@@ -27,6 +27,7 @@ background-attachment: local;
 /* Global values */
 background-attachment: inherit;
 background-attachment: initial;
+background-attachment: revert;
 background-attachment: unset;
 </pre>
 
@@ -36,7 +37,7 @@ background-attachment: unset;
 
 <dl>
  <dt><code>fixed</code></dt>
- <dd>The background is fixed relative to the viewport. Even if an element has a scrolling mechanism, the background doesn't move with the element. (This is not compatible with {{cssxref("background-clip", "background-clip: text", "#text")}}.)</dd>
+ <dd>The background is fixed relative to the viewport. Even if an element has a scrolling mechanism, the background doesn't move with the element. (This is not compatible with {{cssxref("background-clip", "background-clip: text", "#values")}}.)</dd>
  <dt><code>local</code></dt>
  <dd>The background is fixed relative to the element's contents. If the element has a scrolling mechanism, the background scrolls with the element's contents, and the background painting area and background positioning area are relative to the scrollable area of the element rather than to the border framing them.</dd>
  <dt><code>scroll</code></dt>
@@ -67,7 +68,7 @@ background-attachment: unset;
 <h4 id="CSS">CSS</h4>
 
 <pre class="brush:css; highlight:[3];">p {
-  background-image: url("https://mdn.mozillademos.org/files/12057/starsolid.gif");
+  background-image: url("starsolid.gif");
   background-attachment: fixed;
 }
 </pre>
@@ -101,8 +102,8 @@ background-attachment: unset;
 <h4 id="CSS_2">CSS</h4>
 
 <pre class="brush:css; highlight:[3];">p {
-  background-image: url("https://mdn.mozillademos.org/files/12057/starsolid.gif"),
-      url("https://mdn.mozillademos.org/files/12059/startransparent.gif");
+  background-image: url("starsolid.gif"),
+      url("startransparent.gif");
   background-attachment: fixed, scroll;
   background-repeat: no-repeat, repeat-y;
 }</pre>
@@ -113,32 +114,7 @@ background-attachment: unset;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Backgrounds', '#the-background-attachment', 'background-attachment')}}</td>
-   <td>{{Spec2('CSS3 Backgrounds')}}</td>
-   <td>The shorthand property has been extended to support multiple backgrounds and the <code>local</code> value.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'colors.html#propdef-background-attachment', 'background-attachment')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>No significant change.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#background-attachment', 'background-attachment')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>No significant change.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

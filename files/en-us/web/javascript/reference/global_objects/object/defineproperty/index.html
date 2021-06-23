@@ -212,8 +212,8 @@ Object.defineProperty(o, 'conflict', {
   modify the property according to the values in the descriptor and the object's current
   configuration. If the old descriptor had its <code>configurable</code> attribute set to
   <code>false</code> the property is said to be “non-configurable”. It is not possible to
-  change any attribute of a non-configurable accessor property. For data properties, it is
-  possible to modify the value if the property is writable, and it is possible to change
+  change any attribute of a non-configurable accessor property. For data properties which are configurable, it is
+  possible to modify the value if the property is writable, and it is possible to change the
   <code>writable</code> attribute from <code>true</code> to <code>false</code>. It is not
   possible to switch between data and accessor property types when the property is
   non-configurable.</p>
@@ -542,7 +542,7 @@ console.log(myclass.prototype.y); // 1
   arrays. For now, don't rely on redefining the {{jsxref("Array.length", "length")}}
   property of an array to either work, or to work in a particular manner. And even when
   you <em>can</em> rely on it, <a
-    href="http://whereswalden.com/2013/08/05/new-in-firefox-23-the-length-property-of-an-array-can-be-made-non-writable-but-you-shouldnt-do-it/">there's
+    href="https://whereswalden.com/2013/08/05/new-in-firefox-23-the-length-property-of-an-array-can-be-made-non-writable-but-you-shouldnt-do-it/">there's
     really no good reason to do so</a>.</p>
 
 <h3 id="Internet_Explorer_8_specific_notes">Internet Explorer 8 specific notes</h3>
@@ -579,8 +579,6 @@ console.log(myclass.prototype.y); // 1
   <li>{{jsxref("Object.defineProperties()")}}</li>
   <li>{{jsxref("Object.propertyIsEnumerable()")}}</li>
   <li>{{jsxref("Object.getOwnPropertyDescriptor()")}}</li>
-  <li>{{jsxref("Object.prototype.watch()")}}</li>
-  <li>{{jsxref("Object.prototype.unwatch()")}}</li>
   <li>{{jsxref("Functions/get", "get")}}</li>
   <li>{{jsxref("Functions/set", "set")}}</li>
   <li>{{jsxref("Object.create()")}}</li>

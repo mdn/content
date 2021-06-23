@@ -47,6 +47,7 @@ vertical-align: 20%;
 /* Global values */
 vertical-align: inherit;
 vertical-align: initial;
+vertical-align: revert;
 vertical-align: unset;
 </pre>
 
@@ -119,10 +120,10 @@ vertical-align: unset;
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html">&lt;div&gt;An &lt;img src="https://mdn.mozillademos.org/files/12245/frame_image.svg" alt="link" width="32" height="32" /&gt; image with a default alignment.&lt;/div&gt;
-&lt;div&gt;An &lt;img class="top" src="https://mdn.mozillademos.org/files/12245/frame_image.svg" alt="link" width="32" height="32" /&gt; image with a text-top alignment.&lt;/div&gt;
-&lt;div&gt;An &lt;img class="bottom" src="https://mdn.mozillademos.org/files/12245/frame_image.svg" alt="link" width="32" height="32" /&gt; image with a text-bottom alignment.&lt;/div&gt;
-&lt;div&gt;An &lt;img class="middle" src="https://mdn.mozillademos.org/files/12245/frame_image.svg" alt="link" width="32" height="32" /&gt; image with a middle alignment.&lt;/div&gt;
+<pre class="brush: html">&lt;div&gt;An &lt;img src="frame_image.svg" alt="link" width="32" height="32" /&gt; image with a default alignment.&lt;/div&gt;
+&lt;div&gt;An &lt;img class="top" src="frame_image.svg" alt="link" width="32" height="32" /&gt; image with a text-top alignment.&lt;/div&gt;
+&lt;div&gt;An &lt;img class="bottom" src="frame_image.svg" alt="link" width="32" height="32" /&gt; image with a text-bottom alignment.&lt;/div&gt;
+&lt;div&gt;An &lt;img class="middle" src="frame_image.svg" alt="link" width="32" height="32" /&gt; image with a middle alignment.&lt;/div&gt;
 </pre>
 
 <h4 id="CSS">CSS</h4>
@@ -227,27 +228,7 @@ td {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'visudet.html#propdef-vertical-align', 'vertical-align')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Adds the {{cssxref("&lt;length&gt;")}} value and allows it to be applied to elements with a {{cssxref("display")}} type of <code>table-cell</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#vertical-align', 'vertical-align')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

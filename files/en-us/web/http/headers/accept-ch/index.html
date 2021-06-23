@@ -2,9 +2,11 @@
 title: Accept-CH
 slug: Web/HTTP/Headers/Accept-CH
 tags:
+  - Accept-CH
   - Client hints
   - HTTP
   - HTTP Header
+  - Response header
 browser-compat: http.headers.Accept-CH
 ---
 <div>{{HTTPSidebar}}{{securecontext_header}}{{SeeCompatTable}}</div>
@@ -23,6 +25,10 @@ browser-compat: http.headers.Accept-CH
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
       <td>no</td>
     </tr>
+    <tr>
+      <th scope="row">{{Glossary("CORS-safelisted response header")}}</th>
+      <td>no</td>
+     </tr>
   </tbody>
 </table>
 
@@ -34,12 +40,12 @@ browser-compat: http.headers.Accept-CH
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: html">Accept-CH: &lt;list of client hints&gt;
+<pre class="brush: http">Accept-CH: &lt;list of client hints&gt;
 </pre>
 
 <h2 id="Examples">Examples</h2>
 
-<pre>Accept-CH: Viewport-Width, Width
+<pre class="brush: http">Accept-CH: Viewport-Width, Width
 Vary: Viewport-Width, Width
 </pre>
 

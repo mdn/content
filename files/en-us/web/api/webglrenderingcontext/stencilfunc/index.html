@@ -48,7 +48,7 @@ browser-compat: api.WebGLRenderingContext.stencilFunc
   </dd>
   <dt><code>ref</code></dt>
   <dd>A {{domxref("GLint")}} specifying the reference value for the stencil test. This
-    value is clamped to the range 0 to 2<sup>n</sup> -1 where n is the number of bitplanes
+    value is clamped to the range 0 to 2^n - 1 where n is the number of bitplanes
     in the stencil buffer. The default value is 0.</dd>
   <dt><code>mask</code></dt>
   <dd>A {{domxref("GLuint")}} specifying a bit-wise mask that is used to AND the reference
@@ -86,25 +86,7 @@ gl.getParameter(gl.STENCIL_BITS);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('WebGL', "#5.14.3", "stencilFunc")}}</td>
-      <td>{{Spec2('WebGL')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('OpenGL ES 2.0', "glStencilFunc.xml", "glStencilFunc")}}</td>
-      <td>{{Spec2('OpenGL ES 2.0')}}</td>
-      <td>Man page of the OpenGL API.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

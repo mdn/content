@@ -47,7 +47,7 @@ tags:
   }
 });</pre>
 
-<p>In this class example we have defined a single context option with the <code>contextOptions()</code> function: we returned a simple object stating alpha transparency is allowed.</p>
+<p>In this class example we have defined a single context option with the <code>contextOptions()</code> function: we returned a simple object stating alpha transparency is allowed.</p>
 
 <p>We have then used the <code>paint()</code> function to paint to our canvas.</p>
 
@@ -99,7 +99,7 @@ tags:
 
 <h2 id="PaintSize">PaintSize</h2>
 
-<p>In the example above, we created a 20x200 unit box, painted 15 units from the top of the element  it is the same regardless of the size of the element. If the text is small, the yellow box looks like a huge underline. If the text is huge, the box might look like an bar above the first three letters. It would be better if the background image was relative to the size of the element — we can use the element's <code>paintSize</code> property to ensure the background image is proportional to the size of the element's box model size.</p>
+<p>In the example above, we created a 20x200 unit box, painted 15 units from the top of the element it is the same regardless of the size of the element. If the text is small, the yellow box looks like a huge underline. If the text is huge, the box might look like an bar above the first three letters. It would be better if the background image was relative to the size of the element — we can use the element's <code>paintSize</code> property to ensure the background image is proportional to the size of the element's box model size.</p>
 
 <p><img alt="The background is 50% of the height and 60% of the width of the element" src="mycoolheadersized.png"></p>
 
@@ -264,7 +264,7 @@ li:nth-of-type(3n+1) {
 <p>Let's take a look at a more complex paint example.</p>
 
 <pre class="brush: js">registerPaint('headerHighlight', class {
-  static get inputProperties() { return ['--highColour']; }
+  static get inputProperties() { return ['--highColor']; }
   static get contextOptions() { return {alpha: true}; }
 
   paint(ctx, size, props) {
@@ -274,7 +274,7 @@ li:nth-of-type(3n+1) {
 		const y = size.height * 0.3;
 		const blockWidth = size.width * 0.33;
 		const highlightHeight = size.height * 0.85;
-        const color = props.get('--highColour');
+        const color = props.get('--highColor');
 
 		ctx.fillStyle = color;
 
@@ -309,14 +309,14 @@ li:nth-of-type(3n+1) {
 &lt;h3 class="fancy"&gt;Medium size header&lt;/h3&gt;
 &lt;h6 class="fancy"&gt;Smallest Header&lt;/h6&gt;</pre>
 
-<p>We give each header a different value for the <code>--highColour</code> <a href="/en-US/docs/Web/CSS/CSS_Variables">custom property</a></p>
+<p>We give each header a different value for the <code>--highColor</code> <a href="/en-US/docs/Web/CSS/CSS_Variables">custom property</a></p>
 
 <pre class="brush: css">.fancy {
   background-image: paint(headerHighlight);
 }
-h1 { --highColour: hsla(155, 90%, 60%, 0.7); }
-h3 { --highColour: hsla(255, 90%, 60%, 0.5); }
-h6 { --highColour: hsla(355, 90%, 60%, 0.3); }</pre>
+h1 { --highColor: hsla(155, 90%, 60%, 0.7); }
+h3 { --highColor: hsla(255, 90%, 60%, 0.5); }
+h6 { --highColor: hsla(355, 90%, 60%, 0.3); }</pre>
 
 <p>And we register our worklet</p>
 

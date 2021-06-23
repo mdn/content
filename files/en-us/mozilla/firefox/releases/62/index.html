@@ -116,7 +116,7 @@ tags:
 
 <ul>
  <li>The {{event("userproximity")}} and {{event("deviceproximity")}} events (see also {{domxref("UserProximityEvent")}} and {{domxref("DeviceProximityEvent")}}) have been disabled by default behind the <code>device.sensors.proximity.enabled</code> preference ({{bug(1462308)}}).</li>
- <li>The {{event("devicelight")}} event (see also {{domxref("DeviceLightEvent")}}) has been disabled by default behind the <code>device.sensors.ambientLight.enabled</code> preference ({{bug(1462308)}}).</li>
+ <li>The <code>devicelight</code> event of type <code>DeviceLightEvent</code> has been disabled by default behind the <code>device.sensors.ambientLight.enabled</code> preference ({{bug(1462308)}}).</li>
  <li>The {{event("DOMSubtreeModified")}} and {{event("DOMAttrModified")}} <a href="/en-US/docs/Web/API/MutationEvent">mutation events</a> are no longer thrown when the {{htmlattrxref("style")}} attribute is changed via the CSSOM ({{bug(1460295)}}, see also this <a href="https://www.fxsitecompat.com/en-CA/docs/2018/domattrmodified-and-domsubtreemodified-events-are-no-longer-fired-when-style-attribute-is-changed-via-cssom/">site compatibility post</a>).</li>
  <li>Support for {{domxref("CSSStyleDeclaration.getPropertyCSSValue()")}} has been removed ({{bug(1408301)}}).</li>
  <li>Support for {{domxref("CSSValue")}}, {{domxref("CSSPrimitiveValue")}}, and {{domxref("CSSValueList")}} has been removed ({{bug(1459871)}}).</li>

@@ -21,6 +21,11 @@ browser-compat: api.HTMLFormElement.reset
   mask the form's reset method. It does not reset other attributes in the input, such as
   <code>disabled</code>.</p>
 
+<p>Note that if {{domxref("Element.setAttribute", "setAttribute()")}} is called to set
+  the value of a particular attribute, a subsequent call to <code>reset()</code> won’t
+  reset the attribute to its default value, but instead will keep the attribute at
+  whatever value the {{domxref("Element.setAttribute", "setAttribute()")}} call set it to.</p>
+
 <h2 id="Syntax">Syntax</h2>
 
 <pre class="brush: js"><em>HTMLFormElement</em>.reset()
@@ -33,22 +38,7 @@ browser-compat: api.HTMLFormElement.reset
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', '#dom-form-reset', 'HTMLFormElement: reset')}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

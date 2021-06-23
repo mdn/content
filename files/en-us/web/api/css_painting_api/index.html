@@ -29,7 +29,7 @@ tags:
 
 <dl>
  <dt>{{domxref('PaintWorklet')}}</dt>
- <dd>Programmatically generates an image where a CSS property expects a file. Access this interface through <a href="/en-US/docs/Web/API/CSS/paintWorklet" title="paintWorklet is a static, read-only property of the CSS interface that provides access to the PaintWorklet, which programmatically generates an image where a CSS property expects a file. "><code>CSS.paintWorklet</code></a>.</dd>
+ <dd>Programmatically generates an image where a CSS property expects a file. Access this interface through <a href="/en-US/docs/Web/API/CSS/paintWorklet" title="paintWorklet is a static, read-only property of the CSS interface that provides access to the PaintWorklet, which programmatically generates an image where a CSS property expects a file."><code>CSS.paintWorklet</code></a>.</dd>
  <dt>{{domxref('PaintWorkletGlobalScope')}}</dt>
  <dd>The global execution context of the <code>paintWorklet</code>.</dd>
  <dt>{{domxref('PaintRenderingContext2D')}}</dt>
@@ -49,7 +49,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<p>To draw directly into an element's background using JavaScript in our CSS, we define a paint worklet using the <code><a href="/en-US/docs/Web/API/PaintWorklet/registerPaint">registerPaint()</a></code> function, tell the document to include the worklet using the paintWorklet addModule() method, then include the image we created using the CSS <code><a href="/en-US/docs/Web/CSS/paint()">paint()</a></code>  function.</p>
+<p>To draw directly into an element's background using JavaScript in our CSS, we define a paint worklet using the <code><a href="/en-US/docs/Web/API/PaintWorklet/registerPaint">registerPaint()</a></code> function, tell the document to include the worklet using the paintWorklet addModule() method, then include the image we created using the CSS <code><a href="/en-US/docs/Web/CSS/paint()">paint()</a></code> function.</p>
 
 <p>We create our PaintWorklet called 'hollowHighlights' using the <code><a href="/en-US/docs/Web/API/PaintWorklet/registerPaint">registerPaint()</a></code> function:</p>
 
@@ -119,26 +119,26 @@ tags:
 <p>We then include the paintWorklet:</p>
 
 <pre class="brush: html hidden">&lt;ul&gt;
-    &lt;li&gt;item 1&lt;/li&gt;
-    &lt;li&gt;item 2&lt;/li&gt;
-    &lt;li&gt;item 3&lt;/li&gt;
-    &lt;li&gt;item 4&lt;/li&gt;
-    &lt;li&gt;item 5&lt;/li&gt;
-    &lt;li&gt;item 6&lt;/li&gt;
-    &lt;li&gt;item 7&lt;/li&gt;
-    &lt;li&gt;item 8&lt;/li&gt;
-    &lt;li&gt;item 9&lt;/li&gt;
-    &lt;li&gt;item 10&lt;/li&gt;
-    &lt;li&gt;item 11&lt;/li&gt;
-    &lt;li&gt;item 12&lt;/li&gt;
-    &lt;li&gt;item 13&lt;/li&gt;
-    &lt;li&gt;item 14&lt;/li&gt;
-    &lt;li&gt;item 15&lt;/li&gt;
-    &lt;li&gt;item 16&lt;/li&gt;
-    &lt;li&gt;item 17&lt;/li&gt;
-    &lt;li&gt;item 18&lt;/li&gt;
-    &lt;li&gt;item 19&lt;/li&gt;
-    &lt;li&gt;item 20&lt;/li&gt;
+    &lt;li&gt;item 1&lt;/li&gt;
+    &lt;li&gt;item 2&lt;/li&gt;
+    &lt;li&gt;item 3&lt;/li&gt;
+    &lt;li&gt;item 4&lt;/li&gt;
+    &lt;li&gt;item 5&lt;/li&gt;
+    &lt;li&gt;item 6&lt;/li&gt;
+    &lt;li&gt;item 7&lt;/li&gt;
+    &lt;li&gt;item 8&lt;/li&gt;
+    &lt;li&gt;item 9&lt;/li&gt;
+    &lt;li&gt;item 10&lt;/li&gt;
+    &lt;li&gt;item 11&lt;/li&gt;
+    &lt;li&gt;item 12&lt;/li&gt;
+    &lt;li&gt;item 13&lt;/li&gt;
+    &lt;li&gt;item 14&lt;/li&gt;
+    &lt;li&gt;item 15&lt;/li&gt;
+    &lt;li&gt;item 16&lt;/li&gt;
+    &lt;li&gt;item 17&lt;/li&gt;
+    &lt;li&gt;item 18&lt;/li&gt;
+    &lt;li&gt;item 19&lt;/li&gt;
+    &lt;li&gt;item 20&lt;/li&gt;
 &lt;/ul&gt;</pre>
 
 <pre class="brush: js">  CSS.paintWorklet.addModule('https://mdn.github.io/houdini-examples/cssPaint/intro/worklets/hilite.js');
@@ -167,20 +167,7 @@ li:nth-of-type(3n+1) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS Painting API')}}</td>
-   <td>{{Spec2('CSS Painting API')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications("api.PaintWorkletGlobalScope")}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

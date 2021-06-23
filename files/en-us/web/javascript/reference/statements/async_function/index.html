@@ -2,11 +2,11 @@
 title: async function
 slug: Web/JavaScript/Reference/Statements/async_function
 tags:
-- Example
-- Function
-- JavaScript
-- Language feature
-- Statement
+  - Example
+  - Function
+  - JavaScript
+  - Language feature
+  - Statement
 browser-compat: javascript.statements.async_function
 ---
 <div>{{jsSidebar("Statements")}}</div>
@@ -313,41 +313,6 @@ setTimeout(parallel, 10000) // truly parallel: after 1 second, logs "fast", then
   <code>async function</code> is implicitly wrapped in {{jsxref("Promise.resolve")}} - if
   it's not already a promise itself (as in this example).</p>
 
-<div class="notecard note">
-  <p><strong>Note:</strong> The implicit wrapping of return values in {{jsxref("Promise.resolve")}} does not
-    imply that <code>return await promiseValue</code> is functionally equivalent to
-    <code>return promiseValue</code>.</p>
-
-  <p>Consider the following rewrite of the above code. It returns <code>null</code> if
-    <code>processDataInWorker</code> rejects with an error:</p>
-
-  <pre class="brush: js">async function getProcessedData(url) {
-  let v
-  try {
-    v = await downloadData(url)
-  } catch(e) {
-    v = await downloadFallbackData(url)
-  }
-  try {
-    return await processDataInWorker(v)  // Note the `return await` vs. just `return`
-  } catch (e) {
-    return null
-  }
-}
-</pre>
-
-  <p>Writing <code>return processDataInWorker(v)</code> would have caused the
-    {{jsxref("Promise")}} returned by the function to reject, instead of resolving to
-    <code>null</code> if <code>processDataInWorker(v)</code> rejects.</p>
-
-  <p>This highlights the subtle difference between <code>return foo;</code> and
-    <code>return await foo;</code> — <code>return foo</code> immediately returns
-    <code>foo</code> and never throws, even if <code>foo</code> is a Promise that rejects.
-    <code>return await foo</code> will <em>wait</em> for <code>foo</code> to resolve or
-    reject if it's a Promise, and throws <strong>before returning</strong> if it rejects.
-  </p>
-</div>
-
 <h2 id="Specifications">Specifications</h2>
 
 {{Specifications}}
@@ -363,6 +328,6 @@ setTimeout(parallel, 10000) // truly parallel: after 1 second, logs "fast", then
   <li>{{jsxref("AsyncFunction")}} object</li>
   <li>{{jsxref("Operators/await", "await")}}</li>
   <li><a
-      href="http://innolitics.com/10x/javascript-decorators-for-promise-returning-functions/">"Decorating
+      href="https://innolitics.com/10x/javascript-decorators-for-promise-returning-functions/">"Decorating
       Async Javascript Functions" on "innolitics.com"</a></li>
 </ul>

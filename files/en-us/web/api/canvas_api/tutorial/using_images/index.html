@@ -149,12 +149,12 @@ img.src = 'data:image/gif;base64,R0lGODlhCwALAIAAAAAA3pn/ZiH5BAEAAAEALAAAAAALAAs
     ctx.lineTo(170, 15);
     ctx.stroke();
   };
-  img.src = 'https://mdn.mozillademos.org/files/5395/backdrop.png';
+  img.src = 'backdrop.png';
 }</pre>
 
 <p>The resulting graph looks like this:</p>
 
-<p>{{EmbedLiveSample("Example_A_simple_line_graph", 220, 160, "https://mdn.mozillademos.org/files/206/Canvas_backdrop.png")}}</p>
+<p>{{EmbedLiveSample("Example_A_simple_line_graph", 220, 160, "canvas_backdrop.png")}}</p>
 
 <h2 id="Scaling">Scaling</h2>
 
@@ -192,12 +192,12 @@ img.src = 'data:image/gif;base64,R0lGODlhCwALAIAAAAAA3pn/ZiH5BAEAAAEALAAAAAALAAs
       }
     }
   };
-  img.src = 'https://mdn.mozillademos.org/files/5397/rhino.jpg';
+  img.src = 'rhino.jpg';
 }</pre>
 
 <p>The resulting canvas looks like this:</p>
 
-<p>{{EmbedLiveSample("Example_Tiling_an_image", 160, 160, "https://mdn.mozillademos.org/files/251/Canvas_scale_image.png")}}</p>
+<p>{{EmbedLiveSample("Example_Tiling_an_image", 160, 160, "canvas_scale_image.png")}}</p>
 
 <h2 id="Slicing">Slicing</h2>
 
@@ -208,7 +208,9 @@ img.src = 'data:image/gif;base64,R0lGODlhCwALAIAAAAAA3pn/ZiH5BAEAAAEALAAAAAALAAs
  <dd>Given an <code>image</code>, this function takes the area of the source image specified by the rectangle whose top-left corner is (<code>sx</code>, <code>sy</code>) and whose width and height are <code>sWidth</code> and <code>sHeight</code> and draws it into the canvas, placing it on the canvas at (<code>dx</code>, <code>dy</code>) and scaling it to the size specified by <code>dWidth</code> and <code>dHeight</code>.</dd>
 </dl>
 
-<p><img alt="" class="internal" src="canvas_drawimage.jpg" style="float: right;">To really understand what this does, it may help to look at the image to the right. The first four parameters define the location and size of the slice on the source image. The last four parameters define the rectangle into which to draw the image on the destination canvas.</p>
+<p>To really understand what this does, it may help to look at this image: </p>
+<img alt="" src="canvas_drawimage.jpg">
+<p>The first four parameters define the location and size of the slice on the source image. The last four parameters define the rectangle into which to draw the image on the destination canvas.</p>
 
 <p>Slicing can be a useful tool when you want to make compositions. You could have all elements in a single image file and use this method to composite a complete drawing. For instance, if you want to make a chart you could have a PNG image containing all the necessary text in a single file and depending on your data could change the scale of your chart fairly easily. Another advantage is that you don't need to load every image individually, which can improve load performance.</p>
 
@@ -220,8 +222,8 @@ img.src = 'data:image/gif;base64,R0lGODlhCwALAIAAAAAA3pn/ZiH5BAEAAAEALAAAAAALAAs
  &lt;body onload="draw();"&gt;
    &lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;
    &lt;div style="display:none;"&gt;
-     &lt;img id="source" src="https://mdn.mozillademos.org/files/5397/rhino.jpg" width="300" height="227"&gt;
-     &lt;img id="frame" src="https://mdn.mozillademos.org/files/242/Canvas_picture_frame.png" width="132" height="150"&gt;
+     &lt;img id="source" src="rhino.jpg" width="300" height="227"&gt;
+     &lt;img id="frame" src="canvas_picture_frame.png" width="132" height="150"&gt;
    &lt;/div&gt;
  &lt;/body&gt;
 &lt;/html&gt;
@@ -241,7 +243,7 @@ img.src = 'data:image/gif;base64,R0lGODlhCwALAIAAAAAA3pn/ZiH5BAEAAAEALAAAAAALAAs
 
 <p>We took a different approach to loading the images this time. Instead of loading them by creating new {{domxref("HTMLImageElement")}} objects, we included them as {{HTMLElement("img")}} tags directly in our HTML source and retrieved the images from those. The images are hidden from output by setting the CSS property {{cssxref("display")}} to none for those images.</p>
 
-<p>{{EmbedLiveSample("Example_Framing_an_image", 160, 160, "https://mdn.mozillademos.org/files/226/Canvas_drawimage2.jpg")}}</p>
+<p>{{EmbedLiveSample("Example_Framing_an_image", 160, 160, "canvas_drawimage2.jpg")}}</p>
 
 <p>The script itself is very simple. Each {{HTMLElement("img")}} is assigned an ID attribute, which makes them easy to select using {{domxref("document.getElementById()")}}. We then use <code>drawImage()</code> to slice the rhino out of the first image and scale him onto the canvas, then draw the frame on top using a second <code>drawImage()</code> call.</p>
 
@@ -257,19 +259,19 @@ img.src = 'data:image/gif;base64,R0lGODlhCwALAIAAAAAA3pn/ZiH5BAEAAAEALAAAAAALAAs
  &lt;body onload="draw();"&gt;
      &lt;table&gt;
       &lt;tr&gt;
-        &lt;td&gt;&lt;img src="https://mdn.mozillademos.org/files/5399/gallery_1.jpg"&gt;&lt;/td&gt;
-        &lt;td&gt;&lt;img src="https://mdn.mozillademos.org/files/5401/gallery_2.jpg"&gt;&lt;/td&gt;
-        &lt;td&gt;&lt;img src="https://mdn.mozillademos.org/files/5403/gallery_3.jpg"&gt;&lt;/td&gt;
-        &lt;td&gt;&lt;img src="https://mdn.mozillademos.org/files/5405/gallery_4.jpg"&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;img src="gallery_1.jpg"&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;img src="gallery_2.jpg"&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;img src="gallery_3.jpg"&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;img src="gallery_4.jpg"&gt;&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
-        &lt;td&gt;&lt;img src="https://mdn.mozillademos.org/files/5407/gallery_5.jpg"&gt;&lt;/td&gt;
-        &lt;td&gt;&lt;img src="https://mdn.mozillademos.org/files/5409/gallery_6.jpg"&gt;&lt;/td&gt;
-        &lt;td&gt;&lt;img src="https://mdn.mozillademos.org/files/5411/gallery_7.jpg"&gt;&lt;/td&gt;
-        &lt;td&gt;&lt;img src="https://mdn.mozillademos.org/files/5413/gallery_8.jpg"&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;img src="gallery_5.jpg"&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;img src="gallery_6.jpg"&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;img src="gallery_7.jpg"&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;img src="gallery_8.jpg"&gt;&lt;/td&gt;
       &lt;/tr&gt;
      &lt;/table&gt;
-     &lt;img id="frame" src="https://mdn.mozillademos.org/files/242/Canvas_picture_frame.png" width="132" height="150"&gt;
+     &lt;img id="frame" src="canvas_picture_frame.png" width="132" height="150"&gt;
  &lt;/body&gt;
 &lt;/html&gt;
 </pre>
@@ -277,7 +279,7 @@ img.src = 'data:image/gif;base64,R0lGODlhCwALAIAAAAAA3pn/ZiH5BAEAAAEALAAAAAALAAs
 <p>And here's some CSS to make things look nice:</p>
 
 <pre class="brush: css">body {
-  background: 0 -100px repeat-x url(https://mdn.mozillademos.org/files/5415/bg_gallery.png) #4F191A;
+  background: 0 -100px repeat-x url(bg_gallery.png) #4F191A;
   margin: 10px;
 }
 

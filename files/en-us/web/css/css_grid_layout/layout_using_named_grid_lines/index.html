@@ -14,7 +14,6 @@ tags:
 
 <p>You can assign some or all of the lines in your grid a name when you define your grid with the <code>grid-template-rows</code> and <code>grid-template-columns</code> properties. To demonstrate I’ll use the simple layout created in the guide on line-based placement. This time I’ll create the grid using named lines.</p>
 
-<div id="example_named_lines">
 <div class="hidden">
 <pre class="brush: css">* {box-sizing: border-box;}
 
@@ -77,8 +76,7 @@ tags:
 &lt;/div&gt;
 </pre>
 
-<p>{{ EmbedLiveSample('example_named_lines', '500', '330') }}</p>
-</div>
+<p>{{ EmbedLiveSample('Naming_lines_when_defining_a_grid', '500', '330') }}</p>
 
 <p>Everything else about line-based placement still works in the same way and you can mix named lines and line numbers. Naming lines is useful when creating a responsive design where you redefine the grid, rather than then needing to redefine the content position by changing the line number in your media queries, you can ensure that the line is always named the same in your definitions.</p>
 
@@ -92,7 +90,6 @@ tags:
 
 <p>While you can choose any name, if you append <code>-start</code> and <code>-end</code> to the lines around an area, as I have in the example above, grid will create you a named area of the main name used. Taking the above example, I have <code>content-start</code> and <code>content-end</code> both for rows and for columns. This means I get a grid area named <code>content</code>, and could place something in that area should I wish to.</p>
 
-<div id="implicit_areas_from_lines">
 <div class="hidden">
 <pre class="brush: css">* {box-sizing: border-box;}
 
@@ -129,8 +126,7 @@ tags:
 &lt;/div&gt;
 </pre>
 
-<p>{{ EmbedLiveSample('implicit_areas_from_lines', '500', '330') }}</p>
-</div>
+<p>{{ EmbedLiveSample('Implicit_grid_areas_from_named_lines', '500', '330') }}</p>
 
 <p>We don’t need to define where our areas are with <code>grid-template-areas</code> as our named lines have created an area for us.</p>
 
@@ -166,7 +162,6 @@ tags:
 
 <p>To position <code>overlay</code> using these implicit named lines is the same as positioning an item using lines that we have named.</p>
 
-<div id="implicit_lines_from_area">
 <div class="hidden">
 <pre class="brush: css">* {box-sizing: border-box;}
 
@@ -232,8 +227,7 @@ tags:
 &lt;/div&gt;
 </pre>
 
-<p>{{ EmbedLiveSample('implicit_lines_from_area', '500', '330') }}</p>
-</div>
+<p>{{ EmbedLiveSample('Implicit_Grid_lines_from_named_areas', '500', '330') }}</p>
 
 <p>Given that we have this ability to position create lines from named areas and areas from named lines it is worth taking a little bit of time to plan your naming strategy when starting out creating your grid layout. By selecting names that will make sense to you and your team you will help everyone to use the layouts you create more easily.</p>
 
@@ -241,9 +235,10 @@ tags:
 
 <p>If you want to give all of the lines in your grid a unique name then you will need to write out the track definition long-hand rather than using the repeat syntax, as you need to add the name in square brackets while defining the tracks. If you do use the repeat syntax you will end up with multiple lines that have the same name, however this can be very useful too.</p>
 
+<h3 id="twelve_column_grid_using_repeat">12-column grid using repeat()</h3>
+
 <p>In this next example I am creating a grid with twelve equal width columns. Before defining the 1fr size of the column track I am also defining a line name of <code>[col-start]</code>. This means that we will end up with a grid that has 12 column lines all named <code>col-start</code> before a <code>1fr</code> width column.</p>
 
-<div id="multiple_lines_same_name">
 <div class="hidden">
 <pre class="brush: css">* {box-sizing: border-box;}
 
@@ -289,12 +284,13 @@ tags:
   &lt;div class="item2"&gt;I am placed from col-start line 7 spanning 3 lines&lt;/div&gt;
 &lt;/div&gt;</pre>
 
-<p>{{ EmbedLiveSample('multiple_lines_same_name', '500', '330') }}</p>
-</div>
+<p>{{ EmbedLiveSample('twelve_column_grid_using_repeat', '500', '330') }}</p>
 
 <p>If you take a look at this layout in the Firefox Grid Highlighter you can see how the column lines are shown, and how our items are placed against these lines.</p>
 
 <p><img alt="The 12 column grid with items placed. The Grid Highlighter shows the position of the lines." src="5_named_lines1.png"></p>
+
+<h3 id="defining_named_lines_with_a_track_list">Defining named lines with a track list</h3>
 
 <p>The repeat syntax can also take a track list, it doesn’t just need to be a single track size that is being repeated. The code below would create an eight track grid, with a narrower <code>1fr</code> width column named <code>col1-start</code> followed by a wider <code>3fr</code> column named <code>col2-start</code>.</p>
 
@@ -319,7 +315,6 @@ tags:
 
 <p>If you have used a track list then you can use the <code>span</code> keyword not just to span a number of lines but also to span a number of lines of a certain name.</p>
 
-<div id="span_line_number">
 <div class="hidden">
 <pre class="brush: css">* {box-sizing: border-box;}
 
@@ -360,14 +355,14 @@ tags:
 &lt;/div&gt;
 </pre>
 
-<p>{{ EmbedLiveSample('span_line_number', '500', '330') }}</p>
-</div>
+<p>{{ EmbedLiveSample('defining_named_lines_with_a_track_list', '500', '330') }}</p>
+
+<h3 id="twelve_column_grid_framework">12-column grid framework</h3>
 
 <p>Over the last three guides you have discovered that there are a lot of different ways to place items using grid. This can seem a little bit overcomplicated at first, but remember you don’t need to use all of them. In practice I find that for straightforward layouts, using named template areas works well, it gives that nice visual representation of what your layout looks like, and it is then easy to move things around on the grid.</p>
 
 <p>If working with a strict multiple column layout for example the named lines demonstration in the last part of this guide works very well. If you consider grid systems such as those found in frameworks like Foundation or Bootstrap, these are based on a 12 column grid. The framework then imports the code to do all of the calculations to make sure that the columns add up to 100%. With grid layout the only code we need for our grid “framework” is:</p>
 
-<div id="three_column">
 <pre class="brush: css">.wrapper {
   display: grid;
   gap: 10px;
@@ -428,11 +423,10 @@ tags:
 }
 </pre>
 
-<p>{{ EmbedLiveSample('three_column', '500', '330') }}</p>
+<p>{{ EmbedLiveSample('twelve_column_grid_framework', '500', '330') }}</p>
 
 <p>Once again, the grid highlighter is helpful to show us how the grid we have placed our items on works.</p>
 
 <p><img alt="The layout with the grid highlighted." src="5_named_lines2.png"></p>
-</div>
 
 <p>That’s all I need. I don’t need to do any calculations, grid automatically removed my 10 pixel gutter track before assigning the space to the <code>1fr</code> column tracks. As you start to build out your own layouts, you will find that the syntax becomes more familiar and you choose the ways that work best for you and the type of projects you like to build. Try building some common patterns with these various methods, and you will soon find your most productive way to work. Then, in the next guide we will look at how grid can position items for us - without us needing to use placement properties at all!</p>

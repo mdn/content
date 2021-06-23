@@ -12,8 +12,10 @@ browser-compat: javascript.builtins.Atomics.isLockFree
 
 <p>The static
 	<code><strong>Atomics</strong></code><strong><code>.isLockFree()</code></strong>
-	method is used to determine whether to use locks or atomic operations. It returns
-	<code>true</code>, if the given size is one of the <a
+	method is used to determine whether the <code>Atomics</code> methods use locks 
+  or atomic hardware operations when applied to typed arrays with the given element 
+  byte size. 
+  It returns <code>false</code> if the given size is not one of the <a
 		href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT">BYTES_PER_ELEMENT</a>
 	property of integer TypedArray types.</p>
 

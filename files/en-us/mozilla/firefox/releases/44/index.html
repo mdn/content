@@ -159,7 +159,7 @@ tags:
  <li>{{domxref("Headers")}} objects now support a pair iterator, meaning that the methods {{domxref("Headers.entries()")}}, {{domxref("Headers.keys()")}}, and {{domxref("Headers.values()")}} are now available; {{jsxref("Symbol.iterator")}} now also returns the default iterator for them ({{bug(1108181)}}).</li>
  <li>The {{domxref('XMLHttpRequest')}} API has been disabled on Service Workers ({{bug(931243)}}).</li>
  <li>The interface {{domxref("FetchEvent")}} now extends {{domxref("ExtendableEvent")}}, giving it access to the {{domxref("ExtendableEvent.waitUntil()")}} method. ({{bug(1214772)}}).</li>
- <li>Following a recent change in the specification, {{domxref("FetchEvent.client")}} has been removed ({{bug(1218135)}}).</li>
+ <li>Following a recent change in the specification, <code>FetchEvent.client</code> has been removed ({{bug(1218135)}}).</li>
  <li>To match the latest specification, the {{domxref("ServiceWorkerContainer.onreloadpage")}} has been removed ({{bug(1218139)}}).</li>
  <li>The event handlers {{domxref("ServiceWorkerGlobalScope.onbeforeevicted")}} and {{domxref("ServiceWorkerGlobalScope.onevicted")}} have been removed as they weren't following the spec. They will be reintroduced in the future, but their removal will allow feature detection to work as expected ({{bug(1218142)}}).</li>
  <li>In the {{domxref("FetchEvent.FetchEvent", "FetchEvent()")}} constructor, if the <code>isReload</code> member is not present in the options dictionary, it now defaults to <code>false</code> ({{bug(1216401)}}).</li>

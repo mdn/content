@@ -1,0 +1,46 @@
+---
+title: HIDDevice.oninputreport
+slug: Web/API/HIDDevice/oninputreport
+tags:
+  - API
+  - Property
+  - Reference
+  - oninputreport
+  - HIDDevice
+browser-compat: api.HIDDevice.oninputreport
+---
+<div>{{securecontext_header}}{{DefaultAPISidebar("WebHID API")}}</div>
+
+<p class="summary">The <strong><code>oninputreport</code></strong> EventHandler of the {{domxref("HIDDevice")}} interface is an {{domxref("EventHandler")}} that processes inputreport events.</p>
+
+<p> The event fires when a new report is received from the HID device.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js">HIDDevice.oninputreport = function;
+HIDDevice.addEventListener('inputreport', function);</pre>
+
+<h2>Example</h2>
+
+<p>The following example demonstrates listening for an <code>inputreport</code> event that will allow the application to detect which button is pressed on a Joy-Con Right device. You can see more examples, and live demos in the article <a href="https://web.dev/hid/">Connecting to uncommon HID devices</a>.</p>
+
+<pre class="brush: js">device.addEventListener("inputreport", event => {
+  const { data, device, reportId } = event;
+
+  // Handle only the Joy-Con Right device and a specific report ID.
+  if (device.productId !== 0x2007 && reportId !== 0x3f) return;
+
+  const value = data.getUint8(0);
+  if (value === 0) return;
+
+  const someButtons = { 1: "A", 2: "X", 4: "B", 8: "Y" };
+  console.log(`User pressed button ${someButtons[value]}.`);
+});</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<p>{{Specifications}}</p>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>

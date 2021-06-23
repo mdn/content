@@ -27,7 +27,15 @@ white-space: nowrap;</pre>
 
 <p>The <code>text-overflow</code> property may be specified using one or two values. If one value is given, it specifies overflow behavior for the end of the line (the right end for left-to-right text, the left end for right-to-left text). If two values are given, the first specifies overflow behavior for the left end of the line, and the second specifies it for the right end of the line.</p>
 
-<p>Each value is specified as one of:</p>
+<pre class="brush: css">text-overflow: clip;
+text-overflow: ellipsis ellipsis;
+text-overflow: ellipsis " [..]";
+
+/* Global values */
+text-overflow: inherit;
+text-overflow: initial;
+text-overflow: revert;
+text-overflow: unset;</pre>
 
 <ul>
  <li>one of the keyword values: <code><a href="#clip">clip</a></code>, <code><a href="#ellipsis">ellipsis</a></code>, <code><a href="#fade">fade</a></code></li>
@@ -196,27 +204,7 @@ for (let para of paras) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><a href="https://drafts.csswg.org/css-overflow-4/#text-overflow">CSS Overflow Module Level 4</a></td>
-   <td></td>
-   <td>Added the values <code>&lt;string&gt;</code> and <code>fade</code> and the <code>fade()</code> function</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Overflow', '#text-overflow', 'text-overflow')}}</td>
-   <td>{{Spec2('CSS3 Overflow')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <p>A previous version of this interface reached the <em>Candidate Recommendation</em> status. As some not-listed-at-risk features needed to be removed, the spec was demoted to the <em>Working Draft</em> level, explaining why browsers implemented this property unprefixed, though not at the CR state.</p>
 

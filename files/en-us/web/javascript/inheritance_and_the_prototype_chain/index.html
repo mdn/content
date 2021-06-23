@@ -111,12 +111,12 @@ console.log(p.m()); // 5
 
 <pre class="brush: js">function doSomething(){}
 console.log( doSomething.prototype );
-//  It does not matter how you declare the function, a
+//  It does not matter how you declare the function; a
 //  function in JavaScript will always have a default
-//  prototype property.
-//  (Ps: There is one exception that arrow function doesn't have a default prototype property)
-var doSomething = function(){};
-console.log( doSomething.prototype );
+//  prototype property — with one exception: an arrow
+//  function doesn't have a default prototype property:
+const doSomethingFromArrowFunction = () =&gt; {};
+console.log( doSomethingFromArrowFunction.prototype );
 </pre>
 
 <p>As seen above, <code>doSomething()</code> has a default <code>prototype</code> property, as demonstrated by the console. After running this code, the console should have displayed an object that looks similar to this.</p>

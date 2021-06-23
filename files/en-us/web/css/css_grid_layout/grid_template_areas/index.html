@@ -36,7 +36,6 @@ tags:
 
 <p>With the {{cssxref("grid-area")}} property I can assign each of these areas a name. This will not yet create any layout, but we now have named areas to use in a layout.</p>
 
-<div id="Grid_Area_1">
 <pre class="brush: css">.header {
     grid-area: hd;
 }
@@ -92,8 +91,7 @@ tags:
     &lt;div class="footer"&gt;Footer&lt;/div&gt;
 &lt;/div&gt;</pre>
 
-<p>{{ EmbedLiveSample('Grid_Area_1', '300', '330') }}</p>
-</div>
+<p>{{ EmbedLiveSample('Naming_a_grid_area', '300', '330') }}</p>
 
 <p>Using this method we do not need to specify anything at all on the individual grid items, everything happens on our grid container. We can see the layout described as the value of the {{cssxref("grid-template-areas")}} property.</p>
 
@@ -312,6 +310,8 @@ tags:
 
 <p>Many of the grid examples you will find online make the assumption that you will use grid for main page layout, however grid can be just as useful for small elements as those larger ones. Using {{cssxref("grid-template-areas")}} can be especially nice as it is easy to see in the code what your element looks like.</p>
 
+<h3 id="media_object_example">Media object example</h3>
+
 <p>As a very simple example we can create a “media object”. This is a component with space for an image or other media on one side and content on the other. The image might be displayed on the right or left of the box.</p>
 
 <p><img alt="Images showing an example media object design" src="4_media_objects.png"></p>
@@ -320,7 +320,6 @@ tags:
 
 <p>We give the image area a grid area name of <code>img</code> and the text area <code>content</code>, then we can lay those out using the <code>grid-template-areas</code> property.</p>
 
-<div id="Media_1">
 <pre class="brush: css">* {box-sizing: border-box;}
 
 .media {
@@ -355,14 +354,12 @@ tags:
     &lt;/div&gt;
 &lt;/div&gt;</pre>
 
-<p>{{ EmbedLiveSample('Media_1', '300', '200') }}</p>
-</div>
+<p>{{ EmbedLiveSample('media_object_example', '300', '200') }}</p>
 
 <h3 id="Displaying_the_image_on_the_other_side_of_the_box">Displaying the image on the other side of the box</h3>
 
 <p>We might want to be able to display our box with the image the other way around. To do this, we redefine the grid to put the <code>1fr</code> track last, and flip the values in {{cssxref("grid-template-areas")}}.</p>
 
-<div id="Media_2">
 <pre class="brush: css">* {box-sizing: border-box;}
 
 .media {
@@ -402,8 +399,7 @@ tags:
     &lt;/div&gt;
 &lt;/div&gt;</pre>
 
-<p>{{ EmbedLiveSample('Media_2', '300', '200') }}</p>
-</div>
+<p>{{ EmbedLiveSample('Displaying_the_image_on_the_other_side_of_the_box', '300', '200') }}</p>
 
 <h2 id="Grid_definition_shorthands">Grid definition shorthands</h2>
 

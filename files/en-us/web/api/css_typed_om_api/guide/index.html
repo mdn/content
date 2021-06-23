@@ -7,9 +7,11 @@ tags:
   - Houdini
   - Learn
 ---
+<div>{{DefaultAPISidebar("CSS Typed Object Model API")}}</div>
+
 <p>The <strong><a href="/en-US/docs/Web/API/CSS_Typed_OM_API">CSS Typed Object Model API</a></strong> exposes CSS values as typed JavaScript objects to allow their performant manipulation.</p>
 
-<p>Converting <a href="/en-US/docs/Web/API/CSS_Object_Model">CSS Object Model</a> value strings into meaningfully-typed JavaScript representations and back (via {{domxref("ElementCSSInlineStyle/style", "HTMLElement.style")}} can incur a significant performance overhead.</p>
+<p>Converting <a href="/en-US/docs/Web/API/CSS_Object_Model">CSS Object Model</a> value strings into meaningfully-typed JavaScript representations and back (via {{domxref("HTMLElement.style")}} can incur a significant performance overhead.</p>
 
 <p>The CSS Typed OM makes CSS manipulation more logical and performant by providing object features (rather than CSSOM string manipulation), providing access to types, methods, and an object model for CSS values.</p>
 
@@ -51,9 +53,9 @@ for (const [prop, val] of defaultComputedStyles) {
 	stylesList.appendChild(cssValue);
 }</pre>
 
-<p>The <code>computedStyleMap()</code> method returns a {{domxref('StylePropertyMapReadOnly')}} object containing the <code><a href="/en-US/docs/Web/API/StylePropertyMapReadOnly/size">size</a></code> property, which indicates how many properties are in the map. We iterate through the style map, creating a  <code><a href="/en-US/docs/Web/HTML/Element/dt">&lt;dt&gt;</a></code> and <code><a href="/en-US/docs/Web/HTML/Element/dd">&lt;dd&gt;</a></code> for each property and value respectively.</p>
+<p>The <code>computedStyleMap()</code> method returns a {{domxref('StylePropertyMapReadOnly')}} object containing the <code><a href="/en-US/docs/Web/API/StylePropertyMapReadOnly/size">size</a></code> property, which indicates how many properties are in the map. We iterate through the style map, creating a <code><a href="/en-US/docs/Web/HTML/Element/dt">&lt;dt&gt;</a></code> and <code><a href="/en-US/docs/Web/HTML/Element/dd">&lt;dd&gt;</a></code> for each property and value respectively.</p>
 
-<p>In  <a href="/en-US/docs/Web/API/Element/computedStyleMap#browser_compatibility">browsers that support <code>computedStyleMap()</code></a>, you'll see a list of all the CSS properties and values. In other browsers, you'll just see a link.</p>
+<p>In <a href="/en-US/docs/Web/API/Element/computedStyleMap#browser_compatibility">browsers that support <code>computedStyleMap()</code></a>, you'll see a list of all the CSS properties and values. In other browsers, you'll just see a link.</p>
 
 <p>{{EmbedLiveSample("example1", 120, 300)}}</p>
 
@@ -111,7 +113,7 @@ for ( let i = 0; i &lt; ofInterest.length; i++ ) {
 <p>{{EmbedLiveSample("example2", 120, 300)}}</p>
 </div>
 
-<p>We included {{cssxref('border-left-color')}} to demonstrate that, had we included all the properties, every value that defaults to <code><a href="/en-US/docs/Web/CSS/color_value">currentcolor</a></code> (including {{cssxref('caret-color')}}, {{cssxref('outline-color')}}, {{cssxref('text-decoration-color')}}, {{cssxref('column-rule-color')}}, etc.) would return <code>rgb(255, 0, 0)</code>. The link has inherited <code>font-weight: bold;</code> from the paragraph's styles, listing it as <code>font-weight: 700</code>.  Custom properties, like our <code>--color: red</code> , are properties. As such, they are accessible via <code>get()</code>.</p>
+<p>We included {{cssxref('border-left-color')}} to demonstrate that, had we included all the properties, every value that defaults to <code><a href="/en-US/docs/Web/CSS/color_value">currentcolor</a></code> (including {{cssxref('caret-color')}}, {{cssxref('outline-color')}}, {{cssxref('text-decoration-color')}}, {{cssxref('column-rule-color')}}, etc.) would return <code>rgb(255, 0, 0)</code>. The link has inherited <code>font-weight: bold;</code> from the paragraph's styles, listing it as <code>font-weight: 700</code>. Custom properties, like our <code>--color: red</code> , are properties. As such, they are accessible via <code>get()</code>.</p>
 
 <p>You'll note that custom properties retain the value as written in the stylesheet, whereas computed styles will be listed as the computed value — {{cssxref('color')}} was listed as an <a href="/en-US/docs/Web/CSS/color_value"><code>rgb()</code> </a>value and the {{cssxref('font-weight')}} returned was <code>700</code> even though we use a {{cssxref('&lt;color&gt;', 'named color')}} and the <code>bold</code> keyword.</p>
 
@@ -139,7 +141,7 @@ for ( let i = 0; i &lt; ofInterest.length; i++ ) {
     &lt;/tr&gt;
 &lt;/table&gt;</pre>
 
-<p>For each property of interest, we list the name of the property, use <code>.get(propertyName).value</code> to return the value, and, if the object returned by the <code>get()</code> is a <code>CSSUnitValue</code>, list the unit type we retrieve with <code>.get(propertyName).unit</code>.</p>
+<p>For each property of interest, we list the name of the property, use <code>.get(propertyName).value</code> to return the value, and, if the object returned by the <code>get()</code> is a <code>CSSUnitValue</code>, list the unit type we retrieve with <code>.get(propertyName).unit</code>.</p>
 
 <pre class="brush: js">// get the element we're inspecting
 const myElement = document.querySelector('p');
@@ -184,7 +186,7 @@ for ( let i = 0; i &lt; ofInterest.length; i++ ) {
 
 <p>For those of you using a non-supporting browser, the above output should looks something like this:</p>
 
-<table id="regurgitation" style="height: 424px; width: 1336px;">
+<table id="regurgitation">
  <thead>
   <tr>
    <th>Property</th>
@@ -194,51 +196,51 @@ for ( let i = 0; i &lt; ofInterest.length; i++ ) {
  </thead>
  <tbody>
   <tr>
-   <td>padding-top</td>
+   <td>{{cssxref("padding-top")}}</td>
    <td>0</td>
-   <td>px</td>
+   <td><code>px</code></td>
   </tr>
   <tr>
-   <td>margin-bottom</td>
+   <td>{{cssxref("margin-bottom")}}</td>
    <td>16</td>
-   <td>px</td>
+   <td><code>px</code></td>
   </tr>
   <tr>
-   <td>font-size</td>
+   <td>{{cssxref("font-size")}}</td>
    <td>16</td>
-   <td>px</td>
+   <td><code>px</code></td>
   </tr>
   <tr>
-   <td>font-stretch</td>
+   <td>{{cssxref("font-stretch")}}</td>
    <td>100</td>
-   <td>percent</td>
+   <td><code>%</code></td>
   </tr>
   <tr>
-   <td>animation-duration</td>
+   <td>{{cssxref("animation-duration")}}</td>
    <td>0</td>
-   <td>s</td>
+   <td><code>px</code></td>
   </tr>
   <tr>
-   <td>animation-iteration-count</td>
+   <td>{{cssxref("animation-iteration-count")}}</td>
    <td>1</td>
-   <td>number</td>
+   <td><em>number</em></td>
   </tr>
   <tr>
-   <td>width</td>
+   <td>{{cssxref("width")}}</td>
    <td>auto</td>
-   <td>undefined</td>
+   <td><em>undefined</em></td>
   </tr>
   <tr>
-   <td>height</td>
+   <td>{{cssxref("height")}}</td>
    <td>auto</td>
-   <td>undefined</td>
+   <td><em>undefined</em></td>
   </tr>
  </tbody>
 </table>
 
 <p>You'll note the {{cssxref('&lt;length&gt;')}} unit returned is <code>px</code>, the {{cssxref('&lt;percentage&gt;')}} unit returned is <code>percent</code>, the {{cssxref('&lt;time&gt;')}} unit is <code>s</code> for 'seconds', and the unitless {{cssxref('&lt;number&gt;')}} unit is <code>number</code>.</p>
 
-<p>We didn't declare a {{cssxref('width')}} or a {{cssxref('height')}} for the paragraph, both of which default to <code>auto</code> and therefore return a <code><a href="/en-US/docs/Web/API/CSSKeywordValue">CSSKeywordValue</a></code> instead of a <code><a href="/en-US/docs/Web/API/CSSUnitValue">CSSUnitValue</a></code>. <code>CSSKeywordValue</code>s do not have a unit property, so in these cases our <code>get().unit</code> returns <code>undefined</code>. </p>
+<p>We didn't declare a {{cssxref('width')}} or a {{cssxref('height')}} for the paragraph, both of which default to <code>auto</code> and therefore return a <code><a href="/en-US/docs/Web/API/CSSKeywordValue">CSSKeywordValue</a></code> instead of a <code><a href="/en-US/docs/Web/API/CSSUnitValue">CSSUnitValue</a></code>. <code>CSSKeywordValue</code>s do not have a unit property, so in these cases our <code>get().unit</code> returns <code>undefined</code>.</p>
 
 <p>Had the <code>width</code> or <code>height</code> been defined in a <code>&lt;length&gt;</code> or <code>&lt;percent&gt;</code>, the <code><a href="/en-US/docs/Web/API/CSSUnitValue">CSSUnitValue</a></code> unit would have been <code>px</code> or <code>percent</code> respectively.</p>
 
@@ -265,7 +267,7 @@ for ( let i = 0; i &lt; ofInterest.length; i++ ) {
 
 <ul>
  <li>{{domxref("CSSStyleValue.parse()")}}</li>
- <li>{{domxref("CSSStyleValue.parseAll()")}} </li>
+ <li>{{domxref("CSSStyleValue.parseAll()")}}</li>
 </ul>
 
 <p>As noted above, <code>StylePropertyMapReadOnly.get('--customProperty')</code> returns a {{domxref('CSSUnparsedValue')}}. We can parse <code>CSSUnparsedValue</code> object instances with the inherited {{domxref('CSSStyleValue.parse()')}} and {{domxref('CSSStyleValue.parseAll()')}} methods.</p>
@@ -285,7 +287,7 @@ button {
 	display: inline-block;
 	padding: var(--unit) calc(var(--unit)*2);
 	width: calc(30% + 20px);
-	background: no-repeat 5% center url(https://mdn.mozillademos.org/files/16793/magicwand.png) var(--mainColor);
+	background: no-repeat 5% center url(magicwand.png) var(--mainColor);
 	border: 4px solid var(--mainColor);
 	border-radius: 2px;
 	font-size: calc(var(--unit)*2); color: var(--white);
@@ -309,7 +311,7 @@ const allComputedStyles = button.computedStyleMap();
 let btnWidth = allComputedStyles.get('width')
 
 console.log( btnWidth ); // CSSMathSum
-console.log( btnWidth.values ); // CSSNumericArray {0: CSSUnitValue, 1: CSSUnitValue, length: 2}
+console.log( btnWidth.values ); // CSSNumericArray {0: CSSUnitValue, 1: CSSUnitValue, length: 2}
 console.log( btnWidth.operator ); // 'sum'
 
 // CSSTransformValue
@@ -317,17 +319,17 @@ let transform = allComputedStyles.get('transform');
 
 console.log( transform );        // CSSTransformValue {0: CSSScale, 1: CSSTranslate, length: 2, is2D: true}
 console.log( transform.length ); // 1
-console.log( transform[0] );     // CSSScale {x: CSSUnitValue, y: CSSUnitValue, z: CSSUnitValue, is2D: true}
-console.log( transform[0].x );   // CSSUnitValue {value: 0.95, unit: "number"}
-console.log( transform[0].y );   // CSSUnitValue {value: 0.95, unit: "number"}
-console.log( transform[0].z );   // CSSUnitValue {value: 1, unit: "number"}
+console.log( transform[0] );     // CSSScale {x: CSSUnitValue, y: CSSUnitValue, z: CSSUnitValue, is2D: true}
+console.log( transform[0].x );   // CSSUnitValue {value: 0.95, unit: "number"}
+console.log( transform[0].y );   // CSSUnitValue {value: 0.95, unit: "number"}
+console.log( transform[0].z );   // CSSUnitValue {value: 1, unit: "number"}
 console.log( transform.is2D );   // true
 
 // CSSImageValue
 let bgImage = allComputedStyles.get('background-image');
 
 console.log( bgImage );             // CSSImageValue
-console.log( bgImage.toString() ); // url("https://mdn.mozillademos.org/files/16793/magicwand.png")
+console.log( bgImage.toString() ); // url("magicwand.png")
 
 // CSSUnparsedValue
 let unit = allComputedStyles.get('--unit');
@@ -360,13 +362,13 @@ console.log( parsedUnit.value );
 <pre class="brush: js">// CSSUnparsedValue
 let unit = allComputedStyles.get('--unit');
 
-console.log( unit )    // CSSUnparsedValue {0: " 1.2rem", length: 1}
+console.log( unit )    // CSSUnparsedValue {0: " 1.2rem", length: 1}
 console.log (unit[0] ) // " 1.2rem" </pre>
 
-<p>When we invoke <code>get()</code>, a custom property of type <code>CSSUnparsedValue</code> is returned. Note the space before the <code> 1.2rem</code>.  To get a unit and value, we need a <code>CSSUnitValue</code>, which we can retrieve using the <code>CSSStyleValue.parse()</code> method on the <code>CSSUnparsedValue</code>.</p>
+<p>When we invoke <code>get()</code>, a custom property of type <code>CSSUnparsedValue</code> is returned. Note the space before the <code> 1.2rem</code>. To get a unit and value, we need a <code>CSSUnitValue</code>, which we can retrieve using the <code>CSSStyleValue.parse()</code> method on the <code>CSSUnparsedValue</code>.</p>
 
 <pre class="brush: js">let parsedUnit = CSSNumericValue.parse( unit );
-console.log( parsedUnit );        // CSSUnitValue {value: 1.2, unit: "rem"}
+console.log( parsedUnit );        // CSSUnitValue {value: 1.2, unit: "rem"}
 console.log( parsedUnit.unit );   // "rem"
 console.log( parsedUnit.value );  // 1.2</pre>
 
@@ -381,28 +383,28 @@ console.log( parsedUnit.value );  // 1.2</pre>
 <pre class="brush: js">let btnWidth = allComputedStyles.get('width')
 
 console.log( btnWidth );             // CSSMathSum
-console.log( btnWidth.values );      // CSSNumericArray {0: CSSUnitValue, 1: CSSUnitValue, length: 2}
+console.log( btnWidth.values );      // CSSNumericArray {0: CSSUnitValue, 1: CSSUnitValue, length: 2}
 console.log( btnWidth.operator );    // 'sum'</pre>
 
 <h3 id="CSSTransformValue_with_CSSScale">CSSTransformValue with CSSScale</h3>
 
-<p>The <code><a href="/en-US/docs/Web/CSS/CSS_Display">display: inline-block;</a></code> also enables transforming. In our CSS we have <code>transform: scale(0.95);</code>, which is a {{cssxref('transform')}} function. </p>
+<p>The <code><a href="/en-US/docs/Web/CSS/CSS_Display">display: inline-block;</a></code> also enables transforming. In our CSS we have <code>transform: scale(0.95);</code>, which is a {{cssxref('transform')}} function.</p>
 
 <pre class="brush: js">let transform = allComputedStyles.get('transform');
 
 console.log( transform );        // CSSTransformValue {0: CSSScale, 1: CSSTranslate, length: 2, is2D: true}
 console.log( transform.length ); // 1
-console.log( transform[0] );     // CSSScale {x: CSSUnitValue, y: CSSUnitValue, z: CSSUnitValue, is2D: true}
-console.log( transform[0].x );   // CSSUnitValue {value: 0.95, unit: "number"}
-console.log( transform[0].y );      // CSSUnitValue {value: 0.95, unit: "number"}
-console.log( transform[0].z );   // CSSUnitValue {value: 1, unit: "number"}
+console.log( transform[0] );     // CSSScale {x: CSSUnitValue, y: CSSUnitValue, z: CSSUnitValue, is2D: true}
+console.log( transform[0].x );   // CSSUnitValue {value: 0.95, unit: "number"}
+console.log( transform[0].y );      // CSSUnitValue {value: 0.95, unit: "number"}
+console.log( transform[0].z );   // CSSUnitValue {value: 1, unit: "number"}
 console.log( transform.is2D );   // true</pre>
 
 <p>When we <code>get()</code> the <code>transform</code> property, we get a {{domxref('CSSTransformValue')}}. We can query the length (or number) of transform functions with the .<code>length</code> property.</p>
 
 <p>Seen as we have a length of <code>1</code>, which represents a single transform function, we log the first object and get a <code>CSSScale</code> object. We get <code>CSSUnitValues</code> when we query the <code>x</code>, <code>y</code>, and <code>z</code> scaling. The readonly <code>CSSScale.is2D</code> property is <code>true</code> in this scenario.</p>
 
-<p>Had we added <code>translate()</code>, <code>skew()</code>, and <code>rotate()</code> transform functions, the length would have been <code>4</code>, each with their own <code>x</code>, <code>y</code>, <code>z</code> values, and each with an <code>.is2D</code> property. For example, had we included <code>transform: translate3d(1px, 1px, 3px)</code>, the <code>.get('transform')</code> would have returned a <code>CSSTranslate</code> with <code>CSSUnitValues</code> for <code>x</code>, <code>y</code>, and <code>z</code>, and the readonly .i<code>s2D</code> property would have been <code>false</code>.</p>
+<p>Had we added <code>translate()</code>, <code>skew()</code>, and <code>rotate()</code> transform functions, the length would have been <code>4</code>, each with their own <code>x</code>, <code>y</code>, <code>z</code> values, and each with an <code>.is2D</code> property. For example, had we included <code>transform: translate3d(1px, 1px, 3px)</code>, the <code>.get('transform')</code> would have returned a <code>CSSTranslate</code> with <code>CSSUnitValues</code> for <code>x</code>, <code>y</code>, and <code>z</code>, and the readonly .i<code>s2D</code> property would have been <code>false</code>.</p>
 
 <h3 id="CSSImageValue">CSSImageValue</h3>
 
@@ -411,11 +413,11 @@ console.log( transform.is2D );   // true</pre>
 <pre class="brush: js">let bgImage = allComputedStyles.get('background-image');
 
 console.log( bgImage );             // CSSImageValue
-console.log( bgImage.toString() );  // url("https://mdn.mozillademos.org/files/16793/magicwand.png")</pre>
+console.log( bgImage.toString() );  // url("magicwand.png")</pre>
 
-<p>When we <code>get()</code> the <code>'background-image'</code>, a {{domxref('CSSImageValue')}} is returned. While we used the CSS {{cssxref('background')}} shorthand property, the inherited {{domxref('Object.prototype.toString()')}} method, shows we returned only the image, '<code>url("https://mdn.mozillademos.org/files/16793/magicwand.png")'</code>.</p>
+<p>When we <code>get()</code> the <code>'background-image'</code>, a {{domxref('CSSImageValue')}} is returned. While we used the CSS {{cssxref('background')}} shorthand property, the inherited {{domxref('Object.prototype.toString()')}} method, shows we returned only the image, '<code>url("magicwand.png")'</code>.</p>
 
-<p>Notice that the value returned is the absolute path to the image — this is returned even if the original <code>url()</code> value was relative. Had the background image been a gradient or multiple background images,  <code>.get('background-image') </code>would have returned a <code>CSSStyleValue</code>. The <code>CSSImageValue</code> is returned only if there is a single image, and only if that single image declaration is a URL.</p>
+<p>Notice that the value returned is the absolute path to the image — this is returned even if the original <code>url()</code> value was relative. Had the background image been a gradient or multiple background images, <code>.get('background-image') </code>would have returned a <code>CSSStyleValue</code>. The <code>CSSImageValue</code> is returned only if there is a single image, and only if that single image declaration is a URL.</p>
 
 <h3 id="Summary">Summary</h3>
 

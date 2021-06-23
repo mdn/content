@@ -2,15 +2,15 @@
 title: 'SyntaxError: unterminated string literal'
 slug: Web/JavaScript/Reference/Errors/Unterminated_string_literal
 tags:
-- Error
-- Errors
-- JavaScript
-- SyntaxError
+  - Error
+  - Errors
+  - JavaScript
+  - SyntaxError
 ---
 <div>{{jsSidebar("Errors")}}</div>
 
 <p>The JavaScript error "unterminated string literal" occurs when there is an unterminated
-  {{jsxref("String")}} somewhere. String literals must be enclosed by single
+  <a href="/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#string_literals">string literal</a> somewhere. String literals must be enclosed by single
   (<code>'</code>) or double (<code>"</code>) quotes.</p>
 
 <h2 id="Message">Message</h2>
@@ -25,10 +25,11 @@ SyntaxError: unterminated string literal (Firefox)
 
 <h2 id="What_went_wrong">What went wrong?</h2>
 
-<p>There is an unterminated {{jsxref("String")}} somewhere. String literals must be
+<p>There is an unterminated
+  <a href="/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#string_literals">string literal</a> somewhere. String literals must be
   enclosed by single (<code>'</code>) or double (<code>"</code>) quotes. JavaScript makes
   no distinction between single-quoted strings and double-quoted strings. <a
-    href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#Escape_notation">Escape
+    href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#escape_notation">Escape
     sequences</a> work in strings created with either single or double quotes. To fix this
   error, check if:</p>
 
@@ -50,7 +51,7 @@ SyntaxError: unterminated string literal (Firefox)
 // SyntaxError: unterminated string literal</pre>
 
 <p>Instead, use the <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Addition">+
+    href="/en-US/docs/Web/JavaScript/Reference/Operators/Addition">+
     operator</a>, a backslash, or <a
     href="/en-US/docs/Web/JavaScript/Reference/Template_literals">template literals</a>.
   The <code>+</code> operator variant looks like this:</p>
@@ -81,7 +82,7 @@ otherwise my code is unreadable.';
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li>{{jsxref("String")}}</li>
+  <li><a href="/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#string_literals">string literal</a></li>
   <li><a href="/en-US/docs/Web/JavaScript/Reference/Template_literals">Template
       literals</a></li>
 </ul>

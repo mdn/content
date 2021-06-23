@@ -26,8 +26,7 @@ var domException = new DOMException(message, name);</pre>
   <dd>A description of the exception. If not present, the empty string <code>''</code> is
     used.</dd>
   <dt><code>name</code> {{optional_inline}}</dt>
-  <dd>Returns a {{domxref("DOMString")}} that contains one of the strings associated with
-    an <a href="Web/API/DOMException#Error_constants">error constant</a>.</dd>
+  <dd>A {{domxref("DOMString")}}. If the specified name is a <a href="/en-US/docs/Web/API/DOMException#error_names">standard error name</a>, then getting the <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMException/code"><code>code</code></a> property of the <code>DOMException</code> object will return the code number corresponding to the specified name.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -43,20 +42,7 @@ var domException = new DOMException(message, name);</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('WebIDL', '#dom-domexception-domexception', 'DOMException()')}}</td>
-      <td>{{Spec2('WebIDL')}}</td>
-      <td>Adds the constructor for the <code>DOMException</code> class.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

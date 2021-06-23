@@ -106,8 +106,16 @@ new Intl.DateTimeFormat(locales, options)
 				"<code>indian</code>", "<code>islamic</code>", "<code>iso8601</code>", "
 				<code>japanese</code>", "<code>persian</code>", "<code>roc</code>".</dd>
 			<dt><code>dayPeriod</code></dt>
-			<dd>The way day periods should be expressed. Possible values include:
-				"<code>narrow</code>", "<code>short</code>", " <code>long</code>".</dd>
+			<dd>The formatting style used for day periods like "in the morning", "am", "noon", "n" etc. Possible values include:
+				"<code>narrow</code>", "<code>short</code>", " <code>long</code>".
+				<div class="notecard note">
+					<p><strong>Note:</strong></p>
+					<ul>
+						<li>This option only has an effect if a 12-hour clock is used.</li>
+						<li>Many locales use the same string irrespective of the width specified.</li>
+					</ul>
+				</div>
+			</dd>
 			<dt><code>numberingSystem</code></dt>
 			<dd>Numbering System. Possible values include: "<code>arab</code>",
 				"<code>arabext</code>", " <code>bali</code>", "<code>beng</code>",
@@ -169,7 +177,7 @@ new Intl.DateTimeFormat(locales, options)
 			against all available subset-representation combinations to find the best
 			match. Two algorithms are available for this negotiation and selected by the
 			<code>formatMatcher</code> property: A <a
-				href="http://www.ecma-international.org/ecma-402/1.0/#BasicFormatMatcher">fully
+				href="https://www.ecma-international.org/ecma-402/1.0/#BasicFormatMatcher">fully
 				specified "<code>basic</code>" algorithm</a> and an
 			implementation-dependent "<code>best fit</code>" algorithm.</p>
 
@@ -264,8 +272,7 @@ new Intl.DateTimeFormat(locales, options)
 <p>In basic use without specifying a locale, <code>DateTimeFormat</code> uses the default
 	locale and default options.</p>
 
-<pre
-	class="brush: js">var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+<pre class="brush: js">let date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // toLocaleString without arguments depends on the implementation,
 // the default locale, and the default time zone
@@ -289,6 +296,25 @@ let o = new Intl.DateTimeFormat("en" , {
   dateStyle: "short"
 });
 console.log(o.format(Date.now())); // "07/07/20, 13:31:55 AM"</pre>
+
+<h3 id="using_dayperiod">Using dayPeriod</h3>
+
+<p>Use the <code>dayPeriod</code> option to output a string for the times of day ("in the morning", "at night", "noon", etc.). Note, that this only works when formatting for a 12 hour clock (<code>hourCycle: 'h12'</code>) and that for many locales the strings are the same irrespective of the value passed for the <code>dayPeriod</code>.</p>
+
+<pre class="brush: js">let date = Date.UTC(2012, 11, 17, 4, 0, 42);
+
+console.log(new Intl.DateTimeFormat('en-GB', { hour: 'numeric', hourCycle: 'h12', 
+dayPeriod: 'short', timeZone: 'UTC' }).format(date));
+// > 4 at night"  (same formatting in en-GB for all dayPeriod values)
+
+console.log(new Intl.DateTimeFormat('fr', { hour: 'numeric', hourCycle: 'h12',
+    dayPeriod: 'narrow', timeZone: 'UTC' }).format(date));
+// > "4 mat."  (same output in French for both narrow/short dayPeriod)
+
+console.log(new Intl.DateTimeFormat('fr', { hour: 'numeric', hourCycle: 'h12', 
+    dayPeriod: 'long', timeZone: 'UTC' }).format(date));
+// > "4 du matin"</pre>
+
 
 <h2 id="Specifications">Specifications</h2>
 

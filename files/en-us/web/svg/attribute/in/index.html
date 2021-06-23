@@ -15,7 +15,24 @@ tags:
 
 <p>If the value for {{SVGAttr("result")}} appears multiple times within a given {{SVGElement("filter")}} element, then a reference to that result will use the closest preceding filter primitive with the given value for attribute {{SVGAttr("result")}}.</p>
 
-<p>Fourteen elements are using this attribute: {{SVGElement("feBlend")}}, {{SVGElement("feColorMatrix")}}, {{SVGElement("feComponentTransfer")}}, {{SVGElement("feComposite")}}, {{SVGElement("feConvolveMatrix")}}, {{SVGElement("feDiffuseLighting")}}, {{SVGElement("feDisplacementMap")}}, {{SVGElement("feDropShadow")}}, {{SVGElement("feGaussianBlur")}}, {{SVGElement("feMergeNode")}}, {{SVGElement("feMorphology")}}, {{SVGElement("feOffset")}}, {{SVGElement("feSpecularLighting")}}, {{SVGElement("feTile")}}</p>
+<p>You can use this attribute with the following SVG elements:</p>
+
+<ul>
+  <li>{{SVGElement("feBlend")}}</li>
+  <li>{{SVGElement("feColorMatrix")}}</li>
+  <li>{{SVGElement("feComponentTransfer")}}</li>
+  <li>{{SVGElement("feComposite")}}</li>
+  <li>{{SVGElement("feConvolveMatrix")}}</li>
+  <li>{{SVGElement("feDiffuseLighting")}}</li>
+  <li>{{SVGElement("feDisplacementMap")}}</li>
+  <li>{{SVGElement("feDropShadow")}}</li>
+  <li>{{SVGElement("feGaussianBlur")}}</li>
+  <li>{{SVGElement("feMergeNode")}}</li>
+  <li>{{SVGElement("feMorphology")}}</li>
+  <li>{{SVGElement("feOffset")}}</li>
+  <li>{{SVGElement("feSpecularLighting")}}</li>
+  <li>{{SVGElement("feTile")}}</li>
+</ul>
 
 <h2 id="Usage_notes">Usage notes</h2>
 
@@ -73,7 +90,7 @@ tags:
       &lt;feBlend in="BackgroundImage" in2="SourceGraphic" mode="multiply"/&gt;
     &lt;/filter&gt;
   &lt;/defs&gt;
-  &lt;image xlink:href="https://developer.mozilla.org/files/6457/mdn_logo_only_color.png" x="10%" y="10%" width="80%" height="80%"/&gt;
+  &lt;image xlink:href="mdn_logo_only_color.png" x="10%" y="10%" width="80%" height="80%"/&gt;
   &lt;circle cx="50%" cy="40%" r="40%" fill="#c00" style="filter:url(#backgroundMultiply);" /&gt;
 &lt;/svg&gt;
 
@@ -81,7 +98,7 @@ tags:
   &lt;defs&gt;
     &lt;filter id="imageMultiply"&gt;
       &lt;!-- This is a workaround. --&gt;
-      &lt;feImage xlink:href="https://developer.mozilla.org/files/6457/mdn_logo_only_color.png" x="10%" y="10%" width="80%" height="80%"/&gt;
+      &lt;feImage xlink:href="mdn_logo_only_color.png" x="10%" y="10%" width="80%" height="80%"/&gt;
       &lt;feBlend in2="SourceGraphic" mode="multiply"/&gt;
     &lt;/filter&gt;
   &lt;/defs&gt;

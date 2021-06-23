@@ -9,8 +9,8 @@ tags:
 ---
 <div>{{MDNSidebar}}</div>
 
+<!-- Remove div below here before publishing -->
 <div class="notecard note">
-
 <h2 id="Remove_before_publishing">Remove before publishing</h2>
 
 <h3 id="Page_front_matter">Page front matter</h3>
@@ -38,7 +38,6 @@ tags:
   <p>Optionally, you can elect to include some other tags that represent terms people might search for when looking for information on that technology. For example on WebVR interface pages we include <strong>VR</strong> and <strong>Virtual reality</strong>.</p></dd>
 </dl>
 
-
 <h3 id="Top_macros">Top macros</h3>
 
 <p>There are three macro calls at the top of the template by default. You should update or delete them according to the advice below:</p>
@@ -50,7 +49,6 @@ tags:
 	<div><code>\{{APIRef("<em>GroupDataName</em>")}}</code> — this generates the left hand reference sidebar showing quick reference links related to the current page. For example, every page in the <a href="/en-US/docs/Web/API/WebVR_API">WebVR API</a> has the same sidebar, which points to the other pages in the API. To generate the correct sidebar for your API, you need to add a GroupData entry to our KumaScript GitHub repo, and include the entry's name inside the macro call in place of <em>GroupDataName</em>. See our <a href="/en-US/docs/MDN/Contribute/Howto/Write_an_API_reference/Sidebars">API reference sidebars</a> guide for information on how to do this.</div>
 	</li>
 </ul>
-
 
 <h3 id="Browser_compatibility">Browser compatibility</h3>
 
@@ -69,6 +67,7 @@ tags:
 <p>Use the <code>\{{specifications("path.to.feature.Interface")}}</code> macro to add tables for the main specifications.</p>
 
 </div>
+<!-- Remove div above here before publishing -->
 
 <div>{{draft}}{{securecontext_header}}{{APIRef("GroupDataName")}}</div>
 

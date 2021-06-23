@@ -98,7 +98,7 @@ httpRequest.send();
  <li>4 (complete) or (<strong>request finished and response is ready</strong>)</li>
 </ul>
 
-<p>Next, check the <a href="/en-US/docs/Web/HTTP/Status">HTTP response status codes</a> of the HTTP response. The possible codes are listed at the <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html">W3C</a>. In the following example, we differentiate between a successful and unsuccessful AJAX call by checking for a <a href="/en-US/docs/Web/HTTP/HTTP_response_codes#successful_responses"><code>200 OK</code></a> response code.</p>
+<p>Next, check the <a href="/en-US/docs/Web/HTTP/Status">HTTP response status codes</a> of the HTTP response. The possible codes are listed at the <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html">W3C</a>. In the following example, we differentiate between a successful and unsuccessful AJAX call by checking for a <a href="/en-US/docs/Web/HTTP/Status#successful_responses"><code>200 OK</code></a> response code.</p>
 
 <pre class="brush: js">if (httpRequest.status === 200) {
     // Perfect!
@@ -213,7 +213,7 @@ var root_node = xmldoc.getElementsByTagName('root').item(0);
 alert(root_node.firstChild.data);
 </pre>
 
-<p>This code takes the <code>XMLDocument</code> object given by <code>responseXML</code> and uses DOM methods to access some of the data contained in the XML document. You can see the <code>test.xml</code> <a href="http://www.w3clubs.com/mozdev/test.xml">here</a> and the updated test script <a href="http://www.w3clubs.com/mozdev/httprequest_test_xml.html">here</a>.</p>
+<p>This code takes the <code>XMLDocument</code> object given by <code>responseXML</code> and uses DOM methods to access some of the data contained in the XML document.</p>
 
 <h2 id="Step_5_–_Working_with_data">Step 5 – Working with data</h2>
 
