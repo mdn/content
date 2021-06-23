@@ -84,7 +84,8 @@ sort(function compareFn(firstEl, secondEl) { ... })
 
 <ul>
   <li>If <code>compareFunction(a, b)</code> returns a value &gt; than 0, sort <code>b</code> before <code>a</code>.</li>
-  <li>If <code>compareFunction(a, b)</code> returns a value ≤ 0, leave <code>a</code> and <code>b</code> in the same order.
+  <li>If <code>compareFunction(a, b)</code> returns a value &lt; than 0, sort <code>a</code> before <code>b</code>.</li>
+  <li>If <code>compareFunction(a, b)</code> returns 0, leave <code>a</code> and <code>b</code> in the same order.
     <div class="notecard note">
       <p><strong>Note:</strong> The <a href="https://www.ecma-international.org/ecma-262/10.0/index.html#sec-intro">ECMAScript Standard, 10th edition</a> (2019) 
         algorithm mandates stable sorting, which means elements that compare equal must remain in their original order with respect to each other. 
