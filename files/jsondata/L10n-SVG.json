@@ -1,0 +1,434 @@
+{
+  "categories": {
+    "en-US": "Categories",
+    "de": "Kategorien",
+    "es": "Categorias",
+    "ja": "カテゴリー",
+    "pt-BR": "Categorias",
+    "fr": "Catégories",
+    "zh-CN": "类别",
+    "ru": "Категории"
+  },
+  "info_in_preview_not_available": {
+    "en-US": "SVG info in preview not available",
+    "de": "SVG-Info in der Vorschau nicht verfügbar",
+    "ja": "SVG info はプレビューでは利用できません"
+  },
+  "permittedContent": {
+    "en-US": "Permitted content",
+    "de": "Erlaubter Inhalt",
+    "es": "Contenido permitido",
+    "ja": "許可されている内容",
+    "pt-BR": "Conteúdo permitido",
+    "fr": "Contenu autorisé",
+    "zh-CN": "允许的内容物",
+    "ru": "Разрешённый контент"
+  },
+  "anyNumberOfElementsAnyOrder": {
+    "en-US": "Any number of the following elements, in any order:",
+    "de": "Beliebige Anzahl der folgenden Elemente, in beliebiger Reihenfolge:",
+    "es": "Cualquier n\u00famero de los siguientes elementos, en cualquier orden:",
+    "fr": "Tout \u00e9l\u00e9ment de cette liste, quel qu'en soit l'ordre:",
+    "ja": "任意の数、任意の順序の以下の要素。",
+    "pt-BR": "Qualquer n\u00famero dos seguintes elementos, em qualquer ordem:",
+    "zh-CN": "\u4efb\u610f\u6570\u91cf\u3001\u4efb\u610f\u6392\u5e8f\u7684\u4e0b\u5217\u5143\u7d20\uff1a",
+    "ru": "Любое количество следующих элементов, в любом порядке:"
+  },
+  "anyElementsOrCharacterData": {
+    "en-US": "Any elements or character data",
+    "de": "Beliebige Elemente oder Zeichendaten",
+    "es": "Cualquier elemento o datos de caracter",
+    "fr": "Tout \u00e9l\u00e9ment ou caract\u00e8re de donn\u00e9e",
+    "ja": "あらゆる要素や文字データ",
+    "pt-BR": "Quaisquer elementos ou dados de caracteres",
+    "zh-CN": "\u4efb\u4f55\u5143\u7d20\u6216\u5b57\u7b26\u6570\u636e",
+    "ru": "Любые элементы и символы"
+  },
+  "characterDataElementsInAnyOrder": {
+    "en-US": "Character data and any number of the following elements, in any order:",
+    "de": "Zeichendaten und eine beliebige Anzahl folgender Elemente in beliebiger Reihenfolge:",
+    "es": "Datos de caracteres y cualquier cantidad de los siguientes elementos en cualquier \u00f3rden:",
+    "fr": "Des caract\u00e8res et n'importe quel nombre des \u00e9l\u00e9ments suivants, dans n'importe quel ordre:",
+    "ja": "任意の順で文字データと任意の数の以下の要素。",
+    "pt-BR": "Dados de caracteres e qualquer n\u00famero dos seguintes elementos, em qualquer ordem:",
+    "zh-CN": "\u5b57\u7b26\u6570\u636e\u4ee5\u53ca\u4efb\u610f\u6570\u91cf\u3001\u4efb\u610f\u6392\u5e8f\u7684\u4e0b\u5217\u5143\u7d20\uff1a",
+    "ru": "Символы и любое количество следующих элементов, в любом порядке:"
+  },
+  "empty": {
+    "en-US": "Empty",
+    "de": "Leer",
+    "es": "Vacío",
+    "fr": "Vide",
+    "ja": "空",
+    "pt-BR": "Vazio",
+    "zh-CN": "空洞",
+    "ru": "Такого нет"
+  },
+  "anyNumberOfElementsWithMeshgradientElement": {
+    "en-US": "Any number of animation elements, descriptive elements, {{SVGElement(\"mask\")}}, {{SVGElement(\"clipPath\")}}, {{SVGElement(\"marker\")}}, {{SVGElement(\"script\")}}, and {{SVGElement(\"style\")}} elements, along with zero or one {{SVGElement(\"meshgradient\")}} element.",
+    "de": "Beliebige Anzahl von Animationselementen, beschreibenden Elementen, {{SVGElement(\"mask\")}}, {{SVGElement(\"clipPath\")}}, {{SVGElement(\"marker\")}}, {{SVGElement(\"script\")}} und {{SVGElement(\"style\")}} Elementen zusammen mit keinem oder einem {{SVGElement(\"meshgradient\")}} Element.",
+    "ja": "任意の数のアニメーション要素、説明的要素、 {{SVGElement(\"mask\")}}, {{SVGElement(\"clipPath\")}}, {{SVGElement(\"marker\")}}, {{SVGElement(\"script\")}}, {{SVGElement(\"style\")}} の各要素と 0 個または 1 個の {{SVGElement(\"meshgradient\")}} 要素。"
+  },
+  "anyNumberOfElementsDescriptiveElementsScriptAndTwoToFourStopElements": {
+    "en-US": "Any number of descriptive elements, {{SVGElement(\"script\")}} and from two to four {{SVGElement(\"stop\")}} elements.",
+    "de": "Beliebige Anzahl von beschreibenden Elementen, {{SVGElement(\"script\")}} und zwei bis vier {{SVGElement(\"stop\")}} Elemente.",
+    "ja": "任意の数の説明的要素、 {{SVGElement(\"script\")}} および 2 から 4 個の {{SVGElement(\"stop\")}} 要素。"
+  },
+  "animationElement": {
+    "en-US": "Animation element",
+    "de": "Animationselement",
+    "fr": "Élément d'animation",
+    "ja": "アニメーション要素",
+    "pt-BR": "Elemento de animação",
+    "zh-CN": "动画元素",
+    "ru": "Элемент анимации"
+  },
+  "basicShapeElement": {
+    "en-US": "Basic shape element",
+    "de": "Grundformelement",
+    "es": "Elemento de forma básica",
+    "fr": "Élément de forme basique",
+    "ja": "基本シェイプ要素",
+    "pt-BR": "Elemento básico de forma",
+    "zh-CN": "基本元素",
+    "ru": "Базовые фигуры"
+  },
+  "containerElement": {
+    "en-US": "Container element",
+    "de": "Containerelement",
+    "es": "Elemento contenedor",
+    "fr": "Élément conteneur",
+    "ja": "コンテナー要素",
+    "pt-BR": "Elemento recipiente",
+    "zh-CN": "容器元素",
+    "ru": "Контейнеры"
+  },
+  "descriptiveElement": {
+    "en-US": "Descriptive element",
+    "de": "Beschreibendes Element",
+    "es": "Elemento descriptivo",
+    "fr": "Élément descriptif",
+    "ja": "説明的要素",
+    "pt-BR": "Elemento descritivo",
+    "zh-CN": "描述性元素",
+    "ru": "Элемент описания"
+  },
+  "filterPrimitiveElement": {
+    "en-US": "Filter primitive element",
+    "de": "Filterelement",
+    "pt-BR": "Elemento de filtro primitivo",
+    "fr": "Élément de filtre",
+    "ja": "フィルター構成要素",
+    "zh-CN": "滤镜元素",
+    "ru": "Примитивный фильтр"
+  },
+  "fontElement": {
+    "en-US": "Font element",
+    "de": "Schriftelement",
+    "fr": "Elément de police",
+    "ja": "フォント要素",
+    "pt-BR": "Elemento de fonte",
+    "zh-CN": "字体元素",
+    "ru": "Шрифты"
+  },
+  "gradientElement": {
+    "en-US": "Gradient element",
+    "de": "Farbverlaufselement",
+    "ja": "グラデーション要素",
+    "pt-BR": "Elemento gradiente",
+    "fr": "Élément de dégradé",
+    "zh-CN": "渐变元素",
+    "ru": "Градиент"
+  },
+  "graphicsElement": {
+    "en-US": "Graphics element",
+    "de": "Grafikelement",
+    "es": "Elemento gráfico",
+    "fr": "Élément graphique",
+    "ja": "グラフィック要素",
+    "pt-BR": "Elemento gráfico",
+    "zh-CN": "图形元素",
+    "ru": "Графические элементы"
+  },
+  "graphicsReferencingElement": {
+    "en-US": "Graphics referencing element",
+    "de": "Grafik referenzierendes Element",
+    "fr": "Elément en rapport avec les graphismes",
+    "ja": "グラフィック参照要素",
+    "pt-BR": "Elemento gráfico referenciado",
+    "zh-CN": "图形引用元素",
+    "ru": "Элементы отсылки к графике"
+  },
+  "lightSourceElement": {
+    "en-US": "Light source element",
+    "de": "Lichtquellenelement",
+    "fr": "Élément de source de lumière",
+    "ja": "光源要素",
+    "zh-CN": "光源元素",
+    "ru": "Источникм света"
+  },
+  "neverRenderedElement": {
+    "en-US": "Never-rendered element",
+    "de": "Niemals gerendertes Element",
+    "ja": "非描画要素"
+  },
+  "paintServerElement": {
+    "en-US": "Paint server element",
+    "de": "Paintserver Element",
+    "ja": "ペイントサーバー要素"
+  },
+  "renderableElement": {
+    "en-US": "Renderable element",
+    "de": "Renderbares Element",
+    "ja": "描画可能要素"
+  },
+  "shapeElement": {
+    "en-US": "Shape element",
+    "de": "Formelement",
+    "es": "Elemento forma",
+    "fr": "Élément de forme",
+    "ja": "図形要素",
+    "pt-BR": "Elemento de forma",
+    "zh-CN": "形状元素",
+    "ru": "Фигура"
+  },
+  "structuralElement": {
+    "en-US": "Structural element",
+    "de": "Strukturelement",
+    "es": "Elemento estructural",
+    "fr": "Élément structurel",
+    "ja": "構造的要素",
+    "pt-BR": "elemento estrutural",
+    "zh-CN": "结构元素",
+    "ru": "Структурный элемент"
+  },
+  "textContentElement": {
+    "en-US": "Text content element",
+    "de": "Textinhaltselement",
+    "es": "Elemento de contenido de texto",
+    "fr": "Elément conteneur de texte",
+    "ja": "テキストコンテンツ要素",
+    "pt-BR": "Elemento de conteúdo textual",
+    "zh-CN": "文本内容元素",
+    "ru": "Текстосодержащий элемент"
+  },
+  "textContentChildElement": {
+    "en-US": "Text content child element",
+    "de": "Textinhaltskindelement",
+    "fr": "Elément enfant de conteneur de texte",
+    "ja": "テキストコンテンツの子要素",
+    "pt-BR": "Elemento filho de conteúdo textual",
+    "zh-CN": "文本内容子元素",
+    "ru": "Текстосодержащие дочерние элементы"
+  },
+  "noCategory": {
+    "en-US": "None",
+    "de": "Keine",
+    "es": "Ninguna",
+    "fr": "Aucune",
+    "ja": "無し",
+    "pt-BR": "Nenhum",
+    "zh-CN": "无",
+    "ru": "Нет"
+  },
+  "animationElements": {
+    "en-US": "Animation elements",
+    "de": "Animationselemente",
+    "es": "Elementos de animación",
+    "fr": "Éléments d'animation",
+    "ja": "アニメーション要素",
+    "pt-BR": "Elementos de animação",
+    "zh-CN": "动画元素",
+    "ru": "Элементы анимации"
+  },
+  "descriptiveElements": {
+    "en-US": "Descriptive elements",
+    "de": "Beschreibende Elemente",
+    "es": "Elementos descriptivos",
+    "fr": "Éléments descriptifs",
+    "ja": "説明的要素",
+    "pt-BR": "Elementos descritivos",
+    "zh-CN": "描述性元素",
+    "ru": "Элементы описания"
+  },
+  "filterPrimitiveElements": {
+    "en-US": "Filter primitive elements",
+    "de": "Filterelemente",
+    "fr": "Éléments de primitive de filtre",
+    "ja": "フィルター構成要素",
+    "pt-BR": "Elementos de filtro primitivo",
+    "zh-CN": "滤镜元素",
+    "ru": "Примитивные фильтры"
+  },
+  "gradientElements": {
+    "en-US": "Gradient elements",
+    "de": "Farbverlaufselemente",
+    "fr": "Eléments de dégradés",
+    "ja": "グラデーション要素",
+    "pt-BR": "Elementos de gradiente",
+    "zh-CN": "渐变元素",
+    "ru": "Градиенты"
+  },
+  "shapeElements": {
+    "en-US": "Shape elements",
+    "de": "Formelemente",
+    "fr": "Éléments de formes",
+    "ja": "図形要素",
+    "pt-BR": "Elementos de forma",
+    "zh-CN": "形状元素",
+    "ru": "Фигуры"
+  },
+  "structuralElements": {
+    "en-US": "Structural elements",
+    "de": "Strukturelemente",
+    "es": "Elementos estructurales",
+    "fr": "Éléments structurels",
+    "ja": "構造的要素",
+    "pt-BR": "Elementos estruturais",
+    "zh-CN": "结构化元素",
+    "ru": "Структурные элементы"
+  },
+  "textContentChildElements": {
+    "en-US": "Text content child elements"
+  },
+  "textContentElements": {
+    "en-US": "Text content elements",
+    "de": "Textinhaltselemente",
+    "fr": "Éléments avec du contenu texte",
+    "es": "Elementos de contenido de texto",
+    "ja": "テキストコンテンツの子要素",
+    "pt-BR": "Elementos de conteúdo textual",
+    "zh-CN": "文字内容子元素",
+    "ru": "Текстосодержащие элементы"
+  },
+  "animationAdditionAttributes": {
+    "en-US": "Animation addition attributes",
+    "de": "Animationsadditionsattribute",
+    "fr": "Attributs d'ajout d'animation",
+    "ja": "アニメーション追加属性",
+    "pt-BR": "Atributos de animação adicionais",
+    "zh-CN": "动画累加属性",
+    "ru": "Атрибуты добавления анимации"
+  },
+  "animationAttributeTargetAttributes": {
+    "en-US": "Animation attribute target attributes",
+    "de": "Animationsattributzielattribute",
+    "fr": "Attributs de cible d'animation",
+    "ja": "アニメーション属性対象属性",
+    "pt-BR": "Atributos de destino do atributo da animação",
+    "zh-CN": "动画属性目标属性",
+    "ru": "Атрибуты задания анимации"
+  },
+  "animationEventAttributes": {
+    "en-US": "Animation event attributes",
+    "de": "Animationsereignisattribute",
+    "fr": "Attributs d'événement d'animation",
+    "ja": "アニメーションイベント属性",
+    "pt-BR": "Atributos de eventos da animação",
+    "zh-CN": "动画事件属性",
+    "ru": "Атрибуты событий анимации"
+  },
+  "animationTimingAttributes": {
+    "en-US": "Animation timing attributes",
+    "de": "Animationstimingattribute",
+    "fr": "Attributs de temporisation d'animation",
+    "ja": "アニメーションタイミング属性",
+    "pt-BR": "Atributos de cronometragem da animação",
+    "zh-CN": "动画定时属性",
+    "ru": "Временные атрибуты анимации"
+  },
+  "animationValueAttributes": {
+    "en-US": "Animation value attributes",
+    "de": "Animationswertattribute",
+    "fr": "Attributs de valeur d'animation",
+    "ja": "アニメーション値属性",
+    "pt-BR": "Atributos de valor de animação",
+    "zh-CN": "动画值属性",
+    "ru": "Атрибуты значений анимации"
+  },
+  "ariaAttributes": {
+    "en-US": "ARIA attributes",
+    "de": "ARIA Attribute",
+    "ja": "ARIA 属性"
+  },
+  "conditionalProccessingAttributes": {
+    "en-US": "Conditional proccessing attributes",
+    "de": "Attribute zur bedingten Verarbeitung",
+    "fr": "Attributs de traitement conditionnel",
+    "ja": "条件処理属性",
+    "pt-BR": "Atributos de processamento condicional",
+    "zh-CN": "条件处理属性",
+    "ru": "Атрибуты условной обработки"
+  },
+  "coreAttributes": {
+    "en-US": "Core attributes",
+    "de": "Kernattribute",
+    "pt-BR": "Atributos centrais",
+    "fr": "Attributs centraux",
+    "ja": "コア属性",
+    "zh-CN": "核心属性",
+    "ru": "Атрибуты ядра"
+  },
+  "documentEventAttributes": {
+    "en-US": "Document event attributes",
+    "de": "Dokumentereignisattribute",
+    "fr": "Attributs d'événement du document",
+    "ja": "文書イベント属性",
+    "pt-BR": "Atributos de eventos do documento",
+    "zh-CN": "文档事件属性",
+    "ru": "Атрибуты событий документа"
+  },
+  "filterAttributes": {
+    "en-US": "Filter attributes",
+    "de": "Filterattribute",
+    "fr": "Attributs de filtre",
+    "ja": "フィルター属性",
+    "zh-CN": "滤镜属性属性",
+    "ru": "Атрибуты фильтров"
+  },
+  "globalEventAttributes": {
+    "en-US": "Global event attributes",
+    "de": "Globale Ereignisattribute",
+    "ja": "グローバルイベント属性"
+  },
+  "graphicalEventAttributes": {
+    "en-US": "Graphical event attributes",
+    "de": "Grafikereignisattribute",
+    "pt-BR": "Atributos de eventos gráficos",
+    "fr": "Attributs d'événement graphique",
+    "ja": "グラフィックイベント属性",
+    "zh-CN": "图形事件属性",
+    "ru": "Атрибуты графических событий"
+  },
+  "presentationAttributes": {
+    "en-US": "Presentation attributes",
+    "de": "Präsentationsattribute",
+    "pt-BR": "Atributos de apresentação",
+    "fr": "Attributs de présentation",
+    "ja": "プレゼンテーション属性",
+    "zh-CN": "外观属性",
+    "ru": "Атрибуты показа"
+  },
+  "styleAttributes": {
+    "en-US": "Style attributes",
+    "de": "Stilattribute",
+    "ja": "スタイル属性"
+  },
+  "transferFunctionAttributes": {
+    "en-US": "Transfer function attributes",
+    "fr": "Attributs de fonction de transfert",
+    "de": "Transferfunktionsattribute",
+    "ja": "変換関数属性",
+    "zh-CN": "变换函数属性",
+    "ru": "Функция передачи атрибутов"
+  },
+  "xLinkAttributes": {
+    "en-US": "XLink attributes",
+    "de": "XLink Attribute",
+    "fr": "Attribut XLink",
+    "ja": "XLink 属性",
+    "pt-BR": "Atributos Xlink",
+    "zh-CN": "Xlink属性",
+    "ru": "XLink атрибуты"
+  }
+}
