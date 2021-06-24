@@ -364,30 +364,41 @@ cell 4    | cell 5    | cell 6
 
 <p>To create a live sample, writers use the <code>\{{EmbedLiveSample}}</code> KumaScript macro.</p>
 
-<p>To find the code blocks that should belong to a live sample, we consider that page headings (H2-H6) implicitly divide up the document into nested sections. So, for example:</p>
+<p>To find the code blocks that should belong to a live sample, we consider that page headings (H1-H6) implicitly divide up the document into nested sections. So, for example:</p>
 
 <pre>
-                 H2#Syntax   H3#Params   H3#Return   H2#Examples   H3#Example1
-H2 Syntax           |
-                    |
-Some content        |
-                    |
-H3 Params           |           |
-                    |           |
-More content        |           |
-                    |           |
-H3 Return           |                       |
-                    |                       |
-Yet more content    |                       |
-                    |                       |
-H2 Examples                                           |
-                                                      |
-H3 Example1                                           |            |
-                                                      |            |
-An example                                            |            |
+  H1 Title
+  |
+  ├── Introductory prose content
+  │
+  ├── H2 Syntax
+  |   |
+  │   ├── Syntax code block
+  │   │
+  │   ├── H3 Parameters
+  |   |   |
+  │   │   └── Parameters prose content
+  │   │
+  │   └── H3 Return value
+  |       |
+  │       └── Return value prose content
+  │
+  └── H2 Examples
+      |   
+      └── H3 HTML
+      |   |
+      |   └── HTML code block
+      |
+      └── H3 JavaScript
+      |   |
+      |   └── JS code block
+      |
+      └── H3 Result 
+          |
+          └── \{{EmbedLiveSample}}
 </pre>
 
-<p>In this example there are five sections, one for each heading, and the sections defined by the H3 headings are nested inside the section defined by the H2 headings above them.</p>
+<p>In this example there are eight sections, one for each heading. The sections defined by the H2 headings contain the sections defined by the H3 headings under them, and the top-level section defined by the H1 heading contains the entire document.</p>
 
 <p>Given this model, the rule for finding the code blocks to include in a live sample is:</p>
 
@@ -400,7 +411,45 @@ An example                                            |            |
   <li>If you did find code blocks, build the document and insert the iframe where the macro call was found.</li>
 </ol>
 
-<p>For example, in the case above, if the macro call was in <code>H3#Example1</code>, we would look in: <code>H3#Example1</code>, then (if no code blocks were found there) in <code>H2#Examples</code>.</p>
+<p>For example, in the case above, the macro call is in <code>H3 Result</code>, so we would:
+  <ol>
+    <li>look in <code>H2 Examples > H3 Result</code>, and not find any code blocks</li>
+    <li>go up to <code>H2 Examples</code>, and look there</li>
+    <li>find the code blocks in <code>H2 Examples > H3 HTML</code> and <code>H2 Examples > H3 JavaScript</code>, include them in the live sample, and stop looking.</li>
+  </ol>
+</p>
+
+<pre>
+  H1 Title
+  |
+  ├── Introductory prose content
+  │
+  ├── H2 Syntax
+  |   |
+  │   ├── Syntax code block
+  │   │
+  │   ├── H3 Parameters
+  |   |   |
+  │   │   └── Parameters prose content
+  │   │
+  │   └── H3 Return value
+  |       |
+  │       └── Return value prose content
+  │
+  └── H2 Examples                            Live sample scope
+      |                                              |
+      └── H3 HTML                                    |
+      |   |                                          |
+      |   └── HTML code block                        |
+      |                                              |
+      └── H3 JavaScript                              |
+      |   |                                          |
+      |   └── JS code block                          |
+      |                                              |
+      └── H3 Result                                  |
+          |                                          |
+          └── \{{EmbedLiveSample}}                    |
+</pre>
 
 <h3>Examples</h3>
 
@@ -487,6 +536,10 @@ An example                                            |            |
 </pre>
 
 <p>This will give unexpected results, because the <code>\{{EmbedLiveSample}}</code> call directly under <code>H2#Examples</code> will try to include the code blocks under <code>H3#Example2</code>.</p>
+
+<h3>Discussion reference</h3>
+
+<p>This issue was resolved in <a href="https://github.com/mdn/content/discussions/5803">https://github.com/mdn/content/discussions/5803</a>.</p>
 
 <h2>Inline styles</h2>
 
