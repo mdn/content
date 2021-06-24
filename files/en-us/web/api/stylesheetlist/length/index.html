@@ -1,0 +1,41 @@
+---
+title: StyleSheetList.length
+slug: Web/API/StyleSheetList/length
+tags:
+  - API
+  - Property
+  - Reference
+  - length
+  - StyleSheetList
+browser-compat: api.StyleSheetList.length
+---
+<div>{{APIRef("CSSOM")}}</div>
+
+<p class="summary">The <strong><code>length</code></strong> read-only property of the {{domxref("StyleSheetList")}} interface returns the number of {{domxref("CSSStyleSheet")}} objects in the collection.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js">let length = StyleSheetList.length;</pre>
+
+<h3>Value</h3>
+<p>An integer indicating the number of items in the collection.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<p>In the following example, <code>length</code> is printed to the console, and also used in a for loop to print each individual {{domxref("CSSStyleSheet")}} object to the console.</p>
+
+<pre class="brush: js">let length = document.styleSheets.length;
+console.log(length);
+
+for (let i = 0; i &lt; length; i++) {
+  console.log(document.styleSheets[i]);
+}</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<p>{{Specifications}}</p>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>
+
