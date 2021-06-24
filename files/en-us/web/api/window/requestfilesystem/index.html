@@ -25,19 +25,17 @@ browser-compat: api.Window.requestFileSystem
   use. The returned {{domxref("FileSystem")}} is then available for use with the other <a
     href="/en-US/docs/Web/API/File_and_Directory_Entries_API">file system APIs</a>.</p>
 
-<div class="warning">
-  <p>Even compared to the rest of the File and Directory Entries API,
-    <code>requestFileSystem()</code> is especially non-standard; only Chrome implements
-    it, and all other browser makers have decided that they will not implement it. It has
-    even been removed from <a href="https://wicg.github.io/entries-api/">the proposed
-      specification</a>. <em>Do not use this method!</em></p>
+<div class="notecard note">
+  <p><strong>Do not use this method!</strong></p>
+  <p>Not only the method <code>requestFileSystem()</code> is non-standard, but the browsers implementing it
+    do so with a prefix.</p>
+    <p>All other browser makers have signaled that they don't plan to implement it.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
 <div class="note">
-  <p>This method is prefixed with <code>webkit</code> in all browsers that implement it
-    (that is, Google Chrome).</p>
+  <p>This method is prefixed with <code>webkit</code> in all browsers that implement it.</p>
 </div>
 
 <pre
@@ -69,13 +67,9 @@ browser-compat: api.Window.requestFileSystem
 
 <p><code>undefined</code></p>
 
-<h2 id="Example">Example</h2>
-
 <h2 id="Specifications">Specifications</h2>
 
-{{Specifications}}
-
-<p>This API has no official W3C or WHATWG specification.</p>
+<p>As this method was removed from the <a href="https://wicg.github.io/entries-api/"> File and Directory Entries API</a> proposal, it has no official W3C or WHATWG specification. It is no longer on track to become a standard.</p></p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
