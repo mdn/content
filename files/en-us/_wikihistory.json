@@ -64552,36 +64552,6 @@
       "JesseW"
     ]
   },
-  "Web/API/Navigator/registerContentHandler": {
-    "modified": "2020-10-15T21:06:54.058Z",
-    "contributors": [
-      "Sheppy",
-      "ExE-Boss",
-      "jonathanKingston",
-      "DBaron",
-      "cvrebert",
-      "teoli",
-      "MHasan",
-      "Noitidart",
-      "def00111",
-      "kscarfone",
-      "iamanupmenon",
-      "Skierpage",
-      "kmaglione",
-      "ethertank",
-      "mnoorenberghe",
-      "ziyunfei",
-      "evilpie",
-      "Brettz9",
-      "GijsKruitbosch",
-      "Mgjbot",
-      "Ptak82",
-      "Sayrer",
-      "Nickolay",
-      "Waldo",
-      "RyanFlint"
-    ]
-  },
   "Web/API/Navigator/registerProtocolHandler": {
     "modified": "2020-12-07T13:50:11.400Z",
     "contributors": [

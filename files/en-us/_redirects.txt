@@ -2214,7 +2214,6 @@
 /en-US/docs/DOM/window.navigator.plugins	/en-US/docs/Web/API/NavigatorPlugins/plugins
 /en-US/docs/DOM/window.navigator.product	/en-US/docs/Web/API/NavigatorID/product
 /en-US/docs/DOM/window.navigator.productSub	/en-US/docs/Web/API/Navigator/productSub
-/en-US/docs/DOM/window.navigator.registerContentHandler	/en-US/docs/Web/API/Navigator/registerContentHandler
 /en-US/docs/DOM/window.navigator.userAgent	/en-US/docs/Web/API/NavigatorID/userAgent
 /en-US/docs/DOM/window.navigator.vendor	/en-US/docs/Web/API/Navigator/vendor
 /en-US/docs/DOM/window.navigator.vendorSub	/en-US/docs/Web/API/Navigator/vendorSub
@@ -2666,7 +2665,6 @@
 /en-US/docs/DOM:window.navigator.plugins	/en-US/docs/Web/API/NavigatorPlugins/plugins
 /en-US/docs/DOM:window.navigator.product	/en-US/docs/Web/API/NavigatorID/product
 /en-US/docs/DOM:window.navigator.productSub	/en-US/docs/Web/API/Navigator/productSub
-/en-US/docs/DOM:window.navigator.registerContentHandler	/en-US/docs/Web/API/Navigator/registerContentHandler
 /en-US/docs/DOM:window.navigator.userAgent	/en-US/docs/Web/API/NavigatorID/userAgent
 /en-US/docs/DOM:window.navigator.vendor	/en-US/docs/Web/API/Navigator/vendor
 /en-US/docs/DOM:window.navigator.vendorSub	/en-US/docs/Web/API/Navigator/vendorSub
@@ -3415,7 +3413,6 @@
 /en-US/docs/Document_Object_Model_(DOM)/window.navigator.plugins	/en-US/docs/Web/API/NavigatorPlugins/plugins
 /en-US/docs/Document_Object_Model_(DOM)/window.navigator.product	/en-US/docs/Web/API/NavigatorID/product
 /en-US/docs/Document_Object_Model_(DOM)/window.navigator.productSub	/en-US/docs/Web/API/Navigator/productSub
-/en-US/docs/Document_Object_Model_(DOM)/window.navigator.registerContentHandler	/en-US/docs/Web/API/Navigator/registerContentHandler
 /en-US/docs/Document_Object_Model_(DOM)/window.navigator.userAgent	/en-US/docs/Web/API/NavigatorID/userAgent
 /en-US/docs/Document_Object_Model_(DOM)/window.navigator.vendor	/en-US/docs/Web/API/Navigator/vendor
 /en-US/docs/Document_Object_Model_(DOM)/window.navigator.vendorSub	/en-US/docs/Web/API/Navigator/vendorSub
@@ -8064,7 +8061,6 @@
 /en-US/docs/Web/API/Navigator.plugins	/en-US/docs/Web/API/NavigatorPlugins/plugins
 /en-US/docs/Web/API/Navigator.product	/en-US/docs/Web/API/NavigatorID/product
 /en-US/docs/Web/API/Navigator.productSub	/en-US/docs/Web/API/Navigator/productSub
-/en-US/docs/Web/API/Navigator.registerContentHandler	/en-US/docs/Web/API/Navigator/registerContentHandler
 /en-US/docs/Web/API/Navigator.serviceWorker	/en-US/docs/Web/API/Navigator/serviceWorker
 /en-US/docs/Web/API/Navigator.userAgent	/en-US/docs/Web/API/NavigatorID/userAgent
 /en-US/docs/Web/API/Navigator.vendor	/en-US/docs/Web/API/Navigator/vendor
@@ -9431,7 +9427,6 @@
 /en-US/docs/Web/API/window.navigator.plugins	/en-US/docs/Web/API/NavigatorPlugins/plugins
 /en-US/docs/Web/API/window.navigator.product	/en-US/docs/Web/API/NavigatorID/product
 /en-US/docs/Web/API/window.navigator.productSub	/en-US/docs/Web/API/Navigator/productSub
-/en-US/docs/Web/API/window.navigator.registerContentHandler	/en-US/docs/Web/API/Navigator/registerContentHandler
 /en-US/docs/Web/API/window.navigator.userAgent	/en-US/docs/Web/API/NavigatorID/userAgent
 /en-US/docs/Web/API/window.navigator.vendor	/en-US/docs/Web/API/Navigator/vendor
 /en-US/docs/Web/API/window.navigator.vendorSub	/en-US/docs/Web/API/Navigator/vendorSub
