@@ -2,15 +2,15 @@
 title: Node
 slug: Web/API/Node
 tags:
-- API
-- DOM
-- Document
-- Element
-- Interface
-- Node
-- Reference
-- Structure
-- hierarchy
+  - API
+  - DOM
+  - Document
+  - Element
+  - Interface
+  - Node
+  - Reference
+  - Structure
+  - hierarchy
 browser-compat: api.Node
 ---
 <p>{{APIRef("DOM")}}</p>
@@ -171,7 +171,7 @@ browser-compat: api.Node
   <dd>Compares the position of the current node against another node in any other
     document.</dd>
   <dt>{{DOMxRef("Node.contains()")}}</dt>
-  <dd>Returns a {{jsxref("Boolean")}} value indicating whether or not a node is a
+  <dd>Returns <code>true</code> or <code>false</code> value indicating whether or not a node is a
     descendant of the calling node.</dd>
   <dt>{{domxref("Node.getBoxQuads()")}} {{experimental_inline}}</dt>
   <dd>Returns a list of the node's CSS boxes relative to another node.</dd>
@@ -216,10 +216,10 @@ browser-compat: api.Node
 
 <dl>
   <dt>{{DOMxRef("Node.hasAttributes()")}} {{deprecated_inline}}</dt>
-  <dd>Returns a {{jsxref("Boolean")}} indicating if the element has any attributes, or
+  <dd>Returns <code>true</code> or <code>false</code> indicating if the element has any attributes, or
     not.</dd>
   <dt>{{DOMxRef("Node.isSupported()")}} {{deprecated_inline}}</dt>
-  <dd>Returns a {{jsxref("Boolean")}} flag containing the result of a test whether the DOM
+  <dd>Returns <code>true</code> or <code>false</code> containing the result of a test whether the DOM
     implementation implements a specific feature and this feature is supported by the
     specific node.</dd>
 </dl>
@@ -283,7 +283,7 @@ removeAllChildren(document.body)</pre>
   {{jsxref("Array")}} instead, which contains <code><var>rootNode</var></code> and all
   nodes contained within.</p>
 
-<p>If <code><var>callback</var></code> is provided, and it returns {{jsxref("Boolean")}}
+<p>If <code><var>callback</var></code> is provided, and it returns
   <code>false</code> when called, the current recursion level is aborted, and the function
   resumes execution at the last parent's level. This can be used to abort loops once a
   node has been found (such as searching for a text node which contains a certain string).
@@ -296,7 +296,7 @@ removeAllChildren(document.body)</pre>
   <dd>The <code>Node</code> object whose descendants will be recursed through.</dd>
   <dt><code><var>callback</var></code> {{optional_inline}}</dt>
   <dd>An optional callback <a
-      href="/en-US/docs/JavaScript/Reference/Global_Objects/Function">function</a> that
+      href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a> that
     receives a <code>Node</code> as its only argument. If omitted, <code>eachNode</code>
     returns an {{jsxref("Array")}} of every node contained within
     <code><var>rootNode</var></code> (including the root itself).</dd>
@@ -306,7 +306,7 @@ removeAllChildren(document.body)</pre>
 
 <p>The following example prints the <a
     href="/en-US/docs/Web/API/Node/textContent"><code>textContent</code></a> properties of
-  each <code>&lt;span&gt;</code> tag in a <code>&lt;div&gt;</code> element named
+  each <code>&lt;span&gt;</code> element in a <code>&lt;div&gt;</code> element named
   <code>"box"</code>:</p>
 
 <pre class="brush: html">&lt;div id="box"&gt;
