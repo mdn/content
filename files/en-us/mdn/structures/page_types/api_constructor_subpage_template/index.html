@@ -33,7 +33,7 @@ browser-compat: path.to.feature.NameOfTheConstructor
 ---</pre>
 
 <dl>
-	<dt><strong>Title</strong></dt>
+	<dt><strong>title</strong></dt>
 	<dd>Title heading displayed at top of page. Format as <em>NameOfTheParentInterface</em><strong>.</strong><em>NameOfTheParentInterface</em><strong>()</strong>. For example, the <a href="/en-US/docs/Web/API/Request/Request">Request()</a> constructor has a <em>title</em> of <code>Request.Request()</code>.</dd>
 	<dt>slug</dt>
 	<dd>The end of the URL path after <code>https://developer.mozilla.org/en-US/docs/</code>). This will be formatted like <code>Web/API/NameOfTheParentInterface/NameOfTheParentInterface</code>. Note that the name of the method in the slug omits the parenthesis (it ends in "NameOfTheParentInterface" not "NameOfTheParentInterface()").</dd>
@@ -49,10 +49,9 @@ browser-compat: path.to.feature.NameOfTheConstructor
 
 <h3 id="Top_macros">Top macros</h3>
 	
-<p>There are five macro calls at the top of the template by default. You should update or delete them according to the advice below:</p>
+<p>A number of macro calls appear at the top of the content section. You should update or delete them according to the advice below:</p>
 	
 <ul>
-	<li>\{{draft()}} — this generates a <strong>Draft</strong> banner that indicates that the page is not yet complete, and should only be removed when the first draft of the page is completely finished. After it is ready to be published, you can remove this.</li>
 	<li>\{{SeeCompatTable}} — this generates a <strong>This is an experimental technology</strong> banner that indicates the technology is <a href="/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental">experimental</a>). If the technology you are documenting is not experimental, you can remove this. If it is experimental, and the technology is hidden behind a pref in Firefox, you should also fill in an entry for it in the <a href="/en-US/docs/Mozilla/Firefox/Experimental_features">Experimental features in Firefox</a> page.</li>
 	<li>\{{securecontext_header}} — this generates a <strong>Secure context</strong> banner that indicates the technology is only available in a <a href="/en-US/docs/Web/Security/Secure_Contexts">secure context</a>. If it isn't, then you can remove the macro call. If it is, then you should also fill in an entry for it in the <a href="/en-US/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts">Features restricted to secure contexts</a> page.</li>
 	<li>\{{deprecated_header}} — this generates a <strong>Deprecated</strong> banner that indicates the technology is <a href="/en-US/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete">deprecated</a>. If it isn't, then you can remove the macro call.</li>
