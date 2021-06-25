@@ -51,10 +51,9 @@ browser-compat: path.to.feature.NameOfTheElement
 
 <h3 id="Top_macros">Top macros</h3>
 
-<p>There are four macro calls at the top of the template by default. You should update or delete them according to the advice below:</p>
+<p>A number of macro calls appear at the top of the content section. You should update or delete them according to the advice below:</p>
 
 <ul>
-	<li><code>\{{draft()}}</code> — this generates a <strong>Draft</strong> banner that indicates that the page is not yet complete, and should only be removed when the first draft of the page is completely finished. After it is ready to be published, you can remove this.</li>
 	<li><code>\{{SeeCompatTable}}</code> — this generates a <strong>This is an experimental technology</strong> banner that indicates the technology is <a href="/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental">experimental</a>). If the technology you are documenting is not experimental, you can remove this. If it is experimental, and the technology is hidden behind a pref in Firefox, you should also fill in an entry for it in the <a href="/en-US/docs/Mozilla/Firefox/Experimental_features">Experimental features in Firefox</a> page.</li>
 	<li><code>\{{deprecated_header}</code>} — this generates a <strong>Deprecated</strong> banner that indicates the technology is <a href="/en-US/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete">deprecated</a>. If it isn't, then you can remove the macro call.</li>
 	<li><code>\{{htmlref}}</code> — this generates a suitable HTML sidebar, depending on what tags are included on the page.</li>
@@ -67,8 +66,6 @@ browser-compat: path.to.feature.NameOfTheElement
 <p>The <strong><code>&lt;insert_the_element_name&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element does ... <em>insert a summary paragraph naming the element and saying what it does (ideally 1 or 2 short sentences)</em>.</p>
 
 <div>\{{EmbedInteractiveExample("pages/tabbed/nameOfElement.html", "tabbed-standard")}}</div>
-
-<p>The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a> and send us a pull request.</p>
 
 <p>Further information — at this point, include a few more paragraphs explaining the most important things you need to know about using the element and its main features. It is good to explain briefly what is going on in the interactive example if it is not immediately obvious. You could also explain key points about how this element interacts with important related JavaScript or CSS features. Not too much detail — you don't want to repeat the documentation across pages — but a key point plus a link to that feature's page would be useful. Again, see the <code>&lt;video&gt;</code> page for an example.</p>
 
