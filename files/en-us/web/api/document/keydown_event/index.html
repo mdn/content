@@ -9,6 +9,7 @@ tags:
   - KeyboardEvent
   - Reference
   - keydown
+browser-compat: api.Document.keydown_event
 ---
 <div>{{APIRef}}</div>
 
@@ -39,16 +40,6 @@ tags:
 
 <p>The <code>keydown</code> and {{domxref("Document/keyup_event", "keyup")}} events provide a code indicating which key is pressed, while {{domxref("Document/keypress_event", "keypress")}} indicates which <em>character</em> was entered. For example, a lowercase "a" will be reported as 65 by <code>keydown</code> and <code>keyup</code>, but as 97 by <code>keypress</code>. An uppercase "A" is reported as 65 by all events.</p>
 
-<p>Since Firefox 65, the <code>keydown</code> and {{domxref("Document/keyup_event", "keyup")}} events are now fired during IME composition ({{bug(354358)}}). To ignore all <code>keydown</code> events that are part of composition, do something like this (229 is a special value set for a <code>keyCode</code> relating to an event that has been processed by an IME):</p>
-
-<pre class="brush: js">eventTarget.addEventListener("keydown", event =&gt; {
-  if (event.isComposing || event.keyCode === 229) {
-    return;
-  }
-  // do something
-});
-</pre>
-
 <h2 id="Examples">Examples</h2>
 
 <h3 id="addEventListener_keydown_example">addEventListener keydown example</h3>
@@ -70,26 +61,29 @@ function logKey(e) {
 
 <pre class="brush: js">document.onkeydown = logKey;</pre>
 
+
+<h3 id="Ignoring_keydown_during_ime_composition">Ignoring keydown during IME composition</h3>
+
+<p>An <em>Input Method Editor (IME)</em> is a program that enables users to enter characters that are not supported by their keyboard using some other key combination.</p>
+
+<p>Since Firefox 65, the <code>keydown</code> and {{domxref("Document/keyup_event", "keyup")}} events are now fired during IME composition ({{bug(354358)}}). To ignore all <code>keydown</code> events that are part of composition, do something like this (229 is a special value set for a <code>keyCode</code> relating to an event that has been processed by an IME):</p>
+
+<pre class="brush: js">eventTarget.addEventListener("keydown", event =&gt; {
+  if (event.isComposing || event.keyCode === 229) {
+    return;
+  }
+  // do something
+});
+</pre>
+
+
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('UI Events', '#event-type-keydown')}}</td>
-   <td>{{Spec2('UI Events')}}</td>
-  </tr>
- </tbody>
-</table>
+<p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Document.keydown_event")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

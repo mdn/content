@@ -9,11 +9,12 @@ tags:
   - Reference
   - WebRTC
   - onerror
+browser-compat: api.RTCDataChannel.onerror
 ---
 <p>{{APIRef("WebRTC")}}{{SeeCompatTable}}</p>
 
 <p>The <code><strong>RTCDataChannel.onerror</strong></code> property is an
-  {{domxref("EventHandler")}} which specifies a function to be called when the
+  {{event("Event_handlers", "event handler")}} which specifies a function to be called when the
   {{event("error")}} event is received. When an error occurs on the data channel, the
   function receives as input an {{domxref("ErrorEvent")}} object describing the error
   which occurred.</p>
@@ -55,27 +56,11 @@ dc.onerror = function(event) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{ SpecName('WebRTC 1.0', '#dom-rtcdatachannel-onerror',
-        'RTCDataChannel.onerror') }}</td>
-      <td>{{ Spec2('WebRTC 1.0') }}</td>
-      <td>Initial specification.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCDataChannel.onerror")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

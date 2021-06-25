@@ -8,8 +8,9 @@ tags:
 - Method
 - Reference
 - credential management
+browser-compat: api.CredentialsContainer.create
 ---
-<p>{{APIRef("Credential Management")}}{{SeeCompatTable}}</p>
+<p>{{APIRef("Credential Management API")}}{{SeeCompatTable}}</p>
 
 <p>The <strong><code>create()</code></strong> method of the
   {{domxref("CredentialsContainer")}} interface returns a {{jsxref("Promise")}} that
@@ -17,7 +18,7 @@ tags:
   <code>null</code> if no <code>Credential</code> object can be created.</p>
 
 <div class="note">
-  <p>This method is restricted to top-level contexts. Calls to it within an
+  <p>This method is restricted to top-level contexts. Calls to it within an
     <code>&lt;iframe&gt;</code> element will resolve without effect.</p>
 </div>
 
@@ -41,7 +42,7 @@ tags:
           <li><code>id</code>: (required) {{domxref("USVString")}} Inherited from
             {{domxref("CredentialData")}}.</li>
           <li><code>name</code>: {{optional_inline}} {{domxref("USVString")}} TBD</li>
-          <li><code>iconURL</code>: {{optional_inline}} {{domxref("USVString")}} TBD</li>
+          <li><code>iconURL</code>: {{optional_inline}} {{domxref("USVString")}} TBD</li>
           <li><code>password</code>: (required) {{domxref("USVString")}} TBD</li>
         </ul>
       </li>
@@ -52,13 +53,13 @@ tags:
           <li><code>id</code>: (required) {{domxref("USVString")}} Inherited from
             {{domxref("CredentialData")}}.</li>
           <li><code>name</code>: {{optional_inline}} {{domxref("USVString")}} TBD</li>
-          <li><code>iconURL</code>: {{optional_inline}} {{domxref("USVString")}} TBD</li>
+          <li><code>iconURL</code>: {{optional_inline}} {{domxref("USVString")}} TBD</li>
           <li><code>provider</code>: (required) {{domxref("USVString")}} TBD</li>
           <li><code>protocol</code>: {{optional_inline}} {{domxref("USVString")}} TBD</li>
         </ul>
       </li>
       <li><code>publicKey</code>: {{optional_inline}}
-        an {{domxref("PublicKeyCredentialCreationOptions")}} object that describes the
+        a {{domxref("PublicKeyCredentialCreationOptions")}} object that describes the
         options for creating a <a
           href="/en-US/docs/Web/API/Web_Authentication_API">WebAuthn</a> credential.</li>
     </ul>
@@ -67,33 +68,14 @@ tags:
 
 <h3 id="Returns">Returns</h3>
 
-<p>A {{jsxref("Promise")}} that resolves with a {{domxref("Credential")}} instance, such
-  as {{domxref("PasswordCredential")}}, {{domxref("FederatedCredential")}},
-  or {{domxref("PublicKeyCredential")}}.</p>
+<p>A {{jsxref("Promise")}} that resolves with a {{domxref("Credential")}} instance, such
+  as {{domxref("PasswordCredential")}}, {{domxref("FederatedCredential")}},
+  or {{domxref("PublicKeyCredential")}}.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Credential Management','#dom-credentialscontainer-get','get()')}}
-      </td>
-      <td>{{Spec2('Credential Management')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('WebAuthn')}}</td>
-      <td>{{Spec2('WebAuthn')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.CredentialsContainer.create")}}</p>
+<p>{{Compat}}</p>

@@ -7,6 +7,7 @@ tags:
   - Reference
   - WorkerGlobalScope
   - Workers
+browser-compat: api.WorkerGlobalScope
 ---
 <p>{{APIRef("Web Workers API")}}</p>
 
@@ -67,7 +68,7 @@ tags:
  <dd>Fired at the global/worker scope object when the user's preferred languages change.<br>
  Also available via the {{domxref("WorkerGlobalScope.onlanguagechange")}} property.</dd>
  <dt><code>close</code> {{non-standard_inline}} {{deprecated_inline}}</dt>
- <dd>Is an {{domxref("EventHandler")}} representing the code to be called when the {{event("close")}} event is raised.<br>
+ <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("close")}} event is raised.<br>
  Also available via the {{domxref("WorkerGlobalScope.onclose")}} property.</dd>
  <dt><code>rejectionhandled</code> {{non-standard_inline}}</dt>
  <dd>An event handler for handled <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="The Promise object is used for deferred and asynchronous computations. A Promise represents an operation that hasn't completed yet, but is expected in the future."><code>Promise</code></a> rejection events.<br>
@@ -136,24 +137,11 @@ console.log(navigator);</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#workerglobalscope', 'WorkerGlobalScope')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.WorkerGlobalScope")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

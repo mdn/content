@@ -15,10 +15,11 @@ tags:
   - User experience
   - Web
   - menuitem
+browser-compat: html.elements.menuitem
 ---
 <p>{{HTMLRef}}{{Deprecated_Header}}</p>
 
-<p>The <strong>HTML <code>&lt;menuitem&gt;</code> element</strong> represents a command that a user is able to invoke through a popup menu. This includes context menus, as well as menus that might be attached to a menu button.</p>
+<p>The <strong><code>&lt;menuitem&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element represents a command that a user is able to invoke through a popup menu. This includes context menus, as well as menus that might be attached to a menu button.</p>
 
 <p>A command can either be defined explicitly, with a textual label and optional icon to describe its appearance, or alternatively as an <em>indirect command</em> whose behavior is defined by a separate element. Commands can also optionally include a checkbox or be grouped to share radio buttons. (Menu items for indirect commands gain checkboxes or radio buttons when defined against elements <code>&lt;input type="checkbox"&gt;</code> and <code>&lt;input type="radio"&gt;</code>.)</p>
 
@@ -92,7 +93,7 @@ tags:
 &lt;menu type="context" id="popup-menu"&gt;
   &lt;menuitem type="checkbox" checked&gt;Checkbox&lt;/menuitem&gt;
   &lt;hr&gt;
-  &lt;menuitem type="command" label="This command does nothing" icon="https://developer.mozilla.org/static/img/favicon144.png"&gt;
+  &lt;menuitem type="command" label="This command does nothing" icon="favicon-192x192.png"&gt;
     Commands don't render their contents.
   &lt;/menuitem&gt;
   &lt;menuitem type="command" label="This command has javascript" onclick="alert('command clicked')"&gt;
@@ -119,31 +120,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("HTML5.2", "obsolete.html#elementdef-menuitem", "&lt;menuitem&gt;")}}</td>
-   <td>{{Spec2("HTML5.2")}}</td>
-   <td>Snapshot of the {{SpecName("HTML WHATWG")}}, made obsolete.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML5.1", "interactive-elements.html#the-menuitem-element", "&lt;menuitem&gt;")}}</td>
-   <td>{{Spec2("HTML5.1")}}</td>
-   <td>Snapshot of the {{SpecName("HTML WHATWG")}}, initial definition.</td>
-  </tr>
- </tbody>
-</table>
+<p>Not part of any current specifications.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("html.elements.menuitem")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

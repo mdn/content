@@ -8,11 +8,12 @@ tags:
 - Property
 - Reference
 - Window
+browser-compat: api.WindowEventHandlers.onbeforeunload
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
 <p>The <code><strong>onbeforeunload</strong></code> property of the
-  {{domxref("WindowEventHandlers")}} mixin is the {{domxref("EventHandler")}} for
+  {{domxref("WindowEventHandlers")}} mixin is the {{event("Event_handlers", "event handler")}} for
   processing {{event("beforeunload")}} events. These events fire when a window is about to
   {{event("unload")}} its resources. At this point, the document is still visible and the
   event is still cancelable.</p>
@@ -73,40 +74,11 @@ window.onbeforeunload = function(event) { ... };</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<p>The event was originally introduced by Microsoft in Internet Explorer 4 and
-  standardized in the HTML5 specification.</p>
-
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', '#handler-window-onbeforeunload', 'onbeforeunload')}}
-      </td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML5.1', '#windoweventhandlers', 'GlobalEventHandlers')}}</td>
-      <td>{{Spec2('HTML5.1')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName("HTML5 W3C", "#windoweventhandlers", "GlobalEventHandlers")}}</td>
-      <td>{{Spec2('HTML5 W3C')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.WindowEventHandlers.onbeforeunload")}}</p>
+<p>{{Compat}}</p>
 
 <p>The HTML specification states that authors should use the
   {{domxref("Event.preventDefault()")}} method instead of using

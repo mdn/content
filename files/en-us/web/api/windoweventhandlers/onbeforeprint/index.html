@@ -9,11 +9,12 @@ tags:
 - Reference
 - Wiindow
 - printing
+browser-compat: api.WindowEventHandlers.onbeforeprint
 ---
 <div>{{ApiRef}}</div>
 
 <p>The <code><strong>onbeforeprint</strong></code> property of the
-  {{domxref("WindowEventHandlers")}} mixin is the {{domxref("EventHandler")}} for
+  {{domxref("WindowEventHandlers")}} mixin is the {{event("Event_handlers", "event handler")}} for
   processing {{event("beforeprint")}} events for the current window. These events are
   raised before the print dialog window is opened.</p>
 
@@ -32,27 +33,11 @@ window.onbeforeprint = function(event) { ... };
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', '#handler-window-onbeforeprint', 'onbeforeprint')}}
-      </td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.WindowEventHandlers.onbeforeprint")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -9,11 +9,12 @@ tags:
   - Reference
   - WebRTC
   - onclose
+browser-compat: api.RTCDataChannel.onclose
 ---
 <p>{{APIRef("WebRTC")}}{{SeeCompatTable}}</p>
 
 <p>The <code><strong>RTCDataChannel.onclose</strong></code> property is an
-  {{domxref("EventHandler")}} which specifies a function to be called by the browser when
+  {{event("Event_handlers", "event handler")}} which specifies a function to be called by the browser when
   the {{event("close")}} event is received by the {{domxref("RTCDataChannel")}}. This is a
   simple {{domxref("Event")}} which indicates that the data channel has closed down.</p>
 
@@ -53,27 +54,11 @@ dc.onclose = function(event) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table" style="height: 49px; width: 1000px;">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{ SpecName('WebRTC 1.0', '#dom-rtcdatachannel-onclose',
-        'RTCDataChannel.onclose') }}</td>
-      <td>{{ Spec2('WebRTC 1.0') }}</td>
-      <td>Initial specification.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCDataChannel.onclose")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

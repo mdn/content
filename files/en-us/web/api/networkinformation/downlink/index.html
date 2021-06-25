@@ -9,6 +9,7 @@ tags:
 - Property
 - Reference
 - downlink
+browser-compat: api.NetworkInformation.downlink
 ---
 <p>{{SeeCompatTable}}{{APIRef("Network Information API")}}</p>
 
@@ -19,11 +20,6 @@ tags:
   connections, excluding connections made to a private address space. In the absence of
   recent bandwidth measurement data, the attribute value is determined by the properties
   of the underlying connection technology.</p>
-
-<p>Note that Chrome-based browsers do not conform to the specification, and <a
-    href="https://source.chromium.org/chromium/chromium/src/+/master:third_party/blink/renderer/platform/network/network_state_notifier.cc;l=460;drc=49bf35554c123bbc44a0ef52675144eba2dd7bbc?originalUrl=https:%2F%2Fcs.chromium.org%2F">arbitrarily
-    cap</a> the reported downlink at a maximum of 10 Mbps as an anti-fingerprinting
-  measure. Similar caps exist for the reported latency.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -36,21 +32,16 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Network Information','#dom-networkinformation-downlink','downlink')}}</td>
-      <td>{{Spec2('Network Information')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.NetworkInformation.downlink")}}</p>
+<p>{{Compat}}</p>
+
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+  <li>{{HTTPHeader("Downlink")}}</li>
+</ul>
+

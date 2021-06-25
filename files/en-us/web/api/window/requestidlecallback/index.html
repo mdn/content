@@ -10,6 +10,7 @@ tags:
 - Window
 - requestIdleCallback
 - polyfill
+browser-compat: api.Window.requestIdleCallback
 ---
 <div>{{APIRef("HTML DOM")}}{{SeeCompatTable}}</div>
 
@@ -32,7 +33,8 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js"><code>var <em>handle</em> = <em>window</em>.requestIdleCallback(<em>callback</em>[, <em>options</em>])</code></pre>
+  class="brush: js">window.requestIdleCallback(callback);
+window.requestIdleCallback(callback, options);</pre>
 
 <h3 id="Returns">Return value</h3>
 
@@ -60,38 +62,25 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<p>See our <a href="/en-US/docs/Web/API/Background_Tasks_API#Example">complete example</a>
+<p>See our <a href="/en-US/docs/Web/API/Background_Tasks_API#example">complete example</a>
   in the article <a href="/en-US/docs/Web/API/Background_Tasks_API">Cooperative Scheduling
     of Background Tasks API</a>.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th>Specification</th>
-      <th>Status</th>
-      <th>Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Background Tasks')}}</td>
-      <td>{{Spec2('Background Tasks')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Window.requestIdleCallback")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
   <li>{{domxref("window.cancelIdleCallback()")}}</li>
   <li>{{domxref("IdleDeadline")}}</li>
-  <li>{{domxref("window.setTimeout()")}}</li>
-  <li>{{domxref("window.setInterval()")}}</li>
+  <li>{{domxref("WindowOrWorkerGlobalScope.setTimeout")}}</li>
+  <li>{{domxref("WindowOrWorkerGlobalScope.setInterval")}}</li>
   <li>{{domxref("window.requestAnimationFrame")}}</li>
   <li><a href="https://github.com/behnammodi/polyfill/blob/master/window.polyfill.js">A polyfill</a></li>
 </ul>

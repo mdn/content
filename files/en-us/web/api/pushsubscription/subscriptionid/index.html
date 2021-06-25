@@ -12,12 +12,17 @@ tags:
 - Reference
 - Service Workers
 - subscriptionId
+browser-compat: api.PushSubscription.subscriptionId
 ---
 <div>{{APIRef("Push API")}}{{Deprecated_header}}</div>
 
-<p>The <code><strong>endpoint</strong></code> read-only property of the
-  {{domxref("PushSubscription")}} interface returns a {{domxref("DOMString")}} containing
+<p>The <code><strong>subscriptionId</strong></code> read-only property of the
+  {{domxref("PushSubscription")}} interface returns a {{domxref("DOMString")}} containing
   the subscription ID associated with the push subscription.</p>
+
+<div class="notecard warning">
+  Instead of this feature, use the {{domxref("PushSubscription.endPoint")}} property on the same interface.
+</div>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -26,21 +31,8 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName("Push API")}}</td>
-      <td>{{Spec2("Push API")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+<p>This feature was removed from the <a href="https://w3c.github.io/push-api/#pushsubscription-interface">Push API</a> specification. It is no longer on track to become a standard.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.PushSubscription.subscriptionId")}}</p>
+<p>{{Compat}}</p>

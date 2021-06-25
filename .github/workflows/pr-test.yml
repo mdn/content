@@ -17,12 +17,12 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Setup Node.js environment
-        uses: actions/setup-node@v2.1.4
+        uses: actions/setup-node@v2.1.5
         with:
           node-version: "12"
 
       - name: Cache node_modules
-        uses: actions/cache@v2.1.5
+        uses: actions/cache@v2.1.6
         id: cached-node_modules
         with:
           path: |
@@ -55,10 +55,10 @@ jobs:
           # Now, this gets used by the `git diff ...` inside get-diff-action.
           git config --global core.quotePath false
 
-      - uses: technote-space/get-diff-action@v4.1.1
+      - uses: technote-space/get-diff-action@v4.1.2
         id: git_diff_content
         with:
-          PATTERNS: files/**/*.html
+          PATTERNS: files/**/*.+(html|md)
           SET_ENV_NAME: GIT_DIFF_CONTENT
 
       - name: Build changed content
@@ -142,7 +142,7 @@ jobs:
           name: build
           path: build/
 
-      - uses: technote-space/get-diff-action@v4.1.1
+      - uses: technote-space/get-diff-action@v4.1.2
         with:
           PATTERNS: files/**/*.+(png|jpeg|jpg|gif|svg|webp)
           ABSOLUTE: true
@@ -156,7 +156,7 @@ jobs:
           export CONTENT_ROOT=$(pwd)/files
           yarn filecheck ${{ env.GIT_DIFF_FILES }}
 
-      - uses: technote-space/get-diff-action@v4.1.1
+      - uses: technote-space/get-diff-action@v4.1.2
         id: git_diff_redirects
         with:
           PATTERNS: files/**/_redirects.txt

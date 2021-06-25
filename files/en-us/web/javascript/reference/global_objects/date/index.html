@@ -142,8 +142,6 @@ browser-compat: javascript.builtins.Date
  <dd>Returns a string representing the {{jsxref("Date")}} based on the GMT (UTC) time zone. Use {{jsxref("Date.prototype.toUTCString()", "toUTCString()")}} instead.</dd>
  <dt>{{jsxref("Date.prototype.toLocaleDateString()")}}</dt>
  <dd>Returns a string with a locality sensitive representation of the date portion of this date based on system settings.</dd>
- <dt>{{jsxref("Date.prototype.toLocaleFormat()")}}</dt>
- <dd>Converts a date to a string, using a format string.</dd>
  <dt>{{jsxref("Date.prototype.toLocaleString()")}}</dt>
  <dd>Returns a string with a locality-sensitive representation of this date. Overrides the {{jsxref("Object.prototype.toLocaleString()")}} method.</dd>
  <dt>{{jsxref("Date.prototype.toLocaleTimeString()")}}</dt>
@@ -178,8 +176,11 @@ let birthday = new Date(628021800000)            // passing epoch timestamp
 
 <h3 id="To_get_Date_Month_and_Year_or_Time"> To get Date, Month and Year or Time</h3>
 
-<pre class="brush: js">let [month, date, year]    = new Date().toLocaleDateString("en-US").split("/")
-let [hour, minute, second] = new Date().toLocaleTimeString("en-US").split(/:| /)</pre>
+<pre class="brush: js">
+const date = new Date();
+const [month, day, year]       = [date.getMonth(), date.getDate(), date.getFullYear()];
+const [hour, minutes, seconds] = [date.getHours(), date.getMinutes(), date.getSeconds()];
+</pre>
 
 <h3 id="Two_digit_years_map_to_1900_–_1999">Two digit years map to 1900 – 1999</h3>
 

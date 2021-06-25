@@ -9,6 +9,7 @@ tags:
   - Property
   - Reference
   - signal
+browser-compat: api.AbortController.signal
 ---
 <div>{{APIRef("DOM")}}</div>
 
@@ -28,7 +29,7 @@ tags:
 
 <p>We first create a controller using the {{domxref("AbortController.AbortController","AbortController()")}} constructor, then grab a reference to its associated {{domxref("AbortSignal")}} object using the {{domxref("AbortController.signal")}} property.</p>
 
-<p>When the <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch request</a> is initiated, we pass in the <code>AbortSignal</code> as an option inside the request's options object (see <code>{signal}</code>, below). This associates the signal and controller with the fetch request and allows us to abort it by calling {{domxref("AbortController.abort()")}}, as seen below in the second event listener.</p>
+<p>When the <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch request</a> is initiated, we pass in the <code>AbortSignal</code> as an option inside the request's options object (the <code>{signal}</code> below). This associates the signal and controller with the fetch request and allows us to abort it by calling {{domxref("AbortController.abort()")}}, as seen below in the second event listener.</p>
 
 <pre class="brush: js">var controller = new AbortController();
 var signal = controller.signal;
@@ -48,36 +49,23 @@ function fetchVideo() {
   fetch(url, {signal}).then(function(response) {
     ...
   }).catch(function(e) {
-    reports.textContent = 'Download error: ' + e.message;
-  })
+   reports.textContent = 'Download error: ' + e.message;
+  })
 }</pre>
 
 <div class="note">
 <p><strong>Note</strong>: When <code>abort()</code> is called, the <code>fetch()</code> promise rejects with an <code>AbortError</code>.</p>
 </div>
 
-<p>You can find a full working example on GitHub — see <a href="https://github.com/mdn/dom-examples/tree/master/abort-api">abort-api</a> (<a href="https://mdn.github.io/dom-examples/abort-api/">see it running live also</a>).</p>
+<p>You can find a <a href="https://github.com/mdn/dom-examples/tree/master/abort-api">full working example on GitHub</a>; you can also see it  <a href="https://mdn.github.io/dom-examples/abort-api/">running live</a>.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-abortcontroller-signal', 'signal')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.AbortController.signal")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

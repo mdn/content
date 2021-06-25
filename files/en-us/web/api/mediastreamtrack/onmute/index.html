@@ -11,6 +11,7 @@ tags:
 - WebRTC
 - mute
 - onmute
+browser-compat: api.MediaStreamTrack.onmute
 ---
 <div>{{ APIRef("Media Capture and Streams") }}</div>
 
@@ -26,7 +27,7 @@ tags:
 
 <h3 id="Value">Value</h3>
 
-<p>A function to serve as an {{domxref("EventHandler")}} for the {{event("mute")}} event.
+<p>A function to serve as an {{event("Event_handlers", "event handler")}} for the {{event("mute")}} event.
   The event handler function receives a single parameter: the event object, which is a
   simple {{domxref("Event")}} object.</p>
 
@@ -42,27 +43,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table" style="height: 49px; width: 1000px;">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{ SpecName('Media Capture', '#dom-mediastreamtrack-onmute',
-        'MediaStreamTrack.onmute') }}</td>
-      <td>{{ Spec2('Media Capture') }}</td>
-      <td>Initial specification.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.MediaStreamTrack.onmute")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

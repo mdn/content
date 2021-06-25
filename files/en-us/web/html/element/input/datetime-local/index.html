@@ -22,8 +22,6 @@ browser-compat: html.elements.input.input-datetime-local
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-datetime-local.html", "tabbed-shorter")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
-
 <p>The control's UI varies in general from browser to browser; at the moment support is patchy, with Chrome/Opera/Edge and Safari 14.1 on desktop and most modern versions of mobile browsers having usable implementations. In other browsers, these degrade gracefully to simple <code><a href="/en-US/docs/Web/HTML/Element/input/text">&lt;input type="text"&gt;</a></code> controls.</p>
 
 <p>The control is intended to represent <em>a local date and time</em>, not necessarily <em>the user's local date and time</em>. In other words, an implementation should allow any valid combination of year, month, day, hour, and minute - even if such a combination is invalid in the user's local time zone (such as times within a daylight saving time spring-forward transition gap). Some mobile browsers (particularly on iOS) do not currently implement this correctly.</p>
@@ -78,7 +76,7 @@ browser-compat: html.elements.input.input-datetime-local
 
 <p>{{ EmbedLiveSample('Value', 600, 60) }}</p>
 
-<p>One thing to note is that the displayed date and time formats differ from the actual <code>value</code>; the displayed date and time are formatted according to the user's locale as reported by their operating system, whereas the date/time <code>value</code> is always formatted <code>yyyy-MM-ddThh:mm</code>. When the above value submitted to the server, for example, it will look like <code>partydate=2017-06-01T08:30</code>.</p>
+<p>One thing to note is that the displayed date and time formats differ from the actual <code>value</code>; the displayed date and time are formatted according to the user's locale as reported by their operating system, whereas the date/time <code>value</code> is always formatted <code>YYYY-MM-DDThh:mm</code>. When the above value submitted to the server, for example, it will look like <code>partydate=2017-06-01T08:30</code>.</p>
 
 <div class="note">
 <p><strong>Note:</strong> Also bear in mind that if such data is submitted via HTTP <code><a href="/en-US/docs/Web/HTTP/Methods/GET">GET</a></code>, the colon character will need to be escaped for inclusion in the URL parameters, e.g. <code>partydate=2017-06-01T08%3A30</code>. See {{jsxref("Global_Objects/encodeURI", "encodeURI()")}} for one way to do this.</p>
@@ -118,19 +116,19 @@ dateControl.value = '2017-06-01T08:30';</pre>
  </tbody>
 </table>
 
-<h3 id="htmlattrdefmax">{{htmlattrdef("max")}}</h3>
+<h3 id="attr-max"><code id="max">max</code></h3>
 
-<p>The latest date and time to accept. If the {{htmlattrxref("value", "input")}} entered into the element is later than this timestamp, the element fails <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a>. If the value of the <code>max</code> attribute isn't a valid string which follows the format <code>yyyy-MM-ddThh:mm</code>, then the element has no maximum value.</p>
+<p>The latest date and time to accept. If the {{htmlattrxref("value", "input")}} entered into the element is later than this timestamp, the element fails <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a>. If the value of the <code>max</code> attribute isn't a valid string which follows the format <code>YYYY-MM-DDThh:mm</code>, then the element has no maximum value.</p>
 
 <p>This value must specify a date string later than or equal to the one specified by the <code>min</code> attribute.</p>
 
-<h3 id="htmlattrdefmin">{{htmlattrdef("min")}}</h3>
+<h3 id="attr-min"><code id="min">min</code></h3>
 
-<p>The earliest date and time to accept; timestamps earlier than this will cause the element to fail <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a>. If the value of the <code>min</code> attribute isn't a valid string which follows the format <code>yyyy-MM-ddThh:mm</code>, then the element has no minimum value.</p>
+<p>The earliest date and time to accept; timestamps earlier than this will cause the element to fail <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a>. If the value of the <code>min</code> attribute isn't a valid string which follows the format <code>YYYY-MM-DDThh:mm</code>, then the element has no minimum value.</p>
 
 <p>This value must specify a date string earlier than or equal to the one specified by the <code>max</code> attribute.</p>
 
-<h3 id="htmlattrdefstep">{{htmlattrdef("step")}}</h3>
+<h3 id="attr-step"><code id="step">step</code></h3>
 
 <p>{{page("/en-US/docs/Web/HTML/Element/input/number", "step-include")}}</p>
 
@@ -271,16 +269,16 @@ input:valid+span:after {
 
 <p>Non-supporting browsers gracefully degrade to a text input, but this creates problems both in terms of consistency of user interface (the presented control will be different), and data handling.</p>
 
-<p>The second problem is the most serious; as we mentioned earlier, with a <code>datetime-local</code> input, the actual value is always normalized to the format <code>yyyy-mm-ddThh:mm</code>. With a text input on the other hand, by default the browser has no recognition of what format the date should be in, and there are lots of different ways in which people write dates and times, for example:</p>
+<p>The second problem is the most serious; as we mentioned earlier, with a <code>datetime-local</code> input, the actual value is always normalized to the format <code>YYYY-MM-DDThh:mm</code>. With a text input on the other hand, by default the browser has no recognition of what format the date should be in, and there are lots of different ways in which people write dates and times, for example:</p>
 
 <ul>
- <li><code>ddmmyyyy</code></li>
- <li><code>dd/mm/yyyy</code></li>
- <li><code>mm/dd/yyyy</code></li>
- <li><code>dd-mm-yyyy</code></li>
- <li><code>mm-dd-yyyy</code></li>
- <li><code>mm-dd-yyyy hh:mm</code> (12 hour clock)</li>
- <li><code>mm-dd-yyyy HH:mm</code> (24 hour clock)</li>
+ <li><code>DDMMYYYY</code></li>
+ <li><code>DD/MM/YYYY</code></li>
+ <li><code>MM/DD/YYYY</code></li>
+ <li><code>DD-MM-YYYY</code></li>
+ <li><code>MM-DD-YYYY</code></li>
+ <li><code>MM-DD-YYYY hh:mm</code> (12 hour clock)</li>
+ <li><code>MM-DD-YYYY HH:mm</code> (24 hour clock)</li>
  <li>etc.</li>
 </ul>
 
@@ -334,13 +332,13 @@ input:valid + span:after {
 }</pre>
 </div>
 
-<p>The best way to deal with dates in forms in a cross-browser way at the moment is to get the user to enter the day, month, year, and time in separate controls ({{htmlelement("select")}} elements being popular — see below for an implementation), or use JavaScript libraries such as <a href="https://jqueryui.com/datepicker/">jQuery date picker</a>, and the <a href="http://timepicker.co/">jQuery timepicker plugin</a>.</p>
+<p>The best way to deal with dates in forms in a cross-browser way at the moment is to get the user to enter the day, month, year, and time in separate controls ({{htmlelement("select")}} elements being popular — see below for an implementation), or use JavaScript libraries such as <a href="https://jqueryui.com/datepicker/">jQuery date picker</a>, and the <a href="https://timepicker.co/">jQuery timepicker plugin</a>.</p>
 
 <h2 id="The_Y2K38_Problem_often_server-side">The Y2K38 Problem (often server-side)</h2>
 
 <p>JavaScript uses double precision floating points to store dates, as with all numbers, meaning that JavaScript code will not suffer from the Y2K38 problem unless integer coercion/bit-hacks are used because all JavaScript bit operators use 32-bit signed 2s-complement integers.</p>
 
-<p>The problem is with the server side of things: storage of dates greater than 2<sup>31</sup>-1. To fix this problem, you must store all dates using either unsigned 32-bit integers, signed 64-bit integers, or double-precision floating points on the server. If your server is written in PHP, the fix may be as simple as upgrading to PHP 8 or 7, and upgrading your hardware to x86_64 or IA64. If you are stuck with other hardware, you can try to emulate 64-bit hardware inside a 32-bit virtual machine, but most VMs don't support this kind of virtualization, stability may suffer, and performance will definately suffer greatly.</p>
+<p>The problem is with the server side of things: storage of dates greater than 2^31 - 1. To fix this problem, you must store all dates using either unsigned 32-bit integers, signed 64-bit integers, or double-precision floating points on the server. If your server is written in PHP, the fix may be as simple as upgrading to PHP 8 or 7, and upgrading your hardware to x86_64 or IA64. If you are stuck with other hardware, you can try to emulate 64-bit hardware inside a 32-bit virtual machine, but most VMs don't support this kind of virtualization, stability may suffer, and performance will definately suffer greatly.</p>
 
 <h2 id="The_Y10k_Problem_often_client-side">The Y10k Problem (often client-side)</h2>
 

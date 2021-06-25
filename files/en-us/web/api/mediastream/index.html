@@ -8,10 +8,13 @@ tags:
   - MediaStream
   - Reference
   - WebRTC
+browser-compat: api.MediaStream
 ---
 <div>{{APIRef("Media Capture and Streams")}}</div>
 
-<p><span class="seoSummary">The <strong><code>MediaStream</code></strong> interface represents a stream of media content. A stream consists of several <strong>tracks</strong> such as video or audio tracks. Each track is specified as an instance of {{domxref("MediaStreamTrack")}}.</span>You can obtain a MediaStream object either by using the constructor or by calling {{domxref("MediaDevices.getUserMedia()")}}.</p>
+<p>The <strong><code>MediaStream</code></strong> interface represents a stream of media content. A stream consists of several <strong>tracks</strong>, such as video or audio tracks. Each track is specified as an instance of {{domxref("MediaStreamTrack")}}.</p>
+
+<p>You can obtain a <code>MediaStream</code> object either by using the constructor or by calling functions such as {{domxref("MediaDevices.getUserMedia()")}}, {{domxref("MediaDevices.getDisplayMedia()")}}, or {{domxref("HTMLCanvasElement.captureStream()")}}.</p>
 
 <p>Some user agents subclass this interface to provide more precise information or functionality, like in {{domxref("CanvasCaptureMediaStreamTrack")}}.</p>
 
@@ -42,9 +45,9 @@ tags:
 
 <dl>
  <dt>{{domxref("MediaStream.onaddtrack")}}</dt>
- <dd>An {{domxref("EventHandler")}} containing the action to perform when an {{event("addtrack")}} event is fired when a new {{domxref("MediaStreamTrack")}} object is added.</dd>
+ <dd>An {{event("Event_handlers", "event handler")}} containing the action to perform when an {{event("addtrack")}} event is fired when a new {{domxref("MediaStreamTrack")}} object is added.</dd>
  <dt>{{domxref("MediaStream.onremovetrack")}}</dt>
- <dd>An {{domxref("EventHandler")}} containing the action to perform when a {{event("removetrack")}} event is fired when a {{domxref("MediaStreamTrack")}} object is removed from it.</dd>
+ <dd>An {{event("Event_handlers", "event handler")}} containing the action to perform when a {{event("removetrack")}} event is fired when a {{domxref("MediaStreamTrack")}} object is removed from it.</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
@@ -106,31 +109,16 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Media Capture', '#dom-mediastream', 'MediaStream')}}</td>
-   <td>{{Spec2('Media Capture')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.MediaStream")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>Using the MediaStream API</li>
+ <li><a href="/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API">Using the MediaStream Recording API</li>
  <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a></li>
  <li><a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a></li>
  <li>{{domxref("MediaStreamTrack")}}</li>

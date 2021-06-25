@@ -9,6 +9,7 @@ tags:
   - Reference
   - Web Audio API
   - createScriptProcessor
+browser-compat: api.BaseAudioContext.createScriptProcessor
 ---
 <p>{{APIRef("Web Audio API")}}{{deprecated_header}}</p>
 
@@ -16,10 +17,7 @@ tags:
   creates a {{domxref("ScriptProcessorNode")}} used for direct audio processing.</p>
 
 <div class="note">
-  <p><strong>Note</strong>: As of the August 29 2014 Web Audio API spec publication, this
-    feature has been marked as deprecated, and was replaced by <a
-      href="https://webaudio.github.io/web-audio-api/#audioworklet">AudioWorklet</a> (see
-    {{domxref("AudioWorkletNode")}}).</p>
+  <p><strong>Note</strong>: This feature was replaced by <a href="/en-US/docs/Web/API/AudioWorklet">AudioWorklets</a> and the {{domxref("AudioWorkletNode")}} interface.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
@@ -98,43 +96,43 @@ console.log(scriptNode.bufferSize);
 // load in an audio track via XHR and decodeAudioData
 
 function getData() {
-  request = new XMLHttpRequest();
-  request.open('GET', 'viper.ogg', true);
-  request.responseType = 'arraybuffer';
-  request.onload = function() {
-    var audioData = request.response;
+  request = new XMLHttpRequest();
+  request.open('GET', 'viper.ogg', true);
+  request.responseType = 'arraybuffer';
+  request.onload = function() {
+    var audioData = request.response;
 
-    audioCtx.decodeAudioData(audioData, function(buffer) {
-    myBuffer = buffer;
-    source.buffer = myBuffer;
-  },
-    function(e){"Error with decoding audio data" + e.err});
-  }
-  request.send();
+    audioCtx.decodeAudioData(audioData, function(buffer) {
+      myBuffer = buffer;
+      source.buffer = myBuffer;
+    },
+    function(e){"Error with decoding audio data" + e.err});
+  }
+  request.send();
 }
 
 // Give the node a function to process audio events
 scriptNode.onaudioprocess = function(audioProcessingEvent) {
   // The input buffer is the song we loaded earlier
-  var inputBuffer = audioProcessingEvent.inputBuffer;
+  var inputBuffer = audioProcessingEvent.inputBuffer;
 
-  // The output buffer contains the samples that will be modified and played
-  var outputBuffer = audioProcessingEvent.outputBuffer;
+  // The output buffer contains the samples that will be modified and played
+  var outputBuffer = audioProcessingEvent.outputBuffer;
 
-  // Loop through the output channels (in this case there is only one)
-  for (var channel = 0; channel &lt; outputBuffer.numberOfChannels; channel++) {
-    var inputData = inputBuffer.getChannelData(channel);
-    var outputData = outputBuffer.getChannelData(channel);
+  // Loop through the output channels (in this case there is only one)
+  for (var channel = 0; channel &lt; outputBuffer.numberOfChannels; channel++) {
+    var inputData = inputBuffer.getChannelData(channel);
+    var outputData = outputBuffer.getChannelData(channel);
 
-    // Loop through the 4096 samples
-    for (var sample = 0; sample &lt; inputBuffer.length; sample++) {
-      // make output equal to the same as the input
-      outputData[sample] = inputData[sample];
+    // Loop through the 4096 samples
+    for (var sample = 0; sample &lt; inputBuffer.length; sample++) {
+      // make output equal to the same as the input
+      outputData[sample] = inputData[sample];
 
-      // add noise to each output sample
-      outputData[sample] += ((Math.random() * 2) - 1) * 0.2;
-    }
-  }
+      // add noise to each output sample
+      outputData[sample] += ((Math.random() * 2) - 1) * 0.2;
+    }
+  }
 }
 
 getData();
@@ -142,38 +140,26 @@ getData();
 // wire up play button
 playButton.onclick = function() {
   source.connect(scriptNode);
-  scriptNode.connect(audioCtx.destination);
-  source.start();
+  scriptNode.connect(audioCtx.destination);
+  source.start();
 }
 
 // When the buffer source stops playing, disconnect everything
 source.onended = function() {
   source.disconnect(scriptNode);
-  scriptNode.disconnect(audioCtx.destination);
+  scriptNode.disconnect(audioCtx.destination);
 }
 </pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Web Audio API', '#dom-baseaudiocontext-createscriptprocessor',
-        'createScriptProcessor')}}</td>
-      <td>{{Spec2('Web Audio API')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+<p>Since the August 29 2014 <a href="https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-createscriptprocessor">Web Audio API specification</a> publication, this feature has been deprecated. It is no longer on track to become a standard.</p>
+
+<p>It was replaced by <a href="/en-US/docs/Web/API/AudioWorklet">AudioWorklets</a> and the {{domxref("AudioWorkletNode")}} interface.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.BaseAudioContext.createScriptProcessor")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

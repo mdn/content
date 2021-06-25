@@ -11,6 +11,7 @@ tags:
   - Service Workers
   - ServiceWorker
   - Workers
+browser-compat: api.ExtendableEvent
 ---
 <div>{{APIRef("Service Workers API")}}</div>
 
@@ -48,7 +49,7 @@ tags:
 <dl>
  <dt>{{domxref("ExtendableEvent.waitUntil", "ExtendableEvent.waitUntil()")}}</dt>
  <dd>
- <p>Extends the lifetime of the event.  It is intended to be called in the <code><a href="/en-US/docs/Web/API/ServiceWorkerGlobalScope/install_event">install</a></code> {{domxref("EventHandler")}} for the {{domxref("ServiceWorkerRegistration.installing", "installing")}} worker and on the <code><a href="/en-US/docs/Web/API/ServiceWorkerGlobalScope/activate_event">activate</a></code> {{domxref("EventHandler")}} for the {{domxref("ServiceWorkerRegistration.active", "active")}} worker.</p>
+ <p>Extends the lifetime of the event.  It is intended to be called in the <code><a href="/en-US/docs/Web/API/ServiceWorkerGlobalScope/install_event">install</a></code> {{event("Event_handlers", "event handler")}} for the {{domxref("ServiceWorkerRegistration.installing", "installing")}} worker and on the <code><a href="/en-US/docs/Web/API/ServiceWorkerGlobalScope/activate_event">activate</a></code> {{event("Event_handlers", "event handler")}} for the {{domxref("ServiceWorkerRegistration.active", "active")}} worker.</p>
  </dd>
 </dl>
 
@@ -93,24 +94,11 @@ self.addEventListener('install', function(event) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#extendableevent', 'ExtendableEvent')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.ExtendableEvent")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

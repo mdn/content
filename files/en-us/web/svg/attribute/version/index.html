@@ -5,12 +5,19 @@ tags:
   - Deprecated
   - SVG
   - SVG Attribute
+browser-compat: svg.elements.svg.version
 ---
 <div>{{SVGRef}}{{Deprecated_Header}}</div>
 
 <p>The <strong><code>version</code></strong> attribute is used to indicate what specification a SVG document conforms to. It is only allowed on the root {{SVGElement("svg")}} element. It is purely advisory and has no influence on rendering or processing.</p>
 
 <p>While it is specified to accept any number, the only two valid choices are currently <code>1.0</code> and <code>1.1</code>.</p>
+
+<p>You can use this attribute with the following SVG elements:</p>
+
+<ul>
+  <li>{{SVGElement("svg")}}</li>
+</ul>
 
 <pre class="brush: html; highlight[1]">&lt;svg version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;rect x="10" y="10" width="80" height="80"/&gt;
@@ -56,4 +63,4 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("svg.elements.svg.version")}}</p>
+<p>{{Compat}}</p>

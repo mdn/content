@@ -1,0 +1,54 @@
+---
+title: MIDIPort.open()
+slug: Web/API/MIDIPort/open
+tags:
+  - API
+  - Method
+  - Reference
+  - open
+  - MIDIPort
+browser-compat: api.MIDIPort.open
+---
+<div>{{securecontext_header}}{{DefaultAPISidebar("Web MIDI API")}}</div>
+
+<p class="summary">The <strong><code>open()</code></strong> method of the {{domxref("MIDIPort")}} interface makes the MIDI device connected to this <code>MIDIPort</code> explicitly available.</p>
+
+<p>If the port is successfully opened a new {{domxref("MIDICOnnectionEvent")}} is queued to the {{domxref("MIDIPort.onstatechange")}} and {{domxref("MIDIAccess.onstatechange")}} event handlers, and the {{domxref("MIDIPort.connection")}} property is changed to <code>"open"</code>.</p>
+
+<p>If the port is already open when this method is called, then the promise will resolve successfully.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js">var output = midiAccess.outputs.get(portID);
+output.open(); // opens the port</pre>
+
+<h3 id="Parameters">Parameters</h3>
+
+<p>None.</p>
+
+<h3 id="Returns">Return value</h3>
+
+<p>A {{jsxref("Promise")}} which resolves once access to the port has been successfully obtained.</p>
+
+<h3 id="Exceptions">Exceptions</h3>
+
+<dl>
+  <dt>{{domxref("DOMException")}} <code>InvalidAccessError</code></dt>
+  <dd>The promise is rejected with this error if the port is unavailable and cannot be opened.</dd>
+</dl>
+
+<h2 id="Examples">Examples</h2>
+
+<p>The following example shows an output port being opened.</p>
+
+<pre class="brush:js"><pre class="brush: js">var output = midiAccess.outputs.get(portID);
+output.open(); // opens the port</pre></pre>
+
+
+<h2 id="Specifications">Specifications</h2>
+
+<p>{{Specifications}}</p>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>

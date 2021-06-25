@@ -79,11 +79,11 @@ async function runXR(xrSession) {
 
 <p>This makes using the most of the time available between frames critical. If the user's device is using a 60 Hz display, your callback will be called up to 60 times per second, and your goal is to do what you can to ensure that it doesn't get called less often than that. You achieve this by doing as much as is practicable off the main thread and by keeping your frame rendering callback as efficient as possible. The division of time into 60 Hz blocks with each block being used at least in part to render the scene is shown in the diagram below.</p>
 
-<div style="width: 42em; text-align: center;"><img alt="Renderer execution time per frame period" src="frames-and-refresh-rate.svg" style="padding-bottom: 1em;"></div>
+<img alt="Renderer execution time per frame period" src="frames-and-refresh-rate.svg">
 
 <p>This is important because as the computer becomes increasingly busy, it may not be able to accurately call your callback every frame and may have to skip frames. This is called <strong>dropping frames</strong>. This happens when the amount of time it takes to render a frame exceeds the time available between frames, whether because rendering was delayed or because rendering itself took more time than was available.</p>
 
-<div style="width: 42em; text-align: center;"><img alt="Renderer execution time per frame period" src="dropped-frames-timing.svg" style="padding-bottom: 1em;"></div>
+<img alt="Renderer execution time per frame period" src="dropped-frames-timing.svg">
 
 <p>In the diagram above, frame 3 is dropped because frame 2 did not complete rendering until after frame 3 was due to be painted. The next frame drawn will be frame 4 instead. This is another reason the timestamp passed into your rendering callback is useful. By configuring the scene based on time rather than frame number, you can ensure your rendered frames match what's expected instead of falling behind.</p>
 
@@ -162,7 +162,7 @@ async function runXR(xrSession) {
 
 <p>Put, this form of renderer is using <strong>view-first order</strong>. Each of the two views making up the XR device's display are rendered back to back, where every object is drawn on one view before rendering the same set of objects on the other view. As a result, there's a good bit of replicated effort, since much of the data needed to draw an object winds up getting sent to the GPU twice per frame. However, it simplifies porting existing WebGL code and is frequently good enough to do the job, so we'll look at this method first.</p>
 
-<p>See <a href="/en-US/docs/Web/API/WebXR_Device_API/Rendering#optimizing_by_rendering_in_object-first_order">Optimizing by rendering in object-first order</a> for an alternative approach that renders each object twice back-to-back, once for each eye, before moving on to the next object that makes up the scene for that frame; that is, rendering in <strong>object-first order</strong>.</p>
+<p>See <a href="#optimizing_by_rendering_in_object-first_order">Optimizing by rendering in object-first order</a> for an alternative approach that renders each object twice back-to-back, once for each eye, before moving on to the next object that makes up the scene for that frame; that is, rendering in <strong>object-first order</strong>.</p>
 
 <h4 id="Sample_rendering_callback">Sample rendering callback</h4>
 
@@ -214,7 +214,7 @@ function myDrawFrame(currentFrameTime, frame) {
 
 <p>The <code>myDrawFrame()</code> function grabs the {{domxref("XRSession")}} from the {{domxref("XRFrame")}} object specified by the <code>frame</code> parameter, then calls the session's {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}} method to immediately schedule the rendering of the next frame. This ensures we get into the queue right away, allowing the rest of the time spent in this iteration of the <code>myDrawFrame()</code> function to count toward the timing of drawing the next frame.</p>
 
-<p>We then get the {{domxref("XRViewerPose")}} object that describes the viewer's pose—their position and orientation—using the frame's {{domxref("XRFrame.getViewerPose", "getViewerPose()")}} method, passing in the viewer's reference space from the <code>viewerRefSpace</code> previously obtained <a href="/en-US/docs/Web/API/WebXR_Device_API/Rendering#preparing_the_renderer">while setting up the WebXR session</a>.</p>
+<p>We then get the {{domxref("XRViewerPose")}} object that describes the viewer's pose—their position and orientation—using the frame's {{domxref("XRFrame.getViewerPose", "getViewerPose()")}} method, passing in the viewer's reference space from the <code>viewerRefSpace</code> previously obtained <a href="#preparing_the_renderer">while setting up the WebXR session</a>.</p>
 
 <p>With the viewer's pose in hand, we can then begin to render the frame. The first step is to obtain access to the framebuffer into which the WebXR device wants the frame drawn; this is done by getting the target WebGL layer from the session's {{domxref("XRSession.renderState", "renderState")}} object's {{domxref("XRRenderState.baseLayer", "baseLayer")}} property, then getting the {{domxref("XRWebGLLayer.framebuffer", "framebuffer")}} from that {{domxref("XRWebGLLayer")}} object. We then call <code><a href="/en-US/docs/Web/API/WebGLRenderingContext/bindFramebuffer">gl.bindFrameBuffer()</a></code> to bind that framebuffer as the target for all upcoming drawing commands.</p>
 

@@ -8,9 +8,12 @@ tags:
 ---
 <div>{{CSSRef}}</div>
 
-<p>In addition to the ability to place items accurately onto a created grid, the CSS Grid Layout specification contains rules that control what happens when you create a grid and do not place some or all of the child items. You can see auto-placement in action in the simplest of ways by creating a grid on a set of items. If you give the items no placement information they will position themselves on the grid, one in each grid cell.</p>
+<p>In addition to the ability to place items accurately onto a created grid, the CSS Grid Layout specification contains rules that control what happens when you create a grid and do not place some or all of the child items. You can see auto-placement in action in the simplest of ways by creating a grid on a set of items.</p>
 
-<div id="placement_1">
+<h2 id="default_placement">Default placement</h2>
+
+<p>If you give the items no placement information they will position themselves on the grid, one in each grid cell.</p>
+
 <div class="hidden">
 <pre class="brush: css">* {box-sizing: border-box;}
 
@@ -46,7 +49,7 @@ tags:
 &lt;/div&gt;
 </pre>
 
-<p>{{ EmbedLiveSample('placement_1', '500', '230') }}</p>
+<p>{{ EmbedLiveSample('default_placement', '500', '230') }}</p>
 </div>
 
 <h2 id="Default_rules_for_auto-placement">Default rules for auto-placement</h2>
@@ -59,7 +62,6 @@ tags:
 
 <p>You can however control the size of these rows with the property <code>grid-auto-rows</code>. To cause all created rows to be 100 pixels tall for example you would use:</p>
 
-<div id="placement_2">
 <div class="hidden">
 <pre class="brush: css">* {box-sizing: border-box;}
 
@@ -96,12 +98,12 @@ tags:
 }
 </pre>
 
-<p>{{ EmbedLiveSample('placement_2', '500', '330') }}</p>
-</div>
+<p>{{ EmbedLiveSample('Sizing_rows_in_the_implicit_grid', '500', '330') }}</p>
+
+<h3 id="Sizing_rows_using_minmax">Sizing rows using minmax()</h3>
 
 <p>You can use {{cssxref("minmax()","minmax()")}} in your value for {{cssxref("grid-auto-rows")}} enabling the creation of rows that are a minimum size but then grow to fit content if it is taller.</p>
 
-<div id="placement_3">
 <div class="hidden">
 <pre class="brush: css">* {box-sizing: border-box;}
 
@@ -144,12 +146,12 @@ tags:
 }
 </pre>
 
-<p>{{ EmbedLiveSample('placement_3', '500', '330') }}</p>
-</div>
+<p>{{ EmbedLiveSample('Sizing_rows_using_minmax', '500', '330') }}</p>
+
+<h3 id="Sizing_rows_using_a_track_listing">Sizing rows using a track listing</h3>
 
 <p>You can also pass in a track listing, this will repeat. The following track listing will create an initial implicit row track as 100 pixels and a second as <code>200px</code>. This will continue for as long as content is added to the implicit grid. </p>
 
-<div id="placement_4">
 <div class="hidden">
 <pre class="brush: css">* {box-sizing: border-box;}
 
@@ -189,8 +191,7 @@ tags:
 }
 </pre>
 
-<p>{{ EmbedLiveSample('placement_4', '500', '330') }}</p>
-</div>
+<p>{{ EmbedLiveSample('Sizing_rows_using_a_track_listing', '500', '450') }}</p>
 
 <h3 id="Auto-placement_by_column">Auto-placement by column</h3>
 
@@ -198,7 +199,6 @@ tags:
 
 <p>In this next example I have created a grid with three row tracks of 200 pixels height. I am auto-placing by column and the columns created will be a column width of 300 pixels, then a column width of 100 pixels until there are enough column tracks to hold all of the items.</p>
 
-<div id="placement_5">
 <pre class="brush: css">.wrapper {
     display: grid;
     grid-template-rows: repeat(3, 200px);
@@ -239,8 +239,7 @@ tags:
 &lt;/div&gt;
 </pre>
 
-<p>{{ EmbedLiveSample('placement_5', '500', '640') }}</p>
-</div>
+<p>{{ EmbedLiveSample('Auto-placement_by_column', '500', '700') }}</p>
 
 <h2 id="The_order_of_auto_placed_items">The order of auto placed items</h2>
 
@@ -254,7 +253,6 @@ tags:
 
 <p>The first thing grid will do is place any items that have a position. In the example below I have 12 grid items. Item 2 and item 5 have been placed using line based placement on the grid. You can see how those items are placed and the other items then auto-place in the spaces. The auto-placed items will place themselves before the placed items in DOM order, they don’t start after the position of a placed item that comes before them.</p>
 
-<div id="placement_6">
 <div class="hidden">
 <pre class="brush: css">* {box-sizing: border-box;}
 
@@ -306,8 +304,7 @@ tags:
 }
 </pre>
 
-<p>{{ EmbedLiveSample('placement_6', '500', '450') }}</p>
-</div>
+<p>{{ EmbedLiveSample('Items_with_placement_properties', '500', '500') }}</p>
 
 <h3 id="Deal_with_items_that_span_tracks">Deal with items that span tracks</h3>
 
@@ -315,7 +312,6 @@ tags:
 
 <p>You can see how this then leaves gaps in the grid, as for the auto-placed items if grid comes across an item that doesn’t fit into a track, it will move to the next row until it finds a space the item can fit in.</p>
 
-<div id="placement_7">
 <div class="hidden">
 <pre class="brush: css">* {box-sizing: border-box;}
 .wrapper {
@@ -371,8 +367,7 @@ tags:
 }
 </pre>
 
-<p>{{ EmbedLiveSample('placement_7', '500', '770') }}</p>
-</div>
+<p>{{ EmbedLiveSample('Deal_with_items_that_span_tracks', '500', '800') }}</p>
 
 <h3 id="Filling_in_the_gaps">Filling in the gaps</h3>
 
@@ -382,7 +377,6 @@ tags:
 
 <p>Having done this, grid will now backfill the gaps, as it moves through the grid it leaves gaps as before, but then if it finds an item that will fit in a previous gap it will pick it up and take it out of DOM order to place it in the gap. As with any other reordering in grid this does not change the logical order. Tab order for example, will still follow the document order. We will take a look at the potential accessibility issues of Grid Layout in a later guide, but you should take care when creating this disconnect between the visual order and display order.</p>
 
-<div id="placement_8">
 <div class="hidden">
 <pre class="brush: css">* {box-sizing: border-box;}
 .wrapper {
@@ -439,8 +433,7 @@ tags:
 }
 </pre>
 
-<p>{{ EmbedLiveSample('placement_8', '500', '730') }}</p>
-</div>
+<p>{{ EmbedLiveSample('Filling_in_the_gaps', '500', '730') }}</p>
 
 <h3 id="Anonymous_grid_items">Anonymous grid items</h3>
 
@@ -461,13 +454,10 @@ tags:
 
 <p>Try removing the line <code>grid-auto-flow: dense</code> to see the content reflow to leave gaps in the layout.</p>
 
-<div id="placement_9">
 <p>{{EmbedGHLiveSample("css-examples/grid/docs/autoplacement.html", '100%', 1200)}}</p>
-</div>
 
 <p>Auto-placement can also help you lay out interface items which do have logical order. An example is the definition list in this next example. Definition lists are an interesting challenge to style as they are flat, there is nothing wrapping the groups of <code>dt</code> and <code>dd</code> items. In my example I am allowing auto-placement to place the items, however I have classes that start a <code>dt</code> in column 1, and <code>dd</code> in column 2, this ensure that terms go on one side and definitions on the other - no matter how many of each we have.</p>
 
-<div id="placement_10">
 <div class="hidden">
 <pre class="brush: css">* {box-sizing: border-box;}
 
@@ -510,8 +500,7 @@ dd {
  }
 </pre>
 
-<p>{{ EmbedLiveSample('placement_10', '500', '230') }}</p>
-</div>
+<p>{{ EmbedLiveSample('Use_cases_for_auto-placement', '500', '230') }}</p>
 
 <h2 id="What_can’t_we_do_with_auto-placement_yet">What can’t we do with auto-placement (yet)?</h2>
 

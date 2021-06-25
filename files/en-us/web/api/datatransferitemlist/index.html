@@ -9,10 +9,13 @@ tags:
   - Interface
   - Reference
   - drag and drop
+browser-compat: api.DataTransferItemList
 ---
 <div>{{APIRef("HTML Drag and Drop API")}}</div>
 
 <p>The <code><strong>DataTransferItemList</strong></code> object is a list of {{domxref("DataTransferItem")}} objects representing items being dragged. During a <em>drag operation</em>, each {{domxref("DragEvent")}} has a {{domxref("DragEvent.dataTransfer","dataTransfer")}} property and that property is a <code>DataTransferItemList</code>.</p>
+
+<p>The individual items can be accessed using the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#accessing_array_elements">array operator</a> <code>[]</code>.</p>
 
 <p>This interface has no constructor.</p>
 
@@ -36,33 +39,101 @@ tags:
  <dd>Getter that returns a {{domxref("DataTransferItem")}} at the given index.</dd>
 </dl>
 
-<h2 id="Example">Example</h2>
+<h2 id="Example_Drag_and_Drop">Example</h2>
 
-<p>Each of this interface's methods and properties has a reference page, and each reference page has an example of its usage.</p>
+<p>This example shows how to use drag and drop.</p>
+
+<h3 id="JavaScript">JavaScript</h3>
+
+<pre class="brush: js">function dragstart_handler(ev) {
+  console.log("dragStart");
+  // Add this element's id to the drag payload so the drop handler will
+  // know which element to add to its tree
+  var dataList = ev.dataTransfer.items;
+  dataList.add(ev.target.id, "text/plain");
+  // Add some other items to the drag payload
+  dataList.add("&lt;p&gt;... paragraph ...&lt;/p&gt;", "text/html");
+  dataList.add("http://www.example.org","text/uri-list");
+}
+
+function drop_handler(ev) {
+  console.log("Drop");
+  ev.preventDefault();
+  var data = ev.dataTransfer.items;
+  // Loop through the dropped items and log their data
+  for (var i = 0; i &lt; data.length; i++) {
+    if ((data[i].kind == 'string') &amp;&amp; (data[i].type.match('^text/plain'))) {
+      // This item is the target node
+      data[i].getAsString(function (s){
+        ev.target.appendChild(document.getElementById(s));
+      });
+    } else if ((data[i].kind == 'string') &amp;&amp; (data[i].type.match('^text/html'))) {
+      // Drag data item is HTML
+      data[i].getAsString(function (s){
+        console.log("... Drop: HTML = " + s);
+      });
+    } else if ((data[i].kind == 'string') &amp;&amp; (data[i].type.match('^text/uri-list'))) {
+      // Drag data item is URI
+      data[i].getAsString(function (s){
+        console.log("... Drop: URI = " + s);
+      });
+    }
+  }
+}
+
+function dragover_handler(ev) {
+  console.log("dragOver");
+  ev.preventDefault();
+  // Set the dropEffect to move
+  ev.dataTransfer.dropEffect = "move"
+}
+
+function dragend_handler(ev) {
+  console.log("dragEnd");
+  var dataList = ev.dataTransfer.items;
+  // Clear any remaining drag data
+  dataList.clear();
+}
+
+</pre>
+
+<h3 id="HTML">HTML</h3>
+
+<pre class="brush: html">&lt;div&gt;
+  &lt;p id="source" ondragstart="dragstart_handler(event);" ondragend="dragend_handler(event);" draggable="true"&gt;
+     Select this element, drag it to the Drop Zone and then release the selection to move the element.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);"&gt;Drop Zone&lt;/div&gt;
+</pre>
+
+<h3 id="CSS">CSS</h3>
+
+<pre class="brush: css">div {
+  margin: 0em;
+  padding: 2em;
+}
+
+#source {
+  color: blue;
+  border: 1px solid black;
+}
+
+#target {
+  border: 1px solid black;
+}
+</pre>
+
+<h3 id="Result">Result</h3>
+
+<p>{{EmbedLiveSample('Example_Drag_and_Drop', '35%', '250px')}}</p>
+
+<p>{{LiveSampleLink('Example_Drag_and_Drop', 'Drag and Drop demo link')}}</p>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'interaction.html#datatransferitemlist','DataTransferItemList')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', 'editing.html#datatransferitemlist','DataTransferItemList')}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>Not included in W3C HTML5 {{Spec2('HTML5 W3C')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 
-<p>{{Compat("api.DataTransferItemList")}}</p>
+<p>{{Compat}}</p>

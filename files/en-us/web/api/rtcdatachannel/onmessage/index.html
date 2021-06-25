@@ -9,11 +9,12 @@ tags:
 - Reference
 - WebRTC
 - onmessage
+browser-compat: api.RTCDataChannel.onmessage
 ---
 <p>{{APIRef("WebRTC")}}{{SeeCompatTable}}</p>
 
 <p>The <code><strong>RTCDataChannel.onmessage</strong></code> property stores an
-  {{domxref("EventHandler")}} which specifies a function to be called when the
+  {{event("Event_handlers", "event handler")}} which specifies a function to be called when the
   {{event("message")}} event is fired on the channel. This event is represented by the
   {{domxref("MessageEvent")}} interface. This event is sent to the channel when a message
   is received from the other peer.</p>
@@ -50,27 +51,11 @@ dc.onmessage = function(event) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{ SpecName('WebRTC 1.0', '#dom-rtcdatachannel-onmessage',
-        'RTCDataChannel.onmessage') }}</td>
-      <td>{{ Spec2('WebRTC 1.0') }}</td>
-      <td>Initial specification.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCDataChannel.onmessage")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

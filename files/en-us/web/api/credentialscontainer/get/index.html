@@ -9,11 +9,12 @@ tags:
 - NeedsExample
 - Reference
 - credential management
+browser-compat: api.CredentialsContainer.get
 ---
-<p>{{APIRef("Credential Management")}}{{SeeCompatTable}}</p>
+<p>{{APIRef("Credential Management API")}}{{SeeCompatTable}}</p>
 
 <p>The <strong><code>get()</code></strong> method of the
-  {{domxref("CredentialsContainer")}} interface returns a {{jsxref("Promise")}} to a
+  {{domxref("CredentialsContainer")}} interface returns a {{jsxref("Promise")}} to a
   single {{domxref("Credential")}} instance that matches the provided parameters. If no
   match is found the Promise will resolve to null.</p>
 
@@ -48,26 +49,26 @@ tags:
     <ul>
       <li><code>password</code>: a {{jsxref("Boolean")}} indicating that returned
         {{domxref("Credential")}} instances should include user (as opposed to federated)
-        credentials. </li>
-      <li><code>federated</code>: A {{domxref("FederatedCredentialRequestOptions")}}
+        credentials.</li>
+      <li><code>federated</code>: A {{domxref("FederatedCredentialRequestOptions")}}
         object containing requirements for returned federated credentials. The available
         options are:
         <ul>
           <li><code>providers</code>: An array of {{domxref("DOMString")}} instances of
             identity providers to search for.</li>
-          <li><code>protocols</code> An array of {{domxref("DOMString")}} instances of
+          <li><code>protocols</code> An array of {{domxref("DOMString")}} instances of
             federation protocols to search for.</li>
         </ul>
       </li>
       <li><code>publicKey</code>: An {{domxref("PublicKeyCredentialRequestOptions")}}
         object containing requirements for returned <a
-          href="/en-US/docs/Web/API/Web_Authentication_API">WebAuthn</a> credentials. 
+          href="/en-US/docs/Web/API/Web_Authentication_API">WebAuthn</a> credentials.
       </li>
       <li><code>mediation</code>: A {{jsxref("String")}} indicating whether the user will
         be required to log on for every visit to the website. Valid values are
         <code>"silent"</code>, <code>"optional"</code>, or <code>"required"</code>.</li>
-      <li><code>unmediated</code>: {{deprecated_inline}} A {{jsxref("Boolean")}}
-        indicating the returned {{domxref("Credential")}} instance should not require user
+      <li><code>unmediated</code>: {{deprecated_inline}} A {{jsxref("Boolean")}}
+        indicating the returned {{domxref("Credential")}} instance should not require user
         mediation.</li>
       <li><code>signal</code>: An instance of {{domxref("AbortSignal")}} that can indicate
         that an ongoing <code>get()</code> operation should be halted. An aborted
@@ -80,44 +81,22 @@ tags:
 
 <h3 id="Returns">Returns</h3>
 
-<p>A {{jsxref("Promise")}} that resolves with a {{domxref("Credential")}} instance that
+<p>A {{jsxref("Promise")}} that resolves with a {{domxref("Credential")}} instance that
   matches the provided parameters. If a single Credential cannot be unambiguously
   obtained, the Promise will resolve to null.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Credential Management','#dom-credentialscontainer-get','get()')}}
-      </td>
-      <td>{{Spec2('Credential Management')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('WebAuthn')}}</td>
-      <td>{{Spec2('WebAuthn')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
+<p>{{Compat}}</p>
 
-  <p>{{Compat("api.CredentialsContainer.get")}}</p>
+<h2 id="See_also">See also</h2>
 
-  <h2 id="See_also">See also</h2>
-
-  <ul>
-    <li>{{HTTPHeader("Feature-Policy")}} directive
-      {{HTTPHeader("Feature-Policy/publickey-credentials-get","publickey-credentials-get")}}
-    </li>
-  </ul>
-</div>
+<ul>
+  <li>{{HTTPHeader("Feature-Policy")}} directive
+    {{HTTPHeader("Feature-Policy/publickey-credentials-get","publickey-credentials-get")}}
+  </li>
+</ul>

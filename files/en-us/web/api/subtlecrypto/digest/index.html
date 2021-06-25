@@ -2,12 +2,13 @@
 title: SubtleCrypto.digest()
 slug: Web/API/SubtleCrypto/digest
 tags:
-- API
-- Method
-- Reference
-- SubtleCrypto
-- WebCrypto API
-- digest
+  - API
+  - Method
+  - Reference
+  - SubtleCrypto
+  - WebCrypto API
+  - digest
+browser-compat: api.SubtleCrypto.digest
 ---
 <p>{{APIRef("Web Crypto API")}}{{SecureContext_header}}</p>
 
@@ -22,7 +23,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js">const digest = <var>crypto</var><code>.subtle.digest(<var>algorithm</var>, <var>data</var>)</code>;
+<pre class="brush: js">const digest = crypto.subtle.digest(algorithm, data);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -107,7 +108,7 @@ tags:
  <div class="notecard note">
   <p>Hint: If you are looking here for how to create an keyed-hash message authentication
     code (<a href="/en-US/docs/Glossary/HMAC">HMAC</a>), you need to use the <a
-      href="/en-US/docs/Web/API/SubtleCrypto/sign#HMAC">SubtleCrypto.sign()</a> instead.
+      href="/en-US/docs/Web/API/SubtleCrypto/sign#hmac">SubtleCrypto.sign()</a> instead.
   </p>
 </div>
 
@@ -153,27 +154,11 @@ console.log(digestHex);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('Web Crypto API', '#dfn-SubtleCrypto-method-digest',
-        'SubtleCrypto.digest()')}}</td>
-      <td>{{Spec2('Web Crypto API')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.SubtleCrypto.digest")}}</p>
+<p>{{Compat}}</p>
 
 <div class="notecard note">
   <p> In Chrome 60, they added a feature that disables crypto.subtle for non-TLS

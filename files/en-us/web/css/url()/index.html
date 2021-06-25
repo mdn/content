@@ -13,7 +13,7 @@ browser-compat: css.types.url
 ---
 <div>{{CSSRef}}</div>
 
-<p><span class="seoSummary">The <code><strong>url()</strong></code> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Functions">function</a> is used to include a file. The parameter is an absolute URL, a relative URL, or a data URI. The <code><strong>url()</strong></code> function can be passed as a parameter of another CSS functions, like the {{cssxref('attr()')}} function. Depending on the property for which it is a value, the resource sought can be an image, font, or a stylesheet. The <code>url()</code> functional notation is the value for the <code>&lt;url&gt;</code> data type.</span></p>
+<p>The <code><strong>url()</strong></code> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Functions">function</a> is used to include a file. The parameter is an absolute URL, a relative URL, or a data URI. The <code><strong>url()</strong></code> function can be passed as a parameter of another CSS functions, like the {{cssxref('attr()')}} function. Depending on the property for which it is a value, the resource sought can be an image, font, or a stylesheet. The <code>url()</code> functional notation is the value for the <code>&lt;url&gt;</code> data type.</p>
 
 <div class="notecard note">
 <p><strong>URI or URL?</strong> There is a difference between a {{Glossary("URI")}} and a {{Glossary("URL")}}. A URI identifies a resource. A URL is a type of URI, and describes the <em>location</em> of a resource. A URI can be either a URL or a name ({{Glossary("URN")}}) of a resource.</p>
@@ -28,7 +28,7 @@ url(myFont.woff);
 url(#IDofSVGpath);
 
 /* associated properties */
-background-image: url("https://mdn.mozillademos.org/files/16761/star.gif");
+background-image: url("star.gif");
 list-style-image: url('../images/bullet.jpg');
 content: url("pdficon.jpg");
 cursor: url(mycursor.cur);
@@ -41,7 +41,7 @@ mask-image: url("masks.svg#mask1");
 cursor: url(pointer.cur), pointer;
 
 /* Associated short-hand properties */
-background: url('https://mdn.mozillademos.org/files/16761/star.gif') bottom right repeat-x blue;
+background: url('star.gif') bottom right repeat-x blue;
 border-image: url("/media/diamonds.png") 30 fill / 30px / 30px space;
 
 /* As a parameter in another CSS function */
@@ -59,7 +59,9 @@ content: url(star.svg) url(star.svg) url(star.svg) url(star.svg) url(star.svg);
 
 <p>Relative URLs, if used, are relative to the URL of the stylesheet (not to the URL of the web page).</p>
 
-<p class="task-list-item">The <code><strong>url()</strong></code> function can be included as a value for {{cssxref('background')}}, {{cssxref('background-image')}}, {{cssxref('list-style')}}, {{cssxref('list-style-image')}}, {{cssxref('content')}}, {{cssxref('cursor')}}, {{cssxref('border')}}, {{cssxref('border-image')}}, {{cssxref('border-image-source')}}, {{cssxref('mask')}}, {{cssxref('mask-image')}}, <a href="/en-US/docs/Web/CSS/@font-face/src">src</a> as part of a <a href="/en-US/docs/Web/CSS/@font-face">@font-face</a> block, and <a href="/en-US/docs/Web/CSS/@counter-style/symbols">@counter-style/symbol</a></p>
+<p class="task-list-item">The <code><strong>url()</strong></code> function can be included as a value for 
+  {{cssxref('background')}}, {{cssxref('background-image')}}, {{cssxref('border')}}, {{cssxref('border-image')}}, {{cssxref('border-image-source')}}, {{cssxref('content')}}, {{cssxref('cursor')}}, {{cssxref('filter')}}, {{cssxref('list-style')}}, {{cssxref('list-style-image')}}, {{cssxref('mask')}}, {{cssxref('mask-image')}}, {{cssxref('offset-path')}},
+  <a href="/en-US/docs/Web/CSS/@font-face/src">src</a> as part of a <a href="/en-US/docs/Web/CSS/@font-face">@font-face</a> block, and <a href="/en-US/docs/Web/CSS/@counter-style/symbols">@counter-style/symbol</a></p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -117,7 +119,7 @@ content: url(star.svg) url(star.svg) url(star.svg) url(star.svg) url(star.svg);
 <h4 id="CSS">CSS</h4>
 
 <pre class="brush: css highlight[2]">li::after {
-  content: ' - ' url(https://mdn.mozillademos.org/files/16761/star.gif);
+  content: ' - ' url(star.gif);
 }</pre>
 
 <h4 id="Result">Result</h4>
@@ -166,37 +168,7 @@ content: url(star.svg) url(star.svg) url(star.svg) url(star.svg) url(star.svg);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName('CSS4 Values', '#urls', 'url()')}}</td>
-			<td>{{Spec2('CSS4 Values')}}</td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>{{SpecName('CSS3 Values', '#urls', 'url()')}}</td>
-			<td>{{Spec2('CSS3 Values')}}</td>
-			<td>No significant change from CSS Level 2 (Revision 1).</td>
-		</tr>
-		<tr>
-			<td>{{Specname('CSS2.1', 'syndata.html#uri', 'uri()')}}</td>
-			<td>{{Spec2('CSS2.1')}}</td>
-			<td>No significant change from CSS Level 1.</td>
-		</tr>
-		<tr>
-			<td>{{SpecName('CSS1', '#url', 'url()')}}</td>
-			<td>{{Spec2('CSS1')}}</td>
-			<td>Initial definition.</td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

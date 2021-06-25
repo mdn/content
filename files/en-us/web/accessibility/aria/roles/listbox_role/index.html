@@ -26,7 +26,7 @@ tags:
 
 <dl>
 	<dt><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/option_role">option</a></dt>
-	<dd>One or more nested options are required. All selected options have <code>aria-selected</code> set to <code>true</code>. All options that are not selected have <code>aria-selected</code> set to <code>false</code>.  If an option is not selectable, omit the <code>aria-selected</code>.</dd>
+	<dd>One or more nested options are required. All selected options have <code>aria-selected</code> set to <code>true</code>. All options that are not selected have <code>aria-selected</code> set to <code>false</code>. If an option is not selectable, omit the <code>aria-selected</code>.</dd>
 	<dt><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/List_role">list</a></dt>
 	<dd>A section containing <code>listitem</code> elements</dd>
 </dl>
@@ -35,9 +35,9 @@ tags:
 
 <dl>
 	<dt>aria-activedescendant</dt>
-	<dd>Holds the <code>id</code> string of the currently active element within the listbox.  If that's an option element, then that would be the <code>id</code> of the most recently interacted with option, regardless of whether that option has an <code>aria-selected</code> value of <code>true</code> or not. Takes the value of only one <code>id</code>, even in a multiselectable listbox.  If the <code>id</code> does not refer to a DOM descendant of the listbox, then that <code>id</code> must be included among the IDs in the <code>aria-owns</code> attrubute.</dd>
+	<dd>Holds the <code>id</code> string of the currently active element within the listbox. If that's an option element, then that would be the <code>id</code> of the most recently interacted with option, regardless of whether that option has an <code>aria-selected</code> value of <code>true</code> or not. Takes the value of only one <code>id</code>, even in a multiselectable listbox. If the <code>id</code> does not refer to a DOM descendant of the listbox, then that <code>id</code> must be included among the IDs in the <code>aria-owns</code> attribute.</dd>
 	<dt>aria-owns</dt>
-	<dd>This is a space-separated list of element IDs which are not DOM child elements of the listbox.  IDs listed here cannot also be listed in <code>aria-owns</code> attributes of any other elements.</dd>
+	<dd>This is a space-separated list of element IDs which are not DOM child elements of the listbox. IDs listed here cannot also be listed in <code>aria-owns</code> attributes of any other elements.</dd>
 	<dt>aria-multiselectable</dt>
 	<dd>Include and set to <code>true</code> if the user can select more than one option. If set to <code>true</code>, <em>every</em> selectable option should have an <code>aria-selected</code> attribute included and set to <code>true</code> or <code>false</code>.  Options which are <em>not</em> selectable <em>should not</em> have the <code>aria-selected</code> attribute.</dd>
 	<dd>If <code>false</code> or omitted, only the currently selected option, if any option is selected, needs the <code>aria-selected</code> attribute, and it must be set to <code>true</code>.</dd>
@@ -46,11 +46,11 @@ tags:
 	<dt>aria-readonly</dt>
 	<dd>The user cannot change which options are selected or unselected, but the listbox is otherwise operable.</dd>
 	<dt>aria-label</dt>
-	<dd>A human-readable string value which identifies the listbox.  If there's a visible label, then <code>aria-labelledby</code> should be used instead to refer to that label.</dd>
+	<dd>A human-readable string value which identifies the listbox. If there's a visible label, then <code>aria-labelledby</code> should be used instead to refer to that label.</dd>
 	<dt>aria-labelledby</dt>
-	<dd>Identifies the visible element or elements in a space-separated list of element IDs which identify the listbox.  If there's no visible label, then <code>aria-label</code> should be used instead to include a label.  (Note: "labelled", with two L's, is the correct spelling based on the accessibility API conventions.)</dd>
+	<dd>Identifies the visible element or elements in a space-separated list of element IDs which identify the listbox. If there's no visible label, then <code>aria-label</code> should be used instead to include a label. (Note: "labelled", with two L's, is the correct spelling based on the accessibility API conventions.)</dd>
 	<dt>aria-roledescription</dt>
-	<dd>A human-readable string value which more clearly identifies the role of the listbox.  Screen readers will often read this value to the user after reading the label (if there is one), in place of saying "listbox".</dd>
+	<dd>A human-readable string value which more clearly identifies the role of the listbox. Screen readers will often read this value to the user after reading the label (if there is one), in place of saying "listbox".</dd>
 </dl>
 
 <p>(For further details and a full list of ARIA states and properties see the <a href="https://www.w3.org/TR/wai-aria-1.1/#listbox">ARIA <code>listbox</code> (role)</a> documentation.)</p>

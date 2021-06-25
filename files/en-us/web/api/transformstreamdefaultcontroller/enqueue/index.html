@@ -1,0 +1,62 @@
+---
+title: TransformStreamDefaultController.enqueue()
+slug: Web/API/TransformStreamDefaultController/enqueue
+tags:
+  - API
+  - Method
+  - Reference
+  - enqueue
+  - TransformStreamDefaultController
+---
+<div>{{DefaultAPISidebar("Streams API")}}</div>
+
+<p class="summary">The <strong><code>enqueue()</code></strong> method of the {{domxref("TransformStreamDefaultController")}} interface enqueues the given chunk in the readable side of the stream.</p>
+
+<p>For more information on readable streams and chunks see <a href="/en-US/docs/Web/API/Streams_API/Using_readable_streams">Using Readable Streams</a>.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox">TransformStreamDefaultController.enqueue(chunk);</pre>
+
+<h3 id="Parameters">Parameters</h3>
+
+<dl>
+  <dt><code>chunk</code></dt>
+  <dd>The chunk being queued. A chunk is a single piece of data. It can be any type of data, and a stream can contain chunks of different types.</dd>
+</dl>
+
+<h2 id="Examples">Examples</h2>
+
+<p>In this example an encoded chunk is passed to the queue using the <code>enqueue()</code> method.</p>
+
+<pre class="brush: js">const textEncoderStream = new TransformStream({
+  transform(chunk, controller) {
+    controller.enqueue(new TextEncoder().encode(chunk));
+  },
+  flush(controller) {
+    controller.terminate();
+  },
+});</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+  <tbody>
+   <tr>
+    <th scope="col">Specification</th>
+    <th scope="col">Status</th>
+    <th scope="col">Comment</th>
+   </tr>
+   <tr>
+    <td>{{SpecName('Streams','#ts-default-controller-enqueue','TransformStreamDefaultController.enqueue()')}}</td>
+    <td>{{Spec2('Streams')}}</td>
+    <td>Initial definition</td>
+   </tr>
+  </tbody>
+ </table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+
+<p>{{Compat("api.TransformStreamDefaultController.enqueue")}}</p>

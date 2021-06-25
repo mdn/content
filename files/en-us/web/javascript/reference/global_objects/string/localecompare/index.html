@@ -156,13 +156,13 @@ console.log('ä'.localeCompare('a', 'sv', { sensitivity: 'base' })); // a positi
 <h3 id="Numeric_sorting">Numeric sorting</h3>
 
 <pre class="brush: js">// by default, "2" &gt; "10"
-console.log(<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body">"2".localeCompare("10")</span></span></span>); // 1
+console.log("2".localeCompare("10")); // 1
 
 // numeric using options:
-console.log(<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body">"2".localeCompare("10", undefined, {numeric: true})</span></span></span>); // -1
+console.log("2".localeCompare("10", undefined, {numeric: true})); // -1
 
 // numeric using locales tag:
-console.log(<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body">"2".localeCompare("10", "en-u-kn-true")</span></span></span>); // -1
+console.log("2".localeCompare("10", "en-u-kn-true")); // -1
 </pre>
 
 <h2 id="Specifications">Specifications</h2>

@@ -1,0 +1,38 @@
+---
+title: MIDIPort.onstatechange
+slug: Web/API/MIDIPort/onstatechange
+tags:
+  - API
+  - Property
+  - Reference
+  - onstatechange
+  - MIDIPort
+browser-compat: api.MIDIPort.onstatechange
+---
+<div>{{securecontext_header}}{{DefaultAPISidebar("Web MIDI API")}}</div>
+
+<p class="summary">The <strong><code>onstatechange</code></strong> <code>EventHandler</code> of the {{domxref("MIDIPort")}} interface is an {{domxref("EventHandler")}} that processes state change events.</p>
+
+<p> The event fires when a port changes from open to closed, or closed to open.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js">MIDIPort.onstatechange = function;
+MIDIPort.addEventListener('statechange', function);</pre>
+
+<h2>Example</h2>
+
+<p>In the following example the current {{domxref("MIDIPort.state")}} is logged each time it changes.</p>
+
+<pre class="brush: js">port.onstatechange = function() {
+  console.log(port.state);
+}
+</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<p>{{Specifications}}</p>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>

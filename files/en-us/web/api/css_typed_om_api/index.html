@@ -9,7 +9,7 @@ tags:
 ---
 <div>{{DefaultAPISidebar("CSS Typed Object Model API")}}</div>
 
-<p>The CSS Typed Object Model API simplifies CSS property manipulation by exposing CSS values as typed JavaScript objects rather than strings. This not only simplifies CSS manipulation, but also lessens the negative impact on performance as compared to {{domxref('ElementCSSInlineStyle.style')}}.</p>
+<p>The CSS Typed Object Model API simplifies CSS property manipulation by exposing CSS values as typed JavaScript objects rather than strings. This not only simplifies CSS manipulation, but also lessens the negative impact on performance as compared to {{domxref('HTMLElement.style')}}.</p>
 
 <p>Generally, CSS values can be read and written in JavaScript as strings, which can be slow and cumbersome. CSS Typed Object Model API provides interfaces to interact with underlying values, by representing them with specialized JS objects that can be manipulated and understood more easily and more reliably than string parsing and concatenation. This is easier for authors (for example, numeric values are reflected with actual JS numbers, and have unit-aware mathematical operations defined for them). It is also generally faster, as values can be directly manipulated and then cheaply translated back into underlying values without having to both build and parse strings of CSS.</p>
 
@@ -22,9 +22,9 @@ tags:
 <p>The {{domxref('CSSStyleValue')}} interface of the CSS Typed Object Model API is the base class of all CSS values accessible through the Typed OM API. An instance of this class may be used anywhere a string is expected.</p>
 
 <dl>
-	<dt> {{domxref('CSSStyleValue.parse()', 'CSSStyleValue.parse(property, cssText)')}}  </dt>
+	<dt>{{domxref('CSSStyleValue.parse()', 'CSSStyleValue.parse(property, cssText)')}}</dt>
 	<dd>The parse() method of the CSSStyleValue interface allows a CSSNumericValue to be constructed from a CSS string. It sets a specific CSS property to the specified values and returns the first value as a CSSStyleValue object.</dd>
-	<dt> {{domxref('CSSStyleValue.parseAll()')}}</dt>
+	<dt>{{domxref('CSSStyleValue.parseAll()')}}</dt>
 	<dd>The parseAll() method of the CSSStyleValue interface sets all occurrences of a specific CSS property to the specified value and returns an array of CSSStyleValue objects, each containing one of the supplied values.</dd>
 </dl>
 
@@ -119,20 +119,7 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<tbody>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-		<tr>
-			<td>{{SpecName('CSS Typed OM')}}</td>
-			<td>{{Spec2('CSS Typed OM')}}</td>
-			<td>Initial definition.</td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications("api.CSSStyleValue")}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

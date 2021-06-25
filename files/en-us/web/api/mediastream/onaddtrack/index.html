@@ -8,11 +8,12 @@ tags:
 - MediaStream
 - Property
 - Reference
+browser-compat: api.MediaStream.onaddtrack
 ---
 <p>{{APIRef("Media Streams API")}}</p>
 
 <p><span class="seoSummary">The <strong><code>MediaStream.onaddtrack</code></strong>
-    property is an {{domxref("EventHandler")}} which specifies a function to be called
+    property is an {{event("Event_handlers", "event handler")}} which specifies a function to be called
     when the {{event("addtrack")}} event occurs on a {{domxref("MediaStream")}} instance.
     This happens when a new track of any kind is added to the media stream.</span> This
   event is fired when the browser adds a track to the stream (such as when a
@@ -54,27 +55,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{ SpecName('Media Capture', '#event-mediastream-addtrack',
-        'MediaStream.onaddtrack') }}</td>
-      <td>{{ Spec2('Media Capture') }}</td>
-      <td>Initial specification.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.MediaStream.onaddtrack")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

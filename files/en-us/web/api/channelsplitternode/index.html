@@ -10,12 +10,13 @@ tags:
   - Splitter
   - Web Audio
   - Web Audio API
+browser-compat: api.ChannelSplitterNode
 ---
 <p>{{APIRef("Web Audio API")}}</p>
 
 <p>The <code>ChannelSplitterNode</code> interface, often used in conjunction with its opposite, {{domxref("ChannelMergerNode")}}, separates the different channels of an audio source into a set of mono outputs. This is useful for accessing each channel separately, e.g. for performing channel mixing where gain must be separately controlled on each channel.</p>
 
-<p><img alt="" src="webaudiosplitter.png" style="display: block;"></p>
+<p><img alt="" src="webaudiosplitter.png"></p>
 
 <p>If your <code>ChannelSplitterNode</code> always has one single input, the amount of outputs is defined by a parameter on its constructor and the call to {{domxref("BaseAudioContext/createChannelSplitter", "AudioContext.createChannelSplitter()")}}. In the case that no value is given, it will default to <code>6</code>. If there are fewer channels in the input than there are outputs, supernumerary outputs are silent.</p>
 
@@ -65,24 +66,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#channelsplitternode', 'ChannelSplitterNode')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.ChannelSplitterNode")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

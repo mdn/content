@@ -13,11 +13,12 @@ tags:
 - Property
 - Web Audio API
 - onended
+browser-compat: api.AudioScheduledSourceNode.onended
 ---
 <p>{{APIRef("Web Audio API")}}</p>
 
 <p>The <code>onended</code> event handler for the <code>AudioScheduledSourceNode</code>
-  interface specifies an {{domxref("EventHandler")}} to be executed when the
+  interface specifies an {{event("Event_handlers", "event handler")}} to be executed when the
   {{event("ended")}} event occurs on the node. This event is sent to the node when the
   concrete interface (such as {{domxref("AudioBufferSourceNode")}},
   {{domxref("OscillatorNode")}}, or {{domxref("ConstantSourceNode")}}) determines that it
@@ -54,27 +55,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{ SpecName('Web Audio API', '#dom-audioscheduledsourcenode-onended', 'onended')
-        }}</td>
-      <td>{{ Spec2('Web Audio API') }}</td>
-      <td>Initial specification.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.AudioScheduledSourceNode.onended")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -10,6 +10,7 @@ tags:
 - Reference
 - Storage
 - deleteIndex
+browser-compat: api.IDBObjectStore.deleteIndex
 ---
 <p>{{ APIRef("IndexedDB") }}</p>
 
@@ -43,8 +44,7 @@ tags:
 
 <h3 id="Exceptions">Exceptions</h3>
 
-<p><span style="font-weight: normal; line-height: 1.5;">This method may raise a
-    {{domxref("DOMException")}} of one of the following types:</span></p>
+<p>This method may raise a {{domxref("DOMException")}} of one of the following types:</p>
 
 <table class="standard-table">
   <thead>
@@ -87,7 +87,7 @@ tags:
     Notifications</a> app (<a class="external"
     href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</p>
 
-<pre class="brush: js" style="font-size: 14px;">var db;
+<pre class="brush: js">var db;
 
 // Let us open our database
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
@@ -130,38 +130,18 @@ DBOpenRequest.onupgradeneeded = function(event) {
   objectStore.createIndex("year", "year", { unique: false });
   objectStore.createIndex("notified", "notified", { unique: false });
 
-  <span style="font-size: 1rem;">objectStore.deleteIndex("seconds");</span>
-  <span style="font-size: 1rem;">objectStore.deleteIndex("contact");</span>
+  objectStore.deleteIndex("seconds");
+  objectStore.deleteIndex("contact");
 
 };</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('IndexedDB', '#dom-idbobjectstore-deleteindex', 'deleteIndex()')}}
-      </td>
-      <td>{{Spec2('IndexedDB')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName("IndexedDB 2", "#dom-idbobjectstore-deleteindex", "deleteIndex()")}}
-      </td>
-      <td>{{Spec2("IndexedDB 2")}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.IDBObjectStore.deleteIndex")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

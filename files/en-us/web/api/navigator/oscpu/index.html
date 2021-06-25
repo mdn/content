@@ -9,6 +9,7 @@ tags:
   - NavigatorID
   - Property
   - Reference
+browser-compat: api.Navigator.oscpu
 ---
 <p>{{ ApiRef("HTML DOM") }} {{Deprecated_Header}}</p>
 
@@ -31,35 +32,35 @@ tags:
   </tr>
   <tr>
    <td>OS/2</td>
-   <td>OS/2 Warp x (either 3, 4 or 4.5)</td>
+   <td><code>OS/2 Warp x (either 3, 4 or 4.5)</code></td>
   </tr>
   <tr>
    <td>Windows CE</td>
-   <td>WindowsCE x.y<sup>1</sup></td>
+   <td><code>WindowsCE x.y</code></td>
   </tr>
   <tr>
    <td>Windows 64-bit (64-bit build)</td>
-   <td>Windows NT x.y; Win64; x64</td>
+   <td><code>Windows NT x.y; Win64; x64</code></td>
   </tr>
   <tr>
    <td>Windows 64-bit (32-bit build)</td>
-   <td>Windows NT x.y; WOW64</td>
+   <td><code>Windows NT x.y; WOW64</code></td>
   </tr>
   <tr>
    <td>Windows 32-bit</td>
-   <td>Windows NT x.y</td>
+   <td><code>Windows NT x.y</code></td>
   </tr>
   <tr>
    <td>Mac OS X (PPC build)</td>
-   <td>PowerPC Mac OS X version x.y</td>
+   <td><code>PowerPC Mac OS X version x.y</code></td>
   </tr>
   <tr>
    <td>Mac OS X (i386/x64 build)</td>
-   <td>Intel Mac OS X or macOS version x.y</td>
+   <td><code>Intel Mac OS X</code> or <code>macOS version x.y</code></td>
   </tr>
   <tr>
    <td>Linux 64-bit (32-bit build)</td>
-   <td>Output of <code>uname -s</code> plus <code>i686 on x86_64</code></td>
+   <td>Output of <code>uname -s</code> followed by <code>i686 on x86_64</code></td>
   </tr>
   <tr>
    <td>Linux</td>
@@ -68,9 +69,7 @@ tags:
  </tbody>
 </table>
 
-<ol>
- <li>x.y refers to the version of the operating system</li>
-</ol>
+<p>In this table <code>x.y</code> refers to the version of the operating system
 
 <h2 id="Example">Example</h2>
 
@@ -87,23 +86,8 @@ osInfo(); // alerts "Windows NT 6.0" for example
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#dom-navigator-oscpu', 'NavigatorID: oscpu')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Navigator.oscpu")}}</p>
+<p>{{Compat}}</p>

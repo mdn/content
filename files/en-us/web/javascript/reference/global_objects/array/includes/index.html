@@ -9,7 +9,7 @@ tags:
 - Reference
 - inArray
 - in_array
-- polyfill
+- Polyfill
 browser-compat: javascript.builtins.Array.includes
 ---
 <div>{{JSRef}}</div>
@@ -72,11 +72,13 @@ includes(searchElement, fromIndex)
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js">[1, 2, 3].includes(2)      // true
-[1, 2, 3].includes(4)      // false
-[1, 2, 3].includes(3, 3)   // false
-[1, 2, 3].includes(3, -1)  // true
-[1, 2, NaN].includes(NaN)  // true
+<pre class="brush: js">
+[1, 2, 3].includes(2)         // true
+[1, 2, 3].includes(4)         // false
+[1, 2, 3].includes(3, 3)      // false
+[1, 2, 3].includes(3, -1)     // true
+[1, 2, NaN].includes(NaN)     // true
+["1", "2", "3"].includes(3)   // false
 </pre>
 
 <h3 id="fromIndex_is_greater_than_or_equal_to_the_array_length">
@@ -137,6 +139,7 @@ arr.includes('a', -2)   // false
 <h2 id="See_also">See also</h2>
 
 <ul>
+  <li>A polyfill of <code>Array.prototype.includes</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-array"><code>core-js</code></a></li>
   <li>{{jsxref("TypedArray.prototype.includes()")}}</li>
   <li>{{jsxref("String.prototype.includes()")}}</li>
   <li>{{jsxref("Array.prototype.indexOf()")}}</li>

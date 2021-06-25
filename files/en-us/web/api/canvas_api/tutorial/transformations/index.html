@@ -72,17 +72,17 @@ tags:
 
 <p>When the second <code>restore()</code> statement is called, the original state (the one we set up before the first call to <code>save</code>) is restored and the last rectangle is once again drawn in black.</p>
 
-<p>{{EmbedLiveSample("A_save_and_restore_canvas_state_example", "180", "180", "https://mdn.mozillademos.org/files/249/Canvas_savestate.png")}}</p>
+<p>{{EmbedLiveSample("A_save_and_restore_canvas_state_example", "180", "180", "canvas_savestate.png")}}</p>
 
 <h2 id="Translating">Translating</h2>
 
-<p><img alt="" class="internal" src="canvas_grid_translate.png" style="float: right;">The first of the transformation methods we'll look at is <code>translate()</code>. This method is used to move the canvas and its origin to a different point in the grid.</p>
+<p>The first of the transformation methods we'll look at is <code>translate()</code>. This method is used to move the canvas and its origin to a different point in the grid.</p>
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.translate", "translate(x, y)")}}</dt>
  <dd>Moves the canvas and its origin on the grid. <code>x</code> indicates the horizontal distance to move, and <code>y</code> indicates how far to move the grid vertically.</dd>
 </dl>
-
+<img alt="" class="internal" src="canvas_grid_translate.png">
 <p>It's a good idea to save the canvas state before doing any transformations. In most cases, it is just easier to call the <code>restore</code> method than having to do a reverse translation to return to the original state. Also if you're translating inside a loop and don't save and restore the canvas state, you might end up missing part of your drawing, because it was drawn outside the canvas edge.</p>
 
 <h3 id="A_translate_example">A <code>translate</code> example</h3>
@@ -111,17 +111,17 @@ tags:
 <pre class="brush: js">draw();</pre>
 </div>
 
-<p>{{EmbedLiveSample("A_translate_example", "160", "160", "https://mdn.mozillademos.org/files/9857/translate.png")}}</p>
+<p>{{EmbedLiveSample("A_translate_example", "160", "160", "translate.png")}}</p>
 
 <h2 id="Rotating">Rotating</h2>
 
-<p><img alt="" class="internal" src="canvas_grid_rotate.png" style="float: right;">The second transformation method is <code>rotate()</code>. We use it to rotate the canvas around the current origin.</p>
+<p>The second transformation method is <code>rotate()</code>. We use it to rotate the canvas around the current origin.</p>
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.rotate", "rotate(angle)")}}</dt>
  <dd>Rotates the canvas clockwise around the current origin by the <code>angle</code> number of radians.</dd>
 </dl>
-
+<img alt="" class="internal" src="canvas_grid_rotate.png">
 <p>The rotation center point is always the canvas origin. To change the center point, we will need to move the canvas by using the <code>translate()</code> method.</p>
 
 <h3 id="A_rotate_example">A <code>rotate</code> example</h3>
@@ -171,7 +171,7 @@ tags:
 <pre class="brush: js">draw();</pre>
 </div>
 
-<p>{{EmbedLiveSample("A_rotate_example", "310", "210", "https://mdn.mozillademos.org/files/9859/rotate.png")}}</p>
+<p>{{EmbedLiveSample("A_rotate_example", "310", "210", "rotate.png")}}</p>
 
 <h2 id="Scaling">Scaling</h2>
 
@@ -213,7 +213,7 @@ tags:
 <pre class="brush: js">draw();</pre>
 </div>
 
-<p>{{EmbedLiveSample("A_scale_example", "160", "160", "https://mdn.mozillademos.org/files/9861/scale.png")}}</p>
+<p>{{EmbedLiveSample("A_scale_example", "160", "160", "scale.png")}}</p>
 
 <h2 id="Transforms">Transforms</h2>
 
@@ -274,6 +274,6 @@ tags:
 <pre class="brush: js">draw();</pre>
 </div>
 
-<p>{{EmbedLiveSample("Example_for_transform_and_setTransform", "230", "280", "https://mdn.mozillademos.org/files/255/Canvas_transform.png")}}</p>
+<p>{{EmbedLiveSample("Example_for_transform_and_setTransform", "230", "280", "canvas_transform.png")}}</p>
 
 <p>{{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}</p>

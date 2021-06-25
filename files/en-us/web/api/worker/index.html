@@ -10,6 +10,7 @@ tags:
   - Web Workers
   - Worker
   - Workers
+browser-compat: api.Worker
 ---
 <div>{{APIRef("Web Workers API")}}</div>
 
@@ -28,22 +29,22 @@ tags:
 
 <h2 id="Properties">Properties</h2>
 
-<p><em>Inherits properties from its parent, {{domxref("EventTarget")}}, and implements properties from {{domxref("AbstractWorker")}}.</em></p>
+<p><em>Inherits properties from its parent, {{domxref("EventTarget")}}.</em></p>
 
 <h3 id="Event_handlers">Event handlers</h3>
 
 <dl>
- <dt>{{domxref("AbstractWorker.onerror")}}</dt>
- <dd>An {{ domxref("EventListener") }} called whenever an {{domxref("ErrorEvent")}} of type <code>error</code> bubbles through to the worker. This is inherited from {{domxref("AbstractWorker")}}.</dd>
+ <dt>{{domxref("Worker.onerror")}}</dt>
+ <dd>An {{ domxref("EventListener") }} called whenever an {{domxref("ErrorEvent")}} of type <code>error</code> event occurs.</dd>
  <dt>{{domxref("Worker.onmessage")}}</dt>
- <dd>An {{ domxref("EventListener") }} called whenever a {{domxref("MessageEvent")}} of type <code>message</code> bubbles through the worker — i.e. when a message is sent to the parent document from the worker via {{domxref("DedicatedWorkerGlobalScope.postMessage")}}. The message is stored in the event's {{domxref("MessageEvent.data", "data")}} property.</dd>
+ <dd>An {{ domxref("EventListener") }} called whenever a {{domxref("MessageEvent")}} of type <code>message</code> occurs — i.e. when a message is sent to the parent document from the worker via {{domxref("DedicatedWorkerGlobalScope.postMessage")}}. The message is stored in the event's {{domxref("MessageEvent.data", "data")}} property.</dd>
  <dt>{{domxref("Worker.onmessageerror")}}</dt>
- <dd>Is an {{domxref("EventHandler")}} representing the code to be called when the {{event("messageerror")}} event is raised.</dd>
+ <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("messageerror")}} event is raised.</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
 
-<p><em>Inherits methods from its parent, {{domxref("EventTarget")}}, and implements methods from {{domxref("AbstractWorker")}}.</em></p>
+<p><em>Inherits methods from its parent, {{domxref("EventTarget")}}.</em></p>
 
 <dl>
  <dt>{{domxref("Worker.postMessage()")}}</dt>
@@ -86,26 +87,13 @@ first.onchange = function() {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "#worker", "Worker")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <p>Support varies for different types of workers. See each worker type's page for specifics.</p>
 
-<p>{{Compat("api.Worker")}}</p>
+<p>{{Compat}}</p>
 
 <h3 id="Cross-origin_worker_error_behavior">Cross-origin worker error behavior</h3>
 

@@ -20,12 +20,18 @@ browser-compat: css.properties.color-adjust
 ---
 <div>{{CSSRef}}</div>
 
-<p><span class="seoSummary">The <strong><code>color-adjust</code></strong> CSS property sets what, if anything, the {{Glossary("user agent")}} may do to optimize the appearance of the element on the output device.</span> By default, the browser is allowed to make any adjustments to the element's appearance it determines to be necessary and prudent given the type and capabilities of the output device.</p>
+<p>The <strong><code>color-adjust</code></strong> CSS property sets what, if anything, the {{Glossary("user agent")}} may do to optimize the appearance of the element on the output device. By default, the browser is allowed to make any adjustments to the element's appearance it determines to be necessary and prudent given the type and capabilities of the output device.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre class="brush: css">color-adjust: economy;
-color-adjust: exact;</pre>
+color-adjust: exact;
+
+/* Global values */
+color-adjust: inherit;
+color-adjust: initial;
+color-adjust: revert;
+color-adjust: unset;</pre>
 
 <p>The <code>color-adjust</code> property's value must be one of the following keywords.</p>
 
@@ -111,8 +117,6 @@ color-adjust: exact;</pre>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
 
 <p>{{Compat}}</p>
 

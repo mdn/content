@@ -8,6 +8,7 @@ tags:
   - Reference
   - Window
   - getComputedStyle
+browser-compat: api.Window.getComputedStyle
 ---
 <p>{{APIRef("CSSOM")}}</p>
 
@@ -95,7 +96,7 @@ para.textContent = 'My computed font-size is ' +
 <h2 id="Description">Description</h2>
 
 <p>The returned object is the same {{DOMxRef("CSSStyleDeclaration")}} type as the object
-  returned from the element's {{DOMxRef("ElementCSSInlineStyle/style", "style")}} property. However,
+  returned from the element's {{DOMxRef("HTMLElement/style", "style")}} property. However,
   the two objects have different purposes:</p>
 
 <ul>
@@ -187,32 +188,11 @@ para.textContent = 'My computed font-size is ' +
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName("CSSOM", "#dom-window-getcomputedstyle", "getComputedStyle()")}}</td>
-      <td>{{Spec2("CSSOM")}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName("DOM2 Style", "#CSS-CSSview-getComputedStyle",
-        "getComputedStyle()")}}</td>
-      <td>{{Spec2("DOM2 Style")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Window.getComputedStyle")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

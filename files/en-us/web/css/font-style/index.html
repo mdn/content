@@ -13,7 +13,7 @@ browser-compat: css.properties.font-style
 ---
 <div>{{CSSRef}}</div>
 
-<p><span class="seoSummary">The <strong><code>font-style</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets whether a font should be styled with a normal, italic, or oblique face from its {{cssxref("font-family")}}.</span></p>
+<p>The <strong><code>font-style</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets whether a font should be styled with a normal, italic, or oblique face from its {{cssxref("font-family")}}.</p>
 
 <div>{{EmbedInteractiveExample("pages/css/font-style.html")}}</div>
 
@@ -29,6 +29,7 @@ font-style: oblique 10deg;
 /* Global values */
 font-style: inherit;
 font-style: initial;
+font-style: revert;
 font-style: unset;
 </pre>
 
@@ -57,11 +58,10 @@ font-style: unset;
 
 <p>For the example below to work, you'll need a browser that supports the CSS Fonts Level 4 syntax in which <code>font-style: oblique</code> can accept an <code>&lt;angle&gt;</code>.</p>
 
-<div>{{EmbedLiveSample("variable-font-example", 1200, 180)}}</div>
+<div>{{EmbedLiveSample("Variable_fonts", 1200, 180)}}</div>
 
 <h4 id="HTML">HTML</h4>
 
-<div id="variable-font-example">
 <pre class="brush: html">&lt;header&gt;
     &lt;input type="range" id="slant" name="slant" min="-90" max="90" /&gt;
     &lt;label for="slant"&gt;Slant&lt;/label&gt;
@@ -143,7 +143,6 @@ slantInput.addEventListener('input', update);
 
 update();
 </pre>
-</div>
 
 <h2 id="Accessibility_concerns">Accessibility concerns</h2>
 
@@ -189,41 +188,9 @@ update();
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Fonts', '#font-style-prop', 'font-style')}}</td>
-   <td>{{Spec2('CSS4 Fonts')}}</td>
-   <td>Adds the ability to specify an angle after <code>oblique</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Fonts', '#font-style-prop', 'font-style')}}</td>
-   <td>{{Spec2('CSS3 Fonts')}}</td>
-   <td>No change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'fonts.html#propdef-font-style', 'font-style')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>No change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#font-style', 'font-style')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-<div class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
 
 <p>{{Compat}}</p>
 

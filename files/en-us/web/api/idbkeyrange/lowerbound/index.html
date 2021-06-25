@@ -10,6 +10,7 @@ tags:
 - Reference
 - Storage
 - lowerBound
+browser-compat: api.IDBKeyRange.lowerBound
 ---
 <p>{{ APIRef("IndexedDB") }}</p>
 
@@ -82,7 +83,7 @@ var <em>myIDBKeyRange</em> = <em>IDBKeyRange</em>.lowerBound(<em>lower</em>, <em
       too</a>.)</p>
 </div>
 
-<pre class="brush: js" style="font-size: 14px;">function displayData() {
+<pre class="brush: js">function displayData() {
   var keyRangeValue = IDBKeyRange.lowerBound("F");
 
   var transaction = db.transaction(['fThings'], 'readonly');
@@ -104,29 +105,11 @@ var <em>myIDBKeyRange</em> = <em>IDBKeyRange</em>.lowerBound(<em>lower</em>, <em
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName("IndexedDB 2", "#dom-idbkeyrange-lowerbound", "lowerBound()")}}</td>
-      <td>{{Spec2("IndexedDB 2")}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName("IndexedDB 3", "#dom-idbkeyrange-lowerbound", "lowerBound()")}}</td>
-      <td>{{Spec2("IndexedDB 3")}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.IDBKeyRange.lowerBound")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

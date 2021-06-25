@@ -17,7 +17,7 @@ tags:
 
 <div>{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Introduction", "Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs")}}</div>
 
-<p class="summary">Now that you know what Express is for, we'll show you how to set up and test a Node/Express development environment on Windows, Linux (Ubuntu), and macOS. Whatever common operating system you are using, this article should give you what you need to be able to start developing Express apps.</p>
+<p class="summary">Now that you know what <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction#introducing_express">Express</a> is for, we'll show you how to set up and test a Node/Express development environment on Windows, or Linux (Ubuntu), or macOS. For any of those operating systems, this article provides what you need to start developing Express apps.</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -27,7 +27,7 @@ tags:
   </tr>
   <tr>
    <th scope="row">Objective:</th>
-   <td>To set up a development environment for Express (X.XX) on your computer.</td>
+   <td>To set up a development environment for Express on your computer.</td>
   </tr>
  </tbody>
 </table>
@@ -305,9 +305,11 @@ npm run lint
 
 <div class="note">
 <p><strong>Note: </strong>You can also specify the template library to use and a number of other settings. Use the <code>help</code> command to see all the options:</p>
+<pre class="brush: bash">express --help</pre>
 
-<pre class="brush: bash">express --help
-</pre>
+<p><strong>Note: </strong>If you're using NodeJS <b>version &gt 8.2.0 or latest</b>, you can skip the installation and run express-generator with <code>npx</code>:</p>
+<pre class="brush: bash">npx express-generator helloworld</pre>
+<p>This has the same effect as installing and then running <code>express</code> but does not install the package on your system. However, this means you cannot call <code>express</code> from anywhere.</p>
 </div>
 
 <p>NPM will create the new Express app in a sub folder of your current location, displaying build progress on the console. On completion, the tool will display the commands you need to enter to install the Node dependencies and start the app.</p>

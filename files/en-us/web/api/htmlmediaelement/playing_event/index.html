@@ -6,10 +6,12 @@ tags:
   - HTMLMediaElement
   - Reference
   - playing
+  - Event
+browser-compat: api.HTMLMediaElement.playing_event
 ---
 <div>{{APIRef("HTMLMediaElement")}}</div>
 
-<p><span class="seoSummary">The <code>playing</code> event is fired when playback is ready to start after having been paused or delayed due to lack of data.</span></p>
+<p><span class="seoSummary">The <code>playing</code> event is fired after playback is first started, and whenever it is restarted. For example it is fired when playback resumes after having been paused or delayed due to lack of data.</span></p>
 
 <table class="properties">
  <tbody>
@@ -66,28 +68,11 @@ video.onplaying = (event) =&gt; {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "media.html#event-media-playing", "playing media event")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "embedded-content-0.html#event-media-playing", "playing media event")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.HTMLMediaElement.playing_event")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Related_Events">Related Events</h2>
 

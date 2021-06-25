@@ -15,6 +15,7 @@ tags:
 - Window
 - filesystem
 - requestFileSystem
+browser-compat: api.Window.requestFileSystem
 ---
 <p>{{APIRef("File System API")}} {{Deprecated_Header}} {{non-standard_header()}}</p>
 
@@ -24,19 +25,10 @@ tags:
   use. The returned {{domxref("FileSystem")}} is then available for use with the other <a
     href="/en-US/docs/Web/API/File_and_Directory_Entries_API">file system APIs</a>.</p>
 
-<div class="warning">
-  <p>Even compared to the rest of the File and Directory Entries API,
-    <code>requestFileSystem()</code> is especially non-standard; only Chrome implements
-    it, and all other browser makers have decided that they will not implement it. It has
-    even been removed from <a href="https://wicg.github.io/entries-api/">the proposed
-      specification</a>. <em>Do not use this method!</em></p>
-</div>
-
 <h2 id="Syntax">Syntax</h2>
 
 <div class="note">
-  <p>This method is prefixed with <code>webkit</code> in all browsers that implement it
-    (that is, Google Chrome).</p>
+  <p>This method is prefixed with <code>webkit</code> in all browsers that implement it.</p>
 </div>
 
 <pre
@@ -68,32 +60,13 @@ tags:
 
 <p><code>undefined</code></p>
 
-<h2 id="Example">Example</h2>
-
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('File System API')}}</td>
-      <td>{{Spec2('File System API')}}</td>
-      <td>Draft of proposed API</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>This API has no official W3C or WHATWG specification.</p>
+<p>As this method was removed from the <a href="https://wicg.github.io/entries-api/"> File and Directory Entries API</a> proposal, it has no official W3C or WHATWG specification. It is no longer on track to become a standard.</p></p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Window.requestFileSystem")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -16,10 +16,16 @@ tags:
   - Web
   - menu
   - menus
+browser-compat: html.elements.menu
 ---
 <p>{{HTMLRef}}{{SeeCompatTable}}</p>
 
-<p>The <strong>HTML <code>&lt;menu&gt;</code> element</strong> represents a group of commands that a user can perform or activate. This includes both list menus, which might appear across the top of a screen, as well as <a href="#context_menu">context menus</a>, such as those that might appear underneath a button after it has been clicked.</p>
+<p>The <strong><code>&lt;menu&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element is a semantic alternative to {{HTMLElement("ul")}}. It represents an unordered list of items (represented by {{HTMLElement("li")}} elements), each of these represent a link or other command that the user can activate.</p>
+
+<div class="notecard note">
+  <h4>Note:</h4>
+  <p>In previous version of the HTML specification, the <code>&lt;menu&gt;</code> element had an additional use case as a context menu. This functionality is now considered obsolete, and has been removed from the specification. Firefox was the only browser to implement this functionality which included the {{HTMLAttrDef("label")}} {{Deprecated_inline}} and <code>context</code> {{Deprecated_inline}} attributes. </p>
+</div>
 
 <table class="properties">
  <tbody>
@@ -32,9 +38,7 @@ tags:
   <tr>
    <th scope="row">Permitted content</th>
    <td>
-    <p>If the element is in the <em>list menu</em> state: <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">flow content</a>, or alternatively, zero or more occurrences of {{HTMLElement("li")}}, {{HTMLElement("script")}}, and {{HTMLElement("template")}}. (<em>list menu</em> is the default state, unless the parent element is a {{HTMLElement("menu")}} in the <em>context menu</em> state.)</p>
-
-    <p>If the element is in the <em>context menu</em> state: zero or more occurrences, in any order, of {{HTMLElement("menu")}} (<em>context menu</em> state only), {{HTMLElement("menuitem")}}, {{HTMLElement("hr")}}, {{HTMLElement("script")}}, and {{HTMLElement("template")}}.</p>
+    <p>Zero or more occurrences of {{HTMLElement("li")}}, {{HTMLElement("script")}}, and {{HTMLElement("template")}}.</p>
    </td>
   </tr>
   <tr>
@@ -64,94 +68,15 @@ tags:
 
 <p>This element includes the <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</p>
 
-<dl>
- <dt>{{HTMLAttrDef("label")}} {{Deprecated_inline}}</dt>
- <dd>The name of the menu as shown to the user. Used within nested menus, to provide a label through which the submenu can be accessed. Must only be specified when the parent element is a {{HTMLElement("menu")}} in the <em>context menu</em> state.</dd>
- <dt>{{HTMLAttrDef("type")}}</dt>
- <dd>This attribute indicates the kind of menu being declared, and can be one of two values.
- <ul>
-  <li><code>context</code> {{Deprecated_inline}} : Indicates the <em>popup menu</em> state, which represents a group of commands activated through another element. This might be as a button menu referenced by a {{HTMLAttrxRef("menu", "button")}} attribute of a {{HTMLElement("button")}} element, or as context menu for an element with a <a href="/en-US/docs/Web/HTML/Global_attributes#attr-contextmenu"><code>contextmenu</code></a> attribute. This value is the default if the attribute is missing and the parent element is also a <code>&lt;menu&gt;</code> element.</li>
-  <li><code>toolbar</code>: Indicates the <em>toolbar</em> state, which represents a toolbar consisting of a series of commands for user interaction. This might be in the form of an unordered list of {{HTMLElement("li")}} elements, or, if the element has no <code>&lt;li&gt;</code> element children, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">flow content</a> describing available commands. This value is the default if the attribute is missing.</li>
- </ul>
- </dd>
-</dl>
-
 <h2 id="Usage_notes">Usage notes</h2>
 
 <p>The {{HTMLElement("menu")}} and {{HTMLElement("ul")}} elements both represent an unordered list of items. The key difference is that {{HTMLElement("ul")}} primarily contains items for display, whilst {{HTMLElement("menu")}} is intended for interactive items, to act on.</p>
 
-<p>An HTML menu can be used to create context menus (typically activated by right-clicking another element) or toolbars.</p>
-
-<p><strong>{{anch("Context menu", "Context menus</strong>")}} consist of a <code>&lt;menu&gt;</code> element which contains {{HTMLElement("menuitem")}} elements for each selectable option in the menu, <code>&lt;menu&gt;</code> elements for submenus within the menu, and {{HTMLElement("hr")}} elements for separator lines to break up the menu's content into sections. Context menus are then attached to the element they're activated from using either the associated element's {{HTMLAttrxRef("contextmenu")}} attribute or, for {{anch("Button menu", "button-activated menus")}} attached to {{HTMLElement("button")}} elements, the {{HTMLAttrxRef("menu", "button")}} attribute.</p>
-
-<p><strong>{{anch("Toolbar", "Toolbar menus</strong>")}} consist of a <code>&lt;menu&gt;</code> element whose content is described in one of two ways: either as an unordered list of items represented by {{HTMLElement("li")}} elements (each representing a command or option the user can utilize), or (if there are no <code>&lt;li&gt;</code> elements), <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">flow content</a> describing the available commands and options.</p>
-
-<p>This element was deprecated in HTML4, but reintroduced in HTML5.1 and the HTML living standard. This document describes the current Firefox implementation. Type 'list' is likely to change to 'toolbar' according to HTML5.1.</p>
-
 <h2 id="Examples">Examples</h2>
 
-<h3 id="Context_menu">Context menu</h3>
-
-<p>{{Deprecated_header}}</p>
-
-<h4 id="HTML">HTML</h4>
-
-<pre class="brush: html;">&lt;!-- A &lt;div&gt; element with a context menu --&gt;
-&lt;div contextmenu="popup-menu"&gt;
-  Right-click to see the adjusted context menu
-&lt;/div&gt;
-
-&lt;menu type="context" id="popup-menu"&gt;
-  &lt;menuitem&gt;Action&lt;/menuitem&gt;
-  &lt;menuitem&gt;Another action&lt;/menuitem&gt;
-  &lt;hr/&gt;
-  &lt;menuitem&gt;Separated action&lt;/menuitem&gt;
-&lt;/menu&gt;
-</pre>
-
-<h4 id="CSS">CSS</h4>
-
-<pre class="brush: css;">div {
-  width: 300px;
-  height: 80px;
-  background-color: lightgreen;
-}
-</pre>
-
-<h4 id="Result">Result</h4>
-
-<p>{{EmbedLiveSample("Context_menu", "100%", 80)}}</p>
-
-<h3 id="Menu_button">Menu button</h3>
-
-<div class="notecard warning">
-<p>Menu buttons haven't been implemented in any known browsers yet. The {{HTMLAttrxRef("type", "menu")}} attribute on the <code>&lt;menu&gt;</code> element is now obsolete.</p>
-</div>
-
-<div class="notecard warning">
-<p>{{HTMLElement("menuitem")}} element is obsolete.</p>
-</div>
-
-<h4 id="HTML_2">HTML</h4>
-
-<pre class="brush: html;">&lt;!-- A button, which displays a menu when clicked. --&gt;
-&lt;button type="menu" menu="popup-menu"&gt;
-  Dropdown
-&lt;/button&gt;
-
-&lt;menu type="context" id="popup-menu"&gt;
-  &lt;menuitem&gt;Action&lt;/menuitem&gt;
-  &lt;menuitem&gt;Another action&lt;/menuitem&gt;
-  &lt;hr/&gt;
-  &lt;menuitem&gt;Separated action&lt;/menuitem&gt;
-&lt;/menu&gt;
-</pre>
-
-<h4 id="Result_2">Result</h4>
-
-<p>{{EmbedLiveSample("Menu_button", "100%", 50)}}</p>
-
 <h3 id="Toolbar">Toolbar</h3>
+
+<p>In this example, a <code>&lt;menu&gt;</code> is used to create a toolbar in an editing application.</p>
 
 <div class="notecard warning">
 <p>Toolbar menus haven't been implemented in any known browsers yet.</p>
@@ -159,24 +84,10 @@ tags:
 
 <h4 id="HTML_3">HTML</h4>
 
-<pre class="brush: html;">&lt;!-- A context menu for a simple editor,
-   - containing two menu buttons. --&gt;
-&lt;menu type="toolbar"&gt;
-  &lt;li&gt;
-    &lt;button type="menu" menu="file-menu"&gt;File&lt;/button&gt;
-    &lt;menu type="context" id="file-menu"&gt;
-      &lt;menuitem label="New..." onclick="newFile()"&gt;
-      &lt;menuitem label="Save..." onclick="saveFile()"&gt;
-    &lt;/menu&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;button type="menu" menu="edit-menu"&gt;Edit&lt;/button&gt;
-    &lt;menu type="context" id="edit-menu"&gt;
-      &lt;menuitem label="Cut..." onclick="cutEdit()"&gt;
-      &lt;menuitem label="Copy..." onclick="copyEdit()"&gt;
-      &lt;menuitem label="Paste..." onclick="pasteEdit()"&gt;
-    &lt;/menu&gt;
-  &lt;/li&gt;
+<pre class="brush: html;">&lt;menu&gt;
+  &lt;li&gt;&lt;button onclick="copy()"&gt;Copy&lt;/button&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;button onclick="cut()"&gt;Cut&lt;/button&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;button onclick="paste()"&gt;Paste&lt;/button&gt;&lt;/li&gt;
 &lt;/menu&gt;
 </pre>
 
@@ -186,31 +97,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "grouping-content.html#the-menu-element", "&lt;menu&gt;")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>No change from latest snapshot, {{SpecName("HTML5.2")}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML5.1", "interactive-elements.html#the-menu-element", "&lt;menu&gt;")}}</td>
-   <td>{{Spec2("HTML5.1")}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+<p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("html.elements.menu")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

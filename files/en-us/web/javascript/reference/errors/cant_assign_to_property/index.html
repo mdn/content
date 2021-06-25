@@ -51,7 +51,7 @@ TypeError: Cannot create property 'x' on {y} (Chrome)
 
 var foo = "my string";
 // The following line does nothing if not in strict mode.
-foo.bar = {}; // <span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body">TypeError: can't assign to property "bar" on "my string": not an object</span></span></span>
+foo.bar = {}; // TypeError: can't assign to property "bar" on "my string": not an object
 </pre>
 
 <h3 id="Fixing_the_issue">Fixing the issue</h3>

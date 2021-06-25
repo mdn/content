@@ -2,12 +2,13 @@
 title: TypedArray.prototype.slice()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/slice
 tags:
-- ECMAScript 2015
-- JavaScript
-- Method
-- Prototype
-- TypedArray
-- TypedArrays
+  - ECMAScript 2015
+  - JavaScript
+  - Method
+  - Prototype
+  - TypedArray
+  - TypedArrays
+  - Polyfill
 browser-compat: javascript.builtins.TypedArray.slice
 ---
 <div>{{JSRef}}</div>
@@ -16,7 +17,7 @@ browser-compat: javascript.builtins.TypedArray.slice
   underlying buffer), that contains a copy of a portion of the original typed array. This
   method has the same algorithm as {{jsxref("Array.prototype.slice()")}}.
   <em>TypedArray</em> is one of the <a
-    href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">typed
+    href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects">typed
     array types</a> here.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/typedarray-slice.html","shorter")}}</div>
@@ -61,10 +62,9 @@ slice(start, end)
 
 <h2 id="Description">Description</h2>
 
-<p>The <code>slice</code> method does not alter. It returns a shallow copy of elements
-  from the original typed array.</p>
+<p>The <code>slice</code> method does not alter the original typed array, but instead returns a copy of a portion of the original typed array. As typed arrays only store primitive values, the copy the <code>slice</code> method returns is always a shallow copy.</p>
 
-<p>If a new element is added to either typed array, the other typed array is not affected.
+<p>If an element is changed in either typed array, the other typed array is not affected.
 </p>
 
 <h2 id="Examples">Examples</h2>
@@ -96,7 +96,7 @@ uint8.slice(0,1); // Uint8Array [ 1 ]
 
 <p>If you need to support truly obsolete JavaScript engines that don't support
   {{jsxref("Object.defineProperty")}}, it's best not to polyfill
-  <code>Array.prototype</code> methods at all, as you can't make them non-enumerable.</p>
+  <code><em>TypedArray</em>.prototype</code> methods at all, as you can't make them non-enumerable.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -109,5 +109,6 @@ uint8.slice(0,1); // Uint8Array [ 1 ]
 <h2 id="See_also">See also</h2>
 
 <ul>
+  <li>A polyfill of <code>TypedArray.prototype.slice</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-typed-arrays"><code>core-js</code></a></li>
   <li>{{jsxref("Array.prototype.slice()")}}</li>
 </ul>

@@ -8,6 +8,8 @@ tags:
   - Reference
   - URL API
   - URLSearchParams
+  - Polyfill
+browser-compat: api.URLSearchParams
 ---
 <div>{{ApiRef("URL API")}}</div>
 
@@ -113,30 +115,16 @@ searchParams.get("bin2"); // "E+AXQB+A"
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('URL', '#urlsearchparams', "URLSearchParams")}}</td>
-   <td>{{Spec2('URL')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.URLSearchParams")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
+ <li>A polyfill of <code>URLSearchParams</code> is available in <a href="https://github.com/zloirock/core-js#url-and-urlsearchparams"><code>core-js</code></a></li>
  <li>The {{domxref("URL")}} interface.</li>
  <li><a href="https://developers.google.com/web/updates/2016/01/urlsearchparams?hl=en">Google Developers: Easy URL manipulation with URLSearchParams</a></li>
 </ul>

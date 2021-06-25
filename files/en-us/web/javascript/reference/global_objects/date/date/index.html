@@ -2,10 +2,10 @@
 title: Date() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Date/Date
 tags:
-- Constructor
-- Date
-- JavaScript
-- Reference
+  - Constructor
+  - Date
+  - JavaScript
+  - Reference
 browser-compat: javascript.builtins.Date.Date
 ---
 <div>{{JSRef}}</div>
@@ -34,7 +34,7 @@ new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds)
 
 <div class="notecard note">
   <p><strong>Note:</strong> The only correct way to instantiate a new <code>Date</code>
-    object is by using the {{jsxref("new")}} operator. If you call the <code>Date</code>
+    object is by using the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/new"><code>new</code></a> operator. If you call the <code>Date</code>
     object directly, such as <code>now = Date()</code>, the returned value is a string
     rather than a <code>Date</code> object.</p>
 </div>
@@ -58,7 +58,7 @@ new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds)
       <dd>An integer value representing the number of milliseconds since January 1, 1970,
         00:00:00 UTC (the ECMAScript epoch, equivalent to the UNIX epoch), with leap
         seconds ignored. Keep in mind that most <a
-          href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_16">UNIX
+          href="https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_16">UNIX
           Timestamp</a> functions are only accurate to the nearest second.</dd>
     </dl>
   </li>
@@ -108,7 +108,7 @@ new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds)
         <p>Values from <code>0</code> to <code>99</code> map to the years
           <code>1900</code> to <code>1999</code>. All other values are the actual year.
           See the <a
-            href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#Two_digit_years_map_to_1900_%E2%80%93_1999">example</a>.
+            href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#two_digit_years_map_to_1900_%e2%80%93_1999">example</a>.
         </p>
       </dd>
       <dt><code><var>monthIndex</var></code></dt>
@@ -132,6 +132,12 @@ new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds)
     </dl>
   </li>
 </ol>
+
+<h3 id="return_value">Return value</h3>
+
+<p>Calling <code>new Date()</code> (the <code>Date()</code>constructor) returns a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date"><code>Date</code></a> object. If called with an invalid date string, it returns a <code>Date</code> object whose <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toString"><code>toString()</code></a> method returns the literal string <code>Invalid Date</code>.</p>
+
+<p>Calling the <code>Date()</code> function (without the <code>new</code> keyword) returns a string. If called with an invalid date string, the <code>Date()</code> function returns the literal string <code>Invalid Date</code>.</p>
 
 <h2 id="Examples">Examples</h2>
 

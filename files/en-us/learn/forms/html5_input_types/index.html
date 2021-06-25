@@ -138,10 +138,6 @@ tags:
 
 <p>The <code>number</code> input type makes sense when the range of valid values is limited, for example a person's age or height. If the range is too large for incremental increases to make sense (such as USA ZIP codes, which range from <code>00001</code> to <code>99999</code>), the <code>tel</code> type might be a better option; it provides the numeric keypad while forgoing the number's spinner UI feature.</p>
 
-<div class="notecard note">
-<p><strong>Note</strong>: <code>number</code> inputs are not supported in versions of Internet Explorer below 10.</p>
-</div>
-
 <h2 id="Slider_controls">Slider controls</h2>
 
 <p>Another way to pick a number is to use a <strong>slider</strong>. You see these quite often on sites like house buying sites where you want to set a maximum property price to filter by. Let's look at a live example to illustrate this:</p>
@@ -162,7 +158,7 @@ tags:
 
 <p>This example creates a slider whose value may range between <code>50000</code> and <code>500000</code>, which increments/decrements by 100 at a time. We've given it default value of <code>250000</code>, using the <code>value</code> attribute.</p>
 
-<p>One problem with sliders is that they don't offer any kind of visual feedback as to what the current value is. This is why we've included an {{htmlelement("output")}} element to contain the current value (we'll also look at this element in the next article). You could display an input value or the output of a calculation inside any element, but <code>&lt;output&gt;</code> is special — like <code>&lt;label&gt;</code> — and it can take a <code>for</code> attribute that allows you to associate it with the element or elements that the output value came from.</p>
+<p>One problem with sliders is that they don't offer any kind of visual feedback as to what the current value is. This is why we've included an {{htmlelement("output")}} element to contain the current value. You could display an input value or the output of a calculation inside any element, but <code>&lt;output&gt;</code> is special — like <code>&lt;label&gt;</code> — and it can take a <code>for</code> attribute that allows you to associate it with the element or elements that the output value came from.</p>
 
 <p>To actually display the current value, and update it as it changed, you must use JavaScript, but this is relatively easy to do:</p>
 
@@ -178,7 +174,8 @@ price.addEventListener('input', function() {
 <p>Here we store references to the <code>range</code> input and the <code>output</code> in two variables. Then we immediately set the <code>output</code>'s <code><a href="/en-US/docs/Web/API/Node/textContent">textContent</a></code> to the current <code>value</code> of the input. Finally, an event listener is set to ensure that whenever the range slider is moved, the <code>output</code>'s <code>textContent</code> is updated to the new value.</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: <code>range</code> inputs are not supported in versions of Internet Explorer below 10.</p>
+  <h4>Note</h4>
+  <p>There is a nice tutorial covering this subject on CSS Tricks: <a href="https://css-tricks.com/the-output-element/">The Output Element</a>.</p>
 </div>
 
 <h2 id="Date_and_time_pickers">Date and time pickers</h2>
@@ -226,12 +223,6 @@ price.addEventListener('input', function() {
 <pre class="brush: html">&lt;label for="myDate"&gt;When are you available this summer?&lt;/label&gt;
 &lt;input type="date" name="myDate" min="2013-06-01" max="2013-08-31" step="7" id="myDate"&gt;</pre>
 
-<h3 id="Browser_support_for_datetime_inputs">Browser support for date/time inputs</h3>
-
-<p>You should be warned that the date and time widgets don't have the best browser support. At the moment, Chrome, Edge, and Opera support them well, but there is no support in Internet Explorer, Safari has some mobile support (but no desktop support), and Firefox supports <code>time</code> and <code>date</code> only.</p>
-
-<p>The reference pages linked to above provide suggestions on how to program fallbacks for non-supporting browsers; another option is to consider using a JavaScript library to provide a date picker. Most modern frameworks have good components available to provide this functionality, and there are standalone libraries available too (see <a href="https://flatlogic.com/blog/best-javascript-date-picker-libraries/">Top date picker JavaScript plugins and libraries</a> for some suggestions).</p>
-
 <h2 id="Color_picker_control">Color picker control</h2>
 
 <p>Colors are always a bit difficult to handle. There are many ways to express them: RGB values (decimal or hexadecimal), HSL values, keywords, and so on.</p>
@@ -250,10 +241,6 @@ price.addEventListener('input', function() {
 
 <p>The value returned is always a lowercase 6-value hexadecimal color.</p>
 
-<div class="notecard note">
-<p><strong>Note</strong>: <code>color</code> inputs are not supported in Internet Explorer.</p>
-</div>
-
 <h2 id="Test_your_skills!">Test your skills!</h2>
 
 <p>You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see <a href="/en-US/docs/Learn/Forms/Test_your_skills:_HTML5_controls">Test your skills: HTML5 controls</a>.</p>
@@ -270,7 +257,6 @@ price.addEventListener('input', function() {
  <li><a href="/en-US/docs/Learn/Forms/Your_first_form">Your first form</a></li>
  <li><a href="/en-US/docs/Learn/Forms/How_to_structure_a_web_form">How to structure a web form</a></li>
  <li><a href="/en-US/docs/Learn/Forms/Basic_native_form_controls">Basic native form controls</a></li>
- <li><a href="/en-US/docs/Learn/Forms/HTML5_input_types">The HTML5 input types</a></li>
  <li><a href="/en-US/docs/Learn/Forms/Other_form_controls">Other form controls</a></li>
  <li><a href="/en-US/docs/Learn/Forms/Styling_web_forms">Styling web forms</a></li>
  <li><a href="/en-US/docs/Learn/Forms/Advanced_form_styling">Advanced form styling</a></li>

@@ -26,19 +26,14 @@ tags:
 
 <h3 id="Reflection_of_light">Reflection of light</h3>
 
-<div style="width: 42em;">
-<div style="width: 20em; float: left; margin-right: 1em; margin-bottom: 1em;">
-<figure style="background: #eee; padding: 0.5em; border: 1px solid #aaa; border-radius: 1em; max-width: 504px; padding: 1em; margin: 1em auto;">
-<figcaption><strong>A diagram showing how the angle of reflection corresponds to the angle of incidence.</strong></figcaption>
+<strong>Figure: A diagram showing how the angle of reflection corresponds to the angle of incidence.</strong>
 
-<div style="background-color: #FFF;"><img alt="A diagram showing how the angle of reflection corresponds to the angle of incidence." src="law-of-reflection.svg"></div>
-</figure>
-</div>
-</div>
+<img alt="A diagram showing how the angle of reflection corresponds to the angle of incidence." src="law-of-reflection.svg">
 
-<p>Every object we see, we see because the object either emits or reflects light (or both). The incoming light ray—the <strong>incident ray</strong>—arrives at an angle known as the <strong>angle of incidence</strong>. The angle of incidence, Θ<sub>i</sub>, is the angle between the incident ray and the surface's {{interwiki("wikipedia", "normal vector")}}.</p>
 
-<p>For rough surfaces, light is reflected equally in every direction. However, glossy, mirror-like surfaces reflect most of the light in a direction whose <strong>angle of reflection</strong>, Θ<sub>r</sub>, is equal to the angle of incidence, except it's on the opposite side of the normal vector. The <strong>reflected ray</strong>, then, departs along at that angle off the normal. This is the <strong>{{interwiki("wikipedia", "law of reflection")}}</strong>. This is the foundation for much of what's involved in shading a scene, and comes into play in terms of how different types of light source behave.</p>
+<p>Every object we see, we see because the object either emits or reflects light (or both). The incoming light ray—the <strong>incident ray</strong>—arrives at an angle known as the <strong>angle of incidence</strong>. The angle of incidence, Θᵢ, is the angle between the incident ray and the surface's {{interwiki("wikipedia", "normal vector")}}.</p>
+
+<p>For rough surfaces, light is reflected equally in every direction. However, glossy, mirror-like surfaces reflect most of the light in a direction whose <strong>angle of reflection</strong>, Θᵣ, is equal to the angle of incidence, except it's on the opposite side of the normal vector. The <strong>reflected ray</strong>, then, departs along at that angle off the normal. This is the <strong>{{interwiki("wikipedia", "law of reflection")}}</strong>. This is the foundation for much of what's involved in shading a scene, and comes into play in terms of how different types of light source behave.</p>
 
 <p>The reflected light ray's color may, of course, be altered in intensity and/or hue due to the light's interaction with the surface, but the angle is always the same.</p>
 
@@ -48,19 +43,14 @@ tags:
 
 <p>There are three kinds of light that can affect the color and brightness of objects and their pixels as displayed on the viewer's screen or headset.</p>
 
-<div style="width: 42em;">
-<div style="width: 20em; float: right; margin-left: 1em; margin-bottom: 1em;">
-<figure style="background: #eee; padding: 0.5em; border: 1px solid #aaa; border-radius: 1em; max-width: 504px; padding: 1em; margin: 1em auto;">
-<figcaption><strong>A sphere with only ambient lighting. Note the total lack of any shading to indicate the depth of the sphere.</strong></figcaption>
-
-<div style="background-color: #FFF;"><img alt="A sphere which only has ambient lighting. Note the total lack of any shading to indicate the depth of the sphere." src="sphere-ambient-light-only.jpg"></div>
-</figure>
-</div>
-</div>
 
 <h4 id="Ambient_light">Ambient light</h4>
 
 <p><strong>Ambient light</strong> is light that doesn't come from a defined source, but is just present throughout the scene. This light reaches every surface in the scene at the same intensity from every direction, and is then reflected equally in every direction. As a result, the effect applied by ambient light is universally equal all through the scene.</p>
+
+<strong>Figure: A sphere with only ambient lighting. Note the total lack of any shading to indicate the depth of the sphere.</strong>
+
+<img alt="A sphere which only has ambient lighting. Note the total lack of any shading to indicate the depth of the sphere." src="sphere-ambient-light-only.jpg">
 
 <p>The effect of ambient light is computed by multiplying the intensity of the light source by the reflectance of the surface at the pixel's location. The color and intensity of every pixel in the scene is affected exactly the same way, regardless of where it is in the scene or the direction it's facing. Ambient light is commonly present to prevent shadowed areas from becoming too dark, although it affects the entire scene; however, the amount of ambient light in a scene should be very low.</p>
 
@@ -68,35 +58,25 @@ tags:
 
 <p>Ambient light can also be used to apply a color tint to a scene; for example, in a game in which the player has a special pair of yellow-tinted glasses, you can add a yellow ambient light.</p>
 
-<div style="width: 42em;">
-<div style="width: 20em; float: right; margin-left: 1em; margin-bottom: 1em;">
-<figure style="background: #eee; padding: 0.5em; border: 1px solid #aaa; border-radius: 1em; max-width: 504px; padding: 1em; margin: 1em auto;">
-<figcaption><strong>Saturn's fifth-largest moon, Tethys, bathed in sunlight, coming from the lower left.</strong></figcaption>
-
-<div style="background-color: #FFF;"><img alt="Saturn's fifth-largest moon, Tethys, is lit primarily by the sun, with some light reflected from Saturn. This is diffuse lighting." src="tethys.jpg"></div>
-</figure>
-</div>
-</div>
 
 <h4 id="Diffuse_light">Diffuse light</h4>
 
 <p><strong>Diffuse light</strong> is light which is evenly and directionally emitted from or reflected off a surface. This is the majority of the light we usually see. Diffuse light comes from a particular position or direction and casts shadows. Due to its directionality, the faces of an object facing a diffuse light source will be brighter than the other faces.</p>
 
+<strong>Figure: Saturn's fifth-largest moon, Tethys, bathed in sunlight, coming from the lower left.</strong>
+
+<img alt="Saturn's fifth-largest moon, Tethys, is lit primarily by the sun, with some light reflected from Saturn. This is diffuse lighting." src="tethys.jpg">
+
 <p>Because the intensity of diffuse light depends on the {{interwiki("wikipedia", "angle of incidence")}} (the angle between the vector representing the direction from which the light reaches the surface and the surface's normal vector or the vector perpendicular to the surface), the intensity or brightness of the light reflected by an object varies depending on the surface's orientation relative to the light source.</p>
 
-<div style="width: 42em;">
-<div style="width: 20em; float: right; margin-left: 1em; margin-bottom: 1em;">
-<figure style="background: #eee; padding: 0.5em; border: 1px solid #aaa; border-radius: 1em; max-width: 504px; padding: 1em; margin: 1em auto;">
-<figcaption><strong>A photo taken by NASA's Cassini spacecraft showing specular reflection of light from a lake of liquid methane on the surface of Saturn's moon Titan.</strong></figcaption>
-
-<div style="background-color: #FFF;"><img alt="A photo taken by NASA's Cassini spacecraft showing specular reflection of light from a lake of liquid methane on the surface of Saturn's moon Titan." src="specularlight-titan.jpg"></div>
-</figure>
-</div>
-</div>
 
 <h4 id="Specular_light">Specular light</h4>
 
 <p><strong>Specular light</strong> is the light that makes up the highlights on reflective objects, such as gems, eyes, shiny cups and plates, and the like. Specular lights tend to appear as bright spots or squares on a surface at the point where a light source strikes the surface most directly.</p>
+
+<strong>Figure: A photo taken by NASA's Cassini spacecraft showing specular reflection of light from a lake of liquid methane on the surface of Saturn's moon Titan.</strong>
+
+<img alt="A photo taken by NASA's Cassini spacecraft showing specular reflection of light from a lake of liquid methane on the surface of Saturn's moon Titan." src="specularlight-titan.jpg">
 
 <p>Every light source is represented by some combination of ambient, diffuse, and/or specular light. The WebGL shader program takes the color, directionality, brightness, and other factors for each light source and computes the final color of each pixel.</p>
 
@@ -110,19 +90,15 @@ tags:
 
 <p>Ambient light sources generally don't correspond to any object within the scene, and have no real-world analogues, either.</p>
 
-<div style="width: 42em;">
-<div style="width: 20em; float: right; margin-left: 1em; margin-bottom: 1em;">
-<figure style="background: #eee; padding: 0.5em; border: 1px solid #aaa; border-radius: 1em; max-width: 504px; padding: 1em; margin: 1em auto;">
-<figcaption><strong>Earth and moon both half-lit by the sun's directional lighting.</strong></figcaption>
 
-<div style="background-color: #FFF;"><img alt="A photo taken by the Galileo spacecraft from about 6.3 million kilometers away, with Earth and moon both half-lit by the sun." src="earthandmoon.jpg"></div>
-</figure>
-</div>
-</div>
 
 <h4 id="Directional_light_sources">Directional light sources</h4>
 
 <p>A <strong>directional light source</strong> is a light source that comes from a specific direction, but not from a specific source, so its emitted light rays are parallel to one another. In addition, the intensity of the light doesn't change over distance. This means that shadows cast by directional lights are very sharp, with an essentially instant transition between lighted and shadowed.</p>
+
+<strong>Figure: Earth and moon both half-lit by the sun's directional lighting.</strong>
+
+<img alt="A photo taken by the Galileo spacecraft from about 6.3 million kilometers away, with Earth and moon both half-lit by the sun." src="earthandmoon.jpg">
 
 <p>The most common example of a directional light is the sun. While the sun is in actuality a single (large) object, it's very far away, so the rays of light coming from it are essentially parallel. While sunlight does actually fall off in intensity with distance, the rate of change is very low and is only noticed over vast distances, so the rate of intensity change of sunlight doesn't typically matter for rendering a 3D scene.</p>
 
@@ -132,19 +108,14 @@ tags:
 
 <p>Between the law of reflection and the fact that the brightness of the light rays decreases with distance, the light emitted by a point source and reflected back tends to be brightest at the closest point to the light source and dimmer the farther away it is. Even if the surface is flat, the closest point to the light source is the center, with rays becoming increasingly long as the angle away from the normal changes.</p>
 
-<div style="width: 42em;">
-<div style="width: 20em; float: right; margin-left: 1em; margin-bottom: 1em;">
-<figure style="background: #eee; padding: 0.5em; border: 1px solid #aaa; border-radius: 1em; max-width: 504px; padding: 1em; margin: 1em auto;">
-<figcaption><strong>Photo of a spotlight shining upon a stucco wall at night.</strong></figcaption>
-
-<div style="background-color: #FFF;"><img alt="Photo of a spotlight shining upon a stucco wall at night." src="spotlight-on-stucco.jpg"></div>
-</figure>
-</div>
-</div>
 
 <h4 id="Spot_light_sources">Spot light sources</h4>
 
 <p>A <strong>spot light source</strong> (or <strong>spotlight</strong>) is a light source which is located at a specific position, emitting a cone of light in the direction of its orientation vector. A tapering rate parameter defines how quickly the brightness of the light falls off at the edges of the cone of light, and, as with point lights, an attenuation parameter controls how the light fades over distance.</p>
+
+<strong>Figure: Photo of a spotlight shining upon a stucco wall at night.</strong>
+
+<img alt="Photo of a spotlight shining upon a stucco wall at night." src="spotlight-on-stucco.jpg">
 
 <p>At the edge of the light cone, the light ceases to affect the surface at all.</p>
 

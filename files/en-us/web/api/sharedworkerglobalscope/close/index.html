@@ -9,6 +9,7 @@ tags:
   - SharedWorkerGlobalScope
   - Web Workers
   - close
+browser-compat: api.SharedWorkerGlobalScope.close
 ---
 <p>{{APIRef("Web Workers API")}}</p>
 
@@ -32,24 +33,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<tbody>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-		<tr>
-			<td>{{SpecName('HTML WHATWG', '#dom-sharedworkerglobalscope-close', 'close()')}}</td>
-			<td>{{Spec2('HTML WHATWG')}}</td>
-			<td></td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.SharedWorkerGlobalScope.close")}}</p>
+<p>{{Compat}}</p>
 
 <p><strong>General note:</strong> In newer browser versions, <code>close()</code> is available on <code>SharedWorkerGlobalScope</code> and {{domxref("DedicatedWorkerGlobalScope.close", "DedicatedWorkerGlobalScope")}}. In older browser versions, it is available on {{domxref("WorkerGlobalScope.close","WorkerGlobalScope")}}. This change was made to stop <code>close()</code> being available on service workers, as it isn't supposed to be used there and always throws an exception when called (see {{bug(1336043)}}).</p>
 

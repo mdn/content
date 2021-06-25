@@ -12,6 +12,7 @@ tags:
   - accessing data
   - asynchronous access
   - transactions
+browser-compat: api.IDBDatabase
 ---
 <p>{{APIRef("IndexedDB")}}</p>
 
@@ -20,7 +21,7 @@ tags:
 <p>{{AvailableInWorkers}}</p>
 
 <div class="note">
-<p><strong>Note</strong>: Everything you do in IndexedDB always happens in the context of a <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB#gloss_transaction">transaction</a>, representing interactions with data in the database. All objects in IndexedDB — including object stores, indexes, and cursors — are tied to a particular transaction. Thus, you cannot execute commands, access data, or open anything outside of a transaction.</p>
+<p><strong>Note</strong>: Everything you do in IndexedDB always happens in the context of a <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#gloss_transaction">transaction</a>, representing interactions with data in the database. All objects in IndexedDB — including object stores, indexes, and cursors — are tied to a particular transaction. Thus, you cannot execute commands, access data, or open anything outside of a transaction.</p>
 </div>
 
 <p>{{InheritanceDiagram}}</p>
@@ -129,32 +130,14 @@ DBOpenRequest.onupgradeneeded = function(event) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB', '#idbdatabase', 'IDBDatabase')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td>Initial version</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("IndexedDB 2", "#database-interface", "IDBDatabase")}}</td>
-   <td>{{Spec2("IndexedDB 2")}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
 <div>
 
-<p>{{Compat("api.IDBDatabase")}}</p>
+<p>{{Compat}}</p>
 </div>
 </div>
 

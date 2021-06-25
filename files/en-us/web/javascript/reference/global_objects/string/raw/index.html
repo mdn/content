@@ -2,18 +2,19 @@
 title: String.raw()
 slug: Web/JavaScript/Reference/Global_Objects/String/raw
 tags:
-- ECMAScript 2015
-- JavaScript
-- Method
-- Reference
-- String
+  - ECMAScript 2015
+  - JavaScript
+  - Method
+  - Reference
+  - String
+  - Polyfill
 browser-compat: javascript.builtins.String.raw
 ---
 <div>{{JSRef}}</div>
 
 <p>The static <strong><code>String.raw()</code></strong> method
     is a tag function of <a
-      href="/en-US/docs/Web/JavaScript/Reference/template_strings">template literals</a>.
+      href="/en-US/docs/Web/JavaScript/Reference/Template_literals">template literals</a>.
     This is <em>similar</em> to the <code>r</code> prefix in Python, or the <code>@</code>
     prefix in C# for string literals. (But it is not <em>identical</em>; see explanations
     in <a href="https://bugs.chromium.org/p/v8/issues/detail?id=5016">this issue</a>.)
@@ -24,10 +25,10 @@ browser-compat: javascript.builtins.String.raw
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js"><code>String.raw(<var>callSite</var>, <var>...substitutions</var>)
+<pre class="brush: js">String.raw(callSite, ...substitutions)
 
-String.raw`<var>templateString</var>`
-</code></pre>
+String.raw`templateString`
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -59,7 +60,7 @@ String.raw`<var>templateString</var>`
 <p>In most cases, <code>String.raw()</code> is used with template literal. The first
   syntax mentioned above is only rarely used, because the JavaScript engine will call this
   with proper arguments for you, (just like with other <a
-    href="/en-US/docs/Web/JavaScript/Reference/template_strings#Tagged_template_literals">tag
+    href="/en-US/docs/Web/JavaScript/Reference/Template_literals#tagged_template_literals">tag
     functions</a>).</p>
 
 <p><code>String.raw()</code> is the only built-in tag function of template literals. It
@@ -71,12 +72,12 @@ String.raw`<var>templateString</var>`
 <h3 id="Using_String.raw">Using String.raw()</h3>
 
 <pre class="brush: js">String.raw`Hi\n${2+3}!`;
-// 'Hi\n5!', the character after 'Hi'
+// 'Hi\\n5!', the character after 'Hi'
 // is not a newline character,
 // '\' and 'n' are two characters.
 
 String.raw`Hi\u000A!`;
-// 'Hi\u000A!', same here, this time we will get the
+// 'Hi\\u000A!', same here, this time we will get the
 //  \, u, 0, 0, 0, A, 6 characters.
 // All kinds of escape characters will be ineffective
 // and backslashes will be present in the output string.
@@ -85,7 +86,7 @@ String.raw`Hi\u000A!`;
 
 let name = 'Bob';
 String.raw`Hi\n${name}!`;
-// 'Hi\nBob!', substitutions are processed.
+// 'Hi\\nBob!', substitutions are processed.
 
 // Normally you would not call String.raw() as a function,
 // but to simulate `foo${2 + 3}bar${'Java' + 'Script'}baz` you can do:
@@ -115,7 +116,8 @@ String.raw({ raw: 'test' }, 0, 1, 2); // 't0e1s2t'
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/template_strings">Template literals</a>
+  <li>A polyfill of <code>String.raw</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-string-and-regexp"><code>core-js</code></a></li>
+  <li><a href="/en-US/docs/Web/JavaScript/Reference/Template_literals">Template literals</a>
   </li>
   <li>{{jsxref("String")}}</li>
   <li><a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar">Lexical grammar</a>

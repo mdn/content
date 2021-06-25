@@ -10,13 +10,14 @@ tags:
   - Reference
   - Storage
   - keyPath
+browser-compat: api.IDBIndex.keyPath
 ---
 <p>{{ APIRef("IndexedDB") }}</p>
 
 <div>
   <p>The <strong><code>keyPath</code></strong> property of the {{domxref("IDBIndex")}}
     interface returns the <a
-      href="/en-US/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB#gloss_keypath">key
+      href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#gloss_keypath">key
       path</a> of the current index. If null, this index is not <a
       href="/en-US/docs/Web/API/IDBIndex#gloss_auto-populated">auto-populated</a>.
   </p>
@@ -31,8 +32,7 @@ tags:
 
 <h3 id="Value">Value</h3>
 
-<p><span style="line-height: 1.5;">Any data type that can be used as a key path.</span>
-</p>
+<p>Any data type that can be used as a key path.</p>
 
 <h2 id="Example">Example</h2>
 
@@ -52,7 +52,7 @@ tags:
     demo repo</a> (<a href="https://mdn.github.io/indexeddb-examples/idbindex">View the
     example live</a>.)</p>
 
-<pre style="font-size: 14px;">function displayDataByIndex() {
+<pre class="brush:js">function displayDataByIndex() {
   tableEntry.innerHTML = '';
   var transaction = db.transaction(['contactsList'], 'readonly');
   var objectStore = transaction.objectStore('contactsList');
@@ -83,29 +83,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('IndexedDB', '#dom-idbindex-keypath', 'keyPath')}}</td>
-      <td>{{Spec2('IndexedDB')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName("IndexedDB 2", "#dom-idbindex-keypath", "keyPath")}}</td>
-      <td>{{Spec2("IndexedDB 2")}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.IDBIndex.keyPath")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

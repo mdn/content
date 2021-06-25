@@ -13,6 +13,7 @@ tags:
 - Reference
 - Security
 - origin
+browser-compat: api.HTMLImageElement.crossOrigin
 ---
 <p>{{APIRef("HTML DOM")}}</p>
 
@@ -62,7 +63,7 @@ let <em>crossOriginMode</em> = <em>htmlImageElement</em>.crossOrigin;</pre>
   <code>&lt;img&gt;</code> element to configure CORS access for the fetch of a
   newly-created image.</p>
 
-<pre class="brush: js">const imageUrl = "https://mdn.mozillademos.org/files/16797/clock-demo-400px.png";
+<pre class="brush: js">const imageUrl = "clock-demo-400px.png";
 const container = document.querySelector(".container");
 
 function loadImage(url) {
@@ -122,24 +123,8 @@ output {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', '#dom-img-crossorigin',
-        'HTMLImageElement.crossOrigin')}}</td>
-      <td>{{Spec2('HTML DOM')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.HTMLImageElement.crossOrigin")}}</p>
+<p>{{Compat}}</p>

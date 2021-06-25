@@ -96,14 +96,13 @@ before browsers' main rendering machinery kicks in. This ensures they are availa
 
 <p><code>&lt;link&gt;</code> elements can accept a {{htmlattrxref("type", "link")}} attribute, which contains the MIME type of the resource the element points to. This is especially useful when preloading resources — the browser will use the <code>type</code> attribute value to work out if it supports that resource, and will only download it if so, ignoring it if not.</p>
 
-<p>You can see an example of this in our video example (see the <a href="https://github.com/mdn/html-examples/tree/master/link-rel-preload/video">full source code</a>, and also <a href="https://mdn.github.io/html-examples/link-rel-preload/video/">the live version</a>):</p>
+<p>You can see an example of this in our video example (see the <a href="https://github.com/mdn/html-examples/tree/master/link-rel-preload/video">full source code</a>, and also <a href="https://mdn.github.io/html-examples/link-rel-preload/video/">the live version</a>), a code snippet from which is shown below. And while this code won’t actually cause preloading in any browsers — because video preloading isn’t yet supported in any browsers — it still illustrates the core behavior behind preloading in general.</p>
 
 <pre class="brush: html">&lt;head&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;title&gt;Video preload example&lt;/title&gt;
 
   &lt;link rel="preload" href="sintel-short.mp4" as="video" type="video/mp4"&gt;
-  &lt;link rel="preload" href="sintel-short.webm" as="video" type="video/webm"&gt;
 &lt;/head&gt;
 &lt;body&gt;
   &lt;video controls&gt;
@@ -113,7 +112,13 @@ before browsers' main rendering machinery kicks in. This ensures they are availa
   &lt;/video&gt;
 &lt;/body&gt;</pre>
 
-<p>So in this case, browsers that support MP4s will preload and use the MP4, making the video player hopefully smoother/more responsive for users. Browsers that don't support MP4 can still load the WebM version, but don't get the advantages of preloading. This shows how preloading content can be combined with the philosophy of progressive enhancement.</p>
+<p>The code in the example above causes the <code>video/mp4</code> video to be preloaded only in supporting browsers — and for users who have <code>video/mp4</code> support in their browsers, causes the <code>video/mp4</code> video to actually be used (since it’s the first {{htmlelement("source")}} specified). That makes the video player hopefully smoother/more responsive for users who have <code>video/mp4</code> support in their browsers.</p>
+
+<p>Note that for users whose browsers have both <code>video/mp4</code> and <code>video/webm</code> support, if in that code a <code>&lt;link rel="preload" href="sintel-short.webm" as="video" type="video/webm"&gt;</code> element were also specified, then <em>both</em> the <code>video/mp4</code> and <code>video/webm</code> videos would be preloaded — even though only one of them would actually be used.</p>
+
+<p>Therefore, specifying preloading for multiple types of the same resource is discouraged. Instead, the best practice is to specify preloading only for the type the majority of your users are likely to actually use. That’s why the code in the example above doesn’t specify preloading for the <code>video/webm</code> video.</p>
+
+<p>However, the lack of preloading doesn’t prevent the <code>video/webm</code> video from actually being used by those who need it: for users whose browsers don’t have <code>video/mp4</code> support but do have <code>video/webm</code> support, the code in the example above does still cause the <code>video/webm</code> video to be used — but it does so without also causing it to also be preloaded unnecessarily for the majority of other users.</p>
 
 <h2 id="CORS-enabled_fetches">CORS-enabled fetches</h2>
 

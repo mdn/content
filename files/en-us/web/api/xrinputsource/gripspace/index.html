@@ -14,6 +14,7 @@ tags:
   - WebXR Device API
   - XRInputSession
   - gripSpace
+browser-compat: api.XRInputSource.gripSpace
 ---
 <div>{{securecontext_header}}{{APIRef("WebXR")}}</div>
 
@@ -41,34 +42,17 @@ tags:
   native origin of the grip space is located at the centroid—the center of mass—of the
   user's fist, tracking the position of the user's hand.</p>
 
-<div style="width: 42em;">
-  <div style="width: 20em; float: left;">
-    <figure
-      style="background: #eee; padding: 0.5em; border: 1px solid #aaa; border-radius: 1em; max-width: 504px; padding: 1em; margin: 1em auto;">
-      <figcaption><strong>The coordinate system for the left hand's grip space.</strong>
-      </figcaption>
+<p><strong>The coordinate system for the left hand's grip space.</strong></p>
 
-      <div style="background-color: #FFF;"><img
-          alt="A diagram showing how the grip space indicates the local coordinate system for the player's hand relative to the world."
-          src="gripspace-lefthand-light.svg"></div>
-    </figure>
-  </div>
+<p><img alt="A diagram showing how the grip space indicates the local coordinate system for the player's hand relative to the world." src="gripspace-lefthand-light.svg"></p>
 
-  <div style="width: 20em; float: right;">
-    <figure
-      style="background: #eee; padding: 0.5em; border: 1px solid #aaa; border-radius: 1em; max-width: 504px; padding: 1em; margin: 1em auto;">
-      <figcaption><strong>The coordinate system for the right hand's grip space.</strong>
-      </figcaption>
 
-      <div style="background-color: #FFF;"><img
-          alt="A diagram showing how the grip space indicates the local coordinate system for the player's hand relative to the world."
-          src="gripspace-righthand-light.svg"></div>
-    </figure>
-  </div>
-</div>
+<p><strong>The coordinate system for the right hand's grip space.</strong></p>
 
-<p class="cleared">As shown in the diagram above, the coordinate system is oriented as
-  follows:</p>
+<p><img alt="A diagram showing how the grip space indicates the local coordinate system for the player's hand relative to the world." src="gripspace-righthand-light.svg"></p>
+
+
+<p>As shown in the diagram above, the coordinate system is oriented as follows:</p>
 
 <ul>
   <li>The x-axis is perpendicular to the palm of the user's hand, with the direction
@@ -107,22 +91,8 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('WebXR','#dom-xrinputsource-gripspace','XRInputSource.gripSpace')}}
-      </td>
-      <td>{{Spec2('WebXR')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.XRInputSource.gripSpace")}}</p>
+<p>{{Compat}}</p>

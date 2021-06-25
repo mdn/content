@@ -7,17 +7,48 @@ tags:
   - Template
   - property subpage
   - reference page
+browser-compat: path.to.feature.NameOfTheProperty
 ---
 <p>{{MDNSidebar}}</p>
 
-<div class="note">
+<!-- Remove div below here before publishing -->
+<div class="notecard note">
 <h2 id="Remove_before_publishing">Remove before publishing</h2>
+	
+<h3 id="Page_front_matter">Page front matter</h3>
+	
+<p>The frontmatter at the top of the page is used to define "page metadata". The values should be updated appropriately for the particular property.</p>
+	
+<pre>---
+title: NameOfTheParentInterface.NameOfTheProperty
+slug: Web/API/NameOfTheParentInterface/NameOfTheProperty
+tags:
+  - API
+  - NameOfTheProperty
+  - Property
+  - Reference
+  - Experimental
+  - Deprecated
+  - Non-standard
+browser-compat: path.to.feature.NameOfTheProperty
+---</pre>
 
-<h3 id="Title_and_slug">Title and slug</h3>
+<dl>
+	<dt><strong>title</strong></dt>
+	<dd>Title heading displayed at top of page. Format as <em>NameOfTheParentInterface</em><strong>.</strong><em>NameOfTheProperty</em>. For example, the <a href="/en-US/docs/Web/API/VRDisplay/capabilities">capabilities</a> property of the <a href="/en-US/docs/Web/API/VRDisplay">VRDisplay</a> interface has a <em>title</em> of <em>VRDisplay.capabilities</em>.</dd>
+	<dt>slug</dt>
+	<dd>The end of the URL path after <code>https://developer.mozilla.org/en-US/docs/</code>). This will be formatted like <code>Web/API/NameOfTheParentInterface/NameOfTheProperty</code>.</dd>
+	<dt>tags</dt>
+	<dd><p>Include the following tags: <strong>API</strong>, <strong>Reference</strong>, <strong>Property</strong>, <em>the name of the API</em> (e.g. <strong>WebVR</strong>), the name of the parent interface (e.g. <strong>VRDisplay</strong>), the name of the property (e.g. <strong>capabilities</strong>), <strong>Experimental</strong> (if the technology is <a href="/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental">experimental</a>), <strong>Secure context</strong> (if it is available in a secure context only), and <strong>Deprecated</strong> (if it is <a href="/en-US/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete">deprecated</a>).</p>
+	
+	  <p>Optionally, you can elect to include some other tags that represent terms people might search for when looking for information on that technology. For example on WebVR interface pages we include <strong>VR</strong> and <strong>Virtual reality</strong>.</p></dd>
 
-<p>An API property subpage should have a <em>title</em> of <em>Name</em>Of<em>TheParentInterface + "." + NameOfTheProperty</em>. For example, the <a href="/en-US/docs/Web/API/VRDisplay/capabilities">capabilities</a> property of the <a href="/en-US/docs/Web/API/VRDisplay">VRDisplay</a> interface has a <em>title</em> of <em>VRDisplay.capabilities</em>.</p>
+	<dt>browser-compat</dt>
+	<dd><p>Replace the placeholder value <code>path.to.feature.NameOfTheProperty</code> with the query string for the property in the <a href="https://github.com/mdn/browser-compat-data">Browser compat data repo</a>. The toolchain automatically uses the key to populate the compatibility and specification sections (replacing the <code>\{{Compat}}</code> and <code>\{{Specifications}}</code> macros).</p>
+	  
+	  <p>Note that you may first need to create/update an entry for the API property in our <a href="https://github.com/mdn/browser-compat-data">Browser compat data repo</a>, and the entry for the API will need to include specification information. See our <a href="/en-US/docs/MDN/Structures/Compatibility_tables">guide on how to do this</a>.</p></dd>
+</dl>
 
-<p>The <em>Slug</em> (the last segment at the end of the URL) should be filled in as <em>NameOfTheProperty</em>, so <code>capabilities</code>'s slug is <em>capabilities</em>.</p>
 
 <h3 id="Top_macros">Top macros</h3>
 
@@ -30,19 +61,8 @@ tags:
 	<li>\{{SecureContext_Header}} — this generates a <strong>Secure context</strong> banner that indicates the technology is only available in a <a href="/en-US/docs/Web/Security/Secure_Contexts">secure context</a>. If it isn't, then you can remove the macro call. If it is, then you should also fill in an entry for it in the <a href="/en-US/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts">Features restricted to secure contexts</a> page.</li>
 	<li>\{{Deprecated_Header}} — this generates a <strong>Deprecated</strong> banner that indicates the technology is <a href="/en-US/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete">deprecated</a>. If it isn't, then you can remove the macro call.</li>
 </ul>
-
-<h3 id="Tags">Tags</h3>
-
-<p>In an API method subpage, you need to include the following tags (see the <em>Tags</em> section at the bottom of the editor UI): <strong>API</strong>, <strong>Reference</strong>, <strong>Property</strong>, <em>the name of the API</em> (e.g. <strong>WebVR</strong>), the name of the parent interface (e.g. <strong>VRDisplay</strong>), the name of the method (e.g. <strong>capabilities</strong>), <strong>Experimental</strong> (if the technology is <a href="/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental">experimental</a>), <strong>Secure context</strong> (if it is available in a secure context only), and <strong>Deprecated</strong> (if it is <a href="/en-US/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete">deprecated</a>).</p>
-
-<p>Optionally, you can elect to include some other tags that effective represent terms people might search for when looking for information on that technology. For example on WebVR interface pages we include <strong>VR</strong> and <strong>Virtual reality</strong>.</p>
-
-<h3 id="Browser_compatibility">Browser compatibility</h3>
-
-<p>To fill in the browser compat data, you first need to fill in an entry for the API into our <a href="https://github.com/mdn/browser-compat-data">Browser compat data repo</a> — see our <a href="/en-US/docs/MDN/Structures/Compatibility_tables#the_new_way_the_browser_compat_data_repo_and_dynamic_tables">guide on how to do this</a>.</p>
-
-<p>Once that is done, you can show the compat data for the method with a \{{Compat()}} macro call.</p>
 </div>
+<!-- Remove div above here before publishing -->
 
 <p>{{APIRef("GroupDataName")}}{{Draft}}{{SeeCompatTable}}{{SecureContext_Header}}{{Deprecated_Header}}</p>
 
@@ -72,26 +92,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName("NameOfSpecification", "#document-fragment-linking-directly-to-property-definition", "NameOfTheProperty")}}</td>
-			<td>{{Spec2("NameOfSpecification")}}</td>
-			<td>Initial definition.</td>
-		</tr>
-	</tbody>
-</table>
+<p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility_2">Browser compatibility</h2>
 
-<p>{{Compat("path.to.feature.NameOfTheProperty")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

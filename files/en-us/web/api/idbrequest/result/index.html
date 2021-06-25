@@ -10,6 +10,7 @@ tags:
 - Reference
 - Storage
 - result
+browser-compat: api.IDBRequest.result
 ---
 <p>{{ APIRef("IndexedDB") }}</p>
 
@@ -35,13 +36,11 @@ tags:
 
 <p>The following example requests a given record title, <code>onsuccess</code> gets the
   associated record from the {{domxref("IDBObjectStore")}} (made available
-  as <code>objectStoreTitleRequest.result</code><span style="line-height: 1.5;">), updates
+  as <code>objectStoreTitleRequest.result</code>), updates
     one property of the record, and then puts the updated record back into the object
-    store. For a full working example, see our </span><a
-    href="https://github.com/mdn/to-do-notifications/" style="line-height: 1.5;">To-do
-    Notifications</a><span style="line-height: 1.5;"> app (</span><a
-    href="https://mdn.github.io/to-do-notifications/" style="line-height: 1.5;">view
-    example live</a><span style="line-height: 1.5;">.)</span></p>
+    store. For a full working example, see our <a href="https://github.com/mdn/to-do-notifications/">To-do
+    Notifications</a> app (<a href="https://mdn.github.io/to-do-notifications/">view
+    example live</a>>.)</p>
 
 <pre class="brush: js;highlight:[11]">var title = "Walk dog";
 
@@ -64,36 +63,18 @@ objectStoreTitleRequest.onsuccess = function() {
 
   // When this new request succeeds, run the displayData()
   // function again to update the display
-  <span style="font-size: 1rem;">updateTitleRequest</span><span style="font-size: 1rem;">.onsuccess = function() {</span>
+  updateTitleRequest.onsuccess = function() {
     displayData();
   };
 };</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('IndexedDB', '#dom-idbrequest-result', 'result')}}</td>
-      <td>{{Spec2('IndexedDB')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName("IndexedDB 2", "#dom-idbrequest-result", "result")}}</td>
-      <td>{{Spec2("IndexedDB 2")}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.IDBRequest.result")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

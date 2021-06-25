@@ -8,6 +8,7 @@ tags:
 - Method
 - Reference
 - initCompositionEvent
+browser-compat: api.CompositionEvent.initCompositionEvent
 ---
 <p>{{deprecated_header}}{{APIRef("DOM Events")}}</p>
 
@@ -15,6 +16,8 @@ tags:
   method of the {{domxref("CompositionEvent")}} interface initializes the attributes of a
   <code>CompositionEvent</code> object instance.</p>
 
+<p class="notecard note">The correct way of creating a {{domxref("CompositionEvent")}} is to use
+  the constructor {{domxref("CompositionEvent.CompositionEvent", "CompositionEvent()")}}.</p>
 <h2 id="Syntax">Syntax</h2>
 
 <pre
@@ -47,27 +50,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('DOM3 Events','#idl-interface-CompositionEvent-initializers','initCompositionEvent()')}}
-      </td>
-      <td>{{Spec2('DOM3 Events')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+<p>This method is no longer on a standardization track. It is kept for compatibility purposes. Use the constructor {{domxref("CompositionEvent.CompositionEvent", "CompositionEvent()")}}.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.CompositionEvent.initCompositionEvent")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

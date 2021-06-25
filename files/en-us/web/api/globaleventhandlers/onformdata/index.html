@@ -9,11 +9,12 @@ tags:
 - HTML DOM
 - Property
 - Reference
+browser-compat: api.GlobalEventHandlers.onformdata
 ---
 <div>{{ApiRef("HTML DOM")}}</div>
 
 <p>The <code><strong>onformdata</strong></code> property of the
-  {{domxref("GlobalEventHandlers")}} mixin is the {{domxref("EventHandler")}} for
+  {{domxref("GlobalEventHandlers")}} mixin is the {{event("Event_handlers", "event handler")}} for
   processing {{event("formdata")}} events, fired after the entry list representing the
   form's data is constructed. This happens when the form is submitted, but can also be
   triggered by the invocation of a {{domxref("FormData.FormData", "FormData()")}}
@@ -66,25 +67,11 @@ formElem.onformdata = (e) =&gt; {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML WHATWG','webappapis.html#handler-onformdata','onformdata')}}
-      </td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.GlobalEventHandlers.onformdata")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

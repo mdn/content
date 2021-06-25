@@ -8,6 +8,7 @@ tags:
   - Interface
   - Reference
   - Storage
+browser-compat: api.IDBCursor
 ---
 <p>{{APIRef("IndexedDB")}}</p>
 
@@ -15,7 +16,7 @@ tags:
 <p><strong>Note:</strong> Not to be confused with {{domxref("IDBCursorWithValue")}} which is just an <strong><code>IDBCursor</code></strong> interface with an additional <strong><code>value</code></strong> property.</p>
 </div>
 
-<p>The <strong><code>IDBCursor</code></strong> interface of the <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB API</a> represents a <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB#gloss_cursor">cursor</a> for traversing or iterating over multiple records in a database.</p>
+<p>The <strong><code>IDBCursor</code></strong> interface of the <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB API</a> represents a <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#gloss_cursor">cursor</a> for traversing or iterating over multiple records in a database.</p>
 
 <p>The cursor has a source that indicates which index or object store it is iterating over. It has a position within the range, and moves in a direction that is increasing or decreasing in the order of record keys. The cursor enables an application to asynchronously process all the records in the cursor's range.</p>
 
@@ -96,29 +97,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB', '#cursor-interface', 'cursor')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td>Initial definition</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB 2', '#cursor-interface', "cursor")}}</td>
-   <td>{{Spec2("IndexedDB 2")}}</td>
-   <td>Added <code>continuePrimaryKey()</code> and support for binary keys, and the {{domxref("IDBCursor.request")}} property.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.IDBCursor")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

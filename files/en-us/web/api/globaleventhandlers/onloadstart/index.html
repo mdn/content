@@ -11,11 +11,12 @@ tags:
 - Web
 - events
 - onloadstart
+browser-compat: api.GlobalEventHandlers.onloadstart
 ---
 <div>{{ApiRef}}</div>
 
 <p>The <strong><code>onloadstart</code></strong> property of the
-  {{domxref("GlobalEventHandlers")}} mixin is an {{domxref("EventHandler")}} representing
+  {{domxref("GlobalEventHandlers")}} mixin is an {{event("Event_handlers", "event handler")}} representing
   the code to be called when the {{event("loadstart")}} event is raised (when progress has
   begun on the loading of a resource.)</p>
 
@@ -53,24 +54,8 @@ image.addEventListener('loadend', function(e) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName("HTML WHATWG", "webappapis.html#handler-onloadstart",
-        "onloadstart")}}</td>
-      <td>{{Spec2("HTML WHATWG")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.GlobalEventHandlers.onloadstart")}}</p>
+<p>{{Compat}}</p>

@@ -8,11 +8,12 @@ tags:
   - Method
   - Reference
   - getModifierState
+browser-compat: api.KeyboardEvent.getModifierState
 ---
 <p>{{APIRef("DOM Events")}}</p>
 
 <p>The <code><strong>KeyboardEvent.getModifierState()</strong></code> method returns the
-  current state of the specified modifier key: <code>true</code> if the modifier is active
+  current state of the specified modifier key: <code>true</code> if the modifier is active
   (that is the modifier key is pressed or locked), otherwise, <code>false</code>.</p>
 
 <h2 id="Syntax">Syntax</h2>
@@ -20,7 +21,7 @@ tags:
 <pre
   class="brush: js">var active = event.getModifierState(keyArg);</pre>
 
-<h3 id="Returns">Returns </h3>
+<h3 id="Returns">Returns </h3>
 
 <p>A {{jsxref("Boolean")}}</p>
 
@@ -40,8 +41,8 @@ tags:
 
 <h2 id="Modifier_keys_on_Gecko">Modifier keys on Gecko</h2>
 
-<table style="width: 100%;">
-  <caption>When getModifierState() returns true on Gecko?</caption>
+When <code>getModifierState()</code> returns true on Gecko?
+<table class="standard-table">
   <thead>
     <tr>
       <th scope="row"></th>
@@ -68,15 +69,14 @@ tags:
       </td>
       <td><kbd>Level 3 Shift</kbd> key (or <kbd>Level 5 Shift</kbd> key) pressed</td>
       <td><kbd>⌥ Option</kbd> key pressed</td>
-      <td colspan="2" style="background-color: rgb(204, 204, 204); text-align: center;">
-        <em>Not supported</em></td>
+      <td>❌ <em>Not supported</em></td>
+      <td>❌ <em>Not supported</em></td>
     </tr>
     <tr>
       <th scope="row"><code>"CapsLock"</code></th>
-      <td colspan="3" style="text-align: center;">During LED for <kbd>⇪ Caps Lock</kbd>
+      <td colspan="3">During LED for <kbd>⇪ Caps Lock</kbd>
         turned on</td>
-      <td style="text-align: center; background-color: rgb(204, 204, 204);"><em>Not
-          supported</em></td>
+      <td>❌ <em>Not supported</em></td>
       <td>While <kbd>CapsLock</kbd> is locked</td>
     </tr>
     <tr>
@@ -89,76 +89,87 @@ tags:
     </tr>
     <tr>
       <th scope="row"><code>"Fn"</code></th>
-      <td colspan="4" style="background-color: rgb(204, 204, 204); text-align: center;">
-        <em>Not supported</em></td>
+      <td>❌ <em>Not supported</em></td>
+      <td>❌ <em>Not supported</em></td>
+      <td>❌ <em>Not supported</em></td>
+      <td>❌ <em>Not supported</em></td>
       <td><kbd>Function</kbd> key is pressed, but we're not sure what key makes the
         modifier state active. <kbd>Fn</kbd> key on Mac keyboard doesn't cause this
         active.</td>
     </tr>
     <tr>
       <th scope="row"><code>"FnLock"</code></th>
-      <td colspan="5" style="background-color: rgb(204, 204, 204); text-align: center;">
-        <em>Not supported</em></td>
-    </tr>
+      <td>❌ <em>Not supported</em></td>
+      <td>❌ <em>Not supported</em></td>
+      <td>❌ <em>Not supported</em></td>
+      <td>❌ <em>Not supported</em></td>
+      <td>❌ <em>Not supported</em></td>
     <tr>
       <th scope="row"><code>"Hyper"</code></th>
-      <td colspan="5" style="background-color: rgb(204, 204, 204); text-align: center;">
-        <em>Not supported</em></td>
+      <td>❌ <em>Not supported</em></td>
+      <td>❌ <em>Not supported</em></td>
+      <td>❌ <em>Not supported</em></td>
+      <td>❌ <em>Not supported</em></td>
+      <td>❌ <em>Not supported</em></td>
     </tr>
     <tr>
       <th scope="row"><code>"Meta"</code></th>
-      <td style="background-color: rgb(204, 204, 204); text-align: center;"><em>Not
-          supported</em></td>
-      <td style="text-align: center;"><kbd>Meta</kbd> key pressed</td>
-      <td><kbd>⌘ Command</kbd> key pressed</td>
-      <td style="text-align: center; background-color: rgb(204, 204, 204);"><em>Not
-          supported</em></td>
+      <td>❌ <em>Not supported</em></td>
+      <td><kbd>Meta</kbd> key pressed</td>
+      <td><kbd>⌘ Command</kbd> key pressed</td>
+      <td>❌ <em>Not supported</em></td>
       <td><kbd>⊞ Windows Logo</kbd> key or <kbd>command</kbd> key pressed</td>
     </tr>
     <tr>
       <th scope="row"><code>"NumLock"</code></th>
-      <td colspan="2" style="text-align: center;">During LED for <kbd>Num Lock</kbd>
-        turned on</td>
+      <td colspan="2">During LED for <kbd>Num Lock</kbd> turned on</td>
       <td>A key on numpad pressed</td>
-      <td style="text-align: center; background-color: rgb(204, 204, 204);"><em>Not
-          supported</em></td>
+      <td>❌ <em>Not supported</em></td>
       <td>While <kbd>NumLock</kbd> is locked</td>
     </tr>
     <tr>
       <th scope="row"><code>"OS"</code></th>
       <td><kbd>⊞ Windows Logo</kbd> key pressed</td>
-      <td><kbd>Super</kbd> key or <kbd>Hyper</kbd> key pressed (typically, mapped to
-        <kbd>⊞ Windows Logo</kbd> key)</td>
-      <td colspan="3" style="background-color: rgb(204, 204, 204); text-align: center;">
-        <em>Not supported</em></td>
+      <td><kbd>Super</kbd> key or <kbd>Hyper</kbd> key pressed (typically, mapped to <kbd>⊞ Windows Logo</kbd> key)</td>
+      <td>❌ <em>Not supported</em></td>
+      <td>❌ <em>Not supported</em></td>
+      <td>❌ <em>Not supported</em></td>
     </tr>
     <tr>
       <th scope="row"><code>"ScrollLock"</code></th>
       <td>During LED for <kbd>Scroll Lock</kbd> turned on</td>
-      <td>During LED for <kbd>Scroll Lock</kbd> turned on, but typically this isn't
-        supported by platform</td>
-      <td colspan="2" style="background-color: rgb(204, 204, 204); text-align: center;">
-        <em>Not supported</em></td>
+      <td>During LED for <kbd>Scroll Lock</kbd> turned on, but typically this isn't supported by platform</td>
+      <td>❌ <em>Not supported</em></td>
+      <td>❌ <em>Not supported</em></td>
       <td>While <kbd>ScrollLock</kbd> is locked</td>
     </tr>
     <tr>
       <th scope="row"><code>"Shift"</code></th>
-      <td colspan="5" style="text-align: center;"><kbd>⇧ Shift</kbd> key pressed</td>
+      <td colspan="5"><kbd>⇧ Shift</kbd> key pressed</td>
     </tr>
     <tr>
       <th scope="row"><code>"Super"</code></th>
-      <td colspan="5" style="background-color: rgb(204, 204, 204); text-align: center;">
-        <em>Not supported</em></td>
+      <td>❌ <em>Not supported</em></td>
+      <td>❌ <em>Not supported</em></td>
+      <td>❌ <em>Not supported</em></td>
+      <td>❌ <em>Not supported</em></td>
+      <td>❌ <em>Not supported</em></td>
     </tr>
     <tr>
       <th scope="row"><code>"Symbol"</code></th>
-      <td colspan="5" style="background-color: rgb(204, 204, 204); text-align: center;">
-        <em>Not supported</em></td>
+      <td>❌ <em>Not supported</em></td>
+      <td>❌ <em>Not supported</em></td>
+      <td>❌ <em>Not supported</em></td>
+      <td>❌ <em>Not supported</em></td>
+      <td>❌ <em>Not supported</em></td>
     </tr>
     <tr>
       <th scope="row"><code>"SymbolLock"</code></th>
-      <td colspan="5" style="background-color: rgb(204, 204, 204); text-align: center;">
-        <em>Not supported</em></td>
+      <td>❌ <em>Not supported</em></td>
+      <td>❌ <em>Not supported</em></td>
+      <td>❌ <em>Not supported</em></td>
+      <td>❌ <em>Not supported</em></td>
+      <td>❌ <em>Not supported</em></td>
     </tr>
   </tbody>
 </table>
@@ -258,35 +269,19 @@ if ((event.getModifierState("ScrollLock") ||
 </pre>
 
 <div class="note">
-  <p>Although this example uses <code>.getModifierState()</code> with <code>"Alt"</code>,
+  <p>Although this example uses <code>.getModifierState()</code> with <code>"Alt"</code>,
     <code>"Control"</code>, <code>"Meta"</code> and <code>"Shift"</code>, using
     <code>event.altKey</code>, <code>event.ctrlKey</code>, <code>event.metaKey</code> and
-    <code>event.shiftKey</code> may be more preferable.</p>
+    <code>event.shiftKey</code> may be more preferable.</p>
 </div>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('DOM3 Events', '#widl-KeyboardEvent-getModifierState',
-        'getModifierState()')}}</td>
-      <td>{{Spec2('DOM3 Events')}}</td>
-      <td>Initial definition (<a
-          href="https://dvcs.w3.org/hg/dom3events/raw-file/tip/html/DOM3Events-key.html#keys-modifier">Modifier
-          Keys spec</a>)</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.KeyboardEvent.getModifierState")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

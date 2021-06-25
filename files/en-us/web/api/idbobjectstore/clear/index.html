@@ -10,6 +10,7 @@ tags:
   - Reference
   - Storage
   - clear
+browser-compat: api.IDBObjectStore.clear
 ---
 <p>{{ APIRef("IndexedDB") }}</p>
 
@@ -37,7 +38,7 @@ tags:
 <p>An {{domxref("IDBRequest")}} object on which subsequent events related to this
   operation are fired.</p>
 
-<h3 id="Exceptions"><span style="line-height: 1.5;">Exceptions</span></h3>
+<h3 id="Exceptions">Exceptions</h3>
 
 <p>This method may raise a {{domxref("DOMException")}} of one of the following types:</p>
 
@@ -66,16 +67,13 @@ tags:
 
 <p>In the following code snippet, we open a read/write transaction on our database and
   clear all the current data out of the object store using <code>clear()</code>. For a
-  full working example, see our <a href="https://github.com/mdn/to-do-notifications/"
-    style="line-height: 1.5;">To-do Notifications</a><span style="line-height: 1.5;"> app
-    (</span><a href="https://mdn.github.io/to-do-notifications/"
-    style="line-height: 1.5;">view example live</a><span
-    style="line-height: 1.5;">.)</span></p>
+  full working example, see our <a href="https://github.com/mdn/to-do-notifications/">To-do Notifications</a> app
+    (<a href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</p>
 
 <pre class="brush: js">// Let us open our database
-<span style="line-height: 1.5;">var DBOpenRequest = window.indexedDB.open("toDoList", 4);
+var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
-</span><span style="line-height: 1.5;">DBOpenRequest.onsuccess = function(event) {</span>
+DBOpenRequest.onsuccess = function(event) {
   note.innerHTML += '&lt;li&gt;Database initialised.&lt;/li&gt;';
 
   // store the result of opening the database in the db variable.
@@ -113,29 +111,11 @@ function clearData() {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('IndexedDB', '#dom-idbobjectstore-clear', 'clear()')}}</td>
-      <td>{{Spec2('IndexedDB')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName("IndexedDB 2", "#dom-idbobjectstore-clear", "clear()")}}</td>
-      <td>{{Spec2("IndexedDB 2")}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.IDBObjectStore.clear")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

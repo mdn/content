@@ -103,7 +103,7 @@ editCancelled() {
   this.focusOnEditButton();
 },</pre>
 
-<p>Try editing and then saving/cancelling a to-do item via your keyboard. You'll notice that focus isn’t being set, so we still have a problem to solve. If you open your console, you'll see an error raised along the lines of <em>"<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox-stackTrace reps-custom-format">can't access property "focus", editButtonRef is undefined</span></span></span></span>"</em>. This seems weird. Your button ref was defined when you activated the "Edit" Button, but now it’s not. What is going on?</p>
+<p>Try editing and then saving/cancelling a to-do item via your keyboard. You'll notice that focus isn’t being set, so we still have a problem to solve. If you open your console, you'll see an error raised along the lines of <em>"can't access property "focus", editButtonRef is undefined"</em>. This seems weird. Your button ref was defined when you activated the "Edit" Button, but now it’s not. What is going on?</p>
 
 <p>Well, remember that when we change <code>isEditing</code> to <code>true</code>, we no longer render the section of the component featuring the "Edit" Button. This means there's no element to bind the ref to, so it becomes <code>undefined</code>.</p>
 

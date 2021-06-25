@@ -8,10 +8,11 @@ tags:
   - Property
   - Reference
   - aborted
+browser-compat: api.AbortSignal.aborted
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p>The <strong><code>aborted</code></strong> read-only property returns a value that indicates whether the DOM request(s) the signal is communicating with is/are aborted (<code>true</code>) or not (<code>false</code>).</p>
+<p>The <strong><code>aborted</code></strong> read-only property returns a value that indicates whether the DOM requests the signal is communicating with are aborted (<code>true</code>) or not (<code>false</code>).</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -23,7 +24,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<p>In the following snippet, we create a new <code>AbortController</code> object, and get its {{domxref("AbortSignal")}} (available in the <code>signal</code> property). Later on we check whether or not the signal has been aborted using the <code>aborted</code> property, and send an appropriate log to the console.</p>
+<p>In the following snippet, we create a new <code>AbortController</code> object, and get its {{domxref("AbortSignal")}} (available using the <code>signal</code> property). Later on we check whether or not the signal has been aborted using the <code>aborted</code> property, and send an appropriate log to the console.</p>
 
 <pre class="brush: js">var controller = new AbortController();
 var signal = controller.signal;
@@ -35,24 +36,11 @@ signal.aborted ? console.log('Request has been aborted') : console.log('Request 
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-abortsignal-onabort', 'onabort')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.AbortSignal.aborted")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

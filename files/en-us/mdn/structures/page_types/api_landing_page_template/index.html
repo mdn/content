@@ -5,42 +5,69 @@ tags:
   - API
   - Landing
   - Template
+
 ---
 <div>{{MDNSidebar}}</div>
 
-<div class="note">
+<!-- Remove div below here before publishing -->
+<div class="notecard note">
 <h2 id="Remove_before_publishing">Remove before publishing</h2>
 
-<h3 id="Title_and_slug">Title and slug</h3>
+<h3 id="Page_front_matter">Page front matter</h3>
 
-<p>An API landing page should have a <em>Title</em> of <em>Name of the API</em> + "API". For example, <a href="/en-US/docs/Web/API/WebVR_API">WebVR</a> has a title of <em>WebVR API</em>, <a href="/en-US/docs/Web/API/Fetch_API">Fetch</a> has a title of <em>Fetch API</em>.</p>
+<p>The frontmatter at the top of the page is used to define "page metadata". The values should be updated appropriately for the particular interface.</p>
 
-<p>The <em>Slug</em> (the last segment at the end of the URL) should be filled in as <em>Name of the API</em> + "_API". For example, <a href="/en-US/docs/Web/API/WebVR_API">WebVR</a>'s slug is <em>WebVR API</em>. This is usually filled in for you automatically.</p>
+<pre>---
+title: NameOfTheAPI API
+slug: Web/API/NameOfTheAPI_API
+tags:
+  - API
+  - NameOfTheAPI API
+  - Reference
+  - Experimental
+---</pre>
+
+<dl>
+<dt><strong>title</strong></dt>
+<dd>Title heading displayed at top of page. This is the name of the API followed by the text "API". For example, <a href="/en-US/docs/Web/API/WebVR_API">WebVR</a> has a title of <em>WebVR API</em>, <a href="/en-US/docs/Web/API/Fetch_API">Fetch</a> has a title of <em>Fetch API</em>.</dd>
+<dt>slug</dt>
+<dd>The end of the URL path after <code>https://developer.mozilla.org/en-US/docs/</code>). This will be formatted like <code>Web/API/NameOfTheAPI_API</code></strong>. For example, <a href="/en-US/docs/Web/API/WebVR_API">WebVR</a>'s slug is <code>Web/API/WebVR_API</code>.</dd>
+<dt>tags</dt>
+<dd><p>Include the following tags: <strong>API</strong>, <strong>Reference</strong>, <strong>Landing</strong>, <em>the name of the API</em> (e.g. <strong>WebVR</strong>), <strong>Experimental</strong> (if the technology is <a href="/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental">experimental</a>), <strong>Secure context</strong> (if it is available in a secure context only).</p>
+
+  <p>Optionally, you can elect to include some other tags that represent terms people might search for when looking for information on that technology. For example on WebVR interface pages we include <strong>VR</strong> and <strong>Virtual reality</strong>.</p></dd>
+</dl>
 
 <h3 id="Top_macros">Top macros</h3>
 
 <p>There are three macro calls at the top of the template by default. You should update or delete them according to the advice below:</p>
 
 <ul>
-	<li>\{{draft}} — this generates a <strong>Draft</strong> banner that indicates that the page is not yet complete, and should only be removed when the first draft of the page is completely finished. After it is ready to be published, you can remove this.</li>
-	<li>\{{securecontext_header}} — this generates a <strong>Secure context</strong> banner that indicates the technology is only available in a <a href="/en-US/docs/Web/Security/Secure_Contexts">secure context</a>. If it isn't, then you can remove the macro call. If it is, then you should also fill in an entry for it in the <a href="/en-US/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts">Features restricted to secure contexts</a> page.</li>
+	<li><code>\{{draft}}</code> — this generates a <strong>Draft</strong> banner that indicates that the page is not yet complete, and should only be removed when the first draft of the page is completely finished. After it is ready to be published, you can remove this.</li>
+	<li><code>\{{securecontext_header}}</code> — this generates a <strong>Secure context</strong> banner that indicates the technology is only available in a <a href="/en-US/docs/Web/Security/Secure_Contexts">secure context</a>. If it isn't, then you can remove the macro call. If it is, then you should also fill in an entry for it in the <a href="/en-US/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts">Features restricted to secure contexts</a> page.</li>
 	<li>
-	<div>\{{APIRef("<em>GroupDataName</em>")}} — this generates the left hand reference sidebar showing quick reference links related to the current page. For example, every page in the <a href="/en-US/docs/Web/API/WebVR_API">WebVR API</a> has the same sidebar, which points to the other pages in the API. To generate the correct sidebar for your API, you need to add a GroupData entry to our KumaScript GitHub repo, and include the entry's name inside the macro call in place of <em>GroupDataName</em>. See our <a href="/en-US/docs/MDN/Contribute/Howto/Write_an_API_reference/Sidebars">API reference sidebars</a> guide for information on how to do this.</div>
+	<div><code>\{{APIRef("<em>GroupDataName</em>")}}</code> — this generates the left hand reference sidebar showing quick reference links related to the current page. For example, every page in the <a href="/en-US/docs/Web/API/WebVR_API">WebVR API</a> has the same sidebar, which points to the other pages in the API. To generate the correct sidebar for your API, you need to add a GroupData entry to our KumaScript GitHub repo, and include the entry's name inside the macro call in place of <em>GroupDataName</em>. See our <a href="/en-US/docs/MDN/Contribute/Howto/Write_an_API_reference/Sidebars">API reference sidebars</a> guide for information on how to do this.</div>
 	</li>
 </ul>
 
-<h3 id="Tags">Tags</h3>
-
-<p>In an API landing page, you need to include the following tags (see the <em>Tags</em> section at the bottom of the editor UI): <strong>API</strong>, <strong>Reference</strong>, <strong>Landing</strong>, <em>the name of the API</em> (e.g. <strong>WebVR</strong>), <strong>Experimental</strong> (if the technology is <a href="/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental">experimental</a>), <strong>Secure context</strong> (if it is available in a secure context only).</p>
-
-<p>Optionally, you can elect to include some other tags that effective represent terms people might search for when looking for information on that technology. For example on the WebVR page we include <strong>VR</strong> and <strong>Virtual reality</strong>.</p>
-
 <h3 id="Browser_compatibility">Browser compatibility</h3>
 
-<p>To fill in the browser compat data, you first need to fill in an entry for the API into our <a href="https://github.com/mdn/browser-compat-data">Browser compat data repo</a> — see our <a href="/en-US/docs/MDN/Structures/Compatibility_tables#the_new_way_the_browser_compat_data_repo_and_dynamic_tables">guide on how to do this</a>.</p>
+<p>API landing pages optionally have a browser compatibility section that shows compatibility tables for one or more of the most important interfaces in the API. If the compatibility is similar for most interfaces in the API then often just one compatibility table is needed. If compatibility across the API is complicated/impossible to capture in a few tables, this sections should be omitted.</p>
 
-<p>Once that is done, you can show the compat data for the API with a \{{Compat}} macro call.</p>
+<p>To fill in the browser compatibility section, you may first need to create/update entries for the API interfaces in our <a href="https://github.com/mdn/browser-compat-data">Browser compat data repo</a> — see our <a href="/en-US/docs/MDN/Structures/Compatibility_tables">guide on how to do this</a>.</p>
+
+<p>Add the <code>\{{Compat("path.to.feature.Interface")}}</code> macro for each interface for which compatibility information is required, replacing the "path.to.feature.Interface" argument with the path to the desired interface in the browser compatibility data.</p>
+
+<h3 id="Specifications">Specifications</h3>
+
+<p>API landing pages optionally have a specifications section that lists the relevant specification(s) for each interface. Often there is just one specification covering all interfaces in the API.</p>
+
+<p>To fill in the specifications section, you may first need to create/update entries for interfaces in the <a href="https://github.com/mdn/browser-compat-data">Browser compat data repo</a> to include specification data — see our <a href="/en-US/docs/MDN/Structures/Compatibility_tables">guide on how to do this</a>.</p>
+
+<p>Use the <code>\{{specifications("path.to.feature.Interface")}}</code> macro to add tables for the main specifications.</p>
+
 </div>
+<!-- Remove div above here before publishing -->
 
 <div>{{draft}}{{securecontext_header}}{{APIRef("GroupDataName")}}</div>
 
@@ -99,35 +126,16 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName("NameOfOtherSpecificationfromSpecName")}}</td>
-			<td>{{Spec2("NameOfOtherSpecificationFromSpec2")}}</td>
-			<td>Defines blah blah feature. If no other specs define extensions of this API, you can delete this table row.</td>
-		</tr>
-		<tr>
-			<td>{{SpecName('NameOfSpecificationFromSpecName')}}</td>
-			<td>{{Spec2('NameOfSpecificationFromSpec2')}}</td>
-			<td>Initial definition.</td>
-		</tr>
-	</tbody>
-</table>
+<p>{{Specifications("path.to.feature.Interface_1")}}</p>
+
+<p>{{Specifications("path.to.feature.Interface_2")}}</p>
+
 
 <h2 id="Browser_compatibility_2">Browser compatibility</h2>
 
-<div class="hidden">
-<p>The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-</div>
+<p>{{Compat("path.to.feature.Interface_1")}}</p>
 
-<p>{{Compat("path.to.feature.NameOfAPI")}}</p>
+<p>{{Compat("path.to.feature.Interface_2")}}</p>
 
 <h2 id="See_also">See also</h2>
 

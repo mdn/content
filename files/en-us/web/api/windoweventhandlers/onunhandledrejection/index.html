@@ -11,11 +11,12 @@ tags:
 - WindowEventHandlers
 - events
 - onunhandledrejection
+browser-compat: api.WindowEventHandlers.onunhandledrejection
 ---
 <div>{{APIRef}}</div>
 
 <p>The <strong><code>onunhandledrejection</code></strong> property of the
-  {{domxref("WindowEventHandlers")}} mixin is the {{domxref("EventHandler")}} for
+  {{domxref("WindowEventHandlers")}} mixin is the {{event("Event_handlers", "event handler")}} for
   processing {{event("unhandledrejection")}} events. These events are raised for unhandled
   {{jsxref("Promise")}} rejections.</p>
 
@@ -26,7 +27,7 @@ tags:
 
 <h3 id="Value">Value</h3>
 
-<p><code>function</code> is an {{domxref("EventHandler")}} or function to call when
+<p><code>function</code> is an {{event("Event_handlers", "event handler")}} or function to call when
   <code>unhandledrejection</code> events are received by the window. The event handler
   receives as an input parameter as a {{domxref("PromiseRejectionEvent")}}.</p>
 
@@ -40,22 +41,8 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', 'webappapis.html#handler-window-onunhandledrejection',
-        'onunhandledrejection')}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.WindowEventHandlers.onunhandledrejection")}}</p>
+<p>{{Compat}}</p>

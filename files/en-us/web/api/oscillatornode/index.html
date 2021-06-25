@@ -9,6 +9,7 @@ tags:
   - OscillatorNode
   - Reference
   - Web Audio API
+browser-compat: api.OscillatorNode
 ---
 <p>{{APIRef("Web Audio API")}}</p>
 
@@ -54,9 +55,9 @@ tags:
 
 <dl>
  <dt>{{domxref("OscillatorNode.frequency")}}</dt>
- <dd>An <a href="/en-US/docs/Web/API/AudioParam#a-rate">a-rate</a> {{domxref("AudioParam")}} representing the frequency of oscillation in hertz (though the <code style="font-size: 14px;">AudioParam</code> returned is read-only, the value it represents is not). The default value is 440 Hz (a standard middle-A note).</dd>
+ <dd>An <a href="/en-US/docs/Web/API/AudioParam#a-rate">a-rate</a> {{domxref("AudioParam")}} representing the frequency of oscillation in hertz (though the <code>AudioParam</code> returned is read-only, the value it represents is not). The default value is 440 Hz (a standard middle-A note).</dd>
  <dt>{{domxref("OscillatorNode.detune")}}</dt>
- <dd>An <a href="/en-US/docs/Web/API/AudioParam#a-rate">a-rate</a> {{domxref("AudioParam")}} representing detuning of oscillation in cents (though the <code style="font-size: 14px;">AudioParam</code> returned is read-only, the value it represents is not). The default value is 0.</dd>
+ <dd>An <a href="/en-US/docs/Web/API/AudioParam#a-rate">a-rate</a> {{domxref("AudioParam")}} representing detuning of oscillation in cents (though the <code>AudioParam</code> returned is read-only, the value it represents is not). The default value is 0.</dd>
  <dt>{{domxref("OscillatorNode.type")}}</dt>
  <dd>A string which specifies the shape of waveform to play; this can be one of a number of standard values, or <code>custom</code> to use a {{domxref("PeriodicWave")}} to describe a custom waveform. Different waves will produce different tones. Standard values are <code>"sine"</code>, <code>"square"</code>, <code>"sawtooth"</code>, <code>"triangle"</code> and <code>"custom"</code>. The default is <code>"sine"</code>.</dd>
 </dl>
@@ -98,24 +99,11 @@ oscillator.start();</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#oscillatornode', 'OscillatorNode')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.OscillatorNode")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

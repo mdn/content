@@ -8,6 +8,7 @@ tags:
   - Property
   - Reference
   - Web Audio API
+browser-compat: api.GainNode.gain
 ---
 <p>{{ APIRef("Web Audio API") }}</p>
 
@@ -26,34 +27,21 @@ gainNode.gain.value = 0.5;
 
 <p>An {{domxref("AudioParam")}}.</p>
 
-<div class="note">
+<div class="notecard note">
 <p><strong>Note</strong>: Though the <code>AudioParam</code> returned is read-only, the value it represents is not.</p>
 </div>
 
 <h2 id="Example">Example</h2>
 
-<p>{{page("/en-US/docs/Web/API/AudioContext.createGain","Example")}}</p>
+<p>See <a href="/en-US/docs/Web/API/BaseAudioContext/createGain#example"><code>BaseAudioContext.createGain()</code></a> for example code showing how to use an <code>AudioContext</code> to create a <code>GainNode</code>, which is then used to mute and unmute the audio by changing the gain property value.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#dom-gainnode-gain', 'gain')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.GainNode.gain")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

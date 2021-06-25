@@ -7,6 +7,7 @@ tags:
   - Interface
   - Reference
   - Selection
+browser-compat: api.Selection
 ---
 <div>{{ ApiRef("DOM") }}{{SeeCompatTable}}</div>
 
@@ -52,8 +53,6 @@ tags:
  <dd>Indicates if a certain node is part of the selection.</dd>
  <dt>{{DOMxRef("Selection.deleteFromDocument()")}}</dt>
  <dd>Deletes the selection's content from the document.</dd>
- <dt>{{DOMxRef("Selection.empty()")}}</dt>
- <dd>Removes all ranges from the selection. This is an alias for <code>removeAllRanges()</code> — See {{DOMxRef("Selection.removeAllRanges()")}} for more details.</dd>
  <dt>{{DOMxRef("Selection.extend()")}}</dt>
  <dd>Moves the focus of the selection to a specified point.</dd>
  <dt>{{DOMxRef("Selection.getRangeAt()")}}</dt>
@@ -68,8 +67,6 @@ tags:
  <dd>Adds all the children of the specified node to the selection.</dd>
  <dt>{{DOMxRef("Selection.setBaseAndExtent()")}}</dt>
  <dd>Sets the selection to be a range including all or parts of two specified DOM nodes, and any content located between them.</dd>
- <dt>{{DOMxRef("Selection.setPosition()")}}</dt>
- <dd>Collapses the current selection to a single point. This is an alias for <code>collapse()</code> — See {{DOMxRef("Selection.collapse()")}} for more details.</dd>
  <dt>{{DOMxRef("Selection.toString()")}}</dt>
  <dd>Returns a string currently being represented by the selection object, i.e. the currently selected text.</dd>
 </dl>
@@ -90,10 +87,8 @@ window.alert(selObj);
 
 <p>A selection object represents the {{DOMxRef("Range")}}s that the user has selected. Typically, it holds only one range, accessed as follows:</p>
 
-<div style="overflow: hidden;">
-<pre class="brush:js"><code>var selObj = window.getSelection();
-var range  = selObj.getRangeAt(0);</code></pre>
-</div>
+<pre class="brush:js">var selObj = window.getSelection();
+var range  = selObj.getRangeAt(0);</pre>
 
 <ul>
  <li><code><var>selObj</var></code> is a Selection object</li>
@@ -169,24 +164,11 @@ var range  = selObj.getRangeAt(0);</code></pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Selection API", "#selection-interface", "Selection")}}</td>
-   <td>{{Spec2("Selection API")}}</td>
-   <td>The Selection API specification is based on the HTML Editing APIs specification and focuses on the Selection-related functionality.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Selection")}}</p>
+<p>{{Compat}}</p>
 
 <h3 id="Gecko_notes">Gecko notes</h3>
 
@@ -202,5 +184,5 @@ var range  = selObj.getRangeAt(0);</code></pre>
  <li>{{DOMxRef("Window.getSelection")}}, {{DOMxRef("Document.getSelection")}}, {{DOMxRef("Range")}}</li>
  <li>Selection-related events: {{Event("selectionchange")}} and {{Event("selectstart")}}</li>
  <li>HTML inputs provide simpler helper APIs for working with selection (see {{DOMxRef("HTMLInputElement.setSelectionRange()")}})</li>
- <li>{{DOMxRef("Document.activeElement")}}, {{DOMxRef("HTMLElement.focus()")}}, and {{DOMxRef("HTMLElement.blur()")}}</li>
+ <li>{{DOMxRef("Document.activeElement")}}, {{DOMxRef("HTMLOrForeignElement.focus")}}, and {{DOMxRef("HTMLOrForeignElement.blur")}}</li>
 </ul>

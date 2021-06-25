@@ -6,6 +6,7 @@ tags:
   - IndexedDB
   - Method
   - Reference
+browser-compat: api.IDBObjectStore.delete
 ---
 <p>{{APIRef("IndexedDB")}}</p>
 
@@ -45,7 +46,7 @@ var <em>request</em> = <em>objectStore</em>.delete(<em>KeyRange</em>);
 <p>An {{domxref("IDBRequest")}} object on which subsequent events related to this
   operation are fired. The <code>request.result</code> attribute is set to undefined.</p>
 
-<h3 id="Exceptions"><span style="line-height: 1.5;">Exceptions</span></h3>
+<h3 id="Exceptions">Exceptions</h3>
 
 <p>This method may raise a {{domxref("DOMException")}} of the following types:</p>
 
@@ -82,79 +83,51 @@ var <em>request</em> = <em>objectStore</em>.delete(<em>KeyRange</em>);
   </tbody>
 </table>
 
-<h2 id="Example">Example</h2>
+<h2 id="Examples">Examples</h2>
 
-<p>In the following code snippet, we open a read/write transaction on our database and
-  delete one specific record out of our object store using <code>delete()</code> — a
-  sample record with the key "Walk dog". For a full working example, see our <a
-    href="https://github.com/mdn/to-do-notifications/" style="line-height: 1.5;">To-do
-    Notifications</a><span style="line-height: 1.5;"> app (</span><a
-    href="https://mdn.github.io/to-do-notifications/" style="line-height: 1.5;">view
-    example live</a><span style="line-height: 1.5;">.)</span></p>
+<p>The following code snippet shows the <code>deleteItem()</code> function,
+  which is part of the To-do Notifications example app. This app stores to-do
+  list items using IndexedDB. You can
+<a href="https://github.com/mdn/to-do-notifications/">see the app's complete
+code on GitHub</a>, and
+<a href="https://mdn.github.io/to-do-notifications/">try out the app live</a>.</p>
 
-<pre class="brush: js" style="font-size: 14px;">// Let us open our database
-<span style="line-height: 1.5;">var DBOpenRequest = window.indexedDB.open("toDoList", 4);
+<p>The <code>deleteItem()</code> function is called when the user clicks the
+  button to delete a to-do list item. The item key is set in the button's
+  <code>'data-task'</code> data attribute, so the function
+  knows which item to delete. The function opens a database transaction in
+  which to delete the item, supplying its key. When the transaction completes,
+  the function updates the app UI to report that the item was deleted.</p>
 
-</span><span style="line-height: 1.5;">DBOpenRequest.onsuccess = function(event) {</span>
-  note.innerHTML += '&lt;li&gt;Database initialised.&lt;/li&gt;';
+<p>Note that in this function <code>db</code> is a global variable
+referring to an {{domxref("IDBDatabase")}} object that is initialized when
+the app loads.</p>
 
-  // store the result of opening the database in the db variable. This is used a lot below
-  db = DBOpenRequest.result;
+<pre class="brush: js">
+function deleteItem(event) {
+  // retrieve the name of the task we want to delete
+  let dataTask = event.target.getAttribute('data-task');
 
-  // Run the deleteData() function to delete a record from the database
-  deleteData();
+  // open a database transaction and delete the task, finding it by the name we retrieved above
+  let transaction = db.transaction(["toDoList"], "readwrite");
+  let request = transaction.objectStore("toDoList").delete(dataTask);
+
+  // report that the data item has been deleted
+  transaction.oncomplete = function() {
+    // delete the parent of the button, which is the list item, so it no longer is displayed
+    event.target.parentNode.parentNode.removeChild(event.target.parentNode);
+    note.innerHTML += '&lt;li&gt;Task \"' + dataTask + '\" deleted.&lt;/li&gt;';
+  };
 };
-
-function deleteData() {
-  // open a read/write db transaction, ready for deleting the data
-  var transaction = db.transaction(["toDoList"], "readwrite");
-
-  // report on the success of the transaction completing, when everything is done
-  transaction.oncomplete = function(event) {
-    note.innerHTML += '&lt;li&gt;Transaction completed.&lt;/li&gt;';
-  };
-
-  transaction.onerror = function(event) {
-    note.innerHTML += '&lt;li&gt;Transaction not opened due to error: ' + transaction.error + '&lt;/li&gt;';
-  };
-
-  // create an object store on the transaction
-  var objectStore = transaction.objectStore("toDoList");
-
-  // Make a request to delete the specified record out of the object store
-  var objectStoreRequest = objectStore.delete("Walk dog");
-
-  objectStoreRequest.onsuccess = function(event) {
-    // report the success of our request
-    note.innerHTML += '&lt;li&gt;Request successful.&lt;/li&gt;';
-  };
-};</pre>
+</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('IndexedDB', '#dom-idbobjectstore-delete', 'delete()')}}</td>
-      <td>{{Spec2('IndexedDB')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName("IndexedDB 2", "#dom-idbobjectstore-delete", "delete()")}}</td>
-      <td>{{Spec2("IndexedDB 2")}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.IDBObjectStore.delete")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

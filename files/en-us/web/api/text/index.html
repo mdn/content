@@ -6,6 +6,7 @@ tags:
   - DOM
   - Interface
   - Reference
+browser-compat: api.Text
 ---
 <div>{{ApiRef("DOM")}}</div>
 
@@ -44,6 +45,8 @@ tags:
 <p><em>Inherits methods from its parent, {{domxref("CharacterData")}}.</em></p>
 
 <dl>
+ <dt>{{domxref("Text.getBoxQuads()")}} {{experimental_inline}}</dt>
+ <dd>Returns a list of {{domxref("DOMQuad")}} objects representing the CSS fragments of the node.</dd>
  <dt>{{domxref("Text.replaceWholeText")}} {{deprecated_inline}}</dt>
  <dd>Replaces the text of the current node and all logically adjacent nodes with the specified text.</dd>
  <dt><span class="internal">{{domxref("Text.splitText")}}</span></dt>
@@ -52,45 +55,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#text', 'Text')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Removed the <code>isElementContentWhitespace</code> property.<br>
-    Removed the <code>replaceWholeText()</code> method.<br>
-    Added the <code>Text()</code> constructor.<br>
-    Added the <code>assignedSlot</code> property.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Core', 'core.html#ID-1312295772', 'Text')}}</td>
-   <td>{{Spec2('DOM3 Core')}}</td>
-   <td>Added the <code>isElementContentWhitespace</code> and <code>wholeText</code> properties.<br>
-    Added the <code>replaceWholeText()</code> method.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Core', 'core.html#ID-1312295772', 'Text')}}</td>
-   <td>{{Spec2('DOM2 Core')}}</td>
-   <td>No change from {{SpecName('DOM1')}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-core.html#ID-1312295772', 'Text')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Text")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

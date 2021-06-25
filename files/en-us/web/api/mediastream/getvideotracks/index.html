@@ -13,6 +13,7 @@ tags:
 - getVideoTracks
 - stream
 - track
+browser-compat: api.MediaStream.getVideoTracks
 ---
 <p>{{APIRef("Media Capture and Streams")}}</p>
 
@@ -30,9 +31,9 @@ tags:
 
 <p>None.</p>
 
-<h3 id="Return_value"><span
-    style='font-family: x-locale-heading-primary,zillaslab,Palatino,"Palatino Linotype",x-locale-heading-secondary,serif; font-size: 1.375rem;'>Return
-    value</span></h3>
+<h3 id="Return_value">
+    Return value
+</h3>
 
 <p>An array of {{domxref("MediaStreamTrack")}} objects, one for each video track contained
   in the media stream. Video tracks are those tracks whose
@@ -70,21 +71,8 @@ navigator.mediaDevices.getUserMedia({video: true})
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Media Capture','#dom-mediastream-getvideotracks','getVideoTracks()')}}</td>
-      <td>{{Spec2('Media Capture')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.MediaStream.getVideoTracks")}}</p>
+<p>{{Compat}}</p>

@@ -9,24 +9,25 @@ tags:
   - NeedsExample
   - Reference
   - credential management
+browser-compat: api.CredentialsContainer.preventSilentAccess
 ---
-<p>{{APIRef("")}}{{SeeCompatTable}}</p>
+<p>{{APIRef("Credential Management API")}}{{SeeCompatTable}}</p>
 
-<p><span class="seoSummary">The <strong><code>preventSilentAccess()</code></strong> method
+<p>The <strong><code>preventSilentAccess()</code></strong> method
     of the {{domxref("CredentialsContainer")}} interface sets a flag that specifies
     whether automatic log in is allowed for future visits to the current origin, then
-    returns an empty <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"
-      title="The Promise object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value."><code>Promise</code></a>. </span>For
+    returns an empty <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"
+      title="The Promise object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value."><code>Promise</code></a>. For
   example, you might call this, after a user signs out of a website to ensure that
   they aren't automatically signed in on the next site visit. Mediation varies by origin,
   and is an added check point of browser stored credentials, informing a user of an
-  account login status. This method is typically called after a user signs out of a
+  account login status. This method is typically called after a user signs out of a
   website, ensuring this user's login information is not automatically passed on the next
   site visit.</p>
 
-<p>Earlier versions of the spec called this method <code>requireUserMediation()</code>.
-  See <a href="/en-US/docs/Web/API/CredentialsContainer#browser_compatibility">Browser
-    compatibility</a> for support details.</p>
+<p>Earlier versions of the spec called this method<code>requireUserMediation()</code>.
+  The <a href="/en-US/docs/Web/API/CredentialsContainer#browser_compatibility">Browser
+    compatibility</a> section has support details.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -37,30 +38,14 @@ tags:
 
 <p>None.</p>
 
-<p><span
-    style="font-size: 1.714rem; letter-spacing: -0.021em; line-height: 1;">Returns</span>
-</p>
+<h3>Returns</h3>
 
 <p>An empty {{jsxref("Promise")}}.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Credential Management','#dom-credentialscontainer-preventsilentaccess','preventSilentAccess()')}}
-      </td>
-      <td>{{Spec2('Credential Management')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.CredentialsContainer.preventSilentAccess")}}</p>
+<p>{{Compat}}</p>

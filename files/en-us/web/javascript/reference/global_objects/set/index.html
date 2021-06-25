@@ -9,6 +9,7 @@ tags:
   - Object
   - Reference
   - set
+  - Polyfill
 browser-compat: javascript.builtins.Set
 ---
 <div>{{JSRef}}</div>
@@ -24,6 +25,9 @@ browser-compat: javascript.builtins.Set
 <p>Because each value in the <code>Set</code> has to be unique, the value equality will be checked. In an earlier version of ECMAScript specification, this was not based on the same algorithm as the one used in the <code>===</code> operator. Specifically, for <code>Set</code>s, <code>+0</code> (which is strictly equal to <code>-0</code>) and <code>-0</code> were different values. However, this was changed in the ECMAScript 2015 specification. See <em>"Key equality for -0 and 0"</em> in the <a href="#browser_compatibility">browser compatibility</a> table for details.</p>
 
 <p>{{jsxref("NaN")}} and {{jsxref("undefined")}} can also be stored in a Set. All <code>NaN</code> values are equated (i.e. <code>NaN</code> is considered the same as <code>NaN</code>, even though <code>NaN !== NaN</code>).</p>
+
+<h3 id="performance">Performance</h3>
+<p>The <code>Set</code> <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/has"><code>has</code></a> method checks if a value is in a <code>Set</code> object, using an approach that is, on average, quicker than testing most of the elements that have previously been added to the <code>Set</code> object. In particular, it is, on average, faster than the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes"><code>Array.prototype.includes</code></a> method when an <code>Array</code> object has a <code>length</code> equal to a <code>Set</code> object’s <code>size</code>.</p>
 
 <h2 id="Constructor">Constructor</h2>
 
@@ -64,7 +68,7 @@ browser-compat: javascript.builtins.Set
 <dl>
  <dt>{{jsxref("Set.prototype.@@iterator()", "Set.prototype[@@iterator]()")}}</dt>
  <dd>Returns a new iterator object that yields the <strong>values</strong> for each element in the <code>Set</code> object in insertion order.</dd>
- <dt>{{jsxref("Set.prototype.keys()")}}</dt>
+ <dt>{{jsxref("Set/values")}}</dt>
  <dd>Returns a new iterator object that yields the values for each element in the <code>Set</code> object in insertion order. (For Sets, this is the same as the <strong><code>values()</code></strong> method.)</dd>
  <dt>{{jsxref("Set.prototype.values()")}}</dt>
  <dd>Returns a new iterator object that yields the <strong>values</strong> for each element in the <code>Set</code> object in insertion order. (For Sets, this is the same as the <strong><code>keys()</code></strong> method.)</dd>
@@ -248,7 +252,7 @@ console.log([...new Set(numbers)])
 const mySet = new Set(text)  // Set(5) {'I', 'n', 'd', 'i', 'a'}
 mySet.size  // 5
 
-//case sensitive &amp; duplicate ommision
+//case sensitive &amp; duplicate omission
 new Set("Firefox")  // Set(7) { "F", "i", "r", "e", "f", "o", "x" }
 new Set("firefox")  // Set(6) { "f", "i", "r", "e", "o", "x" }
 </pre>
@@ -275,6 +279,7 @@ console.assert(set.size == array.length);</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
+ <li>A polyfill of <code>Set</code> is available in <a href="https://github.com/zloirock/core-js#set"><code>core-js</code></a></li>
  <li>{{jsxref("Map")}}</li>
  <li>{{jsxref("WeakMap")}}</li>
  <li>{{jsxref("WeakSet")}}</li>

@@ -1,0 +1,55 @@
+---
+title: TransformStreamDefaultController.error()
+slug: Web/API/TransformStreamDefaultController/error
+tags:
+  - API
+  - Method
+  - Reference
+  - error
+  - TransformStreamDefaultController
+---
+<div>{{DefaultAPISidebar("Streams API")}}</div>
+
+<p class="summary">The <strong><code>error()</code></strong> method of the {{domxref("TransformStreamDefaultController")}} interface errors both sides of the stream. Any further interactions with it will fail with the given error message, and any chunks in the queue will be discarded.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox">TransformStreamDefaultController.error(reason);</pre>
+
+<h3 id="Parameters">Parameters</h3>
+
+<dl>
+  <dt><code>reason</code></dt>
+  <dd>A string containing the error message to be returned on any further interaction with the stream.</dd>
+</dl>
+
+<h2 id="Examples">Examples</h2>
+
+<p>In this example the <code>error()</code> method is used when a chunk contains a symbol.</p>
+
+<pre class="brush:js">case 'symbol':
+  controller.error("Cannot send a symbol as a chunk part")
+  break</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+  <tbody>
+   <tr>
+    <th scope="col">Specification</th>
+    <th scope="col">Status</th>
+    <th scope="col">Comment</th>
+   </tr>
+   <tr>
+    <td>{{SpecName('Streams','#ts-default-controller-error','TransformStreamDefaultController.error()')}}</td>
+    <td>{{Spec2('Streams')}}</td>
+    <td>Initial definition</td>
+   </tr>
+  </tbody>
+ </table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+
+<p>{{Compat("api.TransformStreamDefaultController.error")}}</p>

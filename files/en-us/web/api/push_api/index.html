@@ -31,7 +31,7 @@ tags:
 
 <p>The service worker will be started as necessary to handle incoming push messages, which are delivered to the {{domxref("ServiceWorkerGlobalScope.onpush")}} event handler. This allows apps to react to push messages being received, for example, by displaying a notification (using {{domxref("ServiceWorkerRegistration.showNotification()")}}.)</p>
 
-<p>Each subscription is unique to a service worker.  The endpoint for the subscription is a unique <a href="https://www.w3.org/TR/capability-urls/">capability URL</a>: knowledge of the endpoint is all that is necessary to send a message to your application. The endpoint URL therefore needs to be kept secret, or other applications might be able to send push messages to your application.</p>
+<p>Each subscription is unique to a service worker. The endpoint for the subscription is a unique <a href="https://www.w3.org/TR/capability-urls/">capability URL</a>: knowledge of the endpoint is all that is necessary to send a message to your application. The endpoint URL therefore needs to be kept secret, or other applications might be able to send push messages to your application.</p>
 
 <p>Activating a service worker to deliver a push message can result in increased resource usage, particularly of the battery. Different browsers have different schemes for handling this, there is currently no standard mechanism. Firefox allows a limited number (quota) of push messages to be sent to an application, although Push messages that generate notifications are exempt from this limit. The limit is refreshed each time the site is visited. In comparison, Chrome applies no limit, but requires that every push message causes a notification to be displayed.</p>
 
@@ -41,7 +41,7 @@ tags:
  <dt>{{domxref("PushEvent")}}</dt>
  <dd>Represents a push action, sent to the <a href="/en-US/docs/Web/API/ServiceWorkerGlobalScope">global scope</a> of a {{domxref("ServiceWorker")}}. It contains information sent from an application to a {{domxref("PushSubscription")}}.</dd>
  <dt>{{domxref("PushManager")}}</dt>
- <dd>Provides a way to receive notifications from third-party servers, as well as request URLs for push notifications. This interface has replaced the functionality offered by the obsolete {{domxref("PushRegistrationManager")}} interface.</dd>
+ <dd>Provides a way to receive notifications from third-party servers, as well as request URLs for push notifications.</dd>
  <dt>{{domxref("PushMessageData")}}</dt>
  <dd>Provides access to push data sent by a server, and includes methods to manipulate the received data.</dd>
  <dt>{{domxref("PushSubscription")}}</dt>
@@ -94,14 +94,12 @@ tags:
 
 <h3 id="PushMessageData"><code>PushMessageData</code></h3>
 
-<div class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
-
 <p>{{Compat("api.PushMessageData")}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="https://blog.mozilla.org/services/2016/08/23/sending-vapid-identified-webpush-notifications-via-mozillas-push-service/">Sending VAPID identified WebPush Notifications via Mozilla’s Push Service</a></li>
+ <li><a href="https://blog.mozilla.org/services/2016/08/23/sending-vapid-identified-webpush-notifications-via-mozillas-push-service/">Sending VAPID identified WebPush Notifications via Mozilla's Push Service</a></li>
  <li><a href="https://developers.google.com/web/fundamentals/engage-and-retain/push-notifications/">Web Push Notifications: Timely, Relevant, and Precise</a>, Joseph Medley</li>
  <li><a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker API</a></li>
 </ul>

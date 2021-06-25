@@ -10,10 +10,11 @@ tags:
   - NeedsExample
   - Reference
   - credential management
+browser-compat: api.CredentialsContainer
 ---
 <p>{{SeeCompatTable}}{{APIRef("Credential Management API")}}{{securecontext_header}}</p>
 
-<p>The <strong><code>CredentialsContainer</code></strong> interface of the <a href="/en-US/docs/Web/API/Credential_Management_API">Credential Management API</a> exposes methods to request credentials and notify the user agent when events such as successful sign in or sign out happen. This interface is accessible from {{domxref('Navigator.credentials')}}.</p>
+<p>The <strong><code>CredentialsContainer</code></strong> interface of the <a href="/en-US/docs/Web/API/Credential_Management_API">Credential Management API</a> exposes methods to request credentials and notify the user agent when events such as successful sign in or sign out happen. This interface is accessible from {{domxref('Navigator.credentials')}}.</p>
 
 <h2 id="Properties">Properties</h2>
 
@@ -27,13 +28,13 @@ tags:
 
 <dl>
 	<dt>{{domxref("CredentialsContainer.create()")}}{{securecontext_inline}}</dt>
-	<dd>Returns a {{jsxref("Promise")}} that resolves with a new {{domxref("Credential")}} instance based on the provided options, or <code>null</code> if no <code>Credential</code> object can be created. In exceptional circumstances, the {{domxref("Promise")}} may reject.</dd>
+	<dd>Returns a {{jsxref("Promise")}} that resolves with a new {{domxref("Credential")}} instance based on the provided options, or <code>null</code> if no <code>Credential</code> object can be created. In exceptional circumstances, the {{domxref("Promise")}} may reject.</dd>
 	<dt>{{domxref("CredentialsContainer.get()")}}{{securecontext_inline}}</dt>
-	<dd>Returns a {{jsxref("Promise")}} that resolves with the {{domxref("Credential")}} instance that matches the provided parameters.</dd>
+	<dd>Returns a {{jsxref("Promise")}} that resolves with the {{domxref("Credential")}} instance that matches the provided parameters.</dd>
 	<dt>{{domxref("CredentialsContainer.preventSilentAccess()")}}{{securecontext_inline}}</dt>
-	<dd>Sets a flag that specifies whether automatic log in is allowed for future visits to the current origin, then returns an empty {{jsxref("Promise")}}. For example, you might call this, after a user signs out of a website to ensure that they aren't automatically signed in on the next site visit. Earlier versions of the spec called this method <code>requireUserMediation()</code>. See {{anch("Browser compatibility")}} for support details.</dd>
+	<dd>Sets a flag that specifies whether automatic log in is allowed for future visits to the current origin, then returns an empty {{jsxref("Promise")}}. For example, you might call this, after a user signs out of a website to ensure that they aren't automatically signed in on the next site visit. Earlier versions of the spec called this method <code>requireUserMediation()</code>. See {{anch("Browser compatibility")}} for support details.</dd>
 	<dt>{{domxref("CredentialsContainer.store()")}}{{securecontext_inline}}</dt>
-	<dd>Stores a set of credentials for a user, inside a provided {{domxref("Credential")}} instance and returns that instance in a {{jsxref("Promise")}}.</dd>
+	<dd>Stores a set of credentials for a user, inside a provided {{domxref("Credential")}} instance and returns that instance in a {{jsxref("Promise")}}.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
@@ -42,26 +43,8 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<tbody>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-		<tr>
-			<td>{{SpecName('Credential Management')}}</td>
-			<td>{{Spec2('Credential Management')}}</td>
-			<td>Initial definition.</td>
-		</tr>
-		<tr>
-			<td>{{SpecName('WebAuthn')}}</td>
-			<td>{{Spec2('WebAuthn')}}</td>
-			<td>Initial definition.</td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.CredentialsContainer")}}</p>
+<p>{{Compat}}</p>

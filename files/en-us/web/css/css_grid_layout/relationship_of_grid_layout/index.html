@@ -14,7 +14,7 @@ tags:
 
 <p>The basic difference between CSS Grid Layout and <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">CSS Flexbox Layout</a> is that flexbox was designed for layout in one dimension - either a row <em>or</em> a column. Grid was designed for two-dimensional layout - rows, and columns at the same time. The two specifications share some common features, however, and if you have already learned how to use flexbox, the similarities should help you get to grips with Grid.</p>
 
-<h3 id="One-dimensional_vs._two-dimensional_layout">One-dimensional vs. two-dimensional layout</h3>
+<h3 id="One-dimensional_versus_two-dimensional_layout">One-dimensional versus two-dimensional layout</h3>
 
 <p>A simple example can demonstrate the difference between one- and two-dimensional layouts.</p>
 
@@ -22,7 +22,6 @@ tags:
 
 <p>I have also set the {{cssxref("flex-wrap")}} property to <code>wrap</code>, so that if the space in the container becomes too narrow to maintain the flex basis, items will wrap onto a new row.</p>
 
-<div id="onedtwod">
 <div class="hidden">
 <pre class="brush: css">* {box-sizing: border-box;}
 
@@ -60,9 +59,8 @@ tags:
   flex: 1 1 150px;
 }
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('onedtwod', '500', '230') }}</p>
+<p>{{ EmbedLiveSample('One-dimensional_versus_two-dimensional_layout', '500', '230') }}</p>
 
 <p>In the image, you can see that two items have wrapped onto a new line. These items are sharing the available space and not lining up underneath the items above. This is because when you wrap flex items, each new row (or column when working by column) is an independent flex line in the flex container. Space distribution happens across the flex line.</p>
 
@@ -72,7 +70,6 @@ tags:
 
 <p>In this next example, I create the same layout using Grid. This time we have three <code>1fr</code> column tracks. We do not need to set anything on the items themselves; they will lay themselves out one into each cell of the created grid. As you can see they stay in a strict grid, lining up in rows and columns. With five items, we get a gap on the end of row two.</p>
 
-<div id="Two_Dimensional_With_Grid">
 <div class="hidden">
 <pre class="brush: css">* {box-sizing: border-box;}
 
@@ -107,8 +104,7 @@ tags:
 }
 </pre>
 
-<p>{{ EmbedLiveSample('Two_Dimensional_With_Grid', '300', '170') }}</p>
-</div>
+<p>{{ EmbedLiveSample('The_same_layout_with_CSS_grids', '300', '170') }}</p>
 
 <p>A simple question to ask yourself when deciding between grid or flexbox is:</p>
 
@@ -442,7 +438,7 @@ tags:
 }
 </pre>
 
-<p>{{ EmbedLiveSample('With_a_grid_area_as_the_parent', '500', '420') }}</p>
+<p>{{ EmbedLiveSample('With_a_grid_area_as_the_parent', '500', '460') }}</p>
 
 <h2 id="Grid_and_display_contents">Grid and <code>display: contents</code></h2>
 
@@ -452,9 +448,12 @@ tags:
 <p>“The element itself does not generate any boxes, but its children and pseudo-elements still generate boxes as normal. For the purposes of box generation and layout, the element must be treated as if it had been replaced with its children and pseudo-elements in the document tree.”</p>
 </blockquote>
 
-<p>If you set an item to <code>display:</code> <code>contents</code> the box it would normally create disappears, and the boxes of the child elements appear as if they have risen up a level. This means that children of a grid item can become grid items. Sound odd? Here is a simple example. In the following markup, I have a grid and the first item on the grid is set to span all three column tracks. It contains three nested items. As these items are not direct children, they don’t become part of the grid layout and so display using regular block layout.</p>
+<p>If you set an item to <code>display:</code> <code>contents</code> the box it would normally create disappears, and the boxes of the child elements appear as if they have risen up a level. This means that children of a grid item can become grid items. Sound odd? Here is a simple example.</p>
 
-<div id="Display_Contents_Before">
+<h3 id="grid_layout_with_nested_child_elements">Grid layout with nested child elements</h3>
+
+<p>In the following markup, I have a grid and the first item on the grid is set to span all three column tracks. It contains three nested items. As these items are not direct children, they don’t become part of the grid layout and so display using regular block layout.</p>
+
 <div class="hidden">
 <pre class="brush: css">* {box-sizing: border-box;}
 
@@ -505,12 +504,12 @@ tags:
 
 </pre>
 
-<p>{{ EmbedLiveSample('Display_Contents_Before', '400', '420') }}</p>
-</div>
+<p>{{ EmbedLiveSample('grid_layout_with_nested_child_elements', '400', '440') }}</p>
+
+<h3 id="using_display_contents">Using display_contents</h3>
 
 <p>If I now add <code>display:</code> <code>contents</code> to the rules for <code>box1</code>, the box for that item vanishes and the sub-items now become grid items and lay themselves out using the auto-placement rules.</p>
 
-<div id="Display_Contents_After">
 <div class="hidden">
 <pre class="brush: css">* {box-sizing: border-box;}
 
@@ -561,8 +560,7 @@ tags:
 }
 </pre>
 
-<p>{{ EmbedLiveSample('Display_Contents_After', '400', '330') }}</p>
-</div>
+<p>{{ EmbedLiveSample('using_display_contents', '400', '350') }}</p>
 
 <p>This can be a way to get items nested into the grid to act as if they are part of the grid, and is a way around some of the issues that would be solved by subgrids once they are implemented. You can also use <code>display:</code> <code>contents</code> in a similar way with flexbox to enable nested items to become flex items.</p>
 

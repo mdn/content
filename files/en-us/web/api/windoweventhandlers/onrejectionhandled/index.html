@@ -12,11 +12,12 @@ tags:
 - WindowEventHandlers
 - events
 - onrejectionhandled
+browser-compat: api.WindowEventHandlers.onrejectionhandled
 ---
 <div>{{APIRef}}</div>
 
 <p>The <strong><code>onrejectionhandled</code></strong> property of the
-  {{domxref("WindowEventHandlers")}} mixin is the {{domxref("EventHandler")}} for
+  {{domxref("WindowEventHandlers")}} mixin is the {{event("Event_handlers", "event handler")}} for
   processing {{event("rejectionhandled")}} events. These events are raised when
   {{jsxref("Promise")}}s are rejected.</p>
 
@@ -33,22 +34,8 @@ window.onrejectionhandled = function(event) { ...};</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', 'webappapis.html#handler-window-onrejectionhandled',
-        'onrejectionhandled')}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.WindowEventHandlers.onrejectionhandled")}}</p>
+<p>{{Compat}}</p>

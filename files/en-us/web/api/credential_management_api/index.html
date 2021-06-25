@@ -16,7 +16,7 @@ tags:
 
 <h2 id="Credential_management_concepts_and_usage">Credential management concepts and usage</h2>
 
-<p>This API lets websites interact with a user agent’s password system directly so that websites can deal in a uniform way with site credentials and user agents can provide better assistance with the management of their credentials. For example, user agents have a particularly hard time dealing with federated identity providers or esoteric sign-in mechanisms.</p>
+<p>This API lets websites interact with a user agent's password system directly so that websites can deal in a uniform way with site credentials and user agents can provide better assistance with the management of their credentials. For example, user agents have a particularly hard time dealing with federated identity providers or esoteric sign-in mechanisms.</p>
 
 <p>To address these problems, the Credential Management API provides ways for a website to store and retrieve different types of credentials. This gives users capabilities such as seeing the federated account they used to sign on to a site, or resuming a session without the explicit sign-in flow of an expired session.</p>
 
@@ -36,7 +36,7 @@ tags:
  <dt>{{domxref("CredentialsContainer")}}</dt>
  <dd>Exposes methods to request credentials and notify the user agent when interesting events occur such as successful sign in or sign out. This interfaces is accessible from <code>navigator.credentials</code>.</dd>
  <dt>{{domxref("FederatedCredential")}}</dt>
- <dd>Provides information about credentials from a federated identity provider, which is an entity that a website trusts to correctly authenticate a user, and which provides an API for that purpose. <a href="http://openid.net/developers/specs/">OpenID Connect</a> is an example of such a framework.</dd>
+ <dd>Provides information about credentials from a federated identity provider, which is an entity that a website trusts to correctly authenticate a user, and which provides an API for that purpose. <a href="https://openid.net/developers/specs/">OpenID Connect</a> is an example of such a framework.</dd>
  <dt>{{domxref("PasswordCredential")}}</dt>
  <dd>Provides information about a username/password pair.</dd>
  <dt>{{domxref("PublicKeyCredential")}}</dt>
@@ -45,25 +45,7 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Credential Management')}}</td>
-   <td>{{Spec2('Credential Management')}}</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebAuthn')}}</td>
-   <td>{{Spec2('WebAuthn')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications("api.Credential")}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

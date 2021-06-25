@@ -5,6 +5,7 @@ tags:
 - JavaScript
 - Method
 - Object
+- Polyfill
 browser-compat: javascript.builtins.Object.getOwnPropertyDescriptors
 ---
 <div>{{JSRef}}</div>
@@ -83,13 +84,13 @@ browser-compat: javascript.builtins.Object.getOwnPropertyDescriptors
 
 <pre class="brush: js">function superclass() {}
 superclass.prototype = {
-  // Define your methods and properties here
+  // Define the superclass constructor, methods, and properties here
 };
 function subclass() {}
 subclass.prototype = Object.create(
   superclass.prototype,
   {
-    // Define your methods and properties here
+    // Define the subclass constructor, methods, and properties here
   }
 );
 </pre>
@@ -105,6 +106,7 @@ subclass.prototype = Object.create(
 <h2 id="See_also">See also</h2>
 
 <ul>
+  <li>A polyfill of <code>Object.getOwnPropertyDescriptors</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-object"><code>core-js</code></a></li>
   <li>{{jsxref("Object.getOwnPropertyDescriptor()")}}</li>
   <li>{{jsxref("Object.defineProperty()")}}</li>
   <li><a

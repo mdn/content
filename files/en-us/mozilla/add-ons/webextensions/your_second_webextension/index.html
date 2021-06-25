@@ -236,11 +236,11 @@ function listenForClicks() {
     function beastNameToURL(beastName) {
       switch (beastName) {
         case "Frog":
-          return browser.extension.getURL("beasts/frog.jpg");
+          return browser.runtime.getURL("beasts/frog.jpg");
         case "Snake":
-          return browser.extension.getURL("beasts/snake.jpg");
+          return browser.runtime.getURL("beasts/snake.jpg");
         case "Turtle":
-          return browser.extension.getURL("beasts/turtle.jpg");
+          return browser.runtime.getURL("beasts/turtle.jpg");
       }
     }
 
@@ -383,7 +383,7 @@ browser.tabs.executeScript({file: "/content_scripts/beastify.js"})
 
   /**
    * Listen for messages from the background script.
-   * Call "beastify()" or "reset()".
+   * Call "insertBeast()" or "removeExistingBeasts()".
   */
   browser.runtime.onMessage.addListener((message) =&gt; {
     if (message.command === "beastify") {

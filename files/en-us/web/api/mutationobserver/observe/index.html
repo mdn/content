@@ -16,6 +16,7 @@ tags:
 - Node Changes
 - Reference
 - observe
+browser-compat: api.MutationObserver.observe
 ---
 <div>{{APIRef("DOM WHATWG")}}</div>
 
@@ -89,9 +90,7 @@ tags:
       <dt>{{domxref("MutationObserverInit.characterDataOldValue",
         "characterDataOldValue")}} {{optional_inline}}</dt>
       <dd>Set to <code>true</code> to record the previous value of a node's text whenever
-        the text changes on nodes being monitored. For details and an example, see
-        {{SectionOnPage("/en-US/docs/Web/API/MutationObserver", "Monitoring text content
-        changes")}}. The default value is <code>false</code>.</dd>
+        the text changes on nodes being monitored. The default value is <code>false</code>.</dd>
     </dl>
   </dd>
 </dl>
@@ -116,7 +115,7 @@ tags:
         (indicating that attribute changes are not to be monitored), but
         <code>attributeOldValue</code> is <code>true</code> and/or
         <code>attributeFilter</code> is present.</li>
-      <li>The {{domxref("MutaitonObserverInit.characterDataOldValue",
+      <li>The {{domxref("MutationObserverInit.characterDataOldValue",
         "characterDataOldValue")}} option is <code>true</code> but
         {{domxref("MutationObserverInit.characterData")}} is <code>false</code>
         (indicating that character changes are not to be monitored).</li>
@@ -181,24 +180,8 @@ observer.observe(elementToObserve, {subtree: true, childList: true});</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('DOM WHATWG', '#dom-mutationobserver-observe',
-        'MutationObserver.observe()')}}</td>
-      <td>{{ Spec2('DOM WHATWG') }}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.MutationObserver.observe")}}</p>
+<p>{{Compat}}</p>

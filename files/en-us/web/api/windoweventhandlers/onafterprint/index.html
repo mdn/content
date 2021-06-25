@@ -9,11 +9,12 @@ tags:
 - Reference
 - Window
 - printing
+browser-compat: api.WindowEventHandlers.onafterprint
 ---
 <div>{{ApiRef}}</div>
 
 <p>The <code><strong>onafterprint</strong></code> property of the
-  {{domxref("WindowEventHandlers")}} mixin is the {{domxref("EventHandler")}} for
+  {{domxref("WindowEventHandlers")}} mixin is the {{event("Event_handlers", "event handler")}} for
   processing {{event("afterprint")}} events for the current window. These events are
   raised after the user prints, or if they abort the print dialog.</p>
 
@@ -31,24 +32,11 @@ window.onafterprint = function(event) { ... };</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', '#handler-window-onafterprint', 'onafterprint')}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.WindowEventHandlers.onafterprint")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

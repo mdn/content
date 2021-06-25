@@ -7,12 +7,13 @@ tags:
   - HTMLStyleElement
   - Interface
   - Reference
+browser-compat: api.HTMLStyleElement
 ---
 <div>
 <div>{{APIRef("HTML DOM")}}</div>
 </div>
 
-<p>The <strong><code>HTMLStyleElement</code></strong> interface represents a {{HTMLElement("style")}} element. It inherits properties and methods from its parent, {{domxref("HTMLElement")}}, and from {{domxref("LinkStyle")}}.</p>
+<p>The <strong><code>HTMLStyleElement</code></strong> interface represents a {{HTMLElement("style")}} element. It inherits properties and methods from its parent, {{domxref("HTMLElement")}}.</p>
 
 <p>This interface doesn't allow to manipulate the CSS it contains (in most case). To manipulate CSS, see <a href="/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information">Using dynamic styling information</a> for an overview of the objects used to manipulate specified CSS properties using the DOM.</p>
 
@@ -20,7 +21,7 @@ tags:
 
 <h2 id="Properties">Properties</h2>
 
-<p><em>Inherits properties from its parent, {{domxref("HTMLElement")}}, and implements {{domxref("LinkStyle")}}.</em></p>
+<p><em>Inherits properties from its parent, {{domxref("HTMLElement")}}.</em></p>
 
 <dl>
  <dt>{{domxref("HTMLStyleElement.media")}}</dt>
@@ -29,7 +30,7 @@ tags:
  <dd>Is a {{domxref("DOMString")}} representing the type of style being applied by this statement.</dd>
  <dt>{{domxref("HTMLStyleElement.disabled")}}</dt>
  <dd>Is a {{domxref("Boolean")}} value representing whether or not the stylesheet is disabled (true) or not (false).</dd>
- <dt>{{domxref("LinkStyle.sheet")}} {{readonlyInline}}</dt>
+ <dt>{{domxref("HTMLStyleElement.sheet")}} {{readonlyInline}}</dt>
  <dd>Returns the {{domxref("StyleSheet")}} object associated with the given element, or <code>null</code> if there is none</dd>
  <dt>{{domxref("HTMLStyleElement.scoped")}} {{non-standard_inline}} {{deprecated_inline}}</dt>
  <dd>Is a {{domxref("Boolean")}} value indicating if the element applies to the whole document (<code>false</code>) or only to the parent's sub-tree (<code>true</code>).</dd>
@@ -37,48 +38,15 @@ tags:
 
 <h2 id="Methods">Methods</h2>
 
-<p><em>No specific method; inherits properties from its parent, {{domxref("HTMLElement")}}, and {{domxref("LinkStyle")}}.</em></p>
+<p><em>No specific method; inherits properties from its parent, {{domxref("HTMLElement")}}.</em></p>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "#htmlstyleelement", "HTMLStyleElement")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', "document-metadata.html#the-style-element", "HTMLStyleElement")}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "document-metadata.html#the-style-element", "HTMLStyleElement")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>The following property has been added: <code>scoped</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 HTML', 'html.html#ID-16428977', 'HTMLStyleElement')}}</td>
-   <td>{{Spec2('DOM2 HTML')}}</td>
-   <td>Added a second inheritence, the {{domxref("LinkStyle")}} interface.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-html.html#ID-16428977', 'HTMLStyleElement')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.HTMLStyleElement")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

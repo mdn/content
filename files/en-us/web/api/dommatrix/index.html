@@ -10,6 +10,7 @@ tags:
   - Interface
   - Reference
   - matrix
+browser-compat: api.DOMMatrix
 ---
 <p>{{APIRef("Geometry Interfaces")}}</p>
 
@@ -128,39 +129,18 @@ tags:
 
 <p>The matrix defined by the <code>DOMMatrix</code> interface is comprised of four rows of four columns each. While it's beyond the scope of this article to explain the mathematics involved, this 4×4 size is enough to describe any transformation you might apply to either 2D or 3D geometries.</p>
 
-<div style="max-width: 42rem; border: 1px solid #bbb; padding: 0.5rem; margin-bottom: 1em;">
-<div style="margin: 0 auto; max-width: 25rem;">
-<figure><math display="block"><semantics><mrow><mo>[</mo><mtable rowspacing="0.5ex"><mtr><mtd><msub><mi>m</mi><mn>11</mn></msub></mtd><mtd><msub><mi>m</mi><mn>21</mn></msub></mtd><mtd><msub><mi>m</mi><mn>31</mn></msub></mtd><mtd><msub><mi>m</mi><mn>41</mn></msub></mtd></mtr><mtr><mtd><msub><mi>m</mi><mn>12</mn></msub></mtd><mtd><msub><mi>m</mi><mn>22</mn></msub></mtd><mtd><msub><mi>m</mi><mn>32</mn></msub></mtd><mtd><msub><mi>m</mi><mn>42</mn></msub></mtd></mtr><mtr><mtd><msub><mi>m</mi><mn>13</mn></msub></mtd><mtd><msub><mi>m</mi><mn>23</mn></msub></mtd><mtd><msub><mi>m</mi><mn>33</mn></msub></mtd><mtd><msub><mi>m</mi><mn>43</mn></msub></mtd></mtr><mtr><mtd><msub><mi>m</mi><mn>14</mn></msub></mtd><mtd><msub><mi>m</mi><mn>24</mn></msub></mtd><mtd><msub><mi>m</mi><mn>34</mn></msub></mtd><mtd><msub><mi>m</mi><mn>44</mn></msub></mtd></mtr></mtable><mo>]</mo></mrow><annotation encoding="TeX">\left [ \begin{matrix} m_{11} &amp; m_{21} &amp; m_{31} &amp; m_{41} \\ m_{12} &amp; m_{22} &amp; m_{32} &amp; m_{42} \\ m_{13} &amp; m_{23} &amp; m_{33} &amp; m_{43} \\ m_{14} &amp; m_{24} &amp; m_{34} &amp; m_{44} \end{matrix} \right ]</annotation></semantics></math>
-
-<figcaption><strong>The positions of the 16 elements (m<sub>11</sub> through m<sub>44</sub>)</strong> which comprise the 4×4 abstract matrix.</figcaption>
-</figure>
-</div>
-</div>
+<p>Here are The positions of the 16 elements (m_11 through m_44) which comprise the 4×4 abstract matrix:</p>
+<p><math display="block"><semantics><mrow><mo>[</mo><mtable rowspacing="0.5ex"><mtr><mtd><msub><mi>m</mi><mn>11</mn></msub></mtd><mtd><msub><mi>m</mi><mn>21</mn></msub></mtd><mtd><msub><mi>m</mi><mn>31</mn></msub></mtd><mtd><msub><mi>m</mi><mn>41</mn></msub></mtd></mtr><mtr><mtd><msub><mi>m</mi><mn>12</mn></msub></mtd><mtd><msub><mi>m</mi><mn>22</mn></msub></mtd><mtd><msub><mi>m</mi><mn>32</mn></msub></mtd><mtd><msub><mi>m</mi><mn>42</mn></msub></mtd></mtr><mtr><mtd><msub><mi>m</mi><mn>13</mn></msub></mtd><mtd><msub><mi>m</mi><mn>23</mn></msub></mtd><mtd><msub><mi>m</mi><mn>33</mn></msub></mtd><mtd><msub><mi>m</mi><mn>43</mn></msub></mtd></mtr><mtr><mtd><msub><mi>m</mi><mn>14</mn></msub></mtd><mtd><msub><mi>m</mi><mn>24</mn></msub></mtd><mtd><msub><mi>m</mi><mn>34</mn></msub></mtd><mtd><msub><mi>m</mi><mn>44</mn></msub></mtd></mtr></mtable><mo>]</mo></mrow><annotation encoding="TeX">\left [ \begin{matrix} m_{11} &amp; m_{21} &amp; m_{31} &amp; m_{41} \\ m_{12} &amp; m_{22} &amp; m_{32} &amp; m_{42} \\ m_{13} &amp; m_{23} &amp; m_{33} &amp; m_{43} \\ m_{14} &amp; m_{24} &amp; m_{34} &amp; m_{44} \end{matrix} \right ]</annotation></semantics></math></p>
 
 <p>The <code>DOMMatrix</code> interface is designed with the intent that it will be used for all matrices within markup, supplanting the {{domxref("SVGMatrix")}} and {{domxref("CSSMatrix")}} interfaces.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('Geometry Interfaces', '#DOMMatrix', 'DOMMatrix') }}</td>
-   <td>{{ Spec2('Geometry Interfaces') }}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.DOMMatrix")}}</p>
+<p>{{Compat}}</p>
 
 <p>{{Compat("api.WebKitCSSMatrix")}}</p>
 

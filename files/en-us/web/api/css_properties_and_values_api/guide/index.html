@@ -21,10 +21,10 @@ tags:
 <p>The following will register a {{cssxref('--*', 'CSS custom properties')}}, <code>--my-prop</code>, using {{domxref('CSS.registerProperty')}}, as a color, give it a default value, and have it not inherit its value:</p>
 
 <pre class="brush: js">window.CSS.registerProperty({
-  name: '--my-prop',
-  syntax: '&lt;color&gt;',
-  inherits: false,
-  initialValue: '#c0ffee',
+  name: '--my-prop',
+  syntax: '&lt;color&gt;',
+  inherits: false,
+  initialValue: '#c0ffee',
 });
 </pre>
 
@@ -33,9 +33,9 @@ tags:
 <p>The same registration can take place in CSS. The following will register a {{cssxref('--*', 'CSS custom properties')}}, <code>--my-prop</code>, using {{cssxref('@property')}} <a href="/en-US/docs/Web/CSS/At-rule">at-rule</a>, as a color, give it a default value, and have it not inherit its value:</p>
 
 <pre class="brush: css">@property --my-prop {
-  syntax: '&lt;color&gt;';
-  inherits: false;
-  initial-value: #c0ffee;
+  syntax: '&lt;color&gt;';
+  inherits: false;
+  initial-value: #c0ffee;
 }</pre>
 
 <h2 id="Using_registered_custom_properties">Using registered custom properties</h2>
@@ -45,25 +45,25 @@ tags:
 <p>In this example, the custom property <code>--registered</code> has been registered using the syntax <code>&lt;color&gt;</code> and then used in a linear gradient. That property is then transitioned on hover or focus to a different color. Notice that with the registered property the transition works, but that it doesn't with the unregistered property!</p>
 
 <pre class="brush: css">.registered {
-  --registered: #c0ffee;
-  background-image: linear-gradient(to right, #fff, var(--registered));
-  transition: --registered 1s ease-in-out;
+  --registered: #c0ffee;
+  background-image: linear-gradient(to right, #fff, var(--registered));
+  transition: --registered 1s ease-in-out;
 }
 
 .registered:hover,
 .registered:focus {
-  --registered: #b4d455;
+  --registered: #b4d455;
 }
 
 .unregistered {
-  --unregistered: #c0ffee;
-  background-image: linear-gradient(to right, #fff, var(--unregistered));
-  transition: --unregistered 1s ease-in-out;
+  --unregistered: #c0ffee;
+  background-image: linear-gradient(to right, #fff, var(--unregistered));
+  transition: --unregistered 1s ease-in-out;
 }
 
 .unregistered:hover,
 .unregistered:focus {
-  --unregistered: #b4d455;
+  --unregistered: #b4d455;
 }</pre>
 
 <div class="hidden" id="registered">
@@ -72,41 +72,41 @@ tags:
 </pre>
 
 <pre class="brush: css">.registered {
-  --registered: #c0ffee;
-  background-image: linear-gradient(to right, #fff, var(--registered));
-  transition: --registered 1s ease-in-out;
+  --registered: #c0ffee;
+  background-image: linear-gradient(to right, #fff, var(--registered));
+  transition: --registered 1s ease-in-out;
 }
 
 .registered:hover,
 .registered:focus {
-  --registered: #b4d455;
+  --registered: #b4d455;
 }
 
 .unregistered {
-  --unregistered: #c0ffee;
-  background-image: linear-gradient(to right, #fff, var(--unregistered));
-  transition: --unregistered 1s ease-in-out;
+  --unregistered: #c0ffee;
+  background-image: linear-gradient(to right, #fff, var(--unregistered));
+  transition: --unregistered 1s ease-in-out;
 }
 
 .unregistered:hover,
 .unregistered:focus {
-  --unregistered: #b4d455;
+  --unregistered: #b4d455;
 }
 
 button {
-  height: 40vh;
-  display: block;
-  width: 100%;
-  font-size: 3vw;
+  height: 40vh;
+  display: block;
+  width: 100%;
+  font-size: 3vw;
 }
 
 </pre>
 
 <pre class="brush: js">window.CSS.registerProperty({
-  name: '--registered',
-  syntax: '&lt;color&gt;',
-  inherits: false,
-  initialValue: 'red',
+  name: '--registered',
+  syntax: '&lt;color&gt;',
+  inherits: false,
+  initialValue: 'red',
 });</pre>
 </div>
 

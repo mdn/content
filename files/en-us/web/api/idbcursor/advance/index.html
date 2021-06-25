@@ -10,12 +10,13 @@ tags:
 - Reference
 - Storage
 - advance
+browser-compat: api.IDBCursor.advance
 ---
 <div>{{APIRef("IndexedDB")}}</div>
 
 <p>The <strong><code>advance()</code></strong> method of the {{domxref("IDBCursor")}}
-  interface sets the num<span style="line-height: 1.5;">ber of times a cursor should move
-    its position forward.</span></p>
+  interface sets the number of times a cursor should move
+    its position forward.</p>
 
 <p>{{AvailableInWorkers}}</p>
 
@@ -32,8 +33,8 @@ tags:
 
 <h3 id="Exceptions">Exceptions</h3>
 
-<p><span style="line-height: 1.5;">This method may raise a {{domxref("DOMException")}} of
-    one of the following types:</span></p>
+<p>This method may raise a {{domxref("DOMException")}} of
+    one of the following types:</p>
 
 <table class="standard-table">
   <thead>
@@ -69,17 +70,13 @@ tags:
   {{domxref("IDBCursor.continue")}}, except that it allows you to jump multiple records at
   a time, not just always go onto the next record.</p>
 
-<p><span style="line-height: 1.5;">Note that in each iteration of the loop, you can grab
-    data from the current record under the cursor object using </span><code
-    style="font-style: normal; line-height: 1.5;">cursor.value.foo</code><span
-    style="line-height: 1.5;">. For a complete working example, see our <a
+<p>Note that in each iteration of the loop, you can grab
+    data from the current record under the cursor object using <code
+    >cursor.value.foo</code>. For a complete working example, see our <a
       href="https://github.com/mdn/indexeddb-examples/tree/master/idbcursor">IDBCursor
-      example</a></span><span style="line-height: 1.5;"> (</span><a
-    href="https://mdn.github.io/indexeddb-examples/idbcursor/"
-    style="line-height: 1.5;">view example live</a><span
-    style="line-height: 1.5;">.)</span></p>
+      example</a> (<a href="https://mdn.github.io/indexeddb-examples/idbcursor/">view example live</a>.)></p>
 
-<pre class="brush: js"><span class="brush: js" style="line-height: 1.5;">function advanceResult() {</span>
+<pre class="brush: js">function advanceResult() {
   list.textContent = '';
   const transaction = db.transaction(['rushAlbumList'], "readonly");
   const objectStore = transaction.objectStore('rushAlbumList');
@@ -99,29 +96,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th>Specification</th>
-      <th>Status</th>
-      <th>Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('IndexedDB', '#dom-idbcursor-advance', 'advance()')}}</td>
-      <td>{{Spec2('IndexedDB')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName("IndexedDB 2", "#dom-idbcursor-advance", "advance()")}}</td>
-      <td>{{Spec2("IndexedDB 2")}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.IDBCursor.advance")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

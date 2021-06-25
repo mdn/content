@@ -8,11 +8,12 @@ tags:
   - HTML DOM
   - Property
   - Reference
+browser-compat: api.GlobalEventHandlers.onfocus
 ---
 <div>{{ApiRef("HTML DOM")}}</div>
 
 <p>The <code><strong>onfocus</strong></code> property of the
-  {{domxref("GlobalEventHandlers")}} mixin is an {{domxref("EventHandler")}} that
+  {{domxref("GlobalEventHandlers")}} mixin is an {{event("Event_handlers", "event handler")}} that
   processes {{event("focus")}} events on the given element.</p>
 
 <p>The <code>focus</code> event is raised when the user sets focus on an element.</p>
@@ -73,24 +74,11 @@ function inputFocus() {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML WHATWG','webappapis.html#handler-onfocus','onfocus')}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.GlobalEventHandlers.onfocus")}}</p>
+<p>{{Compat}}</p>
 
 <p>In contrast to IE, in which almost all kinds of elements receive the <code>focus</code>
   event, almost all kinds of elements on Gecko browsers do NOT work with this event.</p>

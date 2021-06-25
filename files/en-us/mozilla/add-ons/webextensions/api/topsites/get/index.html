@@ -11,6 +11,7 @@ tags:
   - WebExtensions
   - get
   - topSites
+browser-compat: webextensions.api.topSites.get
 ---
 <div>{{AddonSidebar()}}</div>
 
@@ -68,7 +69,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("webextensions.api.topSites.get")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -100,12 +101,12 @@ function onError(error) {
   console.log(error);
 }
 
-<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="cm-keyword">var</span> <span class="cm-def">gettingTopSites</span> <span class="cm-operator">=</span> <span class="cm-variable">browser</span>.<span class="cm-property">topSites</span>.<span class="cm-property">get</span>({</span></span></span>
-<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="cm-property">  includeBlocked</span>: <span class="cm-atom">true</span>,</span></span></span>
-<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="cm-property">  onePerDomain</span>: <span class="cm-atom">false</span></span></span></span>
-<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body">});</span></span></span>
+var gettingTopSites = browser.topSites.get({
+  includeBlocked: true,
+  onePerDomain: false
+});
 
-<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="cm-variable">gettingTopSites</span>.<span class="cm-property">then</span>(<span class="cm-variable">logTopSites</span>, <span class="cm-variable">onError</span>);</span></span></span></pre>
+gettingTopSites.then(logTopSites, onError);</pre>
 
 <p>{{WebExtExamples}}</p>
 

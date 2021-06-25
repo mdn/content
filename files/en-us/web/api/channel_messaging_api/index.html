@@ -16,7 +16,7 @@ tags:
 
 <h2 id="Channel_messaging_concepts_and_usage">Channel messaging concepts and usage</h2>
 
-<p>A message channel is created using the {{domxref("MessageChannel.MessageChannel", "MessageChannel()")}} constructor. Once created, the two ports of the channel can be accessed through the {{domxref("MessageChannel.port1")}} and {{domxref("MessageChannel.port2")}} properties (which both return {{domxref("MessagePort")}} objects.) The app that created the channel uses <code>port1</code>, and the app at the other end of the port uses <code>port2</code> — you send a message to <code>port2</code>, and transfer the port over to the other browsing context using {{domxref("window.postMessage")}} along with two arguments (the message to send, and the object to transfer ownership of, in this case the port itself.)</p>
+<p>A message channel is created using the {{domxref("MessageChannel.MessageChannel", "MessageChannel()")}} constructor. Once created, the two ports of the channel can be accessed through the {{domxref("MessageChannel.port1")}} and {{domxref("MessageChannel.port2")}} properties (which both return {{domxref("MessagePort")}} objects.) The app that created the channel uses <code>port1</code>, and the app at the other end of the port uses <code>port2</code> — you send a message to <code>port2</code>, and transfer the port over to the other browsing context using {{domxref("window.postMessage")}} along with two arguments (the message to send, and the object to transfer ownership of, in this case the port itself.)</p>
 
 <p>When these transferable objects are transferred, they are no longer usable on the context they previously belonged to. A port, after it is sent, can no longer be used by the original context.</p>
 
@@ -46,20 +46,7 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'web-messaging.html#channel-messaging', 'Channel messaging')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications("api.MessageChannel")}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
@@ -68,8 +55,6 @@ tags:
 <p>{{Compat("api.MessageChannel", 0)}}</p>
 
 <h3 id="MessagePort"><code>MessagePort</code></h3>
-
-<div class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
 
 <p>{{Compat("api.MessagePort", 0)}}</p>
 

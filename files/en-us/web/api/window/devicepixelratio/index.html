@@ -11,6 +11,7 @@ tags:
   - devicePixelRatio
   - ratio
   - resolution
+browser-compat: api.Window.devicePixelRatio
 ---
 <p>{{APIRef}}</p>
 
@@ -114,7 +115,7 @@ const updatePixelRatio = () =&gt; {
 }
 
 updatePixelRatio();
-
+</pre>
 <p>The string <code>mqString</code> is set up to be the media query itself. The media
   query, which begins as <code>(resolution: 1dppx)</code> (for standard  displays) or
   <code>(resolution: 2dppx)</code> (for Retina/HiDPI displays), checks to see if the
@@ -146,11 +147,9 @@ updatePixelRatio();
   &lt;/div&gt;
     &lt;div class="pixel-ratio"&gt;&lt;/div&gt;
 &lt;/div&gt;</pre>
+</pre>
 
-<details>
-  <summary>
-    <h4 id="CSS">CSS</h4>
-  </summary>
+<h4 id="CSS">CSS</h4>
 
   <pre class="brush: css">body {
   font: 22px arial, sans-serif;
@@ -180,8 +179,8 @@ updatePixelRatio();
   bottom: 0;
   right: 1em;
   font-weight: bold;
-}</pre>
-</details>
+}
+</pre>
 
 <h4 id="Result">Result</h4>
 
@@ -190,27 +189,11 @@ updatePixelRatio();
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName("CSSOM View", "#dom-window-devicepixelratio",
-        "Window.devicePixelRatio")}}</td>
-      <td>{{Spec2("CSSOM View")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Window.devicePixelRatio")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

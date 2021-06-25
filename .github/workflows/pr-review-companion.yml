@@ -21,7 +21,7 @@ jobs:
 
     steps:
       - name: 'Download artifact'
-        uses: actions/github-script@v3
+        uses: actions/github-script@v4.0.2
         with:
           script: |
             var artifacts = await github.actions.listWorkflowRunArtifacts({
@@ -63,7 +63,7 @@ jobs:
            path: yari
 
       - name: Install Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v2.2.2
         with:
           python-version: "3.8"
 
@@ -75,7 +75,7 @@ jobs:
 
       - name: Load cached venv
         id: cached-poetry-dependencies
-        uses: actions/cache@v2.1.5
+        uses: actions/cache@v2.1.6
         with:
           path: yari/deployer/.venv
           key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}-${{ hashFiles('.github/workflows/pr-review-companion.yml') }}

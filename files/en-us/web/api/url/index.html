@@ -16,6 +16,8 @@ tags:
   - hostname
   - href
   - origin
+  - Polyfill
+browser-compat: api.URL
 ---
 <p>{{APIRef("URL API")}}</p>
 
@@ -115,35 +117,16 @@ console.log(parsedUrl.searchParams.get("id")); // "123"
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('File API', '#creating-revoking', 'URL')}}</td>
-   <td>{{Spec2('File API')}}</td>
-   <td>Added the static methods <code>URL.createObjectURL()</code> and <code>URL.revokeObjectURL</code><code>()</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('URL', '#api', 'API')}}</td>
-   <td>{{Spec2('URL')}}</td>
-   <td>Initial definition (implements <code>URLUtils</code>).</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.URL")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
+ <li>A polyfill of <code>URL</code> is available in <a href="https://github.com/zloirock/core-js#url-and-urlsearchparams"><code>core-js</code></a></li>
  <li><a href="/en-US/docs/Web/API/URL_API">URL API</a></li>
  <li><a href="/en-US/docs/Learn/Common_questions/What_is_a_URL">What is a URL?</a></li>
  <li>Property to obtain a <code>URL</code> object: {{domxref("URL")}}.</li>

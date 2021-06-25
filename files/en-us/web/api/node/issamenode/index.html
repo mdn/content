@@ -7,12 +7,15 @@ tags:
 - Method
 - Node
 - Reference
+browser-compat: api.Node.isSameNode
 ---
 <div>{{APIRef("DOM")}}</div>
 
 <p><span class="seoSummary">The <code><strong>isSameNode()</strong></code> method for
-    <code>Node</code> objects tests whether two nodes are the same (that is, whether they
+    <code>Node</code> objects is a legacy alias the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality">for the <code>===</code> strict equality operator</a>. That is, it tests whether two nodes are the same (in other words, whether they
     reference the same object).</span></p>
+
+<p>There’s no need to use <code>isSameNode()</code>; instead use the <code>===</code> strict equality operator.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -69,32 +72,11 @@ output.innerHTML += "div 0 same as div 2: " + divList[0].isSameNode(divList[2]) 
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('DOM WHATWG', '#dom-node-issamenode', 'Node: isSameNode')}}</td>
-      <td>{{Spec2('DOM WHATWG')}}</td>
-      <td>No change (was for a long time removed from it).</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('DOM3 Core', 'core.html#Node3-isSameNode', 'Node.isSameNode()')}}
-      </td>
-      <td>{{Spec2('DOM3 Core')}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Node.isSameNode")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

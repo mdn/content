@@ -5,6 +5,7 @@ tags:
   - Deprecated
   - SVG
   - SVG Attribute
+browser-compat: svg.elements.hkern.u1
 ---
 <div>{{SVGRef}}{{Deprecated_Header}}</div>
 
@@ -12,7 +13,12 @@ tags:
 
 <p>If a given Unicode character within the set has multiple corresponding <code>&lt;glyph&gt;</code> elements (i.e., there are multiple <code>&lt;glyph&gt;</code> elements with the same <code>unicode</code> attribute value but different {{SVGAttr("glyph-name")}} values), then all such glyphs are included in the set. Comma is the separator character; thus, to kern a comma, specify the comma as part of a range of Unicode characters or as a glyph name using the {{SVGAttr("g1")}} attribute. The total set of possible first glyphs in the kerning pair is the union of glyphs specified by the <code>u1</code> and <code>g1</code> attributes.</p>
 
-<p>Two elements are using this attribute: {{SVGElement("hkern")}} and {{SVGElement("vkern")}}</p>
+<p>You can use this attribute with the following SVG elements:</p>
+
+<ul>
+  <li>{{SVGElement("hkern")}}</li>
+  <li>{{SVGElement("vkern")}}</li>
+</ul>
 
 <h2 id="Context_notes">Context notes</h2>
 
@@ -61,4 +67,4 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("svg.elements.hkern.u1")}}</p>
+<p>{{Compat}}</p>

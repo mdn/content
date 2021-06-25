@@ -19,12 +19,12 @@ tags:
 
 <p>Storage objects are simple key-value stores, similar to objects, but they stay intact through page loads. The keys and the values are always strings (note that, as with objects, integer keys will be automatically converted to strings). You can access these values like an object, or with the {{domxref("Storage.getItem()")}} and {{domxref("Storage.setItem()")}} methods. These three lines all set the (same) colorSetting entry:</p>
 
-<pre class="brush: js" style="white-space: pre;">localStorage.colorSetting = '#a4509b';
+<pre class="brush: js">localStorage.colorSetting = '#a4509b';
 localStorage['colorSetting'] = '#a4509b';
 localStorage.setItem('colorSetting', '#a4509b');</pre>
 
 <div class="note">
-<p><strong>Note</strong>: It's recommended to use the Web Storage API (<code>setItem</code>, <code>getItem</code>, <code>removeItem</code>, <code>key</code>, <code>length</code>) to prevent the <a href="http://www.2ality.com/2012/01/objects-as-maps.html">pitfalls</a> associated with using plain objects as key-value stores.</p>
+<p><strong>Note</strong>: It's recommended to use the Web Storage API (<code>setItem</code>, <code>getItem</code>, <code>removeItem</code>, <code>key</code>, <code>length</code>) to prevent the <a href="https://www.2ality.com/2012/01/objects-as-maps.html">pitfalls</a> associated with using plain objects as key-value stores.</p>
 </div>
 
 <p>The two mechanisms within Web Storage are as follows:</p>
@@ -50,7 +50,7 @@ localStorage.setItem('colorSetting', '#a4509b');</pre>
 
 <p>Browsers that support localStorage have a property on the window object named <code>localStorage</code>. However, just asserting that the property exists may throw exceptions. If the <code>localStorage</code> object does exist, there is still no guarantee that the localStorage API is actually available, as various browsers offer settings that disable localStorage. So a browser may <em>support</em> localStorage, but not make it <em>available</em> to the scripts on the page.</p>
 
-<p>For example, Safari browser in Private Browsing mode gives us an empty localStorage object with a quota of zero, effectively making it unusable. Conversely, we might get a legitimate <code>QuotaExceededError</code>, which means that we've used up all available storage space, but storage <em>is</em> actually <em>available</em>. Our feature detection should take these scenarios into account.</p>
+<p>For example, for a document viewed in a browser’s private browsing mode, some browsers might give us an empty <code>localStorage</code> object with a quota of zero, effectively making it unusable. Conversely, we might get a legitimate <code>QuotaExceededError</code>, which means that we've used up all available storage space, but storage <em>is</em> actually <em>available</em>. Our feature detection should take these scenarios into account.</p>
 
 <p>Here is a function that detects whether localStorage is both supported and available:</p>
 
@@ -96,11 +96,11 @@ else {
 
 <p>To illustrate some typical web storage usage, we have created an example, imaginatively called <strong>Web Storage Demo</strong>. The <a href="https://mdn.github.io/dom-examples/web-storage/">landing page</a> provides controls that can be used to customize the color, font, and decorative image:</p>
 
-<p><img alt="" src="landing.png" style="display: block; margin: 0px auto;">When you choose different options, the page is instantly updated; in addition, your choices are stored in <code>localStorage</code>, so that when you leave the page and load it again, later on, your choices are remembered.</p>
+<p><img alt="" src="landing.png">When you choose different options, the page is instantly updated; in addition, your choices are stored in <code>localStorage</code>, so that when you leave the page and load it again, later on, your choices are remembered.</p>
 
 <p>We have also provided an <a href="https://mdn.github.io/dom-examples/web-storage/event.html">event output page</a> — if you load this page in another tab, then make changes to your choices in the landing page, you'll see the updated storage information outputted as a {{domxref("StorageEvent")}} is fired.</p>
 
-<p><img alt="" src="event-output.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="" src="event-output.png"></p>
 
 <div class="note">
 <p><strong>Note</strong>: As well as viewing the example pages live using the above links, you can also <a href="https://github.com/mdn/dom-examples/tree/master/web-storage">check out the source code</a>.</p>
@@ -211,8 +211,6 @@ imageForm.onchange = populateStorage;</pre>
 <p>{{Compat("api.Window.localStorage")}}</p>
 
 <h3 id="Window.sessionStorage"><code>Window.sessionStorage</code></h3>
-
-<div class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
 
 <p>{{Compat("api.Window.sessionStorage")}}</p>
 

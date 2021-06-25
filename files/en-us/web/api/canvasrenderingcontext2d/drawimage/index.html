@@ -7,6 +7,7 @@ tags:
   - CanvasRenderingContext2D
   - Method
   - Reference
+browser-compat: api.CanvasRenderingContext2D.drawImage
 ---
 <div>{{APIRef}}</div>
 
@@ -20,8 +21,7 @@ void <em>ctx</em>.drawImage(<em>image</em>, <em>dx</em>, <em>dy</em>, <em>dWidth
 void <em>ctx</em>.drawImage(<em>image</em>, <em>sx</em>, <em>sy</em>, <em>sWidth</em>, <em>sHeight</em>, <em>dx</em>, <em>dy</em>, <em>dWidth</em>, <em>dHeight</em>);
 </pre>
 
-<p><img alt="drawImage" src="canvas_drawimage.jpg"
-    style="float: right;"></p>
+<p><img alt="drawImage" src="canvas_drawimage.jpg"</p>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -93,7 +93,7 @@ void <em>ctx</em>.drawImage(<em>image</em>, <em>sx</em>, <em>sy</em>, <em>sWidth
 <pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
 &lt;div style="display:none;"&gt;
   &lt;img id="source"
-       src="https://mdn.mozillademos.org/files/5397/rhino.jpg"
+       src="rhino.jpg"
        width="300" height="227"&gt;
 &lt;/div&gt;
 </pre>
@@ -143,7 +143,7 @@ const image = new Image(60, 45); // Using optional size for image
 image.onload = drawImageActualSize; // Draw when image has loaded
 
 // Load an image of intrinsic size 300x227 in CSS pixels
-image.src = 'https://mdn.mozillademos.org/files/5397/rhino.jpg';
+image.src = 'rhino.jpg';
 
 function drawImageActualSize() {
   // Use the intrinsic size of image in CSS pixels for the canvas element
@@ -166,25 +166,11 @@ function drawImageActualSize() {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', "#dom-context-2d-drawimage",
-        "CanvasRenderingContext2D: drawImage")}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.CanvasRenderingContext2D.drawImage")}}</p>
+<p>{{Compat}}</p>
 
 <h3 id="Gecko-specific_notes">Gecko-specific notes</h3>
 

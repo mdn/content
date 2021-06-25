@@ -101,35 +101,28 @@ let targetRayVector = targetRayPose.transform.orientation;
 
 <p>The input source's {{domxref("XRInputSource.gripSpace", "gripSpace")}} property is an <code>XRSpace</code> you can use to render objects so they appear to be held in the viewer's hand.</p>
 
-<div style="width: 42em; display: flow-root;">
-<div style="width: 20em; float: left;">
-<figure style="background: #eee; padding: 0.5em; border: 1px solid #aaa; border-radius: 1em; max-width: 504px; padding: 1em; margin: 1em auto;">
-<figcaption><strong>The coordinate system for the left hand's grip space.</strong></figcaption>
 
-<div style="background-color: #FFF;"><img alt="A diagram showing how the grip space indicates the local coordinate system for the player's hand relative to the world." src="dark_left.svg"></div>
-</figure>
-</div>
 
-<div style="width: 20em; float: right;">
-<figure style="background: #eee; padding: 0.5em; border: 1px solid #aaa; border-radius: 1em; max-width: 504px; padding: 1em; margin: 1em auto;">
-<figcaption><strong>The coordinate system for the right hand's grip space.</strong></figcaption>
+<strong>Figure: The coordinate system for the left hand's grip space.</strong>
 
-<div style="background-color: #FFF;"><img alt="A diagram showing how the grip space indicates the local coordinate system for the player's hand relative to the world." src="dark_right.svg"></div>
-</figure>
-</div>
-</div>
+<img width="600px" alt="A diagram showing how the grip space indicates the local coordinate system for the player's hand relative to the world." src="dark_left.svg">
+
+
+
+<strong>Figure: The coordinate system for the right hand's grip space.</strong>
+
+<img width="600px" alt="A diagram showing how the grip space indicates the local coordinate system for the player's hand relative to the world." src="dark_right.svg">
+
 
 <p>The grip space's native origin, located around the center of the player's fist, is (0, 0, 0) within the input source's local coordinate system, while the {{domxref("XRSpace")}} specified by <code>gripSpace</code> can be used at any time to convert coordinates or vectors from the input source's space into world coordinates (or vice-versa).</p>
 
 <p>This means that if you use a 3D model to represent your controller, your player's avatar's hands, or anything else representative of the controller's position in space, the <code>gripSpace</code> can be used as the transform matrix that correctly positions and orients the object's model for rendering. To do this, it's necessary to use the transform to convert the grip space to the world coordinate system used by WebGL for rendering purposes.</p>
 
-<div style="width: 42em; margin-bottom: 1em;">
-<figure style="background: #eee; border: 1px solid #aaa; border-radius: 1em; width: 30em; padding: 1em; margin: 0 auto; display: grid;">
-<figcaption><strong>Mapping the grip space to the world coordinate system. The distances <em>x</em>, <em>y</em>, and <em>z</em> together make up the world coordinates (<em>x</em>, <em>y</em>, z) corresponding to the origin of the grip space <em>G</em>.</strong></figcaption>
 
-<div style="background-color: #FFF;"><img alt="A diagram showing the relationship between the grip space and the world space" src="gripspace-on-worldspace.svg"></div>
-</figure>
-</div>
+<strong>Figure: Mapping the grip space to the world coordinate system. The distances <em>x</em>, <em>y</em>, and <em>z</em> together make up the world coordinates (<em>x</em>, <em>y</em>, z) corresponding to the origin of the grip space <em>G</em>.</strong>
+
+<img width="600px" alt="A diagram showing the relationship between the grip space and the world space" src="gripspace-on-worldspace.svg">
+
 
 <p>In the diagram above, we see the grip space, whose origin is located at <em>G</em>, at the midpoint of the user's grip on the controller, which is pointing directly away from the user, parallel to the <em>z</em> axis. Relative to the origin of the world space, <em>W</em>, the grip space's origin is located <em>x</em> units to the right, <em>y</em> units above, and <em>z</em> units farther away. Given the directionality of the axes, the coordinates of the grip space can be expressed in world coordinates as (<em>x</em>, <em>y</em>, -<em>z</em>); <em>z</em> is negative since the grip space is farther away along the <em>z</em> axis, and is thus in the negative direction.</p>
 
@@ -137,13 +130,11 @@ let targetRayVector = targetRayPose.transform.orientation;
 
 <p>This is shown in the diagram below, in which the controller is located down and to the left of the world space's origin, with the controller also moved to be closer to us than the origin. As a result, the values of <em>x</em> and <em>y</em> are both negative, while <em>z</em> is positive.</p>
 
-<div style="width: 42em; margin-bottom: 1em;">
-<figure style="background: #eee; border: 1px solid #aaa; border-radius: 1em; width: 30em; padding: 1em; margin: 0 auto; display: grid;">
-<figcaption><strong>Mapping a grip space to the world origin when the controller is positioned below and to the left of the world origin, and closer to us than the world origin is.</strong></figcaption>
 
-<div style="background-color: #FFF;"><img alt="The relationship between another grip space and the world space" src="gripspace-on-worldspace-diag.svg"></div>
-</figure>
-</div>
+<strong>Figure Mapping a grip space to the world origin when the controller is positioned below and to the left of the world origin, and closer to us than the world origin is.</strong>
+
+<img width="600px" alt="The relationship between another grip space and the world space" src="gripspace-on-worldspace-diag.svg">
+
 
 <h4 id="Gamepad_record">Gamepad record</h4>
 

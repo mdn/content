@@ -9,6 +9,7 @@ tags:
   - Method
   - Reference
   - Storage
+browser-compat: api.IDBObjectStore.add
 ---
 <p>{{ APIRef("IndexedDB") }}</p>
 
@@ -47,15 +48,13 @@ var <em>request</em> = objectStore.add(<em>value</em>, <em>key</em>);
 
 <h3 id="Returns">Returns</h3>
 
-<p><span style="line-height: 1.5;">An </span><span
-    style="line-height: 1.5;">{{domxref("IDBRequest")}}</span><span
-    style="line-height: 1.5;"> object on</span><span style="line-height: 1.5;"> which
-    subsequent events related to this operation are fired.</span></p>
+<p>An {{domxref("IDBRequest")}} object on which
+    subsequent events related to this operation are fired.</p>
 
 <h3 id="Exceptions">Exceptions</h3>
 
-<p><span style="line-height: 1.5;">This method may raise a {{domxref("DOMException")}} of
-    one of the following types:</span></p>
+<p>This method may raise a {{domxref("DOMException")}} of
+    one of the following types:</p>
 
 <table class="standard-table">
   <thead>
@@ -75,7 +74,7 @@ var <em>request</em> = objectStore.add(<em>value</em>, <em>key</em>);
       <td>This {{domxref("IDBObjectStore")}}'s transaction is inactive.</td>
     </tr>
     <tr>
-      <td><code><span style="line-height: normal;">DataError</span></code></td>
+      <td><code>DataError</code></td>
       <td>
         <p>Any of the following conditions apply:</p>
 
@@ -114,15 +113,14 @@ var <em>request</em> = objectStore.add(<em>value</em>, <em>key</em>);
   some data to an object store using <code>add()</code>. Note also the functions attached
   to transaction event handlers to report on the outcome of the transaction opening in the
   event of success or failure. For a full working example, see our <a
-    href="https://github.com/mdn/to-do-notifications/" style="line-height: 1.5;">To-do
-    Notifications</a><span style="line-height: 1.5;"> app (</span><a
-    href="https://mdn.github.io/to-do-notifications/" style="line-height: 1.5;">view
-    example live</a><span style="line-height: 1.5;">.)</span></p>
+    href="https://github.com/mdn/to-do-notifications/">To-do
+    Notifications</a> app (<a href="https://mdn.github.io/to-do-notifications/">view
+    example live</a>.)</p>
 
 <pre class="brush: js">// Let us open our database
-<span style="line-height: 1.5;">var DBOpenRequest = window.indexedDB.open("toDoList", 4);
+var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
-</span><span style="line-height: 1.5;">DBOpenRequest.onsuccess = function(event) {</span>
+DBOpenRequest.onsuccess = function(event) {
   note.innerHTML += '&lt;li&gt;Database initialised.&lt;/li&gt;';
 
   // store the result of opening the database in the db variable.
@@ -163,29 +161,11 @@ function addData() {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('IndexedDB', '#dom-idbobjectstore-add', 'add()')}}</td>
-      <td>{{Spec2('IndexedDB')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName("IndexedDB 2", "#dom-idbobjectstore-add", "add()")}}</td>
-      <td>{{Spec2("IndexedDB 2")}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.IDBObjectStore.add")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

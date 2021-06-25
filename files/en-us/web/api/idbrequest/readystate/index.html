@@ -10,6 +10,7 @@ tags:
 - Reference
 - Storage
 - readyState
+browser-compat: api.IDBRequest.readyState
 ---
 <p>{{ APIRef("IndexedDB") }}</p>
 
@@ -17,12 +18,9 @@ tags:
   <p>The <strong><code>readyState</code></strong> read-only property of the
     {{domxref("IDBRequest")}} interface returns the state of the request.</p>
 
-  <p><span style="line-height: 1.5;">Every request starts in the </span><code
-      style="font-style: normal; line-height: 1.5;">pending</code><span
-      style="line-height: 1.5;"> state. The state changes to </span><code
-      style="font-style: normal; line-height: 1.5;">done</code><span
-      style="line-height: 1.5;"> when the request completes successfully or when an error
-      occurs.</span></p>
+  <p>>Every request starts in the <code>pending</code> state. The state changes to
+    <code>done</code> when the request completes successfully or when an error
+      occurs.</p>
 
   <p>{{AvailableInWorkers}}</p>
 </div>
@@ -61,14 +59,12 @@ tags:
 
 <p>The following example requests a given record title, <code>onsuccess</code> gets the
   associated record from the {{domxref("IDBObjectStore")}} (made available
-  as <code>objectStoreTitleRequest.result</code><span style="line-height: 1.5;">), updates
+  as <code>objectStoreTitleRequest.result</code>), updates
     one property of the record, and then puts the updated record back into the object
     store in another request. The <code>readyState</code> of the 2nd request is logged to
-    the developer console. For a full working example, see our </span><a
-    href="https://github.com/mdn/to-do-notifications/" style="line-height: 1.5;">To-do
-    Notifications</a><span style="line-height: 1.5;"> app (</span><a
-    href="https://mdn.github.io/to-do-notifications/" style="line-height: 1.5;">view
-    example live</a><span style="line-height: 1.5;">.)</span></p>
+    the developer console. For a full working example, see our 
+    <a href="https://github.com/mdn/to-do-notifications/">To-do Notifications</a> app
+    (<a href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</p>
 
 <pre class="brush: js">var title = "Walk dog";
 
@@ -101,29 +97,11 @@ objectStoreTitleRequest.onsuccess = function() {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('IndexedDB', '#dom-idbrequest-readystate', 'readyState')}}</td>
-      <td>{{Spec2('IndexedDB')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName("IndexedDB 2", "#dom-idbrequest-readystate", "readyState")}}</td>
-      <td>{{Spec2("IndexedDB 2")}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.IDBRequest.readyState")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

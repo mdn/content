@@ -9,7 +9,8 @@ tags:
 - HTTP
 - Reference
 - document-domain
-- header
+- Header
+browser-compat: http.headers.Feature-Policy.document-domain
 ---
 <div>{{HTTPSidebar}} {{SeeCompatTable}}</div>
 
@@ -21,46 +22,29 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: html">Feature-Policy: document-domain &lt;allowlist&gt;;</pre>
+<pre class="brush: http">Feature-Policy: document-domain &lt;allowlist&gt;;</pre>
 
 <dl>
   <dt>&lt;allowlist&gt;</dt>
-  <dd>{{page("Web/HTTP/Feature_Policy/Using_Feature_Policy", "allowlist")}}</dd>
+  <dd>A list of origins for which the feature is allowed. See <a href="/en-US/docs/Web/HTTP/Headers/Feature-Policy#syntax"><code>Feature-Policy</code></a>.</dd>
 </dl>
 
 <h2 id="Default_policy">Default policy</h2>
 
-<p>The default value is <code>*</code>.</p>
+<p>Default allow list for <code>document-domain</code> is <code>*</code>.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', '#document-domain-feature', 'document-domain')}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+<p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("http.headers.Feature-Policy.document-domain")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
   <li>{{HTTPHeader("Feature-Policy")}} header</li>
   <li><a href="/en-US/docs/Web/HTTP/Feature_Policy">Feature Policy</a></li>
-  <li><a href="/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy">Using Feature
-      Policy</a></li>
+  <li><a href="/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy">Using Feature Policy</a></li>
 </ul>

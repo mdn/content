@@ -12,7 +12,7 @@ tags:
 
 <p>This example shows you how to create a WebSocket API server using Oracle Java.<br>
  <br>
- Although other server-side languages can be used to create a WebSocket server, this example uses Oracle Java to simplify the example code<span style="line-height: 1.5;">.</span></p>
+ Although other server-side languages can be used to create a WebSocket server, this example uses Oracle Java to simplify the example code.</p>
 
 <p>This server conforms to <a href="https://datatracker.ietf.org/doc/html/rfc6455">RFC 6455</a>, so it only handles connections from Chrome version 16, Firefox 11, IE 10 and higher.</p>
 
@@ -28,7 +28,7 @@ tags:
 
 <p>When you instantiate the ServerSocket class, it is bound to the port number you specified by the <em>port</em> argument.</p>
 
-<p><span style="line-height: 1.572;">Here's an implementation split into parts:</span></p>
+<p>Here's an implementation split into parts:</p>
 
 <pre class="brush: java">import java.io.IOException;
 import java.io.InputStream;
@@ -65,7 +65,7 @@ public class WebSocket {
 
 <p>Methods:</p>
 
-<p>write<code>(byte[] b, int off, int len)</code></p>
+<pre class="brush: java">write(byte[] b, int off, int len)</pre>
 
 <p>Writes <em><code>len</code></em> bytes from the specified byte array starting at offset <em><code>off</code></em> to this output stream.</p>
 
@@ -73,7 +73,7 @@ public class WebSocket {
 
 <p>Methods:</p>
 
-<p><span class="brush: cpp" style="line-height: 1.572;">read</span><code>(byte[] b, int off, int len)</code></p>
+<pre class="brush: cpp">read(byte[] b, int off, int len)</pre>
 
 <p>Reads up to <em>len</em> bytes of data from the input stream into an array of bytes. </p>
 
@@ -120,24 +120,7 @@ public class WebSocket {
 
 <p>If we send "abcdef", we get these bytes:</p>
 
-<table>
- <tbody>
-  <tr>
-   <td>129</td>
-   <td>134</td>
-   <td>167</td>
-   <td>225</td>
-   <td>225</td>
-   <td>210</td>
-   <td>198</td>
-   <td>131</td>
-   <td>130</td>
-   <td>182</td>
-   <td>194</td>
-   <td>135</td>
-  </tr>
- </tbody>
-</table>
+<pre>129 134 167 225 225 210 198 131 130 182 194 135</pre>
 
 <p>- 129:</p>
 
@@ -163,7 +146,7 @@ public class WebSocket {
 </table>
 
 <p>FIN: You can send your message in frames, but now keep things simple.<br>
- <span style="line-height: 1.572;">Opcode </span><em>0x1</em><span style="line-height: 1.572;"> means this is a text. </span><a href="https://datatracker.ietf.org/doc/html/rfc6455#section-5.2" style="line-height: 1.572;">Full list of Opcodes</a></p>
+ Opcode <em>0x1</em> means this is a text. <a href="https://datatracker.ietf.org/doc/html/rfc6455#section-5.2">Full list of Opcodes</a></p>
 
 <p>- 134:</p>
 
@@ -175,7 +158,7 @@ public class WebSocket {
 
 <p>- 167, 225, 225 and 210 are the bytes of the key to decode. It changes every time.</p>
 
-<p>- The remaining encoded bytes are the <span style="line-height: 1.572;">message.</span></p>
+<p>- The remaining encoded bytes are the message.</p>
 
 <h3 id="Decoding_algorithm">Decoding algorithm</h3>
 

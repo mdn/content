@@ -13,6 +13,8 @@ tags:
   - Timers
   - WindowOrWorkerGlobalScope
   - setTimeout
+  - Polyfill
+browser-compat: api.WindowOrWorkerGlobalScope.setTimeout
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
@@ -335,38 +337,16 @@ function clearAlert() {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th>Specification</th>
-      <th>Status</th>
-      <th>Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', 'webappapis.html#dom-settimeout',
-        'WindowOrWorkerGlobalScope.setTimeout()')}}</td>
-      <td>{{Spec2("HTML WHATWG")}}</td>
-      <td>Method moved to the <code>WindowOrWorkerGlobalScope</code> mixin in the latest
-        spec.</td>
-    </tr>
-    <tr>
-      <td>{{SpecName("HTML WHATWG", "webappapis.html#dom-settimeout",
-        "WindowTimers.setTimeout()")}}</td>
-      <td>{{Spec2("HTML WHATWG")}}</td>
-      <td>Initial definition (DOM Level 0)</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.WindowOrWorkerGlobalScope.setTimeout")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
+  <li>A polyfill of <code>setTimeout</code> which allows passing arguments to the callback is available in <a href="https://github.com/zloirock/core-js#settimeout-and-setinterval"><code>core-js</code></a></li>
   <li>{{domxref("WindowOrWorkerGlobalScope.clearTimeout")}}</li>
   <li>{{domxref("WindowOrWorkerGlobalScope.setInterval")}}</li>
   <li>{{domxref("window.requestAnimationFrame")}}</li>

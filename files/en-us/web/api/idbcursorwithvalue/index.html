@@ -10,10 +10,11 @@ tags:
   - Interface
   - Reference
   - Storage
+browser-compat: api.IDBCursorWithValue
 ---
 <p>{{APIRef("IndexedDB")}}</p>
 
-<p>The <strong><code>IDBCursorWithValue</code></strong> interface of the <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB API</a> represents a <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB#gloss_cursor">cursor</a> for traversing or iterating over multiple records in a database. It is the same as the {{domxref("IDBCursor")}}, except that it includes the <code>value</code> property.</p>
+<p>The <strong><code>IDBCursorWithValue</code></strong> interface of the <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB API</a> represents a <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#gloss_cursor">cursor</a> for traversing or iterating over multiple records in a database. It is the same as the {{domxref("IDBCursor")}}, except that it includes the <code>value</code> property.</p>
 
 <p>The cursor has a source that indicates which index or object store it is iterating over. It has a position within the range, and moves in a direction that is increasing or decreasing in the order of record keys. The cursor enables an application to asynchronously process all the records in the cursor's range.</p>
 
@@ -38,9 +39,9 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<p>In this example we create a transaction, retrieve an object store, then use a cursor to iterate through all the records in the object store. T<span style="line-height: 1.5;">he cursor does not require us to select the data based on a key; we can just grab all of it. Also note that in each iteration of the loop, you can grab data from the current record under the cursor object using </span><code style="font-style: normal; line-height: 1.5;">cursor.value.foo</code><span style="line-height: 1.5;">. For a complete working example, see our <a href="https://github.com/mdn/IDBcursor-example/">IDBCursor example</a></span><span style="line-height: 1.5;"> (</span><a href="https://mdn.github.io/IDBcursor-example/" style="line-height: 1.5;">view example live</a><span style="line-height: 1.5;">.)</span></p>
+<p>In this example we create a transaction, retrieve an object store, then use a cursor to iterate through all the records in the object store. The cursor does not require us to select the data based on a key; we can just grab all of it. Also note that in each iteration of the loop, you can grab data from the current record under the cursor object using <code>cursor.value.foo</code>. For a complete working example, see our <a href="https://github.com/mdn/IDBcursor-example/">IDBCursor example</a> (<a href="https://mdn.github.io/IDBcursor-example/">view example live</a>.)</p>
 
-<pre class="brush: js" style="font-size: 14px;"><span style="line-height: 1.5;">function displayData() {</span>
+<pre class="brush: js">function displayData() {
   var transaction = db.transaction(['rushAlbumList'], "readonly");
   var objectStore = transaction.objectStore('rushAlbumList');
 
@@ -60,29 +61,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB', '#idbcursorwithvalue', 'IDBCursorWithValue')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("IndexedDB 2", "#idbcursorwithvalue", "IDBCursorWithValue")}}</td>
-   <td>{{Spec2("IndexedDB 2")}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.IDBCursorWithValue")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -2,17 +2,19 @@
 title: WindowOrWorkerGlobalScope.setInterval()
 slug: Web/API/WindowOrWorkerGlobalScope/setInterval
 tags:
-- API
-- Gecko
-- HTML DOM
-- Intervals
-- JavaScript timers
-- MakeBrowserAgnostic
-- Method
-- NeedsMarkupWork
-- Timers
-- WindowOrWorkerGlobalScope
-- setInterval
+  - API
+  - Gecko
+  - HTML DOM
+  - Intervals
+  - JavaScript timers
+  - MakeBrowserAgnostic
+  - Method
+  - NeedsMarkupWork
+  - Timers
+  - WindowOrWorkerGlobalScope
+  - setInterval
+  - Polyfill
+browser-compat: api.WindowOrWorkerGlobalScope.setInterval
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
@@ -39,7 +41,7 @@ var <em>intervalID</em> = <em>scope</em>.setInterval(function[, delay]);
   <dt><code>code</code></dt>
   <dd>An optional syntax allows you to include a string instead of a function, which is
     compiled and executed every <code>delay</code> milliseconds. This syntax is <em>not
-      recommended</em> for the same reasons that make using {{jsxref("eval", "eval()")}} a
+      recommended</em> for the same reasons that make using {{jsxref("Global_Objects/eval", "eval()")}} a
     security risk.</dd>
   <dt><code>delay</code>{{optional_inline}}</dt>
   <dd>The time, in milliseconds (thousandths of a second), the timer should delay in
@@ -54,7 +56,7 @@ var <em>intervalID</em> = <em>scope</em>.setInterval(function[, delay]);
   <p><strong>Note</strong>: Passing additional arguments to <code>setInterval()</code> in
     the first syntax does not work in Internet Explorer 9 and earlier. If you want to
     enable this functionality on that browser, you must use a polyfill (see the <a
-      href="#Callback_arguments">Callback arguments</a> section).</p>
+      href="#callback_arguments">Callback arguments</a> section).</p>
 </div>
 
 <h3 id="Return_value">Return value</h3>
@@ -137,7 +139,7 @@ function myCallback(a, b)
 <h3 id="Example_3_Typewriter_simulation">Example 3: Typewriter simulation</h3>
 
 <p>The following example simulates typewriter by first clearing and then slowly
-  typing content into the <a href="/en-US/docs/DOM/NodeList"><code>NodeList</code></a>
+  typing content into the <a href="/en-US/docs/Web/API/NodeList"><code>NodeList</code></a>
   that matches a specified group of selectors.</p>
 
 <pre class="brush:html">&lt;!DOCTYPE html&gt;
@@ -298,7 +300,7 @@ Vivamus blandit massa ut metus mattis in fringilla lectus imperdiet. Proin ac an
 &lt;/html&gt;</pre>
 
 <p><a href="/files/3997/typewriter.html">View this demo in action</a>. See also: <a
-    href="/en-US/docs/DOM/window.clearInterval"><code>clearInterval()</code></a>.</p>
+    href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval"><code>clearInterval()</code></a>.</p>
 
 <h2 id="Callback_arguments">Callback arguments</h2>
 
@@ -364,15 +366,14 @@ if (document.all &amp;&amp; !window.setInterval.isPolyfill) {
 <p>Starting in Gecko 5.0 {{geckoRelease("5.0")}}, intervals are clamped to fire no more
   often than once per second in inactive tabs.</p>
 
-<h2 id="The_this_problem">The "<a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/this"><code>this</code></a>"
-  problem</h2>
+
+<h2 id="The_this_problem">The "this" problem</h2>
 
 <p>When you pass a method to <code>setInterval()</code> or any other function, it is
   invoked with the wrong <a
     href="/en-US/docs/Web/JavaScript/Reference/Operators/this"><code>this</code></a>
   value. This problem is explained in detail in the <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/this#As_an_object_method">JavaScript
+    href="/en-US/docs/Web/JavaScript/Reference/Operators/this#as_an_object_method">JavaScript
     reference</a>.</p>
 
 <h3 id="Explanation">Explanation</h3>
@@ -412,7 +413,7 @@ setTimeout.call(myArray, myArray.myMethod, 2500, 2); // same error
 <p>A possible way to solve the "<code>this</code>" problem is to replace the two native
   <code>setTimeout()</code> or <code>setInterval()</code> global functions with two
   <em>non-native</em> ones that enable their invocation through the <a
-    href="/en-US/docs/JavaScript/Reference/Global_Objects/Function/call"><code>Function.prototype.call</code></a>
+    href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call"><code>Function.prototype.call</code></a>
   method. The following example shows a possible replacement:</p>
 
 <pre class="brush:js">// Enable the passage of the 'this' object through the JavaScript timers
@@ -436,7 +437,7 @@ window.setInterval = function (vCallback, nDelay /*, argumentToPass1, argumentTo
 <div class="note">These two replacements also enable the HTML5 standard passage of
   arbitrary arguments to the callback functions of timers in IE. So they can be used as
   <em>non-standard-compliant</em> polyfills also. See the <a
-    href="#Callback_arguments">callback arguments paragraph</a> for a
+    href="#callback_arguments">callback arguments paragraph</a> for a
   <em>standard-compliant</em> polyfill.</div>
 
 <p>New feature test:</p>
@@ -480,17 +481,6 @@ setTimeout.call(myArray, myArray.myMethod, 2500, 2); // prints "two" after 2,5 s
     problem</a> for details). The following code is also <a
     href="https://github.com/madmurphy/minidaemon.js">available on GitHub</a>.</p>
 
-<div class="note">For a more complex but still modular version of it
-  (<code><em>Daemon</em></code>) see <a
-    href="/en-US/Add-ons/Code_snippets/Timers/Daemons">JavaScript Daemons Management</a>.
-  This more complex version is nothing but a big and scalable collection of methods for
-  the <code><em>Daemon</em></code> constructor. However, the <code><em>Daemon</em></code>
-  constructor itself is nothing but a clone of <code><em>MiniDaemon</em></code> with an
-  added support for <em>init</em> and <em>onstart</em> functions declarable during the
-  instantiation of the <code><em>daemon</em></code>. <strong>So the
-    <code><em>MiniDaemon</em></code> framework remains the recommended way for simple
-    animations</strong>, because <code><em>Daemon</em></code> without its collection of
-  methods is essentially a clone of it.</div>
 
 <h3 id="minidaemon.js">minidaemon.js</h3>
 
@@ -595,7 +585,7 @@ MiniDaemon.prototype.start = function (bReverse) {
       arguments</strong>: <em>index</em> (the iterative index of each invocation),
     <em>length</em> (the number of total invocations assigned to the <em>daemon</em> -
     finite or <a
-      href="/en-US/docs/JavaScript/Reference/Global_Objects/Infinity"><code>Infinity</code></a>)
+      href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity"><code>Infinity</code></a>)
     and <em>backwards</em> (a boolean expressing whether the <em>index</em> is increasing
     or decreasing). It is something like <em>callback</em>.call(<em>thisObject</em>,
     <em>index</em>, <em>length</em>, <em>backwards</em>). <strong>If the callback function
@@ -622,7 +612,7 @@ MiniDaemon.prototype.start = function (bReverse) {
   <dd>The function that is repeatedly invoked (read/write). It is called with three
     arguments: <em>index</em> (the iterative index of each invocation), <em>length</em>
     (the number of total invocations assigned to the daemon - finite or <a
-      href="/en-US/docs/JavaScript/Reference/Global_Objects/Infinity"><code>Infinity</code></a>)
+      href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity"><code>Infinity</code></a>)
     and backwards (a boolean expressing whether the <em>index</em> is decreasing or not) –
     see above. If the <code>myDaemon.task</code> function returns a <code>false</code>
     value the <em>daemon</em> is paused.</dd>
@@ -759,45 +749,18 @@ MiniDaemon.prototype.start = function (bReverse) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th>Specification</th>
-      <th>Status</th>
-      <th>Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', 'webappapis.html#dom-setinterval',
-        'WindowOrWorkerGlobalScope.setInterval()')}}</td>
-      <td>{{Spec2("HTML WHATWG")}}</td>
-      <td>Method moved to the <code>WindowOrWorkerGlobalScope</code> mixin in the latest
-        spec.</td>
-    </tr>
-    <tr>
-      <td>{{SpecName("HTML WHATWG", "webappapis.html#dom-setinterval",
-        "WindowTimers.setInterval()")}}</td>
-      <td>{{Spec2("HTML WHATWG")}}</td>
-      <td>Initial definition (DOM Level 0)</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.WindowOrWorkerGlobalScope.setInterval")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/Add-ons/Code_snippets/Timers">JavaScript timers</a></li>
+  <li>A polyfill of <code>setInterval</code> which allows passing arguments to the callback is available in <a href="https://github.com/zloirock/core-js#settimeout-and-setinterval"><code>core-js</code></a></li>
   <li>{{domxref("WindowOrWorkerGlobalScope.setTimeout")}}</li>
   <li>{{domxref("WindowOrWorkerGlobalScope.clearTimeout")}}</li>
   <li>{{domxref("WindowOrWorkerGlobalScope.clearInterval")}}</li>
   <li>{{domxref("window.requestAnimationFrame")}}</li>
-  <li><a href="/en-US/Add-ons/Code_snippets/Timers/Daemons"><em>Daemons</em>
-      management</a></li>
 </ul>
-
-<div id="gtx-trans" style="position: absolute; left: 164px; top: 272px;">
-  <div class="gtx-trans-icon"></div>
-</div>

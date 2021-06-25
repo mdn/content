@@ -2,12 +2,13 @@
 title: SubtleCrypto.generateKey()
 slug: Web/API/SubtleCrypto/generateKey
 tags:
-- API
-- Method
-- Reference
-- SubtleCrypto
-- Web Crypto API
-- generateKey
+  - API
+  - Method
+  - Reference
+  - SubtleCrypto
+  - Web Crypto API
+  - generateKey
+browser-compat: api.SubtleCrypto.generateKey
 ---
 <p>{{APIRef("Web Crypto API")}}{{SecureContext_header}}</p>
 
@@ -17,7 +18,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js">const <em>result</em> = <em>crypto.subtle</em><code>.generateKey(<em>algorithm</em>, <em>extractable</em>, <em>keyUsages</em>)</code>;
+<pre class="brush: js">const result = crypto.subtle.generateKey(algorithm, extractable, keyUsages);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -28,22 +29,22 @@ tags:
 
     <ul>
       <li>For <a
-          href="/en-US/docs/Web/API/SubtleCrypto/sign#RSASSA-PKCS1-v1_5">RSASSA-PKCS1-v1_5</a>, <a
-          href="/en-US/docs/Web/API/SubtleCrypto/sign#RSA-PSS">RSA-PSS</a>, or <a
-          href="/en-US/docs/Web/API/SubtleCrypto/encrypt#RSA-OAEP">RSA-OAEP</a>: pass an
+          href="/en-US/docs/Web/API/SubtleCrypto/sign#rsassa-pkcs1-v1_5">RSASSA-PKCS1-v1_5</a>, <a
+          href="/en-US/docs/Web/API/SubtleCrypto/sign#rsa-pss">RSA-PSS</a>, or <a
+          href="/en-US/docs/Web/API/SubtleCrypto/encrypt#rsa-oaep">RSA-OAEP</a>: pass an
         <code><a href="/en-US/docs/Web/API/RsaHashedKeyGenParams">RsaHashedKeyGenParams</a></code>
         object.</li>
-      <li>For <a href="/en-US/docs/Web/API/SubtleCrypto/sign#ECDSA">ECDSA</a> or <a
-          href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#ECDH">ECDH</a>: pass
+      <li>For <a href="/en-US/docs/Web/API/SubtleCrypto/sign#ecdsa">ECDSA</a> or <a
+          href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#ecdh">ECDH</a>: pass
         an <code><a href="/en-US/docs/Web/API/EcKeyGenParams">EcKeyGenParams</a></code>
         object.</li>
-      <li>For <a href="/en-US/docs/Web/API/SubtleCrypto/sign#HMAC">HMAC</a>: pass an
+      <li>For <a href="/en-US/docs/Web/API/SubtleCrypto/sign#hmac">HMAC</a>: pass an
         <code><a href="/en-US/docs/Web/API/HmacKeyGenParams">HmacKeyGenParams</a></code>
         object.</li>
-      <li>For <a href="/en-US/docs/Web/API/SubtleCrypto/encrypt#AES-CTR">AES-CTR</a>, <a
-          href="/en-US/docs/Web/API/SubtleCrypto/encrypt#AES-CBC">AES-CBC</a>, <a
-          href="/en-US/docs/Web/API/SubtleCrypto/encrypt#AES-GCM">AES-GCM</a>, or <a
-          href="/en-US/docs/Web/API/SubtleCrypto/encrypt#AES-KW">AES-KW</a>: pass an
+      <li>For <a href="/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-ctr">AES-CTR</a>, <a
+          href="/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-cbc">AES-CBC</a>, <a
+          href="/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-gcm">AES-GCM</a>, or <a
+          href="/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-kw">AES-KW</a>: pass an
         <code><a href="/en-US/docs/Web/API/AesKeyGenParams">AesKeyGenParams</a></code>
         object.</li>
     </ul>
@@ -167,25 +168,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{ SpecName('Web Crypto API', '#dfn-SubtleCrypto-method-generateKey',
-        'SubtleCrypto.generateKey()') }}</td>
-      <td>{{ Spec2('Web Crypto API') }}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.SubtleCrypto.generateKey")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

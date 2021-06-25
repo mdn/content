@@ -202,17 +202,17 @@ tags:
 
 <p><strong>In the example below, try changing the margin values to see how the box is pushed around due to the margin creating or removing space (if it is a negative margin) between this element and the containing element.</strong></p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/box-model/margin.html", '100%', 1000)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/box-model/margin.html", '100%', 700)}} </p>
 
 <h4 id="Margin_collapsing">Margin collapsing</h4>
 
-<p>A key thing to understand about margins is the concept of margin collapsing. If you have two elements whose margins touch, and both margins are positive, those margins will combine to become one margin, which is the size of the largest individual margin. If one or both margins are negative, the amount of negative value will subtract from the total.</p>
+<p>A key thing to understand about margins is the concept of margin collapsing. If you have two elements whose margins touch, and both margins are positive, those margins will combine to become one margin, which is the size of the largest individual margin. If one margin is negative, the amount of negative value will subtract from the total. Where both are negative, the margins will collapse and the largest value will be used.</p>
 
 <p>In the example below, we have two paragraphs. The top paragraph has a <code>margin-bottom</code> of 50 pixels. The second paragraph has a <code>margin-top</code> of 30 pixels. The margins have collapsed together so the actual margin between the boxes is 50 pixels and not the total of the two margins.</p>
 
 <p><strong>You can test this by setting the <code>margin-top</code> of paragraph two to 0. The visible margin between the two paragraphs will not change — it retains the 50 pixels set in the <code>bottom-margin</code> of paragraph one. If you set it to -10px, you'll see that the overall margin becomes 40px — it subtracts from the 50px.</strong></p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/box-model/margin-collapse.html", '100%', 1000)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/box-model/margin-collapse.html", '100%', 700)}} </p>
 
 <p>There are a number of rules that dictate when margins do and do not collapse. For further information see the detailed page on <a href="/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing">mastering margin collapsing</a>. The main thing to remember for now is that margin collapsing is a thing that happens. If you are creating space with margins and don't get the space you expect, this is probably what is happening.</p>
 
@@ -260,13 +260,13 @@ tags:
 
 <p><strong>In the example below we have used various shorthands and longhands to create borders. Have a play around with the different properties to check that you understand how they work. The MDN pages for the border properties give you information about the different styles of border you can choose from.</strong></p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/box-model/border.html", '100%', 1000)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/box-model/border.html", '100%', 700)}} </p>
 
 <h3 id="Padding">Padding</h3>
 
 <p>The padding sits between the border and the content area. Unlike margins you cannot have negative amounts of padding, so the value must be 0 or a positive value. Any background applied to your element will display behind the padding, and it is typically used to push the content away from the border.</p>
 
-<p>We can control the padding on each side of an element individually using the {{cssxref("padding")}} property, or each side individually using the equivalent longhand properties:</p>
+<p>We can control the padding on all sides of an element using the {{cssxref("padding")}} property, or on each side individually using the equivalent longhand properties:</p>
 
 <ul>
  <li>{{cssxref("padding-top")}}</li>
@@ -338,7 +338,7 @@ tags:
    <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators">Combinators</a></li>
   </ul>
  </li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/The_box_model">The box model</a></li>
+ <li>The box model [this article]</li>
  <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders">Backgrounds and borders</a></li>
  <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions">Handling different text directions</a></li>
  <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content">Overflowing content</a></li>

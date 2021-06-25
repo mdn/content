@@ -15,6 +15,7 @@ tags:
   - Reference
   - Video
   - start
+browser-compat: api.MediaRecorder.start
 ---
 <div>{{APIRef("MediaStream Recording")}}</div>
 
@@ -90,11 +91,8 @@ tags:
   <dt><code>SecurityError</code></dt>
   <dd>The {{domxref("MediaStream")}} is configured to disallow recording. This may be the
     case, for example, with sources obtained using {{domxref("MediaDevices.getUserMedia",
-    "getUserMedia()")}} when the user denies permission to use an input device.  This also
-    happens when a {{domxref("MediaStreamTrack")}} within the stream is marked as
-    {{domxref("MediaStreamTrack.isolated", "isolated")}} due to the
-    {{domxref("MediaStreamConstraints.peerIdentity", "peerIdentity")}} constraint on the
-    source stream. This exception may also be delivered as an {{event("error")}} event if
+    "getUserMedia()")}} when the user denies permission to use an input device. This
+    exception may also be delivered as an {{event("error")}} event if
     the security options for the source media change after recording begins.</dd>
   <dt><code>UnknownError</code></dt>
   <dd>Something else went wrong during the recording process.</dd>
@@ -113,25 +111,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName("MediaStream Recording", "#dom-mediarecorder-start",
-        "MediaRecorder.start()")}}</td>
-      <td>{{Spec2("MediaStream Recording")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.MediaRecorder.start")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

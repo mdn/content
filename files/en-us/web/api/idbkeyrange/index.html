@@ -9,6 +9,7 @@ tags:
   - Interface
   - Reference
   - Storage
+browser-compat: api.IDBKeyRange
 ---
 <p>{{APIRef("IndexedDB")}}</p>
 
@@ -121,7 +122,8 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<p>The following example illustrates how you'd use a key range. Here we declare a <code>keyRangeValue</code> as a range between values of "A" and "F". We open a transaction (using {{domxref("IDBTransaction")}}) and an object store, and open a Cursor with {{domxref("IDBObjectStore.openCursor")}}, declaring <code>keyRangeValue</code> as its optional key range value. This means that the cursor will only retrieve records with keys inside that range. This range includes the values "A" and "F", as we haven't declared that they should be open  bounds. If we used <span style="background-color: #fafbfc; font-family: consolas,monaco,andale mono,monospace; font-size: 1rem; line-height: 19px; white-space: pre;">IDBKeyRange.bound("A", "F", true, true);</span>, then the range would not include "A" and "F", only the values between them.</p>
+<p>The following example illustrates how you'd use a key range. Here we declare a <code>keyRangeValue</code> as a range between values of <code>"A"</code> and <code>"F"</code>. We open a transaction (using {{domxref("IDBTransaction")}}) and an object store, and open a cursor with {{domxref("IDBObjectStore.openCursor")}}, declaring <code>keyRangeValue</code> as its optional key range value. This means that the cursor will only retrieve records with keys inside that range. This range includes the values <code>"A"</code> and <code>"F"</code>, as we haven't declared that they should be open bounds.
+If we used <code>IDBKeyRange.bound("A", "F", true, true);</code>, then the range would not include <code>"A"</code> and <code>"F"</code>, only the values between them.</p>
 
 <div class="note">
 <p><strong>Note</strong>: For a more complete example allowing you to experiment with key range, have a look at our <a href="https://github.com/mdn/indexeddb-examples/tree/master/idbkeyrange">IDBKeyRange-example</a> repo (<a href="https://mdn.github.io/indexeddb-examples/idbkeyrange/">view the example live too</a>.)</p>
@@ -149,29 +151,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB', '#idbkeyrange', 'IDBKeyRange')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB 2', '#keyrange', 'IDBKeyRange')}}</td>
-   <td>{{Spec2('IndexedDB 2')}}</td>
-   <td>Adds <code>includes()</code>.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.IDBKeyRange")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

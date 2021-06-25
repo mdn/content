@@ -8,10 +8,11 @@ tags:
   - PasswordCredential
   - Reference
   - credential management
+browser-compat: api.PasswordCredential
 ---
 <p>{{SeeCompatTable}}{{APIRef("Credential Management API")}}{{securecontext_header}}</p>
 
-<p>The interface of the <a href="/en-US/docs/Web/API/Credential_Management_API">Credential Management API</a> provides information about a username/password pair. In supporting browsers an instance of this class may be passed in the <code>credential</code> member of the <code>init</code> object for global {{domxref('WindowOrWorkerGlobalScope.fetch')}}.</p>
+<p>The interface of the <a href="/en-US/docs/Web/API/Credential_Management_API">Credential Management API</a> provides information about a username/password pair. In supporting browsers an instance of this class may be passed in the <code>credential</code> member of the <code>init</code> object for global {{domxref('WindowOrWorkerGlobalScope.fetch')}}.</p>
 
 <div class="note">
 <p><strong>Note:</strong> This interface is restricted to top-level contexts and cannot be used from an {{HTMLElement("iframe")}}.</p>
@@ -30,10 +31,10 @@ tags:
 
 <dl>
  <dt>{{domxref("PasswordCredential.iconURL")}} {{readonlyinline}}{{securecontext_inline}}</dt>
- <dd>A {{domxref("USVString")}} containing a URL pointing to an image for an icon. This image is intended for display in a credential chooser. The URL must be accessible without authentication.</dd>
+ <dd>A {{domxref("USVString")}} containing a URL pointing to an image for an icon. This image is intended for display in a credential chooser. The URL must be accessible without authentication.</dd>
  <dt>{{domxref("PasswordCredential.name")}} {{readonlyinline}}{{securecontext_inline}}</dt>
  <dd>A {{domxref("USVString")}} containing a human-readable public name for display in a credential chooser.</dd>
- <dt>{{domxref("PasswordCredential.password")}} {{readonlyinline}}{{securecontext_inline}}</dt>
+ <dt>{{domxref("PasswordCredential.password")}}{{readonlyinline}}{{securecontext_inline}}</dt>
  <dd>A {{domxref("USVString")}} containing the password of the credential.</dd>
 </dl>
 
@@ -62,21 +63,8 @@ navigator.credentials.store(cred)
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Credential Management')}}</td>
-   <td>{{Spec2('Credential Management')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.PasswordCredential")}}</p>
+<p>{{Compat}}</p>

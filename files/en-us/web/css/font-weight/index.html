@@ -41,6 +41,7 @@ font-weight: 900;
 /* Global values */
 font-weight: inherit;
 font-weight: initial;
+font-weight: revert;
 font-weight: unset;
 </pre>
 
@@ -208,11 +209,10 @@ font-weight: unset;
 
 <p>For the example below to work, you'll need a browser that supports the CSS Fonts Level 4 syntax in which font-weight can be any number between 1 and 1000.</p>
 
-<div>{{EmbedLiveSample("variable-font-example", 1200, 180)}}</div>
+<div>{{EmbedLiveSample("Variable_fonts", 1200, 180)}}</div>
 
 <h4 id="HTML">HTML</h4>
 
-<div id="variable-font-example">
 <pre class="brush: html">&lt;header&gt;
     &lt;input type="range" id="weight" name="weight" min="1" max="1000" /&gt;
     &lt;label for="weight"&gt;Weight&lt;/label&gt;
@@ -294,7 +294,6 @@ weightInput.addEventListener('input', update);
 
 update();
 </pre>
-</div>
 
 <h2 id="Accessibility_concerns">Accessibility concerns</h2>
 
@@ -357,41 +356,9 @@ span {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Fonts', '#font-weight-prop', 'font-weight')}}</td>
-   <td>{{Spec2('CSS4 Fonts')}}</td>
-   <td>Defines <code>font-weight</code> to accept any numbers between 1 and 1000.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Fonts', '#font-weight-prop', 'font-weight')}}</td>
-   <td>{{Spec2('CSS3 Fonts')}}</td>
-   <td>No change.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'fonts.html#propdef-font-weight', 'font-weight')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>No change.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#font-weight', 'font-weight')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-<div class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
 
 <p>{{Compat}}</p>
 

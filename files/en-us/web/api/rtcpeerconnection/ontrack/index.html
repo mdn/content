@@ -9,11 +9,12 @@ tags:
 - Reference
 - WebRTC
 - ontrack
+browser-compat: api.RTCPeerConnection.ontrack
 ---
 <div>{{APIRef("WebRTC")}}</div>
 
 <p><span class="seoSummary">The {{domxref("RTCPeerConnection")}} property
-    <strong><code>ontrack</code></strong> is an {{domxref("EventHandler")}} which
+    <strong><code>ontrack</code></strong> is an {{event("Event_handlers", "event handler")}} which
     specifies a function to be called when the {{event("track")}} event occurs, indicating
     that a track has been added to the {{domxref("RTCPeerConnection")}}.</span> The
   function receives as input the event object, of type {{domxref("RTCTrackEvent")}}; this
@@ -56,27 +57,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('WebRTC 1.0', '#dom-rtcpeerconnection-ontrack',
-        'RTCPeerConnection.ontrack')}}</td>
-      <td>{{Spec2('WebRTC 1.0')}}</td>
-      <td>Initial specification.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCPeerConnection.ontrack")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

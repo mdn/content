@@ -9,12 +9,13 @@ tags:
 - Reference
 - Server-sent events
 - onerror
+browser-compat: api.EventSource.onerror
 ---
 <div>{{APIRef('WebSockets API')}}</div>
 
 
 <p>The <code><strong>onerror</strong></code> property of the {{domxref("EventSource")}}
-  interface is an {{domxref("EventHandler")}} called when an error occurs and the
+  interface is an {{event("Event_handlers", "event handler")}} called when an error occurs and the
   {{event("error")}} event is dispatched on an <code>EventSource</code> object.</p>
 
 <h2 id="Syntax">Syntax</h2>
@@ -35,25 +36,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', "comms.html#handler-eventsource-onerror", "onerror")}}
-      </td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.EventSource.onerror")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

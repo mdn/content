@@ -9,6 +9,10 @@ tags:
 
 <p>The <strong><code>transform</code></strong> attribute defines a list of transform definitions that are applied to an element and the element's children.</p>
 
+<p class="note"><strong>Note:</strong> As of SVG2, <code>transform</code> is a presentation attribute, meaning it can be used as a CSS property. However, be aware that there are some difference in syntax between the CSS property and the attribute. See the documentation for the CSS property {{cssxref('transform')}} for the specific syntax to use in that case.</p>
+
+<p>You can use this attribute with any SVG element.</p>
+
 <div id="topExample">
 <div class="hidden">
 <pre class="brush: css">html,body,svg { height:100% }</pre>
@@ -30,9 +34,7 @@ tags:
 <p>{{EmbedLiveSample('topExample', '100%', 200)}}</p>
 </div>
 
-<p class="note"><strong>Note:</strong> As of SVG2, <code>transform</code> is a presentation attribute, meaning it can be used as a CSS property. However, be aware that there are some difference in syntax between the CSS property and the attribute. See the documentation for the CSS property {{cssxref('transform')}} for the specific syntax to use in that case.</p>
-
-<p>As a presentation attribute, <strong><code>transform</code></strong> can be used by any element (in SVG 1.1, only these 16 elements were allowed to use it: {{SVGElement('a')}}, {{SVGElement('circle')}}, {{SVGElement('clipPath')}}, {{SVGElement('defs')}}, {{SVGElement('ellipse')}}, {{SVGElement('foreignObject')}}, {{SVGElement('g')}}, {{SVGElement('image')}}, {{SVGElement('line')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('switch')}}, {{SVGElement('text')}}, and {{SVGElement('use')}}).</p>
+<p>In SVG 1.1, only these 16 elements were allowed to use it: {{SVGElement('a')}}, {{SVGElement('circle')}}, {{SVGElement('clipPath')}}, {{SVGElement('defs')}}, {{SVGElement('ellipse')}}, {{SVGElement('foreignObject')}}, {{SVGElement('g')}}, {{SVGElement('image')}}, {{SVGElement('line')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('switch')}}, {{SVGElement('text')}}, and {{SVGElement('use')}}).</p>
 
 <p>Also, as a legacy from SVG 1.1, {{SVGElement('linearGradient')}} and {{SVGElement('radialGradient')}} support the <code>gradientTransform</code> attribute, and {{SVGElement('pattern')}} supports the <code>patternTransform</code> attribute, both of which act exactly like the <code>transform</code> attribute.</p>
 

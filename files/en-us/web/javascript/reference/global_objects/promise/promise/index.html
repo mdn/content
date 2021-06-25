@@ -2,10 +2,11 @@
 title: Promise() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Promise/Promise
 tags:
-- Constructor
-- JavaScript
-- Promise
-- Reference
+  - Constructor
+  - JavaScript
+  - Promise
+  - Reference
+  - Polyfill
 browser-compat: javascript.builtins.Promise.Promise
 ---
 <div>{{JSRef}}</div>
@@ -25,49 +26,50 @@ browser-compat: javascript.builtins.Promise.Promise
 
 <dl>
   <dt><code><var>executor</var></code></dt>
-  <dd>A {{jsxref("function")}} to be executed by the constructor, during the process of
+  <dd><p>A {{jsxref("function")}} to be executed by the constructor, during the process of
     constructing the new <code>Promise</code> object. The <code><var>executor</var></code>
     is custom code that ties an outcome to a promise. You, the programmer, write the
-    <code><var>executor</var></code>. The signature of this function is expected to be:
-    <pre class="brush: js">function(<var>resolutionFunc</var>, <var>rejectionFunc</var>){
-    // typically, some asynchronous operation.
-}
-</pre>
-    <p>At the time when the constructor generates the new <code>Promise</code> object, it
-      also generates a corresponding pair of functions for
-      <code><var>resolutionFunc</var></code> and <code><var>rejectionFunc</var></code>;
-      these are "tethered" to the <code>Promise</code> object. Therefore, the code within
-      the <code><var>executor</var></code> has the opportunity to perform some operation
-      and then reflect the operation's outcome (If the value is not another Promise
-      object) as either "fulfilled" or "rejected" by terminating with an invocation of
-      either the <code><var>resolutionFunc</var></code> or the
-      <code><var>rejectionFunc</var></code>, respectively.</p>
-    <p>The <code><var>executor</var></code> has no meaningful return value. It
-      communicates via the side-effect caused by <code><var>resolutionFunc</var></code> or
-      <code><var>rejectionFunc</var></code>. The side-effect is that the
-      <code>Promise</code> object becomes "resolved."</p>
-    <p>Typically, it works like this: The operation within
-      <code><var>executor</var></code> is asynchronous and provides a callback. The
-      callback is defined within the <code><var>executor</var></code> code. The callback
-      terminates by invoking <code><var>resolutionFunc</var></code>. The invocation of
-      <code><var>resolutionFunc</var></code> includes a <code>value</code> parameter. The
-      <code>value</code> is passed back to the tethered <code>Promise</code> object. The
-      <code>Promise</code> object (asynchronously) invokes any <code>.then()</code>
-      associated with it. The <code>value</code> received by <code>.then()</code> is
-      passed to the invocation of <code>handleFulfilled</code> as an input parameter (See
-      "Chained Promises" section).</p>
-    <p>The <code><var>executor</var></code> might also include a
-      <code>try{} catch()</code> block that invokes <code><var>rejectionFunc</var></code>
-      upon error.</p>
-    <p>The signatures of these two functions are simple, they accept a single parameter of
-      any type. Of course, the actual names of these functions can be whatever is desired,
-      i.e. they are named as the parameters of <code><var>executor</var></code>. Each
-      function is used by calling it when appropriate.</p>
-    <pre class="brush: js">resolutionFunc(value) // call on fulfilled
+    <code><var>executor</var></code>. Its signature is expected to be:</p>
+
+    <pre class="brush: js">
+function(<var>resolutionFunc</var>, <var>rejectionFunc</var>){
+  // typically, some asynchronous operation.
+}</pre>
+
+    <p><code><var>resolutionFunc</var></code> and <code><var>rejectionFunc</var></code> are also functions, and you can give them whatever actual names you want. Their signatures are simple: they accept a single parameter of any type.</p>
+
+    <pre class="brush: js">
+resolutionFunc(value) // call on resolved
 rejectionFunc(reason) // call on <em>rejected</em></pre>
 
-    <p>The returned <code>value</code> can be another promise object, in which case the
-      promise gets dynamically inserted into the chain.</p>
+    <p>The <code><var>resolutionFunc</var></code> <code>value</code> parameter can be another promise object, in which case the promise gets dynamically inserted into the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#chained_promises">promise chain</a>.</p>
+
+    About the <code><var>executor</var></code>, it’s important to understand the following:
+
+    <ul>
+      <li>The <code><var>executor</var></code> return value is ignored.</li>
+      <li>If an error is thrown in the <code><var>executor</var></code>, the promise is rejected.</li>
+    </ul>
+
+    So the mechanism by which the code within the <code><var>executor</var></code> has affect is as follows:
+
+    <ul>
+      <li>At the time when the constructor generates the new <code>Promise</code> object, it also generates a corresponding pair of functions for <code><var>resolutionFunc</var></code> and <code><var>rejectionFunc</var></code>; these are "tethered" to the <code>Promise</code> object.</li>
+      <li>The code within the <code><var>executor</var></code> has the opportunity to perform some operation and then reflect the operation's outcome (if the value is not another Promise object) as either "resolved" or "rejected", by terminating with an invocation of either the <code><var>resolutionFunc</var></code> or the <code><var>rejectionFunc</var></code>, respectively.</li>
+      <li>In other words, the code within the <code><var>executor</var></code> communicates via the side effect caused by <code><var>resolutionFunc</var></code> or <code><var>rejectionFunc</var></code>. The side effect is that the <code>Promise</code> object either becomes "resolved", or "rejected".</li>
+    </ul>
+
+    And so, given all the above, here’s a summary of the typical flow:
+
+    <ol>
+      <li>The operation within <code><var>executor</var></code> is asynchronous and provides a callback.</li>
+      <li>The callback is defined within the <code><var>executor</var></code> code.</li>
+      <li>The callback terminates by invoking <code><var>resolutionFunc</var></code>.</li>
+      <li>The invocation of <code><var>resolutionFunc</var></code> includes a <code>value</code> parameter.</li>
+      <li>The <code>value</code> is passed back to the tethered <code>Promise</code> object.</li>
+      <li>The <code>Promise</code> object (asynchronously) invokes any associated <code>.then(<var>handleResolved</var>)</code>.</li>
+      <li>The <code>value</code> received by <code>.then(<var>handleResolved</var>)</code> is passed to the invocation of <code><var>handleResolved</var></code> as an input parameter (see <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#chained_promises">Chained Promises</a>).</li>
+    </ol>
   </dd>
 </dl>
 
@@ -127,5 +129,6 @@ rejectionFunc(reason) // call on <em>rejected</em></pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
+  <li>A polyfill of <code>Promise</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-promise"><code>core-js</code></a></li>
   <li><a href="/en-US/docs/Web/JavaScript/Guide/Using_promises">Using Promises</a></li>
 </ul>

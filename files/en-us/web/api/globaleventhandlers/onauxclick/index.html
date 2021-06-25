@@ -9,11 +9,12 @@ tags:
 - Property
 - Reference
 - auxclick
+browser-compat: api.GlobalEventHandlers.onauxclick
 ---
 <div>{{ApiRef("HTML DOM")}} {{SeeCompatTable}}</div>
 
 <p>The <code><strong>onauxclick</strong></code> property of the
-  {{domxref("GlobalEventHandlers")}} mixin is an {{domxref("EventHandler")}} for
+  {{domxref("GlobalEventHandlers")}} mixin is an {{event("Event_handlers", "event handler")}} for
   processing {{event("auxclick")}} events.</p>
 
 <p>The <code>auxclick</code> event is raised when a non-primary button has been pressed on
@@ -84,24 +85,11 @@ button.onauxclick = function() {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('UI Events','#event-type-auxclick','onauxclick')}}</td>
-      <td>{{Spec2('UI Events')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.GlobalEventHandlers.onauxclick")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

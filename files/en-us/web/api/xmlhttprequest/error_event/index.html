@@ -8,6 +8,7 @@ tags:
   - ProgressEvent
   - Web
   - XMLHttpRequest
+browser-compat: api.XMLHttpRequest.error_event
 ---
 <div>{{APIRef}}</div>
 
@@ -97,7 +98,7 @@ function runXHR(url) {
 }
 
 xhrButtonSuccess.addEventListener('click', () =&gt; {
-    runXHR('https://mdn.mozillademos.org/files/16553/DgsZYJNXcAIPwzy.jpg');
+    runXHR('dgszyjnxcaipwzy.jpg');
 });
 
 xhrButtonError.addEventListener('click', () =&gt; {
@@ -105,7 +106,7 @@ xhrButtonError.addEventListener('click', () =&gt; {
 });
 
 xhrButtonAbort.addEventListener('click', () =&gt; {
-    runXHR('https://mdn.mozillademos.org/files/16553/DgsZYJNXcAIPwzy.jpg').abort();
+    runXHR('dgszyjnxcaipwzy.jpg').abort();
 });</pre>
 
 <h4 id="Result">Result</h4>
@@ -114,26 +115,11 @@ xhrButtonAbort.addEventListener('click', () =&gt; {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('XMLHttpRequest', '#event-xhr-error')}}</td>
-   <td>{{Spec2('XMLHttpRequest')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.XMLHttpRequest.error_event")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

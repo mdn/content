@@ -18,6 +18,7 @@ tags:
   - attachEvent
   - events
   - mselementresize
+browser-compat: api.EventTarget.addEventListener
 ---
 <p>{{APIRef("DOM Events")}}</p>
 
@@ -95,11 +96,9 @@ target.addEventListener(type, listener, useCapture, wantsUntrusted); // wantsUnt
   <dd>
     <div class="notecard note">
       <h4>Note</h4>
-      <p>For event listeners attached to the event target, the event is in the target phase, 
+      <p>For event listeners attached to the event target, the event is in the target phase,
         rather than the capturing and bubbling phases.
-        Events in the target phase will trigger all listeners on an element in the
-      order they were registered, regardless of the <var>useCapture</var>
-      parameter.</p>
+        Event listeners in the “capturing” phase are called before event listeners in any non-capturing phases.</p>
     </div>
 
     <div class="notecard note">
@@ -579,9 +578,8 @@ function nonePassiveHandler(event) {
 
 <h4 id="Specifying_this_using_bind">Specifying "this" using bind()</h4>
 
-<p>The {{jsxref("Function.prototype.bind()")}} method lets you specify the value that
-  should be used as <code>this</code> for all calls to a given function. This lets you
-  easily bypass problems where it's unclear what <code>this</code> will be, depending on
+<p>The {{jsxref("Function.prototype.bind()")}} method lets you establish a fixed 
+  <code>this</code> context for all subsequent calls — bypassing problems where it's unclear what <code>this</code> will be, depending on
   the context from which your function was called. Note, however, that you'll need to keep
   a reference to the listener around so you can remove it later.</p>
 
@@ -593,11 +591,16 @@ function nonePassiveHandler(event) {
   this.onclick1 = function(event) {
     console.log(this.name); // undefined, as |this| is the element
   };
+  
   this.onclick2 = function(event) {
     console.log(this.name); // 'Something Good', as |this| is bound to newly created object
   };
+  
+  // bind causes a fixed `this` context to be assigned to onclick2
+  this.onclick2 = this.onclick2.bind(this);
+  
   element.addEventListener('click', this.onclick1, false);
-  element.addEventListener('click', this.onclick2.bind(this), false); // Trick
+  element.addEventListener('click', this.onclick2, false); // Trick
 }
 const s = new Something(document.body);
 </pre>
@@ -1044,39 +1047,11 @@ window.addEventListener('scroll', function(event) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th>Specification</th>
-      <th>Status</th>
-      <th>Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName("DOM WHATWG", "#dom-eventtarget-addeventlistener",
-        "EventTarget.addEventListener()")}}</td>
-      <td>{{Spec2("DOM WHATWG")}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName("DOM4", "#dom-eventtarget-addeventlistener",
-        "EventTarget.addEventListener()")}}</td>
-      <td>{{Spec2("DOM4")}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName("DOM2 Events", "#Events-EventTarget-addEventListener",
-        "EventTarget.addEventListener()")}}</td>
-      <td>{{Spec2("DOM2 Events")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.EventTarget.addEventListener", 3)}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -12,6 +12,7 @@ tags:
 - SubmitEvent
 - submission
 - submitter
+browser-compat: api.SubmitEvent.submitter
 ---
 <p>{{APIRef("HTML DOM")}}</p>
 
@@ -28,9 +29,7 @@ tags:
 
 <p>An element, indicating the element that sent
   the {{domxref("HTMLFormElement.submit_event", "submit")}} event to the form. While this
-  is often an {{HTMLElement("input")}} element whose {{domxref("HTMLInputElement.type",
-  "type")}} or a {{HTMLElement("button")}} whose {{domxref("HTMLButtonElement.type",
-  "type")}} is <code>submit</code>, it could be some other element which has initiated a
+  is often an {{HTMLElement("input")}} element whose <a href="/en-US/docs/Web/HTML/Element/input#htmlattrdeftype"><code>type</code></a> is <code>submit</code> or a {{HTMLElement("button")}} element whose <a href="/en-US/docs/Web/HTML/Element/input#htmlattrdeftype"><code>type</code></a> is <code>submit</code>, it could be some other element which has initiated a
   submission process.</p>
 
 <p>If the submission was not triggered by a button of some kind, the value
@@ -42,25 +41,8 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('HTML WHATWG',
-        "form-control-infrastructure.html#dom-submitevent-submitter",
-        "SubmitEvent.submitter")}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.SubmitEvent.submitter")}}</p>
+<p>{{Compat}}</p>

@@ -8,12 +8,17 @@ tags:
   - Method
   - NeedsMarkupWork
   - Screen Orientation
+browser-compat: api.Screen.unlockOrientation
 ---
 <p>{{APIRef("Screen Orientation API")}}{{Deprecated_Header}}</p>
 
 <p>The <strong><code>Screen.unlockOrientation()</code></strong> method removes all the
-  previous screen locks set by the page/app. The {{DOMxRef("ScreenOrientation.unlock()")}}
-  method should be used instead.</p>
+  previous screen locks set by the page/app. The {{DOMxRef("ScreenOrientation.unlock()")}}
+  method should be used instead.</p>
+
+<div class="notecard warning">
+  This feature is deprecated and should be avoided. Use the {{DOMxRef("ScreenOrientation.unlock()")}} method instead.</p>
+</div>
 
 <div class="notecard note">
   <p><strong>Note:</strong> This method only works for installed Web apps or for Web pages
@@ -44,28 +49,13 @@ if (unlockOrientation()) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('Screen Orientation',
-        'published/20140220.html#extensions-to-the-screen-interface',
-        'lockOrientation()')}}</td>
-      <td>{{Spec2('Screen Orientation')}}</td>
-      <td>Initial definition (Not present in the draft anymore)</td>
-    </tr>
-  </tbody>
-</table>
+<p>This feature is not part of any specification. It is no longer on track to becoming a standard.</p>
+
+<p>Use {{domxref("ScreenOrientation.unlock()")}} instead.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Screen.unlockOrientation")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

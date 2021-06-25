@@ -57,7 +57,7 @@ tags:
 
 <h3 id="CSS">CSS</h3>
 
-<p>You can write tests for CSS features by testing for the existence of <em><a href="/en-US/docs/Web/API/ElementCSSInlineStyle/style">element.style.property</a></em> (e.g. <code>paragraph.style.transform</code>) in JavaScript.</p>
+<p>You can write tests for CSS features by testing for the existence of <em><a href="/en-US/docs/Web/API/HTMLElement/style">element.style.property</a></em> (e.g. <code>paragraph.style.transform</code>) in JavaScript.</p>
 
 <p>A classic example might be to test for <a href="/en-US/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a> support in a browser; for browsers that support the newest Flexbox spec, we could use a flexible and robust flex layout. For browsers that don't, we could use a floated layout that works OK, although it is slightly more brittle and hacky, and not as cool-looking.</p>
 
@@ -82,7 +82,7 @@ if (testElem.style.flex !== undefined &amp;&amp; testElem.style.flexFlow !== und
  </li>
 </ol>
 
-<p>Here we are grabbing a reference to the second <code>&lt;link&gt;</code> element, and creating a <code>&lt;div&gt;</code> element as part of our test. In our conditional statement, we test that the {{cssxref("flex")}} and {{cssxref("flex-flow")}} properties exist in the browser. Note how the JavaScript representations of those properties that are stored inside the {{domxref("ElementCSSInlineStyle/style", "HTMLElement.style")}} object use lower camel case, not hyphens, to separate the words.</p>
+<p>Here we are grabbing a reference to the second <code>&lt;link&gt;</code> element, and creating a <code>&lt;div&gt;</code> element as part of our test. In our conditional statement, we test that the {{cssxref("flex")}} and {{cssxref("flex-flow")}} properties exist in the browser. Note how the JavaScript representations of those properties that are stored inside the {{domxref("HTMLElement.style")}} object use lower camel case, not hyphens, to separate the words.</p>
 
 <div class="note">
 <p><strong>Note</strong>: If you have trouble getting this to work, you can compare it to our <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/css-feature-detect-finished.html">css-feature-detect-finished.html</a> code (see also the <a href="https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/feature-detection/css-feature-detect-finished.html">live version</a>).</p>

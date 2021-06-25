@@ -7,7 +7,7 @@ tags:
   - Function
   - JavaScript
   - Method
-  - polyfill
+  - Polyfill
 browser-compat: javascript.builtins.Function.bind
 ---
 <div>{{JSRef}}</div>
@@ -132,7 +132,7 @@ boundGetX();
 
 <p>These arguments (if any) follow the provided <code>this</code> value and are then
   inserted at the start of the arguments passed to the target function, followed by
-  whatever arguments are passed bound function at the time it is called.</p>
+  whatever arguments are passed to the bound function at the time it is called.</p>
 
 <pre class="brush: js">function list() {
   return Array.prototype.slice.call(arguments);
@@ -307,6 +307,7 @@ slice(arguments);
 <h2 id="See_also">See also</h2>
 
 <ul>
+  <li>A polyfill of <code>Function.prototype.bind</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-function"><code>core-js</code></a></li>
   <li>{{jsxref("Function.prototype.apply()")}}</li>
   <li>{{jsxref("Function.prototype.call()")}}</li>
   <li>{{jsxref("Functions", "Functions", "", 1)}}</li>

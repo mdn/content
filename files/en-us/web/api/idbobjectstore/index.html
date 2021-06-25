@@ -7,6 +7,7 @@ tags:
   - IndexedDB
   - Interface
   - Reference
+browser-compat: api.IDBObjectStore
 ---
 <p>{{APIRef("IndexedDB")}}</p>
 
@@ -58,7 +59,7 @@ tags:
  <dd>Opens an index from this object store after which it can, for example, be used to return a sequence of records sorted by that index using a cursor.</dd>
  <dt>{{domxref("IDBObjectStore.openCursor()")}}</dt>
  <dd>Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, returns a new {{domxref("IDBCursorWithValue")}} object. Used for iterating through an object store by primary key with a cursor.</dd>
- <dt>{{domxref("IDBObjectStore.openKeyCursor()")}}<span style="line-height: 1.5;"> </span></dt>
+ <dt>{{domxref("IDBObjectStore.openKeyCursor()")}}</dt>
  <dd>Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, returns a new {{domxref("IDBCursor")}}. Used for iterating through an object store with a key.</dd>
  <dt>{{domxref("IDBObjectStore.put()")}}</dt>
  <dd>Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, creates a <a href="https://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#structured-clone">structured clone</a> of the <code>value</code>, and stores the cloned value in the object store. This is for updating existing records in an object store when the transaction's mode is <code>readwrite</code>.</dd>
@@ -66,7 +67,7 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<p>This example shows a variety of different uses of object stores, from updating the data structure with {{domxref("IDBObjectStore.createIndex")}} inside an <code>onupgradeneeded</code> function, to adding a new item to our object store with {{domxref("IDBObjectStore.add")}}. For a full working example, see our <a href="https://github.com/mdn/to-do-notifications/" style="line-height: 1.5;">To-do Notifications</a><span style="line-height: 1.5;"> app (</span><a href="https://mdn.github.io/to-do-notifications/" style="line-height: 1.5;">view example live</a><span style="line-height: 1.5;">.)</span></p>
+<p>This example shows a variety of different uses of object stores, from updating the data structure with {{domxref("IDBObjectStore.createIndex")}} inside an <code>onupgradeneeded</code> function, to adding a new item to our object store with {{domxref("IDBObjectStore.add")}}. For a full working example, see our <a href="https://github.com/mdn/to-do-notifications/">To-do Notifications</a> app (<a href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</p>
 
 <pre class="brush: js">// Let us open our database
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
@@ -134,29 +135,11 @@ objectStoreRequest.onsuccess = function(event) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB', '#idbobjectstore', 'IDBObjectStore')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("IndexedDB 2", "#object-store-interface", "IDBObjectStore")}}</td>
-   <td>{{Spec2("IndexedDB 2")}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.IDBObjectStore")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -7,6 +7,7 @@ tags:
   - CSSRule
   - Interface
   - Reference
+browser-compat: api.CSSStyleDeclaration
 ---
 <div>{{APIRef("CSSOM")}}</div>
 
@@ -15,7 +16,7 @@ tags:
 <p>A <code>CSSStyleDeclaration</code> object can be exposed using three different APIs:</p>
 
 <ul>
- <li>Via {{DOMxRef("ElementCSSInlineStyle.style")}}, which deals with the inline styles of a single element (e.g., <code>&lt;div style="..."&gt;</code>).</li>
+ <li>Via {{DOMxRef("HTMLElement.style")}}, which deals with the inline styles of a single element (e.g., <code>&lt;div style="..."&gt;</code>).</li>
  <li>Via the {{DOMxRef("CSSStyleSheet")}} API. For example, <code>document.styleSheets[0].cssRules[0].style</code> returns a <code>CSSStyleDeclaration</code> object on the first CSS rule in the document's first stylesheet.</li>
  <li>Via {{DOMxRef("Window.getComputedStyle()")}}, which exposes the <code>CSSStyleDeclaration</code> object as a <strong>read-only</strong> interface.</li>
 </ul>
@@ -72,31 +73,11 @@ console.log(styleObj.cssText);</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSSOM', '#the-cssstyledeclaration-interface', 'CSSStyleDeclaration')}}</td>
-   <td>{{Spec2('CSSOM')}}</td>
-   <td>Merged the <strong>DOM Level 2 Style</strong> <code>CSS2Properties</code> interface into <code>CSSStyleDeclaration</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Style', 'css.html#CSS-CSSStyleDeclaration', 'CSSStyleDeclaration')}}</td>
-   <td>{{Spec2('DOM2 Style')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.CSSStyleDeclaration")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

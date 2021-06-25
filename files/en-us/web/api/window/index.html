@@ -12,6 +12,7 @@ tags:
   - global
   - global scope
   - scope
+browser-compat: api.Window
 ---
 <div>{{APIRef("DOM")}}</div>
 
@@ -347,12 +348,10 @@ tags:
 <p><em>This interface inherits event handlers from the {{domxref("EventTarget")}} interface and implements event handlers from {{domxref("WindowEventHandlers")}}.</em></p>
 
 <dl>
- <dt>{{domxref("Window.onappinstalled")}}</dt>
+ <dt>{{domxref("Window.onappinstalled")}} {{deprecated_inline}}</dt>
  <dd>Called when the page is installed as a webapp. See {{domxref("Window/appinstalled_event", "appinstalled")}} event.</dd>
- <dt>{{domxref("Window.onbeforeinstallprompt")}}</dt>
+ <dt>{{domxref("Window.onbeforeinstallprompt")}} {{non-standard_inline}}</dt>
  <dd>An event handler property dispatched before a user is prompted to save a web site to a home screen on mobile.</dd>
- <dt><code>Window.ondevicelight</code> {{deprecated_inline}}</dt>
- <dd>An event handler property for any ambient light levels changes (see {{domxref("DeviceLightEvent")}}).</dd>
  <dt>{{domxref("Window.ondevicemotion")}}</dt>
  <dd>Called if accelerometer detects a change (For mobile devices)</dd>
  <dt>{{domxref("Window.ondeviceorientation")}}</dt>
@@ -373,19 +372,19 @@ tags:
  <dd>An event handler for handled {{jsxref("Promise")}} rejection events.</dd>
  <dt><code>Window.onuserproximity</code> {{deprecated_inline}}</dt>
  <dd>An event handler property for user proximity events (see {{domxref("UserProximityEvent")}}).</dd>
- <dt>{{domxref("Window.onvrdisplayconnect")}}</dt>
+ <dt>{{domxref("Window.onvrdisplayconnect")}} {{deprecated_inline}}</dt>
  <dd>Represents an event handler that will run when a compatible VR device has been connected to the computer (when the {{event("vrdisplayconnected")}} event fires).</dd>
- <dt>{{domxref("Window.onvrdisplaydisconnect")}}</dt>
+ <dt>{{domxref("Window.onvrdisplaydisconnect")}} {{deprecated_inline}}</dt>
  <dd>Represents an event handler that will run when a compatible VR device has been disconnected from the computer (when the {{event("vrdisplaydisconnected")}} event fires).</dd>
- <dt>{{domxref("Window.onvrdisplayactivate")}}</dt>
+ <dt>{{domxref("Window.onvrdisplayactivate")}} {{deprecated_inline}}</dt>
  <dd>Represents an event handler that will run when a display is able to be presented to (when the {{event("vrdisplayactivate")}} event fires), for example if an HMD has been moved to bring it out of standby, or woken up by being put on.</dd>
- <dt>{{domxref("Window.onvrdisplaydeactivate")}}</dt>
+ <dt>{{domxref("Window.onvrdisplaydeactivate")}} {{deprecated_inline}}</dt>
  <dd>Represents an event handler that will run when a display can no longer be presented to (when the {{event("vrdisplaydeactivate")}} event fires), for example if an HMD has gone into standby or sleep mode due to a period of inactivity.</dd>
- <dt>{{domxref("Window.onvrdisplayblur")}}</dt>
+ <dt>{{domxref("Window.onvrdisplayblur")}} {{deprecated_inline}}</dt>
  <dd>Represents an event handler that will run when presentation to a display has been paused for some reason by the browser, OS, or VR hardware (when the {{event("vrdisplayblur")}} event fires) — for example, while the user is interacting with a system menu or browser, to prevent tracking or loss of experience.</dd>
- <dt>{{domxref("Window.onvrdisplayfocus")}}</dt>
+ <dt>{{domxref("Window.onvrdisplayfocus")}} {{deprecated_inline}}</dt>
  <dd>Represents an event handler that will run when presentation to a display has resumed after being blurred (when the {{event("vrdisplayfocus")}} event fires).</dd>
- <dt>{{domxref("Window.onvrdisplaypresentchange")}}</dt>
+ <dt>{{domxref("Window.onvrdisplaypresentchange")}} {{deprecated_inline}}</dt>
  <dd>represents an event handler that will run when the presenting state of a VR device changes — i.e. goes from presenting to not presenting, or vice versa (when the {{event("vrdisplaypresentchange")}} event fires).</dd>
 </dl>
 
@@ -431,7 +430,7 @@ tags:
  <dt>{{domxref("GlobalEventHandlers.onload")}}</dt>
  <dd>Called after all resources and the DOM are fully loaded. WILL NOT get called when the page is loaded from cache, such as with back button.</dd>
  <dt>{{domxref("WindowEventHandlers.onmessage")}}</dt>
- <dd>Is an {{domxref("EventHandler")}} representing the code to be called when the {{event("message")}} event is raised.</dd>
+ <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("message")}} event is raised.</dd>
  <dt>{{domxref("GlobalEventHandlers.onmousedown")}}</dt>
  <dd>Called when ANY mouse button is pressed.</dd>
  <dt>{{domxref("GlobalEventHandlers.onmousemove")}}</dt>
@@ -463,7 +462,7 @@ tags:
  <dt>{{domxref("GlobalEventHandlers.onselect")}}</dt>
  <dd>Called after text in an input field is selected</dd>
  <dt>{{domxref("GlobalEventHandlers.onselectionchange")}}</dt>
- <dd>Is an {{domxref("EventHandler")}} representing the code to be called when the {{event("selectionchange")}} event is raised.</dd>
+ <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("selectionchange")}} event is raised.</dd>
  <dt>{{domxref("WindowEventHandlers.onstorage")}}</dt>
  <dd>Called when there is a change in session storage or local storage. See {{event("storage")}} event</dd>
  <dt>{{domxref("GlobalEventHandlers.onsubmit")}}</dt>
@@ -696,19 +695,8 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#the-window-object', 'Window')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Window")}}</p>
+<p>{{Compat}}</p>

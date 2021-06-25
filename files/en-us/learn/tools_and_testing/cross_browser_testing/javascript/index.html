@@ -121,7 +121,7 @@ tags:
 
 <p>Make a local copy of our <a href="https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/broken-ajax.html">broken-ajax.html</a> example (see the <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/broken-ajax.html">source code</a> also).</p>
 
-<p>If you look at the console, you'll see the error message "<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body">Uncaught <span class="objectBox-stackTrace reps-custom-format">TypeError: <span class="objectBox objectBox-string">can't access property "length", heroes is undefined</span></span></span></span></span>", and the referenced line number is 49. If we look at the source code, the relevant code section is this:</p>
+<p>If you look at the console, you'll see the error message "Uncaught TypeError: can't access property "length", heroes is undefined", and the referenced line number is 49. If we look at the source code, the relevant code section is this:</p>
 
 <pre class="brush: js">function showHeroes(jsonObj) {
   let heroes = jsonObj['members'];
@@ -283,7 +283,7 @@ showHeroes(superHeroes);</pre>
   // Give the user a choice of static maps instead perhaps
 <span class="punctuation token">}</span></pre>
 
-<p>You could also write such a test for a CSS feature, for example by testing for the existence of <em><a href="/en-US/docs/Web/API/ElementCSSInlineStyle/style">element.style.property</a></em> (e.g. <code>paragraph.style.transform !== undefined</code>). But for both CSS and JavaScript, it is probably better to use an established feature detection library rather than writing your own all the time. Modernizr is the industry standard for feature detection tests.</p>
+<p>You could also write such a test for a CSS feature, for example by testing for the existence of <em><a href="/en-US/docs/Web/API/HTMLElement/style">element.style.property</a></em> (e.g. <code>paragraph.style.transform !== undefined</code>). But for both CSS and JavaScript, it is probably better to use an established feature detection library rather than writing your own all the time. Modernizr is the industry standard for feature detection tests.</p>
 
 <p>As a last point, don't confuse feature detection with <strong>browser sniffing</strong> (detecting what specific browser is accessing the site) — this is a terrible practice that should be discouraged at all costs. See {{anch("Using bad browser sniffing code")}}, later on, for more details.</p>
 

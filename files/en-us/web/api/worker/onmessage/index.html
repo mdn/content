@@ -9,10 +9,11 @@ tags:
   - Web Workers
   - Worker
   - onmessage
+browser-compat: api.Worker.onmessage
 ---
 <p>{{APIRef("Web Workers API")}}</p>
 
-<p>The <strong><code>onmessage</code></strong> property of the {{domxref("Worker")}} interface represents an {{domxref("EventHandler")}}, that is a function to be called when the {{event("message")}} event occurs. These events are of type {{domxref("MessageEvent")}} and will be called when the worker's parent receives a message (i.e. from the {{domxref("DedicatedWorkerGlobalScope.postMessage")}} method).</p>
+<p>The <strong><code>onmessage</code></strong> property of the {{domxref("Worker")}} interface represents an {{event("Event_handlers", "event handler")}}, that is a function to be called when the {{event("message")}} event occurs. These events are of type {{domxref("MessageEvent")}} and will be called when the worker's parent receives a message (i.e. from the {{domxref("DedicatedWorkerGlobalScope.postMessage")}} method).</p>
 
 <p>Note that deserializing the message sent by {{domxref("DedicatedWorkerGlobalScope.postMessage", "postMessage()")}} blocks the thread receiving it.</p>
 
@@ -56,24 +57,11 @@ myWorker.onmessage = function(e) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "#handler-worker-onmessage", "Worker.onmessage")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Worker.onmessage")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

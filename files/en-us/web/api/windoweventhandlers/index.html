@@ -8,6 +8,7 @@ tags:
   - Mixin
   - Reference
   - WindowEventHandlers
+browser-compat: api.WindowEventHandlers
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
@@ -23,37 +24,37 @@ tags:
 
 <dl>
  <dt>{{domxref("WindowEventHandlers.onafterprint")}}</dt>
- <dd>Is an {{domxref("EventHandler")}} representing the code to be called when the {{event("afterprint")}} event is raised.</dd>
+ <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("afterprint")}} event is raised.</dd>
  <dt>{{domxref("WindowEventHandlers.onbeforeprint")}}</dt>
- <dd>Is an {{domxref("EventHandler")}} representing the code to be called when the {{event("beforeprint")}} event is raised.</dd>
+ <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("beforeprint")}} event is raised.</dd>
  <dt>{{domxref("WindowEventHandlers.onbeforeunload")}}</dt>
- <dd>Is an {{domxref("EventHandler")}} representing the code to be called when the {{event("beforeunload")}} event is raised.</dd>
+ <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("beforeunload")}} event is raised.</dd>
  <dt>{{domxref("WindowEventHandlers.onhashchange")}}</dt>
- <dd>Is an {{domxref("EventHandler")}} representing the code to be called when the {{event("hashchange")}} event is raised.</dd>
+ <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("hashchange")}} event is raised.</dd>
  <dt>{{domxref("WindowEventHandlers.onlanguagechange")}} {{experimental_inline}}</dt>
- <dd>Is an {{domxref("EventHandler")}} representing the code to be called when the {{event("languagechange")}} event is raised.</dd>
+ <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("languagechange")}} event is raised.</dd>
  <dt>{{domxref("WindowEventHandlers.onmessage")}}</dt>
- <dd>Is an {{domxref("EventHandler")}} representing the code to be called when the {{event("message")}} event is raised.</dd>
+ <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("message")}} event is raised.</dd>
  <dt>{{domxref("WindowEventHandlers.onmessageerror")}}</dt>
- <dd>Is an {{domxref("EventHandler")}} representing the code to be called when the {{event("MessageError")}} event is raised.</dd>
+ <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("MessageError")}} event is raised.</dd>
  <dt>{{domxref("WindowEventHandlers.onoffline")}}</dt>
- <dd>Is an {{domxref("EventHandler")}} representing the code to be called when the {{event("offline")}} event is raised.</dd>
+ <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("offline")}} event is raised.</dd>
  <dt>{{domxref("WindowEventHandlers.ononline")}}</dt>
- <dd>Is an {{domxref("EventHandler")}} representing the code to be called when the {{event("online")}} event is raised.</dd>
+ <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("online")}} event is raised.</dd>
  <dt>{{domxref("WindowEventHandlers.onpagehide")}}</dt>
- <dd>Is an {{domxref("EventHandler")}} representing the code to be called when the {{event("pagehide")}} event is raised.</dd>
+ <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("pagehide")}} event is raised.</dd>
  <dt>{{domxref("WindowEventHandlers.onpageshow")}}</dt>
- <dd>Is an {{domxref("EventHandler")}} representing the code to be called when the {{event("pageshow")}} event is raised.</dd>
+ <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("pageshow")}} event is raised.</dd>
  <dt>{{domxref("WindowEventHandlers.onpopstate")}}</dt>
- <dd>Is an {{domxref("EventHandler")}} representing the code to be called when the {{event("popstate")}} event is raised.</dd>
+ <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("popstate")}} event is raised.</dd>
  <dt>{{domxref("WindowEventHandlers.onrejectionhandled")}}</dt>
- <dd>Is an {{domxref("EventHandler")}} representing the code to be called when the {{event("rejectionhandled")}} event is raised, indicating that a {{jsxref("Promise")}} was rejected and the rejection has been handled.</dd>
+ <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("rejectionhandled")}} event is raised, indicating that a {{jsxref("Promise")}} was rejected and the rejection has been handled.</dd>
  <dt>{{domxref("WindowEventHandlers.onstorage")}}</dt>
- <dd>Is an {{domxref("EventHandler")}} representing the code to be called when the {{event("storage")}} event is raised.</dd>
+ <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("storage")}} event is raised.</dd>
  <dt>{{domxref("WindowEventHandlers.onunhandledrejection")}}</dt>
- <dd>Is an {{domxref("EventHandler")}} representing the code to be called when the {{event("unhandledrejection")}} event is raised, indicating that a {{jsxref("Promise")}} was rejected but the rejection was not handled.</dd>
+ <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("unhandledrejection")}} event is raised, indicating that a {{jsxref("Promise")}} was rejected but the rejection was not handled.</dd>
  <dt>{{domxref("WindowEventHandlers.onunload")}}</dt>
- <dd>Is an {{domxref("EventHandler")}} representing the code to be called when the {{event("unload")}} event is raised.</dd>
+ <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("unload")}} event is raised.</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
@@ -62,36 +63,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#windoweventhandlers', 'WindowEventHandlers')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>No change since the latest snapshot, {{SpecName("HTML5.1")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', '#windoweventhandlers', 'WindowEventHandlers')}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>Snapshot of {{SpecName("HTML WHATWG")}}. Added <code>onlanguage</code> since the {{SpecName("HTML5 W3C")}} snapshot.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML5 W3C", "#windoweventhandlers", "WindowEventHandlers")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Snapshot of {{SpecName("HTML WHATWG")}}. Creation of <code>WindowEventHandlers</code> (properties where on the target before it).</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.WindowEventHandlers")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

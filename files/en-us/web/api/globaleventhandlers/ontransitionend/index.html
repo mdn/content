@@ -13,11 +13,12 @@ tags:
 - Reference
 - Window
 - ontransitionend
+browser-compat: api.GlobalEventHandlers.ontransitionend
 ---
 <div>{{APIRef("CSS3 Transitions")}}</div>
 
 <p>The <strong><code>ontransitionend</code></strong> property of the
-  {{domxref("GlobalEventHandlers")}} mixin is an {{domxref("EventHandler")}} that
+  {{domxref("GlobalEventHandlers")}} mixin is an {{event("Event_handlers", "event handler")}} that
   processes {{event("transitionend")}} events.</p>
 
 <p>The <code>transitionend</code> event is sent to when a <a
@@ -125,26 +126,11 @@ box.ontransitionend = function(event) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('CSS3 Transitions','#dom-globaleventhandlers-ontransitionend','ontransitionend')}}</td>
-      <td>{{Spec2('CSS3 Transitions')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.GlobalEventHandlers.ontransitionend")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -9,14 +9,14 @@ tags:
   - Reference
   - mode
   - request
+browser-compat: api.Request.mode
 ---
 <div>{{APIRef("Fetch")}}</div>
 
 <p>The <strong><code>mode</code></strong> read-only property of the {{domxref("Request")}}
   interface contains the mode of the request (e.g., <code>cors</code>,
-  <code>no-cors</code>, <code>same-origin</code>, or <code>navigate</code>.) This is used
-  to determine if cross-origin requests lead to valid responses, and which properties of
-  the response are readable.</p>
+  <code>no-cors</code>, <code>same-origin</code>, <code>navigate</code> or <code>websocket</code>.) This is used
+  to determine if cross-origin requests lead to valid responses, and which properties of the response are readable.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -53,9 +53,8 @@ tags:
           href="https://fetch.spec.whatwg.org/#concept-filtered-response-cors">limited
           set</a> of headers are exposed in the {{domxref("Response")}}, but the body is
         readable.</li>
-      <li><code>navigate</code> — A mode for supporting navigation. The
-        <code>navigate</code> value is intended to be used only by HTML navigation. A
-        navigate request is created only while navigating between documents.</li>
+      <li><code>navigate</code> — A mode for supporting navigation. The <code>navigate</code> value is intended to be used only by HTML navigation. A navigate request is created only while navigating between documents.</li>
+      <li><code>websocket</code> — A special mode used only when establishing a <a href="/en-US/docs/Web/API/WebSockets_API">WebSocket</a> connection.</li>
     </ul>
   </dd>
 </dl>
@@ -90,24 +89,11 @@ var myMode = myRequest.mode; // returns "cors" by default</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Fetch','#dom-request-mode', 'mode')}}</td>
-      <td>{{Spec2('Fetch')}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Request.mode")}}</p>
+<p>{{Compat}}</p>
 
 
 <h2 id="See_also">See also</h2>

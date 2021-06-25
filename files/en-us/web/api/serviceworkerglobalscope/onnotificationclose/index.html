@@ -9,6 +9,7 @@ tags:
 - Reference
 - ServiceWorkerGlobalScope
 - onnotificationclose
+browser-compat: api.ServiceWorkerGlobalScope.onnotificationclose
 ---
 <p>{{APIRef("Service Workers API")}}</p>
 
@@ -32,8 +33,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js"
-  style="font-size: 14px;">ServiceWorkerGlobalScope.onnotificationclose = function(NotificationEvent) { ... };
+<pre class="brush: js">ServiceWorkerGlobalScope.onnotificationclose = function(NotificationEvent) { ... };
 ServiceWorkerGlobalScope.addEventListener('notificationclose', function(NotificationEvent) { ... });</pre>
 
 <h2 id="Example">Example</h2>
@@ -46,24 +46,8 @@ self.onnotificationclose = function(event) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Web Notifications','#dom-serviceworkerglobalscope-onnotificationclose','onnotificationclick')}}
-      </td>
-      <td>{{Spec2('Web Notifications')}}</td>
-      <td>Initial definition. This property is specified on the
-        {{domxref('Notifications_API')}} even though it's part of
-        {{domxref('ServiceWorkerGlobalScope')}}.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.ServiceWorkerGlobalScope.onnotificationclose")}}</p>
+<p>{{Compat}}</p>

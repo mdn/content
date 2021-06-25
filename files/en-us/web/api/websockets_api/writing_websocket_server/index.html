@@ -9,7 +9,7 @@ tags:
 ---
 <h2 id="Introduction">Introduction</h2>
 
-<p>If you would like to use the WebSocket API, it is useful if you have a server. In this article I will show you how to write one in C#. You can do it in any server-side language<span style="line-height: 1.5;">, but to keep things simple and more understandable, I chose Microsoft's language.</span></p>
+<p>If you would like to use the WebSocket API, it is useful if you have a server. In this article I will show you how to write one in C#. You can do it in any server-side language, but to keep things simple and more understandable, I chose Microsoft's language.</p>
 
 <p>This server conforms to <a href="https://datatracker.ietf.org/doc/html/rfc6455">RFC 6455</a> so it will only handle connections from Chrome version 16, Firefox 11, IE 10 and over.</p>
 
@@ -18,7 +18,7 @@ tags:
 <p>WebSockets communicate over a <a href="https://en.wikipedia.org/wiki/Transmission_Control_Protocol">TCP (Transmission Control Protocol)</a> connection. Luckily, C# has a <a href="https://msdn.microsoft.com/en-us/library/system.net.sockets.tcplistener.aspx">TcpListener</a> class which does as the name suggests. It is in the <em>System.Net.Sockets</em> namespace.</p>
 
 <div class="note">
-<p><span style="line-height: 1.572;">It is a good idea to include the namespace with the <code>using</code></span><span style="line-height: 1.572;"> keyword in order to write less. It allows usage of a namespace's classes without typing the full namespace every time.</span></p>
+<p>It is a good idea to include the namespace with the <code>using</code> keyword in order to write less. It allows usage of a namespace's classes without typing the full namespace every time.</p>
 </div>
 
 <h3 id="TcpListener">TcpListener</h3>
@@ -30,18 +30,18 @@ tags:
 <p><code>localaddr</code> specifies the IP of the listener, and <code>port</code> specifies the port.</p>
 
 <div class="note">
-<p><span style="line-height: 1.572;">To create an <code>IPAddress</code> object from a <code>string</code>, use the </span><code>Parse</code><span style="line-height: 1.572;"> static method of </span><code>IPAddress</code><em>.</em></p>
+<p>To create an <code>IPAddress</code> object from a <code>string</code>, use the <code>Parse</code> static method of <code>IPAddress</code><em>.</em></p>
 </div>
 
-<p><span style="line-height: 1.572;">Methods</span><span style="line-height: 1.572;">:</span></p>
+<p>Methods:</p>
 
 <ul>
- <li><code><span style="line-height: 1.572;">Start()</span></code></li>
- <li><span style="line-height: 1.572;"><code>System.Net.Sockets.<a href="https://msdn.microsoft.com/en-us/library/system.net.sockets.tcpclient.aspx">TcpClient</a> AcceptTcpClient()</code><br>
-  Waits for a Tcp connection, accepts it and returns it as a TcpClient object.</span></li>
+ <li><code>Start()</code></li>
+ <li><code>System.Net.Sockets.<a href="https://msdn.microsoft.com/en-us/library/system.net.sockets.tcpclient.aspx">TcpClient</a> AcceptTcpClient()</code><br>
+  Waits for a Tcp connection, accepts it and returns it as a TcpClient object.</li>
 </ul>
 
-<p><span style="line-height: 1.572;">Here's a barebones server implementation:</span></p>
+<p>Here's a barebones server implementation:</p>
 
 <pre class="brush: cpp">using System.Net.Sockets;
 using System.Net;
@@ -61,7 +61,7 @@ class Server {
 }
 </pre>
 
-<h3 id="TcpClient"><span style="line-height: 1.572;">TcpClient</span></h3>
+<h3 id="TcpClient">TcpClient</h3>
 
 <p>Methods:</p>
 
@@ -82,9 +82,9 @@ class Server {
 <p>Methods:</p>
 
 <ul>
- <li><code>Write(Byte[] buffer, int offset, int size)</code><br>
+ <li><pre class="brush: cpp">Write(Byte[] buffer, int offset, int size)</pre><br>
   Writes bytes from buffer, offset and size determine length of message.</li>
- <li><code><span class="brush: cpp" style="line-height: 1.572;">Read(Byte[] buffer, int offset, int size)</span></code><br>
+ <li><pre class="brush: cpp">Read(Byte[] buffer, int offset, int size)</pre><br>
   Reads bytes to <code>buffer</code>. <code>offset</code> and <code>size</code> determine the length of the message.</li>
 </ul>
 
@@ -169,21 +169,7 @@ if (Regex.IsMatch(data, "^GET")) {
 
 <p>If we send "MDN", we get these bytes:</p>
 
-<table>
- <tbody>
-  <tr>
-   <td>129</td>
-   <td>131</td>
-   <td>61</td>
-   <td>84</td>
-   <td>35</td>
-   <td>6</td>
-   <td>112</td>
-   <td>16</td>
-   <td>109</td>
-  </tr>
- </tbody>
-</table>
+<pre>129 131 61 84 35 6 112 16 109</pre>
 
 <p>Let's take a look at what these bytes mean.</p>
 
@@ -213,7 +199,7 @@ if (Regex.IsMatch(data, "^GET")) {
 <ul>
  <li>FIN bit: This bit indicates whether the full message has been sent from the client. Messages may be sent in frames, but for now we will keep things simple.</li>
  <li>RSV1, RSV2, RSV3: These bits must be 0 unless an extension is negotiated which supplies a nonzero value to them.</li>
- <li><span style="line-height: 1.572;">Opcode: These bits describe the type of message received. Opcode </span>0x1<span style="line-height: 1.572;"> means this is a text message. </span><a href="https://datatracker.ietf.org/doc/html/rfc6455#section-5.2" style="line-height: 1.572;">Full list of Opcodes</a></li>
+ <li>Opcode: These bits describe the type of message received. Opcode 0x1 means this is a text message. <a href="https://datatracker.ietf.org/doc/html/rfc6455#section-5.2">Full list of Opcodes</a></li>
 </ul>
 
 <p>The second byte, which currently has a value of 131, is another bitfield that breaks down as such:</p>
@@ -244,11 +230,11 @@ if (Regex.IsMatch(data, "^GET")) {
 
 <p>Note that the MASK bit is set in our message. This means that the next four bytes (61, 84, 35, and 6) are the mask bytes used to decode the message. These bytes change with every message.</p>
 
-<p>The remaining bytes are the encoded <span style="line-height: 1.572;">message payload.</span></p>
+<p>The remaining bytes are the encoded message payload.</p>
 
 <h3 id="Decoding_algorithm">Decoding algorithm</h3>
 
-<p><em>D<sub>i</sub></em> = <em>E<sub>i</sub></em> XOR <em>M</em><sub>(<em>i</em> mod 4)</sub></p>
+<p><em>D_i</em> = <em>E_i</em> XOR <em>M</em>_(<em>i</em> mod 4)</p>
 
 <p>where <em>D</em> is the decoded message array, <em>E</em> is the encoded message array, <em>M</em> is the mask byte array, and <em>i</em> is the index of the message byte to decode.</p>
 

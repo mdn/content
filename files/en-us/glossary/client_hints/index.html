@@ -8,31 +8,51 @@ tags:
   - Reference
   - Web Performance
 ---
-<p><span class="seoSummary"><strong>Client Hints</strong> are a set of <a href="/en-US/docs/Web/HTTP/Headers">HTTP request header</a> fields for proactive content negotiation allowing clients to indicate a list of device and agent specific preferences.</span></p>
+<p><strong>Client Hints</strong> are a set of <a href="/en-US/docs/Web/HTTP/Headers">HTTP request header</a> fields that a server can proactively request from a client in order to get information about the device, network, user and agent specific preferences. The server can then determine which resources to send based on the client information.</p>
 
-<p>Use of client hints isn't automatic: rather, servers must announce that they support client hints. Servers announce support for Client Hints using the <code><a href="https://datatracker.ietf.org/doc/html/draft-grigorik-http-client-hints-03#section-2.2.1">Accept-CH</a></code> (accept client hints) header or an equivalent HTML meta element with the <code><a href="/en-US/docs/Web/HTML/Element/meta#attributes">http-equiv</a></code> attribute.</p>
+<p>The set of "hint" headers are listed in the topic <a href="/en-US/docs/Web/HTTP/Headers#client_hints">HTTP Headers</a> and <a href="#hint_types">summarized below</a>.</p>
 
-<p><code>Accept-CH: Width, Viewport-Width, Downlink</code></p>
+<h2 id="Overview">Overview</h2>
 
-<p>and / or</p>
+<p>A server must announce that it supports client hints, using the {{HTTPHeader("Accept-CH")}} header to specify the hints that it is interested in recieving.
+  When a client that supports client hints receives the <code>Accept-CH</code> header it can append client hint headers that match the advertised field-values to subsequent requests.</p>
 
-<p><code>&lt;meta http-equiv="Accept-CH" content="Width, Viewport-Width, Downlink</code><code>"&gt;</code></p>
+<p>For example, following <code>Accept-CH</code> in a response below, the client could append {{HTTPHeader("Width")}} and {{HTTPHeader("Downlink")}} headers to all subsequent requests.</p>
 
-<p>When a client receives the <code>Accept-CH</code> header, if supported, it appends Client Hint headers that match the advertised field-values. For example, based on Accept-CH example above, the client could append Width, Viewport-Width, and Downlink headers to all subsequent requests. In the second example, the server gives the browser the hints by setting the Accept-CH meta tag.</p>
+<pre class="brush: http">Accept-CH: Width, Downlink</pre>
 
-<p>Basically, with the Client Hints header, the developer or application can tell the browser to advertise information about itself to the server, such as the device pixel ratio, the viewport width, and the display width. The client can then give the server information about the client's environment, and the server can determine which resources to send based on that information.</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>Client hints can also be specified in HTML using the {{HTMLElement("meta")}} element with the <code><a href="/en-US/docs/Web/HTML/Element/meta#attr-http-equiv">http-equiv</a></code> attribute.</p>
+  <pre>&lt;meta http-equiv="Accept-CH" content="Width, Viewport-Width, Downlink"&gt;</pre>
+</div>
 
-<h2 id="Varying_Client_Hints">Varying Client Hints</h2>
 
-<p>To convey to caches that different <a href="/en-US/docs/Web/HTTP/Headers#client_hints">Client Hints</a> may affect the response, the <code><a href="/en-US/docs/Web/HTTP/Headers/Vary">Vary</a></code> HTTP header must be used.</p>
+<h2 id="Caching_and_client_hints">Caching and Client Hints</h2>
 
-<p id="Example_varying_response">Example varying response:</p>
+<p>Client hints that determine which resources are sent in responses should "generally" also be included in the affected response's {{HTTPHeader("Vary")}} header. This ensures that a different resource is cached for every different value of the hint header.</p>
 
-<p><code>Vary: Accept, Width, Viewport-Width, Downlink</code></p>
+<pre class="brush: http">Vary: Accept, Width, ECT</pre>
+
+<p>You may prefer to omit specifying {{HTTPHeader("Vary")}} or use some other strategy for client hint headers where the value changes a lot, as this effectively makes the resource uncachable (a new cache entry is created for every different value). This applies in particular to network client hints like {{HTTPHeader("Downlink")}} and {{HTTPHeader("RTT")}}. For more information see <a href="/en-US/docs/Web/HTTP/Caching#varying_responses">HTTP Caching > Varying responses</a>.</p>
+
+<h2 id="hint_types">Hint types</h2>
+
+<h3 id="device_client_hints">Device client hints</h3>
+
+<p>Device client hints allow a server to choose what information is sent based on the device characteristics including available memory and screen properties. Headers include: {{HTTPHeader("Device-Memory")}}, {{HTTPHeader("DPR")}}, {{HTTPHeader("Width")}}, {{HTTPHeader("Viewport-Width")}}.</p>
+
+
+<h3 id="network_client_hints">Network client hints</h3>
+
+<p>Network client hints allow a server to choose what information is sent based on the user choice and network bandwidth and latency. Headers include: {{HTTPHeader("Save-Data")}}, {{HTTPHeader("Downlink")}}, {{HTTPHeader("ECT")}}, {{HTTPHeader("RTT")}}.</p>
+
 
 <h2 id="See_also">See also</h2>
 
 <ul>
  <li><a href="/en-US/docs/Web/HTTP/Headers#client_hints">Client Hints headers</a></li>
  <li><a href="/en-US/docs/Web/HTTP/Headers/Vary"><code>Vary</code> HTTP Header</a></li>
+ <li><a href="https://wicg.github.io/client-hints-infrastructure/">Client Hints Infrastructure</a></li>
+ 
 </ul>

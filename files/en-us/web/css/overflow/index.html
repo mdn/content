@@ -15,7 +15,7 @@ browser-compat: css.properties.overflow
 ---
 <div>{{CSSRef}}</div>
 
-<p><span class="seoSummary">The <strong><code>overflow</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand property</a> sets the desired behavior for an element's overflow — i.e. when an element's content is too big to fit in its <a href="/en-US/docs/Web/Guide/CSS/Block_formatting_context">block formatting context</a> — in both directions.</span></p>
+<p>The <strong><code>overflow</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand property</a> sets the desired behavior for an element's overflow — i.e. when an element's content is too big to fit in its <a href="/en-US/docs/Web/Guide/CSS/Block_formatting_context">block formatting context</a> — in both directions.</p>
 
 <div>{{EmbedInteractiveExample("pages/css/overflow.html")}}</div>
 
@@ -41,6 +41,7 @@ overflow: hidden visible;
 /* Global values */
 overflow: inherit;
 overflow: initial;
+overflow: revert;
 overflow: unset;
 </pre>
 
@@ -54,7 +55,7 @@ overflow: unset;
  <dt><code>hidden</code></dt>
  <dd>Content is clipped if necessary to fit the padding box. No scrollbars are provided, and no support for allowing the user to scroll (such as by dragging or using a scroll wheel) is allowed. The content <em>can</em> be scrolled programmatically (for example, by setting the value of a property such as {{domxref("HTMLElement.offsetLeft", "offsetLeft")}}), so the element is still a scroll container.</dd>
  <dt><code>clip</code></dt>
- <dd>Like for <code>hidden</code>, the content is clipped to the element's padding box. The difference between <code>clip</code> and <code>hidden</code> is that the <code>clip</code> keyword also forbids all scrolling, including programmatic scrolling. The box is not a scroll container, and does not start a new formatting context. If you wish to start a new formatting context, you can use {{cssxref("display", "display: flow-root", "#flow-root")}} to do so.</dd>
+ <dd>Similar to <code>hidden</code>, the content is clipped to the element's padding box. The difference between <code>clip</code> and <code>hidden</code> is that the <code>clip</code> keyword also forbids all scrolling, including programmatic scrolling. The box is not a scroll container, and does not start a new formatting context. If you wish to start a new formatting context, you can use {{cssxref("display", "display: flow-root", "#flow-root")}} to do so.</dd>
  <dt><code>scroll</code></dt>
  <dd>Content is clipped if necessary to fit the padding box. Browsers always display scrollbars whether or not any content is actually clipped, preventing scrollbars from appearing or disappearing as content changes. Printers may still print overflowing content.</dd>
  <dt><code>auto</code></dt>
@@ -102,60 +103,81 @@ overflow: unset;
 
 <h3 id="Setting_different_overflow_values_for_text">Setting different overflow values for text</h3>
 
-<pre class="brush: css">p {
-  width: 12em;
-  height: 6em;
+<h4>HTML</h4>
+
+<pre class="brush: html">
+  &lt;div&gt;
+    &lt;code&gt;visible&lt;/code&gt;
+    &lt;p class="visible"&gt;
+     Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+    &lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;div&gt;
+    &lt;code&gt;hidden&lt;/code&gt;
+    &lt;p class="hidden"&gt;
+     Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+    &lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;div&gt;
+    &lt;code&gt;scroll&lt;/code&gt;
+    &lt;p class="scroll"&gt;
+     Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+    &lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;div&gt;
+    &lt;code&gt;auto&lt;/code&gt;
+    &lt;p class="auto"&gt;
+     Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+    &lt;/p&gt;
+  &lt;/div&gt;
+</pre>
+
+<h4>CSS</h4>
+
+<pre class="brush: css">
+body {
+  display: flex;
+  justify-content: space-around;
+}
+
+div {
+  margin: 1em;
+  font-size: 1.2em;
+}
+
+p {
+  width: 8em;
+  height: 5em;
   border: dotted;
-  overflow: visible; /* content is not clipped */
+}
+
+p.visible {
+  overflow: visible;
+}
+
+p.hidden {
+  overflow: hidden;
+}
+
+p.scroll {
+  overflow: scroll;
+}
+
+p.auto {
+  overflow: auto;
 }
 </pre>
 
-<p style="overflow: visible; display: inline-block; width: 12em; height: 6em; border: dotted;"><code>visible</code> (default)<br>
- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+<h4>Result</h4>
 
-<pre class="brush: css">p { overflow: hidden; /* no scrollbars are provided */ }
-</pre>
-
-<p style="overflow: hidden; display: inline-block; width: 12em; height: 6em; border: dotted;"><code>overflow: hidden</code><br>
- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
-
-<pre class="brush: css">p { overflow: scroll; /* always show scrollbars */ }
-</pre>
-
-<p style="overflow: scroll; display: inline-block; width: 12em; height: 6em; border: dotted;"><code>overflow: scroll</code><br>
- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
-
-<pre class="brush: css">p { overflow: auto; /* append scrollbars if necessary */ }
-</pre>
-
-<p style="overflow: auto; display: inline-block; width: 12em; height: 6em; border: dotted;"><code>overflow: auto</code><br>
- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+{{EmbedLiveSample("Setting_different_overflow_values_for_text", "600", "250")}}
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Overflow', '#propdef-overflow', 'overflow')}}</td>
-   <td>{{Spec2('CSS3 Overflow')}}</td>
-   <td>
-    <p>Changed syntax to allow one or two keywords instead of only one</p>
-   </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'visufx.html#overflow', 'overflow')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

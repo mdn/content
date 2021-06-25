@@ -7,6 +7,7 @@ tags:
   - Experimental
   - Interface
   - Node
+browser-compat: api.ChildNode
 ---
 <p>{{APIRef("DOM")}}</p>
 
@@ -33,27 +34,7 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#interface-childnode', 'ChildNode')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Split the <code>ElementTraversal</code> interface in {{domxref("ParentNode")}} and <code>ChildNode</code>. <code>previousElementSibling</code> and <code>nextElementSibling</code> are now defined on the latter. The {{domxref("CharacterData")}} and {{domxref("DocumentType")}} implemented the new interfaces. Added the <code>remove()</code>, <code>before()</code>, <code>after()</code> and <code>replaceWith()</code> methods.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Element Traversal', '#interface-elementTraversal', 'ElementTraversal')}}</td>
-   <td>{{Spec2('Element Traversal')}}</td>
-   <td>Added the initial definition of its properties to the <code>ElementTraversal</code> pure interface and use it on {{domxref("Element")}}.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Polyfill">Polyfill</h2>
 
@@ -61,7 +42,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.ChildNode")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

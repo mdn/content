@@ -2,12 +2,13 @@
 title: Content-Security-Policy
 slug: Web/HTTP/Headers/Content-Security-Policy
 tags:
-- CSP
-- Content Security Policy
-- HTTP
-- Reference
-- Security
-- header
+  - CSP
+  - Content Security Policy
+  - HTTP
+  - Reference
+  - Security
+  - header
+browser-compat: http.headers.csp.Content-Security-Policy
 ---
 <div>{{HTTPSidebar}}</div>
 
@@ -15,7 +16,7 @@ tags:
   web site administrators to control resources the user agent is allowed to load for a
   given page. With a few exceptions, policies mostly involve specifying server origins and
   script endpoints. This helps guard against cross-site scripting attacks
-  ({{Glossary("XSS")}}).</p>
+  ({{Glossary("Cross-site_scripting")}}).</p>
 
 <p>For more information, see the introductory article on <a
     href="/en-US/docs/Web/HTTP/CSP">Content Security Policy (CSP)</a>.</p>
@@ -117,9 +118,6 @@ tags:
   <dt>{{CSP("base-uri")}}</dt>
   <dd>Restricts the URLs which can be used in a document's {{HTMLElement("base")}}
     element.</dd>
-  <dt>{{CSP("plugin-types")}}</dt>
-  <dd>Restricts the set of plugins that can be embedded into a document by limiting the
-    types of resources which can be loaded.</dd>
   <dt>{{CSP("sandbox")}}</dt>
   <dd>Enables a sandbox for the requested resource similar to the
     {{HTMLElement("iframe")}} {{htmlattrxref("sandbox", "iframe")}} attribute.</dd>
@@ -177,12 +175,6 @@ tags:
 <h3 id="Other_directives">Other directives</h3>
 
 <dl>
-  <dt>{{CSP("block-all-mixed-content")}}</dt>
-  <dd>Prevents loading any assets using HTTP when the page is loaded using HTTPS.</dd>
-  <dt>{{CSP("referrer")}}{{deprecated_inline}}{{non-standard_inline}}</dt>
-  <dd>Used to specify information in the <a
-      href="/en-US/docs/Web/HTTP/Headers/Referer">Referer</a> (sic) header for links away
-    from a page. Use the {{HTTPHeader("Referrer-Policy")}} header instead.</dd>
   <dt>{{CSP("require-sri-for")}}{{experimental_inline}}</dt>
   <dd>Requires the use of {{Glossary("SRI")}} for scripts or styles on the page.</dd>
   <dt>{{CSP("require-trusted-types-for")}}{{experimental_inline}}</dt>
@@ -198,6 +190,20 @@ tags:
     HTTP) as though they have been replaced with secure URLs (those served over HTTPS).
     This directive is intended for web sites with large numbers of insecure legacy URLs
     that need to be rewritten.</dd>
+</dl>
+
+<h3 id="deprecated_directives">Deprecated directives</h3>
+
+<dl>
+  <dt>{{CSP("block-all-mixed-content")}}{{deprecated_inline}}</dt>
+  <dd>Prevents loading any assets using HTTP when the page is loaded using HTTPS.</dd>
+  <dt>{{CSP("plugin-types")}}{{deprecated_inline}}</dt>
+  <dd>Restricts the set of plugins that can be embedded into a document by limiting the
+    types of resources which can be loaded.</dd>
+  <dt>{{CSP("referrer")}}{{deprecated_inline}}{{non-standard_inline}}</dt>
+  <dd>Used to specify information in the <a
+      href="/en-US/docs/Web/HTTP/Headers/Referer">Referer</a> (sic) header for links away
+    from a page. Use the {{HTTPHeader("Referrer-Policy")}} header instead.</dd>
 </dl>
 
 <h2 id="Values">Values</h2>
@@ -221,7 +227,7 @@ tags:
  <dt><code>unsafe-inline</code></dt>
  <dd>Allow use of inline resources.</dd>
  <dt><code>unsafe-eval</code></dt>
- <dd>Allow use of dynamic code evaluation such as {{jsxref("Global_Objects/eval", "eval")}}, {{domxref("Window.setImmediate", "setImmediate")}}{{non-standard_inline}}, and {{domxref("window.execScript", "execScript")}}{{non-standard_inline}}.</dd>
+ <dd>Allow use of dynamic code evaluation such as {{jsxref("Global_Objects/eval", "eval")}}, {{domxref("Window.setImmediate", "setImmediate")}}{{non-standard_inline}}, and <code>window.execScript</code> {{non-standard_inline}}.</dd>
  <dt><code>unsafe-hashes</code> {{experimental_inline}}</dt>
  <dd></dd>
  <dt><code>unsafe-allow-redirects</code> {{experimental_inline}}</dt>
@@ -357,12 +363,7 @@ Content-Security-Policy: default-src https:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table on this page is generated from structured data.
-  If you'd like to contribute to the data, please check out <a
-    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
-  and send us a pull request.</p>
-
-<p>{{Compat("http.headers.csp.Content-Security-Policy")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

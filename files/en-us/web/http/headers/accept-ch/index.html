@@ -2,14 +2,17 @@
 title: Accept-CH
 slug: Web/HTTP/Headers/Accept-CH
 tags:
+  - Accept-CH
   - Client hints
   - HTTP
   - HTTP Header
+  - Response header
+browser-compat: http.headers.Accept-CH
 ---
 <div>{{HTTPSidebar}}{{securecontext_header}}{{SeeCompatTable}}</div>
 
-<p>The <code><strong>Accept-CH</strong></code> header is set by the server to specify
-  which <a href="/en-US/docs/Glossary/Client_hints">Client Hints</a> headers a client
+<p>The <code><strong>Accept-CH</strong></code> header may be set by a server to specify
+  which <a href="/en-US/docs/Glossary/Client_hints">client hints</a> headers a client
   should include in subsequent requests.</p>
 
 <table class="properties">
@@ -20,27 +23,29 @@ tags:
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>?</td>
+      <td>no</td>
     </tr>
+    <tr>
+      <th scope="row">{{Glossary("CORS-safelisted response header")}}</th>
+      <td>no</td>
+     </tr>
   </tbody>
 </table>
 
 <div class="notecard note">
-  <p><strong>Note:</strong> Client Hints are accessible only on secure origins (via TLS).
-    Accept-CH and Accept-CH-Lifetime headers should be persisted for all secure requests
-    to ensure Client Hints are sent reliably.</p>
+  <p><strong>Note:</strong> Client hints are accessible only on secure origins (via TLS).
+    <code>Accept-CH</code> (and <code>Accept-CH-Lifetime</code>) headers should be persisted for all secure requests
+    to ensure client hints are sent reliably.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: html">Accept-CH: &lt;list of client hints&gt;
+<pre class="brush: http">Accept-CH: &lt;list of client hints&gt;
 </pre>
 
 <h2 id="Examples">Examples</h2>
 
-<pre>Accept-CH: Viewport-Width
-Accept-CH: Width
-Accept-CH-Lifetime: 86400
+<pre class="brush: http">Accept-CH: Viewport-Width, Width
 Vary: Viewport-Width, Width
 </pre>
 
@@ -50,18 +55,29 @@ Vary: Viewport-Width, Width
     based on the accepted client hints.</p>
 </div>
 
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Title</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{RFC("8942", "Accept-CH")}}</td>
+      <td>HTTP Client Hints</td>
+    </tr>
+  </tbody>
+</table>
+
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data.
-  If you'd like to contribute to the data, please check out <a
-    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
-  and send us a pull request.</p>
-
-<p>{{Compat("http.headers.Accept-CH")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li>{{HTTPHeader("Accept-CH-Lifetime")}}</li>
   <li>{{HTTPHeader("Vary")}}</li>
 </ul>

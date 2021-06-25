@@ -8,6 +8,7 @@ tags:
   - SharedWorker
   - Web Workers
   - Workers
+browser-compat: api.SharedWorker
 ---
 <div>{{APIRef("Web Workers API")}}</div>
 
@@ -26,18 +27,18 @@ tags:
 
 <h2 id="Properties">Properties</h2>
 
-<p><em>Inherits properties from its parent, {{domxref("EventTarget")}}, and implements properties from {{domxref("AbstractWorker")}}.</em></p>
+<p><em>Inherits properties from its parent, {{domxref("EventTarget")}}.</em></p>
 
 <dl>
- <dt>{{domxref("AbstractWorker.onerror")}}</dt>
- <dd>Is an {{domxref("EventListener")}} that is called whenever an {{domxref("ErrorEvent")}} of type <code>error</code> bubbles through the worker.</dd>
+ <dt>{{domxref("SharedWorker.onerror")}}</dt>
+ <dd>Is an {{domxref("EventListener")}} that is called whenever an {{domxref("ErrorEvent")}} of type <code>error</code> event occurs.</dd>
  <dt>{{domxref("SharedWorker.port")}} {{readonlyInline}}</dt>
  <dd>Returns a {{domxref("MessagePort")}} object used to communicate with and control the shared worker.</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
 
-<p><em>Inherits methods from its parent, {{domxref("EventTarget")}}, and implements methods from {{domxref("AbstractWorker")}}.</em></p>
+<p><em>Inherits methods from its parent, {{domxref("EventTarget")}}.</em></p>
 
 <h2 id="Example">Example</h2>
 
@@ -84,24 +85,11 @@ myWorker.port.onmessage = function(e) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "#sharedworker", "SharedWorker")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>No change from {{SpecName("Web Workers")}}.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.SharedWorker")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

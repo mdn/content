@@ -11,6 +11,7 @@ tags:
   - Storage
   - WebExtensions
   - managed
+browser-compat: webextensions.api.storage.managed
 ---
 <div>{{AddonSidebar()}}</div>
 
@@ -25,7 +26,7 @@ tags:
 <p>Here's an example manifest:</p>
 
 <pre class="brush: json">{
-  "name": "favourite-color-examples@mozilla.org",
+  "name": "favorite-color-examples@mozilla.org",
   "description": "ignored",
   "type": "storage",
   "data":
@@ -34,7 +35,7 @@ tags:
   }
 }</pre>
 
-<p>Given this manifest, the "favourite-color-examples@mozilla.org" extension could access the data using code like this:</p>
+<p>Given this manifest, the "favorite-color-examples@mozilla.org" extension could access the data using code like this:</p>
 
 <pre class="brush: js">var storageItem = browser.storage.managed.get('color');
 storageItem.then((res) =&gt; {
@@ -43,7 +44,7 @@ storageItem.then((res) =&gt; {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("webextensions.api.storage.managed")}}</p>
+<p>{{Compat}}</p>
 
 <p>{{WebExtExamples}}</p>
 

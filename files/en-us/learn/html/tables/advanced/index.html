@@ -53,7 +53,7 @@ tags:
 <p>A caption is placed directly beneath the <code>&lt;table&gt;</code> tag.</p>
 
 <div class="note">
-<p><strong>Note</strong>: The {{htmlattrxref("summary","table")}} attribute can also be used on the <code>&lt;table&gt;</code> element to provide a description — this is also read out by screenreaders. We'd recommend using the <code>&lt;caption&gt;</code> element instead, however, as <code>summary</code> is {{glossary("deprecated")}} by the HTML5 spec, and can't be read by sighted users (it doesn't appear on the page.)</p>
+<p><strong>Note</strong>: The {{htmlattrxref("summary","table")}} attribute can also be used on the <code>&lt;table&gt;</code> element to provide a description — this is also read out by screenreaders. We'd recommend using the <code>&lt;caption&gt;</code> element instead, however, as <code>summary</code> is deprecated by the HTML5 spec, and can't be read by sighted users (it doesn't appear on the page.)</p>
 </div>
 
 <h3 id="Active_learning_Adding_a_caption">Active learning: Adding a caption</h3>
@@ -118,10 +118,7 @@ tfoot {
 
 <p>Your finished table should look something like the following:</p>
 
-<div class="hidden">
-<h6 id="Hidden_example">Hidden example</h6>
-
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
+<pre class="brush: html hidden">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -226,9 +223,9 @@ tfoot {
 
   &lt;/body&gt;
 &lt;/html&gt;</pre>
-</div>
+</pre>
 
-<p>{{ EmbedLiveSample('Hidden_example', '100%', 300, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('Active_learning_Adding_table_structure', '100%', 300, "", "", "hide-codepen-jsfiddle") }}</p>
 
 <div class="note">
 <p><strong>Note</strong>: You can also find it on Github as <a href="https://github.com/mdn/learning-area/blob/master/html/tables/advanced/spending-record-finished.html">spending-record-finished.html</a> (<a href="https://mdn.github.io/learning-area/html/tables/advanced/spending-record-finished.html">see it live also</a>).</p>
@@ -268,35 +265,17 @@ tfoot {
 
 <p>The output of which looks something like this:</p>
 
-<table id="table1">
- <tbody>
-  <tr>
-   <th>title1</th>
-   <th>title2</th>
-   <th>title3</th>
-  </tr>
-  <tr>
-   <td id="nested">
-    <table id="table2">
-     <tbody>
-      <tr>
-       <td>cell1</td>
-       <td>cell2</td>
-       <td>cell3</td>
-      </tr>
-     </tbody>
-    </table>
-   </td>
-   <td>cell2</td>
-   <td>cell3</td>
-  </tr>
-  <tr>
-   <td>cell4</td>
-   <td>cell5</td>
-   <td>cell6</td>
-  </tr>
- </tbody>
-</table>
+<pre class="brush: css hidden">
+  table {
+    border-collapse: collapse;
+  }
+  td, th {
+    border: 1px solid black;
+    padding: 10px 20px;
+  }
+</pre>
+
+{{EmbedLiveSample("Nesting_Tables")}}
 
 <h2 id="Tables_for_visually_impaired_users">Tables for visually impaired users</h2>
 
@@ -413,7 +392,7 @@ tfoot {
 
 <ol>
  <li>You add a unique <code>id</code> to each <code>&lt;th&gt;</code> element.</li>
- <li>You add a <code>headers</code> attribute to each <code>&lt;td&gt;</code> element. Each <code>headers</code> attribute has to contain a list of the <code>id</code>s of all the &lt;th&gt; elements that act as a header for that cell, separated by spaces.</li>
+ <li>You add a <code>headers</code> attribute to each <code>&lt;td&gt;</code> element. Each <code>headers</code> attribute has to contain a list of the <code>id</code>s of all the <code>&lt;th&gt;</code> elements that act as a header for that cell, separated by spaces.</li>
 </ol>
 
 <p>This gives your HTML table an explicit definition of the position of each cell in the table, defined by the header(s) for each column and row it is part of, kind of like a spreadsheet. For it to work well, the table really needs both column and row headers.</p>
@@ -468,6 +447,6 @@ tfoot {
 
 <ul>
  <li><a href="/en-US/docs/Learn/HTML/Tables/Basics">HTML table basics</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Tables/Advanced">HTML table advanced features and accessibility</a></li>
+ <li><strong>HTML table advanced features and accessibility</strong></li>
  <li><a href="/en-US/docs/Learn/HTML/Tables/Structuring_planet_data">Structuring planet data</a></li>
 </ul>

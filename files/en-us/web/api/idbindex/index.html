@@ -9,16 +9,17 @@ tags:
   - Interface
   - Reference
   - Storage
+browser-compat: api.IDBIndex
 ---
 <p>{{APIRef("IndexedDB")}}</p>
 
-<p><span class="seoSummary"><code>IDBIndex</code> interface of the <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB API</a> provides asynchronous access to an <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB#gloss_index">index</a> in a database. An index is a kind of object store for looking up records in another object store, called the referenced object store. You use this interface to retrieve data.</span></p>
+<p><span class="seoSummary"><code>IDBIndex</code> interface of the <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB API</a> provides asynchronous access to an <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#gloss_index">index</a> in a database. An index is a kind of object store for looking up records in another object store, called the referenced object store. You use this interface to retrieve data.</span></p>
 
 <p>You can retrieve records in an object store through the primary key or by using an index. An index lets you look up records in an object store using properties of the values in the object stores records other than the primary key</p>
 
 <p>The index is a persistent key-value storage where the value part of its records is the key part of a record in the referenced object store. The records in an index are automatically populated whenever records in the referenced object store are inserted, updated, or deleted. Each record in an index can point to only one record in its referenced object store, but several indexes can reference the same object store. When the object store changes, all indexes that refers to the object store are automatically updated.</p>
 
-<p><span style="line-height: 1.5;">You can grab a set of keys within a range. To learn more, see {{domxref("IDBKeyRange")}}.</span></p>
+<p>You can grab a set of keys within a range. To learn more, see {{domxref("IDBKeyRange")}}.</p>
 
 <p>{{AvailableInWorkers}}</p>
 
@@ -68,7 +69,7 @@ tags:
 
 <p>Finally, we iterate through each record, and insert the data into an HTML table. For a complete working example, see our <a href="https://github.com/mdn/indexeddb-examples/tree/master/idbindex">IndexedDB-examples demo repo</a> (<a href="https://mdn.github.io/indexeddb-examples/idbindex">View the example live</a>.)</p>
 
-<pre class="brush: js" style="font-size: 14px;">function displayDataByIndex() {
+<pre class="brush: js">function displayDataByIndex() {
   tableEntry.innerHTML = '';
   var transaction = db.transaction(['contactsList'], 'readonly');
   var objectStore = transaction.objectStore('contactsList');
@@ -97,29 +98,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB', '#idbindex', 'IDBIndex')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("IndexedDB 2", "#index-interface", "IDBIndex")}}</td>
-   <td>{{Spec2("IndexedDB 2")}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.IDBIndex")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

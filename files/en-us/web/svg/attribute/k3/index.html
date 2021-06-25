@@ -5,6 +5,7 @@ tags:
   - Filters
   - SVG
   - SVG Attribute
+browser-compat: svg.elements.feComposite.k3
 ---
 <div>{{SVGRef}}</div>
 
@@ -14,7 +15,11 @@ tags:
 
 <pre class="brush: plain">result = k1*i1*i2 + {{SVGAttr("k2")}}*i1 + {{SVGAttr("k3")}}*i2 + {{SVGAttr("k4")}}</pre>
 
-<p>Only one element is using this attribute: {{SVGElement("feComposite")}}</p>
+<p>You can use this attribute with the following SVG elements:</p>
+
+<ul>
+  <li>{{SVGElement("feComposite")}}</li>
+</ul>
 
 <div id="topExample">
 <div class="hidden">
@@ -31,9 +36,9 @@ tags:
     &lt;feComposite in2="SourceGraphic" operator="arithmetic" k1="1" k2="0" k3="10" k4="0" /&gt;
   &lt;/filter&gt;
 
-  &lt;image href="https://mdn.mozillademos.org/files/12668/MDN.svg" x="0" y="0"
+  &lt;image href="mdn.svg" x="0" y="0"
       width="200" height="200" style="filter: url(#composite1);" /&gt;
-  &lt;image href="https://mdn.mozillademos.org/files/12668/MDN.svg" x="0" y="0"
+  &lt;image href="mdn.svg" x="0" y="0"
       width="200" height="200" style="filter: url(#composite2); transform: translateX(220px);" /&gt;
 &lt;/svg&gt;</pre>
 
@@ -85,4 +90,4 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("svg.elements.feComposite.k3")}}</p>
+<p>{{Compat}}</p>

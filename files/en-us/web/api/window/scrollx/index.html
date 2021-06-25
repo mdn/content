@@ -9,6 +9,7 @@ tags:
 - NeedsMobileBrowserCompatibility
 - Property
 - Reference
+browser-compat: api.Window.scrollX
 ---
 <div>{{ APIRef("CSSOM View") }}</div>
 
@@ -52,10 +53,7 @@ tags:
 
 <h2 id="Notes">Notes</h2>
 
-<p><span style="line-height: 1.572;">The </span><code
-    style="font-size: 14px;">pageXOffset</code><span style="line-height: 1.572;"> property
-    is an alias for the </span><code style="font-size: 14px;">scrollX</code><span
-    style="line-height: 1.572;"> property:</span></p>
+<p>The <code>pageXOffset</code> property is an alias for the <code>scrollX</code> property:</p>
 
 <pre>window.pageXOffset == window.scrollX; // always true</pre>
 
@@ -75,26 +73,11 @@ var y = (window.pageYOffset !== undefined)
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{ SpecName('CSSOM View', '#dom-window-scrollx', 'window.scrollX') }}</td>
-      <td>{{ Spec2('CSSOM View') }}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Window.scrollX")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

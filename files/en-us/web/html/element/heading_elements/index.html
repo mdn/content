@@ -7,14 +7,13 @@ tags:
   - HTML sections
   - Reference
   - Web
+browser-compat: html.elements.h1
 ---
 <div>{{HTMLRef}}</div>
 
-<p id="Summary"><span class="seoSummary">The <strong>HTML <code>&lt;h1&gt;</code>–<code>&lt;h6&gt;</code> elements</strong> represent six levels of section headings. <code>&lt;h1&gt;</code> is the highest section level and <code>&lt;h6&gt;</code> is the lowest.</span></p>
+<p>The <strong><code>&lt;h1&gt;</code></strong> to <strong><code>&lt;h6&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> elements represent six levels of section headings. <code>&lt;h1&gt;</code> is the highest section level and <code>&lt;h6&gt;</code> is the lowest.</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/h1-h6.html", "tabbed-standard")}}</div>
-
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a> and send us a pull request.</div>
 
 <table class="properties">
  <tbody>
@@ -64,8 +63,20 @@ tags:
  <li>Avoid using heading elements to resize text. Instead, use the {{glossary("CSS")}} {{cssxref("font-size")}} property.</li>
  <li>Avoid skipping heading levels: always start from <code>&lt;h1&gt;</code>, followed by <code>&lt;h2&gt;</code> and so on.</li>
  <li>Use only one <code>&lt;h1&gt;</code> per page or view. It should concisely describe the overall purpose of the content.</li>
- <li>Using more than one <code>&lt;h1&gt;</code> will not result in an error, but is not considered a best practice. Using only one <code>&lt;h1&gt;</code> is beneficial for screenreader users, and {{glossary("SEO")}}.</li>
- <li>While HTML5 allows a <code>&lt;h1&gt;</code> per <a href="/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#section_elements_in_html5">sectioning element</a>, it is not considered best practice, and may subvert the expectations of how screen reader users navigate.</li>
+</ul>
+
+<h3 id="multiple_h1">Multiple <code>&lt;h1&gt;</code> elements on one page</h3>
+
+<p>Using more than one <code>&lt;h1&gt;</code> is allowed by the HTML specification, but is not considered a best practice. Using only one <code>&lt;h1&gt;</code> is beneficial for screenreader users.</p>
+
+<p>The HTML specification includes the concept of an <em>outline</em> formed by the use of {{htmlelement("section")}} elements.
+  If this were implemented it would enable the use of multiple <code>&lt;h1&gt;</code> elements, giving user agents—including screen readers—a way to understand that an &lt;h1&gt; nested inside a defined section is a subheading. This functionality has never been implemented; therefore it is important to use your headings to describe the outline of your document.</p>
+
+<p>The following articles give more information about the status of outlines:</p>
+
+<ul>
+  <li><a href="https://html5doctor.com/computer-says-no-to-html5-document-outline/">Computer says no the the HTML5 outline</a></li>
+  <li><a href="https://html5accessibility.com/stuff/2021/03/21/a-decade-a-year-of-heading-backwards/">A decade + a year of heading backwards</a></li>
 </ul>
 
 <h2 id="Examples">Examples</h2>
@@ -215,38 +226,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements', '&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, and &lt;h6&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'sections.html#the-h1-h2-h3-h4-h5-and-h6-elements', '&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, and &lt;h6&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'struct/global.html#h-7.5.5', '&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, and &lt;h6&gt;')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+<p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
-
-<p>{{Compat("html.elements.h1")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -9,6 +9,7 @@ tags:
 - Reference
 - WebGL
 - WebGLRenderingContext
+browser-compat: api.WebGLRenderingContext.bufferData
 ---
 <div>{{APIRef("WebGL")}}</div>
 
@@ -157,56 +158,11 @@ var sizeInBytes = dataArray.length * dataArray.BYTES_PER_ELEMENT;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<tbody>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-		<tr>
-			<td>{{SpecName('WebGL', "#5.14.5", "bufferData")}}</td>
-			<td>{{Spec2('WebGL')}}</td>
-			<td>Initial definition.</td>
-		</tr>
-		<tr>
-			<td>{{SpecName('OpenGL ES 2.0', "glBufferData.xml", "glBufferData")}}</td>
-			<td>{{Spec2('OpenGL ES 2.0')}}</td>
-			<td>Man page of the OpenGL API.</td>
-		</tr>
-		<tr>
-			<td>{{SpecName('OpenGL ES 3.0', "glBufferData.xhtml", "glBufferData")}}</td>
-			<td>{{Spec2('OpenGL ES 3.0')}}</td>
-			<td>Man page of the (similar) OpenGL ES 3 API.<br>
-				<br>
-				Adds new <code>target</code> buffers:<br>
-				<code>gl.COPY_READ_BUFFER</code>,<br>
-				<code>gl.COPY_WRITE_BUFFER</code>,<br>
-				<code>gl.TRANSFORM_FEEDBACK_BUFFER</code>,<br>
-				<code>gl.UNIFORM_BUFFER</code>,<br>
-				<code>gl.PIXEL_PACK_BUFFER</code>,<br>
-				<code>gl.PIXEL_UNPACK_BUFFER</code><br>
-				<br>
-				Adds new <code>usage</code> hints:<br>
-				<code>gl.STATIC_READ</code>,<br>
-				<code>gl.DYNAMIC_READ</code>,<br>
-				<code>gl.STREAM_READ</code>,<br>
-				<code>gl.STATIC_COPY</code>,<br>
-				<code>gl.DYNAMIC_COPY</code>,<br>
-				<code>gl.STREAM_COPY</code>.
-			</td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data.
-	If you'd like to contribute to the data, please check out <a
-		href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
-	and send us a pull request.</p>
-
-<p>{{Compat("api.WebGLRenderingContext.bufferData")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

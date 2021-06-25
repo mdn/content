@@ -11,12 +11,13 @@ tags:
 - Reference
 - WebRTC
 - onconnectionstatechange
+browser-compat: api.RTCPeerConnection.onconnectionstatechange
 ---
 <p>{{APIRef("WebRTC")}}</p>
 
 <p><span class="seoSummary">The
     <strong><code>RTCPeerConnection.onconnectionstatechange</code></strong> property
-    specifies an {{domxref("EventHandler")}} which is called to handle the
+    specifies an {{event("Event_handlers", "event handler")}} which is called to handle the
     {{event("connectionstatechange")}} event when it occurs on an instance of
     {{domxref("RTCPeerConnection")}}. This happens whenever the aggregate state of the
     connection changes.</span> The aggregate state is a combination of the states of all
@@ -55,27 +56,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{ SpecName('WebRTC 1.0', '#dom-rtcpeerconnection-onconnectionstatechange',
-        'RTCPeerConnection.onconnectionstatechange') }}</td>
-      <td>{{ Spec2('WebRTC 1.0') }}</td>
-      <td>Initial specification.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCPeerConnection.onconnectionstatechange")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

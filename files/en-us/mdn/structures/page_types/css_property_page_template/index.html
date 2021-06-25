@@ -6,6 +6,7 @@ tags:
   - Property
   - Reference
   - Template
+browser-compat: path.to.feature.NameOfTheProperty
 ---
 <div>{{MDNSidebar}}</div>
 
@@ -18,10 +19,9 @@ tags:
 
 <h3 id="Top_macros">Top macros</h3>
 
-<p>There are four macro calls at the top of the template by default. You should update or delete them according to the advice below:</p>
+<p>A number of macro calls appear at the top of the content section. You should update or delete them according to the advice below:</p>
 
 <ul>
-	<li>\{{draft()}} — this generates a <strong>Draft</strong> banner that indicates that the page is not yet complete, and should only be removed when the first draft of the page is completely finished. After it is ready to be published, you can remove this.</li>
 	<li>\{{SeeCompatTable}} — this generates a <strong>This is an experimental technology</strong> banner that indicates the technology is <a href="/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental">experimental</a>). If the technology you are documenting is not experimental, you can remove this. If it is experimental, and the technology is hidden behind a pref in Firefox, you should also fill in an entry for it in the <a href="/en-US/docs/Mozilla/Firefox/Experimental_features">Experimental features in Firefox</a> page.</li>
 	<li>\{{deprecated_header}} — this generates a <strong>Deprecated</strong> banner that indicates the technology is <a href="/en-US/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete">deprecated</a>. If it isn't, then you can remove the macro call.</li>
 	<li>
@@ -110,11 +110,7 @@ tags:
 
 <h2 id="Browser_compatibility_2">Browser compatibility</h2>
 
-<div class="hidden">
-<p>The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-</div>
-
-<p>{{Compat("path.to.feature.NameOfTheProperty")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

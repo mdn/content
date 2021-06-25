@@ -18,7 +18,7 @@ browser-compat: css.properties.shape-outside
 ---
 <div>{{CSSRef}}</div>
 
-<p><span class="seoSummary">The <strong><code>shape-outside</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property defines a shape—which may be non-rectangular—around which adjacent inline content should wrap.</span> By default, inline content wraps around its margin box; <code>shape-outside</code> provides a way to customize this wrapping, making it possible to wrap text around complex objects rather than simple boxes.</p>
+<p>The <strong><code>shape-outside</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property defines a shape—which may be non-rectangular—around which adjacent inline content should wrap. By default, inline content wraps around its margin box; <code>shape-outside</code> provides a way to customize this wrapping, making it possible to wrap text around complex objects rather than simple boxes.</p>
 
 <div>{{EmbedInteractiveExample("pages/css/shape-outside.html")}}</div>
 
@@ -47,6 +47,7 @@ shape-outside: linear-gradient(45deg, rgba(255, 255, 255, 0) 150px, red 150px);
 /* Global values */
 shape-outside: initial;
 shape-outside: inherit;
+shape-outside: revert;
 shape-outside: unset;
 </pre>
 
@@ -78,7 +79,7 @@ shape-outside: unset;
  </dl>
  </dd>
  <dt>{{cssxref("&lt;basic-shape&gt;")}}</dt>
- <dd>The float area is computed based on the shape created by of one of <code><a href="/en-US/docs/Web/CSS/basic-shape#inset()">inset()</a></code>, <code><a href="/en-US/docs/Web/CSS/basic-shape#circle()">circle()</a></code>, <code><a href="/en-US/docs/Web/CSS/basic-shape#ellipse()">ellipse()</a></code>,  <code><a href="/en-US/docs/Web/CSS/basic-shape#polygon()">polygon()</a></code>, or as added in the level 2 specification <code>path()</code>. If a <code>&lt;shape-box&gt;</code> is also supplied, it defines the reference box for the <code>&lt;basic-shape&gt;</code> function. Otherwise, the reference box defaults to <code>margin-box</code>.</dd>
+ <dd>The float area is computed based on the shape created by of one of {{cssxref("basic-shape/inset()","inset()")}}, {{cssxref("basic-shape/circle()","circle()")}}, {{cssxref("basic-shape/ellipse()","ellipse()")}},  {{cssxref("basic-shape/polygon()","polygon()")}} or, as added in the level 2 specification, <code>path()</code>. If a <code>&lt;shape-box&gt;</code> is also supplied, it defines the reference box for the <code>&lt;basic-shape&gt;</code> function. Otherwise, the reference box defaults to <code>margin-box</code>.</dd>
  <dt>{{cssxref("&lt;image&gt;")}}</dt>
  <dd>The float area is extracted and computed based on the alpha channel of the specified {{cssxref("&lt;image&gt;")}} as defined by {{cssxref("shape-image-threshold")}}.</dd>
  <dd>
@@ -162,27 +163,7 @@ p {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS Shapes', '#shape-outside-property', 'shape-outside')}}</td>
-   <td>{{Spec2('CSS Shapes')}}</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS Shapes 2', '#shape-outside-property', 'shape-outside')}}</td>
-   <td>{{Spec2('CSS Shapes 2')}}</td>
-   <td>Adds the <code>path()</code> value</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

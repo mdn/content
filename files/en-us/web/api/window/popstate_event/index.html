@@ -13,6 +13,7 @@ tags:
   - URL
   - Window
   - popstate
+browser-compat: api.Window.popstate_event
 ---
 <p>{{APIRef}}</p>
 
@@ -71,7 +72,7 @@ tags:
  <li>If the <strong>new-entry</strong> doesn't have persisted user state and its URL's fragment is non-<code>null</code>, the document is scrolled to that fragment.</li>
  <li>Next, <strong>current-entry</strong> is set to <strong>new-entry</strong>. The destination entry is now considered to be current.</li>
  <li>If <strong>new-entry</strong> has serialized state information saved with it, that information is deserialized into {{domxref("History.state")}}; otherwise, <code>state</code> is <code>null</code>.</li>
- <li><span style="color: #229922;">If the value of <code>state</code> changed, the <code>popstate</code> event is sent to the document.</span></li>
+ <li>If the value of <code>state</code> changed, the <code>popstate</code> event is sent to the document.</li>
  <li>Any persisted user state is restored, if the browser chooses to do so.</li>
  <li>If the original and new entry's shared the same document, but had different fragments in their URLs, send the {{domxref("Window.hashchange_event", "hashchange")}} event to the window.</li>
 </ol>
@@ -110,22 +111,11 @@ history.go(2);  // Logs "location: http://example.com/example.html?page=3, state
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'indices.html#event-popstate', 'popstate')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Window.popstate_event")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

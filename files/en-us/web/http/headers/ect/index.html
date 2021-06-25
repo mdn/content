@@ -1,0 +1,83 @@
+---
+title: ECT
+slug: Web/HTTP/Headers/ECT
+tags:
+  - ect
+  - Client hints
+  - HTTP
+  - HTTP Header
+  - Request header
+  - Client hints
+  - Experimental
+browser-compat: http.headers.ect
+---
+<div>{{HTTPSidebar}} {{SeeCompatTable}}</div>
+
+<p>The <strong><code>ECT</code></strong> {{Glossary("Client hints","network client hint")}} request header field indicates the {{Glossary("effective connection type")}}: <code>slow-2g</code>, <code>2g</code>, <code>3g</code>, <code>4g</code>.</p>
+
+<table class="properties">
+  <tbody>
+   <tr>
+    <th scope="row">Header type</th>
+    <td>{{Glossary("Request header")}}, {{Glossary("Client hints","Client hint")}}</td>
+   </tr>
+   <tr>
+    <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <td>no</td>
+   </tr>
+  </tbody>
+ </table>
+
+ <p>The value represents the "network profile" that best matches the connection's latency and bandwidth, rather than the actual mechanisms used for transferring the data. For example, <code>2g</code> might be used to represent a slow wifi connection with high latency and low bandwidth, while <code>4g</code> might be used to represent a fast fibre-based broadband network.</p>
+
+<p>The hint allows a server to choose what information is sent based on the broad characteristics of the network. For example, a server might choose to send smaller versions of images and other resources on less capable connections. The value might also be used as a starting point for determining what information is sent, which is further refined using information in {{HTTPHeader("RTT")}} and {{HTTPHeader("Downlink")}} hints.</p>
+
+<div class="notecard note">
+  <p><strong>Note:</strong> A server that specifies {{HTTPHeader("ECT")}} in {{HTTPHeader("Accept-CH")}} may also specify it in {{HTTPHeader("Vary")}} to indicate that responses should be cached for different ECT values.</p>
+</div>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: http">ECT: &lt;value&gt;</pre>
+
+<h2 id="Directives">Directives</h2>
+
+<dl>
+ <dt>&lt;value&gt;</dt>
+ <dd>A value indicating {{Glossary("effective connection type")}}. This is one of: <code>slow-2g</code>, <code>2g</code>, <code>3g</code>, or <code>4g</code>.</dd>
+</dl>
+
+<h2 id="Examples">Examples</h2>
+
+<p>A server first needs to opt in to receive the <code>ECT</code> header by sending the {{HTTPHeader("Accept-CH")}} response header containing <code>ECT</code>.</p>
+
+<pre class="brush: http">Accept-CH: ECT</pre>
+
+<p>Then on subsequent requests the client might send an <code>ECT</code> header back:</p>
+
+<pre class="brush: http">ECT: 2g</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<p>{{Specifications}}</p>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>
+
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+  <li><a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/client-hints">Adapting to Users with Client Hints</a> (developer.google.com)</li>
+ <li>Network client hints
+  <ul>
+    <li>{{HTTPHeader("Downlink")}}</li>
+    <li>{{HTTPHeader("RTT")}}</li>
+    <li>{{HTTPHeader("Save-Data")}}</li>
+   </ul>
+ </li>
+ <li>{{HTTPHeader("Accept-CH")}}</li>
+ <li><a href="/en-US/docs/Web/HTTP/Caching#varying_responses">HTTP Caching > Varying responses</a> and {{HTTPHeader("Vary")}}</li>
+ <li>{{domxref("NetworkInformation.effectiveType")}}</li>
+</ul>

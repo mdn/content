@@ -9,11 +9,12 @@ tags:
 - Reference
 - WebRTC
 - ondatachannel
+browser-compat: api.RTCPeerConnection.ondatachannel
 ---
 <p>{{APIRef("WebRTC")}}{{SeeCompatTable}}</p>
 
 <p>The <code><strong>RTCPeerConnection.ondatachannel</strong></code> property is an
-  {{domxref("EventHandler")}} which specifies a function which is called when the
+  {{event("Event_handlers", "event handler")}} which specifies a function which is called when the
   {{event("datachannel")}} event occurs on an {{domxref("RTCPeerConnection")}}. This
   event, of type {{domxref("RTCDataChannelEvent")}}, is sent when an
   {{domxref("RTCDataChannel")}} is added to the connection by the remote peer calling
@@ -47,27 +48,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{ SpecName('WebRTC 1.0', '#dom-rtcpeerconnection-ondatachannel',
-        'RTCPeerConnection.ondatachannel') }}</td>
-      <td>{{ Spec2('WebRTC 1.0') }}</td>
-      <td>Initial specification.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCPeerConnection.ondatachannel")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

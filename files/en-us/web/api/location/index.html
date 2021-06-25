@@ -7,6 +7,7 @@ tags:
   - Interface
   - Location
   - Reference
+browser-compat: api.Location
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
@@ -16,47 +17,43 @@ tags:
 
 <h3 id="HTML">HTML</h3>
 
-<pre class="brush: html">&lt;span id="href"&gt;&lt;span id="origin"&gt;&lt;span id="protocol"&gt;http:&lt;/span&gt;//&lt;span id="host"&gt;&lt;span id="hostname"&gt;example.org&lt;/span&gt;:&lt;span id="port"&gt;8888&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span id="pathname"&gt;/foo/bar&lt;/span&gt;&lt;span id="search"&gt;?q=baz&lt;/span&gt;&lt;span id="hash"&gt;#bang&lt;/span&gt;&lt;/span&gt;</pre>
+<pre class="brush: html">&lt;span id="href" title="href"&gt;&lt;span id="origin" title="origin"&gt;&lt;span id="protocol" title="protocol"&gt;https:&lt;/span&gt;//&lt;span id="host" title="host"&gt;&lt;span id="hostname" title="hostname"&gt;example.org&lt;/span&gt;:&lt;span id="port" title="port"&gt;8080&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span id="pathname" title="pathname"&gt;/foo/bar&lt;/span&gt;&lt;span id="search" title="search"&gt;?q=baz&lt;/span&gt;&lt;span id="hash" title="hash"&gt;#bang&lt;/span&gt;&lt;/span&gt;</pre>
 
 <h3 id="CSS">CSS</h3>
 
-<pre class="brush: css">html, body {height:100%;}
-html {display:table; width:100%;}
-body {display:table-cell; text-align:center; vertical-align:middle; font-family:georgia; font-size:230%; line-height:1em; white-space:nowrap;}
+<pre class="brush: css">html, body { height: 100%; }
 
-[title] {position:relative; display:inline-block; box-sizing:border-box; /*border-bottom:.5em solid;*/ line-height:2em; cursor:pointer;}
+html { display: table; width: 100%; }
 
-[title]:before {content:attr(title); font-family:monospace; position:absolute; top:100%; width:100%; left:50%; margin-left:-50%; font-size:40%; line-height:1.5; background:black;}
-[title]:hover:before,
-:target:before {background:black; color:yellow;}
+body { display: table-cell; text-align: center; vertical-align: middle; font-family: Georgia; font-size: 200%; line-height: 1em; white-space: nowrap; }
 
-[title] [title]:before {margin-top:1.5em;}
-[title] [title] [title]:before {margin-top:3em;}
-[title] [title] [title] [title]:before {margin-top:4.5em;}
+[title] { position: relative; display: inline-block; box-sizing: border-box; line-height: 2em; cursor: pointer; }
 
-[title]:hover,
-:target {position:relative; z-index:1; outline:50em solid rgba(255,255,255,.8);}</pre>
+[title]:before { content: attr(title); font-family: monospace; position: absolute; top: 100%; width: 100%; left: 50%; margin-left: -50%; font-size: 40%; line-height: 1.5; background: black; }
+
+[title]:hover:before, :target:before { background: black; color: yellow; }
+
+[title] [title]:before { margin-top: 1.5em; }
+
+[title] [title] [title]:before { margin-top: 3em; }
+
+[title] [title] [title] [title]:before { margin-top: 4.5em; }
+
+[title]:hover, :target { position: relative; z-index: 1; outline: 50em solid rgba(255, 255, 255, .8); }</pre>
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<pre class="brush: js">[].forEach.call(document.querySelectorAll('[title][id]'), function (node) {
-  node.addEventListener("click", function(e) {
-    e.preventDefault();
-    e.stopPropagation();
-    window.location.hash = '#' + e.target.getAttribute('id');
-  });
-});
-[].forEach.call(document.querySelectorAll('[title]:not([id])'), function (node) {
-  node.addEventListener("click", function(e) {
-    e.preventDefault();
-    e.stopPropagation();
-    window.location.hash = '';
-  });
+<pre class="brush: js">document.body.addEventListener('click', function (evt) {
+    evt.preventDefault();
+
+    window.location.hash = evt.target.hasAttribute('id')
+        ? '#' + evt.target.getAttribute('id')
+        : '';
 });</pre>
 
 <h3 id="Result">Result</h3>
 
-<p>{{EmbedLiveSample('Anatomy_Of_Location')}}</p>
+<p>{{EmbedLiveSample('Anatomy_Of_Location', '85ch', '220px')}}</p>
 
 <h2 id="Properties">Properties</h2>
 
@@ -115,26 +112,11 @@ console.log(url.origin);    // https://developer.mozilla.org:8080
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "browsers.html#the-location-interface", "Location")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Location")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

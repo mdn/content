@@ -6,6 +6,8 @@ tags:
 - HTML DOM
 - Method
 - Window
+- Polyfill
+browser-compat: api.Window.clearImmediate
 ---
 <p>{{APIRef("HTML DOM")}}{{Non-standard_header}}</p>
 
@@ -40,32 +42,17 @@ document.getElementById("button")
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><a href="https://w3c.github.io/setImmediate/#si-setImmediate"
-          hreflang="en" lang="en">Efficient Script Yielding<br>
-          <small lang="en-US">The definition of '<code>setImmediate</code>' in that
-            specification.</small></a></td>
-      <td><span class="spec-ED">Editor's Draft</span></td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+<p>Not part of any current specifications. The
+<a href="https://w3c.github.io/setImmediate/#si-setImmediate">Efficient Script Yielding</a>
+specification is no longer being worked on.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Window.clearImmediate")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
+  <li>A polyfill of <code>clearImmediate</code> is available in <a href="https://github.com/zloirock/core-js#setimmediate"><code>core-js</code></a></li>
   <li>{{DOMxRef("Window.setImmediate()")}}</li>
 </ul>
