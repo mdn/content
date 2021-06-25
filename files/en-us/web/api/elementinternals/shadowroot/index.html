@@ -9,36 +9,32 @@ tags:
   - ElementInternals
 browser-compat: api.ElementInternals.shadowRoot
 ---
-<div>{{DefaultAPISidebar("")}}</div>
+<div>{{DefaultAPISidebar("DOM")}}</div>
 
-<p class="summary">The <strong><code>shadowRoot</code></strong>  property of the {{domxref("ElementInternals")}} interface  </p>
+<p class="summary">The <strong><code>shadowRoot</code></strong> read-only property of the {{domxref("ElementInternals")}} interface returns the {{domxref("ShadowRoot")}} for this element.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js">let ashadowRoot = ElementInternals.shadowRoot;
-// Remove this one if the property is read only.
-ElementInternals.shadowRoot = a;
+<pre class="brush: js">let shadowRoot = ElementInternals.shadowRoot;
 </pre>
 
 <h3>Value</h3>
-<p></p>
+<p>A {{domxref("ShadowRoot")}} if the element has a shadow root, otherwise <code>null</code>.</p>
 
 <h2 id="Examples">Examples</h2>
 
-<p>Fill in a simple example that nicely shows a typical usage of the API, then perhaps some more complex examples (see our guide on how to add <a href="/en-US/docs/MDN/Contribute/Structures/Code_examples">code examples</a> for more information).</p>
+<p>The following example prints the value of <code>shadowRoot</code> to the console, immediately after calling {{domxref("Element.attachInternals()")}}. At this point the value is <code>null</code>. After calling {{domxref("Element.attachShadow()")}} the element has a Shadow Root, and <code>shadowRoot</code> returns the object representing it.</p>
 
-<p>This text should be replaced with a brief description of what the example demonstrates.</p>
+<pre class="brush: js">constructor() {
+  super();
+  this.internals_ = this.attachInternals();
 
-<pre class="brush: js">
-my code block</pre>
+  console.log(this.internals_.shadowRoot); // null
 
-<p>And/or include a list of links to useful code samples that live elsewhere:</p>
+  this.attachShadow({ mode: "open" });
 
-<ul>
-	<li>x</li>
-	<li>y</li>
-	<li>z</li>
-</ul>
+  console.log(this.internals_.shadowRoot); // a ShadowRoot object
+}</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

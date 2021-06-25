@@ -9,42 +9,45 @@ tags:
   - ElementInternals
 browser-compat: api.ElementInternals.setFormValue
 ---
-<div>{{DefaultAPISidebar("")}}</div>
+<div>{{DefaultAPISidebar("DOM")}}</div>
 
-<p class="summary">The <strong><code>setFormValue()</code></strong> method of the {{domxref("ElementInternals")}} interface  </p>
+<p class="summary">The <strong><code>setFormValue()</code></strong> method of the {{domxref("ElementInternals")}} interface sets the element's submission value and state, communicating these to the user agent.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js">ElementInternals.setFormValue();</pre>
+<pre class="brush: js">ElementInternals.setFormValue(value);
+ElementInternals.setFormValue(value, state);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
+<dl>
+  <dt><code>value</code></dt>
+  <dd>A {{domxref("File")}}, or a {{domxref("USVString","string")}}, or {{domxref("FormData")}} as the value to be submitted to the server.</dd>
+  <dt><code>state</code>{{Optional_Inline}}</dt>
+  <dd>A {{domxref("File")}}, or a {{domxref("USVString","string")}}, or {{domxref("FormData")}} representing the input made by the user. This allows the application to re-display the information that the user submitted, in the form that they submitted it, if required.</dd>
+</dl>
 
+<div class="notecard note">
+  <h4>Note:</h4>
+  <p>In general, <code>state</code> is used to pass information specified by a user, the <code>value</code> is suitable for submission to a server, post sanitization. For example, if a custom element asked a user to submit a date, the user might enter "3/15/2019". This would be the <code>state</code>. The server expects a date format of <code>2019-03-15</code>, the date in this format would be passed as the <code>value</code>.</p>
+</div>
 
 <h3 id="Returns">Return value</h3>
 
-<p></p>
+<p>Undefined.</p>
 
 <h3 id="Exceptions">Exceptions</h3>
 
-
+<dl>
+  <dt>{{domxref("DOMException")}} <code>NotSupportedError</code></dt>
+  <dd>Thrown if the element does not have its <code>formAssociated</code> property set to <code>true</code>.</dd>
+</dl>
 
 <h2 id="Examples">Examples</h2>
 
-<p>Fill in a simple example that nicely shows a typical usage of the API, then perhaps some more complex examples (see our guide on how to add <a href="/en-US/docs/MDN/Contribute/Structures/Code_examples">code examples</a> for more information).</p>
+<p>In the following example, a checkbox custom element sets <code>on</code> as the value to send to the server, and <code>checked</code> as the state.</p>
 
-<p>This text should be replaced with a brief description of what the example demonstrates.</p>
-
-<pre class="brush: js">
-my code block</pre>
-
-<p>And/or include a list of links to useful code samples that live elsewhere:</p>
-
-<ul>
-	<li>x</li>
-	<li>y</li>
-	<li>z</li>
-</ul>
+<pre class="brush: js">this.internals_.setFormValue("on","checked");</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -52,8 +55,4 @@ my code block</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
-
 <p>{{Compat}}</p>
-
-

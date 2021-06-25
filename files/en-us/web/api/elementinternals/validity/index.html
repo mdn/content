@@ -19,7 +19,7 @@ browser-compat: api.ElementInternals.validity
 </pre>
 
 <h3>Value</h3>
-<p>A {{domxref("ValidityState")}} object</p>
+<p>A {{domxref("ValidityState")}} object.</p>
 
 <h3>Exceptions</h3>
 
@@ -30,7 +30,7 @@ browser-compat: api.ElementInternals.validity
 
 <h2 id="Examples">Examples</h2>
 
-<p>The following example shows a custom checkbox component with <code>formAssociated</code> set to <code>true</code>. </p>
+<p>The following example shows a custom checkbox component with <code>formAssociated</code> set to <code>true</code>, the value of <code>validity.valid</code> is logged to the console.</p>
 
 <pre class="brush: js">class CustomCheckbox extends HTMLElement {
   static formAssociated = true;
@@ -39,14 +39,14 @@ browser-compat: api.ElementInternals.validity
     super();
     this.internals_ = this.attachInternals();
 
-    this.attachShadow({ mode: "open" });
-    this.shadowRoot.appendChild(template.content.cloneNode(true));
+    /* ... */
+
   }
   window.customElements.define("custom-checkbox", CustomCheckbox);
 })();
 
 let element = document.getElementById("custom-checkbox");
-console.log(element.validity.valid);</pre>
+console.log(element.internals_.validity.valid);</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

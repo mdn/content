@@ -10,7 +10,7 @@ browser-compat: api.ElementInternals
 ---
 <div>{{DefaultAPISidebar("DOM")}}</div>
 
-<p class="summary">The <strong><code>ElementInternals</code></strong> interface of the {{domxref('Document_Object_Model','','',' ')}} gives web developers a way </p>
+<p class="summary">The <strong><code>ElementInternals</code></strong> interface of the {{domxref('Document_Object_Model','','',' ')}} gives web developers a way to allow custom elements to fully participate in HTML forms. It provides utilities for working with these elements in the same way you would work with any standard HTML form element, and also exposes the <a href="https://wicg.github.io/aom/explainer.html">Accessibility Object Model</a> to the element.</p>
 
 <h2 id="Properties">Properties</h2>
 
@@ -32,7 +32,12 @@ browser-compat: api.ElementInternals
 
 <h3 id="Properties_included_from_Aria">Properties included from ARIA</h3>
 
-<p><em>The <code>ElementInternals</code> interface includes the following properties, defined on the <code>ARIAMixin</code> mixin.</em></p>
+<p>The <code>ElementInternals</code> interface includes the following properties, defined on the <code>ARIAMixin</code> mixin.</p>
+
+<div class="notecard note">
+  <h4>Note:</h4>
+  <p>These are included in order that default accessibility semantics can be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <a href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</a>.</p>
+</div>
 
 <dl>
   <dt>{{domxref("ElementInternals.ariaAtomic")}}</dt>
@@ -117,34 +122,55 @@ browser-compat: api.ElementInternals
   <dd>Is a {{domxref("DOMString")}} reflecting the <code>aria-valuetext</code> attribute, which defines the human readable text alternative of aria-valuenow for a range widget.</dd>
 </dl>
 
-
-<h3 id="Event_handlers">Event handlers</h3>
-
-
-
 <h2 id="Methods">Methods</h2>
 
 <dl>
   <dt>{{domxref("ElementInternals.setFormValue()")}}</dt>
-  <dd></dd>
+  <dd>Sets the element's submission value and state, communicating these to the user agent.</dd>
   <dt>{{domxref("ElementInternals.setValidity()")}}</dt>
-  <dd></dd>
+  <dd>Sets the validity of the element.</dd>
   <dt>{{domxref("ElementInternals.checkValidity()")}}</dt>
-  <dd></dd>
+  <dd>Checks if an element meets any <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a> rules applied to it.</dd>
   <dt>{{domxref("ElementInternals.reportValidity()")}}</dt>
-  <dd></dd>
+  <dd>Checks if an element meets any <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a> rules applied to it, and also sends a validation message to the user agent.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
 
+<p>The following example demonstrates how to create a custom form-associated element with {{domxref("Element.attachInternals")}}.</p>
 
+<pre class="brush: js">class CustomCheckbox extends HTMLElement {
+  static formAssociated = true;
 
+  constructor() {
+    super();
+    this.internals_ = this.attachInternals();
+  }
+
+  /* ... */
+
+  window.customElements.define("custom-checkbox", CustomCheckbox);
+})();
+
+let element = document.getElementById("custom-checkbox");
+console.log(element.internals_.form);</pre>
 <h2 id="Specifications">Specifications</h2>
 
 <p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
-
 <p>{{Compat}}</p>
+
+<h2 id="Polyfill">Polyfills</h2>
+
+<ul>
+  <li><a href="https://www.npmjs.com/package/element-internals-polyfill">ElementInternals polyfill</a></li>
+</ul>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+  <li><a href="https://web.dev/more-capable-form-controls/">More capable form controls</a></li>
+  <li><a href="https://css-tricks.com/creating-custom-form-controls-with-elementinternals/">Creating custom form controls with ElementInternals</a></li>
+</ul>

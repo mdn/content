@@ -15,6 +15,11 @@ browser-compat: api.ElementInternals.ariaRoleDescription
 
 <p class="summary">The <strong><code>ariaRoleDescription</code></strong> property of the {{domxref("Element")}} interface reflects the value of the <code>aria-roledescription</code> attribute, which defines a human-readable, author-localized description for the role of an element.</p>
 
+<div class="notecard note">
+  <h4>Note:</h4>
+  <p>Setting aria attributes on <code>ElementInternals</code> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <a href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</a>.</p>
+</div>
+
 <h2 id="Syntax">Syntax</h2>
 
 <pre class="brush: js">let ariaRoleDescription = ElementInternals.ariaRoleDescription;
@@ -25,14 +30,9 @@ ElementInternals.ariaRoleDescription = ariaRoleDescription</pre>
 
 <h2 id="Examples">Examples</h2>
 
-<p>In this example the <code>aria-roledescription</code> attribute on the element with an ID of <code>myApplication</code> has been set. Using <code>ariaRoleDescription</code> we can update the value.</p>
+<p>In this example the value of <code>ariaRoleDescription</code> is set to "My custom widget".</p>
 
-<pre class="brush: html">&lt;div id="myApplication" role="application" aria-roledescription="a description of this widget"&gt;...&lt;/div&gt;</pre>
-
-<pre class="brush: js">let el = document.getElementById('myApplication');
-console.log(el.ariaRoleDescription); // "a description of this widget"
-el.ariaRoleDescription = "an updated description of this widget"
-console.log(el.ariaRoleDescription); // "an updated description of this widget"</pre>
+<pre class="brush: js">this.internals_.ariaRoleDescription = "My custom widget";</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

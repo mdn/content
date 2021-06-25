@@ -15,6 +15,11 @@ browser-compat: api.ElementInternals.ariaLevel
 
 <p class="summary">The <strong><code>ariaLevel</code></strong> property of the {{domxref("ElementInternals")}} interface reflects the value of the <code>aria-level</code> attribute, which defines the hierarchical level of an element within a structure.</p>
 
+<div class="notecard note">
+  <h4>Note:</h4>
+  <p>Setting aria attributes on <code>ElementInternals</code> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <a href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</a>.</p>
+</div>
+
 <h2 id="Syntax">Syntax</h2>
 
 <pre class="brush: js">let ariaLevel = ElementInternals.ariaLevel;
@@ -25,15 +30,9 @@ ElementInternals.ariaLevel = ariaLevel</pre>
 
 <h2 id="Examples">Examples</h2>
 
-<p>In this example the <code>aria-level</code> attribute on the element with an ID of <code>main-heading</code> is set to "1". Using <code>ariaLevel</code> we update the value to "2".</p>
+<p>In this example the value of <code>ariaLevel</code> is set to "1".</p>
 
-<pre class="brush: html">&lt;div role="heading" id="main-heading" aria-level="1"&gt;This is a main page heading&lt;/div&gt;
-</pre>
-
-<pre class="brush: js">let el = document.getElementById('main-heading');
-console.log(el.ariaLevel); // "1"
-el.ariaLevel = "2"
-console.log(el.ariaLevel); // "2"</pre>
+<pre class="brush: js">this.internals_.ariaLevel = "1";</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

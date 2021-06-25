@@ -9,9 +9,13 @@ tags:
   - ElementInternals
 browser-compat: api.ElementInternals.reportValidity
 ---
-<div>{{DefaultAPISidebar("")}}</div>
+<div>{{DefaultAPISidebar("DOM")}}</div>
 
-<p class="summary">The <strong><code>reportValidity()</code></strong> method of the {{domxref("ElementInternals")}} interface  </p>
+<p class="summary">The <strong><code>reportValidity()</code></strong> method of the {{domxref("ElementInternals")}} interface checks if the element meets any <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a> rules applied to it.</p>
+
+<p>If <code>reportValidity</code> returns <code>false</code> then a cancelable <a href="/en-US/docs/Web/API/HTMLInputElement/invalid_event">invalid event</a> is fired on the element.</p>
+
+<p>This method behaves in a similar way to {{domxref("ElementInternals.checkValidity()")}}, however it additionally sends the value of {{domxref("ElementInternals.validationMessage")}} to the user agent for display.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -19,32 +23,31 @@ browser-compat: api.ElementInternals.reportValidity
 
 <h3 id="Parameters">Parameters</h3>
 
-
+<p>None.</p>
 
 <h3 id="Returns">Return value</h3>
 
-<p></p>
+<p>A {{jsxref("Boolean")}}, <code>true</code> if the element meets all validation constraints.</p>
 
 <h3 id="Exceptions">Exceptions</h3>
 
-
+<dl>
+  <dt>{{domxref("DOMException")}} <code>NotSupportedError</code></dt>
+  <dd>Thrown if the element does not have its <code>formAssociated</code> property set to <code>true</code>.</dd>
+</dl>
 
 <h2 id="Examples">Examples</h2>
 
-<p>Fill in a simple example that nicely shows a typical usage of the API, then perhaps some more complex examples (see our guide on how to add <a href="/en-US/docs/MDN/Contribute/Structures/Code_examples">code examples</a> for more information).</p>
 
-<p>This text should be replaced with a brief description of what the example demonstrates.</p>
+<p>In the following example {{domxref("ElementInternals.setValidity()")}} is used to indicate that the element does not meet validation rules. Calling <code>reportValidity()</code> returns <code>false</code>, and the value "my message" is sent to the user agent for display.</p>
 
-<pre class="brush: js">
-my code block</pre>
+<p>After calling <code>setValidity</code> again, this time indicating that all rules are marked false, <code>reportValidity()</code> returns <code>true</code>.</p>
 
-<p>And/or include a list of links to useful code samples that live elsewhere:</p>
-
-<ul>
-	<li>x</li>
-	<li>y</li>
-	<li>z</li>
-</ul>
+<pre class="brush: js">let element = document.getElementById("join-checkbox");
+element.internals_.setValidity({'valueMissing':true},"my message");
+console.log(element.internals_.reportValidity()); // false
+element.internals_.setValidity({});
+console.log(element.internals_.reportValidity()); // true</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

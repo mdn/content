@@ -15,6 +15,11 @@ browser-compat: api.ElementInternals.ariaCurrent
 
 <p class="summary">The <strong><code>ariaCurrent</code></strong> property of the {{domxref("ElementInternals")}} interface reflects the value of the <code>aria-current</code> attribute, which indicates the element that represents the current item within a container or set of related elements.</p>
 
+<div class="notecard note">
+  <h4>Note:</h4>
+  <p>Setting aria attributes on <code>ElementInternals</code> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <a href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</a>.</p>
+</div>
+
 <h2 id="Syntax">Syntax</h2>
 
 <pre class="brush: js">let ariaCurrent = ElementInternals.ariaCurrent;
@@ -42,20 +47,9 @@ ElementInternals.ariaCurrent = ariaCurrent</pre>
 
 <h2 id="Examples">Examples</h2>
 
-<p>In this example a set of links are used for site navigation. The <code>aria-current</code> attribute indicates the current page. The value <code>page</code> is incorporated into the screenreader announcement. Using <code>ariaCurrent</code> we can update that value.</p>
+<p>In this example the value of <code>ariaCurrent</code> is set to "page".</p>
 
-<pre class="brush: html">&lt;nav&gt;
-  &lt;ul&gt;
-    &lt;li&gt;&lt;a id="link-home" href="/" aria-current="page"&gt;Home&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="/"&gt;About&lt;/a&gt;&lt;/li&gt;
-    &lt;li>&lt;a href="/"&gt;Contact&lt;/a&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/nav&gt;</pre>
-
-<pre class="brush: js">let el = document.getElementById('link-home');
-console.log(el.ariaCurrent); // "page"
-el.ariaCurrent = "tab"
-console.log(el.ariaCurrent); // "tab"</pre>
+<pre class="brush: js">this.internals_.ariaCurrent = "page";</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

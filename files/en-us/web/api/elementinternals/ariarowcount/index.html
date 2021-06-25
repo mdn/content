@@ -15,6 +15,11 @@ browser-compat: api.ElementInternals.ariaRowCount
 
 <p class="summary">The <strong><code>ariaRowCount</code></strong> property of the {{domxref("ElementInternals")}} interface reflects the value of the <code>aria-rowcount</code> attribute, which defines the total number of rows in a table, grid, or treegrid.</p>
 
+<div class="notecard note">
+  <h4>Note:</h4>
+  <p>Setting aria attributes on <code>ElementInternals</code> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <a href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</a>.</p>
+</div>
+
 <h2 id="Syntax">Syntax</h2>
 
 <pre class="brush: js">let ariaRowCount = ElementInternals.ariaRowCount;
@@ -25,40 +30,9 @@ ElementInternals.ariaRowCount = ariaRowCount</pre>
 
 <h2 id="Examples">Examples</h2>
 
-<p>In this example the <code>aria-rowcount</code> attribute on the element with an ID of <code>semantic-table</code> is set to "100", representing the total number of rows in the table, rather than the currently visible rows. Using <code>ariaRowCount</code> we update the value to "101".</p>
+<p>In this example the value of <code>ariaRowCount</code> is set to "100".</p>
 
-<pre class="brush: html">&lt;table id="semantic-table" role="table" aria-label="Semantic Elements" aria-describedby="semantic_elements_table_desc" aria-rowcount="100"&gt;
-  &lt;caption id="semantic_elements_table_desc"&gt;Semantic Elements to use instead of ARIA's roles&lt;/caption&gt;
-  &lt;thead role="rowgroup"&gt;
-    &lt;tr role="row"&gt;
-      &lt;th role="columnheader" aria-sort="none" aria-rowindex="1"&gt;ARIA Role&lt;/th&gt;
-      &lt;th role="columnheader" aria-sort="none" aria-rowindex="1"&gt;Semantic Element&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody role="rowgroup"&gt;
-    &lt;tr role="row"&gt;
-      &lt;td role="cell" aria-rowindex="11"&gt;header&lt;/td&gt;
-      &lt;td role="cell" aria-rowindex="11"&gt;h1&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr role="row"&gt;
-      &lt;td role="cell" aria-rowindex="16"&gt;header&lt;/td&gt;
-      &lt;td role="cell" aria-rowindex="16"&gt;h6&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr role="row"&gt;
-      &lt;td role="cell" aria-rowindex="18"&gt;rowgroup&lt;/td&gt;
-      &lt;td role="cell" aria-rowindex="18"&gt;thead&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr role="row"&gt;
-      &lt;td role="cell" aria-rowindex="24"&gt;term&lt;/td&gt;
-      &lt;td role="cell" aria-rowindex="24"&gt;dt&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;</pre>
-
-<pre class="brush: js">let el = document.getElementById('semantic-table');
-console.log(el.ariaRowCount); // 100
-el.ariaRowCount = "101"
-console.log(el.ariaRowCount); // 101</pre>
+<pre class="brush: js">this.internals_.ariaRowCount = "100";</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

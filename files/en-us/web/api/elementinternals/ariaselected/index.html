@@ -15,6 +15,11 @@ browser-compat: api.ElementInternals.ariaSelected
 
 <p class="summary">The <strong><code>ariaSelected</code></strong> property of the {{domxref("ElementInternals")}} interface reflects the value of the <code>aria-selected</code> attribute, which indicates the current "selected" state of elements that have a selected state.</p>
 
+<div class="notecard note">
+  <h4>Note:</h4>
+  <p>Setting aria attributes on <code>ElementInternals</code> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <a href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</a>.</p>
+</div>
+
 <h2 id="Syntax">Syntax</h2>
 
 <pre class="brush: js">let ariaSelected = ElementInternals.ariaSelected;
@@ -34,14 +39,9 @@ ElementInternals.ariaSelected = ariaSelected</pre>
 
 <h2 id="Examples">Examples</h2>
 
-<p>In this example the <code>aria-selected</code> attribute on the element with an ID of <code>tab-id</code> is set to "true". Using <code>ariaSelected</code> we update the value to "false".</p>
+<p>In this example the value of <code>ariaSelected</code> is set to "true".</p>
 
-<pre class="brush: html">&lt;button role="tab" aria-selected="true" aria-controls="tabpanel-id" id="tab-id"&gt;Tab label&lt;/button&gt;</pre>
-
-<pre class="brush: js">let el = document.getElementById('tab-id');
-console.log(el.ariaSelected); // true
-el.ariaSelected = "false";
-console.log(el.ariaSelected); // false</pre>
+<pre class="brush: js">this.internals_.ariaSelected = "true";</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

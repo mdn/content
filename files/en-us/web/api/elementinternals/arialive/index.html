@@ -14,6 +14,11 @@ browser-compat: api.ElementInternals.ariaLive
 
 <p class="summary">The <strong><code>ariaLive</code></strong> property of the {{domxref("ElementInternals")}} interface reflects the value of the <code><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions">aria-live</a></code> attribute, which indicates that an element will be updated, and describes the types of updates the user agents, assistive technologies, and user can expect from the live region.</p>
 
+<div class="notecard note">
+  <h4>Note:</h4>
+  <p>Setting aria attributes on <code>ElementInternals</code> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <a href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</a>.</p>
+</div>
+
 <h2 id="Syntax">Syntax</h2>
 
 <pre class="brush: js">let ariaLive = ElementInternals.ariaLive;
@@ -33,17 +38,9 @@ ElementInternals.ariaLive = ariaLive</pre>
 
 <h2 id="Examples">Examples</h2>
 
-<p>In this example the <code>aria-live</code> attribute on the element with an ID of <code>planetInfo</code> is set to "polite". We then update the value to "assertive".</p>
+<p>In this example the value of <code>ariaLive</code> is set to "assertive".</p>
 
-<pre class="brush: html">&lt;div role="region" id="planetInfo" aria-live="polite"&gt;
-  &lt;h2 id="planetTitle"&gt;No planet selected&lt;/h2&gt;
-  &lt;p id="planetDescription"&gt;Select a planet to view its description&lt;/p&gt;
-&lt;/div&gt;</pre>
-
-<pre class="brush: js">let el = document.getElementById('planetInfo');
-console.log(el.ariaLive); // "polite"
-el.ariaLive = "assertive";
-console.log(el.ariaLive); // assertive</pre>
+<pre class="brush: js">this.internals_.ariaLive = "assertive";</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

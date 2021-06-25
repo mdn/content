@@ -9,36 +9,26 @@ tags:
   - ElementInternals
 browser-compat: api.ElementInternals.labels
 ---
-<div>{{DefaultAPISidebar("")}}</div>
+<div>{{DefaultAPISidebar("DOM")}}</div>
 
-<p class="summary">The <strong><code>labels</code></strong>  property of the {{domxref("ElementInternals")}} interface  </p>
+<p class="summary">The <strong><code>labels</code></strong> read-only property of the {{domxref("ElementInternals")}} interface returns the labels associated with the element.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js">let alabels = ElementInternals.labels;
-// Remove this one if the property is read only.
-ElementInternals.labels = a;
-</pre>
+<pre class="brush: js">let labels = ElementInternals.labels;</pre>
 
 <h3>Value</h3>
-<p></p>
+<p>A {{domxref("NodeList")}} containing all of the label elements associated with this element.</p>
 
 <h2 id="Examples">Examples</h2>
 
-<p>Fill in a simple example that nicely shows a typical usage of the API, then perhaps some more complex examples (see our guide on how to add <a href="/en-US/docs/MDN/Contribute/Structures/Code_examples">code examples</a> for more information).</p>
+<p>The following example shows a custom checkbox component with a {{HTMLElement("label")}} element linked to it. Printing the value of <code>labels</code> to the console returns a {{domxref("NodeList")}} with one entry, representing this label.</p>
 
-<p>This text should be replaced with a brief description of what the example demonstrates.</p>
+<pre class="brush: html">&lt;form id="myForm"&gt;&lt;custom-checkbox id="join-checkbox"&gt;&lt;/custom-checkbox&gt;
+  &lt;label for="custom-checkbox"&gt;Join newsletter&lt;/label&gt;&lt;/form&gt;</pre>
 
-<pre class="brush: js">
-my code block</pre>
-
-<p>And/or include a list of links to useful code samples that live elsewhere:</p>
-
-<ul>
-	<li>x</li>
-	<li>y</li>
-	<li>z</li>
-</ul>
+<pre class="brush: js">let element = document.getElementById("custom-checkbox");
+console.log(element.internals_.label);</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

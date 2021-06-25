@@ -13,7 +13,12 @@ browser-compat: api.ElementInternals.ariaAtomic
 ---
 <div>{{DefaultAPISidebar("DOM")}}</div>
 
-<p class="summary">The <strong><code>ariaAtomic</code></strong> property of the {{domxref("ElementInternals")}} interface reflects the value of the <code>aria-atomic</code> attribute, which indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the {{domxref("aria-relevant")}} attribute.</p>
+<p class="summary">The <strong><code>ariaAtomic</code></strong> property of the {{domxref("ElementInternals")}} interface reflects the value of the <code>aria-atomic</code> attribute, which indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the <code>aria-relevant</code> attribute.</p>
+
+<div class="notecard note">
+  <h4>Note:</h4>
+  <p>Setting aria attributes on <code>ElementInternals</code> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <a href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</a>.</p>
+</div>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -31,14 +36,13 @@ ElementInternals.ariaAtomic = ariaAtomic</pre>
 
 <h2 id="Examples">Examples</h2>
 
-<p>In this example the <code>aria-atomic</code> attribute on the element with an ID of <code>"clock"</code> is set to "true". Using <code>ariaAtomic</code> we update the value to "false".</p>
+<p>In this example the value of <code>ariaAtomic</code> is set to "true" in the constructor for a custom element .</p>
 
-<pre class="brush: html">&lt;div id="clock" role="timer" aria-live="polite" aria-atomic="true"&gt;&lt;/div&gt;</pre>
-
-<pre class="brush: js">let el = document.getElementById('clock');
-console.log(el.ariaAtomic); // true
-el.ariaAtomic = "false"
-console.log(el.ariaAtomic); // false</pre>
+<pre class="brush: js">constructor() {
+  super();
+  this.internals_ = this.attachInternals();
+  this.internals_.ariaAtomic = "true";
+}</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

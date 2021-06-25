@@ -16,8 +16,8 @@ browser-compat: api.ElementInternals.ariaMultiSelectable
 <p class="summary">The <strong><code>ariaMultiSelectable</code></strong> property of the {{domxref("ElementInternals")}} interface reflects the value of the <code>aria-multiselectable</code> attribute, which indicates that the user may select more than one item from the current selectable descendants.</p>
 
 <div class="notecard note">
-  <h3>Note</h3>
-  <p>Where possible use an HTML {{htmlelement("select")}} element as this has built in semantics and does not require ARIA attributes.</p>
+  <h4>Note:</h4>
+  <p>Setting aria attributes on <code>ElementInternals</code> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <a href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</a>.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
@@ -37,19 +37,9 @@ ElementInternals.ariaMultiSelectable = ariaMultiSelectable</pre>
 
 <h2 id="Examples">Examples</h2>
 
-<p>In this example the <code>aria-multiselectable</code> attribute on the element with an ID of <code>listbox1</code> is set to "true" indicating that this input accepts multiple selected items. Using <code>ariaMultiSelectable</code> we update the value to "false".</p>
+<p>In this example the value of <code>ariaMultiSelectable</code> is set to "true".</p>
 
-<pre class="brush: html">&lt;div role="listbox" tabindex="0" id="listbox1"
-  aria-multiselectable="true" aria-labelledby="listbox1label" aria-activedescendant="listbox1-1"&gt;
-  &lt;div role="option" id="listbox1-1" class="selected" aria-selected="true"&gt;Green&lt;/div&gt;
-  &lt;div role="option" id="listbox1-2"&gt;Orange&lt;/div&gt;
-  &lt;div role="option" id="listbox1-3"&gt;Red&lt;/div&lt;
-&lt;/div></pre>
-
-<pre class="brush: js">let el = document.getElementById('listbox1');
-console.log(el.ariaMultiSelectable); // "true"
-el.ariaMultiSelectable = "false"
-console.log(el.ariaMultiSelectable); // "false"</pre>
+<pre class="brush: js">this.internals_.ariaMultiSelectable = "true";</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
