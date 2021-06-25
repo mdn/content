@@ -179,42 +179,11 @@ div {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Backgrounds', '#background-position', 'background-position')}}</td>
-   <td>{{Spec2('CSS3 Backgrounds')}}</td>
-   <td>Adds support for multiple backgrounds and the four-value syntax. Modifies the percentage definition to match implementations.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'colors.html#propdef-background-position', 'background-position')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Allows for keyword values and {{cssxref("&lt;length&gt;")}} and {{cssxref("&lt;percentage&gt;")}} values to be mixed.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#background-position', 'background-position')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <p>{{Compat}}</p>
-
-<h3 id="Quantum_CSS_notes">Quantum CSS notes</h3>
-
-<ul>
- <li>Gecko has a bug meaning that <code>background-position</code> can't be {{cssxref("transition","transitioned")}} between two values containing different numbers of {{cssxref("&lt;position&gt;")}} values, for example <code>background-position: 10px 10px;</code> and <code>background-position: 20px 20px, 30px 30px;</code> (see {{bug(1390446)}}). Firefox's new parallel CSS engine (also known as <a href="https://wiki.mozilla.org/Quantum">Quantum CSS</a> or <a href="https://wiki.mozilla.org/Quantum/Stylo">Stylo</a>, planned for release in Firefox 57) fixes this.</li>
-</ul>
 
 <h2 id="See_also">See also</h2>
 

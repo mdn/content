@@ -138,30 +138,11 @@ radial-gradient(circle at center, red 0, blue, green 100%)</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Images', '#radial-gradients', 'radial-gradients()')}}</td>
-   <td>{{Spec2('CSS3 Images')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>{{Compat}}</div>
-
-<h3 id="Quantum_CSS_notes">Quantum CSS notes</h3>
-
-<p>Gecko used to have a long-standing bug whereby radial gradients like <code>radial-gradient(circle gold,red)</code> would work, even though they shouldn't because of the missing comma between <code>circle</code> and <code>gold</code>. Also, {{cssxref("calc()")}} expressions were rejected — causing the value to be invalid — when used as the radius component of a <code>radial-gradient()</code> function ({{bug(1376019)}}). Firefox's new parallel CSS engine (also known as <a href="https://wiki.mozilla.org/Quantum">Quantum CSS</a> or <a href="https://wiki.mozilla.org/Quantum/Stylo">Stylo</a>, released in Firefox 57) fixed these bugs.</p>
 
 <h2 id="See_also">See also</h2>
 

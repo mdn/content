@@ -14,8 +14,11 @@ browser-compat: api.Screen.lockOrientation
 <p>{{APIRef("Screen Orientation API")}}{{Deprecated_Header}}</p>
 
 <p>The <strong><code>lockOrientation()</code></strong> method of the {{DOMxRef("Screen")}}
-  interface locks the screen into a specified orientation.
-  The {{DOMxRef("ScreenOrientation.lock()")}} method should be used instead.</p>
+  interface locks the screen into a specified orientation.</p>
+
+<div class="notecard warning">
+  This feature is deprecated and should be avoided. Use the {{DOMxRef("ScreenOrientation.lock()")}} method instead.</p>
+</div>
 
 <div class="notecard note">
   <p><strong>Note:</strong> This method only works for installed Web apps or for Web pages
@@ -117,7 +120,9 @@ if (screen.lockOrientationUniversal(["landscape-primary", "landscape-secondary"]
 
 <h2 id="Specifications">Specifications</h2>
 
-{{Specifications}}
+<p>This feature is not part of any specification. It is no longer on track to becoming a standard.</p>
+
+<p>Use {{domxref("ScreenOrientation.lock()")}} instead.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

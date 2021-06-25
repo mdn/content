@@ -36643,21 +36643,6 @@
       "teoli"
     ]
   },
-  "Web/API/DOMUserData": {
-    "modified": "2019-07-29T13:58:20.442Z",
-    "contributors": [
-      "bershanskiy",
-      "Nickolay",
-      "Sebastianz",
-      "teoli",
-      "MHasan",
-      "kscarfone",
-      "Sheppy",
-      "madarche",
-      "fscholz",
-      "Brettz9"
-    ]
-  },
   "Web/API/DataTransfer": {
     "modified": "2020-10-15T21:08:21.990Z",
     "contributors": [
@@ -64567,36 +64552,6 @@
       "JesseW"
     ]
   },
-  "Web/API/Navigator/registerContentHandler": {
-    "modified": "2020-10-15T21:06:54.058Z",
-    "contributors": [
-      "Sheppy",
-      "ExE-Boss",
-      "jonathanKingston",
-      "DBaron",
-      "cvrebert",
-      "teoli",
-      "MHasan",
-      "Noitidart",
-      "def00111",
-      "kscarfone",
-      "iamanupmenon",
-      "Skierpage",
-      "kmaglione",
-      "ethertank",
-      "mnoorenberghe",
-      "ziyunfei",
-      "evilpie",
-      "Brettz9",
-      "GijsKruitbosch",
-      "Mgjbot",
-      "Ptak82",
-      "Sayrer",
-      "Nickolay",
-      "Waldo",
-      "RyanFlint"
-    ]
-  },
   "Web/API/Navigator/registerProtocolHandler": {
     "modified": "2020-12-07T13:50:11.400Z",
     "contributors": [
@@ -65683,23 +65638,6 @@
       "jszhou"
     ]
   },
-  "Web/API/Node/getUserData": {
-    "modified": "2020-10-15T21:12:07.558Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "chrisdavidmills",
-      "jwhitlock",
-      "Sebastianz",
-      "teoli",
-      "namolmes",
-      "Sheppy",
-      "kohei.yoshino",
-      "mattbasta",
-      "Martimus8",
-      "Brettz9"
-    ]
-  },
   "Web/API/Node/hasChildNodes": {
     "modified": "2020-10-15T21:06:32.138Z",
     "contributors": [
@@ -66255,23 +66193,6 @@
       "Waldo",
       "Callek",
       "JesseW"
-    ]
-  },
-  "Web/API/Node/setUserData": {
-    "modified": "2020-10-15T21:12:01.591Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "chrisdavidmills",
-      "jaen",
-      "Sebastianz",
-      "teoli",
-      "Khodaidad_Basharmand",
-      "Sheppy",
-      "kohei.yoshino",
-      "mattbasta",
-      "madarche",
-      "Brettz9"
     ]
   },
   "Web/API/Node/textContent": {
@@ -71460,17 +71381,6 @@
       "fscholz",
       "chrisdavidmills",
       "jpmedley"
-    ]
-  },
-  "Web/API/PushRegistrationManager": {
-    "modified": "2020-10-15T21:33:29.485Z",
-    "contributors": [
-      "sideshowbarker",
-      "ExE-Boss",
-      "tocretpa",
-      "Sebastianz",
-      "jpmedley",
-      "kscarfone"
     ]
   },
   "Web/API/PushSubscription": {
@@ -84136,20 +84046,6 @@
       "jsx",
       "kscarfone",
       "chrisdavidmills"
-    ]
-  },
-  "Web/API/UserDataHandler": {
-    "modified": "2020-10-15T21:09:32.725Z",
-    "contributors": [
-      "HM100",
-      "fscholz",
-      "MHasan",
-      "kohei.yoshino",
-      "namolmes",
-      "teoli",
-      "Sheppy",
-      "Neil",
-      "Brettz9"
     ]
   },
   "Web/API/UserProximityEvent": {

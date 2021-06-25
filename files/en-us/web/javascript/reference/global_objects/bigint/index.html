@@ -223,7 +223,7 @@ Boolean(12n)
 
 <h3 id="Cryptography">Cryptography</h3>
 
-<p>The operations supported on BigInt values are not constant-time. BigInt values are therefore <a href="https://www.chosenplaintext.ca/articles/beginners-guide-constant-time-cryptography.html">unsuitable for use in cryptography</a>.</p>
+<p>The operations supported on BigInt values are not constant-time, and are thus open to <a href="https://en.wikipedia.org/wiki/Timing_attack">timing attacks</a>. JavaScript BigInts are therefore not well-suited for use in cryptography.</p>
 
 <h3 id="Use_within_JSON">Use within JSON</h3>
 

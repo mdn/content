@@ -35,13 +35,6 @@ browser-compat: javascript.builtins.TypedArray
   (<code><var>TypedArray</var>.prototype</code>) have <code>%TypedArray%.prototype</code>
   as their <code>[[Prototype]]</code>.</p>
 
-<p>The <code>%TypedArray%</code> constructor on its own is not particularly useful.
-  Calling it or using it in a <code>new</code> expression will throw a
-  {{jsxref("TypeError")}}, except when used during object creation in JS engines that
-  support subclassing. There are at present no such engines, so <code>%TypedArray%</code>
-  is only useful to polyfill functions or properties onto all
-  <code><var>TypedArray</var></code> constructors.</p>
-
 <p>When creating an instance of a <code><var>TypedArray</var></code> (e.g.
   <code>Int8Array</code>), an array buffer is created internally in memory or, if an
   <code>ArrayBuffer</code> object is given as constructor argument, then this is used

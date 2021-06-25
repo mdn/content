@@ -1,0 +1,47 @@
+---
+title: StyleSheetList.item()
+slug: Web/API/StyleSheetList/item
+tags:
+  - API
+  - Method
+  - Reference
+  - item
+  - StyleSheetList
+browser-compat: api.StyleSheetList.item
+---
+<div>{{APIRef("CSSOM")}}</div>
+
+<p class="summary">The <strong><code>item()</code></strong> method of the {{domxref("StyleSheetList")}} interface returns a single {{domxref("CSSStyleSheet")}} object.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js">StyleSheetList.item(index);</pre>
+
+<h3 id="Parameters">Parameters</h3>
+
+<dl>
+  <dt><code>index</code></dt>
+  <dd>An integer which is the index of the item in the collection to be returned.</dd>
+</dl>
+
+<h3 id="Returns">Return value</h3>
+
+<p>A {{domxref("CSSStyleSheet")}} object, or <code>null</code> if one does not exist for this index.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<p>In the following example, a for loop prints each individual {{domxref("CSSStyleSheet")}} object to the console, by calling <code>item</code> with the value of <code>i</code>.</p>
+
+<pre class="brush: js">let list = document.styleSheets;
+
+for (let i = 0; i &lt; list.length; i++) {
+  console.log(list.item(i));
+}</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<p>{{Specifications}}</p>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>

@@ -29,7 +29,7 @@ tags:
  <li>The Network Monitor's main toolbar now includes a <a href="/en-US/docs/Tools/Network_Monitor#throttling">Throttling</a> dropdown which was only available in the <a href="/en-US/docs/Tools/Responsive_Design_Mode#network_throttling">Responsive Design Mode</a> before. It allows you to throttle your network speed to emulate various different network speed conditions ({{bug(1349559)}}).</li>
  <li>The Browser Console now hides CSS errors by default for readability and performance reasons ({{bug(1452143)}}).</li>
  <li>The Browser Console now includes a command to restart the browser. Use <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>R</kbd> (Windows, Linux) or <kbd>Cmd</kbd> + <kbd>Alt</kbd> + <kbd>R</kbd> (Mac) to restart the browser with the same tabs open as before the restart.</li>
- <li>DevTools' web extension APIs <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/network/onRequestFinished">devtools.network.onRequestFinished</a></code> ({{bug(1311171)}}) and <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/network/getHAR">devtools.network.getHAR</a></code> ({{bug(1311177)}}) got implemented (enabling extensions like <a href="/en-US/docs/Web">har-export-trigger</a>).</li>
+ <li>DevTools' web extension APIs <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/network/onRequestFinished">devtools.network.onRequestFinished</a></code> ({{bug(1311171)}}) and <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/network/getHAR">devtools.network.getHAR</a></code> ({{bug(1311177)}}) got implemented (enabling extensions like <a href="/en-US/docs/Web">har-export-trigger</a>).</li>
  <li>The Firebug theme got removed since the transition of Firebug users into DevTools is complete ({{bug(1378108)}}).</li>
 </ul>
 
@@ -61,7 +61,7 @@ tags:
 <h3 id="SVG">SVG</h3>
 
 <ul>
- <li>The <code>ping</code>, <code>rel</code>, <code>referrerPolicy</code>, <code>relList</code>, <code>hreflang</code>, <code>type</code> and <code>text</code> properties have been added to the {{SVGElement("a")}} element ({{domxref("SVGAElement")}}) to be consistent with the HTML {{HTMLElement("a")}} element ({{bug("1451823")}}).</li>
+ <li>The <code>ping</code>, <code>rel</code>, <code>referrerPolicy</code>, <code>relList</code>, <code>hreflang</code>, <code>type</code> and <code>text</code> properties have been added to the {{SVGElement("a")}} element ({{domxref("SVGAElement")}}) to be consistent with the HTML {{HTMLElement("a")}} element ({{bug("1451823")}}).</li>
  <li>The {{SVGElement("textPath")}} element ({{domxref("SVGTextPathElement")}}) now supports the SVG2 <code>path</code> and <code>side</code> attributes ({{bug("1446617")}} and {{bug("1446650")}}).</li>
  <li>The {{domxref("SVGGeometryElement")}} interface is now supported for more elements and not just for the {{SVGElement("path")}} element ({{bug("1325320")}}).</li>
 </ul>
@@ -83,7 +83,7 @@ tags:
 <h4 id="DOM">DOM</h4>
 
 <ul>
- <li>The {{domxref("Document.anchors", "anchors")}}, {{domxref("Document.applets", "applets")}}, {{domxref("Document.embeds", "embeds")}}, {{domxref("Document.forms", "forms")}}, {{domxref("Document.head", "head")}}, {{domxref("Document.images", "images")}}, {{domxref("Document.links", "links")}}, {{domxref("Document.plugins", "plugins")}}, and {{domxref("Document.scripts", "scripts")}} properties have been moved from the {{domxref("HTMLDocument")}} interface onto {{domxref("Document")}} ({{bug(1415588)}}).</li>
+ <li>The {{domxref("Document.anchors", "anchors")}}, {{domxref("Document.applets", "applets")}}, {{domxref("Document.embeds", "embeds")}}, {{domxref("Document.forms", "forms")}}, {{domxref("Document.head", "head")}}, {{domxref("Document.images", "images")}}, {{domxref("Document.links", "links")}}, {{domxref("Document.plugins", "plugins")}}, and {{domxref("Document.scripts", "scripts")}} properties have been moved from the {{domxref("HTMLDocument")}} interface onto {{domxref("Document")}} ({{bug(1415588)}}).</li>
  <li>{{domxref("DOMTokenList.replace()")}} now returns a boolean value to indicate whether the replacement occurred successfully, rather than void ({{bug(1444909)}}).</li>
  <li>The <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a>'s {{domxref("Request.credentials")}} property now defaults to <code>"same-origin"</code> per the latest revision of the specification ({{bug(1394399)}}).</li>
  <li>The {{domxref("Request.destination")}} property has been implemented ({{bug(1402892)}}).</li>
@@ -165,7 +165,7 @@ tags:
 
 <ul>
  <li>The {{domxref("File")}} interface's property {{domxref("File.lastModifiedDate", "lastModifiedDate")}} has been removed ({{bug(1458883)}}).</li>
- <li>The {{domxref("Node.getUserData()")}} and {{domxref("Node.setUserData()")}} methods have been removed from the platform completely ({{bug(749981)}}).</li>
+ <li>The <strong><code>Node.setUserData</code></strong> and <strong><code>Node.getUserData</code></strong> methods have been removed from the platform completely ({{bug(749981)}}).</li>
  <li>The {{domxref("Element.createShadowRoot()")}} method has been removed. Use {{domxref("Element.attachShadow()")}} instead ({{bug(1453789)}}).</li>
  <li>The {{domxref("MediaStream")}} overload of the {{domxref("URL.createObjectURL()")}} method has been removed ({{bug(1454889)}}).</li>
 </ul>
@@ -201,7 +201,7 @@ tags:
  <li>You can now use <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/permissions/request">permissions.request</a></code> from an <code>about:addons</code> preferences page ({{bug(1382953)}}).</li>
  <li>You can now force web pages to use system fonts instead of the fonts they specify using the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/useDocumentFonts">browserSettings.useDocumentFonts</a></code> property ({{bug("1400805")}}).</li>
  <li>You can now cause browser search autocomplete suggestions to automatically open in a new tab rather than the current tab using the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/openUrlbarResultsInNewTabs">browserSettings.openUrlbarResultsInNewTabs</a></code> property ({{bug("1432645")}}).</li>
- <li>You can control whether the user can close a tab using double-click with the  <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/closeTabsByDoubleClick" rel="nofollow"><code>browserSettings.closeTabsByDoubleClick</code></a> property ({{bug("1435142")}}).</li>
+ <li>You can control whether the user can close a tab using double-click with the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/closeTabsByDoubleClick" rel="nofollow"><code>browserSettings.closeTabsByDoubleClick</code></a> property ({{bug("1435142")}}).</li>
  <li>The <code>toolbar</code>, <code>toolbar_text</code>, <code>toolbar_field</code>, <code>toolbar_field_text</code>, and <code>toolbar_field_border</code> <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme">theme</a> manifest properties now also apply to the findbar ({{bug(1418605)}}).</li>
  <li>In <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction/getPanel">sidebarAction.getPanel()</a></code>, <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction/getTitle">sidebarAction.getTitle()</a></code>, <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction/setPanel">sidebarAction.setPanel()</a></code>, <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction/setTitle">sidebarAction.setTitle()</a></code>, and <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction/setIcon">sidebarAction.setIcon()</a></code>, you can now specify a <code>windowId</code> so that the features will be set/got only for a specific window ({{bug(1390464)}}).</li>
  <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/hide">tabs.hide()</a></code> and <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/show">tabs.show()</a></code> are now enabled by default ({{bug(1455040)}}).
