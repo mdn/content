@@ -62,9 +62,15 @@ browser-compat: http.headers.DPR
 
 <pre class="brush: http">Accept-CH: DPR</pre>
 
-<p>Then on subsequent requests the client might send <code>DPR</code> header back:</p>
+<p>Then on subsequent requests the client might send <code>DPR</code> header to the server:</p>
 
-<pre class="brush: http">DPR: 2.0</pre>
+<pre class="brush: http">DPR: 2.0
+</pre>
+
+<p>If a request with the <code>DPR</code> header (as shown above) is for an image resource, then the server response must include the {{HTTPHeader("Content-DPR")}} header:</p>
+
+<pre class="brush: http">Content-DPR: 2.0
+</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
