@@ -51,22 +51,23 @@ linear-gradient(45deg, red 0 50%, blue 50% 100%);</pre>
 
 <dl>
  <dt><code>&lt;side-or-corner&gt;</code></dt>
- <dd>The position of the gradient line's starting point. If specified, it consists of the word <code>to</code> and up to two keywords: one indicates the horizontal side (<code>left</code> or <code>right</code>), and the other the vertical side (<code>top</code> or <code>bottom</code>). The order of the side keywords does not matter. If unspecified, it defaults to <code>to bottom</code>.</dd>
- <dd>The values <code>to top</code>, <code>to bottom</code>, <code>to left</code>, and <code>to right</code> are equivalent to the angles <code>0deg</code>, <code>180deg</code>, <code>270deg</code>, and <code>90deg</code>, respectively. The other values are translated into an angle.</dd>
+ <dd>
+   <p>The position of the gradient line's starting point. If specified, it consists of the word <code>to</code> and up to two keywords: one indicates the horizontal side (<code>left</code> or <code>right</code>), and the other the vertical side (<code>top</code> or <code>bottom</code>). The order of the side keywords does not matter. If unspecified, it defaults to <code>to bottom</code>.</p>
+   <p>The values <code>to top</code>, <code>to bottom</code>, <code>to left</code>, and <code>to right</code> are equivalent to the angles <code>0deg</code>, <code>180deg</code>, <code>270deg</code>, and <code>90deg</code>, respectively. The other values are translated into an angle.</p>
+ </dd>
  <dt>{{CSSxRef("&lt;angle&gt;")}}</dt>
  <dd>The gradient line's angle of direction. A value of <code>0deg</code> is equivalent to <code>to top</code>; increasing values rotate clockwise from there.</dd>
  <dt><code>&lt;linear-color-stop&gt;</code></dt>
  <dd>A color-stop's {{CSSxRef("&lt;color&gt;")}} value, followed by one or two optional stop positions, (each being either a {{CSSxRef("&lt;percentage&gt;")}} or a {{CSSxRef("&lt;length&gt;")}} along the gradient's axis).</dd>
  <dt><code>&lt;color-hint&gt;</code></dt>
- <dd>The color-hint is an interpolation hint defining how the gradient progresses between adjacent color stops. The length defines at which point between two color stops the gradient color should reach the midpoint of the color transition. If omitted, the midpoint of the color transition is the midpoint between two color stops.</dd>
- <dd>
- <div class="note">
+ <dd>An interpolation hint defining how the gradient progresses between adjacent color stops. The length defines at which point between two color stops the gradient color should reach the midpoint of the color transition. If omitted, the midpoint of the color transition is the midpoint between two color stops.</dd>
+</dl>
+<div class="note">
  <p><strong>Note:</strong> Rendering of <a href="#gradient_with_multiple_color_stops">color stops in CSS gradients</a> follows the same rules as color stops in <a href="/en-US/docs/Web/SVG/Tutorial/Gradients">SVG gradients</a>.</p>
 
  <p>Note also that the first example above does not exactly render as depicted in Mozilla Firefox (particularly version 80.0b3). You'll have to set the html height property to 100% or 100vh to render as depicted.</p>
- </div>
- </dd>
-</dl>
+</div>
+
 
 <h2 id="Description">Description</h2>
 

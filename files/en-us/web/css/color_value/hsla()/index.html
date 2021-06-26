@@ -31,9 +31,11 @@ hsla(235 100% 50% 1); /* CSS Colors 4 space-separated values */
 
 <dl>
   <dt>Functional notation: <code>hsl[a](H, S, L[, A])</code></dt>
-  <dd><code>H</code> (hue) is an {{cssxref("&lt;angle&gt;")}} of the color circle given in <code>deg</code>s, <code>rad</code>s, <code>grad</code>s, or <code>turn</code>s in {{SpecName("CSS4 Colors","#the-hsl-notation")}}. When written as a unitless {{cssxref("&lt;number&gt;")}}, it is interpreted as degrees, as specified in {{SpecName("CSS3 Colors", "#hsl-color")}}. By definition, red=0deg=360deg, with the other colors spread around the circle, so green=120deg, blue=240deg, etc. As an <code>&lt;angle&gt;</code>, it implicitly wraps around such that -120deg=240deg, 480deg=120deg, -1turn=1turn, etc.</dd>
-  <dd><code>S</code> (saturation) and <code>L</code> (lightness) are percentages. <code>100%</code> <strong>saturation</strong> is completely saturated, while <code>0%</code> is completely unsaturated (gray). <code>100%</code> <strong>lightness</strong> is white, <code>0%</code> lightness is black, and <code>50%</code> lightness is “normal.”</dd>
-  <dd><code>A</code> (alpha) can be a {{cssxref("&lt;number&gt;")}} between <code>0</code> and <code>1</code>, or a {{cssxref("&lt;percentage&gt;")}}, where the number <code>1</code> corresponds to <code>100%</code> (full opacity).</dd>
+  <dd>
+    <p><code>H</code> (hue) is an {{cssxref("&lt;angle&gt;")}} of the color circle given in <code>deg</code>s, <code>rad</code>s, <code>grad</code>s, or <code>turn</code>s in {{SpecName("CSS4 Colors","#the-hsl-notation")}}. When written as a unitless {{cssxref("&lt;number&gt;")}}, it is interpreted as degrees, as specified in {{SpecName("CSS3 Colors", "#hsl-color")}}. By definition, red=0deg=360deg, with the other colors spread around the circle, so green=120deg, blue=240deg, etc. As an <code>&lt;angle&gt;</code>, it implicitly wraps around such that -120deg=240deg, 480deg=120deg, -1turn=1turn, etc.</p>
+    <p><code>S</code> (saturation) and <code>L</code> (lightness) are percentages. <code>100%</code> <strong>saturation</strong> is completely saturated, while <code>0%</code> is completely unsaturated (gray). <code>100%</code> <strong>lightness</strong> is white, <code>0%</code> lightness is black, and <code>50%</code> lightness is “normal.”</p>
+    <p><code>A</code> (alpha) can be a {{cssxref("&lt;number&gt;")}} between <code>0</code> and <code>1</code>, or a {{cssxref("&lt;percentage&gt;")}}, where the number <code>1</code> corresponds to <code>100%</code> (full opacity).</p>
+  </dd>
   <dt>Functional notation: <code>hsl[a](H S L[ / A])</code></dt>
   <dd>CSS Colors Level 4 adds support for space-separated values in the functional notation.</dd>
  </dl>
