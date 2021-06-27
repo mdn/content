@@ -124,10 +124,10 @@ greetUser("Veronica");</pre>
  <dt>Worker event loop</dt>
  <dd>A worker event loop is one which drives a worker; this includes all forms of workers, including basic <a href="/en-US/docs/Web/API/Web_Workers_API">web workers</a>, <a href="/en-US/docs/Web/API/SharedWorker">shared workers</a>, and <a href="/en-US/docs/Web/API/Service_Worker_API">service workers</a>. Workers are kept in one or more agents that are separate from the "main" code; the browser may use a single event loop for all of the workers of a given type or may use multiple event loops to handle them.</dd>
  <dt>Worklet event loop</dt>
- <dd>A <a href="/en-US/docs/Web/API/Worklet">worklet</a> event loop is the event loop used to drive agents which run the code for the workelets for a given agent. This includes worklets of type {{domxref("Worklet")}}, {{domxref("AudioWorklet")}}, and {{domxref("PaintWorklet")}}.</dd>
+ <dd>A <a href="/en-US/docs/Web/API/Worklet">worklet</a> event loop is the event loop used to drive agents which run the code for the worklets for a given agent. This includes worklets of type {{domxref("Worklet")}}, {{domxref("AudioWorklet")}}, and {{domxref("PaintWorklet")}}.</dd>
 </dl>
 
-<p>Several windows loaded from the same {{Glossary("origin")}} may be running on the same event loop, each queueing tasks onto the event loop so that their tasks take turns with the processor, one after another. Keep in mind that web parlance, the word "window" actually means "browser-level container that web content runs within," including an actual window, a tab, or a frame.</p>
+<p>Several windows loaded from the same {{Glossary("origin")}} may be running on the same event loop, each queueing tasks onto the event loop so that their tasks take turns with the processor, one after another. Keep in mind that in web parlance, the word "window" actually means "browser-level container that web content runs within," including an actual window, a tab, or a frame.</p>
 
 <p>There are specific circumstances in which this sharing of an event loop among windows with a common origin is possible, such as:</p>
 
@@ -164,7 +164,7 @@ greetUser("Veronica");</pre>
 
 <p>Microtasks are another solution to this problem, providing a finer degree of access by making it possible to schedule code to run before the next iteration of the event loop begins, instead of having to wait until the next one.</p>
 
-<p>The microtask queue has been around for a while, but it's historiclaly been used only internally in order to drive things like promises. The addition of <code>queueMicrotask()</code>, exposing it to web developers, creates a unified queue for microtasks which is used wherever it's necessary to have the ability to schedule code to run safely when there are no execution contexts left on the JavaScript execution context stack. Across multiple instances and across all browsers and JavaScript runtimes, a standardized microqueue mechanism means these microtasks will operate reliably in the same order, thus avoiding potentially difficult to find bugs.</p>
+<p>The microtask queue has been around for a while, but it's historically been used only internally in order to drive things like promises. The addition of <code>queueMicrotask()</code>, exposing it to web developers, creates a unified queue for microtasks which is used wherever it's necessary to have the ability to schedule code to run safely when there are no execution contexts left on the JavaScript execution context stack. Across multiple instances and across all browsers and JavaScript runtimes, a standardized microqueue mechanism means these microtasks will operate reliably in the same order, thus avoiding potentially difficult to find bugs.</p>
 
 <h2 id="See_also">See also</h2>
 
