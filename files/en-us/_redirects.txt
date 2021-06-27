@@ -1290,7 +1290,6 @@
 /en-US/docs/DOM/Document.xmlEncoding	/en-US/docs/Web/API/Document/xmlEncoding
 /en-US/docs/DOM/Document/QuerySelectorAll	/en-US/docs/Web/API/Document/querySelectorAll
 /en-US/docs/DOM/DocumentFragment	/en-US/docs/Web/API/DocumentFragment
-/en-US/docs/DOM/DocumentTouch	/en-US/docs/Web/API/DocumentTouch
 /en-US/docs/DOM/DocumentTouch.createTouch	/en-US/docs/Web/API/Document/createTouch
 /en-US/docs/DOM/DocumentTouch.createTouchList	/en-US/docs/Web/API/Document/createTouchList
 /en-US/docs/DOM/DocumentType	/en-US/docs/Web/API/DocumentType
@@ -2836,7 +2835,6 @@
 /en-US/docs/Document_Object_Model_(DOM)/Document.scripts	/en-US/docs/Web/API/Document/scripts
 /en-US/docs/Document_Object_Model_(DOM)/Document.xmlEncoding	/en-US/docs/Web/API/Document/xmlEncoding
 /en-US/docs/Document_Object_Model_(DOM)/DocumentFragment	/en-US/docs/Web/API/DocumentFragment
-/en-US/docs/Document_Object_Model_(DOM)/DocumentTouch	/en-US/docs/Web/API/DocumentTouch
 /en-US/docs/Document_Object_Model_(DOM)/DocumentTouch.createTouch	/en-US/docs/Web/API/Document/createTouch
 /en-US/docs/Document_Object_Model_(DOM)/DocumentTouch.createTouchList	/en-US/docs/Web/API/Document/createTouchList
 /en-US/docs/Document_Object_Model_(DOM)/DocumentType	/en-US/docs/Web/API/DocumentType

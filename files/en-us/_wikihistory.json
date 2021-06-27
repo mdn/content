@@ -40998,20 +40998,6 @@
       "chrisdavidmills"
     ]
   },
-  "Web/API/DocumentTouch": {
-    "modified": "2019-07-30T14:34:53.558Z",
-    "contributors": [
-      "bershanskiy",
-      "ExE-Boss",
-      "chrisdavidmills",
-      "AFBarstow",
-      "fscholz",
-      "MHasan",
-      "nairakhil13",
-      "kohei.yoshino",
-      "Sheppy"
-    ]
-  },
   "Web/API/DocumentType": {
     "modified": "2020-10-15T21:12:22.085Z",
     "contributors": [
