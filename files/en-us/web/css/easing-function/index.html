@@ -111,18 +111,18 @@ tags:
  <dt><var>number_of_steps</var></dt>
  <dd>Is a strictly positive {{cssxref("&lt;integer&gt;")}}, representing the amount of equidistant treads composing the stepping function.</dd>
  <dt><var>direction</var></dt>
- <dd>Is a keyword indicating if it the function is <a href="https://en.wikipedia.org/wiki/Left-continuous#Directional_and_semi-continuity">left- or right-continuous</a>:</dd>
  <dd>
- <ul>
-  <li><code>jump-start</code> denotes a left-continuous function, so that the first step or jump happens when the interpolation begins;</li>
-  <li><code>jump-end</code> denotes a right-continuous function, so that the last step or jump happens when the interpolation ends;</li>
-  <li><code>jump-both</code> denotes a right and left continuous function, includes pauses at both the 0% and 100% marks, effectively adding a step during the interpolation iteration;</li>
-  <li><code>jump-none</code> There is no jump on either end. Instead, holding at both the 0% mark and the 100% mark, each for 1/n of the duration</li>
-  <li><code>start</code> is the equivalent of <code>jump-start</code></li>
-  <li><code>end</code> is the equivalent of <code>jump-end</code></li>
- </ul>
+   <p>Is a keyword indicating if it the function is <a href="https://en.wikipedia.org/wiki/Left-continuous#Directional_and_semi-continuity">left- or right-continuous</a>:</p>
+   <ul>
+    <li><code>jump-start</code> denotes a left-continuous function, so that the first step or jump happens when the interpolation begins;</li>
+    <li><code>jump-end</code> denotes a right-continuous function, so that the last step or jump happens when the interpolation ends;</li>
+    <li><code>jump-both</code> denotes a right and left continuous function, includes pauses at both the 0% and 100% marks, effectively adding a step during the interpolation iteration;</li>
+    <li><code>jump-none</code> There is no jump on either end. Instead, holding at both the 0% mark and the 100% mark, each for 1/n of the duration</li>
+    <li><code>start</code> is the equivalent of <code>jump-start</code></li>
+    <li><code>end</code> is the equivalent of <code>jump-end</code></li>
+   </ul>
+   <p><code>end</code> is the default.</p>
  </dd>
- <dd><code>end</code> is the default.</dd>
 </dl>
 
 <h5 id="steps_n_&lt;direction&gt;">steps( n, &lt;direction&gt; )</h5>

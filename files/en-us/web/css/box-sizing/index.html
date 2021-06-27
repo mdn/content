@@ -57,11 +57,15 @@ box-sizing: unset;</pre>
 
 <dl>
  <dt><code>content-box</code></dt>
- <dd>This is the initial and default value as specified by the CSS standard. The {{Cssxref("width")}} and {{Cssxref("height")}} properties include the content, but does not include the padding, border, or margin. For example, <code>.box {width: 350px; border: 10px solid black;}</code> renders a box that is 370px wide.</dd>
- <dd>Here, the dimensions of the element are calculated as: <em>width = width of the content</em>, and <em>height = height of the content</em>. (Borders and padding are not included in the calculation.)</dd>
+ <dd>
+  <p>This is the initial and default value as specified by the CSS standard. The {{Cssxref("width")}} and {{Cssxref("height")}} properties include the content, but does not include the padding, border, or margin. For example, <code>.box {width: 350px; border: 10px solid black;}</code> renders a box that is 370px wide.</p>
+  <p>Here, the dimensions of the element are calculated as: <em>width = width of the content</em>, and <em>height = height of the content</em>. (Borders and padding are not included in the calculation.)</p>
+ </dd>
  <dt><code>border-box</code></dt>
- <dd>The {{Cssxref("width")}} and {{Cssxref("height")}} properties include the content, padding, and border, but do not include the margin. Note that padding and border will be inside of the box. For example, <code>.box {width: 350px; border: 10px solid black;}</code> renders a box that is 350px wide, with the area for content being 330px wide. The content box can't be negative and is floored to 0, making it impossible to use <code>border-box</code> to make the element disappear.</dd>
- <dd>Here the dimensions of the element are calculated as: <em>width = border + padding + width of the content</em>, and <em>height = border + padding + height of the content</em>.</dd>
+ <dd>
+  <p>The {{Cssxref("width")}} and {{Cssxref("height")}} properties include the content, padding, and border, but do not include the margin. Note that padding and border will be inside of the box. For example, <code>.box {width: 350px; border: 10px solid black;}</code> renders a box that is 350px wide, with the area for content being 330px wide. The content box can't be negative and is floored to 0, making it impossible to use <code>border-box</code> to make the element disappear.</p>
+  <p>Here the dimensions of the element are calculated as: <em>width = border + padding + width of the content</em>, and <em>height = border + padding + height of the content</em>.</p>
+ </dd>
 </dl>
 
 <h2 id="Formal_definition">Formal definition</h2>

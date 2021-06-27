@@ -49,36 +49,36 @@ repeating-radial-gradient(farthest-corner at 20% 20%, red 0, green, red 20%);
  <dt><code>&lt;shape&gt;</code></dt>
  <dd>The gradient's shape. The value can be <code>circle</code> (meaning that the gradient's shape is a circle with constant radius) or <code>ellipse</code> (meaning that the shape is an axis-aligned ellipse). If unspecified, it defaults to <code>ellipse</code>.</dd>
  <dt><code>&lt;extent-keyword&gt;</code></dt>
- <dd>A keyword describing how big the ending shape must be. The possible values are:</dd>
  <dd>
- <table class="standard-table">
-  <tbody>
-   <tr>
-    <th>Keyword</th>
-    <th>Description</th>
-   </tr>
-   <tr>
-    <td><code>closest-side</code></td>
-    <td>The gradient's ending shape meets the side of the box closest to its center (for circles) or meets both the vertical and horizontal sides closest to the center (for ellipses).</td>
-   </tr>
-   <tr>
-    <td><code>closest-corner</code></td>
-    <td>The gradient's ending shape is sized so that it exactly meets the closest corner of the box from its center.</td>
-   </tr>
-   <tr>
-    <td><code>farthest-side</code></td>
-    <td>Similar to <code>closest-side</code>, except the ending shape is sized to meet the side of the box farthest from its center (or vertical and horizontal sides).</td>
-   </tr>
-   <tr>
-    <td><code>farthest-corner</code></td>
-    <td>The gradient's ending shape is sized so that it exactly meets the farthest corner of the box from its center.</td>
-   </tr>
-  </tbody>
- </table>
+  <p>A keyword describing how big the ending shape must be. The possible values are:</p>
+  <table class="standard-table">
+   <tbody>
+    <tr>
+     <th>Keyword</th>
+     <th>Description</th>
+    </tr>
+    <tr>
+     <td><code>closest-side</code></td>
+     <td>The gradient's ending shape meets the side of the box closest to its center (for circles) or meets both the vertical and horizontal sides closest to the center (for ellipses).</td>
+    </tr>
+    <tr>
+     <td><code>closest-corner</code></td>
+     <td>The gradient's ending shape is sized so that it exactly meets the closest corner of the box from its center.</td>
+    </tr>
+    <tr>
+     <td><code>farthest-side</code></td>
+     <td>Similar to <code>closest-side</code>, except the ending shape is sized to meet the side of the box farthest from its center (or vertical and horizontal sides).</td>
+    </tr>
+    <tr>
+     <td><code>farthest-corner</code></td>
+     <td>The gradient's ending shape is sized so that it exactly meets the farthest corner of the box from its center.</td>
+    </tr>
+   </tbody>
+  </table>
 
- <div class="note">
- <p><strong>Note:</strong> Early implementations of this function included other keywords (<code>cover</code> and <code>contain</code>) as synonyms of the standard <code>farthest-corner</code> and <code>closest-side</code>, respectively. Use the standard keywords only, as some implementations have already dropped those older variants.</p>
- </div>
+  <div class="note">
+   <p><strong>Note:</strong> Early implementations of this function included other keywords (<code>cover</code> and <code>contain</code>) as synonyms of the standard <code>farthest-corner</code> and <code>closest-side</code>, respectively. Use the standard keywords only, as some implementations have already dropped those older variants.</p>
+  </div>
  </dd>
  <dt><code>&lt;color-stop&gt;</code></dt>
  <dd>A color-stop's {{cssxref("&lt;color&gt;")}} value, followed by an optional stop position (either a {{cssxref("&lt;percentage&gt;")}} or a {{cssxref("&lt;length&gt;")}} along the gradient's axis). A percentage of <code>0%</code>, or a length of <code>0</code>, represents the center of the gradient; the value <code>100%</code> represents the intersection of the ending shape with the virtual gradient ray. Percentage values in between are linearly positioned on the virtual gradient ray.</dd>
