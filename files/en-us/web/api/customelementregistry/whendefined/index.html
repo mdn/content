@@ -88,8 +88,10 @@ const promises = [...undefinedElements].map(
 
 // Wait for all the children to be upgraded,
 // then remove the placeholder.
+async function response(){
 await Promise.all(promises);
 container.removeChild(placeholder);
+}
 </pre>
 
 <h2 id="Specifications">Specifications</h2>
