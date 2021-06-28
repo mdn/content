@@ -107,7 +107,7 @@ tags:
 
 <p>In this section we'll go through the different ways in which you can add SVG vector graphics to your web pages.</p>
 
-<h3 id="The_quick_way_htmlelementimg">The quick way: {{htmlelement("img")}}</h3>
+<h3 id="The_quick_way_htmlelementimg">The quick way: <code>img</code> element</h3>
 
 <p>To embed an SVG via an {{htmlelement("img")}} element, you just need to reference it in the src attribute as you'd expect. You will need a <code>height</code> or a <code>width</code> attribute (or both if your SVG has no inherent aspect ratio). If you have not already done so, please read <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML">Images in HTML</a>.</p>
 
@@ -151,7 +151,7 @@ background-size: contain;</pre>
 
 <h3 id="How_to_include_SVG_code_inside_your_HTML">How to include SVG code inside your HTML</h3>
 
-<p>You can also open up the SVG file in a text editor, copy the SVG code, and paste it into your HTML document — this is sometimes called putting your <strong>SVG inline</strong>, or <strong>inlining SVG</strong>. Make sure your SVG code snippet begins and ends with the <code><a href="/en-US/docs/Web/SVG/Element/svg">&lt;svg&gt;&lt;/svg&gt;</a></code> tags (don't include anything outside those.) Here's a very simple example of what you might paste into your document:</p>
+<p>You can also open up the SVG file in a text editor, copy the SVG code, and paste it into your HTML document — this is sometimes called putting your <strong>SVG inline</strong>, or <strong>inlining SVG</strong>. Make sure your SVG code snippet begins with an <code>&lt;svg&gt;</code> start tag and ends with an <code>&lt;/svg&gt;</code> end tag. Here's a very simple example of what you might paste into your document:</p>
 
 <pre class="brush: html">&lt;svg width="300" height="200"&gt;
     &lt;rect width="100%" height="100%" fill="green" /&gt;
@@ -176,7 +176,7 @@ background-size: contain;</pre>
  <li>You may include fallback in a {{svgelement("foreignObject")}} element, but browsers that support SVG still download any fallback images. You need to weigh whether the extra overhead is really worthwhile, just to support obsolescent browsers.</li>
 </ul>
 
-<h3 id="How_to_embed_an_SVG_with_an_htmlelementiframe">How to embed an SVG with an {{htmlelement("iframe")}}</h3>
+<h3 id="How_to_embed_an_SVG_with_an_htmlelementiframe">How to embed an SVG with an <code>iframe</code></h3>
 
 <p>You can open SVG images in your browser just like webpages. So embedding an SVG document with an <code>&lt;iframe&gt;</code> is done just like we studied in <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies">From &lt;object&gt; to &lt;iframe&gt; — other embedding technologies</a>.</p>
 
@@ -354,7 +354,6 @@ textarea.onkeyup = function(){
  <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML">Images in HTML</a></li>
  <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content">Video and audio content</a></li>
  <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies">From &lt;object&gt; to &lt;iframe&gt; — other embedding technologies</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web">Adding vector graphics to the Web</a></li>
  <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">Responsive images</a></li>
  <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page">Mozilla splash page</a></li>
 </ul>
