@@ -2,12 +2,12 @@
 title: String.prototype.split()
 slug: Web/JavaScript/Reference/Global_Objects/String/split
 tags:
-- JavaScript
-- Method
-- Prototype
-- Reference
-- Regular Expressions
-- String
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
+  - Regular Expressions
+  - String
 browser-compat: javascript.builtins.String.split
 ---
 <div>{{JSRef}}</div>
@@ -62,7 +62,7 @@ split(separator, limit)
           characters</em> (<a
           href="https://unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries">grapheme
           clusters</a>) or unicode characters (codepoints), but by UTF-16 codeunits. This
-        destroys <a href="http://unicode.org/faq/utf_bom.html#utf16-2">surrogate
+        destroys <a href="https://unicode.org/faq/utf_bom.html#utf16-2">surrogate
           pairs</a>. See <a href="https://stackoverflow.com/a/34717402">“How do you get a
           string to a character array in JavaScript?” on StackOverflow</a>.</p>
     </div>
@@ -236,12 +236,12 @@ const strReverse = str.split('').reverse().join('')
     unicode-aware split. (Use, for example, <a
       href="https://github.com/mathiasbynens/esrever">esrever</a> instead.)</p>
 
-  <pre class="brush: js example-bad">const str = 'résumé'
-const strReverse = str.split(/(?:)/u).reverse().join('')
-// =&gt; "́emuśer"
+  <pre class="brush: js example-bad">const str = 'mañana mañana'
+const strReverse = str.split('').reverse().join('')
+// =&gt; "anãnam anañam" // notice how the first word has an ã rather ñ
 </pre>
 
-  <p><strong>Bonus:</strong> use {{jsxref("Operators/Comparison_Operators", "===",
+  <p><strong>Bonus:</strong> use {{jsxref("Operators", "===",
     "#Identity_strict_equality_(===)")}} operator to test if the original string was a
     palindrome.</p>
 </div>
