@@ -443,18 +443,28 @@ y = 42 + ' is the answer' // "42 is the answer"
 
 <h3 id="Numeric_literals">Numeric literals</h3>
 
+<p>JavaScript numeric literals include integer literals in different bases as well as floating-point literals in base-10.</p>
+
+<p>Note that the language specification requires numeric literals to be unsigned.  Nevertheless, code fragments like <code>-123.4</code> are fine, being interpreted as a unary <code>-</code> operator applied to the numeric literal <code>123.4</code>.</p>
+
+<h4 id="Integer_literals">Integer literals</h4>
+
+
 <p>Integer and {{jsxref("BigInt")}} literals can be written in decimal (base 10), hexadecimal (base 16), octal (base 8) and binary (base 2).</p>
 
 <ul>
- <li>A <em>decimal</em> numeric literal is a sequence of digits without a leading <code>0</code> (zero).</li>
- <li>A leading <code>0</code> (zero) on a numeric literal, or a leading <code>0o</code> (or <code>0O</code>) indicates it is in <em>octal</em>. Octal numerics can include only the digits <code>0</code>–<code>7</code>.</li>
- <li>A leading <code>0x</code> (or <code>0X</code>) indicates a <em>hexadecimal</em> numeric type. Hexadecimal numerics can include digits (<code>0</code>–<code>9</code>) and the letters <code>a</code>–<code>f</code> and <code>A</code>–<code>F</code>. (The case of a character does not change its value. Therefore: <code>0xa</code> = <code>0xA</code> = <code>10</code> and <code>0xf</code> = <code>0xF</code> = <code>15</code>.)</li>
+ <li>A <em>decimal</em> integer literal is a sequence of digits without a leading <code>0</code> (zero).</li>
+ <li>A leading <code>0</code> (zero) on an integer literal, or a leading <code>0o</code> (or <code>0O</code>) indicates it is in <em>octal</em>. Octal integer literals can include only the digits <code>0</code>–<code>7</code>.</li>
+ <li>A leading <code>0x</code> (or <code>0X</code>) indicates a <em>hexadecimal</em> integer literal. Hexadecimal integers can include digits (<code>0</code>–<code>9</code>) and the letters <code>a</code>–<code>f</code> and <code>A</code>–<code>F</code>. (The case of a character does not change its value. Therefore: <code>0xa</code> = <code>0xA</code> = <code>10</code> and <code>0xf</code> = <code>0xF</code> = <code>15</code>.)</li>
  <li>
-  <p>A leading <code>0b</code> (or <code>0B</code>) indicates a <em>binary</em> numeric literal. Binary numerics can only include the digits <code>0</code> and <code>1</code>.</p>
+  A leading <code>0b</code> (or <code>0B</code>) indicates a <em>binary</em> integer literal. Binary integer literals can only include the digits <code>0</code> and <code>1</code>.
+ </li>
+ <li>
+   A trailing <code>n</code> suffix on an integer literal indicates a {{jsxref("BigInt")}} literal.  The integer literal can use any of the above bases. Note that leading-zero octal syntax like <code>0123n</code> is not allowed, but <code>0o123n</code> is fine.
  </li>
 </ul>
 
-<p>Some examples of numeric literals are:</p>
+<p>Some examples of integer literals are:</p>
 
 <pre class="eval">0, 117, 123456789123456789n             (decimal, base 10)
 015, 0001, 0o777777777777n              (octal, base 8)
@@ -464,7 +474,7 @@ y = 42 + ' is the answer' // "42 is the answer"
 
 <p>For more information, see <a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#numeric_literals">Numeric literals in the Lexical grammar reference</a>.</p>
 
-<h3 id="Floating-point_literals">Floating-point literals</h3>
+<h4 id="Floating-point_literals">Floating-point literals</h4>
 
 <p>A floating-point literal can have the following parts:</p>
 
