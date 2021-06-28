@@ -34233,19 +34233,6 @@
       "jswisher"
     ]
   },
-  "Web/API/ChildNode/after": {
-    "modified": "2020-10-15T21:47:18.650Z",
-    "contributors": [
-      "beingmrkenny",
-      "stevenvachon",
-      "mfluehr",
-      "fscholz",
-      "stevenwdv",
-      "jszhou",
-      "FabioVergani",
-      "jpmedley"
-    ]
-  },
   "Web/API/ChildNode/before": {
     "modified": "2020-10-15T21:47:12.526Z",
     "contributors": [
@@ -41994,6 +41981,19 @@
       "teoli",
       "kscarfone",
       "Masayuki"
+    ]
+  },
+  "Web/API/Element/after": {
+    "modified": "2020-10-15T21:47:18.650Z",
+    "contributors": [
+      "beingmrkenny",
+      "stevenvachon",
+      "mfluehr",
+      "fscholz",
+      "stevenwdv",
+      "jszhou",
+      "FabioVergani",
+      "jpmedley"
     ]
   },
   "Web/API/Element/afterscriptexecute_event": {
