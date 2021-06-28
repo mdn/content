@@ -193,18 +193,27 @@ textarea.onkeyup = function(){
 
 <p>There are some serious {{anch("Security concerns")}} to consider with <code>&lt;iframe&gt;</code>s, as we'll discuss below, but this doesn't mean that you shouldn't use them in your websites — it just requires some knowledge and careful thinking. Let's explore the code in a bit more detail. Say you wanted to include the MDN glossary on one of your web pages — you could try something like this:</p>
 
-<pre>&lt;iframe src="https://developer.mozilla.org/en-US/docs/Glossary"
-        width="100%" height="500" allowfullscreen sandbox&gt;
-  &lt;p&gt;
-    &lt;a href="/en-US/docs/Glossary"&gt;
-       Fallback link for browsers that don't support iframes
-    &lt;/a&gt;
-  &lt;/p&gt;
-&lt;/iframe&gt;</pre>
+<pre class="brush: html">
+&lt;head&gt;
+  &lt;style&gt; iframe { border: none } &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;iframe src="https://developer.mozilla.org/en-US/docs/Glossary"
+          width="100%" height="500" allowfullscreen sandbox&gt;
+    &lt;p&gt;
+      &lt;a href="/en-US/docs/Glossary"&gt;
+         Fallback link for browsers that don't support iframes
+      &lt;/a&gt;
+    &lt;/p&gt;
+  &lt;/iframe&gt;
+&lt;/body&gt;
+</pre>
 
 <p>This example includes the basic essentials needed to use an <code>&lt;iframe&gt;</code>:</p>
 
 <dl>
+ <dt><a href="/en-US/docs/Web/CSS/border"><code>border: none</code></a></dt>
+ <dd>If used, the <code>&lt;iframe&gt;</code> is displayed without a surrounding border. Otherwise, by default, browsers display the <code>&lt;iframe&gt;</code> with a surrounding border (which is generally undesirable).</dd>
  <dt>{{htmlattrxref('allowfullscreen','iframe')}}</dt>
  <dd>If set, the <code>&lt;iframe&gt;</code> is able to be placed in fullscreen mode using the <a href="/en-US/docs/Web/API/Fullscreen_API">Fullscreen API</a> (somewhat beyond the scope of this article.)</dd>
  <dt>{{htmlattrxref('src','iframe')}}</dt>
