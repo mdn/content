@@ -28,6 +28,7 @@ browser-compat: api.BluetoothRemoteGATTCharacteristic
   Promise&lt;DataView&gt; readValue();
   Promise&lt;void&gt; writeValue(BufferSource <dfn>value</dfn>);
   Promise&lt;void&gt; writeValueWithResponse(BufferSource <dfn>value</dfn>);
+  Promise&lt;void&gt; writeValueWithoutResponse(BufferSource <dfn>value</dfn>);
   Promise&lt;void&gt; startNotifications();
   Promise&lt;void&gt; stopNotifications();
 };
@@ -59,6 +60,8 @@ BluetoothRemoteGATTCharacteristic implements CharacteristicEventHandlers;</pre>
  <dt>{{DOMxRef("BluetoothRemoteGATTCharacteristic.writeValue()")}}</dt>
  <dd>Sets the value property to the bytes contained in an {{JSxRef("ArrayBuffer")}} and returns a {{JSxRef("Promise")}}.</dd>
  <dt>{{DOMxRef("BluetoothRemoteGATTCharacteristic.writeValueWithResponse()")}}</dt>
+ <dd>Sets the value property to the bytes contained in an {{JSxRef("ArrayBuffer")}} and returns a {{JSxRef("Promise")}}.</dd>
+ <dt>{{DOMxRef("BluetoothRemoteGATTCharacteristic.writeValueWithoutResponse()")}}</dt>
  <dd>Sets the value property to the bytes contained in an {{JSxRef("ArrayBuffer")}} and returns a {{JSxRef("Promise")}}.</dd>
  <dt>{{DOMxRef("BluetoothRemoteGATTCharacteristic.startNotifications()")}}</dt>
  <dd>Returns a {{JSxRef("Promise")}} when <code>navigator.bluetooth</code> is added to the active notification context.</dd>
