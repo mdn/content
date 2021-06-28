@@ -236,9 +236,9 @@ const strReverse = str.split('').reverse().join('')
     unicode-aware split. (Use, for example, <a
       href="https://github.com/mathiasbynens/esrever">esrever</a> instead.)</p>
 
-  <pre class="brush: js example-bad">const str = 'résumé'
-const strReverse = str.split(/(?:)/u).reverse().join('')
-// =&gt; "́emuśer"
+  <pre class="brush: js example-bad">const str = 'mañana mañana'
+const strReverse = str.split('').reverse().join('')
+// =&gt; "anãnam anañam" // notice how the first word has an ã rather ñ
 </pre>
 
   <p><strong>Bonus:</strong> use {{jsxref("Operators", "===",
