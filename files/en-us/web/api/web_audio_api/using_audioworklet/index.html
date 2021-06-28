@@ -201,7 +201,7 @@ const firstByteOfFirstChannel = firstInputFirstChannel[0]; // (or inputList[0][0
 <ol>
  <li>Load and install the audio processor module</li>
  <li>Create an {{domxref("AudioWorkletNode")}}, specifying the audio processor module to use by its name</li>
- <li>Connect inputs to the <code>AudioWorkletNode</code> and its outputs to appropriate destinations (either other nodes or to the {{domxref("AudioContext")}} object's {{domxref("AudioContext.destination", "destination")}} property.</li>
+ <li>Connect inputs to the <code>AudioWorkletNode</code> and its outputs to appropriate destinations (either other nodes or to the {{domxref("AudioContext")}} object's {{domxref("BaseAudioContext/destination", "destination")}} property.</li>
 </ol>
 
 <p>To use an audio worklet processor, you can use code similar to the following:</p>
@@ -303,7 +303,7 @@ async function createMyAudioProcessor() {
 
 <h3 id="Accessing_parameters_from_the_main_thread_script">Accessing parameters from the main thread script</h3>
 
-<p>Your main thread script can access the parameters just like it can any other node. To do so, first you need to get a reference to the parameter by calling the {{domxref("AudioWorkletNode")}}'s {{domxref("AudioWorkletNode.parameters", "parameters")}} property's {{domxref("AudioParamMap.get", "get()")}} method:</p>
+<p>Your main thread script can access the parameters just like it can any other node. To do so, first you need to get a reference to the parameter by calling the {{domxref("AudioWorkletNode")}}'s {{domxref("AudioWorkletNode.parameters", "parameters")}} property's <code>get()</code> method:</p>
 
 <pre class="brush: js">let gainParam = myAudioWorkletNode.parameters.get("gain");
 </pre>
