@@ -8342,6 +8342,7 @@
 /en-US/docs/Web/API/RTCIceCandidatePairStats/circuitBreakerTriggerCoun	/en-US/docs/Web/API/RTCIceCandidatePairStats/circuitBreakerTriggerCount
 /en-US/docs/Web/API/RTCIceCandidatePairStats/contentRequestsSent	/en-US/docs/Web/API/RTCIceCandidatePairStats/consentRequestsSent
 /en-US/docs/Web/API/RTCIceCandidateStats/ip	/en-US/docs/Web/API/RTCIceCandidateStats/address
+/en-US/docs/Web/API/RTCIceCandidateType	/en-US/docs/Web/API/RTCIceCandidate/type
 /en-US/docs/Web/API/RTCIceConnectionState	/en-US/docs/Web/API/RTCPeerConnection/iceConnectionState
 /en-US/docs/Web/API/RTCIceGatheringState	/en-US/docs/Web/API/RTCPeerConnection/iceGatheringState
 /en-US/docs/Web/API/RTCInboundRtpStreamStats/lastPacketReceivedTimesta	/en-US/docs/Web/API/RTCInboundRtpStreamStats/lastPacketReceivedTimestamp

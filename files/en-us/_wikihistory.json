@@ -72393,13 +72393,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/RTCIceCandidateType": {
-    "modified": "2020-10-15T22:06:15.113Z",
-    "contributors": [
-      "sideshowbarker",
-      "Sheppy"
-    ]
-  },
   "Web/API/RTCIceComponent": {
     "modified": "2020-10-15T22:06:08.263Z",
     "contributors": [
