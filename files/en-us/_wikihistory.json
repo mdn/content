@@ -34233,21 +34233,6 @@
       "jswisher"
     ]
   },
-  "Web/API/ChildNode/before": {
-    "modified": "2020-10-15T21:47:12.526Z",
-    "contributors": [
-      "beingmrkenny",
-      "stevenvachon",
-      "mfluehr",
-      "fscholz",
-      "dima74",
-      "stevenwdv",
-      "Permutator",
-      "zhi.lin",
-      "jszhou",
-      "jpmedley"
-    ]
-  },
   "Web/API/Client": {
     "modified": "2020-10-15T21:31:16.211Z",
     "contributors": [
@@ -42129,6 +42114,21 @@
       "david_ross",
       "RByers",
       "chrisdavidmills"
+    ]
+  },
+  "Web/API/Element/before": {
+    "modified": "2020-10-15T21:47:12.526Z",
+    "contributors": [
+      "beingmrkenny",
+      "stevenvachon",
+      "mfluehr",
+      "fscholz",
+      "dima74",
+      "stevenwdv",
+      "Permutator",
+      "zhi.lin",
+      "jszhou",
+      "jpmedley"
     ]
   },
   "Web/API/Element/beforescriptexecute_event": {
