@@ -7120,6 +7120,7 @@
 /en-US/docs/Web/API/ChildNode.nextElementSibling	/en-US/docs/Web/API/Element/nextElementSibling
 /en-US/docs/Web/API/ChildNode.remove	/en-US/docs/Web/API/Element/remove
 /en-US/docs/Web/API/ChildNode/after	/en-US/docs/Web/API/Element/after
+/en-US/docs/Web/API/ChildNode/before	/en-US/docs/Web/API/Element/before
 /en-US/docs/Web/API/ChildNode/remove	/en-US/docs/Web/API/Element/remove
 /en-US/docs/Web/API/ChildNode/replaceWith	/en-US/docs/Web/API/Element/replaceWith
 /en-US/docs/Web/API/Childnode.previousElementSibling	/en-US/docs/Web/API/Element/previousElementSibling
