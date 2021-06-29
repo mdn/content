@@ -8403,12 +8403,7 @@
 /en-US/docs/Web/API/ReadableByteStream	/en-US/docs/Web/API/ReadableStream
 /en-US/docs/Web/API/Reference	/en-US/docs/Web/API
 /en-US/docs/Web/API/RegisterProperty	/en-US/docs/Web/API/CSS/RegisterProperty
-/en-US/docs/Web/API/Request/arrayBuffer	/en-US/docs/Web/API/Response/arrayBuffer
-/en-US/docs/Web/API/Request/blob	/en-US/docs/Web/API/Response/blob
-/en-US/docs/Web/API/Request/bodyUsed	/en-US/docs/Web/API/Response/bodyUsed
 /en-US/docs/Web/API/Request/context	/en-US/docs/Web/API/Request/destination
-/en-US/docs/Web/API/Request/json	/en-US/docs/Web/API/Response/json
-/en-US/docs/Web/API/Request/text	/en-US/docs/Web/API/Response/text
 /en-US/docs/Web/API/Resource_Timing	/en-US/docs/Web/API/Resource_Timing_API
 /en-US/docs/Web/API/Response/Response.headers	/en-US/docs/Web/API/Response/headers
 /en-US/docs/Web/API/Response/Response.ok	/en-US/docs/Web/API/Response/ok
