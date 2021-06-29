@@ -34207,32 +34207,6 @@
       "Brettz9"
     ]
   },
-  "Web/API/ChildNode": {
-    "modified": "2020-10-15T21:24:15.043Z",
-    "contributors": [
-      "Zearin_Galaurum",
-      "GustvandeWal",
-      "Andrew-Cottrell",
-      "fscholz",
-      "stevenwdv",
-      "jackblackevo",
-      "arronei",
-      "JSlife23",
-      "erikadoyle",
-      "jpmedley",
-      "valtlait1",
-      "jwhitlock",
-      "Sheppy",
-      "pantherCZ",
-      "Jeremie",
-      "teoli",
-      "jdfm",
-      "Vincent",
-      "SarahWalrus",
-      "copperwall",
-      "jswisher"
-    ]
-  },
   "Web/API/Client": {
     "modified": "2020-10-15T21:31:16.211Z",
     "contributors": [
