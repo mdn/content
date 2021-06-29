@@ -30593,26 +30593,6 @@
       "rolfedh"
     ]
   },
-  "Web/API/Body": {
-    "modified": "2020-10-15T21:33:19.070Z",
-    "contributors": [
-      "Wind1808",
-      "fmeyertoens",
-      "sideshowbarker",
-      "Akh-rman",
-      "RickBrown",
-      "fscholz",
-      "vqrs",
-      "chrisdavidmills",
-      "jpmedley",
-      "yqjiang",
-      "ZaneHannanAU",
-      "Hugues-Antoine",
-      "erikadoyle",
-      "teoli",
-      "kscarfone"
-    ]
-  },
   "Web/API/BroadcastChannel": {
     "modified": "2020-10-15T21:32:14.287Z",
     "contributors": [
