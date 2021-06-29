@@ -30009,68 +30009,6 @@
       "rolfedh"
     ]
   },
-  "Web/API/BluetoothAdvertisingData": {
-    "modified": "2020-10-15T21:38:21.302Z",
-    "contributors": [
-      "sideshowbarker",
-      "kingleo713",
-      "ExE-Boss",
-      "fscholz",
-      "Alhadis",
-      "rolfedh",
-      "jpmedley"
-    ]
-  },
-  "Web/API/BluetoothAdvertisingData/appearance": {
-    "modified": "2020-10-15T21:38:37.521Z",
-    "contributors": [
-      "sideshowbarker",
-      "ExE-Boss",
-      "fscholz",
-      "rolfedh",
-      "jpmedley"
-    ]
-  },
-  "Web/API/BluetoothAdvertisingData/manufacturerData": {
-    "modified": "2020-10-15T21:38:38.872Z",
-    "contributors": [
-      "sideshowbarker",
-      "ExE-Boss",
-      "fscholz",
-      "rolfedh",
-      "jpmedley"
-    ]
-  },
-  "Web/API/BluetoothAdvertisingData/rssi": {
-    "modified": "2020-10-15T21:38:38.761Z",
-    "contributors": [
-      "sideshowbarker",
-      "ExE-Boss",
-      "fscholz",
-      "rolfedh",
-      "jpmedley"
-    ]
-  },
-  "Web/API/BluetoothAdvertisingData/serviceData": {
-    "modified": "2020-10-15T21:38:38.767Z",
-    "contributors": [
-      "sideshowbarker",
-      "ExE-Boss",
-      "fscholz",
-      "rolfedh",
-      "jpmedley"
-    ]
-  },
-  "Web/API/BluetoothAdvertisingData/txPower": {
-    "modified": "2020-10-15T21:38:38.592Z",
-    "contributors": [
-      "sideshowbarker",
-      "ExE-Boss",
-      "fscholz",
-      "rolfedh",
-      "jpmedley"
-    ]
-  },
   "Web/API/BluetoothCharacteristicProperties": {
     "modified": "2020-10-15T21:49:08.074Z",
     "contributors": [
