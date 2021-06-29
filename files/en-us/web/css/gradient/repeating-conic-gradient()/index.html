@@ -11,7 +11,7 @@ tags:
   - Reference
   - Web
   - gradient
-browser-compat: css.types.image.gradient.conic-gradient
+browser-compat: css.types.image.gradient.repeating-conic-gradient
 ---
 <div>{{CSSRef}}</div>
 
@@ -25,8 +25,8 @@ browser-compat: css.types.image.gradient.conic-gradient
    offset by 3degrees so there is no up/down straight line */
 background: repeating-conic-gradient(
     from 3deg at 25% 25%,
-    hsl(200, 100%, 50%) 0deg 15deg,
-    hsl(200, 100%, 60%) 10deg 30deg);
+    hsl(200, 100%, 50%) 0deg 15deg,
+    hsl(200, 100%, 60%) 10deg 30deg);
 );</pre>
 
 <h3 id="Values">Values</h3>
@@ -62,7 +62,7 @@ background: repeating-conic-gradient(
 
 <h3 id="Understanding_repeating_conic_gradients">Understanding repeating conic gradients</h3>
 
-<p>The repeating-conic-gradient syntax is similar to the  {{CSSxRef("gradient/conic-gradient()")}} and {{CSSxRef("gradient/repeating-radial-gradient()")}} syntax. Like the non-repeating conic-gradient, the color-stops are placed around a gradient arc. Like the repeating radial gradient, the size of the repeating section is the first color stop subtracted from the angle of the last color stop.</p>
+<p>The repeating-conic-gradient syntax is similar to the {{CSSxRef("gradient/conic-gradient()")}} and {{CSSxRef("gradient/repeating-radial-gradient()")}} syntax. Like the non-repeating conic-gradient, the color-stops are placed around a gradient arc. Like the repeating radial gradient, the size of the repeating section is the first color stop subtracted from the angle of the last color stop.</p>
 
 <p><img alt="Comparison of the color stops for repeating and non-repeating conic and radial gradients" src="repeatingconicgradient.png"></p>
 
