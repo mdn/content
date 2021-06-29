@@ -111856,6 +111856,17 @@
       "apepper"
     ]
   },
+  "Web/CSS/image/paint()": {
+    "modified": "2020-11-16T09:08:59.452Z",
+    "contributors": [
+      "chrisdavidmills",
+      "ramiy",
+      "rachelandrew",
+      "wbamberg",
+      "mfuji09",
+      "estelle"
+    ]
+  },
   "Web/CSS/ime-mode": {
     "modified": "2020-10-15T21:06:19.171Z",
     "contributors": [
@@ -114449,17 +114460,6 @@
       "F1na",
       "grendel",
       "jojomojo"
-    ]
-  },
-  "Web/CSS/paint()": {
-    "modified": "2020-11-16T09:08:59.452Z",
-    "contributors": [
-      "chrisdavidmills",
-      "ramiy",
-      "rachelandrew",
-      "wbamberg",
-      "mfuji09",
-      "estelle"
     ]
   },
   "Web/CSS/paint-order": {
