@@ -72400,12 +72400,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/RTCIceComponent": {
-    "modified": "2020-10-15T22:06:08.263Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
   "Web/API/RTCIceCredentialType": {
     "modified": "2020-10-15T22:20:11.863Z",
     "contributors": [
