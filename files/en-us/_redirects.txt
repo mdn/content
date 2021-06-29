@@ -10160,6 +10160,7 @@
 /en-US/docs/Web/CSS/transform-function/skewY	/en-US/docs/Web/CSS/transform-function/skewY()
 /en-US/docs/Web/CSS/transform-function/translate	/en-US/docs/Web/CSS/transform-function/translate()
 /en-US/docs/Web/CSS/transform-function/translate3d	/en-US/docs/Web/CSS/transform-function/translate3d()
+/en-US/docs/Web/CSS/transform-function/translateX	/en-US/docs/Web/CSS/transform-function/translateX()
 /en-US/docs/Web/CSS/transform-function/translateY	/en-US/docs/Web/CSS/transform-function/translateY()
 /en-US/docs/Web/CSS/transform-function/translateZ	/en-US/docs/Web/CSS/transform-function/translateZ()
 /en-US/docs/Web/CSS/unicode-range	/en-US/docs/Web/CSS/@font-face/unicode-range

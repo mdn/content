@@ -116810,7 +116810,7 @@
       "SphinxKnight"
     ]
   },
-  "Web/CSS/transform-function/translateX": {
+  "Web/CSS/transform-function/translateX()": {
     "modified": "2020-12-11T16:52:10.696Z",
     "contributors": [
       "Johuspect",
