@@ -27,6 +27,10 @@ browser-compat: api.Request
 <h2 id="Properties">Properties</h2>
 
 <dl>
+ <dt>{{domxref("Request.body")}} {{readonlyInline}}</dt>
+ <dd>A {{domxref("ReadableStream")}} of the body contents.</dd>
+ <dt>{{domxref("Request.bodyUsed")}} {{readonlyInline}}</dt>
+ <dd>Stores a {{domxref("Boolean")}} that declares whether the body has been used in a response yet.</dd>
  <dt>{{domxref("Request.cache")}} {{readonlyInline}}</dt>
  <dd>Contains the cache mode of the request (e.g., <code>default</code>, <code>reload</code>, <code>no-cache</code>).</dd>
  <dt>{{domxref("Request.credentials")}} {{readonlyInline}}</dt>
@@ -51,39 +55,25 @@ browser-compat: api.Request
  <dd>Contains the URL of the request.</dd>
 </dl>
 
-<p><code>Request</code> implements {{domxref("Body")}}, so it also inherits the following properties:</p>
-
-<dl>
- <dt>{{domxref("Body.body", "body")}} {{readonlyInline}}</dt>
- <dd>A simple getter used to expose a {{domxref("ReadableStream")}} of the body contents.</dd>
- <dt>{{domxref("Body.bodyUsed", "bodyUsed")}} {{readonlyInline}}</dt>
- <dd>Stores a {{domxref("Boolean")}} that declares whether the body has been used in a response yet.</dd>
-</dl>
-
 <h2 id="Methods">Methods</h2>
 
 <dl>
- <dt>{{domxref("Request.clone()")}}</dt>
- <dd>Creates a copy of the current <code>Request</code> object.</dd>
-</dl>
-
-<p><code>Request</code> implements {{domxref("Body")}}, so it also has the following methods available to it:</p>
-
-<dl>
- <dt>{{domxref("Body.arrayBuffer()")}}</dt>
+ <dt>{{domxref("Request.arrayBuffer()")}}</dt>
  <dd>Returns a promise that resolves with an {{domxref("ArrayBuffer")}} representation of the request body.</dd>
- <dt>{{domxref("Body.blob()")}}</dt>
+ <dt>{{domxref("Request.blob()")}}</dt>
  <dd>Returns a promise that resolves with a {{domxref("Blob")}} representation of the request body.</dd>
- <dt>{{domxref("Body.formData()")}}</dt>
+ <dt>{{domxref("Request.clone()")}}</dt>
+ <dd>Creates a copy of the current <code>Request</code> object.</dd><dt
+ >{{domxref("Request.formData()")}}</dt>
  <dd>Returns a promise that resolves with a {{domxref("FormData")}} representation of the request body.</dd>
- <dt>{{domxref("Body.json()")}}</dt>
+ <dt>{{domxref("Request.json()")}}</dt>
  <dd>Returns a promise that resolves with a {{domxref("JSON")}} representation of the request body.</dd>
- <dt>{{domxref("Body.text()")}}</dt>
+ <dt>{{domxref("Request.text()")}}</dt>
  <dd>Returns a promise that resolves with an {{domxref("USVString")}} (text) representation of the request body.</dd>
 </dl>
 
 <div class="note">
-<p><strong>Note</strong>: The {{domxref("Body")}} functions can be run only once; subsequent calls will resolve with empty strings/ArrayBuffers.</p>
+<p><strong>Note</strong>: The request body functions can be run only once; subsequent calls will resolve with empty strings/ArrayBuffers.</p>
 </div>
 
 <h2 id="Examples">Examples</h2>
