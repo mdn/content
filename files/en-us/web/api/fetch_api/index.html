@@ -26,7 +26,7 @@ tags:
 
 <p>The <code>fetch()</code> method takes one mandatory argument, the path to the resource you want to fetch. It returns a {{JSxRef("Promise")}} that resolves to the {{DOMxRef("Response")}} to that request — as soon as the server responds with headers — <strong>even if the server response is an HTTP error status</strong>. You can also optionally pass in an <code>init</code> options object as the second argument (see {{DOMxRef("Request")}}).</p>
 
-<p>Once a {{DOMxRef("Response")}} is retrieved, there are a number of methods available to define what the body content is and how it should be handled (see {{DOMxRef("Body")}}).</p>
+<p>Once a {{DOMxRef("Response")}} is retrieved, there are a number of methods available to define what the body content is and how it should be handled.</p>
 
 <p>You can create a request and response directly using the {{DOMxRef("Request.Request", "Request()")}} and {{DOMxRef("Response.Response", "Response()")}} constructors, but it's uncommon to do this directly. Instead, these are more likely to be created as results of other API actions (for example, {{DOMxRef("FetchEvent.respondWith()")}} from service workers).</p>
 
@@ -64,13 +64,6 @@ tags:
  <dd>Represents a resource request.</dd>
  <dt>{{DOMxRef("Response")}}</dt>
  <dd>Represents the response to a request.</dd>
-</dl>
-
-<h2 id="Fetch_mixin">Fetch mixin</h2>
-
-<dl>
- <dt>{{DOMxRef("Body")}}</dt>
- <dd>Provides methods relating to the body of the response/request, allowing you to declare what its content type is and how it should be handled.</dd>
 </dl>
 
 <h2 id="Specifications">Specifications</h2>

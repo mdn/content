@@ -37,11 +37,11 @@ tags:
 
 <p>Here we are fetching a JSON file across the network and printing it to the console. The simplest use of <code>fetch()</code> takes one argument — the path to the resource you want to fetch — and returns a promise containing the response (a {{domxref("Response")}} object).</p>
 
-<p>This is just an HTTP response, not the actual JSON. To extract the JSON body content from the response, we use the {{domxref("Body.json","json()")}} method (defined on the {{domxref("Body")}} mixin, which is implemented by both the {{domxref("Request")}} and {{domxref("Response")}} objects.)</p>
+<p>This is just an HTTP response, not the actual JSON. To extract the JSON body content from the response, we use the {{domxref("Response.json()")}} method.</p>
 
 <div class="notecard note">
   <h4>Note</h4>
-  <p>The Body mixin also has similar methods to extract other types of body content; see the {{anch("Body")}} section for more.</p>
+  <p>See the {{anch("Body")}} section for similar methods to extract other types of body content.</p>
 </div>
 
 <p>Fetch requests are controlled by the <code>connect-src</code> directive of <a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy">Content Security Policy</a> rather than the directive of the resources it's retrieving.</p>
@@ -416,14 +416,14 @@ addEventListener('fetch', function(event) {
  <li>{{domxref("FormData")}}</li>
 </ul>
 
-<p>The {{domxref("Body")}} mixin defines the following methods to extract a body (implemented by both {{domxref("Request")}} and {{domxref("Response")}}). These all return a promise that is eventually resolved with the actual content.</p>
+<p>The {{domxref("Request")}} and {{domxref("Response")}} interfaces share the following methods to extract a body. These all return a promise that is eventually resolved with the actual content.</p>
 
 <ul>
- <li>{{domxref("Body.arrayBuffer","arrayBuffer()")}}</li>
- <li>{{domxref("Body.blob","blob()")}}</li>
- <li>{{domxref("Body.json","json()")}}</li>
- <li>{{domxref("Body.text","text()")}}</li>
- <li>{{domxref("Body.formData","formData()")}}</li>
+ <li>{{domxref("Request.arrayBuffer()")}} / {{domxref("Response.arrayBuffer()")}}</li>
+ <li>{{domxref("Request.blob()")}} / {{domxref("Response.blob()")}}</li>
+ <li>{{domxref("Request.formData()")}} / {{domxref("Response.formData()")}}</li>
+ <li>{{domxref("Request.json()")}} / {{domxref("Response.json()")}}</li>
+ <li>{{domxref("Request.text()")}} / {{domxref("Response.text()")}}</li>
 </ul>
 
 <p>This makes usage of non-textual data much easier than it was with XHR.</p>

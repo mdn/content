@@ -27,7 +27,7 @@ tags:
 
 <h2 id="Browser_support">Browser support</h2>
 
-<p>You can consume Fetch {{domxref("Body")}} objects as streams and create your own custom readable streams in Firefox 65+ and Chrome 42+ (and equivalent Chromium-based browsers). <a href="/en-US/docs/Web/API/Streams_API/Concepts#Pipe_chains">Pipe chains</a> are only supported in Chrome at the moment, and that functionality is subject to change.</p>
+<p>You can consume Fetch body objects as streams and create your own custom readable streams in Firefox 65+ and Chrome 42+ (and equivalent Chromium-based browsers). <a href="/en-US/docs/Web/API/Streams_API/Concepts#Pipe_chains">Pipe chains</a> are only supported in Chrome at the moment, and that functionality is subject to change.</p>
 
 <h2 id="Finding_some_examples">Finding some examples</h2>
 
@@ -37,7 +37,7 @@ tags:
 
 <p>The <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a> allows you to fetch resources across the network, providing a modern alternative to <a href="/en-US/docs/Web/API/XMLHttpRequest">XHR</a>. It has a number of advantages, and what is really nice about it is that browsers have recently added the ability to consume a fetch response as a readable stream.</p>
 
-<p>The {{domxref("Body")}} mixin now includes the {{domxref("Body.body","body")}} property, which is a simple getter exposing the body contents as a readable stream. This mixin is implemented by both the {{domxref("Request")}} and {{domxref("Response")}} interfaces, so it is available on both, although consuming the stream of a response body is perhaps a bit more obvious.</p>
+<p>The {{domxref("Request.body")}} and {{domxref("Response.body")}} properties are available, which are getters exposing the body contents as a readable stream.</p>
 
 <p>As our <a href="https://github.com/mdn/dom-examples/tree/master/streams/simple-pump">Simple stream pump</a> example shows (<a href="https://mdn.github.io/dom-examples/streams/simple-pump/">see it live also</a>), exposing it is a matter of just accessing the <code>body</code> property of the response:</p>
 
