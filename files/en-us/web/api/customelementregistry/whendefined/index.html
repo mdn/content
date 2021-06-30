@@ -77,21 +77,24 @@ browser-compat: api.CustomElementRegistry.whenDefined
 &lt;/nav&gt;
 </pre>
 
-<pre class="brush: js">const container = document.getElementById('menu-container');
+<pre class="brush: js">
+const container = document.getElementById('menu-container');
 const placeholder = container.querySelector('.menu-placeholder');
 // Fetch all the children of menu that are not yet defined.
 const undefinedElements = container.querySelectorAll(':not(:defined)');
 
-const promises = [...undefinedElements].map(
-  button =&gt; customElements.whenDefined(button.localName)
-);
+async function removePlaceholder(){
+  const promises = [...undefinedElements].map(
+    button =&gt; customElements.whenDefined(button.localName)
+  );
 
 // Wait for all the children to be upgraded,
 // then remove the placeholder.
-async function response(){
-await Promise.all(promises);
-container.removeChild(placeholder);
+  await Promise.all(promises);
+  container.removeChild(placeholder);
 }
+
+removePlaceholder();
 </pre>
 
 <h2 id="Specifications">Specifications</h2>
