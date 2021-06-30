@@ -12,10 +12,9 @@ browser-compat: api.Request.text
 ---
 <div>{{APIRef("Fetch")}}</div>
 
-<p>The <strong><code>text()</code></strong> method of the {{domxref("Request")}} interface takes
-  a {{domxref("Request")}} stream and reads it to completion. It returns a promise that
-  resolves with a {{domxref("USVString")}} object (text). The response
-  is <em>always</em> decoded using UTF-8.</p>
+<p>The <strong><code>text()</code></strong> method of the {{domxref("Request")}} interface
+reads the request body and returns it as a promise that resolves with a {{domxref("USVString")}} object (text).
+The response is <em>always</em> decoded using UTF-8.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -41,7 +40,7 @@ const request = new Request('/myEndpoint', {
   body: text
 });
 
-request.formData().then(function(text) {
+request.text().then(function(text) {
   // do something with the text sent in the request
 });
 </pre>
