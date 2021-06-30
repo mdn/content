@@ -37,11 +37,16 @@ padding-inline-end: unset;
 
 <h3 id="Values">Values</h3>
 
-<p>The <code>padding-inline-end</code> property takes the same values as the {{cssxref("padding-left")}} property.</p>
+<dl>
+  <dt>{{cssxref("&lt;length&gt;")}}</dt>
+  <dd>The size of the padding as a fixed value. Must be nonnegative.</dd>
+  <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
+  <dd>The size of the padding as a percentage, relative to the <em>inline-size</em> of the containing block. Must be nonnegative.</dd>
+</dl>
 
 <h2 id="Description">Description</h2>
 
-<p>This property corresponds to the {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, or {{cssxref("padding-left")}} property depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.</p>
+<p>The <code>padding-inline-end</code> property is defined in the specification as taking the same values as the {{cssxref("padding-top")}} property. However, the phsyical property it maps to depends on the values set for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}. Therefore, it could map to {{cssxref("padding-bottom")}}, {{cssxref("padding-right")}}, or {{cssxref("padding-left")}}</p>
 
 <p>It relates to {{cssxref("padding-block-start")}}, {{cssxref("padding-block-end")}}, and {{cssxref("padding-inline-start")}}, which define the other paddings of the element.</p>
 
