@@ -318,11 +318,11 @@ Click the Start Capture button to begin.&lt;/p&gt;
 
 <h2 id="Security_2">Security</h2>
 
-<p>In order to function when <a href="/en-US/docs/Web/HTTP/Feature_Policy">Feature Policy</a> is enabled, you will need the <code>display-capture</code> permission. This can be done using the {{HTTPHeader("Feature-Policy")}} {{Glossary("HTTP")}} header or—if you're using the Screen Capture API in an {{HTMLElement("iframe")}}, the <code>&lt;iframe&gt;</code> element's {{htmlattrxref("allow", "iframe")}} attribute.</p>
+<p>In order to function when <a href="/en-US/docs/Web/HTTP/Permissions_Policy">Permissions Policy</a> is enabled, you will need the <code>display-capture</code> permission. This can be done using the {{HTTPHeader("Permissions-Policy")}} {{Glossary("HTTP")}} header or—if you're using the Screen Capture API in an {{HTMLElement("iframe")}}, the <code>&lt;iframe&gt;</code> element's {{htmlattrxref("allow", "iframe")}} attribute.</p>
 
 <p>For example, this line in the HTTP headers will enable Screen Capture API for the document and any embedded {{HTMLElement("iframe")}} elements that are loaded from the same origin:</p>
 
-<pre>Feature-Policy: display-capture 'self'</pre>
+<pre>Permissions-Policy: display-capture 'self'</pre>
 
 <p>If you're performing screen capture within an <code>&lt;iframe&gt;</code>, you can request permission just for that frame, which is clearly more secure than requesting a more general permission:</p>
 

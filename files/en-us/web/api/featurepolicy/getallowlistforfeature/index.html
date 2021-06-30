@@ -3,16 +3,23 @@ title: FeaturePolicy.getAllowlistForFeature()
 slug: Web/API/FeaturePolicy/getAllowlistForFeature
 tags:
 - API
+- Directive
 - Feature Policy
 - Feature-Policy
+- FeaturePolicy
+- Permissions-Policy
 - Reference
 browser-compat: api.FeaturePolicy.getAllowlistForFeature
 ---
 <div>{{APIRef("Feature Policy API")}}{{SeeCompatTable}}</div>
 
 <p><span class="seoSummary">The <strong><code>getAllowlistForFeature()</code></strong>
-    method of the {{DOMxRef("FeaturePolicy")}} allows query of the allow list for a
-    specific feature for the current Feature Policy.</span></p>
+    method of the {{DOMxRef("FeaturePolicy")}} interface allows query of the allow list for a
+    specific feature for the current Permissions Policy.</span></p>
+
+<div class="note">
+  <p>The <code>Permissions-Policy</code> header was previously named <code>Feature-Policy</code>. This API as well as some linked-to articles and demos still use the older name.</p>
+</div>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -27,19 +34,19 @@ browser-compat: api.FeaturePolicy.getAllowlistForFeature
 
 <h3 id="Return_value">Return value</h3>
 
-<p>An <a href="Web/HTTP/Feature_Policy/Using_Feature_Policy">Allow list</a> for the
+<p>An <a href="Web/HTTP/Permissions_Policy/Using_Permissions_Policy">Allow list</a> for the
   specified feature.</p>
 
 <h2 id="Errors">Errors</h2>
 
-<p>The function will raise a warning if the specified Feature Policy directive name is not
+<p>The function will raise a warning if the specified Permissions Policy directive name is not
   known. However, it will also return empty array, indicating that no origin is allowed to
   use the feature.</p>
 
 <h2 id="Example">Example</h2>
 
 <p>The following example prints all the origins that are allowed to use Camera API by the
-  Feature Policy. Please note that Camera API might be restricted by the Permissions API,
+  Permissions Policy. Please note that Camera API might be restricted by the Permissions API,
   if the user did not grant the corresponding permission yet.</p>
 
 <pre class="brush: js">// First, get the Feature Policy object

@@ -60,7 +60,7 @@ tags:
 
 <dl>
  <dt>{{DOMxRef("Document.pictureInPictureEnabled")}}</dt>
- <dd>The <code>pictureInPictureEnabled</code> property tells you whether or not it is possible to engage picture-in-picture mode. This is <code>false</code> if picture-in-picture mode is not available for any reason (e.g. the <a href="/en-US/docs/Web/HTTP/Headers/Feature-Policy/picture-in-picture"><code>"picture-in-picture"</code> feature</a> has been disallowed, or picture-in-picture mode is not supported).</dd>
+ <dd>The <code>pictureInPictureEnabled</code> property tells you whether or not it is possible to engage picture-in-picture mode. This is <code>false</code> if picture-in-picture mode is not available for any reason (e.g. the <a href="/en-US/docs/Web/HTTP/Headers/Permissions-Policy/picture-in-picture"><code>"picture-in-picture"</code> feature</a> has been disallowed, or picture-in-picture mode is not supported).</dd>
 </dl>
 
 <h3 id="Properties_on_the_Document_or_ShadowRoot_interfaces">Properties on the Document or ShadowRoot interfaces</h3>
@@ -89,9 +89,9 @@ tags:
 
 <h2 id="Controlling_access">Controlling access</h2>
 
-<p>The availability of picture-in-picture mode can be controlled using <a href="/en-US/docs/Web/HTTP/Feature_Policy">Feature Policy</a>. The full-screen mode feature is identified by the string <code>"picture-in-picture"</code>, with a default allow-list value of <code>"self"</code>, meaning that picture-in-picture mode is permitted in top-level document contexts, as well as to nested browsing contexts loaded from the same origin as the top-most document.</p>
+<p>The availability of picture-in-picture mode can be controlled using <a href="/en-US/docs/Web/HTTP/Permissions_Policy">Permissions Policy</a>. The full-screen mode feature is identified by the string <code>"picture-in-picture"</code>, with a default allow-list value of <code>"self"</code>, meaning that picture-in-picture mode is permitted in top-level document contexts, as well as to nested browsing contexts loaded from the same origin as the top-most document.</p>
 
-<p>See <a href="/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy">Using Feature Policy</a> to learn more about using Feature Policy to control access to an API.</p>
+<p>See <a href="/en-US/docs/Web/HTTP/Permissions_Policy/Using_Permissions_Policy">Using Permissions Policy</a> to learn more about using Permissions Policy to control access to an API.</p>
 
 <h2 id="Examples">Examples</h2>
 

@@ -11,7 +11,7 @@ tags:
 ---
 <div>{{draft}}{{SeeCompatTable}}{{APIRef("Reporting API")}}</div>
 
-<p class="summary">The Reporting API provides a generic reporting mechanism for web applications to use to make reports available based on various platform features (for example <a href="/en-US/docs/Web/HTTP/CSP">Content Security Policy</a>, <a href="/en-US/docs/Web/HTTP/Headers/Feature-Policy">Feature-Policy</a>, or feature deprecation reports) in a consistent manner.</p>
+<p class="summary">The Reporting API provides a generic reporting mechanism for web applications to use to make reports available based on various platform features (for example <a href="/en-US/docs/Web/HTTP/CSP">Content Security Policy</a>, <a href="/en-US/docs/Web/HTTP/Headers/Permissions-Policy">Permissions-Policy</a>, or feature deprecation reports) in a consistent manner.</p>
 
 <h2 id="Concepts_and_usage">Concepts and usage</h2>
 
@@ -19,7 +19,7 @@ tags:
 
 <ul>
  <li><a href="/en-US/docs/Web/HTTP/CSP">Content Security Policy</a> violations.</li>
- <li><a href="/en-US/docs/Web/HTTP/Headers/Feature-Policy">Feature-Policy</a> violations.</li>
+ <li><a href="/en-US/docs/Web/HTTP/Headers/Permissions-Policy">Permissions-Policy</a> violations.</li>
  <li>Deprecated feature usage (when you are using something that will stop working soon in browsers).</li>
  <li>Occurrence of crashes.</li>
  <li>Occurrence of user-agent interventions (when the browser blocks something your code is trying to do because it is deemed a security risk for example, or just plain annoying, like auto-playing audio).</li>
@@ -158,5 +158,5 @@ let observer = new ReportingObserver(function(reports, observer) {
 
 <ul>
  <li><a href="/en-US/docs/Web/HTTP/CSP">Content Security Policy</a></li>
- <li><code><a href="/en-US/docs/Web/HTTP/Headers/Feature-Policy">Feature-Policy</a></code></li>
+ <li><code><a href="/en-US/docs/Web/HTTP/Headers/Permissions-Policy">Permissions-Policy</a></code></li>
 </ul>

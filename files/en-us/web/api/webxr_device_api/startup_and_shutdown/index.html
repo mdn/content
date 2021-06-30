@@ -126,7 +126,7 @@ const xr = getXR("if-needed"); // Use the polyfill only if navigator.xr missing
 
 <h3 id="Permissions_and_security">Permissions and security</h3>
 
-<p>There are a number of security measures in place revolving around WebXR. First among these is that use of <code>immersive-vr</code> mode—which entirely replaces the user's view of the world—requires that the <code>xr-spatial-tracking</code>  <a href="/en-US/docs/Web/HTTP/Feature_Policy">feature policy</a> be in place. On top of that, the document needs to be secure and currently focused. Finally, you must call {{domxref("XRSystem.requestSession", "requestSession()")}} from a user event handler, such as the handler for the {{domxref("Element.click_event", "click")}} event.</p>
+<p>There are a number of security measures in place revolving around WebXR. First among these is that use of <code>immersive-vr</code> mode—which entirely replaces the user's view of the world—requires that the <code>xr-spatial-tracking</code>  <a href="/en-US/docs/Web/HTTP/Permissions_Policy">permissions policy</a> be in place. On top of that, the document needs to be secure and currently focused. Finally, you must call {{domxref("XRSystem.requestSession", "requestSession()")}} from a user event handler, such as the handler for the {{domxref("Element.click_event", "click")}} event.</p>
 
 <p>For more specifics about securing WebXR actitvities and usage, see the article <a href="/en-US/docs/Web/API/WebXR_Device_API/Permissions_and_security">Permissions and security for WebXR</a>.</p>
 
@@ -166,7 +166,7 @@ if (immersiveOK) {
  <dd>An on-screen presentation of the XR imagery within the context of the document window.</dd>
 </dl>
 
-<p>If the session couldn't be created for some reason—such as feature policy disallowing its use or the user declining to grant permission to use the headset—the promise gets rejected. So a more complete function that starts up and returns a WebXR session could look like this:</p>
+<p>If the session couldn't be created for some reason—such as permissions policy disallowing its use or the user declining to grant permission to use the headset—the promise gets rejected. So a more complete function that starts up and returns a WebXR session could look like this:</p>
 
 <pre class="brush: js">async function createImmersiveSession(xr) {
   try {

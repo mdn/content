@@ -204,8 +204,8 @@ browser-compat: api.MediaDevices.getUserMedia
     browsing instance is not permitted access to the device, the user has denied access
     for the current session, or the user has denied all access to user media devices
     globally. On browsers that support managing media permissions with <a
-      href="/en-US/docs/Web/HTTP/Feature_Policy">Feature Policy</a>, this error is
-    returned if Feature Policy is not configured to allow access to the input source(s).
+      href="/en-US/docs/Web/HTTP/Permissions_Policy">Permissions Policy</a>, this error is
+    returned if Permissions Policy is not configured to allow access to the input source(s).
     <div class="note">Older versions of the specification used <code>SecurityError</code>
       for this instead; <code>SecurityError</code> has taken on a new meaning.</div>
   </dd>
@@ -255,7 +255,7 @@ browser-compat: api.MediaDevices.getUserMedia
   inputs. Only a window's top-level document context for a valid origin can even request
   permission to use <code>getUserMedia()</code>, unless the top-level context expressly
   grants permission for a given {{HTMLElement("iframe")}} to do so using <a
-    href="/en-US/docs/Web/HTTP/Feature_Policy">Feature Policy</a>. Otherwise, the user
+    href="/en-US/docs/Web/HTTP/Permissions_Policy">Permissions Policy</a>. Otherwise, the user
   will never even be asked for permission to use the input devices.</p>
 
 <p>For additional details on these requirements and rules, how they are reflected in the
@@ -294,22 +294,22 @@ browser-compat: api.MediaDevices.getUserMedia
 <div class="notecard note">
   <p><strong>Note:</strong> The security model for <code>getUserMedia()</code> is still
     somewhat in flux. The originally-designed security mechanism is in the process of
-    being replaced with Feature Policy, so various browsers have different levels of
+    being replaced with Permissions Policy, so various browsers have different levels of
     security support, using different mechanisms. You should test your code carefully on a
     variety of devices and browsers to be sure it is as broadly compatible as possible</p>
 </div>
 
-<h4 id="Feature_Policy">Feature Policy</h4>
+<h4 id="Permissions_Policy">Permissions Policy</h4>
 
-<p>The <a href="/en-US/docs/Web/HTTP/Feature_Policy">Feature Policy</a> security
+<p>The <a href="/en-US/docs/Web/HTTP/Permissions_Policy">Permissions Policy</a> security
   management feature of {{Glossary("HTTP")}} is in the process of being introduced into
   browsers, with support available to some extent in many browsers (though not always
   enabled by default, as in Firefox). <code>getUserMedia()</code> is one method which will
-  require the use of Feature Policy, and your code needs to be prepared to deal with this.
+  require the use of Permissions Policy, and your code needs to be prepared to deal with this.
   For example, you may need to use the {{htmlattrxref("allow", "iframe")}} attribute on
   any {{HTMLElement("iframe")}} that uses <code>getUserMedia()</code>, and pages that use
   <code>getUserMedia()</code> will eventually need to supply the
-  {{HTTPHeader("Feature-Policy")}} header.</p>
+  {{HTTPHeader("Permissions-Policy")}} header.</p>
 
 <p>The two permissions that apply to <code>getUserMedia()</code> are <code>camera</code>
   and <code>microphone</code>.</p>
@@ -318,12 +318,12 @@ browser-compat: api.MediaDevices.getUserMedia
   and any embedded {{HTMLElement("iframe")}} elements that are loaded from the same
   origin:</p>
 
-<pre>Feature-Policy: camera 'self'</pre>
+<pre>Permissions-Policy: camera 'self'</pre>
 
 <p>This will request access to the microphone for the current origin and the specific
   origin https://developer.mozilla.org:</p>
 
-<pre>Feature-Policy: microphone 'self' https://developer.mozilla.org</pre>
+<pre>Permissions-Policy: microphone 'self' https://developer.mozilla.org</pre>
 
 <p>If you're using <code>getUserMedia()</code> within an <code>&lt;iframe&gt;</code>, you
   can request permission just for that frame, which is clearly more secure than requesting
@@ -334,7 +334,7 @@ browser-compat: api.MediaDevices.getUserMedia
 &lt;/iframe&gt;</pre>
 
 <p>Read our guide, <a
-    href="/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy">Using Feature
+    href="/en-US/docs/Web/HTTP/Permissions_Policy/Using_Permissions_Policy">Using Feature
     Policy</a>, to learn more about how it works.</p>
 
 <h4 id="Encryption_based_security">Encryption based security</h4>

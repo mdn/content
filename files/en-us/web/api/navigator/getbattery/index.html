@@ -22,8 +22,8 @@ browser-compat: api.Navigator.getBattery
 
 <div class="notecard note">
   <p><strong>Note:</strong> In some browsers access to this feature is controlled by
-    {{HTTPHeader("Feature-Policy")}} directive
-    {{HTTPHeader("Feature-Policy/battery","battery")}}.</p>
+    {{HTTPHeader("Permissions-Policy")}} directive
+    {{HTTPHeader("Permissions-Policy/battery","battery")}}.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
@@ -54,8 +54,8 @@ browser-compat: api.Navigator.getBattery
   <dd><strong>Note:</strong> No User Agent currently throws this exception, but the
     specification describes the following behaviors:<br>
     This document is not allowed to use this feature. For example, it might not be
-    explicitly allowed or restricted via {{HTTPHeader("Feature-Policy")}}
-    {{HTTPHeader("Feature-Policy/battery", "battery")}} feature.</dd>
+    explicitly allowed or restricted via {{HTTPHeader("Permissions-Policy")}}
+    {{HTTPHeader("Permissions-Policy/battery", "battery")}} feature.</dd>
 </dl>
 
 <h2 id="Example">Example</h2>
@@ -89,6 +89,6 @@ navigator.getBattery().then(function(battery) {
 
 <ul>
   <li><a href="/en-US/docs/Web/API/Battery_Status_API">Battery Status API</a></li>
-  <li><code>Feature-Policy</code> {{HTTPHeader("Feature-Policy/battery", "battery")}}
+  <li><code>Permissions-Policy</code> {{HTTPHeader("Permissions-Policy/battery", "battery")}}
     feature</li>
 </ul>
