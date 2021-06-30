@@ -48,8 +48,7 @@ tags:
 
 <pre class="brush: json">"Fetch API": {
     "overview":   [ "Fetch API"],
-    "interfaces": [ "Body",
-                    "Headers",
+    "interfaces": [ "Headers",
                     "Request",
                     "Response",
                     "FetchController",
@@ -67,9 +66,9 @@ tags:
 
 <p>This section lists all the sub-members you could include in a <code>GroupData</code> entry.</p>
 
-<p>Note that most of the values included inside the listed sub-members equate to both the link text, and slugs appended to the end of the main API index page —  <code>https://developer.mozilla.org/<em>&lt;language-code&gt;</em>/docs/Web/API</code> — to create the final URL for the displayed link. So for example, "Body" will result in a link being created like so:</p>
+<p>Note that most of the values included inside the listed sub-members equate to both the link text, and slugs appended to the end of the main API index page —  <code>https://developer.mozilla.org/<em>&lt;language-code&gt;</em>/docs/Web/API</code> — to create the final URL for the displayed link. So for example, "Response" will result in a link being created like so:</p>
 
-<pre class="brush: html">&lt;li&gt;&lt;a href="/en-US/docs/Web/API"&gt;Body&lt;/a&gt;&lt;/li&gt;</pre>
+<pre class="brush: html">&lt;li&gt;&lt;a href="/en-US/docs/Web/API"&gt;Response&lt;/a&gt;&lt;/li&gt;</pre>
 
 <p>There are a few exceptions. For example the "guides" sub-member contains one or more sets of link information (title and slug) that defines links to associated guides/tutorials. In this case the slugs are appended to the end of the MDN docs root — https://developer.mozilla.org/<em>&lt;language-code&gt;</em>/docs — allowing an article anywhere on MDN to be included.</p>
 
@@ -80,7 +79,7 @@ tags:
 	<p><code>"overview"</code> — the value is an array, inside of which you include the slug of the API overview page, if there is one. "Fetch API" results in a link being made to <a href="/en-US/docs/Web/API/Fetch_API">https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API</a>.</p>
 	</li>
 	<li>
-	<p><code>"interfaces"</code> — the value is an array in which you should list all of the interfaces that form part of that API. "Body" results in a link being made to <a href="/en-US/docs/Web/API/Body">https://developer.mozilla.org/en-US/docs/Web/API/Body</a>.</p>
+	<p><code>"interfaces"</code> — the value is an array in which you should list all of the interfaces that form part of that API. "Response" results in a link being made to <a href="/en-US/docs/Web/API/Response">https://developer.mozilla.org/en-US/docs/Web/API/Response</a>.</p>
 	</li>
 	<li>
 	<p><code>"methods"</code> — the value is an array that should contain any methods the spec adds to interfaces associated with other APIs, such as instantiation methods created on {{domxref("Navigator")}} or {{domxref("Window")}}. If there are a huge number of methods, you might want to consider only listing the most popular ones, or putting them first in the list. "WindowOrWorkerGlobalScope.fetch()" results in a link being made to <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch</a>. Do <em>not</em> list methods that are members of interfaces that are members of interfaces that are owned by the same API.</p>
