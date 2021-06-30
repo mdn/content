@@ -75197,13 +75197,6 @@
       "kscarfone"
     ]
   },
-  "Web/API/RequestDestination": {
-    "modified": "2020-10-15T22:05:59.042Z",
-    "contributors": [
-      "silverwind",
-      "Sheppy"
-    ]
-  },
   "Web/API/ResizeObserver": {
     "modified": "2020-11-09T07:09:43.943Z",
     "contributors": [
