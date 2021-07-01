@@ -17,6 +17,8 @@ order of the keys. Any value (both objects and
 {{glossary("Primitive", "primitive values")}}) may be used as
 either a key or a value.
 
+{{EmbedInteractiveExample("pages/js/map.html", "taller")}}
+
 ## Description
 
 A `Map` object iterates its elements in insertion order — a
