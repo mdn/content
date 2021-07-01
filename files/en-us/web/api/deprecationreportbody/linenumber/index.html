@@ -32,6 +32,7 @@ browser-compat: api.DeprecationReportBody.lineNumber
 let observer = new ReportingObserver(function(reports, observer) {
   let firstReport = reports[0];
   console.log(firstReport.type); // deprecation
+  console.log(firstReport.body.sourceFile);
   console.log(firstReport.body.lineNumber);
 }, options);</pre>
 
