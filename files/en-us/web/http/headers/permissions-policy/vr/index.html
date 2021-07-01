@@ -1,0 +1,52 @@
+---
+title: 'Permissions-Policy: vr'
+slug: Web/HTTP/Headers/Permissions-Policy/vr
+tags:
+  - Directive
+  - Permissions Policy
+  - Permissions-Policy
+  - HTTP
+  - Reference
+  - WebVR
+  - Experimental
+browser-compat: http.headers.Permissions-Policy.vr
+---
+<div>{{HTTPSidebar}}</div>
+
+<p class="warning">The <a href="/en-US/docs/Web/API/WebVR_API">WebVR API</a> has been replaced with the <a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</a> and is currently being removed from the web platform. Use the feature identifier {{HTTPHeader("Permissions-Policy/xr-spatial-tracking","xr-spatial-tracking")}} for WebXR Device API instead.</p>
+
+<div class="note">
+  <p>The <code>Permissions-Policy</code> header was previously named <code>Feature-Policy</code>. As of June 2021, the {{domxref('FeaturePolicy')}} API  as well as some linked-to articles and demos still use the older name.</p>
+</div>
+
+<p><span class="seoSummary">The HTTP {{HTTPHeader("Permissions-Policy")}} header <code>vr</code> directive controls whether the current document is allowed to use the <a href="/en-US/docs/Web/API/WebVR_API">WebVR API</a>. When this policy is enabled, the {{JSxRef("Promise")}} returned by {{DOMxRef("Navigator.getVRDisplays","Navigator.getVRDisplays()")}} will reject with a {{DOMxRef("DOMException")}}.</span></p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: http">Permissions-Policy: vr &lt;allowlist&gt;;</pre>
+
+<dl>
+  <dt>&lt;allowlist&gt;</dt>
+  <dd>A list of origins for which the feature is allowed. See <a href="/en-US/docs/Web/HTTP/Headers/Permissions-Policy#syntax"><code>Permissions-Policy</code></a>.</dd>
+</dl>
+
+<h2 id="Default_policy">Default policy</h2>
+
+<p>The default allowlist is <code>'self'</code>.</p>
+
+<h2 id="Specifications">Specifications</h2>
+
+<p>{{Specifications}}</p>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>{{HTTPHeader("Permissions-Policy/xr-spatial-tracking","Permissions-Policy: xr-spatial-tracking")}}</li>
+ <li>{{HTTPHeader("Permissions-Policy")}} header</li>
+ <li><a href="/en-US/docs/Web/HTTP/Permissions_Policy">Permissions Policy</a></li>
+ <li><a href="/en-US/docs/Web/HTTP/Permissions_Policy/Using_Permissions_Policy">Using Permissions Policy</a></li>
+</ul>
