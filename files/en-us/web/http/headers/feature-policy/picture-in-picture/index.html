@@ -1,26 +1,31 @@
 ---
-title: 'Feature-Policy: picture-in-picture'
-slug: Web/HTTP/Headers/Feature-Policy/picture-in-picture
+title: 'Permissions-Policy: picture-in-picture'
+slug: Web/HTTP/Headers/Permissions-Policy/picture-in-picture
 tags:
   - Directive
-  - Feature-Policy
+  - Permissions Policy
+  - Permissions-Policy
   - HTTP
   - Picture in picture
   - Reference
   - Experimental
-browser-compat: http.headers.Feature-Policy.picture-in-picture
+browser-compat: http.headers.Permissions-Policy.picture-in-picture
 ---
-<p>{{HTTPSidebar}} {{SeeCompatTable}}</p>
+<p>{{HTTPSidebar}}</p>
 
-<p>The HTTP {{HTTPHeader("Feature-Policy")}} header <code>picture-in-picture</code> directive controls whether the current document is allowed to play a video in a Picture-in-Picture mode via the corresponding API.</p>
+<div class="note">
+  <p>The <code>Permissions-Policy</code> header was previously named <code>Feature-Policy</code>. As of June 2021, the {{domxref('FeaturePolicy')}} API  as well as some linked-to articles and demos still use the older name.</p>
+</div>
+
+<p>The HTTP {{HTTPHeader("Permissions-Policy")}} header <code>picture-in-picture</code> directive controls whether the current document is allowed to play a video in a Picture-in-Picture mode via the corresponding API.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre>Feature-Policy: picture-in-picture &lt;allowlist&gt;;</pre>
+<pre>Permissions-Policy: picture-in-picture &lt;allowlist&gt;;</pre>
 
 <dl>
   <dt>&lt;allowlist&gt;</dt>
-  <dd>A list of origins for which the feature is allowed. See <a href="/en-US/docs/Web/HTTP/Headers/Feature-Policy#syntax"><code>Feature-Policy</code></a>.</dd>
+  <dd>A list of origins for which the feature is allowed. See <a href="/en-US/docs/Web/HTTP/Headers/Permissions-Policy#syntax"><code>Permissions-Policy</code></a>.</dd>
 </dl>
 
 <h2 id="Default_policy">Default policy</h2>
@@ -29,22 +34,7 @@ browser-compat: http.headers.Feature-Policy.picture-in-picture
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Feature Policy')}}</td>
-   <td>{{Spec2('Feature Policy')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+<p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
@@ -53,7 +43,7 @@ browser-compat: http.headers.Feature-Policy.picture-in-picture
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{HTTPHeader("Feature-Policy")}} header</li>
- <li><a href="/en-US/docs/Web/HTTP/Feature_Policy">Feature Policy</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy">Using Feature Policy</a></li>
+ <li>{{HTTPHeader("Permissions-Policy")}} header</li>
+ <li><a href="/en-US/docs/Web/HTTP/Permissions_Policy">Permissions Policy</a></li>
+ <li><a href="/en-US/docs/Web/HTTP/Permissions_Policy/Using_Permissions_Policy">Using Permissions Policy</a></li>
 </ul>
