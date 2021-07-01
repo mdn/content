@@ -17,7 +17,7 @@ tags:
 
 <pre class="brush: html">&lt;input type="email" <strong>multiple</strong> name="emails" id="emails"&gt;</pre>
 
-<p>If and only if the <code>multiple</code> attribute is specified, the value can be a list of properly-formed comma-separated e-mail addresses. Any trailing and leading whitespace is removed from each address in the list.</p>
+<p>If and only if the <code>multiple</code> attribute is specified, the value can be a list of properly-formed comma-separated e-mail addresses. Any trailing and leading whitespace is removed from each address in the list.</p>
 
 <p>When <code>multiple</code> is set on the {{HTMLElement("input/file", "file")}} input type, the user can select one or more files. The user can choose multiple files from the file picker in any way that their chosen platform allows (e.g. by holding down <kbd>Shift</kbd> or <kbd>Control</kbd>, and then clicking).</p>
 
@@ -66,7 +66,7 @@ tags:
 <pre class="brush: css">input:invalid {border: red solid 3px;}</pre>
 </div>
 
-<p>If and only if the <code>multiple</code> attribute is specified, the value can be a list of properly-formed comma-separated e-mail addresses. Any trailing and leading whitespace is removed from each address in the list. If the <code><a href="/en-US/docs/Web/HTML/Attributes/required">required</a></code> attribute is present, at least one email address is required.</p>
+<p>If and only if the <code>multiple</code> attribute is specified, the value can be a list of properly-formed comma-separated e-mail addresses. Any trailing and leading whitespace is removed from each address in the list. If the <code><a href="/en-US/docs/Web/HTML/Attributes/required">required</a></code> attribute is present, at least one email address is required.</p>
 
 <p>Some browsers support the appearance of the <code><a href="/en-US/docs/Web/HTML/Attributes/list">list</a></code> of options from the associated {{htmlelement('datalist')}} for subsequent email addresses when <code>multiple</code> is present. Others do not.</p>
 
@@ -96,7 +96,7 @@ tags:
 
 <p>Note the difference in appearance between the example with <code>multiple</code> set and the other <code>file</code> input without.</p>
 
-<p>When the form is submitted,had we used <code><a href="/en-US/docs/Web/HTML/Element/form">method="get"</a></code> each selected file's name would have been added to URL parameters as<code>?uploads=img1.jpg&amp;uploads=img2.svg</code>. However, since we are sumbitting <a href="/en-US/docs/Web/API/XMLHttpRequest/multipart">multipart</a> form data, we much use post. See the {{htmlelement('form')}} element  and <a href="/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data#the_method_attribute">sending form data</a> for more information.</p>
+<p>When the form is submitted,had we used <code><a href="/en-US/docs/Web/HTML/Element/form">method="get"</a></code> each selected file's name would have been added to URL parameters as<code>?uploads=img1.jpg&amp;uploads=img2.svg</code>. However, since we are sumbitting <a href="/en-US/docs/Web/API/XMLHttpRequest/multipart">multipart</a> form data, we much use post. See the {{htmlelement('form')}} element and <a href="/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data#the_method_attribute">sending form data</a> for more information.</p>
 
 <h3 id="select">select</h3>
 
@@ -153,27 +153,23 @@ select[multiple]:active {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'input.html#attr-input-multiple', 'multiple attribute')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'input.html#attr-input-multiple', 'multiple attribute')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+<h3>For the the <code>select</code> element</h3>
+
+{{Specifications("html.elements.select.multiple")}}
+
+<h3>For the the <code>input</code> element</h3>
+
+{{Specifications("html.elements.input.multiple")}}
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<h3>For the the <code>select</code> element</h3>
+
+{{Compat("html.elements.select.multiple")}}
+
+<h3>For the the <code>input</code> element</h3>
+
+{{Compat("html.elements.input.multiple")}}
 
 <h2 id="See_also">See also</h2>
 
