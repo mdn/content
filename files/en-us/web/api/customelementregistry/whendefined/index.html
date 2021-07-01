@@ -88,9 +88,9 @@ async function removePlaceholder(){
     button =&gt; customElements.whenDefined(button.localName)
   );
 
-// Wait for all the children to be upgraded,
-// then remove the placeholder.
+  // Wait for all the children to be upgraded
   await Promise.all(promises);
+  // then remove the placeholder
   container.removeChild(placeholder);
 }
 
