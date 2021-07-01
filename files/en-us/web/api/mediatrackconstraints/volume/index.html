@@ -19,7 +19,7 @@ browser-compat: api.MediaTrackConstraints.volume
 <div>{{APIRef("Media Capture and Streams")}}{{deprecated_header}}</div>
 
 <p>The {{domxref("MediaTrackConstraints")}} dictionary's
-  <code><strong>volume</strong></code> property is a {{domxref("ConstrainDouble")}}
+  <code><strong>volume</strong></code> property is a <a href="/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDouble"><code>ConstrainDouble</code></a>
   describing the requested or mandatory constraints placed upon the value of the
   {{domxref("MediaTrackSettings.volume", "volume")}} constrainable property.</p>
 
@@ -37,13 +37,13 @@ browser-compat: api.MediaTrackConstraints.volume
 
 <h3 id="Value">Value</h3>
 
-<p>A {{domxref("ConstrainDouble")}} describing the acceptable or required value(s) for an
+<p>A <a href="/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDouble"><code>ConstrainDouble</code></a> describing the acceptable or required value(s) for an
   audio track's volume, on a linear scale where 0.0 means silence and 1.0 is the highest
   supported volume.</p>
 
 <p>If this value is a number, the user agent will attempt to obtain media whose volume is
   as close as possible to this number given the capabilities of the hardware and the other
-  constraints specified. Otherwise, the value of this {{domxref("ConstrainDouble")}} will
+  constraints specified. Otherwise, the value of this <a href="/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDouble"><code>ConstrainDouble</code></a> will
   guide the user agent in its efforts to provide an exact match to the required volume (if
   <code>exact</code> is specified or both <code>min</code> and <code>max</code> are
   provided and have the same value) or to a best-possible value.</p>
