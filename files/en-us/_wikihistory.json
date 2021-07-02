@@ -30094,16 +30094,6 @@
       "jpmedley"
     ]
   },
-  "Web/API/BluetoothDevice/connectGATT": {
-    "modified": "2020-10-15T21:39:00.125Z",
-    "contributors": [
-      "sideshowbarker",
-      "ExE-Boss",
-      "fscholz",
-      "rolfedh",
-      "jpmedley"
-    ]
-  },
   "Web/API/BluetoothDevice/deviceClass": {
     "modified": "2020-10-15T21:38:55.184Z",
     "contributors": [
@@ -30121,16 +30111,6 @@
       "fscholz",
       "david_ross",
       "jpmedley"
-    ]
-  },
-  "Web/API/BluetoothDevice/gattServer": {
-    "modified": "2020-10-15T21:38:56.359Z",
-    "contributors": [
-      "sideshowbarker",
-      "ExE-Boss",
-      "fscholz",
-      "jpmedley",
-      "rolfedh"
     ]
   },
   "Web/API/BluetoothDevice/id": {
@@ -30478,28 +30458,6 @@
   },
   "Web/API/BluetoothRemoteGATTService/getCharacteristics": {
     "modified": "2020-10-15T21:38:57.496Z",
-    "contributors": [
-      "sideshowbarker",
-      "ExE-Boss",
-      "fscholz",
-      "chrisdavidmills",
-      "jpmedley",
-      "rolfedh"
-    ]
-  },
-  "Web/API/BluetoothRemoteGATTService/getIncludedService": {
-    "modified": "2020-10-15T21:39:00.697Z",
-    "contributors": [
-      "sideshowbarker",
-      "ExE-Boss",
-      "fscholz",
-      "chrisdavidmills",
-      "jpmedley",
-      "rolfedh"
-    ]
-  },
-  "Web/API/BluetoothRemoteGATTService/getIncludedServices": {
-    "modified": "2020-10-15T21:38:57.971Z",
     "contributors": [
       "sideshowbarker",
       "ExE-Boss",
