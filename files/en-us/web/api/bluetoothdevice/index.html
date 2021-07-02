@@ -46,9 +46,6 @@ BluetoothDevice implements ServiceEventHandlers;
   <dd>A {{DOMxRef("DOMString")}} that provices a human-readable name for the device.</dd>
   <dt>{{DOMxRef("BluetoothDevice.gatt")}} {{Experimental_Inline}}{{ReadOnlyInline}}</dt>
   <dd>A reference to the device's {{DOMxRef("BluetoothRemoteGATTServer")}}.</dd>
-  <dt>{{DOMxRef("BluetoothDevice.uuids")}} {{Experimental_Inline}}{{deprecated_inline}}{{ReadOnlyInline}}</dt>
-  <dd>Lists the UUID's of GATT services provided by the device, that the current origin is
-    allowed to access.</dd>
 </dl>
 
 <h3 id="Non-standard_Chrome_OS_properties">Non-standard Chrome OS properties</h3>
@@ -62,14 +59,6 @@ BluetoothDevice implements ServiceEventHandlers;
   <dt>{{DOMxRef("BluetoothDevice.deviceClass")}} {{Non-standard_Inline}}
     {{deprecated_inline}}{{ReadOnlyInline}}</dt>
   <dd>A number representing the Bluetooth devices "Class of Device".</dd>
-  <dt>{{DOMxRef("BluetoothDevice.productID")}} {{Non-standard_Inline}}
-    {{deprecated_inline}}{{ReadOnlyInline}}</dt>
-  <dd>The 16-bit Product ID field in the <code>pnp_id</code> characteristic in
-    the <code>device_information</code> service.</dd>
-  <dt>{{DOMxRef("BluetoothDevice.productVersion")}} {{Non-standard_Inline}}
-    {{deprecated_inline}}{{ReadOnlyInline}}</dt>
-  <dd>The 16-bit Product Version field in the <code>pnp_id</code> characteristic in the
-    <code>device_information</code> service.</dd>
   <dt>{{DOMxRef("BluetoothDevice.paired")}} {{Non-standard_Inline}}
     {{deprecated_inline}}{{ReadOnlyInline}}</dt>
   <dd>A {{jsxref("Boolean")}} value indicating whether the device is paired with the

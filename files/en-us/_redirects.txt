@@ -6979,10 +6979,13 @@
 /en-US/docs/Web/API/BluetoothCharacteristicProperties/writeWithoutRespponse	/en-US/docs/Web/API/BluetoothCharacteristicProperties/writeWithoutResponse
 /en-US/docs/Web/API/BluetoothDevice.name	/en-US/docs/Web/API/BluetoothDevice/name
 /en-US/docs/Web/API/BluetoothDevice.paired	/en-US/docs/Web/API/BluetoothDevice/paired
-/en-US/docs/Web/API/BluetoothDevice.uuids	/en-US/docs/Web/API/BluetoothDevice/uuids
+/en-US/docs/Web/API/BluetoothDevice.uuids	/en-US/docs/Web/API/BluetoothDevice
 /en-US/docs/Web/API/BluetoothDevice/adData	/en-US/docs/Web/API/Web_Bluetooth_API
 /en-US/docs/Web/API/BluetoothDevice/connectGATT	/en-US/docs/Web/API/BluetoothDevice
 /en-US/docs/Web/API/BluetoothDevice/gattServer	/en-US/docs/Web/API/BluetoothDevice
+/en-US/docs/Web/API/BluetoothDevice/productID	/en-US/docs/Web/API/BluetoothDevice
+/en-US/docs/Web/API/BluetoothDevice/productVersion	/en-US/docs/Web/API/BluetoothDevice
+/en-US/docs/Web/API/BluetoothDevice/uuids	/en-US/docs/Web/API/BluetoothDevice
 /en-US/docs/Web/API/BluetoothDevice/vendorID	/en-US/docs/Web/API/BluetoothDevice
 /en-US/docs/Web/API/BluetoothDevice/vendorIDSource	/en-US/docs/Web/API/BluetoothDevice
 /en-US/docs/Web/API/BluetoothGATTRemoteServer	/en-US/docs/Web/API/BluetoothRemoteGATTServer

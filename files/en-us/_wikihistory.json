@@ -30131,36 +30131,6 @@
       "chrisdavidmills"
     ]
   },
-  "Web/API/BluetoothDevice/productID": {
-    "modified": "2020-10-15T21:38:56.394Z",
-    "contributors": [
-      "sideshowbarker",
-      "ExE-Boss",
-      "fscholz",
-      "jpmedley",
-      "rolfedh"
-    ]
-  },
-  "Web/API/BluetoothDevice/productVersion": {
-    "modified": "2020-10-15T21:38:56.778Z",
-    "contributors": [
-      "sideshowbarker",
-      "ExE-Boss",
-      "fscholz",
-      "jpmedley",
-      "rolfedh"
-    ]
-  },
-  "Web/API/BluetoothDevice/uuids": {
-    "modified": "2020-10-15T21:37:48.295Z",
-    "contributors": [
-      "sideshowbarker",
-      "ExE-Boss",
-      "fscholz",
-      "jpmedley",
-      "chrisdavidmills"
-    ]
-  },
   "Web/API/BluetoothRemoteGATTCharacteristic": {
     "modified": "2020-10-15T21:37:40.197Z",
     "contributors": [
