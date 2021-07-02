@@ -39,10 +39,10 @@
   resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-3.3.9.tgz#a7c7c81dba343227192e11d5513e809cdc59727e"
   integrity sha512-rTYpol8vAIWnFLaLFxVOwHXd4tEVPIx6HlaG8IV/G1eWuLwg5y58dWHGTde2l7pRokbbjs75oKVWagUK14RRrQ==
 
-"@mdn/yari@0.4.567":
-  version "0.4.567"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.567.tgz#97720b06685ed1a69297c863bc3a45dbf6c33b04"
-  integrity sha512-5vbaWRQ+ZcRCXkL1tKGESfm9G+bq5X9cmRz2uchZ+EnLamOYZaciBtXDoCxiyIHzAtiie0kH5mJQl295cJgI6Q==
+"@mdn/yari@0.4.568":
+  version "0.4.568"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.568.tgz#e50288a126d9b637cdb33d6c2053d0a951158b74"
+  integrity sha512-C7ycVm8EEZEiOx7bOSPF4ess2r16gtfr0VVXklGI2M/DDdz84S0F8cTICUtMUu0xRZF6T5E5TyP98XaadNO/bA==
   dependencies:
     "@caporal/core" "2.0.2"
     "@fast-csv/parse" "4.3.6"
@@ -96,7 +96,7 @@
     rehype-format "^3.1.0"
     rehype-parse "^7.0.1"
     rehype-raw "^5.1.0"
-    rehype-remark "^8.0.0"
+    rehype-remark "^8.1.0"
     rehype-stringify "^8.0.0"
     remark-gfm "^1.0.0"
     remark-parse "^9.0.0"
@@ -3831,11 +3831,14 @@ rehype-raw@^5.1.0:
   dependencies:
     hast-util-raw "^6.1.0"
 
-rehype-remark@^8.0.0:
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/rehype-remark/-/rehype-remark-8.0.0.tgz#66233e5b6e096419353f4c5c0fb6808f7924dd57"
-  integrity sha512-d1EmgsqWc1v9E/URuzozU8pa4AYHIcfOMLhgzQRHeaxYyMHJKIrpBMdRhl+IbqcHLD699Ho/vO+DpSZgKsGM8Q==
+rehype-remark@^8.1.0:
+  version "8.1.1"
+  resolved "https://registry.yarnpkg.com/rehype-remark/-/rehype-remark-8.1.1.tgz#aa2e7a9b454aaf498788982e3095a0535241e7fa"
+  integrity sha512-8HCmub9Fcy208A7RGbjmVlxTMYZXGaF7jsUE2tuvNKuaGFrk9yrYuKAXoTVC7QFwBPzTvEc5AOZKpUiWRkamlw==
   dependencies:
+    "@types/hast" "^2.0.0"
+    "@types/mdast" "^3.0.0"
+    "@types/unist" "^2.0.0"
     hast-util-to-mdast "^7.0.0"
 
 rehype-stringify@^8.0.0:
