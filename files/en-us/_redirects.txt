@@ -6983,6 +6983,8 @@
 /en-US/docs/Web/API/BluetoothDevice/adData	/en-US/docs/Web/API/Web_Bluetooth_API
 /en-US/docs/Web/API/BluetoothDevice/connectGATT	/en-US/docs/Web/API/BluetoothDevice
 /en-US/docs/Web/API/BluetoothDevice/gattServer	/en-US/docs/Web/API/BluetoothDevice
+/en-US/docs/Web/API/BluetoothDevice/vendorID	/en-US/docs/Web/API/BluetoothDevice
+/en-US/docs/Web/API/BluetoothDevice/vendorIDSource	/en-US/docs/Web/API/BluetoothDevice
 /en-US/docs/Web/API/BluetoothGATTRemoteServer	/en-US/docs/Web/API/BluetoothRemoteGATTServer
 /en-US/docs/Web/API/BluetoothGATTRemoteServer/connected	/en-US/docs/Web/API/BluetoothRemoteGATTServer/connected
 /en-US/docs/Web/API/BluetoothGATTRemoteServer/device	/en-US/docs/Web/API/BluetoothRemoteGATTServer/device

@@ -30161,26 +30161,6 @@
       "chrisdavidmills"
     ]
   },
-  "Web/API/BluetoothDevice/vendorID": {
-    "modified": "2020-10-15T21:38:55.952Z",
-    "contributors": [
-      "sideshowbarker",
-      "ExE-Boss",
-      "fscholz",
-      "jpmedley",
-      "rolfedh"
-    ]
-  },
-  "Web/API/BluetoothDevice/vendorIDSource": {
-    "modified": "2020-10-15T21:38:55.964Z",
-    "contributors": [
-      "sideshowbarker",
-      "ExE-Boss",
-      "fscholz",
-      "jpmedley",
-      "rolfedh"
-    ]
-  },
   "Web/API/BluetoothRemoteGATTCharacteristic": {
     "modified": "2020-10-15T21:37:40.197Z",
     "contributors": [
