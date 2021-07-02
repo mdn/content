@@ -6980,6 +6980,7 @@
 /en-US/docs/Web/API/BluetoothDevice.name	/en-US/docs/Web/API/BluetoothDevice/name
 /en-US/docs/Web/API/BluetoothDevice.paired	/en-US/docs/Web/API/BluetoothDevice/paired
 /en-US/docs/Web/API/BluetoothDevice.uuids	/en-US/docs/Web/API/BluetoothDevice/uuids
+/en-US/docs/Web/API/BluetoothDevice/adData	/en-US/docs/Web/API/Web_Bluetooth_API
 /en-US/docs/Web/API/BluetoothDevice/connectGATT	/en-US/docs/Web/API/BluetoothDevice
 /en-US/docs/Web/API/BluetoothDevice/gattServer	/en-US/docs/Web/API/BluetoothDevice
 /en-US/docs/Web/API/BluetoothGATTRemoteServer	/en-US/docs/Web/API/BluetoothRemoteGATTServer
@@ -11635,7 +11636,7 @@
 /en-US/docs/XSL_Transformations_in_Mozilla_FAQ_(external)	/en-US/docs/Web/API/XSLTProcessor/XSL_Transformations_in_Mozilla_FAQ
 /en-US/docs/XSL_Transforms	/en-US/docs/Web/API/XSLTProcessor
 /en-US/docs/acceptCharset	/en-US/docs/Web/API/HTMLFormElement/acceptCharset
-/en-US/docs/adData	/en-US/docs/Web/API/BluetoothDevice/adData
+/en-US/docs/adData	/en-US/docs/Web/API/Web_Bluetooth_API
 /en-US/docs/addEventListener	/en-US/docs/Web/API/EventTarget/addEventListener
 /en-US/docs/appendChild	/en-US/docs/Web/API/Node/appendChild
 /en-US/docs/applications	/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings

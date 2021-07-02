@@ -30084,16 +30084,6 @@
       "chrisdavidmills"
     ]
   },
-  "Web/API/BluetoothDevice/adData": {
-    "modified": "2020-10-15T21:38:57.283Z",
-    "contributors": [
-      "sideshowbarker",
-      "ExE-Boss",
-      "fscholz",
-      "rolfedh",
-      "jpmedley"
-    ]
-  },
   "Web/API/BluetoothDevice/deviceClass": {
     "modified": "2020-10-15T21:38:55.184Z",
     "contributors": [
