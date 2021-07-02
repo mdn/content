@@ -51722,6 +51722,37 @@
       "AFBarstow"
     ]
   },
+  "Web/API/HTMLElement/tabIndex": {
+    "modified": "2020-10-15T21:06:27.399Z",
+    "contributors": [
+      "mfuji09",
+      "ExE-Boss",
+      "sideshowbarker",
+      "Wind1808",
+      "mfluehr",
+      "fscholz",
+      "momdo",
+      "erikadoyle",
+      "bchuchua",
+      "Jeremie",
+      "teoli",
+      "mikemaccana",
+      "ajaybhat",
+      "kscarfone",
+      "Sheppy",
+      "ethertank",
+      "kitchin",
+      "ziyunfei",
+      "dextra",
+      "George3",
+      "Callek",
+      "Mw22",
+      "Mgjbot",
+      "Ptak82",
+      "Dria",
+      "JesseW"
+    ]
+  },
   "Web/API/HTMLElement/title": {
     "modified": "2020-10-15T21:14:34.278Z",
     "contributors": [
@@ -54223,37 +54254,6 @@
       "sideshowbarker",
       "complicationlamp",
       "jpmedley"
-    ]
-  },
-  "Web/API/HTMLOrForeignElement/tabIndex": {
-    "modified": "2020-10-15T21:06:27.399Z",
-    "contributors": [
-      "mfuji09",
-      "ExE-Boss",
-      "sideshowbarker",
-      "Wind1808",
-      "mfluehr",
-      "fscholz",
-      "momdo",
-      "erikadoyle",
-      "bchuchua",
-      "Jeremie",
-      "teoli",
-      "mikemaccana",
-      "ajaybhat",
-      "kscarfone",
-      "Sheppy",
-      "ethertank",
-      "kitchin",
-      "ziyunfei",
-      "dextra",
-      "George3",
-      "Callek",
-      "Mw22",
-      "Mgjbot",
-      "Ptak82",
-      "Dria",
-      "JesseW"
     ]
   },
   "Web/API/HTMLOutputElement": {
