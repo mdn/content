@@ -2,7 +2,7 @@
 title: 'Privacy, permissions, and information security'
 slug: Web/Privacy
 tags:
-  - Feature Policy
+  - Permissions Policy
   - Information
   - Permissions
   - Personalize
@@ -88,12 +88,12 @@ tags:
    <td>Provides the ability to define the extent to which a document's content can be accessed by other devices over the web; used in particular to prevent or mitigate attacks on the server</td>
   </tr>
   <tr>
-   <td><a href="/en-US/docs/Web/HTTP/Feature_Policy">Feature Policy</a></td>
+   <td><a href="/en-US/docs/Web/HTTP/Permissions_Policy">Permissions Policy</a></td>
    <td>Lets web developers selectively enable, disable, and modify the behavior of certain features and APIs both for a document and for subdocuments loaded in {{HTMLElement("iframe")}}s</td>
   </tr>
   <tr>
    <td>{{HTMLElement("iframe")}}'s {{htmlattrxref("allow")}} attribute</td>
-   <td>Technically part of Feature Policy, the <code>allow</code> attribute on an <code>&lt;iframe&gt;</code> specifies which web features the document in the frame should be allowed to access</td>
+   <td>Technically part of Permissions Policy, the <code>allow</code> attribute on an <code>&lt;iframe&gt;</code> specifies which web features the document in the frame should be allowed to access</td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/HTTP/Public_Key_Pinning">HTTP Public Key Pinning</a> (HPKP)</td>
@@ -118,7 +118,7 @@ tags:
  </tbody>
 </table>
 
-<p>Not all of these are generally directly used within code; notably, the <a href="/en-US/docs/Web/API/Permissions_API">Permissions API</a>, <a href="/en-US/docs/Web/HTTP/Feature_Policy">Feature Policy</a>, and the <code>allow</code> attribute on <code>&lt;iframe&gt;</code> elements are primary tools directly used by code to help secure a site and its content.</p>
+<p>Not all of these are generally directly used within code; notably, the <a href="/en-US/docs/Web/API/Permissions_API">Permissions API</a>, <a href="/en-US/docs/Web/HTTP/Permissions_Policy">Permissions Policy</a>, and the <code>allow</code> attribute on <code>&lt;iframe&gt;</code> elements are primary tools directly used by code to help secure a site and its content.</p>
 
 <h2 id="Keeping_personal_data_safe">Keeping personal data safe</h2>
 
@@ -126,7 +126,7 @@ tags:
 
 <h2 id="Bringing_it_all_together">Bringing it all together</h2>
 
-<p>&lt;using Feature Policy with permissions and so forth; how to use them together, how they interact, etc&gt;</p>
+<p>&lt;using Permissions Policy with permissions and so forth; how to use them together, how they interact, etc&gt;</p>
 
 <h3 id="Permission_requests_in_&lt;iframe&gt;_elements">Permission requests in &lt;iframe&gt; elements</h3>
 
@@ -134,7 +134,7 @@ tags:
 
 <p>While specifications for these technologies either state or recommend tactics for handling situations like this, browsers may offer different solutions to improve security even further or to try new features, or try to reduce complexity for users, among other possible reasons.</p>
 
-<p>&lt;--- allow attribute, feature policy, and permissions api stuff ---&gt;</p>
+<p>&lt;--- allow attribute, permissions policy, and permissions api stuff ---&gt;</p>
 
 <p>A specific user experience issue that often arises is a document that's loaded with permission to access a resource and the document contains an {{HTMLElement("iframe")}} with the {{htmlattrxref("allow", "iframe")}} attribute to delegate that permission to the contents of the frame. In this case, it's possible for the user to wind up being prompted repeatedly for that same resource, first by the main page, then by the document in the frame.</p>
 
@@ -147,5 +147,5 @@ tags:
 <ul>
  <li><a href="/en-US/docs/Web/Security">Web security</a></li>
  <li><a href="/en-US/docs/Web/API/Permissions_API">Permissions API</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy">Using Feature Policy</a> and the HTTP {{HTTPHeader("feature-policy")}} header</li>
+ <li><a href="/en-US/docs/Web/HTTP/Permissions_Policy/Using_Permissions_Policy">Using Permissions Policy</a> and the HTTP {{HTTPHeader("Permissions-Policy")}} header</li>
 </ul>
