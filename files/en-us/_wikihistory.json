@@ -30084,16 +30084,6 @@
       "chrisdavidmills"
     ]
   },
-  "Web/API/BluetoothDevice/deviceClass": {
-    "modified": "2020-10-15T21:38:55.184Z",
-    "contributors": [
-      "sideshowbarker",
-      "ExE-Boss",
-      "fscholz",
-      "jpmedley",
-      "rolfedh"
-    ]
-  },
   "Web/API/BluetoothDevice/gatt": {
     "modified": "2020-10-15T21:48:50.498Z",
     "contributors": [
@@ -30115,16 +30105,6 @@
   "Web/API/BluetoothDevice/name": {
     "modified": "2020-10-15T21:37:34.208Z",
     "contributors": [
-      "ExE-Boss",
-      "fscholz",
-      "jpmedley",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/API/BluetoothDevice/paired": {
-    "modified": "2020-10-15T21:37:34.377Z",
-    "contributors": [
-      "sideshowbarker",
       "ExE-Boss",
       "fscholz",
       "jpmedley",
