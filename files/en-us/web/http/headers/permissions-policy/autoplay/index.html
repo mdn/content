@@ -1,0 +1,62 @@
+---
+title: 'Permissions-Policy: autoplay'
+slug: Web/HTTP/Headers/Permissions-Policy/autoplay
+tags:
+  - Directive
+  - Permissions Policy
+  - Permissions-Policy
+  - HTTP
+  - Reference
+  - autoplay
+  - Experimental
+browser-compat: http.headers.Permissions-Policy.autoplay
+---
+<div>{{HTTPSidebar}}</div>
+
+<div class="note">
+  <p>The <code>Permissions-Policy</code> header was previously named <code>Feature-Policy</code>. As of June 2021, the {{domxref('FeaturePolicy')}} API  as well as some linked-to articles and demos still use the older name.</p>
+</div>
+
+<p><span class="seoSummary">The HTTP {{HTTPHeader("Permissions-Policy")}} header
+    <code>autoplay</code> directive controls whether the current document is allowed to
+    autoplay media requested through the {{domxref("HTMLMediaElement")}} interface.</span>
+  When this policy is enabled and there were no user gestures, the {{jsxref("Promise")}}
+  returned by {{domxref("HTMLMediaElement.play()")}} will reject with
+  a {{domxref("DOMException")}}. The {{htmlattrxref("autoplay", "audio")}} attribute on
+  {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements will be ignored.</p>
+
+<p>For more details on autoplay and autoplay blocking, see the article <a
+    href="/en-US/docs/Web/Media/Autoplay_guide">Autoplay guide for media and Web Audio
+    APIs</a>.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: http">Permissions-Policy: autoplay &lt;allowlist&gt;;</pre>
+
+<dl>
+  <dt>&lt;allowlist&gt;</dt>
+  <dd>A list of origins for which the feature is allowed. See <a href="/en-US/docs/Web/HTTP/Headers/Permissions-Policy#syntax"><code>Permissions-Policy</code></a>.</dd>
+ </dl>
+
+<h2 id="Default_policy">Default policy</h2>
+
+<p>The default value in <a
+    href="https://www.chromestatus.com/feature/5100524789563392">Google Chrome</a> is
+  <code>'self'</code>.</p>
+
+<h2 id="Specifications">Specifications</h2>
+
+<p>{{Specifications}}</p>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+  <li>{{HTTPHeader("Permissions-Policy")}} header</li>
+  <li><a href="/en-US/docs/Web/HTTP/Permissions_Policy">Permissions Policy</a></li>
+  <li><a href="/en-US/docs/Web/HTTP/Permissions_Policy/Using_Permissions_Policy">Using Feature
+      Policy</a></li>
+</ul>
