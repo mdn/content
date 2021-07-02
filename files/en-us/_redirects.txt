@@ -8294,6 +8294,7 @@
 /en-US/docs/Web/API/PeriodicSyncManager/unregister()	/en-US/docs/Web/API/PeriodicSyncManager/unregister
 /en-US/docs/Web/API/PermissionStatus/status	/en-US/docs/Web/API/PermissionStatus/state
 /en-US/docs/Web/API/PictureInPictureWindow/PictureInPictureWindow:_resize_event	/en-US/docs/Web/API/PictureInPictureWindow/resize_event
+/en-US/docs/Web/API/Point	/en-US/docs/Web/API/WebKitPoint
 /en-US/docs/Web/API/Position	/en-US/docs/Web/API/GeolocationPosition
 /en-US/docs/Web/API/Position.coords	/en-US/docs/Web/API/GeolocationPosition/coords
 /en-US/docs/Web/API/Position.timestamp	/en-US/docs/Web/API/GeolocationPosition/timestamp
@@ -8796,7 +8797,6 @@
 /en-US/docs/Web/API/WebGL_API/Using_shaders_to_apply_color_in_WebGL	/en-US/docs/Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
 /en-US/docs/Web/API/WebGL_API/Using_textures_in_WebGL	/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
 /en-US/docs/Web/API/WebKitCSSMatrix	/en-US/docs/Web/API/DOMMatrix
-/en-US/docs/Web/API/WebKitPoint	/en-US/docs/Web/API/Point
 /en-US/docs/Web/API/WebRTC_API/Architecture	/en-US/docs/Web/API/WebRTC_API/Protocols
 /en-US/docs/Web/API/WebRTC_API/Architecture/Connectivity	/en-US/docs/Web/API/WebRTC_API/Connectivity
 /en-US/docs/Web/API/WebRTC_API/Architecture/Protocols	/en-US/docs/Web/API/WebRTC_API/Protocols
@@ -8840,8 +8840,8 @@
 /en-US/docs/Web/API/WheelEvent.deltaX	/en-US/docs/Web/API/WheelEvent/deltaX
 /en-US/docs/Web/API/WheelEvent.deltaY	/en-US/docs/Web/API/WheelEvent/deltaY
 /en-US/docs/Web/API/WheelEvent.deltaZ	/en-US/docs/Web/API/WheelEvent/deltaZ
-/en-US/docs/Web/API/Window.convertPointFromNodeToPage	/en-US/docs/Web/API/Window/convertPointFromNodeToPage
-/en-US/docs/Web/API/Window.convertPointFromPageToNode	/en-US/docs/Web/API/Window/convertPointFromPageToNode
+/en-US/docs/Web/API/Window.convertPointFromNodeToPage	/en-US/docs/Web/API/Window/webkitConvertPointFromNodeToPage
+/en-US/docs/Web/API/Window.convertPointFromPageToNode	/en-US/docs/Web/API/Window/webkitConvertPointFromPageToNode
 /en-US/docs/Web/API/Window.devicePixelRatio	/en-US/docs/Web/API/Window/devicePixelRatio
 /en-US/docs/Web/API/Window.dispatchEvent	/en-US/docs/Web/API/EventTarget/dispatchEvent
 /en-US/docs/Web/API/Window.localStorage	/en-US/docs/Web/API/Window/localStorage
@@ -8859,6 +8859,8 @@
 /en-US/docs/Web/API/Window/caches	/en-US/docs/Web/API/WindowOrWorkerGlobalScope/caches
 /en-US/docs/Web/API/Window/clearInterval	/en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval
 /en-US/docs/Web/API/Window/clearTimeout	/en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout
+/en-US/docs/Web/API/Window/convertPointFromNodeToPage	/en-US/docs/Web/API/Window/webkitConvertPointFromNodeToPage
+/en-US/docs/Web/API/Window/convertPointFromPageToNode	/en-US/docs/Web/API/Window/webkitConvertPointFromPageToNode
 /en-US/docs/Web/API/Window/fetch	/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch
 /en-US/docs/Web/API/Window/indexedDB	/en-US/docs/Web/API/WindowOrWorkerGlobalScope/indexedDB
 /en-US/docs/Web/API/Window/mozRequestAnimationFrame	/en-US/docs/Web/API/window/requestAnimationFrame
