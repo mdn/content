@@ -1,27 +1,23 @@
 ---
-title: HTMLOrForeignElement.dataset
-slug: Web/API/HTMLOrForeignElement/dataset
+title: HTMLElement.dataset
+slug: Web/API/HTMLElement/dataset
 tags:
-- API
-- HTML DOM
-- HTMLElement
-- HTMLOrForeignElement
-- Property
-- Read-only
-- Reference
-- SVG
-- SVG Custom Attributes
-- SVG2
-- SVGElement
-- dataset
+  - API
+  - HTML DOM
+  - HTMLElement
+  - Property
+  - Read-only
+  - Reference
+  - dataset
+browser-compat: api.HTMLElement.dataset
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p><span class="seoSummary">The <strong><code>dataset</code></strong> read-only property
-    of the {{DOMxRef("HTMLOrForeignElement")}} mixin provides read/write access to <a
-      href="/en-US/docs/Web/HTML/Global_attributes/data-*">custom data attributes</a>
-    (<code>data-<var>*</var></code>) on elements.</span> It exposes a map of strings
-  ({{domxref("DOMStringMap")}}) with an entry for each <code>data-*</code> attribute.</p>
+<p>The <strong><code>dataset</code></strong> read-only property
+of the {{DOMxRef("HTMLElement")}} interface provides read/write access to <a
+href="/en-US/docs/Web/HTML/Global_attributes/data-*">custom data attributes</a>
+(<code>data-<var>*</var></code>) on elements.</span> It exposes a map of strings
+({{domxref("DOMStringMap")}}) with an entry for each <code>data-*</code> attribute.</p>
 
 <div class="notecard note">
   <p>The <code>dataset</code> property itself can be read, but not directly written.
@@ -147,39 +143,11 @@ if ('someDataAttr' in el.dataset === false) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', "dom.html#dom-dataset", "HTMLElement.dataset")}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td>No change from latest snapshot, {{SpecName('HTML5.1')}}</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML5.1', "dom.html#dom-dataset", "HTMLElement.dataset")}}</td>
-      <td>{{Spec2('HTML5.1')}}</td>
-      <td>Snapshot of {{SpecName('HTML WHATWG')}}, no change from {{SpecName('HTML5 W3C')}}</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML5 W3C', "dom.html#dom-dataset", "HTMLElement.dataset")}}</td>
-      <td>{{Spec2('HTML5 W3C')}}</td>
-      <td>Snapshot of {{SpecName('HTML WHATWG')}}, initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.HTMLElement.dataset")}}</p>
-
-<div class="hidden">Please change the compat macro's parameter to
-  <code>api.HTMLOrForeignElement.dataset</code> after BCD is updated.</div>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
