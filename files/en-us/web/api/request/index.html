@@ -30,7 +30,7 @@ browser-compat: api.Request
  <dt>{{domxref("Request.body")}} {{readonlyInline}}</dt>
  <dd>A {{domxref("ReadableStream")}} of the body contents.</dd>
  <dt>{{domxref("Request.bodyUsed")}} {{readonlyInline}}</dt>
- <dd>Stores a {{domxref("Boolean")}} that declares whether the body has been used in a response yet.</dd>
+ <dd>Stores a {{domxref("Boolean")}} that declares whether the body has been used in a request yet.</dd>
  <dt>{{domxref("Request.cache")}} {{readonlyInline}}</dt>
  <dd>Contains the cache mode of the request (e.g., <code>default</code>, <code>reload</code>, <code>no-cache</code>).</dd>
  <dt>{{domxref("Request.credentials")}} {{readonlyInline}}</dt>
@@ -63,13 +63,13 @@ browser-compat: api.Request
  <dt>{{domxref("Request.blob()")}}</dt>
  <dd>Returns a promise that resolves with a {{domxref("Blob")}} representation of the request body.</dd>
  <dt>{{domxref("Request.clone()")}}</dt>
- <dd>Creates a copy of the current <code>Request</code> object.</dd><dt
- >{{domxref("Request.formData()")}}</dt>
+ <dd>Creates a copy of the current <code>Request</code> object.</dd>
+ <dt>{{domxref("Request.formData()")}}</dt>
  <dd>Returns a promise that resolves with a {{domxref("FormData")}} representation of the request body.</dd>
  <dt>{{domxref("Request.json()")}}</dt>
- <dd>Returns a promise that resolves with a {{jsxref("JSON")}} representation of the request body.</dd>
+ <dd>Returns a promise that resolves with the result of parsing the request body as {{JSxRef("JSON")}}.</dd>
  <dt>{{domxref("Request.text()")}}</dt>
- <dd>Returns a promise that resolves with an {{domxref("USVString")}} (text) representation of the request body.</dd>
+ <dd>Returns a promise that resolves with a text representation of the request body.</dd>
 </dl>
 
 <div class="note">
