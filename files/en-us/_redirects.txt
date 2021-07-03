@@ -1919,7 +1919,7 @@
 /en-US/docs/DOM/element.clientHeight	/en-US/docs/Web/API/Element/clientHeight
 /en-US/docs/DOM/element.clientWidth	/en-US/docs/Web/API/Element/clientWidth
 /en-US/docs/DOM/element.cloneNode	/en-US/docs/Web/API/Node/cloneNode
-/en-US/docs/DOM/element.dataset	/en-US/docs/Web/API/HTMLOrForeignElement/dataset
+/en-US/docs/DOM/element.dataset	/en-US/docs/Web/API/HTMLElement/dataset
 /en-US/docs/DOM/element.dir	/en-US/docs/Web/API/HTMLElement/dir
 /en-US/docs/DOM/element.dispatchEvent	/en-US/docs/Web/API/EventTarget/dispatchEvent
 /en-US/docs/DOM/element.firstChild	/en-US/docs/Web/API/Node/firstChild
@@ -3209,7 +3209,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/element.click	/en-US/docs/Web/API/HTMLElement/click
 /en-US/docs/Document_Object_Model_(DOM)/element.clientHeight	/en-US/docs/Web/API/Element/clientHeight
 /en-US/docs/Document_Object_Model_(DOM)/element.clientWidth	/en-US/docs/Web/API/Element/clientWidth
-/en-US/docs/Document_Object_Model_(DOM)/element.dataset	/en-US/docs/Web/API/HTMLOrForeignElement/dataset
+/en-US/docs/Document_Object_Model_(DOM)/element.dataset	/en-US/docs/Web/API/HTMLElement/dataset
 /en-US/docs/Document_Object_Model_(DOM)/element.dispatchEvent	/en-US/docs/Web/API/EventTarget/dispatchEvent
 /en-US/docs/Document_Object_Model_(DOM)/element.focus	/en-US/docs/Web/API/HTMLOrForeignElement/focus
 /en-US/docs/Document_Object_Model_(DOM)/element.getAttribute	/en-US/docs/Web/API/Element/getAttribute
@@ -7594,7 +7594,7 @@
 /en-US/docs/Web/API/HTMLElement.blur	/en-US/docs/Web/API/HTMLOrForeignElement/blur
 /en-US/docs/Web/API/HTMLElement.click	/en-US/docs/Web/API/HTMLElement/click
 /en-US/docs/Web/API/HTMLElement.contentEditable	/en-US/docs/Web/API/HTMLElement/contentEditable
-/en-US/docs/Web/API/HTMLElement.dataset	/en-US/docs/Web/API/HTMLOrForeignElement/dataset
+/en-US/docs/Web/API/HTMLElement.dataset	/en-US/docs/Web/API/HTMLElement/dataset
 /en-US/docs/Web/API/HTMLElement.dir	/en-US/docs/Web/API/HTMLElement/dir
 /en-US/docs/Web/API/HTMLElement.focus	/en-US/docs/Web/API/HTMLOrForeignElement/focus
 /en-US/docs/Web/API/HTMLElement.forceSpellCheck	/en-US/docs/Web/HTML/Global_attributes/spellcheck
@@ -7614,7 +7614,6 @@
 /en-US/docs/Web/API/HTMLElement.title	/en-US/docs/Web/API/HTMLElement/title
 /en-US/docs/Web/API/HTMLElement/HTMLElement.accessKey	/en-US/docs/Web/API/HTMLElement/accessKey
 /en-US/docs/Web/API/HTMLElement/blur	/en-US/docs/Web/API/HTMLOrForeignElement/blur
-/en-US/docs/Web/API/HTMLElement/dataset	/en-US/docs/Web/API/HTMLOrForeignElement/dataset
 /en-US/docs/Web/API/HTMLElement/focus	/en-US/docs/Web/API/HTMLOrForeignElement/focus
 /en-US/docs/Web/API/HTMLElement/forceSpellCheck	/en-US/docs/Web/HTML/Global_attributes/spellcheck
 /en-US/docs/Web/API/HTMLElement/invalid_event	/en-US/docs/Web/API/HTMLInputElement/invalid_event
@@ -7697,6 +7696,7 @@
 /en-US/docs/Web/API/HTMLMediaElement/mcs_ended_event	/en-US/docs/Web/API/MediaStreamTrack/ended_event
 /en-US/docs/Web/API/HTMLObjectElement/tabIndex	/en-US/docs/Web/API/HTMLObjectElement/type
 /en-US/docs/Web/API/HTMLOptionElement.Option	/en-US/docs/Web/API/HTMLOptionElement/Option
+/en-US/docs/Web/API/HTMLOrForeignElement/dataset	/en-US/docs/Web/API/HTMLElement/dataset
 /en-US/docs/Web/API/HTMLOrSVGElement	/en-US/docs/Web/API/HTMLOrForeignElement
 /en-US/docs/Web/API/HTMLSelectElement.add	/en-US/docs/Web/API/HTMLSelectElement/add
 /en-US/docs/Web/API/HTMLSelectElement.checkValidity	/en-US/docs/Web/API/HTMLSelectElement/checkValidity
@@ -8417,7 +8417,7 @@
 /en-US/docs/Web/API/RotationRate.gamma	/en-US/docs/Web/API/DeviceMotionEvent/rotationRate
 /en-US/docs/Web/API/SVGAElement/SVGAlement.target	/en-US/docs/Web/API/SVGAElement/target
 /en-US/docs/Web/API/SVGAnimatedPoints	/en-US/docs/Web/API/SVGPolygonElement
-/en-US/docs/Web/API/SVGElement/dataset	/en-US/docs/Web/API/HTMLOrForeignElement/dataset
+/en-US/docs/Web/API/SVGElement/dataset	/en-US/docs/Web/API/HTMLElement/dataset
 /en-US/docs/Web/API/SVGElement/onabort	/en-US/docs/Web/API/GlobalEventHandlers/onabort
 /en-US/docs/Web/API/SVGElement/onblur	/en-US/docs/Web/API/GlobalEventHandlers/onblur
 /en-US/docs/Web/API/SVGElement/onchange	/en-US/docs/Web/API/GlobalEventHandlers/onchange
@@ -9126,7 +9126,7 @@
 /en-US/docs/Web/API/element.click	/en-US/docs/Web/API/HTMLElement/click
 /en-US/docs/Web/API/element.clientHeight	/en-US/docs/Web/API/Element/clientHeight
 /en-US/docs/Web/API/element.clientWidth	/en-US/docs/Web/API/Element/clientWidth
-/en-US/docs/Web/API/element.dataset	/en-US/docs/Web/API/HTMLOrForeignElement/dataset
+/en-US/docs/Web/API/element.dataset	/en-US/docs/Web/API/HTMLElement/dataset
 /en-US/docs/Web/API/element.dir	/en-US/docs/Web/API/HTMLElement/dir
 /en-US/docs/Web/API/element.focus	/en-US/docs/Web/API/HTMLOrForeignElement/focus
 /en-US/docs/Web/API/element.getAttribute	/en-US/docs/Web/API/Element/getAttribute
@@ -11164,7 +11164,7 @@
 /en-US/docs/Web/Reference/File_System_API	/en-US/docs/Web/API/File_and_Directory_Entries_API
 /en-US/docs/Web/Reference/Functions_and classes_available_to_workers	/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
 /en-US/docs/Web/Reference/Functions_and_classes_available_to_workers	/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
-/en-US/docs/Web/SVG/Attribute/dataset	/en-US/docs/Web/API/HTMLOrForeignElement/dataset
+/en-US/docs/Web/SVG/Attribute/dataset	/en-US/docs/Web/API/HTMLElement/dataset
 /en-US/docs/Web/SVG/Tutorial/Fill_Stroke_and_Gradients	/en-US/docs/Web/SVG/Tutorial/Fills_and_Strokes
 /en-US/docs/Web/SVG/circle	/en-US/docs/Web/SVG/Element/circle
 /en-US/docs/Web/SVG/ellipse	/en-US/docs/Web/SVG/Element/ellipse
