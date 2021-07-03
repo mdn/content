@@ -70067,18 +70067,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/Point": {
-    "modified": "2020-10-15T21:32:53.457Z",
-    "contributors": [
-      "teoli",
-      "fscholz",
-      "Sheppy",
-      "libbymc",
-      "Sebastianz",
-      "kscarfone",
-      "cvrebert"
-    ]
-  },
   "Web/API/PointerEvent": {
     "modified": "2020-10-15T21:39:50.207Z",
     "contributors": [
@@ -87526,6 +87514,18 @@
       "chrisdavidmills"
     ]
   },
+  "Web/API/WebKitPoint": {
+    "modified": "2020-10-15T21:32:53.457Z",
+    "contributors": [
+      "teoli",
+      "fscholz",
+      "Sheppy",
+      "libbymc",
+      "Sebastianz",
+      "kscarfone",
+      "cvrebert"
+    ]
+  },
   "Web/API/WebRTC_API": {
     "modified": "2020-12-14T11:30:04.164Z",
     "contributors": [
@@ -89652,26 +89652,6 @@
       "Dria",
       "Callek",
       "JesseW"
-    ]
-  },
-  "Web/API/Window/convertPointFromNodeToPage": {
-    "modified": "2020-10-15T21:32:54.816Z",
-    "contributors": [
-      "fscholz",
-      "Sheppy",
-      "Sebastianz",
-      "teoli",
-      "cvrebert"
-    ]
-  },
-  "Web/API/Window/convertPointFromPageToNode": {
-    "modified": "2020-10-15T21:32:54.759Z",
-    "contributors": [
-      "fscholz",
-      "Sheppy",
-      "Sebastianz",
-      "kscarfone",
-      "cvrebert"
     ]
   },
   "Web/API/Window/copy_event": {
@@ -92560,6 +92540,26 @@
       "chrisdavidmills",
       "abbycar",
       "slimsag"
+    ]
+  },
+  "Web/API/Window/webkitConvertPointFromNodeToPage": {
+    "modified": "2020-10-15T21:32:54.816Z",
+    "contributors": [
+      "fscholz",
+      "Sheppy",
+      "Sebastianz",
+      "teoli",
+      "cvrebert"
+    ]
+  },
+  "Web/API/Window/webkitConvertPointFromPageToNode": {
+    "modified": "2020-10-15T21:32:54.759Z",
+    "contributors": [
+      "fscholz",
+      "Sheppy",
+      "Sebastianz",
+      "kscarfone",
+      "cvrebert"
     ]
   },
   "Web/API/Window/window": {
