@@ -1249,7 +1249,7 @@
 /en-US/docs/DOM/DOM_event_reference	/en-US/docs/Web/Events
 /en-US/docs/DOM/DOM_event_reference/DOMContentLoaded	/en-US/docs/Web/API/Window/DOMContentLoaded_event
 /en-US/docs/DOM/DOM_event_reference/DOMMouseScroll	/en-US/docs/Web/API/Element/DOMMouseScroll_event
-/en-US/docs/DOM/DOM_event_reference/MozMousePixelScroll	/en-US/docs/Web/API/Element/MozMousePixelScroll
+/en-US/docs/DOM/DOM_event_reference/MozMousePixelScroll	/en-US/docs/Web/API/Element/MozMousePixelScroll_event
 /en-US/docs/DOM/DOM_event_reference/beforeunload	/en-US/docs/Web/API/WindowEventHandlers/onbeforeunload
 /en-US/docs/DOM/DOM_event_reference/compositionend	/en-US/docs/Web/API/Element/compositionend_event
 /en-US/docs/DOM/DOM_event_reference/compositionstart	/en-US/docs/Web/API/Element/compositionstart_event
@@ -7362,6 +7362,7 @@
 /en-US/docs/Web/API/Element/Element.localName	/en-US/docs/Web/API/Element/localName
 /en-US/docs/Web/API/Element/Element:_fullscreenerror_event	/en-US/docs/Web/API/Element/fullscreenerror_event
 /en-US/docs/Web/API/Element/Element:touchend_event	/en-US/docs/Web/API/Element/touchend_event
+/en-US/docs/Web/API/Element/MozMousePixelScroll	/en-US/docs/Web/API/Element/MozMousePixelScroll_event
 /en-US/docs/Web/API/Element/accessKey	/en-US/docs/Web/API/HTMLElement/accessKey
 /en-US/docs/Web/API/Element/animationcancel_event	/en-US/docs/Web/API/HTMLElement/animationcancel_event
 /en-US/docs/Web/API/Element/animationend_event	/en-US/docs/Web/API/HTMLElement/animationend_event
@@ -10184,7 +10185,7 @@
 /en-US/docs/Web/Events/MSGestureTap	/en-US/docs/Web/API/Element/MSGestureTap_event
 /en-US/docs/Web/Events/MSInertiaStart	/en-US/docs/Web/API/Element/MSInertiaStart_event
 /en-US/docs/Web/Events/MSManipulationStateChanged	/en-US/docs/Web/API/Element/MSManipulationStateChanged_event
-/en-US/docs/Web/Events/MozMousePixelScroll	/en-US/docs/Web/API/Element/MozMousePixelScroll
+/en-US/docs/Web/Events/MozMousePixelScroll	/en-US/docs/Web/API/Element/MozMousePixelScroll_event
 /en-US/docs/Web/Events/SVGError	/en-US/docs/Web/API/SVGElement/error_event
 /en-US/docs/Web/Events/SVGLoad	/en-US/docs/Web/API/SVGElement/load_event
 /en-US/docs/Web/Events/abort	/en-US/docs/Web/API/HTMLMediaElement/abort_event
@@ -11025,7 +11026,7 @@
 /en-US/docs/Web/Reference/Events	/en-US/docs/Web/Events
 /en-US/docs/Web/Reference/Events/DOMContentLoaded	/en-US/docs/Web/API/Window/DOMContentLoaded_event
 /en-US/docs/Web/Reference/Events/DOMMouseScroll	/en-US/docs/Web/API/Element/DOMMouseScroll_event
-/en-US/docs/Web/Reference/Events/MozMousePixelScroll	/en-US/docs/Web/API/Element/MozMousePixelScroll
+/en-US/docs/Web/Reference/Events/MozMousePixelScroll	/en-US/docs/Web/API/Element/MozMousePixelScroll_event
 /en-US/docs/Web/Reference/Events/SVGError	/en-US/docs/Web/API/SVGElement/error_event
 /en-US/docs/Web/Reference/Events/SVGLoad	/en-US/docs/Web/API/SVGElement/load_event
 /en-US/docs/Web/Reference/Events/abort	/en-US/docs/Web/API/HTMLMediaElement/abort_event
