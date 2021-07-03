@@ -34,11 +34,11 @@ href="/en-US/docs/Web/HTML/Global_attributes/data-*">custom data attributes</a>
   <dd>The attribute name begins with <code>data-</code>. It can contain only letters,
     numbers, dashes (<code>-</code>), periods (<code>.</code>), colons (<code>:</code>),
     and underscores (<code>_</code>). Any ASCII capital letters (<code>A</code> to
-    <code>Z</code>) are ignored and converted to lowercase.</dd>
+    <code>Z</code>) are converted to lowercase.</dd>
   <dt>In JavaScript</dt>
-  <dd>The property name of a custom data attribute is the same as the HTML attribute
+  <dd>The property name of a custom data attribute is the same as the HTML attribute
     without the <code>data-</code> prefix, and removes single dashes (<code>-</code>) for
-    when to capitalize the property’s “camelCased” name.</dd>
+    when to capitalize the property's "camelCased" name.</dd>
 </dl>
 
 <p>In addition to the information below, you'll find a how-to guide for using HTML data
@@ -55,6 +55,8 @@ href="/en-US/docs/Web/HTML/Global_attributes/data-*">custom data attributes</a>
       domxref("DOMStringMap") }} entry by the following:</p>
 
     <ol>
+      <li>Lowercase all ASCII capital letters (<code>A</code> to
+        <code>Z</code>);</li>
       <li>Remove the prefix <code>data-</code> (including the dash);</li>
       <li>For any dash (<code>U+002D</code>) followed by an ASCII lowercase letter
         <code>a</code> to <code>z</code>, remove the dash and uppercase the letter;</li>
@@ -67,7 +69,7 @@ href="/en-US/docs/Web/HTML/Global_attributes/data-*">custom data attributes</a>
       following:</p>
 
     <ol>
-      <li><strong>Restriction:</strong> Before transformation, a dash <em>must not</em> be
+      <li><strong>Restriction:</strong> Before transformation, a dash <em>must not</em> be
         immediately followed by an ASCII lowercase letter <code>a</code> to
         <code>z</code>;</li>
       <li>Add the <code>data-</code> prefix;</li>
