@@ -83,7 +83,7 @@ function handleMessageFromWorker(msg) {
 myWorker.addEventListener('message', handleMessageFromWorker);
 
 function sendMainArrBuff(aBuf) {
-	console.log('got back buf in main thread, aBuf.byteLength:', aBuf.byteLength);
+	console.info('got back buf in main thread, aBuf.byteLength:', aBuf.byteLength);
 }
 
 // Ok lets create the buffer and send it
