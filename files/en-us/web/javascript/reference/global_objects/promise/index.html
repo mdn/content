@@ -201,13 +201,13 @@ window.addEventListener("message", (event) =&gt; {
  <dt>{{JSxRef("Promise.allSettled", "Promise.allSettled(iterable)")}}</dt>
  <dd>
    <p>Wait until all promises have settled (each may resolve or reject).</p>
-   <p>Returns a Promise that resolves after all of the given promises have either resolved or rejected, with an array of objects that each describe the outcome of each promise.</p>
+   <p>Returns a Promise that resolves after all of the given promises is either fulfilled or rejected, with an array of objects that each describe the outcome of each promise.</p>
  </dd>
  <dt>{{JSxRef("Promise.any", "Promise.any(iterable)")}}</dt>
  <dd>Takes an iterable of Promise objects and, as soon as one of the promises in the iterable fulfills, returns a single promise that resolves with the value from that promise.</dd>
  <dt>{{JSxRef("Promise.race", "Promise.race(iterable)")}}</dt>
  <dd>
-   <p>Wait until any of the promises is resolved or rejected.</p>
+   <p>Wait until any of the promises is fulfilled or rejected.</p>
    <p>If the returned promise resolves, it is resolved with the value of the first promise in the iterable that resolved.</p>
    <p>If it rejects, it is rejected with the reason from the first promise that was rejected.</p>
  </dd>
