@@ -82756,18 +82756,6 @@
       "Warhammerkid"
     ]
   },
-  "Web/API/TypeInfo": {
-    "modified": "2020-01-26T13:54:49.205Z",
-    "contributors": [
-      "Zearin_Galaurum",
-      "Sheppy",
-      "Sebastianz",
-      "teoli",
-      "fscholz",
-      "kscarfone",
-      "Brettz9"
-    ]
-  },
   "Web/API/UDP_Socket_API": {
     "modified": "2019-01-16T21:07:51.221Z",
     "contributors": [

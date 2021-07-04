@@ -1761,7 +1761,6 @@
 /en-US/docs/DOM/TouchList.length	/en-US/docs/Web/API/TouchList/length
 /en-US/docs/DOM/Touch_events	/en-US/docs/Web/API/Touch_events
 /en-US/docs/DOM/Touch_events_(Mozilla_experimental)	/en-US/docs/Web/API/Touch_events/Mozilla_experimental_events
-/en-US/docs/DOM/TypeInfo	/en-US/docs/Web/API/TypeInfo
 /en-US/docs/DOM/UIEvent	/en-US/docs/Web/API/UIEvent
 /en-US/docs/DOM/UserProximityEvent	/en-US/docs/Web/API/UserProximityEvent
 /en-US/docs/DOM/Using_device_orientation_with_3D_transforms	/en-US/docs/Web/Events/Using_device_orientation_with_3D_transforms
@@ -3101,7 +3100,6 @@
 /en-US/docs/Document_Object_Model_(DOM)/TouchList.item	/en-US/docs/Web/API/TouchList/item
 /en-US/docs/Document_Object_Model_(DOM)/TouchList.length	/en-US/docs/Web/API/TouchList/length
 /en-US/docs/Document_Object_Model_(DOM)/Touch_events	/en-US/docs/Web/API/Touch_events
-/en-US/docs/Document_Object_Model_(DOM)/TypeInfo	/en-US/docs/Web/API/TypeInfo
 /en-US/docs/Document_Object_Model_(DOM)/UIEvent	/en-US/docs/Web/API/UIEvent
 /en-US/docs/Document_Object_Model_(DOM)/Using_full-screen_mode	/en-US/docs/Web/API/Fullscreen_API
 /en-US/docs/Document_Object_Model_(DOM)/Using_the_Page_Visibility_API	/en-US/docs/Web/API/Page_Visibility_API
