@@ -41628,7 +41628,7 @@
       "erikadoyle"
     ]
   },
-  "Web/API/Element/MozMousePixelScroll": {
+  "Web/API/Element/MozMousePixelScroll_event": {
     "modified": "2020-10-15T21:19:40.311Z",
     "contributors": [
       "mfuji09",
