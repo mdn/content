@@ -15,6 +15,8 @@ tags:
 
 <p class="summary">Many WebVR hardware setups feature controllers that go along with the headset. These can be used in WebVR apps via the <a href="/en-US/docs/Web/API/Gamepad_API">Gamepad API</a>, and specifically the <a href="/en-US/docs/Web/API/Gamepad_API#experimental_gamepad_extensions">Gamepad Extensions API</a> that adds API features for accessing <a href="/en-US/docs/Web/API/GamepadPose">controller pose</a>, <a href="/en-US/docs/Web/API/GamepadHapticActuator">haptic actuators</a>, and more. This article explains the basics.</p>
 
+<div class="notecard note"><strong>Note:</strong> WebVR API is replaced by <a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR API</a>. WebVR was never ratified as a standard, was implemented and enabled by default in very few browsers and supported a small number of devices.</div>
+
 <h2 id="The_WebVR_API">The WebVR API</h2>
 
 <p>The <a href="/en-US/docs/Web/API/WebVR_API">WebVR API</a> is a nascent, but very interesting new feature of the web platform that allows developers to create web-based virtual reality experiences. It does this by providing access to VR headsets connected to your computer as {{domxref("VRDisplay")}} objects, which can be manipulated to start and stop presentation to the display, queried for movement data (e.g. orientation and position) that can be used to update the display on each frame of the animation loop, and more.</p>
