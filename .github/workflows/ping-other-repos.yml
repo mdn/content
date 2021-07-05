@@ -1,0 +1,17 @@
+name: Ping other repos
+
+on:
+  push:
+    branches: [main]
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping w3c/mdn-spec-links
+        uses: peter-evans/repository-dispatch@v1
+        if: ${{ github.repository == 'mdn/content' }}
+        with:
+          token: ${{ secrets.SIDESHOWBARKER }}
+          repository: w3c/mdn-spec-links
+          event-type: ping
+          client-payload: '{"repository": "${{ github.repository }}", "ref": "${{ github.ref }}", "sha": "${{ github.sha }}"}'
