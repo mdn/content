@@ -59286,16 +59286,6 @@
       "bershanskiy"
     ]
   },
-  "Web/API/LocalMediaStream": {
-    "modified": "2020-10-15T21:31:19.650Z",
-    "contributors": [
-      "Sheppy",
-      "teoli",
-      "lucian95",
-      "kscarfone",
-      "Potch"
-    ]
-  },
   "Web/API/Location": {
     "modified": "2020-11-13T08:30:24.008Z",
     "contributors": [
