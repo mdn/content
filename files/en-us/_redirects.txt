@@ -7714,8 +7714,8 @@
 /en-US/docs/Web/API/HTMLMediaElement/mcs_ended_event	/en-US/docs/Web/API/MediaStreamTrack/ended_event
 /en-US/docs/Web/API/HTMLObjectElement/tabIndex	/en-US/docs/Web/API/HTMLObjectElement/type
 /en-US/docs/Web/API/HTMLOptionElement.Option	/en-US/docs/Web/API/HTMLOptionElement/Option
-/en-US/docs/Web/API/HTMLOrForeignElement/tabIndex	/en-US/docs/Web/API/HTMLElement/tabIndex
 /en-US/docs/Web/API/HTMLOrForeignElement/dataset	/en-US/docs/Web/API/HTMLElement/dataset
+/en-US/docs/Web/API/HTMLOrForeignElement/tabIndex	/en-US/docs/Web/API/HTMLElement/tabIndex
 /en-US/docs/Web/API/HTMLOrSVGElement	/en-US/docs/Web/API/HTMLOrForeignElement
 /en-US/docs/Web/API/HTMLSelectElement.add	/en-US/docs/Web/API/HTMLSelectElement/add
 /en-US/docs/Web/API/HTMLSelectElement.checkValidity	/en-US/docs/Web/API/HTMLSelectElement/checkValidity
