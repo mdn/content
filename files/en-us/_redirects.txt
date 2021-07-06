@@ -8097,7 +8097,6 @@
 /en-US/docs/Web/API/Navigator/mediaDevices/getUserMedia	/en-US/docs/Web/API/MediaDevices/getUserMedia
 /en-US/docs/Web/API/Navigator/platform	/en-US/docs/Web/API/NavigatorID/platform
 /en-US/docs/Web/API/Navigator/product	/en-US/docs/Web/API/NavigatorID/product
-/en-US/docs/Web/API/Navigator/storage	/en-US/docs/Web/API/NavigatorStorage/storage
 /en-US/docs/Web/API/Navigator/taintEnabled	/en-US/docs/Web/API/NavigatorID/taintEnabled
 /en-US/docs/Web/API/Navigator/userAgent	/en-US/docs/Web/API/NavigatorID/userAgent
 /en-US/docs/Web/API/NavigatorConcurrentHardware	/en-US/docs/Web/API/Navigator
@@ -8129,6 +8128,8 @@
 /en-US/docs/Web/API/NavigatorPlugins/javaEnabled	/en-US/docs/Web/API/Navigator/javaEnabled
 /en-US/docs/Web/API/NavigatorPlugins/mimeTypes	/en-US/docs/Web/API/Navigator/mimeTypes
 /en-US/docs/Web/API/NavigatorPlugins/plugins	/en-US/docs/Web/API/Navigator/plugins
+/en-US/docs/Web/API/NavigatorStorage	/en-US/docs/Web/API/Navigator
+/en-US/docs/Web/API/NavigatorStorage/storage	/en-US/docs/Web/API/Navigator/storage
 /en-US/docs/Web/API/NetworkInformation.connection	/en-US/docs/Web/API/Navigator/connection
 /en-US/docs/Web/API/NetworkInformation.ontypechange	/en-US/docs/Web/API/NetworkInformation/onchange
 /en-US/docs/Web/API/NetworkInformation/NetworkInformation.rtt	/en-US/docs/Web/API/NetworkInformation/rtt

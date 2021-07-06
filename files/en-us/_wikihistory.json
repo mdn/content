@@ -64549,6 +64549,18 @@
       "jyasskin"
     ]
   },
+  "Web/API/Navigator/storage": {
+    "modified": "2020-10-15T21:50:37.556Z",
+    "contributors": [
+      "fscholz",
+      "loomchild",
+      "chrisdavidmills",
+      "jpmedley",
+      "inexorabletash",
+      "yisibl",
+      "Sheppy"
+    ]
+  },
   "Web/API/Navigator/vendor": {
     "modified": "2020-10-15T21:06:59.062Z",
     "contributors": [
@@ -64785,27 +64797,6 @@
       "Jabez",
       "Dria",
       "JesseW"
-    ]
-  },
-  "Web/API/NavigatorStorage": {
-    "modified": "2020-10-15T21:50:37.887Z",
-    "contributors": [
-      "Wind1808",
-      "fscholz",
-      "chrisdavidmills",
-      "Sheppy"
-    ]
-  },
-  "Web/API/NavigatorStorage/storage": {
-    "modified": "2020-10-15T21:50:37.556Z",
-    "contributors": [
-      "fscholz",
-      "loomchild",
-      "chrisdavidmills",
-      "jpmedley",
-      "inexorabletash",
-      "yisibl",
-      "Sheppy"
     ]
   },
   "Web/API/NetworkInformation": {
