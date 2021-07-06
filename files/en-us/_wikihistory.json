@@ -74697,15 +74697,6 @@
       "jpmedley"
     ]
   },
-  "Web/API/RenderingContext": {
-    "modified": "2019-03-23T23:08:55.144Z",
-    "contributors": [
-      "sideshowbarker",
-      "Sheppy",
-      "fscholz",
-      "teoli"
-    ]
-  },
   "Web/API/Report": {
     "modified": "2020-10-15T22:16:18.021Z",
     "contributors": [
