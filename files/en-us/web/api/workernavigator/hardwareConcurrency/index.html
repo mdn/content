@@ -4,10 +4,12 @@ slug: Web/API/Navigator/hardwareConcurrency
 tags:
   - API
   - HTML DOM
-  - Navigator
   - Property
+  - Web Workers
+  - Worker
+  - WorkerNavigator
   - hardwareConcurrency
-browser-compat: api.Navigator.hardwareConcurrency
+browser-compat: api.WorkerNavigator.hardwareConcurrency
 ---
 <p>{{APIRef("HTML DOM")}}</p>
 
@@ -44,9 +46,11 @@ browser-compat: api.Navigator.hardwareConcurrency
   these objects are, in turn, stored into an array for later use. This creates a pool of
   workers we can use to process requests later.</p>
 
+<p>The following code can be run in a worker:</p>
+
 <pre class="brush: js">let workerList = [];
 
-for (let i = 0; i &lt; window.navigator.hardwareConcurrency; i++) {
+for (let i = 0; i &lt; navigator.hardwareConcurrency; i++) {
   let newWorker = {
     worker: new Worker('cpuworker.js'),
     inUse: false
@@ -65,6 +69,5 @@ for (let i = 0; i &lt; window.navigator.hardwareConcurrency; i++) {
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li>{{domxref("Navigator")}}</li>
   <li>{{domxref("WorkerNavigator")}}</li>
 </ul>

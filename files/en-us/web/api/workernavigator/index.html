@@ -17,11 +17,13 @@ browser-compat: api.WorkerNavigator
 
 <h2 id="Properties">Properties</h2>
 
-<p><em>The <code>WorkerNavigator</code> interface implements properties from the {{DOMxRef("NavigatorID")}}, {{DOMxRef("NavigatorOnLine")}}, {{DOMxRef("NavigatorDataStore")}}, and {{DOMxRef("NavigatorConcurrentHardware")}} interfaces. </em></p>
+<p><em>The <code>WorkerNavigator</code> interface implements properties from the {{DOMxRef("NavigatorID")}}, {{DOMxRef("NavigatorOnLine")}}, and {{DOMxRef("NavigatorDataStore")}} interfaces. </em></p>
 
 <dl>
  <dt>{{DOMxRef("WorkerNavigator.connection")}}{{ReadOnlyInline}}</dt>
  <dd>Provides a {{DOMxRef("NetworkInformation")}} object containing information about the network connection of a device.</dd>
+ <dt>{{DOMxRef("WorkerNavigator.hardwareConcurrency")}}{{ReadOnlyInline}}</dt>
+ <dd>Returns the number of logical processor cores available.</dd>
  <dt>{{DOMxRef("WorkerNavigator.language")}} {{readonlyInline}}</dt>
  <dd>Returns a {{domxref("DOMString")}} representing the preferred language of the user, usually the language of the browser UI. The <code>null</code> value is returned when this is unknown.</dd>
  <dt>{{DOMxRef("WorkerNavigator.languages")}} {{readonlyInline}} {{experimental_inline}}</dt>
@@ -45,8 +47,6 @@ browser-compat: api.WorkerNavigator
  <dd>Returns the official name of the browser. Do not rely on this property to return the correct value.</dd>
  <dt>{{DOMxRef("NavigatorID.appVersion")}} {{Deprecated_Inline}}{{ReadOnlyInline}}</dt>
  <dd>Returns the version of the browser as a string. Do not rely on this property to return the correct value.</dd>
- <dt>{{DOMxRef("NavigatorConcurrentHardware.hardwareConcurrency")}}{{ReadOnlyInline}}</dt>
- <dd>Returns the number of logical processor cores available.</dd>
  <dt>{{DOMxRef("NavigatorOnLine.onLine")}}{{ReadOnlyInline}}</dt>
  <dd>Returns a {{DOMxRef("Boolean")}} indicating whether the browser is online.</dd>
  <dt>{{DOMxRef("NavigatorID.platform")}} {{Deprecated_Inline}}{{ReadOnlyInline}}</dt>
@@ -59,7 +59,7 @@ browser-compat: api.WorkerNavigator
 
 <h2 id="Methods">Methods</h2>
 
-<p><em>The <code>WorkerNavigator</code> interface implements methods from the {{DOMxRef("NavigatorID")}}, {{DOMxRef("NavigatorLanguage")}} and {{DOMxRef("NavigatorOnLine")}} interfaces.</em></p>
+<p><em>The <code>WorkerNavigator</code> interface implements methods from the {{DOMxRef("NavigatorID")}} and {{DOMxRef("NavigatorOnLine")}} interfaces.</em></p>
 
 <h2 id="Specifications">Specifications</h2>
 
