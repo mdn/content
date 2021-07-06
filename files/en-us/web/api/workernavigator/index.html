@@ -17,7 +17,7 @@ browser-compat: api.WorkerNavigator
 
 <h2 id="Properties">Properties</h2>
 
-<p><em>The <code>WorkerNavigator</code> interface implements properties from the {{DOMxRef("NavigatorID")}}, {{DOMxRef("NavigatorOnLine")}}, and {{DOMxRef("NavigatorDataStore")}} interfaces. </em></p>
+<p><em>The <code>WorkerNavigator</code> interface implements properties from the {{DOMxRef("NavigatorID")}}, and {{DOMxRef("NavigatorDataStore")}} interfaces. </em></p>
 
 <dl>
  <dt>{{DOMxRef("WorkerNavigator.connection")}}{{ReadOnlyInline}}</dt>
@@ -30,6 +30,8 @@ browser-compat: api.WorkerNavigator
  <dd>Returns an array of {{domxref("DOMString")}} representing the languages known to the user, by order of preference.</dd>
  <dt>{{DOMxRef("WorkerNavigator.locks")}} {{Experimental_Inline}}{{ReadOnlyInline}}</dt>
  <dd>Returns a {{DOMxRef("LockManager")}} object which provides methods for requesting a new {{DOMxRef('Lock')}} object and querying for an existing <code>Lock</code> object.</dd>
+ <dt>{{DOMxRef("WorkerNavigator.onLine")}}{{ReadOnlyInline}}</dt>
+ <dd>Returns a {{DOMxRef("Boolean")}} indicating whether the browser is online.</dd>
  <dt>{{DOMxRef("WorkerNavigator.permissions")}} {{Experimental_Inline}}{{ReadOnlyInline}}</dt>
  <dd>Returns a {{DOMxRef("Permissions")}} object that can be used to query and update permission status of APIs covered by the <a href="/en-US/docs/Web/API/Permissions_API">Permissions API</a>.</dd>
  <dt>{{domxref("WorkerNavigator.serial")}} {{readonlyInline}}</dt>
@@ -47,8 +49,6 @@ browser-compat: api.WorkerNavigator
  <dd>Returns the official name of the browser. Do not rely on this property to return the correct value.</dd>
  <dt>{{DOMxRef("NavigatorID.appVersion")}} {{Deprecated_Inline}}{{ReadOnlyInline}}</dt>
  <dd>Returns the version of the browser as a string. Do not rely on this property to return the correct value.</dd>
- <dt>{{DOMxRef("NavigatorOnLine.onLine")}}{{ReadOnlyInline}}</dt>
- <dd>Returns a {{DOMxRef("Boolean")}} indicating whether the browser is online.</dd>
  <dt>{{DOMxRef("NavigatorID.platform")}} {{Deprecated_Inline}}{{ReadOnlyInline}}</dt>
  <dd>Returns a string representing the platform of the browser. Do not rely on this property to return the correct value.</dd>
  <dt>{{DOMxRef("NavigatorID.product")}} {{Deprecated_Inline}}{{ReadOnlyInline}}</dt>
@@ -59,7 +59,7 @@ browser-compat: api.WorkerNavigator
 
 <h2 id="Methods">Methods</h2>
 
-<p><em>The <code>WorkerNavigator</code> interface implements methods from the {{DOMxRef("NavigatorID")}} and {{DOMxRef("NavigatorOnLine")}} interfaces.</em></p>
+<p><em>The <code>WorkerNavigator</code> interface implements methods from the {{DOMxRef("NavigatorID")}} interface.</em></p>
 
 <h2 id="Specifications">Specifications</h2>
 
