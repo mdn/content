@@ -35570,17 +35570,6 @@
       "kscarfone"
     ]
   },
-  "Web/API/DOMLocator": {
-    "modified": "2019-03-23T23:59:09.557Z",
-    "contributors": [
-      "mfluehr",
-      "Sebastianz",
-      "teoli",
-      "kscarfone",
-      "Sheppy",
-      "Brettz9"
-    ]
-  },
   "Web/API/DOMMatrix": {
     "modified": "2020-10-15T21:30:28.915Z",
     "contributors": [
