@@ -52,7 +52,7 @@ inputForm.onsubmit = function(event) {
   synth.speak(utterThis);
 
   utterThis.onboundary = function(event) {
-    console.log(event.name + ' boundary reached after ' + event.elapsedTime + ' milliseconds.');
+    console.log(event.name + ' boundary reached after ' + event.elapsedTime + ' seconds.');
   }
 
   inputTxt.blur();

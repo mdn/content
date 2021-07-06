@@ -82,6 +82,10 @@ function handleMessageFromWorker(msg) {
 
 myWorker.addEventListener('message', handleMessageFromWorker);
 
+function sendMainArrBuff(aBuf) {
+	console.info('got back buf in main thread, aBuf.byteLength:', aBuf.byteLength);
+}
+
 // Ok lets create the buffer and send it
 var arrBuf = new ArrayBuffer(8);
 console.info('arrBuf.byteLength pre transfer:', arrBuf.byteLength);

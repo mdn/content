@@ -14,16 +14,15 @@ tags:
 - onactivate
 browser-compat: api.Sensor.onactivate
 ---
-<div>{{APIRef("Generic Sensor API")}}</div>
+<div>{{APIRef("Sensor API")}}</div>
 
-<p><span class="seoSummary">The <strong><code>onactivate</code></strong>
-    {{event("Event_handlers", "event handler")}} is called when one of the Sensor interface's child
-    interfaces becomes active.</span></p>
+<p>The <strong><code>onactivate</code></strong> {{event("Event_handlers", "event handler")}} is
+  called when one of the Sensor interface's child interfaces becomes active.</span></p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js"><em>sensorInstance</em>.onactivate = <var>function</var>
-<em>sensorInstance</em>.addEventListener('activate', function() { ... })</pre>
+<pre class="brush: js">sensorInstance.onactivate = function
+   sensorInstance.addEventListener('activate', function() { ... })</pre>
 
 <p>Because {{domxref('Sensor')}} is a base class, <code>onactivate</code> may only be used
   on one of its derived classes.</p>

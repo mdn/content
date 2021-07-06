@@ -70,7 +70,7 @@ and also a &lt;a href="https://example.com"&gt;link&lt;/a&gt;.&lt;/p&gt;
 
 <p>The very first thing we need to do is to tell the HTML document that we have some CSS rules we want it to use. There are three different ways to apply CSS to an HTML document that you'll commonly come across, however, for now, we will look at the most usual and useful way of doing so — linking CSS from the head of your document.</p>
 
-<p>Create a file in the same folder as your HTML document and save it as <code>styles.css</code>. The <code>.css</code> extension shows that this is a CSS file.</p>
+<p>Create a file in the same folder as your HTML document and save it as <code>styles.css</code>. The <code>.css</code> extension shows that this is a CSS file.</p>
 
 <p>To link <code>styles.css</code> to <code>index.html</code> add the following line somewhere inside the {{htmlelement("head")}} of the HTML document:</p>
 
@@ -102,13 +102,13 @@ and also a &lt;a href="https://example.com"&gt;link&lt;/a&gt;.&lt;/p&gt;
 
 <p>Try this out in the interactive editor below (edit the code boxes), or in your local CSS document.</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/getting-started/started1.html", '100%', 900)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/getting-started/started1.html", '100%', 900)}}</p>
 
 <h2 id="Changing_the_default_behavior_of_elements">Changing the default behavior of elements</h2>
 
 <p>When we look at a well-marked up HTML document, even something as simple as our example, we can see how the browser is making the HTML readable by adding some default styling. Headings are large and bold and our list has bullets. This happens because browsers have internal stylesheets containing default styles, which they apply to all pages by default; without them all of the text would run together in a clump and we would have to style everything from scratch. All modern browsers display HTML content by default in pretty much the same way.</p>
 
-<p>However, you will often want something other than the choice the browser has made. This can be done by choosing the HTML element that you want to change, and using a CSS rule to change the way it looks.  A good example is our <code>&lt;ul&gt;</code>, an unordered list. It has list bullets, and if I decide I don't want those bullets I can remove them like so:</p>
+<p>However, you will often want something other than the choice the browser has made. This can be done by choosing the HTML element that you want to change, and using a CSS rule to change the way it looks. A good example is our <code>&lt;ul&gt;</code>, an unordered list. It has list bullets, and if I decide I don't want those bullets I can remove them like so:</p>
 
 <pre class="brush: css">li {
   list-style-type: none;
@@ -158,7 +158,7 @@ span.special {
   font-weight: bold;
 }</pre>
 
-<p>As you can imagine, some classes might be applied to many elements and you don't want to have to keep editing your CSS every time something new needs to take on that style. Therefore it is sometimes best to bypass the element and refer to the class, unless you know that you want to create some special rules for one element alone, and perhaps want to make sure they are not applied to other things.</p>
+<p>As you can imagine, some classes might be applied to many elements and you don't want to have to keep editing your CSS every time something new needs to take on that style. Therefore it is sometimes best to bypass the element and refer to the class, unless you know that you want to create some special rules for one element alone, and perhaps want to make sure they are not applied to other things.</p>
 
 <h2 id="Styling_things_based_on_their_location_in_a_document">Styling things based on their location in a document</h2>
 
@@ -172,7 +172,7 @@ span.special {
 
 <p>This selector will select any <code>&lt;em&gt;</code> element that is inside (a descendant of) an <code>&lt;li&gt;</code>. So in your example document, you should find that the <code>&lt;em&gt;</code> in the third list item is now purple, but the one inside the paragraph is unchanged.</p>
 
-<p>Something else you might like to try is styling a paragraph when it comes directly after a heading at the same hierarchy level in the HTML. To do so place a <code>+</code>  (an <strong>adjacent sibling combinator</strong>) between the selectors.</p>
+<p>Something else you might like to try is styling a paragraph when it comes directly after a heading at the same hierarchy level in the HTML. To do so place a <code>+</code> (an <strong>adjacent sibling combinator</strong>) between the selectors.</p>
 
 <p>Try adding this rule to your stylesheet as well:</p>
 
@@ -200,7 +200,7 @@ a:visited {
   color: green;
 }</pre>
 
-<p>You can change the way the link looks when the user hovers over it, for example removing the underline, which is achieved by in the next rule:</p>
+<p>You can change the way the link looks when the user hovers over it, for example by removing the underline, which is achieved by the next rule:</p>
 
 <pre class="brush: css">a:hover {
   text-decoration: none;
@@ -208,9 +208,9 @@ a:visited {
 
 <p>In the live example below, you can play with different values for the various states of a link. I have added the rules above to it, and now realize that the pink color is quite light and hard to read — why not change that to a better color? Can you make the links bold?</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/getting-started/started3.html", '100%', 900)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/getting-started/started3.html", '100%', 900)}}</p>
 
-<p>We have removed the underline on our link on hover. You could remove the underline from all states of a link. It is worth remembering however that in a real site, you want to ensure that visitors know that a link is a link. Leaving the underline in place, can be an important clue for people to realize that some text inside a paragraph can be clicked on — this is the behavior they are used to. As with everything in CSS, there is the potential to make the document less accessible with your changes — we will aim to highlight potential pitfalls in appropriate places.</p>
+<p>We have removed the underline on our link on hover. You could remove the underline from all states of a link. It is worth remembering however that in a real site, you want to ensure that visitors know that a link is a link. Leaving the underline in place can be an important clue for people to realize that some text inside a paragraph can be clicked on — this is the behavior they are used to. As with everything in CSS, there is the potential to make the document less accessible with your changes — we will aim to highlight potential pitfalls in appropriate places.</p>
 
 <div class="notecard note">
 <p><strong>Note</strong>: you will often see mention of <a href="/en-US/docs/Learn/Accessibility">accessibility</a> in these lessons and across MDN. When we talk about accessibility we are referring to the requirement for our webpages to be understandable and usable by everyone.</p>

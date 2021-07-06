@@ -86,8 +86,8 @@ sort(function compareFn(firstEl, secondEl) { ... })
   <li>If <code>compareFunction(a, b)</code> returns a value &gt; than 0, sort <code>b</code> before <code>a</code>.</li>
   <li>If <code>compareFunction(a, b)</code> returns a value ≤ 0, leave <code>a</code> and <code>b</code> in the same order.
     <div class="notecard note">
-      <p><strong>Note:</strong> The <a href="https://www.ecma-international.org/ecma-262/10.0/index.html#sec-intro">ECMAScript Standard, 10th edition</a> (2019) 
-        algorithm mandates stable sorting, which means elements that compare equal must remain in their original order with respect to each other. 
+      <p><strong>Note:</strong> The <a href="https://www.ecma-international.org/ecma-262/10.0/index.html#sec-intro">ECMAScript Standard, 10th edition</a> (2019)
+        algorithm mandates stable sorting, which means elements that compare equal must remain in their original order with respect to each other.
         This behaviour may not be respected by older browsers.</p>
     </div>
   </li>
@@ -232,10 +232,10 @@ items.sort(function (a, b) {
   temporary array to achieve the right order.</p>
 
 <pre class="brush: js">// the array to be sorted
-const in = ['delta', 'alpha', 'charlie', 'bravo'];
+const data = ['delta', 'alpha', 'charlie', 'bravo'];
 
 // temporary array holds objects with position and sort-value
-const mapped = in.map((v, i) => {
+const mapped = data.map((v, i) => {
   return { i, value: someSlowOperation(v) };
 })
 
@@ -250,7 +250,7 @@ mapped.sort((a, b) => {
   return 0;
 });
 
-const result = mapped.map(v => in[v.i]);
+const result = mapped.map(v => data[v.i]);
 </pre>
 
 <p>There is an open source library available called <a
