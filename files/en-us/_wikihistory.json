@@ -54072,48 +54072,6 @@
       "JesseW"
     ]
   },
-  "Web/API/HTMLOrForeignElement/nonce": {
-    "modified": "2020-10-15T22:00:37.198Z",
-    "contributors": [
-      "fscholz",
-      "mfuji09",
-      "ExE-Boss",
-      "sideshowbarker",
-      "complicationlamp",
-      "jpmedley"
-    ]
-  },
-  "Web/API/HTMLOrForeignElement/tabIndex": {
-    "modified": "2020-10-15T21:06:27.399Z",
-    "contributors": [
-      "mfuji09",
-      "ExE-Boss",
-      "sideshowbarker",
-      "Wind1808",
-      "mfluehr",
-      "fscholz",
-      "momdo",
-      "erikadoyle",
-      "bchuchua",
-      "Jeremie",
-      "teoli",
-      "mikemaccana",
-      "ajaybhat",
-      "kscarfone",
-      "Sheppy",
-      "ethertank",
-      "kitchin",
-      "ziyunfei",
-      "dextra",
-      "George3",
-      "Callek",
-      "Mw22",
-      "Mgjbot",
-      "Ptak82",
-      "Dria",
-      "JesseW"
-    ]
-  },
   "Web/API/HTMLOutputElement": {
     "modified": "2020-10-15T21:13:22.294Z",
     "contributors": [
