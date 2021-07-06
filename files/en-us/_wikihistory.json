@@ -63752,6 +63752,38 @@
       "Jeremie"
     ]
   },
+  "Web/API/Navigator/Online_and_offline_events": {
+    "modified": "2020-09-15T12:54:20.249Z",
+    "contributors": [
+      "OtterOne",
+      "chrisdavidmills",
+      "torazaburo",
+      "edwardcasbon",
+      "artistics-weddings",
+      "schmod",
+      "maxbarrett",
+      "kazaf",
+      "PierreBergamin",
+      "jsx",
+      "Jeremie",
+      "kscarfone",
+      "teoli",
+      "HaNdTriX",
+      "lmorchard",
+      "DavidWalsh",
+      "jswisher",
+      "john_smith",
+      "ethertank",
+      "grendel",
+      "Sheppy",
+      "sebmozilla",
+      "Nickolay",
+      "Mgjbot",
+      "Leandro Mercês Xavier",
+      "BenoitL",
+      "Jresig"
+    ]
+  },
   "Web/API/Navigator/activeVRDisplays": {
     "modified": "2020-10-15T21:46:04.268Z",
     "contributors": [
@@ -64236,6 +64268,44 @@
       "krosylight"
     ]
   },
+  "Web/API/Navigator/onLine": {
+    "modified": "2020-12-14T11:30:49.586Z",
+    "contributors": [
+      "chrisdavidmills",
+      "deanmarano",
+      "zakius",
+      "Equal",
+      "sideshowbarker",
+      "fscholz",
+      "nmve",
+      "lhanneman",
+      "SaurabhRaje",
+      "abbycar",
+      "malyw",
+      "Sebastianz",
+      "teoli",
+      "jsx",
+      "jorgecasar",
+      "kscarfone",
+      "null---",
+      "Cloudmonkeys",
+      "Sheppy",
+      "ethertank",
+      "depy",
+      "4esn0k",
+      "ziyunfei",
+      "Pavel.Zubkou",
+      "thewoolleyman",
+      "webinista",
+      "grendel",
+      "ebidel",
+      "MarcDiethelm",
+      "Mgjbot",
+      "Nickolay",
+      "Diablownik",
+      "Jabez"
+    ]
+  },
   "Web/API/Navigator/oscpu": {
     "modified": "2020-10-15T21:06:55.078Z",
     "contributors": [
@@ -64715,86 +64785,6 @@
       "Jabez",
       "Dria",
       "JesseW"
-    ]
-  },
-  "Web/API/NavigatorOnLine": {
-    "modified": "2020-10-15T21:24:38.132Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "chrisdavidmills",
-      "abbycar",
-      "teoli"
-    ]
-  },
-  "Web/API/NavigatorOnLine/Online_and_offline_events": {
-    "modified": "2020-09-15T12:54:20.249Z",
-    "contributors": [
-      "OtterOne",
-      "chrisdavidmills",
-      "torazaburo",
-      "edwardcasbon",
-      "artistics-weddings",
-      "schmod",
-      "maxbarrett",
-      "kazaf",
-      "PierreBergamin",
-      "jsx",
-      "Jeremie",
-      "kscarfone",
-      "teoli",
-      "HaNdTriX",
-      "lmorchard",
-      "DavidWalsh",
-      "jswisher",
-      "john_smith",
-      "ethertank",
-      "grendel",
-      "Sheppy",
-      "sebmozilla",
-      "Nickolay",
-      "Mgjbot",
-      "Leandro Mercês Xavier",
-      "BenoitL",
-      "Jresig"
-    ]
-  },
-  "Web/API/NavigatorOnLine/onLine": {
-    "modified": "2020-12-14T11:30:49.586Z",
-    "contributors": [
-      "chrisdavidmills",
-      "deanmarano",
-      "zakius",
-      "Equal",
-      "sideshowbarker",
-      "fscholz",
-      "nmve",
-      "lhanneman",
-      "SaurabhRaje",
-      "abbycar",
-      "malyw",
-      "Sebastianz",
-      "teoli",
-      "jsx",
-      "jorgecasar",
-      "kscarfone",
-      "null---",
-      "Cloudmonkeys",
-      "Sheppy",
-      "ethertank",
-      "depy",
-      "4esn0k",
-      "ziyunfei",
-      "Pavel.Zubkou",
-      "thewoolleyman",
-      "webinista",
-      "grendel",
-      "ebidel",
-      "MarcDiethelm",
-      "Mgjbot",
-      "Nickolay",
-      "Diablownik",
-      "Jabez"
     ]
   },
   "Web/API/NavigatorStorage": {

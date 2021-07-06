@@ -2205,7 +2205,7 @@
 /en-US/docs/DOM/window.navigator.mozBattery	/en-US/docs/Web/API/Navigator/battery
 /en-US/docs/DOM/window.navigator.mozIsLocallyAvailable	/en-US/docs/Web/API/Navigator/mozIsLocallyAvailable
 /en-US/docs/DOM/window.navigator.mozVibrate	/en-US/docs/Web/API/Navigator/vibrate
-/en-US/docs/DOM/window.navigator.onLine	/en-US/docs/Web/API/NavigatorOnLine/onLine
+/en-US/docs/DOM/window.navigator.onLine	/en-US/docs/Web/API/Navigator/onLine
 /en-US/docs/DOM/window.navigator.oscpu	/en-US/docs/Web/API/Navigator/oscpu
 /en-US/docs/DOM/window.navigator.platform	/en-US/docs/Web/API/NavigatorID/platform
 /en-US/docs/DOM/window.navigator.plugins	/en-US/docs/Web/API/Navigator/plugins
@@ -2656,7 +2656,7 @@
 /en-US/docs/DOM:window.navigator.language	/en-US/docs/Web/API/Navigator/language
 /en-US/docs/DOM:window.navigator.mimeTypes	/en-US/docs/Web/API/Navigator/mimeTypes
 /en-US/docs/DOM:window.navigator.mozIsLocallyAvailable	/en-US/docs/Web/API/Navigator/mozIsLocallyAvailable
-/en-US/docs/DOM:window.navigator.onLine	/en-US/docs/Web/API/NavigatorOnLine/onLine
+/en-US/docs/DOM:window.navigator.onLine	/en-US/docs/Web/API/Navigator/onLine
 /en-US/docs/DOM:window.navigator.oscpu	/en-US/docs/Web/API/Navigator/oscpu
 /en-US/docs/DOM:window.navigator.platform	/en-US/docs/Web/API/NavigatorID/platform
 /en-US/docs/DOM:window.navigator.plugins	/en-US/docs/Web/API/Navigator/plugins
@@ -3401,7 +3401,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/window.navigator.mimeTypes	/en-US/docs/Web/API/Navigator/mimeTypes
 /en-US/docs/Document_Object_Model_(DOM)/window.navigator.mozBattery	/en-US/docs/Web/API/Navigator/battery
 /en-US/docs/Document_Object_Model_(DOM)/window.navigator.mozIsLocallyAvailable	/en-US/docs/Web/API/Navigator/mozIsLocallyAvailable
-/en-US/docs/Document_Object_Model_(DOM)/window.navigator.onLine	/en-US/docs/Web/API/NavigatorOnLine/onLine
+/en-US/docs/Document_Object_Model_(DOM)/window.navigator.onLine	/en-US/docs/Web/API/Navigator/onLine
 /en-US/docs/Document_Object_Model_(DOM)/window.navigator.oscpu	/en-US/docs/Web/API/Navigator/oscpu
 /en-US/docs/Document_Object_Model_(DOM)/window.navigator.platform	/en-US/docs/Web/API/NavigatorID/platform
 /en-US/docs/Document_Object_Model_(DOM)/window.navigator.plugins	/en-US/docs/Web/API/Navigator/plugins
@@ -5920,16 +5920,16 @@
 /en-US/docs/Navigation_timing/Using_Navigation_Timing	/en-US/docs/Web/API/Navigation_timing_API/Using_Navigation_Timing
 /en-US/docs/Navigator.geolocation	/en-US/docs/Web/API/Navigator/geolocation
 /en-US/docs/Navigator.mediaDevices	/en-US/docs/Web/API/Navigator/mediaDevices
-/en-US/docs/Navigator.onLine	/en-US/docs/Web/API/NavigatorOnLine/onLine
+/en-US/docs/Navigator.onLine	/en-US/docs/Web/API/Navigator/onLine
 /en-US/docs/NavigatorUserMedia	/en-US/docs/Web/API/Navigator/getUserMedia
 /en-US/docs/NavigatorUserMedia.getUserMedia	/en-US/docs/Web/API/Navigator/getUserMedia
 /en-US/docs/NavigatorUserMedia.mediaDevices	/en-US/docs/Web/API/Navigator/mediaDevices
 /en-US/docs/Netscape_Gecko_User_Agent_Strings	/en-US/docs/Web/HTTP/Headers/User-Agent/Firefox
 /en-US/docs/Node_server_without_framework	/en-US/docs/Learn/Server-side/Node_server_without_framework
 /en-US/docs/Notable_bugs_fixed_in_Firefox_3	/en-US/docs/Mozilla/Firefox/Releases/3/Notable_bugs_fixed
-/en-US/docs/Online/Offline_Events	/en-US/docs/Web/API/NavigatorOnLine/Online_and_offline_events
-/en-US/docs/Online_Offline_Events	/en-US/docs/Web/API/NavigatorOnLine/Online_and_offline_events
-/en-US/docs/Online_and_offline_events	/en-US/docs/Web/API/NavigatorOnLine/Online_and_offline_events
+/en-US/docs/Online/Offline_Events	/en-US/docs/Web/API/Navigator/Online_and_offline_events
+/en-US/docs/Online_Offline_Events	/en-US/docs/Web/API/Navigator/Online_and_offline_events
+/en-US/docs/Online_and_offline_events	/en-US/docs/Web/API/Navigator/Online_and_offline_events
 /en-US/docs/OpenWebApps	/en-US/docs/Web/Progressive_web_apps
 /en-US/docs/OpenWebDemos	/en-US/docs/Web/Demos_of_open_web_technologies
 /en-US/docs/Optimizing_Your_Pages_for_Speculative_Parsing	/en-US/docs/Glossary/speculative_parsing
@@ -8077,7 +8077,7 @@
 /en-US/docs/Web/API/Navigator.maxTouchPoints	/en-US/docs/Web/API/Navigator/maxTouchPoints
 /en-US/docs/Web/API/Navigator.mimeTypes	/en-US/docs/Web/API/Navigator/mimeTypes
 /en-US/docs/Web/API/Navigator.mozIsLocallyAvailable	/en-US/docs/Web/API/Navigator/mozIsLocallyAvailable
-/en-US/docs/Web/API/Navigator.onLine	/en-US/docs/Web/API/NavigatorOnLine/onLine
+/en-US/docs/Web/API/Navigator.onLine	/en-US/docs/Web/API/Navigator/onLine
 /en-US/docs/Web/API/Navigator.oscpu	/en-US/docs/Web/API/Navigator/oscpu
 /en-US/docs/Web/API/Navigator.platform	/en-US/docs/Web/API/NavigatorID/platform
 /en-US/docs/Web/API/Navigator.plugins	/en-US/docs/Web/API/Navigator/plugins
@@ -8095,7 +8095,6 @@
 /en-US/docs/Web/API/Navigator/mediaDevices.getUserMedia	/en-US/docs/Web/API/MediaDevices/getUserMedia
 /en-US/docs/Web/API/Navigator/mediaDevices/enumerateDevices	/en-US/docs/Web/API/MediaDevices/enumerateDevices
 /en-US/docs/Web/API/Navigator/mediaDevices/getUserMedia	/en-US/docs/Web/API/MediaDevices/getUserMedia
-/en-US/docs/Web/API/Navigator/onLine	/en-US/docs/Web/API/NavigatorOnLine/onLine
 /en-US/docs/Web/API/Navigator/platform	/en-US/docs/Web/API/NavigatorID/platform
 /en-US/docs/Web/API/Navigator/product	/en-US/docs/Web/API/NavigatorID/product
 /en-US/docs/Web/API/Navigator/storage	/en-US/docs/Web/API/NavigatorStorage/storage
@@ -8119,7 +8118,10 @@
 /en-US/docs/Web/API/NavigatorLanguage.languages	/en-US/docs/Web/API/Navigator/languages
 /en-US/docs/Web/API/NavigatorLanguage/language	/en-US/docs/Web/API/Navigator/language
 /en-US/docs/Web/API/NavigatorLanguage/languages	/en-US/docs/Web/API/Navigator/languages
-/en-US/docs/Web/API/NavigatorOnLine.onLine	/en-US/docs/Web/API/NavigatorOnLine/onLine
+/en-US/docs/Web/API/NavigatorOnLine	/en-US/docs/Web/API/Navigator
+/en-US/docs/Web/API/NavigatorOnLine.onLine	/en-US/docs/Web/API/Navigator/onLine
+/en-US/docs/Web/API/NavigatorOnLine/Online_and_offline_events	/en-US/docs/Web/API/Navigator/Online_and_offline_events
+/en-US/docs/Web/API/NavigatorOnLine/onLine	/en-US/docs/Web/API/Navigator/onLine
 /en-US/docs/Web/API/NavigatorPlugins	/en-US/docs/Web/API/Navigator
 /en-US/docs/Web/API/NavigatorPlugins.javaEnabled	/en-US/docs/Web/API/Navigator/javaEnabled
 /en-US/docs/Web/API/NavigatorPlugins.mimeTypes	/en-US/docs/Web/API/Navigator/mimeTypes
@@ -8994,7 +8996,7 @@
 /en-US/docs/Web/API/WorkerNavigator/appVersion	/en-US/docs/Web/API/NavigatorID/appVersion
 /en-US/docs/Web/API/WorkerNavigator/language	/en-US/docs/Web/API/Navigator/language
 /en-US/docs/Web/API/WorkerNavigator/languages	/en-US/docs/Web/API/Navigator/languages
-/en-US/docs/Web/API/WorkerNavigator/onLine	/en-US/docs/Web/API/NavigatorOnLine/onLine
+/en-US/docs/Web/API/WorkerNavigator/onLine	/en-US/docs/Web/API/Navigator/onLine
 /en-US/docs/Web/API/WorkerNavigator/platform	/en-US/docs/Web/API/NavigatorID/platform
 /en-US/docs/Web/API/WorkerNavigator/product	/en-US/docs/Web/API/NavigatorID/product
 /en-US/docs/Web/API/WorkerNavigator/taintEnabled	/en-US/docs/Web/API/NavigatorID/taintEnabled
@@ -9448,7 +9450,7 @@
 /en-US/docs/Web/API/window.navigator.language	/en-US/docs/Web/API/Navigator/language
 /en-US/docs/Web/API/window.navigator.mimeTypes	/en-US/docs/Web/API/Navigator/mimeTypes
 /en-US/docs/Web/API/window.navigator.mozIsLocallyAvailable	/en-US/docs/Web/API/Navigator/mozIsLocallyAvailable
-/en-US/docs/Web/API/window.navigator.onLine	/en-US/docs/Web/API/NavigatorOnLine/onLine
+/en-US/docs/Web/API/window.navigator.onLine	/en-US/docs/Web/API/Navigator/onLine
 /en-US/docs/Web/API/window.navigator.oscpu	/en-US/docs/Web/API/Navigator/oscpu
 /en-US/docs/Web/API/window.navigator.platform	/en-US/docs/Web/API/NavigatorID/platform
 /en-US/docs/Web/API/window.navigator.plugins	/en-US/docs/Web/API/Navigator/plugins

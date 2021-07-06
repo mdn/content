@@ -19,7 +19,7 @@ browser-compat: api.Navigator
 
 <h2 id="Properties">Properties</h2>
 
-<p><em>Doesn't inherit any properties, but implements those defined in {{domxref("NavigatorID")}}, {{domxref("NavigatorOnLine")}}, {{domxref("NavigatorContentUtils")}}, {{domxref("NavigatorStorage")}}, {{domxref("NavigatorStorageUtils")}}, and {{domxref("NavigatorUserMedia")}}.</em></p>
+<p><em>Doesn't inherit any properties, but implements those defined in {{domxref("NavigatorID")}}, {{domxref("NavigatorContentUtils")}}, {{domxref("NavigatorStorage")}}, {{domxref("NavigatorStorageUtils")}}, and {{domxref("NavigatorUserMedia")}}.</em></p>
 
 <h3 id="Standard_properties">Standard properties</h3>
 
@@ -58,14 +58,10 @@ browser-compat: api.Navigator
  <dd>Returns a reference to a {{domxref("MediaDevices")}} object which can then be used to get information about available media devices ({{domxref("MediaDevices.enumerateDevices()")}}), find out what constrainable properties are supported for media on the user's computer and user agent ({{domxref("MediaDevices.getSupportedConstraints()")}}), and to request access to media using {{domxref("MediaDevices.getUserMedia()")}}.</dd>
  <dt>{{domxref("Navigator.mediaSession")}} {{readonlyinline}} {{experimental_inline}}</dt>
  <dd>Returns {{domxref("MediaSession")}} object which can be used to provide metadata that can be used by the browser to present information about the currently-playing media to the user, such as in a global media controls UI.</dd>
- <dt>{{domxref("Navigator.mimeTypes")}} {{readonlyInline}}{{deprecated_inline}}</dt>
- <dd>Returns an {{domxref("MimeTypeArray")}} listing the MIME types supported by the browser.</dd>
- <dt>{{domxref("NavigatorOnLine.onLine")}} {{readonlyInline}}</dt>
+ <dt>{{domxref("Navigator.onLine")}} {{readonlyInline}}</dt>
  <dd>Returns a {{domxref("Boolean")}} indicating whether the browser is working online.</dd>
  <dt>{{domxref("Navigator.permissions")}} {{readonlyinline}} {{experimental_inline}}</dt>
  <dd>Returns a {{domxref("Permissions")}} object that can be used to query and update permission status of APIs covered by the <a href="/en-US/docs/Web/API/Permissions_API">Permissions API</a>.</dd>
- <dt>{{domxref("Navigator.plugins")}} {{readonlyInline}}{{deprecated_inline}}</dt>
- <dd>Returns a {{domxref("PluginArray")}} listing the plugins installed in the browser.</dd>
  <dt>{{domxref("Navigator.presentation")}} {{readonlyInline}} {{experimental_inline}}</dt>
  <dd>Returns a reference to the {{domxref("Presentation")}} API.</dd>
  <dt>{{domxref("Navigator.serial")}} {{readonlyInline}}</dt>
@@ -112,10 +108,14 @@ browser-compat: api.Navigator
  <dd>Returns an array containing every {{domxref("VRDisplay")}} object that is currently presenting ({{domxref("VRDisplay.ispresenting")}} is <code>true</code>).</dd>
  <dt>{{domxref("Navigator.battery")}} {{readonlyInline}} {{deprecated_inline}}</dt>
  <dd>Returns a {{domxref("BatteryManager")}} object you can use to get information about the battery charging status.</dd>
+ <dt>{{domxref("Navigator.mimeTypes")}} {{readonlyInline}}{{deprecated_inline}}</dt>
+ <dd>Returns an {{domxref("MimeTypeArray")}} listing the MIME types supported by the browser.</dd>
  <dt>{{domxref("Navigator.oscpu")}} {{readonlyInline}} {{deprecated_inline}}</dt>
  <dd>Returns a string that represents the current operating system.</dd>
  <dt>{{domxref("NavigatorID.platform")}} {{readonlyInline}} {{deprecated_inline}}</dt>
  <dd>Returns a string representing the platform of the browser. Do not rely on this function to return a significant value.</dd>
+ <dt>{{domxref("Navigator.plugins")}} {{readonlyInline}}{{deprecated_inline}}</dt>
+ <dd>Returns a {{domxref("PluginArray")}} listing the plugins installed in the browser.</dd>
  <dt>{{domxref("NavigatorID.product")}} {{readonlyInline}} {{deprecated_inline}}</dt>
  <dd>Always returns <code>'Gecko'</code>, on any browser. This property is kept only for compatibility purpose.</dd>
  <dt>{{domxref("Navigator.productSub")}} {{readonlyInline}} {{deprecated_inline}}</dt>
