@@ -1760,7 +1760,6 @@
 /en-US/docs/DOM/TouchList.length	/en-US/docs/Web/API/TouchList/length
 /en-US/docs/DOM/Touch_events	/en-US/docs/Web/API/Touch_events
 /en-US/docs/DOM/Touch_events_(Mozilla_experimental)	/en-US/docs/Web/API/Touch_events/Mozilla_experimental_events
-/en-US/docs/DOM/TypeInfo	/en-US/docs/Web/API/TypeInfo
 /en-US/docs/DOM/UIEvent	/en-US/docs/Web/API/UIEvent
 /en-US/docs/DOM/UserProximityEvent	/en-US/docs/Web/API/UserProximityEvent
 /en-US/docs/DOM/Using_device_orientation_with_3D_transforms	/en-US/docs/Web/Events/Using_device_orientation_with_3D_transforms
@@ -1995,7 +1994,7 @@
 /en-US/docs/DOM/element.setCapture	/en-US/docs/Web/API/Element/setCapture
 /en-US/docs/DOM/element.style	/en-US/docs/Web/API/HTMLElement/style
 /en-US/docs/DOM/element.supports	/en-US/docs/Web/API/CSS/supports
-/en-US/docs/DOM/element.tabIndex	/en-US/docs/Web/API/HTMLOrForeignElement/tabIndex
+/en-US/docs/DOM/element.tabIndex	/en-US/docs/Web/API/HTMLElement/tabIndex
 /en-US/docs/DOM/element.tagName	/en-US/docs/Web/API/Element/tagName
 /en-US/docs/DOM/element.textContent	/en-US/docs/Web/API/Node/textContent
 /en-US/docs/DOM/element.title	/en-US/docs/Web/API/HTMLElement/title
@@ -2497,7 +2496,7 @@
 /en-US/docs/DOM:element.setAttributeNodeNS	/en-US/docs/Web/API/Element/setAttributeNodeNS
 /en-US/docs/DOM:element.style	/en-US/docs/Web/API/HTMLElement/style
 /en-US/docs/DOM:element.supports	/en-US/docs/Web/API/CSS/supports
-/en-US/docs/DOM:element.tabIndex	/en-US/docs/Web/API/HTMLOrForeignElement/tabIndex
+/en-US/docs/DOM:element.tabIndex	/en-US/docs/Web/API/HTMLElement/tabIndex
 /en-US/docs/DOM:element.tagName	/en-US/docs/Web/API/Element/tagName
 /en-US/docs/DOM:element.textContent	/en-US/docs/Web/API/Node/textContent
 /en-US/docs/DOM:element.title	/en-US/docs/Web/API/HTMLElement/title
@@ -3099,7 +3098,6 @@
 /en-US/docs/Document_Object_Model_(DOM)/TouchList.item	/en-US/docs/Web/API/TouchList/item
 /en-US/docs/Document_Object_Model_(DOM)/TouchList.length	/en-US/docs/Web/API/TouchList/length
 /en-US/docs/Document_Object_Model_(DOM)/Touch_events	/en-US/docs/Web/API/Touch_events
-/en-US/docs/Document_Object_Model_(DOM)/TypeInfo	/en-US/docs/Web/API/TypeInfo
 /en-US/docs/Document_Object_Model_(DOM)/UIEvent	/en-US/docs/Web/API/UIEvent
 /en-US/docs/Document_Object_Model_(DOM)/Using_full-screen_mode	/en-US/docs/Web/API/Fullscreen_API
 /en-US/docs/Document_Object_Model_(DOM)/Using_the_Page_Visibility_API	/en-US/docs/Web/API/Page_Visibility_API
@@ -3261,7 +3259,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/element.setCapture	/en-US/docs/Web/API/Element/setCapture
 /en-US/docs/Document_Object_Model_(DOM)/element.style	/en-US/docs/Web/API/HTMLElement/style
 /en-US/docs/Document_Object_Model_(DOM)/element.supports	/en-US/docs/Web/API/CSS/supports
-/en-US/docs/Document_Object_Model_(DOM)/element.tabIndex	/en-US/docs/Web/API/HTMLOrForeignElement/tabIndex
+/en-US/docs/Document_Object_Model_(DOM)/element.tabIndex	/en-US/docs/Web/API/HTMLElement/tabIndex
 /en-US/docs/Document_Object_Model_(DOM)/element.tagName	/en-US/docs/Web/API/Element/tagName
 /en-US/docs/Document_Object_Model_(DOM)/element.title	/en-US/docs/Web/API/HTMLElement/title
 /en-US/docs/Document_Object_Model_(DOM)/en_DOM	/en-US/docs/Web/API/Element/setCapture
@@ -7627,7 +7625,7 @@
 /en-US/docs/Web/API/HTMLElement.oncut	/en-US/docs/Web/API/HTMLElement/oncut
 /en-US/docs/Web/API/HTMLElement.onpaste	/en-US/docs/Web/API/HTMLElement/onpaste
 /en-US/docs/Web/API/HTMLElement.style	/en-US/docs/Web/API/HTMLElement/style
-/en-US/docs/Web/API/HTMLElement.tabIndex	/en-US/docs/Web/API/HTMLOrForeignElement/tabIndex
+/en-US/docs/Web/API/HTMLElement.tabIndex	/en-US/docs/Web/API/HTMLElement/tabIndex
 /en-US/docs/Web/API/HTMLElement.title	/en-US/docs/Web/API/HTMLElement/title
 /en-US/docs/Web/API/HTMLElement/HTMLElement.accessKey	/en-US/docs/Web/API/HTMLElement/accessKey
 /en-US/docs/Web/API/HTMLElement/blur	/en-US/docs/Web/API/HTMLOrForeignElement/blur
@@ -7657,7 +7655,6 @@
 /en-US/docs/Web/API/HTMLElement/onscroll	/en-US/docs/Web/API/GlobalEventHandlers/onscroll
 /en-US/docs/Web/API/HTMLElement/onselect	/en-US/docs/Web/API/GlobalEventHandlers/onselect
 /en-US/docs/Web/API/HTMLElement/onsubmit	/en-US/docs/Web/API/GlobalEventHandlers/onsubmit
-/en-US/docs/Web/API/HTMLElement/tabIndex	/en-US/docs/Web/API/HTMLOrForeignElement/tabIndex
 /en-US/docs/Web/API/HTMLFormControlsCollection.namedItem	/en-US/docs/Web/API/HTMLFormControlsCollection/namedItem
 /en-US/docs/Web/API/HTMLFormElement.acceptCharset	/en-US/docs/Web/API/HTMLFormElement/acceptCharset
 /en-US/docs/Web/API/HTMLFormElement.action	/en-US/docs/Web/API/HTMLFormElement/action
@@ -7714,6 +7711,7 @@
 /en-US/docs/Web/API/HTMLObjectElement/tabIndex	/en-US/docs/Web/API/HTMLObjectElement/type
 /en-US/docs/Web/API/HTMLOptionElement.Option	/en-US/docs/Web/API/HTMLOptionElement/Option
 /en-US/docs/Web/API/HTMLOrForeignElement/dataset	/en-US/docs/Web/API/HTMLElement/dataset
+/en-US/docs/Web/API/HTMLOrForeignElement/tabIndex	/en-US/docs/Web/API/HTMLElement/tabIndex
 /en-US/docs/Web/API/HTMLOrSVGElement	/en-US/docs/Web/API/HTMLOrForeignElement
 /en-US/docs/Web/API/HTMLSelectElement.add	/en-US/docs/Web/API/HTMLSelectElement/add
 /en-US/docs/Web/API/HTMLSelectElement.checkValidity	/en-US/docs/Web/API/HTMLSelectElement/checkValidity
@@ -9202,7 +9200,7 @@
 /en-US/docs/Web/API/element.setCapture	/en-US/docs/Web/API/Element/setCapture
 /en-US/docs/Web/API/element.style	/en-US/docs/Web/API/HTMLElement/style
 /en-US/docs/Web/API/element.supports	/en-US/docs/Web/API/CSS/supports
-/en-US/docs/Web/API/element.tabIndex	/en-US/docs/Web/API/HTMLOrForeignElement/tabIndex
+/en-US/docs/Web/API/element.tabIndex	/en-US/docs/Web/API/HTMLElement/tabIndex
 /en-US/docs/Web/API/element.tagName	/en-US/docs/Web/API/Element/tagName
 /en-US/docs/Web/API/element.title	/en-US/docs/Web/API/HTMLElement/title
 /en-US/docs/Web/API/event.altKey	/en-US/docs/Web/API/MouseEvent/altKey
@@ -11872,7 +11870,7 @@
 /en-US/docs/supports	/en-US/docs/Web/API/CSS/supports
 /en-US/docs/switch_command_JavaScript	/en-US/docs/Learn/JavaScript/Building_blocks/conditionals
 /en-US/docs/tBodies	/en-US/docs/Web/API/HTMLTableElement/tBodies
-/en-US/docs/tabIndex	/en-US/docs/Web/API/HTMLOrForeignElement/tabIndex
+/en-US/docs/tabIndex	/en-US/docs/Web/API/HTMLElement/tabIndex
 /en-US/docs/tabs.moveInSuccession	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/moveInSuccession
 /en-US/docs/tagName	/en-US/docs/Web/API/Element/tagName
 /en-US/docs/timeStamp	/en-US/docs/Web/API/Event/timeStamp

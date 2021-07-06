@@ -24,11 +24,10 @@ tags:
       {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} constructor
       instead.</strong><br>
     <br>
-    This method is based on early drafts of {{SpecName("DOM2 Events")}} and is implemented
-    in Gecko-based browsers; other browsers implemented
-    {{domxref("KeyboardEvent.initKeyboardEvent")}} based on early drafts of
-    {{SpecName("DOM3 Events")}}. Favor the modern constructor structure as the only
-    cross-browser way of building events.
+    This method is based on the key events spec in the <a class="external"
+    href="https://www.w3.org/TR/1999/WD-DOM-Level-2-19990923/events.html">early versions
+    of DOM 2 Events</a>, later removed from that spec.Favor the modern constructor structure as
+    the only cross-browser way of building events.
   </p>
 </div>
 
@@ -93,15 +92,14 @@ document.getElementById('blah').dispatchEvent(event);
 
 <h2 id="Specifications">Specifications</h2>
 
-<p>This implementation of keyboard events is based on the key events spec in the <a
-    class="external"
+<p>This implementation of keyboard events is based on the key events spec in the <a class="external"
     href="https://www.w3.org/TR/1999/WD-DOM-Level-2-19990923/events.html">early versions
     of DOM 2 Events</a>, later removed from that spec.</p>
 
 <p>The <code>initKeyEvent</code> is the current Gecko equivalent of the DOM Level 3 Events
   (initially drafted and also deprecated in favor of
   {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}}
-  {{domxref("Keyboard.initKeyboardEvent()")}} method with the following arguments :</p>
+  {{domxref("Keyboard.initKeyboardEvent()")}} method with the following arguments:</p>
 
 <pre class="eval">typeArg of type DOMString
 canBubbleArg of type boolean

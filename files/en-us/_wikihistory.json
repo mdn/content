@@ -51565,6 +51565,37 @@
       "AFBarstow"
     ]
   },
+  "Web/API/HTMLElement/tabIndex": {
+    "modified": "2020-10-15T21:06:27.399Z",
+    "contributors": [
+      "mfuji09",
+      "ExE-Boss",
+      "sideshowbarker",
+      "Wind1808",
+      "mfluehr",
+      "fscholz",
+      "momdo",
+      "erikadoyle",
+      "bchuchua",
+      "Jeremie",
+      "teoli",
+      "mikemaccana",
+      "ajaybhat",
+      "kscarfone",
+      "Sheppy",
+      "ethertank",
+      "kitchin",
+      "ziyunfei",
+      "dextra",
+      "George3",
+      "Callek",
+      "Mw22",
+      "Mgjbot",
+      "Ptak82",
+      "Dria",
+      "JesseW"
+    ]
+  },
   "Web/API/HTMLElement/title": {
     "modified": "2020-10-15T21:14:34.278Z",
     "contributors": [
@@ -54028,37 +54059,6 @@
       "sideshowbarker",
       "complicationlamp",
       "jpmedley"
-    ]
-  },
-  "Web/API/HTMLOrForeignElement/tabIndex": {
-    "modified": "2020-10-15T21:06:27.399Z",
-    "contributors": [
-      "mfuji09",
-      "ExE-Boss",
-      "sideshowbarker",
-      "Wind1808",
-      "mfluehr",
-      "fscholz",
-      "momdo",
-      "erikadoyle",
-      "bchuchua",
-      "Jeremie",
-      "teoli",
-      "mikemaccana",
-      "ajaybhat",
-      "kscarfone",
-      "Sheppy",
-      "ethertank",
-      "kitchin",
-      "ziyunfei",
-      "dextra",
-      "George3",
-      "Callek",
-      "Mw22",
-      "Mgjbot",
-      "Ptak82",
-      "Dria",
-      "JesseW"
     ]
   },
   "Web/API/HTMLOutputElement": {
@@ -59273,16 +59273,6 @@
     "modified": "2020-10-15T22:29:46.550Z",
     "contributors": [
       "bershanskiy"
-    ]
-  },
-  "Web/API/LocalMediaStream": {
-    "modified": "2020-10-15T21:31:19.650Z",
-    "contributors": [
-      "Sheppy",
-      "teoli",
-      "lucian95",
-      "kscarfone",
-      "Potch"
     ]
   },
   "Web/API/Location": {
@@ -82743,18 +82733,6 @@
       "vishu_gawli",
       "Sheppy",
       "Warhammerkid"
-    ]
-  },
-  "Web/API/TypeInfo": {
-    "modified": "2020-01-26T13:54:49.205Z",
-    "contributors": [
-      "Zearin_Galaurum",
-      "Sheppy",
-      "Sebastianz",
-      "teoli",
-      "fscholz",
-      "kscarfone",
-      "Brettz9"
     ]
   },
   "Web/API/UDP_Socket_API": {
