@@ -2200,7 +2200,7 @@
 /en-US/docs/DOM/window.navigator.geolocation.getCurrentPosition	/en-US/docs/Web/API/Geolocation/getCurrentPosition
 /en-US/docs/DOM/window.navigator.geolocation.watchPosition	/en-US/docs/Web/API/Geolocation/watchPosition
 /en-US/docs/DOM/window.navigator.javaEnabled	/en-US/docs/Web/API/Navigator/javaEnabled
-/en-US/docs/DOM/window.navigator.language	/en-US/docs/Web/API/NavigatorLanguage/language
+/en-US/docs/DOM/window.navigator.language	/en-US/docs/Web/API/Navigator/language
 /en-US/docs/DOM/window.navigator.mimeTypes	/en-US/docs/Web/API/Navigator/mimeTypes
 /en-US/docs/DOM/window.navigator.mozBattery	/en-US/docs/Web/API/Navigator/battery
 /en-US/docs/DOM/window.navigator.mozIsLocallyAvailable	/en-US/docs/Web/API/Navigator/mozIsLocallyAvailable
@@ -2653,7 +2653,7 @@
 /en-US/docs/DOM:window.navigator.buildID	/en-US/docs/Web/API/Navigator/buildID
 /en-US/docs/DOM:window.navigator.cookieEnabled	/en-US/docs/Web/API/Navigator/cookieEnabled
 /en-US/docs/DOM:window.navigator.javaEnabled	/en-US/docs/Web/API/Navigator/javaEnabled
-/en-US/docs/DOM:window.navigator.language	/en-US/docs/Web/API/NavigatorLanguage/language
+/en-US/docs/DOM:window.navigator.language	/en-US/docs/Web/API/Navigator/language
 /en-US/docs/DOM:window.navigator.mimeTypes	/en-US/docs/Web/API/Navigator/mimeTypes
 /en-US/docs/DOM:window.navigator.mozIsLocallyAvailable	/en-US/docs/Web/API/Navigator/mozIsLocallyAvailable
 /en-US/docs/DOM:window.navigator.onLine	/en-US/docs/Web/API/NavigatorOnLine/onLine
@@ -3397,7 +3397,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/window.navigator.buildID	/en-US/docs/Web/API/Navigator/buildID
 /en-US/docs/Document_Object_Model_(DOM)/window.navigator.cookieEnabled	/en-US/docs/Web/API/Navigator/cookieEnabled
 /en-US/docs/Document_Object_Model_(DOM)/window.navigator.javaEnabled	/en-US/docs/Web/API/Navigator/javaEnabled
-/en-US/docs/Document_Object_Model_(DOM)/window.navigator.language	/en-US/docs/Web/API/NavigatorLanguage/language
+/en-US/docs/Document_Object_Model_(DOM)/window.navigator.language	/en-US/docs/Web/API/Navigator/language
 /en-US/docs/Document_Object_Model_(DOM)/window.navigator.mimeTypes	/en-US/docs/Web/API/Navigator/mimeTypes
 /en-US/docs/Document_Object_Model_(DOM)/window.navigator.mozBattery	/en-US/docs/Web/API/Navigator/battery
 /en-US/docs/Document_Object_Model_(DOM)/window.navigator.mozIsLocallyAvailable	/en-US/docs/Web/API/Navigator/mozIsLocallyAvailable
@@ -8073,7 +8073,7 @@
 /en-US/docs/Web/API/Navigator.getUserMedia	/en-US/docs/Web/API/Navigator/getUserMedia
 /en-US/docs/Web/API/Navigator.getVRDevices	/en-US/docs/Web/API/Navigator/getVRDisplays
 /en-US/docs/Web/API/Navigator.javaEnabled	/en-US/docs/Web/API/Navigator/javaEnabled
-/en-US/docs/Web/API/Navigator.language	/en-US/docs/Web/API/NavigatorLanguage/language
+/en-US/docs/Web/API/Navigator.language	/en-US/docs/Web/API/Navigator/language
 /en-US/docs/Web/API/Navigator.maxTouchPoints	/en-US/docs/Web/API/Navigator/maxTouchPoints
 /en-US/docs/Web/API/Navigator.mimeTypes	/en-US/docs/Web/API/Navigator/mimeTypes
 /en-US/docs/Web/API/Navigator.mozIsLocallyAvailable	/en-US/docs/Web/API/Navigator/mozIsLocallyAvailable
@@ -8092,8 +8092,6 @@
 /en-US/docs/Web/API/Navigator/appName	/en-US/docs/Web/API/NavigatorID/appName
 /en-US/docs/Web/API/Navigator/appVersion	/en-US/docs/Web/API/NavigatorID/appVersion
 /en-US/docs/Web/API/Navigator/getVRDevices	/en-US/docs/Web/API/Navigator/getVRDisplays
-/en-US/docs/Web/API/Navigator/language	/en-US/docs/Web/API/NavigatorLanguage/language
-/en-US/docs/Web/API/Navigator/languages	/en-US/docs/Web/API/NavigatorLanguage/languages
 /en-US/docs/Web/API/Navigator/mediaDevices.getUserMedia	/en-US/docs/Web/API/MediaDevices/getUserMedia
 /en-US/docs/Web/API/Navigator/mediaDevices/enumerateDevices	/en-US/docs/Web/API/MediaDevices/enumerateDevices
 /en-US/docs/Web/API/Navigator/mediaDevices/getUserMedia	/en-US/docs/Web/API/MediaDevices/getUserMedia
@@ -8109,13 +8107,16 @@
 /en-US/docs/Web/API/NavigatorID.appCodeName	/en-US/docs/Web/API/NavigatorID/appCodeName
 /en-US/docs/Web/API/NavigatorID.appName	/en-US/docs/Web/API/NavigatorID/appName
 /en-US/docs/Web/API/NavigatorID.appVersion	/en-US/docs/Web/API/NavigatorID/appVersion
-/en-US/docs/Web/API/NavigatorID.language	/en-US/docs/Web/API/NavigatorLanguage/language
+/en-US/docs/Web/API/NavigatorID.language	/en-US/docs/Web/API/Navigator/language
 /en-US/docs/Web/API/NavigatorID.platform	/en-US/docs/Web/API/NavigatorID/platform
 /en-US/docs/Web/API/NavigatorID.product	/en-US/docs/Web/API/NavigatorID/product
 /en-US/docs/Web/API/NavigatorID.taintEnabled	/en-US/docs/Web/API/NavigatorID/taintEnabled
 /en-US/docs/Web/API/NavigatorID.userAgent	/en-US/docs/Web/API/NavigatorID/userAgent
-/en-US/docs/Web/API/NavigatorLanguage.language	/en-US/docs/Web/API/NavigatorLanguage/language
-/en-US/docs/Web/API/NavigatorLanguage.languages	/en-US/docs/Web/API/NavigatorLanguage/languages
+/en-US/docs/Web/API/NavigatorLanguage	/en-US/docs/Web/API/Navigator
+/en-US/docs/Web/API/NavigatorLanguage.language	/en-US/docs/Web/API/Navigator/language
+/en-US/docs/Web/API/NavigatorLanguage.languages	/en-US/docs/Web/API/Navigator/languages
+/en-US/docs/Web/API/NavigatorLanguage/language	/en-US/docs/Web/API/Navigator/language
+/en-US/docs/Web/API/NavigatorLanguage/languages	/en-US/docs/Web/API/Navigator/languages
 /en-US/docs/Web/API/NavigatorOnLine.onLine	/en-US/docs/Web/API/NavigatorOnLine/onLine
 /en-US/docs/Web/API/NavigatorPlugins	/en-US/docs/Web/API/Navigator
 /en-US/docs/Web/API/NavigatorPlugins.javaEnabled	/en-US/docs/Web/API/Navigator/javaEnabled
@@ -8989,8 +8990,8 @@
 /en-US/docs/Web/API/WorkerNavigator/appCodeName	/en-US/docs/Web/API/NavigatorID/appCodeName
 /en-US/docs/Web/API/WorkerNavigator/appName	/en-US/docs/Web/API/NavigatorID/appName
 /en-US/docs/Web/API/WorkerNavigator/appVersion	/en-US/docs/Web/API/NavigatorID/appVersion
-/en-US/docs/Web/API/WorkerNavigator/language	/en-US/docs/Web/API/NavigatorLanguage/language
-/en-US/docs/Web/API/WorkerNavigator/languages	/en-US/docs/Web/API/NavigatorLanguage/languages
+/en-US/docs/Web/API/WorkerNavigator/language	/en-US/docs/Web/API/Navigator/language
+/en-US/docs/Web/API/WorkerNavigator/languages	/en-US/docs/Web/API/Navigator/languages
 /en-US/docs/Web/API/WorkerNavigator/onLine	/en-US/docs/Web/API/NavigatorOnLine/onLine
 /en-US/docs/Web/API/WorkerNavigator/platform	/en-US/docs/Web/API/NavigatorID/platform
 /en-US/docs/Web/API/WorkerNavigator/product	/en-US/docs/Web/API/NavigatorID/product
@@ -9442,7 +9443,7 @@
 /en-US/docs/Web/API/window.navigator.geolocation.getCurrentPosition	/en-US/docs/Web/API/Geolocation/getCurrentPosition
 /en-US/docs/Web/API/window.navigator.geolocation.watchPosition	/en-US/docs/Web/API/Geolocation/watchPosition
 /en-US/docs/Web/API/window.navigator.javaEnabled	/en-US/docs/Web/API/Navigator/javaEnabled
-/en-US/docs/Web/API/window.navigator.language	/en-US/docs/Web/API/NavigatorLanguage/language
+/en-US/docs/Web/API/window.navigator.language	/en-US/docs/Web/API/Navigator/language
 /en-US/docs/Web/API/window.navigator.mimeTypes	/en-US/docs/Web/API/Navigator/mimeTypes
 /en-US/docs/Web/API/window.navigator.mozIsLocallyAvailable	/en-US/docs/Web/API/Navigator/mozIsLocallyAvailable
 /en-US/docs/Web/API/window.navigator.onLine	/en-US/docs/Web/API/NavigatorOnLine/onLine
@@ -11805,7 +11806,7 @@
 /en-US/docs/navigator.buildID	/en-US/docs/Web/API/Navigator/buildID
 /en-US/docs/navigator.cookieEnabled	/en-US/docs/Web/API/Navigator/cookieEnabled
 /en-US/docs/navigator.javaEnabled	/en-US/docs/Web/API/Navigator/javaEnabled
-/en-US/docs/navigator.language	/en-US/docs/Web/API/NavigatorLanguage/language
+/en-US/docs/navigator.language	/en-US/docs/Web/API/Navigator/language
 /en-US/docs/navigator.mimeTypes	/en-US/docs/Web/API/Navigator/mimeTypes
 /en-US/docs/navigator.oscpu	/en-US/docs/Web/API/Navigator/oscpu
 /en-US/docs/navigator.platform	/en-US/docs/Web/API/NavigatorID/platform

@@ -64058,6 +64058,58 @@
       "jpmedley"
     ]
   },
+  "Web/API/Navigator/language": {
+    "modified": "2020-10-15T21:06:59.788Z",
+    "contributors": [
+      "Sephr",
+      "ftruter",
+      "blairbodnar",
+      "nickmccurdy",
+      "kernp",
+      "sideshowbarker",
+      "fscholz",
+      "ianjmacintosh",
+      "Kornel",
+      "jakub-g",
+      "nmve",
+      "abbycar",
+      "teoli",
+      "Sebastianz",
+      "Jeremie",
+      "hexalys",
+      "chrisdavidmills",
+      "ziyunfei",
+      "ScottMichaud",
+      "mounirlamouri",
+      "kscarfone",
+      "chitra_lakhotia",
+      "Sheppy",
+      "Pandark",
+      "Skierpage",
+      "Mgjbot",
+      "BenoitL",
+      "Fini",
+      "Diablownik",
+      "Dria",
+      "JesseW"
+    ]
+  },
+  "Web/API/Navigator/languages": {
+    "modified": "2020-10-15T21:27:22.781Z",
+    "contributors": [
+      "nitsakh",
+      "sideshowbarker",
+      "fscholz",
+      "jakub-g",
+      "mayank23",
+      "denghuiquan",
+      "teoli",
+      "chrisdavidmills",
+      "jt3rd",
+      "yisi",
+      "ziyunfei"
+    ]
+  },
   "Web/API/Navigator/locks": {
     "modified": "2020-10-15T22:07:43.304Z",
     "contributors": [
@@ -64673,68 +64725,6 @@
       "Jabez",
       "Dria",
       "JesseW"
-    ]
-  },
-  "Web/API/NavigatorLanguage": {
-    "modified": "2020-10-15T21:24:37.889Z",
-    "contributors": [
-      "mfuji09",
-      "alattalatta",
-      "fscholz",
-      "teoli",
-      "realityking"
-    ]
-  },
-  "Web/API/NavigatorLanguage/language": {
-    "modified": "2020-10-15T21:06:59.788Z",
-    "contributors": [
-      "Sephr",
-      "ftruter",
-      "blairbodnar",
-      "nickmccurdy",
-      "kernp",
-      "sideshowbarker",
-      "fscholz",
-      "ianjmacintosh",
-      "Kornel",
-      "jakub-g",
-      "nmve",
-      "abbycar",
-      "teoli",
-      "Sebastianz",
-      "Jeremie",
-      "hexalys",
-      "chrisdavidmills",
-      "ziyunfei",
-      "ScottMichaud",
-      "mounirlamouri",
-      "kscarfone",
-      "chitra_lakhotia",
-      "Sheppy",
-      "Pandark",
-      "Skierpage",
-      "Mgjbot",
-      "BenoitL",
-      "Fini",
-      "Diablownik",
-      "Dria",
-      "JesseW"
-    ]
-  },
-  "Web/API/NavigatorLanguage/languages": {
-    "modified": "2020-10-15T21:27:22.781Z",
-    "contributors": [
-      "nitsakh",
-      "sideshowbarker",
-      "fscholz",
-      "jakub-g",
-      "mayank23",
-      "denghuiquan",
-      "teoli",
-      "chrisdavidmills",
-      "jt3rd",
-      "yisi",
-      "ziyunfei"
     ]
   },
   "Web/API/NavigatorOnLine": {
