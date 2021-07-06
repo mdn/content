@@ -7634,7 +7634,6 @@
 /en-US/docs/Web/API/HTMLElement/focus	/en-US/docs/Web/API/HTMLOrForeignElement/focus
 /en-US/docs/Web/API/HTMLElement/forceSpellCheck	/en-US/docs/Web/HTML/Global_attributes/spellcheck
 /en-US/docs/Web/API/HTMLElement/invalid_event	/en-US/docs/Web/API/HTMLInputElement/invalid_event
-/en-US/docs/Web/API/HTMLElement/nonce	/en-US/docs/Web/API/HTMLOrForeignElement/nonce
 /en-US/docs/Web/API/HTMLElement/onabort	/en-US/docs/Web/API/GlobalEventHandlers/onabort
 /en-US/docs/Web/API/HTMLElement/onblur	/en-US/docs/Web/API/GlobalEventHandlers/onblur
 /en-US/docs/Web/API/HTMLElement/onchange	/en-US/docs/Web/API/GlobalEventHandlers/onchange
@@ -7713,6 +7712,7 @@
 /en-US/docs/Web/API/HTMLObjectElement/tabIndex	/en-US/docs/Web/API/HTMLObjectElement/type
 /en-US/docs/Web/API/HTMLOptionElement.Option	/en-US/docs/Web/API/HTMLOptionElement/Option
 /en-US/docs/Web/API/HTMLOrForeignElement/dataset	/en-US/docs/Web/API/HTMLElement/dataset
+/en-US/docs/Web/API/HTMLOrForeignElement/nonce	/en-US/docs/Web/API/HTMLElement/nonce
 /en-US/docs/Web/API/HTMLOrForeignElement/tabIndex	/en-US/docs/Web/API/HTMLElement/tabIndex
 /en-US/docs/Web/API/HTMLOrSVGElement	/en-US/docs/Web/API/HTMLOrForeignElement
 /en-US/docs/Web/API/HTMLSelectElement.add	/en-US/docs/Web/API/HTMLSelectElement/add
