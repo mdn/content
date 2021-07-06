@@ -64033,6 +64033,22 @@
       "dmarcos"
     ]
   },
+  "Web/API/Navigator/javaEnabled": {
+    "modified": "2020-10-15T21:07:04.664Z",
+    "contributors": [
+      "ExE-Boss",
+      "teoli",
+      "kscarfone",
+      "Sheppy",
+      "ziyunfei",
+      "Mgjbot",
+      "Ptak82",
+      "Maian",
+      "Nickolay",
+      "Dria",
+      "JesseW"
+    ]
+  },
   "Web/API/Navigator/keyboard": {
     "modified": "2020-12-10T11:16:25.306Z",
     "contributors": [
@@ -64091,6 +64107,26 @@
     "contributors": [
       "regseb",
       "Sheppy"
+    ]
+  },
+  "Web/API/Navigator/mimeTypes": {
+    "modified": "2020-10-15T21:16:44.067Z",
+    "contributors": [
+      "ExE-Boss",
+      "fscholz",
+      "jpmedley",
+      "chrisdavidmills",
+      "teoli",
+      "MHasan",
+      "bsmedberg",
+      "kscarfone",
+      "Sheppy",
+      "ethertank",
+      "Mgjbot",
+      "Diablownik",
+      "George3",
+      "Dria",
+      "JesseW"
     ]
   },
   "Web/API/Navigator/mozIsLocallyAvailable": {
@@ -64161,6 +64197,30 @@
       "connorshea",
       "chrisdavidmills",
       "poiru"
+    ]
+  },
+  "Web/API/Navigator/plugins": {
+    "modified": "2020-10-15T21:06:55.402Z",
+    "contributors": [
+      "ExE-Boss",
+      "chrisdavidmills",
+      "Makyen",
+      "teoli",
+      "cpeterson",
+      "kohei.yoshino",
+      "bsmedberg",
+      "kscarfone",
+      "ethertank",
+      "Sheppy",
+      "ziyunfei",
+      "Mgjbot",
+      "Diablownik",
+      "George3",
+      "Nickolay",
+      "Jabez",
+      "Dria",
+      "Smcn",
+      "JesseW"
     ]
   },
   "Web/API/Navigator/presentation": {
@@ -64755,75 +64815,6 @@
       "Nickolay",
       "Diablownik",
       "Jabez"
-    ]
-  },
-  "Web/API/NavigatorPlugins": {
-    "modified": "2020-10-15T21:24:38.838Z",
-    "contributors": [
-      "fscholz",
-      "jpmedley",
-      "Sheppy",
-      "teoli"
-    ]
-  },
-  "Web/API/NavigatorPlugins/javaEnabled": {
-    "modified": "2020-10-15T21:07:04.664Z",
-    "contributors": [
-      "ExE-Boss",
-      "teoli",
-      "kscarfone",
-      "Sheppy",
-      "ziyunfei",
-      "Mgjbot",
-      "Ptak82",
-      "Maian",
-      "Nickolay",
-      "Dria",
-      "JesseW"
-    ]
-  },
-  "Web/API/NavigatorPlugins/mimeTypes": {
-    "modified": "2020-10-15T21:16:44.067Z",
-    "contributors": [
-      "ExE-Boss",
-      "fscholz",
-      "jpmedley",
-      "chrisdavidmills",
-      "teoli",
-      "MHasan",
-      "bsmedberg",
-      "kscarfone",
-      "Sheppy",
-      "ethertank",
-      "Mgjbot",
-      "Diablownik",
-      "George3",
-      "Dria",
-      "JesseW"
-    ]
-  },
-  "Web/API/NavigatorPlugins/plugins": {
-    "modified": "2020-10-15T21:06:55.402Z",
-    "contributors": [
-      "ExE-Boss",
-      "chrisdavidmills",
-      "Makyen",
-      "teoli",
-      "cpeterson",
-      "kohei.yoshino",
-      "bsmedberg",
-      "kscarfone",
-      "ethertank",
-      "Sheppy",
-      "ziyunfei",
-      "Mgjbot",
-      "Diablownik",
-      "George3",
-      "Nickolay",
-      "Jabez",
-      "Dria",
-      "Smcn",
-      "JesseW"
     ]
   },
   "Web/API/NavigatorStorage": {
