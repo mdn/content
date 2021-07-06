@@ -19,7 +19,7 @@ browser-compat: api.Navigator
 
 <h2 id="Properties">Properties</h2>
 
-<p><em>Doesn't inherit any properties, but implements those defined in {{domxref("NavigatorID")}}.</em></p>
+<p><em>Doesn't inherit any properties.</em></p>
 
 <h3 id="Standard_properties">Standard properties</h3>
 
@@ -70,7 +70,7 @@ browser-compat: api.Navigator
  <dd>Returns a {{domxref("ServiceWorkerContainer")}} object, which provides access to registration, removal, upgrade, and communication with the {{domxref("ServiceWorker")}} objects for the <a href="https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window">associated document</a>.</dd>
  <dt>{{domxref("Navigator.storage")}} {{readonlyinline}}</dt>
  <dd>Returns the singleton {{domxref('StorageManager')}} object used for managing persistence permissions and estimating available storage on a site-by-site/app-by-app basis.</dd>
- <dt>{{domxref("NavigatorID.userAgent")}} {{readonlyInline}}</dt>
+ <dt>{{domxref("Navigator.userAgent")}} {{readonlyInline}}</dt>
  <dd>Returns the user agent string for the current browser.</dd>
  <dt>{{domxref("Navigator.vendor")}} {{readonlyInline}}</dt>
  <dd>Returns the vendor name of the current browser (e.g., "Netscape6").</dd>
@@ -98,11 +98,11 @@ browser-compat: api.Navigator
 <h3 id="Deprecated_properties">Deprecated properties</h3>
 
 <dl>
- <dt>{{domxref("NavigatorID.appCodeName")}} {{readonlyInline}} {{deprecated_inline}}</dt>
+ <dt>{{domxref("Navigator.appCodeName")}} {{readonlyInline}} {{deprecated_inline}}</dt>
  <dd>Returns the internal "code" name of the current browser. Do not rely on this property to return the correct value.</dd>
- <dt>{{domxref("NavigatorID.appName")}} {{readonlyInline}} {{deprecated_inline}}</dt>
+ <dt>{{domxref("Navigator.appName")}} {{readonlyInline}} {{deprecated_inline}}</dt>
  <dd>Returns a {{domxref("DOMString")}} with the official name of the browser. Do not rely on this property to return the correct value.</dd>
- <dt>{{domxref("NavigatorID.appVersion")}} {{readonlyInline}} {{deprecated_inline}}</dt>
+ <dt>{{domxref("Navigator.appVersion")}} {{readonlyInline}} {{deprecated_inline}}</dt>
  <dd>Returns the version of the browser as a {{domxref("DOMString")}}. Do not rely on this property to return the correct value.</dd>
  <dt>{{domxref("Navigator.activeVRDisplays")}} {{readonlyInline}} {{deprecated_inline}}</dt>
  <dd>Returns an array containing every {{domxref("VRDisplay")}} object that is currently presenting ({{domxref("VRDisplay.ispresenting")}} is <code>true</code>).</dd>
@@ -112,11 +112,11 @@ browser-compat: api.Navigator
  <dd>Returns an {{domxref("MimeTypeArray")}} listing the MIME types supported by the browser.</dd>
  <dt>{{domxref("Navigator.oscpu")}} {{readonlyInline}} {{deprecated_inline}}</dt>
  <dd>Returns a string that represents the current operating system.</dd>
- <dt>{{domxref("NavigatorID.platform")}} {{readonlyInline}} {{deprecated_inline}}</dt>
+ <dt>{{domxref("Navigator.platform")}} {{readonlyInline}} {{deprecated_inline}}</dt>
  <dd>Returns a string representing the platform of the browser. Do not rely on this function to return a significant value.</dd>
  <dt>{{domxref("Navigator.plugins")}} {{readonlyInline}}{{deprecated_inline}}</dt>
  <dd>Returns a {{domxref("PluginArray")}} listing the plugins installed in the browser.</dd>
- <dt>{{domxref("NavigatorID.product")}} {{readonlyInline}} {{deprecated_inline}}</dt>
+ <dt>{{domxref("Navigator.product")}} {{readonlyInline}} {{deprecated_inline}}</dt>
  <dd>Always returns <code>'Gecko'</code>, on any browser. This property is kept only for compatibility purpose.</dd>
  <dt>{{domxref("Navigator.productSub")}} {{readonlyInline}} {{deprecated_inline}}</dt>
  <dd>Returns the build number of the current browser (e.g., "20060909").</dd>
@@ -126,7 +126,7 @@ browser-compat: api.Navigator
 
 <h2 id="Methods">Methods</h2>
 
-<p><em>Doesn't inherit any method, but implements those defined in {{domxref("NavigatorID")}}.</em></p>
+<p><em>Doesn't inherit any method.</em></p>
 
 <dl>
  <dt>{{domxref("Navigator.canShare()")}}</dt>
@@ -158,7 +158,7 @@ browser-compat: api.Navigator
  <dd>Returns a promise that resolves to an array of {{domxref("VRDisplay")}} objects representing any available VR devices connected to the computer.</dd>
  <dt>{{domxref("Navigator.getUserMedia()")}} {{deprecated_inline}}</dt>
  <dd>After having prompted the user for permission, returns the audio or video stream associated to a camera or microphone on the local computer.</dd>
- <dt>{{domxref("NavigatorID.taintEnabled()")}} {{deprecated_inline}}</dt>
+ <dt>{{domxref("Navigator.taintEnabled()")}} {{deprecated_inline}}</dt>
  <dd>Returns <code>false</code>. JavaScript taint/untaint functions removed in JavaScript 1.2.</dd>
 </dl>
 
