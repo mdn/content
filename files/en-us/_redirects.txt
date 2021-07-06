@@ -8101,6 +8101,8 @@
 /en-US/docs/Web/API/Navigator/storage	/en-US/docs/Web/API/NavigatorStorage/storage
 /en-US/docs/Web/API/Navigator/taintEnabled	/en-US/docs/Web/API/NavigatorID/taintEnabled
 /en-US/docs/Web/API/Navigator/userAgent	/en-US/docs/Web/API/NavigatorID/userAgent
+/en-US/docs/Web/API/NavigatorConcurrentHardware	/en-US/docs/Web/API/Navigator
+/en-US/docs/Web/API/NavigatorConcurrentHardware/hardwareConcurrency	/en-US/docs/Web/API/Navigator/hardwareConcurrency
 /en-US/docs/Web/API/NavigatorGeolocation	/en-US/docs/Web/API/Geolocation
 /en-US/docs/Web/API/NavigatorGeolocation.geolocation	/en-US/docs/Web/API/Navigator/geolocation
 /en-US/docs/Web/API/NavigatorGeolocation/geolocation	/en-US/docs/Web/API/Navigator/geolocation

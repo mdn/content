@@ -64033,6 +64033,22 @@
       "dmarcos"
     ]
   },
+  "Web/API/Navigator/hardwareConcurrency": {
+    "modified": "2020-10-15T21:44:36.249Z",
+    "contributors": [
+      "sideshowbarker",
+      "fscholz",
+      "jaffathecake",
+      "scriptguru",
+      "Sephr",
+      "jpmedley",
+      "libbymc",
+      "nmve",
+      "Sheepy",
+      "aschr",
+      "Sheppy"
+    ]
+  },
   "Web/API/Navigator/javaEnabled": {
     "modified": "2020-10-15T21:07:04.664Z",
     "contributors": [
@@ -64542,32 +64558,6 @@
       "Wind1808",
       "Sheppy",
       "bershanskiy"
-    ]
-  },
-  "Web/API/NavigatorConcurrentHardware": {
-    "modified": "2020-10-15T21:44:40.003Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "jpmedley",
-      "libbymc",
-      "Sheppy"
-    ]
-  },
-  "Web/API/NavigatorConcurrentHardware/hardwareConcurrency": {
-    "modified": "2020-10-15T21:44:36.249Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "jaffathecake",
-      "scriptguru",
-      "Sephr",
-      "jpmedley",
-      "libbymc",
-      "nmve",
-      "Sheepy",
-      "aschr",
-      "Sheppy"
     ]
   },
   "Web/API/NavigatorID": {
