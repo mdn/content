@@ -92,14 +92,16 @@ tags:
 <h3 id="device_client_hints">Device client hints</h3>
 
 <dl>
-  <dt>{{HTTPHeader("Device-Memory")}} {{experimental_inline}}</dt>
-  <dd>Approximate amount of available client RAM memory. Technically a part of <a href="/en-US/docs/Web/API/Device_Memory_API">Device Memory API</a>.</dd>
-  <dt>{{HTTPHeader("DPR")}} {{deprecated_inline}}</dt>
+  <dt>{{HTTPHeader("Content-DPR")}} {{deprecated_inline}}{{experimental_inline}}</dt>
+  <dd>Response header used to confirm the image device to pixel ratio in requests where the {{HTTPHeader("DPR")}} client hint was used to select an image resource.</dd>
+  <dt>{{HTTPHeader("Device-Memory")}} {{deprecated_inline}}{{experimental_inline}}</dt>
+  <dd>Approximate amount of available client RAM memory. This is part of the <a href="/en-US/docs/Web/API/Device_Memory_API">Device Memory API</a>.</dd>
+  <dt>{{HTTPHeader("DPR")}} {{deprecated_inline}}{{experimental_inline}}</dt>
   <dd>Client device pixel ratio (DPR), which is the number of physical device pixels corresponding to every CSS pixel.</dd>
-  <dt>{{HTTPHeader("Viewport-Width")}} {{experimental_inline}}</dt>
-  <dd>A number that indicates the layout viewport width in CSS pixels. The provided pixel value is a number rounded to the smallest following integer (i.e. ceiling value). If <code>Viewport-Width</code> occurs in a message more than once, the last value overrides all previous occurrences.</dd>
-  <dt>{{HTTPHeader("Width")}} {{experimental_inline}}</dt>
-  <dd>The <code>Width</code> request header field is a number that indicates the desired resource width in physical pixels (i.e. intrinsic size of an image). The provided pixel value is a number rounded to the smallest following integer (i.e. ceiling value). The <code>Width</code> header field can be omitted if the desired resource width is not known at the time of the request or the resource does not have a display width. If <code>Width</code> occurs in a message more than once, the last value overrides all previous occurrences.</dd>
+  <dt>{{HTTPHeader("Viewport-Width")}} {{deprecated_inline}}{{experimental_inline}}</dt>
+  <dd>A number that indicates the layout viewport width in CSS pixels. The provided pixel value is a number rounded to the smallest following integer (i.e. ceiling value).</dd>
+  <dt>{{HTTPHeader("Width")}} {{deprecated_inline}}{{experimental_inline}}</dt>
+  <dd>The <code>Width</code> request header field is a number that indicates the desired resource width in physical pixels (i.e. intrinsic size of an image).</dd>
  </dl>
 
 

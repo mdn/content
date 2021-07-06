@@ -594,7 +594,7 @@ function deleteItem(e) {
 }</pre>
  </li>
  <li>
-  <p>The following snippet is taken from inside <code>fetchVideoFromNetwork()</code> — here we fetch MP4 and WebM versions of the video using two separate {{domxref("WindowOrWorkerGlobalScope/fetch", "WindowOrWorkerGlobalScope.fetch()")}} requests. We then use the {{domxref("blob()", "Body.blob()")}} method to extract each response's body as a blob, giving us an object representation of the videos that can be stored and displayed later on.</p>
+  <p>The following snippet is taken from inside <code>fetchVideoFromNetwork()</code> — here we fetch MP4 and WebM versions of the video using two separate {{domxref("WindowOrWorkerGlobalScope/fetch", "WindowOrWorkerGlobalScope.fetch()")}} requests. We then use the {{domxref("Response.blob()")}} method to extract each response's body as a blob, giving us an object representation of the videos that can be stored and displayed later on.</p>
 
   <p>We have a problem here though — these two requests are both asynchronous, but we only want to try to display or store the video when both promises have fulfilled. Fortunately there is a built-in method that handles such a problem — {{jsxref("Promise.all()")}}. This takes one argument — references to all the individual promises you want to check for fulfillment placed in an array — and is itself promise-based.</p>
 

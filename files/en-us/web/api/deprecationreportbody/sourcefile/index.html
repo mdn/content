@@ -1,0 +1,49 @@
+---
+title: DeprecationReportBody.sourceFile
+slug: Web/API/DeprecationReportBody/sourceFile
+tags:
+  - API
+  - Property
+  - Reference
+  - sourceFile
+  - DeprecationReportBody
+browser-compat: api.DeprecationReportBody.sourceFile
+---
+<div>{{APIRef("Reporting API")}}</div>
+
+<p class="summary">The <strong><code>sourceFile</code></strong> read-only property of the {{domxref("DeprecationReportBody")}} interface returns the path to the source file where the deprecated feature was used.</p>
+
+<div class="notecard note">
+  <h4>Note:</h4>
+  <p>This property can be used with {{domxref("DeprecationReportBody.lineNumber")}} and {{domxref("DeprecationReportBody.columnNumber")}} to locate the column and line in the file where the error occurred.</p>
+</div>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js">let sourceFile = DeprecationReportBody.sourceFile;</pre>
+
+<h3>Value</h3>
+<p>A {{domxref("DOMString","string")}}, or <code>null</code> if the path is not known.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<p>In this example we create a new {{domxref("ReportingObserver")}} to observe deprecation reports, then print the value of <code>sourceFile</code> to the console.</p>
+
+<pre class="brush: js">let options = {
+  types: ['deprecation'],
+  buffered: true
+}
+
+let observer = new ReportingObserver(function(reports, observer) {
+  let firstReport = reports[0];
+  console.log(firstReport.type); // deprecation
+  console.log(firstReport.body.sourceFile);
+}, options);</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<p>{{Specifications}}</p>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>

@@ -1,0 +1,68 @@
+---
+title: HTMLElement.tabIndex
+slug: Web/API/HTMLElement/tabIndex
+tags:
+  - API
+  - HTML DOM
+  - HTMLElement
+  - Property
+  - Reference
+  - tabIndex
+browser-compat: api.HTMLElement.tabIndex
+---
+<div>{{APIRef("HTML DOM")}}</div>
+
+<p>The <strong><code>tabIndex</code></strong> property of the
+{{DOMxRef("HTMLElement")}} mixin represents the tab order of the current element.</p>
+
+<p>Tab order is as follows:</p>
+
+<ol>
+  <li>Elements with a positive <code>tabIndex</code>. Elements that have identical
+    <code>tabIndex</code> values should be navigated in the order they appear. Navigation
+    proceeds from the lowest <code>tabIndex</code> to the highest <code>tabIndex</code>.
+  </li>
+  <li>Elements that do not support the <code>tabIndex</code> attribute or support it and
+    assign <code>tabIndex</code> to <code>0</code>, in the order they appear.</li>
+</ol>
+
+<p>Elements that are disabled do not participate in the tabbing order.</p>
+
+<p>Values don't need to be sequential, nor must they begin with any particular value. They
+  may even be negative, though each browser trims very large values.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js"><em>element</em>.tabIndex = <em>index</em>;
+var <em>index</em> = <em>element</em>.tabIndex;
+</pre>
+
+<h3 id="Value">Value</h3>
+
+<p><code>index</code> is an integer</p>
+
+<h2 id="Example">Example</h2>
+
+<pre class="brush:js">const b1 = document.getElementById('button1');
+
+b1.tabIndex = 1;
+</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+{{Specifications}}
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+  <li><a
+      href="/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets">Accessibility
+      of keyboard-navigable JavaScript widgets</a></li>
+  <li>The HTML
+    <code><a href="/en-US/docs/Web/HTML/Global_attributes/tabindex"><strong>tabindex</strong></a></code>
+    global attribute.</li>
+</ul>

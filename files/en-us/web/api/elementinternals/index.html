@@ -1,0 +1,180 @@
+---
+title: ElementInternals
+slug: Web/API/ElementInternals
+tags:
+  - API
+  - Interface
+  - Reference
+  - ElementInternals
+browser-compat: api.ElementInternals
+---
+<div>{{DefaultAPISidebar("DOM")}}</div>
+
+<p class="summary">The <strong><code>ElementInternals</code></strong> interface of the {{domxref('Document_Object_Model','','',' ')}} gives web developers a way to allow custom elements to fully participate in HTML forms. It provides utilities for working with these elements in the same way you would work with any standard HTML form element, and also exposes the <a href="https://wicg.github.io/aom/explainer.html">Accessibility Object Model</a> to the element.</p>
+
+<h2 id="Constructor">Constructor</h2>
+
+<p>This interface has no constructor. An <code>ElementInternals</code> object is returned when calling {{domxref("Element.attachInternals()")}}.</p>
+
+<h2 id="Properties">Properties</h2>
+
+<dl>
+  <dt>{{domxref("ElementInternals.shadowRoot")}}{{ReadOnlyInline}}</dt>
+  <dd>Returns the {{domxref("ShadowRoot")}} object associated with this element.</dd>
+  <dt>{{domxref("ElementInternals.form")}}{{ReadOnlyInline}}</dt>
+  <dd>Returns the {{domxref("HTMLFormElement")}} associated with this element.</dd>
+  <dt>{{domxref("ElementInternals.willValidate")}}{{ReadOnlyInline}}</dt>
+  <dd> {{jsxref("Boolean")}} which returns true if the element is a submittable element that is a candidate for
+    <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a>.</dd>
+  <dt>{{domxref("ElementInternals.validity")}}{{ReadOnlyInline}}</dt>
+  <dd>Returns a {{domxref("ValidityState")}} object which represents the different validity states the element can be in, with respect to constraint validation.</dd>
+  <dt>{{domxref("ElementInternals.validationMessage")}}{{ReadOnlyInline}}</dt>
+  <dd>A {{domxref("DOMString","string")}} containing the validation message of this element.</dd>
+  <dt>{{domxref("ElementInternals.labels")}}{{ReadOnlyInline}}</dt>
+  <dd>Returns a {{domxref("NodeList")}} of all of the label elements associated with this element.</dd>
+</dl>
+
+<h3 id="Properties_included_from_Aria">Properties included from ARIA</h3>
+
+<p>The <code>ElementInternals</code> interface includes the following properties, defined on the <code>ARIAMixin</code> mixin.</p>
+
+<div class="notecard note">
+  <h4>Note:</h4>
+  <p>These are included in order that default accessibility semantics can be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <a href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</a>.</p>
+</div>
+
+<dl>
+  <dt>{{domxref("ElementInternals.ariaAtomic")}}</dt>
+  <dd>Is a {{domxref("DOMString")}} reflecting the <code>aria-atomic</code> attribute, which indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the <code>aria-relevant</code> attribute.</dd>
+  <dt>{{domxref("ElementInternals.ariaAutoComplete")}}</dt>
+  <dd>Is a {{domxref("DOMString")}} reflecting the <code>aria-autocomplete</code> attribute, which indicates whether inputting text could trigger display of one or more predictions of the user's intended value for a combobox, searchbox, or textbox and specifies how predictions would be presented if they were made.</dd>
+  <dt>{{domxref("ElementInternals.ariaBusy")}}</dt>
+  <dd>Is a {{domxref("DOMString")}} reflecting the <code>aria-busy</code> attribute, which indicates whether an element is being modified, as assistive technologies may want to wait until the modifications are complete before exposing them to the user.</dd>
+  <dt>{{domxref("ElementInternals.ariaChecked")}}</dt>
+  <dd>Is a {{domxref("DOMString")}} reflecting the <code>aria-checked</code> attribute, which indicates the current "checked" state of checkboxes, radio buttons, and other widgets that have a checked state.</dd>
+  <dt>{{domxref("ElementInternals.ariaColCount")}}</dt>
+  <dd>Is a {{domxref("DOMString")}} reflecting the <code>aria-colcount</code> attribute, which defines the number of columns in a table, grid, or treegrid.</dd>
+  <dt>{{domxref("ElementInternals.ariaColIndex")}}</dt>
+  <dd>Is a {{domxref("DOMString")}} reflecting the <code>aria-colindex</code> attribute, which defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid.</dd>
+  <dt>{{domxref("ElementInternals.ariaColIndexText")}}</dt>
+  <dd>Is a {{domxref("DOMString")}} reflecting the <code>aria-colindextext</code> attribute, which defines a human readable text alternative of aria-colindex.</dd>
+  <dt>{{domxref("ElementInternals.ariaColSpan")}}</dt>
+  <dd>Is a {{domxref("DOMString")}} reflecting the <code>aria-colspan</code> attribute, which defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid.</dd>
+  <dt>{{domxref("ElementInternals.ariaCurrent")}}</dt>
+  <dd>Is a {{domxref("DOMString")}} reflecting the <code>aria-current</code> attribute, which indicates the element that represents the current item within a container or set of related elements.</dd>
+  <dt>{{domxref("ElementInternals.ariaDescription")}}</dt>
+  <dd>Is a {{domxref("DOMString")}} reflecting the <code>aria-description</code> attribute, which defines a string value that describes or annotates the current ElementInternals.</dd>
+  <dt>{{domxref("ElementInternals.ariaDisabled")}}</dt>
+  <dd>Is a {{domxref("DOMString")}} reflecting the <code>aria-disabled</code> attribute, which indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.</dd>
+  <dt>{{domxref("ElementInternals.ariaExpanded")}}</dt>
+  <dd>Is a {{domxref("DOMString")}} reflecting the <code>aria-expanded</code> attribute, which indicates whether a grouping element owned or controlled by this element is expanded or collapsed.</dd>
+  <dt>{{domxref("ElementInternals.ariaHasPopup")}}</dt>
+  <dd>Is a {{domxref("DOMString")}} reflecting the <code>aria-haspopup</code> attribute, which indicates the availability and type of interactive popup element, such as menu or dialog, that can be triggered by an ElementInternals.</dd>
+  <dt>{{domxref("ElementInternals.ariaHidden")}}</dt>
+  <dd>Is a {{domxref("DOMString")}} reflecting the <code>aria-hidden</code> attribute, which indicates whether the element is exposed to an accessibility API.</dd>
+  <dt>{{domxref("ElementInternals.ariaKeyShortcuts")}}</dt>
+  <dd>Is a {{domxref("DOMString")}} reflecting the <code>aria-keyshortcuts</code> attribute, which indicates keyboard shortcuts that an author has implemented to activate or give focus to an ElementInternals.</dd>
+  <dt>{{domxref("ElementInternals.ariaLabel")}}</dt>
+  <dd>Is a {{domxref("DOMString")}} reflecting the <code>aria-label</code> attribute, which defines a string value that labels the current ElementInternals.</dd>
+  <dt>{{domxref("ElementInternals.ariaLevel")}}</dt>
+  <dd>Is a {{domxref("DOMString")}} reflecting the <code>aria-level</code> attribute, which defines the hierarchical level of an element within a structure.</dd>
+  <dt>{{domxref("ElementInternals.ariaLive")}}</dt>
+  <dd>Is a {{domxref("DOMString")}} reflecting the <code>aria-live</code> attribute, which indicates that an element will be updated, and describes the types of updates the user agents, assistive technologies, and user can expect from the live region.</dd>
+  <dt>{{domxref("ElementInternals.ariaModal")}}</dt>
+  <dd>Is a {{domxref("DOMString")}} reflecting the <code>aria-modal</code> attribute, which indicates whether an element is modal when displayed.</dd>
+  <dt>{{domxref("ElementInternals.ariaMultiline")}}</dt>
+  <dd>Is a {{domxref("DOMString")}} reflecting the <code>aria-multiline</code> attribute, which indicates whether a text box accepts multiple lines of input or only a single line.</dd>
+  <dt>{{domxref("ElementInternals.ariaMultiSelectable")}}</dt>
+  <dd>Is a {{domxref("DOMString")}} reflecting the <code>aria-multiselectable</code> attribute, which indicates that the user may select more than one item from the current selectable descendants.</dd>
+  <dt>{{domxref("ElementInternals.ariaOrientation")}}</dt>
+  <dd>Is a {{domxref("DOMString")}} reflecting the <code>aria-orientation</code> attribute, which indicates whether the element's orientation is horizontal, vertical, or unknown/ambiguous.</dd>
+  <dt>{{domxref("ElementInternals.ariaPlaceholder")}}</dt>
+  <dd>Is a {{domxref("DOMString")}} reflecting the <code>aria-placeholder</code> attribute, which defines a short hint intended to aid the user with data entry when the control has no value.</dd>
+  <dt>{{domxref("ElementInternals.ariaPosInSet")}}</dt>
+  <dd>Is a {{domxref("DOMString")}} reflecting the <code>aria-posinset</code> attribute, which defines an element's number or position in the current set of listitems or treeitems.</dd>
+  <dt>{{domxref("ElementInternals.ariaPressed")}}</dt>
+  <dd>Is a {{domxref("DOMString")}} reflecting the <code>aria-pressed</code> attribute, which indicates the current "pressed" state of toggle buttons.</dd>
+  <dt>{{domxref("ElementInternals.ariaReadOnly")}}</dt>
+  <dd>Is a {{domxref("DOMString")}} reflecting the <code>aria-readonly</code> attribute, which indicates that the element is not editable, but is otherwise operable.</dd>
+  <dt>{{domxref("ElementInternals.ariaRelevant")}}</dt>
+  <dd>Is a {{domxref("DOMString")}} reflecting the <code>aria-relevant</code> attribute, which indicates what notifications the user agent will trigger when the accessibility tree within a live region is modified. This is used to describe what changes in an <code>aria-live</code> region are relevant and should be announced.</dd>
+  <dt>{{domxref("ElementInternals.ariaRequired")}}</dt>
+  <dd>Is a {{domxref("DOMString")}} reflecting the <code>aria-required</code> attribute, which indicates that user input is required on the element before a form may be submitted.</dd>
+  <dt>{{domxref("ElementInternals.ariaRoleDescription")}}</dt>
+  <dd>Is a {{domxref("DOMString")}} reflecting the <code>aria-roledescription</code> attribute, which defines a human-readable, author-localized description for the role of an Element.</dd>
+  <dt>{{domxref("ElementInternals.ariaRowCount")}}</dt>
+  <dd>Is a {{domxref("DOMString")}} reflecting the <code>aria-rowcount</code> attribute, which defines the total number of rows in a table, grid, or treegrid.</dd>
+  <dt>{{domxref("ElementInternals.ariaRowIndex")}}</dt>
+  <dd>Is a {{domxref("DOMString")}} reflecting the <code>aria-rowindex</code> attribute, which defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid.</dd>
+  <dt>{{domxref("ElementInternals.ariaRowIndexText")}}</dt>
+  <dd>Is a {{domxref("DOMString")}} reflecting the <code>aria-rowindextext</code> attribute, which defines a human readable text alternative of aria-rowindex.</dd>
+  <dt>{{domxref("ElementInternals.ariaRowSpan")}}</dt>
+  <dd>Is a {{domxref("DOMString")}} reflecting the <code>aria-rowspan</code> attribute, which defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid.</dd>
+  <dt>{{domxref("ElementInternals.ariaSelected")}}</dt>
+  <dd>Is a {{domxref("DOMString")}} reflecting the <code>aria-selected</code> attribute, which indicates the current "selected" state of elements that have a selected state.</dd>
+  <dt>{{domxref("ElementInternals.ariaSetSize")}}</dt>
+  <dd>Is a {{domxref("DOMString")}} reflecting the <code>aria-setsize</code> attribute, which defines the number of items in the current set of listitems or treeitems.</dd>
+  <dt>{{domxref("ElementInternals.ariaSort")}}</dt>
+  <dd>Is a {{domxref("DOMString")}} reflecting the <code>aria-sort</code> attribute, which indicates if items in a table or grid are sorted in ascending or descending order.</dd>
+  <dt>{{domxref("ElementInternals.ariaValueMax")}}</dt>
+  <dd>Is a {{domxref("DOMString")}} reflecting the <code>aria-valueMax</code> attribute, which defines the maximum allowed value for a range widget.</dd>
+  <dt>{{domxref("ElementInternals.ariaValueMin")}}</dt>
+  <dd>Is a {{domxref("DOMString")}} reflecting the <code>aria-valueMin</code> attribute, which defines the minimum allowed value for a range widget.</dd>
+  <dt>{{domxref("ElementInternals.ariaValueNow")}}</dt>
+  <dd>Is a {{domxref("DOMString")}} reflecting the <code>aria-valueNow</code> attribute, which defines the current value for a range widget.</dd>
+  <dt>{{domxref("ElementInternals.ariaValueText")}}</dt>
+  <dd>Is a {{domxref("DOMString")}} reflecting the <code>aria-valuetext</code> attribute, which defines the human readable text alternative of aria-valuenow for a range widget.</dd>
+</dl>
+
+<h2 id="Methods">Methods</h2>
+
+<dl>
+  <dt>{{domxref("ElementInternals.setFormValue()")}}</dt>
+  <dd>Sets the element's submission value and state, communicating these to the user agent.</dd>
+  <dt>{{domxref("ElementInternals.setValidity()")}}</dt>
+  <dd>Sets the validity of the element.</dd>
+  <dt>{{domxref("ElementInternals.checkValidity()")}}</dt>
+  <dd>Checks if an element meets any <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a> rules applied to it.</dd>
+  <dt>{{domxref("ElementInternals.reportValidity()")}}</dt>
+  <dd>Checks if an element meets any <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a> rules applied to it, and also sends a validation message to the user agent.</dd>
+</dl>
+
+<h2 id="Examples">Examples</h2>
+
+<p>The following example demonstrates how to create a custom form-associated element with {{domxref("Element.attachInternals")}}.</p>
+
+<pre class="brush: js">class CustomCheckbox extends HTMLElement {
+  static formAssociated = true;
+
+  constructor() {
+    super();
+    this.internals_ = this.attachInternals();
+  }
+
+  /* ... */
+
+  window.customElements.define("custom-checkbox", CustomCheckbox);
+})();
+
+let element = document.getElementById("custom-checkbox");
+console.log(element.internals_.form);</pre>
+<h2 id="Specifications">Specifications</h2>
+
+<p>{{Specifications}}</p>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>
+
+<h2 id="Polyfill">Polyfills</h2>
+
+<ul>
+  <li><a href="https://www.npmjs.com/package/element-internals-polyfill">ElementInternals polyfill</a></li>
+</ul>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+  <li><a href="https://web.dev/more-capable-form-controls/">More capable form controls</a></li>
+  <li><a href="https://css-tricks.com/creating-custom-form-controls-with-elementinternals/">Creating custom form controls with ElementInternals</a></li>
+</ul>

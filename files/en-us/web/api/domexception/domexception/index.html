@@ -36,9 +36,33 @@ var domException = new DOMException(message, name);</pre>
   <dd>A newly created {{domxref("DOMException")}} object.</dd>
 </dl>
 
-<h2 id="Example">Example</h2>
+<h2 id="Examples">Examples</h2>
 
-<p>TBD</p>
+<p>In this example, pressing the button causes a custom <code>DOMException</code> to be thrown, which is then caught and the custom error message shown in an alert.</p>
+
+<h3>HTML</h3>
+
+<pre class="brush: html">
+&lt;button&gt;Trigger DOM Exception&lt;/button&gt;
+</pre>
+
+<h3>JavaScript</h3>
+
+<pre class="brush: js">
+const button = document.querySelector('button');
+
+button.onclick = function() {
+    try {
+        throw new DOMException("Custom DOM Exception");
+    } catch(error) {
+        alert(`Error: ${error.message}`);
+    }
+}
+</pre>
+
+<h3>Result</h3>
+
+<p>{{ EmbedLiveSample('Examples', '100%', 60) }}</p>
 
 <h2 id="Specifications">Specifications</h2>
 

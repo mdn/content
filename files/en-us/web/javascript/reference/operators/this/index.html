@@ -496,7 +496,7 @@ for (var i = 0; i &lt; elements.length; i++) {
     href="/en-US/docs/Web/Guide/Events/Event_handlers">on-event handler</a>, its
   <code>this</code> is set to the DOM element on which the listener is placed:</p>
 
-<pre class="brush:js">&lt;button onclick="alert(this.tagName.toLowerCase());"&gt;
+<pre class="brush: html">&lt;button onclick="alert(this.tagName.toLowerCase());"&gt;
   Show this
 &lt;/button&gt;
 </pre>
@@ -504,7 +504,7 @@ for (var i = 0; i &lt; elements.length; i++) {
 <p>The above alert shows <code>button</code>. Note however that only the outer code has
   its <code>this</code> set this way:</p>
 
-<pre class="brush:js">&lt;button onclick="alert((function() { return this; })());"&gt;
+<pre class="brush: html">&lt;button onclick="alert((function() { return this; })());"&gt;
   Show inner this
 &lt;/button&gt;
 </pre>

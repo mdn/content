@@ -85,7 +85,7 @@ console.log(encodeURIComponent('\uDFFF'));
 
 <p>For example, if a user writes <code>Jack &amp; Jill</code>, the text may get encoded as
   <code>Jack &amp;amp; Jill</code>. Without <code>encodeURIComponent()</code> the
-  ampersand could be interpretted on the server as the start of a new field and jeopardize
+  ampersand could be interpreted on the server as the start of a new field and jeopardize
   the integrity of the data.</p>
 
 <p>For <a href="https://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#application/x-www-form-urlencoded-encoding-algorithm"><code>application/x-www-form-urlencoded</code></a>, spaces are to be replaced by <code>+</code>, so one may wish to follow a <code>encodeURIComponent()</code> replacement with an additional replacement of <code>%20</code> with <code>+</code>.</p>
