@@ -50873,6 +50873,32 @@
       "mfluehr"
     ]
   },
+  "Web/API/HTMLElement/blur": {
+    "modified": "2020-10-15T21:06:46.166Z",
+    "contributors": [
+      "sideshowbarker",
+      "ExE-Boss",
+      "mfluehr",
+      "fscholz",
+      "xrtariq2594",
+      "cvrebert",
+      "teoli",
+      "saneyuki_s",
+      "ajaybhat",
+      "kscarfone",
+      "Sheppy",
+      "tregagnon",
+      "mattbasta",
+      "ethertank",
+      "ziyunfei",
+      "another_sam",
+      "Mgjbot",
+      "Ptak82",
+      "RobG",
+      "Dria",
+      "JesseW"
+    ]
+  },
   "Web/API/HTMLElement/change_event": {
     "modified": "2020-10-31T17:59:03.510Z",
     "contributors": [
@@ -51045,6 +51071,39 @@
       "Dria",
       "Bismarck",
       "GT",
+      "Callek",
+      "JesseW"
+    ]
+  },
+  "Web/API/HTMLElement/focus": {
+    "modified": "2020-10-15T21:06:48.520Z",
+    "contributors": [
+      "ratley",
+      "hinell",
+      "ExE-Boss",
+      "Sheppy",
+      "mfluehr",
+      "sideshowbarker",
+      "fscholz",
+      "EiraGe",
+      "xrtariq2594",
+      "jakobc",
+      "rittmeyer",
+      "swick7",
+      "teoli",
+      "saneyuki_s",
+      "ajaybhat",
+      "kscarfone",
+      "tregagnon",
+      "mattbasta",
+      "ziyunfei",
+      "Nickolay",
+      "another_sam",
+      "Bzbarsky",
+      "Mgjbot",
+      "Gopi",
+      "Ptak82",
+      "Dria",
       "Callek",
       "JesseW"
     ]
@@ -53994,71 +54053,6 @@
       "ethertank",
       "mkato",
       "Brettz9"
-    ]
-  },
-  "Web/API/HTMLOrForeignElement": {
-    "modified": "2020-10-15T22:22:55.787Z",
-    "contributors": [
-      "ExE-Boss"
-    ]
-  },
-  "Web/API/HTMLOrForeignElement/blur": {
-    "modified": "2020-10-15T21:06:46.166Z",
-    "contributors": [
-      "sideshowbarker",
-      "ExE-Boss",
-      "mfluehr",
-      "fscholz",
-      "xrtariq2594",
-      "cvrebert",
-      "teoli",
-      "saneyuki_s",
-      "ajaybhat",
-      "kscarfone",
-      "Sheppy",
-      "tregagnon",
-      "mattbasta",
-      "ethertank",
-      "ziyunfei",
-      "another_sam",
-      "Mgjbot",
-      "Ptak82",
-      "RobG",
-      "Dria",
-      "JesseW"
-    ]
-  },
-  "Web/API/HTMLOrForeignElement/focus": {
-    "modified": "2020-10-15T21:06:48.520Z",
-    "contributors": [
-      "ratley",
-      "hinell",
-      "ExE-Boss",
-      "Sheppy",
-      "mfluehr",
-      "sideshowbarker",
-      "fscholz",
-      "EiraGe",
-      "xrtariq2594",
-      "jakobc",
-      "rittmeyer",
-      "swick7",
-      "teoli",
-      "saneyuki_s",
-      "ajaybhat",
-      "kscarfone",
-      "tregagnon",
-      "mattbasta",
-      "ziyunfei",
-      "Nickolay",
-      "another_sam",
-      "Bzbarsky",
-      "Mgjbot",
-      "Gopi",
-      "Ptak82",
-      "Dria",
-      "Callek",
-      "JesseW"
     ]
   },
   "Web/API/HTMLOutputElement": {

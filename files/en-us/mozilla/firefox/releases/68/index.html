@@ -139,7 +139,7 @@ tags:
  <li>{{domxref("XMLHttpRequest")}} has been updated to no longer accept the non-standard <code>moz-chunked-arraybuffer</code> value for {{domxref("XMLHttpRequest.responseType", "responseType")}}. Code still using it should be updated to <a href="/en-US/docs/Web/API/Streams_API/Using_readable_streams#consuming_a_fetch_as_a_stream">use the Fetch API as a stream</a> ({{bug(1120171)}}).</li>
  <li><code>XMLHttpRequest</code> now outputs a warning to console if you perform a synchronous request while handling an {{domxref("Window.unload_event", "unload")}}, {{domxref("Window.beforeunload_event", "beforeunload")}}, or {{domxref("Window.pagehide_event", "pagehide")}} event ({{bug(980902)}}).</li>
  <li>The {{domxref("Document.cookie", "cookie")}} property has moved from the {{domxref("HTMLDocument")}} interface to the {{domxref("Document")}} interface, allowing documents other than {{Glossary("HTML")}} to use cookies ({{bug(144795)}}).</li>
- <li>The {{domxref("HTMLOrForeignElement/focus")}} and {{domxref("SVGElement.focus()")}} methods now accept an optional object that may contain a boolean <code>preventScroll</code> option specifying whether or not to block the browser from scrolling the newly-focused element into view ({{bug(1374045)}}).</li>
+ <li>The {{domxref("HTMLElement.focus()")}} and {{domxref("SVGElement.focus()")}} methods now accept an optional object that may contain a boolean <code>preventScroll</code> option specifying whether or not to block the browser from scrolling the newly-focused element into view ({{bug(1374045)}}).</li>
 </ul>
 
 <h4 id="DOM_events">DOM events</h4>

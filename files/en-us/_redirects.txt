@@ -1909,7 +1909,7 @@
 /en-US/docs/DOM/element.appendChild	/en-US/docs/Web/API/Node/appendChild
 /en-US/docs/DOM/element.attributes	/en-US/docs/Web/API/Element/attributes
 /en-US/docs/DOM/element.baseURIObject	/en-US/docs/Web/API/Node
-/en-US/docs/DOM/element.blur	/en-US/docs/Web/API/HTMLOrForeignElement/blur
+/en-US/docs/DOM/element.blur	/en-US/docs/Web/API/HTMLElement/blur
 /en-US/docs/DOM/element.childNodes	/en-US/docs/Web/API/Node/childNodes
 /en-US/docs/DOM/element.classList	/en-US/docs/Web/API/Element/classList
 /en-US/docs/DOM/element.className	/en-US/docs/Web/API/Element/className
@@ -1921,7 +1921,7 @@
 /en-US/docs/DOM/element.dir	/en-US/docs/Web/API/HTMLElement/dir
 /en-US/docs/DOM/element.dispatchEvent	/en-US/docs/Web/API/EventTarget/dispatchEvent
 /en-US/docs/DOM/element.firstChild	/en-US/docs/Web/API/Node/firstChild
-/en-US/docs/DOM/element.focus	/en-US/docs/Web/API/HTMLOrForeignElement/focus
+/en-US/docs/DOM/element.focus	/en-US/docs/Web/API/HTMLElement/focus
 /en-US/docs/DOM/element.getAttribute	/en-US/docs/Web/API/Element/getAttribute
 /en-US/docs/DOM/element.getAttributeNS	/en-US/docs/Web/API/Element/getAttributeNS
 /en-US/docs/DOM/element.getAttributeNode	/en-US/docs/Web/API/Element/getAttributeNode
@@ -2419,7 +2419,7 @@
 /en-US/docs/DOM:element.appendChild	/en-US/docs/Web/API/Node/appendChild
 /en-US/docs/DOM:element.attributes	/en-US/docs/Web/API/Element/attributes
 /en-US/docs/DOM:element.baseURIObject	/en-US/docs/Web/API/Node
-/en-US/docs/DOM:element.blur	/en-US/docs/Web/API/HTMLOrForeignElement/blur
+/en-US/docs/DOM:element.blur	/en-US/docs/Web/API/HTMLElement/blur
 /en-US/docs/DOM:element.childNodes	/en-US/docs/Web/API/Node/childNodes
 /en-US/docs/DOM:element.className	/en-US/docs/Web/API/Element/className
 /en-US/docs/DOM:element.click	/en-US/docs/Web/API/HTMLElement/click
@@ -2429,7 +2429,7 @@
 /en-US/docs/DOM:element.dir	/en-US/docs/Web/API/HTMLElement/dir
 /en-US/docs/DOM:element.dispatchEvent	/en-US/docs/Web/API/EventTarget/dispatchEvent
 /en-US/docs/DOM:element.firstChild	/en-US/docs/Web/API/Node/firstChild
-/en-US/docs/DOM:element.focus	/en-US/docs/Web/API/HTMLOrForeignElement/focus
+/en-US/docs/DOM:element.focus	/en-US/docs/Web/API/HTMLElement/focus
 /en-US/docs/DOM:element.getAttribute	/en-US/docs/Web/API/Element/getAttribute
 /en-US/docs/DOM:element.getAttributeNS	/en-US/docs/Web/API/Element/getAttributeNS
 /en-US/docs/DOM:element.getAttributeNode	/en-US/docs/Web/API/Element/getAttributeNode
@@ -3207,7 +3207,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/element.clientWidth	/en-US/docs/Web/API/Element/clientWidth
 /en-US/docs/Document_Object_Model_(DOM)/element.dataset	/en-US/docs/Web/API/HTMLElement/dataset
 /en-US/docs/Document_Object_Model_(DOM)/element.dispatchEvent	/en-US/docs/Web/API/EventTarget/dispatchEvent
-/en-US/docs/Document_Object_Model_(DOM)/element.focus	/en-US/docs/Web/API/HTMLOrForeignElement/focus
+/en-US/docs/Document_Object_Model_(DOM)/element.focus	/en-US/docs/Web/API/HTMLElement/focus
 /en-US/docs/Document_Object_Model_(DOM)/element.getAttribute	/en-US/docs/Web/API/Element/getAttribute
 /en-US/docs/Document_Object_Model_(DOM)/element.getAttributeNS	/en-US/docs/Web/API/Element/getAttributeNS
 /en-US/docs/Document_Object_Model_(DOM)/element.getAttributeNode	/en-US/docs/Web/API/Element/getAttributeNode
@@ -7606,12 +7606,12 @@
 /en-US/docs/Web/API/HTMLDialogElement/returnValue()	/en-US/docs/Web/API/HTMLDialogElement/returnValue
 /en-US/docs/Web/API/HTMLDialogElement/show()	/en-US/docs/Web/API/HTMLDialogElement/show
 /en-US/docs/Web/API/HTMLDialogElement/showModal()	/en-US/docs/Web/API/HTMLDialogElement/showModal
-/en-US/docs/Web/API/HTMLElement.blur	/en-US/docs/Web/API/HTMLOrForeignElement/blur
+/en-US/docs/Web/API/HTMLElement.blur	/en-US/docs/Web/API/HTMLElement/blur
 /en-US/docs/Web/API/HTMLElement.click	/en-US/docs/Web/API/HTMLElement/click
 /en-US/docs/Web/API/HTMLElement.contentEditable	/en-US/docs/Web/API/HTMLElement/contentEditable
 /en-US/docs/Web/API/HTMLElement.dataset	/en-US/docs/Web/API/HTMLElement/dataset
 /en-US/docs/Web/API/HTMLElement.dir	/en-US/docs/Web/API/HTMLElement/dir
-/en-US/docs/Web/API/HTMLElement.focus	/en-US/docs/Web/API/HTMLOrForeignElement/focus
+/en-US/docs/Web/API/HTMLElement.focus	/en-US/docs/Web/API/HTMLElement/focus
 /en-US/docs/Web/API/HTMLElement.forceSpellCheck	/en-US/docs/Web/HTML/Global_attributes/spellcheck
 /en-US/docs/Web/API/HTMLElement.forceSpellCheck()	/en-US/docs/Web/HTML/Global_attributes/spellcheck
 /en-US/docs/Web/API/HTMLElement.isContentEditable	/en-US/docs/Web/API/HTMLElement/isContentEditable
@@ -7628,8 +7628,6 @@
 /en-US/docs/Web/API/HTMLElement.tabIndex	/en-US/docs/Web/API/HTMLElement/tabIndex
 /en-US/docs/Web/API/HTMLElement.title	/en-US/docs/Web/API/HTMLElement/title
 /en-US/docs/Web/API/HTMLElement/HTMLElement.accessKey	/en-US/docs/Web/API/HTMLElement/accessKey
-/en-US/docs/Web/API/HTMLElement/blur	/en-US/docs/Web/API/HTMLOrForeignElement/blur
-/en-US/docs/Web/API/HTMLElement/focus	/en-US/docs/Web/API/HTMLOrForeignElement/focus
 /en-US/docs/Web/API/HTMLElement/forceSpellCheck	/en-US/docs/Web/HTML/Global_attributes/spellcheck
 /en-US/docs/Web/API/HTMLElement/invalid_event	/en-US/docs/Web/API/HTMLInputElement/invalid_event
 /en-US/docs/Web/API/HTMLElement/onabort	/en-US/docs/Web/API/GlobalEventHandlers/onabort
@@ -7709,10 +7707,11 @@
 /en-US/docs/Web/API/HTMLMediaElement/mcs_ended_event	/en-US/docs/Web/API/MediaStreamTrack/ended_event
 /en-US/docs/Web/API/HTMLObjectElement/tabIndex	/en-US/docs/Web/API/HTMLObjectElement/type
 /en-US/docs/Web/API/HTMLOptionElement.Option	/en-US/docs/Web/API/HTMLOptionElement/Option
+/en-US/docs/Web/API/HTMLOrForeignElement/blur	/en-US/docs/Web/API/HTMLElement/blur
 /en-US/docs/Web/API/HTMLOrForeignElement/dataset	/en-US/docs/Web/API/HTMLElement/dataset
+/en-US/docs/Web/API/HTMLOrForeignElement/focus	/en-US/docs/Web/API/HTMLElement/focus
 /en-US/docs/Web/API/HTMLOrForeignElement/nonce	/en-US/docs/Web/API/HTMLElement/nonce
 /en-US/docs/Web/API/HTMLOrForeignElement/tabIndex	/en-US/docs/Web/API/HTMLElement/tabIndex
-/en-US/docs/Web/API/HTMLOrSVGElement	/en-US/docs/Web/API/HTMLOrForeignElement
 /en-US/docs/Web/API/HTMLSelectElement.add	/en-US/docs/Web/API/HTMLSelectElement/add
 /en-US/docs/Web/API/HTMLSelectElement.checkValidity	/en-US/docs/Web/API/HTMLSelectElement/checkValidity
 /en-US/docs/Web/API/HTMLSelectElement.item	/en-US/docs/Web/API/HTMLSelectElement/item
@@ -9136,7 +9135,7 @@
 /en-US/docs/Web/API/dummyDocument.scripts	/en-US/docs/Web/API/Document/scripts
 /en-US/docs/Web/API/dummydocument.querySelector	/en-US/docs/Web/API/Document/querySelector
 /en-US/docs/Web/API/element.accessKey	/en-US/docs/Web/API/HTMLElement/accessKey
-/en-US/docs/Web/API/element.blur	/en-US/docs/Web/API/HTMLOrForeignElement/blur
+/en-US/docs/Web/API/element.blur	/en-US/docs/Web/API/HTMLElement/blur
 /en-US/docs/Web/API/element.childNodes	/en-US/docs/Web/API/Node/childNodes
 /en-US/docs/Web/API/element.classList	/en-US/docs/Web/API/Element/classList
 /en-US/docs/Web/API/element.className	/en-US/docs/Web/API/Element/className
@@ -9145,7 +9144,7 @@
 /en-US/docs/Web/API/element.clientWidth	/en-US/docs/Web/API/Element/clientWidth
 /en-US/docs/Web/API/element.dataset	/en-US/docs/Web/API/HTMLElement/dataset
 /en-US/docs/Web/API/element.dir	/en-US/docs/Web/API/HTMLElement/dir
-/en-US/docs/Web/API/element.focus	/en-US/docs/Web/API/HTMLOrForeignElement/focus
+/en-US/docs/Web/API/element.focus	/en-US/docs/Web/API/HTMLElement/focus
 /en-US/docs/Web/API/element.getAttribute	/en-US/docs/Web/API/Element/getAttribute
 /en-US/docs/Web/API/element.getAttributeNS	/en-US/docs/Web/API/Element/getAttributeNS
 /en-US/docs/Web/API/element.getAttributeNode	/en-US/docs/Web/API/Element/getAttributeNode
@@ -11757,7 +11756,7 @@
 /en-US/docs/enctype	/en-US/docs/Web/API/HTMLFormElement/enctype
 /en-US/docs/eventPhase	/en-US/docs/Web/API/Event/eventPhase
 /en-US/docs/firstChild	/en-US/docs/Web/API/Node/firstChild
-/en-US/docs/focus	/en-US/docs/Web/API/HTMLOrForeignElement/focus
+/en-US/docs/focus	/en-US/docs/Web/API/HTMLElement/focus
 /en-US/docs/getAttribute	/en-US/docs/Web/API/Element/getAttribute
 /en-US/docs/getAttributeNS	/en-US/docs/Web/API/Element/getAttributeNS
 /en-US/docs/getAttributeNode	/en-US/docs/Web/API/Element/getAttributeNode
