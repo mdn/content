@@ -12,8 +12,8 @@ on:
   push:
     branches: [main]
 jobs:
-  if: ${{ github.repository == 'mdn/content' }}  # Won’t be run from forks
   ping:
+    if: github.repository == 'mdn/content'  # Won’t be run from forks
     runs-on: ubuntu-latest
     steps:
       - name: Ping w3c/mdn-spec-links
