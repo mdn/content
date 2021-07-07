@@ -1,6 +1,6 @@
 ---
 title: HTMLElement.focus()
-slug: Web/API/HTMLOrForeignElement/focus
+slug: Web/API/HTMLElement/focus
 tags:
   - API
   - Focus
@@ -11,17 +11,17 @@ tags:
   - Scroll
   - View
   - activate
+browser-compat: api.HTMLElement.focus
 ---
 <div>{{ APIRef("HTML DOM") }}</div>
 
-<p><span class="seoSummary">The <strong><code>HTMLElement.focus()</code></strong> method
+<p>The <strong><code>HTMLElement.focus()</code></strong> method
 		sets focus on the specified element, if it can be focused. The focused element is
-		the element which will receive keyboard and similar events by default.</span></p>
+		the element which will receive keyboard and similar events by default.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-	class="brush: js"><em>element</em>.focus(<em>options</em>); // Object parameter</pre>
+<pre class="brush: js"><em>element</em>.focus(<em>options</em>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -113,42 +113,7 @@ focusNoScrollMethod = function getFocusWithoutScrolling() {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName('HTML WHATWG', 'editing.html#dom-focus', 'focus')}}</td>
-			<td>{{Spec2('HTML WHATWG')}}</td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>{{SpecName('HTML5.1', 'editing.html#focus()-0', 'focus')}}</td>
-			<td>{{Spec2('HTML5.1')}}</td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>{{SpecName('HTML5 W3C', 'editing.html#dom-focus', 'focus')}}</td>
-			<td>{{Spec2('HTML5 W3C')}}</td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>{{SpecName('DOM2 HTML', 'html.html#ID-32130014', 'focus')}}</td>
-			<td>{{Spec2('DOM2 HTML')}}</td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>{{SpecName('DOM1', 'level-one-html.html#method-focus', 'focus')}}</td>
-			<td>{{Spec2('DOM1')}}</td>
-			<td></td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Notes">Notes</h2>
 
@@ -167,13 +132,11 @@ focusNoScrollMethod = function getFocusWithoutScrolling() {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.HTMLElement.focus")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-	<li>DOM method {{domxref("HTMLOrForeignElement.blur")}} to remove the focus from an element.
-	</li>
-	<li>{{ domxref("document.activeElement") }} to know which is the currently focused
-		element.</li>
+	<li>{{domxref("HTMLElement.blur")}} to remove the focus from an element.</li>
+	<li>{{domxref("document.activeElement")}} to know which is the currently focused element.</li>
 </ul>
