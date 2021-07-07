@@ -8993,16 +8993,7 @@
 /en-US/docs/Web/API/WorkerGlobalScope/setInterval	/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval
 /en-US/docs/Web/API/WorkerGlobalScope/setTimeout	/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout
 /en-US/docs/Web/API/WorkerLocation.hash	/en-US/docs/Web/API/WorkerLocation/hash
-/en-US/docs/Web/API/WorkerNavigator/appCodeName	/en-US/docs/Web/API/Navigator/appCodeName
-/en-US/docs/Web/API/WorkerNavigator/appName	/en-US/docs/Web/API/Navigator/appName
-/en-US/docs/Web/API/WorkerNavigator/appVersion	/en-US/docs/Web/API/Navigator/appVersion
-/en-US/docs/Web/API/WorkerNavigator/language	/en-US/docs/Web/API/Navigator/language
-/en-US/docs/Web/API/WorkerNavigator/languages	/en-US/docs/Web/API/Navigator/languages
-/en-US/docs/Web/API/WorkerNavigator/onLine	/en-US/docs/Web/API/Navigator/onLine
-/en-US/docs/Web/API/WorkerNavigator/platform	/en-US/docs/Web/API/Navigator/platform
-/en-US/docs/Web/API/WorkerNavigator/product	/en-US/docs/Web/API/Navigator/product
 /en-US/docs/Web/API/WorkerNavigator/taintEnabled	/en-US/docs/Web/API/Navigator/taintEnabled
-/en-US/docs/Web/API/WorkerNavigator/userAgent	/en-US/docs/Web/API/Navigator/userAgent
 /en-US/docs/Web/API/WritableStreamDefaultWriter/WritableStreamDefaultWriter.closed	/en-US/docs/Web/API/WritableStreamDefaultWriter/closed
 /en-US/docs/Web/API/XDomainRequest.abort	/en-US/docs/Web/API/XDomainRequest/abort
 /en-US/docs/Web/API/XDomainRequest.onerror	/en-US/docs/Web/API/XDomainRequest/onerror
