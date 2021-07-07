@@ -67808,14 +67808,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/PaymentDetailsBase": {
-    "modified": "2020-10-15T22:06:00.262Z",
-    "contributors": [
-      "sideshowbarker",
-      "ExE-Boss",
-      "Sheppy"
-    ]
-  },
   "Web/API/PaymentDetailsUpdate": {
     "modified": "2020-10-15T22:05:59.557Z",
     "contributors": [
