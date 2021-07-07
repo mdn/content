@@ -28124,25 +28124,6 @@
       "chrisdavidmills"
     ]
   },
-  "Web/API/AudioContextOptions": {
-    "modified": "2020-10-15T22:05:16.322Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
-  "Web/API/AudioContextOptions/latencyHint": {
-    "modified": "2020-10-15T22:05:21.912Z",
-    "contributors": [
-      "Melatonin64",
-      "Sheppy"
-    ]
-  },
-  "Web/API/AudioContextOptions/sampleRate": {
-    "modified": "2020-10-15T22:05:22.748Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
   "Web/API/AudioDestinationNode": {
     "modified": "2020-10-15T21:24:14.807Z",
     "contributors": [
