@@ -412,18 +412,20 @@ console.log(myArray);
 &lt;/p&gt;
 &lt;form action="#"&gt;
   &lt;input id="phone"&gt;
-    &lt;button onclick="testInfo(document.getElementById('phone'));"&gt;Check&lt;/button&gt;
-&lt;/form&gt;</pre>
+    &lt;button onclick="testInfo(document.querySelector('#phone'));"&gt;Check&lt;/button&gt;
+&lt;/form&gt;
+&lt;p id=&quot;out&quot;&gt;&lt;/p&gt;</pre>
 
 <h4 id="JavaScript">JavaScript</h4>
 
 <pre class="brush: js">var re = /(?:\d{3}|\(\d{3}\))([-\/\.])\d{3}\1\d{4}/;
 function testInfo(phoneInput) {
   var OK = re.exec(phoneInput.value);
+  var out = document.querySelector('#out');
   if (!OK) {
-    console.error(phoneInput.value + ' isn\'t a phone number with area code!');
+    out.textContent = `${phoneInput.value} isn't a phone number with area code!`;
   } else {
-    console.log('Thanks, your phone number is ' + OK[0]);
+    out.textContent = `Thanks, your phone number is ${OK[0]}`;
   }
 } </pre>
 
