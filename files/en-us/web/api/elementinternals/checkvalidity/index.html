@@ -1,0 +1,55 @@
+---
+title: ElementInternals.checkValidity()
+slug: Web/API/ElementInternals/checkValidity
+tags:
+  - API
+  - Method
+  - Reference
+  - checkValidity
+  - ElementInternals
+browser-compat: api.ElementInternals.checkValidity
+---
+<div>{{DefaultAPISidebar("")}}</div>
+
+<p class="summary">The <strong><code>checkValidity()</code></strong> method of the {{domxref("ElementInternals")}} interface checks if the element meets any <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a> rules applied to it.</p>
+
+<p>If <code>checkValidity</code> returns <code>false</code> then a cancelable <a href="/en-US/docs/Web/API/HTMLInputElement/invalid_event">invalid event</a> is fired on the element.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js">ElementInternals.checkValidity();</pre>
+
+<h3 id="Parameters">Parameters</h3>
+
+<p>None.</p>
+
+<h3 id="Returns">Return value</h3>
+
+<p>A {{jsxref("Boolean")}}, <code>true</code> if the element meets all validation constraints.</p>
+
+<h3 id="Exceptions">Exceptions</h3>
+
+<dl>
+  <dt>{{domxref("DOMException")}} <code>NotSupportedError</code></dt>
+  <dd>Thrown if the element does not have its <code>formAssociated</code> property set to <code>true</code>.</dd>
+</dl>
+
+<h2 id="Examples">Examples</h2>
+
+<p>In the following example {{domxref("ElementInternals.setValidity()")}} is used to indicate that the element does not meet validation rules. Calling <code>checkValidity()</code> returns <code>false</code>. After calling <code>setValidity</code> again, this time indicating that all rules are marked false, <code>checkValidity()</code> returns <code>true</code>.</p>
+
+<pre class="brush: js">let element = document.getElementById("join-checkbox");
+element.internals_.setValidity({'valueMissing':true},"my message");
+console.log(element.internals_.checkValidity()); // false
+element.internals_.setValidity({});
+console.log(element.internals_.checkValidity()); // true</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<p>{{Specifications}}</p>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>
+
+

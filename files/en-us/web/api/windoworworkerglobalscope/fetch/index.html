@@ -158,7 +158,7 @@ browser-compat: api.WindowOrWorkerGlobalScope.fetch
     href="https://mdn.github.io/fetch-examples/fetch-request/">Fetch Request live</a>) we
   create a new {{domxref("Request")}} object using the relevant constructor, then fetch it
   using a <code>fetch()</code> call. Since we are fetching an image, we run
-  {{domxref("Body.blob()")}} on the response to give it the proper MIME type so it will be
+  {{domxref("Response.blob()")}} on the response to give it the proper MIME type so it will be
   handled properly, then create an Object URL of it and display it in an
   {{htmlelement("img")}} element.</p>
 

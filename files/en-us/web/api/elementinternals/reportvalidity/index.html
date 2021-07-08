@@ -1,0 +1,62 @@
+---
+title: ElementInternals.reportValidity()
+slug: Web/API/ElementInternals/reportValidity
+tags:
+  - API
+  - Method
+  - Reference
+  - reportValidity
+  - ElementInternals
+browser-compat: api.ElementInternals.reportValidity
+---
+<div>{{DefaultAPISidebar("DOM")}}</div>
+
+<p class="summary">The <strong><code>reportValidity()</code></strong> method of the {{domxref("ElementInternals")}} interface checks if the element meets any <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a> rules applied to it.</p>
+
+<p>If <code>reportValidity</code> returns <code>false</code> then a cancelable <a href="/en-US/docs/Web/API/HTMLInputElement/invalid_event">invalid event</a> is fired on the element.</p>
+
+<p>This method behaves in a similar way to {{domxref("ElementInternals.checkValidity()")}}, however it additionally sends the value of {{domxref("ElementInternals.validationMessage")}} to the user agent for display.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js">ElementInternals.reportValidity();</pre>
+
+<h3 id="Parameters">Parameters</h3>
+
+<p>None.</p>
+
+<h3 id="Returns">Return value</h3>
+
+<p>A {{jsxref("Boolean")}}, <code>true</code> if the element meets all validation constraints.</p>
+
+<h3 id="Exceptions">Exceptions</h3>
+
+<dl>
+  <dt>{{domxref("DOMException")}} <code>NotSupportedError</code></dt>
+  <dd>Thrown if the element does not have its <code>formAssociated</code> property set to <code>true</code>.</dd>
+</dl>
+
+<h2 id="Examples">Examples</h2>
+
+
+<p>In the following example {{domxref("ElementInternals.setValidity()")}} is used to indicate that the element does not meet validation rules. Calling <code>reportValidity()</code> returns <code>false</code>, and the value "my message" is sent to the user agent for display.</p>
+
+<p>After calling <code>setValidity</code> again, this time indicating that all rules are marked false, <code>reportValidity()</code> returns <code>true</code>.</p>
+
+<pre class="brush: js">let element = document.getElementById("join-checkbox");
+element.internals_.setValidity({'valueMissing':true},"my message");
+console.log(element.internals_.reportValidity()); // false
+element.internals_.setValidity({});
+console.log(element.internals_.reportValidity()); // true</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<p>{{Specifications}}</p>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+
+<p>{{Compat}}</p>
+
+

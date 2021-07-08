@@ -18,7 +18,7 @@ browser-compat: api.HTMLElement
 
 <h2 id="Properties">Properties</h2>
 
-<p><em>Inherits properties from its parent, {{DOMxRef("Element")}}, and implements those from {{DOMxRef("DocumentAndElementEventHandlers")}}, {{DOMxRef("GlobalEventHandlers")}}, {{DOMxRef("HTMLOrForeignElement")}} and {{DOMxRef("TouchEventHandlers")}}.</em></p>
+<p><em>Inherits properties from its parent, {{DOMxRef("Element")}}, and implements those from {{DOMxRef("DocumentAndElementEventHandlers")}}, {{DOMxRef("GlobalEventHandlers")}}, and {{DOMxRef("TouchEventHandlers")}}.</em></p>
 
 <dl>
  <dt>{{DOMxRef("HTMLElement.accessKey")}}</dt>
@@ -33,7 +33,7 @@ browser-compat: api.HTMLElement
  <dd>Returns a {{DOMxRef("Boolean")}} that indicates whether or not the content of the element can be edited.</dd>
  <dt>{{DOMxRef("HTMLElement.contextMenu")}} {{Deprecated_Inline}}</dt>
  <dd>Is a {{DOMxRef("HTMLMenuElement")}} representing the contextual menu associated with the element. It may be <code>null</code>.</dd>
- <dt>{{DOMxRef("HTMLOrForeignElement.dataset")}} {{ReadOnlyInline}}</dt>
+ <dt>{{DOMxRef("HTMLElement.dataset")}} {{ReadOnlyInline}}</dt>
  <dd>Returns a {{DOMxRef("DOMStringMap")}} with which script can read and write the element's <a href="/en-US/docs/Learn/HTML/Howto/Use_data_attributes">custom data attributes</a> (<code>data-*</code>) .</dd>
  <dt>{{DOMxRef("HTMLElement.dir")}}</dt>
  <dd>Is a {{DOMxRef("DOMString")}}, reflecting the <code>dir</code> global attribute, representing the directionality of the element. Possible values are <code>"ltr"</code>, <code>"rtl"</code>, and <code>"auto"</code>.</dd>
@@ -63,7 +63,7 @@ browser-compat: api.HTMLElement
  <dd>Is a {{DOMxRef("DOMString")}} representing the language of an element's attributes, text, and element contents.</dd>
  <dt>{{DOMxRef("HTMLElement.noModule")}}</dt>
  <dd>Is a {{JSxRef("Boolean")}} indicating whether an import script can be executed in user agents that support module scripts.</dd>
- <dt>{{DOMxRef("HTMLOrForeignElement.nonce")}}</dt>
+ <dt>{{DOMxRef("HTMLElement.nonce")}}</dt>
  <dd>Returns the cryptographic number used once that is used by Content Security Policy to determine whether a given fetch will be allowed to proceed.</dd>
  <dt>{{DOMxRef("HTMLElement.offsetHeight")}} {{Experimental_Inline}}{{ReadOnlyInline}}</dt>
  <dd>Returns a <code>double</code> containing the height of an element, relative to the layout.</dd>
@@ -81,7 +81,7 @@ browser-compat: api.HTMLElement
  <dd>Is a {{JSxRef("Boolean")}} that controls <a href="/en-US/docs/Web/HTML/Global_attributes/spellcheck">spell-checking</a>. It is present on all HTML elements, though it doesn't have an effect on all of them.</dd>
  <dt>{{DOMxRef("HTMLElement.style")}}</dt>
  <dd>Is a {{DOMxRef("CSSStyleDeclaration")}} representing the declarations of the element's {{htmlattrxref("style")}} attribute.</dd>
- <dt>{{DOMxRef("HTMLOrForeignElement.tabIndex")}}</dt>
+ <dt>{{DOMxRef("HTMLElement.tabIndex")}}</dt>
  <dd>Is a <code>long</code> representing the position of the element in the tabbing order.</dd>
  <dt>{{DOMxRef("HTMLElement.title")}}</dt>
  <dd>Is a {{DOMxRef("DOMString")}} containing the text that appears in a popup box when mouse is over the element.</dd>
@@ -116,16 +116,16 @@ browser-compat: api.HTMLElement
 
 <h2 id="Methods">Methods</h2>
 
-<p><em>Inherits methods from its parent, {{DOMxRef("Element")}}, and implements those from {{DOMxRef("DocumentAndElementEventHandlers")}}, {{DOMxRef("GlobalEventHandlers")}}, {{DOMxRef("HTMLOrForeignElement")}} and {{DOMxRef("TouchEventHandlers")}}.</em></p>
+<p><em>Inherits methods from its parent, {{DOMxRef("Element")}}, and implements those from {{DOMxRef("DocumentAndElementEventHandlers")}}, {{DOMxRef("GlobalEventHandlers")}}, and {{DOMxRef("TouchEventHandlers")}}.</em></p>
 
 <dl>
  <dt>{{DOMxRef("HTMLElement.attachInternals()")}} {{Experimental_Inline}}</dt>
  <dd>Attaches an {{DOMxRef("ElementInternals")}} instance to the custom element.</dd>
- <dt>{{DOMxRef("HTMLOrForeignElement.blur()")}}</dt>
+ <dt>{{DOMxRef("HTMLElement.blur()")}}</dt>
  <dd>Removes keyboard focus from the currently focused element.</dd>
  <dt>{{DOMxRef("HTMLElement.click()")}}</dt>
  <dd>Sends a mouse click event to the element.</dd>
- <dt>{{DOMxRef("HTMLOrForeignElement.focus()")}}</dt>
+ <dt>{{DOMxRef("HTMLElement.focus()")}}</dt>
  <dd>Makes the element the current keyboard focus.</dd>
 </dl>
 

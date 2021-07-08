@@ -53,7 +53,7 @@ inputForm.onsubmit = function(event) {
   synth.speak(utterThis);
 
   utterThis.onpause = function(event) {
-    console.log('Speech paused after ' + event.elapsedTime + ' milliseconds.');
+    console.log('Speech paused after ' + event.elapsedTime + ' seconds.');
   }
 
   inputTxt.blur();

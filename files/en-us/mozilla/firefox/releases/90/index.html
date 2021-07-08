@@ -40,6 +40,7 @@ tags:
 <ul>
   <li><a href="/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields">Private class static and instance fields and methods</a> are now supported by default ({{bug(1708235)}} and {{bug(1708236)}}).</li>
   <li>Custom date/time formats specified as options to the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat"><code>Intl.DateTimeFormat()</code> constructor</a> can now include <code>dayPeriod</code> — a value indicating that the approximate time of day (e.g. "in the morning", "at night", etc.) should be included as a <code>narrow</code>, <code>short</code>, or <code>long</code> string ({{bug(1645115)}}).</li>
+  <li>The relative indexing method <code>at()</code> has been added to the <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></code> and <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray">TypedArray</a></code> global objects. ({{bug(1681371)}})</li>
  </ul>
 
 <h4 id="removals_js">Removals</h4>
@@ -66,6 +67,7 @@ tags:
 
 <ul>
   <li>Support was added for the deprecated {{DOMxref("WheelEvent")}} properties: <code>WheelEvent.wheelDelta</code>, <code>WheelEvent.wheelDeltaX</code>, and <code>WheelEvent.wheelDeltaY</code>. This allows Firefox to work with a small subset of pages that were broken by recent compatibility improvements to <code>WheelEvent</code> ({{bug(1708829)}}).</li>
+  <li>Support for the <code>matrix</code> protocol has been added and can now be passed into the {{domxref('Navigator.registerProtocolHandler()')}} method as a valid scheme.</li>
 </ul>
 
 <h4 id="Media_WebRTC_and_Web_Audio">Media, WebRTC, and Web Audio</h4>
@@ -81,6 +83,8 @@ tags:
 <h4 id="removals_webdriver">Removals</h4>
 
 <h2 id="Changes_for_add-on_developers">Changes for add-on developers</h2>
+
+<li>The <code>matrix</code> URI scheme is now supported and can be defined as a protocol within the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/protocol_handlers"><code>protocol_handlers</code></a> key in an extensions <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json"><code>manifest.json</code></a></li>
 
 <h4 id="removals_webext">Removals</h4>
 

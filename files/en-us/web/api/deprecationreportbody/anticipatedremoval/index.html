@@ -1,0 +1,44 @@
+---
+title: DeprecationReportBody.anticipatedRemoval
+slug: Web/API/DeprecationReportBody/anticipatedRemoval
+tags:
+  - API
+  - Property
+  - Reference
+  - anticipatedRemoval
+  - DeprecationReportBody
+browser-compat: api.DeprecationReportBody.anticipatedRemoval
+---
+<div>{{APIRef("Reporting API")}}</div>
+
+<p class="summary">The <strong><code>anticipatedRemoval</code></strong> read-only property of the {{domxref("DeprecationReportBody")}} interface returns the date that the browser version which removes the feature will ship. This value can be used to prioritize warnings. If this property returns <code>null</code> because the date is unknown, then the deprecation should be considered low priority.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js">let anticipatedRemoval = DeprecationReportBody.anticipatedRemoval;</pre>
+
+<h3>Value</h3>
+<p>A {{jsxref("date")}} object, or <code>null</code> if the date is not known.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<p>In this example we create a new {{domxref("ReportingObserver")}} to observe deprecation reports, then print the value of <code>anticipatedRemoval</code> to the console.</p>
+
+<pre class="brush: js">let options = {
+  types: ['deprecation'],
+  buffered: true
+}
+
+let observer = new ReportingObserver(function(reports, observer) {
+  let firstReport = reports[0];
+  console.log(firstReport.type); // deprecation
+  console.log(firstReport.body.anticipatedRemoval);
+}, options);</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<p>{{Specifications}}</p>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>

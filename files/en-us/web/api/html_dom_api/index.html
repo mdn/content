@@ -405,7 +405,7 @@ nameField.addEventListener("input", event =&gt; {
 
 <p>This code uses the {{domxref("Document")}} interface's {{domxref("Document.getElementById", "getElementById()")}} method to get the DOM object representing the {{HTMLElement("input")}} elements whose IDs are <code>userName</code> and <code>sendButton</code>.  With these, we can access the properties and methods that provide information about and grant control over these elements.</p>
 
-<p>The {{domxref("HTMLInputElement")}} object for the "Send" button's {{domxref("HTMLInputElement.disabled", "disabled")}} property is set to <code>true</code>, which disables the "Send" button so it can't be clicked. In addition, the user name input field is made the active focus by calling the {{domxref("HTMLOrForeignElement/focus", "focus()")}} method it inherits from {{domxref("HTMLElement")}}.</p>
+<p>The {{domxref("HTMLInputElement")}} object for the "Send" button's {{domxref("HTMLInputElement.disabled", "disabled")}} property is set to <code>true</code>, which disables the "Send" button so it can't be clicked. In addition, the user name input field is made the active focus by calling the {{domxref("HTMLElement/focus", "focus()")}} method it inherits from {{domxref("HTMLElement")}}.</p>
 
 <p>Then {{domxref("EventTarget.addEventListener", "addEventListener()")}} is called to add a handler for the <code>input</code> event to the user name input. This code looks at the length of the current value of the input; if it's zero, then the "Send" button is disabled if it's not already disabled. Otherwise, the code ensures that the button is enabled.</p>
 

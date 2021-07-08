@@ -1,0 +1,37 @@
+---
+title: RemotePlayback.ondisconnect
+slug: Web/API/RemotePlayback/ondisconnect
+tags:
+  - API
+  - Property
+  - Reference
+  - ondisconnect
+  - RemotePlayback
+browser-compat: api.RemotePlayback.ondisconnect
+---
+<div>{{DefaultAPISidebar("Remote Playback API")}}</div>
+
+<p class="summary">The <strong><code>ondisconnect</code></strong> EventHandler of the {{domxref("RemotePlayback")}} interface is an {{domxref("EventHandler")}} that processes the events fired when the user agent disconnects from the remote device.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js">RemotePlayback.ondisconnect = function;
+RemotePlayback.addEventListener('<em>disconnect</em>', function);</pre>
+
+<h2>Example</h2>
+
+<p>In the following example the value of {{domxref("RemotePlayback.state")}} is printed to the console when the user agent disconnects from the remote device.</p>
+
+<pre class="brush: js">RemotePlayback.disconnect = function() {
+  console.log(RemotePlayback.state);
+}</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<p>{{Specifications}}</p>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>
+
+

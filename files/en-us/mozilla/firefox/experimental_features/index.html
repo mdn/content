@@ -549,42 +549,6 @@ tags:
 
 <h2 id="JavaScript">JavaScript</h2>
 
-<h3 id="Relative_indexing_method">Relative indexing method</h3>
-
-<p>The relative indexing method <code>at()</code> has been added to the <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></code> and <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray">TypedArray</a></code> global objects. Passing a positive integer to the method returns the item or character at that position, and it also accepts negative integers, which count back from the end of the array or string. For example, <code>1</code> would return the second item or character and <code>-1</code> would return the last item or character. See <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/at">Array.prototype.at()</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/at">String.prototype.at()</a></code> and <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/at">TypedArray.prototype.at()</a></code> for more details.</p>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col" style="vertical-align: bottom;">Release channel</th>
-   <th scope="col" style="vertical-align: bottom;">Version added</th>
-   <th scope="col" style="vertical-align: bottom;">Enabled by default?</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <th scope="row">Nightly</th>
-   <td>85</td>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Developer Edition</th>
-   <td>85</td>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Beta</th>
-   <td>85</td>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Release</th>
-   <td>85</td>
-   <td>No</td>
-  </tr>
- </tbody>
-</table>
-
 
 <h2 id="APIs">APIs</h2>
 
@@ -874,6 +838,46 @@ tags:
   <tr>
    <th scope="row">Preference name</th>
    <th colspan="2"><code><strong>dom.events.asyncClipboard.clipboardItem</strong></code></th>
+  </tr>
+ </tbody>
+</table>
+
+<h4 id="clipboardread">ClipboardRead</h4>
+
+<p> The <a href="/en-US/docs/Web/API/Clipboard/read">Clipboard.read()</a> method of the {{domxref('Clipboard')}} interface is now available under the <code>dom.events.asyncClipboard.read</code> preference,  when previously it was under <code>dom.events.asyncClipboard.clipboardItem</code>. (See ({{bug(1701512)}}) for more details.) </p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col" style="vertical-align: bottom;">Release channel</th>
+   <th scope="col" style="vertical-align: bottom;">Version added</th>
+   <th scope="col" style="vertical-align: bottom;">Enabled by default?</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th scope="row">Nightly</th>
+   <td>90</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Developer Edition</th>
+   <td>90</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Beta</th>
+   <td>90</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Release</th>
+   <td>90</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Preference name</th>
+   <th colspan="2"><code>dom.events.asyncClipboard.read</code> </th>
   </tr>
  </tbody>
 </table>
