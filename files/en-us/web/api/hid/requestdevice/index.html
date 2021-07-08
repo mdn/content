@@ -41,7 +41,7 @@ browser-compat: api.HID.requestDevice
 
 <div class="notecard note">
   <h4>Note:</h4>
-  <p>The device filters are used to narrow the list of devices presented to the user. If no filters are present, all connected devices are shown. When one of more filters are included, a device is included if any filter matches. To match a filter, all of the rules included in that filter must match.</p>
+  <p>The device filters are used to narrow the list of devices presented to the user. If no filters are present, all connected devices are shown. When one or more filters are included, a device is included if any filter matches. To match a filter, all of the rules included in that filter must match.</p>
 </div>
 
 <h3 id="Returns">Return value</h3>
@@ -57,7 +57,7 @@ browser-compat: api.HID.requestDevice
 
 <h2 id="Examples">Examples</h2>
 
-<h3>Matching a device will all four filter rules</h3>
+<h3>Matching a device with all four filter rules</h3>
 
 <p>In the following example a HID device is requested that has a vendor ID of <code>0xABCD</code>, product ID of <code>0x1234</code>, usage page <code>0x0C</code> and usage ID <code>0x01</code>. Only devices that match all of these rules will be shown.</p>
 
@@ -89,7 +89,7 @@ browser-compat: api.HID.requestDevice
 
   <h3>An example with two filters</h3>
 
-  <p>This next example includes two filters, devices will be shown if they match either of these filters.</p>
+  <p>This next example includes two filters. Devices will be shown if they match either of these filters.</p>
 
   <pre class="brush: js">// Filter on devices with the Nintendo Switch Joy-Con USB Vendor/Product IDs.
   const filters = [
