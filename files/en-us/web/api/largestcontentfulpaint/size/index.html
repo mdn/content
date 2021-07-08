@@ -9,44 +9,43 @@ tags:
   - LargestContentfulPaint
 browser-compat: api.LargestContentfulPaint.size
 ---
-<div>{{DefaultAPISidebar("")}}</div>
+<div>{{DefaultAPISidebar("Largest Contentful Paint API")}}</div>
 
-<p class="summary">The <strong><code>size</code></strong>  property of the {{domxref("LargestContentfulPaint")}} interface  </p>
+<p class="summary">The <strong><code>size</code></strong> read-only property of the {{domxref("LargestContentfulPaint")}} interface returns the intrinsic size of the element that is the largest contentful paint.</p>
+
+<p>The <code>size</code> of the element is the <code>width</code> * <code>height</code> of the {{domxref("DOMRectReadOnly","rectangle")}} that this element creates on the screen.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js">let asize = LargestContentfulPaint.size;
-// Remove this one if the property is read only.
-LargestContentfulPaint.size = a;
-</pre>
+<pre class="brush: js">let size = LargestContentfulPaint.size;</pre>
 
 <h3>Value</h3>
-<p></p>
+<p>An integer representing the width * height of the element.</p>
 
 <h2 id="Examples">Examples</h2>
 
-<p>Fill in a simple example that nicely shows a typical usage of the API, then perhaps some more complex examples (see our guide on how to add <a href="/en-US/docs/MDN/Contribute/Structures/Code_examples">code examples</a> for more information).</p>
+<p>The following example gets the <code>LargestContentfulPaint</code> object and prints the value of <code>size</code> to the console.</p>
 
-<p>This text should be replaced with a brief description of what the example demonstrates.</p>
+<pre class="brush: js">try {
+  let lcp;
 
-<pre class="brush: js">
-my code block</pre>
+  const po = new PerformanceObserver((entryList) => {
+    const entries = entryList.getEntries();
+    const lastEntry = entries[entries.length - 1];
+    console.log(lastEntry.size);
+  });
 
-<p>And/or include a list of links to useful code samples that live elsewhere:</p>
+  po.observe({type: 'largest-contentful-paint', buffered: true});
 
-<ul>
-	<li>x</li>
-	<li>y</li>
-	<li>z</li>
-</ul>
+} catch (e) {
+  // Do nothing if the browser doesn't support this API.
+}</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
 <p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
 
 <p>{{Compat}}</p>
 
