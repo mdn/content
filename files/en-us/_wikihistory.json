@@ -28124,25 +28124,6 @@
       "chrisdavidmills"
     ]
   },
-  "Web/API/AudioContextOptions": {
-    "modified": "2020-10-15T22:05:16.322Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
-  "Web/API/AudioContextOptions/latencyHint": {
-    "modified": "2020-10-15T22:05:21.912Z",
-    "contributors": [
-      "Melatonin64",
-      "Sheppy"
-    ]
-  },
-  "Web/API/AudioContextOptions/sampleRate": {
-    "modified": "2020-10-15T22:05:22.748Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
   "Web/API/AudioDestinationNode": {
     "modified": "2020-10-15T21:24:14.807Z",
     "contributors": [
@@ -50873,6 +50854,32 @@
       "mfluehr"
     ]
   },
+  "Web/API/HTMLElement/blur": {
+    "modified": "2020-10-15T21:06:46.166Z",
+    "contributors": [
+      "sideshowbarker",
+      "ExE-Boss",
+      "mfluehr",
+      "fscholz",
+      "xrtariq2594",
+      "cvrebert",
+      "teoli",
+      "saneyuki_s",
+      "ajaybhat",
+      "kscarfone",
+      "Sheppy",
+      "tregagnon",
+      "mattbasta",
+      "ethertank",
+      "ziyunfei",
+      "another_sam",
+      "Mgjbot",
+      "Ptak82",
+      "RobG",
+      "Dria",
+      "JesseW"
+    ]
+  },
   "Web/API/HTMLElement/change_event": {
     "modified": "2020-10-31T17:59:03.510Z",
     "contributors": [
@@ -51045,6 +51052,39 @@
       "Dria",
       "Bismarck",
       "GT",
+      "Callek",
+      "JesseW"
+    ]
+  },
+  "Web/API/HTMLElement/focus": {
+    "modified": "2020-10-15T21:06:48.520Z",
+    "contributors": [
+      "ratley",
+      "hinell",
+      "ExE-Boss",
+      "Sheppy",
+      "mfluehr",
+      "sideshowbarker",
+      "fscholz",
+      "EiraGe",
+      "xrtariq2594",
+      "jakobc",
+      "rittmeyer",
+      "swick7",
+      "teoli",
+      "saneyuki_s",
+      "ajaybhat",
+      "kscarfone",
+      "tregagnon",
+      "mattbasta",
+      "ziyunfei",
+      "Nickolay",
+      "another_sam",
+      "Bzbarsky",
+      "Mgjbot",
+      "Gopi",
+      "Ptak82",
+      "Dria",
       "Callek",
       "JesseW"
     ]
@@ -53994,71 +54034,6 @@
       "ethertank",
       "mkato",
       "Brettz9"
-    ]
-  },
-  "Web/API/HTMLOrForeignElement": {
-    "modified": "2020-10-15T22:22:55.787Z",
-    "contributors": [
-      "ExE-Boss"
-    ]
-  },
-  "Web/API/HTMLOrForeignElement/blur": {
-    "modified": "2020-10-15T21:06:46.166Z",
-    "contributors": [
-      "sideshowbarker",
-      "ExE-Boss",
-      "mfluehr",
-      "fscholz",
-      "xrtariq2594",
-      "cvrebert",
-      "teoli",
-      "saneyuki_s",
-      "ajaybhat",
-      "kscarfone",
-      "Sheppy",
-      "tregagnon",
-      "mattbasta",
-      "ethertank",
-      "ziyunfei",
-      "another_sam",
-      "Mgjbot",
-      "Ptak82",
-      "RobG",
-      "Dria",
-      "JesseW"
-    ]
-  },
-  "Web/API/HTMLOrForeignElement/focus": {
-    "modified": "2020-10-15T21:06:48.520Z",
-    "contributors": [
-      "ratley",
-      "hinell",
-      "ExE-Boss",
-      "Sheppy",
-      "mfluehr",
-      "sideshowbarker",
-      "fscholz",
-      "EiraGe",
-      "xrtariq2594",
-      "jakobc",
-      "rittmeyer",
-      "swick7",
-      "teoli",
-      "saneyuki_s",
-      "ajaybhat",
-      "kscarfone",
-      "tregagnon",
-      "mattbasta",
-      "ziyunfei",
-      "Nickolay",
-      "another_sam",
-      "Bzbarsky",
-      "Mgjbot",
-      "Gopi",
-      "Ptak82",
-      "Dria",
-      "Callek",
-      "JesseW"
     ]
   },
   "Web/API/HTMLOutputElement": {
@@ -60565,30 +60540,6 @@
       "jpmedley"
     ]
   },
-  "Web/API/MediaPositionState": {
-    "modified": "2020-10-15T22:29:16.278Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
-  "Web/API/MediaPositionState/duration": {
-    "modified": "2020-10-15T22:29:15.614Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
-  "Web/API/MediaPositionState/playbackRate": {
-    "modified": "2020-10-15T22:29:18.046Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
-  "Web/API/MediaPositionState/position": {
-    "modified": "2020-10-15T22:29:17.412Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
   "Web/API/MediaQueryList": {
     "modified": "2020-11-05T07:41:35.142Z",
     "contributors": [
@@ -63752,6 +63703,38 @@
       "Jeremie"
     ]
   },
+  "Web/API/Navigator/Online_and_offline_events": {
+    "modified": "2020-09-15T12:54:20.249Z",
+    "contributors": [
+      "OtterOne",
+      "chrisdavidmills",
+      "torazaburo",
+      "edwardcasbon",
+      "artistics-weddings",
+      "schmod",
+      "maxbarrett",
+      "kazaf",
+      "PierreBergamin",
+      "jsx",
+      "Jeremie",
+      "kscarfone",
+      "teoli",
+      "HaNdTriX",
+      "lmorchard",
+      "DavidWalsh",
+      "jswisher",
+      "john_smith",
+      "ethertank",
+      "grendel",
+      "Sheppy",
+      "sebmozilla",
+      "Nickolay",
+      "Mgjbot",
+      "Leandro Mercês Xavier",
+      "BenoitL",
+      "Jresig"
+    ]
+  },
   "Web/API/Navigator/activeVRDisplays": {
     "modified": "2020-10-15T21:46:04.268Z",
     "contributors": [
@@ -63761,6 +63744,68 @@
       "connorshea",
       "chrisdavidmills",
       "mattwojo"
+    ]
+  },
+  "Web/API/Navigator/appCodeName": {
+    "modified": "2020-10-15T21:07:06.098Z",
+    "contributors": [
+      "alattalatta",
+      "sideshowbarker",
+      "fscholz",
+      "abbycar",
+      "teoli",
+      "chrisdavidmills",
+      "kscarfone",
+      "ethertank",
+      "Sheppy",
+      "ziyunfei",
+      "Mgjbot",
+      "Ptak82",
+      "Dria",
+      "JesseW"
+    ]
+  },
+  "Web/API/Navigator/appName": {
+    "modified": "2020-10-15T21:06:58.400Z",
+    "contributors": [
+      "alattalatta",
+      "sideshowbarker",
+      "fscholz",
+      "abbycar",
+      "teoli",
+      "chrisdavidmills",
+      "Ugoku",
+      "Robg1",
+      "kscarfone",
+      "ethertank",
+      "Sheppy",
+      "ziyunfei",
+      "Marcoos",
+      "Mgjbot",
+      "Diablownik",
+      "Dria",
+      "JesseW"
+    ]
+  },
+  "Web/API/Navigator/appVersion": {
+    "modified": "2020-10-15T21:07:01.689Z",
+    "contributors": [
+      "sideshowbarker",
+      "fscholz",
+      "nmve",
+      "abbycar",
+      "teoli",
+      "chrisdavidmills",
+      "kscarfone",
+      "Sheppy",
+      "ethertank",
+      "ziyunfei",
+      "Marcoos",
+      "Crash",
+      "Mgjbot",
+      "Diablownik",
+      "Dria",
+      "JesseW"
     ]
   },
   "Web/API/Navigator/battery": {
@@ -64033,6 +64078,38 @@
       "dmarcos"
     ]
   },
+  "Web/API/Navigator/hardwareConcurrency": {
+    "modified": "2020-10-15T21:44:36.249Z",
+    "contributors": [
+      "sideshowbarker",
+      "fscholz",
+      "jaffathecake",
+      "scriptguru",
+      "Sephr",
+      "jpmedley",
+      "libbymc",
+      "nmve",
+      "Sheepy",
+      "aschr",
+      "Sheppy"
+    ]
+  },
+  "Web/API/Navigator/javaEnabled": {
+    "modified": "2020-10-15T21:07:04.664Z",
+    "contributors": [
+      "ExE-Boss",
+      "teoli",
+      "kscarfone",
+      "Sheppy",
+      "ziyunfei",
+      "Mgjbot",
+      "Ptak82",
+      "Maian",
+      "Nickolay",
+      "Dria",
+      "JesseW"
+    ]
+  },
   "Web/API/Navigator/keyboard": {
     "modified": "2020-12-10T11:16:25.306Z",
     "contributors": [
@@ -64040,6 +64117,58 @@
       "mfluehr",
       "mfuji09",
       "jpmedley"
+    ]
+  },
+  "Web/API/Navigator/language": {
+    "modified": "2020-10-15T21:06:59.788Z",
+    "contributors": [
+      "Sephr",
+      "ftruter",
+      "blairbodnar",
+      "nickmccurdy",
+      "kernp",
+      "sideshowbarker",
+      "fscholz",
+      "ianjmacintosh",
+      "Kornel",
+      "jakub-g",
+      "nmve",
+      "abbycar",
+      "teoli",
+      "Sebastianz",
+      "Jeremie",
+      "hexalys",
+      "chrisdavidmills",
+      "ziyunfei",
+      "ScottMichaud",
+      "mounirlamouri",
+      "kscarfone",
+      "chitra_lakhotia",
+      "Sheppy",
+      "Pandark",
+      "Skierpage",
+      "Mgjbot",
+      "BenoitL",
+      "Fini",
+      "Diablownik",
+      "Dria",
+      "JesseW"
+    ]
+  },
+  "Web/API/Navigator/languages": {
+    "modified": "2020-10-15T21:27:22.781Z",
+    "contributors": [
+      "nitsakh",
+      "sideshowbarker",
+      "fscholz",
+      "jakub-g",
+      "mayank23",
+      "denghuiquan",
+      "teoli",
+      "chrisdavidmills",
+      "jt3rd",
+      "yisi",
+      "ziyunfei"
     ]
   },
   "Web/API/Navigator/locks": {
@@ -64093,6 +64222,26 @@
       "Sheppy"
     ]
   },
+  "Web/API/Navigator/mimeTypes": {
+    "modified": "2020-10-15T21:16:44.067Z",
+    "contributors": [
+      "ExE-Boss",
+      "fscholz",
+      "jpmedley",
+      "chrisdavidmills",
+      "teoli",
+      "MHasan",
+      "bsmedberg",
+      "kscarfone",
+      "Sheppy",
+      "ethertank",
+      "Mgjbot",
+      "Diablownik",
+      "George3",
+      "Dria",
+      "JesseW"
+    ]
+  },
   "Web/API/Navigator/mozIsLocallyAvailable": {
     "modified": "2020-10-15T21:06:57.850Z",
     "contributors": [
@@ -64132,6 +64281,44 @@
       "krosylight"
     ]
   },
+  "Web/API/Navigator/onLine": {
+    "modified": "2020-12-14T11:30:49.586Z",
+    "contributors": [
+      "chrisdavidmills",
+      "deanmarano",
+      "zakius",
+      "Equal",
+      "sideshowbarker",
+      "fscholz",
+      "nmve",
+      "lhanneman",
+      "SaurabhRaje",
+      "abbycar",
+      "malyw",
+      "Sebastianz",
+      "teoli",
+      "jsx",
+      "jorgecasar",
+      "kscarfone",
+      "null---",
+      "Cloudmonkeys",
+      "Sheppy",
+      "ethertank",
+      "depy",
+      "4esn0k",
+      "ziyunfei",
+      "Pavel.Zubkou",
+      "thewoolleyman",
+      "webinista",
+      "grendel",
+      "ebidel",
+      "MarcDiethelm",
+      "Mgjbot",
+      "Nickolay",
+      "Diablownik",
+      "Jabez"
+    ]
+  },
   "Web/API/Navigator/oscpu": {
     "modified": "2020-10-15T21:06:55.078Z",
     "contributors": [
@@ -64163,10 +64350,78 @@
       "poiru"
     ]
   },
+  "Web/API/Navigator/platform": {
+    "modified": "2020-10-15T21:06:57.275Z",
+    "contributors": [
+      "alattalatta",
+      "mfuji09",
+      "Sheppy",
+      "fscholz",
+      "abbycar",
+      "teoli",
+      "chrisdavidmills",
+      "0xdeadcafe",
+      "kscarfone",
+      "Rob W",
+      "ziyunfei",
+      "Marcoos",
+      "Mgjbot",
+      "Diablownik",
+      "Nickolay",
+      "Jabez",
+      "Dria",
+      "JesseW"
+    ]
+  },
+  "Web/API/Navigator/plugins": {
+    "modified": "2020-10-15T21:06:55.402Z",
+    "contributors": [
+      "ExE-Boss",
+      "chrisdavidmills",
+      "Makyen",
+      "teoli",
+      "cpeterson",
+      "kohei.yoshino",
+      "bsmedberg",
+      "kscarfone",
+      "ethertank",
+      "Sheppy",
+      "ziyunfei",
+      "Mgjbot",
+      "Diablownik",
+      "George3",
+      "Nickolay",
+      "Jabez",
+      "Dria",
+      "Smcn",
+      "JesseW"
+    ]
+  },
   "Web/API/Navigator/presentation": {
     "modified": "2020-10-15T22:26:07.734Z",
     "contributors": [
       "bershanskiy"
+    ]
+  },
+  "Web/API/Navigator/product": {
+    "modified": "2020-10-15T21:09:01.652Z",
+    "contributors": [
+      "alattalatta",
+      "sideshowbarker",
+      "fscholz",
+      "nmve",
+      "abbycar",
+      "teoli",
+      "chrisdavidmills",
+      "kscarfone",
+      "ethertank",
+      "Sheppy",
+      "Marcoos",
+      "Mgjbot",
+      "Diablownik",
+      "Blueray",
+      "Dria",
+      "JesseW"
     ]
   },
   "Web/API/Navigator/productSub": {
@@ -64351,6 +64606,57 @@
       "jyasskin"
     ]
   },
+  "Web/API/Navigator/storage": {
+    "modified": "2020-10-15T21:50:37.556Z",
+    "contributors": [
+      "fscholz",
+      "loomchild",
+      "chrisdavidmills",
+      "jpmedley",
+      "inexorabletash",
+      "yisibl",
+      "Sheppy"
+    ]
+  },
+  "Web/API/Navigator/taintEnabled": {
+    "modified": "2020-10-15T21:29:32.809Z",
+    "contributors": [
+      "alattalatta",
+      "fscholz",
+      "sideshowbarker",
+      "teoli",
+      "Broetchen1234",
+      "chrisdavidmills"
+    ]
+  },
+  "Web/API/Navigator/userAgent": {
+    "modified": "2020-10-15T21:07:02.778Z",
+    "contributors": [
+      "Tigt",
+      "alattalatta",
+      "mfuji09",
+      "Sheppy",
+      "fscholz",
+      "Krinkle",
+      "abbycar",
+      "teoli",
+      "chrisdavidmills",
+      "jsx",
+      "kscarfone",
+      "ethertank",
+      "ziyunfei",
+      "shicker",
+      "Jonathan.Sampson",
+      "madarche",
+      "Potappo",
+      "Mgjbot",
+      "Nickolay",
+      "GT",
+      "Jabez",
+      "Dria",
+      "JesseW"
+    ]
+  },
   "Web/API/Navigator/vendor": {
     "modified": "2020-10-15T21:06:59.062Z",
     "contributors": [
@@ -64430,421 +64736,6 @@
       "Wind1808",
       "Sheppy",
       "bershanskiy"
-    ]
-  },
-  "Web/API/NavigatorConcurrentHardware": {
-    "modified": "2020-10-15T21:44:40.003Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "jpmedley",
-      "libbymc",
-      "Sheppy"
-    ]
-  },
-  "Web/API/NavigatorConcurrentHardware/hardwareConcurrency": {
-    "modified": "2020-10-15T21:44:36.249Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "jaffathecake",
-      "scriptguru",
-      "Sephr",
-      "jpmedley",
-      "libbymc",
-      "nmve",
-      "Sheepy",
-      "aschr",
-      "Sheppy"
-    ]
-  },
-  "Web/API/NavigatorID": {
-    "modified": "2020-10-15T21:24:38.906Z",
-    "contributors": [
-      "alattalatta",
-      "fscholz",
-      "sideshowbarker",
-      "abbycar",
-      "Sheppy",
-      "yesman82",
-      "teoli"
-    ]
-  },
-  "Web/API/NavigatorID/appCodeName": {
-    "modified": "2020-10-15T21:07:06.098Z",
-    "contributors": [
-      "alattalatta",
-      "sideshowbarker",
-      "fscholz",
-      "abbycar",
-      "teoli",
-      "chrisdavidmills",
-      "kscarfone",
-      "ethertank",
-      "Sheppy",
-      "ziyunfei",
-      "Mgjbot",
-      "Ptak82",
-      "Dria",
-      "JesseW"
-    ]
-  },
-  "Web/API/NavigatorID/appName": {
-    "modified": "2020-10-15T21:06:58.400Z",
-    "contributors": [
-      "alattalatta",
-      "sideshowbarker",
-      "fscholz",
-      "abbycar",
-      "teoli",
-      "chrisdavidmills",
-      "Ugoku",
-      "Robg1",
-      "kscarfone",
-      "ethertank",
-      "Sheppy",
-      "ziyunfei",
-      "Marcoos",
-      "Mgjbot",
-      "Diablownik",
-      "Dria",
-      "JesseW"
-    ]
-  },
-  "Web/API/NavigatorID/appVersion": {
-    "modified": "2020-10-15T21:07:01.689Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "nmve",
-      "abbycar",
-      "teoli",
-      "chrisdavidmills",
-      "kscarfone",
-      "Sheppy",
-      "ethertank",
-      "ziyunfei",
-      "Marcoos",
-      "Crash",
-      "Mgjbot",
-      "Diablownik",
-      "Dria",
-      "JesseW"
-    ]
-  },
-  "Web/API/NavigatorID/platform": {
-    "modified": "2020-10-15T21:06:57.275Z",
-    "contributors": [
-      "alattalatta",
-      "mfuji09",
-      "Sheppy",
-      "fscholz",
-      "abbycar",
-      "teoli",
-      "chrisdavidmills",
-      "0xdeadcafe",
-      "kscarfone",
-      "Rob W",
-      "ziyunfei",
-      "Marcoos",
-      "Mgjbot",
-      "Diablownik",
-      "Nickolay",
-      "Jabez",
-      "Dria",
-      "JesseW"
-    ]
-  },
-  "Web/API/NavigatorID/product": {
-    "modified": "2020-10-15T21:09:01.652Z",
-    "contributors": [
-      "alattalatta",
-      "sideshowbarker",
-      "fscholz",
-      "nmve",
-      "abbycar",
-      "teoli",
-      "chrisdavidmills",
-      "kscarfone",
-      "ethertank",
-      "Sheppy",
-      "Marcoos",
-      "Mgjbot",
-      "Diablownik",
-      "Blueray",
-      "Dria",
-      "JesseW"
-    ]
-  },
-  "Web/API/NavigatorID/taintEnabled": {
-    "modified": "2020-10-15T21:29:32.809Z",
-    "contributors": [
-      "alattalatta",
-      "fscholz",
-      "sideshowbarker",
-      "teoli",
-      "Broetchen1234",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/API/NavigatorID/userAgent": {
-    "modified": "2020-10-15T21:07:02.778Z",
-    "contributors": [
-      "Tigt",
-      "alattalatta",
-      "mfuji09",
-      "Sheppy",
-      "fscholz",
-      "Krinkle",
-      "abbycar",
-      "teoli",
-      "chrisdavidmills",
-      "jsx",
-      "kscarfone",
-      "ethertank",
-      "ziyunfei",
-      "shicker",
-      "Jonathan.Sampson",
-      "madarche",
-      "Potappo",
-      "Mgjbot",
-      "Nickolay",
-      "GT",
-      "Jabez",
-      "Dria",
-      "JesseW"
-    ]
-  },
-  "Web/API/NavigatorLanguage": {
-    "modified": "2020-10-15T21:24:37.889Z",
-    "contributors": [
-      "mfuji09",
-      "alattalatta",
-      "fscholz",
-      "teoli",
-      "realityking"
-    ]
-  },
-  "Web/API/NavigatorLanguage/language": {
-    "modified": "2020-10-15T21:06:59.788Z",
-    "contributors": [
-      "Sephr",
-      "ftruter",
-      "blairbodnar",
-      "nickmccurdy",
-      "kernp",
-      "sideshowbarker",
-      "fscholz",
-      "ianjmacintosh",
-      "Kornel",
-      "jakub-g",
-      "nmve",
-      "abbycar",
-      "teoli",
-      "Sebastianz",
-      "Jeremie",
-      "hexalys",
-      "chrisdavidmills",
-      "ziyunfei",
-      "ScottMichaud",
-      "mounirlamouri",
-      "kscarfone",
-      "chitra_lakhotia",
-      "Sheppy",
-      "Pandark",
-      "Skierpage",
-      "Mgjbot",
-      "BenoitL",
-      "Fini",
-      "Diablownik",
-      "Dria",
-      "JesseW"
-    ]
-  },
-  "Web/API/NavigatorLanguage/languages": {
-    "modified": "2020-10-15T21:27:22.781Z",
-    "contributors": [
-      "nitsakh",
-      "sideshowbarker",
-      "fscholz",
-      "jakub-g",
-      "mayank23",
-      "denghuiquan",
-      "teoli",
-      "chrisdavidmills",
-      "jt3rd",
-      "yisi",
-      "ziyunfei"
-    ]
-  },
-  "Web/API/NavigatorOnLine": {
-    "modified": "2020-10-15T21:24:38.132Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "chrisdavidmills",
-      "abbycar",
-      "teoli"
-    ]
-  },
-  "Web/API/NavigatorOnLine/Online_and_offline_events": {
-    "modified": "2020-09-15T12:54:20.249Z",
-    "contributors": [
-      "OtterOne",
-      "chrisdavidmills",
-      "torazaburo",
-      "edwardcasbon",
-      "artistics-weddings",
-      "schmod",
-      "maxbarrett",
-      "kazaf",
-      "PierreBergamin",
-      "jsx",
-      "Jeremie",
-      "kscarfone",
-      "teoli",
-      "HaNdTriX",
-      "lmorchard",
-      "DavidWalsh",
-      "jswisher",
-      "john_smith",
-      "ethertank",
-      "grendel",
-      "Sheppy",
-      "sebmozilla",
-      "Nickolay",
-      "Mgjbot",
-      "Leandro Mercês Xavier",
-      "BenoitL",
-      "Jresig"
-    ]
-  },
-  "Web/API/NavigatorOnLine/onLine": {
-    "modified": "2020-12-14T11:30:49.586Z",
-    "contributors": [
-      "chrisdavidmills",
-      "deanmarano",
-      "zakius",
-      "Equal",
-      "sideshowbarker",
-      "fscholz",
-      "nmve",
-      "lhanneman",
-      "SaurabhRaje",
-      "abbycar",
-      "malyw",
-      "Sebastianz",
-      "teoli",
-      "jsx",
-      "jorgecasar",
-      "kscarfone",
-      "null---",
-      "Cloudmonkeys",
-      "Sheppy",
-      "ethertank",
-      "depy",
-      "4esn0k",
-      "ziyunfei",
-      "Pavel.Zubkou",
-      "thewoolleyman",
-      "webinista",
-      "grendel",
-      "ebidel",
-      "MarcDiethelm",
-      "Mgjbot",
-      "Nickolay",
-      "Diablownik",
-      "Jabez"
-    ]
-  },
-  "Web/API/NavigatorPlugins": {
-    "modified": "2020-10-15T21:24:38.838Z",
-    "contributors": [
-      "fscholz",
-      "jpmedley",
-      "Sheppy",
-      "teoli"
-    ]
-  },
-  "Web/API/NavigatorPlugins/javaEnabled": {
-    "modified": "2020-10-15T21:07:04.664Z",
-    "contributors": [
-      "ExE-Boss",
-      "teoli",
-      "kscarfone",
-      "Sheppy",
-      "ziyunfei",
-      "Mgjbot",
-      "Ptak82",
-      "Maian",
-      "Nickolay",
-      "Dria",
-      "JesseW"
-    ]
-  },
-  "Web/API/NavigatorPlugins/mimeTypes": {
-    "modified": "2020-10-15T21:16:44.067Z",
-    "contributors": [
-      "ExE-Boss",
-      "fscholz",
-      "jpmedley",
-      "chrisdavidmills",
-      "teoli",
-      "MHasan",
-      "bsmedberg",
-      "kscarfone",
-      "Sheppy",
-      "ethertank",
-      "Mgjbot",
-      "Diablownik",
-      "George3",
-      "Dria",
-      "JesseW"
-    ]
-  },
-  "Web/API/NavigatorPlugins/plugins": {
-    "modified": "2020-10-15T21:06:55.402Z",
-    "contributors": [
-      "ExE-Boss",
-      "chrisdavidmills",
-      "Makyen",
-      "teoli",
-      "cpeterson",
-      "kohei.yoshino",
-      "bsmedberg",
-      "kscarfone",
-      "ethertank",
-      "Sheppy",
-      "ziyunfei",
-      "Mgjbot",
-      "Diablownik",
-      "George3",
-      "Nickolay",
-      "Jabez",
-      "Dria",
-      "Smcn",
-      "JesseW"
-    ]
-  },
-  "Web/API/NavigatorStorage": {
-    "modified": "2020-10-15T21:50:37.887Z",
-    "contributors": [
-      "Wind1808",
-      "fscholz",
-      "chrisdavidmills",
-      "Sheppy"
-    ]
-  },
-  "Web/API/NavigatorStorage/storage": {
-    "modified": "2020-10-15T21:50:37.556Z",
-    "contributors": [
-      "fscholz",
-      "loomchild",
-      "chrisdavidmills",
-      "jpmedley",
-      "inexorabletash",
-      "yisibl",
-      "Sheppy"
     ]
   },
   "Web/API/NetworkInformation": {
@@ -67805,14 +67696,6 @@
     "contributors": [
       "bershanskiy",
       "MyNameIsBond",
-      "Sheppy"
-    ]
-  },
-  "Web/API/PaymentDetailsBase": {
-    "modified": "2020-10-15T22:06:00.262Z",
-    "contributors": [
-      "sideshowbarker",
-      "ExE-Boss",
       "Sheppy"
     ]
   },
@@ -128153,12 +128036,6 @@
       "zbjornson",
       "fscholz",
       "teoli"
-    ]
-  },
-  "Web/HTTP/Headers/Index": {
-    "modified": "2019-03-18T21:27:08.312Z",
-    "contributors": [
-      "ExE-Boss"
     ]
   },
   "Web/HTTP/Headers/Keep-Alive": {

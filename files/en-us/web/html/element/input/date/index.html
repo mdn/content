@@ -161,7 +161,7 @@ console.log(dateControl.valueAsNumber); // prints 1496275200000, a JavaScript ti
 <p>You can use the {{htmlattrxref("min", "input")}} and {{htmlattrxref("max", "input")}} attributes to restrict the dates that can be chosen by the user. In the following example, we set a minimum date of <code>2017-04-01</code> and a maximum date of <code>2017-04-30</code>:</p>
 
 <pre class="brush: html">&lt;form&gt;
-  &lt;label for="party"&gt;Choose your preferred party date:
+  &lt;label&gt;Choose your preferred party date:
     &lt;input type="date" name="party" min="2017-04-01" max="2017-04-30"&gt;
   &lt;/label&gt;
 &lt;/form&gt;</pre>
@@ -253,7 +253,7 @@ input:valid+span::after {
 <p>One way around this is the {{htmlattrxref("pattern", "input")}} attribute on your date input. Even though the date picker doesn't use it, the text input fallback will. For example, try viewing the following in a unsupporting browser:</p>
 
 <pre class="brush: html">&lt;form&gt;
-  &lt;label for="bday"&gt;Enter your birthday:
+  &lt;label&gt;Enter your birthday:
     &lt;input type="date" name="bday" required pattern="\d{4}-\d{2}-\d{2}"&gt;
     &lt;span class="validity"&gt;&lt;/span&gt;
   &lt;/label&gt;
@@ -298,41 +298,41 @@ input:valid + span::after {
 <p>The HTML looks like so:</p>
 
 <pre class="brush: html">&lt;form&gt;
-    &lt;div class="nativeDatePicker"&gt;
-      &lt;label for="bday"&gt;Enter your birthday:&lt;/label&gt;
-      &lt;input type="date" id="bday" name="bday"&gt;
-      &lt;span class="validity"&gt;&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;p class="fallbackLabel"&gt;Enter your birthday:&lt;/p&gt;
-    &lt;div class="fallbackDatePicker"&gt;
-      &lt;span&gt;
-        &lt;label for="day"&gt;Day:&lt;/label&gt;
-        &lt;select id="day" name="day"&gt;
-        &lt;/select&gt;
-      &lt;/span&gt;
-      &lt;span&gt;
-        &lt;label for="month"&gt;Month:&lt;/label&gt;
-        &lt;select id="month" name="month"&gt;
-          &lt;option selected&gt;January&lt;/option&gt;
-          &lt;option&gt;February&lt;/option&gt;
-          &lt;option&gt;March&lt;/option&gt;
-          &lt;option&gt;April&lt;/option&gt;
-          &lt;option&gt;May&lt;/option&gt;
-          &lt;option&gt;June&lt;/option&gt;
-          &lt;option&gt;July&lt;/option&gt;
-          &lt;option&gt;August&lt;/option&gt;
-          &lt;option&gt;September&lt;/option&gt;
-          &lt;option&gt;October&lt;/option&gt;
-          &lt;option&gt;November&lt;/option&gt;
-          &lt;option&gt;December&lt;/option&gt;
-        &lt;/select&gt;
-      &lt;/span&gt;
-      &lt;span&gt;
-        &lt;label for="year"&gt;Year:&lt;/label&gt;
-        &lt;select id="year" name="year"&gt;
-        &lt;/select&gt;
-      &lt;/span&gt;
-    &lt;/div&gt;
+  &lt;div class="nativeDatePicker"&gt;
+    &lt;label for="bday"&gt;Enter your birthday:&lt;/label&gt;
+    &lt;input type="date" id="bday" name="bday"&gt;
+    &lt;span class="validity"&gt;&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;p class="fallbackLabel"&gt;Enter your birthday:&lt;/p&gt;
+  &lt;div class="fallbackDatePicker"&gt;
+    &lt;span&gt;
+      &lt;label for="day"&gt;Day:&lt;/label&gt;
+      &lt;select id="day" name="day"&gt;
+      &lt;/select&gt;
+    &lt;/span&gt;
+    &lt;span&gt;
+      &lt;label for="month"&gt;Month:&lt;/label&gt;
+      &lt;select id="month" name="month"&gt;
+        &lt;option selected&gt;January&lt;/option&gt;
+        &lt;option&gt;February&lt;/option&gt;
+        &lt;option&gt;March&lt;/option&gt;
+        &lt;option&gt;April&lt;/option&gt;
+        &lt;option&gt;May&lt;/option&gt;
+        &lt;option&gt;June&lt;/option&gt;
+        &lt;option&gt;July&lt;/option&gt;
+        &lt;option&gt;August&lt;/option&gt;
+        &lt;option&gt;September&lt;/option&gt;
+        &lt;option&gt;October&lt;/option&gt;
+        &lt;option&gt;November&lt;/option&gt;
+        &lt;option&gt;December&lt;/option&gt;
+      &lt;/select&gt;
+    &lt;/span&gt;
+    &lt;span&gt;
+      &lt;label for="year"&gt;Year:&lt;/label&gt;
+      &lt;select id="year" name="year"&gt;
+      &lt;/select&gt;
+    &lt;/span&gt;
+  &lt;/div&gt;
 &lt;/form&gt;</pre>
 
 <p>The months are hardcoded (as they are always the same), while the day and year values are dynamically generated depending on the currently selected month and year, and the current year (see the code comments below for detailed explanations of how these functions work.)</p>

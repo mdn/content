@@ -113,7 +113,8 @@ new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds)
       </dd>
       <dt><code><var>monthIndex</var></code></dt>
       <dd>Integer value representing the month, beginning with <code>0</code> for January
-        to <code>11</code> for December.</dd>
+        to <code>11</code> for December. If a value greater than <code>11</code> is passed in, 
+        then those months will be added to the date; for example, <code>new Date(1990, 12, 1)</code> will return January 1st, 1991</dd>
       <dt><code><var>day</var></code> {{optional_inline}}</dt>
       <dd>Integer value representing the day of the month. The default is <code>1</code>.
       </dd>

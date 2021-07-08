@@ -68,6 +68,7 @@ tags:
 <ul>
   <li>Support was added for the deprecated {{DOMxref("WheelEvent")}} properties: <code>WheelEvent.wheelDelta</code>, <code>WheelEvent.wheelDeltaX</code>, and <code>WheelEvent.wheelDeltaY</code>. This allows Firefox to work with a small subset of pages that were broken by recent compatibility improvements to <code>WheelEvent</code> ({{bug(1708829)}}).</li>
   <li>The {{domxref("CanvasRenderingContext2D")}} interface of the {{domxref("Canvas API")}} now provides a {{domxref('CanvasRenderingContext2D.createConicGradient()','createConicGradient()')}} method. This returns a {{domxref('CanvasGradient')}} much like the existing {{domxref('CanvasRenderingContext2D.createLinearGradient()','linear')}} and {{domxref('CanvasRenderingContext2D.createRadialGradient()','radial')}} gradients, but allows a gradient to move around a point defined by coordinates. See {{bug(1627014)}} for more details.</li>
+  <li>Support for the <code>matrix</code> protocol has been added and can now be passed into the {{domxref('Navigator.registerProtocolHandler()')}} method as a valid scheme.</li>
 </ul>
 
 <h4 id="Media_WebRTC_and_Web_Audio">Media, WebRTC, and Web Audio</h4>
@@ -83,6 +84,8 @@ tags:
 <h4 id="removals_webdriver">Removals</h4>
 
 <h2 id="Changes_for_add-on_developers">Changes for add-on developers</h2>
+
+<li>The <code>matrix</code> URI scheme is now supported and can be defined as a protocol within the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/protocol_handlers"><code>protocol_handlers</code></a> key in an extensions <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json"><code>manifest.json</code></a></li>
 
 <h4 id="removals_webext">Removals</h4>
 

@@ -24,9 +24,20 @@ browser-compat: css.at-rules.property
   initial-value: #c0ffee;
 }</pre>
 
+<h3>Descriptors</h3>
+
+<dl>
+  <dt>{{cssxref("@property/syntax","syntax")}}</dt>
+  <dd>Describes the allowable syntax for the property.</dd>
+  <dt>{{cssxref("@property/inherits","inherits")}}</dt>
+  <dd>Controls whether the custom property registration specified by <code>@property</code> inherits by default.</dd>
+  <dt>{{cssxref("@property/initial-value","initial-value")}}</dt>
+  <dd>Sets the initial value for the property.</dd>
+</dl>
+
 <p>A valid <code>@property</code> rule represents a custom property registration, with the property name being the serialization of the in the rule’s prelude.</p>
 
-<p><code>@property</code> rules require a <strong>syntax</strong> and <strong>inherits</strong> descriptor; if either are missing, the entire rule is invalid and must be ignored. The <strong>initial-value</strong> descriptor is optional only if the syntax is the universal syntax definition, otherwise the descriptor is required; if it’s missing, the entire rule is invalid and must be ignored.</p>
+<p><code>@property</code> rules require a {{cssxref("@property/syntax","syntax")}} and {{cssxref("@property/inherits","inherits")}} descriptor; if either are missing, the entire rule is invalid and must be ignored. The {{cssxref("@property/initial-value","initial-value")}} descriptor is optional only if the syntax is the universal syntax definition, otherwise the descriptor is required; if it’s missing, the entire rule is invalid and must be ignored.</p>
 
 <p>Unknown descriptors are invalid and ignored, but do not invalidate the <code>@property</code> rule.</p>
 

@@ -802,6 +802,46 @@ tags:
  </tbody>
 </table>
 
+<h4 id="clipboardread">ClipboardRead</h4>
+
+<p> The <a href="/en-US/docs/Web/API/Clipboard/read">Clipboard.read()</a> method of the {{domxref('Clipboard')}} interface is now available under the <code>dom.events.asyncClipboard.read</code> preference,  when previously it was under <code>dom.events.asyncClipboard.clipboardItem</code>. (See ({{bug(1701512)}}) for more details.) </p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col" style="vertical-align: bottom;">Release channel</th>
+   <th scope="col" style="vertical-align: bottom;">Version added</th>
+   <th scope="col" style="vertical-align: bottom;">Enabled by default?</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th scope="row">Nightly</th>
+   <td>90</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Developer Edition</th>
+   <td>90</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Beta</th>
+   <td>90</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Release</th>
+   <td>90</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Preference name</th>
+   <th colspan="2"><code>dom.events.asyncClipboard.read</code> </th>
+  </tr>
+ </tbody>
+</table>
+
 <h4 id="HTML_Sanitizer_API">HTML Sanitizer API</h4>
 
 <p>The {{domxref('HTML Sanitizer API')}} allow developers to take untrusted strings of HTML and sanitize them for safe insertion into a document’s DOM. Default elements within each configuration property (those to be sanitized) are still under consideration. Due to this the config parameter has not been implemented (see {{domxref('Sanitizer.sanitizer()', 'the constructor')}}) for more information. See {{bug('1673309')}} for more details.</p>
