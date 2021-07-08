@@ -7970,6 +7970,10 @@
 /en-US/docs/Web/API/MediaCapabilities_API	/en-US/docs/Web/API/Media_Capabilities_API/Using_the_Media_Capabilities_API
 /en-US/docs/Web/API/MediaDevices/mediaDevices.getUserMedia	/en-US/docs/Web/API/MediaDevices/getUserMedia
 /en-US/docs/Web/API/MediaMetadata/MediaMetadata.title	/en-US/docs/Web/API/MediaMetadata/title
+/en-US/docs/Web/API/MediaPositionState	/en-US/docs/Web/API/MediaSession/setPositionState
+/en-US/docs/Web/API/MediaPositionState/duration	/en-US/docs/Web/API/MediaSession/setPositionState
+/en-US/docs/Web/API/MediaPositionState/playbackRate	/en-US/docs/Web/API/MediaSession/setPositionState
+/en-US/docs/Web/API/MediaPositionState/position	/en-US/docs/Web/API/MediaSession/setPositionState
 /en-US/docs/Web/API/MediaQueryList/addListener()	/en-US/docs/Web/API/MediaQueryList/addListener
 /en-US/docs/Web/API/MediaQueryListListener	/en-US/docs/Web/API/MediaQueryList
 /en-US/docs/Web/API/MediaRecorder.ondataavailable	/en-US/docs/Web/API/MediaRecorder/ondataavailable
