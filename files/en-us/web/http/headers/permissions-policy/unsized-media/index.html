@@ -1,0 +1,52 @@
+---
+title: 'Permissions-Policy: unsized-media'
+slug: Web/HTTP/Headers/Permissions-Policy/unsized-media
+tags:
+  - Directive
+  - Permissions Policy
+  - Permissions-Policy
+  - HTTP
+  - Reference
+  - Experimental
+  - Non-standard
+browser-compat: http.headers.Permissions-Policy.unsized-media
+---
+<p>{{HTTPSidebar}}</p>
+
+<div class="note">
+  <p>The <code>Permissions-Policy</code> header was previously named <code>Feature-Policy</code>. As of June 2021, the {{domxref('FeaturePolicy')}} API  as well as some linked-to articles and demos still use the older name.</p>
+</div>
+
+<p>The HTTP {{HTTPHeader('Permissions-Policy')}} header <code>unsized-media</code> directive controls whether the current document is allowed to change the size of media elements after the initial layout is complete.</p>
+
+<p>This restriction solves "layout instability" problem caused by providing default dimensions for images whose size is not specified in advance so that image doesn't change size after loading.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre>Permissions-Policy: unsized-media &lt;allowlist&gt;;</pre>
+
+<dl>
+  <dt>&lt;allowlist&gt;</dt>
+  <dd>A list of origins for which the feature is allowed. See <a href="/en-US/docs/Web/HTTP/Headers/Permissions-Policy#syntax"><code>Permissions-Policy</code></a>.</dd>
+</dl>
+
+<h2 id="Default_value">Default value</h2>
+
+<p>The default value for unsized-media is <code>'*'</code>, that is unsized media elements are allowed for all origins by default. The page will re-flow every time an image with unknown dimensions is loaded.</p>
+
+<h2 id="Specifications">Specifications</h2>
+
+<p>{{Specifications}}</p>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>{{HTTPHeader('Permissions-Policy')}} header</li>
+ <li><a href="/en-US/docs/Web/HTTP/Permissions_Policy">Permissions Policy</a></li>
+ <li><a href="/en-US/docs/Web/HTTP/Permissions_Policy/Using_Permissions_Policy">Using Permissions Policy</a></li>
+ <li><a href="https://github.com/w3c/webappsec-Permissions-Policy/blob/master/policies/unsized-media.md">Proposal</a></li>
+</ul>

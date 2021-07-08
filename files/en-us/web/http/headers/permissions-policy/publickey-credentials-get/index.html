@@ -1,0 +1,53 @@
+---
+title: 'Permissions-Policy: publickey-credentials-get'
+slug: Web/HTTP/Headers/Permissions-Policy/publickey-credentials-get
+tags:
+  - Directive
+  - Permissions Policy
+  - Permissions-Policy
+  - HTTP
+  - publickey-credentials-get
+  - Reference
+  - Experimental
+browser-compat: http.headers.Permissions-Policy.publickey-credentials-get
+---
+<div>{{HTTPSidebar}}</div>
+
+<div class="note">
+  <p>The <code>Permissions-Policy</code> header was previously named <code>Feature-Policy</code>. As of June 2021, the {{domxref('FeaturePolicy')}} API  as well as some linked-to articles and demos still use the older name.</p>
+</div>
+
+<p><span class="seoSummary">The HTTP {{HTTPHeader("Permissions-Policy")}} header <code>publickey-credentials-get</code> directive controls whether the current document is allowed to access the <a href="/en-US/docs/Web/API/Web_Authentication_API">Web Authentication API</a> to retrieve public-key credentials; i.e, via {{DOMxRef("CredentialsContainer.get", "navigator.credentials.get({publicKey: ..., ...})")}}.</span></p>
+
+<p>When this policy is enabled, any attempt to query public key credentials will result in an error.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: http">Permissions-Policy: publickey-credentials-get &lt;allowlist&gt;;</pre>
+
+<dl>
+  <dt>&lt;allowlist&gt;</dt>
+  <dd>A list of origins for which the feature is allowed. See <a href="/en-US/docs/Web/HTTP/Headers/Permissions-Policy#syntax"><code>Permissions-Policy</code></a>.</dd>
+</dl>
+
+<h2 id="Default_policy">Default policy</h2>
+
+<p>The default allowlist is <code>'self'</code>.</p>
+
+<h2 id="Specifications">Specifications</h2>
+
+<p>{{Specifications}}</p>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>{{HTTPHeader("Permissions-Policy")}} header</li>
+ <li><a href="/en-US/docs/Web/HTTP/Permissions_Policy">Permissions Policy</a></li>
+ <li><a href="/en-US/docs/Web/HTTP/Permissions_Policy/Using_Permissions_Policy">Using Permissions Policy</a></li>
+ <li><a href="/en-US/docs/Web/API/Web_Authentication_API">Web Authentication API</a></li>
+ <li>{{DOMxRef("PublicKeyCredential")}} interface</li>
+</ul>
