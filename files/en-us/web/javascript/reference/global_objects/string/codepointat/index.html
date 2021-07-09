@@ -33,15 +33,13 @@ browser-compat: javascript.builtins.String.codePointAt
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A number representing the code point value of the character at the given
-  <code><var>pos</var></code>. If there is no element at <code>pos</code>, returns
-  {{jsxref("undefined")}}.</p>
+<p>A decimal number representing the code point value of the character at the given <code><var>pos</var></code>.</p>
 
-<h2 id="Description">Description</h2>
-
-<p>If there is no element at the specified position, {{jsxref("undefined")}} is returned.
-  If no UTF-16 surrogate pair begins at <code><var>pos</var></code>, the code unit at
-  <code><var>pos</var></code> is returned.</p>
+<ul>
+  <li>If there is no element at <code><var>pos</var></code>, returns <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined"><code>undefined</code></a>.</li>
+  <li>If the element at <code><var>pos</var></code> is a UTF-16 high surrogate, returns the code point of the surrogate <em>pair</em>.</li>
+  <li>If the element at <code><var>pos</var></code> is a UTF-16 low surrogate, returns <em>only</em> the low surrogate code point.</li>
+</ul>
 
 <h2 id="Examples">Examples</h2>
 
