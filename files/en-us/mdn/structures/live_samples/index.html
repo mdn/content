@@ -23,11 +23,11 @@ tags:
 <p>A "group" of code blocks, in this context, is identified by the ID of a heading or a block element (such as a {{HTMLElement("div")}}).</p>
 
 <ul>
- <li>If the ID belongs to a block element, the group includes all the code blocks within the enclosing block element whose ID is used. </li>
+ <li>If the ID belongs to a block element, the group includes all the code blocks within the enclosing block element whose ID is used.</li>
  <li>If the ID belongs to a heading, the group includes all the code blocks that are after that heading and before the next heading of the same heading level. Note that code blocks under subheadings of the specified heading are all used; if this is not the effect you want, use an ID on a block element instead.</li>
 </ul>
 
-<p>The macro uses a special URL to fetch the sample code for a given group, for example <code>https://yari-demos.prod.mdn.mozit.cloud/en-US/docs/Web/CSS/animation/_samples_/Cylon_Eye</code>. The general structure is <code>https://<em>url-of-page</em>_samples_/<em>group-id</em></code>, where <code>group-id</code> is the ID of the heading or block where the code is located.</p>
+<p>The macro uses a special URL to fetch the sample code for a given group, for example <code>https://yari-demos.prod.mdn.mozit.cloud/en-US/docs/Web/CSS/animation/_sample_.Cylon_Eye.html</code>. The general structure is <code>https://<em>url-of-page</em>/_sample_.<em>group-id</em>.html</code>, where <code>group-id</code> is the ID of the heading or block where the code is located.</p>
 
 <p>The resulting frame (or page) is sandboxed, secure, and technically may do anything that works on the Web. Of course, as a practical matter, the code must contribute to the point of the page that contains it; random stuff running on MDN will be removed by the editor community.</p>
 
@@ -44,7 +44,7 @@ tags:
 <p>There are two macros that you can use to display live samples:</p>
 
 <ul>
- <li><code><a href="https://github.com/mdn/yari/blob/master/kumascript/macros/EmbedLiveSample.ejs">EmbedLiveSample</a></code> embeds a live sample into a page</li>
+ <li><code><a href="https://github.com/mdn/yari/blob/master/kumascript/macros/EmbedLiveSample.ejs">EmbedLiveSample</a></code> embeds a live sample into a page</li>
  <li><code><a href="https://github.com/mdn/yari/blob/master/kumascript/macros/LiveSampleLink.ejs">LiveSampleLink</a></code> creates a link that opens the live sample in a new page</li>
 </ul>
 
