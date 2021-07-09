@@ -25,7 +25,7 @@ browser-compat: api.CSSStyleDeclaration
 
 <dl>
  <dt>{{DOMxRef("CSSStyleDeclaration.cssText")}}</dt>
- <dd>Textual representation of the declaration block, if and only if it is exposed via {{DOMxRef("HTMLElement.style")}}. Setting this attribute changes the inline style.</dd>
+ <dd>Textual representation of the declaration block, if and only if it is exposed via {{DOMxRef("HTMLElement.style")}}. Setting this attribute changes the inline style. If you want a text representation of a computed declaration block, you can get it with <code>JSON.stringify()</code>.</dd>
  <dt>{{DOMxRef("CSSStyleDeclaration.length")}}{{ReadOnlyInline}}</dt>
  <dd>The number of properties. See the {{DOMxRef("CSSStyleDeclaration.item()", 'item()')}} method below.</dd>
  <dt>{{DOMxRef("CSSStyleDeclaration.parentRule")}}{{ReadOnlyInline}}</dt>
