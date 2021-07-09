@@ -7,9 +7,9 @@ tags:
   - Mozilla
   - Release
 ---
-<p>{{FirefoxSidebar}}{{draft}}</p>
+<p>{{FirefoxSidebar}}</p>
 
-<p class="summary">This article provides information about the changes in Firefox 90 that will affect developers. Firefox 90 is the current <a href="https://www.mozilla.org/en-US/firefox/channel/desktop/#beta">Beta version of Firefox</a>, and will ship on <a href="https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates">July 13, 2021</a>.</p>
+<p class="summary">This article provides information about the changes in Firefox 90 that will affect developers. Firefox 90 is the current <a href="https://www.mozilla.org/en-US/firefox/channel/desktop/#beta">Beta version of Firefox</a>, and will ship on <a href="https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates">July 13, 2021</a>.</p>
 
 <h2 id="Changes_for_web_developers">Changes for web developers</h2>
 
@@ -25,15 +25,12 @@ tags:
   <li>A fix to the way that form payloads are handled around newline normalization and escaping in multipart/formdata. This meets the updated specification, and matches other browser implementations. ({{bug(1686765)}}).</li>
 </ul>
 
-<h4 id="removals_html">Removals</h4>
-
 <h3 id="CSS">CSS</h3>
 
 <ul>
-  <li><code>-webkit-image-set()</code> has been implemented as an alias of the standard {{cssxref("image-set()")}} function ({{bug(1709415)}}).</li>
+  <li><code>-webkit-image-set()</code> has been implemented as an alias of the standard {{cssxref("image/image-set()")}} function ({{bug(1709415)}}).</li>
 </ul>
 
-<h4 id="removals_css">Removals</h4>
 
 <h3 id="JavaScript">JavaScript</h3>
 
@@ -42,8 +39,6 @@ tags:
   <li>Custom date/time formats specified as options to the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat"><code>Intl.DateTimeFormat()</code> constructor</a> can now include <code>dayPeriod</code> — a value indicating that the approximate time of day (e.g. "in the morning", "at night", etc.) should be included as a <code>narrow</code>, <code>short</code>, or <code>long</code> string ({{bug(1645115)}}).</li>
   <li>The relative indexing method <code>at()</code> has been added to the <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></code> and <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray">TypedArray</a></code> global objects. ({{bug(1681371)}})</li>
  </ul>
-
-<h4 id="removals_js">Removals</h4>
 
 <h3 id="HTTP">HTTP</h3>
 
@@ -57,15 +52,8 @@ tags:
   <li>FTP has now been removed from Firefox ({{bug(1574475)}}). This follows <a href="/en-US/docs/Mozilla/Firefox/Releases/88#http">deprecation in Firefox 88</a>. Note that web extensions can still register themselves as <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/protocol_handlers">FTP protocol handlers</a>.</li>
 </ul>
 
-<h3 id="Security">Security</h3>
-
-<h4 id="removals_sec">Removals</h4>
 
 <h3 id="APIs">APIs</h3>
-
-<ul>
-  <li>Starting with this version, the <a href= "/en-US/docs/Web/API/Cache">Cache API</a> can be used in the extension pages (like background page, browserAction popups, moz-extension workers or allowing the caching of moz-extension urls) and the worker globals. For more details, see ({{bug(1575625)}}).</li>
-</ul>
 
 <h4 id="DOM">DOM</h4>
 
@@ -75,23 +63,12 @@ tags:
   <li>Support for the <code>matrix</code> protocol has been added and can now be passed into the {{domxref('Navigator.registerProtocolHandler()')}} method as a valid scheme.</li>
 </ul>
 
-<h4 id="Media_WebRTC_and_Web_Audio">Media, WebRTC, and Web Audio</h4>
-
-<h4 id="removals_media">Removals</h4>
-
-<h3 id="WebAssembly">WebAssembly</h3>
-
-<h4 id="removals_wasm">Removals</h4>
-
-<h3 id="webdriver_conformance_marionette">WebDriver conformance (Marionette)</h3>
-
-<h4 id="removals_webdriver">Removals</h4>
-
 <h2 id="Changes_for_add-on_developers">Changes for add-on developers</h2>
 
-<li>The <code>matrix</code> URI scheme is now supported and can be defined as a protocol within the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/protocol_handlers"><code>protocol_handlers</code></a> key in an extensions <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json"><code>manifest.json</code></a></li>
-
-<h4 id="removals_webext">Removals</h4>
+<ul>
+  <li>The <code>matrix</code> URI scheme is now supported and can be defined as a protocol within the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/protocol_handlers"><code>protocol_handlers</code></a> key in an extensions <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json"><code>manifest.json</code></a></li>
+  <li>Starting with this version, the <a href= "/en-US/docs/Web/API/Cache">Cache API</a> can be used in the extension pages and worker globals. For more details, see ({{bug(1575625)}}).</li>
+</ul>
 
 <h2 id="Older_versions">Older versions</h2>
 
