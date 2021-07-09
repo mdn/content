@@ -8,7 +8,7 @@ tags:
   - WebHID API
 browser-compat: api.HID
 ---
-<div>{{ APIRef("WebHID API") }}{{SeeCompatTable}}</div>
+<div>{{securecontext_header}}{{DefaultAPISidebar("WebHID API")}}</div>
 
 <p>The <strong><code>HID</code></strong> interface provides methods for connecting to <em>HID devices</em>, listing attached HID devices and event handlers for connected HID devices.</p>
 
@@ -33,9 +33,8 @@ browser-compat: api.HID
  <dt>{{domxref("HID.getDevices","getDevices()")}}</dt>
  <dd>Returns a {{jsxref("Promise")}} that resolves with an array of connected {{domxref("HIDDevice")}} objects.
  </dd>
- <dt>{{domxref("HID.requestDevices","requestDevice()")}}</dt>
- <dd>Returns a {{jsxref("Promise")}} that resolves with an array of connected {{domxref("HIDDevice")}} objects from the HID device selected from popup.
- <div class="note">You can only select one HID device from the popup at a time from this {{jsxref("Promise")}}, but the array might contain multiple {{domxref("HIDDevice")}}s.</div>
+ <dt>{{domxref("HID.requestDevice","requestDevice()")}}</dt>
+ <dd>Returns a {{jsxref("Promise")}} that resolves with an array of connected {{domxref("HIDDevice")}} objects. Calling this function will trigger the user agent's permission flow in order to gain permission to access one selected device from the returned list of devices.
  </dd>
 </dl>
 
