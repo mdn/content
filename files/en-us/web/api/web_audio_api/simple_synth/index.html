@@ -185,7 +185,7 @@ let mainGainNode = null;
 
 <ol>
  <li><code>audioContext</code> is set to reference the global {{domxref("AudioContext")}} object (or <code>webkitAudioContext</code> if necessary).</li>
- <li><code>oscillators</code> is set up to be ready to contain a list of all currently-playing oscillators. It starts off empty, since there are none playing yet.</li>
+ <li><code>oscList</code> is set up to be ready to contain a list of all currently-playing oscillators. It starts off empty, since there are none playing yet.</li>
  <li><code>mainGainNode</code> is set to null; during the setup process, it will be configured to contain a {{domxref("GainNode")}} which all playing oscillators will connect to and play through to allow the overall volume to be controlled using a single slider control.</li>
 </ol>
 
