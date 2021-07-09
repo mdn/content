@@ -191,28 +191,6 @@ tags:
  </dd>
 </dl>
 
-<h2 id="limitations">Limitations</h2>
-
-<p>IndexedDB is designed to cover most cases that need client-side storage. However, it is not designed for a few cases like the following:</p>
-
-<ul>
- <li>Internationalized sorting. Not all languages sort strings in the same way, so internationalized sorting is not supported. While the database can't store data in a specific internationalized order, you can sort the data that you've read out of the database yourself. Note, however, that <a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB#locale-aware_sorting">locale-aware sorting</a> has been allowed with an experimental flag enabled (currently for Firefox only) since Firefox 43.</li>
- <li>Synchronizing. The API is not designed to take care of synchronizing with a server-side database. You have to write code that synchronizes a client-side indexedDB database with a server-side database.</li>
- <li>Full text searching. The API does not have an equivalent of the <code>LIKE</code> operator in SQL.</li>
-</ul>
-
-<p>In addition, be aware that browsers can wipe out the database, such as in the following conditions:</p>
-
-<ul>
- <li>The user requests a wipe out. Many browsers have settings that let users wipe all data stored for a given website, including cookies, bookmarks, stored passwords, and IndexedDB data.</li>
- <li>The browser is in private browsing mode. Some browsers, have "private browsing" (Firefox) or "incognito" (Chrome) modes. At the end of the session, the browser wipes out the database.</li>
- <li>The disk or quota limit has been reached.</li>
- <li>The data is corrupt.</li>
- <li>An incompatible change is made to the feature.</li>
-</ul>
-
-<p>The exact circumstances and browser capabilities change over time, but the general philosophy of the browser vendors is to make the best effort to keep the data when possible.</p>
-
 <h2 id="next">Next steps</h2>
 
 <p>With an understanding of IndexedDB’s key characteristics and core terminology under our belts, we can get to more concrete stuff. For a tutorial on how to use the API, see <a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a>.</p>
