@@ -16,7 +16,7 @@ browser-compat: api.DocumentType
 
 <h2 id="Properties">Properties</h2>
 
-<p><em>Inherits properties from its parent, {{domxref("Node")}}, and implements the {{domxref("ChildNode")}} interface.</em></p>
+<p><em>Inherits properties from its parent, {{domxref("Node")}}.</em></p>
 
 <dl>
 	<dt>{{domxref("DocumentType.entities")}} {{readonlyInline}} {{deprecated_inline}}</dt>
@@ -38,7 +38,13 @@ browser-compat: api.DocumentType
 <p><em>Inherits methods from its parent, {{domxref("Node")}}.</em></p>
 
 <dl>
-	<dt>{{domxref("DocumentType.remove()")}}</dt>
+	<dt>{{domxref("DocumentType.after()")}}</dt>
+	<dd>Inserts a set of {{domxref("Node")}} or {{domxref("DOMString")}} objects in the children list of the
+    <code>DocumentType</code>'s parent, just after the <code>DocumentType</code> object.</dd>
+  <dt>{{domxref("DocumentType.before()")}}</dt>
+  <dd>Inserts a set of {{domxref("Node")}} or {{domxref("DOMString")}} objects in the children list of the
+    <code>DocumentType</code>'s parent, just before the <code>DocumentType</code> object.</dd>
+  <dt>{{domxref("DocumentType.remove()")}}</dt>
 	<dd>Removes the object from its parent children list.</dd>
   <dt>{{domxref("DocumentType.replaceWith()")}}</dt>
 	<dd>Replaces the document type with a set of given nodes.</dd>
@@ -46,36 +52,7 @@ browser-compat: api.DocumentType
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<tbody>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-		<tr>
-			<td>{{SpecName('DOM WHATWG', '#documenttype', 'DocumentType')}}</td>
-			<td>{{Spec2('DOM WHATWG')}}</td>
-			<td>Added implementation of the {{domxref("ChildNode")}} interface.<br>
-			Removed the <code>internalSubset</code>, <code>entities</code>, and <code>notation</code> properties.</td>
-		</tr>
-		<tr>
-			<td>{{SpecName('DOM3 Core', 'core.html#ID-412266927', 'DocumentType')}}</td>
-			<td>{{Spec2('DOM3 Core')}}</td>
-			<td>No change from {{SpecName('DOM2 Core')}}.</td>
-		</tr>
-		<tr>
-			<td>{{SpecName('DOM2 Core', 'core.html#ID-412266927', 'DocumentType')}}</td>
-			<td>{{Spec2('DOM2 Core')}}</td>
-			<td>Added the <code>publicID</code>, <code>systemID</code>, and <code>internalSubset</code> properties.</td>
-		</tr>
-		<tr>
-			<td>{{SpecName('DOM1', 'level-one-core.html#ID-412266927', 'DocumentType')}}</td>
-			<td>{{Spec2('DOM1')}}</td>
-			<td>Initial definition</td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

@@ -114,7 +114,7 @@ Cache-Control: public
 
 <p>The more we use cached resources, the better the responsiveness and the performance of a Web site will be. To optimize this, good practices recommend to set expiration times as far in the future as possible. This is possible on resources that are regularly updated, or often, but is problematic for resources that are rarely and infrequently updated. They are the resources that would benefit the most from caching resources, yet this makes them very difficult to update. This is typical of the technical resources included and linked from each Web pages: JavaScript and CSS files change infrequently, but when they change you want them to be updated quickly.</p>
 
-<p>Web developers invented a technique that Steve Souders called <em>revving</em><sup><a href="https://www.stevesouders.com/blog/2008/08/23/revving-filenames-dont-use-querystring/">[1]</a></sup>. Infrequently updated files are named in a specific way: in their URL, usually in the filename, a revision (or version) number is added. That way each new revision of this resource is considered as a resource on its own that <em>never</em> changes and that can have an expiration time very far in the future, usually one year or even more. In order to have the new versions, all the links to them must be changed, that is the drawback of this method: additional complexity that is usually taken care of by the tool chain used by Web developers. When the infrequently variable resources change they induce an additional change to often variable resources. When these are read, the new versions of the others are also read.</p>
+<p>Web developers invented a technique that Steve Souders called <a href="https://www.stevesouders.com/blog/2008/08/23/revving-filenames-dont-use-querystring/">revving</a>. Infrequently updated files are named in a specific way: in their URL, usually in the filename, a revision (or version) number is added. That way each new revision of this resource is considered as a resource on its own that <em>never</em> changes and that can have an expiration time very far in the future, usually one year or even more. In order to have the new versions, all the links to them must be changed, that is the drawback of this method: additional complexity that is usually taken care of by the tool chain used by Web developers. When the infrequently variable resources change they induce an additional change to often variable resources. When these are read, the new versions of the others are also read.</p>
 
 <p>This technique has an additional benefit: updating two cached resources at the same time will not lead to the situation where the out-dated version of one resource is used in combination with the new version of the other one. This is very important when web sites have CSS stylesheets or JS scripts that have mutual dependencies, i.e., they depend on each other because they refer to the same HTML elements.</p>
 
@@ -171,8 +171,8 @@ if (req.http.Accept-Encoding) {
     set req.http.Accept-Encoding = "gzip";
   }
   // elsif other encoding types to check
-else {
-  unset req.http.Accept-Encoding;
+  else {
+    unset req.http.Accept-Encoding;
   }
 }
 </pre>

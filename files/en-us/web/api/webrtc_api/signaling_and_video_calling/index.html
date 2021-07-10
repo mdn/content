@@ -159,7 +159,7 @@ tags:
 
 <p>When each peer's ICE layer begins to send candidates, it enters into an exchange among the various points in the chain that looks like this:</p>
 
-<p><a href="https://mdn.mozillademos.org/files/12365/WebRTC%20-%20ICE%20Candidate%20Exchange.svg"><img alt="Diagram of ICE candidate exchange process" src="webrtc_-_ice_candidate_exchange.svg"></a></p>
+<p><a href="webrtc_-_ice_candidate_exchange.svg"><img alt="Diagram of ICE candidate exchange process" src="webrtc_-_ice_candidate_exchange.svg"></a></p>
 
 <p>Each side sends candidates to the other as it receives them from their local ICE layer; there is no taking turns or batching of candidates. As soon as the two peers agree upon one candidate that they can both use to exchange the media, media begins to flow. Each peer continues to send candidates until it runs out of options, even after the media has already begun to flow. This is done in hopes of identifying even better options than the one initially selected.</p>
 

@@ -31,25 +31,25 @@ slug: Web/API/msCapsLockWarningOff
 
 <h2 id="Example_2">Example 2</h2>
 
-<pre style="padding: 5px; margin: 0px; font-style: normal; font-weight: 400; overflow: auto; word-wrap: normal; font-family: Consolas, Courier, monospace !important; color: rgb(0, 0, 0); font-size: 13px; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; text-decoration-style: initial;"><span style="color: blue;">&lt;</span><span style="color: #a31515;">html</span><span style="color: blue;">&gt;</span>
-<span style="color: blue;">&lt;</span><span style="color: #a31515;">head</span><span style="color: blue;">&gt;</span>
-    <span style="color: blue;">&lt;</span><span style="color: #a31515;">title</span><span style="color: blue;">&gt;</span>msCapsLockWarningOff example<span style="color: blue;">&lt;/</span><span style="color: #a31515;">title</span><span style="color: blue;">&gt;</span>
-    <span style="color: blue;">&lt;</span><span style="color: #a31515;">script</span> <span style="color: red;">type</span><span style="color: blue;">=</span><span style="color: blue;">"text/javascript"</span><span style="color: blue;">&gt;</span>
+<pre>&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;msCapsLockWarningOff example&lt;/title&gt;
+    &lt;script type="text/javascript"&gt;
 
-        <span style="color: blue;">function</span> capsOff() {
-                  <span style="color: blue;">if</span> (document.msCapsLockWarningOff == <span style="color: blue;">false</span>) {
-                document.msCapsLockWarningOff = <span style="color: blue;">true</span>;
-                document.getElementById(<span style="color: #a31515;">"caps"</span>).innerHTML = <span style="color: #a31515;">"Warning off"</span>;
-            } <span style="color: blue;">else</span> {
-                document.msCapsLockWarningOff = <span style="color: blue;">false</span>;
-                document.getElementById(<span style="color: #a31515;">"caps"</span>).innerHTML = <span style="color: #a31515;">"Warning on"</span>;
+        function capsOff() {
+                  if (document.msCapsLockWarningOff == false) {
+                document.msCapsLockWarningOff = true;
+                document.getElementById("caps").innerHTML = "Warning off";
+            } else {
+                document.msCapsLockWarningOff = false;
+                document.getElementById("caps").innerHTML = "Warning on";
             }
         }
 
-    <span style="color: blue;">&lt;/</span><span style="color: #a31515;">script</span><span style="color: blue;">&gt;</span>
-<span style="color: blue;">&lt;/</span><span style="color: #a31515;">head</span><span style="color: blue;">&gt;</span>
-<span style="color: blue;">&lt;</span><span style="color: #a31515;">body</span><span style="color: blue;">&gt;</span>
-<span style="color: blue;">&lt;</span><span style="color: #a31515;">label</span><span style="color: blue;">&gt;</span>Type a password: <span style="color: blue;">&lt;</span><span style="color: #a31515;">input</span> <span style="color: red;">type</span><span style="color: blue;">=</span><span style="color: blue;">"password"</span> <span style="color: blue;">/&gt;</span><span style="color: blue;">&lt;/</span><span style="color: #a31515;">label</span><span style="color: blue;">&gt;</span><span style="color: blue;">&lt;</span><span style="color: #a31515;">br</span> <span style="color: blue;">/&gt;</span>
-<span style="color: blue;">&lt;</span><span style="color: #a31515;">button</span> <span style="color: red;">id</span><span style="color: blue;">=</span><span style="color: blue;">"caps"</span> <span style="color: red;">onclick</span><span style="color: blue;">=</span><span style="color: blue;">"capsOff();"</span><span style="color: blue;">&gt;</span>Warning off<span style="color: blue;">&lt;/</span><span style="color: #a31515;">button</span><span style="color: blue;">&gt;</span>
-<span style="color: blue;">&lt;/</span><span style="color: #a31515;">body</span><span style="color: blue;">&gt;</span>
-<span style="color: blue;">&lt;/</span><span style="color: #a31515;">html</span><span style="color: blue;">&gt;</span></pre>
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;label&gt;Type a password: input type="password" /&gt;&lt;/label&gt;&lt;br /&gt;
+&lt;button id="caps" onclick="capsOff();"&gt;Warning off&lt;/button&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>

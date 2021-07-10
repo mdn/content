@@ -11,11 +11,10 @@ browser-compat: css.properties.hyphens
 ---
 <div>{{CSSRef}}</div>
 
-<p><span class="seoSummary">The <strong><code>hyphens</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property specifies how words should be hyphenated when text wraps across multiple lines.</span> It can prevent hyphenation entirely, hyphenate at manually-specified points within the text, or let the browser automatically insert hyphens where appropriate.</p>
+<p>The <strong><code>hyphens</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property specifies how words should be hyphenated when text wraps across multiple lines. It can prevent hyphenation entirely, hyphenate at manually-specified points within the text, or let the browser automatically insert hyphens where appropriate.</p>
 
 <div>{{EmbedInteractiveExample("pages/css/hyphens.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <p>Hyphenation rules are language-specific. In HTML, the language is determined by the <code><a href="/en-US/docs/Web/HTML/Global_attributes/lang">lang</a></code> attribute, and browsers will hyphenate only if this attribute is present and the appropriate hyphenation dictionary is available. In XML, the <code><a href="/en-US/docs/Web/SVG/Attribute/xml:lang">xml:lang</a></code> attribute must be used.</p>
 
@@ -33,6 +32,7 @@ hyphens: auto;
 /* Global values */
 hyphens: inherit;
 hyphens: initial;
+hyphens: revert;
 hyphens: unset;
 </pre>
 
@@ -125,22 +125,7 @@ dd.auto {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Text", "#hyphens-property", "hyphens")}}</td>
-   <td>{{Spec2("CSS3 Text")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

@@ -9,8 +9,7 @@ tags:
 ---
 <div>{{jsSidebar("Errors")}}</div>
 
-<p>The JavaScript exception "missing variable name" occurs way too often as naming things
-  is so hard. Or maybe a comma is wrong. Check for typos!</p>
+<p>The JavaScript exception "missing variable name" is a common error experienced by developers. It mostly occurs due to a typo or a forgotten variable name.</p>
 
 <h2 id="Message">Message</h2>
 
@@ -23,14 +22,11 @@ SyntaxError: Unexpected token = (Chrome)</pre>
 
 <h2 id="What_went_wrong">What went wrong?</h2>
 
-<p>A variable is missing a name. This is likely due to a syntax error in your code.
-  Probably a comma is wrong somewhere or you struggled with coming up with a name. Totally
-  understandable! Naming things is so hard.</p>
+<p>A variable is missing a name. The cause is most likely a typo or a forgotten variable name.
+  Make sure that you've provided the name of the variable before the <code>=</code> sign.</p>
 
-<ul>
-  <li>Check to ensure the previous lines / declaration does not end with a comma instead
-    of a semi-colon.</li>
-</ul>
+<p>When declaring multiple variables at the same time, make sure that the previous lines/declaration does not end with a comma instead
+  of a semi-colon.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -39,9 +35,9 @@ SyntaxError: Unexpected token = (Chrome)</pre>
 <pre class="brush: js example-bad">var = "foo";
 </pre>
 
-<p>It's tough coming up with good variable names. We all have been there.</p>
+<p>Coming up with a descriptive variable name is challenging for most developers. It gets easier over time.</p>
 
-<pre class="brush: js example-good">var ohGodWhy = "foo";</pre>
+<pre class="brush: js example-good">var description = "foo";</pre>
 
 <h3 id="Reserved_keywords_cant_be_variable_names">Reserved keywords can't be variable
   names</h3>

@@ -261,6 +261,8 @@ browser-compat: api.Document
  <dd>Release the pointer lock.</dd>
  <dt>{{DOMxRef("Document.getAnimations()")}}</dt>
  <dd>Returns an array of all {{DOMxRef("Animation")}} objects currently in effect, whose target elements are descendants of the <code>document</code>.</dd>
+ <dt>{{domxref("Document.getBoxQuads()")}} {{experimental_inline}}</dt>
+ <dd>Returns a list of {{domxref("DOMQuad")}} objects representing the CSS fragments of the node.</dd>
  <dt>{{DOMxRef("Document.getElementById")}}</dt>
  <dd>Returns an object reference to the identified element.</dd>
  <dt>{{DOMxRef("Document.getElementsByClassName()")}}</dt>
@@ -578,72 +580,7 @@ browser-compat: api.Document
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("DOM WHATWG", "#interface-document", "Document")}}</td>
-   <td>{{Spec2("DOM WHATWG")}}</td>
-   <td>Intend to supersede DOM 3</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "dom.html#the-document-object", "Document")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>Turn the {{DOMxRef("HTMLDocument")}} interface into a <code>Document</code> extension.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSSOM View", "#extensions-to-the-document-interface", "Document")}}</td>
-   <td>{{Spec2("CSSOM View")}}</td>
-   <td>Extend the <code>Document</code> interface</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("Pointer Lock", "#extensions-to-the-document-interface", "Document")}}</td>
-   <td>{{Spec2("Pointer Lock")}}</td>
-   <td>Extend the <code>Document</code> interface</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("Page Visibility API", "#extensions-to-the-document-interface", "Document")}}</td>
-   <td>{{Spec2("Page Visibility API")}}</td>
-   <td>Extend the <code>Document</code> interface with the <code>visibilityState</code> and <code>hidden</code> attributes and the <code>onvisibilitychange</code> event listener.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("Selection API", "#extensions-to-document-interface", "Document")}}</td>
-   <td>{{Spec2("Selection API")}}</td>
-   <td>Adds <code>getSelection()</code>, <code>onselectstart</code> and <code>onselectionchange</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM4", "#interface-document", "Document")}}</td>
-   <td>{{Spec2("DOM4")}}</td>
-   <td>Supersede DOM 3</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM3 Core", "#i-Document", "Document")}}</td>
-   <td>{{Spec2("DOM3 Core")}}</td>
-   <td>Supersede DOM 2</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM3 XPath", "xpath.html#XPathEvaluator", "XPathEvaluator")}}</td>
-   <td>{{Spec2("DOM3 XPath")}}</td>
-   <td>Define the {{DOMxRef("XPathEvaluator")}} interface which extend document.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM2 Core", "#i-Document", "Document")}}</td>
-   <td>{{Spec2("DOM2 Core")}}</td>
-   <td>Supersede DOM 1</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM1", "#i-Document", "Document")}}</td>
-   <td>{{Spec2("DOM1")}}</td>
-   <td>Initial definition for the interface</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

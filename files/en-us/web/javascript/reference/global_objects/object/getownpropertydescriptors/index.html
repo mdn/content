@@ -84,13 +84,13 @@ browser-compat: javascript.builtins.Object.getOwnPropertyDescriptors
 
 <pre class="brush: js">function superclass() {}
 superclass.prototype = {
-  // Define your methods and properties here
+  // Define the superclass constructor, methods, and properties here
 };
 function subclass() {}
 subclass.prototype = Object.create(
   superclass.prototype,
   {
-    // Define your methods and properties here
+    // Define the subclass constructor, methods, and properties here
   }
 );
 </pre>

@@ -15,7 +15,6 @@ browser-compat: css.properties.border-radius
 
 <div>{{EmbedInteractiveExample("pages/css/border-radius.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <p>The radius applies to the whole {{cssxref("background")}}, even if the element has no border; the exact position of the clipping is defined by the {{cssxref("background-clip")}} property.</p>
 
@@ -65,6 +64,7 @@ border-radius: 10px 5% / 20px 25em 30px 35em;
 /* Global values */
 border-radius: inherit;
 border-radius: initial;
+border-radius: revert;
 border-radius: unset;
 </pre>
 
@@ -118,9 +118,9 @@ border-radius: unset;
 </table>
 
 <dl>
- <dt><a id="&lt;length&gt;">{{cssxref("&lt;length&gt;")}}</a></dt>
+ <dt>{{cssxref("&lt;length&gt;")}}</dt>
  <dd>Denotes the size of the circle radius, or the semi-major and semi-minor axes of the ellipse, using length values. Negative values are invalid.</dd>
- <dt><a id="&lt;percentage&gt;">{{cssxref("&lt;percentage&gt;")}}</a></dt>
+ <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
  <dd>Denotes the size of the circle radius, or the semi-major and semi-minor axes of the ellipse, using percentage values. Percentages for the horizontal axis refer to the width of the box; percentages for the vertical axis refer to the height of the box. Negative values are invalid.</dd>
 </dl>
 
@@ -253,22 +253,7 @@ pre#example-7 {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Backgrounds', '#border-radius', 'border-radius')}}</td>
-   <td>{{Spec2('CSS3 Backgrounds')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
@@ -277,5 +262,5 @@ pre#example-7 {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>Border-radius-related CSS properties: {{cssxref("border-top-left-radius")}}, {{cssxref("border-top-right-radius")}}, {{cssxref("border-bottom-right-radius")}}, {{cssxref("border-bottom-left-radius")}}</li>
+ <li>Border-radius-related CSS properties: {{cssxref("border-top-left-radius")}}, {{cssxref("border-top-right-radius")}}, {{cssxref("border-bottom-right-radius")}}, {{cssxref("border-bottom-left-radius")}}, {{cssxref("border-start-start-radius")}}, {{cssxref("border-start-end-radius")}}, {{cssxref("border-end-start-radius")}}, {{cssxref("border-end-end-radius")}}</li>
 </ul>

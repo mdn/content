@@ -41,7 +41,6 @@ tags:
 
 <p>In this example I have used grid to lay out a set of boxes that contain links. I have used the line-based placement properties to position box 1 on the second row of the grid. Visually it now appears as the fourth item in the list. However, if I tab from link to link the tab order still begins with box 1, as it comes first in the source.</p>
 
-<div id="accessibility_1">
 <div class="hidden">
 <pre class="brush: css">* {box-sizing: border-box;}
 
@@ -82,8 +81,7 @@ tags:
 &lt;/div&gt;
 </pre>
 
-<p>{{ EmbedLiveSample('accessibility_1', '500', '330') }}</p>
-</div>
+<p>{{ EmbedLiveSample('Visual_not_logical_re-ordering', '500', '330') }}</p>
 
 <p>The specification says that in this scenario, if box 1 really makes sense logically in that position, we should go back to our source and make the change there rather than reordering using grid layout. This is what is meant by visual versus logical reordering, logical ordering is important for the meaning and structure of our document, and we should make sure that we preserve that structure.</p>
 

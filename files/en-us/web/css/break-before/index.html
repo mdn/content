@@ -9,6 +9,7 @@ tags:
   - NeedsExample
   - Reference
   - 'recipe:css-property'
+browser-compat: css.properties.break-before
 ---
 <div>{{CSSRef}}</div>
 
@@ -39,6 +40,7 @@ break-before: region;
 /* Global values */
 break-before: inherit;
 break-before: initial;
+break-before: revert;
 break-before: unset;
 </pre>
 
@@ -66,9 +68,9 @@ break-before: unset;
  <dd>Allows, but does not force, any break (page, column, or region) to be inserted right before the principal box.</dd>
  <dt><code>avoid</code></dt>
  <dd>Avoids any break (page, column, or region) from being inserted right before the principal box.</dd>
- <dt><code>always</code> {{experimental_inline}}</dt>
- <dd>Forces a page break right after the principal box. The type of this break is that of the immediately-containing fragmentation context. If we are inside a multicol container then it would force a column break, inside paged media (but not inside a multicol container) a page break.</dd>
- <dt><code>all</code> {{experimental_inline}}</dt>
+ <dt><code>always</code> {{experimental_inline}}</dt>
+ <dd>Forces a page break right after the principal box. The type of this break is that of the immediately-containing fragmentation context. If we are inside a multicol container then it would force a column break, inside paged media (but not inside a multicol container) a page break.</dd>
+ <dt><code>all</code> {{experimental_inline}}</dt>
  <dd>Forces a page break right after the principal box. Breaking through all possible fragmentation contexts. So a break inside a multicol container, which was inside a page container would force a column and page break.</dd>
 </dl>
 
@@ -109,7 +111,7 @@ break-before: unset;
 
 <h2 id="Page_break_aliases">Page break aliases</h2>
 
-<p>For compatibility reasons, the legacy {{cssxref("page-break-before")}} property should be treated by browsers as an alias of <code>break-before</code>. This ensures that sites using <code>page-break-before</code> continue to work as designed. A subset of values should be aliased as follows:</p>
+<p>For compatibility reasons, the legacy {{cssxref("page-break-before")}} property should be treated by browsers as an alias of <code>break-before</code>. This ensures that sites using <code>page-break-before</code> continue to work as designed. A subset of values should be aliased as follows:</p>
 
 <table class="standard-table">
  <thead>
@@ -160,7 +162,7 @@ break-before: unset;
 
 <p>In the following example we have a container that contains an <code>&lt;h1&gt;</code> spanning all columns (achieved using <code>column-span: all</code>) and a series of <code>&lt;h2&gt;</code>s and paragraphs laid out in multiple columns using <code>column-width: 200px</code>.</p>
 
-<p>By default, the subheadings and paragraphs were laid out rather messily because the headings were not in a uniform place. However, we used <code>break-before: column</code> on the <code>&lt;h2&gt;</code> elements to force a column break before each one, meaning that you end up with an <code>&lt;h2&gt;</code> neatly at the top of each column.</p>
+<p>By default, the subheadings and paragraphs were laid out rather messily because the headings were not in a uniform place. However, we used <code>break-before: column</code> on the <code>&lt;h2&gt;</code> elements to force a column break before each one, meaning that you end up with an <code>&lt;h2&gt;</code> neatly at the top of each column.</p>
 
 <h4 id="HTML">HTML</h4>
 
@@ -218,42 +220,11 @@ article {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Fragmentation', '#break-between', 'break-before')}}</td>
-   <td>{{Spec2('CSS3 Fragmentation')}}</td>
-   <td>Adds the <code>recto</code> and <code>verso</code> keywords. Changes the media type of this property from <code>paged</code> to {{xref_cssvisual}}. Defines the breaking algorithm with different kinds of breaks.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Regions', '#region-flow-break', 'break-before')}}</td>
-   <td>{{Spec2('CSS3 Regions')}}</td>
-   <td>Extends the property to handle region breaks. Adds the <code>avoid-region</code> and <code>region</code> keywords.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Multicol', '#break-before-break-after-break-inside', 'break-before')}}</td>
-   <td>{{Spec2('CSS3 Multicol')}}</td>
-   <td>Initial definition. Extends the CSS 2.1 {{cssxref("page-break-before")}} property to handle both page and column breaks.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<h3 id="Support_in_multi-column_layout">Support in multi-column layout</h3>
-
-<p>{{Compat("css.properties.break-before.multicol_context")}}</p>
-
-<h3 id="Support_in_paged_media">Support in paged media</h3>
-
-<p>{{Compat("css.properties.break-before.paged_context")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

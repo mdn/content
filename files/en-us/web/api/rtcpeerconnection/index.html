@@ -57,9 +57,6 @@ browser-compat: api.RTCPeerConnection
  <dt>{{domxref("RTCPeerConnection.icegatheringstatechange_event", "icegatheringstatechange")}}</dt>
  <dd>Sent to the <code>RTCPeerConnection</code> when the ICE layer's gathering state, reflected by {{domxref("RTCPeerConnection.iceGatheringState", "iceGatheringState")}}, changes. This indicates whether ICE negotiation has not yet begun (<code>new</code>), has begun gathering candidates (<code>gathering</code>), or has completed (<code>complete</code>).<br>
  Also available using the {{domxref("RTCPeerConnection.onicegatheringstatechange", "onicegatheringstatechange")}} event handler property.</dd>
- <dt>{{domxref("RTCPeerConnection.isolationchange_event", "isolationchange")}}</dt>
- <dd>Sent to the <code>RTCPeerConnection</code> when the {{domxref("MediaStreamTrack.isolated", "isolated")}} property on one of the {{domxref("MediaStreamTrack")}} objects associated with the connection changes value. A track is {{domxref("MediaStreamTrack.isolated", "isolated")}} if its content cannot be accessed by the owning document due to lack of authentication or if the track comes from a cross-origin source.<br>
- Also available through the {{domxref("RTCPeerConnection.onisolationchange", "onisolationchange")}} event handler property.</dd>
  <dt>{{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}}</dt>
  <dd>Sent to the <code>RTCPeerConnection</code> when negotiation or renegotiation of the ICE connection needs to be performed; this can happen both when first opening a connection as well as when it's neccessary to adapt to changing network conditions. The receiver should respond by creating an offer and sending it to the other peer.<br>
  Also available as the {{domxref("RTCPeerConnection.onnegotiationneeded", "onnegotiationneeded")}} event handler property.</dd>
@@ -77,17 +74,6 @@ browser-compat: api.RTCPeerConnection
  <dt>{{domxref("RTCPeerConnection.addstream_event", "addstream")}} {{deprecated_inline}}</dt>
  <dd>Sent when a new {{domxref("MediaStream")}} has been added to the connection. Instead of watching for this obsolete event, you should watch each for {{domxref("RTCPeerConnection.track_event", "track")}} events; one is sent for each {{domxref("MediaStreamTrack")}} added to the connection.<br>
  Available as the {{domxref("RTCPeerConnection.onaddstream", "onaddstream")}} event handler property.</dd>
- <dt>{{domxref("RTCPeerConnection.identityresult_event", "identityresult")}} {{deprecated_inline}}</dt>
- <dd>In old versions of the WebRTC specification, this event was used to indicate that an identity assertion is available. Now, you should instead wait for a the promise returned by {{domxref("RTCPeerConnection.peerIdentity", "peerIdentity")}} to resolve with an identity.<br>
- Also available using the {{domxref("RTCPeerConnection.onidentityresult", "onidentityresult")}} event handler property.</dd>
- <dt>{{domxref("RTCPeerConnection.idpassertionerror_event", "idpassertionerror")}} {{deprecated_inline}}</dt>
- <dd>In old versions of the WebRTC specification, this event was used to indicate that an error occurred while attempting to generate an identity assertion. Now, you should instead wait for a the promise returned by {{domxref("RTCPeerConnection.peerIdentity", "peerIdentity")}} to be rejected with an error.<br>
- Also available as the {{domxref("RTCPeerConnection.onidpassertionerror", "onidpinsertionerror")}} event handler property.</dd>
- <dt>{{domxref("RTCPeerConnection.idpvalidationerror_event", "idpvalidationerror")}} {{deprecated_inline}}</dt>
- <dd>In old versions of the WebRTC specification, this event was used to indicate that an error occurred while attempting to validate an identity assertion. Now, you should instead wait for a the promise returned by {{domxref("RTCPeerConnection.peerIdentity", "peerIdentity")}} to be rejected with an error.<br>
- Also available using the {{domxref("RTCPeerConnection.onpeeridentity", "onpeerdentity")}} event handler property.</dd>
- <dt>{{domxref("RTCPeerConnection.peeridentity_event", "peeridentity")}} {{deprecated_inline}}</dt>
- <dd>In old versions of the WebRTC specification, this event was used to deliver a received identity. Now, you should instead wait for a the promise returned by {{domxref("RTCPeerConnection.peerIdentity", "peerIdentity")}} to resolve with an identity.</dd>
  <dt>{{domxref("RTCPeerConnection.removestream_event", "removestream")}} {{deprecated_inline}}</dt>
  <dd>Sent to the <code>RTCPeerConnection</code> when a {{domxref("MediaStream")}} is removed from the connection. Instead of watching for this obsolete event, you should watch each stream for {{domxref("MediaStream.removetrack_event", "removetrack")}} events on each stream within the <code>RTCPeerConnection</code>.<br>
  Also available as the {{domxref("RTCPeerConnection.onremovestream", "onremovestream")}} event handler property.</dd>
@@ -338,22 +324,7 @@ browser-compat: api.RTCPeerConnection
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('WebRTC 1.0', '#interface-definition', 'RTCPeerConnection')}}</td>
-   <td>{{Spec2('WebRTC 1.0')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

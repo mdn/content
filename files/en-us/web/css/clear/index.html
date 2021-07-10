@@ -22,7 +22,7 @@ browser-compat: css.properties.clear
 <p>The floats that are relevant to be cleared are the earlier floats within the same <a href="/en-US/docs/Web/Guide/CSS/Block_formatting_context">block formatting context</a>.</p>
 
 <div class="note">
-<p>If an element contains only floated elements, its height collapses to nothing. If you want it to always be able to resize, so that it contains floating elements inside it, you need to self-clear its children. This is called <strong>clearfix</strong>, and one way to do it is to add <code>clear</code> to a replaced {{cssxref("::after")}} <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-element</a> on it.</p>
+<p>If an element contains only floated elements, its height collapses to nothing. If you want it to always be able to resize, so that it contains floating elements inside it, you need to self-clear its children. This is called <strong>clearfix</strong>, and one way to do it is to add <code>clear</code> to a replaced {{cssxref("::after")}} <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-element</a> on it.</p>
 
 <pre class="brush: css">#container::after {
   content: "";
@@ -45,6 +45,7 @@ clear: inline-end;
 /* Global values */
 clear: inherit;
 clear: initial;
+clear: revert;
 clear: unset;
 </pre>
 
@@ -198,32 +199,7 @@ p {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS Logical Properties', '#float-clear', 'float and clear')}}</td>
-   <td>{{Spec2('CSS Logical Properties')}}</td>
-   <td>Adds the values <code>inline-start</code> and <code>inline-end</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'visuren.html#flow-control', 'clear')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>No significant changes, though details are clarified.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#clear', 'clear')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

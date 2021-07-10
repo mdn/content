@@ -59,11 +59,11 @@ tags:
 
 <p><img alt="Our example site as viewed on a narrow screen; the first image has shrunk to the point where it is hard to make out the detail on it." src="non-responsive-narrow.png" style="display: block; margin: 0px auto;"></p>
 
-<p>An improvement would be to display a cropped version of the image which displays the important details of the image when the site is viewed on a narrow screen. A second cropped image could be displayed for a medium width screen device, like a tablet. This is commonly known as the <strong>art direction problem</strong>.</p>
+<p>An improvement would be to display a cropped version of the image which displays the important details of the image when the site is viewed on a narrow screen. A second cropped image could be displayed for a medium-width screen device, like a tablet. The general problem whereby you want to serve different cropped images in that way, for various layouts, is commonly known as the <strong>art direction problem</strong>.</p>
 
 <p>In addition, there is no need to embed such large images on the page if it is being viewed on a mobile screen. And conversely, a small <a href="/en-US/docs/Glossary/Raster_image">raster image</a> starts to look grainy when displayed larger than its original size (a raster image is a set number of pixels wide and a set number of pixels tall, as we saw when we looked at <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web">vector graphics</a>). This is called the <strong>resolution switching problem</strong>.</p>
 
-<p>Conversely, it is unnecessary to display a large image on a screen significantly smaller than the size it was meant for. Doing so can waste bandwidth; in particular, mobile users don't want to waste bandwidth by downloading a large image intended for desktop, when a small image would do for their device. Ideally, you would have multiple resolutions available and serve the appropriate size depending upon the device accessing the data on the website.</p>
+<p>Conversely, it is unnecessary to display a large image on a screen significantly smaller than the size it was meant for. Doing so can waste bandwidth; in particular, mobile users don't want to waste bandwidth by downloading a large image intended for desktop users, when a small image would do for their device. Ideally, you would have multiple resolutions available and serve the appropriate size depending upon the device accessing the data on the website.</p>
 
 <p>To make things more complicated, some devices have high resolution screens that need larger images than you might expect to display nicely. This is essentially the same problem, but in a slightly different context.</p>
 
@@ -72,12 +72,12 @@ tags:
 <p>This kind of problem didn't exist when the web first existed, in the early to mid 90s — back then the only devices in existence to browse the Web were desktops and laptops, so browser engineers and spec writers didn't even think to implement solutions. <em>Responsive image technologies</em> were implemented recently to solve the problems indicated above by letting you offer the browser several image files, either all showing the same thing but containing different numbers of pixels (<em>resolution switching</em>), or different images suitable for different space allocations (<em>art direction</em>).</p>
 
 <div class="note">
-<p><strong>Note</strong>: The new features discussed in this article — {{htmlattrxref("srcset", "img")}}/{{htmlattrxref("sizes", "img")}}/{{htmlelement("picture")}} — are all supported in release versions of modern desktop and mobile browsers (including Microsoft's Edge browser, although not Internet Explorer.) </p>
+<p><strong>Note</strong>: The new features discussed in this article — {{htmlattrxref("srcset", "img")}}/{{htmlattrxref("sizes", "img")}}/{{htmlelement("picture")}} — are all supported in modern desktop and mobile browsers (including Microsoft's Edge browser, although not Internet Explorer.) </p>
 </div>
 
 <h2 id="How_do_you_create_responsive_images">How do you create responsive images?</h2>
 
-<p>In this section, we'll look at the two problems illustrated above and show how to solve them using HTML's responsive image features. You should note that we will be focusing on the HTML {{htmlelement("img")}}s for this section, as seen in the content area of the example above — the image in the site header is only for decoration, and therefore implemented using CSS background images. <a href="https://blog.cloudfour.com/responsive-images-101-part-8-css-images/">CSS arguably has better tools for responsive design</a> than HTML, and we'll talk about those in a future CSS module.</p>
+<p>In this section, we'll look at the two problems illustrated above and show how to solve them using HTML's responsive image features. You should note that we will be focusing on {{htmlelement("img")}} elements for this section, as seen in the content area of the example above — the image in the site header is only for decoration, and therefore implemented using CSS background images. <a href="https://blog.cloudfour.com/responsive-images-101-part-8-css-images/">CSS arguably has better tools for responsive design</a> than HTML, and we'll talk about those in a future CSS module.</p>
 
 <h3 id="Resolution_switching_Different_sizes">Resolution switching: Different sizes</h3>
 
@@ -128,7 +128,7 @@ tags:
 <p>And that's it! At this point, if a supporting browser with a viewport width of 480px loads the page, the <code>(max-width: 600px)</code> media condition will be true, and so the browser chooses the <code>480px</code> slot. The <code>elva-fairy-480w.jpg</code> will be loaded, as its inherent width (<code>480w</code>) is closest to the slot size. The 800px picture is 128KB on disk, whereas the 480px version is only 63KB — a saving of 65KB. Now, imagine if this was a page that had many pictures on it. Using this technique could save mobile users a lot of bandwidth.</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: When testing this with a desktop browser, if the browser fails to load the narrower images when you've got its window set to the narrowest width, have a look at what the viewport is (you can approximate it by going into the browser's JavaScript console and typing in <code><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="cm-variable">document</span>.<span class="cm-property">querySelector</span>(<span class="cm-string">'html'</span>).<span class="cm-property">clientWidth</span></span></span></span></code>). Different browsers have minimum sizes that they'll let you reduce the window width to, and they might be wider than you'd think. When testing it with a mobile browser, you can use tools like Firefox's <code>about:debugging</code> page to inspect the page loaded on the mobile using the desktop developer tools.<br>
+<p><strong>Note</strong>: When testing this with a desktop browser, if the browser fails to load the narrower images when you've got its window set to the narrowest width, have a look at what the viewport is (you can approximate it by going into the browser's JavaScript console and typing in <code>document.querySelector('html').clientWidth</code>). Different browsers have minimum sizes that they'll let you reduce the window width to, and they might be wider than you'd think. When testing it with a mobile browser, you can use tools like Firefox's <code>about:debugging</code> page to inspect the page loaded on the mobile using the desktop developer tools.<br>
  <br>
  To see which images were loaded, you can use Firefox DevTools's <a href="/en-US/docs/Tools/Network_Monitor">Network Monitor</a> tab.</p>
 </div>
@@ -234,7 +234,7 @@ tags:
 
 <ul>
  <li><strong>Art direction</strong>: The problem whereby you want to serve cropped images for different layouts — for example a landscape image showing a full scene for a desktop layout, and a portrait image showing the main subject zoomed in for a mobile layout. You can solve this problem using the {{htmlelement("picture")}} element.</li>
- <li><strong>Resolution switching</strong>: The problem whereby you want to serve smaller image files to narrow screen devices, as they don't need huge images like desktop displays do — and also optionally that you want to serve different resolution images to high density/low density screens. You can solve this problem by using <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web">vector graphics</a> (SVG images) and the {{htmlattrxref("srcset", "img")}} with {{htmlattrxref("sizes", "img")}} attributes.</li>
+ <li><strong>Resolution switching</strong>: The problem whereby you want to serve smaller image files to narrow-screen devices, as they don't need huge images like desktop displays do — and to serve different resolution images to high density/low density screens. You can solve this problem using <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web">vector graphics</a> (SVG images) and the {{htmlattrxref("srcset", "img")}} with {{htmlattrxref("sizes", "img")}} attributes.</li>
 </ul>
 
 <p>This also draws to a close the entire <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding">Multimedia and embedding</a> module! The only thing to do now before moving on is to try our multimedia assessment, and see how you get on. Have fun!</p>
@@ -258,6 +258,5 @@ tags:
  <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content">Video and audio content</a></li>
  <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies">From &lt;object&gt; to &lt;iframe&gt; — other embedding technologies</a></li>
  <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web">Adding vector graphics to the Web</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">Responsive images</a></li>
  <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page">Mozilla splash page</a></li>
 </ul>

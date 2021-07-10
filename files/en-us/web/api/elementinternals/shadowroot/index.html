@@ -1,0 +1,49 @@
+---
+title: ElementInternals.shadowRoot
+slug: Web/API/ElementInternals/shadowRoot
+tags:
+  - API
+  - Property
+  - Reference
+  - shadowRoot
+  - ElementInternals
+browser-compat: api.ElementInternals.shadowRoot
+---
+<div>{{DefaultAPISidebar("DOM")}}</div>
+
+<p class="summary">The <strong><code>shadowRoot</code></strong> read-only property of the {{domxref("ElementInternals")}} interface returns the {{domxref("ShadowRoot")}} for this element.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js">let shadowRoot = ElementInternals.shadowRoot;
+</pre>
+
+<h3>Value</h3>
+<p>A {{domxref("ShadowRoot")}} if the element has a shadow root, otherwise <code>null</code>.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<p>The following example prints the value of <code>shadowRoot</code> to the console, immediately after calling {{domxref("Element.attachInternals()")}}. At this point the value is <code>null</code>. After calling {{domxref("Element.attachShadow()")}} the element has a Shadow Root, and <code>shadowRoot</code> returns the object representing it.</p>
+
+<pre class="brush: js">constructor() {
+  super();
+  this.internals_ = this.attachInternals();
+
+  console.log(this.internals_.shadowRoot); // null
+
+  this.attachShadow({ mode: "open" });
+
+  console.log(this.internals_.shadowRoot); // a ShadowRoot object
+}</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<p>{{Specifications}}</p>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+
+<p>{{Compat}}</p>
+
+

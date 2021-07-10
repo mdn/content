@@ -455,7 +455,7 @@ email.addEventListener("input", function (event) {
 
 <p>Here we store a reference to the email input, then add an event listener to it that runs the contained code each time the value inside the input is changed.</p>
 
-<p>Inside the contained code, we check whether the email input's <code>validity.typeMismatch</code> property returns <code>true</code>, meaning that the contained value doesn't match the pattern for a well-formed email address. If so, we call the <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation#constraint_api's_element.setcustomvalidity()"><code>setCustomValidity()</code></a> method with a custom message. This renders the input invalid, so that when you try to submit the form, submission fails and the custom error message is displayed.</p>
+<p>Inside the contained code, we check whether the email input's <code>validity.typeMismatch</code> property returns <code>true</code>, meaning that the contained value doesn't match the pattern for a well-formed email address. If so, we call the {{domxref("HTMLInputElement.setCustomValidity()","setCustomValidity()")}} method with a custom message. This renders the input invalid, so that when you try to submit the form, submission fails and the custom error message is displayed.</p>
 
 <p>If the <code>validity.typeMismatch</code> property returns <code>false</code>, we call the <code>setCustomValidity()</code> method an empty string. This renders the input valid, so the form will submit.</p>
 
@@ -585,15 +585,15 @@ form.addEventListener('submit', function (event) {
 
 function showError() {
   if(email.validity.valueMissing) {
-    // If the field is empty
+    // If the field is empty,
     // display the following error message.
     emailError.textContent = 'You need to enter an e-mail address.';
   } else if(email.validity.typeMismatch) {
-    // If the field doesn't contain an email address
+    // If the field doesn't contain an email address,
     // display the following error message.
     emailError.textContent = 'Entered value needs to be an e-mail address.';
   } else if(email.validity.tooShort) {
-    // If the data is too short
+    // If the data is too short,
     // display the following error message.
     emailError.textContent = `Email should be at least ${ email.minLength } characters; you entered ${ email.value.length }.`;
   }

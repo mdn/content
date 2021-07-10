@@ -24,9 +24,9 @@ browser-compat: css.types.image
 	<li>An image denoted by the {{CSSxRef("url()", "url()")}} data type</li>
 	<li>A {{CSSxRef("&lt;gradient&gt;")}} data type</li>
 	<li>A part of the webpage, defined by the {{CSSxRef("element()","element()")}} function</li>
-	<li>An image, image fragment or solid patch of color, defined by the {{CSSxRef("image()","image()")}} function</li>
+	<li>An image, image fragment or solid patch of color, defined by the {{CSSxRef("image/image()","image()")}} function</li>
 	<li>A blending of two or more images defined by the {{CSSxRef("cross-fade()","cross-fade()")}} function.</li>
-	<li>A selection of images chosen based on resolution defined by the {{CSSxRef("image-set()","image-set()")}} function.</li>
+	<li>A selection of images chosen based on resolution defined by the {{CSSxRef("image/image-set()","image-set()")}} function.</li>
 </ul>
 
 <h2 id="Description">Description</h2>
@@ -97,7 +97,7 @@ browser-compat: css.types.image
 	<li>If the specified size defines <em>neither the width nor the height</em>, the concrete object size is calculated so that it matches the intrinsic aspect ratio of the image but without exceeding the default object size in any dimension. If the image has no intrinsic aspect ratio, the intrinsic aspect ratio of the object it applies to is used; if this object has none, the missing width or height are taken from the default object size.</li>
 </ul>
 
-<div class="note"><strong>Note:</strong> Not all browsers support every type of image on every property. See the <a href="/en-US/docs/Web/CSS/image#browser_compatibility">browser compatibility section</a> for details.</div>
+<div class="note"><strong>Note:</strong> Not all browsers support every type of image on every property. See the <a href="#browser_compatibility">browser compatibility section</a> for details.</div>
 
 <h2 id="Accessibility_concerns">Accessibility concerns</h2>
 
@@ -137,27 +137,7 @@ image-set('cat.jpg' 1x, 'dog.jpg' 1x) /* every image in an image set must have a
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName("CSS4 Images", "#typedef-image", "&lt;image&gt;")}}</td>
-			<td>{{Spec2("CSS4 Images")}}</td>
-			<td>Adds {{CSSxRef("element()","element()")}}, {{CSSxRef("image()","image()")}}, {{CSSxRef("image-set()","image-set()")}}, {{CSSxRef("conic-gradient()","conic-gradient()")}}, {{CSSxRef("repeating-conic-gradient()", "repeating-conic-gradient()")}}, and {{CSSxRef("image-resolution")}}.</td>
-		</tr>
-		<tr>
-			<td>{{SpecName("CSS3 Images", "#typedef-image", "&lt;image&gt;")}}</td>
-			<td>{{Spec2("CSS3 Images")}}</td>
-			<td>Initial definition. Before this, there was no explicitly defined <code>&lt;image&gt;</code> data type. Images could only be defined using the <code>url()</code> functional notation.</td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
@@ -168,7 +148,7 @@ image-set('cat.jpg' 1x, 'dog.jpg' 1x) /* every image in an image set must have a
 <ul>
 	<li>{{CSSxRef("&lt;gradient&gt;")}}</li>
 	<li>{{CSSxRef("element()","element()")}}</li>
-	<li>{{CSSxRef("image()", "image()")}}</li>
-	<li>{{CSSxRef("image-set()","image-set()")}}</li>
+	<li>{{CSSxRef("image/image()", "image()")}}</li>
+	<li>{{CSSxRef("image/image-set()","image-set()")}}</li>
 	<li>{{CSSxRef("cross-fade()","cross-fade()")}}</li>
 </ul>

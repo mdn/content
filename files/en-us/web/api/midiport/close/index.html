@@ -11,7 +11,7 @@ browser-compat: api.MIDIPort.close
 ---
 <div>{{securecontext_header}}{{DefaultAPISidebar("Web MIDI API")}}</div>
 
-<p class="summary">The <strong><code>close()</code></strong> method of the {{domxref("MIDIPort")}} interface makes the MIDI device connected to this MIDIPort unavailable.</p>
+<p class="summary">The <strong><code>close()</code></strong> method of the {{domxref("MIDIPort")}} interface makes the access to the MIDI device connected to this <code>MIDIPort</code> unavailable.</p>
 
 <p>If the port is successfully closed a new {{domxref("MIDICOnnectionEvent")}} is queued to the {{domxref("MIDIPort.onstatechange")}} and {{domxref("MIDIAccess.onstatechange")}} event handlers, and the {{domxref("MIDIPort.connection")}} property is changed to <code>"closed"</code>.</p>
 
@@ -31,25 +31,12 @@ browser-compat: api.MIDIPort.close
 
 <p>The following example shows an output port being closed.</p>
 
-<pre class="brush: js">var output = midiAccess.outputs.get(portID);
+<pre class="brush: js">let output = midiAccess.outputs.get(portID);
 output.close(); // closes the port</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-   <tr>
-    <th scope="col">Specification</th>
-    <th scope="col">Status</th>
-    <th scope="col">Comment</th>
-   </tr>
-   <tr>
-    <td>{{SpecName('WebMIDI API','#dom-midiport-close','MIDIPort.close()')}}</td>
-    <td>{{Spec2('WebMIDI API')}}</td>
-    <td>Initial definition.</td>
-   </tr>
-  </tbody>
- </table>
+<p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

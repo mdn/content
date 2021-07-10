@@ -10,8 +10,14 @@ tags:
 - Property
 - Read-only
 - legacy
+browser-compat: api.PerformanceNavigation.type
 ---
 <p>{{APIRef("Navigation Timing")}}{{Deprecated_Header}}</p>
+
+<p>The legacy
+  <code><strong>PerformanceNavigation.type</code></strong>
+  read-only property returns an <code>unsigned short</code> containing a constant
+  describing how the navigation to this page was done.</p>
 
 <div class="notecard warning">
   <h4>Warning</h4>
@@ -19,10 +25,7 @@ tags:
     Please use the {{domxref("PerformanceNavigationTiming")}} interface instead.</p>
 </div>
 
-<p>The legacy
-  <code><strong>PerformanceNavigation</strong></code><strong><code>.type</code></strong>
-  read-only property returns an <code>unsigned short</code> containing a constant
-  describing how the navigation to this page was done. Possible values are:</p>
+<p>Possible values are:</p>
 
 <table class="standard-table">
   <thead>
@@ -65,25 +68,12 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Navigation Timing', '#dom-performancenavigation-type',
-        'PerformanceNavigation.type')}}</td>
-      <td>{{Spec2('Navigation Timing')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+<p>This feature is no longer on track to become a standard, as the <a href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing specification</a> has marked it as deprecated.
+  Use the {{domxref("PerformanceNavigationTiming")}} interface instead.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.PerformanceNavigation.type")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -7,6 +7,7 @@ tags:
   - CSS Property
   - Reference
   - recipe:css-property
+browser-compat: css.properties.align-content
 ---
 <p>The <a href="/en-US/docs/Web/CSS">CSS</a> <strong><code>align-content</code></strong> property sets the distribution of space between and around content items along a <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">flexbox</a>'s cross-axis or a <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">grid</a>'s block axis.</p>
 
@@ -14,7 +15,7 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/css/align-content.html")}}</div>
 
-<p>This property has no effect on single line flex containers (i.e. ones with <code>flex-wrap: nowrap</code>).</p>
+<p>This property has no effect on single line flex containers (i.e. ones with <code>flex-wrap: nowrap</code>).</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -54,6 +55,7 @@ align-content: unsafe center;
 /* Global values */
 align-content: inherit;
 align-content: initial;
+align-content: revert;
 align-content: unset;
 </pre>
 
@@ -74,12 +76,12 @@ align-content: unset;
  <dd>The items are packed flush to each other in the center of the alignment container along the cross axis.</dd>
  <dt><code>normal</code></dt>
  <dd>The items are packed in their default position as if no <code>align-content</code> value was set.</dd>
- <dt><code>baseline<br>
- first baseline</code><br>
- <code>last baseline</code></dt>
- <dd><img alt='the baseline is the line upon which most letters "sit" and below which descenders extend.' src="410px-typography_line_terms.svg.png"></dd>
- <dd>Specifies participation in first- or last-baseline alignment: aligns the alignment baseline of the box’s first or last baseline set with the corresponding baseline in the shared first or last baseline set of all the boxes in its baseline-sharing group.<br>
- The fallback alignment for <code>first baseline</code> is <code>start</code>, the one for <code>last baseline</code> is <code>end</code>.</dd>
+ <dt><code>baseline</code>, <code>first baseline</code>, <code>last baseline</code></dt>
+ <dd>
+   <p>Specifies participation in first- or last-baseline alignment: aligns the alignment baseline of the box's first or last baseline set with the corresponding baseline in the shared first or last baseline set of all the boxes in its baseline-sharing group.</p>
+   <img alt='the baseline is the line upon which most letters "sit" and below which descenders extend.' src="410px-typography_line_terms.svg.png">
+   <p>The fallback alignment for <code>first baseline</code> is <code>start</code>, the one for <code>last baseline</code> is <code>end</code>.</p>
+ </dd>
  <dt><code>space-between</code></dt>
  <dd>The items are evenly distributed within the alignment container along the cross axis. The spacing between each pair of adjacent items is the same. The first item is flush with the start edge of the alignment container in the cross axis, and the last item is flush with the end edge of the alignment container in the cross axis.</dd>
  <dt><code>space-around</code></dt>
@@ -247,39 +249,11 @@ display.addEventListener('change', function (evt) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Box Alignment", "#propdef-align-content", "align-content")}}</td>
-   <td>{{Spec2("CSS3 Box Alignment")}}</td>
-   <td>Adds the [ first | last ]? baseline, start, end, left, right, unsafe | safe values.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS3 Flexbox", "#align-content-property", "align-content")}}</td>
-   <td>{{Spec2("CSS3 Flexbox")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
-
-<div>{{cssinfo}}</div>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<h3 id="Support_in_Flex_layout">Support in Flex layout</h3>
-
-<p>{{Compat("css.properties.align-content.flex_context")}}</p>
-
-<h3 id="Support_in_Grid_layout">Support in Grid layout</h3>
-
-<p>{{Compat("css.properties.align-content.grid_context")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

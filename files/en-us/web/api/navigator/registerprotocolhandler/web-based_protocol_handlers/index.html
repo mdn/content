@@ -6,15 +6,12 @@ tags:
   - HTML5
   - Web-Based Protocol Handlers
 ---
-<div></div>
 
 <h2 id="Background">Background</h2>
 
 <p>It's fairly common to find web pages link to resources using non-<code>http</code> protocols. An example is the <code>mailto:</code> protocol:</p>
 
-<div style="overflow: hidden;">
 <pre class="brush:html">&lt;a href="mailto:webmaster@example.com"&gt;Web Master&lt;/a&gt;</pre>
-</div>
 
 <p>Web authors can use a <code>mailto:</code> link when they want to provide a convenient way for users to send an email, directly from the webpage. When the link is activated, the browser should launch the default desktop application for handling email. You can think of this as a <em>desktop-based</em> protocol handler.</p>
 
@@ -38,7 +35,7 @@ tags:
 
 <p>When a browser executes this code, it should display a prompt to the user, asking permission to allow the web application to register as a handler for the protocol. Firefox displays a prompt in the notification bar area:</p>
 
-<p><img alt="" src="protocolregister.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="" src="protocolregister.png"></p>
 
 <div class="note"><strong>Note:</strong>The URL template supplied when registering <strong>must</strong> be of the same domain as the webpage attempting to perform the registration or the registration will fail. For example, <code class="plain">http://example.com/homepage.html</code> can register a protocol handler for <code class="plain">http://example.com/handle_mailto/%s</code>, but not for <code class="plain">http://example.<em><strong>org</strong></em>/handle_mailto/%s</code>.</div>
 
@@ -124,7 +121,6 @@ if ( isset ( $_GET["value"] ) ) {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Navigator/registerContentHandler">window.navigator.registerContentHandler</a></li>
  <li><a href="/en-US/docs/XPCOM_Interface_Reference/nsIProtocolHandler">nsIProtocolHandler</a> (XUL only)</li>
  <li><a href="http://blog.mozilla.com/webdev/2010/07/26/registerprotocolhandler-enhancing-the-federated-web/">RegisterProtocolHandler Enhancing the Federated Web</a> at Mozilla Webdev</li>
  <li><a href="https://developers.google.com/web/updates/2011/06/Registering-a-custom-protocol-handler">Register a custom protocolHandler</a> at Google Developers.</li>

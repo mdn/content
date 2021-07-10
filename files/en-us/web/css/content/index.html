@@ -12,7 +12,7 @@ browser-compat: css.properties.content
 ---
 <div>{{CSSRef}}</div>
 
-<p class="summary">The <strong><code>content</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property replaces an element with a generated value. Objects inserted using the <code>content</code> property are <strong>anonymous <a href="/en-US/docs/Web/CSS/Replaced_element">replaced elements</a></strong><em>.</em></p>
+<p>The <strong><code>content</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property replaces an element with a generated value. Objects inserted using the <code>content</code> property are <strong>anonymous <a href="/en-US/docs/Web/CSS/Replaced_element">replaced elements</a></strong><em>.</em></p>
 
 <pre class="brush:css no-line-numbers">/* Keywords that cannot be combined with other values */
 content: normal;
@@ -50,6 +50,7 @@ content: open-quote counter(chapter_counter);
 /* Global values */
 content: inherit;
 content: initial;
+content: revert;
 content: unset;
 </pre>
 
@@ -67,11 +68,10 @@ content: unset;
  <dt>{{cssxref("&lt;image&gt;")}}</dt>
  <dd>An {{cssxref("&lt;image&gt;")}}, denoted by the {{cssxref("url()")}} or {{cssxref("&lt;gradient&gt;")}} data type, or part of the webpage, defined by the {{cssxref("element()", "element()")}} function, denoting the content to display.</dd>
  <dt>{{cssxref("counter()")}}</dt>
- <dd>The value of a <a href="/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters">CSS counter</a>, generally a number produced by computations defined by {{cssxref("&lt;counter-reset&gt;")}} and {{cssxref("&lt;counter-increment&gt;")}} properties. It can be displayed using either the {{cssxref("counter()")}} or {{cssxref("counters()")}} function.</dd>
  <dd>
- <p>The {{cssxref("counter()")}} function has two forms: 'counter(<var>name</var>)' or 'counter(<var>name</var>, style)'. The generated text is the value of the innermost counter of the given name in scope at the given pseudo-element. It is formatted in the specified {{cssxref("&lt;list-style-type&gt;")}} (<code>decimal</code> by default).</p>
-
- <p>The {{cssxref("counters()")}} function also has two forms: 'counters(<var>name</var>, <var>string</var>)' or 'counters(<var>name</var>, <var>string</var>, <var>style</var>)'. The generated text is the value of all counters with the given name in scope at the given pseudo-element, from outermost to innermost, separated by the specified string. The counters are rendered in the indicated {{cssxref("&lt;list-style-type&gt;")}} (<code>decimal</code> by default).</p>
+   <p>The value of a <a href="/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters">CSS counter</a>, generally a number produced by computations defined by {{cssxref("&lt;counter-reset&gt;")}} and {{cssxref("&lt;counter-increment&gt;")}} properties. It can be displayed using either the {{cssxref("counter()")}} or {{cssxref("counters()")}} function.</p>
+   <p>The {{cssxref("counter()")}} function has two forms: 'counter(<var>name</var>)' or 'counter(<var>name</var>, style)'. The generated text is the value of the innermost counter of the given name in scope at the given pseudo-element. It is formatted in the specified {{cssxref("&lt;list-style-type&gt;")}} (<code>decimal</code> by default).</p>
+   <p>The {{cssxref("counters()")}} function also has two forms: 'counters(<var>name</var>, <var>string</var>)' or 'counters(<var>name</var>, <var>string</var>, <var>style</var>)'. The generated text is the value of all counters with the given name in scope at the given pseudo-element, from outermost to innermost, separated by the specified string. The counters are rendered in the indicated {{cssxref("&lt;list-style-type&gt;")}} (<code>decimal</code> by default).</p>
  </dd>
  <dt><code>attr(x)</code></dt>
  <dd>The value of the element's attribute <code>x</code> as a string. If there is no attribute <code>x</code>, an empty string is returned. The case-sensitivity of attribute names depends on the document language.</dd>
@@ -225,7 +225,7 @@ a::after {
 }
 
 #mdn::before {
-  content: url("https://mdn.mozillademos.org/files/7691/mdn-favicon16.png");
+  content: url("mdn-favicon16.png");
 }
 
 li {
@@ -249,7 +249,7 @@ li {
 <h4 id="CSS_5">CSS</h4>
 
 <pre class="brush: css">#replaced {
-  content: url("https://mdn.mozillademos.org/files/12668/MDN.svg");
+  content: url("mdn.svg");
 }
 
 #replaced::after { /* will not show if element replacement is supported */
@@ -262,27 +262,7 @@ li {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Content", "#content-property", "content")}}</td>
-   <td>{{Spec2("CSS3 Content")}}</td>
-   <td>Adds support for alt-text</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS2.1", "generate.html#content", "content")}}</td>
-   <td>{{Spec2("CSS2.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

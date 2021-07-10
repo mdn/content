@@ -10,15 +10,9 @@ tags:
 - Property
 - Read-only
 - legacy
+browser-compat: api.Performance.timing
 ---
 <p>{{APIRef("Navigation Timing")}}{{deprecated_header}}</p>
-
-<div class="warning">
-  <p>This property is deprecated in the <a
-      href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2
-      specification</a>. Please use the {{domxref("PerformanceNavigationTiming")}}
-    interface instead.</p>
-</div>
 
 <p>The legacy
   <code><strong>Performance</strong></code><strong><code>.timing</code></strong> read-only
@@ -27,6 +21,13 @@ tags:
 
 <p>This property is not available in workers.</p>
 
+<div class="warning">
+  <p>This property is deprecated in the <a
+      href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2
+      specification</a>. Please use the {{domxref("PerformanceNavigationTiming")}}
+    interface instead.</p>
+</div>
+
 <h2 id="Syntax">Syntax</h2>
 
 <pre
@@ -34,24 +35,12 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Navigation Timing Level 2', '#obsolete')}}</td>
-      <td>{{Spec2('Navigation Timing Level 2')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+<p>This feature is no longer on track to become a standard, as the <a href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing specification</a> has marked it as deprecated.
+  Use the {{domxref("PerformanceNavigationTiming")}} interface instead.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Performance.timing")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

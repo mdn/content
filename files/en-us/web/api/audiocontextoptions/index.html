@@ -25,17 +25,10 @@ browser-compat: api.AudioContextOptions
 
 <dl>
  <dt>{{domxref("AudioContextOptions.latencyHint", "latencyHint")}} {{optional_inline}}</dt>
- <dd>The type of playback that the context will be used for, as a value from the {{domxref("AudioContextLatencyCategory")}} enum or a double-precision floating-point value indicating the preferred maximum latency of the context in seconds. The user agent may or may not choose to meet this request; check the value of {{domxref("AudioContext.baseLatency")}} to determine the true latency after creating the context.</dd>
+ <dd>The type of playback that the context will be used for, as a predefined {{jsxref("string")}} (<code>"balanced"</code>, <code>"interactive"</code> or <code>"playback"</code>) or a double-precision floating-point value indicating the preferred maximum latency of the context in seconds. The user agent may or may not choose to meet this request; check the value of {{domxref("AudioContext.baseLatency")}} to determine the true latency after creating the context.</dd>
  <dt>{{domxref("AudioContextOptions.sampleRate", "sampleRate")}} {{optional_inline}}</dt>
  <dd>The {{domxref("BaseAudioContext.sampleRate", "sampleRate")}} to be used by the <code>AudioContext</code>, specified in samples per second. The value may be any value supported by {{domxref("AudioBuffer")}}. If not specified, the preferred sample rate for the context's output device is used by default.</dd>
 </dl>
-
-<h2 id="Constants">Constants</h2>
-
-<h3 id="Standard_values_for_latencyHint">Standard values for latencyHint</h3>
-
-<p><em>Standard</em> values for the {{domxref("AudioContextOptions.latencyHint", "latencyHint")}} property are provided in the {{domxref("AudioContextLatencyCategory")}} enumerated string. These select an appropriate value for a given type of audio usage, e.g. <code>"balanced"</code>, <code>"interactive"</code> or <code>"playback"</code>.
-You can also specify a preferred maximum latency in seconds.</p>
 
 <h2 id="Example">Example</h2>
 
@@ -48,20 +41,7 @@ You can also specify a preferred maximum latency in seconds.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API','#AudioContextOptions','AudioContextOptions')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

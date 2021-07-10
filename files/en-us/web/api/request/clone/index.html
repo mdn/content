@@ -15,7 +15,7 @@ browser-compat: api.Request.clone
 
 <p>The <strong><code>clone()</code></strong> method of the {{domxref("Request")}} interface creates a copy of the current <code>Request</code> object.</p>
 
-<p><code>clone()</code> throws a {{jsxref("TypeError")}} if the response {{domxref("Body")}} has already been used. In fact, the main reason <code>clone()</code> exists is to allow multiple uses of {{domxref("Body")}} objects (when they are one-use only.)</p>
+<p><code>clone()</code> throws a {{jsxref("TypeError")}} if the request body has already been used. In fact, the main reason <code>clone()</code> exists is to allow multiple uses of body objects (when they are one-use only.)</p>
 
 <p>If intend to modify the request, you may prefer the {{domxref("Request")}} constructor.</p>
 
@@ -40,20 +40,7 @@ var newRequest = myRequest.clone(); // a copy of the request is now stored in ne
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Fetch','#dom-request-clone','clone')}}</td>
-   <td>{{Spec2('Fetch')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

@@ -18,8 +18,8 @@ browser-compat: api.Response.clone
   different variable.</p>
 
 <p><code>clone()</code> throws a {{jsxref("TypeError")}} if the response
-  {{domxref("Body")}} has already been used. In fact, the main reason <code>clone()</code>
-  exists is to allow multiple uses of {{domxref("Body")}} objects (when they are one-use
+  body has already been used. In fact, the main reason <code>clone()</code>
+  exists is to allow multiple uses of body objects (when they are one-use
   only.)</p>
 
 <h2 id="Syntax">Syntax</h2>
@@ -45,7 +45,7 @@ browser-compat: api.Response.clone
   {{domxref("Request.Request","Request()")}} constructor, passing it a JPG path. We then
   fetch this request using {{domxref("WindowOrWorkerGlobalScope/fetch","fetch()")}}. When the fetch
   resolves successfully, we clone it, extract a blob from both responses using two
-  {{domxref("Body.blob")}} calls, create object URLs out of the blobs using
+  {{domxref("Response.blob")}} calls, create object URLs out of the blobs using
   {{domxref("URL.createObjectURL")}}, and display them in two separate
   {{htmlelement("img")}} elements.</p>
 
@@ -70,20 +70,7 @@ fetch(myRequest).then(function(response) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Fetch','#dom-response-clone','clone()')}}</td>
-      <td>{{Spec2('Fetch')}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

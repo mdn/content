@@ -1,0 +1,43 @@
+---
+title: ElementInternals.labels
+slug: Web/API/ElementInternals/labels
+tags:
+  - API
+  - Property
+  - Reference
+  - labels
+  - ElementInternals
+browser-compat: api.ElementInternals.labels
+---
+<div>{{DefaultAPISidebar("DOM")}}</div>
+
+<p class="summary">The <strong><code>labels</code></strong> read-only property of the {{domxref("ElementInternals")}} interface returns the labels associated with the element.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js">let labels = ElementInternals.labels;</pre>
+
+<h3>Value</h3>
+<p>A {{domxref("NodeList")}} containing all of the label elements associated with this element.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<p>The following example shows a custom checkbox component with a {{HTMLElement("label")}} element linked to it. Printing the value of <code>labels</code> to the console returns a {{domxref("NodeList")}} with one entry, representing this label.</p>
+
+<pre class="brush: html">&lt;form id="myForm"&gt;&lt;custom-checkbox id="join-checkbox"&gt;&lt;/custom-checkbox&gt;
+  &lt;label for="custom-checkbox"&gt;Join newsletter&lt;/label&gt;&lt;/form&gt;</pre>
+
+<pre class="brush: js">let element = document.getElementById("custom-checkbox");
+console.log(element.internals_.label);</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<p>{{Specifications}}</p>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+
+<p>{{Compat}}</p>
+
+

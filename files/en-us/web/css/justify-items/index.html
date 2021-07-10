@@ -7,6 +7,7 @@ tags:
   - CSS Property
   - Reference
   - 'recipe:css-property'
+browser-compat: css.properties.justify-items
 ---
 <div>{{CSSRef}}</div>
 
@@ -14,7 +15,6 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/css/justify-items.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <p>The effect of this property is dependent of the layout mode we are in:</p>
 
@@ -61,6 +61,7 @@ justify-items: legacy center;
 /* Global values */
 justify-items: inherit;
 justify-items: initial;
+justify-items: revert;
 justify-items: unset;
 </pre>
 
@@ -103,13 +104,13 @@ justify-items: unset;
  <dt><code>center</code></dt>
  <dd>The items are packed flush to each other toward the center of the of the alignment container.</dd>
  <dt><code>left</code></dt>
- <dd>The items are packed flush to each other toward the left edge of the alignment container. If the property’s axis is not parallel with the inline axis, this value behaves like <code>start</code>.</dd>
+ <dd>The items are packed flush to each other toward the left edge of the alignment container. If the property's axis is not parallel with the inline axis, this value behaves like <code>start</code>.</dd>
  <dt><code>right</code></dt>
- <dd>The items are packed flush to each other toward the right edge of the alignment container in the appropriate axis. If the property’s axis is not parallel with the inline axis, this value behaves like <code>start</code>.</dd>
+ <dd>The items are packed flush to each other toward the right edge of the alignment container in the appropriate axis. If the property's axis is not parallel with the inline axis, this value behaves like <code>start</code>.</dd>
  <dt><code>baseline<br>
  first baseline</code><br>
  <code>last baseline</code></dt>
- <dd>Specifies participation in first- or last-baseline alignment: aligns the alignment baseline of the box’s first or last baseline set with the corresponding baseline in the shared first or last baseline set of all the boxes in its baseline-sharing group.<br>
+ <dd>Specifies participation in first- or last-baseline alignment: aligns the alignment baseline of the box's first or last baseline set with the corresponding baseline in the shared first or last baseline set of all the boxes in its baseline-sharing group.<br>
  The fallback alignment for <code>first baseline</code> is <code>start</code>, the one for <code>last baseline</code> is <code>end</code>.</dd>
  <dt><code>stretch</code></dt>
  <dd>If the combined size of the items is less than the size of the alignment container, any <code>auto</code>-sized items have their size increased equally (not proportionally), while still respecting the constraints imposed by {{CSSxRef("max-height")}}/{{CSSxRef("max-width")}} (or equivalent functionality), so that the combined size exactly fills the alignment container.</dd>
@@ -140,10 +141,10 @@ justify-items: unset;
 <h4 id="HTML">HTML</h4>
 
 <pre class="brush: html">&lt;article class="container" tabindex="0"&gt;
-  &lt;span&gt;First child&lt;/span&gt;
-  &lt;span&gt;Second child&lt;/span&gt;
-  &lt;span&gt;Third child&lt;/span&gt;
-  &lt;span&gt;Fourth child&lt;/span&gt;
+  &lt;span&gt;First child&lt;/span&gt;
+  &lt;span&gt;Second child&lt;/span&gt;
+  &lt;span&gt;Third child&lt;/span&gt;
+  &lt;span&gt;Fourth child&lt;/span&gt;
 &lt;/article&gt;</pre>
 
 <h4 id="CSS">CSS</h4>
@@ -189,32 +190,11 @@ article {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Box Alignment", "#propdef-justify-items", "justify-items")}}</td>
-   <td>{{Spec2("CSS3 Box Alignment")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<h3 id="Support_in_Flex_layout">Support in Flex layout</h3>
-
-<p>{{Compat("css.properties.justify-items.flex_context")}}</p>
-
-<h3 id="Support_in_Grid_layout">Support in Grid layout</h3>
-
-<p>{{Compat("css.properties.justify-items.grid_context")}}</p>
+{{Compat}}
 
 <h2 id="See_also">See also</h2>
 

@@ -7,12 +7,16 @@ tags:
 - Method
 - Reference
 - Simple Push API
+browser-compat: api.PushManager.register
 ---
-<div>{{deprecated_header}}{{ ApiRef("Push API")}}</div>
+<div>{{deprecated_header}}{{ApiRef("Push API")}}</div>
 
 <p>The <strong><code>register</code></strong> method is used to ask the system to request
-  a new endpoint for notifications. This method has been superseded by
-  {{domxref("PushManager.subscribe()")}}.</p>
+  a new endpoint for notifications.</p>
+
+<div class="notecard note">
+  <p>This method has been superseded by {{domxref("PushManager.subscribe()")}}.</p>
+</div>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -47,26 +51,11 @@ req.onerror = function(e) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('Push API')}}</td>
-      <td>{{Spec2('Push API')}}</td>
-      <td>Defines the <code>PushManager</code> interface.</td>
-    </tr>
-  </tbody>
-</table>
+<p>This feature is not part of any specification. It is no longer on track to become a standard.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.PushManager.register")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

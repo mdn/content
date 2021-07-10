@@ -79,7 +79,7 @@ tags:
 
 <p>A WebM file containing a movie which has a main video track and one alternate angle track, plus audio for both English and Spanish, in addition to audio for an English commentary track can be conceptualized as shown in the diagram below. Also included are text tracks containing closed captions for the feature film, Spanish subtitles for the film, and English captions for the commentary.</p>
 
-<p><a href="https://mdn.mozillademos.org/files/16898/ContainersAndTracks.svg"><img alt="Diagram conceptualizing the contents of a media file at the track level." src="containersandtracks.svg"></a></p>
+<p><a href="containersandtracks.svg"><img alt="Diagram conceptualizing the contents of a media file at the track level." src="containersandtracks.svg"></a></p>
 
 <p>The audio and video tracks within the container hold data in the appropriate format for the codec used to encode that media. Different formats are used for audio tracks versus video tracks. Each audio track is encoded using an <a href="/en-US/docs/Web/Media/Formats/Audio_codecs">audio codec</a>, while video tracks are encoded using (as you probably have guessed) <a href="/en-US/docs/Web/Media/Formats/Video_codecs">a video codec</a>. As we talked about before, different browsers support different video and audio formats, and different container formats (like MP3, MP4, and WebM, which in turn can contain different types of video and audio).</p>
 
@@ -248,7 +248,7 @@ This is the second.
 
 <ol>
  <li>Save it as a <code>.vtt</code> file in a sensible place.</li>
- <li>Link to the <code>.vtt</code> file with the {{htmlelement("track")}} element. <code>&lt;track&gt;</code> should be placed within <code>&lt;audio&gt;</code> or <code>&lt;video&gt;</code>, but after all <code>&lt;source&gt;</code> elements. Use the {{htmlattrxref("kind","track")}} attribute to specify whether the cues are <code>subtitles</code>, <code>captions</code>, or <code>descriptions</code>. Further, use {{htmlattrxref("srclang","track")}} to tell the browser what language you have written the subtitles in. Finally, add {{htmlattrxref("label","track")}} to help readers identifying the language they are searching for.</li>
+ <li>Link to the <code>.vtt</code> file with the {{htmlelement("track")}} element. <code>&lt;track&gt;</code> should be placed within <code>&lt;audio&gt;</code> or <code>&lt;video&gt;</code>, but after all <code>&lt;source&gt;</code> elements. Use the {{htmlattrxref("kind","track")}} attribute to specify whether the cues are <code>subtitles</code>, <code>captions</code>, or <code>descriptions</code>. Further, use {{htmlattrxref("srclang","track")}} to tell the browser what language you have written the subtitles in. Finally, add {{htmlattrxref("label","track")}} to help readers identify the language they are searching for.</li>
 </ol>
 
 <p>Here's an example:</p>
@@ -315,7 +315,6 @@ This is the second.
 
 <ul>
  <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML">Images in HTML</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content">Video and audio content</a></li>
  <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies">From &lt;object&gt; to &lt;iframe&gt; — other embedding technologies</a></li>
  <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web">Adding vector graphics to the Web</a></li>
  <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">Responsive images</a></li>

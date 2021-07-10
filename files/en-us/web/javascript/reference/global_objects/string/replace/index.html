@@ -2,13 +2,13 @@
 title: String.prototype.replace()
 slug: Web/JavaScript/Reference/Global_Objects/String/replace
 tags:
-- Expressions
-- JavaScript
-- Method
-- Prototype
-- Reference
-- Regular
-- String
+  - Expressions
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
+  - Regular
+  - String
 browser-compat: javascript.builtins.String.replace
 ---
 <div>{{JSRef}}</div>
@@ -49,13 +49,15 @@ replace(substr, replacerFunction)
   <dd>The {{jsxref("String")}} that replaces the substring specified by the specified
     <code><var>regexp</var></code> or <code><var>substr</var></code> parameter. A number
     of special replacement patterns are supported; see the "<a
-      href="#Specifying_a_string_as_a_parameter">Specifying a string as a parameter</a>"
-    section below.</dd>
+      href="#specifying_a_string_as_a_parameter">Specifying a string as a parameter</a>"
+    section below.
+    <p>If <code><var>newSubstr</var></code> is an empty string, then the substring given by <code><var>substr</var></code>, or the matches for <code><var>regexp</var></code>, are removed (rather then being replaced).</p>
+    </dd>
   <dt><code><var>replacerFunction</var></code> (replacement)</dt>
   <dd>A function to be invoked to create the new substring to be used to replace the
     matches to the given <code><var>regexp</var></code> or <code><var>substr</var></code>.
     The arguments supplied to this function are described in the "<a
-      href="#Specifying_a_function_as_a_parameter">Specifying a function as a
+      href="#specifying_a_function_as_a_parameter">Specifying a function as a
       parameter</a>" section below.</dd>
 </dl>
 
@@ -209,7 +211,7 @@ console.log(newstr);  // Twas the night before Christmas...
 
 <p>Global replace can only be done with a regular expression. In the following example,
   the regular expression includes the <a
-    href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#Advanced_searching_with_flags_2">global
+    href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags_2">global
     and ignore case flags</a> which permits <code>replace()</code> to replace each
   occurrence of <code>'apples'</code> in the string with <code>'oranges'</code>.</p>
 

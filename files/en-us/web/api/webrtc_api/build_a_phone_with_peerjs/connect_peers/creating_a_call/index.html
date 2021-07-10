@@ -31,7 +31,7 @@ slug: Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Creating_a_call
 })</pre>
 
     <p>Let's walk through this code:</p>
-    <ol style="list-style-type: upper-latin">
+    <ul>
       <li>
         <p><code>const call = peer.call(code, window.localStream)</code>: This will create a call with the <code>code</code> and <code>window.localStream</code> we've previously assigned. Note that the <code>localStream</code> will be the user's <code>localStream</code>. So for caller A it'll be their stream &amp; for B, their own stream.</p>
       </li>
@@ -50,7 +50,7 @@ slug: Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Creating_a_call
       <li>
       <p>Finally you want to show the correct content, so call the <code>showConnectedContent()</code> function you created earlier.</p>
       </li>
-    </ol>
+    </ul>
   <li>
     <p>To test this out, open <code>localhost:8000</code> in two browser windows and click Call inside one of them. You should see this:</p>
 

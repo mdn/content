@@ -87,7 +87,7 @@ tags:
  <li>With the keyword {{jsxref("Statements/const", "const")}} or {{jsxref("Statements/let", "let")}}. For example, <code>let y = 13</code>. This syntax can be used to declare a block-scope local variable. (See <a href="#variable_scope">Variable scope</a> below.)</li>
 </ul>
 
-<p>You can declare variables to unpack values from <a href="/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#object_literals">Object Literals</a> using the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">Destructuring Assignment</a> syntax. For example, <code>let { bar } = foo</code>. This will create a variable named <code>bar</code> and assign to it the value corresponding to the key of the same name from our object <code>foo</code>.  </p>
+<p>You can declare variables to unpack values from <a href="#object_literals">Object Literals</a> using the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">Destructuring Assignment</a> syntax. For example, <code>let { bar } = foo</code>. This will create a variable named <code>bar</code> and assign to it the value corresponding to the key of the same name from our object <code>foo</code>.  </p>
 
 <p>You can also assign a value to a variable For example, <code>x = 42</code>. This form creates an <strong><a href="/en-US/docs/Web/JavaScript/Reference/Statements/var#description">undeclared global</a></strong> variable. It also generates a strict JavaScript warning. Undeclared global variables can often lead to unexpected behavior. Thus, it is discouraged to use undeclared global variables.</p>
 
@@ -443,33 +443,43 @@ y = 42 + ' is the answer' // "42 is the answer"
 
 <h3 id="Numeric_literals">Numeric literals</h3>
 
-<p>{{jsxref("Number")}} and {{jsxref("BigInt")}} types can be written in decimal (base 10), hexadecimal (base 16), octal (base 8) and binary (base 2).</p>
+<p>JavaScript numeric literals include integer literals in different bases as well as floating-point literals in base-10.</p>
+
+<p>Note that the language specification requires numeric literals to be unsigned.  Nevertheless, code fragments like <code>-123.4</code> are fine, being interpreted as a unary <code>-</code> operator applied to the numeric literal <code>123.4</code>.</p>
+
+<h4 id="Integer_literals">Integer literals</h4>
+
+
+<p>Integer and {{jsxref("BigInt")}} literals can be written in decimal (base 10), hexadecimal (base 16), octal (base 8) and binary (base 2).</p>
 
 <ul>
- <li>A <em>decimal</em> numeric literal is a sequence of digits without a leading <code>0</code> (zero).</li>
- <li>A leading <code>0</code> (zero) on a numeric literal, or a leading <code>0o</code> (or <code>0O</code>) indicates it is in <em>octal</em>. Octal numerics can include only the digits <code>0</code>–<code>7</code>.</li>
- <li>A leading <code>0x</code> (or <code>0X</code>) indicates a <em>hexadecimal</em> numeric type. Hexadecimal numerics can include digits (<code>0</code>–<code>9</code>) and the letters <code>a</code>–<code>f</code> and <code>A</code>–<code>F</code>. (The case of a character does not change its value. Therefore: <code>0xa</code> = <code>0xA</code> = <code>10</code> and <code>0xf</code> = <code>0xF</code> = <code>15</code>.)</li>
+ <li>A <em>decimal</em> integer literal is a sequence of digits without a leading <code>0</code> (zero).</li>
+ <li>A leading <code>0</code> (zero) on an integer literal, or a leading <code>0o</code> (or <code>0O</code>) indicates it is in <em>octal</em>. Octal integer literals can include only the digits <code>0</code>–<code>7</code>.</li>
+ <li>A leading <code>0x</code> (or <code>0X</code>) indicates a <em>hexadecimal</em> integer literal. Hexadecimal integers can include digits (<code>0</code>–<code>9</code>) and the letters <code>a</code>–<code>f</code> and <code>A</code>–<code>F</code>. (The case of a character does not change its value. Therefore: <code>0xa</code> = <code>0xA</code> = <code>10</code> and <code>0xf</code> = <code>0xF</code> = <code>15</code>.)</li>
  <li>
-  <p>A leading <code>0b</code> (or <code>0B</code>) indicates a <em>binary</em> numeric literal. Binary numerics can only include the digits <code>0</code> and <code>1</code>.</p>
+  A leading <code>0b</code> (or <code>0B</code>) indicates a <em>binary</em> integer literal. Binary integer literals can only include the digits <code>0</code> and <code>1</code>.
+ </li>
+ <li>
+   A trailing <code>n</code> suffix on an integer literal indicates a {{jsxref("BigInt")}} literal.  The integer literal can use any of the above bases. Note that leading-zero octal syntax like <code>0123n</code> is not allowed, but <code>0o123n</code> is fine.
  </li>
 </ul>
 
-<p>Some examples of numeric literals are:</p>
+<p>Some examples of integer literals are:</p>
 
-<pre class="eval">0, 117, -345, 123456789123456789n             (decimal, base 10)
-015, 0001, -0o77, 0o777777777777n             (octal, base 8)
-0x1123, 0x00111, -0xF1A7, 0x123456789ABCDEFn  (hexadecimal, "hex" or base 16)
-0b11, 0b0011, -0b11, 0b11101001010101010101n  (binary, base 2)
+<pre class="eval">0, 117, 123456789123456789n             (decimal, base 10)
+015, 0001, 0o777777777777n              (octal, base 8)
+0x1123, 0x00111, 0x123456789ABCDEFn     (hexadecimal, "hex" or base 16)
+0b11, 0b0011, 0b11101001010101010101n   (binary, base 2)
 </pre>
 
 <p>For more information, see <a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#numeric_literals">Numeric literals in the Lexical grammar reference</a>.</p>
 
-<h3 id="Floating-point_literals">Floating-point literals</h3>
+<h4 id="Floating-point_literals">Floating-point literals</h4>
 
 <p>A floating-point literal can have the following parts:</p>
 
 <ul>
- <li>A decimal integer which can be signed (preceded by "<code>+</code>" or "<code>-</code>"),</li>
+ <li>An unsigned decimal integer,</li>
  <li>A decimal point ("<code>.</code>"),</li>
  <li>A fraction (another decimal number),</li>
  <li>An exponent.</li>
@@ -479,14 +489,14 @@ y = 42 + ' is the answer' // "42 is the answer"
 
 <p>More succinctly, the syntax is:</p>
 
-<pre class="eval">[(+|-)][digits].[digits][(E|e)[(+|-)]digits]
+<pre class="eval">[digits].[digits][(E|e)[(+|-)]digits]
 </pre>
 
 <p>For example:</p>
 
 <pre class="eval">3.1415926
--.123456789
--3.1E+12
+.123456789
+3.1E+12
 .1e-23
 </pre>
 

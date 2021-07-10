@@ -14,7 +14,6 @@ browser-compat: css.properties.text-overflow
 
 <div>{{EmbedInteractiveExample("pages/css/text-overflow.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <p>The <code>text-overflow</code> property doesn't force an overflow to occur. To make text overflow its container you have to set other CSS properties: {{cssxref("overflow")}} and {{cssxref("white-space")}}. For example:</p>
 
@@ -27,7 +26,15 @@ white-space: nowrap;</pre>
 
 <p>The <code>text-overflow</code> property may be specified using one or two values. If one value is given, it specifies overflow behavior for the end of the line (the right end for left-to-right text, the left end for right-to-left text). If two values are given, the first specifies overflow behavior for the left end of the line, and the second specifies it for the right end of the line.</p>
 
-<p>Each value is specified as one of:</p>
+<pre class="brush: css">text-overflow: clip;
+text-overflow: ellipsis ellipsis;
+text-overflow: ellipsis " [..]";
+
+/* Global values */
+text-overflow: inherit;
+text-overflow: initial;
+text-overflow: revert;
+text-overflow: unset;</pre>
 
 <ul>
  <li>one of the keyword values: <code><a href="#clip">clip</a></code>, <code><a href="#ellipsis">ellipsis</a></code>, <code><a href="#fade">fade</a></code></li>
@@ -47,8 +54,10 @@ white-space: nowrap;</pre>
  <dt id="fade"><code>fade</code> {{experimental_inline}}</dt>
  <dd>This keyword clips the overflowing inline content and applies a fade-out effect near the edge of the line box with complete transparency at the edge.</dd>
  <dt id="fade_length_percentage"><code>fade( &lt;length&gt; | &lt;percentage&gt; )</code> {{experimental_inline}}</dt>
- <dd>This function clips the overflowing inline content and applies a fade-out effect near the edge of the line box with complete transparency at the edge.</dd>
- <dd>The argument determines the distance over which the fade effect is applied. The {{cssxref("&lt;percentage&gt;")}} is resolved against the width of the line box. Values lower than <code>0</code> are clipped to <code>0</code>. Values greater than the width of the line box are clipped to the width of the line box.</dd>
+ <dd>
+   <p>This function clips the overflowing inline content and applies a fade-out effect near the edge of the line box with complete transparency at the edge.</p>
+   <p>The argument determines the distance over which the fade effect is applied. The {{cssxref("&lt;percentage&gt;")}} is resolved against the width of the line box. Values lower than <code>0</code> are clipped to <code>0</code>. Values greater than the width of the line box are clipped to the width of the line box.</p>
+ </dd>
 </dl>
 
 <h2 id="Formal_definition">Formal definition</h2>
@@ -196,27 +205,7 @@ for (let para of paras) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><a href="https://drafts.csswg.org/css-overflow-4/#text-overflow">CSS Overflow Module Level 4</a></td>
-   <td></td>
-   <td>Added the values <code>&lt;string&gt;</code> and <code>fade</code> and the <code>fade()</code> function</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Overflow', '#text-overflow', 'text-overflow')}}</td>
-   <td>{{Spec2('CSS3 Overflow')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <p>A previous version of this interface reached the <em>Candidate Recommendation</em> status. As some not-listed-at-risk features needed to be removed, the spec was demoted to the <em>Working Draft</em> level, explaining why browsers implemented this property unprefixed, though not at the CR state.</p>
 

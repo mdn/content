@@ -1,5 +1,5 @@
 ---
-title: PasswordCredential
+title: PasswordCredential()
 slug: Web/API/PasswordCredential/PasswordCredential
 tags:
   - API
@@ -8,11 +8,12 @@ tags:
   - PasswordCredential
   - Reference
   - credential management
+browser-compat: api.PasswordCredential.PasswordCredential
 ---
-<p>{{APIRef("")}}{{Non-standard_header}}</p>
+<p>{{APIRef("Credential Management API")}}{{Non-standard_header}}</p>
 
-<p><span class="seoSummary">The <strong><code>PasswordCredential</code></strong>
-    constructor creates a new {{domxref("PasswordCredential")}} object.</span> In
+<p>The <strong><code>PasswordCredential()</code></strong>
+    constructor creates a new {{domxref("PasswordCredential")}} object. In
   supporting browsers, an instance of this class may be passed the <code>credential</code>
   from the <code>init</code> object for global {{domxref('WindowOrWorkerGlobalScope.fetch')}}.</p>
 
@@ -26,7 +27,7 @@ var myCredential = new PasswordCredential(HTMLFormElement)</pre>
 <p>Either of the following:</p>
 
 <dl>
-  <dt><em>passwordCredentialData</em> </dt>
+  <dt><em>passwordCredentialData</em></dt>
   <dd>A PasswordCredentialData dictionary containing the following fields:
     <ul>
       <li><code>iconURL</code>: (Optional) the URL of a user's avatar image.</li>
@@ -36,15 +37,15 @@ var myCredential = new PasswordCredential(HTMLFormElement)</pre>
     </ul>
   </dd>
   <dt><em>htmlFormElement</em></dt>
-  <dd>A reference to an {{domxref("HTMLFormElement")}} with appropriate input fields. The
+  <dd>A reference to an {{domxref("HTMLFormElement")}} with appropriate input fields. The
     form should, at the very least, contain an id and password. It could also require a
     CSRF token.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
 
-<p>This example shows how to set up an {{domxref("HTMLFormElement")}} to caputure data
-  which we'll use to create a {{domxref("PasswordCredential")}} object.</p>
+<p>This example shows how to set up an {{domxref("HTMLFormElement")}} to caputure data
+  which we'll use to create a {{domxref("PasswordCredential")}} object.</p>
 
 <p>Starting with the form element.</p>
 
@@ -55,7 +56,7 @@ var myCredential = new PasswordCredential(HTMLFormElement)</pre>
 &lt;/form&gt;</pre>
 
 <p>Then, a reference to this form element, using it to create
-  a {{domxref("PasswordCredential")}} object, and storing it in the browser's password
+  a {{domxref("PasswordCredential")}} object, and storing it in the browser's password
   system.</p>
 
 <pre class="brush: js">var form = document.querySelector('#form');
@@ -68,21 +69,8 @@ navigator.credentials.store(creds)
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Credential Management')}}</td>
-      <td>{{Spec2('Credential Management')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.PasswordCredential.PasswordCredential")}}</p>
+<p>{{Compat}}</p>

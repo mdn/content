@@ -258,16 +258,18 @@ p, li {
   margin: 0 auto;
 }</pre>
 
-<p>Next, we center the image to make it look better. We could use the <code>margin: 0 auto</code> trick again as we did for the body. But there are differences that require an additional setting to make the CSS work. </p>
+<p>Next, we center the image to make it look better. We could use the <code>margin: 0 auto</code> trick again as we did for the body. But there are differences that require an additional setting to make the CSS work.</p>
 
-<p>The {{htmlelement("body")}} is a <strong>block</strong> element, meaning it takes up space on the page. A block element can have margin and other spacing values applied to it. In contrast, images are <strong>inline</strong> elements. It is not possible to apply margin or spacing values to inline elements. So to apply margins to the image, we must give the image block-level behavior using <code>display: block;</code>.</p>
+<p>The {{htmlelement("body")}} is a <strong>block</strong> element, meaning it takes up space on the page. The margin applied to a block element will be respected by other elements on the page. In contrast, images are <strong>inline</strong> elements, for the auto margin trick to work on this image, we must give it block-level behavior using <code>display: block;</code>.</p>
 
-<div class="note">
-<p><strong>Note</strong>: The instructions above assume that you're using an image smaller than the width set on the body. (600 pixels) If your image is larger, it will overflow the body, spilling into the rest of the page. To fix this, you can either: 1) reduce the image width using a <a href="https://en.wikipedia.org/wiki/Raster_graphics_editor">graphics editor</a>, or 2) use CSS to size the image by setting the {{cssxref("width")}} property on the <code>&lt;img&gt;</code> element with a smaller value.</p>
+<div class="notecard note">
+  <h4>Note:</h4>
+<p>The instructions above assume that you're using an image smaller than the width set on the body. (600 pixels) If your image is larger, it will overflow the body, spilling into the rest of the page. To fix this, you can either: 1) reduce the image width using a <a href="https://en.wikipedia.org/wiki/Raster_graphics_editor">graphics editor</a>, or 2) use CSS to size the image by setting the {{cssxref("width")}} property on the <code>&lt;img&gt;</code> element with a smaller value.</p>
 </div>
 
-<div class="note">
-<p><strong>Note</strong>: Don't be too concerned if you don't completely understand <code>display: block;</code> or the differences between a block element and an inline element. It will make more sense as you continue your study of CSS. You can find more information about different display values on MDN's <a href="/en-US/docs/Web/CSS/display">display reference page</a>.</p>
+<div class="notecard note">
+  <h4>Note:</h4>
+<p>Don't be too concerned if you don't completely understand <code>display: block;</code> or the differences between a block element and an inline element. It will make more sense as you continue your study of CSS. You can find more information about different display values on MDN's <a href="/en-US/docs/Web/CSS/display">display reference page</a>.</p>
 </div>
 
 <h2 id="Conclusion">Conclusion</h2>
@@ -285,12 +287,12 @@ p, li {
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li id="Installing_basic_software"><a href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software">Installing basic software</a></li>
- <li id="What_will_your_website_look_like"><a href="/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like">What will your website look like?</a></li>
- <li id="Dealing_with_files"><a href="/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files">Dealing with files</a></li>
- <li id="HTML_basics"><a href="/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics">HTML basics</a></li>
- <li id="CSS_basics"><a href="/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics">CSS basics</a></li>
- <li id="JavaScript_basics"><a href="/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics">JavaScript basics</a></li>
- <li id="Publishing_your_website"><a href="/en-US/docs/Learn/Getting_started_with_the_web/Publishing_your_website">Publishing your website</a></li>
- <li id="How_the_web_works"><a href="/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works">How the web works</a></li>
+ <li><a href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software">Installing basic software</a></li>
+ <li><a href="/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like">What will your website look like?</a></li>
+ <li><a href="/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files">Dealing with files</a></li>
+ <li><a href="/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics">HTML basics</a></li>
+ <li>CSS basics</li>
+ <li><a href="/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics">JavaScript basics</a></li>
+ <li><a href="/en-US/docs/Learn/Getting_started_with_the_web/Publishing_your_website">Publishing your website</a></li>
+ <li><a href="/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works">How the web works</a></li>
 </ul>

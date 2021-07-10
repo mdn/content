@@ -56,7 +56,7 @@ tags:
 <ul>
  <li>{{domxref("WorkerGlobalScope.importScripts", "WorkerGlobalScope.importScripts()")}} (all workers), </li>
  <li>{{domxref("WorkerGlobalScope.close", "close()")}} {{non-standard_inline}} (dedicated and shared workers only), </li>
- <li>{{domxref("DedicatedWorkerGlobalScope.postMessage")}} (dedicated workers and only).</li>
+ <li>{{domxref("DedicatedWorkerGlobalScope.postMessage")}} (dedicated workers only).</li>
 </ul>
 
 <h3 id="Supported_Web_APIs">Supported Web APIs</h3>
@@ -72,8 +72,6 @@ tags:
 <h2 id="Web_Worker_interfaces">Web Worker interfaces</h2>
 
 <dl>
- <dt>{{DOMxRef("AbstractWorker")}}</dt>
- <dd>Abstracts properties and methods common to all kind of workers (i.e. {{DOMxRef("Worker")}} or {{DOMxRef("SharedWorker")}}).</dd>
  <dt>{{DOMxRef("Worker")}}</dt>
  <dd>Represents a running worker thread, allowing you to pass messages to the running worker code.</dd>
  <dt>{{DOMxRef("WorkerLocation")}}</dt>

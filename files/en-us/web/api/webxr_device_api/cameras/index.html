@@ -64,7 +64,7 @@ tags:
 <p>In general, virtual cameras may or may not be incorporated into physical objects within the scene. Indeed, outside the scope of 3D gaming, the odds are far more likely that the camera will not correspond with an object that appears in the scene at all. Some examples of ways 3D cameras are used:</p>
 
 <ul>
- <li>When rendering animation—whether for filmmaking or for use within the context of a presentation or game—the virtual camera is used just like a real-world film camera. As much as possible, <a href="/en-US/docs/Web/API/WebXR_Device_API/Cameras#simulating_classic_cinematography">standard cinematographic techniques</a> are used, since the viewer has likely grown up watching films using those techniques, and has subconscious expectations that a film or animation will follow those methods. Deviating from them can pull the viewer out of the moment.</li>
+ <li>When rendering animation—whether for filmmaking or for use within the context of a presentation or game—the virtual camera is used just like a real-world film camera. As much as possible, <a href="#simulating_classic_cinematography">standard cinematographic techniques</a> are used, since the viewer has likely grown up watching films using those techniques, and has subconscious expectations that a film or animation will follow those methods. Deviating from them can pull the viewer out of the moment.</li>
  <li>In business applications, the 3D camera is used to set the apparent size and perspective when rendering things such as graphs and charts.</li>
  <li>In mapping applications, the camera may either be placed directly over the scene, or might use various angles to show perspective. For 3D GPS solutions, the camera is positioned to show the area around the user, with the majority of the display showing the area ahead of the user's path of motion.</li>
  <li>When using WebGL to accelerate 2D graphics drawing, the camera is typically placed directly above the center of the scene with the distance and field of view set to allow the entire scene to be presented.</li>
@@ -118,7 +118,7 @@ tags:
 
 <h3 id="Composing_multiple_transforms">Composing multiple transforms</h3>
 
-<p>If your camera needs to be performing multiple transforms simultaneously, such as zooming and panning at the same time, you can multiply the transform matrices together to compose them into a single matrix that applies both changes at once. See <a href="/en-US/docs/Web/API/WebGL_API/Matrix_math_for_the_web#multiplying_two_matrices">Multiplying two matrices</a> in the article <a href="/en-US/docs/Web/API/WebGL_API/Matrix_math_for_the_web">Matrix math for the web</a> for a clear but readable function that does this or use your preferred matrix math library such as <a href="http://glmatrix.net/">glMatrix</a> to do the work.</p>
+<p>If your camera needs to be performing multiple transforms simultaneously, such as zooming and panning at the same time, you can multiply the transform matrices together to compose them into a single matrix that applies both changes at once. See <a href="/en-US/docs/Web/API/WebGL_API/Matrix_math_for_the_web#multiplying_two_matrices">Multiplying two matrices</a> in the article <a href="/en-US/docs/Web/API/WebGL_API/Matrix_math_for_the_web">Matrix math for the web</a> for a clear but readable function that does this or use your preferred matrix math library such as <a href="https://glmatrix.net/">glMatrix</a> to do the work.</p>
 
 <p>It's crucial to remember that unlike typical arithmetic, where multiplication is commutative (that is, you get the same answer whether you multiply left to right or right to left), matrix multiplication <em>is not commutative!</em> This is because each transform affects the position of the object and possibly the very coordinate system itself, which can dramatically change the results of the next operation performed. So you need to be careful about the order in which you apply your transforms when building your composite transform (or directly applying transforms in sequence).</p>
 
@@ -142,10 +142,10 @@ tags:
 
 <p>Is represented in array form like this:</p>
 
-<pre class="brush: js">let matrixArray = [a<sub>1</sub>, a<sub>2</sub>, a<sub>3</sub>, a<sub>4</sub>, a<sub>5</sub>, a<sub>6</sub>, a<sub>7</sub>, a<sub>8</sub>,
-                   a<sub>9</sub>, a<sub>10</sub>, a<sub>11</sub>, a<sub>12</sub>, a<sub>13</sub>, a<sub>14</sub>, a<sub>15</sub>, a<sub>16</sub>];</pre>
+<pre class="brush: js">let matrixArray = [a1, a2, a3, a4, a5, a6, a7, a8,
+                   a9, a10, a11, a12, a13, a14, a15, a16];</pre>
 
-<p>In this array, the leftmost column contains the entries a<sub>1</sub>, a<sub>2</sub>, a<sub>3</sub>, and a<sub>4</sub>. The topmost row contains the entries a<sub>1</sub>, a<sub>5</sub>, a<sub>9</sub>, and a<sub>13</sub>.</p>
+<p>In this array, the leftmost column contains the entries <em>a</em>₁, <em>a</em>₂, <em>a</em>₃, and <em>a</em>₄. The topmost row contains the entries <em>a</em>₁, <em>a</em>₅, <em>a</em>₉, and <em>a</em>₁₃</sub>.</p>
 
 <p>Keep in mind that most WebGL and WebXR programming is done using third-party libraries which expand upon the basic functionality of WebGL by adding routines that make it much easier to perform not only core matrix and other operations, but often also to simulate these standard cinematography techniques. You should strongly consider using one instead of directly using WebGL. This guide uses WebGL directly since it's useful to understand to some extent what goes on under the hood, and to aide in the development of libraries or to help you optimize code.</p>
 
@@ -181,7 +181,7 @@ tags:
   return transform;
 }</pre>
 
-<p>After converting the FOV angle, <code>fovDegrees</code>, from degrees to radians and computing the aspect ratio of the {{domxref("XRViewport")}} specified by the <code>viewport</code> parameter, this function uses the <a href="http://glmatrix.net/">glMatrix</a> library's <code><a href="http://glmatrix.net/docs/module-mat4.html#.perspective">mat4.perspective()</a></code> function to compute the perspective matrix.</p>
+<p>After converting the FOV angle, <code>fovDegrees</code>, from degrees to radians and computing the aspect ratio of the {{domxref("XRViewport")}} specified by the <code>viewport</code> parameter, this function uses the <a href="https://glmatrix.net/">glMatrix</a> library's <code><a href="https://glmatrix.net/docs/module-mat4.html#.perspective">mat4.perspective()</a></code> function to compute the perspective matrix.</p>
 
 <p>The perspective matrix encapsulates the field of view (technically, this is the <em>vertical</em> field of view), aspect ratio, and the near and far clipping planes within the 4x4 matrix <code>transform</code>, which is then returned to the caller.</p>
 
@@ -196,7 +196,7 @@ const translateVec = vec3.fromValues(-trackDistance, -craneDistance, pushDistanc
 mat4.translate(transform, transform, translateVec);
 </pre>
 
-<p>This starts with the perspective matrix representing a 130° vertical field of view, then applies a translation that moves the camera in a manner that includes <a href="/en-US/docs/Web/API/WebXR_Device_API/Cameras#track">track</a>, <a href="/en-US/docs/Web/API/WebXR_Device_API/Cameras#crane">crane</a>, and <a href="/en-US/docs/Web/API/WebXR_Device_API/Cameras#push">push</a> movements.</p>
+<p>This starts with the perspective matrix representing a 130° vertical field of view, then applies a translation that moves the camera in a manner that includes <a href="#track">track</a>, <a href="#crane">crane</a>, and <a href="#push">push</a> movements.</p>
 
 <h4 id="Scaling_transforms">Scaling transforms</h4>
 
@@ -247,9 +247,9 @@ vec4.transformMat4(myVector, myVector, createScalingMatrix(2.0));</pre>
 
 <p><strong>Panning</strong> or <strong>yaw</strong> is the rotation of the camera left to right or right to left, with its base otherwise fixed in place. The position of the camera in space does not change, only the direction in which it's looking. And that direction does not change other than horizontally. Panning is great for establishing a setting or providing a sense of scope in a vast space or on a vast object. Or just for looking left and right, like simulating the player turning their head in an immersive or VR scenario.</p>
 
-<div style="width: 42em; text-align: center;"><img alt="A diagram showing a camera panning left or right" src="camera-pan.png"></div>
+<img alt="A diagram showing a camera panning left or right" src="camera-pan.png">
 
-<p>To do this, then, we need to rotate around the Y axis, to simulate the left and right rotation of the camera. Using the <a href="http://glmatrix.net/">glMatrix</a> library we've used previously, this can be performed using the <code>rotateY()</code> method on the <code>mat4</code> class, which represents a standard 4x4 matrix. To rotate the viewpoint defined by the matrix <code>viewMatrix</code> by <code>panAngle</code> radians:</p>
+<p>To do this, then, we need to rotate around the Y axis, to simulate the left and right rotation of the camera. Using the <a href="https://glmatrix.net/">glMatrix</a> library we've used previously, this can be performed using the <code>rotateY()</code> method on the <code>mat4</code> class, which represents a standard 4x4 matrix. To rotate the viewpoint defined by the matrix <code>viewMatrix</code> by <code>panAngle</code> radians:</p>
 
 <pre class="brush: js">mat4.rotateY(viewMatrix, viewMatrix, panAngle);
 </pre>
@@ -260,7 +260,7 @@ vec4.transformMat4(myVector, myVector, createScalingMatrix(2.0));</pre>
 
 <p>When you <strong>tilt</strong> or <strong>pitch</strong> the camera, you keep it fixed in space at the same coordinates while changing the direction in which it's facing vertically without altering the horizontal portion of its facing at all. It adjusts the direction it's pointing up and down. Tilting is good for capturing the scope of a tall object or scene, such as a forest or a mountain, but is also a popular way to introduce a character or locale of importance or which inspires awe. it's also of course useful for implementing support for a player looking up and down.</p>
 
-<div style="width: 42em; text-align: center;"><img alt="A diagram showing a camera tilting up and down" src="camera-tilt.png"></div>
+<img alt="A diagram showing a camera tilting up and down" src="camera-tilt.png">
 
 <p>Thus, tilting the camera can be achieved by rotating the camera around the X axis, so that it pivots to look up and down. This can be done using the appropriate method in your matrix math library, such as the <code>rotateX()</code> method in glMatrix's <code>mat4</code> class:</p>
 
@@ -272,7 +272,7 @@ vec4.transformMat4(myVector, myVector, createScalingMatrix(2.0));</pre>
 
 <p>A <strong>dolly</strong> shot is one in which the entire camera is moved forward and backward. In classic filmmaking, this is typically done with the camera mounted on a track or on a moving vehicle. The resulting motion can create impressively smooth effects, especially if moving along with the person or object that's the focus of your shot.</p>
 
-<div style="width: 42em; text-align: center;"><img alt="A diagram showing how a camera moves for a dolly shot" src="camera-dolly.png"></div>
+<img alt="A diagram showing how a camera moves for a dolly shot" src="camera-dolly.png">
 
 <p>While a dolly shot and a zoom seem like they ought to look about the same, they don't. The fact that zooming alters the camera's focal length means that the spatial relationship between the target and its surroundings doesn't change even as the target gets larger or smaller in the frame. On the other hand, a dolly shot, by actually moving the camera, replicates the sense of physical movement, causing the relationships of objects in the scene to shift as you expect while moving past them as you go toward or away from the target of the shot.</p>
 
@@ -286,7 +286,7 @@ vec4.transformMat4(myVector, myVector, createScalingMatrix(2.0));</pre>
 
 <p><strong>Trucking</strong> using a physical camera uses the same kind of rigging as dollying, but instead of moving the camera forward and backward, it moves from left to right or vice-versa. The camera doesn't rotate at all, so the focus of the shot slowly glides off the screen. This can suggest concentration, time passing, or contemplation when attempting to establish emotion in a scene. It's also used frequently in "walk-and-talk" scenes, wherein the camera glides alongside the characters and they walk through the scene.</p>
 
-<div style="width: 42em; text-align: center;"><img alt="A diagram showing how a camera trucks left and right" src="camera-truck.png"></div>
+<img alt="A diagram showing how a camera trucks left and right" src="camera-truck.png">
 
 <p>To move the camera left and right, translate the view matrix along the X axis in the opposite direction from the desired camera movement:</p>
 
@@ -298,7 +298,7 @@ vec4.transformMat4(myVector, myVector, createScalingMatrix(2.0));</pre>
 
 <p>A <strong>pedestal</strong> shot is one involving keeping the camera fixed horizontally relative to the floor, but moved straight up or down. Picture the camera on a pedestal (or pole) that gets taller or shorter. This is useful when tracking a subject that's getting taller or shorter, or is standing up or sitting down from a chair, or moving straight up and down.</p>
 
-<div style="width: 42em; text-align: center;"><img alt="A diagram showing a camera moving up and down using a pedestal motion" src="camera-pedestal.png"></div>
+<img alt="A diagram showing a camera moving up and down using a pedestal motion" src="camera-pedestal.png">
 
 <p>This is similar to a <strong>crane</strong> shot, which involves moving a camera attached to a crane up and down. To perform a pedestal or crane motion, translate the view along the Y axis in the opposite direction from the direction you want to move the camera:</p>
 
@@ -310,7 +310,7 @@ vec4.transformMat4(myVector, myVector, createScalingMatrix(2.0));</pre>
 
 <p><strong>Cant</strong> (or <strong>roll</strong>) is a rotation of the camera around its roll axis; that is, the camera remains fixed in space, and remains pointed at the same location, but rotates around so that the top of the camera is pointed in a different direction.</p>
 
-<div style="width: 42em; text-align: center;"><img alt="A diagram showing a camera rolling left and right" src="camera-roll.png"></div>
+<img alt="A diagram showing a camera rolling left and right" src="camera-roll.png">
 
 <p>You can visualize this by holding your arm out in front of you with your hand open, palm down. Imagine that your hand is the camera and the back of your hand represents the top of the camera. Now rotate your hand so that the "camera" is upside-down. You have just canted your hand around the roll axis. In cinematography, cant can be used to simulate various types of unsteady motion such as waves or turbulence, but can also be used for dramatic effect.</p>
 

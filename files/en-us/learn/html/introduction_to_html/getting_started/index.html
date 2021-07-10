@@ -449,11 +449,11 @@ textarea.onkeyup = function(){
 
 <pre class="brush: html">&lt;a href="https://www.example.com"&gt;A link to my example.&lt;/a&gt;
 
-&lt;a href='http://www.example.com'&gt;A link to my example.&lt;/a&gt;</pre>
+&lt;a href='https://www.example.com'&gt;A link to my example.&lt;/a&gt;</pre>
 
 <p>Make sure you don't mix single quotes and double quotes. This example (below) shows a kind of mixing quotes that will go wrong:</p>
 
-<pre class="example-bad brush: html">&lt;a href="http://www.example.com'&gt;A link to my example.&lt;/a&gt;</pre>
+<pre class="example-bad brush: html">&lt;a href="https://www.example.com'&gt;A link to my example.&lt;/a&gt;</pre>
 
 <p>However, if you use one type of quote, you can include the other type of quote <em>inside</em> your attribute values:</p>
 
@@ -461,11 +461,11 @@ textarea.onkeyup = function(){
 
 <p>To use quote marks inside other quote marks of the same type (single quote or double quote), use <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#entity_references_including_special_characters_in_html">HTML entities</a>. For example, this will break:</p>
 
-<pre class="example-bad brush: html">&lt;a href='http://www.example.com' title='Isn't this fun?'&gt;A link to my example.&lt;/a&gt;</pre>
+<pre class="example-bad brush: html">&lt;a href='https://www.example.com' title='Isn't this fun?'&gt;A link to my example.&lt;/a&gt;</pre>
 
 <p>Instead, you need to do this:</p>
 
-<pre class="brush: html">&lt;a href='http://www.example.com' title='Isn&amp;apos;t this fun?'&gt;A link to my example.&lt;/a&gt;</pre>
+<pre class="brush: html">&lt;a href='https://www.example.com' title='Isn&amp;apos;t this fun?'&gt;A link to my example.&lt;/a&gt;</pre>
 
 <h2 id="Anatomy_of_an_HTML_document">Anatomy of an HTML document</h2>
 
@@ -718,7 +718,7 @@ textarea.onkeyup = function(){
 <p>{{ EmbedLiveSample('Entity_references_Including_special_characters_in_HTML', 700, 200, "", "", "hide-codepen-jsfiddle") }}</p>
 
 <div class="note">
-<p><strong>Note</strong>: You don't need to use entity references for any other symbols, as modern browsers will handle the actual symbols just fine as long as your HTML's <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#specifying_your_document's_character_encoding">character encoding is set to UTF-8</a>.</p>
+<p><strong>Note</strong>: You don't need to use entity references for any other symbols, as modern browsers will handle the actual symbols just fine as long as your HTML's <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#specifying_your_documents_character_encoding">character encoding is set to UTF-8</a>.</p>
 </div>
 
 <h2 id="HTML_comments">HTML comments</h2>

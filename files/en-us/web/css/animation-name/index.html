@@ -6,12 +6,12 @@ tags:
   - CSS Animations
   - CSS Property
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.animation-name
 ---
 <div>{{CSSRef}}</div>
 
-<p><span class="seoSummary">The <strong><code>animation-name</code></strong> <a href="/en-US/docs/CSS">CSS</a> property specifies the names of one or more {{cssxref("@keyframes")}} at-rules describing the animation or animations to apply to the element.</span></p>
+<p>The <strong><code>animation-name</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property specifies the names of one or more {{cssxref("@keyframes")}} at-rules describing the animation or animations to apply to the element.</p>
 
 <div>{{EmbedInteractiveExample("pages/css/animation-name.html")}}</div>
 
@@ -30,9 +30,10 @@ animation-name: test1, animation4;
 animation-name: none, -moz-specific, sliding;
 
 /* Global values */
-animation-name: <a href="/en-US/docs/Web/CSS/initial">initial</a>
-animation-name: <a href="/en-US/docs/Web/CSS/inherit">inherit</a>
-animation-name: <a href="/en-US/docs/Web/CSS/unset">unset</a></pre>
+animation-name: initial;
+animation-name: inherit;
+animation-name: revert;
+animation-name: unset;</pre>
 
 <h3 id="Values">Values</h3>
 
@@ -44,7 +45,7 @@ animation-name: <a href="/en-US/docs/Web/CSS/unset">unset</a></pre>
 </dl>
 
 <div class="note">
-<p><strong>Note</strong>: When you specify multiple comma-separated values on an <code>animation-*</code> property, they will be assigned to the animations specified in the {{cssxref("animation-name")}} property in different ways depending on how many there are. For more information, see <a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations#Setting_multiple_animation_property_values">Setting multiple animation property values</a>.</p>
+<p><strong>Note</strong>: When you specify multiple comma-separated values on an <code>animation-*</code> property, they will be assigned to the animations specified in the {{cssxref("animation-name")}} property in different ways depending on how many there are. For more information, see <a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations#setting_multiple_animation_property_values">Setting multiple animation property values</a>.</p>
 </div>
 
 <h2 id="Formal_definition">Formal definition</h2>
@@ -89,22 +90,7 @@ animation-name: <a href="/en-US/docs/Web/CSS/unset">unset</a></pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName('CSS3 Animations', '#animation-name', 'animation-name')}}</td>
-			<td>{{Spec2('CSS3 Animations')}}</td>
-			<td>Initial definition.</td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

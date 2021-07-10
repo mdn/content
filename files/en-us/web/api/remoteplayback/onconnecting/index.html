@@ -1,0 +1,37 @@
+---
+title: RemotePlayback.onconnecting
+slug: Web/API/RemotePlayback/onconnecting
+tags:
+  - API
+  - Property
+  - Reference
+  - onconnecting
+  - RemotePlayback
+browser-compat: api.RemotePlayback.onconnecting
+---
+<div>{{DefaultAPISidebar("Remote Playback API")}}</div>
+
+<p class="summary">The <strong><code>onconnecting</code></strong> EventHandler of the {{domxref("RemotePlayback")}} interface is an {{domxref("EventHandler")}} that processes the events fired when the user agent initiates remote playback.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js">RemotePlayback.onconnecting = function;
+RemotePlayback.addEventListener('<em>connecting</em>', function);</pre>
+
+<h2>Example</h2>
+
+<p>In the following example the value of {{domxref("RemotePlayback.state")}} is printed to the console when the user agent initiates a connection.</p>
+
+<pre class="brush: js">RemotePlayback.onconnecting = function() {
+  console.log(RemotePlayback.state);
+}</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<p>{{Specifications}}</p>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>
+
+

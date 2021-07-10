@@ -1,0 +1,46 @@
+---
+title: ServiceWorker.onerror
+slug: Web/API/ServiceWorker/onerror
+tags:
+  - API
+  - ServiceWorker
+  - EventHandler
+  - Property
+  - Reference
+  - Web Workers
+  - Workers
+  - onerror
+browser-compat: api.ServiceWorker.onerror
+---
+<div>{{APIRef("Service Workers API")}}</div>
+
+<p>The <code><strong>onerror</strong></code> property of the {{domxref("ServiceWorker")}} interface represents an {{event("Event_handlers", "event handler")}}, that is a function to be called when the {{event("error")}} event occurs.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js">myServiceWorker.onerror = function(event) { ... };</pre>
+
+<h2 id="Example">Example</h2>
+
+<p>The following code snippet gets a handle to the {{domxref("ServiceWorker")}} object via {{domxref("ServiceWorkerRegistration.active")}} and sets up an <code>onerror</code> handler on the resulting object:</p>
+
+<pre class="brush: js">// in the page being controlled
+if (navigator.serviceWorker) {
+
+  navigator.serviceWorker.register('service-worker.js');
+
+  navigator.serviceWorker.ready.then(registration =&gt; {
+    registration.active.onerror = (event) =&gt; {
+      console.log('An error occurred in the service worker!');
+    };
+  });
+
+}</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+{{Specifications}}
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>

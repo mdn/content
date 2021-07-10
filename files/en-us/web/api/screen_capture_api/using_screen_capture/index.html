@@ -48,8 +48,6 @@ tags:
 <figcaption><strong><em>Starting screen capture: <code>Promise</code> style</em></strong>
 
 <pre class="brush: js">function startCapture(displayMediaOptions) {
- let captureStream = null;
-
  return navigator.mediaDevices.getDisplayMedia(displayMediaOptions)
     .catch(err =&gt; { console.error("Error:" + err); return null; });
 }</pre>
@@ -84,25 +82,7 @@ tags:
 <p><strong>Note:</strong> Unlike most uses of constraints in media APIs, here it's solely used to define the stream configuration, and <em>not</em> to filter the available choices.</p>
 </div>
 
-<p>There are three new constraints added to <code>MediaTrackConstraints</code> (as well as to {{domxref("MediaTrackSupportedConstraints")}} and {{domxref("MediaTrackSettings")}}) for configuring a screen capture stream:</p>
-
-<dl>
- <dt>{{domxref("MediaTrackConstraints.cursor", "cursor")}}</dt>
- <dd>
- <p>Indicates whether or not to capture the mouse cursor, and if so, whether to do so all the time or only while the mouse is in motion. The possible values are:</p>
-
- <dl>
-  <dt><code>always</code></dt>
-  <dd>The mouse cursor should always be captured in the generated stream.</dd>
-  <dt><code>motion</code></dt>
-  <dd>The cursor should only be visible while moving, and, at the discretion of the {{Glossary("user agent")}}, for a brief time before after moving. Then the cursor is removed from the stream.</dd>
-  <dt><code>never</code></dt>
-  <dd>The cursor should never be visible in the generated stream.</dd>
- </dl>
- </dd>
- <dt>{{domxref("MediaTrackConstraints.logicalSurface", "logicalSurface")}}</dt>
- <dd>A Boolean which if <code>true</code> indicates that the capture should include offscreen areas of the source, if there are any.</dd>
-</dl>
+<p>See <a href="/en-US/docs/Web/API/MediaTrackConstraints#properties_of_shared_screen_tracks">Properties of shared screen tracks</a> for details about additional constraints for configuring a screen-capture stream that are added to {{domxref("MediaTrackConstraints")}}, {{domxref("MediaTrackSupportedConstraints")}}, and {{domxref("MediaTrackSettings")}}).</p>
 
 <p>None of the constraints are applied in any way until after the content to capture has been selected. The contraints alter what you see in the resulting stream.</p>
 

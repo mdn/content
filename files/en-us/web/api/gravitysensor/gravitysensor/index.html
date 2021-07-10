@@ -1,5 +1,5 @@
 ---
-title: GravitySensor.GravitySensor()
+title: GravitySensor()
 slug: Web/API/GravitySensor/GravitySensor
 tags:
 - API
@@ -13,16 +13,17 @@ tags:
 - Sensors
 browser-compat: api.GravitySensor.GravitySensor
 ---
-<div>{{APIRef("Generic Sensor API")}}</div>
+<div>{{APIRef("Sensor API")}}</div>
 
-<p><span class="seoSummary">The <strong><code>GravitySensor</code></strong>
+<p>The <strong><code>GravitySensor()</code></strong>
     constructor creates a new {{domxref("GravitySensor")}} object which
-    provides on each reading the gravity applied to the device along all three axes.</span></p>
+    provides on each reading the gravity applied to the device along all three axes.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js">let <var>gravitySensor</var> = new GravitySensor([<em>options</em>])</pre>
+  class="brush: js">let <var>gravitySensor</var> = new GravitySensor([<em>options</em>])
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -36,7 +37,7 @@ browser-compat: api.GravitySensor.GravitySensor
         used, the latter for frequencies less than a second. The actual reading frequency
         depends on device hardware and consequently may be less than requested. The default
         frequency is the one defined by the underlying platform.</li>
-      <li><code>referenceFrame</code>: The local coordinate system representing 
+      <li><code>referenceFrame</code>: The local coordinate system representing
         the reference frame. It can be either  <code>'device'</code> or
         <code>'screen'</code>. The default is <code>'device'</code>.</li>
     </ul>
@@ -49,32 +50,12 @@ browser-compat: api.GravitySensor.GravitySensor
   <dt>SecurityError</dt>
   <dd>Use of this feature was blocked by a feature policy. If a feature policy blocks use of a feature,
     it is because your code is inconsistent with the policies set on your server.
-    This is not something that would ever be shown to a user. See {{httpheader('Feature-Policy')}} for implementation instructions.</dd>
+    This is not something that would ever be shown to a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implementation instructions.</dd>
 </dl>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Generic Sensor')}}</td>
-      <td>{{Spec2('Generic Sensor')}}</td>
-      <td>Defines sensors in general.</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('Accelerometer','#dom-gravitysensor-gravitysensor','GravitySensor')}}
-      </td>
-      <td>{{Spec2('Accelerometer')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

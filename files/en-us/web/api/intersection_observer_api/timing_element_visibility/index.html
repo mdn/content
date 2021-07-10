@@ -358,7 +358,7 @@ function startup() {
  <dd>The total number of milliseconds the ad has been visible.</dd>
 </dl>
 
-<p>These are accessed through each ad's {{domxref("HTMLOrForeignElement.dataset")}} attribute, which provides a {{domxref("DOMStringMap")}} mapping each custom attribute's name to its value. The values are strings, but we can convert those to numbers easily enough—in fact, JavaScript generally does it automatically, although we'll have one instance where we have to do it ourselves.</p>
+<p>These are accessed through each ad's {{domxref("HTMLElement.dataset")}} attribute, which provides a {{domxref("DOMStringMap")}} mapping each custom attribute's name to its value. The values are strings, but we can convert those to numbers easily enough—in fact, JavaScript generally does it automatically, although we'll have one instance where we have to do it ourselves.</p>
 
 <p>We start by fetching the time at which the ad's previous visibility status check time (<code>adBox.dataset.lastViewStarted</code>) into a local variable named <code>lastStarted</code>. We also get the current time-since-creation value using {{domxref("Performance.now", "performance.now()")}} into <code>currentTime</code>.</p>
 

@@ -8,6 +8,7 @@ tags:
   - PushManager
   - Reference
   - Service Workers
+browser-compat: api.PushManager.getSubscription
 ---
 <p>{{SeeCompatTable}}{{ApiRef("Push API")}}</p>
 
@@ -17,7 +18,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js" style="font-size: 14px;">PushManager.getSubscription().then(function(pushSubscription) { ... } );</pre>
+<pre class="brush: js">PushManager.getSubscription().then(function(pushSubscription) { ... } );</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -31,7 +32,7 @@ tags:
 
 <p>This code snippet is taken from a <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/push-messaging-and-notifications">push messaging and notification sample</a>. (No live demo is available.)</p>
 
-<pre class="brush: js" style="font-size: 14px;">// We need the service worker registration to check for a subscription
+<pre class="brush: js">// We need the service worker registration to check for a subscription
   navigator.serviceWorker.ready.then(function(serviceWorkerRegistration) {
     // Do we already have a push message subscription?
     serviceWorkerRegistration.pushManager.getSubscription()
@@ -65,26 +66,13 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Push API', '#dom-pushmanager-getsubscription', 'getSubscription()')}}</td>
-   <td>{{Spec2('Push API')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
 <div>
 
-<p>{{Compat("api.PushManager.getSubscription")}}</p>
+<p>{{Compat}}</p>
 </div>
 </div>

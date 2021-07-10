@@ -6,6 +6,7 @@ tags:
   - Command
   - Reference
   - WebDriver
+browser-compat: webdriver.commands.CloseWindow
 ---
 <p>The <em>Close Window</em> <a href="/en-US/docs/Web/WebDriver/Command">command</a> of the <a href="/en-US/docs/Web/WebDriver">WebDriver</a> API closes the current top-level browsing context (window or tab) and returns with the list of currently open <code><a href="/en-US/docs/Web/WebDriver/WebWindow">WebWindow</a></code>s. If it is the last window that is being closed, the WebDriver session will implicitly be deleted. Subsequent commands after the session is ended will therefore cause <a href="/en-US/docs/Web/WebDriver/Errors/InvalidSessionID">invalid session ID</a> errors.</p>
 
@@ -103,7 +104,7 @@ namespace MDNWebDriverExamples
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("webdriver.commands.CloseWindow")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

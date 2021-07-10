@@ -45,7 +45,7 @@ slug: Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Answer_a_call
 });</pre>
 
     <p>Let's walk through the most important parts of this code:</p>
-    <ol style="list-style-type: upper-latin">
+    <ul>
       <li>
         <p><code>call.answer(window.localStream)</code>: if <code>answerCall</code> is <code>true</code>, you'll want to call peerJS’s <code>answer()</code> function on the call to create an answer, passing it the local stream.</p>
       </li>
@@ -58,7 +58,7 @@ slug: Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Answer_a_call
       <li>
         <p>If the person denies the call, we’re just going to log a message to the console.</p>
       </li>
-    </ol>
+    </ul>
   </li>
   <li>
     <p>The code you have now is enough for you to create a call and answer it. Refresh your browsers and test it out. You’ll want to make sure that both browsers have the console open or else you won’t get the prompt to answer the call. Click call, submit the peer ID for the other browser and then answer the call. The final page should look like this:</p>

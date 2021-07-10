@@ -26,7 +26,7 @@ tags:
 
 <p>To demonstrate 3D spatialization we've created a modified version of the boombox demo we created in our basic <a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a> guide. see the <a href="https://mdn.github.io/webaudio-examples/spacialization/">3D spatialization demo live</a> (and see the <a href="https://github.com/mdn/webaudio-examples/tree/master/spacialization">source code</a> also).</p>
 
-<p><img alt="A simple UI with a rotated boombox and controls to move it left and right and in and out, and rotate it." src="web-audio-spatialization.png" style="border-style: solid; border-width: 1px;"></p>
+<p><img alt="A simple UI with a rotated boombox and controls to move it left and right and in and out, and rotate it." src="web-audio-spatialization.png"></p>
 
 <p>The boombox sits inside a room (defined by the edges of the browser viewport), and in this demo, we can move and rotate it with the provided controls. When we move the boombox, the sound it produces changes accordingly, panning as it moves to the left or right of the room, or becoming quieter as it is moved away from the user or is rotated so the speakers are facing away from them, etc. This is done by setting the different properties of the <code>PannerNode</code> object instance in relation to that movement, to emulate spacialization.</p>
 

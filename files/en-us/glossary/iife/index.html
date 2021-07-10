@@ -69,7 +69,7 @@ console.log(firstAccount.balance); // undefined
 console.log(firstAccount.withdraw(20)); // 80
 console.log(firstAccount.withdraw(30)); // 50
 console.log(firstAccount.doBadThings); // undefined, this method is private
-const secondAccount = makeWithdraw(20);
+const secondAccount = makeWithdraw(20); // "I will do bad things with your money"
 secondAccount.withdraw(30); // "Insufficient money"
 secondAccount.withdraw(20);  // 0</pre>
 
@@ -100,7 +100,7 @@ for (var i = 0; i &lt; 2; i++) {
   button.innerText = "Button " + i;
   button.onclick = (function (copyOfI) {
     return function() {alert(copyOfI);};
-  }(i));
+  })(i);
   document.body.appendChild(button);
 }
 console.log(i); // 2</pre>

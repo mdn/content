@@ -34,7 +34,7 @@ browser-compat: api.Response.ok
   we create a new {{domxref("Request")}} object using the
   {{domxref("Request.Request","Request()")}} constructor, passing it a JPG path. We then
   fetch this request using {{domxref("WindowOrWorkerGlobalScope/fetch","fetch()")}}, extract a blob from
-  the response using {{domxref("Body.blob")}}, create an object URL out of it using
+  the response using {{domxref("Response.blob")}}, create an object URL out of it using
   {{domxref("URL.createObjectURL")}}, and display this in an {{htmlelement("img")}}.</p>
 
 <div class="note">
@@ -56,20 +56,7 @@ fetch(myRequest).then(function(response) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Fetch','#dom-response-ok','ok')}}</td>
-      <td>{{Spec2('Fetch')}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

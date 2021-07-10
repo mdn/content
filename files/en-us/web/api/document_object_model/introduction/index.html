@@ -173,7 +173,7 @@ table.summary = "note: increased border";
  <li><code>{{domxref("document.createElement", "", "", "1")}}(name)</code></li>
  <li><code>parentNode.{{domxref("Node.appendChild", "appendChild", "", "1")}}(node)</code></li>
  <li><code>element.{{domxref("element.innerHTML", "innerHTML", "", "1")}}</code></li>
- <li><code>element.{{domxref("ElementCSSInlineStyle/style", "style", "", "1")}}.left</code></li>
+ <li><code>element.{{domxref("HTMLElement/style", "style", "", "1")}}.left</code></li>
  <li><code>element.{{domxref("element.setAttribute", "setAttribute", "", "1")}}()</code></li>
  <li><code>element.{{domxref("element.getAttribute", "getAttribute", "", "1")}}()</code></li>
  <li><code>element.{{domxref("EventTarget.addEventListener", "addEventListener", "", "1")}}()</code></li>
@@ -202,8 +202,8 @@ table.summary = "note: increased border";
 &lt;/head&gt;
 &lt;body&gt;
   &lt;div style="margin: .5in; height: 400px;"&gt;
-    &lt;p&gt;&lt;b&gt;&lt;code&gt;text&lt;/code&gt;&lt;/b&gt;&lt;/p&gt;
     &lt;form&gt;
+      &lt;p&gt;&lt;b&gt;&lt;code&gt;text&lt;/code&gt;&lt;/b&gt;&lt;/p&gt;
       &lt;select onChange="setBodyAttr('text',
         this.options[this.selectedIndex].value);"&gt;
         &lt;option value="black"&gt;black&lt;/option&gt;

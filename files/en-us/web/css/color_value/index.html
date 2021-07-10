@@ -858,17 +858,17 @@ browser-compat: css.types.color
 <p><strong>Historical note:</strong> <code>transparent</code> wasn't a true color in CSS Level 2 (Revision 1). It was a special keyword that could be used instead of a regular <code>&lt;color&gt;</code> value on two CSS properties: {{Cssxref("background")}} and {{Cssxref("border")}}. It was essentially added to allow developers to override an inherited solid color. With the advent of alpha channels in CSS Colors Level 3, <code>transparent</code> was redefined as a true color. It can now be used wherever a <code>&lt;color&gt;</code> value can be used.</p>
 </div>
 
-<h3 id="currentcolor_keyword"><code id="currentColor">currentcolor</code> keyword</h3>
+<h3 id="currentcolor_keyword"><code id="currentColor">currentColor</code> keyword</h3>
 
-<p>The <code>currentcolor</code> keyword represents the value of an element's {{Cssxref("color")}} property. This lets you use the <code>color</code> value on properties that do not receive it by default.</p>
+<p>The <code>currentColor</code> keyword represents the value of an element's {{Cssxref("color")}} property. This lets you use the <code>color</code> value on properties that do not receive it by default.</p>
 
-<p>If <code>currentcolor</code> is used as the value of the <code>color</code> property, it instead takes its value from the inherited value of the <code>color</code> property.</p>
+<p>If <code>currentColor</code> is used as the value of the <code>color</code> property, it instead takes its value from the inherited value of the <code>color</code> property.</p>
 
-<h4 id="currentcolor_example">currentcolor example</h4>
+<h4 id="currentcolor_example">currentColor example</h4>
 
-<pre class="brush: html">&lt;div style="color:blue; border: 1px dashed currentcolor;"&gt;
+<pre class="brush: html">&lt;div style="color:blue; border: 1px dashed currentColor;"&gt;
   The color of this text is blue.
-  &lt;div style="background:currentcolor; height:9px;"&gt;&lt;/div&gt;
+  &lt;div style="background:currentColor; height:9px;"&gt;&lt;/div&gt;
   This block is surrounded by a blue border.
 &lt;/div&gt;</pre>
 
@@ -915,9 +915,11 @@ browser-compat: css.types.color
 
 <dl>
  <dt>Functional notation: <code>hsl[a](H, S, L[, A])</code></dt>
- <dd><code>H</code> (hue) is an {{cssxref("&lt;angle&gt;")}} of the color circle given in <code>deg</code>s, <code>rad</code>s, <code>grad</code>s, or <code>turn</code>s in {{SpecName("CSS4 Colors","#the-hsl-notation")}}. When written as a unitless {{cssxref("&lt;number&gt;")}}, it is interpreted as degrees, as specified in {{SpecName("CSS3 Colors", "#hsl-color")}}. By definition, red=0deg=360deg, with the other colors spread around the circle, so green=120deg, blue=240deg, etc. As an <code>&lt;angle&gt;</code>, it implicitly wraps around such that -120deg=240deg, 480deg=120deg, -1turn=1turn, etc.</dd>
- <dd><code>S</code> (saturation) and <code>L</code> (lightness) are percentages. <code>100%</code> <strong>saturation</strong> is completely saturated, while <code>0%</code> is completely unsaturated (gray). <code>100%</code> <strong>lightness</strong> is white, <code>0%</code> lightness is black, and <code>50%</code> lightness is “normal.”</dd>
- <dd><code>A</code> (alpha) can be a {{cssxref("&lt;number&gt;")}} between <code>0</code> and <code>1</code>, or a {{cssxref("&lt;percentage&gt;")}}, where the number <code>1</code> corresponds to <code>100%</code> (full opacity).</dd>
+ <dd>
+   <p><code>H</code> (hue) is an {{cssxref("&lt;angle&gt;")}} of the color circle given in <code>deg</code>s, <code>rad</code>s, <code>grad</code>s, or <code>turn</code>s in {{SpecName("CSS4 Colors","#the-hsl-notation")}}. When written as a unitless {{cssxref("&lt;number&gt;")}}, it is interpreted as degrees, as specified in {{SpecName("CSS3 Colors", "#hsl-color")}}. By definition, red=0deg=360deg, with the other colors spread around the circle, so green=120deg, blue=240deg, etc. As an <code>&lt;angle&gt;</code>, it implicitly wraps around such that -120deg=240deg, 480deg=120deg, -1turn=1turn, etc.</p>
+   <p><code>S</code> (saturation) and <code>L</code> (lightness) are percentages. <code>100%</code> <strong>saturation</strong> is completely saturated, while <code>0%</code> is completely unsaturated (gray). <code>100%</code> <strong>lightness</strong> is white, <code>0%</code> lightness is black, and <code>50%</code> lightness is “normal.”</p>
+   <p><code>A</code> (alpha) can be a {{cssxref("&lt;number&gt;")}} between <code>0</code> and <code>1</code>, or a {{cssxref("&lt;percentage&gt;")}}, where the number <code>1</code> corresponds to <code>100%</code> (full opacity).</p>
+ </dd>
  <dt>Functional notation: <code>hsl[a](H S L[ / A])</code></dt>
  <dd>CSS Colors Level 4 adds support for space-separated values in the functional notation.</dd>
 </dl>
