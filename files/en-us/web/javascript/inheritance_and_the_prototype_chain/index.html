@@ -254,11 +254,9 @@ function f() {
   this.edges = [];
 }
 
-Graph.prototype = {
-  addVertex: function(v) {
-    this.vertices.push(v);
-  }
-};
+Graph.prototype.addVertex = function(v) {
+  this.vertices.push(v);
+}
 
 var g = new Graph();
 // g is an object with own properties 'vertices' and 'edges'.
