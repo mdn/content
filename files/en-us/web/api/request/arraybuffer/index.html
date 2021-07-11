@@ -13,8 +13,7 @@ browser-compat: api.Request.arrayBuffer
 <div>{{APIRef("Fetch")}}</div>
 
 <p>The <strong><code>arrayBuffer()</code></strong> method of the {{domxref("Request")}} interface
-  takes a {{domxref("Request")}} stream and reads it to completion. It returns a promise
-  that resolves with an {{jsxref("ArrayBuffer")}}.</p>
+reads the request body and returns it as a promise that resolves with an {{jsxref("ArrayBuffer")}}.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -35,12 +34,11 @@ request.arrayBuffer().then(function(buffer) {
 <h2 id="Examples">Examples</h2>
 
 <pre class="brush: js">
-const myArray = new ArrayBuffer(512);
-const longInt8View = new Uint8Array(myArray);
+const myArray = new Uint8Array(10);
 
 const request = new Request('/myEndpoint', {
   method: 'POST',
-  body: longInt8View
+  body: myArray
 });
 
 request.arrayBuffer().then(function(buffer) {

@@ -1,0 +1,37 @@
+---
+title: Time zone
+slug: Glossary/Time_zone
+tags:
+  - Glossary
+  - JavaScript
+  - Time zone
+  - Locale
+---
+<p>A <strong>time zone</strong>, in computing, is first and foremost a property of the local environment in which an application runs — with a particular name such as Asia/Tokyo. The time zone set in the environment controls what time the environment’s clock provides, and what date, and what the environment’s current {{Glossary("time zone offset")}} is.</p>
+
+<p>An environment’s time zone also controls behavior related to dates and times and time zone offsets in the past and future — for example, determining whether Daylight Savings Time (DST) was in effect in that environment during a certain date in the past, or will be for a certain date in the future.</p>
+
+<p>In a JavaScript application, to determine the time zone of the local environment in which the application is running, you can use the following code:</p>
+
+<pre class="brush: js">Intl.DateTimeFormat().resolvedOptions().timeZone</pre>
+
+<p>When formatting date and time information, JavaScript also provides for specifying time zones other than just the time zone of the local environment. For example, to get a formatted representation of the current date and time in the Europe/Berlin time zone, you can use the following code:
+
+<pre class="brush: js">new Date().toLocaleString('en-US', { timeZone: 'Europe/Berlin' })</pre>
+
+<p>Every time zone is associated with a certain region of the world and has a standard name in the <a href="https://en.wikipedia.org/wiki/Tz_database">IANA time zone database (tz database)</a> (the most widely used database of time zones).</p>
+
+<p>The <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">list of IANA time zones</a> contains several hundred standard time zone names for regions throughout the world. For example, there’s an IANA time zone associated with the entire Pacific coast region of America, and its name is America/Los_Angeles. (There are no America/Seattle or America/San_Francisco time zones, for instance — instead Seattle and San Francisco are in the America/Los_Angeles time zone.)</p>
+
+<p>It’s important to understand that identifiers with <code>+/-</code> numbers such as <code>GMT+9</code>, <code>GMT-0500</code>, <code>UTC+01:00</code> and so on are not time zones — instead they’re {{Glossary("time zone offsets")}}. A time zone’s associated time zone offset can change for various reasons — for example, depending of whether Daylight Savings Time (DST) is currently in effect in the time zone.</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+  <li>{{Glossary("Time zone offset")}}</li>
+  <li>Stack Overflow: <a href="https://stackoverflow.com/tags/timezone/info">info page about time zones</a></li>
+  <li>Wikipedia: <a href="https://en.wikipedia.org/wiki/Tz_database">IANA time zone database (tz database)</a></li>
+  <li>Wikipedia: <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">list of IANA time zones</a></p>
+</ul>
+
+<div>{{QuickLinksWithSubpages("/en-US/docs/Glossary")}}</div>
