@@ -1,0 +1,54 @@
+---
+title: 'Permissions-Policy: screen-wake-lock'
+slug: Web/HTTP/Headers/Permissions-Policy/screen-wake-lock
+tags:
+  - Directive
+  - Permissions Policy
+  - Permissions-Policy
+  - HTTP
+  - Reference
+  - screen-wake-lock
+  - Experimental
+browser-compat: http.headers.Permissions-Policy.screen-wake-lock
+---
+<p>{{HTTPSidebar}}</p>
+
+<div class="note">
+  <p>The <code>Permissions-Policy</code> header was previously named <code>Feature-Policy</code>. As of June 2021, the {{domxref('FeaturePolicy')}} API  as well as some linked-to articles and demos still use the older name.</p>
+</div>
+
+<p><span class="seoSummary">The HTTP {{HTTPHeader("Permissions-Policy")}} header <strong><code>screen-wake-lock</code></strong> directive controls whether the current document is allowed to use <a href="/en-US/docs/Web/API/Screen_Wake_Lock_API">Screen Wake Lock API</a> to indicate that device should not dim or turn off the screen.</span></p>
+
+<div class="notecard note">
+<p><strong>Note:</strong> In earlier specification drafts this directive was called <code>wake-lock</code>")}}.</p>
+</div>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre>Permissions-Policy: screen-wake-lock &lt;allowlist&gt;;</pre>
+
+<dl>
+  <dt>&lt;allowlist&gt;</dt>
+  <dd>A list of origins for which the feature is allowed. See <a href="/en-US/docs/Web/HTTP/Headers/Permissions-Policy#syntax"><code>Permissions-Policy</code></a>.</dd>
+</dl>
+
+<h2 id="Default_policy">Default policy</h2>
+
+<p>Default allow list for <code>screen-wake-lock</code> is <code>'self'</code>.</p>
+
+<h2 id="Specifications">Specifications</h2>
+
+<p>{{Specifications}}</p>
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/API/Screen_Wake_Lock_API">Screen Wake Lock API</a></li>
+ <li>{{HTTPHeader('Permissions-Policy')}} header</li>
+ <li><a href="/en-US/docs/Web/HTTP/Permissions_Policy">Permissions Policy</a></li>
+ <li><a href="/en-US/docs/Web/HTTP/Permissions_Policy/Using_Permissions_Policy">Using Permissions Policy</a></li>
+ <li><a href="https://www.w3.org/TR/wake-lock/#wake-locks">Default value of the allow list</a></li>
+</ul>
