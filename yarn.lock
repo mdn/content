@@ -34,22 +34,22 @@
     lodash.isundefined "^3.0.1"
     lodash.uniq "^4.5.0"
 
-"@mdn/browser-compat-data@3.3.9":
-  version "3.3.9"
-  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-3.3.9.tgz#a7c7c81dba343227192e11d5513e809cdc59727e"
-  integrity sha512-rTYpol8vAIWnFLaLFxVOwHXd4tEVPIx6HlaG8IV/G1eWuLwg5y58dWHGTde2l7pRokbbjs75oKVWagUK14RRrQ==
+"@mdn/browser-compat-data@3.3.10":
+  version "3.3.10"
+  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-3.3.10.tgz#10299e35ee07b2a78e58731939a5f35d926db622"
+  integrity sha512-3pUDpaS17YjM0yCUyZCzNGVd+p9ig4UUTw0RI5EDpiLlwwDiiSmU+31fhEqv7gHAxkW7X1TUP8z7YXsWY2SJsg==
 
-"@mdn/yari@0.4.567":
-  version "0.4.567"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.567.tgz#97720b06685ed1a69297c863bc3a45dbf6c33b04"
-  integrity sha512-5vbaWRQ+ZcRCXkL1tKGESfm9G+bq5X9cmRz2uchZ+EnLamOYZaciBtXDoCxiyIHzAtiie0kH5mJQl295cJgI6Q==
+"@mdn/yari@0.4.587":
+  version "0.4.587"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.587.tgz#b2ef14e19f3771dba1bcf738984920ddee17a084"
+  integrity sha512-YttRlkVRkrKAHknb6BNlap0pOIVlHc0kuvHJ6LAoc5TDjet/xetmiFMMzQEQPKYR5LlWkqc+YvoDuqQsycMr5A==
   dependencies:
     "@caporal/core" "2.0.2"
     "@fast-csv/parse" "4.3.6"
-    "@mdn/browser-compat-data" "3.3.9"
+    "@mdn/browser-compat-data" "3.3.10"
     "@stripe/stripe-js" "^1.15.1"
     accept-language-parser "1.5.0"
-    browser-specs "^1.41.1"
+    browser-specs "^2.1.0"
     chalk "4.1.1"
     cheerio "1.0.0-rc.6"
     cli-progress "^3.9.0"
@@ -57,7 +57,7 @@
     cookie "0.4.1"
     cookie-parser "1.4.5"
     cssesc "^3.0.0"
-    dayjs "1.10.5"
+    dayjs "1.10.6"
     dotenv "10.0.0"
     ejs "3.1.6"
     express "4.17.1"
@@ -71,7 +71,7 @@
     hast-util-is-element "^1.1.0"
     hast-util-to-html "^7.1.3"
     hast-util-to-text "^2.0.1"
-    http-proxy-middleware "2.0.0"
+    http-proxy-middleware "2.0.1"
     image-size "1.0.0"
     image-type "4.1.0"
     imagemin "7.0.1"
@@ -90,13 +90,13 @@
     mdn-data "2.0.19"
     open "^8.2.1"
     open-editor "3.0.0"
-    prismjs "1.24.0"
+    prismjs "1.24.1"
     react-modal "^3.14.3"
     read-chunk "3.2.0"
     rehype-format "^3.1.0"
     rehype-parse "^7.0.1"
     rehype-raw "^5.1.0"
-    rehype-remark "^8.0.0"
+    rehype-remark "^8.1.1"
     rehype-stringify "^8.0.0"
     remark-gfm "^1.0.0"
     remark-parse "^9.0.0"
@@ -558,10 +558,10 @@ braces@^3.0.1:
   dependencies:
     fill-range "^7.0.1"
 
-browser-specs@^1.41.1:
-  version "1.41.1"
-  resolved "https://registry.yarnpkg.com/browser-specs/-/browser-specs-1.41.1.tgz#8e8ecf71fb1994eb1eddb4c38af47d6385438a6b"
-  integrity sha512-iN9Ej4r68wrEF+CzW5wWcxOpyaUhwSoRIplD6T0tyLWm8Ax+nfGPV/CuX59dWT9dOAP+Ew5pCfq6P67SgEK6dQ==
+browser-specs@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/browser-specs/-/browser-specs-2.1.0.tgz#9a00ed323f54cb0061e80aa00e06fa300360bc24"
+  integrity sha512-gw9xmHjNy0bYLp1SSubeN67vBmDXrb0+8Gk978zUdraxQ0Sw8dWsqhY/fHxOnMPqn8YfYpiVkgB05eUMPKgoJg==
 
 buffer-alloc-unsafe@^1.1.0:
   version "1.1.0"
@@ -1075,10 +1075,10 @@ currently-unhandled@^0.4.1:
   dependencies:
     array-find-index "^1.0.1"
 
-dayjs@1.10.5:
-  version "1.10.5"
-  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.10.5.tgz#5600df4548fc2453b3f163ebb2abbe965ccfb986"
-  integrity sha512-BUFis41ikLz+65iH6LHQCDm4YPMj5r1YFLdupPIyM4SGcXMmtiLQ7U37i+hGS8urIuqe7I/ou3IS1jVc4nbN4g==
+dayjs@1.10.6:
+  version "1.10.6"
+  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.10.6.tgz#288b2aa82f2d8418a6c9d4df5898c0737ad02a63"
+  integrity sha512-AztC/IOW4L1Q41A86phW5Thhcrco3xuAA+YX/BLpLWWjRcTj5TOt/QImBLmCKlrF7u7k47arTnOyL6GnbG8Hvw==
 
 debug@2.6.9:
   version "2.6.9"
@@ -2218,10 +2218,10 @@ http-errors@~1.7.2:
     statuses ">= 1.5.0 < 2"
     toidentifier "1.0.0"
 
-http-proxy-middleware@2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/http-proxy-middleware/-/http-proxy-middleware-2.0.0.tgz#20d1ac3409199c83e5d0383ba6436b04e7acb9fe"
-  integrity sha512-S+RN5njuyvYV760aiVKnyuTXqUMcSIvYOsHA891DOVQyrdZOwaXtBHpt9FUVPEDAsOvsPArZp6VXQLs44yvkow==
+http-proxy-middleware@2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/http-proxy-middleware/-/http-proxy-middleware-2.0.1.tgz#7ef3417a479fb7666a571e09966c66a39bd2c15f"
+  integrity sha512-cfaXRVoZxSed/BmkA7SwBVNI9Kj7HFltaE5rqYOub5kWzWZ+gofV2koVN1j2rMW7pEfSSlCHGJ31xmuyFyfLOg==
   dependencies:
     "@types/http-proxy" "^1.17.5"
     http-proxy "^1.18.1"
@@ -3611,10 +3611,10 @@ prepend-http@^2.0.0:
   resolved "https://registry.yarnpkg.com/prepend-http/-/prepend-http-2.0.0.tgz#e92434bfa5ea8c19f41cdfd401d741a3c819d897"
   integrity sha1-6SQ0v6XqjBn0HN/UAddBo8gZ2Jc=
 
-prismjs@1.24.0:
-  version "1.24.0"
-  resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.24.0.tgz#0409c30068a6c52c89ef7f1089b3ca4de56be2ac"
-  integrity sha512-SqV5GRsNqnzCL8k5dfAjCNhUrF3pR0A9lTDSCUZeh/LIshheXJEaP0hwLz2t4XHivd2J/v2HR+gRnigzeKe3cQ==
+prismjs@1.24.1:
+  version "1.24.1"
+  resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.24.1.tgz#c4d7895c4d6500289482fa8936d9cdd192684036"
+  integrity sha512-mNPsedLuk90RVJioIky8ANZEwYm5w9LcvCXrxHlwf4fNVSn8jEipMybMkWUyyF0JhnC+C4VcOVSBuHRKs1L5Ow==
 
 process-nextick-args@~2.0.0:
   version "2.0.1"
@@ -3831,11 +3831,14 @@ rehype-raw@^5.1.0:
   dependencies:
     hast-util-raw "^6.1.0"
 
-rehype-remark@^8.0.0:
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/rehype-remark/-/rehype-remark-8.0.0.tgz#66233e5b6e096419353f4c5c0fb6808f7924dd57"
-  integrity sha512-d1EmgsqWc1v9E/URuzozU8pa4AYHIcfOMLhgzQRHeaxYyMHJKIrpBMdRhl+IbqcHLD699Ho/vO+DpSZgKsGM8Q==
+rehype-remark@^8.1.1:
+  version "8.1.1"
+  resolved "https://registry.yarnpkg.com/rehype-remark/-/rehype-remark-8.1.1.tgz#aa2e7a9b454aaf498788982e3095a0535241e7fa"
+  integrity sha512-8HCmub9Fcy208A7RGbjmVlxTMYZXGaF7jsUE2tuvNKuaGFrk9yrYuKAXoTVC7QFwBPzTvEc5AOZKpUiWRkamlw==
   dependencies:
+    "@types/hast" "^2.0.0"
+    "@types/mdast" "^3.0.0"
+    "@types/unist" "^2.0.0"
     hast-util-to-mdast "^7.0.0"
 
 rehype-stringify@^8.0.0:

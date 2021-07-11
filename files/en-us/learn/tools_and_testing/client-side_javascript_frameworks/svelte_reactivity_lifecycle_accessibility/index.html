@@ -36,7 +36,7 @@ tags:
 	</tbody>
 </table>
 
-<p>We'll focus on some accessibility issues involving focus management. To do so, we'll utilize some techniques for accessing DOM nodes and executing methods like <code><a href="/en-US/docs/Web/API/HTMLOrForeignElement/focus">focus()</a></code> and <code><a href="/en-US/docs/Web/API/HTMLInputElement/select">select()</a></code>. We will also see how to declare and clean-up event listeners on DOM elements.</p>
+<p>We'll focus on some accessibility issues involving focus management. To do so, we'll utilize some techniques for accessing DOM nodes and executing methods like <code><a href="/en-US/docs/Web/API/HTMLElement/focus">focus()</a></code> and <code><a href="/en-US/docs/Web/API/HTMLInputElement/select">select()</a></code>. We will also see how to declare and clean-up event listeners on DOM elements.</p>
 
 <p>We also need to learn a bit about component lifecycle, to understand when these DOM nodes get mounted and unmounted from the DOM and how we can access them. We will also learn about the <code>action</code> directive, which will allow us to extend the functionality of HTML elements in a reusable and declarative way.</p>
 
@@ -286,7 +286,7 @@ foo.bar = 'baz'</pre>
 
 <p>We'd also like to add some usability features, like disabling the <em>Save</em> button when required fields are empty, giving focus to certain HTML elements or auto-selecting contents when a text input receives focus.</p>
 
-<p>To implement all these features we'll need programmatic access to DOM nodes to run functions like <code><a href="/en-US/docs/Web/API/HTMLOrForeignElement/focus">focus()</a></code> and <code><a href="/en-US/docs/Web/API/HTMLInputElement/select">select()</a></code>. We will also have to use <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code> and <code><a href="/en-US/docs/Web/API/EventTarget/removeEventListener">removeEventListener()</a></code> to run specific tasks when the control receives focus.</p>
+<p>To implement all these features we'll need programmatic access to DOM nodes to run functions like <code><a href="/en-US/docs/Web/API/HTMLElement/focus">focus()</a></code> and <code><a href="/en-US/docs/Web/API/HTMLInputElement/select">select()</a></code>. We will also have to use <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code> and <code><a href="/en-US/docs/Web/API/EventTarget/removeEventListener">removeEventListener()</a></code> to run specific tasks when the control receives focus.</p>
 
 <p>The problem is that all these DOM nodes are dynamically created by Svelte at runtime. So we'll have to wait for them to be created and added to the DOM in order to use them. To do so, we'll have to learn about the <a href="https://svelte.dev/tutorial/onmount">component lifecycle</a> to understand when we can access them — more on this later.</p>
 

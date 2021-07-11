@@ -227,7 +227,7 @@ tags:
 
 <h3 id="Property_initial-letter">Property: initial-letter</h3>
 
-<p>The {{cssxref("initial-letter")}} CSS property is part of the {{SpecName("CSS3 Inline")}} specification and allows you to specify how dropped, raised, and sunken initial letters are displayed. (See {{bug(1223880)}} for more details.)</p>
+<p>The {{cssxref("initial-letter")}} CSS property is part of the <a href="https://drafts.csswg.org/css-inline/">CSS Inline Layout</a> specification and allows you to specify how dropped, raised, and sunken initial letters are displayed. (See {{bug(1223880)}} for more details.)</p>
 
 <table class="standard-table">
  <thead>
@@ -267,7 +267,7 @@ tags:
 
 <h3 id="Property_aspect-ratio">Property: aspect-ratio</h3>
 
-<p>The {{cssxref("aspect-ratio")}} CSS property is part of the {{SpecName("CSS4 Sizing")}} specification and allows you to create boxes which conform to an aspect ratio. (See {{bug(1639963)}} and {{bug(1646096)}} for more details.)</p>
+<p>The {{cssxref("aspect-ratio")}} CSS property is part of the <a href="https://drafts.csswg.org/css-sizing-4/">CSS4 Sizing</a> specification and allows you to create boxes which conform to an aspect ratio. (See {{bug(1639963)}} and {{bug(1646096)}} for more details.)</p>
 
 <table class="standard-table">
  <thead>
@@ -307,7 +307,7 @@ tags:
 
 <h3 id="Descriptor_size_adjust">Descriptor: size-adjust</h3>
 
-<p>The {{cssxref("@font-face/size-adjust")}} CSS descriptor is part of the {{SpecName("CSS5 Fonts")}} specification and defines a multiplier for glyph outlines and metrics associated with this font. This makes it easier to harmonize the designs of various fonts when rendered at the same font-size. (See {{bug(1698495)}} for more details.)</p>
+<p>The {{cssxref("@font-face/size-adjust")}} CSS descriptor is part of the <a href="https://drafts.csswg.org/css-fonts-5/">CSS5 Fonts</a> specification and defines a multiplier for glyph outlines and metrics associated with this font. This makes it easier to harmonize the designs of various fonts when rendered at the same font-size. (See {{bug(1698495)}} for more details.)</p>
 
 <table class="standard-table">
  <thead>
@@ -507,9 +507,9 @@ tags:
  </tbody>
 </table>
 
-<h3 id="Property_math-style">Property: math-style </h3>
+<h3 id="Property_math-style">Property: math-style</h3>
 
-<p>The {{cssxref("math-style")}} property  indicates whether MathML equations should render with normal or compact height. (See {{bug(1665975)}} for more details.)</p>
+<p>The {{cssxref("math-style")}} property indicates whether MathML equations should render with normal or compact height. (See {{bug(1665975)}} for more details.)</p>
 
 <table class="standard-table">
  <thead>
@@ -549,86 +549,10 @@ tags:
 
 <h2 id="JavaScript">JavaScript</h2>
 
-<h3 id="Relative_indexing_method">Relative indexing method</h3>
-
-<p>The relative indexing method <code>at()</code> has been added to the <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></code> and <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray">TypedArray</a></code> global objects. Passing a positive integer to the method returns the item or character at that position, and it also accepts negative integers, which count back from the end of the array or string. For example, <code>1</code> would return the second item or character and <code>-1</code> would return the last item or character. See <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/at">Array.prototype.at()</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/at">String.prototype.at()</a></code> and <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/at">TypedArray.prototype.at()</a></code> for more details.</p>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col" style="vertical-align: bottom;">Release channel</th>
-   <th scope="col" style="vertical-align: bottom;">Version added</th>
-   <th scope="col" style="vertical-align: bottom;">Enabled by default?</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <th scope="row">Nightly</th>
-   <td>85</td>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Developer Edition</th>
-   <td>85</td>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Beta</th>
-   <td>85</td>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Release</th>
-   <td>85</td>
-   <td>No</td>
-  </tr>
- </tbody>
-</table>
-
 
 <h2 id="APIs">APIs</h2>
 
 <h3 id="Graphics_Canvas_WebGL_and_WebGPU">Graphics: Canvas, WebGL, and WebGPU</h3>
-
-<h4 id="CanvasRenderingContext2D.createConicGradient">CanvasRenderingContext2D.createConicGradient()</h4>
-
-<p>The {{domxref("CanvasRenderingContext2D")}} interface of the {{domxref("Canvas API")}} now provides a {{domxref('CanvasRenderingContext2D.createConicGradient()','createConicGradient()')}} method. This returns a {{domxref('CanvasGradient')}} much like the existing {{domxref('CanvasRenderingContext2D.createLinearGradient()','linear')}} and {{domxref('CanvasRenderingContext2D.createRadialGradient()','radial')}} gradients, but allows a gradient to move around a point defined by coordinates. See {{bug(1627014)}} for more details.</p>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col" style="vertical-align: bottom;">Release channel</th>
-   <th scope="col" style="vertical-align: bottom;">Version added</th>
-   <th scope="col" style="vertical-align: bottom;">Enabled by default?</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <th scope="row">Nightly</th>
-   <td>86</td>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Developer Edition</th>
-   <td>86</td>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Beta</th>
-   <td>86</td>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Release</th>
-   <td>86</td>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Preference name</th>
-   <th colspan="2"><code>canvas.createConicGradient.enabled</code></th>
-  </tr>
- </tbody>
-</table>
 
 <h4 id="Interface_OffscreenCanvas">Interface: OffscreenCanvas</h4>
 
@@ -874,6 +798,46 @@ tags:
   <tr>
    <th scope="row">Preference name</th>
    <th colspan="2"><code><strong>dom.events.asyncClipboard.clipboardItem</strong></code></th>
+  </tr>
+ </tbody>
+</table>
+
+<h4 id="clipboardread">ClipboardRead</h4>
+
+<p> The <a href="/en-US/docs/Web/API/Clipboard/read">Clipboard.read()</a> method of the {{domxref('Clipboard')}} interface is also now available under the <code>dom.events.asyncClipboard.read</code> preference,  when previously it was under <code>dom.events.asyncClipboard.clipboardItem</code>. (See ({{bug(1701512)}}) for more details.) </p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col" style="vertical-align: bottom;">Release channel</th>
+   <th scope="col" style="vertical-align: bottom;">Version added</th>
+   <th scope="col" style="vertical-align: bottom;">Enabled by default?</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th scope="row">Nightly</th>
+   <td>90</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Developer Edition</th>
+   <td>90</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Beta</th>
+   <td>90</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Release</th>
+   <td>90</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Preference name</th>
+   <th colspan="2"><code>dom.events.asyncClipboard.read</code> </th>
   </tr>
  </tbody>
 </table>
@@ -1124,7 +1088,7 @@ tags:
 
 <h3 id="Visual_Viewport_API">Visual Viewport API</h3>
 
-<p>The <a href="/en-US/docs/Web/API/Visual_Viewport_API">Visual Viewport API</a> provides access to information describing the position of the {{Glossary("visual viewport")}} relative to the document as well as to the window's content area. It also supports events to monitor changes to this information. See {{bug(1550390)}} for more details. There currently is no real plan to ship this on desktop, but you can track the state of that just in case it changes in {{bug(1551302)}}.</p>
+<p>The <a href="/en-US/docs/Web/API/Visual_Viewport_API">Visual Viewport API</a> provides access to information describing the position of the {{Glossary("visual viewport")}} relative to the document as well as to the window's content area. It also supports events to monitor changes to this information. See {{bug(1550390)}} for more details. There in now a plan to ship this on desktop, you can track the state of that in {{bug(1551302)}}.</p>
 
 <table class="standard-table">
  <thead>
