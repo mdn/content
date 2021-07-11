@@ -34,7 +34,7 @@ tags:
 <ul>
  <li>The global context is the execution context created to run the main body of your code; that is, any code that exists outside of a JavaScript function.</li>
  <li>Each function is run within its own execution context. This is frequently referred to as a "local context."</li>
- <li>Using the ill-advised {{jsxref("eval()")}} function also creates a new execution context.</li>
+ <li>Using the ill-advised {{jsxref("Global_Objects/eval", "eval()")}} function also creates a new execution context.</li>
 </ul>
 
 <p>Each context is, in essence, a level of scope within your code. As one of these code segments begins execution, a new context is constructed in which to run it; that context is then destroyed when the code exits. Consider the JavaScript program below:</p>
