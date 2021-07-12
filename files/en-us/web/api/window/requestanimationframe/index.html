@@ -95,7 +95,7 @@ function step(timestamp) {
   const elapsed = timestamp - start;
 
   if (previousTimeStamp !== timestamp) {
-    // Math.min() is used here to sure the element stops at exactly 200px
+    // Math.min() is used here to make sure the element stops at exactly 200px
     const count = Math.min(0.1 * elapsed, 200);
     element.style.transform = 'translateX(' + count + 'px)';
   }
