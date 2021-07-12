@@ -87,17 +87,21 @@ browser-compat: api.Window.requestAnimationFrame
   (<code>0.1 * 2000</code>) to the right of its initial position.</p>
 
 <pre class="brush: js">const element = document.getElementById('some-element-you-want-to-animate');
-let start;
+let start, previousTimeStamp;
 
 function step(timestamp) {
   if (start === undefined)
     start = timestamp;
   const elapsed = timestamp - start;
 
-  // `Math.min()` is used here to make sure that the element stops at exactly 200px.
-  element.style.transform = 'translateX(' + Math.min(0.1 * elapsed, 200) + 'px)';
+  if (previousTimeStamp !== timestamp) {
+    // Math.min() is used here to sure the element stops at exactly 200px
+    const count = Math.min(0.1 * elapsed, 200);
+    element.style.transform = 'translateX(' + count + 'px)';
+  }
 
   if (elapsed &lt; 2000) { // Stop the animation after 2 seconds
+    previousTimeStamp = timestamp
     window.requestAnimationFrame(step);
   }
 }
