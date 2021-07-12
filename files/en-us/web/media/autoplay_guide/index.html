@@ -278,7 +278,7 @@ if (startPlayPromise !== undefined) {
  <dt><code>media.autoplay.allow-muted</code></dt>
  <dd>A Boolean preference which if <code>true</code> (the default) allows audio media which is currently muted to be automatically played. If this has been changed to <code>false</code>, media with an audio track will not be permitted to play even if muted.</dd>
  <dt><code>media.autoplay.block-webaudio</code></dt>
- <dd>A Boolean preference which indicates whether or not to apply autoplay blocking to the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a>. The default is <code>true</code>.</dd>
+ <dd>A Boolean preference which indicates whether or not to apply autoplay blocking to the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a>. The default is <code>false</code>, except on Nightly where it is <code>true</code>.</dd>
  <dt><code>media.autoplay.default</code></dt>
  <dd>An integer preference which specifies whether per-domain configuration for autoplay support by default is allowed (<code>0</code>), blocked (<code>1</code>), or prompt-on-use (<code>2</code>). The default value is <code>0</code>.</dd>
  <dt><code>media.autoplay.enabled.user-gestures-needed</code> (Nightly builds only)</dt>
