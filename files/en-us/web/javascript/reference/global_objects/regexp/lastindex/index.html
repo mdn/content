@@ -24,10 +24,13 @@ browser-compat: javascript.builtins.RegExp.lastIndex
 <p>This property is set only if the regular expression instance used the <code>g</code> flag to indicate a global search, or the <code>y</code> flag to indicate a sticky search. The following rules apply when {{jsxref("RegExp.prototype.test()", "test()")}} and {{jsxref("RegExp.prototype.exec()", "exec()")}} are called on a given input:</p>
 
 <ul>
-<li>If <code>lastIndex</code> is greater than the length of the input, exec() or test() will not find a match, and <code>lastIndex</code> will be set to 0.</li>
-<li>If <code>lastIndex</code> is equal to or less than the length of the input, exec() or test() will attempt to match the input starting from <code>lastIndex</code>.</li>
-<li>If exec() or test() find a match, then <code>lastIndex</code> will be set to the position of the end of the matched string in the input.</li>
-<li>If exec() or test() do not find a match, then <code>lastIndex</code> will be set to 0.</li>
+<li>If <code>lastIndex</code> is greater than the length of the input, <code>exec()</code> or <code>test()</code> will not find a match, and <code>lastIndex</code> will be set to 0.</li>
+<li>If <code>lastIndex</code> is equal to or less than the length of the input, <code>exec()</code> or <code>test()</code> will attempt to match the input starting from <code>lastIndex</code>.
+  <ul>
+    <li>If <code>exec()</code> or <code>test()</code> find a match, then <code>lastIndex</code> will be set to the position of the end of the matched string in the input.</li>
+    <li>If <code>exec()</code> or <code>test()</code> do not find a match, then <code>lastIndex</code> will be set to 0.</li>
+  </ul>
+</li>
 </ul>
 
 <h2 id="Examples">Examples</h2>
