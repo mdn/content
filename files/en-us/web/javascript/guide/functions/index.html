@@ -40,7 +40,7 @@ tags:
 
 <p>Primitive parameters (such as a number) are passed to functions <strong>by value</strong>; the value is passed to the function, but if the function changes the value of the parameter, <strong>this change is not reflected globally or in the calling function</strong>.</p>
 
-<p>If you pass an object (i.e. a non-primitive value, such as {{jsxref("Array")}} or a user-defined object) as a parameter and the function changes the object's properties, that change is visible outside the function, as shown in the following example:</p>
+<p>If you pass an object (i.e., a non-primitive value, such as {{jsxref("Array")}} or a user-defined object) as a parameter and the function changes the object's properties, that change is visible outside the function, as shown in the following example:</p>
 
 <pre class="brush: js">function myFunc(theObject) {
   theObject.make = 'Toyota';
@@ -135,7 +135,7 @@ function square(n) { return n * n }
 <p>The scope of a function is the function in which it is declared (or the entire program, if it is declared at the top level).</p>
 
 <div class="note">
-<p><strong>Note:</strong> This works only when defining the function using the above syntax (i.e. <code>function funcName(){}</code>). The code below will not work.</p>
+<p><strong>Note:</strong> This works only when defining the function using the above syntax (i.e., <code>function funcName(){}</code>). The code below will not work.</p>
 
 <p>This means that function hoisting only works with function <em>declarations</em>—not with function <em>expressions</em>.</p>
 
@@ -373,7 +373,7 @@ A(1); // logs 6 (1 + 2 + 3)
 <p>This can be done because:</p>
 
 <ol>
-	<li><code>B</code> forms a closure including <code>A</code> (i.e. <code>B</code> can access <code>A</code>'s arguments and variables).</li>
+	<li><code>B</code> forms a closure including <code>A</code> (i.e., <code>B</code> can access <code>A</code>'s arguments and variables).</li>
 	<li><code>C</code> forms a closure including <code>B</code>.</li>
 	<li>Because <code>B</code>'s closure includes <code>A</code>, <code>C</code>'s closure includes <code>A</code>, <code>C</code> can access <em>both</em> <code>B</code> <em>and</em> <code>A</code>'s arguments and variables. In other words, <code>C</code> <em>chains</em> the scopes of <code>B</code> and <code>A</code>, <em>in that order</em>.</li>
 </ol>
