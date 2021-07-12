@@ -204,17 +204,17 @@ customElements.define('num-counter', Counter);
 <p>The code below demonstrates the approach using the example of a class for adding <code>Scalar</code> values. The class uses the <code>in</code> operator to check that added objects have the <code>#length</code> private class field, and throws an informative exception message if a different type of object is passed.</p>
 
 <pre class="brush: js">class Scalar {
-  #length = 0;
+  #total = 0;
   constructor(value) {
-    this.#length = value;
+    this.#total = value || this.#total;
   }
   
   add(s) {
     // check the passed object defines #length
-    if (!(#length in s)) {
+    if (!(#total in s)) {
       throw new TypeError("Expected an instance of Scalar");
     }
-    this.#length += s.#length;
+    this.#total += s.#total;
   }
 }
 
