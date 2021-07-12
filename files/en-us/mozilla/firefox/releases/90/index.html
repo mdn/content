@@ -23,6 +23,7 @@ tags:
 
 <ul>
   <li>A fix to the way that form payloads are handled around newline normalization and escaping in multipart/formdata. This meets the updated specification, and matches other browser implementations. ({{bug(1686765)}}).</li>
+  <li>Firefox now sets an image's {{Glossary("intrinsic size")}} and resolution based on {{Glossary("EXIF")}} information (if present and self-consistent). This allows a server to, for example, send a low-quality placeholder image to speed up loading. It also enables a <a href="https://github.com/eeeps/exif-intrinsic-sizing-explainer">number of other use cases</a> ({{bug(1680387)}}).</li>
 </ul>
 
 <h3 id="CSS">CSS</h3>
