@@ -386,9 +386,6 @@ console.log(Object.getPrototypeOf(g).hasOwnProperty('addVertex'));
 
 <pre class="brush: js">
 function foo(){}
-foo.prototype = {
-  foo_prop: "foo val"
-};
 foo.prototype.foo_prop = "foo val";
 function bar(){}
 var proto = new foo();
