@@ -71,7 +71,7 @@ const theFuture = previousMaxSafe + 2n
 const multi = previousMaxSafe * 2n
 // ↪ 18014398509481982n
 
-const subtr = multi – 10n
+const subtr = multi - 10n
 // ↪ 18014398509481972n
 
 const mod = multi % 10n
@@ -81,7 +81,7 @@ const bigN = 2n ** 54n
 // ↪ 18014398509481984n
 
 bigN * -1n
-// ↪ –18014398509481984n
+// ↪ -18014398509481984n
 </pre>
 
 <p>The <code>/</code> operator also works as expected with whole numbers — but operations with a fractional result will be truncated when used with a BigInt value — they won’t return any fractional digits.</p>
