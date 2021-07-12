@@ -68,7 +68,7 @@ jobs:
 
           # This is so that if there's a single 'unsafe_html' flaw, it
           # completely fails the build.
-          # But all other flaws should be 'warn' so that we can include
+          # But all other flaws should be 'warn', so that we can include
           # information about the flaws when we analyze the built PR.
           BUILD_FLAW_LEVELS: "unsafe_html: error, *:warn"
 
@@ -90,7 +90,7 @@ jobs:
           # where there are interesting cookies, it's a safe choice.
           BUILD_LIVE_SAMPLES_BASE_URL: ""
 
-          # In these builds we never care for or need the ability to sign in.
+          # In these builds, we never care for or need the ability to sign in.
           # This environment variable will disable that functionality entirely.
           REACT_APP_DISABLE_AUTH: true
 
