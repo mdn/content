@@ -2,10 +2,10 @@
 title: in operator
 slug: Web/JavaScript/Reference/Operators/in
 tags:
-- JavaScript
-- Language feature
-- Operator
-- Relational Operators
+  - JavaScript
+  - Language feature
+  - Operator
+  - Relational Operators
 browser-compat: javascript.operators.in
 ---
 <div>{{jsSidebar("Operators")}}</div>
@@ -121,6 +121,30 @@ empties[2] // returns undefined
 <pre class="brush: js">'toString' in {}  // returns true
 </pre>
 
+<h3 id="Private_fields_and_methods">Private fields and methods</h3>
+
+<p>You can also use the <code>in</code> operator to check whether a particular <a href="/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields">private class field or method</a> has been defined in a class. The operator returns <code>true</code> if the method is defined, and <code>false</code> otherwise.</p>
+
+<div class="notecard note">
+  <p><strong>Note:</strong> Code will <code>throw</code> if you attempt to access a <em>private</em> class field/method that has not been defined. Using the <code>in</code> operator to check for potentially missing private fields is more compact than using <code>try/catch</code>.</p>
+</div>
+
+<p>The code fragment below demonstrates a static function that checks whether a specified class has particular private methods and fields.</p>
+
+<pre class="brush: js">
+  class ClassWithPrivateFeatures {
+    #a;
+    #b = null;
+    #c() {}
+    get #d() {}
+    static f(o) {
+      return #a in o && #b in o && #c in o && #d in o;
+    }
+  }
+  ClassWithPrivateFeatures.f(new ClassWithPrivateFeatures()) // returns true
+  ClassWithPrivateFeatures.f({}) // returns false  
+</pre>
+
 <h2 id="Specifications">Specifications</h2>
 
 {{Specifications}}
@@ -140,6 +164,6 @@ empties[2] // returns undefined
   </li>
   <li>{{jsxref("Object.prototype.hasOwnProperty()")}}</li>
   <li>{{jsxref("Reflect.has()")}}</li>
-  <li><a href="/en-US/docs/Enumerability_and_ownership_of_properties">Enumerability and
+  <li><a href="/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties">Enumerability and
       ownership of properties</a></li>
 </ul>
