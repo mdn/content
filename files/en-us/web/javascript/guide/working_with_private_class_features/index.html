@@ -196,6 +196,34 @@ customElements.define('num-counter', Counter);
 
 <p>In this case, pretty much every field and method is private to the class. Thus, it presents an interface to the rest of the code that's essentially just like a built-in HTML element. No other part of the JavaScript has the power to affect any of its internals.</p>
 
+
+<h2>Checking if a private field/method exists</h2>
+
+<p>Javascript code will <code>throw</code> if you attempt to access a private method or field that does not exist (this differs from a normal/public method, which will return <code>undefined</code>). If you need to write code to test whether a private feature has been defined you might use <code>try</code>/<code>catch</code>, but it is more compact to use the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/in"><code>in</code></a> operator. This returns <code>true</code> or <code>false</code> depending on whether or not the property is defined.</p>
+
+<p>The code below demonstrates the approach using the example of a class for adding <code>Scalar</code> values. The class uses <code>in</code> operator to check that added objects have the <code>#length</code> private class field, and throws an informative exception message if a different type of object is passed.</p>
+
+<pre class="brush: js">class Scalar {
+  #length = 0;
+  constructor(value) {
+    this.#length = value;
+  }
+  
+  add(s) {
+    // check the passed object defines #length
+    if (!(#length in s)) {
+      throw new TypeError("Expected an instance of Scalar");
+    }
+    this.#length += s.#length;
+  }
+}
+
+let scalar1 = new Scalar(1);
+scalar1.add(scalar1)
+scalar1.add({}) // throws informative exception
+</pre>
+
+
 <h2 id="See_also">See also</h2>
 
 <ul>
