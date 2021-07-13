@@ -15,7 +15,7 @@ browser-compat: javascript.builtins.Intl.DateTimeFormat.formatRangeToParts
 <div>{{JSRef}}</div>
 
 <p>The <strong><code>Intl.DateTimeFormat.prototype.formatRangeToParts()</code></strong>
-	method allows locale-specific tokens representing each part of the formatted date
+	method returns an array of locale-specific tokens representing each part of the formatted date
 	range produced by {{jsxref("Intl.DateTimeFormat")}} formatters.</p>
 
 <div>
@@ -51,16 +51,17 @@ console.log(fmt.formatRange(date1, date2));
 fmt.formatRangeToParts(date1, date2);
 // return value:
 // [
-//   { type: 'hour',      value: '10',  source: "startRange" },
+//   { type: 'hour',      value: '9',  source: "startRange" },
 //   { type: 'literal',   value: ':',   source: "startRange" },
 //   { type: 'minute',    value: '00',  source: "startRange" },
 //   { type: 'literal',   value: ' – ', source: "shared"     },
-//   { type: 'hour',      value: '11',  source: "endRange"   },
+//   { type: 'hour',      value: '10',  source: "endRange"   },
 //   { type: 'literal',   value: ':',   source: "endRange"   },
 //   { type: 'minute',    value: '00',  source: "endRange"   },
 //   { type: 'literal',   value: ' ',   source: "shared"     },
-//   { type: 'dayPeriod', value: 'AM',  source: "shared"     }
-// ]</pre>
+//   { type: 'dayPeriod', value: 'PM',  source: "shared"     }
+// ]
+</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
