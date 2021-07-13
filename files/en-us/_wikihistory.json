@@ -47679,21 +47679,6 @@
       "AFBarstow"
     ]
   },
-  "Web/API/FullscreenOptions": {
-    "modified": "2020-10-15T22:10:43.216Z",
-    "contributors": [
-      "ExE-Boss",
-      "Sheppy"
-    ]
-  },
-  "Web/API/FullscreenOptions/navigationUI": {
-    "modified": "2020-10-15T22:10:43.097Z",
-    "contributors": [
-      "neiesc",
-      "ExE-Boss",
-      "Sheppy"
-    ]
-  },
   "Web/API/Fullscreen_API": {
     "modified": "2020-12-02T10:59:03.389Z",
     "contributors": [
