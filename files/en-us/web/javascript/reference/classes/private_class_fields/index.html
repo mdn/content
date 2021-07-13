@@ -66,6 +66,10 @@ const instance = new ClassWithPrivateField()
 instance.#privateField === 42;   // Syntax error
 </pre>
 
+<div class="notecard note">
+  <p><strong>Note:</strong> Use the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/in"><code>in</code></a> operator to check for potentially missing private fields (or private methods). This will return <code>true</code> if the private field or method exists, and <code>false</code> otherwise.</p>
+</div>
+
 <p>Like public fields, private fields are added at construction time in a base class, or at the point where <code>super()</code> is invoked in a subclass.</p>
 
 <pre class="brush: js">class ClassWithPrivateField {

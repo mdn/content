@@ -56,67 +56,72 @@ eval(code)        // throws a SyntaxError in old engines
   used by the Babel compiler, and the more commonly used <a
     href="https://en.wikipedia.org/wiki/YAML">YAML</a>.</p>
 
-<h3 id="Full_JSON_syntax">Full JSON syntax</h3>
+<h3 id="full_json_grammar">Full JSON grammar</h3>
 
-<p>The full JSON syntax is as follows:</p>
+<p>Valid JSON syntax is formally defined by the following grammar, expressed in <a href="https://en.wikipedia.org/wiki/Augmented_Backus%E2%80%93Naur_form">ABNF</a>, and copied from <a href="https://datatracker.ietf.org/doc/html/rfc8259">IETF JSON standard (RFC)</a>:</p>
 
-<pre class="brush: js"><var>JSON</var> = <strong>null</strong>
-    <em>or</em> <strong>true</strong> <em>or</em> <strong>false</strong>
-    <em>or</em> <var>JSONNumber</var>
-    <em>or</em> <var>JSONString</var>
-    <em>or</em> <var>JSONObject</var>
-    <em>or</em> <var>JSONArray</var>
+<pre>
+JSON-text = object / array
+begin-array     = ws %x5B ws  ; [ left square bracket
+begin-object    = ws %x7B ws  ; { left curly bracket
+end-array       = ws %x5D ws  ; ] right square bracket
+end-object      = ws %x7D ws  ; } right curly bracket
+name-separator  = ws %x3A ws  ; : colon
+value-separator = ws %x2C ws  ; , comma
+ws = *(
+     %x20 /              ; Space
+     %x09 /              ; Horizontal tab
+     %x0A /              ; Line feed or New line
+     %x0D                ; Carriage return
+     )
+value = false / null / true / object / array / number / string
+false = %x66.61.6c.73.65   ; false
+null  = %x6e.75.6c.6c      ; null
+true  = %x74.72.75.65      ; true
+object = begin-object [ member *( value-separator member ) ]
+         end-object
+member = string name-separator value
+array = begin-array [ value *( value-separator value ) ] end-array
+number = [ minus ] int [ frac ] [ exp ]
+decimal-point = %x2E       ; .
+digit1-9 = %x31-39         ; 1-9
+e = %x65 / %x45            ; e E
+exp = e [ minus / plus ] 1*DIGIT
+frac = decimal-point 1*DIGIT
+int = zero / ( digit1-9 *DIGIT )
+minus = %x2D               ; -
+plus = %x2B                ; +
+zero = %x30                ; 0
+string = quotation-mark *char quotation-mark
+char = unescaped /
+    escape (
+        %x22 /          ; "    quotation mark  U+0022
+        %x5C /          ; \    reverse solidus U+005C
+        %x2F /          ; /    solidus         U+002F
+        %x62 /          ; b    backspace       U+0008
+        %x66 /          ; f    form feed       U+000C
+        %x6E /          ; n    line feed       U+000A
+        %x72 /          ; r    carriage return U+000D
+        %x74 /          ; t    tab             U+0009
+        %x75 4HEXDIG )  ; uXXXX                U+XXXX
+escape = %x5C              ; \
+quotation-mark = %x22      ; "
+unescaped = %x20-21 / %x23-5B / %x5D-10FFFF
 
-<var>JSONNumber</var> = <strong>-</strong> <var>PositiveNumber</var>
-          <em>or</em> <var>PositiveNumber</var>
-<var>PositiveNumber</var> = DecimalNumber
-              <em>or</em> <var>DecimalNumber</var> <strong>.</strong> <var>Digits</var>
-              <em>or</em> <var>DecimalNumber</var> <strong>.</strong> <var>Digits</var> <var>ExponentPart</var>
-              <em>or</em> <var>DecimalNumber</var> <var>ExponentPart</var>
-<var>DecimalNumber</var> = <strong>0</strong>
-             <em>or</em> <var>OneToNine</var> <var>Digits</var>
-<var>ExponentPart</var> = <strong>e</strong> <var>Exponent</var>
-            <em>or</em> <strong>E</strong> <var>Exponent</var>
-<var>Exponent</var> = <var>Digits</var>
-        <em>or</em> <strong>+</strong> <var>Digits</var>
-        <em>or</em> <strong>-</strong> <var>Digits</var>
-<var>Digits</var> = <var>Digit</var>
-      <em>or</em> <var>Digits</var> <var>Digit</var>
-<var>Digit</var> = <strong>0</strong> through <strong>9</strong>
-<var>OneToNine</var> = <strong>1</strong> through <strong>9</strong>
-
-<var>JSONString</var> = <strong>""</strong>
-          <em>or</em> <strong>"</strong> <var>StringCharacters</var> <strong>"</strong>
-<var>StringCharacters</var> = <var>StringCharacter</var>
-                <em>or</em> <var>StringCharacters</var> <var>StringCharacter</var>
-<var>StringCharacter</var> = any character
-                  <em>except</em> <strong>"</strong> <em>or</em> <strong>\</strong> <em>or</em> U+0000 through U+001F
-               <em>or</em> <var>EscapeSequence</var>
-<var>EscapeSequence</var> = <strong>\"</strong> <em>or</em> <strong>\/</strong> <em>or</em> <strong>\\</strong> <em>or</em> <strong>\b</strong> <em>or</em> <strong>\f</strong> <em>or</em> <strong>\n</strong> <em>or</em> <strong>\r</strong> <em>or</em> <strong>\t</strong>
-              <em>or</em> <strong>\u</strong> <var>HexDigit</var> <var>HexDigit</var> <var>HexDigit</var> <var>HexDigit</var>
-<var>HexDigit</var> = <strong>0</strong> through <strong>9</strong>
-        <em>or</em> <strong>A</strong> through <strong>F</strong>
-        <em>or</em> <strong>a</strong> through <strong>f</strong>
-
-<var>JSONObject</var> = <strong>{</strong> <strong>}</strong>
-          <em>or</em> <strong>{</strong> <var>Members</var> <strong>}</strong>
-<var>Members</var> = <var>JSONString</var> <strong>:</strong> <var>JSON</var>
-       <em>or</em> <var>Members</var> <strong>,</strong> <var>JSONString</var> <strong>:</strong> <var>JSON</var>
-
-<var>JSONArray</var> = <strong>[</strong> <strong>]</strong>
-         <em>or</em> <strong>[</strong> <var>ArrayElements</var> <strong>]</strong>
-<var>ArrayElements</var> = <var>JSON</var>
-             <em>or</em> <var>ArrayElements</var> <strong>,</strong> <var>JSON</var>
+HEXDIG = DIGIT / %x41-46 / %x61-66   ; 0-9, A-F, or a-f
+       ; HEXDIG equivalent to HEXDIG rule in [RFC5234]
+DIGIT = %x30-39            ; 0-9
+      ; DIGIT equivalent to DIGIT rule in [RFC5234]
 </pre>
 
 <p>Insignificant {{glossary("whitespace")}} may be present anywhere except within a
   <code><var>JSONNumber</var></code> (numbers must contain no whitespace) or
   <code><var>JSONString</var></code> (where it is interpreted as the corresponding
   character in the string, or would cause an error). The tab character (<a
-    href="http://unicode-table.com/en/0009/">U+0009</a>), carriage return (<a
-    href="http://unicode-table.com/en/000D/">U+000D</a>), line feed (<a
-    href="http://unicode-table.com/en/000A/">U+000A</a>), and space (<a
-    href="http://unicode-table.com/en/0020/">U+0020</a>) characters are the only valid
+    href="https://unicode-table.com/en/0009/">U+0009</a>), carriage return (<a
+    href="https://unicode-table.com/en/000D/">U+000D</a>), line feed (<a
+    href="https://unicode-table.com/en/000A/">U+000A</a>), and space (<a
+    href="https://unicode-table.com/en/0020/">U+0020</a>) characters are the only valid
   whitespace characters.</p>
 
 <h2 id="Static_methods">Static methods</h2>
@@ -172,9 +177,9 @@ eval(code)        // throws a SyntaxError in old engines
 
 <ul>
   <li>{{jsxref("Date.prototype.toJSON()")}}</li>
-  <li><a href="http://www.jsondiff.com/">JSON Diff</a> checker</li>
-  <li><a href="http://jsonbeautifier.org/">JSON Beautifier/editor</a></li>
-  <li><a href="http://jsonparser.org/">JSON Parser</a></li>
+  <li><a href="https://json-diff.com/">JSON Diff</a> checker</li>
+  <li><a href="https://jsonbeautifier.org/">JSON Beautifier/editor</a></li>
+  <li><a href="https://jsonparser.org/">JSON Parser</a></li>
   <li><a href="https://tools.learningcontainer.com/json-validator/">JSON Validator</a>
   </li>
 </ul>
