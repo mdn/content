@@ -167,7 +167,7 @@ browser-compat: api.Element.requestFullscreen
 
 <pre class="brush: js">let elem = document.documentElement;
 
-elem.requestFullscreen({ navigationUI: "show" }).then({}).catch(err =&gt; {
+elem.requestFullscreen({ navigationUI: "show" }).then(() => {}).catch(err =&gt; {
   alert(`An error occurred while trying to switch into full-screen mode: ${err.message} (${err.name})`);
 });
 </pre>
