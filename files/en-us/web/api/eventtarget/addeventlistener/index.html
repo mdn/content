@@ -100,13 +100,6 @@ target.addEventListener(type, listener, useCapture, wantsUntrusted); // wantsUnt
         rather than the capturing and bubbling phases.
         Event listeners in the “capturing” phase are called before event listeners in any non-capturing phases.</p>
     </div>
-
-    <div class="notecard note">
-      <h4>Note</h4>
-      <p><code><var>useCapture</var></code> has not
-      always been optional. Ideally, you should include it for the widest possible browser
-      compatibility.</p>
-    </div>
   </dd>
   <dt><code><var>wantsUntrusted</var></code> {{optional_inline}} {{Non-standard_inline}}</dt>
   <dd>A Firefox (Gecko)-specific parameter. If <code>true</code>, the listener receives
