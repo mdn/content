@@ -17,7 +17,7 @@ browser-compat: api.WorkerNavigator.serial
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <var>serialObj</var> = self.navigator.serial;</pre>
+<pre class="syntaxbox">var <var>serialObj</var> = navigator.serial;</pre>
 
 <h3>Value</h3>
 <p>A {{domxref("Serial")}} object.</p>
@@ -26,7 +26,7 @@ browser-compat: api.WorkerNavigator.serial
 
 <p>The following example uses the <code>getPorts()</code> method to initialize a list of available ports.</p>
 
-<pre class="brush: js notranslate">self.navigator.serial.getPorts()
+<pre class="brush: js notranslate">navigator.serial.getPorts()
 .then((ports) => {
   // Initialize the list of available ports.
 });</pre>
