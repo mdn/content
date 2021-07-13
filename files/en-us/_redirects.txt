@@ -7497,6 +7497,8 @@
 /en-US/docs/Web/API/FocusEvent.FocusEvent	/en-US/docs/Web/API/FocusEvent/FocusEvent
 /en-US/docs/Web/API/FocusEvent.relatedTarget	/en-US/docs/Web/API/FocusEvent/relatedTarget
 /en-US/docs/Web/API/FontFace/FontFace.style	/en-US/docs/Web/API/FontFace/style
+/en-US/docs/Web/API/FullscreenOptions	/en-US/docs/Web/API/Element/requestFullScreen
+/en-US/docs/Web/API/FullscreenOptions/navigationUI	/en-US/docs/Web/API/Element/requestFullScreen
 /en-US/docs/Web/API/GLbitfield	/en-US/docs/Web/API/WebGL_API/Types
 /en-US/docs/Web/API/GLboolean	/en-US/docs/Web/API/WebGL_API/Types
 /en-US/docs/Web/API/GLbyte	/en-US/docs/Web/API/WebGL_API/Types
