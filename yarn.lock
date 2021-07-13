@@ -39,17 +39,17 @@
   resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-3.3.10.tgz#10299e35ee07b2a78e58731939a5f35d926db622"
   integrity sha512-3pUDpaS17YjM0yCUyZCzNGVd+p9ig4UUTw0RI5EDpiLlwwDiiSmU+31fhEqv7gHAxkW7X1TUP8z7YXsWY2SJsg==
 
-"@mdn/yari@0.4.591":
-  version "0.4.591"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.591.tgz#d710077ded4fad3f0462fb1ca093a237e166b088"
-  integrity sha512-u5KpyNSIPcvASQYhgfHnbEuURtPkbpyZPW32VtHe2BLnDGkA+HVULPy5gYl2XfbJ5BYzHSm8pv+Aw/9wGFQfHg==
+"@mdn/yari@0.4.594":
+  version "0.4.594"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.594.tgz#a09bed5d51db8f896ed6d35a0a2fd3ff40181478"
+  integrity sha512-sU+VOoVRuPs0SI72U8t683vNn8Y5bjx5kTCvqOT7beOILTste1t9sH1mfctWtA+Eb08KVa/fM5HpW77UzVmPbQ==
   dependencies:
     "@caporal/core" "2.0.2"
     "@fast-csv/parse" "4.3.6"
     "@mdn/browser-compat-data" "3.3.10"
-    "@stripe/stripe-js" "^1.15.1"
+    "@stripe/stripe-js" "^1.16.0"
     accept-language-parser "1.5.0"
-    browser-specs "^2.1.0"
+    browser-specs "^2.2.0"
     chalk "4.1.1"
     cheerio "1.0.0-rc.6"
     cli-progress "^3.9.0"
@@ -63,7 +63,7 @@
     express "4.17.1"
     fast-xml-parser "3.19.0"
     fdir "5.1.0"
-    file-type "16.5.0"
+    file-type "16.5.1"
     front-matter "^4.0.2"
     fs-extra "10.0.0"
     glob "^7.1.7"
@@ -141,10 +141,10 @@
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-4.0.0.tgz#2ff674e9611b45b528896d820d3d7a812de2f0e4"
   integrity sha512-FyD2meJpDPjyNQejSjvnhpgI/azsQkA4lGbuu5BQZfjvJ9cbRZXzeWL2HceCekW4lixO9JPesIIQkSoLjeJHNQ==
 
-"@stripe/stripe-js@^1.15.1":
-  version "1.15.1"
-  resolved "https://registry.yarnpkg.com/@stripe/stripe-js/-/stripe-js-1.15.1.tgz#a3809ecc5aa8a03bd261a2f970d11cfdcbf11c4f"
-  integrity sha512-yJiDGutlwu25iajCy51VRJeoH3UMs+s5qVIDGfmPUuFpZ+F6AJ9g9EFrsBNvHxAGBahQFMLlBdzlCVydhGp6tg==
+"@stripe/stripe-js@^1.16.0":
+  version "1.16.0"
+  resolved "https://registry.yarnpkg.com/@stripe/stripe-js/-/stripe-js-1.16.0.tgz#73bce24fb7f47d719caa6b151e58e49b4167d463"
+  integrity sha512-ZSHbiwTrISoaTbpercmYGuY7QTg7HxfFyNgbJBaYbwHWbzMhpEdGTsmMpaBXIU6iiqwEEDaIyD8O6yJ+H5DWCg==
 
 "@szmarczak/http-timer@^4.0.5":
   version "4.0.5"
@@ -558,10 +558,10 @@ braces@^3.0.1:
   dependencies:
     fill-range "^7.0.1"
 
-browser-specs@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/browser-specs/-/browser-specs-2.1.0.tgz#9a00ed323f54cb0061e80aa00e06fa300360bc24"
-  integrity sha512-gw9xmHjNy0bYLp1SSubeN67vBmDXrb0+8Gk978zUdraxQ0Sw8dWsqhY/fHxOnMPqn8YfYpiVkgB05eUMPKgoJg==
+browser-specs@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/browser-specs/-/browser-specs-2.2.0.tgz#87725850446718ed2a6e440b756e32de032bce63"
+  integrity sha512-aCJWsEq/hpTYlwDhhxEUN/E9Jcfnt24PD0LmYrKy0Ml2gOV/f37sh6sbaU29Y3l4EfPwT1GhDnPP+/pa1n7leQ==
 
 buffer-alloc-unsafe@^1.1.0:
   version "1.1.0"
@@ -1662,10 +1662,10 @@ figures@^3.0.0:
   dependencies:
     escape-string-regexp "^1.0.5"
 
-file-type@16.5.0:
-  version "16.5.0"
-  resolved "https://registry.yarnpkg.com/file-type/-/file-type-16.5.0.tgz#16a2626f3b33bac612f6e81e52216f3a7c8e12a2"
-  integrity sha512-OxgWA9tbL8N/WP00GD1z8O0MiwQKFyWRs1q+3FhjdvcGgKqwxcejyGWso3n4/IMU6DdwV+ARZ4A7TTnPkDcSiw==
+file-type@16.5.1:
+  version "16.5.1"
+  resolved "https://registry.yarnpkg.com/file-type/-/file-type-16.5.1.tgz#dd697dc5c3a2f4db63af746f38a6322e5e7bc6a5"
+  integrity sha512-Pi1G43smrCy82Q3be3sfKaeS5uHdfj905dP88YqhroG6TYbVY2ljTdDXeXqa6Cn5nOk6znOjWM2uZptA8vH/qQ==
   dependencies:
     readable-web-to-node-stream "^3.0.0"
     strtok3 "^6.0.3"
