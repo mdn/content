@@ -518,7 +518,7 @@ video.onclick = function() {
 
 <h4 id="Bubbling_and_capturing_explained">Bubbling and capturing explained</h4>
 
-<p>When an event is fired on an element that has parent elements (in this case, the {{htmlelement("video")}} has the {{htmlelement("div")}} as a parent), modern browsers run two different phases — the <strong>capturing</strong> phase and the <strong>bubbling</strong> phase.</p>
+<p>When an event is fired on an element that has parent elements (in this case, the {{htmlelement("video")}} has the {{htmlelement("div")}} as a parent), modern browsers run three different phases — the <strong>capturing</strong> phase, the <strong>target</strong> phase, and the <strong>bubbling</strong> phase.</p>
 
 <p>In the <strong>capturing</strong> phase:</p>
 
@@ -527,7 +527,13 @@ video.onclick = function() {
  <li>Then it moves on to the next element inside <code>&lt;html&gt;</code> and does the same thing, then the next one, and so on until it reaches the element that was actually selected.</li>
 </ul>
 
-<p>In the <strong>bubbling</strong> phase, the exact opposite occurs:</p>
+<p>In the <strong>target</strong> phase:</p>
+<ul>
+ <li>The browser calls any event listeners registered for this phase (which is the point at which the event has arrived at {{domxref("EventTarget", "the event's target", "", 1)}}).</li>
+ <li>Then, if {{domxref("Event.bubbles")}} is <code>true</code>, it propagates the event to the next immediate ancestor element, then the next one, and so on until it reaches the <code>&lt;html&gt;</code> element. Otherwise, if {{domxref("Event.bubbles")}} is <code>false</code>, it doesn’t propagate the event to any ancestors of the target.</li>
+</ul>
+
+<p>In the <strong>bubbling</strong> phase, the exact opposite of the <strong>capturing</strong> phase occurs:</p>
 
 <ul>
  <li>The browser checks to see if the element selected has an <code>onclick</code> event handler registered on it for the bubbling phase, and runs it if so.</li>
