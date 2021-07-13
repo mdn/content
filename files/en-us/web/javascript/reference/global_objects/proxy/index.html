@@ -54,7 +54,7 @@ const handler2 = {
 
 const proxy2 = new Proxy(target, handler2);</pre>
 
-<p>Here we've provided an implementation of the {{jsxref("Global_Objects/Proxy/handler/get", "get()")}} handler, which intercepts attempts to access properties in the target.</p>
+<p>Here we've provided an implementation of the {{jsxref("Global_Objects/Proxy/Proxy/get", "get()")}} handler, which intercepts attempts to access properties in the target.</p>
 
 <p>Handler functions are sometimes called <em>traps</em>, presumably because they trap calls to the target object. The very simple trap in <code>handler2</code> above redefines all property accessors:</p>
 
@@ -100,7 +100,7 @@ console.log(proxy3.message2); // world</pre>
 
 <h3 id="Basic_example">Basic example</h3>
 
-<p>In this simple example, the number <code>37</code> gets returned as the default value when the property name is not in the object. It is using the {{jsxref("Global_Objects/Proxy/handler/get", "get()")}} handler.</p>
+<p>In this simple example, the number <code>37</code> gets returned as the default value when the property name is not in the object. It is using the {{jsxref("Global_Objects/Proxy/Proxy/get", "get()")}} handler.</p>
 
 <pre class="brush: js">const handler = {
   get: function(obj, prop) {
@@ -140,7 +140,7 @@ console.log(target.a);
 
 <h3 id="Validation">Validation</h3>
 
-<p>With a <code>Proxy</code>, you can easily validate the passed value for an object. This example uses the {{jsxref("Global_Objects/Proxy/handler/set", "set()")}} handler.</p>
+<p>With a <code>Proxy</code>, you can easily validate the passed value for an object. This example uses the {{jsxref("Global_Objects/Proxy/Proxy/set", "set()")}} handler.</p>
 
 <pre class="brush: js">let validator = {
   set: function(obj, prop, value) {
@@ -171,7 +171,7 @@ person.age = 300;        // Throws an exception
 
 <h3 id="Extending_constructor">Extending constructor</h3>
 
-<p>A function proxy could easily extend a constructor with a new constructor. This example uses the {{jsxref("Global_Objects/Proxy/handler/construct", "construct()")}} and {{jsxref("Global_Objects/Proxy/handler/apply", "apply()")}} handlers.</p>
+<p>A function proxy could easily extend a constructor with a new constructor. This example uses the {{jsxref("Global_Objects/Proxy/Proxy/construct", "construct()")}} and {{jsxref("Global_Objects/Proxy/Proxy/apply", "apply()")}} handlers.</p>
 
 <pre class="brush: js">function extend(sup, base) {
   var descriptor = Object.getOwnPropertyDescriptor(
@@ -213,7 +213,7 @@ console.log(Peter.age);     // 13</pre>
 
 <h3 id="Manipulating_DOM_nodes">Manipulating DOM nodes</h3>
 
-<p>Sometimes you want to toggle the attribute or class name of two different elements. Here's how using the {{jsxref("Global_Objects/Proxy/handler/set", "set()")}} handler.</p>
+<p>Sometimes you want to toggle the attribute or class name of two different elements. Here's how using the {{jsxref("Global_Objects/Proxy/Proxy/set", "set()")}} handler.</p>
 
 <pre class="brush: js">let view = new Proxy({
   selected: null
@@ -369,11 +369,11 @@ console.log(products.number);      // 3
 
 <h3 id="A_complete_traps_list_example">A complete <code>traps</code> list example</h3>
 
-<p>Now in order to create a complete sample <code>traps</code> list, for didactic purposes, we will try to proxify a <em>non-native</em> object that is particularly suited to this type of operation: the <code>docCookies</code> global object created by <a href="/en-US/docs/Web/API/Document/cookie/Simple_document.cookie_framework">the "little framework" published on the <code>document.cookie</code> page</a>.</p>
+<p>Now in order to create a complete sample <code>traps</code> list, for didactic purposes, we will try to proxify a <em>non-native</em> object that is particularly suited to this type of operation: the <code>docCookies</code> global object created by <a href="https://reference.codeproject.com/Book/dom/document/cookie/simple_document.cookie_framework">a simple cookie framework</a>.</p>
 
 <pre class="brush: js">/*
   var docCookies = ... get the "docCookies" object here:
-  https://developer.mozilla.org/en-US/docs/DOM/document.cookie#A_little_framework.3A_a_complete_cookies_reader.2Fwriter_with_full_unicode_support
+  https://reference.codeproject.com/Book/dom/document/cookie/simple_document.cookie_framework
 */
 
 var docCookies = new Proxy(docCookies, {
@@ -431,9 +431,6 @@ console.log(docCookies.my_cookie1);</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="https://www.youtube.com/watch?v=sClk6aB_CPk">"Proxies are awesome" Brendan Eich presentation at JSConf</a> (<a href="http://www.slideshare.net/BrendanEich/metaprog-5303821">slides</a>)</li>
- <li><a href="http://wiki.ecmascript.org/doku.php?id=harmony:proxies">ECMAScript Harmony Proxy proposal page</a> and <a href="http://wiki.ecmascript.org/doku.php?id=harmony:proxies_semantics">ECMAScript Harmony proxy semantics page</a></li>
- <li><a href="http://web.archive.org/web/20171007221059/http://soft.vub.ac.be/~tvcutsem/proxies/">Tutorial on proxies</a></li>
- <li><a href="/en-US/docs/JavaScript/Old_Proxy_API">SpiderMonkey specific Old Proxy API</a></li>
- <li>{{jsxref("Object.watch()")}} is a non-standard feature, but has been supported in Gecko for a long time.</li>
+ <li><a href="https://www.youtube.com/watch?v=sClk6aB_CPk">"Proxies are awesome" Brendan Eich presentation at JSConf</a> (<a href="https://www.slideshare.net/BrendanEich/metaprog-5303821">slides</a>)</li>
+ <li><a href="https://web.archive.org/web/20171007221059/https://soft.vub.ac.be/~tvcutsem/proxies/">Tutorial on proxies</a></li>
 </ul>
