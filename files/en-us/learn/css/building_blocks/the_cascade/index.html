@@ -1,0 +1,338 @@
+---
+title: The Cascade
+slug: Learn/CSS/Building_blocks/The_Cascade
+tags:
+  - Beginner
+  - CSS
+  - Cascade
+  - Learn
+  - origin
+  - important
+  - context
+  - specificity
+  - order of appearance
+---
+<div>{{LearnSidebar}}{{NextMenu("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks")}}</div>
+
+<p>CSS stands for Cascading Style Sheets — that first word cascading is essential to understand. The cascade is the mechanism that controls which CSS is applied to the document and how conflicting code is handled. This lesson aims to develop your knowledge of the concepts behind it and how they interact.</p>
+
+<p>This section can feel less immediately relevant and a little more academic than some other parts of the course. Still, we encourage you to work through it and check that you understand the concepts before moving on. Understanding these things will save you much pain later on! </p>
+
+<table class="learn-box standard-table">
+ <tbody>
+  <tr>
+   <th scope="row">Prerequisites:</th>
+   <td>Basic computer literacy, <a href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software">basic software installed</a>, basic knowledge of <a href="/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files">working with files</a>, HTML basics (study <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a>), and an idea of how CSS works (study <a href="/en-US/docs/Learn/CSS/First_steps">CSS first steps</a>.)</td>
+  </tr>
+  <tr>
+   <th scope="row">Objective:</th>
+   <td>To learn about the cascade and specificity, and how inheritance works in CSS.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Conflicting_rules">Conflicting rules</h2>
+
+<p>At some point, you will encounter CSS you thought should apply but is not working; most of the time, it will be the result of conflicting declarations. So, what should happen if you have one rule that sets the color of your text to red and another one to blue? Well, the cascade is what CSS uses to answer this type of question.</p>
+
+<p>This mechanism can be frustrating at first: the rules that apply might not be the ones you expected. But, once you understand the concepts behind it and how they behave, you will be able to leverage them into writing less but more resilient code. If this seems tricky, don’t worry — as you get more practice writing CSS, it will soon become obvious to you.</p>
+
+<p>We will start by going through the four concepts that compose the cascade before seeing how they interact.</p>
+
+<h3 id="Order_of_appearance">Order of appearance</h3>
+
+<p>When writing CSS, you should always be aware of its position in the document. In case of a conflict, the order of your rules matters: the last one in the document is the one that will be used.</p>
+
+<p>Here we are talking about the position within the HTML document, so you need to consider all the CSS of the document: inline, internal, and external. External style sheets are treated as if they were replacing their <code>link</code> tag. Likewise, imported style sheets replace their <code>@import</code> rule.</p>
+
+<p>In the example below, we have two rules that could apply to the <code>h1</code>. It ends up being colored blue since it’s the last one in the order of appearance.</p>
+
+<p>{{EmbedGHLiveSample("css-examples/learn/cascade/cascade-simple.html", '100%', 400)}}</p>
+
+<p>This concept can look deceptively straightforward. As your project grows, it will be harder and harder to keep everything organized in the correct order. Thankfully, you will soon learn how to leverage other parts of the cascade and different methodologies to make your life easier.</p>
+
+<h3 id="Specificity">Specificity</h3>
+
+<p>Another thing you should also always be mindful of is the type and number of selectors you are using. The more specific you are, the more weight your rule will have when conflicting with another one.</p>
+
+<p>Again, in this example, we have two declarations that could apply to the <code>h1</code>. Yet, this time it is colored red even though <code>color: blue;</code> is still the last declaration. The reason is that the first rule uses a class selector, which has a higher specificity than the type selector used by the second rule. Because of that difference in specificity, the order of appearance is not taken into consideration.</p>
+
+<p>{{EmbedGHLiveSample("css-examples/learn/cascade/specificity-simple.html", '100%', 400)}}</p>
+
+<p>To find out the specificity of a rule, you need to divide its selectors into three categories, from most specific to least specific:</p>
+<ul>
+  <li>Category <strong>A</strong>: ID selectors (e.g., <code>#heading</code>)</li>
+  <li>Category <strong>B</strong>: Class selectors (e.g., <code>.btn</code>), attributes selectors (e.g., <code>[href*="en-US"]</code>), and pseudo-classes (e.g., <code>:hover</code>)</li>
+  <li>Category <strong>C</strong>: Type selectors (e.g., <code>section</code>) and pseudo-elements (e.g., <code>::selection</code>)</li>
+</ul>
+
+<p>The pseudo-classes <code>:is()</code>, <code>:not()</code> and <code>:has()</code> are replaced by the most specific selector in their argument list. While <code>:nth-child()</code> and <code>:nth-last-child()</code> are counted as both a pseudo-class and their most specific selector.</p>
+
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>The universal selector (<code>*</code>), combinators (<code>+</code>, <code>></code>, <code>~</code>, <code>' '</code>), and the <code>:where</code> pseudo-class have no effect on specificity.</p>
+</div>
+
+<div class="notecard warning">
+  <h4>Warning</h4>
+  <p>Declarations inside an element's <a href="/en-US/docs/Web/HTML/Global_attributes#attr-style"><code>style</code></a> attribute are considered to have a specificity higher than all selectors.</p>
+</div>
+
+<p>Let's calculate the specificity for the following selector:</p>
+<pre>#article a[href*="en-US"] > .icon</pre>
+<p>In category A, we have 1 id selector <code>#article</code>. In category B, we have 1 attribute selector <code>[href*="en-US"]</code> and 1 class selector <code>.icon</code>. Finally, in category C, we have 1 type selector <code>a</code>. Giving us a specificity of 1,2,1.</p>
+
+<p>The following table shows a few isolated examples to get you in the mood. Try going through these, and making sure you understand why they have the specificity that we have given them. We've not covered selectors in detail yet, but you can find details of each selector on the MDN <a href="/en-US/docs/Web/CSS/CSS_Selectors">selectors reference</a>.</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Selector</th>
+   <th scope="col">Category A</th>
+   <th scope="col">Category B</th>
+   <th scope="col">Category C</th>
+   <th scope="col">Specificity</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>h1</code></td>
+   <td>0</td>
+   <td>0</td>
+   <td>1</td>
+   <td>0,0,1</td>
+  </tr>
+  <tr>
+   <td><code>h1 + p::first-letter</code></td>
+   <td>0</td>
+   <td>0</td>
+   <td>3</td>
+   <td>0,0,3</td>
+  </tr>
+  <tr>
+   <td><code>li &gt; a[title] &gt; .inline-warning</code></td>
+   <td>0</td>
+   <td>2</td>
+   <td>2</td>
+   <td>0,2,2</td>
+  </tr>
+  <tr>
+   <td><code>#identifier</code></td>
+   <td>1</td>
+   <td>0</td>
+   <td>0</td>
+   <td>1,0,0</td>
+  </tr>
+  <tr>
+   <td><code>:is(p, .text)</code></td>
+   <td>0</td>
+   <td>1</td>
+   <td>0</td>
+   <td>0,1,0</td>
+  </tr>
+  <tr>
+   <td><code>li:nth-child(2n+0)</code></td>
+   <td>0</td>
+   <td>1</td>
+   <td>1</td>
+   <td>0,1,1</td>
+  </tr>
+  <tr>
+   <td><code>:where(h1, #heading)</code></td>
+   <td>0</td>
+   <td>0</td>
+   <td>0</td>
+   <td>0,0,0</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>To find out which declaration is the most specific, you must compare their categories with each other. Starting with category A, do the same for B and eventually C if there is still no winner. In the end, if all the values are tied, the declarations have the same specificity — their order of appearance will decide which one is applied.</p>
+
+<p>This behavior helps avoid repetition in your CSS. A common practice is defining generic styles for the basic elements and then creating classes for those that are different. For example, in the stylesheet below, we have defined generic styles for level 2 headings and then created some classes that change only some properties and values. The values defined initially are applied to all headings, then the more specific values are applied to the headings with the classes.</p>
+
+<p>{{EmbedGHLiveSample("css-examples/learn/cascade/mixing-rules.html", '100%', 700)}}</p>
+
+<p>Before we move on, let's look at an example in action.</p>
+
+<p>{{EmbedGHLiveSample("css-examples/learn/cascade/specificity-boxes.html", '100%', 700)}}</p>
+
+<p>So what's going on here? First of all, we are only interested in the first seven rules of this example, and as you'll notice, we have included their specificity values in a comment before each one.</p>
+<ul>
+<li>
+  The first two selectors are competing over the styling of the link's background color — the second one wins and makes the background color blue because it has an extra ID selector in the chain: its specificity is 2,0,1 vs. 1,0,1.
+</li>
+<li>
+  The third and fourth selectors are competing over the styling of the link's text color. The second one wins and makes the text white because although it has one less element selector, the missing selector is swapped out for a class selector, which is in category B rather than category C. So the winning specificity is 1,1,3 vs. 1,0,4.
+</li>
+<li>
+  Selectors 5–7 are competing over the styling of the link's border when hovered. Selector six loses to five with a specificity of 0,2,3 vs. 0,2,4 — it has one fewer element selector in the chain. Selector seven, however, beats both five and six — it has the same number of sub-selectors in the chain as five, but an element has been swapped out for a class selector. So the winning specificity is 0,3,3 vs. 0,2,3 and ,0,2,4.
+</li>
+</ul>
+<h3 id="Origin_and_importance">Origin and Importance</h3>
+
+<h4>The different origins of CSS</h4>
+
+<p>The CSS you write — the author declarations — is not the only one used to render the document that your users will see. The browser uses its own style sheet — the user agent declarations — to provide a default styling for the elements. And your users themselves can also bring their individual styles — the user declarations — usually through browser extensions or user settings such as the font size or accessibility options like "reduce motion".</p>
+
+<p>With all these declarations written independently from multiple sources, there will naturally be some conflicts. The cascade solves this by ranking them using the following list, from highest to lowest priority.</p>
+<ol>
+  <li>Author declarations — the styles you define.</li>
+  <li>User declarations — the styles your users define.</li>
+  <li>User agent declarations — the styles the browsers define.</li>
+</ol>
+
+<p>This concept allows, for example, the browser to provide a default styling for the elements that both you and your users can overwrite. But it can also lead to unwanted situations like modifying the settings your users have set. For instance, suppose that someone with low vision increases their default font size. Changing it in your CSS could make the document unreadable for them.</p>
+
+<h4>The <code>!important</code> annotation</h4>
+
+<p>To prevent or force the overwriting of a declaration, you can raise its priority by adding the <code>!important</code> annotation at the end of it.</p>
+
+<pre class="brush: css">
+p {
+  color: red !important;
+}
+</pre>
+
+<p>Beware that it will take precedence over the other parts of the cascade, making your code less predictable and harder to understand. So, you should only use it when you have no other option. An overuse of <code>!important</code> is usually the sign of a poorly organized code or a developer who does not fully understand the cascade.</p>
+
+<p>The annotation also reverses the order of priority set by the origin, giving your users the final say as to how the document is rendered on their device.</p>
+
+<h4>How origin and importance work together</h4>
+
+<p>A declaration's origin and importance are two parts of the same concept. <code>!important</code> transforms the origin of a normal declaration into an important one. The origins are then ranked to solve the eventual conflicts using the following list, from highest to lowest priority.</p>
+
+<ol>
+  <li>Transition declarations*</li>
+  <li>Important user agent declarations</li>
+  <li>Important user declarations</li>
+  <li>Important author declarations</li>
+  <li>Animation declarations*</li>
+  <li>Normal author declarations</li>
+  <li>Normal user declarations</li>
+  <li>Normal user agent declarations</li>
+</ol>
+
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>*Temporary styles applied during a transition have a unique priority higher than anything else, whereas the animations' have a priority higher than any normal declaration but lower than all important ones.</p>
+</div>
+
+<p>In this example, we have three rules that could apply to the h1. This time, it is colored green. The three rules have the same origin, but one has the <code>!important</code> annotation making it an important author declaration. Because of the higher priority, the rest of the cascade is not evaluated.</p>
+
+<pre class="brush: css">
+.main-heading {
+    color: red;
+}
+
+h1 {
+  color: green !important;
+}
+
+h1 {
+    color: blue;
+}
+</pre>
+
+<pre class="brush: html">
+&#x3C;h1 class=&#x22;main-heading&#x22;&#x3E;This is my heading.&#x3C;/h1&#x3E;
+</pre>
+
+<h3 id="Context">Context</h3>
+
+<p>Prior knowledge of the DOM (Document Object Model) and the Shadow DOM is required to understand this one fully. But, don't worry, you are unlikely to encounter it as a beginner, and you can always come back later. </p>
+
+<p>To simplify things, a document on the web can host other sub-documents that cannot conflict with the rest of the page, see web components for more information. This creates different contexts within the same document. If a declaration from the main part of the document — the outer context — conflicts with a rule from a sub-document — the inner context — the outer context will win unless the inner rule uses the <code>!important</code> annotation.</p>
+
+<p>Let's take a look at it in action:</p>
+
+<pre class="brush: css">
+sub-document::part(heading) {
+  color: red;
+  text-decoration: underline red;
+}
+</pre>
+
+<pre class="brush: html">
+&#x3C;template id=&#x22;sub-document&#x22;&#x3E;
+  &#x3C;style&#x3E;
+    h1 {
+      color: blue;
+      text-decoration: underline blue !important;
+    }
+  &#x3C;/style&#x3E;
+ &#x3C;h1 part=&#x22;heading&#x22;&#x3E;This is my heading.&#x3C;/h1&#x3E;
+&#x3C;/template&#x3E;
+&#x3C;sub-document&#x3E;&#x3C;/sub-document&#x3E;
+</pre>
+
+<pre class="brush: js">
+customElements.define(
+  "sub-document",
+  class extends HTMLElement {
+    constructor() {
+      super();
+      let template = document.getElementById("sub-document");
+      let templateContent = template.content;
+      const shadowRoot = this.attachShadow({ mode: "open" }).appendChild(
+        templateContent.cloneNode(true)
+      );
+    }
+  }
+);
+</pre>
+
+<p>The h1 ends up red with a blue underline. The outer context color declaration can overwrite the inner context, but the !important annotation on the text-decoration declaration prevents any modification outside of its context.</p>
+
+<p>This allows, for example, the creation of reusable components. You can give them a default style that can be customized while still preventing any modification that could break it. You can read about Web Components for more examples.</p>
+
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>An inner context rule with the <code>!important</code> annotation will also win against an outer context rule with the <code>!important</code> annotation.</p>
+</div>
+
+<h2 id="Understanding_the_cascade">Understanding the cascade</h2>
+
+<!-- TODO -->
+
+<h2 id="To_summarize">To summarize</h2>
+
+<!-- TODO -->
+
+<h2 id="Test_your_skills!">Test your skills!</h2>
+
+<p>We have covered a lot in this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see <a href="/en-US/docs/Learn/CSS/Building_blocks/Cascade_tasks">Test your skills: the Cascade</a>.</p>
+
+<h2 id="Whats_next">What's next</h2>
+
+<p>If you understood most of this article, then well done — you've started getting familiar with the fundamental mechanics of CSS. Next up, we'll look at selectors in detail.</p>
+
+<p>If you didn't fully understand some of the concepts then don't worry! This is definitely the most complicated thing we've covered so far in the course and is something that even professional web developers sometimes find tricky. We'd advise that you return to this article a few times as you continue through the course, and keep thinking about it.</p>
+
+<p>Refer back here if you start to come across strange issues with styles not applying as expected. It could be a specificity issue.</p>
+
+<p>{{NextMenu("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks")}}</p>
+
+<h2 id="In_this_module">In this module</h2>
+
+<ol>
+ <li><a href="/en-US/docs/Learn/CSS/Building_blocks/The_cascade">The Cascade</a></li>
+ <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors">CSS selectors</a>
+  <ul>
+   <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors">Type, class, and ID selectors</a></li>
+   <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors">Attribute selectors</a></li>
+   <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements">Pseudo-classes and pseudo-elements</a></li>
+   <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators">Combinators</a></li>
+  </ul>
+ </li>
+ <li><a href="/en-US/docs/Learn/CSS/Building_blocks/The_box_model">The box model</a></li>
+ <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders">Backgrounds and borders</a></li>
+ <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions">Handling different text directions</a></li>
+ <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content">Overflowing content</a></li>
+ <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Values_and_units">Values and units</a></li>
+ <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS">Sizing items in CSS</a></li>
+ <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Images_media_form_elements">Images, media, and form elements</a></li>
+ <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Styling_tables">Styling tables</a></li>
+ <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS">Debugging CSS</a></li>
+ <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Organizing">Organizing your CSS</a></li>
+</ol>
