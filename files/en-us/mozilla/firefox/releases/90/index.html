@@ -65,6 +65,27 @@ tags:
   <li>Support for the <code>matrix</code> protocol has been added and can now be passed into the {{domxref('Navigator.registerProtocolHandler()')}} method as a valid scheme.</li>
 </ul>
 
+<h3 id="webdriver_conformance_marionette">WebDriver conformance (Marionette)</h3>
+<ul>
+  <li>Marionette now restricts to a single active WebDriver session ({{bug(1691047)}}).</li>
+  <li>Added support for the new type of user prompts in Firefox ({{bug(1686741)}})</li>
+  <li>Window handles make use of a unique id now, and don't change for process
+    swaps as caused by <a href="https://firefox-source-docs.mozilla.org/dom/navigation/nav_replace.html#cross-group-navigations">cross-group navigations</a> ({{bug(1680479)}}).</li>
+  <li>Fixed an inappropriate abortion of the current WebDriver command when a
+    new user prompt was opened in a background tab ({{bug(1701686)}}).</li>
+  <li>Fixed the <code>WebDriver:GetWindowHandles</code> command to now correctly
+    handle unloaded tabs ({{bug(1682062)}}).</li>
+  <li>Fixed the <code>WebDriver:NewSession</code> command to always return the
+    <code>proxy</code> capability even if empty ({{bug(1710935)}}). </li>
+</ul>
+
+<h4 id="removals_webdriver">Removals</h4>
+<ul>
+  <li>With the <a href="#removals_http">removal of the FTP support in Firefox 90</a>
+    the <code>ftpProxy</code> capability is no longer evaluated, and when used will
+    throw an <code>invalid argument</code> error ({{bug(1703805)}}).</li>
+</ul>
+
 <h2 id="Changes_for_add-on_developers">Changes for add-on developers</h2>
 
 <ul>
