@@ -9908,6 +9908,7 @@
 /en-US/docs/Web/CSS/:-webkit-autofill	/en-US/docs/Web/CSS/:autofill
 /en-US/docs/Web/CSS/::-moz-placeholder	/en-US/docs/Web/CSS/::placeholder
 /en-US/docs/Web/CSS/::-moz-selection	/en-US/docs/Web/CSS/::selection
+/en-US/docs/Web/CSS/::-ms-browse	/en-US/docs/Web/CSS/::file-selector-button
 /en-US/docs/Web/CSS/::-webkit-file-upload-button	/en-US/docs/Web/CSS/::file-selector-button
 /en-US/docs/Web/CSS/::-webkit-input-placeholder	/en-US/docs/Web/CSS/::placeholder
 /en-US/docs/Web/CSS/::-webkit-resizer	/en-US/docs/Web/CSS/::-webkit-scrollbar
