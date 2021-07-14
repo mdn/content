@@ -1,20 +1,44 @@
 ---
-title: 'xlink:href'
-slug: 'Web/SVG/Attribute/xlink:href'
+title: xlink:href
+slug: Web/SVG/Attribute/xlink:href
 tags:
   - NeedsCompatTable
   - SVG
   - SVG Attribute
 ---
-<div>{{SVGRef}}{{Deprecated_Header("SVG2")}}</div>
+<div>{{SVGRef}}{{Deprecated_Header}}</div>
 
-<p>The <strong><code>xlink:href</code></strong> attribute defines a reference to a resource as a reference <a href="/en-US/docs/Web/SVG/Content_type#IRI">IRI</a>. The exact meaning of that link depends on the context of each element using it.</p>
+<p>The <strong><code>xlink:href</code></strong> attribute defines a reference to a resource as a reference <a href="/en-US/docs/Web/SVG/Content_type#iri">IRI</a>. The exact meaning of that link depends on the context of each element using it.</p>
 
 <div class="note">
 <p><strong>Note:</strong> SVG 2 removed the need for the <code>xlink</code> namespace, so instead of <code>xlink:href</code> you should use {{SVGAttr("href")}}.</p>
 </div>
 
-<p>22 elements are using this attribute: {{SVGElement("a")}}, {{SVGElement("altGlyph")}}, {{SVGElement("animate")}}, {{SVGElement("animateColor")}}, {{SVGElement("animateMotion")}}, {{SVGElement("animateTransform")}}, {{SVGElement("color-profile")}}, {{SVGElement("cursor")}}, {{SVGElement("feImage")}}, {{SVGElement("filter")}}, {{SVGElement("font-face-uri")}}, {{SVGElement("glyphRef")}}, {{SVGElement("image")}}, {{SVGElement("linearGradient")}}, {{SVGElement("mpath")}}, {{SVGElement("pattern")}}, {{SVGElement("radialGradient")}}, {{SVGElement("script")}}, {{SVGElement("set")}}, {{SVGElement("textPath")}}, {{SVGElement("tref")}}, and {{SVGElement("use")}}}</p>
+<p>You can use this attribute with the following SVG elements:</p>
+
+<ul>
+  <li>{{SVGElement("a")}}</li>
+  <li>{{SVGElement("altGlyph")}}</li>
+  <li>{{SVGElement("animate")}}</li>
+  <li>{{SVGElement("animateColor")}}</li>
+  <li>{{SVGElement("animateMotion")}}</li>
+  <li>{{SVGElement("animateTransform")}}</li>
+  <li>{{SVGElement("cursor")}}</li>
+  <li>{{SVGElement("feImage")}}</li>
+  <li>{{SVGElement("filter")}}</li>
+  <li>{{SVGElement("font-face-uri")}}</li>
+  <li>{{SVGElement("glyphRef")}}</li>
+  <li>{{SVGElement("image")}}</li>
+  <li>{{SVGElement("linearGradient")}}</li>
+  <li>{{SVGElement("mpath")}}</li>
+  <li>{{SVGElement("pattern")}}</li>
+  <li>{{SVGElement("radialGradient")}}</li>
+  <li>{{SVGElement("script")}}</li>
+  <li>{{SVGElement("set")}}</li>
+  <li>{{SVGElement("textPath")}}</li>
+  <li>{{SVGElement("tref")}}</li>
+  <li>{{SVGElement("use")}}</li>
+</ul>
 
 <div id="topExample">
 <div class="hidden">
@@ -38,7 +62,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Value</th>
-   <td><code><a href="/en-US/docs/Web/SVG/Content_type#IRI">&lt;iri&gt;</a></code></td>
+   <td><code><a href="/en-US/docs/Web/SVG/Content_type#iri">&lt;iri&gt;</a></code></td>
   </tr>
   <tr>
    <th scope="row">Default value</th>
@@ -63,7 +87,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Value</th>
-   <td><code><a href="/en-US/docs/Web/SVG/Content_type#IRI">&lt;iri&gt;</a></code></td>
+   <td><code><a href="/en-US/docs/Web/SVG/Content_type#iri">&lt;iri&gt;</a></code></td>
   </tr>
   <tr>
    <th scope="row">Default value</th>
@@ -92,28 +116,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Value</th>
-   <td><code><a href="/en-US/docs/Web/SVG/Content_type#IRI">&lt;iri&gt;</a></code></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><em>None</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>No</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="color-profile">color-profile</h2>
-
-<p>For {{SVGElement("color-profile")}}, <code>xlink:href</code> defines the location of an {{Glossary("ICC")}} profile resource.</p>
-
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code><a href="/en-US/docs/Web/SVG/Content_type#IRI">&lt;iri&gt;</a></code></td>
+   <td><code><a href="/en-US/docs/Web/SVG/Content_type#iri">&lt;iri&gt;</a></code></td>
   </tr>
   <tr>
    <th scope="row">Default value</th>
@@ -134,7 +137,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Value</th>
-   <td><code><a href="/en-US/docs/Web/SVG/Content_type#FuncIRI">&lt;funciri&gt;</a></code></td>
+   <td><code><a href="/en-US/docs/Web/SVG/Content_type#funciri">&lt;funciri&gt;</a></code></td>
   </tr>
   <tr>
    <th scope="row">Default value</th>
@@ -155,7 +158,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Value</th>
-   <td><code><a href="/en-US/docs/Web/SVG/Content_type#IRI">&lt;iri&gt;</a></code></td>
+   <td><code><a href="/en-US/docs/Web/SVG/Content_type#iri">&lt;iri&gt;</a></code></td>
   </tr>
   <tr>
    <th scope="row">Default value</th>
@@ -176,7 +179,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Value</th>
-   <td><code><a href="/en-US/docs/Web/SVG/Content_type#IRI">&lt;iri&gt;</a></code></td>
+   <td><code><a href="/en-US/docs/Web/SVG/Content_type#iri">&lt;iri&gt;</a></code></td>
   </tr>
   <tr>
    <th scope="row">Default value</th>
@@ -197,7 +200,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Value</th>
-   <td><code><a href="/en-US/docs/Web/SVG/Content_type#IRI">&lt;iri&gt;</a></code></td>
+   <td><code><a href="/en-US/docs/Web/SVG/Content_type#iri">&lt;iri&gt;</a></code></td>
   </tr>
   <tr>
    <th scope="row">Default value</th>
@@ -218,7 +221,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Value</th>
-   <td><code><a href="/en-US/docs/Web/SVG/Content_type#IRI">&lt;iri&gt;</a></code></td>
+   <td><code><a href="/en-US/docs/Web/SVG/Content_type#iri">&lt;iri&gt;</a></code></td>
   </tr>
   <tr>
    <th scope="row">Default value</th>
@@ -239,7 +242,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Value</th>
-   <td><code><a href="/en-US/docs/Web/SVG/Content_type#IRI">&lt;iri&gt;</a></code></td>
+   <td><code><a href="/en-US/docs/Web/SVG/Content_type#iri">&lt;iri&gt;</a></code></td>
   </tr>
   <tr>
    <th scope="row">Default value</th>
@@ -260,7 +263,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Value</th>
-   <td><code><a href="/en-US/docs/Web/SVG/Content_type#IRI">&lt;iri&gt;</a></code></td>
+   <td><code><a href="/en-US/docs/Web/SVG/Content_type#iri">&lt;iri&gt;</a></code></td>
   </tr>
   <tr>
    <th scope="row">Default value</th>
@@ -281,7 +284,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Value</th>
-   <td><code><a href="/en-US/docs/Web/SVG/Content_type#IRI">&lt;iri&gt;</a></code></td>
+   <td><code><a href="/en-US/docs/Web/SVG/Content_type#iri">&lt;iri&gt;</a></code></td>
   </tr>
   <tr>
    <th scope="row">Default value</th>
@@ -302,7 +305,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Value</th>
-   <td><code><a href="/en-US/docs/Web/SVG/Content_type#IRI">&lt;iri&gt;</a></code></td>
+   <td><code><a href="/en-US/docs/Web/SVG/Content_type#iri">&lt;iri&gt;</a></code></td>
   </tr>
   <tr>
    <th scope="row">Default value</th>
@@ -323,7 +326,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Value</th>
-   <td><code><a href="/en-US/docs/Web/SVG/Content_type#IRI">&lt;iri&gt;</a></code></td>
+   <td><code><a href="/en-US/docs/Web/SVG/Content_type#iri">&lt;iri&gt;</a></code></td>
   </tr>
   <tr>
    <th scope="row">Default value</th>
@@ -344,7 +347,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Value</th>
-   <td><code><a href="/en-US/docs/Web/SVG/Content_type#IRI">&lt;iri&gt;</a></code></td>
+   <td><code><a href="/en-US/docs/Web/SVG/Content_type#iri">&lt;iri&gt;</a></code></td>
   </tr>
   <tr>
    <th scope="row">Default value</th>
@@ -365,7 +368,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Value</th>
-   <td><code><a href="/en-US/docs/Web/SVG/Content_type#IRI">&lt;iri&gt;</a></code></td>
+   <td><code><a href="/en-US/docs/Web/SVG/Content_type#iri">&lt;iri&gt;</a></code></td>
   </tr>
   <tr>
    <th scope="row">Default value</th>
@@ -386,7 +389,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Value</th>
-   <td><code><a href="/en-US/docs/Web/SVG/Content_type#IRI">&lt;iri&gt;</a></code></td>
+   <td><code><a href="/en-US/docs/Web/SVG/Content_type#iri">&lt;iri&gt;</a></code></td>
   </tr>
   <tr>
    <th scope="row">Default value</th>
@@ -407,7 +410,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Value</th>
-   <td><code><a href="/en-US/docs/Web/SVG/Content_type#IRI">&lt;iri&gt;</a></code></td>
+   <td><code><a href="/en-US/docs/Web/SVG/Content_type#iri">&lt;iri&gt;</a></code></td>
   </tr>
   <tr>
    <th scope="row">Default value</th>
@@ -445,11 +448,6 @@ tags:
    <td>{{SpecName("SVG1.1", "animate.html#HrefAttribute", "href for &lt;animate&gt;, &lt;animateColor&gt;, &lt;animateMotion&gt;, &lt;animateTransform&gt;, and &lt;set&gt;")}}</td>
    <td>{{Spec2("SVG1.1")}}</td>
    <td>Defines <code>href</code> for animation elements.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "color.html#ColorProfileElementHrefAttribute", "href for &lt;color-profile&gt;")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Defines <code>href</code> for the {{SVGElement("color-profile")}} element.</td>
   </tr>
   <tr>
    <td>{{SpecName("SVG1.1", "interact.html#CursorElementHrefAttribute", "href for &lt;cursor&gt;")}}</td>

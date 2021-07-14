@@ -12,11 +12,10 @@ tags:
 ---
 <div>{{CSSRef}}</div>
 
-<p><span class="seoSummary">The <strong><code>fit-content()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Functions">function</a> clamps a given size to an available size according to the formula <code>min(<var>maximum size</var>, max(<var>minimum size</var>, <var>argument</var>))</code>.</span></p>
+<p>The <strong><code>fit-content()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Functions">function</a> clamps a given size to an available size according to the formula <code>min(<var>maximum size</var>, max(<var>minimum size</var>, <var>argument</var>))</code>.</p>
 
 <div>{{EmbedInteractiveExample("pages/css/function-fit-content.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <p>The function can be used as a track size in <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid</a> properties, where the maximum size is defined by <code><a href="/en-US/docs/Web/CSS/grid-template-columns#max-content">max-content</a></code> and the minimum size by <code><a href="/en-US/docs/Web/CSS/grid-template-columns#auto">auto</a></code>, which is calculated similar to <code>auto</code> (i.e., <code><a href="/en-US/docs/Web/CSS/minmax">minmax(auto, max-content)</a></code>), except that the track size is clamped at <var>argument</var> if it is greater than the <code>auto</code> minimum.</p>
 
@@ -42,8 +41,10 @@ fit-content(40%)
  <dt>{{cssxref("&lt;length&gt;")}}</dt>
  <dd>An absolute length.</dd>
  <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
- <dd>A percentage relative to the available space in the given axis.</dd>
- <dd>In grid properties it is relative to the inline size of the grid container in column tracks and to the block size of the grid container for row tracks. Otherwise it is relative to the available inline size or block size of the laid out box depending on the writing mode.</dd>
+ <dd>
+   <p>A percentage relative to the available space in the given axis.</p>
+   <p>In grid properties it is relative to the inline size of the grid container in column tracks and to the block size of the grid container for row tracks. Otherwise it is relative to the available inline size or block size of the laid out box depending on the writing mode.</p>
+ </dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>

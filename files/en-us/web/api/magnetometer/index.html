@@ -10,19 +10,20 @@ tags:
   - Sensor
   - Sensor APIs
   - Sensors
+browser-compat: api.Magnetometer
 ---
-<div>{{APIRef("Generic Sensor API")}}</div>
+<div>{{APIRef("Sensor API")}}</div>
 
-<p><span class="seoSummary">The <strong><code>Magnetometer</code></strong> interface of the <a href="/docs/Web/API/Sensor_APIs">Sensor APIs</a> provides information about the magnetic field as detected by the device’s primary magnetometer sensor. </span></p>
+<p>The <strong><code>Magnetometer</code></strong> interface of the <a href="/en-US/docs/Web/API/Sensor_APIs">Sensor APIs</a> provides information about the magnetic field as detected by the device's primary magnetometer sensor.</p>
 
-<p>To use this sensor, the user must grant permission to the <code>'magnetometer'</code> device sensor through the {{domxref('Permissions')}} API.</p>
+<p>To use this sensor, the user must grant permission to the <code>'magnetometer'</code> device sensor through the <a href="/en-US/docs/Web/API/Permissions_API">Permissions API</a>.</p>
 
-<p>If a feature policy blocks use of a feature, it's because your code is inconsistent with the policies set on your server. This is not something that would ever be shown to a user. See {{httpheader('Feature-Policy')}} for implementation instructions.</p>
+<p>If a feature policy blocks use of a feature, it's because your code is inconsistent with the policies set on your server. This is not something that would ever be shown to a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implementation instructions.</p>
 
 <h2 id="Constructor">Constructor</h2>
 
 <dl>
- <dt>{{domxref("Magnetometer.Magnetometer()")}}</dt>
+ <dt>{{domxref("Magnetometer.Magnetometer", "Magnetometer()")}}</dt>
  <dd>Creates a new <code>Magnetometer</code> object.</dd>
 </dl>
 
@@ -52,26 +53,8 @@ magSensor.start();</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Generic Sensor')}}</td>
-   <td>{{Spec2('Generic Sensor')}}</td>
-   <td>Defines sensors in general.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Magnetometer','#magnetometer-interface','Magnetometer')}}</td>
-   <td>{{Spec2('Magnetometer')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Magnetometer")}}</p>
+<p>{{Compat}}</p>

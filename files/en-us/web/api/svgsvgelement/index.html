@@ -7,6 +7,7 @@ tags:
   - Reference
   - SVG
   - SVG DOM
+browser-compat: api.SVGSVGElement
 ---
 <div>{{APIRef("SVG")}}</div>
 
@@ -31,8 +32,6 @@ tags:
 	<dd>An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("contentScriptType")}} attribute of the given {{SVGElement("svg")}} element.</dd>
 	<dt>{{domxref("SVGSVGElement.contentStyleType")}}</dt>
 	<dd>An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("contentStyleType")}} attribute of the given {{SVGElement("svg")}} element.</dd>
-	<dt>{{domxref("SVGSVGElement.viewport")}}</dt>
-	<dd>An {{domxref("SVGRect")}} containing the position and size of the viewport (implicit or explicit) that corresponds to the given {{SVGElement("svg")}} element. When the browser is actually rendering the content, then the position and size values represent the actual values when rendering. The position and size values are unitless values in the coordinate system of the parent element. If no parent element exists (i.e., {{SVGElement("svg")}} element represents the root of the document tree), if this SVG document is embedded as part of another document (e.g., via the HTML {{HTMLElement("object")}} element), then the position and size are unitless values in the coordinate system of the parent document. (If the parent uses CSS or XSL layout, then unitless values represent pixel units for the current CSS or XSL viewport.)</dd>
 	<dt>{{domxref("SVGSVGElement.pixelUnitToMillimeterX")}} {{deprecated_inline}}</dt>
 	<dd>A float representing the size of the pixel unit (as defined by CSS2) along the x-axis of the viewport, which represents a unit somewhere in the range of 70dpi to 120dpi, and, on systems that support this, might actually match the characteristics of the target medium. On systems where it is impossible to know the size of a pixel, a suitable default pixel size is provided.</dd>
 	<dt>{{domxref("SVGSVGElement.pixelUnitToMillimeterY")}} {{deprecated_inline}}</dt>
@@ -144,31 +143,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName("SVG2", "struct.html#InterfaceSVGSVGElement", "SVGSVGElement")}}</td>
-			<td>{{Spec2("SVG2")}}</td>
-			<td>Replaced the inheritance from {{domxref("SVGElement")}} by {{domxref("SVGGraphicsElement")}}, removed the implemented interfaces {{domxref("SVGTests")}}, {{domxref("SVGLangSpace")}}, {{domxref("SVGExternalResourcesRequired")}}, {{domxref("SVGStylable")}}, {{domxref("SVGLocatable")}}, {{domxref("DocumentEvent")}}, {{domxref("ViewCSS")}}, and {{domxref("DocumentCSS")}} and added implemented interface {{domxref("WindowEventHandlers")}}.</td>
-		</tr>
-		<tr>
-			<td>{{SpecName("SVG1.1", "struct.html#InterfaceSVGSVGElement", "SVGSVGElement")}}</td>
-			<td>{{Spec2("SVG1.1")}}</td>
-			<td>Initial definition</td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.SVGSVGElement")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

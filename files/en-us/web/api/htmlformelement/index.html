@@ -10,6 +10,7 @@ tags:
   - HTMLFormElement
   - Interface
   - Reference
+browser-compat: api.HTMLFormElement
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
@@ -90,7 +91,7 @@ tags:
 
 <h3 id="Obtaining_a_form_element_object">Obtaining a form element object</h3>
 
-<p>To obtain an <code>HTMLFormElement</code> object, you can use a <a href="/en-US/docs/Web/CSS/CSS_Selectors">CSS selector</a> with {{domxref("ParentNode.querySelector", "querySelector()")}}, or you can get a list of all of the forms in the document using its {{domxref("Document.forms", "forms")}} property.</p>
+<p>To obtain an <code>HTMLFormElement</code> object, you can use a <a href="/en-US/docs/Web/CSS/CSS_Selectors">CSS selector</a> with {{domxref("Document.querySelector", "querySelector()")}}, or you can get a list of all of the forms in the document using its {{domxref("Document.forms", "forms")}} property.</p>
 
 <p>{{domxref("Document.forms")}} returns an array of <code>HTMLFormElement</code> objects listing each of the forms on the page. You can then use any of the following syntaxes to get an individual form:</p>
 
@@ -226,35 +227,15 @@ f.submit();                               // Call the form's submit() method
 
 <h3 id="Submitting_forms_and_uploading_files_using_XMLHttpRequest">Submitting forms and uploading files using XMLHttpRequest</h3>
 
-<p>If you want to know how to serialize and submit a form using the {{domxref("XMLHttpRequest")}} API, please read <a href="/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files">this paragraph</a>.</p>
+<p>If you want to know how to serialize and submit a form using the {{domxref("XMLHttpRequest")}} API, please read <a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#submitting_forms_and_uploading_files">this paragraph</a>.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "#htmlformelement", "HTMLFormElement")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>The following method has been added: <code>requestAutocomplete()</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "sec-forms.html#htmlformelement", "HTMLFormElement")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>The elements properties returns an {{domxref("HTMLFormControlsCollection")}} instead of a raw {{domxref("HTMLCollection")}}. This is mainly a technical change. The following method has been added: <code>checkValidity()</code>. The following properties have been added: <code>autocomplete</code>, <code>noValidate</code>, and <code>encoding</code>.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.HTMLFormElement")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

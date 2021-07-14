@@ -20,11 +20,13 @@ tags:
 
 <p>The easing functions in the cubic-bezier subset of easing functions are often called "smooth" easing functions, because they can be used to smooth down the start and end of the interpolation. They correlate an input ratio to an output ratio, both expressed as {{cssxref("&lt;number&gt;")}}s. For these values, <code>0.0</code> represents the initial state, and <code>1.0</code> represents the final state.</p>
 
-<p><img src="tf_with_output_gt_than_1.png" style="float: left;"><img src="tf_with_output_gt_than_1_clipped.png" style="float: left; margin-right: 5px;"></p>
-
 <p class="cleared">Depending on the specific function used, the calculated output can sometimes grow to be greater than <code>1.0</code> or smaller than <code>0.0</code> during the course of an animation. This causes the value to go farther than the final state, and then return. In animations, for some properties, such as {{cssxref("left")}} or {{cssxref("right")}}, this creates a kind of "bouncing" effect.</p>
 
+<img src="tf_with_output_gt_than_1.png">
+
 <p>However, certain properties will restrict the output if it goes outside an allowable range. For example, a color component greater than <code>255</code> or smaller than <code>0</code> will be clipped to the closest allowed value (<code>255</code> and <code>0</code>, respectively). Some <code>cubic-bezier()</code> curves exhibit this property.</p>
+
+<img src="tf_with_output_gt_than_1_clipped.png">
 
 <h2 class="cleared" id="Syntax">Syntax</h2>
 
@@ -38,13 +40,13 @@ tags:
 
 <h5 id="linear">linear</h5>
 
-<p style="float: left;"><img alt="A graph with X and Y ranges from 0 to 1, with the X axis labeled 'Time ratio' and the Y axis labeled 'Output ratio.' A straight diagonal line extends from the origin to the X 1 Y 1 position." src="cubic-bezier-linear.png"></p>
+<img alt="A graph with X and Y ranges from 0 to 1, with the X axis labeled 'Time ratio' and the Y axis labeled 'Output ratio.' A straight diagonal line extends from the origin to the X 1 Y 1 position." src="cubic-bezier-linear.png">
 
 <p>The interpolation is done at a constant rate from beginning to end. This keyword represents the easing function <code>cubic-bezier(0.0, 0.0, 1.0, 1.0)</code>.</p>
 
 <h4 class="cleared" id="cubic-bezier">The cubic-bezier() class of easing functions</h4>
 
-<p style="float: left;"><img alt="A graph with X and Y ranges from 0 to 1, with the X axis labeled 'Time ratio' and the Y axis labeled 'Output ratio.' A curved line extends from the origin to the X 1 Y 1 position. The X 0 Y 0 point of the line is labeled  'P₀ = (0, 0)'. Extending from the X 0 Y 0 point is a Bezier handle labeled 'P₁ = (0.075, 0.75)'. The X 1 Y 1 point of the line is labeled 'P₃ = (1, 1)'. Extending from the X 1 Y 1 point is a Bezier handle labeled 'P₂ = (0.0875, 0.36)'." src="cubic-bezier-example.png"></p>
+<img alt="A graph with X and Y ranges from 0 to 1, with the X axis labeled 'Time ratio' and the Y axis labeled 'Output ratio.' A curved line extends from the origin to the X 1 Y 1 position. The X 0 Y 0 point of the line is labeled  'P₀ = (0, 0)'. Extending from the X 0 Y 0 point is a Bezier handle labeled 'P₁ = (0.075, 0.75)'. The X 1 Y 1 point of the line is labeled 'P₃ = (1, 1)'. Extending from the X 1 Y 1 point is a Bezier handle labeled 'P₂ = (0.0875, 0.36)'." src="cubic-bezier-example.png">
 
 <p>The <code>cubic-bezier()</code> functional notation defines a <a href="https://en.wikipedia.org/wiki/B%C3%A9zier_curve#Cubic_B.C3.A9zier_curves">cubic Bézier curve</a>. As these curves are continuous, they are often used to smooth down the start and end of the interpolation and are therefore sometimes called <em>easing functions</em>.</p>
 
@@ -109,27 +111,27 @@ tags:
  <dt><var>number_of_steps</var></dt>
  <dd>Is a strictly positive {{cssxref("&lt;integer&gt;")}}, representing the amount of equidistant treads composing the stepping function.</dd>
  <dt><var>direction</var></dt>
- <dd>Is a keyword indicating if it the function is <a href="https://en.wikipedia.org/wiki/Left-continuous#Directional_and_semi-continuity">left- or right-continuous</a>:</dd>
  <dd>
- <ul>
-  <li><code>jump-start</code> denotes a left-continuous function, so that the first step or jump happens when the interpolation begins;</li>
-  <li><code>jump-end</code> denotes a right-continuous function, so that the last step or jump happens when the interpolation ends;</li>
-  <li><code>jump-both</code> denotes a right and left continuous function, includes pauses at both the 0% and 100% marks, effectively adding a step during the interpolation iteration;</li>
-  <li><code>jump-none</code> There is no jump on either end. Instead, holding at both the 0% mark and the 100% mark, each for 1/n of the duration</li>
-  <li><code>start</code> is the equivalent of <code>jump-start</code></li>
-  <li><code>end</code> is the equivalent of <code>jump-end</code></li>
- </ul>
+   <p>Is a keyword indicating if it the function is <a href="https://en.wikipedia.org/wiki/Left-continuous#Directional_and_semi-continuity">left- or right-continuous</a>:</p>
+   <ul>
+    <li><code>jump-start</code> denotes a left-continuous function, so that the first step or jump happens when the interpolation begins;</li>
+    <li><code>jump-end</code> denotes a right-continuous function, so that the last step or jump happens when the interpolation ends;</li>
+    <li><code>jump-both</code> denotes a right and left continuous function, includes pauses at both the 0% and 100% marks, effectively adding a step during the interpolation iteration;</li>
+    <li><code>jump-none</code> There is no jump on either end. Instead, holding at both the 0% mark and the 100% mark, each for 1/n of the duration</li>
+    <li><code>start</code> is the equivalent of <code>jump-start</code></li>
+    <li><code>end</code> is the equivalent of <code>jump-end</code></li>
+   </ul>
+   <p><code>end</code> is the default.</p>
  </dd>
- <dd><code>end</code> is the default.</dd>
 </dl>
 
 <h5 id="steps_n_&lt;direction&gt;">steps( n, &lt;direction&gt; )</h5>
 
-<ul style="list-style-type: none; display: flex;">
+<ul>
  <li>
   <p><code>steps(2, jump-start)</code><br>
    <code>steps(2, start)</code></p>
-  <img alt="A graph with X and Y ranges from 0 to 1, with the X axis labeled 'Time ratio' and the Y axis labeled 'Output ratio.' Three dots are present, the first at the X 0 Y 0 position, the second at the X 0.5 Y 0.5 position, and the third at the X 1 Y 1 position. The second and third dots have horizontal lines extending 0.5 units backwards towards the Y axis." src="steps-2-start.png" style="float: left; vertical-align: top;"></li>
+  <img alt="A graph with X and Y ranges from 0 to 1, with the X axis labeled 'Time ratio' and the Y axis labeled 'Output ratio.' Three dots are present, the first at the X 0 Y 0 position, the second at the X 0.5 Y 0.5 position, and the third at the X 1 Y 1 position. The second and third dots have horizontal lines extending 0.5 units backwards towards the Y axis." src="steps-2-start.png"></li>
  <li>
   <p><code>steps(4, jump-end)<br>
    steps(4, end)</code></p>
@@ -144,11 +146,11 @@ tags:
 
 <h5 class="cleared" id="step-start">step-start</h5>
 
-<p><img alt="A graph with X and Y ranges from 0 to 1, with the X axis labeled 'Time ratio' and the Y axis labeled 'Output ratio.' Two dots are present, the first at the X 0 Y 0 position, and the second at the X 1 Y 1 position. The second dot has a horizontal lines extending 1 units back towards the Y axis." src="steps-1-start.png" style="float: left; vertical-align: top;"> The interpolation jumps immediately to its final state, where it stays until the end. This keyword represents the easing function <code>steps(1, jump-start)</code> or <code>steps(1, start)</code>.</p>
+<p><img alt="A graph with X and Y ranges from 0 to 1, with the X axis labeled 'Time ratio' and the Y axis labeled 'Output ratio.' Two dots are present, the first at the X 0 Y 0 position, and the second at the X 1 Y 1 position. The second dot has a horizontal lines extending 1 units back towards the Y axis." src="steps-1-start.png"> The interpolation jumps immediately to its final state, where it stays until the end. This keyword represents the easing function <code>steps(1, jump-start)</code> or <code>steps(1, start)</code>.</p>
 
 <h5 class="cleared" id="step-end">step-end</h5>
 
-<p><img alt="A graph with X and Y ranges from 0 to 1, with the X axis labeled 'Time ratio' and the Y axis labeled 'Output ratio.' Two dots are present, the first at the X 0 Y 0 position, and the second at the X 1 Y 1 position. The first dot has a horizontal lines extending 1 unit forwards away from the Y axis." src="steps-1-end.png" style="float: left; vertical-align: top;"> The interpolation stays in its initial state until the end, at which point it jumps directly to its final state. This keyword represents the easing function <code>steps(1, jump-end)</code> or <code>steps(1, end)</code>.</p>
+<p><img alt="A graph with X and Y ranges from 0 to 1, with the X axis labeled 'Time ratio' and the Y axis labeled 'Output ratio.' Two dots are present, the first at the X 0 Y 0 position, and the second at the X 1 Y 1 position. The first dot has a horizontal lines extending 1 unit forwards away from the Y axis." src="steps-1-end.png"> The interpolation stays in its initial state until the end, at which point it jumps directly to its final state. This keyword represents the easing function <code>steps(1, jump-end)</code> or <code>steps(1, end)</code>.</p>
 
 <h2 class="cleared" id="Examples">Examples</h2>
 

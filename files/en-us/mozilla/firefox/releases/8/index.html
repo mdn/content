@@ -35,7 +35,7 @@ tags:
  <li>When editing {{ domxref("element.contenteditable") }} areas, exiting a heading by pressing return, or exiting list editing mode by pressing return twice, now returns to paragraph entry mode (that is, paragraphs inside {{ HTMLElement("p") }} blocks) instead of separating lines by {{ HTMLElement("br") }} elements.</li>
  <li>Fixed a bug that prevents justification from taking effect properly when applied to the first line in a {{ domxref("element.contenteditable") }} area.</li>
  <li>Fixed a bug that caused pressing delete or backspace at the beginning of a {{ domxref("element.contenteditable") }} area to affect the previous <code>contenteditable</code> block if one is present.</li>
- <li>{{ domxref("DocumentOrShadowRoot/getSelection", "document.getSelection()") }} now returns the same <code>Selection</code> object as {{ domxref("window.getSelection()") }}, instead of <em>stringifying</em> it.</li>
+ <li>{{ domxref("Document.getSelection()") }} now returns the same <code>Selection</code> object as {{ domxref("window.getSelection()") }}, instead of <em>stringifying</em> it.</li>
  <li>The HTML5 <code>selectionDirection</code> property makes it possible to define the direction of the selection in an editable text.</li>
  <li>{{ domxref("HTMLMediaElement") }} now have a <code>seekable</code> property that return a {{ domxref("TimeRanges") }} object.</li>
  <li>The {{ domxref("HTMLMediaElement") }}<code>.preload</code> attribute now correctly reflects as an <em>enumerated value</em>.</li>

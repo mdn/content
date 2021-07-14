@@ -1,5 +1,5 @@
 ---
-title: Notification.Notification()
+title: Notification()
 slug: Web/API/Notification/Notification
 tags:
 - API
@@ -8,6 +8,7 @@ tags:
 - Notifications
 - Notifications API
 - Reference
+browser-compat: api.Notification.Notification
 ---
 <p>{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}</p>
 
@@ -94,33 +95,21 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName("Web Notifications","#dom-notification-notification","Notification()
-        constructor")}}</td>
-      <td>{{Spec2('Web Notifications')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Notification.Notification")}}</p>
+<p>{{Compat}}</p>
 
 <h3 id="Chrome_notes">Chrome notes</h3>
 
 <p>Starting in Chrome 49, notifications don't work in incognito mode.</p>
 
-<p>{{Page("/en-US/docs/Web/API/Notifications_API", "Chrome notes")}}</p>
+<p>Chrome for Android will throw a <code>TypeError</code> when calling the
+  <code>Notification</code> constructor. It only supports creating
+  notifications from a service worker. See the
+  <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=481856">
+  Chromium issue tracker</a> for more details.</p>
 
 <h3 id="Internet_Explorer_notes">Internet Explorer notes</h3>
 

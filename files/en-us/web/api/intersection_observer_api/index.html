@@ -104,7 +104,7 @@ observer.observe(target);
 };
 </pre>
 
-<p>The list of entries received by the callback includes one entry for each target which reporting a change in its intersection status. Check the value of the {{domxref("IntersectionObserverEntry.isIntersecting", "isIntersecting")}} property to see if the entry represents an element that currently intersects with the root.</p>
+<p>The list of entries received by the callback includes one entry for each target which reported a change in its intersection status. Check the value of the {{domxref("IntersectionObserverEntry.isIntersecting", "isIntersecting")}} property to see if the entry represents an element that currently intersects with the root.</p>
 
 <p>Be aware that your callback is executed on the main thread. It should operate as quickly as possible; if anything time-consuming needs to be done, use {{domxref("Window.requestIdleCallback()")}}.</p>
 

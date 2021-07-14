@@ -10,6 +10,7 @@ tags:
   - Localization
   - Prototype
   - Reference
+browser-compat: javascript.builtins.Intl.Locale.script
 ---
 <div>{{JSRef}}</div>
 
@@ -23,7 +24,7 @@ tags:
 
 <h3 id="Setting_the_script_in_the_locale_identifer_string_argument">Setting the script in the locale identifer string argument</h3>
 
-<p>The script is the second part of a valid Unicode language identifier string, and can be set by adding it to the locale identifier string that is passed into the {{jsxref("Locale/Locale", "Locale")}} constructor. Note that the script is not a required part of a locale identifier.</p>
+<p>The script is the second part of a valid Unicode language identifier string, and can be set by adding it to the locale identifier string that is passed into the {{jsxref("Intl/Locale/Locale", "Locale")}} constructor. Note that the script is not a required part of a locale identifier.</p>
 
 <pre class="brush: js">let scriptStr = new Intl.Locale("en-Latn-US");
 
@@ -31,7 +32,7 @@ console.log(scriptStr.script); // Prints "Latn"</pre>
 
 <h3 id="Setting_the_script_via_the_configuration_object">Setting the script via the configuration object</h3>
 
-<p>The {{jsxref("Locale/Locale", "Locale")}} constructor takes a configuration object, which can be used to set the script subtag and property.</p>
+<p>The {{jsxref("Intl/Locale/Locale", "Locale")}} constructor takes a configuration object, which can be used to set the script subtag and property.</p>
 
 <pre class="brush: js">let scriptObj = new Intl.Locale("fr-FR", {script: "Latn"});
 
@@ -39,22 +40,11 @@ console.log(scriptObj.script); // Prints "Latn"</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName('ES Int Draft', '#sec-Intl.Locale.prototype.script')}}</td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>{{Compat("javascript.builtins.Intl.Locale.script")}}</div>
+<div>{{Compat}}</div>
 
 <h2 id="See_also">See also</h2>
 

@@ -13,7 +13,7 @@ slug: Mozilla/Projects/NSS/NSS_3.15.1_release_notes
 <h2 id="New_in_NSS_3.15.1">New in NSS 3.15.1</h2>
 <h3 id="New_Functionality">New Functionality</h3>
 <ul>
-  <li>TLS 1.2: TLS 1.2 (<a href="https://tools.ietf.org/html/rfc5246" title="http://tools.ietf.org/html/rfc5246">RFC 5246</a>) is supported. HMAC-SHA256 cipher suites (<a href="https://tools.ietf.org/html/rfc5246" title="http://tools.ietf.org/html/rfc5246">RFC 5246</a> and <a href="https://tools.ietf.org/html/rfc5289" title="http://tools.ietf.org/html/rfc5289">RFC 5289</a>) are supported, allowing TLS to be used without MD5 and SHA-1. Note the following limitations.
+  <li>TLS 1.2: TLS 1.2 (<a href="https://datatracker.ietf.org/doc/html/rfc5246" title="http://tools.ietf.org/html/rfc5246">RFC 5246</a>) is supported. HMAC-SHA256 cipher suites (<a href="https://datatracker.ietf.org/doc/html/rfc5246" title="http://tools.ietf.org/html/rfc5246">RFC 5246</a> and <a href="https://datatracker.ietf.org/doc/html/rfc5289" title="http://tools.ietf.org/html/rfc5289">RFC 5289</a>) are supported, allowing TLS to be used without MD5 and SHA-1. Note the following limitations.
     <ul>
       <li>The hash function used in the signature for TLS 1.2 client authentication must be the hash function of the TLS 1.2 PRF, which is always SHA-256 in NSS 3.15.1.</li>
       <li>AES GCM cipher suites are not yet supported.</li>

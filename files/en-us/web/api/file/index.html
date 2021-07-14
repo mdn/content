@@ -7,6 +7,7 @@ tags:
   - Interface
   - Reference
   - Web
+browser-compat: api.File
 ---
 <div>{{APIRef}}</div>
 
@@ -14,9 +15,9 @@ tags:
 
 <p><code>File</code> objects are generally retrieved from a {{DOMxRef("FileList")}} object returned as a result of a user selecting files using the {{HTMLElement("input")}} element, from a drag and drop operation's {{DOMxRef("DataTransfer")}} object, or from the <code>mozGetAsFile()</code> API on an {{DOMxRef("HTMLCanvasElement")}}.</p>
 
-<p>A <code>File</code> object is a specific kind of a {{DOMxRef("Blob")}}, and can be used in any context that a Blob can. In particular, {{DOMxRef("FileReader")}}, {{DOMxRef("URL.createObjectURL()")}}, {{DOMxRef("ImageBitmapFactories.createImageBitmap()", "createImageBitmap()")}}, and {{DOMxRef("XMLHttpRequest", "", "send()")}} accept both <code>Blob</code>s and <code>File</code>s.</p>
+<p>A <code>File</code> object is a specific kind of a {{DOMxRef("Blob")}}, and can be used in any context that a Blob can. In particular, {{DOMxRef("FileReader")}}, {{DOMxRef("URL.createObjectURL()")}}, {{DOMxRef("WindowOrWorkerGlobalScope/createImageBitmap", "createImageBitmap()")}}, and {{DOMxRef("XMLHttpRequest", "", "send()")}} accept both <code>Blob</code>s and <code>File</code>s.</p>
 
-<p>See <a href="/en-US/docs/Using_files_from_web_applications">Using files from web applications</a> for more information and examples.</p>
+<p>See <a href="/en-US/docs/Web/API/File/Using_files_from_web_applications">Using files from web applications</a> for more information and examples.</p>
 
 <p>{{InheritanceDiagram}}</p>
 
@@ -66,26 +67,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('File API', "#file-section", "The <code>File</code> interface")}}</td>
-   <td>{{Spec2('File API')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.File")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

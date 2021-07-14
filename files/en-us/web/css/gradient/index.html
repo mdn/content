@@ -9,6 +9,7 @@ tags:
   - Graphics
   - Layout
   - Reference
+browser-compat: css.types.image.gradient
 ---
 <div>{{CSSRef}}</div>
 
@@ -16,7 +17,6 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/css/type-gradient.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <p>A CSS gradient has <a href="/en-US/docs/Web/CSS/image#no_intrinsic">no intrinsic dimensions</a>; i.e., it has no natural or preferred size, nor a preferred ratio. Its concrete size will match the size of the element to which it applies.</p>
 
@@ -27,25 +27,25 @@ tags:
 <div id="linear-gradient">
 <h4 id="Linear_gradient">Linear gradient</h4>
 
-<p>Linear gradients transition colors progressively along an imaginary line. They are generated with the {{cssxref("linear-gradient", "linear-gradient()")}} function.</p>
+<p>Linear gradients transition colors progressively along an imaginary line. They are generated with the {{cssxref("gradient/linear-gradient()", "linear-gradient()")}} function.</p>
 </div>
 
 <div id="radial-gradient">
 <h4 id="Radial_gradient">Radial gradient</h4>
 
-<p>Radial gradients transition colors progressively from a center point (origin). They are generated with the {{cssxref("radial-gradient", "radial-gradient()")}} function.</p>
+<p>Radial gradients transition colors progressively from a center point (origin). They are generated with the {{cssxref("gradient/radial-gradient()", "radial-gradient()")}} function.</p>
 </div>
 
 <div id="repeating-gradient">
 <h4 id="Repeating_gradient">Repeating gradient</h4>
 
-<p>Repeating gradients duplicate a gradient as much as necessary to fill a given area. They are generated with the {{cssxref("repeating-linear-gradient", "repeating-linear-gradient()")}} and {{cssxref("repeating-radial-gradient", "repeating-radial-gradient()")}} functions.</p>
+<p>Repeating gradients duplicate a gradient as much as necessary to fill a given area. They are generated with the {{cssxref("gradient/repeating-linear-gradient()", "repeating-linear-gradient()")}} and {{cssxref("gradient/repeating-radial-gradient()", "repeating-radial-gradient()")}} functions.</p>
 </div>
 
 <div id="conic-gradient">
 <h4 id="Conic_gradient">Conic gradient</h4>
 
-<p>Conic gradients transition colors progressively around a circle. They are generated with the {{cssxref("conic-gradient", "conic-gradient()")}} function.</p>
+<p>Conic gradients transition colors progressively around a circle. They are generated with the {{cssxref("gradient/conic-gradient()", "conic-gradient()")}} function.</p>
 </div>
 
 <h2 id="Interpolation">Interpolation</h2>
@@ -146,38 +146,18 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Images', '#gradients', '&lt;gradient&gt;')}}</td>
-   <td>{{Spec2('CSS4 Images')}}</td>
-   <td>Adds conic-gradient</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Images', '#gradients', '&lt;gradient&gt;')}}</td>
-   <td>{{Spec2('CSS3 Images')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>{{Compat("css.types.image.gradient")}}</div>
+<div>{{Compat}}</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
  <li><a href="/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients">Using CSS gradients</a></li>
- <li>Gradient functions: {{cssxref("linear-gradient", "linear-gradient()")}}, {{cssxref("radial-gradient", "radial-gradient()")}}, {{cssxref("repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("repeating-radial-gradient", "repeating-radial-gradient()")}}, {{cssxref("conic-gradient", "conic-gradient()")}}</li>
+ <li>Gradient functions: {{cssxref("gradient/linear-gradient()", "gradient/linear-gradient()")}}, {{cssxref("gradient/radial-gradient()", "radial-gradient()")}}, {{cssxref("gradient/repeating-linear-gradient()", "repeating-linear-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient()", "repeating-radial-gradient()")}}, {{cssxref("gradient/conic-gradient()", "gradient/conic-gradient()")}}</li>
  <li><a href="/en-US/docs/Web/CSS/CSS_Types">CSS Basic Data Types</a></li>
  <li><a href="/en-US/docs/Web/CSS/CSS_Values_and_Units">CSS Units and Values</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/Values_and_units">Introduction to CSS: Values and Units</a></li>
+ <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Values_and_units">Introduction to CSS: Values and Units</a></li>
 </ul>

@@ -1,5 +1,5 @@
 ---
-title: VRDisplayEvent.VRDisplayEvent()
+title: VRDisplayEvent()
 slug: Web/API/VRDisplayEvent/VRDisplayEvent
 tags:
   - API
@@ -10,10 +10,15 @@ tags:
   - VRDisplayEvent
   - Virtual Reality
   - WebVR
+browser-compat: api.VRDisplayEvent.VRDisplayEvent
 ---
 <div>{{APIRef("WebVR API")}}{{Deprecated_Header}}</div>
 
-<p>The {{domxref("VRDisplayEvent")}} constructor creates a <code>VRDisplayEvent</code> object instance.</p>
+<p>The <strong><code>VRDisplayEvent()</code></strong> constructor creates a {{domxref("VRDisplayEvent")}} object instance.</p>
+
+<div class="notepad note">
+  <p><strong>Note:</strong> This constructor was part of the old <a href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</a>. It has been superseded by the <a href="https://immersive-web.github.io/webxr/">WebXR Device API</a>.</p>
+</div>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -44,28 +49,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<tbody>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-		<tr>
-			<td>{{SpecName('WebVR 1.1', '#dom-vrdisplayevent-vrdisplayevent', 'VRDisplayEvent()')}}</td>
-			<td>{{Spec2('WebVR 1.1')}}</td>
-			<td>Initial definition</td>
-		</tr>
-	</tbody>
-</table>
+<p>This constructor was part of the old <a href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</a> that has been superseded by the <a href="https://immersive-web.github.io/webxr/">WebXR Device API</a>. It is no longer on track to becoming a standard.</p>
+<p>Until all browsers have implemented the new <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Fundamentals">WebXR APIs</a>, it is recommended to rely on frameworks, like <a href="https://aframe.io/">A-Frame</a>, <a href="https://www.babylonjs.com/">Babylon.js</a>, or <a href="https://threejs.org/">Three.js</a>, or a <a href="https://github.com/immersive-web/webxr-polyfill">polyfill</a>, to develop WebXR applications that will work across all browsers <a href="https://developer.oculus.com/documentation/oculus-browser/browser-vr-xr/">[1]</a>.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-<div class="hidden">
-<p>The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-</div>
-
-<p>{{Compat("api.VRDisplayEvent.VRDisplayEvent")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

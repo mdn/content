@@ -7,6 +7,7 @@ tags:
   - Reference
   - SVG
   - SVG DOM
+browser-compat: api.SVGScriptElement
 ---
 <div>{{APIRef("SVG")}}</div>
 
@@ -17,8 +18,10 @@ tags:
 <h2 id="Properties">Properties</h2>
 
 <dl>
+ <dt>{{domxref("SVGScriptElement.href")}} {{ReadOnlyInline}}</dt>
+ <dd>An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("href")}} or {{SVGAttr("xlink:href")}} attribute of the given {{SVGElement("script")}} element.</dd>
  <dt>{{domxref("SVGScriptElement.type")}} {{ReadOnlyInline}}</dt>
- <dd>A {{domxref("DOMString")}} corresponding to the {{SVGAttr("type")}} attribute of the given {{SVGElement("script")}} element. A {{domxref("DOMException")}} is raised with the code <code>NO_MODIFICATION_ALLOWED_ERR</code> on an attempt to change the value of a read only attribut.</dd>
+ <dd>A {{domxref("DOMString")}} corresponding to the {{SVGAttr("type")}} attribute of the given {{SVGElement("script")}} element. A {{domxref("DOMException")}} is raised with the code <code>NO_MODIFICATION_ALLOWED_ERR</code> on an attempt to change the value of a read only attribute.</dd>
  <dt>{{domxref("SVGScriptElement.crossOrigin")}} {{ReadOnlyInline}}</dt>
  <dd>A {{domxref("DOMString")}} corresponding to the {{SVGAttr("crossorigin")}} attribute of the given {{SVGElement("script")}} element.</dd>
 </dl>
@@ -29,26 +32,8 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG2", "interact.html#InterfaceSVGScriptElement", "SVGScriptElement")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>Removed the implemented interface {{domxref("SVGExternalResourcesRequired")}} and added the <code>crossOrigin</code> property.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "script.html#InterfaceSVGScriptElement", "SVGScriptElement")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.SVGScriptElement")}}</p>
+<p>{{Compat}}</p>

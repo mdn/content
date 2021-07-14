@@ -6,23 +6,23 @@ tags:
   - Experimental
   - IndexedDB
   - Interface
-  - Obsolete
+  - Deprecated
   - Reference
 ---
 <p>{{APIRef("IndexedDB")}} {{ draft() }}</p>
 
 <div class="warning">
-<p><strong>Important</strong>: The synchronous version of the IndexedDB API was originally intended for use only with <a href="/en-US/docs/Web/Guide/Performance/Using_web_workers">Web Workers</a>, and was eventually removed from the spec because its need was questionable. It may however be reintroduced in the future if there is enough demand from web developers.</p>
+<p><strong>Important</strong>: The synchronous version of the IndexedDB API was originally intended for use only with <a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Web Workers</a>, and was eventually removed from the spec because its need was questionable. It may however be reintroduced in the future if there is enough demand from web developers.</p>
 </div>
 
-<p>The <code>IDBFactorySync</code> interface of the <a href="/en-US/docs/IndexedDB">IndexedDB API</a> provide a synchronous means of accessing the capabilities of indexed databases.</p>
+<p>The <code>IDBFactorySync</code> interface of the <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB API</a> provide a synchronous means of accessing the capabilities of indexed databases.</p>
 
 <h2 id="Method_overview">Method overview</h2>
 
 <table class="standard-table">
  <tbody>
   <tr>
-   <td><code><a href="/en-US/docs/IndexedDB/IDBDatabaseSync">IDBDatabaseSync</a> <a href="#open">open</a> (in DOMString name, in DOMString description, in optional boolean modifyDatabase) raises (<a href="/en-US/docs/IndexedDB/IDBDatabaseException">IDBDatabaseException</a>);</code></td>
+   <td><code><a href="/en-US/docs/Web/API/IDBDatabaseSync">IDBDatabaseSync</a> <a href="#open">open</a> (in DOMString name, in DOMString description, in optional boolean modifyDatabase) raises (<a href="/en-US/docs/Web/API/IDBDatabaseException">IDBDatabaseException</a>);</code></td>
   </tr>
  </tbody>
 </table>
@@ -31,7 +31,7 @@ tags:
 
 <h3 id="open">open()</h3>
 
-<p>Opens and returns a <a href="/en-US/docs/IndexedDB#gloss_database_connection">connection to a database</a>. Blocks the calling thread until the connection object is ready to return. If there is already a database with the specified name, it uses that one; otherwise, it creates the database using the specified name and description.</p>
+<p>Opens and returns a <a href="/en-US/docs/Web/API/IndexedDB_API#gloss_database_connection">connection to a database</a>. Blocks the calling thread until the connection object is ready to return. If there is already a database with the specified name, it uses that one; otherwise, it creates the database using the specified name and description.</p>
 
 <pre>IDBDatabaseSync open (
   in DOMString name,
@@ -51,7 +51,7 @@ tags:
 <h5 id="Returns">Returns</h5>
 
 <dl>
- <dt><code><a href="/en-US/docs/IndexedDB/IDBDatabaseSync">IDBDatabaseSync</a></code></dt>
+ <dt><code><a href="/en-US/docs/Web/API/IDBDatabaseSync">IDBDatabaseSync</a></code></dt>
  <dd>An object to access the open database.</dd>
 </dl>
 
@@ -60,8 +60,8 @@ tags:
 <p>This method can raise an IDBDatabaseException with the following codes:</p>
 
 <dl>
- <dt><code><a href="/en-US/docs/IndexedDB/IDBDatabaseException#NON_TRANSIENT_ERR">NON_TRANSIENT_ERR</a></code></dt>
+ <dt><code><a href="/en-US/docs/Web/API/IDBDatabaseException#non_transient_err">NON_TRANSIENT_ERR</a></code></dt>
  <dd>If the <code>name</code> parameter is not valid. A valid name is any string including the empty string.</dd>
- <dt><code><a href="/en-US/docs/IndexedDB/IDBDatabaseException#UNKNOWN_ERR">UNKNOWN_ERR</a></code></dt>
+ <dt><code><a href="/en-US/docs/Web/API/IDBDatabaseException#unknown_err">UNKNOWN_ERR</a></code></dt>
  <dd>If an error occurs while the database is being opened.</dd>
 </dl>

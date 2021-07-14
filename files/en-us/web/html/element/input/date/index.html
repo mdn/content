@@ -12,6 +12,7 @@ tags:
   - Input Element
   - Input Type
   - Reference
+browser-compat: html.elements.input.input-date
 ---
 <div>{{HTMLRef}}</div>
 
@@ -20,8 +21,6 @@ tags:
 <p>The resulting value includes the year, month, and day, but <em>not</em> the time. The {{HTMLElement("input/time", "time")}} and {{HTMLElement("input/datetime-local", "datetime-local")}} input types support time and date+time input.</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-date.html", "tabbed-shorter")}}</div>
-
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <p>The input UI generally varies from browser to browser; see {{anch("Browser compatibility")}} for further details. In unsupported browsers, the control degrades gracefully to <code><a href="/en-US/docs/Web/HTML/Element/input/text">&lt;input type="text"&gt;</a></code>.</p>
 
@@ -72,14 +71,14 @@ tags:
 <p><strong>The displayed date format will differ from the actual <code>value</code></strong> — the displayed date is formatted <em>based on the locale of the user's browser</em>, but the parsed <code>value</code> is always formatted <code>yyyy-mm-dd</code>.</p>
 </div>
 
-<p>You can get and set the date value in JavaScript with the input element's {{domxref("HTMLInputElement.value", "value")}} and {{domxref("HTMLInputElement.valueAsNumber", "valueAsNumber")}} properties. For example:</p>
+<p>You can get and set the date value in JavaScript with the {{domxref("HTMLInputElement")}} <code>value</code> and <code>valueAsNumber</code> properties. For example:</p>
 
 <pre class="brush: js">var dateControl = document.querySelector('input[type="date"]');
 dateControl.value = '2017-06-01';
 console.log(dateControl.value); // prints "2017-06-01"
 console.log(dateControl.valueAsNumber); // prints 1496275200000, a JavaScript timestamp (ms)</pre>
 
-<p>This code finds the first {{HTMLElement("input")}} element whose <code>type</code> is <code>date</code>, and sets its value to <code>2017-06-01</code> (June 1<sup>st</sup>, 2017). It then reads that value back in string and number formats.</p>
+<p>This code finds the first {{HTMLElement("input")}} element whose <code>type</code> is <code>date</code>, and sets its value to <code>2017-06-01</code> (June 1st, 2017). It then reads that value back in string and number formats.</p>
 
 <h2 id="Additional_attributes">Additional attributes</h2>
 
@@ -108,19 +107,19 @@ console.log(dateControl.valueAsNumber); // prints 1496275200000, a JavaScript ti
  </tbody>
 </table>
 
-<h3 id="htmlattrdefmax">{{htmlattrdef("max")}}</h3>
+<h3 id="attr-max"><code id="max">max</code></h3>
 
-<p>The latest date to accept. If the {{htmlattrxref("value", "input")}} entered into the element occurs afterward, the element fails <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a>. If the value of the <code>max</code> attribute isn't a possible date string in the format <code>yyyy-mm-dd</code>, then the element has no maximum date value.</p>
+<p>The latest date to accept. If the {{htmlattrxref("value", "input")}} entered into the element occurs afterward, the element fails <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a>. If the value of the <code>max</code> attribute isn't a possible date string in the format <code>yyyy-mm-dd</code>, then the element has no maximum date value.</p>
 
 <p>If both the <code>max</code> and <code>min</code> attributes are set, this value must be a date string <strong>later than or equal to</strong> the one in the <code>min</code> attribute.</p>
 
-<h3 id="htmlattrdefmin">{{htmlattrdef("min")}}</h3>
+<h3 id="attr-min"><code id="min">min</code></h3>
 
-<p>The earliest date to accept. If the {{htmlattrxref("value", "input")}} entered into the element occurs beforehand, the element fails <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a>. If the value of the <code>min</code> attribute isn't a possible date string in the format <code>yyyy-mm-dd</code>, then the element has no minimum date value.</p>
+<p>The earliest date to accept. If the {{htmlattrxref("value", "input")}} entered into the element occurs beforehand, the element fails <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a>. If the value of the <code>min</code> attribute isn't a possible date string in the format <code>yyyy-mm-dd</code>, then the element has no minimum date value.</p>
 
 <p>If both the <code>max</code> and <code>min</code> attributes are set, this value must be a date string <strong>earlier than or equal to</strong> the one in the <code>max</code> attribute.</p>
 
-<h3 id="htmlattrdefstep">{{htmlattrdef("step")}}</h3>
+<h3 id="attr-step"><code id="step">step</code></h3>
 
 <p>{{page("/en-US/docs/Web/HTML/Element/input/number", "step-include")}}</p>
 
@@ -162,7 +161,7 @@ console.log(dateControl.valueAsNumber); // prints 1496275200000, a JavaScript ti
 <p>You can use the {{htmlattrxref("min", "input")}} and {{htmlattrxref("max", "input")}} attributes to restrict the dates that can be chosen by the user. In the following example, we set a minimum date of <code>2017-04-01</code> and a maximum date of <code>2017-04-30</code>:</p>
 
 <pre class="brush: html">&lt;form&gt;
-  &lt;label for="party"&gt;Choose your preferred party date:
+  &lt;label&gt;Choose your preferred party date:
     &lt;input type="date" name="party" min="2017-04-01" max="2017-04-30"&gt;
   &lt;/label&gt;
 &lt;/form&gt;</pre>
@@ -254,7 +253,7 @@ input:valid+span::after {
 <p>One way around this is the {{htmlattrxref("pattern", "input")}} attribute on your date input. Even though the date picker doesn't use it, the text input fallback will. For example, try viewing the following in a unsupporting browser:</p>
 
 <pre class="brush: html">&lt;form&gt;
-  &lt;label for="bday"&gt;Enter your birthday:
+  &lt;label&gt;Enter your birthday:
     &lt;input type="date" name="bday" required pattern="\d{4}-\d{2}-\d{2}"&gt;
     &lt;span class="validity"&gt;&lt;/span&gt;
   &lt;/label&gt;
@@ -299,41 +298,41 @@ input:valid + span::after {
 <p>The HTML looks like so:</p>
 
 <pre class="brush: html">&lt;form&gt;
-    &lt;div class="nativeDatePicker"&gt;
-      &lt;label for="bday"&gt;Enter your birthday:&lt;/label&gt;
-      &lt;input type="date" id="bday" name="bday"&gt;
-      &lt;span class="validity"&gt;&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;p class="fallbackLabel"&gt;Enter your birthday:&lt;/p&gt;
-    &lt;div class="fallbackDatePicker"&gt;
-      &lt;span&gt;
-        &lt;label for="day"&gt;Day:&lt;/label&gt;
-        &lt;select id="day" name="day"&gt;
-        &lt;/select&gt;
-      &lt;/span&gt;
-      &lt;span&gt;
-        &lt;label for="month"&gt;Month:&lt;/label&gt;
-        &lt;select id="month" name="month"&gt;
-          &lt;option selected&gt;January&lt;/option&gt;
-          &lt;option&gt;February&lt;/option&gt;
-          &lt;option&gt;March&lt;/option&gt;
-          &lt;option&gt;April&lt;/option&gt;
-          &lt;option&gt;May&lt;/option&gt;
-          &lt;option&gt;June&lt;/option&gt;
-          &lt;option&gt;July&lt;/option&gt;
-          &lt;option&gt;August&lt;/option&gt;
-          &lt;option&gt;September&lt;/option&gt;
-          &lt;option&gt;October&lt;/option&gt;
-          &lt;option&gt;November&lt;/option&gt;
-          &lt;option&gt;December&lt;/option&gt;
-        &lt;/select&gt;
-      &lt;/span&gt;
-      &lt;span&gt;
-        &lt;label for="year"&gt;Year:&lt;/label&gt;
-        &lt;select id="year" name="year"&gt;
-        &lt;/select&gt;
-      &lt;/span&gt;
-    &lt;/div&gt;
+  &lt;div class="nativeDatePicker"&gt;
+    &lt;label for="bday"&gt;Enter your birthday:&lt;/label&gt;
+    &lt;input type="date" id="bday" name="bday"&gt;
+    &lt;span class="validity"&gt;&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;p class="fallbackLabel"&gt;Enter your birthday:&lt;/p&gt;
+  &lt;div class="fallbackDatePicker"&gt;
+    &lt;span&gt;
+      &lt;label for="day"&gt;Day:&lt;/label&gt;
+      &lt;select id="day" name="day"&gt;
+      &lt;/select&gt;
+    &lt;/span&gt;
+    &lt;span&gt;
+      &lt;label for="month"&gt;Month:&lt;/label&gt;
+      &lt;select id="month" name="month"&gt;
+        &lt;option selected&gt;January&lt;/option&gt;
+        &lt;option&gt;February&lt;/option&gt;
+        &lt;option&gt;March&lt;/option&gt;
+        &lt;option&gt;April&lt;/option&gt;
+        &lt;option&gt;May&lt;/option&gt;
+        &lt;option&gt;June&lt;/option&gt;
+        &lt;option&gt;July&lt;/option&gt;
+        &lt;option&gt;August&lt;/option&gt;
+        &lt;option&gt;September&lt;/option&gt;
+        &lt;option&gt;October&lt;/option&gt;
+        &lt;option&gt;November&lt;/option&gt;
+        &lt;option&gt;December&lt;/option&gt;
+      &lt;/select&gt;
+    &lt;/span&gt;
+    &lt;span&gt;
+      &lt;label for="year"&gt;Year:&lt;/label&gt;
+      &lt;select id="year" name="year"&gt;
+      &lt;/select&gt;
+    &lt;/span&gt;
+  &lt;/div&gt;
 &lt;/form&gt;</pre>
 
 <p>The months are hardcoded (as they are always the same), while the day and year values are dynamically generated depending on the currently selected month and year, and the current year (see the code comments below for detailed explanations of how these functions work.)</p>
@@ -484,39 +483,17 @@ daySelect.onchange = function() {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comments</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'forms.html#date-state-(type=date)', '&lt;input type="date"&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'sec-forms.html#date-state-typedate', '&lt;input type="date"&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+<p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
-
-<p>{{Compat("html.elements.input.input-date")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
  <li>The generic {{HTMLElement("input")}} element and the interface used to manipulate it, {{domxref("HTMLInputElement")}}</li>
- <li><a href="/en-US/docs/Learn/Forms/Basic_native_form_controls#Date_and_time_picker">Date and Time picker tutorial</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/HTML5_input_types#date_and_time_pickers">Date and Time picker tutorial</a></li>
  <li><a href="/en-US/docs/Web/HTML/Date_and_time_formats">Date and time formats used in HTML</a></li>
  <li><a href="/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls">Compatibility of CSS properties</a></li>
 </ul>

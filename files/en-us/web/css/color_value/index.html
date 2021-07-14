@@ -14,17 +14,28 @@ tags:
   - rgb
   - rgba
   - unit
+  - lch
+  - lab
+browser-compat: css.types.color
 ---
 <div>{{CSSRef}}</div>
 
-<p>The <strong><code>&lt;color&gt;</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Types">data type</a> represents a color in the <a href="https://en.wikipedia.org/wiki/SRGB">sRGB color space</a>. A <code>&lt;color&gt;</code> may also include an <a href="https://en.wikipedia.org/wiki/Alpha_compositing">alpha-channel</a> <em>transparency value</em>, indicating how the color should <a href="https://www.w3.org/TR/2003/REC-SVG11-20030114/masking.html#SimpleAlphaBlending">composite</a> with its background.</p>
+<p>The <strong><code>&lt;color&gt;</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Types">data type</a> represents a color.
+  A <code>&lt;color&gt;</code> may also include an <a href="https://en.wikipedia.org/wiki/Alpha_compositing">alpha-channel</a> <em>transparency value</em>, indicating how the color should <a href="https://www.w3.org/TR/2003/REC-SVG11-20030114/masking.html#SimpleAlphaBlending">composite</a> with its background.</p>
 
 <p>A <code>&lt;color&gt;</code> can be defined in any of the following ways:</p>
 
 <ul>
- <li>Using a keyword (such as <code>blue</code> or <code>transparent</code>)</li>
- <li>Using the <a href="https://en.wikipedia.org/wiki/RGB_color_model#Geometric_representation">RGB cubic-coordinate</a> system (via the #-hexadecimal or the <code>rgb()</code> and <code>rgba()</code> functional notations)</li>
- <li>Using the <a href="https://en.wikipedia.org/wiki/HSL_and_HSV">HSL cylindrical-coordinate</a> system (via the <code>hsl()</code> and <code>hsla()</code> functional notations)</li>
+ <li>Using a keyword (such as <code>blue</code> or <code>transparent</code>). All existing keywords specify a color in the <a href="https://en.wikipedia.org/wiki/SRGB">sRGB color space</a></li>
+ <li>Using the <a href="https://en.wikipedia.org/wiki/RGB_color_model#Geometric_representation">RGB cubic-coordinate</a> system (via the #-hexadecimal or the <code>rgb()</code> and <code>rgba()</code> functional notations).
+  These always specify a color in the <a href="https://en.wikipedia.org/wiki/SRGB">sRGB color space</a></li>
+ <li>Using the <a href="https://en.wikipedia.org/wiki/HSL_and_HSV">HSL cylindrical-coordinate</a> system (via the <code>hsl()</code> and <code>hsla()</code> functional notations).
+  These always specify a color in the <a href="https://en.wikipedia.org/wiki/SRGB">sRGB color space</a></li>
+ <li>Using the <a href="https://en.wikipedia.org/wiki/CIELAB_color_space#Cylindrical_representation:_CIELCh_or_CIEHLC">LCH cylindrical coordinate system</a>, via the <code>lch()</code> functional notation.
+   This can specify any visible color.</li>
+ <li>Using the <a href="https://en.wikipedia.org/wiki/CIELAB_color_space">Lab coordinate system</a>, via the <code>lab()</code> functional notation.
+   This can specify any visible color.</li>
+ <li>Using the <code>color()</code> functional notation, to specify a color in a variety of predifined or custom color spaces.</li>
 </ul>
 
 <div class="note">
@@ -847,17 +858,17 @@ tags:
 <p><strong>Historical note:</strong> <code>transparent</code> wasn't a true color in CSS Level 2 (Revision 1). It was a special keyword that could be used instead of a regular <code>&lt;color&gt;</code> value on two CSS properties: {{Cssxref("background")}} and {{Cssxref("border")}}. It was essentially added to allow developers to override an inherited solid color. With the advent of alpha channels in CSS Colors Level 3, <code>transparent</code> was redefined as a true color. It can now be used wherever a <code>&lt;color&gt;</code> value can be used.</p>
 </div>
 
-<h3 id="currentcolor_keyword"><code id="currentColor">currentcolor</code> keyword</h3>
+<h3 id="currentcolor_keyword"><code id="currentColor">currentColor</code> keyword</h3>
 
-<p>The <code>currentcolor</code> keyword represents the value of an element's {{Cssxref("color")}} property. This lets you use the <code>color</code> value on properties that do not receive it by default.</p>
+<p>The <code>currentColor</code> keyword represents the value of an element's {{Cssxref("color")}} property. This lets you use the <code>color</code> value on properties that do not receive it by default.</p>
 
-<p>If <code>currentcolor</code> is used as the value of the <code>color</code> property, it instead takes its value from the inherited value of the <code>color</code> property.</p>
+<p>If <code>currentColor</code> is used as the value of the <code>color</code> property, it instead takes its value from the inherited value of the <code>color</code> property.</p>
 
-<h4 id="currentcolor_example">currentcolor example</h4>
+<h4 id="currentcolor_example">currentColor example</h4>
 
-<pre class="brush: html">&lt;div style="color:blue; border: 1px dashed currentcolor;"&gt;
+<pre class="brush: html">&lt;div style="color:blue; border: 1px dashed currentColor;"&gt;
   The color of this text is blue.
-  &lt;div style="background:currentcolor; height:9px;"&gt;&lt;/div&gt;
+  &lt;div style="background:currentColor; height:9px;"&gt;&lt;/div&gt;
   This block is surrounded by a blue border.
 &lt;/div&gt;</pre>
 
@@ -865,7 +876,7 @@ tags:
 
 <h3 id="RGB_colors">RGB colors</h3>
 
-<p>The RGB color model defines a given color according to its red, green, and blue components. An optional alpha component represents the color's transparency.</p>
+<p>The RGB color model defines a given color in the <a href="https://en.wikipedia.org/wiki/SRGB">sRGB color space</a> according to its red, green, and blue components. An optional alpha component represents the color's transparency.</p>
 
 <h4 id="Syntax_2">Syntax</h4>
 
@@ -888,9 +899,11 @@ tags:
 
 <h3 id="HSL_colors">HSL colors</h3>
 
-<p>The HSL color model defines a given color according to its hue, saturation, and lightness components. An optional alpha component represents the color's transparency.</p>
+<p>The HSL color model defines a given color in the <a href="https://en.wikipedia.org/wiki/SRGB">sRGB color space</a> according to its hue, saturation, and lightness components. An optional alpha component represents the color's transparency.</p>
 
-<p>Many designers find HSL more intuitive than RGB, since it allows hue, saturation, and lightness to each be adjusted independently. HSL can also make it easier to create a set of matching colors (such as when you want multiple shades of a single hue).</p>
+<p>Many designers find HSL more intuitive than RGB, since it allows hue, saturation, and lightness to each be adjusted independently. HSL can also make it easier to create a set of matching colors (such as when you want multiple shades of a single hue).
+  However, using HSL to create color variations can produce surprising results, as it is not <a href="https://en.wikipedia.org/wiki/Color_difference#Tolerance">perceptually uniform</a>. For example, both <code>hsl(240 100% 50%)</code> and <code>hsl(60 100% 50%)</code> have the same lightness, even though the former is much darker than the latter.
+  </p>
 
 <h4 id="Syntax_3">Syntax</h4>
 
@@ -902,9 +915,11 @@ tags:
 
 <dl>
  <dt>Functional notation: <code>hsl[a](H, S, L[, A])</code></dt>
- <dd><code>H</code> (hue) is an {{cssxref("&lt;angle&gt;")}} of the color circle given in <code>deg</code>s, <code>rad</code>s, <code>grad</code>s, or <code>turn</code>s in {{SpecName("CSS4 Colors","#the-hsl-notation")}}. When written as a unitless {{cssxref("&lt;number&gt;")}}, it is interpreted as degrees, as specified in {{SpecName("CSS3 Colors", "#hsl-color")}}. By definition, red=0deg=360deg, with the other colors spread around the circle, so green=120deg, blue=240deg, etc. As an <code>&lt;angle&gt;</code>, it implicitly wraps around such that -120deg=240deg, 480deg=120deg, -1turn=1turn, etc.</dd>
- <dd><code>S</code> (saturation) and <code>L</code> (lightness) are percentages. <code>100%</code> <strong>saturation</strong> is completely saturated, while <code>0%</code> is completely unsaturated (gray). <code>100%</code> <strong>lightness</strong> is white, <code>0%</code> lightness is black, and <code>50%</code> lightness is “normal.”</dd>
- <dd><code>A</code> (alpha) can be a {{cssxref("&lt;number&gt;")}} between <code>0</code> and <code>1</code>, or a {{cssxref("&lt;percentage&gt;")}}, where the number <code>1</code> corresponds to <code>100%</code> (full opacity).</dd>
+ <dd>
+   <p><code>H</code> (hue) is an {{cssxref("&lt;angle&gt;")}} of the color circle given in <code>deg</code>s, <code>rad</code>s, <code>grad</code>s, or <code>turn</code>s in {{SpecName("CSS4 Colors","#the-hsl-notation")}}. When written as a unitless {{cssxref("&lt;number&gt;")}}, it is interpreted as degrees, as specified in {{SpecName("CSS3 Colors", "#hsl-color")}}. By definition, red=0deg=360deg, with the other colors spread around the circle, so green=120deg, blue=240deg, etc. As an <code>&lt;angle&gt;</code>, it implicitly wraps around such that -120deg=240deg, 480deg=120deg, -1turn=1turn, etc.</p>
+   <p><code>S</code> (saturation) and <code>L</code> (lightness) are percentages. <code>100%</code> <strong>saturation</strong> is completely saturated, while <code>0%</code> is completely unsaturated (gray). <code>100%</code> <strong>lightness</strong> is white, <code>0%</code> lightness is black, and <code>50%</code> lightness is “normal.”</p>
+   <p><code>A</code> (alpha) can be a {{cssxref("&lt;number&gt;")}} between <code>0</code> and <code>1</code>, or a {{cssxref("&lt;percentage&gt;")}}, where the number <code>1</code> corresponds to <code>100%</code> (full opacity).</p>
+ </dd>
  <dt>Functional notation: <code>hsl[a](H S L[ / A])</code></dt>
  <dd>CSS Colors Level 4 adds support for space-separated values in the functional notation.</dd>
 </dl>
@@ -926,11 +941,11 @@ tags:
  </dd>
  <dt>ButtonFace</dt>
  <dd>
- <p>Background of push buttons</p>
+ <p>Background color of controls</p>
  </dd>
  <dt>ButtonText</dt>
  <dd>
- <p>Text of push buttons</p>
+ <p>Foreground color of controls</p>
  </dd>
  <dt>Canvas</dt>
  <dd>
@@ -938,7 +953,7 @@ tags:
  </dd>
  <dt>CanvasText</dt>
  <dd>
- <p>Text in application content or documents</p>
+ <p>Foreground color in application content or documents</p>
  </dd>
  <dt>Field</dt>
  <dd>
@@ -950,15 +965,15 @@ tags:
  </dd>
  <dt>GrayText</dt>
  <dd>
- <p>Text that is disabled</p>
+ <p>Foreground color for disabled items (e.g. a disabled control)</p>
  </dd>
  <dt>Highlight</dt>
  <dd>
- <p>Background of items that are selected in a control</p>
+ <p>Background of selected items</p>
  </dd>
  <dt>HighlightText</dt>
  <dd>
- <p>Text of items that are selected in a control</p>
+ <p>Foreground color of selected items</p>
  </dd>
  <dt>LinkText</dt>
  <dd>
@@ -1105,11 +1120,11 @@ tags:
  </dd>
  <dt>-moz-Combobox</dt>
  <dd>
- <p>{{Gecko_minversion_inline("1.9.2")}} Background color for combo-boxes. Should be used with the <code>-moz-ComboboxText</code> foreground color. In versions prior to 1.9.2, use <code>-moz-Field</code> instead.</p>
+ <p>Background color for combo-boxes. Should be used with the <code>-moz-ComboboxText</code> foreground color. In versions prior to 1.9.2, use <code>-moz-Field</code> instead.</p>
  </dd>
  <dt>-moz-ComboboxText</dt>
  <dd>
- <p>{{Gecko_minversion_inline("1.9.2")}} Text color for combo-boxes. Should be used with the <code>-moz-Combobox</code> background color. In versions prior to 1.9.2, use <code>-moz-FieldText</code> instead.</p>
+ <p>Text color for combo-boxes. Should be used with the <code>-moz-Combobox</code> background color. In versions prior to 1.9.2, use <code>-moz-FieldText</code> instead.</p>
  </dd>
  <dt>-moz-Dialog</dt>
  <dd>
@@ -1119,39 +1134,25 @@ tags:
  <dd>
  <p>Text color for dialog boxes. Should be used with the <code>-moz-Dialog</code> background color.</p>
  </dd>
- <dt>-moz-dragtargetzone</dt>
- <dt>-moz-EvenTreeRow</dt>
+ <dt>-moz-dragtargetzone, -moz-EvenTreeRow</dt>
  <dd>
- <p>{{gecko_minversion_inline("1.9")}} Background color for even-numbered rows in a tree. Should be used with the <code>-moz-FieldText</code> foreground color. In Gecko versions prior to 1.9, use <code>-moz-Field</code>. See also <code>-moz-OddTreeRow</code>.</p>
+ <p>Background color for even-numbered rows in a tree. Should be used with the <code>-moz-FieldText</code> foreground color. In Gecko versions prior to 1.9, use <code>-moz-Field</code>. See also <code>-moz-OddTreeRow</code>.</p>
  </dd>
  <dt>-moz-html-CellHighlight</dt>
  <dd>
- <p>{{gecko_minversion_inline("1.9")}} Background color for highlighted item in HTML {{HTMLElement("select")}}s. Should be used with the <code>-moz-html-CellHighlightText</code> foreground color. Prior to Gecko 1.9, use <code>-moz-CellHighlight</code>.</p>
+ <p>Background color for highlighted item in HTML {{HTMLElement("select")}}s. Should be used with the <code>-moz-html-CellHighlightText</code> foreground color. Prior to Gecko 1.9, use <code>-moz-CellHighlight</code>.</p>
  </dd>
  <dt>-moz-html-CellHighlightText</dt>
  <dd>
- <p>{{gecko_minversion_inline("1.9")}} Text color for highlighted items in HTML {{HTMLElement("select")}}s. Should be used with the <code>-moz-html-CellHighlight</code> background color. Prior to Gecko 1.9, use <code>-moz-CellHighlightText</code>.</p>
+ <p>Text color for highlighted items in HTML {{HTMLElement("select")}}s. Should be used with the <code>-moz-html-CellHighlight</code> background color. Prior to Gecko 1.9, use <code>-moz-CellHighlightText</code>.</p>
  </dd>
- <dt>-moz-mac-accentdarkestshadow</dt>
- <dt>-moz-mac-accentdarkshadow</dt>
- <dt>-moz-mac-accentface</dt>
- <dt>-moz-mac-accentlightesthighlight</dt>
- <dt>-moz-mac-accentlightshadow</dt>
- <dt>-moz-mac-accentregularhighlight</dt>
- <dt>-moz-mac-accentregularshadow</dt>
- <dt>-moz-mac-chrome-active</dt>
+ <dt>-moz-mac-accentdarkestshadow, -moz-mac-accentdarkshadow, -moz-mac-accentface, -moz-mac-accentlightesthighlight, -moz-mac-accentlightshadow, -moz-mac-accentregularhighlight, -moz-mac-accentregularshadow, -moz-mac-chrome-active</dt>
  <dd>
- <p>{{Gecko_minversion_inline("1.9.1")}}</p>
  </dd>
  <dt>-moz-mac-chrome-inactive</dt>
  <dd>
- <p>{{Gecko_minversion_inline("1.9.1")}}</p>
  </dd>
- <dt>-moz-mac-focusring</dt>
- <dt>-moz-mac-menuselect</dt>
- <dt>-moz-mac-menushadow</dt>
- <dt>-moz-mac-menutextselect</dt>
- <dt>-moz-MenuHover</dt>
+ <dt>-moz-mac-focusring, -moz-mac-menuselect, -moz-mac-menushadow, -moz-mac-menutextselect, -moz-MenuHover</dt>
  <dd>
  <p>Background color for hovered menu items. Often similar to <code>Highlight</code>. Should be used with the <code>-moz-MenuHoverText</code> or <code>-moz-MenuBarHoverText</code> foreground color.</p>
  </dd>
@@ -1161,7 +1162,7 @@ tags:
  </dd>
  <dt>-moz-MenuBarText</dt>
  <dd>
- <p>{{Gecko_minversion_inline("1.9.2")}} Text color in menu bars. Often similar to <code>MenuText</code>. Should be used on top of <code>Menu</code> background.</p>
+ <p>Text color in menu bars. Often similar to <code>MenuText</code>. Should be used on top of <code>Menu</code> background.</p>
  </dd>
  <dt>-moz-MenuBarHoverText</dt>
  <dd>
@@ -1169,29 +1170,27 @@ tags:
  </dd>
  <dt>-moz-nativehyperlinktext</dt>
  <dd>
- <p>{{Gecko_minversion_inline("1.9.1")}} Default platform hyperlink color.</p>
+ <p>Default platform hyperlink color.</p>
  </dd>
  <dt>-moz-OddTreeRow</dt>
  <dd>
- <p>{{gecko_minversion_inline("1.9")}} Background color for odd-numbered rows in a tree. Should be used with the <code>-moz-FieldText</code> foreground color. In Gecko versions prior to 1.9, use <code>-moz-Field</code>. See also <code>-moz-EvenTreeRow</code>.</p>
+ <p>Background color for odd-numbered rows in a tree. Should be used with the <code>-moz-FieldText</code> foreground color. In Gecko versions prior to 1.9, use <code>-moz-Field</code>. See also <code>-moz-EvenTreeRow</code>.</p>
  </dd>
  <dt>-moz-win-communicationstext</dt>
  <dd>
- <p>{{gecko_minversion_inline("1.9")}} Should be used for text in objects with <code>{{cssxref("-moz-appearance")}}: -moz-win-communications-toolbox;</code>.</p>
+ <p> Should be used for text in objects with <code>{{cssxref("appearance")}}: -moz-win-communications-toolbox;</code>.</p>
  </dd>
  <dt>-moz-win-mediatext</dt>
  <dd>
- <p>{{gecko_minversion_inline("1.9")}} Should be used for text in objects with <code>{{cssxref("-moz-appearance")}}: -moz-win-media-toolbox</code>.</p>
+ <p> Should be used for text in objects with <code>{{cssxref("appearance")}}: -moz-win-media-toolbox</code>.</p>
  </dd>
  <dt>-moz-win-accentcolor</dt>
  <dd>
- <p>{{gecko_minversion_inline("56")}}<br>
-  Used to access the Windows 10 custom accent color that you can set on the start menu, taskbar, title bars, etc.</p>
+  Used to access the Windows 10 custom accent color that you can set on the start menu, taskbar, title bars, etc.
  </dd>
  <dt>-moz-win-accentcolortext</dt>
  <dd>
- <p>{{gecko_minversion_inline("56")}}<br>
-  Used to access the color of text placed over the Windows 10 custom accent color in the start menu, taskbar, title bars, etc.</p>
+ <p>Used to access the color of text placed over the Windows 10 custom accent color in the start menu, taskbar, title bars, etc.</p>
  </dd>
 </dl>
 </div>
@@ -1205,11 +1204,11 @@ tags:
  </dd>
  <dt>-moz-default-background-color</dt>
  <dd>
- <p>{{Gecko_minversion_inline("5.0")}} User's preference for the document background color.</p>
+ <p>User's preference for the document background color.</p>
  </dd>
  <dt>-moz-default-color</dt>
  <dd>
- <p>{{Gecko_minversion_inline("5.0")}} User's preference for the text color.</p>
+ <p>User's preference for the text color.</p>
  </dd>
  <dt>-moz-hyperlinktext</dt>
  <dd>
@@ -1221,13 +1220,39 @@ tags:
  </dd>
 </dl>
 
+<h3 id="Lab_colors">Lab colors</h3>
+  
+<p>CSS Color 4 introduced Lab colors.
+Lab colors are specified via the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/lab()"><code>lab()</code></a> functional notation.
+They are not limited to a specific color space, and can represent the entire spectrum of human vision.</p>
+  
+<h3 id="LCH_colors">LCH colors</h3>
+  
+<p>CSS Color 4 introduced LCH colors.
+LCH colors are specified via the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/lch()"><code>lch()</code></a> functional notation.
+They are not limited to a specific color space, and can represent the entire spectrum of human vision.</p>
+
+<p>In fact, LCH is the polar form of Lab. It is more human friendly than Lab, as its chroma and hue components specify qualities of the desired color, as opposed to mixing.
+It is similar to HSL in that way, although it is far more perceptually uniform.
+Unlike HSL that describes both <code>hsl(60 100% 50%)</code> <code>hsl(240 100% 50%)</code> as having the same lightness, LCH (and Lab) correctly ascribes different lightnesses to them:
+the former (yellow) has an L of 97.6 and the latter (blue) an L of 29.6. 
+Therefore, LCH can be used to create palettes across entirely different colors, with predictable results.
+Please note that LCH hue is not the same as HSL hue and LCH chroma is not the same as HSL saturation, although they do share some conceptual similarities.</p>
+
+  
+<h3 id="color_colors">color() colors</h3>
+  
+<p>CSS Color 4 introduced this notation.
+Colors specified via the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/color()"><code>color()</code></a> function can specify a color in any of the predefined color spaces, 
+  as well as custom color spaces, defined via the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@color-profile"><code>@color-profile</code></a> rule.</p>
+
 <h2 id="Interpolation">Interpolation</h2>
 
-<p>In animations and <a href="/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients">gradients</a>, <code>&lt;color&gt;</code> values are interpolated on each of their red, green, and blue components. Each component is interpolated as a real, floating-point number. Note that interpolation of colors happens in the <a href="https://www.gimp.org/docs/plug-in/appendix-alpha.html">alpha-premultiplied sRGBA color space</a> to prevent unexpected gray colors from appearing. In animations, the interpolation's speed is determined by the <a href="/en-US/docs/Web/CSS/single-transition-timing-function">timing function</a>.</p>
+<p>In animations and <a href="/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients">gradients</a>, <code>&lt;color&gt;</code> values are interpolated on each of their red, green, and blue components. Each component is interpolated as a real, floating-point number. Note that interpolation of colors happens in the <a href="https://www.gimp.org/docs/plug-in/appendix-alpha.html">alpha-premultiplied sRGBA color space</a> to prevent unexpected gray colors from appearing. In animations, the interpolation's speed is determined by the <a href="/en-US/docs/Web/CSS/easing-function">timing function</a>.</p>
 
 <h2 id="Accessibility_considerations">Accessibility considerations</h2>
 
-<p>Some people have difficulty distinguishing colors. The <a href="https://www.w3.org/TR/WCAG/#visual-audio-contrast">WCAG 2.0</a> recommendation strongly advises against using color as the only means of conveying a specific message, action, or result. See <a href="/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#Color_and_color_contrast">Color and color contrast</a> for more information.</p>
+<p>Some people have difficulty distinguishing colors. The <a href="https://www.w3.org/TR/WCAG/#visual-audio-contrast">WCAG 2.0</a> recommendation strongly advises against using color as the only means of conveying a specific message, action, or result. See <a href="/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#color_and_color_contrast">Color and color contrast</a> for more information.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -1339,8 +1364,8 @@ rgba(51, 170, 51, .7)   <span style="background: rgba(51, 170, 51, .7);"> /*  70
 rgba(51, 170, 51,  1)   <span style="background: rgba(51, 170, 51,  1);"> /* full opaque green */ </span>
 
 /* Whitespace syntax */
-rgba(51 170 51 / 0.4)    /*  40% opaque green */ 
-rgba(51 170 51 / 40%)    /*  40% opaque green */ 
+rgba(51 170 51 / 0.4)    /*  40% opaque green */
+rgba(51 170 51 / 40%)    /*  40% opaque green */
 
 /* Functional syntax with floats value */
 rgba(255, 0, 153.6, 1)
@@ -1557,7 +1582,7 @@ hsla(240 100% 50% / 5%)      <span style="background: hsla(240,100%,50%,0.05);">
   <tr>
    <td>{{SpecName('CSS4 Colors', '#changes-from-3')}}</td>
    <td>{{Spec2('CSS4 Colors')}}</td>
-   <td>Adds <code>rebeccapurple</code>, four- (<code>#RGBA</code>) and eight-digit (<code>#RRGGBBAA</code>) hexadecimal notations, <code>rgba()</code> and <code>hsla()</code> as aliases of <code>rgb()</code> and <code>hsl()</code> (both with identical parameter syntax), space-separated function parameters as an alternative to commas, percentages for alpha values, and angles for the hue component in <code>hsl()</code> colors.</td>
+    <td>Adds LCH and Lab colors, the <code>color()</code> functional notation, <code>rebeccapurple</code>, four- (<code>#RGBA</code>) and eight-digit (<code>#RRGGBBAA</code>) hexadecimal notations, <code>rgba()</code> and <code>hsla()</code> as aliases of <code>rgb()</code> and <code>hsl()</code> (both with identical parameter syntax), space-separated function parameters as an alternative to commas, percentages for alpha values, and angles for the hue component in <code>hsl()</code> colors.</td>
   </tr>
   <tr>
    <td>{{SpecName('CSS3 Colors', '#colorunits', '&lt;color&gt;')}}</td>
@@ -1579,7 +1604,7 @@ hsla(240 100% 50% / 5%)      <span style="background: hsla(240,100%,50%,0.05);">
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.types.color")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

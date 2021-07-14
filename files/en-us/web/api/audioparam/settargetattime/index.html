@@ -8,6 +8,7 @@ tags:
   - Reference
   - Web Audio API
   - setTargetAtTime
+browser-compat: api.AudioParam.setTargetAtTime
 ---
 <p>{{ APIRef("Web Audio API") }}</p>
 
@@ -91,41 +92,41 @@ tags:
 <p>For more details, check the following table on how the value changes from 0% to 100% as
   the time progresses.</p>
 
-<table style="width: auto;">
+<table>
   <thead>
     <tr>
-      <th style="white-space: nowrap;">Time since <code>startTime</code></th>
+      <th>Time since <code>startTime</code></th>
       <th>Value</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><code>0 * timeConstant</code></td>
-      <td style="text-align: right;">0%</td>
+      <td>0%</td>
     </tr>
     <tr>
       <td><code>0.5 * timeConstant</code></td>
-      <td style="text-align: right;">39.3%</td>
+      <td>39.3%</td>
     </tr>
     <tr>
       <td><code>1 * timeConstant</code></td>
-      <td style="text-align: right;">63.2%</td>
+      <td>63.2%</td>
     </tr>
     <tr>
       <td><code>2 * timeConstant</code></td>
-      <td style="text-align: right;">86.5%</td>
+      <td>86.5%</td>
     </tr>
     <tr>
       <td><code>3 * timeConstant</code></td>
-      <td style="text-align: right;">95.0%</td>
+      <td>95.0%</td>
     </tr>
     <tr>
       <td><code>4 * timeConstant</code></td>
-      <td style="text-align: right;">98.2%</td>
+      <td>98.2%</td>
     </tr>
     <tr>
       <td><code>5 * timeConstant</code></td>
-      <td style="text-align: right;">99.3%</td>
+      <td>99.3%</td>
     </tr>
     <tr>
       <td><code>n * timeConstant</code></td>
@@ -202,25 +203,11 @@ atTimeMinus.onclick = function() {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Web Audio API', '#dom-audioparam-settargetattime',
-        'setTargetAtTime')}}</td>
-      <td>{{Spec2('Web Audio API')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.AudioParam.setTargetAtTime")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

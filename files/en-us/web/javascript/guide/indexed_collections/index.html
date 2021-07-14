@@ -4,7 +4,7 @@ slug: Web/JavaScript/Guide/Indexed_collections
 tags:
   - Guide
   - JavaScript
-  - 'l10n:priority'
+  - l10n:priority
 ---
 <div>{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Keyed_Collections")}}</div>
 
@@ -29,7 +29,7 @@ let arr = [<var>element0</var>, <var>element1</var>, ..., <var>elementN</var>]
 
 <p><code><var>element0</var>, <var>element1</var>, ..., <var>elementN</var></code> is a list of values for the array's elements. When these values are specified, the array is initialized with them as the array's elements. The array's <code>length</code> property is set to the number of arguments.</p>
 
-<p>The bracket syntax is called an "array literal" or "array initializer." It's shorter than other forms of array creation, and so is generally preferred. See <a href="/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#Array_literals">Array literals</a> for details.</p>
+<p>The bracket syntax is called an "array literal" or "array initializer." It's shorter than other forms of array creation, and so is generally preferred. See <a href="/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#array_literals">Array literals</a> for details.</p>
 
 <p>To create an array with non-zero length, but without any items, either of the following can be used:</p>
 
@@ -58,7 +58,7 @@ obj.prop = [element0, element1, ..., elementN]
 let obj = {prop: [element0, element1, ...., elementN]}
 </pre>
 
-<p>If you wish to initialize an array with a single element, and the element happens to be a <code>Number</code>, you must use the bracket syntax. When a single <code>Number</code> value is passed to the <code>Array()</code> constructor or function, it is interpreted as an <code>arrayLength</code>, not as a single element.</p>
+<p>If you wish to initialize an array with a single element, and the element happens to be a <code>Number</code>, you must use the bracket syntax. When a single <code>Number</code> value is passed to the <code>Array()</code> constructor or function, it is interpreted as an <code><var>arrayLength</var></code>, not as a single element.</p>
 
 <pre class="brush: js">let arr = [42]       // Creates an array with only one element:
                      // the number 42.
@@ -167,7 +167,7 @@ for (let i = 0; i &lt; colors.length; i++) {
 }
 </pre>
 
-<p>If you know that none of the elements in your array evaluate to <code>false</code> in a boolean context—if your array consists only of <a href="/en-US/docs/DOM">DOM</a> nodes, for example—you can use a more efficient idiom:</p>
+<p>If you know that none of the elements in your array evaluate to <code>false</code> in a boolean context—if your array consists only of <a href="/en-US/docs/Web/API/Document_Object_Model">DOM</a> nodes, for example—you can use a more efficient idiom:</p>
 
 <pre class="brush: js">let divs = document.getElementsByTagName('div')
 for (let i = 0, div; div = divs[i]; i++) {
@@ -435,9 +435,9 @@ Row 3: [3, 0] [3, 1] [3, 2] [3, 3]
 
 <p>Arrays can also be used like objects, to store related information.</p>
 
-<pre class="brush: js"><code>const arr = [1, 2, 3];
-arr.property = "value";
-console.log(arr.property);  // Logs "value"</code>
+<pre class="brush: js">const arr = [1, 2, 3];
+arr.property = &quot;value&quot;;
+console.log(arr.property);  // Logs &quot;value&quot;
 </pre>
 
 <h3 id="Arrays_and_regular_expressions">Arrays and regular expressions</h3>
@@ -450,20 +450,20 @@ console.log(arr.property);  // Logs "value"</code>
 
 <p>Array methods cannot be called directly on array-like objects.</p>
 
-<pre class="brush: js example-bad"><code>function printArguments() {
-  arguments.forEach(function(item) {  // <span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox-stackTrace reps-custom-format">TypeError: <span class="objectBox objectBox-string">arguments.forEach is not a function</span></span></span></span></span>
+<pre class="brush: js example-bad">function printArguments() {
+  arguments.forEach(function(item) {  // TypeError: arguments.forEach is not a function
     console.log(item);
   });
-}</code>
+}
 </pre>
 
 <p>But you can call them indirectly using {{jsxref("Global_Objects/Function/call","Function.prototype.call()")}}.</p>
 
-<pre class="brush: js example-good"><code>function printArguments() {
+<pre class="brush: js example-good">function printArguments() {
   Array.prototype.forEach.call(arguments, function(item) {
     console.log(item);
   });
-}</code>
+}
 </pre>
 
 <p>Array prototype methods can be used on strings as well, since they provide sequential access to their characters in a similar way to arrays:</p>
@@ -475,13 +475,13 @@ console.log(arr.property);  // Logs "value"</code>
 
 <h2 id="Typed_Arrays">Typed Arrays</h2>
 
-<p><a href="/en-US/docs/Web/JavaScript/Typed_arrays">JavaScript typed arrays</a> are array-like objects and provide a mechanism for accessing raw binary data. As you already know, {{jsxref("Array")}} objects grow and shrink dynamically and can have any JavaScript value. JavaScript engines perform optimizations so that these arrays are fast. However, as web applications become more and more powerful, adding features such as audio and video manipulation, access to raw data using <a href="/en-US/docs/WebSockets">WebSockets</a>, and so forth, it has become clear that there are times when it would be helpful for JavaScript code to be able to quickly and easily manipulate raw binary data in typed arrays.</p>
+<p><a href="/en-US/docs/Web/JavaScript/Typed_arrays">JavaScript typed arrays</a> are array-like objects and provide a mechanism for accessing raw binary data. As you already know, {{jsxref("Array")}} objects grow and shrink dynamically and can have any JavaScript value. JavaScript engines perform optimizations so that these arrays are fast. However, as web applications become more and more powerful, adding features such as audio and video manipulation, access to raw data using <a href="/en-US/docs/Web/API/WebSockets_API">WebSockets</a>, and so forth, it has become clear that there are times when it would be helpful for JavaScript code to be able to quickly and easily manipulate raw binary data in typed arrays.</p>
 
 <h3 id="Buffers_and_views_typed_array_architecture">Buffers and views: typed array architecture</h3>
 
 <p>To achieve maximum flexibility and efficiency, JavaScript typed arrays split the implementation into <strong>buffers</strong> and <strong>views</strong>. A buffer (implemented by the {{jsxref("ArrayBuffer")}} object) is an object representing a chunk of data; it has no format to speak of, and offers no mechanism for accessing its contents. In order to access the memory contained in a buffer, you need to use a view. A view provides a <strong>context </strong>— that is, a data type, starting offset, and number of elements — that turns the data into an actual typed array.</p>
 
-<p><img alt="Typed arrays in an ArrayBuffer" src="https://mdn.mozillademos.org/files/8629/typed_arrays.png" style="height: 278px; width: 666px;"></p>
+<p><img alt="Typed arrays in an ArrayBuffer" src="typed_arrays.png"></p>
 
 <h3 id="ArrayBuffer">ArrayBuffer</h3>
 
@@ -561,7 +561,7 @@ console.log(arr.property);  // Logs "value"</code>
   </tr>
   <tr>
    <td>{{jsxref("Float32Array")}}</td>
-   <td><code>1.2</code>×<code>10<sup>-38</sup></code> to <code>3.4</code>×<code>10<sup>38</sup></code></td>
+   <td><code>1.2E-38</code> to <code>3.4E38</code></td>
    <td>4</td>
    <td>32-bit IEEE floating point number (7 significant digits e.g., <code>1.1234567</code>)</td>
    <td><code>unrestricted float</code></td>
@@ -569,7 +569,7 @@ console.log(arr.property);  // Logs "value"</code>
   </tr>
   <tr>
    <td>{{jsxref("Float64Array")}}</td>
-   <td><code>5.0</code>×<code>10<sup>-324</sup></code> to <code>1.8</code>×<code>10<sup>308</sup></code></td>
+   <td><code>5E-324</code> to <code>1.8E308</code></td>
    <td>8</td>
    <td>64-bit IEEE floating point number (16 significant digits e.g., <code>1.123...15</code>)</td>
    <td><code>unrestricted double</code></td>
@@ -577,7 +577,7 @@ console.log(arr.property);  // Logs "value"</code>
   </tr>
   <tr>
    <td>{{jsxref("BigInt64Array")}}</td>
-   <td><code>-2<sup>63</sup></code> to <code>2<sup>63</sup>-1</code></td>
+   <td><code>-2^63</code> to <code>2^63 - 1</code></td>
    <td>8</td>
    <td>64-bit two's complement signed integer</td>
    <td><code>bigint</code></td>
@@ -585,7 +585,7 @@ console.log(arr.property);  // Logs "value"</code>
   </tr>
   <tr>
    <td>{{jsxref("BigUint64Array")}}</td>
-   <td><code>0</code> to <code>2<sup>64</sup>-1</code></td>
+   <td><code>0</code> to <code>2^64 - 1</code></td>
    <td>8</td>
    <td>64-bit unsigned integer</td>
    <td><code>bigint</code></td>

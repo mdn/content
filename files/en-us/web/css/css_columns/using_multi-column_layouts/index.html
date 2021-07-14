@@ -11,7 +11,7 @@ tags:
 ---
 <div>{{CSSRef}}</div>
 
-<p class="summary"><span class="seoSummary">The <strong>CSS Multi-column Layout Module</strong> extends the <em>block layout mode</em> to allow the easy definition of multiple columns of text.</span> People have trouble reading text if lines are too long; if it takes too long for the eyes to move from the end of the one line to the beginning of the next, they lose track of which line they were on. Therefore, to make maximum use of a large screen, authors should have limited-width columns of text placed side by side, just as newspapers do.</p>
+<p>The <strong>CSS Multi-column Layout Module</strong> extends the <em>block layout mode</em> to allow the easy definition of multiple columns of text.</span> People have trouble reading text if lines are too long; if it takes too long for the eyes to move from the end of the one line to the beginning of the next, they lose track of which line they were on. Therefore, to make maximum use of a large screen, authors should have limited-width columns of text placed side by side, just as newspapers do.</p>
 
 <p>Unfortunately this is impossible to do with CSS and HTML without forcing column breaks at fixed positions, or severely restricting the markup allowed in the text, or using heroic scripting. This limitation is solved by adding new CSS properties to extend the traditional block layout mode.</p>
 
@@ -27,7 +27,6 @@ tags:
 
 <h3 id="HTML">HTML</h3>
 
-<div id="column_count">
 <pre class="brush: html">&lt;div id="col"&gt;
   &lt;p&gt;
     Lorem ipsum dolor sit amet, consectetur adipisicing elit,
@@ -55,13 +54,12 @@ tags:
   column-count: 2;
 }
 </pre>
-</div>
 
 <h3 id="Result">Result</h3>
 
 <p>Will display the content in two columns (if you're using a multi-column compliant browser):</p>
 
-<p>{{EmbedLiveSample("column_count", "100%")}}</p>
+<p>{{EmbedLiveSample("Example_1", "100%")}}</p>
 
 <p>The <code>column-width</code> property sets the minimum desired column width. If <code>column-count</code> is not also set, then the browser will automatically make as many columns as fit in the available width.</p>
 
@@ -69,7 +67,6 @@ tags:
 
 <h3 id="HTML_2">HTML</h3>
 
-<div id="column_width">
 <pre class="brush: html">&lt;div id="wid"&gt;
   Lorem ipsum dolor sit amet, consectetur adipisicing elit,
   sed do eiusmod tempor incididunt ut labore et dolore magna
@@ -88,11 +85,10 @@ tags:
   column-width: 100px;
 }
 </pre>
-</div>
 
 <h3 id="Result_2">Result</h3>
 
-<p>{{EmbedLiveSample("column_width", "100%")}}</p>
+<p>{{EmbedLiveSample("Example_2", "100%")}}</p>
 
 <p>The exact details are described in <a href="https://www.w3.org/TR/css3-multicol/">the CSS3 specification</a>.</p>
 
@@ -108,7 +104,6 @@ tags:
 
 <h3 id="HTML_3">HTML</h3>
 
-<div id="column_short">
 <pre class="brush: html">&lt;div id="col_short"&gt;
   Lorem ipsum dolor sit amet, consectetur adipisicing elit,
   sed do eiusmod tempor incididunt ut labore et dolore magna
@@ -127,9 +122,8 @@ tags:
   columns: 12em;
 }
 </pre>
-</div>
 
-<p>{{EmbedLiveSample("column_short", "100%")}}</p>
+<p>{{EmbedLiveSample("Example_3", "100%")}}</p>
 
 <p>The CSS declaration <code>column-count: 4</code> can be replaced by <code>columns: 4</code>.</p>
 
@@ -137,7 +131,6 @@ tags:
 
 <h3 id="HTML_4">HTML</h3>
 
-<div id="example_4_columns">
 <pre class="brush: html">&lt;div id="columns_4"&gt;
   Lorem ipsum dolor sit amet, consectetur adipisicing elit,
   sed do eiusmod tempor incididunt ut labore et dolore magna
@@ -156,11 +149,10 @@ tags:
   columns: 4;
 }
 </pre>
-</div>
 
 <h3 id="Result_3">Result</h3>
 
-<p>{{EmbedLiveSample("example_4_columns", "100%")}}</p>
+<p>{{EmbedLiveSample("Example_4", "100%")}}</p>
 
 <p>The two CSS declarations <code>column-width: 8em</code> and <code>column-count: 12</code> can be replaced by <code>columns: 12 8em</code>.</p>
 
@@ -168,7 +160,6 @@ tags:
 
 <h3 id="HTML_5">HTML</h3>
 
-<div id="example_12_columns">
 <pre class="brush: html">&lt;div id="columns_12"&gt;
   Lorem ipsum dolor sit amet, consectetur adipisicing elit,
   sed do eiusmod tempor incididunt ut labore et dolore magna
@@ -187,11 +178,10 @@ tags:
   columns: 12 8em;
 }
 </pre>
-</div>
 
 <h3 id="Result_4">Result</h3>
 
-<p>{{EmbedLiveSample("example_12_columns", "100%")}}</p>
+<p>{{EmbedLiveSample("Example_5", "100%")}}</p>
 
 <h3 id="Height_Balancing">Height Balancing</h3>
 
@@ -207,7 +197,6 @@ tags:
 
 <h3 id="HTML_6">HTML</h3>
 
-<div id="col_gap">
 <pre class="brush: html">&lt;div id="column_gap"&gt;
   Lorem ipsum dolor sit amet, consectetur adipisicing elit,
   sed do eiusmod tempor incididunt ut labore et dolore magna
@@ -227,11 +216,10 @@ tags:
   column-gap: 2em;
 }
 </pre>
-</div>
 
 <h3 id="Result_5">Result</h3>
 
-<p>{{EmbedLiveSample("col_gap", "100%")}}</p>
+<p>{{EmbedLiveSample("Example_6", "100%")}}</p>
 
 <h2 id="Graceful_Degradation">Graceful Degradation</h2>
 

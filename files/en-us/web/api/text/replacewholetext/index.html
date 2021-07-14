@@ -5,8 +5,9 @@ tags:
 - API
 - DOM
 - Method
-- Obsolete
+- Deprecated
 - Text
+browser-compat: api.Text.replaceWholeText
 ---
 <p>{{ApiRef("DOM")}}{{deprecated_header}}</p>
 
@@ -19,40 +20,30 @@ tags:
   if one of the text nodes being replaced is read only.</p>
 
 <p>This method returns the text node which received the replacement text, or
-  <code>null</code> if the replacement text is an empty string.  The returned node is the
+  <code>null</code> if the replacement text is an empty string. The returned node is the
   current node unless the current node is read only, in which case the returned node is a
   newly created text node of the same type which has been inserted at the location of the
   replacement.</p>
+
+  <div class="notecard note">
+    <p><strong>Note:</strong> In order to achieve a similar effect in modern browsers,
+      consider using {{domxref("Node.textContent")}} or {{domxref("Element.innerHTML")}}.</p>
+  </div>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre
   class="brush: js"><em>replacementNode</em> = <em>textnode</em>.replaceWholeText(content) </pre>
 
-<h2 id="Example">Example</h2>
-
-<p>See the example for the {{domxref("Text.wholeText")}} property.</p>
-
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('DOM3 Core', 'core.html#ID-1312295772', 'Text')}}</td>
-      <td>{{Spec2('DOM3 Core')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+<p>This method was originally present in the DOM specification. It has been removed and this feature is no longer on track to become a standard.</p>
+
+<p>Instead, consider using algorithms based on {{domxref("Node.textContent")}} or {{domxref("Element.innerHTML")}}.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Text.replaceWholeText")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

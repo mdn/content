@@ -76,6 +76,7 @@ tags:
  <li>The {{WebExtAPIRef("tabs.duplicate")}} API now supports <code>duplicateProperties</code>, enabling the position and active status of a duplicated tab to be specified. ({{bug(1560218)}})</li>
  <li>The {{WebExtAPIRef("permissions")}} API events {{WebExtAPIRef("permissions.onAdded")}} and {{WebExtAPIRef("permissions.onRemoved")}} are now supported. ({{bug(1444294)}})</li>
  <li>Multiple <code>Content-Security-Policy</code> header changes requested in {{WebExtAPIRef("webRequest.onHeadersReceived")}} are merged. ({{bug(1462989 )}})</li>
+ <li>{{WebExtAPIRef("webRequest")}} events will no longer be triggered for <code>data:</code>-URLs. ({{bug(1631933)}})</li>
 </ul>
 
 <h3 id="Manifest_changes">Manifest changes</h3>

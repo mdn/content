@@ -7,6 +7,7 @@ tags:
   - Reference
   - SVG
   - SVG DOM
+browser-compat: api.SVGAnimationElement
 ---
 <div>{{APIRef("SVG")}}</div>
 
@@ -19,6 +20,10 @@ tags:
 <p><em>This interface also inherits properties from its parent, {{domxref("SVGElement")}}.</em></p>
 
 <dl>
+ <dt>{{domxref("SVGAnimationElement.requiredExtensions")}} {{ReadOnlyInline}}</dt>
+ <dd>An {{domxref("SVGStringList")}} reflecting the {{SVGAttr("requiredExtensions")}} attribute of the given element.</dd>
+ <dt>{{domxref("SVGAnimationElement.systemLanguage")}} {{ReadOnlyInline}}</dt>
+ <dd>An {{domxref("SVGStringList")}} reflecting the {{SVGAttr("systemLanguage")}} attribute of the given element.</dd>
  <dt>{{domxref("SVGAnimationElement.targetElement")}} {{ReadOnlyInline}}</dt>
  <dd>An {{domxref("SVGElement")}} representing the element which is being animated. If no target element is being animated (for example, because the {{SVGAttr("href")}} specifies an unknown element) the value returned is <code>null</code>.</dd>
 </dl>
@@ -66,26 +71,8 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td>Specification</td>
-   <td>Status</td>
-   <td>Comment</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG Animations 2", "#InterfaceSVGAnimationElement", "SVGAnimationElement")}}</td>
-   <td>{{Spec2("SVG Animations 2")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "animate.html#InterfaceSVGAnimationElement", "SVGAnimationElement")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.SVGAnimationElement")}}</p>
+<p>{{Compat}}</p>

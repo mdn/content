@@ -2,15 +2,14 @@
 title: 'SyntaxError: missing variable name'
 slug: Web/JavaScript/Reference/Errors/No_variable_name
 tags:
-- Error
-- Errors
-- JavaScript
-- SyntaxError
+  - Error
+  - Errors
+  - JavaScript
+  - SyntaxError
 ---
 <div>{{jsSidebar("Errors")}}</div>
 
-<p>The JavaScript exception "missing variable name" occurs way too often as naming things
-  is so hard. Or maybe a comma is wrong. Check for typos!</p>
+<p>The JavaScript exception "missing variable name" is a common error experienced by developers. It mostly occurs due to a typo or a forgotten variable name.</p>
 
 <h2 id="Message">Message</h2>
 
@@ -23,14 +22,11 @@ SyntaxError: Unexpected token = (Chrome)</pre>
 
 <h2 id="What_went_wrong">What went wrong?</h2>
 
-<p>A variable is missing a name. This is likely due to a syntax error in your code.
-  Probably a comma is wrong somewhere or you struggled with coming up with a name. Totally
-  understandable! Naming things is so hard.</p>
+<p>A variable is missing a name. The cause is most likely a typo or a forgotten variable name.
+  Make sure that you've provided the name of the variable before the <code>=</code> sign.</p>
 
-<ul>
-  <li>Check to ensure the previous lines / declaration does not end with a comma instead
-    of a semi-colon.</li>
-</ul>
+<p>When declaring multiple variables at the same time, make sure that the previous lines/declaration does not end with a comma instead
+  of a semi-colon.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -39,15 +35,15 @@ SyntaxError: Unexpected token = (Chrome)</pre>
 <pre class="brush: js example-bad">var = "foo";
 </pre>
 
-<p>It's tough coming up with good variable names. We all have been there.</p>
+<p>Coming up with a descriptive variable name is challenging for most developers. It gets easier over time.</p>
 
-<pre class="brush: js example-good">var ohGodWhy = "foo";</pre>
+<pre class="brush: js example-good">var description = "foo";</pre>
 
 <h3 id="Reserved_keywords_cant_be_variable_names">Reserved keywords can't be variable
   names</h3>
 
 <p>There are a few variable names that are <a
-    href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords">reserved
+    href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#keywords">reserved
     keywords</a>. You can't use these. Sorry :(</p>
 
 <pre class="brush: js example-bad">var debugger = "whoop";
@@ -94,6 +90,6 @@ var second = document.getElementById('two');</pre>
 <ul>
   <li><a href="http://wiki.c2.com/?GoodVariableNames">Good variable names</a></li>
   <li>{{jsxref("Statements/var", "var")}}</li>
-  <li><a href="/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#Declarations">Variable
+  <li><a href="/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#declarations">Variable
       declarations in the JavaScript Guide</a></li>
 </ul>

@@ -6,10 +6,17 @@ tags:
   - DOM
   - DOM Reference
   - File API
-  - Obsolete
+  - Deprecated
   - Reference
+browser-compat: api.BlobBuilder
 ---
 <p>{{APIRef("File API")}}{{ deprecated_header}}</p>
+
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>The <code>BlobBuilder</code> interface has been
+  deprecated in favor of the newly introduced {{domxref('Blob')}} constructor.</p>
+</div>
 
 <p>The <strong><code>BlobBuilder</code></strong> interface provides an easy way to
   construct {{domxref("Blob")}} objects. Just create a <code>BlobBuilder</code> and append
@@ -17,8 +24,6 @@ tags:
   building your blob, call {{manch("getBlob")}} to retrieve a {{domxref("Blob")}}
   containing the data you sent into the blob builder.</p>
 
-<div class="note"><strong>Note:</strong> The <code>BlobBuilder</code> interface has been
-  deprecated in favor of the newly introduced {{domxref('Blob')}} constructor.</div>
 
 <h2 id="Method_overview">Method overview</h2>
 
@@ -140,7 +145,7 @@ void append(
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.BlobBuilder")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

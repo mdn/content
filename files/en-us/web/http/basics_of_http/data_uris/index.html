@@ -7,6 +7,7 @@ tags:
   - HTTP
   - Intermediate
   - URL
+browser-compat: http.data-url
 ---
 <div>{{HTTPSidebar}}</div>
 
@@ -25,16 +26,18 @@ tags:
 
 <p>The <code>mediatype</code> is a <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME type</a> string, such as <code>'image/jpeg'</code> for a JPEG image file. If omitted, defaults to <code>text/plain;charset=US-ASCII</code></p>
 
-<p>If the data is textual, you can embed the text (using the appropriate entities or escapes based on the enclosing document's type). Otherwise, you can specify <code>base64</code> to embed base64-encoded binary data. You can find more info on MIME types <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">here</a> and <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Complete_list_of_MIME_types">here</a>.</p>
+<p>If the data contains <a href="https://datatracker.ietf.org/doc/html/rfc3986#section-2.2">characters defined in RFC 3986 as reserved characters</a>, or contains space characters, newline characters, or other non-printing characters, those characters must be <a href="/en-US/docs/Glossary/percent-encoding">percent-encoded</a> (<em>aka</em> “URL-encoded”).</p>
+
+<p>If the data is textual, you can embed the text (using the appropriate entities or escapes based on the enclosing document's type). Otherwise, you can specify <code>base64</code> to embed base64-encoded binary data. You can find more info on MIME types <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">here</a> and <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types">here</a>.</p>
 
 <p>A few examples:</p>
 
 <dl>
- <dt><code>data:,Hello%2C%20World!</code></dt>
- <dd>Simple text/plain data. Note the use of <a href="/en-US/docs/Glossary/percent-encoding">percent-encoding</a> (URL-encoding) for the quote and space characters. Also, for CSV data (MIME type "text/csv"), percent-encoding is needed to preserve the line endings that delimit rows of the spreadsheet.</dd>
+ <dt><code>data:,Hello%2C%20World%21</code></dt>
+ <dd>The text/plain data <code>Hello, World!</code>. Note how the comma is  <a href="/en-US/docs/Glossary/percent-encoding">percent-encoded</a> as <code>%2C</code>, and the space character as <code>%20</code>.</dd>
  <dt><code>data:text/plain;base64,SGVsbG8sIFdvcmxkIQ==</code></dt>
  <dd>base64-encoded version of the above</dd>
- <dt><code>data:text/html,%3Ch1%3EHello%2C%20World!%3C%2Fh1%3E</code></dt>
+ <dt><code>data:text/html,%3Ch1%3EHello%2C%20World%21%3C%2Fh1%3E</code></dt>
  <dd>An HTML document with <code>&lt;h1&gt;Hello, World!&lt;/h1&gt;</code></dd>
  <dt><code>data:text/html,&lt;script&gt;alert('hi');&lt;/script&gt;</code></dt>
  <dd>An HTML document that executes a JavaScript alert. Note that the closing script tag is required.</dd>
@@ -46,7 +49,7 @@ tags:
 
 <h3 id="Encoding_in_Javascript">Encoding in Javascript</h3>
 
-<p>The Web APIs have native methods to encode or decode to base64: <a href="/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding">Base64 encoding and decoding</a>.</p>
+<p>The Web APIs have native methods to encode or decode to base64: <a href="/en-US/docs/Glossary/Base64">Base64 encoding and decoding</a>.</p>
 
 <h3 id="Encoding_on_a_Unix_system">Encoding on a Unix system</h3>
 
@@ -93,7 +96,7 @@ base64 a.txt&gt;b.txt
  <dt>Syntax</dt>
  <dd>The format for <code>data</code> URLs is very simple, but it's easy to forget to put a comma before the "data" segment, or to incorrectly encode the data into base64 format.</dd>
  <dt>Formatting in HTML</dt>
- <dd>A <code>data</code> URL provides a file within a file, which can potentially be very wide relative to the width of the enclosing document. As a URL, the <code>data</code> should be formatable with whitespace (linefeed, tab, or spaces), but there are practical issues that arise <a href="http://bugzilla.mozilla.org/show_bug.cgi?id=73026#c12">when using base64 encoding</a>.</dd>
+ <dd>A <code>data</code> URL provides a file within a file, which can potentially be very wide relative to the width of the enclosing document. As a URL, the <code>data</code> should be formatable with whitespace (linefeed, tab, or spaces), but there are practical issues that arise <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=73026#c12">when using base64 encoding</a>.</dd>
  <dt>Length limitations</dt>
  <dd>Although Firefox supports <code>data</code> URLs of essentially unlimited length, browsers are not required to support any particular maximum length of data. For example, the Opera 11 browser limited URLs to 65535 characters long which limits <code>data</code> URLs to 65529 characters (65529 characters being the length of the encoded data, not the source, if you use the plain <code>data:</code>, without specifying a MIME type).</dd>
  <dt>Lack of error handling</dt>
@@ -123,15 +126,15 @@ base64 a.txt&gt;b.txt
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{compat("http.data-url")}}</p>
+<p>{{compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding">Base64 encoding and decoding</a></li>
+ <li><a href="/en-US/docs/Glossary/Base64">Base64 encoding and decoding</a></li>
  <li><a href="/en-US/docs/Glossary/percent-encoding">Percent encoding</a></li>
- <li>{{domxref("WindowBase64.atob","atob()")}}</li>
- <li>{{domxref("WindowBase64.btoa","btoa()")}}</li>
- <li><a href="/en-US/docs/Web/CSS/uri">CSS <code>url()</code></a></li>
+ <li>{{domxref("WindowOrWorkerGlobalScope/atob","atob()")}}</li>
+ <li>{{domxref("WindowOrWorkerGlobalScope/btoa","btoa()")}}</li>
+ <li><a href="/en-US/docs/Web/CSS/url()">CSS <code>url()</code></a></li>
  <li><a href="/en-US/docs/Glossary/URI">URI</a></li>
 </ul>

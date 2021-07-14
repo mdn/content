@@ -10,7 +10,7 @@ tags:
 ---
 <div>{{CSSRef}}</div>
 
-<p class="summary">The Logical Properties and Values Specification introduces flow-relative mappings for many of the properties and values in CSS. This article introduces the specification, and explains flow relative properties and values.</p>
+<p>The Logical Properties and Values Specification introduces flow-relative mappings for many of the properties and values in CSS. This article introduces the specification, and explains flow relative properties and values.</p>
 
 <h2 id="Why_do_we_need_logical_properties">Why do we need logical properties?</h2>
 
@@ -18,15 +18,15 @@ tags:
 
 <p>An example of why these mappings might be needed is as follows. I have a Layout using CSS Grid, the grid container has a width applied and I am using the {{CSSxRef("align-self")}} and {{CSSxRef("justify-self")}} properties to align the items. These properties are flow relative — <code>justify-self: start</code> aligns the item to the start on the inline dimension, <code>align-self: start</code> does the same on the block dimension.</p>
 
-<p><img alt="A grid in a horizontal writing mode" src="grid-horizontal-width-sm.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="A grid in a horizontal writing mode" src="grid-horizontal-width-sm.png"></p>
 
 <p>If I now change the writing mode of this component to <code>vertical-rl</code> using the {{CSSxRef("writing-mode")}} property, the alignment continues to work in the same way. The inline dimension is now running vertically and the block dimension horizontally. The grid doesn't look the same however, as the width assigned to the container is a horizontal measure, a measure tied to the physical and not the logical or flow relative running of the text.</p>
 
-<p><img alt="A grid in vertical writing mode." src="grid-vertical-width-sm.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="A grid in vertical writing mode." src="grid-vertical-width-sm.png"></p>
 
 <p>If instead of the <code>width</code> property we use the logical property {{CSSxRef("inline-size")}}, the component now works the same way no matter which writing mode it is displayed using.</p>
 
-<p><img alt="A grid layout in vertical writing mode" src="grid-vertical-inline-size-small.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="A grid layout in vertical writing mode" src="grid-vertical-inline-size-small.png"></p>
 
 <p>You can try this out in the live example below. Change <code>writing-mode</code> from <code>vertical-rl</code> to <code>horizontal-tb</code> on <code>.grid</code> to see how the different properties change the layout.</p>
 
@@ -44,11 +44,11 @@ tags:
 
 <p>The below diagram shows the inline and block directions in a horizontal writing mode:</p>
 
-<p><img alt="diagram showing the inline axis running horizontally, block axis vertically." src="mdn-horizontal.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="diagram showing the inline axis running horizontally, block axis vertically." src="mdn-horizontal.png"></p>
 
 <p>This diagram shows block and inline in a vertical writing mode:</p>
 
-<p><img alt="Diagram showing the block axis running horizontally the inline axis vertically." src="mdn-vertical.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="Diagram showing the block axis running horizontally the inline axis vertically." src="mdn-vertical.png"></p>
 
 <h2 id="Browser_support">Browser support</h2>
 

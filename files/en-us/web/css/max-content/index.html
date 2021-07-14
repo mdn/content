@@ -7,20 +7,26 @@ tags:
   - Reference
   - max-content
   - sizing
+browser-compat: css.properties.width.max-content
 ---
 <p>The <code>max-content</code> sizing keyword represents the intrinsic maximum width of the content. For text content this means that the content will not wrap at all even if it causes overflows.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: css"><code>/* Used as a length */
+<pre class="brush: css">/* Used as a length */
 width: max-content;
 inline-size: max-content;
 height: max-content;
 block-size: max-content;
 
 /* used in grid tracks */
-grid-template-columns: 200px 1fr max-content;</code>
-</pre>
+grid-template-columns: 200px 1fr max-content;
+
+/* Global values */
+max-content: inherit;
+max-content: initial;
+max-content: revert;
+max-content: unset;</pre>
 
 <h2 id="Examples">Examples</h2>
 
@@ -91,35 +97,13 @@ grid-template-columns: 200px 1fr max-content;</code>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table>
- <thead>
-  <tr>
-   <th>Specification</th>
-   <th>Status</th>
-   <th>Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Sizing", "#valdef-width-max-content", "max-content")}}</td>
-   <td>{{Spec2("CSS3 Sizing")}}</td>
-   <td>Defines the keyword as laid out box size for {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("min-width")}}, {{cssxref("min-height")}}, {{cssxref("max-width")}} and {{cssxref("max-height")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS Grid", "#valdef-grid-template-columns-max-content", "max-content")}}</td>
-   <td>{{Spec2("CSS Grid")}}</td>
-   <td>Defines the keyword when used as a track size.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-
 <h3 id="Supported_for_width_and_other_sizing_properties">Supported for width (and other sizing properties)</h3>
 
-<p>{{Compat("css.properties.width.max-content")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

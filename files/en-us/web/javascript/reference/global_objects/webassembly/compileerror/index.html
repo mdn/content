@@ -9,6 +9,7 @@ tags:
   - NativeError
   - Reference
   - WebAssembly
+browser-compat: javascript.builtins.WebAssembly.CompileError
 ---
 <div>{{JSRef}}</div>
 
@@ -25,7 +26,7 @@ tags:
 
 <dl>
  <dt>{{jsxref("Error.prototype.message", "WebAssembly.CompileError.prototype.message")}}</dt>
- <dd>Error message. Although ECMA-262 specifies that {{jsxref("URIError")}} should provide its own <code>message</code> property, in <a href="/en-US/docs/Mozilla/Projects/SpiderMonkey">SpiderMonkey</a>, it inherits {{jsxref("Error.prototype.message")}}.</dd>
+ <dd>Error message. Inherited from {{jsxref("Error")}}.</dd>
  <dt>{{jsxref("Error.prototype.name", "WebAssembly.CompileError.prototype.name")}}</dt>
  <dd>Error name. Inherited from {{jsxref("Error")}}.</dd>
  <dt>{{jsxref("Error.prototype.fileName", "WebAssembly.CompileError.prototype.fileName")}}</dt>
@@ -67,25 +68,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('WebAssembly JS', '#exceptiondef-compileerror', 'WebAssembly constructors')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-native-error-types-used-in-this-standard', 'NativeError')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.WebAssembly.CompileError")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
@@ -94,4 +81,3 @@ tags:
  <li><a href="/en-US/docs/WebAssembly/Concepts">WebAssembly concepts</a></li>
  <li><a href="/en-US/docs/WebAssembly/Using_the_JavaScript_API">Using the WebAssembly JavaScript API</a></li>
 </ul>
-

@@ -9,16 +9,16 @@ tags:
 - Reference
 - Statement
 - export
+browser-compat: javascript.statements.export
 ---
 <div>{{jsSidebar("Statements")}}</div>
 
 <p><span class="seoSummary">The <strong><code>export</code></strong> statement is used
     when creating JavaScript modules to export live bindings to functions, objects, or
     primitive values from the module so they can be used by other programs with the
-    {{jsxref("Statements/import", "import")}} statement. Bindings that are exported can
-    still be modified locally; when imported, although they can only be read by the
-    importing module the value updates whenever it is updated by the exporting
-    module.</span></p>
+    {{jsxref("Statements/import", "import")}} statement. The value of an imported binding
+    is subject to change in the module that exports it. When a module updates the value of
+    a binding that it exports, the update will be visible in its imported value.</span></p>
 
 <p>Exported modules are in {{jsxref("Strict_mode","strict mode", "", 1)}} whether you
   declare them as such or not. The export statement cannot be used in embedded scripts.
@@ -266,22 +266,11 @@ import { myFunction, myVariable, myClass } from 'parentModule.js'</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-exports', 'Exports')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.statements.export")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -8,10 +8,11 @@ tags:
   - Reference
   - Web
   - transitionstart
+browser-compat: api.Document.transitionstart_event
 ---
 <div>{{APIRef}}{{SeeCompatTable}}</div>
 
-<p>The <strong><code>transitionstart</code></strong> event is fired when a <a href="/en-US/docs/CSS/Using_CSS_transitions">CSS transition</a> has actually started, i.e., after any {{cssxref("transition-delay")}} has ended.</p>
+<p>The <strong><code>transitionstart</code></strong> event is fired when a <a href="/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">CSS transition</a> has actually started, i.e., after any {{cssxref("transition-delay")}} has ended.</p>
 
 <p>The difference is <code>transitionstart</code> and <code>transitionrun</code> is that <code>transitionrun</code> fires when the transition is created (i.e. at the start of any delay) and <code>transitionstart</code> fires when the actual animation has begun (i.e. at the end of any delay).</p>
 
@@ -52,30 +53,15 @@ tags:
   console.log('Started transitioning');
 };</pre>
 
-<p><a href="/en-US/docs/Web/API/HTMLElement/transitionstart_event#Live_example">See a live example of this event.</a></p>
+<p><a href="/en-US/docs/Web/API/HTMLElement/transitionstart_event#live_example">See a live example of this event.</a></p>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Transitions', '#transitionstart', 'transitionstart')}}</td>
-   <td>{{Spec2('CSS3 Transitions')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Document.transitionstart_event")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -12,38 +12,26 @@ tags:
 - Sensor APIs
 - Sensors
 - onerror
+browser-compat: api.Sensor.onerror
 ---
-<div>{{APIRef("Generic Sensor API")}}</div>
+<div>{{APIRef("Sensor API")}}</div>
 
-<p><span class="seoSummary">The <strong><code>onerror</code></strong>
-    {{domxref("EventHandler")}} is called when an error occurs on one of the child
-    interfaces of the {{domxref("Sensor")}} interface.</span></p>
+<p>The <strong><code>onerror</code></strong>
+    <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> is called when an error occurs on one of the child
+    interfaces of the {{domxref("Sensor")}} interface.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js"><em>sensorInstance</em>.onerror = <var>function
-</var><em>sensorInstance</em>.addEventListener('error', function() { ... })</pre>
+<pre class="brush: js">sensorInstance.onerror = function
+  sensorInstance.addEventListener('error', function() { ... })</pre>
 
 <p>Because {{domxref('Sensor')}} is a base class, <code>onerror</code> may only be used on
   one of its derived classes.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Generic Sensor','#dom-sensor-onerror','onerror')}}</td>
-      <td>{{Spec2('Generic Sensor')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Sensor.onerror")}}</p>
+<p>{{Compat}}</p>

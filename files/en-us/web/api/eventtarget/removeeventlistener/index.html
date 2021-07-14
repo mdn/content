@@ -11,6 +11,7 @@ tags:
   - Reference
   - browser compatibility
   - removeEventListener
+browser-compat: api.EventTarget.removeEventListener
 ---
 <div>{{APIRef("DOM Events")}}</div>
 
@@ -59,9 +60,9 @@ tags:
   <dd>Specifies whether the {{domxref("EventListener")}} to be removed is registered as a
     capturing listener or not. If this parameter is absent, a default value of
     <code>false</code> is assumed.</dd>
-  <dd>If a listener is registered twice, one with capture and one without, remove each one
-    separately. Removal of a capturing listener does not affect a non-capturing version of
-    the same listener, and vice versa.</dd>
+  <dd>If a listener is registered twice, one with capture and one without, you must remove
+    each one separately. Removal of a capturing listener does not affect a non-capturing
+    version of the same listener, and vice versa.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -172,39 +173,11 @@ mouseOverTarget.addEventListener('mouseover', function () {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th>Specification</th>
-      <th>Status</th>
-      <th>Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName("DOM WHATWG", "#dom-eventtarget-removeeventlistener",
-        "EventTarget.removeEventListener()")}}</td>
-      <td>{{Spec2("DOM WHATWG")}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName("DOM4", "#dom-eventtarget-removeeventlistener",
-        "EventTarget.removeEventListener()")}}</td>
-      <td>{{Spec2("DOM4")}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName("DOM2 Events", "#Events-EventTarget-removeEventListener",
-        "EventTarget.removeEventListener()")}}</td>
-      <td>{{Spec2("DOM2 Events")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.EventTarget.removeEventListener", 3)}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Polyfill_to_support_older_browsers">Polyfill to support older browsers</h2>
 

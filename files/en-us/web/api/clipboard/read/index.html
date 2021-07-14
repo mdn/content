@@ -15,6 +15,7 @@ tags:
 - copy
 - paste
 - read
+browser-compat: api.Clipboard.read
 ---
 <div>{{APIRef("Clipboard API")}}</div>
 
@@ -47,7 +48,7 @@ tags:
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A {{jsxref("Promise")}} that resolves with a {{domxref("DataTransfer")}} object
+<p>A {{jsxref("Promise")}} that resolves with a sequence of {{domxref("ClipboardItem")}} objects
   containing the clipboard's contents. The promise is rejected if permission to access the
   clipboard is not granted.</p>
 
@@ -62,23 +63,24 @@ tags:
 <pre class="brush: js">// First, ask the Permissions API if we have some kind of access to
 // the "clipboard-read" feature.
 
-navigator.permissions.query({name: "clipboard-read"}).then(result =&gt; {
-  // If permission to read the clipboard is granted or if the user will
-  // be prompted to allow it, we proceed.
-
-  if (result.state == "granted" || result.state == "prompt") {
-    navigator.clipboard.read().then(data =&gt; {
-      for (let i=0; i&lt;data.items.length; i++) {
-        if (data.items[i].type != "image/png") {
-          alert("Clipboard contains non-image data. Unable to access it.");
-        } else {
-          const blob = data.items[i].getType("image/png");
-          imgElem.src = URL.createObjectURL(blob);
+navigator.permissions.query({ name: "clipboard-read" }).then((result) =&gt {
+    // If permission to read the clipboard is granted or if the user will
+    // be prompted to allow it, we proceed.
+  
+    if (result.state == "granted" || result.state == "prompt") {
+      navigator.clipboard.read().then((data) =&gt {
+        for (let i = 0; i &lt data.length; i++) {
+          if (!data[i].types.includes("image/png")) {
+            alert("Clipboard contains non-image data. Unable to access it.");
+          } else {
+            data[i].getType("image/png").then((blob) =&gt {
+              imgElem.src = URL.createObjectURL(blob);
+            });
+          }
         }
-      }
-    });
-  }
-});
+      });
+    }
+  });
 </pre>
 
 <div class="note">
@@ -91,24 +93,11 @@ navigator.permissions.query({name: "clipboard-read"}).then(result =&gt; {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Clipboard API','#dom-clipboard-read','read()')}}</td>
-      <td>{{Spec2('Clipboard API')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Clipboard.read")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

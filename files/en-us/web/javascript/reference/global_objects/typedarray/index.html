@@ -2,10 +2,12 @@
 title: TypedArray
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray
 tags:
-- Class
-- JavaScript
-- TypedArray
-- TypedArrays
+  - Class
+  - JavaScript
+  - TypedArray
+  - TypedArrays
+  - Polyfill
+browser-compat: javascript.builtins.TypedArray
 ---
 <div>{{JSRef}}</div>
 
@@ -20,11 +22,6 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/typedarray-constructor.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Description">Description</h2>
 
@@ -37,13 +34,6 @@ tags:
   <code>%TypedArray%</code> constructor function. Additionally, all typed array prototypes
   (<code><var>TypedArray</var>.prototype</code>) have <code>%TypedArray%.prototype</code>
   as their <code>[[Prototype]]</code>.</p>
-
-<p>The <code>%TypedArray%</code> constructor on its own is not particularly useful.
-  Calling it or using it in a <code>new</code> expression will throw a
-  {{jsxref("TypeError")}}, except when used during object creation in JS engines that
-  support subclassing. There are at present no such engines, so <code>%TypedArray%</code>
-  is only useful to polyfill functions or properties onto all
-  <code><var>TypedArray</var></code> constructors.</p>
 
 <p>When creating an instance of a <code><var>TypedArray</var></code> (e.g.
   <code>Int8Array</code>), an array buffer is created internally in memory or, if an
@@ -124,8 +114,8 @@ tags:
     </tr>
     <tr>
       <td>{{jsxref("Float32Array")}}</td>
-      <td><code>1.2</code>×<code>10<sup>-38</sup></code> to
-        <code>3.4</code>×<code>10<sup>38</sup></code></td>
+      <td><code>-3.4E38</code> to <code>3.4E38</code><br/>
+        and <code>1.2E-38</code> is the min positive number</td>
       <td>4</td>
       <td>32-bit IEEE floating point number (7 significant digits e.g.,
         <code>1.234567</code>)</td>
@@ -134,8 +124,8 @@ tags:
     </tr>
     <tr>
       <td>{{jsxref("Float64Array")}}</td>
-      <td><code>5.0</code>×<code>10<sup>-324</sup></code> to
-        <code>1.8</code>×<code>10<sup>308</sup></code></td>
+      <td><code>-1.8E308</code> to <code>1.8E308</code><br/>
+        and <code>5E-324</code> is the min positive number</td>
       <td>8</td>
       <td>64-bit IEEE floating point number (16 significant digits e.g.,
         <code>1.23456789012345</code>)</td>
@@ -144,7 +134,7 @@ tags:
     </tr>
     <tr>
       <td>{{jsxref("BigInt64Array")}}</td>
-      <td><code>-2<sup>63</sup></code> to <code>2<sup>63</sup>-1</code></td>
+      <td><code>-2^63</code> to <code>2^63 - 1</code></td>
       <td>8</td>
       <td>64-bit two's complement signed integer</td>
       <td><code>bigint</code></td>
@@ -152,7 +142,7 @@ tags:
     </tr>
     <tr>
       <td>{{jsxref("BigUint64Array")}}</td>
-      <td><code>0</code> to <code>2<sup>64</sup>-1</code></td>
+      <td><code>0</code> to <code>2^64 - 1</code></td>
       <td>8</td>
       <td>64-bit unsigned integer</td>
       <td><code>bigint</code></td>
@@ -168,11 +158,15 @@ tags:
   {{jsxref("BigInt64Array")}}. These objects all have a common syntax for their
   constructors:</p>
 
-<pre class="brush: js">new <var>TypedArray</var>();
-new <var>TypedArray</var>(<var>length</var>);
-new <var>TypedArray</var>(<var>typedArray</var>);
-new <var>TypedArray</var>(<var>object</var>);
-new <var>TypedArray</var>(<var>buffer</var> [, <var>byteOffset</var> [, <var>length</var>]]);
+<pre class="brush: js">
+new TypedArray()
+new TypedArray(length)
+new TypedArray(typedArray)
+new TypedArray(object)
+
+new TypedArray(buffer)
+new TypedArray(buffer, byteOffset)
+new TypedArray(buffer, byteOffset, length)
 </pre>
 
 <p>Where <var>TypedArray</var> is a constructor for one of the concrete types.</p>
@@ -217,7 +211,7 @@ new <var>TypedArray</var>(<var>buffer</var> [, <var>byteOffset</var> [, <var>len
   </dd>
   <dt>{{jsxref("TypedArray.@@species", "get TypedArray[@@species]")}}</dt>
   <dd>The constructor function used to create derived objects.</dd>
-  <dt>{{jsxref("TypedArray.prototype")}}</dt>
+  <dt>{{jsxref("TypedArray")}}</dt>
   <dd>Prototype for <code><var>TypedArray</var></code> objects.</dd>
 </dl>
 
@@ -387,28 +381,52 @@ Int8Array.prototype[-1] = 'foo';
 Int8Array.prototype.foo = 'bar';
 (new Int8Array(32)).foo; // "bar"</pre>
 
+<h3 id="Cannot_be_frozen">Cannot be frozen</h3>
+
+<p><code><var>TypedArray</var></code>s that aren't empty cannot be frozen, as their
+  underlying <code>ArrayBuffer</code> could be mutated through another
+  <code><var>TypedArray</var></code> view of the buffer. This would mean that the object
+  would never genuinely be frozen.</p>
+
+<pre class="brush: js example-bad">const i8 = Int8Array.of(1, 2, 3);
+Object.freeze(i8);
+// TypeError: Cannot freeze array buffer views with elements</pre>
+
+<h3 id="ByteOffset_must_be_aligned">ByteOffset must be aligned</h3>
+
+<p>When constructing a <code><var>TypedArray</var></code> as a view onto an
+  <code>ArrayBuffer</code>, the <code>byteOffset</code> argument must be aligned to its
+  element size; in other words, the offset must be a multiple of
+  <code>BYTES_PER_ELEMENT</code>.</p>
+
+<pre class="brush: js example-bad">const i32 = new Int32Array(new ArrayBuffer(4), 1);
+// RangeError: start offset of Int32Array should be a multiple of 4</pre>
+
+<pre class="brush: js example-good">const i32 = new Int32Array(new ArrayBuffer(4), 0);</pre>
+
+<h3 id="ByteLength_must_be_aligned">ByteLength must be aligned</h3>
+
+<p>Like the <code>byteOffset</code> parameter, the <code>byteLength</code> property of an
+  <code>ArrayBuffer</code> passed to a <code><var>TypedArray</var></code>'s constructor
+  must be a multiple of the constructor's <code>BYTES_PER_ELEMENT</code>.</p>
+
+<pre class="brush: js example-bad">const i32 = new Int32Array(new ArrayBuffer(3));
+// RangeError: byte length of Int32Array should be a multiple of 4</pre>
+
+<pre class="brush: js example-good">const i32 = new Int32Array(new ArrayBuffer(4);</pre>
+
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-typedarray-objects', 'TypedArray Objects')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.TypedArray")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
+  <li>A polyfill of typed arrays is available in <a href="https://github.com/zloirock/core-js#ecmascript-typed-arrays"><code>core-js</code></a></li>
   <li><a href="/en-US/docs/Web/JavaScript/Typed_arrays">JavaScript typed arrays</a></li>
   <li>{{jsxref("ArrayBuffer")}}</li>
   <li>{{jsxref("DataView")}}</li>

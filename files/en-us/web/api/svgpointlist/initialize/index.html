@@ -1,0 +1,61 @@
+---
+title: SVGPointList.initialize()
+slug: Web/API/SVGPointList/initialize
+tags:
+  - API
+  - Method
+  - Reference
+  - initialize
+  - SVGPointList
+browser-compat: api.SVGPointList.initialize
+---
+<div>{{APIRef("SVG")}}</div>
+
+<p class="summary">The <strong><code>initialize()</code></strong> method of the {{domxref("SVGPointList")}} interface clears the list then adds a single new {{domxref("SVGPoint")}} object to the list.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js">SVGPointList.initialize(obj);</pre>
+
+<h3 id="Parameters">Parameters</h3>
+
+<dl>
+  <dt><code>obj</code></dt>
+  <dd>An {{domxref("SVGPoint")}} object containing the coordinates of the point to be added when the list is initialized.</dd>
+</dl>
+
+<h3 id="Returns">Return value</h3>
+
+<p>The added {{domxref("SVGPoint")}} object.</p>
+
+<h3 id="Exceptions">Exceptions</h3>
+
+<dl>
+  <dt>{{domxref("DOMException")}} <code>NoModicationAllowedError</code></dt>
+  <dd>Thrown if the list is read-only.</dd>
+</dl>
+
+<h2 id="Examples">Examples</h2>
+
+<p>The following example shows an SVG which contains a {{SVGElement("polyline")}} with five coordinate pairs. Returning {{domxref("SVGPointList.length")}} gives the value <code>5</code>. After calling <code>initialize()</code>, returning {{domxref("SVGPointList.length")}} gives the value <code>1</code>.</p>
+
+<pre class="brush: html">&lt;svg id="svg" viewBox="-10 -10 120 120" xmlns="http://www.w3.org/2000/svg"&gt;
+  &lt;polyline id="example" stroke="black" fill="none"
+   points="50,0 21,90 98,35 2,35 79,90"/&gt;
+</svg></pre>
+
+<pre class="brush: js">let example = document.getElementById("example");
+console.log(example.points.length) //5;
+let svgpoint = document.getElementById("svg").createSVGPoint();
+example.points.initialize(svgpoint);
+console.log(example.points.length); //1</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<p>{{Specifications}}</p>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+
+<p>{{Compat}}</p>

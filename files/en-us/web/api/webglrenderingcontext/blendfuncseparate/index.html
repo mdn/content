@@ -2,11 +2,12 @@
 title: WebGLRenderingContext.blendFuncSeparate()
 slug: Web/API/WebGLRenderingContext/blendFuncSeparate
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGLRenderingContext
+browser-compat: api.WebGLRenderingContext.blendFuncSeparate
 ---
 <div>{{APIRef("WebGL")}}</div>
 
@@ -23,18 +24,18 @@ tags:
 
 <dl>
   <dt><code>srcRGB</code></dt>
-  <dd>A {{domxref("GLenum")}} specifying a multiplier for the red, green and blue (RGB)
+  <dd>A {{domxref("WebGL_API.Types")}} specifying a multiplier for the red, green and blue (RGB)
     source blending factors. The default value is <code>gl.ONE</code>. For possible
     values, see below.</dd>
   <dt><code>dstRGB</code></dt>
-  <dd>A {{domxref("GLenum")}} specifying a multiplier for the red, green and blue (RGB)
+  <dd>A {{domxref("WebGL_API.Types")}} specifying a multiplier for the red, green and blue (RGB)
     destination blending factors. The default value is <code>gl.ZERO</code>. For possible
     values, see below.</dd>
   <dt><code>srcAlpha</code></dt>
-  <dd>A {{domxref("GLenum")}} specifying a multiplier for the alpha source blending
+  <dd>A {{domxref("WebGL_API.Types")}} specifying a multiplier for the alpha source blending
     factor. The default value is <code>gl.ONE</code>. For possible values, see below.</dd>
   <dt><code>dstAlpha</code></dt>
-  <dd>A {{domxref("GLenum")}} specifying a multiplier for the alpha destination blending
+  <dd>A {{domxref("WebGL_API.Types")}} specifying a multiplier for the alpha destination blending
     factor. The default value is <code>gl.ZERO</code>. For possible values, see below.
   </dd>
 </dl>
@@ -68,6 +69,14 @@ tags:
   <li>color(A) = (sourceAlpha * <em>srcAlpha</em>) + (destinationAlpha *
     <em>dstAlpha</em>)</li>
 </ul>
+
+<p>In the following table, R<sub>S</sub>, G<sub>S</sub>, B<sub>S</sub>, A<sub>S</sub> represent respectively
+the <em>red</em>, <em>green</em>, <em>blue</em> and <em>alpha</em> component of the source, while
+R<sub>D</sub>, G<sub>D</sub>, B<sub>D</sub>, A<sub>D</sub> represent respectively
+the <em>red</em>, <em>green</em>, <em>blue</em> and <em>alpha</em> component of the destination.
+Similarly, R<sub>C</sub>, G<sub>C</sub>, B<sub>C</sub>, A<sub>C</sub> represent respectively
+the <em>red</em>, <em>green</em>, <em>blue</em> and <em>alpha</em> component of a constant color.
+They are all values between 0 and 1, included.</p>
 
 <table class="standard-table">
   <thead>
@@ -200,37 +209,11 @@ gl.getParameter(gl.BLEND_SRC_RGB) == gl.SRC_COLOR;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('WebGL', "#5.14.3", "blendFunc")}}</td>
-      <td>{{Spec2('WebGL')}}</td>
-      <td>Initial definition.<br>
-        In WebGL, constant color and constant alpha cannot be used together as source and
-        destination factors in the blend function. See section 6.13. of the specification.
-      </td>
-    </tr>
-    <tr>
-      <td>{{SpecName('OpenGL ES 2.0', "glBlendFunc.xml", "glBlendFunc")}}</td>
-      <td>{{Spec2('OpenGL ES 2.0')}}</td>
-      <td>Man page of the OpenGL API.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data.
-  If you'd like to contribute to the data, please check out <a
-    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
-  and send us a pull request.</p>
-
-<p>{{Compat("api.WebGLRenderingContext.blendFuncSeparate")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

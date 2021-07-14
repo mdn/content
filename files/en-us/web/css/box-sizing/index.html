@@ -15,14 +15,14 @@ tags:
   - 'recipe:css-property'
   - size
   - width
+browser-compat: css.properties.box-sizing
 ---
 <p>{{CSSRef}}</p>
 
-<p><span class="seoSummary">The <strong><code>box-sizing</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets how the total width and height of an element is calculated.</span></p>
+<p>The <strong><code>box-sizing</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets how the total width and height of an element is calculated.</p>
 
 <div>{{EmbedInteractiveExample("pages/css/box-sizing.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <p>By default in the <a href="/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">CSS box model</a>, the <code>width</code> and <code>height</code> you assign to an element is applied only to the element's content box. If the element has any border or padding, this is then added to the <code>width</code> and <code>height</code> to arrive at the size of the box that's rendered on the screen. This means that when you set <code>width</code> and <code>height</code>, you have to adjust the value you give to allow for any border or padding that may be added. For example, if you have four boxes with <code>width: 25%;</code>, if any has left or right padding or a left or right border, they will not by default fit on one line within the constraints of the parent container.</p>
 
@@ -30,7 +30,9 @@ tags:
 
 <ul>
  <li><code>content-box</code> gives you the default CSS box-sizing behavior. If you set an element's width to 100 pixels, then the element's content box will be 100 pixels wide, and the width of any border or padding will be added to the final rendered width, making the element wider than 100px.</li>
- <li><code>border-box</code> tells the browser to account for any border and padding in the values you specify for an element's width and height. If you set an element's width to 100 pixels, that 100 pixels will include any border or padding you added, and the content box will shrink to absorb that extra width. This typically makes it much easier to size elements.</li>
+ <li><p><code>border-box</code> tells the browser to account for any border and padding in the values you specify for an element's width and height. If you set an element's width to 100 pixels, that 100 pixels will include any border or padding you added, and the content box will shrink to absorb that extra width. This typically makes it much easier to size elements.</p>
+   <p><code>box-sizing: border-box</code> is the default styling that browsers use for the {{htmlelement("table")}}, {{htmlelement("select")}}, and {{htmlelement("button")}} elements, and for {{htmlelement("input")}} elements whose type is <code>{{htmlelement("input/radio", "radio")}}</code>, <code>{{htmlelement("input/checkbox", "checkbox")}}</code>, <code>{{htmlelement("input/reset", "reset")}}</code>, <code>{{htmlelement("input/button", "button")}}</code>, <code>{{htmlelement("input/submit", "submit")}}</code>, <code>{{htmlelement("input/color", "color")}}</code>, or <code>{{htmlelement("input/search", "search")}}</code>.</p>
+ </li>
 </ul>
 
 <div class="notecard note">
@@ -39,17 +41,30 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
+<pre class="brush: css">box-sizing: border-box;
+box-sizing: content-box;
+
+/* Global values */
+box-sizing: inherit;
+box-sizing: initial;
+box-sizing: revert;
+box-sizing: unset;</pre>
+
 <p>The <code>box-sizing</code> property is specified as a single keyword chosen from the list of values below.</p>
 
 <h3 id="Values">Values</h3>
 
 <dl>
  <dt><code>content-box</code></dt>
- <dd>This is the initial and default value as specified by the CSS standard. The {{Cssxref("width")}} and {{Cssxref("height")}} properties include the content, but does not include the padding, border, or margin. For example, <code>.box {width: 350px; border: 10px solid black;}</code> renders a box that is 370px wide.</dd>
- <dd>Here, the dimensions of the element are calculated as: <em>width = width of the content</em>, and <em>height = height of the content</em>. (Borders and padding are not included in the calculation.)</dd>
+ <dd>
+  <p>This is the initial and default value as specified by the CSS standard. The {{Cssxref("width")}} and {{Cssxref("height")}} properties include the content, but does not include the padding, border, or margin. For example, <code>.box {width: 350px; border: 10px solid black;}</code> renders a box that is 370px wide.</p>
+  <p>Here, the dimensions of the element are calculated as: <em>width = width of the content</em>, and <em>height = height of the content</em>. (Borders and padding are not included in the calculation.)</p>
+ </dd>
  <dt><code>border-box</code></dt>
- <dd>The {{Cssxref("width")}} and {{Cssxref("height")}} properties include the content, padding, and border, but do not include the margin. Note that padding and border will be inside of the box. For example, <code>.box {width: 350px; border: 10px solid black;}</code> renders a box that is 350px wide, with the area for content being 330px wide. The content box can't be negative and is floored to 0, making it impossible to use <code>border-box</code> to make the element disappear.</dd>
- <dd>Here the dimensions of the element are calculated as: <em>width = border + padding + width of the content</em>, and <em>height = border + padding + height of the content</em>.</dd>
+ <dd>
+  <p>The {{Cssxref("width")}} and {{Cssxref("height")}} properties include the content, padding, and border, but do not include the margin. Note that padding and border will be inside of the box. For example, <code>.box {width: 350px; border: 10px solid black;}</code> renders a box that is 350px wide, with the area for content being 330px wide. The content box can't be negative and is floored to 0, making it impossible to use <code>border-box</code> to make the element disappear.</p>
+  <p>Here the dimensions of the element are calculated as: <em>width = border + padding + width of the content</em>, and <em>height = border + padding + height of the content</em>.</p>
+ </dd>
 </dl>
 
 <h2 id="Formal_definition">Formal definition</h2>
@@ -58,7 +73,7 @@ tags:
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
@@ -105,26 +120,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Sizing', '#box-sizing', 'box-sizing')}}</td>
-   <td>{{Spec2('CSS3 Sizing')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.box-sizing")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

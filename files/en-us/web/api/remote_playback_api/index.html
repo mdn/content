@@ -1,0 +1,63 @@
+---
+title: Remote Playback API
+slug: Web/API/Remote_Playback_API
+tags:
+  - API
+  - Overview
+  - Reference
+  - Remote Playback API
+---
+<div>{{DefaultAPISidebar("Remote Playback API")}}</div>
+
+<p class="summary">The Remote Playback API extends the {{domxref("HTMLMediaElement")}} to enable the control of remote playback of media from a webpage.</p>
+
+<h2> Concepts and Usage</h2>
+
+<p>Remote playback devices are connected devices such as TVs, projectors, or speakers. The API takes into account wired devices connected via HDMI or DVI, and wireless devices, for example Chromecast or AirPlay.</p>
+
+<p>The API enables a page, which has an media element such as a video or audio file, to initiate and control playback of that media on a connected remote device. For example, playing a video on a connected TV.</p>
+
+<div class="notecard note">
+  <h4>Proprietary APIs</h4>
+  <p>Safari for iOS has some APIs which enable remote playback on AirPlay. Details of these can be found in <a href="https://developer.apple.com/library/archive/releasenotes/General/WhatsNewInSafari/Articles/Safari_9_0.html#//apple_ref/doc/uid/TP40014305-CH9-SW16">the Safari 9.0 release notes</a>.</p>
+
+  <p>Android versions of Firefox and Chrome also contain some remote playback features. These devices will show a Cast button if there is a Cast device available in the local network.</p>
+</div>
+
+<h2 id="Interfaces"> Interfaces</h2>
+
+<dl>
+  <dt>{{domxref("RemotePlayback")}}</dt>
+  <dd>Allows the page to detect availability of remote playback devices, then connect to and control playing on these devices.</dd>
+</dl>
+
+<h2 id="Examples">Examples</h2>
+
+<p>The following example demonstrates a player with custom controls that supports remote playback. Initially the button used to select a device is hidden.</p>
+
+<pre class="brush: html">&lt;video id="videoElement" src="https://example.org/media.ext"&gt;
+&lt;button id="deviceBtn" style="display: none;"&gt;Pick device&lt;/button&gt;</pre>
+
+<p>The {{domxref("RemotePlayback.watchAvailability()")}} method is watches for available remote playback devices. If a device is available, use the callback to show the button.</p>
+
+<pre class="brush: js">const deviceBtn = document.getElementById("deviceBtn");
+const videoElem = document.getElementById("videoElement");
+
+function availabilityCallback(available) {
+  // Show or hide the device picker button depending on device availability.
+  deviceBtn.style.display = available ? "inline" : "none";
+}
+
+videoElem.remote.watchAvailability(availabilityCallback).catch(() => {
+  /* If the device cannot continuously watch available,
+  show the button to allow the user to try to prompt for a connection.*/
+  deviceBtn.style.display = "inline";
+});</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<p>{{Specifications("api.RemotePlayback")}}</p>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat("api.RemotePlayback")}}</p>

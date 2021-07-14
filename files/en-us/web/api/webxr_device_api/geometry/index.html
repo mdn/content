@@ -35,7 +35,7 @@ tags:
 
 <p>WebGL measures all distances and lengths in <strong>meters</strong>. WebXR inherits this standard, as well as the fact that the world is a cube two meters wide, two meters tall, and two meters deep. Each of the three axes has a minimum value of -1.0 and a maximum of 1.0, with the center of the cube located at (0, 0, 0).</p>
 
-<p><img alt="Diagram showing a WebXR space whose X, Y, and Z coordinate axes each have a minimum value of -1 and a maximum of 1." src="https://mdn.mozillademos.org/files/17034/DefaultSpaceDimensions.svg" style="height: 384px; width: 640px;"></p>
+<p><img alt="Diagram showing a WebXR space whose X, Y, and Z coordinate axes each have a minimum value of -1 and a maximum of 1." src="defaultspacedimensions.svg"></p>
 
 <p>This two cubic meter space encompasses the entire universe for the purposes of your code. Everything you draw must have its coordinates mapped to fit into this space, either explicitly within your code, or by using a transform to adjust the coordinates of all vertices. The most efficient way, of course, is to design your objects and code to use the same coordinate system as WebGL does.</p>
 
@@ -57,7 +57,7 @@ let radiansToDegrees = (rad) =&gt; rad / RADIANS_PER_DEGREE;
   <h4>Note</h4>
   <p>Note that for security reasons, <code>DOMHighResTimeStamp</code> usually introduces a
   small amount of imprecision to the clock in order to prevent it from being used in <a
-    href="/en-US/docs/Web/Privacy#Fingerprinting">fingerprinting</a> and timing-based
+    href="/en-US/docs/Web/Privacy#fingerprinting">fingerprinting</a> and timing-based
   attacks.</p>
 </div>
 
@@ -70,9 +70,9 @@ let radiansToDegrees = (rad) =&gt; rad / RADIANS_PER_DEGREE;
 <p>We offer a <a href="/en-US/docs/Web/API/WebGL_API/Matrix_math_for_the_web">guide to matrix mathematics as it pertains to 3D geometry</a>, including how matrices are used for the three primary transforms that need to be performed when rendering 3D scenes:</p>
 
 <ul>
- <li><strong><a href="/en-US/docs/Web/API/WebGL_API/Matrix_math_for_the_web#Translation_matrix">Translation</a></strong> is the use of a matrix to shift the position of a point through the virtual space. This motion can be along any of the object's axes, or any combination of them.</li>
- <li><strong><a href="/en-US/docs/Web/API/WebGL_API/Matrix_math_for_the_web#Rotation_matrix">Rotation</a></strong> is the application of a matrix that rotates a point around the origin of the object's coordinate system.</li>
- <li><strong><a href="/en-US/docs/Web/API/WebGL_API/Matrix_math_for_the_web#Scale_matrix">Scaling</a></strong> is the use of a matrix to alter the size of an object.</li>
+ <li><strong><a href="/en-US/docs/Web/API/WebGL_API/Matrix_math_for_the_web#translation_matrix">Translation</a></strong> is the use of a matrix to shift the position of a point through the virtual space. This motion can be along any of the object's axes, or any combination of them.</li>
+ <li><strong><a href="/en-US/docs/Web/API/WebGL_API/Matrix_math_for_the_web#rotation_matrix">Rotation</a></strong> is the application of a matrix that rotates a point around the origin of the object's coordinate system.</li>
+ <li><strong><a href="/en-US/docs/Web/API/WebGL_API/Matrix_math_for_the_web#scale_matrix">Scaling</a></strong> is the use of a matrix to alter the size of an object.</li>
 </ul>
 
 <p>Note that when we say that a transform applies to a point, it also, by extension, can be applied to a <em>collection</em> of points. Since an object is represented by some number of polygons made up of a number of points in space, applying the same transform to every point that makes up the object will apply that same transform to the entire object overall. Transforms can also be applied to vectors, since vectors are described using a coordinate value to define the direction and magnitude of the vector.</p>
@@ -98,7 +98,7 @@ let radiansToDegrees = (rad) =&gt; rad / RADIANS_PER_DEGREE;
 
 <p>The directionality of the coordinate system can be seen in the following diagram:</p>
 
-<p><img alt="Diagram showing the coordinate system used by WebGL and WebXR." src="https://mdn.mozillademos.org/files/17033/webgl_coordinates.svg" style="height: 487px; width: 487px;"></p>
+<p><img alt="Diagram showing the coordinate system used by WebGL and WebXR." src="webgl_coordinates.svg"></p>
 
 <p>An {{domxref("XRRigidTransform")}} called the <strong>origin offset</strong> is used to transform points from the space's own effective coordinate system to the XR device's native coordinate system. The origin offset is initially an identity transform, since typically the two origins are aligned when the space is first established. However, as changes in alignment accumulate over time the origin offset may change to compensate.</p>
 

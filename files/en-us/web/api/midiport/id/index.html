@@ -1,0 +1,39 @@
+---
+title: MIDIPort.id
+slug: Web/API/MIDIPort/id
+tags:
+  - API
+  - Property
+  - Reference
+  - id
+  - MIDIPort
+browser-compat: api.MIDIPort.id
+---
+<div>{{securecontext_header}}{{DefaultAPISidebar("Web MIDI API")}}</div>
+
+<p class="summary">The <strong><code>id</code></strong> read-only property of the {{domxref("MIDIPort")}} interface returns the unique ID of the port.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js">let id = MIDIPort.id;
+</pre>
+
+<h3>Value</h3>
+<p>A {{domxref("DOMString","string")}} containing an ID for the port.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<p>The following example loops through all input ports and prints the id of each to the console.</p>
+
+<pre class="brush: js">for (let entry of midiAccess.inputs) {
+  let input = entry[1];
+  console.log(input.id);
+}</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<p>{{Specifications}}</p>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>

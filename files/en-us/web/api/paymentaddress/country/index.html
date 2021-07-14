@@ -12,8 +12,9 @@ tags:
 - country
 - payment
 - paymentAddress
+browser-compat: api.PaymentAddress.country
 ---
-<p>{{APIRef("Payment Request API")}}</p>
+<p>{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}</p>
 
 <p>The <strong><code>country</code></strong> read-only property of the
   {{domxref('PaymentAddress')}} interface is a string identifying the address's country
@@ -45,28 +46,11 @@ tags:
   {{domxref("AddressErrors.country", "country")}} property is a string indicating the
   validation error that occurred and, if possible, suggests how to fix it.</p>
 
-<h2 id="Specifications">Specifications</h2>
-
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Payment','#dom-paymentaddress','PaymentAddress.country')}}</td>
-      <td>{{Spec2('Payment')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
-
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
 
-  <p>{{Compat("api.PaymentAddress.country")}}</p>
+  <p>{{Compat}}</p>
 
   <h2 id="See_also">See also</h2>
 

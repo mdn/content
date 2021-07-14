@@ -6,9 +6,11 @@ tags:
 - HTMLImageElement
 - Intrinsic Height
 - Reference
+- Property
 - Vertical
 - naturalHeight
 - size
+browser-compat: api.HTMLImageElement.naturalHeight
 ---
 <p>{{APIRef("HTML DOM")}}</p>
 
@@ -19,6 +21,13 @@ tags:
   drawn with nothing constraining its height; if you don't specify a height for the image,
   or place the image inside a container that either limits or expressly specifies the
   image height, it will be rendered this tall.</p>
+
+  <p class="notecard note"><strong>Note:</strong> Most of the time the natural height is the actual height of the image sent by the server.
+    Nevertheless, browsers can modify an image before pushing it to the renderer. For example, Chrome
+    <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=1187043#c7">degrades the resolution of
+    images on low-end devices</a>. In such cases, <code>naturalHeight</code> will consider the height of the image modified
+    by such browser interventions as the natural height, and returns this value.
+  </p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -96,24 +105,8 @@ window.addEventListener("load", event =&gt; {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', '#dom-img-naturalheight',
-        'HTMLImageElement.naturalheight')}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.HTMLImageElement.naturalHeight")}}</p>
+<p>{{Compat}}</p>

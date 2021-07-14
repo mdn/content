@@ -36,11 +36,11 @@ tags:
 <p>The number of audio channels available on a signal is frequently presented in a numeric format, such as 2.0 or 5.1. This is called {{interwiki("wikipedia", "Surround_sound#Channel_notation", "channel notation")}}. The first number is the number of full frequency range audio channels that the signal includes. The number after the period indicates the number of those channels which are reserved for low-frequency effect (LFE) outputs; these are often referred to as <strong>subwoofers</strong>.</p>
 </div>
 
-<p><img alt="A simple box diagram with an outer box labeled Audio context, and three inner boxes labeled Sources, Effects and Destination. The three inner boxes have arrow between them pointing from left to right, indicating the flow of audio information." src="webaudioapi_en.svg" style="display: block; margin: 0px auto;"></p>
+<p><img alt="A simple box diagram with an outer box labeled Audio context, and three inner boxes labeled Sources, Effects and Destination. The three inner boxes have arrow between them pointing from left to right, indicating the flow of audio information." src="webaudioapi_en.svg"></p>
 
 <p>Each input or output is composed of one or more audio <strong>channels,</strong> which together represent a specific audio layout. Any discrete channel structure is supported, including <em>mono</em>, <em>stereo</em>, <em>quad</em>, <em>5.1</em>, and so on.</p>
 
-<p><img alt="Show the ability of AudioNodes to connect via their inputs and outputs and the channels inside these inputs/outputs." src="mdn.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="Show the ability of AudioNodes to connect via their inputs and outputs and the channels inside these inputs/outputs." src="mdn.png"></p>
 
 <p>Audio sources can be obtained in a number of ways:</p>
 
@@ -311,13 +311,13 @@ var buffer = context.createBuffer(1, 22050, 22050);</pre>
 
 <dl>
  <dt>{{domxref("AnalyserNode.getFloatFrequencyData()")}}</dt>
- <dd>Copies the current frequency data into a {{domxref("Float32Array")}} array passed into it.</dd>
+ <dd>Copies the current frequency data into a {{jsxref("Float32Array")}} array passed into it.</dd>
  <dt>{{domxref("AnalyserNode.getByteFrequencyData()")}}</dt>
- <dd>Copies the current frequency data into a {{domxref("Uint8Array")}} (unsigned byte array) passed into it.</dd>
+ <dd>Copies the current frequency data into a {{jsxref("Uint8Array")}} (unsigned byte array) passed into it.</dd>
  <dt>{{domxref("AnalyserNode.getFloatTimeDomainData()")}}</dt>
- <dd>Copies the current waveform, or time-domain, data into a {{domxref("Float32Array")}} array passed into it.</dd>
+ <dd>Copies the current waveform, or time-domain, data into a {{jsxref("Float32Array")}} array passed into it.</dd>
  <dt>{{domxref("AnalyserNode.getByteTimeDomainData()")}}</dt>
- <dd>Copies the current waveform, or time-domain, data into a {{domxref("Uint8Array")}} (unsigned byte array) passed into it.</dd>
+ <dd>Copies the current waveform, or time-domain, data into a {{jsxref("Uint8Array")}} (unsigned byte array) passed into it.</dd>
 </dl>
 
 <div class="note">
@@ -338,7 +338,7 @@ var buffer = context.createBuffer(1, 22050, 22050);</pre>
 <p>The listener's position is described using right-hand Cartesian coordinates; its movement using a velocity vector and the direction the listener's head is pointing using two direction vectors: up and front. These respectively define the direction of the top of the listener's head, and the direction the listener's nose is pointing, and are at right angles to one another.</p>
 </div>
 
-<p><img alt="We see the position, up and front vectors of an AudioListener, with the up and front vectors at 90° from the other." src="webaudiolistenerreduced.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="We see the position, up and front vectors of an AudioListener, with the up and front vectors at 90° from the other." src="webaudiolistenerreduced.png"></p>
 
 <div class="note">
 <p><strong>Note</strong>: For more information, see our <a href="/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics">Web audio spatialization basics</a> article.</p>

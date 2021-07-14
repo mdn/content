@@ -17,8 +17,9 @@ tags:
 - paymentAddress
 - region
 - state
+browser-compat: api.PaymentAddress.region
 ---
-<div>{{APIRef("Payment Request API")}}</div>
+<div>{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}</div>
 
 <p>The read-only <strong><code>region</code></strong> property of the
   {{domxref('PaymentAddress')}} interface returns a string containing the top-level
@@ -44,24 +45,6 @@ tags:
   intended purpose (e.g., to ship a product). However, always verify addresses to make
   sure what the user provides is usable.</p>
 
-<h2 id="Specifications">Specifications</h2>
-
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Payment','#dom-paymentaddress-region','PaymentAddress.region')}}
-      </td>
-      <td>{{Spec2('Payment')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
-
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.PaymentAddress.region")}}</p>
+<p>{{Compat}}</p>

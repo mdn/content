@@ -6,6 +6,7 @@ tags:
   - SVG
   - Template
   - reference page
+browser-compat: path.to.feature.NameOfTheElement
 ---
 <div>{{FirefoxSidebar}}</div>
 
@@ -20,10 +21,9 @@ tags:
 
 <h3 id="Top_macros">Top macros</h3>
 
-<p>There are four macro calls at the top of the template by default. You should update or delete them according to the advice below:</p>
+<p>A number of macro calls appear at the top of the content section. You should update or delete them according to the advice below:</p>
 
 <ul>
-	<li>\{{draft()}} — this generates a <strong>Draft</strong> banner that indicates that the page is not yet complete, and should only be removed when the first draft of the page is completely finished. After it is ready to be published, you can remove this.</li>
 	<li>\{{SeeCompatTable}} — this generates a <strong>This is an experimental technology</strong> banner that indicates the technology is <a href="/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental">experimental</a>). If the technology you are documenting is not experimental, you can remove this. If it is experimental, and the technology is hidden behind a pref in Firefox, you should also fill in an entry for it in the <a href="/en-US/docs/Mozilla/Firefox/Experimental_features">Experimental features in Firefox</a> page.</li>
 	<li>\{{deprecated_header}} — this generates a <strong>Deprecated</strong> banner that indicates the technology is <a href="/en-US/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete">deprecated</a>. If it isn't, then you can remove the macro call.</li>
 	<li>
@@ -35,11 +35,11 @@ tags:
 
 <p>In an SVG element subpage, you need to include the following tags (see the <em>Tags</em> section at the bottom of the editor UI): <strong>SVG</strong>, <strong>Reference</strong>, <strong>Element</strong>, <em>the name of the Element</em> (e.g. <strong>g</strong>), <strong>SVG container</strong>/<strong>SVG animation/SVG light source</strong>/<strong>SVG text content</strong>/<strong>SVG font</strong> as appropriate, <strong>Experimental</strong> (if the technology is <a href="/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental">experimental</a>), and <strong>Deprecated</strong> (if it is <a href="/en-US/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete">deprecated</a>).</p>
 
-<h3 id="Browser_compatibility">Browser compatibility</h3>
+<h3 id="Browser_compatibility_and_specifications">Browser compatibility and specifications</h3>
 
 <p>To fill in the browser compat data, you first need to fill in an entry for the API into our <a href="https://github.com/mdn/browser-compat-data">Browser compat data repo</a> — see our <a href="/en-US/docs/MDN/Structures/Compatibility_tables#the_new_way_the_browser_compat_data_repo_and_dynamic_tables">guide on how to do this</a>.</p>
 
-<p>Once that is done, you can show the compat data for the method with a \{{Compat()}} macro call.</p>
+<p>Once that is done, you can show the compat data for the SVG element with a \{{Compat}} macro call and its specification information with a \{{Specifications}} macro call.</p>
 </div>
 
 <div>{{draft}}{{SeeCompatTable}}{{deprecated_header}}{{svgref}}</div>
@@ -63,7 +63,6 @@ tags:
 	<li><a href="/en-US/docs/Web/SVG/Attribute#presentation_attributes">Presentation attributes</a></li>
 	<li>{{SVGAttr("class")}}</li>
 	<li>{{SVGAttr("style")}}</li>
-	<li>{{SVGAttr("externalResourcesRequired")}}</li>
 	<li>{{SVGAttr("transform")}}</li>
 </ul>
 
@@ -96,30 +95,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName("NameOfSpecificationFromSpecName","#document-fragment-linking-directly-to-element-definition","NameOfTheElement")}}</td>
-			<td>{{Spec2('NameOfSpecificationFromSpec2')}}</td>
-			<td>Initial definition.</td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility_2">Browser compatibility</h2>
 
-<div class="hidden">
-<p>The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-</div>
-
-<p>{{Compat("path.to.feature.NameOfTheElement")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

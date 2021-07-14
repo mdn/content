@@ -10,6 +10,7 @@ tags:
   - Web Audio API
   - sound
   - value
+browser-compat: api.AudioParam.value
 ---
 <p>{{APIRef("Web Audio API")}}</p>
 
@@ -115,24 +116,11 @@ gainNode.gain.setValueAtTime(0.4, audioCtx.currentTime);</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Web Audio API', '#dom-audioparam-value', 'value')}}</td>
-      <td>{{Spec2('Web Audio API')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.AudioParam.value")}}</p>
+<p>{{Compat}}</p>
 
 <p>When changing the gain value of a {{domxref("GainNode")}}, Google Chrome prior to
   version 64 (January 2018) would perform a smooth interpolation to prevent dezippering.

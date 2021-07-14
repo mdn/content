@@ -30,8 +30,8 @@ tags:
 
 <h2 id="Clipping_paths">Clipping paths</h2>
 
-<p><img alt="" class="internal" src="canvas_clipping_path.png" style="float: right;">A clipping path is like a normal canvas shape but it acts as a mask to hide unwanted parts of shapes. This is visualized in the image on the right. The red star shape is our clipping path. Everything that falls outside of this path won't get drawn on the canvas.</p>
-
+<p>A clipping path is like a normal canvas shape but it acts as a mask to hide unwanted parts of shapes. This is visualized in the image on the right. The red star shape is our clipping path. Everything that falls outside of this path won't get drawn on the canvas.</p>
+<img alt="" class="internal" src="canvas_clipping_path.png">
 <p>If we compare clipping paths to the <code>globalCompositeOperation</code> property we've seen above, we see two compositing modes that achieve more or less the same effect in <code>source-in</code> and <code>source-atop</code>. The most important differences between the two are that clipping paths are never actually drawn to the canvas and the clipping path is never affected by adding new shapes. This makes clipping paths ideal for drawing multiple shapes in a restricted area.</p>
 
 <p>In the chapter about <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes">drawing shapes</a> I only mentioned the <code>stroke()</code> and <code>fill()</code> methods, but there's a third method we can use with paths, called <code>clip()</code>.</p>
@@ -107,6 +107,6 @@ function drawStar(ctx, r) {
 
 <p>Everything that's drawn after creating the clipping path will only appear inside that path. You can see this clearly in the linear gradient that's drawn next. After this a set of 50 randomly positioned and scaled stars is drawn, using the custom <code>drawStar()</code> function. Again the stars only appear inside the defined clipping path.</p>
 
-<p>{{EmbedLiveSample("A_clip_example", "180", "180", "https://mdn.mozillademos.org/files/208/Canvas_clip.png")}}</p>
+<p>{{EmbedLiveSample("A_clip_example", "180", "180", "canvas_clip.png")}}</p>
 
 <p>{{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}</p>

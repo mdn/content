@@ -11,6 +11,7 @@ tags:
 - Reference
 - WebRTC
 - stopped
+browser-compat: api.RTCRtpTransceiver.stopped
 ---
 <div>{{APIRef("WebRTC")}}{{deprecated_header}}</div>
 
@@ -21,6 +22,12 @@ tags:
 <p>The transceiver is stopped if the {{domxref("RTCRtpTransceiver.stop", "stop()")}}
   method has been called or if a change to either the local or the remote description has
   caused the transceiver to be stopped for some reason.</p>
+
+<div class="Notecard note">
+  <p>This property is <em>deprecated</em> and will be removed in the future. Instead, look
+    at the value of {{domxref("RTCRtpTransceiver.currentDirection", "currentDirection")}}.
+    Its value is <code>stopped</code> if the transceiver has stopped.</p>
+</div>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -36,36 +43,15 @@ tags:
 
 <h2 id="Usage_notes">Usage notes</h2>
 
-<p>This property is <em>deprecated</em> and will be removed in the future. Instead, look
-  at the value of {{domxref("RTCRtpTransceiver.currentDirection", "currentDirection")}}.
-  Its value is <code>stopped</code> if the transceiver has stopped.</p>
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Currently only Firefox implements <code>stopped</code>, and
-    has not yet been updated to implement this change.</p>
-</div>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName("WebRTC 1.0", "#dom-rtcrtptransceiver-stopped",
-        "RTCRtpTransceiver.stopped")}}</td>
-      <td>{{Spec2("WebRTC 1.0")}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+<p>This feature is not part of any current specification. It is no longer on track to become a standard.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCRtpTransceiver.stopped")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

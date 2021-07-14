@@ -1,0 +1,88 @@
+---
+title: SVGMarkerElement.preserveAspectRatio
+slug: Web/API/SVGMarkerElement/preserveAspectRatio
+tags:
+  - API
+  - Property
+  - Reference
+  - preserveAspectRatio
+  - SVGMarkerElement
+browser-compat: api.SVGMarkerElement.preserveAspectRatio
+---
+<div>{{APIRef("SVG")}}</div>
+
+<p class="summary">The <strong><code>preserveAspectRatio</code></strong> read-only property of the {{domxref("SVGMarkerElement")}} interface returns an {{domxref("SVGAnimatedPreserveAspectRatio")}} object containing the value of the {{SVGattr("preserveAspectRatio")}} attribute of the {{SVGElement("marker")}}.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre  class="brush: js">let preserveAspectRatio = SVGMarkerElement.preserveAspectRatio;</pre>
+
+<h3>Value</h3>
+<p>An {{domxref("SVGAnimatedPreserveAspectRatio")}} object. The <code>baseVal</code> property of this object returns an {{domxref("SVGPreserveAspectRatio")}} object, with the following properties:</p>
+
+<dl>
+  <dt><code>align</code></dt>
+    <dd>One of the following numeric constants:
+      <dl>
+        <dt><code>0</code></dt>
+        <dd><code>SVG_PRESERVEASPECTRATIO_UNKNOWN</code></dd>
+        <dt><code>1</code></dt>
+        <dd><code>SVG_PRESERVEASPECTRATIO_NONE</code></dd>
+        <dt><code>2</code></dt>
+        <dd><code>SVG_PRESERVEASPECTRATIO_XMINYMIN</code></dd>
+        <dt><code>3</code></dt>
+        <dd><code>SVG_PRESERVEASPECTRATIO_XMIDYMIN</code></dd>
+        <dt><code>4</code></dt>
+        <dd><code>SVG_PRESERVEASPECTRATIO_XMAXYMIN</code></dd>
+        <dt><code>5</code></dt>
+        <dd><code>SVG_PRESERVEASPECTRATIO_XMINYMID</code></dd>
+        <dt><code>6</code></dt>
+        <dd><code>SVG_PRESERVEASPECTRATIO_XMIDYMID</code></dd>
+        <dt><code>7</code></dt>
+        <dd><code>SVG_PRESERVEASPECTRATIO_XMAXYMID</code></dd>
+        <dt><code>8</code></dt>
+        <dd><code>SVG_PRESERVEASPECTRATIO_XMINYMAX</code></dd>
+        <dt><code>9</code></dt>
+        <dd><code>SVG_PRESERVEASPECTRATIO_XMIDYMAX</code></dd>
+        <dt><code>10</code></dt>
+        <dd><code>SVG_PRESERVEASPECTRATIO_XMAXYMAX</code></dd>
+      </dl>
+    </dd>
+  <dt><code>meetOrSlice</code></dt>
+  <dl>
+    <dt><code>0</code></dt>
+    <dd><code>SVG_MEETORSLICE_UNKNOWN</code></dd>
+    <dt><code>1</code></dt>
+    <dd><code>SVG_MEETORSLICE_MEET</code></dd>
+    <dt><code>2</code></dt>
+    <dd><code>SVG_MEETORSLICE_SLICE</code></dd>
+   </dl>
+</dl>
+
+<h2 id="Examples">Examples</h2>
+
+<p>This example demonstrates how to return the numeric constants for <code>align</code> and <code>meetOrSlice</code> which relate to the values set for the {{SVGattr("preserveAspectRatio")}} attribute of {{SVGElement("marker")}}.</p>
+
+<pre class="brush: html">&lt;svg id="svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"&gt;
+  &lt;defs&gt;
+    &lt;marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5"
+        preserveAspectRatio="xMidYMid meet"
+        markerWidth="6" markerHeight="6"
+        orient="auto-start-reverse"&gt;
+      &lt;path d="M 0 0 L 10 5 L 0 10 z" /&gt;
+    &lt;/marker&gt;
+  &lt;/defs&gt;
+&lt;/svg&gt;</pre>
+
+<pre class="brush: js">let marker = document.getElementById("arrow");
+console.log(marker.preserveAspectRatio.baseVal.align); // 6
+console.log(marker.preserveAspectRatio.baseVal.meetOrSlice); // 1 </pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+{{Specifications}}
+
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>

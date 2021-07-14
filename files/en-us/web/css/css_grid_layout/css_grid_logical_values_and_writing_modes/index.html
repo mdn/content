@@ -6,7 +6,9 @@ tags:
   - CSS Grids
   - Guide
 ---
-<p class="summary">In these guides, I have already touched on an important feature of grid layout: the support for different writing modes that is built into the specification. <span class="seoSummary">For this guide, we will look at this feature of grid and other modern layout methods, learning a little about writing modes and logical vs. physical properties as we do so.</span></p>
+<div>{{CSSRef}}</div>
+
+<p>In these guides, I have already touched on an important feature of grid layout: the support for different writing modes that is built into the specification. For this guide, we will look at this feature of grid and other modern layout methods, learning a little about writing modes and logical vs. physical properties as we do so.</span></p>
 
 <h2 id="Logical_and_physical_properties_and_values">Logical and physical properties and values</h2>
 
@@ -65,7 +67,6 @@ tags:
 
 <p>The value <code>horizontal-tb</code> is the default for text on the web. It is the direction in which you are reading this guide. The other properties will change the way that text flows in our document, matching the different writing modes found around the world. Again, for full details of these see <a href="https://24ways.org/2016/css-writing-modes/">Jen’s article</a>. As a simple example, I have two paragraphs below. The first uses the default <code>horizontal-tb</code>, and the second uses <code>vertical-rl</code>. In the mode text still runs left to right, however the direction of the text is vertical - inline text now runs down the page, from top to bottom.</p>
 
-<div id="writing_1">
 <div class="hidden">
 <pre class="brush: css">.wrapper &gt; p {
     border: 2px solid #ffa94d;
@@ -85,16 +86,16 @@ tags:
 &lt;/div&gt;
 </pre>
 
-<p>{{ EmbedLiveSample('writing_1', '500', '420') }}</p>
-</div>
+<p>{{ EmbedLiveSample('writing-mode', '500', '500') }}</p>
 
 <h2 id="Writing_modes_in_grid_layouts">Writing modes in grid layouts</h2>
 
 <p>If we now take a look at a grid layout example, we can see how changing the writing mode means changing our idea of where the Block and Inline Axis are.</p>
 
-<p>The grid in my next example has three columns and two row tracks. This means there are three tracks running down the block axis. In default writing mode, grid auto-places items starting at the top left, moving along to the right, filling up the three cells on the inline axis. It then moves onto the next line, creating a new Row track, and fills in more items:</p>
+<h3 id="default_writing_mode">Default writing mode</h3>
 
-<div id="writing_2">
+<p>The grid in this example has three columns and two row tracks. This means there are three tracks running down the block axis. In default writing mode, grid auto-places items starting at the top left, moving along to the right, filling up the three cells on the inline axis. It then moves onto the next line, creating a new Row track, and fills in more items:</p>
+
 <div class="hidden">
 <pre class="brush: css">* {box-sizing: border-box;}
 
@@ -131,12 +132,12 @@ gap: 10px;
 &lt;/div&gt;
 </pre>
 
-<p>{{ EmbedLiveSample('writing_2', '500', '330') }}</p>
-</div>
+<p>{{ EmbedLiveSample('default_writing_mode', '500', '330') }}</p>
+
+<h3 id="setting_writing_mode">Setting writing mode</h3>
 
 <p>If we add <code>writing-mode: vertical-lr</code> to the grid container, we can see that the block and inline Axis are now running in a different direction. The block or <em>column</em> axis now runs across the page from left to right, Inline runs down the page, creating rows from top to bottom.</p>
 
-<div id="writing_3">
 <div class="hidden">
 <pre class="brush: css">* {box-sizing: border-box;}
 
@@ -174,8 +175,7 @@ gap: 10px;
 &lt;/div&gt;
 </pre>
 
-<p>{{ EmbedLiveSample('writing_3', '500', '330') }}</p>
-</div>
+<p>{{ EmbedLiveSample('setting_writing_mode', '500', '330') }}</p>
 
 <p><img alt="A image showing the direction of Block and Inline when writing-mode is vertical-lr" src="8-vertical-lr.png"></p>
 
@@ -185,7 +185,6 @@ gap: 10px;
 
 <p>In this next example, I am using alignment to align items inside a grid that is set to <code>writing-mode: vertical-lr</code>. The <code>start</code> and <code>end</code> properties work in exactly the same way that they do in the default writing mode, and remain logical in a way that using left and right, top and bottom to align items would not do. This occurs once we've flipped the grid onto the side, like this:</p>
 
-<div id="writing_4">
 <div class="hidden">
 <pre class="brush: css">* {box-sizing: border-box;}
 
@@ -239,8 +238,7 @@ gap: 10px;
 &lt;/div&gt;
 </pre>
 
-<p>{{ EmbedLiveSample('writing_4', '500', '330') }}</p>
-</div>
+<p>{{ EmbedLiveSample('Logical_values_for_alignment', '500', '330') }}</p>
 
 <p>If you want to see how these work, with a right to left as well as top to bottom writing mode, switch <code>vertical-lr</code> to <code>vertical-rl</code>, which is a vertical writing mode running from right to left.</p>
 
@@ -252,6 +250,8 @@ gap: 10px;
 
 <p>The key thing to remember when placing items by line number, is that line 1 is the start line, no matter which writing mode you are in. Line -1 is the end line, no matter which writing mode you are in.</p>
 
+<h3 id="line-based_placement_with_left_to_right_text">Line-based placement with left to right text</h3>
+
 <p>In this next example, I have a grid which is in the default <code>ltr</code> direction. I have positioned three items using line-based placement.</p>
 
 <ul>
@@ -260,7 +260,6 @@ gap: 10px;
  <li>Item 3 starts at column line 1, spanning to column line 3.</li>
 </ul>
 
-<div id="writing_5">
 <div class="hidden">
 <pre class="brush: css">* {box-sizing: border-box;}
 
@@ -305,12 +304,12 @@ gap: 10px;
     &lt;/div&gt;
 </pre>
 
-<p>{{ EmbedLiveSample('writing_5', '500', '330') }}</p>
-</div>
+<p>{{ EmbedLiveSample('line-based_placement_with_left_to_right_text', '500', '330') }}</p>
+
+<h3 id="line-based_placement_with_right_to_left_text">Line-based placement with right to left text</h3>
 
 <p>If I now add the {{cssxref("direction")}} property with a value of <code>rtl</code> to the grid container, line 1 becomes the right hand side of the grid, and line -1 on the left.</p>
 
-<div id="writing_6">
 <div class="hidden">
 <pre class="brush: css">* {box-sizing: border-box;}
 
@@ -356,8 +355,7 @@ gap: 10px;
     &lt;/div&gt;
 </pre>
 
-<p>{{ EmbedLiveSample('writing_6', '500', '330') }}</p>
-</div>
+<p>{{ EmbedLiveSample('line-based_placement_with_right_to_left_text', '500', '330') }}</p>
 
 <p>What this demonstrates, is that if you are switching the direction of your text, either for entire pages or for parts of pages, and are using lines: you may want to name your lines, if you do not want the layout to completely switch direction. For some things, for example, where a grid contains text content, this switching may be exactly what you want. For other usage it may not.</p>
 
@@ -389,7 +387,6 @@ gap: 10px;
 
 <p>In addition to displaying documents, using the correct writing mode for the language, writing modes can be used creatively within documents that are otherwise <code>ltr</code>. In this next example I have a grid layout with a set of links down one side. I’ve used writing modes to turn these on their side in the column track:</p>
 
-<div id="writing_7">
 <pre class="brush: css">.wrapper {
     display: grid;
     grid-gap: 20px;
@@ -426,8 +423,7 @@ gap: 10px;
     &lt;/div&gt;
 </pre>
 
-<p>{{ EmbedLiveSample('writing_7', '500', '330') }}</p>
-</div>
+<p>{{ EmbedLiveSample('Mixed_writing_modes_and_grid_layout', '500', '330') }}</p>
 
 <h2 id="Physical_values_and_grid_layout">Physical values and grid layout</h2>
 
@@ -440,66 +436,3 @@ gap: 10px;
 <p>Our new layout methods give us the ability to use these logical values to place items, however, as soon as we start to combine them with the physical properties used for margins and padding, we need to remember that those physical properties will not change according to writing mode.</p>
 
 <p>The <a href="https://drafts.csswg.org/css-logical-props/">CSS Logical Properties specification</a> means that you can use the <a href="/en-US/docs/Web/CSS/CSS_Logical_Properties">logical equivalents</a> for properties, such as {{cssxref("margin-left")}} and {{cssxref("margin-right")}}, in your CSS. These properties and values have good support in modern browsers. Your understanding of block and inline through grid will help you to understand how to use these too.</p>
-
-<section id="Quick_links">
-<ol>
- <li><a href="/en-US/docs/Web/CSS"><strong>CSS</strong></a></li>
- <li><a href="/en-US/docs/Web/CSS/Reference"><strong>CSS Reference</strong></a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a></li>
- <li data-default-state="open"><a href="#"><strong>Guides</strong></a>
-  <ol>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">Basics concepts of grid layout</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout">Relationship to other layout methods</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid">Line-based placement</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas">Grid template areas</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines">Layout using named grid lines</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout">Auto-placement in grid layout</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">Box alignment in grid layout</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes">Grids, logical values and writing modes</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility">CSS Grid Layout and Accessibility</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement">CSS Grid Layout and Progressive Enhancement</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout">Realizing common layouts using grids</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Subgrid">Subgrid</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout">Masonry layout</a></li>
-  </ol>
- </li>
- <li data-default-state="open"><a href="#"><strong>Properties</strong></a>
-  <ol>
-   <li><code><a href="/en-US/docs/Web/CSS/align-tracks">align-tracks</a></code>{{Experimental_Inline}}</li>
-   <li><code><a href="/en-US/docs/Web/CSS/column-gap">column-gap</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/gap">gap</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid">grid</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-area">grid-area</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-auto-columns">grid-auto-columns</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-auto-flow">grid-auto-flow</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-auto-rows">grid-auto-rows</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-column">grid-column</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-column-end">grid-column-end</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-column-start">grid-column-start</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-row">grid-row</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-row-end">grid-row-end</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-row-start">grid-row-start</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-template">grid-template</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-template-areas">grid-template-areas</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-template-columns">grid-template-columns</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-template-rows">grid-template-rows</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/justify-tracks">justify-tracks</a></code>{{Experimental_Inline}}</li>
-   <li><code><a href="/en-US/docs/Web/CSS/masonry-auto-flow">masonry-auto-flow</a></code>{{Experimental_Inline}}</li>
-   <li><code><a href="/en-US/docs/Web/CSS/row-gap">row-gap</a></code></li>
-  </ol>
- </li>
- <li data-default-state="open"><a href="#"><strong>Glossary</strong></a>
-  <ol>
-   <li><a href="/en-US/docs/Glossary/Grid">Grid</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_lines">Grid lines</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_tracks">Grid tracks</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_cell">Grid cell</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_areas">Grid areas</a></li>
-   <li><a href="/en-US/docs/Glossary/Gutters">Gutters</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_Axis">Grid Axis</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_rows">Grid row</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_column">Grid column</a></li>
-  </ol>
- </li>
-</ol>
-</section>

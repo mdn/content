@@ -2,13 +2,19 @@
 title: Sec-Fetch-Dest
 slug: Web/HTTP/Headers/Sec-Fetch-Dest
 tags:
+  - Sec-Fetch-Dest
   - Fetch Metadata Request Headers
   - HTTP
   - HTTP Headers
+  - Reference
+  - Request header
+browser-compat: http.headers.Sec-Fetch-Dest
 ---
-<p>{{HTTPSidebar}}{{Draft}}</p>
+<p>{{HTTPSidebar}}</p>
 
-<p>The <strong><code>Sec-Fetch-Dest</code></strong> fetch metadata header indicates the request's destination, that is how the fetched data will be used.</p>
+<p>The <strong><code>Sec-Fetch-Dest</code></strong> {{Glossary("Fetch metadata request header", "fetch metadata request header")}} indicates the request's <em>destination</em>. That is the initiator of the original fetch request, which is where (and how) the fetched data will be used.</p>
+
+<p>This allows servers determine whether to service a request based on whether it is appropriate for how it is <em>expected</em> to be used. For example, a request with an <code>audio</code> destination should request audio data, not some other type of resource (for example, a document that includes senstive user information).</p>
 
 <table class="properties">
 	<tbody>
@@ -18,26 +24,27 @@ tags:
 		</tr>
 		<tr>
 			<th scope="row">{{Glossary("Forbidden header name")}}</th>
-			<td>yes, since it has prefix <code>Sec-</code></td>
+			<td>yes (prefix <code>Sec-</code>)</td>
 		</tr>
 		<tr>
 			<th scope="row">{{Glossary("CORS-safelisted request header")}}</th>
-			<td></td>
+			<td>no</td>
 		</tr>
 	</tbody>
 </table>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: html">Sec-Fetch-Dest: audio
+<pre class="brush: http">Sec-Fetch-Dest: audio
 Sec-Fetch-Dest: audioworklet
 Sec-Fetch-Dest: document
 Sec-Fetch-Dest: embed
 Sec-Fetch-Dest: empty
 Sec-Fetch-Dest: font
+Sec-Fetch-Dest: frame
+Sec-Fetch-Dest: iframe
 Sec-Fetch-Dest: image
 Sec-Fetch-Dest: manifest
-Sec-Fetch-Dest: nested-document
 Sec-Fetch-Dest: object
 Sec-Fetch-Dest: paintworklet
 Sec-Fetch-Dest: report
@@ -49,86 +56,90 @@ Sec-Fetch-Dest: track
 Sec-Fetch-Dest: video
 Sec-Fetch-Dest: worker
 Sec-Fetch-Dest: xslt
-Sec-Fetch-Dest: audioworklet
-Sec-Fetch-Dest: audioworklet
 </pre>
 
-<h2 id="Values">Values</h2>
+<p>Servers should ignore this header if it contains any other value.</p>
+
+<h2 id="Directives">Directives</h2>
+
+<div class="notecard note">
+	<h4>Note</h4>
+	<p>These directives correspond to the values returned by {{domxref("Request.destination")}}).</p>
+</div>
 
 <dl>
 	<dt><code>audio</code></dt>
-	<dd></dd>
+	<dd>The destination is audio data. This might originate from an HTML {{HTMLElement("audio")}} tag.</dd>
 	<dt><code>audioworklet</code></dt>
-	<dd></dd>
+	<dd>The destination is data being fetched for use by an audio worklet. This might originate from a call to {{domxref("Worklet.addModule()", "audioWorklet.addModule()")}}.</dd>
 	<dt><code>document</code></dt>
-	<dd></dd>
+	<dd>The destination is a document (HTML or XML), and the request is the result of a user-initiated top-level navigation (e.g. resulting from a user clicking a link).</dd>
 	<dt><code>embed</code></dt>
-	<dd></dd>
+	<dd>The destination is embedded content. This might originate from an HTML {{HTMLElement("embed")}} tag.</dd>
 	<dt><code>empty</code></dt>
-	<dd></dd>
+	<dd>The destination is the empty string. This is used for destinations that do not have their own value. For exmaple <code>fetch()</code>, {{domxref("navigator.sendBeacon()")}}, {{domxref("EventSource")}}, {{domxref("XMLHttpRequest")}}, {{domxref("WebSocket")}}, etc.</dd>
 	<dt><code>font</code></dt>
-	<dd></dd>
+	<dd>The destination is a font. This might originate from CSS {{cssxref("@font-face")}}.</dd>
+	<dt><code>frame</code></dt>
+	<dd>The destination is a frame. This might originate from an HTML {{HTMLElement("frame")}} tag.</dd>
+	<dt><code>iframe</code></dt>
+	<dd>The destination is an iframe. This might originate from an HTML {{HTMLElement("iframe")}} tag.</dd>
 	<dt><code>image</code></dt>
-	<dd></dd>
+	<dd>The destination is an image. This might originate from an HTML {{HTMLElement("image")}}, SVG {{SVGElement("image")}}, CSS {{cssxref("background-image")}}, CSS {{cssxref("cursor")}}, CSS {{cssxref("list-style-image")}}, etc.</dd>
 	<dt><code>manifest</code></dt>
-	<dd></dd>
+	<dd>The destination is a manifest. This might originate from an HTML <a href="/en-US/docs/Web/HTML/Link_types/manifest">&lt;link rel=manifest&gt;</a>).</dd>
 	<dt><code>object</code></dt>
-	<dd></dd>
+	<dd>The destination is an object. This might originate from an HTML {{HTMLElement("object")}} tag.</dd>
 	<dt><code>paintworklet</code></dt>
-	<dd></dd>
+	<dd>The destination is a paint worklet. This might originate from a call to {{domxref('Worklet.addModule', 'CSS.PaintWorklet.addModule()')}}.</dd>
 	<dt><code>report</code></dt>
-	<dd></dd>
+	<dd>The destination is a report (for exmaple, a content security policy report).</dd>
 	<dt><code>script</code></dt>
-	<dd></dd>
+	<dd>The destination is a script. This might originate from an HTML {{HTMLElement("script")}} tag or a call to {{domxref("WorkerGlobalScope.importScripts()")}}.</dd>
 	<dt><code>serviceworker</code></dt>
-	<dd></dd>
+	<dd>The destination is a service worker. This might originate from a call to {{domxref("ServiceWorkerContainer.register","navigator.serviceWorker.register()")}}.</dd>
 	<dt><code>sharedworker</code></dt>
-	<dd></dd>
+	<dd>The destination is a shared worker. This might originate from a {{domxref("SharedWorker")}}.</dd>
 	<dt><code>style</code></dt>
-	<dd></dd>
+	<dd>The destination is a style. This might originate from an HTML {{HTMLElement("link","&lt;link rel=stylesheet&gt;")}} or a CSS {{cssxref("@import")}}.</dd>
 	<dt><code>track</code></dt>
-	<dd></dd>
+	<dd>The destination is an HTML text track. This might originate from an HTML {{HTMLElement("track")}} tag.</dd>
 	<dt><code>video</code></dt>
-	<dd></dd>
+	<dd>The destination is video data. This might originate from an HTML {{HTMLElement("video")}} tag.</dd>
 	<dt><code>worker</code></dt>
-	<dd></dd>
+	<dd>The destination is a {{domxref("Worker")}}.</dd>
 	<dt><code>xslt</code></dt>
-	<dd></dd>
-	<dt><code>nested-document</code></dt>
-	<dd></dd>
+	<dd>The destination is an XLST transform.</dd>
 </dl>
+
 
 <h2 id="Examples">Examples</h2>
 
-<p>TODO</p>
+<p>A cross-site request generated by an {{HTMLElement("img")}} element would result in a request with the following HTTP request headers (note that the destination is <code>image</code>):</p>
+
+<pre class="brush: http">Sec-Fetch-Dest: image
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: cross-site
+</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-    <thead>
-        <tr>
-            <th scope="col">Specification</th>
-            <th scope="col">Status</th>
-            <th scope="col">Comment</th>
-        </tr>
-     </thead>
-     <tbody>
-         <tr>
-            <td>{{SpecName('Fetch Metadata','#sec-fetch-dest-header', 'Sec-Fetch-Dest')}}</td>
-            <td>{{Spec2("Fetch Metadata")}}</td>
-            <td>Initial definition</td>
-         </tr>
-     </tbody>
-</table>
+<p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("http.headers.Sec-Fetch-Dest")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-	<li>{{HTTPHeader("Sec-Fetch-Mode")}}</li>
-	<li>{{HTTPHeader("Sec-Fetch-Site")}}</li>
-	<li>{{HTTPHeader("Sec-Fetch-User")}}</li>
-</ul>
+	<li>Related headers
+	 <ul>
+		 <li>{{HTTPHeader("Sec-Fetch-Mode")}}</li>
+		 <li>{{HTTPHeader("Sec-Fetch-Site")}}</li>
+		 <li>{{HTTPHeader("Sec-Fetch-User")}}</li>
+	  </ul>
+	</li>
+	<li><a href="https://web.dev/fetch-metadata/">Protect your resources from web attacks with Fetch Metadata</a> (web.dev)</li> 
+	<li><a href="https://secmetadata.appspot.com/">Fetch Metadata Request Headers playground</a> (secmetadata.appspot.com)</li>
+   </ul>

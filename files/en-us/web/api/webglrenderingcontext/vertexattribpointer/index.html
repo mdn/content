@@ -7,6 +7,7 @@ tags:
 - Reference
 - WebGL
 - WebGLRenderingContext
+browser-compat: api.WebGLRenderingContext.vertexAttribPointer
 ---
 <div>{{APIRef("WebGL")}}</div>
 
@@ -222,21 +223,8 @@ tags:
 
 <p>Will be stored in the array buffer as follows:</p>
 
-<table style="width: auto;">
-  <tbody>
-    <tr>
-      <td style="background-color: #ccf;">00 00 80 3F</td>
-      <td style="background-color: #ddf;">00 00 00 40</td>
-      <td style="background-color: #ccf;">00 00 0C 3F</td>
-      <td style="background-color: #cfc;">7F</td>
-      <td style="background-color: #dfd;">00</td>
-      <td style="background-color: #cfc;">00</td>
-      <td style="background-color: #dfd;">00</td>
-      <td style="background-color: #fcc;">7F FF</td>
-      <td style="background-color: #fdd;">3F FF</td>
-    </tr>
-  </tbody>
-</table>
+<p><img src="webgl-array-buffer.svg"
+     alt="WebGL array buffer contents"></p>
 
 <h3 id="Creating_the_array_buffer">Creating the array buffer</h3>
 
@@ -324,35 +312,11 @@ gl.enableVertexAttribArray(locTexUV);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('WebGL', "#5.14.10", "vertexAttribPointer")}}</td>
-      <td>{{Spec2('WebGL')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('OpenGL ES 2.0', "glVertexAttribPointer.xml",
-        "glVertexAttribPointer")}}</td>
-      <td>{{Spec2('OpenGL ES 2.0')}}</td>
-      <td>Man page of the OpenGL API.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data.
-  If you'd like to contribute to the data, please check out <a
-    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
-  and send us a pull request.</p>
-
-<p>{{Compat("api.WebGLRenderingContext.vertexAttribPointer")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

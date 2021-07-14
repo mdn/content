@@ -7,12 +7,13 @@ tags:
   - Interface
   - Reference
   - Web Audio API
+browser-compat: api.ChannelMergerNode
 ---
 <p>{{APIRef("Web Audio API")}}</p>
 
 <p>The <code>ChannelMergerNode</code> interface, often used in conjunction with its opposite, {{domxref("ChannelSplitterNode")}}, reunites different mono inputs into a single output. Each input is used to fill a channel of the output. This is useful for accessing each channels separately, e.g. for performing channel mixing where gain must be separately controlled on each channel.</p>
 
-<p><img alt="" src="webaudiomerger.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="" src="webaudiomerger.png"></p>
 
 <p>If <code>ChannelMergerNode</code> has one single output, but as many inputs as there are channels to merge; the number of inputs is defined as a parameter of its constructor and the call to {{domxref("BaseAudioContext/createChannelMerger", "AudioContext.createChannelMerger()")}}. In the case that no value is given, it will default to <code>6</code>.</p>
 
@@ -64,24 +65,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#channelmergernode', 'ChannelMergerNode')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.ChannelMergerNode")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

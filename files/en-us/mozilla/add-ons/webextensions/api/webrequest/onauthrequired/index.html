@@ -11,6 +11,7 @@ tags:
   - WebExtensions
   - onAuthRequired
   - webRequest
+browser-compat: webextensions.api.webRequest.onAuthRequired
 ---
 <div>{{AddonSidebar()}}</div>
 
@@ -179,7 +180,7 @@ browser.webRequest.onAuthRequired.hasListener(<var>listener</var>)
  </dl>
  </dd>
  <dt><code>realm</code>{{optional_inline}}</dt>
- <dd><code>string</code>. The authentication <a href="https://tools.ietf.org/html/rfc1945#section-11">realm</a> provided by the server, if there is one.</dd>
+ <dd><code>string</code>. The authentication <a href="https://datatracker.ietf.org/doc/html/rfc1945#section-11">realm</a> provided by the server, if there is one.</dd>
  <dt><code>requestId</code></dt>
  <dd><code>string</code>. The ID of the request. Request IDs are unique within a browser session, so you can use them to relate different events associated with the same request.</dd>
  <dd>
@@ -228,9 +229,7 @@ browser.webRequest.onAuthRequired.hasListener(<var>listener</var>)
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-
-<p>{{Compat("webextensions.api.webRequest.onAuthRequired", 10)}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Examples">Examples</h2>
 

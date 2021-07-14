@@ -5,17 +5,26 @@ tags:
 - API
 - CSSOM
 - Method
-- Obsolete
+- Deprecated
 - Reference
+browser-compat: api.CSSStyleDeclaration.getPropertyCSSValue
 ---
 <p>{{ APIRef("CSSOM") }} {{deprecated_header}}</p>
 
-<p><span class="seoSummary">The <strong>CSSStyleDeclaration.getPropertyCSSValue()</strong>
+<p>The <strong>CSSStyleDeclaration.getPropertyCSSValue()</strong>
     method interface returns a {{domxref('CSSValue')}} containing the CSS value for a
-    property.</span> Note that it returns <code>null</code> if the property name is a
+    property. Note that it returns <code>null</code> if the property name is a
   shorthand property.</p>
 
-<p>You should use {{domxref("CSSStyleDeclaration.getPropertyValue()")}} instead.</p>
+<div class="notecard note">
+  <p><strong>Note:</strong> This interface was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do
+  not implement it.</p>
+  <p>To achieve your purpose, you can use:</p>
+  <ul>
+    <li>{{domxref("CSSStyleDeclaration.getPropertyValue()")}} of the untyped <a href="/en-US/docs/Web/API/CSS_Object_Model">CSS Object Model</a>, widely supported, or</li>
+    <li>{{domxref("Element.computedStyleMap()")}} of the modern <a href="/en-US/docs/Web/CSS_Typed_OM_API">CSS Typed Object Model API</a>, less supported and considered experimental.</li>
+  </ul>
+</div>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -47,26 +56,11 @@ var rgbObj = style.getPropertyCSSValue('color').getRGBColorValue();
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('DOM2 Style', 'css.html#CSS-CSSStyleDeclaration',
-        'CSSStyleDeclaration')}}</td>
-      <td>{{Spec2('DOM2 Style')}}</td>
-      <td>Declared as obsolete in <a
-          href="https://lists.w3.org/Archives/Public/www-style/2003Oct/0347.html">July
-          2003</a>.</td>
-    </tr>
-  </tbody>
-</table>
+<p>This feature was originally defined in the <a href="https://www.w3.org/TR/DOM-Level-2-Style">DOM Style Level 2</a> specification, but has been dropped from any
+  standardization effort since then.</p>
+
+<p>It has been superseded by a modern, but incompatible, <a href="/en-US/docs/Web/API/CSS_Typed_OM_API">CSS Typed Object Model API</a> that is now on the standard track.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.CSSStyleDeclaration.getPropertyCSSValue")}}</p>
+<p>{{Compat}}</p>

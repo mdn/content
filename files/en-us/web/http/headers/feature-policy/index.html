@@ -4,7 +4,6 @@ slug: Web/HTTP/Headers/Feature-Policy
 tags:
   - Authorization
   - Experimental
-  - Feature Policy
   - Feature-Policy
   - HTTP
   - Permissions
@@ -12,6 +11,7 @@ tags:
   - Security
   - Web
   - header
+browser-compat: http.headers.Feature-Policy
 ---
 <div>{{HTTPSidebar}} {{SeeCompatTable}}</div>
 
@@ -41,14 +41,31 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: html">Feature-Policy: &lt;directive&gt; &lt;allowlist&gt;</pre>
+<pre class="brush: http">Feature-Policy: &lt;directive&gt; &lt;allowlist&gt;</pre>
 
 <dl>
  <dt><code>&lt;directive&gt;</code></dt>
- <dd>The Feature Policy directive to apply the <code>allowlist</code> to. See {{anch("Directives")}} below for a list of the permitted directive names.</dd>
- <dt><code>&lt;allowlist&gt;</code></dt>
- <dd>{{page("Web/HTTP/Feature_Policy/Using_Feature_Policy", "allowlist")}}</dd>
+ <dd>The Feature Policy directive to apply the <code>allowlist</code> to. See <a href="#directives">Directives</a> below for a list of the permitted directive names.</dd>
+ <dt>&lt;allowlist&gt;</dt>
+ <dd><p>An <code>allowlist</code> is a list of origins that takes one or more of the following values, separated by spaces:</p>
+
+  <ul>
+   <li><code>*</code>: The feature will be allowed in this document, and all nested browsing contexts (iframes) regardless of their origin.</li>
+   <li><code>'self'</code>: The feature will be allowed in this document, and in all nested browsing contexts (iframes) in the same origin. The feature is not allowed in cross-origin documents in nested browsing contexts.</li>
+   <li><code>'src'</code>: (In an iframe <code>allow</code> attribute only) The feature will be allowed in this iframe, as long as the document loaded into it comes from the same origin as the URL in the iframe's {{HTMLElement('iframe','src','#Attributes')}} attribute.
+    <div class="note">The <code>'src'</code> origin is used in the iframe <code>allow</code> attribute only, and is the <em>default</em> <code>allowlist</code> value. </div>
+   </li>
+   <li><code>'none'</code>: The feature is disabled in top-level and nested browsing contexts.</li>
+   <li>&lt;origin(s)&gt;: The feature is allowed for specific origins (for example, https://example.com). Origins should be separated by a space.</li>
+  </ul>
+  
+  <p>The values <code>*</code> (enable for all origins) or <code>'none'</code> (disable for all origins) may only be used alone, while <code>'self'</code> and <code>'src'</code> may be used with one or more origins.</p>
+  <p>Features have a <em>default</em> allowlist, which is one of: <code>*</code>, <code>'self'</code>, or <code>'none'</code>.</p>
+</dd>
 </dl>
+
+
+
 
 <h2 id="Directives">Directives</h2>
 
@@ -101,12 +118,16 @@ tags:
  <dd>Controls whether the current document is allowed to use the <a href="/en-US/docs/Web/API/Web_Authentication_API">Web Authentication API</a> to retrieve already stored public-key credentials, i.e. via {{domxref("CredentialsContainer.get","navigator.credentials.get({publicKey: ..., ...})")}}.</dd>
  <dt>{{httpheader('Feature-Policy/sync-xhr', 'sync-xhr')}}</dt>
  <dd>Controls whether the current document is allowed to make synchronous {{DOMxRef("XMLHttpRequest")}} requests.</dd>
+ <dt>{{httpheader('Feature-Policy/unoptimized-images', 'unoptimized-images')}} {{experimental_inline}}{{Non-standard_Inline}}</dt>
+ <dd>Controls whether the current document is allowed to download and display unoptimized images.</dd>
+ <dt>{{httpheader('Feature-Policy/unsized-media', 'unsized-media')}} {{experimental_inline}}{{Non-standard_Inline}}</dt>
+ <dd>Controls whether the current document is allowed to change the size of media elements after the initial layout is complete.</dd>
  <dt>{{httpheader('Feature-Policy/usb', 'usb')}}</dt>
  <dd>Controls whether the current document is allowed to use the <a href="https://wicg.github.io/webusb/">WebUSB API</a>.</dd>
+ <dt>{{httpheader('Feature-Policy/vibrate', 'vibrate')}} {{deprecated_inline}}{{experimental_inline}}{{Non-standard_Inline}}</dt>
+ <dd>Controls whether the current document is  allowed to trigger device vibrations via {{DOMxRef("Navigator.vibrate","Navigator.vibrate()")}} method of <a href="/en-US/docs/Web/API/Vibration_API">Vibration API</a>.</dd>
  <dt>{{httpheader('Feature-Policy/vr', 'vr')}} {{deprecated_inline}}</dt>
  <dd>Controls whether the current document is allowed to use the <a href="/en-US/docs/Web/API/WebVR_API">WebVR API</a>. When this policy is disabled, the {{jsxref("Promise")}} returned by {{domxref("Navigator.getVRDisplays","Navigator.getVRDisplays()")}} will reject with a {{domxref("DOMException")}}. Keep in mind that the WebVR standard is in the process of being replaced with <a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR</a>.</dd>
- <dt>{{httpheader('Feature-Policy/wake-lock', 'wake-lock')}}</dt>
- <dd>Controls whether the current document is allowed to use <a href="https://www.w3.org/TR/wake-lock/">Wake Lock API</a> to indicate that device should not enter power-saving mode.</dd>
  <dt>{{httpheader('Feature-Policy/screen-wake-lock', 'screen-wake-lock')}}</dt>
  <dd>Controls whether the current document is allowed to use <a href="/en-US/docs/Web/API/Screen_Wake_Lock_API">Screen Wake Lock API</a> to indicate that device should not turn off or dim the screen.</dd>
  <dt>{{httpheader("Feature-Policy/web-share", "web-share")}}</dt>
@@ -140,7 +161,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("http.headers.Feature-Policy")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

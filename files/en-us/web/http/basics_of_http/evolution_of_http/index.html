@@ -22,7 +22,7 @@ tags:
  <li>A server to give access to the document, an early version of <em>httpd</em>.</li>
 </ul>
 
-<p>These four building blocks were completed by the end of 1990, and the first servers were already running outside of CERN by early 1991. On August 6<sup>th</sup> 1991, Tim Berners-Lee's <a href="https://www.w3.org/People/Berners-Lee/1991/08/art-6484.txt">post</a> on the public <em>alt.hypertext</em> newsgroup is now considered as the official start of the World Wide Web as a public project.</p>
+<p>These four building blocks were completed by the end of 1990, and the first servers were already running outside of CERN by early 1991. On August 6th 1991, Tim Berners-Lee's <a href="https://www.w3.org/People/Berners-Lee/1991/08/art-6484.txt">post</a> on the public <em>alt.hypertext</em> newsgroup is now considered as the official start of the World Wide Web as a public project.</p>
 
 <p>The HTTP protocol used in those early phases was very simple, later dubbed HTTP/0.9, and sometimes as the one-line protocol.</p>
 
@@ -118,7 +118,7 @@ Vary: Cookie, Accept-Encoding
 <em>(content)</em>
 
 GET /static/img/header-background.png HTTP/1.1
-Host: developer.cdn.mozilla.net
+Host: developer.mozilla.org
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:50.0) Gecko/20100101 Firefox/50.0
 Accept: */*
 Accept-Language: en-US,en;q=0.5
@@ -159,12 +159,12 @@ Server: Apache
 
 <ul>
  <li><a href="/en-US/docs/Web/API/Server-sent_events">Server-sent events</a>, where the server can push occasional messages to the browser.</li>
- <li><a href="/en-US/docs/Web/API/WebSocket_API">WebSocket</a>, a new protocol that can be set up by upgrading an existing HTTP connection.</li>
+ <li><a href="/en-US/docs/Web/API/WebSockets_API">WebSocket</a>, a new protocol that can be set up by upgrading an existing HTTP connection.</li>
 </ul>
 
 <h3 id="Relaxing_the_security-model_of_the_Web">Relaxing the security-model of the Web</h3>
 
-<p>HTTP is independent of the security model of the Web, the <a href="/en-US/docs/Web/Security/Same-origin_policy">same-origin policy</a>. In fact, the current Web security model has been developed after the creation of HTTP! Over the years, it has proved useful to be able to be more lenient, by allowing under certain constraints to lift some of the restriction of this policy. How much and when such restrictions are lifted is transmitted by the server to the client using a new bunch of HTTP headers. These are defined in specifications like <a href="/en-US/docs/Glossary/CORS">Cross-Origin Resource Sharing</a> (CORS) or the <a href="/en-US/docs/Web/Security/CSP">Content Security Policy</a> (CSP).</p>
+<p>HTTP is independent of the security model of the Web, the <a href="/en-US/docs/Web/Security/Same-origin_policy">same-origin policy</a>. In fact, the current Web security model has been developed after the creation of HTTP! Over the years, it has proved useful to be able to be more lenient, by allowing under certain constraints to lift some of the restriction of this policy. How much and when such restrictions are lifted is transmitted by the server to the client using a new bunch of HTTP headers. These are defined in specifications like <a href="/en-US/docs/Glossary/CORS">Cross-Origin Resource Sharing</a> (CORS) or the <a href="/en-US/docs/Web/HTTP/CSP">Content Security Policy</a> (CSP).</p>
 
 <p>In addition to these large extensions, numerous other headers have been added, sometimes experimentally only. Notable headers are Do Not Track ({{HTTPHeader("DNT")}}) header to control privacy, {{HTTPHeader("X-Frame-Options")}}, or {{HTTPHeader('Upgrade-Insecure-Requests')}} but many more exist.</p>
 
@@ -183,7 +183,7 @@ Server: Apache
  <li>It allows a server to populate data in a client cache, in advance of it being required, through a mechanism called the server push.</li>
 </ul>
 
-<p>Officially standardized, in May 2015, HTTP/2 has had much success. By July 2016, 8.7% of all Web sites<sup><a href="https://w3techs.com/technologies/details/ce-http2/all/all">[1]</a></sup> were already using it, representing more than 68% of all requests<sup><a href="https://www.keycdn.com/blog/http2-statistics/">[2]</a></sup>. High-traffic Web sites showed the most rapid adoption, saving considerably on data transfer overheads and subsequent budgets.</p>
+<p>Officially standardized, in May 2015, HTTP/2 has had much success. By July 2016, 8.7% of all Web sites were already using it (see <a href="https://w3techs.com/technologies/details/ce-http2/all/all">these stats</a>), representing more than 68% of all requests (see <a href="https://www.keycdn.com/blog/http2-statistics/">these statistics</a>). High-traffic Web sites showed the most rapid adoption, saving considerably on data transfer overheads and subsequent budgets.</p>
 
 <p>This rapid adoption rate was likely as HTTP/2 does not require adaptation of Web sites and applications: using HTTP/1.1 or HTTP/2 is transparent for them. Having an up-to-date server communicating with a recent browser is enough to enable its use: only a limited set of groups were needed to trigger adoption, and as legacy browser and server versions are renewed, usage has naturally increased, without further Web developer efforts.</p>
 
@@ -203,6 +203,6 @@ Server: Apache
 
 <p>{{Draft}}{{SeeCompatTable}}</p>
 
-<p>The next major version of HTTP, HTTP/3, will use QUIC instead TCP/TLS for the transport layer portion.</p>
+<p>The next major version of HTTP, HTTP/3, will use {{Glossary("QUIC")}} instead {{Glossary("TCP")}}/{{Glossary("TLS")}} for the transport layer portion.</p>
 
 <p>See {{bug(1158011)}} for implementation status in Firefox.</p>

@@ -2,18 +2,19 @@
 title: HTMLElement.oncopy
 slug: Web/API/HTMLElement/oncopy
 tags:
-- API
-- Event Handler
-- Experimental
-- HTMLElement
-- NeedsSpecTable
-- Property
-- Reference
+  - API
+  - Event Handler
+  - Experimental
+  - HTMLElement
+  - NeedsSpecTable
+  - Property
+  - Reference
+browser-compat: api.HTMLElement.oncopy
 ---
-<div>{{ APIRef("HTML DOM") }}{{SeeCompatTable}} {{ Fx_minversion_header(3) }}</div>
+<div>{{ APIRef("HTML DOM") }}{{SeeCompatTable}}</div>
 
 <p>The <strong><code>oncopy</code></strong> property of the {{domxref("HTMLElement")}}
-  interface is an {{domxref("EventHandler")}} that processes
+  interface is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> that processes
   {{domxref("Element/copy_event", "copy")}} events.</p>
 
 <p>The <code>copy</code> event fires when the user attempts to copy text.</p>
@@ -73,7 +74,7 @@ editor.onpaste = logPaste;</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.HTMLElement.oncopy")}}</p>
+<p>{{Compat}}</p>
 
 <p>Since Firefox 13, the preference <code>dom.event.clipboardevents.enabled</code>
   controls this feature. It defaults to <code>true</code> but can be disabled.</p>

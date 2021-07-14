@@ -1,0 +1,37 @@
+---
+title: BackgroundFetchEvent.registration
+slug: Web/API/BackgroundFetchEvent/registration
+tags:
+  - API
+  - Property
+  - Reference
+  - registration
+  - BackgroundFetchEvent
+browser-compat: api.BackgroundFetchEvent.registration
+---
+<div>{{DefaultAPISidebar("Background Fetch API")}}</div>
+
+<p class="summary">The <strong><code>registration</code></strong> read-only property of the {{domxref("BackgroundFetchEvent")}} interface returns a {{domxref("BackgroundFetchRegistration")}} object.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox">let registration = BackgroundFetchEvent.registration;</pre>
+
+<h3>Value</h3>
+<p>A  {{domxref("BackgroundFetchRegistration")}}.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<p>In this example, if the user clicks on the user interface displaying the download progress, this fires the <code>onbackgroundfetchclick</code> event. The current {{domxref("BackgroundFetchRegistration")}} is returned by calling <code>event.registration</code>.</p>
+
+<pre class="brush: js">addEventListener('backgroundfetchclick', (event) => {
+  console.log(event.registration);
+});</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+{{Specifications}}
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>

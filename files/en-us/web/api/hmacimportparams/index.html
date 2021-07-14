@@ -10,7 +10,7 @@ tags:
 ---
 <div>{{ APIRef("Web Crypto API") }}</div>
 
-<p>The <strong><code>HmacImportParams</code></strong> dictionary of the <a href="/en-US/docs/Web/API/Web_Crypto_API">Web Crypto API </a>represents the object that should be passed as the <code>algorithm</code> parameter into {{domxref("SubtleCrypto.importKey()")}} or {{domxref("SubtleCrypto.unwrapKey()")}}, when generating a key for the <a href="/en-US/docs/Web/API/SubtleCrypto/sign#HMAC">HMAC</a> algorithm.</p>
+<p>The <strong><code>HmacImportParams</code></strong> dictionary of the <a href="/en-US/docs/Web/API/Web_Crypto_API">Web Crypto API </a>represents the object that should be passed as the <code>algorithm</code> parameter into {{domxref("SubtleCrypto.importKey()")}} or {{domxref("SubtleCrypto.unwrapKey()")}}, when generating a key for the <a href="/en-US/docs/Web/API/SubtleCrypto/sign#hmac">HMAC</a> algorithm.</p>
 
 <h2 id="Properties">Properties</h2>
 
@@ -19,7 +19,7 @@ tags:
  <dd>A {{domxref("DOMString")}}. This should be set to <code>HMAC</code>.</dd>
  <dt><code>hash</code></dt>
  <dd>
- <p>A {{domxref("DOMString")}} representing the name of the <a href="/en-US/docs/Web/API/Web_Crypto_API/Supported_algorithms#Digest_algorithms">digest function</a> to use. The can take a value of <code>SHA-256</code>, <code>SHA-384</code>, or <code>SHA-512</code>.</p>
+ <p>A {{domxref("DOMString")}} representing the name of the <a href="/en-US/docs//Web/API/SubtleCrypto/digest#supported_algorithms">digest function</a> to use. The can take a value of <code>SHA-256</code>, <code>SHA-384</code>, or <code>SHA-512</code>.</p>
 
  <div class="notecard warning">
  <p><strong>Warning</strong>: Although you can technically pass <code>SHA-1</code> here, this is strongly discouraged as it is considered vulnerable.</p>

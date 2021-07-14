@@ -12,6 +12,7 @@ tags:
   - Style
   - Web
   - 'recipe:css-property'
+browser-compat: css.properties.contain
 ---
 <div>{{CSSRef}}</div>
 
@@ -47,6 +48,7 @@ contain: size layout paint;
 /* Global values */
 contain: inherit;
 contain: initial;
+contain: revert;
 contain: unset;</pre>
 
 <p>The <code>contain</code> property is specified as either one of the following:</p>
@@ -81,7 +83,7 @@ contain: unset;</pre>
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
@@ -174,32 +176,17 @@ article {
   contain: content;
 }</pre>
 
-<p>This also means that the first image no longer floats down to the second article, and instead stays inside it's containing element's bounds:</p>
+<p>This also means that the first image no longer floats down to the second article, and instead stays inside its containing element's bounds:</p>
 
 <p>{{EmbedGHLiveSample("css-examples/contain/contain-fix.html", '100%', 500)}}</p>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS Containment 2', '#contain-property', 'contain')}}</td>
-   <td>{{Spec2('CSS Containment 2')}}</td>
-   <td>Added <code>style</code> keyword</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.contain")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

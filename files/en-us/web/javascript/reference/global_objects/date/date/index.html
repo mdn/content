@@ -2,37 +2,39 @@
 title: Date() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Date/Date
 tags:
-- Constructor
-- Date
-- JavaScript
-- Reference
+  - Constructor
+  - Date
+  - JavaScript
+  - Reference
+browser-compat: javascript.builtins.Date.Date
 ---
 <div>{{JSRef}}</div>
 
-<p><span class="seoSummary">Creates a JavaScript <strong><code>Date</code></strong>
+<p>Creates a JavaScript <strong><code>Date</code></strong>
     instance that represents a single moment in time in a platform-independent
-    format.</span> <code>Date</code> objects contain a <code>Number</code> that represents
+    format.<code>Date</code> objects contain a <code>Number</code> that represents
   milliseconds since 1 January 1970 UTC.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/date-constructor.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre class="brush: js">new Date()
-new Date(<var>value</var>)
-new Date(<var>dateString</var>)
-new Date(<var>year</var>, <var>monthIndex</var> [, <var>day</var> [, <var>hours</var> [, <var>minutes</var> [, <var>seconds</var> [, <var>milliseconds</var>]]]]])
+new Date(value)
+new Date(dateString)
+
+new Date(year, monthIndex)
+new Date(year, monthIndex, day)
+new Date(year, monthIndex, day, hours)
+new Date(year, monthIndex, day, hours, minutes)
+new Date(year, monthIndex, day, hours, minutes, seconds)
+new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds)
 </pre>
 
 <div class="notecard note">
   <p><strong>Note:</strong> The only correct way to instantiate a new <code>Date</code>
-    object is by using the {{jsxref("new")}} operator. If you call the <code>Date</code>
+    object is by using the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/new"><code>new</code></a> operator. If you call the <code>Date</code>
     object directly, such as <code>now = Date()</code>, the returned value is a string
     rather than a <code>Date</code> object.</p>
 </div>
@@ -56,7 +58,7 @@ new Date(<var>year</var>, <var>monthIndex</var> [, <var>day</var> [, <var>hours<
       <dd>An integer value representing the number of milliseconds since January 1, 1970,
         00:00:00 UTC (the ECMAScript epoch, equivalent to the UNIX epoch), with leap
         seconds ignored. Keep in mind that most <a
-          href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_16">UNIX
+          href="https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_16">UNIX
           Timestamp</a> functions are only accurate to the nearest second.</dd>
     </dl>
   </li>
@@ -67,7 +69,7 @@ new Date(<var>year</var>, <var>monthIndex</var> [, <var>day</var> [, <var>hours<
       <dt><code><var>dateString</var></code></dt>
       <dd>A string value representing a date, specified in a format recognized by the
         {{jsxref("Date.parse()")}} method. (These formats are <a
-          href="https://tools.ietf.org/html/rfc2822#page-14">IETF-compliant RFC 2822
+          href="https://datatracker.ietf.org/doc/html/rfc2822#page-14">IETF-compliant RFC 2822
           timestamps</a>, and also strings in a <a
           href="https://www.ecma-international.org/ecma-262/11.0/#sec-date.parse">version
           of ISO8601</a>.)
@@ -78,7 +80,7 @@ new Date(<var>year</var>, <var>monthIndex</var> [, <var>day</var> [, <var>hours<
           </p>
 
           <ul>
-            <li>Support for <a href="https://tools.ietf.org/html/rfc2822">RFC 2822</a>
+            <li>Support for <a href="https://datatracker.ietf.org/doc/html/rfc2822">RFC 2822</a>
               format strings is by convention only.</li>
             <li>Support for ISO 8601 formats differs in that date-only strings (e.g.
               <code>"1970-01-01"</code>) are treated as UTC, not local.</li>
@@ -106,12 +108,13 @@ new Date(<var>year</var>, <var>monthIndex</var> [, <var>day</var> [, <var>hours<
         <p>Values from <code>0</code> to <code>99</code> map to the years
           <code>1900</code> to <code>1999</code>. All other values are the actual year.
           See the <a
-            href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#Two_digit_years_map_to_1900_%E2%80%93_1999">example</a>.
+            href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#two_digit_years_map_to_1900_%e2%80%93_1999">example</a>.
         </p>
       </dd>
       <dt><code><var>monthIndex</var></code></dt>
       <dd>Integer value representing the month, beginning with <code>0</code> for January
-        to <code>11</code> for December.</dd>
+        to <code>11</code> for December. If a value greater than <code>11</code> is passed in, 
+        then those months will be added to the date; for example, <code>new Date(1990, 12, 1)</code> will return January 1st, 1991</dd>
       <dt><code><var>day</var></code> {{optional_inline}}</dt>
       <dd>Integer value representing the day of the month. The default is <code>1</code>.
       </dd>
@@ -130,6 +133,12 @@ new Date(<var>year</var>, <var>monthIndex</var> [, <var>day</var> [, <var>hours<
     </dl>
   </li>
 </ol>
+
+<h3 id="return_value">Return value</h3>
+
+<p>Calling <code>new Date()</code> (the <code>Date()</code>constructor) returns a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date"><code>Date</code></a> object. If called with an invalid date string, it returns a <code>Date</code> object whose <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toString"><code>toString()</code></a> method returns the literal string <code>Invalid Date</code>.</p>
+
+<p>Calling the <code>Date()</code> function (without the <code>new</code> keyword) returns a string. If called with an invalid date string, the <code>Date()</code> function returns the literal string <code>Invalid Date</code>.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -151,22 +160,11 @@ let birthday = new Date(1995, 11, 17, 3, 24, 0)</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-date-constructor', 'Date')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Date.Date")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

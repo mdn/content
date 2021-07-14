@@ -9,6 +9,7 @@ tags:
   - Inheritance
   - Intermediate
   - JavaScript
+browser-compat: javascript.classes
 ---
 <div>{{JsSidebar("Classes")}}</div>
 
@@ -40,7 +41,7 @@ class Rectangle {}
 
 <h3 id="Class_expressions">Class expressions</h3>
 
-<p>A <strong>class expression</strong> is another way to define a class. Class expressions can be named or unnamed. The name given to a named class expression is local to the class's body. (it can be retrieved through the class's (not an instance's) {{jsxref("Function.name", "name")}} property, though).</p>
+<p>A <strong>class expression</strong> is another way to define a class. Class expressions can be named or unnamed. The name given to a named class expression is local to the class's body. However, it can be accessed via the {{jsxref("Function.name", "name")}} property.</p>
 
 <pre class="brush: js">// unnamed
 let Rectangle = class {
@@ -64,8 +65,7 @@ console.log(Rectangle.name);
 </pre>
 
 <div class="notecard note">
-  <h4>Note:</h4>
-<p> Class <strong>expressions</strong> are subject to the same hoisting restrictions as described in the {{anch("Class declarations")}} section.</p>
+<p><strong>Note:</strong> Class <strong>expressions</strong> are subject to the same hoisting restrictions as described in the {{anch("Class declarations")}} section.</p>
 </div>
 
 <h2 id="Class_body_and_method_definitions">Class body and method definitions</h2>
@@ -127,7 +127,7 @@ console.log([...pentagon.getSides()]); // [1,2,3,4,5]</pre>
 
 <h3 id="Static_methods_and_properties">Static methods and properties</h3>
 
-<p>The {{jsxref("Classes/static", "static", "", "true")}} keyword defines a static method or property for a class. Static members (properties and methods) are called without <a href="/en-US/docs/Learn/JavaScript/Objects#the_object_(class_instance)" title='An example of class instance is "var john = new Person();"'>instantiating </a>their class and <strong>cannot</strong> be called through a class instance. Static methods are often used to create utility functions for an application, whereas static properties are useful for caches, fixed-configuration, or any other data you don't need to be replicated across instances.</p>
+<p>The {{jsxref("Classes/static", "static", "", "true")}} keyword defines a static method or property for a class. Static members (properties and methods) are called without instantiating their class and <strong>cannot</strong> be called through a class instance. Static methods are often used to create utility functions for an application, whereas static properties are useful for caches, fixed-configuration, or any other data you don't need to be replicated across instances.</p>
 
 <pre class="brush: js">class Point {
   constructor(x, y) {
@@ -216,10 +216,6 @@ Rectangle.prototype.prototypeWidth = 25;
 
 <h3 id="Field_declarations">Field declarations</h3>
 
-<div class="warning">
-<p>Public and private field declarations are an <a href="https://github.com/tc39/proposal-class-fields">experimental feature (stage 3)</a> proposed at <a href="https://tc39.es">TC39</a>, the JavaScript standards committee. Support in browsers is limited, but the feature can be used through a build step with systems like <a href="https://babeljs.io/">Babel</a>.</p>
-</div>
-
 <h4 id="Public_field_declarations">Public field declarations</h4>
 
 <p>With the JavaScript field declaration syntax, the above example can be written as:</p>
@@ -257,13 +253,12 @@ Rectangle.prototype.prototypeWidth = 25;
 <p>It's an error to reference private fields from outside of the class; they can only be read or written within the class body. By defining things that are not visible outside of the class, you ensure that your classes' users can't depend on internals, which may change from version to version.</p>
 
 <div class="notecard note">
-  <h4>Note:</h4>
-<p>Private fields can only be declared up-front in a field declaration.</p>
+<p><strong>Note:</strong> Private fields can only be declared up-front in a field declaration.</p>
 </div>
 
 <p>Private fields cannot be created later through assigning to them, the way that normal properties can.</p>
 
-<p>For more information, see {{jsxref("Classes/Private_class_fields", "private class fields", "", "true")}}.</p>
+<p>For more information, see {{jsxref("Classes/Private_class_fields", "private class features", "", "true")}}.</p>
 
 <h2 id="Sub_classing_with_extends">Sub classing with <code>extends</code></h2>
 
@@ -410,20 +405,11 @@ class Bar extends calculatorMixin(randomizerMixin(Foo)) { }</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-class-definitions', 'Class definitions')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.classes")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
@@ -432,7 +418,7 @@ class Bar extends calculatorMixin(randomizerMixin(Foo)) { }</pre>
  <li>{{jsxref("Statements/class", "class declaration", "", "true")}}</li>
  <li>{{jsxref("Operators/class", "class expression", "", "true")}}</li>
  <li>{{jsxref("Classes/Public_class_fields", "Public class fields", "", "true")}}</li>
- <li>{{jsxref("Classes/Private_class_fields", "Private class fields", "", "true")}}</li>
+ <li>{{jsxref("Classes/Private_class_fields", "Private class features", "", "true")}}</li>
  <li>{{jsxref("Operators/super", "super")}}</li>
  <li><a href="https://hacks.mozilla.org/2015/07/es6-in-depth-classes/">Blog post: "ES6 In Depth: Classes"</a></li>
  <li><a href="https://github.com/tc39/proposal-class-fields">Fields and public/private class properties proposal (stage 3)</a></li>

@@ -14,7 +14,7 @@ tags:
 ---
 <div>{{CSSRef}}</div>
 
-<p class="summary">In this article we will take a look at how Flexbox fits in with all the other CSS modules. We’ll find out which specifications you also need to take notice of if you want to learn flexbox, and find out why flexbox is different to some other modules.</p>
+<p>In this article we will take a look at how Flexbox fits in with all the other CSS modules. We’ll find out which specifications you also need to take notice of if you want to learn flexbox, and find out why flexbox is different to some other modules.</p>
 
 <div class="note">
 <p><strong>Note</strong>: CSS versions 1 and 2 were a single monolithic specification where all of CSS was defined in one large document. As CSS became a more feature rich language, maintaining one huge specification became problematic, with different parts of CSS moving on at different speeds. CSS was therefore modularized, and the various CSS Specifications are different modules that make up CSS today. These modules relate to each other, and are at different stages of development.</p>
@@ -24,7 +24,7 @@ tags:
 
 <p>For many people the first reason they start to look at flexbox is because of the ability to properly align flex items inside a flex container. Flexbox provides access to properties that allow the alignment of items on their cross axis and justification of items on the main axis.</p>
 
-<p>These properties started life in the flexbox specification, but are now also part of the <a href="https://www.w3.org/TR/css-align-3/">Box Alignment Specification</a>. This specification details how alignment works in all layout — not just flexbox. Box alignment deals with alignment and justification, and also distribution of space along an axis.</p>
+<p>These properties started life in the flexbox specification, but are now also part of the <a href="https://www.w3.org/TR/css-align-3/">Box Alignment Specification</a>. This specification details how alignment works in all layout — not just flexbox. Box alignment deals with alignment and justification, including creating gaps or gutters between flex items.</p>
 
 <p>The reason that the Box alignment properties remain detailed in the flexbox specification as well as being in box alignment is to ensure that completion of the flexbox spec is not held up by box alignment, which has to detail these methods for all layout types. There is a note in the flexbox spec stating that in the future, once it is completed, the definitions in Box Alignment Level 3 will supersede those of flexbox:</p>
 
@@ -32,11 +32,7 @@ tags:
 <p>"Note: While the alignment properties are defined in CSS Box Alignment [CSS-ALIGN-3], Flexible Box Layout reproduces the definitions of the relevant ones here so as to not create a normative dependency that may slow down advancement of the spec. These properties apply only to flex layout until CSS Box Alignment Level 3 is finished and defines their effect for other layout modes. Additionally, any new values defined in the Box Alignment module will apply to Flexible Box Layout; in other words, the Box Alignment module, once completed, will supersede the definitions here."</p>
 </blockquote>
 
-<p>In a later article in this series — Aligning items in a flex container — we will take a thorough look at how the Box Alignment properties apply to flex items.</p>
-
-<h3 id="The_gap_properties">The gap properties</h3>
-
-<p>A recent addition to the Box Alignment specification has been the {{cssxref("row-gap")}} and {{cssxref("column-gap")}} properties, along with the shorthand {{cssxref("gap")}}. These properties were initially defined in the CSS Grid specification and named <code>grid-row-gap</code>, <code>grid-column-gap</code> and <code>grid-gap</code>. They have been renamed and moved to Box Alignment in order that they can be used in all layout methods — this will ultimately include flexbox. Until browsers implement the <code>gap</code> properties for flexbox, {{cssxref("margin")}}s have to be used to create gaps between items.</p>
+<p>In a later article in this series — <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container">Aligning items in a flex container</a> — we will take a thorough look at how the Box Alignment properties apply to flex items.</p>
 
 <h2 id="Writing_Modes">Writing Modes</h2>
 

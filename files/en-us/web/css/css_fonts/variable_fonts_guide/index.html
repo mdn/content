@@ -11,7 +11,7 @@ tags:
 ---
 <div>{{CSSRef}}</div>
 
-<p class="summary"><strong>Variable fonts</strong> are an evolution of the OpenType font specification that enables many different variations of a typeface to be incorporated into a single file, rather than having a separate font file for every width, weight, or style. They let you access all the variations contained in a given font file via CSS and a single {{cssxref("@font-face")}} reference. This article will give you all you need to know to get you started using variable fonts.</p>
+<p><strong>Variable fonts</strong> are an evolution of the OpenType font specification that enables many different variations of a typeface to be incorporated into a single file, rather than having a separate font file for every width, weight, or style. They let you access all the variations contained in a given font file via CSS and a single {{cssxref("@font-face")}} reference. This article will give you all you need to know to get you started using variable fonts.</p>
 
 <div class="warning">
 <p><strong>Warning</strong>: In order to use variable fonts on your operating system, you need to make sure that it is up to date. For example Linux OSes need the latest Linux Freetype version, and macOS prior to High Sierra (10.13) does not support variable fonts. If your operating system is not up to date, you will not be able to use variable fonts in web pages or the Firefox Developer Tools.</p>
@@ -178,7 +178,7 @@ font-variation-settings: 'opsz' 36;</pre>
 
 <pre class="brush: css">@font-face {
  font-family: 'MyVariableFontName';
- src: 'path/to/font/file/myvariablefont.woff2' format('woff2-variations');
+ src: url('path/to/font/file/myvariablefont.woff2') format('woff2-variations');
  font-weight: 125 950;
  font-stretch: 75% 125%;
  font-style: normal;
@@ -189,7 +189,7 @@ font-variation-settings: 'opsz' 36;</pre>
 
 <pre class="brush: css">@font-face {
  font-family: 'MyVariableFontName';
- src: 'path/to/font/file/myvariablefont.woff2' format('woff2-variations');
+ src: url('path/to/font/file/myvariablefont.woff2') format('woff2-variations');
  font-weight: 125 950;
  font-stretch: 75% 125%;
  font-style: oblique 0deg 20deg;
@@ -203,7 +203,7 @@ font-variation-settings: 'opsz' 36;</pre>
 
 <pre class="brush: css">@font-face {
  font-family: 'MyVariableFontName';
- src: 'path/to/font/file/myvariablefont.woff2' format('woff2-variations');
+ src: url('path/to/font/file/myvariablefont.woff2') format('woff2-variations');
  font-weight: 125 950;
  font-stretch: 75% 125%;
  font-style: italic;
@@ -213,7 +213,7 @@ font-variation-settings: 'opsz' 36;</pre>
 
 <pre class="brush: css">@font-face {
  font-family: 'MyVariableFontName';
- src: 'path/to/font/file/myvariablefont.woff2' format('woff2-variations');
+ src: url('path/to/font/file/myvariablefont.woff2') format('woff2-variations');
  font-weight: 125 950;
  font-stretch: 75% 125%;
  font-style: oblique 0deg 12deg;

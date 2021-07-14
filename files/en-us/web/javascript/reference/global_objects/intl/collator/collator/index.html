@@ -2,18 +2,19 @@
 title: Intl.Collator() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator
 tags:
-- Collator
-- Constructor
-- Internationalization
-- Intl
-- JavaScript
-- Localization
-- Reference
+  - Collator
+  - Constructor
+  - Internationalization
+  - Intl
+  - JavaScript
+  - Localization
+  - Reference
+browser-compat: javascript.builtins.Intl.Collator.Collator
 ---
 <div>{{JSRef}}</div>
 
 <p>The <strong><code>Intl.Collator()</code></strong> constructor creates
-	{{jsxref("Collator", "Intl.Collator")}} objects that enable language-sensitive string
+	{{jsxref("Intl/Collator", "Intl.Collator")}} objects that enable language-sensitive string
 	comparison.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/intl-collator.html")}}</div>
@@ -21,8 +22,11 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-	class="brush: js">new Intl.Collator([<var>locales</var>[, <var>options</var>]])</pre>
+<pre class="brush: js">
+new Intl.Collator()
+new Intl.Collator(locales)
+new Intl.Collator(locales, options)
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -37,7 +41,7 @@ tags:
 		<p>The following Unicode extension keys are allowed:</p>
 
 		<div class="note notecard">
-			<p>These keys can usually also be set with <code>options</code> (as listed
+			<p><strong>Note:</strong> These keys can usually also be set with <code>options</code> (as listed
 				below). When both are set, the <code>options</code> property takes
 				precedence.</p>
 		</div>
@@ -111,7 +115,7 @@ tags:
 				"10". Possible values are <code>true</code> and <code>false</code>; the
 				default is <code>false</code>.
 				<div class="note notecard">
-					<p>This option can also be set through the <code>kn</code> Unicode
+					<p><strong>Note:</strong> This option can also be set through the <code>kn</code> Unicode
 						extension key; if both are provided, this <code>options</code>
 						property takes precedence.</p>
 				</div>
@@ -125,7 +129,7 @@ tags:
 				key; if both are provided, the <code><var>options</var></code> property
 				takes precedence.
 				<div class="note notecard">
-					<p>This option can also be set through the <code>kf</code> Unicode
+					<p><strong>Note:</strong> This option can also be set through the <code>kf</code> Unicode
 						extension key; if both are provided, this <code>options</code>
 						property takes precedence.</p>
 				</div>
@@ -138,7 +142,7 @@ tags:
 				"<code>reformed</code>", "<code>searchjl</code>", "<code>stroke</code>",
 				"<code>trad</code>", "<code>unihan</code>".
 				<div class="note notecard">
-					<p>This option can also be set through the <code>co</code> Unicode
+					<p><strong>Note:</strong> This option can also be set through the <code>co</code> Unicode
 						extension key; if both are provided, this <code>options</code>
 						property takes precedence.</p>
 				</div>
@@ -166,23 +170,11 @@ console.log(new Intl.Collator().compare('a', 'a')); // → 0
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName('ES Int Draft', '#sec-the-intl-collator-constructor',
-				'Intl.Collator constructor')}}</td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>{{Compat("javascript.builtins.Intl.Collator.Collator")}}</div>
+<div>{{Compat}}</div>
 
 <h2 id="See_also">See also</h2>
 

@@ -1,0 +1,91 @@
+---
+title: InputDeviceInfo.getCapabilities()
+slug: Web/API/InputDeviceInfo/getCapabilities
+tags:
+  - API
+  - Method
+  - Reference
+  - getCapabilities
+  - InputDeviceInfo
+browser-compat: api.InputDeviceInfo.getCapabilities
+---
+{{DefaultAPISidebar("Media Capture and Streams")}}
+
+<p class="summary">The <strong><code>getCapabilities()</code></strong> method of the {{domxref("InputDeviceInfo")}} interface returns a <code>MediaTrackCapabilities</code> object describing the primary audio or video track of the device's {{domxref("MediaStream")}}.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js">InputDeviceInfo.getCapabilities();</pre>
+
+<h3 id="Parameters">Parameters</h3>
+
+<p>None.</p>
+
+<h3 id="Returns">Return value</h3>
+
+<p>A <code>MediaTrackCapabilities</code> object containing the following members:</p>
+
+<dl>
+  <dt><code>deviceId</code></dt>
+  <dd>A {{domxref("ConstrainDOMString")}} object containing the device ID.</dd>
+  <dt><code>groudId</code></dt>
+  <dd>A {{domxref("ConstrainDOMString")}} object containing a group ID.</dd>
+  <dt><code>autoGainControl</code>></dt>
+  <dd>A {{domxref("ConstrainBoolean")}} object reporting if the source can do auto gain control.
+    If the feature can be controlled by a script the source will report both true and false as possible values.</dd>
+  <dt><code>channelCount</code></dt>
+  <dd>A {{domxref("ConstrainULong")}} containing the channel count or range of channel counts.</dd>
+  <dt><code>echoCancellation</code></dt>
+  <dd>A {{domxref("ConstrainBoolean")}} object reporting if the source can do echo cancellation.
+    If the feature can be controlled by a script the source will report both true and false as possible values.</dd>
+  <dt><code>latency</code></dt>
+  <dd>A {{domxref("ConstrainDouble")}} containing the latency or range of latencies.</dd>
+  <dt><code>noiseSuppression</code></dt>
+  <dd>A {{domxref("ConstrainBoolean")}} object reporting if the source can do noise suppression.
+    If the feature can be controlled by a script the source will report both true and false as possible values.</dd>
+  <dt><code>sampleRate</code></dt>
+  <dd>A {{domxref("ConstrainULong")}} containing the sample rate or range of sample rates.</dd>
+  <dt><code>sampleSize</code></dt>
+  <dd>A {{domxref("ConstrainULong")}} containing the sample size or range of sample sizes.</dd>
+  <dt><code>aspectRatio</code></dt>
+  <dd>A {{domxref("ConstrainDouble")}} containing the video aspect ratio (width in pixels divided by height in pixels) or range of aspect ratios.</dd>
+  <dt><code>facingMode</code></dt>
+  <dd>A {{domxref("ConstrainDOMString")}} object containing the camera facing mode. A camera may report multiple facings, for example "left" and "user".</dd>
+  <dt><code>frameRate</code></dt>
+  <dd>A {{domxref("ConstrainDouble")}} containing the frame rate or range of frame rates which are acceptable.</dd>
+  <dt><code>height</code></dt>
+  <dd>A {{domxref("ConstrainULong")}} containing the video height or range of heights in pixels.</dd>
+  <dt><code>width</code></dt>
+  <dd>A {{domxref("ConstrainULong")}} containing the video width or range of widths in pixels.</dd>
+  <dt><code>resizeMode</code></dt>
+  <dd>A {{domxref("ConstrainDOMString")}} object containing the mode or an array of modes the UA can use to derive the resolution of the video track.</dd>
+</dl>
+
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>If the user has not granted permission to access the input device an empty object will be returned.</p>
+</div>
+
+<h2 id="Examples">Examples</h2>
+
+<p>In the following example we ask for permission to access audio and video devices with {{domxref("mediaDevices.getUserMedia()")}}, as to use <code>getCapabilities()</code> we need permission to access the devices.</p>
+
+<p>If <code>device</code> is an <code>InputDeviceInfo</code> object, then <code>getCapabilities()</code> will return an object with members representing its capbilities. A video stream will not include auto properties such as <code>noiseSuppression</code>, for example.</p>
+
+<pre class="brush: js">// Get permission to access audio or video devices
+navigator.mediaDevices.getUserMedia({ audio: true, video: true });
+
+navigator.mediaDevices.enumerateDevices()
+  .then(function(devices) {
+    devices.forEach(function(device) {
+      console.log(device.getCapabilities()); // a MediaTrackCapabilities object.
+    });
+  })</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+{{Specifications}}
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>

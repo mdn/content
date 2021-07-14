@@ -12,6 +12,7 @@ tags:
   - Object Model
   - Reference
   - StyleSheet
+browser-compat: api.CSSStyleSheet
 ---
 <div>{{APIRef("CSSOM")}}</div>
 
@@ -88,9 +89,9 @@ tags:
 
 <p>In some browsers, if a stylesheet is loaded from a different domain, accessing <code>cssRules</code> results in <code>SecurityError</code>.</p>
 
-<p>A stylesheet is associated with at most one {{domxref("Document")}}, which it applies to (unless {{domxref("StyleSheet.disabled", "disabled", "", 1)}}). A list of <code>CSSStyleSheet</code> objects for a given document can be obtained using the {{domxref("DocumentOrShadowRoot/styleSheets", "document.styleSheets")}} property. A specific style sheet can also be accessed from its <em>owner</em> object (<code>Node</code> or <code>CSSImportRule</code>), if any.</p>
+<p>A stylesheet is associated with at most one {{domxref("Document")}}, which it applies to (unless {{domxref("StyleSheet.disabled", "disabled", "", 1)}}). A list of <code>CSSStyleSheet</code> objects for a given document can be obtained using the {{domxref("Document.styleSheets")}} property. A specific style sheet can also be accessed from its <em>owner</em> object (<code>Node</code> or <code>CSSImportRule</code>), if any.</p>
 
-<p>A <code>CSSStyleSheet</code> object is created and inserted into the document's {{domxref("DocumentOrShadowRoot/styleSheets", "document.styleSheets")}} list automatically by the browser, when a stylesheet is loaded for a document. As the stylesheet list cannot be modified directly, there's no useful way to create a new <code>CSSStyleSheet</code> object manually (although <a href="https://wicg.github.io/construct-stylesheets/">Constructable Stylesheet Objects</a> is coming to the web platform soon and is already supported in Blink). To create a new stylesheet, insert a {{HTMLElement("style")}} or {{HTMLElement("link")}} element into the document.</p>
+<p>A <code>CSSStyleSheet</code> object is created and inserted into the document's {{domxref("Document.styleSheets")}} list automatically by the browser, when a stylesheet is loaded for a document. As the stylesheet list cannot be modified directly, there's no useful way to create a new <code>CSSStyleSheet</code> object manually (although <a href="https://wicg.github.io/construct-stylesheets/">Constructable Stylesheet Objects</a> is coming to the web platform soon and is already supported in Blink). To create a new stylesheet, insert a {{HTMLElement("style")}} or {{HTMLElement("link")}} element into the document.</p>
 
 <p>A (possibly incomplete) list of ways a stylesheet can be associated with a document follows:</p>
 
@@ -113,7 +114,9 @@ tags:
    <td>{{domxref("HTMLLinkElement")}},<br>
     {{domxref("HTMLStyleElement")}},<br>
     or {{domxref("SVGStyleElement")}}</td>
-   <td>{{domxref("LinkStyle.sheet", ".sheet")}}</td>
+   <td>{{domxref("HTMLLinkElement.sheet")}},<br>
+    {{domxref("HTMLStyleElement.sheet")}},<br>
+    or {{domxref("SVGStyleElement.sheet")}}</td>
   </tr>
   <tr>
    <td>CSS {{cssxref("@import")}} rule in other style sheets applied to the document</td>
@@ -127,7 +130,7 @@ tags:
    <td>Yes</td>
    <td>{{domxref("StyleSheet.ownerNode", ".ownerNode")}}</td>
    <td>{{domxref("ProcessingInstruction")}}</td>
-   <td>{{domxref("LinkStyle.sheet", ".sheet")}}</td>
+   <td>{{domxref("ProcessingInstruction.sheet", ".sheet")}}</td>
   </tr>
   <tr>
    <td>HTTP Link Header</td>
@@ -148,29 +151,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Specification</th>
-   <th>Status</th>
-   <th>Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSSOM", "#cssstylesheet", 'CSSStyleSheet')}}</td>
-   <td>{{Spec2("CSSOM")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM2 Style", "css.html#CSS-CSSStyleSheet", "CSSStyleSheet")}}</td>
-   <td>{{Spec2("DOM2 Style")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.CSSStyleSheet")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

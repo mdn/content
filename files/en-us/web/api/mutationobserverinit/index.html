@@ -14,6 +14,7 @@ tags:
   - MutationObserverInit
   - Observer
   - mutation
+browser-compat: api.MutationObserverInit
 ---
 <div>{{APIRef("DOM WHATWG")}}</div>
 
@@ -37,28 +38,13 @@ tags:
 	<dt>{{domxref("MutationObserverInit.characterData", "characterData")}} {{optional_inline}}</dt>
 	<dd>Set to <code>true</code> to monitor the specified target node (and, if <code>subtree</code> is <code>true</code>, its descendants) for changes to the character data contained within the node or nodes. The default value is <code>true</code> if <code>characterDataOldValue</code> is specified, otherwise the default value is <code>false</code>.</dd>
 	<dt>{{domxref("MutationObserverInit.characterDataOldValue", "characterDataOldValue")}} {{optional_inline}}</dt>
-	<dd>Set to <code>true</code> to record the previous value of a node's text whenever the text changes on nodes being monitored. For details and an example, see {{SectionOnPage("/en-US/docs/Web/API/MutationObserver", "Monitoring text content changes")}}. The default value is <code>false</code>.</dd>
+	<dd>Set to <code>true</code> to record the previous value of a node's text whenever the text changes on nodes being monitored. The default value is <code>false</code>.</dd>
 </dl>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName('DOM WHATWG', '#dictdef-mutationobserverinit', 'MutationObserverInit')}}</td>
-			<td>{{ Spec2('DOM WHATWG') }}</td>
-			<td></td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.MutationObserverInit")}}</p>
+<p>{{Compat}}</p>

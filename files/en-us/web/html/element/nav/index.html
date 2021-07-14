@@ -11,14 +11,13 @@ tags:
   - Sections
   - Web
   - nav
+browser-compat: html.elements.nav
 ---
 <div>{{HTMLRef}}</div>
 
-<p><span class="seoSummary">The <strong>HTML <code>&lt;nav&gt;</code> element</strong> represents a section of a page whose purpose is to provide navigation links, either within the current document or to other documents. Common examples of navigation sections are menus, tables of contents, and indexes.</span></p>
+<p>The <strong><code>&lt;nav&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element represents a section of a page whose purpose is to provide navigation links, either within the current document or to other documents. Common examples of navigation sections are menus, tables of contents, and indexes.</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/nav.html", "tabbed-standard")}}</div>
-
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a> and send us a pull request.</p>
 
 <table class="properties">
  <tbody>
@@ -78,38 +77,36 @@ tags:
 &lt;/nav&gt;
 </pre>
 
+<p>The semantics of the <code>nav</code> element is that of providing links. However a <code>nav</code> element doesn&rsquo;t have to contain a list, it can contain other kinds of content as well. In this navigation block, links are provided in prose:</p>
+<pre class="brush: html">&lt;nav&gt;
+  &lt;h2&gt;Navigation&lt;/h2&gt;
+  &lt;p&gt;You are on my home page. To the north lies &lt;a href="/blog"&gt;my
+  blog&lt;/a&gt;, from whence the sounds of battle can be heard. To the east
+  you can see a large mountain, upon which many &lt;a
+  href="/school"&gt;school papers&lt;/a&gt; are littered. Far up thus mountain
+  you can spy a little figure who appears to be me, desperately
+  scribbling a &lt;a href="/school/thesis"&gt;thesis&lt;/a&gt;.&lt;/p&gt;
+  &lt;p&gt;To the west are several exits. One fun-looking exit is labeled &lt;a
+  href="https://games.example.com/"&gt;"games"&lt;/a&gt;. Another more
+  boring-looking exit is labeled &lt;a
+  href="https://isp.example.net/"&gt;ISP&trade;&lt;/a&gt;.&lt;/p&gt;
+  &lt;p&gt;To the south lies a dark and dank &lt;a href="/about"&gt;contacts
+  page&lt;/a&gt;. Cobwebs cover its disused entrance, and at one point you
+  see a rat run quickly out of the page.&lt;/p&gt;
+&lt;/nav&gt;</pre>
+
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'sections.html#the-nav-element', '&lt;nav&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>No change since latest W3C snapshot.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'sections.html#the-nav-element', '&lt;nav&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+<p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("html.elements.nav")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
  <li>Other section-related elements: {{HTMLElement("body")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}};</li>
- <li class="last"><a class="deki-ns current" href="/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines" title="Sections and Outlines of an HTML5 document">Sections and outlines of an HTML5 document</a>.</li>
- <li class="last"><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Navigation_Role">ARIA: Navigation role</a></li>
+ <li><a href="/en-US/docs/Web/HTML/Element/Heading_Elements">Sections and outlines of an HTML5 document</a>.</li>
+ <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Navigation_Role">ARIA: Navigation role</a></li>
 </ul>

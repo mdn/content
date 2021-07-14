@@ -11,10 +11,11 @@ tags:
   - Non-standard
   - Reference
   - 'recipe:css-property'
+browser-compat: css.properties.-moz-context-properties
 ---
 <div>{{CSSRef}}{{Non-standard_header}}</div>
 
-<p><span class="seoSummary">The <code><strong>-moz-context-properties</strong></code> property can be used within privileged contexts in Firefox to share the values of specified properties of the element with a child SVG image.</span></p>
+<p>The <code><strong>-moz-context-properties</strong></code> property can be used within privileged contexts in Firefox to share the values of specified properties of the element with a child SVG image.</span></p>
 
 <p>If you reference an SVG image in a webpage (such as with the {{htmlelement("img")}} element or as a background image), the SVG image can coordinate with the embedding element (its context) to have the image adopt property values set on the embedding element. To do this the embedding element needs to list the properties that are to be made available to the image by listing them as values of the <code>-moz-context-properties</code> property, and the image needs to opt in to using those properties by using values such as the <code>context-fill</code> value.</p>
 
@@ -49,7 +50,7 @@ tags:
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
@@ -85,7 +86,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.-moz-context-properties")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

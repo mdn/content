@@ -1,0 +1,125 @@
+# Things to do and run after a "PR Test" workflow has finished successfully.
+# Note, as of right now, this workflow does a bunch of things. It might be
+# worth considering to break it up so there's a dedicated post-PR
+# workflow just to posting PR comments about flaws, for example.
+
+name: PR review companion
+
+on:
+  workflow_run:
+    workflows: ["PR Test"]
+    types:
+      - completed
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+
+    if: >
+      ${{ github.event.workflow_run.event == 'pull_request' &&
+      github.event.workflow_run.conclusion == 'success' }}
+
+    steps:
+      - name: 'Download artifact'
+        uses: actions/github-script@v4.0.2
+        with:
+          script: |
+            var artifacts = await github.actions.listWorkflowRunArtifacts({
+               owner: context.repo.owner,
+               repo: context.repo.repo,
+               run_id: ${{github.event.workflow_run.id }},
+            });
+            var matchArtifacts = artifacts.data.artifacts.filter((artifact) => {
+              return artifact.name == "build"
+            });
+            if (matchArtifacts.length === 0) {
+              console.warn(
+                'No artifacts to download probably just means nothing ' +
+                'was built in the "PR test" workflow. That\'s OK. ' +
+                'This is actually not a genuine CI error.'
+              );
+              throw new Error(
+                'No matched build artifacts. ' +
+                'Perhaps nothing built in the "PR test" workflow'
+              );
+            }
+            var matchArtifact = matchArtifacts[0];
+            var download = await github.actions.downloadArtifact({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                artifact_id: matchArtifact.id,
+                archive_format: 'zip',
+            });
+            var fs = require('fs');
+            fs.writeFileSync('${{github.workspace}}/build.zip', Buffer.from(download.data));
+
+      - name: Unzip what was downloaded
+        run: |
+          unzip build.zip -d build
+
+      - uses: actions/checkout@v2
+        with:
+           repository: mdn/yari
+           path: yari
+
+      - name: Install Python
+        uses: actions/setup-python@v2.2.2
+        with:
+          python-version: "3.8"
+
+      - name: Install Python poetry
+        uses: snok/install-poetry@v1.1.6
+        with:
+          virtualenvs-create: true
+          virtualenvs-in-project: true
+
+      - name: Load cached venv
+        id: cached-poetry-dependencies
+        uses: actions/cache@v2.1.6
+        with:
+          path: yari/deployer/.venv
+          key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}-${{ hashFiles('.github/workflows/pr-review-companion.yml') }}
+
+      - name: Install poetry dependencies
+        if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
+        run: |
+          cd yari/deployer
+          poetry install --no-interaction --no-root
+
+      - name: Install Deployer
+        run: |
+          cd yari/deployer
+          poetry install --no-interaction
+
+      - name: Deploy and analyze built content
+        env:
+          BUILD_OUT_ROOT: ${{ github.workspace }}/build
+
+          DEPLOYER_BUCKET_NAME: mdn-content-dev
+          AWS_ACCESS_KEY_ID: ${{ secrets.DEPLOYER_DEV_AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.DEPLOYER_DEV_AWS_SECRET_ACCESS_KEY }}
+          DEPLOYER_LOG_EACH_SUCCESSFUL_UPLOAD: false
+
+        run: |
+          PR_NUMBER=`cat build/NR`
+
+          echo "Pull request:"
+          echo "https://github.com/mdn/content/pull/$PR_NUMBER"
+
+          cd yari/deployer
+
+          poetry run deployer upload \
+            --prefix="pr$PR_NUMBER" \
+            --no-redirects \
+            --default-cache-control 0 \
+            "$BUILD_OUT_ROOT"
+
+          poetry run deployer analyze-pr-build \
+            --prefix="pr$PR_NUMBER" \
+            --analyze-flaws \
+            --analyze-dangerous-content \
+            --github-token="${{secrets.GITHUB_TOKEN}}" \
+            --repo=$GITHUB_REPOSITORY \
+            --pr-number=$PR_NUMBER \
+            --diff-file=$BUILD_OUT_ROOT/DIFF \
+            $BUILD_OUT_ROOT

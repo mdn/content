@@ -1,0 +1,47 @@
+---
+title: Document.styleSheets
+slug: Web/API/Document/styleSheets
+tags:
+  - API
+  - Document
+  - Property
+  - Reference
+  - Stylesheets
+browser-compat: api.Document.styleSheets
+---
+<div>{{APIRef("CSSOM")}}</div>
+
+<p><span class="seoSummary">The <strong><code>styleSheets</code></strong> read-only property of the {{domxref("Document")}} interface returns a {{domxref('StyleSheetList')}} of {{domxref('CSSStyleSheet')}} objects, for stylesheets explicitly linked into or embedded in a document.</span></p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js">document.styleSheets</pre>
+
+<h3 id="Value">Value</h3>
+
+<p>The returned list is ordered as follows:</p>
+
+<ul>
+ <li>StyleSheets retrieved from {{htmlelement("link")}} headers are placed first, sorted in header order.</li>
+ <li>StyleSheets retrieved from the DOM are placed after, sorted in <a href="https://dom.spec.whatwg.org/#concept-tree-order">tree order</a>.</li>
+</ul>
+
+<h2 id="Examples">Examples</h2>
+
+<pre class="brush: js">function getStyleSheet(unique_title) {
+  for (var i=0; i&lt;document.styleSheets.length; i++) {
+    var sheet = document.styleSheets[i];
+    if (sheet.title == unique_title) {
+      return sheet;
+    }
+  }
+}
+</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+{{Specifications}}
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>

@@ -379,7 +379,7 @@ function startup() {
   timerBox.innerText = min + ":" + sec.toString().padStart(2, "0");
 }</pre>
 
-<p>This code finds the ad's timer using its ID, <code>"timer"</code>, and computes the number of seconds elapsed by dividing the ad's <code>totalViewTime</code> by 1000. Then it calculates the number of minutes and seconds elapsed before setting the timer's {{domxref("Node.innerText", "innerText")}} to a string representing that time in the form m:ss. The {{jsxref("String.padStart()")}} method is used to ensure that the number of seconds is padded out to two digits if it's less than 10.</p>
+<p>This code finds the ad's timer using its ID, <code>"timer"</code>, and computes the number of seconds elapsed by dividing the ad's <code>totalViewTime</code> by 1000. Then it calculates the number of minutes and seconds elapsed before setting the timer's {{domxref("HTMLElement/innerText", "innerText")}} to a string representing that time in the form m:ss. The {{jsxref("String.padStart()")}} method is used to ensure that the number of seconds is padded out to two digits if it's less than 10.</p>
 
 <h3 id="Building_the_page_contents">Building the page contents</h3>
 

@@ -12,6 +12,7 @@ tags:
 - Web
 - WebRTC
 - createAnswer
+browser-compat: api.RTCPeerConnection.createAnswer
 ---
 <p>{{APIRef("WebRTC")}}</p>
 
@@ -49,10 +50,10 @@ tags:
 
 <dl>
   <dt><code>successCallback</code> {{deprecated_inline}}</dt>
-  <dd>An {{domxref("RTCSessionDescriptionCallback")}} which will be passed a single
+  <dd>A <a href="/en-US/docs/Glossary/Callback_function">callback function</a> which will be passed a single
     {{domxref("RTCSessionDescription")}} object describing the newly-created answer.</dd>
   <dt><code>failureCallback</code> {{deprecated_inline}}</dt>
-  <dd>An {{domxref("RTCPeerConnectionErrorCallback")}} which will be passed a single
+  <dd>A <a href="/en-US/docs/Glossary/Callback_function">callback function</a> which will be passed a single
     {{domxref("DOMException")}} object explaining why the request to create an answer
     failed.</dd>
   <dt><code>options</code> {{optional_inline}}</dt>
@@ -120,22 +121,8 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('WebRTC 1.0', '#dom-rtcpeerconnection-createanswer',
-        'createAnswer()')}}</td>
-      <td>{{Spec2('WebRTC 1.0')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCPeerConnection.createAnswer")}}</p>
+<p>{{Compat}}</p>

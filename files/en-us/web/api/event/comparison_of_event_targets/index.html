@@ -25,7 +25,7 @@ tags:
    <th>Purpose</th>
   </tr>
   <tr>
-   <td><code><a href="/en-US/docs/DOM/event.target">event.target</a></code></td>
+   <td><code><a href="/en-US/docs/Web/API/Event/target">event.target</a></code></td>
    <td><a href="https://www.w3.org/TR/DOM-Level-2/events.html#Events-interface">DOM Event Interface</a></td>
    <td>
     <p>The DOM element on the lefthand side of the call that triggered this event, eg:</p>
@@ -36,23 +36,23 @@ tags:
    </td>
   </tr>
   <tr>
-   <td><code><a href="/en-US/docs/DOM/event.currentTarget">event.currentTarget</a></code></td>
+   <td><code><a href="/en-US/docs/Web/API/Event/currentTarget">event.currentTarget</a></code></td>
    <td><a href="https://www.w3.org/TR/DOM-Level-2/events.html#Events-interface">DOM Event Interface</a></td>
    <td>The <a href="https://www.w3.org/TR/DOM-Level-2/events.html#Events-EventTarget"><code>EventTarget</code></a> whose <a href="https://www.w3.org/TR/DOM-Level-2/events.html#Events-EventListener"><code>EventListeners</code></a> are currently being processed. As the event capturing and bubbling occurs, this value changes.</td>
   </tr>
   <tr>
-   <td><code><a href="/en-US/docs/DOM/event.relatedTarget">event.relatedTarget</a></code></td>
+   <td><code><a href="/en-US/docs/Web/API/MouseEvent/relatedTarget">event.relatedTarget</a></code></td>
    <td><a href="https://www.w3.org/TR/DOM-Level-2/events.html#Events-MouseEvent">DOM MouseEvent Interface</a></td>
    <td>Identifies a secondary target for the event.</td>
   </tr>
   <tr>
-   <td><code><a href="/en-US/docs/DOM/event.explicitOriginalTarget">event.explicitOriginalTarget</a></code></td>
+   <td><code><a href="/en-US/docs/Web/API/Event/explicitOriginalTarget">event.explicitOriginalTarget</a></code></td>
    <td>{{ Source("/dom/webidl/Event.webidl", "Event.webidl") }}</td>
    <td>{{ Non-standard_inline() }} If the event was retargeted for some reason other than an anonymous boundary crossing, this will be set to the target before the retargeting occurs. For example, mouse events are retargeted to their parent node when they happen over text nodes ({{ Bug("185889") }}), and in that case <code>.target</code> will show the parent and <code>.explicitOriginalTarget</code> will show the text node.<br>
     Unlike <code>.originalTarget</code>, <code>.explicitOriginalTarget</code> will never contain anonymous content.</td>
   </tr>
   <tr>
-   <td><code><a href="/en-US/docs/DOM/event.originalTarget">event.originalTarget</a></code></td>
+   <td><code><a href="/en-US/docs/Web/API/Event/originalTarget">event.originalTarget</a></code></td>
    <td>{{ Source("/dom/webidl/Event.webidl", "Event.webidl") }}</td>
    <td>{{ Non-standard_inline() }} The original target of the event, before any retargetings. See <a href="/en-US/docs/XBL/XBL_1.0_Reference/Anonymous_Content#Event_Flow_and_Targeting">Anonymous Content#Event_Flow_and_Targeting</a> for details.</td>
   </tr>
@@ -150,8 +150,8 @@ tags:
  <tbody>
   <tr>
    <th>Event type</th>
-   <th><a href="/en-US/docs/DOM/event.target">event.target</a></th>
-   <th><a href="/en-US/docs/DOM/event.relatedTarget">event.relatedTarget</a></th>
+   <th><a href="/en-US/docs/Web/API/Event/target">event.target</a></th>
+   <th><a href="/en-US/docs/Web/API/MouseEvent/relatedTarget">event.relatedTarget</a></th>
   </tr>
   <tr>
    <td><code>mouseover</code></td>

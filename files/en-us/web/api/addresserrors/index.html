@@ -14,6 +14,7 @@ tags:
   - Reference
   - payment
   - paymentAddress
+browser-compat: api.AddressErrors
 ---
 <div>{{APIRef("Payment Request API")}}</div>
 
@@ -44,8 +45,6 @@ tags:
  <dd>A {{domxref("DOMString")}} which, if present, indicates that the {{domxref("PaymentAddress.recipient", "recipient")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.</dd>
  <dt>{{domxref("AddressErrors.region", "region")}}</dt>
  <dd>A {{domxref("DOMString")}} which, if present, indicates that the {{domxref("PaymentAddress.region", "region")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.</dd>
- <dt>{{domxref("AddressErrors.regionCode", "regionCode")}}</dt>
- <dd>A {{domxref("DOMString")}} which, if present, indicates that the {{domxref("PaymentAddress.regionCode", "regionCode")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.</dd>
  <dt>{{domxref("AddressErrors.sortingCode", "sortingCode")}}</dt>
  <dd>A {{domxref("DOMString")}} which, if present, indicates that the {{domxref("PaymentAddress.sortingCode", "sortingCode")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.</dd>
 </dl>
@@ -235,21 +234,8 @@ not-useless gift as a token of our thanks!&lt;/p&gt;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Payment','#dom-addresserrors','AddressErrors')}}</td>
-   <td>{{Spec2('Payment')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.AddressErrors")}}</p>
+<p>{{Compat}}</p>

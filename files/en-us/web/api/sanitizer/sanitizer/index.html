@@ -5,6 +5,7 @@ tags:
 - Constructor
 - HTML Sanitizer API
 - sanitize
+browser-compat: api.Sanitizer.Sanitizer
 ---
 <div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("HTML Sanitizer API")}}</div>
 
@@ -75,21 +76,8 @@ const drop = new Sanitizer({dropElements: [ "b" ]).sanitizeToString(sample);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML Sanitizer API','#sanitizer-api','sanitizer')}}</td>
-      <td>{{Spec2('HTML Sanitizer API')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Sanitizer.Sanitizer")}}</p>
+<p>{{Compat}}</p>

@@ -7,6 +7,7 @@ tags:
   - FinalizationRegistry
   - JavaScript
   - Reference
+browser-compat: javascript.builtins.FinalizationRegistry.FinalizationRegistry
 ---
 <div>{{JSRef}}</div>
 
@@ -14,7 +15,18 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js">new FinalizationRegistry([<var>callback</var>]);
+<pre class="brush: js">
+// No callback
+new FinalizationRegistry();
+
+// Arrow callback function
+new FinalizationRegistry(heldValue => { ... } )
+
+// Callback function
+new FinalizationRegistry(callbackFn)
+
+// Inline callback function
+new FinalizationRegistry(function callbackFn(heldValue) { ... })
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -37,22 +49,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('WeakRefs', '#sec-finalization-registry-constructor', 'FinalizationRegistry constructor')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.FinalizationRegistry.FinalizationRegistry")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -1,0 +1,66 @@
+---
+title: ElementInternals.ariaCurrent
+slug: Web/API/ElementInternals/ariaCurrent
+tags:
+  - API
+  - Property
+  - Reference
+  - ariaCurrent
+  - AriaAttributes
+  - AriaMixin
+  - ElementInternals
+browser-compat: api.ElementInternals.ariaCurrent
+---
+<div>{{DefaultAPISidebar("DOM")}}</div>
+
+<p class="summary">The <strong><code>ariaCurrent</code></strong> property of the {{domxref("ElementInternals")}} interface reflects the value of the <code>aria-current</code> attribute, which indicates the element that represents the current item within a container or set of related elements.</p>
+
+<div class="notecard note">
+  <h4>Note:</h4>
+  <p>Setting aria attributes on <code>ElementInternals</code> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <a href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</a>.</p>
+</div>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js">let ariaCurrent = ElementInternals.ariaCurrent;
+ElementInternals.ariaCurrent = ariaCurrent;</pre>
+
+<h3>Value</h3>
+<p>A {{domxref("DOMString")}} with one of the following values:</p>
+
+<dl>
+  <dt><code>"page"</code></dt>
+  <dd>Represents the current page within a set of pages.</dd>
+  <dt><code>"step"</code></dt>
+  <dd>Represents the current step within a process.</dd>
+  <dt><code>"location"</code></dt>
+  <dd>Represents the current location, for example the current page in a breadcrumbs hierarchy.</dd>
+  <dt><code>"date"</code></dt>
+  <dd>Represents the current date within a collection of dates.</dd>
+  <dt><code>"time"</code></dt>
+  <dd>Represents the current time within a set of times.</dd>
+  <dt><code>"true"</code></dt>
+  <dd>Represents the current item within a set.</dd>
+  <dt><code>"false"</code></dt>
+  <dd>Does not represent the current item within a set.</dd>
+</dl>
+
+<h2 id="Examples">Examples</h2>
+
+<p>In this example the value of <code>ariaCurrent</code> is set to "page".</p>
+
+<pre class="brush: js">this.internals_.ariaCurrent = "page";</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+{{Specifications}}
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+  <li><a href="https://tink.uk/using-the-aria-current-attribute/">Using the aria-current attribute</a></li>
+</ul>

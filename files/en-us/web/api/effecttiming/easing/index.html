@@ -2,19 +2,20 @@
 title: EffectTiming.easing
 slug: Web/API/EffectTiming/easing
 tags:
-- API
-- Animation
-- EffectTiming
-- Experimental
-- KeyframeEffect
-- Property
-- Reference
-- Timing Function
-- Web Animations
-- animate
-- easing
-- waapi
-- web animations api
+  - API
+  - Animation
+  - EffectTiming
+  - Experimental
+  - KeyframeEffect
+  - Property
+  - Reference
+  - Timing Function
+  - Web Animations
+  - animate
+  - easing
+  - waapi
+  - web animations api
+browser-compat: api.EffectTiming.easing
 ---
 <div>{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}</div>
 
@@ -26,23 +27,23 @@ tags:
 
 <div class="note">
   <p>{{domxref("Element.animate()")}},
-    {{domxref("KeyframeEffectReadOnly.KeyframeEffectReadOnly",
+    {{domxref("KeyframeEffect/KeyframeEffect",
     "KeyframeEffectReadOnly()")}}, and {{domxref("KeyframeEffect.KeyframeEffect",
     "KeyframeEffect()")}} all accept an object of timing properties including
     <code>easing</code>. The value of easing corresponds directly
     to {{domxref("AnimationEffectTimingReadOnly.easing")}} in
-    {{domxref("AnimationEffectReadOnly.timing", "timing")}} objects returned by
-    {{domxref("AnimationEffectReadOnly")}}, {{domxref("KeyframeEffectReadOnly")}}, and
+    {{domxref("AnimationEffect/getTiming", "timing")}} objects returned by
+    {{domxref("AnimationEffect")}}, {{domxref("KeyframeEffect")}}, and
     {{domxref("KeyframeEffect")}}.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre class="brush: js">var <em>timingProperties</em> = {
-  easing: {{cssxref("single-transition-timing-function")}}
+  easing: {{cssxref("easing-function")}}
 }
 
-<em>timingProperties</em>.easing = {{cssxref("single-transition-timing-function")}}
+<em>timingProperties</em>.easing = {{cssxref("easing-function")}}
 </pre>
 
 <h3 id="Value">Value</h3>
@@ -60,8 +61,7 @@ tags:
     <code>cubic-bezier(&lt;number&gt;, &lt;number&gt;, &lt;number&gt;, &lt;number&gt;)</code>
   </dt>
   <dd><img alt="A diagram showing the points of a cubic bezier timing function."
-      src="https://www.w3.org/TR/css-timing-1/cubic-bezier-timing-curve.svg"
-      style="height: 150px; width: 400px;"><br>
+      src="cubic-bezier-timing-curve.svg"><br>
     Specifies <a
       href="https://w3c.github.io/web-animations/#cubic-bzier-timing-function">a cubic
       Bézier timing function</a>. The four numbers specify points P1 and P2 of the curve
@@ -91,8 +91,7 @@ tags:
     <code>frames()</code>.</dd>
   <dt><code>steps(&lt;integer&gt;[, [ start | end ] ]?)</code></dt>
   <dd><img alt="A diagram of the various steps timing functions."
-      src="https://www.w3.org/TR/css-timing-1/step-timing-func-examples.svg"
-      style="height: 238px; width: 500px;"><br>
+      src="step-timing-func-examples.svg"><br>
     Specifies <a href="https://w3c.github.io/web-animations/#step-timing-function">a step
       timing function</a>, which breaks the animation down into a number of equal time
     intervals. The browser flips to a different static frame when each interval is
@@ -134,24 +133,11 @@ spriteFrames, {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Web Animations', '#time-transformations', 'easing' )}}</td>
-      <td>{{Spec2('Web Animations')}}</td>
-      <td>Editor's draft.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.EffectTiming.easing", 2)}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

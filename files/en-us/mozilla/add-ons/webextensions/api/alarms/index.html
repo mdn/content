@@ -9,10 +9,13 @@ tags:
   - Reference
   - WebExtensions
   - alarms
+browser-compat: webextensions.api.alarms
 ---
 <div>{{AddonSidebar}}</div>
 
-<p><span class="seoSummary">Schedule code to run at a specific time in the future.</span> This is like <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">setTimeout()</a></code> and <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval">setInterval()</a></code>, except that those functions don't work with background pages that are loaded on demand. Alarms do not persist across browser sessions.</p>
+<p><span class="seoSummary">Schedule code to run at a specific time in the future.</span> This is like <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">setTimeout()</a></code> and <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval">setInterval()</a></code>, except that those functions don't work with background pages that are loaded on demand.</p>
+
+<p>Alarms do not persist across browser sessions. They are created globally across all contexts of a single extension. E.g. alarm created in background script will fire <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/alarms/onAlarm"><code>onAlarm</code></a> event in background script, options page, popup page and extension tabs (and vice versa). Alarms API is not available in <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#webextension_apis"><code>Content scripts</code></a>.</p>
 
 <p>To use this API you need to have the "alarms" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a>.</p>
 
@@ -49,7 +52,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("webextensions.api.alarms")}}</p>
+<p>{{Compat}}</p>
 
 <div class="note"><strong>Acknowledgements</strong>
 

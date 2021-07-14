@@ -1,0 +1,99 @@
+---
+title: Document.elementFromPoint()
+slug: Web/API/Document/elementFromPoint
+tags:
+  - API
+  - Coordinates
+  - Document
+  - Method
+  - Reference
+browser-compat: api.Document.elementFromPoint
+---
+<div>{{APIRef("DOM")}}</div>
+
+<p><span class="seoSummary">The <strong><code>elementFromPoint()</code></strong>
+    method, available on the {{domxref("Document")}} object, returns the topmost {{domxref("Element")}} at the specified coordinates
+    (relative to the viewport).</span></p>
+
+<p>If the element at the specified point belongs to another document (for example, the
+  document of an {{HTMLElement("iframe")}}), that document's parent element is returned
+  (the <code>&lt;iframe&gt;</code> itself). If the element at the given point is anonymous
+  or XBL generated content, such as a textbox's scroll bars, then the first non-anonymous
+  ancestor element (for example, the textbox) is returned.</p>
+
+<p>Elements with {{cssxref("pointer-events")}} set to <code>none</code> will be ignored,
+  and the element below it will be returned.</p>
+
+<p>If the method is run on another document (like an <code>&lt;iframe&gt;</code>'s
+  subdocument), the coordinates are relative to the document where the method is being
+  called.</p>
+
+<p>If the specified point is outside the visible bounds of the document or either
+  coordinate is negative, the result is <code>null</code>.</p>
+
+<p>If you need to find the specific position inside the element, use
+  {{domxref("Document.caretPositionFromPoint()")}}.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre
+  class="brush: js">elementFromPoint(x, y)</pre>
+
+<h3 id="Parameters">Parameters</h3>
+
+<dl>
+  <dt><code><var>x</var></code></dt>
+  <dd>The horizontal coordinate of a point, relative to the left edge of the current
+    {{Glossary("viewport")}}.</dd>
+  <dt><code><var>y</var></code></dt>
+  <dd>The vertical coordinate of a point, relative to the top edge of the current
+    viewport.</dd>
+</dl>
+
+<h3 id="Return_value">Return value</h3>
+
+<p>The topmost {{domxref("Element")}} object located at the specified coordinates.</p>
+
+<h2 id="Example">Example</h2>
+
+<p>This example creates two buttons which let you set the current color of the paragraph
+  element located under the coordinates <code>(2, 2)</code>.</p>
+
+<h3 id="JavaScript">JavaScript</h3>
+
+<pre class="brush: js">function changeColor(newColor) {
+  elem = document.elementFromPoint(2, 2);
+  elem.style.color = newColor;
+}</pre>
+
+<p>The <code>changeColor()</code> method obtains the element located at the specified
+  point, then sets that element's current foreground {{cssxref("color")}} property to the
+  color specified by the <code>newColor</code> parameter.</p>
+
+<h3 id="HTML">HTML</h3>
+
+<pre class="brush:html" id="ExampleCode">&lt;p id="para1"&gt;Some text here&lt;/p&gt;
+&lt;button onclick="changeColor('blue');"&gt;Blue&lt;/button&gt;
+&lt;button onclick="changeColor('red');"&gt;Red&lt;/button&gt;
+</pre>
+
+<p>The HTML provides the paragraph whose color will be affected, as well as two buttons:
+  one to change the color to blue, and another to change the color to red.</p>
+
+<h3 id="Result">Result</h3>
+
+<p>{{EmbedLiveSample('Example', 400, 100)}}</p>
+
+<h2 id="Specifications">Specifications</h2>
+
+{{Specifications}}
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+  <li>{{domxref("Document.elementsFromPoint()")}}</li>
+</ul>

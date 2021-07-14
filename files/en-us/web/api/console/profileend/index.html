@@ -1,5 +1,5 @@
 ---
-title: Console.profileEnd()
+title: console.profileEnd()
 slug: Web/API/Console/profileEnd
 tags:
 - API
@@ -11,6 +11,7 @@ tags:
 - Web Development
 - profileEnd
 - web console
+browser-compat: api.Console.profileEnd
 ---
 <p>{{APIRef("Console API")}}{{Non-standard_header}}</p>
 
@@ -20,18 +21,18 @@ tags:
     {{bug(1240249)}}.</p>
 </div>
 
-<p>The profileEnd method stops recording a profile previously started with
-  {{DOMxRef("Console.profile()")}}.</p>
+<p>The <strong><code>console.profileEnd()</code></strong> method stops recording a profile previously started with
+  {{DOMxRef("console.profile()")}}.</p>
 
 <p>You can optionally supply an argument to name the profile. Doing so enables you to stop
   only that profile if you have multiple profiles being recorded.</p>
 
 <ul>
-  <li>if <code>Console.profileEnd()</code> is passed a profile name, and it matches the
+  <li>if <code>console.profileEnd()</code> is passed a profile name, and it matches the
     name of a profile being recorded, then that profile is stopped.</li>
-  <li>if <code>Console.profileEnd()</code> is passed a profile name and it does not match
+  <li>if <code>console.profileEnd()</code> is passed a profile name and it does not match
     the name of a profile being recorded, no changes will be made.</li>
-  <li>if <code>Console.profileEnd()</code> is not passed a profile name, the most recently
+  <li>if <code>console.profileEnd()</code> is not passed a profile name, the most recently
     started profile is stopped.</li>
 </ul>
 
@@ -51,10 +52,10 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Console.profileEnd")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li>{{DOMxRef("Console.profile()")}}</li>
+  <li>{{DOMxRef("console.profile()")}}</li>
 </ul>

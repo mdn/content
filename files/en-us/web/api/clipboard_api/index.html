@@ -17,7 +17,7 @@ tags:
 ---
 <div>{{DefaultAPISidebar("Clipboard API")}}</div>
 
-<p>The <strong>Clipboard API</strong> provides the ability to respond to clipboard commands (cut, copy, and paste) as well as to asynchronously read from and write to the system clipboard. Access to the contents of the clipboard is gated behind the <a href="/en-US/docs/Web/API/Permissions_API">Permissions API</a>: The <code>clipboard-write</code> permission is granted automatically to pages when they are in the active tab. The <code>clipboard-read</code> permission must be requested, which you can do by trying to read data from the clipboard.</p>
+<p>The <strong>Clipboard API</strong> provides the ability to respond to clipboard commands (cut, copy, and paste) as well as to asynchronously read from and write to the system clipboard. Access to the contents of the clipboard is gated behind the <a href="/en-US/docs/Web/API/Permissions_API">Permissions API</a>: The <code>clipboard-write</code> permission is granted automatically to pages when they are in the active tab. The <code>clipboard-read</code> permission must be requested, which you can do by trying to read data from the clipboard.</p>
 
 <div class="notecard note">
 <p><strong>Note:</strong> This API is <em>not available</em> in <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a> (not exposed via {{domxref("WorkerNavigator")}}).</p>
@@ -47,20 +47,7 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Clipboard API')}}</td>
-   <td>{{Spec2('Clipboard API')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications("api.Clipboard")}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
@@ -69,8 +56,6 @@ tags:
 <p>{{Compat("api.Clipboard")}}</p>
 
 <h3 id="ClipboardEvent">ClipboardEvent</h3>
-
-<div class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
 
 <p>{{Compat("api.ClipboardEvent")}}</p>
 

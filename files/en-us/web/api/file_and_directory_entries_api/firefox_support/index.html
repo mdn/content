@@ -89,8 +89,8 @@ var FileSystemEntry = window.FileSystemEntry || window.Entry;
    <li>Using drag and drop by calling the {{domxref("DataTransferItem.getAsEntry()")}} method, which lets you get a {{domxref("FileSystemFileEntry")}} or {{domxref("FileSystemDirectoryEntry")}} for files dropped on a drop zone.</li>
   </ul>
  </li>
- <li>You can't use the <code><a href="/en-US/docs/Web/API/LocalFileSystem#requestFileSystem">LocalFileSystem.requestFileSystem()</a></code> method to get access to a specified local file system.</li>
- <li>The <code><a href="/en-US/docs/Web/API/LocalFileSystem#resolveLocalFileSystemURL">LocalFileSystem.resolveLocalFileSystemURL()</a></code> method isn't implemented.</li>
+ <li>You can't use the <code><a href="/en-US/docs/Web/API/LocalFileSystem#requestfilesystem">LocalFileSystem.requestFileSystem()</a></code> method to get access to a specified local file system.</li>
+ <li>The <code><a href="/en-US/docs/Web/API/LocalFileSystem#resolvelocalfilesystemurl">LocalFileSystem.resolveLocalFileSystemURL()</a></code> method isn't implemented.</li>
  <li>Only the asynchronous versions of the interfaces are implemented. Any interfaces with names that end in "<code>Sync"</code> aren't available.</li>
  <li>Firefox only supports reading from files in the file system. You can't write to them. In particular, the {{domxref("FileSystemFileEntry.createWriter()")}} method, used to create a {{domxref("FileWriter")}} to handle writing to a file, is not implemented and will just return an error.</li>
  <li>Firefox doesn't support the <code>"filesystem:"</code> URL scheme.</li>

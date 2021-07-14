@@ -1,6 +1,6 @@
 ---
 title: ':out-of-range'
-slug: 'Web/CSS/:out-of-range'
+slug: Web/CSS/:out-of-range
 tags:
   - CSS
   - Layout
@@ -9,10 +9,11 @@ tags:
   - Selector
   - Selectors
   - UI Selector
+browser-compat: css.selectors.out-of-range
 ---
 <div>{{CSSRef}}</div>
 
-<p>The <strong><code>:out-of-range</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/CSS/Pseudo-classes" title="Pseudo-classes">pseudo-class</a> represents an {{htmlelement("input")}} element whose current value is outside the range limits specified by the {{htmlattrxref("min", "input")}} and {{htmlattrxref("max","input")}} attributes.</p>
+<p>The <strong><code>:out-of-range</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> represents an {{htmlelement("input")}} element whose current value is outside the range limits specified by the {{htmlattrxref("min", "input")}} and {{htmlattrxref("max","input")}} attributes.</p>
 
 <pre class="brush: css no-line-numbers">/* Selects any &lt;input&gt;, but only when it has a range
    specified, and its value is outside that range */
@@ -26,11 +27,10 @@ input:out-of-range {
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: css">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
-<div id="example">
 <h3 id="HTML">HTML</h3>
 
 <pre class="brush: html">&lt;form action="" id="form1"&gt;
@@ -72,41 +72,20 @@ input:out-of-range + label::after {
 }</pre>
 
 <h3 id="Result">Result</h3>
-</div>
 
 <div>{{EmbedLiveSample('Examples', 600, 140)}}</div>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'scripting.html#selector-out-of-range', ':out-of-range')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Defines when <code>:out-of-range</code> matches elements in HTML.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS4 Selectors', '#out-of-range-pseudo', ':out-of-range')}}</td>
-   <td>{{Spec2('CSS4 Selectors')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.selectors.out-of-range")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
  <li>{{cssxref(":in-range")}}</li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/Form_validation">Form data validation</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Form_validation">Form data validation</a></li>
 </ul>

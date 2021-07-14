@@ -5,6 +5,7 @@ tags:
   - Event
   - Reference
   - Web Speech API
+browser-compat: api.SpeechSynthesisUtterance.boundary_event
 ---
 <div>{{APIRef("Web Speech API")}} {{SeeCompatTable}}</div>
 
@@ -36,35 +37,22 @@ tags:
 <p>You can use the <code>boundary</code> event in an <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener</a></code> method:</p>
 
 <pre class="brush: js">utterThis.addEventListener('boundary', function(event) {
-  console.log(event.name + ' boundary reached after ' + event.elapsedTime + ' milliseconds.');
+  console.log(event.name + ' boundary reached after ' + event.elapsedTime + ' seconds.');
 });</pre>
 
 <p>Or use the <code><a href="/en-US/docs/Web/API/SpeechSynthesisUtterance/onboundary">onboundary</a></code> event handler property:</p>
 
 <pre class="brush: js">utterThis.onboundary = function(event) {
-  console.log(event.name + ' boundary reached after ' + event.elapsedTime + ' milliseconds.');
+  console.log(event.name + ' boundary reached after ' + event.elapsedTime + ' seconds.');
 }</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Speech API', '#utterance-events', 'speech synthesis utterance events')}}</td>
-   <td>{{Spec2('Web Speech API')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.SpeechSynthesisUtterance.boundary_event")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

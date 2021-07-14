@@ -18,6 +18,7 @@ tags:
 - augmented
 - matrix
 - transform
+browser-compat: api.XRRigidTransform.matrix
 ---
 <p>{{APIRef("WebXR Device API")}}</p>
 
@@ -61,106 +62,58 @@ tags:
         <mtable rowspacing="0.5ex">
           <mtr>
             <mtd>
-              <mi>a</mi>
-              <mo stretchy="false">[</mo>
-              <mn>0</mn>
-              <mo stretchy="false">]</mo>
+              <mi>a0</mi>
             </mtd>
             <mtd>
-              <mi>a</mi>
-              <mo stretchy="false">[</mo>
-              <mn>4</mn>
-              <mo stretchy="false">]</mo>
+              <mi>a4</mi>
             </mtd>
             <mtd>
-              <mi>a</mi>
-              <mo stretchy="false">[</mo>
-              <mn>8</mn>
-              <mo stretchy="false">]</mo>
+              <mi>a8</mi>
             </mtd>
             <mtd>
-              <mi>a</mi>
-              <mo stretchy="false">[</mo>
-              <mn>12</mn>
-              <mo stretchy="false">]</mo>
+              <mi>a12</mi>
             </mtd>
           </mtr>
           <mtr>
             <mtd>
-              <mi>a</mi>
-              <mo stretchy="false">[</mo>
-              <mn>1</mn>
-              <mo stretchy="false">]</mo>
+              <mi>a1</mi>
             </mtd>
             <mtd>
-              <mi>a</mi>
-              <mo stretchy="false">[</mo>
-              <mn>5</mn>
-              <mo stretchy="false">]</mo>
+              <mi>a5</mi>
             </mtd>
             <mtd>
-              <mi>a</mi>
-              <mo stretchy="false">[</mo>
-              <mn>9</mn>
-              <mo stretchy="false">]</mo>
+              <mi>a9</mi>
             </mtd>
             <mtd>
-              <mi>a</mi>
-              <mo stretchy="false">[</mo>
-              <mn>13</mn>
-              <mo stretchy="false">]</mo>
+              <mi>a13</mi>
             </mtd>
           </mtr>
           <mtr>
             <mtd>
-              <mi>a</mi>
-              <mo stretchy="false">[</mo>
-              <mn>2</mn>
-              <mo stretchy="false">]</mo>
+              <mi>a2</mi>
             </mtd>
             <mtd>
-              <mi>a</mi>
-              <mo stretchy="false">[</mo>
-              <mn>6</mn>
-              <mo stretchy="false">]</mo>
+              <mi>a6</mi>
             </mtd>
             <mtd>
-              <mi>a</mi>
-              <mo stretchy="false">[</mo>
-              <mn>10</mn>
-              <mo stretchy="false">]</mo>
+              <mi>a10</mi>
             </mtd>
             <mtd>
-              <mi>a</mi>
-              <mo stretchy="false">[</mo>
-              <mn>14</mn>
-              <mo stretchy="false">]</mo>
+              <mi>a14</mi>
             </mtd>
           </mtr>
           <mtr>
             <mtd>
-              <mi>a</mi>
-              <mo stretchy="false">[</mo>
-              <mn>3</mn>
-              <mo stretchy="false">]</mo>
+              <mi>a3</mi>
             </mtd>
             <mtd>
-              <mi>a</mi>
-              <mo stretchy="false">[</mo>
-              <mn>7</mn>
-              <mo stretchy="false">]</mo>
+              <mi>a7</mi>
             </mtd>
             <mtd>
-              <mi>a</mi>
-              <mo stretchy="false">[</mo>
-              <mn>11</mn>
-              <mo stretchy="false">]</mo>
+              <mi>a11</mi>
             </mtd>
             <mtd>
-              <mi>a</mi>
-              <mo stretchy="false">[</mo>
-              <mn>15</mn>
-              <mo stretchy="false">]</mo>
+              <mi>a15</mi>
             </mtd>
           </mtr>
         </mtable>
@@ -261,7 +214,7 @@ tags:
   resulting in a translation matrix
   that will transform a coordinate system by the specified distance in each dimension,
   with no rotational change. Here
-  <code>p<sub>x</sub></code>, <code>p<sub>y</sub></code>, and <code>p<sub>z</sub></code>
+  <em>p<sub>x</sub></em>, <em>p<sub>y</sub></em>, and <em>p<sub>z</sub></em>
   are the values of the
   <code>x</code>, <code>y</code>, and <code>z</code> members of the
   {{domxref("DOMPointReadOnly")}}
@@ -853,24 +806,8 @@ drawGLObject("magic-lamp", transform.matrix);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName("WebXR","#dom-xrrigidtransform-matrix","XRRigidTransform.matrix")}}
-      </td>
-      <td>{{Spec2("WebXR")}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>{{Compat("api.XRRigidTransform.matrix")}}</div>
+<div>{{Compat}}</div>

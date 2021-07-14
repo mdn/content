@@ -6,9 +6,14 @@ tags:
   - CSS Grids
   - Guide
 ---
-<p>In addition to the ability to place items accurately onto a created grid, the CSS Grid Layout specification contains rules that control what happens when you create a grid and do not place some or all of the child items. You can see auto-placement in action in the simplest of ways by creating a grid on a set of items. If you give the items no placement information they will position themselves on the grid, one in each grid cell.</p>
+<div>{{CSSRef}}</div>
 
-<div id="placement_1">
+<p>In addition to the ability to place items accurately onto a created grid, the CSS Grid Layout specification contains rules that control what happens when you create a grid and do not place some or all of the child items. You can see auto-placement in action in the simplest of ways by creating a grid on a set of items.</p>
+
+<h2 id="default_placement">Default placement</h2>
+
+<p>If you give the items no placement information they will position themselves on the grid, one in each grid cell.</p>
+
 <div class="hidden">
 <pre class="brush: css">* {box-sizing: border-box;}
 
@@ -44,7 +49,7 @@ tags:
 &lt;/div&gt;
 </pre>
 
-<p>{{ EmbedLiveSample('placement_1', '500', '230') }}</p>
+<p>{{ EmbedLiveSample('default_placement', '500', '230') }}</p>
 </div>
 
 <h2 id="Default_rules_for_auto-placement">Default rules for auto-placement</h2>
@@ -57,7 +62,6 @@ tags:
 
 <p>You can however control the size of these rows with the property <code>grid-auto-rows</code>. To cause all created rows to be 100 pixels tall for example you would use:</p>
 
-<div id="placement_2">
 <div class="hidden">
 <pre class="brush: css">* {box-sizing: border-box;}
 
@@ -94,12 +98,12 @@ tags:
 }
 </pre>
 
-<p>{{ EmbedLiveSample('placement_2', '500', '330') }}</p>
-</div>
+<p>{{ EmbedLiveSample('Sizing_rows_in_the_implicit_grid', '500', '330') }}</p>
 
-<p>You can use {{cssxref("minmax","minmax()")}} in your value for {{cssxref("grid-auto-rows")}} enabling the creation of rows that are a minimum size but then grow to fit content if it is taller.</p>
+<h3 id="Sizing_rows_using_minmax">Sizing rows using minmax()</h3>
 
-<div id="placement_3">
+<p>You can use {{cssxref("minmax()","minmax()")}} in your value for {{cssxref("grid-auto-rows")}} enabling the creation of rows that are a minimum size but then grow to fit content if it is taller.</p>
+
 <div class="hidden">
 <pre class="brush: css">* {box-sizing: border-box;}
 
@@ -142,12 +146,12 @@ tags:
 }
 </pre>
 
-<p>{{ EmbedLiveSample('placement_3', '500', '330') }}</p>
-</div>
+<p>{{ EmbedLiveSample('Sizing_rows_using_minmax', '500', '330') }}</p>
+
+<h3 id="Sizing_rows_using_a_track_listing">Sizing rows using a track listing</h3>
 
 <p>You can also pass in a track listing, this will repeat. The following track listing will create an initial implicit row track as 100 pixels and a second as <code>200px</code>. This will continue for as long as content is added to the implicit grid. </p>
 
-<div id="placement_4">
 <div class="hidden">
 <pre class="brush: css">* {box-sizing: border-box;}
 
@@ -187,8 +191,7 @@ tags:
 }
 </pre>
 
-<p>{{ EmbedLiveSample('placement_4', '500', '330') }}</p>
-</div>
+<p>{{ EmbedLiveSample('Sizing_rows_using_a_track_listing', '500', '450') }}</p>
 
 <h3 id="Auto-placement_by_column">Auto-placement by column</h3>
 
@@ -196,7 +199,6 @@ tags:
 
 <p>In this next example I have created a grid with three row tracks of 200 pixels height. I am auto-placing by column and the columns created will be a column width of 300 pixels, then a column width of 100 pixels until there are enough column tracks to hold all of the items.</p>
 
-<div id="placement_5">
 <pre class="brush: css">.wrapper {
     display: grid;
     grid-template-rows: repeat(3, 200px);
@@ -237,8 +239,7 @@ tags:
 &lt;/div&gt;
 </pre>
 
-<p>{{ EmbedLiveSample('placement_5', '500', '640') }}</p>
-</div>
+<p>{{ EmbedLiveSample('Auto-placement_by_column', '500', '700') }}</p>
 
 <h2 id="The_order_of_auto_placed_items">The order of auto placed items</h2>
 
@@ -252,7 +253,6 @@ tags:
 
 <p>The first thing grid will do is place any items that have a position. In the example below I have 12 grid items. Item 2 and item 5 have been placed using line based placement on the grid. You can see how those items are placed and the other items then auto-place in the spaces. The auto-placed items will place themselves before the placed items in DOM order, they don’t start after the position of a placed item that comes before them.</p>
 
-<div id="placement_6">
 <div class="hidden">
 <pre class="brush: css">* {box-sizing: border-box;}
 
@@ -304,8 +304,7 @@ tags:
 }
 </pre>
 
-<p>{{ EmbedLiveSample('placement_6', '500', '450') }}</p>
-</div>
+<p>{{ EmbedLiveSample('Items_with_placement_properties', '500', '500') }}</p>
 
 <h3 id="Deal_with_items_that_span_tracks">Deal with items that span tracks</h3>
 
@@ -313,7 +312,6 @@ tags:
 
 <p>You can see how this then leaves gaps in the grid, as for the auto-placed items if grid comes across an item that doesn’t fit into a track, it will move to the next row until it finds a space the item can fit in.</p>
 
-<div id="placement_7">
 <div class="hidden">
 <pre class="brush: css">* {box-sizing: border-box;}
 .wrapper {
@@ -369,8 +367,7 @@ tags:
 }
 </pre>
 
-<p>{{ EmbedLiveSample('placement_7', '500', '770') }}</p>
-</div>
+<p>{{ EmbedLiveSample('Deal_with_items_that_span_tracks', '500', '800') }}</p>
 
 <h3 id="Filling_in_the_gaps">Filling in the gaps</h3>
 
@@ -380,7 +377,6 @@ tags:
 
 <p>Having done this, grid will now backfill the gaps, as it moves through the grid it leaves gaps as before, but then if it finds an item that will fit in a previous gap it will pick it up and take it out of DOM order to place it in the gap. As with any other reordering in grid this does not change the logical order. Tab order for example, will still follow the document order. We will take a look at the potential accessibility issues of Grid Layout in a later guide, but you should take care when creating this disconnect between the visual order and display order.</p>
 
-<div id="placement_8">
 <div class="hidden">
 <pre class="brush: css">* {box-sizing: border-box;}
 .wrapper {
@@ -437,8 +433,7 @@ tags:
 }
 </pre>
 
-<p>{{ EmbedLiveSample('placement_8', '500', '730') }}</p>
-</div>
+<p>{{ EmbedLiveSample('Filling_in_the_gaps', '500', '730') }}</p>
 
 <h3 id="Anonymous_grid_items">Anonymous grid items</h3>
 
@@ -457,51 +452,12 @@ tags:
 
 <p>Auto-placement is useful whenever you have a collection of items. That could be items that do not have a logical order such as a gallery of photos, or product listing. In that case you might choose to use the dense packing mode to fill in any holes in your grid. In my image gallery example I have some landscape and some portrait images. I have set landscape images – with a class of <code>landscape</code> to span two column tracks. I then use <code>grid-auto-flow: dense</code> to create a densely packed grid.</p>
 
-<div id="placement_9">
-<pre class="brush: css">.wrapper {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    gap: 10px;
-    grid-auto-flow: dense;
-    list-style: none;
-    margin: 1em auto;
-    padding: 0;
-    max-width: 800px;
-}
-.wrapper li {
-    border: 1px solid #ccc;
-}
-.wrapper li.landscape {
-    grid-column-end: span 2;
-}
-.wrapper li img {
-   display: block;
-   object-fit: cover;
-   width: 100%;
-   height: 100%;
-}
-</pre>
+<p>Try removing the line <code>grid-auto-flow: dense</code> to see the content reflow to leave gaps in the layout.</p>
 
-<pre class="brush: html">&lt;ul class="wrapper"&gt;
-   &lt;li&gt;&lt;img src="https://placehold.it/200x300" alt="placeholder"&gt;&lt;/li&gt;
-   &lt;li class="landscape"&gt;&lt;img src="https://placehold.it/350x200" alt="placeholder"&gt;&lt;/li&gt;
-   &lt;li class="landscape"&gt;&lt;img src="https://placehold.it/350x200" alt="placeholder"&gt;&lt;/li&gt;
-   &lt;li class="landscape"&gt;&lt;img src="https://placehold.it/350x200" alt="placeholder"&gt;&lt;/li&gt;
-   &lt;li&gt;&lt;img src="https://placehold.it/200x300" alt="placeholder"&gt;&lt;/li&gt;
-   &lt;li&gt;&lt;img src="https://placehold.it/200x300" alt="placeholder"&gt;&lt;/li&gt;
-   &lt;li class="landscape"&gt;&lt;img src="https://placehold.it/350x200" alt="placeholder"&gt;&lt;/li&gt;
-   &lt;li&gt;&lt;img src="https://placehold.it/200x300" alt="placeholder"&gt;&lt;/li&gt;
-   &lt;li&gt;&lt;img src="https://placehold.it/200x300" alt="placeholder"&gt;&lt;/li&gt;
-   &lt;li&gt;&lt;img src="https://placehold.it/200x300" alt="placeholder"&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
-
-<p>{{ EmbedLiveSample('placement_9', '500', '1300') }}</p>
-</div>
+<p>{{EmbedGHLiveSample("css-examples/grid/docs/autoplacement.html", '100%', 1200)}}</p>
 
 <p>Auto-placement can also help you lay out interface items which do have logical order. An example is the definition list in this next example. Definition lists are an interesting challenge to style as they are flat, there is nothing wrapping the groups of <code>dt</code> and <code>dd</code> items. In my example I am allowing auto-placement to place the items, however I have classes that start a <code>dt</code> in column 1, and <code>dd</code> in column 2, this ensure that terms go on one side and definitions on the other - no matter how many of each we have.</p>
 
-<div id="placement_10">
 <div class="hidden">
 <pre class="brush: css">* {box-sizing: border-box;}
 
@@ -544,74 +500,10 @@ dd {
  }
 </pre>
 
-<p>{{ EmbedLiveSample('placement_10', '500', '230') }}</p>
-</div>
+<p>{{ EmbedLiveSample('Use_cases_for_auto-placement', '500', '230') }}</p>
 
 <h2 id="What_can’t_we_do_with_auto-placement_yet">What can’t we do with auto-placement (yet)?</h2>
 
 <p>There are a couple of things that often come up as questions. Currently we can’t do things like target every other cell of the grid with our items. A related issue may have already come to mind if you followed the last guide about named lines on the grid. It would be to define a rule that said “auto-place items against the next line named “n”, and grid would then skip other lines.There is <a href="https://github.com/w3c/csswg-drafts/issues/796">an issue raised about this</a> on the CSSWG GitHub repository, and you would be welcome to add your own use cases to this.</p>
 
 <p>It may be that you come up with your own use cases for auto-placement or any other part of grid layout. If you do, raise them as issues or add to an existing issue that could solve your use case. This will help to make future versions of the specification better.</p>
-
-<section id="Quick_links">
-<ol>
- <li><a href="/en-US/docs/Web/CSS"><strong>CSS</strong></a></li>
- <li><a href="/en-US/docs/Web/CSS/Reference"><strong>CSS Reference</strong></a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a></li>
- <li data-default-state="open"><a href="#"><strong>Guides</strong></a>
-  <ol>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">Basics concepts of grid layout</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout">Relationship to other layout methods</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid">Line-based placement</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas">Grid template areas</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines">Layout using named grid lines</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout">Auto-placement in grid layout</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">Box alignment in grid layout</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes">Grids, logical values and writing modes</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility">CSS Grid Layout and Accessibility</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement">CSS Grid Layout and Progressive Enhancement</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout">Realizing common layouts using grids</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Subgrid">Subgrid</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout">Masonry layout</a></li>
-  </ol>
- </li>
- <li data-default-state="open"><a href="#"><strong>Properties</strong></a>
-  <ol>
-   <li><code><a href="/en-US/docs/Web/CSS/align-tracks">align-tracks</a></code>{{Experimental_Inline}}</li>
-   <li><code><a href="/en-US/docs/Web/CSS/column-gap">column-gap</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/gap">gap</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid">grid</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-area">grid-area</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-auto-columns">grid-auto-columns</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-auto-flow">grid-auto-flow</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-auto-rows">grid-auto-rows</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-column">grid-column</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-column-end">grid-column-end</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-column-start">grid-column-start</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-row">grid-row</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-row-end">grid-row-end</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-row-start">grid-row-start</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-template">grid-template</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-template-areas">grid-template-areas</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-template-columns">grid-template-columns</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-template-rows">grid-template-rows</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/justify-tracks">justify-tracks</a></code>{{Experimental_Inline}}</li>
-   <li><code><a href="/en-US/docs/Web/CSS/masonry-auto-flow">masonry-auto-flow</a></code>{{Experimental_Inline}}</li>
-   <li><code><a href="/en-US/docs/Web/CSS/row-gap">row-gap</a></code></li>
-  </ol>
- </li>
- <li data-default-state="open"><a href="#"><strong>Glossary</strong></a>
-  <ol>
-   <li><a href="/en-US/docs/Glossary/Grid">Grid</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_lines">Grid lines</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_tracks">Grid tracks</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_cell">Grid cell</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_areas">Grid areas</a></li>
-   <li><a href="/en-US/docs/Glossary/Gutters">Gutters</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_Axis">Grid Axis</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_rows">Grid row</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_column">Grid column</a></li>
-  </ol>
- </li>
-</ol>
-</section>

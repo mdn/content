@@ -2,9 +2,10 @@
 title: Content-Location
 slug: Web/HTTP/Headers/Content-Location
 tags:
-- HTTP
-- Reference
-- header
+  - HTTP
+  - Reference
+  - header
+browser-compat: http.headers.Content-Location
 ---
 <div>{{HTTPSidebar}}</div>
 
@@ -19,13 +20,13 @@ tags:
   without further content negotiation in the future. <code>Location</code> is a header
   associated with the response, while <code>Content-Location</code> is associated with the
   data returned. This distinction may seem abstract without <a
-    href="#Examples">examples</a>.</p>
+    href="#examples">examples</a>.</p>
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Header type</th>
-      <td>{{Glossary("Entity header")}}</td>
+      <td>{{Glossary("Representation header")}}</td>
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
@@ -44,9 +45,9 @@ tags:
 <dl>
   <dt>&lt;url&gt;</dt>
   <dd>A <a
-      href="/en-US/docs/Learn/Common_questions/What_is_a_URL#Examples_of_relative_URLs">relative</a>
+      href="/en-US/docs/Learn/Common_questions/What_is_a_URL#examples_of_relative_urls">relative</a>
     (to the request URL) or <a
-      href="/en-US/docs/Learn/Common_questions/What_is_a_URL#Examples_of_absolute_URLs">absolute</a>
+      href="/en-US/docs/Learn/Common_questions/What_is_a_URL#examples_of_absolute_urls">absolute</a>
     URL.</dd>
 </dl>
 
@@ -87,7 +88,7 @@ tags:
 
 <p>These URLs are examples — the site could serve the different filetypes with any URL
   patterns it wishes, such as a <a
-    href="/en-US/docs/Web/API/HTMLHyperlinkElementUtils/search">query string
+    href="/en-US/docs/Web/API/HTMLAnchorElement/search">query string
     parameter</a>: <code>/documents/foo?format=json</code>,
   <code>/documents/foo?format=xml</code>, and so on.</p>
 
@@ -164,29 +165,11 @@ Content-Location: /my-receipts/38
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Title</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{RFC("7231", "Content-Location", "3.1.4.2")}}</td>
-      <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data.
-  If you'd like to contribute to the data, please check out <a
-    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
-  and send us a pull request.</p>
-
-<p>{{Compat("http.headers.Content-Location")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

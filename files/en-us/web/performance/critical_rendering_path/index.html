@@ -34,7 +34,7 @@ tags:
 
 <p>In terms of selector performance, less specific selectors are faster than more specific ones. For example, <code>.foo {}</code> is faster than <code>.bar .foo {}</code> because when the browser finds <code>.foo</code>, in the second scenario, it has to walk up the DOM to check if <code>.foo</code> has an ancestor <code>.bar</code>. The more specific tag requires more work from the browser, but this penalty is not likely worth optimizing.</p>
 
-<p>If you measure the time it takes to parse CSS, you'll be amazed at how fast browsers truly are. The more specific rule is more expensive because it has to traverse more nodes in the DOM tree - but that extra expense is generally minimal. Measure first. Optimize as needed. Specificity is likely not your low hanging fruit. When it comes to CSS, selector performance optimization, improvements will only be in microseconds. There are other <a href="/en-US/docs/Learn/Performance/CSS_performance">ways to optimize CSS</a>, such as minification, and separating deferred CSS into non-blocking requests by using media queries.</p>
+<p>If you measure the time it takes to parse CSS, you'll be amazed at how fast browsers truly are. The more specific rule is more expensive because it has to traverse more nodes in the DOM tree - but that extra expense is generally minimal. Measure first. Optimize as needed. Specificity is likely not your low hanging fruit. When it comes to CSS, selector performance optimization, improvements will only be in microseconds. There are other <a href="/en-US/docs/Learn/Performance/CSS">ways to optimize CSS</a>, such as minification, and separating deferred CSS into non-blocking requests by using media queries.</p>
 
 <h3 id="Render_Tree">Render Tree</h3>
 

@@ -178,7 +178,7 @@ def youngest(request):
    <li><em>Framework purpose/origin</em>: Some web frameworks were initially created to solve certain types of problems, and remain <em>better</em> at creating web apps with similar constraints. For example, Django was created to support development of a newspaper website, so it's good for blogs and other sites that involve publishing things. By contrast, Flask is a much lighter-weight framework and is great for creating web apps running on embedded devices.</li>
    <li><em>Opinionated vs unopinionated</em>: An opinionated framework is one in which there are recommended "best" ways to solve a particular problem. Opinionated frameworks tend to be more productive when you're trying to solve common problems, because they lead you in the right direction, however they are sometimes less flexible.</li>
    <li><em>Batteries included vs. get it yourself</em>: Some web frameworks include tools/libraries that address every problem their developers can think "by default", while more lightweight frameworks expect web developers to pick and choose solution to problems from separate libraries (Django is an example of the former, while Flask is an example of a very light-weight framework). Frameworks that include everything are often easier to get started with because you already have everything you need, and the chances are that it is well integrated and well documented. However if a smaller framework has everything you (will ever) need then it can run in more constrained environments and will have a smaller and easier subset of things to learn.</li>
-   <li><em>Whether or not the framework encourages good development practices</em>: For example, a framework that encourages a <a href="/en-US/docs/Web/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture">Model-View-Controller</a> architecture to separate code into logical functions will result in more maintainable code than one that has no expectations on developers. Similarly, framework design can have a large impact on how easy it is to test and re-use code.</li>
+   <li><em>Whether or not the framework encourages good development practices</em>: For example, a framework that encourages a <a href="/en-US/docs/Glossary/MVC">Model-View-Controller</a> architecture to separate code into logical functions will result in more maintainable code than one that has no expectations on developers. Similarly, framework design can have a large impact on how easy it is to test and re-use code.</li>
   </ul>
  </li>
  <li><strong>Performance of the framework/programming language:</strong> Usually "speed" is not the biggest factor in selection because even relatively slow runtimes like Python are more than "good enough" for mid-sized sites running on moderate hardware. The perceived speed benefits of another language, e.g. C++ or JavaScript, may well be offset by the costs of learning and maintenance.</li>
@@ -189,10 +189,10 @@ def youngest(request):
 
 <p>There are many other possible factors, including licensing, whether or not the framework is under active development, etc.</p>
 
-<p>If you're an absolute beginner at programming then you'll probably choose your framework based on "ease of learning". In addition to "ease of use" of the language itself, high quality documentation/tutorials and an active community helping new users are your most valuable resources. We've chosen <a href="https://www.djangoproject.com/">Django</a> (Python) and <a href="http://expressjs.com/">Express</a> (Node/JavaScript) to write our examples later on in the course, mainly because they are easy to learn and have good support.</p>
+<p>If you're an absolute beginner at programming then you'll probably choose your framework based on "ease of learning". In addition to "ease of use" of the language itself, high quality documentation/tutorials and an active community helping new users are your most valuable resources. We've chosen <a href="https://www.djangoproject.com/">Django</a> (Python) and <a href="https://expressjs.com/">Express</a> (Node/JavaScript) to write our examples later on in the course, mainly because they are easy to learn and have good support.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Let's go to the main websites for <a href="https://www.djangoproject.com/">Django</a> (Python) and <a href="http://expressjs.com/">Express</a> (Node/JavaScript) and check out their documentation and community.</p>
+<p><strong>Note</strong>: Let's go to the main websites for <a href="https://www.djangoproject.com/">Django</a> (Python) and <a href="https://expressjs.com/">Express</a> (Node/JavaScript) and check out their documentation and community.</p>
 
 <ol>
  <li>Navigate to the main sites (linked above)
@@ -234,21 +234,21 @@ def youngest(request):
 
 <p><a href="http://flask.pocoo.org/">Flask</a> is a microframework for Python. </p>
 
-<p>While minimalist, Flask can create serious websites out of the box. It contains a development server and debugger, and includes support for <a href="https://github.com/pallets/jinja">Jinja2</a> templating, secure cookies, <a href="https://en.wikipedia.org/wiki/Unit_testing">unit testing</a>, and <a href="http://www.restapitutorial.com/lessons/restfulresourcenaming.html">RESTful</a> request dispatching. It has good documentation and an active community. </p>
+<p>While minimalist, Flask can create serious websites out of the box. It contains a development server and debugger, and includes support for <a href="https://github.com/pallets/jinja">Jinja2</a> templating, secure cookies, <a href="https://en.wikipedia.org/wiki/Unit_testing">unit testing</a>, and <a href="https://www.restapitutorial.com/lessons/restfulresourcenaming.html">RESTful</a> request dispatching. It has good documentation and an active community. </p>
 
-<p>Flask has become extremely popular, particularly for developers who need to provide web services on small, resource-constrained systems (e.g. running a web server on a <a href="https://www.raspberrypi.org/">Raspberry Pi</a>, <a href="http://blogtarkin.com/drone-definitions-learning-the-drone-lingo/">Drone controllers</a>, etc.)</p>
+<p>Flask has become extremely popular, particularly for developers who need to provide web services on small, resource-constrained systems (e.g. running a web server on a <a href="https://www.raspberrypi.org/">Raspberry Pi</a>, <a href="https://blogtarkin.com/drone-definitions-learning-the-drone-lingo/">Drone controllers</a>, etc.)</p>
 
 <h3 id="Express_Node.jsJavaScript">Express (Node.js/JavaScript)</h3>
 
-<p><a href="http://expressjs.com/">Express</a> is a fast, unopinionated, flexible and minimalist web framework for <a href="https://nodejs.org/en/">Node.js</a> (node is a browserless environment for running JavaScript). It provides a robust set of features for web and mobile applications and delivers useful HTTP utility methods and <a href="/en-US/docs/Glossary/Middleware">middleware</a>.</p>
+<p><a href="https://expressjs.com/">Express</a> is a fast, unopinionated, flexible and minimalist web framework for <a href="https://nodejs.org/en/">Node.js</a> (node is a browserless environment for running JavaScript). It provides a robust set of features for web and mobile applications and delivers useful HTTP utility methods and <a href="/en-US/docs/Glossary/Middleware">middleware</a>.</p>
 
 <p>Express is extremely popular, partially because it eases the migration of client-side JavaScript web programmers into server-side development, and partially because it is resource-efficient (the underlying node environment uses lightweight multitasking within a thread rather than spawning separate processes for every new web request). </p>
 
 <p>Because Express is a minimalist web framework it does not incorporate every component that you might want to use (for example, database access and support for users and sessions are provided through independent libraries). There are many excellent independent components, but sometimes it can be hard to work out which is the best for a particular purpose! </p>
 
-<p>Many popular server-side and full stack frameworks (comprising both server and client-side frameworks) are based on Express, including <a href="http://feathersjs.com/">Feathers</a>, <a href="https://www.itemsapi.com/">ItemsAPI</a>, <a href="http://keystonejs.com/">KeystoneJS</a>, <a href="http://krakenjs.com/">Kraken</a>, <a href="http://loopback.io/">LoopBack, </a><a href="http://mean.io/">MEAN</a>, and <a href="http://sailsjs.org/">Sails</a>.</p>
+<p>Many popular server-side and full stack frameworks (comprising both server and client-side frameworks) are based on Express, including <a href="https://feathersjs.com/">Feathers</a>, <a href="https://www.itemsapi.com/">ItemsAPI</a>, <a href="https://keystonejs.com/">KeystoneJS</a>, <a href="https://krakenjs.com/">Kraken</a>, <a href="https://loopback.io/">LoopBack, </a><a href="https://mean.io/">MEAN</a>, and <a href="https://sailsjs.org/">Sails</a>.</p>
 
-<p>A lot of high profile companies use Express, including: Uber, Accenture, IBM, etc. (a list is provided <a href="http://expressjs.com/en/resources/companies-using-express.html">here</a>).</p>
+<p>A lot of high profile companies use Express, including: Uber, Accenture, IBM, etc. (a list is provided <a href="https://expressjs.com/en/resources/companies-using-express.html">here</a>).</p>
 
 <h3 id="Deno_JavaScript">Deno (JavaScript)</h3>
 
@@ -271,7 +271,7 @@ def youngest(request):
 
 <h3 id="Ruby_on_Rails_Ruby">Ruby on Rails (Ruby)</h3>
 
-<p><a href="http://rubyonrails.org/">Rails</a> (usually referred to as "Ruby on Rails") is a web framework written for the Ruby programming language.</p>
+<p><a href="https://rubyonrails.org/">Rails</a> (usually referred to as "Ruby on Rails") is a web framework written for the Ruby programming language.</p>
 
 <p>Rails follows a very similar design philosophy to Django. Like Django it provides standard mechanisms for routing URLs, accessing data from a database, generating HTML from templates and formatting data as {{glossary("JSON")}} or {{glossary("XML")}}. It similarly encourages the use of design patterns like DRY ("don't repeat yourself" — write code only once if at all possible), MVC (model-view-controller) and a number of others.</p>
 
@@ -297,7 +297,7 @@ def youngest(request):
 
 <h3 id="ASP.NET">ASP.NET</h3>
 
-<p><a href="http://www.asp.net/">ASP.NET</a> is an open source web framework developed by Microsoft for building modern web applications and services. With ASP.NET you can quickly create web sites based on HTML, CSS, and JavaScript, scale them for use by millions of users and easily add more complex capabilities like Web APIs, forms over data, or real time communications.</p>
+<p><a href="https://www.asp.net/">ASP.NET</a> is an open source web framework developed by Microsoft for building modern web applications and services. With ASP.NET you can quickly create web sites based on HTML, CSS, and JavaScript, scale them for use by millions of users and easily add more complex capabilities like Web APIs, forms over data, or real time communications.</p>
 
 <p>One of the differentiators for ASP.NET is that it is built on the <a href="https://en.wikipedia.org/wiki/Common_Language_Runtime">Common Language Runtime</a> (CLR), allowing programmers to write ASP.NET code using any supported .NET language (C#, Visual Basic, etc.). Like many Microsoft products it benefits from excellent tools (often free), an active developer community, and well-written documentation.</p>
 
@@ -305,7 +305,7 @@ def youngest(request):
 
 <h3 id="Mojolicious_Perl">Mojolicious (Perl)</h3>
 
-<p><a href="http://mojolicious.org/">Mojolicious</a> is a next-generation web framework for the Perl programming language.</p>
+<p><a href="https://mojolicious.org/">Mojolicious</a> is a next-generation web framework for the Perl programming language.</p>
 
 <p>Back in the early days of the web, many people learned Perl because of a wonderful Perl library called <a href="https://metacpan.org/module/CGI">CGI</a>. It was simple enough to get started without knowing much about the language and powerful enough to keep you going. Mojolicious implements this idea using bleeding edge technologies.</p>
 
@@ -313,7 +313,7 @@ def youngest(request):
 
 <ul>
  <li>A real-time web framework, to easily grow single-file prototypes into well-structured MVC web applications.</li>
- <li>RESTful routes, plugins, commands, Perl-ish templates, content negotiation, session management, form validation, testing framework, static file server, CGI/<a href="http://plackperl.org">PSGI</a> detection, and first-class Unicode support.</li>
+ <li>RESTful routes, plugins, commands, Perl-ish templates, content negotiation, session management, form validation, testing framework, static file server, CGI/<a href="https://plackperl.org">PSGI</a> detection, and first-class Unicode support.</li>
  <li>A full-stack HTTP and WebSocket client/server implementation with IPv6, TLS, SNI, IDNA, HTTP/SOCKS5 proxy, UNIX domain socket, Comet (long polling), keep-alive, connection pooling, timeout, cookie, multipart, and gzip compression support.</li>
  <li>JSON and HTML/XML parsers and generators with CSS selector support.</li>
  <li>Very clean, portable and object-oriented pure-Perl API with no hidden magic.</li>
@@ -322,7 +322,7 @@ def youngest(request):
 
 <h3 id="Spring_Boot_Java">Spring Boot (Java)</h3>
 
-<p><a href="https://spring.io/projects/spring-boot">Spring Boot</a> is one of a number of projects provided by <a href="http://spring.io/">Spring</a>. It is a good starting point for doing server-side web development using <a href="https://www.java.com">Java</a>.</p>
+<p><a href="https://spring.io/projects/spring-boot">Spring Boot</a> is one of a number of projects provided by <a href="https://spring.io/">Spring</a>. It is a good starting point for doing server-side web development using <a href="https://www.java.com">Java</a>.</p>
 
 <p>Although definitely not the only framework based on <a href="https://www.java.com">Java</a> it is easy to use to create stand-alone, production-grade Spring-based Applications that you can "just run". It is an opinionated view of the Spring platform and third-party libraries but allows to start with minimum fuss and configuration.</p>
 

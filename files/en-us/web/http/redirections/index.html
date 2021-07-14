@@ -51,7 +51,7 @@ tags:
    <th scope="row"><code>301</code></th>
    <td><code>Moved Permanently</code></td>
    <td>{{HTTPMethod("GET")}} methods unchanged.<br>
-    Others may or may not be changed to {{HTTPMethod("GET")}}.<sup><a href="#attr1">[1]</a></sup></td>
+    Others may or may not be changed to {{HTTPMethod("GET")}}. (See <a href="#attr1">[1]</a>)</td>
    <td>Reorganization of a Web site.</td>
   </tr>
   <tr>
@@ -85,7 +85,7 @@ tags:
    <th scope="row"><code>302</code></th>
    <td><code>Found</code></td>
    <td>{{HTTPMethod("GET")}} methods unchanged.<br>
-    Others may or may not be changed to {{HTTPMethod("GET")}}.<sup><a href="#attr2">[2]</a></sup></td>
+    Others may or may not be changed to {{HTTPMethod("GET")}}. (See<a href="#attr2">[2]</a>)</td>
    <td>The Web page is temporarily unavailable for unforeseen reasons.</td>
   </tr>
   <tr>
@@ -268,7 +268,7 @@ rewrite ^/images/(.*)$ https://images.example.com/$1 permanent;
 
 <p>Redirection loops happen when additional redirections follow the one that has already been followed. In other words, there is a loop that will never be finished and no page will ever be found.</p>
 
-<p>Most of the time this is a server problem, and if the server cannot detect it, it will send back a {{HTTPStatus("500")}} <code>Internal Server Error</code>. If you encounter such an error soon after modifying a server configuration, this is likely a redirection loop.</p>
+<p>Most of the time this is a server problem, and if the server can detect it, it will send back a {{HTTPStatus("500")}} <code>Internal Server Error</code>. If you encounter such an error soon after modifying a server configuration, this is likely a redirection loop.</p>
 
 <p>Sometimes, the server won't detect it: a redirection loop can spread over several servers which each don't have the full picture. In this case, browsers will detect it and display an error message. Firefox displays:</p>
 

@@ -8,6 +8,7 @@ tags:
 - Reference
 - attachShadow
 - shadow dom
+browser-compat: api.Element.attachShadow
 ---
 <div>{{APIRef('Shadow DOM')}}</div>
 
@@ -48,13 +49,13 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js">var <var>shadowroot</var> = <var>element</var>.attachShadow(<var>shadowRootInit</var>);
+<pre class="brush: js">var <var>shadowroot</var> = <var>element</var>.attachShadow(<var>init</var>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
-  <dt><code>shadowRootInit</code></dt>
+  <dt><code>init</code></dt>
   <dd>A <code>ShadowRootInit</code> dictionary, which can contain the following fields:
     <dl>
       <dt><code>mode</code></dt>
@@ -161,23 +162,8 @@ customElements.define('word-count', WordCount, { extends: 'p' });</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('DOM WHATWG', '#dom-element-attachshadow', 'attachShadow()')}}</td>
-      <td>{{Spec2('DOM WHATWG')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Element.attachShadow")}}</p>
+<p>{{Compat}}</p>

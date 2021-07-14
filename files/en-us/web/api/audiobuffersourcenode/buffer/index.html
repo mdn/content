@@ -11,6 +11,7 @@ tags:
 - Reference
 - Web Audio API
 - sound
+browser-compat: api.AudioBufferSourceNode.buffer
 ---
 <p>{{ APIRef("Web Audio API") }}</p>
 
@@ -33,15 +34,13 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<div class="note">
-  <p>For a full working example, see<a class="external external-icon"
-      href="https://mdn.github.io/webaudio-examples/audio-buffer/"> this code running
-      live</a>, or <a class="external external-icon"
-      href="https://github.com/mdn/webaudio-examples/blob/master/audio-buffer/index.html">view
-      the source</a>.</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>For a full working example, see <a href="https://mdn.github.io/webaudio-examples/audio-buffer/"> this code running
+      live</a>, or <a href="https://github.com/mdn/webaudio-examples/blob/master/audio-buffer/index.html">view the source</a>.</p>
 </div>
 
-<pre class="brush: js;highlight[19]">var myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
+<pre class="brush: js">var myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
 
 button.onclick = function() {
   // Fill the buffer with white noise;
@@ -64,28 +63,15 @@ button.onclick = function() {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName("Web Audio API", "#dom-audiobuffersourcenode-buffer", "buffer")}}
-      </td>
-      <td>{{Spec2("Web Audio API")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.AudioBufferSourceNode.buffer")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
-<p>{{page("/en-US/docs/Web/API/AudioBufferSourceNode","See_also")}}</p>
+<ul>
+ <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
+ <li><a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a></li>
+</ul>

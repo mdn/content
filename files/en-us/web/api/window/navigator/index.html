@@ -8,6 +8,7 @@ tags:
 - Read-only
 - Reference
 - Window
+browser-compat: api.Window.navigator
 ---
 <div>{{APIRef}}</div>
 
@@ -42,8 +43,11 @@ if (sUsrAg.indexOf("Firefox") &gt; -1) {
   sBrowser = "Microsoft Internet Explorer";
   // "Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; .NET4.0C; .NET4.0E; Zoom 3.6.0; wbx 1.0.0; rv:11.0) like Gecko"
 } else if (sUsrAg.indexOf("Edge") &gt; -1) {
-  sBrowser = "Microsoft Edge";
+  sBrowser = "Microsoft Edge (Legacy)";
   // "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36 Edge/16.16299"
+} else if (sUsrAg.indexOf("Edg") &gt; -1) {
+  sBrowser = "Microsoft Edge (Chromium)";
+  // Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36 Edg/91.0.864.64
 } else if (sUsrAg.indexOf("Chrome") &gt; -1) {
   sBrowser = "Google Chrome or Chromium";
   // "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/66.0.3359.181 Chrome/66.0.3359.181 Safari/537.36"
@@ -59,23 +63,8 @@ alert("You are using: " + sBrowser);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', '#dom-navigator', 'Window: navigator')}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Window.navigator")}}</p>
+<p>{{Compat}}</p>

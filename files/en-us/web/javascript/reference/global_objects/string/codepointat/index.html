@@ -8,6 +8,8 @@ tags:
 - Prototype
 - Reference
 - String
+- Polyfill
+browser-compat: javascript.builtins.String.codePointAt
 ---
 <div>{{JSRef}}</div>
 
@@ -16,15 +18,10 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/string-codepointat.html","shorter")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js"><var>str</var>.codePointAt(<var>pos</var>)</pre>
+<pre class="brush: js">codePointAt(pos)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -36,15 +33,13 @@ tags:
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A number representing the code point value of the character at the given
-  <code><var>pos</var></code>. If there is no element at <code>pos</code>, returns
-  {{jsxref("undefined")}}.</p>
+<p>A decimal number representing the code point value of the character at the given <code><var>pos</var></code>.</p>
 
-<h2 id="Description">Description</h2>
-
-<p>If there is no element at the specified position, {{jsxref("undefined")}} is returned.
-  If no UTF-16 surrogate pair begins at <code><var>pos</var></code>, the code unit at
-  <code><var>pos</var></code> is returned.</p>
+<ul>
+  <li>If there is no element at <code><var>pos</var></code>, returns <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined"><code>undefined</code></a>.</li>
+  <li>If the element at <code><var>pos</var></code> is a UTF-16 high surrogate, returns the code point of the surrogate <em>pair</em>.</li>
+  <li>If the element at <code><var>pos</var></code> is a UTF-16 low surrogate, returns <em>only</em> the low surrogate code point.</li>
+</ul>
 
 <h2 id="Examples">Examples</h2>
 
@@ -127,27 +122,16 @@ if (!String.prototype.codePointAt) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-string.prototype.codepointat',
-        'String.prototype.codePointAt')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.String.codePointAt")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
+  <li>A polyfill of <code>String.prototype.codePointAt</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-string-and-regexp"><code>core-js</code></a></li>
   <li>{{jsxref("String.fromCodePoint()")}}</li>
   <li>{{jsxref("String.fromCharCode()")}}</li>
   <li>{{jsxref("String.prototype.charCodeAt()")}}</li>

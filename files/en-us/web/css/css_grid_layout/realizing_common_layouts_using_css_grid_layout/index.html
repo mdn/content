@@ -6,6 +6,8 @@ tags:
   - CSS Grids
   - Guide
 ---
+<div>{{CSSRef}}</div>
+
 <p>To round off this set of guides to CSS Grid Layout, I am going to walk through a few different layouts, which demonstrate some of the different techniques you can use when designing with grid layout. We will look at an example using <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas">grid-template-areas</a>, a typical 12-column flexible grid system, and also a product listing using auto-placement. As you can see from this set of examples, there is often more than one way to achieve the result you want with grid layout. Choose the method you find most helpful for the problems that you are solving and the designs that you need to implement.</p>
 
 <h2 id="A_responsive_layout_with_1_to_3_fluid_columns_using_grid-template-areas">A responsive layout with 1 to 3 fluid columns using <code>grid-template-areas</code></h2>
@@ -18,47 +20,45 @@ tags:
 
 <p>My mark-up is a container with elements inside for a header, footer, main content, navigation, sidebar, and a block into which I am intending to place advertising.</p>
 
-<div id="layout_1">
 <div class="hidden">
 <pre class="brush: css">* {box-sizing: border-box;}
+  .wrapper {
+    max-width: 1024px;
+    margin: 0 auto;
+    font: 1.2em Helvetica, arial, sans-serif;
+  }
 
-    .wrapper {
-        max-width: 1024px;
-        margin: 0 auto;
-        font: 1.2em Helvetica, arial, sans-serif;
-    }
+  .wrapper &gt; * {
+    border: 2px solid #f08c00;
+    background-color: #ffec99;
+    border-radius: 5px;
+    padding: 10px;
+  }
 
-    .wrapper &gt; * {
-        border: 2px solid #f08c00;
-        background-color: #ffec99;
-        border-radius: 5px;
-        padding: 10px;
-    }
-
-    nav ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
 </pre>
 </div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
-        &lt;header class="main-head"&gt;The header&lt;/header&gt;
-        &lt;nav class="main-nav"&gt;
-            &lt;ul&gt;
-                &lt;li&gt;&lt;a href=""&gt;Nav 1&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href=""&gt;Nav 2&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href=""&gt;Nav 3&lt;/a&gt;&lt;/li&gt;
-            &lt;/ul&gt;
-        &lt;/nav&gt;
-        &lt;article class="content"&gt;
-            &lt;h1&gt;Main article area&lt;/h1&gt;
-            &lt;p&gt;In this layout, we display the areas in source order for any screen less that 500 pixels wide. We go to a two column layout, and then to a three column layout by redefining the grid, and the placement of items on the grid.&lt;/p&gt;
-        &lt;/article&gt;
-        &lt;aside class="side"&gt;Sidebar&lt;/aside&gt;
-        &lt;div class="ad"&gt;Advertising&lt;/div&gt;
-        &lt;footer class="main-footer"&gt;The footer&lt;/footer&gt;
+  &lt;header class="main-head"&gt;The header&lt;/header&gt;
+  &lt;nav class="main-nav"&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=""&gt;Nav 1&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=""&gt;Nav 2&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=""&gt;Nav 3&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+  &lt;article class="content"&gt;
+    &lt;h1&gt;Main article area&lt;/h1&gt;
+    &lt;p&gt;In this layout, we display the areas in source order for any screen less that 500 pixels wide. We go to a two column layout, and then to a three column layout by redefining the grid, and the placement of items on the grid.&lt;/p&gt;
+  &lt;/article&gt;
+  &lt;aside class="side"&gt;Sidebar&lt;/aside&gt;
+  &lt;div class="ad"&gt;Advertising&lt;/div&gt;
+  &lt;footer class="main-footer"&gt;The footer&lt;/footer&gt;
 &lt;/div&gt;
 </pre>
 
@@ -140,8 +140,7 @@ tags:
 
 <p>In this layout I am displaying the <code>nav</code> in the left column, alongside the <code>content</code>. In the right column we have the <code>sidebar</code> and underneath it the advertisements (<code>ad</code>). The <code>footer</code> now spans right across the bottom of the layout. I then use a flexbox to display the navigation as a column.</p>
 
-<p>{{ EmbedLiveSample('layout_1', '800', '500') }}</p>
-</div>
+<p>{{ EmbedLiveSample('A_responsive_layout_with_1_to_3_fluid_columns_using_grid-template-areas', '800', '500') }}</p>
 
 <p>This is a simple example but demonstrates how we can use a grid layout to rearrange our layout for different breakpoints. In particular I am changing the location of that <code>ad</code> block, as appropriate in my different column setups. I find this named areas method very helpful at a prototyping stage, it is easy to play around with the location of elements. You could always begin to use grid in this way for prototyping, even if you can’t rely on it fully in production due to the browsers that visit your site.</p>
 
@@ -149,7 +148,6 @@ tags:
 
 <p>If you have been working with one of the many frameworks or grid systems you may be accustomed to laying out your site on a 12- or 16-column flexible grid. We can create this type of system using CSS Grid Layout. As a simple example, I am creating a 12-column flexible grid that has 12 <code>1fr</code>-unit column tracks, they all have a start line named <code>col-start</code>. This means that we will have twelve grid lines named <code>col-start</code>.</p>
 
-<div id="layout_2">
 <div class="hidden">
 <pre class="brush: css">.wrapper {
   max-width: 1024px;
@@ -201,8 +199,7 @@ tags:
 }
 </pre>
 
-<p>{{ EmbedLiveSample('layout_2', '800', '400') }}</p>
-</div>
+<p>{{ EmbedLiveSample('A_flexible_12-column_layout', '800', '400') }}</p>
 
 <p>As described in the <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines">guide to named lines</a>, we are using the named line to place our item. As we have 12 lines all with the same name we use the name, and then the index of the line. You could also use the line index itself if you prefer and avoid using named lines at all.</p>
 
@@ -212,50 +209,50 @@ tags:
 
 <p>There are some key differences with how a grid layout works over the grid systems you may have used previously. As you can see, we do not need to add any markup to create a row, grid systems need to do this to stop elements popping up into the row above. With CSS Grid Layout, we can place things into rows, with no danger of them rising up into the row above if it is left empty. Due to this <em>strict</em> column and row placement we can also easily leave white space in our layout. We also don’t need special classes to pull or push things, to indent them into the grid. All we need to do is specify the start and end line for the item.</p>
 
-<h3 id="Building_a_layout_using_the_12-column_system">Building a layout using the 12-column system</h3>
+<h2 id="Building_a_layout_using_the_12-column_system">Building a layout using the 12-column system</h2>
 
 <p>To see how this layout method works in practice, we can create the same layout that we created with {{cssxref("grid-template-areas")}}, this time using the 12-column grid system. I am starting with the same markup as used for the grid template areas example.</p>
 
-<div id="layout_3">
 <div class="hidden">
 <pre class="brush: css">* {box-sizing: border-box;}
+  .wrapper {
+    max-width: 1024px;
+    margin: 0 auto;
+    font: 1.2em Helvetica, arial, sans-serif;
+  }
 
-    .wrapper {
-        max-width: 1024px;
-        margin: 0 auto;
-        font: 1.2em Helvetica, arial, sans-serif;
-    }
+  .wrapper &gt; * {
+    border: 2px solid #f08c00;
+    background-color: #ffec99;
+    border-radius: 5px;
+    padding: 10px;
+  }
 
-    .wrapper &gt; * {
-        border: 2px solid #f08c00;
-        background-color: #ffec99;
-        border-radius: 5px;
-        padding: 10px;
-    }
-
-    nav ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
 </pre>
 </div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
-        &lt;header class="main-head"&gt;The header&lt;/header&gt;
-        &lt;nav class="main-nav"&gt;
-            &lt;ul&gt;
-                &lt;li&gt;&lt;a href=""&gt;Nav 1&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href=""&gt;Nav 2&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href=""&gt;Nav 3&lt;/a&gt;&lt;/li&gt;
-            &lt;/ul&gt;
-        &lt;/nav&gt;
-        &lt;article class="content"&gt;&lt;h1&gt;Main article area&lt;/h1&gt;
-        &lt;p&gt;In this layout, we display the areas in source order for any screen less that 500 pixels wide. We go to a two column layout, and then to a three column layout by redefining the grid, and the placement of items on the grid.&lt;/p&gt;&lt;/article&gt;
-        &lt;aside class="side"&gt;Sidebar&lt;/aside&gt;
-        &lt;div class="ad"&gt;Advertising&lt;/div&gt;
-        &lt;footer class="main-footer"&gt;The footer&lt;/footer&gt;
-    &lt;/div&gt;
+  &lt;header class="main-head"&gt;The header&lt;/header&gt;
+  &lt;nav class="main-nav"&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=""&gt;Nav 1&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=""&gt;Nav 2&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=""&gt;Nav 3&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+  &lt;article class="content"&gt;
+    &lt;h1&gt;Main article area&lt;/h1&gt;
+    &lt;p&gt;In this layout, we display the areas in source order for any screen less that 500 pixels wide. We go to a two column layout, and then to a three column layout by redefining the grid, and the placement of items on the grid.&lt;/p&gt;
+  &lt;/article&gt;
+  &lt;aside class="side"&gt;Sidebar&lt;/aside&gt;
+  &lt;div class="ad"&gt;Advertising&lt;/div&gt;
+  &lt;footer class="main-footer"&gt;The footer&lt;/footer&gt;
+&lt;/div&gt;
 </pre>
 
 <p>I can then set up our grid, as for the example 12-column layout above.</p>
@@ -281,7 +278,6 @@ tags:
 <p>The ad panel is below the sidebar, so starts at grid row line 4. Then we have the content and footer starting at col-start 4 and spanning 9 tracks taking them to the end of the grid.</p>
 
 <pre class="brush: css">@media (min-width: 500px) {
-
   .side {
     grid-column: col-start / span 3;
     grid-row: 3;
@@ -328,8 +324,7 @@ tags:
 }
 </pre>
 
-<p>{{ EmbedLiveSample('layout_3', '800', '450') }}</p>
-</div>
+<p>{{ EmbedLiveSample('Building_a_layout_using_the_12-column_system', '800', '450') }}</p>
 
 <p>Once again the <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts">Grid Inspector</a> is useful to help us see how our layout has taken shape.</p>
 
@@ -343,36 +338,55 @@ tags:
 
 <p>The markup for my listing is an unordered list of items. Each item contains a heading, some text of varying height, and a call to action link.</p>
 
-<div id="layout_4">
 <pre class="brush: html">&lt;ul class="listing"&gt;
   &lt;li&gt;
     &lt;h2&gt;Item One&lt;/h2&gt;
-    &lt;div class="body"&gt;&lt;p&gt;The content of this listing item goes here.&lt;/p&gt;&lt;/div&gt;
-    &lt;div class="cta"&gt;&lt;a href=""&gt;Call to action!&lt;/a&gt;&lt;/div&gt;
+    &lt;div class="body"&gt;
+      &lt;p&gt;The content of this listing item goes here.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="cta"&gt;
+      &lt;a href=""&gt;Call to action!&lt;/a&gt;
+    &lt;/div&gt;
   &lt;/li&gt;
-   &lt;li&gt;
-     &lt;h2&gt;Item Two&lt;/h2&gt;
-     &lt;div class="body"&gt;&lt;p&gt;The content of this listing item goes here.&lt;/p&gt;&lt;/div&gt;
-     &lt;div class="cta"&gt;&lt;a href=""&gt;Call to action!&lt;/a&gt;&lt;/div&gt;
-   &lt;/li&gt;
-   &lt;li class="wide"&gt;
-     &lt;h2&gt;Item Three&lt;/h2&gt;
-     &lt;div class="body"&gt;&lt;p&gt;The content of this listing item goes here.&lt;/p&gt;
-     &lt;p&gt;This one has more text than the other items.&lt;/p&gt;
-     &lt;p&gt;Quite a lot more&lt;/p&gt;
-     &lt;p&gt;Perhaps we could do something different with it?&lt;/p&gt;&lt;/div&gt;
-     &lt;div class="cta"&gt;&lt;a href=""&gt;Call to action!&lt;/a&gt;&lt;/div&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-     &lt;h2&gt;Item Four&lt;/h2&gt;
-     &lt;div class="body"&gt;&lt;p&gt;The content of this listing item goes here.&lt;/p&gt;&lt;/div&gt;
-     &lt;div class="cta"&gt;&lt;a href=""&gt;Call to action!&lt;/a&gt;&lt;/div&gt;
-    &lt;/li&gt;
-     &lt;li&gt;
-     &lt;h2&gt;Item Five&lt;/h2&gt;
-     &lt;div class="body"&gt;&lt;p&gt;The content of this listing item goes here.&lt;/p&gt;&lt;/div&gt;
-      &lt;div class="cta"&gt;&lt;a href=""&gt;Call to action!&lt;/a&gt;&lt;/div&gt;
-    &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h2&gt;Item Two&lt;/h2&gt;
+    &lt;div class="body"&gt;
+      &lt;p&gt;The content of this listing item goes here.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="cta"&gt;
+      &lt;a href=""&gt;Call to action!&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li class="wide"&gt;
+    &lt;h2&gt;Item Three&lt;/h2&gt;
+    &lt;div class="body"&gt;
+      &lt;p&gt;The content of this listing item goes here.&lt;/p&gt;
+      &lt;p&gt;This one has more text than the other items.&lt;/p&gt;
+      &lt;p&gt;Quite a lot more&lt;/p&gt;
+      &lt;p&gt;Perhaps we could do something different with it?&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="cta"&gt;
+      &lt;a href=""&gt;Call to action!&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h2&gt;Item Four&lt;/h2&gt;
+    &lt;div class="body"&gt;
+      &lt;p&gt;The content of this listing item goes here.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="cta"&gt;
+      &lt;a href=""&gt;Call to action!&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h2&gt;Item Five&lt;/h2&gt;
+    &lt;div class="body"&gt;
+      &lt;p&gt;The content of this listing item goes here.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="cta"&gt;
+      &lt;a href=""&gt;Call to action!&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 </pre>
 
@@ -431,8 +445,9 @@ tags:
 
 <p>This is really one of the key reasons I would use flexbox rather than grid, if I am just aligning or distributing something in a single dimension, that’s a flexbox use case. </p>
 
-<p>{{ EmbedLiveSample('layout_4', '800', '900') }}</p>
-</div>
+<p>{{ EmbedLiveSample('A_product_listing_with_auto-placement', '800', '900') }}</p>
+
+<h2 id="preventing_gaps_with_the_dense_keyword">Preventing gaps with the dense keyword</h2>
 
 <p>This is all looking fairly complete now, however we sometimes have these cards which contain far more content than the others. It might be nice to cause those to span two tracks, and then they won’t be so tall. I have a class of <code>wide</code> on my larger item, and I add a rule {{cssxref("grid-column-end")}} with a value of <code>span 2</code>. Now when grid encounters this item, it will assign it two tracks. At some breakpoints, this means that we'll get a gap in the grid – where there isn’t space to lay out a two-track item.</p>
 
@@ -440,7 +455,6 @@ tags:
 
 <p>I can cause a grid to backfill those gaps by setting {{cssxref("grid-auto-flow")}}<code>: dense </code> on the grid container. Take care when doing this however as it does take items away from their logical source order. You should only do this if your items do not have a set order – and be aware of the <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility#visual_not_logical_re-ordering">issues</a> of the tab order following the source and not your reordered display.</p>
 
-<div id="layout_5">
 <div class="hidden">
 <pre class="brush: html">&lt;ul class="listing"&gt;
   &lt;li&gt;
@@ -523,79 +537,15 @@ tags:
 }
 </pre>
 
-<p>{{ EmbedLiveSample('layout_5', '800', '900') }}</p>
+<p>{{ EmbedLiveSample('preventing_gaps_with_the_dense_keyword', '800', '900') }}</p>
 
 <p>This technique of using auto-placement with some rules applied to certain items is very useful, and can help you to deal with content that is being output by a CMS for example, where you have repeated items and can perhaps add a class to certain ones as they are rendered into the HTML.</p>
-</div>
 
 <h2 id="Further_exploration">Further exploration</h2>
 
 <p>The best way to learn to use grid layout is to continue to build examples like the ones we have covered here. Pick something that you normally build using your framework of choice, or using floats, and see if you can build it using grid. Don’t forget to find examples that are impossible to build with current methods. That might mean taking inspiration from magazines or other non-web sources. Grid Layout opens up possibilities that we have not had before, we don’t need to be tied to the same old layouts to use it.</p>
 
 <ul>
- <li>For inspiration see the <a href="http://labs.jensimmons.com/"><em>Layout Labs</em> from Jen Simmons</a>, she has been creating layouts based on a range of sources.</li>
- <li>For additional common layout patterns see <em><a href="http://gridbyexample.com">Grid by Example</a></em>, where there are many smaller examples of grid layout and also some larger UI patterns and full page layouts.</li>
+ <li>For inspiration see the <a href="https://labs.jensimmons.com/"><em>Layout Labs</em> from Jen Simmons</a>, she has been creating layouts based on a range of sources.</li>
+ <li>For additional common layout patterns see <em><a href="https://gridbyexample.com">Grid by Example</a></em>, where there are many smaller examples of grid layout and also some larger UI patterns and full page layouts.</li>
 </ul>
-
-<section id="Quick_links">
-<ol>
- <li><a href="/en-US/docs/Web/CSS"><strong>CSS</strong></a></li>
- <li><a href="/en-US/docs/Web/CSS/Reference"><strong>CSS Reference</strong></a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a></li>
- <li data-default-state="open"><a href="#"><strong>Guides</strong></a>
-  <ol>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">Basics concepts of grid layout</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout">Relationship to other layout methods</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid">Line-based placement</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas">Grid template areas</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines">Layout using named grid lines</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout">Auto-placement in grid layout</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">Box alignment in grid layout</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes">Grids, logical values and writing modes</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility">CSS Grid Layout and Accessibility</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement">CSS Grid Layout and Progressive Enhancement</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout">Realizing common layouts using grids</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Subgrid">Subgrid</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout">Masonry layout</a></li>
-  </ol>
- </li>
- <li data-default-state="open"><a href="#"><strong>Properties</strong></a>
-  <ol>
-   <li><code><a href="/en-US/docs/Web/CSS/align-tracks">align-tracks</a></code>{{Experimental_Inline}}</li>
-   <li><code><a href="/en-US/docs/Web/CSS/column-gap">column-gap</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/gap">gap</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid">grid</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-area">grid-area</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-auto-columns">grid-auto-columns</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-auto-flow">grid-auto-flow</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-auto-rows">grid-auto-rows</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-column">grid-column</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-column-end">grid-column-end</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-column-start">grid-column-start</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-row">grid-row</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-row-end">grid-row-end</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-row-start">grid-row-start</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-template">grid-template</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-template-areas">grid-template-areas</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-template-columns">grid-template-columns</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-template-rows">grid-template-rows</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/justify-tracks">justify-tracks</a></code>{{Experimental_Inline}}</li>
-   <li><code><a href="/en-US/docs/Web/CSS/masonry-auto-flow">masonry-auto-flow</a></code>{{Experimental_Inline}}</li>
-   <li><code><a href="/en-US/docs/Web/CSS/row-gap">row-gap</a></code></li>
-  </ol>
- </li>
- <li data-default-state="open"><a href="#"><strong>Glossary</strong></a>
-  <ol>
-   <li><a href="/en-US/docs/Glossary/Grid">Grid</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_lines">Grid lines</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_tracks">Grid tracks</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_cell">Grid cell</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_areas">Grid areas</a></li>
-   <li><a href="/en-US/docs/Glossary/Gutters">Gutters</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_Axis">Grid Axis</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_rows">Grid row</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_column">Grid column</a></li>
-  </ol>
- </li>
-</ol>
-</section>

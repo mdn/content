@@ -2,10 +2,10 @@
 title: 'ReferenceError: invalid assignment left-hand side'
 slug: Web/JavaScript/Reference/Errors/Invalid_assignment_left-hand_side
 tags:
-- Error
-- Errors
-- JavaScript
-- ReferenceError
+  - Error
+  - Errors
+  - JavaScript
+  - ReferenceError
 ---
 <div>{{jsSidebar("Errors")}}</div>
 
@@ -25,9 +25,9 @@ tags:
 <h2 id="What_went_wrong">What went wrong?</h2>
 
 <p>There was an unexpected assignment somewhere. This might be due to a mismatch of a <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/Assignment_Operators">assignment
-    operator</a> and a <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">comparison
+    href="/en-US/docs/Web/JavaScript/Reference/Operators#assignment_operators">assignment
+    operator</a> and an <a
+    href="/en-US/docs/Web/JavaScript/Reference/Operators#equality_operators">equality
     operator</a>, for example. While a single "<code>=</code>" sign assigns a value to a
   variable, the "<code>==</code>" or "<code>===</code>" operators compare a value.</p>
 
@@ -46,7 +46,7 @@ var str = 'Hello, '
 // ReferenceError: invalid assignment left-hand side
 </pre>
 
-<p>In the <code>if</code> statement, you want to use a comparison operator ("=="), and for
+<p>In the <code>if</code> statement, you want to use an equality operator ("=="), and for
   the string concatenation, the plus ("+") operator is needed.</p>
 
 <pre class="brush: js example-good">if (Math.PI == 3 || Math.PI == 4) {
@@ -62,9 +62,9 @@ var str = 'Hello, '
 
 <ul>
   <li><a
-      href="/en-US/docs/Web/JavaScript/Reference/Operators/Assignment_Operators">Assignment
+      href="/en-US/docs/Web/JavaScript/Reference/Operators#assignment_operators">Assignment
       operators</a></li>
   <li><a
-      href="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">Comparison
+      href="/en-US/docs/Web/JavaScript/Reference/Operators#equality_operators">Equality
       operators</a></li>
 </ul>

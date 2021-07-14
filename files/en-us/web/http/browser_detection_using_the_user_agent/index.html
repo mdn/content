@@ -185,61 +185,57 @@ addEventListener("resize", setTimeout.bind(0,function(){
 	<tbody>
 		<tr>
 			<td>Firefox</td>
-			<td>Firefox/xyz</td>
-			<td>Seamonkey/xyz</td>
+			<td><code>Firefox/xyz</code></td>
+			<td><code>Seamonkey/xyz</code></td>
 			<td></td>
 		</tr>
 		<tr>
 			<td>Seamonkey</td>
-			<td>Seamonkey/xyz</td>
+			<td><code>Seamonkey/xyz</code></td>
 			<td></td>
 			<td></td>
 		</tr>
 		<tr>
 			<td>Chrome</td>
-			<td>Chrome/xyz</td>
-			<td>Chromium/xyz</td>
+			<td><code>Chrome/xyz</code></td>
+			<td><code>Chromium/xyz</code></td>
 			<td></td>
 		</tr>
 		<tr>
 			<td>Chromium</td>
-			<td>Chromium/xyz</td>
+			<td><code>Chromium/xyz</code></td>
 			<td></td>
 			<td></td>
 		</tr>
 		<tr>
 			<td>Safari</td>
-			<td>Safari/xyz</td>
-			<td>Chrome/xyz or Chromium/xyz</td>
-			<td>Safari gives two version numbers: one technical in the Safari/xyz token, and one user-friendly in a Version/xyz token</td>
+			<td><code>Safari/xyz</code></td>
+			<td><code>Chrome/xyz</code> or <code>Chromium/xyz</code></td>
+			<td>Safari gives two version numbers: one technical in the <code>Safari/xyz</code> token, and one user-friendly in a <code>Version/xyz</code> token</td>
 		</tr>
 		<tr>
-			<td>Opera</td>
-			<td>
-			<p>OPR/xyz <sup>[1]</sup></p>
-
-			<p>Opera/xyz</p>
+			<td rowspan="2">Opera</td>
+      <td>
+			<p><code>OPR/xyz</code></p></td>
+      <td></td>
+      <td>Opera 15+ (Blink-based engine)</td>
+    </tr>
+    <tr>
+      <td>
+			<p><code>Opera/xyz</code></p>
 			</td>
-			<td></td>
-			<td>
-			<p><sup>[1]</sup> Opera 15+ (Blink-based engine)</p>
-
-			<p><sup>[2]</sup> Opera 12- (Presto-based engine)</p>
-			</td>
+      <td></td>
+			<td>Opera 12- (Presto-based engine)</td>
 		</tr>
 		<tr>
-			<td>Internet Explorer</td>
-			<td>
-			<p>; MSIE xyz; <sup>[1]</sup></p>
-
-			<p>Trident/7.0; .*rv:xyz <sup>[2]</sup></p>
-			</td>
-			<td></td>
-			<td>
-			<p><sup>[1]</sup> Internet Explorer 10-</p>
-
-			<p><sup>[2]</sup> Internet Explorer 11</p>
-			</td>
+			<td rowspan="2">Internet Explorer</td>
+			<td><code>; MSIE xyz;</code></td>
+      <td></td>
+      <td>Internet Explorer 10-</td>
+    <tr>
+      <td><code>Trident/7.0; .*rv:xyz</code></td>
+      <td></td>
+			<td> Internet Explorer 11</td>
 		</tr>
 	</tbody>
 </table>
@@ -269,33 +265,33 @@ addEventListener("resize", setTimeout.bind(0,function(){
 	<tbody>
 		<tr>
 			<td>Gecko</td>
-			<td>Gecko/xyz</td>
+			<td><code>Gecko/xyz</code>/td>
 			<td></td>
 		</tr>
 		<tr>
 			<td>WebKit</td>
-			<td>AppleWebKit/xyz</td>
+			<td><code>AppleWebKit/xyz</code></td>
 			<td>Pay attention, WebKit browsers add a 'like Gecko' string that may trigger false positive for Gecko if the detection is not careful.</td>
 		</tr>
 		<tr>
 			<td>Presto</td>
-			<td>Opera/xyz</td>
+			<td><code>Opera/xyz</code></td>
 			<td><strong>Note:</strong> Presto is no longer used in Opera browser builds &gt;= version 15 (see 'Blink')</td>
 		</tr>
 		<tr>
 			<td>Trident</td>
-			<td>Trident/xyz</td>
+			<td><code>Trident/xyz</code></td>
 			<td>Internet Explorer put this token in the <em>comment</em> part of the User Agent String</td>
 		</tr>
 		<tr>
 			<td>EdgeHTML</td>
-			<td>Edge/xyz</td>
+			<td><code>Edge/xyz</code></td>
 			<td>The non-Chromium Edge puts its engine version after the <em>Edge/</em> token, not the application version.<br>
 			<strong>Note:</strong> EdgeHTML is no longer used in Edge browser builds &gt;= version 79 (see 'Blink').</td>
 		</tr>
 		<tr>
 			<td>Blink</td>
-			<td>Chrome/xyz</td>
+			<td><code>Chrome/xyz</code></td>
 			<td></td>
 		</tr>
 	</tbody>
@@ -335,17 +331,17 @@ addEventListener("resize", setTimeout.bind(0,function(){
 		<tr>
 			<td>Mozilla (Gecko, Firefox)</td>
 			<td><a href="/en-US/docs/Gecko_user_agent_string_reference"><strong>Mobile</strong> or <strong>Tablet</strong> token</a> in the comment.</td>
-			<td>Mozilla/5.0 (Android; Mobile; rv:13.0) Gecko/13.0 Firefox/13.0</td>
+			<td><code>Mozilla/5.0 (Android; Mobile; rv:13.0) Gecko/13.0 Firefox/13.0</code></td>
 		</tr>
 		<tr>
 			<td>WebKit-based (Android, Safari)</td>
 			<td><a href="https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariWebContent/OptimizingforSafarioniPhone/OptimizingforSafarioniPhone.html#//apple_ref/doc/uid/TP40006517-SW3"><strong>Mobile Safari</strong> token</a> outside the comment.</td>
-			<td>Mozilla/5.0 (Linux; U; Android 4.0.3; de-ch; HTC Sensation Build/IML74K) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30</td>
+			<td><code>Mozilla/5.0 (Linux; U; Android 4.0.3; de-ch; HTC Sensation Build/IML74K) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30</code></td>
 		</tr>
 		<tr>
 			<td>Blink-based (Chromium, Google Chrome, Opera 15+, Edge on Android)</td>
 			<td><a href="https://developers.google.com/chrome/mobile/docs/user-agent"><strong>Mobile Safari</strong> token</a> outside the comment.</td>
-			<td>Mozilla/5.0 (Linux; Android 4.4.2); Nexus 5 Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.117 Mobile Safari/537.36 OPR/20.0.1396.72047</td>
+			<td><code>Mozilla/5.0 (Linux; Android 4.4.2); Nexus 5 Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.117 Mobile Safari/537.36 OPR/20.0.1396.72047</code></td>
 		</tr>
 		<tr>
 			<td>Presto-based (Opera 12-)</td>
@@ -353,18 +349,18 @@ addEventListener("resize", setTimeout.bind(0,function(){
 			<p><a href="http://my.opera.com/community/openweb/idopera/"><strong>Opera Mobi/xyz</strong> token</a> in the comment (Opera 12-)</p>
 			</td>
 			<td>
-			<p>Opera/9.80 (Android 2.3.3; Linux; Opera Mobi/ADR-1111101157; U; es-ES) Presto/2.9.201 Version/11.50</p>
+			<p><code>Opera/9.80 (Android 2.3.3; Linux; Opera Mobi/ADR-1111101157; U; es-ES) Presto/2.9.201 Version/11.50</code></p>
 			</td>
 		</tr>
 		<tr>
 			<td>Internet Explorer</td>
 			<td><strong>IEMobile/xyz</strong> token in the comment.</td>
-			<td>Mozilla/5.0 (compatible; MSIE 9.0; Windows Phone OS 7.5; Trident/5.0; IEMobile/9.0)</td>
+			<td><code>Mozilla/5.0 (compatible; MSIE 9.0; Windows Phone OS 7.5; Trident/5.0; IEMobile/9.0)</code></td>
 		</tr>
 		<tr>
 			<td>Edge on Windows 10 Mobile</td>
 			<td><strong>Mobile/xyz</strong> &amp; <strong>Edge/</strong> tokens outside the comment.</td>
-			<td>Mozilla/5.0 (Windows Phone 10.0; Android 6.0.1; Xbox; Xbox One) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Mobile Safari/537.36 Edge/16.16299</td>
+			<td><code>Mozilla/5.0 (Windows Phone 10.0; Android 6.0.1; Xbox; Xbox One) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Mobile Safari/537.36 Edge/16.16299</code></td>
 		</tr>
 	</tbody>
 </table>

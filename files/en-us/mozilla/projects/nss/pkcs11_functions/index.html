@@ -6,7 +6,20 @@ tags:
 ---
 <h3 id="PKCS_.2311_Functions">PKCS #11 Functions</h3>
 <p>This chapter describes the core PKCS #11 functions that an application needs for communicating with cryptographic modules. In particular, these functions are used for obtaining certificates, keys, and passwords. This was converted from <a class="external" href="https://www.mozilla.org/projects/security/pki/nss/ref/ssl/pkfnc.html">"Chapter 7: PKCS #11 Functions"</a>.</p>
-<ul> <li><a href="/en-US/NSS_reference">Back to the NSS reference main page.</a></li> <li><a href="/en-US/NSS_PKCS11_Functions#SECMOD_LoadUserModule">SECMOD_LoadUserModule</a></li> <li><a href="/en-US/NSS_PKCS11_Functions#SECMOD_UnloadUserModule">SECMOD_UnloadUserModule</a></li> <li><a href="/en-US/NSS_PKCS11_Functions#SECMOD_OpenUserDB">SECMOD_OpenUserDB</a></li> <li><a href="/en-US/NSS_PKCS11_Functions#SECMOD_CloseUserDB">SECMOD_CloseUserDB</a></li> <li><a href="/en-US/NSS_PKCS11_Functions#PK11_FindCertFromNickname">PK11_FindCertFromNickname</a></li> <li><a href="/en-US/NSS_PKCS11_Functions#PK11_FindKeyByAnyCert">PK11_FindKeyByAnyCert</a></li> <li><a href="/en-US/NSS_PKCS11_Functions#PK11_GetSlotName">PK11_GetSlotName</a></li> <li><a href="/en-US/NSS_PKCS11_Functions#PK11_GetTokenName">PK11_GetTokenName</a></li> <li><a href="/en-US/NSS_PKCS11_Functions#PK11_IsHW">PK11_IsHW</a></li> <li><a href="/en-US/NSS_PKCS11_Functions#PK11_IsPresent">PK11_IsPresent</a></li> <li><a href="/en-US/NSS_PKCS11_Functions#PK11_IsReadOnly">PK11_IsReadOnly</a></li> <li><a href="/en-US/NSS_PKCS11_Functions#PK11_SetPasswordFunc">PK11_SetPasswordFunc</a></li>
+<ul>
+  <li><a href="/en-US/docs/Mozilla/Projects/NSS/Reference">Back to the NSS reference main page.</a></li>
+  <li><a href="#secmod_loadusermodule">SECMOD_LoadUserModule</a></li>
+  <li><a href="#secmod_unloadusermodule">SECMOD_UnloadUserModule</a></li>
+  <li><a href="#secmod_openuserdb">SECMOD_OpenUserDB</a></li>
+  <li><a href="#secmod_closeuserdb">SECMOD_CloseUserDB</a></li>
+  <li><a href="#pk11_findcertfromnickname">PK11_FindCertFromNickname</a></li>
+  <li><a href="#pk11_findkeybyanycert">PK11_FindKeyByAnyCert</a></li>
+  <li><a href="#pk11_getslotname">PK11_GetSlotName</a></li>
+  <li><a href="#pk11_gettokenname">PK11_GetTokenName</a></li>
+  <li><a href="#pk11_ishw">PK11_IsHW</a></li>
+  <li><a href="#pk11_ispresent">PK11_IsPresent</a></li>
+  <li><a href="#pk11_isreadonly">PK11_IsReadOnly</a></li>
+  <li><a href="#pk11_setpasswordfunc">PK11_SetPasswordFunc</a></li>
 </ul>
 <h5 id="SECMOD_LoadUserModule">SECMOD_LoadUserModule</h5>
 <p>Load a new PKCS #11 module based on a moduleSpec.</p>
@@ -18,7 +31,7 @@ tags:
 </pre>
 <h6 id="Parameters">Parameters</h6>
 <p>This function has the following parameters:</p>
-<p><em>moduleSpec</em> is a pkcs #11 moduleSpec. <em>parent</em> is the moduleDB that presented this module spec. For applications this value should be NULL. <em>recurse</em> is a boolean indicates whether or not the module should also launch additional pkcs #11 modules. This is only applicable if the loaded module is actually a moduleDB rather than a PKCS #11 module (see <a href="/en-US/PKCS11_Module_Specs">PKCS11_Module_Specs</a>).</p>
+<p><em>moduleSpec</em> is a pkcs #11 moduleSpec. <em>parent</em> is the moduleDB that presented this module spec. For applications this value should be NULL. <em>recurse</em> is a boolean indicates whether or not the module should also launch additional pkcs #11 modules. This is only applicable if the loaded module is actually a moduleDB rather than a PKCS #11 module (see <a href="/en-US/docs/Mozilla/Projects/NSS/PKCS11/Module_Specs">PKCS11_Module_Specs</a>).</p>
 <h6 id="Returns">Returns</h6>
 <p>The function returns one of these values:</p>
 <ul> <li>If successful, a pointer to a SECMODModule. Caller owns the reference</li> <li>If unsuccessful, NULL.</li>
@@ -27,7 +40,7 @@ tags:
 <h6 id="Description">Description</h6>
 <p>SECMOD_LoadUserModule loads a new PKCS #11 module into NSS and connects it to the current NSS trust infrastructure. Once the module has been successfully loaded, other NSS calls will use it in the normal course of searching.</p>
 
-<p><em>modulespec</em> specifies how the module should be loaded. More information about module spec is available at <a href="/en-US/PKCS11_Module_Specs">PKCS11_Module_Specs</a>. NSS parameters may be specified in module specs used by SECMOD_LoadUserModule.</p>
+<p><em>modulespec</em> specifies how the module should be loaded. More information about module spec is available at <a href="/en-US/docs/Mozilla/Projects/NSS/PKCS11/Module_Specs">PKCS11_Module_Specs</a>. NSS parameters may be specified in module specs used by SECMOD_LoadUserModule.</p>
 <p>Module will continue to function in the NSS infrastructure until unloaded with SECMOD_UnloadUserModule.</p>
 <h5 id="SECMOD_UnloadUserModule">SECMOD_UnloadUserModule</h5>
 <p>Unload a PKCS #11 module.</p>
@@ -90,7 +103,7 @@ tags:
 Valid flags are:</p>
 <ul> <li><em>readOnly</em> - Databases should be opened read only.</li> <li><em>noCertDB</em> - Don't try to open a certificate database.</li> <li><em>noKeyDB</em> - Don't try to open a key database.</li> <li><em>forceOpen</em> - Don't fail to initialize the token if thedatabases could not be opened.</li> <li><em>passwordRequired</em> - zero length passwords are not acceptable(valid only if there is a keyDB).</li> <li><em>optimizeSpace</em> - allocate smaller hash tables and lock tables.When this flag is not specified, Softoken will allocatelarge tables to prevent lock contention.</li>
 </ul>
-<p>For more info on module strings see <a href="/en-US/PKCS11_Module_Specs">PKCS11_Module_Specs</a>.</p>
+<p>For more info on module strings see <a href="/en-US/docs/Mozilla/Projects/NSS/PKCS11/Module_Specs">PKCS11_Module_Specs</a>.</p>
 <p>This function will return a reference to a slot. The caller is responsible for freeing the slot reference when it is through. Freeing the slot reference will not unload the slot. That happens with the corresponding SECMOD_CloseUserDB() function. Until the SECMOD_CloseUserDB function is called, the newly opened database will be visible to any NSS calls search for keys or certs.</p>
 <h5 id="PK11_FindCertFromNickname">PK11_FindCertFromNickname</h5>
 <p>Finds a certificate from its nickname.</p>

@@ -1,5 +1,5 @@
 ---
-title: VRFrameData.VRFrameData()
+title: VRFrameData()
 slug: Web/API/VRFrameData/VRFrameData
 tags:
   - API
@@ -10,10 +10,15 @@ tags:
   - VRFrameData
   - Virtual Reality
   - WebVR
+browser-compat: api.VRFrameData.VRFrameData
 ---
 <div>{{APIRef("WebVR API")}}{{Deprecated_Header}}</div>
 
-<p>The {{domxref("VRFrameData")}} constructor creates a <code>VRFrameData</code> object instance.</p>
+<p>The <strong><code>VRFrameData()</code></strong> constructor creates a {{domxref("VRFrameData")}} object instance.</p>
+
+<div class="notepad note">
+  <p><strong>Note:</strong> This constructor was part of the old <a href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</a>. It has been superseded by the <a href="https://immersive-web.github.io/webxr/">WebXR Device API</a>.</p>
+</div>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -25,28 +30,16 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<p>{{page("/Web/API/VRDisplay/getFrameData", "Examples")}}</p>
+<p>See <a href="/en-US/docs/Web/API/VRDisplay/getFrameData#examples"><code>VRDisplay.getFrameData()</code></a> for example code.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebVR 1.1', '#dom-vrframedata-vrframedata', 'VRFrameData()')}}</td>
-   <td>{{Spec2('WebVR 1.1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+<p>This constructor was part of the old <a href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</a> that has been superseded by the <a href="https://immersive-web.github.io/webxr/">WebXR Device API</a>. It is no longer on track to becoming a standard.</p>
+<p>Until all browsers have implemented the new <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Fundamentals">WebXR APIs</a>, it is recommended to rely on frameworks, like <a href="https://aframe.io/">A-Frame</a>, <a href="https://www.babylonjs.com/">Babylon.js</a>, or <a href="https://threejs.org/">Three.js</a>, or a <a href="https://github.com/immersive-web/webxr-polyfill">polyfill</a>, to develop WebXR applications that will work across all browsers <a href="https://developer.oculus.com/documentation/oculus-browser/browser-vr-xr/">[1]</a>.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.VRFrameData.VRFrameData")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -11,25 +11,29 @@ tags:
   - alignment
   - box alignment
 ---
+<div>{{CSSRef}}</div>
+
 <p>CSS Grid Layout implements the specification <a href="https://drafts.csswg.org/css-align/">Box Alignment Level 3</a> which is the same standard <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">flexbox </a>uses for aligning items in its flex container. This specification details how alignment should work in all the different layout methods. Layout methods will conform to the specification where possible and implement individual behavior based on their differences (features and constraints). While the specification currently specifies alignment details for all layout methods, browsers have not fully implemented all of the specification; however, the CSS Grid Layout method has been widely adopted.</p>
 
-<p><span class="seoSummary">This guide presents demonstrations of how box alignment in grid layout works. You will see many similarities in how these properties and values work in flexbox.</span> Due to grid being two-dimensional and flexbox one-dimensional there are some small differences that you should watch out for. So we will start by looking at the two axes that we deal with when aligning things in a grid.</p>
+<p>This guide presents demonstrations of how box alignment in grid layout works. You will see many similarities in how these properties and values work in flexbox. Due to grid being two-dimensional and flexbox one-dimensional there are some small differences that you should watch out for. So we will start by looking at the two axes that we deal with when aligning things in a grid.</p>
 
 <h2 id="The_two_axes_of_a_grid_layout">The two axes of a grid layout</h2>
 
 <p>When working with grid layout you have two axes available to align things against – the <em>block axis</em> and the <em>inline axis</em>. The block axis is the axis upon which blocks are laid out in block layout. If you have two paragraphs on your page they display one below the other, so it is this direction we describe as the block axis. </p>
 
-<p><img alt="" src="block_axis.png" style="height: 306px; width: 940px;"></p>
+<p><img alt="" src="block_axis.png"></p>
 
 <p>The <em>inline axis</em> runs across the block axis, it is the direction in which text in regular inline flow runs. </p>
 
-<p><img alt="" src="7_inline_axis.png" style="height: 306px; width: 940px;"></p>
+<p><img alt="" src="7_inline_axis.png"></p>
 
 <p>We are able to align the content inside grid areas, and the grid tracks themselves on these two axes.</p>
 
 <h2 id="Aligning_items_on_the_Block_Axis">Aligning items on the Block Axis</h2>
 
 <p>The {{cssxref("align-self")}} and {{cssxref("align-items")}} properties control alignment on the block axis. When we use these properties, we are changing the alignment of the item within the grid area you have placed it.</p>
+
+<h3 id="using_align-items">Using align-items</h3>
 
 <p>In the following example, I have four grid areas within my grid. I can use the {{cssxref("align-items")}} property on the grid container, to align the items using one of the following values:</p>
 
@@ -45,7 +49,6 @@ tags:
  <li><code>last baseline</code></li>
 </ul>
 
-<div id="alignment_1">
 <div class="hidden">
 <pre class="brush: css">* {box-sizing: border-box;}
 
@@ -99,16 +102,16 @@ tags:
 &lt;/div&gt;
 </pre>
 
-<p>{{ EmbedLiveSample('alignment_1', '500', '450') }}</p>
-</div>
+<p>{{ EmbedLiveSample('using_align-items', '500', '500') }}</p>
 
 <p>Keep in mind that once you set <code>align-items: start</code>, the height of each child <code>&lt;div&gt;</code> will be determined by the contents of the <code>&lt;div&gt;</code>.  This is in contrast to omitting <code><a href="/en-US/docs/Web/CSS/align-items">align-items</a></code> completely, in which case the height of each <code>&lt;div&gt;</code> stretches to fill its grid area.</p>
 
 <p>The {{cssxref("align-items")}} property sets the {{cssxref("align-self")}} property for all of the child grid items. This means that you can set the property individually, by using <code>align-self</code> on a grid item.</p>
 
+<h3 id="using_align-self">Using align-self</h3>
+
 <p>In this next example, I am using the <code>align-self</code> property, to demonstrate the different alignment values. The first area, is showing the default behavior of <code>align-self</code>, which is to stretch. The second item, has an <code>align-self</code> value of <code>start</code>, the third <code>end</code> and the fourth <code>center</code>.</p>
 
-<div id="alignment_2">
 <div class="hidden">
 <pre class="brush: css">* {box-sizing: border-box;}
 
@@ -164,8 +167,7 @@ tags:
 &lt;/div&gt;
 </pre>
 
-<p>{{ EmbedLiveSample('alignment_2', '500', '450') }}</p>
-</div>
+<p>{{ EmbedLiveSample('using_align-self', '500', '500') }}</p>
 
 <h3 id="Items_with_an_intrinsic_aspect_ratio">Items with an intrinsic aspect ratio</h3>
 
@@ -193,7 +195,6 @@ tags:
 
 <p>Once again the default is <code>stretch</code>, other than for items with an intrinsic aspect ratio. This means that by default, grid items will cover their grid area, unless you change that by setting alignment. The first item in the example demonstrates this default alignment:</p>
 
-<div id="alignment_3">
 <div class="hidden">
 <pre class="brush: css">* {box-sizing: border-box;}
 
@@ -249,8 +250,7 @@ tags:
 &lt;/div&gt;
 </pre>
 
-<p>{{ EmbedLiveSample('alignment_3', '500', '450') }}</p>
-</div>
+<p>{{ EmbedLiveSample('Justifying_Items_on_the_Inline_Axis', '500', '500') }}</p>
 
 <p>As with {{cssxref("align-self")}} and {{cssxref("align-items")}}, you can apply {{cssxref("justify-items")}} to the grid container, to set the {{cssxref("justify-self")}} value for all items.</p>
 
@@ -266,7 +266,6 @@ tags:
 
 <p>By combining the align and justify properties we can easily center an item inside a grid area.</p>
 
-<div id="alignment_4">
 <div class="hidden">
 <pre class="brush: css">* {box-sizing: border-box;}
 
@@ -307,8 +306,7 @@ tags:
 &lt;/div&gt;
 </pre>
 
-<p>{{ EmbedLiveSample('alignment_4', '500', '480') }}</p>
-</div>
+<p>{{ EmbedLiveSample('Center_an_item_in_the_area', '500', '500') }}</p>
 
 <h2 id="Aligning_the_grid_tracks_on_the_block_axis">Aligning the grid tracks on the block axis</h2>
 
@@ -330,9 +328,12 @@ tags:
 
 <p>In the below example I have a grid container of 500 pixels by 500 pixels. I have defined 3 row and column tracks each of 100 pixels with a 10 pixel gutter. This means that there is space inside the grid container both in the block and inline directions.</p>
 
-<p>The <code>align-content</code> property is applied to the grid container as it works on the entire grid. The default behavior in grid layout is <code>start</code>, which is why our grid tracks are in the top left corner of the grid, aligned against the start grid lines:</p>
+<p>The <code>align-content</code> property is applied to the grid container as it works on the entire grid.</p>
 
-<div id="alignment_5">
+<h3 id="default_alignment">Default alignment</h3>
+
+<p>The default behavior in grid layout is <code>start</code>, which is why our grid tracks are in the top left corner of the grid, aligned against the start grid lines:</p>
+
 <div class="hidden">
 <pre class="brush: css">* {box-sizing: border-box;}
 
@@ -386,12 +387,12 @@ tags:
 &lt;/div&gt;
 </pre>
 
-<p>{{ EmbedLiveSample('alignment_5', '500', '520') }}</p>
+<p>{{ EmbedLiveSample('default_alignment', '500', '550') }}</p>
+
+<h3 id="align-content_end">Setting align-content: end</h3>
 
 <p>If I add <code>align-content</code> to my container, with a value of <code>end</code>, the tracks all move to the end line of the grid container in the block dimension:</p>
-</div>
 
-<div id="alignment_6">
 <div class="hidden">
 <pre class="brush: css">* {box-sizing: border-box;}
 
@@ -446,12 +447,12 @@ tags:
 &lt;/div&gt;
 </pre>
 
-<p>{{ EmbedLiveSample('alignment_6', '500', '520') }}</p>
-</div>
+<p>{{ EmbedLiveSample('align-content_end', '500', '550') }}</p>
+
+<h3 id="align-content_end_space-between">Setting align-content: space-between</h3>
 
 <p>We can also use values for this property that you may be familiar with from flexbox; the space distribution values of <code>space-between</code>, <code>space-around</code> and <code>space-evenly</code>. If we update {{cssxref("align-content")}} to <code>space-between</code>, you can see how the elements on our grid space out:</p>
 
-<div id="alignment_7">
 <div class="hidden">
 <pre class="brush: css">* {box-sizing: border-box;}
 
@@ -506,14 +507,13 @@ tags:
 &lt;/div&gt;
 </pre>
 
-<p>{{ EmbedLiveSample('alignment_7', '500', '520') }}</p>
-</div>
+<p>{{ EmbedLiveSample('align-content_end_space-between', '500', '600') }}</p>
 
 <p>It is worth noting, that using these space distribution values may cause items on your grid to become larger. If an item spans more than one grid track, as further space is added between the tracks, that item needs to become large to absorb the space. We’re always working in a strict grid. Therefore, if you decide to use these values, ensure that the content of your tracks can cope with the extra space, or that you have used alignment properties on the items, to cause them to move to the start rather than stretch.</p>
 
 <p>In the below image I have placed the grid with <code>align-content</code>, with a value of <code>start</code> alongside the grid when <code>align-content</code> has a value of <code>space-between</code>. You can see how items 1 and 2, which span two row tracks have taken on extra height as they gain the additional space added to the gap between those two tracks:</p>
 
-<p><img alt="Demonstrating how items become larger if we use space-between." src="7_space-between.png" style="height: 534px; width: 1030px;"></p>
+<p><img alt="Demonstrating how items become larger if we use space-between." src="7_space-between.png"></p>
 
 <h2 id="Justifying_the_grid_tracks_on_the_inline_axis">Justifying the grid tracks on the inline axis</h2>
 
@@ -521,7 +521,6 @@ tags:
 
 <p>Using the same example, I am setting {{cssxref("justify-content")}} to <code>space-around</code>. This once again causes tracks which span more than one column track to gain extra space:</p>
 
-<div id="alignment_8">
 <div class="hidden">
 <pre class="brush: css">* {box-sizing: border-box;}
 
@@ -577,8 +576,7 @@ tags:
 &lt;/div&gt;
 </pre>
 
-<p>{{ EmbedLiveSample('alignment_8', '500', '500') }}</p>
-</div>
+<p>{{ EmbedLiveSample('Justifying_the_grid_tracks_on_the_inline_axis', '500', '550') }}</p>
 
 <h2 id="Alignment_and_auto_margins">Alignment and auto margins</h2>
 
@@ -586,7 +584,6 @@ tags:
 
 <p>In this next example, I have given item 1 a left margin of <code>auto</code>. You can see how the content is now pushed over to the right side of the area, as the auto margin takes up remaining space, after room for the content of that item has been assigned:</p>
 
-<div id="alignment_9">
 <div class="hidden">
 <pre class="brush: css">* {box-sizing: border-box;}
 
@@ -641,12 +638,11 @@ tags:
 &lt;/div&gt;
 </pre>
 
-<p>{{ EmbedLiveSample('alignment_9', '500', '500') }}</p>
-</div>
+<p>{{ EmbedLiveSample('Alignment_and_auto_margins', '500', '550') }}</p>
 
 <p>You can see how the item is aligned by using the <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts">Firefox Grid Highlighter</a>:</p>
 
-<p><img alt="Image showing auto-margins using the Grid Highlighter." src="7_auto_margins.png" style="height: 1000px; width: 1000px;"></p>
+<p><img alt="Image showing auto-margins using the Grid Highlighter." src="7_auto_margins.png"></p>
 
 <h2 id="Alignment_and_Writing_Modes">Alignment and Writing Modes</h2>
 
@@ -655,66 +651,3 @@ tags:
 <p>CSS Grid Layout, and the Box Alignment specification are designed to work with writing modes in CSS. This means that if you are working in a right to left language, such as Arabic, the start of the grid would be the top and right, so the default of <code>justify-content: start</code> would be for grid tracks to start on the right hand side of the grid.</p>
 
 <p>Setting auto margins, using <code>margin-right</code> or <code>margin-left</code> however, or absolutely positioning items using the <code>top</code>, <code>right</code>, <code>bottom</code> and <code>left</code> offsets would not honor writing modes. In the next guide, we will look further into this interaction between CSS grid layout, box alignment and writing modes. This will be important to understand, if you develop sites that are then displayed in multiple languages, or if you want to mix languages or writing modes in a design.</p>
-
-<section id="Quick_links">
-<ol>
- <li><a href="/en-US/docs/Web/CSS"><strong>CSS</strong></a></li>
- <li><a href="/en-US/docs/Web/CSS/Reference"><strong>CSS Reference</strong></a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a></li>
- <li data-default-state="open"><a href="#"><strong>Guides</strong></a>
-  <ol>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">Basics concepts of grid layout</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout">Relationship to other layout methods</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid">Line-based placement</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas">Grid template areas</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines">Layout using named grid lines</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout">Auto-placement in grid layout</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">Box alignment in grid layout</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes">Grids, logical values and writing modes</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility">CSS Grid Layout and Accessibility</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement">CSS Grid Layout and Progressive Enhancement</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout">Realizing common layouts using grids</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Subgrid">Subgrid</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout">Masonry layout</a></li>
-  </ol>
- </li>
- <li data-default-state="open"><a href="#"><strong>Properties</strong></a>
-  <ol>
-   <li><code><a href="/en-US/docs/Web/CSS/align-tracks">align-tracks</a></code>{{Experimental_Inline}}</li>
-   <li><code><a href="/en-US/docs/Web/CSS/column-gap">column-gap</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/gap">gap</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid">grid</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-area">grid-area</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-auto-columns">grid-auto-columns</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-auto-flow">grid-auto-flow</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-auto-rows">grid-auto-rows</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-column">grid-column</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-column-end">grid-column-end</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-column-start">grid-column-start</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-row">grid-row</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-row-end">grid-row-end</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-row-start">grid-row-start</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-template">grid-template</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-template-areas">grid-template-areas</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-template-columns">grid-template-columns</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-template-rows">grid-template-rows</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/justify-tracks">justify-tracks</a></code>{{Experimental_Inline}}</li>
-   <li><code><a href="/en-US/docs/Web/CSS/masonry-auto-flow">masonry-auto-flow</a></code>{{Experimental_Inline}}</li>
-   <li><code><a href="/en-US/docs/Web/CSS/row-gap">row-gap</a></code></li>
-  </ol>
- </li>
- <li data-default-state="open"><a href="#"><strong>Glossary</strong></a>
-  <ol>
-   <li><a href="/en-US/docs/Glossary/Grid">Grid</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_lines">Grid lines</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_tracks">Grid tracks</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_cell">Grid cell</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_areas">Grid areas</a></li>
-   <li><a href="/en-US/docs/Glossary/Gutters">Gutters</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_Axis">Grid Axis</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_rows">Grid row</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_column">Grid column</a></li>
-  </ol>
- </li>
-</ol>
-</section>

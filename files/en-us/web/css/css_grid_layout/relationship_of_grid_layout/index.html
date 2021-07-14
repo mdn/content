@@ -6,13 +6,15 @@ tags:
   - CSS Grids
   - Guide
 ---
+<div>{{CSSRef}}</div>
+
 <p>CSS Grid Layout has been designed to work alongside other parts of CSS, as part of a complete system for doing the layout. In this guide, I will explain how a grid fits together with other techniques you may already be using.</p>
 
 <h2 id="Grid_and_flexbox">Grid and flexbox</h2>
 
 <p>The basic difference between CSS Grid Layout and <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">CSS Flexbox Layout</a> is that flexbox was designed for layout in one dimension - either a row <em>or</em> a column. Grid was designed for two-dimensional layout - rows, and columns at the same time. The two specifications share some common features, however, and if you have already learned how to use flexbox, the similarities should help you get to grips with Grid.</p>
 
-<h3 id="One-dimensional_vs._two-dimensional_layout">One-dimensional vs. two-dimensional layout</h3>
+<h3 id="One-dimensional_versus_two-dimensional_layout">One-dimensional versus two-dimensional layout</h3>
 
 <p>A simple example can demonstrate the difference between one- and two-dimensional layouts.</p>
 
@@ -20,7 +22,6 @@ tags:
 
 <p>I have also set the {{cssxref("flex-wrap")}} property to <code>wrap</code>, so that if the space in the container becomes too narrow to maintain the flex basis, items will wrap onto a new row.</p>
 
-<div id="onedtwod">
 <div class="hidden">
 <pre class="brush: css">* {box-sizing: border-box;}
 
@@ -58,9 +59,8 @@ tags:
   flex: 1 1 150px;
 }
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('onedtwod', '500', '230') }}</p>
+<p>{{ EmbedLiveSample('One-dimensional_versus_two-dimensional_layout', '500', '230') }}</p>
 
 <p>In the image, you can see that two items have wrapped onto a new line. These items are sharing the available space and not lining up underneath the items above. This is because when you wrap flex items, each new row (or column when working by column) is an independent flex line in the flex container. Space distribution happens across the flex line.</p>
 
@@ -70,7 +70,6 @@ tags:
 
 <p>In this next example, I create the same layout using Grid. This time we have three <code>1fr</code> column tracks. We do not need to set anything on the items themselves; they will lay themselves out one into each cell of the created grid. As you can see they stay in a strict grid, lining up in rows and columns. With five items, we get a gap on the end of row two.</p>
 
-<div id="Two_Dimensional_With_Grid">
 <div class="hidden">
 <pre class="brush: css">* {box-sizing: border-box;}
 
@@ -105,8 +104,7 @@ tags:
 }
 </pre>
 
-<p>{{ EmbedLiveSample('Two_Dimensional_With_Grid', '300', '170') }}</p>
-</div>
+<p>{{ EmbedLiveSample('The_same_layout_with_CSS_grids', '300', '170') }}</p>
 
 <p>A simple question to ask yourself when deciding between grid or flexbox is:</p>
 
@@ -440,7 +438,7 @@ tags:
 }
 </pre>
 
-<p>{{ EmbedLiveSample('With_a_grid_area_as_the_parent', '500', '420') }}</p>
+<p>{{ EmbedLiveSample('With_a_grid_area_as_the_parent', '500', '460') }}</p>
 
 <h2 id="Grid_and_display_contents">Grid and <code>display: contents</code></h2>
 
@@ -450,9 +448,12 @@ tags:
 <p>“The element itself does not generate any boxes, but its children and pseudo-elements still generate boxes as normal. For the purposes of box generation and layout, the element must be treated as if it had been replaced with its children and pseudo-elements in the document tree.”</p>
 </blockquote>
 
-<p>If you set an item to <code>display:</code> <code>contents</code> the box it would normally create disappears, and the boxes of the child elements appear as if they have risen up a level. This means that children of a grid item can become grid items. Sound odd? Here is a simple example. In the following markup, I have a grid and the first item on the grid is set to span all three column tracks. It contains three nested items. As these items are not direct children, they don’t become part of the grid layout and so display using regular block layout.</p>
+<p>If you set an item to <code>display:</code> <code>contents</code> the box it would normally create disappears, and the boxes of the child elements appear as if they have risen up a level. This means that children of a grid item can become grid items. Sound odd? Here is a simple example.</p>
 
-<div id="Display_Contents_Before">
+<h3 id="grid_layout_with_nested_child_elements">Grid layout with nested child elements</h3>
+
+<p>In the following markup, I have a grid and the first item on the grid is set to span all three column tracks. It contains three nested items. As these items are not direct children, they don’t become part of the grid layout and so display using regular block layout.</p>
+
 <div class="hidden">
 <pre class="brush: css">* {box-sizing: border-box;}
 
@@ -503,12 +504,12 @@ tags:
 
 </pre>
 
-<p>{{ EmbedLiveSample('Display_Contents_Before', '400', '420') }}</p>
-</div>
+<p>{{ EmbedLiveSample('grid_layout_with_nested_child_elements', '400', '440') }}</p>
+
+<h3 id="using_display_contents">Using display_contents</h3>
 
 <p>If I now add <code>display:</code> <code>contents</code> to the rules for <code>box1</code>, the box for that item vanishes and the sub-items now become grid items and lay themselves out using the auto-placement rules.</p>
 
-<div id="Display_Contents_After">
 <div class="hidden">
 <pre class="brush: css">* {box-sizing: border-box;}
 
@@ -559,8 +560,7 @@ tags:
 }
 </pre>
 
-<p>{{ EmbedLiveSample('Display_Contents_After', '400', '330') }}</p>
-</div>
+<p>{{ EmbedLiveSample('using_display_contents', '400', '350') }}</p>
 
 <p>This can be a way to get items nested into the grid to act as if they are part of the grid, and is a way around some of the issues that would be solved by subgrids once they are implemented. You can also use <code>display:</code> <code>contents</code> in a similar way with flexbox to enable nested items to become flex items.</p>
 
@@ -572,66 +572,3 @@ tags:
  <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox Guides</a></li>
  <li><a href="/en-US/docs/Web/CSS/CSS_Columns">Multiple-column Layout Guides</a></li>
 </ul>
-
-<section id="Quick_links">
-<ol>
- <li><a href="/en-US/docs/Web/CSS"><strong>CSS</strong></a></li>
- <li><a href="/en-US/docs/Web/CSS/Reference"><strong>CSS Reference</strong></a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a></li>
- <li data-default-state="open"><a href="#"><strong>Guides</strong></a>
-  <ol>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">Basics concepts of grid layout</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout">Relationship to other layout methods</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid">Line-based placement</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas">Grid template areas</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines">Layout using named grid lines</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout">Auto-placement in grid layout</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">Box alignment in grid layout</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes">Grids, logical values, and writing modes</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility">CSS Grid Layout and Accessibility</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement">CSS Grid Layout and Progressive Enhancement</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout">Realizing common layouts using grids</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Subgrid">Subgrid</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout">Masonry layout</a></li>
-  </ol>
- </li>
- <li data-default-state="open"><a href="#"><strong>Properties</strong></a>
-  <ol>
-   <li><code><a href="/en-US/docs/Web/CSS/align-tracks">align-tracks</a></code>{{Experimental_Inline}}</li>
-   <li><code><a href="/en-US/docs/Web/CSS/column-gap">column-gap</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/gap">gap</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid">grid</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-area">grid-area</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-auto-columns">grid-auto-columns</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-auto-flow">grid-auto-flow</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-auto-rows">grid-auto-rows</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-column">grid-column</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-column-end">grid-column-end</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-column-start">grid-column-start</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-row">grid-row</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-row-end">grid-row-end</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-row-start">grid-row-start</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-template">grid-template</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-template-areas">grid-template-areas</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-template-columns">grid-template-columns</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-template-rows">grid-template-rows</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/justify-tracks">justify-tracks</a></code>{{Experimental_Inline}}</li>
-   <li><code><a href="/en-US/docs/Web/CSS/masonry-auto-flow">masonry-auto-flow</a></code>{{Experimental_Inline}}</li>
-   <li><code><a href="/en-US/docs/Web/CSS/row-gap">row-gap</a></code></li>
-  </ol>
- </li>
- <li data-default-state="open"><a href="#"><strong>Glossary</strong></a>
-  <ol>
-   <li><a href="/en-US/docs/Glossary/Grid">Grid</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_lines">Grid lines</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_tracks">Grid tracks</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_cell">Grid cell</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_areas">Grid areas</a></li>
-   <li><a href="/en-US/docs/Glossary/Gutters">Gutters</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_Axis">Grid Axis</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_rows">Grid row</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_column">Grid column</a></li>
-  </ol>
- </li>
-</ol>
-</section>

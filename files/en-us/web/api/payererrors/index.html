@@ -14,8 +14,9 @@ tags:
   - Reference
   - payment
   - paymentAddress
+browser-compat: api.PayerErrors
 ---
-<div>{{APIRef("Payment Request API")}}</div>
+<div>{{APIRef("Payment Request API")}} {{Deprecated_header}} {{Non-standard_header}}</div>
 
 <p><span class="seoSummary">The <strong><code>PayerErrors</code></strong> dictionary is used by the <a href="/en-US/docs/Web/API/Payment_Request_API">Payment Request API</a> to indicate the presence of—and to explain how to correct—validation errors in the payer details.</span> For each field in the payment information that fails validation, the <code>PayerErrors</code> object contains a string explaining the error.</p>
 
@@ -24,33 +25,14 @@ tags:
 <h2 id="Properties">Properties</h2>
 
 <dl>
- <dt>{{domxref("PayerErrors.email", "email")}} {{optional_inline}}</dt>
+ <dt>{{domxref("PayerErrors.email", "email")}} {{optional_inline}}{{Deprecated_inline}}</dt>
  <dd>If present, this {{domxref("DOMString")}} is a string describing the validation error from which the payer's email address—as given by {{domxref("PaymentResponse.payerEmail")}}—currently suffers. If this property is absent from the <code>PayerErrors</code> object, the email address passed validation.</dd>
- <dt>{{domxref("PayerErrors.name", "name")}} {{optional_inline}}</dt>
+ <dt>{{domxref("PayerErrors.name", "name")}} {{optional_inline}}{{Deprecated_inline}}</dt>
  <dd>If this {{domxref("DOMString")}} is present in the object, the {{domxref("PaymentResponse.payerName")}} property failed validation, and this string explains what needs to be corrected. If this property is absent, the paer name is fine</dd>
- <dt>{{domxref("PayerErrors.phone", "phone")}} {{optional_inline}}</dt>
+ <dt>{{domxref("PayerErrors.phone", "phone")}} {{optional_inline}}{{Deprecated_inline}}</dt>
  <dd>If present, this string is an error message explaining why the payer's phone number ({{domxref("PaymentResponse.payerPhone")}}) failed validation. This property is absent if the phone number passed validation.</dd>
 </dl>
 
-<h2 id="Example">Example</h2>
-
-<h2 id="Specifications">Specifications</h2>
-
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Payment','#dom-payererrors','PayerErrors')}}</td>
-   <td>{{Spec2('Payment')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
-
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.PayerErrors")}}</p>
+<p>{{Compat}}</p>

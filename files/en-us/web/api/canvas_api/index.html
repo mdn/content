@@ -28,7 +28,7 @@ tags:
 
 <p>The {{domxref("Document.getElementById()")}} method gets a reference to the HTML <code>&lt;canvas&gt;</code> element. Next, the {{domxref("HTMLCanvasElement.getContext()")}} method gets that element's context—the thing onto which the drawing will be rendered.</p>
 
-<p>The actual drawing is done using the {{domxref("CanvasRenderingContext2D")}} interface. The {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} property makes the rectangle green. The {{domxref("CanvasRenderingContext2D.fillRect()", "fillRect()")}} method places its top-left corner at (10, 10), and gives it a size of 150 units wide by 100 tall.</p>
+<p>The actual drawing is done using the {{domxref("CanvasRenderingContext2D")}} interface. The {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} property makes the rectangle green. The {{domxref("CanvasRenderingContext2D.fillRect()", "fillRect()")}} method places its top-left corner at (10, 10), and gives it a size of 150 units wide by 100 tall.</p>
 
 <pre class="brush: js">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
@@ -52,7 +52,6 @@ ctx.fillRect(10, 10, 150, 100);
  <li>{{domxref("CanvasPattern")}}</li>
  <li>{{domxref("ImageBitmap")}}</li>
  <li>{{domxref("ImageData")}}</li>
- <li>{{domxref("RenderingContext")}}</li>
  <li>{{domxref("TextMetrics")}}</li>
  <li>{{domxref("OffscreenCanvas")}} {{experimental_inline}}</li>
  <li>{{domxref("Path2D")}} {{experimental_inline}}</li>
@@ -110,22 +109,7 @@ ctx.fillRect(10, 10, 150, 100);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#2dcontext', 'the 2D rendering context')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications("html.elements.canvas")}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

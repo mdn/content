@@ -10,6 +10,7 @@ tags:
 - Reference
 - Storage
 - getAll
+browser-compat: api.IDBObjectStore.getAll
 ---
 <p>{{ APIRef("IndexedDB") }}</p>
 
@@ -54,7 +55,7 @@ var request = <em>objectStore</em>.getAll(<em>query</em>, <em>count</em>);</pre>
     default to a key range that selects all the records in this object store.</dd>
   <dt><em>count</em> {{optional_inline}}</dt>
   <dd>Specifies the number of values to return if more than one is found. If it is lower
-    than <code>0</code> or greater than <code>2<sup>32</sup>-1</code> a
+    than <code>0</code> or greater than <code>2^32 - 1</code> a
     {{jsxref("TypeError")}} exception will be thrown.</dd>
 </dl>
 
@@ -94,28 +95,15 @@ var request = <em>objectStore</em>.getAll(<em>query</em>, <em>count</em>);</pre>
 </table>
 
 <p>A {{jsxref("TypeError")}} exception is thrown if the <code>count</code> parameter is
-  not between <code>0</code> and <code>2<sup>32</sup>-1</code> included.</p>
+  not between <code>0</code> and <code>2^32 - 1</code> included.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('IndexedDB 2', '#dom-idbobjectstore-getall', 'getAll()')}}</td>
-      <td>{{Spec2('IndexedDB 2')}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.IDBObjectStore.getAll")}}</p>
+<p>{{Compat}}</p>
 
 
 <h2 id="See_also">See also</h2>

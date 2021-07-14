@@ -10,12 +10,13 @@ tags:
   - Reference
   - Selector
   - Web
+browser-compat: css.selectors.host-context
 ---
 <div>{{CSSRef}}</div>
 
-<p><span class="seoSummary">The <strong><code>:host-context()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> function selects the shadow host of the <a href="/en-US/docs/Web/Web_Components/Using_shadow_DOM">shadow DOM</a> containing the CSS it is used inside (so you can select a custom element from inside its shadow DOM) — but only if the selector given as the function's parameter matches the shadow host's ancestor(s) in the place it sits inside the DOM hierarchy.</span></p>
+<p>The <strong><code>:host-context()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> function selects the shadow host of the <a href="/en-US/docs/Web/Web_Components/Using_shadow_DOM">shadow DOM</a> containing the CSS it is used inside (so you can select a custom element from inside its shadow DOM) — but only if the selector given as the function's parameter matches the shadow host's ancestor(s) in the place it sits inside the DOM hierarchy.</p>
 
-<p><span class="seoSummary">In other words, this allows a custom element, or anything within that custom element's shadow DOM, to apply different styles based on its position within the outer DOM or classes/attributes applied to ancestor elements.</span></p>
+<p>In other words, this allows a custom element, or anything within that custom element's shadow DOM, to apply different styles based on its position within the outer DOM or classes/attributes applied to ancestor elements.</span></p>
 
 <p>One typical use of this is with a descendant selector expression — for example <code>h1</code> — to select only instances of the custom element that are inside an <code>&lt;h1&gt;</code>.  Another typical use would be to allow inner elements to react to classes or attributes on any ancestor elements - for example, applying a different text color when a <code>.dark-theme</code> class is applied to <code>&lt;body&gt;</code>.</p>
 
@@ -46,7 +47,7 @@ p {
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: css">{{CSSSyntax}}</pre>
+{{CSSSyntax}}
 
 <h2 id="Examples">Examples</h2>
 
@@ -79,28 +80,11 @@ style.textContent = 'span:hover { text-decoration: underline; }' +
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS Scope', '#host-selector', ':host-context()') }}</td>
-   <td>{{ Spec2('CSS Scope') }}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-
-<p>{{Compat("css.selectors.host-context")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

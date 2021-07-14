@@ -31,7 +31,7 @@ tags:
 
 <p>The higher the amplitude (height) of the wave, the louder the sound is at that instant. The shorter the wavelength (the closer together the crests of the wave are), the higher the frequency (or pitch) of the sound that's produced.</p>
 
-<p><img alt="A simple sound waveform" src="https://mdn.mozillademos.org/files/16616/audio-waveform.svg" style="height: 287px; width: 691px;"></p>
+<p><img alt="A simple sound waveform" src="audio-waveform.svg"></p>
 
 <p>Computers, however, are digital. In order to represent a sound wave in a way computers can manipulate and work with (let alone transmit over a network), the sound has to be converted into a digital form. This process is called <strong>analog to digital conversion</strong> (<strong>A/D</strong> for short).</p>
 
@@ -39,7 +39,7 @@ tags:
 
 <p>Sound enters the computer through a microphone or other input in the form of a stream of electrons whose voltage varies to represent the amplitude of the sound wave. This analog signal is then converted into digital form by a circuit that captures the incoming wave's amplitude at regular intervals, converting that data into a number in a form that is understood by the audio recording system. Each of these captured moments is a <strong>sample</strong>. By chaining all the samples together, you can approximately represent the original wave, as seen in the diagram below.</p>
 
-<p><img alt="An audio waveform with samples taken periodically" src="https://mdn.mozillademos.org/files/16653/audio-waveform-samples1.svg" style="height: 287px; width: 691px;"></p>
+<p><img alt="An audio waveform with samples taken periodically" src="audio-waveform-samples1.svg"></p>
 
 <p>In this example, the blue line represents the samples taken from the audio waveform, which is black. At regular intervals, the A/D converter circuitry reads the voltage of the signal as a value between (in this case) -1.0 and +1.0. Since the amplitude varies over the duration of that time slice, the A/D converter must choose a value to represent that slice, whether by taking the value at a particular moment (in the diagram above, the midpoint of each slice is used as the value), or by averaging the amplitude over the duration of each sample. Those sample values are then recorded as the amplitude of the waveform at that time.</p>
 
@@ -182,7 +182,7 @@ tags:
 
 <p>This is portrayed in the diagram below. The diagram compares the frequency range of human hearing (green) to the frequency range of human speech (red) and the range of frequencies in which the majority of human vocalizations lie (yellow).</p>
 
-<p><img alt="Diagram showing human hearing range compared to human speech range" src="https://mdn.mozillademos.org/files/16489/human-hearing-range.svg" style="height: 128px; width: 670px;"></p>
+<p><img alt="Diagram showing human hearing range compared to human speech range" src="human-hearing-range.svg"></p>
 
 <p>The large differences among these ranges gives us room to lose details in audio data without significantly impacting the ability of the human ear to notice any real change in audio quality. These facts can be taken advantage of when compressing audio.</p>
 

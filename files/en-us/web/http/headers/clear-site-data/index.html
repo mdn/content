@@ -7,6 +7,7 @@ tags:
   - Reference
   - Response Header
   - header
+browser-compat: http.headers.Clear-Site-Data
 ---
 <p>{{HTTPSidebar}}</p>
 
@@ -41,7 +42,10 @@ Clear-Site-Data: "*"
 
 <h2 id="Directives">Directives</h2>
 
-<p class="note">All directives must comply with the <a href="https://tools.ietf.org/html/rfc7230#section-3.2.6">quoted-string grammar</a>. A directive that does not include the double quotes is invalid.</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>All directives must comply with the <a href="https://tools.ietf.org/html/rfc7230#section-3.2.6">quoted-string grammar</a>. A directive that does not include the double quotes is invalid.</p>
+</div>
 
 <dl>
  <dt id="cache"><code>"cache"</code></dt>
@@ -83,22 +87,11 @@ Clear-Site-Data: "*"
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><a href="https://w3c.github.io/webappsec-clear-site-data">Clear Site Data</a> (Latest Editor's Draft)</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("http.headers.Clear-Site-Data")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

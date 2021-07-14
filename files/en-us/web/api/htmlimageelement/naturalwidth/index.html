@@ -13,6 +13,7 @@ tags:
 - naturalWidth
 - size
 - width
+browser-compat: api.HTMLImageElement.naturalWidth
 ---
 <p>{{APIRef("HTML DOM")}}</p>
 
@@ -26,6 +27,13 @@ tags:
 
 <p>The corresponding {{domxref("HTMLImageElement.naturalHeight", "naturalHeight")}} method
   returns the natural height of the image.</p>
+
+  <p class="notecard note"><strong>Note:</strong> Most of the time the natural width is the actual width of the image sent by the server.
+    Nevertheless, browsers can modify an image before pushing it to the renderer. For example, Chrome
+    <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=1187043#c7">degrades the resolution of
+    images on low-end devices</a>. In such cases, <code>naturalWidth</code> will consider the width of the image modified
+    by such browser interventions as the natural width, and returns this value.
+  </p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -46,28 +54,12 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<p>{{page("/en-US/docs/Web/API/HTMLImageElement/naturalHeight", "Example")}}</p>
+<p>See <a href="/en-US/docs/Web/API/HTMLImageElement/naturalHeight#example"><code>HTMLImageElement.naturalHeight</code></a> for example code that displays an image in both its natural "density-adjusted" size, and in its rendered size as altered by the page's CSS and other factors.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', '#dom-img-naturalwidth',
-        'HTMLImageElement.naturalWidth')}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.HTMLImageElement.naturalWidth")}}</p>
+<p>{{Compat}}</p>

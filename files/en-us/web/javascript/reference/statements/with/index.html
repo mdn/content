@@ -6,10 +6,13 @@ tags:
 - JavaScript
 - Language feature
 - Statement
+browser-compat: javascript.statements.with
 ---
-<div class="warning">Use of the <code>with</code> statement is not recommended, as it may
+<div class="warning">
+  <p><strong>Warning:</strong>Use of the <code>with</code> statement is not recommended, as it may
   be the source of confusing bugs and compatibility issues. See the "Ambiguity Contra"
-  paragraph in the "Description" section below for details.</div>
+  paragraph in the "Description" section below for details.</p>
+</div>
 
 <div>{{jsSidebar("Statements")}}</div>
 
@@ -40,11 +43,13 @@ tags:
   scope chain, then the name is bound to the property and the object containing the
   property. Otherwise a {{jsxref("ReferenceError")}} is thrown.</p>
 
-<div class="note">Using <code>with</code> is not recommended, and is forbidden in
+<div class="note">
+  <p><strong>Note:</strong> Using <code>with</code> is not recommended, and is forbidden in
   ECMAScript 5 <a
     href="/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode">strict
     mode</a>. The recommended alternative is to assign the object whose properties you
-  want to access to a temporary variable.</div>
+  want to access to a temporary variable.</p>
+</div>
 
 <h3 id="Performance_pro_contra">Performance pro &amp; contra</h3>
 
@@ -111,8 +116,8 @@ tags:
   {{jsxref("Math.sin", "sin")}} methods, without specifying an object. JavaScript assumes
   the <code>Math</code> object for these references.</p>
 
-<pre class="brush: js">var a, x, y;
-var r = 10;
+<pre class="brush: js">let a, x, y;
+const r = 10;
 
 with (Math) {
   a = PI * r * r;
@@ -122,22 +127,11 @@ with (Math) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-with-statement', 'with statement')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.statements.with")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

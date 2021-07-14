@@ -12,7 +12,7 @@ tags:
 ---
 <div>{{CSSRef}}</div>
 
-<p class="summary">The Flexible Box Module, usually referred to as flexbox, was designed as a one-dimensional layout model, and as a method that could offer space distribution between items in an interface and powerful alignment capabilities. This article gives an outline of the main features of flexbox, which we will be exploring in more detail in the rest of these guides.</p>
+<p>The Flexible Box Module, usually referred to as flexbox, was designed as a one-dimensional layout model, and as a method that could offer space distribution between items in an interface and powerful alignment capabilities. This article gives an outline of the main features of flexbox, which we will be exploring in more detail in the rest of these guides.</p>
 
 <p>When we describe flexbox as being one dimensional we are describing the fact that flexbox deals with layout in one dimension at a time — either as a row or as a column. This can be contrasted with the two-dimensional model of <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a>, which controls columns and rows together.</p>
 
@@ -33,21 +33,21 @@ tags:
 
 <p>Should you choose <code>row</code> or <code>row-reverse</code>, your main axis will run along the row in the <strong>inline direction</strong>.</p>
 
-<p><img alt="If flex-direction is set to row the main axis runs along the row in the inline direction." src="basics1.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="If flex-direction is set to row the main axis runs along the row in the inline direction." src="basics1.png"></p>
 
 <p>Choose <code>column</code> or <code>column-reverse</code> and your main axis will run from the top of the page to the bottom — in the <strong>block direction</strong>.</p>
 
-<p><img alt="If flex-direction is set to column the main axis runs in the block direction." src="basics2.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="If flex-direction is set to column the main axis runs in the block direction." src="basics2.png"></p>
 
 <h3 id="The_cross_axis">The cross axis</h3>
 
 <p>The cross axis runs perpendicular to the main axis, therefore if your <code>flex-direction</code> (main axis) is set to <code>row</code> or <code>row-reverse</code> the cross axis runs down the columns.</p>
 
-<p><img alt="If flex-direction is set to row then the cross axis runs in the block direction." src="basics3.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="If flex-direction is set to row then the cross axis runs in the block direction." src="basics3.png"></p>
 
 <p>If your main axis is <code>column</code> or <code>column-reverse</code> then the cross axis runs along the rows.</p>
 
-<p><img alt="If flex-direction is set to column then the cross axis runs in the inline direction." src="basics4.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="If flex-direction is set to column then the cross axis runs in the inline direction." src="basics4.png"></p>
 
 <p>Understanding which axis is which is important when we start to look at aligning and justifying flex items; flexbox features properties that align and justify content along one axis or the other.</p>
 
@@ -59,11 +59,11 @@ tags:
 
 <p>If the <code>flex-direction</code> is <code>row</code> and I am working in English, then the start edge of the main axis will be on the left, the end edge on the right.</p>
 
-<p><img alt="Working in English the start edge is on the left." src="basics5.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="Working in English the start edge is on the left." src="basics5.png"></p>
 
 <p>If I were to work in Arabic, then the start edge of my main axis would be on the right and the end edge on the left.</p>
 
-<p><img alt="The start edge in a RTL language is on the right." src="basics6.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="The start edge in a RTL language is on the right." src="basics6.png"></p>
 
 <p>In both cases the start edge of the cross axis is at the top of the flex container and the end edge at the bottom, as both languages have a horizontal writing mode.</p>
 
@@ -132,7 +132,7 @@ tags:
 
 <p>If we have three 100 pixel-wide items in a container which is 500 pixels wide, then the space we need to lay out our items is 300 pixels. This leaves 200 pixels of available space. If we don’t change the initial values then flexbox will put that space after the last item.</p>
 
-<p><img alt="This flex container has available space after laying out the items." src="basics7.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="This flex container has available space after laying out the items." src="basics7.png"></p>
 
 <p>If we instead would like the items to grow and fill the space, then we need to have a method of distributing the leftover space between the items. This is what the <code>flex</code> properties that we apply to the items themselves, will do.</p>
 

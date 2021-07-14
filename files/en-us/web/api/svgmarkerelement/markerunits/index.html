@@ -1,0 +1,57 @@
+---
+title: SVGMarkerElement.markerUnits
+slug: Web/API/SVGMarkerElement/markerUnits
+tags:
+  - API
+  - Property
+  - Reference
+  - markerUnits
+  - SVGMarkerElement
+browser-compat: api.SVGMarkerElement.markerUnits
+---
+<div>{{APIRef("SVG")}}</div>
+
+<p class="summary">The <strong><code>markerUnits</code></strong> read-only property of the {{domxref("SVGMarkerElement")}} interface returns an {{domxref("SVGAnimatedEnumeration")}} object. This object returns an integer which represents the keyword values that the {{SVGattr("markerUnits")}} attribute accepts.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox">let markerUnits = SVGMarkerElement.markerUnits;</pre>
+
+<h3>Value</h3>
+<p>An {{domxref("SVGAnimatedEnumeration")}} object. The <code>baseVal</code> property of this object contains one of the following values:</p>
+
+<dl>
+  <dt>0</dt>
+  <dd><code>SVG_MARKERUNITS_UNKNOWN</code> which means that the {{SVGattr("markerUnits")}} attribute has a value other than the two predefined keywords.</dd>
+  <dt>1</dt>
+  <dd><code>SVG_MARKERUNITS_USERSPACEONUSE</code> which means that the {{SVGattr("markerUnits")}} attribute has the keyword value <code>userSpaceOnUse</code>.</dd>
+  <dt>2</dt>
+  <dd><code>SVG_MARKERUNITS_STROKEWIDTH</code> which means that the {{SVGattr("markerUnits")}} attribute has the keyword value <code>strokeWidth</code>.</dd>
+</dl>
+
+<h2 id="Examples">Examples</h2>
+
+<p>The <code>markerUnits</code> property returns an {{domxref("SVGAnimatedEnumeration")}} object that contains the value of the {{SVGattr("markerUnits")}} attribute.</p>
+
+<pre class="brush: html">&lt;svg id="svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"&gt;
+  &lt;defs&gt;
+    &lt;marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5"
+        markerWidth="6" markerHeight="6"
+        orient="auto-start-reverse"
+        markerUnits="strokeWidth"&gt;
+      &lt;path d="M 0 0 L 10 5 L 0 10 z" /&gt;
+    &lt;/marker&gt;
+  &lt;/defs&gt;
+&lt;/svg&gt;</pre>
+
+<pre class="brush: js">let marker = document.getElementById("arrow");
+console.log(marker.markerUnits.baseVal); // 2</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+{{Specifications}}
+
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>

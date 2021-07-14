@@ -7,6 +7,7 @@ tags:
 - RTCPeerConnection
 - Reference
 - WebRTC
+browser-compat: api.RTCPeerConnection.getIdentityAssertion
 ---
 <p>{{APIRef("WebRTC")}}{{SeeCompatTable}}</p>
 
@@ -15,8 +16,8 @@ tags:
   {{domxref("RTCPeerConnection.signalingState", "signalingState")}} is not
   <code>"closed"</code>.</p>
 
-<p>The method returns immediately. If the assertion cannot be generated, an
-  {{event("idpassertionerror")}} will be sent to the object.</p>
+<p>The method returns a JavaScript {{jsxref("Promise")}} which resolves to an
+  identity assertion encoded as a {{domxref("DOMString")}}.
 
 <p>It is not expected for the application dealing with the <code>RTCPeerConnection</code>:
   this is automatically done; an explicit call only allows to anticipate the need.</p>
@@ -30,34 +31,19 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js">var pc = new PeerConnection();
+<pre class="brush: js">var pc = new RTCPeerConnection();
 
-pc.getIdentityAssertion(); // Not mandatory, but we know that we will need it in the future.
+pc.setIdentityProvider("developer.mozilla.org");
+var assertion = await pc.getIdentityAssertion();
 </pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table" style="height: 49px; width: 1000px;">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{ SpecName('WebRTC Identity', '#dfn-getidentityassertion',
-        'RTCPeerConnection.getIdentityAssertion()') }}</td>
-      <td>{{ Spec2('WebRTC Identity') }}</td>
-      <td>Initial specification.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCPeerConnection.getIdentityAssertion")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

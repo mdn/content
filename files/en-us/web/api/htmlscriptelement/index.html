@@ -7,6 +7,7 @@ tags:
   - Interface
   - NeedsNewLayout
   - Reference
+browser-compat: api.HTMLScriptElement
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
@@ -27,14 +28,13 @@ tags:
  <dt>{{domxref("HTMLScriptElement.src")}}</dt>
  <dd>Is a {{domxref("DOMString")}} representing the URL of an external script. It reflects the {{htmlattrxref("src","script")}} attribute.</dd>
 
- <dt>{{domxref("HTMLScriptElement.event")}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("HTMLScriptElement.event")}} {{deprecated_inline}}</dt>
  <dd>Is a {{domxref("DOMString")}}; an obsolete way of registering event handlers on elements in an HTML document.</dd>
 
- <dt>{{domxref("HTMLScriptElement.charset")}}</dt>
+ <dt>{{domxref("HTMLScriptElement.charset")}} {{deprecated_inline}}</dt>
  <dd>Is a {{domxref("DOMString")}} representing the character encoding of an external script. It reflects the {{htmlattrxref("charset","script")}} attribute.</dd>
 
- <dt>{{domxref("HTMLScriptElement.async")}}</dt>
- <dt>{{domxref("HTMLScriptElement.defer")}}</dt>
+ <dt>{{domxref("HTMLScriptElement.async")}}, {{domxref("HTMLScriptElement.defer")}}</dt>
  <dd>
   <p>The <code>async</code> and <code>defer</code> attributes are {{domxref("Boolean")}} attributes that control how the script should be executed. <strong>The <code>defer</code> and <code>async</code> attributes must not be specified if the <code>src</code> attribute is absent.</strong></p>
 
@@ -111,44 +111,11 @@ affixScriptToHead("myScript2.js", function () { alert("The script \"myScript2.js
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "#htmlscriptelement", "HTMLScriptElement")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', "scripting-1.html#the-script-element", "HTMLScriptElement")}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "scripting-1.html#the-script-element", "HTMLScriptElement")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>The following properties are now obsolete: <code>htmlFor,</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 HTML', 'html.html#ID-81598695', 'HTMLScriptElement')}}</td>
-   <td>{{Spec2('DOM2 HTML')}}</td>
-   <td>No change from {{SpecName("DOM1")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-html.html#ID-81598695', 'HTMLScriptElement')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.HTMLScriptElement")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

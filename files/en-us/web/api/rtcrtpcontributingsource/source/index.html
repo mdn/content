@@ -9,11 +9,12 @@ tags:
 - Reference
 - WebRTC
 - source
+browser-compat: api.RTCRtpContributingSource.source
 ---
 <div>{{APIRef("WebRTC API")}}</div>
 
 <p><span class="seoSummary">The read-only <strong><code>source</code></strong> property of
-    the {{domxref("RTCRtpContributingSource")}} interface returns the source identifier of
+    the {{domxref("RTCRtpContributingSource")}} dictionary contains the source identifier of
     a particular stream of RTP packets.</span> The value is the contributing source (CSRC)
   or synchronization source (SSRC) identifier, depending on whether the object is an
   <code>RTCRtpContributingSource</code> or {{domxref("RTCRtpSynchronizationSource")}},
@@ -33,21 +34,8 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('WebRTC 1.0','#dom-rtcrtpcontributingsource-source','source')}}</td>
-      <td>{{Spec2('WebRTC 1.0')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCRtpContributingSource.source")}}</p>
+<p>{{Compat}}</p>

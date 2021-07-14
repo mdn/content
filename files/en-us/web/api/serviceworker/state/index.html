@@ -8,6 +8,7 @@ tags:
 - Service Workers
 - ServiceWorker
 - state
+browser-compat: api.ServiceWorker.state
 ---
 <div>{{APIRef("Service Workers API")}}</div>
 
@@ -24,9 +25,21 @@ tags:
 
 <h3 id="Value">Value</h3>
 
-<p>A {{domxref("ServiceWorkerState")}} definition (<a
-    href="https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#service-worker-state-enum">see
-    the spec</a>.)</p>
+<p>A {{jsxref("String")}} that can take one of the following values:
+  <dl>
+    <dt><code>"installing"</code></dt>
+    <dd>The service worker in this state is considered an installing worker. During this state, {{DOMxRef("ExtendableEvent.waitUntil()")}} can be called inside the <code>install</code> event handler to extend the life of the installing worker until the passed promise resolves successfully. This is primarily used to ensure that the service worker is not active until all of the core caches are populated.</dd>
+    <dt><code>"installed"</code></dt>
+    <dd>The service worker in this state is considered a waiting worker.</dd>
+    <dt><code>"activating"</code></dt>
+    <dd>The service worker in this state is considered an active worker. During this state, {{DOMxRef("ExtendableEvent.waitUntil()")}} can be called inside the <code>onactivate</code> event handler to extend the life of the active worker until the passed promise resolves successfully. No functional events are dispatched until the state becomes activated.</dd>
+    <dt><code>"activated"</code></dt>
+    <dd>The service worker in this state is considered an active worker ready to handle functional events.</dd>
+    <dt><code>"redundant"</code></dt>
+    <dd>A new service worker is replacing the current service worker, or the current service worker is being discarded due to an install failure.</dd>
+   </dl>
+
+</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -58,21 +71,8 @@ if (serviceWorker) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Service Workers', '#service-worker-state', 'state')}}</td>
-      <td>{{Spec2('Service Workers')}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.ServiceWorker.state")}}</p>
+<p>{{Compat}}</p>

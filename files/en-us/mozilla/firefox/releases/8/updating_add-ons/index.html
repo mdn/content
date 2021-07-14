@@ -28,7 +28,7 @@ tags:
 <h2 id="DOM_changes">DOM changes</h2>
 <p>There have been a couple of changes in the DOM that impact add-ons:</p>
 <h3 id="Selection_changes">Selection changes</h3>
-<p>In the past, {{ domxref("DocumentOrShadowRoot/getSelection", "document.getSelection()") }} was returning a stringified version of the selection instead of the {{ domxref("Selection") }} object itself. This was non-standard behavior, and has been corrected.</p>
+<p>In the past, {{ domxref("Document.getSelection()") }} was returning a stringified version of the selection instead of the {{ domxref("Selection") }} object itself. This was non-standard behavior, and has been corrected.</p>
 <h3 id="Potential_name_conflicts">Potential name conflicts</h3>
 <p>When the DOM File API was added, a new global called {{ domxref("File") }} was added; this can conflict with objects in your scripts. If you have any globals called <code>File</code>, you should rename them.</p>
 <p>Similarly, a new global, {{ domxref("ChromeWorker") }}, was introduced to support allowing Workers to be used from chrome code. If by some chance you have any globals with this name, you should rename them.</p>

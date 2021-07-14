@@ -68,7 +68,7 @@ const audioSource = audioCtx.createMediaElementSource(audioElement);
 <p>This is all the information the Mapquest API needs to plot a simple map. The server you are connecting to handles all the complicated stuff, like displaying the correct map tiles for the area being shown, etc.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Some APIs handle access to their functionality slightly differently, requiring the developer to make an HTTP request to a specific URL pattern to retrieve data. These are called <a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs#a_restful_api_%e2%80%94_nytimes">RESTful APIs — we'll show an example later on</a>.</p>
+<p><strong>Note</strong>: Some APIs handle access to their functionality slightly differently, requiring the developer to make an HTTP request to a specific URL pattern to retrieve data. These are called <a href="#a_restful_api_%e2%80%94_nytimes">RESTful APIs — we'll show an example later on</a>.</p>
 </div>
 
 <h3 id="They_usually_require_API_keys">They usually require API keys</h3>
@@ -278,7 +278,7 @@ fetch(url).then(function(result) {
   displayResults(json);
 });</pre>
 
-<p>Here we run the request by passing our <code>url</code> variable to <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch()</a></code>, convert the response body to JSON using the <code><a href="/en-US/docs/Web/API/Body/json">json()</a></code> function, then pass the resulting JSON to the <code>displayResults()</code> function so the data can be displayed in our UI.</p>
+<p>Here we run the request by passing our <code>url</code> variable to <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch()</a></code>, convert the response body to JSON using the <code><a href="/en-US/docs/Web/API/Response/json">json()</a></code> function, then pass the resulting JSON to the <code>displayResults()</code> function so the data can be displayed in our UI.</p>
 
 <h3 id="Displaying_the_data">Displaying the data</h3>
 
@@ -416,6 +416,8 @@ function previousPage(e) {
 <p>To get it running, you'll need to:</p>
 
 <ul>
+ <li>Read the <a href="https://developers.google.com/youtube/v3/getting-started">YouTube Data API Overview</a> documentation.</li>
+ <li>Make sure you visit the <a href="https://console.developers.google.com/apis/enabled">Enabled APIs page</a>, and in the list of APIs, make sure the status is ON for the YouTube Data API v3.</a></li>
  <li>Get an API key from <a href="https://cloud.google.com/">Google Cloud</a>.</li>
  <li>Find the string <code>ENTER-API-KEY-HERE</code> in the source code, and replace it with your API key.</li>
  <li>Run the example through a web server. It won't work if you just run it directly in the browser (i.e. via a <code>file://</code> URL).</li>
@@ -433,7 +435,6 @@ function previousPage(e) {
  <li><a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction">Introduction to web APIs</a></li>
  <li><a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents">Manipulating documents</a></li>
  <li><a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data">Fetching data from the server</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs">Third party APIs</a></li>
  <li><a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics">Drawing graphics</a></li>
  <li><a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs">Video and audio APIs</a></li>
  <li><a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage">Client-side storage</a></li>

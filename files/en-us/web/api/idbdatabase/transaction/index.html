@@ -9,6 +9,7 @@ tags:
   - Method
   - Reference
   - Storage
+browser-compat: api.IDBDatabase.transaction
 ---
 <p>{{ APIRef("IndexedDB") }}</p>
 
@@ -142,9 +143,9 @@ var transaction = db.transaction('my-store-name');</pre>
 
 <p>In this example we open a database connection, then use transaction() to open a
   transaction on the database. For a complete example, see our <a
-    href="https://github.com/mdn/to-do-notifications/" style="line-height: 1.5;">To-do
+    href="https://github.com/mdn/to-do-notifications/">To-do
     Notifications</a> app (<a
-    href="https://mdn.github.io/to-do-notifications/" style="line-height: 1.5;">view
+    href="https://mdn.github.io/to-do-notifications/">view
     example live</a>.)</p>
 
 <pre class="brush: js">var db;
@@ -184,30 +185,11 @@ var objectStore = transaction.objectStore("toDoList");
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('IndexedDB', '#dom-idbdatabase-transaction', 'transaction()')}}</td>
-      <td>{{Spec2('IndexedDB')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName("IndexedDB 2", "#dom-idbdatabase-transaction", "transaction()")}}
-      </td>
-      <td>{{Spec2("IndexedDB 2")}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.IDBDatabase.transaction")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

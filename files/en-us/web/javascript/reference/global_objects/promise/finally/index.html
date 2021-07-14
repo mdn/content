@@ -8,6 +8,8 @@ tags:
 - Prototype
 - Reference
 - finally
+- Polyfill
+browser-compat: javascript.builtins.Promise.finally
 ---
 <div>{{JSRef}}</div>
 
@@ -19,6 +21,8 @@ tags:
 
 <p>This helps to avoid duplicating code in both the promise's {{jsxref("Promise.then",
   "then()")}} and {{jsxref("Promise.catch", "catch()")}} handlers.</p>
+
+<div>{{EmbedInteractiveExample("pages/js/promise-finally.html", "taller")}}</div>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -94,40 +98,20 @@ fetch(myRequest).then(function(response) {
 
 </pre>
 
-<div class="hidden">
-  <p>Please do not add polyfills on MDN pages. For more details, refer to: <a
-      href="https://discourse.mozilla.org/t/mdn-rfc-001-mdn-wiki-pages-shouldnt-be-a-distributor-of-polyfills/24500">https://discourse.mozilla.org/t/mdn-rfc-001-mdn-wiki-pages-shouldnt-be-a-distributor-of-polyfills/24500</a>
-  </p>
-</div>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-promise.prototype.finally',
-        'Promise.prototype.finally')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div class="hidden">To contribute to this compatibility data, please write a pull request
-  against this repository: <a
-    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>.
-</div>
 
-<p>{{Compat("javascript.builtins.Promise.finally")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
+  <li>A polyfill of <code>Promise.prototype.finally</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-promise"><code>core-js</code></a></li>
   <li>{{jsxref("Promise")}}</li>
   <li>{{jsxref("Promise.prototype.then()")}}</li>
   <li>{{jsxref("Promise.prototype.catch()")}}</li>

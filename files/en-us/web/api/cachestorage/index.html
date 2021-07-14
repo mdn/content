@@ -9,6 +9,7 @@ tags:
   - Reference
   - Service Workers
   - ServiceWorker
+browser-compat: api.CacheStorage
 ---
 <p>{{APIRef("Service Workers API")}}</p>
 
@@ -17,7 +18,7 @@ tags:
 <p>The interface:</p>
 
 <ul>
- <li>Provides a master directory of all the named caches that can be accessed by a {{domxref("ServiceWorker")}} or other type of worker or {{domxref("window")}} scope (you’re not limited to only using it with service workers, even though the {{SpecName('Service Workers')}} spec defines it).
+ <li>Provides a master directory of all the named caches that can be accessed by a {{domxref("ServiceWorker")}} or other type of worker or {{domxref("window")}} scope (you’re not limited to only using it with service workers).
   <div class="notecard note">
     <h4>Note</h4>
     <p><a href="https://bugs.chromium.org/p/chromium/issues/detail?id=1026063">Chrome and Safari only expose `CacheStorage` to the windowed context over HTTPS</a>. {{domxref("WindowOrWorkerGlobalScope/caches", "WorkerGlobalScope.caches")}} will be undefined unless an SSL certificate is configured.</p>
@@ -177,24 +178,11 @@ try {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#cachestorage', 'CacheStorage')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.CacheStorage")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

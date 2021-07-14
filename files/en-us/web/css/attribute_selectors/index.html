@@ -7,6 +7,7 @@ tags:
   - Reference
   - Selector
   - Selectors
+browser-compat: css.selectors.attribute
 ---
 <div>{{CSSRef}}</div>
 
@@ -55,9 +56,9 @@ a[class~="logo"] {
  <dd>Represents elements with an attribute name of <em>attr</em> whose value is suffixed (followed) by <em>value</em>.</dd>
  <dt><code>[<em>attr</em>*=<em>value</em>]</code></dt>
  <dd>Represents elements with an attribute name of <em>attr</em> whose value contains at least one occurrence of <em>value</em> within the string.</dd>
- <dt id="case-insensitive"><code>[<em>attr</em> <em>operator</em> <em>value</em> i]</code></dt>
+ <dt><code>[<em>attr</em> <em>operator</em> <em>value</em> i]</code></dt>
  <dd>Adding an <code>i</code> (or <code>I</code>) before the closing bracket causes the value to be compared case-insensitively (for characters within the ASCII range).</dd>
- <dt id="case-sensitive"><code>[<em>attr</em> <em>operator</em> <em>value</em> s]</code> {{Experimental_Inline}}</dt>
+ <dt><code>[<em>attr</em> <em>operator</em> <em>value</em> s]</code> {{Experimental_Inline}}</dt>
  <dd>Adding an <code>s</code> (or <code>S</code>) before the closing bracket causes the value to be compared case-sensitively (for characters within the ASCII range).</dd>
 </dl>
 
@@ -204,36 +205,11 @@ ol[type="A" s] {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS4 Selectors", "#attribute-selectors", "attribute selectors")}}</td>
-   <td>{{Spec2("CSS4 Selectors")}}</td>
-   <td>Adds modifier for ASCII case-sensitive and case-insensitive attribute value selection.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS3 Selectors", "#attribute-selectors", "attribute selectors")}}</td>
-   <td>{{Spec2("CSS3 Selectors")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS2.1", "selector.html#attribute-selectors", "attribute selectors")}}</td>
-   <td>{{Spec2("CSS2.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.selectors.attribute")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
@@ -241,5 +217,4 @@ ol[type="A" s] {
  <li>{{CSSxRef("attr")}}</li>
  <li>Selecting a single element: {{DOMxRef("Document.querySelector()")}}, {{DOMxRef("DocumentFragment.querySelector()")}}, or {{DOMxRef("Element.querySelector()")}}</li>
  <li>Selecting all matching elements: {{DOMxRef("Document.querySelectorAll()")}}, {{DOMxRef("DocumentFragment.querySelectorAll()")}}, or {{DOMxRef("Element.querySelectorAll()")}}</li>
- <li>The above methods are all implemented based on the {{DOMxRef("ParentNode")}} mixin; see {{DOMxRef("ParentNode.querySelector()")}} and {{DOMxRef("ParentNode.querySelectorAll()")}}</li>
 </ul>

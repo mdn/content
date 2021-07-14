@@ -8,6 +8,7 @@ tags:
   - Reference
   - TouchEvent
   - touch
+browser-compat: api.TouchEvent
 ---
 <p>{{APIRef("Touch Events")}}</p>
 
@@ -44,7 +45,7 @@ tags:
  <dt>{{domxref("TouchEvent.touches")}} {{readonlyInline}}</dt>
  <dd>A {{domxref("TouchList")}} of all the {{domxref("Touch")}} objects representing all current points of contact with the surface, regardless of target or changed status.</dd>
  <dt>{{domxref("TouchEvent.rotation")}} {{non-standard_inline()}} {{readonlyInline}}</dt>
- <dd>Change in rotation (in degrees) since the event's beginning. Positive values indicate clockwise rotation; negative values indicate anticlockwise rotation. Initial value: <code>0.0</code></dd>
+ <dd>Change in rotation (in degrees) since the event's beginning. Positive values indicate clockwise rotation; negative values indicate counterclockwise rotation. Initial value: <code>0.0</code></dd>
  <dt>{{domxref("TouchEvent.scale")}} {{non-standard_inline()}} {{readonlyInline}}</dt>
  <dd>Distance between two digits since the event's beginning. Expressed as a floating-point multiple of the initial distance between the digits at the beginning of the event. Values below 1.0 indicate an inward pinch (zoom out). Values above 1.0 indicate an outward unpinch (zoom in). Initial value: <code>1.0</code></dd>
 </dl>
@@ -106,35 +107,15 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<p>See the <a href="/en-US/docs/Web/API/Touch_events#Example">example on the main Touch events article</a>.</p>
+<p>See the <a href="/en-US/docs/Web/API/Touch_events#example">example on the main Touch events article</a>.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Touch Events 2','#touchevent-interface', 'TouchEvent')}}</td>
-   <td>{{Spec2('Touch Events 2')}}</td>
-   <td>Added <code>ontouchstart</code>, <code>ontouchend</code>, <code>ontouchmove</code>, <code>ontouchend</code> global attribute handlers</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Touch Events', '#touchevent-interface', 'TouchEvent')}}</td>
-   <td>{{Spec2('Touch Events')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.TouchEvent")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

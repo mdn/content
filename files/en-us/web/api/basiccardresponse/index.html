@@ -10,6 +10,7 @@ tags:
   - Payment Request
   - Payment Request API
   - Reference
+browser-compat: api.BasicCardResponse
 ---
 <p>{{securecontext_header}}{{SeeCompatTable}}{{APIRef("Payment Request API")}}</p>
 
@@ -39,12 +40,12 @@ tags:
 <p>The first of these three (<code>supportedInstruments</code> in the example below) contains a <code>data</code> property that has to conform to the structure defined by the {{domxref("BasicCardRequest")}} dictionary.</p>
 
 <pre class="brush:js">var supportedInstruments = [{
-  <code>supportedMethods: 'basic-card',
+  supportedMethods: 'basic-card',
   data: {
     supportedNetworks: ['visa', 'mastercard', 'amex', 'jcb',
                         'diners', 'discover', 'mir', 'unionpay'],
     supportedTypes: ['credit', 'debit']
-  }</code>
+  }
 }];
 
 var details = {
@@ -97,21 +98,8 @@ try {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<tbody>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-		<tr>
-			<td>{{SpecName('Basic Card Payment','#basiccardresponse-dictionary','BasicCardResponse')}}</td>
-			<td>{{Spec2('Basic Card Payment')}}</td>
-			<td>Initial definition.</td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.BasicCardResponse")}}</p>
+<p>{{Compat}}</p>

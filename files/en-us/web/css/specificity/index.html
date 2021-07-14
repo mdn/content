@@ -10,7 +10,7 @@ tags:
 ---
 <div>{{CSSRef}}</div>
 
-<p class="summary"><strong>Specificity</strong> is the means by which browsers decide which CSS property values are the most relevant to an element and, therefore, will be applied. Specificity is based on the matching rules which are composed of different sorts of <a href="/en-US/docs/Web/CSS/Reference#Selectors">CSS selectors</a>.</p>
+<p><strong>Specificity</strong> is the means by which browsers decide which CSS property values are the most relevant to an element and, therefore, will be applied. Specificity is based on the matching rules which are composed of different sorts of <a href="/en-US/docs/Web/CSS/Reference#Selectors">CSS selectors</a>.</p>
 
 <h2 id="How_is_specificity_calculated">How is specificity calculated?</h2>
 
@@ -30,7 +30,7 @@ tags:
  <li><a href="/en-US/docs/Web/CSS/ID_selectors">ID selectors</a> (e.g., <code>#example</code>).</li>
 </ol>
 
-<p>Universal selector ({{CSSxRef("Universal_selectors", "*")}}), combinators ({{CSSxRef("Adjacent_sibling_combinator", "+")}}, {{CSSxRef("Child_combinator", "&gt;")}}, {{CSSxRef("General_sibling_combinator", "~")}}, <a href="/en-US/docs/Web/CSS/Descendant_combinator" style="white-space: nowrap;">'<code> </code>'</a>, {{CSSxRef("Column_combinator", "||")}}) and negation pseudo-class ({{CSSxRef(":not", ":not()")}}) have no effect on specificity. (The selectors declared <em>inside</em> <code>:not()</code> do, however.)</p>
+<p>Universal selector ({{CSSxRef("Universal_selectors", "*")}}), combinators ({{CSSxRef("Adjacent_sibling_combinator", "+")}}, {{CSSxRef("Child_combinator", "&gt;")}}, {{CSSxRef("General_sibling_combinator", "~")}}, <a href="/en-US/docs/Web/CSS/Descendant_combinator">'<code> </code>'</a>, {{CSSxRef("Column_combinator", "||")}}) and negation pseudo-class ({{CSSxRef(":not", ":not()")}}) have no effect on specificity. (The selectors declared <em>inside</em> <code>:not()</code> do, however.)</p>
 
 <p>For more information, visit: <a href="/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#Specificity_2">"Specificity" in "Cascade and inheritance"</a>, you can also visit: <a href="https://specifishity.com">https://specifishity.com</a></p>
 
@@ -144,7 +144,6 @@ p.awesome {
 
 <p>The matches-any pseudo-class {{CSSxRef(":is", ":is()")}} {{Experimental_Inline}} and the negation pseudo-class {{CSSxRef(":not", ":not()")}} are <em>not</em> considered a pseudo-class in the specificity calculation. But selectors placed into the pseudo-class count as normal selectors when determining the count of <a href="#selector_types">selector types</a>.</p>
 
-<div id="The_not_exception-example">
 <p>This chunk of CSS ...</p>
 
 <pre class="brush: css">div.outer p {
@@ -168,8 +167,7 @@ div:not(.outer) p {
 
 <p>... appears on the screen like this:</p>
 
-<p>{{EmbedLiveSample("The_not_exception-example")}}</p>
-</div>
+<p>{{EmbedLiveSample("The_is_and_not_exceptions")}}</p>
 
 <h3 id="The_where_exception">The :where() exception {{Experimental_Inline}}</h3>
 
@@ -303,7 +301,6 @@ h1 {
 
 <h2 id="Specifications">Specifications</h2>
 
-<div style="overflow: auto;">
 <table class="standard-table">
  <thead>
   <tr>
@@ -335,7 +332,6 @@ h1 {
   </tr>
  </tbody>
 </table>
-</div>
 
 <h2 id="See_also">See also</h2>
 

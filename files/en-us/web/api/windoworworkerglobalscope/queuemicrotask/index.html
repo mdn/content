@@ -21,6 +21,8 @@ tags:
 - asynchronous
 - queueMicrotask
 - setTimeout
+- Polyfill
+browser-compat: api.WindowOrWorkerGlobalScope.queueMicrotask
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
@@ -107,39 +109,16 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th>Specification</th>
-      <th>Status</th>
-      <th>Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName("HTML WHATWG", "timers-and-user-prompts.html#microtask-queuing",
-        "self.queueMicrotask()")}}</td>
-      <td>{{Spec2("HTML WHATWG")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div class="hidden">The compatibility table on this page is generated from structured
-  data. If you'd like to contribute to the data, please check out <a
-    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
-  and send us a pull request.<br>
-  <br>
-  NOTE: data on this has been submitted; just waiting on it to be reviewed, merged, and
-  for a new data release before it will show up here. See
-  https://github.com/mdn/browser-compat-data/pull/4754 for PR.
-</div>
-
-<p>{{Compat("api.WindowOrWorkerGlobalScope.queueMicrotask")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
+  <li>A polyfill of <code>queueMicrotask</code> is available in <a href="https://github.com/zloirock/core-js#queuemicrotask"><code>core-js</code></a></li>
   <li><a href="/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide">Using microtasks in
       JavaScript with queueMicrotask()</a></li>
   <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous">Asynchronous JavaScript</a></li>

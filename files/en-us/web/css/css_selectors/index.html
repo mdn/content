@@ -10,7 +10,7 @@ tags:
 ---
 <div>{{CSSRef("Selectors")}}</div>
 
-<p class="summary"><span class="seoSummary"><strong>CSS selectors</strong> define the elements to which a set of CSS rules apply.</span></p>
+<p><strong>CSS selectors</strong> define the elements to which a set of CSS rules apply.</span></p>
 
 <div class="notecard note">
 <p><strong>Note</strong>: There are no selectors or combinators to select parent items, siblings of parents, or children of parent siblings.</p>
@@ -46,7 +46,7 @@ tags:
 <dl>
  <dt><a href="/en-US/docs/Web/CSS/Selector_list">Selector list</a></dt>
  <dd>The <code>,</code> is a grouping method, it selects all the matching nodes.<br>
- <strong>Syntax:</strong> <code style="white-space: nowrap;"><var>A</var>, <var>B</var></code><br>
+ <strong>Syntax:</strong> <code><var>A</var>, <var>B</var></code><br>
  <strong>Example:</strong> <code>div, span</code> will match both {{HTMLElement("span")}} and {{HTMLElement("div")}} elements.</dd>
 </dl>
 
@@ -55,23 +55,23 @@ tags:
 <dl>
  <dt><a href="/en-US/docs/Web/CSS/Descendant_combinator">Descendant combinator</a></dt>
  <dd>The <code> </code> (space) combinator selects nodes that are descendants of the first element.<br>
- <strong>Syntax:</strong> <code style="white-space: nowrap;"><var>A</var> <var>B</var></code><br>
+ <strong>Syntax:</strong> <code><var>A</var> <var>B</var></code><br>
  <strong>Example:</strong> <code>div span</code> will match all {{HTMLElement("span")}} elements that are inside a {{HTMLElement("div")}} element.</dd>
  <dt><a href="/en-US/docs/Web/CSS/Child_combinator">Child combinator</a></dt>
  <dd>The <code>&gt;</code> combinator selects nodes that are direct children of the first element.<br>
- <strong>Syntax:</strong> <code style="white-space: nowrap;"><var>A</var> &gt; <var>B</var></code><br>
+ <strong>Syntax:</strong> <code><var>A</var> &gt; <var>B</var></code><br>
  <strong>Example:</strong> <code>ul &gt; li</code> will match all {{HTMLElement("li")}} elements that are nested directly inside a {{HTMLElement("ul")}} element.</dd>
  <dt><a href="/en-US/docs/Web/CSS/General_sibling_combinator">General sibling combinator</a></dt>
  <dd>The <code>~</code> combinator selects siblings. This means that the second element follows the first (though not necessarily immediately), and both share the same parent.<br>
- <strong>Syntax:</strong> <code style="white-space: nowrap;"><var>A</var> ~ <var>B</var></code><br>
+ <strong>Syntax:</strong> <code><var>A</var> ~ <var>B</var></code><br>
  <strong>Example:</strong> <code>p ~ span</code> will match all {{HTMLElement("span")}} elements that follow a {{HTMLElement("p")}}, immediately or not.</dd>
  <dt><a href="/en-US/docs/Web/CSS/Adjacent_sibling_combinator">Adjacent sibling combinator</a></dt>
  <dd>The <code>+</code> combinator selects adjacent siblings. This means that the second element directly follows the first, and both share the same parent.<br>
- <strong>Syntax:</strong> <code style="white-space: nowrap;"><var>A</var> + <var>B</var></code><br>
+ <strong>Syntax:</strong> <code><var>A</var> + <var>B</var></code><br>
  <strong>Example:</strong> <code>h2 + p</code> will match all {{HTMLElement("p")}} elements that directly follow an {{HTMLElement("h2")}}.</dd>
  <dt><a href="/en-US/docs/Web/CSS/Column_combinator">Column combinator</a> {{Experimental_Inline}}</dt>
  <dd>The <code>||</code> combinator selects nodes which belong to a column.<br>
- <strong>Syntax:</strong> <code style="white-space: nowrap;"><var>A</var> || <var>B</var></code><br>
+ <strong>Syntax:</strong> <code><var>A</var> || <var>B</var></code><br>
  <strong>Example:</strong> <code>col || td</code> will match all {{HTMLElement("td")}} elements that belong to the scope of the {{HTMLElement("col")}}.</dd>
 </dl>
 

@@ -10,6 +10,7 @@ tags:
   - Method
   - Reference
   - RelativeTimeFormat
+browser-compat: javascript.builtins.Intl.RelativeTimeFormat.supportedLocalesOf
 ---
 <div>{{JSRef}}</div>
 
@@ -20,7 +21,10 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js">Intl.RelativeTimeFormat.supportedLocalesOf(<var>locales</var>[, <var>options</var>])</pre>
+<pre class="brush: js">
+Intl.RelativeTimeFormat.supportedLocalesOf(locales)
+Intl.RelativeTimeFormat.supportedLocalesOf(locales, options)
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -30,7 +34,7 @@ tags:
 	<dt><code><var>options</var></code> {{optional_inline}}</dt>
 	<dd>
 		<p>An object that may have the following property:</p>
-		
+
 		<dl>
 			<dt><code>localeMatcher</code></dt>
 			<dd>The locale matching algorithm to use. Possible values are "<code>lookup</code>" and "<code>best fit</code>"; the default is "<code>best fit</code>". For information about this option, see the {{jsxref("Intl", "Intl", "#Locale_negotiation", 1)}} page.</dd>
@@ -60,22 +64,11 @@ console.log(Intl.RelativeTimeFormat.supportedLocalesOf(locales, options).join(',
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName('ES Int Draft', '#sec-Intl.RelativeTimeFormat.supportedLocalesOf', 'RelativeTimeFormat.supportedLocalesOf()')}}</td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>{{Compat("javascript.builtins.Intl.RelativeTimeFormat.supportedLocalesOf")}}</div>
+<div>{{Compat}}</div>
 
 <h2 id="See_also">See also</h2>
 

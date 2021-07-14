@@ -5,6 +5,7 @@ tags:
   - HTTP
   - Reference
   - Request method
+browser-compat: http.methods.POST
 ---
 <p>{{HTTPSidebar}}</p>
 
@@ -12,7 +13,7 @@ tags:
 
 <p>The difference between {{HTTPMethod("PUT")}} and <code>POST</code> is that <code>PUT</code> is idempotent: calling it once or several times successively has the same effect (that is no <em>side</em> effect), where successive identical <code>POST</code> may have additional effects, like passing an order several times.</p>
 
-<p>A <code>POST</code> request is typically sent via an <a href="/en-US/docs/Web/Guide/HTML/Forms">HTML form</a> and results in a change on the server. In this case, the content type is selected by putting the adequate string in the {{htmlattrxref("enctype", "form")}} attribute of the {{HTMLElement("form")}} element or the {{htmlattrxref("formenctype", "input")}} attribute of the {{HTMLElement("input") }} or {{HTMLElement("button")}} elements:</p>
+<p>A <code>POST</code> request is typically sent via an <a href="/en-US/docs/Learn/Forms">HTML form</a> and results in a change on the server. In this case, the content type is selected by putting the adequate string in the {{htmlattrxref("enctype", "form")}} attribute of the {{HTMLElement("form")}} element or the {{htmlattrxref("formenctype", "input")}} attribute of the {{HTMLElement("input") }} or {{HTMLElement("button")}} elements:</p>
 
 <ul>
  <li><code>application/x-www-form-urlencoded</code>: the keys and values are encoded in key-value tuples separated by <code>'&amp;'</code>, with a <code>'='</code> between the key and the value. Non-alphanumeric characters in both keys and values are {{glossary("percent-encoding", "percent encoded")}}: this is the reason why this type is not suitable to use with binary data (use <code>multipart/form-data</code> instead)</li>
@@ -53,7 +54,7 @@ tags:
    <td>Only if freshness information is included</td>
   </tr>
   <tr>
-   <th scope="row">Allowed in <a href="/en-US/docs/Web/Guide/HTML/Forms">HTML forms</a></th>
+   <th scope="row">Allowed in <a href="/en-US/docs/Learn/Forms">HTML forms</a></th>
    <td>Yes</td>
   </tr>
  </tbody>
@@ -94,30 +95,11 @@ value2
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Title</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{RFC("7231", "POST", "4.3.3")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
-  </tr>
-  <tr>
-   <td>{{RFC("2046", "Common Syntax", "5.1.1")}}</td>
-   <td>Multipurpose Internet Mail Extensions (MIME) Part Two: Media Types</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-
-<p>{{Compat("http.methods.POST")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

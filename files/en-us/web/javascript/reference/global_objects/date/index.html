@@ -9,14 +9,14 @@ tags:
   - Time
   - Unix Epoch
   - timeStamp
+browser-compat: javascript.builtins.Date
 ---
 <div>{{JSRef}}</div>
 
-<p><span class="seoSummary">JavaScript <strong><code>Date</code></strong> objects represent a single moment in time in a platform-independent format.</span> <code>Date</code> objects contain a <code>Number</code> that represents milliseconds since 1 January 1970 UTC.</p>
+<p>JavaScript <strong><code>Date</code></strong> objects represent a single moment in time in a platform-independent format. <code>Date</code> objects contain a <code>Number</code> that represents milliseconds since 1 January 1970 UTC.</p>
 
 <div class="notecard note">
-<p>TC39 is working on <a href="https://tc39.es/proposal-temporal/docs/index.html">Temporal</a>, a new Date/Time API.<br>
- Read more about it on the <a href="https://blogs.igalia.com/compilers/2020/06/23/dates-and-times-in-javascript/">Igalia blog</a> and fill out the <a href="https://forms.gle/iL9iZg7Y9LvH41Nv8">survey</a>. It needs real-world feedback from web developers, but is not yet ready for production use!</p>
+<p><strong>Note:</strong> TC39 is working on <a href="https://tc39.es/proposal-temporal/docs/index.html">Temporal</a>, a new Date/Time API. Read more about it on the <a href="https://blogs.igalia.com/compilers/2020/06/23/dates-and-times-in-javascript/">Igalia blog</a>. It is not yet ready for production use!</p>
 </div>
 
 <h2 id="Description">Description</h2>
@@ -142,8 +142,6 @@ tags:
  <dd>Returns a string representing the {{jsxref("Date")}} based on the GMT (UTC) time zone. Use {{jsxref("Date.prototype.toUTCString()", "toUTCString()")}} instead.</dd>
  <dt>{{jsxref("Date.prototype.toLocaleDateString()")}}</dt>
  <dd>Returns a string with a locality sensitive representation of the date portion of this date based on system settings.</dd>
- <dt>{{jsxref("Date.prototype.toLocaleFormat()")}}</dt>
- <dd>Converts a date to a string, using a format string.</dd>
  <dt>{{jsxref("Date.prototype.toLocaleString()")}}</dt>
  <dd>Returns a string with a locality-sensitive representation of this date. Overrides the {{jsxref("Object.prototype.toLocaleString()")}} method.</dd>
  <dt>{{jsxref("Date.prototype.toLocaleTimeString()")}}</dt>
@@ -178,8 +176,11 @@ let birthday = new Date(628021800000)            // passing epoch timestamp
 
 <h3 id="To_get_Date_Month_and_Year_or_Time"> To get Date, Month and Year or Time</h3>
 
-<pre class="brush: js">let [month, date, year]    = new Date().toLocaleDateString("en-US").split("/")
-let [hour, minute, second] = new Date().toLocaleTimeString("en-US").split(/:| /)</pre>
+<pre class="brush: js">
+const date = new Date();
+const [month, day, year]       = [date.getMonth(), date.getDate(), date.getFullYear()];
+const [hour, minutes, seconds] = [date.getHours(), date.getMinutes(), date.getSeconds()];
+</pre>
 
 <h3 id="Two_digit_years_map_to_1900_–_1999">Two digit years map to 1900 – 1999</h3>
 
@@ -245,22 +246,11 @@ let yourFunctionReturn = printElapsedTime(yourFunction)
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-date-objects', 'Date')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Date", 3)}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

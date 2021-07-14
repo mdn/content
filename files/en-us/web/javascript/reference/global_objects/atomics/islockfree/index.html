@@ -6,13 +6,16 @@ tags:
 - JavaScript
 - Method
 - Shared Memory
+browser-compat: javascript.builtins.Atomics.isLockFree
 ---
 <div>{{JSRef}}</div>
 
 <p>The static
 	<code><strong>Atomics</strong></code><strong><code>.isLockFree()</code></strong>
-	method is used to determine whether to use locks or atomic operations. It returns
-	<code>true</code>, if the given size is one of the <a
+	method is used to determine whether the <code>Atomics</code> methods use locks 
+  or atomic hardware operations when applied to typed arrays with the given element 
+  byte size. 
+  It returns <code>false</code> if the given size is not one of the <a
 		href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT">BYTES_PER_ELEMENT</a>
 	property of integer TypedArray types.</p>
 
@@ -49,21 +52,11 @@ Atomics.isLockFree(8); // true</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<tbody>
-		<tr>
-			<th scope="col">Specification</th>
-		</tr>
-		<tr>
-			<td>{{SpecName('ESDraft', '#sec-atomics.islockfree', 'Atomics.isLockFree')}}
-			</td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Atomics.isLockFree")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

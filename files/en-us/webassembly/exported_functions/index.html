@@ -21,8 +21,8 @@ tags:
 <p>You can retrieve exported WebAssembly functions in two ways:</p>
 
 <ul>
- <li>By calling <code><a href="/en-US/docs/WebAssembly/API/Table/get">Table.prototype.get()</a></code> on an existing table.</li>
- <li>By accessing a function exported from a wasm module instance via <code><a href="/en-US/docs/WebAssembly/API/Instance/exports">Instance.exports</a></code>.</li>
+ <li>By calling <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get">Table.prototype.get()</a></code> on an existing table.</li>
+ <li>By accessing a function exported from a wasm module instance via <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/exports">Instance.exports</a></code>.</li>
 </ul>
 
 <p>Either way, you get the same kind of wrapper for the underlying function.  From a JavaScript point of view, it's as if every wasm function <em>is</em> a JavaScript function too — but they are encapsulated by the exported wasm function object instance and there are only limited ways to access them.</p>
@@ -46,15 +46,15 @@ WebAssembly.instantiateStreaming(fetch('table.wasm'))
 
 <p>Here we create a table (<code>otherTable</code>) from JavaScript using the {{jsxref("WebAssembly.Table")}} constructor, then we load table.wasm into our page using the {{jsxref("WebAssembly.instantiateStreaming()")}} method.</p>
 
-<p>We then get the function exported from the module, retrieve the functions it references via <code><a href="/en-US/docs/WebAssembly/API/Table/get">tbl.get()</a></code> and log the result of invoking each one to the console. Next, we use <code>set()</code> to make the <code>otherTable</code> table contain references to the same functions as the <code>tbl</code> table.</p>
+<p>We then get the function exported from the module, retrieve the functions it references via <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get">tbl.get()</a></code> and log the result of invoking each one to the console. Next, we use <code>set()</code> to make the <code>otherTable</code> table contain references to the same functions as the <code>tbl</code> table.</p>
 
 <p>To prove this, we then retrieve these references back from <code>otherTable</code> and print their results to console too, which gives the same results.</p>
 
 <h2 id="They_are_real_functions">They are real functions</h2>
 
-<p>In the previous example, the return value of each <code><a href="/en-US/docs/WebAssembly/API/Table/get">Table.prototype.get()</a></code> call is an exported WebAssembly function — exactly what we have been talking about.</p>
+<p>In the previous example, the return value of each <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get">Table.prototype.get()</a></code> call is an exported WebAssembly function — exactly what we have been talking about.</p>
 
-<p>It is worth noting that these are real JavaScript functions, in addition to being wrappers for WebAssembly functions. If you load the above example in a <a href="/en-US/docs/WebAssembly#Browser_compatibility">WebAssembly-supporting browser</a>, and run the following lines in your console:</p>
+<p>It is worth noting that these are real JavaScript functions, in addition to being wrappers for WebAssembly functions. If you load the above example in a <a href="/en-US/docs/WebAssembly#browser_compatibility">WebAssembly-supporting browser</a>, and run the following lines in your console:</p>
 
 <pre class="brush: js">var testFunc = otherTable.get(0);
 typeof testFunc;</pre>

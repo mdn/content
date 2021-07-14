@@ -54,12 +54,12 @@ tags:
    <td>Chrome 56, Edge 16, Firefox 51, Safari 11</td>
   </tr>
   <tr>
-   <th scope="row">{{anch("MPEG", "MPEG / MPEG-2")}}</th>
+   <th scope="row">{{anch("MPEGMPEG-2", "MPEG / MPEG-2")}}</th>
    <td>Moving Picture Experts Group (1 and 2)</td>
    <td>—</td>
   </tr>
   <tr>
-   <th scope="row">{{anch("MP4", "MPEG-4 (MP4)")}}</th>
+   <th scope="row">{{anch("MPEG-4_MP4", "MPEG-4 (MP4)")}}</th>
    <td>Moving Picture Experts Group 4</td>
    <td>Chrome 3, Edge 12, Firefox, Internet Explorer 9, Opera 24, Safari 3.1</td>
   </tr>
@@ -117,7 +117,7 @@ tags:
  </tbody>
 </table>
 
-<p>These MIME types are the fundamental types for the 3GP media container; other types may be used depending on the specific codec or codecs in use; in addition, you can <a href="/en-US/docs/Web/Media/Formats/codecs_parameter#ISO-BMFF">add the <code>codecs</code> parameter</a> to the MIME type string to indicate which codecs are used for the audio and/or video tracks, and to optionally provide details about the profile, level, and/or other codec configuration specifics.</p>
+<p>These MIME types are the fundamental types for the 3GP media container; other types may be used depending on the specific codec or codecs in use; in addition, you can <a href="/en-US/docs/Web/Media/Formats/codecs_parameter#iso-bmff">add the <code>codecs</code> parameter</a> to the MIME type string to indicate which codecs are used for the audio and/or video tracks, and to optionally provide details about the profile, level, and/or other codec configuration specifics.</p>
 
 <table class="standard-table">
  <caption>Video codecs supported by 3GP</caption>
@@ -343,7 +343,7 @@ tags:
  </tbody>
 </table>
 
-<h3 id="MPEGMPEG-2"><a id="MPEG">MPEG</a>/MPEG-2</h3>
+<h3 id="MPEGMPEG-2">MPEG/MPEG-2</h3>
 
 <p>The <strong>{{interwiki("wikipedia", "MPEG-1")}}</strong> and <strong>{{interwiki("wikipedia", "MPEG-2")}}</strong> file formats are essentially identical. Created by the Moving Picture Experts Group (MPEG), these formats are widely used in physical media, including as the format of the video on DVD media.</p>
 
@@ -438,13 +438,13 @@ tags:
  </tbody>
 </table>
 
-<h3 id="MPEG-4_MP4"><a id="MP4">MPEG-4 (MP4)</a></h3>
+<h3 id="MPEG-4_MP4">MPEG-4 (MP4)</h3>
 
 <p><strong>{{interwiki("wikipedia", "MPEG-4")}}</strong> (<strong>MP4</strong>) is the latest version of the MPEG file format. There are two versions of the format, defined in parts 1 and 14 of the specification. MP4 is a popular container today, as it supports several of the most-used codecs and is broadly supported.</p>
 
 <p>The original MPEG-4 Part 1 file format was introduced in 1999; the version 2 format, defined in Part 14, was added in 2003. The MP4 file format is derived from the {{interwiki("wikipedia", "ISO base media file format")}}, which is directly derived from the {{interwiki("wikipedia", "QuickTime file format")}} developed by <a href="https://www.apple.com/">Apple</a>.</p>
 
-<p>When specifying the MPEG-4 media type (<code>audio/mp4</code> or <code>video/mp4</code>), you can <a href="/en-US/docs/Web/Media/Formats/codecs_parameter#ISO-BMFF">add the <code>codecs</code> parameter</a> to the MIME type string to indicate which codecs are used for the audio and/or video tracks, and to optionally provide details about the profile, level, and/or other codec configuration specifics.</p>
+<p>When specifying the MPEG-4 media type (<code>audio/mp4</code> or <code>video/mp4</code>), you can <a href="/en-US/docs/Web/Media/Formats/codecs_parameter#iso-bmff">add the <code>codecs</code> parameter</a> to the MIME type string to indicate which codecs are used for the audio and/or video tracks, and to optionally provide details about the profile, level, and/or other codec configuration specifics.</p>
 
 <table class="standard-table">
  <caption>Base MPEG-4 media MIME types</caption>
@@ -462,7 +462,7 @@ tags:
  </tbody>
 </table>
 
-<p>These MIME types are the fundamental types for the MPEG-4 media container; other MIME types may be used depending on the specific codec or codecs in use within the container. In addition, you can <a href="/en-US/docs/Web/Media/Formats/codecs_parameter#ISO-BMFF">add the <code>codecs</code> parameter</a> to the MIME type string to indicate which codecs are used for the audio and/or video tracks, and to optionally provide details about the profile, level, and/or other codec configuration specifics.</p>
+<p>These MIME types are the fundamental types for the MPEG-4 media container; other MIME types may be used depending on the specific codec or codecs in use within the container. In addition, you can <a href="/en-US/docs/Web/Media/Formats/codecs_parameter#iso-bmff">add the <code>codecs</code> parameter</a> to the MIME type string to indicate which codecs are used for the audio and/or video tracks, and to optionally provide details about the profile, level, and/or other codec configuration specifics.</p>
 
 <table class="standard-table">
  <caption>Video codecs supported by MPEG-4</caption>
@@ -575,7 +575,7 @@ tags:
 
 <p>While Ogg has been around for a long time, it has never gained the wide support needed to make it a good first choice for a media container. You are typically better off using WebM, though there are times when Ogg is useful to offer, such as when you wish to support older versions of Firefox and Chrome which don't yet support WebM. For example, Firefox 3.5 and 3.6 support Ogg, but not WebM.</p>
 
-<p>You can get more information about Ogg and its codecs in the <a href="http://en.flossmanuals.net/ogg-theora/">Theora Cookbook</a>.</p>
+<p>You can get more information about Ogg and its codecs in the <a href="https://en.flossmanuals.net/ogg-theora/">Theora Cookbook</a>.</p>
 
 <table class="standard-table">
  <caption>Base Ogg media MIME types</caption>
@@ -595,7 +595,7 @@ tags:
 
 <p>The <code>application/ogg</code> MIME type can be used when you don't necessarily know whether the media contains audio or video. If at all possible, you should use one of the specific types, but fall back to <code>application/ogg</code> if you don't know the content format or formats.</p>
 
-<p>You can also <a href="/en-US/docs/Web/Media/Formats/codecs_parameter#Ogg">add the <code>codecs</code> parameter</a> to the MIME type string to indicate which codecs are used for the audio and/or video tracks, and to optionally further describe the track media formats.</p>
+<p>You can also <a href="/en-US/docs/Web/Media/Formats/codecs_parameter#ogg">add the <code>codecs</code> parameter</a> to the MIME type string to indicate which codecs are used for the audio and/or video tracks, and to optionally further describe the track media formats.</p>
 
 <table class="standard-table">
  <caption>Video codecs supported by Ogg</caption>
@@ -703,7 +703,7 @@ tags:
 
 <p>The <code>video/quicktime</code> MIME type is the fundamental type for the QuickTime media container. It's worth noting that QuickTime (the media framework on Mac operating systems) supports a wide variety of containers and codecs, so it actually supports many other MIME types.</p>
 
-<p>You can <a href="/en-US/docs/Web/Media/Formats/codecs_parameter#ISO-BMFF">add the <code>codecs</code> parameter</a> to the MIME type string to indicate which codecs are used for the audio and/or video tracks, and to optionally provide details about the profile, level, and/or other codec configuration specifics.</p>
+<p>You can <a href="/en-US/docs/Web/Media/Formats/codecs_parameter#iso-bmff">add the <code>codecs</code> parameter</a> to the MIME type string to indicate which codecs are used for the audio and/or video tracks, and to optionally provide details about the profile, level, and/or other codec configuration specifics.</p>
 
 <table class="standard-table">
  <caption>Video codecs supported by QuickTime</caption>
@@ -867,7 +867,7 @@ tags:
  </tbody>
 </table>
 
-<h3 id="WAVE_WAV"><a id="WAVE">WAVE</a> (WAV)</h3>
+<h3 id="WAVE_WAV">WAVE (WAV)</h3>
 
 <p>The <strong>Waveform Audio File Format</strong> (<strong>WAVE</strong>), usually referred to as WAV due to its filename extension being <code>.wav</code>, is a format developed by Microsoft and IBM to store audio bitstream data.</p>
 
@@ -1054,7 +1054,7 @@ tags:
 
 <h3 id="Guidelines">Guidelines</h3>
 
-<p>The best choice also depends on what you'll be doing with the media. Playing back media is a different thing than recording and/or editing it. If you're going to be manipulating the media data, using an uncompressed format can improve performance, while using a lossless compressed format at least prevent the accumulation of noise as compression artifacts are multiplied with each re-compression that occurs.</p>
+<p>The best choice also depends on what you'll be doing with the media. Playing back media is a different thing than recording and/or editing it. If you're going to be manipulating the media data, using an uncompressed format can improve performance, while using a lossless compressed format at least prevents the accumulation of noise as compression artifacts are multiplied with each re-compression that occurs.</p>
 
 <ul>
  <li>If your target audience is likely to include users on mobile, especially on lower-end devices or on slow networks, consider providing a version of your media in a 3GP container with appropriate compression.</li>

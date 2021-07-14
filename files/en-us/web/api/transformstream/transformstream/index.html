@@ -1,0 +1,119 @@
+---
+title: TransformStream()
+slug: Web/API/TransformStream/TransformStream
+tags:
+  - API
+  - Constructor
+  - Reference
+  - TransformStream
+browser-compat: api.TransformStream.TransformStream
+---
+<p>{{APIRef("Streams")}}</p>
+
+<p class="summary">The <strong><code>TransformStream()</code></strong> constructor creates a new {{domxref("TransformStream")}} object which represents a pair of streams: a {{domxref("WritableStream")}} representing the writable side, and a {{domxref("ReadableStream")}} representing the readable side.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js">new TransformStream();
+new TransformStream(transformer);
+new TransformStream(transformer, writableStrategy);
+new TransformStream(transformer, writableStrategy, readableStrategy);</pre>
+
+<h3 id="Parameters">Parameters</h3>
+
+<dl>
+  <dt><code>transformer</code>{{Optional_Inline}}</dt>
+  <dd>
+    <p>An object representing the <code>transformer</code>. If not supplied the resulting stream will be an <strong>identity transform stream</strong> which forwards all chunks written to its writable side to its readable side, without any changes.</p>
+
+  <p>The transformer object can contain any of the following methods. In each method <code>controller</code> is an instance of {{domxref("TransformStreamDefaultController")}}.</p>
+
+  <dl>
+    <dt><code>start(controller)</code></dt>
+    <dd>Called when the <code>TransformStream</code> is constructed. It is typically used to enqueue chunks using {{domxref("TransformStreamDefaultController.enqueue()")}}. </dd>
+    <dt><code>transform(chunk, controller)</code></dt>
+    <dd>Called when a chunk written to the writable side is ready to be transformed, and performs the work of the transformation stream. If no <code>transform()</code> method is supplied, the identity transform is used, and the chunk will be enqueued with no changes.</dd>
+    <dt><code>flush(controller)</code></dt>
+    <dd>Called after all chunks written to the writable side have been successfully transformed, and the writable side is about to be closed.</dd>
+  </dl>
+
+</dd>
+  <dt><code>writableStrategy</code>{{Optional_Inline}}</dt>
+  <dd>An object that optionally defines a queuing strategy for the stream. This takes two
+    parameters:
+    <dl>
+      <dt><code>highWaterMark</code></dt>
+      <dd>A non-negative integer. This defines the total number of chunks that can be
+        contained in the internal queue before backpressure is applied.</dd>
+      <dt><code>size(chunk)</code></dt>
+      <dd>A method containing a parameter <code>chunk</code>. This indicates the size to
+        use for each chunk, in bytes.</dd>
+    </dl>
+  </dd>
+  <dt><code>readableStrategy</code>{{Optional_Inline}}</dt>
+  <dd>An object that optionally defines a queuing strategy for the stream. This takes two
+    parameters:
+    <dl>
+      <dt><code>highWaterMark</code></dt>
+      <dd>A non-negative integer. This defines the total number of chunks that can be
+        contained in the internal queue before backpressure is applied.</dd>
+      <dt><code>size(chunk)</code></dt>
+      <dd>A method containing a parameter <code>chunk</code>. This indicates the size to
+        use for each chunk, in bytes.</dd>
+    </dl>
+  </dd>
+</dl>
+
+<div class="notecard note">
+  <h4>Note:</h4>
+  <p>You could define your own custom
+    <code>readableStrategy</code> or <code>writableStrategy</code>, or use an instance of
+    {{domxref("ByteLengthQueuingStrategy")}} or {{domxref("CountQueuingStrategy")}}
+    for the object values.</p>
+</div>
+
+<h2 id="Examples">Examples</h2>
+
+<h3>Transforming text to uppercase</h3>
+
+<p>The following example transforms text to uppercase chunk by chunk. This example is from <a href="https://web.dev/streams/">Streams—The Definitive Guide</a>, which has a number of examples of different types of streams.</p>
+
+<pre class="brush: js">function upperCaseStream() {
+  return new TransformStream({
+    transform(chunk, controller) {
+      controller.enqueue(chunk.toUpperCase());
+    },
+  });
+}
+
+function appendToDOMStream(el) {
+  return new WritableStream({
+    write(chunk) {
+      el.append(chunk);
+    }
+  });
+}
+
+fetch('./lorem-ipsum.txt').then((response) =>
+  response.body
+    .pipeThrough(new TextDecoderStream())
+    .pipeThrough(upperCaseStream())
+    .pipeTo(appendToDOMStream(document.body))
+);</pre>
+
+<h3>Creating an identity transform stream</h3>
+
+<p>If no <code>transformer</code> argument is supplied then the result will be an identity transform stream which forwards all chunks written to the writable side to the readable side with no changes. In the following example an identity transform stream is used to add buffering to a pipe.</p>
+
+<pre class="brush: js">const writableStrategy = new ByteLengthQueuingStrategy({ highWaterMark: 1024 * 1024 });
+readableStream
+  .pipeThrough(new TransformStream(undefined, writableStrategy))
+  .pipeTo(writableStream);</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<p>{{Specifications}}</p>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>

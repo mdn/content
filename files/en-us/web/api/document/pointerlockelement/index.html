@@ -1,0 +1,57 @@
+---
+title: Document.pointerLockElement
+slug: Web/API/Document/pointerLockElement
+tags:
+  - API
+  - DOM
+  - Document
+  - Property
+  - Reference
+  - mouse lock
+browser-compat: api.Document.pointerLockElement
+---
+<div>{{APIRef("DOM")}}</div>
+
+<p><span class="seoSummary">The read-only <strong><code>pointerLockElement</code></strong> property
+    of the {{domxref("Document")}} interface provides the
+    element set as the target for mouse events while the pointer is locked. It is
+    <code>null</code> if lock is pending, pointer is unlocked, or the target is in another
+    document.</span></p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js"><var>document</var>.pointerLockElement;</pre>
+
+<h3 id="Value">Value</h3>
+
+<p>An {{domxref("Element")}} or <code>null</code>.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<p>Determine if a canvas element is currently pointer locked.</p>
+
+<pre class="brush: js">
+if (document.pointerLockElement === canvasElement) {
+  console.log('The pointer lock status is now locked');
+  // Do something useful in response
+} else {
+  console.log('The pointer lock status is now unlocked');
+  // Do something useful in response
+}
+</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+{{Specifications}}
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+  <li>{{ domxref("Document.exitPointerLock()") }}</li>
+  <li>{{ domxref("Element.requestPointerLock()") }}</li>
+  <li><a href="/en-US/docs/Web/API/Pointer_Lock_API">Pointer Lock</a></li>
+</ul>

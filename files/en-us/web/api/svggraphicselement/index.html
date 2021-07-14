@@ -7,6 +7,7 @@ tags:
   - Reference
   - SVG
   - SVG OM
+browser-compat: api.SVGGraphicsElement
 ---
 <div>{{APIRef("SVG")}}</div>
 
@@ -14,15 +15,15 @@ tags:
 
 <p>{{InheritanceDiagram(600, 120)}}</p>
 
-<div class="note">
-<p><strong>Note:</strong> This interface was introduced in SVG 2 and replaces the {{domxref("SVGLocatable")}} and {{domxref("SVGTransformable")}} interfaces from SVG 1.1.</p>
-</div>
-
 <h2 id="Properties">Properties</h2>
 
 <p><em>This interface also inherits properties from its parent, {{domxref("SVGElement")}}.</em></p>
 
 <dl>
+ <dt>{{domxref("SVGGraphicsElement.requiredExtensions")}} {{ReadOnlyInline}}</dt>
+ <dd>An {{domxref("SVGStringList")}} reflecting the {{SVGAttr("requiredExtensions")}} attribute of the given element.</dd>
+ <dt>{{domxref("SVGGraphicsElement.systemLanguage")}} {{ReadOnlyInline}}</dt>
+ <dd>An {{domxref("SVGStringList")}} reflecting the {{SVGAttr("systemLanguage")}} attribute of the given element.</dd>
  <dt>{{domxref("SVGGraphicsElement.transform")}} {{ReadOnlyInline}}</dt>
  <dd>An {{domxref("SVGAnimatedTransformList")}} reflecting the computed value of the {{cssxref("transform")}} property and its corresponding {{SVGAttr("transform")}} attribute of the given element.</dd>
 </dl>
@@ -57,23 +58,8 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG2", "types.html#InterfaceSVGGraphicsElement", "SVGGraphicsElement")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.SVGGraphicsElement")}}</p>
+<p>{{Compat}}</p>

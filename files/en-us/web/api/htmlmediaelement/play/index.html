@@ -11,6 +11,7 @@ tags:
 - Reference
 - Video
 - play
+browser-compat: api.HTMLMediaElement.play
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
@@ -35,7 +36,7 @@ tags:
   rejected if for any reason playback cannot be started.</p>
 
 <div class="note">
-  <p><strong>Note:</strong> Older browsers may not return a value from
+  <p><strong>Note:</strong> Browsers released before 2019 may not return a value from
     <code>play()</code>.</p>
 </div>
 
@@ -71,7 +72,7 @@ tags:
   promise to be immediately rejected with a <code>NotAllowedError</code>. Web sites should
   be prepared to handle this situation. For example, a site should not present a user
   interface that assumes playback has begun automatically, but should instead update their
-  UI based on whether the returned promise is resolved or rejected. See the
+  UI based on whether the returned promise is fulfilled or rejected. See the
   {{anch("Example", "example")}} below for more information.</p>
 
 <div class="note">
@@ -134,36 +135,11 @@ function handlePlayButton() {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th>Specification</th>
-      <th>Status</th>
-      <th>Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', 'embedded-content.html#dom-media-play', 'play()')}}
-      </td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td>Initial definition; living specification.</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML5 W3C','embedded-content-0.html#dom-media-play','play()')}}</td>
-      <td>{{Spec2('HTML5 W3C')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
-
-<div class="note">
-  <p><strong>Note:</strong> The WHATWG and W3C versions of the specification differ (as of
-    August, 2018) as to whether this method returns a {{jsxref("Promise")}} or nothing at
-    all, respectively.</p>
-</div>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.HTMLMediaElement.play")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -5,7 +5,7 @@ tags:
   - Deprecated
   - Guide
   - JavaScript
-  - Obsolete
+  - Deprecated
 ---
 <p>{{JsSidebar("More")}}</p>
 
@@ -149,7 +149,7 @@ tags:
 
 <ul>
  <li>{{jsxref("Global_Objects/Date/getYear", "getYear")}} and {{jsxref("Global_Objects/Date/setYear", "setYear")}} are affected by the Year-2000-Problem and have been subsumed by {{jsxref("Global_Objects/Date/getFullYear", "getFullYear")}} and {{jsxref("Global_Objects/Date/setFullYear", "setFullYear")}}.</li>
- <li>You should use {{jsxref("Global_Objects/Date/toISOString", "toISOString")}} instead of the deprecated {{jsxref("Global_Objects/Date/toGMTString", "toGMTString")}} method in new code.</li>
+ <li>You should use {{jsxref("Global_Objects/Date/toUTCString", "toUTCString")}} instead of the deprecated {{jsxref("Global_Objects/Date/toGMTString", "toGMTString")}} method in new code.</li>
  <li>{{jsxref("Global_Objects/Date/toLocaleFormat", "toLocaleFormat")}} is deprecated.</li>
 </ul>
 
@@ -243,7 +243,17 @@ tags:
  </tbody>
 </table>
 
+<h3 id="String">String</h3>
+
+<ul>
+ <li>Non-standard String generic methods like <code>String.slice(myStr, 0, 12)</code>, <code>String.replace(myStr, /\./g, "!")</code>, etc. have been introduced in Firefox 1.5 (JavaScript 1.6), deprecated in Firefox 53, and removed in Firefox 68. You can use methods on {{jsxref("String", "String.prototype", "instance_methods")}} together with {{jsxref("Function.call")}} instead.</li>
+</ul>
+
 <h3 id="Array">Array</h3>
+
+<ul>
+ <li>Non-standard Array generic methods like <code>Array.slice(myArr, 0, 12)</code>, <code>Array.forEach(myArr, myFn)</code>, etc. have been introduced in Firefox 1.5 (JavaScript 1.6), deprecated in Firefox 68, and removed in Firefox 71. You can use methods on {{jsxref("Array", "Array.prototype", "instance_methods")}} together with {{jsxref("Function.call")}} instead.</li>
+</ul>
 
 <table class="standard-table">
  <tbody>

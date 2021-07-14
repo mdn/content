@@ -7,8 +7,6 @@ tags:
   - NeedsContent
   - Web Development
 ---
-<p>{{Page("/en-US/docs/Web/Accessibility/ARIA/Roles", "Subnav")}}</p>
-
 <p><span class="seoSummary">The <code><a href="https://www.w3.org/TR/2009/WD-wai-aria-20091215/roles#dialog">dialog</a></code> role is used to mark up an HTML based application dialog or window that separates content or UI from the rest of the web application or page. Dialogs are generally placed on top of the rest of the page content using an overlay. Dialogs can be either non-modal (it's still possible to interact with content outside of the dialog) or modal (only the content in the dialog can be interacted with).</span></p>
 
 <pre class="brush: html">&lt;div <strong>role="dialog" aria-labelledby="dialog1Title" aria-describedby="dialog1Desc"</strong>&gt;
@@ -54,7 +52,7 @@ tags:
  <li>After the dialog is dismissed, keyboard focus should be moved back to where it was before it moved into the dialog. Otherwise the focus can be dropped to the beginning of the page.</li>
  <li>For most dialogs, the expected behavior is that the dialog's tab order <em>wraps</em>, which means that when the user tabs through the focusable elements in the dialog, the first focusable element will be focused after the last one has been reached. In other words, the tab order should be contained within and by the dialog.</li>
  <li>If the dialog can be moved or resized, ensure that these actions must be performable by keyboard users as well as mouse users. Similarly, if a dialog provides special features like toolbars or context menus, these must be reachable and operable by keyboard users as well.</li>
- <li>Dialogs can be modal or non-modal. When a <em>modal</em> dialog appears on the screen, it's not possible to interact with any page content outside the dialog. In other words, the main application UI or page content is considered to be temporarily disabled as long as the modal dialog is showing. For <em>non-modal</em> dialogs it is still possible to interact with content outside of the dialog while the dialog is showing. Note that for non-modal dialogs there will have to be a global keyboard shortcut that allows focus to be moved between opened dialogs and the main page. For more information see the <a href="/en-US/docs/ARIA/ARIA_Guides/Managing_Modal_and_Non_Modal_Dialogs">Managing Modal and Non Modal Dialogs</a> guide.</li>
+ <li>Dialogs can be modal or non-modal. When a <em>modal</em> dialog appears on the screen, it's not possible to interact with any page content outside the dialog. In other words, the main application UI or page content is considered to be temporarily disabled as long as the modal dialog is showing. For <em>non-modal</em> dialogs it is still possible to interact with content outside of the dialog while the dialog is showing. Note that for non-modal dialogs there will have to be a global keyboard shortcut that allows focus to be moved between opened dialogs and the main page.</li>
 </ul>
 
 <h3 id="Associated_ARIA_roles_states_and_properties">Associated ARIA roles, states, and properties</h3>
@@ -111,7 +109,7 @@ tags:
 <h4 id="Working_Examples">Working Examples:</h4>
 
 <ul>
- <li><a href="http://jqueryui.com/demos/dialog/">jQuery-UI Dialog</a></li>
+ <li><a href="https://jqueryui.com/demos/dialog/">jQuery-UI Dialog</a></li>
 </ul>
 
 <h3 id="Notes">Notes </h3>
@@ -143,3 +141,10 @@ tags:
  <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Alertdialog_Role">ARIA: alertdialog role</a></li>
  <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role">Using the alertdialog role</a></li>
 </ul>
+
+
+<section id="Quick_links">
+  <ol>
+      <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles"><strong>WAI-ARIA roles</strong></a>{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}</li>
+  </ol>
+</section>

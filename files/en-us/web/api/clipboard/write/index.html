@@ -14,6 +14,7 @@ tags:
 - copy
 - paste
 - write
+browser-compat: api.Clipboard.write
 ---
 <div>{{APIRef("Clipboard API")}}</div>
 
@@ -57,22 +58,31 @@ tags:
 <p>This example function replaces the current contents of the clipboard with a specified
   string.</p>
 
-<pre class="brush: js">function setClipboard(text) {
-  let data = [new ClipboardItem({ "text/plain": text })];
+<pre class="brush: js">
+function setClipboard(text) {
+    var type = "text/plain";
+    var blob = new Blob([text], { type });
+    var data = [new ClipboardItem({ [type]: blob })];
 
-  navigator.clipboard.write(data).then(function() {
-    /* success */
-  }, function() {
-    /* failure */
-  });
+    navigator.clipboard.write(data).then(
+        function () {
+        /* success */
+        },
+        function () {
+        /* failure */
+        }
+    );
 }
 </pre>
 
-<p>The code begins by creating a new {{domxref("ClipboardItem")}} object into which the
-  text will be placed for sending to the clipboard. The key of the object passed to the
-  {{domxref("ClipboardItem")}} constructor indicates the content type, the value indicates
-  the content. The content could be a text or even a Blob (e.g. for copying images to the
-  clipboard). Then <code>write()</code> is called, specifying both a fulfillment function
+<p>The code begins by creating a new a {{domxref("Blob")}} object. This object is 
+  required to construct a {{domxref("ClipboardItem")}} object which is sent to the 
+  clipboard. The {{domxref("Blob")}} constructor takes in  the content we want to copy
+  and its type. This {{domxref("Blob")}} object can be derived from many sources e.g. a {{domxref("Canvas")}}.
+  <br />
+  <br />
+  Next, we create a new {{domxref("ClipboardItem")}} object into which the blob will be placed for sending to the clipboard. 
+  The key of the object passed to the {{domxref("ClipboardItem")}} constructor indicates the content type, the value indicates the content. Then <code>write()</code> is called, specifying both a fulfillment function
   and an error function.</p>
 
 <h3 id="Example_of_copying_canvas_contents_to_the_clipboard">Example of copying canvas
@@ -96,24 +106,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Clipboard API','#dom-clipboard-write','write()')}}</td>
-      <td>{{Spec2('Clipboard API')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Clipboard.write")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

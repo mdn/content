@@ -159,7 +159,7 @@ tags:
 
 <p>Promises are important to understand because most modern Web APIs use them for functions that perform potentially lengthy tasks. To use modern web technologies you'll need to use promises. Later on in the chapter, we'll look at how to write your own promise, but for now, we'll look at some simple examples that you'll encounter in Web APIs.</p>
 
-<p>In the first example, we'll use the <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch()</a></code> method to fetch an image from the web, the {{domxref("Body.blob", "blob()")}} method to transform the fetch response's raw body contents into a {{domxref("Blob")}} object, and then display that blob inside an {{htmlelement("img")}} element. This is very similar to the example we looked at in the <a href="/en-US/docs/Learn/JavaScript/Asynchronous/Introducing#asynchronous_javascript">first article of the series</a>, but we'll do it a bit differently as we get you building your own promise-based code.</p>
+<p>In the first example, we'll use the <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch()</a></code> method to fetch an image from the web, the {{domxref("Response.blob()")}} method to transform the fetch response's raw body contents into a {{domxref("Blob")}} object, and then display that blob inside an {{htmlelement("img")}} element. This is very similar to the example we looked at in the <a href="/en-US/docs/Learn/JavaScript/Asynchronous/Introducing#asynchronous_javascript">first article of the series</a>, but we'll do it a bit differently as we get you building your own promise-based code.</p>
 
 <div class="notecard note">
 <p><strong>Note</strong>: The following example will not work if you just run it directly from the file (i.e. via a <code>file://</code> URL). You need to run it through a <a href="/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server">local testing server</a>, or use an online solution such as <a href="https://glitch.com/">Glitch</a> or <a href="/en-US/docs/Learn/Common_questions/Using_Github_pages">GitHub pages</a>.</p>
@@ -279,7 +279,7 @@ document.body.appendChild(image);</pre>
 
 <h2 id="Promise_terminology_recap">Promise terminology recap</h2>
 
-<p>There was a lot to cover in the above section, so let's go back over it quickly to give you a <a href="/en-US/docs/Learn/JavaScript/Asynchronous/Promises#promise_terminology_recap">short guide that you can bookmark</a> and use to refresh your memory in the future. You should also go over the above section again a few more time to make sure these concepts stick.</p>
+<p>There was a lot to cover in the above section, so let's go back over it quickly to give you a <a href="/en-US/docs/Learn/JavaScript/Asynchronous/Promises#promise_terminology_recap">short guide that you can bookmark</a> and use to refresh your memory in the future. You should also go over the above section again a few more times to make sure these concepts stick.</p>
 
 <ol>
  <li>When a promise is created, it is neither in a success or failure state. It is said to be <strong>pending</strong>.</li>
@@ -487,7 +487,7 @@ document.body.appendChild(para);</pre>
 <p>Let's have a look at a simple example to get you started — here we wrap a <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">setTimeout()</a></code> call with a promise — this runs a function after two seconds that resolves the promise (using the passed <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve">resolve()</a></code> call) with a string of "Success!".</p>
 
 <pre class="brush: js">let timeoutPromise = new Promise((resolve, reject) =&gt; {
-  setTimeout(function(){
+  setTimeout(() =&gt; {
     resolve('Success!');
   }, 2000);
 });</pre>
@@ -529,7 +529,7 @@ document.body.appendChild(para);</pre>
     } else if (interval &lt; 0 || typeof interval !== 'number') {
       reject('Interval is negative or not a number');
     } else {
-      setTimeout(function(){
+      setTimeout(() =&gt; {
         resolve(message);
       }, interval);
     }

@@ -2,16 +2,16 @@
 title: 'TypeError: can''t redefine non-configurable property "x"'
 slug: Web/JavaScript/Reference/Errors/Cant_redefine_property
 tags:
-- Error
-- Errors
-- JavaScript
-- TypeError
+  - Error
+  - Errors
+  - JavaScript
+  - TypeError
 ---
 <div>{{jsSidebar("Errors")}}</div>
 
 <p>The JavaScript exception "can't redefine non-configurable property" occurs when it was
   attempted to redefine a property, but that property is <a
-    href="/en-US/docs/Web/JavaScript/Data_structures#Properties">non-configurable</a>.</p>
+    href="/en-US/docs/Web/JavaScript/Data_structures#properties">non-configurable</a>.</p>
 
 <h2 id="Message">Message</h2>
 
@@ -27,7 +27,7 @@ TypeError: Cannot redefine property: "x" (Chrome)
 <h2 id="What_went_wrong">What went wrong?</h2>
 
 <p>It was attempted to redefine a property, but that property is <a
-    href="/en-US/docs/Web/JavaScript/Data_structures#Properties">non-configurable</a>. The
+    href="/en-US/docs/Web/JavaScript/Data_structures#properties">non-configurable</a>. The
   <code>configurable</code> attribute controls whether the property can be deleted from
   the object and whether its attributes (other than <code>writable</code>) can be changed.
   Usually, properties in an object created by an <a
@@ -60,7 +60,7 @@ Object.defineProperty(obj, "foo", {value: "baz", configurable: true});</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/Web/JavaScript/Data_structures#Properties">[[Configurable]]</a>
+  <li><a href="/en-US/docs/Web/JavaScript/Data_structures#properties">[[Configurable]]</a>
   </li>
   <li>{{jsxref("Object.defineProperty()")}}</li>
 </ul>

@@ -13,9 +13,9 @@ tags:
 
 <h2 id="Advantages_of_Houdini">Advantages of Houdini</h2>
 
-<p>Houdini enables faster parse times than using JavaScript <code><a href="/en-US/docs/Web/API/ElementCSSInlineStyle/style">style</a></code> for style changes. Browsers parse the CSSOM — including layout, paint, and composite processes — before applying any style updates found in scripts. In addition, layout, paint, and composite processes are repeated for JavaScript style updates. Houdini code doesn't wait for that first rendering cycle to be complete. Rather, it is included in that first cycle — creating renderable, understandable styles. Houdini provides an object-based API for working with CSS values in JavaScript.</p>
+<p>Houdini enables faster parse times than using JavaScript <code><a href="/en-US/docs/Web/API/HTMLElement/style">style</a></code> for style changes. Browsers parse the CSSOM — including layout, paint, and composite processes — before applying any style updates found in scripts. In addition, layout, paint, and composite processes are repeated for JavaScript style updates. Houdini code doesn't wait for that first rendering cycle to be complete. Rather, it is included in that first cycle — creating renderable, understandable styles. Houdini provides an object-based API for working with CSS values in JavaScript.</p>
 
-<p>Houdini's CSS Typed OM is a CSS Object Model with types and methods, exposing values as JavaScript objects making for more intuitive CSS manipulation than previous string based <code><a href="/en-US/docs/Web/API/ElementCSSInlineStyle/style">HTMLElement.style</a></code> manipulations. Every element and style sheet rule has a style map which is accessible via its <code><a href="/en-US/docs/Web/API/StylePropertyMap">StylePropertyMap</a></code>.</p>
+<p>Houdini's CSS Typed OM is a CSS Object Model with types and methods, exposing values as JavaScript objects making for more intuitive CSS manipulation than previous string based <code><a href="/en-US/docs/Web/API/HTMLElement/style">HTMLElement.style</a></code> manipulations. Every element and style sheet rule has a style map which is accessible via its <code><a href="/en-US/docs/Web/API/StylePropertyMap">StylePropertyMap</a></code>.</p>
 
 <p>A feature of CSS Houdini is the <a href="/en-US/docs/Web/API/Worklet">Worklet</a>. With worklets, you can create modular CSS, requiring a single line of JavaScript to import configurable components: no pre-processors, post-processors or JavaScript frameworks needed.</p>
 
@@ -29,7 +29,7 @@ tags:
 <p>The CSS <code>paint()</code> function parameters include the name of the worklet, along with optional parameters. The worklet also has access to the element's custom properties: they don't need to be passed as function arguments.</p>
 
 <pre class="brush: css">li {
-	background-image: paint(myComponent, stroke, 10px);
+    background-image: paint(myComponent, stroke, 10px);
     --highlights: blue;
     --lowlights: green;
 }</pre>
@@ -82,5 +82,5 @@ tags:
 
 <ul>
   <li>The <a href="https://houdini.how/">Worklet library</a> for examples and code.</li>
-  <li><a href="http://houdini.glitch.me/">Interactive introduction to Houdini</a></li>
+  <li><a href="https://houdini.glitch.me/">Interactive introduction to Houdini</a></li>
 </ul>

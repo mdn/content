@@ -2,22 +2,26 @@
 title: Intl.PluralRules() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules
 tags:
-- Constructor
-- Internationalization
-- Intl
-- JavaScript
-- Localization
-- PluralRules
-- Reference
+  - Constructor
+  - Internationalization
+  - Intl
+  - JavaScript
+  - Localization
+  - PluralRules
+  - Reference
+browser-compat: javascript.builtins.Intl.PluralRules.PluralRules
 ---
 <div>{{JSRef}}</div>
 
 <p>The <strong><code>Intl.PluralRules()</code></strong> constructor creates
-	{{jsxref("PluralRules", "Intl.PluralRules")}} objects.</p>
+	{{jsxref("Intl/PluralRules", "Intl.PluralRules")}} objects.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js">new Intl.PluralRules([<var>locales</var>[, <var>options</var>]])
+<pre class="brush: js">
+new Intl.PluralRules()
+new Intl.PluralRules(locales)
+new Intl.PluralRules(locales, options)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -69,7 +73,7 @@ tags:
 				to 20; the default for plain number and percent formatting is 0; the
 				default for currency formatting is the number of minor unit digits
 				provided by the <a
-					href="http://www.currency-iso.org/en/home/tables/table-a1.html">ISO
+					href="https://www.currency-iso.org/en/home/tables/table-a1.html">ISO
 					4217 currency code list</a> (2 if the list doesn't provide that
 				information).</dd>
 			<dt><code>maximumFractionDigits</code></dt>
@@ -78,7 +82,7 @@ tags:
 				<code>minimumFractionDigits</code> and 3; the default for currency
 				formatting is the larger of <code>minimumFractionDigits</code> and the
 				number of minor unit digits provided by the <a
-					href="http://www.currency-iso.org/en/home/tables/table-a1.html">ISO
+					href="https://www.currency-iso.org/en/home/tables/table-a1.html">ISO
 					4217 currency code list</a> (2 if the list doesn't provide that
 				information); the default for percent formatting is the larger of
 				<code>minimumFractionDigits</code> and 0.</dd>
@@ -121,39 +125,36 @@ pr.select(2);
 
 <pre class="brush: js">var pr = new Intl.PluralRules('en-US', { type: 'ordinal' });
 
-pr.select(0);
-// → 'other'
-pr.select(1);
-// → 'one'
-pr.select(2);
-// → 'two'
-pr.select(3);
-// → 'few'
-pr.select(4);
-// → 'other'
-pr.select(42);
-// → 'two'
+const suffixes = new Map([
+  ['one',   'st'],
+  ['two',   'nd'],
+  ['few',   'rd'],
+  ['other', 'th'],
+]);
+const formatOrdinals = (n) =&gt; {
+  const rule = pr.select(n);
+  const suffix = suffixes.get(rule);
+  return `${n}${suffix}`;
+};
+
+formatOrdinals(0);   // '0th'
+formatOrdinals(1);   // '1st'
+formatOrdinals(2);   // '2nd'
+formatOrdinals(3);   // '3rd'
+formatOrdinals(4);   // '4th'
+formatOrdinals(11);  // '11th'
+formatOrdinals(21);  // '21st'
+formatOrdinals(42);  // '42nd'
+formatOrdinals(103); // '103rd'
 </pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName('ES Int Draft', '#sec-intl-pluralrules-constructor',
-				'Intl.PluralRules() constructor')}}</td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>{{Compat("javascript.builtins.Intl.PluralRules.PluralRules")}}</div>
+<div>{{Compat}}</div>
 
 <h2 id="See_also">See also</h2>
 

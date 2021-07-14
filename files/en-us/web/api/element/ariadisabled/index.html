@@ -9,14 +9,14 @@ tags:
   - AriaAttributes
   - AriaMixin
   - Element
+browser-compat: api.Element.ariaDisabled
 ---
 <div>{{DefaultAPISidebar("DOM")}}</div>
 
 <p class="summary">The <strong><code>ariaDisabled</code></strong> property of the {{domxref("Element")}} interface reflects the value of the <code>aria-disabled</code> attribute, which indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.</p>
 
 <div class="notecard note">
-  <h3>Note</h3>
-  <p>Where possible use an HTML {{htmlelement("input")}} element with <code>type="button"</code> or the {{htmlelement("button")}} element as these have built in semantics and do not require ARIA attributes.</p>
+  <p><strong>Note:</strong> Where possible, use the {{htmlelement("input")}} element with <code>type="button"</code> or the {{htmlelement("button")}} element —  because those elements have built in semantics and do not require ARIA attributes.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
@@ -29,10 +29,9 @@ tags:
 
 <dl>
   <dt><code>"true"</code></dt>
-  <dd>The element is enabled.</dd>
+  <dd>The element and all focusable descendants are disabled, but perceivable, and their values cannot be changed by the user.</dd>
   <dt><code>"false"</code></dt>
-  <dd>The element and all focusable descendants are disabled and its value cannot be changed by the user.</dd>
-</dl>
+  <dd>The element is enabled.</dl>
 
 <h2 id="Examples">Examples</h2>
 
@@ -47,23 +46,8 @@ console.log(el.ariaDisabled); // "false"</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ARIA 1.2','#dom-ariamixin-ariadisabled','ariaDisabled')}}</td>
-   <td>{{Spec2('ARIA 1.2')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
-
-<p>{{Compat("api.Element.ariaDisabled")}}</p>
+<p>{{Compat}}</p>

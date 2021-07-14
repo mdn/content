@@ -11,10 +11,11 @@ tags:
   - Reference
   - Style
   - revert
+browser-compat: css.types.global_keywords.revert
 ---
 <div>{{CSSRef}}</div>
 
-<p><span class="seoSummary">The <strong><code>revert</code></strong> CSS keyword reverts the cascaded value of the property from its current value to the value the property would have had if no changes had been made by the current <strong>{{Glossary("style origin")}}</strong> to the current element.</span> Thus, it resets the property to its inherited value if it inherits from its parent or to the default value established by the user agent's stylesheet (or by user styles, if any exist). It can be applied to any CSS property, including the CSS shorthand {{cssxref("all")}}.</p>
+<p>The <strong><code>revert</code></strong> CSS keyword reverts the cascaded value of the property from its current value to the value the property would have had if no changes had been made by the current <strong>{{Glossary("style origin")}}</strong> to the current element. Thus, it resets the property to its inherited value if it inherits from its parent or to the default value established by the user agent's stylesheet (or by user styles, if any exist). It can be applied to any CSS property, including the CSS shorthand {{cssxref("all")}}.</p>
 
 <p>This removes from the cascade all of the styles that have been overridden until the style being rolled back to is reached.</p>
 
@@ -101,29 +102,14 @@ section.with-revert { color: revert }
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Cascade', '#default', 'revert')}}</td>
-   <td>{{Spec2('CSS4 Cascade')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
 <div>
 
-<p>{{Compat("css.types.global_keywords.revert")}}</p>
+<p>{{Compat}}</p>
 </div>
 </div>
 

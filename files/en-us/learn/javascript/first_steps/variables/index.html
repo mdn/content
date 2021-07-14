@@ -38,46 +38,60 @@ tags:
 
 <p>Throughout this article, you'll be asked to type in lines of code to test your understanding of the content. If you are using a desktop browser, the best place to type your sample code is your browser's JavaScript console (see <a href="/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">What are browser developer tools</a> for more information on how to access this tool).</p>
 
-<h2 id="What_is_a_variable">What is a variable?</h2>
 
-<p>A variable is a container for a value, like a number we might use in a sum, or a string that we might use as part of a sentence. But one special thing about variables is that their contained values can change. Let's look at a simple example:</p>
+<h2>What is a variable?</h2>
 
-<pre class="brush: html">&lt;button&gt;Press me&lt;/button&gt;</pre>
+<p>A variable is a container for a value, like a number we might use in a sum, or a string that we might use as part of a sentence. Let's look at a simple example:</p>
 
-<pre class="brush: js">const button = document.querySelector('button');
+<div id="example_with_variabele">
+    <pre class="brush: html">
+    &lt;button id="button_A"&gt;Press me&lt;/button&gt;
+    &lt;h3 id="heading_A"&gt;&lt;/h3&gt;
+    </pre>
 
-button.onclick = function() {
-  let name = prompt('What is your name?');
-  alert('Hello ' + name + ', nice to see you!');
-}</pre>
+    <pre class="brush: js">
+    const buttonA = document.querySelector('#button_A');
+    const headingA = document.querySelector('#heading_A');
+    
+    buttonA.onclick = function() {
+      let name = prompt('What is your name?');
+      alert('Hello ' + name + ', nice to see you!');
+      headingA.textContent = 'Welcome ' + name;
+    }</pre>
+    
+    <p>{{ EmbedLiveSample('example_with_variabele', '100%', 50, "", "", "hide-codepen-jsfiddle") }}</p>
+</div>
 
-<p>{{ EmbedLiveSample('What_is_a_variable', '100%', 50, "", "", "hide-codepen-jsfiddle") }}</p>
-
-<p>In this example pressing the button runs a couple of lines of code. The first line pops a box up on the screen that asks the reader to enter their name, and then stores the value in a variable. The second line displays a welcome message that includes their name, taken from the variable value.</p>
+<p>In this example pressing the button runs some code. The first line pops a box up on the screen that asks the reader to enter their name, and then stores the value in a variable. The second line displays a welcome message that includes their name, taken from the variable value and the third line displays that name on the page.</p>
 
 <p>To understand why this is so useful, let's think about how we'd write this example without using a variable. It would end up looking something like this:</p>
 
-<pre class="example-bad">let name = prompt('What is your name?');
 
-if (name === 'Adam') {
-  alert('Hello Adam, nice to see you!');
-} else if (name === 'Alan') {
-  alert('Hello Alan, nice to see you!');
-} else if (name === 'Bella') {
-  alert('Hello Bella, nice to see you!');
-} else if (name === 'Bianca') {
-  alert('Hello Bianca, nice to see you!');
-} else if (name === 'Chris') {
-  alert('Hello Chris, nice to see you!');
-}
+<div id="example_without_variable">
 
-// ... and so on ...</pre>
+    <pre class="brush: html example-bad">
+    &lt;button id="button_B"&gt;Press me&lt;/button&gt;
+    &lt;h3 id="heading_B"&gt;&lt;/h3&gt;
+    </pre>
 
-<p>You may not fully understand the syntax we are using (yet!), but you should be able to get the idea — if we didn't have variables available, we'd have to implement a giant code block that checked what the entered name was, and then display the appropriate message for any name. This is obviously really inefficient (the code is a lot bigger, even for only five choices), and it just wouldn't work — you couldn't possibly store all possible choices.</p>
+    <pre class="brush: js example-bad">
+    const buttonB = document.querySelector('#button_B');
+    const headingB = document.querySelector('#heading_B');
+    
+    buttonB.onclick = function() {
+        alert('Hello ' + prompt('What is your name?') + ', nice to see you!');
+        headingB.textContent = 'Welcome ' + prompt('What is your name?');
+    }</pre>
+    
+    <p>{{ EmbedLiveSample('example_without_variable', '100%', 50, "", "", "hide-codepen-jsfiddle") }}</p>
+</div>
+
+
+<p>You may not fully understand the syntax we are using (yet!), but you should be able to get the idea. If we didn't have variables available, we'd have to ask the reader for their name every time we needed to use it!</p>
 
 <p>Variables just make sense, and as you learn more about JavaScript they will start to become second nature.</p>
 
-<p>Another special thing about variables is that they can contain just about anything — not just strings and numbers. Variables can also contain complex data and even entire functions to do amazing things. You'll learn more about this as you go along.</p>
+<p>One special thing about variables is that they can contain just about anything — not just strings and numbers. Variables can also contain complex data and even entire functions to do amazing things. You'll learn more about this as you go along.</p>
 
 <div class="note">
 <p><strong>Note</strong>: We say variables contain values. This is an important distinction to make. Variables aren't the values themselves; they are containers for values. You can think of them being like little cardboard boxes that you can store things in.</p>
@@ -308,13 +322,13 @@ typeof myNumber;</pre>
 
 <p>In the early days of JavaScript, constants didn't exist. In modern JavaScript, we have the keyword <code>const</code>, which lets us store values that can never be changed:</p>
 
-<pre class="brush: js">const daysInWeek = 7<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox objectBox-number">;
-const hoursInDay = 24;</span></span></span></span></pre>
+<pre class="brush: js">const daysInWeek = 7;
+const hoursInDay = 24;</pre>
 
-<p><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox objectBox-number"><code>const</code> works in exactly the same way as <code>let</code>, except that you can't give a <code>const</code> a new value. In the following example, the second line would throw an error:</span></span></span></span></p>
+<p><code>const</code> works in exactly the same way as <code>let</code>, except that you can't give a <code>const</code> a new value. In the following example, the second line would throw an error:</p>
 
-<pre class="brush: js">const daysInWeek = 7<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox objectBox-number">;
-daysInWeek = 8;</span></span></span></span></pre>
+<pre class="brush: js">const daysInWeek = 7;
+daysInWeek = 8;</pre>
 
 <h2 id="Test_your_skills!">Test your skills!</h2>
 

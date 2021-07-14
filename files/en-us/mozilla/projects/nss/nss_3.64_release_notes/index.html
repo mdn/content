@@ -1,0 +1,44 @@
+---
+title: NSS 3.64 release notes
+slug: Mozilla/Projects/NSS/NSS_3.64_release_notes
+---
+<h2 id="Introduction">Introduction</h2>
+
+<p>Network Security Services (NSS) 3.64 was released on <strong>15 April 2021</strong>.</p>
+
+
+<h2 id="Distribution_Information">Distribution Information</h2>
+
+<p>The HG tag is NSS_3_64_RTM. NSS 3.64 requires NSPR 4.30 or newer.</p>
+
+<p>NSS 3.64 source distributions are available on ftp.mozilla.org for secure HTTPS download:</p>
+
+<ul>
+ <li>Source tarballs:<br>
+  <a href="https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_64_RTM/src/">https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_64_RTM/src/</a></li>
+</ul>
+
+<p>Other releases are available <a href="/en-US/docs/Mozilla/Projects/NSS/NSS_Releases">in NSS Releases</a>.</p>
+
+<h2 id="Bugs_fixed_in_NSS_3.64">Bugs fixed in NSS 3.64</h2>
+
+<ul>
+  <li> Bug 1705286 - Properly detect mips64.</li>
+  <li> Bug 1687164 - Introduce NSS_DISABLE_CRYPTO_VSX and disable_crypto_vsx.</li>
+  <li> Bug 1698320 - replace __builtin_cpu_supports("vsx") with ppc_crypto_support() for clang.</li>
+  <li> Bug 1613235 - Add POWER ChaCha20 stream cipher vector acceleration.</li>
+</ul>
+
+<h2 id="Compatibility">Compatibility</h2>
+
+<p>NSS 3.64 shared libraries are backwards-compatible with all older NSS 3.x shared libraries. A program linked with older NSS 3.x shared libraries will work with NSS 3.64 shared libraries without recompiling or relinking. Furthermore, applications that restrict their use of NSS APIs to the functions listed in NSS Public Functions will remain compatible with future versions of the NSS shared libraries.</p>
+
+<h2 id="Feedback">Feedback</h2>
+
+<p>Bugs discovered should be reported by filing a bug report on <a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=NSS">bugzilla.mozilla.org</a> (product NSS).</p>
+
+<h2 id="Notes">Notes</h2>
+
+<p>This version of NSS contains a number of contributions for "unsupported platforms". We would like to thank the authors and the reviewers for their contributions to NSS.</p>
+
+<p>Discussions about moving the documentation are still ongoing. (See discussion in the 3.62 release notes.)</p>

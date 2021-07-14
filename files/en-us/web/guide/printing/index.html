@@ -32,7 +32,7 @@ tags:
 
 <p>Some browsers (including Firefox 6 and later and Internet Explorer) send <code>beforeprint</code> and <code>afterprint</code> events to let content determine when printing may have occurred. You can use this to adjust the user interface presented during printing (such as by displaying or hiding user interface elements during the print process).</p>
 
-<div class="note"><strong>Note:</strong> You can also use <a href="/en-US/docs/DOM/window.onbeforeprint"><code>window.onbeforeprint</code></a> and <a href="/en-US/docs/DOM/window.onafterprint"><code>window.onafterprint</code></a> to assign handlers for these events, but using {{domxref("EventTarget.addEventListener()")}} is preferred.</div>
+<div class="note"><strong>Note:</strong> You can also use <a href="/en-US/docs/Web/API/WindowEventHandlers/onbeforeprint"><code>window.onbeforeprint</code></a> and <a href="/en-US/docs/Web/API/WindowEventHandlers/onafterprint"><code>window.onafterprint</code></a> to assign handlers for these events, but using {{domxref("EventTarget.addEventListener()")}} is preferred.</div>
 
 <h2 id="Examples">Examples</h2>
 
@@ -40,7 +40,7 @@ tags:
 
 <h4 id="Open_and_automatically_close_a_popup_window_when_finished">Open and automatically close a popup window when finished</h4>
 
-<p>If you want to be able to automatically close a <a href="/en-US/docs/DOM/window.open">popup window</a> (for example, the printer-friendly version of a document) after the user prints its contents, you can use code like this:</p>
+<p>If you want to be able to automatically close a <a href="/en-US/docs/Web/API/Window/open">popup window</a> (for example, the printer-friendly version of a document) after the user prints its contents, you can use code like this:</p>
 
 <pre class="brush: html">&lt;!doctype html&gt;
 &lt;html&gt;
@@ -65,11 +65,11 @@ tags:
 &lt;/html&gt;
 </pre>
 
-<div><a href="/samples/domref/printevents.html">View Live Examples</a></div>
+<div><a href="https://media.prod.mdn.mozit.cloud/samples/domref/printevents.html">View Live Examples</a></div>
 
 <h3 id="Print_an_external_page_without_opening_it">Print an external page without opening it</h3>
 
-<p>If you want to be able to print an external page without opening it, you can utilize a hidden {{HTMLElement("iframe")}} (see: <a href="/en-US/docs/DOM/HTMLIFrameElement">HTMLIFrameElement</a>), automatically removing it after the user prints its contents. The following is a possible example which will print a file named <code>externalPage.html</code>:</p>
+<p>If you want to be able to print an external page without opening it, you can utilize a hidden {{HTMLElement("iframe")}} (see: <a href="/en-US/docs/Web/API/HTMLIFrameElement">HTMLIFrameElement</a>), automatically removing it after the user prints its contents. The following is a possible example which will print a file named <code>externalPage.html</code>:</p>
 
 <pre class="brush: html">&lt;!doctype html&gt;
 &lt;html&gt;
@@ -115,9 +115,9 @@ function printPage (sURL) {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/DOM/window.print"><code>window.print</code></a></li>
- <li><a href="/en-US/docs/DOM/window.onbeforeprint"><code>window.onbeforeprint</code></a></li>
- <li><a href="/en-US/docs/DOM/window.onafterprint"><code>window.onafterprint</code></a></li>
- <li><a href="/en-US/docs/CSS/Media_queries" title="CSS/Media queries">Media queries</a></li>
+ <li><a href="/en-US/docs/Web/API/Window/print"><code>window.print</code></a></li>
+ <li><a href="/en-US/docs/Web/API/WindowEventHandlers/onbeforeprint"><code>window.onbeforeprint</code></a></li>
+ <li><a href="/en-US/docs/Web/API/WindowEventHandlers/onafterprint"><code>window.onafterprint</code></a></li>
+ <li><a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries" title="CSS/Media queries">Media queries</a></li>
  <li>{{cssxref("@media")}}</li>
 </ul>

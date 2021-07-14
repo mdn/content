@@ -7,6 +7,7 @@ tags:
   - Reference
   - SVG
   - SVG DOM
+browser-compat: api.SVGMPathElement
 ---
 <div>{{APIRef("SVG")}}</div>
 
@@ -16,7 +17,12 @@ tags:
 
 <h2 id="Properties">Properties</h2>
 
-<p><em>This interface doesn't implement any specific properties, but inherits properties from its parent interface, {{domxref("SVGElement")}}.</em></p>
+<p><em>This interface also inherits properties from its parent, {{domxref("SVGElement")}}.</em></p>
+
+<dl>
+  <dt>{{domxref("SVGMPathElement.href")}} {{ReadOnlyInline}}</dt>
+  <dd>An {{domxref("SVGAnimatedString")}} that corresponds to the {{SVGAttr("href")}} or {{SVGAttr("xlink:href")}} attribute of the given {{SVGElement("mpath")}} element.</dd>
+</dl>
 
 <h2 id="Methods">Methods</h2>
 
@@ -24,26 +30,8 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG Animations 2", "#InterfaceSVGMPathElement", "SVGMPathElement")}}</td>
-   <td>{{Spec2("SVG Animations 2")}}</td>
-   <td>Removed the implemented interface {{domxref("SVGExternalResourcesRequired")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "animate.html#InterfaceSVGMPathElement", "SVGMPathElement")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.SVGMPathElement")}}</p>
+<p>{{Compat}}</p>

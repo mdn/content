@@ -7,10 +7,11 @@ tags:
   - CSS
   - CSS Descriptor
   - Reference
+browser-compat: css.at-rules.counter-style.negative
 ---
 <div>{{CSSRef}}</div>
 
-<p><span class="seoSummary">When defining custom counter styles, the <strong><code>negative</code></strong> descriptor lets you alter the representations of negative counter values, by providing a way to specify symbols to be appended or prepended to the counter representation when the value is negative.</span></p>
+<p>When defining custom counter styles, the <strong><code>negative</code></strong> descriptor lets you alter the representations of negative counter values, by providing a way to specify symbols to be appended or prepended to the counter representation when the value is negative.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -38,7 +39,7 @@ negative: "(" ")";   /* Surrounds value by '(' and ')' if it is negative */
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
@@ -46,13 +47,13 @@ negative: "(" ")";   /* Surrounds value by '(' and ')' if it is negative */
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html">&lt;ul class="list" start="-3"&gt;
+<pre class="brush: html">&lt;ol class="list" start="-3"&gt;
   &lt;li&gt;One&lt;/li&gt;
   &lt;li&gt;Two&lt;/li&gt;
   &lt;li&gt;Three&lt;/li&gt;
   &lt;li&gt;Four&lt;/li&gt;
   &lt;li&gt;Five&lt;/li&gt;
-&lt;/ul&gt;</pre>
+&lt;/ol&gt;</pre>
 
 <h4 id="CSS">CSS</h4>
 
@@ -72,30 +73,15 @@ negative: "(" ")";   /* Surrounds value by '(' and ')' if it is negative */
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Counter Styles', '#counter-style-system', 'system')}}</td>
-   <td>{{Spec2('CSS3 Counter Styles')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.at-rules.counter-style.negative")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
  <li>{{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}</li>
- <li>{{cssxref("symbols", "symbols()")}}, the functional notation creating anonymous counter styles.</li>
+ <li>{{cssxref("symbols()", "symbols()")}}, the functional notation creating anonymous counter styles.</li>
 </ul>

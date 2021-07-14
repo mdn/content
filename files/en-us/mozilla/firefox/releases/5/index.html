@@ -17,13 +17,13 @@ tags:
  <li>In order to comply with the HTML5 specification, support for the UTF-7 and UTF-32 <a href="/en-US/docs/Character_Sets_Supported_by_Gecko">character sets</a> has been removed.</li>
  <li>When in quirks mode, empty {{ HTMLElement("map") }}s are no longer skipped over in favor of non-empty ones when matching. See the <a href="/en-US/docs/Web/HTML/Element/map#gecko_notes">Gecko notes</a> on the {{ HTMLElement("map") }} element for details.</li>
  <li>Firefox mobile on Android now supports WOFF fonts for {{ cssxref("@font-face") }}.</li>
- <li>WebGL <a href="/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL#cross-domain_textures">no longer loads textures from domains other than the originating domain</a>, as a security measure. <a href="/en-US/HTTP_access_control">HTTP access control</a> support should be coming sometime in the future to make this possible more securely.</li>
+ <li>WebGL <a href="/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL#cross-domain_textures">no longer loads textures from domains other than the originating domain</a>, as a security measure. <a href="/en-US/docs/Web/HTTP_access_control">HTTP access control</a> support should be coming sometime in the future to make this possible more securely.</li>
 </ul>
 
 <h4 id="Canvas_improvements">Canvas improvements</h4>
 
 <ul>
- <li>The {{ HTMLElement("canvas") }} 2D drawing context now supports specifying an <code>ImageData</code> object as the input to the <code>createImageData()</code> method; this <a href="/en-US/HTML/Canvas/Pixel_manipulation_with_canvas#creating_an_imagedata_object">creates a new <code>ImageData</code> object</a> initialized with the same dimensions as the specified object, but still with all pixels preset to transparent black. This was documented as implemented already but was not.</li>
+ <li>The {{ HTMLElement("canvas") }} 2D drawing context now supports specifying an <code>ImageData</code> object as the input to the <code>createImageData()</code> method; this <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas#creating_an_imagedata_object">creates a new <code>ImageData</code> object</a> initialized with the same dimensions as the specified object, but still with all pixels preset to transparent black. This was documented as implemented already but was not.</li>
  <li>Specifying non-finite values when adding color stops through a call to the {{ domxref("CanvasGradient") }} method <code>addColorStop()</code> now correctly throws <code>INDEX_SIZE_ERR</code> instead of <code>SYNTAX_ERR</code>.</li>
  <li>The {{ domxref("HTMLCanvasElement") }} method <code>toDataURL()</code> now correctly lower-cases the specified MIME type before matching.</li>
  <li><code>getImageData()</code> now correctly accepts rectangles that extend beyond the bounds of the canvas; pixels outside the canvas are returned as transparent black.</li>
@@ -54,7 +54,7 @@ tags:
  <li><a href="/en-US/docs/Web/API/XMLHttpRequest"><code>XMLHttpRequest</code></a> now <a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#detecting_any_load_end_condition">supports the <code>loadend</code> event</a> for progress listeners. This is sent after any transfer is finished (that is, after the <code>abort</code>, <code>error</code>, or <code>load</code> event). You can use this to handle any tasks that need to be performed regardless of success or failure of a transfer.</li>
  <li>The {{ domxref("Blob") }} and, by extension, the {{ domxref("File") }} objects' <code>slice()</code> method has been removed and replaced with a new, proposed syntax that makes it more consistent with <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice"><code>Array.slice()</code></a> and <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/slice"><code>String.slice()</code></a> methods in JavaScript. This method is named <a href="/en-US/docs/Web/API/Blob#mozslice()"><code>mozSlice()</code></a> for now.</li>
  <li>The value of {{ domxref("window.navigator.language") }} is now determined by looking at the value of the <code>Accept-Language</code> <a href="/en-US/docs/Web/HTTP/Headers">HTTP header</a>.</li>
- <li>The {{ domxref("Node.prefix") }} property is now read only, as required by the DOM specification.</li>
+ <li>The {{ domxref("Element.prefix") }} property is now read only, as required by the DOM specification.</li>
  <li>The {{ domxref("HTMLVideoElement") }} now supports experimental properties to get information about video paint statistics like frame rates.</li>
 </ul>
 

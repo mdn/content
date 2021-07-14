@@ -7,6 +7,7 @@ tags:
 - Reference
 - Storage
 - Web Storage
+browser-compat: api.Storage.removeItem
 ---
 <div>{{APIRef("Web Storage API")}}</div>
 
@@ -51,11 +52,11 @@ tags:
 <p>We can do the same for the session storage.</p>
 
 <pre class="brush: js">function populateStorage() {
-  <code>sessionStorage</code>.setItem('bgcolor', 'red');
-  <code>sessionStorage</code>.setItem('font', 'Helvetica');
-  <code>sessionStorage</code>.setItem('image', 'myCat.png');
+  sessionStorage.setItem('bgcolor', 'red');
+  sessionStorage.setItem('font', 'Helvetica');
+  sessionStorage.setItem('image', 'myCat.png');
 
-  <code>sessionStorage</code>.removeItem('image');
+  sessionStorage.removeItem('image');
 }</pre>
 
 <div class="note">
@@ -65,27 +66,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', 'webstorage.html#dom-storage-removeitem',
-        'Storage.removeItem')}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Storage.removeItem")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

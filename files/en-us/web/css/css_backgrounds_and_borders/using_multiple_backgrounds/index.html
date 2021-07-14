@@ -10,12 +10,12 @@ tags:
 ---
 <div>{{CSSRef}}</div>
 
-<p><span class="seoSummary">You can apply <strong>multiple backgrounds</strong> to elements. These are layered atop one another with the first background you provide on top and the last background listed in the back.</span> Only the last background can include a background color.</p>
+<p>You can apply <strong>multiple backgrounds</strong> to elements. These are layered atop one another with the first background you provide on top and the last background listed in the back. Only the last background can include a background color.</p>
 
 <p>Specifying multiple backgrounds is easy:</p>
 
 <pre class="brush: css">.myclass {
-  background: background1, background 2, ..., backgroundN;
+  background: background1, background2, ..., backgroundN;
 }
 </pre>
 
@@ -34,8 +34,8 @@ tags:
 <pre class="brush: css">.multi-bg-example {
   width: 100%;
   height: 400px;
-  background-image: url(https://mdn.mozillademos.org/files/11305/firefox.png),
-      url(https://mdn.mozillademos.org/files/11307/bubbles.png),
+  background-image: url(firefox.png),
+      url(bubbles.png),
       linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0));
   background-repeat: no-repeat,
       no-repeat,

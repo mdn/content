@@ -25,7 +25,7 @@ tags:
 <p>JavaScript objects are dynamic "bags" of properties (referred to as <strong>own properties</strong>). JavaScript objects have a link to a prototype object. When trying to access a property of an object, the property will not only be sought on the object but on the prototype of the object, the prototype of the prototype, and so on until either a property with a matching name is found or the end of the prototype chain is reached.</p>
 
 <div class="note">
-<p>Following the ECMAScript standard, the notation <code>someObject.[[Prototype]]</code> is used to designate the prototype of <code>someObject</code>. Since ECMAScript 2015, the <code>[[Prototype]]</code> is accessed using the accessors {{jsxref("Object.getPrototypeOf()")}} and {{jsxref("Object.setPrototypeOf()")}}. This is equivalent to the JavaScript property <code>__proto__</code> which is non-standard but de-facto implemented by many browsers.</p>
+<p><strong>Note:</strong> Following the ECMAScript standard, the notation <code>someObject.[[Prototype]]</code> is used to designate the prototype of <code>someObject</code>. Since ECMAScript 2015, the <code>[[Prototype]]</code> is accessed using the accessors {{jsxref("Object.getPrototypeOf()")}} and {{jsxref("Object.setPrototypeOf()")}}. This is equivalent to the JavaScript property <code>__proto__</code> which is non-standard but de-facto implemented by many browsers.</p>
 
 <p>It should not be confused with the <code><em>func</em>.prototype</code> property of functions, which instead specifies the <code>[[Prototype]]</code> to be assigned to all <em>instances</em> of objects created by the given function when used as a constructor. The <code><strong>Object.prototype</strong></code> property represents the {{jsxref("Object")}} prototype object.</p>
 </div>
@@ -111,12 +111,12 @@ console.log(p.m()); // 5
 
 <pre class="brush: js">function doSomething(){}
 console.log( doSomething.prototype );
-//  It does not matter how you declare the function, a
+//  It does not matter how you declare the function; a
 //  function in JavaScript will always have a default
-//  prototype property.
-//  (Ps: There is one exception that arrow function doesn't have a default prototype property)
-var doSomething = function(){};
-console.log( doSomething.prototype );
+//  prototype property — with one exception: an arrow
+//  function doesn't have a default prototype property:
+const doSomethingFromArrowFunction = () =&gt; {};
+console.log( doSomethingFromArrowFunction.prototype );
 </pre>
 
 <p>As seen above, <code>doSomething()</code> has a default <code>prototype</code> property, as demonstrated by the console. After running this code, the console should have displayed an object that looks similar to this.</p>
@@ -247,18 +247,16 @@ function f() {
 
 <h3 id="With_a_constructor">With a constructor</h3>
 
-<p>A "constructor" in JavaScript is "just" a function that happens to be called with the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/new">new operator</a>.</p>
+<p>A constructor in JavaScript is just a function that happens to be called with the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/new">new operator</a>.</p>
 
 <pre class="brush: js">function Graph() {
   this.vertices = [];
   this.edges = [];
 }
 
-Graph.prototype = {
-  addVertex: function(v) {
-    this.vertices.push(v);
-  }
-};
+Graph.prototype.addVertex = function(v) {
+  this.vertices.push(v);
+}
 
 var g = new Graph();
 // g is an object with own properties 'vertices' and 'edges'.
@@ -305,7 +303,7 @@ delete a.a;       // This can also be done via 'delete Object.getPrototypeOf(b).
 console.log(a.a); // print undefined
 console.log(b.a); // print undefined</pre>
 
-<p>The <code>new</code> operator has a shorter chain in this example:</p>
+<p>In the following example, calling <code>new Graph()</code> creates a <code>Graph</code> instance that has its own <code>vertices</code> property, and that doesn’t inherit any <code>vertices</code> property. So when the <code>vertices</code> property is deleted from that <code>Graph</code> instance, the instance then has neither its own <code>vertices</code> property nor any inherited <code>vertices</code> property.</p>
 
 <pre class="brush: js">function Graph() {
   this.vertices = [4,4];
@@ -313,6 +311,7 @@ console.log(b.a); // print undefined</pre>
 
 var g = new Graph();
 console.log(g.vertices); // print [4,4]
+console.log(g.__proto__.vertices) // print undefined
 g.vertices = 25;
 console.log(g.vertices); // print 25
 delete g.vertices;
@@ -376,8 +375,8 @@ console.log(Object.getPrototypeOf(g).hasOwnProperty('addVertex'));
 <p>Here are all 4 ways and their pros/cons. All of the examples listed below create exactly the same resulting <code>inst</code> object (thus logging the same results to the console), except in different ways.</p>
 
 <h4 class="name">#1: New initialization</h4>
-<div class="notecard warning" id="Bad_practice_Extension_of_native_prototypes">
-<p>One misfeature that is often used is to extend <code>Object.prototype</code> or one of the other built-in prototypes.</p>
+<div class="notecard warning">
+<p><strong>Warning:</strong> One misfeature that is often used is to extend <code>Object.prototype</code> or one of the other built-in prototypes.</p>
 
 <p>This technique is called monkey patching and breaks <em>encapsulation</em>. While used by popular frameworks such as Prototype.js, there is still no good reason for cluttering built-in types with additional <em>non-standard</em> functionality.</p>
 
@@ -387,14 +386,12 @@ console.log(Object.getPrototypeOf(g).hasOwnProperty('addVertex'));
 
 <pre class="brush: js">
 function foo(){}
-foo.prototype = {
-  foo_prop: "foo val"
-};
+foo.prototype.foo_prop = "foo val";
 function bar(){}
-var proto = new foo;
+var proto = new foo();
 proto.bar_prop = "bar val";
 bar.prototype = proto;
-var inst = new bar;
+var inst = new bar();
 console.log(inst.foo_prop);
 console.log(inst.bar_prop);
 </pre>
@@ -418,25 +415,21 @@ console.log(inst.bar_prop);
 <pre class="brush: js">
 // Technique 1
 function foo(){}
-foo.prototype = {
-  foo_prop: "foo val"
-};
+foo.prototype.foo_prop = "foo val";
 function bar(){}
 var proto = Object.create(
   foo.prototype
 );
 proto.bar_prop = "bar val";
 bar.prototype = proto;
-var inst = new bar;
+var inst = new bar();
 console.log(inst.foo_prop);
 console.log(inst.bar_prop);
 </pre>
 <pre class="brush: js">
 // Technique 2
 function foo(){}
-foo.prototype = {
-  foo_prop: "foo val"
-};
+foo.prototype.foo_prop = "foo val";
 function bar(){}
 var proto = Object.create(
   foo.prototype,
@@ -447,7 +440,7 @@ var proto = Object.create(
   }
 );
 bar.prototype = proto;
-var inst = new bar;
+var inst = new bar();
 console.log(inst.foo_prop);
 console.log(inst.bar_prop)</pre>
 <table class="standard-table">
@@ -467,9 +460,7 @@ console.log(inst.bar_prop)</pre>
 <pre class="brush: js">
 // Technique 1
 function foo(){}
-foo.prototype = {
-  foo_prop: "foo val"
-};
+foo.prototype.foo_prop = "foo val";
 function bar(){}
 var proto = {
   bar_prop: "bar val"
@@ -478,24 +469,22 @@ Object.setPrototypeOf(
   proto, foo.prototype
 );
 bar.prototype = proto;
-var inst = new bar;
+var inst = new bar();
 console.log(inst.foo_prop);
 console.log(inst.bar_prop);
 </pre>
 <pre class="brush: js">
 // Technique 2
 function foo(){}
-foo.prototype = {
-  foo_prop: "foo val"
-};
+foo.prototype.foo_prop = "foo val";
 function bar(){}
 var proto;
-proto=Object.setPrototypeOf(
+proto = Object.setPrototypeOf(
   { bar_prop: "bar val" },
   foo.prototype
 );
 bar.prototype = proto;
-var inst = new bar;
+var inst = new bar();
 console.log(inst.foo_prop);
 console.log(inst.bar_prop)</pre>
 <table class="standard-table">
@@ -511,20 +500,18 @@ console.log(inst.bar_prop)</pre>
     </tr>
   </tbody>
 </table>
-<h4 class="example">#4: Setting the {{jsxref("Object/proto","__proto__")}} property</h4>
-<pre id="example-4" class="brush: js">
+<h4 class="example" id="4_setting_the___proto___property">#4: Setting the {{jsxref("Object/proto","__proto__")}} property</h4>
+<pre class="brush: js">
 // Technique 1
 function A(){}
-A.prototype = {
-  foo_prop: "foo val"
-};
+A.prototype.foo_prop = "foo val";
 function bar(){}
 var proto = {
   bar_prop: "bar val",
   __proto__: A.prototype
 };
 bar.prototype = proto;
-var inst = new bar;
+var inst = new bar();
 console.log(inst.foo_prop);
 console.log(inst.bar_prop);
 </pre>
@@ -560,7 +547,7 @@ console.log(inst.bar_prop)</pre>
 
 <p>JavaScript is a bit confusing for developers coming from Java or C++, as it's all dynamic, all runtime, and it has no classes at all. It's all just instances (objects). Even the "classes" we simulate are just a function object.</p>
 
-<p>You probably already noticed that our <a href="#example-4">function A</a> has a special property called <code>prototype</code>. This special property works with the JavaScript <code>new </code>operator. The reference to the prototype object is copied to the internal <code>[[Prototype]]</code> property of the new instance. For example, when you do <code>var a1 = new A()</code>, JavaScript (after creating the object in memory and before running function <code>A()</code> with <code>this</code> defined to it) sets <code>a1.[[Prototype]] = A.prototype</code>. When you then access properties of the instance, JavaScript first checks whether they exist on that object directly, and if not, it looks in <code>[[Prototype]]</code>. This means that all the stuff you define in <code>prototype</code> is effectively shared by all instances, and you can even later change parts of <code>prototype</code> and have the changes appear in all existing instances, if you wanted to.</p>
+<p>You probably already noticed that our <a href="#4_setting_the___proto___property">function A</a> has a special property called <code>prototype</code>. This special property works with the JavaScript <code>new </code>operator. The reference to the prototype object is copied to the internal <code>[[Prototype]]</code> property of the new instance. For example, when you do <code>var a1 = new A()</code>, JavaScript (after creating the object in memory and before running function <code>A()</code> with <code>this</code> defined to it) sets <code>a1.[[Prototype]] = A.prototype</code>. When you then access properties of the instance, JavaScript first checks whether they exist on that object directly, and if not, it looks in <code>[[Prototype]]</code>. This means that all the stuff you define in <code>prototype</code> is effectively shared by all instances, and you can even later change parts of <code>prototype</code> and have the changes appear in all existing instances, if you wanted to.</p>
 
 <p>If, in the example above, you do <code>var a1 = new A(); var a2 = new A();</code> then <code>a1.doSomething</code> would actually refer to <code>Object.getPrototypeOf(a1).doSomething</code>, which is the same as the <code>A.prototype.doSomething</code> you defined, i.e. <code>Object.getPrototypeOf(a1).doSomething == Object.getPrototypeOf(a2).doSomething == A.prototype.doSomething</code>.</p>
 
