@@ -54,7 +54,7 @@ SyntaxError: expected '=&gt;' after argument list, got "x"
 
 <p>Sometimes, you leave out brackets around <code>if</code> statements:</p>
 
-<pre class="brush: js example-bad line-numbers  language-js">function round(n, upperBound, lowerBound){
+<pre class="brush: js example-bad">function round(n, upperBound, lowerBound){
   if(n &gt; upperBound) || (n &lt; lowerBound){
     throw 'Number ' + String(n) + ' is more than ' + String(upperBound) + ' or less than ' + String(lowerBound);
   }else if(n &lt; ((upperBound + lowerBound)/2)){
