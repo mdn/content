@@ -113,7 +113,7 @@ tags:
  <li>If you're using a server-side script or framework to generate content, the way to indicate the content type will depend on the tool you're using. Check the framework or library's documentation.</li>
 </ul>
 
-<p>Regardless of what server system you use, the effect you need to achieve is to set a response header with the name {{httpheader("Content-Type")}}, followed by a colon and space, followed by a MIME type. For example, in a PHP environment, you’d need to set the response header for PDF resources like this:
+<p>Regardless of what server system you use, the effect you need to achieve is to set a response header with the name {{httpheader("Content-Type")}}, followed by a colon and space, followed by a MIME type. High level environments often allow such headers to be set when generating the page. For example, in a PHP environment, you could set the response header for PDF resources like this:
 <pre>
 <code>header('Content-Type: application/pdf')</code>
 </pre>
