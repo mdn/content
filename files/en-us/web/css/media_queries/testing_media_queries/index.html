@@ -53,7 +53,7 @@ function handleOrientationChange(mql) {
 handleOrientationChange(mediaQueryList);
 
 // Add the callback function as a listener to the query list.
-mediaQueryList.addListener(handleOrientationChange);
+mediaQueryList.addEventListener('change', handleOrientationChange);
 </pre>
 
 <p>This code creates the orientation-testing media query list, then adds an event listener to it. After defining the listener, we also call the listener directly. This makes our listener perform adjustments based on the current device orientation; otherwise, our code might assume the device is in portrait mode at startup, even if it's actually in landscape mode.</p>
