@@ -2,61 +2,59 @@
 title: Math.floor()
 slug: Web/JavaScript/Reference/Global_Objects/Math/floor
 tags:
-- JavaScript
-- Math
-- Method
-- Reference
+  - JavaScript
+  - Math
+  - Method
+  - Reference
 browser-compat: javascript.builtins.Math.floor
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>Math.floor()</code></strong> function returns the largest integer
-  less than or equal to a given number.</p>
+The **`Math.floor()`** function returns the largest integer less than or equal
+to a given number.
 
-<div>{{EmbedInteractiveExample("pages/js/math-floor.html")}}</div>
+{{EmbedInteractiveExample("pages/js/math-floor.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+Math.floor(x)
+```
 
-<pre class="brush: js">Math.floor(<var>x</var>)</pre>
+### Parameters
 
-<h3 id="Parameters">Parameters</h3>
+- `x`
+  - : A number.
 
-<dl>
-  <dt><code><var>x</var></code></dt>
-  <dd>A number.</dd>
-</dl>
+### Return value
 
-<h3 id="Return_value">Return value</h3>
+A number representing the largest integer less than or equal to the specified
+number.
 
-<p>A number representing the largest integer less than or equal to the specified number.
-</p>
+## Description
 
-<h2 id="Description">Description</h2>
+Because `floor()` is a static method of `Math`, you always use it as
+`Math.floor()`, rather than as a method of a `Math` object you created (`Math`
+is not a constructor).
 
-<p>Because <code>floor()</code> is a static method of <code>Math</code>, you always use it
-  as <code>Math.floor()</code>, rather than as a method of a <code>Math</code> object you
-  created (<code>Math</code> is not a constructor).</p>
+> **Note:** `Math.floor(null)` returns 0, not a {{jsxref("NaN")}}.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> <code>Math.floor(null)</code> returns 0, not a
-    {{jsxref("NaN")}}.</p>
-</div>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Using Math.floor()
 
-<h3 id="Using_Math.floor">Using Math.floor()</h3>
-
-<pre class="brush: js">Math.floor( 45.95); //  45
+```js
+Math.floor( 45.95); //  45
 Math.floor( 45.05); //  45
 Math.floor(  4   ); //   4
 Math.floor(-45.05); // -46
 Math.floor(-45.95); // -46
-</pre>
+```
 
-<h3 id="Decimal_adjustment">Decimal adjustment</h3>
+### Decimal adjustment
 
-<pre class="brush: js">/**
+```js
+/**
  * Decimal adjustment of a number.
  *
  * @param {String}  type  The type of adjustment.
@@ -72,7 +70,7 @@ function decimalAdjust(type, value, exp) {
   value = +value;
   exp = +exp;
   // If the value is not a number or the exp is not an integer...
-  if (isNaN(value) || !(typeof exp === 'number' &amp;&amp; exp % 1 === 0)) {
+  if (isNaN(value) || !(typeof exp === 'number' && exp % 1 === 0)) {
     return NaN;
   }
   // Shift
@@ -84,11 +82,11 @@ function decimalAdjust(type, value, exp) {
 }
 
 // Decimal round
-const round10 = (value, exp) =&gt; decimalAdjust('round', value, exp);
+const round10 = (value, exp) => decimalAdjust('round', value, exp);
 // Decimal floor
-const floor10 = (value, exp) =&gt; decimalAdjust('floor', value, exp);
+const floor10 = (value, exp) => decimalAdjust('floor', value, exp);
 // Decimal ceil
-const ceil10 = (value, exp) =&gt; decimalAdjust('ceil', value, exp);
+const ceil10 = (value, exp) => decimalAdjust('ceil', value, exp);
 
 // Round
 round10(55.55, -1);   // 55.6
@@ -109,22 +107,20 @@ ceil10(55.51, -1);    // 55.6
 ceil10(51, 1);        // 60
 ceil10(-55.59, -1);   // -55.5
 ceil10(-59, 1);       // -50
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Math.abs()")}}</li>
-  <li>{{jsxref("Math.ceil()")}}</li>
-  <li>{{jsxref("Math.round()")}}</li>
-  <li>{{jsxref("Math.sign()")}}</li>
-  <li>{{jsxref("Math.trunc()")}}</li>
-</ul>
+- {{jsxref("Math.abs()")}}
+- {{jsxref("Math.ceil()")}}
+- {{jsxref("Math.round()")}}
+- {{jsxref("Math.sign()")}}
+- {{jsxref("Math.trunc()")}}

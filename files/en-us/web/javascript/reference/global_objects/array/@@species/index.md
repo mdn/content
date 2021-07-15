@@ -1,65 +1,66 @@
 ---
-title: 'get Array[@@species]'
+title: get Array[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/Array/@@species
 tags:
-- Array
-- JavaScript
-- Method
-- Prototype
+  - Array
+  - JavaScript
+  - Method
+  - Prototype
 browser-compat: javascript.builtins.Array.@@species
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>Array[@@species]</code></strong> accessor property returns the
-  <code>Array</code> constructor.</p>
+The **`Array[@@species]`** accessor property returns the `Array` constructor.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">Array[Symbol.species]
-</pre>
+```js
+Array[Symbol.species]
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>The {{jsxref("Array")}} constructor.</p>
+The {{jsxref("Array")}} constructor.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The <code>species</code> accessor property returns the default constructor for
-  <code>Array</code> objects. Subclass constructors may override it to change the
-  constructor assignment.</p>
+The `species` accessor property returns the default constructor for `Array`
+objects. Subclass constructors may override it to change the constructor
+assignment.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Species_in_ordinary_objects">Species in ordinary objects</h3>
+### Species in ordinary objects
 
-<p>The <code>species</code> property returns the default constructor function, which is
-  the <code>Array</code> constructor for <code>Array</code> objects:</p>
+The `species` property returns the default constructor function, which is the
+`Array` constructor for `Array` objects:
 
-<pre class="brush: js">Array[Symbol.species]; // function Array()</pre>
+```js
+Array[Symbol.species]; // function Array()
+```
 
-<h3 id="Species_in_derived_objects">Species in derived objects</h3>
+### Species in derived objects
 
-<p>In a derived collection object (e.g. your custom array <code>MyArray</code>), the
-  <code>MyArray</code> species is the <code>MyArray</code> constructor. However, you might
-  want to overwrite this, in order to return parent <code>Array</code> objects in your
-  derived class methods:</p>
+In a derived collection object (e.g. your custom array `MyArray`), the `MyArray`
+species is the `MyArray` constructor. However, you might want to overwrite this,
+in order to return parent `Array` objects in your derived class methods:
 
-<pre class="brush: js">class MyArray extends Array {
+```js
+class MyArray extends Array {
   // Overwrite MyArray species to the parent Array constructor
   static get [Symbol.species]() { return Array; }
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Array")}}</li>
-  <li>{{jsxref("Symbol.species")}}</li>
-</ul>
+- {{jsxref("Array")}}
+- {{jsxref("Symbol.species")}}

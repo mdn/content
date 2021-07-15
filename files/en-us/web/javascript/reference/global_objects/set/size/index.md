@@ -9,39 +9,40 @@ tags:
   - set
 browser-compat: javascript.builtins.Set.size
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>size</code></strong> accessor property returns the number of (unique) elements in a {{jsxref("Set")}} object.</p>
+The **`size`** accessor property returns the number of (unique) elements in a
+{{jsxref("Set")}} object.
 
-<div>{{EmbedInteractiveExample("pages/js/set-prototype-size.html")}}</div>
+{{EmbedInteractiveExample("pages/js/set-prototype-size.html")}}
 
+## Description
 
-<h2 id="Description">Description</h2>
+The value of `size` is an integer representing how many entries the `Set` object
+has. A set accessor function for `size` is `undefined`; you cannot change this
+property.
 
-<p>The value of <code>size</code> is an integer representing how many entries the <code>Set</code> object has. A set accessor function for <code>size</code> is <code>undefined</code>; you cannot change this property.</p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Using size
 
-<h3 id="Using_size">Using size</h3>
-
-<pre class="brush: js">var mySet = new Set();
+```js
+var mySet = new Set();
 mySet.add(1);
 mySet.add(5);
 mySet.add('some text')
 
 mySet.size; // 3
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("Set")}}</li>
-</ul>
+- {{jsxref("Set")}}

@@ -4,165 +4,141 @@ slug: Web/JavaScript/Guide
 tags:
   - Guide
   - JavaScript
-  - 'l10n:priority'
+  - l10n:priority
 ---
-<div>{{jsSidebar("JavaScript Guide")}}</div>
+{{jsSidebar("JavaScript Guide")}}
 
-<p class="summary">The JavaScript Guide shows you how to use <a href="/en-US/docs/Web/JavaScript">JavaScript</a> and gives an overview of the language. If you need exhaustive information about a language feature, have a look at the <a href="/en-US/docs/Web/JavaScript/Reference">JavaScript reference</a>.</p>
+The JavaScript Guide shows you how to use
+[JavaScript](/en-US/docs/Web/JavaScript) and gives an overview of the language.
+If you need exhaustive information about a language feature, have a look at the
+[JavaScript reference](/en-US/docs/Web/JavaScript/Reference).
 
-<p>This Guide is divided into the following chapters.</p>
+This Guide is divided into the following chapters.
 
-<h2 id="Introduction"><a href="/en-US/docs/Web/JavaScript/Guide/Introduction">Introduction</a></h2>
+## [Introduction](/en-US/docs/Web/JavaScript/Guide/Introduction)
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Introduction#where_to_find_javascript_information">About this guide</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Introduction#what_is_javascript">About JavaScript</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Introduction#javascript_and_java">JavaScript and Java</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Introduction#javascript_and_the_ecmascript_specification">ECMAScript</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Introduction#getting_started_with_javascript">Tools</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Introduction#hello_world">Hello World</a></li>
-</ul>
+- [About this guide](/en-US/docs/Web/JavaScript/Guide/Introduction#where_to_find_javascript_information)
+- [About JavaScript](/en-US/docs/Web/JavaScript/Guide/Introduction#what_is_javascript)
+- [JavaScript and Java](/en-US/docs/Web/JavaScript/Guide/Introduction#javascript_and_java)
+- [ECMAScript](/en-US/docs/Web/JavaScript/Guide/Introduction#javascript_and_the_ecmascript_specification)
+- [Tools](/en-US/docs/Web/JavaScript/Guide/Introduction#getting_started_with_javascript)
+- [Hello World](/en-US/docs/Web/JavaScript/Guide/Introduction#hello_world)
 
-<h2 id="Grammar_and_types"><a href="/en-US/docs/Web/JavaScript/Guide/Grammar_and_types">Grammar and types</a></h2>
+## [Grammar and types](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types)
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#basics">Basic syntax &amp; comments</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#declarations">Declarations</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#variable_scope">Variable scope</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#variable_hoisting">Variable hoisting</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#data_structures_and_types">Data structures and types</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#literals">Literals</a></li>
-</ul>
+- [Basic syntax & comments](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#basics)
+- [Declarations](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#declarations)
+- [Variable scope](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#variable_scope)
+- [Variable hoisting](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#variable_hoisting)
+- [Data structures and types](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#data_structures_and_types)
+- [Literals](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#literals)
 
-<h2 id="Control_flow_and_error_handling"><a href="/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling">Control flow and error handling</a></h2>
+## [Control flow and error handling](/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
 
-<ul>
- <li><code><a href="/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#if...else_statement">if...else</a></code></li>
- <li><code><a href="/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#switch_statement">switch</a></code></li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#exception_handling_statements"><code>try</code>/<code>catch</code>/<code>throw</code></a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#utilizing_error_objects">Error objects</a></li>
-</ul>
+- [`if...else`](/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#if...else_statement)
+- [`switch`](/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#switch_statement)
+- [`try`/`catch`/`throw`](/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#exception_handling_statements)
+- [Error objects](/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#utilizing_error_objects)
 
-<h2 id="Loops_and_iteration"><a href="/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration">Loops and iteration</a></h2>
+## [Loops and iteration](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration)
 
-<ul>
- <li><code><a href="/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for_statement">for</a></code></li>
- <li><code><a href="/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#while_statement">while</a></code></li>
- <li><code><a href="/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#do...while_statement">do...while</a></code></li>
- <li><code><a href="/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#continue_statement">continue</a></code></li>
- <li><code><a href="/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#break_statement">break</a></code></li>
- <li><code><a href="/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...in_statement">for..in</a></code></li>
- <li><code><a href="/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement">for..of</a></code></li>
-</ul>
+- [`for`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for_statement)
+- [`while`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#while_statement)
+- [`do...while`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#do...while_statement)
+- [`continue`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#continue_statement)
+- [`break`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#break_statement)
+- [`for..in`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...in_statement)
+- [`for..of`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement)
 
-<h2 id="Functions"><a href="/en-US/docs/Web/JavaScript/Guide/Functions">Functions</a></h2>
+## [Functions](/en-US/docs/Web/JavaScript/Guide/Functions)
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Functions#defining_functions">Defining functions</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Functions#calling_functions">Calling functions</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Functions#function_scope">Function scope</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Functions#closures">Closures</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Functions#using_the_arguments_object">Arguments</a> &amp; <a href="/en-US/docs/Web/JavaScript/Guide/Functions#function_parameters">parameters</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Functions#arrow_functions">Arrow functions</a></li>
-</ul>
+- [Defining functions](/en-US/docs/Web/JavaScript/Guide/Functions#defining_functions)
+- [Calling functions](/en-US/docs/Web/JavaScript/Guide/Functions#calling_functions)
+- [Function scope](/en-US/docs/Web/JavaScript/Guide/Functions#function_scope)
+- [Closures](/en-US/docs/Web/JavaScript/Guide/Functions#closures)
+- [Arguments](/en-US/docs/Web/JavaScript/Guide/Functions#using_the_arguments_object)
+  & [parameters](/en-US/docs/Web/JavaScript/Guide/Functions#function_parameters)
+- [Arrow functions](/en-US/docs/Web/JavaScript/Guide/Functions#arrow_functions)
 
-<h2 id="Expressions_and_operators"><a href="/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators">Expressions and operators</a></h2>
+## [Expressions and operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators)
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment_operators">Assignment</a> &amp; <a href="/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#comparison_operators">Comparisons</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#arithmetic_operators">Arithmetic operators</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#bitwise_operators">Bitwise</a> &amp; <a href="/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#logical_operators">logical operators</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#conditional_(ternary)_operator">Conditional (ternary) operator</a></li>
-</ul>
+- [Assignment](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment_operators)
+  &
+  [Comparisons](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#comparison_operators)
+- [Arithmetic operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#arithmetic_operators)
+- [Bitwise](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#bitwise_operators)
+  &
+  [logical operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#logical_operators)
+- [Conditional (ternary) operator](</en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#conditional_(ternary)_operator>)
 
-<h2 id="Numbers_and_dates"><a href="/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates">Numbers and dates</a></h2>
+## [Numbers and dates](/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates)
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates#numbers">Number literals</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates#number_object"><code>Number</code> object</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates#math_object"><code>Math</code> object</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates#date_object"><code>Date</code> object</a></li>
-</ul>
+- [Number literals](/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates#numbers)
+- [`Number` object](/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates#number_object)
+- [`Math` object](/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates#math_object)
+- [`Date` object](/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates#date_object)
 
-<h2 id="Text_formatting"><a href="/en-US/docs/Web/JavaScript/Guide/Text_formatting">Text formatting</a></h2>
+## [Text formatting](/en-US/docs/Web/JavaScript/Guide/Text_formatting)
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Text_formatting#string_literals">String literals</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Text_formatting#string_objects"><code>String</code> object</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Text_formatting#multi-line_template_literals">Template literals</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Text_formatting#internationalization">Internationalization</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">Regular Expressions</a></li>
-</ul>
+- [String literals](/en-US/docs/Web/JavaScript/Guide/Text_formatting#string_literals)
+- [`String` object](/en-US/docs/Web/JavaScript/Guide/Text_formatting#string_objects)
+- [Template literals](/en-US/docs/Web/JavaScript/Guide/Text_formatting#multi-line_template_literals)
+- [Internationalization](/en-US/docs/Web/JavaScript/Guide/Text_formatting#internationalization)
+- [Regular Expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
 
-<h2 id="Indexed_collections"><a href="/en-US/docs/Web/JavaScript/Guide/Indexed_collections">Indexed collections</a></h2>
+## [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Indexed_collections#array_object">Arrays</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Indexed_collections#typed_arrays">Typed arrays</a></li>
-</ul>
+- [Arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#array_object)
+- [Typed arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#typed_arrays)
 
-<h2 id="Keyed_collections"><a href="/en-US/docs/Web/JavaScript/Guide/Keyed_collections">Keyed collections</a></h2>
+## [Keyed collections](/en-US/docs/Web/JavaScript/Guide/Keyed_collections)
 
-<ul>
- <li><code><a href="/en-US/docs/Web/JavaScript/Guide/Keyed_collections#map_object">Map</a></code></li>
- <li><code><a href="/en-US/docs/Web/JavaScript/Guide/Keyed_collections#weakmap_object">WeakMap</a></code></li>
- <li><code><a href="/en-US/docs/Web/JavaScript/Guide/Keyed_collections#set_object">Set</a></code></li>
- <li><code><a href="/en-US/docs/Web/JavaScript/Guide/Keyed_collections#weakset_object">WeakSet</a></code></li>
-</ul>
+- [`Map`](/en-US/docs/Web/JavaScript/Guide/Keyed_collections#map_object)
+- [`WeakMap`](/en-US/docs/Web/JavaScript/Guide/Keyed_collections#weakmap_object)
+- [`Set`](/en-US/docs/Web/JavaScript/Guide/Keyed_collections#set_object)
+- [`WeakSet`](/en-US/docs/Web/JavaScript/Guide/Keyed_collections#weakset_object)
 
-<h2 id="Working_with_objects"><a href="/en-US/docs/Web/JavaScript/Guide/Working_with_Objects">Working with objects</a></h2>
+## [Working with objects](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects)
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#objects_and_properties">Objects and properties</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#creating_new_objects">Creating objects</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_methods">Defining methods</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters">Getter and setter</a></li>
-</ul>
+- [Objects and properties](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#objects_and_properties)
+- [Creating objects](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#creating_new_objects)
+- [Defining methods](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_methods)
+- [Getter and setter](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters)
 
-<h2 id="Details_of_the_object_model"><a href="/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model">Details of the object model</a></h2>
+## [Details of the object model](/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model)
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model#class-based_vs._prototype-based_languages">Prototype-based OOP</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model#creating_the_hierarchy">Creating object hierarchies</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model#property_inheritance_revisited">Inheritance</a></li>
-</ul>
+- [Prototype-based OOP](/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model#class-based_vs._prototype-based_languages)
+- [Creating object hierarchies](/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model#creating_the_hierarchy)
+- [Inheritance](/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model#property_inheritance_revisited)
 
-<h2 id="Promises"><a href="/en-US/docs/Web/JavaScript/Guide/Using_promises">Promises</a></h2>
+## [Promises](/en-US/docs/Web/JavaScript/Guide/Using_promises)
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Using_promises#guarantees">Guarantees</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Using_promises#chaining">Chaining</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Using_promises#error_propagation">Error propagation</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Using_promises#composition">Composition</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Using_promises#timing">Timing</a></li>
-</ul>
+- [Guarantees](/en-US/docs/Web/JavaScript/Guide/Using_promises#guarantees)
+- [Chaining](/en-US/docs/Web/JavaScript/Guide/Using_promises#chaining)
+- [Error propagation](/en-US/docs/Web/JavaScript/Guide/Using_promises#error_propagation)
+- [Composition](/en-US/docs/Web/JavaScript/Guide/Using_promises#composition)
+- [Timing](/en-US/docs/Web/JavaScript/Guide/Using_promises#timing)
 
-<h2 id="Iterators_and_generators"><a href="/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators">Iterators and generators</a></h2>
+## [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#iterators">Iterators</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#iterables">Iterables</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#generators">Generators</a></li>
-</ul>
+- [Iterators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#iterators)
+- [Iterables](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#iterables)
+- [Generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#generators)
 
-<h2 id="Meta_programming"><a href="/en-US/docs/Web/JavaScript/Guide/Meta_programming">Meta programming</a></h2>
+## [Meta programming](/en-US/docs/Web/JavaScript/Guide/Meta_programming)
 
-<ul>
- <li><code><a href="/en-US/docs/Web/JavaScript/Guide/Meta_programming#proxies">Proxy</a></code></li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Meta_programming#handlers_and_traps">Handlers and traps</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Meta_programming#revocable_proxy">Revocable Proxy</a></li>
- <li><code><a href="/en-US/docs/Web/JavaScript/Guide/Meta_programming#reflection">Reflect</a></code></li>
-</ul>
+- [`Proxy`](/en-US/docs/Web/JavaScript/Guide/Meta_programming#proxies)
+- [Handlers and traps](/en-US/docs/Web/JavaScript/Guide/Meta_programming#handlers_and_traps)
+- [Revocable Proxy](/en-US/docs/Web/JavaScript/Guide/Meta_programming#revocable_proxy)
+- [`Reflect`](/en-US/docs/Web/JavaScript/Guide/Meta_programming#reflection)
 
-<h2 id="JavaScript_modules"><a href="/en-US/docs/Web/JavaScript/Guide/Modules">JavaScript modules</a></h2>
+## [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules)
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Modules#exporting_module_features">Exporting</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Modules#importing_features_into_your_script">Importing</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Modules#default_exports_versus_named_exports">Default exports</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Modules#renaming_imports_and_exports">Renaming features</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Modules#aggregating_modules">Aggregating modules</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Modules#dynamic_module_loading">Dynamic module loading</a></li>
-</ul>
+- [Exporting](/en-US/docs/Web/JavaScript/Guide/Modules#exporting_module_features)
+- [Importing](/en-US/docs/Web/JavaScript/Guide/Modules#importing_features_into_your_script)
+- [Default exports](/en-US/docs/Web/JavaScript/Guide/Modules#default_exports_versus_named_exports)
+- [Renaming features](/en-US/docs/Web/JavaScript/Guide/Modules#renaming_imports_and_exports)
+- [Aggregating modules](/en-US/docs/Web/JavaScript/Guide/Modules#aggregating_modules)
+- [Dynamic module loading](/en-US/docs/Web/JavaScript/Guide/Modules#dynamic_module_loading)
 
-<p>{{Next("Web/JavaScript/Guide/Introduction")}}</p>
+{{Next("Web/JavaScript/Guide/Introduction")}}

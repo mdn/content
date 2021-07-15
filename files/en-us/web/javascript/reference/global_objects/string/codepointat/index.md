@@ -2,69 +2,72 @@
 title: String.prototype.codePointAt()
 slug: Web/JavaScript/Reference/Global_Objects/String/codePointAt
 tags:
-- ECMAScript 2015
-- JavaScript
-- Method
-- Prototype
-- Reference
-- String
-- Polyfill
+  - ECMAScript 2015
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
+  - String
+  - Polyfill
 browser-compat: javascript.builtins.String.codePointAt
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>codePointAt()</code></strong> method returns a non-negative integer
-  that is the UTF-16 code point value.</p>
+The **`codePointAt()`** method returns a non-negative integer that is the UTF-16
+code point value.
 
-<div>{{EmbedInteractiveExample("pages/js/string-codepointat.html","shorter")}}</div>
+{{EmbedInteractiveExample("pages/js/string-codepointat.html","shorter")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+codePointAt(pos)
+```
 
-<pre class="brush: js">codePointAt(pos)</pre>
+### Parameters
 
-<h3 id="Parameters">Parameters</h3>
+- `pos`
+  - : Position of an element in `str` to return the code point value from.
 
-<dl>
-  <dt><code><var>pos</var></code></dt>
-  <dd>Position of an element in <code><var>str</var></code> to return the code point value
-    from.</dd>
-</dl>
+### Return value
 
-<h3 id="Return_value">Return value</h3>
+A decimal number representing the code point value of the character at the given
+`pos`.
 
-<p>A decimal number representing the code point value of the character at the given <code><var>pos</var></code>.</p>
+- If there is no element at `pos`, returns
+  [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined).
+- If the element at `pos` is a UTF-16 high surrogate, returns the code point of
+  the surrogate _pair_.
+- If the element at `pos` is a UTF-16 low surrogate, returns _only_ the low
+  surrogate code point.
 
-<ul>
-  <li>If there is no element at <code><var>pos</var></code>, returns <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined"><code>undefined</code></a>.</li>
-  <li>If the element at <code><var>pos</var></code> is a UTF-16 high surrogate, returns the code point of the surrogate <em>pair</em>.</li>
-  <li>If the element at <code><var>pos</var></code> is a UTF-16 low surrogate, returns <em>only</em> the low surrogate code point.</li>
-</ul>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Using codePointAt()
 
-<h3 id="Using_codePointAt">Using codePointAt()</h3>
-
-<pre class="brush: js">'ABC'.codePointAt(1)           // 66
+```js
+'ABC'.codePointAt(1)           // 66
 '\uD800\uDC00'.codePointAt(0)  // 65536
 
 'XYZ'.codePointAt(42)          // undefined
-</pre>
+```
 
-<h3 id="Looping_with_codePointAt">Looping with codePointAt()</h3>
+### Looping with codePointAt()
 
-<pre class="brush: js">for (let codePoint of '\ud83d\udc0e\ud83d\udc71\u2764') {
+```js
+for (let codePoint of '\ud83d\udc0e\ud83d\udc71\u2764') {
    console.log(codePoint.codePointAt(0).toString(16))
 }
 // '1f40e', '1f471', '2764'
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>The following extends Strings to include the <code>codePointAt()</code> function as
-  specified in ECMAScript 2015 for browsers without native support.</p>
+The following extends Strings to include the `codePointAt()` function as
+specified in ECMAScript 2015 for browsers without native support.
 
-<pre class="brush: js">/*! https://mths.be/codepointat v0.2.0 by @mathias */
+```js
+/*! https://mths.be/codepointat v0.2.0 by @mathias */
 if (!String.prototype.codePointAt) {
   (function() {
     'use strict'; // needed to support `apply`/`call` with `undefined`/`null`
@@ -73,7 +76,7 @@ if (!String.prototype.codePointAt) {
       try {
         var object = {};
         var $defineProperty = Object.defineProperty;
-        var result = $defineProperty(object, object, object) &amp;&amp; $defineProperty;
+        var result = $defineProperty(object, object, object) && $defineProperty;
       } catch(error) {}
       return result;
     }());
@@ -89,18 +92,18 @@ if (!String.prototype.codePointAt) {
         index = 0;
       }
       // Account for out-of-bounds indices:
-      if (index &lt; 0 || index &gt;= size) {
+      if (index < 0 || index >= size) {
         return undefined;
       }
       // Get the first code unit
       var first = string.charCodeAt(index);
       var second;
       if ( // check if it’s the start of a surrogate pair
-        first &gt;= 0xD800 &amp;&amp; first &lt;= 0xDBFF &amp;&amp; // high surrogate
-        size &gt; index + 1 // there is a next code unit
+        first >= 0xD800 && first <= 0xDBFF && // high surrogate
+        size > index + 1 // there is a next code unit
       ) {
         second = string.charCodeAt(index + 1);
-        if (second &gt;= 0xDC00 &amp;&amp; second &lt;= 0xDFFF) { // low surrogate
+        if (second >= 0xDC00 && second <= 0xDFFF) { // low surrogate
           // https://mathiasbynens.be/notes/javascript-encoding#surrogate-formulae
           return (first - 0xD800) * 0x400 + second - 0xDC00 + 0x10000;
         }
@@ -118,22 +121,21 @@ if (!String.prototype.codePointAt) {
     }
   }());
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>A polyfill of <code>String.prototype.codePointAt</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-string-and-regexp"><code>core-js</code></a></li>
-  <li>{{jsxref("String.fromCodePoint()")}}</li>
-  <li>{{jsxref("String.fromCharCode()")}}</li>
-  <li>{{jsxref("String.prototype.charCodeAt()")}}</li>
-  <li>{{jsxref("String.prototype.charAt()")}}</li>
-</ul>
+- A polyfill of `String.prototype.codePointAt` is available in
+  [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- {{jsxref("String.fromCodePoint()")}}
+- {{jsxref("String.fromCharCode()")}}
+- {{jsxref("String.prototype.charCodeAt()")}}
+- {{jsxref("String.prototype.charAt()")}}

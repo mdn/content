@@ -10,72 +10,71 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Object.assign
 ---
-<p>{{JSRef}}</p>
+{{JSRef}}
 
-<p>The <strong><code>Object.assign()</code></strong> method
-    copies all {{jsxref("Object/propertyIsEnumerable", "enumerable", "", 1)}}
-    {{jsxref("Object/hasOwnProperty", "own properties", "", 1)}} from one or more
-    <em>source objects</em> to a <em>target object</em>. It returns the modified target
-    object.</p>
+The **`Object.assign()`** method copies all
+{{jsxref("Object/propertyIsEnumerable", "enumerable", "", 1)}}
+{{jsxref("Object/hasOwnProperty", "own properties", "", 1)}}
+from one or more _source objects_ to a _target object_. It returns the modified
+target object.
 
-<div>{{EmbedInteractiveExample("pages/js/object-assign.html")}}</div>
+{{EmbedInteractiveExample("pages/js/object-assign.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+Object.assign(target, ...sources)
+```
 
-<pre
-  class="brush: js">Object.assign(<var>target</var>, ...<var>sources</var>)</pre>
+### Parameters
 
-<h3 id="Parameters">Parameters</h3>
+- `target`
+  - : The target object — what to apply the sources’ properties to, which is
+    returned after it is modified.
+- `sources`
+  - : The source object(s) — objects containing the properties you want to
+    apply.
 
-<dl>
-  <dt><code><var>target</var></code></dt>
-  <dd>The target object — what to apply the sources’ properties to, which is returned
-    after it is modified.</dd>
-  <dt><code><var>sources</var></code></dt>
-  <dd>The source object(s) — objects containing the properties you want to apply.</dd>
-</dl>
+### Return value
 
-<h3 id="Return_value">Return value</h3>
+The target object.
 
-<p>The target object.</p>
+## Description
 
-<h2 id="Description">Description</h2>
+Properties in the target object are overwritten by properties in the sources if
+they have the same {{jsxref("Object/keys", "key", "", 1)}}. Later
+sources' properties overwrite earlier ones.
 
-<p>Properties in the target object are overwritten by properties in the sources if they
-  have the same {{jsxref("Object/keys", "key", "", 1)}}. Later sources' properties
-  overwrite earlier ones.</p>
+The `Object.assign()` method only copies _enumerable_ and _own_ properties from
+a source object to a target object. It uses `[[Get]]` on the source and
+`[[Set]]` on the target, so it will invoke
+[getters](/en-US/docs/Web/JavaScript/Reference/Functions/get) and
+[setters](/en-US/docs/Web/JavaScript/Reference/Functions/set). Therefore it
+_assigns_ properties, versus copying or defining new properties. This may make
+it unsuitable for merging new properties into a prototype if the merge sources
+contain getters.
 
-<p>The <code>Object.assign()</code> method only copies <em>enumerable</em> and
-  <em>own</em> properties from a source object to a target object. It uses
-  <code>[[Get]]</code> on the source and <code>[[Set]]</code> on the target, so it will
-  invoke <a href="/en-US/docs/Web/JavaScript/Reference/Functions/get">getters</a> and <a
-    href="/en-US/docs/Web/JavaScript/Reference/Functions/set">setters</a>. Therefore it
-  <em>assigns</em> properties, versus copying or defining new properties. This may make it
-  unsuitable for merging new properties into a prototype if the merge sources contain
-  getters.</p>
+For copying property definitions (including their enumerability) into
+prototypes, use {{jsxref("Object.getOwnPropertyDescriptor()")}}
+and {{jsxref("Object.defineProperty()")}} instead.
 
-<p>For copying property definitions (including their enumerability) into prototypes, use
-  {{jsxref("Object.getOwnPropertyDescriptor()")}} and
-  {{jsxref("Object.defineProperty()")}} instead.</p>
+Both {{jsxref("String")}} and {{jsxref("Symbol")}} properties
+are copied.
 
-<p>Both {{jsxref("String")}} and {{jsxref("Symbol")}} properties are copied.</p>
+In case of an error, for example if a property is non-writable, a
+{{jsxref("TypeError")}} is raised, and the `target` object is changed
+if any properties are added before the error is raised.
 
-<p>In case of an error, for example if a property is non-writable, a
-  {{jsxref("TypeError")}} is raised, and the <code><var>target</var></code> object is
-  changed if any properties are added before the error is raised.</p>
+> **Note:** `Object.assign()` does not throw on {{jsxref("null")}} or
+> {{jsxref("undefined")}} sources.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> <code>Object.assign()</code> does not throw on
-    {{jsxref("null")}} or {{jsxref("undefined")}} sources.</p>
-</div>
+## Polyfill
 
-<h2 id="Polyfill">Polyfill</h2>
+This [polyfill](/en-US/docs/Glossary/Polyfill) doesn't support symbol
+properties, since ES5 doesn't have symbols anyway:
 
-<p>This <a href="/en-US/docs/Glossary/Polyfill">polyfill</a> doesn't support symbol
-  properties, since ES5 doesn't have symbols anyway:</p>
-
-<pre class="brush: js">if (typeof Object.assign !== 'function') {
+```js
+if (typeof Object.assign !== 'function') {
   // Must be writable: true, enumerable: false, configurable: true
   Object.defineProperty(Object, "assign", {
     value: function assign(target, varArgs) { // .length of function is 2
@@ -86,10 +85,10 @@ browser-compat: javascript.builtins.Object.assign
 
       var to = Object(target);
 
-      for (var index = 1; index &lt; arguments.length; index++) {
+      for (var index = 1; index < arguments.length; index++) {
         var nextSource = arguments[index];
 
-        if (nextSource !== null &amp;&amp; nextSource !== undefined) {
+        if (nextSource !== null && nextSource !== undefined) {
           for (var nextKey in nextSource) {
             // Avoid bugs when hasOwnProperty is shadowed
             if (Object.prototype.hasOwnProperty.call(nextSource, nextKey)) {
@@ -104,26 +103,28 @@ browser-compat: javascript.builtins.Object.assign
     configurable: true
   });
 }
-</pre>
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Cloning_an_object">Cloning an object</h3>
+### Cloning an object
 
-<pre class="brush: js">const obj = { a: 1 };
+```js
+const obj = { a: 1 };
 const copy = Object.assign({}, obj);
 console.log(copy); // { a: 1 }
-</pre>
+```
 
-<h3 id="Deep_Clone">Warning for Deep Clone</h3>
+### Warning for Deep Clone
 
-<p>For deep cloning, we need to use alternatives, because <code>Object.assign()</code>
-  copies property values.</p>
+For deep cloning, we need to use alternatives, because `Object.assign()` copies
+property values.
 
-<p>If the source value is a reference to an object, it only copies the reference value.
-</p>
+If the source value is a reference to an object, it only copies the reference
+value.
 
-<pre class="brush: js">function test() {
+```js
+function test() {
   'use strict';
 
   let obj1 = { a: 0 , b: { c: 0}};
@@ -150,44 +151,50 @@ console.log(copy); // { a: 1 }
   console.log(JSON.stringify(obj3)); // { "a": 0, "b": { "c": 0}}
 }
 
-test();</pre>
+test();
+```
 
-<h3 id="Merging_objects">Merging objects</h3>
+### Merging objects
 
-<pre class="brush: js">const o1 = { a: 1 };
+```js
+const o1 = { a: 1 };
 const o2 = { b: 2 };
 const o3 = { c: 3 };
 
 const obj = Object.assign(o1, o2, o3);
 console.log(obj); // { a: 1, b: 2, c: 3 }
-console.log(o1);  // { a: 1, b: 2, c: 3 }, target object itself is changed.</pre>
+console.log(o1);  // { a: 1, b: 2, c: 3 }, target object itself is changed.
+```
 
-<h3 id="Merging_objects_with_same_properties">Merging objects with same properties</h3>
+### Merging objects with same properties
 
-<pre class="brush: js">const o1 = { a: 1, b: 1, c: 1 };
+```js
+const o1 = { a: 1, b: 1, c: 1 };
 const o2 = { b: 2, c: 2 };
 const o3 = { c: 3 };
 
 const obj = Object.assign({}, o1, o2, o3);
-console.log(obj); // { a: 1, b: 2, c: 3 }</pre>
+console.log(obj); // { a: 1, b: 2, c: 3 }
+```
 
-<p>The properties are overwritten by other objects that have the same properties later in
-  the parameters order.</p>
+The properties are overwritten by other objects that have the same properties
+later in the parameters order.
 
-<h3 id="Copying_symbol-typed_properties">Copying symbol-typed properties</h3>
+### Copying symbol-typed properties
 
-<pre class="brush: js">const o1 = { a: 1 };
+```js
+const o1 = { a: 1 };
 const o2 = { [Symbol('foo')]: 2 };
 
 const obj = Object.assign({}, o1, o2);
 console.log(obj); // { a : 1, [Symbol("foo")]: 2 } (cf. bug 1207182 on Firefox)
 Object.getOwnPropertySymbols(obj); // [Symbol(foo)]
-</pre>
+```
 
-<h3 id="Properties_on_the_prototype_chain_and_non-enumerable_properties_cannot_be_copied">
-  Properties on the prototype chain and non-enumerable properties cannot be copied</h3>
+### Properties on the prototype chain and non-enumerable properties cannot be copied
 
-<pre class="brush: js">const obj = Object.create({ foo: 1 }, { // foo is on obj's prototype chain.
+```js
+const obj = Object.create({ foo: 1 }, { // foo is on obj's prototype chain.
   bar: {
     value: 2  // bar is a non-enumerable property.
   },
@@ -199,11 +206,12 @@ Object.getOwnPropertySymbols(obj); // [Symbol(foo)]
 
 const copy = Object.assign({}, obj);
 console.log(copy); // { baz: 3 }
-</pre>
+```
 
-<h3 id="Primitives_will_be_wrapped_to_objects">Primitives will be wrapped to objects</h3>
+### Primitives will be wrapped to objects
 
-<pre class="brush: js">const v1 = 'abc';
+```js
+const v1 = 'abc';
 const v2 = true;
 const v3 = 10;
 const v4 = Symbol('foo');
@@ -212,12 +220,12 @@ const obj = Object.assign({}, v1, null, v2, undefined, v3, v4);
 // Primitives will be wrapped, null and undefined will be ignored.
 // Note, only string wrappers can have own enumerable properties.
 console.log(obj); // { "0": "a", "1": "b", "2": "c" }
-</pre>
+```
 
-<h3 id="Exceptions_will_interrupt_the_ongoing_copying_task">Exceptions will interrupt the
-  ongoing copying task</h3>
+### Exceptions will interrupt the ongoing copying task
 
-<pre class="brush: js">const target = Object.defineProperty({}, 'foo', {
+```js
+const target = Object.defineProperty({}, 'foo', {
   value: 1,
   writable: false
 }); // target.foo is a read-only property
@@ -231,11 +239,12 @@ console.log(target.foo2); // 3, the first property of the second source was copi
 console.log(target.foo);  // 1, exception is thrown here.
 console.log(target.foo3); // undefined, assign method has finished, foo3 will not be copied.
 console.log(target.baz);  // undefined, the third source will not be copied either.
-</pre>
+```
 
-<h3 id="Copying_accessors">Copying accessors</h3>
+### Copying accessors
 
-<pre class="brush: js">const obj = {
+```js
+const obj = {
   foo: 1,
   get bar() {
     return 2;
@@ -249,14 +258,14 @@ console.log(copy);
 
 // This is an assign function that copies full descriptors
 function completeAssign(target, ...sources) {
-  sources.forEach(source =&gt; {
-    let descriptors = Object.keys(source).reduce((descriptors, key) =&gt; {
+  sources.forEach(source => {
+    let descriptors = Object.keys(source).reduce((descriptors, key) => {
       descriptors[key] = Object.getOwnPropertyDescriptor(source, key);
       return descriptors;
     }, {});
 
     // By default, Object.assign copies enumerable Symbols, too
-    Object.getOwnPropertySymbols(source).forEach(sym =&gt; {
+    Object.getOwnPropertySymbols(source).forEach(sym => {
       let descriptor = Object.getOwnPropertyDescriptor(source, sym);
       if (descriptor.enumerable) {
         descriptors[sym] = descriptor;
@@ -270,25 +279,20 @@ function completeAssign(target, ...sources) {
 copy = completeAssign({}, obj);
 console.log(copy);
 // { foo:1, get bar() { return 2 } }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>A polyfill of <code>Object.assign</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-object"><code>core-js</code></a></li>
-  <li>{{jsxref("Object.defineProperties()")}}</li>
-  <li><a
-      href="/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties">Enumerability
-      and ownership of properties</a></li>
-  <li><a
-      href="/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax#spread_in_object_literals">Spread
-      in object literals</a></li>
-</ul>
+- A polyfill of `Object.assign` is available in
+  [`core-js`](https://github.com/zloirock/core-js#ecmascript-object)
+- {{jsxref("Object.defineProperties()")}}
+- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Spread in object literals](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax#spread_in_object_literals)

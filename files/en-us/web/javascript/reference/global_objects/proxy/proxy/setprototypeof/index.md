@@ -2,89 +2,84 @@
 title: handler.setPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/setPrototypeOf
 tags:
-- ECMAScript 2015
-- JavaScript
-- Method
-- Prototype
-- Proxy
+  - ECMAScript 2015
+  - JavaScript
+  - Method
+  - Prototype
+  - Proxy
 browser-compat: javascript.builtins.Proxy.handler.setPrototypeOf
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>handler.setPrototypeOf()</code></strong> method is a trap for
-  {{jsxref("Object.setPrototypeOf()")}}.</p>
+The **`handler.setPrototypeOf()`** method is a trap for
+{{jsxref("Object.setPrototypeOf()")}}.
 
-<div>{{EmbedInteractiveExample("pages/js/proxyhandler-setprototypeof.html", "taller",
-  "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/proxyhandler-setprototypeof.html", "taller",
+  "taller")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush: js">const <var>p</var> = new Proxy(<var>target</var>, {
-  setPrototypeOf: function(<var>target</var>, <var>prototype</var>) {
+```js
+const p = new Proxy(target, {
+  setPrototypeOf: function(target, prototype) {
   }
 });
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>The following parameters are passed to the <code>setPrototypeOf()</code> method.
-  <code>this</code> is bound to the handler.</p>
+The following parameters are passed to the `setPrototypeOf()` method. `this` is
+bound to the handler.
 
-<dl>
-  <dt><code><var>target</var></code></dt>
-  <dd>The target object.</dd>
-  <dt><code><var>prototype</var></code></dt>
-  <dd>The object's new prototype or <code>null</code>.</dd>
-</dl>
+- `target`
+  - : The target object.
+- `prototype`
+  - : The object's new prototype or `null`.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>The <code>setPrototypeOf()</code> method returns <code>true</code> if the
-  <code>[[Prototype]]</code> was successfully changed, otherwise <code>false</code>.</p>
+The `setPrototypeOf()` method returns `true` if the `[[Prototype]]` was
+successfully changed, otherwise `false`.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The <code><strong>handler.setPrototypeOf()</strong></code> method is a trap for
-  {{jsxref("Object.setPrototypeOf()")}}.</p>
+The **`handler.setPrototypeOf()`** method is a trap for
+{{jsxref("Object.setPrototypeOf()")}}.
 
-<h3 id="Interceptions">Interceptions</h3>
+### Interceptions
 
-<p>This trap can intercept these operations:</p>
+This trap can intercept these operations:
 
-<ul>
-  <li>{{jsxref("Object.setPrototypeOf()")}}</li>
-  <li>{{jsxref("Reflect.setPrototypeOf()")}}</li>
-</ul>
+- {{jsxref("Object.setPrototypeOf()")}}
+- {{jsxref("Reflect.setPrototypeOf()")}}
 
-<h3 id="Invariants">Invariants</h3>
+### Invariants
 
-<p>If the following invariants are violated, the proxy will throw a
-  {{jsxref("TypeError")}}:</p>
+If the following invariants are violated, the proxy will throw a
+{{jsxref("TypeError")}}:
 
-<ul>
-  <li>If <code><var>target</var></code> is not extensible, the <code>prototype</code>
-    parameter must be the same value as
-    <code>Object.getPrototypeOf(<var>target</var>)</code>.</li>
-</ul>
+- If `target` is not extensible, the `prototype` parameter must be the same
+  value as `Object.getPrototypeOf(target)`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>If you want to disallow setting a new prototype for your object, your handler's
-  <code>setPrototypeOf()</code> method can either return <code>false</code>, or it can
-  throw an exception.</p>
+If you want to disallow setting a new prototype for your object, your handler's
+`setPrototypeOf()` method can either return `false`, or it can throw an
+exception.
 
-<h3 id="Approach_1_Returning_false">Approach 1: Returning false</h3>
+### Approach 1: Returning false
 
-<p>This approach means that any mutating operation that throws an exception on failure to
-  mutate, must create the exception itself.</p>
+This approach means that any mutating operation that throws an exception on
+failure to mutate, must create the exception itself.
 
-<p>For example, {{jsxref("Object.setPrototypeOf()")}} will create and throw a
-  {{jsxref("TypeError")}} itself. If the mutation is performed by an operation that
-  <em>doesn't</em> ordinarily throw in case of failure, such as
-  {{jsxref("Reflect.setPrototypeOf()")}}, no exception will be thrown.</p>
+For example, {{jsxref("Object.setPrototypeOf()")}} will create and
+throw a {{jsxref("TypeError")}} itself. If the mutation is performed by
+an operation that _doesn't_ ordinarily throw in case of failure, such as
+{{jsxref("Reflect.setPrototypeOf()")}}, no exception will be
+thrown.
 
-<pre class="brush: js">const handlerReturnsFalse = {
+```js
+const handlerReturnsFalse = {
     setPrototypeOf(target, newProto) {
         return false;
     }
@@ -95,15 +90,16 @@ const newProto = {}, target = {};
 const p1 = new Proxy(target, handlerReturnsFalse);
 Object.setPrototypeOf(p1, newProto); // throws a TypeError
 Reflect.setPrototypeOf(p1, newProto); // returns false
-</pre>
+```
 
-<h3 id="Approach_2_Throwing_an_Exception">Approach 2: Throwing an Exception</h3>
+### Approach 2: Throwing an Exception
 
-<p>The latter approach will cause <em>any</em> operation that attempts to mutate, to
-  throw. This approach is best if you want even non-throwing operations to throw on
-  failure, or you want to throw a custom exception value.</p>
+The latter approach will cause _any_ operation that attempts to mutate, to
+throw. This approach is best if you want even non-throwing operations to throw
+on failure, or you want to throw a custom exception value.
 
-<pre class="brush: js">const handlerThrows = {
+```js
+const handlerThrows = {
     setPrototypeOf(target, newProto) {
         throw new Error('custom error');
     }
@@ -113,21 +109,20 @@ const newProto = {}, target = {};
 
 const p2 = new Proxy(target, handlerThrows);
 Object.setPrototypeOf(p2, newProto);  // throws new Error("custom error")
-Reflect.setPrototypeOf(p2, newProto); // throws new Error("custom error")</pre>
+Reflect.setPrototypeOf(p2, newProto); // throws new Error("custom error")
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Proxy")}}</li>
-  <li>{{jsxref("Proxy.handler", "handler")}}</li>
-  <li>{{jsxref("Object.setPrototypeOf()")}}</li>
-  <li>{{jsxref("Reflect.setPrototypeOf()")}}</li>
-</ul>
+- {{jsxref("Proxy")}}
+- {{jsxref("Proxy.handler", "handler")}}
+- {{jsxref("Object.setPrototypeOf()")}}
+- {{jsxref("Reflect.setPrototypeOf()")}}

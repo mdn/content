@@ -8,112 +8,178 @@ tags:
   - Namespace
 browser-compat: javascript.builtins.Intl
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p class="summary">The <strong><code>Intl</code></strong> object is the namespace for the ECMAScript Internationalization API, which provides language sensitive string comparison, number formatting, and date and time formatting. The <strong><code>Intl</code></strong> object provides access to several constructors as well as functionality common to the internationalization constructors and other language sensitive functions.</p>
+The **`Intl`** object is the namespace for the ECMAScript Internationalization
+API, which provides language sensitive string comparison, number formatting, and
+date and time formatting. The **`Intl`** object provides access to several
+constructors as well as functionality common to the internationalization
+constructors and other language sensitive functions.
 
-<h2 id="Constructor_properties">Constructor properties</h2>
+## Constructor properties
 
-<dl>
-	<dt>{{jsxref("Global_Objects/Intl/Collator/Collator", "Intl.Collator()")}}</dt>
-	<dd>Constructor for collators, which are objects that enable language-sensitive string comparison.</dd>
-	<dt>{{jsxref("Global_Objects/Intl/DateTimeFormat/DateTimeFormat", "Intl.DateTimeFormat()")}}</dt>
-	<dd>Constructor for objects that enable language-sensitive date and time formatting.</dd>
-	<dt>{{jsxref("Global_Objects/Intl/DisplayNames/DisplayNames", "Intl.DisplayNames()")}}</dt>
-	<dd>Constructor for objects that enable the consistent translation of language, region and script display names.</dd>
-	<dt>{{jsxref("Global_Objects/Intl/ListFormat/ListFormat", "Intl.ListFormat()")}}</dt>
-	<dd>Constructor for objects that enable language-sensitive list formatting.</dd>
-	<dt>{{jsxref("Global_Objects/Intl/Locale/Locale", "Intl.Locale()")}}</dt>
-	<dd>Constructor for objects that represents a Unicode locale identifier.</dd>
-	<dt>{{jsxref("Global_Objects/Intl/NumberFormat/NumberFormat", "Intl.NumberFormat()")}}</dt>
-	<dd>Constructor for objects that enable language-sensitive number formatting.</dd>
-	<dt>{{jsxref("Global_Objects/Intl/PluralRules/PluralRules", "Intl.PluralRules()")}}</dt>
-	<dd>Constructor for objects that enable plural-sensitive formatting and language-specific rules for plurals.</dd>
-	<dt>{{jsxref("Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat", "Intl.RelativeTimeFormat()")}}</dt>
-	<dd>Constructor for objects that enable language-sensitive relative time formatting.</dd>
-</dl>
+- {{jsxref("Global_Objects/Intl/Collator/Collator", "Intl.Collator()")}}
+  - : Constructor for collators, which are objects that enable
+    language-sensitive string comparison.
+- {{jsxref("Global_Objects/Intl/DateTimeFormat/DateTimeFormat", "Intl.DateTimeFormat()")}}
+  - : Constructor for objects that enable language-sensitive date and time
+    formatting.
+- {{jsxref("Global_Objects/Intl/DisplayNames/DisplayNames", "Intl.DisplayNames()")}}
+  - : Constructor for objects that enable the consistent translation of
+    language, region and script display names.
+- {{jsxref("Global_Objects/Intl/ListFormat/ListFormat", "Intl.ListFormat()")}}
+  - : Constructor for objects that enable language-sensitive list formatting.
+- {{jsxref("Global_Objects/Intl/Locale/Locale", "Intl.Locale()")}}
+  - : Constructor for objects that represents a Unicode locale identifier.
+- {{jsxref("Global_Objects/Intl/NumberFormat/NumberFormat", "Intl.NumberFormat()")}}
+  - : Constructor for objects that enable language-sensitive number formatting.
+- {{jsxref("Global_Objects/Intl/PluralRules/PluralRules", "Intl.PluralRules()")}}
+  - : Constructor for objects that enable plural-sensitive formatting and
+    language-specific rules for plurals.
+- {{jsxref("Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat", "Intl.RelativeTimeFormat()")}}
+  - : Constructor for objects that enable language-sensitive relative time
+    formatting.
 
-<h2 id="Static_methods">Static methods</h2>
+## Static methods
 
-<dl>
-	<dt>{{jsxref("Intl.getCanonicalLocales()")}}</dt>
-	<dd>Returns canonical locale names.</dd>
-</dl>
+- {{jsxref("Intl.getCanonicalLocales()")}}
+  - : Returns canonical locale names.
 
-<h2 id="Locale_identification_and_negotiation">Locale identification and negotiation</h2>
+## Locale identification and negotiation
 
-<p>The internationalization constructors as well as several language sensitive methods of other constructors (listed under <a href="#see_also">See also</a>) use a common pattern for identifying locales and determining the one they will actually use: they all accept <code>locales</code> and <code>options</code> arguments, and negotiate the requested locale(s) against the locales they support using an algorithm specified in the <code>options.localeMatcher</code> property.</p>
+The internationalization constructors as well as several language sensitive
+methods of other constructors (listed under [See also](#see_also)) use a common
+pattern for identifying locales and determining the one they will actually use:
+they all accept `locales` and `options` arguments, and negotiate the requested
+locale(s) against the locales they support using an algorithm specified in the
+`options.localeMatcher` property.
 
-<h3 id="locales_argument">locales argument</h3>
+### locales argument
 
-<p>The <code>locales</code> argument is used to determine the locale used in a given operation. The JavaScript implementation examines <code>locales</code>, and then computes a locale it understands that comes closest to satisfying the expressed preference. <code>locales</code> may be:</p>
+The `locales` argument is used to determine the locale used in a given
+operation. The JavaScript implementation examines `locales`, and then computes a
+locale it understands that comes closest to satisfying the expressed preference.
+`locales` may be:
 
-<ul>
-	<li><code>undefined</code> (or omitted): The implementation's default locale will be used.</li>
-	<li>A locale: A locale identifier or an <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale">Intl.Locale</a></code> object that wraps a locale identifier.</li>
-	<li>A list of locales: Any other value, that will be converted into an object and then treated as an array of locales.</li>
-</ul>
+- `undefined` (or omitted): The implementation's default locale will be used.
+- A locale: A locale identifier or an
+  [`Intl.Locale`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale)
+  object that wraps a locale identifier.
+- A list of locales: Any other value, that will be converted into an object and
+  then treated as an array of locales.
 
-<p>In the latter two cases, the actual locale used is the best-supported locale determined by <a href="#locale_negotiation">locale negotiation</a>.</p>
+In the latter two cases, the actual locale used is the best-supported locale
+determined by [locale negotiation](#locale_negotiation).
 
-<p>A locale identifier is a string that consists of:</p>
+A locale identifier is a string that consists of:
 
-<ol>
-	<li>a language subtag,</li>
-	<li>(optionally) a script subtag,</li>
-	<li>(optionally) a region (or country) subtag,</li>
-	<li>(optionally) one or more variant subtags (all of which must be unique),</li>
-	<li>(optionally) one or more BCP 47 extension sequences, and</li>
-	<li>(optionally) a private-use extension sequence</li>
-</ol>
+1.  a language subtag,
+2.  (optionally) a script subtag,
+3.  (optionally) a region (or country) subtag,
+4.  (optionally) one or more variant subtags (all of which must be unique),
+5.  (optionally) one or more BCP 47 extension sequences, and
+6.  (optionally) a private-use extension sequence
 
-<p>...with all present subtags and sequences separated by hyphens. Locale identifiers are case-insensitive ASCII. However, it's conventional to use title case (first letter capitalized, successive letters lower case) for script subtags, upper case for region subtags, and lower case for everything else. For example:</p>
+...with all present subtags and sequences separated by hyphens. Locale
+identifiers are case-insensitive ASCII. However, it's conventional to use title
+case (first letter capitalized, successive letters lower case) for script
+subtags, upper case for region subtags, and lower case for everything else. For
+example:
 
-<ul>
-	<li>"<code>hi</code>": Hindi (language)</li>
-	<li>"<code>de-AT</code>": German (language) as used in Austria (region)</li>
-	<li>"<code>zh-Hans-CN</code>": Chinese (language) written in simplified characters (script) as used in China (region)</li>
-	<li>"<code>en-emodeng</code>": English (language) in the "Early modern English" dialect (variant)</li>
-</ul>
+- "`hi`": Hindi (language)
+- "`de-AT`": German (language) as used in Austria (region)
+- "`zh-Hans-CN`": Chinese (language) written in simplified characters (script)
+  as used in China (region)
+- "`en-emodeng`": English (language) in the "Early modern English" dialect
+  (variant)
 
-<p>Subtags identifying languages, scripts, regions (including countries), and (rarely used) variants are registered in the <a href="http://www.iana.org/assignments/language-subtag-registry">IANA Language Subtag Registry</a>. This registry is periodically updated over time, and implementations may not always be up to date, so don't rely too much on subtags being universally supported.</p>
+Subtags identifying languages, scripts, regions (including countries), and
+(rarely used) variants are registered in the
+[IANA Language Subtag Registry](http://www.iana.org/assignments/language-subtag-registry). This
+registry is periodically updated over time, and implementations may not always
+be up to date, so don't rely too much on subtags being universally supported.
 
-<p>BCP 47 extension sequences consist of a single digit or letter (other than <code>"x"</code>) and one or more two- to eight-letter or digit subtags separated by hyphens. Only one sequence is permitted for each digit or letter: "<code>de-a-foo-a-foo</code>" is invalid. BCP 47 extension subtags are defined in the <a href="https://github.com/unicode-org/cldr/tree/master/common/bcp47">Unicode CLDR Project</a>. Currently only two extensions have defined semantics:</p>
+BCP 47 extension sequences consist of a single digit or letter (other than
+`"x"`) and one or more two- to eight-letter or digit subtags separated by
+hyphens. Only one sequence is permitted for each digit or letter:
+"`de-a-foo-a-foo`" is invalid. BCP 47 extension subtags are defined in the
+[Unicode CLDR Project](https://github.com/unicode-org/cldr/tree/master/common/bcp47).
+Currently only two extensions have defined semantics:
 
-<ul>
-	<li>The <code>"u"</code> (Unicode) extension can be used to request additional customization of {{jsxref("Intl/Collator")}}, {{jsxref("Intl/NumberFormat")}}, or {{jsxref("Intl/DateTimeFormat")}} objects. Examples:
+- The `"u"` (Unicode) extension can be used to request additional customization
+  of {{jsxref("Intl/Collator")}},
+  {{jsxref("Intl/NumberFormat")}}, or
+  {{jsxref("Intl/DateTimeFormat")}} objects. Examples:
 
-		<ul>
-			<li>"<code>de-DE-u-co-phonebk</code>": Use the phonebook variant of the German sort order, which interprets umlauted vowels as corresponding character pairs: ä → ae, ö → oe, ü → ue.</li>
-			<li>"<code>th-TH-u-nu-thai</code>": Use Thai digits (๐, ๑, ๒, ๓, ๔, ๕, ๖, ๗, ๘, ๙) in number formatting.</li>
-			<li>"<code>ja-JP-u-ca-japanese</code>": Use the Japanese calendar in date and time formatting, so that 2013 is expressed as the year 25 of the Heisei period, or 平成25.</li>
-			<li>"<code>en-GB-u-ca-islamic</code>": use British English with the Islamic (Hijri) calendar, where the Gregorian date 14 October, 2017 is the Hijri date 24 Muharram, 1439.</li>
-		</ul>
-	</li>
-	<li>The <code>"t"</code> (transformed) extension indicates transformed content: for example, text that was translated from another locale. No <code>Intl</code> functionality currently considers the <code>"t"</code> extension. However, this extension sometimes contains a nested locale (with no extensions): for example, the transformed extension in "<code>de-t-en</code>" contains the locale identifier for English. If a nested locale is present, it must be a valid locale identifier. For example, because "<code>en-emodeng-emodeng</code>" is invalid (because it contains a duplicate <code>emodeng</code> variant subtag), "<code>de-t-en-emodeng-emodeng</code>" is also invalid.</li>
-</ul>
+  - "`de-DE-u-co-phonebk`": Use the phonebook variant of the German sort order,
+    which interprets umlauted vowels as corresponding character pairs: ä → ae, ö
+    → oe, ü → ue.
+  - "`th-TH-u-nu-thai`": Use Thai digits (๐, ๑, ๒, ๓, ๔, ๕, ๖, ๗, ๘, ๙) in
+    number formatting.
+  - "`ja-JP-u-ca-japanese`": Use the Japanese calendar in date and time
+    formatting, so that 2013 is expressed as the year 25 of the Heisei period,
+    or 平成 25.
+  - "`en-GB-u-ca-islamic`": use British English with the Islamic (Hijri)
+    calendar, where the Gregorian date 14 October, 2017 is the Hijri date 24
+    Muharram, 1439.
 
-<p>Finally, a private-use extension sequence using the letter <code>"x"</code> may appear, followed by one or more one- to eight-letter or digit subtags separated by hyphens. This allows applications to encode information for their own private use, that will be ignored by all <code>Intl</code> operations.</p>
+- The `"t"` (transformed) extension indicates transformed content: for example,
+  text that was translated from another locale. No `Intl` functionality
+  currently considers the `"t"` extension. However, this extension sometimes
+  contains a nested locale (with no extensions): for example, the transformed
+  extension in "`de-t-en`" contains the locale identifier for English. If a
+  nested locale is present, it must be a valid locale identifier. For example,
+  because "`en-emodeng-emodeng`" is invalid (because it contains a duplicate
+  `emodeng` variant subtag), "`de-t-en-emodeng-emodeng`" is also invalid.
 
-<h3 id="locale_negotiation">Locale negotiation</h3>
+Finally, a private-use extension sequence using the letter `"x"` may appear,
+followed by one or more one- to eight-letter or digit subtags separated by
+hyphens. This allows applications to encode information for their own private
+use, that will be ignored by all `Intl` operations.
 
-<p>The list of locales specified by the <code>locales</code> argument, after Unicode extensions have been removed from them, is interpreted as a prioritized request from the application. The runtime compares it against the locales it has available and picks the best one available. Two matching algorithms exist: the "<code>lookup</code>" matcher follows the Lookup algorithm specified in <a href="https://datatracker.ietf.org/doc/html/rfc4647#section-3.4">BCP 47</a>; the "<code>best fit</code>" matcher lets the runtime provide a locale that's at least, but possibly more, suited for the request than the result of the Lookup algorithm. If the application doesn't provide a <code>locales</code> argument, or the runtime doesn't have a locale that matches the request, then the runtime's default locale is used. The matcher can be selected using a property of the <code>options</code> argument (see below).</p>
+### Locale negotiation
 
-<p>If the selected locale identifier had a Unicode extension sequence, that extension is now used to customize the constructed object or the behavior of the function. Each constructor or function supports only a subset of the keys defined for the Unicode extension, and the supported values often depend on the locale identifier. For example, the "<code>co</code>" key (collation) is only supported by {{jsxref("Intl/Collator")}}, and its "<code>phonebk</code>" value is only supported for German.</p>
+The list of locales specified by the `locales` argument, after Unicode
+extensions have been removed from them, is interpreted as a prioritized request
+from the application. The runtime compares it against the locales it has
+available and picks the best one available. Two matching algorithms exist: the
+"`lookup`" matcher follows the Lookup algorithm specified in
+[BCP 47](https://datatracker.ietf.org/doc/html/rfc4647#section-3.4); the
+"`best fit`" matcher lets the runtime provide a locale that's at least, but
+possibly more, suited for the request than the result of the Lookup algorithm.
+If the application doesn't provide a `locales` argument, or the runtime doesn't
+have a locale that matches the request, then the runtime's default locale is
+used. The matcher can be selected using a property of the `options` argument
+(see below).
 
-<h3 id="options_argument">options argument</h3>
+If the selected locale identifier had a Unicode extension sequence, that
+extension is now used to customize the constructed object or the behavior of the
+function. Each constructor or function supports only a subset of the keys
+defined for the Unicode extension, and the supported values often depend on the
+locale identifier. For example, the "`co`" key (collation) is only supported by
+{{jsxref("Intl/Collator")}}, and its "`phonebk`" value is only
+supported for German.
 
-<p>The <code>options</code> argument must be an object with properties that vary between constructors and functions. If the <code>options</code> argument is not provided or is undefined, default values are used for all properties.</p>
+### options argument
 
-<p>One property is supported by all language sensitive constructors and functions: The <code>localeMatcher</code> property, whose value must be a string "<code>lookup</code>" or "<code>best fit</code>" and which selects one of the locale matching algorithms described above.</p>
+The `options` argument must be an object with properties that vary between
+constructors and functions. If the `options` argument is not provided or is
+undefined, default values are used for all properties.
 
-<h2 id="Examples">Examples</h2>
+One property is supported by all language sensitive constructors and functions:
+The `localeMatcher` property, whose value must be a string "`lookup`" or
+"`best fit`" and which selects one of the locale matching algorithms described
+above.
 
-<h3 id="Formatting_dates_and_numbers">Formatting dates and numbers</h3>
+## Examples
 
-<p>You can use <code>Intl</code> to format dates and numbers in a form that's conventional for a specific language and region:</p>
+### Formatting dates and numbers
 
-<pre class="brush: js">const count = 26254.39;
+You can use `Intl` to format dates and numbers in a form that's conventional for
+a specific language and region:
+
+```js
+const count = 26254.39;
 const date = new Date("2012-05-24");
 
 function log(locale) {
@@ -127,38 +193,34 @@ log("en-US");
 
 log("de-DE");
 // expected output: 24.5.2012 26.254,39
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>Introduction: <a href="https://norbertlindenberg.com/2012/12/ecmascript-internationalization-api/index.html">The ECMAScript Internationalization API</a></li>
-	<li>Constructors
-		<ul>
-			<li>{{jsxref("Intl/Collator", "Intl.Collator")}}</li>
-			<li>{{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}}</li>
-			<li>{{jsxref("Intl/ListFormat", "Intl.ListFormat")}}</li>
-			<li>{{jsxref("Intl/NumberFormat", "Intl.NumberFormat")}}</li>
-			<li>{{jsxref("Intl/PluralRules", "Intl.PluralRules")}}</li>
-			<li>{{jsxref("Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat")}}</li>
-			<li>{{jsxref("Intl/Locale", "Intl.Locale")}}</li>
-		</ul>
-	</li>
-	<li>Methods
-		<ul>
-			<li>{{jsxref("String.prototype.localeCompare()")}}</li>
-			<li>{{jsxref("Number.prototype.toLocaleString()")}}</li>
-			<li>{{jsxref("Date.prototype.toLocaleString()")}}</li>
-			<li>{{jsxref("Date.prototype.toLocaleDateString()")}}</li>
-			<li>{{jsxref("Date.prototype.toLocaleTimeString()")}}</li>
-		</ul>
-	</li>
-</ul>
+- Introduction:
+  [The ECMAScript Internationalization API](https://norbertlindenberg.com/2012/12/ecmascript-internationalization-api/index.html)
+- Constructors
+
+  - {{jsxref("Intl/Collator", "Intl.Collator")}}
+  - {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}}
+  - {{jsxref("Intl/ListFormat", "Intl.ListFormat")}}
+  - {{jsxref("Intl/NumberFormat", "Intl.NumberFormat")}}
+  - {{jsxref("Intl/PluralRules", "Intl.PluralRules")}}
+  - {{jsxref("Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat")}}
+  - {{jsxref("Intl/Locale", "Intl.Locale")}}
+
+- Methods
+
+  - {{jsxref("String.prototype.localeCompare()")}}
+  - {{jsxref("Number.prototype.toLocaleString()")}}
+  - {{jsxref("Date.prototype.toLocaleString()")}}
+  - {{jsxref("Date.prototype.toLocaleDateString()")}}
+  - {{jsxref("Date.prototype.toLocaleTimeString()")}}

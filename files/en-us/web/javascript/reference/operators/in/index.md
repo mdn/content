@@ -8,36 +8,36 @@ tags:
   - Relational Operators
 browser-compat: javascript.operators.in
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>The <strong><code>in</code> operator</strong> returns
-    <code>true</code> if the specified property is in the specified object or its
-    prototype chain.</p>
+The **`in` operator** returns `true` if the specified property is in the
+specified object or its prototype chain.
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-inoperator.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-inoperator.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">prop in object</pre>
+```js
+prop in object
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>prop</var></code></dt>
-  <dd>A string or symbol representing a property name or array index (non-symbols will be
-    coerced to strings).</dd>
-  <dt><code><var>object</var></code></dt>
-  <dd>Object to check if it (or its prototype chain) contains the property with specified name
-    (<code><var>prop</var></code>).</dd>
-</dl>
+- `prop`
+  - : A string or symbol representing a property name or array index
+    (non-symbols will be coerced to strings).
+- `object`
+  - : Object to check if it (or its prototype chain) contains the property with
+    specified name (`prop`).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Basic_usage">Basic usage</h3>
+### Basic usage
 
-<p>The following examples show some uses of the <code>in</code> operator.</p>
+The following examples show some uses of the `in` operator.
 
-<pre class="brush: js">// Arrays
+```js
+// Arrays
 let trees = ['redwood', 'bay', 'cedar', 'oak', 'maple']
 0 in trees        // returns true
 3 in trees        // returns true
@@ -53,84 +53,95 @@ Symbol.iterator in trees // returns true (arrays are iterable, works only in ES2
 let mycar = {make: 'Honda', model: 'Accord', year: 1998}
 'make' in mycar  // returns true
 'model' in mycar // returns true
-</pre>
+```
 
-<p>You must specify an object on the right side of the <code>in</code> operator. For
-  example, you can specify a string created with the <code>String</code> constructor, but
-  you cannot specify a string literal.</p>
+You must specify an object on the right side of the `in` operator. For example,
+you can specify a string created with the `String` constructor, but you cannot
+specify a string literal.
 
-<pre class="brush: js">let color1 = new String('green')
+```js
+let color1 = new String('green')
 'length' in color1 // returns true
 
 let color2 = 'coral'
 // generates an error (color2 is not a String object)
 'length' in color2
-</pre>
+```
 
-<h3 id="Using_in_with_deleted_or_undefined_properties">Using <code>in</code> with deleted
-  or undefined properties</h3>
+### Using `in` with deleted or undefined properties
 
-<p>If you delete a property with the
-  <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/delete">delete</a></code>
-  operator, the <code>in</code> operator returns <code>false</code> for that property.</p>
+If you delete a property with the
+[`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete) operator, the
+`in` operator returns `false` for that property.
 
-<pre class="brush: js">let mycar = {make: 'Honda', model: 'Accord', year: 1998}
+```js
+let mycar = {make: 'Honda', model: 'Accord', year: 1998}
 delete mycar.make
 'make' in mycar   // returns false
 
 let trees = new Array('redwood', 'bay', 'cedar', 'oak', 'maple')
 delete trees[3]
 3 in trees  // returns false
-</pre>
+```
 
-<p>If you set a property to {{jsxref("Global_Objects/undefined", "undefined")}} but do not
-  delete it, the <code>in</code> operator returns true for that property.</p>
+If you set a property to
+{{jsxref("Global_Objects/undefined", "undefined")}} but do not
+delete it, the `in` operator returns true for that property.
 
-<pre class="brush: js">let mycar = {make: 'Honda', model: 'Accord', year: 1998}
+```js
+let mycar = {make: 'Honda', model: 'Accord', year: 1998}
 mycar.make = undefined
 'make' in mycar   // returns true
-</pre>
+```
 
-<pre class="brush: js">let trees = new Array('redwood', 'bay', 'cedar', 'oak', 'maple')
+```js
+let trees = new Array('redwood', 'bay', 'cedar', 'oak', 'maple')
 trees[3] = undefined
 3 in trees  // returns true
-</pre>
+```
 
-<p>The <code>in</code> operator will return <code>false</code> for empty array slots. Even
-  if accessing it directly returns <code>undefined</code>.</p>
+The `in` operator will return `false` for empty array slots. Even if accessing
+it directly returns `undefined`.
 
-<pre class="brush: js">let empties = new Array(3)
+```js
+let empties = new Array(3)
 empties[2] // returns undefined
 2 in empties  // returns false
-</pre>
+```
 
-<p>To avoid this, make sure a new array is always filled with non-empty values or not
-  write to indexes past the end of array.</p>
+To avoid this, make sure a new array is always filled with non-empty values or
+not write to indexes past the end of array.
 
-<pre class="brush: js">let empties = new Array(3).fill(undefined)
+```js
+let empties = new Array(3).fill(undefined)
 2 in empties  // returns true
-</pre>
+```
 
-<h3 id="Inherited_properties">Inherited properties</h3>
+### Inherited properties
 
-<p>The <code>in</code> operator returns <code>true</code> for properties in the prototype
-  chain. (If you want to check for only <em>non-inherited</em> properties,
-  use {{jsxref("Object.prototype.hasOwnProperty()")}} instead.)</p>
+The `in` operator returns `true` for properties in the prototype chain. (If you
+want to check for only _non-inherited_ properties,
+use {{jsxref("Object.prototype.hasOwnProperty()")}} instead.)
 
-<pre class="brush: js">'toString' in {}  // returns true
-</pre>
+```js
+'toString' in {}  // returns true
+```
 
-<h3 id="Private_fields_and_methods">Private fields and methods</h3>
+### Private fields and methods
 
-<p>You can also use the <code>in</code> operator to check whether a particular <a href="/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields">private class field or method</a> has been defined in a class. The operator returns <code>true</code> if the method is defined, and <code>false</code> otherwise.</p>
+You can also use the `in` operator to check whether a particular
+[private class field or method](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields)
+has been defined in a class. The operator returns `true` if the method is
+defined, and `false` otherwise.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Code will <code>throw</code> if you attempt to access a <em>private</em> class field/method that has not been defined. Using the <code>in</code> operator to check for potentially missing private fields is more compact than using <code>try/catch</code>.</p>
-</div>
+> **Note:** Code will `throw` if you attempt to access a _private_ class
+> field/method that has not been defined. Using the `in` operator to check for
+> potentially missing private fields is more compact than using `try/catch`.
 
-<p>The code fragment below demonstrates a static function that checks whether a specified class has particular private methods and fields.</p>
+The code fragment below demonstrates a static function that checks whether a
+specified class has particular private methods and fields.
 
-<pre class="brush: js">
+```js
   class ClassWithPrivateFeatures {
     #a;
     #b = null;
@@ -142,27 +153,20 @@ empties[2] // returns undefined
   }
   ClassWithPrivateFeatures.f(new ClassWithPrivateFeatures()) // returns true
   ClassWithPrivateFeatures.f({}) // returns false  
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>
-    <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...in">for...in</a></code>
-  </li>
-  <li>
-    <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/delete">delete</a></code>
-  </li>
-  <li>{{jsxref("Object.prototype.hasOwnProperty()")}}</li>
-  <li>{{jsxref("Reflect.has()")}}</li>
-  <li><a href="/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties">Enumerability and
-      ownership of properties</a></li>
-</ul>
+- [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in)
+- [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete)
+- {{jsxref("Object.prototype.hasOwnProperty()")}}
+- {{jsxref("Reflect.has()")}}
+- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)

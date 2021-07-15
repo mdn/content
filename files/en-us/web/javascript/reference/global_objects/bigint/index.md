@@ -8,15 +8,28 @@ tags:
   - Reference
 browser-compat: javascript.builtins.BigInt
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>BigInt</code></strong> is a built-in object whose constructor returns a <code>bigint</code> {{Glossary("Primitive", "primitive")}} — also called a <strong>BigInt value</strong>, or sometimes just a <strong>BigInt</strong> — to represent whole numbers larger than  2^53 - 1 (<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER"><code>Number.MAX_SAFE_INTEGER</code></a>), which is the largest number JavaScript can represent with a <code>number</code> {{Glossary("Primitive", "primitive")}} (or <em>Number value</em>). BigInt values can be used for arbitrarily large integers.</p>
+**`BigInt`** is a built-in object whose constructor returns a `bigint`
+{{Glossary("Primitive", "primitive")}} — also called a **BigInt
+value**, or sometimes just a **BigInt** — to represent whole numbers larger than
+2^53 - 1
+([`Number.MAX_SAFE_INTEGER`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER)),
+which is the largest number JavaScript can represent with a `number`
+{{Glossary("Primitive", "primitive")}} (or _Number value_). BigInt
+values can be used for arbitrarily large integers.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>A <strong>BigInt value</strong>, also sometimes just called a <strong>BigInt</strong>, is a <code>bigint</code> {{Glossary("Primitive", "primitive")}}, created by appending <code>n</code> to the end of an integer literal, or by calling the {{jsxref("Global_Objects/BigInt/BigInt", "BigInt()")}} constructor (but without the <code>new</code> operator) and giving it an integer value or string value.</p>
+A **BigInt value**, also sometimes just called a **BigInt**, is a `bigint`
+{{Glossary("Primitive", "primitive")}}, created by appending `n`
+to the end of an integer literal, or by calling the
+{{jsxref("Global_Objects/BigInt/BigInt", "BigInt()")}}
+constructor (but without the `new` operator) and giving it an integer value or
+string value.
 
-<pre class="brush: js">const previouslyMaxSafeInteger = 9007199254740991n
+```js
+const previouslyMaxSafeInteger = 9007199254740991n
 
 const alsoHuge = BigInt(9007199254740991)
 // ↪ 9007199254740991n
@@ -32,34 +45,47 @@ const hugeOctal = BigInt("0o377777777777777777")
 
 const hugeBin = BigInt("0b11111111111111111111111111111111111111111111111111111")
 // ↪ 9007199254740991n
-</pre>
+```
 
-<p>BigInt values are similar to Number values in some ways, but also differ in a few key matters: A BigInt value cannot be used with methods in the built-in <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math"><code>Math</code></a> object and cannot be mixed with a Number value in operations; they must be coerced to the same type. Be careful coercing values back and forth, however, as the precision of a BigInt value may be lost when it is coerced to a Number value.</p>
+BigInt values are similar to Number values in some ways, but also differ in a
+few key matters: A BigInt value cannot be used with methods in the built-in
+[`Math`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math) object and
+cannot be mixed with a Number value in operations; they must be coerced to the
+same type. Be careful coercing values back and forth, however, as the precision
+of a BigInt value may be lost when it is coerced to a Number value.
 
-<h3 id="Type_information">Type information</h3>
+### Type information
 
-<p>When tested against <code>typeof</code>, a BigInt value (<code>bigint</code> primitive) will give "<code>bigint</code>":</p>
+When tested against `typeof`, a BigInt value (`bigint` primitive) will give
+"`bigint`":
 
-<pre class="brush: js">typeof 1n === 'bigint'           // true
+```js
+typeof 1n === 'bigint'           // true
 typeof BigInt('1') === 'bigint'  // true
-</pre>
+```
 
-<p>A BigInt value can also be wrapped in an <code>Object</code>:</p>
+A BigInt value can also be wrapped in an `Object`:
 
-<pre class="brush: js">typeof Object(1n) === 'object'  // true
-</pre>
+```js
+typeof Object(1n) === 'object'  // true
+```
 
-<h3 id="Operators">Operators</h3>
+### Operators
 
-<p>The following operators may be used with BigInt values or object-wrapped BigInt values:</p>
+The following operators may be used with BigInt values or object-wrapped BigInt
+values:
 
-<pre>+ * - % **</pre>
+    + * - % **
 
-<p><a href="/en-US/docs/Web/JavaScript/Reference/Operators">Bitwise operators</a> are supported as well, except <code>&gt;&gt;&gt;</code> (zero-fill right shift), as every BigInt value is signed.</p>
+[Bitwise operators](/en-US/docs/Web/JavaScript/Reference/Operators) are
+supported as well, except `>>>` (zero-fill right shift), as every BigInt value
+is signed.
 
-<p>Also unsupported is the unary operator (<code>+</code>), <a href="https://github.com/tc39/proposal-bigint/blob/master/ADVANCED.md#dont-break-asmjs">in order to not break asm.js</a>.</p>
+Also unsupported is the unary operator (`+`),
+[in order to not break asm.js](https://github.com/tc39/proposal-bigint/blob/master/ADVANCED.md#dont-break-asmjs).
 
-<pre class="brush: js">const previousMaxSafe = BigInt(Number.MAX_SAFE_INTEGER)
+```js
+const previousMaxSafe = BigInt(Number.MAX_SAFE_INTEGER)
 // ↪ 9007199254740991n
 
 const maxPlusOne = previousMaxSafe + 1n
@@ -82,82 +108,96 @@ const bigN = 2n ** 54n
 
 bigN * -1n
 // ↪ -18014398509481984n
-</pre>
+```
 
-<p>The <code>/</code> operator also works as expected with whole numbers — but operations with a fractional result will be truncated when used with a BigInt value — they won’t return any fractional digits.</p>
+The `/` operator also works as expected with whole numbers — but operations with
+a fractional result will be truncated when used with a BigInt value — they won’t
+return any fractional digits.
 
-<pre class="brush: js">const expected = 4n / 2n
+```js
+const expected = 4n / 2n
 // ↪ 2n
 
 const truncated = 5n / 2n
 // ↪ 2n, not 2.5n
+```
 
-</pre>
+### Comparisons
 
-<h3 id="Comparisons">Comparisons</h3>
+A BigInt value is not strictly equal to a Number value, but it _is_ loosely so:
 
-<p>A BigInt value is not strictly equal to a Number value, but it <em>is</em> loosely so:</p>
-
-<pre class="brush: js">0n === 0
+```js
+0n === 0
 // ↪ false
 
 0n == 0
-// ↪ true</pre>
+// ↪ true
+```
 
-<p>A Number value and a BigInt value may be compared as usual:</p>
+A Number value and a BigInt value may be compared as usual:
 
-<pre class="brush: js">1n &lt; 2
+```js
+1n < 2
 // ↪ true
 
-2n &gt; 1
+2n > 1
 // ↪ true
 
-2 &gt; 2
+2 > 2
 // ↪ false
 
-2n &gt; 2
+2n > 2
 // ↪ false
 
-2n &gt;= 2
-// ↪ true</pre>
+2n >= 2
+// ↪ true
+```
 
-<p>BigInt values and Number values may be mixed in arrays and sorted:</p>
+BigInt values and Number values may be mixed in arrays and sorted:
 
-<pre class="brush: js">const mixed = [4n, 6, -12n, 10, 4, 0, 0n]
+```js
+const mixed = [4n, 6, -12n, 10, 4, 0, 0n]
 // ↪  [4n, 6, -12n, 10, 4, 0, 0n]
 
 mixed.sort() // default sorting behavior
 // ↪  [ -12n, 0, 0n, 10, 4n, 4, 6 ]
 
-mixed.sort((a, b) =&gt; a - b)
+mixed.sort((a, b) => a - b)
 // won't work since subtraction will not work with mixed types
 // TypeError: can't convert BigInt value to Number value
 
 // sort with an appropriate numeric comparator
-mixed.sort((a, b) =&gt; (a &lt; b) ? -1 : ((a &gt; b) ? 1 : 0))
+mixed.sort((a, b) => (a < b) ? -1 : ((a > b) ? 1 : 0))
 // ↪  [ -12n, 0, 0n, 4n, 4, 6, 10 ]
-</pre>
+```
 
-<p>Note that comparisons with <code>Object</code>-wrapped BigInt values act as with other objects, only indicating equality when the same object instance is compared:</p>
+Note that comparisons with `Object`-wrapped BigInt values act as with other
+objects, only indicating equality when the same object instance is compared:
 
-<pre class="brush: js">0n === Object(0n)          // false
+```js
+0n === Object(0n)          // false
 Object(0n) === Object(0n)  // false
 
 const o = Object(0n)
 o === o                    // true
-</pre>
+```
 
-<h3 id="Conditionals">Conditionals</h3>
+### Conditionals
 
-<p>A BigInt value behaves like a Number value in cases where:</p>
+A BigInt value behaves like a Number value in cases where:
 
-<ul>
- <li>it is converted to a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean"><code>Boolean</code></a>: via the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean"><code>Boolean</code></a> function;</li>
- <li>when used with <a href="/en-US/docs/Web/JavaScript/Reference/Operators">logical operators</a> <code>||</code>, <code>&amp;&amp;</code>, and <code>!</code>; or</li>
- <li>within a conditional test like an <a href="/en-US/docs/Web/JavaScript/Reference/Statements/if...else"><code>if</code></a> statement.</li>
-</ul>
+- it is converted to a
+  [`Boolean`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean): via
+  the [`Boolean`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)
+  function;
+- when used with
+  [logical operators](/en-US/docs/Web/JavaScript/Reference/Operators) `||`,
+  `&&`, and `!`; or
+- within a conditional test like an
+  [`if`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else) statement.
 
-<pre class="brush: js">if (0n) {
+```js
+if (0n) {
   console.log('Hello from the if!')
 } else {
   console.log('Hello from the else!')
@@ -168,7 +208,7 @@ o === o                    // true
 0n || 12n
 // ↪ 12n
 
-0n &amp;&amp; 12n
+0n && 12n
 // ↪ 0n
 
 Boolean(0n)
@@ -182,67 +222,81 @@ Boolean(12n)
 
 !0n
 // ↪ true
-</pre>
+```
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt"><code>BigInt()</code></a></dt>
- <dd>Creates a new BigInt value.</dd>
-</dl>
+- [`BigInt()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt)
+  - : Creates a new BigInt value.
 
-<h2 id="Static_methods">Static methods</h2>
+## Static methods
 
-<dl>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/asIntN"><code>BigInt.asIntN()</code></a></dt>
- <dd>Clamps a BigInt value to a signed integer value, and returns that value.</dd>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/asUintN"><code>BigInt.asUintN()</code></a></dt>
- <dd>Clamps a BigInt value to an unsigned integer value, and returns that value.</dd>
-</dl>
+- [`BigInt.asIntN()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/asIntN)
+  - : Clamps a BigInt value to a signed integer value, and returns that value.
+- [`BigInt.asUintN()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/asUintN)
+  - : Clamps a BigInt value to an unsigned integer value, and returns that
+    value.
 
-<h2 id="Instance_methods">Instance methods</h2>
+## Instance methods
 
-<dl>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/toLocaleString"><code>BigInt.prototype.toLocaleString()</code></a></dt>
- <dd>Returns a string with a language-sensitive representation of this BigInt value. Overrides the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toLocaleString"><code>Object.prototype.toLocaleString()</code></a> method.</dd>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/toString"><code>BigInt.prototype.toString()</code></a></dt>
- <dd>Returns a string representing this BigInt value in the specified radix (base). Overrides the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString"><code>Object.prototype.toString()</code></a> method.</dd>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/valueOf"><code>BigInt.prototype.valueOf()</code></a></dt>
- <dd>Returns this BigInt value. Overrides the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf"><code>Object.prototype.valueOf()</code></a> method.</dd>
-</dl>
+- [`BigInt.prototype.toLocaleString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/toLocaleString)
+  - : Returns a string with a language-sensitive representation of this BigInt
+    value. Overrides the
+    [`Object.prototype.toLocaleString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toLocaleString)
+    method.
+- [`BigInt.prototype.toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/toString)
+  - : Returns a string representing this BigInt value in the specified radix
+    (base). Overrides the
+    [`Object.prototype.toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString)
+    method.
+- [`BigInt.prototype.valueOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/valueOf)
+  - : Returns this BigInt value. Overrides the
+    [`Object.prototype.valueOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf)
+    method.
 
-<h2 id="Usage_recommendations">Usage recommendations</h2>
+## Usage recommendations
 
-<h3 id="Coercion">Coercion</h3>
+### Coercion
 
-<p>Because coercing between Number values and BigInt values can lead to loss of precision, the following are recommended:</p>
-<ul>
-  <li>Only use a BigInt value when values greater than 2^53 are reasonably expected.</li>
-  <li>Don’t coerce between BigInt values and Number values.</li>
-</ul>
+Because coercing between Number values and BigInt values can lead to loss of
+precision, the following are recommended:
 
-<h3 id="Cryptography">Cryptography</h3>
+- Only use a BigInt value when values greater than 2^53 are reasonably expected.
+- Don’t coerce between BigInt values and Number values.
 
-<p>The operations supported on BigInt values are not constant-time, and are thus open to <a href="https://en.wikipedia.org/wiki/Timing_attack">timing attacks</a>. JavaScript BigInts are therefore not well-suited for use in cryptography.</p>
+### Cryptography
 
-<h3 id="Use_within_JSON">Use within JSON</h3>
+The operations supported on BigInt values are not constant-time, and are thus
+open to [timing attacks](https://en.wikipedia.org/wiki/Timing_attack).
+JavaScript BigInts are therefore not well-suited for use in cryptography.
 
-<p>Using <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify"><code>JSON.stringify()</code></a> with any BigInt value will raise a <code>TypeError</code>, as BigInt values aren't serialized in JSON by default. However, you can implement your own <code>toJSON</code> method:</p>
+### Use within JSON
 
-<pre class="brush: js">BigInt.prototype.toJSON = function() { return this.toString()  }</pre>
+Using
+[`JSON.stringify()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)
+with any BigInt value will raise a `TypeError`, as BigInt values aren't
+serialized in JSON by default. However, you can implement your own `toJSON`
+method:
 
-<p>Instead of throwing, <code>JSON.stringify</code> now produces a string like this:</p>
+```js
+BigInt.prototype.toJSON = function() { return this.toString()  }
+```
 
-<pre class="brush: js">JSON.stringify(BigInt(1))
-// '"1"'</pre>
+Instead of throwing, `JSON.stringify` now produces a string like this:
 
-<h2 id="Examples">Examples</h2>
+```js
+JSON.stringify(BigInt(1))
+// '"1"'
+```
 
-<h3 id="Calculating_Primes">Calculating Primes</h3>
+## Examples
 
-<pre class="brush: js">// Returns true if the passed BigInt value is a prime number
+### Calculating Primes
+
+```js
+// Returns true if the passed BigInt value is a prime number
 function isPrime(p) {
-  for (let i = 2n; i * i &lt;= p; i++) {
+  for (let i = 2n; i * i <= p; i++) {
     if (p % i === 0n) return false;
   }
   return true
@@ -253,7 +307,7 @@ function nthPrime(nth) {
   let maybePrime = 2n
   let prime = 0n
 
-  while (nth &gt;= 0n) {
+  while (nth >= 0n) {
     if (isPrime(maybePrime)) {
       nth--
       prime = maybePrime
@@ -265,20 +319,18 @@ function nthPrime(nth) {
 }
 
 nthPrime(20n)
-// ↪ 73n</pre>
+// ↪ 73n
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat}}
 
-<p>{{Compat}}</p>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number"><code>Number</code></a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER"><code>Number.MAX_SAFE_INTEGER</code></a></li>
-</ul>
+- [`Number`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)
+- [`Number.MAX_SAFE_INTEGER`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER)

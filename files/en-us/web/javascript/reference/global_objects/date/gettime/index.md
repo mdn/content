@@ -2,48 +2,52 @@
 title: Date.prototype.getTime()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getTime
 tags:
-- Date
-- JavaScript
-- Method
-- Prototype
-- Reference
+  - Date
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
 browser-compat: javascript.builtins.Date.getTime
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>getTime()</code></strong> method returns the number of milliseconds*
-  since the <a href="https://en.wikipedia.org/wiki/Unix_time">Unix Epoch</a>.</p>
+The **`getTime()`** method returns the number of milliseconds\* since the
+[Unix Epoch](https://en.wikipedia.org/wiki/Unix_time).
 
-<p>* JavaScript uses <em>milliseconds</em> as the unit of measurement, whereas Unix Time
-  is in <em>seconds</em>.</p>
+\* JavaScript uses _milliseconds_ as the unit of measurement, whereas Unix Time
+is in _seconds_.
 
-<p><em>getTime() always uses UTC for time representation. For example, a client browser in
-    one timezone, getTime() will be the same as a client browser in any other
-    timezone.</em></p>
+_getTime() always uses UTC for time representation. For example, a client
+browser in one timezone, getTime() will be the same as a client browser in any
+other timezone._
 
-<p>You can use this method to help assign a date and time to another {{jsxref("Date")}}
-  object. This method is functionally equivalent to the {{jsxref("Date.valueof",
-  "valueOf()")}} method.</p>
+You can use this method to help assign a date and time to another
+{{jsxref("Date")}} object. This method is functionally equivalent to the
+{{jsxref("Date.valueof",
+  "valueOf()")}} method.
 
-<div>{{EmbedInteractiveExample("pages/js/date-gettime.html","shorter")}}</div>
+{{EmbedInteractiveExample("pages/js/date-gettime.html","shorter")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">getTime()</pre>
+```js
+getTime()
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A number representing the milliseconds elapsed between 1 January 1970 00:00:00 UTC and
-  the given date.</p>
+A number representing the milliseconds elapsed between 1 January 1970 00:00:00
+UTC and the given date.
 
-<h2 id="Reduced_time_precision">Reduced time precision</h2>
+## Reduced time precision
 
-<p>To offer protection against timing attacks and fingerprinting, the precision of
-  <code>new Date().getTime()</code> might get rounded depending on browser settings. In
-  Firefox, the <code>privacy.reduceTimerPrecision</code> preference is enabled by default
-  and defaults to 20µs in Firefox 59; in 60 it will be 2ms.</p>
+To offer protection against timing attacks and fingerprinting, the precision of
+`new Date().getTime()` might get rounded depending on browser settings. In
+Firefox, the `privacy.reduceTimerPrecision` preference is enabled by default and
+defaults to 20µs in Firefox 59; in 60 it will be 2ms.
 
-<pre class="brush: js">// reduced time precision (2ms) in Firefox 60
+```js
+// reduced time precision (2ms) in Firefox 60
 new Date().getTime();
 // 1519211809934
 // 1519211810362
@@ -56,57 +60,56 @@ new Date().getTime();
 // 1519129858900
 // 1519129864400
 // ...
-</pre>
+```
 
-<p>In Firefox, you can also enable <code>privacy.resistFingerprinting</code>, the
-  precision will be 100ms or the value of
-  <code>privacy.resistFingerprinting.reduceTimerPrecision.microseconds</code>, whichever
-  is larger.</p>
+In Firefox, you can also enable `privacy.resistFingerprinting`, the precision
+will be 100ms or the value of
+`privacy.resistFingerprinting.reduceTimerPrecision.microseconds`, whichever is
+larger.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_getTime_for_copying_dates">Using <code>getTime()</code> for copying dates
-</h3>
+### Using `getTime()` for copying dates
 
-<p>Constructing a date object with the identical time value.</p>
+Constructing a date object with the identical time value.
 
-<pre class="brush: js">// Since month is zero based, birthday will be January 10, 1995
+```js
+// Since month is zero based, birthday will be January 10, 1995
 var birthday = new Date(1994, 12, 10);
 var copy = new Date();
 copy.setTime(birthday.getTime());
-</pre>
+```
 
-<h3 id="Measuring_execution_time">Measuring execution time</h3>
+### Measuring execution time
 
-<p>Subtracting two subsequent <code>getTime()</code> calls on newly generated
-  {{jsxref("Date")}} objects, give the time span between these two calls. This can be used
-  to calculate the executing time of some operations. See also {{jsxref("Date.now()")}} to
-  prevent instantiating unnecessary {{jsxref("Date")}} objects.</p>
+Subtracting two subsequent `getTime()` calls on newly generated
+{{jsxref("Date")}} objects, give the time span between these two calls.
+This can be used to calculate the executing time of some operations. See also
+{{jsxref("Date.now()")}} to prevent instantiating unnecessary
+{{jsxref("Date")}} objects.
 
-<pre class="brush: js">var end, start;
+```js
+var end, start;
 
 start = new Date();
-for (var i = 0; i &lt; 1000; i++) {
+for (var i = 0; i < 1000; i++) {
   Math.sqrt(i);
 }
 end = new Date();
 
 console.log('Operation took ' + (end.getTime() - start.getTime()) + ' msec');
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat}}
 
-<p>{{Compat}}</p>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
-  <li>{{jsxref("Date.prototype.setTime()")}}</li>
-  <li>{{jsxref("Date.prototype.valueOf()")}}</li>
-  <li>{{jsxref("Date.now()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.setTime()")}}
+- {{jsxref("Date.prototype.valueOf()")}}
+- {{jsxref("Date.now()")}}

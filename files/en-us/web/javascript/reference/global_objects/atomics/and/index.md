@@ -2,125 +2,95 @@
 title: Atomics.and()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/and
 tags:
-- Atomics
-- JavaScript
-- Method
-- Shared Memory
+  - Atomics
+  - JavaScript
+  - Method
+  - Shared Memory
 browser-compat: javascript.builtins.Atomics.and
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The static <code><strong>Atomics</strong></code><strong><code>.and()</code></strong>
-  method computes a bitwise AND with a given value at a given position in the array, and
-  returns the old value at that position. This atomic operation guarantees that no other
-  write happens until the modified value is written back.</p>
+The static **`Atomics`\*\***`.and()`\*\* method computes a bitwise AND with a
+given value at a given position in the array, and returns the old value at that
+position. This atomic operation guarantees that no other write happens until the
+modified value is written back.
 
-<div>{{EmbedInteractiveExample("pages/js/atomics-and.html")}}</div>
+{{EmbedInteractiveExample("pages/js/atomics-and.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+Atomics.and(typedArray, index, value)
+```
 
-<pre class="brush: js">Atomics.and(<var>typedArray</var>, <var>index</var>, <var>value</var>)
-</pre>
+### Parameters
 
-<h3 id="Parameters">Parameters</h3>
-
-<dl>
-  <dt><code><var>typedArray</var></code></dt>
-  <dd>An integer typed array. One of {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}},
-    {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}},
+- `typedArray`
+  - : An integer typed array. One of {{jsxref("Int8Array")}},
+    {{jsxref("Uint8Array")}}, {{jsxref("Int16Array")}},
+    {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}},
     {{jsxref("Uint32Array")}}, {{jsxref("BigInt64Array")}}, or
-    {{jsxref("BigUint64Array")}}.</dd>
-  <dt><code><var>index</var></code></dt>
-  <dd>The position in the <code><var>typedArray</var></code> to compute the bitwise AND.
-  </dd>
-  <dt><code><var>value</var></code></dt>
-  <dd>The number to compute the bitwise AND with.</dd>
-</dl>
+    {{jsxref("BigUint64Array")}}.
+- `index`
+  - : The position in the `typedArray` to compute the bitwise AND.
+- `value`
+  - : The number to compute the bitwise AND with.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>The old value at the given position
-  (<code><var>typedArray</var>[<var>index</var>]</code>).</p>
+The old value at the given position (`typedArray[index]`).
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<ul>
-  <li>Throws a {{jsxref("TypeError")}}, if <code><var>typedArray</var></code> is not one
-    of the allowed integer types.</li>
-  <li>Throws a {{jsxref("RangeError")}}, if <code><var>index</var></code> is out of bounds
-    in the <code><var>typedArray</var></code>.</li>
-</ul>
+- Throws a {{jsxref("TypeError")}}, if `typedArray` is not one of the
+  allowed integer types.
+- Throws a {{jsxref("RangeError")}}, if `index` is out of bounds in the
+  `typedArray`.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The bitwise AND operation only yields 1, if both <code>a</code> and <code>b</code> are
-  1. The truth table for the AND operation is:</p>
+The bitwise AND operation only yields 1, if both `a` and `b` are 1\. The truth
+table for the AND operation is:
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th><code>a</code></th>
-      <th><code>b</code></th>
-      <th><code>a &amp; b</code></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-    </tr>
-  </tbody>
-</table>
+| `a` | `b` | `a & b` |
+| --- | --- | ------- |
+| 0   | 0   | 0       |
+| 0   | 1   | 0       |
+| 1   | 0   | 0       |
+| 1   | 1   | 1       |
 
-<p>For example, a bitwise AND of <code>5 &amp; 1</code> results in <code>0001</code> which
-  is 1 in decimal.</p>
+For example, a bitwise AND of `5 & 1` results in `0001` which is 1 in decimal.
 
-<pre class="brush: plain">5  0101
+```plain
+5  0101
 1  0001
    ----
-1  0001</pre>
+1  0001
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_and">Using and()</h3>
+### Using and()
 
-<pre class="brush: js">const sab = new SharedArrayBuffer(1024);
+```js
+const sab = new SharedArrayBuffer(1024);
 const ta = new Uint8Array(sab);
 ta[0] = 5;
 
 Atomics.and(ta, 0, 1); // returns 0, the old value
 Atomics.load(ta, 0);  // 1
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Atomics")}}</li>
-  <li>{{jsxref("Atomics.or()")}}</li>
-  <li>{{jsxref("Atomics.xor()")}}</li>
-</ul>
+- {{jsxref("Atomics")}}
+- {{jsxref("Atomics.or()")}}
+- {{jsxref("Atomics.xor()")}}

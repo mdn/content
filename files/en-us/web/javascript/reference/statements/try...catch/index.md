@@ -2,23 +2,23 @@
 title: try...catch
 slug: Web/JavaScript/Reference/Statements/try...catch
 tags:
-- Exception
-- JavaScript
-- Language feature
-- Statement
+  - Exception
+  - JavaScript
+  - Language feature
+  - Statement
 browser-compat: javascript.statements.try_catch
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p>The <strong><code>try...catch</code></strong> statement marks a block of statements to
-  try and specifies a response should an exception be thrown.</p>
+The **`try...catch`** statement marks a block of statements to try and specifies
+a response should an exception be thrown.
 
-<div>{{EmbedInteractiveExample("pages/js/statement-trycatch.html")}}</div>
+{{EmbedInteractiveExample("pages/js/statement-trycatch.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush: js">try {
+```js
+try {
   try_statements
 }
 catch (exception_var) {
@@ -27,83 +27,74 @@ catch (exception_var) {
 finally {
   finally_statements
 }
-</pre>
+```
 
-<dl>
-  <dt><code><em>try_statements</em></code></dt>
-  <dd>The statements to be executed.</dd>
+- `try_statements`
+  - : The statements to be executed.
+- `catch_statements`
+  - : Statement that is executed if an exception is thrown in the `try`-block.
+- `exception_var`
+  - : An optional identifier to hold an exception object for the associated
+    `catch`-block.
+- `finally_statements`
+  - : Statements that are executed after the `try` statement completes. These
+    statements execute regardless of whether an exception was thrown or caught.
 
-  <dt><code><em>catch_statements</em></code></dt>
-  <dd>Statement that is executed if an exception is thrown in the <code>try</code>-block.
-  </dd>
+## Description
 
-  <dt><code><em>exception_var</em></code></dt>
-  <dd>An optional identifier to hold an exception object for the associated
-    <code>catch</code>-block.</dd>
+The `try` statement consists of a `try`-block, which contains one or more
+statements. `{}` must always be used, even for single statements. At least one
+`catch`-block, or a `finally`-block, must be present. This gives us three forms
+for the `try` statement:
 
-  <dt><code><em>finally_statements</em></code></dt>
-  <dd>Statements that are executed after the <code>try</code> statement completes. These
-    statements execute regardless of whether an exception was thrown or caught.</dd>
-</dl>
+- `try...catch`
+- `try...finally`
+- `try...catch...finally`
 
-<h2 id="Description">Description</h2>
+A `catch`-block contains statements that specify what to do if an exception is
+thrown in the `try`-block. If any statement within the `try`-block (or in a
+function called from within the `try`-block) throws an exception, control is
+immediately shifted to the `catch`-block. If no exception is thrown in the
+`try`-block, the `catch`-block is skipped.
 
-<p>The <code>try</code> statement consists of a <code>try</code>-block, which contains one
-  or more statements. <code>{}</code> must always be used, even for single statements. At
-  least one <code>catch</code>-block, or a <code>finally</code>-block, must be present.
-  This gives us three forms for the <code>try</code> statement:</p>
+The `finally`-block will always execute after the `try`-block and
+`catch`-block(s) have finished executing. It always executes, regardless of
+whether an exception was thrown or caught.
 
-<ul>
-  <li><code>try...catch</code></li>
-  <li><code>try...finally</code></li>
-  <li><code>try...catch...finally</code></li>
-</ul>
+You can nest one or more `try` statements. If an inner `try` statement does not
+have a `catch`-block, the enclosing `try` statement's `catch`-block is used
+instead.
 
-<p>A <code>catch</code>-block contains statements that specify what to do if an exception
-  is thrown in the <code>try</code>-block. If any statement within the
-  <code>try</code>-block (or in a function called from within the <code>try</code>-block)
-  throws an exception, control is immediately shifted to the <code>catch</code>-block. If
-  no exception is thrown in the <code>try</code>-block, the <code>catch</code>-block is
-  skipped.</p>
+You can also use the `try` statement to handle JavaScript exceptions. See the
+[JavaScript Guide](/en-US/docs/Web/JavaScript/Guide) for more information on
+JavaScript exceptions.
 
-<p>The <code>finally</code>-block will always execute after the <code>try</code>-block and
-  <code>catch</code>-block(s) have finished executing. It always executes, regardless of
-  whether an exception was thrown or caught.</p>
+### Unconditional catch-block
 
-<p>You can nest one or more <code>try</code> statements. If an inner <code>try</code>
-  statement does not have a <code>catch</code>-block, the enclosing <code>try</code>
-  statement's <code>catch</code>-block is used instead.</p>
+When a `catch`-block is used, the `catch`-block is executed when any exception
+is thrown from within the `try`-block. For example, when the exception occurs in
+the following code, control transfers to the `catch`-block.
 
-<p>You can also use the <code>try</code> statement to handle JavaScript exceptions. See
-  the <a href="/en-US/docs/Web/JavaScript/Guide">JavaScript Guide</a> for more information
-  on JavaScript exceptions.</p>
-
-<h3 id="Unconditional_catch-block">Unconditional catch-block</h3>
-
-<p>When a <code>catch</code>-block is used, the <code>catch</code>-block is executed when
-  any exception is thrown from within the <code>try</code>-block. For example, when the
-  exception occurs in the following code, control transfers to the
-  <code>catch</code>-block.</p>
-
-<pre class="brush: js">try {
+```js
+try {
   throw 'myException'; // generates an exception
 } catch (e) {
   // statements to handle any exceptions
   logMyErrors(e); // pass exception object to error handler
 }
-</pre>
+```
 
-<p>The <code>catch</code>-block specifies an identifier (<code>e</code> in the example
-  above) that holds the value of the exception; this value is only available in the
-  {{Glossary("Scope", "scope")}} of the <code>catch</code>-block.</p>
+The `catch`-block specifies an identifier (`e` in the example above) that holds
+the value of the exception; this value is only available in the
+{{Glossary("Scope", "scope")}} of the `catch`-block.
 
-<h3 id="Conditional_catch-blocks">Conditional catch-blocks</h3>
+### Conditional catch-blocks
 
-<p>You can create "Conditional <code>catch</code>-blocks" by combining
-  <code>try...catch</code> blocks with <code>if...else if...else</code> structures, like
-  this:</p>
+You can create "Conditional `catch`-blocks" by combining `try...catch` blocks
+with `if...else if...else` structures, like this:
 
-<pre class="brush: js">try {
+```js
+try {
   myroutine(); // may throw three types of exceptions
 } catch (e) {
   if (e instanceof TypeError) {
@@ -117,12 +108,13 @@ finally {
     logMyErrors(e); // pass exception object to error handler
   }
 }
-</pre>
+```
 
-<p>A common use case for this is to only catch (and silence) a small subset of expected
-  errors, and then re-throw the error in other cases:</p>
+A common use case for this is to only catch (and silence) a small subset of
+expected errors, and then re-throw the error in other cases:
 
-<pre class="brush: js">try {
+```js
+try {
   myRoutine();
 } catch (e) {
   if (e instanceof RangeError) {
@@ -131,18 +123,18 @@ finally {
     throw e;  // re-throw the error unchanged
   }
 }
-</pre>
+```
 
-<h3 id="The_exception_identifier">The exception identifier</h3>
+### The exception identifier
 
-<p>When an exception is thrown in the <code>try</code>-block,
-  <em><code>exception_var</code></em> (i.e., the <code>e</code> in <code>catch (e)</code>)
-  holds the exception value. You can use this identifier to get information about the
-  exception that was thrown. This identifier is only available in the
-  <code>catch</code>-block's {{Glossary("Scope", "scope")}}. If you don't need the
-  exception value, it could be omitted.</p>
+When an exception is thrown in the `try`-block, _`exception_var`_ (i.e., the `e`
+in `catch (e)`) holds the exception value. You can use this identifier to get
+information about the exception that was thrown. This identifier is only
+available in the `catch`-block's {{Glossary("Scope", "scope")}}. If
+you don't need the exception value, it could be omitted.
 
-<pre class="brush: js">function isValidJSON(text) {
+```js
+function isValidJSON(text) {
   try {
     JSON.parse(text);
     return true;
@@ -150,38 +142,39 @@ finally {
     return false;
   }
 }
-</pre>
+```
 
-<h3 id="The_finally-block">The finally-block</h3>
+### The finally-block
 
-<p>The <code>finally</code>-block contains statements to execute after the
-  <code>try</code>-block and <code>catch</code>-block(s) execute, but before the
-  statements following the <code>try...catch...finally</code>-block. Note that the
-  <code>finally</code>-block executes regardless of whether an exception is thrown. Also,
-  if an exception is thrown, the statements in the <code>finally</code>-block execute even
-  if no <code>catch</code>-block handles the exception.</p>
+The `finally`-block contains statements to execute after the `try`-block and
+`catch`-block(s) execute, but before the statements following the
+`try...catch...finally`-block. Note that the `finally`-block executes regardless
+of whether an exception is thrown. Also, if an exception is thrown, the
+statements in the `finally`-block execute even if no `catch`-block handles the
+exception.
 
-<p>The following example shows one use case for the <code>finally</code>-block. The code
-  opens a file and then executes statements that use the file; the
-  <code>finally</code>-block makes sure the file always closes after it is used even if an
-  exception was thrown.</p>
+The following example shows one use case for the `finally`-block. The code opens
+a file and then executes statements that use the file; the `finally`-block makes
+sure the file always closes after it is used even if an exception was thrown.
 
-<pre class="brush: js">openMyFile();
+```js
+openMyFile();
 try {
   // tie up a resource
   writeMyFile(theData);
 } finally {
   closeMyFile(); // always close the resource
 }
-</pre>
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Nested_try-blocks">Nested try-blocks</h3>
+### Nested try-blocks
 
-<p>First, let's see what happens with this:</p>
+First, let's see what happens with this:
 
-<pre class="brush: js">try {
+```js
+try {
   try {
     throw new Error('oops');
   } finally {
@@ -194,12 +187,13 @@ try {
 // Output:
 // "finally"
 // "outer" "oops"
-</pre>
+```
 
-<p>Now, if we already caught the exception in the inner <code>try</code>-block by adding a
-  <code>catch</code>-block</p>
+Now, if we already caught the exception in the inner `try`-block by adding a
+`catch`-block
 
-<pre class="brush: js">try {
+```js
+try {
   try {
     throw new Error('oops');
   } catch (ex) {
@@ -214,11 +208,12 @@ try {
 // Output:
 // "inner" "oops"
 // "finally"
-</pre>
+```
 
-<p>And now, let's rethrow the error.</p>
+And now, let's rethrow the error.
 
-<pre class="brush: js">try {
+```js
+try {
   try {
     throw new Error('oops');
   } catch (ex) {
@@ -235,21 +230,22 @@ try {
 // "inner" "oops"
 // "finally"
 // "outer" "oops"
-</pre>
+```
 
-<p>Any given exception will be caught only once by the nearest enclosing
-  <code>catch</code>-block unless it is rethrown. Of course, any new exceptions raised in
-  the "inner" block (because the code in <code>catch</code>-block may do something that
-  throws), will be caught by the "outer" block.</p>
+Any given exception will be caught only once by the nearest enclosing
+`catch`-block unless it is rethrown. Of course, any new exceptions raised in the
+"inner" block (because the code in `catch`-block may do something that throws),
+will be caught by the "outer" block.
 
-<h3 id="Returning_from_a_finally-block">Returning from a finally-block</h3>
+### Returning from a finally-block
 
-<p>If the <code>finally</code>-block returns a value, this value becomes the return value
-  of the entire <code>try-catch-finally</code> statement, regardless of any
-  <code>return</code> statements in the <code>try</code> and <code>catch</code>-blocks.
-  This includes exceptions thrown inside of the <code>catch</code>-block:</p>
+If the `finally`-block returns a value, this value becomes the return value of
+the entire `try-catch-finally` statement, regardless of any `return` statements
+in the `try` and `catch`-blocks. This includes exceptions thrown inside of the
+`catch`-block:
 
-<pre class="brush: js">(function() {
+```js
+(function() {
   try {
     try {
       throw new Error('oops');
@@ -267,22 +263,21 @@ try {
 
 // Output:
 // "inner" "oops"
-// "finally"</pre>
+// "finally"
+```
 
-<p>The outer "oops" is not thrown because of the return in the <code>finally</code>-block.
-  The same would apply to any value returned from the <code>catch</code>-block.</p>
+The outer "oops" is not thrown because of the return in the `finally`-block. The
+same would apply to any value returned from the `catch`-block.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Error")}}</li>
-  <li>{{jsxref("Statements/throw", "throw")}}</li>
-</ul>
+- {{jsxref("Error")}}
+- {{jsxref("Statements/throw", "throw")}}

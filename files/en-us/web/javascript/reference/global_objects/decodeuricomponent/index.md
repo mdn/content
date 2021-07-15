@@ -2,88 +2,90 @@
 title: decodeURIComponent()
 slug: Web/JavaScript/Reference/Global_Objects/decodeURIComponent
 tags:
-- JavaScript
-- Method
-- Reference
+  - JavaScript
+  - Method
+  - Reference
 browser-compat: javascript.builtins.decodeURIComponent
 ---
-<div>{{jsSidebar("Objects")}}</div>
+{{jsSidebar("Objects")}}
 
-<p>The <code><strong>decodeURIComponent()</strong></code> function decodes a Uniform
-  Resource Identifier (URI) component previously created by
-  {{jsxref("encodeURIComponent")}} or by a similar routine.</p>
+The **`decodeURIComponent()`** function decodes a Uniform Resource Identifier
+(URI) component previously created by
+{{jsxref("encodeURIComponent")}} or by a similar routine.
 
-<div>{{EmbedInteractiveExample("pages/js/globalprops-decodeuricomponent.html")}}</div>
+{{EmbedInteractiveExample("pages/js/globalprops-decodeuricomponent.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">decodeURIComponent(<em>encodedURI</em>)</pre>
+```js
+decodeURIComponent(encodedURI)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>encodedURI</code></dt>
-  <dd>An encoded component of a Uniform Resource Identifier.</dd>
-</dl>
+- `encodedURI`
+  - : An encoded component of a Uniform Resource Identifier.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A new string representing the decoded version of the given encoded Uniform Resource
-  Identifier (URI) component.</p>
+A new string representing the decoded version of the given encoded Uniform
+Resource Identifier (URI) component.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>Throws an {{jsxref("URIError")}} ("malformed URI sequence") exception when used
-  wrongly.</p>
+Throws an {{jsxref("URIError")}} ("malformed URI sequence") exception when
+used wrongly.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Replaces each escape sequence in the encoded URI component with the character that it
-  represents.</p>
+Replaces each escape sequence in the encoded URI component with the character
+that it represents.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Decoding_a_Cyrillic_URL_component">Decoding a Cyrillic URL component</h3>
+### Decoding a Cyrillic URL component
 
-<pre class="brush: js">decodeURIComponent('JavaScript_%D1%88%D0%B5%D0%BB%D0%BB%D1%8B');
+```js
+decodeURIComponent('JavaScript_%D1%88%D0%B5%D0%BB%D0%BB%D1%8B');
 // "JavaScript_шеллы"
-</pre>
+```
 
-<h3 id="Catching_errors">Catching errors</h3>
+### Catching errors
 
-<pre class="brush: js">try {
+```js
+try {
   var a = decodeURIComponent('%E0%A4%A');
 } catch(e) {
   console.error(e);
 }
 
-// URIError: malformed URI sequence</pre>
+// URIError: malformed URI sequence
+```
 
-<h3 id="Decoding_query_parameters_from_a_URL">Decoding query parameters from a URL</h3>
+### Decoding query parameters from a URL
 
-<p>decodeURIComponent cannot be used directly to parse query parameters from a URL. It
-  needs a bit of preparation.</p>
+decodeURIComponent cannot be used directly to parse query parameters from a URL.
+It needs a bit of preparation.
 
-<pre class="brush: js">function decodeQueryParam(p) {
+```js
+function decodeQueryParam(p) {
   return decodeURIComponent(p.replace(/\+/g, ' '));
 }
 
 decodeQueryParam('search+query%20%28correct%29');
 // 'search query (correct)'
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("decodeURI")}}</li>
-  <li>{{jsxref("encodeURI")}}</li>
-  <li>{{jsxref("encodeURIComponent")}}</li>
-</ul>
+- {{jsxref("decodeURI")}}
+- {{jsxref("encodeURI")}}
+- {{jsxref("encodeURIComponent")}}

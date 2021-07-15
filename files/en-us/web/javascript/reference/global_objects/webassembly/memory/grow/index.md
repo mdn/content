@@ -2,71 +2,71 @@
 title: WebAssembly.Memory.prototype.grow()
 slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/grow
 tags:
-- API
-- JavaScript
-- Method
-- Reference
-- WebAssembly
-- grow
-- memory
+  - API
+  - JavaScript
+  - Method
+  - Reference
+  - WebAssembly
+  - grow
+  - memory
 browser-compat: javascript.builtins.WebAssembly.Memory.grow
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>grow()</code></strong> protoype method of the
-  <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory">Memory</a></code>
-  object increases the size of the memory instance by a specified number of WebAssembly
-  pages.</p>
+The **`grow()`** protoype method of the
+[`Memory`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory)
+object increases the size of the memory instance by a specified number of
+WebAssembly pages.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">grow(number)</pre>
+```js
+grow(number)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><em>number</em></dt>
-  <dd>The number of WebAssembly pages you want to grow the memory by (each one is 64KiB in
-    size).</dd>
-</dl>
+- _number_
+  - : The number of WebAssembly pages you want to grow the memory by (each one
+    is 64KiB in size).
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>The previous size of the memory, in units of WebAssembly pages.</p>
+The previous size of the memory, in units of WebAssembly pages.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_grow">Using grow</h3>
+### Using grow
 
-<p>The following example creates a new WebAssembly Memory instance with an initial size of
-  1 page (64KiB), and a maximum size of 10 pages (640KiB).</p>
+The following example creates a new WebAssembly Memory instance with an initial
+size of 1 page (64KiB), and a maximum size of 10 pages (640KiB).
 
-<pre class="brush: js">var memory = new WebAssembly.Memory({initial:1, maximum:10});</pre>
+```js
+var memory = new WebAssembly.Memory({initial:1, maximum:10});
+```
 
-<p>We can then grow the instance by one page like so:</p>
+We can then grow the instance by one page like so:
 
-<pre class="brush: js">const bytesPerPage = 64 * 1024;
+```js
+const bytesPerPage = 64 * 1024;
 console.log(memory.buffer.byteLength / bytesPerPage);  // "1"
 console.log(memory.grow(1));                           // "1"
 console.log(memory.buffer.byteLength / bytesPerPage);  // "2"
-</pre>
+```
 
-<p>Note the return value of <code>grow()</code> here is the previous number of WebAssembly
-  pages.</p>
+Note the return value of `grow()` here is the previous number of WebAssembly
+pages.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/WebAssembly">WebAssembly</a> overview page</li>
-  <li><a href="/en-US/docs/WebAssembly/Concepts">WebAssembly concepts</a></li>
-  <li><a href="/en-US/docs/WebAssembly/Using_the_JavaScript_API">Using the WebAssembly
-      JavaScript API</a></li>
-</ul>
+- [WebAssembly](/en-US/docs/WebAssembly) overview page
+- [WebAssembly concepts](/en-US/docs/WebAssembly/Concepts)
+- [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)

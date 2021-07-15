@@ -2,61 +2,59 @@
 title: Reflect.setPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/setPrototypeOf
 tags:
-- ECMAScript 2015
-- JavaScript
-- Method
-- Reference
-- Reflect
-- Polyfill
+  - ECMAScript 2015
+  - JavaScript
+  - Method
+  - Reference
+  - Reflect
+  - Polyfill
 browser-compat: javascript.builtins.Reflect.setPrototypeOf
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The static
-    <strong><code>Reflect.setPrototypeOf()</code></strong> method is the same method as
-    {{jsxref("Object.setPrototypeOf()")}}, except for its return type. It sets the
-    prototype (i.e., the internal <code>[[Prototype]]</code> property) of a specified
-    object to another object or to {{jsxref("null")}}, and returns <code>true</code> if
-    the operation was successful, or <code>false</code> otherwise.</p>
+The static **`Reflect.setPrototypeOf()`** method is the same method as
+{{jsxref("Object.setPrototypeOf()")}}, except for its return type. It
+sets the prototype (i.e., the internal `[[Prototype]]` property) of a specified
+object to another object or to {{jsxref("null")}}, and returns `true` if
+the operation was successful, or `false` otherwise.
 
-<div>{{EmbedInteractiveExample("pages/js/reflect-setprototypeof.html")}}</div>
+{{EmbedInteractiveExample("pages/js/reflect-setprototypeof.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+Reflect.setPrototypeOf(target, prototype)
+```
 
-<pre class="brush: js">Reflect.setPrototypeOf(<var>target</var>, <var>prototype</var>)
-</pre>
+### Parameters
 
-<h3 id="Parameters">Parameters</h3>
+- `target`
+  - : The target object of which to set the prototype.
+- `prototype`
+  - : The object's new prototype (an object or {{jsxref("null")}}).
 
-<dl>
-  <dt><code><var>target</var></code></dt>
-  <dd>The target object of which to set the prototype.</dd>
-  <dt><code><var>prototype</var></code></dt>
-  <dd>The object's new prototype (an object or {{jsxref("null")}}).</dd>
-</dl>
+### Return value
 
-<h3 id="Return_value">Return value</h3>
+A {{jsxref("Boolean")}} indicating whether or not the prototype was
+successfully set.
 
-<p>A {{jsxref("Boolean")}} indicating whether or not the prototype was successfully set.
-</p>
+### Exceptions
 
-<h3 id="Exceptions">Exceptions</h3>
+A {{jsxref("TypeError")}}, if `target` is not an
+{{jsxref("Object")}} or if `prototype` is neither an object nor
+{{jsxref("null")}}.
 
-<p>A {{jsxref("TypeError")}}, if <code><var>target</var></code> is not an
-  {{jsxref("Object")}} or if <code><var>prototype</var></code> is neither an object nor
-  {{jsxref("null")}}.</p>
+## Description
 
-<h2 id="Description">Description</h2>
+The `Reflect.setPrototypeOf` method changes the prototype (i.e. the value of the
+internal `[[Prototype]]` property) of the specified object.
 
-<p>The <code>Reflect.setPrototypeOf</code> method changes the prototype (i.e. the value of
-  the internal <code>[[Prototype]]</code> property) of the specified object.</p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Using Reflect.setPrototypeOf()
 
-<h3 id="Using_Reflect.setPrototypeOf">Using Reflect.setPrototypeOf()</h3>
-
-<pre class="brush: js">Reflect.setPrototypeOf({}, Object.prototype)  // true
+```js
+Reflect.setPrototypeOf({}, Object.prototype)  // true
 
 // It can change an object's [[Prototype]] to null.
 Reflect.setPrototypeOf({}, null)  // true
@@ -68,20 +66,19 @@ Reflect.setPrototypeOf(Object.freeze({}), null)  // false
 let target = {}
 let proto = Object.create(target)
 Reflect.setPrototypeOf(target, proto)  // false
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>A polyfill of <code>Reflect.setPrototypeOf</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-reflect"><code>core-js</code></a></li>
-  <li>{{jsxref("Reflect")}}</li>
-  <li>{{jsxref("Object.setPrototypeOf()")}}</li>
-</ul>
+- A polyfill of `Reflect.setPrototypeOf` is available in
+  [`core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
+- {{jsxref("Reflect")}}
+- {{jsxref("Object.setPrototypeOf()")}}

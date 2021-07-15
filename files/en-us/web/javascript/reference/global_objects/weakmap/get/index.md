@@ -2,61 +2,57 @@
 title: WeakMap.prototype.get()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/get
 tags:
-- ECMAScript 2015
-- JavaScript
-- Method
-- Prototype
-- WeakMap
+  - ECMAScript 2015
+  - JavaScript
+  - Method
+  - Prototype
+  - WeakMap
 browser-compat: javascript.builtins.WeakMap.get
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>get()</code></strong> method returns a specified element from a
-  <code>WeakMap</code> object.</p>
+The **`get()`** method returns a specified element from a `WeakMap` object.
 
-<div>{{EmbedInteractiveExample("pages/js/weakmap-prototype-get.html")}}</div>
+{{EmbedInteractiveExample("pages/js/weakmap-prototype-get.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+get(key)
+```
 
-<pre class="brush: js">get(key)</pre>
+### Parameters
 
-<h3 id="Parameters">Parameters</h3>
+- `key`
+  - : Required. The key of the element to return from the `WeakMap` object.
 
-<dl>
-  <dt><code><var>key</var></code></dt>
-  <dd>Required. The key of the element to return from the <code>WeakMap</code> object.
-  </dd>
-</dl>
+### Return value
 
-<h3 id="Return_value">Return value</h3>
+The element associated with the specified key in the `WeakMap` object. If the
+key can't be found, {{jsxref("undefined")}} is returned.
 
-<p>The element associated with the specified key in the <code>WeakMap</code> object. If
-  the key can't be found, {{jsxref("undefined")}} is returned.</p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Using the get() method
 
-<h3 id="Using_the_get_method">Using the get() method</h3>
-
-<pre class="brush: js">var wm = new WeakMap();
+```js
+var wm = new WeakMap();
 wm.set(window, 'foo');
 
 wm.get(window); // Returns "foo".
 wm.get('baz');  // Returns undefined.
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("WeakMap")}}</li>
-  <li>{{jsxref("WeakMap.set()")}}</li>
-  <li>{{jsxref("WeakMap.has()")}}</li>
-</ul>
+- {{jsxref("WeakMap")}}
+- {{jsxref("WeakMap.set()")}}
+- {{jsxref("WeakMap.has()")}}

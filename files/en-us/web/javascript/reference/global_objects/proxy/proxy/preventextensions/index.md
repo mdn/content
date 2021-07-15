@@ -8,62 +8,62 @@ tags:
   - Proxy
 browser-compat: javascript.builtins.Proxy.handler.preventExtensions
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>handler.preventExtensions()</code></strong> method is a trap for {{jsxref("Object.preventExtensions()")}}.</p>
+The **`handler.preventExtensions()`** method is a trap for
+{{jsxref("Object.preventExtensions()")}}.
 
-<div>{{EmbedInteractiveExample("pages/js/proxyhandler-preventextensions.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/proxyhandler-preventextensions.html", "taller")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush: js">const <var>p</var> = new Proxy(<var>target</var>, {
-  preventExtensions: function(<var>target</var>) {
+```js
+const p = new Proxy(target, {
+  preventExtensions: function(target) {
   }
 });
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>The following parameter is passed to the <code>preventExtensions()</code> method. <code>this</code> is bound to the handler.</p>
+The following parameter is passed to the `preventExtensions()` method. `this` is
+bound to the handler.
 
-<dl>
- <dt><code><var>target</var></code></dt>
- <dd>The target object.</dd>
-</dl>
+- `target`
+  - : The target object.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>The <code>preventExtensions()</code> method must return a boolean value.</p>
+The `preventExtensions()` method must return a boolean value.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The <code><strong>handler.preventExtensions()</strong></code> method is a trap for {{jsxref("Object.preventExtensions()")}}.</p>
+The **`handler.preventExtensions()`** method is a trap for
+{{jsxref("Object.preventExtensions()")}}.
 
-<h3 id="Interceptions">Interceptions</h3>
+### Interceptions
 
-<p>This trap can intercept these operations:</p>
+This trap can intercept these operations:
 
-<ul>
- <li>{{jsxref("Object.preventExtensions()")}}</li>
- <li>{{jsxref("Reflect.preventExtensions()")}}</li>
-</ul>
+- {{jsxref("Object.preventExtensions()")}}
+- {{jsxref("Reflect.preventExtensions()")}}
 
-<h3 id="Invariants">Invariants</h3>
+### Invariants
 
-<p>If the following invariants are violated, the proxy will throw a {{jsxref("TypeError")}}:</p>
+If the following invariants are violated, the proxy will throw a
+{{jsxref("TypeError")}}:
 
-<ul>
- <li><code>Object.preventExtensions(<var>proxy</var>)</code> only returns <code>true</code> if <code>Object.isExtensible(<var>proxy</var>)</code> is <code>false</code>.</li>
-</ul>
+- `Object.preventExtensions(proxy)` only returns `true` if
+  `Object.isExtensible(proxy)` is `false`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Trapping_of_preventExtensions">Trapping of preventExtensions</h3>
+### Trapping of preventExtensions
 
-<p>The following code traps {{jsxref("Object.preventExtensions()")}}.</p>
+The following code traps {{jsxref("Object.preventExtensions()")}}.
 
-<pre class="brush: js">const p = new Proxy({}, {
+```js
+const p = new Proxy({}, {
   preventExtensions: function(target) {
     console.log('called');
     Object.preventExtensions(target);
@@ -73,32 +73,31 @@ browser-compat: javascript.builtins.Proxy.handler.preventExtensions
 
 console.log(Object.preventExtensions(p)); // "called"
                                           // false
-</pre>
+```
 
-<p>The following code violates the invariant.</p>
+The following code violates the invariant.
 
-<pre class="brush: js example-bad">const p = new Proxy({}, {
+```js example-bad
+const p = new Proxy({}, {
   preventExtensions: function(target) {
     return true;
   }
 });
 
 Object.preventExtensions(p); // TypeError is thrown
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("Proxy")}}</li>
- <li>{{jsxref("Proxy.handler", "handler")}}</li>
- <li>{{jsxref("Object.preventExtensions()")}}</li>
- <li>{{jsxref("Reflect.preventExtensions()")}}</li>
-</ul>
+- {{jsxref("Proxy")}}
+- {{jsxref("Proxy.handler", "handler")}}
+- {{jsxref("Object.preventExtensions()")}}
+- {{jsxref("Reflect.preventExtensions()")}}

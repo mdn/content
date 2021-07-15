@@ -8,45 +8,45 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Math.SQRT2
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>Math.SQRT2</code></strong> property represents the square root of 2, approximately 1.414:</p>
+The **`Math.SQRT2`** property represents the square root of 2, approximately
+1.414:
 
-<p><math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.SQRT2</mi></mstyle><mo>=</mo><msqrt><mn>2</mn></msqrt><mo>≈</mo><mn>1.414</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.SQRT2}} = \sqrt{2} \approx 1.414</annotation></semantics></math></p>
+<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.SQRT2</mi></mstyle><mo>=</mo><msqrt><mn>2</mn></msqrt><mo>≈</mo><mn>1.414</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.SQRT2}}
+= \sqrt{2} \approx 1.414</annotation></semantics></math>
 
-<div>{{EmbedInteractiveExample("pages/js/math-sqrt2.html", "shorter")}}</div>
+{{EmbedInteractiveExample("pages/js/math-sqrt2.html", "shorter")}}{{js_property_attributes(0, 0, 0)}}
 
+## Description
 
-<div>{{js_property_attributes(0, 0, 0)}}</div>
+Because `SQRT2` is a static property of `Math`, you always use it as
+`Math.SQRT2`, rather than as a property of a `Math` object you created (`Math`
+is not a constructor).
 
-<h2 id="Description">Description</h2>
+## Examples
 
-<p>Because <code>SQRT2</code> is a static property of <code>Math</code>, you always use it as <code>Math.SQRT2</code>, rather than as a property of a <code>Math</code> object you created (<code>Math</code> is not a constructor).</p>
+### Using Math.SQRT2
 
-<h2 id="Examples">Examples</h2>
+The following function returns the square root of 2:
 
-<h3 id="Using_Math.SQRT2">Using Math.SQRT2</h3>
-
-<p>The following function returns the square root of 2:</p>
-
-<pre class="brush: js">function getRoot2() {
+```js
+function getRoot2() {
   return Math.SQRT2;
 }
 
 getRoot2(); // 1.4142135623730951
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("Math.pow()")}}</li>
- <li>{{jsxref("Math.sqrt()")}}</li>
-</ul>
+- {{jsxref("Math.pow()")}}
+- {{jsxref("Math.sqrt()")}}

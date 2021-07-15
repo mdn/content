@@ -1,28 +1,31 @@
 ---
-title: 'arguments[@@iterator]()'
+title: arguments[@@iterator]()
 slug: Web/JavaScript/Reference/Functions/arguments/@@iterator
 tags:
-- Functions
-- JavaScript
-- Property
-- arguments
+  - Functions
+  - JavaScript
+  - Property
+  - arguments
 browser-compat: javascript.functions.arguments.@@iterator
 ---
-<div>{{jsSidebar("Functions")}}</div>
+{{jsSidebar("Functions")}}
 
-<p>The initial value of the <strong><code>@@iterator</code></strong> property is the same
-  function object as the initial value of the {{jsxref("Array.prototype.values")}}
-  property.</p>
+The initial value of the **`@@iterator`** property is the same function object
+as the initial value of the {{jsxref("Array.prototype.values")}}
+property.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>arguments</var>[Symbol.iterator]()</pre>
+```js
+arguments[Symbol.iterator]()
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Iteration_using_for...of_loop">Iteration using for...of loop</h3>
+### Iteration using for...of loop
 
-<pre class="brush: js">function f() {
+```js
+function f() {
   // your browser must support for..of loop
   // and let-scoped variables in for loops
   for (let letter of arguments) {
@@ -30,18 +33,16 @@ browser-compat: javascript.functions.arguments.@@iterator
   }
 }
 f('w', 'y', 'k', 'o', 'p');
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Array.prototype.values()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.values()")}}

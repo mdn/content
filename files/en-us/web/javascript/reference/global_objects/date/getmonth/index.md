@@ -2,70 +2,69 @@
 title: Date.prototype.getMonth()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getMonth
 tags:
-- Date
-- JavaScript
-- Method
-- Prototype
-- Reference
+  - Date
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
 browser-compat: javascript.builtins.Date.getMonth
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>getMonth()</code></strong> method returns the month in the specified
-  date according to local time, as a zero-based value (where zero indicates the first
-  month of the year).</p>
+The **`getMonth()`** method returns the month in the specified date according to
+local time, as a zero-based value (where zero indicates the first month of the
+year).
 
-<div>{{EmbedInteractiveExample("pages/js/date-getmonth.html","shorter")}}</div>
+{{EmbedInteractiveExample("pages/js/date-getmonth.html","shorter")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+getMonth()
+```
 
-<pre class="brush: js">getMonth()</pre>
+### Return value
 
-<h3 id="Return_value">Return value</h3>
+An integer number, between 0 and 11, representing the month in the given date
+according to local time. 0 corresponds to January, 1 to February, and so on.
 
-<p>An integer number, between 0 and 11, representing the month in the given date according
-  to local time. 0 corresponds to January, 1 to February, and so on.</p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Using getMonth()
 
-<h3 id="Using_getMonth">Using getMonth()</h3>
+The second statement below assigns the value 11 to the variable `month`, based
+on the value of the {{jsxref("Date")}} object `Xmas95`.
 
-<p>The second statement below assigns the value 11 to the variable <code>month</code>,
-  based on the value of the {{jsxref("Date")}} object <code>Xmas95</code>.</p>
-
-<pre class="brush: js">var Xmas95 = new Date('December 25, 1995 23:15:30');
+```js
+var Xmas95 = new Date('December 25, 1995 23:15:30');
 var month = Xmas95.getMonth();
 
 console.log(month); // 11
-</pre>
+```
 
-<div class="notecard note">
-  <p><strong>Note:</strong> If needed, the full name of a month (<code>January</code> for
-    example) can be obtained by using
-    <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat#Using_options">Intl.DateTimeFormat()</a></code>
-    with an <code>options</code> parameter. Using this method, internationalization is
-    made easier:</p>
+> **Note:** If needed, the full name of a month (`January` for example) can be
+> obtained by using
+> [`Intl.DateTimeFormat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat#Using_options)
+> with an `options` parameter. Using this method, internationalization is made
+> easier:
+>
+> ```js
+> var options = { month: 'long'};
+> console.log(new Intl.DateTimeFormat('en-US', options).format(Xmas95));
+> // December
+> console.log(new Intl.DateTimeFormat('de-DE', options).format(Xmas95));
+> // Dezember
+> ```
 
-  <pre class="brush: js">var options = { month: 'long'};
-console.log(new Intl.DateTimeFormat('en-US', options).format(Xmas95));
-// December
-console.log(new Intl.DateTimeFormat('de-DE', options).format(Xmas95));
-// Dezember
-</pre>
-</div>
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Date.prototype.getUTCMonth()")}}</li>
-  <li>{{jsxref("Date.prototype.setMonth()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getUTCMonth()")}}
+- {{jsxref("Date.prototype.setMonth()")}}

@@ -2,92 +2,94 @@
 title: return
 slug: Web/JavaScript/Reference/Statements/return
 tags:
-- JavaScript
-- Language feature
-- Statement
+  - JavaScript
+  - Language feature
+  - Statement
 browser-compat: javascript.statements.return
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p>The <strong><code>return</code></strong> statement ends function execution and
-  specifies a value to be returned to the function caller.</p>
+The **`return`** statement ends function execution and specifies a value to be
+returned to the function caller.
 
-<div>{{EmbedInteractiveExample("pages/js/statement-return.html")}}</div>
+{{EmbedInteractiveExample("pages/js/statement-return.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+return [expression]; 
+```
 
-<pre class="brush: js">return [<var>expression</var>]; </pre>
+- `expression`
+  - : The expression whose value is to be returned. If omitted, `undefined` is
+    returned instead.
 
-<dl>
-  <dt><code><var>expression</var></code></dt>
-  <dd>The expression whose value is to be returned. If omitted, <code>undefined</code> is
-    returned instead.</dd>
-</dl>
+## Description
 
-<h2 id="Description">Description</h2>
+When a `return` statement is used in a function body, the execution of the
+function is stopped. If specified, a given value is returned to the function
+caller. For example, the following function returns the square of its argument,
+`x`, where `x` is a number.
 
-<p>When a <code>return</code> statement is used in a function body, the execution of the
-  function is stopped. If specified, a given value is returned to the function caller. For
-  example, the following function returns the square of its argument, <code>x</code>,
-  where <code>x</code> is a number.</p>
-
-<pre class="brush: js">function square(x) {
+```js
+function square(x) {
    return x * x;
 }
 var demo = square(3);
 // demo will equal 9
-</pre>
+```
 
-<p>If the value is omitted, <code>undefined</code> is returned instead.</p>
+If the value is omitted, `undefined` is returned instead.
 
-<p>The following return statements all break the function execution:</p>
+The following return statements all break the function execution:
 
-<pre class="brush: js">return;
+```js
+return;
 return true;
 return false;
 return x;
 return x + y / 3;
-</pre>
+```
 
-<h3 id="Automatic_Semicolon_Insertion">Automatic Semicolon Insertion</h3>
+### Automatic Semicolon Insertion
 
-<p>The <code>return</code> statement is affected by <a
-    href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion">automatic
-    semicolon insertion (ASI)</a>. No line terminator is allowed between the
-  <code>return</code> keyword and the expression.</p>
+The `return` statement is affected by
+[automatic semicolon insertion (ASI)](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion).
+No line terminator is allowed between the `return` keyword and the expression.
 
-<pre class="brush: js">return
+```js
+return
 a + b;
-</pre>
+```
 
-<p>is transformed by ASI into:</p>
+is transformed by ASI into:
 
-<pre class="brush: js">return;
+```js
+return;
 a + b;
-</pre>
+```
 
-<p>The console will warn "unreachable code after return statement".</p>
+The console will warn "unreachable code after return statement".
 
-<div class="note">
-  <p><strong>Note:</strong> Starting with Firefox 40, a warning is shown in the console if
-  unreachable code is found after a <code>return</code> statement.</p>
-</div>
+> **Note:** Starting with Firefox 40, a warning is shown in the console if
+> unreachable code is found after a `return` statement.
 
-<p>To avoid this problem (to prevent ASI), you could use parentheses:</p>
+To avoid this problem (to prevent ASI), you could use parentheses:
 
-<pre class="brush: js">return (
+```js
+return (
   a + b
 );
-</pre>
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Interrupt_a_function">Interrupt a function</h3>
+### Interrupt a function
 
-<p>A function immediately stops at the point where <code>return</code> is called.</p>
+A function immediately stops at the point where `return` is called.
 
-<pre class="brush: js">function counter() {
+```js
+function counter() {
   for (var count = 1; ; count++) {  // infinite loop
     console.log(count + 'A'); // until 5
       if (count === 5) {
@@ -110,34 +112,30 @@ counter();
 // 4A
 // 4B
 // 5A
-</pre>
+```
 
-<h3 id="Returning_a_function">Returning a function</h3>
+### Returning a function
 
-<p>See also the article about <a href="/en-US/docs/Web/JavaScript/Closures">Closures</a>.
-</p>
+See also the article about [Closures](/en-US/docs/Web/JavaScript/Closures).
 
-<pre class="brush: js">function magic() {
+```js
+function magic() {
   return function calc(x) { return x * 42; };
 }
 
 var answer = magic();
 answer(1337); // 56154
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a
-      href="/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope">Functions</a>
-  </li>
-  <li><a href="/en-US/docs/Web/JavaScript/Closures">Closures</a></li>
-</ul>
+- [Functions](/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope)
+- [Closures](/en-US/docs/Web/JavaScript/Closures)

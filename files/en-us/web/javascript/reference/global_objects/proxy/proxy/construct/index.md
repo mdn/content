@@ -8,66 +8,69 @@ tags:
   - Proxy
 browser-compat: javascript.builtins.Proxy.handler.construct
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>handler.construct()</code></strong> method is a trap for the {{jsxref("Operators/new", "new")}} operator. In order for the new operation to be valid on the resulting Proxy object, the target used to initialize the proxy must itself have a <code>[[Construct]]</code> internal method (i.e. <code>new target</code> must be valid).</p>
+The **`handler.construct()`** method is a trap for the
+{{jsxref("Operators/new", "new")}} operator. In order for the new
+operation to be valid on the resulting Proxy object, the target used to
+initialize the proxy must itself have a `[[Construct]]` internal method (i.e.
+`new target` must be valid).
 
-<div>{{EmbedInteractiveExample("pages/js/proxyhandler-construct.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/proxyhandler-construct.html", "taller")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush: js">const <var>p</var> = new Proxy(<var>target</var>, {
-  construct: function(<var>target</var>, <var>argumentsList</var>, <var>newTarget</var>) {
+```js
+const p = new Proxy(target, {
+  construct: function(target, argumentsList, newTarget) {
   }
 });
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>The following parameters are passed to the <code>construct()</code> method. <code>this</code> is bound to the handler.</p>
+The following parameters are passed to the `construct()` method. `this` is bound
+to the handler.
 
-<dl>
- <dt><code><var>target</var></code></dt>
- <dd>The target object.</dd>
- <dt><code><var>argumentsList</var></code></dt>
- <dd>The list of arguments for the constructor.</dd>
- <dt><code><var>newTarget</var></code></dt>
- <dd>The constructor that was originally called, <code><var>p</var></code> above.</dd>
-</dl>
+- `target`
+  - : The target object.
+- `argumentsList`
+  - : The list of arguments for the constructor.
+- `newTarget`
+  - : The constructor that was originally called, `p` above.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>The <code>construct</code> method must return an object.</p>
+The `construct` method must return an object.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The <code><strong>handler.construct()</strong></code> method is a trap for the {{jsxref("Operators/new", "new")}} operator.</p>
+The **`handler.construct()`** method is a trap for the
+{{jsxref("Operators/new", "new")}} operator.
 
-<h3 id="Interceptions">Interceptions</h3>
+### Interceptions
 
-<p>This trap can intercept these operations:</p>
+This trap can intercept these operations:
 
-<ul>
- <li><code>new myFunction(...args)</code></li>
- <li>{{jsxref("Reflect.construct()")}}</li>
-</ul>
+- `new myFunction(...args)`
+- {{jsxref("Reflect.construct()")}}
 
-<h3 id="Invariants">Invariants</h3>
+### Invariants
 
-<p>If the following invariants are violated, the proxy will throw a {{jsxref("TypeError")}}:</p>
+If the following invariants are violated, the proxy will throw a
+{{jsxref("TypeError")}}:
 
-<ul>
- <li>The result must be an <code>Object</code>.</li>
-</ul>
+- The result must be an `Object`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Trapping_the_new_operator">Trapping the new operator</h3>
+### Trapping the new operator
 
-<p>The following code traps the {{jsxref("Operators/new", "new")}} operator.</p>
+The following code traps the {{jsxref("Operators/new", "new")}}
+operator.
 
-<pre class="brush: js">const p = new Proxy(function() {}, {
+```js
+const p = new Proxy(function() {}, {
   construct: function(target, argumentsList, newTarget) {
     console.log('called: ' + argumentsList.join(', '));
     return { value: argumentsList[0] * 10 };
@@ -76,43 +79,45 @@ browser-compat: javascript.builtins.Proxy.handler.construct
 
 console.log(new p(1).value); // "called: 1"
                              // 10
-</pre>
+```
 
-<p>The following code violates the invariant.</p>
+The following code violates the invariant.
 
-<pre class="brush: js example-bad">const p = new Proxy(function() {}, {
+```js example-bad
+const p = new Proxy(function() {}, {
   construct: function(target, argumentsList, newTarget) {
     return 1;
   }
 });
 
 new p(); // TypeError is thrown
-</pre>
+```
 
-<p>The following code improperly initializes the proxy. The <code><var>target</var></code> in Proxy initialization must itself be a valid constructor for the {{jsxref("Operators/new", "new")}} operator.</p>
+The following code improperly initializes the proxy. The `target` in Proxy
+initialization must itself be a valid constructor for the
+{{jsxref("Operators/new", "new")}} operator.
 
-<pre class="brush: js example-bad">const p = new Proxy({}, {
+```js example-bad
+const p = new Proxy({}, {
   construct: function(target, argumentsList, newTarget) {
     return {};
   }
 });
 
 new p(); // TypeError is thrown, "p" is not a constructor
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("Proxy")}}</li>
- <li>{{jsxref("Proxy/Proxy", "handler")}}</li>
- <li>{{jsxref("Operators/new", "new")}} operator.</li>
- <li>{{jsxref("Reflect.construct()")}}</li>
-</ul>
+- {{jsxref("Proxy")}}
+- {{jsxref("Proxy/Proxy", "handler")}}
+- {{jsxref("Operators/new", "new")}} operator.
+- {{jsxref("Reflect.construct()")}}

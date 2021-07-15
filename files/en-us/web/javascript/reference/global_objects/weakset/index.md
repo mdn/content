@@ -9,32 +9,36 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.WeakSet
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>WeakSet</code></strong> object lets you store weakly held <em>objects</em> in a collection.</p>
+The **`WeakSet`** object lets you store weakly held _objects_ in a collection.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p><code>WeakSet</code> objects are collections of objects. Just as with {{jsxref("Set")}}s, each object in a <code>WeakSet</code> may occur only once; all objects in a <code>WeakSet</code>'s collection are unique.</p>
+`WeakSet` objects are collections of objects. Just as with
+{{jsxref("Set")}}s, each object in a `WeakSet` may occur only once; all
+objects in a `WeakSet`'s collection are unique.
 
-<p>The main differences to the {{jsxref("Set")}} object are:</p>
+The main differences to the {{jsxref("Set")}} object are:
 
-<ul>
- <li><code>WeakSet</code>s are collections of <strong>objects only</strong>. They cannot contain arbitrary values of any type, as {{jsxref("Set")}}s can.</li>
- <li>The <code>WeakSet</code> is <em>weak</em>, meaning references to objects in a <code>WeakSet</code> are held <em>weakly</em>. If no other references to an object stored in the <code>WeakSet</code> exist, those objects can be garbage collected.
-  <div class="notecard note">
-  <p><strong>Note:</strong> This also means that there is no list of current objects stored in the collection. <code>WeakSets</code> are not enumerable.</p>
-  </div>
- </li>
-</ul>
+- `WeakSet`s are collections of **objects only**. They cannot contain arbitrary
+  values of any type, as {{jsxref("Set")}}s can.
+- The `WeakSet` is _weak_, meaning references to objects in a `WeakSet` are held
+  _weakly_. If no other references to an object stored in the `WeakSet` exist,
+  those objects can be garbage collected.
 
-<h3 id="Use_case_Detecting_circular_references">Use case: Detecting circular references</h3>
+  > **Note:** This also means that there is no list of current objects stored in
+  > the collection. `WeakSets` are not enumerable.
 
-<p>Functions that call themselves recursively need a way of guarding against circular data structures by tracking which objects have already been processed.</p>
+### Use case: Detecting circular references
 
-<p><code>WeakSet</code>s are ideal for this purpose:</p>
+Functions that call themselves recursively need a way of guarding against
+circular data structures by tracking which objects have already been processed.
 
-<pre class="brush: js">// Execute a callback on everything stored inside an object
+`WeakSet`s are ideal for this purpose:
+
+```js
+// Execute a callback on everything stored inside an object
 function execRecursively(fn, subject, _refs = null){
   if(!_refs)
     _refs = new WeakSet();
@@ -59,36 +63,38 @@ const foo = {
 };
 
 foo.bar.baz = foo; // Circular reference!
-execRecursively(obj =&gt; console.log(obj), foo);
-</pre>
+execRecursively(obj => console.log(obj), foo);
+```
 
-<p>Here, a <code>WeakSet</code> is created on the first run, and passed along with every subsequent function call (using the internal <code>_refs</code> parameter).</p>
+Here, a `WeakSet` is created on the first run, and passed along with every
+subsequent function call (using the internal `_refs` parameter).
 
-<p>The number of objects or their traversal order is immaterial, so a <code>WeakSet</code> is more suitable (and performant) than a {{jsxref("Set")}} for tracking object references, especially if a very large number of objects is involved.</p>
+The number of objects or their traversal order is immaterial, so a `WeakSet` is
+more suitable (and performant) than a {{jsxref("Set")}} for tracking
+object references, especially if a very large number of objects is involved.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{jsxref("WeakSet/WeakSet", "WeakSet()")}}</dt>
- <dd>Creates a new <code>WeakSet</code> object.</dd>
-</dl>
+- {{jsxref("WeakSet/WeakSet", "WeakSet()")}}
+  - : Creates a new `WeakSet` object.
 
-<h2 id="Instance_methods">Instance methods</h2>
+## Instance methods
 
-<dl>
- <dt>{{jsxref("WeakSet.add", "WeakSet.prototype.add(<var>value</var>)")}}</dt>
- <dd>Appends <code><var>value</var></code> to the <code>WeakSet</code> object.</dd>
- <dt>{{jsxref("WeakSet.delete", "WeakSet.prototype.delete(<var>value</var>)")}}</dt>
- <dd>Removes <code><var>value</var></code> from the <code>WeakSet</code>. <code>WeakSet.prototype.has(<var>value</var>)</code> will return <code>false</code> afterwards.</dd>
- <dt>{{jsxref("WeakSet.has", "WeakSet.prototype.has(<var>value</var>)")}}</dt>
- <dd>Returns a boolean asserting whether <code><var>value</var></code> is present in the <code>WeakSet</code> object or not.</dd>
-</dl>
+- {{jsxref("WeakSet.add", "WeakSet.prototype.add(<var>value</var>)")}}
+  - : Appends `value` to the `WeakSet` object.
+- {{jsxref("WeakSet.delete", "WeakSet.prototype.delete(<var>value</var>)")}}
+  - : Removes `value` from the `WeakSet`. `WeakSet.prototype.has(value)` will
+    return `false` afterwards.
+- {{jsxref("WeakSet.has", "WeakSet.prototype.has(<var>value</var>)")}}
+  - : Returns a boolean asserting whether `value` is present in the `WeakSet`
+    object or not.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_the_WeakSet_object">Using the WeakSet object</h3>
+### Using the WeakSet object
 
-<pre class="brush: js">const ws = new WeakSet();
+```js
+const ws = new WeakSet();
 const foo = {};
 const bar = {};
 
@@ -100,23 +106,24 @@ ws.has(bar);    // true
 
 ws.delete(foo); // removes foo from the set
 ws.has(foo);    // false, foo has been removed
-ws.has(bar);    // true, bar is retained</pre>
+ws.has(bar);    // true, bar is retained
+```
 
-<p>Note that <code>foo !== bar</code>. While they are similar objects, <em>they are not <strong>the same object</strong></em>. And so they are both added to the set.</p>
+Note that `foo !== bar`. While they are similar objects, \*they are not **the
+same object\***. And so they are both added to the set.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>A polyfill of <code>WeakSet</code> is available in <a href="https://github.com/zloirock/core-js#weakset"><code>core-js</code></a></li>
- <li>{{jsxref("Map")}}</li>
- <li>{{jsxref("Set")}}</li>
- <li>{{jsxref("WeakMap")}}</li>
-</ul>
+- A polyfill of `WeakSet` is available in
+  [`core-js`](https://github.com/zloirock/core-js#weakset)
+- {{jsxref("Map")}}
+- {{jsxref("Set")}}
+- {{jsxref("WeakMap")}}

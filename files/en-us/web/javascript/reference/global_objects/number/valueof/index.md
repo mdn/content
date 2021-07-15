@@ -2,57 +2,57 @@
 title: Number.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Number/valueOf
 tags:
-- JavaScript
-- Method
-- Number
-- Prototype
-- Reference
+  - JavaScript
+  - Method
+  - Number
+  - Prototype
+  - Reference
 browser-compat: javascript.builtins.Number.valueOf
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>valueOf()</code></strong> method returns the wrapped primitive value
-  of a {{jsxref("Number")}} object.</p>
+The **`valueOf()`** method returns the wrapped primitive value of a
+{{jsxref("Number")}} object.
 
-<div>{{EmbedInteractiveExample("pages/js/number-valueof.html")}}</div>
+{{EmbedInteractiveExample("pages/js/number-valueof.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+valueOf()
+```
 
-<pre class="brush: js">valueOf()</pre>
+### Return value
 
-<h3 id="Return_value">Return value</h3>
+A number representing the primitive value of the specified
+{{jsxref("Number")}} object.
 
-<p>A number representing the primitive value of the specified {{jsxref("Number")}} object.
-</p>
+## Description
 
-<h2 id="Description">Description</h2>
+This method is usually called internally by JavaScript and not explicitly in web
+code.
 
-<p>This method is usually called internally by JavaScript and not explicitly in web code.
-</p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Using valueOf
 
-<h3 id="Using_valueOf">Using valueOf</h3>
-
-<pre class="brush: js">let numObj = new Number(10)
+```js
+let numObj = new Number(10)
 console.log(typeof numObj)  // object
 
 let num = numObj.valueOf()
 console.log(num)            // 10
 console.log(typeof num)     // number
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Number.prototype.toSource()")}}</li>
-</ul>
+- {{jsxref("Number.prototype.toSource()")}}

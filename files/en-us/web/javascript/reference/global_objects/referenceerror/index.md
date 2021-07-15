@@ -9,39 +9,43 @@ tags:
   - ReferenceError
 browser-compat: javascript.builtins.ReferenceError
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <code><strong>ReferenceError</strong></code> object represents an error when a non-existent variable is referenced.</p>
+The **`ReferenceError`** object represents an error when a non-existent variable
+is referenced.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{jsxref("Global_Objects/ReferenceError/ReferenceError", "ReferenceError()")}}</dt>
- <dd>Creates a new <code>ReferenceError</code> object.</dd>
-</dl>
+- {{jsxref("Global_Objects/ReferenceError/ReferenceError", "ReferenceError()")}}
+  - : Creates a new `ReferenceError` object.
 
-<h2 id="Instance_properties">Instance properties</h2>
+## Instance properties
 
-<dl>
- <dt>{{jsxref("Error.prototype.message", "ReferenceError.prototype.message")}}</dt>
- <dd>Error message. Although ECMA-262 specifies that {{jsxref("ReferenceError")}} should provide its own <code>message</code> property, in <a href="/en-US/docs/Mozilla/Projects/SpiderMonkey">SpiderMonkey</a>, it inherits {{jsxref("Error.prototype.message")}}.</dd>
- <dt>{{jsxref("Error.prototype.name", "ReferenceError.prototype.name")}}</dt>
- <dd>Error name. Inherited from {{jsxref("Error")}}.</dd>
- <dt>{{jsxref("Error.prototype.fileName", "ReferenceError.prototype.fileName")}}</dt>
- <dd>Path to file that raised this error. Inherited from {{jsxref("Error")}}.</dd>
- <dt>{{jsxref("Error.prototype.lineNumber", "ReferenceError.prototype.lineNumber")}}</dt>
- <dd>Line number in file that raised this error. Inherited from {{jsxref("Error")}}.</dd>
- <dt>{{jsxref("Error.prototype.columnNumber", "ReferenceError.prototype.columnNumber")}}</dt>
- <dd>Column number in line that raised this error. Inherited from {{jsxref("Error")}}.</dd>
- <dt>{{jsxref("Error.prototype.stack", "ReferenceError.prototype.stack")}}</dt>
- <dd>Stack trace. Inherited from {{jsxref("Error")}}.</dd>
-</dl>
+- {{jsxref("Error.prototype.message", "ReferenceError.prototype.message")}}
+  - : Error message. Although ECMA-262 specifies that
+    {{jsxref("ReferenceError")}} should provide its own `message`
+    property, in [SpiderMonkey](/en-US/docs/Mozilla/Projects/SpiderMonkey), it
+    inherits {{jsxref("Error.prototype.message")}}.
+- {{jsxref("Error.prototype.name", "ReferenceError.prototype.name")}}
+  - : Error name. Inherited from {{jsxref("Error")}}.
+- {{jsxref("Error.prototype.fileName", "ReferenceError.prototype.fileName")}}
+  - : Path to file that raised this error. Inherited from
+    {{jsxref("Error")}}.
+- {{jsxref("Error.prototype.lineNumber", "ReferenceError.prototype.lineNumber")}}
+  - : Line number in file that raised this error. Inherited from
+    {{jsxref("Error")}}.
+- {{jsxref("Error.prototype.columnNumber", "ReferenceError.prototype.columnNumber")}}
+  - : Column number in line that raised this error. Inherited from
+    {{jsxref("Error")}}.
+- {{jsxref("Error.prototype.stack", "ReferenceError.prototype.stack")}}
+  - : Stack trace. Inherited from {{jsxref("Error")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Catching_a_ReferenceError">Catching a ReferenceError</h3>
+### Catching a ReferenceError
 
-<pre class="brush: js">try {
+```js
+try {
   let a = undefinedVariable
 } catch (e) {
   console.log(e instanceof ReferenceError)  // true
@@ -52,11 +56,12 @@ browser-compat: javascript.builtins.ReferenceError
   console.log(e.columnNumber)               // 6
   console.log(e.stack)                      // "@Scratchpad/2:2:7\n"
 }
-</pre>
+```
 
-<h3 id="Creating_a_ReferenceError">Creating a ReferenceError</h3>
+### Creating a ReferenceError
 
-<pre class="brush: js">try {
+```js
+try {
   throw new ReferenceError('Hello', 'someFile.js', 10)
 } catch (e) {
   console.log(e instanceof ReferenceError)  // true
@@ -67,18 +72,16 @@ browser-compat: javascript.builtins.ReferenceError
   console.log(e.columnNumber)               // 0
   console.log(e.stack)                      // "@Scratchpad/2:2:9\n"
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("Error")}}</li>
-</ul>
+- {{jsxref("Error")}}

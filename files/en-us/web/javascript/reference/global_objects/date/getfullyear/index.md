@@ -2,62 +2,62 @@
 title: Date.prototype.getFullYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getFullYear
 tags:
-- Date
-- JavaScript
-- Method
-- Prototype
-- Reference
+  - Date
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
 browser-compat: javascript.builtins.Date.getFullYear
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>getFullYear()</code></strong> method returns the year of the
-  specified date according to local time.</p>
+The **`getFullYear()`** method returns the year of the specified date according
+to local time.
 
-<p>Use this method instead of the {{jsxref("Date.prototype.getYear()", "getYear()")}}
-  method.</p>
+Use this method instead of the
+{{jsxref("Date.prototype.getYear()", "getYear()")}} method.
 
-<div>{{EmbedInteractiveExample("pages/js/date-getfullyear.html","shorter")}}</div>
+{{EmbedInteractiveExample("pages/js/date-getfullyear.html","shorter")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+getFullYear()
+```
 
-<pre class="brush: js">getFullYear()</pre>
+### Return value
 
-<h3 id="Return_value">Return value</h3>
+A number corresponding to the year of the given date, according to local time.
 
-<p>A number corresponding to the year of the given date, according to local time.</p>
+## Description
 
-<h2 id="Description">Description</h2>
+The value returned by `getFullYear()` is an absolute number. For dates between
+the years 1000 and 9999, `getFullYear()` returns a four-digit number, for
+example, 1995. Use this function to make sure a year is compliant with years
+after 2000\.
 
-<p>The value returned by <code>getFullYear()</code> is an absolute number. For dates
-  between the years 1000 and 9999, <code>getFullYear()</code> returns a four-digit number,
-  for example, 1995. Use this function to make sure a year is compliant with years after
-  2000.</p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Using getFullYear()
 
-<h3 id="Using_getFullYear">Using getFullYear()</h3>
+The following example assigns the four-digit value of the current year to the
+variable `year`.
 
-<p>The following example assigns the four-digit value of the current year to the variable
-  <code>year</code>.</p>
-
-<pre class="brush: js">var today = new Date();
+```js
+var today = new Date();
 var year = today.getFullYear();
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Date.prototype.getUTCFullYear()")}}</li>
-  <li>{{jsxref("Date.prototype.setFullYear()")}}</li>
-  <li>{{jsxref("Date.prototype.getYear()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getUTCFullYear()")}}
+- {{jsxref("Date.prototype.setFullYear()")}}
+- {{jsxref("Date.prototype.getYear()")}}

@@ -2,79 +2,75 @@
 title: DataView.prototype.getBigUint64()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getBigUint64
 tags:
-- BigInt
-- DataView
-- JavaScript
-- Method
-- Prototype
-- Reference
-- TypedArrays
-- getBigUint64
+  - BigInt
+  - DataView
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
+  - TypedArrays
+  - getBigUint64
 browser-compat: javascript.builtins.DataView.getBigUint64
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>getBigUint64()</code></strong> method gets an unsigned 64-bit integer
-  (unsigned long long) at the specified byte offset from the start of the
-  {{jsxref("DataView")}}.</p>
+The **`getBigUint64()`** method gets an unsigned 64-bit integer (unsigned long
+long) at the specified byte offset from the start of the
+{{jsxref("DataView")}}.
 
-<div>{{EmbedInteractiveExample("pages/js/dataview-getbiguint64.html")}}</div>
+{{EmbedInteractiveExample("pages/js/dataview-getbiguint64.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 getBigUint64(byteOffset)
 getBigUint64(byteOffset, littleEndian)
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>byteOffset</dt>
-  <dd>The offset, in bytes, from the start of the view to read the data from.</dd>
-  <dt>littleEndian</dt>
-  <dd>{{optional_inline}} Indicates whether the 64-bit int is stored in <a
-      href="/en-US/docs/Glossary/Endianness">little- or big-endian</a> format. If
-    <code>false</code> or <code>undefined</code>, a big-endian value is read.</dd>
-</dl>
+- byteOffset
+  - : The offset, in bytes, from the start of the view to read the data from.
+- littleEndian
+  - : {{optional_inline}} Indicates whether the 64-bit int is stored in
+    [little- or big-endian](/en-US/docs/Glossary/Endianness) format. If `false`
+    or `undefined`, a big-endian value is read.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref("BigInt")}}.</p>
+A {{jsxref("BigInt")}}.
 
-<h3 id="Errors_thrown">Errors thrown</h3>
+### Errors thrown
 
-<dl>
-  <dt>{{jsxref("RangeError")}}</dt>
-  <dd>Thrown if the <code>byteOffset</code> is set such that it would read beyond the end
-    of the view.</dd>
-</dl>
+- {{jsxref("RangeError")}}
+  - : Thrown if the `byteOffset` is set such that it would read beyond the end
+    of the view.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>There is no alignment constraint; multi-byte values may be fetched from any offset.</p>
+There is no alignment constraint; multi-byte values may be fetched from any
+offset.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_the_getBigUint64_method">Using the <code>getBigUint64</code> method</h3>
+### Using the `getBigUint64` method
 
-<pre class="brush:js">var buffer = new ArrayBuffer(8);
+```js
+var buffer = new ArrayBuffer(8);
 var dataview = new DataView(buffer);
 dataview.getBigUint64(0); // 0n
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("DataView")}}</li>
-  <li>{{jsxref("ArrayBuffer")}}</li>
-  <li>{{jsxref("BigInt")}}</li>
-</ul>
+- {{jsxref("DataView")}}
+- {{jsxref("ArrayBuffer")}}
+- {{jsxref("BigInt")}}

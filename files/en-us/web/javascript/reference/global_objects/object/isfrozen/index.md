@@ -2,47 +2,50 @@
 title: Object.isFrozen()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isFrozen
 tags:
-- ECMAScript 5
-- JavaScript
-- Method
-- Object
+  - ECMAScript 5
+  - JavaScript
+  - Method
+  - Object
 browser-compat: javascript.builtins.Object.isFrozen
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>Object.isFrozen()</code></strong> determines if an object is
-  {{jsxref("Object.freeze()", "frozen", "", 1)}}.</p>
+The **`Object.isFrozen()`** determines if an object is
+{{jsxref("Object.freeze()", "frozen", "", 1)}}.
 
-<div>{{EmbedInteractiveExample("pages/js/object-isfrozen.html")}}</div>
+{{EmbedInteractiveExample("pages/js/object-isfrozen.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+Object.isFrozen(obj)
+```
 
-<pre class="brush: js">Object.isFrozen(<var>obj</var>)</pre>
+### Parameters
 
-<h3 id="Parameters">Parameters</h3>
+- `obj`
+  - : The object which should be checked.
 
-<dl>
-  <dt><code><var>obj</var></code></dt>
-  <dd>The object which should be checked.</dd>
-</dl>
+### Return value
 
-<h3 id="Return_value">Return value</h3>
+A {{jsxref("Boolean")}} indicating whether or not the given object is
+frozen.
 
-<p>A {{jsxref("Boolean")}} indicating whether or not the given object is frozen.</p>
+## Description
 
-<h2 id="Description">Description</h2>
+An object is frozen if and only if it is not
+{{jsxref("Object.isExtensible()",
+  "extensible", "", 1)}},
+all its properties are non-configurable, and all its data properties (that is,
+properties which are not accessor properties with getter or setter components)
+are non-writable.
 
-<p>An object is frozen if and only if it is not {{jsxref("Object.isExtensible()",
-  "extensible", "", 1)}}, all its properties are non-configurable, and all its data
-  properties (that is, properties which are not accessor properties with getter or setter
-  components) are non-writable.</p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Using Object.isFrozen
 
-<h3 id="Using_Object.isFrozen">Using Object.isFrozen</h3>
-
-<pre class="brush: js">// A new object is extensible, so it is not frozen.
+```js
+// A new object is extensible, so it is not frozen.
 Object.isFrozen({}); // === false
 
 // An empty object which is not extensible
@@ -123,35 +126,34 @@ Object.isExtensible(frozen); // === false
 
 // Also by definition, a frozen object is sealed.
 Object.isSealed(frozen); // === true
-</pre>
+```
 
-<h3 id="Non-object_coercion">Non-object coercion</h3>
+### Non-object coercion
 
-<p>In ES5, if the argument to this method is not an object (a primitive), then it will
-  cause a {{jsxref("TypeError")}}. In ES2015, a non-object argument will be treated as if
-  it was a frozen ordinary object, return <code>true</code>.</p>
+In ES5, if the argument to this method is not an object (a primitive), then it
+will cause a {{jsxref("TypeError")}}. In ES2015, a non-object argument
+will be treated as if it was a frozen ordinary object, return `true`.
 
-<pre class="brush: js">Object.isFrozen(1);
+```js
+Object.isFrozen(1);
 // TypeError: 1 is not an object (ES5 code)
 
 Object.isFrozen(1);
 // true                          (ES2015 code)
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Object.freeze()")}}</li>
-  <li>{{jsxref("Object.preventExtensions()")}}</li>
-  <li>{{jsxref("Object.isExtensible()")}}</li>
-  <li>{{jsxref("Object.seal()")}}</li>
-  <li>{{jsxref("Object.isSealed()")}}</li>
-</ul>
+- {{jsxref("Object.freeze()")}}
+- {{jsxref("Object.preventExtensions()")}}
+- {{jsxref("Object.isExtensible()")}}
+- {{jsxref("Object.seal()")}}
+- {{jsxref("Object.isSealed()")}}

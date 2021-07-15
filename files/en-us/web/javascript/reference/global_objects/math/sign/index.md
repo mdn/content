@@ -2,59 +2,56 @@
 title: Math.sign()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sign
 tags:
-- JavaScript
-- Math
-- Method
-- Reference
-- Polyfill
+  - JavaScript
+  - Math
+  - Method
+  - Reference
+  - Polyfill
 browser-compat: javascript.builtins.Math.sign
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>Math.sign()</code></strong> function returns either a
-  <strong>positive</strong> or <strong>negative</strong> +/- 1, indicating the sign of a
-  number passed into the argument. If the number passed into <code>Math.sign()</code> is
-  0, it will return a +/- 0. Note that if the number is positive, an explicit (+) will
-  <strong>not</strong> be returned.</p>
+The **`Math.sign()`** function returns either a **positive** or **negative** +/-
+1, indicating the sign of a number passed into the argument. If the number
+passed into `Math.sign()` is 0, it will return a +/- 0. Note that if the number
+is positive, an explicit (+) will **not** be returned.
 
-<div>{{EmbedInteractiveExample("pages/js/math-sign.html")}}</div>
+{{EmbedInteractiveExample("pages/js/math-sign.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+Math.sign(x)
+```
 
-<pre class="brush: js">Math.sign(<var>x</var>)</pre>
+### Parameters
 
-<h3 id="Parameters">Parameters</h3>
+- `x`
+  - : A number. If this argument is not a `number`, it is implicitly converted
+    to one.
 
-<dl>
-  <dt><code><var>x</var></code></dt>
-  <dd>A number. If this argument is not a <code>number</code>, it is implicitly converted
-    to one.</dd>
-</dl>
+### Return value
 
-<h3 id="Return_value">Return value</h3>
+A number representing the sign of the given argument:
 
-<p>A number representing the sign of the given argument:</p>
+- If the argument is positive, returns `1`.
+- If the argument is negative, returns `-1`.
+- If the argument is positive zero, returns `0`.
+- If the argument is negative zero, returns `-0`.
+- Otherwise, {{jsxref("NaN")}} is returned.
 
-<ul>
-  <li>If the argument is positive, returns <code>1</code>.</li>
-  <li>If the argument is negative, returns <code>-1</code>.</li>
-  <li>If the argument is positive zero, returns <code>0</code>.</li>
-  <li>If the argument is negative zero, returns <code>-0</code>.</li>
-  <li>Otherwise, {{jsxref("NaN")}} is returned.</li>
-</ul>
+## Description
 
-<h2 id="Description">Description</h2>
+Because `sign()` is a static method of `Math`, you always use it as
+`Math.sign()`, rather than as a method of a `Math` object you created (`Math` is
+not a constructor).
 
-<p>Because <code>sign()</code> is a static method of <code>Math</code>, you always use it
-  as <code>Math.sign()</code>, rather than as a method of a <code>Math</code> object you
-  created (<code>Math</code> is not a constructor).</p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Using Math.sign()
 
-<h3 id="Using_Math.sign">Using Math.sign()</h3>
-
-<pre class="brush: js">Math.sign(3);     //  1
+```js
+Math.sign(3);     //  1
 Math.sign(-3);    // -1
 Math.sign('-3');  // -1
 Math.sign(0);     //  0
@@ -62,26 +59,23 @@ Math.sign(-0);    // -0
 Math.sign(NaN);   // NaN
 Math.sign('foo'); // NaN
 Math.sign();      // NaN
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat}}
 
-<p>{{Compat}}</p>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
-  <li>A polyfill of <code>Math.sign</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-math"><code>core-js</code></a></li>
-  <li><a href="https://github.com/behnammodi/polyfill/blob/master/math.polyfill.js">A
-    polyfill</a></li>
-  <li>{{jsxref("Math.abs()")}}</li>
-  <li>{{jsxref("Math.ceil()")}}</li>
-  <li>{{jsxref("Math.floor()")}}</li>
-  <li>{{jsxref("Math.round()")}}</li>
-  <li>{{jsxref("Math.trunc()")}}</li>
-</ul>
+- A polyfill of `Math.sign` is available in
+  [`core-js`](https://github.com/zloirock/core-js#ecmascript-math)
+- [A polyfill](https://github.com/behnammodi/polyfill/blob/master/math.polyfill.js)
+- {{jsxref("Math.abs()")}}
+- {{jsxref("Math.ceil()")}}
+- {{jsxref("Math.floor()")}}
+- {{jsxref("Math.round()")}}
+- {{jsxref("Math.trunc()")}}

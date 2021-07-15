@@ -2,20 +2,21 @@
 title: 'TypeError: "x" is (not) "y"'
 slug: Web/JavaScript/Reference/Errors/Unexpected_type
 tags:
-- Error
-- Errors
-- JavaScript
-- TypeError
+  - Error
+  - Errors
+  - JavaScript
+  - TypeError
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<p>The JavaScript exception "<em>x</em> is (not) <em>y</em>" occurs when there was an
-  unexpected type. Oftentimes, unexpected {{jsxref("undefined")}} or {{jsxref("null")}}
-  values.</p>
+The JavaScript exception "_x_ is (not) _y_" occurs when there was an unexpected
+type. Oftentimes, unexpected {{jsxref("undefined")}} or
+{{jsxref("null")}} values.
 
-<h2 id="Message">Message</h2>
+## Message
 
-<pre class="brush: js">TypeError: Unable to get property {x} of undefined or null reference (Edge)
+```js
+TypeError: Unable to get property {x} of undefined or null reference (Edge)
 TypeError: "x" is (not) "y" (Firefox)
 
 Examples:
@@ -24,25 +25,27 @@ TypeError: "x" is null
 TypeError: "undefined" is not an object
 TypeError: "x" is not an object or null
 TypeError: "x" is not a symbol
-</pre>
+```
 
-<h2 id="Error_type">Error type</h2>
+## Error type
 
-<p>{{jsxref("TypeError")}}.</p>
+{{jsxref("TypeError")}}.
 
-<h2 id="What_went_wrong">What went wrong?</h2>
+## What went wrong?
 
-<p>There was an unexpected type. This occurs oftentimes with {{jsxref("undefined")}} or
-  {{jsxref("null")}} values.</p>
+There was an unexpected type. This occurs oftentimes with
+{{jsxref("undefined")}} or {{jsxref("null")}} values.
 
-<p>Also, certain methods, such as {{jsxref("Object.create()")}} or
-  {{jsxref("Symbol.keyFor()")}}, require a specific type, that must be provided.</p>
+Also, certain methods, such as {{jsxref("Object.create()")}} or
+{{jsxref("Symbol.keyFor()")}}, require a specific type, that must be
+provided.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Invalid_cases">Invalid cases</h3>
+### Invalid cases
 
-<pre class="brush: js example-bad">// undefined and null cases on which the substring method won't work
+```js example-bad
+// undefined and null cases on which the substring method won't work
 var foo = undefined;
 foo.substring(1); // TypeError: foo is undefined
 
@@ -55,15 +58,16 @@ Symbol.keyFor(foo); // TypeError: foo is not a symbol
 
 var foo = 'bar'
 Object.create(foo); // TypeError: "foo" is not an object or null
-</pre>
+```
 
-<h3 id="Fixing_the_issue">Fixing the issue</h3>
+### Fixing the issue
 
-<p>To fix null pointer to <code>undefined</code> values, you can use the <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/typeof">typeof</a> operator, for
-  example.</p>
+To fix null pointer to `undefined` values, you can use the
+[typeof](/en-US/docs/Web/JavaScript/Reference/Operators/typeof) operator, for
+example.
 
-<pre class="brush: js">if (foo !== undefined) {
+```js
+if (foo !== undefined) {
   // Now we know that foo is defined, we are good to go.
 }
 
@@ -71,11 +75,9 @@ if (typeof foo !== 'undefined') {
   // The same good idea, but don't use this implementation - it can bring problems
   // because of the confusion between truly undefined and undeclared variables.
 }
-</pre>
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("undefined")}}</li>
-  <li>{{jsxref("null")}}</li>
-</ul>
+- {{jsxref("undefined")}}
+- {{jsxref("null")}}

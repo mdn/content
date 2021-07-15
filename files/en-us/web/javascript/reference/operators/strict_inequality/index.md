@@ -2,52 +2,58 @@
 title: Strict inequality (!==)
 slug: Web/JavaScript/Reference/Operators/Strict_inequality
 tags:
-- JavaScript
-- Language feature
-- Operator
-- Reference
+  - JavaScript
+  - Language feature
+  - Operator
+  - Reference
 browser-compat: javascript.operators.strict_inequality
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>The strict inequality operator (<code>!==</code>) checks whether its two operands are
-  not equal, returning a Boolean result. Unlike the <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/Inequality">inequality</a>
-  operator, the strict inequality operator always considers operands of different types to
-  be different.</p>
+The strict inequality operator (`!==`) checks whether its two operands are not
+equal, returning a Boolean result. Unlike the
+[inequality](/en-US/docs/Web/JavaScript/Reference/Operators/Inequality)
+operator, the strict inequality operator always considers operands of different
+types to be different.
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-strict-inequality.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-strict-inequality.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+x !== y
+```
 
-<pre class="brush: js">x !== y</pre>
+## Description
 
-<h2 id="Description">Description</h2>
+The strict inequality operator checks whether its operands are not equal. It is
+the negation of the
+[strict equality](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality)
+operator so the following two lines will always give the same result:
 
-<p>The strict inequality operator checks whether its operands are not equal. It is the
-  negation of the <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality">strict
-    equality</a> operator so the following two lines will always give the same result:</p>
+```js
+x !== y
 
-<pre class="brush: js">x !== y
+!(x === y)
+```
 
-!(x === y)</pre>
+For details of the comparison algorithm, see the page for the
+[strict equality](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality)
+operator.
 
-<p>For details of the comparison algorithm, see the page for the <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality">strict
-    equality</a> operator.</p>
+Like the strict equality operator, the strict inequality operator will always
+consider operands of different types to be different:
 
-<p>Like the strict equality operator, the strict inequality operator will always consider
-  operands of different types to be different:</p>
+```js
+3 !== "3"; // true
+```
 
-<pre class="brush: js">3 !== "3"; // true</pre>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Comparing operands of the same type
 
-<h3 id="Comparing_operands_of_the_same_type">Comparing operands of the same type</h3>
-
-<pre class="brush: js">console.log("hello" !== "hello");   // false
+```js
+console.log("hello" !== "hello");   // false
 console.log("hello" !== "hola");    // true
 
 console.log(3 !== 3);               // false
@@ -56,19 +62,23 @@ console.log(3 !== 4);               // true
 console.log(true !== true);         // false
 console.log(true !== false);        // true
 
-console.log(null !== null);         // false</pre>
+console.log(null !== null);         // false
+```
 
-<h3 id="Comparing_operands_of_different_types">Comparing operands of different types</h3>
+### Comparing operands of different types
 
-<pre class="brush: js">console.log("3" !== 3);           // true
+```js
+console.log("3" !== 3);           // true
 
 console.log(true !== 1);          // true
 
-console.log(null !== undefined);  // true</pre>
+console.log(null !== undefined);  // true
+```
 
-<h3 id="Comparing_objects">Comparing objects</h3>
+### Comparing objects
 
-<pre class="brush: js">const object1 = {
+```js
+const object1 = {
   name: "hello"
 }
 
@@ -77,23 +87,19 @@ const object2 = {
 }
 
 console.log(object1 !== object2);  // true
-console.log(object1 !== object1);  // false</pre>
+console.log(object1 !== object1);  // false
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Equality">Equality
-      operator</a></li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Inequality">Inequality
-      operator</a></li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality">Strict
-      equality operator</a></li>
-</ul>
+- [Equality operator](/en-US/docs/Web/JavaScript/Reference/Operators/Equality)
+- [Inequality operator](/en-US/docs/Web/JavaScript/Reference/Operators/Inequality)
+- [Strict equality operator](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality)

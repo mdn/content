@@ -1,39 +1,43 @@
 ---
-title: 'Set.prototype[@@iterator]()'
+title: Set.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/Set/@@iterator
 tags:
-- ECMAScript 2015
-- Iterator
-- JavaScript
-- Method
-- Prototype
-- Reference
-- set
+  - ECMAScript 2015
+  - Iterator
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
+  - set
 browser-compat: javascript.builtins.Set.@@iterator
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The initial value of the <strong><code>@@iterator</code></strong> property is the same
-  function object as the initial value of the {{jsxref("Set.prototype.values()",
-  "values")}} property.</p>
+The initial value of the **`@@iterator`** property is the same function object
+as the initial value of the
+{{jsxref("Set.prototype.values()",
+  "values")}} property.
 
-<div>{{EmbedInteractiveExample("pages/js/set-prototype-@@iterator.html")}}</div>
+{{EmbedInteractiveExample("pages/js/set-prototype-@@iterator.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+mySet[Symbol.iterator]
+```
 
-<pre class="brush: js"><var>mySet</var>[Symbol.iterator]</pre>
+### Return value
 
-<h3 id="Return_value">Return value</h3>
+The `Set` **iterator** function, which is the
+{{jsxref("Set.prototype.values()", "values()")}} function by
+default.
 
-<p>The <code>Set</code> <strong>iterator</strong> function, which is the
-  {{jsxref("Set.prototype.values()", "values()")}} function by default.</p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Using \[@@iterator]\()
 
-<h3 id="Using_iterator">Using [@@iterator]()</h3>
-
-<pre class="brush: js">const mySet = new Set();
+```js
+const mySet = new Set();
 mySet.add('0');
 mySet.add(1);
 mySet.add({});
@@ -43,11 +47,12 @@ const setIter = mySet[Symbol.iterator]();
 console.log(setIter.next().value); // "0"
 console.log(setIter.next().value); // 1
 console.log(setIter.next().value); // Object
-</pre>
+```
 
-<h3 id="Using_iterator_with_for..of">Using [@@iterator]() with for..of</h3>
+### Using \[@@iterator]\() with for..of
 
-<pre class="brush: js">const mySet = new Set();
+```js
+const mySet = new Set();
 mySet.add('0');
 mySet.add(1);
 mySet.add({});
@@ -55,20 +60,18 @@ mySet.add({});
 for (const v of mySet) {
   console.log(v);
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Set.prototype.entries()")}}</li>
-  <li>{{jsxref("Set.prototype.keys()")}}</li>
-  <li>{{jsxref("Set.prototype.values()")}}</li>
-</ul>
+- {{jsxref("Set.prototype.entries()")}}
+- {{jsxref("Set.prototype.keys()")}}
+- {{jsxref("Set.prototype.values()")}}

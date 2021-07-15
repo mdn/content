@@ -2,30 +2,29 @@
 title: TypedArray.prototype.reduce()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/reduce
 tags:
-- JavaScript
-- Method
-- Prototype
-- Reference
-- TypedArray
-- TypedArrays
-- Polyfill
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
+  - TypedArray
+  - TypedArrays
+  - Polyfill
 browser-compat: javascript.builtins.TypedArray.reduce
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>reduce()</code></strong> method applies a function against an
-  accumulator and each value of the typed array (from left-to-right) has to reduce it to a
-  single value. This method has the same algorithm as
-  {{jsxref("Array.prototype.reduce()")}}. <em>TypedArray</em> is one of the <a
-    href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">typed
-    array types</a> here.</p>
+The **`reduce()`** method applies a function against an accumulator and each
+value of the typed array (from left-to-right) has to reduce it to a single
+value. This method has the same algorithm as
+{{jsxref("Array.prototype.reduce()")}}. _TypedArray_ is one of the
+[typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)
+here.
 
-<div>{{EmbedInteractiveExample("pages/js/typedarray-reduce.html")}}</div>
+{{EmbedInteractiveExample("pages/js/typedarray-reduce.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush: js">
+```js
 // Arrow function
 reduce((accumulator, currentValue) => { ... } )
 reduce((accumulator, currentValue, index) => { ... } )
@@ -41,86 +40,83 @@ reduce(function callbackFn(accumulator, currentValue) { ... })
 reduce(function callbackFn(accumulator, currentValue, index) { ... })
 reduce(function callbackFn(accumulator, currentValue, index, array){ ... })
 reduce(function callbackFn(accumulator, currentValue, index, array) { ... }, initialValue)
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>callbackFn</var></code></dt>
-  <dd>Function to execute on each value in the typed array, taking four arguments:
-    <dl>
-      <dt><code><var>accumulator</var></code></dt>
-      <dd>The value previously returned in the last invocation of the callback, or
-        <code>initialValue</code>, if supplied (see below).</dd>
-      <dt><code><var>currentValue</var></code></dt>
-      <dd>The current element being processed in the typed array.</dd>
-      <dt><code><var>index</var></code></dt>
-      <dd>The index of the current element being processed in the typed array.</dd>
-      <dt><code><var>array</var></code></dt>
-      <dd>The typed array <code>reduce()</code> was called upon.</dd>
-    </dl>
-  </dd>
-  <dt><code><var>initialValue</var></code></dt>
-  <dd>Optional. Object to use as the first argument to the first call of the
-    <code><var>callbackFn</var></code>.</dd>
-</dl>
+- `callbackFn`
 
-<h3 id="Return_value">Return value</h3>
+  - : Function to execute on each value in the typed array, taking four
+    arguments:
 
-<p>The value that results from the reduction.</p>
+    - `accumulator`
+      - : The value previously returned in the last invocation of the callback,
+        or `initialValue`, if supplied (see below).
+    - `currentValue`
+      - : The current element being processed in the typed array.
+    - `index`
+      - : The index of the current element being processed in the typed array.
+    - `array`
+      - : The typed array `reduce()` was called upon.
 
-<h2 id="Description">Description</h2>
+- `initialValue`
+  - : Optional. Object to use as the first argument to the first call of the
+    `callbackFn`.
 
-<p>The <code>reduce</code> method executes the <code><var>callbackFn</var></code> function
-  once for each element present in the typed array, excluding holes in the typed array,
-  receiving four arguments: the initial value (or value from the previous
-  <code><var>callbackFn</var></code> call), the value of the current element, the current
-  index, and the typed array over which iteration is occurring.</p>
+### Return value
 
-<p>The first time the callback is called, <code><var>accumulator</var></code> and
-  <code><var>currentValue</var></code> can be one of two values. If
-  <code><var>initialValue</var></code> is provided in the call to <code>reduce</code>,
-  then <code><var>accumulator</var></code> will be equal to
-  <code><var>initialValue</var></code> and <code><var>currentValue</var></code> will be
-  equal to the first value in the typed array. If no <code><var>initialValue</var></code>
-  was provided, then <code><var>accumulator</var></code> will be equal to the first
-  value in the typed array and <code><var>currentValue</var></code> will be equal to the
-  second.</p>
+The value that results from the reduction.
 
-<p>If the typed array is empty and no <code><var>initialValue</var></code> was provided,
-  {{jsxref("TypeError")}} would be thrown. If the typed array has only one element
-  (regardless of position) and no <code><var>initialValue</var></code> was provided, or if
-  <code><var>initialValue</var></code> is provided but the typed array is empty, the solo
-  value would be returned without calling <code><var>callbackFn</var></code>.</p>
+## Description
 
-<h2 id="Examples">Examples</h2>
+The `reduce` method executes the `callbackFn` function once for each element
+present in the typed array, excluding holes in the typed array, receiving four
+arguments: the initial value (or value from the previous `callbackFn` call), the
+value of the current element, the current index, and the typed array over which
+iteration is occurring.
 
-<h3 id="Sum_up_all_values_within_an_array">Sum up all values within an array</h3>
+The first time the callback is called, `accumulator` and `currentValue` can be
+one of two values. If `initialValue` is provided in the call to `reduce`, then
+`accumulator` will be equal to `initialValue` and `currentValue` will be equal
+to the first value in the typed array. If no `initialValue` was provided, then
+`accumulator` will be equal to the first value in the typed array and
+`currentValue` will be equal to the second.
 
-<pre class="brush: js">var total = new Uint8Array([0, 1, 2, 3]).reduce(function(a, b) {
+If the typed array is empty and no `initialValue` was provided,
+{{jsxref("TypeError")}} would be thrown. If the typed array has only
+one element (regardless of position) and no `initialValue` was provided, or if
+`initialValue` is provided but the typed array is empty, the solo value would be
+returned without calling `callbackFn`.
+
+## Examples
+
+### Sum up all values within an array
+
+```js
+var total = new Uint8Array([0, 1, 2, 3]).reduce(function(a, b) {
   return a + b;
 });
 // total == 6
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>This method uses the same algorithm as {{jsxref("Array.prototype.reduce()")}}, so the
-  same polyfill can be used here: replace <code>Array.prototype.reduce</code> with
-  <code>TypedArray.prototype.reduce</code>.</p>
+This method uses the same algorithm as
+{{jsxref("Array.prototype.reduce()")}}, so the same polyfill can
+be used here: replace `Array.prototype.reduce` with
+`TypedArray.prototype.reduce`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>A polyfill of <code>TypedArray.prototype.reduce</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-typed-arrays"><code>core-js</code></a></li>
-  <li>{{jsxref("TypedArray.prototype.reduceRight()")}}</li>
-  <li>{{jsxref("Array.prototype.reduce()")}}</li>
-</ul>
+- A polyfill of `TypedArray.prototype.reduce` is available in
+  [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- {{jsxref("TypedArray.prototype.reduceRight()")}}
+- {{jsxref("Array.prototype.reduce()")}}

@@ -2,69 +2,72 @@
 title: empty
 slug: Web/JavaScript/Reference/Statements/Empty
 tags:
-- JavaScript
-- Language feature
-- Statement
+  - JavaScript
+  - Language feature
+  - Statement
 browser-compat: javascript.statements.empty
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p>An <strong>empty statement</strong> is used to provide no statement, although the
-  JavaScript syntax would expect one.</p>
+An **empty statement** is used to provide no statement, although the JavaScript
+syntax would expect one.
 
-<div>{{EmbedInteractiveExample("pages/js/statement-empty.html")}}</div>
+{{EmbedInteractiveExample("pages/js/statement-empty.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+;
+```
 
-<pre class="brush: js">;
-</pre>
+## Description
 
-<h2 id="Description">Description</h2>
+The empty statement is a semicolon (`;`) indicating that no statement will be
+executed, even if JavaScript syntax requires one.
 
-<p>The empty statement is a semicolon (<code>;</code>) indicating that no statement will
-  be executed, even if JavaScript syntax requires one.</p>
+The opposite behavior, where you want multiple statements, but JavaScript only
+allows a single one, is possible using
+a[ block statement](/en-US/docs/Web/JavaScript/Reference/Statements/block),
+which combines several statements into a single one.
 
-<p>The opposite behavior, where you want multiple statements, but JavaScript only allows a
-  single one, is possible using a<a
-    href="/en-US/docs/Web/JavaScript/Reference/Statements/block"> block statement</a>,
-  which combines several statements into a single one.</p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Empty loop body
 
-<h3 id="Empty_loop_body">Empty loop body</h3>
+The empty statement is sometimes used with loop statements. See the following
+example with an empty loop body:
 
-<p>The empty statement is sometimes used with loop statements. See the following example
-  with an empty loop body:</p>
-
-<pre class="brush: js">let arr = [1, 2, 3];
+```js
+let arr = [1, 2, 3];
 
 // Assign all array values to 0
-for (let i = 0; i &lt; arr.length; arr[i++] = 0) /* empty statement */ ;
+for (let i = 0; i < arr.length; arr[i++] = 0) /* empty statement */ ;
 
 console.log(arr);
 // [0, 0, 0]
-</pre>
+```
 
-<h3 id="Unintentional_usage">Unintentional usage</h3>
+### Unintentional usage
 
-<p>It is a good idea to comment <em>intentional</em> use of the empty statement, as it is
-  not really obvious to distinguish from a normal semicolon.</p>
+It is a good idea to comment _intentional_ use of the empty statement, as it is
+not really obvious to distinguish from a normal semicolon.
 
-<p>In the following example, the usage is probably not intentional:</p>
+In the following example, the usage is probably not intentional:
 
-<pre class="brush: js example-bad">if (condition);       // Caution, this "if" does nothing!
+```js example-bad
+if (condition);       // Caution, this "if" does nothing!
    killTheUniverse()  // So this always gets executed!!!
-</pre>
+```
 
-<p>In the next example, an {{jsxref("Statements/if...else", "if...else")}} statement
-  without curly braces (<code>{}</code>) is used.</p>
+In the next example, an
+{{jsxref("Statements/if...else", "if...else")}} statement
+without curly braces (`{}`) is used.
 
-<p>If <code>three</code> is <code>true</code>, nothing will happen, <code>four</code> does
-  not matter, and also the <code>launchRocket()</code> function in the <code>else</code>
-  case will not be executed.</p>
+If `three` is `true`, nothing will happen, `four` does not matter, and also the
+`launchRocket()` function in the `else` case will not be executed.
 
-<pre class="brush: js example-bad">if (one)
+```js example-bad
+if (one)
   doOne();
 else if (two)
   doTwo();
@@ -73,18 +76,17 @@ else if (three)
 else if (four)
   doFour();
 else
-  launchRocket();</pre>
+  launchRocket();
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Statements/block", "Block statement")}}</li>
-</ul>
+- {{jsxref("Statements/block", "Block statement")}}

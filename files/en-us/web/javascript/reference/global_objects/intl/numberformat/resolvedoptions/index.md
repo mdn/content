@@ -12,81 +12,78 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.NumberFormat.resolvedOptions
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>Intl.NumberFormat.prototype.resolvedOptions()</code></strong> method
-	returns a new object with properties reflecting the locale and number formatting
-	options computed during initialization of this {{jsxref("Intl/NumberFormat")}} object.</p>
+The **`Intl.NumberFormat.prototype.resolvedOptions()`** method returns a new
+object with properties reflecting the locale and number formatting options
+computed during initialization of this {{jsxref("Intl/NumberFormat")}}
+object.
 
-<div>
-	{{EmbedInteractiveExample("pages/js/intl-numberformat-prototype-resolvedoptions.html")}}
-</div>
+{{EmbedInteractiveExample("pages/js/intl-numberformat-prototype-resolvedoptions.html")}}
+
 <!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">resolvedOptions()</pre>
+```js
+resolvedOptions()
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A new object with properties reflecting the locale and number formatting options
-	computed during the initialization of the given {{jsxref("Intl/NumberFormat")}} object.</p>
+A new object with properties reflecting the locale and number formatting options
+computed during the initialization of the given
+{{jsxref("Intl/NumberFormat")}} object.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The resulting object has the following properties:</p>
+The resulting object has the following properties:
 
-<dl>
-	<dt><code>locale</code></dt>
-	<dd>The BCP 47 language tag for the locale actually used. If any Unicode extension
-		values were requested in the input BCP 47 language tag that led to this locale,
-		the key-value pairs that were requested and are supported for this locale are
-		included in <code>locale</code>.</dd>
-	<dt><code>numberingSystem</code></dt>
-	<dd>The value provided for this properties in the <code>options</code> argument, if
-		present, or the value requested using the Unicode extension key "<code>nu</code>"
-		or filled in as a default.</dd>
-	<dt><code>notation</code></dt>
-	<dd>The value provided for this property in the <code>options</code> argument, if
-		present, or "<code>standard</code>" filled in as a default.</dd>
-	<dt><code>compactDisplay</code></dt>
-	<dd>
-		The value provided for this property in the <code>options</code> argument, or
-		"<code>short</code>" filled in as a default. <br>
-		This property is only present if the <code>notation</code> is set to "compact". 
-	</dd>
-	<dt><code>signDisplay</code></dt>
-	<dd>The value provided for this property in the <code>options</code> argument, or
-		"<code>auto</code>" filled in as a default. </dd>
-	<dt><code>useGrouping</code></dt>
-	<dd>The values provided for these properties in the <code>options</code> argument or
-		filled in as defaults.</dd>
-	<dt><code>currency</code>, <code>currencyDisplay</code></dt>
-	<dd>The values provided for these properties in the <code>options</code> argument or
-		filled in as defaults. These properties are only present if <code>style</code> is
-		"<code>currency</code>".</dd>
-</dl>
+- `locale`
+  - : The BCP 47 language tag for the locale actually used. If any Unicode
+    extension values were requested in the input BCP 47 language tag that led to
+    this locale, the key-value pairs that were requested and are supported for
+    this locale are included in `locale`.
+- `numberingSystem`
+  - : The value provided for this properties in the `options` argument, if
+    present, or the value requested using the Unicode extension key "`nu`" or
+    filled in as a default.
+- `notation`
+  - : The value provided for this property in the `options` argument, if
+    present, or "`standard`" filled in as a default.
+- `compactDisplay`
+  - : The value provided for this property in the `options` argument, or
+    "`short`" filled in as a default.  This property is only present if the
+    `notation` is set to "compact".
+- `signDisplay`
+  - : The value provided for this property in the `options` argument, or
+    "`auto`" filled in as a default.
+- `useGrouping`
+  - : The values provided for these properties in the `options` argument or
+    filled in as defaults.
+- `currency`, `currencyDisplay`
+  - : The values provided for these properties in the `options` argument or
+    filled in as defaults. These properties are only present if `style` is
+    "`currency`".
 
-<p>Only one of the following two groups of properties is included:</p>
+Only one of the following two groups of properties is included:
 
-<dl>
-	<dt><code>minimumIntegerDigits</code>, <code>minimumFractionDigits</code>, <code>maximumFractionDigits</code></dt>
-	<dd>The values provided for these properties in the <code>options</code> argument or
-		filled in as defaults. These properties are present only if neither
-		<code>minimumSignificantDigits</code> nor <code>maximumSignificantDigits</code>
-		was provided in the <code>options</code> argument.</dd>
-	<dt><code>minimumSignificantDigits</code>, <code>maximumSignificantDigits</code></dt>
-	<dd>The values provided for these properties in the <code>options</code> argument or
-		filled in as defaults. These properties are present only if at least one of them
-		was provided in the <code>options</code> argument.</dd>
-</dl>
+- `minimumIntegerDigits`, `minimumFractionDigits`, `maximumFractionDigits`
+  - : The values provided for these properties in the `options` argument or
+    filled in as defaults. These properties are present only if neither
+    `minimumSignificantDigits` nor `maximumSignificantDigits` was provided in
+    the `options` argument.
+- `minimumSignificantDigits`, `maximumSignificantDigits`
+  - : The values provided for these properties in the `options` argument or
+    filled in as defaults. These properties are present only if at least one of
+    them was provided in the `options` argument.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_the_resolvedOptions_method">Using the <code>resolvedOptions</code> method
-</h3>
+### Using the `resolvedOptions` method
 
-<pre class="brush: js">var de = new Intl.NumberFormat('de-DE');
+```js
+var de = new Intl.NumberFormat('de-DE');
 var usedOptions = de.resolvedOptions();
 
 usedOptions.locale;                // "de-DE"
@@ -98,18 +95,16 @@ usedOptions.minimumIntegerDigits;  // 1
 usedOptions.minimumFractionDigits; // 0
 usedOptions.maximumFractionDigits; // 3
 usedOptions.useGrouping;           // true
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>{{jsxref("Intl/NumberFormat", "Intl.NumberFormat")}}</li>
-</ul>
+- {{jsxref("Intl/NumberFormat", "Intl.NumberFormat")}}

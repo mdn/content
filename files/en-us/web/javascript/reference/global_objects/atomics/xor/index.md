@@ -2,122 +2,95 @@
 title: Atomics.xor()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/xor
 tags:
-- Atomics
-- JavaScript
-- Method
-- Shared Memory
+  - Atomics
+  - JavaScript
+  - Method
+  - Shared Memory
 browser-compat: javascript.builtins.Atomics.xor
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The static <code><strong>Atomics</strong></code><strong><code>.xor()</code></strong>
-  method computes a bitwise XOR with a given value at a given position in the array, and
-  returns the old value at that position. This atomic operation guarantees that no other
-  write happens until the modified value is written back.</p>
+The static **`Atomics`\*\***`.xor()`\*\* method computes a bitwise XOR with a
+given value at a given position in the array, and returns the old value at that
+position. This atomic operation guarantees that no other write happens until the
+modified value is written back.
 
-<div>{{EmbedInteractiveExample("pages/js/atomics-xor.html")}}</div>
+{{EmbedInteractiveExample("pages/js/atomics-xor.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">Atomics.xor(typedArray, index, value)
-</pre>
+```js
+Atomics.xor(typedArray, index, value)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>typedArray</code></dt>
-  <dd>An integer typed array. One of {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}},
-    {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}},
+- `typedArray`
+  - : An integer typed array. One of {{jsxref("Int8Array")}},
+    {{jsxref("Uint8Array")}}, {{jsxref("Int16Array")}},
+    {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}},
     {{jsxref("Uint32Array")}}, {{jsxref("BigInt64Array")}}, or
-    {{jsxref("BigUint64Array")}}.</dd>
-  <dt><code>index</code></dt>
-  <dd>The position in the <code>typedArray</code> to compute the bitwise XOR.</dd>
-  <dt><code>value</code></dt>
-  <dd>The number to compute the bitwise XOR with.</dd>
-</dl>
+    {{jsxref("BigUint64Array")}}.
+- `index`
+  - : The position in the `typedArray` to compute the bitwise XOR.
+- `value`
+  - : The number to compute the bitwise XOR with.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>The old value at the given position (<code>typedArray[index]</code>).</p>
+The old value at the given position (`typedArray[index]`).
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<ul>
-  <li>Throws a {{jsxref("TypeError")}}, if <code>typedArray</code> is not one of the
-    allowed integer types.</li>
-  <li>Throws a {{jsxref("RangeError")}}, if <code>index</code> is out of bounds in the
-    <code>typedArray</code>.</li>
-</ul>
+- Throws a {{jsxref("TypeError")}}, if `typedArray` is not one of the
+  allowed integer types.
+- Throws a {{jsxref("RangeError")}}, if `index` is out of bounds in the
+  `typedArray`.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The bitwise XOR operation yields 1, if <code>a</code> and <code>b</code> are different.
-  The truth table for the XOR operation is:</p>
+The bitwise XOR operation yields 1, if `a` and `b` are different. The truth
+table for the XOR operation is:
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th><code>a</code></th>
-      <th><code>b</code></th>
-      <th><code>a ^ b</code></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <td>0</td>
-      <td>1</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>1</td>
-      <td>0</td>
-    </tr>
-  </tbody>
-</table>
+| `a` | `b` | `a ^ b` |
+| --- | --- | ------- |
+| 0   | 0   | 0       |
+| 0   | 1   | 1       |
+| 1   | 0   | 1       |
+| 1   | 1   | 0       |
 
-<p>For example, a bitwise XOR of <code>5 ^ 1</code> results in <code>0100</code> which is
-  4 in decimal.</p>
+For example, a bitwise XOR of `5 ^ 1` results in `0100` which is 4 in decimal.
 
-<pre class="brush: plain">5  0101
+```plain
+5  0101
 1  0001
    ----
 4  0100
-</pre>
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_xor">Using xor</h3>
+### Using xor
 
-<pre class="brush: js">const sab = new SharedArrayBuffer(1024);
+```js
+const sab = new SharedArrayBuffer(1024);
 const ta = new Uint8Array(sab);
 ta[0] = 5;
 
 Atomics.xor(ta, 0, 1); // returns 5, the old value
-Atomics.load(ta, 0);  // 4</pre>
+Atomics.load(ta, 0);  // 4
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Atomics")}}</li>
-  <li>{{jsxref("Atomics.and()")}}</li>
-  <li>{{jsxref("Atomics.or()")}}</li>
-</ul>
+- {{jsxref("Atomics")}}
+- {{jsxref("Atomics.and()")}}
+- {{jsxref("Atomics.or()")}}

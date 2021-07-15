@@ -2,88 +2,84 @@
 title: WebAssembly.compile()
 slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/compile
 tags:
-- API
-- JavaScript
-- Method
-- Object
-- Reference
-- WebAssembly
-- compile
+  - API
+  - JavaScript
+  - Method
+  - Object
+  - Reference
+  - WebAssembly
+  - compile
 browser-compat: javascript.builtins.WebAssembly.compile
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>WebAssembly.compile()</code></strong> function compiles WebAssembly
-  binary code into a {{jsxref("WebAssembly.Module")}} object. This function is useful if
-  it is necessary to a compile a module before it can be instantiated (otherwise, the
-  {{jsxref("WebAssembly.instantiate()")}} function should be used).</p>
+The **`WebAssembly.compile()`** function compiles WebAssembly binary code into a
+{{jsxref("WebAssembly.Module")}} object. This function is useful if
+it is necessary to a compile a module before it can be instantiated (otherwise,
+the {{jsxref("WebAssembly.instantiate()")}} function should be
+used).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">WebAssembly.compile(bufferSource)</pre>
+```js
+WebAssembly.compile(bufferSource)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><em>bufferSource</em></dt>
-  <dd>A <a href="/en-US/docs/Web/JavaScript/Typed_arrays">typed array</a> or <a
-      href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a>
-    containing the binary code of the .wasm module you want to compile.</dd>
-</dl>
+- _bufferSource_
+  - : A [typed array](/en-US/docs/Web/JavaScript/Typed_arrays) or
+    [ArrayBuffer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
+    containing the binary code of the .wasm module you want to compile.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <code>Promise</code> that resolves to a {{jsxref("WebAssembly.Module")}} object
-  representing the compiled module.</p>
+A `Promise` that resolves to a {{jsxref("WebAssembly.Module")}}
+object representing the compiled module.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<ul>
-  <li>If <code>bufferSource</code> is not a <a
-      href="/en-US/docs/Web/JavaScript/Typed_arrays">typed array</a>, a
-    {{jsxref("TypeError")}} is thrown.</li>
-  <li>If compilation fails, the promise rejects with a
-    {{jsxref("WebAssembly.CompileError")}}.</li>
-</ul>
+- If `bufferSource` is not a
+  [typed array](/en-US/docs/Web/JavaScript/Typed_arrays), a
+  {{jsxref("TypeError")}} is thrown.
+- If compilation fails, the promise rejects with a
+  {{jsxref("WebAssembly.CompileError")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_compile">Using compile</h3>
+### Using compile
 
-<p>The following example compiles the loaded simple.wasm byte code using the
-  <code>compile()</code> function and then sends it to a <a
-    href="/en-US/docs/Web/API/Web_Workers_API">worker</a> using <a
-    href="/en-US/docs/Web/API/Worker/postMessage">postMessage()</a>.</p>
+The following example compiles the loaded simple.wasm byte code using the
+`compile()` function and then sends it to a
+[worker](/en-US/docs/Web/API/Web_Workers_API) using
+[postMessage()](/en-US/docs/Web/API/Worker/postMessage).
 
-<pre class="brush: js">var worker = new Worker("wasm_worker.js");
+```js
+var worker = new Worker("wasm_worker.js");
 
-fetch('simple.wasm').then(response =&gt;
+fetch('simple.wasm').then(response =>
   response.arrayBuffer()
-).then(bytes =&gt;
+).then(bytes =>
   WebAssembly.compile(bytes)
-).then(mod =&gt;
+).then(mod =>
   worker.postMessage(mod)
-);</pre>
+);
+```
 
-<div class="note">
-  <p><strong>Note:</strong> You'll probably want to use
-    {{jsxref("WebAssembly.compileStreaming()")}} in most cases, as it is more efficient
-    than <code>compile()</code>.</p>
-</div>
+> **Note:** You'll probably want to use
+> {{jsxref("WebAssembly.compileStreaming()")}} in most cases, as
+> it is more efficient than `compile()`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/WebAssembly">WebAssembly</a> overview page</li>
-  <li><a href="/en-US/docs/WebAssembly/Concepts">WebAssembly concepts</a></li>
-  <li><a href="/en-US/docs/WebAssembly/Using_the_JavaScript_API">Using the WebAssembly
-      JavaScript API</a></li>
-</ul>
+- [WebAssembly](/en-US/docs/WebAssembly) overview page
+- [WebAssembly concepts](/en-US/docs/WebAssembly/Concepts)
+- [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)

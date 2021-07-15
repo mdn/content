@@ -11,34 +11,41 @@ tags:
   - Regular Expressions
 browser-compat: javascript.builtins.RegExp.dotAll
 ---
-<p>{{JSRef}}</p>
+{{JSRef}}
 
-<p>The <strong><code>dotAll</code></strong> property indicates whether or not the "<code>s</code>" flag is used with the regular expression. <code>dotAll</code> is a read-only property of an individual regular expression instance.</p>
+The **`dotAll`** property indicates whether or not the "`s`" flag is used with
+the regular expression. `dotAll` is a read-only property of an individual
+regular expression instance.
 
-<div>{{EmbedInteractiveExample("pages/js/regexp-prototype-dotall.html")}}</div>
+{{EmbedInteractiveExample("pages/js/regexp-prototype-dotall.html")}}
 
-<p>{{JS_Property_Attributes(0, 0, 1)}}</p>
+{{JS_Property_Attributes(0, 0, 1)}}
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The value of <code>dotAll</code> is a {{JSxRef("Boolean")}} and <code>true</code> if the "<code>s</code>" flag was used; otherwise, <code>false</code>. The "<code>s</code>" flag indicates that the dot special character ("<code>.</code>") should additionally match the following line terminator ("newline") characters in a string, which it would not match otherwise:</p>
+The value of `dotAll` is a {{JSxRef("Boolean")}} and `true` if the "`s`"
+flag was used; otherwise, `false`. The "`s`" flag indicates that the dot special
+character ("`.`") should additionally match the following line terminator
+("newline") characters in a string, which it would not match otherwise:
 
-<ul>
- <li>U+000A LINE FEED (LF) ("<code>\n</code>")</li>
- <li>U+000D CARRIAGE RETURN (CR) ("<code>\r</code>")</li>
- <li>U+2028 LINE SEPARATOR</li>
- <li>U+2029 PARAGRAPH SEPARATOR</li>
-</ul>
+- U+000A LINE FEED (LF) ("`\n`")
+- U+000D CARRIAGE RETURN (CR) ("`\r`")
+- U+2028 LINE SEPARATOR
+- U+2029 PARAGRAPH SEPARATOR
 
-<p>This effectively means the dot will match any character on the Unicode Basic Multilingual Plane (BMP). To allow it to match astral characters, the "<code>u</code>" (unicode) flag should be used. Using both flags in conjunction allows the dot to match any Unicode character, without exceptions.</p>
+This effectively means the dot will match any character on the Unicode Basic
+Multilingual Plane (BMP). To allow it to match astral characters, the "`u`"
+(unicode) flag should be used. Using both flags in conjunction allows the dot to
+match any Unicode character, without exceptions.
 
-<p>You cannot change this property directly.</p>
+You cannot change this property directly.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_dotAll">Using <code>dotAll</code></h3>
+### Using `dotAll`
 
-<pre class="brush: js">var str1 = 'bar\nexample foo example';
+```js
+var str1 = 'bar\nexample foo example';
 
 var regex1 = new RegExp('bar.example','s');
 
@@ -53,26 +60,24 @@ var regex2 = new RegExp('bar.example');
 console.log(regex2.dotAll); // Output: false
 
 console.log(str2.replace(regex2,'')); // Output: bar
-                                      //         example foo example</pre>
+                                      //         example foo example
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat}}
 
-<p>{{Compat}}</p>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{JSxRef("RegExp.lastIndex")}}</li>
- <li>{{JSxRef("RegExp.prototype.global")}}</li>
- <li>{{JSxRef("RegExp.prototype.hasIndices")}}</li>
- <li>{{JSxRef("RegExp.prototype.ignoreCase")}}</li>
- <li>{{JSxRef("RegExp.prototype.multiline")}}</li>
- <li>{{JSxRef("RegExp.prototype.source")}}</li>
- <li>{{JSxRef("RegExp.prototype.sticky")}}</li>
- <li>{{JSxRef("RegExp.prototype.unicode")}}</li>
-</ul>
+- {{JSxRef("RegExp.lastIndex")}}
+- {{JSxRef("RegExp.prototype.global")}}
+- {{JSxRef("RegExp.prototype.hasIndices")}}
+- {{JSxRef("RegExp.prototype.ignoreCase")}}
+- {{JSxRef("RegExp.prototype.multiline")}}
+- {{JSxRef("RegExp.prototype.source")}}
+- {{JSxRef("RegExp.prototype.sticky")}}
+- {{JSxRef("RegExp.prototype.unicode")}}

@@ -9,54 +9,83 @@ tags:
   - Reflect
 browser-compat: javascript.builtins.Reflect
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><span class="seoSummary"><strong>Reflect</strong> is a built-in object that provides methods for interceptable JavaScript operations. The methods are the same as those of <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler">proxy handlers</a>. <code>Reflect</code> is not a function object, so it's not constructible.</span></p>
+**Reflect** is a built-in object that provides methods for interceptable
+JavaScript operations. The methods are the same as those of
+[proxy handlers](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler).
+`Reflect` is not a function object, so it's not constructible.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Unlike most global objects, <code>Reflect</code> is not a constructor. You cannot use it with a <a href="/en-US/docs/Web/JavaScript/Reference/Operators/new"><code>new</code> operator</a> or invoke the <code>Reflect</code> object as a function. All properties and methods of <code>Reflect</code> are static (just like the {{jsxref("Math")}} object).</p>
+Unlike most global objects, `Reflect` is not a constructor. You cannot use it
+with a [`new` operator](/en-US/docs/Web/JavaScript/Reference/Operators/new) or
+invoke the `Reflect` object as a function. All properties and methods of
+`Reflect` are static (just like the {{jsxref("Math")}} object).
 
-<p>The <code>Reflect</code> object provides the following static functions which have the same names as the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler">proxy handler methods</a>.</p>
+The `Reflect` object provides the following static functions which have the same
+names as the
+[proxy handler methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler).
 
-<p>Some of these methods are also the same as corresponding methods on {{jsxref("Object")}}, although they do have <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/Comparing_Reflect_and_Object_methods">some subtle differences</a> between them.</p>
+Some of these methods are also the same as corresponding methods on
+{{jsxref("Object")}}, although they do
+have [some subtle differences](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/Comparing_Reflect_and_Object_methods) between
+them.
 
-<h2 id="Static_methods">Static methods</h2>
+## Static methods
 
-<dl>
- <dt>{{jsxref("Reflect.apply()", "Reflect.apply(<var>target</var>, <var>thisArgument</var>, <var>argumentsList</var>)")}}</dt>
- <dd>Calls a <code><var>target</var></code> function with arguments as specified by the <code><var>argumentsList</var></code> parameter. See also {{jsxref("Function.prototype.apply()")}}.</dd>
- <dt>{{jsxref("Reflect.construct()", "Reflect.construct(<var>target</var>, <var>argumentsList</var>[, <var>newTarget</var>])")}}</dt>
- <dd>The <a href="/en-US/docs/Web/JavaScript/Reference/Operators/new"><code>new</code> operator</a> as a function. Equivalent to calling <code>new <var>target</var>(...<var>argumentsList</var>)</code>. Also provides the option to specify a different prototype.</dd>
- <dt>{{jsxref("Reflect.defineProperty()", "Reflect.defineProperty(<var>target</var>, <var>propertyKey</var>, <var>attributes</var>)")}}</dt>
- <dd>Similar to {{jsxref("Object.defineProperty()")}}. Returns a {{jsxref("Boolean")}} that is <code>true</code> if the property was successfully defined.</dd>
- <dt>{{jsxref("Reflect.deleteProperty()", "Reflect.deleteProperty(<var>target</var>, <var>propertyKey</var>)")}}</dt>
- <dd>The <a href="/en-US/docs/Web/JavaScript/Reference/Operators/delete"><code>delete</code> operator</a> as a function. Equivalent to calling <code>delete <var>target</var>[<var>propertyKey</var>]</code>.</dd>
- <dt>{{jsxref("Reflect.get()", "Reflect.get(<var>target</var>, <var>propertyKey</var>[, <var>receiver</var>])")}}</dt>
- <dd>Returns the value of the property. Works like getting a property from an object (<code>target[propertyKey]</code>) as a function.</dd>
- <dt>{{jsxref("Reflect.getOwnPropertyDescriptor()", "Reflect.getOwnPropertyDescriptor(<var>target</var>, <var>propertyKey</var>)")}}</dt>
- <dd>Similar to {{jsxref("Object.getOwnPropertyDescriptor()")}}. Returns a property descriptor of the given property if it exists on the object,  {{jsxref("undefined")}} otherwise.</dd>
- <dt>{{jsxref("Reflect.getPrototypeOf()", "Reflect.getPrototypeOf(<var>target</var>)")}}</dt>
- <dd>Same as {{jsxref("Object.getPrototypeOf()")}}.</dd>
- <dt>{{jsxref("Reflect.has()", "Reflect.has(<var>target, propertyKey</var>)")}}</dt>
- <dd>Returns a {{jsxref("Boolean")}} indicating whether the target has the property. Either as own or inherited. Works like the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/in"><code>in</code> operator</a> as a function.</dd>
- <dt>{{jsxref("Reflect.isExtensible()", "Reflect.isExtensible(<var>target</var>)")}}</dt>
- <dd>Same as {{jsxref("Object.isExtensible()")}}. Returns a {{jsxref("Boolean")}} that is <code>true</code> if the target is extensible.</dd>
- <dt>{{jsxref("Reflect.ownKeys()", "Reflect.ownKeys(<var>target</var>)")}}</dt>
- <dd>Returns an array of the target object's own (not inherited) property keys.</dd>
- <dt>{{jsxref("Reflect.preventExtensions()", "Reflect.preventExtensions(<var>target</var>)")}}</dt>
- <dd>Similar to {{jsxref("Object.preventExtensions()")}}. Returns a {{jsxref("Boolean")}} that is <code>true</code> if the update was successful.</dd>
- <dt>{{jsxref("Reflect.set()", "Reflect.set(<var>target</var>, <var>propertyKey</var>, <var>value</var>[, <var>receiver</var>])")}}</dt>
- <dd>A function that assigns values to properties. Returns a {{jsxref("Boolean")}} that is <code>true</code> if the update was successful.</dd>
- <dt>{{jsxref("Reflect.setPrototypeOf()", "Reflect.setPrototypeOf(<var>target</var>, <var>prototype</var>)")}}</dt>
- <dd>A function that sets the prototype of an object. Returns a {{jsxref("Boolean")}} that is <code>true</code> if the update was successful.</dd>
-</dl>
+- {{jsxref("Reflect.apply()", "Reflect.apply(<var>target</var>, <var>thisArgument</var>, <var>argumentsList</var>)")}}
+  - : Calls a `target` function with arguments as specified by the
+    `argumentsList` parameter. See also
+    {{jsxref("Function.prototype.apply()")}}.
+- {{jsxref("Reflect.construct()", "Reflect.construct(<var>target</var>, <var>argumentsList</var>[, <var>newTarget</var>])")}}
+  - : The [`new` operator](/en-US/docs/Web/JavaScript/Reference/Operators/new)
+    as a function. Equivalent to calling `new target(...argumentsList)`. Also
+    provides the option to specify a different prototype.
+- {{jsxref("Reflect.defineProperty()", "Reflect.defineProperty(<var>target</var>, <var>propertyKey</var>, <var>attributes</var>)")}}
+  - : Similar to {{jsxref("Object.defineProperty()")}}. Returns a
+    {{jsxref("Boolean")}} that is `true` if the property was successfully
+    defined.
+- {{jsxref("Reflect.deleteProperty()", "Reflect.deleteProperty(<var>target</var>, <var>propertyKey</var>)")}}
+  - : The
+    [`delete` operator](/en-US/docs/Web/JavaScript/Reference/Operators/delete)
+    as a function. Equivalent to calling `delete target[propertyKey]`.
+- {{jsxref("Reflect.get()", "Reflect.get(<var>target</var>, <var>propertyKey</var>[, <var>receiver</var>])")}}
+  - : Returns the value of the property. Works like getting a property from an
+    object (`target[propertyKey]`) as a function.
+- {{jsxref("Reflect.getOwnPropertyDescriptor()", "Reflect.getOwnPropertyDescriptor(<var>target</var>, <var>propertyKey</var>)")}}
+  - : Similar to
+    {{jsxref("Object.getOwnPropertyDescriptor()")}}. Returns a
+    property descriptor of the given property if it exists on the object, 
+    {{jsxref("undefined")}} otherwise.
+- {{jsxref("Reflect.getPrototypeOf()", "Reflect.getPrototypeOf(<var>target</var>)")}}
+  - : Same as {{jsxref("Object.getPrototypeOf()")}}.
+- {{jsxref("Reflect.has()", "Reflect.has(<var>target, propertyKey</var>)")}}
+  - : Returns a {{jsxref("Boolean")}} indicating whether the target has
+    the property. Either as own or inherited. Works like the
+    [`in` operator](/en-US/docs/Web/JavaScript/Reference/Operators/in) as a
+    function.
+- {{jsxref("Reflect.isExtensible()", "Reflect.isExtensible(<var>target</var>)")}}
+  - : Same as {{jsxref("Object.isExtensible()")}}. Returns a
+    {{jsxref("Boolean")}} that is `true` if the target is extensible.
+- {{jsxref("Reflect.ownKeys()", "Reflect.ownKeys(<var>target</var>)")}}
+  - : Returns an array of the target object's own (not inherited) property keys.
+- {{jsxref("Reflect.preventExtensions()", "Reflect.preventExtensions(<var>target</var>)")}}
+  - : Similar to {{jsxref("Object.preventExtensions()")}}. Returns a
+    {{jsxref("Boolean")}} that is `true` if the update was successful.
+- {{jsxref("Reflect.set()", "Reflect.set(<var>target</var>, <var>propertyKey</var>, <var>value</var>[, <var>receiver</var>])")}}
+  - : A function that assigns values to properties. Returns a
+    {{jsxref("Boolean")}} that is `true` if the update was successful.
+- {{jsxref("Reflect.setPrototypeOf()", "Reflect.setPrototypeOf(<var>target</var>, <var>prototype</var>)")}}
+  - : A function that sets the prototype of an object. Returns a
+    {{jsxref("Boolean")}} that is `true` if the update was successful.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Detecting_whether_an_object_contains_certain_properties">Detecting whether an object contains certain properties</h3>
+### Detecting whether an object contains certain properties
 
-<pre class="brush: js">const duck = {
+```js
+const duck = {
   name: 'Maurice',
   color: 'white',
   greeting: function() {
@@ -67,30 +96,33 @@ browser-compat: javascript.builtins.Reflect
 Reflect.has(duck, 'color');
 // true
 Reflect.has(duck, 'haircut');
-// false</pre>
+// false
+```
 
-<h3 id="Returning_the_objects_own_keys">Returning the object's own keys</h3>
+### Returning the object's own keys
 
-<pre class="brush: js">Reflect.ownKeys(duck);
-// [ "name", "color", "greeting" ]</pre>
+```js
+Reflect.ownKeys(duck);
+// [ "name", "color", "greeting" ]
+```
 
-<h3 id="Adding_a_new_property_to_the_object">Adding a new property to the object</h3>
+### Adding a new property to the object
 
-<pre class="brush: js">Reflect.set(duck, 'eyes', 'black');
+```js
+Reflect.set(duck, 'eyes', 'black');
 // returns "true" if successful
-// "duck" now contains the property "eyes: 'black'"</pre>
+// "duck" now contains the property "eyes: 'black'"
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The {{jsxref("Proxy")}} global object.</li>
- <li>The {{jsxref("Proxy.handler", "handler")}} object.</li>
-</ul>
+- The {{jsxref("Proxy")}} global object.
+- The {{jsxref("Proxy.handler", "handler")}} object.

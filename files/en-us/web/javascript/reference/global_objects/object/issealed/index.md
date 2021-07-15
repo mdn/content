@@ -2,48 +2,49 @@
 title: Object.isSealed()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isSealed
 tags:
-- ECMAScript 5
-- JavaScript
-- JavaScript 1.8.5
-- Method
-- Object
+  - ECMAScript 5
+  - JavaScript
+  - JavaScript 1.8.5
+  - Method
+  - Object
 browser-compat: javascript.builtins.Object.isSealed
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>Object.isSealed()</code></strong> method determines if an object is
-  sealed.</p>
+The **`Object.isSealed()`** method determines if an object is sealed.
 
-<div>{{EmbedInteractiveExample("pages/js/object-issealed.html")}}</div>
+{{EmbedInteractiveExample("pages/js/object-issealed.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+Object.isSealed(obj)
+```
 
-<pre class="brush: js">Object.isSealed(<var>obj</var>)</pre>
+### Parameters
 
-<h3 id="Parameters">Parameters</h3>
+- `obj`
+  - : The object which should be checked.
 
-<dl>
-  <dt><code><var>obj</var></code></dt>
-  <dd>The object which should be checked.</dd>
-</dl>
+### Return value
 
-<h3 id="Return_value">Return value</h3>
+A {{jsxref("Boolean")}} indicating whether or not the given object is
+sealed.
 
-<p>A {{jsxref("Boolean")}} indicating whether or not the given object is sealed.</p>
+## Description
 
-<h2 id="Description">Description</h2>
+Returns `true` if the object is sealed, otherwise `false`. An object is sealed
+if it is not
+{{jsxref("Object.isExtensible", "extensible", "", 1)}} and if
+all its properties are non-configurable and therefore not removable (but not
+necessarily non-writable).
 
-<p>Returns <code>true</code> if the object is sealed, otherwise <code>false</code>. An
-  object is sealed if it is not {{jsxref("Object.isExtensible", "extensible", "", 1)}} and
-  if all its properties are non-configurable and therefore not removable (but not
-  necessarily non-writable).</p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Using Object.isSealed
 
-<h3 id="Using_Object.isSealed">Using Object.isSealed</h3>
-
-<pre class="brush: js">// Objects aren't sealed by default.
+```js
+// Objects aren't sealed by default.
 var empty = {};
 Object.isSealed(empty); // === false
 
@@ -86,35 +87,34 @@ Object.isFrozen(s2); // === false
 var s3 = Object.seal({ get p() { return 0; } });
 Object.isFrozen(s3); // === true
 // (only configurability matters for accessor properties)
-</pre>
+```
 
-<h3 id="Non-object_coercion">Non-object coercion</h3>
+### Non-object coercion
 
-<p>In ES5, if the argument to this method is not an object (a primitive), then it will
-  cause a {{jsxref("TypeError")}}. In ES2015, a non-object argument will be treated as if
-  it was a sealed ordinary object, return <code>true</code>.</p>
+In ES5, if the argument to this method is not an object (a primitive), then it
+will cause a {{jsxref("TypeError")}}. In ES2015, a non-object argument
+will be treated as if it was a sealed ordinary object, return `true`.
 
-<pre class="brush: js">Object.isSealed(1);
+```js
+Object.isSealed(1);
 // TypeError: 1 is not an object (ES5 code)
 
 Object.isSealed(1);
 // true                          (ES2015 code)
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Object.seal()")}}</li>
-  <li>{{jsxref("Object.preventExtensions()")}}</li>
-  <li>{{jsxref("Object.isExtensible()")}}</li>
-  <li>{{jsxref("Object.freeze()")}}</li>
-  <li>{{jsxref("Object.isFrozen()")}}</li>
-</ul>
+- {{jsxref("Object.seal()")}}
+- {{jsxref("Object.preventExtensions()")}}
+- {{jsxref("Object.isExtensible()")}}
+- {{jsxref("Object.freeze()")}}
+- {{jsxref("Object.isFrozen()")}}

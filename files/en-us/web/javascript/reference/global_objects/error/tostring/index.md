@@ -2,31 +2,35 @@
 title: Error.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Error/toString
 tags:
-- JavaScript
-- Method
-- Prototype
+  - JavaScript
+  - Method
+  - Prototype
 browser-compat: javascript.builtins.Error.toString
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <code><strong>toString()</strong></code> method returns a string representing the
-  specified {{jsxref("Error")}} object.</p>
+The **`toString()`** method returns a string representing the specified
+{{jsxref("Error")}} object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">toString()</pre>
+```js
+toString()
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A string representing the specified {{jsxref("Error")}} object.</p>
+A string representing the specified {{jsxref("Error")}} object.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The {{jsxref("Error")}} object overrides the {{jsxref("Object.prototype.toString()")}}
-  method inherited by all objects. Its semantics are as follows (assuming
-  {{jsxref("Object")}} and {{jsxref("String")}} have their original values):</p>
+The {{jsxref("Error")}} object overrides the
+{{jsxref("Object.prototype.toString()")}} method inherited by all
+objects. Its semantics are as follows (assuming {{jsxref("Object")}} and
+{{jsxref("String")}} have their original values):
 
-<pre class="brush: js">Error.prototype.toString = function() {
+```js
+Error.prototype.toString = function() {
   'use strict';
 
   var obj = Object(this);
@@ -49,13 +53,14 @@ browser-compat: javascript.builtins.Error.toString
 
   return name + ': ' + msg;
 };
-</pre>
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_toString">Using toString()</h3>
+### Using toString()
 
-<pre class="brush: js">var e1 = new Error('fatal error');
+```js
+var e1 = new Error('fatal error');
 console.log(e1.toString()); // 'Error: fatal error'
 
 var e2 = new Error('fatal error');
@@ -75,18 +80,16 @@ var e5 = new Error('fatal error');
 e5.name = 'hello';
 e5.message = undefined;
 console.log(e5.toString()); // 'hello'
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Error.prototype.toSource()")}}</li>
-</ul>
+- {{jsxref("Error.prototype.toSource()")}}

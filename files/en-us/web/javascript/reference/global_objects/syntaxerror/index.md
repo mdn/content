@@ -9,39 +9,45 @@ tags:
   - SyntaxError
 browser-compat: javascript.builtins.SyntaxError
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <code><strong>SyntaxError</strong></code> object represents an error when trying to interpret syntactically invalid code. It is thrown when the JavaScript engine encounters tokens or token order that does not conform to the syntax of the language when parsing code.</p>
+The **`SyntaxError`** object represents an error when trying to interpret
+syntactically invalid code. It is thrown when the JavaScript engine encounters
+tokens or token order that does not conform to the syntax of the language when
+parsing code.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{jsxref("Global_Objects/SyntaxError/SyntaxError", "SyntaxError()")}}</dt>
- <dd>Creates a new <code>SyntaxError</code> object.</dd>
-</dl>
+- {{jsxref("Global_Objects/SyntaxError/SyntaxError", "SyntaxError()")}}
+  - : Creates a new `SyntaxError` object.
 
-<h2 id="Instance_properties">Instance properties</h2>
+## Instance properties
 
-<dl>
- <dt>{{jsxref("Error.prototype.message", "SyntaxError.prototype.message")}}</dt>
- <dd>Error message. Although ECMA-262 specifies that {{jsxref("SyntaxError")}} should provide its own <code>message</code> property, in <a href="/en-US/docs/Mozilla/Projects/SpiderMonkey">SpiderMonkey</a>, it inherits {{jsxref("Error.prototype.message")}}.</dd>
- <dt>{{jsxref("Error.prototype.name", "SyntaxError.prototype.name")}}</dt>
- <dd>Error name. Inherited from {{jsxref("Error")}}.</dd>
- <dt>{{jsxref("Error.prototype.fileName", "SyntaxError.prototype.fileName")}}</dt>
- <dd>Path to file that raised this error. Inherited from {{jsxref("Error")}}.</dd>
- <dt>{{jsxref("Error.prototype.lineNumber", "SyntaxError.prototype.lineNumber")}}</dt>
- <dd>Line number in file that raised this error. Inherited from {{jsxref("Error")}}.</dd>
- <dt>{{jsxref("Error.prototype.columnNumber", "SyntaxError.prototype.columnNumber")}}</dt>
- <dd>Column number in line that raised this error. Inherited from {{jsxref("Error")}}.</dd>
- <dt>{{jsxref("Error.prototype.stack", "SyntaxError.prototype.stack")}}</dt>
- <dd>Stack trace. Inherited from {{jsxref("Error")}}.</dd>
-</dl>
+- {{jsxref("Error.prototype.message", "SyntaxError.prototype.message")}}
+  - : Error message. Although ECMA-262 specifies that
+    {{jsxref("SyntaxError")}} should provide its own `message` property,
+    in [SpiderMonkey](/en-US/docs/Mozilla/Projects/SpiderMonkey), it inherits
+    {{jsxref("Error.prototype.message")}}.
+- {{jsxref("Error.prototype.name", "SyntaxError.prototype.name")}}
+  - : Error name. Inherited from {{jsxref("Error")}}.
+- {{jsxref("Error.prototype.fileName", "SyntaxError.prototype.fileName")}}
+  - : Path to file that raised this error. Inherited from
+    {{jsxref("Error")}}.
+- {{jsxref("Error.prototype.lineNumber", "SyntaxError.prototype.lineNumber")}}
+  - : Line number in file that raised this error. Inherited from
+    {{jsxref("Error")}}.
+- {{jsxref("Error.prototype.columnNumber", "SyntaxError.prototype.columnNumber")}}
+  - : Column number in line that raised this error. Inherited from
+    {{jsxref("Error")}}.
+- {{jsxref("Error.prototype.stack", "SyntaxError.prototype.stack")}}
+  - : Stack trace. Inherited from {{jsxref("Error")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Catching_a_SyntaxError">Catching a SyntaxError</h3>
+### Catching a SyntaxError
 
-<pre class="brush: js">try {
+```js
+try {
   eval('hoo bar');
 } catch (e) {
   console.error(e instanceof SyntaxError);
@@ -52,11 +58,12 @@ browser-compat: javascript.builtins.SyntaxError
   console.error(e.columnNumber);
   console.error(e.stack);
 }
-</pre>
+```
 
-<h3 id="Creating_a_SyntaxError">Creating a SyntaxError</h3>
+### Creating a SyntaxError
 
-<pre class="brush: js">try {
+```js
+try {
   throw new SyntaxError('Hello', 'someFile.js', 10);
 } catch (e) {
   console.error(e instanceof SyntaxError); // true
@@ -67,18 +74,16 @@ browser-compat: javascript.builtins.SyntaxError
   console.error(e.columnNumber);           // 0
   console.error(e.stack);                  // @debugger eval code:3:9
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("Error")}}</li>
-</ul>
+- {{jsxref("Error")}}

@@ -1,53 +1,57 @@
 ---
-title: 'Date.prototype[@@toPrimitive]'
+title: Date.prototype[@@toPrimitive]
 slug: Web/JavaScript/Reference/Global_Objects/Date/@@toPrimitive
 tags:
-- Date
-- JavaScript
-- Method
-- Prototype
-- Reference
+  - Date
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
 browser-compat: javascript.builtins.Date.@@toPrimitive
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <code><strong>[@@toPrimitive]()</strong></code> method converts a <code>Date</code>
-  object to a primitive value.</p>
+The **`[@@toPrimitive]()`** method converts a `Date` object to a primitive
+value.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">Date()[Symbol.toPrimitive](<var>hint</var>);</pre>
+```js
+Date()[Symbol.toPrimitive](hint);
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>The primitive value of the given {{jsxref("Date")}} object. Depending on the argument,
-  the method can return either a string or a number.</p>
+The primitive value of the given {{jsxref("Date")}} object. Depending on
+the argument, the method can return either a string or a number.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The <code>[@@toPrimitive]()</code> method of the {{jsxref("Date")}} object returns a
-  primitive value, that is either of type number or of type string.</p>
+The `[@@toPrimitive]()` method of the {{jsxref("Date")}} object returns a
+primitive value, that is either of type number or of type string.
 
-<p>If <code><var>hint</var></code> is <code>string</code> or <code>default</code>,
-  <code>[@@toPrimitive]()</code> tries to call the {{jsxref("Object.prototype.toString()",
-  "toString")}} method. If the <code>toString</code> property does not exist, it tries to
-  call the {{jsxref("Object.prototype.valueOf()", "valueOf")}} method and if the
-  <code>valueOf</code> does not exist either, <code>[@@toPrimitive]()</code> throws a
-  {{jsxref("TypeError")}}.</p>
+If `hint` is `string` or `default`, `[@@toPrimitive]()` tries to call the
+{{jsxref("Object.prototype.toString()",
+  "toString")}} method.
+If the `toString` property does not exist, it tries to call the
+{{jsxref("Object.prototype.valueOf()", "valueOf")}} method and
+if the `valueOf` does not exist either, `[@@toPrimitive]()` throws a
+{{jsxref("TypeError")}}.
 
-<p>If <code>hint</code> is <code>number</code>, <code>[@@toPrimitive]()</code> first tries
-  to call <code>valueOf</code>, and if that fails, it calls <code>toString</code>.</p>
+If `hint` is `number`, `[@@toPrimitive]()` first tries to call `valueOf`, and if
+that fails, it calls `toString`.
 
-<p>JavaScript calls the <code>[@@toPrimitive]()</code> method to convert an object to a
-  primitive value. You rarely need to invoke the <code>[@@toPrimitive]()</code> method
-  yourself; JavaScript automatically invokes it when encountering an object where a
-  primitive value is expected.</p>
+JavaScript calls the `[@@toPrimitive]()` method to convert an object to a
+primitive value. You rarely need to invoke the `[@@toPrimitive]()` method
+yourself; JavaScript automatically invokes it when encountering an object where
+a primitive value is expected.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Returning_date_primitives">Returning date primitives</h3>
+### Returning date primitives
 
-<pre class="brush: js">const testDate = new Date(1590757517834);
+```js
+const testDate = new Date(1590757517834);
 // "Date Fri May 29 2020 14:05:17 GMT+0100 (British Summer Time)"
 
 testDate[Symbol.toPrimitive]('string');
@@ -57,18 +61,17 @@ testDate[Symbol.toPrimitive]('number');
 // Returns "1590757517834"
 
 testDate[Symbol.toPrimitive]('default');
-// Returns "Date Fri May 29 2020 14:05:17 GMT+0100 (British Summer Time)"</pre>
+// Returns "Date Fri May 29 2020 14:05:17 GMT+0100 (British Summer Time)"
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Symbol.toPrimitive")}}</li>
-</ul>
+- {{jsxref("Symbol.toPrimitive")}}

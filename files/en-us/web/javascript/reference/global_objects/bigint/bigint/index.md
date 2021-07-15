@@ -2,52 +2,48 @@
 title: BigInt() constructor
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/BigInt
 tags:
-- BigInt
-- Constructor
-- JavaScript
-- Reference
+  - BigInt
+  - Constructor
+  - JavaScript
+  - Reference
 browser-compat: javascript.builtins.BigInt.BigInt
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>BigInt()</code></strong> constructor returns a value of type
-  <strong>bigint</strong>.</p>
+The **`BigInt()`** constructor returns a value of type **bigint**.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">BigInt(<var>value</var>);
-</pre>
+```js
+BigInt(value);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>value</var></code></dt>
-  <dd>The numeric value of the object being created. May be a string or an integer.</dd>
-</dl>
+- `value`
+  - : The numeric value of the object being created. May be a string or an
+    integer.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> <code>BigInt()</code> is not used with the
-    {{JSxRef("Operators/new", "new")}} operator.</p>
-</div>
+> **Note:** `BigInt()` is not used with the
+> {{JSxRef("Operators/new", "new")}} operator.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Creating_a_new_BigInt">Creating a new BigInt</h3>
+### Creating a new BigInt
 
-<pre class="brush: js">BigInt(123);
+```js
+BigInt(123);
 // 123n
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("BigInt")}} class</li>
-</ul>
+- {{jsxref("BigInt")}} class

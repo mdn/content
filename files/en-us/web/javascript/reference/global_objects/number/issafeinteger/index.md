@@ -9,69 +9,66 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Number.isSafeInteger
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>Number.isSafeInteger()</code></strong> method determines whether the
-  provided value is a number that is a <dfn>safe integer</dfn>.</p>
+The **`Number.isSafeInteger()`** method determines whether the provided value is
+a number that is a _safe integer_.
 
-<div>{{EmbedInteractiveExample("pages/js/number-issafeinteger.html")}}</div>
+{{EmbedInteractiveExample("pages/js/number-issafeinteger.html")}}
 
+A safe integer is an integer that
 
-<p>A safe integer is an integer that</p>
+- can be exactly represented as an IEEE-754 double precision number, and
+- whose IEEE-754 representation cannot be the result of rounding any other
+  integer to fit the IEEE-754 representation.
 
-<ul>
-  <li>can be exactly represented as an IEEE-754 double precision number, and</li>
-  <li>whose IEEE-754 representation cannot be the result of rounding any other integer to
-    fit the IEEE-754 representation.</li>
-</ul>
+For example, `2^53 - 1` is a safe integer: it can be exactly represented, and no
+other integer rounds to it under any IEEE-754 rounding mode. In contrast, `2^53`
+is _not_ a safe integer: it can be exactly represented in IEEE-754, but the
+integer `2^53 + 1` can't be directly represented in IEEE-754 but instead rounds
+to `2^53` under round-to-nearest and round-to-zero rounding. The safe integers
+consist of all integers from `-(2^53 - 1)` inclusive to `2^53 - 1` inclusive (±
+`9007199254740991` or ± 9,007,199,254,740,991).
 
-<p>For example, <code>2^53 - 1</code> is a safe integer: it can be exactly
-  represented, and no other integer rounds to it under any IEEE-754 rounding mode. In
-  contrast, <code>2^53</code> is <em>not</em> a safe integer: it can be exactly
-  represented in IEEE-754, but the integer <code>2^53 + 1</code> can't be
-  directly represented in IEEE-754 but instead rounds to <code>2^53</code> under
-  round-to-nearest and round-to-zero rounding. The safe integers consist of all integers
-  from <code>-(2^53 - 1)</code> inclusive to <code>2^53 - 1</code>
-  inclusive (± <code>9007199254740991</code> or ± 9,007,199,254,740,991).</p>
+Handling values larger or smaller than \~9 quadrillion with full precision
+requires using an
+[arbitrary precision arithmetic library](https://en.wikipedia.org/wiki/Arbitrary-precision_arithmetic).
+See
+[What Every Programmer Needs to Know about Floating Point Arithmetic](http://floating-point-gui.de/)
+for more information on floating point representations of numbers.
 
-<p>Handling values larger or smaller than ~9 quadrillion with full precision requires
-  using an <a
-    href="https://en.wikipedia.org/wiki/Arbitrary-precision_arithmetic">arbitrary
-    precision arithmetic library</a>. See <a href="http://floating-point-gui.de/">What
-    Every Programmer Needs to Know about Floating Point Arithmetic</a> for more
-  information on floating point representations of numbers.</p>
+For larger integers, consider using the {{jsxref("BigInt")}} type.
 
-<p>For larger integers, consider using the {{jsxref("BigInt")}} type.</p>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+Number.isSafeInteger(testValue)
+```
 
-<pre class="brush: js">Number.isSafeInteger(testValue)
-</pre>
+### Parameters
 
-<h3 id="Parameters">Parameters</h3>
+- `testValue`
+  - : The value to be tested for being a safe integer.
 
-<dl>
-  <dt><code>testValue</code></dt>
-  <dd>The value to be tested for being a safe integer.</dd>
-</dl>
+### Return value
 
-<h3 id="Return_value">Return value</h3>
+A {{jsxref("Boolean")}} indicating whether or not the given value is a
+number that is a safe integer.
 
-<p>A {{jsxref("Boolean")}} indicating whether or not the given value is a number that is a
-  safe integer.</p>
+## Polyfill
 
-<h2 id="Polyfill">Polyfill</h2>
-
-<pre class="brush: js">Number.isSafeInteger = Number.isSafeInteger || function (value) {
-   return Number.isInteger(value) &amp;&amp; Math.abs(value) &lt;= Number.MAX_SAFE_INTEGER;
+```js
+Number.isSafeInteger = Number.isSafeInteger || function (value) {
+   return Number.isInteger(value) && Math.abs(value) <= Number.MAX_SAFE_INTEGER;
 };
-</pre>
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_isSafeInteger">Using isSafeInteger</h3>
+### Using isSafeInteger
 
-<pre class="brush: js">Number.isSafeInteger(3);                    // true
+```js
+Number.isSafeInteger(3);                    // true
 Number.isSafeInteger(Math.pow(2, 53));      // false
 Number.isSafeInteger(Math.pow(2, 53) - 1);  // true
 Number.isSafeInteger(NaN);                  // false
@@ -79,22 +76,21 @@ Number.isSafeInteger(Infinity);             // false
 Number.isSafeInteger('3');                  // false
 Number.isSafeInteger(3.1);                  // false
 Number.isSafeInteger(3.0);                  // true
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>A polyfill of <code>Number.isSafeInteger</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-number"><code>core-js</code></a></li>
-  <li>The {{jsxref("Number")}} object it belongs to.</li>
-  <li>{{jsxref("Number.MIN_SAFE_INTEGER")}}</li>
-  <li>{{jsxref("Number.MAX_SAFE_INTEGER")}}</li>
-  <li>{{jsxref("BigInt")}}</li>
-</ul>
+- A polyfill of `Number.isSafeInteger` is available in
+  [`core-js`](https://github.com/zloirock/core-js#ecmascript-number)
+- The {{jsxref("Number")}} object it belongs to.
+- {{jsxref("Number.MIN_SAFE_INTEGER")}}
+- {{jsxref("Number.MAX_SAFE_INTEGER")}}
+- {{jsxref("BigInt")}}

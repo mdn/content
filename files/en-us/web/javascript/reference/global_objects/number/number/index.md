@@ -9,44 +9,45 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Number.Number
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>Number()</code> constructor</strong> creates a {{jsxref("Number")}} object.</p>
+The **`Number()` constructor** creates a {{jsxref("Number")}} object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">new Number(<var>value</var>)
-</pre>
+```js
+new Number(value)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code><var>value</var></code></dt>
- <dd>The numeric value of the object being created.</dd>
-</dl>
+- `value`
+  - : The numeric value of the object being created.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Creating_Number_objects">Creating Number objects</h3>
+### Creating Number objects
 
-<pre class="brush: js">const a = new Number('123'); // a === 123 is false
+```js
+const a = new Number('123'); // a === 123 is false
 const b = Number('123');     // b === 123 is true
 a instanceof Number;         // is true
-b instanceof Number;         // is false</pre>
+b instanceof Number;         // is false
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>A polyfill of modern <code>Number</code> behavior (with support binary and octal literals) is available in <a href="https://github.com/zloirock/core-js#ecmascript-number"><code>core-js</code></a></li>
- <li>{{jsxref("NaN")}}</li>
- <li>The {{jsxref("Math")}} global object</li>
- <li>Integers with arbitrary precision: {{jsxref("BigInt")}}</li>
-</ul>
+- A polyfill of modern `Number` behavior (with support binary and octal
+  literals) is available in
+  [`core-js`](https://github.com/zloirock/core-js#ecmascript-number)
+- {{jsxref("NaN")}}
+- The {{jsxref("Math")}} global object
+- Integers with arbitrary precision: {{jsxref("BigInt")}}

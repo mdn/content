@@ -2,64 +2,61 @@
 title: Promise.reject()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/reject
 tags:
-- ECMAScript 2015
-- JavaScript
-- Method
-- Promise
-- Reference
+  - ECMAScript 2015
+  - JavaScript
+  - Method
+  - Promise
+  - Reference
 browser-compat: javascript.builtins.Promise.reject
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>Promise.reject()</code></strong> method returns a
-  <code>Promise</code> object that is rejected with a given reason.</p>
+The **`Promise.reject()`** method returns a `Promise` object that is rejected
+with a given reason.
 
-<div>{{EmbedInteractiveExample("pages/js/promise-reject.html")}}</div>
+{{EmbedInteractiveExample("pages/js/promise-reject.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+Promise.reject(reason);
+```
 
-<pre class="brush: js">Promise.reject(<var>reason</var>);</pre>
+### Parameters
 
-<h3 id="Parameters">Parameters</h3>
+- `reason`
+  - : Reason why this `Promise` rejected.
 
-<dl>
-  <dt><code><var>reason</var></code></dt>
-  <dd>Reason why this <code>Promise</code> rejected.</dd>
-</dl>
+### Return value
 
-<h3 id="Return_value">Return value</h3>
+A {{jsxref("Promise")}} that is rejected with the given reason.
 
-<p>A {{jsxref("Promise")}} that is rejected with the given reason.</p>
+## Description
 
-<h2 id="Description">Description</h2>
+The static `Promise.reject` function returns a `Promise` that is rejected. For
+debugging purposes and selective error catching, it is useful to make `reason`
+an `instanceof` {{jsxref("Error")}}.
 
-<p>The static <code>Promise.reject</code> function returns a <code>Promise</code> that is
-  rejected. For debugging purposes and selective error catching, it is useful to make
-  <code>reason</code> an <code>instanceof</code> {{jsxref("Error")}}.</p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Using the static Promise.reject() method
 
-<h3 id="Using_the_static_Promise.reject_method">Using the static Promise.reject() method
-</h3>
-
-<pre class="brush: js">Promise.reject(new Error('fail')).then(function() {
+```js
+Promise.reject(new Error('fail')).then(function() {
   // not called
 }, function(error) {
   console.error(error); // Stacktrace
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat}}
 
-<p>{{Compat}}</p>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
-  <li>{{jsxref("Promise")}}</li>
-</ul>
+- {{jsxref("Promise")}}

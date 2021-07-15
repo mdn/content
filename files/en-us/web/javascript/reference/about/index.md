@@ -5,48 +5,61 @@ tags:
   - Guide
   - JavaScript
 ---
-<div>{{JsSidebar}}</div>
+{{JsSidebar}}
 
-<p>The JavaScript reference serves as a repository of facts about the JavaScript language. The entire language is described here in detail. As you write JavaScript code, you'll refer to these pages often (thus the title "JavaScript reference"). If you're learning JavaScript, or need help understanding some of its capabilities or features, check out the <a href="/en-US/docs/Web/JavaScript/Guide">JavaScript guide</a>.</p>
+The JavaScript reference serves as a repository of facts about the JavaScript
+language. The entire language is described here in detail. As you write
+JavaScript code, you'll refer to these pages often (thus the title "JavaScript
+reference"). If you're learning JavaScript, or need help understanding some of
+its capabilities or features, check out the
+[JavaScript guide](/en-US/docs/Web/JavaScript/Guide).
 
-<p>The JavaScript language is intended to be used within some larger environment, be it a browser, server-side scripts, or similar. For the most part, this reference attempts to be environment-agnostic and does not target a web browser environment.</p>
+The JavaScript language is intended to be used within some larger environment,
+be it a browser, server-side scripts, or similar. For the most part, this
+reference attempts to be environment-agnostic and does not target a web browser
+environment.
 
-<h2 id="Where_to_find_JavaScript_information">Where to find JavaScript information</h2>
+## Where to find JavaScript information
 
-<p>JavaScript documentation of core language features (pure <a href="/en-US/docs/Web/JavaScript/Language_Resources">ECMAScript</a>, for the most part) includes the following:</p>
+JavaScript documentation of core language features (pure
+[ECMAScript](/en-US/docs/Web/JavaScript/Language_Resources), for the most part)
+includes the following:
 
-<ul>
- <li>The <a href="/en-US/docs/Web/JavaScript/Guide">JavaScript guide</a></li>
- <li>The <a href="/en-US/docs/Web/JavaScript/Reference">JavaScript reference</a></li>
-</ul>
+- The [JavaScript guide](/en-US/docs/Web/JavaScript/Guide)
+- The [JavaScript reference](/en-US/docs/Web/JavaScript/Reference)
 
-<p>If you are new to JavaScript, start with the <a href="/en-US/docs/Web/JavaScript/Guide">guide</a>. Once you have a firm grasp of the fundamentals, you can use the <a href="/en-US/docs/Web/JavaScript/Reference">reference</a> to get more details on individual objects and language constructs.</p>
+If you are new to JavaScript, start with the
+[guide](/en-US/docs/Web/JavaScript/Guide). Once you have a firm grasp of the
+fundamentals, you can use the [reference](/en-US/docs/Web/JavaScript/Reference)
+to get more details on individual objects and language constructs.
 
-<h2 id="Structure_of_the_reference">Structure of the reference</h2>
+## Structure of the reference
 
-<p>In the JavaScript reference you can find the following chapters:</p>
+In the JavaScript reference you can find the following chapters:
 
-<dl>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects">Standard built-in objects</a></dt>
- <dd>This chapter documents all the JavaScript standard built-in objects, along with their methods and properties.</dd>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Statements">Statements and declarations</a></dt>
- <dd>JavaScript applications consist of statements with an appropriate syntax. A single statement may span multiple lines. Multiple statements may occur on a single line if each statement is separated by a semicolon. This isn't a keyword, but a group of keywords.</dd>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Operators">Expressions and operators</a></dt>
- <dd>This chapter documents all the JavaScript language operators, expressions and keywords.</dd>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Functions">Functions</a></dt>
- <dd>Chapter about JavaScript functions.</dd>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Classes">Classes</a></dt>
- <dd>Chapter about JavaScript classes introduced in ECMAScript 2015.</dd>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Errors">Errors</a></dt>
- <dd>Chapter about specific errors, exceptions and warnings thrown by JavaScript.</dd>
- <dt><a href="/en-US/docs/Web/JavaScript/New_in_JavaScript">New in JavaScript</a></dt>
- <dd>Chapter about JavaScript version history.</dd>
-</dl>
+- [Standard built-in objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects)
+  - : This chapter documents all the JavaScript standard built-in objects, along
+    with their methods and properties.
+- [Statements and declarations](/en-US/docs/Web/JavaScript/Reference/Statements)
+  - : JavaScript applications consist of statements with an appropriate syntax.
+    A single statement may span multiple lines. Multiple statements may occur on
+    a single line if each statement is separated by a semicolon. This isn't a
+    keyword, but a group of keywords.
+- [Expressions and operators](/en-US/docs/Web/JavaScript/Reference/Operators)
+  - : This chapter documents all the JavaScript language operators, expressions
+    and keywords.
+- [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
+  - : Chapter about JavaScript functions.
+- [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
+  - : Chapter about JavaScript classes introduced in ECMAScript 2015.
+- [Errors](/en-US/docs/Web/JavaScript/Reference/Errors)
+  - : Chapter about specific errors, exceptions and warnings thrown by
+    JavaScript.
+- [New in JavaScript](/en-US/docs/Web/JavaScript/New_in_JavaScript)
+  - : Chapter about JavaScript version history.
 
-<h3 id="More_reference_pages">More reference pages</h3>
+### More reference pages
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features">Deprecated and obsolete features</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar">Lexical grammar</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Data_structures">Data types and data structures</a></li>
-</ul>
+- [Deprecated and obsolete features](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)
+- [Lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar)
+- [Data types and data structures](/en-US/docs/Web/JavaScript/Data_structures)

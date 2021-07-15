@@ -2,24 +2,23 @@
 title: Date.UTC()
 slug: Web/JavaScript/Reference/Global_Objects/Date/UTC
 tags:
-- Date
-- JavaScript
-- Method
-- Reference
+  - Date
+  - JavaScript
+  - Method
+  - Reference
 browser-compat: javascript.builtins.Date.UTC
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>Date.UTC()</code></strong> method accepts parameters similar to the
-  {{jsxref("Date")}} constructor, but treats them as UTC. It returns the number of
-  milliseconds since January 1, 1970, 00:00:00 UTC.</p>
+The **`Date.UTC()`** method accepts parameters similar to the
+{{jsxref("Date")}} constructor, but treats them as UTC. It returns the
+number of milliseconds since January 1, 1970, 00:00:00 UTC.
 
-<div>{{EmbedInteractiveExample("pages/js/date-utc.html")}}</div>
+{{EmbedInteractiveExample("pages/js/date-utc.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush: js">
+```js
 Date.UTC(year)
 Date.UTC(year, month)
 Date.UTC(year, month, day)
@@ -27,110 +26,104 @@ Date.UTC(year, month, day, hour)
 Date.UTC(year, month, day, hour, minute)
 Date.UTC(year, month, day, hour, minute, second)
 Date.UTC(year, month, day, hour, minute, second, millisecond)
-</pre>
+```
 
-<dl>
-  <dt><code><var>year</var></code></dt>
-  <dd>A full year.</dd>
-  <dt><code><var>month</var></code> {{optional_inline}}</dt>
-  <dd>An integer between <code>0</code> (January) and <code>11</code> (December)
-    representing the month. Since ECMAScript 2017 it defaults to <code>0</code> if
-    omitted. <em>(Up until ECMAScript 2016, <code><var>month</var></code> was a required
-      parameter. As of ES2017, it no longer is.)</em></dd>
-  <dt><code><var>day</var></code> {{optional_inline}}</dt>
-  <dd>An integer between <code>1</code> and <code>31</code> representing the day of the
-    month. If omitted, defaults to <code>1</code>.</dd>
-  <dt><code><var>hour</var></code> {{optional_inline}}</dt>
-  <dd>An integer between <code>0</code> and <code>23</code> representing the hours. If
-    omitted, defaults to <code>0</code>.</dd>
-  <dt><code><var>minute</var></code> {{optional_inline}}</dt>
-  <dd>An integer between <code>0</code> and <code>59</code> representing the minutes. If
-    omitted, defaults to <code>0</code>.</dd>
-  <dt><code><var>second</var></code> {{optional_inline}}</dt>
-  <dd>An integer between <code>0</code> and <code>59</code> representing the seconds. If
-    omitted, defaults to <code>0</code>.</dd>
-  <dt><code><var>millisecond</var></code> {{optional_inline}}</dt>
-  <dd>An integer between <code>0</code> and <code>999</code> representing the
-    milliseconds. If omitted, defaults to <code>0</code>.</dd>
-</dl>
+- `year`
+  - : A full year.
+- `month` {{optional_inline}}
+  - : An integer between `0` (January) and `11` (December) representing the
+    month. Since ECMAScript 2017 it defaults to `0` if omitted. _(Up until
+    ECMAScript 2016, `month` was a required parameter. As of ES2017, it no
+    longer is.)_
+- `day` {{optional_inline}}
+  - : An integer between `1` and `31` representing the day of the month. If
+    omitted, defaults to `1`.
+- `hour` {{optional_inline}}
+  - : An integer between `0` and `23` representing the hours. If omitted,
+    defaults to `0`.
+- `minute` {{optional_inline}}
+  - : An integer between `0` and `59` representing the minutes. If omitted,
+    defaults to `0`.
+- `second` {{optional_inline}}
+  - : An integer between `0` and `59` representing the seconds. If omitted,
+    defaults to `0`.
+- `millisecond` {{optional_inline}}
+  - : An integer between `0` and `999` representing the milliseconds. If
+    omitted, defaults to `0`.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A number representing the number of milliseconds for the given date since January 1,
-  1970, 00:00:00, UTC.</p>
+A number representing the number of milliseconds for the given date since
+January 1, 1970, 00:00:00, UTC.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p><code>UTC()</code> takes comma-delimited date and time parameters and returns the
-  number of milliseconds between January 1, 1970, 00:00:00, universal time and the
-  specified date and time.</p>
+`UTC()` takes comma-delimited date and time parameters and returns the number of
+milliseconds between January 1, 1970, 00:00:00, universal time and the specified
+date and time.
 
-<p>Years between <code>0</code> and <code>99</code> are converted to a year in the
-  20th century <code>(1900 + year)</code>. For example, <code>95</code> is
-  converted to the year <code>1995</code>.</p>
+Years between `0` and `99` are converted to a year in the 20th century
+`(1900 + year)`. For example, `95` is converted to the year `1995`.
 
-<p>The <code>UTC()</code> method differs from the {{jsxref("Date")}} constructor in two
-  ways:</p>
+The `UTC()` method differs from the {{jsxref("Date")}} constructor in two
+ways:
 
-<ol>
-  <li><code>Date.UTC()</code> uses universal time instead of the local time.</li>
-  <li><code>Date.UTC()</code> returns a time value as a number instead of creating a
-    {{jsxref("Date")}} object.</li>
-</ol>
+1.  `Date.UTC()` uses universal time instead of the local time.
+2.  `Date.UTC()` returns a time value as a number instead of creating a
+    {{jsxref("Date")}} object.
 
-<p>If a parameter is outside of the expected range, the <code>UTC()</code> method updates
-  the other parameters to accommodate the value. For example, if <code>15</code> is used
-  for <code><var>month</var></code>, the year will be incremented by 1
-  <code>(<var>year</var> + 1)</code> and <code>3</code> will be used for the month.</p>
+If a parameter is outside of the expected range, the `UTC()` method updates the
+other parameters to accommodate the value. For example, if `15` is used for
+`month`, the year will be incremented by 1 `(year + 1)` and `3` will be used for
+the month.
 
-<p><code>UTC()</code> is a static method of {{jsxref("Date")}}, so it's called as
-  <code>Date.UTC()</code> rather than as a method of a {{jsxref("Date")}} instance.</p>
+`UTC()` is a static method of {{jsxref("Date")}}, so it's called as
+`Date.UTC()` rather than as a method of a {{jsxref("Date")}} instance.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_Date.UTC">Using Date.UTC()</h3>
+### Using Date.UTC()
 
-<p>The following statement creates a {{jsxref("Date")}} object with the arguments treated
-  as UTC instead of local:</p>
+The following statement creates a {{jsxref("Date")}} object with the
+arguments treated as UTC instead of local:
 
-<pre class="brush:js">let utcDate = new Date(Date.UTC(2018, 11, 1, 0, 0, 0));
-</pre>
+```js
+let utcDate = new Date(Date.UTC(2018, 11, 1, 0, 0, 0));
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h3 id="Compatibility_notes">Compatibility notes</h3>
+### Compatibility notes
 
-<h4 id="Date.UTC_with_fewer_than_two_arguments">Date.UTC() with fewer than two arguments
-</h4>
+#### Date.UTC() with fewer than two arguments
 
-<p>When providing less than two arguments to <code>Date.UTC()</code>, ECMAScript 2017
-  requires that {{jsxref("NaN")}} is returned. Engines that weren't supporting this
-  behavior have been updated (see <a
-    href="https://bugzilla.mozilla.org/show_bug.cgi?id=1050755">bug 1050755</a>, <a
-    href="https://github.com/tc39/ecma262/pull/642">ecma-262 #642</a>).</p>
+When providing less than two arguments to `Date.UTC()`, ECMAScript 2017 requires
+that {{jsxref("NaN")}} is returned. Engines that weren't supporting this
+behavior have been updated (see
+[bug 1050755](https://bugzilla.mozilla.org/show_bug.cgi?id=1050755),
+[ecma-262 #642](https://github.com/tc39/ecma262/pull/642)).
 
-<pre class="brush: js">Date.UTC();
+```js
+Date.UTC();
 Date.UTC(1);
 
 // Safari: NaN
 // Chrome/Opera/V8: NaN
 
-// Firefox &lt;54: non-NaN
+// Firefox <54: non-NaN
 // Firefox 54+: NaN
 
 // IE: non-NaN
 // Edge: NaN
-</pre>
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Date.parse()")}}</li>
-  <li>{{jsxref("Date")}}</li>
-</ul>
+- {{jsxref("Date.parse()")}}
+- {{jsxref("Date")}}

@@ -2,58 +2,59 @@
 title: String.prototype.fixed()
 slug: Web/JavaScript/Reference/Global_Objects/String/fixed
 tags:
-- Deprecated
-- HTML wrapper methods
-- JavaScript
-- Method
-- Prototype
-- Reference
-- String
-- Polyfill
+  - Deprecated
+  - HTML wrapper methods
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
+  - String
+  - Polyfill
 browser-compat: javascript.builtins.String.fixed
 ---
-<div>{{JSRef}} {{deprecated_header}}</div>
+{{JSRef}} {{deprecated_header}}
 
-<p>The <strong><code>fixed()</code></strong> method creates a {{HTMLElement("tt")}} HTML
-  element that causes a string to be displayed in fixed-pitch font.</p>
+The **`fixed()`** method creates a {{HTMLElement("tt")}} HTML element
+that causes a string to be displayed in fixed-pitch font.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">fixed()</pre>
+```js
+fixed()
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A string representing a {{HTMLElement("tt")}} HTML element.</p>
+A string representing a {{HTMLElement("tt")}} HTML element.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The <code>fixed()</code> method embeds a string in a <code>&lt;tt&gt;</code> element:
-  "<code>&lt;tt&gt;str&lt;/tt&gt;</code>".</p>
+The `fixed()` method embeds a string in a `<tt>` element: "`<tt>str</tt>`".
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_fixed">Using fixed()</h3>
+### Using fixed()
 
-<p>The following example uses the <code>fixed</code> method to change the formatting of a
-  string:</p>
+The following example uses the `fixed` method to change the formatting of a
+string:
 
-<pre class="brush: js">var worldString = 'Hello, world';
-console.log(worldString.fixed()); // "&lt;tt&gt;Hello, world&lt;/tt&gt;"
-</pre>
+```js
+var worldString = 'Hello, world';
+console.log(worldString.fixed()); // "<tt>Hello, world</tt>"
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>A polyfill of <code>String.prototype.fixed</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-string-and-regexp"><code>core-js</code></a></li>
-  <li>{{jsxref("String.prototype.bold()")}}</li>
-  <li>{{jsxref("String.prototype.italics()")}}</li>
-  <li>{{jsxref("String.prototype.strike()")}}</li>
-</ul>
+- A polyfill of `String.prototype.fixed` is available in
+  [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- {{jsxref("String.prototype.bold()")}}
+- {{jsxref("String.prototype.italics()")}}
+- {{jsxref("String.prototype.strike()")}}

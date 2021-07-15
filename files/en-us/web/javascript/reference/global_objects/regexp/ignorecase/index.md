@@ -10,47 +10,47 @@ tags:
   - Regular Expressions
 browser-compat: javascript.builtins.RegExp.ignoreCase
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>ignoreCase</code></strong> property indicates whether or not the "<code>i</code>" flag is used with the regular expression. <code>ignoreCase</code> is a read-only property of an individual regular expression instance.</p>
+The **`ignoreCase`** property indicates whether or not the "`i`" flag is used
+with the regular expression. `ignoreCase` is a read-only property of an
+individual regular expression instance.
 
-<div>{{EmbedInteractiveExample("pages/js/regexp-prototype-ignorecase.html")}}</div>
+{{EmbedInteractiveExample("pages/js/regexp-prototype-ignorecase.html")}}{{js_property_attributes(0, 0, 1)}}
 
+## Description
 
-<div>{{js_property_attributes(0, 0, 1)}}</div>
+The value of `ignoreCase` is a {{jsxref("Boolean")}} and `true` if the
+"`i`" flag was used; otherwise, `false`. The "`i`" flag indicates that case
+should be ignored while attempting a match in a string.
 
-<h2 id="Description">Description</h2>
+You cannot change this property directly.
 
-<p>The value of <code>ignoreCase</code> is a {{jsxref("Boolean")}} and <code>true</code> if the "<code>i</code>" flag was used; otherwise, <code>false</code>. The "<code>i</code>" flag indicates that case should be ignored while attempting a match in a string.</p>
+## Examples
 
-<p>You cannot change this property directly.</p>
+### Using ignoreCase
 
-<h2 id="Examples">Examples</h2>
-
-<h3 id="Using_ignoreCase">Using ignoreCase</h3>
-
-<pre class="brush: js">var regex = new RegExp('foo', 'i');
+```js
+var regex = new RegExp('foo', 'i');
 
 console.log(regex.ignoreCase); // true
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("RegExp.lastIndex")}}</li>
- <li>{{JSxRef("RegExp.prototype.dotAll")}}</li>
- <li>{{JSxRef("RegExp.prototype.global")}}</li>
- <li>{{JSxRef("RegExp.prototype.hasIndices")}}</li>
- <li>{{JSxRef("RegExp.prototype.multiline")}}</li>
- <li>{{JSxRef("RegExp.prototype.source")}}</li>
- <li>{{JSxRef("RegExp.prototype.sticky")}}</li>
- <li>{{JSxRef("RegExp.prototype.unicode")}}</li>
-</ul>
+- {{jsxref("RegExp.lastIndex")}}
+- {{JSxRef("RegExp.prototype.dotAll")}}
+- {{JSxRef("RegExp.prototype.global")}}
+- {{JSxRef("RegExp.prototype.hasIndices")}}
+- {{JSxRef("RegExp.prototype.multiline")}}
+- {{JSxRef("RegExp.prototype.source")}}
+- {{JSxRef("RegExp.prototype.sticky")}}
+- {{JSxRef("RegExp.prototype.unicode")}}

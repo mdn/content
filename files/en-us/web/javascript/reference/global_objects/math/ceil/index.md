@@ -8,55 +8,56 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Math.ceil
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>Math.ceil()</code></strong> function always rounds a number up to the
-  next largest integer.</p>
+The **`Math.ceil()`** function always rounds a number up to the next largest
+integer.
 
-<p><strong>Note: </strong><code>Math.ceil({{jsxref("null")}})</code> returns integer 0 and
-  does not give a {{jsxref("NaN")}} error.</p>
+**Note:** `Math.ceil({{jsxref("null")}})` returns integer 0 and does not
+give a {{jsxref("NaN")}} error.
 
-<div>{{EmbedInteractiveExample("pages/js/math-ceil.html")}}</div>
+{{EmbedInteractiveExample("pages/js/math-ceil.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+Math.ceil(x)
+```
 
-<pre class="brush: js">Math.ceil(x)</pre>
+### Parameters
 
-<h3 id="Parameters">Parameters</h3>
+- `x`
+  - : A number.
 
-<dl>
-  <dt><code><var>x</var></code></dt>
-  <dd>A number.</dd>
-</dl>
+### Return value
 
-<h3 id="Return_value">Return value</h3>
+The smallest integer greater than or equal to the given number.
 
-<p>The smallest integer greater than or equal to the given number.</p>
+## Description
 
-<h2 id="Description">Description</h2>
+Because `ceil()` is a static method of `Math`, you always use it as
+`Math.ceil()`, rather than as a method of a `Math` object you created (`Math` is
+not a constructor).
 
-<p>Because <code>ceil()</code> is a static method of <code>Math</code>, you always use it
-  as <code>Math.ceil()</code>, rather than as a method of a <code>Math</code> object you
-  created (<code>Math</code> is not a constructor).</p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Using Math.ceil()
 
-<h3 id="Using_Math.ceil">Using Math.ceil()</h3>
+The following example shows example usage of `Math.ceil()`.
 
-<p>The following example shows example usage of <code>Math.ceil()</code>.</p>
-
-<pre class="brush: js">Math.ceil(.95);    // 1
+```js
+Math.ceil(.95);    // 1
 Math.ceil(4);      // 4
 Math.ceil(7.004);  // 8
 Math.ceil(-0.95);  // -0
 Math.ceil(-4);     // -4
 Math.ceil(-7.004); // -7
-</pre>
+```
 
-<h3 id="Decimal_adjustment">Decimal adjustment</h3>
+### Decimal adjustment
 
-<pre class="brush: js">// Closure
+```js
+// Closure
 (function() {
   /**
    * Decimal adjustment of a number.
@@ -74,7 +75,7 @@ Math.ceil(-7.004); // -7
     value = +value;
     exp = +exp;
     // If the value is not a number or the exp is not an integer...
-    if (isNaN(value) || !(typeof exp === 'number' &amp;&amp; exp % 1 === 0)) {
+    if (isNaN(value) || !(typeof exp === 'number' && exp % 1 === 0)) {
       return NaN;
     }
     // Shift
@@ -124,23 +125,20 @@ Math.ceil10(55.51, -1);    // 55.6
 Math.ceil10(51, 1);        // 60
 Math.ceil10(-55.59, -1);   // -55.5
 Math.ceil10(-59, 1);       // -50
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat}}
 
-<p>{{Compat}}</p>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
-  <li>{{jsxref("Math.abs()")}}</li>
-  <li>{{jsxref("Math.floor()")}}</li>
-  <li>{{jsxref("Math.round()")}}</li>
-  <li>{{jsxref("Math.sign()")}}</li>
-  <li>{{jsxref("Math.trunc()")}}</li>
-</ul>
+- {{jsxref("Math.abs()")}}
+- {{jsxref("Math.floor()")}}
+- {{jsxref("Math.round()")}}
+- {{jsxref("Math.sign()")}}
+- {{jsxref("Math.trunc()")}}

@@ -11,59 +11,61 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.ListFormat
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>Intl.ListFormat</code></strong> object enables language-sensitive list formatting.</p>
+The **`Intl.ListFormat`** object enables language-sensitive list formatting.
 
-<div>{{EmbedInteractiveExample("pages/js/intl-listformat.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/intl-listformat.html", "taller")}}
+
 <!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{jsxref("Intl/ListFormat/ListFormat", "Intl.ListFormat()")}}</dt>
- <dd>Creates a new <code>Intl.ListFormat</code> object.</dd>
-</dl>
+- {{jsxref("Intl/ListFormat/ListFormat", "Intl.ListFormat()")}}
+  - : Creates a new `Intl.ListFormat` object.
 
-<h2 id="Static_methods">Static methods</h2>
+## Static methods
 
-<dl>
- <dt>{{jsxref("Intl/ListFormat/supportedLocalesOf", "Intl.ListFormat.supportedLocalesOf()")}}</dt>
- <dd>Returns an array containing those of the provided locales that are supported without having to fall back to the runtime's default locale.</dd>
-</dl>
+- {{jsxref("Intl/ListFormat/supportedLocalesOf", "Intl.ListFormat.supportedLocalesOf()")}}
+  - : Returns an array containing those of the provided locales that are
+    supported without having to fall back to the runtime's default locale.
 
-<h2 id="Instance_methods">Instance methods</h2>
+## Instance methods
 
-<dl>
- <dt>{{jsxref("Intl/ListFormat/format", "Intl.ListFormat.prototype.format()")}}</dt>
- <dd>Returns a language-specific formatted string representing the elements of the list.</dd>
- <dt>{{jsxref("Intl/ListFormat/formatToParts", "Intl.ListFormat.prototype.formatToParts()")}}</dt>
- <dd>Returns an array of objects representing the different components that can be used to format a list of values in a locale-aware fashion.</dd>
-</dl>
+- {{jsxref("Intl/ListFormat/format", "Intl.ListFormat.prototype.format()")}}
+  - : Returns a language-specific formatted string representing the elements of
+    the list.
+- {{jsxref("Intl/ListFormat/formatToParts", "Intl.ListFormat.prototype.formatToParts()")}}
+  - : Returns an array of objects representing the different components that can
+    be used to format a list of values in a locale-aware fashion.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_format">Using format</h3>
+### Using format
 
-<p>The following example shows how to create a List formatter using the English language.</p>
+The following example shows how to create a List formatter using the English
+language.
 
-<pre class="brush: js">const list = ['Motorcycle', 'Bus', 'Car'];
+```js
+const list = ['Motorcycle', 'Bus', 'Car'];
 
  console.log(new Intl.ListFormat('en-GB', { style: 'long', type: 'conjunction' }).format(list));
-// &gt; Motorcycle, Bus and Car
+// > Motorcycle, Bus and Car
 
  console.log(new Intl.ListFormat('en-GB', { style: 'short', type: 'disjunction' }).format(list));
-// &gt; Motorcycle, Bus or Car
+// > Motorcycle, Bus or Car
 
  console.log(new Intl.ListFormat('en-GB', { style: 'narrow', type: 'unit' }).format(list));
-// &gt; Motorcycle Bus Car
-</pre>
+// > Motorcycle Bus Car
+```
 
-<h3 id="Using_formatToParts">Using formatToParts</h3>
+### Using formatToParts
 
-<p>The following example shows how to create a List formatter returning formatted parts</p>
+The following example shows how to create a List formatter returning formatted
+parts
 
-<pre class="brush: js">const list = ['Motorcycle', 'Bus', 'Car'];
+```js
+const list = ['Motorcycle', 'Bus', 'Car'];
 console.log(new Intl.ListFormat('en-GB', { style: 'long', type: 'conjunction' }).formatToParts(list));
 
 // [ { "type": "element", "value": "Motorcycle" },
@@ -71,22 +73,20 @@ console.log(new Intl.ListFormat('en-GB', { style: 'long', type: 'conjunction' })
 //   { "type": "element", "value": "Bus" },
 //   { "type": "literal", "value": ", and " },
 //   { "type": "element", "value": "Car" } ];
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p><a href="https://formatjs.io/docs/polyfills/intl-listformat">formatjs Intl.ListFormat polyfill</a></p>
+[formatjs Intl.ListFormat polyfill](https://formatjs.io/docs/polyfills/intl-listformat)
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("Intl")}}</li>
-</ul>
+- {{jsxref("Intl")}}

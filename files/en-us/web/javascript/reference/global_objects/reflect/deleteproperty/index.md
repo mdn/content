@@ -2,61 +2,59 @@
 title: Reflect.deleteProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/deleteProperty
 tags:
-- ECMAScript 2015
-- JavaScript
-- Method
-- Reference
-- Reflect
-- Polyfill
+  - ECMAScript 2015
+  - JavaScript
+  - Method
+  - Reference
+  - Reflect
+  - Polyfill
 browser-compat: javascript.builtins.Reflect.deleteProperty
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The static
-  <code><strong>Reflect</strong></code><strong><code>.deleteProperty()</code></strong>
-  method allows to delete properties. It is like the <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/delete"><code>delete</code>
-    operator</a> as a function.</p>
+The static **`Reflect`\*\***`.deleteProperty()`\*\* method allows to delete
+properties. It is like the
+[`delete` operator](/en-US/docs/Web/JavaScript/Reference/Operators/delete) as a
+function.
 
-<div>{{EmbedInteractiveExample("pages/js/reflect-deleteproperty.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/reflect-deleteproperty.html", "taller")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">Reflect.deleteProperty(<var>target</var>, <var>propertyKey</var>)
-</pre>
+```js
+Reflect.deleteProperty(target, propertyKey)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>target</var></code></dt>
-  <dd>The target object on which to delete the property.</dd>
-  <dt><code><var>propertyKey</var></code></dt>
-  <dd>The name of the property to be deleted.</dd>
-</dl>
+- `target`
+  - : The target object on which to delete the property.
+- `propertyKey`
+  - : The name of the property to be deleted.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref("Boolean")}} indicating whether or not the property was successfully
-  deleted.</p>
+A {{jsxref("Boolean")}} indicating whether or not the property was
+successfully deleted.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>A {{jsxref("TypeError")}}, if <code><var>target</var></code> is not an
-  {{jsxref("Object")}}.</p>
+A {{jsxref("TypeError")}}, if `target` is not an
+{{jsxref("Object")}}.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The <code>Reflect.deleteProperty</code> method allows you to delete a property on an
-  object. It returns a {{jsxref("Boolean")}} indicating whether or not the property was
-  successfully deleted. It is almost identical to the non-strict <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/delete"><code>delete</code>
-    operator</a>.</p>
+The `Reflect.deleteProperty` method allows you to delete a property on an
+object. It returns a {{jsxref("Boolean")}} indicating whether or not the
+property was successfully deleted. It is almost identical to the non-strict
+[`delete` operator](/en-US/docs/Web/JavaScript/Reference/Operators/delete).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_Reflect.deleteProperty">Using <code>Reflect.deleteProperty()</code></h3>
+### Using `Reflect.deleteProperty()`
 
-<pre class="brush: js">let obj = { x: 1, y: 2 }
+```js
+let obj = { x: 1, y: 2 }
 Reflect.deleteProperty(obj, 'x')  // true
 obj                               // { y: 2 }
 
@@ -69,21 +67,19 @@ Reflect.deleteProperty({}, 'foo')  // true
 
 // Returns false if a property is unconfigurable
 Reflect.deleteProperty(Object.freeze({foo: 1}), 'foo')  // false
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>A polyfill of <code>Reflect.deleteProperty</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-reflect"><code>core-js</code></a></li>
-  <li>{{jsxref("Reflect")}}</li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/delete"><code>delete</code>
-      operator</a></li>
-</ul>
+- A polyfill of `Reflect.deleteProperty` is available in
+  [`core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
+- {{jsxref("Reflect")}}
+- [`delete` operator](/en-US/docs/Web/JavaScript/Reference/Operators/delete)

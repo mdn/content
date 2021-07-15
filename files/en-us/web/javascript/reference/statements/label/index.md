@@ -7,54 +7,54 @@ tags:
   - Statement
 browser-compat: javascript.statements.label
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p>The <strong>labeled statement</strong> can be used with {{jsxref("Statements/break",
-  "break")}} or {{jsxref("Statements/continue", "continue")}} statements. It is prefixing
-  a statement with an identifier which you can refer to.</p>
+The **labeled statement** can be used with
+{{jsxref("Statements/break",
+  "break")}} or
+{{jsxref("Statements/continue", "continue")}} statements. It is
+prefixing a statement with an identifier which you can refer to.
 
-<div>{{EmbedInteractiveExample("pages/js/statement-label.html")}}</div>
+{{EmbedInteractiveExample("pages/js/statement-label.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+label :
+  statement
+```
 
-<pre class="brush: js"><em>label</em> :
-  <em>statement</em>
-</pre>
+- `label`
+  - : Any JavaScript identifier that is not a reserved word.
+- `statement`
+  - : A JavaScript statement. `break` can be used with any labeled statement,
+    and `continue` can be used with looping labeled statements.
 
-<dl>
-  <dt><code><em>label</em></code></dt>
-  <dd>Any JavaScript identifier that is not a reserved word.</dd>
-  <dt><code><em>statement</em></code></dt>
-  <dd>A JavaScript statement. <code>break</code> can be used with any labeled statement,
-    and <code>continue</code> can be used with looping labeled statements.</dd>
-</dl>
+## Description
 
-<h2 id="Description">Description</h2>
+You can use a label to identify a loop, and then use the `break` or `continue`
+statements to indicate whether a program should interrupt the loop or continue
+its execution.
 
-<p>You can use a label to identify a loop, and then use the <code>break</code> or
-  <code>continue</code> statements to indicate whether a program should interrupt the loop
-  or continue its execution.</p>
+Note that JavaScript has _no_ `goto` statement, you can only use labels with
+`break` or `continue`.
 
-<p>Note that JavaScript has <em>no</em> <code>goto</code> statement, you can only use
-  labels with <code>break</code> or <code>continue</code>.</p>
+In [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) code, you
+can't use "`let`" as a label name. It will throw a
+{{jsxref("SyntaxError")}} (let is a reserved identifier).
 
-<p>In <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a> code, you
-  can't use "<code>let</code>" as a label name. It will throw a {{jsxref("SyntaxError")}}
-  (let is a reserved identifier).</p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Using a labeled continue with for loops
 
-<h3 id="Using_a_labeled_continue_with_for_loops">Using a labeled continue with for loops
-</h3>
-
-<pre class="brush: js">let i, j;
+```js
+let i, j;
 
 loop1:
-for (i = 0; i &lt; 3; i++) {      //The first for statement is labeled "loop1"
+for (i = 0; i < 3; i++) {      //The first for statement is labeled "loop1"
    loop2:
-   for (j = 0; j &lt; 3; j++) {   //The second for statement is labeled "loop2"
-      if (i === 1 &amp;&amp; j === 1) {
+   for (j = 0; j < 3; j++) {   //The second for statement is labeled "loop2"
+      if (i === 1 && j === 1) {
          continue loop1;
       }
       console.log('i = ' + i + ', j = ' + j);
@@ -70,36 +70,39 @@ for (i = 0; i &lt; 3; i++) {      //The first for statement is labeled "loop1"
 //   "i = 2, j = 1"
 //   "i = 2, j = 2"
 // Notice how it skips both "i = 1, j = 1" and "i = 1, j = 2"
-</pre>
+```
 
-<h3 id="Using_a_labeled_continue_statement">Using a labeled continue statement</h3>
+### Using a labeled continue statement
 
-<p>Given an array of items and an array of tests, this example counts the number of items
-  that passes all the tests.</p>
+Given an array of items and an array of tests, this example counts the number of
+items that passes all the tests.
 
-<pre class="brush: js">let itemsPassed = 0;
+```js
+let itemsPassed = 0;
 let i, j;
 
 top:
-for (i = 0; i &lt; items.length; i++) {
-  for (j = 0; j &lt; tests.length; j++) {
+for (i = 0; i < items.length; i++) {
+  for (j = 0; j < tests.length; j++) {
     if (!tests[j].pass(items[i])) {
       continue top;
     }
   }
 
   itemsPassed++;
-}</pre>
+}
+```
 
-<h3 id="Using_a_labeled_break_with_for_loops">Using a labeled break with for loops</h3>
+### Using a labeled break with for loops
 
-<pre class="brush: js">let i, j;
+```js
+let i, j;
 
 loop1:
-for (i = 0; i &lt; 3; i++) {      //The first for statement is labeled "loop1"
+for (i = 0; i < 3; i++) {      //The first for statement is labeled "loop1"
    loop2:
-   for (j = 0; j &lt; 3; j++) {   //The second for statement is labeled "loop2"
-      if (i === 1 &amp;&amp; j === 1) {
+   for (j = 0; j < 3; j++) {   //The second for statement is labeled "loop2"
+      if (i === 1 && j === 1) {
          break loop1;
       }
       console.log('i = ' + i + ', j = ' + j);
@@ -111,32 +114,36 @@ for (i = 0; i &lt; 3; i++) {      //The first for statement is labeled "loop1"
 //   "i = 0, j = 1"
 //   "i = 0, j = 2"
 //   "i = 1, j = 0"
-// Notice the difference with the previous continue example</pre>
+// Notice the difference with the previous continue example
+```
 
-<h3 id="Using_a_labeled_break_statement">Using a labeled break statement</h3>
+### Using a labeled break statement
 
-<p>Given an array of items and an array of tests, this example determines whether all
-  items pass all tests.</p>
+Given an array of items and an array of tests, this example determines whether
+all items pass all tests.
 
-<pre class="brush: js">let allPass = true;
+```js
+let allPass = true;
 let i, j;
 
 top:
-for (i = 0; i &lt; items.length; i++) {
-  for (j = 0; j &lt; tests.length; j++) {
+for (i = 0; i < items.length; i++) {
+  for (j = 0; j < tests.length; j++) {
     if (!tests[j].pass(items[i])) {
       allPass = false;
       break top;
     }
   }
-}</pre>
+}
+```
 
-<h3 id="Using_a_labeled_block_with_break">Using a labeled block with break</h3>
+### Using a labeled block with break
 
-<p>You can use labels within simple blocks, but only <code>break</code> statements can
-  make use of non-loop labels.</p>
+You can use labels within simple blocks, but only `break` statements can make
+use of non-loop labels.
 
-<pre class="brush: js">foo: {
+```js
+foo: {
   console.log('face');
   break foo;
   console.log('this will not be executed');
@@ -146,42 +153,45 @@ console.log('swap');
 // this will log:
 
 // "face"
-// "swap" </pre>
+// "swap" 
+```
 
-<h3 id="Labeled_function_declarations">Labeled function declarations</h3>
+### Labeled function declarations
 
-<p>Starting with ECMAScript 2015, labeled function declarations are now standardized for
-  non-strict code in the <a
-    href="https://www.ecma-international.org/ecma-262/6.0/#sec-labelled-function-declarations">web
-    compatibility annex of the specification</a>.</p>
+Starting with ECMAScript 2015, labeled function declarations are now
+standardized for non-strict code in the
+[web compatibility annex of the specification](https://www.ecma-international.org/ecma-262/6.0/#sec-labelled-function-declarations).
 
-<pre class="brush: js">L: function F() {}</pre>
-
-<p>In <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a> code,
-  however, this will throw a {{jsxref("SyntaxError")}}:</p>
-
-<pre class="brush: js">'use strict';
+```js
 L: function F() {}
-// SyntaxError: functions cannot be labelled</pre>
+```
 
-<p><a href="/en-US/docs/Web/JavaScript/Reference/Statements/function*">Generator
-    functions</a> can neither be labeled in strict code, nor in non-strict code:</p>
+In [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) code,
+however, this will throw a {{jsxref("SyntaxError")}}:
 
-<pre class="brush: js">L: function* F() {}
+```js
+'use strict';
+L: function F() {}
+// SyntaxError: functions cannot be labelled
+```
+
+[Generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/function*)
+can neither be labeled in strict code, nor in non-strict code:
+
+```js
+L: function* F() {}
 // SyntaxError: generator functions cannot be labelled
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Statements/break", "break")}}</li>
-  <li>{{jsxref("Statements/continue", "continue")}}</li>
-</ul>
+- {{jsxref("Statements/break", "break")}}
+- {{jsxref("Statements/continue", "continue")}}

@@ -2,101 +2,100 @@
 title: Reflect.defineProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/defineProperty
 tags:
-- ECMAScript 2015
-- JavaScript
-- Method
-- Reference
-- Reflect
-- Polyfill
+  - ECMAScript 2015
+  - JavaScript
+  - Method
+  - Reference
+  - Reflect
+  - Polyfill
 browser-compat: javascript.builtins.Reflect.defineProperty
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The static <strong><code>Reflect.defineProperty()</code></strong> method is like
-  {{jsxref("Object.defineProperty()")}} but returns a {{jsxref("Boolean")}}.</p>
+The static **`Reflect.defineProperty()`** method is like
+{{jsxref("Object.defineProperty()")}} but returns a
+{{jsxref("Boolean")}}.
 
-<div>{{EmbedInteractiveExample("pages/js/reflect-defineproperty.html")}}</div>
+{{EmbedInteractiveExample("pages/js/reflect-defineproperty.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+Reflect.defineProperty(target, propertyKey, attributes)
+```
 
-<pre class="brush: js">Reflect.defineProperty(<var>target</var>, <var>propertyKey</var>, <var>attributes</var>)
-</pre>
+### Parameters
 
-<h3 id="Parameters">Parameters</h3>
+- `target`
+  - : The target object on which to define the property.
+- `propertyKey`
+  - : The name of the property to be defined or modified.
+- `attributes`
+  - : The attributes for the property being defined or modified.
 
-<dl>
-  <dt><code><var>target</var></code></dt>
-  <dd>The target object on which to define the property.</dd>
-  <dt><code><var>propertyKey</var></code></dt>
-  <dd>The name of the property to be defined or modified.</dd>
-  <dt><code><var>attributes</var></code></dt>
-  <dd>The attributes for the property being defined or modified.</dd>
-</dl>
+### Return value
 
-<h3 id="Return_value">Return value</h3>
+A {{jsxref("Boolean")}} indicating whether or not the property was
+successfully defined.
 
-<p>A {{jsxref("Boolean")}} indicating whether or not the property was successfully
-  defined.</p>
+### Exceptions
 
-<h3 id="Exceptions">Exceptions</h3>
+A {{jsxref("TypeError")}}, if `target` is not an
+{{jsxref("Object")}}.
 
-<p>A {{jsxref("TypeError")}}, if <code><var>target</var></code> is not an
-  {{jsxref("Object")}}.</p>
+## Description
 
-<h2 id="Description">Description</h2>
+The `Reflect.defineProperty` method allows precise addition to or modification
+of a property on an object. For more details, see the
+{{jsxref("Object.defineProperty")}} which is similar.
 
-<p>The <code>Reflect.defineProperty</code> method allows precise addition to or
-  modification of a property on an object. For more details, see the
-  {{jsxref("Object.defineProperty")}} which is similar.</p>
+> **Note:** `Object.defineProperty` returns the object or throws a
+> {{jsxref("TypeError")}} if the property has not been successfully
+> defined. `Reflect.defineProperty`, however, returns a
+> {{jsxref("Boolean")}} indicating whether or not the property was
+> successfully defined.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> <code>Object.defineProperty</code> returns the
-    object or throws a {{jsxref("TypeError")}} if the property has not been successfully
-    defined. <code>Reflect.defineProperty</code>, however, returns a {{jsxref("Boolean")}}
-    indicating whether or not the property was successfully defined.</p>
-</div>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Using Reflect.defineProperty()
 
-<h3 id="Using_Reflect.defineProperty">Using Reflect.defineProperty()</h3>
-
-<pre class="brush: js">let obj = {}
+```js
+let obj = {}
 Reflect.defineProperty(obj, 'x', {value: 7})  // true
 obj.x                                         // 7
-</pre>
+```
 
-<h3 id="Checking_if_property_definition_has_been_successful">Checking if property
-  definition has been successful</h3>
+### Checking if property definition has been successful
 
-<p>With {{jsxref("Object.defineProperty")}}, which returns an object if successful, or
-  throws a {{jsxref("TypeError")}} otherwise, you would use a
-  <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/try...catch">try...catch</a></code>
-  block to catch any error that occurred while defining a property.</p>
+With {{jsxref("Object.defineProperty")}}, which returns an object
+if successful, or throws a {{jsxref("TypeError")}} otherwise, you would
+use a
+[`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch)
+block to catch any error that occurred while defining a property.
 
-<p>Because <code>Reflect.defineProperty</code> returns a Boolean success status, you can
-  just use an
-  <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/if...else">if...else</a></code>
-  block here:</p>
+Because `Reflect.defineProperty` returns a Boolean success status, you can just
+use an [`if...else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else)
+block here:
 
-<pre class="brush: js">if (Reflect.defineProperty(target, property, attributes)) {
+```js
+if (Reflect.defineProperty(target, property, attributes)) {
   // success
 } else {
   // failure
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>A polyfill of <code>Reflect.defineProperty</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-reflect"><code>core-js</code></a></li>
-  <li>{{jsxref("Reflect")}}</li>
-  <li>{{jsxref("Object.defineProperty()")}}</li>
-</ul>
+- A polyfill of `Reflect.defineProperty` is available in
+  [`core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
+- {{jsxref("Reflect")}}
+- {{jsxref("Object.defineProperty()")}}

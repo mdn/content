@@ -8,75 +8,87 @@ tags:
   - Property
 browser-compat: javascript.builtins.Function.caller
 ---
-<div>{{JSRef}} {{deprecated_header}}</div>
+{{JSRef}} {{deprecated_header}}
 
-<p>The <strong><code><var>function</var>.caller</code></strong> property returns the function that invoked the specified function. It returns <code>null</code> for strict, async function and generator function callers.</p>
+The **`function.caller`** property returns the function that invoked the
+specified function. It returns `null` for strict, async function and generator
+function callers.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>If the function <code>f</code> was invoked by the top level code, the value of <code>f.caller</code> is {{jsxref("null")}}, otherwise it's the function that called <code>f</code>. It's also <code>null</code> for strict, async function and generator function callers.</p>
+If the function `f` was invoked by the top level code, the value of `f.caller`
+is {{jsxref("null")}}, otherwise it's the function that called `f`. It's
+also `null` for strict, async function and generator function callers.
 
-<p>This property replaces the obsolete {{jsxref("Functions/arguments/caller", "arguments.caller")}} property of the {{jsxref("Functions/arguments", "arguments")}} object.</p>
+This property replaces the obsolete
+{{jsxref("Functions/arguments/caller", "arguments.caller")}}
+property of the {{jsxref("Functions/arguments", "arguments")}}
+object.
 
-<p>The special property <code>__caller__</code>, which returned the activation object of the caller thus allowing to reconstruct the stack, was removed for security reasons.</p>
+The special property `__caller__`, which returned the activation object of the
+caller thus allowing to reconstruct the stack, was removed for security reasons.
 
-<h3 id="Notes">Notes</h3>
+### Notes
 
-<p>Note that in case of recursion, you can't reconstruct the call stack using this property. Consider:</p>
+Note that in case of recursion, you can't reconstruct the call stack using this
+property. Consider:
 
-<pre class="brush: js">function f(n) { g(n - 1); }
-function g(n) { if (n &gt; 0) { f(n); } else { stop(); } }
+```js
+function f(n) { g(n - 1); }
+function g(n) { if (n > 0) { f(n); } else { stop(); } }
 f(2);
-</pre>
+```
 
-<p>At the moment <code>stop()</code> is called the call stack will be:</p>
+At the moment `stop()` is called the call stack will be:
 
-<pre class="brush: js">f(2) -&gt; g(1) -&gt; f(1) -&gt; g(0) -&gt; stop()
-</pre>
+```js
+f(2) -> g(1) -> f(1) -> g(0) -> stop()
+```
 
-<p>The following is true:</p>
+The following is true:
 
-<pre class="brush: js">stop.caller === g &amp;&amp; f.caller === g &amp;&amp; g.caller === f
-</pre>
+```js
+stop.caller === g && f.caller === g && g.caller === f
+```
 
-<p>so if you tried to get the stack trace in the <code>stop()</code> function like this:</p>
+so if you tried to get the stack trace in the `stop()` function like this:
 
-<pre class="brush: js">var f = stop;
+```js
+var f = stop;
 var stack = 'Stack trace:';
 while (f) {
   stack += '\n' + f.name;
   f = f.caller;
 }
-</pre>
+```
 
-<p>the loop would never stop.</p>
+the loop would never stop.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Checking_the_value_of_a_functions_caller_property">Checking the value of a function's <code>caller</code> property</h3>
+### Checking the value of a function's `caller` property
 
-<p>The following code checks the value a function's <code>caller</code> property.</p>
+The following code checks the value a function's `caller` property.
 
-<pre class="brush: js">function myFunc() {
+```js
+function myFunc() {
   if (myFunc.caller == null) {
     return 'The function was called from the top!';
   } else {
     return 'This function\'s caller was ' + myFunc.caller;
   }
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p><span class="pl-s">Not part of any standard.</span></p>
+Not part of any standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("Function.name", "Function.name")}}</li>
- <li>{{jsxref("Functions/arguments", "arguments")}}</li>
-</ul>
+- {{jsxref("Function.name", "Function.name")}}
+- {{jsxref("Functions/arguments", "arguments")}}

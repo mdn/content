@@ -9,38 +9,42 @@ tags:
   - TypedArrays
 browser-compat: javascript.builtins.TypedArray.byteOffset
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>byteOffset</code></strong> accessor property represents the offset (in bytes) of a typed array from the start of its {{jsxref("ArrayBuffer")}}.</p>
+The **`byteOffset`** accessor property represents the offset (in bytes) of a
+typed array from the start of its {{jsxref("ArrayBuffer")}}.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The <code>byteOffset</code> property is an accessor property whose set accessor function is <code>undefined</code>, meaning that you can only read this property. The value is established when a <em>TypedArray</em> is constructed and cannot be changed.<em> TypedArray</em> is one of the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">TypedArray objects</a>.</p>
+The `byteOffset` property is an accessor property whose set accessor function is
+`undefined`, meaning that you can only read this property. The value is
+established when a _TypedArray_ is constructed and cannot be changed.
+_TypedArray_ is one of the
+[TypedArray objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_the_byteOffset_property">Using the byteOffset property</h3>
+### Using the byteOffset property
 
-<pre class="brush:js">var buffer = new ArrayBuffer(8);
+```js
+var buffer = new ArrayBuffer(8);
 
 var uint8 = new Uint8Array(buffer);
 uint8.byteOffset; // 0 (no offset specified)
 
 var uint8 = new Uint8Array(buffer, 3);
 uint8.byteOffset; // 3 (as specified when constructing Uint8Array)
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Typed_arrays">JavaScript typed arrays</a></li>
- <li>{{jsxref("TypedArray")}}</li>
-</ul>
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- {{jsxref("TypedArray")}}

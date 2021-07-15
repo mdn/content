@@ -2,45 +2,46 @@
 title: extends
 slug: Web/JavaScript/Reference/Classes/extends
 tags:
-- Classes
-- ECMAScript 2015
-- JavaScript
-- Language feature
+  - Classes
+  - ECMAScript 2015
+  - JavaScript
+  - Language feature
 browser-compat: javascript.classes.extends
 ---
-<div>{{jsSidebar("Classes")}}</div>
+{{jsSidebar("Classes")}}
 
-<p>The <strong><code>extends</code></strong> keyword is used in <a
-    href="/en-US/docs/Web/JavaScript/Reference/Statements/class">class declarations</a> or
-  <a href="/en-US/docs/Web/JavaScript/Reference/Operators/class">class expressions</a> to
-  create a class that is a child of another class.</p>
+The **`extends`** keyword is used in
+[class declarations](/en-US/docs/Web/JavaScript/Reference/Statements/class) or
+[class expressions](/en-US/docs/Web/JavaScript/Reference/Operators/class) to
+create a class that is a child of another class.
 
-<div>{{EmbedInteractiveExample("pages/js/classes-extends.html")}}</div>
+{{EmbedInteractiveExample("pages/js/classes-extends.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+class ChildClass extends ParentClass { ... }
+```
 
-<pre class="brush: js">class ChildClass extends ParentClass { ... }</pre>
+## Description
 
-<h2 id="Description">Description</h2>
+The `extends` keyword can be used to subclass custom classes as well as built-in
+objects.
 
-<p>The <code>extends</code> keyword can be used to subclass custom classes as well as
-  built-in objects.</p>
+The `.prototype` of the extension must be an {{jsxref("Object")}} or
+{{jsxref("null")}}.
 
-<p>The <code>.prototype</code> of the extension must be an {{jsxref("Object")}} or
-  {{jsxref("null")}}.</p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Using extends
 
-<h3 id="Using_extends">Using extends</h3>
+The first example creates a class called `Square` from a class called `Polygon`.
+This example is extracted from this
+[live demo](https://googlechrome.github.io/samples/classes-es6/index.html)
+[(source)](https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html).
 
-<p>The first example creates a class called <code>Square</code> from a class called
-  <code>Polygon</code>. This example is extracted from this <a
-    href="https://googlechrome.github.io/samples/classes-es6/index.html">live demo</a> <a
-    href="https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html">(source)</a>.
-</p>
-
-<pre class="brush: js">class Square extends Polygon {
+```js
+class Square extends Polygon {
   constructor(length) {
     // Here, it calls the parent class' constructor with lengths
     // provided for the Polygon's width and height
@@ -53,41 +54,37 @@ browser-compat: javascript.classes.extends
   get area() {
     return this.height * this.width;
   }
-}</pre>
+}
+```
 
-<h3 id="Using_extends_with_built-in_objects">Using extends with built-in objects</h3>
+### Using extends with built-in objects
 
-<p>This example extends the built-in {{jsxref("Date")}} object. This example is extracted
-  from this <a href="https://googlechrome.github.io/samples/classes-es6/index.html">live
-    demo</a> <a
-    href="https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html">(source)</a>.
-</p>
+This example extends the built-in {{jsxref("Date")}} object. This example
+is extracted from this
+[live demo](https://googlechrome.github.io/samples/classes-es6/index.html)
+[(source)](https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html).
 
-<pre class="brush: js">class myDate extends Date {
+```js
+class myDate extends Date {
 
   getFormattedDate() {
     var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     return this.getDate() + '-' + months[this.getMonth()] + '-' + this.getFullYear();
   }
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Classes">Classes</a></li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Classes/constructor">constructor</a>
-  </li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/super">super</a></li>
-  <li><a
-      href="https://medium.com/beginners-guide-to-mobile-web-development/super-and-extends-in-javascript-es6-understanding-the-tough-parts-6120372d3420">Anurag
-      Majumdar - Super &amp; Extends in JavaScript</a></li>
-</ul>
+- [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
+- [constructor](/en-US/docs/Web/JavaScript/Reference/Classes/constructor)
+- [super](/en-US/docs/Web/JavaScript/Reference/Operators/super)
+- [Anurag Majumdar - Super & Extends in JavaScript](https://medium.com/beginners-guide-to-mobile-web-development/super-and-extends-in-javascript-es6-understanding-the-tough-parts-6120372d3420)

@@ -2,73 +2,69 @@
 title: Date.prototype.setUTCSeconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCSeconds
 tags:
-- Date
-- JavaScript
-- Method
-- Prototype
-- Reference
+  - Date
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
 browser-compat: javascript.builtins.Date.setUTCSeconds
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>setUTCSeconds()</code></strong> method sets the seconds for a
-  specified date according to universal time.</p>
+The **`setUTCSeconds()`** method sets the seconds for a specified date according
+to universal time.
 
-<div>{{EmbedInteractiveExample("pages/js/date-setutcseconds.html")}}</div>
+{{EmbedInteractiveExample("pages/js/date-setutcseconds.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush: js">
+```js
 setUTCSeconds(secondsValue)
 setUTCSeconds(secondsValue, msValue)
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>secondsValue</var></code></dt>
-  <dd>An integer between 0 and 59, representing the seconds.</dd>
-  <dt><code><var>msValue</var></code></dt>
-  <dd>Optional. A number between 0 and 999, representing the milliseconds.</dd>
-</dl>
+- `secondsValue`
+  - : An integer between 0 and 59, representing the seconds.
+- `msValue`
+  - : Optional. A number between 0 and 999, representing the milliseconds.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>The number of milliseconds between 1 January 1970 00:00:00 UTC and the updated date.
-</p>
+The number of milliseconds between 1 January 1970 00:00:00 UTC and the updated
+date.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>If you do not specify the <code>msValue</code> parameter, the value returned from the
-  {{jsxref("Date.prototype.getUTCMilliseconds()", "getUTCMilliseconds()")}} method is
-  used.</p>
+If you do not specify the `msValue` parameter, the value returned from the
+{{jsxref("Date.prototype.getUTCMilliseconds()", "getUTCMilliseconds()")}}
+method is used.
 
-<p>If a parameter you specify is outside of the expected range,
-  <code>setUTCSeconds()</code> attempts to update the date information in the
-  {{jsxref("Date")}} object accordingly. For example, if you use 100 for
-  <code>secondsValue</code>, the minutes stored in the {{jsxref("Date")}} object will be
-  incremented by 1, and 40 will be used for seconds.</p>
+If a parameter you specify is outside of the expected range, `setUTCSeconds()`
+attempts to update the date information in the {{jsxref("Date")}} object
+accordingly. For example, if you use 100 for `secondsValue`, the minutes stored
+in the {{jsxref("Date")}} object will be incremented by 1, and 40 will be
+used for seconds.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_setUTCSeconds">Using setUTCSeconds()</h3>
+### Using setUTCSeconds()
 
-<pre class="brush: js">var theBigDay = new Date();
+```js
+var theBigDay = new Date();
 theBigDay.setUTCSeconds(20);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Date.prototype.getUTCSeconds()")}}</li>
-  <li>{{jsxref("Date.prototype.setSeconds()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getUTCSeconds()")}}
+- {{jsxref("Date.prototype.setSeconds()")}}

@@ -12,72 +12,74 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.NumberFormat.format
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>Intl.NumberFormat.prototype.format()</code></strong> method formats a
-	number according to the locale and formatting options of this
-	{{jsxref("Intl/NumberFormat")}} object.</p>
+The **`Intl.NumberFormat.prototype.format()`** method formats a number according
+to the locale and formatting options of this
+{{jsxref("Intl/NumberFormat")}} object.
 
-<div>{{EmbedInteractiveExample("pages/js/intl-numberformat-prototype-format.html",
-	"taller")}}</div>
+{{EmbedInteractiveExample("pages/js/intl-numberformat-prototype-format.html",
+	"taller")}}
+
 <!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">format(number)</pre>
+```js
+format(number)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-	<dt><code><var>number</var></code></dt>
-	<dd>A {{jsxref("Number")}} or {{jsxref("BigInt")}} to format.</dd>
-</dl>
+- `number`
+  - : A {{jsxref("Number")}} or {{jsxref("BigInt")}} to format.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The <code>format</code> getter function formats a number into a string according to the
-	locale and formatting options of this {{jsxref("Intl/NumberFormat")}} object.</p>
+The `format` getter function formats a number into a string according to the
+locale and formatting options of this {{jsxref("Intl/NumberFormat")}}
+object.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_format">Using format</h3>
+### Using format
 
-<p>Use the <code>format</code> getter function for formatting a single currency value,
-	here for Russia:</p>
+Use the `format` getter function for formatting a single currency value, here
+for Russia:
 
-<pre class="brush: js">var options = { style: 'currency', currency: 'RUB' };
+```js
+var options = { style: 'currency', currency: 'RUB' };
 var numberFormat = new Intl.NumberFormat('ru-RU', options);
 console.log(numberFormat.format(654321.987));
 // → "654 321,99 руб."
-</pre>
+```
 
-<h3 id="Using_format_with_map">Using format with map</h3>
+### Using format with map
 
-<p>Use the <code>format</code> getter function for formatting all numbers in an array.
-	Note that the function is bound to the {{jsxref("Intl/NumberFormat")}} from which it was
-	obtained, so it can be passed directly to {{jsxref("Array.prototype.map")}}. This is
-	considered a historical artefact, as part of a convention which is no longer followed
-	for new features, but is preserved to maintain compatibility with existing programs.
-</p>
+Use the `format` getter function for formatting all numbers in an array. Note
+that the function is bound to the {{jsxref("Intl/NumberFormat")}} from
+which it was obtained, so it can be passed directly to
+{{jsxref("Array.prototype.map")}}. This is considered a historical
+artefact, as part of a convention which is no longer followed for new features,
+but is preserved to maintain compatibility with existing programs.
 
-<pre class="brush: js">var a = [123456.789, 987654.321, 456789.123];
+```js
+var a = [123456.789, 987654.321, 456789.123];
 var numberFormat = new Intl.NumberFormat('es-ES');
-var formatted = a.map(n =&gt; numberFormat.format(n));
+var formatted = a.map(n => numberFormat.format(n));
 console.log(formatted.join('; '));
 // → "123.456,789; 987.654,321; 456.789,123"
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>{{jsxref("Intl/NumberFormat", "Intl.NumberFormat")}}</li>
-	<li>{{jsxref("Number.prototype.toLocaleString()")}}</li>
-</ul>
+- {{jsxref("Intl/NumberFormat", "Intl.NumberFormat")}}
+- {{jsxref("Number.prototype.toLocaleString()")}}

@@ -2,63 +2,64 @@
 title: Boolean.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Boolean/toString
 tags:
-- Boolean
-- JavaScript
-- Method
-- Prototype
-- Reference
+  - Boolean
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
 browser-compat: javascript.builtins.Boolean.toString
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <code><strong>toString()</strong></code> method returns a string representing the
-  specified Boolean object.</p>
+The **`toString()`** method returns a string representing the specified Boolean
+object.
 
-<div>{{EmbedInteractiveExample("pages/js/boolean-tostring.html")}}</div>
+{{EmbedInteractiveExample("pages/js/boolean-tostring.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">toString()</pre>
+```js
+toString()
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A string representing the specified {{jsxref("Boolean")}} object.</p>
+A string representing the specified {{jsxref("Boolean")}} object.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The {{jsxref("Boolean")}} object overrides the <code>toString</code> method of the
-  {{jsxref("Object")}} object; it does not inherit
-  {{jsxref("Object.prototype.toString()")}}. For <code>Boolean</code> objects, the
-  <code>toString</code> method returns a string representation of the object.</p>
+The {{jsxref("Boolean")}} object overrides the `toString` method of the
+{{jsxref("Object")}} object; it does not inherit
+{{jsxref("Object.prototype.toString()")}}. For `Boolean` objects,
+the `toString` method returns a string representation of the object.
 
-<p>JavaScript calls the <code>toString()</code> method automatically when a
-  {{jsxref("Boolean")}} is to be represented as a text value or when a
-  {{jsxref("Boolean")}} is referred to in a string concatenation.</p>
+JavaScript calls the `toString()` method automatically when a
+{{jsxref("Boolean")}} is to be represented as a text value or when a
+{{jsxref("Boolean")}} is referred to in a string concatenation.
 
-<p>For {{jsxref("Boolean")}} objects and values, the built-in <code>toString()</code>
-  method returns the string "<code>true</code>" or "<code>false</code>" depending on the
-  value of the boolean object.</p>
+For {{jsxref("Boolean")}} objects and values, the built-in `toString()`
+method returns the string "`true`" or "`false`" depending on the value of the
+boolean object.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_toString">Using <code>toString()</code></h3>
+### Using `toString()`
 
-<p>In the following code, <code>flag.toString()</code> returns "<code>true</code>":</p>
+In the following code, `flag.toString()` returns "`true`":
 
-<pre class="brush: js">var flag = new Boolean(true);
+```js
+var flag = new Boolean(true);
 var myVar = flag.toString();
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Object.prototype.toString()")}}</li>
-</ul>
+- {{jsxref("Object.prototype.toString()")}}

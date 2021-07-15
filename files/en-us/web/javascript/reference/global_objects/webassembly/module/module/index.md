@@ -2,52 +2,50 @@
 title: WebAssembly.Module() constructor
 slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Module/Module
 tags:
-- Constructor
-- JavaScript
-- Module
-- Reference
-- WebAssembly
+  - Constructor
+  - JavaScript
+  - Module
+  - Reference
+  - WebAssembly
 browser-compat: javascript.builtins.WebAssembly.Module.Module
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>A <strong><code>WebAssembly.Module()</code></strong> constructor creates a new Module
-  object containing stateless WebAssembly code that has already been compiled by the
-  browser and can be efficiently <a href="/en-US/docs/Web/API/Worker/postMessage">shared
-    with Workers</a>, and instantiated multiple times.</p>
+A **`WebAssembly.Module()`** constructor creates a new Module object containing
+stateless WebAssembly code that has already been compiled by the browser and can
+be efficiently [shared with Workers](/en-US/docs/Web/API/Worker/postMessage),
+and instantiated multiple times.
 
-<p>The <code>WebAssembly.Module()</code> constructor function can be called to
-  synchronously compile given WebAssembly binary code. However, the primary way to get a
-  <code>Module</code> is through an asynchronous compilation function like
-  {{jsxref("WebAssembly.compile()")}}.</p>
+The `WebAssembly.Module()` constructor function can be called to synchronously
+compile given WebAssembly binary code. However, the primary way to get a
+`Module` is through an asynchronous compilation function like
+{{jsxref("WebAssembly.compile()")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<div class="warning">
-  <p><strong>Warning:</strong> Since compilation for large modules can be expensive,
-    developers should only use the <code>Module()</code> constructor when synchronous
-    compilation is absolutely required; the asynchronous
-    {{jsxref("WebAssembly.compileStreaming()")}} method should be used at all other times.
-  </p>
-</div>
+> **Warning:** Since compilation for large modules can be expensive, developers
+> should only use the `Module()` constructor when synchronous compilation is
+> absolutely required; the asynchronous
+> {{jsxref("WebAssembly.compileStreaming()")}} method should be
+> used at all other times.
 
-<pre class="brush: js">new WebAssembly.Module(bufferSource)</pre>
+```js
+new WebAssembly.Module(bufferSource)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><em>bufferSource</em></dt>
-  <dd>A <a href="/en-US/docs/Web/JavaScript/Typed_arrays">typed array</a> or <a
-      href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a>
-    containing the binary code of the .wasm module you want to compile.</dd>
-</dl>
+- _bufferSource_
+  - : A [typed array](/en-US/docs/Web/JavaScript/Typed_arrays) or
+    [ArrayBuffer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
+    containing the binary code of the .wasm module you want to compile.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Synchronously_compiling_a_WebAssembly_module">Synchronously compiling a
-  WebAssembly module</h3>
+### Synchronously compiling a WebAssembly module
 
-<pre class="brush: js">var importObject = {
+```js
+var importObject = {
   imports: {
     imported_func: function(arg) {
       console.log(arg);
@@ -59,29 +57,27 @@ function createWasmModule(bytes) {
   return new WebAssembly.Module(bytes);
 }
 
-fetch('simple.wasm').then(response =&gt;
+fetch('simple.wasm').then(response =>
   response.arrayBuffer()
-).then(bytes =&gt; {
+).then(bytes => {
   let mod = createWasmModule(bytes);
   WebAssembly.instantiate(mod, importObject)
-  .then(result =&gt;
+  .then(result =>
      result.exports.exported_func()
   );
-})</pre>
+})
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/WebAssembly">WebAssembly</a> overview page</li>
-  <li><a href="/en-US/docs/WebAssembly/Concepts">WebAssembly concepts</a></li>
-  <li><a href="/en-US/docs/WebAssembly/Using_the_JavaScript_API">Using the WebAssembly
-      JavaScript API</a></li>
-</ul>
+- [WebAssembly](/en-US/docs/WebAssembly) overview page
+- [WebAssembly concepts](/en-US/docs/WebAssembly/Concepts)
+- [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)

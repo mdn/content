@@ -11,58 +11,79 @@ tags:
   - Regular Expressions
 browser-compat: javascript.builtins.RegExp.n
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The legacy RegExp <strong>$1, $2, $3, $4, $5, $6, $7, $8, $9</strong> properties are static and read-only properties of regular expressions that contain parenthesized substring matches.</p>
+The legacy RegExp **$1, $2, $3, $4, $5, $6, $7, $8, $9** properties are static
+and read-only properties of regular expressions that contain parenthesized
+substring matches.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The $1, ..., $9 properties are static, they are not a property of an individual regular expression object. Instead, you always use them as <code>RegExp.$1</code>, ..., <code>RegExp.$9</code>.</p>
+The $1, ..., $9 properties are static, they are not a property of an individual
+regular expression object. Instead, you always use them as `RegExp.$1`, ...,
+`RegExp.$9`.
 
-<p>The values of these properties are read-only and modified whenever successful matches are made.</p>
+The values of these properties are read-only and modified whenever successful
+matches are made.
 
-<p>The number of possible parenthesized substrings is unlimited, but the <code>RegExp</code> object can only hold the first nine. You can access all parenthesized substrings through the returned array's indexes.</p>
+The number of possible parenthesized substrings is unlimited, but the `RegExp`
+object can only hold the first nine. You can access all parenthesized substrings
+through the returned array's indexes.
 
-<p>These properties can be used in the replacement text for the {{jsxref("String.replace")}} method. When used this way, do not prepend them with <code>RegExp</code>. The example below illustrates this. When parentheses are not included in the regular expression, the script interprets <code>$n</code>'s literally (where <code>n</code> is a positive integer).</p>
+These properties can be used in the replacement text for the
+{{jsxref("String.replace")}} method. When used this way, do not prepend
+them with `RegExp`. The example below illustrates this. When parentheses are not
+included in the regular expression, the script interprets `$n`'s literally
+(where `n` is a positive integer).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_n_with_String.replace">Using $n with String.replace</h3>
+### Using $n with String.replace
 
-<p>The following script uses the {{jsxref("String.prototype.replace()", "replace()")}} method of the {{jsxref("String")}} instance to match a name in the format <em>first last</em> and output it in the format <em>last, first</em>. In the replacement text, the script uses <code>$1</code> and <code>$2</code> to indicate the results of the corresponding matching parentheses in the regular expression pattern.</p>
+The following script uses the
+{{jsxref("String.prototype.replace()", "replace()")}} method
+of the {{jsxref("String")}} instance to match a name in the format
+_first last_ and output it in the format _last, first_. In the replacement text,
+the script uses `$1` and `$2` to indicate the results of the corresponding
+matching parentheses in the regular expression pattern.
 
-<pre class="brush: js">var re = /(\w+)\s(\w+)/;
+```js
+var re = /(\w+)\s(\w+)/;
 var str = 'John Smith';
 str.replace(re, '$2, $1'); // "Smith, John"
 RegExp.$1; // "John"
 RegExp.$2; // "Smith"
-</pre>
+```
 
-<h3 id="Using_n_with_RegExp.test">Using $n with RegExp.test</h3>
+### Using $n with RegExp.test
 
-<p>The following script uses the {{jsxref("RegExp.prototype.test()", "test()")}} method of the {{jsxref("RegExp")}} instance to grab a number in a generic string.</p>
+The following script uses the
+{{jsxref("RegExp.prototype.test()", "test()")}} method of the
+{{jsxref("RegExp")}} instance to grab a number in a generic string.
 
-<pre class="brush: js">var str = 'Test 24';
+```js
+var str = 'Test 24';
 var number = /(\d+)/.test(str) ? RegExp.$1 : '0';
 number; // "24"
-</pre>
+```
 
-<p>Please note that any operation involving the usage of other regular expressions between a <code>re.test(str)</code> call and the <code>RegExp.$n</code> property, might have side effects, so that accessing these special properties should be done instantly, otherwise the result might be unexpected.</p>
+Please note that any operation involving the usage of other regular expressions
+between a `re.test(str)` call and the `RegExp.$n` property, might have side
+effects, so that accessing these special properties should be done instantly,
+otherwise the result might be unexpected.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("RegExp.input", "RegExp.input ($_)")}}</li>
- <li>{{jsxref("RegExp.lastMatch", "RegExp.lastMatch ($&amp;)")}}</li>
- <li>{{jsxref("RegExp.lastParen", "RegExp.lastParen ($+)")}}</li>
- <li>{{jsxref("RegExp.leftContext", "RegExp.leftContext ($`)")}}</li>
- <li>{{jsxref("RegExp.rightContext", "RegExp.rightContext ($')")}}</li>
-</ul>
+- {{jsxref("RegExp.input", "RegExp.input ($_)")}}
+- {{jsxref("RegExp.lastMatch", "RegExp.lastMatch ($&amp;)")}}
+- {{jsxref("RegExp.lastParen", "RegExp.lastParen ($+)")}}
+- {{jsxref("RegExp.leftContext", "RegExp.leftContext ($`)")}}
+- {{jsxref("RegExp.rightContext", "RegExp.rightContext ($')")}}

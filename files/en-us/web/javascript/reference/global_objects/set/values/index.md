@@ -2,44 +2,42 @@
 title: Set.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/Set/values
 tags:
-- ECMAScript 2015
-- Iterator
-- JavaScript
-- Method
-- Prototype
-- set
+  - ECMAScript 2015
+  - Iterator
+  - JavaScript
+  - Method
+  - Prototype
+  - set
 browser-compat: javascript.builtins.Set.values
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>values()</code></strong> method returns a new iterator object that
-  contains the values for each element in the <code>Set</code> object in insertion order.
-</p>
+The **`values()`** method returns a new iterator object that contains the values
+for each element in the `Set` object in insertion order.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> The <strong><code>keys()</code></strong> method is an alias
-    for this method (for similarity with {{jsxref("Map")}} objects), hence the
-    <code>keys()</code> page redirecting here. It behaves exactly the same and returns
-    <strong>values</strong> of <code>Set</code> elements.</p>
-</div>
+> **Note:** The **`keys()`** method is an alias for this method (for similarity
+> with {{jsxref("Map")}} objects), hence the `keys()` page redirecting
+> here. It behaves exactly the same and returns **values** of `Set` elements.
 
-<div>{{EmbedInteractiveExample("pages/js/set-prototype-values.html")}}</div>
+{{EmbedInteractiveExample("pages/js/set-prototype-values.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+values()
+```
 
-<pre class="brush: js">values()</pre>
+### Return value
 
-<h3 id="Return_value">Return value</h3>
+A new iterator object containing the values for each element in the given `Set`,
+in insertion order.
 
-<p>A new iterator object containing the values for each element in the given
-  <code>Set</code>, in insertion order.</p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Using values()
 
-<h3 id="Using_values">Using values()</h3>
-
-<pre class="brush: js">var mySet = new Set();
+```js
+var mySet = new Set();
 mySet.add('foo');
 mySet.add('bar');
 mySet.add('baz');
@@ -48,18 +46,17 @@ var setIter = mySet.values();
 
 console.log(setIter.next().value); // "foo"
 console.log(setIter.next().value); // "bar"
-console.log(setIter.next().value); // "baz"</pre>
+console.log(setIter.next().value); // "baz"
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Set.prototype.entries()")}}</li>
-</ul>
+- {{jsxref("Set.prototype.entries()")}}

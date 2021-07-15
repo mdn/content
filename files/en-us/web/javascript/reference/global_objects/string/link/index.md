@@ -2,75 +2,74 @@
 title: String.prototype.link()
 slug: Web/JavaScript/Reference/Global_Objects/String/link
 tags:
-- Deprecated
-- HTML wrapper methods
-- JavaScript
-- Method
-- Prototype
-- Reference
-- String
-- Polyfill
+  - Deprecated
+  - HTML wrapper methods
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
+  - String
+  - Polyfill
 browser-compat: javascript.builtins.String.link
 ---
-<div>{{JSRef}} {{deprecated_header}}</div>
+{{JSRef}} {{deprecated_header}}
 
-<p>The <strong><code>link()</code></strong> method creates a string representing the code
-  for an {{HTMLElement("a")}} HTML element to be used as a hypertext link to another URL.
-</p>
+The **`link()`** method creates a string representing the code for an
+{{HTMLElement("a")}} HTML element to be used as a hypertext link to
+another URL.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">link(url)</pre>
+```js
+link(url)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>url</var></code></dt>
-  <dd>Any string that specifies the <code>href</code> attribute of the
-    <code>&lt;a&gt;</code> element; it should be a valid URL (relative or absolute), with
-    any <code>&amp;</code> characters escaped as <code>&amp;amp;</code>, and any
-    <code>"</code> characters escaped as <code>&amp;quot;</code>.</dd>
-</dl>
+- `url`
+  - : Any string that specifies the `href` attribute of the `<a>` element; it
+    should be a valid URL (relative or absolute), with any `&` characters
+    escaped as `&amp;`, and any `"` characters escaped as `&quot;`.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A string containing an {{HTMLElement("a")}} HTML element.</p>
+A string containing an {{HTMLElement("a")}} HTML element.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Use the <code>link()</code> method to create an HTML snippet for a hypertext link. The
-  returned string can then be added to the document via {{domxref("document.write()")}} or
-  {{domxref("element.innerHTML")}}.</p>
+Use the `link()` method to create an HTML snippet for a hypertext link. The
+returned string can then be added to the document via
+{{domxref("document.write()")}} or
+{{domxref("element.innerHTML")}}.
 
-<p>Links created with the <code>link()</code> method become elements in the
-  <code>links</code> array of the <code>document</code> object. See
-  {{domxref("document.links")}}.</p>
+Links created with the `link()` method become elements in the `links` array of
+the `document` object. See {{domxref("document.links")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_link">Using link()</h3>
+### Using link()
 
-<p>The following example displays the word "MDN" as a hypertext link that returns the user
-  to the Mozilla Developer Network.</p>
+The following example displays the word "MDN" as a hypertext link that returns
+the user to the Mozilla Developer Network.
 
-<pre class="brush: js">var hotText = 'MDN';
+```js
+var hotText = 'MDN';
 var url = 'https://developer.mozilla.org/';
 
 console.log('Click to return to ' + hotText.link(url));
-// Click to return to &lt;a href="https://developer.mozilla.org/"&gt;MDN&lt;/a&gt;
-</pre>
+// Click to return to <a href="https://developer.mozilla.org/">MDN</a>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>A polyfill of <code>String.prototype.link</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-string-and-regexp"><code>core-js</code></a></li>
-  <li>{{jsxref("String.prototype.anchor()")}}</li>
-</ul>
+- A polyfill of `String.prototype.link` is available in
+  [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- {{jsxref("String.prototype.anchor()")}}

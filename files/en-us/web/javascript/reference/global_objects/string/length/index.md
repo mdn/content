@@ -10,27 +10,41 @@ tags:
   - length
 browser-compat: javascript.builtins.String.length
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><span class="seoSummary">The <strong><code>length</code></strong> property of a {{jsxref("String")}} object contains the length of the string, in UTF-16 code units. <code>length</code> is a read-only data property of string instances.</span></p>
+The **`length`** property of a {{jsxref("String")}} object contains the
+length of the string, in UTF-16 code units. `length` is a read-only data
+property of string instances.
 
-<div>{{EmbedInteractiveExample("pages/js/string-length.html", "shorter")}}</div>
+{{EmbedInteractiveExample("pages/js/string-length.html", "shorter")}}
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>This property returns the number of code units in the string. {{interwiki("wikipedia", "UTF-16")}}, the string format used by JavaScript, uses a single 16-bit code unit to represent the most common characters, but needs to use two code units for less commonly-used characters, so it's possible for the value returned by <code>length</code> to not match the actual number of characters in the string.</p>
+This property returns the number of code units in the string.
+{{interwiki("wikipedia", "UTF-16")}}, the string format used by
+JavaScript, uses a single 16-bit code unit to represent the most common
+characters, but needs to use two code units for less commonly-used characters,
+so it's possible for the value returned by `length` to not match the actual
+number of characters in the string.
 
-<p>ECMAScript 2016 (ed. 7) established a maximum length of <code>2^53 - 1</code> elements. Previously, no maximum length was specified. In Firefox, strings have a maximum length of <code>2**30 - 2</code> (~1GB). In versions prior to Firefox 65, the maximum length was <code>2**28 - 1</code> (~256MB).</p>
+ECMAScript 2016 (ed. 7) established a maximum length of `2^53 - 1` elements.
+Previously, no maximum length was specified. In Firefox, strings have a maximum
+length of `2**30 - 2` (\~1GB). In versions prior to Firefox 65, the maximum
+length was `2**28 - 1` (\~256MB).
 
-<p>For an empty string, <code>length</code> is 0.</p>
+For an empty string, `length` is 0.
 
-<p>The static property <code>String.length</code> is unrelated to the length of strings, it's the arity of the <code>String</code> function (loosely, the number of formal parameters it has), which is 1.</p>
+The static property `String.length` is unrelated to the length of strings, it's
+the arity of the `String` function (loosely, the number of formal parameters it
+has), which is 1.
 
-<h2 id="Unicode">Unicode</h2>
+## Unicode
 
-<p>Since `length` counts code units instead of characters, if you want to get the number of characters you need something like this:</p>
+Since \`length\` counts code units instead of characters, if you want to get the
+number of characters you need something like this:
 
-<pre class="brush: js">function getCharacterLength (str) {
+```js
+function getCharacterLength (str) {
   // The string iterator that is used here iterates over characters,
   //  not mere code units
   return [...str].length;
@@ -47,24 +61,27 @@ Object.defineProperty(String.prototype, 'charLength', {
 });
 
 console.log('A\uD87E\uDC04Z'.charLength); // 3
-</pre>
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Basic_usage">Basic usage</h3>
+### Basic usage
 
-<pre class="brush: js">let x = 'Mozilla';
+```js
+let x = 'Mozilla';
 let empty = '';
 
 console.log(x + ' is ' + x.length + ' code units long');
 /* "Mozilla is 7 code units long" */
 
 console.log('The empty string has a length of ' + empty.length);
-// expected output: "The empty string has a length of 0"</pre>
+// expected output: "The empty string has a length of 0"
+```
 
-<h3 id="Assigning_to_length">Assigning to length</h3>
+### Assigning to length
 
-<pre class="brush: js">let myString = "bluebells";
+```js
+let myString = "bluebells";
 
 // Attempting to assign a value to a string's .length property has no observable effect.
 myString.length = 4;
@@ -72,18 +89,16 @@ console.log(myString);
 // expected output: "bluebells"
 console.log(myString.length);
 // expected output: 9
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://downloads.teradata.com/blog/jasonstrimpel/2011/11/javascript-string-length-and-internationalizing-web-applications">JavaScript <code>String.length</code> and Internationalizing Web Applications</a></li>
-</ul>
+- [JavaScript `String.length` and Internationalizing Web Applications](https://downloads.teradata.com/blog/jasonstrimpel/2011/11/javascript-string-length-and-internationalizing-web-applications)

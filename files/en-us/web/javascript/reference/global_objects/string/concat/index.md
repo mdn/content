@@ -2,61 +2,61 @@
 title: String.prototype.concat()
 slug: Web/JavaScript/Reference/Global_Objects/String/concat
 tags:
-- JavaScript
-- Method
-- Prototype
-- Reference
-- String
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
+  - String
 browser-compat: javascript.builtins.String.concat
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><span class="seoSummary">The <strong><code>concat()</code></strong> method concatenates
-    the string arguments to the calling string and returns a new string.</span></p>
+The **`concat()`** method concatenates the string arguments to the calling
+string and returns a new string.
 
-<div>{{EmbedInteractiveExample("pages/js/string-concat.html")}}</div>
+{{EmbedInteractiveExample("pages/js/string-concat.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush: js">
+```js
 concat(str1)
 concat(str1, str2)
-concat(str1, str2, ... , strN)</pre>
+concat(str1, str2, ... , strN)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>strN</code></dt>
-  <dd>One or more strings to concatenate to <code>str</code>.</dd>
-</dl>
+- `strN`
+  - : One or more strings to concatenate to `str`.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A new string containing the combined text of the strings provided.</p>
+A new string containing the combined text of the strings provided.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The <code>concat()</code> function concatenates the string arguments to the calling
-  string and returns a new string. Changes to the original string or the returned string
-  don't affect the other.</p>
+The `concat()` function concatenates the string arguments to the calling string
+and returns a new string. Changes to the original string or the returned string
+don't affect the other.
 
-<p>If the arguments are not of the type string, they are converted to string values before
-  concatenating.</p>
+If the arguments are not of the type string, they are converted to string values
+before concatenating.
 
-<h2 id="Performance">Performance</h2>
+## Performance
 
-<p>It is strongly recommended that the {{jsxref("Operators/Assignment_Operators",
-  "assignment operators", "", 1)}} (<code>+</code>, <code>+=</code>) are used instead of
-  the <code>concat()</code> method.</p>
+It is strongly recommended that the
+{{jsxref("Operators/Assignment_Operators",
+  "assignment operators", "", 1)}}
+(`+`, `+=`) are used instead of the `concat()` method.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_concat">Using concat()</h3>
+### Using concat()
 
-<p>The following example combines strings into a new string.</p>
+The following example combines strings into a new string.
 
-<pre class="brush: js">let hello = 'Hello, '
+```js
+let hello = 'Hello, '
 console.log(hello.concat('Kevin', '. Have a nice day.'))
 // Hello, Kevin. Have a nice day.
 
@@ -68,20 +68,17 @@ let greetList = ['Hello', ' ', 'Venkat', '!']
 "".concat(null)  // "null"
 "".concat(true)  // "true"
 "".concat(4, 5)  // "45"
+```
 
-</pre>
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Array.prototype.concat()")}}</li>
-  <li>{{jsxref("Operators/Assignment_Operators", "Assignment operators", "", 1)}}</li>
-</ul>
+- {{jsxref("Array.prototype.concat()")}}
+- {{jsxref("Operators/Assignment_Operators", "Assignment operators", "", 1)}}

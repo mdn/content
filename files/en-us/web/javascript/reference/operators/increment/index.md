@@ -2,85 +2,72 @@
 title: Increment (++)
 slug: Web/JavaScript/Reference/Operators/Increment
 tags:
-- JavaScript
-- Language feature
-- Operator
-- Reference
+  - JavaScript
+  - Language feature
+  - Operator
+  - Reference
 browser-compat: javascript.operators.increment
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>The increment operator (<code>++</code>) increments (adds one to) its operand and
-  returns a value.</p>
+The increment operator (`++`) increments (adds one to) its operand and returns a
+value.
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-increment.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-increment.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 x++
 ++x
-</pre>
+```
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>If used postfix, with operator after operand (for example,
-  <code><var>x</var>++</code>), the increment operator increments and returns the value
-  before incrementing.</p>
+If used postfix, with operator after operand (for example, `x++`), the increment
+operator increments and returns the value before incrementing.
 
-<p>If used prefix, with operator before operand (for example,
-  <code>++<var>x</var></code>), the increment operator increments and returns the value
-  after incrementing.</p>
+If used prefix, with operator before operand (for example, `++x`), the increment
+operator increments and returns the value after incrementing.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Postfix_increment">Postfix increment</h3>
+### Postfix increment
 
-<pre class="brush: js">let x = 3;
+```js
+let x = 3;
 y = x++;
 
 // y = 3
 // x = 4
-</pre>
+```
 
-<h3 id="Prefix_increment">Prefix increment</h3>
+### Prefix increment
 
-<pre class="brush: js">let a = 2;
+```js
+let a = 2;
 b = ++a;
 
 // a = 3
 // b = 3
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Addition">Addition
-      operator</a></li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction">Subtraction
-      operator</a></li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Division">Division
-      operator</a></li>
-  <li><a
-      href="/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication">Multiplication
-      operator</a></li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Remainder">Remainder
-      operator</a></li>
-  <li><a
-      href="/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation">Exponentiation
-      operator</a></li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Decrement">Decrement
-      operator</a></li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Unary_negation">Unary
-      negation operator</a></li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus">Unary plus
-      operator</a></li>
-</ul>
+- [Addition operator](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)
+- [Subtraction operator](/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction)
+- [Division operator](/en-US/docs/Web/JavaScript/Reference/Operators/Division)
+- [Multiplication operator](/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication)
+- [Remainder operator](/en-US/docs/Web/JavaScript/Reference/Operators/Remainder)
+- [Exponentiation operator](/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation)
+- [Decrement operator](/en-US/docs/Web/JavaScript/Reference/Operators/Decrement)
+- [Unary negation operator](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_negation)
+- [Unary plus operator](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus)

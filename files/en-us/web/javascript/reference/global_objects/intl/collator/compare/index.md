@@ -12,73 +12,72 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.Collator.compare
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>Intl.Collator.prototype.compare()</code></strong> method compares two
-	strings according to the sort order of this {{jsxref("Intl/Collator")}} object.</p>
+The **`Intl.Collator.prototype.compare()`** method compares two strings
+according to the sort order of this {{jsxref("Intl/Collator")}} object.
 
-<div>{{EmbedInteractiveExample("pages/js/intl-collator-prototype-compare.html")}}</div>
+{{EmbedInteractiveExample("pages/js/intl-collator-prototype-compare.html")}}
+
 <!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">compare(string1, string2)</pre>
+```js
+compare(string1, string2)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-	<dt><code><var>string1</var></code>, <code><var>string2</var></code></dt>
-	<dd>The strings to compare against each other.</dd>
-</dl>
+- `string1`, `string2`
+  - : The strings to compare against each other.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The <code>compare</code> getter function returns a number indicating how
-	<code><var>string1</var></code> and <code><var>string2</var></code> compare to each
-	other according to the sort order of this {{jsxref("Intl/Collator")}} object: a negative
-	value if <code><var>string1</var></code> comes before <code><var>string2</var></code>;
-	a positive value if <code><var>string1</var></code> comes after
-	<code><var>string2</var></code>; 0 if they are considered equal.</p>
+The `compare` getter function returns a number indicating how `string1` and
+`string2` compare to each other according to the sort order of this
+{{jsxref("Intl/Collator")}} object: a negative value if `string1` comes
+before `string2`; a positive value if `string1` comes after `string2`; 0 if they
+are considered equal.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_compare_for_array_sort">Using compare for array sort</h3>
+### Using compare for array sort
 
-<p>Use the <code>compare</code> getter function for sorting arrays. Note that the function
-	is bound to the collator from which it was obtained, so it can be passed directly to
-	{{jsxref("Array.prototype.sort()")}}.</p>
+Use the `compare` getter function for sorting arrays. Note that the function is
+bound to the collator from which it was obtained, so it can be passed directly
+to {{jsxref("Array.prototype.sort()")}}.
 
-<pre class="brush: js">var a = ['Offenbach', 'Österreich', 'Odenwald'];
+```js
+var a = ['Offenbach', 'Österreich', 'Odenwald'];
 var collator = new Intl.Collator('de-u-co-phonebk');
 a.sort(collator.compare);
 console.log(a.join(', '));
 // → "Odenwald, Österreich, Offenbach"
-</pre>
+```
 
-<h3 id="Using_compare_for_array_search">Using compare for array search</h3>
+### Using compare for array search
 
-<p>Use the <code>compare</code> getter function for finding matching strings in arrays:
-</p>
+Use the `compare` getter function for finding matching strings in arrays:
 
-<pre class="brush: js">var a = ['Congrès', 'congres', 'Assemblée', 'poisson'];
+```js
+var a = ['Congrès', 'congres', 'Assemblée', 'poisson'];
 var collator = new Intl.Collator('fr', { usage: 'search', sensitivity: 'base' });
 var s = 'congres';
-var matches = a.filter(v =&gt; collator.compare(v, s) === 0);
+var matches = a.filter(v => collator.compare(v, s) === 0);
 console.log(matches.join(', '));
 // → "Congrès, congres"
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>{{jsxref("Intl.Collator")}}</li>
-	<li>{{jsxref("String.prototype.localeCompare()")}}</li>
-</ul>
+- {{jsxref("Intl.Collator")}}
+- {{jsxref("String.prototype.localeCompare()")}}

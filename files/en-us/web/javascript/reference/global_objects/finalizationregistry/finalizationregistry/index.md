@@ -9,13 +9,15 @@ tags:
   - Reference
 browser-compat: javascript.builtins.FinalizationRegistry.FinalizationRegistry
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>FinalizationRegistry</code></strong> constructor creates a {{jsxref("FinalizationRegistry")}} object that uses the given callback.</p>
+The **`FinalizationRegistry`** constructor creates a
+{{jsxref("FinalizationRegistry")}} object that uses the given
+callback.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 // No callback
 new FinalizationRegistry();
 
@@ -27,36 +29,34 @@ new FinalizationRegistry(callbackFn)
 
 // Inline callback function
 new FinalizationRegistry(function callbackFn(heldValue) { ... })
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code><var>callback</var></code> {{optional_inline}}</dt>
- <dd>The callback function this registry should use. If provided, this must be a function.</dd>
-</dl>
+- `callback` {{optional_inline}}
+  - : The callback function this registry should use. If provided, this must be
+    a function.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Creating_a_new_registry">Creating a new registry</h3>
+### Creating a new registry
 
-<p>You create the registry passing in the callback:</p>
+You create the registry passing in the callback:
 
-<pre class="brush: js">const registry = new FinalizationRegistry(heldValue =&gt; {
+```js
+const registry = new FinalizationRegistry(heldValue => {
   // ....
 });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("FinalizationRegistry")}}</li>
-</ul>
+- {{jsxref("FinalizationRegistry")}}

@@ -2,56 +2,55 @@
 title: WeakRef() constructor
 slug: Web/JavaScript/Reference/Global_Objects/WeakRef/WeakRef
 tags:
-- Constructor
-- JavaScript
-- Reference
-- WeakRef
+  - Constructor
+  - JavaScript
+  - Reference
+  - WeakRef
 browser-compat: javascript.builtins.WeakRef.WeakRef
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>WeakRef</code></strong> constructor creates a {{jsxref("WeakRef")}}
-  object referring to a given target object.</p>
+The **`WeakRef`** constructor creates a {{jsxref("WeakRef")}} object
+referring to a given target object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">new WeakRef(targetObject);
-</pre>
+```js
+new WeakRef(targetObject);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>targetObject</dt>
-  <dd>The target object the WeakRef should refer to (also called the <em>referent</em>).
-  </dd>
-</dl>
+- targetObject
+  - : The target object the WeakRef should refer to (also called the
+    _referent_).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Creating_a_new_WeakRef_object">Creating a new WeakRef object</h3>
+### Creating a new WeakRef object
 
-<p>See the main <a
-    href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakRef#examples"><code>WeakRef</code></a>
-  page for a complete example.</p>
+See the main
+[`WeakRef`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakRef#examples)
+page for a complete example.
 
-<pre class="brush: js">class Counter {
+```js
+class Counter {
   constructor(element) {
     // Remember a weak reference to a DOM element
     this.ref = new WeakRef(element);
     this.start();
   }
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("WeakRef")}}</li>
-</ul>
+- {{jsxref("WeakRef")}}

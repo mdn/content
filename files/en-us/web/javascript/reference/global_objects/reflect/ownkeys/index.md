@@ -2,57 +2,53 @@
 title: Reflect.ownKeys()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/ownKeys
 tags:
-- ECMAScript 2015
-- JavaScript
-- Method
-- Reference
-- Reflect
-- Polyfill
+  - ECMAScript 2015
+  - JavaScript
+  - Method
+  - Reference
+  - Reflect
+  - Polyfill
 browser-compat: javascript.builtins.Reflect.ownKeys
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The static <strong><code>Reflect.ownKeys()</code></strong> method returns an array of
-  the <code>target</code> object's own property keys.</p>
+The static **`Reflect.ownKeys()`** method returns an array of the `target`
+object's own property keys.
 
-<div>{{EmbedInteractiveExample("pages/js/reflect-ownkeys.html")}}</div>
+{{EmbedInteractiveExample("pages/js/reflect-ownkeys.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+Reflect.ownKeys(target)
+```
 
-<pre class="brush: js">Reflect.ownKeys(<var>target</var>)
-</pre>
+### Parameters
 
-<h3 id="Parameters">Parameters</h3>
+- `target`
+  - : The target object from which to get the own keys.
 
-<dl>
-  <dt><code><var>target</var></code></dt>
-  <dd>The target object from which to get the own keys.</dd>
-</dl>
+### Return value
 
-<h3 id="Return_value">Return value</h3>
+An {{jsxref("Array")}} of the `target` object's own property keys.
 
-<p>An {{jsxref("Array")}} of the <code><var>target</var></code> object's own property
-  keys.</p>
+### Exceptions
 
-<h3 id="Exceptions">Exceptions</h3>
+A {{jsxref("TypeError")}}, if `target` is not an
+{{jsxref("Object")}}.
 
-<p>A {{jsxref("TypeError")}}, if <code><var>target</var></code> is not an
-  {{jsxref("Object")}}.</p>
+## Description
 
-<h2 id="Description">Description</h2>
+The `Reflect.ownKeys` method returns an array of the `target` object's own
+property keys. Its return value is equivalent to
+`{{jsxref("Object.getOwnPropertyNames", "Object.getOwnPropertyNames(target)", "", 1)}}.concat({{jsxref("Object.getOwnPropertySymbols", "Object.getOwnPropertySymbols(target)", "", 1)}})`.
 
-<p>The <code>Reflect.ownKeys</code> method returns an array of the
-  <code><var>target</var></code> object's own property keys. Its return value is
-  equivalent to
-  <code>{{jsxref("Object.getOwnPropertyNames", "Object.getOwnPropertyNames(target)", "", 1)}}.concat({{jsxref("Object.getOwnPropertySymbols", "Object.getOwnPropertySymbols(target)", "", 1)}})</code>.
-</p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Using Reflect.ownKeys()
 
-<h3 id="Using_Reflect.ownKeys">Using Reflect.ownKeys()</h3>
-
-<pre class="brush: js">Reflect.ownKeys({z: 3, y: 2, x: 1})  // [ "z", "y", "x" ]
+```js
+Reflect.ownKeys({z: 3, y: 2, x: 1})  // [ "z", "y", "x" ]
 Reflect.ownKeys([])                  // ["length"]
 
 let sym = Symbol.for('comet')
@@ -64,20 +60,19 @@ Reflect.ownKeys(obj)
 // Indexes in numeric order,
 // strings in insertion order,
 // symbols in insertion order
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>A polyfill of <code>Reflect.ownKeys</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-reflect"><code>core-js</code></a></li>
-  <li>{{jsxref("Reflect")}}</li>
-  <li>{{jsxref("Object.getOwnPropertyNames()")}}</li>
-</ul>
+- A polyfill of `Reflect.ownKeys` is available in
+  [`core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
+- {{jsxref("Reflect")}}
+- {{jsxref("Object.getOwnPropertyNames()")}}

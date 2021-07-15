@@ -2,81 +2,78 @@
 title: Date.prototype.setFullYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setFullYear
 tags:
-- Date
-- JavaScript
-- Method
-- Prototype
-- Reference
+  - Date
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
 browser-compat: javascript.builtins.Date.setFullYear
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>setFullYear()</code></strong> method sets the full year for a
-  specified date according to local time. Returns new timestamp.</p>
+The **`setFullYear()`** method sets the full year for a specified date according
+to local time. Returns new timestamp.
 
-<div>{{EmbedInteractiveExample("pages/js/date-setfullyear.html")}}</div>
+{{EmbedInteractiveExample("pages/js/date-setfullyear.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush: js">
+```js
 setFullYear(yearValue)
 setFullYear(yearValue, monthValue)
 setFullYear(yearValue, monthValue, dateValue)
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>yearValue</var></code></dt>
-  <dd>An integer specifying the numeric value of the year, for example, 1995.</dd>
-  <dt><code><var>monthValue</var></code></dt>
-  <dd>Optional. An integer between 0 and 11 representing the months January through
-    December.</dd>
-  <dt><code><var>dateValue</var></code></dt>
-  <dd>Optional. An integer between 1 and 31 representing the day of the month. If you
-    specify the <code><var>dateValue</var></code> parameter, you must also specify the
-    <code><var>monthValue</var></code>.</dd>
-</dl>
+- `yearValue`
+  - : An integer specifying the numeric value of the year, for example, 1995.
+- `monthValue`
+  - : Optional. An integer between 0 and 11 representing the months January
+    through December.
+- `dateValue`
+  - : Optional. An integer between 1 and 31 representing the day of the month.
+    If you specify the `dateValue` parameter, you must also specify the
+    `monthValue`.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>The number of milliseconds between 1 January 1970 00:00:00 UTC and the updated date.
-</p>
+The number of milliseconds between 1 January 1970 00:00:00 UTC and the updated
+date.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>If you do not specify the <code><var>monthValue</var></code> and
-  <code><var>dateValue</var></code> parameters, the values returned from the
-  {{jsxref("Date.prototype.getMonth()", "getMonth()")}} and
-  {{jsxref("Date.prototype.getDate()", "getDate()")}} methods are used.</p>
+If you do not specify the `monthValue` and `dateValue` parameters, the values
+returned from the
+{{jsxref("Date.prototype.getMonth()", "getMonth()")}} and
+{{jsxref("Date.prototype.getDate()", "getDate()")}} methods are
+used.
 
-<p>If a parameter you specify is outside of the expected range, <code>setFullYear()</code>
-  attempts to update the other parameters and the date information in the
-  {{jsxref("Date")}} object accordingly. For example, if you specify 15 for
-  <code><var>monthValue</var></code>, the year is incremented by 1
-  (<code><var>yearValue</var> + 1</code>), and 3 is used for the month.</p>
+If a parameter you specify is outside of the expected range, `setFullYear()`
+attempts to update the other parameters and the date information in the
+{{jsxref("Date")}} object accordingly. For example, if you specify 15 for
+`monthValue`, the year is incremented by 1 (`yearValue + 1`), and 3 is used for
+the month.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_setFullYear">Using setFullYear()</h3>
+### Using setFullYear()
 
-<pre class="brush: js">var theBigDay = new Date();
+```js
+var theBigDay = new Date();
 theBigDay.setFullYear(1997);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Date.prototype.getUTCFullYear()")}}</li>
-  <li>{{jsxref("Date.prototype.setUTCFullYear()")}}</li>
-  <li>{{jsxref("Date.prototype.setYear()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getUTCFullYear()")}}
+- {{jsxref("Date.prototype.setUTCFullYear()")}}
+- {{jsxref("Date.prototype.setYear()")}}

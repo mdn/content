@@ -2,76 +2,70 @@
 title: DataView.prototype.getUint16()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getUint16
 tags:
-- DataView
-- JavaScript
-- Method
-- Prototype
-- TypedArrays
+  - DataView
+  - JavaScript
+  - Method
+  - Prototype
+  - TypedArrays
 browser-compat: javascript.builtins.DataView.getUint16
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>getUint16()</code></strong> method gets an unsigned 16-bit integer
-  (unsigned short) at the specified byte offset from the start of the
-  {{jsxref("DataView")}}.</p>
+The **`getUint16()`** method gets an unsigned 16-bit integer (unsigned short) at
+the specified byte offset from the start of the {{jsxref("DataView")}}.
 
-<div>{{EmbedInteractiveExample("pages/js/dataview-getuint16.html")}}</div>
+{{EmbedInteractiveExample("pages/js/dataview-getuint16.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush: js">
+```js
 getUint16(byteOffset)
 getUint16(byteOffset, littleEndian)
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>byteOffset</var></code></dt>
-  <dd>The offset, in byte, from the start of the view where to read the data.</dd>
-  <dt><code><var>littleEndian</var></code></dt>
-  <dd>{{optional_inline}} Indicates whether the 16-bit int is stored in
-    {{Glossary("Endianness", "little- or big-endian")}} format. If <code>false</code> or
-    <code>undefined</code>, a big-endian value is read.</dd>
-</dl>
+- `byteOffset`
+  - : The offset, in byte, from the start of the view where to read the data.
+- `littleEndian`
+  - : {{optional_inline}} Indicates whether the 16-bit int is stored in
+    {{Glossary("Endianness", "little- or big-endian")}} format.
+    If `false` or `undefined`, a big-endian value is read.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An unsigned 16-bit integer number.</p>
+An unsigned 16-bit integer number.
 
-<h3 id="Errors_thrown">Errors thrown</h3>
+### Errors thrown
 
-<dl>
-  <dt>{{jsxref("RangeError")}}</dt>
-  <dd>Thrown if the <code>byteOffset</code> is set such as it would read beyond the end of
-    the view.</dd>
-</dl>
+- {{jsxref("RangeError")}}
+  - : Thrown if the `byteOffset` is set such as it would read beyond the end of
+    the view.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>There is no alignment constraint; multi-byte values may be fetched from any offset.</p>
+There is no alignment constraint; multi-byte values may be fetched from any
+offset.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_the_getUint16_method">Using the getUint16 method</h3>
+### Using the getUint16 method
 
-<pre class="brush:js">var buffer = new ArrayBuffer(8);
+```js
+var buffer = new ArrayBuffer(8);
 var dataview = new DataView(buffer);
 dataview.getUint16(1); // 0
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("DataView")}}</li>
-  <li>{{jsxref("ArrayBuffer")}}</li>
-</ul>
+- {{jsxref("DataView")}}
+- {{jsxref("ArrayBuffer")}}

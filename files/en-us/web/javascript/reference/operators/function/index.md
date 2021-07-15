@@ -2,88 +2,93 @@
 title: Function expression
 slug: Web/JavaScript/Reference/Operators/function
 tags:
-- Function
-- JavaScript
-- Language feature
-- Operator
-- Primary Expressions
+  - Function
+  - JavaScript
+  - Language feature
+  - Operator
+  - Primary Expressions
 browser-compat: javascript.operators.function
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>The <strong><code>function</code></strong> keyword can be used to define a function
-  inside an expression.</p>
+The **`function`** keyword can be used to define a function inside an
+expression.
 
-<p>You can also define functions using the {{jsxref("Function/Function", "Function")}}
-  constructor and a {{jsxref("Statements/function", "function declaration", "", 1)}}.</p>
+You can also define functions using the
+{{jsxref("Function/Function", "Function")}} constructor and a
+{{jsxref("Statements/function", "function declaration", "", 1)}}.
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-functionexpression.html",
-  "shorter")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-functionexpression.html",
+  "shorter")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+The expression is not allowed at the start of a statement.
 
-<p>The expression is not allowed at the start of a statement.</p>
-
-<pre class="brush: js">
+```js
 function [name]([param1[, param2[, ..., paramN]]]) {
   statements
 }
-</pre>
+```
 
-<p>As of ES2015, you can also use {{jsxref("Functions/Arrow_functions", "arrow functions",
-  "", 1)}}.</p>
+As of ES2015, you can also use
+{{jsxref("Functions/Arrow_functions", "arrow functions",
+  "", 1)}}.
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>name</var></code> {{optional_inline}}</dt>
-  <dd>The function name. Can be omitted, in which case the function is <em>anonymous</em>.
-    The name is only local to the function body.</dd>
-  <dt><code><var>paramN</var></code> {{optional_inline}}</dt>
-  <dd>The name of an argument to be passed to the function.</dd>
-  <dt><code><var>statements</var></code> {{optional_inline}}</dt>
-  <dd>The statements which comprise the body of the function.</dd>
-</dl>
+- `name` {{optional_inline}}
+  - : The function name. Can be omitted, in which case the function is
+    _anonymous_. The name is only local to the function body.
+- `paramN` {{optional_inline}}
+  - : The name of an argument to be passed to the function.
+- `statements` {{optional_inline}}
+  - : The statements which comprise the body of the function.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>A function expression is very similar to and has almost the same syntax as a function
-  declaration (see {{jsxref("Statements/function", "function")}} statement for details).
-  The main difference between a function expression and a function declaration is the
-  <em>function name</em>, which can be omitted in function expressions to create
-  <em>anonymous</em> functions. A function expression can be used as an <a
-    href="/en-US/docs/Glossary/IIFE">IIFE (Immediately Invoked Function Expression)</a>
-  which runs as soon as it is defined. See also the chapter about {{jsxref("Functions",
-  "functions", "", 1)}} for more information.</p>
+A function expression is very similar to and has almost the same syntax as a
+function declaration (see
+{{jsxref("Statements/function", "function")}} statement for
+details). The main difference between a function expression and a function
+declaration is the _function name_, which can be omitted in function expressions
+to create _anonymous_ functions. A function expression can be used as an
+[IIFE (Immediately Invoked Function Expression)](/en-US/docs/Glossary/IIFE)
+which runs as soon as it is defined. See also the chapter about
+{{jsxref("Functions",
+  "functions", "", 1)}} for more
+information.
 
-<h3 id="Function_expression_hoisting">Function expression hoisting</h3>
+### Function expression hoisting
 
-<p>Function expressions in JavaScript are not hoisted, unlike
-  {{jsxref("Statements/function", "function declarations",
-  "#Function_declaration_hoisting", 1)}}. You can't use function expressions before you
-  create them:</p>
+Function expressions in JavaScript are not hoisted, unlike
+{{jsxref("Statements/function", "function declarations",
+  "#Function_declaration_hoisting", 1)}}.
+You can't use function expressions before you create them:
 
-<pre class="brush: js">console.log(notHoisted) // undefined
+```js
+console.log(notHoisted) // undefined
 //  even though the variable name is hoisted, the definition isn't. so it's undefined.
 notHoisted(); // TypeError: notHoisted is not a function
 
 var notHoisted = function() {
    console.log('bar');
 };
-</pre>
+```
 
-<h3 id="Named_function_expression">Named function expression</h3>
+### Named function expression
 
-<p>If you want to refer to the current function inside the function body, you need to
-  create a named function expression. <strong>This name is then local only to the
-      function body (scope)</strong>. This also avoids using the non-standard
-  {{jsxref("Functions/arguments/callee", "arguments.callee")}} property.</p>
+If you want to refer to the current function inside the function body, you need
+to create a named function expression. **This name is then local only to the
+function body (scope)**. This also avoids using the non-standard
+{{jsxref("Functions/arguments/callee", "arguments.callee")}}
+property.
 
-<pre class="brush: js">let math = {
+```js
+let math = {
   'factit': function factorial(n) {
     console.log(n)
-    if (n &lt;= 1) {
+    if (n <= 1) {
       return 1;
     }
     return n * factorial(n - 1);
@@ -91,16 +96,17 @@ var notHoisted = function() {
 };
 
 math.factit(3) //3;2;1;
-</pre>
+```
 
-<p>The variable the function expression is assigned to will have a <code>name</code>
-  property. The name doesn't change if it's assigned to a different variable. If function
-  name is omitted, it will be the variable name (implicit name). If function name is
-  present, it will be the function name (explicit name). This also applies to
-  {{jsxref("Functions/Arrow_functions", "arrow functions")}} (arrows don't have a name so
-  you can only give the variable an implicit name).</p>
+The variable the function expression is assigned to will have a `name` property.
+The name doesn't change if it's assigned to a different variable. If function
+name is omitted, it will be the variable name (implicit name). If function name
+is present, it will be the function name (explicit name). This also applies to
+{{jsxref("Functions/Arrow_functions", "arrow functions")}}
+(arrows don't have a name so you can only give the variable an implicit name).
 
-<pre class="brush: js">var foo = function() {}
+```js
+var foo = function() {}
 foo.name // "foo"
 
 var foo2 = foo
@@ -112,35 +118,38 @@ bar.name // "baz"
 console.log(foo === foo2); // true
 console.log(typeof baz); // undefined
 console.log(bar === baz); // false (errors because baz == undefined)
-</pre>
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Creating_an_unnamed_function">Creating an unnamed function</h3>
+### Creating an unnamed function
 
-<p>The following example defines an unnamed function and assigns it to <code>x</code>. The
-  function returns the square of its argument:</p>
+The following example defines an unnamed function and assigns it to `x`. The
+function returns the square of its argument:
 
-<pre class="brush: js">var x = function(y) {
+```js
+var x = function(y) {
    return y * y;
 };
-</pre>
+```
 
-<h3 id="Using_a_function_as_a_callback">Using a function as a callback</h3>
+### Using a function as a callback
 
-<p>More commonly it is used as a {{Glossary("Callback_function", "callback")}}:</p>
+More commonly it is used as a
+{{Glossary("Callback_function", "callback")}}:
 
-<pre class="brush: js">button.addEventListener('click', function(event) {
+```js
+button.addEventListener('click', function(event) {
     console.log('button is clicked!')
 })
-</pre>
+```
 
-<h3 id="Using_an_immediately_executed_function_expression">Using an immediately executed
-  function expression</h3>
+### Using an immediately executed function expression
 
-<p>An anonymous function is created and called:</p>
+An anonymous function is created and called:
 
-<pre class="brush: js">(function() {
+```js
+(function() {
     console.log('Code runs!')
 })();
 
@@ -149,27 +158,24 @@ console.log(bar === baz); // false (errors because baz == undefined)
 !function() {
   console.log('Code runs!')
 }();
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Arrow_functions", "Arrow functions", "", 1)}}</li>
-  <li>{{jsxref("Functions_and_function_scope", "Functions and function scope", "", 1)}}
-  </li>
-  <li>{{jsxref("Function")}}</li>
-  <li>{{jsxref("Statements/function", "function")}} statement</li>
-  <li>{{jsxref("Statements/function*", "function*")}} statement</li>
-  <li>{{jsxref("Operators/function*", "function*")}} expression</li>
-  <li>{{jsxref("GeneratorFunction")}}</li>
-  <li>{{jsxref("Statements/async_function", "async function", "", 1)}}</li>
-  <li>{{jsxref("Operators/async_function", "async function expression", "", 1)}}</li>
-</ul>
+- {{jsxref("Arrow_functions", "Arrow functions", "", 1)}}
+- {{jsxref("Functions_and_function_scope", "Functions and function scope", "", 1)}}
+- {{jsxref("Function")}}
+- {{jsxref("Statements/function", "function")}} statement
+- {{jsxref("Statements/function*", "function*")}} statement
+- {{jsxref("Operators/function*", "function*")}} expression
+- {{jsxref("GeneratorFunction")}}
+- {{jsxref("Statements/async_function", "async function", "", 1)}}
+- {{jsxref("Operators/async_function", "async function expression", "", 1)}}

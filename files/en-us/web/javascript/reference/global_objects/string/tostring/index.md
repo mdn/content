@@ -2,59 +2,60 @@
 title: String.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/String/toString
 tags:
-- JavaScript
-- Method
-- Prototype
-- Reference
-- String
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
+  - String
 browser-compat: javascript.builtins.String.toString
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>toString()</code></strong> method returns a string representing the
-  specified object.</p>
+The **`toString()`** method returns a string representing the specified object.
 
-<div>{{EmbedInteractiveExample("pages/js/string-tostring.html")}}</div>
+{{EmbedInteractiveExample("pages/js/string-tostring.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">toString()</pre>
+```js
+toString()
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A string representing the calling object.</p>
+A string representing the calling object.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The {{jsxref("String")}} object overrides the <code>toString()</code> method of the
-  {{jsxref("Object")}} object; it does not inherit
-  {{jsxref("Object.prototype.toString()")}}. For {{jsxref("String")}} objects, the
-  <code>toString()</code> method returns a string representation of the object and is the
-  same as the {{jsxref("String.prototype.valueOf()")}} method.</p>
+The {{jsxref("String")}} object overrides the `toString()` method of the
+{{jsxref("Object")}} object; it does not inherit
+{{jsxref("Object.prototype.toString()")}}. For
+{{jsxref("String")}} objects, the `toString()` method returns a string
+representation of the object and is the same as the
+{{jsxref("String.prototype.valueOf()")}} method.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_toString">Using <code>toString()</code></h3>
+### Using `toString()`
 
-<p>The following example displays the string value of a {{jsxref("String")}} object:</p>
+The following example displays the string value of a
+{{jsxref("String")}} object:
 
-<pre class="brush: js">var x = new String('Hello world');
+```js
+var x = new String('Hello world');
 
 console.log(x.toString()); // logs 'Hello world'
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat}}
 
-<p>{{Compat}}</p>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
-  <li>{{jsxref("Object.prototype.toSource()")}}</li>
-  <li>{{jsxref("String.prototype.valueOf()")}}</li>
-</ul>
+- {{jsxref("Object.prototype.toSource()")}}
+- {{jsxref("String.prototype.valueOf()")}}

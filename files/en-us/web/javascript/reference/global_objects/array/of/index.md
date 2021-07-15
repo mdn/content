@@ -2,91 +2,82 @@
 title: Array.of()
 slug: Web/JavaScript/Reference/Global_Objects/Array/of
 tags:
-- Array
-- ECMAScript 2015
-- JavaScript
-- Method
-- Polyfill
+  - Array
+  - ECMAScript 2015
+  - JavaScript
+  - Method
+  - Polyfill
 browser-compat: javascript.builtins.Array.of
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <code><strong>Array.of()</strong></code> method creates a new <code>Array</code>
-  instance from a variable number of arguments, regardless of number or type of the
-  arguments.</p>
+The **`Array.of()`** method creates a new `Array` instance from a variable
+number of arguments, regardless of number or type of the arguments.
 
-<p>The difference between <code><strong>Array.of()</strong></code> and the
-  <code><strong>Array</strong></code> constructor is in the handling of integer arguments:
-  <code><strong>Array.of(7)</strong></code> creates an array with a single element,
-  <code>7</code>, whereas <code><strong>Array(7)</strong></code> creates an empty array
-  with a <code>length</code> property of <code>7</code> (<strong>Note:</strong> this
-  implies an array of <code>7</code> empty slots, not slots with actual
-  {{jsxref("undefined")}} values).</p>
+The difference between **`Array.of()`** and the **`Array`** constructor is in
+the handling of integer arguments: **`Array.of(7)`** creates an array with a
+single element, `7`, whereas **`Array(7)`** creates an empty array with a
+`length` property of `7` (**Note:** this implies an array of `7` empty slots,
+not slots with actual {{jsxref("undefined")}} values).
 
-<pre class="brush: js">Array.of(7); // [7]
+```js
+Array.of(7); // [7]
 Array(7); // array of 7 empty slots
 
 Array.of(1, 2, 3); // [1, 2, 3]
 Array(1, 2, 3);    // [1, 2, 3]
-</pre>
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 Array.of(element0)
 Array.of(element0, element1)
 Array.of(element0, element1, ... , elementN)
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>element<em>N</em></var></code></dt>
-  <dd>Elements used to create the array.</dd>
-</dl>
+- `elementN`
+  - : Elements used to create the array.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A new {{jsxref("Array")}} instance.</p>
+A new {{jsxref("Array")}} instance.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>This function is part of the ECMAScript 2015 standard.</p>
+This function is part of the ECMAScript 2015 standard.
 
-<p>For more information, see:</p>
+For more information, see:
 
-<ul>
-  <li><a href="https://gist.github.com/rwaldron/1074126"><code>Array.of()</code> </a></li>
-  <li><a href="https://gist.github.com/rwaldron/1074126"><code>Array.from()</code>
-      proposal</a></li>
-  <li><a href="https://gist.github.com/rwaldron/3186576"><code>Array.of()</code>
-      polyfill</a></li>
-</ul>
+- [`Array.of()`](https://gist.github.com/rwaldron/1074126)
+- [`Array.from()` proposal](https://gist.github.com/rwaldron/1074126)
+- [`Array.of()` polyfill](https://gist.github.com/rwaldron/3186576)
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_Array.of">Using Array.of</h3>
+### Using Array.of
 
-<pre class="brush: js">Array.of(1);         // [1]
+```js
+Array.of(1);         // [1]
 Array.of(1, 2, 3);   // [1, 2, 3]
 Array.of(undefined); // [undefined]
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>A polyfill of <code>Array.of</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-array"><code>core-js</code></a></li>
-  <li><a href="https://github.com/behnammodi/polyfill/blob/master/array.polyfill.js">A
-    polyfill</a></li>
-  <li>{{jsxref("Array")}}</li>
-  <li>{{jsxref("Array.from()")}}</li>
-  <li>{{jsxref("TypedArray.of()")}}</li>
-</ul>
+- A polyfill of `Array.of` is available in
+  [`core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [A polyfill](https://github.com/behnammodi/polyfill/blob/master/array.polyfill.js)
+- {{jsxref("Array")}}
+- {{jsxref("Array.from()")}}
+- {{jsxref("TypedArray.of()")}}

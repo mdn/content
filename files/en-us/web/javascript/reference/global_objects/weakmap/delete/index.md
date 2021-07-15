@@ -2,61 +2,58 @@
 title: WeakMap.prototype.delete()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/delete
 tags:
-- ECMAScript 2015
-- JavaScript
-- Method
-- Prototype
-- Reference
-- WeakMap
+  - ECMAScript 2015
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
+  - WeakMap
 browser-compat: javascript.builtins.WeakMap.delete
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>delete()</code></strong> method removes the specified element from a
-  {{jsxref("WeakMap")}} object.</p>
+The **`delete()`** method removes the specified element from a
+{{jsxref("WeakMap")}} object.
 
-<div>{{EmbedInteractiveExample("pages/js/weakmap-prototype-delete.html")}}</div>
+{{EmbedInteractiveExample("pages/js/weakmap-prototype-delete.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+delete(key)
+```
 
-<pre class="brush: js">delete(key)</pre>
+### Parameters
 
-<h3 id="Parameters">Parameters</h3>
+- `key`
+  - : The key of the element to remove from the `WeakMap` object.
 
-<dl>
-  <dt><code><var>key</var></code></dt>
-  <dd>The key of the element to remove from the <code>WeakMap</code> object.</dd>
-</dl>
+### Return value
 
-<h3 id="Return_value">Return value</h3>
+`true` if an element in the `WeakMap` object has been removed successfully.
+`false` if the key is not found in the `WeakMap` or if the key is not an object.
 
-<p><code>true</code> if an element in the <code>WeakMap</code> object has been removed
-  successfully. <code>false</code> if the key is not found in the <code>WeakMap</code> or
-  if the key is not an object.</p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Using the delete() method
 
-<h3 id="Using_the_delete_method">Using the delete() method</h3>
-
-<pre class="brush: js highlight:[4]">var wm = new WeakMap();
+```js
+var wm = new WeakMap();
 wm.set(window, 'foo');
 
 wm.delete(window); // Returns true. Successfully removed.
 
 wm.has(window);    // Returns false. The window object is no longer in the WeakMap.
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("WeakMap")}}</li>
-</ul>
+- {{jsxref("WeakMap")}}

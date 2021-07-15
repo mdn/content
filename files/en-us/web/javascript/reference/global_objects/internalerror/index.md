@@ -8,84 +8,83 @@ tags:
   - Object
 browser-compat: javascript.builtins.InternalError
 ---
-<div>{{JSRef}} {{non-standard_header}}</div>
+{{JSRef}} {{non-standard_header}}
 
-<p>The <strong><code>InternalError</code> object</strong> indicates an error that occurred internally in the JavaScript engine.</p>
+The **`InternalError` object** indicates an error that occurred internally in
+the JavaScript engine.
 
-<p>Example cases are mostly when something is too large, e.g.:</p>
+Example cases are mostly when something is too large, e.g.:
 
-<ul>
- <li>"too many switch cases",</li>
- <li>"too many parentheses in regular expression",</li>
- <li>"array initializer too large",</li>
- <li>"too much recursion".</li>
-</ul>
+- "too many switch cases",
+- "too many parentheses in regular expression",
+- "array initializer too large",
+- "too much recursion".
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{jsxref("InternalError/InternalError", "InternalError()")}}</dt>
- <dd>Creates a new <code>InternalError</code> object.</dd>
-</dl>
+- {{jsxref("InternalError/InternalError", "InternalError()")}}
+  - : Creates a new `InternalError` object.
 
-<h2 id="Instance_properties">Instance properties</h2>
+## Instance properties
 
-<dl>
- <dt>{{jsxref("Error.prototype.message", "InternalError.prototype.message")}}</dt>
- <dd>Error message. Inherited from {{jsxref("Error")}}.</dd>
- <dt>{{jsxref("Error.prototype.name", "InternalError.prototype.name")}}</dt>
- <dd>Error name. Inherited from {{jsxref("Error")}}.</dd>
- <dt>{{jsxref("Error.prototype.fileName", "InternalError.prototype.fileName")}}</dt>
- <dd>Path to file that raised this error. Inherited from {{jsxref("Error")}}.</dd>
- <dt>{{jsxref("Error.prototype.lineNumber", "InternalError.prototype.lineNumber")}}</dt>
- <dd>Line number in file that raised this error. Inherited from {{jsxref("Error")}}.</dd>
- <dt>{{jsxref("Error.prototype.columnNumber", "InternalError.prototype.columnNumber")}}</dt>
- <dd>Column number in line that raised this error. Inherited from {{jsxref("Error")}}.</dd>
- <dt>{{jsxref("Error.prototype.stack", "InternalError.prototype.stack")}}</dt>
- <dd>Stack trace. Inherited from {{jsxref("Error")}}.</dd>
-</dl>
+- {{jsxref("Error.prototype.message", "InternalError.prototype.message")}}
+  - : Error message. Inherited from {{jsxref("Error")}}.
+- {{jsxref("Error.prototype.name", "InternalError.prototype.name")}}
+  - : Error name. Inherited from {{jsxref("Error")}}.
+- {{jsxref("Error.prototype.fileName", "InternalError.prototype.fileName")}}
+  - : Path to file that raised this error. Inherited from
+    {{jsxref("Error")}}.
+- {{jsxref("Error.prototype.lineNumber", "InternalError.prototype.lineNumber")}}
+  - : Line number in file that raised this error. Inherited from
+    {{jsxref("Error")}}.
+- {{jsxref("Error.prototype.columnNumber", "InternalError.prototype.columnNumber")}}
+  - : Column number in line that raised this error. Inherited from
+    {{jsxref("Error")}}.
+- {{jsxref("Error.prototype.stack", "InternalError.prototype.stack")}}
+  - : Stack trace. Inherited from {{jsxref("Error")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Too_much_recursion">Too much recursion</h3>
+### Too much recursion
 
-<p>This recursive function runs 10 times, as per the exit condition.</p>
+This recursive function runs 10 times, as per the exit condition.
 
-<pre class="brush: js">function loop(x) {
-  if (x &gt;= 10) // "x &gt;= 10" is the exit condition
+```js
+function loop(x) {
+  if (x >= 10) // "x >= 10" is the exit condition
     return;
   // do stuff
   loop(x + 1); // the recursive call
 }
-loop(0);</pre>
+loop(0);
+```
 
-<p>Setting this condition to an extremely high value, won't work:</p>
+Setting this condition to an extremely high value, won't work:
 
-<pre class="brush: js example-bad">function loop(x) {
-  if (x &gt;= 1000000000000)
+```js example-bad
+function loop(x) {
+  if (x >= 1000000000000)
     return;
   // do stuff
   loop(x + 1);
 }
 loop(0);
 
-// InternalError: too much recursion</pre>
+// InternalError: too much recursion
+```
 
-<p>For more information, see <a href="/en-US/docs/Web/JavaScript/Reference/Errors/Too_much_recursion">InternalError: too much recursion.</a></p>
+For more information, see
+[InternalError: too much recursion.](/en-US/docs/Web/JavaScript/Reference/Errors/Too_much_recursion)
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any standard.</p>
+Not part of any standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("Error")}}</li>
- <li>
-  <p><a href="/en-US/docs/Web/JavaScript/Reference/Errors/Too_much_recursion">InternalError: too much recursion</a></p>
- </li>
-</ul>
+- {{jsxref("Error")}}
+- [InternalError: too much recursion](/en-US/docs/Web/JavaScript/Reference/Errors/Too_much_recursion)

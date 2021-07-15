@@ -9,117 +9,94 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Math.asinh
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>Math.asinh()</code></strong> function returns the hyperbolic arcsine
-    of a number, that is</p>
+The **`Math.asinh()`** function returns the hyperbolic arcsine of a number, that
+is
 
-<p><math display="block">
-        <semantics>
-            <mrow>
-                <mstyle mathvariant="monospace">
-                    <mrow>
-                        <mo lspace="0em" rspace="thinmathspace">Math.asinh</mo>
-                        <mo stretchy="false">(</mo>
-                        <mi>x</mi>
-                        <mo stretchy="false">)</mo>
-                    </mrow>
-                </mstyle>
-                <mo>=</mo>
-                <mo lspace="0em" rspace="thinmathspace">arsinh</mo>
-                <mo stretchy="false">(</mo>
-                <mi>x</mi>
-                <mo stretchy="false">)</mo>
-                <mo>=</mo>
-                <mtext> the unique </mtext>
-                <mspace width="thickmathspace"></mspace>
-                <mi>y</mi>
-                <mspace width="thickmathspace"></mspace>
-                <mtext>such that</mtext>
-                <mspace width="thickmathspace"></mspace>
-                <mo lspace="0em" rspace="0em">sinh</mo>
-                <mo stretchy="false">(</mo>
-                <mi>y</mi>
-                <mo stretchy="false">)</mo>
-                <mo>=</mo>
-                <mi>x</mi>
-            </mrow>
-            <annotation encoding="TeX">\mathtt{\operatorname{Math.asinh}(x)} =
-                \operatorname{arsinh}(x) = \text{ the unique } \; y \; \text{such that} \;
-                \sinh(y) = x</annotation>
-        </semantics>
-    </math></p>
+<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.asinh</mo>
+<mo stretchy="false">(</mo> <mi>x</mi> <mo stretchy="false">)</mo>
+</mrow></mstyle><mo>=</mo> <mo lspace="0em" rspace="thinmathspace">arsinh</mo>
+<mo stretchy="false">(</mo> <mi>x</mi> <mo stretchy="false">)</mo> <mo>=</mo>
+<mtext>the unique </mtext><mspace width="thickmathspace"></mspace><mi>y</mi>
+<mspace width="thickmathspace"></mspace><mtext>such that</mtext>
+<mspace width="thickmathspace"></mspace><mo lspace="0em" rspace="0em">sinh</mo>
+<mo stretchy="false">(</mo> <mi>y</mi> <mo stretchy="false">)</mo> <mo>=</mo>
+<mi>x</mi>
+</mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.asinh}(x)} =
+\operatorname{arsinh}(x) = \text{ the unique } \; y \; \text{such that} \;
+\sinh(y) = x</annotation></semantics></math>
 
-<div>{{EmbedInteractiveExample("pages/js/math-asinh.html")}}</div>
+{{EmbedInteractiveExample("pages/js/math-asinh.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+Math.asinh(x)
+```
 
-<pre class="brush: js">Math.asinh(x)</pre>
+### Parameters
 
-<h3 id="Parameters">Parameters</h3>
+- `x`
+  - : A number.
 
-<dl>
-    <dt><code><var>x</var></code></dt>
-    <dd>A number.</dd>
-</dl>
+### Return value
 
-<h3 id="Return_value">Return value</h3>
+The hyperbolic arcsine of the given number.
 
-<p>The hyperbolic arcsine of the given number.</p>
+## Description
 
-<h2 id="Description">Description</h2>
+Because `asinh()` is a static method of `Math`, you always use it as
+`Math.asinh()`, rather than as a method of a `Math` object you created (`Math`
+is not a constructor).
 
-<p>Because <code>asinh()</code> is a static method of <code>Math</code>, you always use it
-    as <code>Math.asinh()</code>, rather than as a method of a <code>Math</code> object
-    you created (<code>Math</code> is not a constructor).</p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Using Math.asinh()
 
-<h3 id="Using_Math.asinh">Using Math.asinh()</h3>
-
-<pre class="brush: js">Math.asinh(1);  // 0.881373587019543
+```js
+Math.asinh(1);  // 0.881373587019543
 Math.asinh(0);  // 0
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p><code>Math.asinh</code> can be emulated with the following function:</p>
+`Math.asinh` can be emulated with the following function:
 
-<pre class="brush: js">if (!Math.asinh) Math.asinh = function(x) {
+```js
+if (!Math.asinh) Math.asinh = function(x) {
     var absX = Math.abs(x), w
-    if (absX &lt; 3.725290298461914e-9) // |x| &lt; 2^-28
+    if (absX < 3.725290298461914e-9) // |x| < 2^-28
         return x
-    if (absX &gt; 268435456) // |x| &gt; 2^28
+    if (absX > 268435456) // |x| > 2^28
         w = Math.log(absX) + Math.LN2
-    else if (absX &gt; 2) // 2^28 &gt;= |x| &gt; 2
+    else if (absX > 2) // 2^28 >= |x| > 2
         w = Math.log(2 * absX + 1 / (Math.sqrt(x * x + 1) + absX))
     else
         var t = x * x, w = Math.log1p(absX + t / (1 + Math.sqrt(1 + t)))
 
-    return x &gt; 0 ? w : -w
+    return x > 0 ? w : -w
 }
-</pre>
+```
 
-<p><code>Math.log1p</code> may also have to be polyfilled; see <a
-        href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/log1p">Math.log1p</a>
-    for details.</p>
+`Math.log1p` may also have to be polyfilled; see
+[Math.log1p](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/log1p) for
+details.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-    <li>A polyfill of <code>Math.asinh</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-math"><code>core-js</code></a></li>
-    <li>{{jsxref("Math.acosh()")}}</li>
-    <li>{{jsxref("Math.atanh()")}}</li>
-    <li>{{jsxref("Math.cosh()")}}</li>
-    <li>{{jsxref("Math.sinh()")}}</li>
-    <li>{{jsxref("Math.tanh()")}}</li>
-</ul>
+- A polyfill of `Math.asinh` is available in
+  [`core-js`](https://github.com/zloirock/core-js#ecmascript-math)
+- {{jsxref("Math.acosh()")}}
+- {{jsxref("Math.atanh()")}}
+- {{jsxref("Math.cosh()")}}
+- {{jsxref("Math.sinh()")}}
+- {{jsxref("Math.tanh()")}}

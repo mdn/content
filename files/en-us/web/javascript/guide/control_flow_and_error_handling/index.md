@@ -13,193 +13,195 @@ tags:
   - l10n:priority
   - statements
 ---
-<div>{{jsSidebar("JavaScript Guide")}}
-  {{PreviousNext("Web/JavaScript/Guide/Grammar_and_types",
-  "Web/JavaScript/Guide/Loops_and_iteration")}}</div>
+{{jsSidebar("JavaScript Guide")}}
+{{PreviousNext("Web/JavaScript/Guide/Grammar_and_types",
+  "Web/JavaScript/Guide/Loops_and_iteration")}}
 
-<p class="seoSummary">JavaScript supports a compact set of statements, specifically
-  control flow statements, that you can use to incorporate a great deal of interactivity
-  in your application. This chapter provides an overview of these statements.</p>
+JavaScript supports a compact set of statements, specifically control flow
+statements, that you can use to incorporate a great deal of interactivity in
+your application. This chapter provides an overview of these statements.
 
-<p>The <a href="/en-US/docs/Web/JavaScript/Reference/Statements">JavaScript reference</a>
-  contains exhaustive details about the statements in this chapter. The semicolon
-  (<code>;</code>) character is used to separate statements in JavaScript code.</p>
+The [JavaScript reference](/en-US/docs/Web/JavaScript/Reference/Statements)
+contains exhaustive details about the statements in this chapter. The semicolon
+(`;`) character is used to separate statements in JavaScript code.
 
-<p>Any JavaScript expression is also a statement. See <a
-    href="/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators">Expressions and
-    operators</a> for complete information about expressions.</p>
+Any JavaScript expression is also a statement. See
+[Expressions and operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators)
+for complete information about expressions.
 
-<h2 id="Block_statement">Block statement</h2>
+## Block statement
 
-<p>The most basic statement is a <dfn>block statement</dfn>, which is used to group
-  statements. The block is delimited by a pair of curly brackets:</p>
+The most basic statement is a _block statement_, which is used to group
+statements. The block is delimited by a pair of curly brackets:
 
-<pre class="brush: js">{
-  <var>statement_1</var>;
-  <var>statement_2</var>;
+```js
+{
+  statement_1;
+  statement_2;
   ⋮
-  <var>statement_n</var>;
+  statement_n;
 }
-</pre>
+```
 
-<h3 id="Example">Example</h3>
+### Example
 
-<p>Block statements are commonly used with control flow statements (<code>if</code>,
-  <code>for</code>, <code>while</code>).</p>
+Block statements are commonly used with control flow statements (`if`, `for`,
+`while`).
 
-<pre class="brush: js">while (x &lt; 10) {
+```js
+while (x < 10) {
   x++;
 }
-</pre>
+```
 
-<p>Here, <code>{ x++; }</code> is the block statement.</p>
+Here, `{ x++; }` is the block statement.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> JavaScript before ECMAScript2015 (6th edition)
-    <strong>does not</strong> have block scope!  In older JavaScript, variables introduced
-    within a block are scoped to the containing function or script, and the effects of
-    setting them persist beyond the block itself. In other words, <em>block statements do
-      not define a scope</em>.</p>
+> **Note:** JavaScript before ECMAScript2015 (6th edition) **does not** have
+> block scope!  In older JavaScript, variables introduced within a block are
+> scoped to the containing function or script, and the effects of setting them
+> persist beyond the block itself. In other words, _block statements do not
+> define a scope_.
+>
+> "Standalone" blocks in JavaScript can produce completely different results
+> from what they would produce in C or Java. For example:
+>
+> ```js
+> var x = 1;
+> {
+>   var x = 2;
+> }
+> console.log(x); // outputs 2
+> ```
+>
+> This outputs `2` because the `var x` statement within the block is in the same
+> scope as the `var x` statement before the block. (In C or Java, the equivalent
+> code would have outputted `1`.)
+>
+> **Since ECMAScript2015**, the `let` and `const` variable declarations are
+> block-scoped. See the {{jsxref("Statements/let", "let")}}
+> and {{jsxref("Statements/const", "const")}} reference pages for
+> more information.
 
-  <p>"Standalone" blocks in JavaScript can produce completely different results from what
-    they would produce in C or Java. For example:</p>
+## Conditional statements
 
-  <pre class="brush: js">var x = 1;
-{
-  var x = 2;
-}
-console.log(x); // outputs 2
-</pre>
+A conditional statement is a set of commands that executes if a specified
+condition is true. JavaScript supports two conditional statements: `if...else`
+and `switch`.
 
-  <p>This outputs <code>2</code> because the <code>var x</code> statement within the block
-    is in the same scope as the <code>var x</code> statement before the block. (In C or
-    Java, the equivalent code would have outputted <code>1</code>.)</p>
+### `if...else` statement
 
-  <p><strong>Since ECMAScript2015</strong>, the <code>let</code> and
-    <code>const</code> variable declarations are block-scoped. See the
-    {{jsxref("Statements/let", "let")}} and {{jsxref("Statements/const", "const")}}
-    reference pages for more information.</p>
-</div>
+Use the `if` statement to execute a statement if a logical condition is `true`.
+Use the optional `else` clause to execute a statement if the condition is
+`false`.
 
-<h2 id="Conditional_statements">Conditional statements</h2>
+An `if` statement looks like this:
 
-<p>A conditional statement is a set of commands that executes if a specified condition is
-  true. JavaScript supports two conditional statements: <code>if...else</code> and
-  <code>switch</code>.</p>
-
-<h3 id="if...else_statement"><code>if...else</code> statement</h3>
-
-<p>Use the <code>if</code> statement to execute a statement if a logical condition is
-  <code>true</code>. Use the optional <code>else</code> clause to execute a statement if
-  the condition is <code>false</code>.</p>
-
-<p>An <code>if</code> statement looks like this:</p>
-
-<pre class="brush: js">if (<var>condition</var>) {
-  <var>statement_1</var>;
+```js
+if (condition) {
+  statement_1;
 } else {
-  <var>statement_2</var>;
-}</pre>
-
-<p>Here, the <code><var>condition</var></code> can be any expression that evaluates to
-  <code>true</code> or <code>false</code>. (See <a
-    href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean#description">Boolean</a>
-  for an explanation of what evaluates to <code>true</code> and <code>false</code>.)</p>
-
-<p>If <code><var>condition</var></code> evaluates to <code>true</code>,
-  <code><var>statement_1</var></code> is executed. Otherwise,
-  <code><var>statement_2</var></code> is executed. <code><var>statement_1</var></code> and
-  <code><var>statement_2</var></code> can be any statement, including further nested
-  <code>if</code> statements.</p>
-
-<p>You can also compound the statements using <code>else if</code> to have multiple
-  conditions tested in sequence, as follows:</p>
-
-<pre class="brush: js">if (<var>condition_1</var>) {
-  <var>statement_1</var>;
-} else if (<var>condition_2</var>) {
-  <var>statement_2</var>;
-} else if (<var>condition_n</var>) {
-  <var>statement_n</var>;
-} else {
-  <var>statement_last</var>;
+  statement_2;
 }
-</pre>
+```
 
-<p>In the case of multiple conditions, only the first logical condition which evaluates to
-  <code>true</code> will be executed. To execute multiple statements, group them within a
-  block statement (<code>{ … }</code>).</p>
+Here, the `condition` can be any expression that evaluates to `true` or `false`.
+(See
+[Boolean](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean#description)
+for an explanation of what evaluates to `true` and `false`.)
 
-<h4 id="Best_practice">Best practice</h4>
+If `condition` evaluates to `true`, `statement_1` is executed. Otherwise,
+`statement_2` is executed. `statement_1` and `statement_2` can be any statement,
+including further nested `if` statements.
 
-<p>In general, it's good practice to always use block statements—<em>especially</em> when
-  nesting <code>if</code> statements:</p>
+You can also compound the statements using `else if` to have multiple conditions
+tested in sequence, as follows:
 
-<pre class="brush: js">if (<var>condition</var>) {
-  <var>statement_1_runs_if_condition_is_true</var>;
-  <var>statement_2_runs_if_condition_is_true</var>;
+```js
+if (condition_1) {
+  statement_1;
+} else if (condition_2) {
+  statement_2;
+} else if (condition_n) {
+  statement_n;
 } else {
-  <var>statement_3_runs_if_condition_is_false</var>;
-  <var>statement_4_runs_if_condition_is_false</var>;
+  statement_last;
 }
-</pre>
+```
 
-<p>It's unwise to use simple assignments in a conditional expression, because the
-  assignment can be confused with equality when glancing over the code.</p>
+In the case of multiple conditions, only the first logical condition which
+evaluates to `true` will be executed. To execute multiple statements, group them
+within a block statement (`{ … }`).
 
-<p>For example, do <em>not</em> write code like this:</p>
+#### Best practice
 
-<pre class="example-bad brush: js">// Prone to being misread as "x == y"
+In general, it's good practice to always use block statements—_especially_ when
+nesting `if` statements:
+
+```js
+if (condition) {
+  statement_1_runs_if_condition_is_true;
+  statement_2_runs_if_condition_is_true;
+} else {
+  statement_3_runs_if_condition_is_false;
+  statement_4_runs_if_condition_is_false;
+}
+```
+
+It's unwise to use simple assignments in a conditional expression, because the
+assignment can be confused with equality when glancing over the code.
+
+For example, do _not_ write code like this:
+
+```js example-bad
+// Prone to being misread as "x == y"
 if (x = y) {
   /* statements here */
 }
-</pre>
+```
 
-<p>If you need to use an assignment in a conditional expression, a common practice is to
-  put additional parentheses around the assignment, like this:</p>
+If you need to use an assignment in a conditional expression, a common practice
+is to put additional parentheses around the assignment, like this:
 
-<pre class="example-good brush: js">if ((x = y)) {
+```js example-good
+if ((x = y)) {
   /* statements here */
 }
-</pre>
+```
 
-<h4 id="Falsy_values">Falsy values</h4>
+#### Falsy values
 
-<p>The following values evaluate to <code>false</code> (also known as <a
-    href="/en-US/docs/Glossary/Falsy">Falsy</a> values):</p>
+The following values evaluate to `false` (also known as
+[Falsy](/en-US/docs/Glossary/Falsy) values):
 
-<ul>
-  <li><code>false</code></li>
-  <li><code>undefined</code></li>
-  <li><code>null</code></li>
-  <li><code>0</code></li>
-  <li><code>NaN</code></li>
-  <li>the empty string (<code>""</code>)</li>
-</ul>
+- `false`
+- `undefined`
+- `null`
+- `0`
+- `NaN`
+- the empty string (`""`)
 
-<p>All other values—including all objects—evaluate to <code>true</code> when passed to a
-  conditional statement.</p>
+All other values—including all objects—evaluate to `true` when passed to a
+conditional statement.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Do not confuse the primitive boolean values
-    <code>true</code> and <code>false</code> with the true and false values of the
-    {{jsxref("Boolean")}} object!</p>
+> **Note:** Do not confuse the primitive boolean values `true` and `false` with
+> the true and false values of the {{jsxref("Boolean")}} object!
+>
+> For example:
+>
+> ```js
+> var b = new Boolean(false);
+> if (b)         // this condition evaluates to true
+> if (b == true) // this condition evaluates to false
+> ```
 
-  <p>For example:</p>
+#### **Example**
 
-  <pre class="brush: js">var b = new Boolean(false);
-if (b)         // this condition evaluates to true
-if (b == true) // this condition evaluates to false
-</pre>
-</div>
+In the following example, the function `checkData` returns `true` if the number
+of characters in a `Text` object is three. Otherwise, it displays an alert and
+returns `false`.
 
-<h4 id="Example_2"><strong>Example</strong></h4>
-
-<p>In the following example, the function <code>checkData</code> returns <code>true</code>
-  if the number of characters in a <code>Text</code> object is three. Otherwise, it
-  displays an alert and returns <code>false</code>.</p>
-
-<pre class="brush: js">function checkData() {
+```js
+function checkData() {
   if (document.form1.threeChar.value.length == 3) {
     return true;
   } else {
@@ -209,68 +211,64 @@ if (b == true) // this condition evaluates to false
     return false;
   }
 }
-</pre>
+```
 
-<h3 id="switch_statement"><code>switch</code> statement</h3>
+### `switch` statement
 
-<p>A <code>switch</code> statement allows a program to evaluate an expression and attempt
-  to match the expression's value to a <code>case</code> label. If a match is found, the
-  program executes the associated statement.</p>
+A `switch` statement allows a program to evaluate an expression and attempt to
+match the expression's value to a `case` label. If a match is found, the program
+executes the associated statement.
 
-<p>A <code>switch</code> statement looks like this:</p>
+A `switch` statement looks like this:
 
-<pre class="brush: js">switch (<var>expression</var>) {
-  case <var>label_1</var>:
-    <var>statements_1</var>
+```js
+switch (expression) {
+  case label_1:
+    statements_1
     [break;]
-  case <var>label_2</var>:
-    <var>statements_2</var>
+  case label_2:
+    statements_2
     [break;]
     …
   default:
-    <var>statements_def</var>
+    statements_def
     [break;]
 }
-</pre>
+```
 
-<p>JavaScript evaluates the above switch statement as follows:</p>
+JavaScript evaluates the above switch statement as follows:
 
-<ul>
-  <li>The program first looks for a <code>case</code> clause with a label matching the
-    value of expression and then transfers control to that clause, executing the
-    associated statements.</li>
-  <li>If no matching label is found, the program looks for the optional
-    <code>default</code> clause:
-    <ul>
-      <li>If a <code>default</code> clause is found, the program transfers control to that
-        clause, executing the associated statements.</li>
-      <li>If no <code>default</code> clause is found, the program resumes execution at the
-        statement following the end of <code>switch</code>.</li>
-      <li>(By convention, the <code>default</code> clause is written as the last clause,
-        but it does not need to be so.)</li>
-    </ul>
-  </li>
-</ul>
+- The program first looks for a `case` clause with a label matching the value of
+  expression and then transfers control to that clause, executing the associated
+  statements.
+- If no matching label is found, the program looks for the optional `default`
+  clause:
 
-<h4 id="break_statements">break statements</h4>
+  - If a `default` clause is found, the program transfers control to that
+    clause, executing the associated statements.
+  - If no `default` clause is found, the program resumes execution at the
+    statement following the end of `switch`.
+  - (By convention, the `default` clause is written as the last clause, but it
+    does not need to be so.)
 
-<p>The optional <code>break</code> statement associated with each <code>case</code> clause
-  ensures that the program breaks out of <code>switch</code> once the matched statement is
-  executed, and then continues execution at the statement following <code>switch</code>.
-  If <code>break</code> is omitted, the program continues execution inside the
-  <code>switch</code> statement (and will evaluate the next <code>case</code>, and so on).
-</p>
+#### break statements
 
-<h5 id="Example_3"><strong>Example</strong></h5>
+The optional `break` statement associated with each `case` clause ensures that
+the program breaks out of `switch` once the matched statement is executed, and
+then continues execution at the statement following `switch`. If `break` is
+omitted, the program continues execution inside the `switch` statement (and will
+evaluate the next `case`, and so on).
 
-<p>In the following example, if <code><var>fruittype</var></code> evaluates to
-  <code>'Bananas'</code>, the program matches the value with case <code>'Bananas'</code>
-  and executes the associated statement. When <code>break</code> is encountered, the
-  program exits the <code>switch</code> and continues execution from the statement
-  following <code>switch</code>. If <code>break</code> were omitted, the statement for
-  <code>case 'Cherries'</code> would also be executed.</p>
+##### **Example**
 
-<pre class="brush: js">switch (<var>fruittype</var>) {
+In the following example, if `fruittype` evaluates to `'Bananas'`, the program
+matches the value with case `'Bananas'` and executes the associated statement.
+When `break` is encountered, the program exits the `switch` and continues
+execution from the statement following `switch`. If `break` were omitted, the
+statement for `case 'Cherries'` would also be executed.
+
+```js
+switch (fruittype) {
   case 'Oranges':
     console.log('Oranges are $0.59 a pound.');
     break;
@@ -292,59 +290,52 @@ if (b == true) // this condition evaluates to false
   default:
    console.log(`Sorry, we are out of ${fruittype}.`);
 }
-console.log("Is there anything else you'd like?");</pre>
+console.log("Is there anything else you'd like?");
+```
 
-<h2 id="Exception_handling_statements">Exception handling statements</h2>
+## Exception handling statements
 
-<p>You can throw exceptions using the <code>throw</code> statement and handle them using
-  the <code>try...catch</code> statements.</p>
+You can throw exceptions using the `throw` statement and handle them using the
+`try...catch` statements.
 
-<ul>
-  <li><a href="#throw_statement"><code>throw</code> statement</a></li>
-  <li><a href="#try...catch_statement"><code>try...catch</code> statement</a></li>
-</ul>
+- [`throw` statement](#throw_statement)
+- [`try...catch` statement](#try...catch_statement)
 
-<h3 id="Exception_types">Exception types</h3>
+### Exception types
 
-<p>Just about any object can be thrown in JavaScript. Nevertheless, not all thrown objects
-  are created equal. While it is common to throw numbers or strings as errors, it is
-  frequently more effective to use one of the exception types specifically created for
-  this purpose:</p>
+Just about any object can be thrown in JavaScript. Nevertheless, not all thrown
+objects are created equal. While it is common to throw numbers or strings as
+errors, it is frequently more effective to use one of the exception types
+specifically created for this purpose:
 
-<ul>
-  <li><a
-      href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error#error_types">ECMAScript
-      exceptions</a></li>
-  <li><a href="/en-US/docs/Web/API/DOMException"
-      title="The DOMException interface represents an abnormal event (called an exception) which occurs as a result of calling a method or accessing a property of a web API."><code>DOMException</code></a>
-    and <a href="/en-US/docs/Web/API/DOMError"
-      title="The DOMError interface describes an error object that contains an error name."><code>DOMError</code></a>
-  </li>
-</ul>
+- [ECMAScript exceptions](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error#error_types)
+- [`DOMException`](/en-US/docs/Web/API/DOMException "The DOMException interface represents an abnormal event (called an exception) which occurs as a result of calling a method or accessing a property of a web API.")
+  and [`DOMError`](/en-US/docs/Web/API/DOMError "The DOMError interface describes an error object that contains an error name.")
 
-<h3 id="throw_statement"><code>throw</code> statement</h3>
+### `throw` statement
 
-<p>Use the <code>throw</code> statement to throw an exception. A <code>throw</code>
-  statement specifies the value to be thrown:</p>
+Use the `throw` statement to throw an exception. A `throw` statement
+specifies the value to be thrown:
 
-<pre class="brush: js">throw <var>expression</var>;
-</pre>
+```js
+throw expression;
+```
 
-<p>You may throw any expression, not just expressions of a specific type. The following
-  code throws several exceptions of varying types:</p>
+You may throw any expression, not just expressions of a specific type. The
+following code throws several exceptions of varying types:
 
-<pre class="brush: js">throw 'Error2';   // String type
+```js
+throw 'Error2';   // String type
 throw 42;         // Number type
 throw true;       // Boolean type
 throw {toString: function() { return "I'm an object!"; } };
-</pre>
+```
 
-<div class="note">
-  <p><strong>Note:</strong> You can specify an object when you throw an exception. You can
-    then reference the object's properties in the <code>catch</code> block.</p>
-</div>
+> **Note:** You can specify an object when you throw an exception. You can then
+> reference the object's properties in the `catch` block.
 
-<pre class="brush: js">// Create an object type UserException
+```js
+// Create an object type UserException
 function UserException(message) {
   this.message = message;
   this.name = 'UserException';
@@ -357,35 +348,35 @@ UserException.prototype.toString = function() {
 }
 
 // Create an instance of the object type and throw it
-throw new UserException('Value too high');</pre>
+throw new UserException('Value too high');
+```
 
-<h3 id="try...catch_statement"><code>try...catch</code> statement</h3>
+### `try...catch` statement
 
-<p>The <code>try...catch</code> statement marks a block of statements to try, and
-  specifies one or more responses should an exception be thrown. If an exception is
-  thrown, the <code>try...catch</code> statement catches it.</p>
+The `try...catch` statement marks a block of statements to try, and specifies
+one or more responses should an exception be thrown. If an exception is thrown,
+the `try...catch` statement catches it.
 
-<p>The <code>try...catch</code> statement consists of a <code>try</code> block, which
-  contains one or more statements, and a <code>catch</code> block, containing statements
-  that specify what to do if an exception is thrown in the <code>try</code> block.</p>
+The `try...catch` statement consists of a `try` block, which contains one or
+more statements, and a `catch` block, containing statements that specify what to
+do if an exception is thrown in the `try` block.
 
-<p>In other words, you want the <code>try</code> block to succeed—but if it does not, you
-  want control to pass to the <code>catch</code> block. If any statement within the
-  <code>try</code> block (or in a function called from within the <code>try</code> block)
-  throws an exception, control <em>immediately</em> shifts to the <code>catch</code>
-  block. If no exception is thrown in the <code>try</code> block, the <code>catch</code>
-  block is skipped. The <code>finally</code> block executes after the <code>try</code> and
-  <code>catch</code> blocks execute but before the statements following the
-  <code>try...catch</code> statement.</p>
+In other words, you want the `try` block to succeed—but if it does not, you want
+control to pass to the `catch` block. If any statement within the `try` block
+(or in a function called from within the `try` block) throws an exception,
+control _immediately_ shifts to the `catch` block. If no exception is thrown in
+the `try` block, the `catch` block is skipped. The `finally` block executes
+after the `try` and `catch` blocks execute but before the statements following
+the `try...catch` statement.
 
-<p>The following example uses a <code>try...catch</code> statement. The example calls a
-  function that retrieves a month name from an array based on the value passed to the
-  function. If the value does not correspond to a month number
-  (<code>1</code>–<code>12</code>), an exception is thrown with the value
-  <code>"InvalidMonthNo"</code> and the statements in the <code>catch</code> block set the
-  <code><var>monthName</var></code> variable to <code>'unknown'</code>.</p>
+The following example uses a `try...catch` statement. The example calls a
+function that retrieves a month name from an array based on the value passed to
+the function. If the value does not correspond to a month number (`1`–`12`), an
+exception is thrown with the value `"InvalidMonthNo"` and the statements in the
+`catch` block set the `monthName` variable to `'unknown'`.
 
-<pre class="brush: js">function getMonthName(mo) {
+```js
+function getMonthName(mo) {
   mo = mo - 1; // Adjust month number for array index (1 = Jan, 12 = Dec)
   let months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',
                 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
@@ -403,69 +394,68 @@ catch (e) {
   monthName = 'unknown';
   logMyErrors(e); // pass exception object to error handler (i.e. your own function)
 }
-</pre>
+```
 
-<h4 id="The_catch_block">The <code>catch</code> block</h4>
+#### The `catch` block
 
-<p>You can use a <code>catch</code> block to handle all exceptions that may be generated
-  in the <code>try</code> block.</p>
+You can use a `catch` block to handle all exceptions that may be generated in
+the `try` block.
 
-<pre class="brush: js">catch (<var>catchID</var>) {
-  <var>statements</var>
+```js
+catch (catchID) {
+  statements
 }
-</pre>
+```
 
-<p>The <code>catch</code> block specifies an identifier (<code><var>catchID</var></code>
-  in the preceding syntax) that holds the value specified by the <code>throw</code>
-  statement. You can use this identifier to get information about the exception that was
-  thrown.</p>
+The `catch` block specifies an identifier (`catchID` in the preceding syntax)
+that holds the value specified by the `throw` statement. You can use this
+identifier to get information about the exception that was thrown.
 
-<p>JavaScript creates this identifier when the <code>catch</code> block is entered. The
-  identifier lasts only for the duration of the <code>catch</code> block. Once the
-  <code>catch</code> block finishes executing, the identifier no longer exists.</p>
+JavaScript creates this identifier when the `catch` block is entered. The
+identifier lasts only for the duration of the `catch` block. Once the `catch`
+block finishes executing, the identifier no longer exists.
 
-<p>For example, the following code throws an exception. When the exception occurs, control
-  transfers to the <code>catch</code> block.</p>
+For example, the following code throws an exception. When the exception occurs,
+control transfers to the `catch` block.
 
-<pre class="brush: js">try {
+```js
+try {
   throw 'myException'; // generates an exception
 }
 catch (err) {
   // statements to handle any exceptions
   logMyErrors(err);    // pass exception object to error handler
 }
-</pre>
+```
 
-<div class="notecard note">
-  <p><strong>Note:</strong> When logging errors to the console inside
-    a <code>catch</code> block, using <code>console.error()</code> rather than
-    <code>console.log()</code> is advised for debugging. It formats the message as an
-    error, and adds it to the list of error messages generated by the page. </p>
-</div>
+> **Note:** When logging errors to the console inside a `catch` block, using
+> `console.error()` rather than `console.log()` is advised for debugging. It
+> formats the message as an error, and adds it to the list of error messages
+> generated by the page.
 
-<h4 id="The_finally_block">The <code>finally</code> block</h4>
+#### The `finally` block
 
-<p>The <code>finally</code> block contains statements to be executed <em>after</em> the
-  <code>try</code> and <code>catch</code> blocks execute. Additionally, the
-  <code>finally</code> block executes <em>before</em> the code that follows the
-  <code>try…catch…finally</code> statement.</p>
+The `finally` block contains statements to be executed _after_ the `try` and
+`catch` blocks execute. Additionally, the `finally` block executes _before_ the
+code that follows the `try…catch…finally` statement.
 
-<p>It is also important to note that the <code>finally</code> block will execute
-  <em>whether or not</em> an exception is thrown. If an exception is thrown, however, the
-  statements in the <code>finally</code> block execute even if no <code>catch</code> block
-  handles the exception that was thrown.</p>
+It is also important to note that the `finally` block will execute _whether or
+not_ an exception is thrown. If an exception is thrown, however, the statements
+in the `finally` block execute even if no `catch` block handles the exception
+that was thrown.
 
-<p>You can use the <code>finally</code> block to make your script fail gracefully when an
-  exception occurs. For example, you may need to release a resource that your script has
-  tied up.</p>
+You can use the `finally` block to make your script fail gracefully when an
+exception occurs. For example, you may need to release a resource that your
+script has tied up.
 
-<p>The following example opens a file and then executes statements that use the file.
-  (Server-side JavaScript allows you to access files.) If an exception is thrown while the
-  file is open, the <code>finally</code> block closes the file before the script fails.
-  Using <code>finally</code> here <em>ensures</em> that the file is never left open, even
-  if an error occurs.</p>
+The following example opens a file and then executes statements that use the
+file. (Server-side JavaScript allows you to access files.) If an exception is
+thrown while the file is open, the `finally` block closes the file before the
+script fails. Using `finally` here _ensures_ that the file is never left open,
+even if an error occurs.
 
-<pre class="brush: js">openMyFile();
+```js
+openMyFile();
 try {
   writeMyFile(theData); // This may throw an error
 } catch(e) {
@@ -473,14 +463,14 @@ try {
 } finally {
   closeMyFile(); // Always close the resource
 }
-</pre>
+```
 
-<p>If the <code>finally</code> block returns a value, this value becomes the return value
-  of the entire <code>try…catch…finally</code> production, regardless of any
-  <code>return</code> statements in the <code>try</code> and <code>catch</code> blocks:
-</p>
+If the `finally` block returns a value, this value becomes the return value of
+the entire `try…catch…finally` production, regardless of any `return` statements
+in the `try` and `catch` blocks:
 
-<pre class="brush: js">function f() {
+```js
+function f() {
   try {
     console.log(0);
     throw 'bogus';
@@ -498,12 +488,13 @@ try {
   console.log(5);   // not reachable
 }
 console.log(f()); // 0, 1, 3, false
-</pre>
+```
 
-<p>Overwriting of return values by the <code>finally</code> block also applies to
-  exceptions thrown or re-thrown inside of the <code>catch</code> block:</p>
+Overwriting of return values by the `finally` block also applies to exceptions
+thrown or re-thrown inside of the `catch` block:
 
-<pre class="brush: js">function f() {
+```js
+function f() {
   try {
     throw 'bogus';
   } catch(e) {
@@ -527,44 +518,42 @@ try {
 
 // OUTPUT
 // caught inner "bogus"
-// false</pre>
+// false
+```
 
-<h4 id="Nesting_try...catch_statements">Nesting try...catch statements</h4>
+#### Nesting try...catch statements
 
-<p>You can nest one or more <code>try...catch</code> statements.</p>
+You can nest one or more `try...catch` statements.
 
-<p>If an inner <code>try</code> block does <em>not</em> have a corresponding
-  <code>catch</code> block:</p>
+If an inner `try` block does _not_ have a corresponding `catch` block:
 
-<ol>
-  <li>it <em>must</em> contain a <code>finally</code> block, and</li>
-  <li>the enclosing <code>try...catch</code> statement's <code>catch</code> block is
-    checked for a match.</li>
-</ol>
+1.  it *must* contain a `finally` block, and
+2.  the enclosing `try...catch` statement's `catch` block is checked for a
+    match.
 
-<p>For more information, see <a
-    href="/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#nested_try-blocks">nested
-    try-blocks</a> on the
-  <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/try...catch">try...catch</a></code>
-  reference page.</p>
+For more information, see
+[nested try-blocks](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#nested_try-blocks)
+on the
+[`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch)
+reference page.
 
-<h3 id="Utilizing_Error_objects">Utilizing Error objects</h3>
+### Utilizing Error objects
 
-<p>Depending on the type of error, you may be able to use the <code>name</code> and
-  <code>message</code> properties to get a more refined message.</p>
+Depending on the type of error, you may be able to use the `name` and `message`
+properties to get a more refined message.
 
-<p>The <code>name</code> property provides the general class of <code>Error</code> (such
-  as <code>DOMException</code> or <code>Error</code>), while <code>message</code>
-  generally provides a more succinct message than one would get by converting the error
-  object to a string.</p>
+The `name` property provides the general class of `Error` (such as
+`DOMException` or `Error`), while `message` generally provides a more succinct
+message than one would get by converting the error object to a string.
 
-<p>If you are throwing your own exceptions, in order to take advantage of these properties
-  (such as if your <code>catch</code> block doesn't discriminate between your own
-  exceptions and system ones), you can use the <code>Error</code> constructor.</p>
+If you are throwing your own exceptions, in order to take advantage of these
+properties (such as if your `catch` block doesn't discriminate between your own
+exceptions and system ones), you can use the `Error` constructor.
 
-<p>For example:</p>
+For example:
 
-<pre class="brush: js">function doSomethingErrorProne() {
+```js
+function doSomethingErrorProne() {
   if (ourCodeMakesAMistake()) {
     throw (new Error('The message'));
   } else {
@@ -578,7 +567,7 @@ try {
   console.error(e.name);    // logs 'Error'
   console.error(e.message); // logs 'The message', or a JavaScript error message
 }
-</pre>
+```
 
-<div>{{PreviousNext("Web/JavaScript/Guide/Grammar_and_types",
-  "Web/JavaScript/Guide/Loops_and_iteration")}}</div>
+{{PreviousNext("Web/JavaScript/Guide/Grammar_and_types",
+  "Web/JavaScript/Guide/Loops_and_iteration")}}

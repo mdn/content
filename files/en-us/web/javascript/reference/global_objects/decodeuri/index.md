@@ -2,83 +2,85 @@
 title: decodeURI()
 slug: Web/JavaScript/Reference/Global_Objects/decodeURI
 tags:
-- Decode
-- JavaScript
-- Method
-- String
-- Text
-- URI
-- URL
-- decodeURI
-- decoding
+  - Decode
+  - JavaScript
+  - Method
+  - String
+  - Text
+  - URI
+  - URL
+  - decodeURI
+  - decoding
 browser-compat: javascript.builtins.decodeURI
 ---
-<div>{{jsSidebar("Objects")}}</div>
+{{jsSidebar("Objects")}}
 
-<p><span class="seoSummary">The <code><strong>decodeURI()</strong></code> function decodes
-    a Uniform Resource Identifier (URI) previously created by {{jsxref("encodeURI",
-    "encodeURI()")}} or by a similar routine.</span></p>
+The **`decodeURI()`** function decodes a Uniform Resource Identifier (URI)
+previously created by {{jsxref("encodeURI",
+    "encodeURI()")}}
+or by a similar routine.
 
-<div>{{EmbedInteractiveExample("pages/js/globalprops-decodeuri.html")}}</div>
+{{EmbedInteractiveExample("pages/js/globalprops-decodeuri.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><code>decodeURI(<var>encodedURI</var>)</code></pre>
+```js
+decodeURI(encodedURI)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>encodedURI</var></code></dt>
-  <dd>A complete, encoded Uniform Resource Identifier.</dd>
-</dl>
+- `encodedURI`
+  - : A complete, encoded Uniform Resource Identifier.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A new string representing the unencoded version of the given encoded Uniform Resource
-  Identifier (URI).</p>
+A new string representing the unencoded version of the given encoded Uniform
+Resource Identifier (URI).
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>Throws an {{jsxref("URIError")}} ("malformed URI sequence") exception when
-  <code><var>encodedURI</var></code> contains invalid character sequences.</p>
+Throws an {{jsxref("URIError")}} ("malformed URI sequence") exception when
+`encodedURI` contains invalid character sequences.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Replaces each escape sequence in the encoded URI with the character that it represents,
-  but does not decode escape sequences that could not have been introduced by
-  {{jsxref("encodeURI")}}. The character “<code>#</code>” is not decoded from escape
-  sequences.</p>
+Replaces each escape sequence in the encoded URI with the character that it
+represents, but does not decode escape sequences that could not have been
+introduced by {{jsxref("encodeURI")}}. The character “`#`” is not
+decoded from escape sequences.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Decoding_a_Cyrillic_URL">Decoding a Cyrillic URL</h3>
+### Decoding a Cyrillic URL
 
-<pre class="brush: js">decodeURI('https://developer.mozilla.org/ru/docs/JavaScript_%D1%88%D0%B5%D0%BB%D0%BB%D1%8B');
+```js
+decodeURI('https://developer.mozilla.org/ru/docs/JavaScript_%D1%88%D0%B5%D0%BB%D0%BB%D1%8B');
 // "https://developer.mozilla.org/ru/docs/JavaScript_шеллы"
-</pre>
+```
 
-<h3 id="Catching_errors">Catching errors</h3>
+### Catching errors
 
-<pre class="brush: js">try {
+```js
+try {
   var a = decodeURI('%E0%A4%A');
 } catch(e) {
   console.error(e);
 }
 
-// URIError: malformed URI sequence</pre>
+// URIError: malformed URI sequence
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("decodeURIComponent", "decodeURIComponent()")}}</li>
-  <li>{{jsxref("encodeURI", "encodeURI()")}}</li>
-  <li>{{jsxref("encodeURIComponent", "encodeURIComponent()")}}</li>
-</ul>
+- {{jsxref("decodeURIComponent", "decodeURIComponent()")}}
+- {{jsxref("encodeURI", "encodeURI()")}}
+- {{jsxref("encodeURIComponent", "encodeURIComponent()")}}

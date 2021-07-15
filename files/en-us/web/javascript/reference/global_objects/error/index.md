@@ -8,97 +8,123 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Error
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code>Error</code> objects are thrown when runtime errors occur. The <code>Error</code> object can also be used as a base object for user-defined exceptions. See below for standard built-in error types.</p>
+`Error` objects are thrown when runtime errors occur. The `Error` object can
+also be used as a base object for user-defined exceptions. See below for
+standard built-in error types.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Runtime errors result in new <code>Error</code> objects being created and thrown.</p>
+Runtime errors result in new `Error` objects being created and thrown.
 
-<h3 id="Error_types">Error types</h3>
+### Error types
 
-<p>Besides the generic <code>Error</code> constructor, there are other core error constructors in JavaScript. For client-side exceptions, see <a href="/en-US/docs/Web/JavaScript/Guide/Statements#Exception_handling_statements">Exception handling statements</a>.</p>
+Besides the generic `Error` constructor, there are other core error constructors
+in JavaScript. For client-side exceptions, see
+[Exception handling statements](/en-US/docs/Web/JavaScript/Guide/Statements#Exception_handling_statements).
 
-<dl>
- <dt>{{JSxRef("EvalError")}}</dt>
- <dd>Creates an instance representing an error that occurs regarding the global function {{JSxRef("eval", "eval()")}}.</dd>
- <dt>{{JSxRef("RangeError")}}</dt>
- <dd>Creates an instance representing an error that occurs when a numeric variable or parameter is outside of its valid range.</dd>
- <dt>{{JSxRef("ReferenceError")}}</dt>
- <dd>Creates an instance representing an error that occurs when de-referencing an invalid reference.</dd>
- <dt>{{JSxRef("SyntaxError")}}</dt>
- <dd>Creates an instance representing a syntax error.</dd>
- <dt>{{JSxRef("TypeError")}}</dt>
- <dd>Creates an instance representing an error that occurs when a variable or parameter is not of a valid type.</dd>
- <dt>{{JSxRef("URIError")}}</dt>
- <dd>Creates an instance representing an error that occurs when {{JSxRef("encodeURI", "encodeURI()")}} or {{JSxRef("decodeURI", "decodeURI()")}} are passed invalid parameters.</dd>
- <dt>{{JSxRef("AggregateError")}}</dt>
- <dd>Creates an instance representing several errors wrapped in a single error when multiple errors need to be reported by an operation, for example by {{JSxRef("Promise.any()")}}.</dd>
- <dt>{{JSxRef("InternalError")}} {{non-standard_inline}}</dt>
- <dd>Creates an instance representing an error that occurs when an internal error in the JavaScript engine is thrown. E.g. "too much recursion".</dd>
-</dl>
+- {{JSxRef("EvalError")}}
+  - : Creates an instance representing an error that occurs regarding the global
+    function {{JSxRef("eval", "eval()")}}.
+- {{JSxRef("RangeError")}}
+  - : Creates an instance representing an error that occurs when a numeric
+    variable or parameter is outside of its valid range.
+- {{JSxRef("ReferenceError")}}
+  - : Creates an instance representing an error that occurs when de-referencing
+    an invalid reference.
+- {{JSxRef("SyntaxError")}}
+  - : Creates an instance representing a syntax error.
+- {{JSxRef("TypeError")}}
+  - : Creates an instance representing an error that occurs when a variable or
+    parameter is not of a valid type.
+- {{JSxRef("URIError")}}
+  - : Creates an instance representing an error that occurs when
+    {{JSxRef("encodeURI", "encodeURI()")}} or
+    {{JSxRef("decodeURI", "decodeURI()")}} are passed invalid
+    parameters.
+- {{JSxRef("AggregateError")}}
+  - : Creates an instance representing several errors wrapped in a single error
+    when multiple errors need to be reported by an operation, for example by
+    {{JSxRef("Promise.any()")}}.
+- {{JSxRef("InternalError")}} {{non-standard_inline}}
+  - : Creates an instance representing an error that occurs when an internal
+    error in the JavaScript engine is thrown. E.g. "too much recursion".
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/Error"><code>Error()</code></a></dt>
- <dd>Creates a new <code>Error</code> object.</dd>
-</dl>
+- [`Error()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/Error)
+  - : Creates a new `Error` object.
 
-<h2 id="Static_methods">Static methods</h2>
+## Static methods
 
-<dl>
- <dt>{{JSxRef("Error.captureStackTrace()")}}</dt>
- <dd>A non-standard <strong>V8</strong> function that creates the {{JSxRef("Error.prototype.stack", "stack")}} property on an Error instance.</dd>
-</dl>
+- {{JSxRef("Error.captureStackTrace()")}}
+  - : A non-standard **V8** function that creates the
+    {{JSxRef("Error.prototype.stack", "stack")}} property on an
+    Error instance.
 
-<h2 id="Instance_properties">Instance properties</h2>
+## Instance properties
 
-<dl>
- <dt>{{jsxref("Error.prototype.message")}}</dt>
- <dd>Error message.</dd>
- <dt>{{jsxref("Error.prototype.name")}}</dt>
- <dd>Error name.</dd>
- <dt>{{jsxref("Error.prototype.description")}} {{non-standard_inline}}</dt>
- <dd>A non-standard Microsoft property for the error description. Similar to {{jsxref("Error.prototype.message", "message")}}.</dd>
- <dt>{{jsxref("Error.prototype.number")}} {{non-standard_inline}}</dt>
- <dd>A non-standard Microsoft property for an error number.</dd>
- <dt>{{jsxref("Error.prototype.fileName")}} {{non-standard_inline}}</dt>
- <dd>A non-standard Mozilla property for the path to the file that raised this error.</dd>
- <dt>{{jsxref("Error.prototype.lineNumber")}} {{non-standard_inline}}</dt>
- <dd>A non-standard Mozilla property for the line number in the file that raised this error.</dd>
- <dt>{{jsxref("Error.prototype.columnNumber")}} {{non-standard_inline}}</dt>
- <dd>A non-standard Mozilla property for the column number in the line that raised this error.</dd>
- <dt>{{jsxref("Error.prototype.stack")}} {{non-standard_inline}}</dt>
- <dd>A non-standard Mozilla property for a stack trace.</dd>
-</dl>
+- {{jsxref("Error.prototype.message")}}
+  - : Error message.
+- {{jsxref("Error.prototype.name")}}
+  - : Error name.
+- {{jsxref("Error.prototype.description")}}
+  {{non-standard_inline}}
+  - : A non-standard Microsoft property for the error description. Similar to
+    {{jsxref("Error.prototype.message", "message")}}.
+- {{jsxref("Error.prototype.number")}}
+  {{non-standard_inline}}
+  - : A non-standard Microsoft property for an error number.
+- {{jsxref("Error.prototype.fileName")}}
+  {{non-standard_inline}}
+  - : A non-standard Mozilla property for the path to the file that raised this
+    error.
+- {{jsxref("Error.prototype.lineNumber")}}
+  {{non-standard_inline}}
+  - : A non-standard Mozilla property for the line number in the file that
+    raised this error.
+- {{jsxref("Error.prototype.columnNumber")}}
+  {{non-standard_inline}}
+  - : A non-standard Mozilla property for the column number in the line that
+    raised this error.
+- {{jsxref("Error.prototype.stack")}}
+  {{non-standard_inline}}
+  - : A non-standard Mozilla property for a stack trace.
 
-<h2 id="Instance_methods">Instance methods</h2>
+## Instance methods
 
-<dl>
- <dt>{{jsxref("Error.prototype.toString()")}}</dt>
- <dd>Returns a string representing the specified object. Overrides the {{jsxref("Object.prototype.toString()")}} method.</dd>
-</dl>
+- {{jsxref("Error.prototype.toString()")}}
+  - : Returns a string representing the specified object. Overrides the
+    {{jsxref("Object.prototype.toString()")}} method.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Throwing_a_generic_error">Throwing a generic error</h3>
+### Throwing a generic error
 
-<p>Usually you create an <code>Error</code> object with the intention of raising it using the {{JSxRef("Statements/throw", "throw")}} keyword. You can handle the error using the {{JSxRef("Statements/try...catch", "try...catch")}} construct:</p>
+Usually you create an `Error` object with the intention of raising it using the
+{{JSxRef("Statements/throw", "throw")}} keyword. You can handle the
+error using the
+{{JSxRef("Statements/try...catch", "try...catch")}} construct:
 
-<pre class="brush: js">try {
+```js
+try {
   throw new Error('Whoops!')
 } catch (e) {
   console.error(e.name + ': ' + e.message)
 }
-</pre>
+```
 
-<h3 id="Handling_a_specific_error">Handling a specific error</h3>
+### Handling a specific error
 
-<p>You can choose to handle only specific error types by testing the error type with the error's {{JSxRef("Object.prototype.constructor", "constructor")}} property or, if you're writing for modern JavaScript engines, {{JSxRef("Operators/instanceof", "instanceof")}} keyword:</p>
+You can choose to handle only specific error types by testing the error type
+with the error's
+{{JSxRef("Object.prototype.constructor", "constructor")}}
+property or, if you're writing for modern JavaScript engines,
+{{JSxRef("Operators/instanceof", "instanceof")}} keyword:
 
-<pre class="brush: js">try {
+```js
+try {
   foo.bar()
 } catch (e) {
   if (e instanceof EvalError) {
@@ -113,25 +139,32 @@ browser-compat: javascript.builtins.Error
     throw e;
   }
 }
-</pre>
+```
 
-<h3 id="Custom_Error_Types">Custom Error Types</h3>
+### Custom Error Types
 
-<p>You might want to define your own error types deriving from <code>Error</code> to be able to <code>throw new MyError()</code> and use <code>instanceof MyError</code> to check the kind of error in the exception handler.  This results in cleaner and more consistent error handling code.</p>
+You might want to define your own error types deriving from `Error` to be able
+to `throw new MyError()` and use `instanceof MyError` to check the kind of error
+in the exception handler.  This results in cleaner and more consistent error
+handling code.
 
-<p>See <a href="http://stackoverflow.com/questions/1382107/whats-a-good-way-to-extend-error-in-javascript">"What's a good way to extend Error in JavaScript?"</a> on StackOverflow for an in-depth discussion.</p>
+See ["What's a good way to extend Error in JavaScript?"](http://stackoverflow.com/questions/1382107/whats-a-good-way-to-extend-error-in-javascript) on
+StackOverflow for an in-depth discussion.
 
-<h4 id="ES6_Custom_Error_Class">ES6 Custom Error Class</h4>
+#### ES6 Custom Error Class
 
-<div class="notecard warning">
-<p><strong>Warning:</strong> Versions of Babel prior to 7 can handle <code>CustomError</code> class methods, but only when they are declared with <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty()</a>. Otherwise, old versions of Babel and other transpilers will not correctly handle the following code without <a href="https://github.com/loganfsmyth/babel-plugin-transform-builtin-extend">additional configuration</a>.</p>
-</div>
+> **Warning:** Versions of Babel prior to 7 can handle `CustomError`
+> class methods, but only when they are declared with
+> [Object.defineProperty()](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty).
+> Otherwise, old versions of Babel and other transpilers will not correctly
+> handle the following code without
+> [additional configuration](https://github.com/loganfsmyth/babel-plugin-transform-builtin-extend).
 
-<div class="notecard note">
-<p><strong>Note:</strong> Some browsers include the <code>CustomError</code> constructor in the stack trace when using ES2015 classes.</p>
-</div>
+> **Note:** Some browsers include the `CustomError` constructor in the stack
+> trace when using ES2015 classes.
 
-<pre class="brush: js">class CustomError extends Error {
+```js
+class CustomError extends Error {
   constructor(foo = 'bar', ...params) {
     // Pass remaining arguments (including vendor specific ones) to parent constructor
     super(...params)
@@ -155,15 +188,16 @@ try {
   console.error(e.foo)     //baz
   console.error(e.message) //bazMessage
   console.error(e.stack)   //stacktrace
-}</pre>
+}
+```
 
-<h4 id="ES5_Custom_Error_Object">ES5 Custom Error Object</h4>
+#### ES5 Custom Error Object
 
-<div class="warning">
-<p><strong>Warning:</strong> All browsers include the <code>CustomError</code> constructor in the stack trace when using a prototypal declaration.</p>
-</div>
+> **Warning:** All browsers include the `CustomError` constructor in the stack
+> trace when using a prototypal declaration.
 
-<pre class="brush: js">function CustomError(foo, message, fileName, lineNumber) {
+```js
+function CustomError(foo, message, fileName, lineNumber) {
   var instance = new Error(message, fileName, lineNumber);
   instance.name = 'CustomError';
   instance.foo = foo;
@@ -195,19 +229,18 @@ try {
   console.error(e.name); //CustomError
   console.error(e.foo); //baz
   console.error(e.message); //bazMessage
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{JSxRef("Statements/throw", "throw")}}</li>
- <li>{{JSxRef("Statements/try...catch", "try...catch")}}</li>
-</ul>
+- {{JSxRef("Statements/throw", "throw")}}
+- {{JSxRef("Statements/try...catch", "try...catch")}}

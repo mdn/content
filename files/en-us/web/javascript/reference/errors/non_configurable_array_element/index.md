@@ -7,88 +7,92 @@ tags:
   - JavaScript
   - TypeError
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<p>The JavaScript exception "can't delete non-configurable array element" occurs when it
-  was attempted to <a
-    href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length#shortening_an_array">shorten
-    the length</a> of an array, but one of the array's elements is <a
-    href="/en-US/docs/Web/JavaScript/Data_structures#properties">non-configurable</a>.</p>
+The JavaScript exception "can't delete non-configurable array element" occurs
+when it was attempted to
+[shorten the length](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length#shortening_an_array)
+of an array, but one of the array's elements is
+[non-configurable](/en-US/docs/Web/JavaScript/Data_structures#properties).
 
-<h2 id="Message">Message</h2>
+## Message
 
-<pre class="brush: js">TypeError: can't delete non-configurable array element (Firefox)
+```js
+TypeError: can't delete non-configurable array element (Firefox)
 TypeError: Cannot delete property '2' of [object Array] (Chrome)
-</pre>
+```
 
-<h2 id="Error_type">Error type</h2>
+## Error type
 
-<p>{{jsxref("TypeError")}}</p>
+{{jsxref("TypeError")}}
 
-<h2 id="What_went_wrong">What went wrong?</h2>
+## What went wrong?
 
-<p>It was attempted to <a
-    href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length#shortening_an_array">shorten
-    the length</a> of an array, but one of the array's elements is <a
-    href="/en-US/docs/Web/JavaScript/Data_structures#properties">non-configurable</a>.
-  When shortening an array, the elements beyond the new array length will be deleted,
-  which failed in this situation.</p>
+It was attempted to
+[shorten the length](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length#shortening_an_array)
+of an array, but one of the array's elements is
+[non-configurable](/en-US/docs/Web/JavaScript/Data_structures#properties). When
+shortening an array, the elements beyond the new array length will be deleted,
+which failed in this situation.
 
-<p>The <code>configurable</code> attribute controls whether the property can be deleted
-  from the object and whether its attributes (other than <code>writable</code>) can be
-  changed.</p>
+The `configurable` attribute controls whether the property can be deleted from
+the object and whether its attributes (other than `writable`) can be changed.
 
-<p>Usually, properties in an object created by an <a
-    href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#syntax">array
-    initializer</a> are configurable. However, for example, when using
-  {{jsxref("Object.defineProperty()")}}, the property isn't configurable by default.</p>
+Usually, properties in an object created by an
+[array initializer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#syntax)
+are configurable. However, for example, when using
+{{jsxref("Object.defineProperty()")}}, the property isn't
+configurable by default.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Non-configurable_properties_created_by_Object.defineProperty">Non-configurable
-  properties created by <code>Object.defineProperty</code></h3>
+### Non-configurable properties created by `Object.defineProperty`
 
-<p>The {{jsxref("Object.defineProperty()")}} creates non-configurable properties by
-  default if you haven't specified them as configurable.</p>
+The {{jsxref("Object.defineProperty()")}} creates non-configurable
+properties by default if you haven't specified them as configurable.
 
-<pre class="brush: js example-bad">"use strict";
+```js example-bad
+"use strict";
 var arr = [];
 Object.defineProperty(arr, 0, {value: 0});
 Object.defineProperty(arr, 1, {value: "1"});
 
 arr.length = 1;
 // TypeError: can't delete non-configurable array element
-</pre>
+```
 
-<p>You will need to set the elements as configurable, if you intend to shorten the array.
-</p>
+You will need to set the elements as configurable, if you intend to shorten the
+array.
 
-<pre class="brush: js example-good">"use strict";
+```js example-good
+"use strict";
 var arr = [];
 Object.defineProperty(arr, 0, {value: 0, configurable: true});
 Object.defineProperty(arr, 1, {value: "1", configurable: true});
 
 arr.length = 1;
-</pre>
+```
 
-<h3 id="Seal-ed_Arrays"><code>Seal</code>-ed Arrays</h3>
+### `Seal`-ed Arrays
 
-<p>The {{jsxref("Object.seal()")}} function marks all existing elements as
-  non-configurable.</p>
+The {{jsxref("Object.seal()")}} function marks all existing elements as
+non-configurable.
 
-<pre class="brush: js example-bad">"use strict";
+```js example-bad
+"use strict";
 var arr = [1,2,3];
 Object.seal(arr);
 
 arr.length = 1;
 // TypeError: can't delete non-configurable array element
-</pre>
+```
 
-<p>You either need to remove the {{jsxref("Object.seal()")}} call, or make a copy of it.
-  In case of a copy, shortening the copy of the array does not modify the original array
-  length.</p>
+You either need to remove the {{jsxref("Object.seal()")}} call, or make
+a copy of it. In case of a copy, shortening the copy of the array does not
+modify the original array length.
 
-<pre class="brush: js example-good">"use strict";
+```js example-good
+"use strict";
 var arr = [1,2,3];
 Object.seal(arr);
 
@@ -96,14 +100,11 @@ Object.seal(arr);
 var copy = Array.from(arr);
 copy.length = 1;
 // arr.length == 3
-</pre>
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/JavaScript/Data_structures#properties">[[Configurable]]</a>
-  </li>
-  <li>{{jsxref("Array.length")}}</li>
-  <li>{{jsxref("Object.defineProperty()")}}</li>
-  <li>{{jsxref("Object.seal()")}}</li>
-</ul>
+- [\[\[Configurable\]\]](/en-US/docs/Web/JavaScript/Data_structures#properties)
+- {{jsxref("Array.length")}}
+- {{jsxref("Object.defineProperty()")}}
+- {{jsxref("Object.seal()")}}

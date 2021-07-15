@@ -2,56 +2,57 @@
 title: Array.isArray()
 slug: Web/JavaScript/Reference/Global_Objects/Array/isArray
 tags:
-- Array
-- ECMAScript 5
-- JavaScript
-- Method
-- Reference
-- Polyfill
+  - Array
+  - ECMAScript 5
+  - JavaScript
+  - Method
+  - Reference
+  - Polyfill
 browser-compat: javascript.builtins.Array.isArray
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <code><strong>Array.isArray()</strong></code> method determines whether the passed
-  value is an {{jsxref("Array")}}.</p>
+The **`Array.isArray()`** method determines whether the passed value is an
+{{jsxref("Array")}}.
 
-<pre class="brush: js">Array.isArray([1, 2, 3]);  // true
+```js
+Array.isArray([1, 2, 3]);  // true
 Array.isArray({foo: 123}); // false
 Array.isArray('foobar');   // false
 Array.isArray(undefined);  // false
-</pre>
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">Array.isArray(value)</pre>
+```js
+Array.isArray(value)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>value</code></dt>
-  <dd>The value to be checked.</dd>
-</dl>
+- `value`
+  - : The value to be checked.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p><code>true</code> if the value is an {{jsxref("Array")}}; otherwise,
-  <code>false</code>.</p>
+`true` if the value is an {{jsxref("Array")}}; otherwise, `false`.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>If the value is an {{jsxref("Array")}}, <code>true</code> is returned; otherwise,
-  <code>false</code> is. </p>
+If the value is an {{jsxref("Array")}}, `true` is returned; otherwise,
+`false` is.
 
-<p>See the article <a href="http://web.mit.edu/jwalden/www/isArray.html">“Determining with
-    absolute accuracy whether or not a JavaScript object is an array”</a> for more
-  details. Given a {{jsxref("TypedArray")}} instance, <code>false</code> is always
-  returned.</p>
+See the article
+[“Determining with absolute accuracy whether or not a JavaScript object is an array”](http://web.mit.edu/jwalden/www/isArray.html)
+for more details. Given a {{jsxref("TypedArray")}} instance, `false` is
+always returned.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_Array.isArray">Using Array.isArray</h3>
+### Using Array.isArray
 
-<pre class="brush: js">// all following calls return true
+```js
+// all following calls return true
 Array.isArray([]);
 Array.isArray([1]);
 Array.isArray(new Array());
@@ -71,14 +72,15 @@ Array.isArray(true);
 Array.isArray(false);
 Array.isArray(new Uint8Array(32));
 Array.isArray({ __proto__: Array.prototype });
-</pre>
+```
 
-<h3 id="instanceof_vs_isArray"><code>instanceof</code> vs <code>isArray</code></h3>
+### `instanceof` vs `isArray`
 
-<p>When checking for <code>Array</code> instance, <code>Array.isArray</code> is preferred
-  over <code>instanceof</code> because it works through <code>iframes</code>.</p>
+When checking for `Array` instance, `Array.isArray` is preferred
+over `instanceof` because it works through `iframes`.
 
-<pre class="brush: js">var iframe = document.createElement('iframe');
+```js
+var iframe = document.createElement('iframe');
 document.body.appendChild(iframe);
 xArray = window.frames[window.frames.length-1].Array;
 var arr = new xArray(1,2,3); // [1,2,3]
@@ -87,21 +89,19 @@ var arr = new xArray(1,2,3); // [1,2,3]
 Array.isArray(arr);  // true
 // Considered harmful, because doesn't work through iframes
 arr instanceof Array; // false
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>A polyfill of <code>Array.isArray</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-array"><code>core-js</code></a></li>
-  <li><a href="https://github.com/behnammodi/polyfill/blob/master/array.polyfill.js">A
-    polyfill</a></li>
-  <li>{{jsxref("Array")}}</li>
-</ul>
+- A polyfill of `Array.isArray` is available in
+  [`core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [A polyfill](https://github.com/behnammodi/polyfill/blob/master/array.polyfill.js)
+- {{jsxref("Array")}}

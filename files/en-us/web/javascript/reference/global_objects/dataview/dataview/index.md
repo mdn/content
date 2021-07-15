@@ -2,90 +2,87 @@
 title: DataView() constructor
 slug: Web/JavaScript/Reference/Global_Objects/DataView/DataView
 tags:
-- Constructor
-- DataView
-- JavaScript
-- Reference
-- TypedArrays
-- Polyfill
+  - Constructor
+  - DataView
+  - JavaScript
+  - Reference
+  - TypedArrays
+  - Polyfill
 browser-compat: javascript.builtins.DataView.DataView
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>DataView()</code></strong> constructor is used to create
-  {{jsxref("DataView")}} objects.</p>
+The **`DataView()`** constructor is used to create {{jsxref("DataView")}}
+objects.
 
-<div>{{EmbedInteractiveExample("pages/js/dataview-constructor.html")}}</div>
+{{EmbedInteractiveExample("pages/js/dataview-constructor.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush: js">
+```js
 new DataView(buffer)
 new DataView(buffer, byteOffset)
 new DataView(buffer, byteOffset, byteLength)
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>buffer</var></code></dt>
-  <dd>An existing {{jsxref("ArrayBuffer")}} or {{jsxref("SharedArrayBuffer")}} to use as
-    the storage backing the new <code>DataView</code> object.</dd>
-  <dt><code><var>byteOffset</var></code> {{optional_inline}}</dt>
-  <dd>The offset, in bytes, to the first byte in the above buffer for the new view to
-    reference. If unspecified, the buffer view starts with the first byte.</dd>
-  <dt><code><var>byteLength</var></code> {{optional_inline}}</dt>
-  <dd>The number of elements in the byte array. If unspecified, the view's length will
-    match the buffer's length.</dd>
-</dl>
+- `buffer`
+  - : An existing {{jsxref("ArrayBuffer")}} or
+    {{jsxref("SharedArrayBuffer")}} to use as the storage backing the
+    new `DataView` object.
+- `byteOffset` {{optional_inline}}
+  - : The offset, in bytes, to the first byte in the above buffer for the new
+    view to reference. If unspecified, the buffer view starts with the first
+    byte.
+- `byteLength` {{optional_inline}}
+  - : The number of elements in the byte array. If unspecified, the view's
+    length will match the buffer's length.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A new <code>DataView</code> object representing the specified data buffer. (That
-  probably wasn't a very helpful description.)</p>
+A new `DataView` object representing the specified data buffer. (That probably
+wasn't a very helpful description.)
 
-<p>You can think of the returned object as an "interpreter" of the array buffer of bytes —
-  it knows how to convert numbers to fit within the buffer correctly, both when reading
-  and writing to it. This means handling integer and float conversion, endianness, and
-  other details of representing numbers in binary form.</p>
+You can think of the returned object as an "interpreter" of the array buffer of
+bytes — it knows how to convert numbers to fit within the buffer correctly, both
+when reading and writing to it. This means handling integer and float
+conversion, endianness, and other details of representing numbers in binary
+form.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt>{{jsxref("RangeError")}}</dt>
-  <dd>
-    <p>Thrown if the <code>byteOffset</code> or <code>byteLength</code> parameter values
-      result in the view extending past the end of the buffer.</p>
+- {{jsxref("RangeError")}}
 
-    <p>For example, if the buffer is 16 bytes long, the <code>byteOffset</code> is 8, and
-      the <code>byteLength</code> is 10, this error is thrown because the resulting view
-      tries to extend 2 bytes past the total length of the buffer.</p>
-  </dd>
-</dl>
+  - : Thrown if the `byteOffset` or `byteLength` parameter values result in the
+    view extending past the end of the buffer.
 
-<h2 id="Examples">Examples</h2>
+    For example, if the buffer is 16 bytes long, the `byteOffset` is 8, and the
+    `byteLength` is 10, this error is thrown because the resulting view tries to
+    extend 2 bytes past the total length of the buffer.
 
-<h3 id="Using_DataView">Using DataView</h3>
+## Examples
 
-<pre class="brush: js">var buffer = new ArrayBuffer(16);
+### Using DataView
+
+```js
+var buffer = new ArrayBuffer(16);
 var view = new DataView(buffer, 0);
 
 view.setInt16(1, 42);
 view.getInt16(1); // 42
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>A polyfill of <code>DataView</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-typed-arrays"><code>core-js</code></a></li>
-  <li>{{jsxref("DataView")}}</li>
-</ul>
+- A polyfill of `DataView` is available in
+  [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- {{jsxref("DataView")}}

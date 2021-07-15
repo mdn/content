@@ -2,63 +2,61 @@
 title: Reflect.get()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/get
 tags:
-- ECMAScript 2015
-- JavaScript
-- Method
-- Reference
-- Reflect
-- Polyfill
+  - ECMAScript 2015
+  - JavaScript
+  - Method
+  - Reference
+  - Reflect
+  - Polyfill
 browser-compat: javascript.builtins.Reflect.get
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The static <strong><code>Reflect.get()</code></strong> method works like getting a
-  property from an object (<code>target[propertyKey]</code>) as a function.</p>
+The static **`Reflect.get()`** method works like getting a property from an
+object (`target[propertyKey]`) as a function.
 
-<div>{{EmbedInteractiveExample("pages/js/reflect-get.html")}}</div>
+{{EmbedInteractiveExample("pages/js/reflect-get.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 Reflect.get(target, propertyKey)
 Reflect.get(target, propertyKey, receiver)
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>target</var></code></dt>
-  <dd>The target object on which to get the property.</dd>
-  <dt><code><var>propertyKey</var></code></dt>
-  <dd>The name of the property to get.</dd>
-  <dt><code><var>receiver</var></code> {{optional_inline}}</dt>
-  <dd>The value of <code>this</code> provided for the call to
-    <code><var>target</var></code> if a getter is encountered. When used with
-    {{jsxref("Proxy")}}, it can be an object that inherits from
-    <code><var>target</var></code>.</dd>
-</dl>
+- `target`
+  - : The target object on which to get the property.
+- `propertyKey`
+  - : The name of the property to get.
+- `receiver` {{optional_inline}}
+  - : The value of `this` provided for the call to `target` if a getter is
+    encountered. When used with {{jsxref("Proxy")}}, it can be an object
+    that inherits from `target`.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>The value of the property.</p>
+The value of the property.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>A {{jsxref("TypeError")}}, if <code><var>target</var></code> is not an
-  {{jsxref("Object")}}.</p>
+A {{jsxref("TypeError")}}, if `target` is not an
+{{jsxref("Object")}}.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The <code>Reflect.get</code> method allows you to get a property on an object. It is
-  like the <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors">property
-    accessor</a> syntax as a function.</p>
+The `Reflect.get` method allows you to get a property on an object. It is like
+the
+[property accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors)
+syntax as a function.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_Reflect.get">Using <code>Reflect.get()</code></h3>
+### Using `Reflect.get()`
 
-<pre class="brush: js">// Object
+```js
+// Object
 let obj = { x: 1, y: 2 }
 Reflect.get(obj, 'x')  // 1
 
@@ -85,21 +83,19 @@ let obj = new Proxy(x, {
   }
 })
 Reflect.get(obj, 'foo', y) // "3bar"
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>A polyfill of <code>Reflect.get</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-reflect"><code>core-js</code></a></li>
-  <li>{{jsxref("Reflect")}}</li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors">Property
-      accessors</a></li>
-</ul>
+- A polyfill of `Reflect.get` is available in
+  [`core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
+- {{jsxref("Reflect")}}
+- [Property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors)

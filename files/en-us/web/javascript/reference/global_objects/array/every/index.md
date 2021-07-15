@@ -2,25 +2,24 @@
 title: Array.prototype.every()
 slug: Web/JavaScript/Reference/Global_Objects/Array/every
 tags:
-- Array
-- ECMAScript 5
-- JavaScript
-- Method
-- Prototype
-- Polyfill
+  - Array
+  - ECMAScript 5
+  - JavaScript
+  - Method
+  - Prototype
+  - Polyfill
 browser-compat: javascript.builtins.Array.every
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><span class="seoSummary">The <strong><code>every()</code></strong> method tests whether
-    all elements in the array pass the test implemented by the provided function. It
-    returns a Boolean value.</span></p>
+The **`every()`** method tests whether all elements in the array pass the test
+implemented by the provided function. It returns a Boolean value.
 
-<div>{{EmbedInteractiveExample("pages/js/array-every.html","shorter")}}</div>
+{{EmbedInteractiveExample("pages/js/array-every.html","shorter")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 // Arrow function
 every((element) => { ... } )
 every((element, index) => { ... } )
@@ -35,90 +34,80 @@ every(function callbackFn(element) { ... })
 every(function callbackFn(element, index) { ... })
 every(function callbackFn(element, index, array){ ... })
 every(function callbackFn(element, index, array) { ... }, thisArg)
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>callbackFn</var></code></dt>
-  <dd>A function to test for each element, taking three arguments:
-    <dl>
-      <dt><code><var>element</var></code></dt>
-      <dd>The current element being processed in the array.</dd>
-      <dt><code><var>index</var></code> {{Optional_inline}}</dt>
-      <dd>The index of the current element being processed in the array.</dd>
-      <dt><code><var>array</var></code> {{Optional_inline}}</dt>
-      <dd>The array <code>every</code> was called upon.</dd>
-    </dl>
-  </dd>
-  <dt><code><var>thisArg</var></code> {{Optional_inline}}</dt>
-  <dd>A value to use as <code>this</code> when executing <code><var>callbackFn</var></code>.
-  </dd>
-</dl>
+- `callbackFn`
 
-<h3 id="Return_value">Return value</h3>
+  - : A function to test for each element, taking three arguments:
 
-<p><strong><code>true</code></strong> if the <code><var>callbackFn</var></code> function
-  returns a {{Glossary("truthy")}} value for every array element. Otherwise,
-  <strong><code>false</code></strong>.</p>
+    - `element`
+      - : The current element being processed in the array.
+    - `index` {{Optional_inline}}
+      - : The index of the current element being processed in the array.
+    - `array` {{Optional_inline}}
+      - : The array `every` was called upon.
 
-<h2 id="Description">Description</h2>
+- `thisArg` {{Optional_inline}}
+  - : A value to use as `this` when executing `callbackFn`.
 
-<p>The <code>every</code> method executes the provided <code><var>callbackFn</var></code>
-  function once for each element present in the array until it finds the one where
-  <code><var>callbackFn</var></code> returns a {{Glossary("falsy")}} value. If such an
-  element is found, the <code>every</code> method immediately returns <code>false</code>.
-  Otherwise, if <code><var>callbackFn</var></code> returns a {{Glossary("truthy")}} value
-  for all elements, <code>every</code> returns <code>true</code>.</p>
+### Return value
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Calling this method on an empty array will return
-    <code>true</code> for any condition!</p>
-</div>
+**`true`** if the `callbackFn` function returns a {{Glossary("truthy")}}
+value for every array element. Otherwise, **`false`**.
 
-<p><code><var>callbackFn</var></code> is invoked only for array indexes which have assigned
-  values. It is not invoked for indexes which have been deleted, or which have never been
-  assigned values.</p>
+## Description
 
-<p><code><var>callbackFn</var></code> is invoked with three arguments: the value of the
-  element, the index of the element, and the Array object being traversed.</p>
+The `every` method executes the provided `callbackFn` function once for each
+element present in the array until it finds the one where `callbackFn` returns a
+{{Glossary("falsy")}} value. If such an element is found, the `every`
+method immediately returns `false`. Otherwise, if `callbackFn` returns a
+{{Glossary("truthy")}} value for all elements, `every` returns `true`.
 
-<p>If a <code><var>thisArg</var></code> parameter is provided to <code>every</code>, it
-  will be used as callback's <code>this</code> value. Otherwise, the value
-  <code>undefined</code> will be used as its <code>this</code> value. The
-  <code>this</code> value ultimately observable by <code><var>callback</var></code> is
-  determined according to <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/this">the usual rules for
-    determining the <code>this</code> seen by a function</a>.</p>
+> **Note:** Calling this method on an empty array will return `true` for any
+> condition!
 
-<p><code>every</code> does not mutate the array on which it is called.</p>
+`callbackFn` is invoked only for array indexes which have assigned values. It is
+not invoked for indexes which have been deleted, or which have never been
+assigned values.
 
-<p>The range of elements processed by <code>every</code> is set before the first
-  invocation of <code><var>callbackFn</var></code>. Therefore,
-  <code><var>callbackFn</var></code> will not run on elements that are appended to the array
-  after the call to <code>every</code> begins. If existing elements of the array are
-  changed, their value as passed to <code><var>callbackFn</var></code> will be the value at
-  the time <code>every</code> visits them. Elements that are deleted are not visited.</p>
+`callbackFn` is invoked with three arguments: the value of the element, the
+index of the element, and the Array object being traversed.
 
-<p><code>every</code> acts like the "for all" quantifier in mathematics. In particular,
-  for an empty array, it returns <code>true</code>. (It is <a
-    href="https://en.wikipedia.org/wiki/Vacuous_truth">vacuously true</a> that all
-  elements of the <a href="https://en.wikipedia.org/wiki/Empty_set#Properties">empty
-    set</a> satisfy any given condition.)</p>
+If a `thisArg` parameter is provided to `every`, it will be used as callback's
+`this` value. Otherwise, the value `undefined` will be used as its `this` value.
+The `this` value ultimately observable by `callback` is determined according to
+[the usual rules for determining the `this` seen by a function](/en-US/docs/Web/JavaScript/Reference/Operators/this).
 
-<h2 id="Polyfill">Polyfill</h2>
+`every` does not mutate the array on which it is called.
 
-<p><code>every</code> was added to the ECMA-262 standard in the 5th edition,
-  and it may not be present in other implementations of the standard. You can work around
-  this by inserting the following code at the beginning of your scripts, allowing use of
-  <code>every</code> in implementations which do not natively support it.</p>
+The range of elements processed by `every` is set before the first invocation of
+`callbackFn`. Therefore, `callbackFn` will not run on elements that are appended
+to the array after the call to `every` begins. If existing elements of the array
+are changed, their value as passed to `callbackFn` will be the value at the time
+`every` visits them. Elements that are deleted are not visited.
 
-<p>This algorithm is exactly the one specified in ECMA-262, 5th edition,
-  assuming <code>Object</code> and <code>TypeError</code> have their original values, and
-  that <code><var>callbackfn</var>.call</code> evaluates to the original value of
-  {{jsxref("Function.prototype.call")}}.</p>
+`every` acts like the "for all" quantifier in mathematics. In particular, for an
+empty array, it returns `true`. (It is
+[vacuously true](https://en.wikipedia.org/wiki/Vacuous_truth) that all elements
+of the [empty set](https://en.wikipedia.org/wiki/Empty_set#Properties) satisfy
+any given condition.)
 
-<pre class="brush: js">if (!Array.prototype.every) {
+## Polyfill
+
+`every` was added to the ECMA-262 standard in the 5th edition, and it may not be
+present in other implementations of the standard. You can work around this by
+inserting the following code at the beginning of your scripts, allowing use of
+`every` in implementations which do not natively support it.
+
+This algorithm is exactly the one specified in ECMA-262, 5th edition, assuming
+`Object` and `TypeError` have their original values, and that `callbackfn.call`
+evaluates to the original value of
+{{jsxref("Function.prototype.call")}}.
+
+```js
+if (!Array.prototype.every) {
   Array.prototype.every = function(callbackfn, thisArg) {
     'use strict';
     var T, k;
@@ -134,23 +123,23 @@ every(function callbackFn(element, index, array) { ... }, thisArg)
     // 2. Let lenValue be the result of calling the Get internal method
     //    of O with the argument "length".
     // 3. Let len be ToUint32(lenValue).
-    var len = O.length &gt;&gt;&gt; 0;
+    var len = O.length >>> 0;
 
     // 4. If IsCallable(callbackfn) is false, throw a TypeError exception.
-    if (typeof callbackfn !== 'function' &amp;&amp; Object.prototype.toString.call(callbackfn) !== '[object Function]') {
+    if (typeof callbackfn !== 'function' && Object.prototype.toString.call(callbackfn) !== '[object Function]') {
       throw new TypeError();
     }
 
     // 5. If thisArg was supplied, let T be thisArg; else let T be undefined.
-    if (arguments.length &gt; 1) {
+    if (arguments.length > 1) {
       T = thisArg;
     }
 
     // 6. Let k be 0.
     k = 0;
 
-    // 7. Repeat, while k &lt; len
-    while (k &lt; len) {
+    // 7. Repeat, while k < len
+    while (k < len) {
 
       var kValue;
 
@@ -183,98 +172,102 @@ every(function callbackFn(element, index, array) { ... }, thisArg)
     return true;
   };
 }
-</pre>
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Testing_size_of_all_array_elements">Testing size of all array elements</h3>
+### Testing size of all array elements
 
-<p>The following example tests whether all elements in the array are bigger than 10.</p>
+The following example tests whether all elements in the array are bigger
+than 10.
 
-<pre class="brush: js">function isBigEnough(element, index, array) {
-  return element &gt;= 10;
+```js
+function isBigEnough(element, index, array) {
+  return element >= 10;
 }
 [12, 5, 8, 130, 44].every(isBigEnough);   // false
 [12, 54, 18, 130, 44].every(isBigEnough); // true
-</pre>
+```
 
-<h3 id="Using_arrow_functions">Using arrow functions</h3>
+### Using arrow functions
 
-<p><a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">Arrow
-    functions</a> provide a shorter syntax for the same test.</p>
+[Arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
+provide a shorter syntax for the same test.
 
-<pre class="brush: js">[12, 5, 8, 130, 44].every(x =&gt; x &gt;= 10);   // false
-[12, 54, 18, 130, 44].every(x =&gt; x &gt;= 10); // true</pre>
+```js
+[12, 5, 8, 130, 44].every(x => x >= 10);   // false
+[12, 54, 18, 130, 44].every(x => x >= 10); // true
+```
 
-<h3 id="Affecting_Initial_Array_modifying_appending_and_deleting">Affecting Initial Array
-  (modifying, appending, and deleting)</h3>
+### Affecting Initial Array (modifying, appending, and deleting)
 
-<p>The following examples tests the behavior of the <code>every</code> method when the
-  array is modified.</p>
+The following examples tests the behavior of the `every` method when the array
+is modified.
 
-<pre class="brush: js">// ---------------
+```js
+// ---------------
 // Modifying items
 // ---------------
 let arr = [1, 2, 3, 4];
-arr.every( (elem, index, arr) =&gt; {
+arr.every( (elem, index, arr) => {
   arr[index+1] -= 1
-  console.log(`[${arr}][${index}] -&gt; ${elem}`)
-  return elem &lt; 2
+  console.log(`[${arr}][${index}] -> ${elem}`)
+  return elem < 2
 })
 
 // Loop runs for 3 iterations, but would
 // have run 2 iterations without any modification
 //
-// 1st iteration: [1,1,3,4][0] -&gt; 1
-// 2nd iteration: [1,1,2,4][1] -&gt; 1
-// 3rd iteration: [1,1,2,3][2] -&gt; 2
+// 1st iteration: [1,1,3,4][0] -> 1
+// 2nd iteration: [1,1,2,4][1] -> 1
+// 3rd iteration: [1,1,2,3][2] -> 2
 
 // ---------------
 // Appending items
 // ---------------
 arr = [1, 2, 3];
-arr.every( (elem, index, arr) =&gt; {
+arr.every( (elem, index, arr) => {
   arr.push('new')
-  console.log(`[${arr}][${index}] -&gt; ${elem}`)
-  return elem &lt; 4
+  console.log(`[${arr}][${index}] -> ${elem}`)
+  return elem < 4
 })
 
 // Loop runs for 3 iterations, even after appending new items
 //
-// 1st iteration: [1, 2, 3, new][0] -&gt; 1
-// 2nd iteration: [1, 2, 3, new, new][1] -&gt; 2
-// 3rd iteration: [1, 2, 3, new, new, new][2] -&gt; 3
+// 1st iteration: [1, 2, 3, new][0] -> 1
+// 2nd iteration: [1, 2, 3, new, new][1] -> 2
+// 3rd iteration: [1, 2, 3, new, new, new][2] -> 3
 
 // ---------------
 // Deleting items
 // ---------------
 arr = [1, 2, 3, 4];
-arr.every( (elem, index, arr) =&gt; {
+arr.every( (elem, index, arr) => {
   arr.pop()
-  console.log(`[${arr}][${index}] -&gt; ${elem}`)
-  return elem &lt; 4
+  console.log(`[${arr}][${index}] -> ${elem}`)
+  return elem < 4
 })
 
 // Loop runs for 2 iterations only, as the remaining
 // items are `pop()`ed off
 //
-// 1st iteration: [1,2,3][0] -&gt; 1
-// 2nd iteration: [1,2][1] -&gt; 2</pre>
+// 1st iteration: [1,2,3][0] -> 1
+// 2nd iteration: [1,2][1] -> 2
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>A polyfill of <code>Array.prototype.every</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-array"><code>core-js</code></a></li>
-  <li>{{jsxref("Array.prototype.forEach()")}}</li>
-  <li>{{jsxref("Array.prototype.some()")}}</li>
-  <li>{{jsxref("Array.prototype.find()")}}</li>
-  <li>{{jsxref("TypedArray.prototype.every()")}}</li>
-</ul>
+- A polyfill of `Array.prototype.every` is available in
+  [`core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- {{jsxref("Array.prototype.forEach()")}}
+- {{jsxref("Array.prototype.some()")}}
+- {{jsxref("Array.prototype.find()")}}
+- {{jsxref("TypedArray.prototype.every()")}}

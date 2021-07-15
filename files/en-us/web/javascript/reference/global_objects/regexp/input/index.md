@@ -10,43 +10,46 @@ tags:
   - Regular Expressions
 browser-compat: javascript.builtins.RegExp.input
 ---
-<div>{{JSRef}} {{non-standard_header}}</div>
+{{JSRef}} {{non-standard_header}}
 
-<p>The non-standard <strong><code>input</code></strong> property is a static property of regular expressions that contains the string against which a regular expression is matched. <code>RegExp.$_</code> is an alias for this property.</p>
+The non-standard **`input`** property is a static property of regular
+expressions that contains the string against which a regular expression is
+matched. `RegExp.$_` is an alias for this property.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The <code>input</code> property is static, it is not a property of an individual regular expression object. Instead, you always use it as <code>RegExp.input</code> or <code>RegExp.$_.</code></p>
+The `input` property is static, it is not a property of an individual regular
+expression object. Instead, you always use it as `RegExp.input` or `RegExp.$_.`
 
-<p>The value of the <code><strong>input</strong></code> property is modified whenever the searched string on the regular expression is changed and that string is matching.</p>
+The value of the **`input`** property is modified whenever the searched string
+on the regular expression is changed and that string is matching.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_input_and__">Using <code>input</code> and <code>$_</code></h3>
+### Using `input` and `$_`
 
-<pre class="brush: js">var re = /hi/g;
+```js
+var re = /hi/g;
 re.test('hi there!');
 RegExp.input;         // "hi there!"
 re.test('foo');       // new test, non-matching
 RegExp.$_;            // "hi there!"
 re.test('hi world!'); // new test, matching
 RegExp.$_;            // "hi world!"
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("RegExp.lastMatch", "RegExp.lastMatch ($&amp;)")}}</li>
- <li>{{jsxref("RegExp.lastParen", "RegExp.lastParen ($+)")}}</li>
- <li>{{jsxref("RegExp.leftContext", "RegExp.leftContext ($`)")}}</li>
- <li>{{jsxref("RegExp.rightContext", "RegExp.rightContext ($')")}}</li>
- <li>{{jsxref("RegExp.n", "RegExp.$1-$9")}}</li>
-</ul>
+- {{jsxref("RegExp.lastMatch", "RegExp.lastMatch ($&amp;)")}}
+- {{jsxref("RegExp.lastParen", "RegExp.lastParen ($+)")}}
+- {{jsxref("RegExp.leftContext", "RegExp.leftContext ($`)")}}
+- {{jsxref("RegExp.rightContext", "RegExp.rightContext ($')")}}
+- {{jsxref("RegExp.n", "RegExp.$1-$9")}}

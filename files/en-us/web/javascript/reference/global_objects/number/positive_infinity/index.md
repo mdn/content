@@ -8,63 +8,78 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Number.POSITIVE_INFINITY
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>Number.POSITIVE_INFINITY</code></strong> property represents the positive Infinity value.</p>
+The **`Number.POSITIVE_INFINITY`** property represents the positive Infinity
+value.
 
-<div>{{EmbedInteractiveExample("pages/js/number-positive-infinity.html")}}</div>
+{{EmbedInteractiveExample("pages/js/number-positive-infinity.html")}}{{js_property_attributes(0, 0, 0)}}
 
+## Description
 
-<div>{{js_property_attributes(0, 0, 0)}}</div>
+The value of `Number.POSITIVE_INFINITY` is the same as the value of the global
+object's {{jsxref("Infinity")}} property.
 
-<h2 id="Description">Description</h2>
+This value behaves slightly differently than mathematical infinity:
 
-<p>The value of <code>Number.POSITIVE_INFINITY</code> is the same as the value of the global object's {{jsxref("Infinity")}} property.</p>
+- Any positive value, including `POSITIVE_INFINITY`, multiplied by
+  `POSITIVE_INFINITY` is `POSITIVE_INFINITY`.
+- Any negative value, including
+  {{jsxref("Number.NEGATIVE_INFINITY", "NEGATIVE_INFINITY")}},
+  multiplied by `POSITIVE_INFINITY` is
+  {{jsxref("Number.NEGATIVE_INFINITY", "NEGATIVE_INFINITY")}}.
+- Any positive number divided by `POSITIVE_INFINITY` is positive Zero.
+- Any negative number divided by `POSITIVE_INFINITY` is negative Zero.
+- Zero multiplied by `POSITIVE_INFINITY` is {{jsxref("NaN")}}.
+- {{jsxref("Global_Objects/NaN", "NaN")}} multiplied by
+  `POSITIVE_INFINITY` is {{jsxref("NaN")}}.
+- `POSITIVE_INFINITY`, divided by any negative value except
+  {{jsxref("Number.NEGATIVE_INFINITY", "NEGATIVE_INFINITY")}},
+  is
+  {{jsxref("Number.NEGATIVE_INFINITY", "NEGATIVE_INFINITY")}}.
+- `POSITIVE_INFINITY`, divided by any positive value except `POSITIVE_INFINITY`,
+  is `POSITIVE_INFINITY`.
+- `POSITIVE_INFINITY`, divided by either
+  {{jsxref("Number.NEGATIVE_INFINITY", "NEGATIVE_INFINITY")}}
+  or `POSITIVE_INFINITY`, is {{jsxref("NaN")}}.
 
-<p>This value behaves slightly differently than mathematical infinity:</p>
+You might use the `Number.POSITIVE_INFINITY` property to indicate an error
+condition that returns a finite number in case of success. Note, however, that
+{{jsxref("isFinite")}} would be more appropriate in such a case.
 
-<ul>
- <li>Any positive value, including <code>POSITIVE_INFINITY</code>, multiplied by <code>POSITIVE_INFINITY</code> is <code>POSITIVE_INFINITY</code>.</li>
- <li>Any negative value, including {{jsxref("Number.NEGATIVE_INFINITY", "NEGATIVE_INFINITY")}}, multiplied by <code>POSITIVE_INFINITY</code> is {{jsxref("Number.NEGATIVE_INFINITY", "NEGATIVE_INFINITY")}}.</li>
- <li>Any positive number divided by <code>POSITIVE_INFINITY</code> is positive Zero.</li>
- <li>Any negative number divided by <code>POSITIVE_INFINITY</code> is negative Zero.</li>
- <li>Zero multiplied by <code>POSITIVE_INFINITY</code> is {{jsxref("NaN")}}.</li>
- <li>{{jsxref("Global_Objects/NaN", "NaN")}} multiplied by <code>POSITIVE_INFINITY</code> is {{jsxref("NaN")}}.</li>
- <li><code>POSITIVE_INFINITY</code>, divided by any negative value except {{jsxref("Number.NEGATIVE_INFINITY", "NEGATIVE_INFINITY")}}, is {{jsxref("Number.NEGATIVE_INFINITY", "NEGATIVE_INFINITY")}}.</li>
- <li><code>POSITIVE_INFINITY</code>, divided by any positive value except <code>POSITIVE_INFINITY</code>, is <code>POSITIVE_INFINITY</code>.</li>
- <li><code>POSITIVE_INFINITY</code>, divided by either {{jsxref("Number.NEGATIVE_INFINITY", "NEGATIVE_INFINITY")}} or <code>POSITIVE_INFINITY</code>, is {{jsxref("NaN")}}.</li>
-</ul>
+Because `POSITIVE_INFINITY` is a static property of
+{{jsxref("Number")}}, you always use it as `Number.POSITIVE_INFINITY`,
+rather than as a property of a {{jsxref("Number")}} object you created.
 
-<p>You might use the <code>Number.POSITIVE_INFINITY</code> property to indicate an error condition that returns a finite number in case of success. Note, however, that {{jsxref("isFinite")}} would be more appropriate in such a case.</p>
+## Examples
 
-<p>Because <code>POSITIVE_INFINITY</code> is a static property of {{jsxref("Number")}}, you always use it as <code>Number.POSITIVE_INFINITY</code>, rather than as a property of a {{jsxref("Number")}} object you created.</p>
+### Using POSITIVE_INFINITY
 
-<h2 id="Examples">Examples</h2>
+In the following example, the variable `bigNumber` is assigned a value that is
+larger than the maximum value. When the
+{{jsxref("Statements/if...else", "if")}} statement executes,
+`bigNumber` has the value `Infinity`, so `bigNumber` is set to a more manageable
+value before continuing.
 
-<h3 id="Using_POSITIVE_INFINITY">Using POSITIVE_INFINITY</h3>
-
-<p>In the following example, the variable <code>bigNumber</code> is assigned a value that is larger than the maximum value. When the {{jsxref("Statements/if...else", "if")}} statement executes, <code>bigNumber</code> has the value <code>Infinity</code>, so <code>bigNumber</code> is set to a more manageable value before continuing.</p>
-
-<pre class="brush: js">var bigNumber = Number.MAX_VALUE * 2;
+```js
+var bigNumber = Number.MAX_VALUE * 2;
 
 if (bigNumber == Number.POSITIVE_INFINITY) {
   bigNumber = returnFinite();
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("Number.NEGATIVE_INFINITY")}}</li>
- <li>{{jsxref("Number.isFinite()")}}</li>
- <li>{{jsxref("Infinity")}}</li>
- <li>{{jsxref("isFinite", "isFinite()")}}</li>
-</ul>
+- {{jsxref("Number.NEGATIVE_INFINITY")}}
+- {{jsxref("Number.isFinite()")}}
+- {{jsxref("Infinity")}}
+- {{jsxref("isFinite", "isFinite()")}}

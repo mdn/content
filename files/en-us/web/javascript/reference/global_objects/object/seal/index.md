@@ -2,66 +2,69 @@
 title: Object.seal()
 slug: Web/JavaScript/Reference/Global_Objects/Object/seal
 tags:
-- ECMAScript 5
-- JavaScript
-- JavaScript 1.8.5
-- Method
-- Object
-- Reference
+  - ECMAScript 5
+  - JavaScript
+  - JavaScript 1.8.5
+  - Method
+  - Object
+  - Reference
 browser-compat: javascript.builtins.Object.seal
 ---
-<p>{{JSRef}}</p>
+{{JSRef}}
 
-<p>The <code><strong>Object.seal()</strong></code> method seals an object, preventing new
-  properties from being added to it and marking all existing properties as
-  non-configurable. Values of present properties can still be changed as long as they are
-  writable.</p>
+The **`Object.seal()`** method seals an object, preventing new properties from
+being added to it and marking all existing properties as non-configurable.
+Values of present properties can still be changed as long as they are writable.
 
-<div>{{EmbedInteractiveExample("pages/js/object-seal.html")}}</div>
+{{EmbedInteractiveExample("pages/js/object-seal.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+Object.seal(obj)
+```
 
-<pre class="brush: js">Object.seal(<var>obj</var>)</pre>
+### Parameters
 
-<h3 id="Parameters">Parameters</h3>
+- `obj`
+  - : The object which should be sealed.
 
-<dl>
-  <dt><code><var>obj</var></code></dt>
-  <dd>The object which should be sealed.</dd>
-</dl>
+### Return value
 
-<h3 id="Return_value">Return value</h3>
+The object being sealed.
 
-<p>The object being sealed.</p>
+## Description
 
-<h2 id="Description">Description</h2>
+By default, objects are
+{{jsxref("Object.isExtensible()", "extensible", "", 1)}}
+(new properties can be added to them). Sealing an object prevents new properties
+from being added and marks all existing properties as non-configurable. This has
+the effect of making the set of properties on the object fixed. Making all
+properties non-configurable also prevents them from being converted from data
+properties to accessor properties and vice versa, but it does not prevent the
+values of data properties from being changed. Attempting to delete or add
+properties to a sealed object, or to convert a data property to accessor or vice
+versa, will fail, either silently or by throwing a
+{{jsxref("TypeError")}} (most commonly, although not exclusively, when
+in {{jsxref("Strict_mode", "strict mode", "", 1)}} code).
 
-<p>By default, objects are {{jsxref("Object.isExtensible()", "extensible", "", 1)}} (new
-  properties can be added to them). Sealing an object prevents new properties from being
-  added and marks all existing properties as non-configurable. This has the effect of
-  making the set of properties on the object fixed. Making all properties non-configurable
-  also prevents them from being converted from data properties to accessor properties and
-  vice versa, but it does not prevent the values of data properties from being changed.
-  Attempting to delete or add properties to a sealed object, or to convert a data property
-  to accessor or vice versa, will fail, either silently or by throwing a
-  {{jsxref("TypeError")}} (most commonly, although not exclusively, when in
-  {{jsxref("Strict_mode", "strict mode", "", 1)}} code).</p>
+The prototype chain remains untouched. However, the
+{{jsxref("Object.proto",
+  "__proto__")}} property is sealed as
+well.
 
-<p>The prototype chain remains untouched. However, the {{jsxref("Object.proto",
-  "__proto__")}} property is sealed as well.</p>
+### Comparison to Object.freeze()
 
-<h3 id="Comparison_to_Object.freeze">Comparison to Object.freeze()</h3>
+Existing properties in objects frozen with
+{{jsxref("Object.freeze()")}} are made immutable. Objects sealed with
+`Object.seal()` can have their existing properties changed.
 
-<p>Existing properties in objects frozen with {{jsxref("Object.freeze()")}} are made
-  immutable. Objects sealed with <code>Object.seal()</code> can have their existing
-  properties changed.</p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Using Object.seal
 
-<h3 id="Using_Object.seal">Using Object.seal</h3>
-
-<pre class="brush: js">var obj = {
+```js
+var obj = {
   prop: function() {},
   foo: 'bar'
 };
@@ -111,35 +114,34 @@ Object.defineProperty(obj, 'ohai', {
 Object.defineProperty(obj, 'foo', {
   value: 'eit'
 }); // changes existing property value
-</pre>
+```
 
-<h3 id="Non-object_coercion">Non-object coercion</h3>
+### Non-object coercion
 
-<p>In ES5, if the argument to this method is not an object (a primitive), then it will
-  cause a {{jsxref("TypeError")}}. In ES2015, a non-object argument will be treated as if
-  it was a sealed ordinary object by returning it.</p>
+In ES5, if the argument to this method is not an object (a primitive), then it
+will cause a {{jsxref("TypeError")}}. In ES2015, a non-object argument
+will be treated as if it was a sealed ordinary object by returning it.
 
-<pre class="brush: js">Object.seal(1);
+```js
+Object.seal(1);
 // TypeError: 1 is not an object (ES5 code)
 
 Object.seal(1);
 // 1                             (ES2015 code)
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Object.isSealed()")}}</li>
-  <li>{{jsxref("Object.preventExtensions()")}}</li>
-  <li>{{jsxref("Object.isExtensible()")}}</li>
-  <li>{{jsxref("Object.freeze()")}}</li>
-  <li>{{jsxref("Object.isFrozen()")}}</li>
-</ul>
+- {{jsxref("Object.isSealed()")}}
+- {{jsxref("Object.preventExtensions()")}}
+- {{jsxref("Object.isExtensible()")}}
+- {{jsxref("Object.freeze()")}}
+- {{jsxref("Object.isFrozen()")}}

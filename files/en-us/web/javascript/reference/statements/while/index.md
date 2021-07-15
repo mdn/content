@@ -2,81 +2,77 @@
 title: while
 slug: Web/JavaScript/Reference/Statements/while
 tags:
-- JavaScript
-- Language feature
-- Statement
-- while
+  - JavaScript
+  - Language feature
+  - Statement
+  - while
 browser-compat: javascript.statements.while
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p>The <strong>while statement</strong> creates a loop that executes a specified statement
-  as long as the test condition evaluates to true. The condition is evaluated before
-  executing the statement.</p>
+The **while statement** creates a loop that executes a specified statement as
+long as the test condition evaluates to true. The condition is evaluated before
+executing the statement.
 
-<div>{{EmbedInteractiveExample("pages/js/statement-while.html")}}</div>
+{{EmbedInteractiveExample("pages/js/statement-while.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">while (<var>condition</var>)
-  <var>statement</var>
-</pre>
+```js
+while (condition)
+  statement
+```
 
-<dl>
-  <dt><code><var>condition</var></code></dt>
-  <dd>An expression evaluated before each pass through the loop. If this condition
-    evaluates to true, <code><var>statement</var></code> is executed. When condition
-    evaluates to false, execution continues with the statement after the
-    <code>while</code> loop.</dd>
-  <dt><code><var>statement</var></code></dt>
-  <dd>An optional statement that is executed as long as the condition evaluates to true.
-    To execute multiple statements within the loop, use a <a
-      href="/en-US/docs/JavaScript/Reference/Statements/block">block</a> statement
-    (<code>{ ... }</code>) to group those statements.<br>
-    <br>
-    Note: Use the <code>break</code> statement to stop a loop before condition evaluates
-    to true.
-  </dd>
-</dl>
+- `condition`
+  - : An expression evaluated before each pass through the loop. If this
+    condition evaluates to true, `statement` is executed. When condition
+    evaluates to false, execution continues with the statement after the `while`
+    loop.
+- `statement`
 
-<h2 id="Examples">Examples</h2>
+  - : An optional statement that is executed as long as the condition evaluates
+    to true. To execute multiple statements within the loop, use a
+    [block](/en-US/docs/JavaScript/Reference/Statements/block) statement
+    (`{ ... }`) to group those statements.
 
-<h3 id="Using_while">Using while</h3>
+    Note: Use the `break` statement to stop a loop before condition evaluates to
+    true.
 
-<p>The following <code>while</code> loop iterates as long as <code>n</code> is less than
-  three.</p>
+## Examples
 
-<pre class="brush:js">var n = 0;
+### Using while
+
+The following `while` loop iterates as long as `n` is less than three.
+
+```js
+var n = 0;
 var x = 0;
 
-while (n &lt; 3) {
+while (n < 3) {
   n++;
   x += n;
-}</pre>
+}
+```
 
-<p>Each iteration, the loop increments <code>n</code> and adds it to <code>x</code>.
-  Therefore, <code>x</code> and <code>n</code> take on the following values:</p>
+Each iteration, the loop increments `n` and adds it to `x`. Therefore, `x` and
+`n` take on the following values:
 
-<ul>
-  <li>After the first pass: <code>n</code> = 1 and <code>x</code> = 1</li>
-  <li>After the second pass: <code>n</code> = 2 and <code>x</code> = 3</li>
-  <li>After the third pass: <code>n</code> = 3 and <code>x</code> = 6</li>
-</ul>
+- After the first pass: `n` = 1 and `x` = 1
+- After the second pass: `n` = 2 and `x` = 3
+- After the third pass: `n` = 3 and `x` = 6
 
-<p>After completing the third pass, the condition <code>n</code> &lt; 3 is no longer true,
-  so the loop terminates.</p>
+After completing the third pass, the condition `n` < 3 is no longer true, so the
+loop terminates.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Statements/do...while", "do...while")}}</li>
-  <li>{{jsxref("Statements/for", "for")}}</li>
-</ul>
+- {{jsxref("Statements/do...while", "do...while")}}
+- {{jsxref("Statements/for", "for")}}

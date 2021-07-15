@@ -9,35 +9,36 @@ tags:
   - TypedArrays
 browser-compat: javascript.builtins.SharedArrayBuffer.byteLength
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>byteLength</code></strong> accessor property represents the length of an {{jsxref("SharedArrayBuffer")}} in bytes.</p>
+The **`byteLength`** accessor property represents the length of an
+{{jsxref("SharedArrayBuffer")}} in bytes.
 
-<div>{{EmbedInteractiveExample("pages/js/sharedarraybuffer-bytelength.html","shorter")}}</div>
+{{EmbedInteractiveExample("pages/js/sharedarraybuffer-bytelength.html","shorter")}}
 
+## Description
 
-<h2 id="Description">Description</h2>
+The `byteLength` property is an accessor property whose set accessor function is
+`undefined`, meaning that you can only read this property. The value is
+established when the shared array is constructed and cannot be changed.
 
-<p>The <code>byteLength</code> property is an accessor property whose set accessor function is <code>undefined</code>, meaning that you can only read this property. The value is established when the shared array is constructed and cannot be changed.</p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Using byteLength
 
-<h3 id="Using_byteLength">Using byteLength</h3>
-
-<pre class="brush:js">var sab = new SharedArrayBuffer(1024);
+```js
+var sab = new SharedArrayBuffer(1024);
 sab.byteLength; // 1024
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("SharedArrayBuffer")}}</li>
-</ul>
+- {{jsxref("SharedArrayBuffer")}}

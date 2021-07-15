@@ -2,65 +2,70 @@
 title: 'TypeError: cyclic object value'
 slug: Web/JavaScript/Reference/Errors/Cyclic_object_value
 tags:
-- Error
-- Errors
-- JavaScript
-- TypeError
+  - Error
+  - Errors
+  - JavaScript
+  - TypeError
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<p>The JavaScript exception "cyclic object value" occurs when object references were found
-  in <a href="https://www.json.org/">JSON</a>. {{jsxref("JSON.stringify()")}} doesn't try
-  to solve them and fails accordingly.</p>
+The JavaScript exception "cyclic object value" occurs when object references
+were found in [JSON](https://www.json.org/).
+{{jsxref("JSON.stringify()")}} doesn't try to solve them and fails
+accordingly.
 
-<h2 id="Message">Message</h2>
+## Message
 
-<pre class="brush: js">TypeError: cyclic object value (Firefox)
+```js
+TypeError: cyclic object value (Firefox)
 TypeError: Converting circular structure to JSON (Chrome and Opera)
 TypeError: Circular reference in value argument not supported (Edge)
-</pre>
+```
 
-<h2 id="Error_type">Error type</h2>
+## Error type
 
-<p>{{jsxref("TypeError")}}</p>
+{{jsxref("TypeError")}}
 
-<h2 id="What_went_wrong">What went wrong?</h2>
+## What went wrong?
 
-<p>The <a href="https://www.json.org/">JSON format</a> per se doesn't support object
-  references (although an <a
-    href="https://datatracker.ietf.org/doc/html/draft-pbryan-zyp-json-ref-03">IETF draft
-    exists</a>), hence {{jsxref("JSON.stringify()")}} doesn't try to solve them and fails
-  accordingly.</p>
+The [JSON format](https://www.json.org/) per se doesn't support object
+references (although an
+[IETF draft exists](https://datatracker.ietf.org/doc/html/draft-pbryan-zyp-json-ref-03)),
+hence {{jsxref("JSON.stringify()")}} doesn't try to solve them and
+fails accordingly.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Circular_references">Circular references</h3>
+### Circular references
 
-<p>In a circular structure like the following</p>
+In a circular structure like the following
 
-<pre class="brush: js">var circularReference = {otherData: 123};
+```js
+var circularReference = {otherData: 123};
 circularReference.myself = circularReference;
-</pre>
+```
 
-<p>{{jsxref("JSON.stringify()")}} will fail</p>
+{{jsxref("JSON.stringify()")}} will fail
 
-<pre class="brush: js example-bad">JSON.stringify(circularReference);
+```js example-bad
+JSON.stringify(circularReference);
 // TypeError: cyclic object value
-</pre>
+```
 
-<p>To serialize circular references you can use a library that supports them (e.g. <a
-    href="https://github.com/douglascrockford/JSON-js/blob/master/cycle.js">cycle.js</a>)
-  or implement a solution by yourself, which will require finding and replacing (or
-  removing) the cyclic references by serializable values.</p>
+To serialize circular references you can use a library that supports them (e.g.
+[cycle.js](https://github.com/douglascrockford/JSON-js/blob/master/cycle.js)) or
+implement a solution by yourself, which will require finding and replacing (or
+removing) the cyclic references by serializable values.
 
-<p>The snippet below illustrates how to find and filter (thus causing data loss) a cyclic
-  reference by using the <code>replacer</code> parameter of
-  {{jsxref("JSON.stringify()")}}:</p>
+The snippet below illustrates how to find and filter (thus causing data loss) a
+cyclic reference by using the `replacer` parameter of
+{{jsxref("JSON.stringify()")}}:
 
-<pre class="brush: js">const getCircularReplacer = () =&gt; {
+```js
+const getCircularReplacer = () => {
   const seen = new WeakSet();
-  return (key, value) =&gt; {
-    if (typeof value === "object" &amp;&amp; value !== null) {
+  return (key, value) => {
+    if (typeof value === "object" && value !== null) {
       if (seen.has(value)) {
         return;
       }
@@ -72,15 +77,12 @@ circularReference.myself = circularReference;
 
 JSON.stringify(circularReference, getCircularReplacer());
 // {"otherData":123}
-</pre>
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("JSON.stringify")}}</li>
-  <li><a
-      href="https://github.com/douglascrockford/JSON-js/blob/master/cycle.js">cycle.js</a>
-    – Introduces two functions, <code>JSON.decycle</code> and
-    <code>JSON.retrocycle</code>, which makes it possible to encode and decode cyclical
-    structures and dags into an extended and retrocompatible JSON format.</li>
-</ul>
+- {{jsxref("JSON.stringify")}}
+- [cycle.js](https://github.com/douglascrockford/JSON-js/blob/master/cycle.js) –
+  Introduces two functions, `JSON.decycle` and `JSON.retrocycle`, which makes it
+  possible to encode and decode cyclical structures and dags into an extended
+  and retrocompatible JSON format.

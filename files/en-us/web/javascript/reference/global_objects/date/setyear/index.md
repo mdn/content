@@ -2,69 +2,69 @@
 title: Date.prototype.setYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setYear
 tags:
-- Date
-- Deprecated
-- JavaScript
-- Method
-- Prototype
-- Reference
+  - Date
+  - Deprecated
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
 browser-compat: javascript.builtins.Date.setYear
 ---
-<div>{{JSRef}} {{deprecated_header}}</div>
+{{JSRef}} {{deprecated_header}}
 
-<p>The <strong><code>setYear()</code></strong> method sets the year for a specified date
-  according to local time. Because <code>setYear()</code> does not set full years ("year
-  2000 problem"), it is no longer used and has been replaced by the
-  {{jsxref("Date.prototype.setFullYear()", "setFullYear()")}} method.</p>
+The **`setYear()`** method sets the year for a specified date according to local
+time. Because `setYear()` does not set full years ("year 2000 problem"), it is
+no longer used and has been replaced by the
+{{jsxref("Date.prototype.setFullYear()", "setFullYear()")}}
+method.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">setYear(yearValue)</pre>
+```js
+setYear(yearValue)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>yearValue</var></code></dt>
-  <dd>An integer.</dd>
-</dl>
+- `yearValue`
+  - : An integer.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>The number of milliseconds between 1 January 1970 00:00:00 UTC and the updated date.
-</p>
+The number of milliseconds between 1 January 1970 00:00:00 UTC and the updated
+date.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>If <code>yearValue</code> is a number between 0 and 99 (inclusive), then the year for
-  <code>dateObj</code> is set to <code>1900 + yearValue</code>. Otherwise, the year for
-  <code>dateObj</code> is set to <code>yearValue</code>.</p>
+If `yearValue` is a number between 0 and 99 (inclusive), then the year for
+`dateObj` is set to `1900 + yearValue`. Otherwise, the year for `dateObj` is set
+to `yearValue`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_setYear">Using setYear()</h3>
+### Using setYear()
 
-<p>The first two lines set the year to 1996. The third sets the year to 2000.</p>
+The first two lines set the year to 1996. The third sets the year to 2000.
 
-<pre class="brush: js">var theBigDay = new Date();
+```js
+var theBigDay = new Date();
 
 theBigDay.setYear(96);
 theBigDay.setYear(1996);
 theBigDay.setYear(2000);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Date.prototype.getFullYear()")}}</li>
-  <li>{{jsxref("Date.prototype.getUTCFullYear()")}}</li>
-  <li>{{jsxref("Date.prototype.setFullYear()")}}</li>
-  <li>{{jsxref("Date.prototype.setUTCFullYear()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getFullYear()")}}
+- {{jsxref("Date.prototype.getUTCFullYear()")}}
+- {{jsxref("Date.prototype.setFullYear()")}}
+- {{jsxref("Date.prototype.setUTCFullYear()")}}

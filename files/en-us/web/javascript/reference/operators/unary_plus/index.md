@@ -2,84 +2,76 @@
 title: Unary plus (+)
 slug: Web/JavaScript/Reference/Operators/Unary_plus
 tags:
-- JavaScript
-- Language feature
-- Operator
-- Reference
+  - JavaScript
+  - Language feature
+  - Operator
+  - Reference
 browser-compat: javascript.operators.unary_plus
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>The unary plus operator (<code>+</code>) precedes its operand and evaluates to its
-  operand but attempts to convert it into a number, if it isn't already.</p>
+The unary plus operator (`+`) precedes its operand and evaluates to its operand
+but attempts to convert it into a number, if it isn't already.
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-unary-plus.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-unary-plus.html", "taller")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">+x</pre>
+```js
++x
+```
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Although unary negation (<code>-</code>) also can convert non-numbers, unary plus is
-  the fastest and preferred way of converting something into a number, because it does not
-  perform any other operations on the number. It can convert string representations of
-  integers and floats, as well as the non-string values <code>true</code>,
-  <code>false</code>, and <code>null</code>. Integers in both decimal and hexadecimal
-  (<code>0x</code>-prefixed) formats are supported. Negative numbers are supported (though
-  not for hex). Using the operator on BigInt values throws a TypeError. If it cannot parse
-  a particular value, it will evaluate to {{jsxref("NaN")}}.</p>
+Although unary negation (`-`) also can convert non-numbers, unary plus is the
+fastest and preferred way of converting something into a number, because it does
+not perform any other operations on the number. It can convert string
+representations of integers and floats, as well as the non-string values `true`,
+`false`, and `null`. Integers in both decimal and hexadecimal (`0x`-prefixed)
+formats are supported. Negative numbers are supported (though not for hex).
+Using the operator on BigInt values throws a TypeError. If it cannot parse a
+particular value, it will evaluate to {{jsxref("NaN")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Usage_with_numbers">Usage with numbers</h3>
+### Usage with numbers
 
-<pre class="brush: js">const x = 1;
+```js
+const x = 1;
 const y = -1;
 
 console.log(+x);
 // 1
 console.log(+y);
-// -1</pre>
+// -1
+```
 
-<h3 id="Usage_with_non-numbers">Usage with non-numbers</h3>
+### Usage with non-numbers
 
-<pre class="brush: js">+true  // 1
+```js
++true  // 1
 +false // 0
 +null  // 0
 +function(val){ return val } // NaN
 +1n    // throws TypeError: Cannot convert BigInt value to number
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Addition">Addition
-      operator</a></li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction">Subtraction
-      operator</a></li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Division">Division
-      operator</a></li>
-  <li><a
-      href="/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication">Multiplication
-      operator</a></li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Remainder">Remainder
-      operator</a></li>
-  <li><a
-      href="/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation">Exponentiation
-      operator</a></li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Increment">Increment
-      operator</a></li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Decrement">Decrement
-      operator</a></li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Unary_negation">Unary
-      negation operator</a></li>
-</ul>
+- [Addition operator](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)
+- [Subtraction operator](/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction)
+- [Division operator](/en-US/docs/Web/JavaScript/Reference/Operators/Division)
+- [Multiplication operator](/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication)
+- [Remainder operator](/en-US/docs/Web/JavaScript/Reference/Operators/Remainder)
+- [Exponentiation operator](/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation)
+- [Increment operator](/en-US/docs/Web/JavaScript/Reference/Operators/Increment)
+- [Decrement operator](/en-US/docs/Web/JavaScript/Reference/Operators/Decrement)
+- [Unary negation operator](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_negation)

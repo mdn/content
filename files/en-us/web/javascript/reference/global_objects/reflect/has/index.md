@@ -2,58 +2,58 @@
 title: Reflect.has()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/has
 tags:
-- ECMAScript 2015
-- JavaScript
-- Method
-- Reference
-- Reflect
-- Polyfill
+  - ECMAScript 2015
+  - JavaScript
+  - Method
+  - Reference
+  - Reflect
+  - Polyfill
 browser-compat: javascript.builtins.Reflect.has
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The static <strong><code>Reflect.has()</code></strong> method works like the <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/in"><code>in</code> operator</a>
-  as a function.</p>
+The static **`Reflect.has()`** method works like the
+[`in` operator](/en-US/docs/Web/JavaScript/Reference/Operators/in) as a
+function.
 
-<div>{{EmbedInteractiveExample("pages/js/reflect-has.html")}}</div>
+{{EmbedInteractiveExample("pages/js/reflect-has.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">Reflect.has(<var>target</var>, <var>propertyKey</var>)
-</pre>
+```js
+Reflect.has(target, propertyKey)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>target</var></code></dt>
-  <dd>The target object in which to look for the property.</dd>
-  <dt><code><var>propertyKey</var></code></dt>
-  <dd>The name of the property to check.</dd>
-</dl>
+- `target`
+  - : The target object in which to look for the property.
+- `propertyKey`
+  - : The name of the property to check.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref("Boolean")}} indicating whether or not the <code><var>target</var></code>
-  has the property.</p>
+A {{jsxref("Boolean")}} indicating whether or not the `target` has the
+property.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>A {{jsxref("TypeError")}}, if <code><var>target</var></code> is not an
-  {{jsxref("Object")}}.</p>
+A {{jsxref("TypeError")}}, if `target` is not an
+{{jsxref("Object")}}.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The <code>Reflect.has</code> method allows you to check if a property is in an object.
-  It works like the <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/in"><code>in</code> operator</a>
-  as a function.</p>
+The `Reflect.has` method allows you to check if a property is in an object. It
+works like the
+[`in` operator](/en-US/docs/Web/JavaScript/Reference/Operators/in) as a
+function.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_Reflect.has">Using Reflect.has()</h3>
+### Using Reflect.has()
 
-<pre class="brush: js">Reflect.has({x: 0}, 'x')  // true
+```js
+Reflect.has({x: 0}, 'x')  // true
 Reflect.has({x: 0}, 'y')  // false
 
 // returns true for properties in the prototype chain
@@ -65,32 +65,30 @@ obj = new Proxy({}, {
 });
 Reflect.has(obj, 'doorbell')  // true
 Reflect.has(obj, 'dormitory')  // false
-</pre>
+```
 
-<p><code>Reflect.has</code> returns <code>true</code> for any inherited properties, like
-  the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/in"><code>in</code>
-    operator</a>:</p>
+`Reflect.has` returns `true` for any inherited properties, like the
+[`in` operator](/en-US/docs/Web/JavaScript/Reference/Operators/in):
 
-<pre class="brush: js">const a = {foo: 123}
+```js
+const a = {foo: 123}
 const b = {__proto__: a}
 const c = {__proto__: b}
-// The prototype chain is: c -&gt; b -&gt; a
+// The prototype chain is: c -> b -> a
 Reflect.has(c, 'foo') // true
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>A polyfill of <code>Reflect.has</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-reflect"><code>core-js</code></a></li>
-  <li>{{jsxref("Reflect")}}</li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/in"><code>in</code>
-      operator</a></li>
-</ul>
+- A polyfill of `Reflect.has` is available in
+  [`core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
+- {{jsxref("Reflect")}}
+- [`in` operator](/en-US/docs/Web/JavaScript/Reference/Operators/in)

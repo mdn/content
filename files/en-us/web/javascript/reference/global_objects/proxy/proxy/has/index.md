@@ -2,80 +2,76 @@
 title: handler.has()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/has
 tags:
-- ECMAScript 2015
-- JavaScript
-- Method
-- Proxy
+  - ECMAScript 2015
+  - JavaScript
+  - Method
+  - Proxy
 browser-compat: javascript.builtins.Proxy.handler.has
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>handler.has()</code></strong> method is a trap for the
-  {{jsxref("Operators/in", "in")}} operator.</p>
+The **`handler.has()`** method is a trap for the
+{{jsxref("Operators/in", "in")}} operator.
 
-<div>{{EmbedInteractiveExample("pages/js/proxyhandler-has.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/proxyhandler-has.html", "taller")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush: js">const <var>p</var> = new Proxy(<var>target</var>, {
-  has: function(<var>target</var>, <var>prop</var>) {
+```js
+const p = new Proxy(target, {
+  has: function(target, prop) {
   }
 });
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>The following parameters are passed to <code>has()</code> method. <code>this</code> is
-  bound to the handler.</p>
+The following parameters are passed to `has()` method. `this` is bound to the
+handler.
 
-<dl>
-  <dt><code><var>target</var></code></dt>
-  <dd>The target object.</dd>
-  <dt><code><var>prop</var></code></dt>
-  <dd>The name or {{jsxref("Symbol")}} of the property to check for existence.</dd>
-</dl>
+- `target`
+  - : The target object.
+- `prop`
+  - : The name or {{jsxref("Symbol")}} of the property to check for
+    existence.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>The <code>has()</code> method must return a boolean value.</p>
+The `has()` method must return a boolean value.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The <code><strong>handler.has()</strong></code> method is a trap for the
-  {{jsxref("Operators/in", "in")}} operator.</p>
+The **`handler.has()`** method is a trap for the
+{{jsxref("Operators/in", "in")}} operator.
 
-<h3 id="Interceptions">Interceptions</h3>
+### Interceptions
 
-<p>This trap can intercept these operations:</p>
+This trap can intercept these operations:
 
-<ul>
-  <li>Property query: <code><var>foo</var> in <var>proxy</var></code></li>
-  <li>Inherited property query: <code>foo in Object.create(<var>proxy</var>)</code></li>
-  <li><code>with</code> check: <code>with(<var>proxy</var>) { (<var>foo</var>); }</code>
-  </li>
-  <li>{{jsxref("Reflect.has()")}}</li>
-</ul>
+- Property query: `foo in proxy`
+- Inherited property query: `foo in Object.create(proxy)`
+- `with` check: `with(proxy) { (foo); }`
+- {{jsxref("Reflect.has()")}}
 
-<h3 id="Invariants">Invariants</h3>
+### Invariants
 
-<p>If the following invariants are violated, the proxy will throw a
-  {{jsxref("TypeError")}}:</p>
+If the following invariants are violated, the proxy will throw a
+{{jsxref("TypeError")}}:
 
-<ul>
-  <li>A property cannot be reported as non-existent, if it exists as a non-configurable
-    own property of the target object.</li>
-  <li>A property cannot be reported as non-existent, if it exists as an own property of
-    the target object and the target object is not extensible.</li>
-</ul>
+- A property cannot be reported as non-existent, if it exists as a
+  non-configurable own property of the target object.
+- A property cannot be reported as non-existent, if it exists as an own property
+  of the target object and the target object is not extensible.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Trapping_the_in_operator">Trapping the in operator</h3>
+### Trapping the in operator
 
-<p>The following code traps the {{jsxref("Operators/in", "in")}} operator.</p>
+The following code traps the {{jsxref("Operators/in", "in")}}
+operator.
 
-<pre class="brush: js">const p = new Proxy({}, {
+```js
+const p = new Proxy({}, {
   has: function(target, prop) {
     console.log('called: ' + prop);
     return true;
@@ -84,11 +80,12 @@ browser-compat: javascript.builtins.Proxy.handler.has
 
 console.log('a' in p); // "called: a"
                        // true
-</pre>
+```
 
-<p>The following code violates an invariant.</p>
+The following code violates an invariant.
 
-<pre class="brush: js example-bad">const obj = { a: 10 };
+```js example-bad
+const obj = { a: 10 };
 Object.preventExtensions(obj);
 
 const p = new Proxy(obj, {
@@ -98,21 +95,19 @@ const p = new Proxy(obj, {
 });
 
 'a' in p; // TypeError is thrown
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Proxy")}}</li>
-  <li>{{jsxref("Proxy.handler", "handler")}}</li>
-  <li>{{jsxref("Operators/in", "in")}} operator</li>
-  <li>{{jsxref("Reflect.has()")}}</li>
-</ul>
+- {{jsxref("Proxy")}}
+- {{jsxref("Proxy.handler", "handler")}}
+- {{jsxref("Operators/in", "in")}} operator
+- {{jsxref("Reflect.has()")}}

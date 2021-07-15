@@ -2,107 +2,66 @@
 title: typeof
 slug: Web/JavaScript/Reference/Operators/typeof
 tags:
-- JavaScript
-- Language feature
-- Operator
-- Reference
-- Unary
+  - JavaScript
+  - Language feature
+  - Operator
+  - Reference
+  - Unary
 browser-compat: javascript.operators.typeof
 ---
-<div>{{JSSidebar("Operators")}}</div>
+{{JSSidebar("Operators")}}
 
-<p>The <strong><code>typeof</code></strong> operator returns a string indicating the type
-  of the unevaluated operand.</p>
+The **`typeof`** operator returns a string indicating the type of the
+unevaluated operand.
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-typeof.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-typeof.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>typeof</code> operator is followed by its operand:</p>
+The `typeof` operator is followed by its operand:
 
-<pre class="brush: js">
+```js
 typeof operand
 typeof(operand)
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>operand</var></code></dt>
-  <dd>An expression representing the object or <a
-      href="/en-US/docs/Glossary/Primitive">primitive</a> whose type is to be returned.
-  </dd>
-</dl>
+- `operand`
+  - : An expression representing the object or
+    [primitive](/en-US/docs/Glossary/Primitive) whose type is to be returned.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The following table summarizes the possible return values of <code>typeof</code>. For
-  more information about types and primitives, see also the <a
-    href="/en-US/docs/Web/JavaScript/Data_structures">JavaScript data structure</a> page.
-</p>
+The following table summarizes the possible return values of `typeof`. For more
+information about types and primitives, see also the
+[JavaScript data structure](/en-US/docs/Web/JavaScript/Data_structures) page.
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Type</th>
-      <th scope="col">Result</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><a href="/en-US/docs/Glossary/Undefined">Undefined</a></td>
-      <td><code>"undefined"</code></td>
-    </tr>
-    <tr>
-      <td><a href="/en-US/docs/Glossary/Null">Null</a></td>
-      <td><code>"object"</code> (see <a href="#typeof_null">below</a>)</td>
-    </tr>
-    <tr>
-      <td><a href="/en-US/docs/Glossary/Boolean">Boolean</a></td>
-      <td><code>"boolean"</code></td>
-    </tr>
-    <tr>
-      <td><a href="/en-US/docs/Glossary/Number">Number</a></td>
-      <td><code>"number"</code></td>
-    </tr>
-    <tr>
-      <td><a href="/en-US/docs/Glossary/BigInt">BigInt</a> (new in ECMAScript 2020)</td>
-      <td><code>"bigint"</code></td>
-    </tr>
-    <tr>
-      <td><a href="/en-US/docs/Glossary/String">String</a></td>
-      <td><code>"string"</code></td>
-    </tr>
-    <tr>
-      <td><a href="/en-US/docs/Glossary/Symbol">Symbol</a> (new in ECMAScript 2015)</td>
-      <td><code>"symbol"</code></td>
-    </tr>
-    <tr>
-      <td><a href="/en-US/docs/Glossary/Function">Function</a> object (implements [[Call]]
-        in ECMA-262 terms)</td>
-      <td><code>"function"</code></td>
-    </tr>
-    <tr>
-      <td>Any other object</td>
-      <td><code>"object"</code></td>
-    </tr>
-  </tbody>
-</table>
+| Type                                                                                     | Result                                 |
+| ---------------------------------------------------------------------------------------- | -------------------------------------- |
+| [Undefined](/en-US/docs/Glossary/Undefined)                                              | `"undefined"`                          |
+| [Null](/en-US/docs/Glossary/Null)                                                        | `"object"` (see [below](#typeof_null)) |
+| [Boolean](/en-US/docs/Glossary/Boolean)                                                  | `"boolean"`                            |
+| [Number](/en-US/docs/Glossary/Number)                                                    | `"number"`                             |
+| [BigInt](/en-US/docs/Glossary/BigInt) (new in ECMAScript 2020)                           | `"bigint"`                             |
+| [String](/en-US/docs/Glossary/String)                                                    | `"string"`                             |
+| [Symbol](/en-US/docs/Glossary/Symbol) (new in ECMAScript 2015)                           | `"symbol"`                             |
+| [Function](/en-US/docs/Glossary/Function) object (implements [[Call]] in ECMA-262 terms) | `"function"`                           |
+| Any other object                                                                         | `"object"`                             |
 
-<div class="notecard note">
-  <p><strong>Note:</strong> ECMAScript 2019 and older permitted implementations to have
-    <code>typeof</code> return any implementation-defined string value for non-callable
-    non-standard exotic objects.</p>
+> **Note:** ECMAScript 2019 and older permitted implementations to have `typeof`
+> return any implementation-defined string value for non-callable non-standard
+> exotic objects.
+>
+> The only known browser to have actually taken advantage of this is old
+> Internet Explorer (see [below](#ie-specific_notes)).
 
-  <p>The only known browser to have actually taken advantage of this is old Internet
-    Explorer (see <a href="#ie-specific_notes">below</a>).</p>
-</div>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Basic usage
 
-<h3 id="Basic_usage">Basic usage</h3>
-
-<pre class="brush: js">// Numbers
+```js
+// Numbers
 typeof 37 === 'number';
 typeof 3.14 === 'number';
 typeof(42) === 'number';
@@ -141,7 +100,7 @@ typeof undeclaredVariable === 'undefined';
 // Objects
 typeof {a: 1} === 'object';
 
-// use <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray">Array.isArray</a> or Object.prototype.toString.call
+// use Array.isArray or Object.prototype.toString.call
 // to differentiate regular objects from arrays
 typeof [1, 2, 4] === 'object';
 
@@ -156,26 +115,30 @@ typeof new String('abc') === 'object';
 // Functions
 typeof function() {} === 'function';
 typeof class C {} === 'function';
-typeof Math.sin === 'function';</pre>
+typeof Math.sin === 'function';
+```
 
-<h3 id="typeof_null"><code>typeof null</code></h3>
+### `typeof null`
 
-<pre class="brush: js no-line-numbers">// This stands since the beginning of JavaScript
-typeof null === 'object';</pre>
+```js
+// This stands since the beginning of JavaScript
+typeof null === 'object';
+```
 
-<p>In the first implementation of JavaScript, JavaScript values were represented as a type
-  tag and a value. The type tag for objects was <code>0</code>. <code>null</code> was
-  represented as the NULL pointer (<code>0x00</code> in most platforms). Consequently,
-  <code>null</code> had <code>0</code> as type tag, hence the <code>typeof</code> return
-  value <code>"object"</code>. (<a
-    href="http://www.2ality.com/2013/10/typeof-null.html">reference</a>)</p>
+In the first implementation of JavaScript, JavaScript values were represented as
+a type tag and a value. The type tag for objects was `0`. `null` was represented
+as the NULL pointer (`0x00` in most platforms). Consequently, `null` had `0` as
+type tag, hence the `typeof` return value `"object"`.
+([reference](http://www.2ality.com/2013/10/typeof-null.html))
 
-<p>A fix was proposed for ECMAScript (via an opt-in), but <a     href="https://web.archive.org/web/20160331031419/http://wiki.ecmascript.org:80/doku.php?id=harmony:typeof_null">was
-    rejected</a>. It would have resulted in <code>typeof null === 'null'</code>.</p>
+A fix was proposed for ECMAScript (via an opt-in), but
+[was rejected](https://web.archive.org/web/20160331031419/http://wiki.ecmascript.org:80/doku.php?id=harmony:typeof_null).
+It would have resulted in `typeof null === 'null'`.
 
-<h3 id="Using_new_operator">Using <code>new</code> operator</h3>
+### Using `new` operator
 
-<pre class="brush: js;">// All constructor functions, with the exception of the Function constructor, will always be typeof 'object'
+```js
+// All constructor functions, with the exception of the Function constructor, will always be typeof 'object'
 let str = new String('String');
 let num = new Number(100);
 
@@ -185,41 +148,45 @@ typeof num; // It will return 'object'
 let func = new Function();
 
 typeof func; // It will return 'function'
-</pre>
+```
 
-<h3 id="Need_for_parentheses_in_Syntax">Need for parentheses in Syntax</h3>
+### Need for parentheses in Syntax
 
-<pre class="brush:js">// Parentheses can be used for determining the data type of expressions.
+```js
+// Parentheses can be used for determining the data type of expressions.
 let iData = 99;
 
 typeof iData + ' Wisen'; // 'number Wisen'
 typeof (iData + ' Wisen'); // 'string'
-</pre>
+```
 
-<h3 id="Regular_expressions">Regular expressions</h3>
+### Regular expressions
 
-<p>Callable regular expressions were a non-standard addition in some browsers.</p>
+Callable regular expressions were a non-standard addition in some browsers.
 
-<pre class="brush: js no-line-numbers">typeof /s/ === 'function'; // Chrome 1-12 Non-conform to ECMAScript 5.1
-typeof /s/ === 'object';   // Firefox 5+  Conform to ECMAScript 5.1</pre>
+```js
+typeof /s/ === 'function'; // Chrome 1-12 Non-conform to ECMAScript 5.1
+typeof /s/ === 'object';   // Firefox 5+  Conform to ECMAScript 5.1
+```
 
-<h3 id="Errors">Errors</h3>
+### Errors
 
-<p>Before ECMAScript 2015, <code>typeof</code> was always guaranteed to return a string
-  for any operand it was supplied with. Even with undeclared identifiers,
-  <code>typeof</code> will return <code>'undefined'</code>. Using <code>typeof</code>
-  could never generate an error.</p>
+Before ECMAScript 2015, `typeof` was always guaranteed to return a string for
+any operand it was supplied with. Even with undeclared identifiers, `typeof`
+will return `'undefined'`. Using `typeof` could never generate an error.
 
-<p>However, with the addition of block-scoped {{JSxRef("Statements/let", "let")}} and
-  {{JSxRef("Statements/const", "const")}}, using <code>typeof</code> on <code>let</code> and
-  <code>const</code> variables (or using <code>typeof</code> on a <code>class</code>) in a
-  block before they are declared will throw a {{JSxRef("ReferenceError")}}. Block scoped
-  variables are in a "<a
-    href="/en-US/docs/Web/JavaScript/Reference/Statements/let#The_temporal_dead_zone_and_typeof">temporal
-    dead zone</a>" from the start of the block until the initialization is processed,
-  during which, it will throw an error if accessed.</p>
+However, with the addition of block-scoped
+{{JSxRef("Statements/let", "let")}} and
+{{JSxRef("Statements/const", "const")}}, using `typeof` on `let`
+and `const` variables (or using `typeof` on a `class`) in a block before they
+are declared will throw a {{JSxRef("ReferenceError")}}. Block scoped
+variables are in a
+"[temporal dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#The_temporal_dead_zone_and_typeof)"
+from the start of the block until the initialization is processed, during which,
+it will throw an error if accessed.
 
-<pre class="brush: js no-line-numbers">typeof undeclaredVariable === 'undefined';
+```js
+typeof undeclaredVariable === 'undefined';
 
 typeof newLetVariable; // ReferenceError
 typeof newConstVariable; // ReferenceError
@@ -227,33 +194,35 @@ typeof newClass; // ReferenceError
 
 let newLetVariable;
 const newConstVariable = 'hello';
-class newClass{};</pre>
+class newClass{};
+```
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>All current browsers expose a non-standard host object <a
-    href="/en-US/docs/Web/API/Document/all"
-    title="The Document interface's read-only all property returns an HTMLAllCollection rooted at the document node. In other words, it returns the entire contents of the page."><code>document.all</code></a>
-  with type <code>undefined</code>.</p>
+All current browsers expose a non-standard host object
+[`document.all`](/en-US/docs/Web/API/Document/all "The Document interface's read-only all property returns an HTMLAllCollection rooted at the document node. In other words, it returns the entire contents of the page.")
+with type `undefined`.
 
-<pre
-  class="brush: js no-line-numbers">typeof document.all === 'undefined';</pre>
+```js
+typeof document.all === 'undefined';
+```
 
-<p>Although the specification allows custom type tags for non-standard exotic objects, it
-  requires those type tags to be different from the predefined ones. The case of
-  <code>document.all</code> having type <code>'undefined'</code> is classified in the web
-  standards as a "willful violation" of the original ECMA JavaScript standard.</p>
+Although the specification allows custom type tags for non-standard exotic
+objects, it requires those type tags to be different from the predefined ones.
+The case of `document.all` having type `'undefined'` is classified in the web
+standards as a "willful violation" of the original ECMA JavaScript standard.
 
-<h3 id="Real-world_usage">Real-world usage</h3>
+### Real-world usage
 
-<p><code>typeof</code> is very useful, but it's not as versatile as might be required. For
-  example, <code>typeof([])</code> , is <code>'object'</code>, as well as
-  <code>typeof(new Date())</code>, <code>typeof(/abc/)</code>, etc.</p>
+`typeof` is very useful, but it's not as versatile as might be required. For
+example, `typeof([])` , is `'object'`, as well as `typeof(new Date())`,
+`typeof(/abc/)`, etc.
 
-<p>For greater specificity in checking types, a <code>typeof</code> wrapper for usage in
-  production-level code would be as follows (provided <code>obj</code> exists):</p>
+For greater specificity in checking types, a `typeof` wrapper for usage in
+production-level code would be as follows (provided `obj` exists):
 
-<pre class="brush: js">  function type(obj, showFullClass) {
+```js
+  function type(obj, showFullClass) {
 
     // get toPrototypeString() of obj (handles all types)
     if (showFullClass && typeof obj === "object") {
@@ -265,42 +234,44 @@ class newClass{};</pre>
     if (deepType === 'generatorfunction') { return 'function' }
 
     // Prevent overspecificity (for example, [object HTMLDivElement], etc).
-    // Account for functionish Regexp (Android &lt;=2.3), functionish &lt;object&gt; element (Chrome &lt;=57, Firefox &lt;=52), etc.
+    // Account for functionish Regexp (Android <=2.3), functionish <object> element (Chrome <=57, Firefox <=52), etc.
     // String.prototype.match is universally supported.
 
     return deepType.match(/^(array|bigint|date|error|function|generator|regexp|symbol)$/) ? deepType :
        (typeof obj === 'object' || typeof obj === 'function') ? 'object' : typeof obj;
-  }</pre>
+  }
+```
 
-<p>For checking non-existent variables that would otherwise throw
-  a {{JSxRef("ReferenceError")}}, use <code>typeof nonExistentVar === 'undefined'</code>.
-</p>
+For checking non-existent variables that would otherwise throw
+a {{JSxRef("ReferenceError")}}, use
+`typeof nonExistentVar === 'undefined'`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h3 id="IE-specific_notes">IE-specific notes</h3>
+### IE-specific notes
 
-<p>On IE 6, 7, and 8 a lot of host objects are objects and not functions. For example:</p>
+On IE 6, 7, and 8 a lot of host objects are objects and not functions. For
+example:
 
-<pre class="brush: js no-line-numbers">typeof alert === 'object'</pre>
+```js
+typeof alert === 'object'
+```
 
-<p>Some non-standard IE properties return other values (<a
-    href="https://github.com/tc39/ecma262/issues/1440#issuecomment-461963872">tc39/ecma262#1440
-    (comment)</a>):</p>
+Some non-standard IE properties return other values
+([tc39/ecma262#1440 (comment)](https://github.com/tc39/ecma262/issues/1440#issuecomment-461963872)):
 
-<pre class="brush: js no-line-numbers">typeof window.external.AddSearchProvider === "unknown";
-typeof window.external.IsSearchProviderInstalled === "unknown";</pre>
+```js
+typeof window.external.AddSearchProvider === "unknown";
+typeof window.external.IsSearchProviderInstalled === "unknown";
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{JSxRef("Operators/instanceof", "instanceof")}}</li>
-  <li><a href="https://github.com/tc39/ecma262/issues/668"><code>document.all</code>
-      willful violation of the standard</a></li>
-</ul>
+- {{JSxRef("Operators/instanceof", "instanceof")}}
+- [`document.all` willful violation of the standard](https://github.com/tc39/ecma262/issues/668)

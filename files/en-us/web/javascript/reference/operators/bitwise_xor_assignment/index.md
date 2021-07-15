@@ -2,30 +2,33 @@
 title: Bitwise XOR assignment (^=)
 slug: Web/JavaScript/Reference/Operators/Bitwise_XOR_assignment
 tags:
-- Assignment operator
-- JavaScript
-- Language feature
-- Operator
-- Reference
+  - Assignment operator
+  - JavaScript
+  - Language feature
+  - Operator
+  - Reference
 browser-compat: javascript.operators.bitwise_xor_assignment
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>The bitwise XOR assignment operator (<code>^=</code>) uses the binary representation of
-  both operands, does a bitwise XOR operation on them and assigns the result to the
-  variable.</p>
+The bitwise XOR assignment operator (`^=`) uses the binary representation of
+both operands, does a bitwise XOR operation on them and assigns the result to
+the variable.
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-bitwise-xor-assignment.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-bitwise-xor-assignment.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">x ^= y // x = x ^ y</pre>
+```js
+x ^= y // x = x ^ y
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_bitwise_XOR_assignment">Using bitwise XOR assignment</h3>
+### Using bitwise XOR assignment
 
-<pre class="brush: js">let a = 5;      // 00000000000000000000000000000101
+```js
+let a = 5;      // 00000000000000000000000000000101
 a ^= 3;         // 00000000000000000000000000000011
 
 console.log(a); // 00000000000000000000000000000110
@@ -36,23 +39,17 @@ b ^= 0;         // 00000000000000000000000000000000
 
 console.log(b); // 00000000000000000000000000000101
 // 5
+```
 
-</pre>
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a
-      href="/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment">Assignment
-      operators in the JS guide</a></li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR">Bitwise XOR
-      operator</a></li>
-</ul>
+- [Assignment operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment)
+- [Bitwise XOR operator](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR)

@@ -2,40 +2,41 @@
 title: Symbol.keyFor()
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/keyFor
 tags:
-- ECMAScript 2015
-- JavaScript
-- Method
-- Symbol
+  - ECMAScript 2015
+  - JavaScript
+  - Method
+  - Symbol
 browser-compat: javascript.builtins.Symbol.keyFor
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>Symbol.keyFor(sym)</code></strong> method retrieves a shared symbol
-  key from the global symbol registry for the given symbol.</p>
+The **`Symbol.keyFor(sym)`** method retrieves a shared symbol key from the
+global symbol registry for the given symbol.
 
-<div>{{EmbedInteractiveExample("pages/js/symbol-keyfor.html")}}</div>
+{{EmbedInteractiveExample("pages/js/symbol-keyfor.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">Symbol.keyFor(<var>sym</var>);</pre>
+```js
+Symbol.keyFor(sym);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>sym</var></code></dt>
-  <dd>Symbol, required. The symbol to find a key for.</dd>
-</dl>
+- `sym`
+  - : Symbol, required. The symbol to find a key for.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A string representing the key for the given symbol if one is found on the global
-  registry; otherwise, {{jsxref("undefined")}}.</p>
+A string representing the key for the given symbol if one is found on the global
+registry; otherwise, {{jsxref("undefined")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_keyFor">Using keyFor()</h3>
+### Using keyFor()
 
-<pre class="brush: js">var globalSym = Symbol.for('foo'); // create a new global symbol
+```js
+var globalSym = Symbol.for('foo'); // create a new global symbol
 Symbol.keyFor(globalSym); // "foo"
 
 var localSym = Symbol();
@@ -44,18 +45,16 @@ Symbol.keyFor(localSym); // undefined
 // well-known symbols are not symbols registered
 // in the global symbol registry
 Symbol.keyFor(Symbol.iterator) // undefined
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Symbol.for()")}}</li>
-</ul>
+- {{jsxref("Symbol.for()")}}

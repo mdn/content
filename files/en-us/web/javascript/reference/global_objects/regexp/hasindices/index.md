@@ -11,25 +11,31 @@ tags:
   - Regular Expressions
 browser-compat: javascript.builtins.RegExp.hasIndices
 ---
-<p>{{JSRef}}</p>
+{{JSRef}}
 
-<p>The <strong><code>hasIndices</code></strong> property indicates whether or not the "<code>d</code>" flag is used with the regular expression. <code>hasIndices</code> is a read-only property of an individual regular expression instance.</p>
+The **`hasIndices`** property indicates whether or not the "`d`" flag is used
+with the regular expression. `hasIndices` is a read-only property of an
+individual regular expression instance.
 
-<div>{{EmbedInteractiveExample("pages/js/regexp-prototype-hasindices.html")}}</div>
+{{EmbedInteractiveExample("pages/js/regexp-prototype-hasindices.html")}}
 
-<p>{{JS_Property_Attributes(0, 0, 1)}}</p>
+{{JS_Property_Attributes(0, 0, 1)}}
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The value of <code>hasIndices</code> is a {{JSxRef("Boolean")}} and <code>true</code> if the "<code>d</code>" flag was used; otherwise, <code>false</code>. The "<code>d</code>" flag indicates that the result of a regular expression match should contain the start and end indices of the substrings of each capture group.</p>
+The value of `hasIndices` is a {{JSxRef("Boolean")}} and `true` if the
+"`d`" flag was used; otherwise, `false`. The "`d`" flag indicates that the
+result of a regular expression match should contain the start and end indices of
+the substrings of each capture group.
 
-<p>You cannot change this property directly.</p>
+You cannot change this property directly.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_hasIndices">Using <code>hasIndices</code></h3>
+### Using `hasIndices`
 
-<pre class="brush: js">const str1 = 'foo bar foo';
+```js
+const str1 = 'foo bar foo';
 
 const regex1 = new RegExp('foo', 'gd');
 
@@ -45,27 +51,24 @@ const regex2 = new RegExp('foo');
 console.log(regex2.hasIndices); // Output: false
 
 console.log(regex2.exec(str2).indices); // Output: undefined
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat}}
 
-<p>{{Compat}}</p>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{JSxRef("RegExp.lastIndex")}}</li>
- <li>{{JSxRef("RegExp.prototype.exec()")}}</li>
- <li>{{JSxRef("RegExp.prototype.dotAll")}}</li>
- <li>{{JSxRef("RegExp.prototype.global")}}</li>
- <li>{{JSxRef("RegExp.prototype.ignoreCase")}}</li>
- <li>{{JSxRef("RegExp.prototype.multiline")}}</li>
- <li>{{JSxRef("RegExp.prototype.source")}}</li>
- <li>{{JSxRef("RegExp.prototype.sticky")}}</li>
- <li>{{JSxRef("RegExp.prototype.unicode")}}</li>
-</ul>
+- {{JSxRef("RegExp.lastIndex")}}
+- {{JSxRef("RegExp.prototype.exec()")}}
+- {{JSxRef("RegExp.prototype.dotAll")}}
+- {{JSxRef("RegExp.prototype.global")}}
+- {{JSxRef("RegExp.prototype.ignoreCase")}}
+- {{JSxRef("RegExp.prototype.multiline")}}
+- {{JSxRef("RegExp.prototype.source")}}
+- {{JSxRef("RegExp.prototype.sticky")}}
+- {{JSxRef("RegExp.prototype.unicode")}}

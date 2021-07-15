@@ -2,34 +2,33 @@
 title: TypedArray.prototype.find()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/find
 tags:
-- ECMAScript 2015
-- JavaScript
-- Method
-- Prototype
-- Reference
-- TypedArray
-- TypedArrays
-- Polyfill
+  - ECMAScript 2015
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
+  - TypedArray
+  - TypedArrays
+  - Polyfill
 browser-compat: javascript.builtins.TypedArray.find
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>find()</code></strong> method returns a value of an element in the
-  typed array, if it satisfies the provided testing function. Otherwise
-  {{jsxref("undefined")}} is returned. <em>TypedArray</em> is one of the <a
-    href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">typed
-    array types</a> here.</p>
+The **`find()`** method returns a value of an element in the typed array, if it
+satisfies the provided testing function. Otherwise
+{{jsxref("undefined")}} is returned. _TypedArray_ is one of the
+[typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)
+here.
 
-<p>See also the {{jsxref("TypedArray.findIndex", "findIndex()")}} method, which returns
-  the <strong>index</strong> of a found element in the typed array instead of its value.
-</p>
+See also the {{jsxref("TypedArray.findIndex", "findIndex()")}}
+method, which returns the **index** of a found element in the typed array
+instead of its value.
 
-<div>{{EmbedInteractiveExample("pages/js/typedarray-find.html")}}</div>
+{{EmbedInteractiveExample("pages/js/typedarray-find.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush: js">
+```js
 // Arrow function
 find((element) => { ... } )
 find((element, index) => { ... } )
@@ -44,93 +43,89 @@ find(function callbackFn(element) { ... })
 find(function callbackFn(element, index) { ... })
 find(function callbackFn(element, index, array){ ... })
 find(function callbackFn(element, index, array) { ... }, thisArg)
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>callbackFn</var></code></dt>
-  <dd>Function to execute on each value in the typed array, taking three arguments:
-    <dl>
-      <dt><code><var>element</var></code></dt>
-      <dd>The current element being processed in the typed array.</dd>
-      <dt><code><var>index</var></code></dt>
-      <dd>The index of the current element being processed in the typed array.</dd>
-      <dt><code><var>array</var></code></dt>
-      <dd>The array <code>find()</code> was called upon.</dd>
-    </dl>
-  </dd>
-  <dt><code><var>thisArg</var></code> {{optional_inline}}</dt>
-  <dd>Object to use as <code>this</code> when executing <code><var>callbackFn</var></code>.
-  </dd>
-</dl>
+- `callbackFn`
 
-<h3 id="Return_value">Return value</h3>
+  - : Function to execute on each value in the typed array, taking three
+    arguments:
 
-<p>A value in the array if an element passes the test; otherwise, {{jsxref("undefined")}}.
-</p>
+    - `element`
+      - : The current element being processed in the typed array.
+    - `index`
+      - : The index of the current element being processed in the typed array.
+    - `array`
+      - : The array `find()` was called upon.
 
-<h2 id="Description">Description</h2>
+- `thisArg` {{optional_inline}}
+  - : Object to use as `this` when executing `callbackFn`.
 
-<p>The <code>find()</code> method executes the <code><var>callbackFn</var></code> function
-  once for each element present in the typed array until it finds one where
-  <code><var>callbackFn</var></code> returns a true value. If such an element is found,
-  <code>find()</code> immediately returns the value of that element. Otherwise,
-  <code>find()</code> returns {{jsxref("undefined")}}. <code><var>callbackFn</var></code> is
-  invoked only for indexes of the typed array which have assigned values; it is not
-  invoked for indexes which have been deleted or which have never been assigned values.
-</p>
+### Return value
 
-<p><code><var>callbackFn</var></code> is invoked with three arguments: the value of the
-  element, the index of the element, and the typed array object being traversed.</p>
+A value in the array if an element passes the test; otherwise,
+{{jsxref("undefined")}}.
 
-<p>If a <code><var>thisArg</var></code> parameter is provided to <code>find()</code>, it
-  will be used as the <code>this</code> for each invocation of the
-  <code><var>callbackFn</var></code>. If it is not provided, then {{jsxref("undefined")}} is
-  used.</p>
+## Description
 
-<p><code>find()</code> does not mutate the typed array on which it is called.</p>
+The `find()` method executes the `callbackFn` function once for each element
+present in the typed array until it finds one where `callbackFn` returns a true
+value. If such an element is found, `find()` immediately returns the value of
+that element. Otherwise, `find()` returns {{jsxref("undefined")}}.
+`callbackFn` is invoked only for indexes of the typed array which have assigned
+values; it is not invoked for indexes which have been deleted or which have
+never been assigned values.
 
-<p>The range of elements processed by <code>find()</code> is set before the first
-  invocation of <code><var>callbackFn</var></code>. Elements that are appended to the typed
-  array after the call to <code>find()</code> begins will not be visited by
-  <code><var>callbackFn</var></code>. If an existing, unvisited element of the typed array
-  is changed by <code><var>callbackFn</var></code>, its value passed to the visiting
-  <code><var>callbackFn</var></code> will be the value at the time that <code>find()</code>
-  visits that element's index; elements that are deleted are not visited.</p>
+`callbackFn` is invoked with three arguments: the value of the element, the
+index of the element, and the typed array object being traversed.
 
-<h2 id="Examples">Examples</h2>
+If a `thisArg` parameter is provided to `find()`, it will be used as the `this`
+for each invocation of the `callbackFn`. If it is not provided, then
+{{jsxref("undefined")}} is used.
 
-<h3 id="Find_a_prime_number_in_a_typed_array">Find a prime number in a typed array</h3>
+`find()` does not mutate the typed array on which it is called.
 
-<p>The following example finds an element in the typed array that is a prime number (or
-  returns {{jsxref("undefined")}} if there is no prime number).</p>
+The range of elements processed by `find()` is set before the first invocation
+of `callbackFn`. Elements that are appended to the typed array after the call to
+`find()` begins will not be visited by `callbackFn`. If an existing, unvisited
+element of the typed array is changed by `callbackFn`, its value passed to the
+visiting `callbackFn` will be the value at the time that `find()` visits that
+element's index; elements that are deleted are not visited.
 
-<pre class="brush: js">function isPrime(element, index, array) {
+## Examples
+
+### Find a prime number in a typed array
+
+The following example finds an element in the typed array that is a prime number
+(or returns {{jsxref("undefined")}} if there is no prime number).
+
+```js
+function isPrime(element, index, array) {
   var start = 2;
-  while (start &lt;= Math.sqrt(element)) {
-    if (element % start++ &lt; 1) {
+  while (start <= Math.sqrt(element)) {
+    if (element % start++ < 1) {
       return false;
     }
   }
-  return element &gt; 1;
+  return element > 1;
 }
 
 var uint8 = new Uint8Array([4, 5, 8, 12]);
-console.log(uint8.find(isPrime)); // 5</pre>
+console.log(uint8.find(isPrime)); // 5
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>A polyfill of <code>TypedArray.prototype.find</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-typed-arrays"><code>core-js</code></a></li>
-  <li>{{jsxref("TypedArray.prototype.findIndex()")}}</li>
-  <li>{{jsxref("TypedArray.prototype.every()")}}</li>
-</ul>
+- A polyfill of `TypedArray.prototype.find` is available in
+  [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- {{jsxref("TypedArray.prototype.findIndex()")}}
+- {{jsxref("TypedArray.prototype.every()")}}

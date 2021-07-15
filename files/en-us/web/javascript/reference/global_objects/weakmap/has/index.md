@@ -2,64 +2,60 @@
 title: WeakMap.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/has
 tags:
-- ECMAScript 2015
-- JavaScript
-- Method
-- Prototype
-- WeakMap
+  - ECMAScript 2015
+  - JavaScript
+  - Method
+  - Prototype
+  - WeakMap
 browser-compat: javascript.builtins.WeakMap.has
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>has()</code></strong> method returns a boolean indicating whether an
-  element with the specified key exists in the <code>WeakMap</code> object or not.</p>
+The **`has()`** method returns a boolean indicating whether an element with the
+specified key exists in the `WeakMap` object or not.
 
-<div>{{EmbedInteractiveExample("pages/js/weakmap-prototype-has.html")}}</div>
+{{EmbedInteractiveExample("pages/js/weakmap-prototype-has.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+has(key)
+```
 
-<pre class="brush: js">has(key)</pre>
+### Parameters
 
-<h3 id="Parameters">Parameters</h3>
+- `key`
+  - : Required. The key of the element to test for presence in the `WeakMap`
+    object.
 
-<dl>
-  <dt><code><var>key</var></code></dt>
-  <dd>Required. The key of the element to test for presence in the <code>WeakMap</code>
-    object.</dd>
-</dl>
+### Return value
 
-<h3 id="Return_value">Return value</h3>
+- Boolean
+  - : Returns `true` if an element with the specified key exists in the
+    `WeakMap` object; otherwise `false`.
 
-<dl>
-  <dt>Boolean</dt>
-  <dd>Returns <code>true</code> if an element with the specified key exists in the
-    <code>WeakMap</code> object; otherwise <code>false</code>.</dd>
-</dl>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Using the has method
 
-<h3 id="Using_the_has_method">Using the has method</h3>
-
-<pre class="brush: js">var wm = new WeakMap();
+```js
+var wm = new WeakMap();
 wm.set(window, 'foo');
 
 wm.has(window); // returns true
 wm.has('baz');  // returns false
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("WeakMap")}}</li>
-  <li>{{jsxref("WeakMap.prototype.set()")}}</li>
-  <li>{{jsxref("WeakMap.prototype.get()")}}</li>
-</ul>
+- {{jsxref("WeakMap")}}
+- {{jsxref("WeakMap.prototype.set()")}}
+- {{jsxref("WeakMap.prototype.get()")}}

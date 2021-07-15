@@ -2,45 +2,43 @@
 title: WeakMap() constructor
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/WeakMap
 tags:
-- Constructor
-- JavaScript
-- Reference
-- WeakMap
-- Polyfill
+  - Constructor
+  - JavaScript
+  - Reference
+  - WeakMap
+  - Polyfill
 browser-compat: javascript.builtins.WeakMap.WeakMap
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>WeakMap()</code> constructor</strong> creates <code>WeakMap</code>
-  objects which are a collections of key/value pairs in which the keys are weakly
-  referenced. The keys must be objects and the values can be arbitrary values.</p>
+The **`WeakMap()` constructor** creates `WeakMap` objects which are a
+collections of key/value pairs in which the keys are weakly referenced. The keys
+must be objects and the values can be arbitrary values.
 
-<p>You can learn more about <code>WeakMap</code>s in the section <a
-    href="/en-US/docs/Web/JavaScript/Guide/Keyed_collections#WeakMap_object">WeakMap
-    object</a> in <a href="/en-US/docs/Web/JavaScript/Guide/Keyed_collections">Keyed
-    collections</a>.</p>
+You can learn more about `WeakMap`s in the section
+[WeakMap object](/en-US/docs/Web/JavaScript/Guide/Keyed_collections#WeakMap_object)
+in [Keyed collections](/en-US/docs/Web/JavaScript/Guide/Keyed_collections).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 new WeakMap()
 new WeakMap(iterable)
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>iterable</var></code></dt>
-  <dd>Iterable is an Array or other iterable object whose elements are key-value pairs
-    (2-element Arrays). Each key-value pair will be added to the new WeakMap. null is
-    treated as undefined.</dd>
-</dl>
+- `iterable`
+  - : Iterable is an Array or other iterable object whose elements are key-value
+    pairs (2-element Arrays). Each key-value pair will be added to the new
+    WeakMap. null is treated as undefined.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_WeakMap">Using WeakMap</h3>
+### Using WeakMap
 
-<pre class="brush: js">const wm1 = new WeakMap(),
+```js
+const wm1 = new WeakMap(),
       wm2 = new WeakMap(),
       wm3 = new WeakMap();
 const o1 = {},
@@ -67,26 +65,22 @@ wm3.get(o1); // 37
 wm1.has(o1); // true
 wm1.delete(o1);
 wm1.has(o1); // false
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>A polyfill of <code>WeakMap</code> is available in <a href="https://github.com/zloirock/core-js#weakmap"><code>core-js</code></a></li>
-  <li><a
-      href="/en-US/docs/Web/JavaScript/Guide/Keyed_collections#WeakMap_object"><code>WeakMap</code>
-      in the JavaScript guide</a></li>
-  <li><a href="http://fitzgeraldnick.com/weblog/53/">Hiding Implementation Details with
-      ECMAScript 6 WeakMaps</a></li>
-  <li>{{jsxref("Map")}}</li>
-  <li>{{jsxref("Set")}}</li>
-  <li>{{jsxref("WeakSet")}}</li>
-</ul>
+- A polyfill of `WeakMap` is available in
+  [`core-js`](https://github.com/zloirock/core-js#weakmap)
+- [`WeakMap` in the JavaScript guide](/en-US/docs/Web/JavaScript/Guide/Keyed_collections#WeakMap_object)
+- [Hiding Implementation Details with ECMAScript 6 WeakMaps](http://fitzgeraldnick.com/weblog/53/)
+- {{jsxref("Map")}}
+- {{jsxref("Set")}}
+- {{jsxref("WeakSet")}}

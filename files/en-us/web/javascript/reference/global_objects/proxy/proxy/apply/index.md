@@ -2,77 +2,71 @@
 title: handler.apply()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/apply
 tags:
-- ECMAScript 2015
-- JavaScript
-- Method
-- Proxy
+  - ECMAScript 2015
+  - JavaScript
+  - Method
+  - Proxy
 browser-compat: javascript.builtins.Proxy.handler.apply
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>handler.apply()</code></strong> method is a trap for a function call.
-</p>
+The **`handler.apply()`** method is a trap for a function call.
 
-<div>{{EmbedInteractiveExample("pages/js/proxyhandler-apply.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/proxyhandler-apply.html", "taller")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush: js">const <var>p</var> = new Proxy(<var>target</var>, {
-  apply: function(<var>target</var>, <var>thisArg</var>, <var>argumentsList</var>) {
+```js
+const p = new Proxy(target, {
+  apply: function(target, thisArg, argumentsList) {
   }
 });
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>The following parameters are passed to the <code>apply()</code> method.
-  <code>this</code> is bound to the handler.</p>
+The following parameters are passed to the `apply()` method. `this` is bound to
+the handler.
 
-<dl>
-  <dt><code><var>target</var></code></dt>
-  <dd>The target object.</dd>
-  <dt><code><var>thisArg</var></code></dt>
-  <dd>The <code>this</code> argument for the call.</dd>
-  <dt><code><var>argumentsList</var></code></dt>
-  <dd>The list of arguments for the call.</dd>
-</dl>
+- `target`
+  - : The target object.
+- `thisArg`
+  - : The `this` argument for the call.
+- `argumentsList`
+  - : The list of arguments for the call.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>The <code>apply()</code> method can return any value.</p>
+The `apply()` method can return any value.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The <code><strong>handler.apply()</strong></code> method is a trap for a function call.
-</p>
+The **`handler.apply()`** method is a trap for a function call.
 
-<h3 id="Interceptions">Interceptions</h3>
+### Interceptions
 
-<p>This trap can intercept these operations:</p>
+This trap can intercept these operations:
 
-<ul>
-  <li><code><var>proxy</var>(...<var>args</var>)</code></li>
-  <li>{{jsxref("Function.prototype.apply()")}} and {{jsxref("Function.prototype.call()")}}
-  </li>
-  <li>{{jsxref("Reflect.apply()")}}</li>
-</ul>
+- `proxy(...args)`
+- {{jsxref("Function.prototype.apply()")}} and
+  {{jsxref("Function.prototype.call()")}}
+- {{jsxref("Reflect.apply()")}}
 
-<h3 id="Invariants">Invariants</h3>
+### Invariants
 
-<p>If the following invariants are violated, the proxy will throw a
-  {{jsxref("TypeError")}}.</p>
+If the following invariants are violated, the proxy will throw a
+{{jsxref("TypeError")}}.
 
-<p>The <code><var>target</var></code> must be a callable itself. That is, it must be a
-  function object.</p>
+The `target` must be a callable itself. That is, it must be a function object.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Trapping_a_function_call">Trapping a function call</h3>
+### Trapping a function call
 
-<p>The following code traps a function call.</p>
+The following code traps a function call.
 
-<pre class="brush: js">const p = new Proxy(function() {}, {
+```js
+const p = new Proxy(function() {}, {
   apply: function(target, thisArg, argumentsList) {
     console.log('called: ' + argumentsList.join(', '));
     return argumentsList[0] + argumentsList[1] + argumentsList[2];
@@ -81,22 +75,20 @@ browser-compat: javascript.builtins.Proxy.handler.apply
 
 console.log(p(1, 2, 3)); // "called: 1, 2, 3"
                          // 6
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Proxy")}}</li>
-  <li>{{jsxref("Proxy.handler", "handler")}}</li>
-  <li>{{jsxref("Function.prototype.apply()")}}</li>
-  <li>{{jsxref("Function.prototype.call()")}}</li>
-  <li>{{jsxref("Reflect.apply()")}}</li>
-</ul>
+- {{jsxref("Proxy")}}
+- {{jsxref("Proxy.handler", "handler")}}
+- {{jsxref("Function.prototype.apply()")}}
+- {{jsxref("Function.prototype.call()")}}
+- {{jsxref("Reflect.apply()")}}

@@ -2,64 +2,64 @@
 title: Object.preventExtensions()
 slug: Web/JavaScript/Reference/Global_Objects/Object/preventExtensions
 tags:
-- ECMAScript 5
-- JavaScript
-- JavaScript 1.8.5
-- Method
-- Object
+  - ECMAScript 5
+  - JavaScript
+  - JavaScript 1.8.5
+  - Method
+  - Object
 browser-compat: javascript.builtins.Object.preventExtensions
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>Object.preventExtensions()</code></strong> method prevents new
-  properties from ever being added to an object (i.e. prevents future extensions to the
-  object).</p>
+The **`Object.preventExtensions()`** method prevents new properties from ever
+being added to an object (i.e. prevents future extensions to the object).
 
-<div>{{EmbedInteractiveExample("pages/js/object-preventextensions.html")}}</div>
+{{EmbedInteractiveExample("pages/js/object-preventextensions.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+Object.preventExtensions(obj)
+```
 
-<pre class="brush: js">Object.preventExtensions(<var>obj</var>)</pre>
+### Parameters
 
-<h3 id="Parameters">Parameters</h3>
+- `obj`
+  - : The object which should be made non-extensible.
 
-<dl>
-  <dt><code><var>obj</var></code></dt>
-  <dd>The object which should be made non-extensible.</dd>
-</dl>
+### Return value
 
-<h3 id="Return_value">Return value</h3>
+The object being made non-extensible.
 
-<p>The object being made non-extensible.</p>
+## Description
 
-<h2 id="Description">Description</h2>
+An object is extensible if new properties can be added to it.
+`Object.preventExtensions()` marks an object as no longer extensible, so that it
+will never have properties beyond the ones it had at the time it was marked as
+non-extensible. Note that the properties of a non-extensible object, in general,
+may still be _deleted_. Attempting to add new properties to a non-extensible
+object will fail, either silently or by throwing a
+{{jsxref("TypeError")}} (most commonly, but not exclusively, when in
+{{jsxref("Functions_and_function_scope/Strict_mode", "strict
+  mode", "", 1)}}).
 
-<p>An object is extensible if new properties can be added to it.
-  <code>Object.preventExtensions()</code> marks an object as no longer extensible, so that
-  it will never have properties beyond the ones it had at the time it was marked as
-  non-extensible. Note that the properties of a non-extensible object, in general, may
-  still be <em>deleted</em>. Attempting to add new properties to a non-extensible object
-  will fail, either silently or by throwing a {{jsxref("TypeError")}} (most commonly, but
-  not exclusively, when in {{jsxref("Functions_and_function_scope/Strict_mode", "strict
-  mode", "", 1)}}).</p>
+`Object.preventExtensions()` only prevents addition of own properties.
+Properties can still be added to the object prototype.
 
-<p><code>Object.preventExtensions()</code> only prevents addition of own properties.
-  Properties can still be added to the object prototype.</p>
+This method makes the `[[prototype]]` of the target immutable; any
+`[[prototype]]` re-assignment will throw a `TypeError`. This behavior is
+specific to the internal `[[prototype]]` property, other properties of the
+target object will remain mutable.
 
-<p>This method makes the <code>[[prototype]]</code> of the target immutable; any
-  <code>[[prototype]]</code> re-assignment will throw a <code>TypeError</code>. This
-  behavior is specific to the internal <code>[[prototype]]</code> property, other
-  properties of the target object will remain mutable.</p>
+There is no way to make an object extensible again once it has been made
+non-extensible.
 
-<p>There is no way to make an object extensible again once it has been made
-  non-extensible.</p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Using Object.preventExtensions
 
-<h3 id="Using_Object.preventExtensions">Using Object.preventExtensions</h3>
-
-<pre class="brush: js">// Object.preventExtensions returns the object
+```js
+// Object.preventExtensions returns the object
 // being made non-extensible.
 var obj = {};
 var obj2 = Object.preventExtensions(obj);
@@ -89,42 +89,43 @@ function fail() {
   nonExtensible.newProperty = 'FAIL';
 }
 fail();
-</pre>
+```
 
-<p>A non-extensible object's prototype is immutable:</p>
+A non-extensible object's prototype is immutable:
 
-<pre class="brush: js">var fixed = Object.preventExtensions({});
+```js
+var fixed = Object.preventExtensions({});
 // throws a 'TypeError'.
-fixed.__proto__ = { oh: 'hai' };</pre>
+fixed.__proto__ = { oh: 'hai' };
+```
 
-<h3 id="Non-object_coercion">Non-object coercion</h3>
+### Non-object coercion
 
-<p>In ES5, if the argument to this method is not an object (a primitive), then it will
-  cause a {{jsxref("TypeError")}}. In ES2015, a non-object argument will be treated as if
-  it was a non-extensible ordinary object, return it.</p>
+In ES5, if the argument to this method is not an object (a primitive), then it
+will cause a {{jsxref("TypeError")}}. In ES2015, a non-object argument
+will be treated as if it was a non-extensible ordinary object, return it.
 
-<pre class="brush: js">Object.preventExtensions(1);
+```js
+Object.preventExtensions(1);
 // TypeError: 1 is not an object (ES5 code)
 
 Object.preventExtensions(1);
 // 1                             (ES2015 code)
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Object.isExtensible()")}}</li>
-  <li>{{jsxref("Object.seal()")}}</li>
-  <li>{{jsxref("Object.isSealed()")}}</li>
-  <li>{{jsxref("Object.freeze()")}}</li>
-  <li>{{jsxref("Object.isFrozen()")}}</li>
-  <li>{{jsxref("Reflect.preventExtensions()")}}</li>
-</ul>
+- {{jsxref("Object.isExtensible()")}}
+- {{jsxref("Object.seal()")}}
+- {{jsxref("Object.isSealed()")}}
+- {{jsxref("Object.freeze()")}}
+- {{jsxref("Object.isFrozen()")}}
+- {{jsxref("Reflect.preventExtensions()")}}

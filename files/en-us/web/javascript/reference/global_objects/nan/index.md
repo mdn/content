@@ -7,38 +7,45 @@ tags:
   - Reference
 browser-compat: javascript.builtins.NaN
 ---
-<div>{{jsSidebar("Objects")}}</div>
+{{jsSidebar("Objects")}}
 
-<p>The global <code><strong>NaN</strong></code> property is a value representing Not-A-Number.</p>
+The global **`NaN`** property is a value representing Not-A-Number.
 
-<p>{{js_property_attributes(0,0,0)}}</p>
+{{js_property_attributes(0,0,0)}}
 
-<div>{{EmbedInteractiveExample("pages/js/globalprops-nan.html")}}</div>
+{{EmbedInteractiveExample("pages/js/globalprops-nan.html")}}
 
+## Description
 
-<h2 id="Description">Description</h2>
+`NaN` is a property of the _global object_. In other words, it is a variable in
+global scope.
 
-<p><code>NaN</code> is a property of the <em>global object</em>. In other words, it is a variable in global scope.</p>
+The initial value of `NaN` is Not-A-Number — the same as the value of
+{{jsxref("Number.NaN")}}. In modern browsers, `NaN` is a
+non-configurable, non-writable property. Even when this is not the case, avoid
+overriding it. It is rather rare to use `NaN` in a program.
 
-<p>The initial value of <code>NaN</code> is Not-A-Number — the same as the value of {{jsxref("Number.NaN")}}. In modern browsers, <code>NaN</code> is a non-configurable, non-writable property. Even when this is not the case, avoid overriding it. It is rather rare to use <code>NaN</code> in a program.</p>
+There are five different types of operations that return `NaN`:
 
-<p>There are five different types of operations that return <code>NaN</code>:</p>
+- Number cannot be parsed (e.g. `parseInt("blabla")` or `Number(undefined)`)
+- Math operation where the result is not a real number (e.g. `Math.sqrt(-1)`)
+- Operand of an argument is `NaN` (e.g. `7 ** NaN`)
+- Indeterminate form (e.g. `0 * Infinity`, or `undefined + undefined`)
+- Any operation that involves a string and is not an addition operation (e.g.
+  `"foo" / 3`)
 
-<ul>
- <li>Number cannot be parsed (e.g. <code>parseInt("blabla")</code> or <code>Number(undefined)</code>)</li>
- <li>Math operation where the result is not a real number (e.g. <code>Math.sqrt(-1)</code>)</li>
- <li>Operand of an argument is <code>NaN</code> (e.g. <code>7 ** NaN</code>)</li>
- <li>Indeterminate form (e.g. <code>0 * Infinity</code>, or <code>undefined + undefined</code>)</li>
- <li>Any operation that involves a string and is not an addition operation (e.g. <code>"foo" / 3</code>)</li>
-</ul>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Testing against NaN
 
-<h3 id="Testing_against_NaN">Testing against NaN</h3>
+`NaN` compares unequal (via `==`, `!=`, `===`, and `!==`) to any other value --
+including to another `NaN` value. Use {{jsxref("Number.isNaN()")}} or
+{{jsxref("Global_Objects/isNaN", "isNaN()")}} to most clearly
+determine whether a value is `NaN`. Or perform a self-comparison: `NaN`, and
+only `NaN`, will compare unequal to itself.
 
-<p><code>NaN</code> compares unequal (via <code>==</code>, <code>!=</code>, <code>===</code>, and <code>!==</code>) to any other value -- including to another <code>NaN</code> value. Use {{jsxref("Number.isNaN()")}} or {{jsxref("Global_Objects/isNaN", "isNaN()")}} to most clearly determine whether a value is <code>NaN</code>. Or perform a self-comparison: <code>NaN</code>, and only <code>NaN</code>, will compare unequal to itself.</p>
-
-<pre class="brush: js">NaN === NaN;        // false
+```js
+NaN === NaN;        // false
 Number.NaN === NaN; // false
 isNaN(NaN);         // true
 isNaN(Number.NaN);  // true
@@ -48,34 +55,37 @@ function valueIsNaN(v) { return v !== v; }
 valueIsNaN(1);          // false
 valueIsNaN(NaN);        // true
 valueIsNaN(Number.NaN); // true
-</pre>
+```
 
-<p>However, do note the difference between <code>isNaN()</code> and <code>Number.isNaN()</code>: the former will return <code>true</code> if the value is currently <code>NaN</code>, or if it is going to be <code>NaN</code> after it is coerced to a number, while the latter will return <code>true</code> only if the value is currently <code>NaN</code>:</p>
+However, do note the difference between `isNaN()` and `Number.isNaN()`: the
+former will return `true` if the value is currently `NaN`, or if it is going to
+be `NaN` after it is coerced to a number, while the latter will return `true`
+only if the value is currently `NaN`:
 
-<pre class="brush: js">isNaN('hello world');        // true
+```js
+isNaN('hello world');        // true
 Number.isNaN('hello world'); // false
-</pre>
+```
 
-<p>Additionally, some array methods cannot find <code>NaN</code>, while others can.</p>
+Additionally, some array methods cannot find `NaN`, while others can.
 
-<pre class="brush: js">let arr = [2, 4, NaN, 12];
+```js
+let arr = [2, 4, NaN, 12];
 arr.indexOf(NaN);                      // -1 (false)
 arr.includes(NaN);                     // true
-arr.findIndex(n =&gt; Number.isNaN(n));   // 2
-</pre>
+arr.findIndex(n => Number.isNaN(n));   // 2
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("Number.NaN")}}</li>
- <li>{{jsxref("Number.isNaN()")}}</li>
- <li>{{jsxref("isNaN", "isNaN()")}}</li>
-</ul>
+- {{jsxref("Number.NaN")}}
+- {{jsxref("Number.isNaN()")}}
+- {{jsxref("isNaN", "isNaN()")}}

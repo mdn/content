@@ -2,47 +2,46 @@
 title: WebAssembly.LinkError() constructor
 slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/LinkError/LinkError
 tags:
-- Constructor
-- JavaScript
-- Reference
-- WebAssembly
+  - Constructor
+  - JavaScript
+  - Reference
+  - WebAssembly
 browser-compat: javascript.builtins.WebAssembly.LinkError.LinkError
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <code><strong>WebAssembly.LinkError()</strong></code> constructor creates a new
-  WebAssembly <code>LinkError</code> object, which indicates an error during module
-  instantiation (besides <a href="https://webassembly.org/docs/semantics/#traps">traps</a>
-  from the start function).</p>
+The **`WebAssembly.LinkError()`** constructor creates a new WebAssembly
+`LinkError` object, which indicates an error during module instantiation
+(besides [traps](https://webassembly.org/docs/semantics/#traps) from the start
+function).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 new WebAssembly.LinkError()
 new WebAssembly.LinkError(message)
 new WebAssembly.LinkError(message, fileName)
 new WebAssembly.LinkError(message, fileName, lineNumber)
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>message</code> {{optional_inline}}</dt>
-  <dd>Human-readable description of the error.</dd>
-  <dt><code>fileName</code> {{optional_inline}}</dt>
-  <dd>The name of the file containing the code that caused the exception.</dd>
-  <dt><code>lineNumber</code> {{optional_inline}}</dt>
-  <dd>The line number of the code that caused the exception.</dd>
-</dl>
+- `message` {{optional_inline}}
+  - : Human-readable description of the error.
+- `fileName` {{optional_inline}}
+  - : The name of the file containing the code that caused the exception.
+- `lineNumber` {{optional_inline}}
+  - : The line number of the code that caused the exception.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Creating_a_new_LinkError_instance">Creating a new LinkError instance</h3>
+### Creating a new LinkError instance
 
-<p>The following snippet creates a new <code>LinkError</code> instance, and logs its
-  details to the console:</p>
+The following snippet creates a new `LinkError` instance, and logs its details
+to the console:
 
-<pre class="brush: js">try {
+```js
+try {
   throw new WebAssembly.LinkError('Hello', 'someFile', 10);
 } catch (e) {
   console.log(e instanceof LinkError); // true
@@ -52,21 +51,19 @@ new WebAssembly.LinkError(message, fileName, lineNumber)
   console.log(e.lineNumber);              // 10
   console.log(e.columnNumber);            // 0
   console.log(e.stack);                   // returns the location where the code was run
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/WebAssembly">WebAssembly</a> overview page</li>
-  <li><a href="/en-US/docs/WebAssembly/Concepts">WebAssembly concepts</a></li>
-  <li><a href="/en-US/docs/WebAssembly/Using_the_JavaScript_API">Using the WebAssembly
-      JavaScript API</a></li>
-</ul>
+- [WebAssembly](/en-US/docs/WebAssembly) overview page
+- [WebAssembly concepts](/en-US/docs/WebAssembly/Concepts)
+- [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)

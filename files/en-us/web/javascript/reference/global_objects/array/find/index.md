@@ -11,31 +11,30 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.find
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><span class="seoSummary">The <code>find()</code> method returns the value of the first
-    element in the provided array that satisfies the provided testing function. If no
-    values satisfy the testing function, {{jsxref("undefined")}} is returned.</span></p>
+The `find()` method returns the value of the first element in the provided array
+that satisfies the provided testing function. If no values satisfy the testing
+function, {{jsxref("undefined")}} is returned.
 
-<div>{{EmbedInteractiveExample("pages/js/array-find.html","shorter")}}</div>
+{{EmbedInteractiveExample("pages/js/array-find.html","shorter")}}
 
-<ul>
-  <li>If you need the <strong>index</strong> of the found element in the array, use
-    {{jsxref("Array.findIndex", "findIndex()")}}.</li>
-  <li>If you need to find the <strong>index of a value</strong>, use
-    {{jsxref("Array.prototype.indexOf()")}}. (It’s similar to {{jsxref("Array.findIndex",
-    "findIndex()")}}, but checks each element for equality with the value instead of using
-    a testing function.)</li>
-  <li>If you need to find if a value <strong>exists</strong> in an array, use
-    {{jsxref("Array.prototype.includes()")}}. Again, it checks each element for equality
-    with the value instead of using a testing function.</li>
-  <li>If you need to find if any element satisfies the provided testing function, use
-    {{jsxref("Array.prototype.some()")}}.</li>
-</ul>
+- If you need the **index** of the found element in the array, use
+  {{jsxref("Array.findIndex", "findIndex()")}}.
+- If you need to find the **index of a value**, use
+  {{jsxref("Array.prototype.indexOf()")}}. (It’s similar to
+  {{jsxref("Array.findIndex",
+    "findIndex()")}}, but checks
+  each element for equality with the value instead of using a testing function.)
+- If you need to find if a value **exists** in an array, use
+  {{jsxref("Array.prototype.includes()")}}. Again, it checks each
+  element for equality with the value instead of using a testing function.
+- If you need to find if any element satisfies the provided testing function,
+  use {{jsxref("Array.prototype.some()")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 // Arrow function
 find((element) => { ... } )
 find((element, index) => { ... } )
@@ -50,71 +49,63 @@ find(function callbackFn(element) { ... })
 find(function callbackFn(element, index) { ... })
 find(function callbackFn(element, index, array){ ... })
 find(function callbackFn(element, index, array) { ... }, thisArg)
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>callbackFn</var></code></dt>
-  <dd>Function to execute on each value in the array, taking 3 arguments:
-    <dl>
-      <dt><code><var>element</var></code></dt>
-      <dd>The current element in the array.</dd>
-      <dt><code><var>index</var></code> {{optional_inline}}</dt>
-      <dd>The index (position) of the current element in the array.</dd>
-      <dt><code><var>array</var></code> {{optional_inline}}</dt>
-      <dd>The array that <code>find</code> was called on.</dd>
-    </dl>
-  </dd>
-  <dt><code><var>thisArg</var></code> {{optional_inline}}</dt>
-  <dd>Object to use as {{jsxref("Operators/this", "this")}} inside
-    <code><var>callbackFn</var></code>.</dd>
-</dl>
+- `callbackFn`
 
-<h3 id="Return_value">Return value</h3>
+  - : Function to execute on each value in the array, taking 3 arguments:
 
-<p>The <strong>value</strong> of the <strong>first element</strong> in the array that
-  satisfies the provided testing function. Otherwise, {{jsxref("undefined")}} is returned.
-</p>
+    - `element`
+      - : The current element in the array.
+    - `index` {{optional_inline}}
+      - : The index (position) of the current element in the array.
+    - `array` {{optional_inline}}
+      - : The array that `find` was called on.
 
-<h2 id="Description">Description</h2>
+- `thisArg` {{optional_inline}}
+  - : Object to use as {{jsxref("Operators/this", "this")}} inside
+    `callbackFn`.
 
-<p>The <code>find</code> method executes the <code><var>callbackFn</var></code> function
-  once for each index of the array until the <code><var>callbackFn</var></code> returns a <a
-    href="/en-US/docs/Glossary/Truthy">truthy</a> value. If so, <code>find</code>
-  immediately returns the value of that element. Otherwise, <code>find</code> returns
-  {{jsxref("undefined")}}.</p>
+### Return value
 
-<p><code><var>callbackFn</var></code> is invoked for <em>every</em> index of the array, not
-  just those with assigned values. This means it may be less efficient for sparse arrays,
-  compared to methods that only visit assigned values.</p>
+The **value** of the **first element** in the array that satisfies the provided
+testing function. Otherwise, {{jsxref("undefined")}} is returned.
 
-<p>If a <code><var>thisArg</var></code> parameter is provided to <code>find</code>, it
-  will be used as the <code>this</code> value inside each invocation of the
-  <code><var>callbackFn</var></code>. If it is not provided, then {{jsxref("undefined")}} is
-  used.</p>
+## Description
 
-<p>The <code>find</code> method does not mutate the array on which it is called, but the
-  function provided to <code><var>callbackFn</var></code> can. If so, the elements processed
-  by <code>find</code> are set <em>before</em> the first invocation of
-  <code><var>callbackFn</var></code>. Therefore:</p>
+The `find` method executes the `callbackFn` function once for each index of the
+array until the `callbackFn` returns a [truthy](/en-US/docs/Glossary/Truthy)
+value. If so, `find` immediately returns the value of that element. Otherwise,
+`find` returns {{jsxref("undefined")}}.
 
-<ul>
-  <li><code><var>callbackFn</var></code> will not visit any elements added to the array
-    after the call to <code>find</code> begins.</li>
-  <li>If an existing, yet-unvisited element of the array is changed by
-    <code><var>callbackFn</var></code>, its value passed to the
-    <code><var>callbackFn</var></code> will be the value at the time <code>find</code>
-    visits that element's index.</li>
-  <li>Elements that are {{jsxref("Operators/delete", "deleted")}} are still visited.</li>
-</ul>
+`callbackFn` is invoked for _every_ index of the array, not just those with
+assigned values. This means it may be less efficient for sparse arrays, compared
+to methods that only visit assigned values.
 
-<h2 id="Examples">Examples</h2>
+If a `thisArg` parameter is provided to `find`, it will be used as the `this`
+value inside each invocation of the `callbackFn`. If it is not provided, then
+{{jsxref("undefined")}} is used.
 
-<h3 id="Find_an_object_in_an_array_by_one_of_its_properties">Find an object in an array by
-  one of its properties</h3>
+The `find` method does not mutate the array on which it is called, but the
+function provided to `callbackFn` can. If so, the elements processed by `find`
+are set _before_ the first invocation of `callbackFn`. Therefore:
 
-<pre class="brush: js">const inventory = [
+- `callbackFn` will not visit any elements added to the array after the call to
+  `find` begins.
+- If an existing, yet-unvisited element of the array is changed by `callbackFn`,
+  its value passed to the `callbackFn` will be the value at the time `find`
+  visits that element's index.
+- Elements that are {{jsxref("Operators/delete", "deleted")}} are
+  still visited.
+
+## Examples
+
+### Find an object in an array by one of its properties
+
+```js
+const inventory = [
   {name: 'apples', quantity: 2},
   {name: 'bananas', quantity: 0},
   {name: 'cherries', quantity: 5}
@@ -125,44 +116,48 @@ function isCherries(fruit) {
 }
 
 console.log(inventory.find(isCherries));
-// { name: 'cherries', quantity: 5 }</pre>
+// { name: 'cherries', quantity: 5 }
+```
 
-<h4 id="Using_arrow_function_and_destructuring">Using arrow function and destructuring
-</h4>
+#### Using arrow function and destructuring
 
-<pre class="brush: js">const inventory = [
+```js
+const inventory = [
   {name: 'apples', quantity: 2},
   {name: 'bananas', quantity: 0},
   {name: 'cherries', quantity: 5}
 ];
 
-const result = inventory.find( ({ name }) =&gt; name === 'cherries' );
+const result = inventory.find( ({ name }) => name === 'cherries' );
 
-console.log(result) // { name: 'cherries', quantity: 5 }</pre>
+console.log(result) // { name: 'cherries', quantity: 5 }
+```
 
-<h3 id="Find_a_prime_number_in_an_array">Find a prime number in an array</h3>
+### Find a prime number in an array
 
-<p>The following example finds an element in the array that is a prime number (or returns
-  {{jsxref("undefined")}} if there is no prime number):</p>
+The following example finds an element in the array that is a prime number (or
+returns {{jsxref("undefined")}} if there is no prime number):
 
-<pre class="brush: js">function isPrime(element, index, array) {
+```js
+function isPrime(element, index, array) {
   let start = 2;
-  while (start &lt;= Math.sqrt(element)) {
-    if (element % start++ &lt; 1) {
+  while (start <= Math.sqrt(element)) {
+    if (element % start++ < 1) {
       return false;
     }
   }
-  return element &gt; 1;
+  return element > 1;
 }
 
 console.log([4, 6, 8, 12].find(isPrime)); // undefined, not found
 console.log([4, 5, 8, 12].find(isPrime)); // 5
-</pre>
+```
 
-<p>The following examples show that nonexistent and deleted elements <em>are</em> visited,
-  and that the value passed to the callback is their value when visited:</p>
+The following examples show that nonexistent and deleted elements _are_ visited,
+and that the value passed to the callback is their value when visited:
 
-<pre class="brush: js">// Declare array with no elements at indexes 2, 3, and 4
+```js
+// Declare array with no elements at indexes 2, 3, and 4
 const array = [0,1,,,,5,6];
 
 // Shows all indexes, not just those with assigned values
@@ -189,24 +184,26 @@ array.find(function(value, index) {
 // Visited index 4 with value undefined
 // Visited index 5 with value undefined
 // Visited index 6 with value 6
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>A polyfill of <code>Array.prototype.find</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-array"><code>core-js</code></a></li>
-  <li>{{jsxref("Array.prototype.findIndex()")}} – find and return an index</li>
-  <li>{{jsxref("Array.prototype.includes()")}} – test whether a value exists in the array
-  </li>
-  <li>{{jsxref("Array.prototype.filter()")}} – remove all non-matching elements</li>
-  <li>{{jsxref("Array.prototype.every()")}} – test all elements</li>
-  <li>{{jsxref("Array.prototype.some()")}} – test until one element matches</li>
-</ul>
+- A polyfill of `Array.prototype.find` is available in
+  [`core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- {{jsxref("Array.prototype.findIndex()")}} – find and return an
+  index
+- {{jsxref("Array.prototype.includes()")}} – test whether a value
+  exists in the array
+- {{jsxref("Array.prototype.filter()")}} – remove all non-matching
+  elements
+- {{jsxref("Array.prototype.every()")}} – test all elements
+- {{jsxref("Array.prototype.some()")}} – test until one element
+  matches

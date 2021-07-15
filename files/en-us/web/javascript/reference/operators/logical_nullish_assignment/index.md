@@ -2,60 +2,63 @@
 title: Logical nullish assignment (??=)
 slug: Web/JavaScript/Reference/Operators/Logical_nullish_assignment
 tags:
-- Assignment operator
-- JavaScript
-- Language feature
-- Logical Operator
-- Operator
-- Reference
+  - Assignment operator
+  - JavaScript
+  - Language feature
+  - Logical Operator
+  - Operator
+  - Reference
 browser-compat: javascript.operators.logical_nullish_assignment
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>The logical nullish assignment (<code>x ??= y</code>) operator only assigns if
-  <code>x</code> is {{Glossary("nullish")}} (<code>null</code> or <code>undefined</code>).
-</p>
+The logical nullish assignment (`x ??= y`) operator only assigns if `x` is
+{{Glossary("nullish")}} (`null` or `undefined`).
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-logical-nullish-assignment.html")}}
-</div>
+{{EmbedInteractiveExample("pages/js/expressions-logical-nullish-assignment.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+expr1 ??= expr2
+```
 
-<pre class="brush: js">expr1 ??= expr2</pre>
+## Description
 
-<h2 id="Description">Description</h2>
+### Short-circuit evaluation
 
-<h3 id="Short-circuit_evaluation">Short-circuit evaluation</h3>
+The
+[nullish coalescing](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
+operator is evaluated left to right, it is tested for possible short-circuit
+evaluation using the following rule:
 
-<p>The <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator">nullish
-    coalescing</a> operator is evaluated left to right, it is tested for possible
-  short-circuit evaluation using the following rule:</p>
+`(some expression that is neither null nor undefined) ?? expr` is short-circuit
+evaluated to the left-hand side expression if the left-hand side proves to be
+neither `null` nor `undefined`.
 
-<p><code>(some expression that is neither null nor undefined) ?? expr</code> is
-  short-circuit evaluated to the left-hand side expression if the left-hand side proves to
-  be neither <code>null</code> nor <code>undefined</code>.</p>
+Short circuit means that the `expr` part above is **not evaluated**, hence any
+side effects of doing so do not take effect (e.g., if `expr` is a function call,
+the calling never takes place).
 
-<p>Short circuit means that the <code><em>expr</em></code> part above is <strong>not
-    evaluated</strong>, hence any side effects of doing so do not take effect (e.g., if
-  <code><em>expr</em></code> is a function call, the calling never takes place).</p>
+Logical nullish assignment short-circuits as well meaning that `x ??= y` is
+equivalent to:
 
-<p>Logical nullish assignment short-circuits as well meaning that <code>x ??= y</code> is
-  equivalent to:</p>
+```js
+x ?? (x = y);
+```
 
-<pre class="brush: js">x ?? (x = y);</pre>
+And not equivalent to the following which would always perform an assignment:
 
-<p>And not equivalent to the following which would always perform an assignment:</p>
+```js example-bad
+x = x ?? y;
+```
 
-<pre class="brush: js example-bad">x = x ?? y;
-</pre>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Using logical nullish assignment
 
-<h3 id="Using_logical_nullish_assignment">Using logical nullish assignment</h3>
-
-<pre class="brush: js">function config(options) {
+```js
+function config(options) {
   options.duration ??= 100;
   options.speed ??= 25;
   return options;
@@ -63,23 +66,19 @@ browser-compat: javascript.operators.logical_nullish_assignment
 
 config({ duration: 125 }); // { duration: 125, speed: 25 }
 config({}); // { duration: 100, speed: 25 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a
-      href="/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator">The
-      nullish coalescing operator (<code>??</code>)</a></li>
-  <li>{{Glossary("Nullish")}}</li>
-  <li>{{Glossary("Truthy")}}</li>
-  <li>{{Glossary("Falsy")}}</li>
-</ul>
+- [The nullish coalescing operator (`??`)](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
+- {{Glossary("Nullish")}}
+- {{Glossary("Truthy")}}
+- {{Glossary("Falsy")}}

@@ -2,56 +2,64 @@
 title: async function expression
 slug: Web/JavaScript/Reference/Operators/async_function
 tags:
-- Function
-- JavaScript
-- Language feature
-- Operator
-- Primary Expression
+  - Function
+  - JavaScript
+  - Language feature
+  - Operator
+  - Primary Expression
 browser-compat: javascript.operators.async_function
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>The <strong><code>async function</code></strong> keyword can be used to define
-  <code>async</code> functions inside expressions.</p>
+The **`async function`** keyword can be used to define `async` functions inside
+expressions.
 
-<p>You can also define async functions using an <a
-    href="/en-US/docs/Web/JavaScript/Reference/Statements/async_function"
-    title="The async function keyword can be used to define async functions inside expressions.">async
-    function statement</a>.</p>
+You can also define async functions using
+an [async function statement](/en-US/docs/Web/JavaScript/Reference/Statements/async_function "The async function keyword can be used to define async functions inside expressions.").
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 async function [name]([param1[, param2[, ..., paramN]]]) {
   statements
 }
-</pre>
+```
 
-<p>As of ES2015, you can also use <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow functions</a>.</p>
+As of ES2015, you can also
+use [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>name</var></code></dt>
-  <dd>The function name. Can be omitted, in which case the function is <em>anonymous</em>.
-    The name is only local to the function body.</dd>
-  <dt><code><var>paramN</var></code></dt>
-  <dd>The name of an argument to be passed to the function.</dd>
-  <dt><code><var>statements</var></code></dt>
-  <dd>The statements which comprise the body of the function.</dd>
-</dl>
+- `name`
+  - : The function name. Can be omitted, in which case the function is
+    _anonymous_. The name is only local to the function body.
+- `paramN`
+  - : The name of an argument to be passed to the function.
+- `statements`
+  - : The statements which comprise the body of the function.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>An <code>async function</code> expression is very similar to, and has almost the same syntax as, an {{jsxref('Statements/async_function', 'async function statement')}}. The main difference between an async <code>function</code> expression and an async <code>function</code> statement is the <em>function name</em>, which can be omitted in <code>async function</code> expressions to create <em>anonymous</em> functions. An <code>async function</code> expression can be used as an <a href="/en-US/docs/Glossary/IIFE">IIFE</a> (Immediately Invoked Function Expression) which runs as soon as it is defined. See also the chapter about <a href="/en-US/docs/Web/JavaScript/Reference/Functions">functions</a> for more information.</p>
+An `async function` expression is very similar to, and has almost the same
+syntax as, an
+{{jsxref('Statements/async_function', 'async function statement')}}.
+The main difference between an async `function` expression and an async
+`function` statement is the _function name_, which can be omitted in
+`async function` expressions to create _anonymous_ functions. An
+`async function` expression can be used as an [IIFE](/en-US/docs/Glossary/IIFE)
+(Immediately Invoked Function Expression) which runs as soon as it is
+defined. See also the chapter about
+[functions](/en-US/docs/Web/JavaScript/Reference/Functions) for more
+information.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Simple_example">Simple example</h3>
+### Simple example
 
-<pre class="brush: js">function resolveAfter2Seconds(x) {
-  return new Promise(resolve =&gt; {
-    setTimeout(() =&gt; {
+```js
+function resolveAfter2Seconds(x) {
+  return new Promise(resolve => {
+    setTimeout(() => {
       resolve(x);
     }, 2000);
   });
@@ -63,7 +71,7 @@ const add = async function(x) { // async function expression assigned to a varia
   return x + a + b;
 };
 
-add(10).then(v =&gt; {
+add(10).then(v => {
   console.log(v);  // prints 60 after 4 seconds.
 });
 
@@ -71,23 +79,21 @@ add(10).then(v =&gt; {
   let p_a = resolveAfter2Seconds(20);
   let p_b = resolveAfter2Seconds(30);
   return x + await p_a + await p_b;
-})(10).then(v =&gt; {
+})(10).then(v => {
   console.log(v);  // prints 60 after 2 seconds.
 });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Statements/async_function", "async function")}}</li>
-  <li>{{jsxref("AsyncFunction")}} object</li>
-  <li>{{jsxref("Operators/await", "await")}}</li>
-</ul>
+- {{jsxref("Statements/async_function", "async function")}}
+- {{jsxref("AsyncFunction")}} object
+- {{jsxref("Operators/await", "await")}}

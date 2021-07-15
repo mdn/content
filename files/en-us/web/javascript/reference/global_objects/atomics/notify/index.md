@@ -2,92 +2,88 @@
 title: Atomics.notify()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/notify
 tags:
-- Atomics
-- JavaScript
-- Method
-- Shared Memory
+  - Atomics
+  - JavaScript
+  - Method
+  - Shared Memory
 browser-compat: javascript.builtins.Atomics.notify
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The static <code><strong>Atomics</strong></code><strong><code>.notify()</code></strong>
-  method notifies up some agents that are sleeping in the wait queue.</p>
+The static **`Atomics`\*\***`.notify()`\*\* method notifies up some agents that
+are sleeping in the wait queue.
 
-<div class="note">
-  <p><strong>Note:</strong> This operation works with a shared {{jsxref("Int32Array")}}
-    only.<br>
-    It will return <code>0</code> on non-shared <code>ArrayBuffer</code> objects.</p>
-</div>
+> **Note:** This operation works with a shared {{jsxref("Int32Array")}}
+> only. It will return `0` on non-shared `ArrayBuffer` objects.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">Atomics.notify(typedArray, index, count)
-</pre>
+```js
+Atomics.notify(typedArray, index, count)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>typedArray</code></dt>
-  <dd>A shared {{jsxref("Int32Array")}}.</dd>
-  <dt><code>index</code></dt>
-  <dd>The position in the <code>typedArray</code> to wake up on.</dd>
-  <dt><code>count</code> {{optional_inline}}</dt>
-  <dd>The number of sleeping agents to notify. Defaults to {{jsxref("Infinity",
-    "+Infinity")}}.</dd>
-</dl>
+- `typedArray`
+  - : A shared {{jsxref("Int32Array")}}.
+- `index`
+  - : The position in the `typedArray` to wake up on.
+- `count` {{optional_inline}}
+  - : The number of sleeping agents to notify. Defaults to
+    {{jsxref("Infinity",
+    "+Infinity")}}.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<ul>
-  <li>Returns the number of woken up agents.</li>
-  <li>Returns <code>0</code>, if a non-shared {{jsxref("ArrayBuffer")}} object is used.
-  </li>
-</ul>
+- Returns the number of woken up agents.
+- Returns `0`, if a non-shared {{jsxref("ArrayBuffer")}} object is used.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<ul>
-  <li>Throws a {{jsxref("TypeError")}}, if <code>typedArray</code> is not a
-    {{jsxref("Int32Array")}}.</li>
-  <li>Throws a {{jsxref("RangeError")}}, if <code>index</code> is out of bounds in the
-    <code>typedArray</code>.</li>
-</ul>
+- Throws a {{jsxref("TypeError")}}, if `typedArray` is not a
+  {{jsxref("Int32Array")}}.
+- Throws a {{jsxref("RangeError")}}, if `index` is out of bounds in the
+  `typedArray`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_notify">Using <code>notify</code></h3>
+### Using `notify`
 
-<p>Given a shared <code>Int32Array</code>:</p>
+Given a shared `Int32Array`:
 
-<pre class="brush: js">const sab = new SharedArrayBuffer(1024);
+```js
+const sab = new SharedArrayBuffer(1024);
 const int32 = new Int32Array(sab);
-</pre>
+```
 
-<p>A reading thread is sleeping and waiting on location 0 which is expected to be 0. As
-  long as that is true, it will not go on. However, once the writing thread has stored a
-  new value, it will be notified by the writing thread and return the new value (123).</p>
+A reading thread is sleeping and waiting on location 0 which is expected to
+be 0. As long as that is true, it will not go on. However, once the writing
+thread has stored a new value, it will be notified by the writing thread and
+return the new value (123).
 
-<pre class="brush: js">Atomics.wait(int32, 0, 0);
-console.log(int32[0]); // 123</pre>
+```js
+Atomics.wait(int32, 0, 0);
+console.log(int32[0]); // 123
+```
 
-<p>A writing thread stores a new value and notifies the waiting thread once it has
-  written:</p>
+A writing thread stores a new value and notifies the waiting thread once it has
+written:
 
-<pre class="brush: js">console.log(int32[0]); // 0;
+```js
+console.log(int32[0]); // 0;
 Atomics.store(int32, 0, 123);
-Atomics.notify(int32, 0, 1);</pre>
+Atomics.notify(int32, 0, 1);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Atomics")}}</li>
-  <li>{{jsxref("Atomics.wait()")}}</li>
-</ul>
+- {{jsxref("Atomics")}}
+- {{jsxref("Atomics.wait()")}}

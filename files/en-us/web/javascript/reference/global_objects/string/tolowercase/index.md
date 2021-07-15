@@ -2,54 +2,53 @@
 title: String.prototype.toLowerCase()
 slug: Web/JavaScript/Reference/Global_Objects/String/toLowerCase
 tags:
-- JavaScript
-- Method
-- Prototype
-- Reference
-- String
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
+  - String
 browser-compat: javascript.builtins.String.toLowerCase
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>toLowerCase()</code></strong> method returns the calling string value
-  converted to lower case.</p>
+The **`toLowerCase()`** method returns the calling string value converted to
+lower case.
 
-<div>{{EmbedInteractiveExample("pages/js/string-tolowercase.html","shorter")}}</div>
+{{EmbedInteractiveExample("pages/js/string-tolowercase.html","shorter")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">toLowerCase()</pre>
+```js
+toLowerCase()
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A new string representing the calling string converted to lower case.</p>
+A new string representing the calling string converted to lower case.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The <code>toLowerCase()</code> method returns the value of the string converted to
-  lower case. <code>toLowerCase()</code> does not affect the value of the string
-  <code>str</code> itself.</p>
+The `toLowerCase()` method returns the value of the string converted to lower
+case. `toLowerCase()` does not affect the value of the string `str` itself.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_toLowerCase">Using <code>toLowerCase()</code></h3>
+### Using `toLowerCase()`
 
-<pre class="brush: js">console.log('ALPHABET'.toLowerCase()); // 'alphabet'
-</pre>
+```js
+console.log('ALPHABET'.toLowerCase()); // 'alphabet'
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat}}
 
-<p>{{Compat}}</p>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
-  <li>{{jsxref("String.prototype.toLocaleLowerCase()")}}</li>
-  <li>{{jsxref("String.prototype.toLocaleUpperCase()")}}</li>
-  <li>{{jsxref("String.prototype.toUpperCase()")}}</li>
-</ul>
+- {{jsxref("String.prototype.toLocaleLowerCase()")}}
+- {{jsxref("String.prototype.toLocaleUpperCase()")}}
+- {{jsxref("String.prototype.toUpperCase()")}}

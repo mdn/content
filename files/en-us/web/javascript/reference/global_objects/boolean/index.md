@@ -8,102 +8,123 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Boolean
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>Boolean</code></strong> object is an object wrapper for a boolean value.</p>
+The **`Boolean`** object is an object wrapper for a boolean value.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The value passed as the first parameter is converted to a boolean value, if necessary. If the value is omitted or is <code>0</code>, <code>-0</code>, {{jsxref("null")}}, <code>false</code>, {{jsxref("NaN")}}, {{jsxref("undefined")}}, or the empty string (<code>""</code>), the object has an initial value of <code>false</code>. All other values, including any object, an empty array (<code>[]</code>), or the string "<code>false</code>", create an object with an initial value of <code>true</code>.</p>
+The value passed as the first parameter is converted to a boolean value, if
+necessary. If the value is omitted or is `0`, `-0`, {{jsxref("null")}},
+`false`, {{jsxref("NaN")}}, {{jsxref("undefined")}}, or the
+empty string (`""`), the object has an initial value of `false`. All other
+values, including any object, an empty array (`[]`), or the string "`false`",
+create an object with an initial value of `true`.
 
-<p>Do not confuse the {{Glossary("Primitive", "primitive")}} <code>Boolean</code> values <code>true</code> and <code>false</code> with the <code>true</code> and <code>false</code> values of the <code>Boolean</code> object.</p>
+Do not confuse the {{Glossary("Primitive", "primitive")}}
+`Boolean` values `true` and `false` with the `true` and `false` values of the
+`Boolean` object.
 
-<p><strong>Any</strong> object of which the value is not {{jsxref("undefined")}} or {{jsxref("null")}}, including a <code>Boolean</code> object whose value is <code>false</code>, evaluates to <code>true</code> when passed to a conditional statement. For example, the condition in the following {{jsxref("Statements/if...else", "if")}} statement evaluates to <code>true</code>:</p>
+**Any** object of which the value is not {{jsxref("undefined")}} or
+{{jsxref("null")}}, including a `Boolean` object whose value is `false`,
+evaluates to `true` when passed to a conditional statement. For example, the
+condition in the following {{jsxref("Statements/if...else", "if")}}
+statement evaluates to `true`:
 
-<pre class="brush: js">var x = new Boolean(false);
+```js
+var x = new Boolean(false);
 if (x) {
   // this code is executed
 }
-</pre>
+```
 
-<p>This behavior does not apply to <code>Boolean</code> primitives. For example, the condition in the following {{jsxref("Statements/if...else", "if")}} statement evaluates to <code>false</code>:</p>
+This behavior does not apply to `Boolean` primitives. For example, the condition
+in the following {{jsxref("Statements/if...else", "if")}} statement
+evaluates to `false`:
 
-<pre class="brush: js">var x = false;
+```js
+var x = false;
 if (x) {
   // this code is not executed
 }
-</pre>
+```
 
-<p>Do not use a <code>Boolean</code> object to convert a non-boolean value to a boolean value. To perform this task, instead, use <code>Boolean</code> as a function, or a <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_NOT">double NOT operator</a>:</p>
+Do not use a `Boolean` object to convert a non-boolean value to a boolean value.
+To perform this task, instead, use `Boolean` as a function, or a
+[double NOT operator](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_NOT):
 
-<pre class="brush: js">var x = Boolean(expression);     // use this...
+```js
+var x = Boolean(expression);     // use this...
 var x = !!(expression);          // ...or this
 var x = new Boolean(expression); // don't use this!
-</pre>
+```
 
-<p>If you specify any object, including a <code>Boolean</code> object whose value is <code>false</code>, as the initial value of a <code>Boolean</code> object, the new <code>Boolean</code> object has a value of <code>true</code>.</p>
+If you specify any object, including a `Boolean` object whose value is `false`,
+as the initial value of a `Boolean` object, the new `Boolean` object has a value
+of `true`.
 
-<pre class="brush: js">var myFalse = new Boolean(false);   // initial value of false
+```js
+var myFalse = new Boolean(false);   // initial value of false
 var g = Boolean(myFalse);       // initial value of true
 var myString = new String('Hello'); // string object
 var s = Boolean(myString);      // initial value of true
-</pre>
+```
 
-<p>Do not use a <code>Boolean</code> object in place of a <code>Boolean</code> primitive.</p>
+Do not use a `Boolean` object in place of a `Boolean` primitive.
 
-<div class="note">
-<p><strong>Note:</strong> When the non-standard property <code><a href="/en-US/docs/Web/API/Document#Properties">document.all</a></code> is used as an argument for this constructor, the result is a <code>Boolean</code> object with the value <code>false</code>. This property is legacy and non-standard and should not be used.</p>
-</div>
+> **Note:** When the non-standard property
+> [`document.all`](/en-US/docs/Web/API/Document#Properties) is used as an
+> argument for this constructor, the result is a `Boolean` object with the value
+> `false`. This property is legacy and non-standard and should not be used.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{jsxref("Global_Objects/Boolean/Boolean", "Boolean()")}}</dt>
- <dd>Creates a new <code>Boolean</code> object.</dd>
-</dl>
+- {{jsxref("Global_Objects/Boolean/Boolean", "Boolean()")}}
+  - : Creates a new `Boolean` object.
 
-<h2 id="Instance_methods">Instance methods</h2>
+## Instance methods
 
-<dl>
- <dt>{{jsxref("Boolean.prototype.toString()")}}</dt>
- <dd>Returns a string of either <code>true</code> or <code>false</code> depending upon the value of the object. Overrides the {{jsxref("Object.prototype.toString()")}} method.</dd>
- <dt>{{jsxref("Boolean.prototype.valueOf()")}}</dt>
- <dd>Returns the primitive value of the {{jsxref("Boolean")}} object. Overrides the {{jsxref("Object.prototype.valueOf()")}} method.</dd>
-</dl>
+- {{jsxref("Boolean.prototype.toString()")}}
+  - : Returns a string of either `true` or `false` depending upon the value of
+    the object. Overrides the
+    {{jsxref("Object.prototype.toString()")}} method.
+- {{jsxref("Boolean.prototype.valueOf()")}}
+  - : Returns the primitive value of the {{jsxref("Boolean")}} object.
+    Overrides the {{jsxref("Object.prototype.valueOf()")}} method.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Creating_Boolean_objects_with_an_initial_value_of_false">Creating <code>Boolean</code> objects with an initial value of <code>false</code></h3>
+### Creating `Boolean` objects with an initial value of `false`
 
-<pre class="brush: js">var bNoParam = new Boolean();
+```js
+var bNoParam = new Boolean();
 var bZero = new Boolean(0);
 var bNull = new Boolean(null);
 var bEmptyString = new Boolean('');
 var bfalse = new Boolean(false);
-</pre>
+```
 
-<h3 id="Creating_Boolean_objects_with_an_initial_value_of_true">Creating <code>Boolean</code> objects with an initial value of <code>true</code></h3>
+### Creating `Boolean` objects with an initial value of `true`
 
-<pre class="brush: js">var btrue = new Boolean(true);
+```js
+var btrue = new Boolean(true);
 var btrueString = new Boolean('true');
 var bfalseString = new Boolean('false');
 var bSuLin = new Boolean('Su Lin');
 var bArrayProto = new Boolean([]);
 var bObjProto = new Boolean({});
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Glossary/Boolean">Boolean</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Data_structures#Boolean_type">Boolean primitives</a></li>
- <li><a href="https://en.wikipedia.org/wiki/Boolean_data_type">Boolean data type (Wikipedia)</a></li>
-</ul>
+- [Boolean](/en-US/docs/Glossary/Boolean)
+- [Boolean primitives](/en-US/docs/Web/JavaScript/Data_structures#Boolean_type)
+- [Boolean data type (Wikipedia)](https://en.wikipedia.org/wiki/Boolean_data_type)

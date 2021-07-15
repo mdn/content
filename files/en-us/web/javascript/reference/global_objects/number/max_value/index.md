@@ -8,45 +8,47 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Number.MAX_VALUE
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>Number.MAX_VALUE</code></strong> property represents the maximum numeric value representable in JavaScript.</p>
+The **`Number.MAX_VALUE`** property represents the maximum numeric value
+representable in JavaScript.
 
-<div>{{EmbedInteractiveExample("pages/js/number-maxvalue.html")}}</div>
+{{EmbedInteractiveExample("pages/js/number-maxvalue.html")}}{{js_property_attributes(0, 0, 0)}}
 
+## Description
 
-<div>{{js_property_attributes(0, 0, 0)}}</div>
+The `MAX_VALUE` property has a value of approximately `1.79E+308`, or 2^1024.
+Values larger than `MAX_VALUE` are represented as {{jsxref("Infinity")}}.
 
-<h2 id="Description">Description</h2>
+Because `MAX_VALUE` is a static property of {{jsxref("Number")}}, you
+always use it as `Number.MAX_VALUE`, rather than as a property of a
+{{jsxref("Number")}} object you created.
 
-<p>The <code>MAX_VALUE</code> property has a value of approximately <code>1.79E+308</code>, or 2^1024. Values larger than <code>MAX_VALUE</code> are represented as {{jsxref("Infinity")}}.</p>
+## Examples
 
-<p>Because <code>MAX_VALUE</code> is a static property of {{jsxref("Number")}}, you always use it as <code>Number.MAX_VALUE</code>, rather than as a property of a {{jsxref("Number")}} object you created.</p>
+### Using MAX_VALUE
 
-<h2 id="Examples">Examples</h2>
+The following code multiplies two numeric values. If the result is less than or
+equal to `MAX_VALUE`, the `func1` function is called; otherwise, the `func2`
+function is called.
 
-<h3 id="Using_MAX_VALUE">Using MAX_VALUE</h3>
-
-<p>The following code multiplies two numeric values. If the result is less than or equal to <code>MAX_VALUE</code>, the <code>func1</code> function is called; otherwise, the <code>func2</code> function is called.</p>
-
-<pre class="brush: js">if (num1 * num2 &lt;= Number.MAX_VALUE) {
+```js
+if (num1 * num2 <= Number.MAX_VALUE) {
   func1();
 } else {
   func2();
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("Number.MIN_VALUE")}}</li>
- <li>The {{jsxref("Number")}} object it belongs to</li>
-</ul>
+- {{jsxref("Number.MIN_VALUE")}}
+- The {{jsxref("Number")}} object it belongs to

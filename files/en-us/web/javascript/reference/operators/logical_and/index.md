@@ -2,157 +2,164 @@
 title: Logical AND (&&)
 slug: Web/JavaScript/Reference/Operators/Logical_AND
 tags:
-- JavaScript
-- Language feature
-- Logical Operator
-- Operator
-- Reference
+  - JavaScript
+  - Language feature
+  - Logical Operator
+  - Operator
+  - Reference
 browser-compat: javascript.operators.logical_and
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>The logical AND (<code>&amp;&amp;</code>) operator (logical conjunction) for a set of
-  operands is true if and only if all of its operands are true. It is typically used with
-  {{jsxref("Boolean")}} (logical) values. When it is, it returns a Boolean value. However,
-  the <code>&amp;&amp;</code> operator actually returns the value of one of the specified
-  operands, so if this operator is used with non-Boolean values, it will return a
-  non-Boolean value.</p>
+The logical AND (`&&`) operator (logical conjunction) for a set of operands is
+true if and only if all of its operands are true. It is typically used with
+{{jsxref("Boolean")}} (logical) values. When it is, it returns a Boolean
+value. However, the `&&` operator actually returns the value of one of the
+specified operands, so if this operator is used with non-Boolean values, it will
+return a non-Boolean value.
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-logical-and.html", "shorter")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-logical-and.html", "shorter")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+expr1 && expr2
+```
 
-<pre class="brush: js">expr1 &amp;&amp; expr2</pre>
+## Description
 
-<h2 id="Description">Description</h2>
+If `expr1` can be converted to `true`, returns `expr2`; else, returns `expr1`.
 
-<p>If <code>expr1</code> can be converted to <code>true</code>, returns
-  <code>expr2</code>; else, returns <code>expr1</code>.
-</p>
+If a value can be converted to `true`, the value is so-called
+{{Glossary("truthy")}}. If a value can be converted to `false`, the value
+is so-called {{Glossary("falsy")}}.
 
-<p>If a value can be converted to <code>true</code>, the value is so-called
-  {{Glossary("truthy")}}. If a value can be converted to <code>false</code>, the value is
-  so-called {{Glossary("falsy")}}.</p>
+Examples of expressions that can be converted to false are:
 
-<p>Examples of expressions that can be converted to false are:</p>
+- `null`;
+- `NaN`;
+- `0`;
+- empty string (`""` or `''` or ` `` `);
+- `undefined`.
 
-<ul>
-  <li><code>null</code>;</li>
-  <li><code>NaN</code>;</li>
-  <li><code>0</code>;</li>
-  <li>empty string (<code>""</code> or <code>''</code> or <code>``</code>);</li>
-  <li><code>undefined</code>.</li>
-</ul>
+Even though the `&&` operator can be used with operands that are not Boolean
+values, it can still be considered a boolean operator since its return value can
+always be converted to a
+[boolean primitive](/en-US/docs/Web/JavaScript/Data_structures#Boolean_type). To
+explicitly convert its return value (or any expression in general) to the
+corresponding boolean value, use a double
+[NOT operator](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_NOT)
+or the {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}}
+constructor.
 
-<p>Even though the <code>&amp;&amp;</code> operator can be used with operands that are not
-  Boolean values, it can still be considered a boolean operator since its return value can
-  always be converted to a <a
-    href="/en-US/docs/Web/JavaScript/Data_structures#Boolean_type">boolean primitive</a>.
-  To explicitly convert its return value (or any expression in general) to the
-  corresponding boolean value, use a double <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_NOT">NOT
-    operator</a> or the {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}}
-  constructor.</p>
+### Short-circuit evaluation
 
-<h3 id="Short-circuit_evaluation">Short-circuit evaluation</h3>
+The logical AND expression is evaluated left to right, it is tested for possible
+"short-circuit" evaluation using the following rule:
 
-<p>The logical AND expression is evaluated left to right, it is tested for possible
-  "short-circuit" evaluation using the following rule:</p>
+`(some falsy expression) && expr` is short-circuit evaluated to the falsy
+expression;
 
-<p><code>(some falsy expression) &amp;&amp; <em>expr</em></code> is short-circuit
-  evaluated to the falsy expression;</p>
+Short circuit means that the `expr` part above is **not evaluated**, hence any
+side effects of doing so do not take effect (e.g., if `expr` is a function call,
+the calling never takes place). This happens because the value of the operator
+is already determined after the evaluation of the first operand. See example:
 
-<p>Short circuit means that the <code><em>expr</em></code> part above is <strong>not
-    evaluated</strong>, hence any side effects of doing so do not take effect (e.g., if
-  <code><em>expr</em></code> is a function call, the calling never takes place). This
-  happens because the value of the operator is already determined after the evaluation of
-  the first operand. See example:</p>
-
-<pre class="brush: js">function A(){ console.log('called A'); return false; }
+```js
+function A(){ console.log('called A'); return false; }
 function B(){ console.log('called B'); return true; }
 
-console.log( A() &amp;&amp; B() );
+console.log( A() && B() );
 // logs "called A" due to the function call,
 // then logs false (which is the resulting value of the operator)
-</pre>
+```
 
-<h3 id="Operator_precedence">Operator precedence</h3>
+### Operator precedence
 
-<p>The following expressions might seem equivalent, but they are not, because the
-  <code>&amp;&amp;</code> operator is executed before the <code>||</code> operator (see <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence">operator
-    precedence</a>).</p>
+The following expressions might seem equivalent, but they are not, because the
+`&&` operator is executed before the `||` operator (see
+[operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)).
 
-<pre
-  class="brush: js">true || false &amp;&amp; false      // returns true, because &amp;&amp; is executed first
-(true || false) &amp;&amp; false    // returns false, because operator precedence cannot apply</pre>
+```js
+true || false && false      // returns true, because && is executed first
+(true || false) && false    // returns false, because operator precedence cannot apply
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_AND">Using AND</h3>
+### Using AND
 
-<p>The following code shows examples of the <code>&amp;&amp;</code> (logical AND)
-  operator.</p>
+The following code shows examples of the `&&` (logical AND) operator.
 
-<pre class="brush: js">a1 = true  &amp;&amp; true       // t &amp;&amp; t returns true
-a2 = true  &amp;&amp; false      // t &amp;&amp; f returns false
-a3 = false &amp;&amp; true       // f &amp;&amp; t returns false
-a4 = false &amp;&amp; (3 == 4)   // f &amp;&amp; f returns false
-a5 = 'Cat' &amp;&amp; 'Dog'      // t &amp;&amp; t returns "Dog"
-a6 = false &amp;&amp; 'Cat'      // f &amp;&amp; t returns false
-a7 = 'Cat' &amp;&amp; false      // t &amp;&amp; f returns false
-a8 = ''    &amp;&amp; false      // f &amp;&amp; f returns ""
-a9 = false &amp;&amp; ''         // f &amp;&amp; f returns false</pre>
+```js
+a1 = true  && true       // t && t returns true
+a2 = true  && false      // t && f returns false
+a3 = false && true       // f && t returns false
+a4 = false && (3 == 4)   // f && f returns false
+a5 = 'Cat' && 'Dog'      // t && t returns "Dog"
+a6 = false && 'Cat'      // f && t returns false
+a7 = 'Cat' && false      // t && f returns false
+a8 = ''    && false      // f && f returns ""
+a9 = false && ''         // f && f returns false
+```
 
-<h3 id="Conversion_rules_for_booleans">Conversion rules for booleans</h3>
+### Conversion rules for booleans
 
-<h4 id="Converting_AND_to_OR">Converting AND to OR</h4>
+#### Converting AND to OR
 
-<p>The following operation involving <strong>booleans</strong>:</p>
+The following operation involving **booleans**:
 
-<pre class="brush: js">bCondition1 &amp;&amp; bCondition2</pre>
+```js
+bCondition1 && bCondition2
+```
 
-<p>is always equal to:</p>
+is always equal to:
 
-<pre class="brush: js">!(!bCondition1 || !bCondition2)</pre>
+```js
+!(!bCondition1 || !bCondition2)
+```
 
-<h4 id="Converting_OR_to_AND">Converting OR to AND</h4>
+#### Converting OR to AND
 
-<p>The following operation involving <strong>booleans</strong>:</p>
+The following operation involving **booleans**:
 
-<pre class="brush: js">bCondition1 || bCondition2</pre>
+```js
+bCondition1 || bCondition2
+```
 
-<p>is always equal to:</p>
+is always equal to:
 
-<pre class="brush: js">!(!bCondition1 &amp;&amp; !bCondition2)</pre>
+```js
+!(!bCondition1 && !bCondition2)
+```
 
-<h3 id="Removing_nested_parentheses">Removing nested parentheses</h3>
+### Removing nested parentheses
 
-<p>As logical expressions are evaluated left to right, it is always possible to remove
-  parentheses from a complex expression following some rules.</p>
+As logical expressions are evaluated left to right, it is always possible to
+remove parentheses from a complex expression following some rules.
 
-<p>The following composite operation involving <strong>booleans</strong>:</p>
+The following composite operation involving **booleans**:
 
-<pre
-  class="brush: js">bCondition1 || (bCondition2 &amp;&amp; bCondition3)</pre>
+```js
+bCondition1 || (bCondition2 && bCondition3)
+```
 
-<p>is always equal to:</p>
+is always equal to:
 
-<pre class="brush: js">bCondition1 || bCondition2 &amp;&amp; bCondition3</pre>
+```js
+bCondition1 || bCondition2 && bCondition3
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Boolean")}}</li>
-  <li>{{Glossary("Truthy")}}</li>
-  <li>{{Glossary("Falsy")}}</li>
-</ul>
+- {{jsxref("Boolean")}}
+- {{Glossary("Truthy")}}
+- {{Glossary("Falsy")}}

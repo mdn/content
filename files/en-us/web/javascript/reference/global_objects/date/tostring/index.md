@@ -2,113 +2,109 @@
 title: Date.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toString
 tags:
-- Date
-- JavaScript
-- Method
-- Prototype
-- Reference
+  - Date
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
 browser-compat: javascript.builtins.Date.toString
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>toString()</code></strong> method returns a string representing the
-  specified {{jsxref("Date")}} object.</p>
+The **`toString()`** method returns a string representing the specified
+{{jsxref("Date")}} object.
 
-<div>{{EmbedInteractiveExample("pages/js/date-tostring.html","shorter")}}</div>
+{{EmbedInteractiveExample("pages/js/date-tostring.html","shorter")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">toString()</pre>
+```js
+toString()
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A string representing the given date.</p>
+A string representing the given date.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>{{jsxref("Date")}} instances inherit their <code>toString()</code> method from
-  {{jsxref("Date.prototype")}}, not {{jsxref("Object.prototype")}}.
-  <code>Date.prototype.toString()</code> returns a string representation of the Date in
-  the format specified in ECMA-262 which can be summarised as:</p>
+{{jsxref("Date")}} instances inherit their `toString()` method from
+{{jsxref("Date.prototype")}}, not
+{{jsxref("Object.prototype")}}. `Date.prototype.toString()` returns a
+string representation of the Date in the format specified in ECMA-262 which can
+be summarised as:
 
-<ul>
-  <li>Week day: 3 letter English week day name, e.g. "Sat"</li>
-  <li>space</li>
-  <li>Month name: 3 letter English month name, e.g. "Sep"</li>
-  <li>space</li>
-  <li>Date: 2 digit day in month, e.g. "01"</li>
-  <li>space</li>
-  <li>Year: 4 digit year, e.g. "2018"</li>
-  <li>space</li>
-  <li>Hour: 2 digit hour of day, e.g. "14"</li>
-  <li>colon</li>
-  <li>Minute: 2 digit minute of hour, e.g. "53"</li>
-  <li>colon</li>
-  <li>Second: 2 digit second of minute, e.g. "26"</li>
-  <li>space</li>
-  <li>The string "GMT"</li>
-  <li>Timezone offset sign, either:
-    <ul>
-      <li>"+" for positive offsets (0 or greater)</li>
-      <li>"-" for negative offsets (less than zero)</li>
-    </ul>
-  </li>
-  <li>Two digit hour offset, e.g. "14"</li>
-  <li>Two digit minute offset, e.g. "00"</li>
-  <li>Optionally, a timezone name consisting of:
-    <ul>
-      <li>space</li>
-      <li>Left bracket, i.e. "("</li>
-      <li>An implementation dependent string representation of the timezone, which might
-        be an abbreviation or full name (there is no standard for names or abbreviations
-        of timezones), e.g. "Line Islands Time" or "LINT"</li>
-      <li>Right bracket, i.e. ")"</li>
-    </ul>
-  </li>
-</ul>
+- Week day: 3 letter English week day name, e.g. "Sat"
+- space
+- Month name: 3 letter English month name, e.g. "Sep"
+- space
+- Date: 2 digit day in month, e.g. "01"
+- space
+- Year: 4 digit year, e.g. "2018"
+- space
+- Hour: 2 digit hour of day, e.g. "14"
+- colon
+- Minute: 2 digit minute of hour, e.g. "53"
+- colon
+- Second: 2 digit second of minute, e.g. "26"
+- space
+- The string "GMT"
+- Timezone offset sign, either:
 
-<p>E.g. "Sat Sep 01 2018 14:53:26 GMT+1400 (LINT)"</p>
+  - "+" for positive offsets (0 or greater)
+  - "-" for negative offsets (less than zero)
 
-<p>Until ECMAScript 2018 (edition 9), the format of the string returned by
-  <code>Date.prototype.toString</code> was implementation dependent. Therefore it should
-  not be relied upon to be in the specified format.</p>
+- Two digit hour offset, e.g. "14"
+- Two digit minute offset, e.g. "00"
+- Optionally, a timezone name consisting of:
 
-<p>The <code>toString()</code> method is automatically called when a date is to be
-  represented as a text value, e.g. <code>console.log(new Date())</code>, or when a date
-  is used in a string concatenation, such as
-  <code>var today = 'Today is ' + new Date()</code>.</p>
+  - space
+  - Left bracket, i.e. "("
+  - An implementation dependent string representation of the timezone, which
+    might be an abbreviation or full name (there is no standard for names or
+    abbreviations of timezones), e.g. "Line Islands Time" or "LINT"
+  - Right bracket, i.e. ")"
 
-<p><code>toString()</code> is a generic method, it does not require that its
-  <code>this</code> is a {{jsxref("Date")}} instance. However, it must have an internal
-  <code>[[TimeValue]]</code> property that can't be constructed using native javascript,
-  so it's effectively limited to use with {{jsxref("Date")}} instances. If called on a
-  non–Date instance, a {{jsxref("TypeError")}} is thrown.</p>
+E.g. "Sat Sep 01 2018 14:53:26 GMT+1400 (LINT)"
 
-<h2 id="Examples">Examples</h2>
+Until ECMAScript 2018 (edition 9), the format of the string returned by
+`Date.prototype.toString` was implementation dependent. Therefore it should not
+be relied upon to be in the specified format.
 
-<h3 id="Using_toString">Using toString()</h3>
+The `toString()` method is automatically called when a date is to be represented
+as a text value, e.g. `console.log(new Date())`, or when a date is used in a
+string concatenation, such as `var today = 'Today is ' + new Date()`.
 
-<p>The following assigns the <code>toString()</code> value of a {{jsxref("Date")}} object
-  to <code>myVar</code>:</p>
+`toString()` is a generic method, it does not require that its `this` is a
+{{jsxref("Date")}} instance. However, it must have an internal
+`[[TimeValue]]` property that can't be constructed using native javascript, so
+it's effectively limited to use with {{jsxref("Date")}} instances. If
+called on a non–Date instance, a {{jsxref("TypeError")}} is thrown.
 
-<pre class="brush: js">var x = new Date();
+## Examples
+
+### Using toString()
+
+The following assigns the `toString()` value of a {{jsxref("Date")}}
+object to `myVar`:
+
+```js
+var x = new Date();
 var myVar = x.toString(); // assigns a string value to myVar in the same format as:
                           // Mon Sep 08 1998 14:36:22 GMT-0700 (PDT)
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Object.prototype.toString()")}}</li>
-  <li>{{jsxref("Date.prototype.toDateString()")}}</li>
-  <li>{{jsxref("Date.prototype.toLocaleString()")}}</li>
-  <li>{{jsxref("Date.prototype.toTimeString()")}}</li>
-</ul>
+- {{jsxref("Object.prototype.toString()")}}
+- {{jsxref("Date.prototype.toDateString()")}}
+- {{jsxref("Date.prototype.toLocaleString()")}}
+- {{jsxref("Date.prototype.toTimeString()")}}

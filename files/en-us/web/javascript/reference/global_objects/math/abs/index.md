@@ -2,51 +2,52 @@
 title: Math.abs()
 slug: Web/JavaScript/Reference/Global_Objects/Math/abs
 tags:
-- JavaScript
-- Math
-- Method
-- Reference
+  - JavaScript
+  - Math
+  - Method
+  - Reference
 browser-compat: javascript.builtins.Math.abs
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>Math.abs()</code></strong> function returns
-    the absolute value of a number. That is, it returns <code>x</code> if <code>x</code>
-    is positive or zero, and the negation of <code>x</code> if <code>x</code> is negative.</p>
+The **`Math.abs()`** function returns the absolute value of a number. That is,
+it returns `x` if `x` is positive or zero, and the negation of `x` if `x` is
+negative.
 
-<div>{{EmbedInteractiveExample("pages/js/math-abs.html")}}</div>
+{{EmbedInteractiveExample("pages/js/math-abs.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+Math.abs(x)
+```
 
-<pre class="brush: js">Math.abs(<var>x</var>)</pre>
+### Parameters
 
-<h3 id="Parameters">Parameters</h3>
+- `x`
+  - : A number.
 
-<dl>
-  <dt><code><var>x</var></code></dt>
-  <dd>A number.</dd>
-</dl>
+### Return value
 
-<h3 id="Return_value">Return value</h3>
+The absolute value of the given number.
 
-<p>The absolute value of the given number.</p>
+## Description
 
-<h2 id="Description">Description</h2>
+Because `abs()` is a static method of `Math`, you always use it as `Math.abs()`,
+rather than as a method of a `Math` object you created (`Math` is not a
+constructor).
 
-<p>Because <code>abs()</code> is a static method of <code>Math</code>, you always use it
-  as <code>Math.abs()</code>, rather than as a method of a <code>Math</code> object you
-  created (<code>Math</code> is not a constructor).</p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Behavior of Math.abs()
 
-<h3 id="Behavior_of_Math.abs">Behavior of Math.abs()</h3>
+Passing an empty object, an array with more than one member, a non-numeric
+string or {{jsxref("undefined")}}/empty variable returns
+{{jsxref("NaN")}}. Passing {{jsxref("null")}}, an empty string or
+an empty array returns 0.
 
-<p>Passing an empty object, an array with more than one member, a non-numeric string or
-  {{jsxref("undefined")}}/empty variable returns {{jsxref("NaN")}}. Passing
-  {{jsxref("null")}}, an empty string or an empty array returns 0.</p>
-
-<pre class="brush: js">Math.abs('-1');     // 1
+```js
+Math.abs('-1');     // 1
 Math.abs(-2);       // 2
 Math.abs(null);     // 0
 Math.abs('');       // 0
@@ -56,22 +57,20 @@ Math.abs([1,2]);    // NaN
 Math.abs({});       // NaN
 Math.abs('string'); // NaN
 Math.abs();         // NaN
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Math.ceil()")}}</li>
-  <li>{{jsxref("Math.floor()")}}</li>
-  <li>{{jsxref("Math.round()")}}</li>
-  <li>{{jsxref("Math.sign()")}}</li>
-  <li>{{jsxref("Math.trunc()")}}</li>
-</ul>
+- {{jsxref("Math.ceil()")}}
+- {{jsxref("Math.floor()")}}
+- {{jsxref("Math.round()")}}
+- {{jsxref("Math.sign()")}}
+- {{jsxref("Math.trunc()")}}

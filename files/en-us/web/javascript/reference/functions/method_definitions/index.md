@@ -2,52 +2,54 @@
 title: Method definitions
 slug: Web/JavaScript/Reference/Functions/Method_definitions
 tags:
-- ECMAScript 2015
-- Functions
-- JavaScript
-- Language feature
-- Object
-- Syntax
+  - ECMAScript 2015
+  - Functions
+  - JavaScript
+  - Language feature
+  - Object
+  - Syntax
 browser-compat: javascript.functions.method_definitions
 ---
-<div>{{JsSidebar("Functions")}}</div>
+{{JsSidebar("Functions")}}
 
-<p>Starting with ECMAScript 2015, a shorter syntax for method definitions on objects
-  initializers is introduced. It is a shorthand for a function assigned to the method's
-  name.</p>
+Starting with ECMAScript 2015, a shorter syntax for method definitions on
+objects initializers is introduced. It is a shorthand for a function assigned to
+the method's name.
 
-<div>{{EmbedInteractiveExample("pages/js/functions-definitions.html")}}</div>
+{{EmbedInteractiveExample("pages/js/functions-definitions.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">const obj = {
-  get <var>property</var>() {},
-  set <var>property</var>(<var>value</var>) {},
-  <var>property</var>( <var>parameters…</var> ) {},
-  *<var>generator</var>( <var>parameters…</var> ) {},
-  async <var>property</var>( <var>parameters…</var> ) {},
-  async* <var>generator</var>( <var>parameters…</var> ) {},
+```js
+const obj = {
+  get property() {},
+  set property(value) {},
+  property( parameters… ) {},
+  *generator( parameters… ) {},
+  async property( parameters… ) {},
+  async* generator( parameters… ) {},
 
   //  with computed keys
-  get [<var>property]</var>() {},
-  set [<var>property]</var>(<var>value</var>) {},
-  [<var>property</var>]( <var>parameters…</var> ) {},
-  *[<var>generator</var>]( <var>parameters…</var> ) {},
-  async [<var>property</var>]( <var>parameters…</var> ) {},
-  async* [<var>generator]</var>( <var>parameters…</var> ) {},
+  get [property]() {},
+  set [property](value) {},
+  [property]( parameters… ) {},
+  *[generator]( parameters… ) {},
+  async [property]( parameters… ) {},
+  async* [generator]( parameters… ) {},
 };
-</pre>
+```
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The shorthand syntax is similar to the <a
-    href="/en-US/docs/Web/JavaScript/Reference/Functions/get">getter</a> and <a
-    href="/en-US/docs/Web/JavaScript/Reference/Functions/set">setter</a> syntax introduced
-  in ES5.</p>
+The shorthand syntax is similar to the
+[getter](/en-US/docs/Web/JavaScript/Reference/Functions/get) and
+[setter](/en-US/docs/Web/JavaScript/Reference/Functions/set) syntax introduced
+in ES5.
 
-<p>Given the following code:</p>
+Given the following code:
 
-<pre class="brush: js">const obj = {
+```js
+const obj = {
   foo: function() {
     // ...
   },
@@ -55,11 +57,12 @@ browser-compat: javascript.functions.method_definitions
     // ...
   }
 }
-</pre>
+```
 
-<p>You are now able to shorten this to:</p>
+You are now able to shorten this to:
 
-<pre class="brush: js">const obj = {
+```js
+const obj = {
   foo() {
     // ...
   },
@@ -67,31 +70,25 @@ browser-compat: javascript.functions.method_definitions
     // ...
   }
 }
+```
 
-</pre>
+### Generator methods
 
-<h3 id="Generator_methods">Generator methods</h3>
+[Generator methods](/en-US/docs/Web/JavaScript/Reference/Statements/function*)
+can be defined using the shorthand syntax as well.
 
-<p><a href="/en-US/docs/Web/JavaScript/Reference/Statements/function*">Generator
-    methods</a> can be defined using the shorthand syntax as well.</p>
+When doing so:
 
-<p>When doing so:</p>
+- The asterisk (`*`) in the shorthand syntax must be _before_ the generator
+  property name. (That is, `* g(){}` will work, but `g *(){}` will not.)
+- Non-generator method definitions cannot contain the `yield` keyword. This
+  means that
+  [legacy generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/Legacy_generator_function)
+  won't work either, and will throw a {{jsxref("SyntaxError")}}. Always
+  use `yield` in conjunction with the asterisk (`*`).
 
-<ul>
-  <li>The asterisk (<code>*</code>) in the shorthand syntax must be <em>before</em> the
-    generator property name. (That is, <code>* g(){}</code> will work,
-    but <code>g *(){}</code> will not.)</li>
-  <li>
-    <p>Non-generator method definitions cannot contain the <code>yield</code> keyword.
-      This means that <a
-        href="/en-US/docs/Web/JavaScript/Reference/Statements/Legacy_generator_function">legacy
-        generator functions</a> won't work either, and will throw a
-      {{jsxref("SyntaxError")}}. Always use <code>yield</code> in conjunction with the
-      asterisk (<code>*</code>).</p>
-  </li>
-</ul>
-
-<pre class="brush: js highlight[12]">// Using a named property
+```js
+// Using a named property
 const obj2 = {
   g: function* () {
     let index = 0
@@ -113,14 +110,16 @@ const obj2 = {
 
 const it = obj2.g()
 console.log(it.next().value)  // 0
-console.log(it.next().value)  // 1</pre>
+console.log(it.next().value)  // 1
+```
 
-<h3 id="Async_methods">Async methods</h3>
+### Async methods
 
-<p>{{jsxref("Statements/async_function", "Async methods", "", 1)}} can also be defined
-  using the shorthand syntax.</p>
+{{jsxref("Statements/async_function", "Async methods", "", 1)}}
+can also be defined using the shorthand syntax.
 
-<pre class="brush: js highlight[12]">// Using a named property
+```js
+// Using a named property
 const obj3 = {
   f: async function () {
     await some_promise
@@ -133,14 +132,16 @@ const obj3 = {
     await some_promise
   }
 }
-</pre>
+```
 
-<h3 id="Async_generator_methods">Async generator methods</h3>
+### Async generator methods
 
-<p><a href="/en-US/docs/Web/JavaScript/Reference/Statements/function*">Generator
-    methods</a> can also be {{jsxref("Statements/async_function", "async", "", 1)}}.</p>
+[Generator methods](/en-US/docs/Web/JavaScript/Reference/Statements/function*)
+can also be
+{{jsxref("Statements/async_function", "async", "", 1)}}.
 
-<pre class="brush: js">const obj4 = {
+```js
+const obj4 = {
   f: async function* () {
     yield 1
     yield 2
@@ -155,15 +156,16 @@ const obj4 = {
    yield 2
    yield 3
   }
-}</pre>
+}
+```
 
-<h3 id="Method_definitions_are_not_constructable">Method definitions are not constructable
-</h3>
+### Method definitions are not constructable
 
-<p>Methods cannot be constructors! They will throw a {{jsxref("TypeError")}} if you try to
-  instantiate them.</p>
+Methods cannot be constructors! They will throw a
+{{jsxref("TypeError")}} if you try to instantiate them.
 
-<pre class="brush: js example-bad">const objA = {
+```js example-bad
+const objA = {
   method() {}
 }
 new objA.method  // TypeError: obj.method is not a constructor
@@ -172,24 +174,26 @@ const objB = {
   * g() {}
 }
 new objB.g       // TypeError: obj.g is not a constructor (changed in ES2016)
-</pre>
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Simple_test_case">Simple test case</h3>
+### Simple test case
 
-<pre class="brush: js highlight[3]">const obj = {
+```js
+const obj = {
   a: 'foo',
   b() { return this.a }
 };
 console.log(obj.b())  // "foo"
-</pre>
+```
 
-<h3 id="Computed_property_names">Computed property names</h3>
+### Computed property names
 
-<p>The shorthand syntax also supports computed property names.</p>
+The shorthand syntax also supports computed property names.
 
-<pre class="brush: js highlight[4]">const bar = {
+```js
+const bar = {
   foo0: function() { return 0 },
   foo1() { return 1 },
   ['foo' + 2]() { return 2 }
@@ -206,24 +210,18 @@ function foo() {
 
 let name = 'foo'
 console.log(window[name]())  // 1
+```
 
-</pre>
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Functions/get">get</a></code>
-  </li>
-  <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Functions/set">set</a></code>
-  </li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar">Lexical grammar</a>
-  </li>
-</ul>
+- [`get`](/en-US/docs/Web/JavaScript/Reference/Functions/get)
+- [`set`](/en-US/docs/Web/JavaScript/Reference/Functions/set)
+- [Lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar)

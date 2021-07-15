@@ -2,52 +2,52 @@
 title: WebAssembly.Instance() constructor
 slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/Instance
 tags:
-- Constructor
-- JavaScript
-- Reference
-- WebAssembly
+  - Constructor
+  - JavaScript
+  - Reference
+  - WebAssembly
 browser-compat: javascript.builtins.WebAssembly.Instance.Instance
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>WebAssembly.Instance()</code></strong> constructor creates a new
-  <code>Instance</code> object which is a stateful, executable instance of a
-  {{jsxref("WebAssembly.Module")}}.</p>
+The **`WebAssembly.Instance()`** constructor creates a new `Instance` object
+which is a stateful, executable instance of a
+{{jsxref("WebAssembly.Module")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<div class="warning">
-  <p><strong>Warning:</strong> Since instantiation for large modules can be expensive,
-    developers should only use the <code>Instance()</code> constructor when synchronous
-    instantiation is absolutely required; the asynchronous
-    {{jsxref("WebAssembly.instantiateStreaming()")}} method should be used at all other
-    times.</p>
-</div>
+> **Warning:** Since instantiation for large modules can be expensive,
+> developers should only use the `Instance()` constructor when synchronous
+> instantiation is absolutely required; the asynchronous
+> {{jsxref("WebAssembly.instantiateStreaming()")}} method should
+> be used at all other times.
 
-<pre class="brush: js">new WebAssembly.Instance(module, importObject)</pre>
+```js
+new WebAssembly.Instance(module, importObject)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><em>module</em></dt>
-  <dd>The {{jsxref("WebAssembly.Module")}} object to be instantiated.</dd>
-  <dt><em>importObject</em> {{optional_inline}}</dt>
-  <dd>An object containing the values to be imported into the newly-created
-    <code>Instance</code>, such as functions or {{jsxref("WebAssembly.Memory")}} objects.
-    There must be one matching property for each declared import of <code>module</code> or
-    else a {{jsxref("WebAssembly.LinkError")}} is thrown.</dd>
-</dl>
+- _module_
+  - : The {{jsxref("WebAssembly.Module")}} object to be
+    instantiated.
+- _importObject_ {{optional_inline}}
+  - : An object containing the values to be imported into the newly-created
+    `Instance`, such as functions or
+    {{jsxref("WebAssembly.Memory")}} objects. There must be one
+    matching property for each declared import of `module` or else a
+    {{jsxref("WebAssembly.LinkError")}} is thrown.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 class="highlight-spanned" id="Synchronously_instantiating_a_WebAssembly_module"><span
-    class="highlight-span">Synchronously instantiating a WebAssembly module</span></h3>
+### Synchronously instantiating a WebAssembly module
 
-<p>The <code>WebAssembly.Instance()</code> constructor function can be called to
-  synchronously instantiate a given {{jsxref("WebAssembly.Module")}} object, for example:
-</p>
+The `WebAssembly.Instance()` constructor function can be called to synchronously
+instantiate a given {{jsxref("WebAssembly.Module")}} object, for
+example:
 
-<pre class="brush: js">const importObject = {
+```js
+const importObject = {
   imports: {
     imported_func: function(arg) {
       console.log(arg);
@@ -55,18 +55,21 @@ browser-compat: javascript.builtins.WebAssembly.Instance.Instance
   }
 };
 
-fetch('simple.wasm').then(response =&gt;
+fetch('simple.wasm').then(response =>
   response.arrayBuffer()
-).then(bytes =&gt; {
+).then(bytes => {
   let mod = new WebAssembly.Module(bytes);
   let instance = new WebAssembly.Instance(mod, importObject);
   instance.exports.exported_func();
-})</pre>
+})
+```
 
-<p>However, the preferred way to get an <code>Instance</code> is through the asynchronous
-  {{jsxref("WebAssembly.instantiateStreaming()")}} function, for example like this:</p>
+However, the preferred way to get an `Instance` is through the asynchronous
+{{jsxref("WebAssembly.instantiateStreaming()")}} function, for
+example like this:
 
-<pre class="brush: js">const importObject = {
+```js
+const importObject = {
   imports: {
     imported_func: function(arg) {
       console.log(arg);
@@ -75,21 +78,19 @@ fetch('simple.wasm').then(response =&gt;
 };
 
 WebAssembly.instantiateStreaming(fetch('simple.wasm'), importObject)
-.then(obj =&gt; obj.instance.exports.exported_func());</pre>
+.then(obj => obj.instance.exports.exported_func());
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/WebAssembly">WebAssembly</a> overview page</li>
-  <li><a href="/en-US/docs/WebAssembly/Concepts">WebAssembly concepts</a></li>
-  <li><a href="/en-US/docs/WebAssembly/Using_the_JavaScript_API">Using the WebAssembly
-      JavaScript API</a></li>
-</ul>
+- [WebAssembly](/en-US/docs/WebAssembly) overview page
+- [WebAssembly concepts](/en-US/docs/WebAssembly/Concepts)
+- [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)

@@ -2,40 +2,39 @@
 title: WeakSet() constructor
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet/WeakSet
 tags:
-- Constructor
-- JavaScript
-- Reference
-- WeakSet
-- Polyfill
+  - Constructor
+  - JavaScript
+  - Reference
+  - WeakSet
+  - Polyfill
 browser-compat: javascript.builtins.WeakSet.WeakSet
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>WeakSet</code></strong> constructor lets you create
-  <code>WeakSet</code> objects that store weakly held <em>objects</em> in a collection.
-</p>
+The **`WeakSet`** constructor lets you create `WeakSet` objects that store
+weakly held _objects_ in a collection.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 new WeakSet()
 new WeakSet(iterable)
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><var>iterable</var></dt>
-  <dd>If an <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...of">iterable
-      object</a> is passed, all of its elements will be added to the new
-    <code>WeakSet</code>. null is treated as undefined.</dd>
-</dl>
+- _iterable_
+  - : If an
+    [iterable object](/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
+    is passed, all of its elements will be added to the new `WeakSet`. null is
+    treated as undefined.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_the_WeakSet_object">Using the WeakSet object</h3>
+### Using the WeakSet object
 
-<pre class="brush: js">var ws = new WeakSet();
+```js
+var ws = new WeakSet();
 var foo = {};
 var bar = {};
 
@@ -47,22 +46,22 @@ ws.has(bar);    // true
 
 ws.delete(foo); // removes foo from the set
 ws.has(foo);    // false, foo has been removed
-ws.has(bar);    // true, bar is retained</pre>
+ws.has(bar);    // true, bar is retained
+```
 
-<p>Note that <code>foo !== bar</code>. While they are similar objects, <em>they are not
-    <strong>the same object</strong></em>. And so they are both added to the set.</p>
+Note that `foo !== bar`. While they are similar objects, \*they are not **the
+same object\***. And so they are both added to the set.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>A polyfill of <code>WeakSet</code> is available in <a href="https://github.com/zloirock/core-js#weakset"><code>core-js</code></a></li>
-  <li>{{jsxref("WeakSet")}}</li>
-</ul>
+- A polyfill of `WeakSet` is available in
+  [`core-js`](https://github.com/zloirock/core-js#weakset)
+- {{jsxref("WeakSet")}}

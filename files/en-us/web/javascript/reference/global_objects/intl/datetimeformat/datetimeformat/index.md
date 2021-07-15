@@ -11,277 +11,245 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.DateTimeFormat.DateTimeFormat
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>Intl.DateTimeFormat()</code></strong> constructor creates
-	{{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}} objects that enable
-	language-sensitive date and time formatting.</p>
+The **`Intl.DateTimeFormat()`** constructor creates
+{{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}}
+objects that enable language-sensitive date and time formatting.
 
-<div>{{EmbedInteractiveExample("pages/js/intl-datetimeformat.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/intl-datetimeformat.html", "taller")}}
+
 <!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 new Intl.DateTimeFormat()
 new Intl.DateTimeFormat(locales)
 new Intl.DateTimeFormat(locales, options)
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-	<dt><code><var>locales</var></code> {{optional_inline}}</dt>
-	<dd>
-		<p>A string with a BCP 47 language tag, or an array of such strings. To use the
-			browser's default locale, pass an empty array. Unicode extension are supported
-			(for example "<code>en-US-u-ca-buddhist</code>"). For the general form and
-			interpretation of the <code><var>locales</var></code> argument, see the
-			{{jsxref("Global_Objects/Intl", "Intl",
-			"#Locale_identification_and_negotiation", 1)}} page. The following Unicode
-			extension keys are allowed:</p>
+- `locales` {{optional_inline}}
 
-		<dl>
-			<dt><code>nu</code></dt>
-			<dd>Numbering system. Possible values include: "<code>arab</code>",
-				"<code>arabext</code>", "<code>bali</code>", "<code>beng</code>",
-				"<code>deva</code>", "<code>fullwide</code>", "<code>gujr</code>",
-				"<code>guru</code>", "<code>hanidec</code>", "<code>khmr</code>",
-				"<code>knda</code>", "<code>laoo</code>", "<code>latn</code>",
-				"<code>limb</code>", "<code>mlym</code>", "<code>mong</code>",
-				"<code>mymr</code>", "<code>orya</code>", "<code>tamldec</code>",
-				"<code>telu</code>", "<code>thai</code>", "<code>tibt</code>".</dd>
-			<dt><code>ca</code></dt>
-			<dd>Calendar. Possible values include: "<code>buddhist</code>",
-				"<code>chinese</code>", "<code>coptic</code>", "<code>ethiopia</code>",
-				"<code>ethiopic</code>", "<code>gregory</code>", "<code>hebrew</code>",
-				"<code>indian</code>", "<code>islamic</code>", "<code>iso8601</code>",
-				"<code>japanese</code>", "<code>persian</code>", "<code>roc</code>".</dd>
-			<dt><code>hc</code></dt>
-			<dd>Hour cycle. Possible values include: "<code>h11</code>",
-				"<code>h12</code>", "<code>h23</code>", "<code>h24</code>".</dd>
-		</dl>
-	</dd>
-	<dt><code><var>options</var></code> {{optional_inline}}</dt>
-	<dd>
-		<p>An object with some or all of the following properties:</p>
+  - : A string with a BCP 47 language tag, or an array of such strings. To use
+    the browser's default locale, pass an empty array. Unicode extension are
+    supported (for example "`en-US-u-ca-buddhist`"). For the general form and
+    interpretation of the `locales` argument, see the
+    {{jsxref("Global_Objects/Intl", "Intl",
+			"#Locale_identification_and_negotiation", 1)}}
+    page. The following Unicode extension keys are allowed:
 
-		<dl>
-			<dt><code>dateStyle</code></dt>
-			<dd>The date formatting style to use when calling <code>format()</code>.
-				Possible values include:
-				<ul>
-					<li>"<code>full</code>"</li>
-					<li>"<code>long</code>"</li>
-					<li>"<code>medium</code>"</li>
-					<li>"<code>short</code>"</li>
-				</ul>
+    - `nu`
+      - : Numbering system. Possible values include: "`arab`", "`arabext`",
+        "`bali`", "`beng`", "`deva`", "`fullwide`", "`gujr`", "`guru`",
+        "`hanidec`", "`khmr`", "`knda`", "`laoo`", "`latn`", "`limb`", "`mlym`",
+        "`mong`", "`mymr`", "`orya`", "`tamldec`", "`telu`", "`thai`", "`tibt`".
+    - `ca`
+      - : Calendar. Possible values include: "`buddhist`", "`chinese`",
+        "`coptic`", "`ethiopia`", "`ethiopic`", "`gregory`", "`hebrew`",
+        "`indian`", "`islamic`", "`iso8601`", "`japanese`", "`persian`",
+        "`roc`".
+    - `hc`
+      - : Hour cycle. Possible values include: "`h11`", "`h12`", "`h23`",
+        "`h24`".
 
-				<div class="notecard note">
-					<p><strong>Note:</strong> <code>dateStyle</code> can be used with <code>timeStyle</code>, but
-						not with other options (e.g. <code>weekday</code>,
-						<code>hour</code>, <code>month</code>, etc.).</p>
-				</div>
-			</dd>
-			<dt><code>timeStyle</code></dt>
-			<dd>
-        <p>The time formatting style to use when calling <code>format()</code>.
-				Possible values include:</p>
-				<ul>
-					<li>"<code>full</code>"</li>
-					<li>"<code>long</code>"</li>
-					<li>"<code>medium</code>"</li>
-					<li>"<code>short</code>"</li>
-				</ul>
-				<div class="notecard note">
-					<p><strong>Note:</strong> <code>timeStyle</code> can be used with <code>dateStyle</code>, but
-						not with other options (e.g. <code>weekday</code>,
-						<code>hour</code>, <code>month</code>, etc.).</p>
-				</div>
-			</dd>
-			<dt><code>calendar</code></dt>
-			<dd>Calendar. Possible values include: "<code>buddhist</code>",
-				"<code>chinese</code>", " <code>coptic</code>", "<code>ethiopia</code>",
-				"<code>ethiopic</code>", "<code>gregory</code>", " <code>hebrew</code>",
-				"<code>indian</code>", "<code>islamic</code>", "<code>iso8601</code>", "
-				<code>japanese</code>", "<code>persian</code>", "<code>roc</code>".</dd>
-			<dt><code>dayPeriod</code></dt>
-			<dd>The formatting style used for day periods like "in the morning", "am", "noon", "n" etc. Possible values include:
-				"<code>narrow</code>", "<code>short</code>", " <code>long</code>".
-				<div class="notecard note">
-					<p><strong>Note:</strong></p>
-					<ul>
-						<li>This option only has an effect if a 12-hour clock is used.</li>
-						<li>Many locales use the same string irrespective of the width specified.</li>
-					</ul>
-				</div>
-			</dd>
-			<dt><code>numberingSystem</code></dt>
-			<dd>Numbering System. Possible values include: "<code>arab</code>",
-				"<code>arabext</code>", " <code>bali</code>", "<code>beng</code>",
-				"<code>deva</code>", "<code>fullwide</code>", " <code>gujr</code>",
-				"<code>guru</code>", "<code>hanidec</code>", "<code>khmr</code>", "
-				<code>knda</code>", "<code>laoo</code>", "<code>latn</code>",
-				"<code>limb</code>", "<code>mlym</code>", " <code>mong</code>",
-				"<code>mymr</code>", "<code>orya</code>", "<code>tamldec</code>", "
-				<code>telu</code>", "<code>thai</code>", "<code>tibt</code>".</dd>
-			<dt><code>localeMatcher</code></dt>
-			<dd>The locale matching algorithm to use. Possible values are
-				"<code>lookup</code>" and "<code>best fit</code>"; the default is
-				"<code>best fit</code>". For information about this option, see the
-				{{jsxref("Global_Objects/Intl", "Intl", "#Locale_negotiation", 1)}} page.
-			</dd>
-			<dt><code>timeZone</code></dt>
-			<dd>The time zone to use. The only value implementations must recognize is
-				"<code>UTC</code>"; the default is the runtime's default time zone.
-				Implementations may also recognize the time zone names of the <a
-					href="https://www.iana.org/time-zones">IANA time zone database</a>,
-				such as "<code>Asia/Shanghai</code>", "<code>Asia/Kolkata</code>",
-				"<code>America/New_York</code>".</dd>
-			<dt><code>hour12</code></dt>
-			<dd>Whether to use 12-hour time (as opposed to 24-hour time). Possible values
-				are <code>true</code> and <code>false</code>; the default is locale
-				dependent. This option overrides the <code>hc</code> language tag and/or
-				the <code>hourCycle</code> option in case both are present.</dd>
-			<dt><code>hourCycle</code></dt>
-			<dd>The hour cycle to use. Possible values are "<code>h11</code>",
-				"<code>h12</code>", "<code>h23</code>", or "<code>h24</code>". This option
-				overrides the <code>hc</code> language tag, if both are present, and the
-				<code>hour12</code> option takes precedence in case both options have been
-				specified.</dd>
-			<dt><code>formatMatcher</code></dt>
-			<dd>The format matching algorithm to use. Possible values are
-				"<code>basic</code>" and "<code>best fit</code>"; the default is
-				"<code>best fit</code>". See the following paragraphs for information
-				about the use of this property.</dd>
-		</dl>
+- `options` {{optional_inline}}
 
-		<p>The following properties describe the date-time components to use in formatted
-			output, and their desired representations. Implementations are required to
-			support at least the following subsets:</p>
+  - : An object with some or all of the following properties:
 
-		<ul>
-			<li><code>weekday</code>, <code>year</code>, <code>month</code>,
-				<code>day</code>, <code>hour</code>, <code>minute</code>,
-				<code>second</code></li>
-			<li><code>weekday</code>, <code>year</code>, <code>month</code>,
-				<code>day</code></li>
-			<li><code>year</code>, <code>month</code>, <code>day</code></li>
-			<li><code>year</code>, <code>month</code></li>
-			<li><code>month</code>, <code>day</code></li>
-			<li><code>hour</code>, <code>minute</code>, <code>second</code></li>
-			<li><code>hour</code>, <code>minute</code></li>
-		</ul>
+    - `dateStyle`
 
-		<p>Implementations may support other subsets, and requests will be negotiated
-			against all available subset-representation combinations to find the best
-			match. Two algorithms are available for this negotiation and selected by the
-			<code>formatMatcher</code> property: A <a
-				href="https://www.ecma-international.org/ecma-402/1.0/#BasicFormatMatcher">fully
-				specified "<code>basic</code>" algorithm</a> and an
-			implementation-dependent "<code>best fit</code>" algorithm.</p>
+      - : The date formatting style to use when calling `format()`. Possible
+        values include:
 
-		<dl>
-			<dt><code>weekday</code></dt>
-			<dd>The representation of the weekday. Possible values are:
-				<ul>
-					<li>"<code>long</code>" (e.g., <code>Thursday</code>)</li>
-					<li>"<code>short</code>" (e.g., <code>Thu</code>)</li>
-					<li>"<code>narrow</code>" (e.g., <code>T</code>). Two weekdays may
-						have the same narrow style for some locales (e.g.
-						<code>Tuesday</code>'s narrow style is also <code>T</code>).</li>
-				</ul>
-			</dd>
-			<dt><code>era</code></dt>
-			<dd>The representation of the era. Possible values are:
-				<ul>
-					<li>"<code>long</code>" (e.g., <code>Anno Domini</code>)</li>
-					<li>"<code>short</code>" (e.g., <code>AD</code>)</li>
-					<li>"<code>narrow</code>" (e.g., <code>A</code>)</li>
-				</ul>
-			</dd>
-			<dt><code>year</code></dt>
-			<dd>The representation of the year. Possible values are:
-				<ul>
-					<li>"<code>numeric</code>" (e.g., <code>2012</code>)</li>
-					<li>"<code>2-digit</code>" (e.g., <code>12</code>)</li>
-				</ul>
-			</dd>
-			<dt><code>month</code></dt>
-			<dd>The representation of the month. Possible values are:
-				<ul>
-					<li>"<code>numeric</code>" (e.g., <code>2</code>)</li>
-					<li>"<code>2-digit</code>" (e.g., <code>02</code>)</li>
-					<li>"<code>long</code>" (e.g., <code>March</code>)</li>
-					<li>"<code>short</code>" (e.g., <code>Mar</code>)</li>
-					<li>"<code>narrow</code>" (e.g., <code>M</code>). Two months may have
-						the same narrow style for some locales (e.g. <code>May</code>'s
-						narrow style is also <code>M</code>).</li>
-				</ul>
-			</dd>
-			<dt><code>day</code></dt>
-			<dd>The representation of the day. Possible values are:
-				<ul>
-					<li>"<code>numeric</code>" (e.g., <code>1</code>)</li>
-					<li>"<code>2-digit</code>" (e.g., <code>01</code>)</li>
-				</ul>
-			</dd>
-			<dt><code>hour</code></dt>
-			<dd>The representation of the hour. Possible values are
-				"<code>numeric</code>", "<code>2-digit</code>".</dd>
-			<dt><code>minute</code></dt>
-			<dd>The representation of the minute. Possible values are
-				"<code>numeric</code>", "<code>2-digit</code>".</dd>
-			<dt><code>second</code></dt>
-			<dd>The representation of the second. Possible values are
-				"<code>numeric</code>", "<code>2-digit</code>".</dd>
-			<dt><code>fractionalSecondDigits</code></dt>
-			<dd>The number of digits used to represent fractions of a second (any
-				additional digits are truncated). Possible values are:
+        - "`full`"
+        - "`long`"
+        - "`medium`"
+        - "`short`"
 
-				<ul>
-					<li><code>0</code> (Fractional part dropped.)</li>
-					<li><code>1</code> (Fractional part represented as 1 digit. For
-						example, 736 is formatted as <code>7</code>.)</li>
-					<li><code>2</code> (Fractional part represented as 2 digits. For
-						example, 736 is formatted as <code>73</code>.)</li>
-					<li><code>3</code> (Fractional part represented as 3 digits. For
-						example, 736 is formatted as <code>736</code>.)</li>
-				</ul>
-			</dd>
-			<dt><code>timeZoneName</code></dt>
-			<dd>The representation of the time zone name. Possible values are:
-				<ul>
-					<li>"<code>long</code>" (e.g., <code>British Summer Time</code>)</li>
-					<li>"<code>short</code>" (e.g., <code>GMT+1</code>)</li>
-				</ul>
-			</dd>
-		</dl>
+        > **Note:** `dateStyle` can be used with `timeStyle`, but not with other
+        > options (e.g. `weekday`, `hour`, `month`, etc.).
 
-		<p>The default value for each date-time component property is
-			{{jsxref("undefined")}}, but if all component properties are
-			{{jsxref("undefined")}}, then <code>year</code>, <code>month</code>, and
-			<code>day</code> are assumed to be "<code>numeric</code>".</p>
-	</dd>
-</dl>
+    - `timeStyle`
 
-<h2 id="Examples">Examples</h2>
+      - : The time formatting style to use when calling `format()`. Possible
+        values include:
 
-<h3 id="Using_DateTimeFormat">Using DateTimeFormat</h3>
+        - "`full`"
+        - "`long`"
+        - "`medium`"
+        - "`short`"
 
-<p>In basic use without specifying a locale, <code>DateTimeFormat</code> uses the default
-	locale and default options.</p>
+        > **Note:** `timeStyle` can be used with `dateStyle`, but not with other
+        > options (e.g. `weekday`, `hour`, `month`, etc.).
 
-<pre class="brush: js">let date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+    - `calendar`
+      - : Calendar. Possible values include: "`buddhist`", "`chinese`", "
+        `coptic`", "`ethiopia`", "`ethiopic`", "`gregory`", " `hebrew`",
+        "`indian`", "`islamic`", "`iso8601`", " `japanese`", "`persian`",
+        "`roc`".
+    - `dayPeriod`
+
+      - : The formatting style used for day periods like "in the morning", "am",
+        "noon", "n" etc. Possible values include: "`narrow`", "`short`", "
+        `long`".
+
+        > **Note:**
+        >
+        > - This option only has an effect if a 12-hour clock is used.
+        > - Many locales use the same string irrespective of the width
+        >   specified.
+
+    - `numberingSystem`
+      - : Numbering System. Possible values include: "`arab`", "`arabext`", "
+        `bali`", "`beng`", "`deva`", "`fullwide`", " `gujr`", "`guru`",
+        "`hanidec`", "`khmr`", " `knda`", "`laoo`", "`latn`", "`limb`",
+        "`mlym`", " `mong`", "`mymr`", "`orya`", "`tamldec`", " `telu`",
+        "`thai`", "`tibt`".
+    - `localeMatcher`
+      - : The locale matching algorithm to use. Possible values are "`lookup`"
+        and "`best fit`"; the default is "`best fit`". For information about
+        this option, see the
+        {{jsxref("Global_Objects/Intl", "Intl", "#Locale_negotiation", 1)}}
+        page.
+    - `timeZone`
+      - : The time zone to use. The only value implementations must recognize is
+        "`UTC`"; the default is the runtime's default time zone. Implementations
+        may also recognize the time zone names of the
+        [IANA time zone database](https://www.iana.org/time-zones), such as
+        "`Asia/Shanghai`", "`Asia/Kolkata`", "`America/New_York`".
+    - `hour12`
+      - : Whether to use 12-hour time (as opposed to 24-hour time). Possible
+        values are `true` and `false`; the default is locale dependent. This
+        option overrides the `hc` language tag and/or the `hourCycle` option in
+        case both are present.
+    - `hourCycle`
+      - : The hour cycle to use. Possible values are "`h11`", "`h12`", "`h23`",
+        or "`h24`". This option overrides the `hc` language tag, if both are
+        present, and the `hour12` option takes precedence in case both options
+        have been specified.
+    - `formatMatcher`
+      - : The format matching algorithm to use. Possible values are "`basic`"
+        and "`best fit`"; the default is "`best fit`". See the following
+        paragraphs for information about the use of this property.
+
+    The following properties describe the date-time components to use in
+    formatted output, and their desired representations. Implementations are
+    required to support at least the following subsets:
+
+    - `weekday`, `year`, `month`, `day`, `hour`, `minute`, `second`
+    - `weekday`, `year`, `month`, `day`
+    - `year`, `month`, `day`
+    - `year`, `month`
+    - `month`, `day`
+    - `hour`, `minute`, `second`
+    - `hour`, `minute`
+
+    Implementations may support other subsets, and requests will be negotiated
+    against all available subset-representation combinations to find the best
+    match. Two algorithms are available for this negotiation and selected by the
+    `formatMatcher` property: A
+    [fully specified "`basic`" algorithm](https://www.ecma-international.org/ecma-402/1.0/#BasicFormatMatcher)
+    and an implementation-dependent "`best fit`" algorithm.
+
+    - `weekday`
+
+      - : The representation of the weekday. Possible values are:
+
+        - "`long`" (e.g., `Thursday`)
+        - "`short`" (e.g., `Thu`)
+        - "`narrow`" (e.g., `T`). Two weekdays may have the same narrow style
+          for some locales (e.g. `Tuesday`'s narrow style is also `T`).
+
+    - `era`
+
+      - : The representation of the era. Possible values are:
+
+        - "`long`" (e.g., `Anno Domini`)
+        - "`short`" (e.g., `AD`)
+        - "`narrow`" (e.g., `A`)
+
+    - `year`
+
+      - : The representation of the year. Possible values are:
+
+        - "`numeric`" (e.g., `2012`)
+        - "`2-digit`" (e.g., `12`)
+
+    - `month`
+
+      - : The representation of the month. Possible values are:
+
+        - "`numeric`" (e.g., `2`)
+        - "`2-digit`" (e.g., `02`)
+        - "`long`" (e.g., `March`)
+        - "`short`" (e.g., `Mar`)
+        - "`narrow`" (e.g., `M`). Two months may have the same narrow style for
+          some locales (e.g. `May`'s narrow style is also `M`).
+
+    - `day`
+
+      - : The representation of the day. Possible values are:
+
+        - "`numeric`" (e.g., `1`)
+        - "`2-digit`" (e.g., `01`)
+
+    - `hour`
+      - : The representation of the hour. Possible values are "`numeric`",
+        "`2-digit`".
+    - `minute`
+      - : The representation of the minute. Possible values are "`numeric`",
+        "`2-digit`".
+    - `second`
+      - : The representation of the second. Possible values are "`numeric`",
+        "`2-digit`".
+    - `fractionalSecondDigits`
+
+      - : The number of digits used to represent fractions of a second (any
+        additional digits are truncated). Possible values are:
+
+        - `0` (Fractional part dropped.)
+        - `1` (Fractional part represented as 1 digit. For example, 736 is
+          formatted as `7`.)
+        - `2` (Fractional part represented as 2 digits. For example, 736 is
+          formatted as `73`.)
+        - `3` (Fractional part represented as 3 digits. For example, 736 is
+          formatted as `736`.)
+
+    - `timeZoneName`
+
+      - : The representation of the time zone name. Possible values are:
+
+        - "`long`" (e.g., `British Summer Time`)
+        - "`short`" (e.g., `GMT+1`)
+
+    The default value for each date-time component property is
+    {{jsxref("undefined")}}, but if all component properties are
+    {{jsxref("undefined")}}, then `year`, `month`, and `day` are
+    assumed to be "`numeric`".
+
+## Examples
+
+### Using DateTimeFormat
+
+In basic use without specifying a locale, `DateTimeFormat` uses the default
+locale and default options.
+
+```js
+let date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // toLocaleString without arguments depends on the implementation,
 // the default locale, and the default time zone
 console.log(new Intl.DateTimeFormat().format(date));
-// → "12/19/2012" if run with en-US locale (language) and time zone America/Los_Angeles (UTC-0800)</pre>
+// → "12/19/2012" if run with en-US locale (language) and time zone America/Los_Angeles (UTC-0800)
+```
 
-<h3 id="Using_timeStyle_and_dateStyle">Using timeStyle and dateStyle</h3>
+### Using timeStyle and dateStyle
 
-<pre class="brush: js">let o = new Intl.DateTimeFormat("en" , {
+```js
+let o = new Intl.DateTimeFormat("en" , {
   timeStyle: "short"
 });
 console.log(o.format(Date.now())); // "13:31 AM"
@@ -295,13 +263,18 @@ let o = new Intl.DateTimeFormat("en" , {
   timeStyle: "medium",
   dateStyle: "short"
 });
-console.log(o.format(Date.now())); // "07/07/20, 13:31:55 AM"</pre>
+console.log(o.format(Date.now())); // "07/07/20, 13:31:55 AM"
+```
 
-<h3 id="using_dayperiod">Using dayPeriod</h3>
+### Using dayPeriod
 
-<p>Use the <code>dayPeriod</code> option to output a string for the times of day ("in the morning", "at night", "noon", etc.). Note, that this only works when formatting for a 12 hour clock (<code>hourCycle: 'h12'</code>) and that for many locales the strings are the same irrespective of the value passed for the <code>dayPeriod</code>.</p>
+Use the `dayPeriod` option to output a string for the times of day ("in the
+morning", "at night", "noon", etc.). Note, that this only works when formatting
+for a 12 hour clock (`hourCycle: 'h12'`) and that for many locales the strings
+are the same irrespective of the value passed for the `dayPeriod`.
 
-<pre class="brush: js">let date = Date.UTC(2012, 11, 17, 4, 0, 42);
+```js
+let date = Date.UTC(2012, 11, 17, 4, 0, 42);
 
 console.log(new Intl.DateTimeFormat('en-GB', { hour: 'numeric', hourCycle: 'h12', 
 dayPeriod: 'short', timeZone: 'UTC' }).format(date));
@@ -313,20 +286,18 @@ console.log(new Intl.DateTimeFormat('fr', { hour: 'numeric', hourCycle: 'h12',
 
 console.log(new Intl.DateTimeFormat('fr', { hour: 'numeric', hourCycle: 'h12', 
     dayPeriod: 'long', timeZone: 'UTC' }).format(date));
-// > "4 du matin"</pre>
+// > "4 du matin"
+```
 
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>{{jsxref("Intl.DateTimeFormat")}}</li>
-	<li>{{jsxref("Global_Objects/Intl", "Intl")}}</li>
-</ul>
+- {{jsxref("Intl.DateTimeFormat")}}
+- {{jsxref("Global_Objects/Intl", "Intl")}}

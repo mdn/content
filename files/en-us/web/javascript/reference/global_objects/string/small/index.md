@@ -2,66 +2,69 @@
 title: String.prototype.small()
 slug: Web/JavaScript/Reference/Global_Objects/String/small
 tags:
-- Deprecated
-- HTML wrapper methods
-- JavaScript
-- Method
-- Prototype
-- Reference
-- String
-- Polyfill
+  - Deprecated
+  - HTML wrapper methods
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
+  - String
+  - Polyfill
 browser-compat: javascript.builtins.String.small
 ---
-<div>{{JSRef}} {{deprecated_header}}</div>
+{{JSRef}} {{deprecated_header}}
 
-<p>The <strong><code>small()</code></strong> method creates a {{HTMLElement("small")}}
-  HTML element that causes a string to be displayed in a small font.</p>
+The **`small()`** method creates a {{HTMLElement("small")}} HTML element
+that causes a string to be displayed in a small font.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">small()</pre>
+```js
+small()
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A string containing a {{HTMLElement("small")}} HTML element.</p>
+A string containing a {{HTMLElement("small")}} HTML element.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The <code>small()</code> method embeds a string in a <code>&lt;small&gt;</code>
-  element: "<code>&lt;small&gt;str&lt;/small&gt;</code>".</p>
+The `small()` method embeds a string in a `<small>` element:
+"`<small>str</small>`".
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_small">Using small()</h3>
+### Using small()
 
-<p>The following example uses string methods to change the size of a string:</p>
+The following example uses string methods to change the size of a string:
 
-<pre class="brush: js">var worldString = 'Hello, world';
+```js
+var worldString = 'Hello, world';
 
-console.log(worldString.small());     // &lt;small&gt;Hello, world&lt;/small&gt;
-console.log(worldString.big());       // &lt;big&gt;Hello, world&lt;/big&gt;
-console.log(worldString.fontsize(7)); // &lt;font size="7"&gt;Hello, world&lt;/fontsize&gt;
-</pre>
+console.log(worldString.small());     // <small>Hello, world</small>
+console.log(worldString.big());       // <big>Hello, world</big>
+console.log(worldString.fontsize(7)); // <font size="7">Hello, world</fontsize>
+```
 
-<p>With the {{domxref("HTMLElement/style", "element.style")}} object you can get
-  the element's <code>style</code> attribute and manipulate it more generically, for
-  example:</p>
+With the {{domxref("HTMLElement/style", "element.style")}} object
+you can get the element's `style` attribute and manipulate it more generically,
+for example:
 
-<pre class="brush: js">document.getElementById('yourElemId').style.fontSize = '0.7em';
-</pre>
+```js
+document.getElementById('yourElemId').style.fontSize = '0.7em';
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>A polyfill of <code>String.prototype.small</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-string-and-regexp"><code>core-js</code></a></li>
-  <li>{{jsxref("String.prototype.fontsize()")}}</li>
-  <li>{{jsxref("String.prototype.big()")}}</li>
-</ul>
+- A polyfill of `String.prototype.small` is available in
+  [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- {{jsxref("String.prototype.fontsize()")}}
+- {{jsxref("String.prototype.big()")}}

@@ -2,52 +2,57 @@
 title: Date.now()
 slug: Web/JavaScript/Reference/Global_Objects/Date/now
 tags:
-- Date
-- JavaScript
-- Method
-- Reference
-- Time
-- Polyfill
+  - Date
+  - JavaScript
+  - Method
+  - Reference
+  - Time
+  - Polyfill
 browser-compat: javascript.builtins.Date.now
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The static <strong><code>Date.now()</code></strong> method returns the number of
-  milliseconds elapsed since January 1, 1970 00:00:00 UTC.</p>
+The static **`Date.now()`** method returns the number of milliseconds elapsed
+since January 1, 1970 00:00:00 UTC.
 
-<div>{{EmbedInteractiveExample("pages/js/date-now.html")}}</div>
+{{EmbedInteractiveExample("pages/js/date-now.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">Date.now()</pre>
+```js
+Date.now()
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref("Number")}} representing the milliseconds elapsed since the UNIX epoch.</p>
+A {{jsxref("Number")}} representing the milliseconds elapsed since the
+UNIX epoch.
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>This method was standardized in ECMA-262 5th edition. Engines which have not
-  been updated to support this method can work around the absence of this method using the
-  following shim:</p>
+This method was standardized in ECMA-262 5th edition. Engines which have not
+been updated to support this method can work around the absence of this method
+using the following shim:
 
-<pre class="brush: js">if (!Date.now) {
+```js
+if (!Date.now) {
   Date.now = function now() {
     return new Date().getTime();
   };
 }
-</pre>
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Reduced_time_precision">Reduced time precision</h3>
+### Reduced time precision
 
-<p>To offer protection against timing attacks and fingerprinting, the precision of
-  <code>Date.now()</code> might get rounded depending on browser settings.<br>
-  In Firefox, the <code>privacy.reduceTimerPrecision</code>  preference is enabled by
-  default and defaults to 20µs in Firefox 59; in 60 it will be 2ms.</p>
+To offer protection against timing attacks and fingerprinting, the precision of
+`Date.now()` might get rounded depending on browser settings. In Firefox,
+the `privacy.reduceTimerPrecision`  preference is enabled by default and
+defaults to 20µs in Firefox 59; in 60 it will be 2ms.
 
-<pre class="brush: js">// reduced time precision (2ms) in Firefox 60
+```js
+// reduced time precision (2ms) in Firefox 60
 Date.now()
 // 1519211809934
 // 1519211810362
@@ -60,27 +65,26 @@ Date.now();
 // 1519129858900
 // 1519129864400
 // ...
-</pre>
+```
 
-<p>In Firefox, you can also enable <code>privacy.resistFingerprinting</code>, the
-  precision will be 100ms or the value of
-  <code>privacy.resistFingerprinting.reduceTimerPrecision.microseconds</code>, whichever
-  is larger.</p>
+In Firefox, you can also enable `privacy.resistFingerprinting`, the precision
+will be 100ms or the value of
+`privacy.resistFingerprinting.reduceTimerPrecision.microseconds`, whichever is
+larger.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat}}
 
-<p>{{Compat}}</p>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
-  <li>A polyfill of <code>Date.now</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-date"><code>core-js</code></a></li>
-  <li>{{domxref("Performance.now()")}} — provides timestamps with sub-millisecond
-    resolution for use in measuring web page performance</li>
-  <li>{{domxref("console.time()")}} / {{domxref("console.timeEnd()")}}</li>
-</ul>
+- A polyfill of `Date.now` is available in
+  [`core-js`](https://github.com/zloirock/core-js#ecmascript-date)
+- {{domxref("Performance.now()")}} — provides timestamps with
+  sub-millisecond resolution for use in measuring web page performance
+- {{domxref("console.time()")}} /
+  {{domxref("console.timeEnd()")}}

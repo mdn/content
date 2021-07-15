@@ -2,110 +2,114 @@
 title: Object.freeze()
 slug: Web/JavaScript/Reference/Global_Objects/Object/freeze
 tags:
-- Change
-- Changeability
-- ECMAScript 5
-- JavaScript
-- Method
-- Mutability
-- Mutable
-- Object
-- Reference
-- freeze
-- lock
+  - Change
+  - Changeability
+  - ECMAScript 5
+  - JavaScript
+  - Method
+  - Mutability
+  - Mutable
+  - Object
+  - Reference
+  - freeze
+  - lock
 browser-compat: javascript.builtins.Object.freeze
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <code><strong>Object.freeze()</strong></code> method <strong>freezes</strong> an
-  object. A frozen object can no longer be changed; freezing an object prevents new
-  properties from being added to it, existing properties from being removed, prevents
-  changing the enumerability, configurability, or writability of existing properties, and
-  prevents the values of existing properties from being changed. In addition, freezing an
-  object also prevents its prototype from being changed. <code>freeze()</code> returns the
-  same object that was passed in.</p>
+The **`Object.freeze()`** method **freezes** an object. A frozen object can no
+longer be changed; freezing an object prevents new properties from being added
+to it, existing properties from being removed, prevents changing the
+enumerability, configurability, or writability of existing properties, and
+prevents the values of existing properties from being changed. In addition,
+freezing an object also prevents its prototype from being changed. `freeze()`
+returns the same object that was passed in.
 
-<div>{{EmbedInteractiveExample("pages/js/object-freeze.html")}}</div>
+{{EmbedInteractiveExample("pages/js/object-freeze.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+Object.freeze(obj)
+```
 
-<pre class="brush: js">Object.freeze(<var>obj</var>)</pre>
+### Parameters
 
-<h3 id="Parameters">Parameters</h3>
+- `obj`
+  - : The object to freeze.
 
-<dl>
-  <dt><code><var>obj</var></code></dt>
-  <dd>The object to freeze.</dd>
-</dl>
+### Return value
 
-<h3 id="Return_value">Return value</h3>
+The object that was passed to the function.
 
-<p>The object that was passed to the function.</p>
+## Description
 
-<h2 id="Description">Description</h2>
+Nothing can be added to or removed from the properties set of a frozen object.
+Any attempt to do so will fail, either silently or by throwing a
+{{jsxref("TypeError")}} exception (most commonly, but not exclusively,
+when in {{jsxref("Strict_mode", "strict
+  mode", "", 1)}}).
 
-<p>Nothing can be added to or removed from the properties set of a frozen object. Any
-  attempt to do so will fail, either silently or by throwing a {{jsxref("TypeError")}}
-  exception (most commonly, but not exclusively, when in {{jsxref("Strict_mode", "strict
-  mode", "", 1)}}).</p>
+For data properties of a frozen object, values cannot be changed, the writable
+and configurable attributes are set to false. Accessor properties (getters and
+setters) work the same (and still give the illusion that you are changing the
+value). Note that values that are objects can still be modified, unless they are
+also frozen. As an object, an array can be frozen; after doing so, its elements
+cannot be altered and no elements can be added to or removed from the array.
 
-<p>For data properties of a frozen object, values cannot be changed, the writable and
-  configurable attributes are set to false. Accessor properties (getters and setters) work
-  the same (and still give the illusion that you are changing the value). Note that values
-  that are objects can still be modified, unless they are also frozen. As an object, an
-  array can be frozen; after doing so, its elements cannot be altered and no elements can
-  be added to or removed from the array.</p>
+`freeze()` returns the same object that was passed into the function. It _does
+not_ create a frozen copy.
 
-<p><code>freeze()</code> returns the same object that was passed into the function. It
-  <em>does not</em> create a frozen copy.</p>
+In ES5, if the argument to this method is not an object (a primitive), then it
+will cause a {{jsxref("TypeError")}}. In ES2015, a non-object argument
+will be treated as if it were a frozen ordinary object, and be returned.
 
-<p>In ES5, if the argument to this method is not an object (a primitive), then it will
-  cause a {{jsxref("TypeError")}}. In ES2015, a non-object argument will be treated as if
-  it were a frozen ordinary object, and be returned.</p>
-
-<pre class="brush: js">&gt; Object.freeze(1)
+```js
+> Object.freeze(1)
 TypeError: 1 is not an object // ES5 code
 
-&gt; Object.freeze(1)
+> Object.freeze(1)
 1                             // ES2015 code
-</pre>
+```
 
-<p>An {{domxref("ArrayBufferView")}} with elements will cause a {{jsxref("TypeError")}},
-  as they are views over memory and will definitely cause other possible issues:</p>
+An {{domxref("ArrayBufferView")}} with elements will cause a
+{{jsxref("TypeError")}}, as they are views over memory and will
+definitely cause other possible issues:
 
-<pre class="brush: js">&gt; Object.freeze(new Uint8Array(0)) // No elements
-<em>Uint8Array</em> []
+```js
+> Object.freeze(new Uint8Array(0)) // No elements
+Uint8Array []
 
-&gt; Object.freeze(new Uint8Array(1)) // Has elements
+> Object.freeze(new Uint8Array(1)) // Has elements
 TypeError: Cannot freeze array buffer views with elements
 
-&gt; Object.freeze(new DataView(new ArrayBuffer(32))) // No elements
-<em>DataView</em> {}
+> Object.freeze(new DataView(new ArrayBuffer(32))) // No elements
+DataView {}
 
-&gt; Object.freeze(new Float64Array(new ArrayBuffer(64), 63, 0)) // No elements
-<em>Float64Array</em> []
+> Object.freeze(new Float64Array(new ArrayBuffer(64), 63, 0)) // No elements
+Float64Array []
 
-&gt; Object.freeze(new Float64Array(new ArrayBuffer(64), 32, 2)) // Has elements
+> Object.freeze(new Float64Array(new ArrayBuffer(64), 32, 2)) // Has elements
 TypeError: Cannot freeze array buffer views with elements
-</pre>
+```
 
-<p>Note that; as the standard three properties (<code>buf.byteLength</code>,
-  <code>buf.byteOffset</code> and <code>buf.buffer</code>) are read-only (as are those of
-  an {{jsxref("ArrayBuffer")}} or {{jsxref("SharedArrayBuffer")}}), there is no reason for
-  attempting to freeze these properties.</p>
+Note that; as the standard three properties (`buf.byteLength`, `buf.byteOffset`
+and `buf.buffer`) are read-only (as are those of an
+{{jsxref("ArrayBuffer")}} or {{jsxref("SharedArrayBuffer")}}),
+there is no reason for attempting to freeze these properties.
 
-<h3 id="Comparison_to_Object.seal">Comparison to Object.seal()</h3>
+### Comparison to Object.seal()
 
-<p>Objects sealed with {{jsxref("Object.seal()")}} can have their existing properties
-  changed. Existing properties in objects frozen with <code>Object.freeze()</code> are
-  made immutable.</p>
+Objects sealed with {{jsxref("Object.seal()")}} can have their existing
+properties changed. Existing properties in objects frozen with `Object.freeze()`
+are made immutable.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Freezing_objects">Freezing objects</h3>
+### Freezing objects
 
-<pre class="brush: js">const obj = {
+```js
+const obj = {
   prop() {},
   foo: 'bar'
 };
@@ -150,11 +154,12 @@ Object.defineProperty(obj, 'foo', { value: 'eit' });
 // both statements below will throw a TypeError.
 Object.setPrototypeOf(obj, { x: 20 })
 obj.__proto__ = { x: 20 }
-</pre>
+```
 
-<h3 id="Freezing_arrays">Freezing arrays</h3>
+### Freezing arrays
 
-<pre class="brush: js">let a = [0];
+```js
+let a = [0];
 Object.freeze(a); // The array cannot be modified now.
 
 a[0] = 1; // fails silently
@@ -168,37 +173,41 @@ function fail() {
 fail();
 
 // Attempted to push
-a.push(2); // throws a TypeError</pre>
+a.push(2); // throws a TypeError
+```
 
-<p>The object being frozen is <em>immutable</em>. However, it is not necessarily
-  <em>constant</em>. The following example shows that a frozen object is not constant
-  (freeze is shallow).</p>
+The object being frozen is _immutable_. However, it is not necessarily
+_constant_. The following example shows that a frozen object is not constant
+(freeze is shallow).
 
-<pre class="brush: js">const obj1 = {
+```js
+const obj1 = {
   internal: {}
 };
 
 Object.freeze(obj1);
 obj1.internal.a = 'aValue';
 
-obj1.internal.a // 'aValue'</pre>
+obj1.internal.a // 'aValue'
+```
 
-<p>To be a constant object, the entire reference graph (direct and indirect references to
-  other objects) must reference only immutable frozen objects. The object being frozen is
-  said to be immutable because the entire object <em>state</em> (values and references to
-  other objects) within the whole object is fixed. Note that strings, numbers, and
-  booleans are always immutable and that Functions and Arrays are objects.</p>
+To be a constant object, the entire reference graph (direct and indirect
+references to other objects) must reference only immutable frozen objects. The
+object being frozen is said to be immutable because the entire object _state_
+(values and references to other objects) within the whole object is fixed. Note
+that strings, numbers, and booleans are always immutable and that Functions and
+Arrays are objects.
 
-<h4 id="What_is_shallow_freeze">What is "shallow freeze"?</h4>
+#### What is "shallow freeze"?
 
-<p>The result of calling <code>Object.freeze(<var>object</var>)</code> only applies to the
-  immediate properties of <code>object</code> itself and will prevent future property
-  addition, removal or value re-assignment operations <em>only</em> on
-  <code>object</code>. If the value of those properties are objects themselves, those
-  objects are not frozen and may be the target of property addition, removal or value
-  re-assignment operations.</p>
+The result of calling `Object.freeze(object)` only applies to the immediate
+properties of `object` itself and will prevent future property addition, removal
+or value re-assignment operations _only_ on `object`. If the value of those
+properties are objects themselves, those objects are not frozen and may be the
+target of property addition, removal or value re-assignment operations.
 
-<pre class="brush: js">const employee = {
+```js
+const employee = {
   name: "Mayank",
   designation: "Developer",
   address: {
@@ -213,19 +222,20 @@ employee.name = "Dummy"; // fails silently in non-strict mode
 employee.address.city = "Noida"; // attributes of child object can be modified
 
 console.log(employee.address.city) // Output: "Noida"
-</pre>
+```
 
-<p>To make an object immutable, recursively freeze each property which is of type object
-  (deep freeze). Use the pattern on a case-by-case basis based on your design when you
-  know the object contains no <a
-    href="https://en.wikipedia.org/wiki/Cycle_(graph_theory)">cycles</a> in the reference
-  graph, otherwise an endless loop will be triggered. An enhancement to
-  <code>deepFreeze()</code> would be to have an internal function that receives a path
-  (e.g. an Array) argument so you can suppress calling <code>deepFreeze()</code>
-  recursively when an object is in the process of being made immutable. You still run a
-  risk of freezing an object that shouldn't be frozen, such as [window].</p>
+To make an object immutable, recursively freeze each property which is of type
+object (deep freeze). Use the pattern on a case-by-case basis based on your
+design when you know the object contains no
+[cycles](<https://en.wikipedia.org/wiki/Cycle_(graph_theory)>) in the reference
+graph, otherwise an endless loop will be triggered. An enhancement to
+`deepFreeze()` would be to have an internal function that receives a path (e.g.
+an Array) argument so you can suppress calling `deepFreeze()` recursively when
+an object is in the process of being made immutable. You still run a risk of
+freezing an object that shouldn't be frozen, such as \[window].
 
-<pre class="brush: js">function deepFreeze(object) {
+```js
+function deepFreeze(object) {
   // Retrieve the property names defined on object
   const propNames = Object.getOwnPropertyNames(object);
 
@@ -234,7 +244,7 @@ console.log(employee.address.city) // Output: "Noida"
   for (const name of propNames) {
     const value = object[name];
 
-    if (value &amp;&amp; typeof value === "object") {
+    if (value && typeof value === "object") {
       deepFreeze(value);
     }
   }
@@ -252,22 +262,20 @@ deepFreeze(obj2);
 
 obj2.internal.a = 'anotherValue'; // fails silently in non-strict mode
 obj2.internal.a; // null
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Object.isFrozen()")}}</li>
-  <li>{{jsxref("Object.preventExtensions()")}}</li>
-  <li>{{jsxref("Object.isExtensible()")}}</li>
-  <li>{{jsxref("Object.seal()")}}</li>
-  <li>{{jsxref("Object.isSealed()")}}</li>
-</ul>
+- {{jsxref("Object.isFrozen()")}}
+- {{jsxref("Object.preventExtensions()")}}
+- {{jsxref("Object.isExtensible()")}}
+- {{jsxref("Object.seal()")}}
+- {{jsxref("Object.isSealed()")}}

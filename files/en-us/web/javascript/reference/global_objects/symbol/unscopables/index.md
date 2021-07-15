@@ -8,28 +8,46 @@ tags:
   - Symbol
 browser-compat: javascript.builtins.Symbol.unscopables
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>Symbol.unscopables</code></strong> well-known symbol is used to specify an object value of whose own and inherited property names are excluded from the <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/with">with</a></code> environment bindings of the associated object.</p>
+The **`Symbol.unscopables`** well-known symbol is used to specify an object
+value of whose own and inherited property names are excluded from the
+[`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with) environment
+bindings of the associated object.
 
-<div>{{EmbedInteractiveExample("pages/js/symbol-unscopables.html")}}</div>
+{{EmbedInteractiveExample("pages/js/symbol-unscopables.html")}}
 
+## Description
 
-<h2 id="Description">Description</h2>
+The `@@unscopables` symbol (`Symbol.unscopables`) can be defined on any object
+to exclude property names from being exposed as lexical variables in
+[`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with) environment
+bindings. Note that if using
+[Strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), `with`
+statements are not available and will likely also not need this symbol.
 
-<p>The <code>@@unscopables</code> symbol (<code>Symbol.unscopables</code>) can be defined on any object to exclude property names from being exposed as lexical variables in <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/with">with</a></code> environment bindings. Note that if using <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">Strict mode</a>, <code>with</code> statements are not available and will likely also not need this symbol.</p>
+Setting a property to `true` in an `unscopables` object will make it
+_unscopable_ and therefore it won't appear in lexical scope variables. Setting a
+property to `false` will make it `scopable` and thus it will appear in lexical
+scope variables.
 
-<p>Setting a property to <code>true</code> in an <code>unscopables</code> object will make it <em>unscopable</em> and therefore it won't appear in lexical scope variables. Setting a property to <code>false</code> will make it <code>scopable</code> and thus it will appear in lexical scope variables.</p>
+{{js_property_attributes(0,0,0)}}
 
-<p>{{js_property_attributes(0,0,0)}}</p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Scoping in with statements
 
-<h3 id="Scoping_in_with_statements">Scoping in with statements</h3>
+The following code works fine in ES5 and below. However, in ECMAScript 2015 and
+later, the {{jsxref("Array.prototype.keys()")}} method was
+introduced. That means that inside `with` environment "keys" would now be the
+method and not the variable. That's when the `unscopable`s symbol was
+introduced. A built-in `unscopables` setting is implemented as
+{{jsxref("Array.@@unscopables", "Array.prototype[@@unscopables]")}}
+to prevent that some of the Array methods are being scoped into the `with`
+statement.
 
-<p>The following code works fine in ES5 and below. However, in ECMAScript 2015 and later, the {{jsxref("Array.prototype.keys()")}} method was introduced. That means that inside <code>with</code> environment "keys" would now be the method and not the variable. That's when the <code>unscopable</code>s symbol was introduced. A built-in <code>unscopables</code> setting is implemented as {{jsxref("Array.@@unscopables", "Array.prototype[@@unscopables]")}} to prevent that some of the Array methods are being scoped into the <code>with</code> statement.</p>
-
-<pre class="brush: js">var keys = [];
+```js
+var keys = [];
 
 with (Array.prototype) {
   keys.push('something');
@@ -38,13 +56,14 @@ with (Array.prototype) {
 Object.keys(Array.prototype[Symbol.unscopables]);
 // ["copyWithin", "entries", "fill", "find", "findIndex",
 //  "includes", "keys", "values"]
-</pre>
+```
 
-<h3 id="Unscopables_in_objects">Unscopables in objects</h3>
+### Unscopables in objects
 
-<p>You can also set <code>unscopables</code> for your own objects.</p>
+You can also set `unscopables` for your own objects.
 
-<pre class="brush: js">var obj = {
+```js
+var obj = {
   foo: 1,
   bar: 2
 };
@@ -58,19 +77,18 @@ with (obj) {
   console.log(foo); // 1
   console.log(bar); // ReferenceError: bar is not defined
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("Array.@@unscopables", "Array.prototype[@@unscopables]")}}</li>
- <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/with">with</a></code> statement (not available in <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">Strict mode</a>)</li>
-</ul>
+- {{jsxref("Array.@@unscopables", "Array.prototype[@@unscopables]")}}
+- [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with) statement (not
+  available in [Strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode))

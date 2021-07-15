@@ -2,46 +2,49 @@
 title: Intl.DateTimeFormat.prototype.formatRangeToParts()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatRangeToParts
 tags:
-- DateTimeFormat
-- Internationalization
-- Intl
-- JavaScript
-- Localization
-- Method
-- Prototype
-- Reference
+  - DateTimeFormat
+  - Internationalization
+  - Intl
+  - JavaScript
+  - Localization
+  - Method
+  - Prototype
+  - Reference
 browser-compat: javascript.builtins.Intl.DateTimeFormat.formatRangeToParts
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>Intl.DateTimeFormat.prototype.formatRangeToParts()</code></strong>
-	method returns an array of locale-specific tokens representing each part of the formatted date
-	range produced by {{jsxref("Intl.DateTimeFormat")}} formatters.</p>
+The **`Intl.DateTimeFormat.prototype.formatRangeToParts()`** method returns an
+array of locale-specific tokens representing each part of the formatted date
+range produced by {{jsxref("Intl.DateTimeFormat")}} formatters.
 
-<div>
-	{{EmbedInteractiveExample("pages/js/intl-datetimeformat-prototype-formatrangetoparts.html",
-	"taller")}}</div>
+{{EmbedInteractiveExample("pages/js/intl-datetimeformat-prototype-formatrangetoparts.html",
+	"taller")}}
+
 <!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">formatRangeToParts(startDate, endDate)</pre>
+```js
+formatRangeToParts(startDate, endDate)
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Basic_formatRangeToParts_usage">Basic formatRangeToParts usage</h3>
+### Basic formatRangeToParts usage
 
-<p>This method receives two {{jsxref("Date")}}s and returns an {{jsxref("Array")}} of
-	objects containing the <em>locale-specific</em> tokens representing each part of the formatted date range.</p>
+This method receives two {{jsxref("Date")}}s and returns an
+{{jsxref("Array")}} of objects containing the _locale-specific_ tokens
+representing each part of the formatted date range.
 
-<div class="notecard note">
-	<p><strong>Note:</strong> The return values shown in your locale may differ from those listed below.</p>
-</div>
+> **Note:** The return values shown in your locale may differ from those listed
+> below.
 
-<pre class="brush: js">let date1 = new Date(Date.UTC(2007, 0, 10, 10, 0, 0));
+```js
+let date1 = new Date(Date.UTC(2007, 0, 10, 10, 0, 0));
 let date2 = new Date(Date.UTC(2007, 0, 10, 11, 0, 0));
-// &gt; 'Wed, 10 Jan 2007 10:00:00 GMT'
-// &gt; 'Wed, 10 Jan 2007 11:00:00 GMT'
+// > 'Wed, 10 Jan 2007 10:00:00 GMT'
+// > 'Wed, 10 Jan 2007 11:00:00 GMT'
 
 let fmt = new Intl.DateTimeFormat("en", {
     hour: 'numeric',
@@ -49,7 +52,7 @@ let fmt = new Intl.DateTimeFormat("en", {
 });
 
 console.log(fmt.formatRange(date1, date2));
-// &gt; '10:00 – 11:00 AM'
+// > '10:00 – 11:00 AM'
 
 fmt.formatRangeToParts(date1, date2);
 // return value:
@@ -64,19 +67,17 @@ fmt.formatRangeToParts(date1, date2);
 //   { type: 'literal',   value: ' ',   source: "shared"     },
 //   { type: 'dayPeriod', value: 'AM',  source: "shared"     }
 // ]
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>{{jsxref("Intl/DateTimeFormat/formatRange", "Intl.DateTimeFormat.prototype.formatRange()")}}</li>
-	<li>{{jsxref("Intl.DateTimeFormat")}}</li>
-</ul>
+- {{jsxref("Intl/DateTimeFormat/formatRange", "Intl.DateTimeFormat.prototype.formatRange()")}}
+- {{jsxref("Intl.DateTimeFormat")}}

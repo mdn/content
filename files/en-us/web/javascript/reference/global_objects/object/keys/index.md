@@ -2,51 +2,51 @@
 title: Object.keys()
 slug: Web/JavaScript/Reference/Global_Objects/Object/keys
 tags:
-- ECMAScript 5
-- JavaScript
-- JavaScript 1.8.5
-- Method
-- Object
-- Polyfill
+  - ECMAScript 5
+  - JavaScript
+  - JavaScript 1.8.5
+  - Method
+  - Object
+  - Polyfill
 browser-compat: javascript.builtins.Object.keys
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><span class="seoSummary">The <code><strong>Object.keys()</strong></code> method returns
-    an array of a given object's own enumerable property <strong>names</strong>, iterated
-    in the same order that a normal loop would.</span></p>
+The **`Object.keys()`** method returns an array of a given object's own
+enumerable property **names**, iterated in the same order that a normal loop
+would.
 
-<div>{{EmbedInteractiveExample("pages/js/object-keys.html")}}</div>
+{{EmbedInteractiveExample("pages/js/object-keys.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+Object.keys(obj)
+```
 
-<pre class="brush: js">Object.keys(<var>obj</var>)</pre>
+### Parameters
 
-<h3 id="Parameters">Parameters</h3>
+- `obj`
+  - : The object of which the enumerable's own properties are to be returned.
 
-<dl>
-  <dt><code><var>obj</var></code></dt>
-  <dd>The object of which the enumerable's own properties are to be returned.</dd>
-</dl>
+### Return value
 
-<h3 id="Return_value">Return value</h3>
+An array of strings that represent all the enumerable properties of the given
+object.
 
-<p>An array of strings that represent all the enumerable properties of the given object.
-</p>
+## Description
 
-<h2 id="Description">Description</h2>
+`Object.keys()` returns an array whose elements are strings corresponding to the
+enumerable properties found directly upon `object`. The ordering of the
+properties is the same as that given by looping over the properties of the
+object manually.
 
-<p><code>Object.keys()</code> returns an array whose elements are strings corresponding to
-  the enumerable properties found directly upon <code>object</code>. The ordering of the
-  properties is the same as that given by looping over the properties of the object
-  manually.</p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Using Object.keys
 
-<h3 id="Using_Object.keys">Using Object.keys</h3>
-
-<pre class="brush: js">// simple array
+```js
+// simple array
 const arr = ['a', 'b', 'c'];
 console.log(Object.keys(arr)); // console: ['0', '1', '2']
 
@@ -66,31 +66,33 @@ const myObj = Object.create({}, {
 });
 myObj.foo = 1;
 console.log(Object.keys(myObj)); // console: ['foo']
-</pre>
+```
 
-<p>If you want <em>all</em> properties—including non-enumerables—see
-  {{jsxref("Object.getOwnPropertyNames()")}}.</p>
+If you want _all_ properties—including non-enumerables—see
+{{jsxref("Object.getOwnPropertyNames()")}}.
 
-<h3 id="Non-object_coercion">Non-object coercion</h3>
+### Non-object coercion
 
-<p>In ES5, if the argument to this method is not an object (a primitive), then it will
-  cause a {{jsxref("TypeError")}}.</p>
+In ES5, if the argument to this method is not an object (a primitive), then it
+will cause a {{jsxref("TypeError")}}.
 
-<p>From ES2015 onwards, a non-object argument will be coerced to an object.</p>
+From ES2015 onwards, a non-object argument will be coerced to an object.
 
-<pre class="brush: js">// In ES5
+```js
+// In ES5
 Object.keys('foo');  // TypeError: "foo" is not an object
 
 // In ES2015+
 Object.keys('foo');  // ["0", "1", "2"]
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>To add compatible <code>Object.keys</code> support in older environments that do not
-  natively support it, copy the following snippet:</p>
+To add compatible `Object.keys` support in older environments that do not
+natively support it, copy the following snippet:
 
-<pre class="brush: js">// From https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
+```js
+// From https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
 if (!Object.keys) {
   Object.keys = (function() {
     'use strict';
@@ -108,7 +110,7 @@ if (!Object.keys) {
         dontEnumsLength = dontEnums.length;
 
     return function(obj) {
-      if (typeof obj !== 'function' &amp;&amp; (typeof obj !== 'object' || obj === null)) {
+      if (typeof obj !== 'function' && (typeof obj !== 'object' || obj === null)) {
         throw new TypeError('Object.keys called on non-object');
       }
 
@@ -121,7 +123,7 @@ if (!Object.keys) {
       }
 
       if (hasDontEnumBug) {
-        for (i = 0; i &lt; dontEnumsLength; i++) {
+        for (i = 0; i < dontEnumsLength; i++) {
           if (hasOwnProperty.call(obj, dontEnums[i])) {
             result.push(dontEnums[i]);
           }
@@ -131,34 +133,29 @@ if (!Object.keys) {
     };
   }());
 }
-</pre>
+```
 
-<p>Please note that the above code includes non-enumerable keys in IE7 (and maybe IE8),
-  when passing in an object from a different window.</p>
+Please note that the above code includes non-enumerable keys in IE7 (and maybe
+IE8), when passing in an object from a different window.
 
-<p>For a simple Browser Polyfill, see <a
-    href="http://tokenposts.blogspot.com.au/2012/04/javascript-objectkeys-browser.html">Javascript
-    - Object.keys Browser Compatibility</a>.</p>
+For a simple Browser Polyfill, see
+[Javascript \- Object.keys Browser Compatibility](http://tokenposts.blogspot.com.au/2012/04/javascript-objectkeys-browser.html).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat}}
 
-<p>{{Compat}}</p>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
-  <li>A polyfill of <code>Object.keys</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-object"><code>core-js</code></a></li>
-  <li><a
-      href="/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties">Enumerability
-      and ownership of properties</a></li>
-  <li>{{jsxref("Object.prototype.propertyIsEnumerable()")}}</li>
-  <li>{{jsxref("Object.create()")}}</li>
-  <li>{{jsxref("Object.getOwnPropertyNames()")}}</li>
-  <li>{{jsxref("Object.values()")}}</li>
-  <li>{{jsxref("Object.entries()")}}</li>
-</ul>
+- A polyfill of `Object.keys` is available in
+  [`core-js`](https://github.com/zloirock/core-js#ecmascript-object)
+- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- {{jsxref("Object.prototype.propertyIsEnumerable()")}}
+- {{jsxref("Object.create()")}}
+- {{jsxref("Object.getOwnPropertyNames()")}}
+- {{jsxref("Object.values()")}}
+- {{jsxref("Object.entries()")}}

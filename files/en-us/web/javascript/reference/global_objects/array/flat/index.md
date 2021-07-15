@@ -2,72 +2,75 @@
 title: Array.prototype.flat()
 slug: Web/JavaScript/Reference/Global_Objects/Array/flat
 tags:
-- Array
-- JavaScript
-- Method
-- Prototype
-- Reference
-- flat
-- Polyfill
+  - Array
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
+  - flat
+  - Polyfill
 browser-compat: javascript.builtins.Array.flat
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <code><strong>flat()</strong></code> method creates a new array with all sub-array
-  elements concatenated into it recursively up to the specified depth.</p>
+The **`flat()`** method creates a new array with all sub-array elements
+concatenated into it recursively up to the specified depth.
 
-<div>{{EmbedInteractiveExample("pages/js/array-flat.html")}}</div>
+{{EmbedInteractiveExample("pages/js/array-flat.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">flat()
-flat(depth)</pre>
+```js
+flat()
+flat(depth)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>depth</code> {{optional_inline}}</dt>
-  <dd>The depth level specifying how deep a nested array structure should be flattened.
-    Defaults to 1.</dd>
-</dl>
+- `depth` {{optional_inline}}
+  - : The depth level specifying how deep a nested array structure should be
+    flattened. Defaults to 1.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A new array with the sub-array elements concatenated into it.</p>
+A new array with the sub-array elements concatenated into it.
 
-<h2 id="Alternatives">Alternatives</h2>
+## Alternatives
 
-<h3 id="reduce_and_concat">reduce and concat</h3>
+### reduce and concat
 
-<pre class="brush: js">const arr = [1, 2, [3, 4]];
+```js
+const arr = [1, 2, [3, 4]];
 
 // To flat single level array
 arr.flat();
 // is equivalent to
-arr.reduce((acc, val) =&gt; acc.concat(val), []);
+arr.reduce((acc, val) => acc.concat(val), []);
 // [1, 2, 3, 4]
 
 // or with decomposition syntax
-const flattened = arr =&gt; [].concat(...arr);
-</pre>
+const flattened = arr => [].concat(...arr);
+```
 
-<h3 id="reduce_concat_isArray_recursivity">reduce + concat + isArray + recursivity</h3>
+### reduce + concat + isArray + recursivity
 
-<pre class="brush: js">const arr = [1, 2, [3, 4, [5, 6]]];
+```js
+const arr = [1, 2, [3, 4, [5, 6]]];
 
 // to enable deep level flatten use recursion with reduce and concat
 function flatDeep(arr, d = 1) {
-   return d &gt; 0 ? arr.reduce((acc, val) =&gt; acc.concat(Array.isArray(val) ? flatDeep(val, d - 1) : val), [])
+   return d > 0 ? arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatDeep(val, d - 1) : val), [])
                 : arr.slice();
 };
 
 flatDeep(arr, Infinity);
 // [1, 2, 3, 4, 5, 6]
-</pre>
+```
 
-<h3 id="Use_a_stack">Use a stack</h3>
+### Use a stack
 
-<pre class="brush: js">// non recursive flatten deep using a stack
+```js
+// non recursive flatten deep using a stack
 // note that depth control is hard/inefficient as we will need to tag EACH value with its own depth
 // also possible w/o reversing on shift/unshift, but array OPs on the end tends to be faster
 function flatten(input) {
@@ -90,16 +93,17 @@ function flatten(input) {
 const arr = [1, 2, [3, 4, [5, 6]]];
 flatten(arr);
 // [1, 2, 3, 4, 5, 6]
-</pre>
+```
 
-<h3 id="Use_Generator_function">Use Generator function</h3>
+### Use Generator function
 
-<pre class="brush: js">function* flatten(array, depth) {
+```js
+function* flatten(array, depth) {
     if(depth === undefined) {
       depth = 1;
     }
     for(const item of array) {
-        if(Array.isArray(item) &amp;&amp; depth &gt; 0) {
+        if(Array.isArray(item) && depth > 0) {
           yield* flatten(item, depth - 1);
         } else {
           yield item;
@@ -110,13 +114,14 @@ flatten(arr);
 const arr = [1, 2, [3, 4, [5, 6]]];
 const flattened = [...flatten(arr, Infinity)];
 // [1, 2, 3, 4, 5, 6]
-</pre>
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Flattening_nested_arrays">Flattening nested arrays</h3>
+### Flattening nested arrays
 
-<pre class="brush: js">const arr1 = [1, 2, [3, 4]];
+```js
+const arr1 = [1, 2, [3, 4]];
 arr1.flat();
 // [1, 2, 3, 4]
 
@@ -131,32 +136,32 @@ arr3.flat(2);
 const arr4 = [1, 2, [3, 4, [5, 6, [7, 8, [9, 10]]]]];
 arr4.flat(Infinity);
 // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-</pre>
+```
 
-<h3 id="Flattening_and_array_holes">Flattening and array holes</h3>
+### Flattening and array holes
 
-<p>The flat method removes empty slots in arrays:</p>
+The flat method removes empty slots in arrays:
 
-<pre class="brush: js">const arr5 = [1, 2, , 4, 5];
+```js
+const arr5 = [1, 2, , 4, 5];
 arr5.flat();
 // [1, 2, 4, 5]
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>A polyfill of <code>Array.prototype.flat</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-array"><code>core-js</code></a></li>
-  <li>{{jsxref("Array.prototype.flatMap()")}}</li>
-  <li>{{jsxref("Array.prototype.map()")}}</li>
-  <li>{{jsxref("Array.prototype.reduce()")}}</li>
-  <li>{{jsxref("Array.prototype.concat()")}}</li>
-  <li><a href="https://github.com/behnammodi/polyfill/blob/master/array.polyfill.js">A polyfill</a></li>
-</ul>
+- A polyfill of `Array.prototype.flat` is available in
+  [`core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- {{jsxref("Array.prototype.flatMap()")}}
+- {{jsxref("Array.prototype.map()")}}
+- {{jsxref("Array.prototype.reduce()")}}
+- {{jsxref("Array.prototype.concat()")}}
+- [A polyfill](https://github.com/behnammodi/polyfill/blob/master/array.polyfill.js)

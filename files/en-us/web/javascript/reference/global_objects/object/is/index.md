@@ -13,74 +13,67 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Object.is
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>Object.is()</code></strong> method determines whether two values are
-  <a href="/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness">the same
-    value</a>.</p>
+The **`Object.is()`** method determines whether two values are
+[the same value](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">Object.is(value1, value2);</pre>
+```js
+Object.is(value1, value2);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>value1</var></code></dt>
-  <dd>The first value to compare.</dd>
-  <dt><code><var>value2</var></code></dt>
-  <dd>The second value to compare.</dd>
-</dl>
+- `value1`
+  - : The first value to compare.
+- `value2`
+  - : The second value to compare.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref("Boolean")}} indicating whether or not the two arguments are the same value.
-</p>
+A {{jsxref("Boolean")}} indicating whether or not the two arguments are
+the same value.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p><code>Object.is()</code> determines whether two values are <a
-    href="/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness">the same
-    value</a>. Two values are the same if one of the following holds:</p>
+`Object.is()` determines whether two values are
+[the same value](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness).
+Two values are the same if one of the following holds:
 
-<ul>
-  <li>both {{jsxref("undefined")}}</li>
-  <li>both {{jsxref("null")}}</li>
-  <li>both <code>true</code> or both <code>false</code></li>
-  <li>both strings of the same length with the same characters in the same order</li>
-  <li>both the same object (meaning both values reference the same object in memory)</li>
-  <li>both numbers and
-    <ul>
-      <li>both <code>+0</code></li>
-      <li>both <code>-0</code></li>
-      <li>both {{jsxref("NaN")}}</li>
-      <li>or both non-zero and both not {{jsxref("NaN")}} and both have the same value
-      </li>
-    </ul>
-  </li>
-</ul>
+- both {{jsxref("undefined")}}
+- both {{jsxref("null")}}
+- both `true` or both `false`
+- both strings of the same length with the same characters in the same order
+- both the same object (meaning both values reference the same object in memory)
+- both numbers and
 
-<p>This is <em>not</em> the same as being equal according to the
-  {{jsxref("Operators", "==", "#Equality")}} operator. The
-  <code>==</code> operator applies various coercions to both sides (if they are not the
-  same Type) before testing for equality (resulting in such behavior as
-  <code>"" == false</code> being <code>true</code>), but <code>Object.is</code> doesn't
-  coerce either value.</p>
+  - both `+0`
+  - both `-0`
+  - both {{jsxref("NaN")}}
+  - or both non-zero and both not {{jsxref("NaN")}} and both have the
+    same value
 
-<p>This is also <em>not</em> the same as being equal according to the
-  {{jsxref("Operators", "===", "#Identity")}} operator. The
-  only difference between <code>Object.is()</code> and <code>===</code> is in
-  their treatment of signed zeroes and NaNs. For example, the <code>===</code>
-  operator (and the <code>==</code> operator) treats the number values <code>-0</code>
-  and <code>+0</code> as equal. Also, the <code>===</code> operator treats
-  {{jsxref("Number.NaN")}} and {{jsxref("NaN")}} as not equal.</p>
+This is _not_ the same as being equal according to the
+{{jsxref("Operators", "==", "#Equality")}} operator. The `==`
+operator applies various coercions to both sides (if they are not the same Type)
+before testing for equality (resulting in such behavior as `"" == false` being
+`true`), but `Object.is` doesn't coerce either value.
 
-<h2 id="Examples">Examples</h2>
+This is also _not_ the same as being equal according to the
+{{jsxref("Operators", "===", "#Identity")}} operator. The only
+difference between `Object.is()` and `===` is in their treatment of signed
+zeroes and NaNs. For example, the `===` operator (and the `==` operator) treats
+the number values `-0` and `+0` as equal. Also, the `===` operator treats
+{{jsxref("Number.NaN")}} and {{jsxref("NaN")}} as not equal.
 
-<h3 id="Using_Object.is">Using Object.is</h3>
+## Examples
 
-<pre class="brush: js">// Case 1: Evaluation result is the same as using ===
+### Using Object.is
+
+```js
+// Case 1: Evaluation result is the same as using ===
 Object.is(25, 25);                // true
 Object.is('foo', 'foo');          // true
 Object.is('foo', 'bar');          // false
@@ -102,11 +95,12 @@ Object.is(0n, -0n);               // true
 // Case 3: NaN
 Object.is(NaN, 0/0);              // true
 Object.is(NaN, Number.NaN)        // true
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<pre class="brush: js">if (!Object.is) {
+```js
+if (!Object.is) {
   Object.defineProperty(Object, "is", {
     value: function (x, y) {
       // SameValue algorithm
@@ -120,25 +114,24 @@ Object.is(NaN, Number.NaN)        // true
         // The only possibility for a variable to not be strictly equal to itself
         // is when that variable evaluates to NaN (example: Number.NaN, 0/0, NaN).
         // This checks for case 3.
-        return x !== x &amp;&amp; y !== y;
+        return x !== x && y !== y;
       }
     }
   });
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>A polyfill of <code>Object.is</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-object"><code>core-js</code></a></li>
-  <li><a href="/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness">Equality
-      comparisons and sameness</a> — a comparison of all three built-in sameness
-    facilities</li>
-</ul>
+- A polyfill of `Object.is` is available in
+  [`core-js`](https://github.com/zloirock/core-js#ecmascript-object)
+- [Equality comparisons and sameness](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness)
+  — a comparison of all three built-in sameness facilities

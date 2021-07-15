@@ -1,48 +1,48 @@
 ---
-title: 'Intl[@@toStringTag]'
+title: Intl[@@toStringTag]
 slug: Web/JavaScript/Reference/Global_Objects/Intl/@@toStringTag
 tags:
-- Internationalization
-- Intl
-- JavaScript
-- Property
-- Localization
-- Reference
+  - Internationalization
+  - Intl
+  - JavaScript
+  - Property
+  - Localization
+  - Reference
 browser-compat: javascript.builtins.Intl.@@toStringTag
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>Intl[@@toStringTag]</code></strong> property has an initial value of
-	"Intl".</p>
+The **`Intl[@@toStringTag]`** property has an initial value of "Intl".
 
-<div>{{EmbedInteractiveExample("pages/js/intl-prototype-tostringtag.html","shorter")}}
-</div>
+{{EmbedInteractiveExample("pages/js/intl-prototype-tostringtag.html","shorter")}}
+
 <!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
-<div>{{js_property_attributes(0,0,1)}}</div>
+{{js_property_attributes(0,0,1)}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">Intl[Symbol.toStringTag]</pre>
+```js
+Intl[Symbol.toStringTag]
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_toStringTag">Using toStringTag</h3>
+### Using toStringTag
 
-<pre class="brush:js">Object.prototype.toString.call(Intl) // "[object Intl]"
+```js
+Object.prototype.toString.call(Intl) // "[object Intl]"
 Intl.toString() // "[object Intl]"
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>{{jsxref("Symbol.toStringTag")}}</li>
-</ul>
+- {{jsxref("Symbol.toStringTag")}}

@@ -1,57 +1,57 @@
 ---
-title: 'Symbol.prototype[@@toPrimitive]'
+title: Symbol.prototype[@@toPrimitive]
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/@@toPrimitive
 tags:
-- ECMAScript 2015
-- JavaScript
-- Method
-- Prototype
-- Symbol
+  - ECMAScript 2015
+  - JavaScript
+  - Method
+  - Prototype
+  - Symbol
 browser-compat: javascript.builtins.Symbol.@@toPrimitive
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>[@@toPrimitive]()</code></strong> method converts a Symbol object to
-  a primitive value.</p>
+The **`[@@toPrimitive]()`** method converts a Symbol object to a primitive
+value.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">Symbol()[Symbol.toPrimitive](<var>hint</var>)
-</pre>
+```js
+Symbol()[Symbol.toPrimitive](hint)
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>The primitive value of the specified {{jsxref("Symbol")}} object.</p>
+The primitive value of the specified {{jsxref("Symbol")}} object.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The <code>[@@toPrimitive]()</code> method of {{jsxref("Symbol")}} returns the primitive
-  value of a Symbol object as a Symbol data type. The <code><var>hint</var></code>
-  argument is not used.</p>
+The `[@@toPrimitive]()` method of {{jsxref("Symbol")}} returns the
+primitive value of a Symbol object as a Symbol data type. The `hint` argument is
+not used.
 
-<p>JavaScript calls the <code>[@@toPrimitive]()</code> method to convert an object to a
-  primitive value. You rarely need to invoke the <code>[@@toPrimitive]()</code> method
-  yourself; JavaScript automatically invokes it when encountering an object where a
-  primitive value is expected.</p>
+JavaScript calls the `[@@toPrimitive]()` method to convert an object to a
+primitive value. You rarely need to invoke the `[@@toPrimitive]()` method
+yourself; JavaScript automatically invokes it when encountering an object where
+a primitive value is expected.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_toPrimitive">Using @@toPrimitive</h3>
+### Using @@toPrimitive
 
-<pre class="brush: js">const sym = Symbol("example");
+```js
+const sym = Symbol("example");
 sym === sym[Symbol.toPrimitive](); // true
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Symbol.toPrimitive")}}</li>
-</ul>
+- {{jsxref("Symbol.toPrimitive")}}

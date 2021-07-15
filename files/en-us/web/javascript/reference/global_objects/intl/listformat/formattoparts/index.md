@@ -12,50 +12,52 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.ListFormat.formatToParts
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>Intl.ListFormat.prototype.formatToParts()</code></strong> method
-	returns an {{jsxref("Array")}} of objects representing the different components that
-	can be used to format a list of values in a locale-aware fashion.</p>
+The **`Intl.ListFormat.prototype.formatToParts()`** method returns an
+{{jsxref("Array")}} of objects representing the different components that
+can be used to format a list of values in a locale-aware fashion.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">formatToParts(list)</pre>
+```js
+formatToParts(list)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-	<dt><code><var>list</var></code></dt>
-	<dd>An {{jsxref("Array")}} of values to be formatted according to a locale.</dd>
-</dl>
+- `list`
+  - : An {{jsxref("Array")}} of values to be formatted according to a
+    locale.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An {{jsxref("Array")}} of components which contains the formatted parts from the list.
-</p>
+An {{jsxref("Array")}} of components which contains the formatted parts
+from the list.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Whereas {{jsxref("Intl/ListFormat/format",
-	"Intl.ListFormat.prototype.format()")}} returns a string being the formatted version
-	of the list (according to the given locale and style options),
-	<code>formatToParts()</code> returns an array of the different components of the
-	formatted string.</p>
+Whereas
+{{jsxref("Intl/ListFormat/format",
+	"Intl.ListFormat.prototype.format()")}}
+returns a string being the formatted version of the list (according to the given
+locale and style options), `formatToParts()` returns an array of the different
+components of the formatted string.
 
-<p>Each element of the resulting array has two properties: <code>type</code> and
-	<code>value</code>. The <code>type</code> property may be either
-	"<code>element</code>", which refers to a value from the list, or
-	"<code>literal</code>" which refers to a linguistic construct. The <code>value</code>
-	property gives the content, as a string, of the token.</p>
+Each element of the resulting array has two properties: `type` and `value`. The
+`type` property may be either "`element`", which refers to a value from the
+list, or "`literal`" which refers to a linguistic construct. The `value`
+property gives the content, as a string, of the token.
 
-<p>The locale and style options used for formatting are given when constructing the
-	{{jsxref("Intl.ListFormat")}} instance.</p>
+The locale and style options used for formatting are given when constructing the
+{{jsxref("Intl.ListFormat")}} instance.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_formatToParts">Using formatToParts</h3>
+### Using formatToParts
 
-<pre class="brush: js">const fruits = ['Apple', 'Orange', 'Pineapple'];
+```js
+const fruits = ['Apple', 'Orange', 'Pineapple'];
 const myListFormat = new Intl.ListFormat('en-GB', { style: 'long', type: 'conjunction' });
 
 console.table(myListFormat.formatToParts(fruits));
@@ -66,26 +68,23 @@ console.table(myListFormat.formatToParts(fruits));
 //  { "type": "literal", "value": ", and " },
 //  { "type": "element", "value": "Pineapple" }
 // ]
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>{{jsxref("Intl.ListFormat")}}</li>
-	<li>{{jsxref("Intl/ListFormat/format", "Intl.ListFormat.prototype.format()")}}
-	</li>
-	<li>{{jsxref("Intl/RelativeTimeFormat/formatToParts",
-		"Intl.RelativeTimeFormat.prototype.formatToParts()")}}</li>
-	<li>{{jsxref("Intl/NumberFormat/formatToParts",
-		"Intl.NumberFormat.prototype.formatToParts()")}}</li>
-	<li>{{jsxref("Intl/DateTimeFormat/formatToParts",
-		"Intl.DateTimeFormat.prototype.formatToParts()")}}</li>
-</ul>
+- {{jsxref("Intl.ListFormat")}}
+- {{jsxref("Intl/ListFormat/format", "Intl.ListFormat.prototype.format()")}}
+- {{jsxref("Intl/RelativeTimeFormat/formatToParts",
+		"Intl.RelativeTimeFormat.prototype.formatToParts()")}}
+- {{jsxref("Intl/NumberFormat/formatToParts",
+		"Intl.NumberFormat.prototype.formatToParts()")}}
+- {{jsxref("Intl/DateTimeFormat/formatToParts",
+		"Intl.DateTimeFormat.prototype.formatToParts()")}}

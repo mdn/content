@@ -8,44 +8,45 @@ tags:
   - arguments
 browser-compat: javascript.functions.arguments.length
 ---
-<div>{{jsSidebar("Functions")}}</div>
+{{jsSidebar("Functions")}}
 
-<p>The <strong><code>arguments.length</code></strong> property contains the number of arguments passed to the function.</p>
+The **`arguments.length`** property contains the number of arguments passed to
+the function.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The arguments.length property provides the number of arguments actually passed to a function. This can be more or less than the defined parameter's count (see {{jsxref("Function.length")}}).</p>
+The arguments.length property provides the number of arguments actually passed
+to a function. This can be more or less than the defined parameter's count (see
+{{jsxref("Function.length")}}).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_arguments.length">Using <code>arguments.length</code></h3>
+### Using `arguments.length`
 
-<p>In this example we define a function that can add two or more numbers together.</p>
+In this example we define a function that can add two or more numbers together.
 
-<pre class="brush: js">function adder(base /*, n2, ... */) {
+```js
+function adder(base /*, n2, ... */) {
   base = Number(base);
-  for (var i = 1; i &lt; arguments.length; i++) {
+  for (var i = 1; i < arguments.length; i++) {
     base += Number(arguments[i]);
   }
   return base;
 }
-</pre>
+```
 
-<div class="note">
-<p><strong>Note:</strong> Note the difference between {{jsxref("Function.length")}} and arguments.length</p>
-</div>
+> **Note:** Note the difference between {{jsxref("Function.length")}}
+> and arguments.length
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("Function")}}</li>
- <li>{{jsxref("Function.length")}}</li>
-</ul>
+- {{jsxref("Function")}}
+- {{jsxref("Function.length")}}

@@ -2,77 +2,74 @@
 title: RegExp.prototype.compile()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/compile
 tags:
-- Deprecated
-- JavaScript
-- Method
-- Prototype
-- Reference
-- RegExp
-- Regular Expressions
+  - Deprecated
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
+  - RegExp
+  - Regular Expressions
 browser-compat: javascript.builtins.RegExp.compile
 ---
-<div>{{JSRef}} {{deprecated_header}}</div>
+{{JSRef}} {{deprecated_header}}
 
-<p>The deprecated <code><strong>compile</strong></code><strong><code>()</code></strong>
-  method is used to (re-)compile a regular expression during execution of a script. It is
-  basically the same as the <code>RegExp</code> constructor.</p>
+The deprecated **`compile`\*\***`()`\*\* method is used to (re-)compile a
+regular expression during execution of a script. It is basically the same as the
+`RegExp` constructor.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">compile(pattern, flags)</pre>
+```js
+compile(pattern, flags)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>pattern</code></dt>
-  <dd>The text of the regular expression.</dd>
-  <dt><code>flags</code></dt>
-  <dd>
-    <p>If specified, flags can have any combination of the following values:</p>
+- `pattern`
+  - : The text of the regular expression.
+- `flags`
 
-    <dl>
-      <dt><code>g</code></dt>
-      <dd>global match</dd>
-      <dt><code>i</code></dt>
-      <dd>ignore case</dd>
-      <dt><code>m</code></dt>
-      <dd>multiline; treat beginning and end characters (^ and $) as working over multiple
-        lines (i.e., match the beginning or end of <em>each</em> line (delimited by \n or
-        \r), not only the very beginning or end of the whole input string)</dd>
-      <dt><code>y</code></dt>
-      <dd>sticky; matches only from the index indicated by the <code>lastIndex</code>
-        property of this regular expression in the target string (and does not attempt to
-        match from any later indexes).</dd>
-    </dl>
-  </dd>
-</dl>
+  - : If specified, flags can have any combination of the following values:
 
-<h2 id="Description">Description</h2>
+    - `g`
+      - : global match
+    - `i`
+      - : ignore case
+    - `m`
+      - : multiline; treat beginning and end characters (^ and $) as working
+        over multiple lines (i.e., match the beginning or end of _each_ line
+        (delimited by \n or \r), not only the very beginning or end of the whole
+        input string)
+    - `y`
+      - : sticky; matches only from the index indicated by the `lastIndex`
+        property of this regular expression in the target string (and does not
+        attempt to match from any later indexes).
 
-<p> The <code>compile</code> method is deprecated. You can just use the
-  <code>RegExp</code> constructor to achieve the same effect.</p>
+## Description
 
-<h2 id="Examples">Examples</h2>
+The `compile` method is deprecated. You can just use the `RegExp` constructor to
+achieve the same effect.
 
-<h3 id="Using_compile">Using <code>compile()</code></h3>
+## Examples
 
-<p>The following example shows how to recompile a regular expression with a new pattern
-  and a new flag.</p>
+### Using `compile()`
 
-<pre class="brush: js">var regexObj = new RegExp('foo', 'gi');
+The following example shows how to recompile a regular expression with a new
+pattern and a new flag.
+
+```js
+var regexObj = new RegExp('foo', 'gi');
 regexObj.compile('new foo', 'g');
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("RegExp")}}</li>
-</ul>
+- {{jsxref("RegExp")}}

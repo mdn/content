@@ -2,93 +2,102 @@
 title: 'SyntaxError: illegal character'
 slug: Web/JavaScript/Reference/Errors/Illegal_character
 tags:
-- Error
-- Errors
-- JavaScript
-- SyntaxError
+  - Error
+  - Errors
+  - JavaScript
+  - SyntaxError
 ---
-<p>{{jsSidebar("Errors")}}</p>
+{{jsSidebar("Errors")}}
 
-<p>The JavaScript exception "illegal character" occurs when there is an invalid or
-  unexpected token that doesn't belong at this position in the code.</p>
+The JavaScript exception "illegal character" occurs when there is an invalid or
+unexpected token that doesn't belong at this position in the code.
 
-<h2 id="Message">Message</h2>
+## Message
 
-<pre class="brush: js">SyntaxError: Invalid character (Edge)
+```js
+SyntaxError: Invalid character (Edge)
 SyntaxError: illegal character (Firefox)
 SyntaxError: Invalid or unexpected token (Chrome)
-</pre>
+```
 
-<h2 id="Error_type">Error type</h2>
+## Error type
 
-<p>{{jsxref("SyntaxError")}}</p>
+{{jsxref("SyntaxError")}}
 
-<h2 id="What_went_wrong">What went wrong?</h2>
+## What went wrong?
 
-<p>There is an invalid or unexpected token that doesn't belong at this position in the
-  code. Use an editor that supports syntax highlighting and carefully check your code
-  against mismatches like a minus sign (<code> - </code>) versus a dash (<code> – </code>)
-  or simple quotes (<code> " </code>) vs non-standard quotation marks (<code> “ </code>).
-</p>
+There is an invalid or unexpected token that doesn't belong at this position in
+the code. Use an editor that supports syntax highlighting and carefully check
+your code against mismatches like a minus sign (` - `) versus a dash (` – `) or
+simple quotes (` " `) vs non-standard quotation marks (` “ `).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Mismatched_characters">Mismatched characters</h3>
+### Mismatched characters
 
-<p>Some characters look similar, but will cause the parser to fail interpreting your code.
-  Famous examples of this are quotes, the minus or semicolon (<a
-    href="https://en.wikipedia.org/wiki/Question_mark#Greek_question_mark">greek
-    questionmark (U+37e)</a> looks same).</p>
+Some characters look similar, but will cause the parser to fail interpreting
+your code. Famous examples of this are quotes, the minus or semicolon
+([greek questionmark (U+37e)](https://en.wikipedia.org/wiki/Question_mark#Greek_question_mark)
+looks same).
 
-<pre class="brush: js example-bad">“This looks like a string”;  // SyntaxError: illegal character
+```js example-bad
+“This looks like a string”;  // SyntaxError: illegal character
                              // “ and ” are not " but look like this
 
 42 – 13;                     // SyntaxError: illegal character
                              // – is not - but looks like this
 
 var foo = 'bar';             // SyntaxError: illegal character
-                             // &lt;37e&gt; is not ; but looks like this
-</pre>
+                             // <37e> is not ; but looks like this
+```
 
-<p>This should work:</p>
+This should work:
 
-<pre class="brush: js example-good">"This is actually a string";
+```js example-good
+"This is actually a string";
 42 - 13;
 var foo = 'bar';
-</pre>
+```
 
-<p>Some editors and IDEs will notify you or at least use a slightly different highlighting for it, but not all. When something like this happens to your code and you're not able to find the source of the problem, it's often best to just delete the problematic line and retype it.</p>
+Some editors and IDEs will notify you or at least use a slightly different
+highlighting for it, but not all. When something like this happens to your code
+and you're not able to find the source of the problem, it's often best to just
+delete the problematic line and retype it.
 
-<h3 id="Forgotten_characters">Forgotten characters</h3>
+### Forgotten characters
 
-<p>It's easy to forget a character here or there.</p>
+It's easy to forget a character here or there.
 
-<pre class="brush: js example-bad">var colors = ['#000', #333', '#666'];
+```js example-bad
+var colors = ['#000', #333', '#666'];
 // SyntaxError: illegal character
-</pre>
+```
 
-<p>Add the missing quote for <code>'#333'</code>.</p>
+Add the missing quote for `'#333'`.
 
-<pre class="brush: js example-good">var colors = ['#000', '#333', '#666'];</pre>
+```js example-good
+var colors = ['#000', '#333', '#666'];
+```
 
-<h3 id="Hidden_characters">Hidden characters</h3>
+### Hidden characters
 
-<p>When copy pasting code from external sources, there might be invalid characters. Watch
-  out!</p>
+When copy pasting code from external sources, there might be invalid characters.
+Watch out!
 
-<pre class="brush: js example-bad">var foo = 'bar';
+```js example-bad
+var foo = 'bar';
 // SyntaxError: illegal character
-</pre>
+```
 
-<p>When inspecting this code in an editor like Vim, you can see that there is actually a
-  <a href="https://en.wikipedia.org/wiki/Zero-width_space">zero-width space (ZWSP)
-    (U+200B)</a> character.</p>
+When inspecting this code in an editor like Vim, you can see that there is
+actually a
+[zero-width space (ZWSP) (U+200B)](https://en.wikipedia.org/wiki/Zero-width_space)
+character.
 
-<pre class="brush: js">var foo = 'bar';&lt;200b&gt;</pre>
+```js
+var foo = 'bar';<200b>
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar">Lexical grammar</a>
-  </li>
-</ul>
+- [Lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar)

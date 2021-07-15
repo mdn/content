@@ -2,66 +2,63 @@
 title: Error() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Error/Error
 tags:
-- Constructor
-- JavaScript
-- Reference
+  - Constructor
+  - JavaScript
+  - Reference
 browser-compat: javascript.builtins.Error.Error
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><span class="seoSummary">The <strong><code>Error</code></strong> constructor creates an
-    error object.</span></p>
+The **`Error`** constructor creates an error object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 new Error()
 new Error(message)
 new Error(message, fileName)
 new Error(message, fileName, lineNumber)
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>message</var></code>{{Optional_Inline}}</dt>
-  <dd>A human-readable description of the error.</dd>
-  <dt><code><var>fileName</var></code> {{Optional_Inline}}{{Non-standard_inline}}</dt>
-  <dd>The value for the <code><var>fileName</var></code> property on the created
-    <code>Error</code> object. Defaults to the name of the file containing the code that
-    called the <code>Error()</code> constructor.</dd>
-  <dt><code><var>lineNumber</var></code> {{Optional_Inline}}{{Non-standard_inline}}</dt>
-  <dd>The value for the <code><var>lineNumber</var></code> property on the created
-    <code>Error</code> object. Defaults to the line number containing the
-    <code>Error()</code> constructor invocation.</dd>
-</dl>
+- `message`{{Optional_Inline}}
+  - : A human-readable description of the error.
+- `fileName` {{Optional_Inline}}{{Non-standard_inline}}
+  - : The value for the `fileName` property on the created `Error` object.
+    Defaults to the name of the file containing the code that called the
+    `Error()` constructor.
+- `lineNumber` {{Optional_Inline}}{{Non-standard_inline}}
+  - : The value for the `lineNumber` property on the created `Error` object.
+    Defaults to the line number containing the `Error()` constructor invocation.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Function_call_or_new_construction">Function call or new construction</h3>
+### Function call or new construction
 
-<p>When <code>Error</code> is used like a function -- without {{JSxRef("Operators/new",
-  "new")}}, it will return an <code>Error</code> object. Therefore, a mere call to
-  <code>Error</code> will produce the same output that constructing an <code>Error</code>
-  object via the <code>new</code> keyword would.</p>
+When `Error` is used like a function -- without
+{{JSxRef("Operators/new",
+  "new")}}, it will return an `Error`
+object. Therefore, a mere call to `Error` will produce the same output that
+constructing an `Error` object via the `new` keyword would.
 
-<pre class="brush: js">// this...
+```js
+// this...
 const x = Error('I was created using a function call!')
 
 // ...has the same functionality as this.
-const y = new Error('I was constructed via the "new" keyword!')</pre>
+const y = new Error('I was constructed via the "new" keyword!')
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{JSxRef("Statements/throw", "throw")}}</li>
-  <li>{{JSxRef("Statements/try...catch", "try...catch")}}</li>
-</ul>
+- {{JSxRef("Statements/throw", "throw")}}
+- {{JSxRef("Statements/try...catch", "try...catch")}}

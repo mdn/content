@@ -7,40 +7,41 @@ tags:
   - JavaScript
   - SyntaxError
 ---
-<div>{{JSSidebar("Errors")}}</div>
+{{JSSidebar("Errors")}}
 
-<p>The JavaScript exception "identifier starts immediately after numeric literal" occurs
-  when an identifier started with a digit. Identifiers can only start with a letter,
-  underscore (_), or dollar sign ($).</p>
+The JavaScript exception "identifier starts immediately after numeric literal"
+occurs when an identifier started with a digit. Identifiers can only start with
+a letter, underscore (\_), or dollar sign ($).
 
-<h2 id="Message">Message</h2>
+## Message
 
-<pre class="brush: js">SyntaxError: Unexpected identifier after numeric literal (Edge)
+```js
+SyntaxError: Unexpected identifier after numeric literal (Edge)
 SyntaxError: identifier starts immediately after numeric literal (Firefox)
 SyntaxError: Unexpected number (Chrome)
-</pre>
+```
 
-<h2 id="Error_type">Error type</h2>
+## Error type
 
-<p>{{jsxref("SyntaxError")}}</p>
+{{jsxref("SyntaxError")}}
 
-<h2 id="What_went_wrong">What went wrong?</h2>
+## What went wrong?
 
-<p>The names of variables, called <a
-    href="/en-US/docs/Glossary/Identifier">identifiers</a>, conform to certain rules,
-  which your code must adhere to!</p>
+The names of variables, called [identifiers](/en-US/docs/Glossary/Identifier),
+conform to certain rules, which your code must adhere to!
 
-<p>A JavaScript identifier must start with a letter, underscore (_), or dollar sign ($).
-  They can't start with a digit! Only subsequent characters can be digits (0-9).</p>
+A JavaScript identifier must start with a letter, underscore (\_), or dollar
+sign ($). They can't start with a digit! Only subsequent characters can be
+digits (0-9).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Variable_names_starting_with_numeric_literals">Variable names starting with
-  numeric literals</h3>
+### Variable names starting with numeric literals
 
-<p>Variable names can't start with numbers in JavaScript. The following fails:</p>
+Variable names can't start with numbers in JavaScript. The following fails:
 
-<pre class="brush: js example-bad">var 1life = 'foo';
+```js example-bad
+var 1life = 'foo';
 // SyntaxError: identifier starts immediately after numeric literal
 
 var foo = 1life;
@@ -48,19 +49,17 @@ var foo = 1life;
 
 alert(1.foo);
 // SyntaxError: identifier starts immediately after numeric literal
-</pre>
+```
 
-<p>You will need to rename your variable to avoid the leading number.</p>
+You will need to rename your variable to avoid the leading number.
 
-<pre class="brush: js example-good">var life1 = 'foo';
+```js example-good
+var life1 = 'foo';
 var foo = life1;
-</pre>
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar">Lexical grammar</a>
-  </li>
-  <li><a href="/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#variables">Variables</a>
-    in the <a href="/en-US/docs/Web/JavaScript/Guide">JavaScript Guide</a></li>
-</ul>
+- [Lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar)
+- [Variables](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#variables) in
+  the [JavaScript Guide](/en-US/docs/Web/JavaScript/Guide)

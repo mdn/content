@@ -2,38 +2,40 @@
 title: Rest parameters
 slug: Web/JavaScript/Reference/Functions/rest_parameters
 tags:
-- Functions
-- JavaScript
-- Language feature
-- Rest
-- Rest parameters
+  - Functions
+  - JavaScript
+  - Language feature
+  - Rest
+  - Rest parameters
 browser-compat: javascript.functions.rest_parameters
 ---
-<div>{{jsSidebar("Functions")}}</div>
+{{jsSidebar("Functions")}}
 
-<p><span class="seoSummary">The <strong>rest parameter</strong> syntax allows a function
-    to accept an indefinite number of arguments as an array, providing a way to represent
-    {{interwiki("wikipedia", "Variadic_function", "variadic functions")}} in
-    JavaScript.</span></p>
+The **rest parameter** syntax allows a function to accept an indefinite number
+of arguments as an array, providing a way to represent
+{{interwiki("wikipedia", "Variadic_function", "variadic functions")}}
+in JavaScript.
 
-<div>{{EmbedInteractiveExample("pages/js/functions-restparameters.html")}}</div>
+{{EmbedInteractiveExample("pages/js/functions-restparameters.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">function f(<var>a</var>, <var>b</var>, ...<var>theArgs</var>) {
+```js
+function f(a, b, ...theArgs) {
   // ...
-}</pre>
+}
+```
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>A function definition's last parameter can be prefixed with "<code>...</code>" (three
-  U+002E FULL STOP characters), which will cause all remaining (user supplied) parameters
-  to be placed within a <a
-    href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">"standard"
-    JavaScript array.</a>. Only the last parameter in a function definition can be a rest
-  parameter.</p>
+A function definition's last parameter can be prefixed with "`...`" (three
+U+002E FULL STOP characters), which will cause all remaining (user supplied)
+parameters to be placed within a
+["standard" JavaScript array.](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array).
+Only the last parameter in a function definition can be a rest parameter.
 
-<pre class="brush: js">function myFun(a,  b, ...manyMoreArgs) {
+```js
+function myFun(a,  b, ...manyMoreArgs) {
   console.log("a", a)
   console.log("b", b)
   console.log("manyMoreArgs", manyMoreArgs)
@@ -45,43 +47,51 @@ myFun("one", "two", "three", "four", "five", "six")
 // a, one
 // b, two
 // manyMoreArgs, ["three", "four", "five", "six"]
-</pre>
+```
 
-<h4 id="Quick_Reference">Quick reference</h4>
+#### Quick reference
 
-<p>A function definition can have only one <code>...</code><var>restParam</var>.</p>
-<pre class="brush:js example-bad">foo(...one, ...wrong, ...wrong)</pre>
-<p>The rest parameter must be the last parameter in the function
-  definition.</p>
-<pre class="brush:js example-bad">foo(...wrong, arg2, arg3)</pre>
-<pre class="brush:js example-good">foo(arg1, arg2, ...correct)</pre>
+A function definition can have only one `...`_restParam_.
 
-<h3>The difference between rest parameters and the <code>arguments</code> object</h3>
+```js example-bad
+foo(...one, ...wrong, ...wrong)
+```
 
-<p>There are three main differences between rest parameters and the
-  {{jsxref("Functions/arguments", "arguments")}} object:</p>
+The rest parameter must be the last parameter in the function definition.
 
-<ul>
-  <li>The <code>arguments</code> object is <strong>not a real array</strong>, while rest
-    parameters are {{jsxref("Global_Objects/Array", "Array")}} instances, meaning methods
-    like {{jsxref("Array.sort", "sort")}}, {{jsxref("Array.map", "map")}},
-    {{jsxref("Array.forEach", "forEach")}} or {{jsxref("Array/pop", "pop")}} can be
-    applied on it directly;</li>
-  <li>The <code>arguments</code> object has additional functionality specific to itself
-    (like the <code>callee</code> property).</li>
-  <li>The <code>...restParam</code> bundles all the extra parameters into a single array,
-    therefore it does not contain any named argument defined <strong>before</strong> the
-    <code>...restParam</code>. Whereas the <code>arguments</code> object contains all of
-    the parameters -- including all of the stuff in the <code>...restParam</code> --
-    <strong>un</strong>bundled.</li>
-</ul>
+```js example-bad
+foo(...wrong, arg2, arg3)
+```
 
-<h3 id="From_arguments_to_an_array">From arguments to an array</h3>
+```js example-good
+foo(arg1, arg2, ...correct)
+```
 
-<p>Rest parameters were introduced to reduce the boilerplate code that was commonly used
-  for converting a set of arguments to an array.</p>
+### The difference between rest parameters and the `arguments` object
 
-<pre class="brush: js">// Before rest parameters, "arguments" could be converted to a normal array using:
+There are three main differences between rest parameters and the
+{{jsxref("Functions/arguments", "arguments")}} object:
+
+- The `arguments` object is **not a real array**, while rest parameters are
+  {{jsxref("Global_Objects/Array", "Array")}} instances, meaning
+  methods like {{jsxref("Array.sort", "sort")}},
+  {{jsxref("Array.map", "map")}},
+  {{jsxref("Array.forEach", "forEach")}} or
+  {{jsxref("Array/pop", "pop")}} can be applied on it directly;
+- The `arguments` object has additional functionality specific to itself (like
+  the `callee` property).
+- The `...restParam` bundles all the extra parameters into a single array,
+  therefore it does not contain any named argument defined **before** the
+  `...restParam`. Whereas the `arguments` object contains all of the parameters
+  -- including all of the stuff in the `...restParam` -- **un**bundled.
+
+### From arguments to an array
+
+Rest parameters were introduced to reduce the boilerplate code that was commonly
+used for converting a set of arguments to an array.
+
+```js
+// Before rest parameters, "arguments" could be converted to a normal array using:
 
 function f(a, b) {
 
@@ -101,20 +111,20 @@ function f(...args) {
   let normalArray = args
   let first = normalArray.shift() // OK, gives the first argument
 }
-</pre>
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_rest_parameters">Using rest parameters</h3>
+### Using rest parameters
 
-<p>In this example, the first argument is mapped to <code>a</code> and the second to
-  <code>b</code>, so these named arguments are used as normal.</p>
+In this example, the first argument is mapped to `a` and the second to `b`, so
+these named arguments are used as normal.
 
-<p>However, the third argument, <code>manyMoreArgs</code>, will be an array that contains
-  the third, fourth, fifth, sixth ...
-  nth — as many arguments that the user includes.</p>
+However, the third argument, `manyMoreArgs`, will be an array that contains the
+third, fourth, fifth, sixth ... nth — as many arguments that the user includes.
 
-<pre class="brush: js">function myFun(a, b, ...manyMoreArgs) {
+```js
+function myFun(a, b, ...manyMoreArgs) {
   console.log("a", a)
   console.log("b", b)
   console.log("manyMoreArgs", manyMoreArgs)
@@ -124,67 +134,75 @@ myFun("one", "two", "three", "four", "five", "six")
 
 // a, "one"
 // b, "two"
-// manyMoreArgs, ["three", "four", "five", "six"] &lt;-- notice it's an array
-</pre>
+// manyMoreArgs, ["three", "four", "five", "six"] <-- notice it's an array
+```
 
-<p>Below, even though there is just one value, the last argument still gets put into an
-  array.</p>
+Below, even though there is just one value, the last argument still gets put
+into an array.
 
-<pre class="brush: js">// using the same function definition from example above
+```js
+// using the same function definition from example above
 
 myFun("one", "two", "three")
 
 // a, "one"
 // b, "two"
-// manyMoreArgs, ["three"] &lt;-- notice it's an array, even though there's just one value</pre>
+// manyMoreArgs, ["three"] <-- notice it's an array, even though there's just one value
+```
 
-<p>Below, the third argument isn't provided, but <code>manyMoreArgs</code> is still an
-  array (albeit an empty one).</p>
+Below, the third argument isn't provided, but `manyMoreArgs` is still an array
+(albeit an empty one).
 
-<pre class="brush: js">// using the same function definition from example above
+```js
+// using the same function definition from example above
 
 myFun("one", "two")
 
 // a, "one"
 // b, "two"
-// manyMoreArgs, [] &lt;-- yip, still an array</pre>
+// manyMoreArgs, [] <-- yip, still an array
+```
 
-<h3 id="Argument_length">Argument length</h3>
+### Argument length
 
-<p>Since <code>theArgs</code> is an array, a count of its elements is given by the
-  <code>length</code> property:</p>
+Since `theArgs` is an array, a count of its elements is given by the `length`
+property:
 
-<pre class="brush: js">function fun1(...theArgs) {
+```js
+function fun1(...theArgs) {
   console.log(theArgs.length)
 }
 
 fun1()         // 0
 fun1(5)        // 1
 fun1(5, 6, 7)  // 3
-</pre>
+```
 
-<h3>Using rest parameters in combination with ordinary parameters</h3>
+### Using rest parameters in combination with ordinary parameters
 
-<p>In the next example, a rest parameter is used to collect all parameters after the first
-  parameter into an array. Each one of the parameter values collected into the array is
-  then multiplied by the first parameter, and the array is returned:</p>
+In the next example, a rest parameter is used to collect all parameters after
+the first parameter into an array. Each one of the parameter values collected
+into the array is then multiplied by the first parameter, and the array is
+returned:
 
-<pre class="brush: js">function multiply(multiplier, ...theArgs) {
-  return theArgs.map(element =&gt; {
+```js
+function multiply(multiplier, ...theArgs) {
+  return theArgs.map(element => {
     return multiplier * element
   })
 }
 
 let arr = multiply(2, 15, 25, 42)
 console.log(arr)  // [30, 50, 84]
-</pre>
+```
 
-<h3>Rest parameters are real arrays; the arguments object is not.</h3>
+### Rest parameters are real arrays; the arguments object is not.
 
-<p><code>Array</code> methods can be used on rest parameters, but not on the
-  <code>arguments</code> object:</p>
+`Array` methods can be used on rest parameters, but not on the `arguments`
+object:
 
-<pre class="brush: js">function sortRestArgs(...theArgs) {
+```js
+function sortRestArgs(...theArgs) {
   let sortedArgs = theArgs.sort()
   return sortedArgs
 }
@@ -198,42 +216,35 @@ function sortArguments() {
 
 console.log(sortArguments(5, 3, 7, 1))
 // throws a TypeError (arguments.sort is not a function)
-</pre>
+```
 
-<p>To use <code>Array</code> methods on the <code>arguments</code> object, it must be
-  converted to a real array first.</p>
+To use `Array` methods on the `arguments` object, it must be converted to a real
+array first.
 
-<pre class="brush: js">function sortArguments() {
+```js
+function sortArguments() {
   let args = Array.from(arguments)
   let sortedArgs = args.sort()
   return sortedArgs
 }
 console.log(sortArguments(5, 3, 7, 1))  // 1, 3, 5, 7
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax">Spread
-      syntax</a> (also ‘<code>...</code>’)</li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Functions/arguments">Arguments
-      object</a></li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Functions"
-      title="Functions and function scope">Functions</a></li>
-  <li><a       href="http://wiki.ecmascript.org/doku.php?id=harmony:rest_parameters">Original
-      proposal at ecmascript.org</a></li>
-  <li><a       href="http://javascriptweblog.wordpress.com/2011/01/18/javascripts-arguments-object-and-beyond/">JavaScript
-      arguments object and beyond</a></li>
-  <li><a
-      href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">Destructuring
-      assignment</a></li>
-</ul>
+- [Spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
+  (also ‘`...`’)
+- [Arguments object](/en-US/docs/Web/JavaScript/Reference/Functions/arguments)
+- [Array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
+- [Functions](/en-US/docs/Web/JavaScript/Reference/Functions "Functions and function scope")
+- [Original proposal at ecmascript.org](http://wiki.ecmascript.org/doku.php?id=harmony:rest_parameters)
+- [JavaScript arguments object and beyond](http://javascriptweblog.wordpress.com/2011/01/18/javascripts-arguments-object-and-beyond/)
+- [Destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)

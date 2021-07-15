@@ -2,53 +2,54 @@
 title: 'Error: Permission denied to access property "x"'
 slug: Web/JavaScript/Reference/Errors/Property_access_denied
 tags:
-- Error
-- Errors
-- JavaScript
-- Security
+  - Error
+  - Errors
+  - JavaScript
+  - Security
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<p>The JavaScript exception "Permission denied to access property" occurs when there was
-  an attempt to access an object for which you have no permission.</p>
+The JavaScript exception "Permission denied to access property" occurs when
+there was an attempt to access an object for which you have no permission.
 
-<h2 id="Message">Message</h2>
+## Message
 
-<pre class="brush: js">Error: Permission denied to access property "x"
-</pre>
+```js
+Error: Permission denied to access property "x"
+```
 
-<h2 id="Error_type">Error type</h2>
+## Error type
 
-<p>{{jsxref("Error")}}.</p>
+{{jsxref("Error")}}.
 
-<h2 id="What_went_wrong">What went wrong?</h2>
+## What went wrong?
 
-<p>There was attempt to access an object for which you have no permission. This is likely
-  an {{HTMLElement("iframe")}} element loaded from a different domain for which you
-  violated the <a href="/en-US/docs/Web/Security/Same-origin_policy">same-origin
-    policy</a>.</p>
+There was attempt to access an object for which you have no permission. This is
+likely an {{HTMLElement("iframe")}} element loaded from a different
+domain for which you violated the
+[same-origin policy](/en-US/docs/Web/Security/Same-origin_policy).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="No_permission_to_access_document">No permission to access document</h3>
+### No permission to access document
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;iframe id="myframe" src="http://www1.w3c-test.org/common/blank.html"&gt;&lt;/iframe&gt;
-    &lt;script&gt;
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <iframe id="myframe" src="http://www1.w3c-test.org/common/blank.html"></iframe>
+    <script>
       onload = function() {
         console.log(frames[0].document);
         // Error: Permission denied to access property "document"
       }
-    &lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;&lt;/body&gt;
-&lt;/html&gt;</pre>
+    </script>
+  </head>
+  <body></body>
+</html>
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{HTMLElement("iframe")}}</li>
-  <li><a href="/en-US/docs/Web/Security/Same-origin_policy">Same-origin policy</a></li>
-</ul>
+- {{HTMLElement("iframe")}}
+- [Same-origin policy](/en-US/docs/Web/Security/Same-origin_policy)

@@ -9,22 +9,24 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Symbol.replace
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>Symbol.replace</code></strong> well-known symbol specifies the method that replaces matched substrings of a string. This function is called by the {{jsxref("String.prototype.replace()")}} method.</p>
+The **`Symbol.replace`** well-known symbol specifies the method that replaces
+matched substrings of a string. This function is called by the
+{{jsxref("String.prototype.replace()")}} method.
 
-<p>For more information, see {{jsxref("RegExp.@@replace", "RegExp.prototype[@@replace]()")}} and {{jsxref("String.prototype.replace()")}}.</p>
+For more information, see
+{{jsxref("RegExp.@@replace", "RegExp.prototype[@@replace]()")}}
+and {{jsxref("String.prototype.replace()")}}.
 
-<div>{{EmbedInteractiveExample("pages/js/symbol-replace.html")}}</div>
+{{EmbedInteractiveExample("pages/js/symbol-replace.html")}}{{js_property_attributes(0,0,0)}}
 
+## Examples
 
-<div>{{js_property_attributes(0,0,0)}}</div>
+### Using Symbol.replace
 
-<h2 id="Examples">Examples</h2>
-
-<h3 id="Using_Symbol.replace">Using Symbol.replace</h3>
-
-<pre class="brush: js">class CustomReplacer {
+```js
+class CustomReplacer {
   constructor(value) {
     this.value = value;
   }
@@ -34,22 +36,22 @@ browser-compat: javascript.builtins.Symbol.replace
 }
 
 console.log('football'.replace(new CustomReplacer('foo')));
-// expected output: "#!@?tball"</pre>
+// expected output: "#!@?tball"
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>A polyfill of <code>Symbol.replace</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-symbol"><code>core-js</code></a></li>
- <li>{{jsxref("Symbol.match")}}</li>
- <li>{{jsxref("Symbol.search")}}</li>
- <li>{{jsxref("Symbol.split")}}</li>
- <li>{{jsxref("RegExp.@@replace", "RegExp.prototype[@@replace]()")}}</li>
-</ul>
+- A polyfill of `Symbol.replace` is available in
+  [`core-js`](https://github.com/zloirock/core-js#ecmascript-symbol)
+- {{jsxref("Symbol.match")}}
+- {{jsxref("Symbol.search")}}
+- {{jsxref("Symbol.split")}}
+- {{jsxref("RegExp.@@replace", "RegExp.prototype[@@replace]()")}}

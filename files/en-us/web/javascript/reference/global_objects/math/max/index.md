@@ -13,104 +13,103 @@ tags:
   - max
 browser-compat: javascript.builtins.Math.max
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><span class="seoSummary">The <strong><code>Math.max()</code></strong> function returns
-    the largest of the zero or more numbers given as input parameters, or {{jsxref("NaN")}} if any parameter
-    isn't a number and can't be converted into one.</span></p>
+The **`Math.max()`** function returns the largest of the zero or more numbers
+given as input parameters, or {{jsxref("NaN")}} if any parameter isn't a
+number and can't be converted into one.
 
-<div>{{EmbedInteractiveExample("pages/js/math-max.html")}}</div>
+{{EmbedInteractiveExample("pages/js/math-max.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush: js">
+```js
 Math.max()
 Math.max(value0)
 Math.max(value0, value1)
 Math.max(value0, value1, ... , valueN)
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>value1</var>, <var>value2</var>, ...</code></dt>
-  <dd>Zero or more numbers among which the largest value will be selected and returned.</dd>
-</dl>
+- `value1, value2, ...`
+  - : Zero or more numbers among which the largest value will be selected and
+    returned.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>The largest of the given numbers. If any one or more of the parameters cannot be
-  converted into a number, {{jsxref("NaN")}} is returned. The result is
-  -{{jsxref("Infinity")}} if no parameters are provided.</p>
+The largest of the given numbers. If any one or more of the parameters cannot be
+converted into a number, {{jsxref("NaN")}} is returned. The result is
+\-{{jsxref("Infinity")}} if no parameters are provided.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Because <code>max()</code> is a static method of <code>Math</code>, you always use it
-  as <code>Math.max()</code>, rather than as a method of a <code>Math</code> object you
-  created (<code>Math</code> is not a constructor).</p>
+Because `max()` is a static method of `Math`, you always use it as `Math.max()`,
+rather than as a method of a `Math` object you created (`Math` is not a
+constructor).
 
-<p>If no arguments are given, the result is -{{jsxref("Infinity")}}.</p>
+If no arguments are given, the result is -{{jsxref("Infinity")}}.
 
-<p>If at least one of arguments cannot be converted to a number, the result is
-  {{jsxref("NaN")}}.</p>
+If at least one of arguments cannot be converted to a number, the result is
+{{jsxref("NaN")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_Math.max">Using Math.max()</h3>
+### Using Math.max()
 
-<pre class="brush: js">Math.max(10, 20);   //  20
+```js
+Math.max(10, 20);   //  20
 Math.max(-10, -20); // -10
 Math.max(-10, 20);  //  20
-</pre>
+```
 
-<h3 id="Getting_the_maximum_element_of_an_array">Getting the maximum element of an array
-</h3>
+### Getting the maximum element of an array
 
-<p>{{jsxref("Array.prototype.reduce", "Array.reduce()")}} can be used to find the maximum
-  element in a numeric array, by comparing each value:</p>
+{{jsxref("Array.prototype.reduce", "Array.reduce()")}} can be
+used to find the maximum element in a numeric array, by comparing each value:
 
-<pre class="brush: js">var arr = [1,2,3];
+```js
+var arr = [1,2,3];
 var max = arr.reduce(function(a, b) {
     return Math.max(a, b);
 });
-</pre>
+```
 
-<p>The following function uses {{jsxref("Function.prototype.apply()")}} to get the maximum
-  of an array. <code>getMaxOfArray([1, 2, 3])</code> is equivalent to
-  <code>Math.max(1, 2, 3)</code>, but you can use <code>getMaxOfArray()</code> on
-  programmatically constructed arrays. This should only be used for arrays with relatively
-  few elements.</p>
+The following function uses {{jsxref("Function.prototype.apply()")}}
+to get the maximum of an array. `getMaxOfArray([1, 2, 3])` is equivalent to
+`Math.max(1, 2, 3)`, but you can use `getMaxOfArray()` on programmatically
+constructed arrays. This should only be used for arrays with relatively few
+elements.
 
-<pre class="brush: js">function getMaxOfArray(numArray) {
+```js
+function getMaxOfArray(numArray) {
   return Math.max.apply(null, numArray);
-}</pre>
+}
+```
 
-<p>The new <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax">spread
-    operator</a> is a shorter way of writing the <code>apply</code> solution to get the
-  maximum of an array:</p>
+The new
+[spread operator](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
+is a shorter way of writing the `apply` solution to get the maximum of an array:
 
-<pre class="brush: js">var arr = [1, 2, 3];
+```js
+var arr = [1, 2, 3];
 var max = Math.max(...arr);
-</pre>
+```
 
-<p>However, both spread (<code>...</code>) and <code>apply</code> will either fail or
-  return the wrong result if the array has too many elements, because they try to pass the
-  array elements as function parameters. See <a
-    href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply#using_apply_and_built-in_functions">Using
-    apply and built-in functions</a> for more details. The <code>reduce</code> solution
-  does not have this problem.</p>
+However, both spread (`...`) and `apply` will either fail or return the wrong
+result if the array has too many elements, because they try to pass the array
+elements as function parameters. See
+[Using apply and built-in functions](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply#using_apply_and_built-in_functions)
+for more details. The `reduce` solution does not have this problem.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Math.min()")}}</li>
-</ul>
+- {{jsxref("Math.min()")}}

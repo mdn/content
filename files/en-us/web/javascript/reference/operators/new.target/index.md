@@ -2,73 +2,76 @@
 title: new.target
 slug: Web/JavaScript/Reference/Operators/new.target
 tags:
-- Classes
-- ECMAScript 2015
-- JavaScript
-- Language feature
-- Reference
+  - Classes
+  - ECMAScript 2015
+  - JavaScript
+  - Language feature
+  - Reference
 browser-compat: javascript.operators.new_target
 ---
-<div>{{JSSidebar("Operators")}}</div>
+{{JSSidebar("Operators")}}
 
-<p>The <strong><code>new.target</code></strong> pseudo-property lets you detect whether a
-  function or constructor was called using the <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/new">new</a> operator. In
-  constructors and functions invoked using the <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/new">new</a> operator,
-  <code>new.target</code> returns a reference to the constructor or function. In normal
-  function calls, <code>new.target</code> is {{jsxref("undefined")}}.</p>
+The **`new.target`** pseudo-property lets you detect whether a function or
+constructor was called using the
+[new](/en-US/docs/Web/JavaScript/Reference/Operators/new) operator. In
+constructors and functions invoked using the
+[new](/en-US/docs/Web/JavaScript/Reference/Operators/new) operator, `new.target`
+returns a reference to the constructor or function. In normal function calls,
+`new.target` is {{jsxref("undefined")}}.
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-newtarget.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-newtarget.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">new.target</pre>
+```js
+new.target
+```
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The <code>new.target</code> syntax consists of the keyword <code>new</code>, a dot, and
-  the identifier <code>target</code>. Normally, the left-hand side of the dot is the
-  object on which property access is performed, but here, <code>new</code> is not an
-  object.</p>
+The `new.target` syntax consists of the keyword `new`, a dot, and the identifier
+`target`. Normally, the left-hand side of the dot is the object on which
+property access is performed, but here, `new` is not an object.
 
-<p>The <code>new.target</code> pseudo-property is available in all functions.</p>
+The `new.target` pseudo-property is available in all functions.
 
-<p>In class constructors, it refers to the constructed class.</p>
+In class constructors, it refers to the constructed class.
 
-<p>In ordinary functions, it refers to the function itself, assuming it was invoked via
-  the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/new">new</a> operator;
-  otherwise <code>new.target</code> is {{jsxref("undefined")}}.</p>
+In ordinary functions, it refers to the function itself, assuming it was invoked
+via the [new](/en-US/docs/Web/JavaScript/Reference/Operators/new) operator;
+otherwise `new.target` is {{jsxref("undefined")}}.
 
-<p>In <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow
-    functions</a>, <code>new.target</code> is inherited from the surrounding scope.</p>
+In
+[arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions),
+`new.target` is inherited from the surrounding scope.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="new.target_in_function_calls">new.target in function calls</h3>
+### new\.target in function calls
 
-<p>In normal function calls (as opposed to constructor function calls),
-  <code>new.target</code> is {{jsxref("undefined")}}. This lets you detect whether a
-  function was called with <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/new">new</a> as a constructor.
-</p>
+In normal function calls (as opposed to constructor function calls),
+`new.target` is {{jsxref("undefined")}}. This lets you detect whether a
+function was called with
+[new](/en-US/docs/Web/JavaScript/Reference/Operators/new) as a constructor.
 
-<pre class="brush: js">function Foo() {
+```js
+function Foo() {
   if (!new.target) { throw 'Foo() must be called with new' }
   console.log('Foo instantiated with new')
 }
 
 new Foo()  // logs "Foo instantiated with new"
 Foo()      // throws "Foo() must be called with new"
-</pre>
+```
 
-<h3 id="new.target_in_constructors">new.target in constructors</h3>
+### new\.target in constructors
 
-<p>In class constructors, <code>new.target</code> refers to the constructor that was
-  directly invoked by <code>new</code>. This is also the case if the constructor is in a
-  parent class and was delegated from a child constructor.</p>
+In class constructors, `new.target` refers to the constructor that was directly
+invoked by `new`. This is also the case if the constructor is in a parent class
+and was delegated from a child constructor.
 
-<pre class="brush: js">class A {
+```js
+class A {
   constructor() {
     console.log(new.target.name)
   }
@@ -83,29 +86,25 @@ class C { constructor() { console.log(new.target)  } }
 class D extends C { constructor() { super()  } }
 
 let c = new C()  // logs class C{constructor(){console.log(new.target);}}
-let d = new D()  // logs class D extends C{constructor(){super();}}</pre>
+let d = new D()  // logs class D extends C{constructor(){super();}}
+```
 
-<p>Thus from the above example of class <code>C</code> and <code>D</code>,
-  it seems that <code>new.target</code> points to the class definition of class which is
-  initialized. For example, when <code>d</code> was initialized using
-  <code>new D()</code>, the class definition of <code>D</code> was printed; and similarly,
-  in case of <code>c</code>, the class <code>C</code> was printed.</p>
+Thus from the above example of class `C` and `D`, it seems that `new.target`
+points to the class definition of class which is initialized. For example, when
+`d` was initialized using `new D()`, the class definition of `D` was
+printed; and similarly, in case of `c`, the class `C` was printed.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Functions">Functions</a></li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Classes">Classes</a></li>
-  <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/new">new</a></code>
-  </li>
-  <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/this">this</a></code>
-  </li>
-</ul>
+- [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
+- [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
+- [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new)
+- [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this)

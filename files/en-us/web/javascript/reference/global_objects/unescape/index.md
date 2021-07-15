@@ -2,73 +2,71 @@
 title: unescape()
 slug: Web/JavaScript/Reference/Global_Objects/unescape
 tags:
-- Deprecated
-- JavaScript
-- Method
+  - Deprecated
+  - JavaScript
+  - Method
 browser-compat: javascript.builtins.unescape
 ---
-<p>{{jsSidebar("Objects")}}</p>
+{{jsSidebar("Objects")}}
 
-<div class="warning"><p><strong>Warning:</strong> Although <code>unescape()</code> is not strictly deprecated
-  (as in "removed from the Web standards"), it is defined in <a
-    href="https://www.ecma-international.org/ecma-262/9.0/index.html#sec-additional-ecmascript-features-for-web-browsers">Annex
-    B</a> of the ECMA-262 standard, whose introduction states:</p>
-  <blockquote>… All of the language features and behaviors specified in this annex have
-    one or more undesirable characteristics and in the absence of legacy usage would be
-    removed from this specification. …<br>
-    … Programmers should not use or assume the existence of these features and behaviors
-    when writing new ECMAScript code. …</blockquote>
-</div>
+> **Warning:** Although `unescape()` is not strictly deprecated (as in "removed
+> from the Web standards"), it is defined in
+> [Annex B](https://www.ecma-international.org/ecma-262/9.0/index.html#sec-additional-ecmascript-features-for-web-browsers)
+> of the ECMA-262 standard, whose introduction states:
+>
+> > … All of the language features and behaviors specified in this annex have
+> > one or more undesirable characteristics and in the absence of legacy usage
+> > would be removed from this specification. … … Programmers should not use or
+> > assume the existence of these features and behaviors when writing new
+> > ECMAScript code. …
 
-<p>The <code><strong>unescape()</strong></code> function computes a new string in which
-  hexadecimal escape sequences are replaced with the character that it represents. The
-  escape sequences might be introduced by a function like {{jsxref("escape")}}. Usually,
-  {{jsxref("decodeURI")}} or {{jsxref("decodeURIComponent")}} are preferred over
-  <code>unescape</code>.</p>
+The **`unescape()`** function computes a new string in which hexadecimal escape
+sequences are replaced with the character that it represents. The escape
+sequences might be introduced by a function like {{jsxref("escape")}}.
+Usually, {{jsxref("decodeURI")}} or
+{{jsxref("decodeURIComponent")}} are preferred over `unescape`.
 
-<div class="note"><p><strong>Note:</strong> Do not use <code>unescape</code> to decode URIs,
-  use <code>decodeURI</code> instead.</p></div>
+> **Note:** Do not use `unescape` to decode URIs, use `decodeURI` instead.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">unescape(<var>str</var>)</pre>
+```js
+unescape(str)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>str</var></code></dt>
-  <dd>A string to be decoded.</dd>
-</dl>
+- `str`
+  - : A string to be decoded.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A new string in which certain characters have been unescaped.</p>
+A new string in which certain characters have been unescaped.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The <code>unescape</code> function is a property of the <em>global object</em>.</p>
+The `unescape` function is a property of the _global object_.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_unescape">Using unescape</h3>
+### Using unescape
 
-<pre class="brush: js">unescape('abc123');     // "abc123"
+```js
+unescape('abc123');     // "abc123"
 unescape('%E4%F6%FC');  // "äöü"
 unescape('%u0107');     // "ć"
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("decodeURI")}}</li>
-  <li>{{jsxref("decodeURIComponent")}}</li>
-  <li>{{jsxref("escape")}}</li>
-</ul>
+- {{jsxref("decodeURI")}}
+- {{jsxref("decodeURIComponent")}}
+- {{jsxref("escape")}}

@@ -2,64 +2,64 @@
 title: String.prototype.includes()
 slug: Web/JavaScript/Reference/Global_Objects/String/includes
 tags:
-- JavaScript
-- Method
-- Prototype
-- Reference
-- String
-- Polyfill
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
+  - String
+  - Polyfill
 browser-compat: javascript.builtins.String.includes
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>includes()</code></strong> method performs a case-sensitive search to determine whether one string may
-  be found within another string, returning <code>true</code> or <code>false</code> as
-  appropriate.</p>
+The **`includes()`** method performs a case-sensitive search to determine
+whether one string may be found within another string, returning `true` or
+`false` as appropriate.
 
-<div>{{EmbedInteractiveExample("pages/js/string-includes.html", "shorter")}}</div>
+{{EmbedInteractiveExample("pages/js/string-includes.html", "shorter")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 includes(searchString)
 includes(searchString, position)
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>searchString</var></code></dt>
-  <dd>A string to be searched for within <code><var>str</var></code>.</dd>
-  <dt><code><var>position</var></code> {{optional_inline}}</dt>
-  <dd>The position within the string at which to begin searching for
-    <code>searchString</code>. (Defaults to <code>0</code>.)</dd>
-</dl>
+- `searchString`
+  - : A string to be searched for within `str`.
+- `position` {{optional_inline}}
+  - : The position within the string at which to begin searching for
+    `searchString`. (Defaults to `0`.)
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p><strong><code>true</code></strong> if the search string is found anywhere within the
-  given string; otherwise, <strong><code>false</code></strong> if not.</p>
+**`true`** if the search string is found anywhere within the given string;
+otherwise, **`false`** if not.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>This method lets you determine whether or not a string includes another string.</p>
+This method lets you determine whether or not a string includes another string.
 
-<h3 id="Case-sensitivity">Case-sensitivity</h3>
+### Case-sensitivity
 
-<p>The <code>includes()</code> method is case sensitive. For example, the following
-  expression returns <code>false</code>:</p>
+The `includes()` method is case sensitive. For example, the following expression
+returns `false`:
 
-<pre class="brush: js">'Blue Whale'.includes('blue')  // returns false
-</pre>
+```js
+'Blue Whale'.includes('blue')  // returns false
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>This method has been added to the ECMAScript 2015 specification and may not be
-  available in all JavaScript implementations yet.</p>
+This method has been added to the ECMAScript 2015 specification and may not be
+available in all JavaScript implementations yet.
 
-<p>However, you can easily polyfill this method:</p>
+However, you can easily polyfill this method:
 
-<pre class="brush: js">if (!String.prototype.includes) {
+```js
+if (!String.prototype.includes) {
   String.prototype.includes = function(search, start) {
     'use strict';
 
@@ -70,13 +70,14 @@ includes(searchString, position)
     return this.indexOf(search, start) !== -1;
   };
 }
-</pre>
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_includes">Using <code>includes()</code></h3>
+### Using `includes()`
 
-<pre class="brush: js">const str = 'To be, or not to be, that is the question.'
+```js
+const str = 'To be, or not to be, that is the question.'
 
 console.log(str.includes('To be'))        // true
 console.log(str.includes('question'))     // true
@@ -84,25 +85,23 @@ console.log(str.includes('nonexistent'))  // false
 console.log(str.includes('To be', 1))     // false
 console.log(str.includes('TO BE'))        // false
 console.log(str.includes(''))             // true
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat}}
 
-<p>{{Compat}}</p>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
-  <li>A polyfill of <code>String.prototype.includes</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-string-and-regexp"><code>core-js</code></a></li>
-  <li>{{jsxref("Array.prototype.includes()")}}</li>
-  <li>{{jsxref("TypedArray.prototype.includes()")}}</li>
-  <li>{{jsxref("String.prototype.indexOf()")}}</li>
-  <li>{{jsxref("String.prototype.lastIndexOf()")}}</li>
-  <li>{{jsxref("String.prototype.startsWith()")}}</li>
-  <li>{{jsxref("String.prototype.endsWith()")}}</li>
-</ul>
+- A polyfill of `String.prototype.includes` is available in
+  [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- {{jsxref("Array.prototype.includes()")}}
+- {{jsxref("TypedArray.prototype.includes()")}}
+- {{jsxref("String.prototype.indexOf()")}}
+- {{jsxref("String.prototype.lastIndexOf()")}}
+- {{jsxref("String.prototype.startsWith()")}}
+- {{jsxref("String.prototype.endsWith()")}}

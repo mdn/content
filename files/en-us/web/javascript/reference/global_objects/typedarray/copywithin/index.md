@@ -2,78 +2,74 @@
 title: TypedArray.prototype.copyWithin()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/copyWithin
 tags:
-- JavaScript
-- Method
-- Prototype
-- TypedArray
-- TypedArrays
-- Polyfill
+  - JavaScript
+  - Method
+  - Prototype
+  - TypedArray
+  - TypedArrays
+  - Polyfill
 browser-compat: javascript.builtins.TypedArray.copyWithin
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <code><strong>copyWithin()</strong></code> method copies the sequence of array
-  elements within the array to the position starting at <code><var>target</var></code>.
-  The copy is taken from the index positions of the second and third arguments
-  <code><var>start</var></code> and <code><var>end</var></code>. The
-  <code><var>end</var></code> argument is optional and defaults to the length of the
-  array. This method has the same algorithm as {{jsxref("Array.prototype.copyWithin")}}.
-  <em>TypedArray</em> is one of the <a
-    href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">typed
-    array types</a> here.</p>
+The **`copyWithin()`** method copies the sequence of array elements within the
+array to the position starting at `target`. The copy is taken from the index
+positions of the second and third arguments `start` and `end`. The `end`
+argument is optional and defaults to the length of the array. This method has
+the same algorithm as {{jsxref("Array.prototype.copyWithin")}}.
+_TypedArray_ is one of the
+[typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)
+here.
 
-<div>{{EmbedInteractiveExample("pages/js/typedarray-copywithin.html")}}</div>
+{{EmbedInteractiveExample("pages/js/typedarray-copywithin.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush: js">
+```js
 copyWithin(target, start)
 copyWithin(target, start, end)
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>target</var></code></dt>
-  <dd>Target start index position where to copy the elements to.</dd>
-  <dt><code><var>start</var></code></dt>
-  <dd>Source start index position where to start copying elements from.</dd>
-  <dt><code><var>end</var></code> {{optional_inline}}</dt>
-  <dd>Optional. Source end index position where to end copying elements from.</dd>
-</dl>
+- `target`
+  - : Target start index position where to copy the elements to.
+- `start`
+  - : Source start index position where to start copying elements from.
+- `end` {{optional_inline}}
+  - : Optional. Source end index position where to end copying elements from.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>The modified array.</p>
+The modified array.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>See {{jsxref("Array.prototype.copyWithin")}} for more details.</p>
+See {{jsxref("Array.prototype.copyWithin")}} for more details.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_copyWithin">Using copyWithin</h3>
+### Using copyWithin
 
-<pre class="brush: js">var buffer = new ArrayBuffer(8);
+```js
+var buffer = new ArrayBuffer(8);
 var uint8 = new Uint8Array(buffer);
 uint8.set([1,2,3]);
 console.log(uint8); // Uint8Array [ 1, 2, 3, 0, 0, 0, 0, 0 ]
 uint8.copyWithin(3,0,3);
 console.log(uint8); // Uint8Array [ 1, 2, 3, 1, 2, 3, 0, 0 ]
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>A polyfill of <code>TypedArray.prototype.copyWithin</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-typed-arrays"><code>core-js</code></a></li>
-  <li>{{jsxref("TypedArray")}}</li>
-</ul>
+- A polyfill of `TypedArray.prototype.copyWithin` is available in
+  [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- {{jsxref("TypedArray")}}

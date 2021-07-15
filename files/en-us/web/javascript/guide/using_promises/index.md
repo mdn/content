@@ -10,17 +10,25 @@ tags:
   - asynchronous
   - l10n:priority
 ---
-<div>{{jsSidebar("JavaScript Guide")}}{{PreviousNext("Web/JavaScript/Guide/Details_of_the_Object_Model", "Web/JavaScript/Guide/Iterators_and_Generators")}}</div>
+{{jsSidebar("JavaScript Guide")}}{{PreviousNext("Web/JavaScript/Guide/Details_of_the_Object_Model", "Web/JavaScript/Guide/Iterators_and_Generators")}}
 
-<p>A {{jsxref("Promise")}} is an object representing the eventual completion or failure of an asynchronous operation. Since most people are consumers of already-created promises, this guide will explain consumption of returned promises before explaining how to create them.</p>
+A {{jsxref("Promise")}} is an object representing the eventual completion
+or failure of an asynchronous operation. Since most people are consumers of
+already-created promises, this guide will explain consumption of returned
+promises before explaining how to create them.
 
-<p>Essentially, a promise is a returned object to which you attach callbacks, instead of passing callbacks into a function.</p>
+Essentially, a promise is a returned object to which you attach callbacks,
+instead of passing callbacks into a function.
 
-<p>Imagine a function, <code>createAudioFileAsync()</code>, which asynchronously generates a sound file given a configuration record and two callback functions, one called if the audio file is successfully created, and the other called if an error occurs.</p>
+Imagine a function, `createAudioFileAsync()`, which asynchronously generates a
+sound file given a configuration record and two callback functions, one called
+if the audio file is successfully created, and the other called if an error
+occurs.
 
-<p>Here's some code that uses <code>createAudioFileAsync()</code>:</p>
+Here's some code that uses `createAudioFileAsync()`:
 
-<pre class="brush: js line-numbers">function successCallback(result) {
+```js
+function successCallback(result) {
   console.log("Audio file ready at URL: " + result);
 }
 
@@ -29,59 +37,84 @@ function failureCallback(error) {
 }
 
 createAudioFileAsync(audioSettings, successCallback, failureCallback);
-</pre>
+```
 
-<p>If <code>createAudioFileAsync()</code> were rewritten to return a promise, you would attach your callbacks to it instead:</p>
+If `createAudioFileAsync()` were rewritten to return a promise, you would attach
+your callbacks to it instead:
 
-<pre class="brush: js line-numbers">createAudioFileAsync(audioSettings).then(successCallback, failureCallback);</pre>
+```js
+createAudioFileAsync(audioSettings).then(successCallback, failureCallback);
+```
 
-<p>This convention has several advantages. We will explore each one.</p>
+This convention has several advantages. We will explore each one.
 
-<h2 id="Guarantees">Guarantees</h2>
+## Guarantees
 
-<p>Unlike old-fashioned <em>passed-in</em> callbacks, a promise comes with some guarantees:</p>
+Unlike old-fashioned _passed-in_ callbacks, a promise comes with some
+guarantees:
 
-<ul>
- <li>Callbacks added with <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then">then()</a></code> will never be invoked before the <a href="/en-US/docs/Web/JavaScript/EventLoop#run-to-completion">completion of the current run</a> of the JavaScript event loop.</li>
- <li>These callbacks will be invoked even if they were added <em>after</em> the success or failure of the asynchronous operation that the promise represents.</li>
- <li>Multiple callbacks may be added by calling <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then">then()</a></code> several times. They will be invoked one after another, in the order in which they were inserted.</li>
-</ul>
+- Callbacks added
+  with [`then()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then)
+  will never be invoked before the
+  [completion of the current run](/en-US/docs/Web/JavaScript/EventLoop#run-to-completion)
+  of the JavaScript event loop.
+- These callbacks will be invoked even if they were added _after_ the success or
+  failure of the asynchronous operation that the promise represents.
+- Multiple callbacks may be added by
+  calling [`then()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then)
+  several times. They will be invoked one after another, in the order in which
+  they were inserted.
 
-<p>One of the great things about using promises is <strong>chaining</strong>.</p>
+One of the great things about using promises is **chaining**.
 
-<h2 id="Chaining">Chaining</h2>
+## Chaining
 
-<p>A common need is to execute two or more asynchronous operations back to back, where each subsequent operation starts when the previous operation succeeds, with the result from the previous step. We accomplish this by creating a <strong>promise chain</strong>.</p>
+A common need is to execute two or more asynchronous operations back to back,
+where each subsequent operation starts when the previous operation succeeds,
+with the result from the previous step. We accomplish this by creating a
+**promise chain**.
 
-<p>Here's the magic: the <code>then()</code> function returns a <strong>new promise</strong>, different from the original:</p>
+Here's the magic: the `then()` function returns a **new promise**, different
+from the original:
 
-<pre class="brush: js">const promise = doSomething();
+```js
+const promise = doSomething();
 const promise2 = promise.then(successCallback, failureCallback);
-</pre>
+```
 
-<p>or</p>
+or
 
-<pre class="brush: js">const promise2 = doSomething().then(successCallback, failureCallback);
-</pre>
+```js
+const promise2 = doSomething().then(successCallback, failureCallback);
+```
 
-<p>This second promise (<code>promise2</code>) represents the completion not just of <code>doSomething()</code>, but also of the <code>successCallback</code> or <code>failureCallback</code> you passed in, which can be other asynchronous functions returning a promise. When that's the case, any callbacks added to <code>promise2</code> get queued behind the promise returned by either <code>successCallback</code> or <code>failureCallback</code>.</p>
+This second promise (`promise2`) represents the completion not just of
+`doSomething()`, but also of the `successCallback` or `failureCallback` you
+passed in, which can be other asynchronous functions returning a promise. When
+that's the case, any callbacks added to `promise2` get queued behind the promise
+returned by either `successCallback` or `failureCallback`.
 
-<p>Basically, each promise represents the completion of another asynchronous step in the chain.</p>
+Basically, each promise represents the completion of another asynchronous step
+in the chain.
 
-<p>In the old days, doing several asynchronous operations in a row would lead to the classic callback pyramid of doom:</p>
+In the old days, doing several asynchronous operations in a row would lead to
+the classic callback pyramid of doom:
 
-<pre class="brush: js">doSomething(function(result) {
+```js
+doSomething(function(result) {
   doSomethingElse(result, function(newResult) {
     doThirdThing(newResult, function(finalResult) {
       console.log('Got the final result: ' + finalResult);
     }, failureCallback);
   }, failureCallback);
 }, failureCallback);
-</pre>
+```
 
-<p>With modern functions, we attach our callbacks to the returned promises instead, forming a promise chain:</p>
+With modern functions, we attach our callbacks to the returned promises instead,
+forming a promise chain:
 
-<pre class="brush: js">doSomething()
+```js
+doSomething()
 .then(function(result) {
   return doSomethingElse(result);
 })
@@ -92,66 +125,82 @@ const promise2 = promise.then(successCallback, failureCallback);
   console.log('Got the final result: ' + finalResult);
 })
 .catch(failureCallback);
-</pre>
+```
 
-<p>The arguments to <code>then</code> are optional, and <code>catch(failureCallback)</code> is short for <code>then(null, failureCallback)</code>. You might see this expressed with <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow functions</a> instead:</p>
+The arguments to `then` are optional, and `catch(failureCallback)` is short for
+`then(null, failureCallback)`. You might see this expressed with
+[arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
+instead:
 
-<pre class="brush: js">doSomething()
-.then(result =&gt; doSomethingElse(result))
-.then(newResult =&gt; doThirdThing(newResult))
-.then(finalResult =&gt; {
+```js
+doSomething()
+.then(result => doSomethingElse(result))
+.then(newResult => doThirdThing(newResult))
+.then(finalResult => {
   console.log(`Got the final result: ${finalResult}`);
 })
 .catch(failureCallback);
-</pre>
+```
 
-<p><strong>Important:</strong> Always return results, otherwise callbacks won't catch the result of a previous promise (with arrow functions <code>() =&gt; x</code> is short for <code>() =&gt; { return x; }</code>).</p>
+**Important:** Always return results, otherwise callbacks won't catch the result
+of a previous promise (with arrow functions `() => x` is short for
+`() => { return x; }`).
 
-<h3 id="Chaining_after_a_catch">Chaining after a catch</h3>
+### Chaining after a catch
 
-<p>It's possible to chain <em>after</em> a failure, i.e. a <code>catch</code>, which is useful to accomplish new actions even after an action failed in the chain. Read the following example:</p>
+It's possible to chain _after_ a failure, i.e. a `catch`, which is useful to
+accomplish new actions even after an action failed in the chain. Read the
+following example:
 
-<pre class="brush: js">new Promise((resolve, reject) =&gt; {
+```js
+new Promise((resolve, reject) => {
     console.log('Initial');
 
     resolve();
 })
-.then(() =&gt; {
+.then(() => {
     throw new Error('Something failed');
 
     console.log('Do this');
 })
-.catch(() =&gt; {
+.catch(() => {
     console.error('Do that');
 })
-.then(() =&gt; {
+.then(() => {
     console.log('Do this, no matter what happened before');
 });
-</pre>
+```
 
-<p>This will output the following text:</p>
+This will output the following text:
 
-<pre class="brush: plain">Initial
+```plain
+Initial
 Do that
 Do this, no matter what happened before
-</pre>
+```
 
-<p><strong>Note:</strong> The text <q>Do this</q> is not displayed because the <q>Something failed</q> error caused a rejection.</p>
+**Note:** The text "Do this" is not displayed because the "Something failed"
+error caused a rejection.
 
-<h2 id="Error_propagation">Error propagation</h2>
+## Error propagation
 
-<p>You might recall seeing <code>failureCallback</code> three times in the pyramid of doom earlier, compared to only once at the end of the promise chain:</p>
+You might recall seeing `failureCallback` three times in the pyramid of doom
+earlier, compared to only once at the end of the promise chain:
 
-<pre class="brush: js">doSomething()
-.then(result =&gt; doSomethingElse(result))
-.then(newResult =&gt; doThirdThing(newResult))
-.then(finalResult =&gt; console.log(`Got the final result: ${finalResult}`))
+```js
+doSomething()
+.then(result => doSomethingElse(result))
+.then(newResult => doThirdThing(newResult))
+.then(finalResult => console.log(`Got the final result: ${finalResult}`))
 .catch(failureCallback);
-</pre>
+```
 
-<p>If there's an exception, the browser will look down the chain for <code>.catch()</code> handlers or <code>onRejected</code>. This is very much modeled after how synchronous code works:</p>
+If there's an exception, the browser will look down the chain for `.catch()`
+handlers or `onRejected`. This is very much modeled after how synchronous code
+works:
 
-<pre class="brush: js">try {
+```js
+try {
   const result = syncDoSomething();
   const newResult = syncDoSomethingElse(result);
   const finalResult = syncDoThirdThing(newResult);
@@ -159,11 +208,14 @@ Do this, no matter what happened before
 } catch(error) {
   failureCallback(error);
 }
-</pre>
+```
 
-<p>This symmetry with asynchronous code culminates in the <a href="/en-US/docs/Web/JavaScript/Reference/Statements/async_function"><code>async</code>/<code>await</code></a> syntactic sugar in ECMAScript 2017:</p>
+This symmetry with asynchronous code culminates in the
+[`async`/`await`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
+syntactic sugar in ECMAScript 2017:
 
-<pre class="brush: js">async function foo() {
+```js
+async function foo() {
   try {
     const result = await doSomething();
     const newResult = await doSomethingElse(result);
@@ -173,121 +225,189 @@ Do this, no matter what happened before
     failureCallback(error);
   }
 }
-</pre>
+```
 
-<p>It builds on promises, e.g. <code>doSomething()</code> is the same function as before. You can read more about the syntax <a href="https://developers.google.com/web/fundamentals/getting-started/primers/async-functions">here</a>.</p>
+It builds on promises, e.g. `doSomething()` is the same function as before. You
+can read more about the syntax
+[here](https://developers.google.com/web/fundamentals/getting-started/primers/async-functions).
 
-<p>Promises solve a fundamental flaw with the callback pyramid of doom, by catching all errors, even thrown exceptions and programming errors. This is essential for functional composition of asynchronous operations.</p>
+Promises solve a fundamental flaw with the callback pyramid of doom, by catching
+all errors, even thrown exceptions and programming errors. This is essential for
+functional composition of asynchronous operations.
 
-<h2 id="Promise_rejection_events">Promise rejection events</h2>
+## Promise rejection events
 
-<p>Whenever a promise is rejected, one of two events is sent to the global scope (generally, this is either the <a href="/en-US/docs/Web/API/Window" title="The Window interface represents a window containing a DOM document; the document property points to the DOM document loaded in that window."><code>window</code></a> or, if being used in a web worker, it's the <a href="/en-US/docs/Web/API/Worker" title="The Worker interface of the Web Workers API represents a background task that can be created via script, which can send messages back to its creator."><code>Worker</code></a> or other worker-based interface). The two events are:</p>
+Whenever a promise is rejected, one of two events is sent to the global scope
+(generally, this is either the
+[`window`](/en-US/docs/Web/API/Window "The Window interface represents a window containing a DOM document; the document property points to the DOM document loaded in that window.")
+or, if being used in a web worker, it's the
+[`Worker`](/en-US/docs/Web/API/Worker "The Worker interface of the Web Workers API represents a background task that can be created via script, which can send messages back to its creator.")
+or other worker-based interface). The two events are:
 
-<dl>
- <dt><a href="/en-US/docs/Web/API/Window/rejectionhandled_event" title="The rejectionhandled event is sent to the script's global scope (usually window but also Worker) whenever a JavaScript Promise is rejected but after the promise rejection has been handled."><code>rejectionhandled</code></a></dt>
- <dd>Sent when a promise is rejected, after that rejection has been handled by the executor's <code>reject</code> function.</dd>
- <dt><a href="/en-US/docs/Web/API/Window/unhandledrejection_event" title="The unhandledrejection event is sent to the global scope of a script when a JavaScript Promise that has no rejection handler is rejected; typically, this is the window, but may also be a Worker."><code>unhandledrejection</code></a></dt>
- <dd>Sent when a promise is rejected but there is no rejection handler available.</dd>
-</dl>
+- [`rejectionhandled`](/en-US/docs/Web/API/Window/rejectionhandled_event "The rejectionhandled event is sent to the script's global scope (usually window but also Worker) whenever a JavaScript Promise is rejected but after the promise rejection has been handled.")
+  - : Sent when a promise is rejected, after that rejection has been handled by
+    the executor's `reject` function.
+- [`unhandledrejection`](/en-US/docs/Web/API/Window/unhandledrejection_event "The unhandledrejection event is sent to the global scope of a script when a JavaScript Promise that has no rejection handler is rejected; typically, this is the window, but may also be a Worker.")
+  - : Sent when a promise is rejected but there is no rejection handler
+    available.
 
-<p>In both cases, the event (of type <a href="/en-US/docs/Web/API/PromiseRejectionEvent" title="The PromiseRejectionEvent interface represents events which are sent to the global script context when JavaScript Promises are rejected."><code>PromiseRejectionEvent</code></a>) has as members a <a href="/en-US/docs/Web/API/PromiseRejectionEvent/promise" title="The PromiseRejectionEvent interface's promise read-only property indicates the JavaScript Promise which was rejected. You can examine the event's PromiseRejectionEvent.reason property to learn why the promise was rejected."><code>promise</code></a> property indicating the promise that was rejected, and a <a href="/en-US/docs/Web/API/PromiseRejectionEvent/reason" title="The read-only PromiseRejection property reason read-only property is any JavaScript value or Object which provides the reason passed into Promise.reject(). This in theory provides information about why the promise was rejected."><code>reason</code></a> property that provides the reason given for the promise to be rejected.</p>
+In both cases, the event (of type
+[`PromiseRejectionEvent`](/en-US/docs/Web/API/PromiseRejectionEvent "The PromiseRejectionEvent interface represents events which are sent to the global script context when JavaScript Promises are rejected."))
+has as members a
+[`promise`](/en-US/docs/Web/API/PromiseRejectionEvent/promise "The PromiseRejectionEvent interface's promise read-only property indicates the JavaScript Promise which was rejected. You can examine the event's PromiseRejectionEvent.reason property to learn why the promise was rejected.")
+property indicating the promise that was rejected, and a
+[`reason`](/en-US/docs/Web/API/PromiseRejectionEvent/reason "The read-only PromiseRejection property reason read-only property is any JavaScript value or Object which provides the reason passed into Promise.reject(). This in theory provides information about why the promise was rejected.")
+property that provides the reason given for the promise to be rejected.
 
-<p>These make it possible to offer fallback error handling for promises, as well as to help debug issues with your promise management. These handlers are global per context, so all errors will go to the same event handlers, regardless of source.</p>
+These make it possible to offer fallback error handling for promises, as well as
+to help debug issues with your promise management. These handlers are global per
+context, so all errors will go to the same event handlers, regardless of source.
 
-<p>One case of special usefulness: when writing code for <a href="/en-US/docs/Glossary/Node.js">Node.js</a>, it's common that modules you include in your project may have unhandled rejected promises, logged to the console by the Node.js runtime. You can capture them for analysis and handling by your code—or just to avoid having them cluttering up your output—by adding a handler for the Node.js <code>unhandledRejection</code> event (notice the difference in capitalization of the name), like this:</p>
+One case of special usefulness: when writing code for
+[Node.js](/en-US/docs/Glossary/Node.js), it's common that modules you include in
+your project may have unhandled rejected promises, logged to the console by the
+Node.js runtime. You can capture them for analysis and handling by your code—or
+just to avoid having them cluttering up your output—by adding a handler for the
+Node.js `unhandledRejection` event (notice the difference in capitalization of
+the name), like this:
 
-<pre class="brush: js">process.on("unhandledRejection", (reason, promise) =&gt; {
+```js
+process.on("unhandledRejection", (reason, promise) => {
   /* You might start here by adding code to examine the
    * "promise" and "reason" values. */
 });
-</pre>
+```
 
-<p>For Node.js, to prevent the error from being logged to the console (the default action that would otherwise occur), adding that <code>process.on()</code> listener is all that’s necessary; there's no need for an equivalent of the browser runtime’s <a href="/en-US/docs/Web/API/Event/preventDefault"><code>preventDefault()</code></a> method.</p>
+For Node.js, to prevent the error from being logged to the console (the default
+action that would otherwise occur), adding that `process.on()` listener is all
+that’s necessary; there's no need for an equivalent of the browser runtime’s
+[`preventDefault()`](/en-US/docs/Web/API/Event/preventDefault) method.
 
-<p>However, if you add that <code>process.on</code> listener but don't also have code within it to handle rejected promises, they will just be dropped on the floor and silently ignored. So ideally, you should add code within that listener to examine each rejected promise and make sure it was not caused by an actual code bug.</p>
+However, if you add that `process.on` listener but don't also have code within
+it to handle rejected promises, they will just be dropped on the floor and
+silently ignored. So ideally, you should add code within that listener to
+examine each rejected promise and make sure it was not caused by an actual code
+bug.
 
-<h2 id="Creating_a_Promise_around_an_old_callback_API">Creating a Promise around an old callback API</h2>
+## Creating a Promise around an old callback API
 
-<p>A {{jsxref("Promise")}} can be created from scratch using its constructor. This should be needed only to wrap old APIs.</p>
+A {{jsxref("Promise")}} can be created from scratch using its
+constructor. This should be needed only to wrap old APIs.
 
-<p>In an ideal world, all asynchronous functions would already return promises. Unfortunately, some APIs still expect success and/or failure callbacks to be passed in the old way. The most obvious example is the <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout"><code>setTimeout()</code></a> function:</p>
+In an ideal world, all asynchronous functions would already return promises.
+Unfortunately, some APIs still expect success and/or failure callbacks to be
+passed in the old way. The most obvious example is the
+[`setTimeout()`](/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout)
+function:
 
-<pre class="brush: js">setTimeout(() =&gt; saySomething("10 seconds passed"), 10*1000);
-</pre>
+```js
+setTimeout(() => saySomething("10 seconds passed"), 10*1000);
+```
 
-<p>Mixing old-style callbacks and promises is problematic. If <code>saySomething()</code> fails or contains a programming error, nothing catches it. <code>setTimeout</code> is to blame for this.</p>
+Mixing old-style callbacks and promises is problematic. If `saySomething()`
+fails or contains a programming error, nothing catches it. `setTimeout` is to
+blame for this.
 
-<p>Luckily we can wrap <code>setTimeout</code> in a promise. Best practice is to wrap problematic functions at the lowest possible level, and then never call them directly again:</p>
+Luckily we can wrap `setTimeout` in a promise. Best practice is to wrap
+problematic functions at the lowest possible level, and then never call them
+directly again:
 
-<pre class="brush: js">const wait = ms =&gt; new Promise(resolve =&gt; setTimeout(resolve, ms));
+```js
+const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
 
-wait(10*1000).then(() =&gt; saySomething("10 seconds")).catch(failureCallback);
-</pre>
+wait(10*1000).then(() => saySomething("10 seconds")).catch(failureCallback);
+```
 
-<p>Basically, the promise constructor takes an executor function that lets us resolve or reject a promise manually. Since <code>setTimeout()</code> doesn't really fail, we left out reject in this case.</p>
+Basically, the promise constructor takes an executor function that lets us
+resolve or reject a promise manually. Since `setTimeout()` doesn't really fail,
+we left out reject in this case.
 
-<h2 id="Composition">Composition</h2>
+## Composition
 
-<p>{{jsxref("Promise.resolve()")}} and {{jsxref("Promise.reject()")}} are shortcuts to manually create an already resolved or rejected promise respectively. This can be useful at times.</p>
+{{jsxref("Promise.resolve()")}} and
+{{jsxref("Promise.reject()")}} are shortcuts to manually create an
+already resolved or rejected promise respectively. This can be useful at times.
 
-<p>{{jsxref("Promise.all()")}} and {{jsxref("Promise.race()")}} are two composition tools for running asynchronous operations in parallel.</p>
+{{jsxref("Promise.all()")}} and {{jsxref("Promise.race()")}}
+are two composition tools for running asynchronous operations in parallel.
 
-<p>We can start operations in parallel and wait for them all to finish like this:</p>
+We can start operations in parallel and wait for them all to finish like this:
 
-<pre class="brush: js">Promise.all([func1(), func2(), func3()])
-.then(([result1, result2, result3]) =&gt; { /* use result1, result2 and result3 */ });
-</pre>
+```js
+Promise.all([func1(), func2(), func3()])
+.then(([result1, result2, result3]) => { /* use result1, result2 and result3 */ });
+```
 
-<p>Sequential composition is possible using some clever JavaScript:</p>
+Sequential composition is possible using some clever JavaScript:
 
-<pre class="brush: js">[func1, func2, func3].reduce((p, f) =&gt; p.then(f), Promise.resolve())
-.then(result3 =&gt; { /* use result3 */ });
-</pre>
+```js
+[func1, func2, func3].reduce((p, f) => p.then(f), Promise.resolve())
+.then(result3 => { /* use result3 */ });
+```
 
-<p>Basically, we reduce an array of asynchronous functions down to a promise chain equivalent to: <code>Promise.resolve().then(func1).then(func2).then(func3);</code></p>
+Basically, we reduce an array of asynchronous functions down to a promise chain
+equivalent to: `Promise.resolve().then(func1).then(func2).then(func3);`
 
-<p>This can be made into a reusable compose function, which is common in functional programming:</p>
+This can be made into a reusable compose function, which is common in functional
+programming:
 
-<pre class="brush: js">const applyAsync = (acc,val) =&gt; acc.then(val);
-const composeAsync = (...funcs) =&gt; x =&gt; funcs.reduce(applyAsync, Promise.resolve(x));</pre>
+```js
+const applyAsync = (acc,val) => acc.then(val);
+const composeAsync = (...funcs) => x => funcs.reduce(applyAsync, Promise.resolve(x));
+```
 
-<p>The <code>composeAsync()</code> function will accept any number of functions as arguments, and will return a new function that accepts an initial value to be passed through the composition pipeline:</p>
+The `composeAsync()` function will accept any number of functions as arguments,
+and will return a new function that accepts an initial value to be passed
+through the composition pipeline:
 
-<pre class="brush: js">const transformData = composeAsync(func1, func2, func3);
+```js
+const transformData = composeAsync(func1, func2, func3);
 const result3 = transformData(data);
-</pre>
+```
 
-<p>In ECMAScript 2017, sequential composition can be done more with async/await:</p>
+In ECMAScript 2017, sequential composition can be done more with async/await:
 
-<pre class="brush: js">let result;
+```js
+let result;
 for (const f of [func1, func2, func3]) {
   result = await f(result);
 }
 /* use last result (i.e. result3) */
-</pre>
+```
 
-<h2 id="Timing">Timing</h2>
+## Timing
 
-<p>To avoid surprises, functions passed to <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then">then()</a></code> will never be called synchronously, even with an already-resolved promise:</p>
+To avoid surprises, functions passed to
+[`then()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then)
+will never be called synchronously, even with an already-resolved promise:
 
-<pre class="brush: js">Promise.resolve().then(() =&gt; console.log(2));
+```js
+Promise.resolve().then(() => console.log(2));
 console.log(1); // 1, 2
-</pre>
+```
 
-<p>Instead of running immediately, the passed-in function is put on a microtask queue, which means it runs later (only after the function which created it exits, and when the JavaScript execution stack is empty), just before control is returned to the event loop; i.e. pretty soon:</p>
+Instead of running immediately, the passed-in function is put on a microtask
+queue, which means it runs later (only after the function which created it
+exits, and when the JavaScript execution stack is empty), just before control is
+returned to the event loop; i.e. pretty soon:
 
-<pre class="brush: js">const wait = ms =&gt; new Promise(resolve =&gt; setTimeout(resolve, ms));
+```js
+const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
 
-wait(0).then(() =&gt; console.log(4));
-Promise.resolve().then(() =&gt; console.log(2)).then(() =&gt; console.log(3));
+wait(0).then(() => console.log(4));
+Promise.resolve().then(() => console.log(2)).then(() => console.log(3));
 console.log(1); // 1, 2, 3, 4
-</pre>
+```
 
-<h4 id="Task_queues_vs_microtasks">Task queues vs microtasks</h4>
+#### Task queues vs microtasks
 
-<p>Promise callbacks are handled as a <a href="/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide">Microtask</a> whereas <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">setTimeout()</a></code> callbacks are handled as Task queues.</p>
+Promise callbacks are handled as a
+[Microtask](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide) whereas
+[`setTimeout()`](/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout)
+callbacks are handled as Task queues.
 
-<pre class="brush: js">const promise = new Promise(function(resolve, reject) {
+```js
+const promise = new Promise(function(resolve, reject) {
   console.log("Promise callback");
   resolve();
 }).then(function(result) {
@@ -299,87 +419,124 @@ setTimeout(function() {
 }, 0);
 
 console.log("Promise (pending)", promise);
-</pre>
+```
 
-<p>The code above will output:</p>
+The code above will output:
 
-<pre class="brush: plain">Promise callback
-Promise (pending) Promise {&lt;pending&gt;}
+```plain
+Promise callback
+Promise (pending) Promise {<pending>}
 Promise callback (.then)
-event-loop cycle: Promise (fulfilled) Promise {&lt;fulfilled&gt;}</pre>
+event-loop cycle: Promise (fulfilled) Promise {<fulfilled>}
+```
 
-<p>For more details, refer to <a href="/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide/In_depth#tasks_vs_microtasks">Tasks vs microtasks</a>.</p>
+For more details, refer to
+[Tasks vs microtasks](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide/In_depth#tasks_vs_microtasks).
 
-<h2 id="Nesting">Nesting</h2>
+## Nesting
 
-<p>Simple promise chains are best kept flat without nesting, as nesting can be a result of careless composition. See <a href="#common_mistakes">common mistakes</a>.</p>
+Simple promise chains are best kept flat without nesting, as nesting can be a
+result of careless composition. See [common mistakes](#common_mistakes).
 
-<p>Nesting is a control structure to limit the scope of <code>catch</code> statements. Specifically, a nested <code>catch</code> only catches failures in its scope and below, not errors higher up in the chain outside the nested scope. When used correctly, this gives greater precision in error recovery:</p>
+Nesting is a control structure to limit the scope of `catch` statements.
+Specifically, a nested `catch` only catches failures in its scope and below, not
+errors higher up in the chain outside the nested scope. When used correctly,
+this gives greater precision in error recovery:
 
-<pre class="brush: js">doSomethingCritical()
-.then(result =&gt; doSomethingOptional(result)
-  .then(optionalResult =&gt; doSomethingExtraNice(optionalResult))
-  .catch(e =&gt; {})) // Ignore if optional stuff fails; proceed.
-.then(() =&gt; moreCriticalStuff())
-.catch(e =&gt; console.error("Critical failure: " + e.message));
-</pre>
+```js
+doSomethingCritical()
+.then(result => doSomethingOptional(result)
+  .then(optionalResult => doSomethingExtraNice(optionalResult))
+  .catch(e => {})) // Ignore if optional stuff fails; proceed.
+.then(() => moreCriticalStuff())
+.catch(e => console.error("Critical failure: " + e.message));
+```
 
-<p>Note that the optional steps here are nested, not from the indentation, but from the precarious placement of the outer <code>(</code> and <code>)</code> around them.</p>
+Note that the optional steps here are nested, not from the indentation, but from
+the precarious placement of the outer `(` and `)` around them.
 
-<p>The inner neutralizing <code>catch</code> statement only catches failures from <code>doSomethingOptional()</code> and <code>doSomethingExtraNice()</code>, after which the code resumes with <code>moreCriticalStuff()</code>. Importantly, if <code>doSomethingCritical()</code> fails, its error is caught by the final (outer) <code>catch</code> only.</p>
+The inner neutralizing `catch` statement only catches failures from
+`doSomethingOptional()` and `doSomethingExtraNice()`, after which the code
+resumes with `moreCriticalStuff()`. Importantly, if `doSomethingCritical()`
+fails, its error is caught by the final (outer) `catch` only.
 
-<h2 id="Common_mistakes">Common mistakes</h2>
+## Common mistakes
 
-<p>Here are some common mistakes to watch out for when composing promise chains. Several of these mistakes manifest in the following example:</p>
+Here are some common mistakes to watch out for when composing promise chains.
+Several of these mistakes manifest in the following example:
 
-<pre class="brush: js example-bad">// Bad example! Spot 3 mistakes!
+```js example-bad
+// Bad example! Spot 3 mistakes!
 
 doSomething().then(function(result) {
   doSomethingElse(result) // Forgot to return promise from inner chain + unnecessary nesting
-  .then(newResult =&gt; doThirdThing(newResult));
-}).then(() =&gt; doFourthThing());
+  .then(newResult => doThirdThing(newResult));
+}).then(() => doFourthThing());
 // Forgot to terminate chain with a catch!
-</pre>
+```
 
-<p>The first mistake is to not chain things together properly. This happens when we create a new promise but forget to return it. As a consequence, the chain is broken, or rather, we have two independent chains racing. This means <code>doFourthThing()</code> won't wait for   <code>doSomethingElse()</code> or <code>doThirdThing()</code> to finish, and will run in parallel with them, likely unintended. Separate chains also have separate error handling, leading to uncaught errors.</p>
+The first mistake is to not chain things together properly. This happens when we
+create a new promise but forget to return it. As a consequence, the chain is
+broken, or rather, we have two independent chains racing. This
+means `doFourthThing()` won't wait for   `doSomethingElse()` or `doThirdThing()`
+to finish, and will run in parallel with them, likely unintended. Separate
+chains also have separate error handling, leading to uncaught errors.
 
-<p>The second mistake is to nest unnecessarily, enabling the first mistake. Nesting also limits the scope of inner error handlers, which—if unintended—can lead to uncaught errors. A variant of this is the <a href="https://stackoverflow.com/questions/23803743/what-is-the-explicit-promise-construction-antipattern-and-how-do-i-avoid-it">promise constructor anti-pattern</a>, which combines nesting with redundant use of the promise constructor to wrap code that already uses promises.</p>
+The second mistake is to nest unnecessarily, enabling the first mistake. Nesting
+also limits the scope of inner error handlers, which—if unintended—can lead to
+uncaught errors. A variant of this is the
+[promise constructor anti-pattern](https://stackoverflow.com/questions/23803743/what-is-the-explicit-promise-construction-antipattern-and-how-do-i-avoid-it),
+which combines nesting with redundant use of the promise constructor to wrap
+code that already uses promises.
 
-<p>The third mistake is forgetting to terminate chains with <code>catch</code>. Unterminated promise chains lead to uncaught promise rejections in most browsers.</p>
+The third mistake is forgetting to terminate chains with `catch`. Unterminated
+promise chains lead to uncaught promise rejections in most browsers.
 
-<p>A good rule-of-thumb is to always either return or terminate promise chains, and as soon as you get a new promise, return it immediately, to flatten things:</p>
+A good rule-of-thumb is to always either return or terminate promise chains, and
+as soon as you get a new promise, return it immediately, to flatten things:
 
-<pre class="brush: js example-good">doSomething()
+```js example-good
+doSomething()
 .then(function(result) {
   return doSomethingElse(result);
 })
-.then(newResult =&gt; doThirdThing(newResult))
-.then(() =&gt; doFourthThing())
-.catch(error =&gt; console.error(error));
-</pre>
+.then(newResult => doThirdThing(newResult))
+.then(() => doFourthThing())
+.catch(error => console.error(error));
+```
 
-<p>Note that <code>() =&gt; x</code> is short for <code>() =&gt; { return x; }</code>.</p>
+Note that `() => x` is short for `() => { return x; }`.
 
-<p>Now we have a single deterministic chain with proper error handling.</p>
+Now we have a single deterministic chain with proper error handling.
 
-<p>Using <a href="/en-US/docs/Web/JavaScript/Reference/Statements/async_function"><code>async</code>/<code>await</code></a> addresses most, if not all of these problems—the tradeoff being that the most common mistake with that syntax is forgetting the <a href="/en-US/docs/Web/JavaScript/Reference/Statements/async_function"><code>await</code></a> keyword.</p>
+Using
+[`async`/`await`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
+addresses most, if not all of these problems—the tradeoff being that the most
+common mistake with that syntax is forgetting the
+[`await`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
+keyword.
 
-<h2 id="When_promises_and_tasks_collide">When promises and tasks collide</h2>
+## When promises and tasks collide
 
-<p>If you run into situations in which you have promises and tasks (such as events or callbacks) which are firing in unpredictable orders, it's possible you may benefit from using a microtask to check status or balance out your promises when promises are created conditionally.</p>
+If you run into situations in which you have promises and tasks (such as events
+or callbacks) which are firing in unpredictable orders, it's possible you may
+benefit from using a microtask to check status or balance out your promises when
+promises are created conditionally.
 
-<p>If you think microtasks may help solve this problem, see the <a href="/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide">microtask guide</a> to learn more about how to use <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/queueMicrotask" title="The queueMicrotask() method, which is exposed on the Window or Worker interface, queues a microtask to be executed at a safe time prior to control returning to the browser's event loop."><code>queueMicrotask()</code></a> to enqueue a function as a microtask.</p>
+If you think microtasks may help solve this problem, see the
+[microtask guide](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide) to learn
+more about how to use
+[`queueMicrotask()`](/en-US/docs/Web/API/WindowOrWorkerGlobalScope/queueMicrotask "The queueMicrotask() method, which is exposed on the Window or Worker interface, queues a microtask to be executed at a safe time prior to control returning to the browser's event loop.")
+to enqueue a function as a microtask.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("Promise.then()")}}</li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/async_function"><code>async</code>/<code>await</code></a> </li>
- <li><a href="http://promisesaplus.com/">Promises/A+ specification</a></li>
- <li><a href="https://medium.com/@ramsunvtech/promises-of-promise-part-1-53f769245a53">Venkatraman.R - JS Promise (Part 1, Basics)</a></li>
- <li><a href="https://medium.com/@ramsunvtech/js-promise-part-2-q-js-when-js-and-rsvp-js-af596232525c#.dzlqh6ski">Venkatraman.R - JS Promise (Part 2 - Using Q.js, When.js and RSVP.js)</a></li>
- <li><a href="https://tech.io/playgrounds/11107/tools-for-promises-unittesting/introduction">Venkatraman.R - Tools for Promises Unit Testing</a></li>
- <li><a href="http://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html">Nolan Lawson: We have a problem with promises — Common mistakes with promises</a></li>
-</ul>
+- {{jsxref("Promise.then()")}}
+- [`async`/`await`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
+- [Promises/A+ specification](http://promisesaplus.com/)
+- [Venkatraman.R - JS Promise (Part 1, Basics)](https://medium.com/@ramsunvtech/promises-of-promise-part-1-53f769245a53)
+- [Venkatraman.R - JS Promise (Part 2 - Using Q.js, When.js and RSVP.js)](https://medium.com/@ramsunvtech/js-promise-part-2-q-js-when-js-and-rsvp-js-af596232525c#.dzlqh6ski)
+- [Venkatraman.R - Tools for Promises Unit Testing](https://tech.io/playgrounds/11107/tools-for-promises-unittesting/introduction)
+- [Nolan Lawson: We have a problem with promises — Common mistakes with promises](http://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html)
 
-<p>{{PreviousNext("Web/JavaScript/Guide/Details_of_the_Object_Model", "Web/JavaScript/Guide/Iterators_and_Generators")}}</p>
+{{PreviousNext("Web/JavaScript/Guide/Details_of_the_Object_Model", "Web/JavaScript/Guide/Iterators_and_Generators")}}

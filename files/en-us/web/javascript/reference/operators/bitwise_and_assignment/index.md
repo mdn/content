@@ -2,48 +2,47 @@
 title: Bitwise AND assignment (&=)
 slug: Web/JavaScript/Reference/Operators/Bitwise_AND_assignment
 tags:
-- Assignment operator
-- JavaScript
-- Language feature
-- Operator
-- Reference
+  - Assignment operator
+  - JavaScript
+  - Language feature
+  - Operator
+  - Reference
 browser-compat: javascript.operators.bitwise_and_assignment
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>The bitwise AND assignment operator (<code>&amp;=</code>) uses the binary
-  representation of both operands, does a bitwise AND operation on them and assigns the
-  result to the variable.</p>
+The bitwise AND assignment operator (`&=`) uses the binary representation of
+both operands, does a bitwise AND operation on them and assigns the result to
+the variable.
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-bitwise-and-assignment.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-bitwise-and-assignment.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">x &amp;= y // x = x &amp; y</pre>
+```js
+x &= y // x = x & y
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_bitwise_AND_assignment">Using bitwise AND assignment</h3>
+### Using bitwise AND assignment
 
-<pre class="brush: js">let a = 5;
+```js
+let a = 5;
 // 5:     00000000000000000000000000000101
 // 2:     00000000000000000000000000000010
-a &amp;= 2; // 0</pre>
+a &= 2; // 0
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a
-      href="/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment">Assignment
-      operators in the JS guide</a></li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_AND">Bitwise AND
-      operator</a></li>
-</ul>
+- [Assignment operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment)
+- [Bitwise AND operator](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_AND)

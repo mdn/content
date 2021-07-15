@@ -2,72 +2,71 @@
 title: String.prototype.repeat()
 slug: Web/JavaScript/Reference/Global_Objects/String/repeat
 tags:
-- ECMAScript 2015
-- JavaScript
-- Method
-- Prototype
-- Reference
-- String
-- Polyfill
+  - ECMAScript 2015
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
+  - String
+  - Polyfill
 browser-compat: javascript.builtins.String.repeat
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>repeat()</code></strong> method constructs and returns a new string
-  which contains the specified number of copies of the string on which it was called,
-  concatenated together.</p>
+The **`repeat()`** method constructs and returns a new string which contains the
+specified number of copies of the string on which it was called, concatenated
+together.
 
-<div>{{EmbedInteractiveExample("pages/js/string-repeat.html","shorter")}}</div>
+{{EmbedInteractiveExample("pages/js/string-repeat.html","shorter")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+repeat(count)
+```
 
-<pre class="brush: js">repeat(count)</pre>
+### Parameters
 
-<h3 id="Parameters">Parameters</h3>
+- `count`
+  - : An integer between `0` and
+    {{jsxref("Global_Objects/Number/POSITIVE_INFINITY", "+Infinity")}},
+    indicating the number of times to repeat the string.
 
-<dl>
-  <dt><code><var>count</var></code></dt>
-  <dd>An integer between <code>0</code> and
-    {{jsxref("Global_Objects/Number/POSITIVE_INFINITY", "+Infinity")}}, indicating the
-    number of times to repeat the string.</dd>
-</dl>
+### Return value
 
-<h3 id="Return_value">Return value</h3>
+A new string containing the specified number of copies of the given string.
 
-<p>A new string containing the specified number of copies of the given string.</p>
+### Exceptions
 
-<h3 id="Exceptions">Exceptions</h3>
+- {{jsxref("Errors/Negative_repetition_count", "RangeError")}}:
+  repeat count must be non-negative.
+- {{jsxref("Errors/Resulting_string_too_large", "RangeError")}}:
+  repeat count must be less than infinity and not overflow maximum string size.
 
-<ul>
-  <li>{{jsxref("Errors/Negative_repetition_count", "RangeError")}}: repeat count must be
-    non-negative.</li>
-  <li>{{jsxref("Errors/Resulting_string_too_large", "RangeError")}}: repeat count must be
-    less than infinity and not overflow maximum string size.</li>
-</ul>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Using repeat()
 
-<h3 id="Using_repeat">Using repeat()</h3>
-
-<pre class="brush: js">'abc'.repeat(-1)    // RangeError
+```js
+'abc'.repeat(-1)    // RangeError
 'abc'.repeat(0)     // ''
 'abc'.repeat(1)     // 'abc'
 'abc'.repeat(2)     // 'abcabc'
 'abc'.repeat(3.5)   // 'abcabcabc' (count will be converted to integer)
 'abc'.repeat(1/0)   // RangeError
 
-({ toString: () =&gt; 'abc', repeat: String.prototype.repeat }).repeat(2)
+({ toString: () => 'abc', repeat: String.prototype.repeat }).repeat(2)
 // 'abcabc' (repeat() is a generic method)
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>This method has been added to the ECMAScript 2015 specification and may not be
-  available in all JavaScript implementations yet. However, you can polyfill
-  <code>String.prototype.repeat()</code> with the following snippet:</p>
+This method has been added to the ECMAScript 2015 specification and may not be
+available in all JavaScript implementations yet. However, you can polyfill
+`String.prototype.repeat()` with the following snippet:
 
-<pre class="brush: js">if (!String.prototype.repeat) {
+```js
+if (!String.prototype.repeat) {
   String.prototype.repeat = function(count) {
     'use strict';
     if (this == null)
@@ -80,7 +79,7 @@ browser-compat: javascript.builtins.String.repeat
     if (count != count)
       count = 0;
 
-    if (count &lt; 0)
+    if (count < 0)
       throw new RangeError('repeat count must be non-negative');
 
     if (count == Infinity)
@@ -92,8 +91,8 @@ browser-compat: javascript.builtins.String.repeat
 
     // Ensuring count is a 31-bit integer allows us to heavily optimize the
     // main part. But anyway, most current (August 2014) browsers can't handle
-    // strings 1 &lt;&lt; 28 chars or longer, so:
-    if (str.length * count &gt;= 1 &lt;&lt; 28)
+    // strings 1 << 28 chars or longer, so:
+    if (str.length * count >= 1 << 28)
       throw new RangeError('repeat count must not overflow maximum string size');
 
     var maxCount = str.length * count;
@@ -106,19 +105,18 @@ browser-compat: javascript.builtins.String.repeat
     return str;
   }
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>A polyfill of <code>String.prototype.repeat</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-string-and-regexp"><code>core-js</code></a></li>
-  <li>{{jsxref("String.prototype.concat()")}}</li>
-</ul>
+- A polyfill of `String.prototype.repeat` is available in
+  [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- {{jsxref("String.prototype.concat()")}}

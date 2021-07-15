@@ -7,68 +7,68 @@ tags:
   - JavaScript
   - TypeError
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<p>The JavaScript strict mode exception "can't assign to property" occurs when attempting
-  to create a property on <a href="/en-US/docs/Glossary/Primitive">primitive</a> value
-  such as a <a href="/en-US/docs/Glossary/Symbol">symbol</a>, a <a
-    href="/en-US/docs/Glossary/String">string</a>, a <a
-    href="/en-US/docs/Glossary/Number">number</a> or a <a
-    href="/en-US/docs/Glossary/Boolean">boolean</a>. <a
-    href="/en-US/docs/Glossary/Primitive">Primitive</a> values cannot hold any <a
-    href="/en-US/docs/Glossary/property/JavaScript">property</a>.</p>
+The JavaScript strict mode exception "can't assign to property" occurs when
+attempting to create a property on [primitive](/en-US/docs/Glossary/Primitive)
+value such as a [symbol](/en-US/docs/Glossary/Symbol), a
+[string](/en-US/docs/Glossary/String), a [number](/en-US/docs/Glossary/Number)
+or a [boolean](/en-US/docs/Glossary/Boolean).
+[Primitive](/en-US/docs/Glossary/Primitive) values cannot hold any
+[property](/en-US/docs/Glossary/property/JavaScript).
 
-<h2 id="Message">Message</h2>
+## Message
 
-<pre class="brush: js">TypeError: can't assign to property &quot;x&quot; on {y}: not an object (Firefox)
+```js
+TypeError: can't assign to property "x" on {y}: not an object (Firefox)
 TypeError: Cannot create property 'x' on {y} (Chrome)
-</pre>
+```
 
-<h2 id="Error_type">Error type</h2>
+## Error type
 
-<p>{{jsxref("TypeError")}}.</p>
+{{jsxref("TypeError")}}.
 
-<h2 id="What_went_wrong">What went wrong?</h2>
+## What went wrong?
 
-<p>In {{jsxref("Strict_mode")}}, a {{jsxref("TypeError")}} is raised when attempting to
-  create a property on <a href="/en-US/docs/Glossary/Primitive">primitive</a> value such
-  as a <a href="/en-US/docs/Glossary/Symbol">symbol</a>, a <a
-    href="/en-US/docs/Glossary/String">string</a>, a <a
-    href="/en-US/docs/Glossary/Number">number</a> or a <a
-    href="/en-US/docs/Glossary/Boolean">boolean</a>. <a
-    href="/en-US/docs/Glossary/Primitive">Primitive</a> values cannot hold any <a
-    href="/en-US/docs/Glossary/property/JavaScript">property</a>.</p>
+In {{jsxref("Strict_mode")}}, a {{jsxref("TypeError")}} is
+raised when attempting to create a property on
+[primitive](/en-US/docs/Glossary/Primitive) value such as a
+[symbol](/en-US/docs/Glossary/Symbol), a [string](/en-US/docs/Glossary/String),
+a [number](/en-US/docs/Glossary/Number) or a
+[boolean](/en-US/docs/Glossary/Boolean).
+[Primitive](/en-US/docs/Glossary/Primitive) values cannot hold any
+[property](/en-US/docs/Glossary/property/JavaScript).
 
-<p>The problem might be that an unexpected value is flowing at an unexpected place, or
-  that an object variant of a {{jsxref("String")}} or a {{jsxref("Number")}} is expected.
-</p>
+The problem might be that an unexpected value is flowing at an unexpected place,
+or that an object variant of a {{jsxref("String")}} or a
+{{jsxref("Number")}} is expected.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Invalid_cases">Invalid cases</h3>
+### Invalid cases
 
-<pre class="brush: js example-bad">'use strict';
+```js example-bad
+'use strict';
 
 var foo = "my string";
 // The following line does nothing if not in strict mode.
 foo.bar = {}; // TypeError: can't assign to property "bar" on "my string": not an object
-</pre>
+```
 
-<h3 id="Fixing_the_issue">Fixing the issue</h3>
+### Fixing the issue
 
-<p>Either fix the code to prevent the <a
-    href="/en-US/docs/Glossary/Primitive">primitive</a> from being used in such places, or
-  fix the issue is to create the object equivalent {{jsxref("Object")}}.</p>
+Either fix the code to prevent the [primitive](/en-US/docs/Glossary/Primitive)
+from being used in such places, or fix the issue is to create the object
+equivalent {{jsxref("Object")}}.
 
-<pre class="brush: js example-good">'use strict';
+```js example-good
+'use strict';
 
 var foo = new String("my string");
 foo.bar = {};
-</pre>
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Strict_mode")}}</li>
-  <li><a href="/en-US/docs/Glossary/Primitive">primitive</a></li>
-</ul>
+- {{jsxref("Strict_mode")}}
+- [primitive](/en-US/docs/Glossary/Primitive)

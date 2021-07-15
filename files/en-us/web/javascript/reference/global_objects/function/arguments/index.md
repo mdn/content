@@ -9,27 +9,38 @@ tags:
   - arguments
 browser-compat: javascript.builtins.Function.arguments
 ---
-<div>{{JSRef}} {{deprecated_header}}</div>
+{{JSRef}} {{deprecated_header}}
 
-<p>The <code><strong>function.arguments</strong></code> property refers to an array-like object corresponding to the arguments passed to a function. Use the simple variable {{jsxref("Functions/arguments", "arguments")}} instead. This property is restricted to non-strict functions.</p>
+The **`function.arguments`** property refers to an array-like object
+corresponding to the arguments passed to a function. Use the simple variable
+{{jsxref("Functions/arguments", "arguments")}} instead. This
+property is restricted to non-strict functions.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The syntax <code><em>function</em>.arguments</code> is deprecated. The recommended way to access the {{jsxref("Functions/arguments", "arguments")}} object available within functions is to refer to the variable {{jsxref("Functions/arguments", "arguments")}}.</p>
+The syntax `function.arguments` is deprecated. The recommended way to access the
+{{jsxref("Functions/arguments", "arguments")}} object available
+within functions is to refer to the variable
+{{jsxref("Functions/arguments", "arguments")}}.
 
-<p>In the case of recursion, i.e. if function <code>f</code> appears several times on the call stack, the value of <code>f.arguments</code> represents the arguments corresponding to the most recent invocation of the function.</p>
+In the case of recursion, i.e. if function `f` appears several times on the call
+stack, the value of `f.arguments` represents the arguments corresponding to the
+most recent invocation of the function.
 
-<p>The value of the arguments property is normally null if there is no outstanding invocation of the function in progress (that is, the function has been called but has not yet returned.</p>
+The value of the arguments property is normally null if there is no outstanding
+invocation of the function in progress (that is, the function has been called
+but has not yet returned.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_the_arguments_object">Using the arguments object</h3>
+### Using the arguments object
 
-<pre class="brush: js">function f(n) { g(n - 1) }
+```js
+function f(n) { g(n - 1) }
 
 function g(n) {
   console.log('before: ' + g.arguments[0])
-  if (n &gt; 0) { f(n) }
+  if (n > 0) { f(n) }
   console.log('after: ' + g.arguments[0])
 }
 
@@ -44,19 +55,18 @@ console.log('returned: ' + g.arguments)
 // after: 0
 // after: 1
 // returned: null
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p><span class="pl-s">Not part of any standard.</span> Deprecated in favor of {{jsxref("Functions/arguments", "arguments")}} in ECMAScript 3.</p>
+Not part of any standard. Deprecated in favor of
+{{jsxref("Functions/arguments", "arguments")}} in ECMAScript 3.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("Functions/arguments", "arguments")}} object</li>
- <li>{{jsxref("Functions", "Functions and function scope", "", 1)}}</li>
-</ul>
+- {{jsxref("Functions/arguments", "arguments")}} object
+- {{jsxref("Functions", "Functions and function scope", "", 1)}}

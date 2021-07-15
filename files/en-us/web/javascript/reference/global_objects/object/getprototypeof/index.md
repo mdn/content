@@ -9,73 +9,73 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Object.getPrototypeOf
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>Object.getPrototypeOf()</code></strong> method returns the prototype
-  (i.e. the value of the internal <code>[[Prototype]]</code> property) of the specified
-  object.</p>
+The **`Object.getPrototypeOf()`** method returns the prototype (i.e. the value
+of the internal `[[Prototype]]` property) of the specified object.
 
-<div>{{EmbedInteractiveExample("pages/js/object-getprototypeof.html")}}</div>
+{{EmbedInteractiveExample("pages/js/object-getprototypeof.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+Object.getPrototypeOf(obj)
+```
 
-<pre class="brush: js">Object.getPrototypeOf(<var>obj</var>)</pre>
+### Parameters
 
-<h3 id="Parameters">Parameters</h3>
+- `obj`
+  - : The object whose prototype is to be returned.
 
-<dl>
-  <dt><code><var>obj</var></code></dt>
-  <dd>The object whose prototype is to be returned.</dd>
-</dl>
+### Return value
 
-<h3 id="Return_value">Return value</h3>
+The prototype of the given object. If there are no inherited properties,
+{{jsxref("null")}} is returned.
 
-<p>The prototype of the given object. If there are no inherited properties,
-  {{jsxref("null")}} is returned.</p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Using getPrototypeOf
 
-<h3 id="Using_getPrototypeOf">Using getPrototypeOf</h3>
-
-<pre class="brush: js">var proto = {};
+```js
+var proto = {};
 var obj = Object.create(proto);
 Object.getPrototypeOf(obj) === proto; // true
-</pre>
+```
 
-<h3 id="Non-object_coercion">Non-object coercion</h3>
+### Non-object coercion
 
-<p>In ES5, it will throw a {{jsxref("TypeError")}} exception if the <var>obj</var>
-  parameter isn't an object. In ES2015, the parameter will be coerced to an
-  {{jsxref("Object")}}.</p>
+In ES5, it will throw a {{jsxref("TypeError")}} exception if the _obj_
+parameter isn't an object. In ES2015, the parameter will be coerced to an
+{{jsxref("Object")}}.
 
-<pre class="brush: js">Object.getPrototypeOf('foo');
+```js
+Object.getPrototypeOf('foo');
 // TypeError: "foo" is not an object (ES5 code)
 Object.getPrototypeOf('foo');
 // String.prototype                  (ES2015 code)
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h3 id="Opera-specific_notes">Opera-specific notes</h3>
+### Opera-specific notes
 
-<p>Even though older Opera versions don't support <code>Object.getPrototypeOf()</code>
-  yet, Opera supports the non-standard {{jsxref("Object.proto", "__proto__")}} property
-  since Opera 10.50.</p>
+Even though older Opera versions don't support `Object.getPrototypeOf()` yet,
+Opera supports the non-standard
+{{jsxref("Object.proto", "__proto__")}} property since Opera 10.50.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>A polyfill of <code>Object.getPrototypeOf</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-object"><code>core-js</code></a></li>
-  <li>{{jsxref("Object.prototype.isPrototypeOf()")}}</li>
-  <li>{{jsxref("Object.setPrototypeOf()")}}</li>
-  <li>{{jsxref("Object/proto","Object.prototype.__proto__")}}</li>
-  <li>John Resig's post on <a       href="http://ejohn.org/blog/objectgetprototypeof/">getPrototypeOf</a></li>
-  <li>{{jsxref("Reflect.getPrototypeOf()")}}</li>
-</ul>
+- A polyfill of `Object.getPrototypeOf` is available in
+  [`core-js`](https://github.com/zloirock/core-js#ecmascript-object)
+- {{jsxref("Object.prototype.isPrototypeOf()")}}
+- {{jsxref("Object.setPrototypeOf()")}}
+- {{jsxref("Object/proto","Object.prototype.__proto__")}}
+- John Resig's post on
+  [getPrototypeOf](http://ejohn.org/blog/objectgetprototypeof/)
+- {{jsxref("Reflect.getPrototypeOf()")}}

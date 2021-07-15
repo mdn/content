@@ -2,69 +2,70 @@
 title: Promise.resolve()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/resolve
 tags:
-- ECMAScript 2015
-- JavaScript
-- Method
-- Promise
-- Reference
+  - ECMAScript 2015
+  - JavaScript
+  - Method
+  - Promise
+  - Reference
 browser-compat: javascript.builtins.Promise.resolve
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>Promise.resolve()</code></strong> method returns a
-  {{jsxref("Promise")}} object that is resolved with a given value. If the value is a
-  promise, that promise is returned; if the value is a thenable (i.e. has a
-  {{jsxref("Promise.then", "\"then\" method")}}), the returned promise will "follow" that
-  thenable, adopting its eventual state; otherwise the returned promise will be fulfilled
-  with the value. This function flattens nested layers of promise-like objects (e.g. a
-  promise that resolves to a promise that resolves to something) into a single layer.</p>
+The **`Promise.resolve()`** method returns a {{jsxref("Promise")}} object
+that is resolved with a given value. If the value is a promise, that promise is
+returned; if the value is a thenable (i.e. has a
+{{jsxref("Promise.then", "\"then\" method")}}), the returned
+promise will "follow" that thenable, adopting its eventual state; otherwise the
+returned promise will be fulfilled with the value. This function flattens nested
+layers of promise-like objects (e.g. a promise that resolves to a promise that
+resolves to something) into a single layer.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">Promise.resolve(<var>value</var>);
-</pre>
+```js
+Promise.resolve(value);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>value</var></code></dt>
-  <dd>Argument to be resolved by this <code>Promise</code>. Can also be a
-    <code>Promise</code> or a thenable to resolve.</dd>
-</dl>
+- `value`
+  - : Argument to be resolved by this `Promise`. Can also be a `Promise` or a
+    thenable to resolve.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref("Promise")}} that is resolved with the given value, or the promise passed as
-  value, if the value was a promise object.</p>
+A {{jsxref("Promise")}} that is resolved with the given value, or the
+promise passed as value, if the value was a promise object.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The static <code>Promise.resolve</code> function returns a <code>Promise</code> that is
-  resolved.</p>
+The static `Promise.resolve` function returns a `Promise` that is resolved.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_the_static_Promise.resolve_method">Using the static Promise.resolve method
-</h3>
+### Using the static Promise.resolve method
 
-<pre class="brush: js">Promise.resolve('Success').then(function(value) {
+```js
+Promise.resolve('Success').then(function(value) {
   console.log(value); // "Success"
 }, function(value) {
   // not called
 });
-</pre>
+```
 
-<h3 id="Resolving_an_array">Resolving an array</h3>
+### Resolving an array
 
-<pre class="brush: js">var p = Promise.resolve([1,2,3]);
+```js
+var p = Promise.resolve([1,2,3]);
 p.then(function(v) {
   console.log(v[0]); // 1
 });
-</pre>
+```
 
-<h3 id="Resolving_another_Promise">Resolving another Promise</h3>
+### Resolving another Promise
 
-<pre class="brush: js">var original = Promise.resolve(33);
+```js
+var original = Promise.resolve(33);
 var cast = Promise.resolve(original);
 cast.then(function(value) {
   console.log('value: ' + value);
@@ -74,17 +75,16 @@ console.log('original === cast ? ' + (original === cast));
 // logs, in order:
 // original === cast ? true
 // value: 33
-</pre>
+```
 
-<p>The inverted order of the logs is due to the fact that the <code>then</code> handlers
-  are called asynchronously. See how <code>then</code> works <a
-    href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then#Return_value">here</a>.
-</p>
+The inverted order of the logs is due to the fact that the `then` handlers are
+called asynchronously. See how `then` works
+[here](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then#Return_value).
 
-<h3 id="Resolving_thenables_and_throwing_Errors">Resolving thenables and throwing Errors
-</h3>
+### Resolving thenables and throwing Errors
 
-<pre class="brush: js">// Resolving a thenable object
+```js
+// Resolving a thenable object
 var p1 = Promise.resolve({
   then: function(onFulfill, onReject) { onFulfill('fulfilled!'); }
 });
@@ -123,19 +123,16 @@ p3.then(function(v) {
 }, function(e) {
   // not called
 });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat}}
 
-<p>{{Compat}}</p>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
-  <li>{{jsxref("Promise")}}</li>
-</ul>
+- {{jsxref("Promise")}}

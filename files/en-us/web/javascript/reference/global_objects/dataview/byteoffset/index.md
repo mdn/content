@@ -9,41 +9,43 @@ tags:
   - TypedArrays
 browser-compat: javascript.builtins.DataView.byteOffset
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>byteOffset</code></strong> accessor property represents the offset (in bytes) of this view from the start of its {{jsxref("ArrayBuffer")}} or {{jsxref("SharedArrayBuffer")}}.</p>
+The **`byteOffset`** accessor property represents the offset (in bytes) of this
+view from the start of its {{jsxref("ArrayBuffer")}} or
+{{jsxref("SharedArrayBuffer")}}.
 
-<div>{{EmbedInteractiveExample("pages/js/dataview-byteoffset.html")}}</div>
+{{EmbedInteractiveExample("pages/js/dataview-byteoffset.html")}}
 
+## Description
 
-<h2 id="Description">Description</h2>
+The `byteOffset` property is an accessor property whose set accessor function is
+`undefined`, meaning that you can only read this property. The value is
+established when an `DataView` is constructed and cannot be changed.
 
-<p>The <code>byteOffset</code> property is an accessor property whose set accessor function is <code>undefined</code>, meaning that you can only read this property. The value is established when an <code>DataView</code> is constructed and cannot be changed.</p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Using the byteOffset property
 
-<h3 id="Using_the_byteOffset_property">Using the byteOffset property</h3>
-
-<pre class="brush:js">var buffer = new ArrayBuffer(8);
+```js
+var buffer = new ArrayBuffer(8);
 var dataview = new DataView(buffer);
 dataview.byteOffset; // 0 (no offset specified)
 
 var dataview2 = new DataView(buffer, 3);
 dataview2.byteOffset; // 3 (as specified when constructing the DataView)
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("DataView")}}</li>
- <li>{{jsxref("ArrayBuffer")}}</li>
- <li>{{jsxref("SharedArrayBuffer")}}</li>
-</ul>
+- {{jsxref("DataView")}}
+- {{jsxref("ArrayBuffer")}}
+- {{jsxref("SharedArrayBuffer")}}

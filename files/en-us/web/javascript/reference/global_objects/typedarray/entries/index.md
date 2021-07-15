@@ -2,72 +2,75 @@
 title: TypedArray.prototype.entries()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/entries
 tags:
-- ECMAScript 2015
-- Iterator
-- JavaScript
-- Method
-- Prototype
-- Reference
-- TypedArray
-- TypedArrays
-- Polyfill
+  - ECMAScript 2015
+  - Iterator
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
+  - TypedArray
+  - TypedArrays
+  - Polyfill
 browser-compat: javascript.builtins.TypedArray.entries
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>entries()</code></strong> method returns a new {{jsxref("Array")}}
-  iterator object that contains the key/value pairs for each index in the array.</p>
+The **`entries()`** method returns a new {{jsxref("Array")}} iterator
+object that contains the key/value pairs for each index in the array.
 
-<div>{{EmbedInteractiveExample("pages/js/typedarray-entries.html")}}</div>
+{{EmbedInteractiveExample("pages/js/typedarray-entries.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">entries()</pre>
+```js
+entries()
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A new array iterator object.</p>
+A new array iterator object.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Iteration_using_for...of_loop">Iteration using for...of loop</h3>
+### Iteration using for...of loop
 
-<pre class="brush: js">var arr = new Uint8Array([10, 20, 30, 40, 50]);
+```js
+var arr = new Uint8Array([10, 20, 30, 40, 50]);
 var eArray = arr.entries();
 // your browser must support for..of loop
 // and let-scoped variables in for loops
 for (let n of eArray) {
   console.log(n);
 }
-</pre>
+```
 
-<h3 id="Alternative_iteration">Alternative iteration</h3>
+### Alternative iteration
 
-<pre class="brush: js">var arr = new Uint8Array([10, 20, 30, 40, 50]);
+```js
+var arr = new Uint8Array([10, 20, 30, 40, 50]);
 var eArr = arr.entries();
 console.log(eArr.next().value); // [0, 10]
 console.log(eArr.next().value); // [1, 20]
 console.log(eArr.next().value); // [2, 30]
 console.log(eArr.next().value); // [3, 40]
 console.log(eArr.next().value); // [4, 50]
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>A polyfill of <code>TypedArray.prototype.entries</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-typed-arrays"><code>core-js</code></a></li>
-  <li><a href="/en-US/docs/Web/JavaScript/Typed_arrays">JavaScript typed arrays</a></li>
-  <li>{{jsxref("TypedArray")}}</li>
-  <li>{{jsxref("TypedArray.prototype.keys()")}}</li>
-  <li>{{jsxref("TypedArray.prototype.values()")}}</li>
-  <li>{{jsxref("TypedArray.prototype.@@iterator()",
-    "TypedArray.prototype[@@iterator]()")}}</li>
-</ul>
+- A polyfill of `TypedArray.prototype.entries` is available in
+  [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- {{jsxref("TypedArray")}}
+- {{jsxref("TypedArray.prototype.keys()")}}
+- {{jsxref("TypedArray.prototype.values()")}}
+- {{jsxref("TypedArray.prototype.@@iterator()",
+    "TypedArray.prototype[@@iterator]()")}}

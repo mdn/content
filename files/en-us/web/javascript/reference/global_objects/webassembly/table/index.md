@@ -9,83 +9,102 @@ tags:
   - table
 browser-compat: javascript.builtins.WebAssembly.Table
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <code><strong>WebAssembly.Table()</strong></code> object is a JavaScript wrapper object — an array-like structure representing a WebAssembly Table, which stores function references. A table created by JavaScript or in WebAssembly code will be accessible and mutable from both JavaScript and WebAssembly.</p>
+The **`WebAssembly.Table()`** object is a JavaScript wrapper object — an
+array-like structure representing a WebAssembly Table, which stores function
+references. A table created by JavaScript or in WebAssembly code will be
+accessible and mutable from both JavaScript and WebAssembly.
 
-<div class="note">
-<p><strong>Note:</strong> Tables can currently only store function references, but this will likely be expanded in the future.</p>
-</div>
+> **Note:** Tables can currently only store function references, but this will
+> likely be expanded in the future.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/Table"><code>WebAssembly.Table()</code></a></dt>
- <dd>Creates a new <code>Table</code> object.</dd>
-</dl>
+- [`WebAssembly.Table()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/Table)
+  - : Creates a new `Table` object.
 
-<h2 id="Instance_properties">Instance properties</h2>
+## Instance properties
 
-<dl>
- <dt>{{jsxref("WebAssembly/Table/length","Table.prototype.length")}}</dt>
- <dd>Returns the length of the table, i.e. the number of elements.</dd>
-</dl>
+- {{jsxref("WebAssembly/Table/length","Table.prototype.length")}}
+  - : Returns the length of the table, i.e. the number of elements.
 
-<h2 id="Instance_methods">Instance methods</h2>
+## Instance methods
 
-<dl>
- <dt>{{jsxref("WebAssembly/Table/get","Table.prototype.get()")}}</dt>
- <dd>Accessor function — gets the element stored at a given index.</dd>
- <dt>{{jsxref("WebAssembly/Table/grow","Table.prototype.grow()")}}</dt>
- <dd>Increases the size of the Table instance by a specified number of elements.</dd>
- <dt>{{jsxref("WebAssembly/Table/set","Table.prototype.set()")}}</dt>
- <dd>Sets an element stored at a given index to a given value.</dd>
-</dl>
+- {{jsxref("WebAssembly/Table/get","Table.prototype.get()")}}
+  - : Accessor function — gets the element stored at a given index.
+- {{jsxref("WebAssembly/Table/grow","Table.prototype.grow()")}}
+  - : Increases the size of the Table instance by a specified number of
+    elements.
+- {{jsxref("WebAssembly/Table/set","Table.prototype.set()")}}
+  - : Sets an element stored at a given index to a given value.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Creating_a_new_WebAssembly_Table_instance">Creating a new WebAssembly Table instance</h3>
+### Creating a new WebAssembly Table instance
 
-<p>The following example (see table2.html <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.html">source code</a> and <a href="https://mdn.github.io/webassembly-examples/js-api-examples/table2.html">live version</a>) creates a new WebAssembly Table instance with an initial size of 2 elements. We then print out the table length and contents of the two indexes (retrieved via {{jsxref("WebAssembly/Table/get", "Table.prototype.get()")}} to show that the length is two and both elements are {{jsxref("null")}}.</p>
+The following example (see table2.html
+[source code](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.html)
+and
+[live version](https://mdn.github.io/webassembly-examples/js-api-examples/table2.html))
+creates a new WebAssembly Table instance with an initial size of 2 elements. We
+then print out the table length and contents of the two indexes (retrieved via
+{{jsxref("WebAssembly/Table/get", "Table.prototype.get()")}}
+to show that the length is two and both elements are {{jsxref("null")}}.
 
-<pre class="brush: js">var tbl = new WebAssembly.Table({initial:2, element:"anyfunc"});
+```js
+var tbl = new WebAssembly.Table({initial:2, element:"anyfunc"});
 console.log(tbl.length);  // "2"
 console.log(tbl.get(0));  // "null"
-console.log(tbl.get(1));  // "null"</pre>
+console.log(tbl.get(1));  // "null"
+```
 
-<p>We then create an import object that contains the table:</p>
+We then create an import object that contains the table:
 
-<pre class="brush: js">var importObj = {
+```js
+var importObj = {
   js: {
     tbl:tbl
   }
-};</pre>
+};
+```
 
-<p>Finally, we load and instantiate a wasm module (table2.wasm) using the {{jsxref("WebAssembly.instantiateStreaming()")}} method.  The table2.wasm module contains two functions (one that returns 42 and another that returns 83) and stores both into elements 0 and 1 of the imported table (see <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.wat">text representation</a>).  So after instantiation, the table still has length 2, but the elements now contain callable <a href="/en-US/docs/WebAssembly/Exported_functions">Exported WebAssembly Functions</a> which we can call from JS.</p>
+Finally, we load and instantiate a wasm module (table2.wasm) using the
+{{jsxref("WebAssembly.instantiateStreaming()")}} method.  The
+table2.wasm module contains two functions (one that returns 42 and another that
+returns 83) and stores both into elements 0 and 1 of the imported table (see
+[text representation](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.wat)). 
+So after instantiation, the table still has length 2, but the elements now
+contain callable
+[Exported WebAssembly Functions](/en-US/docs/WebAssembly/Exported_functions)
+which we can call from JS.
 
-<pre class="brush: js">WebAssembly.instantiateStreaming(fetch('table2.wasm'), importObject)
+```js
+WebAssembly.instantiateStreaming(fetch('table2.wasm'), importObject)
 .then(function(obj) {
   console.log(tbl.length);
   console.log(tbl.get(0)());
   console.log(tbl.get(1)());
-});</pre>
+});
+```
 
-<p>Note how you've got to include a second function invocation operator at the end of the accessor to actually invoke the referenced function and log the value stored inside it (e.g. <code>get(0)()</code> rather than <code>get(0)</code>) .</p>
+Note how you've got to include a second function invocation operator at the end
+of the accessor to actually invoke the referenced function and log the value
+stored inside it (e.g. `get(0)()` rather than `get(0)`) .
 
-<p>This example shows that we're creating and accessing the table from JavaScript, but the same table is visible and callable inside the wasm instance too.</p>
+This example shows that we're creating and accessing the table from JavaScript,
+but the same table is visible and callable inside the wasm instance too.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/WebAssembly">WebAssembly</a> overview page</li>
- <li><a href="/en-US/docs/WebAssembly/Concepts">WebAssembly concepts</a></li>
- <li><a href="/en-US/docs/WebAssembly/Using_the_JavaScript_API">Using the WebAssembly JavaScript API</a></li>
-</ul>
+- [WebAssembly](/en-US/docs/WebAssembly) overview page
+- [WebAssembly concepts](/en-US/docs/WebAssembly/Concepts)
+- [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)

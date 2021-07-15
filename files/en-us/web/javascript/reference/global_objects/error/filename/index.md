@@ -8,35 +8,37 @@ tags:
   - Prototype
 browser-compat: javascript.builtins.Error.fileName
 ---
-<div>{{JSRef}} {{non-standard_header}}</div>
+{{JSRef}} {{non-standard_header}}
 
-<p>The <code><strong>fileName</strong></code> property contains the path to the file that raised this error.</p>
+The **`fileName`** property contains the path to the file that raised this
+error.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>This non-standard property contains the path to the file that raised this error. If called from a debugger context, the Firefox Developer Tools for example, "debugger eval code" is returned.</p>
+This non-standard property contains the path to the file that raised this error.
+If called from a debugger context, the Firefox Developer Tools for example,
+"debugger eval code" is returned.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_fileName">Using fileName</h3>
+### Using fileName
 
-<pre class="brush: js">var e = new Error('Could not parse input');
+```js
+var e = new Error('Could not parse input');
 throw e;
 // e.fileName could look like "file:///C:/example.html"
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any standard.</p>
+Not part of any standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("Error.prototype.stack")}}</li>
- <li>{{jsxref("Error.prototype.columnNumber")}}</li>
- <li>{{jsxref("Error.prototype.lineNumber")}}</li>
-</ul>
+- {{jsxref("Error.prototype.stack")}}
+- {{jsxref("Error.prototype.columnNumber")}}
+- {{jsxref("Error.prototype.lineNumber")}}

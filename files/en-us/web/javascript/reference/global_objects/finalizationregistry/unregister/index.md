@@ -9,43 +9,46 @@ tags:
   - Reference
 browser-compat: javascript.builtins.FinalizationRegistry.unregister
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <code>unregister</code> unregisters a target object from a
-    {{jsxref("FinalizationRegistry")}} instance.</p>
+The `unregister` unregisters a target object from a
+{{jsxref("FinalizationRegistry")}} instance.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">unregister(unregisterToken);</pre>
+```js
+unregister(unregisterToken);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-    <dt><code><var>unregisterToken</var></code></dt>
-    <dd>The token used with the {{jsxref("FinalizationRegistry.prototype.register",
-        "register")}} method when registering the target object.</dd>
-</dl>
+- `unregisterToken`
+  - : The token used with the
+    {{jsxref("FinalizationRegistry.prototype.register",
+        "register")}}
+    method when registering the target object.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p><code>undefined</code>.</p>
+`undefined`.
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>When a target object has been reclaimed, it is no longer registered in the registry.
-    There is no need to all <code>unregister</code> in your cleanup callback. Only call
-    <code>unregister</code> if you haven't received a cleanup callback and no longer need
-    to receive one.</p>
+When a target object has been reclaimed, it is no longer registered in the
+registry. There is no need to all `unregister` in your cleanup callback. Only
+call `unregister` if you haven't received a cleanup callback and no longer need
+to receive one.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_unregister">Using unregister</h3>
+### Using unregister
 
-<p>This example shows registering a target object using that same object as the unregister
-    token, then later unregistering it via <code>unregister</code>:</p>
+This example shows registering a target object using that same object as the
+unregister token, then later unregistering it via `unregister`:
 
-<pre class="brush: js">class Thingy {
-    #cleanup = label =&gt; {
+```js
+class Thingy {
+    #cleanup = label => {
     //         ^^^^^−−−−− held value
         console.error(
             `The \`release\` method was never called for the object with the label "${label}"`
@@ -72,12 +75,13 @@ browser-compat: javascript.builtins.FinalizationRegistry.unregister
         //                        ^^^^−−−−− unregister token
     }
 }
-</pre>
+```
 
-<p>This example shows registering a target object using a different object as its
-    unregister token:</p>
+This example shows registering a target object using a different object as its
+unregister token:
 
-<pre class="brush: js"> {
+```js
+ {
     //         ^^^^−−−−− held value
         console.error(
             `The \`release\` method was never called for the \`Thingy\` for the file "${file.name}"`
@@ -109,18 +113,16 @@ browser-compat: javascript.builtins.FinalizationRegistry.unregister
         }
     }
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-    <li>{{jsxref("FinalizationRegistry")}}</li>
-</ul>
+- {{jsxref("FinalizationRegistry")}}

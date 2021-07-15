@@ -8,26 +8,33 @@ tags:
   - Property
 browser-compat: javascript.builtins.Function.displayName
 ---
-<div>{{JSRef}} {{non-standard_header}}</div>
+{{JSRef}} {{non-standard_header}}
 
-<p>The <code><strong>function.displayName</strong></code> property returns the display name of the function.</p>
+The **`function.displayName`** property returns the display name of the
+function.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_a_displayName">Setting a displayName</h3>
+### Setting a displayName
 
-<p>It is usually preferred by consoles and profilers over {{jsxref("Function.name", "func.name")}} to display the name of a function.</p>
+It is usually preferred by consoles and profilers over
+{{jsxref("Function.name", "func.name")}} to display the name of a
+function.
 
-<p>By entering the following in a console, it should display as something like "<code>function My Function()</code>":</p>
+By entering the following in a console, it should display as something like
+"`function My Function()`":
 
-<pre class="brush: js">var a = function() {};
+```js
+var a = function() {};
 a.displayName = 'My Function';
 
-a; // "function My Function()"</pre>
+a; // "function My Function()"
+```
 
-<p>When defined, the <code>displayName</code> property returns the display name of a function:</p>
+When defined, the `displayName` property returns the display name of a function:
 
-<pre class="brush: js">function doSomething() {}
+```js
+function doSomething() {}
 
 console.log(doSomething.displayName); // "undefined"
 
@@ -36,13 +43,15 @@ var popup = function(content) { console.log(content); };
 popup.displayName = 'Show Popup';
 
 console.log(popup.displayName); // "Show Popup"
-</pre>
+```
 
-<h3 id="Defining_a_displayName_in_function_expressions">Defining a displayName in function expressions</h3>
+### Defining a displayName in function expressions
 
-<p>You can define a function with a display name in a {{jsxref("Functions", "function expression", "", 1)}}:</p>
+You can define a function with a display name in a
+{{jsxref("Functions", "function expression", "", 1)}}:
 
-<pre class="brush: js">var object = {
+```js
+var object = {
   someMethod: function() {}
 };
 
@@ -52,13 +61,14 @@ console.log(object.someMethod.displayName); // logs "someMethod"
 
 try { someMethod } catch(e) { console.log(e); }
 // ReferenceError: someMethod is not defined
-</pre>
+```
 
-<h3 id="Changing_displayName_dynamically">Changing displayName dynamically</h3>
+### Changing displayName dynamically
 
-<p>You can dynamically change the <code>displayName</code> of a function:</p>
+You can dynamically change the `displayName` of a function:
 
-<pre class="brush: js">var object = {
+```js
+var object = {
   // anonymous
   someMethod: function(value) {
     arguments.callee.displayName = 'someMethod (' + value + ')';
@@ -69,18 +79,16 @@ console.log(object.someMethod.displayName); // "undefined"
 
 object.someMethod('123')
 console.log(object.someMethod.displayName); // "someMethod (123)"
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p><span class="pl-s">Not part of any standard.</span></p>
+Not part of any standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("Function.name")}}</li>
-</ul>
+- {{jsxref("Function.name")}}

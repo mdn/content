@@ -9,22 +9,28 @@ tags:
   - TypedArrays
 browser-compat: javascript.builtins.TypedArray.byteLength
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>byteLength</code></strong> accessor property represents the length (in bytes) of the typed array.</p>
+The **`byteLength`** accessor property represents the length (in bytes) of the
+typed array.
 
-<div>{{EmbedInteractiveExample("pages/js/typedarray-bytelength.html","shorter")}}</div>
+{{EmbedInteractiveExample("pages/js/typedarray-bytelength.html","shorter")}}
 
+## Description
 
-<h2 id="Description">Description</h2>
+The `byteLength` property is an accessor property whose set accessor function is
+`undefined`, meaning that you can only read this property. The value is
+established when a _TypedArray_ is constructed and cannot be changed. If the
+_TypedArray_ is not specifying a `byteOffset` or a `length`, the `length` of the
+referenced `ArrayBuffer` will be returned. _TypedArray_ is one of the
+[TypedArray objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects).
 
-<p>The <code>byteLength</code> property is an accessor property whose set accessor function is <code>undefined</code>, meaning that you can only read this property. The value is established when a <em>TypedArray</em> is constructed and cannot be changed. If the <em>TypedArray</em> is not specifying a <code>byteOffset</code> or a <code>length</code>, the <code>length</code> of the referenced <code>ArrayBuffer</code> will be returned. <em>TypedArray</em> is one of the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects">TypedArray objects</a>.</p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Using the byteLength property
 
-<h3 id="Using_the_byteLength_property">Using the byteLength property</h3>
-
-<pre class="brush:js">var buffer = new ArrayBuffer(8);
+```js
+var buffer = new ArrayBuffer(8);
 
 var uint8 = new Uint8Array(buffer);
 uint8.byteLength; // 8 (matches the byteLength of the buffer)
@@ -34,19 +40,17 @@ uint8.byteLength; // 5 (as specified when constructing the Uint8Array)
 
 var uint8 = new Uint8Array(buffer, 2);
 uint8.byteLength; // 6 (due to the offset of the constructed Uint8Array)
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Typed_arrays">JavaScript typed arrays</a></li>
- <li>{{jsxref("TypedArray")}}</li>
-</ul>
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- {{jsxref("TypedArray")}}

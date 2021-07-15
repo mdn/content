@@ -2,65 +2,66 @@
 title: Array.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toString
 tags:
-- Array
-- JavaScript
-- Method
-- Prototype
+  - Array
+  - JavaScript
+  - Method
+  - Prototype
 browser-compat: javascript.builtins.Array.toString
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <code><strong>toString()</strong></code> method returns a string representing the
-  specified array and its elements.</p>
+The **`toString()`** method returns a string representing the specified array
+and its elements.
 
-<div>{{EmbedInteractiveExample("pages/js/array-tostring.html","shorter")}}</div>
+{{EmbedInteractiveExample("pages/js/array-tostring.html","shorter")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">toString()</pre>
+```js
+toString()
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A string representing the elements of the array.</p>
+A string representing the elements of the array.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The {{jsxref("Array")}} object overrides the <code>toString</code> method of
-  {{jsxref("Object")}}. For Array objects, the <code>toString</code> method joins the
-  array and returns one string containing each array element separated by commas.</p>
+The {{jsxref("Array")}} object overrides the `toString` method of
+{{jsxref("Object")}}. For Array objects, the `toString` method joins the
+array and returns one string containing each array element separated by commas.
 
-<p>JavaScript calls the <code>toString</code> method automatically when an array is to be
-  represented as a text value or when an array is referred to in a string concatenation.
-</p>
+JavaScript calls the `toString` method automatically when an array is to be
+represented as a text value or when an array is referred to in a string
+concatenation.
 
-<h3 id="ECMAScript_5_semantics">ECMAScript 5 semantics</h3>
+### ECMAScript 5 semantics
 
-<p>Starting in JavaScript 1.8.5 (Firefox 4), and consistent with ECMAScript 5th edition
-  semantics, the <code>toString()</code> method is generic and can be used with any
-  object. {{jsxref("Object.prototype.toString()")}} will be called, and the resulting
-  value will be returned.</p>
+Starting in JavaScript 1.8.5 (Firefox 4), and consistent with ECMAScript 5th
+edition semantics, the `toString()` method is generic and can be used with any
+object. {{jsxref("Object.prototype.toString()")}} will be called,
+and the resulting value will be returned.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_toString">Using toString</h3>
+### Using toString
 
-<pre class="brush: js">const array1 = [1, 2, 'a', '1a'];
+```js
+const array1 = [1, 2, 'a', '1a'];
 
 console.log(array1.toString());
 // expected output: "1,2,a,1a"
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Array.prototype.join()")}}</li>
-  <li>{{jsxref("Object.prototype.toSource()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.join()")}}
+- {{jsxref("Object.prototype.toSource()")}}

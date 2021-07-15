@@ -2,127 +2,119 @@
 title: WebAssembly.Memory() constructor
 slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/Memory
 tags:
-- Constructor
-- JavaScript
-- Reference
-- WebAssembly
+  - Constructor
+  - JavaScript
+  - Reference
+  - WebAssembly
 browser-compat: javascript.builtins.WebAssembly.Memory.Memory
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <code><strong>WebAssembly.Memory()</strong></code> constructor creates a new
-  <code>Memory</code> object whose {{jsxref("WebAssembly/Memory/buffer","buffer")}}
-  property is a resizable
-  <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a></code>
-  or <code>SharedArrayBuffer</code> that holds the raw bytes of memory accessed by a
-  WebAssembly <code>Instance</code>.</p>
+The **`WebAssembly.Memory()`** constructor creates a new `Memory` object whose
+{{jsxref("WebAssembly/Memory/buffer","buffer")}} property is a
+resizable
+[`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
+or `SharedArrayBuffer` that holds the raw bytes of memory accessed by a
+WebAssembly `Instance`.
 
-<p>A memory created by JavaScript or in WebAssembly code will be accessible and mutable
-  from both JavaScript and WebAssembly.</p>
+A memory created by JavaScript or in WebAssembly code will be accessible and
+mutable from both JavaScript and WebAssembly.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">new WebAssembly.Memory(memoryDescriptor)</pre>
+```js
+new WebAssembly.Memory(memoryDescriptor)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><em>memoryDescriptor</em></dt>
-  <dd>An object that can contain the following members:
-    <dl>
-      <dt><em>initial</em></dt>
-      <dd>The initial size of the WebAssembly Memory, in units of WebAssembly pages.</dd>
-      <dt><em>maximum {{optional_inline}}</em></dt>
-      <dd>The maximum size the WebAssembly Memory is allowed to grow to, in units of
-        WebAssembly pages. When present, the <code>maximum</code> parameter acts as a hint
-        to the engine to reserve memory up front. However, the engine may ignore or clamp
-        this reservation request. Unshared WebAssembly memories don't need to set a
-        <code>maximum</code>, but shared memories do.</dd>
-      <dt>shared <em>{{optional_inline}}</em></dt>
-      <dd>A boolean value that defines whether the memory is a shared memory or not. If
-        set to <code>true</code>, it is a shared memory. The default is
-        <code>false</code>.</dd>
-    </dl>
-  </dd>
-</dl>
+- _memoryDescriptor_
 
-<div class="note">
-  <p><strong>Note:</strong> A WebAssembly page has a constant size of 65,536 bytes, i.e.,
-    64KiB.</p>
-</div>
+  - : An object that can contain the following members:
 
-<h3 id="Exceptions">Exceptions</h3>
+    - _initial_
+      - : The initial size of the WebAssembly Memory, in units of WebAssembly
+        pages.
+    - _maximum {{optional_inline}}_
+      - : The maximum size the WebAssembly Memory is allowed to grow to, in
+        units of WebAssembly pages. When present, the `maximum` parameter acts
+        as a hint to the engine to reserve memory up front. However, the engine
+        may ignore or clamp this reservation request. Unshared WebAssembly
+        memories don't need to set a `maximum`, but shared memories do.
+    - shared _{{optional_inline}}_
+      - : A boolean value that defines whether the memory is a shared memory or
+        not. If set to `true`, it is a shared memory. The default is `false`.
 
-<ul>
-  <li>If <code>memoryDescriptor</code> is not of type object, a {{jsxref("TypeError")}} is
-    thrown.</li>
-  <li>If <code>maximum</code> is specified and is smaller than <code>initial</code>, a
-    {{jsxref("RangeError")}} is thrown.</li>
-</ul>
+> **Note:** A WebAssembly page has a constant size of 65,536 bytes, i.e., 64KiB.
 
-<h2 id="Examples">Examples</h2>
+### Exceptions
 
-<h3 id="Creating_a_new_Memory_instance">Creating a new Memory instance</h3>
+- If `memoryDescriptor` is not of type object, a
+  {{jsxref("TypeError")}} is thrown.
+- If `maximum` is specified and is smaller than `initial`, a
+  {{jsxref("RangeError")}} is thrown.
 
-<p>There are two ways to get a <code>WebAssembly.Memory</code> object. The first way is to
-  construct it from JavaScript. The following example creates a new WebAssembly Memory
-  instance with an initial size of 10 pages (640KiB), and a maximum size of 100 pages
-  (6.4MiB). Its
-  <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer">buffer</a></code>
-  property will return an
-  <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a></code>.
-</p>
+## Examples
 
-<pre
-  class="brush: js">var memory = new WebAssembly.Memory({initial:10, maximum:100});</pre>
+### Creating a new Memory instance
 
-<p>The second way to get a <code>WebAssembly.Memory</code> object is to have it exported
-  by a WebAssembly module. The following example (see <a
-    href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.html">memory.html</a>
-  on GitHub, and <a
-    href="https://mdn.github.io/webassembly-examples/js-api-examples/memory.html">view it
-    live also</a>) fetches and instantiates the loaded memory.wasm byte code using the
-  {{jsxref("WebAssembly.instantiateStreaming()")}} method, while importing the memory
-  created in the line above. It then stores some values in that memory, then exports a
-  function and uses it to sum some values.</p>
+There are two ways to get a `WebAssembly.Memory` object. The first way is to
+construct it from JavaScript. The following example creates a new WebAssembly
+Memory instance with an initial size of 10 pages (640KiB), and a maximum size of
+100 pages (6.4MiB). Its
+[`buffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer)
+property will return an
+[`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer).
 
-<pre class="brush: js">WebAssembly.instantiateStreaming(fetch('memory.wasm'), { js: { mem: memory } })
-.then(obj =&gt; {
+```js
+var memory = new WebAssembly.Memory({initial:10, maximum:100});
+```
+
+The second way to get a `WebAssembly.Memory` object is to have it exported by a
+WebAssembly module. The following example (see
+[memory.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.html)
+on GitHub, and
+[view it live also](https://mdn.github.io/webassembly-examples/js-api-examples/memory.html))
+fetches and instantiates the loaded memory.wasm byte code using the
+{{jsxref("WebAssembly.instantiateStreaming()")}} method, while
+importing the memory created in the line above. It then stores some values in
+that memory, then exports a function and uses it to sum some values.
+
+```js
+WebAssembly.instantiateStreaming(fetch('memory.wasm'), { js: { mem: memory } })
+.then(obj => {
   var i32 = new Uint32Array(memory.buffer);
-  for (var i = 0; i &lt; 10; i++) {
+  for (var i = 0; i < 10; i++) {
     i32[i] = i;
   }
   var sum = obj.instance.exports.accumulate(0, 10);
   console.log(sum);
-});</pre>
+});
+```
 
-<h3 id="Creating_a_shared_memory">Creating a shared memory</h3>
+### Creating a shared memory
 
-<p>By default, WebAssembly memories are unshared. You can create a <a
-    href="/en-US/docs/WebAssembly/Understanding_the_text_format#Shared_memories">shared
-    memory</a> by passing <code>shared: true</code> in the constructor's initialization
-  object:</p>
+By default, WebAssembly memories are unshared. You can create a
+[shared memory](/en-US/docs/WebAssembly/Understanding_the_text_format#Shared_memories)
+by passing `shared: true` in the constructor's initialization object:
 
-<pre
-  class="brush: js">let memory = new WebAssembly.Memory({initial:10, maximum:100, shared:true});</pre>
+```js
+let memory = new WebAssembly.Memory({initial:10, maximum:100, shared:true});
+```
 
-<p>This memory's <code>buffer</code> property will return a
-  <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer">SharedArrayBuffer</a></code>.
-</p>
+This memory's `buffer` property will return a
+[`SharedArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/WebAssembly">WebAssembly</a> overview page</li>
-  <li><a href="/en-US/docs/WebAssembly/Concepts">WebAssembly concepts</a></li>
-  <li><a href="/en-US/docs/WebAssembly/Using_the_JavaScript_API">Using the WebAssembly
-      JavaScript API</a></li>
-</ul>
+- [WebAssembly](/en-US/docs/WebAssembly) overview page
+- [WebAssembly concepts](/en-US/docs/WebAssembly/Concepts)
+- [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)

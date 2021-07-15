@@ -2,56 +2,57 @@
 title: Date.prototype.getUTCMilliseconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCMilliseconds
 tags:
-- Date
-- JavaScript
-- Method
-- Prototype
-- Reference
+  - Date
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
 browser-compat: javascript.builtins.Date.getUTCMilliseconds
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>getUTCMilliseconds()</code></strong> method returns the milliseconds
-  portion of the time object's value.</p>
+The **`getUTCMilliseconds()`** method returns the milliseconds portion of the
+time object's value.
 
-<div>{{EmbedInteractiveExample("pages/js/date-getutcmilliseconds.html","shorter")}}</div>
+{{EmbedInteractiveExample("pages/js/date-getutcmilliseconds.html","shorter")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+getUTCMilliseconds()
+```
 
-<pre class="brush: js">getUTCMilliseconds()</pre>
+### Return value
 
-<h3 id="Return_value">Return value</h3>
+An integer number, between 0 and 999, representing the milliseconds portion
+of the given date object.  This method is a companion to the other UTC based
+methods that give hour portion, minute portion, etc.; this method gives
+milliseconds portion.
 
-<p>An integer number, between 0 and 999, representing the milliseconds portion of the
-  given date object.  This method is a companion to the other UTC based methods that give
-  hour portion, minute portion, etc.; this method gives milliseconds portion.  </p>
+Not to be confused with Unix epoch time.  To get total milliseconds since
+1970/01/01, use the method ".getTime()".
 
-<p>Not to be confused with Unix epoch time.  To get total milliseconds since 1970/01/01,
-  use the method ".getTime()".</p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Using getUTCMilliseconds()
 
-<h3 id="Using_getUTCMilliseconds">Using getUTCMilliseconds()</h3>
+The following example assigns the milliseconds portion of the current time to
+the variable `milliseconds`.
 
-<p>The following example assigns the milliseconds portion of the current time to the
-  variable <code>milliseconds</code>.</p>
-
-<pre class="brush: js">var today = new Date();
+```js
+var today = new Date();
 var milliseconds = today.getUTCMilliseconds();
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Date.prototype.getMilliseconds()")}}</li>
-  <li>{{jsxref("Date.prototype.setUTCMilliseconds()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getMilliseconds()")}}
+- {{jsxref("Date.prototype.setUTCMilliseconds()")}}

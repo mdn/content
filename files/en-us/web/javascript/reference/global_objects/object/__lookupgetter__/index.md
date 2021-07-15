@@ -10,76 +10,74 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Object.lookupGetter
 ---
-<div>{{JSRef}} {{deprecated_header}}</div>
+{{JSRef}} {{deprecated_header}}
 
-<p>The <strong><code>__lookupGetter__</code></strong> method returns the function bound as
-  a getter to the specified property.</p>
+The **`__lookupGetter__`** method returns the function bound as a getter to the
+specified property.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">__lookupGetter__(sprop)</pre>
+```js
+__lookupGetter__(sprop)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>sprop</var></code></dt>
-  <dd>A string containing the name of the property whose getter should be returned.</dd>
-</dl>
+- `sprop`
+  - : A string containing the name of the property whose getter should be
+    returned.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>The function bound as a getter to the specified property.</p>
+The function bound as a getter to the specified property.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>If a getter has been defined for an object's property, it's not possible to reference
-  the getter function through that property, because that property refers to the return
-  value of that function. <code>__lookupGetter__</code> can be used to obtain a reference
-  to the getter function.</p>
+If a getter has been defined for an object's property, it's not possible to
+reference the getter function through that property, because that property
+refers to the return value of that function. `__lookupGetter__` can be used to
+obtain a reference to the getter function.
 
-<p>It is now possible to do this in a standardized way using
-  {{jsxref("Object.getOwnPropertyDescriptor()")}} and
-  {{jsxref("Object.getPrototypeOf()")}}.</p>
+It is now possible to do this in a standardized way using
+{{jsxref("Object.getOwnPropertyDescriptor()")}} and
+{{jsxref("Object.getPrototypeOf()")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Standard-compliant_and_non-standard_ways_to_get_a_property_getter">
-  Standard-compliant and non-standard ways to get a property getter</h3>
+### Standard-compliant and non-standard ways to get a property getter
 
-<pre class="brush: js">var obj = {
+```js
+var obj = {
   get foo() {
-    return Math.random() &gt; 0.5 ? 'foo' : 'bar';
+    return Math.random() > 0.5 ? 'foo' : 'bar';
   }
 };
 
 // Non-standard and deprecated way
 obj.__lookupGetter__('foo');
-// (function() { return Math.random() &gt; 0.5 ? 'foo' : 'bar'; })
+// (function() { return Math.random() > 0.5 ? 'foo' : 'bar'; })
 
 // Standard-compliant way
 Object.getOwnPropertyDescriptor(obj, "foo").get;
-// (function() { return Math.random() &gt; 0.5 ? 'foo' : 'bar'; })
-</pre>
+// (function() { return Math.random() > 0.5 ? 'foo' : 'bar'; })
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>A polyfill of <code>Object.prototype.__lookupGetter__</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-object"><code>core-js</code></a></li>
-  <li>{{jsxref("Object.prototype.__lookupSetter__()")}}</li>
-  <li>{{jsxref("Functions/get", "get")}} operator</li>
-  <li>{{jsxref("Object.getOwnPropertyDescriptor()")}} and
-    {{jsxref("Object.getPrototypeOf()")}}</li>
-  <li>{{jsxref("Object.prototype.__defineGetter__()")}}</li>
-  <li>{{jsxref("Object.prototype.__defineSetter__()")}}</li>
-  <li><a
-      href="/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters">JS
-      Guide: Defining Getters and Setters</a></li>
-</ul>
+- A polyfill of `Object.prototype.__lookupGetter__` is available in
+  [`core-js`](https://github.com/zloirock/core-js#ecmascript-object)
+- {{jsxref("Object.prototype.__lookupSetter__()")}}
+- {{jsxref("Functions/get", "get")}} operator
+- {{jsxref("Object.getOwnPropertyDescriptor()")}} and
+  {{jsxref("Object.getPrototypeOf()")}}
+- {{jsxref("Object.prototype.__defineGetter__()")}}
+- {{jsxref("Object.prototype.__defineSetter__()")}}
+- [JS Guide: Defining Getters and Setters](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters)

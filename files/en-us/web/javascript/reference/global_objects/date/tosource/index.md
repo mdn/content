@@ -2,51 +2,52 @@
 title: Date.prototype.toSource()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toSource
 tags:
-- Date
-- JavaScript
-- Method
-- Prototype
-- Reference
+  - Date
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
 browser-compat: javascript.builtins.Date.toSource
 ---
-<div>{{JSRef}} {{deprecated_header}}</div>
+{{JSRef}} {{deprecated_header}}
 
-<p>The <strong><code>toSource()</code></strong> method returns a string representing the
-  source code of the object.</p>
+The **`toSource()`** method returns a string representing the source code of the
+object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>dateObj</var>.toSource()
-Date.toSource()</pre>
+```js
+dateObj.toSource()
+Date.toSource()
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A string representing the source code of the given {{jsxref("Global_Objects/Date",
-  "Date")}} object.</p>
+A string representing the source code of the given
+{{jsxref("Global_Objects/Date",
+  "Date")}} object.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Native_function">Native function</h3>
+### Native function
 
-<p>For the built-in {{jsxref("Date")}} object, <code>toSource()</code> returns the
-  following string indicating that the source code is not available:</p>
+For the built-in {{jsxref("Date")}} object, `toSource()` returns the
+following string indicating that the source code is not available:
 
-<pre class="brush: js">function Date() {
+```js
+function Date() {
     [native code]
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any standard.</p>
+Not part of any standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat}}
 
-<p>{{Compat}}</p>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
-  <li>{{jsxref("Object.prototype.toSource()")}}</li>
-</ul>
+- {{jsxref("Object.prototype.toSource()")}}

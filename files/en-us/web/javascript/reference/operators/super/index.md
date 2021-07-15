@@ -2,50 +2,49 @@
 title: super
 slug: Web/JavaScript/Reference/Operators/super
 tags:
-- Classes
-- ECMAScript 2015
-- JavaScript
-- Language feature
-- Left-hand-side expressions
-- Operator
+  - Classes
+  - ECMAScript 2015
+  - JavaScript
+  - Language feature
+  - Left-hand-side expressions
+  - Operator
 browser-compat: javascript.operators.super
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>The <strong>super</strong> keyword is used to access and call functions on an object's
-  parent.</p>
+The **super** keyword is used to access and call functions on an object's
+parent.
 
-<p>The <code>super.prop</code> and <code>super[expr]</code> expressions are valid in any
-  <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions">method
-    definition</a> in both <a
-    href="/en-US/docs/Web/JavaScript/Reference/Classes">classes</a> and <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer">object
-    literals</a>.</p>
+The `super.prop` and `super[expr]` expressions are valid in any
+[method definition](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions)
+in both [classes](/en-US/docs/Web/JavaScript/Reference/Classes) and
+[object literals](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">super([arguments]); // calls the parent constructor.
+```js
+super([arguments]); // calls the parent constructor.
 super.functionOnParent([arguments]);
-</pre>
+```
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>When used in a constructor, the <code>super</code> keyword appears alone and must be
-  used before the <code>this</code> keyword is used. The <code>super</code> keyword can
-  also be used to call functions on a parent object.</p>
+When used in a constructor, the `super` keyword appears alone and must be used
+before the `this` keyword is used. The `super` keyword can also be used to call
+functions on a parent object.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_super_in_classes">Using <code>super</code> in classes</h3>
+### Using `super` in classes
 
-<p>This code snippet is taken from the <a
-    href="https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html">classes
-    sample</a> (<a
-    href="https://googlechrome.github.io/samples/classes-es6/index.html">live demo</a>).
-  Here <code>super()</code> is called to avoid duplicating the constructor parts' that are
-  common between <code>Rectangle</code> and <code>Square</code>.</p>
+This code snippet is taken from the
+[classes sample](https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html)
+([live demo](https://googlechrome.github.io/samples/classes-es6/index.html)).
+Here `super()` is called to avoid duplicating the constructor parts' that are
+common between `Rectangle` and `Square`.
 
-<pre class="brush: js">class Rectangle {
+```js
+class Rectangle {
   constructor(height, width) {
     this.name = 'Rectangle';
     this.height = height;
@@ -74,14 +73,16 @@ class Square extends Rectangle {
     // can use 'this'. Leaving this out will cause a reference error.
     this.name = 'Square';
   }
-}</pre>
+}
+```
 
-<h3 id="Super-calling_static_methods">Super-calling static methods</h3>
+### Super-calling static methods
 
-<p>You are also able to call super on <a
-    href="/en-US/docs/Web/JavaScript/Reference/Classes/static">static</a> methods.</p>
+You are also able to call super on
+[static](/en-US/docs/Web/JavaScript/Reference/Classes/static) methods.
 
-<pre class="brush: js">class Rectangle {
+```js
+class Rectangle {
   static logNbSides() {
     return 'I have 4 sides';
   }
@@ -93,17 +94,17 @@ class Square extends Rectangle {
   }
 }
 Square.logDescription(); // 'I have 4 sides which are all equal'
-</pre>
+```
 
-<h3 id="Deleting_super_properties_will_throw_an_error">Deleting super properties will
-  throw an error</h3>
+### Deleting super properties will throw an error
 
-<p>You cannot use the <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/delete">delete operator</a> and
-  <code>super.prop</code> or <code>super[expr]</code> to delete a parent class' property,
-  it will throw a {{jsxref("ReferenceError")}}.</p>
+You cannot use the
+[delete operator](/en-US/docs/Web/JavaScript/Reference/Operators/delete) and
+`super.prop` or `super[expr]` to delete a parent class' property, it will throw
+a {{jsxref("ReferenceError")}}.
 
-<pre class="brush: js">class Base {
+```js
+class Base {
   foo() {}
 }
 class Derived extends Base {
@@ -112,15 +113,17 @@ class Derived extends Base {
   }
 }
 
-new Derived().delete(); // ReferenceError: invalid delete involving 'super'. </pre>
+new Derived().delete(); // ReferenceError: invalid delete involving 'super'. 
+```
 
-<h3 id="super.prop_cannot_overwrite_non-writable_properties"><code>super.prop</code>
-  cannot overwrite non-writable properties</h3>
+### `super.prop` cannot overwrite non-writable properties
 
-<p>When defining non-writable properties with e.g. {{jsxref("Object.defineProperty")}},
-  <code>super</code> cannot overwrite the value of the property.</p>
+When defining non-writable properties with e.g.
+{{jsxref("Object.defineProperty")}}, `super` cannot overwrite the
+value of the property.
 
-<pre class="brush: js">class X {
+```js
+class X {
   constructor() {
     Object.defineProperty(this, 'prop', {
       configurable: true,
@@ -142,20 +145,20 @@ class Y extends X {
 var y = new Y();
 y.foo(); // TypeError: "prop" is read-only
 console.log(y.prop); // 1
-</pre>
+```
 
-<h3 id="Using_super.prop_in_object_literals">Using <code>super.prop</code> in object
-  literals</h3>
+### Using `super.prop` in object literals
 
-<p>Super can also be used in the <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer">object
-    initializer / literal</a> notation. In this example, two objects define a method. In
-  the second object, <code>super</code> calls the first object's method. This works with
-  the help of {{jsxref("Object.setPrototypeOf()")}} with which we are able to set the
-  prototype of <code>obj2</code> to <code>obj1</code>, so that <code>super</code> is able
-  to find <code>method1</code> on <code>obj1</code>.</p>
+Super can also be used in the
+[object initializer / literal](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer)
+notation. In this example, two objects define a method. In the second object,
+`super` calls the first object's method. This works with the help of
+{{jsxref("Object.setPrototypeOf()")}} with which we are able to set
+the prototype of `obj2` to `obj1`, so that `super` is able to find `method1` on
+`obj1`.
 
-<pre class="brush: js">var obj1 = {
+```js
+var obj1 = {
   method1() {
     console.log('method 1');
   }
@@ -169,18 +172,16 @@ var obj2 = {
 
 Object.setPrototypeOf(obj2, obj1);
 obj2.method2(); // logs "method 1"
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Classes">Classes</a></li>
-</ul>
+- [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)

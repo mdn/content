@@ -2,99 +2,92 @@
 title: TypedArray.prototype.fill()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/fill
 tags:
-- ECMAScript 2015
-- JavaScript
-- Method
-- Prototype
-- TypedArray
-- TypedArrays
-- Polyfill
+  - ECMAScript 2015
+  - JavaScript
+  - Method
+  - Prototype
+  - TypedArray
+  - TypedArrays
+  - Polyfill
 browser-compat: javascript.builtins.TypedArray.fill
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>fill()</code></strong> method fills all the elements of a typed array
-  from a start index to an end index with a static value. This method has the same
-  algorithm as {{jsxref("Array.prototype.fill()")}}. <em>TypedArray</em> is one of the <a
-    href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">typed
-    array types</a> here.</p>
+The **`fill()`** method fills all the elements of a typed array from a start
+index to an end index with a static value. This method has the same algorithm as
+{{jsxref("Array.prototype.fill()")}}. _TypedArray_ is one of the
+[typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)
+here.
 
-<div>{{EmbedInteractiveExample("pages/js/typedarray-fill.html","shorter")}}</div>
+{{EmbedInteractiveExample("pages/js/typedarray-fill.html","shorter")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush: js">
+```js
 fill(value)
 fill(value, start)
 fill(value, start, end)
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>value</var></code></dt>
-  <dd>Value to fill the typed array with.</dd>
-  <dt><code><var>start</var></code> {{optional_inline}}</dt>
-  <dd>Start index. Defaults to 0.</dd>
-  <dt><code><var>end</var></code> {{optional_inline}}</dt>
-  <dd>End index (not included). Defaults to <code>this.length</code>.</dd>
-</dl>
+- `value`
+  - : Value to fill the typed array with.
+- `start` {{optional_inline}}
+  - : Start index. Defaults to 0.
+- `end` {{optional_inline}}
+  - : End index (not included). Defaults to `this.length`.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>The modified array.</p>
+The modified array.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The elements interval to fill is [<code><var>start</var></code>,
-  <code><var>end</var></code>).</p>
+The elements interval to fill is \[`start`, `end`).
 
-<p>The <strong><code>fill()</code></strong> method takes up to three arguments
-  <code><var>value</var></code>,
-  <code><var>start</var></code><code><var>start</var></code> and
-  <code><var>end</var></code>. The <code><var>start</var></code> and
-  <code><var>end</var></code> arguments are optional with default values of <code>0</code>
-  and the <code>length</code> of the <code>this</code> object.</p>
+The **`fill()`** method takes up to three arguments `value`, ` start``start `
+and `end`. The `start` and `end` arguments are optional with default values of
+`0` and the `length` of the `this` object.
 
-<p>If <code><var>start</var></code> is negative, it is treated as
-  <code>length+start</code> where <code>length</code> is the length of the array. If
-  <code><var>end</var></code> is negative, it is treated as <code>length+end</code>.</p>
+If `start` is negative, it is treated as `length+start` where `length` is the
+length of the array. If `end` is negative, it is treated as `length+end`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_fill">Using fill()</h3>
+### Using fill()
 
-<pre class="brush: js">new Uint8Array([1, 2, 3]).fill(4);         // Uint8Array [4, 4, 4]
+```js
+new Uint8Array([1, 2, 3]).fill(4);         // Uint8Array [4, 4, 4]
 new Uint8Array([1, 2, 3]).fill(4, 1);      // Uint8Array [1, 4, 4]
 new Uint8Array([1, 2, 3]).fill(4, 1, 2);   // Uint8Array [1, 4, 3]
 new Uint8Array([1, 2, 3]).fill(4, 1, 1);   // Uint8Array [1, 2, 3]
 new Uint8Array([1, 2, 3]).fill(4, -3, -2); // Uint8Array [4, 2, 3]
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>Since there is no global object with the name <em>TypedArray</em>, polyfilling must be
-  done on an "as needed" basis. Use the following "polyfill" along with the
-  {{jsxref("Array.prototype.fill()")}} polyfill.</p>
+Since there is no global object with the name _TypedArray_, polyfilling must be
+done on an "as needed" basis. Use the following "polyfill" along with the
+{{jsxref("Array.prototype.fill()")}} polyfill.
 
-<pre class="brush: js">// https://tc39.github.io/ecma262/#sec-%typedarray%.prototype.fill
+```js
+// https://tc39.github.io/ecma262/#sec-%typedarray%.prototype.fill
 if (!Uint8Array.prototype.fill) {
   Uint8Array.prototype.fill = Array.prototype.fill;
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>A polyfill of <code>TypedArray.prototype.fill</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-typed-arrays"><code>core-js</code></a></li>
-  <li>{{jsxref("Array.prototype.fill()")}}</li>
-</ul>
+- A polyfill of `TypedArray.prototype.fill` is available in
+  [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- {{jsxref("Array.prototype.fill()")}}

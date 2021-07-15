@@ -8,41 +8,65 @@ tags:
   - JavaScript
   - l10n:priority
 ---
-<div>{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_Operators")}}</div>
+{{jsSidebar("JavaScript Guide")}}
+{{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_Operators")}}
 
-<p class="summary">Functions are one of the fundamental building blocks in JavaScript. A function in JavaScript is similar to a procedure—a set of statements that performs a task or calculates a value, but for a procedure to qualify as a function, it should take some input and return an output where there is some obvious relationship between the input and the output. To use a function, you must define it somewhere in the scope from which you wish to call it.</p>
+Functions are one of the fundamental building blocks in JavaScript. A function
+in JavaScript is similar to a procedure—a set of statements that performs a task
+or calculates a value, but for a procedure to qualify as a function, it should
+take some input and return an output where there is some obvious relationship
+between the input and the output. To use a function, you must define it
+somewhere in the scope from which you wish to call it.
 
-<p>See also the <a href="/en-US/docs/Web/JavaScript/Reference/Functions">exhaustive reference chapter about JavaScript functions</a> to get to know the details.</p>
+See also the
+[exhaustive reference chapter about JavaScript functions](/en-US/docs/Web/JavaScript/Reference/Functions)
+to get to know the details.
 
-<h2 id="Defining_functions">Defining functions</h2>
+## Defining functions
 
-<h3 id="Function_declarations">Function declarations</h3>
+### Function declarations
 
-<p>A <strong>function definition</strong> (also called a <strong>function declaration</strong>, or <strong>function statement</strong>) consists of the <a href="/en-US/docs/Web/JavaScript/Reference/Statements/function"><code>function</code></a> keyword, followed by:</p>
+A **function definition** (also called a **function declaration**, or **function
+statement**) consists of the
+[`function`](/en-US/docs/Web/JavaScript/Reference/Statements/function) keyword,
+followed by:
 
-<ul>
-	<li>The name of the function.</li>
-	<li>A list of parameters to the function, enclosed in parentheses and separated by commas.</li>
-	<li>The JavaScript statements that define the function, enclosed in curly brackets, <code>{...}</code>.</li>
-</ul>
+- The name of the function.
+- A list of parameters to the function, enclosed in parentheses and separated by
+  commas.
+- The JavaScript statements that define the function, enclosed in curly
+  brackets, `{...}`.
 
-<p>For example, the following code defines a simple function named <code>square</code>:</p>
+For example, the following code defines a simple function named `square`:
 
-<pre class="brush: js">function square(number) {
+```js
+function square(number) {
   return number * number;
 }
-</pre>
+```
 
-<p>The function <code>square</code> takes one parameter, called <code>number</code>. The function consists of one statement that says to return the parameter of the function (that is, <code>number</code>) multiplied by itself. The statement <a href="/en-US/docs/Web/JavaScript/Reference/Statements/return"><code>return</code></a> specifies the value returned by the function:</p>
+The function `square` takes one parameter, called `number`. The function
+consists of one statement that says to return the parameter of the function
+(that is, `number`) multiplied by itself. The statement
+[`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return) specifies the
+value returned by the function:
 
-<pre class="brush: js">return number * number;
-</pre>
+```js
+return number * number;
+```
 
-<p>Primitive parameters (such as a number) are passed to functions <strong>by value</strong>; the value is passed to the function, but if the function changes the value of the parameter, <strong>this change is not reflected globally or in the calling function</strong>.</p>
+Primitive parameters (such as a number) are passed to functions **by value**;
+the value is passed to the function, but if the function changes the value of
+the parameter, **this change is not reflected globally or in the calling
+function**.
 
-<p>If you pass an object (i.e., a non-primitive value, such as {{jsxref("Array")}} or a user-defined object) as a parameter and the function changes the object's properties, that change is visible outside the function, as shown in the following example:</p>
+If you pass an object (i.e., a non-primitive value, such as
+{{jsxref("Array")}} or a user-defined object) as a parameter and the
+function changes the object's properties, that change is visible outside the
+function, as shown in the following example:
 
-<pre class="brush: js">function myFunc(theObject) {
+```js
+function myFunc(theObject) {
   theObject.make = 'Toyota';
 }
 
@@ -54,38 +78,52 @@ x = mycar.make; // x gets the value "Honda"
 myFunc(mycar);
 y = mycar.make; // y gets the value "Toyota"
                 // (the make property was changed by the function)
-</pre>
+```
 
-<h3 id="Function_expressions">Function expressions</h3>
+### Function expressions
 
-<p>While the function declaration above is syntactically a statement, functions can also be created by a <a href="/en-US/docs/Web/JavaScript/Reference/Operators/function">function expression</a>.</p>
+While the function declaration above is syntactically a statement, functions can
+also be created by a
+[function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function).
 
-<p>Such a function can be <strong>anonymous</strong>; it does not have to have a name. For example, the function <code>square</code> could have been defined as:</p>
+Such a function can be **anonymous**; it does not have to have a name. For
+example, the function `square` could have been defined as:
 
-<pre class="brush: js">const square = function(number) { return number * number }
-var x = square(4) // x gets the value 16</pre>
+```js
+const square = function(number) { return number * number }
+var x = square(4) // x gets the value 16
+```
 
-<p>However, a name <em>can</em> be provided with a function expression. Providing a name allows the function to refer to itself, and also makes it easier to identify the function in a debugger's stack traces:</p>
+However, a name _can_ be provided with a function expression. Providing a name
+allows the function to refer to itself, and also makes it easier to identify the
+function in a debugger's stack traces:
 
-<pre class="brush: js">const factorial = function fac(n) { return n &lt; 2 ? 1 : n * fac(n - 1) }
+```js
+const factorial = function fac(n) { return n < 2 ? 1 : n * fac(n - 1) }
 
 console.log(factorial(3))
-</pre>
+```
 
-<p>Function expressions are convenient when passing a function as an argument to another function. The following example shows a <code>map</code> function that should receive a function as first argument and an array as second argument:</p>
+Function expressions are convenient when passing a function as an argument to
+another function. The following example shows a `map` function that should
+receive a function as first argument and an array as second argument:
 
-<pre class="brush: js">function map(f, a) {
+```js
+function map(f, a) {
   let result = []; // Create a new Array
   let i; // Declare variable
   for (i = 0; i != a.length; i++)
     result[i] = f(a[i]);
   return result;
 }
-</pre>
+```
 
-<p>In the following code, the function receives a function defined by a function expression and executes it for every element of the array received as a second argument:</p>
+In the following code, the function receives a function defined by a function
+expression and executes it for every element of the array received as a second
+argument:
 
-<pre class="brush: js">function map(f, a) {
+```js
+function map(f, a) {
   let result = []; // Create a new Array
   let i; // Declare variable
   for (i = 0; i != a.length; i++)
@@ -97,89 +135,125 @@ const f = function(x) {
 }
 let numbers = [0, 1, 2, 5, 10];
 let cube = map(f,numbers);
-console.log(cube);</pre>
+console.log(cube);
+```
 
-<p>Function returns: <code>[0, 1, 8, 125, 1000]</code>.</p>
+Function returns: `[0, 1, 8, 125, 1000]`.
 
-<p>In JavaScript, a function can be defined based on a condition. For example, the following function definition defines <code>myFunc</code> only if <code>num</code> equals <code>0</code>:</p>
+In JavaScript, a function can be defined based on a condition. For example, the
+following function definition defines `myFunc` only if `num` equals `0`:
 
-<pre class="brush: js">var myFunc;
+```js
+var myFunc;
 if (num === 0) {
   myFunc = function(theObject) {
     theObject.make = 'Toyota';
   }
-}</pre>
+}
+```
 
-<p>In addition to defining functions as described here, you can also use the {{jsxref("Function")}} constructor to create functions from a string at runtime, much like {{jsxref("Global_Objects/eval", "eval()")}}.</p>
+In addition to defining functions as described here, you can also use the
+{{jsxref("Function")}} constructor to create functions from a string at
+runtime, much like {{jsxref("Global_Objects/eval", "eval()")}}.
 
-<p>A <strong>method</strong> is a function that is a property of an object. Read more about objects and methods in <a href="/en-US/docs/Web/JavaScript/Guide/Working_with_Objects">Working with objects</a>.</p>
+A **method** is a function that is a property of an object. Read more about
+objects and methods in
+[Working with objects](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects).
 
-<h2 id="Calling_functions">Calling functions</h2>
+## Calling functions
 
-<p><em>Defining</em> a function does not <em>execute</em> it. Defining it names the function and specifies what to do when the function is called.</p>
+_Defining_ a function does not _execute_ it. Defining it names the function and
+specifies what to do when the function is called.
 
-<p><strong>Calling</strong> the function actually performs the specified actions with the indicated parameters. For example, if you define the function <code>square</code>, you could call it as follows:</p>
+**Calling** the function actually performs the specified actions with the
+indicated parameters. For example, if you define the function `square`, you
+could call it as follows:
 
-<pre class="brush: js">square(5);
-</pre>
+```js
+square(5);
+```
 
-<p>The preceding statement calls the function with an argument of <code>5</code>. The function executes its statements and returns the value <code>25</code>.</p>
+The preceding statement calls the function with an argument of `5`. The function
+executes its statements and returns the value `25`.
 
-<p>Functions must be <em>in scope</em> when they are called, but the function declaration can be hoisted (appear below the call in the code), as in this example:</p>
+Functions must be _in scope_ when they are called, but the function declaration
+can be hoisted (appear below the call in the code), as in this example:
 
-<pre class="brush: js">console.log(square(5));
+```js
+console.log(square(5));
 /* ... */
 function square(n) { return n * n }
-</pre>
+```
 
-<p>The scope of a function is the function in which it is declared (or the entire program, if it is declared at the top level).</p>
+The scope of a function is the function in which it is declared (or the entire
+program, if it is declared at the top level).
 
-<div class="note">
-<p><strong>Note:</strong> This works only when defining the function using the above syntax (i.e., <code>function funcName(){}</code>). The code below will not work.</p>
+> **Note:** This works only when defining the function using the above syntax
+> (i.e., `function funcName(){}`). The code below will not work.
+>
+> This means that function hoisting only works with function _declarations_—not
+> with function _expressions_.
+>
+> ```js example-bad
+> console.log(square)    // square is hoisted with an initial value undefined.
+> console.log(square(5)) // Uncaught TypeError: square is not a function
+> const square = function(n) {
+>   return n * n;
+> }
+> ```
 
-<p>This means that function hoisting only works with function <em>declarations</em>—not with function <em>expressions</em>.</p>
+The arguments of a function are not limited to strings and numbers. You can pass
+whole objects to a function. The `showProps()` function (defined in
+[Working with objects](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#objects_and_properties))
+is an example of a function that takes an object as an argument.
 
-<pre class="brush: js example-bad">console.log(square)    // square is hoisted with an initial value undefined.
-console.log(square(5)) // Uncaught TypeError: square is not a function
-const square = function(n) {
-  return n * n;
-}
-</pre>
-</div>
+A function can call itself. For example, here is a function that computes
+factorials recursively:
 
-<p>The arguments of a function are not limited to strings and numbers. You can pass whole objects to a function. The <code>showProps()</code> function (defined in <a href="/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#objects_and_properties">Working with objects</a>) is an example of a function that takes an object as an argument.</p>
-
-<p>A function can call itself. For example, here is a function that computes factorials recursively:</p>
-
-<pre class="brush: js">function factorial(n) {
+```js
+function factorial(n) {
   if ((n === 0) || (n === 1))
     return 1;
   else
     return (n * factorial(n - 1));
 }
-</pre>
+```
 
-<p>You could then compute the factorials of <code>1</code> through <code>5</code> as follows:</p>
+You could then compute the factorials of `1` through `5` as follows:
 
-<pre class="brush: js">var a, b, c, d, e;
+```js
+var a, b, c, d, e;
 a = factorial(1); // a gets the value 1
 b = factorial(2); // b gets the value 2
 c = factorial(3); // c gets the value 6
 d = factorial(4); // d gets the value 24
 e = factorial(5); // e gets the value 120
-</pre>
+```
 
-<p>There are other ways to call functions. There are often cases where a function needs to be called dynamically, or the number of arguments to a function vary, or in which the context of the function call needs to be set to a specific object determined at runtime.</p>
+There are other ways to call functions. There are often cases where a function
+needs to be called dynamically, or the number of arguments to a function vary,
+or in which the context of the function call needs to be set to a specific
+object determined at runtime.
 
-<p>It turns out that <em>functions are themselves objects</em>—and in turn, these objects have methods. (See the {{jsxref("Function")}} object.) One of these, the {{jsxref("Function.apply", "apply()")}} method, can be used to achieve this goal.</p>
+It turns out that _functions are themselves objects_—and in turn, these objects
+have methods. (See the {{jsxref("Function")}} object.) One of these, the
+{{jsxref("Function.apply", "apply()")}} method, can be used to
+achieve this goal.
 
-<h2 id="Function_scope">Function scope</h2>
+## Function scope
 
-<p>Variables defined inside a function cannot be accessed from anywhere outside the function, because the variable is defined only in the scope of the function. However, a function can access all variables and functions defined inside the scope in which it is defined.</p>
+Variables defined inside a function cannot be accessed from anywhere outside the
+function, because the variable is defined only in the scope of the function.
+However, a function can access all variables and functions defined inside the
+scope in which it is defined.
 
-<p>In other words, a function defined in the global scope can access all variables defined in the global scope. A function defined inside another function can also access all variables defined in its parent function, and any other variables to which the parent function has access.</p>
+In other words, a function defined in the global scope can access all variables
+defined in the global scope. A function defined inside another function can also
+access all variables defined in its parent function, and any other variables to
+which the parent function has access.
 
-<pre class="brush: js">// The following variables are defined in the global scope
+```js
+// The following variables are defined in the global scope
 var num1 = 20,
     num2 = 3,
     name = 'Chamakh';
@@ -204,77 +278,88 @@ function getScore() {
 }
 
 getScore(); // Returns "Chamakh scored 5"
-</pre>
+```
 
-<h2 id="Scope_and_the_function_stack">Scope and the function stack</h2>
+## Scope and the function stack
 
-<h3 id="Recursion">Recursion</h3>
+### Recursion
 
-<p>A function can refer to and call itself. There are three ways for a function to refer to itself:</p>
+A function can refer to and call itself. There are three ways for a function to
+refer to itself:
 
-<ol>
-	<li>The function's name</li>
-	<li><code><a href="/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee">arguments.callee</a></code></li>
-	<li>An in-scope variable that refers to the function</li>
-</ol>
+1.  The function's name
+2.  [`arguments.callee`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee)
+3.  An in-scope variable that refers to the function
 
-<p>For example, consider the following function definition:</p>
+For example, consider the following function definition:
 
-<pre class="brush: js">var foo = function bar() {
+```js
+var foo = function bar() {
    // statements go here
 }
-</pre>
+```
 
-<p>Within the function body, the following are all equivalent:</p>
+Within the function body, the following are all equivalent:
 
-<ol>
-	<li><code>bar()</code></li>
-	<li><code>arguments.callee()</code></li>
-	<li><code>foo()</code></li>
-</ol>
+1.  `bar()`
+2.  `arguments.callee()`
+3.  `foo()`
 
-<p>A function that calls itself is called a <em>recursive function</em>. In some ways, recursion is analogous to a loop. Both execute the same code multiple times, and both require a condition (to avoid an infinite loop, or rather, infinite recursion in this case).</p>
+A function that calls itself is called a _recursive function_. In some ways,
+recursion is analogous to a loop. Both execute the same code multiple times, and
+both require a condition (to avoid an infinite loop, or rather, infinite
+recursion in this case).
 
-<p>For example, the following loop...</p>
+For example, the following loop...
 
-<pre class="brush: js">var x = 0;
-while (x &lt; 10) { // "x &lt; 10" is the loop condition
+```js
+var x = 0;
+while (x < 10) { // "x < 10" is the loop condition
    // do stuff
    x++;
 }
-</pre>
+```
 
-<p>...can be converted into a recursive function declaration, followed by a call to that function:</p>
+...can be converted into a recursive function declaration, followed by a call to
+that function:
 
-<pre class="brush: js">function loop(x) {
-  if (x &gt;= 10) // "x &gt;= 10" is the exit condition (equivalent to "!(x &lt; 10)")
+```js
+function loop(x) {
+  if (x >= 10) // "x >= 10" is the exit condition (equivalent to "!(x < 10)")
     return;
   // do stuff
   loop(x + 1); // the recursive call
 }
 loop(0);
-</pre>
+```
 
-<p>However, some algorithms cannot be simple iterative loops. For example, getting all the nodes of a tree structure (such as the <a href="/en-US/docs/Web/API/Document_Object_Model">DOM</a>) is easier via recursion:</p>
+However, some algorithms cannot be simple iterative loops. For example, getting
+all the nodes of a tree structure (such as the
+[DOM](/en-US/docs/Web/API/Document_Object_Model)) is easier via recursion:
 
-<pre class="brush: js">function walkTree(node) {
+```js
+function walkTree(node) {
   if (node == null) //
     return;
   // do something with node
-  for (var i = 0; i &lt; node.childNodes.length; i++) {
+  for (var i = 0; i < node.childNodes.length; i++) {
     walkTree(node.childNodes[i]);
   }
 }
-</pre>
+```
 
-<p>Compared to the function <code>loop</code>, each recursive call itself makes many recursive calls here.</p>
+Compared to the function `loop`, each recursive call itself makes many recursive
+calls here.
 
-<p>It is possible to convert any recursive algorithm to a non-recursive one, but the logic is often much more complex, and doing so requires the use of a stack.</p>
+It is possible to convert any recursive algorithm to a non-recursive one, but
+the logic is often much more complex, and doing so requires the use of a stack.
 
-<p>In fact, recursion itself uses a stack: the function stack. The stack-like behavior can be seen in the following example:</p>
+In fact, recursion itself uses a stack: the function stack. The stack-like
+behavior can be seen in the following example:
 
-<pre class="brush: js">function foo(i) {
-  if (i &lt; 0)
+```js
+function foo(i) {
+  if (i < 0)
     return;
   console.log('begin: ' + i);
   foo(i - 1);
@@ -291,26 +376,33 @@ foo(3);
 // end: 0
 // end: 1
 // end: 2
-// end: 3</pre>
+// end: 3
+```
 
-<h3 id="Nested_functions_and_closures">Nested functions and closures</h3>
+### Nested functions and closures
 
-<p>You may nest a function within another function. The nested (inner) function is private to its containing (outer) function.</p>
+You may nest a function within another function. The nested (inner) function is
+private to its containing (outer) function.
 
-<p>It also forms a <em>closure</em>. A closure is an expression (most commonly, a function) that can have free variables together with an environment that binds those variables (that "closes" the expression).</p>
+It also forms a _closure_. A closure is an expression (most commonly, a
+function) that can have free variables together with an environment that binds
+those variables (that "closes" the expression).
 
-<p>Since a nested function is a closure, this means that a nested function can "inherit" the arguments and variables of its containing function. In other words, the inner function contains the scope of the outer function.</p>
+Since a nested function is a closure, this means that a nested function can
+"inherit" the arguments and variables of its containing function. In other
+words, the inner function contains the scope of the outer function.
 
-<p>To summarize:</p>
+To summarize:
 
-<ul>
-	<li>The inner function can be accessed only from statements in the outer function.</li>
-	<li>The inner function forms a closure: the inner function can use the arguments and variables of the outer function, while the outer function cannot use the arguments and variables of the inner function.</li>
-</ul>
+- The inner function can be accessed only from statements in the outer function.
+- The inner function forms a closure: the inner function can use the arguments
+  and variables of the outer function, while the outer function cannot use the
+  arguments and variables of the inner function.
 
-<p>The following example shows nested functions:</p>
+The following example shows nested functions:
 
-<pre class="brush: js">function addSquares(a, b) {
+```js
+function addSquares(a, b) {
   function square(x) {
     return x * x;
   }
@@ -319,11 +411,13 @@ foo(3);
 a = addSquares(2, 3); // returns 13
 b = addSquares(3, 4); // returns 25
 c = addSquares(4, 5); // returns 41
-</pre>
+```
 
-<p>Since the inner function forms a closure, you can call the outer function and specify arguments for both the outer and inner function:</p>
+Since the inner function forms a closure, you can call the outer function and
+specify arguments for both the outer and inner function:
 
-<pre class="brush: js">function outside(x) {
+```js
+function outside(x) {
   function inside(y) {
     return x + y;
   }
@@ -334,29 +428,39 @@ fn_inside = outside(3); // Think of it like: give me a function that adds 3 to w
 result = fn_inside(5); // returns 8
 
 result1 = outside(3)(5); // returns 8
-</pre>
+```
 
-<h3 id="Preservation_of_variables">Preservation of variables</h3>
+### Preservation of variables
 
-<p>Notice how <code>x</code> is preserved when <code>inside</code> is returned. A closure must preserve the arguments and variables in all scopes it references. Since each call provides potentially different arguments, a new closure is created for each call to <code>outside</code>. The memory can be freed only when the returned <code>inside</code> is no longer accessible.</p>
+Notice how `x` is preserved when `inside` is returned. A closure must preserve
+the arguments and variables in all scopes it references. Since each call
+provides potentially different arguments, a new closure is created for each call
+to `outside`. The memory can be freed only when the returned `inside` is no
+longer accessible.
 
-<p>This is not different from storing references in other objects, but is often less obvious because one does not set the references directly and cannot inspect them.</p>
+This is not different from storing references in other objects, but is often
+less obvious because one does not set the references directly and cannot inspect
+them.
 
-<h3 id="Multiply-nested_functions">Multiply-nested functions</h3>
+### Multiply-nested functions
 
-<p>Functions can be multiply-nested.  For example:</p>
+Functions can be multiply-nested. For example:
 
-<ul>
-	<li>A function (<code>A</code>) contains a function (<code>B</code>), which itself contains a function (<code>C</code>).</li>
-	<li>Both functions <code>B</code> and <code>C</code> form closures here. So, <code>B</code> can access <code>A</code>, and <code>C</code> can access <code>B</code>.</li>
-	<li>In addition, since <code>C</code> can access <code>B</code> which can access <code>A</code>, <code>C</code> can also access <code>A</code>.</li>
-</ul>
+- A function (`A`) contains a function (`B`), which itself contains a function
+  (`C`).
+- Both functions `B` and `C` form closures here. So, `B` can access `A`, and `C`
+  can access `B`.
+- In addition, since `C` can access `B` which can access `A`, `C` can also
+  access `A`.
 
-<p>Thus, the closures can contain multiple scopes; they recursively contain the scope of the functions containing it. This is called <em>scope chaining</em>. (The reason it is called "chaining" is explained later.)</p>
+Thus, the closures can contain multiple scopes; they recursively contain the
+scope of the functions containing it. This is called _scope chaining_. (The
+reason it is called "chaining" is explained later.)
 
-<p>Consider the following example:</p>
+Consider the following example:
 
-<pre class="brush: js">function A(x) {
+```js
+function A(x) {
   function B(y) {
     function C(z) {
       console.log(x + y + z);
@@ -366,25 +470,33 @@ result1 = outside(3)(5); // returns 8
   B(2);
 }
 A(1); // logs 6 (1 + 2 + 3)
-</pre>
+```
 
-<p>In this example, <code>C</code> accesses <code>B</code>'s <code>y</code> and <code>A</code>'s <code>x</code>.</p>
+In this example, `C` accesses `B`'s `y` and `A`'s `x`.
 
-<p>This can be done because:</p>
+This can be done because:
 
-<ol>
-	<li><code>B</code> forms a closure including <code>A</code> (i.e., <code>B</code> can access <code>A</code>'s arguments and variables).</li>
-	<li><code>C</code> forms a closure including <code>B</code>.</li>
-	<li>Because <code>B</code>'s closure includes <code>A</code>, <code>C</code>'s closure includes <code>A</code>, <code>C</code> can access <em>both</em> <code>B</code> <em>and</em> <code>A</code>'s arguments and variables. In other words, <code>C</code> <em>chains</em> the scopes of <code>B</code> and <code>A</code>, <em>in that order</em>.</li>
-</ol>
+1.  `B` forms a closure including `A` (i.e., `B` can access `A`'s arguments and
+    variables).
+2.  `C` forms a closure including `B`.
+3.  Because `B`'s closure includes `A`, `C`'s closure includes `A`, `C` can
+    access _both_ `B` _and_ `A`'s arguments and variables. In other words, `C`
+    _chains_ the scopes of `B` and `A`, _in that order_.
 
-<p>The reverse, however, is not true. <code>A</code> cannot access <code>C</code>, because <code>A</code> cannot access any argument or variable of <code>B</code>, which <code>C</code> is a variable of. Thus, <code>C</code> remains private to only <code>B</code>.</p>
+The reverse, however, is not true. `A` cannot access `C`, because `A` cannot
+access any argument or variable of `B`, which `C` is a variable of. Thus, `C`
+remains private to only `B`.
 
-<h3 id="Name_conflicts">Name conflicts</h3>
+### Name conflicts
 
-<p>When two arguments or variables in the scopes of a closure have the same name, there is a <em>name conflict</em>. More nested scopes take precedence. So, the inner-most scope takes the highest precedence, while the outer-most scope takes the lowest. This is the scope chain. The first on the chain is the inner-most scope, and the last is the outer-most scope. Consider the following:</p>
+When two arguments or variables in the scopes of a closure have the same name,
+there is a _name conflict_. More nested scopes take precedence. So, the
+inner-most scope takes the highest precedence, while the outer-most scope takes
+the lowest. This is the scope chain. The first on the chain is the inner-most
+scope, and the last is the outer-most scope. Consider the following:
 
-<pre class="brush: js">function outside() {
+```js
+function outside() {
   var x = 5;
   function inside(x) {
     return x * 2;
@@ -393,19 +505,34 @@ A(1); // logs 6 (1 + 2 + 3)
 }
 
 outside()(10); // returns 20 instead of 10
-</pre>
+```
 
-<p>The name conflict happens at the statement <code>return x * 2</code> and is between <code>inside</code>'s parameter <code>x</code> and <code>outside</code>'s variable <code>x</code>. The scope chain here is {<code>inside</code>, <code>outside</code>, global object}. Therefore, <code>inside</code>'s <code>x</code> takes precedences over <code>outside</code>'s <code>x</code>, and <code>20</code> (<code>inside</code>'s <code>x</code>) is returned instead of <code>10</code> (<code>outside</code>'s <code>x</code>).</p>
+The name conflict happens at the statement `return x * 2` and is between
+`inside`'s parameter `x` and `outside`'s variable `x`. The scope chain here is
+{`inside`, `outside`, global object}. Therefore, `inside`'s `x` takes
+precedences over `outside`'s `x`, and `20` (`inside`'s `x`) is returned instead
+of `10` (`outside`'s `x`).
 
-<h2 id="Closures">Closures</h2>
+## Closures
 
-<p>Closures are one of the most powerful features of JavaScript. JavaScript allows for the nesting of functions and grants the inner function full access to all the variables and functions defined inside the outer function (and all other variables and functions that the outer function has access to).</p>
+Closures are one of the most powerful features of JavaScript. JavaScript allows
+for the nesting of functions and grants the inner function full access to all
+the variables and functions defined inside the outer function (and all other
+variables and functions that the outer function has access to).
 
-<p>However, the outer function does <em>not</em> have access to the variables and functions defined inside the inner function. This provides a sort of encapsulation for the variables of the inner function.</p>
+However, the outer function does _not_ have access to the variables and
+functions defined inside the inner function. This provides a sort of
+encapsulation for the variables of the inner function.
 
-<p>Also, since the inner function has access to the scope of the outer function, the variables and functions defined in the outer function will live longer than the duration of the outer function execution, if the inner function manages to survive beyond the life of the outer function. A closure is created when the inner function is somehow made available to any scope outside the outer function.</p>
+Also, since the inner function has access to the scope of the outer function,
+the variables and functions defined in the outer function will live longer than
+the duration of the outer function execution, if the inner function manages to
+survive beyond the life of the outer function. A closure is created when the
+inner function is somehow made available to any scope outside the outer
+function.
 
-<pre class="brush: js">var pet = function(name) {   // The outer function defines a variable called "name"
+```js
+var pet = function(name) {   // The outer function defines a variable called "name"
   var getName = function() {
     return name;             // The inner function has access to the "name" variable of the outer
                              //function
@@ -415,11 +542,13 @@ outside()(10); // returns 20 instead of 10
 myPet = pet('Vivie');
 
 myPet();                     // Returns "Vivie"
-</pre>
+```
 
-<p>It can be much more complex than the code above. An object containing methods for manipulating the inner variables of the outer function can be returned.</p>
+It can be much more complex than the code above. An object containing methods
+for manipulating the inner variables of the outer function can be returned.
 
-<pre class="brush: js">var createPet = function(name) {
+```js
+var createPet = function(name) {
   var sex;
 
   return {
@@ -436,7 +565,7 @@ myPet();                     // Returns "Vivie"
     },
 
     setSex: function(newSex) {
-      if(typeof newSex === 'string' &amp;&amp; (newSex.toLowerCase() === 'male' ||
+      if(typeof newSex === 'string' && (newSex.toLowerCase() === 'male' ||
         newSex.toLowerCase() === 'female')) {
         sex = newSex;
       }
@@ -451,12 +580,18 @@ pet.setName('Oliver');
 pet.setSex('male');
 pet.getSex();                   // male
 pet.getName();                  // Oliver
-</pre>
+```
 
-<p>In the code above, the <code>name</code> variable of the outer function is accessible to the inner functions, and there is no other way to access the inner variables except through the inner functions. The inner variables of the inner functions act as safe stores for the outer arguments and variables. They hold "persistent" and "encapsulated" data for the inner functions to work with. The functions do not even have to be assigned to a variable, or have a name.</p>
+In the code above, the `name` variable of the outer function is accessible to
+the inner functions, and there is no other way to access the inner variables
+except through the inner functions. The inner variables of the inner functions
+act as safe stores for the outer arguments and variables. They hold "persistent"
+and "encapsulated" data for the inner functions to work with. The functions do
+not even have to be assigned to a variable, or have a name.
 
-<pre class="brush: js">var getCode = (function() {
-  var apiCode = '0]Eal(eh&amp;2';    // A code we do not want outsiders to be able to modify...
+```js
+var getCode = (function() {
+  var apiCode = '0]Eal(eh&2';    // A code we do not want outsiders to be able to modify...
 
   return function() {
     return apiCode;
@@ -464,50 +599,65 @@ pet.getName();                  // Oliver
 })();
 
 getCode();    // Returns the apiCode
-</pre>
+```
 
-<div class="notecard note">
-<p><strong>Note:</strong> There are a number of pitfalls to watch out for when using closures!</p>
+> **Note:** There are a number of pitfalls to watch out for when using closures!
+>
+> If an enclosed function defines a variable with the same name as a variable in
+> the outer scope, then there is no way to refer to the variable in the outer
+> scope again. (The inner scope variable "overrides" the outer one, until the
+> program exits the inner scope.)
+>
+> ```js example-bad
+> var createPet = function(name) {  // The outer function defines a variable called "name".
+>   return {
+>     setName: function(name) {    // The enclosed function also defines a variable called "name".
+>       name = name;               // How do we access the "name" defined by the outer function?
+>     }
+>   }
+> }
+> ```
 
-<p>If an enclosed function defines a variable with the same name as a variable in the outer scope, then there is no way to refer to the variable in the outer scope again.  (The inner scope variable "overrides" the outer one, until the program exits the inner scope.)</p>
+## Using the arguments object
 
-<pre class="example-bad brush: js">var createPet = function(name) {  // The outer function defines a variable called "name".
-  return {
-    setName: function(name) {    // The enclosed function also defines a variable called "name".
-      name = name;               // How do we access the "name" defined by the outer function?
-    }
-  }
-}
-</pre>
-</div>
+The arguments of a function are maintained in an array-like object. Within a
+function, you can address the arguments passed to it as follows:
 
-<h2 id="Using_the_arguments_object">Using the arguments object</h2>
+```js
+arguments[i]
+```
 
-<p>The arguments of a function are maintained in an array-like object. Within a function, you can address the arguments passed to it as follows:</p>
+where `i` is the ordinal number of the argument, starting at `0`. So, the first
+argument passed to a function would be `arguments[0]`. The total number of
+arguments is indicated by `arguments.length`.
 
-<pre class="brush: js">arguments[i]
-</pre>
+Using the `arguments` object, you can call a function with more arguments than
+it is formally declared to accept. This is often useful if you don't know in
+advance how many arguments will be passed to the function. You can use
+`arguments.length` to determine the number of arguments actually passed to the
+function, and then access each argument using the `arguments` object.
 
-<p>where <code>i</code> is the ordinal number of the argument, starting at <code>0</code>. So, the first argument passed to a function would be <code>arguments[0]</code>. The total number of arguments is indicated by <code>arguments.length</code>.</p>
+For example, consider a function that concatenates several strings. The only
+formal argument for the function is a string that specifies the characters that
+separate the items to concatenate. The function is defined as follows:
 
-<p>Using the <code>arguments</code> object, you can call a function with more arguments than it is formally declared to accept. This is often useful if you don't know in advance how many arguments will be passed to the function. You can use <code>arguments.length</code> to determine the number of arguments actually passed to the function, and then access each argument using the <code>arguments</code> object.</p>
-
-<p>For example, consider a function that concatenates several strings. The only formal argument for the function is a string that specifies the characters that separate the items to concatenate. The function is defined as follows:</p>
-
-<pre class="brush: js">function myConcat(separator) {
+```js
+function myConcat(separator) {
    var result = ''; // initialize list
    var i;
    // iterate through arguments
-   for (i = 1; i &lt; arguments.length; i++) {
+   for (i = 1; i < arguments.length; i++) {
       result += arguments[i] + separator;
    }
    return result;
 }
-</pre>
+```
 
-<p>You can pass any number of arguments to this function, and it concatenates each argument into a string "list":</p>
+You can pass any number of arguments to this function, and it concatenates each
+argument into a string "list":
 
-<pre class="brush: js">// returns "red, orange, blue, "
+```js
+// returns "red, orange, blue, "
 myConcat(', ', 'red', 'orange', 'blue');
 
 // returns "elephant; giraffe; lion; cheetah; "
@@ -515,73 +665,103 @@ myConcat('; ', 'elephant', 'giraffe', 'lion', 'cheetah');
 
 // returns "sage. basil. oregano. pepper. parsley. "
 myConcat('. ', 'sage', 'basil', 'oregano', 'pepper', 'parsley');
-</pre>
+```
 
-<div class="note">
-<p><strong>Note:</strong> The <code>arguments</code> variable is "array-like", but not an array. It is array-like in that it has a numbered index and a <code>length</code> property. However, it does <em>not</em> possess all of the array-manipulation methods.</p>
-</div>
+> **Note:** The `arguments` variable is "array-like", but not an array. It is
+> array-like in that it has a numbered index and a `length` property. However,
+> it does _not_ possess all of the array-manipulation methods.
 
-<p>See the {{jsxref("Function")}} object in the JavaScript reference for more information.</p>
+See the {{jsxref("Function")}} object in the JavaScript reference for more
+information.
 
-<h2 id="Function_parameters">Function parameters</h2>
+## Function parameters
 
-<p>Starting with ECMAScript 2015, there are two new kinds of parameters: <em>default parameters</em> and <em>rest parameters</em>.</p>
+Starting with ECMAScript 2015, there are two new kinds of parameters: _default
+parameters_ and _rest parameters_.
 
-<h3 id="Default_parameters">Default parameters</h3>
+### Default parameters
 
-<p>In JavaScript, parameters of functions default to <code>undefined</code>. However, in some situations it might be useful to set a different default value. This is exactly what default parameters do.</p>
+In JavaScript, parameters of functions default to `undefined`. However, in some
+situations it might be useful to set a different default value. This is exactly
+what default parameters do.
 
-<h4 id="Without_default_parameters_pre-ECMAScript_2015">Without default parameters (pre-ECMAScript 2015)</h4>
+#### Without default parameters (pre-ECMAScript 2015)
 
-<p>In the past, the general strategy for setting defaults was to test parameter values in the body of the function and assign a value if they are <code>undefined</code>.</p>
+In the past, the general strategy for setting defaults was to test parameter
+values in the body of the function and assign a value if they are `undefined`.
 
-<p>In the following example, if no value is provided for <code>b</code>, its value would be <code>undefined</code> when evaluating <code>a*b</code>, and a call to <code>multiply</code> would normally have returned <code>NaN</code>. However, this is prevented by the second line in this example:</p>
+In the following example, if no value is provided for `b`, its value would be
+`undefined` when evaluating `a*b`, and a call to `multiply` would normally have
+returned `NaN`. However, this is prevented by the second line in this example:
 
-<pre class="brush: js">function multiply(a, b) {
+```js
+function multiply(a, b) {
   b = typeof b !== 'undefined' ?  b : 1;
 
   return a * b;
 }
 
 multiply(5); // 5
-</pre>
+```
 
-<h4 id="With_default_parameters_post-ECMAScript_2015">With default parameters (post-ECMAScript 2015)</h4>
+#### With default parameters (post-ECMAScript 2015)
 
-<p>With <em>default parameters</em>, a manual check in the function body is no longer necessary. You can put <code>1</code> as the default value for <code>b</code> in the function head:</p>
+With _default parameters_, a manual check in the function body is no longer
+necessary. You can put `1` as the default value for `b` in the function head:
 
-<pre class="brush: js">function multiply(a, b = 1) {
+```js
+function multiply(a, b = 1) {
   return a * b;
 }
 
-multiply(5); // 5</pre>
+multiply(5); // 5
+```
 
-<p>For more details, see <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters">default parameters</a> in the reference.</p>
+For more details, see
+[default parameters](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters)
+in the reference.
 
-<h3 id="Rest_parameters">Rest parameters</h3>
+### Rest parameters
 
-<p>The <a href="/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters">rest parameter</a> syntax allows us to represent an indefinite number of arguments as an array.</p>
+The
+[rest parameter](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters)
+syntax allows us to represent an indefinite number of arguments as an array.
 
-<p>In the following example, the function <code>multiply</code> uses <em>rest parameters</em> to collect arguments from the second one to the end. The function then multiplies these by the first argument.</p>
+In the following example, the function `multiply` uses _rest parameters_ to
+collect arguments from the second one to the end. The function then multiplies
+these by the first argument.
 
-<pre class="brush: js">function multiply(multiplier, ...theArgs) {
-  return theArgs.map(x =&gt; multiplier * x);
+```js
+function multiply(multiplier, ...theArgs) {
+  return theArgs.map(x => multiplier * x);
 }
 
 var arr = multiply(2, 1, 2, 3);
-console.log(arr); // [2, 4, 6]</pre>
+console.log(arr); // [2, 4, 6]
+```
 
-<h2 id="Arrow_functions">Arrow functions</h2>
+## Arrow functions
 
-<p>An <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow function expression</a> (previously, and now incorrectly known as <strong>fat arrow function</strong>) has a shorter syntax compared to function expressions and does not have its own <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/this">this</a></code>, <a href="/en-US/docs/Web/JavaScript/Reference/Functions/arguments">arguments</a>, <a href="/en-US/docs/Web/JavaScript/Reference/Operators/super">super</a>, or <a href="/en-US/docs/Web/JavaScript/Reference/Operators/new.target">new.target</a>. Arrow functions are always anonymous. See also this hacks.mozilla.org blog post: "<a href="https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/">ES6 In Depth: Arrow functions</a>".</p>
+An
+[arrow function expression](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
+(previously, and now incorrectly known as **fat arrow function**) has a shorter
+syntax compared to function expressions and does not have its own
+[`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this),
+[arguments](/en-US/docs/Web/JavaScript/Reference/Functions/arguments),
+[super](/en-US/docs/Web/JavaScript/Reference/Operators/super), or
+[new.target](/en-US/docs/Web/JavaScript/Reference/Operators/new.target). Arrow
+functions are always anonymous. See also this hacks.mozilla.org blog post:
+"[ES6 In Depth: Arrow functions](https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/)".
 
-<p>Two factors influenced the introduction of arrow functions: <em>shorter functions</em> and <em>non-binding</em> of <code>this</code>.</p>
+Two factors influenced the introduction of arrow functions: _shorter functions_
+and _non-binding_ of `this`.
 
-<h3 id="Shorter_functions">Shorter functions</h3>
+### Shorter functions
 
-<p>In some functional patterns, shorter functions are welcome. Compare:</p>
+In some functional patterns, shorter functions are welcome. Compare:
 
-<pre class="brush: js">var a = [
+```js
+var a = [
   'Hydrogen',
   'Helium',
   'Lithium',
@@ -592,16 +772,22 @@ var a2 = a.map(function(s) { return s.length; });
 
 console.log(a2); // logs [8, 6, 7, 9]
 
-var a3 = a.map(s =&gt; s.length);
+var a3 = a.map(s => s.length);
 
 console.log(a3); // logs [8, 6, 7, 9]
-</pre>
+```
 
-<h3 id="No_separate_this">No separate <code>this</code></h3>
+### No separate `this`
 
-<p>Until arrow functions, every new function defined its own <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/this">this</a></code> value (a new object in the case of a constructor, undefined in <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a> function calls, the base object if the function is called as an "object method", etc.). This proved to be less than ideal with an object-oriented style of programming.</p>
+Until arrow functions, every new function defined its own
+[`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) value (a new
+object in the case of a constructor, undefined in
+[strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) function calls,
+the base object if the function is called as an "object method", etc.). This
+proved to be less than ideal with an object-oriented style of programming.
 
-<pre class="brush: js">function Person() {
+```js
+function Person() {
   // The Person() constructor defines `this` as itself.
   this.age = 0;
 
@@ -613,11 +799,14 @@ console.log(a3); // logs [8, 6, 7, 9]
   }, 1000);
 }
 
-var p = new Person();</pre>
+var p = new Person();
+```
 
-<p>In ECMAScript 3/5, this issue was fixed by assigning the value in <code>this</code> to a variable that could be closed over.</p>
+In ECMAScript 3/5, this issue was fixed by assigning the value in `this` to a
+variable that could be closed over.
 
-<pre class="brush: js">function Person() {
+```js
+function Person() {
   var self = this; // Some choose `that` instead of `self`.
                    // Choose one and be consistent.
   self.age = 0;
@@ -627,75 +816,94 @@ var p = new Person();</pre>
     // the value is the expected object.
     self.age++;
   }, 1000);
-}</pre>
+}
+```
 
-<p>Alternatively, a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind">bound function</a> could be created so that the proper <code>this</code> value would be passed to the <code>growUp()</code> function.</p>
+Alternatively, a
+[bound function](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)
+could be created so that the proper `this` value would be passed to the
+`growUp()` function.
 
-<p>An arrow function does not have its own <code>this</code>; the <code>this</code> value of the enclosing execution context is used. Thus, in the following code, the <code>this</code> within the function that is passed to <code>setInterval</code> has the same value as <code>this</code> in the enclosing function:</p>
+An arrow function does not have its own `this`; the `this` value of the
+enclosing execution context is used. Thus, in the following code, the `this`
+within the function that is passed to `setInterval` has the same value as `this`
+in the enclosing function:
 
-<pre class="brush: js">function Person() {
+```js
+function Person() {
   this.age = 0;
 
-  setInterval(() =&gt; {
+  setInterval(() => {
     this.age++; // |this| properly refers to the person object
   }, 1000);
 }
 
-var p = new Person();</pre>
+var p = new Person();
+```
 
-<h2 id="Predefined_functions">Predefined functions</h2>
+## Predefined functions
 
-<p>JavaScript has several top-level, built-in functions:</p>
+JavaScript has several top-level, built-in functions:
 
-<dl>
-	<dt>{{jsxref("Global_Objects/eval", "eval()")}}</dt>
-	<dd>
-	<p>The <code><strong>eval()</strong></code> method evaluates JavaScript code represented as a string.</p>
-	</dd>
-	<dt>{{jsxref("Global_Objects/uneval", "uneval()")}}</dt>
-	<dd>
-	<p>The <code><strong>uneval()</strong></code> method creates a string representation of the source code of an {{jsxref("Object")}}.</p>
-	</dd>
-	<dt>{{jsxref("Global_Objects/isFinite", "isFinite()")}}</dt>
-	<dd>
-	<p>The global <code><strong>isFinite()</strong></code> function determines whether the passed value is a finite number. If needed, the parameter is first converted to a number.</p>
-	</dd>
-	<dt>{{jsxref("Global_Objects/isNaN", "isNaN()")}}</dt>
-	<dd>
-	<p>The <code><strong>isNaN()</strong></code> function determines whether a value is {{jsxref("Global_Objects/NaN", "NaN")}} or not. Note: coercion inside the <code>isNaN</code> function has <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN#description">interesting</a> rules; you may alternatively want to use {{jsxref("Number.isNaN()")}}, as defined in ECMAScript 2015, or you can use <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/typeof">typeof</a></code> to determine if the value is Not-A-Number.</p>
-	</dd>
-	<dt>{{jsxref("Global_Objects/parseFloat", "parseFloat()")}}</dt>
-	<dd>
-	<p>The <code><strong>parseFloat()</strong></code> function parses a string argument and returns a floating point number.</p>
-	</dd>
-	<dt>{{jsxref("Global_Objects/parseInt", "parseInt()")}}</dt>
-	<dd>
-	<p>The <code><strong>parseInt()</strong></code> function parses a string argument and returns an integer of the specified radix (the base in mathematical numeral systems).</p>
-	</dd>
-	<dt>{{jsxref("Global_Objects/decodeURI", "decodeURI()")}}</dt>
-	<dd>
-	<p>The <code><strong>decodeURI()</strong></code> function decodes a Uniform Resource Identifier (URI) previously created by {{jsxref("Global_Objects/encodeURI", "encodeURI")}} or by a similar routine.</p>
-	</dd>
-	<dt>{{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}</dt>
-	<dd>
-	<p>The <code><strong>decodeURIComponent()</strong></code> method decodes a Uniform Resource Identifier (URI) component previously created by {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent")}} or by a similar routine.</p>
-	</dd>
-	<dt>{{jsxref("Global_Objects/encodeURI", "encodeURI()")}}</dt>
-	<dd>
-	<p>The <code><strong>encodeURI()</strong></code> method encodes a Uniform Resource Identifier (URI) by replacing each instance of certain characters by one, two, three, or four escape sequences representing the UTF-8 encoding of the character (will only be four escape sequences for characters composed of two "surrogate" characters).</p>
-	</dd>
-	<dt>{{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}</dt>
-	<dd>
-	<p>The <code><strong>encodeURIComponent()</strong></code> method encodes a Uniform Resource Identifier (URI) component by replacing each instance of certain characters by one, two, three, or four escape sequences representing the UTF-8 encoding of the character (will only be four escape sequences for characters composed of two "surrogate" characters).</p>
-	</dd>
-	<dt>{{jsxref("Global_Objects/escape", "escape()")}}</dt>
-	<dd>
-	<p>The deprecated <code><strong>escape()</strong></code> method computes a new string in which certain characters have been replaced by a hexadecimal escape sequence. Use {{jsxref("Global_Objects/encodeURI", "encodeURI")}} or {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent")}} instead.</p>
-	</dd>
-	<dt>{{jsxref("Global_Objects/unescape", "unescape()")}}</dt>
-	<dd>
-	<p>The deprecated <code><strong>unescape()</strong></code> method computes a new string in which hexadecimal escape sequences are replaced with the character that it represents. The escape sequences might be introduced by a function like {{jsxref("Global_Objects/escape", "escape")}}. Because <code>unescape()</code> is deprecated, use {{jsxref("Global_Objects/decodeURI", "decodeURI()")}} or {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent")}} instead.</p>
-	</dd>
-</dl>
+- {{jsxref("Global_Objects/eval", "eval()")}}
+  - : The **`eval()`** method evaluates JavaScript code represented as a string.
+- {{jsxref("Global_Objects/uneval", "uneval()")}}
+  - : The **`uneval()`** method creates a string representation of the source
+    code of an {{jsxref("Object")}}.
+- {{jsxref("Global_Objects/isFinite", "isFinite()")}}
+  - : The global **`isFinite()`** function determines whether the passed value
+    is a finite number. If needed, the parameter is first converted to a number.
+- {{jsxref("Global_Objects/isNaN", "isNaN()")}}
+  - : The **`isNaN()`** function determines whether a value is
+    {{jsxref("Global_Objects/NaN", "NaN")}} or not. Note: coercion
+    inside the `isNaN` function has
+    [interesting](/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN#description)
+    rules; you may alternatively want to use
+    {{jsxref("Number.isNaN()")}}, as defined in ECMAScript 2015, or you
+    can use [`typeof`](/en-US/docs/Web/JavaScript/Reference/Operators/typeof) to
+    determine if the value is Not-A-Number.
+- {{jsxref("Global_Objects/parseFloat", "parseFloat()")}}
+  - : The **`parseFloat()`** function parses a string argument and returns a
+    floating point number.
+- {{jsxref("Global_Objects/parseInt", "parseInt()")}}
+  - : The **`parseInt()`** function parses a string argument and returns an
+    integer of the specified radix (the base in mathematical numeral systems).
+- {{jsxref("Global_Objects/decodeURI", "decodeURI()")}}
+  - : The **`decodeURI()`** function decodes a Uniform Resource Identifier (URI)
+    previously created by
+    {{jsxref("Global_Objects/encodeURI", "encodeURI")}} or by a
+    similar routine.
+- {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}
+  - : The **`decodeURIComponent()`** method decodes a Uniform Resource
+    Identifier (URI) component previously created by
+    {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent")}}
+    or by a similar routine.
+- {{jsxref("Global_Objects/encodeURI", "encodeURI()")}}
+  - : The **`encodeURI()`** method encodes a Uniform Resource Identifier (URI)
+    by replacing each instance of certain characters by one, two, three, or four
+    escape sequences representing the UTF-8 encoding of the character (will only
+    be four escape sequences for characters composed of two "surrogate"
+    characters).
+- {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}
+  - : The **`encodeURIComponent()`** method encodes a Uniform Resource
+    Identifier (URI) component by replacing each instance of certain characters
+    by one, two, three, or four escape sequences representing the UTF-8 encoding
+    of the character (will only be four escape sequences for characters composed
+    of two "surrogate" characters).
+- {{jsxref("Global_Objects/escape", "escape()")}}
+  - : The deprecated **`escape()`** method computes a new string in which
+    certain characters have been replaced by a hexadecimal escape sequence. Use
+    {{jsxref("Global_Objects/encodeURI", "encodeURI")}} or
+    {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent")}}
+    instead.
+- {{jsxref("Global_Objects/unescape", "unescape()")}}
+  - : The deprecated **`unescape()`** method computes a new string in which
+    hexadecimal escape sequences are replaced with the character that it
+    represents. The escape sequences might be introduced by a function like
+    {{jsxref("Global_Objects/escape", "escape")}}. Because
+    `unescape()` is deprecated, use
+    {{jsxref("Global_Objects/decodeURI", "decodeURI()")}} or
+    {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent")}}
+    instead.
 
-<p>{{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_Operators")}}</p>
+{{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_Operators")}}

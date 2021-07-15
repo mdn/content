@@ -2,48 +2,51 @@
 title: static
 slug: Web/JavaScript/Reference/Classes/static
 tags:
-- Classes
-- ECMAScript 2015
-- JavaScript
-- Language feature
-- Static
+  - Classes
+  - ECMAScript 2015
+  - JavaScript
+  - Language feature
+  - Static
 browser-compat: javascript.classes.static"
 ---
-<div>{{jsSidebar("Classes")}}</div>
+{{jsSidebar("Classes")}}
 
-<p>The <code><strong>static</strong></code> keyword defines a
-    static method or property for a class. Neither static methods nor static properties
-    can be called on instances of the class. Instead, they're called on the class
-    itself.</p>
+The **`static`** keyword defines a static method or property for a class.
+Neither static methods nor static properties can be called on instances of the
+class. Instead, they're called on the class itself.
 
-<p>Static methods are often utility functions, such as functions to create
-or clone objects, whereas static properties are useful for caches, fixed-configuration,
-or any other data you don't need to be replicated across instances.</p>
+Static methods are often utility functions, such as functions to create or clone
+objects, whereas static properties are useful for caches, fixed-configuration,
+or any other data you don't need to be replicated across instances.
 
-<p>Note that the examples throughout this article use <a href="/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields">public class fields</a> (including static public class fields), which are not yet part of the ECMAScript specification, but are instead specified in a <a href="https://tc39.es/proposal-class-fields/">Public and private instance fields</a> proposal at <a href="https://tc39.es/">TC39</a>.</p>
+Note that the examples throughout this article use
+[public class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields)
+(including static public class fields), which are not yet part of the ECMAScript
+specification, but are instead specified in a
+[Public and private instance fields](https://tc39.es/proposal-class-fields/)
+proposal at [TC39](https://tc39.es/).
 
-<div>{{EmbedInteractiveExample("pages/js/classes-static.html")}}</div>
+{{EmbedInteractiveExample("pages/js/classes-static.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+static methodName() { ... }
+static propertyName [= value];
+```
 
-<pre class="brush: js">static <var>methodName</var>() { ... }
-static <var>propertyName </var>[= <var>value</var>];
-</pre>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Using static members in classes
 
-<h3 id="Using_static_members_in_classes">Using static members in classes</h3>
+The following example demonstrates several things:
 
-<p>The following example demonstrates several things:</p>
+1.  How a static member (method or property) is defined on a class.
+2.  That a class with a static member can be sub-classed.
+3.  How a static member can and cannot be called.
 
-<ol>
-  <li>How a static member (method or property) is defined on a class.</li>
-  <li>That a class with a static member can be sub-classed.</li>
-  <li>How a static member can and cannot be called.</li>
-</ol>
-
-<pre class="brush: js">class Triple {
+```js
+class Triple {
   static customName = 'Tripler';
   static description = 'I triple any number you provide';
   static calculate(n = 1) {
@@ -72,17 +75,16 @@ console.log(SquaredTriple.customName);      // 'Tripler'
 
 // This throws because calculate() is a static member, not an instance member.
 console.log(tp.calculate());                // 'tp.calculate is not a function'
-</pre>
+```
 
-<h3 id="Calling_static_members_from_another_static_method">Calling static members from
-  another static method</h3>
+### Calling static members from another static method
 
-<p>In order to call a static method or property within another static method of the same
-  class, you can use the
-  <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/this">this</a></code>
-  keyword.</p>
+In order to call a static method or property within another static method of the
+same class, you can use the
+[`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) keyword.
 
-<pre class="brush: js">class StaticMethodCall {
+```js
+class StaticMethodCall {
   static staticProperty = 'static property';
   static staticMethod() {
     return 'Static method and ' + this.staticProperty + ' has been called';
@@ -95,19 +97,21 @@ StaticMethodCall.staticMethod();
 // 'Static method and static property has been called'
 
 StaticMethodCall.anotherStaticMethod();
-// 'Static method and static property has been called from another static method'</pre>
+// 'Static method and static property has been called from another static method'
+```
 
-<h3 id="Calling_static_members_from_a_class_constructor_and_other_methods">Calling static
-  members from a class constructor and other methods</h3>
+### Calling static members from a class constructor and other methods
 
-<p>Static members are not directly accessible using the {{JSxRef("Operators/this", "this")}} keyword from
-  non-static methods. You need to call them using the class name:
-  <code>CLASSNAME.STATIC_METHOD_NAME()</code> /
-  <code>CLASSNAME.STATIC_PROPERTY_NAME</code> or by calling the method as a property of
-  the <code>constructor</code>: <code>this.constructor.STATIC_METHOD_NAME() </code> /
-  <code>this.constructor.STATIC_PROPERTY_NAME</code></p>
+Static members are not directly accessible using the
+{{JSxRef("Operators/this", "this")}} keyword from non-static
+methods. You need to call them using the class name:
+`CLASSNAME.STATIC_METHOD_NAME()` / `CLASSNAME.STATIC_PROPERTY_NAME` or by
+calling the method as a property of the `constructor`:
+`this.constructor.STATIC_METHOD_NAME() `/
+`this.constructor.STATIC_PROPERTY_NAME`
 
-<pre class="brush: js">class StaticMethodCall {
+```js
+class StaticMethodCall {
   constructor() {
     console.log(StaticMethodCall.staticProperty); // 'static property'
     console.log(this.constructor.staticProperty); // 'static property'
@@ -119,22 +123,19 @@ StaticMethodCall.anotherStaticMethod();
   static staticMethod() {
     return 'static method has been called.';
   }
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/class"><code>class</code>
-      expression</a></li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/class"><code>class</code>
-      declaration</a></li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Classes">Classes</a></li>
-</ul>
+- [`class` expression](/en-US/docs/Web/JavaScript/Reference/Operators/class)
+- [`class` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/class)
+- [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)

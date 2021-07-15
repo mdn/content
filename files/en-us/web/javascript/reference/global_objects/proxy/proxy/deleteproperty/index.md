@@ -2,78 +2,72 @@
 title: handler.deleteProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/deleteProperty
 tags:
-- ECMAScript 2015
-- JavaScript
-- Method
-- Proxy
+  - ECMAScript 2015
+  - JavaScript
+  - Method
+  - Proxy
 browser-compat: javascript.builtins.Proxy.handler.deleteProperty
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>handler.deleteProperty()</code></strong> method is a trap for the
-  {{jsxref("Operators/delete", "delete")}} operator.</p>
+The **`handler.deleteProperty()`** method is a trap for the
+{{jsxref("Operators/delete", "delete")}} operator.
 
-<div>{{EmbedInteractiveExample("pages/js/proxyhandler-deleteproperty.html", "taller")}}
-</div>
+{{EmbedInteractiveExample("pages/js/proxyhandler-deleteproperty.html", "taller")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush: js">const p = new Proxy(<var>target</var>, {
-  deleteProperty: function(<var>target</var>, <var>property</var>) {
+```js
+const p = new Proxy(target, {
+  deleteProperty: function(target, property) {
   }
 });
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>The following parameters are passed to the <code>deleteProperty()</code> method.
-  <code>this</code> is bound to the handler.</p>
+The following parameters are passed to the `deleteProperty()` method. `this` is
+bound to the handler.
 
-<dl>
-  <dt><code><var>target</var></code></dt>
-  <dd>The target object.</dd>
-  <dt><code><var>property</var></code></dt>
-  <dd>The name or {{jsxref("Symbol")}} of the property to delete.</dd>
-</dl>
+- `target`
+  - : The target object.
+- `property`
+  - : The name or {{jsxref("Symbol")}} of the property to delete.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>The <code>deleteProperty()</code> method must return a {{jsxref("Boolean")}} indicating
-  whether or not the property has been successfully deleted.</p>
+The `deleteProperty()` method must return a {{jsxref("Boolean")}}
+indicating whether or not the property has been successfully deleted.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The <code><strong>handler.deleteProperty()</strong></code> method is a trap for the
-  {{jsxref("Operators/delete", "delete")}} operator.</p>
+The **`handler.deleteProperty()`** method is a trap for the
+{{jsxref("Operators/delete", "delete")}} operator.
 
-<h3 id="Interceptions">Interceptions</h3>
+### Interceptions
 
-<p>This trap can intercept these operations:</p>
+This trap can intercept these operations:
 
-<ul>
-  <li>Property deletion: <code>delete <var>proxy</var>[<var>foo</var>]</code> and
-    <code>delete <var>proxy</var>.<var>foo</var></code></li>
-  <li>{{jsxref("Reflect.deleteProperty()")}}</li>
-</ul>
+- Property deletion: `delete proxy[foo]` and `delete proxy.foo`
+- {{jsxref("Reflect.deleteProperty()")}}
 
-<h3 id="Invariants">Invariants</h3>
+### Invariants
 
-<p>If the following invariants are violated, the proxy will throw a
-  {{jsxref("TypeError")}}:</p>
+If the following invariants are violated, the proxy will throw a
+{{jsxref("TypeError")}}:
 
-<ul>
-  <li>A property cannot be deleted, if it exists as a non-configurable own property of the
-    target object.</li>
-</ul>
+- A property cannot be deleted, if it exists as a non-configurable own property
+  of the target object.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Trapping_the_delete_operator">Trapping the delete operator</h3>
+### Trapping the delete operator
 
-<p>The following code traps the {{jsxref("Operators/delete", "delete")}} operator.</p>
+The following code traps the
+{{jsxref("Operators/delete", "delete")}} operator.
 
-<pre class="brush: js">const p = new Proxy({}, {
+```js
+const p = new Proxy({}, {
   deleteProperty: function(target, prop) {
     if (prop in target){
       delete target[prop]
@@ -98,21 +92,19 @@ console.log('a' in p)  // false
 
 result = delete p.a    // "property not found: a"
 console.log(result)    // false
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Proxy")}}</li>
-  <li>{{jsxref("Proxy.handler", "handler")}}</li>
-  <li>{{jsxref("Operators/delete", "delete")}} operator</li>
-  <li>{{jsxref("Reflect.deleteProperty()")}}</li>
-</ul>
+- {{jsxref("Proxy")}}
+- {{jsxref("Proxy.handler", "handler")}}
+- {{jsxref("Operators/delete", "delete")}} operator
+- {{jsxref("Reflect.deleteProperty()")}}

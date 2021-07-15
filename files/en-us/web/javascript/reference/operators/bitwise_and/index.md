@@ -2,107 +2,81 @@
 title: Bitwise AND (&)
 slug: Web/JavaScript/Reference/Operators/Bitwise_AND
 tags:
-- Bitwise operator
-- JavaScript
-- Language feature
-- Operator
-- Reference
+  - Bitwise operator
+  - JavaScript
+  - Language feature
+  - Operator
+  - Reference
 browser-compat: javascript.operators.bitwise_and
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>The bitwise AND operator (<code>&amp;</code>) returns a <code>1</code> in each bit
-  position for which the corresponding bits of both operands are <code>1</code>s.</p>
+The bitwise AND operator (`&`) returns a `1` in each bit position for which the
+corresponding bits of both operands are `1`s.
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-bitwise-and.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-bitwise-and.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+a & b
+```
 
-<pre class="brush: js">a &amp; b</pre>
+## Description
 
-<h2 id="Description">Description</h2>
+The operands are converted to 32-bit integers and expressed by a series of bits
+(zeroes and ones). Numbers with more than 32 bits get their most significant
+bits discarded. For example, the following integer with more than 32 bits will
+be converted to a 32 bit integer:
 
-<p>The operands are converted to 32-bit integers and expressed by a series of bits (zeroes
-  and ones). Numbers with more than 32 bits get their most significant bits discarded. For
-  example, the following integer with more than 32 bits will be converted to a 32 bit
-  integer:</p>
+```js
+Before: 11100110111110100000000000000110000000000001
+After:              10100000000000000110000000000001
+```
 
-<pre class="brush: js">Before: 11100110111110100000000000000110000000000001
-After:              10100000000000000110000000000001</pre>
+Each bit in the first operand is paired with the corresponding bit in the second
+operand: _first bit_ to _first bit_, _second bit_ to _second bit_, and so on.
 
-<p>Each bit in the first operand is paired with the corresponding bit in the second
-  operand: <em>first bit</em> to <em>first bit</em>, <em>second bit</em> to <em>second
-    bit</em>, and so on.</p>
+The operator is applied to each pair of bits, and the result is constructed
+bitwise.
 
-<p>The operator is applied to each pair of bits, and the result is constructed bitwise.
-</p>
+The truth table for the AND operation is:
 
-<p>The truth table for the AND operation is:</p>
+| a   | b   | a AND b |
+| --- | --- | ------- |
+| 0   | 0   | 0       |
+| 0   | 1   | 0       |
+| 1   | 0   | 0       |
+| 1   | 1   | 1       |
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th class="header" scope="col">a</th>
-      <th class="header" scope="col">b</th>
-      <th class="header" scope="col">a AND b</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-    </tr>
-  </tbody>
-</table>
-
-<pre class="brush: js">.    9 (base 10) = 00000000000000000000000000001001 (base 2)
+```js
+.    9 (base 10) = 00000000000000000000000000001001 (base 2)
     14 (base 10) = 00000000000000000000000000001110 (base 2)
                    --------------------------------
-14 &amp; 9 (base 10) = 00000000000000000000000000001000 (base 2) = 8 (base 10)
-</pre>
+14 & 9 (base 10) = 00000000000000000000000000001000 (base 2) = 8 (base 10)
+```
 
-<p>Bitwise ANDing any number <code><var>x</var></code> with <code>0</code> yields
-  <code>0</code>.</p>
+Bitwise ANDing any number `x` with `0` yields `0`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_bitwise_AND">Using bitwise AND</h3>
+### Using bitwise AND
 
-<pre class="brush: js">// 5: 00000000000000000000000000000101
+```js
+// 5: 00000000000000000000000000000101
 // 2: 00000000000000000000000000000010
-5 &amp; 2; // 0</pre>
+5 & 2; // 0
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Bitwise">Bitwise
-      operators in the JS guide</a></li>
-  <li><a
-      href="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_AND_assignment">Bitwise
-      AND assignment operator</a></li>
-</ul>
+- [Bitwise operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Bitwise)
+- [Bitwise AND assignment operator](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_AND_assignment)

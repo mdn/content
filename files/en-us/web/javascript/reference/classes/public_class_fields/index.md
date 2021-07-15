@@ -6,15 +6,16 @@ tags:
   - JavaScript
   - Language feature
 ---
-<div>{{JsSidebar("Classes")}}</div>
+{{JsSidebar("Classes")}}
 
-<p>Both static and instance public fields are writable, enumerable, and configurable
-  properties. As such, unlike their private counterparts, they participate in prototype
-  inheritance.</p>
+Both static and instance public fields are writable, enumerable, and
+configurable properties. As such, unlike their private counterparts, they
+participate in prototype inheritance.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">class ClassWithInstanceField {
+```js
+class ClassWithInstanceField {
   instanceField = 'instance field'
 }
 
@@ -27,43 +28,48 @@ class ClassWithPublicInstanceMethod {
     return 'hello world'
   }
 }
-</pre>
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Public_static_fields">Public static fields</h3>
+### Public static fields
 
-<p>Public static fields are useful when you want a field to exist only once per class, not
-  on every class instance you create. This is useful for caches, fixed-configuration, or
-  any other data you don't need to be replicated across instances.</p>
+Public static fields are useful when you want a field to exist only once per
+class, not on every class instance you create. This is useful for caches,
+fixed-configuration, or any other data you don't need to be replicated across
+instances.
 
-<p>Public static fields are declared using the <code>static</code> keyword. They are added
-  to the class constructor at the time of class evaluation using
-  {{jsxref("Global_Objects/Object/defineProperty", "Object.defineProperty()")}}. They are
-  accessed again from the class constructor.</p>
+Public static fields are declared using the `static` keyword. They are added to
+the class constructor at the time of class evaluation using
+{{jsxref("Global_Objects/Object/defineProperty", "Object.defineProperty()")}}.
+They are accessed again from the class constructor.
 
-<pre class="brush: js">class ClassWithStaticField {
+```js
+class ClassWithStaticField {
   static staticField = 'static field'
 }
 
 console.log(ClassWithStaticField.staticField)
 // expected output: "static field"
-</pre>
+```
 
-<p>Fields without initializers are initialized to <code>undefined</code>.</p>
+Fields without initializers are initialized to `undefined`.
 
-<pre class="brush: js">class ClassWithStaticField {
+```js
+class ClassWithStaticField {
   static staticField
 }
 
 console.assert(ClassWithStaticField.hasOwnProperty('staticField'))
 console.log(ClassWithStaticField.staticField)
-// expected output: "undefined"</pre>
+// expected output: "undefined"
+```
 
-<p>Public static fields are not reinitialized on subclasses, but can be accessed via the
-  prototype chain.</p>
+Public static fields are not reinitialized on subclasses, but can be accessed
+via the prototype chain.
 
-<pre class="brush: js">class ClassWithStaticField {
+```js
+class ClassWithStaticField {
   static baseStaticField = 'base field'
 }
 
@@ -75,13 +81,15 @@ console.log(SubClassWithStaticField.subStaticField)
 // expected output: "sub class field"
 
 console.log(SubClassWithStaticField.baseStaticField)
-// expected output: "base field"</pre>
+// expected output: "base field"
+```
 
-<p>When initializing fields, <code>this</code> refers to the class constructor. You can
-  also reference it by name, and use <code>super</code> to get the superclass constructor
-  (if one exists).</p>
+When initializing fields, `this` refers to the class constructor. You can also
+reference it by name, and use `super` to get the superclass constructor (if one
+exists).
 
-<pre class="brush: js">class ClassWithStaticField {
+```js
+class ClassWithStaticField {
   static baseStaticField = 'base static field'
   static anotherBaseStaticField = this.baseStaticField
 
@@ -97,40 +105,47 @@ console.log(ClassWithStaticField.anotherBaseStaticField)
 
 console.log(SubClassWithStaticField.subStaticField)
 // expected output: "base static method output"
-</pre>
+```
 
-<h3 id="Public_instance_fields">Public instance fields</h3>
+### Public instance fields
 
-<p>Public instance fields exist on every created instance of a class. By declaring a
-  public field, you can ensure the field is always present, and the class definition is
-  more self-documenting.</p>
+Public instance fields exist on every created instance of a class. By declaring
+a public field, you can ensure the field is always present, and the class
+definition is more self-documenting.
 
-<p>Public instance fields are added with {{jsxref("Global_Objects/Object/defineProperty",
-  "Object.defineProperty()")}} either at construction time in the base class (before the
-  constructor body runs), or just after <code>super()</code> returns in a subclass.</p>
+Public instance fields are added with
+{{jsxref("Global_Objects/Object/defineProperty",
+  "Object.defineProperty()")}}
+either at construction time in the base class (before the constructor body
+runs), or just after `super()` returns in a subclass.
 
-<pre class="brush: js">class ClassWithInstanceField {
+```js
+class ClassWithInstanceField {
   instanceField = 'instance field'
 }
 
 const instance = new ClassWithInstanceField()
 console.log(instance.instanceField)
-// expected output: "instance field"</pre>
+// expected output: "instance field"
+```
 
-<p>Fields without initializers are initialized to <code>undefined</code>.</p>
+Fields without initializers are initialized to `undefined`.
 
-<pre class="brush: js">class ClassWithInstanceField {
+```js
+class ClassWithInstanceField {
   instanceField
 }
 
 const instance = new ClassWithInstanceField()
 console.assert(instance.hasOwnProperty('instanceField'))
 console.log(instance.instanceField)
-// expected output: "undefined"</pre>
+// expected output: "undefined"
+```
 
-<p>Like properties, field names may be computed.</p>
+Like properties, field names may be computed.
 
-<pre class="brush: js">const PREFIX = 'prefix'
+```js
+const PREFIX = 'prefix'
 
 class ClassWithComputedFieldName {
     [`${PREFIX}Field`] = 'prefixed field'
@@ -138,13 +153,15 @@ class ClassWithComputedFieldName {
 
 const instance = new ClassWithComputedFieldName()
 console.log(instance.prefixField)
-// expected output: "prefixed field"</pre>
+// expected output: "prefixed field"
+```
 
-<p>When initializing fields <code>this</code> refers to the class instance under
-  construction. Just as in public instance methods, if you're in a subclass you can access
-  the superclass prototype using <code>super</code>.</p>
+When initializing fields `this` refers to the class instance under construction.
+Just as in public instance methods, if you're in a subclass you can access the
+superclass prototype using `super`.
 
-<pre class="brush: js">class ClassWithInstanceField {
+```js
+class ClassWithInstanceField {
   baseInstanceField = 'base field'
   anotherBaseInstanceField = this.baseInstanceField
   baseInstanceMethod() { return 'base method output' }
@@ -161,36 +178,41 @@ console.log(base.anotherBaseInstanceField)
 // expected output: "base field"
 
 console.log(sub.subInstanceField)
-// expected output: "base method output"</pre>
+// expected output: "base method output"
+```
 
-<h3 id="Public_methods">Public methods</h3>
+### Public methods
 
-<h4 id="Public_static_methods">Public static methods</h4>
+#### Public static methods
 
-<p>The <code><strong>static</strong></code> keyword defines a static method for a class.
-  Static methods aren't called on instances of the class. Instead, they're called on the
-  class itself. These are often utility functions, such as functions to create or clone
-  objects.</p>
+The **`static`** keyword defines a static method for a class. Static methods
+aren't called on instances of the class. Instead, they're called on the class
+itself. These are often utility functions, such as functions to create or clone
+objects.
 
-<pre class="brush: js">class ClassWithStaticMethod {
+```js
+class ClassWithStaticMethod {
   static staticMethod() {
     return 'static method has been called.';
   }
 }
 
 console.log(ClassWithStaticMethod.staticMethod());
-// expected output: "static method has been called."</pre>
+// expected output: "static method has been called."
+```
 
-<p>The static methods are added to the class constructor with
-  {{jsxref("Global_Objects/Object/defineProperty", "Object.defineProperty()")}} at class
-  evaluation time. These methods are writable, non-enumerable, and configurable.</p>
+The static methods are added to the class constructor with
+{{jsxref("Global_Objects/Object/defineProperty", "Object.defineProperty()")}}
+at class evaluation time. These methods are writable, non-enumerable, and
+configurable.
 
-<h4 id="Public_instance_methods">Public instance methods</h4>
+#### Public instance methods
 
-<p>As the name implies, public instance methods are methods available on class instances.
-</p>
+As the name implies, public instance methods are methods available on class
+instances.
 
-<pre class="brush: js">class ClassWithPublicInstanceMethod {
+```js
+class ClassWithPublicInstanceMethod {
   publicMethod() {
     return 'hello world'
   }
@@ -198,25 +220,31 @@ console.log(ClassWithStaticMethod.staticMethod());
 
 const instance = new ClassWithPublicInstanceMethod()
 console.log(instance.publicMethod())
-// expected output: "hello world"</pre>
+// expected output: "hello world"
+```
 
-<p>Public instance methods are added to the class prototype at the time of class
-  evaluation using {{jsxref("Global_Objects/Object/defineProperty",
-  "Object.defineProperty()")}}. They are writable, non-enumerable, and configurable.</p>
+Public instance methods are added to the class prototype at the time of class
+evaluation using
+{{jsxref("Global_Objects/Object/defineProperty",
+  "Object.defineProperty()")}}.
+They are writable, non-enumerable, and configurable.
 
-<p>You may make use of generator, async, and async generator functions.</p>
+You may make use of generator, async, and async generator functions.
 
-<pre class="brush: js">class ClassWithFancyMethods {
+```js
+class ClassWithFancyMethods {
   *generatorMethod() { }
   async asyncMethod() { }
   async *asyncGeneratorMethod() { }
-}</pre>
+}
+```
 
-<p>Inside instance methods, <code>this</code> refers to the instance itself. In
-  subclasses, <code>super</code> lets you access the superclass prototype, allowing you to
-  call methods from the superclass.</p>
+Inside instance methods, `this` refers to the instance itself. In subclasses,
+`super` lets you access the superclass prototype, allowing you to call methods
+from the superclass.
 
-<pre class="brush: js">class BaseClass {
+```js
+class BaseClass {
   msg = 'hello world'
   basePublicMethod() {
     return this.msg
@@ -232,15 +260,16 @@ class SubClass extends BaseClass {
 const instance = new SubClass()
 console.log(instance.subPublicMethod())
 // expected output: "hello world"
-</pre>
+```
 
-<p>Getters and setters are special methods that bind to a class property and are called
-  when that property is accessed or set. Use the <a
-    href="/en-US/docs/Web/JavaScript/Reference/Functions/get">get</a> and <a
-    href="/en-US/docs/Web/JavaScript/Reference/Functions/set">set</a> syntax to declare a
-  public instance getter or setter.</p>
+Getters and setters are special methods that bind to a class property and are
+called when that property is accessed or set. Use the
+[get](/en-US/docs/Web/JavaScript/Reference/Functions/get) and
+[set](/en-US/docs/Web/JavaScript/Reference/Functions/set) syntax to declare a
+public instance getter or setter.
 
-<pre class="brush: js">class ClassWithGetSet {
+```js
+class ClassWithGetSet {
   #msg = 'hello world'
   get msg() {
     return this.#msg
@@ -257,22 +286,18 @@ console.log(instance.msg)
 instance.msg = 'cake'
 console.log(instance.msg)
 // expected output: "hello cake"
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications("javascript.classes")}}</p>
+{{Specifications("javascript.classes")}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("javascript.classes")}}</p>
+{{Compat("javascript.classes")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a
-      href="https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html">The
-      Semantics of All JS Class Elements</a></li>
-  <li><a href="https://v8.dev/features/class-fields">Public and private class fields</a>
-      article at the v8.dev site</li>
-</ul>
+- [The Semantics of All JS Class Elements](https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html)
+- [Public and private class fields](https://v8.dev/features/class-fields)
+  article at the v8.dev site

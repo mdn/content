@@ -2,44 +2,42 @@
 title: RangeError() constructor
 slug: Web/JavaScript/Reference/Global_Objects/RangeError/RangeError
 tags:
-- Constructor
-- JavaScript
-- Reference
+  - Constructor
+  - JavaScript
+  - Reference
 browser-compat: javascript.builtins.RangeError.RangeError
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <code><strong>RangeError()</strong></code> constructor creates an error
-  when a value is not in the set or range of allowed values.</p>
+The **`RangeError()`** constructor creates an error when a value is not in the
+set or range of allowed values.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 new RangeError()
 new RangeError(message)
 new RangeError(message, fileName)
 new RangeError(message, fileName, lineNumber)
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-    <dt><code><var>message</var></code> {{optional_inline}}</dt>
-    <dd>Human-readable description of the error.</dd>
-    <dt><code><var>fileName</var></code> {{optional_inline}} </dt>
-    <dd>The name of the file containing the code that caused the exception</dd>
-    <dt><code><var>lineNumber</var></code> {{optional_inline}} </dt>
-    <dd>The line number of the code that caused the exception</dd>
-</dl>
+- `message` {{optional_inline}}
+  - : Human-readable description of the error.
+- `fileName` {{optional_inline}}
+  - : The name of the file containing the code that caused the exception
+- `lineNumber` {{optional_inline}}
+  - : The line number of the code that caused the exception
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_RangeError_for_numeric_values">Using <code>RangeError</code> (for numeric
-    values)</h3>
+### Using `RangeError` (for numeric values)
 
-<pre class="brush: js">function check(n)
+```js
+function check(n)
 {
-    if( !(n &gt;= -500 &amp;&amp; n &lt;= 500) )
+    if( !(n >= -500 && n <= 500) )
     {
         throw new RangeError("The argument must be between -500 and 500.")
     }
@@ -55,12 +53,13 @@ catch(error)
     {
         // Handle the error
     }
-}</pre>
+}
+```
 
-<h3 id="Using_RangeError_for_non-numeric_values">Using <code>RangeError</code> (for
-    non-numeric values)</h3>
+### Using `RangeError` (for non-numeric values)
 
-<pre class="brush: js">function check(value)
+```js
+function check(value)
 {
     if(["apple", "banana", "carrot"].includes(value) === false)
     {
@@ -79,23 +78,21 @@ catch(error)
         // Handle the error
     }
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-    <li>{{jsxref("Error")}}</li>
-    <li>{{jsxref("Array")}}</li>
-    <li>{{jsxref("Number.toExponential()")}}</li>
-    <li>{{jsxref("Number.toFixed()")}}</li>
-    <li>{{jsxref("Number.toPrecision()")}}</li>
-    <li>{{jsxref("String.prototype.normalize()")}}</li>
-</ul>
+- {{jsxref("Error")}}
+- {{jsxref("Array")}}
+- {{jsxref("Number.toExponential()")}}
+- {{jsxref("Number.toFixed()")}}
+- {{jsxref("Number.toPrecision()")}}
+- {{jsxref("String.prototype.normalize()")}}

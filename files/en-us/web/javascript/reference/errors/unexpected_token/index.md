@@ -2,84 +2,89 @@
 title: 'SyntaxError: Unexpected token'
 slug: Web/JavaScript/Reference/Errors/Unexpected_token
 tags:
-- Error
-- Errors
-- JavaScript
-- SyntaxError
+  - Error
+  - Errors
+  - JavaScript
+  - SyntaxError
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<p>The JavaScript exceptions "unexpected token" occur when a specific language construct
-  was expected, but something else was provided. This might be a simple typo.</p>
+The JavaScript exceptions "unexpected token" occur when a specific language
+construct was expected, but something else was provided. This might be a simple
+typo.
 
-<h2 id="Message">Message</h2>
+## Message
 
-<pre class="brush: js">SyntaxError: expected expression, got "x"
+```js
+SyntaxError: expected expression, got "x"
 SyntaxError: expected property name, got "x"
 SyntaxError: expected target, got "x"
 SyntaxError: expected rest argument name, got "x"
 SyntaxError: expected closing parenthesis, got "x"
-SyntaxError: expected '=&gt;' after argument list, got "x"
-</pre>
+SyntaxError: expected '=>' after argument list, got "x"
+```
 
-<h2 id="Error_type">Error type</h2>
+## Error type
 
-<p>{{jsxref("SyntaxError")}}</p>
+{{jsxref("SyntaxError")}}
 
-<h2 id="What_went_wrong">What went wrong?</h2>
+## What went wrong?
 
-<p>A specific language construct was expected, but something else was provided. This might
-  be a simple typo.</p>
+A specific language construct was expected, but something else was provided.
+This might be a simple typo.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Expression_expected">Expression expected</h3>
+### Expression expected
 
-<p>For example, when chaining expressions, trailing commas are not allowed.</p>
+For example, when chaining expressions, trailing commas are not allowed.
 
-<pre class="brush: js example-bad">for (let i = 0; i &lt; 5,; ++i) {
+```js example-bad
+for (let i = 0; i < 5,; ++i) {
   console.log(i);
 }
 // SyntaxError: expected expression, got ')'
-</pre>
+```
 
-<p>Correct would be omitting the comma or adding another expression:</p>
+Correct would be omitting the comma or adding another expression:
 
-<pre class="brush: js example-good">for (let i = 0; i &lt; 5; ++i) {
+```js example-good
+for (let i = 0; i < 5; ++i) {
   console.log(i);
 }
-</pre>
+```
 
-<h3 id="Not_enough_brackets">Not enough brackets</h3>
+### Not enough brackets
 
-<p>Sometimes, you leave out brackets around <code>if</code> statements:</p>
+Sometimes, you leave out brackets around `if` statements:
 
-<pre class="brush: js example-bad">function round(n, upperBound, lowerBound){
-  if(n &gt; upperBound) || (n &lt; lowerBound){
+```js example-bad
+function round(n, upperBound, lowerBound){
+  if(n > upperBound) || (n < lowerBound){
     throw 'Number ' + String(n) + ' is more than ' + String(upperBound) + ' or less than ' + String(lowerBound);
-  }else if(n &lt; ((upperBound + lowerBound)/2)){
+  }else if(n < ((upperBound + lowerBound)/2)){
     return lowerBound;
   }else{
     return upperBound;
   }
-} // SyntaxError: expected expression, got '||'</pre>
+} // SyntaxError: expected expression, got '||'
+```
 
-<p>The brackets may look correct at first, but note how the <code>||</code> is outside the
-  brackets. Correct would be putting brackets around the <code>||</code>:</p>
+The brackets may look correct at first, but note how the `||` is outside the
+brackets. Correct would be putting brackets around the `||`:
 
-<pre class="brush: js example-good">function round(n, upperBound, lowerBound){
-  if((n &gt; upperBound) || (n &lt; lowerBound)){
+```js example-good
+function round(n, upperBound, lowerBound){
+  if((n > upperBound) || (n < lowerBound)){
     throw 'Number ' + String(n) + ' is more than ' + String(upperBound) + ' or less than ' + String(lowerBound);
-  }else if(n &lt; ((upperBound + lowerBound)/2)){
+  }else if(n < ((upperBound + lowerBound)/2)){
     return lowerBound;
   }else{
     return upperBound;
   }
 }
-</pre>
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("SyntaxError")}}</li>
-</ul>
+- {{jsxref("SyntaxError")}}

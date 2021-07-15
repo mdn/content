@@ -12,38 +12,38 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.PluralRules.select
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>Intl.PluralRules.prototype.select()</code></strong> method returns a
-	string indicating which plural rule to use for locale-aware formatting.</p>
+The **`Intl.PluralRules.prototype.select()`** method returns a string indicating
+which plural rule to use for locale-aware formatting.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">select(number)</pre>
+```js
+select(number)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-	<dt><code><var>number</var></code></dt>
-	<dd>The number to get a plural rule for.</dd>
-</dl>
+- `number`
+  - : The number to get a plural rule for.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A string representing the pluralization category of the <code>number</code>, can be one
-	of <code>zero</code>, <code>one</code>, <code>two</code>, <code>few</code>,
-	<code>many</code> or <code>other</code>.</p>
+A string representing the pluralization category of the `number`, can be one of
+`zero`, `one`, `two`, `few`, `many` or `other`.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>This function selects a pluralization category according to the locale and formatting
-	options of a {{jsxref("Intl/PluralRules")}} object.</p>
+This function selects a pluralization category according to the locale and
+formatting options of a {{jsxref("Intl/PluralRules")}} object.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_select">Using select()</h3>
+### Using select()
 
-<pre class="brush: js"> new Intl.PluralRules('ar-EG').select(0);
+```js
+ new Intl.PluralRules('ar-EG').select(0);
 // → 'zero'
 
 new Intl.PluralRules('ar-EG').select(1);
@@ -57,18 +57,16 @@ new Intl.PluralRules('ar-EG').select(6);
 
 new Intl.PluralRules('ar-EG').select(18);
 // → 'many'
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>{{jsxref("Intl.PluralRules")}}</li>
-</ul>
+- {{jsxref("Intl.PluralRules")}}

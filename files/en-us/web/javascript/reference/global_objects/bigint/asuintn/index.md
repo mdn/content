@@ -2,66 +2,64 @@
 title: BigInt.asUintN()
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/asUintN
 tags:
-- BigInt
-- JavaScript
-- Method
-- Reference
-- asUintN
+  - BigInt
+  - JavaScript
+  - Method
+  - Reference
+  - asUintN
 browser-compat: javascript.builtins.BigInt.asUintN
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>BigInt.asUintN</code></strong> static method clamps a BigInt value to an unsigned integer value, and returns that value.</p>
+The **`BigInt.asUintN`** static method clamps a BigInt value to an unsigned
+integer value, and returns that value.
 
-<div>{{EmbedInteractiveExample("pages/js/bigint-asuintn.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/bigint-asuintn.html", "taller")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+BigInt.asUintN(bits, bigint);
+```
 
-<pre
-  class="brush: js">BigInt.asUintN(<var>bits</var>, <var>bigint</var>);</pre>
+### Parameters
 
-<h3 id="Parameters">Parameters</h3>
+- `bits`
+  - : The amount of bits available for the integer size.
+- `bigint`
+  - : The BigInt value to clamp to fit into the supplied bits.
 
-<dl>
-  <dt><code><var>bits</var></code></dt>
-  <dd>The amount of bits available for the integer size.</dd>
-  <dt><code><var>bigint</var></code></dt>
-  <dd>The BigInt value to clamp to fit into the supplied bits.</dd>
-</dl>
+### Returns
 
-<h3 id="Returns">Returns</h3>
+The value of `bigint` modulo 2^`bits`, as an unsigned integer.
 
-<p>The value of <code><var>bigint</var></code> modulo
-  2^<code><var>bits</var></code>, as an unsigned integer.</p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Staying in 64-bit ranges
 
-<h3 id="Staying_in_64-bit_ranges">Staying in 64-bit ranges</h3>
+The `BigInt.asUintN()` method can be useful to stay in the range of 64-bit
+arithmetic.
 
-<p>The <code>BigInt.asUintN()</code> method can be useful to stay in the range of 64-bit
-  arithmetic.</p>
-
-<pre class="brush: js">const max = 2n ** 64n - 1n;
+```js
+const max = 2n ** 64n - 1n;
 
 BigInt.asUintN(64, max);
 // ↪ 18446744073709551615n
 
 BigInt.asUintN(64, max + 1n);
 // ↪ 0n
-// zero because of overflow</pre>
+// zero because of overflow
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{JSxRef("BigInt")}}</li>
-  <li>{{JSxRef("BigInt.asIntN()")}}</li>
-</ul>
+- {{JSxRef("BigInt")}}
+- {{JSxRef("BigInt.asIntN()")}}

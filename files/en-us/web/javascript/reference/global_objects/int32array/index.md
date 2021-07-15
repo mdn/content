@@ -2,25 +2,25 @@
 title: Int32Array
 slug: Web/JavaScript/Reference/Global_Objects/Int32Array
 tags:
-- Class
-- JavaScript
-- TypedArray
-- TypedArrays
-- Polyfill
+  - Class
+  - JavaScript
+  - TypedArray
+  - TypedArrays
+  - Polyfill
 browser-compat: javascript.builtins.Int32Array
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>Int32Array()</code></strong> typed array constructor creates an array
-  of twos-complement 32-bit signed integers in the platform byte order. If control over
-  byte order is needed, use {{jsxref("DataView")}} instead. The contents are initialized
-  to <code>0</code>. Once established, you can reference elements in the array using the
-  object's methods, or using standard array index syntax (that is, using bracket
-  notation).</p>
+The **`Int32Array()`** typed array constructor creates an array of
+twos-complement 32-bit signed integers in the platform byte order. If control
+over byte order is needed, use {{jsxref("DataView")}} instead. The
+contents are initialized to `0`. Once established, you can reference elements in
+the array using the object's methods, or using standard array index syntax (that
+is, using bracket notation).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 new Int32Array(); // new in ES2017
 new Int32Array(length);
 new Int32Array(typedArray);
@@ -29,43 +29,38 @@ new Int32Array(object);
 new Int32Array(buffer);
 new Int32Array(buffer, byteOffset);
 new Int32Array(buffer, byteOffset, length);
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>length</var></code></dt>
-  <dd>When called with a <code><var>length</var></code> argument, an internal array buffer
-    is created in memory, of size <code><var>length</var></code><em> multiplied by
-      <code>BYTES_PER_ELEMENT</code></em> bytes, containing zeros.</dd>
-  <dt><code><var>typedArray</var></code></dt>
-  <dd>When called with a <code>typedArray</code> argument, which can be an object of any
-    of the typed array types (such as <code>Int32Array</code>), the
-    <code><var>typedArray</var></code> gets copied into a new typed array. Each value in
-    <code><var>typedArray</var></code> is converted to the corresponding type of the
-    constructor before being copied into the new array. The length of the new typed array
-    will be same as the length of the <code><var>typedArray</var></code> argument.</dd>
-  <dt><code><var>object</var></code></dt>
-  <dd>When called with an <code><var>object</var></code> argument, a new typed array is
-    created as if by the <code><var>TypedArray</var>.from()</code> method.</dd>
-  <dt><code><var>buffer</var></code>, <code><var>byteOffset</var></code>,
-    <code><var>length</var></code></dt>
-  <dd>When called with a <code><var>buffer</var></code>, and optionally a
-    <code><var>byteOffset</var></code> and a <code><var>length</var></code> argument, a
-    new typed array view is created that views the specified {{jsxref("ArrayBuffer")}}.
-    The <code><var>byteOffset</var></code> and <code><var>length</var></code> parameters
-    specify the memory range that will be exposed by the typed array view. If both are
-    omitted, all of <code><var>buffer</var></code> is viewed; if only
-    <code><var>length</var></code> is omitted, the remainder of
-    <code><var>buffer</var></code> is viewed.</dd>
-</dl>
+- `length`
+  - : When called with a `length` argument, an internal array buffer is created
+    in memory, of size `length` _multiplied by `BYTES_PER_ELEMENT`_ bytes,
+    containing zeros.
+- `typedArray`
+  - : When called with a `typedArray` argument, which can be an object of any of
+    the typed array types (such as `Int32Array`), the `typedArray` gets copied
+    into a new typed array. Each value in `typedArray` is converted to the
+    corresponding type of the constructor before being copied into the new
+    array. The length of the new typed array will be same as the length of the
+    `typedArray` argument.
+- `object`
+  - : When called with an `object` argument, a new typed array is created as if
+    by the `TypedArray.from()` method.
+- `buffer`, `byteOffset`, `length`
+  - : When called with a `buffer`, and optionally a `byteOffset` and a `length`
+    argument, a new typed array view is created that views the specified
+    {{jsxref("ArrayBuffer")}}. The `byteOffset` and `length` parameters
+    specify the memory range that will be exposed by the typed array view. If
+    both are omitted, all of `buffer` is viewed; if only `length` is omitted,
+    the remainder of `buffer` is viewed.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Different_ways_to_create_an_Int32Array">Different ways to create an Int32Array
-</h3>
+### Different ways to create an Int32Array
 
-<pre class="brush: js">// From a length
+```js
+// From a length
 var int32 = new Int32Array(2);
 int32[0] = 42;
 console.log(int32[0]); // 42
@@ -89,34 +84,37 @@ var z = new Int32Array(buffer, 0, 4);
 var iterable = function*(){ yield* [1,2,3]; }();
 var int32 = new Int32Array(iterable);
 // Int32Array[1, 2, 3]
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h3 id="Compatibility_notes">Compatibility notes</h3>
+### Compatibility notes
 
-<p>Starting with ECMAScript 2015, <code>Int32Array</code> constructors require to be
-  constructed with a {{jsxref("Operators/new", "new")}} operator. Calling a
-  <code>Int32Array</code> constructor as a function without <code>new</code>, will throw a
-  {{jsxref("TypeError")}} from now on.</p>
+Starting with ECMAScript 2015, `Int32Array` constructors require to be
+constructed with a {{jsxref("Operators/new", "new")}} operator.
+Calling a `Int32Array` constructor as a function without `new`, will throw a
+{{jsxref("TypeError")}} from now on.
 
-<pre class="brush: js example-bad">var dv = Int32Array([1, 2, 3]);
+```js example-bad
+var dv = Int32Array([1, 2, 3]);
 // TypeError: calling a builtin Int32Array constructor
-// without new is forbidden</pre>
+// without new is forbidden
+```
 
-<pre class="brush: js example-good">var dv = new Int32Array([1, 2, 3]);</pre>
+```js example-good
+var dv = new Int32Array([1, 2, 3]);
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>A polyfill of <code>Int32Array</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-typed-arrays"><code>core-js</code></a></li>
-  <li><a href="/en-US/docs/Web/JavaScript/Typed_arrays">JavaScript typed arrays</a></li>
-  <li>{{jsxref("ArrayBuffer")}}</li>
-  <li>{{jsxref("DataView")}}</li>
-</ul>
+- A polyfill of `Int32Array` is available in
+  [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- {{jsxref("ArrayBuffer")}}
+- {{jsxref("DataView")}}

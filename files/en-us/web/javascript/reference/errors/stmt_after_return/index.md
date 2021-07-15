@@ -2,61 +2,61 @@
 title: 'Warning: unreachable code after return statement'
 slug: Web/JavaScript/Reference/Errors/Stmt_after_return
 tags:
-- Error
-- JavaScript
-- Warning
+  - Error
+  - JavaScript
+  - Warning
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<p>The JavaScript warning "unreachable code after return statement" occurs when using an
-  expression after a {{jsxref("Statements/return", "return")}} statement, or when using a
-  semicolon-less return statement but including an expression directly after.</p>
+The JavaScript warning "unreachable code after return statement" occurs when
+using an expression after a
+{{jsxref("Statements/return", "return")}} statement, or when
+using a semicolon-less return statement but including an expression directly
+after.
 
-<h2 id="Message">Message</h2>
+## Message
 
-<pre class="brush: js">Warning: unreachable code after return statement (Firefox)
-</pre>
+```js
+Warning: unreachable code after return statement (Firefox)
+```
 
-<h2 id="Error_type">Error type</h2>
+## Error type
 
-<p>Warning</p>
+Warning
 
-<h2 id="What_went_wrong">What went wrong?</h2>
+## What went wrong?
 
-<p>Unreachable code after a return statement might occur in these situations:</p>
+Unreachable code after a return statement might occur in these situations:
 
-<ul>
-  <li>When using an expression after a {{jsxref("Statements/return", "return")}}
-    statement, or</li>
-  <li>when using a semicolon-less return statement but including an expression directly
-    after.</li>
-</ul>
+- When using an expression after a
+  {{jsxref("Statements/return", "return")}} statement, or
+- when using a semicolon-less return statement but including an expression
+  directly after.
 
-<p>When an expression exists after a valid <code>return</code> statement, a warning is
-  given to indicate that the code after the <code>return</code> statement is unreachable,
-  meaning it can never be run.</p>
+When an expression exists after a valid `return` statement, a warning is given
+to indicate that the code after the `return` statement is unreachable, meaning
+it can never be run.
 
-<p>Why should I have semicolons after <code>return</code> statements? In the case of
-  semicolon-less <code>return</code> statements, it can be unclear whether the developer
-  intended to return the statement on the following line, or to stop execution and return.
-  The warning indicates that there is ambiguity in the way the <code>return</code>
-  statement is written.</p>
+Why should I have semicolons after `return` statements? In the case of
+semicolon-less `return` statements, it can be unclear whether the developer
+intended to return the statement on the following line, or to stop execution and
+return. The warning indicates that there is ambiguity in the way the `return`
+statement is written.
 
-<p>Warnings will not be shown for semicolon-less returns if these statements follow it:
-</p>
+Warnings will not be shown for semicolon-less returns if these statements follow
+it:
 
-<ul>
-  <li>{{jsxref("Statements/throw", "throw")}}</li>
-  <li>{{jsxref("Statements/break", "break")}}</li>
-  <li>{{jsxref("Statements/var", "var")}}</li>
-  <li>{{jsxref("Statements/function", "function")}}</li>
-</ul>
+- {{jsxref("Statements/throw", "throw")}}
+- {{jsxref("Statements/break", "break")}}
+- {{jsxref("Statements/var", "var")}}
+- {{jsxref("Statements/function", "function")}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Invalid_cases">Invalid cases</h3>
+### Invalid cases
 
-<pre class="brush: js example-bad">function f() {
+```js example-bad
+function f() {
   var x = 3;
   x += 4;
   return x;   // return exits the function immediately
@@ -67,11 +67,12 @@ function f() {
   return     // this is treated like `return;`
     3 + 4;   // so the function returns, and this line is never reached
 }
-</pre>
+```
 
-<h3 id="Valid_cases">Valid cases</h3>
+### Valid cases
 
-<pre class="brush: js example-good">function f() {
+```js example-good
+function f() {
   var x = 3;
   x += 4;
   x -= 3;
@@ -81,11 +82,9 @@ function f() {
 function f() {
   return 3 + 4  // OK: semicolon-less return with expression on the same line
 }
-</pre>
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Statements/return", "Automatic Semicolon Insertion",
-    "#Automatic_Semicolon_Insertion", 1)}}</li>
-</ul>
+- {{jsxref("Statements/return", "Automatic Semicolon Insertion",
+    "#Automatic_Semicolon_Insertion", 1)}}

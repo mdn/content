@@ -7,36 +7,42 @@ tags:
   - Prototype
 browser-compat: javascript.builtins.Error.message
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <code><strong>message</strong></code> property is a human-readable description of the error.</p>
+The **`message`** property is a human-readable description of the error.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>This property contains a brief description of the error if one is available or has been set. <a href="/en-US/docs/Mozilla/Projects/SpiderMonkey">SpiderMonkey</a> makes extensive use of the <code>message</code> property for exceptions. The <code>message</code> property combined with the {{jsxref("Error.prototype.name", "name")}} property is used by the {{jsxref("Error.prototype.toString()")}} method to create a string representation of the Error.</p>
+This property contains a brief description of the error if one is available or
+has been set. [SpiderMonkey](/en-US/docs/Mozilla/Projects/SpiderMonkey) makes
+extensive use of the `message` property for exceptions. The `message` property
+combined with the {{jsxref("Error.prototype.name", "name")}}
+property is used by the {{jsxref("Error.prototype.toString()")}}
+method to create a string representation of the Error.
 
-<p>By default, the <code>message</code> property is an empty string, but this behavior can be overridden for an instance by specifying a message as the first argument to the {{jsxref("Error/Error", "Error")}} constructor.</p>
+By default, the `message` property is an empty string, but this behavior can be
+overridden for an instance by specifying a message as the first argument to the
+{{jsxref("Error/Error", "Error")}} constructor.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Throwing_a_custom_error">Throwing a custom error</h3>
+### Throwing a custom error
 
-<pre class="brush: js">var e = new Error('Could not parse input');
+```js
+var e = new Error('Could not parse input');
 // e.message is 'Could not parse input'
 throw e;
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("Error.prototype.name")}}</li>
- <li>{{jsxref("Error.prototype.toString()")}}</li>
-</ul>
+- {{jsxref("Error.prototype.name")}}
+- {{jsxref("Error.prototype.toString()")}}

@@ -7,64 +7,62 @@ tags:
   - JavaScript
   - SyntaxError
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<p>The JavaScript warning "test for equality (==) mistyped as assignment (=)?" occurs when
-  there was an assignment (<code>=</code>) when you would normally expect a test for
-  equality (<code>==</code>).</p>
+The JavaScript warning "test for equality (==) mistyped as assignment (=)?"
+occurs when there was an assignment (`=`) when you would normally expect a test
+for equality (`==`).
 
-<h2 id="Message">Message</h2>
+## Message
 
-<pre class="brush: js">Warning: SyntaxError: test for equality (==) mistyped as assignment (=)?
-</pre>
+```js
+Warning: SyntaxError: test for equality (==) mistyped as assignment (=)?
+```
 
-<h2 id="Error_type">Error type</h2>
+## Error type
 
-<p>(Firefox only) {{jsxref("SyntaxError")}} warning which is reported only if
-  <code>javascript.options.strict</code> preference is set to <code>true</code>.</p>
+(Firefox only) {{jsxref("SyntaxError")}} warning which is reported only
+if `javascript.options.strict` preference is set to `true`.
 
-<h2 id="What_went_wrong">What went wrong?</h2>
+## What went wrong?
 
-<p>There was an assignment (<code>=</code>) when you would normally expect a test for
-  equality (<code>==</code>). To help debugging, JavaScript (with strict warnings enabled)
-  warns about this pattern.</p>
+There was an assignment (`=`) when you would normally expect a test for equality
+(`==`). To help debugging, JavaScript (with strict warnings enabled) warns about
+this pattern.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Assignment_within_conditional_expressions">Assignment within conditional
-  expressions</h3>
+### Assignment within conditional expressions
 
-<p>It is advisable to not use simple assignments in a conditional expression (such as
-  <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/if...else">if...else</a></code>),
-  because the assignment can be confused with equality when glancing over the code. For
-  example, do not use the following code:</p>
+It is advisable to not use simple assignments in a conditional expression (such
+as [`if...else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else)),
+because the assignment can be confused with equality when glancing over the
+code. For example, do not use the following code:
 
-<pre class="brush: js example-bad">if (x = y) {
+```js example-bad
+if (x = y) {
   // do the right thing
 }
-</pre>
+```
 
-<p>If you need to use an assignment in a conditional expression, a common practice is to
-  put additional parentheses around the assignment. For example:</p>
+If you need to use an assignment in a conditional expression, a common practice
+is to put additional parentheses around the assignment. For example:
 
-<pre class="brush: js">if ((x = y)) {
+```js
+if ((x = y)) {
   // do the right thing
-}</pre>
+}
+```
 
-<p>Otherwise, you probably meant to use a comparison operator (e.g. <code>==</code> or
-  <code>===</code>):</p>
+Otherwise, you probably meant to use a comparison operator (e.g. `==` or `===`):
 
-<pre class="brush: js">if (x == y) {
+```js
+if (x == y) {
   // do the right thing
-}</pre>
+}
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>
-    <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/if...else">if...else</a></code>
-  </li>
-  <li><a
-      href="/en-US/docs/Web/JavaScript/Reference/Operators#equality_operators">Equality
-      operators</a></li>
-</ul>
+- [`if...else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else)
+- [Equality operators](/en-US/docs/Web/JavaScript/Reference/Operators#equality_operators)

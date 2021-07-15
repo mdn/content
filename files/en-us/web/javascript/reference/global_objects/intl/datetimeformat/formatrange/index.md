@@ -12,35 +12,39 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.DateTimeFormat.formatRange
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>Intl.DateTimeFormat.prototype.formatRange()</code></strong> formats a
-  date range in the most concise way based on the <strong><code>locale</code></strong> and
-  <code><strong>options</strong></code> provided when instantiating
-  {{jsxref("Intl.DateTimeFormat")}} object.</p>
+The **`Intl.DateTimeFormat.prototype.formatRange()`** formats a date range in
+the most concise way based on the **`locale`** and **`options`** provided when
+instantiating {{jsxref("Intl.DateTimeFormat")}} object.
 
-<div>{{EmbedInteractiveExample("pages/js/intl-datetimeformat-prototype-formatrange.html",
-  "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/intl-datetimeformat-prototype-formatrange.html",
+  "taller")}}
+
 <!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">formatRange(startDate, endDate)</pre>
+```js
+formatRange(startDate, endDate)
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Basic_formatRange_usage">Basic formatRange usage</h3>
+### Basic formatRange usage
 
-<p>This method receives two {{jsxref("Date")}}s and formats the date range in the most
-  concise way based on the <code>locale</code> and <code>options</code> provided when
-  instantiating {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}}.</p>
+This method receives two {{jsxref("Date")}}s and formats the date range in
+the most concise way based on the `locale` and `options` provided when
+instantiating
+{{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}}.
 
-<pre class="brush: js">let date1 = new Date(Date.UTC(2007, 0, 10, 10, 0, 0));
+```js
+let date1 = new Date(Date.UTC(2007, 0, 10, 10, 0, 0));
 let date2 = new Date(Date.UTC(2007, 0, 10, 11, 0, 0));
 let date3 = new Date(Date.UTC(2007, 0, 20, 10, 0, 0));
-// &gt; 'Wed, 10 Jan 2007 10:00:00 GMT'
-// &gt; 'Wed, 10 Jan 2007 11:00:00 GMT'
-// &gt; 'Sat, 20 Jan 2007 10:00:00 GMT'
+// > 'Wed, 10 Jan 2007 10:00:00 GMT'
+// > 'Wed, 10 Jan 2007 11:00:00 GMT'
+// > 'Sat, 20 Jan 2007 10:00:00 GMT'
 
 let fmt1 = new Intl.DateTimeFormat("en", {
     year: '2-digit',
@@ -52,9 +56,9 @@ let fmt1 = new Intl.DateTimeFormat("en", {
 console.log(fmt1.format(date1));
 console.log(fmt1.formatRange(date1, date2));
 console.log(fmt1.formatRange(date1, date3));
-// &gt; '1/10/07, 10:00 AM'
-// &gt; '1/10/07, 10:00 – 11:00 AM'
-// &gt; '1/10/07, 10:00 AM – 1/20/07, 10:00 AM'
+// > '1/10/07, 10:00 AM'
+// > '1/10/07, 10:00 – 11:00 AM'
+// > '1/10/07, 10:00 AM – 1/20/07, 10:00 AM'
 
 let fmt2 = new Intl.DateTimeFormat("en", {
     year: 'numeric',
@@ -64,21 +68,19 @@ let fmt2 = new Intl.DateTimeFormat("en", {
 console.log(fmt2.format(date1));
 console.log(fmt2.formatRange(date1, date2));
 console.log(fmt2.formatRange(date1, date3));
-// &gt; 'Jan 10, 2007'
-// &gt; 'Jan 10, 2007'
-// &gt; 'Jan 10 – 20, 2007'
-</pre>
+// > 'Jan 10, 2007'
+// > 'Jan 10, 2007'
+// > 'Jan 10 – 20, 2007'
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Intl.DateTimeFormat")}}</li>
-</ul>
+- {{jsxref("Intl.DateTimeFormat")}}

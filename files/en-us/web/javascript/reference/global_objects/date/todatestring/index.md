@@ -2,84 +2,82 @@
 title: Date.prototype.toDateString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toDateString
 tags:
-- Date
-- JavaScript
-- Method
-- Prototype
-- Reference
+  - Date
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
 browser-compat: javascript.builtins.Date.toDateString
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>toDateString()</code></strong> method returns the date portion of a
-  {{jsxref("Date")}} object in English in the following format separated by spaces:</p>
+The **`toDateString()`** method returns the date portion of a
+{{jsxref("Date")}} object in English in the following format separated by
+spaces:
 
-<ol>
-  <li>First three letters of the week day name</li>
-  <li>First three letters of the month name</li>
-  <li>Two digit day of the month, padded on the left a zero if necessary</li>
-  <li>Four digit year (at least), padded on the left with zeros if necessary</li>
-</ol>
+1.  First three letters of the week day name
+2.  First three letters of the month name
+3.  Two digit day of the month, padded on the left a zero if necessary
+4.  Four digit year (at least), padded on the left with zeros if necessary
 
-<p>E.g. "Thu Jan 01 1970".</p>
+E.g. "Thu Jan 01 1970".
 
-<div>{{EmbedInteractiveExample("pages/js/date-todatestring.html")}}</div>
+{{EmbedInteractiveExample("pages/js/date-todatestring.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">toDateString()</pre>
+```js
+toDateString()
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A string representing the date portion of the given {{jsxref("Date")}} object in human
-  readable form in English.</p>
+A string representing the date portion of the given {{jsxref("Date")}}
+object in human readable form in English.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>{{jsxref("Date")}} instances refer to a specific point in time. Calling
-  {{jsxref("Date.prototype.toString()", "toString()")}} will return the date formatted in
-  a human readable form in English. In <a
-    href="/en-US/docs/Mozilla/Projects/SpiderMonkey">SpiderMonkey</a>, this consists of
-  the date portion (day, month, and year) followed by the time portion (hours, minutes,
-  seconds, and time zone). Sometimes it is desirable to obtain a string of the time
-  portion; such a thing can be accomplished with the <code>toTimeString()</code> method.
-</p>
+{{jsxref("Date")}} instances refer to a specific point in time. Calling
+{{jsxref("Date.prototype.toString()", "toString()")}} will
+return the date formatted in a human readable form in English. In
+[SpiderMonkey](/en-US/docs/Mozilla/Projects/SpiderMonkey), this consists of the
+date portion (day, month, and year) followed by the time portion (hours,
+minutes, seconds, and time zone). Sometimes it is desirable to obtain a string
+of the time portion; such a thing can be accomplished with the `toTimeString()`
+method.
 
-<p>The <code>toDateString()</code> method is especially useful because compliant engines
-  implementing <a href="/en-US/docs/Web/JavaScript/Language_Resources">ECMA-262</a> may
-  differ in the string obtained from {{jsxref("Date.prototype.toString()", "toString()")}}
-  for {{jsxref("Date")}} objects, as the format is implementation-dependent and simple
-  string slicing approaches may not produce consistent results across multiple engines.
-</p>
+The `toDateString()` method is especially useful because compliant engines
+implementing [ECMA-262](/en-US/docs/Web/JavaScript/Language_Resources) may
+differ in the string obtained from
+{{jsxref("Date.prototype.toString()", "toString()")}} for
+{{jsxref("Date")}} objects, as the format is implementation-dependent and
+simple string slicing approaches may not produce consistent results across
+multiple engines.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="A_basic_usage_of_toDateString">A basic usage of toDateString()</h3>
+### A basic usage of toDateString()
 
-<pre class="brush: js">var d = new Date(1993, 5, 28, 14, 39, 7);
+```js
+var d = new Date(1993, 5, 28, 14, 39, 7);
 
 console.log(d.toString());     // logs Mon Jun 28 1993 14:39:07 GMT-0600 (PDT)
 console.log(d.toDateString()); // logs Mon Jun 28 1993
-</pre>
+```
 
-<div class="note">
-  <p><strong>Note:</strong> Month are 0-indexed when used as an argument of
-    {{jsxref("Date")}} (thus 0 corresponds to January and 11 to December).</p>
-</div>
+> **Note:** Month are 0-indexed when used as an argument of
+> {{jsxref("Date")}} (thus 0 corresponds to January and 11 to December).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat}}
 
-<p>{{Compat}}</p>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
-  <li>{{jsxref("Date.prototype.toLocaleDateString()")}}</li>
-  <li>{{jsxref("Date.prototype.toTimeString()")}}</li>
-  <li>{{jsxref("Date.prototype.toString()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.toLocaleDateString()")}}
+- {{jsxref("Date.prototype.toTimeString()")}}
+- {{jsxref("Date.prototype.toString()")}}

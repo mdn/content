@@ -2,84 +2,75 @@
 title: handler.get()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/get
 tags:
-- ECMAScript 2015
-- JavaScript
-- Method
-- Proxy
+  - ECMAScript 2015
+  - JavaScript
+  - Method
+  - Proxy
 browser-compat: javascript.builtins.Proxy.handler.get
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>handler.get()</code></strong> method is a trap for getting a property
-  value.</p>
+The **`handler.get()`** method is a trap for getting a property value.
 
-<div>{{EmbedInteractiveExample("pages/js/proxyhandler-get.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/proxyhandler-get.html", "taller")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush: js">const <var>p</var> = new Proxy(<var>target</var>, {
-  get: function(<var>target</var>, <var>property</var>, <var>receiver</var>) {
+```js
+const p = new Proxy(target, {
+  get: function(target, property, receiver) {
   }
 });
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>The following parameters are passed to the <code>get()</code> method. <code>this</code>
-  is bound to the handler.</p>
+The following parameters are passed to the `get()` method. `this` is bound to
+the handler.
 
-<dl>
-  <dt><code><var>target</var></code></dt>
-  <dd>The target object.</dd>
-  <dt><code><var>property</var></code></dt>
-  <dd>The name or {{jsxref("Symbol")}}  of the property to get. </dd>
-  <dt><code><var>receiver</var></code></dt>
-  <dd>Either the proxy or an object that inherits from the proxy.</dd>
-</dl>
+- `target`
+  - : The target object.
+- `property`
+  - : The name or {{jsxref("Symbol")}}  of the property to get.
+- `receiver`
+  - : Either the proxy or an object that inherits from the proxy.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>The <code>get()</code> method can return any value.</p>
+The `get()` method can return any value.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The <code><strong>handler.get()</strong></code> method is a trap for getting a property
-  value.</p>
+The **`handler.get()`** method is a trap for getting a property value.
 
-<h3 id="Interceptions">Interceptions</h3>
+### Interceptions
 
-<p>This trap can intercept these operations:</p>
+This trap can intercept these operations:
 
-<ul>
-  <li>Property access: <code><var>proxy</var>[<var>foo</var>]</code>and
-    <code><var>proxy</var>.<var>bar</var></code></li>
-  <li>Inherited property access:
-    <code>Object.create(<var>proxy</var>)[<var>foo</var>]</code></li>
-  <li>{{jsxref("Reflect.get()")}}</li>
-</ul>
+- Property access: `proxy[foo]`and `proxy.bar`
+- Inherited property access: `Object.create(proxy)[foo]`
+- {{jsxref("Reflect.get()")}}
 
-<h3 id="Invariants">Invariants</h3>
+### Invariants
 
-<p>If the following invariants are violated, the proxy will throw a
-  {{jsxref("TypeError")}}:</p>
+If the following invariants are violated, the proxy will throw a
+{{jsxref("TypeError")}}:
 
-<ul>
-  <li>The value reported for a property must be the same as the value of the corresponding
-    target object property if the target object property is a non-writable,
-    non-configurable own data property.</li>
-  <li>The value reported for a property must be undefined if the corresponding target
-    object property is a non-configurable own accessor property that has
-    <code>undefined</code> as its <code>[[Get]]</code> attribute.</li>
-</ul>
+- The value reported for a property must be the same as the value of the
+  corresponding target object property if the target object property is a
+  non-writable, non-configurable own data property.
+- The value reported for a property must be undefined if the corresponding
+  target object property is a non-configurable own accessor property that has
+  `undefined` as its `[[Get]]` attribute.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Trap_for_getting_a_property_value">Trap for getting a property value</h3>
+### Trap for getting a property value
 
-<p>The following code traps getting a property value.</p>
+The following code traps getting a property value.
 
-<pre class="brush: js">const p = new Proxy({}, {
+```js
+const p = new Proxy({}, {
   get: function(target, property, receiver) {
     console.log('called: ' + property);
     return 10;
@@ -88,11 +79,12 @@ browser-compat: javascript.builtins.Proxy.handler.get
 
 console.log(p.a); // "called: a"
                   // 10
-</pre>
+```
 
-<p>The following code violates an invariant.</p>
+The following code violates an invariant.
 
-<pre class="brush: js">const obj = {};
+```js
+const obj = {};
 Object.defineProperty(obj, 'a', {
   configurable: false,
   enumerable: false,
@@ -107,20 +99,18 @@ const p = new Proxy(obj, {
 });
 
 p.a; // TypeError is thrown
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Proxy")}}</li>
-  <li>{{jsxref("Proxy.handler", "handler")}}</li>
-  <li>{{jsxref("Reflect.get()")}}</li>
-</ul>
+- {{jsxref("Proxy")}}
+- {{jsxref("Proxy.handler", "handler")}}
+- {{jsxref("Reflect.get()")}}

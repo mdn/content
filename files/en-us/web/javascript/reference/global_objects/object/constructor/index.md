@@ -8,17 +8,26 @@ tags:
   - Prototype
 browser-compat: javascript.builtins.Object.constructor
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>constructor</code></strong> property returns a reference to the {{jsxref("Object")}} constructor function that created the instance object. Note that the value of this property is a reference to <em>the function itself</em>, not a string containing the function's name.</p>
+The **`constructor`** property returns a reference to the
+{{jsxref("Object")}} constructor function that created the instance
+object. Note that the value of this property is a reference to _the function
+itself_, not a string containing the function's name.
 
-<p>The value is only read-only for primitive values such as <code>1</code>, <code>true</code>, and <code>"test"</code>.</p>
+The value is only read-only for primitive values such as `1`, `true`, and
+`"test"`.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>All objects (with the exception of objects created with <code>Object.create(null)</code>) will have a <code>constructor</code> property. Objects created without the explicit use of a constructor function (such as object- and array-literals) will have a <code>constructor</code> property that points to the Fundamental Object constructor type for that object.</p>
+All objects (with the exception of objects created with `Object.create(null)`)
+will have a `constructor` property. Objects created without the explicit use of
+a constructor function (such as object- and array-literals) will have a
+`constructor` property that points to the Fundamental Object constructor type
+for that object.
 
-<pre class="brush: js">let o = {}
+```js
+let o = {}
 o.constructor === Object // true
 
 let o = new Object
@@ -32,45 +41,61 @@ a.constructor === Array // true
 
 let n = new Number(3)
 n.constructor === Number // true
-</pre>
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Displaying_the_constructor_of_an_object">Displaying the constructor of an object</h3>
+### Displaying the constructor of an object
 
-<p>The following example creates a constructor (<code>Tree</code>) and an object of that type (<code>theTree</code>). The example then displays the <code>constructor</code> property for the object <code>theTree</code>.</p>
+The following example creates a constructor (`Tree`) and an object of that type
+(`theTree`). The example then displays the `constructor` property for the object
+`theTree`.
 
-<pre class="brush: js">function Tree(name) {
+```js
+function Tree(name) {
   this.name = name
 }
 
 let theTree = new Tree('Redwood')
 console.log('theTree.constructor is ' + theTree.constructor)
-</pre>
+```
 
-<p>This example displays the following output:</p>
+This example displays the following output:
 
-<pre class="brush: js">theTree.constructor is function Tree(name) {
+```js
+theTree.constructor is function Tree(name) {
   this.name = name
 }
-</pre>
+```
 
-<h3 id="Changing_the_constructor_of_an_object">Changing the constructor of an object</h3>
+### Changing the constructor of an object
 
-<p>One can assign the <code>constructor</code> property for any value except <code>null</code> and <code>undefined</code> since those don't have a corresponding constructor function (like <code>String</code>, <code>Number</code>, <code>Boolean</code> etc.), but values which are primitives won't keep the change (with no exception thrown). This is due to the same mechanism, which allows one to set any property on primitive values (except <code>null</code> and <code>undefined</code>) with no effect. Namely whenever one uses such a primitive as an object an instance of the corresponding constructor is created and discarded right after the statement was executed.</p>
+One can assign the `constructor` property for any value except `null` and
+`undefined` since those don't have a corresponding constructor function (like
+`String`, `Number`, `Boolean` etc.), but values which are primitives won't keep
+the change (with no exception thrown). This is due to the same mechanism, which
+allows one to set any property on primitive values (except `null` and
+`undefined`) with no effect. Namely whenever one uses such a primitive as an
+object an instance of the corresponding constructor is created and discarded
+right after the statement was executed.
 
-<pre class="brush: js">let val = null;
+```js
+let val = null;
 val.constructor = 1; //TypeError: var is null
 
 val = 'abc';
 val.constructor = Number; //val.constructor === String
 
 val.foo = 'bar'; //An implicit instance of String('abc') was created and assigned the prop foo
-val.foo === undefined; //true, since a new instance of String('abc') was created for this comparison, which doesn't have the foo property</pre>
+val.foo === undefined; //true, since a new instance of String('abc') was created for this comparison, which doesn't have the foo property
+```
 
-<p>So basically one can change the value of the <code>constructor</code> property for anything, except the primitives mentioned above, <strong>note that changing the </strong><code>constructor</code><strong> property does not affect the instanceof operator</strong>:</p>
+So basically one can change the value of the `constructor` property for
+anything, except the primitives mentioned above, **note that changing the**
+`constructor` **property does not affect the instanceof operator**:
 
-<pre class="brush: js">let a = [];
+```js
+let a = [];
 a.constructor = String
 a.constructor === String // true
 a instanceof String //false
@@ -80,19 +105,26 @@ a = new Foo();
 a.constructor = 'bar'
 a.constructor === 'bar' // true
 
-//etc.</pre>
+//etc.
+```
 
-<p>If the object is sealed/frozen then the change has no effect and no exception is thrown:</p>
+If the object is sealed/frozen then the change has no effect and no exception is
+thrown:
 
-<pre class="brush: js">let a = Object.seal({});
+```js
+let a = Object.seal({});
 a.constructor = Number;
-a.constructor === Object; //true</pre>
+a.constructor === Object; //true
+```
 
-<h3 id="Changing_the_constructor_of_a_function">Changing the constructor of a function</h3>
+### Changing the constructor of a function
 
-<p>Mostly this property is used for defining a function as a <strong>function-constructor</strong> with further calling it with <strong>new</strong> and prototype-inherits chain.</p>
+Mostly this property is used for defining a function as a
+**function-constructor** with further calling it with **new** and
+prototype-inherits chain.
 
-<pre class="brush: js">function Parent() { /* ... */ }
+```js
+function Parent() { /* ... */ }
 Parent.prototype.parentMethod = function parentMethod() {}
 
 function Child() {
@@ -100,15 +132,19 @@ function Child() {
 }
 Child.prototype = Object.create(Parent.prototype) // re-define child prototype to Parent prototype
 
-Child.prototype.constructor = Child // return original constructor to Child</pre>
+Child.prototype.constructor = Child // return original constructor to Child
+```
 
-<p>But when do we need to perform the last line here? Unfortunately, the answer is: <em>it depends</em>.</p>
+But when do we need to perform the last line here? Unfortunately, the answer is:
+_it depends_.
 
-<p>Let's try to define the cases in which re-assignment of the original constructor will play a major role, and when it will be one superfluous line of code.</p>
+Let's try to define the cases in which re-assignment of the original constructor
+will play a major role, and when it will be one superfluous line of code.
 
-<p>Take the following case: the object has the <code>create()</code> method to create itself.</p>
+Take the following case: the object has the `create()` method to create itself.
 
-<pre class="brush: js">function Parent() { /* ... */ }
+```js
+function Parent() { /* ... */ }
 function CreatedConstructor() {
    Parent.call(this)
 }
@@ -119,13 +155,16 @@ CreatedConstructor.prototype.create = function create() {
   return new this.constructor()
 }
 
-new CreatedConstructor().create().create() // TypeError undefined is not a function since constructor === Parent</pre>
+new CreatedConstructor().create().create() // TypeError undefined is not a function since constructor === Parent
+```
 
-<p>In the example above the exception will be shown since the constructor links to Parent.</p>
+In the example above the exception will be shown since the constructor links to
+Parent.
 
-<p>To avoid this, just assign the necessary constructor you are going to use.</p>
+To avoid this, just assign the necessary constructor you are going to use.
 
-<pre class="brush: js">function Parent() { /* ... */ }
+```js
+function Parent() { /* ... */ }
 function CreatedConstructor() { /* ... */ }
 
 CreatedConstructor.prototype = Object.create(Parent.prototype)
@@ -135,13 +174,15 @@ CreatedConstructor.prototype.create = function create() {
   return new this.constructor()
 }
 
-new CreatedConstructor().create().create() // it's pretty fine</pre>
+new CreatedConstructor().create().create() // it's pretty fine
+```
 
-<p>Ok, now it's pretty clear why changing the constructor can be useful.</p>
+Ok, now it's pretty clear why changing the constructor can be useful.
 
-<p>Let's consider one more case.</p>
+Let's consider one more case.
 
-<pre class="brush: js">function ParentWithStatic() {}
+```js
+function ParentWithStatic() {}
 
 ParentWithStatic.startPosition = { x: 0, y:0 } // Static member property
 ParentWithStatic.getStartPosition = function getStartPosition() {
@@ -167,43 +208,46 @@ Child.prototype.getOffsetByInitialPosition = function getOffsetByInitialPosition
     offsetX: startPosition.x - position.x,
     offsetY: startPosition.y - position.y
   }
-};</pre>
+};
+```
 
-<p>For this example we need either to stay parent constructor to continue to work properly or reassign static properties to child's constructor:</p>
+For this example we need either to stay parent constructor to continue to work
+properly or reassign static properties to child's constructor:
 
-<pre class="brush: js">...
+```js
+...
 Child = Object.assign(Child, ParentWithStatic) // Notice that we assign it before we create(...) a prototype below
 Child.prototype = Object.create(ParentWithStatic.prototype)
 ...
-</pre>
+```
 
-<p>or assign parent constructor identifier to a separate property on the Child constructor function and access it via that property:</p>
+or assign parent constructor identifier to a separate property on the Child
+constructor function and access it via that property:
 
-<pre class="brush: js">...
+```js
+...
 Child.parentConstructor = ParentWithStatic
 Child.prototype = Object.create(ParentWithStatic.prototype)
 ...
    let startPosition = this.constructor.parentConstructor.getStartPosition()
 ...
-</pre>
+```
 
-<div class="notecard note">
-<p><strong>Note:</strong> Manually updating or setting the constructor can lead to different and sometimes confusing consequences. To prevent this, just define the role of <code>constructor</code> in each specific case. In most cases, <code>constructor</code> is not used and reassignment of it is not necessary.</p>
-</div>
+> **Note:** Manually updating or setting the constructor can lead to different
+> and sometimes confusing consequences. To prevent this, just define the role of
+> `constructor` in each specific case. In most cases, `constructor` is not used
+> and reassignment of it is not necessary.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-
-<ul>
- <li>{{jsxref("statements/class","Class declaration","",1)}}</li>
- <li>{{jsxref("Classes/constructor","Class constructor","",1)}}</li>
- <li>Glossary: {{Glossary("constructor", "", 1)}}</li>
-</ul>
+- {{jsxref("statements/class","Class declaration","",1)}}
+- {{jsxref("Classes/constructor","Class constructor","",1)}}
+- Glossary: {{Glossary("constructor", "", 1)}}

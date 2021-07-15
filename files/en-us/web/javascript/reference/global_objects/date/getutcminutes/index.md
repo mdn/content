@@ -2,52 +2,52 @@
 title: Date.prototype.getUTCMinutes()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCMinutes
 tags:
-- Date
-- JavaScript
-- Method
-- Prototype
-- Reference
+  - Date
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
 browser-compat: javascript.builtins.Date.getUTCMinutes
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>getUTCMinutes()</code></strong> method returns the minutes in the
-  specified date according to universal time.</p>
+The **`getUTCMinutes()`** method returns the minutes in the specified date
+according to universal time.
 
-<div>{{EmbedInteractiveExample("pages/js/date-getutcminutes.html")}}</div>
+{{EmbedInteractiveExample("pages/js/date-getutcminutes.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+getUTCMinutes()
+```
 
-<pre class="brush: js">getUTCMinutes()</pre>
+### Return value
 
-<h3 id="Return_value">Return value</h3>
+An integer number, between 0 and 59, representing the minutes in the given date
+according to universal time.
 
-<p>An integer number, between 0 and 59, representing the minutes in the given date
-  according to universal time.</p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Using getUTCMinutes()
 
-<h3 id="Using_getUTCMinutes">Using getUTCMinutes()</h3>
+The following example assigns the minutes portion of the current time to the
+variable `minutes`.
 
-<p>The following example assigns the minutes portion of the current time to the variable
-  <code>minutes</code>.</p>
-
-<pre class="brush: js">var today = new Date();
+```js
+var today = new Date();
 var minutes = today.getUTCMinutes();
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Date.prototype.getMinutes()")}}</li>
-  <li>{{jsxref("Date.prototype.setUTCMinutes()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getMinutes()")}}
+- {{jsxref("Date.prototype.setUTCMinutes()")}}

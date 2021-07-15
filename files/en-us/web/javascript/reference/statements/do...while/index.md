@@ -2,70 +2,68 @@
 title: do...while
 slug: Web/JavaScript/Reference/Statements/do...while
 tags:
-- JavaScript
-- Language feature
-- Statement
+  - JavaScript
+  - Language feature
+  - Statement
 browser-compat: javascript.statements.do_while
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p>The <strong><code>do...while</code> statement</strong> creates a loop that executes a
-  specified statement until the test condition evaluates to false. The condition is
-  evaluated after executing the statement, resulting in the specified statement executing
-  at least once.</p>
+The **`do...while` statement** creates a loop that executes a specified
+statement until the test condition evaluates to false. The condition is
+evaluated after executing the statement, resulting in the specified statement
+executing at least once.
 
-<div>{{EmbedInteractiveExample("pages/js/statement-dowhile.html")}}</div>
+{{EmbedInteractiveExample("pages/js/statement-dowhile.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+do
+   statement
+while (condition);
+```
 
-<pre class="brush: js">do
-   <em>statement</em>
-while (<em>condition</em>);
-</pre>
+- `statement`
+  - : A statement that is executed at least once and is re-executed each time
+    the condition evaluates to true. To execute multiple statements within the
+    loop, use a {{jsxref("Statements/block", "block", "", 1)}}
+    statement (`{ ... }`) to group those statements.
+- `condition`
+  - : An expression evaluated after each pass through the loop. If `condition`
+    evaluates to true, the `statement` is re-executed. When `condition`
+    evaluates to false, control passes to the statement following the
+    `do...while`.
 
-<dl>
-  <dt><code><em>statement</em></code></dt>
-  <dd>A statement that is executed at least once and is re-executed each time the
-    condition evaluates to true. To execute multiple statements within the loop, use a
-    {{jsxref("Statements/block", "block", "", 1)}} statement (<code>{ ... }</code>) to
-    group those statements.</dd>
-  <dt><code><em>condition</em></code></dt>
-  <dd>An expression evaluated after each pass through the loop. If <code>condition</code>
-    evaluates to true, the <code>statement</code> is re-executed. When
-    <code>condition</code> evaluates to false, control passes to the statement following
-    the <code>do...while</code>.</dd>
-</dl>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Using `do...while`
 
-<h3 id="Using_do...while">Using <code>do...while</code></h3>
+In the following example, the `do...while` loop iterates at least once and
+reiterates until `i` is no longer less than 5.
 
-<p>In the following example, the <code>do...while</code> loop iterates at least once and
-  reiterates until <code>i</code> is no longer less than 5.</p>
-
-<pre class="brush: js">var result = '';
+```js
+var result = '';
 var i = 0;
 do {
    i += 1;
    result += i + ' ';
 }
-while (i &gt; 0 &amp;&amp; i &lt; 5);
+while (i > 0 && i < 5);
 // Despite i == 0 this will still loop as it starts off without the test
 
-console.log(result);</pre>
+console.log(result);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Statements/while", "while")}}</li>
-  <li>{{jsxref("Statements/for", "for")}}</li>
-</ul>
+- {{jsxref("Statements/while", "while")}}
+- {{jsxref("Statements/for", "for")}}

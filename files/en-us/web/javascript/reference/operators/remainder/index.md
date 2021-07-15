@@ -2,87 +2,81 @@
 title: Remainder (%)
 slug: Web/JavaScript/Reference/Operators/Remainder
 tags:
-- JavaScript
-- Language feature
-- Operator
-- Reference
+  - JavaScript
+  - Language feature
+  - Operator
+  - Reference
 browser-compat: javascript.operators.remainder
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>The remainder operator (<code>%</code>) returns the remainder left over when one
-  operand is divided by a second operand. It always takes the sign of the dividend.</p>
+The remainder operator (`%`) returns the remainder left over when one operand is
+divided by a second operand. It always takes the sign of the dividend.
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-remainder.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-remainder.html")}}
 
-<p>Note that while in most languages, ‘%’ is a remainder operator, in some (e.g. <a
-    href="https://en.wikipedia.org/wiki/Modulo_operation#In_programming_languages">Python,
-    Perl</a>) it is a modulo operator. For positive values, the two are equivalent, but
-  when the dividend and divisor are of different signs, they give different results. To
-  obtain a modulo in JavaScript, in place of <code>a % n</code>, use
-  <code>((a % n ) + n ) % n</code>.</p>
+Note that while in most languages, ‘%’ is a remainder operator, in some (e.g.
+[Python, Perl](https://en.wikipedia.org/wiki/Modulo_operation#In_programming_languages))
+it is a modulo operator. For positive values, the two are equivalent, but when
+the dividend and divisor are of different signs, they give different results. To
+obtain a modulo in JavaScript, in place of `a % n`, use `((a % n ) + n ) % n`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">x % y</pre>
+```js
+x % y
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Remainder_with_positive_dividend">Remainder with positive dividend</h3>
+### Remainder with positive dividend
 
-<pre class="brush: js"> 12 % 5  //  2
+```js
+ 12 % 5  //  2
  1 % -2 //  1
  1 % 2  //  1
  2 % 3  //  2
 5.5 % 2 // 1.5
-</pre>
+```
 
-<h3 id="Remainder_with_negative_dividend">Remainder with negative dividend</h3>
+### Remainder with negative dividend
 
-<pre class="brush: js">-12 % 5 // -2
+```js
+-12 % 5 // -2
 -1 % 2  // -1
--4 % 2  // -0</pre>
+-4 % 2  // -0
+```
 
-<h3 id="Remainder_with_NaN">Remainder with NaN</h3>
+### Remainder with NaN
 
-<pre class="brush: js">NaN % 2 // NaN</pre>
+```js
+NaN % 2 // NaN
+```
 
-<h3 id="Remainder_with_Infinity">Remainder with Infinity</h3>
+### Remainder with Infinity
 
-<pre class="brush: js">Infinity % 2 // NaN
+```js
+Infinity % 2 // NaN
 Infinity % 0 // NaN
 Infinity % Infinity // NaN
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Addition">Addition
-      operator</a></li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction">Subtraction
-      operator</a></li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Division">Division
-      operator</a></li>
-  <li><a
-      href="/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication">Multiplication
-      operator</a></li>
-  <li><a
-      href="/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation">Exponentiation
-      operator</a></li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Increment">Increment
-      operator</a></li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Decrement">Decrement
-      operator</a></li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Unary_negation">Unary
-      negation operator</a></li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus">Unary plus
-      operator</a></li>
-</ul>
+- [Addition operator](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)
+- [Subtraction operator](/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction)
+- [Division operator](/en-US/docs/Web/JavaScript/Reference/Operators/Division)
+- [Multiplication operator](/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication)
+- [Exponentiation operator](/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation)
+- [Increment operator](/en-US/docs/Web/JavaScript/Reference/Operators/Increment)
+- [Decrement operator](/en-US/docs/Web/JavaScript/Reference/Operators/Decrement)
+- [Unary negation operator](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_negation)
+- [Unary plus operator](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus)

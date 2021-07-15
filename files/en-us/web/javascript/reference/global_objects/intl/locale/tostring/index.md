@@ -11,57 +11,56 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.Locale.toString
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The
-		<strong><code>Intl.Locale.prototype.toString()</code></strong> returns the
-		Locale's full <a
-			href="https://www.unicode.org/reports/tr35/#Unicode_locale_identifier">locale
-			identifier string</a>.</p>
+The **`Intl.Locale.prototype.toString()`** returns the Locale's full
+[locale identifier string](https://www.unicode.org/reports/tr35/#Unicode_locale_identifier).
 
-<div>{{EmbedInteractiveExample("pages/js/intl-locale-prototype-tostring.html")}}</div>
+{{EmbedInteractiveExample("pages/js/intl-locale-prototype-tostring.html")}}
+
 <!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">toString()</pre>
+```js
+toString()
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>The <var>locale</var>'s Unicode locale identifier string.</p>
+The _locale_'s Unicode locale identifier string.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The <code><var>locale</var></code> object is a JavaScript representation of a concept
-	Unicode locale identifier. Information about a particular locale (language, script,
-	calendar type, etc.) can be encoded in a locale identifier string. To make it easier
-	to work with these locale identifiers, the <code><var>locale</var></code> object was
-	introduced to JavaScript. Calling the <code>toString</code> method on a Locale object
-	will return the identifier string for that particular Locale. The
-	<code>toString</code> method allows <code><var>locale</var></code> instances to be
-	provided as an argument to existing <code>Intl</code> constructors, serialized in
-	JSON, or any other context where an exact string representation is useful.</p>
+The `locale` object is a JavaScript representation of a concept Unicode locale
+identifier. Information about a particular locale (language, script, calendar
+type, etc.) can be encoded in a locale identifier string. To make it easier to
+work with these locale identifiers, the `locale` object was introduced to
+JavaScript. Calling the `toString` method on a Locale object will return the
+identifier string for that particular Locale. The `toString` method allows
+`locale` instances to be provided as an argument to existing `Intl`
+constructors, serialized in JSON, or any other context where an exact string
+representation is useful.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_toString">Using toString</h3>
+### Using toString
 
-<pre class="brush: js">let myLocale = new Intl.Locale("fr-Latn-FR", {hourCycle: "h24", calendar: "gregory"});
+```js
+let myLocale = new Intl.Locale("fr-Latn-FR", {hourCycle: "h24", calendar: "gregory"});
 console.log(myLocale.baseName); // Prints "fr-Latn-FR"
 console.log(myLocale.toString()); // Prints "fr-Latn-FR-u-ca-gregory-hc-h24"
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>{{jsxref("Intl.Locale")}}</li>
-	<li>{{jsxref("Intl/Locale/baseName", "Intl.Locale.baseName")}}</li>
-</ul>
+- {{jsxref("Intl.Locale")}}
+- {{jsxref("Intl/Locale/baseName", "Intl.Locale.baseName")}}

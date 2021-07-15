@@ -1,5 +1,5 @@
 ---
-title: 'get Set[@@species]'
+title: get Set[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/Set/@@species
 tags:
   - ECMAScript 2015
@@ -8,42 +8,49 @@ tags:
   - set
 browser-compat: javascript.builtins.Set.@@species
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>Set[Symbol.species]</code></strong> accessor property returns the <code>Set</code> constructor.</p>
+The **`Set[Symbol.species]`** accessor property returns the `Set` constructor.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The <code>species</code> accessor property returns the default constructor for <code>Set</code> objects. Subclass constructors may override it to change the constructor assignment.</p>
+The `species` accessor property returns the default constructor for `Set`
+objects. Subclass constructors may override it to change the constructor
+assignment.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Species_in_ordinary_objects">Species in ordinary objects</h3>
+### Species in ordinary objects
 
-<p>The <code>species</code> property returns the default constructor function, which is the <code>Set</code> constructor for <code>Set</code> objects:</p>
+The `species` property returns the default constructor function, which is the
+`Set` constructor for `Set` objects:
 
-<pre class="brush: js">Set[Symbol.species]; // function Set()</pre>
+```js
+Set[Symbol.species]; // function Set()
+```
 
-<h3 id="Species_in_derived_objects">Species in derived objects</h3>
+### Species in derived objects
 
-<p>In a derived collection object (e.g. your custom set <code>MySet</code>), the <code>MySet</code> species is the <code>MySet</code> constructor. However, you might want to overwrite this, in order to return parent <code>Set</code> objects in your derived class methods:</p>
+In a derived collection object (e.g. your custom set `MySet`), the `MySet`
+species is the `MySet` constructor. However, you might want to overwrite this,
+in order to return parent `Set` objects in your derived class methods:
 
-<pre class="brush: js">class MySet extends Set {
+```js
+class MySet extends Set {
   // Overwrite MySet species to the parent Set constructor
   static get [Symbol.species]() { return Set; }
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("Set")}}</li>
- <li>{{jsxref("Symbol.species")}}</li>
-</ul>
+- {{jsxref("Set")}}
+- {{jsxref("Symbol.species")}}

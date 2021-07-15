@@ -9,74 +9,72 @@ tags:
   - Reference
 browser-compat: javascript.builtins.FinalizationRegistry.register
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <code>register()</code> method registers an object with a
-  {{jsxref("FinalizationRegistry")}} instance so that if the object is garbage-collected,
-  the registry's callback may get called.</p>
+The `register()` method registers an object with a
+{{jsxref("FinalizationRegistry")}} instance so that if the object is
+garbage-collected, the registry's callback may get called.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 register(target, heldValue);
 register(target, heldValue, unregisterToken);
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>target</var></code></dt>
-  <dd>The target object to register.</dd>
-  <dt><code><var>heldValue</var></code></dt>
-  <dd>The value to pass to the finalizer for this object. This cannot be the
-    <code><var>target</var></code> object.</dd>
-  <dt><code><var>unregisterToken</var></code> {{optional_inline}}</dt>
-  <dd>A token that may be used with the <code>unregister</code> method later to unregister
-    the target object. If provided (and not <code>undefined</code>), this must be an
-    object. If not provided, the target cannot be unregistered.</dd>
-</dl>
+- `target`
+  - : The target object to register.
+- `heldValue`
+  - : The value to pass to the finalizer for this object. This cannot be the
+    `target` object.
+- `unregisterToken` {{optional_inline}}
+  - : A token that may be used with the `unregister` method later to unregister
+    the target object. If provided (and not `undefined`), this must be an
+    object. If not provided, the target cannot be unregistered.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p><code>undefined</code>.</p>
+`undefined`.
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>See the <a
-    href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry#avoid_where_possible">Avoid
-    where possible</a> and <a
-    href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry#notes_on_cleanup_callbacks">Notes
-    on cleanup callbacks</a> sections of the {{jsxref("FinalizationRegistry")}} page for
-  important caveats.</p>
+See the
+[Avoid where possible](/en-US/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry#avoid_where_possible)
+and
+[Notes on cleanup callbacks](/en-US/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry#notes_on_cleanup_callbacks)
+sections of the {{jsxref("FinalizationRegistry")}} page for important
+caveats.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_register">Using register</h3>
+### Using register
 
-<p>The following registers the target object referenced by <code><var>target</var></code>,
-  passing in the held value <code>"some value"</code> and passing the target object itself
-  as the unregistration token:</p>
+The following registers the target object referenced by `target`, passing in the
+held value `"some value"` and passing the target object itself as the
+unregistration token:
 
-<pre class="brush: js">registry.register(target, "some value", target);
-</pre>
+```js
+registry.register(target, "some value", target);
+```
 
-<p>The following registers the target object referenced by <code><var>target</var></code>,
-  passing in another object as the held value, and not passing in any unregistration token
-  (which means <code><var>target</var></code> can't be unregistered):</p>
+The following registers the target object referenced by `target`, passing in
+another object as the held value, and not passing in any unregistration token
+(which means `target` can't be unregistered):
 
-<pre class="brush: js">registry.register(target, {"useful": "info about target"});
-</pre>
+```js
+registry.register(target, {"useful": "info about target"});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("FinalizationRegistry")}}</li>
-</ul>
+- {{jsxref("FinalizationRegistry")}}

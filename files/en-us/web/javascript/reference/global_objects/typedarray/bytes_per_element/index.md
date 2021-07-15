@@ -8,24 +8,25 @@ tags:
   - TypedArrays
 browser-compat: javascript.builtins.TypedArray.BYTES_PER_ELEMENT
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <code><strong>TypedArray.BYTES_PER_ELEMENT</strong></code> property represents the size in bytes of each element in an typed array.</p>
+The **`TypedArray.BYTES_PER_ELEMENT`** property represents the size in bytes of
+each element in an typed array.
 
-<div>{{EmbedInteractiveExample("pages/js/typedarray-bytes-per-element.html","shorter")}}</div>
+{{EmbedInteractiveExample("pages/js/typedarray-bytes-per-element.html","shorter")}}{{js_property_attributes(0,0,0)}}
 
+## Description
 
-<div>{{js_property_attributes(0,0,0)}}</div>
+`TypedArray` objects differ from each other in the number of bytes per element
+and in the way the bytes are interpreted. The `BYTES_PER_ELEMENT` constant
+contains the number of bytes each element in the given `TypedArray` has.
 
-<h2 id="Description">Description</h2>
+## Examples
 
-<p><code>TypedArray</code> objects differ from each other in the number of bytes per element and in the way the bytes are interpreted. The <code>BYTES_PER_ELEMENT</code> constant contains the number of bytes each element in the given <code>TypedArray</code> has.</p>
+### Using BYTES_PER_ELEMENT
 
-<h2 id="Examples">Examples</h2>
-
-<h3 id="Using_BYTES_PER_ELEMENT">Using BYTES_PER_ELEMENT</h3>
-
-<pre class="brush:js">Int8Array.BYTES_PER_ELEMENT;         // 1
+```js
+Int8Array.BYTES_PER_ELEMENT;         // 1
 Uint8Array.BYTES_PER_ELEMENT;        // 1
 Uint8ClampedArray.BYTES_PER_ELEMENT; // 1
 Int16Array.BYTES_PER_ELEMENT;        // 2
@@ -33,19 +34,18 @@ Uint16Array.BYTES_PER_ELEMENT;       // 2
 Int32Array.BYTES_PER_ELEMENT;        // 4
 Uint32Array.BYTES_PER_ELEMENT;       // 4
 Float32Array.BYTES_PER_ELEMENT;      // 4
-Float64Array.BYTES_PER_ELEMENT;      // 8</pre>
+Float64Array.BYTES_PER_ELEMENT;      // 8
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Typed_arrays">JavaScript typed arrays</a></li>
- <li>{{jsxref("TypedArray")}}</li>
-</ul>
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- {{jsxref("TypedArray")}}

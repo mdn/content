@@ -2,42 +2,38 @@
 title: Array.prototype.reduce()
 slug: Web/JavaScript/Reference/Global_Objects/Array/Reduce
 tags:
-- Array
-- Array method
-- ECMAScript 5
-- JavaScript
-- Method
-- Prototype
-- Reduce
-- Reference
-- Polyfill
+  - Array
+  - Array method
+  - ECMAScript 5
+  - JavaScript
+  - Method
+  - Prototype
+  - Reduce
+  - Reference
+  - Polyfill
 browser-compat: javascript.builtins.Array.reduce
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <code><strong>reduce()</strong></code> method executes a <strong>reducer</strong>
-  function (that you provide) on each element of the array, resulting in a single output
-  value.</p>
+The **`reduce()`** method executes a **reducer** function (that you provide) on
+each element of the array, resulting in a single output value.
 
-<div>{{EmbedInteractiveExample("pages/js/array-reduce.html")}}</div>
+{{EmbedInteractiveExample("pages/js/array-reduce.html")}}
 
+The **reducer** function takes four arguments:
 
-<p>The <strong>reducer</strong> function takes four arguments:</p>
+1.  Accumulator
+2.  Current Value
+3.  Current Index
+4.  Source Array
 
-<ol>
-  <li>Accumulator</li>
-  <li>Current Value</li>
-  <li>Current Index</li>
-  <li>Source Array</li>
-</ol>
+Your **reducer** function's returned value is assigned to the accumulator, whose
+value is remembered across each iteration throughout the array, and ultimately
+becomes the final, single resulting value.
 
-<p>Your <strong>reducer</strong> function's returned value is assigned to the accumulator,
-  whose value is remembered across each iteration throughout the array, and ultimately
-  becomes the final, single resulting value.</p>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush: js">
+```js
 // Arrow function
 reduce((accumulator, currentValue) => { ... } )
 reduce((accumulator, currentValue, index) => { ... } )
@@ -53,91 +49,76 @@ reduce(function callbackFn(accumulator, currentValue) { ... })
 reduce(function callbackFn(accumulator, currentValue, index) { ... })
 reduce(function callbackFn(accumulator, currentValue, index, array){ ... })
 reduce(function callbackFn(accumulator, currentValue, index, array) { ... }, initialValue)
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>callbackFn</var></code></dt>
-  <dd>
-    <p>A function to execute on each element in the array (except for the first, if no
-      <code><var>initialValue</var></code> is supplied).</p>
+- `callbackFn`
 
-    <p>It takes four arguments:</p>
+  - : A function to execute on each element in the array (except for the first,
+    if no `initialValue` is supplied).
 
-    <dl>
-      <dt><code><var>accumulator</var></code></dt>
-      <dd>The accumulator accumulates <var>callbackFn</var>'s return values. It is the
-        accumulated value previously returned in the last invocation of the callback—or
-        <code><var>initialValue</var></code>, if it was supplied (see below).</dd>
-      <dt><code><var>currentValue</var></code></dt>
-      <dd>The current element being processed in the array.</dd>
-      <dt><code><var>index</var></code> {{optional_inline}}</dt>
-      <dd>The index of the current element being processed in the array. Starts from index
-        <code>0</code> if an <code>initialValue</code> is provided. Otherwise, it starts
-        from index <code>1</code>.</dd>
-      <dt><code><var>array</var></code> {{optional_inline}}</dt>
-      <dd>The array <code>reduce()</code> was called upon.</dd>
-    </dl>
-  </dd>
-  <dt><code><var>initialValue</var></code> {{optional_inline}}</dt>
-  <dd>A value to use as the first argument to the first call of the
-    <code><var>callbackFn</var></code>. If no <code><var>initialValue</var></code> is
-    supplied, the first element in the array will be used as the initial
-    <code><var>accumulator</var></code> value and skipped as
-    <code><var>currentValue</var></code>. Calling <code>reduce()</code> on an empty array
-    without an <code><var>initialValue</var></code> will throw a {{jsxref("TypeError")}}.
-  </dd>
-</dl>
+    It takes four arguments:
 
-<h3 id="Return_value">Return value</h3>
+    - `accumulator`
+      - : The accumulator accumulates _callbackFn_'s return values. It is the
+        accumulated value previously returned in the last invocation of the
+        callback—or `initialValue`, if it was supplied (see below).
+    - `currentValue`
+      - : The current element being processed in the array.
+    - `index` {{optional_inline}}
+      - : The index of the current element being processed in the array. Starts
+        from index `0` if an `initialValue` is provided. Otherwise, it starts
+        from index `1`.
+    - `array` {{optional_inline}}
+      - : The array `reduce()` was called upon.
 
-<p>The single value that results from the reduction.</p>
+- `initialValue` {{optional_inline}}
+  - : A value to use as the first argument to the first call of the
+    `callbackFn`. If no `initialValue` is supplied, the first element in the
+    array will be used as the initial `accumulator` value and skipped as
+    `currentValue`. Calling `reduce()` on an empty array without an
+    `initialValue` will throw a {{jsxref("TypeError")}}.
 
-<h2 id="Description">Description</h2>
+### Return value
 
-<p>The <code>reduce()</code> method executes the <code><var>callbackFn</var></code> once for
-  each assigned value present in the array, taking four arguments:</p>
+The single value that results from the reduction.
 
-<ol>
-  <li><code><var>accumulator</var></code></li>
-  <li><code><var>currentValue</var></code></li>
-  <li><code><var>currentIndex</var></code></li>
-  <li><code><var>array</var></code></li>
-</ol>
+## Description
 
-<p>The first time the callback is called, <code><var>accumulator</var></code> and
-  <code><var>currentValue</var></code> can be one of two values. If
-  <code><var>initialValue</var></code> is provided in the call to <code>reduce()</code>,
-  then <code><var>accumulator</var></code> will be equal to
-  <code><var>initialValue</var></code>, and <code><var>currentValue</var></code> will be
-  equal to the first value in the array. If no <code><var>initialValue</var></code> is
-  provided, then <code><var>accumulator</var></code> will be equal to the first value in
-  the array, and <code><var>currentValue</var></code> will be equal to the second.</p>
+The `reduce()` method executes the `callbackFn` once for each assigned value
+present in the array, taking four arguments:
 
-<div class="note">
-  <p><strong>Note:</strong> If <code><var>initialValue</var></code> is not provided,
-    <code>reduce()</code> will execute the callback function starting at index
-    <code>1</code>, skipping the first index. If <code><var>initialValue</var></code> is
-    provided, it will start at index <code>0</code>.</p>
-</div>
+1.  `accumulator`
+2.  `currentValue`
+3.  `currentIndex`
+4.  `array`
 
-<p>If the array is empty and no <code><var>initialValue</var></code> is provided,
-  {{jsxref("TypeError")}} will be thrown.</p>
+The first time the callback is called, `accumulator` and `currentValue` can be
+one of two values. If `initialValue` is provided in the call to `reduce()`, then
+`accumulator` will be equal to `initialValue`, and `currentValue` will be equal
+to the first value in the array. If no `initialValue` is provided, then
+`accumulator` will be equal to the first value in the array, and `currentValue`
+will be equal to the second.
 
-<p>If the array only has one element (regardless of position) and no
-  <code><var>initialValue</var></code> is provided, or if
-  <code><var>initialValue</var></code> is provided but the array is empty, the solo value
-  will be returned <em>without</em> calling <em><code>callbackFn</code>.</em></p>
+> **Note:** If `initialValue` is not provided, `reduce()` will execute the
+> callback function starting at index `1`, skipping the first index. If
+> `initialValue` is provided, it will start at index `0`.
 
-<p>If <code><var>initialValue</var></code> is provided and the array is not empty then the
-  reduce method will always invoke the callback function starting at index 0. If
-  <code><var>initialValue</var></code> is not provided then the reduce method will act
-  differently for arrays with length larger than 1, equal to 1 and 0, as shown in the
-  following example:</p>
+If the array is empty and no `initialValue` is provided,
+{{jsxref("TypeError")}} will be thrown.
 
-<pre class="brush: js">
-const getMax = (a, b) =&gt; Math.max(a, b);
+If the array only has one element (regardless of position) and no `initialValue`
+is provided, or if `initialValue` is provided but the array is empty, the solo
+value will be returned _without_ calling _`callbackFn`._
+
+If `initialValue` is provided and the array is not empty then the reduce method
+will always invoke the callback function starting at index 0. If `initialValue`
+is not provided then the reduce method will act differently for arrays with
+length larger than 1, equal to 1 and 0, as shown in the following example:
+
+```js
+const getMax = (a, b) => Math.max(a, b);
 
 // callback is invoked for each element in the array starting at index 0
 [1, 100].reduce(getMax, 50); // 100
@@ -151,28 +132,39 @@ const getMax = (a, b) =&gt; Math.max(a, b);
 [      ].reduce(getMax, 1);  // 1
 
 [      ].reduce(getMax);     // TypeError
-</pre>
+```
 
-<h3 id="How_reduce_works">How reduce() works</h3>
+### How reduce() works
 
-<p>Suppose the following use of <code>reduce()</code> occurred:</p>
+Suppose the following use of `reduce()` occurred:
 
-<pre class="brush: js">[0, 1, 2, 3, 4].reduce(function(accumulator, currentValue, currentIndex, array) {
+```js
+[0, 1, 2, 3, 4].reduce(function(accumulator, currentValue, currentIndex, array) {
   return accumulator + currentValue
 })
-</pre>
+```
 
-<p>The callback would be invoked four times, with the arguments and return values in each
-  call being as follows:</p>
+The callback would be invoked four times, with the arguments and return values
+in each call being as follows:
 
 <table class="standard-table">
   <thead>
     <tr>
-      <th scope="col"><code><var>callback</var></code> iteration</th>
-      <th scope="col"><code><var>accumulator</var></code></th>
-      <th scope="col"><code><var>currentValue</var></code></th>
-      <th scope="col"><code><var>currentIndex</var></code></th>
-      <th scope="col"><code><var>array</var></code></th>
+      <th scope="col">
+        <code><var>callback</var></code> iteration
+      </th>
+      <th scope="col">
+        <code><var>accumulator</var></code>
+      </th>
+      <th scope="col">
+        <code><var>currentValue</var></code>
+      </th>
+      <th scope="col">
+        <code><var>currentIndex</var></code>
+      </th>
+      <th scope="col">
+        <code><var>array</var></code>
+      </th>
       <th scope="col">return value</th>
     </tr>
   </thead>
@@ -212,32 +204,45 @@ const getMax = (a, b) =&gt; Math.max(a, b);
   </tbody>
 </table>
 
-<p>The value returned by <code>reduce()</code> would be that of the last callback
-  invocation (<code>10</code>).</p>
+The value returned by `reduce()` would be that of the last callback invocation
+(`10`).
 
-<p>You can also provide an {{jsxref("Functions/Arrow_functions", "Arrow Function","",1)}}
-  instead of a full function. The code below will produce the same output as the code in
-  the block above:</p>
+You can also provide an
+{{jsxref("Functions/Arrow_functions", "Arrow Function","",1)}}
+instead of a full function. The code below will produce the same output as the
+code in the block above:
 
-<pre class="brush: js">[0, 1, 2, 3, 4].reduce( (accumulator, currentValue, currentIndex, array) =&gt; accumulator + currentValue )
-</pre>
+```js
+[0, 1, 2, 3, 4].reduce( (accumulator, currentValue, currentIndex, array) => accumulator + currentValue )
+```
 
-<p>If you were to provide an <code><var>initialValue</var></code> as the second argument
-  to <code>reduce()</code>, the result would look like this:</p>
+If you were to provide an `initialValue` as the second argument to `reduce()`,
+the result would look like this:
 
-<pre class="brush: js">[0, 1, 2, 3, 4].reduce((accumulator, currentValue, currentIndex, array) =&gt; {
+```js
+[0, 1, 2, 3, 4].reduce((accumulator, currentValue, currentIndex, array) => {
     return accumulator + currentValue
 }, 10)
-</pre>
+```
 
 <table class="standard-table">
   <thead>
     <tr>
-      <th scope="col"><code><var>callback</var></code> iteration</th>
-      <th scope="col"><code><var>accumulator</var></code></th>
-      <th scope="col"><code><var>currentValue</var></code></th>
-      <th scope="col"><code><var>currentIndex</var></code></th>
-      <th scope="col"><code><var>array</var></code></th>
+      <th scope="col">
+        <code><var>callback</var></code> iteration
+      </th>
+      <th scope="col">
+        <code><var>accumulator</var></code>
+      </th>
+      <th scope="col">
+        <code><var>currentValue</var></code>
+      </th>
+      <th scope="col">
+        <code><var>currentIndex</var></code>
+      </th>
+      <th scope="col">
+        <code><var>array</var></code>
+      </th>
       <th scope="col">return value</th>
     </tr>
   </thead>
@@ -285,11 +290,12 @@ const getMax = (a, b) =&gt; Math.max(a, b);
   </tbody>
 </table>
 
-<p>The value returned by <code>reduce()</code> in this case would be <code>20</code>.</p>
+The value returned by `reduce()` in this case would be `20`.
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<pre class="brush: js">// Production steps of ECMA-262, Edition 5, 15.4.4.21
+```js
+// Production steps of ECMA-262, Edition 5, 15.4.4.21
 // Reference: https://es5.github.io/#x15.4.4.21
 // https://tc39.github.io/ecma262/#sec-array.prototype.reduce
 if (!Array.prototype.reduce) {
@@ -308,30 +314,30 @@ if (!Array.prototype.reduce) {
       var o = Object(this);
 
       // 2. Let len be ? ToLength(? Get(O, "length")).
-      var len = o.length &gt;&gt;&gt; 0;
+      var len = o.length >>> 0;
 
       // Steps 3, 4, 5, 6, 7
       var k = 0;
       var value;
 
-      if (arguments.length &gt;= 2) {
+      if (arguments.length >= 2) {
         value = arguments[1];
       } else {
-        while (k &lt; len &amp;&amp; !(k in o)) {
+        while (k < len && !(k in o)) {
           k++;
         }
 
         // 3. If len is 0 and initialValue is not present,
         //    throw a TypeError exception.
-        if (k &gt;= len) {
+        if (k >= len) {
           throw new TypeError( 'Reduce of empty array ' +
             'with no initial value' );
         }
         value = o[k++];
       }
 
-      // 8. Repeat, while k &lt; len
-      while (k &lt; len) {
+      // 8. Repeat, while k < len
+      while (k < len) {
         // a. Let Pk be ! ToString(k).
         // b. Let kPresent be ? HasProperty(O, Pk).
         // c. If kPresent is true, then
@@ -352,80 +358,84 @@ if (!Array.prototype.reduce) {
     }
   });
 }
-</pre>
+```
 
-<div class="notecard note">
-  <p><strong>Note:</strong> If you need to support truly obsolete JavaScript engines
-    that do not support {{jsxref("Object.defineProperty()")}}, it is best not to polyfill
-    <code>Array.prototype</code> methods at all, as you cannot make them
-    <strong>non-enumerable</strong>.</p>
-</div>
+> **Note:** If you need to support truly obsolete JavaScript engines that do not
+> support {{jsxref("Object.defineProperty()")}}, it is best not to
+> polyfill `Array.prototype` methods at all, as you cannot make them
+> **non-enumerable**.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Sum_all_the_values_of_an_array">Sum all the values of an array</h3>
+### Sum all the values of an array
 
-<pre class="brush: js">let sum = [0, 1, 2, 3].reduce(function (accumulator, currentValue) {
+```js
+let sum = [0, 1, 2, 3].reduce(function (accumulator, currentValue) {
   return accumulator + currentValue
 }, 0)
 // sum is 6
+```
 
-</pre>
+Alternatively written with an arrow function:
 
-<p>Alternatively written with an arrow function:</p>
-
-<pre class="brush: js">let total = [ 0, 1, 2, 3 ].reduce(
-  ( accumulator, currentValue ) =&gt; accumulator + currentValue,
+```js
+let total = [ 0, 1, 2, 3 ].reduce(
+  ( accumulator, currentValue ) => accumulator + currentValue,
   0
-)</pre>
+)
+```
 
-<h3 id="Sum_of_values_in_an_object_array">Sum of values in an object array</h3>
+### Sum of values in an object array
 
-<p>To sum up the values contained in an array of objects, you <strong>must</strong> supply
-  an <code><var>initialValue</var></code>, so that each item passes through your function.
-</p>
+To sum up the values contained in an array of objects, you **must** supply an
+`initialValue`, so that each item passes through your function.
 
-<pre class="brush: js">let initialValue = 0
+```js
+let initialValue = 0
 let sum = [{x: 1}, {x: 2}, {x: 3}].reduce(function (accumulator, currentValue) {
     return accumulator + currentValue.x
 }, initialValue)
 
 console.log(sum) // logs 6
-</pre>
+```
 
-<p>Alternatively written with an arrow function:</p>
+Alternatively written with an arrow function:
 
-<pre class="brush: js">let initialValue = 0
+```js
+let initialValue = 0
 let sum = [{x: 1}, {x: 2}, {x: 3}].reduce(
-    (accumulator, currentValue) =&gt; accumulator + currentValue.x
+    (accumulator, currentValue) => accumulator + currentValue.x
     , initialValue
 )
 
-console.log(sum) // logs 6</pre>
+console.log(sum) // logs 6
+```
 
-<h3 id="Flatten_an_array_of_arrays">Flatten an array of arrays</h3>
+### Flatten an array of arrays
 
-<pre class="brush: js">let flattened = [[0, 1], [2, 3], [4, 5]].reduce(
+```js
+let flattened = [[0, 1], [2, 3], [4, 5]].reduce(
   function(accumulator, currentValue) {
     return accumulator.concat(currentValue)
   },
   []
 )
 // flattened is [0, 1, 2, 3, 4, 5]
-</pre>
+```
 
-<p>Alternatively written with an arrow function:</p>
+Alternatively written with an arrow function:
 
-<pre class="brush: js">let flattened = [[0, 1], [2, 3], [4, 5]].reduce(
-  ( accumulator, currentValue ) =&gt; accumulator.concat(currentValue),
+```js
+let flattened = [[0, 1], [2, 3], [4, 5]].reduce(
+  ( accumulator, currentValue ) => accumulator.concat(currentValue),
   []
 )
-</pre>
+```
 
-<h3 id="Counting_instances_of_values_in_an_object">Counting instances of values in an
-  object</h3>
+### Counting instances of values in an object
 
-<pre class="brush: js">let names = ['Alice', 'Bob', 'Tiff', 'Bruce', 'Alice']
+```js
+let names = ['Alice', 'Bob', 'Tiff', 'Bruce', 'Alice']
 
 let countedNames = names.reduce(function (allNames, name) {
   if (name in allNames) {
@@ -438,11 +448,12 @@ let countedNames = names.reduce(function (allNames, name) {
 }, {})
 // countedNames is:
 // { 'Alice': 2, 'Bob': 1, 'Tiff': 1, 'Bruce': 1 }
-</pre>
+```
 
-<h3 id="Grouping_objects_by_a_property">Grouping objects by a property</h3>
+### Grouping objects by a property
 
-<pre class="brush: js">let people = [
+```js
+let people = [
   { name: 'Alice', age: 21 },
   { name: 'Max', age: 20 },
   { name: 'Jane', age: 20 }
@@ -468,14 +479,12 @@ let groupedPeople = groupBy(people, 'age')
 //   ],
 //   21: [{ name: 'Alice', age: 21 }]
 // }
-</pre>
+```
 
-<h3
-  id="Bonding_arrays_contained_in_an_array_of_objects_using_the_spread_operator_and_initialValue">
-  Bonding arrays contained in an array of objects using the spread operator and
-  initialValue</h3>
+### Bonding arrays contained in an array of objects using the spread operator and initialValue
 
-<pre class="brush: js">// friends - an array of objects
+```js
+// friends - an array of objects
 // where object field "books" is a list of favorite books
 let friends = [{
   name: 'Anna',
@@ -501,18 +510,18 @@ let allbooks = friends.reduce(function(accumulator, currentValue) {
 //   'Alphabet', 'Bible', 'Harry Potter', 'War and peace',
 //   'Romeo and Juliet', 'The Lord of the Rings',
 //   'The Shining'
-// ]</pre>
+// ]
+```
 
-<h3 id="Remove_duplicate_items_in_an_array">Remove duplicate items in an array</h3>
+### Remove duplicate items in an array
 
-<div class="notecard note">
-  <p><strong>Note:</strong> If you are using an environment compatible with
-    {{jsxref("Set")}} and {{jsxref("Array.from()")}}, you could use
-    <code>let arrayWithNoDuplicates = Array.from(new Set(myArray))</code> to get an array where
-    duplicate items have been removed.</p>
-</div>
+> **Note:** If you are using an environment compatible with
+> {{jsxref("Set")}} and {{jsxref("Array.from()")}}, you could
+> use `let arrayWithNoDuplicates = Array.from(new Set(myArray))` to get an array
+> where duplicate items have been removed.
 
-<pre class="brush: js">let myArray = ['a', 'b', 'a', 'b', 'c', 'e', 'e', 'c', 'd', 'd', 'd', 'd']
+```js
+let myArray = ['a', 'b', 'a', 'b', 'c', 'e', 'e', 'c', 'd', 'd', 'd', 'd']
 let myArrayWithNoDuplicates = myArray.reduce(function (accumulator, currentValue) {
   if (accumulator.indexOf(currentValue) === -1) {
     accumulator.push(currentValue)
@@ -520,30 +529,35 @@ let myArrayWithNoDuplicates = myArray.reduce(function (accumulator, currentValue
   return accumulator
 }, [])
 
-console.log(myArrayWithNoDuplicates)</pre>
+console.log(myArrayWithNoDuplicates)
+```
 
-<h3 id="Replace_.filter.map_with_.reduce">Replace .filter().map() with .reduce()</h3>
+### Replace .filter().map() with .reduce()
 
-<p>Using {{jsxref("Array.filter()")}} then {{jsxref("Array.map()")}} traverses the array
-  twice, but you can achieve the same effect while traversing only once with
-  {{jsxref("Array.reduce()")}}, thereby being more efficient. (If you like for loops, you
-  can filter and map while traversing once with {{jsxref("Array.forEach()")}}).</p>
+Using {{jsxref("Array.filter()")}} then {{jsxref("Array.map()")}}
+traverses the array twice, but you can achieve the same effect while traversing
+only once with {{jsxref("Array.reduce()")}}, thereby being more
+efficient. (If you like for loops, you can filter and map while traversing once
+with {{jsxref("Array.forEach()")}}).
 
-<pre class="brush: js">const numbers = [-5, 6, 2, 0,];
+```js
+const numbers = [-5, 6, 2, 0,];
 
-const doubledPositiveNumbers = numbers.reduce((accumulator, currentValue) =&gt; {
-  if (currentValue &gt; 0) {
+const doubledPositiveNumbers = numbers.reduce((accumulator, currentValue) => {
+  if (currentValue > 0) {
     const doubled = currentValue * 2;
     accumulator.push(doubled);
   }
   return accumulator;
 }, []);
 
-console.log(doubledPositiveNumbers); // [12, 4]</pre>
+console.log(doubledPositiveNumbers); // [12, 4]
+```
 
-<h3 id="Running_Promises_in_Sequence">Running Promises in Sequence</h3>
+### Running Promises in Sequence
 
-<pre class="brush: js">/**
+```js
+/**
  * Runs promises from array of functions that can return promises
  * in chained manner
  *
@@ -552,21 +566,21 @@ console.log(doubledPositiveNumbers); // [12, 4]</pre>
  */
 function runPromiseInSequence(arr, input) {
   return arr.reduce(
-    (promiseChain, currentFunction) =&gt; promiseChain.then(currentFunction),
+    (promiseChain, currentFunction) => promiseChain.then(currentFunction),
     Promise.resolve(input)
   )
 }
 
 // promise function 1
 function p1(a) {
-  return new Promise((resolve, reject) =&gt; {
+  return new Promise((resolve, reject) => {
     resolve(a * 5)
   })
 }
 
 // promise function 2
 function p2(a) {
-  return new Promise((resolve, reject) =&gt; {
+  return new Promise((resolve, reject) => {
     resolve(a * 2)
   })
 }
@@ -578,7 +592,7 @@ function f3(a) {
 
 // promise function 4
 function p4(a) {
-  return new Promise((resolve, reject) =&gt; {
+  return new Promise((resolve, reject) => {
     resolve(a * 4)
   })
 }
@@ -586,18 +600,19 @@ function p4(a) {
 const promiseArr = [p1, p2, f3, p4]
 runPromiseInSequence(promiseArr, 10)
   .then(console.log)   // 1200
-</pre>
+```
 
-<h3 id="Function_composition_enabling_piping">Function composition enabling piping</h3>
+### Function composition enabling piping
 
-<pre class="brush: js">// Building-blocks to use for composition
-const double = x =&gt; x + x
-const triple = x =&gt; 3 * x
-const quadruple = x =&gt; 4 * x
+```js
+// Building-blocks to use for composition
+const double = x => x + x
+const triple = x => 3 * x
+const quadruple = x => 4 * x
 
 // Function composition enabling pipe functionality
-const pipe = (...functions) =&gt; input =&gt; functions.reduce(
-    (acc, fn) =&gt; fn(acc),
+const pipe = (...functions) => input => functions.reduce(
+    (acc, fn) => fn(acc),
     input
 )
 
@@ -612,12 +627,12 @@ multiply6(6)   // 36
 multiply9(9)   // 81
 multiply16(16) // 256
 multiply24(10) // 240
+```
 
-</pre>
+### Write map using reduce
 
-<h3 id="Write_map_using_reduce">Write map using reduce</h3>
-
-<pre class="brush: js">if (!Array.prototype.mapUsingReduce) {
+```js
+if (!Array.prototype.mapUsingReduce) {
   Array.prototype.mapUsingReduce = function(callback, initialValue) {
     return this.reduce(function(mappedArray, currentValue, index, array) {
       mappedArray[index] = callback.call(initialValue, currentValue, index, array)
@@ -627,22 +642,20 @@ multiply24(10) // 240
 }
 
 [1, 2, , 3].mapUsingReduce(
-  (currentValue, index, array) =&gt; currentValue + index + array.length
+  (currentValue, index, array) => currentValue + index + array.length
 ) // [5, 7, , 10]
+```
 
-</pre>
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>A polyfill of <code>Array.prototype.reduce</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-array"><code>core-js</code></a></li>
-  <li>{{jsxref("Array.prototype.reduceRight()")}}</li>
-</ul>
+- A polyfill of `Array.prototype.reduce` is available in
+  [`core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- {{jsxref("Array.prototype.reduceRight()")}}

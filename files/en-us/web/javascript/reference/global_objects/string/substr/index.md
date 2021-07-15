@@ -2,73 +2,64 @@
 title: String.prototype.substr()
 slug: Web/JavaScript/Reference/Global_Objects/String/substr
 tags:
-- Deprecated
-- JavaScript
-- Method
-- Prototype
-- Reference
-- String
+  - Deprecated
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
+  - String
 browser-compat: javascript.builtins.String.substr
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p class="seoSummary">The <strong><code>substr()</code></strong> method returns a portion
-  of the string, starting at the specified index and extending for a given number of
-  characters afterwards.</p>
+The **`substr()`** method returns a portion of the string, starting at the
+specified index and extending for a given number of characters afterwards.
 
-<div>{{EmbedInteractiveExample("pages/js/string-substr.html")}}</div>
+{{EmbedInteractiveExample("pages/js/string-substr.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush: js">
+```js
 substr(start)
 substr(start, length)
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>start</var></code></dt>
-  <dd>The index of the first character to include in the returned substring.</dd>
-  <dt><code><var>length</var></code></dt>
-  <dd>Optional. The number of characters to extract.</dd>
-</dl>
+- `start`
+  - : The index of the first character to include in the returned substring.
+- `length`
+  - : Optional. The number of characters to extract.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A new string containing the specified part of the given string.</p>
+A new string containing the specified part of the given string.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p><code>substr()</code> extracts <code><var>length</var></code> characters from a
-  <code><var>str</var></code>, counting from the <code><var>start</var></code> index.</p>
+`substr()` extracts `length` characters from a `str`, counting from the `start`
+index.
 
-<ul>
-  <li>If <code><var>start</var></code> is a positive number, the index starts counting at
-    the start of the string. Its value is capped at <code><var>str</var>.length</code>.
-  </li>
-  <li>If <code><var>start</var></code> is a negative number, the index starts counting
-    from the end of the string. Its value is capped at
-    <code>-<var>str</var>.length</code>.</li>
-  <li>Note: In Microsoft JScript, negative values of the <code><var>start</var></code>
-    argument are not considered to refer to the end of the string.</li>
-  <li>If <code><var>length</var></code> is omitted, <code>substr()</code> extracts
-    characters to the end of the string.</li>
-  <li>If <code><var>length</var></code> is {{jsxref("undefined")}}, <code>substr()</code>
-    extracts characters to the end of the string.</li>
-  <li>If <code><var>length</var></code> is a negative number, it is treated as
-    <code>0</code>.</li>
-  <li>For both <code><var>start</var></code> and <code><var>length</var></code>,
-    {{jsxref("NaN")}} is treated as <code>0</code>.</li>
-</ul>
+- If `start` is a positive number, the index starts counting at the start of the
+  string. Its value is capped at `str.length`.
+- If `start` is a negative number, the index starts counting from the end of the
+  string. Its value is capped at `-str.length`.
+- Note: In Microsoft JScript, negative values of the `start` argument are not
+  considered to refer to the end of the string.
+- If `length` is omitted, `substr()` extracts characters to the end of the
+  string.
+- If `length` is {{jsxref("undefined")}}, `substr()` extracts
+  characters to the end of the string.
+- If `length` is a negative number, it is treated as `0`.
+- For both `start` and `length`, {{jsxref("NaN")}} is treated as `0`.
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>Microsoft's JScript does not support negative values for the start index. To use this
-  feature in JScript, you can use the following code:</p>
+Microsoft's JScript does not support negative values for the start index. To use
+this feature in JScript, you can use the following code:
 
-<pre class="brush: js">// only run when the substr() function is broken
+```js
+// only run when the substr() function is broken
 if ('ab'.substr(-1) != 'b') {
   /**
    *  Get the substring of a string
@@ -82,18 +73,19 @@ if ('ab'.substr(-1) != 'b') {
       return substr.call(this,
       	// did we get a negative start, calculate how much it is from the beginning of the string
         // adjust the start parameter for negative value
-        start &lt; 0 ? this.length + start : start,
+        start < 0 ? this.length + start : start,
         length)
     }
   }(String.prototype.substr);
 }
-</pre>
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_substr">Using substr()</h3>
+### Using substr()
 
-<pre class="brush: js">var aString = 'Mozilla';
+```js
+var aString = 'Mozilla';
 
 console.log(aString.substr(0, 1));   // 'M'
 console.log(aString.substr(1, 0));   // ''
@@ -103,19 +95,17 @@ console.log(aString.substr(-3));     // 'lla'
 console.log(aString.substr(1));      // 'ozilla'
 console.log(aString.substr(-20, 2)); // 'Mo'
 console.log(aString.substr(20, 2));  // ''
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("String.prototype.slice()")}}</li>
-  <li>{{jsxref("String.prototype.substring()")}}</li>
-</ul>
+- {{jsxref("String.prototype.slice()")}}
+- {{jsxref("String.prototype.substring()")}}

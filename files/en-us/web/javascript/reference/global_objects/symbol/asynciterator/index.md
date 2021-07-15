@@ -10,23 +10,30 @@ tags:
   - asynchronous
 browser-compat: javascript.builtins.Symbol.asyncIterator
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <code><strong>Symbol.asyncIterator</strong></code> well-known symbol specifies the default AsyncIterator for an object. If this property is set on an object, it is an async iterable and can be used in a <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of">for await...of</a></code> loop.</p>
+The **`Symbol.asyncIterator`** well-known symbol specifies the default
+AsyncIterator for an object. If this property is set on an object, it is an
+async iterable and can be used in
+a [`for await...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of) loop.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The <code>Symbol.asyncIterator</code> symbol is a builtin symbol that is used to access an object's <code>@@asyncIterator</code> method. In order for an object to be async iterable, it must have a <code>Symbol.asyncIterator</code> key.</p>
+The `Symbol.asyncIterator` symbol is a builtin symbol that is used to access an
+object's `@@asyncIterator` method. In order for an object to be async iterable,
+it must have a `Symbol.asyncIterator` key.
 
-<p>{{js_property_attributes(0,0,0)}}</p>
+{{js_property_attributes(0,0,0)}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="User-defined_Async_Iterables">User-defined Async Iterables</h3>
+### User-defined Async Iterables
 
-<p>You can define your own async iterable by setting the <code>[Symbol.asyncIterator]</code> property on an object. </p>
+You can define your own async iterable by setting the `[Symbol.asyncIterator]`
+property on an object.
 
-<pre class="brush: js">const myAsyncIterable = {
+```js
+const myAsyncIterable = {
     async* [Symbol.asyncIterator]() {
         yield "hello";
         yield "async";
@@ -34,7 +41,7 @@ browser-compat: javascript.builtins.Symbol.asyncIterator
     }
 };
 
-(async () =&gt; {
+(async () => {
     for await (const x of myAsyncIterable) {
         console.log(x);
         // expected output:
@@ -43,25 +50,28 @@ browser-compat: javascript.builtins.Symbol.asyncIterator
         //    "iteration!"
     }
 })();
-</pre>
+```
 
-<p>When creating an API, remember that async iterables are designed to represent something <em>iterable</em> — like a stream of data or a list —, not to completely replace callbacks and events in most situations.</p>
+When creating an API, remember that async iterables are designed to represent
+something _iterable_ — like a stream of data or a list —, not to completely
+replace callbacks and events in most situations.
 
-<h3 id="Built-in_Async_Iterables">Built-in Async Iterables</h3>
+### Built-in Async Iterables
 
-<p>There are currently no built-in JavaScript objects that have the <code>[Symbol.asyncIterator]</code> key set by default. However, WHATWG Streams are set to be the first built-in object to be async iterable, with <code>[Symbol.asyncIterator]</code> recently landing in the spec.</p>
+There are currently no built-in JavaScript objects that have the
+`[Symbol.asyncIterator]` key set by default. However, WHATWG Streams are set to
+be the first built-in object to be async iterable, with `[Symbol.asyncIterator]`
+recently landing in the spec.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols">Iteration protocols</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of">for await... of</a></li>
-</ul>
+- [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
+- [for await... of](/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of)
