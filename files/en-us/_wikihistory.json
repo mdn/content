@@ -95001,14 +95001,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/XRSessionMode": {
-    "modified": "2020-10-24T11:30:30.822Z",
-    "contributors": [
-      "Wind1808",
-      "Sheppy",
-      "bershanskiy"
-    ]
-  },
   "Web/API/XRSpace": {
     "modified": "2020-10-15T22:22:29.366Z",
     "contributors": [
