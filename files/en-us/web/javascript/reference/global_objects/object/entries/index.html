@@ -13,13 +13,14 @@ browser-compat: javascript.builtins.Object.entries
 
 <p>The <code><strong>Object.entries()</strong></code> method returns an array of a given
   object's own enumerable string-keyed property
-  <code>[<var>key</var>, <var>value</var>]</code> pairs, in the same order as that
-  provided by a {{jsxref("Statements/for...in", "for...in")}} loop. (The only important
-  difference is that a <code>for...in</code> loop enumerates properties in the prototype
+  <code>[<var>key</var>, <var>value</var>]</code> pairs. This is the same as iterating
+  with a {{jsxref("Statements/for...in", "for...in")}} loop, except that a
+  <code>for...in</code> loop enumerates properties in the prototype
   chain as well). </p>
 
-<p>The order of the array returned by <code><strong>Object.entries()</strong></code> does
-  not depend on how an object is defined. If there is a need for certain ordering, then
+<p>The order of the array returned by <code><strong>Object.entries()</strong></code> is
+  the same as that provided by a {{jsxref("Statements/for...in", "for...in")}} loop. If
+  there is a need for different ordering, then
   the array should be sorted first, like
   <code>Object.entries(obj).sort((a, b) =&gt; b[0].localeCompare(a[0]));</code>.</p>
 
