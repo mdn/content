@@ -1,6 +1,6 @@
 ---
 title: console.error()
-slug: Web/API/Console/error
+slug: Web/API/console/error
 tags:
   - API
   - DOM

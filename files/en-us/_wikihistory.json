@@ -34317,7 +34317,7 @@
       "chrisdavidmills"
     ]
   },
-  "Web/API/Console": {
+  "Web/API/console": {
     "modified": "2020-10-15T21:05:51.622Z",
     "contributors": [
       "mfuji09",
@@ -34372,7 +34372,7 @@
       "yyss"
     ]
   },
-  "Web/API/Console/clear": {
+  "Web/API/console/clear": {
     "modified": "2020-10-15T21:45:27.781Z",
     "contributors": [
       "alattalatta",
@@ -34385,7 +34385,7 @@
       "wbamberg"
     ]
   },
-  "Web/API/Console/count": {
+  "Web/API/console/count": {
     "modified": "2020-10-15T21:26:42.386Z",
     "contributors": [
       "alattalatta",
@@ -34410,7 +34410,7 @@
       "wbamberg"
     ]
   },
-  "Web/API/Console/countReset": {
+  "Web/API/console/countReset": {
     "modified": "2020-10-15T22:07:02.809Z",
     "contributors": [
       "alattalatta",
@@ -34421,14 +34421,14 @@
       "chrisdavidmills"
     ]
   },
-  "Web/API/Console/debug": {
+  "Web/API/console/debug": {
     "modified": "2020-10-15T22:14:46.390Z",
     "contributors": [
       "alattalatta",
       "Sheppy"
     ]
   },
-  "Web/API/Console/dir": {
+  "Web/API/console/dir": {
     "modified": "2020-10-15T21:05:50.008Z",
     "contributors": [
       "mfuji09",
@@ -34458,7 +34458,7 @@
       "alanh"
     ]
   },
-  "Web/API/Console/dirxml": {
+  "Web/API/console/dirxml": {
     "modified": "2020-10-15T21:37:54.331Z",
     "contributors": [
       "connorshea",
@@ -34472,7 +34472,7 @@
       "Sebastianz"
     ]
   },
-  "Web/API/Console/error": {
+  "Web/API/console/error": {
     "modified": "2020-10-15T21:05:51.042Z",
     "contributors": [
       "connorshea",
@@ -34496,7 +34496,7 @@
       "myakura"
     ]
   },
-  "Web/API/Console/group": {
+  "Web/API/console/group": {
     "modified": "2020-10-15T21:02:26.181Z",
     "contributors": [
       "connorshea",
@@ -34519,7 +34519,7 @@
       "myakura"
     ]
   },
-  "Web/API/Console/groupCollapsed": {
+  "Web/API/console/groupCollapsed": {
     "modified": "2020-10-15T21:02:41.489Z",
     "contributors": [
       "connorshea",
@@ -34538,7 +34538,7 @@
       "myakura"
     ]
   },
-  "Web/API/Console/groupEnd": {
+  "Web/API/console/groupEnd": {
     "modified": "2020-10-15T21:05:49.953Z",
     "contributors": [
       "connorshea",
@@ -34557,7 +34557,7 @@
       "myakura"
     ]
   },
-  "Web/API/Console/info": {
+  "Web/API/console/info": {
     "modified": "2020-10-15T21:05:50.858Z",
     "contributors": [
       "estelle",
@@ -34578,7 +34578,7 @@
       "myakura"
     ]
   },
-  "Web/API/Console/log": {
+  "Web/API/console/log": {
     "modified": "2020-10-15T21:02:44.299Z",
     "contributors": [
       "mfuji09",
@@ -34616,7 +34616,7 @@
       "myakura"
     ]
   },
-  "Web/API/Console/profile": {
+  "Web/API/console/profile": {
     "modified": "2020-10-15T21:37:02.369Z",
     "contributors": [
       "fscholz",
@@ -34635,7 +34635,7 @@
       "wbamberg"
     ]
   },
-  "Web/API/Console/profileEnd": {
+  "Web/API/console/profileEnd": {
     "modified": "2020-10-15T21:37:04.872Z",
     "contributors": [
       "ExE-Boss",
@@ -34655,7 +34655,7 @@
       "wbamberg"
     ]
   },
-  "Web/API/Console/table": {
+  "Web/API/console/table": {
     "modified": "2020-10-15T21:29:54.225Z",
     "contributors": [
       "fscholz",
@@ -34672,7 +34672,7 @@
       "fitzgen"
     ]
   },
-  "Web/API/Console/time": {
+  "Web/API/console/time": {
     "modified": "2020-10-15T21:05:49.142Z",
     "contributors": [
       "mfuji09",
@@ -34697,7 +34697,7 @@
       "myakura"
     ]
   },
-  "Web/API/Console/timeEnd": {
+  "Web/API/console/timeEnd": {
     "modified": "2020-10-15T21:05:49.965Z",
     "contributors": [
       "irenesmith",
@@ -34722,7 +34722,7 @@
       "myakura"
     ]
   },
-  "Web/API/Console/timeLog": {
+  "Web/API/console/timeLog": {
     "modified": "2020-10-15T22:07:02.547Z",
     "contributors": [
       "plexcom1",
@@ -34730,7 +34730,7 @@
       "chrisdavidmills"
     ]
   },
-  "Web/API/Console/timeStamp": {
+  "Web/API/console/timeStamp": {
     "modified": "2020-10-15T21:37:04.975Z",
     "contributors": [
       "vinyldarkscratch",
@@ -34744,7 +34744,7 @@
       "wbamberg"
     ]
   },
-  "Web/API/Console/trace": {
+  "Web/API/console/trace": {
     "modified": "2020-10-15T21:05:04.282Z",
     "contributors": [
       "Zearin_Galaurum",
@@ -34768,7 +34768,7 @@
       "ziyunfei"
     ]
   },
-  "Web/API/Console/warn": {
+  "Web/API/console/warn": {
     "modified": "2020-10-15T21:05:49.876Z",
     "contributors": [
       "SUM1",
