@@ -242,7 +242,9 @@ console.log(is_verified); // true
 
 <p>A property can be unpacked from an object and assigned to a variable with a different name than the object property.</p>
 
-<pre class="brush: js">const o = {p: 42, q: true};
+<pre class="brush: js">const foo = 42;
+const bar = true;
+const o = {p: 42, q: true};
 const {p: foo, q: bar} = o;
 
 console.log(foo); // 42
