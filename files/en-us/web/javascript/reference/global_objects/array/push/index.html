@@ -71,23 +71,19 @@ console.log(total)   // 4
 
 <h3 id="Merging_two_arrays">Merging two arrays</h3>
 
-<p>This example uses {{jsxref("Function.apply", "apply()")}} to push all elements from a
-  second array.</p>
-
-<p>Do <em>not</em> use this method if the second array (<code>moreVegs</code> in the
-  example) is very large because the maximum number of parameters that one function can
-  take is limited in practice. See {{jsxref("Function.apply", "apply()")}} for more
-  details.</p>
+<p>This example uses {{jsxref("Operators/Spread_syntax", "spread syntax")}} to push all elements from a
+  second array into the first one.</p>
 
 <pre class="brush: js">let vegetables = ['parsnip', 'potato']
 let moreVegs = ['celery', 'beetroot']
 
 // Merge the second array into the first one
-// Equivalent to vegetables.push('celery', 'beetroot')
-Array.prototype.push.apply(vegetables, moreVegs)
+vegetables.push(...moreVegs);
 
 console.log(vegetables)  // ['parsnip', 'potato', 'celery', 'beetroot']
 </pre>
+
+<p>Merging two arrays can also be done with the {{jsxref("Array.prototype.concat()", "concat()")}} method.</p>
 
 <h3 id="Using_an_object_in_an_array-like_fashion">Using an object in an array-like fashion
 </h3>
