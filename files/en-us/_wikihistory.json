@@ -95118,12 +95118,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/XRVisibilityState": {
-    "modified": "2020-10-15T22:23:37.564Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
   "Web/API/XRWebGLLayer": {
     "modified": "2020-10-15T22:23:58.035Z",
     "contributors": [

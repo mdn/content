@@ -13,7 +13,7 @@ tags:
   - XRSession
 browser-compat: api.XRSession
 ---
-<div>{{APIRef("WebXR Device API")}}{{SecureContext_Header}}{{Draft}}</div>
+<div>{{APIRef("WebXR Device API")}}{{SecureContext_Header}}</div>
 
 <p>The WebXR Device API's <code><strong>XRSession</strong></code> interface represents an ongoing XR session, providing methods and properties used to interact with and control the session. To open a WebXR session, use the {{domxref("XRSystem")}} interface's {{domxref("XRSystem.requestSession", "requestSession()")}} method.</p>
 
@@ -25,19 +25,13 @@ browser-compat: api.XRSession
 
 <dl>
  <dt>{{DOMxRef("XRSession.environmentBlendMode", "environmentBlendMode")}} {{Experimental_Inline}} {{ReadOnlyInline}}</dt>
- <dd>
- <p>Returns this session's blend mode which denotes how much of the real-world environment is visible through the XR device and how the device will blend the device imagery with it.</p>
-
- <div class="notecard note">
- <p><strong>Note:</strong> <code>environmentBlendMode()</code> is part of the <a href="https://immersive-web.github.io/webxr-ar-module">WebXR Augmented Reality Module</a>, which has not been completed.</p>
- </div>
- </dd>
+ <dd>Returns this session's blend mode which denotes how much of the real-world environment is visible through the XR device and how the device will blend the device imagery with it.</dd>
  <dt>{{DOMxRef("XRSession.inputSources", "inputSources")}} {{Experimental_Inline}}{{ReadOnlyInline}}</dt>
  <dd>Returns a list of this session's {{DOMxRef("XRInputSource")}}s, each representing an input device used to control the camera and/or scene.</dd>
  <dt>{{DOMxRef("XRSession.renderState", "renderState")}} {{Experimental_Inline}}{{ReadOnlyInline}}</dt>
  <dd>An {{domxref("XRRenderState")}} object which contains options affecting how the imagery is rendered. This includes things such as the near and far clipping planes (distances defining how close and how far away objects can be and still get rendered), as well as field of view information.</dd>
  <dt>{{DOMxRef("XRSession.visibilityState", "visibilityState")}} {{Experimental_Inline}}{{ReadOnlyInline}}</dt>
- <dd>A {{domxref("DOMString")}} whose value is one of those found in the {{domxref("XRVisibilityState")}} enumerated type, indicating whether or not the session's imagery is visible to the user, and if so, if it's being visible but not currently the target for user events.</dd>
+ <dd>A string indicating whether or not the session's imagery is visible to the user, and if so, if it's being visible but not currently the target for user events.</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
@@ -81,7 +75,7 @@ browser-compat: api.XRSession
   </tr>
   <tr>
    <td>{{domxref("XRSession.select_event", "select")}}</td>
-   <td>An event of type {{domxref("XRInputSourceEvent")}} which is sent to the session when one of the session's input sources has successfully completed a <a href="/en-US/docs/Web/API/WebXR_Device_API/Inputs#Primary_actions">primary action</a>. This generally corresponds to the user pressing a trigger, touchpad, or button, speaks a command, or performs a recognizable gesture. The <code>select</code> event is sent after the <code>selectstart</code> event is sent and immediately before the <code>selectend</code> event is sent. If <code>select</code> is <em>not</em> sent, then the select action was aborted before being completed.<br>
+   <td>An event of type {{domxref("XRInputSourceEvent")}} which is sent to the session when one of the session's input sources has successfully completed a <a href="/en-US/docs/Web/API/WebXR_Device_API/Inputs#primary_actions">primary action</a>. This generally corresponds to the user pressing a trigger, touchpad, or button, speaks a command, or performs a recognizable gesture. The <code>select</code> event is sent after the <code>selectstart</code> event is sent and immediately before the <code>selectend</code> event is sent. If <code>select</code> is <em>not</em> sent, then the select action was aborted before being completed.<br>
     Also available through the {{domxref("XRSession.onselect", "onselect")}} event handler property.</td>
   </tr>
   <tr>
@@ -96,12 +90,12 @@ browser-compat: api.XRSession
   </tr>
   <tr>
    <td>{{domxref("XRSession.squeeze_event", "squeeze")}}</td>
-   <td>An {{domxref("XRInputSourceEvent")}} sent to indicate that a <a href="/en-US/docs/Web/API/WebXR_Device_API/Inputs#Primary_squeeze_actions">primary squeeze action</a> has successfully completed. This indicates that the device being squeezed has been released, and may represent dropping a grabbed object, for example. It is sent immediately before the <code>squeezeend</code> event is sent to indicate that the squeeze action is over.<br>
+   <td>An {{domxref("XRInputSourceEvent")}} sent to indicate that a <a href="/en-US/docs/Web/API/WebXR_Device_API/Inputs#primary_squeeze_actions">primary squeeze action</a> has successfully completed. This indicates that the device being squeezed has been released, and may represent dropping a grabbed object, for example. It is sent immediately before the <code>squeezeend</code> event is sent to indicate that the squeeze action is over.<br>
     Also available through the {{domxref("XRSession.onsqueeze", "onsqueeze")}} event handler property.</td>
   </tr>
   <tr>
    <td>{{domxref("XRSession.squeezeend_event", "squeezeend")}}</td>
-   <td>An {{domxref("XRInputSourceEvent")}} sent to the <code>XRSession</code> when the <a href="/en-US/docs/Web/API/WebXR_Device_API/Inputs#Primary_squeeze_actions">primary squeeze action</a> ends, whether or not the action was successful.<br>
+   <td>An {{domxref("XRInputSourceEvent")}} sent to the <code>XRSession</code> when the <a href="/en-US/docs/Web/API/WebXR_Device_API/Inputs#primary_squeeze_actions">primary squeeze action</a> ends, whether or not the action was successful.<br>
     Also available using the {{domxref("XRSession.onsqueezeend", "onsqueezeend")}} event handler property.</td>
   </tr>
   <tr>
