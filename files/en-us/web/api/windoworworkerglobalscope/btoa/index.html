@@ -29,7 +29,7 @@ browser-compat: api.WindowOrWorkerGlobalScope.btoa
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js">var <var>encodedData</var> = <var>scope</var>.btoa(<var>stringToEncode</var>);</pre>
+  class="brush: js">var <var>encodedData</var> = btoa(<var>stringToEncode</var>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -53,8 +53,8 @@ browser-compat: api.WindowOrWorkerGlobalScope.btoa
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js">const encodedData = window.btoa('Hello, world'); // encode a string
-const decodedData = window.atob(encodedData); // decode the string
+<pre class="brush: js">const encodedData = btoa('Hello, world'); // encode a string
+const decodedData = atob(encodedData); // decode the string
 </pre>
 
 <h2 id="Unicode_strings">Unicode strings</h2>

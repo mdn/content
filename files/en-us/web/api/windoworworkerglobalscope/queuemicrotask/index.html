@@ -52,7 +52,7 @@ browser-compat: api.WindowOrWorkerGlobalScope.queueMicrotask
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js"><em>scope</em>.queueMicrotask(<em>function</em>);
+<pre class="brush: js">queueMicrotask(<em>function</em>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -70,7 +70,7 @@ browser-compat: api.WindowOrWorkerGlobalScope.queueMicrotask
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js">self.queueMicrotask(() =&gt; {
+<pre class="brush: js">queueMicrotask(() =&gt; {
   // function contents here
 })</pre>
 
@@ -98,8 +98,8 @@ browser-compat: api.WindowOrWorkerGlobalScope.queueMicrotask
 <p>The code below is basically a monkey-patch for <code>queueMicrotask()</code> for modern
   engines. It creates a microtask by using a promise that resolves immediately.</p>
 
-<pre class="brush: js">if (typeof window.queueMicrotask !== "function") {
-  window.queueMicrotask = function (callback) {
+<pre class="brush: js">if (typeof self.queueMicrotask !== "function") {
+  self.queueMicrotask = function (callback) {
     Promise.resolve()
       .then(callback)
       .catch(e =&gt; setTimeout(() =&gt; { throw e; })); // report exceptions
