@@ -52,10 +52,12 @@ browser-compat: javascript.operators.new
 <ol>
   <li>Define the object type by writing a function that specifies its name and properties.
     For example, a constructor function to create an object <code>Foo</code>might look like this:
-    <pre class="brush: js">function Foo(bar1, bar2) {
-      this.bar1 = bar1;
-      this.bar2 = bar2;
-    }</pre>
+<pre class="brush: js">
+function Foo(bar1, bar2) {
+  this.bar1 = bar1;
+  this.bar2 = bar2;
+}
+</pre>
   </li>
   <li>Create an instance of the object with <code>new</code>.
     <pre class="brush: js">var myFoo = new Foo('Bar 1', 2021);</pre>
