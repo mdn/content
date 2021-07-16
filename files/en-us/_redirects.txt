@@ -7384,6 +7384,7 @@
 /en-US/docs/Web/API/Element/animationend_event	/en-US/docs/Web/API/HTMLElement/animationend_event
 /en-US/docs/Web/API/Element/animationiteration_event	/en-US/docs/Web/API/HTMLElement/animationiteration_event
 /en-US/docs/Web/API/Element/animationstart_event	/en-US/docs/Web/API/HTMLElement/animationstart_event
+/en-US/docs/Web/API/Element/attachInternals	/en-US/docs/Web/API/HTMLElement/attachInternals
 /en-US/docs/Web/API/Element/cancel_event	/en-US/docs/Web/API/HTMLDialogElement/cancel_event
 /en-US/docs/Web/API/Element/fullscreenchange	/en-US/docs/Web/API/Element/fullscreenchange_event
 /en-US/docs/Web/API/Element/gotpointercapture_event	/en-US/docs/Web/API/HTMLElement/gotpointercapture_event
