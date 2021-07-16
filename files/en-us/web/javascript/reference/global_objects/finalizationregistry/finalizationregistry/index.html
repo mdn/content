@@ -16,9 +16,6 @@ browser-compat: javascript.builtins.FinalizationRegistry.FinalizationRegistry
 <h2 id="Syntax">Syntax</h2>
 
 <pre class="brush: js">
-// No callback
-new FinalizationRegistry();
-
 // Arrow callback function
 new FinalizationRegistry(heldValue => { ... } )
 
@@ -32,8 +29,8 @@ new FinalizationRegistry(function callbackFn(heldValue) { ... })
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code><var>callback</var></code> {{optional_inline}}</dt>
- <dd>The callback function this registry should use. If provided, this must be a function.</dd>
+ <dt><code><var>callback</var></code></dt>
+ <dd>The callback function this registry should use.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
