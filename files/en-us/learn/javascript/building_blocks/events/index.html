@@ -529,7 +529,7 @@ video.onclick = function() {
 
 <p>In the <strong>target</strong> phase:</p>
 <ul>
- <li>The browser checks to see if the {{domxref("Event.target")}} (which is the point at which the event has arrived) has an <code>onclick<code> event handler registered on it, and runs it if so.</li>
+ <li>The browser checks to see if the {{domxref("Event.target")}} (which is the point at which the event has arrived) has an <code>onclick</code> event handler registered on it, and runs it if so.</li>
  <li>Then, if {{domxref("Event.bubbles")}} is <code>true</code>, it propagates the event to the direct parent of the selected element, then the next one, and so on until it reaches the <code>&lt;html&gt;</code> element. Otherwise, if {{domxref("Event.bubbles")}} is <code>false</code>, it doesn’t propagate the event to any ancestors of the target.</li>
 </ul>
 
