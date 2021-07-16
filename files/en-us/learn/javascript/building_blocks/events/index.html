@@ -524,25 +524,22 @@ video.onclick = function() {
 
 <ul>
  <li>The browser checks to see if the element's outer-most ancestor ({{htmlelement("html")}}) has an <code>onclick</code> event handler registered on it for the capturing phase, and runs it if so.</li>
- <li>Then it moves on to the next element inside <code>&lt;html&gt;</code> and does the same thing, then the next one, and so on until it reaches the element that was actually selected.</li>
+ <li>Then it moves on to the next element inside <code>&lt;html&gt;</code> and does the same thing, then the next one, and so on until it reaches the direct parent of the element that was actually selected.</li>
 </ul>
 
 <p>In the <strong>target</strong> phase:</p>
 <ul>
- <li>The browser calls any event listeners registered for this phase (which is the point at which the event has arrived at {{domxref("EventTarget", "the event's target", "", 1)}}).</li>
- <li>Then, if {{domxref("Event.bubbles")}} is <code>true</code>, it propagates the event to the next immediate ancestor element, then the next one, and so on until it reaches the <code>&lt;html&gt;</code> element. Otherwise, if {{domxref("Event.bubbles")}} is <code>false</code>, it doesn’t propagate the event to any ancestors of the target.</li>
+ <li>The browser checks to see if the {{domxref("Event.target")}} (which is the point at which the event has arrived) has an <code>onclick<code> event handler registered on it, and runs it if so.</li>
+ <li>Then, if {{domxref("Event.bubbles")}} is <code>true</code>, it propagates the event to the direct parent of the selected element, then the next one, and so on until it reaches the <code>&lt;html&gt;</code> element. Otherwise, if {{domxref("Event.bubbles")}} is <code>false</code>, it doesn’t propagate the event to any ancestors of the target.</li>
 </ul>
 
 <p>In the <strong>bubbling</strong> phase, the exact opposite of the <strong>capturing</strong> phase occurs:</p>
 
 <ul>
- <li>The browser checks to see if the element selected has an <code>onclick</code> event handler registered on it for the bubbling phase, and runs it if so.</li>
+ <li>The browser checks to see if the direct parent of the element selected has an <code>onclick</code> event handler registered on it for the bubbling phase, and runs it if so.</li>
  <li>Then it moves on to the next immediate ancestor element and does the same thing, then the next one, and so on until it reaches the <code>&lt;html&gt;</code> element.</li>
 </ul>
-
-<p><a href="bubbling-capturing.png"><img alt="" src="bubbling-capturing.png" style="display: block; margin: 0px auto;"></a></p>
-
-<p>(Select the image for a bigger diagram)</p>
+<!-- this image suggests that the target phase is part of the capturing and bubbling phases, therefore wrong -->
 
 <p>In modern browsers, by default, all event handlers are registered for the bubbling phase. So in our current example, when you select the video, the event bubbles from the <code>&lt;video&gt;</code> element outwards to the <code>&lt;html&gt;</code> element. Along the way:</p>
 
@@ -553,8 +550,14 @@ video.onclick = function() {
 
 <div class="notecard note">
   <h4>Note</h4>
-  <p>In cases where both types of event handlers are present, bubbling and capturing, the capturing phase will run first, followed by the bubbling phase.</p>
+  <p>All javaScript events go through the capturing and target phases, whether it enters the bubbling phase can be checked by the read-only {{domxref("Event.bubbles")}} property.</p>
 </div>
+
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>event listeners registered for the <code>&lt;html&gt;</code> element aren't at the top of hierarchy. E.g: event listeners registered for the Window and document objects.</p>
+</div>
+<!-- another very good example: https://jsfiddle.net/Archangelll/we76k0fb/ that can be put in live code -->
 
 <h4 id="Fixing_the_problem_with_stopPropagation">Fixing the problem with stopPropagation()</h4>
 
