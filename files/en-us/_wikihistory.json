@@ -94315,13 +94315,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/XREnvironmentBlendMode": {
-    "modified": "2020-10-15T22:23:35.142Z",
-    "contributors": [
-      "sideshowbarker",
-      "Sheppy"
-    ]
-  },
   "Web/API/XREye": {
     "modified": "2020-10-15T22:24:50.001Z",
     "contributors": [
