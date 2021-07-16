@@ -45,6 +45,30 @@ browser-compat: api.IntersectionObserver.observe
 
 <p><code>undefined</code>.</p>
 
+<h2 id="Examples">Examples</h2>
+
+<pre class="brush: js">
+// Register IntersectionObserver
+const io = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    // Add 'active' class if observation target is inside viewport
+    if (entry.intersectionRatio > 0) {
+      entry.target.classList.add('active');
+    }
+    // Remove 'active' class otherwise
+    else {
+      entry.target.classList.remove('active');
+    }
+  })
+})
+
+// Declares what to observe, and observes its properties.
+const boxElList = document.querySelectorAll('.box');
+boxElList.forEach((el) => {
+  io.observe(el);
+})
+</pre>
+
 <h2 id="Specifications">Specifications</h2>
 
 {{Specifications}}

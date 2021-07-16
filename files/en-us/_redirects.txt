@@ -5769,7 +5769,6 @@
 /en-US/docs/Mozilla/Firefox/Releases/Firefox_41_for_developers	/en-US/docs/Mozilla/Firefox/Releases/41
 /en-US/docs/Mozilla/Firefox/Releases/Firefox_47_for_developers	/en-US/docs/Mozilla/Firefox/Releases/47
 /en-US/docs/Mozilla/Firefox/Releases/developers	/en-US/docs/Mozilla/Firefox/Releases/63
-/en-US/docs/Mozilla/Performance/ScrollLinkedEffects	/en-US/docs/Mozilla/Performance/Scroll-linked_effects
 /en-US/docs/Mozilla/Virtualenv	https://github.com/mdn/archived-content/tree/main/files/en-us/mozilla/virtualenv
 /en-US/docs/Mozilla_CSS_Extensions	/en-US/docs/Web/CSS/Mozilla_Extensions
 /en-US/docs/Mozilla_MathML_Project/Authoring	/en-US/docs/Web/MathML/Authoring
@@ -9018,8 +9017,12 @@
 /en-US/docs/Web/API/XR/ondevicechange	/en-US/docs/Web/API/XRSystem/ondevicechange
 /en-US/docs/Web/API/XR/requestSession	/en-US/docs/Web/API/XRSystem/requestSession
 /en-US/docs/Web/API/XR/supportsSession	/en-US/docs/Web/API/XRSystem/isSessionSupported
+/en-US/docs/Web/API/XREnvironmentBlendMode	/en-US/docs/Web/API/XRSession/environmentBlendMode
 /en-US/docs/Web/API/XRRenderState/XRRenderState.inlineVerticalFieldOfView	/en-US/docs/Web/API/XRRenderState/inlineVerticalFieldOfView
+/en-US/docs/Web/API/XRSessionInit	/en-US/docs/Web/API/XRSystem/requestSession
+/en-US/docs/Web/API/XRSessionMode	/en-US/docs/Web/API/XRSystem/requestSession
 /en-US/docs/Web/API/XRTargetRayModoe	/en-US/docs/Web/API/XRTargetRayMode
+/en-US/docs/Web/API/XRVisibilityState	/en-US/docs/Web/API/XRSession/visibilityState
 /en-US/docs/Web/API/console.assert	/en-US/docs/Web/API/console/assert
 /en-US/docs/Web/API/console.dir	/en-US/docs/Web/API/console/dir
 /en-US/docs/Web/API/console.error	/en-US/docs/Web/API/console/error

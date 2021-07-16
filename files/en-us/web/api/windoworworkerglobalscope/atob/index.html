@@ -25,7 +25,7 @@ browser-compat: api.WindowOrWorkerGlobalScope.atob
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js">var <var>decodedData</var> = scope.atob(<var>encodedData</var>);</pre>
+  class="brush: js">var <var>decodedData</var> = atob(<var>encodedData</var>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -48,8 +48,8 @@ browser-compat: api.WindowOrWorkerGlobalScope.atob
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush:js">const encodedData = window.btoa('Hello, world'); // encode a string
-const decodedData = window.atob(encodedData); // decode the string</pre>
+<pre class="brush:js">const encodedData = btoa('Hello, world'); // encode a string
+const decodedData = atob(encodedData); // decode the string</pre>
 
 <h2 id="Polyfill">Polyfill</h2>
 

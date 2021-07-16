@@ -203,7 +203,7 @@ tags:
 
 <h3 id="Temporary_responses_to_unsafe_requests">Temporary responses to unsafe requests</h3>
 
-<p>{{Glossary("safe", "Unsafe")}} requests modify the state of the server and the user shouldn't resend them unintentionally.</p>
+<p>{{Glossary("Safe/HTTP", "Unsafe")}} requests modify the state of the server and the user shouldn't resend them unintentionally.</p>
 
 <p>Typically, you don't want your users to resend {{HTTPMethod("PUT")}}, {{HTTPMethod("POST")}} or {{HTTPMethod("DELETE")}} requests. If you serve the response as the result of this request, a simple press of the reload button will resend the request (possibly after a confirmation message).</p>
 
@@ -242,7 +242,7 @@ tags:
 Redirect 301 / https://www.example.com
 </pre>
 
-<p>The <code><a href="http://httpd.apache.org/docs/current/mod/mod_rewrite.html">mod_rewrite</a></code> module can also create redirects. It is more flexible, but a bit more complex.</p>
+<p>The <code><a href="https://httpd.apache.org/docs/current/mod/mod_rewrite.html">mod_rewrite</a></code> module can also create redirects. It is more flexible, but a bit more complex.</p>
 
 <h3 id="Nginx">Nginx</h3>
 
