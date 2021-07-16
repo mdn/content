@@ -256,9 +256,13 @@ new Intl.DateTimeFormat(locales, options)
 					<li>"<code>short</code>" Short localized form (e.g.: <code>PST</code>, <code>GMT-8</code>)</li>
 					<li>"<code>shortOffset</code>" Short localized GMT format (e.g., <code>GMT-8</code>)</li>
 					<li>"<code>longOffset</code>" Long localized GMT format (e.g., <code>GMT-0800</code>)</li>
-					<li>"<code>shortGeneric</code>" Short generic non-location format (e.g.: <code>PT</code>, <code>Los Angeles Zeit</code>)</li>
+					<li>"<code>shortGeneric</code>" Short generic non-location format (e.g.: <code>PT</code>, <code>Los Angeles Zeit</code>).</li>
 					<li>"<code>longGeneric</code>" Long generic non-location format (e.g.: <code>Pacific Time</code>, <code>Nordamerikanische Westküstenzeit</code>)</li>
 				</ul>
+				<div class="notecard note">
+					<p><strong>Note:</strong> Timezone display may fall back to another format if a required string is unavailable. For example, the non-location formats should display the timezone without a specific country/city location like "Pacific Time", but may fall back to a timezone like "Los Angeles Time".</p>
+
+				</div>
 			</dd>
 		</dl>
 
