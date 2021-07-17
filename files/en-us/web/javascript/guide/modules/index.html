@@ -132,7 +132,7 @@ export function draw(ctx, length, x, y, color) {
 
 <pre class="brush: js">import { name, draw, reportArea, reportPerimeter } from './modules/square.js';</pre>
 
-<p>You use the {{JSxRef("Statements/import", "import")}} statement, followed by a comma-separated list of the features you want to import wrapped in curly braces, followed by the keyword from, followed by the path to the module file — a path relative to the site root, which for our <code>basic-modules</code> example would be <code>/js-examples/modules/basic-modules</code>.</p>
+<p>You use the {{JSxRef("Statements/import", "import")}} statement, followed by a comma-separated list of the features you want to import wrapped in curly braces, followed by the keyword <code>from</code>, followed by the path to the module file — a path relative to the site root, which for our <code>basic-modules</code> example would be <code>/js-examples/modules/basic-modules</code>.</p>
 
 <p>However, we've written the path a bit differently — we are using the dot (<code>.</code>) syntax to mean "the current location", followed by the path beyond that to the file we are trying to find. This is much better than writing out the entire relative path each time, as it is shorter, and it makes the URL portable — the example will still work if you move it to a different location in the site hierarchy.</p>
 
@@ -415,7 +415,7 @@ import { Triangle } from './modules/triangle.js';</pre>
 
 <p>Let's look at an example. In the <a href="https://github.com/mdn/js-examples/tree/master/modules/dynamic-module-imports">dynamic-module-imports</a> directory we've got another example based on our classes example. This time however we are not drawing anything on the canvas when the example loads. Instead, we include three buttons — "Circle", "Square", and "Triangle" — that, when pressed, dynamically load the required module and then use it to draw the associated shape.</p>
 
-<p>In this example we've only made changes to our <code><a href="https://github.com/mdn/js-examples/blob/master/modules/dynamic-module-imports/index.html">index.html</a></code> and <code><a href="https://github.com/mdn/js-examples/blob/master/modules/dynamic-module-imports/main.mjs">main.js</a></code> files — the module exports remain the same as before.</p>
+<p>In this example we've only made changes to our <code><a href="https://github.com/mdn/js-examples/blob/master/modules/dynamic-module-imports/index.html">index.html</a></code> and <code><a href="https://github.com/mdn/js-examples/blob/master/modules/dynamic-module-imports/main.js">main.js</a></code> files — the module exports remain the same as before.</p>
 
 <p>Over in <code>main.js</code> we've grabbed a reference to each button using a <a href="/en-US/docs/Web/API/Document/querySelector"><code>Document.querySelector()</code></a> call, for example:</p>
 
