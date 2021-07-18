@@ -53,6 +53,13 @@ browser-compat: javascript.builtins.String.codePointAt
 
 <h3 id="Looping_with_codePointAt">Looping with codePointAt()</h3>
 
+<p>Because indexing to a <code><var>pos</var></code> whose element is a UTF-16 low surrogate, returns <em>only</em> the low surrogate,
+   it's better not to index directly into a UTF-16 string.</p>
+
+<p>Instead, use a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement"><code>for...of</code></a> statement
+   or an Array's <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach"><code>forEach()</code></a> method
+  (or anything which correctly iterates UTF-16 surrogates) to iterate the string, using <code>codePointAt(0)</code> to get the code point of each element.</p>
+
 <pre class="brush: js">for (let codePoint of '\ud83d\udc0e\ud83d\udc71\u2764') {
    console.log(codePoint.codePointAt(0).toString(16))
 }
