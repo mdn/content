@@ -235,7 +235,7 @@ considerable confusion.
 Therefore, this appears to work in a way:
 
 ```js example-bad
-let wrongMap = new Map()
+const wrongMap = new Map()
 wrongMap['bla'] = 'blaa'
 wrongMap['bla2'] = 'blaaa2'
 
@@ -256,7 +256,7 @@ The correct usage for storing data in the Map is through the `set(key, value)`
 method.
 
 ```js example-good
-let contacts = new Map()
+const contacts = new Map()
 contacts.set('Jessie', {phone: "213-555-1234", address: "123 N 1st Ave"})
 contacts.has('Jessie') // true
 contacts.get('Hilary') // undefined
@@ -325,11 +325,11 @@ console.log(contacts.size) // 1
 ### Using the Map object
 
 ```js
-let myMap = new Map()
+const myMap = new Map()
 
-let keyString = 'a string'
-let keyObj    = {}
-let keyFunc   = function() {}
+const keyString = 'a string'
+const keyObj    = {}
+const keyFunc   = function() {}
 
 // setting the values
 myMap.set(keyString, "value associated with 'a string'")
@@ -356,13 +356,13 @@ not equal to itself (`NaN !== NaN` is true), the following example works because
 `NaN`s are indistinguishable from each other:
 
 ```js
-let myMap = new Map()
+const myMap = new Map()
 myMap.set(NaN, 'not a number')
 
 myMap.get(NaN)
 // "not a number"
 
-let otherNaN = Number('foo')
+const otherNaN = Number('foo')
 myMap.get(otherNaN)
 // "not a number"
 ```
@@ -372,29 +372,29 @@ myMap.get(otherNaN)
 Maps can be iterated using a `for..of` loop:
 
 ```js
-let myMap = new Map()
+const myMap = new Map()
 myMap.set(0, 'zero')
 myMap.set(1, 'one')
 
-for (let [key, value] of myMap) {
+for (const [key, value] of myMap) {
   console.log(key + ' = ' + value)
 }
 // 0 = zero
 // 1 = one
 
-for (let key of myMap.keys()) {
+for (const key of myMap.keys()) {
   console.log(key)
 }
 // 0
 // 1
 
-for (let value of myMap.values()) {
+for (const value of myMap.values()) {
   console.log(value)
 }
 // zero
 // one
 
-for (let [key, value] of myMap.entries()) {
+for (const [key, value] of myMap.entries()) {
   console.log(key + ' = ' + value)
 }
 // 0 = zero
@@ -417,10 +417,10 @@ myMap.forEach(function(value, key) {
 ### Relation with Array objects
 
 ```js
-let kvArray = [['key1', 'value1'], ['key2', 'value2']]
+const kvArray = [['key1', 'value1'], ['key2', 'value2']]
 
 // Use the regular Map constructor to transform a 2D key-value Array into a map
-let myMap = new Map(kvArray)
+const myMap = new Map(kvArray)
 
 myMap.get('key1') // returns "value1"
 
@@ -439,11 +439,11 @@ console.log(Array.from(myMap.keys())) // ["key1", "key2"]
 Just like `Array`s, `Map`s can be cloned:
 
 ```js
-let original = new Map([
+const original = new Map([
   [1, 'one']
 ])
 
-let clone = new Map(original)
+const clone = new Map(original)
 
 console.log(clone.get(1))       // one
 console.log(original === clone) // false (useful for shallow comparison)
@@ -454,20 +454,20 @@ console.log(original === clone) // false (useful for shallow comparison)
 Maps can be merged, maintaining key uniqueness:
 
 ```js
-let first = new Map([
+const first = new Map([
   [1, 'one'],
   [2, 'two'],
   [3, 'three'],
 ])
 
-let second = new Map([
+const second = new Map([
   [1, 'uno'],
   [2, 'dos']
 ])
 
 // Merge two maps. The last repeated key wins.
 // Spread operator essentially converts a Map to an Array
-let merged = new Map([...first, ...second])
+const merged = new Map([...first, ...second])
 
 console.log(merged.get(1)) // uno
 console.log(merged.get(2)) // dos
@@ -477,19 +477,19 @@ console.log(merged.get(3)) // three
 Maps can be merged with Arrays, too:
 
 ```js
-let first = new Map([
+const first = new Map([
   [1, 'one'],
   [2, 'two'],
   [3, 'three'],
 ])
 
-let second = new Map([
+const second = new Map([
   [1, 'uno'],
   [2, 'dos']
 ])
 
 // Merge maps with an array. The last repeated key wins.
-let merged = new Map([...first, ...second, [1, 'eins']])
+const merged = new Map([...first, ...second, [1, 'eins']])
 
 console.log(merged.get(1)) // eins
 console.log(merged.get(2)) // dos
