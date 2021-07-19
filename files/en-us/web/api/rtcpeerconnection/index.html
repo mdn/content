@@ -697,49 +697,6 @@ browser-compat: api.RTCPeerConnection
  </tbody>
 </table>
 
-<h3 id="RTCPeerConnectionState_enum">RTCPeerConnectionState enum</h3>
-
-<p>The <code>RTCPeerConnectionState</code> enum defines string constants which describe states in which the <code>RTCPeerConnection</code> may be. These values are returned by the {{domxref("RTCPeerConnection.connectionState", "connectionState")}} property. This state essentially represents the aggregate state of all ICE transports (which are of type {{domxref("RTCIceTransport")}} or {{domxref("RTCDtlsTransport")}}) being used by the connection.</p>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Constant</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>"new"</code></td>
-   <td>At least one of the connection's ICE transports ({{domxref("RTCIceTransport")}}s or {{domxref("RTCDtlsTransport")}}s) are in the <code>"new"</code> state, and none of them are in one of the following states: <code>"connecting"</code>, <code>"checking"</code>, <code>"failed"</code>, or <code>"disconnected"</code>, <em>or</em> all of the connection's transports are in the <code>"closed"</code> state.</td>
-  </tr>
-  <tr>
-   <td><code>"connecting"</code></td>
-   <td>One or more of the ICE transports are currently in the process of establishing a connection; that is, their <code>RTCIceConnectionState</code> is either <code>"checking"</code> or <code>"connected"</code>, and no transports are in the <code>"failed"</code> state. <strong>&lt;&lt;&lt; Make this a link once I know where that will be documented</strong></td>
-  </tr>
-  <tr>
-   <td><code>"connected"</code></td>
-   <td>Every ICE transport used by the connection is either in use (state <code>"connected"</code> or <code>"completed"</code>) or is closed (state <code>"closed"</code>); in addition, at least one transport is either <code>"connected"</code> or <code>"completed"</code>.</td>
-  </tr>
-  <tr>
-   <td><code>"disconnected"</code></td>
-   <td>At least one of the ICE transports for the connection is in the <code>"disconnected"</code> state and none of the other transports are in the state <code>"failed"</code>, <code>"connecting"</code>, or <code>"checking"</code>.</td>
-  </tr>
-  <tr>
-   <td><code>"failed"</code></td>
-   <td>One or more of the ICE transports on the connection is in the <code>"failed"</code> state.</td>
-  </tr>
-  <tr>
-   <td><code>"closed"</code></td>
-   <td>
-    <p>The <code>RTCPeerConnection</code> is closed.</p>
-
-    <p>This value was in the <a href="#rtcsignalingstate_enum"><code>RTCSignalingState</code> enum</a> (and therefore found by reading the value of the {{domxref("RTCPeerConnection.signalingState", "signalingState")}}) property until the May 13, 2016 draft of the specification.</p>
-   </td>
-  </tr>
- </tbody>
-</table>
-
 <h3 id="RTCRtcpMuxPolicy_enum">RTCRtcpMuxPolicy enum</h3>
 
 <p>The <code>RTCRtcpMuxPolicy</code> enum defines string constants which specify what ICE candidates are gathered to support non-multiplexed RTCP. <strong>&lt;&lt;&lt;add a link to info about multiplexed RTCP.</strong></p>
@@ -794,16 +751,6 @@ browser-compat: api.RTCPeerConnection
   <tr>
    <td><code>"have-remote-pranswer"</code></td>
    <td>A provisional answer has been received and successfully applied in response to an offer previously sent and established by calling <code>setLocalDescription()</code>.</td>
-  </tr>
-  <tr>
-   <td><code>"closed"</code> {{deprecated_inline}}</td>
-   <td>
-    <p>The connection is closed.</p>
-
-    <div class="note">
-    <p><strong>Note:</strong> This value moved into the <a href="#rtcpeerconnectionstate_enum"><code>RTCPeerConnectionState</code> enum</a> in the May 13, 2016 draft of the specification, as it reflects the state of the <code>RTCPeerConnection</code>, not the signaling connection. You now detect a closed connection by checking for {{domxref("RTCPeerConnection.connectionState", "connectionState")}} to be <code>"closed"</code> instead.</p>
-    </div>
-   </td>
   </tr>
  </tbody>
 </table>
