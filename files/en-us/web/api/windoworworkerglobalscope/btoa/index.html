@@ -89,7 +89,9 @@ function toBinary(string) {
   for (let i = 0; i &lt; codeUnits.length; i++) {
     codeUnits[i] = string.charCodeAt(i);
   }
-  return String.fromCharCode(...new Uint8Array(codeUnits.buffer));
+  return new Uint8Array(codeUnits.buffer).reduce((acc, charCode) => {
+    return acc + String.fromCharCode(charCode);
+  }, "");
 }
 
 // a string that contains characters occupying &gt; 1 byte
@@ -108,7 +110,9 @@ console.log(encoded);                 // OCY5JjomOyY8Jj4mPyY=
   for (let i = 0; i &lt; bytes.length; i++) {
     bytes[i] = binary.charCodeAt(i);
   }
-  return String.fromCharCode(...new Uint16Array(bytes.buffer));
+  return new Uint16Array(bytes.buffer).reduce((acc, charCode) => {
+    return acc + String.fromCharCode(charCode);
+  }, "");
 }
 
 const decoded = atob(encoded);
