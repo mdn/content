@@ -56,7 +56,8 @@ num = 6; // Initialization</pre>
 <pre class="brush: js">console.log(num); // Throws ReferenceError exception
 num = 6; // Initialization</pre>
 
-<p>Initializations using <code>let</code> and <code>const</code> are also not hoisted. </p>
+<p>Initializations using <code>let</code> and <code>const</code> are also hoisted but they are in Temporal Dead Zone so whenever we try to access any variable in Temporal Dead Zone it gives us Reference error and after assiging value to let and const variables the temporal dead zone will vanish.</p>
+
 
 <pre class="brush: js">// Example with let:
 a = 1; // initialization.
