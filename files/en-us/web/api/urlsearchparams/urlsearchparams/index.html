@@ -31,7 +31,7 @@ browser-compat: api.URLSearchParams.URLSearchParams
   <li>A {{domxref("USVString")}}, which will be parsed from
     <code>application/x-www-form-urlencoded</code> format. A leading <code>'?'</code>
     character is ignored.</li>
-  <li>A sequence of {{domxref("USVString")}} pairs, representing names/values.</li>
+  <li>A literal sequence of name-value string pairs, or any object — such as a {{domxref("FormData")}} object — with an <a href="/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#iterators">iterator</a> that produces a sequence of string pairs.</li>
   <li>A record of {{domxref("USVString")}} keys and {{domxref("USVString")}} values.</li>
 </ul>
 
