@@ -8977,13 +8977,13 @@
 /en-US/docs/Web/API/WorkerConsole	/en-US/docs/Web/API/console
 /en-US/docs/Web/API/WorkerConsole.info()	/en-US/docs/Web/API/console/info
 /en-US/docs/Web/API/WorkerConsole.log	/en-US/docs/Web/API/console/log
-/en-US/docs/Web/API/WorkerGlobalScope.close	/en-US/docs/Web/API/WorkerGlobalScope/close
+/en-US/docs/Web/API/WorkerGlobalScope.close	/en-US/docs/Web/API/DedicatedWorkerGlobalScope/close
 /en-US/docs/Web/API/WorkerGlobalScope.console	/en-US/docs/Web/API/WorkerGlobalScope/console
 /en-US/docs/Web/API/WorkerGlobalScope.dump	/en-US/docs/Web/API/WorkerGlobalScope/dump
 /en-US/docs/Web/API/WorkerGlobalScope.importScripts	/en-US/docs/Web/API/WorkerGlobalScope/importScripts
 /en-US/docs/Web/API/WorkerGlobalScope.location	/en-US/docs/Web/API/WorkerGlobalScope/location
 /en-US/docs/Web/API/WorkerGlobalScope.navigator	/en-US/docs/Web/API/WorkerGlobalScope/navigator
-/en-US/docs/Web/API/WorkerGlobalScope.onclose	/en-US/docs/Web/API/WorkerGlobalScope/onclose
+/en-US/docs/Web/API/WorkerGlobalScope.onclose	/en-US/docs/Web/API/DedicatedWorkerGlobalScope/close
 /en-US/docs/Web/API/WorkerGlobalScope.onerror	/en-US/docs/Web/API/WorkerGlobalScope/onerror
 /en-US/docs/Web/API/WorkerGlobalScope.onlanguagechange	/en-US/docs/Web/API/WorkerGlobalScope/onlanguagechange
 /en-US/docs/Web/API/WorkerGlobalScope.onoffline	/en-US/docs/Web/API/WorkerGlobalScope/onoffline
@@ -8996,8 +8996,10 @@
 /en-US/docs/Web/API/WorkerGlobalScope/caches	/en-US/docs/Web/API/WindowOrWorkerGlobalScope/caches
 /en-US/docs/Web/API/WorkerGlobalScope/clearInterval	/en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval
 /en-US/docs/Web/API/WorkerGlobalScope/clearTimeout	/en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout
+/en-US/docs/Web/API/WorkerGlobalScope/close	/en-US/docs/Web/API/DedicatedWorkerGlobalScope/close
 /en-US/docs/Web/API/WorkerGlobalScope/fetch	/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch
 /en-US/docs/Web/API/WorkerGlobalScope/indexedDB	/en-US/docs/Web/API/WindowOrWorkerGlobalScope/indexedDB
+/en-US/docs/Web/API/WorkerGlobalScope/onclose	/en-US/docs/Web/API/DedicatedWorkerGlobalScope/close
 /en-US/docs/Web/API/WorkerGlobalScope/setInterval	/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval
 /en-US/docs/Web/API/WorkerGlobalScope/setTimeout	/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout
 /en-US/docs/Web/API/WorkerLocation.hash	/en-US/docs/Web/API/WorkerLocation/hash

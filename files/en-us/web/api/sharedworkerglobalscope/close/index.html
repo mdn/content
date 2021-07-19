@@ -39,8 +39,6 @@ browser-compat: api.SharedWorkerGlobalScope.close
 
 <p>{{Compat}}</p>
 
-<p><strong>General note:</strong> In newer browser versions, <code>close()</code> is available on <code>SharedWorkerGlobalScope</code> and {{domxref("DedicatedWorkerGlobalScope.close", "DedicatedWorkerGlobalScope")}}. In older browser versions, it is available on {{domxref("WorkerGlobalScope.close","WorkerGlobalScope")}}. This change was made to stop <code>close()</code> being available on service workers, as it isn't supposed to be used there and always throws an exception when called (see {{bug(1336043)}}).</p>
-
 <h2 id="See_also">See also</h2>
 
 <p>{{domxref("DedicatedWorkerGlobalScope")}}</p>

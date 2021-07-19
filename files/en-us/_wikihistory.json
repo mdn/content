@@ -92735,17 +92735,6 @@
       "teoli"
     ]
   },
-  "Web/API/WorkerGlobalScope/close": {
-    "modified": "2020-10-15T21:32:17.858Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "DomenicDenicola",
-      "chrisdavidmills",
-      "teoli",
-      "kscarfone"
-    ]
-  },
   "Web/API/WorkerGlobalScope/console": {
     "modified": "2020-10-15T21:32:18.184Z",
     "contributors": [
@@ -92812,17 +92801,6 @@
       "DomenicDenicola",
       "Jeremie",
       "teoli",
-      "kscarfone"
-    ]
-  },
-  "Web/API/WorkerGlobalScope/onclose": {
-    "modified": "2020-10-15T21:32:21.403Z",
-    "contributors": [
-      "fscholz",
-      "DomenicDenicola",
-      "Sheppy",
-      "teoli",
-      "chrisdavidmills",
       "kscarfone"
     ]
   },
