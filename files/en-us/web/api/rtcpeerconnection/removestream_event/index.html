@@ -14,11 +14,13 @@ tags:
   - WebRTC
   - WebRTC API
   - removeStream
+  - Deprecated
 browser-compat: api.RTCPeerConnection.removestream_event
 ---
 <p>{{APIRef("WebRTC")}}{{deprecated_header}}</p>
 
-<p><span class="seoSummary">The obsolete <code><strong>removestream</strong></code> event was sent to an {{domxref("RTCPeerConnection")}} to inform it that a {{domxref("MediaStream")}} had been removed from the connection.</span> You can use the <code>RTCPeerConnection</code> interface's {{domxref("RTCPeerConnection.onremovestream", "onremovestream")}} property to set a handler for this event.</p>
+<p>The obsolete <code><strong>removestream</strong></code> event was sent to an {{domxref("RTCPeerConnection")}} to inform it that a {{domxref("MediaStream")}} had been removed from the connection.
+  You can use the <code>RTCPeerConnection</code> interface's {{domxref("RTCPeerConnection.onremovestream", "onremovestream")}} property to set a handler for this event.</p>
 
 <p>This is the counterpart to the {{domxref("RTCPeerConnection.addstream_event", "addstream")}} event, which is also obsolete.</p>
 

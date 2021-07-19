@@ -2,16 +2,15 @@
 title: RTCPeerConnection.ondatachannel
 slug: Web/API/RTCPeerConnection/ondatachannel
 tags:
-- Event Handler
-- Experimental
-- Property
-- RTCPeerConnection
-- Reference
-- WebRTC
-- ondatachannel
+  - Event Handler
+  - Property
+  - RTCPeerConnection
+  - Reference
+  - WebRTC
+  - ondatachannel
 browser-compat: api.RTCPeerConnection.ondatachannel
 ---
-<p>{{APIRef("WebRTC")}}{{SeeCompatTable}}</p>
+<p>{{APIRef("WebRTC")}}</p>
 
 <p>The <code><strong>RTCPeerConnection.ondatachannel</strong></code> property is an
   <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> which specifies a function which is called when the
@@ -39,10 +38,10 @@ browser-compat: api.RTCPeerConnection.ondatachannel
 <h2 id="Example">Example</h2>
 
 <pre class="brush: js">pc.ondatachannel = function(ev) {
-  console.log('Data channel is created!');
-  ev.channel.onopen = function() {
-    console.log('Data channel is open and ready to be used.');
-  };
+  console.log('Data channel is created!');
+  ev.channel.onopen = function() {
+    console.log('Data channel is open and ready to be used.');
+  };
 };
 </pre>
 
