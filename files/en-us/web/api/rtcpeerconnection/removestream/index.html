@@ -2,25 +2,24 @@
 title: RTCPeerConnection.removeStream()
 slug: Web/API/RTCPeerConnection/removeStream
 tags:
-- Deprecated
-- Experimental
-- Media
-- Method
-- RTCPeerConnection
-- Reference
-- WebRTC
-- removeStream
+  - Deprecated
+  - Media
+  - Method
+  - RTCPeerConnection
+  - Reference
+  - WebRTC
+  - removeStream
 browser-compat: api.RTCPeerConnection.removeStream
 ---
-<div>{{APIRef("WebRTC")}}{{deprecated_header}}{{SeeCompatTable}}</div>
+<div>{{APIRef("WebRTC")}}{{deprecated_header}}</div>
 
-<p><span class="seoSummary">The
+<p>The
     <code><strong>RTCPeerConnection.removeStream()</strong></code> method removes a
     {{domxref("MediaStream")}} as a local source of audio or video. If the negotiation
     already happened, a new one will be needed for the remote peer to be able to use it.
     Because this method has been deprecated, you should instead use
     {{domxref("RTCPeerConnection.removeTrack", "removeTrack()")}} if your target browser
-    versions have implemented it.</span></p>
+    versions have implemented it.</p>
 
 <p>If the {{domxref("RTCPeerConnection.signalingState", "signalingState")}} is set to
   <code>"closed"</code>, an <code>InvalidStateError</code> is raised. If the
