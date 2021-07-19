@@ -600,49 +600,6 @@ browser-compat: api.RTCPeerConnection
  </tbody>
 </table>
 
-<h3 id="RTCIceConnectionState_enum">RTCIceConnectionState enum</h3>
-
-<p>The <code>RTCIceConnectionState</code> enum defines the string constants used to describe the current state of the ICE agent and its connection to the ICE server (that is, the {{Glossary("STUN")}} or {{Glossary("TURN")}} server).</p>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Constant</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>"new"</code></td>
-   <td>The ICE agent is gathering addresses or is waiting to be given remote candidates through calls to {{domxref("RTCPeerConnection.addIceCandidate()")}} (or both).</td>
-  </tr>
-  <tr>
-   <td><code>"checking"</code></td>
-   <td>The ICE agent has been given one or more remote candidates and is checking pairs of local and remote candidates against one another to try to find a compatible match, but has not yet found a pair which will allow the peer connection to be made. It's possible that gathering of candidates is also still underway.</td>
-  </tr>
-  <tr>
-   <td><code>"connected"</code></td>
-   <td>A usable pairing of local and remote candidates has been found for all components of the connection, and the connection has been established. It's possible that gathering is still underway, and it's also possible that the ICE agent is still checking candidates against one another looking for a better connection to use.</td>
-  </tr>
-  <tr>
-   <td><code>"completed"</code></td>
-   <td>The ICE agent has finished gathering candidates, has checked all pairs against one another, and has found a connection for all components.</td>
-  </tr>
-  <tr>
-   <td><code>"failed"</code></td>
-   <td>The ICE candidate has checked all candidates pairs against one another and has failed to find compatible matches for all components of the connection. It is, however, possible that the ICE agent did find compatible connections for some components.</td>
-  </tr>
-  <tr>
-   <td><code>"disconnected"</code></td>
-   <td>Checks to ensure that components are still connected failed for at least one component of the {{domxref("RTCPeerConnection")}}. This is a less stringent test than <code>"failed"</code> and may trigger intermittently and resolve just as spontaneously on less reliable networks, or during temporary disconnections. When the problem resolves, the connection may return to the <code>"connected"</code> state.</td>
-  </tr>
-  <tr>
-   <td><code>"closed"</code></td>
-   <td>The ICE agent for this {{domxref("RTCPeerConnection")}} has shut down and is no longer handling requests.</td>
-  </tr>
- </tbody>
-</table>
-
 <h3 id="RTCIceGatheringState_enum">RTCIceGatheringState enum</h3>
 
 <p>The <code>RTCIceGatheringState</code> enum defines string constants which reflect the current status of ICE gathering, as returned using the {{domxref("RTCPeerConnection.iceGatheringState")}} property. You can detect when this value changes by watching for an event of type {{event("icegatheringstatechange")}}.</p>
