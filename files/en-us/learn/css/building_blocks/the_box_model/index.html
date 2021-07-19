@@ -32,7 +32,7 @@ tags:
 
 <p>In CSS we broadly have two types of boxes — <strong>block boxes</strong> and <strong>inline boxes</strong>. These characteristics refer to how the box behaves in terms of page flow, and in relation to other boxes on the page. Boxes also have the property of being an inner or outer display type. First we will explain what we mean by block box and inline box. We will then explain what is meant by inner and outer display types.</p>
 
-<p>If a box is defined as a block, it will behave in the following ways:</p>
+<p>If a box has an outer display type of <code>block</code>, it will behave in the following ways:</p>
 
 <ul>
  <li>The box will break onto a new line.</li>
@@ -43,7 +43,7 @@ tags:
 
 <p>Some HTML elements, such as <code>&lt;h1&gt;</code> and <code>&lt;p&gt;</code>, use <code>block</code> as their outer display type by default.</p>
 
-<p>If a box is defined as <code>inline</code>, then:</p>
+<p>If a box has an outer display type of <code>inline</code>, then:</p>
 
 <ul>
  <li>The box will not break onto a new line.</li>
@@ -52,9 +52,7 @@ tags:
  <li>Horizontal padding, margins, and borders will apply and will cause other inline boxes to move away from the box.</li>
 </ul>
 
-<p>Some HTML elements, such as <code>&lt;a&gt;</code>, <code>&lt;span&gt;</code>, <code>&lt;em&gt;</code> and <code>&lt;strong&gt;</code>, 
-  
-  The <code>&lt;a&gt;</code> element, used for links, <code>&lt;span&gt;</code>, <code>&lt;em&gt;</code> and <code>&lt;strong&gt;</code> use <code>inline</code> as their outer display type by default.</p>
+<p>Some HTML elements, such as <code>&lt;a&gt;</code>, <code>&lt;span&gt;</code>, <code>&lt;em&gt;</code> and <code>&lt;strong&gt;</code> use <code>inline</code> as their outer display type by default.</p>
 
 <p>The type of box applied to an element is defined by {{cssxref("display")}} property values such as <code>block</code> and <code>inline</code>, and relates to the <strong>outer</strong> value of <code>display</code>.</p>
 
