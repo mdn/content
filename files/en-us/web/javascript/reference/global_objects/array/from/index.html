@@ -24,7 +24,6 @@ browser-compat: javascript.builtins.Array.from
 // Arrow function
 Array.from(arrayLike, (element) => { ... } )
 Array.from(arrayLike, (element, index) => { ... } )
-Array.from(arrayLike, (element, index, array) => { ... } )
 
 // Mapping function
 Array.from(arrayLike, mapFn)
@@ -33,8 +32,8 @@ Array.from(arrayLike, mapFn, thisArg)
 // Inline mapping function
 Array.from(arrayLike, function mapFn(element) { ... })
 Array.from(arrayLike, function mapFn(element, index) { ... })
-Array.from(arrayLike, function mapFn(element, index, array){ ... })
-Array.from(arrayLike, function mapFn(element, index, array) { ... }, thisArg)
+Array.from(arrayLike, function mapFn(element) { ... }, thisArg)
+Array.from(arrayLike, function mapFn(element, index) { ... }, thisArg)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -72,7 +71,8 @@ Array.from(arrayLike, function mapFn(element, index, array) { ... }, thisArg)
     <code>Array.from(<var>obj</var>, <var>mapFn</var>, <var>thisArg</var>)</code><br>
     has the same result
     as <code>Array.from(<var>obj</var>).map(<var>mapFn</var>, <var>thisArg</var>)</code>,<br>
-    except that it does not create an intermediate array.</p>
+    except that it does not create an intermediate array, and <var>mapFn<var> only receives
+    two arguments (<var>element</var>, <var>index</var>).</p>
 
 <div class="note"><p><strong>Note:</strong> This is especially important for certain array subclasses, like <a
         href="/en-US/docs/Web/JavaScript/Typed_arrays">typed arrays</a>, since the
