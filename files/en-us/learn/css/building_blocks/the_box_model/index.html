@@ -80,7 +80,7 @@ tags:
 
 <p>Below this, we have a block-level paragraph, inside which are two <code>&lt;span&gt;</code> elements. These elements would normally be <code>inline</code>, however, one of the elements has a class of block, and we have set it to <code>display: block</code>.</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/box-model/block.html", '100%', 1000)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/box-model/block.html", '100%', 1050)}} </p>
 
 <p>We can see how <code>inline</code> elements behave in this next example. The <code>&lt;span&gt;</code> elements in the first paragraph are inline by default and so do not force line breaks.</p>
 
@@ -119,7 +119,7 @@ tags:
 
 <p>In the standard box model, if you give a box a <code>width</code> and a <code>height</code> attribute, this defines the width and height of the <em>content box</em>. Any padding and border is then added to that width and height to get the total size taken up by the box. This is shown in the image below.</p>
 
-<p>If we assume that the box has the following CSS defining <code>width</code>, <code>height</code>, <code>margin</code>, <code>border</code>, and <code>padding</code>:</p>
+<p>If we assume that a box has the following CSS defining <code>width</code>, <code>height</code>, <code>margin</code>, <code>border</code>, and <code>padding</code>:</p>
 
 <pre class="brush: css">.box {
   width: 350px;
@@ -130,7 +130,7 @@ tags:
 }
 </pre>
 
-<p>The space taken up by our box using the standard box model will actually be 410px (350 + 25 + 25 + 5 + 5), and the height 210px (150 + 25 + 25 + 5 + 5), as the padding and border are added to the width used for the content box.</p>
+<p>The <em>actual</em> space taken up by the box will be 410px wide (350 + 25 + 25 + 5 + 5) and 210px high (150 + 25 + 25 + 5 + 5).</p>
 
 <p><img alt="Showing the size of the box when the standard box model is being used." src="standard-box-model.png"></p>
 
@@ -279,7 +279,7 @@ tags:
 
 <p><strong>You can also change the padding on the class <code>.container,</code> which will make space between the container and the box. Padding can be changed on any element, and will make space between its border and whatever is inside the element.</strong></p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/box-model/padding.html", '100%', 800)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/box-model/padding.html", '100%', 600)}} </p>
 
 <h2 id="The_box_model_and_inline_boxes">The box model and inline boxes</h2>
 
@@ -287,7 +287,7 @@ tags:
 
 <p>In the example below, we have a <code>&lt;span&gt;</code> inside a paragraph and have applied a <code>width</code>, <code>height</code>, <code>margin</code>, <code>border</code>, and <code>padding</code> to it. You can see that the width and height are ignored. The vertical margin, padding, and border are respected but they do not change the relationship of other content to our inline box and so the padding and border overlaps other words in the paragraph. Horizontal padding, margins, and borders are respected and will cause other content to move away from the box.</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/box-model/inline-box-model.html", '100%', 800)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/box-model/inline-box-model.html", '100%', 600)}} </p>
 
 <h2 id="Using_display_inline-block">Using display: inline-block</h2>
 
@@ -304,7 +304,7 @@ tags:
 
 <p><strong>In this next example, we have added <code>display: inline-block</code> to our <code>&lt;span&gt;</code> element. Try changing this to <code>display: block</code> or removing the line completely to see the difference in display models.</strong></p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/box-model/inline-block.html", '100%', 800)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/box-model/inline-block.html", '100%', 700)}} </p>
 
 <p>Where this can be useful is when you want to give a link a larger hit area by adding <code>padding</code>. <code>&lt;a&gt;</code> is an inline element like <code>&lt;span&gt;</code>; you can use <code>display: inline-block</code> to allow padding to be set on it, making it easier for a user to click the link.</p>
 
