@@ -203,7 +203,7 @@ Keep-Alive: timeout=2, max=100
 Connection: Keep-Alive
 </pre>
 
-<p>Lines 1 - 10 above represent the preflight request with the {{HTTPMethod("OPTIONS")}} method. The browser determines that it needs to send this based on the request parameters that the JavaScript code snippet above was using, so that the server can respond whether it is acceptable to send the request with the actual request parameters. OPTIONS is an HTTP/1.1 method that is used to determine further information from servers, and is a {{Glossary("safe")}} method, meaning that it can't be used to change the resource. Note that along with the OPTIONS request, two other request headers are sent (lines 9 and 10 respectively):</p>
+<p>Lines 1 - 10 above represent the preflight request with the {{HTTPMethod("OPTIONS")}} method. The browser determines that it needs to send this based on the request parameters that the JavaScript code snippet above was using, so that the server can respond whether it is acceptable to send the request with the actual request parameters. OPTIONS is an HTTP/1.1 method that is used to determine further information from servers, and is a {{Glossary("Safe/HTTP", "safe")}} method, meaning that it can't be used to change the resource. Note that along with the OPTIONS request, two other request headers are sent (lines 9 and 10 respectively):</p>
 
 <pre class="brush: none">Access-Control-Request-Method: POST
 Access-Control-Request-Headers: X-PINGOTHER, Content-Type
@@ -499,10 +499,6 @@ Vary: Origin</pre>
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <p>{{Compat("http.headers.Access-Control-Allow-Origin")}}</p>
-
-<h3 id="Compatibility_notes">Compatibility notes</h3>
-
-<p>Internet Explorer 8 and 9 expose CORS via the <code>XDomainRequest</code> object, but have a full implementation in IE 10</p>
 
 <h2 id="See_also">See also</h2>
 

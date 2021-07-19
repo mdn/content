@@ -35,10 +35,20 @@ browser-compat: api.RTCIceCandidate.type
 
 <h3 id="Value">Value</h3>
 
-<p>A {{domxref("DOMString")}} whose value is one of those defined by the
-  {{domxref("RTCIceCandidateType")}} enumerated type.</p>
+<p>A {{domxref("DOMString")}} whose value is one of those defined below. These candidate types are listed in order of priority; the higher in the list they are, the more efficient they are.</p>
 
-<p>{{page("/en-US/docs/Web/API/RTCIceCandidateType", "Values")}}</p>
+<div id="value-list">
+<dl>
+ <dt><code>host</code></dt>
+ <dd>The candidate is a host candidate, whose IP address as specified in the {{domxref("RTCIceCandidate.ip")}} property is in fact the true address of the remote peer.</dd>
+ <dt><code>srflx</code></dt>
+ <dd>The candidate is a server reflexive candidate; the <code>ip</code> indicates an intermediary address assigned by the {{Glossary("STUN")}} server to represent the candidate's peer anonymously.</dd>
+ <dt><code>prflx</code></dt>
+ <dd>The candidate is a peer reflexive candidate; the <code>ip</code> is an intermediary address assigned by the STUN server to represent the candidate's peer anonymously.</dd>
+ <dt><code>relay</code></dt>
+ <dd>The candidate is a relay candidate, obtained from a {{Glossary("TURN")}} server. The relay candidate's IP address is an address the TURN server uses to forward the media between the two peers.</dd>
+</dl>
+</div>
 
 <p>If <code>type</code> is <code>null</code>, that information was missing from the
   {{domxref("RTCIceCandidate.candidate", "candidate")}}'s a-line, which will cause

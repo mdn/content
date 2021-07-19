@@ -37,13 +37,13 @@ browser-compat: api.SpeechSynthesisUtterance.pause_event
 <p>You can use the <code>pause</code> event in an <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener</a></code> method:</p>
 
 <pre class="brush: js">utterThis.addEventListener('pause', function(event) {
-  console.log('Speech paused after ' + event.elapsedTime + ' milliseconds.');
+  console.log('Speech paused after ' + event.elapsedTime + ' seconds.');
 });</pre>
 
 <p>Or use the <code><a href="/en-US/docs/Web/API/SpeechSynthesisUtterance/onpause">onpause</a></code> event handler property:</p>
 
 <pre class="brush: js">utterThis.onpause = function(event) {
-  console.log('Speech paused after ' + event.elapsedTime + ' milliseconds.');
+  console.log('Speech paused after ' + event.elapsedTime + ' seconds.');
 }</pre>
 
 <h2 id="Specifications">Specifications</h2>

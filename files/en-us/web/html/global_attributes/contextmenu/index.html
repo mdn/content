@@ -46,7 +46,7 @@ browser-compat: html.global_attributes.contextmenu
     &lt;li contextmenu="ChangeImage" id="changeImage"&gt;
       On the image below, you can fire the "Change Image" action
       in your Context Menu.&lt;br /&gt;
-      &lt;img src="https://developer.mozilla.org/media/img/promote/promobutton_mdn5.png"
+      &lt;img src="promobutton_mdn5.png"
           contextmenu="ChangeImage" id="promoButton" /&gt;
       &lt;menu type="context" id="ChangeImage"&gt;
         &lt;menuitem label="Change Image" onclick="changeImage()"&gt;&lt;/menuitem&gt;
@@ -78,9 +78,7 @@ function decFont() {
 
 function changeImage() {
   var index = Math.ceil(Math.random() * 39 + 1);
-  document.images[0].src =
-      "https://developer.mozilla.org/media/img/promote/promobutton_mdn" +
-      index + ".png";
+  document.images[0].src = index + ".png";
 }</pre>
 
 <h3 id="Result">Result</h3>

@@ -15,14 +15,14 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: html">&lt;link rel="dns-prefetch" href="https://fonts.gstatic.com/" &gt;
+<pre class="brush: html">&lt;link rel="dns-prefetch" href="https://fonts.googleapis.com/" &gt;
 </pre>
 
 <h2 id="Examples">Examples</h2>
 
 <pre class="brush: html">&lt;html&gt;
   &lt;head&gt;
-    &lt;link rel="dns-prefetch" href="https://fonts.gstatic.com/"&gt;
+    &lt;link rel="dns-prefetch" href="https://fonts.googleapis.com/"&gt;
     &lt;!-- and all other head elements --&gt;
   &lt;/head&gt;
   &lt;body&gt;
@@ -40,12 +40,12 @@ tags:
 
 <p><strong>Second</strong>, it’s also possible to specify <code>dns-prefetch</code> (and other resources hints) as an <a href="/en-US/docs/Web/HTTP/Headers">HTTP header</a> by using the <a href="/en-US/docs/Web/HTTP/Headers/Link">HTTP Link field</a>:</p>
 
-<pre class="brush: unix">Link: &lt;https://fonts.gstatic.com/&gt;; rel=dns-prefetch</pre>
+<pre class="brush: unix">Link: &lt;https://fonts.googleapis.com/&gt;; rel=dns-prefetch</pre>
 
 <p><strong>Third</strong>, consider pairing <code>dns-prefetch</code> with the <code>preconnect</code> hint. While <code>dns-prefetch</code> only performs a DNS lookup, <code>preconnect</code> establishes a connection to a server. This process includes DNS resolution, as well as establishing the TCP connection, and performing the <a href="/en-US/docs/Glossary/TLS">TLS</a> handshake—if a site is served over HTTPS. Combining the two provides an opportunity to further reduce the perceived latency of <a href="/en-US/docs/Web/HTTP/CORS">cross-origin requests</a>. You can safely use them together like so:</p>
 
-<pre class="brush: html">&lt;link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin&gt;
-&lt;link rel="dns-prefetch" href="https://fonts.gstatic.com/"&gt;
+<pre class="brush: html">&lt;link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin&gt;
+&lt;link rel="dns-prefetch" href="https://fonts.googleapis.com/"&gt;
 </pre>
 
 <div class="notecard note">

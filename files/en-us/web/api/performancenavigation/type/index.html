@@ -14,16 +14,18 @@ browser-compat: api.PerformanceNavigation.type
 ---
 <p>{{APIRef("Navigation Timing")}}{{Deprecated_Header}}</p>
 
+<p>The legacy
+  <code><strong>PerformanceNavigation.type</code></strong>
+  read-only property returns an <code>unsigned short</code> containing a constant
+  describing how the navigation to this page was done.</p>
+
 <div class="notecard warning">
   <h4>Warning</h4>
   <p>This interface of this property is deprecated in the <a href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</a>.
     Please use the {{domxref("PerformanceNavigationTiming")}} interface instead.</p>
 </div>
 
-<p>The legacy
-  <code><strong>PerformanceNavigation</strong></code><strong><code>.type</code></strong>
-  read-only property returns an <code>unsigned short</code> containing a constant
-  describing how the navigation to this page was done. Possible values are:</p>
+<p>Possible values are:</p>
 
 <table class="standard-table">
   <thead>
@@ -66,7 +68,8 @@ browser-compat: api.PerformanceNavigation.type
 
 <h2 id="Specifications">Specifications</h2>
 
-{{Specifications}}
+<p>This feature is no longer on track to become a standard, as the <a href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing specification</a> has marked it as deprecated.
+  Use the {{domxref("PerformanceNavigationTiming")}} interface instead.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

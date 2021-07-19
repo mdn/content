@@ -109,14 +109,20 @@ tags:
 
 <ul>
  <li>If you're using the Apache web server, check the <em><strong>Media Types and Character Encodings</strong></em> section of <a href="/en-US/docs/Learn/Server-side/Apache_Configuration_htaccess">Apache Configuration: .htaccess</a> for examples of different document types and their corresponding MIME types.</li>
- <li>If you're using NGINX, look at the <a href="/en-US/NGINX_configuration_snippets">NGINX configuration snippets</a>. NGINX does not have a <code>.htaccess</code> equivalent tool, so all changes will go into the main configuration file.</li>
+ <li>If you're using NGINX, note that NGINX does not have a <code>.htaccess</code> equivalent tool, so all changes will go into the main configuration file.</li>
  <li>If you're using a server-side script or framework to generate content, the way to indicate the content type will depend on the tool you're using. Check the framework or library's documentation.</li>
 </ul>
+
+<p>Regardless of what server system you use, the effect you need to achieve is to set a response header with the name {{httpheader("Content-Type")}}, followed by a colon and space, followed by a MIME type. High-level environments often allow such headers to be set when generating the page. For example, in a PHP environment, you could set the response header for PDF resources like this:
+<pre>
+<code>header('Content-Type: application/pdf')</code>
+</pre>
+
+<p>Trying to instead set it with just <code>header('application/pdf')</code> won’t work .</p>
 
 <h2 id="Related_Links">Related Links</h2>
 
 <ul>
- <li><a href="/en-US/Incorrect_MIME_Type_for_CSS_Files">Incorrect MIME Type for CSS Files</a></li>
  <li><a href="https://www.iana.org/assignments/media-types/index.html">IANA | MIME Media Types</a></li>
  <li><a href="https://www.w3.org/Protocols/HTTP/1.1/spec.html">Hypertext Transfer Protocol — HTTP/1.1</a></li>
  <li><a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME types (IANA media types)</a></li>

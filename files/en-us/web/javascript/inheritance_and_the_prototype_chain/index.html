@@ -247,18 +247,16 @@ function f() {
 
 <h3 id="With_a_constructor">With a constructor</h3>
 
-<p>A "constructor" in JavaScript is "just" a function that happens to be called with the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/new">new operator</a>.</p>
+<p>A constructor in JavaScript is just a function that happens to be called with the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/new">new operator</a>.</p>
 
 <pre class="brush: js">function Graph() {
   this.vertices = [];
   this.edges = [];
 }
 
-Graph.prototype = {
-  addVertex: function(v) {
-    this.vertices.push(v);
-  }
-};
+Graph.prototype.addVertex = function(v) {
+  this.vertices.push(v);
+}
 
 var g = new Graph();
 // g is an object with own properties 'vertices' and 'edges'.
@@ -388,14 +386,12 @@ console.log(Object.getPrototypeOf(g).hasOwnProperty('addVertex'));
 
 <pre class="brush: js">
 function foo(){}
-foo.prototype = {
-  foo_prop: "foo val"
-};
+foo.prototype.foo_prop = "foo val";
 function bar(){}
-var proto = new foo;
+var proto = new foo();
 proto.bar_prop = "bar val";
 bar.prototype = proto;
-var inst = new bar;
+var inst = new bar();
 console.log(inst.foo_prop);
 console.log(inst.bar_prop);
 </pre>
@@ -419,25 +415,21 @@ console.log(inst.bar_prop);
 <pre class="brush: js">
 // Technique 1
 function foo(){}
-foo.prototype = {
-  foo_prop: "foo val"
-};
+foo.prototype.foo_prop = "foo val";
 function bar(){}
 var proto = Object.create(
   foo.prototype
 );
 proto.bar_prop = "bar val";
 bar.prototype = proto;
-var inst = new bar;
+var inst = new bar();
 console.log(inst.foo_prop);
 console.log(inst.bar_prop);
 </pre>
 <pre class="brush: js">
 // Technique 2
 function foo(){}
-foo.prototype = {
-  foo_prop: "foo val"
-};
+foo.prototype.foo_prop = "foo val";
 function bar(){}
 var proto = Object.create(
   foo.prototype,
@@ -448,7 +440,7 @@ var proto = Object.create(
   }
 );
 bar.prototype = proto;
-var inst = new bar;
+var inst = new bar();
 console.log(inst.foo_prop);
 console.log(inst.bar_prop)</pre>
 <table class="standard-table">
@@ -468,9 +460,7 @@ console.log(inst.bar_prop)</pre>
 <pre class="brush: js">
 // Technique 1
 function foo(){}
-foo.prototype = {
-  foo_prop: "foo val"
-};
+foo.prototype.foo_prop = "foo val";
 function bar(){}
 var proto = {
   bar_prop: "bar val"
@@ -479,24 +469,22 @@ Object.setPrototypeOf(
   proto, foo.prototype
 );
 bar.prototype = proto;
-var inst = new bar;
+var inst = new bar();
 console.log(inst.foo_prop);
 console.log(inst.bar_prop);
 </pre>
 <pre class="brush: js">
 // Technique 2
 function foo(){}
-foo.prototype = {
-  foo_prop: "foo val"
-};
+foo.prototype.foo_prop = "foo val";
 function bar(){}
 var proto;
-proto=Object.setPrototypeOf(
+proto = Object.setPrototypeOf(
   { bar_prop: "bar val" },
   foo.prototype
 );
 bar.prototype = proto;
-var inst = new bar;
+var inst = new bar();
 console.log(inst.foo_prop);
 console.log(inst.bar_prop)</pre>
 <table class="standard-table">
@@ -516,16 +504,14 @@ console.log(inst.bar_prop)</pre>
 <pre class="brush: js">
 // Technique 1
 function A(){}
-A.prototype = {
-  foo_prop: "foo val"
-};
+A.prototype.foo_prop = "foo val";
 function bar(){}
 var proto = {
   bar_prop: "bar val",
   __proto__: A.prototype
 };
 bar.prototype = proto;
-var inst = new bar;
+var inst = new bar();
 console.log(inst.foo_prop);
 console.log(inst.bar_prop);
 </pre>

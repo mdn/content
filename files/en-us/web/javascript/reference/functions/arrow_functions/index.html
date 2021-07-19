@@ -49,8 +49,11 @@ browser-compat: javascript.functions.arrow_functions
   functions to arrow functions</h3>
 
 <p>Let's decompose a "traditional function" down to the simplest "arrow function"
-  step-by-step:<br>
-  NOTE: Each step along the way is a valid "arrow function"</p>
+  step-by-step:</p>
+
+<div class="notecard note">
+  <p><strong>Note:</strong> Each step along the way is a valid "arrow function".</p>
+</div>
 
 <pre class="brush: js">// Traditional Function
 function (a){
@@ -64,14 +67,14 @@ function (a){
   return a + 100;
 }
 
-// 2. Remove the body brackets and word "return" -- the return is implied.
+// 2. Remove the body braces and word "return" -- the return is implied.
 (a) =&gt; a + 100;
 
 // 3. Remove the argument parentheses
 a =&gt; a + 100;</pre>
 
 <div class="notecard note">
-  <p><strong>Note:</strong> As shown above, the { brackets } and ( parentheses ) and "return" are optional, but
+  <p><strong>Note:</strong> As shown above, the { braces } and ( parentheses ) and "return" are optional, but
     may be required.</p>
 </div>
 
@@ -99,7 +102,7 @@ let b = 2;
 () =&gt; a + b + 100;</pre>
 
 <p>Likewise, if the body requires <strong>additional lines</strong> of processing, you'll
-  need to re-introduce brackets <strong>PLUS the "return"</strong> (arrow functions do not
+  need to re-introduce braces <strong>PLUS the "return"</strong> (arrow functions do not
   magically guess what or when you want to "return"):</p>
 
 <pre class="brush: js">// Traditional Function
@@ -115,7 +118,7 @@ function (a, b){
 }</pre>
 
 <p>And finally, for <strong>named functions</strong> we treat arrow expressions like
-  variables</p>
+  variables:</p>
 
 <pre class="brush: js">// Traditional Function
 function bob (a){
@@ -139,7 +142,7 @@ let bob = a =&gt; a + 100;</pre>
 
 <pre class="brush: js">(param1, paramN) =&gt; expression</pre>
 
-<p class="brush: js">Multiline statements require body brackets and return:
+<p class="brush: js">Multiline statements require body braces and return:
 </p>
 
 <pre class="brush: js">param =&gt; {
@@ -148,7 +151,7 @@ let bob = a =&gt; a + 100;</pre>
 }</pre>
 
 <p class="brush: js">Multiple params require parentheses. Multiline statements
-  require body brackets and return:</p>
+  require body braces and return:</p>
 
 <pre class="brush: js">(param1, paramN) =&gt; {
    let a = 1;

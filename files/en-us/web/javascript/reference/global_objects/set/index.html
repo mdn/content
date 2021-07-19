@@ -68,10 +68,12 @@ browser-compat: javascript.builtins.Set
 <dl>
  <dt>{{jsxref("Set.prototype.@@iterator()", "Set.prototype[@@iterator]()")}}</dt>
  <dd>Returns a new iterator object that yields the <strong>values</strong> for each element in the <code>Set</code> object in insertion order.</dd>
- <dt>{{jsxref("Set/values")}}</dt>
- <dd>Returns a new iterator object that yields the values for each element in the <code>Set</code> object in insertion order. (For Sets, this is the same as the <strong><code>values()</code></strong> method.)</dd>
  <dt>{{jsxref("Set.prototype.values()")}}</dt>
- <dd>Returns a new iterator object that yields the <strong>values</strong> for each element in the <code>Set</code> object in insertion order. (For Sets, this is the same as the <strong><code>keys()</code></strong> method.)</dd>
+ <dd>Returns a new iterator object that yields the <strong>values</strong> for each element in the <code>Set</code> object in insertion order.</dd>
+
+ <dt>{{jsxref("Set.prototype.keys()")}}</dt>
+ <dd>An alias for {{jsxref("Set.prototype.values()")}}.</dd>
+
  <dt>{{jsxref("Set.prototype.entries()")}}</dt>
  <dd>
  <p>Returns a new iterator object that contains <strong>an array of <code>[<var>value</var>, <var>value</var>]</code></strong> for each element in the <code>Set</code> object, in insertion order.</p>
@@ -259,7 +261,7 @@ new Set("firefox")  // Set(6) { "f", "i", "r", "e", "o", "x" }
 
 <h3 id="Use_Set_to_ensure_the_uniqueness_of_a_list_of_values">Use Set to ensure the uniqueness of a list of values</h3>
 
-<pre class="brush: js" dir="ltr">const array = Array
+<pre class="brush: js">const array = Array
   .from(document.querySelectorAll('[id]'))
   .map(function(e) {
       return e.id

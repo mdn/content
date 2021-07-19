@@ -189,8 +189,8 @@ function encryptMessage(key) {
 }
 </pre>
 
-<pre class="brush: js">let iv = new Uint8Array(16);
-let key = new Uint8Array(16);
+<pre class="brush: js">let iv = window.crypto.getRandomValues(new Uint8Array(16));
+let key = window.crypto.getRandomValues(new Uint8Array(16));
 let data = new Uint8Array(12345);
 //crypto functions are wrapped in promises so we have to use await and make sure the function that
 //contains this code is an async function

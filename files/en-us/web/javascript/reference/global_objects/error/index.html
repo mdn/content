@@ -107,6 +107,11 @@ browser-compat: javascript.builtins.Error
     console.error(e.name + ': ' + e.message)
   }
   // ... etc
+  
+  else {
+    // If none of our cases matched leave the Error unhandled
+    throw e;
+  }
 }
 </pre>
 

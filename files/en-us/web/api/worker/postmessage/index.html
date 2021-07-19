@@ -63,76 +63,82 @@ second.onchange = function() {
 
 <h3 id="Transfer_Example">Transfer Example</h3>
 
-<p>This example shows a Firefox add-on that transfers an <code>ArrayBuffer</code> from the main thread to the <code>ChromeWorker</code>, and then the <code>ChromeWorker</code> transfers it back to the main thread.</p>
+<p>This minimum example has <code>main</code> create an <code>ArrayBuffer</code> and transfer it to <code>myWorker</code>, then has <code>myWorker</code> transfer it back to <code>main</code>, with the size logged at each step.</p>
 
-<h4 id="Main_thread_code">Main thread code:</h4>
+<h4 id="main.js_code">main.js code:</h4>
 
-<pre class="brush: js">var myWorker = new ChromeWorker(self.path + 'myWorker.js');
+<pre class="brush: js">
+// create worker
+var myWorker = new Worker("myWorker.js");
 
-function handleMessageFromWorker(msg) {
-    console.log('incoming message from worker, msg:', msg);
-    switch (msg.data.aTopic) {
-        case 'do_sendMainArrBuff':
-            sendMainArrBuff(msg.data.aBuf)
-            break;
-        default:
-            throw 'no aTopic on incoming message to ChromeWorker';
-    }
-}
+// listen for myWorker to transfer the buffer back to main
+myWorker.addEventListener("message", function handleMessageFromWorker(msg) {
+  console.log("message from worker received in main:", msg);
 
-myWorker.addEventListener('message', handleMessageFromWorker);
+  var bufTransferredBackFromWorker = msg.data;
 
-// Ok lets create the buffer and send it
-var arrBuf = new ArrayBuffer(8);
-console.info('arrBuf.byteLength pre transfer:', arrBuf.byteLength);
+  console.log(
+    "buf.byteLength in main AFTER transfer back from worker:",
+    bufTransferredBackFromWorker.byteLength
+  );
+});
 
-myWorker.postMessage(
-    {
-        aTopic: 'do_sendWorkerArrBuff',
-        aBuf: arrBuf // The array buffer that we passed to the transferrable section 3 lines below
-    },
-    [
-        arrBuf // The array buffer we created 9 lines above
-    ]
+// create the buffer
+var myBuf = new ArrayBuffer(8);
+
+console.log(
+  "buf.byteLength in main BEFORE transfer to worker:",
+  myBuf.byteLength
 );
 
-console.info('arrBuf.byteLength post transfer:', arrBuf.byteLength);
+// send myBuf to myWorker and transfer the underlying ArrayBuffer
+myWorker.postMessage(myBuf, [myBuf]);
+
+console.log(
+  "buf.byteLength in main AFTER transfer to worker:",
+  myBuf.byteLength
+);
 </pre>
 
-<h4 id="Worker_code">Worker code</h4>
+<h4 id="myWorker.js_code">myWorker.js code</h4>
 
-<pre class="brush: js">self.onmessage = function (msg) {
-    switch (msg.data.aTopic) {
-        case 'do_sendWorkerArrBuff':
-                sendWorkerArrBuff(msg.data.aBuf)
-            break;
-        default:
-            throw 'no aTopic on incoming message to ChromeWorker';
-    }
-}
+<pre class="brush: js">
+// listen for main to transfer the buffer to myWorker
+self.onmessage = function handleMessageFromMain(msg) {
+  console.log("message from main received in worker:", msg);
 
-function sendWorkerArrBuff(aBuf) {
-    console.info('from worker, PRE send back aBuf.byteLength:', aBuf.byteLength);
+  var bufTransferredFromMain = msg.data;
 
-    self.postMessage({aTopic:'do_sendMainArrBuff', aBuf:aBuf}, [aBuf]);
+  console.log(
+    "buf.byteLength in worker BEFORE transfer back to main:",
+    bufTransferredFromMain.byteLength
+  );
 
-    console.info('from worker, POST send back aBuf.byteLength:', aBuf.byteLength);
-}
+  // send buf back to main and transfer the underlying ArrayBuffer
+  self.postMessage(bufTransferredFromMain, [bufTransferredFromMain]);
+
+  console.log(
+    "buf.byteLength in worker AFTER transfer back to main:",
+    bufTransferredFromMain.byteLength
+  );
+};
 </pre>
 
 <h4 id="Output_logged">Output logged</h4>
 
-<pre class="brush: bash">arrBuf.byteLength pre transfer: 8                              bootstrap.js:40
-arrBuf.byteLength post transfer: 0                             bootstrap.js:42
+<pre class="brush: bash">
+buf.byteLength in main BEFORE transfer to worker:        8                     main.js:19
+buf.byteLength in main AFTER transfer to worker:         0                     main.js:27
 
-from worker, PRE send back aBuf.byteLength: 8                  myWorker.js:5:2
+message from main received in worker:                    MessageEvent { ... }  myWorker.js:3
+buf.byteLength in worker BEFORE transfer back to main:   8                     myWorker.js:7
+buf.byteLength in worker AFTER transfer back to main:    0                     myWorker.js:15
 
-incoming message from worker, msg: message { ... }             bootstrap.js:20
-got back buf in main thread, aBuf.byteLength: 8                bootstrap.js:12
+message from worker received in main:                    MessageEvent { ... }  main.js:6
+buf.byteLength in main AFTER transfer back from worker:  8                     main.js:10
+</pre>
 
-from worker, POST send back aBuf.byteLength: 0                 myWorker.js:7:2</pre>
-
-<p><code>byteLength</code> goes to 0 as it is transferred. To see a full working example of this Firefox demo add-on see here: <a href="https://github.com/Noitidart/ChromeWorker/tree/aca57d9cadc4e68af16201bdecbfb6f9a6f9ca6b">GitHub :: ChromeWorker - demo-transfer-arraybuffer</a></p>
+<p><code>byteLength</code> goes to 0 after the <code>ArrayBuffer</code> is transferred. For a more sophisticated full working example of <code>ArrayBuffer</code> transfer, see this Firefox demo add-on: <a href="https://github.com/Noitidart/ChromeWorker/tree/aca57d9cadc4e68af16201bdecbfb6f9a6f9ca6b">GitHub :: ChromeWorker - demo-transfer-arraybuffer</a></p>
 
 <h2 id="Specifications">Specifications</h2>
 

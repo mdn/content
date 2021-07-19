@@ -37,13 +37,13 @@ browser-compat: api.SpeechSynthesisUtterance.end_event
 <p>You can use the <code>end</code> event in an <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener</a></code> method:</p>
 
 <pre class="brush: js">utterThis.addEventListener('end', function(event) {
-  console.log('Utterance has finished being spoken after ' + event.elapsedTime + ' milliseconds.');
+  console.log('Utterance has finished being spoken after ' + event.elapsedTime + ' seconds.');
 });</pre>
 
 <p>Or use the <code><a href="/en-US/docs/Web/API/SpeechSynthesisUtterance/onend">onend</a></code> event handler property:</p>
 
 <pre class="brush: js">utterThis.onend = function(event) {
-  console.log('Utterance has finished being spoken after ' + event.elapsedTime + ' milliseconds.');
+  console.log('Utterance has finished being spoken after ' + event.elapsedTime + ' seconds.');
 }</pre>
 
 <h2 id="Specifications">Specifications</h2>

@@ -128,8 +128,8 @@ async function digestMessage(message) {
   return hash;
 }
 
-const digestBuffer = await digestMessage(text);
-console.log(digestBuffer.byteLength);
+digestMessage(text)
+  .then(digestBuffer => console.log(digestBuffer.byteLength));
 </pre>
 
 <h3 id="Converting_a_digest_to_a_hex_string">Converting a digest to a hex string</h3>
@@ -148,8 +148,8 @@ async function digestMessage(message) {
   return hashHex;
 }
 
-const digestHex = await digestMessage(text);
-console.log(digestHex);
+digestMessage(text)
+  .then(digestHex => console.log(digestHex));
 </pre>
 
 <h2 id="Specifications">Specifications</h2>

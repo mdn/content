@@ -2,16 +2,15 @@
 title: RTCPeerConnection.setConfiguration()
 slug: Web/API/RTCPeerConnection/setConfiguration
 tags:
-- Configuration
-- Experimental
-- Method
-- RTCPeerConnection
-- Reference
-- WebRTC
-- setConfiguration
+  - Configuration
+  - Method
+  - RTCPeerConnection
+  - Reference
+  - WebRTC
+  - setConfiguration
 browser-compat: api.RTCPeerConnection.setConfiguration
 ---
-<p>{{APIRef("WebRTC")}}{{SeeCompatTable}}</p>
+<p>{{APIRef("WebRTC")}}</p>
 
 <p>The <strong><code>RTCPeerConnection.setConfiguration()</code></strong> method sets the
   current configuration of the {{domxref("RTCPeerConnection")}} based on the values
@@ -81,11 +80,12 @@ browser-compat: api.RTCPeerConnection.setConfiguration
 <p>In this example, it has already been determined that ICE restart is needed, and that
   negotiation needs to be done using a different ICE server.</p>
 
-<pre class="brush: js">var restartConfig = { iceServers: [{
-                          urls: "turn:asia.myturnserver.net",
-                          username: "allie@oopcode.com",
-                          credential: "topsecretpassword"
-                      }]
+<pre class="brush: js">var restartConfig = {
+  iceServers: [{
+    urls: "turn:asia.myturnserver.net",
+    username: "allie@oopcode.com",
+    credential: "topsecretpassword"
+  }]
 };
 
 myPeerConnection.setConfiguration(restartConfig);

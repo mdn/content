@@ -13,12 +13,9 @@ browser-compat: api.HTMLCanvasElement.toBlob
 
 <p>The <strong><code>HTMLCanvasElement.toBlob()</code></strong> method creates a
   {{domxref("Blob")}} object representing the image contained in the canvas; this file may
-  be cached on the disk or stored in memory at the discretion of the user agent. If
-  <code>type</code> is not specified, the image type is <code>image/png</code>. The
-  created image is in a resolution of 96dpi.</p>
+  be cached on the disk or stored in memory at the discretion of the user agent.
 
-<p>The third argument is used when creating images using lossy compression (such as
-  <code>image/jpeg</code>) to specify the quality of the output.</p>
+  <p>The created image is in a resolution of 96dpi.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -33,12 +30,14 @@ browser-compat: api.HTMLCanvasElement.toBlob
     argument.</dd>
   <dt><code>mimeType</code> {{optional_inline}}</dt>
   <dd>A {{domxref("DOMString")}} indicating the image format. The default type is
-    <code>image/png</code>.</dd>
+    <code>image/png</code>; that type is also used if the given type isn't supported.</dd>
   <dt><code>qualityArgument</code> {{optional_inline}}</dt>
-  <dd>A {{jsxref("Number")}} between <code>0</code> and <code>1</code> indicating image
+  <dd>A {{jsxref("Number")}} between <code>0</code> and <code>1</code>, indicating image
     quality if the requested type is <code>image/jpeg </code>or <code>image/webp</code>.
     If this argument is anything else, the default values 0.92 and 0.80 are used for
-    image/jpeg and image/webp respectively. Other arguments are ignored.</dd>
+    image/jpeg and image/webp respectively. Other arguments are ignored.
+    <p>This argument is used when creating images using lossy compression (such as <code>image/jpeg</code>), to specify the quality of the output.</p>
+    </dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>

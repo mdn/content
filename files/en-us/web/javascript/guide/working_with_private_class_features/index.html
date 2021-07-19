@@ -5,7 +5,6 @@ tags:
   - Document
   - Guide
   - JavaScript
-browser-compat: javascript.classes
 ---
 <div>{{jsSidebar("JavaScript Guide")}}</div>
 
@@ -64,11 +63,11 @@ console.log(total.current);  // expected output: 13
 total.reset();               // #count now = 7
 </pre>
 
-<p>The “hash mark” (<code>#</code>) is what marks a field as being private.  It also prevents private fields and property names from ever being in conflict: private names <strong>must</strong> start with <code>#</code>, whereas property names can <strong>never</strong> start that way.</p>
+<p>The "ash mark" (<code>#</code>) is what marks a field as being private.  It also prevents private fields and property names from ever being in conflict: private names <strong>must</strong> start with <code>#</code>, whereas property names can <strong>never</strong> start that way.</p>
 
-<p>Having declared the private fields, they act as we saw in the public example.  The only way to change the <code>#count</code> value is via the publicly available methods like <code>decrease()</code>, and because (in this example) there are no defined ways to alter it, the <code>#init</code> value is immutable.  It’s set when a new <code>PrivateCounter</code> is constructed, and can never be changed thereafter.</p>
+<p>Having declared the private fields, they act as we saw in the public example.  The only way to change the <code>#count</code> value is via the publicly available methods like <code>decrease()</code>, and because (in this example) there are no defined ways to alter it, the <code>#init</code> value is immutable.  It's set when a new <code>PrivateCounter</code> is constructed, and can never be changed thereafter.</p>
 
-<p>It’s also the case that you <strong>cannot</strong> read a private value directly from code outside the class object.  Consider:</p>
+<p>It's also the case that you <strong>cannot</strong> read a private value directly from code outside the class object.  Consider:</p>
 
 <pre class="brush: js">
 let score = new PrivateCounter(); // #count and #init are now both 0
@@ -80,20 +79,20 @@ console.log(score.#count);
   // "Uncaught SyntaxError: Private field '#count' must be declared in an enclosing class"
 </pre>
 
-<p>If you wish to read private data from outside a class, you must first invent a method or other function to return it.  We had already done that with the <code>current()</code> getter that returns the current value of <code>#count</code>, but <code>#init</code> is locked away.  Unless we add something like a <code>getInit()</code> method to the class, we can’t even see the initial value from outside the class, let alone alter it, and the compiler will throw errors if we try.</p>
+<p>If you wish to read private data from outside a class, you must first invent a method or other function to return it.  We had already done that with the <code>current()</code> getter that returns the current value of <code>#count</code>, but <code>#init</code> is locked away.  Unless we add something like a <code>getInit()</code> method to the class, we can't even see the initial value from outside the class, let alone alter it, and the compiler will throw errors if we try.</p>
 
-<p>What are the other restrictions around private fields?  For one, you can’t refer to a private field you didn’t previously define.  You might be used to inventing new fields on the fly in JavaScript, but that just won’t fly with private fields.
+<p>What are the other restrictions around private fields?  For one, you can't refer to a private field you didn't previously define.  You might be used to inventing new fields on the fly in JavaScript, but that just won't fly with private fields.
 
 <pre class="brush: js example-bad">
 class BadIdea {
   constructor(arg) {
     this.#init = arg;  // syntax error occurs here
     #startState = arg; // syntax error would also occur here
-  }                    // because private fields weren’t defined
+  }                    // because private fields weren't defined
 }                      // before being referenced
 </pre>
 
-<p>You can’t define the same name twice in a single class, and you can’t delete private fields.</p>
+<p>You can't define the same name twice in a single class, and you can't delete private fields.</p>
 
 <pre class="brush: js example-bad">
 class BadIdeas {
@@ -106,7 +105,7 @@ class BadIdeas {
 }
 </pre>
 
-<p>There is another limitation: you can’t declare private fields or methods via <a href="/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#using_object_initializers">object literals</a>.  You might be used to something like this:</p>
+<p>There is another limitation: you can't declare private fields or methods via <a href="/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#using_object_initializers">object literals</a>.  You might be used to something like this:</p>
 
 <pre class="brush: js">
 var planet = {
@@ -148,7 +147,7 @@ class colorMixer {
 
 <h2>Private methods</h2>
 
-<p>Just like private fields, private methods are marked with a leading <code>#</code> and cannot be accessed from outside their class.  They’re useful when you have something complex that the class needs to do internally, but it’s something that no other part of the code should be allowed to call.</p>
+<p>Just like private fields, private methods are marked with a leading <code>#</code> and cannot be accessed from outside their class.  They're useful when you have something complex that the class needs to do internally, but it's something that no other part of the code should be allowed to call.</p>
 
 <p>For example, imagine creating <a href="/en-US/docs/Web/Web_Components/Using_custom_elements">HTML custom elements</a> that should do something somewhat complicated when clicked/tapped/otherwise activated.  Furthermore, the somewhat complicated things that happen when the element is clicked should be restricted to this class, because no other part of the JavaScript will (or should) ever access it.  Therefore, something like:</p>
 
@@ -195,7 +194,35 @@ class Counter extends HTMLElement {
 customElements.define('num-counter', Counter);
 </pre>
 
-<p>In this case, pretty much every field and method is private to the class.  Thus, it presents an interface to the rest of the code that’s essentially just like a built-in HTML element.  No other part of the JavaScript has the power to affect any of its internals.</p>
+<p>In this case, pretty much every field and method is private to the class. Thus, it presents an interface to the rest of the code that's essentially just like a built-in HTML element. No other part of the JavaScript has the power to affect any of its internals.</p>
+
+
+<h2>Checking if a private field/method exists</h2>
+
+<p>Javascript code will <code>throw</code> if you attempt to access a private method or field that does not exist (this differs from a normal/public method, which will return <code>undefined</code>). If you need to write code to test whether a private feature has been defined you might use <code>try</code>/<code>catch</code>, but it is more compact to use the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/in"><code>in</code></a> operator. This returns <code>true</code> or <code>false</code> depending on whether or not the property is defined.</p>
+
+<p>The code below demonstrates the approach using the example of a class for adding <code>Scalar</code> values. The class uses the <code>in</code> operator to check that added objects have the <code>#length</code> private class field, and throws an informative exception message if a different type of object is passed.</p>
+
+<pre class="brush: js">class Scalar {
+  #total = 0;
+  constructor(value) {
+    this.#total = value || this.#total;
+  }
+  
+  add(s) {
+    // check the passed object defines #length
+    if (!(#total in s)) {
+      throw new TypeError("Expected an instance of Scalar");
+    }
+    this.#total += s.#total;
+  }
+}
+
+let scalar1 = new Scalar(1);
+scalar1.add(scalar1)
+scalar1.add({}) // throws informative exception
+</pre>
+
 
 <h2 id="See_also">See also</h2>
 
@@ -208,5 +235,4 @@ customElements.define('num-counter', Counter);
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat}}</p>
-
+<p>{{Compat("javascript.classes")}}</p>

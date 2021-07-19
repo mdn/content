@@ -720,9 +720,9 @@ var n3 = !'Cat'; // !t returns false
   "short-circuit" evaluation using the following rules:</p>
 
 <ul>
-  <li><code>false</code> &amp;&amp; <em>anything</em> is short-circuit evaluated to false.
+  <li><code>false &amp;&amp; <em>anything</em></code> is short-circuit evaluated to false.
   </li>
-  <li><code>true</code> || <em>anything</em> is short-circuit evaluated to true.</li>
+  <li><code>true || <em>anything</em></code> is short-circuit evaluated to true.</li>
 </ul>
 
 <p>The rules of logic guarantee that these evaluations are always correct. Note that the
@@ -816,30 +816,21 @@ for (var i = 0, j = 9; i &lt;= j; i++, j--)
 <pre class="brush: js">delete object.property;
 delete object[propertyKey];
 delete objectName[index];
-delete property; // legal only within a with statement
 </pre>
 
 <p>where <code>object</code> is the name of an object, <code>property</code> is an
   existing property, and <code>propertyKey</code> is a string or symbol referring to an
   existing property.</p>
 
-<p>The fourth form is legal only within a
-  <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/with">with</a></code>
-  statement, to delete a property from an object, and also for properties of the global
-  object.</p>
-
 <p>If the <code>delete</code> operator succeeds, it removes the property from the object.
   Trying to access it afterwards will yield <code>undefined</code>. The
   <code>delete</code> operator returns <code>true</code> if the operation is possible; it
   returns <code>false</code> if the operation is not possible.</p>
 
-<pre class="brush: js">x = 42; // implicitly creates window.x
-var y = 43;
-var myobj = {h: 4}; // create object with property h
-
-delete x;       // returns false (cannot delete if created implicitly)
-delete y;       // returns false (cannot delete if declared with var)
+<pre class="brush: js">
 delete Math.PI; // returns false (cannot delete non-configurable properties)
+
+const myObj = {h: 4};
 delete myobj.h; // returns true (can delete user-defined properties)
 </pre>
 

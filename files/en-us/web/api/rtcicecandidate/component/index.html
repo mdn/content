@@ -34,8 +34,14 @@ browser-compat: api.RTCIceCandidate.component
 
 <h3 id="Value">Value</h3>
 
-<p>A {{domxref("DOMString")}} which is <code>"rtp"</code> for RTP (or RTP and RTCP
-  multiplexed together) candidates or <code>"rtcp"</code> for RTCP candidates.</p>
+<p>A {{domxref("DOMString")}} which is one of the following:</p>
+
+<dl>
+ <dt><code>"rtp"</code></dt>
+ <dd>Identifies an ICE transport which is being used for the <a href="/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP">Real-time Transport Protocol</a> (RTP), or for RTP multiplexed with the RTP Control Protocol (RTCP). RTP is defined in {{RFC(3550)}}. This value corresponds to the component ID field in the <code>candidate</code> a-line with the value 1.</dd>
+ <dt><code>"rtcp"</code></dt>
+ <dd>Identifies an ICE transport being used for RTCP, which is defined in {{RFC(3550, "", 6)}}. This value corresponds to the component ID 2.</dd>
+</dl>
 
 <h2 id="Usage_notes">Usage notes</h2>
 
