@@ -94698,12 +94698,6 @@
       "bershanskiy"
     ]
   },
-  "Web/API/XRRenderStateInit": {
-    "modified": "2020-10-15T22:23:33.692Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
   "Web/API/XRRigidTransform": {
     "modified": "2020-12-09T01:01:31.713Z",
     "contributors": [

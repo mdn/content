@@ -9022,6 +9022,7 @@
 /en-US/docs/Web/API/XR/supportsSession	/en-US/docs/Web/API/XRSystem/isSessionSupported
 /en-US/docs/Web/API/XREnvironmentBlendMode	/en-US/docs/Web/API/XRSession/environmentBlendMode
 /en-US/docs/Web/API/XRRenderState/XRRenderState.inlineVerticalFieldOfView	/en-US/docs/Web/API/XRRenderState/inlineVerticalFieldOfView
+/en-US/docs/Web/API/XRRenderStateInit	/en-US/docs/Web/API/XRSession/updateRenderState
 /en-US/docs/Web/API/XRSessionInit	/en-US/docs/Web/API/XRSystem/requestSession
 /en-US/docs/Web/API/XRSessionMode	/en-US/docs/Web/API/XRSystem/requestSession
 /en-US/docs/Web/API/XRTargetRayModoe	/en-US/docs/Web/API/XRTargetRayMode
