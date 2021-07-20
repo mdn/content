@@ -15,7 +15,7 @@ browser-compat: api.RTCPeerConnection.onicegatheringstatechange
 
 <p>The <code><strong>RTCPeerConnection.onicegatheringstatechange</strong></code> property
   is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> which specifies a function to be called when the
-  {{event("icegatheringstatechange")}} event is sent to an
+  {{DOMxRef("RTCPeerConnection/icegatheringstatechange_event", "icegatheringstatechange")}} event is sent to an
   {{domxref("RTCPeerConnection")}} instance. This happens when the ICE gathering
   state—that is, whether or not the ICE agent is actively gathering candidates—changes.
 </p>
@@ -31,7 +31,7 @@ browser-compat: api.RTCPeerConnection.onicegatheringstatechange
 <h3 id="Value">Value</h3>
 
 <p>A function you provide which is passed a single parameter: an {{domxref("Event")}}
-  object containing the {{event("icegatheringstatechange")}} event. You can determine the
+  object containing the {{DOMxRef("RTCPeerConnection/icegatheringstatechange_event", "icegatheringstatechange")}} event. You can determine the
   new state of ICE gathering by looking at the value of the
   {{domxref("RTCPeerConnection.iceGatheringState")}} property.</p>
 
@@ -77,7 +77,6 @@ browser-compat: api.RTCPeerConnection.onicegatheringstatechange
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li>The {{event("icegatheringstatechange")}} event and its type, {{domxref("Event")}}.
-  </li>
+  <li>The {{DOMxRef("RTCPeerConnection/icegatheringstatechange_event", "icegatheringstatechange")}} event and its type, {{domxref("Event")}}.</li>
   <li>{{domxref("RTCPeerConnection.iceGatheringState")}}</li>
 </ul>

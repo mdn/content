@@ -22,7 +22,7 @@ browser-compat: api.RTCPeerConnection.addTrack
 
 <div class="note">
   <p><strong>Note:</strong> Adding a track to a connection triggers renegotiation by
-    firing a {{event("negotiationneeded")}} event. See
+    firing a {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} event. See
     {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling",
     "Starting negotiation")}} for details.</p>
 </div>
@@ -106,7 +106,7 @@ browser-compat: api.RTCPeerConnection.addTrack
 }</pre>
 
 <p>The result is a set of tracks being sent to the remote peer, with no stream
-  associations. The handler for the {{event("track")}} event on the remote peer will be
+  associations. The handler for the {{DOMxRef("RTCPeerConnection/track_event", "track")}} event on the remote peer will be
   responsible for determining what stream to add each track to, even if that means adding
   them all to the same stream. The {{domxref("RTCPeerConnection.ontrack", "ontrack")}}
   handler might look like this:</p>
@@ -162,7 +162,7 @@ pc.ontrack = ev =&gt; {
   }
 }</pre>
 
-<p>The remote peer might then use a {{event("track")}} event handler that looks like this:
+<p>The remote peer might then use a {{DOMxRef("RTCPeerConnection/track_event", "track")}} event handler that looks like this:
 </p>
 
 <pre
@@ -286,5 +286,5 @@ pc.setRemoteDescription(desc).then(function () {
   <li><a href="/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP">Introduction to the Real-time
       Transport Protocol (RTP)</a></li>
   <li>{{domxref("RTCPeerConnection.ontrack")}}</li>
-  <li>{{event("track")}}</li>
+  <li>{{DOMxRef("RTCPeerConnection/track_event", "track")}}</li>
 </ul>

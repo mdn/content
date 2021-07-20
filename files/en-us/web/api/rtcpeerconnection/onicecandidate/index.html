@@ -21,7 +21,7 @@ browser-compat: api.RTCPeerConnection.onicecandidate
 <p>The <code>RTCPeerConnection</code> property
     <strong>{{domxref("RTCPeerConnection.onicecandidate", "onicecandidate")}}</strong>
     property is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> which specifies a function to be called
-    when the {{event("icecandidate")}} event occurs on an {{domxref("RTCPeerConnection")}}
+    when the {{DOMxRef("RTCPeerConnection/icecandidate_event", "icecandidate")}} event occurs on an {{domxref("RTCPeerConnection")}}
     instance. This happens whenever the local {{Glossary("ICE")}} agent needs to deliver a
     message to the other peer through the signaling server.This lets the ICE agent
   perform negotiation with the remote peer without the browser itself needing to know any
@@ -38,7 +38,7 @@ browser-compat: api.RTCPeerConnection.onicecandidate
 
 <p>This should be set to a function which you provide that accepts as input an
   {{domxref("RTCPeerConnectionIceEvent")}} object representing the
-  {{event("icecandidate")}} event. The function should deliver the ICE candidate, whose
+  {{DOMxRef("RTCPeerConnection/icecandidate_event", "icecandidate")}} event. The function should deliver the ICE candidate, whose
   {{Glossary("SDP")}} can be found in the event's
   {{domxref("RTCPeerConnectionIceEvent.candidate", "candidate")}} property, to the remote
   peer through the signaling server.</p>
@@ -56,7 +56,7 @@ browser-compat: api.RTCPeerConnection.onicecandidate
 
 <p>The example below, which is based on the code from the article <a
     href="/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling">Signaling and video
-    calling</a>, sets up a handler for {{event("icecandidate")}} events to send the
+    calling</a>, sets up a handler for {{DOMxRef("RTCPeerConnection/icecandidate_event", "icecandidate")}} events to send the
   candidates to the remote peer.</p>
 
 <pre class="brush: js">pc.onicecandidate = function(event) {
@@ -82,6 +82,6 @@ browser-compat: api.RTCPeerConnection.onicecandidate
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li>The {{event("icecandidate")}} event and its type,
+  <li>The {{DOMxRef("RTCPeerConnection/icecandidate_event", "icecandidate")}} event and its type,
     {{domxref("RTCPeerConnectionIceEvent")}}.</li>
 </ul>

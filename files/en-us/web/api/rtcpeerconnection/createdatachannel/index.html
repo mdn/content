@@ -22,7 +22,7 @@ browser-compat: api.RTCPeerConnection.createDataChannel
   packets, and so forth.</p>
 
 <p>If the new data channel is the first one added to the connection, renegotiation is
-  started by delivering a {{event("negotiationneeded")}} event.</p>
+  started by delivering a {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} event.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -121,7 +121,7 @@ browser-compat: api.RTCPeerConnection.createDataChannel
 <h2 id="Examples">Examples</h2>
 
 <p>This example shows how to create a data channel and set up handlers for the
-  {{event("open")}} and {{event("message")}} events to send and receive messages on it
+  {{DOMxRef("RTCDataChannel/open_event", "open")}} and {{DOMxRef("RTCDataChannel/message_event", "message")}} events to send and receive messages on it
   (For brievity, the example assumes onnegotiationneeded is set up).</p>
 
 <pre class="brush: js">// Offerer side

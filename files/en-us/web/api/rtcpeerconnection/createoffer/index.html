@@ -156,7 +156,7 @@ browser-compat: api.RTCPeerConnection.createOffer
 
 <h2 id="Example">Example</h2>
 
-<p>Here we see a handler for the {{event("negotiationneeded")}} event which creates the
+<p>Here we see a handler for the {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} event which creates the
   offer and sends it to the remote system over a signaling channel.</p>
 
 <div class="note">
@@ -169,18 +169,18 @@ browser-compat: api.RTCPeerConnection.createOffer
     fulfillment handler, depend entirely on your design.</p>
 </div>
 
-<pre class="brush: js">  myPeerConnection.createOffer().then(function(offer) {
-    return myPeerConnection.setLocalDescription(offer);
-  })
-  .then(function() {
-    sendToServer({
-      name: myUsername,
-      target: targetUsername,
-      type: "video-offer",
-      sdp: myPeerConnection.localDescription
-    });
-  })
-  .catch(function(reason) {
+<pre class="brush: js">  myPeerConnection.createOffer().then(function(offer) {
+    return myPeerConnection.setLocalDescription(offer);
+  })
+  .then(function() {
+    sendToServer({
+      name: myUsername,
+      target: targetUsername,
+      type: "video-offer",
+      sdp: myPeerConnection.localDescription
+    });
+  })
+  .catch(function(reason) {
     // An error occurred, so handle the failure to connect
   });</pre>
 
