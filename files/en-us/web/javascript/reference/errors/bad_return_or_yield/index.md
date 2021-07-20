@@ -2,75 +2,72 @@
 title: 'SyntaxError: return not in function'
 slug: Web/JavaScript/Reference/Errors/Bad_return_or_yield
 tags:
-- Error
-- Errors
-- JavaScript
-- SyntaxError
+  - Error
+  - Errors
+  - JavaScript
+  - SyntaxError
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<p>The JavaScript exception "return (or yield) not in function" occurs when a
-  <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/return">return</a></code>
-  or <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/yield">yield</a></code>
-  statement is called outside of a <a
-    href="/en-US/docs/Web/JavaScript/Guide/Functions">function</a>.</p>
+The JavaScript exception "return (or yield) not in function" occurs when a
+[`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return)
+or [`yield`](/en-US/docs/Web/JavaScript/Reference/Operators/yield)
+statement is called outside of a [function](/en-US/docs/Web/JavaScript/Guide/Functions).
 
-<h2 id="Message">Message</h2>
+## Message
 
-<pre class="brush: js">SyntaxError: 'return' statement outside of function (Edge)
+```js
+SyntaxError: 'return' statement outside of function (Edge)
 SyntaxError: return not in function (Firefox)
 SyntaxError: yield not in function (Firefox)
-</pre>
+```
 
-<h2 id="Error_type">Error type</h2>
+## Error type
 
-<p>{{jsxref("SyntaxError")}}.</p>
+{{jsxref("SyntaxError")}}.
 
-<h2 id="What_went_wrong">What went wrong?</h2>
+## What went wrong?
 
-<p>A
-  <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/return">return</a></code>
-  or <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/yield">yield</a></code>
-  statement is called outside of a <a
-    href="/en-US/docs/Web/JavaScript/Guide/Functions">function</a>. Maybe there are
-  missing curly brackets somewhere? The <code>return</code> and <code>yield</code>
-  statements must be in a function, because they end (or pause and resume) function
-  execution and specify a value to be returned to the function caller.</p>
+A
+[`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return)
+or [`yield`](/en-US/docs/Web/JavaScript/Reference/Operators/yield)
+statement is called outside of a [function](/en-US/docs/Web/JavaScript/Guide/Functions). Maybe there are
+missing curly brackets somewhere? The `return` and `yield`
+statements must be in a function, because they end (or pause and resume) function
+execution and specify a value to be returned to the function caller.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Missing_curly_brackets">Missing curly brackets</h3>
+### Missing curly brackets
 
-<pre class="brush: js example-bad">var cheer = function(score) {
+```js example-bad
+var cheer = function(score) {
   if (score === 147)
     return 'Maximum!';
   };
-  if (score &gt; 100) {
+  if (score > 100) {
     return 'Century!';
   }
 }
 
-// SyntaxError: return not in function</pre>
+// SyntaxError: return not in function
+```
 
-<p>The curly brackets look correct at a first glance, but this code snippet is missing a
-  <code>{</code> after the first <code>if</code> statement. Correct would be:</p>
+The curly brackets look correct at a first glance, but this code snippet is missing a
+`{` after the first `if` statement. Correct would be:
 
-<pre class="brush: js example-good">var cheer = function(score) {
+```js example-good
+var cheer = function(score) {
   if (score === 147) {
     return 'Maximum!';
   }
-  if (score &gt; 100) {
+  if (score > 100) {
     return 'Century!';
   }
-};</pre>
+};
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>
-    <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/return">return</a></code>
-  </li>
-  <li>
-    <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/yield">yield</a></code>
-  </li>
-</ul>
+- [`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return)
+- [`yield`](/en-US/docs/Web/JavaScript/Reference/Operators/yield)

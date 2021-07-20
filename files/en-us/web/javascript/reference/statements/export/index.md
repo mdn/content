@@ -2,91 +2,90 @@
 title: export
 slug: Web/JavaScript/Reference/Statements/export
 tags:
-- ECMAScript 2015
-- JavaScript
-- Language feature
-- Modules
-- Reference
-- Statement
-- export
+  - ECMAScript 2015
+  - JavaScript
+  - Language feature
+  - Modules
+  - Reference
+  - Statement
+  - export
 browser-compat: javascript.statements.export
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p><span class="seoSummary">The <strong><code>export</code></strong> statement is used
-    when creating JavaScript modules to export live bindings to functions, objects, or
-    primitive values from the module so they can be used by other programs with the
-    {{jsxref("Statements/import", "import")}} statement. The value of an imported binding
-    is subject to change in the module that exports it. When a module updates the value of
-    a binding that it exports, the update will be visible in its imported value.</span></p>
+The **`export`** statement is used
+when creating JavaScript modules to export live bindings to functions, objects, or
+primitive values from the module so they can be used by other programs with the
+{{jsxref("Statements/import", "import")}} statement. The value of an imported binding
+is subject to change in the module that exports it. When a module updates the value of
+a binding that it exports, the update will be visible in its imported value.
 
-<p>Exported modules are in {{jsxref("Strict_mode","strict mode", "", 1)}} whether you
-  declare them as such or not. The export statement cannot be used in embedded scripts.
-</p>
+Exported modules are in {{jsxref("Strict_mode","strict mode", "", 1)}} whether you
+declare them as such or not. The export statement cannot be used in embedded scripts.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>There are two types of exports:</p>
+There are two types of exports:
 
-<ol>
-  <li>Named Exports (Zero or more exports per module)</li>
-  <li>Default Exports (One per module)</li>
-</ol>
+1.  Named Exports (Zero or more exports per module)
+2.  Default Exports (One per module)
 
-<pre class="brush: js">// Exporting individual features
-export let <var>name1</var>, <var>name2</var>, …, <var>nameN</var>; // also var, const
-export let <var>name1</var> = …, <var>name2</var> = …, …, <var>nameN</var>; // also var, const
+```js
+// Exporting individual features
+export let name1, name2, …, nameN; // also var, const
+export let name1 = …, name2 = …, …, nameN; // also var, const
 export function functionName(){...}
 export class ClassName {...}
 
 // Export list
-export { <var>name1</var>, <var>name2</var>, …, <var>nameN</var> };
+export { name1, name2, …, nameN };
 
 // Renaming exports
-export { <var>variable1</var> as <var>name1</var>, <var>variable2</var> as <var>name2</var>, …, <var>nameN</var> };
+export { variable1 as name1, variable2 as name2, …, nameN };
 
 // Exporting destructured assignments with renaming
-export const { <var>name1</var>, <var>name2: bar</var> } = o;
+export const { name1, name2: bar } = o;
 
 // Default exports
-export default <em>expression</em>;
+export default expression;
 export default function (…) { … } // also class, function*
 export default function name1(…) { … } // also class, function*
-export { <var>name1</var> as default, … };
+export { name1 as default, … };
 
 // Aggregating modules
 export * from …; // does not set the default export
 export * as name1 from …; // Draft ECMAScript® 2O21
-export { <var>name1</var>, <var>name2</var>, …, <var>nameN</var> } from …;
-export { <var>import1</var> as <var>name1</var>, <var>import2</var> as <var>name2</var>, …, <var>nameN</var> } from …;
-export { default, … } from …;</pre>
+export { name1, name2, …, nameN } from …;
+export { import1 as name1, import2 as name2, …, nameN } from …;
+export { default, … } from …;
+```
 
-<dl>
-  <dt><code><var>nameN</var></code></dt>
-  <dd>Identifier to be exported (so that it can be imported via
-    {{jsxref("Statements/import", "import")}} in another script).</dd>
-</dl>
+- `nameN`
+  - : Identifier to be exported (so that it can be imported via
+    {{jsxref("Statements/import", "import")}} in another script).
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>There are two different types of export, <strong>named</strong> and
-  <strong>default</strong>. You can have multiple named exports per module but only one
-  default export. Each type corresponds to one of the above syntax:</p>
+There are two different types of export, **named** and
+**default**. You can have multiple named exports per module but only one
+default export. Each type corresponds to one of the above syntax:
 
-<p>Named exports:</p>
+Named exports:
 
-<pre class="brush: js">// export features declared earlier
+```js
+// export features declared earlier
 export { myFunction, myVariable };
 
 // export individual features (can export var, let,
 // const, function, class)
 export let myVariable = Math.sqrt(2);
 export function myFunction() { ... };
-</pre>
+```
 
-<p>Default exports:</p>
+Default exports:
 
-<pre class="brush: js">// export feature declared earlier as default
+```js
+// export feature declared earlier as default
 export { myFunction as default };
 
 // export individual features as default
@@ -94,78 +93,87 @@ export default function () { ... }
 export default class { .. }
 
 // each export overwrites the previous one
-</pre>
+```
 
-<p>Named exports are useful to export several values. During the import, it is mandatory
-  to use the same name of the corresponding object.</p>
+Named exports are useful to export several values. During the import, it is mandatory
+to use the same name of the corresponding object.
 
-<p>But a default export can be imported with any name for example:</p>
+But a default export can be imported with any name for example:
 
-<pre class="brush: js">// file test.js
+```js
+// file test.js
 let k; export default k = 12;
-</pre>
+```
 
-<pre class="brush: js">// some other file
+```js
+// some other file
 import m from './test'; // note that we have the freedom to use import m instead of import k, because k was default export
 console.log(m);        // will log 12
-</pre>
+```
 
-<p>You can also rename named exports to avoid naming conflicts:</p>
+You can also rename named exports to avoid naming conflicts:
 
-<pre class="brush: js">export { <var>myFunction</var> as <var>function1</var>,<var>
-         myVariable</var> as variable };
-</pre>
+```js
+export { myFunction as function1,
+         myVariable as variable };
+```
 
-<h3 id="Re-exporting_Aggregating">Re-exporting / Aggregating</h3>
+### Re-exporting / Aggregating
 
-<p>It is also possible to "import/export" from different modules in a parent module so
-  that they are available to import from that module. In other words, one can create a
-  single module concentrating various exports from various modules.</p>
+It is also possible to "import/export" from different modules in a parent module so
+that they are available to import from that module. In other words, one can create a
+single module concentrating various exports from various modules.
 
-<p>This can be achieved with the "export from" syntax:</p>
+This can be achieved with the "export from" syntax:
 
-<pre class="brush: js">export { default as function1,
+```js
+export { default as function1,
          function2 } from 'bar.js';
-</pre>
+```
 
-<p>Which is comparable to a combination of import and export:</p>
+Which is comparable to a combination of import and export:
 
-<pre class="brush: js">import { default as function1,
+```js
+import { default as function1,
          function2 } from 'bar.js';
 export { function1 as default, function2 };
-</pre>
+```
 
-<p>But where <code>function1</code> and <code>function2</code> do not become available
-  inside the current module.</p>
+But where `function1` and `function2` do not become available
+inside the current module.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> The following is syntactically invalid despite its import
-    equivalent:</p>
-</div>
+> **Note:** The following is syntactically invalid despite its import
+> equivalent:
 
-<pre class="brush: js">import DefaultExport from 'bar.js'; // Valid
-</pre>
+```js
+import DefaultExport from 'bar.js'; // Valid
+```
 
-<pre class="brush: js">export DefaultExport from 'bar.js'; // Invalid</pre>
+```js
+export DefaultExport from 'bar.js'; // Invalid
+```
 
-<p>The correct way of doing this is to rename the export:</p>
+The correct way of doing this is to rename the export:
 
-<pre class="brush: js">export { default as DefaultExport } from 'bar.js';
-</pre>
+```js
+export { default as DefaultExport } from 'bar.js';
+```
 
-<p>The "export from" syntax allows the <code>as</code> token to be omitted; however
-  this will mean the default item cannot be imported as a named import:</p>
+The "export from" syntax allows the `as` token to be omitted; however
+this will mean the default item cannot be imported as a named import:
 
-<pre class="brush: js">export { default, function2 } from 'bar.js';
-</pre>
+```js
+export { default, function2 } from 'bar.js';
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_named_exports">Using named exports</h3>
+### Using named exports
 
-<p>In a module <code>my-module.js</code>, we could include the following code:</p>
+In a module `my-module.js`, we could include the following code:
 
-<pre class="brush: js">// module "my-module.js"
+```js
+// module "my-module.js"
 function cube(x) {
   return x * x * x;
 }
@@ -183,11 +191,12 @@ var graph = {
 }
 
 export { cube, foo, graph };
-</pre>
+```
 
-<p>Then in the top-level module included in your HTML page, we could have:</p>
+Then in the top-level module included in your HTML page, we could have:
 
-<pre class="brush: js">import { cube, foo, graph } from './my-module.js';
+```js
+import { cube, foo, graph } from './my-module.js';
 
 graph.options = {
     color:'blue',
@@ -196,91 +205,92 @@ graph.options = {
 
 graph.draw();
 console.log(cube(3)); // 27
-console.log(foo);    // 4.555806215962888</pre>
+console.log(foo);    // 4.555806215962888
+```
 
-<p>It is important to note the following:</p>
+It is important to note the following:
 
-<ul>
-  <li>You need to include this script in your HTML with a {{htmlelement("script")}}
-    element of type="module", so that it gets recognized as a module and dealt with
-    appropriately.</li>
-  <li>You can't run JS modules via a <code>file://</code> URL — you'll get <a
-      href="/en-US/docs/Web/HTTP/CORS">CORS</a> errors. You need to run it via an HTTP
-    server.</li>
-</ul>
+- You need to include this script in your HTML with a {{htmlelement("script")}}
+  element of type="module", so that it gets recognized as a module and dealt with
+  appropriately.
+- You can't run JS modules via a `file://` URL — you'll get [CORS](/en-US/docs/Web/HTTP/CORS) errors. You need to run it via an HTTP
+  server.
 
-<h3 id="Using_the_default_export">Using the default export</h3>
+### Using the default export
 
-<p>If we want to export a single value or to have a fallback value for your module, you
-  could use a default export:</p>
+If we want to export a single value or to have a fallback value for your module, you
+could use a default export:
 
-<pre class="brush: js">// module "my-module.js"
+```js
+// module "my-module.js"
 
 export default function cube(x) {
   return x * x * x;
 }
-</pre>
+```
 
-<p>Then, in another script, it is straightforward to import the default export:</p>
+Then, in another script, it is straightforward to import the default export:
 
-<pre class="brush: js">import cube from './my-module.js';
+```js
+import cube from './my-module.js';
 console.log(cube(3)); // 27
-</pre>
+```
 
-<h3 id="Using_export_from">Using export from</h3>
+### Using export from
 
-<p>Let's take an example where we have the following hierarchy:</p>
+Let's take an example where we have the following hierarchy:
 
-<ul>
-  <li><code>childModule1.js</code>: exporting <code>myFunction</code> and
-    <code>myVariable</code></li>
-  <li><code>childModule2.js</code>: exporting <code>myClass</code></li>
-  <li><code>parentModule.js</code>: acting as an aggregator (and doing nothing else)</li>
-  <li>top level module: consuming the exports of <code>parentModule.js</code></li>
-</ul>
+- `childModule1.js`: exporting `myFunction` and
+  `myVariable`
+- `childModule2.js`: exporting `myClass`
+- `parentModule.js`: acting as an aggregator (and doing nothing else)
+- top level module: consuming the exports of `parentModule.js`
 
-<p>This is what it would look like using code snippets:</p>
+This is what it would look like using code snippets:
 
-<pre class="brush: js">// In childModule1.js
+```js
+// In childModule1.js
 let myFunction = ...; // assign something useful to myFunction
 let myVariable = ...; // assign something useful to myVariable
 export {myFunction, myVariable};
-</pre>
+```
 
-<pre class="brush: js">// In childModule2.js
+```js
+// In childModule2.js
 let myClass = ...; // assign something useful to myClass
 export myClass;
-</pre>
+```
 
-<pre class="brush: js">// In parentModule.js
+```js
+// In parentModule.js
 // Only aggregating the exports from childModule1 and childModule2
 // to re-export them
 export { myFunction, myVariable } from 'childModule1.js';
 export { myClass } from 'childModule2.js';
-</pre>
+```
 
-<pre class="brush: js">// In top-level module
+```js
+// In top-level module
 // We can consume the exports from a single module since parentModule
 // "collected"/"bundled" them in a single source
-import { myFunction, myVariable, myClass } from 'parentModule.js'</pre>
+import { myFunction, myVariable, myClass } from 'parentModule.js'
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Statements/import", "import")}}</li>
-  <li><a href="/en-US/docs/Web/JavaScript/Guide/Modules">JavaScript modules</a> guide</li>
-  <li><a href="https://hacks.mozilla.org/2015/08/es6-in-depth-modules/">ES6 in Depth:
-      Modules</a>, Hacks blog post by Jason Orendorff</li>
-  <li><a href="https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/">ES
-      modules: A cartoon deep-dive</a>, Hacks blog post by Lin Clark</li>
-  <li><a href="http://exploringjs.com/es6/ch_modules.html">Axel Rauschmayer's book:
-      "Exploring JS: Modules"</a></li>
-</ul>
+- {{jsxref("Statements/import", "import")}}
+- [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules) guide
+- [ES6 in Depth:
+  Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/), Hacks blog post by Jason Orendorff
+- [ES
+  modules: A cartoon deep-dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/), Hacks blog post by Lin Clark
+- [Axel Rauschmayer's book:
+  "Exploring JS: Modules"](http://exploringjs.com/es6/ch_modules.html)

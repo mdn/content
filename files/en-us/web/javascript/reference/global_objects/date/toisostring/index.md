@@ -2,64 +2,62 @@
 title: Date.prototype.toISOString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toISOString
 tags:
-- Date
-- JavaScript
-- Method
-- Prototype
-- Reference
-- polyfill
+  - Date
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
+  - polyfill
 browser-compat: javascript.builtins.Date.toISOString
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>toISOString()</code></strong> method returns a string in
-  <em>simplified</em> extended ISO format (<a
-    href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a>), which is always 24 or 27
-  characters long
-  (<code><var>YYYY</var>-<var>MM</var>-<var>DD</var>T<var>HH</var>:<var>mm</var>:<var>ss.sss</var>Z</code>
-  or
-  <code><var>±</var><var>YYYYYY</var>-<var>MM</var>-<var>DD</var>T<var>HH</var>:<var>mm</var>:<var>ss.sss</var>Z</code>,
-  respectively). The timezone is always zero UTC offset, as denoted by the suffix
-  "<code>Z</code>".</p>
+The **`toISOString()`** method returns a string in
+_simplified_ extended ISO format ([ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)), which is always 24 or 27
+characters long
+(`YYYY-MM-DDTHH:mm:ss.sssZ`
+or
+`±YYYYYY-MM-DDTHH:mm:ss.sssZ`,
+respectively). The timezone is always zero UTC offset, as denoted by the suffix
+"`Z`".
 
-<div>{{EmbedInteractiveExample("pages/js/date-toisostring.html")}}</div>
+{{EmbedInteractiveExample("pages/js/date-toisostring.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+toISOString()
+```
 
-<pre class="brush: js">toISOString()</pre>
+### Return value
 
-<h3 id="Return_value">Return value</h3>
+A string representing the given date in the [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format according to
+universal time.
 
-<p>A string representing the given date in the <a
-    href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> format according to
-  universal time.</p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Using toISOString()
 
-<h3 id="Using_toISOString">Using toISOString()</h3>
-
-<pre class="brush: js">let today = new Date('05 October 2011 14:48 UTC')
+```js
+let today = new Date('05 October 2011 14:48 UTC')
 
 console.log(today.toISOString())  // Returns 2011-10-05T14:48:00.000Z
-</pre>
+```
 
-<p>The above example uses parsing of a non–standard string value that may not be correctly
-  parsed in non–Mozilla browsers.</p>
+The above example uses parsing of a non–standard string value that may not be correctly
+parsed in non–Mozilla browsers.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Date.prototype.toLocaleDateString()")}}</li>
-  <li>{{jsxref("Date.prototype.toTimeString()")}}</li>
-  <li>{{jsxref("Date.prototype.toUTCString()")}}</li>
-  <li><a href="https://github.com/behnammodi/polyfill/blob/master/date.polyfill.js">A polyfill</a></li>
-</ul>
+- {{jsxref("Date.prototype.toLocaleDateString()")}}
+- {{jsxref("Date.prototype.toTimeString()")}}
+- {{jsxref("Date.prototype.toUTCString()")}}
+- [A polyfill](https://github.com/behnammodi/polyfill/blob/master/date.polyfill.js)

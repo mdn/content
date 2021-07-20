@@ -2,80 +2,76 @@
 title: Equality (==)
 slug: Web/JavaScript/Reference/Operators/Equality
 tags:
-- JavaScript
-- Language feature
-- Operator
-- Reference
+  - JavaScript
+  - Language feature
+  - Operator
+  - Reference
 browser-compat: javascript.operators.equality
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>The equality operator (<code>==</code>) checks whether its two operands are equal,
-  returning a Boolean result. Unlike the <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality">strict
-    equality</a> operator, it attempts to convert and compare operands that are of
-  different types.</p>
+The equality operator (`==`) checks whether its two operands are equal,
+returning a Boolean result. Unlike the [strict
+equality](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality) operator, it attempts to convert and compare operands that are of
+different types.
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-equality.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-equality.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+x == y
+```
 
-<pre class="brush: js">x == y</pre>
+## Description
 
-<h2 id="Description">Description</h2>
+The equality operators (`==` and `!=`) use the [Abstract Equality
+Comparison Algorithm](http://www.ecma-international.org/ecma-262/5.1/#sec-11.9.3) to compare two operands. This can be roughly summarised as
+follows:
 
-<p>The equality operators (<code>==</code> and <code>!=</code>) use the <a
-    href="http://www.ecma-international.org/ecma-262/5.1/#sec-11.9.3">Abstract Equality
-    Comparison Algorithm</a> to compare two operands. This can be roughly summarised as
-  follows:</p>
+- If the operands are both objects, return `true` only if both operands
+  reference the same object.
+- If one operand is `null` and the other is `undefined`, return
+  `true`.
+- If the operands are of different types, try to convert them to the same type before
+  comparing:
 
-<ul>
-  <li>If the operands are both objects, return <code>true</code> only if both operands
-    reference the same object.</li>
-  <li>If one operand is <code>null</code> and the other is <code>undefined</code>, return
-    <code>true</code>.</li>
-  <li>If the operands are of different types, try to convert them to the same type before
-    comparing:
-    <ul>
-      <li>When comparing a number to a string, try to convert the string to a numeric
-        value.</li>
-      <li>If one of the operands is <code>Boolean</code>, convert the Boolean operand to 1
-        if it is <code>true</code> and +0 if it is <code>false</code>.</li>
-      <li>If one of the operands is an object and the other is a number or a string, try
-        to convert the object to a primitive using the object's <code>valueOf()</code> and
-        <code>toString()</code> methods.</li>
-    </ul>
-  </li>
-  <li>If the operands have the same type, they are compared as follows:
-    <ul>
-      <li><code>String</code>: return <code>true</code> only if both operands have the
-        same characters in the same order.</li>
-      <li><code>Number</code>: return <code>true</code> only if both operands have the
-        same value. <code>+0</code> and <code>-0</code> are treated as the same value. If
-        either operand is <code>NaN</code>, return <code>false</code>.</li>
-      <li><code>Boolean</code>: return <code>true</code> only if operands are both
-        <code>true</code> or both <code>false</code>.</li>
-    </ul>
-  </li>
-</ul>
+  - When comparing a number to a string, try to convert the string to a numeric
+    value.
+  - If one of the operands is `Boolean`, convert the Boolean operand to 1
+    if it is `true` and +0 if it is `false`.
+  - If one of the operands is an object and the other is a number or a string, try
+    to convert the object to a primitive using the object's `valueOf()` and
+    `toString()` methods.
 
-<p>The most notable difference between this operator and the <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality">strict
-    equality</a> (<code>===</code>) operator is that the strict equality operator does not
-  attempt type conversion. Instead, the strict equality operator always considers operands
-  of different types to be different.</p>
+- If the operands have the same type, they are compared as follows:
 
-<h2 id="Examples">Examples</h2>
+  - `String`: return `true` only if both operands have the
+    same characters in the same order.
+  - `Number`: return `true` only if both operands have the
+    same value. `+0` and `-0` are treated as the same value. If
+    either operand is `NaN`, return `false`.
+  - `Boolean`: return `true` only if operands are both
+    `true` or both `false`.
 
-<h3 id="Comparison_with_no_type_conversion">Comparison with no type conversion</h3>
+The most notable difference between this operator and the [strict
+equality](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality) (`===`) operator is that the strict equality operator does not
+attempt type conversion. Instead, the strict equality operator always considers operands
+of different types to be different.
 
-<pre class="brush: js">1 == 1;              // true
-"hello" == "hello";  // true</pre>
+## Examples
 
-<h3 id="Comparison_with_type_conversion">Comparison with type conversion</h3>
+### Comparison with no type conversion
 
-<pre class="brush: js">"1" ==  1;            // true
+```js
+1 == 1;              // true
+"hello" == "hello";  // true
+```
+
+### Comparison with type conversion
+
+```js
+"1" ==  1;            // true
 1 == "1";             // true
 0 == false;           // true
 0 == null;            // false
@@ -87,25 +83,29 @@ null == undefined;    // true
 const number1 = new Number(3);
 const number2 = new Number(3);
 number1 == 3;         // true
-number1 == number2;   // false</pre>
+number1 == number2;   // false
+```
 
-<h3 id="Comparison_of_objects">Comparison of objects</h3>
+### Comparison of objects
 
-<pre class="brush: js">const object1 = {"key": "value"}
+```js
+const object1 = {"key": "value"}
 const object2 = {"key": "value"};
 
 object1 == object2 // false
-object2 == object2 // true</pre>
+object2 == object2 // true
+```
 
-<h3 id="Comparing_strings_and_String_objects">Comparing strings and String objects</h3>
+### Comparing strings and String objects
 
-<p>Note that strings constructed using <code>new String()</code> are objects. If you
-  compare one of these with a string literal, the <code>String</code> object will be
-  converted to a string literal and the contents will be compared. However, if both
-  operands are <code>String</code> objects, then they are compared as objects and must
-  reference the same object for comparison to succeed:</p>
+Note that strings constructed using `new String()` are objects. If you
+compare one of these with a string literal, the `String` object will be
+converted to a string literal and the contents will be compared. However, if both
+operands are `String` objects, then they are compared as objects and must
+reference the same object for comparison to succeed:
 
-<pre class="brush: js">const string1 = "hello";
+```js
+const string1 = "hello";
 const string2 = String("hello");
 const string3 = new String("hello");
 const string4 = new String("hello");
@@ -114,29 +114,30 @@ console.log(string1 == string2); // true
 console.log(string1 == string3); // true
 console.log(string2 == string3); // true
 console.log(string3 == string4); // false
-console.log(string4 == string4); // true</pre>
+console.log(string4 == string4); // true
+```
 
-<h3 id="Comparing_Dates_and_strings">Comparing Dates and strings</h3>
+### Comparing Dates and strings
 
-<pre class="brush: js">const d = new Date('December 17, 1995 03:24:00');
+```js
+const d = new Date('December 17, 1995 03:24:00');
 const s = d.toString(); // for example: "Sun Dec 17 1995 03:24:00 GMT-0800 (Pacific Standard Time)"
-console.log(d == s);    //true</pre>
+console.log(d == s);    //true
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Inequality">Inequality
-      operator</a></li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality">Strict
-      equality operator</a></li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Strict_inequality">Strict
-      inequality operator</a></li>
-</ul>
+- [Inequality
+  operator](/en-US/docs/Web/JavaScript/Reference/Operators/Inequality)
+- [Strict
+  equality operator](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality)
+- [Strict
+  inequality operator](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_inequality)

@@ -2,70 +2,68 @@
 title: Math.expm1()
 slug: Web/JavaScript/Reference/Global_Objects/Math/expm1
 tags:
-- JavaScript
-- Math
-- Method
-- Reference
-- Polyfill
+  - JavaScript
+  - Math
+  - Method
+  - Reference
+  - Polyfill
 browser-compat: javascript.builtins.Math.expm1
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>Math.expm1()</code></strong> function returns
-  <code>e^x - 1</code>, where <code>x</code> is the argument, and
-  {{jsxref("Math.E", "e", "", 1)}} the base of the natural logarithms.</p>
+The **`Math.expm1()`** function returns
+`e^x - 1`, where `x` is the argument, and
+{{jsxref("Math.E", "e", "", 1)}} the base of the natural logarithms.
 
-<div>{{EmbedInteractiveExample("pages/js/math-expm1.html")}}</div>
+{{EmbedInteractiveExample("pages/js/math-expm1.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+Math.expm1(x)
+```
 
-<pre class="brush: js">Math.expm1(<var>x</var>)</pre>
+### Parameters
 
-<h3 id="Parameters">Parameters</h3>
+- `x`
+  - : A number.
 
-<dl>
-  <dt><code><var>x</var></code></dt>
-  <dd>A number.</dd>
-</dl>
+### Return value
 
-<h3 id="Return_value">Return value</h3>
+A number representing `e^x - 1`, where `e` is
+{{jsxref("Math.E", "Euler's number", "", 1)}} and `x` is the argument.
 
-<p>A number representing <code>e^x - 1</code>, where <code>e</code> is
-  {{jsxref("Math.E", "Euler's number", "", 1)}} and <code>x</code> is the argument.</p>
+## Description
 
-<h2 id="Description">Description</h2>
+Because `expm1()` is a static method of `Math`, you always use it
+as `Math.expm1()`, rather than as a method of a `Math` object you
+created (`Math` is not a constructor).
 
-<p>Because <code>expm1()</code> is a static method of <code>Math</code>, you always use it
-  as <code>Math.expm1()</code>, rather than as a method of a <code>Math</code> object you
-  created (<code>Math</code> is not a constructor).</p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Using Math.expm1()
 
-<h3 id="Using_Math.expm1">Using Math.expm1()</h3>
-
-<pre class="brush: js">Math.expm1(-1); // -0.6321205588285577
+```js
+Math.expm1(-1); // -0.6321205588285577
 Math.expm1(0);  // 0
 Math.expm1(1);  // 1.718281828459045
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>A polyfill of <code>Math.expm1</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-math"><code>core-js</code></a></li>
-  <li>{{jsxref("Math.E")}}</li>
-  <li>{{jsxref("Math.exp()")}}</li>
-  <li>{{jsxref("Math.log()")}}</li>
-  <li>{{jsxref("Math.log10()")}}</li>
-  <li>{{jsxref("Math.log1p()")}}</li>
-  <li>{{jsxref("Math.log2()")}}</li>
-  <li>{{jsxref("Math.pow()")}}</li>
-</ul>
+- A polyfill of `Math.expm1` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-math)
+- {{jsxref("Math.E")}}
+- {{jsxref("Math.exp()")}}
+- {{jsxref("Math.log()")}}
+- {{jsxref("Math.log10()")}}
+- {{jsxref("Math.log1p()")}}
+- {{jsxref("Math.log2()")}}
+- {{jsxref("Math.pow()")}}

@@ -11,216 +11,211 @@ tags:
   - timeStamp
 browser-compat: javascript.builtins.Date
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>JavaScript <strong><code>Date</code></strong> objects represent a single moment in time in a platform-independent format. <code>Date</code> objects contain a <code>Number</code> that represents milliseconds since 1 January 1970 UTC.</p>
+JavaScript **`Date`** objects represent a single moment in time in a platform-independent format. `Date` objects contain a `Number` that represents milliseconds since 1 January 1970 UTC.
 
-<div class="notecard note">
-<p><strong>Note:</strong> TC39 is working on <a href="https://tc39.es/proposal-temporal/docs/index.html">Temporal</a>, a new Date/Time API. Read more about it on the <a href="https://blogs.igalia.com/compilers/2020/06/23/dates-and-times-in-javascript/">Igalia blog</a>. It is not yet ready for production use!</p>
-</div>
+> **Note:** TC39 is working on [Temporal](https://tc39.es/proposal-temporal/docs/index.html), a new Date/Time API. Read more about it on the [Igalia blog](https://blogs.igalia.com/compilers/2020/06/23/dates-and-times-in-javascript/). It is not yet ready for production use!
 
-<h2 id="Description">Description</h2>
+## Description
 
-<h3 id="The_ECMAScript_epoch_and_timestamps">The ECMAScript epoch and timestamps</h3>
+### The ECMAScript epoch and timestamps
 
-<p>A JavaScript date is fundamentally specified as the number of milliseconds that have elapsed since midnight on January 1, 1970, UTC. This date and time are not the same as the <strong>UNIX epoch </strong>(the number of seconds that have elapsed since midnight on January 1, 1970, UTC), which is the predominant base value for computer-recorded date and time values.</p>
+A JavaScript date is fundamentally specified as the number of milliseconds that have elapsed since midnight on January 1, 1970, UTC. This date and time are not the same as the **UNIX epoch** (the number of seconds that have elapsed since midnight on January 1, 1970, UTC), which is the predominant base value for computer-recorded date and time values.
 
-<p><strong>Note:</strong> It's important to keep in mind that while the time value at the heart of a Date object is UTC, the basic methods to fetch the date and time or its components all work in the local (i.e. host system) time zone and offset.</p>
+**Note:** It's important to keep in mind that while the time value at the heart of a Date object is UTC, the basic methods to fetch the date and time or its components all work in the local (i.e. host system) time zone and offset.
 
-<p>It should be noted that the maximum <code>Date</code> is not of the same value as the maximum safe integer (<code>Number.MAX_SAFE_INTEGER</code> is 9,007,199,254,740,991). Instead, it is defined in ECMA-262 that a maximum of ±100,000,000 (one hundred million) days relative to January 1, 1970 UTC (that is, April 20, 271821 BCE ~ September 13, 275760 CE) can be represented by the standard <code>Date</code> object (equivalent to ±8,640,000,000,000,000 milliseconds).</p>
+It should be noted that the maximum `Date` is not of the same value as the maximum safe integer (`Number.MAX_SAFE_INTEGER` is 9,007,199,254,740,991). Instead, it is defined in ECMA-262 that a maximum of ±100,000,000 (one hundred million) days relative to January 1, 1970 UTC (that is, April 20, 271821 BCE \~ September 13, 275760 CE) can be represented by the standard `Date` object (equivalent to ±8,640,000,000,000,000 milliseconds).
 
-<h3 id="Date_format_and_time_zone_conversions">Date format and time zone conversions</h3>
+### Date format and time zone conversions
 
-<p>There are several methods available to obtain a date in various formats, as well as to perform time zone conversions. Particularly useful are the functions that output the date and time in Coordinated Universal Time (UTC), the global standard time defined by the World Time Standard. (This time is historically known as <em>Greenwich Mean Time</em>, as UTC lies along the meridian that includes London—and nearby Greenwich—in the United Kingdom.) The user's device provides the local time.</p>
+There are several methods available to obtain a date in various formats, as well as to perform time zone conversions. Particularly useful are the functions that output the date and time in Coordinated Universal Time (UTC), the global standard time defined by the World Time Standard. (This time is historically known as _Greenwich Mean Time_, as UTC lies along the meridian that includes London—and nearby Greenwich—in the United Kingdom.) The user's device provides the local time.
 
-<p>In addition to methods to read and alter individual components of the local date and time (such as {{jsxref("Date.getDay", "getDay()")}} and {{jsxref("Date.setHours", "setHours()")}}), there are also versions of the same methods that read and manipulate the date and time using UTC (such as {{jsxref("Date.getUTCDay()", "getUTCDay()")}} and {{jsxref("Date.setUTCHours", "setUTCHours()")}}).</p>
+In addition to methods to read and alter individual components of the local date and time (such as {{jsxref("Date.getDay", "getDay()")}} and {{jsxref("Date.setHours", "setHours()")}}), there are also versions of the same methods that read and manipulate the date and time using UTC (such as {{jsxref("Date.getUTCDay()", "getUTCDay()")}} and {{jsxref("Date.setUTCHours", "setUTCHours()")}}).
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{jsxref("Date/Date", "Date()")}}</dt>
- <dd>When called as a function, returns a string representation of the current date and time, exactly as <code>new Date().toString()</code> does.</dd>
- <dt>{{jsxref("Date/Date", "new Date()")}}</dt>
- <dd>When called as a constructor, returns a new <code>Date</code> object.</dd>
-</dl>
+- {{jsxref("Date/Date", "Date()")}}
+  - : When called as a function, returns a string representation of the current date and time, exactly as `new Date().toString()` does.
+- {{jsxref("Date/Date", "new Date()")}}
+  - : When called as a constructor, returns a new `Date` object.
 
-<h2 id="Static_methods">Static methods</h2>
+## Static methods
 
-<dl>
- <dt>{{jsxref("Date.now()")}}</dt>
- <dd>Returns the numeric value corresponding to the current time—the number of milliseconds elapsed since January 1, 1970 00:00:00 UTC, with leap seconds ignored.</dd>
- <dt>{{jsxref("Date.parse()")}}</dt>
- <dd>Parses a string representation of a date and returns the number of milliseconds since 1 January, 1970, 00:00:00 UTC, with leap seconds ignored.
- <div class="note">
- <p><strong>Note:</strong> Parsing of strings with <code>Date.parse</code> is strongly discouraged due to browser differences and inconsistencies.</p>
- </div>
- </dd>
- <dt>{{jsxref("Date.UTC()")}}</dt>
- <dd>Accepts the same parameters as the longest form of the constructor (i.e. 2 to 7) and returns the number of milliseconds since January 1, 1970, 00:00:00 UTC, with leap seconds ignored.</dd>
-</dl>
+- {{jsxref("Date.now()")}}
+  - : Returns the numeric value corresponding to the current time—the number of milliseconds elapsed since January 1, 1970 00:00:00 UTC, with leap seconds ignored.
+- {{jsxref("Date.parse()")}}
 
-<h2 id="Instance_methods">Instance methods</h2>
+  - : Parses a string representation of a date and returns the number of milliseconds since 1 January, 1970, 00:00:00 UTC, with leap seconds ignored.
 
-<dl>
- <dt>{{jsxref("Date.prototype.getDate()")}}</dt>
- <dd>Returns the day of the month (<code>1</code>–<code>31</code>) for the specified date according to local time.</dd>
- <dt>{{jsxref("Date.prototype.getDay()")}}</dt>
- <dd>Returns the day of the week (<code>0</code>–<code>6</code>) for the specified date according to local time.</dd>
- <dt>{{jsxref("Date.prototype.getFullYear()")}}</dt>
- <dd>Returns the year (4 digits for 4-digit years) of the specified date according to local time.</dd>
- <dt>{{jsxref("Date.prototype.getHours()")}}</dt>
- <dd>Returns the hour (<code>0</code>–<code>23</code>) in the specified date according to local time.</dd>
- <dt>{{jsxref("Date.prototype.getMilliseconds()")}}</dt>
- <dd>Returns the milliseconds (<code>0</code>–<code>999</code>) in the specified date according to local time.</dd>
- <dt>{{jsxref("Date.prototype.getMinutes()")}}</dt>
- <dd>Returns the minutes (<code>0</code>–<code>59</code>) in the specified date according to local time.</dd>
- <dt>{{jsxref("Date.prototype.getMonth()")}}</dt>
- <dd>Returns the month (<code>0</code>–<code>11</code>) in the specified date according to local time.</dd>
- <dt>{{jsxref("Date.prototype.getSeconds()")}}</dt>
- <dd>Returns the seconds (<code>0</code>–<code>59</code>) in the specified date according to local time.</dd>
- <dt>{{jsxref("Date.prototype.getTime()")}}</dt>
- <dd>Returns the numeric value of the specified date as the number of milliseconds since January 1, 1970, 00:00:00 UTC. (Negative values are returned for prior times.)</dd>
- <dt>{{jsxref("Date.prototype.getTimezoneOffset()")}}</dt>
- <dd>Returns the time-zone offset in minutes for the current locale.</dd>
- <dt>{{jsxref("Date.prototype.getUTCDate()")}}</dt>
- <dd>Returns the day (date) of the month (<code>1</code>–<code>31</code>) in the specified date according to universal time.</dd>
- <dt>{{jsxref("Date.prototype.getUTCDay()")}}</dt>
- <dd>Returns the day of the week (<code>0</code>–<code>6</code>) in the specified date according to universal time.</dd>
- <dt>{{jsxref("Date.prototype.getUTCFullYear()")}}</dt>
- <dd>Returns the year (4 digits for 4-digit years) in the specified date according to universal time.</dd>
- <dt>{{jsxref("Date.prototype.getUTCHours()")}}</dt>
- <dd>Returns the hours (<code>0</code>–<code>23</code>) in the specified date according to universal time.</dd>
- <dt>{{jsxref("Date.prototype.getUTCMilliseconds()")}}</dt>
- <dd>Returns the milliseconds (<code>0</code>–<code>999</code>) in the specified date according to universal time.</dd>
- <dt>{{jsxref("Date.prototype.getUTCMinutes()")}}</dt>
- <dd>Returns the minutes (<code>0</code>–<code>59</code>) in the specified date according to universal time.</dd>
- <dt>{{jsxref("Date.prototype.getUTCMonth()")}}</dt>
- <dd>Returns the month (<code>0</code>–<code>11</code>) in the specified date according to universal time.</dd>
- <dt>{{jsxref("Date.prototype.getUTCSeconds()")}}</dt>
- <dd>Returns the seconds (<code>0</code>–<code>59</code>) in the specified date according to universal time.</dd>
- <dt>{{jsxref("Date.prototype.getYear()")}}</dt>
- <dd>Returns the year (usually 2–3 digits) in the specified date according to local time. Use {{jsxref("Date.prototype.getFullYear()", "getFullYear()")}} instead.</dd>
- <dt>{{jsxref("Date.prototype.setDate()")}}</dt>
- <dd>Sets the day of the month for a specified date according to local time.</dd>
- <dt>{{jsxref("Date.prototype.setFullYear()")}}</dt>
- <dd>Sets the full year (e.g. 4 digits for 4-digit years) for a specified date according to local time.</dd>
- <dt>{{jsxref("Date.prototype.setHours()")}}</dt>
- <dd>Sets the hours for a specified date according to local time.</dd>
- <dt>{{jsxref("Date.prototype.setMilliseconds()")}}</dt>
- <dd>Sets the milliseconds for a specified date according to local time.</dd>
- <dt>{{jsxref("Date.prototype.setMinutes()")}}</dt>
- <dd>Sets the minutes for a specified date according to local time.</dd>
- <dt>{{jsxref("Date.prototype.setMonth()")}}</dt>
- <dd>Sets the month for a specified date according to local time.</dd>
- <dt>{{jsxref("Date.prototype.setSeconds()")}}</dt>
- <dd>Sets the seconds for a specified date according to local time.</dd>
- <dt>{{jsxref("Date.prototype.setTime()")}}</dt>
- <dd>Sets the {{jsxref("Date")}} object to the time represented by a number of milliseconds since January 1, 1970, 00:00:00 UTC. Use negative numbers for times prior.</dd>
- <dt>{{jsxref("Date.prototype.setUTCDate()")}}</dt>
- <dd>Sets the day of the month for a specified date according to universal time.</dd>
- <dt>{{jsxref("Date.prototype.setUTCFullYear()")}}</dt>
- <dd>Sets the full year (e.g. 4 digits for 4-digit years) for a specified date according to universal time.</dd>
- <dt>{{jsxref("Date.prototype.setUTCHours()")}}</dt>
- <dd>Sets the hour for a specified date according to universal time.</dd>
- <dt>{{jsxref("Date.prototype.setUTCMilliseconds()")}}</dt>
- <dd>Sets the milliseconds for a specified date according to universal time.</dd>
- <dt>{{jsxref("Date.prototype.setUTCMinutes()")}}</dt>
- <dd>Sets the minutes for a specified date according to universal time.</dd>
- <dt>{{jsxref("Date.prototype.setUTCMonth()")}}</dt>
- <dd>Sets the month for a specified date according to universal time.</dd>
- <dt>{{jsxref("Date.prototype.setUTCSeconds()")}}</dt>
- <dd>Sets the seconds for a specified date according to universal time.</dd>
- <dt>{{jsxref("Date.prototype.setYear()")}}</dt>
- <dd>Sets the year (usually 2–3 digits) for a specified date according to local time. Use {{jsxref("Date.prototype.setFullYear()", "setFullYear()")}} instead.</dd>
- <dt>{{jsxref("Date.prototype.toDateString()")}}</dt>
- <dd>Returns the "date" portion of the {{jsxref("Date")}} as a human-readable string like <code>'Thu Apr 12 2018'</code>.</dd>
- <dt>{{jsxref("Date.prototype.toISOString()")}}</dt>
- <dd>Converts a date to a string following the ISO 8601 Extended Format.</dd>
- <dt>{{jsxref("Date.prototype.toJSON()")}}</dt>
- <dd>Returns a string representing the {{jsxref("Date")}} using {{jsxref("Date.prototype.toISOString()", "toISOString()")}}. Intended for use by {{jsxref("JSON.stringify()")}}.</dd>
- <dt>{{jsxref("Date.prototype.toGMTString()")}}</dt>
- <dd>Returns a string representing the {{jsxref("Date")}} based on the GMT (UTC) time zone. Use {{jsxref("Date.prototype.toUTCString()", "toUTCString()")}} instead.</dd>
- <dt>{{jsxref("Date.prototype.toLocaleDateString()")}}</dt>
- <dd>Returns a string with a locality sensitive representation of the date portion of this date based on system settings.</dd>
- <dt>{{jsxref("Date.prototype.toLocaleString()")}}</dt>
- <dd>Returns a string with a locality-sensitive representation of this date. Overrides the {{jsxref("Object.prototype.toLocaleString()")}} method.</dd>
- <dt>{{jsxref("Date.prototype.toLocaleTimeString()")}}</dt>
- <dd>Returns a string with a locality-sensitive representation of the time portion of this date, based on system settings.</dd>
- <dt>{{jsxref("Date.prototype.toString()")}}</dt>
- <dd>Returns a string representing the specified {{jsxref("Date")}} object. Overrides the {{jsxref("Object.prototype.toString()")}} method.</dd>
- <dt>{{jsxref("Date.prototype.toTimeString()")}}</dt>
- <dd>Returns the "time" portion of the {{jsxref("Date")}} as a human-readable string.</dd>
- <dt>{{jsxref("Date.prototype.toUTCString()")}}</dt>
- <dd>Converts a date to a string using the UTC timezone.</dd>
- <dt>{{jsxref("Date.prototype.valueOf()")}}</dt>
- <dd>Returns the primitive value of a {{jsxref("Date")}} object. Overrides the {{jsxref("Object.prototype.valueOf()")}} method.</dd>
-</dl>
+    > **Note:** Parsing of strings with `Date.parse` is strongly discouraged due to browser differences and inconsistencies.
 
-<h2 id="Examples">Examples</h2>
+- {{jsxref("Date.UTC()")}}
+  - : Accepts the same parameters as the longest form of the constructor (i.e. 2 to 7) and returns the number of milliseconds since January 1, 1970, 00:00:00 UTC, with leap seconds ignored.
 
-<h3 id="Several_ways_to_create_a_Date_object">Several ways to create a Date object</h3>
+## Instance methods
 
-<p>The following examples show several ways to create JavaScript dates:</p>
+- {{jsxref("Date.prototype.getDate()")}}
+  - : Returns the day of the month (`1`–`31`) for the specified date according to local time.
+- {{jsxref("Date.prototype.getDay()")}}
+  - : Returns the day of the week (`0`–`6`) for the specified date according to local time.
+- {{jsxref("Date.prototype.getFullYear()")}}
+  - : Returns the year (4 digits for 4-digit years) of the specified date according to local time.
+- {{jsxref("Date.prototype.getHours()")}}
+  - : Returns the hour (`0`–`23`) in the specified date according to local time.
+- {{jsxref("Date.prototype.getMilliseconds()")}}
+  - : Returns the milliseconds (`0`–`999`) in the specified date according to local time.
+- {{jsxref("Date.prototype.getMinutes()")}}
+  - : Returns the minutes (`0`–`59`) in the specified date according to local time.
+- {{jsxref("Date.prototype.getMonth()")}}
+  - : Returns the month (`0`–`11`) in the specified date according to local time.
+- {{jsxref("Date.prototype.getSeconds()")}}
+  - : Returns the seconds (`0`–`59`) in the specified date according to local time.
+- {{jsxref("Date.prototype.getTime()")}}
+  - : Returns the numeric value of the specified date as the number of milliseconds since January 1, 1970, 00:00:00 UTC. (Negative values are returned for prior times.)
+- {{jsxref("Date.prototype.getTimezoneOffset()")}}
+  - : Returns the time-zone offset in minutes for the current locale.
+- {{jsxref("Date.prototype.getUTCDate()")}}
+  - : Returns the day (date) of the month (`1`–`31`) in the specified date according to universal time.
+- {{jsxref("Date.prototype.getUTCDay()")}}
+  - : Returns the day of the week (`0`–`6`) in the specified date according to universal time.
+- {{jsxref("Date.prototype.getUTCFullYear()")}}
+  - : Returns the year (4 digits for 4-digit years) in the specified date according to universal time.
+- {{jsxref("Date.prototype.getUTCHours()")}}
+  - : Returns the hours (`0`–`23`) in the specified date according to universal time.
+- {{jsxref("Date.prototype.getUTCMilliseconds()")}}
+  - : Returns the milliseconds (`0`–`999`) in the specified date according to universal time.
+- {{jsxref("Date.prototype.getUTCMinutes()")}}
+  - : Returns the minutes (`0`–`59`) in the specified date according to universal time.
+- {{jsxref("Date.prototype.getUTCMonth()")}}
+  - : Returns the month (`0`–`11`) in the specified date according to universal time.
+- {{jsxref("Date.prototype.getUTCSeconds()")}}
+  - : Returns the seconds (`0`–`59`) in the specified date according to universal time.
+- {{jsxref("Date.prototype.getYear()")}}
+  - : Returns the year (usually 2–3 digits) in the specified date according to local time. Use {{jsxref("Date.prototype.getFullYear()", "getFullYear()")}} instead.
+- {{jsxref("Date.prototype.setDate()")}}
+  - : Sets the day of the month for a specified date according to local time.
+- {{jsxref("Date.prototype.setFullYear()")}}
+  - : Sets the full year (e.g. 4 digits for 4-digit years) for a specified date according to local time.
+- {{jsxref("Date.prototype.setHours()")}}
+  - : Sets the hours for a specified date according to local time.
+- {{jsxref("Date.prototype.setMilliseconds()")}}
+  - : Sets the milliseconds for a specified date according to local time.
+- {{jsxref("Date.prototype.setMinutes()")}}
+  - : Sets the minutes for a specified date according to local time.
+- {{jsxref("Date.prototype.setMonth()")}}
+  - : Sets the month for a specified date according to local time.
+- {{jsxref("Date.prototype.setSeconds()")}}
+  - : Sets the seconds for a specified date according to local time.
+- {{jsxref("Date.prototype.setTime()")}}
+  - : Sets the {{jsxref("Date")}} object to the time represented by a number of milliseconds since January 1, 1970, 00:00:00 UTC. Use negative numbers for times prior.
+- {{jsxref("Date.prototype.setUTCDate()")}}
+  - : Sets the day of the month for a specified date according to universal time.
+- {{jsxref("Date.prototype.setUTCFullYear()")}}
+  - : Sets the full year (e.g. 4 digits for 4-digit years) for a specified date according to universal time.
+- {{jsxref("Date.prototype.setUTCHours()")}}
+  - : Sets the hour for a specified date according to universal time.
+- {{jsxref("Date.prototype.setUTCMilliseconds()")}}
+  - : Sets the milliseconds for a specified date according to universal time.
+- {{jsxref("Date.prototype.setUTCMinutes()")}}
+  - : Sets the minutes for a specified date according to universal time.
+- {{jsxref("Date.prototype.setUTCMonth()")}}
+  - : Sets the month for a specified date according to universal time.
+- {{jsxref("Date.prototype.setUTCSeconds()")}}
+  - : Sets the seconds for a specified date according to universal time.
+- {{jsxref("Date.prototype.setYear()")}}
+  - : Sets the year (usually 2–3 digits) for a specified date according to local time. Use {{jsxref("Date.prototype.setFullYear()", "setFullYear()")}} instead.
+- {{jsxref("Date.prototype.toDateString()")}}
+  - : Returns the "date" portion of the {{jsxref("Date")}} as a human-readable string like `'Thu Apr 12 2018'`.
+- {{jsxref("Date.prototype.toISOString()")}}
+  - : Converts a date to a string following the ISO 8601 Extended Format.
+- {{jsxref("Date.prototype.toJSON()")}}
+  - : Returns a string representing the {{jsxref("Date")}} using {{jsxref("Date.prototype.toISOString()", "toISOString()")}}. Intended for use by {{jsxref("JSON.stringify()")}}.
+- {{jsxref("Date.prototype.toGMTString()")}}
+  - : Returns a string representing the {{jsxref("Date")}} based on the GMT (UTC) time zone. Use {{jsxref("Date.prototype.toUTCString()", "toUTCString()")}} instead.
+- {{jsxref("Date.prototype.toLocaleDateString()")}}
+  - : Returns a string with a locality sensitive representation of the date portion of this date based on system settings.
+- {{jsxref("Date.prototype.toLocaleString()")}}
+  - : Returns a string with a locality-sensitive representation of this date. Overrides the {{jsxref("Object.prototype.toLocaleString()")}} method.
+- {{jsxref("Date.prototype.toLocaleTimeString()")}}
+  - : Returns a string with a locality-sensitive representation of the time portion of this date, based on system settings.
+- {{jsxref("Date.prototype.toString()")}}
+  - : Returns a string representing the specified {{jsxref("Date")}} object. Overrides the {{jsxref("Object.prototype.toString()")}} method.
+- {{jsxref("Date.prototype.toTimeString()")}}
+  - : Returns the "time" portion of the {{jsxref("Date")}} as a human-readable string.
+- {{jsxref("Date.prototype.toUTCString()")}}
+  - : Converts a date to a string using the UTC timezone.
+- {{jsxref("Date.prototype.valueOf()")}}
+  - : Returns the primitive value of a {{jsxref("Date")}} object. Overrides the {{jsxref("Object.prototype.valueOf()")}} method.
 
-<div class="note">
-<p><strong>Note:</strong> Parsing of date strings with the <code>Date</code> constructor (and <code>Date.parse</code>, they are equivalent) is strongly discouraged due to browser differences and inconsistencies.</p>
-</div>
+## Examples
 
-<pre class="brush: js">let today = new Date()
+### Several ways to create a Date object
+
+The following examples show several ways to create JavaScript dates:
+
+> **Note:** Parsing of date strings with the `Date` constructor (and `Date.parse`, they are equivalent) is strongly discouraged due to browser differences and inconsistencies.
+
+```js
+let today = new Date()
 let birthday = new Date('December 17, 1995 03:24:00')
 let birthday = new Date('1995-12-17T03:24:00')
 let birthday = new Date(1995, 11, 17)            // the month is 0-indexed
 let birthday = new Date(1995, 11, 17, 3, 24, 0)
 let birthday = new Date(628021800000)            // passing epoch timestamp
-</pre>
+```
 
-<h3 id="To_get_Date_Month_and_Year_or_Time"> To get Date, Month and Year or Time</h3>
+###  To get Date, Month and Year or Time
 
-<pre class="brush: js">
+```js
 const date = new Date();
 const [month, day, year]       = [date.getMonth(), date.getDate(), date.getFullYear()];
 const [hour, minutes, seconds] = [date.getHours(), date.getMinutes(), date.getSeconds()];
-</pre>
+```
 
-<h3 id="Two_digit_years_map_to_1900_–_1999">Two digit years map to 1900 – 1999</h3>
+### Two digit years map to 1900 – 1999
 
-<p>Values from <code>0</code> to <code>99</code> map to the years <code>1900</code> to <code>1999</code>. All other values are the actual year .</p>
+Values from `0` to `99` map to the years `1900` to `1999`. All other values are the actual year .
 
-<p>In order to create and get dates between the years <code>0</code> and <code>99</code> the {{jsxref("Date.prototype.setFullYear()")}} and {{jsxref("Date.prototype.getFullYear()")}} methods should be used.</p>
+In order to create and get dates between the years `0` and `99` the {{jsxref("Date.prototype.setFullYear()")}} and {{jsxref("Date.prototype.getFullYear()")}} methods should be used.
 
-<pre class="brush: js">let date = new Date(98, 1)  // Sun Feb 01 1998 00:00:00 GMT+0000 (GMT)
+```js
+let date = new Date(98, 1)  // Sun Feb 01 1998 00:00:00 GMT+0000 (GMT)
 
 // Deprecated method; 98 maps to 1998 here as well
 date.setYear(98)            // Sun Feb 01 1998 00:00:00 GMT+0000 (GMT)
 
 date.setFullYear(98)        // Sat Feb 01 0098 00:00:00 GMT+0000 (BST)
-</pre>
+```
 
-<h3 id="Calculating_elapsed_time">Calculating elapsed time</h3>
+### Calculating elapsed time
 
-<p>The following examples show how to determine the elapsed time between two JavaScript dates in milliseconds.</p>
+The following examples show how to determine the elapsed time between two JavaScript dates in milliseconds.
 
-<p>Due to the differing lengths of days (due to daylight saving changeover), months, and years, expressing elapsed time in units greater than hours, minutes, and seconds requires addressing a number of issues, and should be thoroughly researched before being attempted.</p>
+Due to the differing lengths of days (due to daylight saving changeover), months, and years, expressing elapsed time in units greater than hours, minutes, and seconds requires addressing a number of issues, and should be thoroughly researched before being attempted.
 
-<pre class="brush: js">// Using Date objects
+```js
+// Using Date objects
 let start = Date.now()
 
 // The event to time goes here:
 doSomethingForALongTime()
 let end = Date.now()
 let elapsed = end - start // elapsed time in milliseconds
-</pre>
+```
 
-<pre class="brush: js">// Using built-in methods
+```js
+// Using built-in methods
 let start = new Date()
 
 // The event to time goes here:
 doSomethingForALongTime()
 let end = new Date()
 let elapsed = end.getTime() - start.getTime() // elapsed time in milliseconds
-</pre>
+```
 
-<pre class="brush: js">// To test a function and get back its return
+```js
+// To test a function and get back its return
 function printElapsedTime(fTest) {
   let nStartTime = Date.now(),
       vReturn = fTest(),
@@ -231,29 +226,26 @@ function printElapsedTime(fTest) {
 }
 
 let yourFunctionReturn = printElapsedTime(yourFunction)
-</pre>
+```
 
-<div class="note">
-<p><strong>Note:</strong> In browsers that support the {{domxref("Window.performance", "Web Performance API", "", 1)}}'s high-resolution time feature, {{domxref("Performance.now()")}} can provide more reliable and precise measurements of elapsed time than {{jsxref("Date.now()")}}.</p>
-</div>
+> **Note:** In browsers that support the {{domxref("Window.performance", "Web Performance API", "", 1)}}'s high-resolution time feature, {{domxref("Performance.now()")}} can provide more reliable and precise measurements of elapsed time than {{jsxref("Date.now()")}}.
 
-<h3 id="Get_the_number_of_seconds_since_the_ECMAScript_Epoch">Get the number of seconds since the ECMAScript Epoch</h3>
+### Get the number of seconds since the ECMAScript Epoch
 
-<pre class="brush: js">let seconds = Math.floor(Date.now() / 1000)
-</pre>
+```js
+let seconds = Math.floor(Date.now() / 1000)
+```
 
-<p>In this case, it's important to return only an integer—so a simple division won't do. It's also important to only return actually elapsed seconds. (That's why this code uses {{jsxref("Math.floor()")}}, and <em>not</em> {{jsxref("Math.round()")}}.)</p>
+In this case, it's important to return only an integer—so a simple division won't do. It's also important to only return actually elapsed seconds. (That's why this code uses {{jsxref("Math.floor()")}}, and _not_ {{jsxref("Math.round()")}}.)
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("Date/Date", "Date()")}} constructor</li>
-</ul>
+- {{jsxref("Date/Date", "Date()")}} constructor

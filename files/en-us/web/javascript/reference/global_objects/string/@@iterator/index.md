@@ -1,49 +1,52 @@
 ---
-title: 'String.prototype[@@iterator]()'
+title: String.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/String/@@iterator
 tags:
-- ECMAScript 2015
-- Iterator
-- JavaScript
-- Method
-- Prototype
-- Reference
-- String
-- Polyfill
+  - ECMAScript 2015
+  - Iterator
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
+  - String
+  - Polyfill
 browser-compat: javascript.builtins.String.@@iterator
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>[@@iterator]()</code></strong> method returns a new iterator object
-  that iterates over the code points of a String value, returning each code point as a
-  String value.</p>
+The **`[@@iterator]()`** method returns a new iterator object
+that iterates over the code points of a String value, returning each code point as a
+String value.
 
-<div>{{EmbedInteractiveExample("pages/js/string-iterator.html")}}</div>
+{{EmbedInteractiveExample("pages/js/string-iterator.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+str[Symbol.iterator]
+```
 
-<pre class="brush: js"><var>str</var>[Symbol.iterator]</pre>
+### Return value
 
-<h3 id="Return_value">Return value</h3>
+A new iterator object.
 
-<p>A new iterator object.</p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Using \[@@iterator]\()
 
-<h3 id="Using_iterator">Using [@@iterator]()</h3>
-
-<pre class="brush: js">var str = 'A\uD835\uDC68';
+```js
+var str = 'A\uD835\uDC68';
 
 var strIter = str[Symbol.iterator]();
 
 console.log(strIter.next().value); // "A"
 console.log(strIter.next().value); // "\uD835\uDC68"
-</pre>
+```
 
-<h3 id="Using_iterator_with_for..of">Using [@@iterator]() with for..of</h3>
+### Using \[@@iterator]\() with for..of
 
-<pre class="brush: js">var str = 'A\uD835\uDC68B\uD835\uDC69C\uD835\uDC6A';
+```js
+var str = 'A\uD835\uDC68B\uD835\uDC69C\uD835\uDC6A';
 
 for (var v of str) {
   console.log(v);
@@ -54,20 +57,18 @@ for (var v of str) {
 // "\uD835\uDC69"
 // "C"
 // "\uD835\uDC6A"
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>A polyfill of <code>String.prototype[@@iterator]</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-string-and-regexp"><code>core-js</code></a></li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols">Iteration
-      protocols</a></li>
-</ul>
+- A polyfill of `String.prototype[@@iterator]` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Iteration
+  protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)

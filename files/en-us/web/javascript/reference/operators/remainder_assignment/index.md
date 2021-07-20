@@ -2,49 +2,50 @@
 title: Remainder assignment (%=)
 slug: Web/JavaScript/Reference/Operators/Remainder_assignment
 tags:
-- Assignment operator
-- JavaScript
-- Language feature
-- Operator
-- Reference
+  - Assignment operator
+  - JavaScript
+  - Language feature
+  - Operator
+  - Reference
 browser-compat: javascript.operators.remainder_assignment
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>The remainder assignment operator (<code>%=</code>) divides a variable by the value of
-  the right operand and assigns the remainder to the variable.</p>
+The remainder assignment operator (`%=`) divides a variable by the value of
+the right operand and assigns the remainder to the variable.
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-remainder-assignment.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-remainder-assignment.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">x %= y // x = x % y</pre>
+```js
+x %= y // x = x % y
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_remainder_assignment">Using remainder assignment</h3>
+### Using remainder assignment
 
-<pre class="brush: js">// Assuming the following variable
+```js
+// Assuming the following variable
 //  bar = 5
 
 bar %= 2     // 1
 bar %= 'foo' // NaN
-bar %= 0     // NaN</pre>
+bar %= 0     // NaN
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a
-      href="/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment">Assignment
-      operators in the JS guide</a></li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Remainder">Remainder
-      operator</a></li>
-</ul>
+- [Assignment
+  operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment)
+- [Remainder
+  operator](/en-US/docs/Web/JavaScript/Reference/Operators/Remainder)

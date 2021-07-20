@@ -2,49 +2,49 @@
 title: Object.isExtensible()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isExtensible
 tags:
-- ECMAScript 5
-- JavaScript
-- JavaScript 1.8.5
-- Method
-- Object
+  - ECMAScript 5
+  - JavaScript
+  - JavaScript 1.8.5
+  - Method
+  - Object
 browser-compat: javascript.builtins.Object.isExtensible
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>Object.isExtensible()</code></strong> method determines if an object
-  is extensible (whether it can have new properties added to it).</p>
+The **`Object.isExtensible()`** method determines if an object
+is extensible (whether it can have new properties added to it).
 
-<div>{{EmbedInteractiveExample("pages/js/object-isextensible.html")}}</div>
+{{EmbedInteractiveExample("pages/js/object-isextensible.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+Object.isExtensible(obj)
+```
 
-<pre class="brush: js">Object.isExtensible(<var>obj</var>)</pre>
+### Parameters
 
-<h3 id="Parameters">Parameters</h3>
+- `obj`
+  - : The object which should be checked.
 
-<dl>
-  <dt><code><var>obj</var></code></dt>
-  <dd>The object which should be checked.</dd>
-</dl>
+### Return value
 
-<h3 id="Return_value">Return value</h3>
+A {{jsxref("Boolean")}} indicating whether or not the given object is extensible.
 
-<p>A {{jsxref("Boolean")}} indicating whether or not the given object is extensible.</p>
+## Description
 
-<h2 id="Description">Description</h2>
+Objects are extensible by default: they can have new properties added to them, and (in
+engines that support {{jsxref("Object.proto", "__proto__")}}) their
+`__proto__` property can be modified. An object can be marked as
+non-extensible using {{jsxref("Object.preventExtensions()")}},
+{{jsxref("Object.seal()")}}, or {{jsxref("Object.freeze()")}}.
 
-<p>Objects are extensible by default: they can have new properties added to them, and (in
-  engines that support {{jsxref("Object.proto", "__proto__")}}) their
-  <code>__proto__</code> property can be modified. An object can be marked as
-  non-extensible using {{jsxref("Object.preventExtensions()")}},
-  {{jsxref("Object.seal()")}}, or {{jsxref("Object.freeze()")}}.</p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Using Object.isExtensible
 
-<h3 id="Using_Object.isExtensible">Using Object.isExtensible</h3>
-
-<pre class="brush: js">// New objects are extensible.
+```js
+// New objects are extensible.
 var empty = {};
 Object.isExtensible(empty); // === true
 
@@ -59,36 +59,35 @@ Object.isExtensible(sealed); // === false
 // Frozen objects are also by definition non-extensible.
 var frozen = Object.freeze({});
 Object.isExtensible(frozen); // === false
-</pre>
+```
 
-<h3 id="Non-object_coercion">Non-object coercion</h3>
+### Non-object coercion
 
-<p>In ES5, if the argument to this method is not an object (a primitive), then it will
-  cause a {{jsxref("TypeError")}}. In ES2015, a non-object argument will be treated as if
-  it was a non-extensible ordinary object, return <code>false</code>.</p>
+In ES5, if the argument to this method is not an object (a primitive), then it will
+cause a {{jsxref("TypeError")}}. In ES2015, a non-object argument will be treated as if
+it was a non-extensible ordinary object, return `false`.
 
-<pre class="brush: js">Object.isExtensible(1);
+```js
+Object.isExtensible(1);
 // TypeError: 1 is not an object (ES5 code)
 
 Object.isExtensible(1);
 // false                         (ES2015 code)
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Object.preventExtensions()")}}</li>
-  <li>{{jsxref("Object.seal()")}}</li>
-  <li>{{jsxref("Object.isSealed()")}}</li>
-  <li>{{jsxref("Object.freeze()")}}</li>
-  <li>{{jsxref("Object.isFrozen()")}}</li>
-  <li>{{jsxref("Reflect.isExtensible()")}}</li>
-</ul>
+- {{jsxref("Object.preventExtensions()")}}
+- {{jsxref("Object.seal()")}}
+- {{jsxref("Object.isSealed()")}}
+- {{jsxref("Object.freeze()")}}
+- {{jsxref("Object.isFrozen()")}}
+- {{jsxref("Reflect.isExtensible()")}}

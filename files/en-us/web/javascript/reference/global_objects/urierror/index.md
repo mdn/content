@@ -9,39 +9,36 @@ tags:
   - URIError
 browser-compat: javascript.builtins.URIError
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <code><strong>URIError</strong></code> object represents an error when a global URI handling function was used in a wrong way.</p>
+The **`URIError`** object represents an error when a global URI handling function was used in a wrong way.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{jsxref("Global_Objects/URIError/URIError", "URIError()")}}</dt>
- <dd>Creates a new <code>URIError</code> object.</dd>
-</dl>
+- {{jsxref("Global_Objects/URIError/URIError", "URIError()")}}
+  - : Creates a new `URIError` object.
 
-<h2 id="Instance_properties">Instance properties</h2>
+## Instance properties
 
-<dl>
- <dt>{{jsxref("Error.prototype.message", "URIError.prototype.message")}}</dt>
- <dd>Error message. Although ECMA-262 specifies that {{jsxref("URIError")}} should provide its own <code>message</code> property, in <a href="/en-US/docs/Mozilla/Projects/SpiderMonkey">SpiderMonkey</a>, it inherits {{jsxref("Error.prototype.message")}}.</dd>
- <dt>{{jsxref("Error.prototype.name", "URIError.prototype.name")}}</dt>
- <dd>Error name. Inherited from {{jsxref("Error")}}.</dd>
- <dt>{{jsxref("Error.prototype.fileName", "URIError.prototype.fileName")}}</dt>
- <dd>Path to file that raised this error. Inherited from {{jsxref("Error")}}.</dd>
- <dt>{{jsxref("Error.prototype.lineNumber", "URIError.prototype.lineNumber")}}</dt>
- <dd>Line number in file that raised this error. Inherited from {{jsxref("Error")}}.</dd>
- <dt>{{jsxref("Error.prototype.columnNumber", "URIError.prototype.columnNumber")}}</dt>
- <dd>Column number in line that raised this error. Inherited from {{jsxref("Error")}}.</dd>
- <dt>{{jsxref("Error.prototype.stack", "URIError.prototype.stack")}}</dt>
- <dd>Stack trace. Inherited from {{jsxref("Error")}}.</dd>
-</dl>
+- {{jsxref("Error.prototype.message", "URIError.prototype.message")}}
+  - : Error message. Although ECMA-262 specifies that {{jsxref("URIError")}} should provide its own `message` property, in [SpiderMonkey](/en-US/docs/Mozilla/Projects/SpiderMonkey), it inherits {{jsxref("Error.prototype.message")}}.
+- {{jsxref("Error.prototype.name", "URIError.prototype.name")}}
+  - : Error name. Inherited from {{jsxref("Error")}}.
+- {{jsxref("Error.prototype.fileName", "URIError.prototype.fileName")}}
+  - : Path to file that raised this error. Inherited from {{jsxref("Error")}}.
+- {{jsxref("Error.prototype.lineNumber", "URIError.prototype.lineNumber")}}
+  - : Line number in file that raised this error. Inherited from {{jsxref("Error")}}.
+- {{jsxref("Error.prototype.columnNumber", "URIError.prototype.columnNumber")}}
+  - : Column number in line that raised this error. Inherited from {{jsxref("Error")}}.
+- {{jsxref("Error.prototype.stack", "URIError.prototype.stack")}}
+  - : Stack trace. Inherited from {{jsxref("Error")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Catching_an_URIError">Catching an URIError</h3>
+### Catching an URIError
 
-<pre class="brush: js">try {
+```js
+try {
   decodeURIComponent('%')
 } catch (e) {
   console.log(e instanceof URIError)  // true
@@ -52,11 +49,12 @@ browser-compat: javascript.builtins.URIError
   console.log(e.columnNumber)         // 2
   console.log(e.stack)                // "@Scratchpad/2:2:3\n"
 }
-</pre>
+```
 
-<h3 id="Creating_an_URIError">Creating an URIError</h3>
+### Creating an URIError
 
-<pre class="brush: js">try {
+```js
+try {
   throw new URIError('Hello', 'someFile.js', 10)
 } catch (e) {
   console.log(e instanceof URIError)  // true
@@ -67,22 +65,20 @@ browser-compat: javascript.builtins.URIError
   console.log(e.columnNumber)         // 0
   console.log(e.stack)                // "@Scratchpad/2:2:9\n"
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("Error")}}</li>
- <li>{{jsxref("Global_Objects/decodeURI", "decodeURI()")}}</li>
- <li>{{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}</li>
- <li>{{jsxref("Global_Objects/encodeURI", "encodeURI()")}}</li>
- <li>{{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}</li>
-</ul>
+- {{jsxref("Error")}}
+- {{jsxref("Global_Objects/decodeURI", "decodeURI()")}}
+- {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}
+- {{jsxref("Global_Objects/encodeURI", "encodeURI()")}}
+- {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}

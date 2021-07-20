@@ -2,55 +2,52 @@
 title: InternalError() constructor
 slug: Web/JavaScript/Reference/Global_Objects/InternalError/InternalError
 tags:
-- Constructor
-- InternalError
-- JavaScript
-- Reference
+  - Constructor
+  - InternalError
+  - JavaScript
+  - Reference
 browser-compat: javascript.builtins.InternalError.InternalError
 ---
-<div>{{JSRef}} {{non-standard_header}}</div>
+{{JSRef}} {{non-standard_header}}
 
-<p>The <strong><code>InternalError()</code></strong> constructor creates an error that
-  indicates an error that occurred internally in the JavaScript engine. For example:
-  "<strong>InternalError</strong>: too much recursion".</p>
+The **`InternalError()`** constructor creates an error that
+indicates an error that occurred internally in the JavaScript engine. For example:
+"**InternalError**: too much recursion".
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 new InternalError()
 new InternalError(message)
 new InternalError(message, fileName)
 new InternalError(message, fileName, lineNumber)
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>message</var></code> {{optional_inline}}</dt>
-  <dd>Human-readable description of the error.</dd>
-  <dt><code><var>fileName</var></code> {{optional_inline}}</dt>
-  <dd>The name of the file containing the code that caused the exception</dd>
-  <dt><code><var>lineNumber</var></code> {{optional_inline}}</dt>
-  <dd>The line number of the code that caused the exception</dd>
-</dl>
+- `message` {{optional_inline}}
+  - : Human-readable description of the error.
+- `fileName` {{optional_inline}}
+  - : The name of the file containing the code that caused the exception
+- `lineNumber` {{optional_inline}}
+  - : The line number of the code that caused the exception
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Creating_a_new_InternalError">Creating a new InternalError</h3>
+### Creating a new InternalError
 
-<pre class="brush: js">new InternalError("Engine failure");
-</pre>
+```js
+new InternalError("Engine failure");
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any standard.</p>
+Not part of any standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Error")}}</li>
-</ul>
+- {{jsxref("Error")}}

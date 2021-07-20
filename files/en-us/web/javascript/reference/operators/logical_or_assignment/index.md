@@ -2,92 +2,93 @@
 title: Logical OR assignment (||=)
 slug: Web/JavaScript/Reference/Operators/Logical_OR_assignment
 tags:
-- JavaScript
-- Language feature
-- Logical Operator
-- Operator
-- Reference
+  - JavaScript
+  - Language feature
+  - Logical Operator
+  - Operator
+  - Reference
 browser-compat: javascript.operators.logical_or_assignment
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>The logical OR assignment (<code>x ||= y</code>) operator only assigns if
-  <code>x</code> is {{Glossary("falsy")}}.</p>
+The logical OR assignment (`x ||= y`) operator only assigns if
+`x` is {{Glossary("falsy")}}.
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-logical-or-assignment.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-logical-or-assignment.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+expr1 ||= expr2
+```
 
-<pre class="brush: js">expr1 ||= expr2</pre>
+## Description
 
-<h2 id="Description">Description</h2>
+### Short-circuit evaluation
 
-<h3 id="Short-circuit_evaluation">Short-circuit evaluation</h3>
+The [logical OR](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR)
+operator works like this:
 
-<p>The <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR">logical OR</a>
-  operator works like this:</p>
-
-<pre class="brush: js">x || y;
+```js
+x || y;
 // returns x when x is truthy
-// returns y when x is not truthy</pre>
+// returns y when x is not truthy
+```
 
-<p>The logical OR operator short-circuits: the second operand is only evaluated if the
-  first operand doesn’t already determine the result.</p>
+The logical OR operator short-circuits: the second operand is only evaluated if the
+first operand doesn’t already determine the result.
 
-<p>Logical OR assignment short-circuits as well, meaning it only performs an assignment if
-  the logical operation would evaluate the right-hand side. In other words,
-  <code>x ||= y</code> is equivalent to:</p>
+Logical OR assignment short-circuits as well, meaning it only performs an assignment if
+the logical operation would evaluate the right-hand side. In other words,
+`x ||= y` is equivalent to:
 
-<pre class="brush: js">x || (x = y);
-</pre>
+```js
+x || (x = y);
+```
 
-<p>And not equivalent to the following which would always perform an assignment:</p>
+And not equivalent to the following which would always perform an assignment:
 
-<pre class="brush: js example-bad">x = x || y;
-</pre>
+```js example-bad
+x = x || y;
+```
 
-<p>Note that this behavior is different to mathematical and bitwise assignment operators.
-</p>
+Note that this behavior is different to mathematical and bitwise assignment operators.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_default_content">Setting default content</h3>
+### Setting default content
 
-<p>If the "lyrics" element is empty, display a default value:</p>
+If the "lyrics" element is empty, display a default value:
 
-<pre
-  class="brush: js">document.getElementById('lyrics').textContent ||= 'No lyrics.'</pre>
+```js
+document.getElementById('lyrics').textContent ||= 'No lyrics.'
+```
 
-<p>Here the short-circuit is especially beneficial, since the element will not be updated
-  unnecessarily and won't cause unwanted side-effects such as additional parsing or
-  rendering work, or loss of focus, etc.</p>
+Here the short-circuit is especially beneficial, since the element will not be updated
+unnecessarily and won't cause unwanted side-effects such as additional parsing or
+rendering work, or loss of focus, etc.
 
-<p>Note: Pay attention to the value returned by the API you're checking against. If an
-  empty string is returned (a {{Glossary("falsy")}} value), <code>||=</code> must be used,
-  otherwise you want to use the <code>??=</code> operator (for {{jsxref("null")}} or
-  {{jsxref("undefined")}} return values).</p>
+Note: Pay attention to the value returned by the API you're checking against. If an
+empty string is returned (a {{Glossary("falsy")}} value), `||=` must be used,
+otherwise you want to use the `??=` operator (for {{jsxref("null")}} or
+{{jsxref("undefined")}} return values).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR">Logical OR
-      (||)</a></li>
-  <li><a
-      href="/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator">The
-      nullish coalescing operator (<code>??</code>)</a></li>
-  <li><a
-      href="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_OR_assignment">Bitwise
-      OR assignment (<code>|=</code>)</a></li>
-  <li>{{jsxref("Boolean")}}</li>
-  <li>{{Glossary("Truthy")}}</li>
-  <li>{{Glossary("Falsy")}}</li>
-</ul>
+- [Logical OR
+  (||)](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR)
+- [The
+  nullish coalescing operator (`??`)](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
+- [Bitwise
+  OR assignment (`|=`)](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_OR_assignment)
+- {{jsxref("Boolean")}}
+- {{Glossary("Truthy")}}
+- {{Glossary("Falsy")}}

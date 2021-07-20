@@ -2,132 +2,122 @@
 title: RegExp() constructor
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/RegExp
 tags:
-- Constructor
-- JavaScript
-- Reference
-- RegExp
+  - Constructor
+  - JavaScript
+  - Reference
+  - RegExp
 browser-compat: javascript.builtins.RegExp.RegExp
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>RegExp</code></strong> constructor creates a regular expression
-  object for matching text with a pattern.</p>
+The **`RegExp`** constructor creates a regular expression
+object for matching text with a pattern.
 
-<p>For an introduction to regular expressions, read the <a
-    href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">Regular Expressions
-    chapter</a> in the <a href="/en-US/docs/Web/JavaScript/Guide">JavaScript Guide</a>.
-</p>
+For an introduction to regular expressions, read the [Regular Expressions
+chapter](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) in the [JavaScript Guide](/en-US/docs/Web/JavaScript/Guide).
 
-<div>{{EmbedInteractiveExample("pages/js/regexp-constructor.html")}}</div>
+{{EmbedInteractiveExample("pages/js/regexp-constructor.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+Literal, constructor, and factory notations are possible:
 
-<p>Literal, constructor, and factory notations are possible:</p>
+```js
+/pattern/flags
+new RegExp(pattern[, flags])
+RegExp(pattern[, flags])
+```
 
-<pre class="brush: js">/<var>pattern</var>/<var>flags</var>
-new RegExp(<var>pattern</var>[, <var>flags</var>])
-RegExp(<var>pattern</var>[, <var>flags</var>])
-</pre>
+### Parameters
 
-<h3 id="Parameters">Parameters</h3>
+- `pattern`
 
-<dl>
-  <dt><code><var>pattern</var></code></dt>
-  <dd>
-    <p>The text of the regular expression.</p>
-    <p>As of ES5, this can also be another <code>RegExp</code> object or literal (for the
-    two RegExp constructor notations only). Patterns may include <a
-      href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#Using_special_characters">special
-      characters</a> to match a wider range of values than would a literal string.</p>
-  </dd>
-  <dt><code><var>flags</var></code></dt>
-  <dd>
-    <p>If specified, <code><var>flags</var></code> is a string that contains the flags to
-      add.</p>
+  - : The text of the regular expression.
 
-    <p>Alternatively, if an object is supplied for the pattern, the
-      <code><var>flags</var></code> string will replace any of that object's flags (and
-      <code>lastIndex</code> will be reset to <code>0</code>) (as of ES2015).</p>
+    As of ES5, this can also be another `RegExp` object or literal (for the
+    two RegExp constructor notations only). Patterns may include [special
+    characters](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#Using_special_characters) to match a wider range of values than would a literal string.
 
-    <p>If <code><var>flags</var></code> is not specified and a regular expressions object
-      is supplied, that object's flags (and <code>lastIndex</code> value) will be copied
-      over.</p>
+- `flags`
 
-    <p><code><var>flags</var></code> may contain any combination of the following
-      characters:</p>
+  - : If specified, `flags` is a string that contains the flags to
+    add.
 
-    <dl>
-      <dt><code>d</code> (indices)</dt>
-      <dd>Generate indices for substring matches.</dd>
-      <dt><code>g</code> (global match)</dt>
-      <dd>Find all matches rather than stopping after the first match.</dd>
-      <dt><code>i</code> (ignore case)</dt>
-      <dd>If <code>u</code> flag is also enabled, use Unicode case folding.</dd>
-      <dt><code>m</code> (multiline)</dt>
-      <dd>Treat beginning and end characters (<code>^</code> and <code>$</code>) as
+    Alternatively, if an object is supplied for the pattern, the
+    `flags` string will replace any of that object's flags (and
+    `lastIndex` will be reset to `0`) (as of ES2015).
+
+    If `flags` is not specified and a regular expressions object
+    is supplied, that object's flags (and `lastIndex` value) will be copied
+    over.
+
+    `flags` may contain any combination of the following
+    characters:
+
+    - `d` (indices)
+      - : Generate indices for substring matches.
+    - `g` (global match)
+      - : Find all matches rather than stopping after the first match.
+    - `i` (ignore case)
+      - : If `u` flag is also enabled, use Unicode case folding.
+    - `m` (multiline)
+      - : Treat beginning and end characters (`^` and `$`) as
         working over multiple lines. In other words, match the beginning or end of
-        <em>each</em> line (delimited by <code>\n</code> or <code>\r</code>), not only the
-        very beginning or end of the whole input string.</dd>
-      <dt><code>s</code> ("dotAll")</dt>
-      <dd>Allows <code>.</code> to match newlines.</dd>
-      <dt><code>u</code> (unicode)</dt>
-      <dd>Treat <code><var>pattern</var></code> as a sequence of Unicode code points. (See
-        also <a href="/en-US/docs/Web/API/DOMString/Binary">Binary strings</a>).</dd>
-      <dt><code>y</code> (sticky)</dt>
-      <dd>Matches only from the index indicated by the <code>lastIndex</code> property of
+        _each_ line (delimited by `\n` or `\r`), not only the
+        very beginning or end of the whole input string.
+    - `s` ("dotAll")
+      - : Allows `.` to match newlines.
+    - `u` (unicode)
+      - : Treat `pattern` as a sequence of Unicode code points. (See
+        also [Binary strings](/en-US/docs/Web/API/DOMString/Binary)).
+    - `y` (sticky)
+      - : Matches only from the index indicated by the `lastIndex` property of
         this regular expression in the target string. Does not attempt to match from any
-        later indexes.</dd>
-    </dl>
-  </dd>
-</dl>
+        later indexes.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Literal_notation_and_constructor">Literal notation and constructor</h3>
+### Literal notation and constructor
 
-<p>There are two ways to create a <code>RegExp</code> object: a <em>literal notation</em>
-  and a <em>constructor</em>.</p>
+There are two ways to create a `RegExp` object: a _literal notation_
+and a _constructor_.
 
-<ul>
-  <li><strong>The literal notation's</strong> parameters are enclosed between slashes and
-    do not use quotation marks.</li>
-  <li><strong>The constructor function's</strong> parameters are not enclosed between
-    slashes but do use quotation marks.</li>
-</ul>
+- **The literal notation's** parameters are enclosed between slashes and
+  do not use quotation marks.
+- **The constructor function's** parameters are not enclosed between
+  slashes but do use quotation marks.
 
-<p>The following three expressions create the same regular expression:</p>
+The following three expressions create the same regular expression:
 
-<pre class="brush: js">/ab+c/i
+```js
+/ab+c/i
 new RegExp(/ab+c/, 'i') // literal notation
 new RegExp('ab+c', 'i') // constructor
-</pre>
+```
 
-<p>The literal notation results in compilation of the regular expression when the
-  expression is evaluated. Use literal notation when the regular expression will remain
-  constant. For example, if you use literal notation to construct a regular expression
-  used in a loop, the regular expression won't be recompiled on each iteration.</p>
+The literal notation results in compilation of the regular expression when the
+expression is evaluated. Use literal notation when the regular expression will remain
+constant. For example, if you use literal notation to construct a regular expression
+used in a loop, the regular expression won't be recompiled on each iteration.
 
-<p>The constructor of the regular expression object—for example,
-  <code>new RegExp('ab+c')</code>—results in runtime compilation of the regular
-  expression. Use the constructor function when you know the regular expression pattern
-  will be changing, or you don't know the pattern and are getting it from another source,
-  such as user input.</p>
+The constructor of the regular expression object—for example,
+`new RegExp('ab+c')`—results in runtime compilation of the regular
+expression. Use the constructor function when you know the regular expression pattern
+will be changing, or you don't know the pattern and are getting it from another source,
+such as user input.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">Regular
-      Expressions</a> chapter in the <a href="/en-US/docs/Web/JavaScript/Guide">JavaScript
-      Guide</a></li>
-  <li>{{jsxref("String.prototype.match()")}}</li>
-  <li>{{jsxref("String.prototype.replace()")}}</li>
-</ul>
+- [Regular
+  Expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) chapter in the [JavaScript
+  Guide](/en-US/docs/Web/JavaScript/Guide)
+- {{jsxref("String.prototype.match()")}}
+- {{jsxref("String.prototype.replace()")}}

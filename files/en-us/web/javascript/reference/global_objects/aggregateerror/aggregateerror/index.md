@@ -2,38 +2,37 @@
 title: AggregateError() constructor
 slug: Web/JavaScript/Reference/Global_Objects/AggregateError/AggregateError
 tags:
-- Constructor
-- JavaScript
-- Reference
-- Polyfill
+  - Constructor
+  - JavaScript
+  - Reference
+  - Polyfill
 browser-compat: javascript.builtins.AggregateError.AggregateError
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <code><strong>AggregateError()</strong></code> constructor creates an error for
-  several errors that need to be wrapped in a single error.</p>
+The **`AggregateError()`** constructor creates an error for
+several errors that need to be wrapped in a single error.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 new AggregateError(errors)
 new AggregateError(errors, message)
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>errors</code></dt>
-  <dd>An iterable of errors, may not actually be {{JSxRef("Error")}} instances.</dd>
-  <dt><code>message</code>{{Optional_Inline}}</dt>
-  <dd>An optional human-readable description of the aggregate error.</dd>
-</dl>
+- `errors`
+  - : An iterable of errors, may not actually be {{JSxRef("Error")}} instances.
+- `message`{{Optional_Inline}}
+  - : An optional human-readable description of the aggregate error.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Creating_an_AggregateError">Creating an <code>AggregateError</code></h3>
+### Creating an `AggregateError`
 
-<pre class="brush: js;">try {
+```js
+try {
   throw new AggregateError([
     new Error("some error"),
   ], 'Hello');
@@ -42,19 +41,18 @@ new AggregateError(errors, message)
   console.log(e.message);                   // "Hello"
   console.log(e.name);                      // "AggregateError"
   console.log(e.errors);                    // [ Error: "some error" ]
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>A polyfill of <code>AggregateError</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-promise"><code>core-js</code></a></li>
-  <li>{{jsxref("Promise.any")}}</li>
-</ul>
+- A polyfill of `AggregateError` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-promise)
+- {{jsxref("Promise.any")}}

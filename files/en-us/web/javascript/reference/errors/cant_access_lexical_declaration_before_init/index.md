@@ -7,42 +7,44 @@ tags:
   - JavaScript
   - ReferenceError
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<p>The JavaScript exception "can't access lexical declaration `<em>variable</em>' before
-  initialization" occurs when a lexical variable was accessed before it was initialized.
-  This happens within any block statement, when
-  <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/let">let</a></code> or
-  <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/const">const</a></code>
-  declarations are accessed before they are defined.</p>
+The JavaScript exception "can't access lexical declaration \`_variable_' before
+initialization" occurs when a lexical variable was accessed before it was initialized.
+This happens within any block statement, when
+[`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) or
+[`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const)
+declarations are accessed before they are defined.
 
-<h2 id="Message">Message</h2>
+## Message
 
-<pre class="brush: js">ReferenceError: Use before delaration (Edge)
+```js
+ReferenceError: Use before delaration (Edge)
 ReferenceError: can't access lexical declaration `X' before initialization (Firefox)
 ReferenceError: 'x' is not defined (Chrome)
-</pre>
+```
 
-<h2 id="Error_type">Error type</h2>
+## Error type
 
-<p>{{jsxref("ReferenceError")}}</p>
+{{jsxref("ReferenceError")}}
 
-<h2 id="What_went_wrong">What went wrong?</h2>
+## What went wrong?
 
-<p>A lexical variable was accessed before it was initialized. This happens within any
-  block statement, when
-  <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/let">let</a></code> or
-  <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/const">const</a></code>
-  declarations are accessed before they are defined.</p>
+A lexical variable was accessed before it was initialized. This happens within any
+block statement, when
+[`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) or
+[`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const)
+declarations are accessed before they are defined.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Invalid_cases">Invalid cases</h3>
+### Invalid cases
 
-<p>In this case, the variable "foo" is redeclared in the block statement using
-  <code>let</code>.</p>
+In this case, the variable "foo" is redeclared in the block statement using
+`let`.
 
-<pre class="brush: js example-bad">function test() {
+```js example-bad
+function test() {
   let foo = 33;
   if (true) {
     let foo = (foo + 55);
@@ -51,26 +53,24 @@ ReferenceError: 'x' is not defined (Chrome)
   }
 }
 test();
-</pre>
+```
 
-<h3 id="Valid_cases">Valid cases</h3>
+### Valid cases
 
-<p>To change "foo" inside the if statement, you need to remove the <code>let</code> that
-  causes the redeclaration.</p>
+To change "foo" inside the if statement, you need to remove the `let` that
+causes the redeclaration.
 
-<pre class="brush: js example-good">function test(){
+```js example-good
+function test(){
    let foo = 33;
    if (true) {
       foo = (foo + 55);
    }
 }
 test();
-</pre>
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a
-      href="/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_and_errors_with_let">Temporal
-      Dead Zone and errors with let</a></li>
-</ul>
+- [Temporal
+  Dead Zone and errors with let](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_and_errors_with_let)

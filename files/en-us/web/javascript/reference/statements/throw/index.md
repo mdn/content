@@ -2,60 +2,58 @@
 title: throw
 slug: Web/JavaScript/Reference/Statements/throw
 tags:
-- Exception
-- JavaScript
-- Language feature
-- Statement
+  - Exception
+  - JavaScript
+  - Language feature
+  - Statement
 browser-compat: javascript.statements.throw
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p>The <strong><code>throw</code> statement</strong> throws a user-defined exception.
-  Execution of the current function will stop (the statements after <code>throw</code>
-  won't be executed), and control will be passed to the first <a
-    href="/en-US/docs/Web/JavaScript/Reference/Statements/try...catch"><code>catch</code></a>
-  block in the call stack. If no <code>catch</code> block exists among caller functions,
-  the program will terminate.</p>
+The **`throw` statement** throws a user-defined exception.
+Execution of the current function will stop (the statements after `throw`
+won't be executed), and control will be passed to the first [`catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch)
+block in the call stack. If no `catch` block exists among caller functions,
+the program will terminate.
 
-<div>{{EmbedInteractiveExample("pages/js/statement-throw.html")}}</div>
+{{EmbedInteractiveExample("pages/js/statement-throw.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+throw expression; 
+```
 
-<pre class="brush: js">throw <var>expression</var>; </pre>
+- `expression`
+  - : The expression to throw.
 
-<dl>
-  <dt><code><var>expression</var></code></dt>
-  <dd>The expression to throw.</dd>
-</dl>
+## Description
 
-<h2 id="Description">Description</h2>
+Use the `throw` statement to throw an exception. When you throw an
+exception, `expression` specifies the value of the exception. Each
+of the following throws an exception:
 
-<p>Use the <code>throw</code> statement to throw an exception. When you throw an
-  exception, <code><var>expression</var></code> specifies the value of the exception. Each
-  of the following throws an exception:</p>
-
-<pre class="brush: js">throw 'Error2'; // generates an exception with a string value
+```js
+throw 'Error2'; // generates an exception with a string value
 throw 42;       // generates an exception with the value 42
 throw true;     // generates an exception with the value true
 throw new Error('Required');  // generates an error object with the message of Required
-</pre>
+```
 
-<p>Also note that the <code>throw</code> statement is affected by <a
-    href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion">automatic
-    semicolon insertion (ASI)</a> as no line terminator between the <code>throw</code>
-  keyword and the expression is allowed.</p>
+Also note that the `throw` statement is affected by [automatic
+semicolon insertion (ASI)](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion) as no line terminator between the `throw`
+keyword and the expression is allowed.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Throw_an_object">Throw an object</h3>
+### Throw an object
 
-<p>You can specify an object when you throw an exception. You can then reference the
-  object's properties in the <code>catch</code> block. The following example creates an
-  object of type <code>UserException</code> and uses it in a <code>throw</code> statement.
-</p>
+You can specify an object when you throw an exception. You can then reference the
+object's properties in the `catch` block. The following example creates an
+object of type `UserException` and uses it in a `throw` statement.
 
-<pre class="brush: js">function UserException(message) {
+```js
+function UserException(message) {
   this.message = message;
   this.name = 'UserException';
 }
@@ -78,15 +76,16 @@ try {
   monthName = 'unknown';
   console.error(e.message, e.name); // pass exception object to err handler
 }
-</pre>
+```
 
-<h3 id="Another_example_of_throwing_an_object">Another example of throwing an object</h3>
+### Another example of throwing an object
 
-<p>The following example tests an input string for a U.S. zip code. If the zip code uses
-  an invalid format, the throw statement throws an exception by creating an object of type
-  <code>ZipCodeFormatException</code>.</p>
+The following example tests an input string for a U.S. zip code. If the zip code uses
+an invalid format, the throw statement throws an exception by creating an object of type
+`ZipCodeFormatException`.
 
-<pre class="brush: js">/*
+```js
+/*
  * Creates a ZipCode object.
  *
  * Accepted formats for a zip code are:
@@ -150,38 +149,37 @@ b = verifyZipCode(9560);          // returns -1
 c = verifyZipCode('a');           // returns -1
 d = verifyZipCode('95060');       // returns 95060
 e = verifyZipCode('95060 1234');  // returns 95060 1234
-</pre>
+```
 
-<h3 id="Rethrow_an_exception">Rethrow an exception</h3>
+### Rethrow an exception
 
-<p>You can use <code>throw</code> to rethrow an exception after you catch it. The
-  following example catches an exception with a numeric value and rethrows it if the value
-  is over 50. The rethrown exception propagates up to the enclosing function or to the top
-  level so that the user sees it.</p>
+You can use `throw` to rethrow an exception after you catch it. The
+following example catches an exception with a numeric value and rethrows it if the value
+is over 50. The rethrown exception propagates up to the enclosing function or to the top
+level so that the user sees it.
 
-<pre class="brush: js">try {
+```js
+try {
   throw n; // throws an exception with a numeric value
 } catch (e) {
-  if (e &lt;= 50) {
+  if (e <= 50) {
     // statements to handle exceptions 1-50
   } else {
     // cannot handle this exception, so rethrow
     throw e;
   }
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Statements/try...catch", "try...catch")}}</li>
-  <li>{{jsxref("Global_Objects/Error", "Error")}}</li>
-</ul>
+- {{jsxref("Statements/try...catch", "try...catch")}}
+- {{jsxref("Global_Objects/Error", "Error")}}

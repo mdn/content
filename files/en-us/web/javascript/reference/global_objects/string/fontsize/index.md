@@ -2,83 +2,78 @@
 title: String.prototype.fontsize()
 slug: Web/JavaScript/Reference/Global_Objects/String/fontsize
 tags:
-- Deprecated
-- HTML wrapper methods
-- JavaScript
-- Method
-- Prototype
-- Reference
-- String
-- Polyfill
+  - Deprecated
+  - HTML wrapper methods
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
+  - String
+  - Polyfill
 browser-compat: javascript.builtins.String.fontsize
 ---
-<div>{{JSRef}} {{deprecated_header}}</div>
+{{JSRef}} {{deprecated_header}}
 
-<p>The <strong><code>fontsize()</code></strong> method creates a {{HTMLElement("font")}}
-  HTML element that causes a string to be displayed in the specified font size.</p>
+The **`fontsize()`** method creates a {{HTMLElement("font")}}
+HTML element that causes a string to be displayed in the specified font size.
 
-<div class="note">
-  <p><strong>Note:</strong> The &lt;font&gt; element has been removed in <a
-      href="/en-US/docs/Web/Guide/HTML/HTML5">HTML5</a> and shouldn't be used anymore.
-    Instead web developers should use <a href="/en-US/docs/Web/CSS">CSS</a> properties.
-  </p>
-</div>
+> **Note:** The \<font> element has been removed in [HTML5](/en-US/docs/Web/Guide/HTML/HTML5) and shouldn't be used anymore.
+> Instead web developers should use [CSS](/en-US/docs/Web/CSS) properties.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">fontsize(size)</pre>
+```js
+fontsize(size)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>size</var></code></dt>
-  <dd>An integer between 1 and 7, a string representing a signed integer between 1 and 7.
-  </dd>
-</dl>
+- `size`
+  - : An integer between 1 and 7, a string representing a signed integer between 1 and 7.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A string containing a {{HTMLElement("font")}} HTML element.</p>
+A string containing a {{HTMLElement("font")}} HTML element.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>When you specify size as an integer, you set the font size of <code>str</code> to one
-  of the 7 defined sizes. When you specify <code>size</code> as a string such as "-2", you
-  adjust the font size of <code>str</code> relative to the size set in the
-  {{HTMLElement("basefont")}} element.</p>
+When you specify size as an integer, you set the font size of `str` to one
+of the 7 defined sizes. When you specify `size` as a string such as "-2", you
+adjust the font size of `str` relative to the size set in the
+{{HTMLElement("basefont")}} element.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_fontsize">Using fontsize()</h3>
+### Using fontsize()
 
-<p>The following example uses string methods to change the size of a string:</p>
+The following example uses string methods to change the size of a string:
 
-<pre class="brush: js">var worldString = 'Hello, world';
+```js
+var worldString = 'Hello, world';
 
-console.log(worldString.small());     // &lt;small&gt;Hello, world&lt;/small&gt;
-console.log(worldString.big());       // &lt;big&gt;Hello, world&lt;/big&gt;
-console.log(worldString.fontsize(7)); // &lt;font size="7"&gt;Hello, world&lt;/fontsize&gt;
-</pre>
+console.log(worldString.small());     // <small>Hello, world</small>
+console.log(worldString.big());       // <big>Hello, world</big>
+console.log(worldString.fontsize(7)); // <font size="7">Hello, world</fontsize>
+```
 
-<p>With the {{domxref("HTMLElement/style", "element.style")}} object you can get
-  the element's <code>style</code> attribute and manipulate it more generically, for
-  example:</p>
+With the {{domxref("HTMLElement/style", "element.style")}} object you can get
+the element's `style` attribute and manipulate it more generically, for
+example:
 
-<pre class="brush: js">document.getElementById('yourElemId').style.fontSize = '0.7em';
-</pre>
+```js
+document.getElementById('yourElemId').style.fontSize = '0.7em';
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>A polyfill of <code>String.prototype.fontsize</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-string-and-regexp"><code>core-js</code></a></li>
-  <li>{{jsxref("String.prototype.big()")}}</li>
-  <li>{{jsxref("String.prototype.small()")}}</li>
-</ul>
+- A polyfill of `String.prototype.fontsize` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- {{jsxref("String.prototype.big()")}}
+- {{jsxref("String.prototype.small()")}}

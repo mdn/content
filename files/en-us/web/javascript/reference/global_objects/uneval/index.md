@@ -2,48 +2,48 @@
 title: uneval()
 slug: Web/JavaScript/Reference/Global_Objects/uneval
 tags:
-- Function
-- JavaScript
-- Method
-- Non-standard
-- Deprecated
-- Reference
-- uneval
+  - Function
+  - JavaScript
+  - Method
+  - Non-standard
+  - Deprecated
+  - Reference
+  - uneval
 browser-compat: javascript.builtins.uneval
 ---
-<p>{{JSSidebar("Objects")}}{{Non-standard_Header}}{{deprecated_header}}</p>
+{{JSSidebar("Objects")}}{{Non-standard_Header}}{{deprecated_header}}
 
-<p>The <code><strong>uneval()</strong></code> function creates a string representation of
-  the source code of an Object.</p>
+The **`uneval()`** function creates a string representation of
+the source code of an Object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">uneval(<var>object</var>)</pre>
+```js
+uneval(object)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>object</var></code></dt>
-  <dd>A JavaScript expression or statement.</dd>
-</dl>
+- `object`
+  - : A JavaScript expression or statement.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A string representing the source code of <code><var>object</var></code>.</p>
+A string representing the source code of `object`.
 
-<div class="note"><p><strong>Note:</strong> This will <em>not</em> return a JSON
-  representation of <code><var>object</var></code>.</p></div>
+> **Note:** This will _not_ return a JSON
+> representation of `object`.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p><code>uneval()</code> is a top-level function and is not associated with any object.
-</p>
+`uneval()` is a top-level function and is not associated with any object.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_uneval">Using uneval</h3>
+### Using uneval
 
-<pre class="brush:js">var a = 1;
+```js
+var a = 1;
 uneval(a); // returns a String containing 1
 
 var b = '1';
@@ -54,21 +54,19 @@ uneval(function foo() {}); // returns "(function foo(){})"
 var a = uneval(function foo() { return 'hi'; });
 var foo = eval(a);
 foo(); // returns "hi"
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p><span class="pl-s">Not part of any standard.</span></p>
+Not part of any standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{JSxRef("Global_Objects/eval", "eval()")}}</li>
-  <li>{{JSxRef("JSON.stringify()")}}</li>
-  <li>{{JSxRef("JSON.parse()")}}</li>
-  <li>{{JSxRef("Object.toSource()")}}</li>
-</ul>
+- {{JSxRef("Global_Objects/eval", "eval()")}}
+- {{JSxRef("JSON.stringify()")}}
+- {{JSxRef("JSON.parse()")}}
+- {{JSxRef("Object.toSource()")}}

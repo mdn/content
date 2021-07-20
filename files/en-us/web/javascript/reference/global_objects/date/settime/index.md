@@ -2,64 +2,61 @@
 title: Date.prototype.setTime()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setTime
 tags:
-- Date
-- JavaScript
-- Method
-- Prototype
-- Reference
+  - Date
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
 browser-compat: javascript.builtins.Date.setTime
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>setTime()</code></strong> method sets the {{jsxref("Date")}} object
-  to the time represented by a number of milliseconds since January 1, 1970, 00:00:00 UTC.
-</p>
+The **`setTime()`** method sets the {{jsxref("Date")}} object
+to the time represented by a number of milliseconds since January 1, 1970, 00:00:00 UTC.
 
-<div>{{EmbedInteractiveExample("pages/js/date-settime.html")}}</div>
+{{EmbedInteractiveExample("pages/js/date-settime.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+setTime(timeValue)
+```
 
-<pre class="brush: js">setTime(timeValue)</pre>
+### Parameters
 
-<h3 id="Parameters">Parameters</h3>
+- `timeValue`
+  - : An integer representing the number of milliseconds since 1 January 1970, 00:00:00
+    UTC.
 
-<dl>
-  <dt><code><var>timeValue</var></code></dt>
-  <dd>An integer representing the number of milliseconds since 1 January 1970, 00:00:00
-    UTC.</dd>
-</dl>
+### Return value
 
-<h3 id="Return_value">Return value</h3>
+The number of milliseconds between 1 January 1970 00:00:00 UTC and the updated date
+(effectively, the value of the argument).
 
-<p>The number of milliseconds between 1 January 1970 00:00:00 UTC and the updated date
-  (effectively, the value of the argument).</p>
+## Description
 
-<h2 id="Description">Description</h2>
+Use the `setTime()` method to help assign a date and time to another
+{{jsxref("Date")}} object.
 
-<p>Use the <code>setTime()</code> method to help assign a date and time to another
-  {{jsxref("Date")}} object.</p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Using setTime()
 
-<h3 id="Using_setTime">Using setTime()</h3>
-
-<pre class="brush: js">var theBigDay = new Date('July 1, 1999');
+```js
+var theBigDay = new Date('July 1, 1999');
 var sameAsBigDay = new Date();
 sameAsBigDay.setTime(theBigDay.getTime());
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Date.prototype.getTime()")}}</li>
-  <li>{{jsxref("Date.prototype.setUTCHours()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getTime()")}}
+- {{jsxref("Date.prototype.setUTCHours()")}}

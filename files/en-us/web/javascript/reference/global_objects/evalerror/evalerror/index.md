@@ -2,47 +2,46 @@
 title: EvalError() constructor
 slug: Web/JavaScript/Reference/Global_Objects/EvalError/EvalError
 tags:
-- Constructor
-- JavaScript
-- Reference
+  - Constructor
+  - JavaScript
+  - Reference
 browser-compat: javascript.builtins.EvalError.EvalError
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>EvalError</code></strong> constructor creates a new error regarding
-  the global {{jsxref("Global_Objects/eval", "eval()")}} function. This exception is not
-  thrown by JavaScript anymore, however the <code>EvalError</code> object remains for
-  compatibility.</p>
+The **`EvalError`** constructor creates a new error regarding
+the global {{jsxref("Global_Objects/eval", "eval()")}} function. This exception is not
+thrown by JavaScript anymore, however the `EvalError` object remains for
+compatibility.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 new EvalError()
 new EvalError(message)
 new EvalError(message, fileName)
 new EvalError(message, fileName, lineNumber)
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>message</var></code> {{optional_inline}}</dt>
-  <dd>Human-readable description of the error.</dd>
-  <dt><code><var>fileName</var></code> {{optional_inline}}</dt>
-  <dd>The name of the file containing the code that caused the exception</dd>
-  <dt><code><var>lineNumber</var></code> {{optional_inline}}</dt>
-  <dd>The line number of the code that caused the exception</dd>
-</dl>
+- `message` {{optional_inline}}
+  - : Human-readable description of the error.
+- `fileName` {{optional_inline}}
+  - : The name of the file containing the code that caused the exception
+- `lineNumber` {{optional_inline}}
+  - : The line number of the code that caused the exception
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p><code>EvalError</code> is not used in the current ECMAScript specification and will
-  thus not be thrown by the runtime. However, the object itself remains for backwards
-  compatibility with earlier versions of the specification.</p>
+`EvalError` is not used in the current ECMAScript specification and will
+thus not be thrown by the runtime. However, the object itself remains for backwards
+compatibility with earlier versions of the specification.
 
-<h3 id="Creating_an_EvalError">Creating an EvalError</h3>
+### Creating an EvalError
 
-<pre class="brush: js">try {
+```js
+try {
   throw new EvalError('Hello', 'someFile.js', 10);
 } catch (e) {
   console.log(e instanceof EvalError); // true
@@ -53,19 +52,17 @@ new EvalError(message, fileName, lineNumber)
   console.log(e.columnNumber);         // 0
   console.log(e.stack);                // "@Scratchpad/2:2:9\n"
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Error")}}</li>
-  <li>{{jsxref("Global_Objects/eval", "eval()")}}</li>
-</ul>
+- {{jsxref("Error")}}
+- {{jsxref("Global_Objects/eval", "eval()")}}

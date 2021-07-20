@@ -10,83 +10,77 @@ tags:
   - WebAssembly
 browser-compat: javascript.builtins.WebAssembly
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>WebAssembly</code></strong> JavaScript object acts as the namespace for all <a href="/en-US/docs/WebAssembly">WebAssembly</a>-related functionality.</p>
+The **`WebAssembly`** JavaScript object acts as the namespace for all [WebAssembly](/en-US/docs/WebAssembly)-related functionality.
 
-<p>Unlike most other global objects, <code>WebAssembly</code> is not a constructor (it is not a function object). You can compare it to {{jsxref("Math")}}, which is also a namespace object for mathematical constants and functions, or to {{jsxref("Intl")}} which is the namespace object for internationalization constructors and other language-sensitive functions.</p>
+Unlike most other global objects, `WebAssembly` is not a constructor (it is not a function object). You can compare it to {{jsxref("Math")}}, which is also a namespace object for mathematical constants and functions, or to {{jsxref("Intl")}} which is the namespace object for internationalization constructors and other language-sensitive functions.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The primary uses for the <code>WebAssembly</code> object are:</p>
+The primary uses for the `WebAssembly` object are:
 
-<ul>
- <li>Loading WebAssembly code, using the {{jsxref("WebAssembly.instantiate()")}} function.</li>
- <li>Creating new memory and table instances via the {{jsxref("WebAssembly.Memory()")}}/{{jsxref("WebAssembly.Table()")}} constructors.</li>
- <li>Providing facilities to handle errors that occur in WebAssembly via the {{jsxref("WebAssembly.CompileError()")}}/{{jsxref("WebAssembly.LinkError()")}}/{{jsxref("WebAssembly.RuntimeError()")}} constructors.</li>
-</ul>
+- Loading WebAssembly code, using the {{jsxref("WebAssembly.instantiate()")}} function.
+- Creating new memory and table instances via the {{jsxref("WebAssembly.Memory()")}}/{{jsxref("WebAssembly.Table()")}} constructors.
+- Providing facilities to handle errors that occur in WebAssembly via the {{jsxref("WebAssembly.CompileError()")}}/{{jsxref("WebAssembly.LinkError()")}}/{{jsxref("WebAssembly.RuntimeError()")}} constructors.
 
-<h2 id="Constructor_properties">Constructor properties</h2>
+## Constructor properties
 
-<dl>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/CompileError/CompileError"><code>WebAssembly.CompileError()</code></a></dt>
- <dd>Indicates an error during WebAssembly decoding or validation.</dd>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Global/Global"><code>WebAssembly.Global()</code></a></dt>
- <dd>Represents a global variable instance, accessible from both JavaScript and importable/exportable across one or more {{jsxref("WebAssembly.Module")}} instances. This allows dynamic linking of multiple modules.</dd>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/Instance"><code>WebAssembly.Instance()</code></a></dt>
- <dd>Is a stateful, executable instance of a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module">WebAssembly.Module</a></dd>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/LinkError/LinkError"><code>WebAssembly.LinkError()</code></a></dt>
- <dd>Indicates an error during module instantiation (besides <a class="external external-icon" href="https://webassembly.org/docs/semantics/#traps" rel="noopener">traps</a> from the start function).</dd>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/Memory"><code>WebAssembly.Memory()</code></a></dt>
- <dd>An object whose {{jsxref("WebAssembly/Memory/buffer","buffer")}} property is a resizable <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a> that holds the raw bytes of memory accessed by a WebAssembly <code>Instance</code>.</dd>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module/Module"><code>WebAssembly.Module()</code></a></dt>
- <dd>Contains stateless WebAssembly code that has already been compiled by the browser and can be efficiently <a href="/en-US/docs/Web/API/Worker/postMessage">shared with Workers</a>, and instantiated multiple times.</dd>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/RuntimeError/RunTimeError"><code>WebAssembly.RuntimeError()</code></a></dt>
- <dd>Error type that is thrown whenever WebAssembly specifies a <a class="external external-icon" href="https://webassembly.org/docs/semantics/#traps" rel="noopener">trap</a>.</dd>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/Table"><code>WebAssembly.Table()</code></a></dt>
- <dd>An array-like structure representing a WebAssembly Table, which stores function references.</dd>
-</dl>
+- [`WebAssembly.CompileError()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/CompileError/CompileError)
+  - : Indicates an error during WebAssembly decoding or validation.
+- [`WebAssembly.Global()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Global/Global)
+  - : Represents a global variable instance, accessible from both JavaScript and importable/exportable across one or more {{jsxref("WebAssembly.Module")}} instances. This allows dynamic linking of multiple modules.
+- [`WebAssembly.Instance()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/Instance)
+  - : Is a stateful, executable instance of a [WebAssembly.Module](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module)
+- [`WebAssembly.LinkError()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/LinkError/LinkError)
+  - : Indicates an error during module instantiation (besides [traps](https://webassembly.org/docs/semantics/#traps) from the start function).
+- [`WebAssembly.Memory()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/Memory)
+  - : An object whose {{jsxref("WebAssembly/Memory/buffer","buffer")}} property is a resizable [ArrayBuffer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) that holds the raw bytes of memory accessed by a WebAssembly `Instance`.
+- [`WebAssembly.Module()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module/Module)
+  - : Contains stateless WebAssembly code that has already been compiled by the browser and can be efficiently [shared with Workers](/en-US/docs/Web/API/Worker/postMessage), and instantiated multiple times.
+- [`WebAssembly.RuntimeError()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/RuntimeError/RunTimeError)
+  - : Error type that is thrown whenever WebAssembly specifies a [trap](https://webassembly.org/docs/semantics/#traps).
+- [`WebAssembly.Table()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/Table)
+  - : An array-like structure representing a WebAssembly Table, which stores function references.
 
-<h2 id="Static_methods">Static methods</h2>
+## Static methods
 
-<dl>
- <dt>{{jsxref("WebAssembly.instantiate()")}}</dt>
- <dd>The primary API for compiling and instantiating WebAssembly code, returning both a <code>Module</code> and its first <code>Instance</code>.</dd>
- <dt>{{jsxref("WebAssembly.instantiateStreaming()")}}</dt>
- <dd>Compiles and instantiates a WebAssembly module directly from a streamed underlying source, returning both a <code>Module</code> and its first <code>Instance</code>.</dd>
- <dt>{{jsxref("WebAssembly.compile()")}}</dt>
- <dd>Compiles a {{jsxref("WebAssembly.Module")}} from WebAssembly binary code, leaving instantiation as a separate step.</dd>
- <dt>{{jsxref("WebAssembly.compileStreaming()")}}</dt>
- <dd>compiles a {{jsxref("WebAssembly.Module")}} directly from a streamed underlying source, leaving instantiation as a separate step.</dd>
- <dt>{{jsxref("WebAssembly.validate()")}}</dt>
- <dd>Validates a given typed array of WebAssembly binary code, returning whether the bytes are valid WebAssembly code (<code>true</code>) or not (<code>false</code>).</dd>
-</dl>
+- {{jsxref("WebAssembly.instantiate()")}}
+  - : The primary API for compiling and instantiating WebAssembly code, returning both a `Module` and its first `Instance`.
+- {{jsxref("WebAssembly.instantiateStreaming()")}}
+  - : Compiles and instantiates a WebAssembly module directly from a streamed underlying source, returning both a `Module` and its first `Instance`.
+- {{jsxref("WebAssembly.compile()")}}
+  - : Compiles a {{jsxref("WebAssembly.Module")}} from WebAssembly binary code, leaving instantiation as a separate step.
+- {{jsxref("WebAssembly.compileStreaming()")}}
+  - : compiles a {{jsxref("WebAssembly.Module")}} directly from a streamed underlying source, leaving instantiation as a separate step.
+- {{jsxref("WebAssembly.validate()")}}
+  - : Validates a given typed array of WebAssembly binary code, returning whether the bytes are valid WebAssembly code (`true`) or not (`false`).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Stream_a_.wasm_module_then_compile_and_instantiate_it">Stream a .wasm module then compile and instantiate it</h3>
+### Stream a .wasm module then compile and instantiate it
 
-<p>The following example (see our <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/instantiate-streaming.html">instantiate-streaming.html</a> demo on GitHub, and <a href="https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html">view it live</a> also) directly streams a .wasm module from an underlying source then compiles and instantiates it, the promise fulfilling with a <code>ResultObject</code>. Because the <code>instantiateStreaming()</code>  function accepts a promise for a <a href="/en-US/docs/Web/API/Response" title="The Response interface of the Fetch API represents the response to a request."><code>Response</code></a> object, you can directly pass it a <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch" title="The fetch() method of the WindowOrWorkerGlobalScope mixin starts the process of fetching a resource from the network, returning a promise which is fulfilled once the response is available."><code>WindowOrWorkerGlobalScope.fetch()</code></a> call, and it will pass the response into the function when it fulfills.</p>
+The following example (see our [instantiate-streaming.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/instantiate-streaming.html) demo on GitHub, and [view it live](https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html) also) directly streams a .wasm module from an underlying source then compiles and instantiates it, the promise fulfilling with a `ResultObject`. Because the `instantiateStreaming()`  function accepts a promise for a [`Response`](/en-US/docs/Web/API/Response "The Response interface of the Fetch API represents the response to a request.") object, you can directly pass it a [`WindowOrWorkerGlobalScope.fetch()`](/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch "The fetch() method of the WindowOrWorkerGlobalScope mixin starts the process of fetching a resource from the network, returning a promise which is fulfilled once the response is available.") call, and it will pass the response into the function when it fulfills.
 
-<pre class="brush: js">var importObject = { imports: { imported_func: arg =&gt; console.log(arg) } };
+```js
+var importObject = { imports: { imported_func: arg => console.log(arg) } };
 
 WebAssembly.instantiateStreaming(fetch('simple.wasm'), importObject)
-.then(obj =&gt; obj.instance.exports.exported_func());</pre>
+.then(obj => obj.instance.exports.exported_func());
+```
 
-<p>The <code>ResultObject</code>'s instance member is then accessed, and the contained exported function invoked.</p>
+The `ResultObject`'s instance member is then accessed, and the contained exported function invoked.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/WebAssembly">WebAssembly</a> overview page</li>
- <li><a href="/en-US/docs/WebAssembly/Concepts">WebAssembly concepts</a></li>
- <li><a href="/en-US/docs/WebAssembly/Using_the_JavaScript_API">Using the WebAssembly JavaScript API</a></li>
-</ul>
+- [WebAssembly](/en-US/docs/WebAssembly) overview page
+- [WebAssembly concepts](/en-US/docs/WebAssembly/Concepts)
+- [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)

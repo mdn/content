@@ -2,41 +2,42 @@
 title: Generator.prototype.return()
 slug: Web/JavaScript/Reference/Global_Objects/Generator/return
 tags:
-- ECMAScript 2015
-- Generator
-- JavaScript
-- Method
-- Prototype
-- Reference
+  - ECMAScript 2015
+  - Generator
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
 browser-compat: javascript.builtins.Generator.return
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>return()</code></strong> method returns the given value and finishes
-  the generator.</p>
+The **`return()`** method returns the given value and finishes
+the generator.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">return(<var>value</var>)</pre>
+```js
+return(value)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>value</var></code></dt>
-  <dd>The value to return.</dd>
-</dl>
+- `value`
+  - : The value to return.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>The value that is given as an argument.</p>
+The value that is given as an argument.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_return">Using return()</h3>
+### Using return()
 
-<p>The following example shows a simple generator and the <code>return</code> method.</p>
+The following example shows a simple generator and the `return` method.
 
-<pre class="brush: js">function* gen() {
+```js
+function* gen() {
   yield 1;
   yield 2;
   yield 3;
@@ -47,15 +48,16 @@ const g = gen();
 g.next();        // { value: 1, done: false }
 g.return('foo'); // { value: "foo", done: true }
 g.next();        // { value: undefined, done: true }
-</pre>
+```
 
-<p>If <code>return(<var>value</var>)</code> is called on a generator that is already in
-  "completed" state, the generator will remain in "completed" state.</p>
+If `return(value)` is called on a generator that is already in
+"completed" state, the generator will remain in "completed" state.
 
-<p>If no argument is provided, the <code>value</code> property of the returned object will be "<code>undefined</code>". If an argument is provided, it will be set to the value
-  of the <code>value</code> property of the returned object.</p>
+If no argument is provided, the `value` property of the returned object will be "`undefined`". If an argument is provided, it will be set to the value
+of the `value` property of the returned object.
 
-<pre class="brush: js">function* gen() {
+```js
+function* gen() {
   yield 1;
   yield 2;
   yield 3;
@@ -68,18 +70,16 @@ g.next(); // { value: 3, done: false }
 g.next(); // { value: undefined, done: true }
 g.return(); // { value: undefined, done: true }
 g.return(1); // { value: 1, done: true }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Statements/function*", "function*")}}</li>
-</ul>
+- {{jsxref("Statements/function*", "function*")}}

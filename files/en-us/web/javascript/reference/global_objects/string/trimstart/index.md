@@ -2,63 +2,66 @@
 title: String.prototype.trimStart()
 slug: Web/JavaScript/Reference/Global_Objects/String/trimStart
 tags:
-- JavaScript
-- Method
-- Prototype
-- Reference
-- String
-- Polyfill
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
+  - String
+  - Polyfill
 browser-compat: javascript.builtins.String.trimStart
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>trimStart()</code></strong> method removes whitespace from the
-  beginning of a string. <code>trimLeft()</code> is an alias of this method.</p>
+The **`trimStart()`** method removes whitespace from the
+beginning of a string. `trimLeft()` is an alias of this method.
 
-<div>{{EmbedInteractiveExample("pages/js/string-trimstart.html")}}</div>
+{{EmbedInteractiveExample("pages/js/string-trimstart.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush: js">
+```js
 trimStart()
 
 trimLeft()
-</pre>
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A new string representing <code><var>str</var></code> stripped of whitespace from its beginning (left side).</p>
+A new string representing `str` stripped of whitespace from its beginning (left side).
 
-<p>If the beginning of <code><var>str</var></code> has no whitespace, a new string is still returned (essentially a copy of <code><var>str</var></code>), with no exception being thrown.</p>
+If the beginning of `str` has no whitespace, a new string is still returned (essentially a copy of `str`), with no exception being thrown.
 
-<h3 id="Aliasing">Aliasing</h3>
+### Aliasing
 
-<p>For consistency with functions like {{jsxref("String.prototype.padStart")}} the
-  standard method name is <code>trimStart</code>. However, for web compatibility reasons,
-  <code>trimLeft</code> remains as an alias to <code>trimStart</code>. In some engines
-  this means:</p>
+For consistency with functions like {{jsxref("String.prototype.padStart")}} the
+standard method name is `trimStart`. However, for web compatibility reasons,
+`trimLeft` remains as an alias to `trimStart`. In some engines
+this means:
 
-<pre class="brush: js">String.prototype.trimLeft.name === "trimStart";</pre>
+```js
+String.prototype.trimLeft.name === "trimStart";
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_trimStart">Using trimStart()</h3>
+### Using trimStart()
 
-<p>The following example displays the lowercase string <code>'foo  '</code>:</p>
+The following example displays the lowercase string `'foo '`:
 
-<pre class="brush: js highlight: [5]">var str = '   foo  ';
+```js
+var str = '   foo  ';
 
 console.log(str.length); // 8
 
 str = str.trimStart();
 console.log(str.length); // 5
 console.log(str);        // 'foo  '
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<pre class="brush: js highlight: [5]">//https://github.com/FabioVergani/js-Polyfill_String-trimStart
+```js
+//https://github.com/FabioVergani/js-Polyfill_String-trimStart
 
 (function(w){
     var String=w.String, Proto=String.prototype;
@@ -76,10 +79,10 @@ console.log(str);        // 'foo  '
 
 /*
 ES6:
-(w=&gt;{
+(w=>{
     const String=w.String, Proto=String.prototype;
 
-    ((o,p)=&gt;{
+    ((o,p)=>{
         if(p in o?o[p]?false:true:true){
             const r=/^\s+/;
             o[p]=o.trimLeft||function(){
@@ -89,20 +92,19 @@ ES6:
     })(Proto,'trimStart');
 
 })(window);
-*/</pre>
+*/
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>A polyfill of <code>String.prototype.trimStart</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-string-and-regexp"><code>core-js</code></a></li>
-  <li>{{jsxref("String.prototype.trim()")}}</li>
-  <li>{{jsxref("String.prototype.trimEnd()")}}</li>
-</ul>
+- A polyfill of `String.prototype.trimStart` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- {{jsxref("String.prototype.trim()")}}
+- {{jsxref("String.prototype.trimEnd()")}}

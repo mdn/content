@@ -7,47 +7,45 @@ tags:
   - Statement
 browser-compat: javascript.statements.debugger
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p>The <strong><code>debugger</code> statement</strong> invokes any available debugging
-  functionality, such as setting a breakpoint. If no debugging functionality is available,
-  this statement has no effect.</p>
+The **`debugger` statement** invokes any available debugging
+functionality, such as setting a breakpoint. If no debugging functionality is available,
+this statement has no effect.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">debugger;</pre>
+```js
+debugger;
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_the_debugger_statement">Using the debugger statement</h3>
+### Using the debugger statement
 
-<p>The following example shows code where a <code>debugger</code> statement has been
-  inserted, to invoke a debugger (if one exists) when the function is called.</p>
+The following example shows code where a `debugger` statement has been
+inserted, to invoke a debugger (if one exists) when the function is called.
 
-<pre class="brush:js">function potentiallyBuggyCode() {
+```js
+function potentiallyBuggyCode() {
     debugger;
     // do potentially buggy stuff to examine, step through, etc.
-}</pre>
+}
+```
 
-<p>When the debugger is invoked, execution is paused at the <code>debugger</code>
-  statement. It is like a breakpoint in the script source.</p>
+When the debugger is invoked, execution is paused at the `debugger`
+statement. It is like a breakpoint in the script source.
 
-<p><a
-    href="screen_shot_2014-02-07_at_9.14.35_am.png"><img
-      alt="Paused at a debugger statement."
-      src="screen_shot_2014-02-07_at_9.14.35_am.png"></a></p>
+[![Paused at a debugger statement.](screen_shot_2014-02-07_at_9.14.35_am.png)](screen_shot_2014-02-07_at_9.14.35_am.png)
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Tools/Debugger">The Debugger in the Firefox Developer Tools</a>
-  </li>
-</ul>
+- [The Debugger in the Firefox Developer Tools](/en-US/docs/Tools/Debugger)

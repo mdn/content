@@ -11,47 +11,43 @@ tags:
   - Regular Expressions
 browser-compat: javascript.builtins.RegExp.unicode
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>unicode</code></strong> property indicates whether or not the "<code>u</code>" flag is used with a regular expression. <code>unicode</code> is a read-only property of an individual regular expression instance.</p>
+The **`unicode`** property indicates whether or not the "`u`" flag is used with a regular expression. `unicode` is a read-only property of an individual regular expression instance.
 
-<div>{{EmbedInteractiveExample("pages/js/regexp-prototype-unicode.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/regexp-prototype-unicode.html", "taller")}}{{js_property_attributes(0, 0, 1)}}
 
+## Description
 
-<div>{{js_property_attributes(0, 0, 1)}}</div>
+The value of `unicode` is a {{jsxref("Boolean")}} and `true` if the "`u`" flag was used; otherwise `false`. The "`u`" flag enables various Unicode-related features. With the "u" flag, any Unicode code point escapes will be interpreted as such, for example.
 
-<h2 id="Description">Description</h2>
+You cannot change this property directly. It is read-only.
 
-<p>The value of <code>unicode</code> is a {{jsxref("Boolean")}} and <code>true</code> if the "<code>u</code>" flag was used; otherwise <code>false</code>. The "<code>u</code>" flag enables various Unicode-related features. With the "u" flag, any Unicode code point escapes will be interpreted as such, for example.</p>
+## Examples
 
-<p>You cannot change this property directly. It is read-only.</p>
+### Using the unicode property
 
-<h2 id="Examples">Examples</h2>
-
-<h3 id="Using_the_unicode_property">Using the unicode property</h3>
-
-<pre class="brush: js">var regex = new RegExp('\u{61}', 'u');
+```js
+var regex = new RegExp('\u{61}', 'u');
 
 console.log(regex.unicode); // true
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("RegExp.lastIndex")}}</li>
- <li>{{JSxRef("RegExp.prototype.dotAll")}}</li>
- <li>{{JSxRef("RegExp.prototype.global")}}</li>
- <li>{{JSxRef("RegExp.prototype.hasIndices")}}</li>
- <li>{{JSxRef("RegExp.prototype.ignoreCase")}}</li>
- <li>{{JSxRef("RegExp.prototype.multiline")}}</li>
- <li>{{JSxRef("RegExp.prototype.source")}}</li>
- <li>{{JSxRef("RegExp.prototype.sticky")}}</li>
-</ul>
+- {{jsxref("RegExp.lastIndex")}}
+- {{JSxRef("RegExp.prototype.dotAll")}}
+- {{JSxRef("RegExp.prototype.global")}}
+- {{JSxRef("RegExp.prototype.hasIndices")}}
+- {{JSxRef("RegExp.prototype.ignoreCase")}}
+- {{JSxRef("RegExp.prototype.multiline")}}
+- {{JSxRef("RegExp.prototype.source")}}
+- {{JSxRef("RegExp.prototype.sticky")}}

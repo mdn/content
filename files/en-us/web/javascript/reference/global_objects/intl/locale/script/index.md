@@ -12,43 +12,45 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.Locale.script
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><span class="seoSummary">The <strong><code>Intl.Locale.prototype.script</code></strong> property is an accessor property which returns the script used for writing the particular language used in the locale.</span></p>
+The **`Intl.Locale.prototype.script`** property is an accessor property which returns the script used for writing the particular language used in the locale.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>A script, sometimes called writing system, is one of the core attributes of a locale. It indicates the set of symbols, or glyphs, that are used to write a particular language. For instance, the script associated with English is Latin, whereas the script typically associated with Korean is Hangul. In many cases, denoting a script is not strictly necessary, since the language (which is necessary) is only written in a single script. There are exceptions to this rule, however, and it is important to indicate the script whenever possible, in order to have a complete Unicode language identifier.</p>
+A script, sometimes called writing system, is one of the core attributes of a locale. It indicates the set of symbols, or glyphs, that are used to write a particular language. For instance, the script associated with English is Latin, whereas the script typically associated with Korean is Hangul. In many cases, denoting a script is not strictly necessary, since the language (which is necessary) is only written in a single script. There are exceptions to this rule, however, and it is important to indicate the script whenever possible, in order to have a complete Unicode language identifier.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_the_script_in_the_locale_identifer_string_argument">Setting the script in the locale identifer string argument</h3>
+### Setting the script in the locale identifer string argument
 
-<p>The script is the second part of a valid Unicode language identifier string, and can be set by adding it to the locale identifier string that is passed into the {{jsxref("Intl/Locale/Locale", "Locale")}} constructor. Note that the script is not a required part of a locale identifier.</p>
+The script is the second part of a valid Unicode language identifier string, and can be set by adding it to the locale identifier string that is passed into the {{jsxref("Intl/Locale/Locale", "Locale")}} constructor. Note that the script is not a required part of a locale identifier.
 
-<pre class="brush: js">let scriptStr = new Intl.Locale("en-Latn-US");
+```js
+let scriptStr = new Intl.Locale("en-Latn-US");
 
-console.log(scriptStr.script); // Prints "Latn"</pre>
+console.log(scriptStr.script); // Prints "Latn"
+```
 
-<h3 id="Setting_the_script_via_the_configuration_object">Setting the script via the configuration object</h3>
+### Setting the script via the configuration object
 
-<p>The {{jsxref("Intl/Locale/Locale", "Locale")}} constructor takes a configuration object, which can be used to set the script subtag and property.</p>
+The {{jsxref("Intl/Locale/Locale", "Locale")}} constructor takes a configuration object, which can be used to set the script subtag and property.
 
-<pre class="brush: js">let scriptObj = new Intl.Locale("fr-FR", {script: "Latn"});
+```js
+let scriptObj = new Intl.Locale("fr-FR", {script: "Latn"});
 
-console.log(scriptObj.script); // Prints "Latn"</pre>
+console.log(scriptObj.script); // Prints "Latn"
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>{{jsxref("Intl.Locale")}}</li>
-	<li><a href="https://www.unicode.org/reports/tr35/#unicode_script_subtag_validity">Unicode's script subtag specification</a></li>
-</ul>
+- {{jsxref("Intl.Locale")}}
+- [Unicode's script subtag specification](https://www.unicode.org/reports/tr35/#unicode_script_subtag_validity)

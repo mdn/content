@@ -7,43 +7,45 @@ tags:
   - JavaScript
   - TypeError
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<p>The JavaScript exception "invalid Array.prototype.sort argument" occurs when the argument of {{jsxref("Array.prototype.sort()")}} isn't either {{jsxref("undefined")}} or a function which compares its operands.</p>
+The JavaScript exception "invalid Array.prototype.sort argument" occurs when the argument of {{jsxref("Array.prototype.sort()")}} isn't either {{jsxref("undefined")}} or a function which compares its operands.
 
-<h2 id="Message">Message</h2>
+## Message
 
-<pre class="brush: html">TypeError: argument is not a function object (Edge)
+```html
+TypeError: argument is not a function object (Edge)
 TypeError: invalid Array.prototype.sort argument (Firefox)
-</pre>
+```
 
-<h2 id="Error_type">Error type</h2>
+## Error type
 
-<p>{{jsxref("TypeError")}}</p>
+{{jsxref("TypeError")}}
 
-<h2 id="What_went_wrong">What went wrong?</h2>
+## What went wrong?
 
-<p>The argument of {{jsxref("Array.prototype.sort()")}} is expected to be either {{jsxref("undefined")}} or a function which compares its operands.</p>
+The argument of {{jsxref("Array.prototype.sort()")}} is expected to be either {{jsxref("undefined")}} or a function which compares its operands.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Invalid_cases">Invalid cases</h3>
+### Invalid cases
 
-<pre class="brush: js example-bad">[1, 3, 2].sort(5);  // TypeError
+```js example-bad
+[1, 3, 2].sort(5);  // TypeError
 
-var cmp = { asc: (x, y) =&gt; x &gt;= y, dsc: (x, y) =&gt; x &lt;= y };
+var cmp = { asc: (x, y) => x >= y, dsc: (x, y) => x <= y };
 [1, 3, 2].sort(cmp[this.key] || 'asc');  // TypeError
-</pre>
+```
 
-<h3 id="Valid_cases">Valid cases</h3>
+### Valid cases
 
-<pre class="brush: js example-good">[1, 3, 2].sort();   // [1, 2, 3]
+```js example-good
+[1, 3, 2].sort();   // [1, 2, 3]
 
-var cmp = { asc: (x, y) =&gt; x &gt;= y, dsc: (x, y) =&gt; x &lt;= y };
-[1, 3, 2].sort(cmp[this.key || 'asc']); // [1, 2, 3]</pre>
+var cmp = { asc: (x, y) => x >= y, dsc: (x, y) => x <= y };
+[1, 3, 2].sort(cmp[this.key || 'asc']); // [1, 2, 3]
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("Array.prototype.sort()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.sort()")}}

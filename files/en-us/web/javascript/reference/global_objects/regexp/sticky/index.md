@@ -12,25 +12,24 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.RegExp.sticky
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>sticky</code></strong> property reflects whether or not the search is sticky (searches in strings only from the index indicated by the {{jsxref("RegExp.lastIndex", "lastIndex")}} property of this regular expression). <code>sticky</code> is a read-only property of an individual regular expression object.</p>
+The **`sticky`** property reflects whether or not the search is sticky (searches in strings only from the index indicated by the {{jsxref("RegExp.lastIndex", "lastIndex")}} property of this regular expression). `sticky` is a read-only property of an individual regular expression object.
 
-<div>{{EmbedInteractiveExample("pages/js/regexp-prototype-sticky.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/regexp-prototype-sticky.html", "taller")}}{{js_property_attributes(0, 0, 1)}}
 
-<div>{{js_property_attributes(0, 0, 1)}}</div>
+## Description
 
-<h2 id="Description">Description</h2>
+The value of `sticky` is a {{jsxref("Boolean")}} and true if the "`y`" flag was used; otherwise, false. The "`y`" flag indicates that it matches only from the index indicated by the {{jsxref("RegExp.lastIndex", "lastIndex")}} property of this regular expression in the target string (and does not attempt to match from any later indexes). A regular expression defined as both `sticky` and `global` ignores the `global` flag.
 
-<p>The value of <code>sticky</code> is a {{jsxref("Boolean")}} and true if the "<code>y</code>" flag was used; otherwise, false. The "<code>y</code>" flag indicates that it matches only from the index indicated by the {{jsxref("RegExp.lastIndex", "lastIndex")}} property of this regular expression in the target string (and does not attempt to match from any later indexes). A regular expression defined as both <code>sticky</code> and <code>global</code> ignores the <code>global</code> flag.</p>
+You cannot change this property directly. It is read-only.
 
-<p>You cannot change this property directly. It is read-only.</p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Using a regular expression with the sticky flag
 
-<h3 id="Using_a_regular_expression_with_the_sticky_flag">Using a regular expression with the sticky flag</h3>
-
-<pre class="brush: js">var str = '#foo#';
+```js
+var str = '#foo#';
 var regex = /foo/y;
 
 regex.lastIndex = 1;
@@ -38,19 +37,18 @@ regex.test(str); // true
 regex.lastIndex = 5;
 regex.test(str); // false (lastIndex is taken into account with sticky flag)
 regex.lastIndex; // 0 (reset after match failure)
-</pre>
+```
 
-<h3 id="Anchored_sticky_flag">Anchored sticky flag</h3>
+### Anchored sticky flag
 
-<p>For several versions, Firefox's SpiderMonkey engine had <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=773687">a bug</a> with regard to the <code>^</code> assertion and the sticky flag which allowed expressions starting with the <code>^</code> assertion and using the sticky flag to match when they shouldn't. The bug was introduced some time after Firefox 3.6 (which had the sticky flag but not the bug) and fixed in 2015. Perhaps because of the bug, the ES2015 specification <a href="http://www.ecma-international.org/ecma-262/7.0/index.html#sec-assertion">specifically calls out</a> the fact that:</p>
+For several versions, Firefox's SpiderMonkey engine had [a bug](https://bugzilla.mozilla.org/show_bug.cgi?id=773687) with regard to the `^` assertion and the sticky flag which allowed expressions starting with the `^` assertion and using the sticky flag to match when they shouldn't. The bug was introduced some time after Firefox 3.6 (which had the sticky flag but not the bug) and fixed in 2015. Perhaps because of the bug, the ES2015 specification [specifically calls out](http://www.ecma-international.org/ecma-262/7.0/index.html#sec-assertion) the fact that:
 
-<blockquote>
-<p>When the <code>y</code> flag is used with a pattern, ^ always matches only at the beginning of the input, or (if <code>multiline</code> is <code>true</code>) at the beginning of a line.</p>
-</blockquote>
+> When the `y` flag is used with a pattern, ^ always matches only at the beginning of the input, or (if `multiline` is `true`) at the beginning of a line.
 
-<p>Examples of correct behavior:</p>
+Examples of correct behavior:
 
-<pre class="brush: js">var regex = /^foo/y;
+```js
+var regex = /^foo/y;
 regex.lastIndex = 2;
 regex.test('..foo');   // false - index 2 is not the beginning of the string
 
@@ -59,26 +57,24 @@ regex2.lastIndex = 2;
 regex2.test('..foo');  // false - index 2 is not the beginning of the string or line
 regex2.lastIndex = 2;
 regex2.test('.\nfoo'); // true - index 2 is the beginning of a line
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>A polyfill of <code>sticky</code> <code>RegExp</code> flag is available in <a href="https://github.com/zloirock/core-js#ecmascript-string-and-regexp"><code>core-js</code></a></li>
- <li>{{jsxref("RegExp.lastIndex")}}</li>
- <li>{{JSxRef("RegExp.prototype.dotAll")}}</li>
- <li>{{JSxRef("RegExp.prototype.global")}}</li>
- <li>{{JSxRef("RegExp.prototype.hasIndices")}}</li>
- <li>{{JSxRef("RegExp.prototype.ignoreCase")}}</li>
- <li>{{JSxRef("RegExp.prototype.multiline")}}</li>
- <li>{{JSxRef("RegExp.prototype.source")}}</li>
- <li>{{JSxRef("RegExp.prototype.unicode")}}</li>
-</ul>
+- A polyfill of `sticky` `RegExp` flag is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- {{jsxref("RegExp.lastIndex")}}
+- {{JSxRef("RegExp.prototype.dotAll")}}
+- {{JSxRef("RegExp.prototype.global")}}
+- {{JSxRef("RegExp.prototype.hasIndices")}}
+- {{JSxRef("RegExp.prototype.ignoreCase")}}
+- {{JSxRef("RegExp.prototype.multiline")}}
+- {{JSxRef("RegExp.prototype.source")}}
+- {{JSxRef("RegExp.prototype.unicode")}}

@@ -8,31 +8,28 @@ tags:
   - WebAssembly
 browser-compat: javascript.builtins.WebAssembly.Instance
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>A <strong><code>WebAssembly.Instance</code></strong> object is a stateful, executable instance of a {{jsxref("WebAssembly.Module")}}. <code>Instance</code> objects contain all the <a href="/en-US/docs/WebAssembly/Exported_functions">Exported WebAssembly functions</a> that allow calling into WebAssembly code from JavaScript.</p>
+A **`WebAssembly.Instance`** object is a stateful, executable instance of a {{jsxref("WebAssembly.Module")}}. `Instance` objects contain all the [Exported WebAssembly functions](/en-US/docs/WebAssembly/Exported_functions) that allow calling into WebAssembly code from JavaScript.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/Instance"><code>WebAssembly.Instance()</code></a></dt>
- <dd>Creates a new <code>Instance</code> object.</dd>
-</dl>
+- [`WebAssembly.Instance()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/Instance)
+  - : Creates a new `Instance` object.
 
-<h2 id="Instance_properties">Instance properties</h2>
+## Instance properties
 
-<dl>
- <dt>{{jsxref("WebAssembly/Instance/exports", "Instance.prototype.exports")}}</dt>
- <dd>Returns an object containing as its members all the functions exported from the WebAssembly module instance, to allow them to be accessed and used by JavaScript. Read-only.</dd>
-</dl>
+- {{jsxref("WebAssembly/Instance/exports", "Instance.prototype.exports")}}
+  - : Returns an object containing as its members all the functions exported from the WebAssembly module instance, to allow them to be accessed and used by JavaScript. Read-only.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Synchronously_instantiating_a_WebAssembly_module">Synchronously instantiating a WebAssembly module</h3>
+### Synchronously instantiating a WebAssembly module
 
-<p>The <code>WebAssembly.Instance()</code> constructor function can be called to synchronously instantiate a given {{jsxref("WebAssembly.Module")}} object, for example:</p>
+The `WebAssembly.Instance()` constructor function can be called to synchronously instantiate a given {{jsxref("WebAssembly.Module")}} object, for example:
 
-<pre class="brush: js">const importObject = {
+```js
+const importObject = {
   imports: {
     imported_func: function(arg) {
       console.log(arg);
@@ -40,17 +37,19 @@ browser-compat: javascript.builtins.WebAssembly.Instance
   }
 };
 
-fetch('simple.wasm').then(response =&gt;
+fetch('simple.wasm').then(response =>
   response.arrayBuffer()
-).then(bytes =&gt; {
+).then(bytes => {
   let mod = new WebAssembly.Module(bytes);
   let instance = new WebAssembly.Instance(mod, importObject);
   instance.exports.exported_func();
-})</pre>
+})
+```
 
-<p>The preferred way to get an <code>Instance</code> is asynchronously, for example using the {{jsxref("WebAssembly.instantiateStreaming()")}} function like this:</p>
+The preferred way to get an `Instance` is asynchronously, for example using the {{jsxref("WebAssembly.instantiateStreaming()")}} function like this:
 
-<pre class="brush: js">const importObject = {
+```js
+const importObject = {
   imports: {
     imported_func: function(arg) {
       console.log(arg);
@@ -59,22 +58,21 @@ fetch('simple.wasm').then(response =&gt;
 };
 
 WebAssembly.instantiateStreaming(fetch('simple.wasm'), importObject)
-.then(obj =&gt; obj.instance.exports.exported_func());</pre>
+.then(obj => obj.instance.exports.exported_func());
+```
 
-<p>This also demonstrates how the <code>exports</code> property is used to access exported functions.</p>
+This also demonstrates how the `exports` property is used to access exported functions.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/WebAssembly">WebAssembly</a> overview page</li>
- <li><a href="/en-US/docs/WebAssembly/Concepts">WebAssembly concepts</a></li>
- <li><a href="/en-US/docs/WebAssembly/Using_the_JavaScript_API">Using the WebAssembly JavaScript API</a></li>
-</ul>
+- [WebAssembly](/en-US/docs/WebAssembly) overview page
+- [WebAssembly concepts](/en-US/docs/WebAssembly/Concepts)
+- [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)

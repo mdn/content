@@ -2,56 +2,56 @@
 title: String.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/String/valueOf
 tags:
-- JavaScript
-- Method
-- Prototype
-- Reference
-- String
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
+  - String
 browser-compat: javascript.builtins.String.valueOf
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>valueOf()</code></strong> method returns the primitive value of a
-  {{jsxref("String")}} object.</p>
+The **`valueOf()`** method returns the primitive value of a
+{{jsxref("String")}} object.
 
-<div>{{EmbedInteractiveExample("pages/js/string-valueof.html")}}</div>
+{{EmbedInteractiveExample("pages/js/string-valueof.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">valueOf()</pre>
+```js
+valueOf()
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A string representing the primitive value of a given {{jsxref("String")}} object.</p>
+A string representing the primitive value of a given {{jsxref("String")}} object.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The <code>valueOf()</code> method of {{jsxref("String")}} returns the primitive value
-  of a {{jsxref("String")}} object as a string data type. This value is equivalent to
-  {{jsxref("String.prototype.toString()")}}.</p>
+The `valueOf()` method of {{jsxref("String")}} returns the primitive value
+of a {{jsxref("String")}} object as a string data type. This value is equivalent to
+{{jsxref("String.prototype.toString()")}}.
 
-<p>This method is usually called internally by JavaScript and not explicitly in code.</p>
+This method is usually called internally by JavaScript and not explicitly in code.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_valueOf">Using <code>valueOf()</code></h3>
+### Using `valueOf()`
 
-<pre class="brush: js">var x = new String('Hello world');
+```js
+var x = new String('Hello world');
 console.log(x.valueOf()); // Displays 'Hello world'
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat}}
 
-<p>{{Compat}}</p>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
-  <li>{{jsxref("String.prototype.toString()")}}</li>
-  <li>{{jsxref("Object.prototype.valueOf()")}}</li>
-</ul>
+- {{jsxref("String.prototype.toString()")}}
+- {{jsxref("Object.prototype.valueOf()")}}

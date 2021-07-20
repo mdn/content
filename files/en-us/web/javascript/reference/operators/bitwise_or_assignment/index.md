@@ -2,54 +2,53 @@
 title: Bitwise OR assignment (|=)
 slug: Web/JavaScript/Reference/Operators/Bitwise_OR_assignment
 tags:
-- Assignment operator
-- JavaScript
-- Language feature
-- Operator
-- Reference
+  - Assignment operator
+  - JavaScript
+  - Language feature
+  - Operator
+  - Reference
 browser-compat: javascript.operators.bitwise_or_assignment
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>The bitwise OR assignment operator (<code>|=</code>) uses the binary representation of
-  both operands, does a bitwise OR operation on them and assigns the result to the
-  variable.</p>
+The bitwise OR assignment operator (`|=`) uses the binary representation of
+both operands, does a bitwise OR operation on them and assigns the result to the
+variable.
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-bitwise-or-assignment.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-bitwise-or-assignment.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+x |= y // x = x | y
+```
 
-<pre class="brush: js">x |= y // x = x | y</pre>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Using bitwise OR assignment
 
-<h3 id="Using_bitwise_OR_assignment">Using bitwise OR assignment</h3>
-
-<pre class="brush: js">let a = 5;
+```js
+let a = 5;
 a |= 2; // 7
 // 5: 00000000000000000000000000000101
 // 2: 00000000000000000000000000000010
 // -----------------------------------
-// 7: 00000000000000000000000000000111</pre>
+// 7: 00000000000000000000000000000111
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a
-      href="/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment">Assignment
-      operators in the JS guide</a></li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_OR">Bitwise OR
-      operator</a></li>
-  <li><a
-      href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment">Logical
-      OR assignment (<code>||=</code>)</a></li>
-</ul>
+- [Assignment
+  operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment)
+- [Bitwise OR
+  operator](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_OR)
+- [Logical
+  OR assignment (`||=`)](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment)

@@ -11,39 +11,43 @@ tags:
   - JavaScript
 browser-compat: javascript.classes
 ---
-<div>{{JsSidebar("Classes")}}</div>
+{{JsSidebar("Classes")}}
 
-<p>Classes are a template for creating objects. They encapsulate data with code to work on that data. Classes in JS are built on prototypes but also have some syntax and semantics that are not shared with ES5 class-like semantics.</p>
+Classes are a template for creating objects. They encapsulate data with code to work on that data. Classes in JS are built on prototypes but also have some syntax and semantics that are not shared with ES5 class-like semantics.
 
-<h2 id="Defining_classes">Defining classes</h2>
+## Defining classes
 
-<p>Classes are in fact "special {{jsxref("Functions", "functions", "", "true")}}", and just as you can define {{jsxref("Operators/function", "function expressions", "", "true")}} and {{jsxref("Statements/function", "function declarations", "", "true")}}, the class syntax has two components: {{jsxref("Operators/class", "class expressions", "", "true")}} and {{jsxref("Statements/class", "class declarations", "", "true")}}.</p>
+Classes are in fact "special {{jsxref("Functions", "functions", "", "true")}}", and just as you can define {{jsxref("Operators/function", "function expressions", "", "true")}} and {{jsxref("Statements/function", "function declarations", "", "true")}}, the class syntax has two components: {{jsxref("Operators/class", "class expressions", "", "true")}} and {{jsxref("Statements/class", "class declarations", "", "true")}}.
 
-<h3 id="Class_declarations">Class declarations</h3>
+### Class declarations
 
-<p>One way to define a class is using a <strong>class declaration</strong>. To declare a class, you use the <code>class</code> keyword with the name of the class ("Rectangle" here).</p>
+One way to define a class is using a **class declaration**. To declare a class, you use the `class` keyword with the name of the class ("Rectangle" here).
 
-<pre class="brush: js">class Rectangle {
+```js
+class Rectangle {
   constructor(height, width) {
     this.height = height;
     this.width = width;
   }
-}</pre>
+}
+```
 
-<h4 id="Hoisting">Hoisting</h4>
+#### Hoisting
 
-<p>An important difference between <strong>function declarations</strong> and <strong>class declarations</strong> is that function declarations are {{Glossary("Hoisting", "hoisted")}} and class declarations are not. You first need to declare your class and then access it, otherwise code like the following will throw a {{jsxref("ReferenceError")}}:</p>
+An important difference between **function declarations** and **class declarations** is that function declarations are {{Glossary("Hoisting", "hoisted")}} and class declarations are not. You first need to declare your class and then access it, otherwise code like the following will throw a {{jsxref("ReferenceError")}}:
 
-<pre class="brush: js example-bad">const p = new Rectangle(); // ReferenceError
+```js example-bad
+const p = new Rectangle(); // ReferenceError
 
 class Rectangle {}
-</pre>
+```
 
-<h3 id="Class_expressions">Class expressions</h3>
+### Class expressions
 
-<p>A <strong>class expression</strong> is another way to define a class. Class expressions can be named or unnamed. The name given to a named class expression is local to the class's body. However, it can be accessed via the {{jsxref("Function.name", "name")}} property.</p>
+A **class expression** is another way to define a class. Class expressions can be named or unnamed. The name given to a named class expression is local to the class's body. However, it can be accessed via the {{jsxref("Function.name", "name")}} property.
 
-<pre class="brush: js">// unnamed
+```js
+// unnamed
 let Rectangle = class {
   constructor(height, width) {
     this.height = height;
@@ -62,31 +66,30 @@ let Rectangle = class Rectangle2 {
 };
 console.log(Rectangle.name);
 // output: "Rectangle2"
-</pre>
+```
 
-<div class="notecard note">
-<p><strong>Note:</strong> Class <strong>expressions</strong> are subject to the same hoisting restrictions as described in the {{anch("Class declarations")}} section.</p>
-</div>
+> **Note:** Class **expressions** are subject to the same hoisting restrictions as described in the {{anch("Class declarations")}} section.
 
-<h2 id="Class_body_and_method_definitions">Class body and method definitions</h2>
+## Class body and method definitions
 
-<p>The body of a class is the part that is in curly brackets <code>{}</code>. This is where you define class members, such as methods or constructor.</p>
+The body of a class is the part that is in curly brackets `{}`. This is where you define class members, such as methods or constructor.
 
-<h3 id="Strict_mode">Strict mode</h3>
+### Strict mode
 
-<p>The body of a class is executed in {{jsxref("Strict_mode", "strict mode", "", "true")}}, i.e., code written here is subject to stricter syntax for increased performance, some otherwise silent errors will be thrown, and certain keywords are reserved for future versions of ECMAScript.</p>
+The body of a class is executed in {{jsxref("Strict_mode", "strict mode", "", "true")}}, i.e., code written here is subject to stricter syntax for increased performance, some otherwise silent errors will be thrown, and certain keywords are reserved for future versions of ECMAScript.
 
-<h3 id="Constructor">Constructor</h3>
+### Constructor
 
-<p>The {{jsxref("Classes/constructor", "constructor", "", "true")}} method is a special method for creating and initializing an object created with a <code>class</code>. There can only be one special method with the name "constructor" in a class. A {{jsxref("SyntaxError")}} will be thrown if the class contains more than one occurrence of a <code>constructor</code> method.</p>
+The {{jsxref("Classes/constructor", "constructor", "", "true")}} method is a special method for creating and initializing an object created with a `class`. There can only be one special method with the name "constructor" in a class. A {{jsxref("SyntaxError")}} will be thrown if the class contains more than one occurrence of a `constructor` method.
 
-<p>A constructor can use the <code>super</code> keyword to call the constructor of the super class.</p>
+A constructor can use the `super` keyword to call the constructor of the super class.
 
-<h3 id="Prototype_methods">Prototype methods</h3>
+### Prototype methods
 
-<p>See also {{jsxref("Functions/Method_definitions", "method definitions", "", "true")}}.</p>
+See also {{jsxref("Functions/Method_definitions", "method definitions", "", "true")}}.
 
-<pre class="brush: js">class Rectangle {
+```js
+class Rectangle {
   constructor(height, width) {
     this.height = height;
     this.width = width;
@@ -103,13 +106,15 @@ console.log(Rectangle.name);
 
 const square = new Rectangle(10, 10);
 
-console.log(square.area); // 100</pre>
+console.log(square.area); // 100
+```
 
-<h3 id="Generator_methods">Generator methods</h3>
+### Generator methods
 
-<p>See also <a href="/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators">Iterators and generators</a>.</p>
+See also [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators).
 
-<pre class="brush: js">class Polygon {
+```js
+class Polygon {
   constructor(...sides) {
     this.sides = sides;
   }
@@ -123,13 +128,15 @@ console.log(square.area); // 100</pre>
 
 const pentagon = new Polygon(1,2,3,4,5);
 
-console.log([...pentagon.getSides()]); // [1,2,3,4,5]</pre>
+console.log([...pentagon.getSides()]); // [1,2,3,4,5]
+```
 
-<h3 id="Static_methods_and_properties">Static methods and properties</h3>
+### Static methods and properties
 
-<p>The {{jsxref("Classes/static", "static", "", "true")}} keyword defines a static method or property for a class. Static members (properties and methods) are called without instantiating their class and <strong>cannot</strong> be called through a class instance. Static methods are often used to create utility functions for an application, whereas static properties are useful for caches, fixed-configuration, or any other data you don't need to be replicated across instances.</p>
+The {{jsxref("Classes/static", "static", "", "true")}} keyword defines a static method or property for a class. Static members (properties and methods) are called without instantiating their class and **cannot** be called through a class instance. Static methods are often used to create utility functions for an application, whereas static properties are useful for caches, fixed-configuration, or any other data you don't need to be replicated across instances.
 
-<pre class="brush: js">class Point {
+```js
+class Point {
   constructor(x, y) {
     this.x = x;
     this.y = y;
@@ -153,13 +160,14 @@ p2.distance;    // undefined
 
 console.log(Point.displayName);      // "Point"
 console.log(Point.distance(p1, p2)); // 7.0710678118654755
-</pre>
+```
 
-<h3 id="Binding_this_with_prototype_and_static_methods">Binding <code>this</code> with prototype and static methods</h3>
+### Binding `this` with prototype and static methods
 
-<p>When a static or prototype method is called without a value for {{jsxref("Operators/this", "this")}}, such as by assigning the method to a variable and then calling it, the <code>this</code> value will be <code>undefined</code> inside the method. This behavior will be the same even if the {{jsxref("Strict_mode", "\"use strict\"")}} directive isn't present, because code within the <code>class</code> body's syntactic boundary is always executed in strict mode.</p>
+When a static or prototype method is called without a value for {{jsxref("Operators/this", "this")}}, such as by assigning the method to a variable and then calling it, the `this` value will be `undefined` inside the method. This behavior will be the same even if the {{jsxref("Strict_mode", "\"use strict\"")}} directive isn't present, because code within the `class` body's syntactic boundary is always executed in strict mode.
 
-<pre class="brush: js">class Animal {
+```js
+class Animal {
   speak() {
     return this;
   }
@@ -175,11 +183,13 @@ speak(); // undefined
 
 Animal.eat() // class Animal
 let eat = Animal.eat;
-eat(); // undefined</pre>
+eat(); // undefined
+```
 
-<p>If we rewrite the above using traditional function-based syntax in non–strict mode, then <code>this</code> method calls are automatically bound to the initial <code>this</code> value, which by default is the {{Glossary("Global_object", "global object")}}. In strict mode, autobinding will not happen; the value of <code>this</code> remains as passed.</p>
+If we rewrite the above using traditional function-based syntax in non–strict mode, then `this` method calls are automatically bound to the initial `this` value, which by default is the {{Glossary("Global_object", "global object")}}. In strict mode, autobinding will not happen; the value of `this` remains as passed.
 
-<pre class="brush: js">function Animal() { }
+```js
+function Animal() { }
 
 Animal.prototype.speak = function() {
   return this;
@@ -195,32 +205,36 @@ speak(); // global object (in non–strict mode)
 
 let eat = Animal.eat;
 eat(); // global object (in non-strict mode)
-</pre>
+```
 
-<h3 id="Instance_properties">Instance properties</h3>
+### Instance properties
 
-<p>Instance properties must be defined inside of class methods:</p>
+Instance properties must be defined inside of class methods:
 
-<pre class="brush: js">class Rectangle {
+```js
+class Rectangle {
   constructor(height, width) {
     this.height = height;
     this.width = width;
   }
-}</pre>
+}
+```
 
-<p>Static (class-side) data properties and prototype data properties must be defined outside of the ClassBody declaration:</p>
+Static (class-side) data properties and prototype data properties must be defined outside of the ClassBody declaration:
 
-<pre class="brush: js">Rectangle.staticWidth = 20;
+```js
+Rectangle.staticWidth = 20;
 Rectangle.prototype.prototypeWidth = 25;
-</pre>
+```
 
-<h3 id="Field_declarations">Field declarations</h3>
+### Field declarations
 
-<h4 id="Public_field_declarations">Public field declarations</h4>
+#### Public field declarations
 
-<p>With the JavaScript field declaration syntax, the above example can be written as:</p>
+With the JavaScript field declaration syntax, the above example can be written as:
 
-<pre class="brush: js">class Rectangle {
+```js
+class Rectangle {
   height = 0;
   width;
   constructor(height, width) {
@@ -228,19 +242,20 @@ Rectangle.prototype.prototypeWidth = 25;
     this.width = width;
   }
 }
-</pre>
+```
 
-<p>By declaring fields up-front, class definitions become more self-documenting, and the fields are always present.</p>
+By declaring fields up-front, class definitions become more self-documenting, and the fields are always present.
 
-<p>As seen above, the fields can be declared with or without a default value.</p>
+As seen above, the fields can be declared with or without a default value.
 
-<p>See {{jsxref("Classes/Public_class_fields", "public class fields", "", "true")}} for more information.</p>
+See {{jsxref("Classes/Public_class_fields", "public class fields", "", "true")}} for more information.
 
-<h4 id="Private_field_declarations">Private field declarations</h4>
+#### Private field declarations
 
-<p>Using private fields, the definition can be refined as below.</p>
+Using private fields, the definition can be refined as below.
 
-<pre class="brush: js">class Rectangle {
+```js
+class Rectangle {
   #height = 0;
   #width;
   constructor(height, width) {
@@ -248,23 +263,22 @@ Rectangle.prototype.prototypeWidth = 25;
     this.#width = width;
   }
 }
-</pre>
+```
 
-<p>It's an error to reference private fields from outside of the class; they can only be read or written within the class body. By defining things that are not visible outside of the class, you ensure that your classes' users can't depend on internals, which may change from version to version.</p>
+It's an error to reference private fields from outside of the class; they can only be read or written within the class body. By defining things that are not visible outside of the class, you ensure that your classes' users can't depend on internals, which may change from version to version.
 
-<div class="notecard note">
-<p><strong>Note:</strong> Private fields can only be declared up-front in a field declaration.</p>
-</div>
+> **Note:** Private fields can only be declared up-front in a field declaration.
 
-<p>Private fields cannot be created later through assigning to them, the way that normal properties can.</p>
+Private fields cannot be created later through assigning to them, the way that normal properties can.
 
-<p>For more information, see {{jsxref("Classes/Private_class_fields", "private class features", "", "true")}}.</p>
+For more information, see {{jsxref("Classes/Private_class_fields", "private class features", "", "true")}}.
 
-<h2 id="Sub_classing_with_extends">Sub classing with <code>extends</code></h2>
+## Sub classing with `extends`
 
-<p>The {{jsxref("Classes/extends", "extends")}} keyword is used in <em>class declarations</em> or <em>class expressions</em> to create a class as a child of another class.</p>
+The {{jsxref("Classes/extends", "extends")}} keyword is used in _class declarations_ or _class expressions_ to create a class as a child of another class.
 
-<pre class="brush: js">class Animal {
+```js
+class Animal {
   constructor(name) {
     this.name = name;
   }
@@ -286,13 +300,14 @@ class Dog extends Animal {
 
 let d = new Dog('Mitzie');
 d.speak(); // Mitzie barks.
-</pre>
+```
 
-<p>If there is a constructor present in the subclass, it needs to first call super() before using "this".</p>
+If there is a constructor present in the subclass, it needs to first call super() before using "this".
 
-<p>One may also extend traditional function-based "classes":</p>
+One may also extend traditional function-based "classes":
 
-<pre class="brush: js">function Animal (name) {
+```js
+function Animal (name) {
   this.name = name;
 }
 
@@ -309,11 +324,13 @@ class Dog extends Animal {
 let d = new Dog('Mitzie');
 d.speak(); // Mitzie barks.
 
-// For similar methods, the child's method takes precedence over parent's method</pre>
+// For similar methods, the child's method takes precedence over parent's method
+```
 
-<p>Note that classes cannot extend regular (non-constructible) objects. If you want to inherit from a regular object, you can instead use {{jsxref("Object.setPrototypeOf()")}}:</p>
+Note that classes cannot extend regular (non-constructible) objects. If you want to inherit from a regular object, you can instead use {{jsxref("Object.setPrototypeOf()")}}:
 
-<pre class="brush: js">const Animal = {
+```js
+const Animal = {
   speak() {
     console.log(`${this.name} makes a noise.`);
   }
@@ -330,31 +347,33 @@ Object.setPrototypeOf(Dog.prototype, Animal);
 
 let d = new Dog('Mitzie');
 d.speak(); // Mitzie makes a noise.
-</pre>
+```
 
-<h2 id="Species">Species</h2>
+## Species
 
-<p>You might want to return {{jsxref("Array")}} objects in your derived array class <code>MyArray</code>. The species pattern lets you override default constructors.</p>
+You might want to return {{jsxref("Array")}} objects in your derived array class `MyArray`. The species pattern lets you override default constructors.
 
-<p>For example, when using methods such as {{jsxref("Array.map", "map()")}} that returns the default constructor, you want these methods to return a parent <code>Array</code> object, instead of the <code>MyArray</code> object. The {{jsxref("Symbol.species")}} symbol lets you do this:</p>
+For example, when using methods such as {{jsxref("Array.map", "map()")}} that returns the default constructor, you want these methods to return a parent `Array` object, instead of the `MyArray` object. The {{jsxref("Symbol.species")}} symbol lets you do this:
 
-<pre class="brush: js">class MyArray extends Array {
+```js
+class MyArray extends Array {
   // Overwrite species to the parent Array constructor
   static get [Symbol.species]() { return Array; }
 }
 
 let a = new MyArray(1,2,3);
-let mapped = a.map(x =&gt; x * x);
+let mapped = a.map(x => x * x);
 
 console.log(mapped instanceof MyArray); // false
 console.log(mapped instanceof Array);   // true
-</pre>
+```
 
-<h2 id="Super_class_calls_with_super">Super class calls with <code>super</code></h2>
+## Super class calls with `super`
 
-<p>The {{jsxref("Operators/super", "super")}} keyword is used to call corresponding methods of super class. This is one advantage over prototype-based inheritance.</p>
+The {{jsxref("Operators/super", "super")}} keyword is used to call corresponding methods of super class. This is one advantage over prototype-based inheritance.
 
-<pre class="brush: js">class Cat {
+```js
+class Cat {
   constructor(name) {
     this.name = name;
   }
@@ -375,51 +394,52 @@ let l = new Lion('Fuzzy');
 l.speak();
 // Fuzzy makes a noise.
 // Fuzzy roars.
-</pre>
+```
 
-<h2 id="Mix-ins">Mix-ins</h2>
+## Mix-ins
 
-<p>Abstract subclasses or <em>mix-ins</em> are templates for classes. An ECMAScript class can only have a single superclass, so multiple inheritance from tooling classes, for example, is not possible. The functionality must be provided by the superclass.</p>
+Abstract subclasses or _mix-ins_ are templates for classes. An ECMAScript class can only have a single superclass, so multiple inheritance from tooling classes, for example, is not possible. The functionality must be provided by the superclass.
 
-<p>A function with a superclass as input and a subclass extending that superclass as output can be used to implement mix-ins in ECMAScript:</p>
+A function with a superclass as input and a subclass extending that superclass as output can be used to implement mix-ins in ECMAScript:
 
-<pre class="brush: js">let calculatorMixin = Base =&gt; class extends Base {
+```js
+let calculatorMixin = Base => class extends Base {
   calc() { }
 };
 
-let randomizerMixin = Base =&gt; class extends Base {
+let randomizerMixin = Base => class extends Base {
   randomize() { }
 };
-</pre>
+```
 
-<p>A class that uses these mix-ins can then be written like this:</p>
+A class that uses these mix-ins can then be written like this:
 
-<pre class="brush: js">class Foo { }
-class Bar extends calculatorMixin(randomizerMixin(Foo)) { }</pre>
+```js
+class Foo { }
+class Bar extends calculatorMixin(randomizerMixin(Foo)) { }
+```
 
-<h2 id="Re-running_a_class_definition">Re-running a class definition</h2>
+## Re-running a class definition
 
-<p>A class can't be redefined. Attempting to do so produces a <code>SyntaxError</code>.</p>
+A class can't be redefined. Attempting to do so produces a `SyntaxError`.
 
-<p>If you're experimenting with code in a web browser, such as the Firefox Web Console (<strong>Tools </strong>&gt;<strong> Web Developer </strong>&gt;<strong> Web Console</strong>) and you 'Run' a definition of a class with the same name twice, you'll get a <code>SyntaxError: redeclaration of let <em>ClassName</em>;</code>. (See further discussion of this issue in {{Bug(1428672)}}.) Doing something similar in Chrome Developer Tools gives you a message like <code>Uncaught SyntaxError: Identifier '<em>ClassName</em>' has already been declared at &lt;anonymous&gt;:1:1</code>.</p>
+If you're experimenting with code in a web browser, such as the Firefox Web Console (**Tools** > **Web Developer** > **Web Console**) and you 'Run' a definition of a class with the same name twice, you'll get a `SyntaxError: redeclaration of let ClassName;`. (See further discussion of this issue in {{Bug(1428672)}}.) Doing something similar in Chrome Developer Tools gives you a message like `Uncaught SyntaxError: Identifier 'ClassName' has already been declared at <anonymous>:1:1`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("Functions", "Functions", "", "true")}}</li>
- <li>{{jsxref("Statements/class", "class declaration", "", "true")}}</li>
- <li>{{jsxref("Operators/class", "class expression", "", "true")}}</li>
- <li>{{jsxref("Classes/Public_class_fields", "Public class fields", "", "true")}}</li>
- <li>{{jsxref("Classes/Private_class_fields", "Private class features", "", "true")}}</li>
- <li>{{jsxref("Operators/super", "super")}}</li>
- <li><a href="https://hacks.mozilla.org/2015/07/es6-in-depth-classes/">Blog post: "ES6 In Depth: Classes"</a></li>
- <li><a href="https://github.com/tc39/proposal-class-fields">Fields and public/private class properties proposal (stage 3)</a></li>
-</ul>
+- {{jsxref("Functions", "Functions", "", "true")}}
+- {{jsxref("Statements/class", "class declaration", "", "true")}}
+- {{jsxref("Operators/class", "class expression", "", "true")}}
+- {{jsxref("Classes/Public_class_fields", "Public class fields", "", "true")}}
+- {{jsxref("Classes/Private_class_fields", "Private class features", "", "true")}}
+- {{jsxref("Operators/super", "super")}}
+- [Blog post: "ES6 In Depth: Classes"](https://hacks.mozilla.org/2015/07/es6-in-depth-classes/)
+- [Fields and public/private class properties proposal (stage 3)](https://github.com/tc39/proposal-class-fields)

@@ -1,72 +1,76 @@
 ---
-title: 'RegExp.prototype[@@match]()'
+title: RegExp.prototype[@@match]()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@match
 tags:
-- JavaScript
-- Method
-- Prototype
-- Reference
-- RegExp
-- Regular Expressions
-- Polyfill
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
+  - RegExp
+  - Regular Expressions
+  - Polyfill
 browser-compat: javascript.builtins.RegExp.@@match
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>[@@match]()</code></strong> method retrieves the matches when
-  matching a <em>string</em> against a <em>regular expression</em>.</p>
+The **`[@@match]()`** method retrieves the matches when
+matching a _string_ against a _regular expression_.
 
-<div>{{EmbedInteractiveExample("pages/js/regexp-prototype-@@match.html")}}</div>
+{{EmbedInteractiveExample("pages/js/regexp-prototype-@@match.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>regexp</var>[Symbol.match](<var>str</var>)</pre>
+```js
+regexp[Symbol.match](str)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>str</var></code></dt>
-  <dd>A {{jsxref("String")}} that is a target of the match.</dd>
-</dl>
+- `str`
+  - : A {{jsxref("String")}} that is a target of the match.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An {{jsxref("Array")}} containing the entire match result and any parentheses-captured
-  matched results, or {{jsxref("null")}} if there were no matches.</p>
+An {{jsxref("Array")}} containing the entire match result and any parentheses-captured
+matched results, or {{jsxref("null")}} if there were no matches.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>This method is called internally in {{jsxref("String.prototype.match()")}}.</p>
+This method is called internally in {{jsxref("String.prototype.match()")}}.
 
-<p>For example, the following two examples return same result.</p>
+For example, the following two examples return same result.
 
-<pre class="brush: js">'abc'.match(/a/);
+```js
+'abc'.match(/a/);
 
-/a/[Symbol.match]('abc');</pre>
+/a/[Symbol.match]('abc');
+```
 
-<p>This method exists for customizing match behavior within <code>RegExp</code>
-  subclasses.</p>
+This method exists for customizing match behavior within `RegExp`
+subclasses.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Direct_call">Direct call</h3>
+### Direct call
 
-<p>This method can be used in <em>almost</em> the same way as
-  {{jsxref("String.prototype.match()")}}, except the different <code>this</code> and the
-  different arguments order.</p>
+This method can be used in _almost_ the same way as
+{{jsxref("String.prototype.match()")}}, except the different `this` and the
+different arguments order.
 
-<pre class="brush: js">let re = /[0-9]+/g;
+```js
+let re = /[0-9]+/g;
 let str = '2016-01-02';
 let result = re[Symbol.match](str);
 console.log(result);  // ["2016", "01", "02"]
-</pre>
+```
 
-<h3 id="Using_match_in_subclasses">Using <code>@@match</code> in subclasses</h3>
+### Using `@@match` in subclasses
 
-<p>Subclasses of {{jsxref("RegExp")}} can override the <code>[@@match]()</code> method to
-  modify the default behavior.</p>
+Subclasses of {{jsxref("RegExp")}} can override the `[@@match]()` method to
+modify the default behavior.
 
-<pre class="brush: js">class MyRegExp extends RegExp {
+```js
+class MyRegExp extends RegExp {
   [Symbol.match](str) {
     let result = RegExp.prototype[Symbol.match].call(this, str);
     if (!result) return null;
@@ -84,24 +88,22 @@ let result = str.match(re); // String.prototype.match calls re[@@match].
 console.log(result.group(1)); // 2016
 console.log(result.group(2)); // 01
 console.log(result.group(3)); // 02
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>A polyfill of <code>RegExp.prototype[@@match]</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-string-and-regexp"><code>core-js</code></a></li>
-  <li>{{jsxref("String.prototype.match()")}}</li>
-  <li>{{jsxref("RegExp.prototype.@@replace()", "RegExp.prototype[@@replace]()")}}</li>
-  <li>{{jsxref("RegExp.prototype.@@search()", "RegExp.prototype[@@search]()")}}</li>
-  <li>{{jsxref("RegExp.prototype.@@split()", "RegExp.prototype[@@split]()")}}</li>
-  <li>{{jsxref("RegExp.prototype.exec()")}}</li>
-  <li>{{jsxref("RegExp.prototype.test()")}}</li>
-</ul>
+- A polyfill of `RegExp.prototype[@@match]` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- {{jsxref("String.prototype.match()")}}
+- {{jsxref("RegExp.prototype.@@replace()", "RegExp.prototype[@@replace]()")}}
+- {{jsxref("RegExp.prototype.@@search()", "RegExp.prototype[@@search]()")}}
+- {{jsxref("RegExp.prototype.@@split()", "RegExp.prototype[@@split]()")}}
+- {{jsxref("RegExp.prototype.exec()")}}
+- {{jsxref("RegExp.prototype.test()")}}

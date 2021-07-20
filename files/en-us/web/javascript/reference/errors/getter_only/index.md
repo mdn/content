@@ -2,50 +2,47 @@
 title: 'TypeError: setting getter-only property "x"'
 slug: Web/JavaScript/Reference/Errors/Getter_only
 tags:
-- Error
-- Errors
-- JavaScript
-- Strict Mode
-- TypeError
+  - Error
+  - Errors
+  - JavaScript
+  - Strict Mode
+  - TypeError
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<p>The JavaScript <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict
-    mode</a>-only exception "setting getter-only property" occurs when there is an attempt
-  to set a new value to a property for which only a <a
-    href="/en-US/docs/Web/JavaScript/Reference/Functions/get">getter</a> is specified.</p>
+The JavaScript [strict
+mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)-only exception "setting getter-only property" occurs when there is an attempt
+to set a new value to a property for which only a [getter](/en-US/docs/Web/JavaScript/Reference/Functions/get) is specified.
 
-<h2 id="Message">Message</h2>
+## Message
 
-<pre class="brush: js">TypeError: Assignment to read-only properties is not allowed in strict mode (Edge)
+```js
+TypeError: Assignment to read-only properties is not allowed in strict mode (Edge)
 TypeError: setting getter-only property "x" (Firefox)
-TypeError: Cannot set property "prop" of #&lt;Object&gt; which has only a getter (Chrome)
-</pre>
+TypeError: Cannot set property "prop" of #<Object> which has only a getter (Chrome)
+```
 
-<h2 id="Error_type">Error type</h2>
+## Error type
 
-<p>{{jsxref("TypeError")}} in <a
-    href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a> only.</p>
+{{jsxref("TypeError")}} in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) only.
 
-<h2 id="What_went_wrong">What went wrong?</h2>
+## What went wrong?
 
-<p>There is an attempt to set a new value to a property for which only a <a
-    href="/en-US/docs/Web/JavaScript/Reference/Functions/get">getter</a> is specified.
-  While this will be silently ignored in non-strict mode, it will throw a
-  {{jsxref("TypeError")}} in <a
-    href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a>.</p>
+There is an attempt to set a new value to a property for which only a [getter](/en-US/docs/Web/JavaScript/Reference/Functions/get) is specified.
+While this will be silently ignored in non-strict mode, it will throw a
+{{jsxref("TypeError")}} in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Property_with_no_setter">Property with no setter</h3>
+### Property with no setter
 
-<p>The example below shows how to set a getter for a property. It doesn't specify a <a
-    href="/en-US/docs/Web/JavaScript/Reference/Functions/set">setter</a>, so a
-  <code>TypeError</code> will be thrown upon trying to set the <code>temperature</code>
-  property to <code>30</code>. For more details see also the
-  {{jsxref("Object.defineProperty()")}} page.</p>
+The example below shows how to set a getter for a property. It doesn't specify a [setter](/en-US/docs/Web/JavaScript/Reference/Functions/set), so a
+`TypeError` will be thrown upon trying to set the `temperature`
+property to `30`. For more details see also the
+{{jsxref("Object.defineProperty()")}} page.
 
-<pre class="brush: js example-bad">"use strict";
+```js example-bad
+"use strict";
 
 function Archiver() {
   var temperature = null;
@@ -61,14 +58,15 @@ var arc = new Archiver();
 arc.temperature; // 'get!'
 
 arc.temperature = 30;
-// TypeError: setting getter-only property "temperature"</pre>
+// TypeError: setting getter-only property "temperature"
+```
 
-<p>To fix this error, you will either need to remove line 16, where there is an attempt to
-  set the temperature property, or you will need to implement a <a
-    href="/en-US/docs/Web/JavaScript/Reference/Functions/set">setter</a> for it, for
-  example like this:</p>
+To fix this error, you will either need to remove line 16, where there is an attempt to
+set the temperature property, or you will need to implement a [setter](/en-US/docs/Web/JavaScript/Reference/Functions/set) for it, for
+example like this:
 
-<pre class="brush: js example-good highlight[12]">"use strict";
+```js example-good
+"use strict";
 
 function Archiver() {
   var temperature = null;
@@ -92,11 +90,10 @@ var arc = new Archiver();
 arc.temperature; // 'get!'
 arc.temperature = 11;
 arc.temperature = 13;
-arc.getArchive(); // [{ val: 11 }, { val: 13 }]</pre>
+arc.getArchive(); // [{ val: 11 }, { val: 13 }]
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Object.defineProperty()")}}</li>
-  <li>{{jsxref("Object.defineProperties()")}}</li>
-</ul>
+- {{jsxref("Object.defineProperty()")}}
+- {{jsxref("Object.defineProperties()")}}

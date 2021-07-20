@@ -2,65 +2,61 @@
 title: Reflect.set()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/set
 tags:
-- ECMAScript 2015
-- JavaScript
-- Method
-- Reference
-- Reflect
-- Polyfill
+  - ECMAScript 2015
+  - JavaScript
+  - Method
+  - Reference
+  - Reflect
+  - Polyfill
 browser-compat: javascript.builtins.Reflect.set
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The static <strong><code>Reflect.set()</code></strong> method works like setting a
-  property on an object.</p>
+The static **`Reflect.set()`** method works like setting a
+property on an object.
 
-<div>{{EmbedInteractiveExample("pages/js/reflect-set.html")}}</div>
+{{EmbedInteractiveExample("pages/js/reflect-set.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush: js">
+```js
 Reflect.set(target, propertyKey, value)
 Reflect.set(target, propertyKey, value, receiver)
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>target</var></code></dt>
-  <dd>The target object on which to set the property.</dd>
-  <dt><code><var>propertyKey</var></code></dt>
-  <dd>The name of the property to set.</dd>
-  <dt><code><var>value</var></code></dt>
-  <dd>The value to set.</dd>
-  <dt><code><var>receiver</var></code> {{optional_inline}}</dt>
-  <dd>The value of <code>this</code> provided for the call to
-    <code><var>target</var></code> if a setter is encountered.</dd>
-</dl>
+- `target`
+  - : The target object on which to set the property.
+- `propertyKey`
+  - : The name of the property to set.
+- `value`
+  - : The value to set.
+- `receiver` {{optional_inline}}
+  - : The value of `this` provided for the call to
+    `target` if a setter is encountered.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref("Boolean")}} indicating whether or not setting the property was successful.
-</p>
+A {{jsxref("Boolean")}} indicating whether or not setting the property was successful.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>A {{jsxref("TypeError")}}, if <code><var>target</var></code> is not an
-  {{jsxref("Object")}}.</p>
+A {{jsxref("TypeError")}}, if `target` is not an
+{{jsxref("Object")}}.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The <code>Reflect.set</code> method allows you to set a property on an object. It does
-  property assignment and is like the <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors">property
-    accessor</a> syntax as a function.</p>
+The `Reflect.set` method allows you to set a property on an object. It does
+property assignment and is like the [property
+accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors) syntax as a function.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_Reflect.set">Using Reflect.set()</h3>
+### Using Reflect.set()
 
-<pre class="brush: js">// Object
+```js
+// Object
 let obj = {}
 Reflect.set(obj, 'prop', 'value')  // true
 obj.prop  // "value"
@@ -79,21 +75,19 @@ let obj = {}
 Reflect.set(obj)  // true
 Reflect.getOwnPropertyDescriptor(obj, 'undefined')
 // { value: undefined, writable: true, enumerable: true, configurable: true }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>A polyfill of <code>Reflect.set</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-reflect"><code>core-js</code></a></li>
-  <li>{{jsxref("Reflect")}}</li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors">Property
-      accessors</a></li>
-</ul>
+- A polyfill of `Reflect.set` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
+- {{jsxref("Reflect")}}
+- [Property
+  accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors)

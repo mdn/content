@@ -8,22 +8,21 @@ tags:
   - Proxy
 browser-compat: javascript.builtins.Proxy
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <code>Proxy</code> object enables you to create a proxy for another object, which can intercept and redefine fundamental operations for that object.</p>
+The `Proxy` object enables you to create a proxy for another object, which can intercept and redefine fundamental operations for that object.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>A <code>Proxy</code> is created with two parameters:</p>
+A `Proxy` is created with two parameters:
 
-<ul>
- <li><code>target</code>: the original object which you want to proxy</li>
- <li><code>handler</code>: an object that defines which operations will be intercepted and how to redefine intercepted operations.</li>
-</ul>
+- `target`: the original object which you want to proxy
+- `handler`: an object that defines which operations will be intercepted and how to redefine intercepted operations.
 
-<p>For example, this code defines a simple target with just two properties, and an even simpler handler with no properties:</p>
+For example, this code defines a simple target with just two properties, and an even simpler handler with no properties:
 
-<pre class="brush: js">const target = {
+```js
+const target = {
   message1: "hello",
   message2: "everyone"
 };
@@ -31,17 +30,19 @@ browser-compat: javascript.builtins.Proxy
 const handler1 = {};
 
 const proxy1 = new Proxy(target, handler1);
-</pre>
+```
 
-<p>Because the handler is empty, this proxy behaves just like the original target:</p>
+Because the handler is empty, this proxy behaves just like the original target:
 
-<pre class="brush: js">console.log(proxy1.message1); // hello
+```js
+console.log(proxy1.message1); // hello
 console.log(proxy1.message2); // everyone
-</pre>
+```
 
-<p>To customise the proxy, we define functions on the handler object:</p>
+To customise the proxy, we define functions on the handler object:
 
-<pre class="brush: js">const target = {
+```js
+const target = {
   message1: "hello",
   message2: "everyone"
 };
@@ -52,18 +53,22 @@ const handler2 = {
   }
 };
 
-const proxy2 = new Proxy(target, handler2);</pre>
+const proxy2 = new Proxy(target, handler2);
+```
 
-<p>Here we've provided an implementation of the {{jsxref("Global_Objects/Proxy/Proxy/get", "get()")}} handler, which intercepts attempts to access properties in the target.</p>
+Here we've provided an implementation of the {{jsxref("Global_Objects/Proxy/Proxy/get", "get()")}} handler, which intercepts attempts to access properties in the target.
 
-<p>Handler functions are sometimes called <em>traps</em>, presumably because they trap calls to the target object. The very simple trap in <code>handler2</code> above redefines all property accessors:</p>
+Handler functions are sometimes called _traps_, presumably because they trap calls to the target object. The very simple trap in `handler2` above redefines all property accessors:
 
-<pre class="brush: js">console.log(proxy2.message1); // world
-console.log(proxy2.message2); // world</pre>
+```js
+console.log(proxy2.message1); // world
+console.log(proxy2.message2); // world
+```
 
-<p>With the help of the {{jsxref("Reflect")}} class we can give some accessors the original behavior and redefine others:</p>
+With the help of the {{jsxref("Reflect")}} class we can give some accessors the original behavior and redefine others:
 
-<pre class="brush: js">const target = {
+```js
+const target = {
   message1: "hello",
   message2: "everyone"
 };
@@ -80,29 +85,27 @@ const handler3 = {
 const proxy3 = new Proxy(target, handler3);
 
 console.log(proxy3.message1); // hello
-console.log(proxy3.message2); // world</pre>
+console.log(proxy3.message2); // world
+```
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{jsxref("Global_Objects/Proxy/Proxy", "Proxy()")}}</dt>
- <dd>Creates a new <code>Proxy</code> object.</dd>
-</dl>
+- {{jsxref("Global_Objects/Proxy/Proxy", "Proxy()")}}
+  - : Creates a new `Proxy` object.
 
-<h2 id="Static_methods">Static methods</h2>
+## Static methods
 
-<dl>
- <dt>{{jsxref("Proxy.revocable()")}}</dt>
- <dd>Creates a revocable <code>Proxy</code> object.</dd>
-</dl>
+- {{jsxref("Proxy.revocable()")}}
+  - : Creates a revocable `Proxy` object.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Basic_example">Basic example</h3>
+### Basic example
 
-<p>In this simple example, the number <code>37</code> gets returned as the default value when the property name is not in the object. It is using the {{jsxref("Global_Objects/Proxy/Proxy/get", "get()")}} handler.</p>
+In this simple example, the number `37` gets returned as the default value when the property name is not in the object. It is using the {{jsxref("Global_Objects/Proxy/Proxy/get", "get()")}} handler.
 
-<pre class="brush: js">const handler = {
+```js
+const handler = {
   get: function(obj, prop) {
     return prop in obj ?
       obj[prop] :
@@ -119,13 +122,14 @@ console.log(p.a, p.b);
 
 console.log('c' in p, p.c);
 //  false, 37
-</pre>
+```
 
-<h3 id="No-op_forwarding_proxy">No-op forwarding proxy</h3>
+### No-op forwarding proxy
 
-<p>In this example, we are using a native JavaScript object to which our proxy will forward all operations that are applied to it.</p>
+In this example, we are using a native JavaScript object to which our proxy will forward all operations that are applied to it.
 
-<pre class="brush: js">const target = {};
+```js
+const target = {};
 const p = new Proxy(target, {});
 
 p.a = 37;
@@ -134,21 +138,22 @@ p.a = 37;
 console.log(target.a);
 //  37
 //  (The operation has been properly forwarded!)
-</pre>
+```
 
-<p>Note that while this "no-op" works for JavaScript objects, it does not work for native browser objects like DOM Elements.</p>
+Note that while this "no-op" works for JavaScript objects, it does not work for native browser objects like DOM Elements.
 
-<h3 id="Validation">Validation</h3>
+### Validation
 
-<p>With a <code>Proxy</code>, you can easily validate the passed value for an object. This example uses the {{jsxref("Global_Objects/Proxy/Proxy/set", "set()")}} handler.</p>
+With a `Proxy`, you can easily validate the passed value for an object. This example uses the {{jsxref("Global_Objects/Proxy/Proxy/set", "set()")}} handler.
 
-<pre class="brush: js">let validator = {
+```js
+let validator = {
   set: function(obj, prop, value) {
     if (prop === 'age') {
       if (!Number.isInteger(value)) {
         throw new TypeError('The age is not an integer');
       }
-      if (value &gt; 200) {
+      if (value > 200) {
         throw new RangeError('The age seems invalid');
       }
     }
@@ -167,13 +172,14 @@ person.age = 100;
 console.log(person.age); // 100
 person.age = 'young';    // Throws an exception
 person.age = 300;        // Throws an exception
-</pre>
+```
 
-<h3 id="Extending_constructor">Extending constructor</h3>
+### Extending constructor
 
-<p>A function proxy could easily extend a constructor with a new constructor. This example uses the {{jsxref("Global_Objects/Proxy/Proxy/construct", "construct()")}} and {{jsxref("Global_Objects/Proxy/Proxy/apply", "apply()")}} handlers.</p>
+A function proxy could easily extend a constructor with a new constructor. This example uses the {{jsxref("Global_Objects/Proxy/Proxy/construct", "construct()")}} and {{jsxref("Global_Objects/Proxy/Proxy/apply", "apply()")}} handlers.
 
-<pre class="brush: js">function extend(sup, base) {
+```js
+function extend(sup, base) {
   var descriptor = Object.getOwnPropertyDescriptor(
     base.prototype, 'constructor'
   );
@@ -209,13 +215,15 @@ var Peter = new Boy('Peter', 13);
 
 console.log(Peter.gender);  // "M"
 console.log(Peter.name);    // "Peter"
-console.log(Peter.age);     // 13</pre>
+console.log(Peter.age);     // 13
+```
 
-<h3 id="Manipulating_DOM_nodes">Manipulating DOM nodes</h3>
+### Manipulating DOM nodes
 
-<p>Sometimes you want to toggle the attribute or class name of two different elements. Here's how using the {{jsxref("Global_Objects/Proxy/Proxy/set", "set()")}} handler.</p>
+Sometimes you want to toggle the attribute or class name of two different elements. Here's how using the {{jsxref("Global_Objects/Proxy/Proxy/set", "set()")}} handler.
 
-<pre class="brush: js">let view = new Proxy({
+```js
+let view = new Proxy({
   selected: null
 },
 {
@@ -250,13 +258,14 @@ console.log(i1.getAttribute('aria-selected'));
 console.log(i2.getAttribute('aria-selected'));
 //  'true'
 Note: even if selected: !null, then giving oldval.setAttribute is not a function
-</pre>
+```
 
-<h3 id="Value_correction_and_an_extra_property">Value correction and an extra property</h3>
+### Value correction and an extra property
 
-<p>The <code>products</code> proxy object evaluates the passed value and converts it to an array if needed. The object also supports an extra property called <code>latestBrowser</code> both as a getter and a setter.</p>
+The `products` proxy object evaluates the passed value and converts it to an array if needed. The object also supports an extra property called `latestBrowser` both as a getter and a setter.
 
-<pre class="brush: js">let products = new Proxy({
+```js
+let products = new Proxy({
   browsers: ['Internet Explorer', 'Netscape']
 },
 {
@@ -296,7 +305,7 @@ products.browsers = 'Firefox';
 //  pass a string (by mistake)
 
 console.log(products.browsers);
-//  ['Firefox'] &lt;- no problem, the value is an array
+//  ['Firefox'] <- no problem, the value is an array
 
 products.latestBrowser = 'Chrome';
 
@@ -304,13 +313,15 @@ console.log(products.browsers);
 //  ['Firefox', 'Chrome']
 
 console.log(products.latestBrowser);
-//  'Chrome'</pre>
+//  'Chrome'
+```
 
-<h3 id="Finding_an_array_item_object_by_its_property">Finding an array item object by its property</h3>
+### Finding an array item object by its property
 
-<p>This proxy extends an array with some utility features. As you see, you can flexibly "define" properties without using {{jsxref("Object.defineProperties", "Object.defineProperties()")}}. This example can be adapted to find a table row by its cell. In that case, the target will be {{domxref("HTMLTableElement.rows", "table.rows")}}.</p>
+This proxy extends an array with some utility features. As you see, you can flexibly "define" properties without using {{jsxref("Object.defineProperties", "Object.defineProperties()")}}. This example can be adapted to find a table row by its cell. In that case, the target will be {{domxref("HTMLTableElement.rows", "table.rows")}}.
 
-<pre class="brush: js">let products = new Proxy([
+```js
+let products = new Proxy([
   { name: 'Firefox', type: 'browser' },
   { name: 'SeaMonkey', type: 'browser' },
   { name: 'Thunderbird', type: 'mailer' }
@@ -365,13 +376,14 @@ console.log(products['Chrome']);   // undefined
 console.log(products.browser);     // [{ name: 'Firefox', type: 'browser' }, { name: 'SeaMonkey', type: 'browser' }]
 console.log(products.types);       // ['browser', 'mailer']
 console.log(products.number);      // 3
-</pre>
+```
 
-<h3 id="A_complete_traps_list_example">A complete <code>traps</code> list example</h3>
+### A complete `traps` list example
 
-<p>Now in order to create a complete sample <code>traps</code> list, for didactic purposes, we will try to proxify a <em>non-native</em> object that is particularly suited to this type of operation: the <code>docCookies</code> global object created by <a href="https://reference.codeproject.com/Book/dom/document/cookie/simple_document.cookie_framework">a simple cookie framework</a>.</p>
+Now in order to create a complete sample `traps` list, for didactic purposes, we will try to proxify a _non-native_ object that is particularly suited to this type of operation: the `docCookies` global object created by [a simple cookie framework](https://reference.codeproject.com/Book/dom/document/cookie/simple_document.cookie_framework).
 
-<pre class="brush: js">/*
+```js
+/*
   var docCookies = ... get the "docCookies" object here:
   https://reference.codeproject.com/Book/dom/document/cookie/simple_document.cookie_framework
 */
@@ -398,7 +410,7 @@ var docCookies = new Proxy(docCookies, {
     return sKey in oTarget || oTarget.hasItem(sKey);
   },
   defineProperty: function (oTarget, sKey, oDesc) {
-    if (oDesc &amp;&amp; 'value' in oDesc) { oTarget.setItem(sKey, oDesc.value); }
+    if (oDesc && 'value' in oDesc) { oTarget.setItem(sKey, oDesc.value); }
     return oTarget;
   },
   getOwnPropertyDescriptor: function (oTarget, sKey) {
@@ -418,19 +430,18 @@ console.log(docCookies.my_cookie1 = 'First value');
 console.log(docCookies.getItem('my_cookie1'));
 
 docCookies.setItem('my_cookie1', 'Changed value');
-console.log(docCookies.my_cookie1);</pre>
+console.log(docCookies.my_cookie1);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://www.youtube.com/watch?v=sClk6aB_CPk">"Proxies are awesome" Brendan Eich presentation at JSConf</a> (<a href="https://www.slideshare.net/BrendanEich/metaprog-5303821">slides</a>)</li>
- <li><a href="https://web.archive.org/web/20171007221059/https://soft.vub.ac.be/~tvcutsem/proxies/">Tutorial on proxies</a></li>
-</ul>
+- ["Proxies are awesome" Brendan Eich presentation at JSConf](https://www.youtube.com/watch?v=sClk6aB_CPk) ([slides](https://www.slideshare.net/BrendanEich/metaprog-5303821))
+- [Tutorial on proxies](https://web.archive.org/web/20171007221059/https://soft.vub.ac.be/~tvcutsem/proxies/)

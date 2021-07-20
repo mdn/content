@@ -2,67 +2,68 @@
 title: Addition assignment (+=)
 slug: Web/JavaScript/Reference/Operators/Addition_assignment
 tags:
-- Assignment operator
-- JavaScript
-- Language feature
-- Operator
-- Reference
+  - Assignment operator
+  - JavaScript
+  - Language feature
+  - Operator
+  - Reference
 browser-compat: javascript.operators.addition_assignment
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>The addition assignment operator (<code>+=</code>) adds the value of the right operand
-  to a variable and assigns the result to the variable. The types of the two operands
-  determine the behavior of the addition assignment operator. Addition or concatenation is
-  possible.</p>
+The addition assignment operator (`+=`) adds the value of the right operand
+to a variable and assigns the result to the variable. The types of the two operands
+determine the behavior of the addition assignment operator. Addition or concatenation is
+possible.
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-addition-assignment.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-addition-assignment.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">x += y // x = x + y</pre>
+```js
+x += y // x = x + y
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_addition_assignment">Using addition assignment</h3>
+### Using addition assignment
 
-<pre class="brush: js">// Assuming the following variables
+```js
+// Assuming the following variables
 //  foo = 'foo'
 //  bar = 5
 //  baz = true
 
-// Number + Number -&gt; addition
+// Number + Number -> addition
 bar += 2 // 7
 
-// Boolean + Number -&gt; addition
+// Boolean + Number -> addition
 baz += 1 // 2
 
-// Boolean + Boolean -&gt; addition
+// Boolean + Boolean -> addition
 baz += false // 1
 
-// Number + String -&gt; concatenation
+// Number + String -> concatenation
 bar += 'foo' // "5foo"
 
-// String + Boolean -&gt; concatenation
+// String + Boolean -> concatenation
 foo += false // "foofalse"
 
-// String + String -&gt; concatenation
-foo += 'bar' // "foobar"</pre>
+// String + String -> concatenation
+foo += 'bar' // "foobar"
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a
-      href="/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment">Assignment
-      operators in the JS guide</a></li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Addition">Addition
-      operator</a></li>
-</ul>
+- [Assignment
+  operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment)
+- [Addition
+  operator](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)

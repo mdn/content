@@ -2,97 +2,104 @@
 title: import.meta
 slug: Web/JavaScript/Reference/Statements/import.meta
 tags:
-- JavaScript
-- Language feature
-- Modules
-- Reference
-- Statement
-- import
-- import.meta
+  - JavaScript
+  - Language feature
+  - Modules
+  - Reference
+  - Statement
+  - import
+  - import.meta
 browser-compat: javascript.statements.import_meta
 ---
-<div>{{JSSidebar("Statements")}}</div>
+{{JSSidebar("Statements")}}
 
-<p>The <strong><code>import.meta</code></strong> object exposes context-specific metadata
-  to a JavaScript module. It contains information about the module, like the module's URL.
-</p>
+The **`import.meta`** object exposes context-specific metadata
+to a JavaScript module. It contains information about the module, like the module's URL.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">import.meta</pre>
+```js
+import.meta
+```
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The syntax consists of the keyword {{JSxRef("Statements/import","import")}}, a dot, and
-  the identifier <code>meta</code>. Normally the left-hand side of the dot is the object
-  on which property access is performed, but here <code>import</code> is not really an
-  object.</p>
+The syntax consists of the keyword {{JSxRef("Statements/import","import")}}, a dot, and
+the identifier `meta`. Normally the left-hand side of the dot is the object
+on which property access is performed, but here `import` is not really an
+object.
 
-<p>The <code>import.meta</code> object is created by the ECMAScript implementation, with a
-  {{JSxRef("null")}} prototype. The object is extensible, and its properties are writable,
-  configurable, and enumerable.</p>
+The `import.meta` object is created by the ECMAScript implementation, with a
+{{JSxRef("null")}} prototype. The object is extensible, and its properties are writable,
+configurable, and enumerable.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_import.meta">Using import.meta</h3>
+### Using import.meta
 
-<p>Given a module <code>my-module.js</code></p>
+Given a module `my-module.js`
 
-<pre class="brush: html">&lt;script type="module" src="my-module.js"&gt;&lt;/script&gt;
-</pre>
+```html
+<script type="module" src="my-module.js"></script>
+```
 
-<p>you can access meta information about the module using the <code>import.meta</code>
-  object.</p>
+you can access meta information about the module using the `import.meta`
+object.
 
-<pre
-  class="brush: js;">console.log(import.meta); // { url: "file:///home/user/my-module.js" }</pre>
+```js
+console.log(import.meta); // { url: "file:///home/user/my-module.js" }
+```
 
-<p>It returns an object with a <code>url</code> property indicating the base URL of the
-  module. This will either be the URL from which the script was obtained, for external
-  scripts, or the document base URL of the containing document, for inline scripts.</p>
+It returns an object with a `url` property indicating the base URL of the
+module. This will either be the URL from which the script was obtained, for external
+scripts, or the document base URL of the containing document, for inline scripts.
 
-<p>Note that this will include query parameters and/or hash (i.e., following the
-  <code>?</code> or <code>#</code>).</p>
+Note that this will include query parameters and/or hash (i.e., following the
+`?` or `#`).
 
-<p>For example, with the following HTML:</p>
+For example, with the following HTML:
 
-<pre class="brush: html">&lt;script type="module"&gt;
+```html
+<script type="module">
 import './index.mjs?someURLInfo=5';
-&lt;/script&gt;</pre>
+</script>
+```
 
-<p>..the following JavaScript file will log the `<code>someURLInfo</code> parameter:</p>
+..the following JavaScript file will log the \``someURLInfo` parameter:
 
-<pre class="brush: js">// index.mjs
-new URL(import.meta.url).searchParams.get('someURLInfo'); // 5</pre>
+```js
+// index.mjs
+new URL(import.meta.url).searchParams.get('someURLInfo'); // 5
+```
 
-<p>The same applies when a file imports another:</p>
+The same applies when a file imports another:
 
-<pre class="brush: js">// index.mjs
+```js
+// index.mjs
 import './index2.mjs?someURLInfo=5';
 
 // index2.mjs
-new URL(import.meta.url).searchParams.get('someURLInfo'); // 5</pre>
+new URL(import.meta.url).searchParams.get('someURLInfo'); // 5
+```
 
-<p>Note that while Node.js will pass on query parameters (or the hash) as in the latter
-  example, as of Node 14.1.0, a URL with query parameters will err when loading in the
-  form <code>node --experimental-modules index.mjs?someURLInfo=5</code> (it is treated as
-  a file rather than a URL in this context).</p>
+Note that while Node.js will pass on query parameters (or the hash) as in the latter
+example, as of Node 14.1.0, a URL with query parameters will err when loading in the
+form `node --experimental-modules index.mjs?someURLInfo=5` (it is treated as
+a file rather than a URL in this context).
 
-<p>Such file-specific argument passing may be complementary to that used in the
-  application-wide <code>location.href</code> (with query strings or hash added after the
-  HTML file path) (or on Node.js, through <code>process.argv</code>).</p>
+Such file-specific argument passing may be complementary to that used in the
+application-wide `location.href` (with query strings or hash added after the
+HTML file path) (or on Node.js, through `process.argv`).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{JSxRef("Statements/import", "import")}}</li>
-  <li>{{JSxRef("Statements/export", "export")}}</li>
-</ul>
+- {{JSxRef("Statements/import", "import")}}
+- {{JSxRef("Statements/export", "export")}}

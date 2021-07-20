@@ -2,79 +2,76 @@
 title: Intl.ListFormat.prototype.format()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/format
 tags:
-- Internationalization
-- Intl
-- JavaScript
-- ListFormat
-- Localization
-- Method
-- Prototype
-- Reference
+  - Internationalization
+  - Intl
+  - JavaScript
+  - ListFormat
+  - Localization
+  - Method
+  - Prototype
+  - Reference
 browser-compat: javascript.builtins.Intl.ListFormat.format
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>format()</code></strong> method returns a string with a
-	language-specific representation of the list.</p>
+The **`format()`** method returns a string with a
+language-specific representation of the list.
 
-<div>{{EmbedInteractiveExample("pages/js/intl-listformat.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/intl-listformat.html", "taller")}}
+
 <!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 format()
 format(list)
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-	<dt><code><var>list</var></code></dt>
-	<dd>An iterable object, such as an Array.</dd>
-</dl>
+- `list`
+  - : An iterable object, such as an Array.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A language-specific formatted string representing the elements of the list</p>
+A language-specific formatted string representing the elements of the list
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The <strong><code>format()</code></strong> method returns a string that has been
-	formatted based on parameters provided in the <code>Intl.ListFormat</code> object. The
-	<code>locales</code> and <code>options</code> parameters customize the behavior of
-	<code>format()</code> and let applications specify the language conventions that
-	should be used to format the list.</p>
+The **`format()`** method returns a string that has been
+formatted based on parameters provided in the `Intl.ListFormat` object. The
+`locales` and `options` parameters customize the behavior of
+`format()` and let applications specify the language conventions that
+should be used to format the list.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_format">Using format</h3>
+### Using format
 
-<p>The following example shows how to create a List formatter using the English language.
-</p>
+The following example shows how to create a List formatter using the English language.
 
-<pre class="brush: js">const list = ['Motorcycle', 'Bus', 'Car'];
+```js
+const list = ['Motorcycle', 'Bus', 'Car'];
 
  console.log(new Intl.ListFormat('en-GB', { style: 'long', type: 'conjunction' }).format(list));
-// &gt; Motorcycle, Bus and Car
+// > Motorcycle, Bus and Car
 
  console.log(new Intl.ListFormat('en-GB', { style: 'short', type: 'disjunction' }).format(list));
-// &gt; Motorcycle, Bus or Car
+// > Motorcycle, Bus or Car
 
  console.log(new Intl.ListFormat('en-GB', { style: 'narrow', type: 'unit' }).format(list));
-// &gt; Motorcycle Bus Car
-</pre>
+// > Motorcycle Bus Car
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>{{jsxref("Intl.ListFormat")}}</li>
-</ul>
+- {{jsxref("Intl.ListFormat")}}

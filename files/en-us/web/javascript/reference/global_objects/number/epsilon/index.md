@@ -9,49 +9,46 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Number.EPSILON
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>Number.EPSILON</code></strong> property represents the difference between 1 and the smallest floating point number greater than 1.</p>
+The **`Number.EPSILON`** property represents the difference between 1 and the smallest floating point number greater than 1.
 
-<p>You do not have to create a {{jsxref("Number")}} object to access this static property (use <code>Number.EPSILON</code>).</p>
+You do not have to create a {{jsxref("Number")}} object to access this static property (use `Number.EPSILON`).
 
-<div>{{EmbedInteractiveExample("pages/js/number-epsilon.html")}}</div>
+{{EmbedInteractiveExample("pages/js/number-epsilon.html")}}{{js_property_attributes(0, 0, 0)}}
 
+## Description
 
-<div>{{js_property_attributes(0, 0, 0)}}</div>
+The `EPSILON` property has a value of approximately `2.2204460492503130808472633361816E-16`, or `2^-52`.
 
-<h2 id="Description">Description</h2>
+## Examples
 
-<p>The <code>EPSILON</code> property has a value of approximately <code>2.2204460492503130808472633361816E-16</code>, or <code>2^-52</code>.</p>
+### Testing equality
 
-<h2 id="Examples">Examples</h2>
-
-<h3 id="Testing_equality">Testing equality</h3>
-
-<pre class="brush: js">x = 0.2;
+```js
+x = 0.2;
 y = 0.3;
 z = 0.1;
-equal = (Math.abs(x - y + z) &lt; Number.EPSILON);
-</pre>
+equal = (Math.abs(x - y + z) < Number.EPSILON);
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<pre class="brush: js">if (Number.EPSILON === undefined) {
+```js
+if (Number.EPSILON === undefined) {
     Number.EPSILON = Math.pow(2, -52);
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>A polyfill of <code>Number.EPSILON</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-number"><code>core-js</code></a></li>
- <li>The {{jsxref("Number")}} object it belongs to</li>
-</ul>
+- A polyfill of `Number.EPSILON` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-number)
+- The {{jsxref("Number")}} object it belongs to

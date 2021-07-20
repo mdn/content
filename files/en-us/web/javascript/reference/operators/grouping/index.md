@@ -2,40 +2,42 @@
 title: Grouping operator ( )
 slug: Web/JavaScript/Reference/Operators/Grouping
 tags:
-- JavaScript
-- Language feature
-- Operator
-- Primary Expressions
+  - JavaScript
+  - Language feature
+  - Operator
+  - Primary Expressions
 browser-compat: javascript.operators.grouping
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>The grouping operator <code>( )</code> controls the precedence of evaluation in
-  expressions.</p>
+The grouping operator `( )` controls the precedence of evaluation in
+expressions.
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-groupingoperator.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-groupingoperator.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">( )</pre>
+```js
+( )
+```
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The grouping operator consists of a pair of parentheses around an expression or
-  sub-expression to override the normal <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence">operator
-    precedence</a> so that expressions with lower precedence can be evaluated before an
-  expression with higher priority. As it sounds, it groups what's inside of
-  the parentheses.</p>
+The grouping operator consists of a pair of parentheses around an expression or
+sub-expression to override the normal [operator
+precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence) so that expressions with lower precedence can be evaluated before an
+expression with higher priority. As it sounds, it groups what's inside of
+the parentheses.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_the_grouping_operator">Using the grouping operator</h3>
+### Using the grouping operator
 
-<p>Overriding multiplication and division first, then addition and subtraction to evaluate
-  addition first.</p>
+Overriding multiplication and division first, then addition and subtraction to evaluate
+addition first.
 
-<pre class="brush: js">var a = 1;
+```js
+var a = 1;
 var b = 2;
 var c = 3;
 
@@ -50,22 +52,19 @@ a + (b * c)   // 7
 
 // which is equivalent to
 a * c + b * c // 9
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a
-      href="/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence">Operator
-      precedence</a></li>
-  <li>{{jsxref("Operators/delete", "delete")}}</li>
-  <li>{{jsxref("Operators/typeof", "typeof")}}</li>
-</ul>
+- [Operator
+  precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)
+- {{jsxref("Operators/delete", "delete")}}
+- {{jsxref("Operators/typeof", "typeof")}}

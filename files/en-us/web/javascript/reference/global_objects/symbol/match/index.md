@@ -9,51 +9,52 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Symbol.match
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <code><strong>Symbol.match</strong></code> well-known symbol specifies the matching of a regular expression against a string. This function is called by the {{jsxref("String.prototype.match()")}} method.</p>
+The **`Symbol.match`** well-known symbol specifies the matching of a regular expression against a string. This function is called by the {{jsxref("String.prototype.match()")}} method.
 
-<div>{{EmbedInteractiveExample("pages/js/symbol-match.html")}}</div>
+{{EmbedInteractiveExample("pages/js/symbol-match.html")}}
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>This function is also used to identify if objects have the behavior of regular expressions. For example, the methods {{jsxref("String.prototype.startsWith()")}}, {{jsxref("String.prototype.endsWith()")}} and {{jsxref("String.prototype.includes()")}}, check if their first argument is a regular expression and will throw a {{jsxref("TypeError")}} if they are. Now, if the <code>match</code> symbol is set to <code>false</code> (or a <a href="/en-US/docs/Glossary/Falsy">Falsy</a> value), it indicates that the object is not intended to be used as a regular expression object.</p>
+This function is also used to identify if objects have the behavior of regular expressions. For example, the methods {{jsxref("String.prototype.startsWith()")}}, {{jsxref("String.prototype.endsWith()")}} and {{jsxref("String.prototype.includes()")}}, check if their first argument is a regular expression and will throw a {{jsxref("TypeError")}} if they are. Now, if the `match` symbol is set to `false` (or a [Falsy](/en-US/docs/Glossary/Falsy) value), it indicates that the object is not intended to be used as a regular expression object.
 
-<p>{{js_property_attributes(0,0,0)}}</p>
+{{js_property_attributes(0,0,0)}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Disabling_the_isRegExp_check">Disabling the <code>isRegExp</code> check</h3>
+### Disabling the `isRegExp` check
 
-<p>The following code will throw a {{jsxref("TypeError")}}:</p>
+The following code will throw a {{jsxref("TypeError")}}:
 
-<pre class="brush: js">'/bar/'.startsWith(/bar/);
+```js
+'/bar/'.startsWith(/bar/);
 
 // Throws TypeError, as /bar/ is a regular expression
-// and Symbol.match is not modified.</pre>
+// and Symbol.match is not modified.
+```
 
-<p>However, if you set <code>Symbol.match</code> to <code>false</code>, the <code>isRegExp</code> check (that uses the <code>match</code> property) will indicate that the object is not a regular expression object. The methods <code>startsWith</code> and <code>endsWith</code> won't throw a <code>TypeError</code> as a consequence.</p>
+However, if you set `Symbol.match` to `false`, the `isRegExp` check (that uses the `match` property) will indicate that the object is not a regular expression object. The methods `startsWith` and `endsWith` won't throw a `TypeError` as a consequence.
 
-<pre class="brush: js">var re = /foo/;
+```js
+var re = /foo/;
 re[Symbol.match] = false;
 '/foo/'.startsWith(re); // true
 '/baz/'.endsWith(re);   // false
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>A polyfill of <code>Symbol.match</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-symbol"><code>core-js</code></a></li>
- <li>{{jsxref("Symbol.replace")}}</li>
- <li>{{jsxref("Symbol.search")}}</li>
- <li>{{jsxref("Symbol.split")}}</li>
- <li>{{jsxref("RegExp.@@match", "RegExp.prototype[@@match]()")}}</li>
-</ul>
+- A polyfill of `Symbol.match` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-symbol)
+- {{jsxref("Symbol.replace")}}
+- {{jsxref("Symbol.search")}}
+- {{jsxref("Symbol.split")}}
+- {{jsxref("RegExp.@@match", "RegExp.prototype[@@match]()")}}

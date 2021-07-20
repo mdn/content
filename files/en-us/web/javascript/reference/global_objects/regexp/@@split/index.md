@@ -1,84 +1,85 @@
 ---
-title: 'RegExp.prototype[@@split]()'
+title: RegExp.prototype[@@split]()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@split
 tags:
-- JavaScript
-- Method
-- Prototype
-- Reference
-- RegExp
-- Regular Expressions
-- Polyfill
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
+  - RegExp
+  - Regular Expressions
+  - Polyfill
 browser-compat: javascript.builtins.RegExp.@@split
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>[@@split]()</code></strong> method splits a {{jsxref("String")}}
-  object into an array of strings by separating the string into substrings.</p>
+The **`[@@split]()`** method splits a {{jsxref("String")}}
+object into an array of strings by separating the string into substrings.
 
-<div>{{EmbedInteractiveExample("pages/js/regexp-prototype-@@split.html")}}</div>
+{{EmbedInteractiveExample("pages/js/regexp-prototype-@@split.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><var>regexp</var>[Symbol.split](<var>str</var>[, <var>limit</var>])</pre>
+```js
+regexp[Symbol.split](str[, limit])
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>str</var></code></dt>
-  <dd>The target of the split operation.</dd>
-  <dt><code><var>limit</var></code> {{optional_inline}}</dt>
-  <dd>
-    <p>Integer specifying a limit on the number of splits to be found. The
-      <code>[@@split]()</code> method still splits on every match of <code>this</code>
-      RegExp pattern (or, in the Syntax above, <code><var>regexp</var></code>), until the
-      number of split items match the <code><var>limit</var></code> or the string falls
-      short of <code>this</code> pattern.</p>
-  </dd>
-</dl>
+- `str`
+  - : The target of the split operation.
+- `limit` {{optional_inline}}
+  - : Integer specifying a limit on the number of splits to be found. The
+    `[@@split]()` method still splits on every match of `this`
+    RegExp pattern (or, in the Syntax above, `regexp`), until the
+    number of split items match the `limit` or the string falls
+    short of `this` pattern.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An {{jsxref("Array")}} containing substrings as its elements.</p>
+An {{jsxref("Array")}} containing substrings as its elements.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>This method is called internally in {{jsxref("String.prototype.split()")}} if its
-  <code>separator</code> argument is an object that has a <code>@@split</code> method,
-  such as a {{jsxref("RegExp")}}. For example, the following two examples return the same
-  result.</p>
+This method is called internally in {{jsxref("String.prototype.split()")}} if its
+`separator` argument is an object that has a `@@split` method,
+such as a {{jsxref("RegExp")}}. For example, the following two examples return the same
+result.
 
-<pre class="brush: js">'a-b-c'.split(/-/);
+```js
+'a-b-c'.split(/-/);
 
-/-/[Symbol.split]('a-b-c');</pre>
+/-/[Symbol.split]('a-b-c');
+```
 
-<p>This method exists for customizing the behavior of <code>split()</code> in
-  <code>RegExp</code> subclass.</p>
+This method exists for customizing the behavior of `split()` in
+`RegExp` subclass.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Direct_call">Direct call</h3>
+### Direct call
 
-<p>This method can be used in almost the same way as
-  {{jsxref("String.prototype.split()")}}, except the different <code>this</code> and the
-  different order of arguments.</p>
+This method can be used in almost the same way as
+{{jsxref("String.prototype.split()")}}, except the different `this` and the
+different order of arguments.
 
-<pre class="brush: js">let re = /-/g;
+```js
+let re = /-/g;
 let str = '2016-01-02';
 let result = re[Symbol.split](str);
 console.log(result);  // ["2016", "01", "02"]
-</pre>
+```
 
-<h3 id="Using_split_in_subclasses">Using @@split in subclasses</h3>
+### Using @@split in subclasses
 
-<p>Subclasses of {{jsxref("RegExp")}} can override the <code>[@@split]()</code> method to
-  modify the default behavior.</p>
+Subclasses of {{jsxref("RegExp")}} can override the `[@@split]()` method to
+modify the default behavior.
 
-<pre class="brush: js">class MyRegExp extends RegExp {
+```js
+class MyRegExp extends RegExp {
   [Symbol.split](str, limit) {
     let result = RegExp.prototype[Symbol.split].call(this, str, limit);
-    return result.map(x =&gt; "(" + x + ")");
+    return result.map(x => "(" + x + ")");
   }
 }
 
@@ -86,24 +87,22 @@ let re = new MyRegExp('-');
 let str = '2016-01-02';
 let result = str.split(re); // String.prototype.split calls re[@@split].
 console.log(result); // ["(2016)", "(01)", "(02)"]
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>A polyfill of <code>RegExp.prototype[@@split]</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-string-and-regexp"><code>core-js</code></a></li>
-  <li>{{jsxref("String.prototype.split()")}}</li>
-  <li>{{jsxref("RegExp.prototype.@@match()", "RegExp.prototype[@@match]()")}}</li>
-  <li>{{jsxref("RegExp.prototype.@@replace()", "RegExp.prototype[@@replace]()")}}</li>
-  <li>{{jsxref("RegExp.prototype.@@search()", "RegExp.prototype[@@search]()")}}</li>
-  <li>{{jsxref("RegExp.prototype.exec()")}}</li>
-  <li>{{jsxref("RegExp.prototype.test()")}}</li>
-</ul>
+- A polyfill of `RegExp.prototype[@@split]` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- {{jsxref("String.prototype.split()")}}
+- {{jsxref("RegExp.prototype.@@match()", "RegExp.prototype[@@match]()")}}
+- {{jsxref("RegExp.prototype.@@replace()", "RegExp.prototype[@@replace]()")}}
+- {{jsxref("RegExp.prototype.@@search()", "RegExp.prototype[@@search]()")}}
+- {{jsxref("RegExp.prototype.exec()")}}
+- {{jsxref("RegExp.prototype.test()")}}

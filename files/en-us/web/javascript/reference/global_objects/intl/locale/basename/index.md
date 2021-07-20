@@ -12,52 +12,56 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.Locale.baseName
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>Intl.Locale.prototype.baseName</code></strong> property returns a substring of the <code>Locale</code>'s string representation, containing core information about the <code>Locale</code>.</p>
+The **`Intl.Locale.prototype.baseName`** property returns a substring of the `Locale`'s string representation, containing core information about the `Locale`.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>An {{jsxref("Intl/Locale", "Intl.Locale")}} object represents a parsed local and options for that locale. The <code>baseName</code> property returns basic, core information about the Locale in the form of a substring of the complete data string. Specifically, the property returns the substring containing the language, and the script and region if available.</p>
+An {{jsxref("Intl/Locale", "Intl.Locale")}} object represents a parsed local and options for that locale. The `baseName` property returns basic, core information about the Locale in the form of a substring of the complete data string. Specifically, the property returns the substring containing the language, and the script and region if available.
 
-<p><code>baseName</code> returns the <code>language ["-" script] ["-" region] *("-" variant)</code> subsequence of the <a href="https://www.unicode.org/reports/tr35/#Identifiers">unicode_language_id grammar</a>.</p>
+`baseName` returns the `language ["-" script] ["-" region] *("-" variant)` subsequence of the [unicode_language_id grammar](https://www.unicode.org/reports/tr35/#Identifiers).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Basic_Example">Basic Example</h3>
+### Basic Example
 
-<pre class="brush: js">let myLoc = new Intl.Locale("fr-Latn-CA"); // Sets locale to Canadian French
+```js
+let myLoc = new Intl.Locale("fr-Latn-CA"); // Sets locale to Canadian French
 console.log(myLoc.toString()); // Prints out "fr-Latn-CA-u-ca-gregory"
-console.log(myLoc.baseName); // Prints out "fr-Latn-CA"</pre>
+console.log(myLoc.baseName); // Prints out "fr-Latn-CA"
+```
 
-<h3 id="Example_with_options_in_the_input_string">Example with options in the input string</h3>
+### Example with options in the input string
 
-<pre class="brush: js">// Sets language to Japanese, region to Japan,
+```js
+// Sets language to Japanese, region to Japan,
 
 // calendar to Gregorian, hour cycle to 24 hours
 let japan = new Intl.Locale("ja-JP-u-ca-gregory-hc-24");
 console.log(japan.toString()); // Prints out "ja-JP-u-ca-gregory-hc-h24"
-console.log(japan.baseName); // Prints out "ja-JP"</pre>
+console.log(japan.baseName); // Prints out "ja-JP"
+```
 
-<h3 id="Example_with_options_that_override_input_string">Example with options that override input string</h3>
+### Example with options that override input string
 
-<pre class="brush: js">// Input string indicates language as Dutch and region as Belgium,
+```js
+// Input string indicates language as Dutch and region as Belgium,
 
 // but options object overrides the region and sets it to the Netherlands
 let dutch = new Intl.Locale("nl-Latn-BE", {region: "NL"});
 
-console.log(dutch.baseName); // Prints out "nl-Latn-NL"</pre>
+console.log(dutch.baseName); // Prints out "nl-Latn-NL"
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>{{jsxref("Intl.Locale")}}</li>
-</ul>
+- {{jsxref("Intl.Locale")}}

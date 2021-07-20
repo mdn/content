@@ -2,84 +2,76 @@
 title: DataView.prototype.setBigUint64()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/setBigUint64
 tags:
-- BigInt
-- DataView
-- JavaScript
-- Method
-- Prototype
-- Reference
-- TypedArrays
-- setBigUint64
+  - BigInt
+  - DataView
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
+  - TypedArrays
+  - setBigUint64
 browser-compat: javascript.builtins.DataView.setBigUint64
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>setBigUint64()</code></strong> method stores an unsigned 64-bit
-  integer (unsigned long long) value at the specified byte offset from the start of the
-  {{jsxref("DataView")}}.</p>
+The **`setBigUint64()`** method stores an unsigned 64-bit
+integer (unsigned long long) value at the specified byte offset from the start of the
+{{jsxref("DataView")}}.
 
-<div>{{EmbedInteractiveExample("pages/js/dataview-setbiguint64.html")}}</div>
+{{EmbedInteractiveExample("pages/js/dataview-setbiguint64.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 setBigUint64(byteOffset, value)
 setBigUint64(byteOffset, value, littleEndian)
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>byteOffset</dt>
-  <dd>The offset, in bytes, from the start of the view to store the data from.</dd>
-  <dt>value</dt>
-  <dd>The value to set as a {{jsxref("BigInt")}}. The highest possible value that fits in
+- byteOffset
+  - : The offset, in bytes, from the start of the view to store the data from.
+- value
+  - : The value to set as a {{jsxref("BigInt")}}. The highest possible value that fits in
     an unsigned 64-bit integer is
-    <code><span class="blob-code-inner blob-code-marker">2n ** 64n - 1n</span></code><span
-      class="blob-code-inner blob-code-marker">
-      (</span><code>18446744073709551615n</code><span
-      class="blob-code-inner blob-code-marker">). Upon overflow, it will be zero
-      (</span><code>0n</code><span class="blob-code-inner blob-code-marker">).</span></dd>
-  <dt>littleEndian</dt>
-  <dd>{{optional_inline}} Indicates whether the 64-bit int is stored in <a
-      href="/en-US/docs/Glossary/Endianness">little- or big-endian</a> format. If
-    <code>false</code> or <code>undefined</code>, a big-endian value is written.</dd>
-</dl>
+    `2n ** 64n - 1n`
+    (`18446744073709551615n`). Upon overflow, it will be zero
+    (`0n`).
+- littleEndian
+  - : {{optional_inline}} Indicates whether the 64-bit int is stored in [little- or big-endian](/en-US/docs/Glossary/Endianness) format. If
+    `false` or `undefined`, a big-endian value is written.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>{{jsxref("undefined")}}.</p>
+{{jsxref("undefined")}}.
 
-<h3 id="Errors_thrown">Errors thrown</h3>
+### Errors thrown
 
-<dl>
-  <dt>{{jsxref("RangeError")}}</dt>
-  <dd>Thrown if the <code>byteOffset</code> is set such that it would store beyond the end
-    of the view.</dd>
-</dl>
+- {{jsxref("RangeError")}}
+  - : Thrown if the `byteOffset` is set such that it would store beyond the end
+    of the view.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_the_setBigUint64_method">Using the <code>setBigUint64</code> method</h3>
+### Using the `setBigUint64` method
 
-<pre class="brush:js">var buffer = new ArrayBuffer(8);
+```js
+var buffer = new ArrayBuffer(8);
 var dataview = new DataView(buffer);
 dataview.setBigUint64(0, 3n);
 dataview.getBigUint64(0); // 3n
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("DataView")}}</li>
-  <li>{{jsxref("ArrayBuffer")}}</li>
-  <li>{{jsxref("BigInt")}}</li>
-</ul>
+- {{jsxref("DataView")}}
+- {{jsxref("ArrayBuffer")}}
+- {{jsxref("BigInt")}}

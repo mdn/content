@@ -2,20 +2,21 @@
 title: Private class features
 slug: Web/JavaScript/Reference/Classes/Private_class_fields
 tags:
-- Classes
-- Private
-- JavaScript
-- Language feature
+  - Classes
+  - Private
+  - JavaScript
+  - Language feature
 ---
-<div>{{JsSidebar("Classes")}}</div>
+{{JsSidebar("Classes")}}
 
-<p>Class fields are {{ jsxref('Classes/Public_class_fields','public') }} by default, but private class members can be created
-  by using a hash <code>#</code> prefix. The privacy encapsulation of these class features is
-  enforced by JavaScript itself.</p>
+Class fields are {{ jsxref('Classes/Public_class_fields','public') }} by default, but private class members can be created
+by using a hash `#` prefix. The privacy encapsulation of these class features is
+enforced by JavaScript itself.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">class ClassWithPrivateField {
+```js
+class ClassWithPrivateField {
   #privateField;
 }
 
@@ -34,25 +35,26 @@ class ClassWithPrivateStaticMethod {
     return 'hello world';
   }
 }
-</pre>
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Private_instance_fields">Private instance fields</h3>
+### Private instance fields
 
-<p>Private instance fields are declared with <strong># names</strong> (pronounced
-  "<em>hash names</em>"), which are identifiers prefixed with <code>#</code>. The
-  <code>#</code> is a part of the name itself.  Private fields are accessible on
-  the class constructor from inside the class
-  declaration itself. They are used for declaration of field names as well
-  as for accessing a field's value.</p>
+Private instance fields are declared with **# names** (pronounced
+"_hash names_"), which are identifiers prefixed with `#`. The
+`#` is a part of the name itself. Private fields are accessible on
+the class constructor from inside the class
+declaration itself. They are used for declaration of field names as well
+as for accessing a field's value.
 
-<p>It is a syntax error to refer to <code>#</code> names from out of scope.
-  It is also a syntax error to refer to private fields
-  that were not declared before they were called, or to attempt to remove
-  declared fields with <code>delete</code>.</p>
+It is a syntax error to refer to `#` names from out of scope.
+It is also a syntax error to refer to private fields
+that were not declared before they were called, or to attempt to remove
+declared fields with `delete`.
 
-<pre class="brush: js example-bad">class ClassWithPrivateField {
+```js example-bad
+class ClassWithPrivateField {
   #privateField;
 
   constructor() {
@@ -64,15 +66,14 @@ class ClassWithPrivateStaticMethod {
 
 const instance = new ClassWithPrivateField()
 instance.#privateField === 42;   // Syntax error
-</pre>
+```
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Use the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/in"><code>in</code></a> operator to check for potentially missing private fields (or private methods). This will return <code>true</code> if the private field or method exists, and <code>false</code> otherwise.</p>
-</div>
+> **Note:** Use the [`in`](/en-US/docs/Web/JavaScript/Reference/Operators/in) operator to check for potentially missing private fields (or private methods). This will return `true` if the private field or method exists, and `false` otherwise.
 
-<p>Like public fields, private fields are added at construction time in a base class, or at the point where <code>super()</code> is invoked in a subclass.</p>
+Like public fields, private fields are added at construction time in a base class, or at the point where `super()` is invoked in a subclass.
 
-<pre class="brush: js">class ClassWithPrivateField {
+```js
+class ClassWithPrivateField {
   #privateField;
 
   constructor() {
@@ -91,15 +92,15 @@ class SubClass extends ClassWithPrivateField {
 
 new SubClass();
 // SubClass {#privateField: 42, #subPrivateField: 23}
-</pre>
+```
 
+### Private static fields
 
-<h3 id="Private_static_fields">Private static fields</h3>
+Private static fields are added to the class constructor at class evaluation time.
+The limitation of static variables being called by only static methods still holds.
 
-<p>Private static fields are added to the class constructor at class evaluation time.
-  The limitation of static variables being called by only static methods still holds.</p>
-
-<pre class="brush: js">class ClassWithPrivateStaticField {
+```js
+class ClassWithPrivateStaticField {
   static #PRIVATE_STATIC_FIELD;
 
   static publicStaticMethod() {
@@ -110,16 +111,16 @@ new SubClass();
 
 console.log(ClassWithPrivateStaticField.publicStaticMethod() === 42);
 // true
-</pre>
+```
 
+There is a restriction on private static fields: Only the class which
+defines the private static field can access the field. This can lead to unexpected behavior when using **`this`**.
+In the following example, `this` refers to the `SubClass` class (not
+the `BaseClassWithPrivateStaticField` class) when we try to call
+`SubClass.basePublicStaticMethod()`, and so causes a `TypeError`.
 
-<p>There is a restriction on private static fields: Only the class which
-  defines the private static field can access the field. This can lead to unexpected behavior when using <strong><code>this</code></strong>.
-  In the following example, <code>this</code> refers to the <code>SubClass</code> class (not
-  the <code>BaseClassWithPrivateStaticField</code> class) when we try to call
-  <code>SubClass.basePublicStaticMethod()</code>, and so causes a <code>TypeError</code>.</p>
-
-<pre class="brush: js">class BaseClassWithPrivateStaticField {
+```js
+class BaseClassWithPrivateStaticField {
   static #PRIVATE_STATIC_FIELD;
 
   static basePublicStaticMethod() {
@@ -141,17 +142,17 @@ console.log(error instanceof TypeError);
 console.log(error);
 // TypeError: Cannot write private member #PRIVATE_STATIC_FIELD
 // to an object whose class did not declare it
-</pre>
+```
 
+### Private methods
 
-<h3 id="Private_methods">Private methods</h3>
+#### Private instance methods
 
-<h4 id="Private_instance_methods">Private instance methods</h4>
+Private instance methods are methods available on class instances whose access is
+restricted in the same manner as private instance fields.
 
-<p>Private instance methods are methods available on class instances whose access is
-  restricted in the same manner as private instance fields.</p>
-
-<pre class="brush: js">class ClassWithPrivateMethod {
+```js
+class ClassWithPrivateMethod {
   #privateMethod() {
     return 'hello world';
   }
@@ -163,13 +164,15 @@ console.log(error);
 
 const instance = new ClassWithPrivateMethod();
 console.log(instance.getPrivateMessage());
-// hello world</pre>
+// hello world
+```
 
-<p>Private instance methods may be generator, async, or async generator functions. Private
-  getters and setters are also possible, although <em>not</em> in generator, async, or
-  async generator forms.</p>
+Private instance methods may be generator, async, or async generator functions. Private
+getters and setters are also possible, although _not_ in generator, async, or
+async generator forms.
 
-<pre class="brush: js">class ClassWithPrivateAccessor {
+```js
+class ClassWithPrivateAccessor {
   #message;
 
   get #decoratedMessage() {
@@ -187,15 +190,16 @@ console.log(instance.getPrivateMessage());
 
 new ClassWithPrivateAccessor();
 // 🎬hello world🛑
-</pre>
+```
 
-<h4 id="Private_static_methods">Private static methods</h4>
+#### Private static methods
 
-<p>Like their public equivalent, private static methods are called on the class itself,
-  not instances of the class. Like private static fields, they are only accessible from
-  inside the class declaration.</p>
+Like their public equivalent, private static methods are called on the class itself,
+not instances of the class. Like private static fields, they are only accessible from
+inside the class declaration.
 
-<pre class="brush: js">class ClassWithPrivateStaticMethod {
+```js
+class ClassWithPrivateStaticMethod {
   static #privateStaticMethod() {
     return 42;
   }
@@ -213,18 +217,19 @@ console.log(ClassWithPrivateStaticMethod.publicStaticMethod1() === 42);
 // true
 console.log(ClassWithPrivateStaticMethod.publicStaticMethod2() === 42);
 // true
-</pre>
+```
 
-<p>Private static methods may be generator, async, and async generator functions.</p>
+Private static methods may be generator, async, and async generator functions.
 
-<p>The same restriction previously mentioned for private static fields holds
-  for private static methods, and similarly can lead to unexpected behavior when using
-  <strong><code>this</code></strong>.
-  In the following example, when we try to call <code>Derived.publicStaticMethod2()</code>,
-  <code>this</code> refers to the <code>Derived</code> class (not
-  the <code>Base</code> class) and so causes a <code>TypeError</code>.</p>
+The same restriction previously mentioned for private static fields holds
+for private static methods, and similarly can lead to unexpected behavior when using
+**`this`**.
+In the following example, when we try to call `Derived.publicStaticMethod2()`,
+`this` refers to the `Derived` class (not
+the `Base` class) and so causes a `TypeError`.
 
-<pre class="brush: js">class Base {
+```js
+class Base {
   static #privateStaticMethod() {
     return 42;
   }
@@ -243,27 +248,22 @@ console.log(Derived.publicStaticMethod1());
 console.log(Derived.publicStaticMethod2());
 // TypeError: Cannot read private member #privateStaticMethod
 // from an object whose class did not declare it
-</pre>
+```
 
+## Specifications
 
-<h2 id="Specifications">Specifications</h2>
+{{Specifications("javascript.classes")}}
 
-<p>{{Specifications("javascript.classes")}}</p>
+## Browser compatibility
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+{{Compat("javascript.classes")}}
 
-<p>{{Compat("javascript.classes")}}</p>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
-  <li><a href="/en-US/docs/Web/JavaScript/Guide/Working_With_Private_Class_Features">
-      Working with private class features</a></li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields">Public
-      class fields</a></li>
-  <li><a
-      href="https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html">The
-      Semantics of All JS Class Elements</a></li>
-  <li><a href="https://v8.dev/features/class-fields">Public and private class fields</a>
-      article at the v8.dev site</li>
-</ul>
+- [Working with private class features](/en-US/docs/Web/JavaScript/Guide/Working_With_Private_Class_Features)
+- [Public
+  class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields)
+- [The
+  Semantics of All JS Class Elements](https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html)
+- [Public and private class fields](https://v8.dev/features/class-fields)
+  article at the v8.dev site

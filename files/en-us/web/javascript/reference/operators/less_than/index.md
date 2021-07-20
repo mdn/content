@@ -8,95 +8,102 @@ tags:
   - Reference
 browser-compat: javascript.operators.less_than
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>The less than operator (<code>&lt;</code>) returns <code>true</code> if the left operand is less than the right operand, and <code>false</code> otherwise.</p>
+The less than operator (`<`) returns `true` if the left operand is less than the right operand, and `false` otherwise.
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-less-than.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-less-than.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">x &lt; y</pre>
+```js
+x < y
+```
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The operands are compared using the <a href="https://tc39.es/ecma262/#sec-abstract-relational-comparison">Abstract Relational Comparison</a> algorithm, which is roughly summarised below:</p>
+The operands are compared using the [Abstract Relational Comparison](https://tc39.es/ecma262/#sec-abstract-relational-comparison) algorithm, which is roughly summarised below:
 
-<ul>
- <li>First, objects are converted to primitives using <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive">Symbol.ToPrimitive</a></code> with the <code>hint</code> parameter be <code>'number'</code>.</li>
- <li>If both values are strings, they are compared as strings, based on the values of the Unicode code points they contain.</li>
- <li>Otherwise JavaScript attempts to convert non-numeric types to numeric values:
-  <ul>
-   <li>Boolean values <code>true</code> and <code>false</code> are converted to 1 and 0 respectively.</li>
-   <li><code>null</code> is converted to 0.</li>
-   <li><code>undefined</code> is converted to <code>NaN</code>.</li>
-   <li>Strings are converted based on the values they contain, and are converted as <code>NaN</code> if they do not contain numeric values.</li>
-  </ul>
- </li>
- <li>If either value is <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN">NaN</a></code>, the operator returns <code>false</code>.</li>
- <li>Otherwise the values are compared as numeric values.</li>
-</ul>
+- First, objects are converted to primitives using [`Symbol.ToPrimitive`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) with the `hint` parameter be `'number'`.
+- If both values are strings, they are compared as strings, based on the values of the Unicode code points they contain.
+- Otherwise JavaScript attempts to convert non-numeric types to numeric values:
 
-<h2 id="Examples">Examples</h2>
+  - Boolean values `true` and `false` are converted to 1 and 0 respectively.
+  - `null` is converted to 0.
+  - `undefined` is converted to `NaN`.
+  - Strings are converted based on the values they contain, and are converted as `NaN` if they do not contain numeric values.
 
-<h3 id="String_to_string_comparison">String to string comparison</h3>
+- If either value is [`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN), the operator returns `false`.
+- Otherwise the values are compared as numeric values.
 
-<pre class="brush: js">console.log("a" &lt; "b");        // true
-console.log("a" &lt; "a");        // false
-console.log("a" &lt; "3");        // false</pre>
+## Examples
 
-<h3 id="String_to_number_comparison">String to number comparison</h3>
+### String to string comparison
 
-<pre class="brush: js">console.log("5" &lt; 3);          // false
-console.log("3" &lt; 3);          // false
-console.log("3" &lt; 5);          // true
+```js
+console.log("a" < "b");        // true
+console.log("a" < "a");        // false
+console.log("a" < "3");        // false
+```
 
-console.log("hello" &lt; 5);      // false
-console.log(5 &lt; "hello");      // false
+### String to number comparison
 
-console.log("5" &lt; 3n);         // false
-console.log("3" &lt; 5n);         // true</pre>
+```js
+console.log("5" < 3);          // false
+console.log("3" < 3);          // false
+console.log("3" < 5);          // true
 
-<h3 id="Number_to_Number_comparison">Number to Number comparison</h3>
+console.log("hello" < 5);      // false
+console.log(5 < "hello");      // false
 
-<pre class="brush: js">console.log(5 &lt; 3);            // false
-console.log(3 &lt; 3);            // false
-console.log(3 &lt; 5);            // true</pre>
+console.log("5" < 3n);         // false
+console.log("3" < 5n);         // true
+```
 
-<h3 id="Number_to_BigInt_comparison">Number to BigInt comparison</h3>
+### Number to Number comparison
 
-<pre class="brush: js">console.log(5n &lt; 3);           // false
-console.log(3 &lt; 5n);           // true</pre>
+```js
+console.log(5 < 3);            // false
+console.log(3 < 3);            // false
+console.log(3 < 5);            // true
+```
 
-<h3 id="Comparing_Boolean_null_undefined_NaN">Comparing Boolean, null, undefined, NaN</h3>
+### Number to BigInt comparison
 
-<pre class="brush: js">console.log(true &lt; false);     // false
-console.log(false &lt; true);     // true
+```js
+console.log(5n < 3);           // false
+console.log(3 < 5n);           // true
+```
 
-console.log(0 &lt; true);         // true
-console.log(true &lt; 1);         // false
+### Comparing Boolean, null, undefined, NaN
 
-console.log(null &lt; 0);         // false
-console.log(null &lt; 1);         // true
+```js
+console.log(true < false);     // false
+console.log(false < true);     // true
 
-console.log(undefined &lt; 3);    // false
-console.log(3 &lt; undefined);    // false
+console.log(0 < true);         // true
+console.log(true < 1);         // false
 
-console.log(3 &lt; NaN);          // false
-console.log(NaN &lt; 3);          // false</pre>
+console.log(null < 0);         // false
+console.log(null < 1);         // true
 
-<h2 id="Specifications">Specifications</h2>
+console.log(undefined < 3);    // false
+console.log(3 < undefined);    // false
+
+console.log(3 < NaN);          // false
+console.log(NaN < 3);          // false
+```
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than">Greater than operator</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than_or_equal">Greater than or equal operator</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Less_than_or_equal">Less than or equal operator</a></li>
-</ul>
+- [Greater than operator](/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than)
+- [Greater than or equal operator](/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than_or_equal)
+- [Less than or equal operator](/en-US/docs/Web/JavaScript/Reference/Operators/Less_than_or_equal)

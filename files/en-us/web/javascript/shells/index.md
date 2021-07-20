@@ -7,32 +7,28 @@ tags:
   - JavaScript
   - Tools
 ---
-<div>{{JsSidebar}}</div>
+{{JsSidebar}}
 
-<p>A JavaScript shell allows you to quickly test snippets of <a href="/en-US/docs/Web/JavaScript">JavaScript</a> code without having to reload a web page. They are extremely useful for developing and debugging code.</p>
+A JavaScript shell allows you to quickly test snippets of [JavaScript](/en-US/docs/Web/JavaScript) code without having to reload a web page. They are extremely useful for developing and debugging code.
 
-<h2 id="Standalone_JavaScript_shells">Standalone JavaScript shells</h2>
+## Standalone JavaScript shells
 
-<p>The following JavaScript shells are stand-alone environments, like Perl or Python.</p>
+The following JavaScript shells are stand-alone environments, like Perl or Python.
 
-<ul>
- <li><a href="http://nodejs.org/">Node.js</a> - Node.js is a platform for easily building fast, scalable network applications.</li>
- <li><a href="https://www.graalvm.org/">GraalJS</a> - A high performance implementation of the JavaScript programming language. Built on the GraalVM by Oracle Labs.</li>
- <li><a href="http://www.jsdb.org/">JSDB</a> - A standalone JavaScript shell, with compiled binaries for Windows, Mac, and Linux.</li>
- <li><a href="http://javalikescript.free.fr/">JavaLikeScript</a> - A standalone, extensible JavaScript shell including both native and JavaScript libraries.</li>
- <li><a href="http://gluescript.sourceforge.net/">GLUEscript</a> - A standalone JavaScript shell for writing cross-platform JavaScript applications.  It can use wxWidgets for GUI apps and was formerly called wxJavaScript.</li>
- <li><a href="https://documentup.com/shelljs/shelljs">ShellJS</a> - Portable Unix shell commands for Node.js</li>
-</ul>
+- [Node.js](http://nodejs.org/) - Node.js is a platform for easily building fast, scalable network applications.
+- [GraalJS](https://www.graalvm.org/) - A high performance implementation of the JavaScript programming language. Built on the GraalVM by Oracle Labs.
+- [JSDB](http://www.jsdb.org/) - A standalone JavaScript shell, with compiled binaries for Windows, Mac, and Linux.
+- [JavaLikeScript](http://javalikescript.free.fr/) - A standalone, extensible JavaScript shell including both native and JavaScript libraries.
+- [GLUEscript](http://gluescript.sourceforge.net/) - A standalone JavaScript shell for writing cross-platform JavaScript applications.  It can use wxWidgets for GUI apps and was formerly called wxJavaScript.
+- [ShellJS](https://documentup.com/shelljs/shelljs) - Portable Unix shell commands for Node.js
 
-<h2 id="List_of_JavaScript_shells">List of JavaScript shells</h2>
+## List of JavaScript shells
 
-<p>The following JavaScript shells work with Mozilla.</p>
+The following JavaScript shells work with Mozilla.
 
-<ul>
- <li>Firefox has a <a href="/en-US/docs/Tools/Web_Console/The_command_line_interpreter">built-in JavaScript console</a>, which support multi-line editing.</li>
- <li><a href="/en-US/docs/Mozilla/Projects/SpiderMonkey/Introduction_to_the_JavaScript_shell">JavaScript Shell</a> (<code>js</code>) - A command line interpreter for JavaScript</li>
- <li><a href="http://babeljs.io/repl">Babel REPL</a> - A browser-based <a href="https://en.wikipedia.org/wiki/REPL">REPL</a> for experimenting with future JavaScript.</li>
- <li><a href="http://es6console.com">ES6Console.com</a> - An open-source JavaScript console to test ECMAScript 2015 code inside the browser.</li>
- <li><a href="http://jsconsole.com/">jsconsole.com</a> -- An open-source JavaScript console with the ability to easily link to particular expressions</li>
- <li><a href="http://www.squarefree.com/shell/">JavaScript Shell (web page)</a> - also available as part of the <a class="link-https" href="https://addons.mozilla.org/en-US/firefox/addon/7434">Extension Developer's Extension</a></li>
-</ul>
+- Firefox has a [built-in JavaScript console](/en-US/docs/Tools/Web_Console/The_command_line_interpreter), which support multi-line editing.
+- [JavaScript Shell](/en-US/docs/Mozilla/Projects/SpiderMonkey/Introduction_to_the_JavaScript_shell) (`js`) - A command line interpreter for JavaScript
+- [Babel REPL](http://babeljs.io/repl) - A browser-based [REPL](https://en.wikipedia.org/wiki/REPL) for experimenting with future JavaScript.
+- [ES6Console.com](http://es6console.com) - An open-source JavaScript console to test ECMAScript 2015 code inside the browser.
+- [jsconsole.com](http://jsconsole.com/) -- An open-source JavaScript console with the ability to easily link to particular expressions
+- [JavaScript Shell (web page)](http://www.squarefree.com/shell/) - also available as part of the [Extension Developer's Extension](https://addons.mozilla.org/en-US/firefox/addon/7434)

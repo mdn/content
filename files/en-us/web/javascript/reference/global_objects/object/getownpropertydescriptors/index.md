@@ -2,87 +2,87 @@
 title: Object.getOwnPropertyDescriptors()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptors
 tags:
-- JavaScript
-- Method
-- Object
-- Polyfill
+  - JavaScript
+  - Method
+  - Object
+  - Polyfill
 browser-compat: javascript.builtins.Object.getOwnPropertyDescriptors
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <code><strong>Object.getOwnPropertyDescriptors()</strong></code> method returns all
-  own property descriptors of a given object.</p>
+The **`Object.getOwnPropertyDescriptors()`** method returns all
+own property descriptors of a given object.
 
-<div>{{EmbedInteractiveExample("pages/js/object-getownpropertydescriptors.html")}}</div>
+{{EmbedInteractiveExample("pages/js/object-getownpropertydescriptors.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">Object.getOwnPropertyDescriptors(<var>obj</var>)</pre>
+```js
+Object.getOwnPropertyDescriptors(obj)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>obj</code></dt>
-  <dd>The object for which to get all own property descriptors.</dd>
-</dl>
+- `obj`
+  - : The object for which to get all own property descriptors.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An object containing all own property descriptors of an object. Might be an empty
-  object, if there are no properties.</p>
+An object containing all own property descriptors of an object. Might be an empty
+object, if there are no properties.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>This method permits examination of the precise description of all own properties of an
-  object. A <dfn>property</dfn> in JavaScript consists of either a string-valued name or a
-  {{jsxref("Symbol")}} and a property descriptor. Further information about property
-  descriptor types and their attributes can be found in
-  {{jsxref("Object.defineProperty()")}}.</p>
+This method permits examination of the precise description of all own properties of an
+object. A _property_ in JavaScript consists of either a string-valued name or a
+{{jsxref("Symbol")}} and a property descriptor. Further information about property
+descriptor types and their attributes can be found in
+{{jsxref("Object.defineProperty()")}}.
 
-<p>A <dfn>property descriptor</dfn> is a record with some of the following attributes:</p>
+A _property descriptor_ is a record with some of the following attributes:
 
-<dl>
-  <dt><code>value</code></dt>
-  <dd>The value associated with the property (data descriptors only).</dd>
-  <dt><code>writable</code></dt>
-  <dd><code>true</code> if and only if the value associated with the property may be
-    changed (data descriptors only).</dd>
-  <dt><code>get</code></dt>
-  <dd>A function which serves as a getter for the property, or {{jsxref("undefined")}} if
-    there is no getter (accessor descriptors only).</dd>
-  <dt><code>set</code></dt>
-  <dd>A function which serves as a setter for the property, or {{jsxref("undefined")}} if
-    there is no setter (accessor descriptors only).</dd>
-  <dt><code>configurable</code></dt>
-  <dd><code>true</code> if and only if the type of this property descriptor may be changed
-    and if the property may be deleted from the corresponding object.</dd>
-  <dt><code>enumerable</code></dt>
-  <dd><code>true</code> if and only if this property shows up during enumeration of the
-    properties on the corresponding object.</dd>
-</dl>
+- `value`
+  - : The value associated with the property (data descriptors only).
+- `writable`
+  - : `true` if and only if the value associated with the property may be
+    changed (data descriptors only).
+- `get`
+  - : A function which serves as a getter for the property, or {{jsxref("undefined")}} if
+    there is no getter (accessor descriptors only).
+- `set`
+  - : A function which serves as a setter for the property, or {{jsxref("undefined")}} if
+    there is no setter (accessor descriptors only).
+- `configurable`
+  - : `true` if and only if the type of this property descriptor may be changed
+    and if the property may be deleted from the corresponding object.
+- `enumerable`
+  - : `true` if and only if this property shows up during enumeration of the
+    properties on the corresponding object.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Creating_a_shallow_clone">Creating a shallow clone</h3>
+### Creating a shallow clone
 
-<p>Whereas the {{jsxref("Object.assign()")}} method will only copy enumerable and own
-  properties from a source object to a target object, you are able to use this method and
-  {{jsxref("Object.create()")}} for a shallow copy between two unknown objects:</p>
+Whereas the {{jsxref("Object.assign()")}} method will only copy enumerable and own
+properties from a source object to a target object, you are able to use this method and
+{{jsxref("Object.create()")}} for a shallow copy between two unknown objects:
 
-<pre class="brush: js">Object.create(
+```js
+Object.create(
   Object.getPrototypeOf(obj),
   Object.getOwnPropertyDescriptors(obj)
 );
-</pre>
+```
 
-<h3 id="Creating_a_subclass">Creating a subclass</h3>
+### Creating a subclass
 
-<p>A typical way of creating a subclass is to define the subclass, set its prototype to an
-  instance of the superclass, and then define properties on that instance. This can get
-  awkward especially for getters and setters. Instead, you can use this code to set the
-  prototype:</p>
+A typical way of creating a subclass is to define the subclass, set its prototype to an
+instance of the superclass, and then define properties on that instance. This can get
+awkward especially for getters and setters. Instead, you can use this code to set the
+prototype:
 
-<pre class="brush: js">function superclass() {}
+```js
+function superclass() {}
 superclass.prototype = {
   // Define the superclass constructor, methods, and properties here
 };
@@ -93,23 +93,19 @@ subclass.prototype = Object.create(
     // Define the subclass constructor, methods, and properties here
   }
 );
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>A polyfill of <code>Object.getOwnPropertyDescriptors</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-object"><code>core-js</code></a></li>
-  <li>{{jsxref("Object.getOwnPropertyDescriptor()")}}</li>
-  <li>{{jsxref("Object.defineProperty()")}}</li>
-  <li><a
-      href="https://github.com/tc39/proposal-object-getownpropertydescriptors">Polyfill</a>
-  </li>
-</ul>
+- A polyfill of `Object.getOwnPropertyDescriptors` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-object)
+- {{jsxref("Object.getOwnPropertyDescriptor()")}}
+- {{jsxref("Object.defineProperty()")}}
+- [Polyfill](https://github.com/tc39/proposal-object-getownpropertydescriptors)

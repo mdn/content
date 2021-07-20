@@ -2,103 +2,99 @@
 title: Math.min()
 slug: Web/JavaScript/Reference/Global_Objects/Math/min
 tags:
-- JavaScript
-- Lowest Number
-- Lowest Value
-- Math
-- Method
-- Minimum
-- Reference
-- Smallest
-- Smallest Number
-- Smallest Value
-- min
+  - JavaScript
+  - Lowest Number
+  - Lowest Value
+  - Math
+  - Method
+  - Minimum
+  - Reference
+  - Smallest
+  - Smallest Number
+  - Smallest Value
+  - min
 browser-compat: javascript.builtins.Math.min
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The static function <strong><code>Math.min()</code></strong>
-    returns the lowest-valued number passed into it, or {{jsxref("NaN")}} if any parameter
-    isn't a number and can't be converted into one.</p>
+The static function **`Math.min()`**
+returns the lowest-valued number passed into it, or {{jsxref("NaN")}} if any parameter
+isn't a number and can't be converted into one.
 
-<div>{{EmbedInteractiveExample("pages/js/math-min.html")}}</div>
+{{EmbedInteractiveExample("pages/js/math-min.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush: js">
+```js
 Math.min()
 Math.min(value0)
 Math.min(value0, value1)
 Math.min(value0, value1, ... , valueN)
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>value1</var>, <var>value2</var>, ...</code></dt>
-  <dd>Zero or more numbers among which the lowest value will be selected and returned.
-  </dd>
-</dl>
+- `value1, value2, ...`
+  - : Zero or more numbers among which the lowest value will be selected and returned.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>The smallest of the given numbers. If any one or more of the parameters cannot be
-  converted into a number, {{jsxref("NaN")}} is returned. The result is
-  {{jsxref("Infinity")}} if no parameters are provided.</p>
+The smallest of the given numbers. If any one or more of the parameters cannot be
+converted into a number, {{jsxref("NaN")}} is returned. The result is
+{{jsxref("Infinity")}} if no parameters are provided.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Because <code>min()</code> is a static method of <code>Math</code>, you always use it
-  as <code>Math.min()</code>, rather than as a method of a <code>Math</code> object you
-  created (<code>Math</code> is not a constructor).</p>
+Because `min()` is a static method of `Math`, you always use it
+as `Math.min()`, rather than as a method of a `Math` object you
+created (`Math` is not a constructor).
 
-<p>If no arguments are given, the result is {{jsxref("Infinity")}}.</p>
+If no arguments are given, the result is {{jsxref("Infinity")}}.
 
-<p>If at least one of arguments cannot be converted to a number, the result is
-  {{jsxref("NaN")}}.</p>
+If at least one of arguments cannot be converted to a number, the result is
+{{jsxref("NaN")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_Math.min">Using Math.min()</h3>
+### Using Math.min()
 
-<p>This finds the min of <code>x</code> and <code>y</code> and assigns it to
-  <code>z</code>:</p>
+This finds the min of `x` and `y` and assigns it to
+`z`:
 
-<pre class="brush: js">var x = 10, y = -20;
+```js
+var x = 10, y = -20;
 var z = Math.min(x, y);
-</pre>
+```
 
-<h3 id="Clipping_a_value_with_Math.min">Clipping a value with Math.min()</h3>
+### Clipping a value with Math.min()
 
-<p><code>Math.min()</code> is often used to clip a value so that it is always less than or
-  equal to a boundary. For instance, this</p>
+`Math.min()` is often used to clip a value so that it is always less than or
+equal to a boundary. For instance, this
 
-<pre class="brush: js">var x = f(foo);
+```js
+var x = f(foo);
 
-if (x &gt; boundary) {
+if (x > boundary) {
   x = boundary;
 }
-</pre>
+```
 
-<p>may be written as this</p>
+may be written as this
 
-<pre class="brush: js">var x = Math.min(f(foo), boundary);
-</pre>
+```js
+var x = Math.min(f(foo), boundary);
+```
 
-<p>{{jsxref("Math.max()")}} can be used in a similar way to clip a value at the other end.
-</p>
+{{jsxref("Math.max()")}} can be used in a similar way to clip a value at the other end.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Math.max()")}}</li>
-</ul>
+- {{jsxref("Math.max()")}}

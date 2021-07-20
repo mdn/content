@@ -2,77 +2,75 @@
 title: Object.getOwnPropertyDescriptor()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor
 tags:
-- ECMAScript 5
-- JavaScript
-- Method
-- Object
+  - ECMAScript 5
+  - JavaScript
+  - Method
+  - Object
 browser-compat: javascript.builtins.Object.getOwnPropertyDescriptor
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>Object.getOwnPropertyDescriptor()</code></strong> method returns an
-  object describing the configuration of a specific property on a given object (that is,
-  one directly present on an object and not in the object's prototype chain). The object
-  returned is mutable but mutating it has no effect on the original property's
-  configuration.</p>
+The **`Object.getOwnPropertyDescriptor()`** method returns an
+object describing the configuration of a specific property on a given object (that is,
+one directly present on an object and not in the object's prototype chain). The object
+returned is mutable but mutating it has no effect on the original property's
+configuration.
 
-<div>{{EmbedInteractiveExample("pages/js/object-getownpropertydescriptor.html")}}</div>
+{{EmbedInteractiveExample("pages/js/object-getownpropertydescriptor.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">Object.getOwnPropertyDescriptor(<var>obj</var>, <var>prop</var>)</pre>
+```js
+Object.getOwnPropertyDescriptor(obj, prop)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>obj</var></code></dt>
-  <dd>The object in which to look for the property.</dd>
-  <dt><code><var>prop</var></code></dt>
-  <dd>The name or {{jsxref("Symbol")}} of the property whose description is to be
-    retrieved.</dd>
-</dl>
+- `obj`
+  - : The object in which to look for the property.
+- `prop`
+  - : The name or {{jsxref("Symbol")}} of the property whose description is to be
+    retrieved.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A property descriptor of the given property if it exists on the object,
-  {{jsxref("undefined")}} otherwise.</p>
+A property descriptor of the given property if it exists on the object,
+{{jsxref("undefined")}} otherwise.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>This method permits examination of the precise description of a property. A
-  <dfn>property</dfn> in JavaScript consists of either a string-valued name or a
-  {{jsxref("Symbol")}} and a property descriptor. Further information about property
-  descriptor types and their attributes can be found in
-  {{jsxref("Object.defineProperty()")}}.</p>
+This method permits examination of the precise description of a property. A
+_property_ in JavaScript consists of either a string-valued name or a
+{{jsxref("Symbol")}} and a property descriptor. Further information about property
+descriptor types and their attributes can be found in
+{{jsxref("Object.defineProperty()")}}.
 
-<p>A <dfn>property descriptor</dfn> is a record with some of the following attributes:</p>
+A _property descriptor_ is a record with some of the following attributes:
 
-<dl>
-  <dt><code>value</code></dt>
-  <dd>The value associated with the property (data descriptors only).</dd>
-  <dt><code>writable</code></dt>
-  <dd><code>true</code> if and only if the value associated with the property may be
-    changed (data descriptors only).</dd>
-  <dt><code>get</code></dt>
-  <dd>A function which serves as a getter for the property, or {{jsxref("undefined")}} if
-    there is no getter (accessor descriptors only).</dd>
-  <dt><code>set</code></dt>
-  <dd>A function which serves as a setter for the property, or {{jsxref("undefined")}} if
-    there is no setter (accessor descriptors only).</dd>
-  <dt><code>configurable</code></dt>
-  <dd><code>true</code> if and only if the type of this property descriptor may be changed
-    and if the property may be deleted from the corresponding object.</dd>
-  <dt><code>enumerable</code></dt>
-  <dd><code>true</code> if and only if this property shows up during enumeration of the
-    properties on the corresponding object.</dd>
-</dl>
+- `value`
+  - : The value associated with the property (data descriptors only).
+- `writable`
+  - : `true` if and only if the value associated with the property may be
+    changed (data descriptors only).
+- `get`
+  - : A function which serves as a getter for the property, or {{jsxref("undefined")}} if
+    there is no getter (accessor descriptors only).
+- `set`
+  - : A function which serves as a setter for the property, or {{jsxref("undefined")}} if
+    there is no setter (accessor descriptors only).
+- `configurable`
+  - : `true` if and only if the type of this property descriptor may be changed
+    and if the property may be deleted from the corresponding object.
+- `enumerable`
+  - : `true` if and only if this property shows up during enumeration of the
+    properties on the corresponding object.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_Object.getOwnPropertyDescriptor">Using Object.getOwnPropertyDescriptor</h3>
+### Using Object.getOwnPropertyDescriptor
 
-<pre class="brush: js">var o, d;
+```js
+var o, d;
 
 o = { get foo() { return 17; } };
 d = Object.getOwnPropertyDescriptor(o, 'foo');
@@ -114,15 +112,16 @@ d = Object.getOwnPropertyDescriptor(o, 'qux');
 //   enumerable: false,
 //   configurable: false
 // }
-</pre>
+```
 
-<h3 id="Non-object_coercion">Non-object coercion</h3>
+### Non-object coercion
 
-<p>In ES5, if the first argument to this method is not an object (a primitive), then it
-  will cause a {{jsxref("TypeError")}}. In ES2015, a non-object first argument will be
-  coerced to an object at first.</p>
+In ES5, if the first argument to this method is not an object (a primitive), then it
+will cause a {{jsxref("TypeError")}}. In ES2015, a non-object first argument will be
+coerced to an object at first.
 
-<pre class="brush: js">Object.getOwnPropertyDescriptor('foo', 0);
+```js
+Object.getOwnPropertyDescriptor('foo', 0);
 // TypeError: "foo" is not an object  // ES5 code
 
 Object.getOwnPropertyDescriptor('foo', 0);
@@ -132,19 +131,17 @@ Object.getOwnPropertyDescriptor('foo', 0);
 //   value: "f",
 //   writable: false
 // }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Object.defineProperty()")}}</li>
-  <li>{{jsxref("Reflect.getOwnPropertyDescriptor()")}}</li>
-</ul>
+- {{jsxref("Object.defineProperty()")}}
+- {{jsxref("Reflect.getOwnPropertyDescriptor()")}}

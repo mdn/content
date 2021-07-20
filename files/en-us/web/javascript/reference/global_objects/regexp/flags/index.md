@@ -12,30 +12,31 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.RegExp.flags
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>flags</code></strong> property returns a string consisting of the <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags">flags</a> of the current regular expression object.</p>
+The **`flags`** property returns a string consisting of the [flags](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags) of the current regular expression object.
 
-<div>{{EmbedInteractiveExample("pages/js/regexp-prototype-flags.html")}}</div>
+{{EmbedInteractiveExample("pages/js/regexp-prototype-flags.html")}}
 
+{{JS_Property_Attributes(0, 0, 1)}}
 
-<p>{{JS_Property_Attributes(0, 0, 1)}}</p>
+## Description
 
-<h2 id="Description">Description</h2>
+Flags in the `flags` property are sorted alphabetically (from left to right, e.g. `"gimsuy"`).
 
-<p>Flags in the <code>flags</code> property are sorted alphabetically (from left to right, e.g. <code>"gimsuy"</code>).</p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Using flags
 
-<h3 id="Using_flags">Using flags</h3>
-
-<pre class="brush: js">/foo/ig.flags;   // "gi"
+```js
+/foo/ig.flags;   // "gi"
 /bar/myu.flags;  // "muy"
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<pre class="brush: js">if (RegExp.prototype.flags === undefined) {
+```js
+if (RegExp.prototype.flags === undefined) {
   Object.defineProperty(RegExp.prototype, 'flags', {
     configurable: true,
     get: function() {
@@ -43,19 +44,17 @@ browser-compat: javascript.builtins.RegExp.flags
     }
   });
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>A polyfill of <code>RegExp.prototype.flags</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-string-and-regexp"><code>core-js</code></a></li>
- <li>{{JSxRef("RegExp.prototype.source")}}</li>
-</ul>
+- A polyfill of `RegExp.prototype.flags` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- {{JSxRef("RegExp.prototype.source")}}

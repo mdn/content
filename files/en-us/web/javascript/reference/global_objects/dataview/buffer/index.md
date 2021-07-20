@@ -9,38 +9,36 @@ tags:
   - TypedArrays
 browser-compat: javascript.builtins.DataView.buffer
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>buffer</code></strong> accessor property represents the {{jsxref("ArrayBuffer")}} or {{jsxref("SharedArrayBuffer")}} referenced by the <code>DataView</code> at construction time.</p>
+The **`buffer`** accessor property represents the {{jsxref("ArrayBuffer")}} or {{jsxref("SharedArrayBuffer")}} referenced by the `DataView` at construction time.
 
-<div>{{EmbedInteractiveExample("pages/js/dataview-buffer.html")}}</div>
+{{EmbedInteractiveExample("pages/js/dataview-buffer.html")}}
 
+## Description
 
-<h2 id="Description">Description</h2>
+The `buffer` property is an accessor property whose set accessor function is `undefined`, meaning that you can only read this property. The value is established when the `DataView` is constructed and cannot be changed.
 
-<p>The <code>buffer</code> property is an accessor property whose set accessor function is <code>undefined</code>, meaning that you can only read this property. The value is established when the <code>DataView</code> is constructed and cannot be changed.</p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Using the buffer property
 
-<h3 id="Using_the_buffer_property">Using the buffer property</h3>
-
-<pre class="brush:js">var buffer = new ArrayBuffer(8);
+```js
+var buffer = new ArrayBuffer(8);
 var dataview = new DataView(buffer);
 dataview.buffer; // ArrayBuffer { byteLength: 8 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("DataView")}}</li>
- <li>{{jsxref("ArrayBuffer")}}</li>
- <li>{{jsxref("SharedArrayBuffer")}}</li>
-</ul>
+- {{jsxref("DataView")}}
+- {{jsxref("ArrayBuffer")}}
+- {{jsxref("SharedArrayBuffer")}}

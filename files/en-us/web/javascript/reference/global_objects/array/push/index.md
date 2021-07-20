@@ -2,103 +2,102 @@
 title: Array.prototype.push()
 slug: Web/JavaScript/Reference/Global_Objects/Array/push
 tags:
-- Array
-- JavaScript
-- Method
-- Prototype
-- Reference
+  - Array
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
 browser-compat: javascript.builtins.Array.push
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <code><strong>push()</strong></code> method adds one or more elements to the end of
-  an array and returns the new length of the array.</p>
+The **`push()`** method adds one or more elements to the end of
+an array and returns the new length of the array.
 
-<div>{{EmbedInteractiveExample("pages/js/array-push.html")}}</div>
+{{EmbedInteractiveExample("pages/js/array-push.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush: js">
+```js
 push(element0)
 push(element0, element1)
 push(element0, element1, ... , elementN)
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>element<em>N</em></code></dt>
-  <dd>The element(s) to add to the end of the array.</dd>
-</dl>
+- `elementN`
+  - : The element(s) to add to the end of the array.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>The new {{jsxref("Array.length", "length")}} property of the object upon which the
-  method was called.</p>
+The new {{jsxref("Array.length", "length")}} property of the object upon which the
+method was called.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The <code>push</code> method appends values to an array.</p>
+The `push` method appends values to an array.
 
-<p><code>push</code> is intentionally generic. This method can be used with
-  {{jsxref("Function.call", "call()")}} or {{jsxref("Function.apply", "apply()")}} on
-  objects resembling arrays. The <code>push</code> method relies on a <code>length</code>
-  property to determine where to start inserting the given values. If the
-  <code>length</code> property cannot be converted into a number, the index used is 0.
-  This includes the possibility of <code>length</code> being nonexistent, in which case
-  <code>length</code> will also be created.</p>
+`push` is intentionally generic. This method can be used with
+{{jsxref("Function.call", "call()")}} or {{jsxref("Function.apply", "apply()")}} on
+objects resembling arrays. The `push` method relies on a `length`
+property to determine where to start inserting the given values. If the
+`length` property cannot be converted into a number, the index used is 0.
+This includes the possibility of `length` being nonexistent, in which case
+`length` will also be created.
 
-<p>Although {{jsxref("Global_Objects/String", "strings", "", 1)}} are native, Array-like
-  objects, they are not suitable in applications of this method, as strings are immutable.
-   Similarly for the native, Array-like object {{jsxref("Functions/arguments",
-  "arguments", "", 1)}}.</p>
+Although {{jsxref("Global_Objects/String", "strings", "", 1)}} are native, Array-like
+objects, they are not suitable in applications of this method, as strings are immutable.
+ Similarly for the native, Array-like object {{jsxref("Functions/arguments",
+  "arguments", "", 1)}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Adding_elements_to_an_array">Adding elements to an array</h3>
+### Adding elements to an array
 
-<p>The following code creates the <code>sports</code> array containing two elements, then
-  appends two elements to it. The <code>total</code> variable contains the new length of
-  the array.</p>
+The following code creates the `sports` array containing two elements, then
+appends two elements to it. The `total` variable contains the new length of
+the array.
 
-<pre class="brush: js">let sports = ['soccer', 'baseball']
+```js
+let sports = ['soccer', 'baseball']
 let total = sports.push('football', 'swimming')
 
 console.log(sports)  // ['soccer', 'baseball', 'football', 'swimming']
 console.log(total)   // 4
-</pre>
+```
 
-<h3 id="Merging_two_arrays">Merging two arrays</h3>
+### Merging two arrays
 
-<p>This example uses {{jsxref("Operators/Spread_syntax", "spread syntax", "", "1")}} to push all elements from a
-  second array into the first one.</p>
+This example uses {{jsxref("Operators/Spread_syntax", "spread syntax", "", "1")}} to push all elements from a
+second array into the first one.
 
-<pre class="brush: js">let vegetables = ['parsnip', 'potato']
+```js
+let vegetables = ['parsnip', 'potato']
 let moreVegs = ['celery', 'beetroot']
 
 // Merge the second array into the first one
 vegetables.push(...moreVegs);
 
 console.log(vegetables)  // ['parsnip', 'potato', 'celery', 'beetroot']
-</pre>
+```
 
-<p>Merging two arrays can also be done with the {{jsxref("Array.prototype.concat()", "concat()")}} method.</p>
+Merging two arrays can also be done with the {{jsxref("Array.prototype.concat()", "concat()")}} method.
 
-<h3 id="Using_an_object_in_an_array-like_fashion">Using an object in an array-like fashion
-</h3>
+### Using an object in an array-like fashion
 
-<p>As mentioned above, <code>push</code> is intentionally generic, and we can use that to
-  our advantage. <code>Array.prototype.push</code> can work on an object just fine, as
-  this example shows.</p>
+As mentioned above, `push` is intentionally generic, and we can use that to
+our advantage. `Array.prototype.push` can work on an object just fine, as
+this example shows.
 
-<p>Note that we don't create an array to store a collection of objects. Instead, we store
-  the collection on the object itself and use <code>call</code> on
-  <code>Array.prototype.push</code> to trick the method into thinking we are dealing with
-  an array—and it just works, thanks to the way JavaScript allows us to establish the
-  execution context in any way we want.</p>
+Note that we don't create an array to store a collection of objects. Instead, we store
+the collection on the object itself and use `call` on
+`Array.prototype.push` to trick the method into thinking we are dealing with
+an array—and it just works, thanks to the way JavaScript allows us to establish the
+execution context in any way we want.
 
-<pre class="brush: js">let obj = {
+```js
+let obj = {
     length: 0,
 
     addElem: function addElem(elem) {
@@ -113,25 +112,23 @@ obj.addElem({})
 obj.addElem({})
 console.log(obj.length)
 // → 2
-</pre>
+```
 
-<p>Note that although <code>obj</code> is not an array, the method <code>push</code>
-  successfully incremented <code>obj</code>'s <code>length</code> property just like if we
-  were dealing with an actual array.</p>
+Note that although `obj` is not an array, the method `push`
+successfully incremented `obj`'s `length` property just like if we
+were dealing with an actual array.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Array.prototype.pop()")}}</li>
-  <li>{{jsxref("Array.prototype.shift()")}}</li>
-  <li>{{jsxref("Array.prototype.unshift()")}}</li>
-  <li>{{jsxref("Array.prototype.concat()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.pop()")}}
+- {{jsxref("Array.prototype.shift()")}}
+- {{jsxref("Array.prototype.unshift()")}}
+- {{jsxref("Array.prototype.concat()")}}

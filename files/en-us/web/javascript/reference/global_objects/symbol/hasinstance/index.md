@@ -9,58 +9,57 @@ tags:
   - Symbol
 browser-compat: javascript.builtins.Symbol.hasInstance
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><span class="seoSummary">The <strong><code>Symbol.hasInstance</code></strong> well-known symbol is used to determine if a constructor object recognizes an object as its instance. The {{jsxref("Operators/instanceof", "instanceof")}} operator's behavior can be customized by this symbol.</span></p>
+The **`Symbol.hasInstance`** well-known symbol is used to determine if a constructor object recognizes an object as its instance. The {{jsxref("Operators/instanceof", "instanceof")}} operator's behavior can be customized by this symbol.
 
-<div>{{EmbedInteractiveExample("pages/js/symbol-hasinstance.html")}}</div>
+{{EmbedInteractiveExample("pages/js/symbol-hasinstance.html")}}{{js_property_attributes(0,0,0)}}
 
+## Examples
 
-<div>{{js_property_attributes(0,0,0)}}</div>
+### Custom instanceof behavior
 
-<h2 id="Examples">Examples</h2>
+You could implement your custom `instanceof` behavior like this, for example:
 
-<h3 id="Custom_instanceof_behavior">Custom instanceof behavior</h3>
-
-<p>You could implement your custom <code>instanceof</code> behavior like this, for example:</p>
-
-<pre class="brush: js">class MyArray {
+```js
+class MyArray {
   static [Symbol.hasInstance](instance) {
     return Array.isArray(instance)
   }
 }
 console.log([] instanceof MyArray); // true
-</pre>
+```
 
-<pre class="brush: js">function MyArray() { }
+```js
+function MyArray() { }
 Object.defineProperty(MyArray, Symbol.hasInstance, {
   value: function(instance) { return Array.isArray(instance); }
 });
-console.log([] instanceof MyArray); // true</pre>
+console.log([] instanceof MyArray); // true
+```
 
-<h3 id="Checking_the_instance_of_an_object">Checking the instance of an object</h3>
+### Checking the instance of an object
 
-<p>Just in the same manner at which you can check if an object is an instance of a  class using the <code>instanceof</code> keyword, we can also use <code>Symbol.hasInstance</code> for such checks also.</p>
+Just in the same manner at which you can check if an object is an instance of a  class using the `instanceof` keyword, we can also use `Symbol.hasInstance` for such checks also.
 
-<pre class="brush: js">class Animal {
+```js
+class Animal {
   constructor() {}
 }
 
 const cat = new Animal();
 
 console.log(Animal[Symbol.hasInstance](cat)); // true
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("Operators/instanceof", "instanceof")}}</li>
-</ul>
+- {{jsxref("Operators/instanceof", "instanceof")}}

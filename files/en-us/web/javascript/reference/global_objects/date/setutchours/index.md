@@ -2,88 +2,82 @@
 title: Date.prototype.setUTCHours()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCHours
 tags:
-- Date
-- JavaScript
-- Method
-- Prototype
-- Reference
+  - Date
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
 browser-compat: javascript.builtins.Date.setUTCHours
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>setUTCHours()</code></strong> method sets the hour for a specified
-  date according to universal time, and returns the number of milliseconds since  January
-  1, 1970 00:00:00 UTC until the time represented by the updated {{jsxref("Date")}}
-  instance.</p>
+The **`setUTCHours()`** method sets the hour for a specified
+date according to universal time, and returns the number of milliseconds since  January
+1, 1970 00:00:00 UTC until the time represented by the updated {{jsxref("Date")}}
+instance.
 
-<div>{{EmbedInteractiveExample("pages/js/date-setutchours.html")}}</div>
+{{EmbedInteractiveExample("pages/js/date-setutchours.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush: js">
+```js
 setUTCHours(hoursValue)
 setUTCHours(hoursValue, minutesValue)
 setUTCHours(hoursValue, minutesValue, secondsValue)
 setUTCHours(hoursValue, minutesValue, secondsValue, msValue)
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>hoursValue</var></code></dt>
-  <dd>An integer between 0 and 23, representing the hour.</dd>
-  <dt><code><var>minutesValue</var></code></dt>
-  <dd>Optional. An integer between 0 and 59, representing the minutes.</dd>
-  <dt><code><var>secondsValue</var></code></dt>
-  <dd>Optional. An integer between 0 and 59, representing the seconds. If you specify the
-    <code><var>secondsValue</var></code> parameter, you must also specify the
-    <code><var>minutesValue</var></code>.</dd>
-  <dt><code><var>msValue</var></code></dt>
-  <dd>Optional. A number between 0 and 999, representing the milliseconds. If you specify
-    the <code><var>msValue</var></code> parameter, you must also specify the
-    <code><var>minutesValue</var></code> and <code><var>secondsValue</var></code>.</dd>
-</dl>
+- `hoursValue`
+  - : An integer between 0 and 23, representing the hour.
+- `minutesValue`
+  - : Optional. An integer between 0 and 59, representing the minutes.
+- `secondsValue`
+  - : Optional. An integer between 0 and 59, representing the seconds. If you specify the
+    `secondsValue` parameter, you must also specify the
+    `minutesValue`.
+- `msValue`
+  - : Optional. A number between 0 and 999, representing the milliseconds. If you specify
+    the `msValue` parameter, you must also specify the
+    `minutesValue` and `secondsValue`.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>The number of milliseconds between January 1, 1970 00:00:00 UTC and the updated date.
-</p>
+The number of milliseconds between January 1, 1970 00:00:00 UTC and the updated date.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>If you do not specify the <code><var>minutesValue</var></code>,
-  <code><var>secondsValue</var></code>, and <code><var>msValue</var></code> parameters,
-  the values returned from the {{jsxref("Date.prototype.getUTCMinutes()",
+If you do not specify the `minutesValue`,
+`secondsValue`, and `msValue` parameters,
+the values returned from the {{jsxref("Date.prototype.getUTCMinutes()",
   "getUTCMinutes()")}}, {{jsxref("Date.prototype.getUTCSeconds()", "getUTCSeconds()")}},
-  and {{jsxref("Date.prototype.getUTCMilliseconds()", "getUTCMilliseconds()")}} methods
-  are used.</p>
+and {{jsxref("Date.prototype.getUTCMilliseconds()", "getUTCMilliseconds()")}} methods
+are used.
 
-<p>If a parameter you specify is outside of the expected range, <code>setUTCHours()</code>
-  attempts to update the date information in the {{jsxref("Date")}} object accordingly.
-  For example, if you use 100 for <code><var>secondsValue</var></code>, the minutes will
-  be incremented by 1 (<code>minutesValue + 1</code>), and 40 will be used for seconds.
-</p>
+If a parameter you specify is outside of the expected range, `setUTCHours()`
+attempts to update the date information in the {{jsxref("Date")}} object accordingly.
+For example, if you use 100 for `secondsValue`, the minutes will
+be incremented by 1 (`minutesValue + 1`), and 40 will be used for seconds.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_setUTCHours">Using setUTCHours()</h3>
+### Using setUTCHours()
 
-<pre class="brush: js">var theBigDay = new Date();
+```js
+var theBigDay = new Date();
 theBigDay.setUTCHours(8);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Date.prototype.getUTCHours()")}}</li>
-  <li>{{jsxref("Date.prototype.setHours()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getUTCHours()")}}
+- {{jsxref("Date.prototype.setHours()")}}

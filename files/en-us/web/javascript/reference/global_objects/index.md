@@ -7,203 +7,163 @@ tags:
   - Overview
   - Reference
 ---
-<p>{{JSSidebar("Objects")}}</p>
+{{JSSidebar("Objects")}}
 
-<p><span class="seoSummary">This chapter documents all of JavaScript's standard, built-in objects, including their methods and properties.</span></p>
+This chapter documents all of JavaScript's standard, built-in objects, including their methods and properties.
 
-<p>The term "global objects" (or standard built-in objects) here is not to be confused with <strong>the global object</strong>. Here, "global objects" refer to <strong>objects in the global scope</strong>.</p>
+The term "global objects" (or standard built-in objects) here is not to be confused with **the global object**. Here, "global objects" refer to **objects in the global scope**.
 
-<p>The <strong>global object</strong> itself can be accessed using the {{JSxRef("Operators/this", "this")}} operator in the global scope. In fact, the global scope <strong>consists of</strong> the properties of the global object, including inherited properties, if any.</p>
+The **global object** itself can be accessed using the {{JSxRef("Operators/this", "this")}} operator in the global scope. In fact, the global scope **consists of** the properties of the global object, including inherited properties, if any.
 
-<p>Other objects in the global scope are either <a href="/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#creating_new_objects">created by the user script</a> or provided by the host application. The host objects available in browser contexts are documented in the <a href="/en-US/docs/Web/API">API reference</a>.</p>
+Other objects in the global scope are either [created by the user script](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#creating_new_objects) or provided by the host application. The host objects available in browser contexts are documented in the [API reference](/en-US/docs/Web/API).
 
-<p>For more information about the distinction between the <a href="/en-US/docs/Web/API/Document_Object_Model">DOM</a> and core <a href="/en-US/docs/Web/JavaScript">JavaScript</a>, see <a href="/en-US/docs/Web/JavaScript/JavaScript_technologies_overview">JavaScript technologies overview</a>.</p>
+For more information about the distinction between the [DOM](/en-US/docs/Web/API/Document_Object_Model) and core [JavaScript](/en-US/docs/Web/JavaScript), see [JavaScript technologies overview](/en-US/docs/Web/JavaScript/JavaScript_technologies_overview).
 
-<h2 id="Standard_objects_by_category">Standard objects by category</h2>
+## Standard objects by category
 
-<h3 id="Value_properties">Value properties</h3>
+### Value properties
 
-<p>These global properties return a simple value. They have no properties or methods.</p>
+These global properties return a simple value. They have no properties or methods.
 
-<ul>
- <li>{{JSxRef("Infinity")}}</li>
- <li>{{JSxRef("NaN")}}</li>
- <li>{{JSxRef("undefined")}}</li>
- <li>{{JSxRef("globalThis")}}</li>
-</ul>
+- {{JSxRef("Infinity")}}
+- {{JSxRef("NaN")}}
+- {{JSxRef("undefined")}}
+- {{JSxRef("globalThis")}}
 
-<h3 id="Function_properties">Function properties</h3>
+### Function properties
 
-<p>These global functions—functions which are called globally, rather than on an object—directly return their results to the caller.</p>
+These global functions—functions which are called globally, rather than on an object—directly return their results to the caller.
 
-<div class="twocolumns">
-<ul>
- <li>{{JSxRef("Global_Objects/eval", "eval()")}}</li>
- <li>{{Non-Standard_Inline}} {{JSxRef("Global_Objects/uneval", "uneval()")}} </li>
- <li>{{JSxRef("Global_Objects/isFinite", "isFinite()")}}</li>
- <li>{{JSxRef("Global_Objects/isNaN", "isNaN()")}}</li>
- <li>{{JSxRef("Global_Objects/parseFloat", "parseFloat()")}}</li>
- <li>{{JSxRef("Global_Objects/parseInt", "parseInt()")}}</li>
- <li>{{JSxRef("Global_Objects/encodeURI", "encodeURI()")}}</li>
- <li>{{JSxRef("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}</li>
- <li>{{JSxRef("Global_Objects/decodeURI", "decodeURI()")}}</li>
- <li>{{JSxRef("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}</li>
- <li><strong>Deprecated</strong>
-  <ul>
-   <li>{{Deprecated_Inline}} {{JSxRef("Global_Objects/escape", "escape()")}}</li>
-   <li>{{Deprecated_Inline}} {{JSxRef("Global_Objects/unescape", "unescape()")}}</li>
-  </ul>
- </li>
-</ul>
-</div>
+- {{JSxRef("Global_Objects/eval", "eval()")}}
+- {{Non-Standard_Inline}} {{JSxRef("Global_Objects/uneval", "uneval()")}}
+- {{JSxRef("Global_Objects/isFinite", "isFinite()")}}
+- {{JSxRef("Global_Objects/isNaN", "isNaN()")}}
+- {{JSxRef("Global_Objects/parseFloat", "parseFloat()")}}
+- {{JSxRef("Global_Objects/parseInt", "parseInt()")}}
+- {{JSxRef("Global_Objects/encodeURI", "encodeURI()")}}
+- {{JSxRef("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}
+- {{JSxRef("Global_Objects/decodeURI", "decodeURI()")}}
+- {{JSxRef("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}
+- **Deprecated**
 
-<h3 id="Fundamental_objects">Fundamental objects</h3>
+  - {{Deprecated_Inline}} {{JSxRef("Global_Objects/escape", "escape()")}}
+  - {{Deprecated_Inline}} {{JSxRef("Global_Objects/unescape", "unescape()")}}
 
-<p>These are the fundamental, basic objects upon which all other objects are based. This includes general objects, booleans, functions, and symbols.</p>
+### Fundamental objects
 
-<ul>
- <li>{{JSxRef("Object")}}</li>
- <li>{{JSxRef("Function")}}</li>
- <li>{{JSxRef("Boolean")}}</li>
- <li>{{JSxRef("Symbol")}}</li>
-</ul>
+These are the fundamental, basic objects upon which all other objects are based. This includes general objects, booleans, functions, and symbols.
 
-<h3 id="Error_objects">Error objects</h3>
+- {{JSxRef("Object")}}
+- {{JSxRef("Function")}}
+- {{JSxRef("Boolean")}}
+- {{JSxRef("Symbol")}}
 
-<p>Error objects are a special type of fundamental object. They include the basic {{JSxRef("Error")}} type, as well as several specialized error types.</p>
+### Error objects
 
-<div class="twocolumns">
-<ul>
- <li>{{JSxRef("Error")}}</li>
- <li>{{JSxRef("AggregateError")}} </li>
- <li>{{JSxRef("EvalError")}}</li>
- <li>{{JSxRef("InternalError")}}</li>
- <li>{{JSxRef("RangeError")}}</li>
- <li>{{JSxRef("ReferenceError")}}</li>
- <li>{{JSxRef("SyntaxError")}}</li>
- <li>{{JSxRef("TypeError")}}</li>
- <li>{{JSxRef("URIError")}}</li>
-</ul>
-</div>
+Error objects are a special type of fundamental object. They include the basic {{JSxRef("Error")}} type, as well as several specialized error types.
 
-<h3 id="Numbers_and_dates">Numbers and dates</h3>
+- {{JSxRef("Error")}}
+- {{JSxRef("AggregateError")}}
+- {{JSxRef("EvalError")}}
+- {{JSxRef("InternalError")}}
+- {{JSxRef("RangeError")}}
+- {{JSxRef("ReferenceError")}}
+- {{JSxRef("SyntaxError")}}
+- {{JSxRef("TypeError")}}
+- {{JSxRef("URIError")}}
 
-<p>These are the base objects representing numbers, dates, and mathematical calculations.</p>
+### Numbers and dates
 
-<ul>
- <li>{{JSxRef("Number")}}</li>
- <li>{{JSxRef("BigInt")}}</li>
- <li>{{JSxRef("Math")}}</li>
- <li>{{JSxRef("Date")}}</li>
-</ul>
+These are the base objects representing numbers, dates, and mathematical calculations.
 
-<h3 id="Text_processing">Text processing</h3>
+- {{JSxRef("Number")}}
+- {{JSxRef("BigInt")}}
+- {{JSxRef("Math")}}
+- {{JSxRef("Date")}}
 
-<p>These objects represent strings and support manipulating them.</p>
+### Text processing
 
-<ul>
- <li>{{JSxRef("String")}}</li>
- <li>{{JSxRef("RegExp")}}</li>
-</ul>
+These objects represent strings and support manipulating them.
 
-<h3 id="Indexed_collections">Indexed collections</h3>
+- {{JSxRef("String")}}
+- {{JSxRef("RegExp")}}
 
-<p>These objects represent collections of data which are ordered by an index value. This includes (typed) arrays and array-like constructs.</p>
+### Indexed collections
 
-<div class="twocolumns">
-<ul>
- <li>{{JSxRef("Array")}}</li>
- <li>{{JSxRef("Int8Array")}}</li>
- <li>{{JSxRef("Uint8Array")}}</li>
- <li>{{JSxRef("Uint8ClampedArray")}}</li>
- <li>{{JSxRef("Int16Array")}}</li>
- <li>{{JSxRef("Uint16Array")}}</li>
- <li>{{JSxRef("Int32Array")}}</li>
- <li>{{JSxRef("Uint32Array")}}</li>
- <li>{{JSxRef("Float32Array")}}</li>
- <li>{{JSxRef("Float64Array")}}</li>
- <li>{{JSxRef("BigInt64Array")}}</li>
- <li>{{JSxRef("BigUint64Array")}}</li>
-</ul>
-</div>
+These objects represent collections of data which are ordered by an index value. This includes (typed) arrays and array-like constructs.
 
-<h3 id="Keyed_collections">Keyed collections</h3>
+- {{JSxRef("Array")}}
+- {{JSxRef("Int8Array")}}
+- {{JSxRef("Uint8Array")}}
+- {{JSxRef("Uint8ClampedArray")}}
+- {{JSxRef("Int16Array")}}
+- {{JSxRef("Uint16Array")}}
+- {{JSxRef("Int32Array")}}
+- {{JSxRef("Uint32Array")}}
+- {{JSxRef("Float32Array")}}
+- {{JSxRef("Float64Array")}}
+- {{JSxRef("BigInt64Array")}}
+- {{JSxRef("BigUint64Array")}}
 
-<p>These objects represent collections which use keys. The iterable collections ({{JSxRef("Map")}} and {{JSxRef("Set")}}) contain elements which are easily iterated in the order of insertion.</p>
+### Keyed collections
 
-<ul>
- <li>{{JSxRef("Map")}}</li>
- <li>{{JSxRef("Set")}}</li>
- <li>{{JSxRef("WeakMap")}}</li>
- <li>{{JSxRef("WeakSet")}}</li>
-</ul>
+These objects represent collections which use keys. The iterable collections ({{JSxRef("Map")}} and {{JSxRef("Set")}}) contain elements which are easily iterated in the order of insertion.
 
-<h3 id="Structured_data">Structured data</h3>
+- {{JSxRef("Map")}}
+- {{JSxRef("Set")}}
+- {{JSxRef("WeakMap")}}
+- {{JSxRef("WeakSet")}}
 
-<p>These objects represent and interact with structured data buffers and data coded using JavaScript Object Notation (JSON).</p>
+### Structured data
 
-<ul>
- <li>{{JSxRef("ArrayBuffer")}}</li>
- <li>{{JSxRef("SharedArrayBuffer")}}</li>
- <li>{{JSxRef("Atomics")}}</li>
- <li>{{JSxRef("DataView")}}</li>
- <li>{{JSxRef("JSON")}}</li>
-</ul>
+These objects represent and interact with structured data buffers and data coded using JavaScript Object Notation (JSON).
 
-<h3 id="Control_abstraction_objects">Control abstraction objects</h3>
+- {{JSxRef("ArrayBuffer")}}
+- {{JSxRef("SharedArrayBuffer")}}
+- {{JSxRef("Atomics")}}
+- {{JSxRef("DataView")}}
+- {{JSxRef("JSON")}}
 
-<p>Control abstractions can help to structure code, especially async code (without using deeply nested callbacks, for example).</p>
+### Control abstraction objects
 
-<ul>
- <li>{{JSxRef("Promise")}}</li>
- <li>{{JSxRef("Generator")}}</li>
- <li>{{JSxRef("GeneratorFunction")}}</li>
- <li>{{JSxRef("AsyncFunction")}}</li>
- <li>{{JSxRef("Global_Objects/AsyncGenerator", "AsyncGenerator")}}</li>
- <li>{{JSxRef("Global_Objects/AsyncGeneratorFunction", "AsyncGeneratorFunction")}}</li>
-</ul>
+Control abstractions can help to structure code, especially async code (without using deeply nested callbacks, for example).
 
-<h3 id="Reflection">Reflection</h3>
+- {{JSxRef("Promise")}}
+- {{JSxRef("Generator")}}
+- {{JSxRef("GeneratorFunction")}}
+- {{JSxRef("AsyncFunction")}}
+- {{JSxRef("Global_Objects/AsyncGenerator", "AsyncGenerator")}}
+- {{JSxRef("Global_Objects/AsyncGeneratorFunction", "AsyncGeneratorFunction")}}
 
-<ul>
- <li>{{JSxRef("Reflect")}}</li>
- <li>{{JSxRef("Proxy")}}</li>
-</ul>
+### Reflection
 
-<h3 id="Internationalization">Internationalization</h3>
+- {{JSxRef("Reflect")}}
+- {{JSxRef("Proxy")}}
 
-<p>Additions to the ECMAScript core for language-sensitive functionalities.</p>
+### Internationalization
 
-<div class="twocolumns">
-<ul>
- <li>{{JSxRef("Intl")}}</li>
- <li>{{JSxRef("Global_Objects/Intl/Collator", "Intl.Collator")}}</li>
- <li>{{JSxRef("Global_Objects/Intl/DateTimeFormat", "Intl.DateTimeFormat")}}</li>
- <li>{{JSxRef("Global_Objects/Intl/ListFormat", "Intl.ListFormat")}}</li>
- <li>{{JSxRef("Global_Objects/Intl/NumberFormat", "Intl.NumberFormat")}}</li>
- <li>{{JSxRef("Global_Objects/Intl/PluralRules", "Intl.PluralRules")}}</li>
- <li>{{JSxRef("Global_Objects/Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat")}}</li>
- <li>{{JSxRef("Global_Objects/Intl/Locale", "Intl.Locale")}}</li>
-</ul>
-</div>
+Additions to the ECMAScript core for language-sensitive functionalities.
 
-<h3 id="WebAssembly">WebAssembly</h3>
+- {{JSxRef("Intl")}}
+- {{JSxRef("Global_Objects/Intl/Collator", "Intl.Collator")}}
+- {{JSxRef("Global_Objects/Intl/DateTimeFormat", "Intl.DateTimeFormat")}}
+- {{JSxRef("Global_Objects/Intl/ListFormat", "Intl.ListFormat")}}
+- {{JSxRef("Global_Objects/Intl/NumberFormat", "Intl.NumberFormat")}}
+- {{JSxRef("Global_Objects/Intl/PluralRules", "Intl.PluralRules")}}
+- {{JSxRef("Global_Objects/Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat")}}
+- {{JSxRef("Global_Objects/Intl/Locale", "Intl.Locale")}}
 
-<div class="twocolumns">
-<ul>
- <li>{{JSxRef("WebAssembly")}}</li>
- <li>{{JSxRef("WebAssembly.Module")}}</li>
- <li>{{JSxRef("WebAssembly.Instance")}}</li>
- <li>{{JSxRef("WebAssembly.Memory")}}</li>
- <li>{{JSxRef("WebAssembly.Table")}}</li>
- <li>{{JSxRef("WebAssembly.CompileError")}}</li>
- <li>{{JSxRef("WebAssembly.LinkError")}}</li>
- <li>{{JSxRef("WebAssembly.RuntimeError")}}</li>
-</ul>
-</div>
+### WebAssembly
 
-<h3 id="Other">Other</h3>
+- {{JSxRef("WebAssembly")}}
+- {{JSxRef("WebAssembly.Module")}}
+- {{JSxRef("WebAssembly.Instance")}}
+- {{JSxRef("WebAssembly.Memory")}}
+- {{JSxRef("WebAssembly.Table")}}
+- {{JSxRef("WebAssembly.CompileError")}}
+- {{JSxRef("WebAssembly.LinkError")}}
+- {{JSxRef("WebAssembly.RuntimeError")}}
 
-<ul>
- <li>{{JSxRef("Functions/arguments", "arguments")}}</li>
-</ul>
+### Other
+
+- {{JSxRef("Functions/arguments", "arguments")}}

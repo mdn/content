@@ -12,83 +12,82 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.NumberFormat.formatToParts
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>Intl.Numberformat.prototype.formatToParts()</code></strong> method
-	allows locale-aware formatting of strings produced by <code>NumberFormat</code>
-	formatters.</p>
+The **`Intl.Numberformat.prototype.formatToParts()`** method
+allows locale-aware formatting of strings produced by `NumberFormat`
+formatters.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 formatToParts()
 formatToParts(number)
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-	<dt><code><var>number</var></code> {{optional_inline}}</dt>
-	<dd>A {{jsxref("Number")}} or {{jsxref("BigInt")}} to format.</dd>
-</dl>
+- `number` {{optional_inline}}
+  - : A {{jsxref("Number")}} or {{jsxref("BigInt")}} to format.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An {{jsxref("Array")}} of objects containing the formatted number in parts.</p>
+An {{jsxref("Array")}} of objects containing the formatted number in parts.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The <code>formatToParts()</code> method is useful for custom formatting of number
-	strings. It returns an {{jsxref("Array")}} of objects containing the locale-specific
-	tokens from which it possible to build custom strings while preserving the
-	locale-specific parts. The structure the <code>formatToParts()</code> method returns,
-	looks like this:</p>
+The `formatToParts()` method is useful for custom formatting of number
+strings. It returns an {{jsxref("Array")}} of objects containing the locale-specific
+tokens from which it possible to build custom strings while preserving the
+locale-specific parts. The structure the `formatToParts()` method returns,
+looks like this:
 
-<pre class="brush: js">[
+```js
+[
   { type: "integer", value: "3" },
   { type: "group", value: "." },
   { type: "integer", value: "500" }
-]</pre>
+]
+```
 
-<p>Possible types are the following:</p>
+Possible types are the following:
 
-<dl>
-	<dt>currency</dt>
-	<dd>The currency string, such as the symbols "$" and "€" or the name "Dollar", "Euro"
-		depending on how <code>currencyDisplay</code> is specified.</dd>
-	<dt>decimal</dt>
-	<dd>The decimal separator string (".").</dd>
-	<dt>fraction</dt>
-	<dd>The fraction number.</dd>
-	<dt>group</dt>
-	<dd>The group separator string (",").</dd>
-	<dt>infinity</dt>
-	<dd>The {{jsxref("Infinity")}} string ("∞").</dd>
-	<dt>integer</dt>
-	<dd>The integer number.</dd>
-	<dt>literal</dt>
-	<dd>Any literal strings or whitespace in the formatted number.</dd>
-	<dt>minusSign</dt>
-	<dd>The minus sign string ("-").</dd>
-	<dt>nan</dt>
-	<dd>The {{jsxref("NaN")}} string ("NaN").</dd>
-	<dt>plusSign</dt>
-	<dd>The plus sign string ("+").</dd>
-	<dt>percentSign</dt>
-	<dd>The percent sign string ("%").</dd>
-	<dt>unit</dt>
-	<dd>The unit string, such as the "l" or "litres", depending on how
-		<code>unitDisplay</code> is specified.</dd>
-</dl>
+- currency
+  - : The currency string, such as the symbols "$" and "€" or the name "Dollar", "Euro"
+    depending on how `currencyDisplay` is specified.
+- decimal
+  - : The decimal separator string (".").
+- fraction
+  - : The fraction number.
+- group
+  - : The group separator string (",").
+- infinity
+  - : The {{jsxref("Infinity")}} string ("∞").
+- integer
+  - : The integer number.
+- literal
+  - : Any literal strings or whitespace in the formatted number.
+- minusSign
+  - : The minus sign string ("-").
+- nan
+  - : The {{jsxref("NaN")}} string ("NaN").
+- plusSign
+  - : The plus sign string ("+").
+- percentSign
+  - : The percent sign string ("%").
+- unit
+  - : The unit string, such as the "l" or "litres", depending on how
+    `unitDisplay` is specified.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Comparing_format_and_formatToParts">Comparing format and formatToParts</h3>
+### Comparing format and formatToParts
 
-<p><code>NumberFormat</code> outputs localized, opaque strings that cannot be manipulated
-	directly:</p>
+`NumberFormat` outputs localized, opaque strings that cannot be manipulated
+directly:
 
-<pre class="brush: js">var number = 3500;
+```js
+var number = 3500;
 
 var formatter = new Intl.NumberFormat('de-DE', {
   style: 'currency',
@@ -97,14 +96,15 @@ var formatter = new Intl.NumberFormat('de-DE', {
 
 formatter.format(number);
 // "3.500,00 €"
-</pre>
+```
 
-<p>However, in many User Interfaces there is a desire to customize the formatting of this
-	string. The <code>formatToParts</code> method enables locale-aware formatting of
-	strings produced by <code>NumberFormat</code> formatters by providing you the string
-	in parts:</p>
+However, in many User Interfaces there is a desire to customize the formatting of this
+string. The `formatToParts` method enables locale-aware formatting of
+strings produced by `NumberFormat` formatters by providing you the string
+in parts:
 
-<pre class="brush: js">formatter.formatToParts(number);
+```js
+formatter.formatToParts(number);
 
 // return value:
 [
@@ -116,44 +116,42 @@ formatter.format(number);
   { type: "literal",  value: " "   },
   { type: "currency", value: "€"   }
 ]
-</pre>
+```
 
-<p>Now the information is available separately and it can be formatted and concatenated
-	again in a customized way. For example by using {{jsxref("Array.prototype.map()")}},
-	<a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow
-		functions</a>, a <a
-		href="/en-US/docs/Web/JavaScript/Reference/Statements/switch">switch
-		statement</a>, <a
-		href="/en-US/docs/Web/JavaScript/Reference/Template_literals">template
-		literals</a>, and {{jsxref("Array.prototype.reduce()")}}.</p>
+Now the information is available separately and it can be formatted and concatenated
+again in a customized way. For example by using {{jsxref("Array.prototype.map()")}},
+[arrow
+functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), a [switch
+statement](/en-US/docs/Web/JavaScript/Reference/Statements/switch), [template
+literals](/en-US/docs/Web/JavaScript/Reference/Template_literals), and {{jsxref("Array.prototype.reduce()")}}.
 
-<pre class="brush: js">var numberString = formatter.formatToParts(number).map(({type, value}) =&gt; {
+```js
+var numberString = formatter.formatToParts(number).map(({type, value}) => {
   switch (type) {
-    case 'currency': return `&lt;strong&gt;${value}&lt;/strong&gt;`;
+    case 'currency': return `<strong>${value}</strong>`;
     default : return value;
   }
-}).reduce((string, part) =&gt; string + part);
-</pre>
+}).reduce((string, part) => string + part);
+```
 
-<p>This will make the currency bold, when using the <code>formatToParts()</code> method.
-</p>
+This will make the currency bold, when using the `formatToParts()` method.
 
-<pre class="brush: js">console.log(numberString);
-// "3.500,00 &lt;strong&gt;€&lt;/strong&gt;"</pre>
+```js
+console.log(numberString);
+// "3.500,00 <strong>€</strong>"
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>{{jsxref("Intl.NumberFormat")}}</li>
-	<li>{{jsxref("Intl/NumberFormat/format", "Intl.NumberFormat.prototype.format")}}</li>
-	<li>Formatting dates: {{jsxref("Intl/DateTimeFormat/formatToParts",
-		"Intl.DateTimeFormat.prototype.formatToParts()")}}</li>
-</ul>
+- {{jsxref("Intl.NumberFormat")}}
+- {{jsxref("Intl/NumberFormat/format", "Intl.NumberFormat.prototype.format")}}
+- Formatting dates: {{jsxref("Intl/DateTimeFormat/formatToParts",
+		"Intl.DateTimeFormat.prototype.formatToParts()")}}

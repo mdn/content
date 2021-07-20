@@ -2,85 +2,81 @@
 title: TypedArray.prototype.join()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/join
 tags:
-- ECMAScript 2015
-- JavaScript
-- Method
-- Prototype
-- TypedArray
-- TypedArrays
-- Polyfill
+  - ECMAScript 2015
+  - JavaScript
+  - Method
+  - Prototype
+  - TypedArray
+  - TypedArrays
+  - Polyfill
 browser-compat: javascript.builtins.TypedArray.join
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>join()</code></strong> method joins all elements of an array into a
-  string. This method has the same algorithm as {{jsxref("Array.prototype.join()")}}.
-  <em>TypedArray</em> is one of the <a
-    href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">typed
-    array types</a> here.</p>
+The **`join()`** method joins all elements of an array into a
+string. This method has the same algorithm as {{jsxref("Array.prototype.join()")}}.
+_TypedArray_ is one of the [typed
+array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) here.
 
-<div>{{EmbedInteractiveExample("pages/js/typedarray-join.html")}}</div>
+{{EmbedInteractiveExample("pages/js/typedarray-join.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush: js">
+```js
 join()
 join(separator)
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>separator</var></code> {{optional_inline}}</dt>
-  <dd>Specifies a string to separate each element. The <code><var>separator</var></code>
+- `separator` {{optional_inline}}
+  - : Specifies a string to separate each element. The `separator`
     is converted to a string if necessary. If omitted, the typed array elements are
-    separated with a comma (",").</dd>
-</dl>
+    separated with a comma (",").
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A string with all array elements joined.</p>
+A string with all array elements joined.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_join">Using join()</h3>
+### Using join()
 
-<pre class="brush: js">var uint8 = new Uint8Array([1,2,3]);
+```js
+var uint8 = new Uint8Array([1,2,3]);
 uint8.join();      // '1,2,3'
 uint8.join(' / '); // '1 / 2 / 3'
 uint8.join('');    // '123'
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>Since there is no global object with the name <em>TypedArray</em>, polyfilling must be
-  done on an "as needed" basis.</p>
+Since there is no global object with the name _TypedArray_, polyfilling must be
+done on an "as needed" basis.
 
-<pre class="brush: js">// https://tc39.github.io/ecma262/#sec-%typedarray%.prototype.join
+```js
+// https://tc39.github.io/ecma262/#sec-%typedarray%.prototype.join
 if (!Uint8Array.prototype.join) {
   Object.defineProperty(Uint8Array.prototype, 'join', {
     value: Array.prototype.join
   });
 }
-</pre>
+```
 
-<p>If you need to support truly obsolete JavaScript engines that don't support
-  {{jsxref("Object.defineProperty")}}, it's best not to polyfill
-  <code>Array.prototype</code> methods at all, as you can't make them non-enumerable.</p>
+If you need to support truly obsolete JavaScript engines that don't support
+{{jsxref("Object.defineProperty")}}, it's best not to polyfill
+`Array.prototype` methods at all, as you can't make them non-enumerable.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>A polyfill of <code>TypedArray.prototype.join</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-typed-arrays"><code>core-js</code></a></li>
-  <li>{{jsxref("TypedArray")}}</li>
-  <li>{{jsxref("Array.prototype.join()")}}</li>
-</ul>
+- A polyfill of `TypedArray.prototype.join` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- {{jsxref("TypedArray")}}
+- {{jsxref("Array.prototype.join()")}}

@@ -2,42 +2,41 @@
 title: ReferenceError() constructor
 slug: Web/JavaScript/Reference/Global_Objects/ReferenceError/ReferenceError
 tags:
-- Constructor
-- JavaScript
-- Reference
-- ReferenceError
+  - Constructor
+  - JavaScript
+  - Reference
+  - ReferenceError
 browser-compat: javascript.builtins.ReferenceError.ReferenceError
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>ReferenceError</code></strong> object represents an error when a
-  non-existent variable is referenced.</p>
+The **`ReferenceError`** object represents an error when a
+non-existent variable is referenced.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 new ReferenceError()
 new ReferenceError(message)
 new ReferenceError(message, fileName)
 new ReferenceError(message, fileName, lineNumber)
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>message</var></code> {{optional_inline}}</dt>
-  <dd>Human-readable description of the error.</dd>
-  <dt><code><var>fileName</var></code> {{optional_inline}}</dt>
-  <dd>The name of the file containing the code that caused the exception.</dd>
-  <dt><code><var>lineNumber</var></code> {{optional_inline}}</dt>
-  <dd>The line number of the code that caused the exception</dd>
-</dl>
+- `message` {{optional_inline}}
+  - : Human-readable description of the error.
+- `fileName` {{optional_inline}}
+  - : The name of the file containing the code that caused the exception.
+- `lineNumber` {{optional_inline}}
+  - : The line number of the code that caused the exception
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Catching_a_ReferenceError">Catching a ReferenceError</h3>
+### Catching a ReferenceError
 
-<pre class="brush: js">try {
+```js
+try {
   let a = undefinedVariable
 } catch (e) {
   console.log(e instanceof ReferenceError)  // true
@@ -48,11 +47,12 @@ new ReferenceError(message, fileName, lineNumber)
   console.log(e.columnNumber)               // 6
   console.log(e.stack)                      // "@Scratchpad/2:2:7\n"
 }
-</pre>
+```
 
-<h3 id="Creating_a_ReferenceError">Creating a ReferenceError</h3>
+### Creating a ReferenceError
 
-<pre class="brush: js">try {
+```js
+try {
   throw new ReferenceError('Hello', 'someFile.js', 10)
 } catch (e) {
   console.log(e instanceof ReferenceError)  // true
@@ -63,18 +63,16 @@ new ReferenceError(message, fileName, lineNumber)
   console.log(e.columnNumber)               // 0
   console.log(e.stack)                      // "@Scratchpad/2:2:9\n"
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Error")}}</li>
-</ul>
+- {{jsxref("Error")}}

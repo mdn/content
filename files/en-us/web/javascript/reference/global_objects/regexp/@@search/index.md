@@ -1,75 +1,76 @@
 ---
-title: 'RegExp.prototype[@@search]()'
+title: RegExp.prototype[@@search]()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@search
 tags:
-- JavaScript
-- Method
-- Prototype
-- Reference
-- RegExp
-- Regular Expressions
-- Polyfill
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
+  - RegExp
+  - Regular Expressions
+  - Polyfill
 browser-compat: javascript.builtins.RegExp.@@search
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>[@@search]()</code></strong> method executes a search for a match
-  between a <code>this</code> regular expression and a string.</p>
+The **`[@@search]()`** method executes a search for a match
+between a `this` regular expression and a string.
 
-<div>{{EmbedInteractiveExample("pages/js/regexp-prototype-@@search.html")}}</div>
+{{EmbedInteractiveExample("pages/js/regexp-prototype-@@search.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+regexp[Symbol.search](str)
+```
 
-<pre class="brush: js"><var>regexp</var>[Symbol.search](<var>str</var>)</pre>
+### Parameters
 
-<h3 id="Parameters">Parameters</h3>
+- `str`
+  - : A {{jsxref("String")}} that is a target of the search.
 
-<dl>
-  <dt><code><var>str</var></code></dt>
-  <dd>A {{jsxref("String")}} that is a target of the search.</dd>
-</dl>
+### Return value
 
-<h3 id="Return_value">Return value</h3>
+- integer
+  - : If successful, `[@@search]()` returns the index of the first match of the
+    regular expression inside the string. Otherwise, it returns -1.
 
-<dl>
-  <dt>integer</dt>
-  <dd>If successful, <code>[@@search]()</code> returns the index of the first match of the
-    regular expression inside the string. Otherwise, it returns -1.</dd>
-</dl>
+## Description
 
-<h2 id="Description">Description</h2>
+This method is called internally in {{jsxref("String.prototype.search()")}}. For
+example, the following two examples return the same result.
 
-<p>This method is called internally in {{jsxref("String.prototype.search()")}}. For
-  example, the following two examples return the same result.</p>
+```js
+'abc'.search(/a/);
 
-<pre class="brush: js">'abc'.search(/a/);
+/a/[Symbol.search]('abc');
+```
 
-/a/[Symbol.search]('abc');</pre>
+This method exists for customizing the search behavior in `RegExp`
+subclasses.
 
-<p>This method exists for customizing the search behavior in <code>RegExp</code>
-  subclasses.</p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Direct call
 
-<h3 id="Direct_call">Direct call</h3>
+This method can be used in almost the same way as
+{{jsxref("String.prototype.search()")}}, except the different `this` and the
+different arguments order.
 
-<p>This method can be used in almost the same way as
-  {{jsxref("String.prototype.search()")}}, except the different <code>this</code> and the
-  different arguments order.</p>
-
-<pre class="brush: js">var re = /-/g;
+```js
+var re = /-/g;
 var str = '2016-01-02';
 var result = re[Symbol.search](str);
 console.log(result);  // 4
-</pre>
+```
 
-<h3 id="Using_search_in_subclasses">Using @@search in subclasses</h3>
+### Using @@search in subclasses
 
-<p>Subclass of {{jsxref("RegExp")}} can override <code>[@@search]()</code> method to
-  modify the behavior.</p>
+Subclass of {{jsxref("RegExp")}} can override `[@@search]()` method to
+modify the behavior.
 
-<pre class="brush: js">class MyRegExp extends RegExp {
+```js
+class MyRegExp extends RegExp {
   constructor(str) {
     super(str)
     this.pattern = str;
@@ -83,24 +84,22 @@ var re = new MyRegExp('a+b');
 var str = 'ab a+b';
 var result = str.search(re); // String.prototype.search calls re[@@search].
 console.log(result); // 3
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>A polyfill of <code>RegExp.prototype[@@search]</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-string-and-regexp"><code>core-js</code></a></li>
-  <li>{{jsxref("String.prototype.search()")}}</li>
-  <li>{{jsxref("RegExp.prototype.@@match()", "RegExp.prototype[@@match]()")}}</li>
-  <li>{{jsxref("RegExp.prototype.@@replace()", "RegExp.prototype[@@replace]()")}}</li>
-  <li>{{jsxref("RegExp.prototype.@@split()", "RegExp.prototype[@@split]()")}}</li>
-  <li>{{jsxref("RegExp.prototype.exec()")}}</li>
-  <li>{{jsxref("RegExp.prototype.test()")}}</li>
-</ul>
+- A polyfill of `RegExp.prototype[@@search]` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- {{jsxref("String.prototype.search()")}}
+- {{jsxref("RegExp.prototype.@@match()", "RegExp.prototype[@@match]()")}}
+- {{jsxref("RegExp.prototype.@@replace()", "RegExp.prototype[@@replace]()")}}
+- {{jsxref("RegExp.prototype.@@split()", "RegExp.prototype[@@split]()")}}
+- {{jsxref("RegExp.prototype.exec()")}}
+- {{jsxref("RegExp.prototype.test()")}}

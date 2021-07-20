@@ -9,85 +9,74 @@ tags:
   - Reference
 browser-compat: javascript.operators.bitwise_not
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>The bitwise NOT operator (<code>~</code>) inverts the bits of its operand. Like other bitwise operators, it converts the operand to a 32-bit signed integer</p>
+The bitwise NOT operator (`~`) inverts the bits of its operand. Like other bitwise operators, it converts the operand to a 32-bit signed integer
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-bitwise-not.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-bitwise-not.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">~a</pre>
+```js
+~a
+```
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The operand is converted to a 32-bit signed integer and expressed as a series of bits (zeroes
-  and ones). Numbers with more than 32 bits get their most significant bits discarded. For
-  example, the following integer, with more than 32 bits, will be converted to a 32-bit signed
-  integer:</p>
+The operand is converted to a 32-bit signed integer and expressed as a series of bits (zeroes
+and ones). Numbers with more than 32 bits get their most significant bits discarded. For
+example, the following integer, with more than 32 bits, will be converted to a 32-bit signed
+integer:
 
-<pre class="brush: js">Before: 11100110111110100000000000000110000000000001
-After:              10100000000000000110000000000001</pre>
+```js
+Before: 11100110111110100000000000000110000000000001
+After:              10100000000000000110000000000001
+```
 
-<p>Each bit in the operand is inverted in the result.
-</p>
+Each bit in the operand is inverted in the result.
 
-<p>The truth table for the <code>NOT</code> operation is:</p>
+The truth table for the `NOT` operation is:
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th class="header" scope="col">a</th>
-      <th class="header" scope="col">NOT a</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>0</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>0</td>
-    </tr>
-  </tbody>
-</table>
+| a   | NOT a |
+| --- | ----- |
+| 0   | 1     |
+| 1   | 0     |
 
-<pre class="brush: js"> 9 (base 10) = 00000000000000000000000000001001 (base 2)
+```js
+ 9 (base 10) = 00000000000000000000000000001001 (base 2)
                --------------------------------
 ~9 (base 10) = 11111111111111111111111111110110 (base 2) = -10 (base 10)
-</pre>
+```
 
-<p>The 32-bit signed integer operand is inverted according to
-  <a href="https://en.wikipedia.org/wiki/Two%27s_complement">two's complement</a>. That is, the
-  presence of the most significant bit is used to express negative integers.</p>
+The 32-bit signed integer operand is inverted according to
+[two's complement](https://en.wikipedia.org/wiki/Two%27s_complement). That is, the
+presence of the most significant bit is used to express negative integers.
 
-<p>Bitwise NOTing any number <code>x</code> yields <code>-(x + 1)</code>. For example,
-  <code>~-5</code> yields <code>4</code>.</p>
+Bitwise NOTing any number `x` yields `-(x + 1)`. For example,
+`~-5` yields `4`.
 
-<p>Note that due to using 32-bit representation for numbers both <code>~-1</code> and
-  <code>~4294967295</code> (2^32 - 1) results in <code>0</code>.</p>
+Note that due to using 32-bit representation for numbers both `~-1` and
+`~4294967295` (2^32 - 1) results in `0`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_bitwise_NOT">Using bitwise NOT</h3>
+### Using bitwise NOT
 
-<pre class="brush: js">~0;  // -1
+```js
+~0;  // -1
 ~-1; // 0
 ~1;  // -2
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#bitwise">Bitwise
-      operators in the JS guide</a></li>
-</ul>
+- [Bitwise
+  operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#bitwise)

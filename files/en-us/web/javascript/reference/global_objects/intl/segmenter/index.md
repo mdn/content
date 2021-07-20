@@ -2,29 +2,23 @@
 title: Intl.Segmenter
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter
 ---
-<p>{{JSRef}}</p>
+{{JSRef}}
 
-<p><span class="seoSummary">The <strong><code>Intl.Segmenter</code></strong> object is a constructor for segmenters, objects that enable language sensitive string splitting.</span></p>
+The **`Intl.Segmenter`** object is a constructor for segmenters, objects that enable language sensitive string splitting.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/Segmenter">Intl.Segmenter()</a></code></dt>
- <dd>Creates a new <code>Segmenter</code> object.</dd>
-</dl>
+- [`Intl.Segmenter()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/Segmenter)
+  - : Creates a new `Segmenter` object.
 
-<h2 id="Static_methods">Static methods</h2>
+## Static methods
 
-<dl>
- <dt>{{jsxref("Intl.Segmenter.supportedLocalesOf", "Intl.Segmenter.supportedLocalesOf()")}}</dt>
- <dd>Returns an array containing those of the provided locales that are supported without having to fall back to the runtime's default locale.</dd>
-</dl>
+- {{jsxref("Intl.Segmenter.supportedLocalesOf", "Intl.Segmenter.supportedLocalesOf()")}}
+  - : Returns an array containing those of the provided locales that are supported without having to fall back to the runtime's default locale.
 
-<h2 id="Instance_methods">Instance methods</h2>
+## Instance methods
 
-<dl>
- <dt>{{jsxref("Intl.Segmenter.segment", "Intl.Segmenter.prototype.segment()")}}</dt>
- <dd>Getter function that segments a string according to the locale and granularity of this {{jsxref("Global_Objects/Intl/Segmenter", "Intl.Segmenter")}} object.</dd>
- <dt>{{jsxref("Intl.Segmenter.resolvedOptions", "Intl.Segmenter.prototype.resolvedOptions()")}}</dt>
- <dd>Returns a new object with properties reflecting the locale and granularity options computed during initialization of this {{jsxref("Global_Objects/Intl/Segmenter", "Intl.Segmenter")}} object.</dd>
-</dl>
+- {{jsxref("Intl.Segmenter.segment", "Intl.Segmenter.prototype.segment()")}}
+  - : Getter function that segments a string according to the locale and granularity of this {{jsxref("Global_Objects/Intl/Segmenter", "Intl.Segmenter")}} object.
+- {{jsxref("Intl.Segmenter.resolvedOptions", "Intl.Segmenter.prototype.resolvedOptions()")}}
+  - : Returns a new object with properties reflecting the locale and granularity options computed during initialization of this {{jsxref("Global_Objects/Intl/Segmenter", "Intl.Segmenter")}} object.

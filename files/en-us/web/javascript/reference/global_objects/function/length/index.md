@@ -7,32 +7,30 @@ tags:
   - Property
 browser-compat: javascript.builtins.Function.length
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>length</code></strong> property indicates the number of parameters expected by the function.</p>
+The **`length`** property indicates the number of parameters expected by the function.
 
-<div>{{EmbedInteractiveExample("pages/js/function-length.html")}}</div>
+{{EmbedInteractiveExample("pages/js/function-length.html")}}{{js_property_attributes(0,0,1)}}
 
+## Description
 
-<div>{{js_property_attributes(0,0,1)}}</div>
+`length` is a property of a function object, and indicates how many arguments the function expects, i.e. the number of formal parameters. This number excludes the {{jsxref("Functions/rest_parameters", "rest parameter", "", 1)}} and only includes parameters before the first one with a default value. By contrast, {{jsxref("Functions/arguments/length", "arguments.length")}} is local to a function and provides the number of arguments actually passed to the function.
 
-<h2 id="Description">Description</h2>
+### Data property of the Function constructor
 
-<p><code>length</code> is a property of a function object, and indicates how many arguments the function expects, i.e. the number of formal parameters. This number excludes the {{jsxref("Functions/rest_parameters", "rest parameter", "", 1)}} and only includes parameters before the first one with a default value. By contrast, {{jsxref("Functions/arguments/length", "arguments.length")}} is local to a function and provides the number of arguments actually passed to the function.</p>
+The {{jsxref("Function")}} constructor is itself a {{jsxref("Function")}} object. Its `length` data property has a value of 1. The property attributes are: Writable: `false`, Enumerable: `false`, Configurable: `true`.
 
-<h3 id="Data_property_of_the_Function_constructor">Data property of the Function constructor</h3>
+### Property of the Function prototype object
 
-<p>The {{jsxref("Function")}} constructor is itself a {{jsxref("Function")}} object. Its <code>length</code> data property has a value of 1. The property attributes are: Writable: <code>false</code>, Enumerable: <code>false</code>, Configurable: <code>true</code>.</p>
+The length property of the {{jsxref("Function")}} prototype object has a value of 0.
 
-<h3 id="Property_of_the_Function_prototype_object">Property of the Function prototype object</h3>
+## Examples
 
-<p>The length property of the {{jsxref("Function")}} prototype object has a value of 0.</p>
+### Using function length
 
-<h2 id="Examples">Examples</h2>
-
-<h3 id="Using_function_length">Using function length</h3>
-
-<pre class="brush: js">console.log(Function.length); /* 1 */
+```js
+console.log(Function.length); /* 1 */
 
 console.log((function()        {}).length); /* 0 */
 console.log((function(a)       {}).length); /* 1 */
@@ -43,18 +41,17 @@ console.log((function(...args) {}).length);
 
 console.log((function(a, b = 1, c) {}).length);
 // 1, only parameters before the first one with
-// a default value is counted</pre>
+// a default value is counted
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("Function")}}</li>
-</ul>
+- {{jsxref("Function")}}

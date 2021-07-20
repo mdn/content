@@ -9,54 +9,56 @@ tags:
   - Symbol
 browser-compat: javascript.builtins.Symbol.toString
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>toString()</code></strong> method returns a string representing the specified {{jsxref("Symbol")}} object.</p>
+The **`toString()`** method returns a string representing the specified {{jsxref("Symbol")}} object.
 
-<div>{{EmbedInteractiveExample("pages/js/symbol-prototype-tostring.html")}}</div>
+{{EmbedInteractiveExample("pages/js/symbol-prototype-tostring.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+toString()
+```
 
-<pre class="brush: js">toString()</pre>
+### Return value
 
-<h3 id="Return_value">Return value</h3>
+A string representing the specified {{jsxref("Symbol")}} object.
 
-<p>A string representing the specified {{jsxref("Symbol")}} object.</p>
+## Description
 
-<h2 id="Description">Description</h2>
+The {{jsxref("Symbol")}} object overrides the `toString` method of the {{jsxref("Object")}} object; it does not inherit {{jsxref("Object.prototype.toString()")}}. For `Symbol` objects, the `toString` method returns a string representation of the object.
 
-<p>The {{jsxref("Symbol")}} object overrides the <code>toString</code> method of the {{jsxref("Object")}} object; it does not inherit {{jsxref("Object.prototype.toString()")}}. For <code>Symbol</code> objects, the <code>toString</code> method returns a string representation of the object.</p>
+### No string concatenation
 
-<h3 id="No_string_concatenation">No string concatenation</h3>
+While you can call `toString()` on Symbols, you cannot use string concatenation with them:
 
-<p>While you can call <code>toString()</code> on Symbols, you cannot use string concatenation with them:</p>
+```js
+Symbol('foo') + 'bar'        // TypeError: Can't convert symbol to string
+```
 
-<pre class="brush: js">Symbol('foo') + 'bar'        // TypeError: Can't convert symbol to string</pre>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Using toString()
 
-<h3 id="Using_toString">Using toString()</h3>
-
-<pre class="brush: js">Symbol('desc').toString()    // "Symbol(desc)"
+```js
+Symbol('desc').toString()    // "Symbol(desc)"
 
 // well-known symbols
 Symbol.iterator.toString()   // "Symbol(Symbol.iterator)
 
 // global symbols
 Symbol.for('foo').toString() // "Symbol(foo)"
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("Object.prototype.toString()")}}</li>
-</ul>
+- {{jsxref("Object.prototype.toString()")}}

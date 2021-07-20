@@ -2,57 +2,56 @@
 title: Math.trunc()
 slug: Web/JavaScript/Reference/Global_Objects/Math/trunc
 tags:
-- ECMAScript 2015
-- JavaScript
-- Math
-- Method
-- Reference
-- Polyfill
+  - ECMAScript 2015
+  - JavaScript
+  - Math
+  - Method
+  - Reference
+  - Polyfill
 browser-compat: javascript.builtins.Math.trunc
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>Math.trunc()</code></strong> function returns the integer part of a
-  number by removing any fractional digits.</p>
+The **`Math.trunc()`** function returns the integer part of a
+number by removing any fractional digits.
 
-<div>{{EmbedInteractiveExample("pages/js/math-trunc.html")}}</div>
+{{EmbedInteractiveExample("pages/js/math-trunc.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+Math.trunc(x)
+```
 
-<pre class="brush: js">Math.trunc(<var>x</var>)
-</pre>
+### Parameters
 
-<h3 id="Parameters">Parameters</h3>
+- `x`
+  - : A number.
 
-<dl>
-  <dt><code><var>x</var></code></dt>
-  <dd>A number.</dd>
-</dl>
+### Return value
 
-<h3 id="Return_value">Return value</h3>
+The integer part of the given number.
 
-<p>The integer part of the given number.</p>
+## Description
 
-<h2 id="Description">Description</h2>
+Unlike the other three `Math` methods: {{jsxref("Math.floor()")}},
+{{jsxref("Math.ceil()")}} and {{jsxref("Math.round()")}}, the way
+`Math.trunc()` works is very simple. It *truncates* (cuts off) the dot
+and the digits to the right of it, no matter whether the argument is a positive or
+negative number.
 
-<p>Unlike the other three <code>Math</code> methods: {{jsxref("Math.floor()")}},
-  {{jsxref("Math.ceil()")}} and {{jsxref("Math.round()")}}, the way
-  <code>Math.trunc()</code> works is very simple. It <em>truncates</em> (cuts off) the dot
-  and the digits to the right of it, no matter whether the argument is a positive or
-  negative number.</p>
+The argument passed to this method will be converted to number type implicitly.
 
-<p>The argument passed to this method will be converted to number type implicitly.</p>
+Because `trunc()` is a static method of `Math`, you always use it
+as `Math.trunc()`, rather than as a method of a `Math` object you
+created (`Math` is not a constructor).
 
-<p>Because <code>trunc()</code> is a static method of <code>Math</code>, you always use it
-  as <code>Math.trunc()</code>, rather than as a method of a <code>Math</code> object you
-  created (<code>Math</code> is not a constructor).</p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Using Math.trunc()
 
-<h3 id="Using_Math.trunc">Using Math.trunc()</h3>
-
-<pre class="brush: js">Math.trunc(13.37);    // 13
+```js
+Math.trunc(13.37);    // 13
 Math.trunc(42.84);    // 42
 Math.trunc(0.123);    //  0
 Math.trunc(-0.123);   // -0
@@ -60,25 +59,23 @@ Math.trunc('-1.123'); // -1
 Math.trunc(NaN);      // NaN
 Math.trunc('foo');    // NaN
 Math.trunc();         // NaN
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>A polyfill of <code>Math.trunc</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-math"><code>core-js</code></a></li>
-  <li><a href="https://github.com/behnammodi/polyfill/blob/master/math.polyfill.js">A
-    polyfill</a></li>
-  <li>{{jsxref("Math.abs()")}}</li>
-  <li>{{jsxref("Math.ceil()")}}</li>
-  <li>{{jsxref("Math.floor()")}}</li>
-  <li>{{jsxref("Math.round()")}}</li>
-  <li>{{jsxref("Math.sign()")}}</li>
-</ul>
+- A polyfill of `Math.trunc` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-math)
+- [A
+  polyfill](https://github.com/behnammodi/polyfill/blob/master/math.polyfill.js)
+- {{jsxref("Math.abs()")}}
+- {{jsxref("Math.ceil()")}}
+- {{jsxref("Math.floor()")}}
+- {{jsxref("Math.round()")}}
+- {{jsxref("Math.sign()")}}

@@ -9,22 +9,20 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Symbol.search
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>Symbol.search</code></strong> well-known symbol specifies the method that returns the index within a string that matches the regular expression. This function is called by the {{jsxref("String.prototype.search()")}} method.</p>
+The **`Symbol.search`** well-known symbol specifies the method that returns the index within a string that matches the regular expression. This function is called by the {{jsxref("String.prototype.search()")}} method.
 
-<p>For more information, see {{jsxref("RegExp.@@search", "RegExp.prototype[@@search]()")}} and {{jsxref("String.prototype.search()")}}.</p>
+For more information, see {{jsxref("RegExp.@@search", "RegExp.prototype[@@search]()")}} and {{jsxref("String.prototype.search()")}}.
 
-<div>{{EmbedInteractiveExample("pages/js/symbol-search.html")}}</div>
+{{EmbedInteractiveExample("pages/js/symbol-search.html")}}{{js_property_attributes(0,0,0)}}
 
+## Examples
 
-<div>{{js_property_attributes(0,0,0)}}</div>
+### Custom string search
 
-<h2 id="Examples">Examples</h2>
-
-<h3 id="Custom_string_search">Custom string search</h3>
-
-<pre class="brush: js">class caseInsensitiveSearch {
+```js
+class caseInsensitiveSearch {
   constructor(value) {
     this.value = value.toLowerCase();
   }
@@ -34,22 +32,21 @@ browser-compat: javascript.builtins.Symbol.search
 }
 
 console.log('foobar'.search(new caseInsensitiveSearch('BaR')));
-// expected output: 3</pre>
+// expected output: 3
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>A polyfill of <code>Symbol.search</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-symbol"><code>core-js</code></a></li>
- <li>{{jsxref("Symbol.match")}}</li>
- <li>{{jsxref("Symbol.replace")}}</li>
- <li>{{jsxref("Symbol.split")}}</li>
- <li>{{jsxref("RegExp.@@search", "RegExp.prototype[@@search]()")}}</li>
-</ul>
+- A polyfill of `Symbol.search` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-symbol)
+- {{jsxref("Symbol.match")}}
+- {{jsxref("Symbol.replace")}}
+- {{jsxref("Symbol.split")}}
+- {{jsxref("RegExp.@@search", "RegExp.prototype[@@search]()")}}

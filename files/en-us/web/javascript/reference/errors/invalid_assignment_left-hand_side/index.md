@@ -7,35 +7,35 @@ tags:
   - JavaScript
   - ReferenceError
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<p>The JavaScript exception "invalid assignment left-hand side" occurs when there was an
-  unexpected assignment somewhere. For example, a single "<code>=</code>" sign was used
-  instead of "<code>==</code>" or "<code>===</code>".</p>
+The JavaScript exception "invalid assignment left-hand side" occurs when there was an
+unexpected assignment somewhere. For example, a single "`=`" sign was used
+instead of "`==`" or "`===`".
 
-<h2 id="Message">Message</h2>
+## Message
 
-<pre class="brush: js">ReferenceError: invalid assignment left-hand side
-</pre>
+```js
+ReferenceError: invalid assignment left-hand side
+```
 
-<h2 id="Error_type">Error type</h2>
+## Error type
 
-<p>{{jsxref("ReferenceError")}}.</p>
+{{jsxref("ReferenceError")}}.
 
-<h2 id="What_went_wrong">What went wrong?</h2>
+## What went wrong?
 
-<p>There was an unexpected assignment somewhere. This might be due to a mismatch of a <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators#assignment_operators">assignment
-    operator</a> and an <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators#equality_operators">equality
-    operator</a>, for example. While a single "<code>=</code>" sign assigns a value to a
-  variable, the "<code>==</code>" or "<code>===</code>" operators compare a value.</p>
+There was an unexpected assignment somewhere. This might be due to a mismatch of a [assignment
+operator](/en-US/docs/Web/JavaScript/Reference/Operators#assignment_operators) and an [equality
+operator](/en-US/docs/Web/JavaScript/Reference/Operators#equality_operators), for example. While a single "`=`" sign assigns a value to a
+variable, the "`==`" or "`===`" operators compare a value.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Typical_invalid_assignments">Typical invalid assignments</h3>
+### Typical invalid assignments
 
-<pre class="brush: js example-bad">if (Math.PI = 3 || Math.PI = 4) {
+```js example-bad
+if (Math.PI = 3 || Math.PI = 4) {
   console.log('no way!');
 }
 // ReferenceError: invalid assignment left-hand side
@@ -44,27 +44,24 @@ var str = 'Hello, '
 += 'is it me '
 += 'you\'re looking for?';
 // ReferenceError: invalid assignment left-hand side
-</pre>
+```
 
-<p>In the <code>if</code> statement, you want to use an equality operator ("=="), and for
-  the string concatenation, the plus ("+") operator is needed.</p>
+In the `if` statement, you want to use an equality operator ("=="), and for
+the string concatenation, the plus ("+") operator is needed.
 
-<pre class="brush: js example-good">if (Math.PI == 3 || Math.PI == 4) {
+```js example-good
+if (Math.PI == 3 || Math.PI == 4) {
   console.log('no way!');
 }
 
 var str = 'Hello, '
 + 'from the '
 + 'other side!';
-</pre>
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a
-      href="/en-US/docs/Web/JavaScript/Reference/Operators#assignment_operators">Assignment
-      operators</a></li>
-  <li><a
-      href="/en-US/docs/Web/JavaScript/Reference/Operators#equality_operators">Equality
-      operators</a></li>
-</ul>
+- [Assignment
+  operators](/en-US/docs/Web/JavaScript/Reference/Operators#assignment_operators)
+- [Equality
+  operators](/en-US/docs/Web/JavaScript/Reference/Operators#equality_operators)

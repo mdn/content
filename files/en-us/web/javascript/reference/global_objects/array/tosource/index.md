@@ -2,70 +2,70 @@
 title: Array.prototype.toSource()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toSource
 tags:
-- Array
-- JavaScript
-- Method
-- Non-standard
-- Prototype
-- Reference
+  - Array
+  - JavaScript
+  - Method
+  - Non-standard
+  - Prototype
+  - Reference
 browser-compat: javascript.builtins.Array.toSource
 ---
-<div>{{JSRef}} {{deprecated_header}}</div>
+{{JSRef}} {{deprecated_header}}
 
-<p>The <code><strong>toSource()</strong></code> method returns a string representing the
-  source code of the array.</p>
+The **`toSource()`** method returns a string representing the
+source code of the array.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">toSource()</pre>
+```js
+toSource()
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A string representing the source code of the array.</p>
+A string representing the source code of the array.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The <code>toSource</code> method returns the following values:</p>
+The `toSource` method returns the following values:
 
-<ul>
-  <li>For the built-in {{jsxref("Array")}} object, <code>toSource</code> returns the
-    following string indicating that the source code is not available:
+- For the built-in {{jsxref("Array")}} object, `toSource` returns the
+  following string indicating that the source code is not available:
 
-    <pre class="brush: js">function Array() {
-    [native code]
-}
-</pre>
-  </li>
-  <li>For instances of {{jsxref("Array")}}, <code>toSource</code> returns a string
-    representing the source code.</li>
-</ul>
+  ```js
+    function Array() {
+        [native code]
+    }
+    ```
 
-<p>This method is usually called internally by JavaScript and not explicitly in code. You
-  can call <code>toSource</code> while debugging to examine the contents of an array.</p>
+- For instances of {{jsxref("Array")}}, `toSource` returns a string
+  representing the source code.
 
-<h2 id="Examples">Examples</h2>
+This method is usually called internally by JavaScript and not explicitly in code. You
+can call `toSource` while debugging to examine the contents of an array.
 
-<h3 id="Examining_the_source_code_of_an_array">Examining the source code of an array</h3>
+## Examples
 
-<p>To examine the source code of an array:</p>
+### Examining the source code of an array
 
-<pre class="brush: js">var alpha = new Array('a', 'b', 'c');
+To examine the source code of an array:
+
+```js
+var alpha = new Array('a', 'b', 'c');
 
 alpha.toSource();
 //returns ['a', 'b', 'c']
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any standard. Implemented in JavaScript 1.3.</p>
+Not part of any standard. Implemented in JavaScript 1.3.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Object.prototype.toSource()")}}</li>
-  <li>{{jsxref("Array.prototype.toString()")}}</li>
-</ul>
+- {{jsxref("Object.prototype.toSource()")}}
+- {{jsxref("Array.prototype.toString()")}}

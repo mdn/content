@@ -2,85 +2,83 @@
 title: Decrement (--)
 slug: Web/JavaScript/Reference/Operators/Decrement
 tags:
-- Decrement
-- JavaScript
-- Language feature
-- Operator
+  - Decrement
+  - JavaScript
+  - Language feature
+  - Operator
 browser-compat: javascript.operators.decrement
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>The decrement operator (<code>--</code>) decrements (subtracts one from) its operand
-  and returns a value.</p>
+The decrement operator (`--`) decrements (subtracts one from) its operand
+and returns a value.
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-decrement.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-decrement.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 x--
 --x
-</pre>
+```
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>If used postfix, with operator after operand (for example,
-  <code><var>x</var>--</code>), the decrement operator decrements and returns the value
-  before decrementing.</p>
+If used postfix, with operator after operand (for example,
+`x--`), the decrement operator decrements and returns the value
+before decrementing.
 
-<p>If used prefix, with operator before operand (for example,
-  <code>--<var>x</var></code>), the decrement operator decrements and returns the value
-  after decrementing.</p>
+If used prefix, with operator before operand (for example,
+`--x`), the decrement operator decrements and returns the value
+after decrementing.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Postfix_decrement">Postfix decrement</h3>
+### Postfix decrement
 
-<pre class="brush: js">let x = 3;
+```js
+let x = 3;
 y = x--;
 
 // y = 3
 // x = 2
-</pre>
+```
 
-<h3 id="Prefix_decrement">Prefix decrement</h3>
+### Prefix decrement
 
-<pre class="brush: js">let a = 2;
+```js
+let a = 2;
 b = --a;
 
 // a = 1
 // b = 1
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Addition">Addition
-      operator</a></li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction">Subtraction
-      operator</a></li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Division">Division
-      operator</a></li>
-  <li><a
-      href="/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication">Multiplication
-      operator</a></li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Remainder">Remainder
-      operator</a></li>
-  <li><a
-      href="/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation">Exponentiation
-      operator</a></li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Increment">Increment
-      operator</a></li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Unary_negation">Unary
-      negation operator</a></li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus">Unary plus
-      operator</a></li>
-</ul>
+- [Addition
+  operator](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)
+- [Subtraction
+  operator](/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction)
+- [Division
+  operator](/en-US/docs/Web/JavaScript/Reference/Operators/Division)
+- [Multiplication
+  operator](/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication)
+- [Remainder
+  operator](/en-US/docs/Web/JavaScript/Reference/Operators/Remainder)
+- [Exponentiation
+  operator](/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation)
+- [Increment
+  operator](/en-US/docs/Web/JavaScript/Reference/Operators/Increment)
+- [Unary
+  negation operator](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_negation)
+- [Unary plus
+  operator](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus)

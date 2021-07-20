@@ -2,29 +2,28 @@
 title: TypedArray.prototype.some()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/some
 tags:
-- ECMAScript 2015
-- JavaScript
-- Method
-- Prototype
-- TypedArray
-- TypedArrays
-- Polyfill
+  - ECMAScript 2015
+  - JavaScript
+  - Method
+  - Prototype
+  - TypedArray
+  - TypedArrays
+  - Polyfill
 browser-compat: javascript.builtins.TypedArray.some
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <code><strong>some()</strong></code> method tests whether some element in the typed
-  array passes the test implemented by the provided function. This method has the same
-  algorithm as {{jsxref("Array.prototype.some()")}}<em>.</em> <em>TypedArray</em> is one
-  of the <a
-    href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">typed
-    array types</a> here.</p>
+The **`some()`** method tests whether some element in the typed
+array passes the test implemented by the provided function. This method has the same
+algorithm as {{jsxref("Array.prototype.some()")}}_._ _TypedArray_ is one
+of the [typed
+array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) here.
 
-<div>{{EmbedInteractiveExample("pages/js/typedarray-some.html")}}</div>
+{{EmbedInteractiveExample("pages/js/typedarray-some.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 // Arrow function
 some((element) => { ... } )
 some((element, index) => { ... } )
@@ -39,107 +38,101 @@ some(function callbackFn(element) { ... })
 some(function callbackFn(element, index) { ... })
 some(function callbackFn(element, index, array){ ... })
 some(function callbackFn(element, index, array) { ... }, thisArg)
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>callbackFn</code></dt>
-  <dd>Function to test for each element, taking three arguments:
-    <dl>
-      <dt><code>element</code></dt>
-      <dd>The current element being processed in the typed array.</dd>
-      <dt><code>index</code></dt>
-      <dd>The index of the current element being processed in the typed array.</dd>
-      <dt><code>array</code></dt>
-      <dd>The typed array <code>some</code> was called upon.</dd>
-    </dl>
-  </dd>
-  <dt><code>thisArg</code></dt>
-  <dd>Optional. Value to use as <code>this</code> when executing <code>callback</code>.
-  </dd>
-</dl>
+- `callbackFn`
 
-<h3 id="Return_value">Return value</h3>
+  - : Function to test for each element, taking three arguments:
 
-<p><code><strong>true</strong></code> if the callback function returns a <a
-    href="/en-US/docs/Glossary/truthy">truthy</a> value for any array element; otherwise,
-  <code><strong>false</strong></code>.</p>
+    - `element`
+      - : The current element being processed in the typed array.
+    - `index`
+      - : The index of the current element being processed in the typed array.
+    - `array`
+      - : The typed array `some` was called upon.
 
-<h2 id="Description">Description</h2>
+- `thisArg`
+  - : Optional. Value to use as `this` when executing `callback`.
 
-<p>The <code>some</code> method executes the <code>callbackFn</code> function once for each
-  element present in the typed array until it finds one where <code>callbackFn</code>
-  returns a true value. If such an element is found, <code>some</code> immediately returns
-  <code>true</code>. Otherwise, <code>some</code> returns <code>false</code>.</p>
+### Return value
 
-<p><code>callbackFn</code> is invoked with three arguments: the value of the element, the
-  index of the element, and the array object being traversed.</p>
+**`true`** if the callback function returns a [truthy](/en-US/docs/Glossary/truthy) value for any array element; otherwise,
+**`false`**.
 
-<p>If a <code>thisArg</code> parameter is provided to <code>some</code>, it will be passed
-  to <code>callbackFn</code> when invoked, for use as its <code>this</code> value.
-  Otherwise, the value <code>undefined</code> will be passed for use as its
-  <code>this</code> value.  The <code>this</code> value ultimately observable by
-  <code>callbackFn</code> is determined according to <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/this">the usual rules for
-    determining the <code>this</code> seen by a function</a>.</p>
+## Description
 
-<p><code>some</code> does not mutate the typed array on which it is called.</p>
+The `some` method executes the `callbackFn` function once for each
+element present in the typed array until it finds one where `callbackFn`
+returns a true value. If such an element is found, `some` immediately returns
+`true`. Otherwise, `some` returns `false`.
 
-<h2 id="Polyfill">Polyfill</h2>
+`callbackFn` is invoked with three arguments: the value of the element, the
+index of the element, and the array object being traversed.
 
-<p>Since there is no global object with the name <em>TypedArray</em>, polyfilling must be
-  done on an "as needed" basis.</p>
+If a `thisArg` parameter is provided to `some`, it will be passed
+to `callbackFn` when invoked, for use as its `this` value.
+Otherwise, the value `undefined` will be passed for use as its
+`this` value.  The `this` value ultimately observable by
+`callbackFn` is determined according to [the usual rules for
+determining the `this` seen by a function](/en-US/docs/Web/JavaScript/Reference/Operators/this).
 
-<pre class="brush: js">// https://tc39.github.io/ecma262/#sec-%typedarray%.prototype.some
+`some` does not mutate the typed array on which it is called.
+
+## Polyfill
+
+Since there is no global object with the name _TypedArray_, polyfilling must be
+done on an "as needed" basis.
+
+```js
+// https://tc39.github.io/ecma262/#sec-%typedarray%.prototype.some
 if (!Uint8Array.prototype.some) {
   Object.defineProperty(Uint8Array.prototype, 'some', {
     value: Array.prototype.some
   });
 }
-</pre>
+```
 
-<p>If you need to support truly obsolete JavaScript engines that don't support
-  <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty</a></code>,
-  it's best not to polyfill <code>Array.prototype</code> methods at all, as you can't make
-  them non-enumerable.</p>
+If you need to support truly obsolete JavaScript engines that don't support
+[`Object.defineProperty`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty),
+it's best not to polyfill `Array.prototype` methods at all, as you can't make
+them non-enumerable.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Testing_size_of_all_typed_array_elements">Testing size of all typed array elements
-</h3>
+### Testing size of all typed array elements
 
-<p>The following example tests whether any element in the typed array is bigger than 10.
-</p>
+The following example tests whether any element in the typed array is bigger than 10.
 
-<pre class="brush: js">function isBiggerThan10(element, index, array) {
-  return element &gt; 10;
+```js
+function isBiggerThan10(element, index, array) {
+  return element > 10;
 }
 new Uint8Array([2, 5, 8, 1, 4]).some(isBiggerThan10); // false
 new Uint8Array([12, 5, 8, 1, 4]).some(isBiggerThan10); // true
-</pre>
+```
 
-<h3 id="Testing_typed_array_elements_using_arrow_functions">Testing typed array elements
-  using arrow functions</h3>
+### Testing typed array elements using arrow functions
 
-<p><a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">Arrow
-    functions</a> provide a shorter syntax for the same test.</p>
+[Arrow
+functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) provide a shorter syntax for the same test.
 
-<pre class="brush: js">new Uint8Array([2, 5, 8, 1, 4]).some(elem =&gt; elem &gt; 10); // false
-new Uint8Array([12, 5, 8, 1, 4]).some(elem =&gt; elem &gt; 10); // true</pre>
+```js
+new Uint8Array([2, 5, 8, 1, 4]).some(elem => elem > 10); // false
+new Uint8Array([12, 5, 8, 1, 4]).some(elem => elem > 10); // true
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>A polyfill of <code>TypedArray.prototype.some</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-typed-arrays"><code>core-js</code></a></li>
-  <li>{{jsxref("TypedArray.prototype.every()")}}</li>
-  <li>{{jsxref("Array.prototype.some()")}}</li>
-</ul>
+- A polyfill of `TypedArray.prototype.some` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- {{jsxref("TypedArray.prototype.every()")}}
+- {{jsxref("Array.prototype.some()")}}

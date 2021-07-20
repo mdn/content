@@ -2,56 +2,57 @@
 title: String.prototype.toUpperCase()
 slug: Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 tags:
-- JavaScript
-- Method
-- Prototype
-- Reference
-- String
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
+  - String
 browser-compat: javascript.builtins.String.toUpperCase
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>toUpperCase()</code></strong> method returns the calling string value
-  converted to uppercase (the value will be converted to a string if it isn't one).</p>
+The **`toUpperCase()`** method returns the calling string value
+converted to uppercase (the value will be converted to a string if it isn't one).
 
-<div>{{EmbedInteractiveExample("pages/js/string-touppercase.html","shorter")}}</div>
+{{EmbedInteractiveExample("pages/js/string-touppercase.html","shorter")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">toUpperCase()</pre>
+```js
+toUpperCase()
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A new string representing the calling string converted to upper case.</p>
+A new string representing the calling string converted to upper case.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt>{{jsxref("TypeError")}}</dt>
-  <dd>When called on {{jsxref("null")}} or {{jsxref("undefined")}}, for example,
-    <code>String.prototype.toUpperCase.call(undefined)</code>.</dd>
-</dl>
+- {{jsxref("TypeError")}}
+  - : When called on {{jsxref("null")}} or {{jsxref("undefined")}}, for example,
+    `String.prototype.toUpperCase.call(undefined)`.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The <code>toUpperCase()</code> method returns the value of the string converted to
-  uppercase. This method does not affect the value of the string itself since JavaScript
-  strings are immutable.</p>
+The `toUpperCase()` method returns the value of the string converted to
+uppercase. This method does not affect the value of the string itself since JavaScript
+strings are immutable.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Basic_usage">Basic usage</h3>
+### Basic usage
 
-<pre class="brush: js">console.log('alphabet'.toUpperCase()); // 'ALPHABET'
-</pre>
+```js
+console.log('alphabet'.toUpperCase()); // 'ALPHABET'
+```
 
-<h3 id="Conversion_of_non-string_this_values_to_strings">Conversion of non-string
-  <code>this</code> values to strings</h3>
+### Conversion of non-string `this` values to strings
 
-<p>This method will convert any non-string value to a string, when you set its
-  <code>this</code> to a value that is not a string:</p>
+This method will convert any non-string value to a string, when you set its
+`this` to a value that is not a string:
 
-<pre class="brush: js">const a = String.prototype.toUpperCase.call({
+```js
+const a = String.prototype.toUpperCase.call({
   toString: function toString() {
     return 'abcdef';
   }
@@ -61,20 +62,18 @@ const b = String.prototype.toUpperCase.call(true);
 
 // prints out 'ABCDEF TRUE'.
 console.log(a, b);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("String.prototype.toLocaleLowerCase()")}}</li>
-  <li>{{jsxref("String.prototype.toLocaleUpperCase()")}}</li>
-  <li>{{jsxref("String.prototype.toLowerCase()")}}</li>
-</ul>
+- {{jsxref("String.prototype.toLocaleLowerCase()")}}
+- {{jsxref("String.prototype.toLocaleUpperCase()")}}
+- {{jsxref("String.prototype.toLowerCase()")}}

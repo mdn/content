@@ -2,20 +2,20 @@
 title: Array() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Array/Array
 tags:
-- Array
-- Constructor
-- JavaScript
-- Reference
+  - Array
+  - Constructor
+  - JavaScript
+  - Reference
 browser-compat: javascript.builtins.Array.Array
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>Array()</code></strong> constructor is used to create
-  {{jsxref("Array")}} objects.</p>
+The **`Array()`** constructor is used to create
+{{jsxref("Array")}} objects.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 // literal constructor
 [element0, element1, ..., elementN]
 
@@ -23,75 +23,72 @@ browser-compat: javascript.builtins.Array.Array
 new Array(element0, element1, ..., elementN)
 
 // construct from array length
-new Array(arrayLength)</pre>
+new Array(arrayLength)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>element<em>N</em></code></dt>
-  <dd>A JavaScript array is initialized with the given elements, except in the case where
-    a single argument is passed to the <code>Array</code> constructor and that argument is
+- `elementN`
+  - : A JavaScript array is initialized with the given elements, except in the case where
+    a single argument is passed to the `Array` constructor and that argument is
     a number (see the arrayLength parameter below). Note that this special case only
-    applies to JavaScript arrays created with the <code>Array</code> constructor, not
-    array literals created with the bracket syntax.</dd>
-  <dt><code>arrayLength</code></dt>
-  <dd>If the only argument passed to the <code>Array</code> constructor is an integer
+    applies to JavaScript arrays created with the `Array` constructor, not
+    array literals created with the bracket syntax.
+- `arrayLength`
+  - : If the only argument passed to the `Array` constructor is an integer
     between 0 and 2^32 - 1 (inclusive), this returns a new JavaScript array with
-    its <code>length</code> property set to that number (<strong>Note:</strong> this
-    implies an array of <code>arrayLength</code> empty slots, not slots with actual
-    <code>undefined</code> values). If the argument is any other number, a
-    {{jsxref("RangeError")}} exception is thrown.</dd>
-</dl>
+    its `length` property set to that number (**Note:** this
+    implies an array of `arrayLength` empty slots, not slots with actual
+    `undefined` values). If the argument is any other number, a
+    {{jsxref("RangeError")}} exception is thrown.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Array_literal_notation">Array literal notation</h3>
+### Array literal notation
 
-<p>Arrays can be created using the <a
-    href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Array_literals">literal</a>
-  notation:</p>
+Arrays can be created using the [literal](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Array_literals)
+notation:
 
-<pre class="brush: js">let fruits = ['Apple', 'Banana'];
+```js
+let fruits = ['Apple', 'Banana'];
 
 console.log(fruits.length); // 2
 console.log(fruits[0]);     // "Apple"
-</pre>
+```
 
-<h3 id="Array_constructor_with_a_single_parameter">Array constructor with a single
-  parameter</h3>
+### Array constructor with a single parameter
 
-<p>Arrays can be created using a constructor with a single number parameter. An array with
-  its <code>length</code> property set to that number and the array elements are empty
-  slots.</p>
+Arrays can be created using a constructor with a single number parameter. An array with
+its `length` property set to that number and the array elements are empty
+slots.
 
-<pre class="brush: js">let fruits = new Array(2);
+```js
+let fruits = new Array(2);
 
 console.log(fruits.length); // 2
 console.log(fruits[0]);     // undefined
-</pre>
+```
 
-<h3 id="Array_constructor_with_multiple_parameters">Array constructor with multiple
-  parameters</h3>
+### Array constructor with multiple parameters
 
-<p>If more than one argument is passed to the constructor, a new {{jsxref("Array")}} with
-  the given elements is created.</p>
+If more than one argument is passed to the constructor, a new {{jsxref("Array")}} with
+the given elements is created.
 
-<pre class="brush: js">let fruits = new Array('Apple', 'Banana');
+```js
+let fruits = new Array('Apple', 'Banana');
 
 console.log(fruits.length); // 2
 console.log(fruits[0]);     // "Apple"
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Array")}} class</li>
-</ul>
+- {{jsxref("Array")}} class

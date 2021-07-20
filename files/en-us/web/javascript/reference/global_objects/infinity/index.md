@@ -7,49 +7,47 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Infinity
 ---
-<div>{{jsSidebar("Objects")}}</div>
+{{jsSidebar("Objects")}}
 
-<p>The global property <code><strong>Infinity</strong></code> is a numeric value representing infinity.</p>
+The global property **`Infinity`** is a numeric value representing infinity.
 
-<p>{{js_property_attributes(0,0,0)}}</p>
+{{js_property_attributes(0,0,0)}}
 
-<div>{{EmbedInteractiveExample("pages/js/globalprops-infinity.html")}}</div>
+{{EmbedInteractiveExample("pages/js/globalprops-infinity.html")}}
 
+## Description
 
-<h2 id="Description">Description</h2>
+`Infinity` is a property of the _global object_. In other words, it is a variable in global scope.
 
-<p><code>Infinity</code> is a property of the <em>global object</em>. In other words, it is a variable in global scope.</p>
+The initial value of `Infinity` is {{jsxref("Number.POSITIVE_INFINITY")}}. The value `Infinity` (positive infinity) is greater than any other number.
 
-<p>The initial value of <code>Infinity</code> is {{jsxref("Number.POSITIVE_INFINITY")}}. The value <code>Infinity</code> (positive infinity) is greater than any other number.</p>
+This value behaves slightly differently than mathematical infinity; see {{jsxref("Number.POSITIVE_INFINITY")}} for details.
 
-<p>This value behaves slightly differently than mathematical infinity; see {{jsxref("Number.POSITIVE_INFINITY")}} for details.</p>
+As defined by the ECMAScript 5 specification, `Infinity` is read-only (implemented in JavaScript 1.8.5 / Firefox 4).
 
-<p>As defined by the ECMAScript 5 specification, <code>Infinity</code> is read-only (implemented in JavaScript 1.8.5 / Firefox 4).</p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Using Infinity
 
-<h3 id="Using_Infinity">Using Infinity</h3>
-
-<pre class="brush: js">console.log(Infinity          ); /* Infinity */
+```js
+console.log(Infinity          ); /* Infinity */
 console.log(Infinity + 1      ); /* Infinity */
 console.log(Math.pow(10, 1000)); /* Infinity */
 console.log(Math.log(0)       ); /* -Infinity */
 console.log(1 / Infinity      ); /* 0 */
 console.log(1 / 0             ); /* Infinity */
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("Number.NEGATIVE_INFINITY")}}</li>
- <li>{{jsxref("Number.POSITIVE_INFINITY")}}</li>
- <li>{{jsxref("Number.isFinite")}}</li>
-</ul>
+- {{jsxref("Number.NEGATIVE_INFINITY")}}
+- {{jsxref("Number.POSITIVE_INFINITY")}}
+- {{jsxref("Number.isFinite")}}

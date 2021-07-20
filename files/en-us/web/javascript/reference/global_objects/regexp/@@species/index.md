@@ -1,5 +1,5 @@
 ---
-title: 'get RegExp[@@species]'
+title: get RegExp[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@species
 tags:
   - JavaScript
@@ -10,45 +10,46 @@ tags:
   - Regular Expressions
 browser-compat: javascript.builtins.RegExp.@@species
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>RegExp[@@species]</code></strong> accessor property returns the <code>RegExp</code> constructor.</p>
+The **`RegExp[@@species]`** accessor property returns the `RegExp` constructor.
 
-<div>{{EmbedInteractiveExample("pages/js/regexp-getregexp-@@species.html")}}</div>
+{{EmbedInteractiveExample("pages/js/regexp-getregexp-@@species.html")}}
 
+## Description
 
-<h2 id="Description">Description</h2>
+The `species` accessor property returns the default constructor for `RegExp` objects. Subclass constructors may over-ride it to change the constructor assignment.
 
-<p>The <code>species</code> accessor property returns the default constructor for <code>RegExp</code> objects. Subclass constructors may over-ride it to change the constructor assignment.</p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Species in ordinary objects
 
-<h3 id="Species_in_ordinary_objects">Species in ordinary objects</h3>
+The `species` property returns the default constructor function, which is the `RegExp` constructor for `RegExp` objects:
 
-<p>The <code>species</code> property returns the default constructor function, which is the <code>RegExp</code> constructor for <code>RegExp</code> objects:</p>
+```js
+RegExp[Symbol.species]; // function RegExp()
+```
 
-<pre class="brush: js">RegExp[Symbol.species]; // function RegExp()</pre>
+### Species in derived objects
 
-<h3 id="Species_in_derived_objects">Species in derived objects</h3>
+In a derived collection object (e.g. your custom regexp `MyRegExp`), the `MyRegExp` species is the `MyRegExp` constructor. However, you might want to overwrite this, in order to return parent `RegExp` objects in your derived class methods:
 
-<p>In a derived collection object (e.g. your custom regexp <code>MyRegExp</code>), the <code>MyRegExp</code> species is the <code>MyRegExp</code> constructor. However, you might want to overwrite this, in order to return parent <code>RegExp</code> objects in your derived class methods:</p>
-
-<pre class="brush: js">class MyRegExp extends RegExp {
+```js
+class MyRegExp extends RegExp {
   // Overwrite MyRegExp species to the parent RegExp constructor
   static get [Symbol.species]() { return RegExp; }
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("RegExp")}}</li>
- <li>{{jsxref("Symbol.species")}}</li>
-</ul>
+- {{jsxref("RegExp")}}
+- {{jsxref("Symbol.species")}}

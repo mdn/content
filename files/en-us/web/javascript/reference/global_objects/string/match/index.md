@@ -2,102 +2,94 @@
 title: String.prototype.match()
 slug: Web/JavaScript/Reference/Global_Objects/String/match
 tags:
-- JavaScript
-- Method
-- Prototype
-- Reference
-- Regular Expressions
-- String
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
+  - Regular Expressions
+  - String
 browser-compat: javascript.builtins.String.match
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>match()</code></strong> method retrieves the result of matching a
-  <em>string</em> against a <a
-    href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">regular expression</a>.
-</p>
+The **`match()`** method retrieves the result of matching a
+_string_ against a [regular expression](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions).
 
-<div>{{EmbedInteractiveExample("pages/js/string-match.html", "shorter")}}</div>
+{{EmbedInteractiveExample("pages/js/string-match.html", "shorter")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+match(regexp)
+```
 
-<pre class="brush: js">match(regexp)</pre>
+### Parameters
 
-<h3 id="Parameters">Parameters</h3>
+- `regexp`
 
-<dl>
-  <dt><code><var>regexp</var></code></dt>
-  <dd>
-    <p>A regular expression object.</p>
-    <p>If <code><var>regexp</var></code> is a non-<code>RegExp</code> object, it is
+  - : A regular expression object.
+
+    If `regexp` is a non-`RegExp` object, it is
     implicitly converted to a {{jsxref("RegExp")}} by using
-    <code>new RegExp(<var>regexp</var>)</code>.</p>
-    <p>If you don't give any parameter and use the <code>match()</code> method directly,
-    you will get an {{jsxref("Array")}} with an empty string: <code>[""]</code>.</p>
-  </dd>
-</dl>
+    `new RegExp(regexp)`.
 
-<h3 id="Return_value">Return value</h3>
+    If you don't give any parameter and use the `match()` method directly,
+    you will get an {{jsxref("Array")}} with an empty string: `[""]`.
 
-<p>An {{jsxref("Array")}} whose contents depend on the presence or absence of the global
-  (<code>g</code>) flag, or {{jsxref("null")}} if no matches are found.</p>
+### Return value
 
-<ul>
-  <li>If the <code>g</code> flag is used, all results matching the complete regular
-    expression will be returned, but capturing groups will not.</li>
-  <li>if the <code>g</code> flag is not used, only the first complete match and its
-    related capturing groups are returned. In this case, the returned item will have
-    additional properties as described below.</li>
-</ul>
+An {{jsxref("Array")}} whose contents depend on the presence or absence of the global
+(`g`) flag, or {{jsxref("null")}} if no matches are found.
 
-<h4 id="Additional_properties">Additional properties</h4>
+- If the `g` flag is used, all results matching the complete regular
+  expression will be returned, but capturing groups will not.
+- if the `g` flag is not used, only the first complete match and its
+  related capturing groups are returned. In this case, the returned item will have
+  additional properties as described below.
 
-<p>As explained above, some results contain additional properties as described below.</p>
+#### Additional properties
 
-<dl>
-  <dt><code>groups</code></dt>
-  <dd>An object of named capturing groups whose keys are the names and values are the
+As explained above, some results contain additional properties as described below.
+
+- `groups`
+  - : An object of named capturing groups whose keys are the names and values are the
     capturing groups or {{jsxref("undefined")}} if no named capturing groups were defined.
-    See <a
-      href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges">Groups
-      and Ranges</a> for more information.</dd>
-  <dt><code>index</code></dt>
-  <dd>The index of the search at which the result was found.</dd>
-  <dt><code>input</code></dt>
-  <dd>A copy of the search string.</dd>
-</dl>
+    See [Groups
+    and Ranges](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges) for more information.
+- `index`
+  - : The index of the search at which the result was found.
+- `input`
+  - : A copy of the search string.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>If the regular expression does not include the <code>g</code> flag,
-  <code>str.match()</code> will return the same result as
-  {{jsxref("RegExp.prototype.exec()", "RegExp.exec()")}}.</p>
+If the regular expression does not include the `g` flag,
+`str.match()` will return the same result as
+{{jsxref("RegExp.prototype.exec()", "RegExp.exec()")}}.
 
-<h3 id="Other_methods">Other methods</h3>
+### Other methods
 
-<ul>
-  <li>If you need to know if a string matches a regular expression {{jsxref("RegExp")}},
-    use {{jsxref("RegExp.prototype.test()", "RegExp.test()")}}.</li>
-  <li>If you only want the first match found, you might want to use
-    {{jsxref("RegExp.prototype.exec()", "RegExp.exec()")}} instead.</li>
-  <li>If you want to obtain capture groups and the global flag is set, you need to use
-    {{jsxref("RegExp.prototype.exec()", "RegExp.exec()")}} or
-    {{jsxref("String.prototype.matchAll()")}} instead.</li>
-</ul>
+- If you need to know if a string matches a regular expression {{jsxref("RegExp")}},
+  use {{jsxref("RegExp.prototype.test()", "RegExp.test()")}}.
+- If you only want the first match found, you might want to use
+  {{jsxref("RegExp.prototype.exec()", "RegExp.exec()")}} instead.
+- If you want to obtain capture groups and the global flag is set, you need to use
+  {{jsxref("RegExp.prototype.exec()", "RegExp.exec()")}} or
+  {{jsxref("String.prototype.matchAll()")}} instead.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_match">Using match()</h3>
+### Using match()
 
-<p>In the following example, <code>match()</code> is used to find '<code>Chapter</code>'
-  followed by 1 or more numeric characters followed by a decimal point and numeric
-  character 0 or more times.</p>
+In the following example, `match()` is used to find '`Chapter`'
+followed by 1 or more numeric characters followed by a decimal point and numeric
+character 0 or more times.
 
-<p>The regular expression includes the <code>i</code> flag so that upper/lower case
-  differences will be ignored.</p>
+The regular expression includes the `i` flag so that upper/lower case
+differences will be ignored.
 
-<pre class="brush: js">const str = 'For more information, see Chapter 3.4.5.1';
+```js
+const str = 'For more information, see Chapter 3.4.5.1';
 const re = /see (chapter \d+(\.\d)*)/i;
 const found = str.match(re);
 
@@ -113,58 +105,59 @@ console.log(found);
 // 'Chapter 3.4.5.1' was captured by '(chapter \d+(\.\d)*)'.
 // '.1' was the last value captured by '(\.\d)'.
 // The 'index' property (22) is the zero-based index of the whole match.
-// The 'input' property is the original string that was parsed.</pre>
+// The 'input' property is the original string that was parsed.
+```
 
-<h3 id="Using_global_and_ignore_case_flags_with_match">Using global and ignore case flags
-  with match()</h3>
+### Using global and ignore case flags with match()
 
-<p>The following example demonstrates the use of the global and ignore case flags with
-  <code>match()</code>. All letters <code>A</code> through <code>E</code> and
-  <code>a</code> through <code>e</code> are returned, each its own element in the array.
-</p>
+The following example demonstrates the use of the global and ignore case flags with
+`match()`. All letters `A` through `E` and
+`a` through `e` are returned, each its own element in the array.
 
-<pre class="brush: js">const str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+```js
+const str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
 const regexp = /[A-E]/gi;
 const matches_array = str.match(regexp);
 
 console.log(matches_array);
 // ['A', 'B', 'C', 'D', 'E', 'a', 'b', 'c', 'd', 'e']
-</pre>
+```
 
-<div class="notecard note">
-  <p><strong>Note:</strong> See also {{jsxref("String.prototype.matchAll()")}} and <a
-      href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#Advanced_searching_with_flags">Advanced
-      searching with flags</a>.</p>
-</div>
+> **Note:** See also {{jsxref("String.prototype.matchAll()")}} and [Advanced
+> searching with flags](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#Advanced_searching_with_flags).
 
-<h3 id="Using_named_capturing_groups">Using named capturing groups</h3>
+### Using named capturing groups
 
-<p>In browsers which support named capturing groups, the following code captures
-  "<code>fox</code>" or "<code>cat</code>" into a group named "<code>animal</code>":</p>
+In browsers which support named capturing groups, the following code captures
+"`fox`" or "`cat`" into a group named "`animal`":
 
-<pre class="brush: js">const paragraph = 'The quick brown fox jumps over the lazy dog. It barked.';
+```js
+const paragraph = 'The quick brown fox jumps over the lazy dog. It barked.';
 
-const capturingRegex = /(?&lt;animal&gt;fox|cat) jumps over/;
+const capturingRegex = /(?<animal>fox|cat) jumps over/;
 const found = paragraph.match(capturingRegex);
 console.log(found.groups); // {animal: "fox"}
-</pre>
+```
 
-<h3 id="Using_match_with_no_parameter">Using match() with no parameter</h3>
+### Using match() with no parameter
 
-<pre class="brush: js">const str = "Nothing will come of nothing.";
+```js
+const str = "Nothing will come of nothing.";
 
-str.match();   // returns [""]</pre>
+str.match();   // returns [""]
+```
 
-<h3 id="A_non-RegExp_object_as_the_parameter">A non-RegExp object as the parameter</h3>
+### A non-RegExp object as the parameter
 
-<p>When the <code><var>regexp</var></code> parameter is a string or a number, it is
-  implicitly converted to a {{jsxref("RegExp")}} by using
-  <code>new RegExp(<var>regexp</var>)</code>.</p>
+When the `regexp` parameter is a string or a number, it is
+implicitly converted to a {{jsxref("RegExp")}} by using
+`new RegExp(regexp)`.
 
-<p>If it is a positive number with a positive sign, <code>RegExp()</code> will ignore the
-  positive sign.</p>
+If it is a positive number with a positive sign, `RegExp()` will ignore the
+positive sign.
 
-<pre class="brush: js">const str1 = "NaN means not a number. Infinity contains -Infinity and +Infinity in JavaScript.",
+```js
+const str1 = "NaN means not a number. Infinity contains -Infinity and +Infinity in JavaScript.",
     str2 = "My grandfather is 65 years old and My grandmother is 63 years old.",
     str3 = "The contract was declared null and void.";
 str1.match("number");   // "number" is a string. returns ["number"]
@@ -174,21 +167,20 @@ str1.match(+Infinity);  // returns ["Infinity"]
 str1.match(-Infinity);  // returns ["-Infinity"]
 str2.match(65);         // returns ["65"]
 str2.match(+65);        // A number with a positive sign. returns ["65"]
-str3.match(null);       // returns ["null"]</pre>
+str3.match(null);       // returns ["null"]
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("String.prototype.matchAll()")}}</li>
-  <li>{{jsxref("RegExp")}}</li>
-  <li>{{jsxref("RegExp.prototype.exec()")}}</li>
-  <li>{{jsxref("RegExp.prototype.test()")}}</li>
-</ul>
+- {{jsxref("String.prototype.matchAll()")}}
+- {{jsxref("RegExp")}}
+- {{jsxref("RegExp.prototype.exec()")}}
+- {{jsxref("RegExp.prototype.test()")}}

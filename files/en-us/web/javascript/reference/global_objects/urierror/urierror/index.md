@@ -2,42 +2,41 @@
 title: URIError() constructor
 slug: Web/JavaScript/Reference/Global_Objects/URIError/URIError
 tags:
-- Constructor
-- JavaScript
-- Reference
-- URIError
+  - Constructor
+  - JavaScript
+  - Reference
+  - URIError
 browser-compat: javascript.builtins.URIError.URIError
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>URIError()</code></strong> constructor creates an error when a global
-  URI handling function was used in a wrong way.</p>
+The **`URIError()`** constructor creates an error when a global
+URI handling function was used in a wrong way.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 new URIError()
 new URIError(message)
 new URIError(message, fileName)
 new URIError(message, fileName, lineNumber)
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>message</var></code> {{optional_inline}}</dt>
-  <dd>Human-readable description of the error.</dd>
-  <dt><code><var>fileName</var></code> {{optional_inline}}</dt>
-  <dd>The name of the file containing the code that caused the exception.</dd>
-  <dt><code><var>lineNumber</var></code> {{optional_inline}}</dt>
-  <dd>The line number of the code that caused the exception.</dd>
-</dl>
+- `message` {{optional_inline}}
+  - : Human-readable description of the error.
+- `fileName` {{optional_inline}}
+  - : The name of the file containing the code that caused the exception.
+- `lineNumber` {{optional_inline}}
+  - : The line number of the code that caused the exception.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Catching_an_URIError">Catching an URIError</h3>
+### Catching an URIError
 
-<pre class="brush: js">try {
+```js
+try {
   decodeURIComponent('%')
 } catch (e) {
   console.log(e instanceof URIError)  // true
@@ -48,11 +47,12 @@ new URIError(message, fileName, lineNumber)
   console.log(e.columnNumber)         // 2
   console.log(e.stack)                // "@Scratchpad/2:2:3\n"
 }
-</pre>
+```
 
-<h3 id="Creating_an_URIError">Creating an URIError</h3>
+### Creating an URIError
 
-<pre class="brush: js">try {
+```js
+try {
   throw new URIError('Hello', 'someFile.js', 10)
 } catch (e) {
   console.log(e instanceof URIError)  // true
@@ -63,22 +63,20 @@ new URIError(message, fileName, lineNumber)
   console.log(e.columnNumber)         // 0
   console.log(e.stack)                // "@Scratchpad/2:2:9\n"
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Error")}}</li>
-  <li>{{jsxref("Global_Objects/decodeURI", "decodeURI()")}}</li>
-  <li>{{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}</li>
-  <li>{{jsxref("Global_Objects/encodeURI", "encodeURI()")}}</li>
-  <li>{{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}</li>
-</ul>
+- {{jsxref("Error")}}
+- {{jsxref("Global_Objects/decodeURI", "decodeURI()")}}
+- {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}
+- {{jsxref("Global_Objects/encodeURI", "encodeURI()")}}
+- {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}

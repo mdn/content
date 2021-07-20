@@ -2,79 +2,75 @@
 title: handler.ownKeys()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/ownKeys
 tags:
-- ECMAScript 2015
-- JavaScript
-- Method
-- Proxy
+  - ECMAScript 2015
+  - JavaScript
+  - Method
+  - Proxy
 browser-compat: javascript.builtins.Proxy.handler.ownKeys
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>handler.ownKeys()</code></strong> method is a trap for
-  {{jsxref("Reflect.ownKeys()")}}.</p>
+The **`handler.ownKeys()`** method is a trap for
+{{jsxref("Reflect.ownKeys()")}}.
 
-<div>{{EmbedInteractiveExample("pages/js/proxyhandler-ownkeys.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/proxyhandler-ownkeys.html", "taller")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">const <var>p</var> = new Proxy(<var>target</var>, {
-  ownKeys: function(<var>target</var>) {
+```js
+const p = new Proxy(target, {
+  ownKeys: function(target) {
   }
 });
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>The following parameter is passed to the <code>ownKeys()</code> method.
-  <code>this</code> is bound to the handler.</p>
+The following parameter is passed to the `ownKeys()` method.
+`this` is bound to the handler.
 
-<dl>
-  <dt><code><var>target</var></code></dt>
-  <dd>The target object.</dd>
-</dl>
+- `target`
+  - : The target object.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>The <code>ownKeys()</code> method must return an enumerable object.</p>
+The `ownKeys()` method must return an enumerable object.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The <code><strong>handler.ownKeys()</strong></code> method is a trap for
-  {{jsxref("Reflect.ownKeys()")}}.</p>
+The **`handler.ownKeys()`** method is a trap for
+{{jsxref("Reflect.ownKeys()")}}.
 
-<h3 id="Interceptions">Interceptions</h3>
+### Interceptions
 
-<p>This trap can intercept these operations:</p>
+This trap can intercept these operations:
 
-<ul>
-  <li>{{jsxref("Object.getOwnPropertyNames()")}}</li>
-  <li>{{jsxref("Object.getOwnPropertySymbols()")}}</li>
-  <li>{{jsxref("Object.keys()")}}</li>
-  <li>{{jsxref("Reflect.ownKeys()")}}</li>
-</ul>
+- {{jsxref("Object.getOwnPropertyNames()")}}
+- {{jsxref("Object.getOwnPropertySymbols()")}}
+- {{jsxref("Object.keys()")}}
+- {{jsxref("Reflect.ownKeys()")}}
 
-<h3 id="Invariants">Invariants</h3>
+### Invariants
 
-<p>If the following invariants are violated, the proxy will throw a
-  {{jsxref("TypeError")}}:</p>
+If the following invariants are violated, the proxy will throw a
+{{jsxref("TypeError")}}:
 
-<ul>
-  <li>The result of <code>ownKeys()</code> must be an array.</li>
-  <li>The type of each array element is either a {{jsxref("String")}} or a
-    {{jsxref("Symbol")}}.</li>
-  <li>The result List must contain the keys of all non-configurable own properties of the
-    target object.</li>
-  <li>If the target object is not extensible, then the result List must contain all the
-    keys of the own properties of the target object and no other values.</li>
-</ul>
+- The result of `ownKeys()` must be an array.
+- The type of each array element is either a {{jsxref("String")}} or a
+  {{jsxref("Symbol")}}.
+- The result List must contain the keys of all non-configurable own properties of the
+  target object.
+- If the target object is not extensible, then the result List must contain all the
+  keys of the own properties of the target object and no other values.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Trapping_of_getOwnPropertyNames">Trapping of getOwnPropertyNames</h3>
+### Trapping of getOwnPropertyNames
 
-<p>The following code traps {{jsxref("Object.getOwnPropertyNames()")}}.</p>
+The following code traps {{jsxref("Object.getOwnPropertyNames()")}}.
 
-<pre class="brush: js">const p = new Proxy({}, {
+```js
+const p = new Proxy({}, {
   ownKeys: function(target) {
     console.log('called');
     return ['a', 'b', 'c'];
@@ -82,11 +78,13 @@ browser-compat: javascript.builtins.Proxy.handler.ownKeys
 });
 
 console.log(Object.getOwnPropertyNames(p)); // "called"
-                                            // [ 'a', 'b', 'c' ]</pre>
+                                            // [ 'a', 'b', 'c' ]
+```
 
-<p>The following code violates an invariant.</p>
+The following code violates an invariant.
 
-<pre class="brush: js example-bad">const obj = {};
+```js example-bad
+const obj = {};
 Object.defineProperty(obj, 'a', {
   configurable: false,
   enumerable: true,
@@ -103,21 +101,19 @@ console.log(Object.getOwnPropertyNames(p));
 
 // TypeError: proxy [[OwnPropertyKeys]] must return an array
 // with only string and symbol elements
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Proxy")}}</li>
-  <li>{{jsxref("Proxy.handler", "handler")}}</li>
-  <li>{{jsxref("Object.getOwnPropertyNames()")}}</li>
-  <li>{{jsxref("Reflect.ownKeys()")}}</li>
-</ul>
+- {{jsxref("Proxy")}}
+- {{jsxref("Proxy.handler", "handler")}}
+- {{jsxref("Object.getOwnPropertyNames()")}}
+- {{jsxref("Reflect.ownKeys()")}}

@@ -2,28 +2,31 @@
 title: WeakMap.prototype.clear()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/clear
 tags:
-- JavaScript
-- Method
-- Deprecated
-- Prototype
-- WeakMap
+  - JavaScript
+  - Method
+  - Deprecated
+  - Prototype
+  - WeakMap
 browser-compat: javascript.builtins.WeakMap.clear
 ---
-<div>{{JSRef}} {{deprecated_header}}</div>
+{{JSRef}} {{deprecated_header}}
 
-<p>The <code><strong>clear()</strong></code> method used to remove all elements from a
-  <code>WeakMap</code> object, but is no longer part of ECMAScript and its
-  implementations.</p>
+The **`clear()`** method used to remove all elements from a
+`WeakMap` object, but is no longer part of ECMAScript and its
+implementations.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">clear()</pre>
+```js
+clear()
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_the_clear_method">Using the <code>clear</code> method</h3>
+### Using the `clear` method
 
-<pre class="brush: js; example-bad">var wm = new WeakMap();
+```js example-bad
+var wm = new WeakMap();
 var obj = {};
 
 wm.set(obj, 'foo');
@@ -36,18 +39,16 @@ wm.clear();
 
 wm.has(obj)  // false
 wm.has(window)  // false
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p><span class="pl-s">Not part of any standard.</span></p>
+Not part of any standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("WeakMap")}}</li>
-</ul>
+- {{jsxref("WeakMap")}}

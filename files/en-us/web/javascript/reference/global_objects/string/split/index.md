@@ -10,120 +10,110 @@ tags:
   - String
 browser-compat: javascript.builtins.String.split
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><span class="seoSummary">The <strong><code>split()</code></strong> method divides a
-    {{jsxref("String")}} into an ordered list of substrings, puts these substrings into an
-    array, and returns the array.  The division is done by searching for a pattern; where
-    the pattern is provided as the first parameter in the method's call.  </span></p>
+The **`split()`** method divides a
+{{jsxref("String")}} into an ordered list of substrings, puts these substrings into an
+array, and returns the array.  The division is done by searching for a pattern; where
+the pattern is provided as the first parameter in the method's call.
 
-<div>{{EmbedInteractiveExample("pages/js/string-split.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/string-split.html", "taller")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush: js">
+```js
 split()
 split(separator)
 split(separator, limit)
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>separator</var></code> {{optional_inline}}</dt>
-  <dd>
-    <p>The pattern describing where each split should occur.
-       The <code><var>separator</var></code> can be a simple string or it can be a
-      {{jsxref("Global_Objects/RegExp", "regular expression", "", 1)}}.</p>
+- `separator` {{optional_inline}}
 
-    <ul>
-      <li>The simplest case is when <code><var>separator</var></code> is just a single
-        character; this is used to split a delimited string.  For example, a string
-        containing tab separated values (TSV) could be parsed by passing a tab character
-        as the separator, like this: <code>myString.split("\t")</code>.</li>
-      <li>If <code><var>separator</var></code> contains multiple characters, that entire
-        character sequence must be found in order to split.</li>
-      <li>If <code><var>separator</var></code> is omitted or does not occur in
-        <code><var>str</var></code>, the returned array contains one element consisting of
-        the entire string.</li>
-      <li>If <code><var>separator</var></code> appears at the beginning (or end) of the
-        string, it still has the effect of splitting.  The result is an empty (i.e. zero
-        length) string, which appears at the first (or last) position of the returned
-        array.</li>
-      <li>If <code><var>separator</var></code> is an empty string (<code>""</code>),
-        <code><var>str</var></code> is converted to an array of each of its UTF-16
-        "characters".</li>
-    </ul>
+  - : The pattern describing where each split should occur.
+     The `separator` can be a simple string or it can be a
+    {{jsxref("Global_Objects/RegExp", "regular expression", "", 1)}}.
 
-    <div class="notecard warning">
-      <p><strong>Warning:</strong> When the empty string (<code>""</code>) is used as a
-        separator, the string is <strong>not</strong> split by <em>user-perceived
-          characters</em> (<a
-          href="https://unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries">grapheme
-          clusters</a>) or unicode characters (codepoints), but by UTF-16 codeunits. This
-        destroys <a href="https://unicode.org/faq/utf_bom.html#utf16-2">surrogate
-          pairs</a>. See <a href="https://stackoverflow.com/a/34717402">“How do you get a
-          string to a character array in JavaScript?” on StackOverflow</a>.</p>
-    </div>
-  </dd>
-  <dt><code><var>limit</var></code> {{optional_inline}}</dt>
-  <dd>
-    <p>A non-negative integer specifying a limit on the number of substrings to be
-      included in the array. If provided, splits the string at each occurrence of the
-      specified <code><var>separator</var></code>, but stops when
-      <code><var>limit</var></code> entries have been placed in the array. Any leftover
-      text is not included in the array at all.</p>
+    - The simplest case is when `separator` is just a single
+      character; this is used to split a delimited string.  For example, a string
+      containing tab separated values (TSV) could be parsed by passing a tab character
+      as the separator, like this: `myString.split("\t")`.
+    - If `separator` contains multiple characters, that entire
+      character sequence must be found in order to split.
+    - If `separator` is omitted or does not occur in
+      `str`, the returned array contains one element consisting of
+      the entire string.
+    - If `separator` appears at the beginning (or end) of the
+      string, it still has the effect of splitting.  The result is an empty (i.e. zero
+      length) string, which appears at the first (or last) position of the returned
+      array.
+    - If `separator` is an empty string (`""`),
+      `str` is converted to an array of each of its UTF-16
+      "characters".
 
-    <ul>
-      <li>The array may contain fewer entries than <code>limit</code> if the end of the
-        string is reached before the limit is reached.</li>
-      <li>If <code><var>limit</var></code> is <code>0</code>, <code>[]</code> is returned.
-      </li>
-    </ul>
-  </dd>
-</dl>
+    > **Warning:** When the empty string (`""`) is used as a
+    > separator, the string is **not** split by _user-perceived
+    > characters_ ([grapheme
+    > clusters](https://unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries)) or unicode characters (codepoints), but by UTF-16 codeunits. This
+    > destroys [surrogate
+    > pairs](https://unicode.org/faq/utf_bom.html#utf16-2). See [“How do you get a
+    > string to a character array in JavaScript?” on StackOverflow](https://stackoverflow.com/a/34717402).
 
-<h3 id="Return_value">Return value</h3>
+- `limit` {{optional_inline}}
 
-<p>An {{jsxref("Array")}} of strings, split at each point where the
-  <code><var>separator</var></code> occurs in the given string.</p>
+  - : A non-negative integer specifying a limit on the number of substrings to be
+    included in the array. If provided, splits the string at each occurrence of the
+    specified `separator`, but stops when
+    `limit` entries have been placed in the array. Any leftover
+    text is not included in the array at all.
 
-<h2 id="Description">Description</h2>
+    - The array may contain fewer entries than `limit` if the end of the
+      string is reached before the limit is reached.
+    - If `limit` is `0`, `[]` is returned.
 
-<p>When found, <code><var>separator</var></code> is removed from the string, and the
-  substrings are returned in an array.</p>
+### Return value
 
-<p>If <code><var>separator</var></code> is a regular expression with capturing
-  parentheses, then each time <code><var>separator</var></code> matches, the results
-  (including any <code>undefined</code> results) of the capturing parentheses are spliced
-  into the output array.</p>
+An {{jsxref("Array")}} of strings, split at each point where the
+`separator` occurs in the given string.
 
-<p>If the separator is an array, then that Array is coerced to a String and used as a
-  separator.</p>
+## Description
 
-<h2 id="Examples">Examples</h2>
+When found, `separator` is removed from the string, and the
+substrings are returned in an array.
 
-<h3 id="Using_split">Using <code>split()</code></h3>
+If `separator` is a regular expression with capturing
+parentheses, then each time `separator` matches, the results
+(including any `undefined` results) of the capturing parentheses are spliced
+into the output array.
 
-<p>When the string is empty, <code>split()</code> returns an array containing one empty
-  string, rather than an empty array. If the string and separator are both empty
-  strings, an empty array is returned.</p>
+If the separator is an array, then that Array is coerced to a String and used as a
+separator.
 
-<pre class="brush: js">const myString = ''
+## Examples
+
+### Using `split()`
+
+When the string is empty, `split()` returns an array containing one empty
+string, rather than an empty array. If the string and separator are both empty
+strings, an empty array is returned.
+
+```js
+const myString = ''
 const splits = myString.split()
 
 console.log(splits)
 
 // ↪ [""]
-</pre>
+```
 
-<p>The following example defines a function that splits a string into an array of strings
-  using <code><var>separator</var></code>. After splitting the string, the function logs
-  messages indicating the original string (before the split), the separator used, the
-  number of elements in the array, and the individual array elements.</p>
+The following example defines a function that splits a string into an array of strings
+using `separator`. After splitting the string, the function logs
+messages indicating the original string (before the split), the separator used, the
+number of elements in the array, and the individual array elements.
 
-<pre class="brush: js">function splitString(stringToSplit, separator) {
+```js
+function splitString(stringToSplit, separator) {
   const arrayOfStrings = stringToSplit.split(separator)
 
   console.log('The original string is: ', stringToSplit)
@@ -140,11 +130,12 @@ const comma = ','
 splitString(tempestString, space)
 splitString(tempestString)
 splitString(monthString, comma)
-</pre>
+```
 
-<p>This example produces the following output:</p>
+This example produces the following output:
 
-<pre class="brush: plain">The original string is: "Oh brave new world that has such people in it."
+```plain
+The original string is: "Oh brave new world that has such people in it."
 The separator is: " "
 The array has 10 elements: Oh / brave / new / world / that / has / such / people / in / it.
 
@@ -155,16 +146,17 @@ The array has 1 elements: Oh brave new world that has such people in it.
 The original string is: "Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec"
 The separator is: ","
 The array has 12 elements: Jan / Feb / Mar / Apr / May / Jun / Jul / Aug / Sep / Oct / Nov / Dec
-</pre>
+```
 
-<h3 id="Removing_spaces_from_a_string">Removing spaces from a string</h3>
+### Removing spaces from a string
 
-<p>In the following example, <code>split()</code> looks for zero or more spaces, followed
-  by a semicolon, followed by zero or more spaces—and, when found, removes the spaces and
-  the semicolon from the string. <code>nameList</code> is the array returned as a result
-  of <code>split()</code>.</p>
+In the following example, `split()` looks for zero or more spaces, followed
+by a semicolon, followed by zero or more spaces—and, when found, removes the spaces and
+the semicolon from the string. `nameList` is the array returned as a result
+of `split()`.
 
-<pre class="brush: js">const names = 'Harry Trump ;Fred Barney; Helen Rigby ; Bill Abel ;Chris Hand '
+```js
+const names = 'Harry Trump ;Fred Barney; Helen Rigby ; Bill Abel ;Chris Hand '
 
 console.log(names)
 
@@ -172,96 +164,93 @@ const re = /\s*(?:;|$)\s*/
 const nameList = names.split(re)
 
 console.log(nameList)
-</pre>
+```
 
-<p>This logs two lines; the first line logs the original string, and the second line logs
-  the resulting array.</p>
+This logs two lines; the first line logs the original string, and the second line logs
+the resulting array.
 
-<pre class="brush: plain">Harry Trump ;Fred Barney; Helen Rigby ; Bill Abel ;Chris Hand
+```plain
+Harry Trump ;Fred Barney; Helen Rigby ; Bill Abel ;Chris Hand
 [ "Harry Trump", "Fred Barney", "Helen Rigby", "Bill Abel", "Chris Hand", "" ]
-</pre>
+```
 
-<h3 id="Returning_a_limited_number_of_splits">Returning a limited number of splits</h3>
+### Returning a limited number of splits
 
-<p>In the following example, <code>split()</code> looks for spaces in a string and returns
-  the first 3 splits that it finds.</p>
+In the following example, `split()` looks for spaces in a string and returns
+the first 3 splits that it finds.
 
-<pre class="brush: js">const myString = 'Hello World. How are you doing?'
+```js
+const myString = 'Hello World. How are you doing?'
 const splits = myString.split(' ', 3)
 
 console.log(splits)
-</pre>
+```
 
-<p>This script displays the following:</p>
+This script displays the following:
 
-<pre class="brush: js">["Hello", "World.", "How"]
-</pre>
+```js
+["Hello", "World.", "How"]
+```
 
-<h3 id="Splitting_with_a_RegExp_to_include_parts_of_the_separator_in_the_result">Splitting
-  with a <code>RegExp</code> to include parts of the separator in the result</h3>
+### Splitting with a `RegExp` to include parts of the separator in the result
 
-<p>If <code><var>separator</var></code> is a regular expression that contains capturing
-  parentheses <code>(</code><code>)</code>, matched results are included in the array.</p>
+If `separator` is a regular expression that contains capturing
+parentheses ` (``) `, matched results are included in the array.
 
-<pre class="brush: js">const myString = 'Hello 1 word. Sentence number 2.'
+```js
+const myString = 'Hello 1 word. Sentence number 2.'
 const splits = myString.split(/(\d)/)
 
 console.log(splits)
-</pre>
+```
 
-<p>This script displays the following:</p>
+This script displays the following:
 
-<pre class="brush: js">[ "Hello ", "1", " word. Sentence number ", "2", "." ]
-</pre>
+```js
+[ "Hello ", "1", " word. Sentence number ", "2", "." ]
+```
 
-<div class="notecard note">
-  <p><strong>Note:</strong> <code>\d</code> matches the <a
-      href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes">character
-      class</a> for digits between 0 and 9.</p>
-</div>
+> **Note:** `\d` matches the [character
+> class](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes) for digits between 0 and 9.
 
-<h3 id="Reversing_a_String_using_split">Reversing a String using <code>split()</code></h3>
+### Reversing a String using `split()`
 
-<div class="warning">
-  <p><strong>Warning:</strong> This is not a robust way to reverse a string:</p>
-
-  <pre class="brush: js example-bad">const str = 'asdfghjkl'
-const strReverse = str.split('').reverse().join('')
-// 'lkjhgfdsa'
-
-// split() returns an array on which reverse() and join() can be applied
-</pre>
-
-  <p>It doesn't work if the string contains grapheme clusters, even when using a
-    unicode-aware split. (Use, for example, <a
-      href="https://github.com/mathiasbynens/esrever">esrever</a> instead.)</p>
-
-  <pre class="brush: js example-bad">const str = 'mañana mañana'
-const strReverse = str.split('').reverse().join('')
-// =&gt; "anãnam anañam" // notice how the first word has an ã rather ñ
-</pre>
-
-  <p><strong>Bonus:</strong> use {{jsxref("Operators", "===",
+> **Warning:** This is not a robust way to reverse a string:
+>
+> ```js example-bad
+> const str = 'asdfghjkl'
+> const strReverse = str.split('').reverse().join('')
+> // 'lkjhgfdsa'
+>
+> // split() returns an array on which reverse() and join() can be applied
+> ```
+>
+> It doesn't work if the string contains grapheme clusters, even when using a
+> unicode-aware split. (Use, for example, [esrever](https://github.com/mathiasbynens/esrever) instead.)
+>
+> ```js example-bad
+> const str = 'mañana mañana'
+> const strReverse = str.split('').reverse().join('')
+> // => "anãnam anañam" // notice how the first word has an ã rather ñ
+> ```
+>
+> **Bonus:** use {{jsxref("Operators", "===",
     "#Identity_strict_equality_(===)")}} operator to test if the original string was a
-    palindrome.</p>
-</div>
+> palindrome.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat}}
 
-<p>{{Compat}}</p>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
-  <li>{{jsxref("String.prototype.charAt()")}}</li>
-  <li>{{jsxref("String.prototype.indexOf()")}}</li>
-  <li>{{jsxref("String.prototype.lastIndexOf()")}}</li>
-  <li>{{jsxref("Array.prototype.join()")}}</li>
-  <li><a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">Using regular
-      expressions in JavaScript</a></li>
-</ul>
+- {{jsxref("String.prototype.charAt()")}}
+- {{jsxref("String.prototype.indexOf()")}}
+- {{jsxref("String.prototype.lastIndexOf()")}}
+- {{jsxref("Array.prototype.join()")}}
+- [Using regular
+  expressions in JavaScript](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)

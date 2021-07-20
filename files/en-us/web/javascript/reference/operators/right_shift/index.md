@@ -2,73 +2,74 @@
 title: Right shift (>>)
 slug: Web/JavaScript/Reference/Operators/Right_shift
 tags:
-- Bitwise operator
-- JavaScript
-- Language feature
-- Operator
-- Reference
+  - Bitwise operator
+  - JavaScript
+  - Language feature
+  - Operator
+  - Reference
 browser-compat: javascript.operators.right_shift
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>The <strong>right shift operator (<code>&gt;&gt;</code>)</strong> shifts the first
-  operand the specified number of bits to the right. Excess bits shifted off to the right
-  are discarded. Copies of the leftmost bit are shifted in from the left. Since the new
-  leftmost bit has the same value as the previous leftmost bit, the sign bit (the leftmost
-  bit) does not change. Hence the name "sign-propagating".</p>
+The **right shift operator (`>>`)** shifts the first
+operand the specified number of bits to the right. Excess bits shifted off to the right
+are discarded. Copies of the leftmost bit are shifted in from the left. Since the new
+leftmost bit has the same value as the previous leftmost bit, the sign bit (the leftmost
+bit) does not change. Hence the name "sign-propagating".
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-right-shift.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-right-shift.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+a >> b
+```
 
-<pre class="brush: js">a &gt;&gt; b</pre>
+## Description
 
-<h2 id="Description">Description</h2>
+This operator shifts the first operand the specified number of bits to the right.
+Excess bits shifted off to the right are discarded. Copies of the leftmost bit are
+shifted in from the left. Since the new leftmost bit has the same value as the previous
+leftmost bit, the sign bit (the leftmost bit) does not change. Hence the name
+"sign-propagating".
 
-<p>This operator shifts the first operand the specified number of bits to the right.
-  Excess bits shifted off to the right are discarded. Copies of the leftmost bit are
-  shifted in from the left. Since the new leftmost bit has the same value as the previous
-  leftmost bit, the sign bit (the leftmost bit) does not change. Hence the name
-  "sign-propagating".</p>
+For example, `9 >> 2` yields 2:
 
-<p>For example, <code>9 &gt;&gt; 2</code> yields 2:</p>
-
-<pre class="brush: js">.    9 (base 10): 00000000000000000000000000001001 (base 2)
+```js
+.    9 (base 10): 00000000000000000000000000001001 (base 2)
                   --------------------------------
-9 &gt;&gt; 2 (base 10): 00000000000000000000000000000010 (base 2) = 2 (base 10)
-</pre>
+9 >> 2 (base 10): 00000000000000000000000000000010 (base 2) = 2 (base 10)
+```
 
-<p>Likewise, <code>-9 &gt;&gt; 2</code> yields <code>-3</code>, because the sign is
-  preserved:</p>
+Likewise, `-9 >> 2` yields `-3`, because the sign is
+preserved:
 
-<pre class="brush: js">.    -9 (base 10): 11111111111111111111111111110111 (base 2)
+```js
+.    -9 (base 10): 11111111111111111111111111110111 (base 2)
                    --------------------------------
--9 &gt;&gt; 2 (base 10): 11111111111111111111111111111101 (base 2) = -3 (base 10)
-</pre>
+-9 >> 2 (base 10): 11111111111111111111111111111101 (base 2) = -3 (base 10)
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_right_shift">Using right shift</h3>
+### Using right shift
 
-<pre class="brush: js"> 9 &gt;&gt; 2; //  2
--9 &gt;&gt; 2; // -3
-</pre>
+```js
+ 9 >> 2; //  2
+-9 >> 2; // -3
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Bitwise">Bitwise
-      operators in the JS guide</a></li>
-  <li><a
-      href="/en-US/docs/Web/JavaScript/Reference/Operators/Right_shift_assignment">Right
-      shift assignment operator</a></li>
-</ul>
+- [Bitwise
+  operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Bitwise)
+- [Right
+  shift assignment operator](/en-US/docs/Web/JavaScript/Reference/Operators/Right_shift_assignment)

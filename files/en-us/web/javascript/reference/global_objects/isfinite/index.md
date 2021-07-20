@@ -2,53 +2,53 @@
 title: isFinite()
 slug: Web/JavaScript/Reference/Global_Objects/isFinite
 tags:
-- Functions
-- JavaScript
-- Method
-- Reference
-- inFinite
+  - Functions
+  - JavaScript
+  - Method
+  - Reference
+  - inFinite
 browser-compat: javascript.builtins.isFinite
 ---
-<div>{{jsSidebar("Objects")}}</div>
+{{jsSidebar("Objects")}}
 
-<p>The global <code><strong>isFinite()</strong></code> function determines whether the
-  passed value is a finite number. If  needed, the parameter is first converted to a
-  number.</p>
+The global **`isFinite()`** function determines whether the
+passed value is a finite number. If  needed, the parameter is first converted to a
+number.
 
-<div>{{EmbedInteractiveExample("pages/js/globalprops-isfinite.html")}}</div>
+{{EmbedInteractiveExample("pages/js/globalprops-isfinite.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+isFinite(testValue)
+```
 
-<pre class="brush: js">isFinite(<var>testValue</var>)</pre>
+### Parameters
 
-<h3 id="Parameters">Parameters</h3>
+- `testValue`
+  - : The value to be tested for finiteness.
 
-<dl>
-  <dt><code><var>testValue</var></code></dt>
-  <dd>The value to be tested for finiteness.</dd>
-</dl>
+### Return value
 
-<h3 id="Return_value">Return value</h3>
+**`false`** if the argument is (or will be coerced to) positive
+or negative {{jsxref("Infinity")}} or {{jsxref("NaN")}} or {{jsxref("undefined")}};
+otherwise, **`true`**.
 
-<p><strong><code>false</code></strong> if the argument is (or will be coerced to) positive
-  or negative {{jsxref("Infinity")}} or {{jsxref("NaN")}} or {{jsxref("undefined")}};
-  otherwise, <strong><code>true</code></strong>.</p>
+## Description
 
-<h2 id="Description">Description</h2>
+`isFinite` is a function property of the global object.
 
-<p><code>isFinite</code> is a function property of the global object.</p>
+You can use this function to determine whether a number is a finite number. The
+`isFinite` function examines the number in its argument. If the argument is
+`NaN`, positive infinity, or negative infinity, this method returns
+`false`; otherwise, it returns `true`.
 
-<p>You can use this function to determine whether a number is a finite number. The
-  <code>isFinite</code> function examines the number in its argument. If the argument is
-  <code>NaN</code>, positive infinity, or negative infinity, this method returns
-  <code>false</code>; otherwise, it returns <code>true</code>.</p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Using isFinite
 
-<h3 id="Using_isFinite">Using isFinite</h3>
-
-<pre class="brush: js">isFinite(Infinity);  // false
+```js
+isFinite(Infinity);  // false
 isFinite(NaN);       // false
 isFinite(-Infinity); // false
 
@@ -61,21 +61,19 @@ isFinite(null);      // true, would've been false with the
 
 isFinite('0');       // true, would've been false with the
                      // more robust Number.isFinite("0")
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Number.isFinite()")}}</li>
-  <li>{{jsxref("Number.NaN")}}</li>
-  <li>{{jsxref("Number.POSITIVE_INFINITY")}}</li>
-  <li>{{jsxref("Number.NEGATIVE_INFINITY")}}</li>
-</ul>
+- {{jsxref("Number.isFinite()")}}
+- {{jsxref("Number.NaN")}}
+- {{jsxref("Number.POSITIVE_INFINITY")}}
+- {{jsxref("Number.NEGATIVE_INFINITY")}}

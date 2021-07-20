@@ -7,43 +7,42 @@ tags:
   - Property
 browser-compat: javascript.builtins.Number.NaN
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>Number.NaN</code></strong> property represents Not-A-Number. Equivalent of {{jsxref("NaN")}}.</p>
+The **`Number.NaN`** property represents Not-A-Number. Equivalent of {{jsxref("NaN")}}.
 
-<div>{{EmbedInteractiveExample("pages/js/number-nan.html")}}</div>
+{{EmbedInteractiveExample("pages/js/number-nan.html")}}
 
+You do not have to create a {{jsxref("Number")}} object to access this static property (use `Number.NaN`).
 
-<p>You do not have to create a {{jsxref("Number")}} object to access this static property (use <code>Number.NaN</code>).</p>
+{{js_property_attributes(0, 0, 0)}}
 
-<div>{{js_property_attributes(0, 0, 0)}}</div>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Checking whether values are numeric
 
-<h3 id="Checking_whether_values_are_numeric">Checking whether values are numeric</h3>
-
-<pre class="brush: js">function sanitise(x) {
+```js
+function sanitise(x) {
   if (isNaN(x)) {
     return Number.NaN;
   }
   return x;
-}</pre>
+}
+```
 
-<h3 id="Testing_against_NaN">Testing against NaN</h3>
+### Testing against NaN
 
-<p>See <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN#testing_against_nan">Testing against NaN</a> on the <code>NaN</code> page.</p>
+See [Testing against NaN](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN#testing_against_nan) on the `NaN` page.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The global {{jsxref("NaN")}} object.</li>
- <li>The {{jsxref("Number")}} object it belongs to.</li>
-</ul>
+- The global {{jsxref("NaN")}} object.
+- The {{jsxref("Number")}} object it belongs to.

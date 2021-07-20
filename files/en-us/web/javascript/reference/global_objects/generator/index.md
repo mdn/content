@@ -11,15 +11,16 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Generator
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <code><strong>Generator</strong></code> object is returned by a {{JSxRef("Statements/function*", "generator function", "", 1)}} and it conforms to both the <a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol">iterable protocol</a> and the <a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol">iterator protocol</a>.</p>
+The **`Generator`** object is returned by a {{JSxRef("Statements/function*", "generator function", "", 1)}} and it conforms to both the [iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) and the [iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol).
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<p>This object cannot be instantiated directly. Instead, a <code>Generator</code> instance can be returned from a <a href="/en-US/docs/Web/JavaScript/Reference/Statements/function*">generator function</a>:</p>
+This object cannot be instantiated directly. Instead, a `Generator` instance can be returned from a [generator function](/en-US/docs/Web/JavaScript/Reference/Statements/function*):
 
-<pre class="brush: js">function* generator() {
+```js
+function* generator() {
   yield 1;
   yield 2;
   yield 3;
@@ -29,26 +30,26 @@ const gen = generator(); // "Generator { }"
 
 console.log(gen.next().value); // 1
 console.log(gen.next().value); // 2
-console.log(gen.next().value); // 3</pre>
+console.log(gen.next().value); // 3
+```
 
-<h2 id="Instance_methods">Instance methods</h2>
+## Instance methods
 
-<dl>
- <dt>{{JSxRef("Generator.prototype.next()")}}</dt>
- <dd>Returns a value yielded by the {{JSxRef("Operators/yield", "yield")}} expression.</dd>
- <dt>{{JSxRef("Generator.prototype.return()")}}</dt>
- <dd>Returns the given value and finishes the generator.</dd>
- <dt>{{JSxRef("Generator.prototype.throw()")}}</dt>
- <dd>Throws an error to a generator (also finishes the generator, unless caught from within that generator).</dd>
-</dl>
+- {{JSxRef("Generator.prototype.next()")}}
+  - : Returns a value yielded by the {{JSxRef("Operators/yield", "yield")}} expression.
+- {{JSxRef("Generator.prototype.return()")}}
+  - : Returns the given value and finishes the generator.
+- {{JSxRef("Generator.prototype.throw()")}}
+  - : Throws an error to a generator (also finishes the generator, unless caught from within that generator).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="An_infinite_iterator">An infinite iterator</h3>
+### An infinite iterator
 
-<p>With a generator function, values are not evaluated until they are needed. Therefore a generator allows us to define a potentially infinite data structure.</p>
+With a generator function, values are not evaluated until they are needed. Therefore a generator allows us to define a potentially infinite data structure.
 
-<pre class="brush: js;">function* infinite() {
+```js
+function* infinite() {
     let index = 0;
 
     while (true) {
@@ -61,21 +62,20 @@ const generator = infinite(); // "Generator { }"
 console.log(generator.next().value); // 0
 console.log(generator.next().value); // 1
 console.log(generator.next().value); // 2
-// ...</pre>
+// ...
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{JSxRef("Statements/function*", "function*")}}</li>
- <li>{{JSxRef("Operators/function*", '<code>function*</code> expression', "", 1)}}</li>
- <li>{{JSxRef("GeneratorFunction")}}</li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols">The Iterator protocol</a></li>
-</ul>
+- {{JSxRef("Statements/function*", "function*")}}
+- {{JSxRef("Operators/function*", '<code>function*</code> expression', "", 1)}}
+- {{JSxRef("GeneratorFunction")}}
+- [The Iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)

@@ -1,78 +1,78 @@
 ---
-title: 'RegExp.prototype[@@matchAll]()'
+title: RegExp.prototype[@@matchAll]()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@matchAll
 tags:
-- JavaScript
-- Method
-- Prototype
-- Reference
-- RegExp
-- Regular Expressions
-- Polyfill
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
+  - RegExp
+  - Regular Expressions
+  - Polyfill
 browser-compat: javascript.builtins.RegExp.@@matchAll
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>[@@matchAll]</code></strong> method returns all matches of the
-  regular expression against a string.</p>
+The **`[@@matchAll]`** method returns all matches of the
+regular expression against a string.
 
-<div>{{EmbedInteractiveExample("pages/js/regexp-prototype-@@matchall.html", "taller")}}
-</div>
+{{EmbedInteractiveExample("pages/js/regexp-prototype-@@matchall.html", "taller")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+regexp[Symbol.matchAll](str)
+```
 
-<pre class="brush: js"><var>regexp</var>[Symbol.matchAll](<var>str</var>)</pre>
+### Parameters
 
-<h3 id="Parameters">Parameters</h3>
+- `str`
+  - : A {{jsxref("String")}} that is a target of the match.
 
-<dl>
-  <dt><code><var>str</var></code></dt>
-  <dd>A {{jsxref("String")}} that is a target of the match.</dd>
-</dl>
+### Return value
 
-<h3 id="Return_value">Return value</h3>
+An [iterator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators).
 
-<p>An <a href="/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators">iterator</a>.
-</p>
+## Description
 
-<h2 id="Description">Description</h2>
+This method is called internally in {{jsxref("String.prototype.matchAll()")}}. For
+example, the following two examples return same result.
 
-<p>This method is called internally in {{jsxref("String.prototype.matchAll()")}}. For
-  example, the following two examples return same result.</p>
+```js
+'abc'.matchAll(/a/);
 
-<pre class="brush: js">'abc'.matchAll(/a/);
+/a/[Symbol.matchAll]('abc');
+```
 
-/a/[Symbol.matchAll]('abc');</pre>
+This method exists for customizing the behavior of `matchAll()` in
+{{jsxref('RegExp')}} subclasses.
 
-<p>This method exists for customizing the behavior of <code>matchAll()</code> in
-  {{jsxref('RegExp')}} subclasses.</p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Direct call
 
-<h3 id="Direct_call">Direct call</h3>
+This method can be used in almost the same way as
+{{jsxref("String.prototype.matchAll()")}}, except for the different value of
+`this` and the different order of arguments.
 
-<p>This method can be used in almost the same way as
-  {{jsxref("String.prototype.matchAll()")}}, except for the different value of
-  <code>this</code> and the different order of arguments.</p>
-
-<pre class="brush: js">let re = /[0-9]+/g;
+```js
+let re = /[0-9]+/g;
 let str = '2016-01-02';
 let result = re[Symbol.matchAll](str);
 
-console.log(Array.from(result, x =&gt; x[0]));
+console.log(Array.from(result, x => x[0]));
 // ["2016", "01", "02"]
-</pre>
+```
 
-<h3 id="Using_matchAll_in_subclasses">Using @@matchAll in subclasses</h3>
+### Using @@matchAll in subclasses
 
-<p>Subclasses of {{jsxref("RegExp")}} can override the <code>[@@matchAll]()</code> method
-  to modify the default behavior.</p>
+Subclasses of {{jsxref("RegExp")}} can override the `[@@matchAll]()` method
+to modify the default behavior.
 
-<p>For example, to return an {{jsxref("Array")}} instead of an <a
-    href="/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators">iterator</a>:</p>
+For example, to return an {{jsxref("Array")}} instead of an [iterator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators):
 
-<pre class="brush: js">class MyRegExp extends RegExp {
+```js
+class MyRegExp extends RegExp {
   [Symbol.matchAll](str) {
     const result = RegExp.prototype[Symbol.matchAll].call(this, str);
     if (!result) {
@@ -88,20 +88,18 @@ const str = '2016-01-02|2019-03-07';
 const result = str.matchAll(re);
 console.log(result[0]); // [ "2016-01-02", "2016", "01", "02" ]
 console.log(result[1]); // [ "2019-03-07", "2019", "03", "07" ]
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>A polyfill of <code>RegExp.prototype[@@matchAll]</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-string-and-regexp"><code>core-js</code></a></li>
-  <li>{{JSxRef("String.prototype.matchAll()")}}</li>
-  <li>{{JSxRef("Symbol.matchAll")}}</li>
-</ul>
+- A polyfill of `RegExp.prototype[@@matchAll]` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- {{JSxRef("String.prototype.matchAll()")}}
+- {{JSxRef("Symbol.matchAll")}}

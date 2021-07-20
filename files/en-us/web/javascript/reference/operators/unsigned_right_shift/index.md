@@ -2,77 +2,77 @@
 title: Unsigned right shift (>>>)
 slug: Web/JavaScript/Reference/Operators/Unsigned_right_shift
 tags:
-- Bitwise operator
-- JavaScript
-- Language feature
-- Operator
-- Reference
+  - Bitwise operator
+  - JavaScript
+  - Language feature
+  - Operator
+  - Reference
 browser-compat: javascript.operators.unsigned_right_shift
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>The <strong>unsigned right shift operator (<code>&gt;&gt;&gt;</code>)</strong>
-  (zero-fill right shift) shifts the first operand the specified number of bits to the
-  right. Excess bits shifted off to the right are discarded. Zero bits are shifted in from
-  the left. The sign bit becomes <code>0</code>, so the result is always non-negative.
-  Unlike the other bitwise operators, zero-fill right shift returns an unsigned 32-bit
-  integer.</p>
+The **unsigned right shift operator (`>>>`)**
+(zero-fill right shift) shifts the first operand the specified number of bits to the
+right. Excess bits shifted off to the right are discarded. Zero bits are shifted in from
+the left. The sign bit becomes `0`, so the result is always non-negative.
+Unlike the other bitwise operators, zero-fill right shift returns an unsigned 32-bit
+integer.
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-unsigned-right-shift.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-unsigned-right-shift.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+a >>> b
+```
 
-<pre class="brush: js">a &gt;&gt;&gt; b</pre>
+## Description
 
-<h2 id="Description">Description</h2>
+This operator shifts the first operand the specified number of bits to the right.
+Excess bits shifted off to the right are discarded. Zero bits are shifted in from the
+left. The sign bit becomes `0`, so the result is always non-negative. Unlike
+the other bitwise operators, zero-fill right shift returns an unsigned 32-bit integer.
 
-<p>This operator shifts the first operand the specified number of bits to the right.
-  Excess bits shifted off to the right are discarded. Zero bits are shifted in from the
-  left. The sign bit becomes <code>0</code>, so the result is always non-negative. Unlike
-  the other bitwise operators, zero-fill right shift returns an unsigned 32-bit integer.
-</p>
+For non-negative numbers, zero-fill right shift and sign-propagating right shift yield
+the same result. For example, `9 >>> 2` yields 2, the same as
+`9 >> 2`:
 
-<p>For non-negative numbers, zero-fill right shift and sign-propagating right shift yield
-  the same result. For example, <code>9 &gt;&gt;&gt; 2</code> yields 2, the same as
-  <code>9 &gt;&gt; 2</code>:</p>
-
-<pre class="brush: js">.     9 (base 10): 00000000000000000000000000001001 (base 2)
+```js
+.     9 (base 10): 00000000000000000000000000001001 (base 2)
                    --------------------------------
-9 &gt;&gt;&gt; 2 (base 10): 00000000000000000000000000000010 (base 2) = 2 (base 10)
-</pre>
+9 >>> 2 (base 10): 00000000000000000000000000000010 (base 2) = 2 (base 10)
+```
 
-<p>However, this is not the case for negative numbers. For example,
-  <code>-9 &gt;&gt;&gt; 2</code> yields 1073741821, which is different than
-  <code>-9 &gt;&gt; 2</code> (which yields <code>-3</code>):</p>
+However, this is not the case for negative numbers. For example,
+`-9 >>> 2` yields 1073741821, which is different than
+`-9 >> 2` (which yields `-3`):
 
-<pre class="brush: js">.     -9 (base 10): 11111111111111111111111111110111 (base 2)
+```js
+.     -9 (base 10): 11111111111111111111111111110111 (base 2)
                     --------------------------------
--9 &gt;&gt;&gt; 2 (base 10): 00111111111111111111111111111101 (base 2) = 1073741821 (base 10)
-</pre>
+-9 >>> 2 (base 10): 00111111111111111111111111111101 (base 2) = 1073741821 (base 10)
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_unsigned_right_shift">Using unsigned right shift</h3>
+### Using unsigned right shift
 
-<pre class="brush: js"> 9 &gt;&gt;&gt; 2; // 2
--9 &gt;&gt;&gt; 2; // 1073741821
-</pre>
+```js
+ 9 >>> 2; // 2
+-9 >>> 2; // 1073741821
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Bitwise">Bitwise
-      operators in the JS guide</a></li>
-  <li><a
-      href="/en-US/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift_assignment">Unsigned
-      right shift assignment operator</a></li>
-</ul>
+- [Bitwise
+  operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Bitwise)
+- [Unsigned
+  right shift assignment operator](/en-US/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift_assignment)

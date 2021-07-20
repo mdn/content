@@ -2,57 +2,57 @@
 title: Object.values()
 slug: Web/JavaScript/Reference/Global_Objects/Object/values
 tags:
-- JavaScript
-- Method
-- Object
-- Reference
-- Polyfill
+  - JavaScript
+  - Method
+  - Object
+  - Reference
+  - Polyfill
 browser-compat: javascript.builtins.Object.values
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><span class="seoSummary">The <code><strong>Object.values()</strong></code> method
-    returns an array of a given object's own enumerable property values, in the same order
-    as that provided by a {{jsxref("Statements/for...in", "for...in")}} loop. (The only
-    difference is that a <code>for...in</code> loop enumerates properties in the prototype
-    chain as well.)</span></p>
+The **`Object.values()`** method
+returns an array of a given object's own enumerable property values, in the same order
+as that provided by a {{jsxref("Statements/for...in", "for...in")}} loop. (The only
+difference is that a `for...in` loop enumerates properties in the prototype
+chain as well.)
 
-<div>{{EmbedInteractiveExample("pages/js/object-values.html")}}</div>
+{{EmbedInteractiveExample("pages/js/object-values.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">Object.values(<var>obj</var>)</pre>
+```js
+Object.values(obj)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>obj</var></code></dt>
-  <dd>The object whose enumerable own property values are to be returned.</dd>
-</dl>
+- `obj`
+  - : The object whose enumerable own property values are to be returned.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An array containing the given object's own enumerable property values.</p>
+An array containing the given object's own enumerable property values.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p><code>Object.values()</code> returns an array whose elements are the enumerable
-  property values found on the object. The ordering of the properties is the same as that
-  given by looping over the property values of the object manually.</p>
+`Object.values()` returns an array whose elements are the enumerable
+property values found on the object. The ordering of the properties is the same as that
+given by looping over the property values of the object manually.
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>To add compatible <code>Object.values</code> support in older environments that do not
-  natively support it, you can find a Polyfill in the <a
-    href="https://github.com/tc39/proposal-object-values-entries">tc39/proposal-object-values-entries</a>
-  or in the <a href="https://github.com/es-shims/Object.values">es-shims/Object.values</a>
-  repositories.</p>
+To add compatible `Object.values` support in older environments that do not
+natively support it, you can find a Polyfill in the [tc39/proposal-object-values-entries](https://github.com/tc39/proposal-object-values-entries)
+or in the [es-shims/Object.values](https://github.com/es-shims/Object.values)
+repositories.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_Object.values">Using Object.values</h3>
+### Using Object.values
 
-<pre class="brush: js">const obj = { foo: 'bar', baz: 42 };
+```js
+const obj = { foo: 'bar', baz: 42 };
 console.log(Object.values(obj)); // ['bar', 42]
 
 // Array-like object
@@ -71,26 +71,23 @@ console.log(Object.values(my_obj)); // ['bar']
 
 // non-object argument will be coerced to an object
 console.log(Object.values('foo')); // ['f', 'o', 'o']
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>A polyfill of <code>Object.values</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-object"><code>core-js</code></a></li>
-  <li><a
-      href="/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties">Enumerability
-      and ownership of properties</a></li>
-  <li>{{jsxref("Object.keys()")}}</li>
-  <li>{{jsxref("Object.entries()")}}</li>
-  <li>{{jsxref("Object.prototype.propertyIsEnumerable()")}}</li>
-  <li>{{jsxref("Object.create()")}}</li>
-  <li>{{jsxref("Object.getOwnPropertyNames()")}}</li>
-</ul>
+- A polyfill of `Object.values` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-object)
+- [Enumerability
+  and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- {{jsxref("Object.keys()")}}
+- {{jsxref("Object.entries()")}}
+- {{jsxref("Object.prototype.propertyIsEnumerable()")}}
+- {{jsxref("Object.create()")}}
+- {{jsxref("Object.getOwnPropertyNames()")}}

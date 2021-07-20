@@ -9,42 +9,42 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Error.lineNumber
 ---
-<div>{{JSRef}} {{non-standard_header}}</div>
+{{JSRef}} {{non-standard_header}}
 
-<p>The <code><strong>lineNumber</strong></code> property contains the line number in the file that raised this error.</p>
+The **`lineNumber`** property contains the line number in the file that raised this error.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_lineNumber">Using lineNumber</h3>
+### Using lineNumber
 
-<pre class="brush: js">var e = new Error('Could not parse input');
+```js
+var e = new Error('Could not parse input');
 throw e;
 console.log(e.lineNumber) // 2
-</pre>
+```
 
-<h3 id="Alternative_example_using_error_event">Alternative example using error event</h3>
+### Alternative example using error event
 
-<pre class="brush: js">window.addEventListener('error', function(e) {
+```js
+window.addEventListener('error', function(e) {
   console.log(e.lineNumber); // 5
 });
 var e = new Error('Could not parse input');
 throw e;
-</pre>
+```
 
-<p>This is not a standard feature and lacks widespread support. See the browser compatibility table below.</p>
+This is not a standard feature and lacks widespread support. See the browser compatibility table below.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any standard.</p>
+Not part of any standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("Error.prototype.stack")}}</li>
- <li>{{jsxref("Error.prototype.columnNumber")}}</li>
- <li>{{jsxref("Error.prototype.fileName")}}</li>
-</ul>
+- {{jsxref("Error.prototype.stack")}}
+- {{jsxref("Error.prototype.columnNumber")}}
+- {{jsxref("Error.prototype.fileName")}}

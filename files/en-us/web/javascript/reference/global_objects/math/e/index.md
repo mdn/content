@@ -8,46 +8,42 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Math.E
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>Math.E</code></strong> property represents Euler's number, the base of natural logarithms, e, which is approximately 2.718.</p>
+The **`Math.E`** property represents Euler's number, the base of natural logarithms, e, which is approximately 2.718.
 
-<p><math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.E</mi></mstyle><mo>=</mo><mi>e</mi><mo>≈</mo><mn>2.718</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.E}} = e \approx 2.718</annotation></semantics></math></p>
+<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.E</mi></mstyle><mo>=</mo><mi>e</mi><mo>≈</mo><mn>2.718</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.E}} = e \approx 2.718</annotation></semantics></math>
 
-<div>{{EmbedInteractiveExample("pages/js/math-e.html")}}</div>
+{{EmbedInteractiveExample("pages/js/math-e.html")}}{{js_property_attributes(0, 0, 0)}}
 
+## Description
 
-<div>{{js_property_attributes(0, 0, 0)}}</div>
+Because `E` is a static property of `Math`, you always use it as `Math.E`, rather than as a property of a `Math` object you created (`Math` is not a constructor).
 
-<h2 id="Description">Description</h2>
+## Examples
 
-<p>Because <code>E</code> is a static property of <code>Math</code>, you always use it as <code>Math.E</code>, rather than as a property of a <code>Math</code> object you created (<code>Math</code> is not a constructor).</p>
+### Using Math.E
 
-<h2 id="Examples">Examples</h2>
+The following function returns e:
 
-<h3 id="Using_Math.E">Using Math.E</h3>
-
-<p>The following function returns e:</p>
-
-<pre class="brush: js">function getNapier() {
+```js
+function getNapier() {
   return Math.E;
 }
 
 getNapier(); // 2.718281828459045
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("Math.exp()")}}</li>
- <li>{{jsxref("Math.log()")}}</li>
- <li>{{jsxref("Math.log1p()")}}</li>
-</ul>
+- {{jsxref("Math.exp()")}}
+- {{jsxref("Math.log()")}}
+- {{jsxref("Math.log1p()")}}

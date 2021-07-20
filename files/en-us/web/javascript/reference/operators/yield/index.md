@@ -2,119 +2,115 @@
 title: yield
 slug: Web/JavaScript/Reference/Operators/yield
 tags:
-- ECMAScript 2015
-- Generators
-- Iterator
-- JavaScript
-- Language feature
-- Operator
+  - ECMAScript 2015
+  - Generators
+  - Iterator
+  - JavaScript
+  - Language feature
+  - Operator
 browser-compat: javascript.operators.yield
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>The <code>yield</code> keyword is used to pause and resume a generator function
-  ({{jsxref("Statements/function*", "function*")}} or <a
-    href="/en-US/docs/Archive/Web/JavaScript/Legacy_generator_function_statement">legacy
-    generator function</a>).</p>
+The `yield` keyword is used to pause and resume a generator function
+({{jsxref("Statements/function*", "function*")}} or [legacy
+generator function](/en-US/docs/Archive/Web/JavaScript/Legacy_generator_function_statement)).
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-yield.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-yield.html", "taller")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+[rv] = yield [expression]
+```
 
-<pre class="brush: js">[rv] = yield [expression]</pre>
+- `expression` {{optional_inline}}
+  - : Defines the value to return from the generator function via [the
+    iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterator_protocol). If omitted, `undefined` is returned instead.
+- `rv` {{optional_inline}}
+  - : Retrieves the optional value passed to the generator's `next()` method
+    to resume its execution.
 
-<dl>
-  <dt><code><var>expression</var></code> {{optional_inline}}</dt>
-  <dd>Defines the value to return from the generator function via <a
-      href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterator_protocol">the
-      iterator protocol</a>. If omitted, <code>undefined</code> is returned instead.</dd>
-  <dt><code><var>rv</var></code> {{optional_inline}}</dt>
-  <dd>
-    <p>Retrieves the optional value passed to the generator's <code>next()</code> method
-      to resume its execution.</p>
-  </dd>
-</dl>
+## Description
 
-<h2 id="Description">Description</h2>
+The `yield` keyword pauses generator function execution and the value of the
+expression following the `yield` keyword is returned to the generator's
+caller. It can be thought of as a generator-based version of the `return`
+keyword.
 
-<p>The <code>yield</code> keyword pauses generator function execution and the value of the
-  expression following the <code>yield</code> keyword is returned to the generator's
-  caller. It can be thought of as a generator-based version of the <code>return</code>
-  keyword.</p>
+`yield` can only be called directly from the generator function that
+contains it. It cannot be called from nested functions or from callbacks.
 
-<p><code>yield</code> can only be called directly from the generator function that
-  contains it. It cannot be called from nested functions or from callbacks.</p>
+The `yield` keyword causes the call to the generator's `next()`
+method to return an `IteratorResult` object with two properties:
+`value` and `done`. The `value` property is the result
+of evaluating the `yield` expression, and `done` is
+`false`, indicating that the generator function has not fully completed.
 
-<p>The <code>yield</code> keyword causes the call to the generator's <code>next()</code>
-  method to return an <code>IteratorResult</code> object with two properties:
-  <code>value</code> and <code>done</code>. The <code>value</code> property is the result
-  of evaluating the <code>yield</code> expression, and <code>done</code> is
-  <code>false</code>, indicating that the generator function has not fully completed.</p>
+Once paused on a `yield` expression, the generator's code execution remains
+paused until the generator's `next()` method is called. Each time the
+generator's `next()` method is called, the generator resumes execution, and
+runs until it reaches one of the following:
 
-<p>Once paused on a <code>yield</code> expression, the generator's code execution remains
-  paused until the generator's <code>next()</code> method is called. Each time the
-  generator's <code>next()</code> method is called, the generator resumes execution, and
-  runs until it reaches one of the following:</p>
+- A `yield`, which causes the generator to once again pause and return the
+  generator's new value. The next time `next()` is called, execution resumes
+  with the statement immediately after the `yield`.
+- {{jsxref("Statements/throw", "throw")}} is used to throw an exception from the
+  generator. This halts execution of the generator entirely, and execution resumes in
+  the caller (as is normally the case when an exception is thrown).
+- The end of the generator function is reached. In this case, execution of the
+  generator ends and an `IteratorResult` is returned to the caller in which
+  the `value` is {{jsxref("undefined")}} and `done` is
+  `true`.
+- A {{jsxref("Statements/return", "return")}} statement is reached. In this case,
+  execution of the generator ends and an `IteratorResult` is returned to the
+  caller in which the `value` is the value specified by the
+  `return` statement and `done` is `true`.
 
-<ul>
-  <li>A <code>yield</code>, which causes the generator to once again pause and return the
-    generator's new value. The next time <code>next()</code> is called, execution resumes
-    with the statement immediately after the <code>yield</code>.</li>
-  <li>{{jsxref("Statements/throw", "throw")}} is used to throw an exception from the
-    generator. This halts execution of the generator entirely, and execution resumes in
-    the caller (as is normally the case when an exception is thrown).</li>
-  <li>The end of the generator function is reached. In this case, execution of the
-    generator ends and an <code>IteratorResult</code> is returned to the caller in which
-    the <code>value</code> is {{jsxref("undefined")}} and <code>done</code> is
-    <code>true</code>.</li>
-  <li>A {{jsxref("Statements/return", "return")}} statement is reached. In this case,
-    execution of the generator ends and an <code>IteratorResult</code> is returned to the
-    caller in which the <code>value</code> is the value specified by the
-    <code>return</code> statement and <code>done</code> is <code>true</code>.</li>
-</ul>
+If an optional value is passed to the generator's `next()` method, that
+value becomes the value returned by the generator's current `yield`
+operation.
 
-<p>If an optional value is passed to the generator's <code>next()</code> method, that
-  value becomes the value returned by the generator's current <code>yield</code>
-  operation.</p>
+Between the generator's code path, its `yield` operators, and the ability to
+specify a new starting value by passing it to {{jsxref("Generator.prototype.next()")}},
+generators offer enormous power and control.
 
-<p>Between the generator's code path, its <code>yield</code> operators, and the ability to
-  specify a new starting value by passing it to {{jsxref("Generator.prototype.next()")}},
-  generators offer enormous power and control.</p>
+> **Warning:** Unfortunately, `next()` is asymmetric, but that can’t be helped: It always
+> sends a value to the currently suspended `yield`, but returns the operand
+> of the following `yield`.
 
-<div class="notecard warning">
-  <p><strong>Warning:</strong> Unfortunately, <code>next()</code> is asymmetric, but that can’t be helped: It always
-    sends a value to the currently suspended <code>yield</code>, but returns the operand
-    of the following <code>yield</code>.</p>
-</div>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Using yield
 
-<h3 id="Using_yield">Using yield</h3>
+The following code is the declaration of an example generator function.
 
-<p>The following code is the declaration of an example generator function.</p>
-
-<pre class="brush: js">function* countAppleSales () {
+```js
+function* countAppleSales () {
   let saleList = [3, 7, 5]
-  for (let i = 0; i &lt; saleList.length; i++) {
+  for (let i = 0; i < saleList.length; i++) {
     yield saleList[i]
   }
-}</pre>
+}
+```
 
-<p>Once a generator function is defined, it can be used by constructing an iterator as
-  shown.</p>
+Once a generator function is defined, it can be used by constructing an iterator as
+shown.
 
-<pre class="brush: js">let appleStore = countAppleSales()  // Generator { }
+```js
+let appleStore = countAppleSales()  // Generator { }
 console.log(appleStore.next())      // { value: 3, done: false }
 console.log(appleStore.next())      // { value: 7, done: false }
 console.log(appleStore.next())      // { value: 5, done: false }
-console.log(appleStore.next())      // { value: undefined, done: true }</pre>
+console.log(appleStore.next())      // { value: undefined, done: true }
+```
 
-<p>You can also send a value with next(value) into the generator. 'step' evaluates as a
-  return value in this syntax [<var>rv</var>] = <strong>yield</strong>
-  [<var>expression</var>]</p>
+You can also send a value with next(value) into the generator. 'step' evaluates as a
+return value in this syntax \[_rv_] = **yield**
+\[_expression_]
 
-<pre class="brush: js">function* counter(value) {
+```js
+function* counter(value) {
  let step;
 
  while (true) {
@@ -132,22 +128,21 @@ console.log(generatorFunc.next().value);   // 2
 console.log(generatorFunc.next().value);   // 3
 console.log(generatorFunc.next(10).value); // 14
 console.log(generatorFunc.next().value);   // 15
-console.log(generatorFunc.next(10).value); // 26</pre>
+console.log(generatorFunc.next(10).value); // 26
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/JavaScript/Guide/The_Iterator_protocol">The Iterator
-      protocol</a></li>
-  <li>{{jsxref("Statements/function*", "function*")}}</li>
-  <li>{{jsxref("Operators/function*", "function* expression")}}</li>
-  <li>{{jsxref("Operators/yield*", "yield*")}}</li>
-</ul>
+- [The Iterator
+  protocol](/en-US/docs/Web/JavaScript/Guide/The_Iterator_protocol)
+- {{jsxref("Statements/function*", "function*")}}
+- {{jsxref("Operators/function*", "function* expression")}}
+- {{jsxref("Operators/yield*", "yield*")}}

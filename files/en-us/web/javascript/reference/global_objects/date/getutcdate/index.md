@@ -2,53 +2,53 @@
 title: Date.prototype.getUTCDate()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCDate
 tags:
-- Date
-- JavaScript
-- Method
-- Prototype
-- Reference
+  - Date
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
 browser-compat: javascript.builtins.Date.getUTCDate
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>getUTCDate()</code></strong> method returns the day of the month(from
-  1 to 31) in the specified date according to universal time.</p>
+The **`getUTCDate()`** method returns the day of the month(from
+1 to 31) in the specified date according to universal time.
 
-<div>{{EmbedInteractiveExample("pages/js/date-getutcdate.html")}}</div>
+{{EmbedInteractiveExample("pages/js/date-getutcdate.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+getUTCDate()
+```
 
-<pre class="brush: js">getUTCDate()</pre>
+### Return value
 
-<h3 id="Return_value">Return value</h3>
+An integer number ranging from 1 to 31 representing day of month for the given date,
+according to universal time.
 
-<p>An integer number ranging from 1 to 31 representing day of month for the given date,
-  according to universal time.</p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Using getUTCDate()
 
-<h3 id="Using_getUTCDate">Using getUTCDate()</h3>
+The following example assigns the day of month of the current date to the variable
+`dayOfMonth`.
 
-<p>The following example assigns the day of month of the current date to the variable
-  <code>dayOfMonth</code>.</p>
-
-<pre class="brush: js">var today = new Date();
+```js
+var today = new Date();
 var dayOfMonth = today.getUTCDate();
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Date.prototype.getUTCDate()")}}</li>
-  <li>{{jsxref("Date.prototype.getDay()")}}</li>
-  <li>{{jsxref("Date.prototype.setUTCDate()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getUTCDate()")}}
+- {{jsxref("Date.prototype.getDay()")}}
+- {{jsxref("Date.prototype.setUTCDate()")}}

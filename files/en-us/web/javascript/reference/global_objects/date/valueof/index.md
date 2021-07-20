@@ -2,59 +2,59 @@
 title: Date.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Date/valueOf
 tags:
-- Date
-- JavaScript
-- Method
-- Prototype
-- Reference
+  - Date
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
 browser-compat: javascript.builtins.Date.valueOf
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>valueOf()</code></strong> method returns the primitive value of a
-  {{jsxref("Date")}} object.</p>
+The **`valueOf()`** method returns the primitive value of a
+{{jsxref("Date")}} object.
 
-<div>{{EmbedInteractiveExample("pages/js/date-valueof.html")}}</div>
+{{EmbedInteractiveExample("pages/js/date-valueof.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">valueOf()</pre>
+```js
+valueOf()
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>The number of milliseconds between 1 January 1970 00:00:00 UTC and the given date.</p>
+The number of milliseconds between 1 January 1970 00:00:00 UTC and the given date.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The <code>valueOf()</code> method returns the primitive value of a {{jsxref("Date")}}
-  object as a number data type, the number of milliseconds since midnight 01 January, 1970
-  UTC.</p>
+The `valueOf()` method returns the primitive value of a {{jsxref("Date")}}
+object as a number data type, the number of milliseconds since midnight 01 January, 1970
+UTC.
 
-<p>This method is functionally equivalent to the {{jsxref("Date.prototype.getTime()")}}
-  method.</p>
+This method is functionally equivalent to the {{jsxref("Date.prototype.getTime()")}}
+method.
 
-<p>This method is usually called internally by JavaScript and not explicitly in code.</p>
+This method is usually called internally by JavaScript and not explicitly in code.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_valueOf">Using valueOf()</h3>
+### Using valueOf()
 
-<pre class="brush: js">var x = new Date(56, 6, 17);
+```js
+var x = new Date(56, 6, 17);
 var myVar = x.valueOf();      // assigns -424713600000 to myVar
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat}}
 
-<p>{{Compat}}</p>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
-  <li>{{jsxref("Object.prototype.valueOf()")}}</li>
-  <li>{{jsxref("Date.prototype.getTime()")}}</li>
-</ul>
+- {{jsxref("Object.prototype.valueOf()")}}
+- {{jsxref("Date.prototype.getTime()")}}

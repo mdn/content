@@ -2,36 +2,38 @@
 title: 'SyntaxError: missing ] after element list'
 slug: Web/JavaScript/Reference/Errors/Missing_bracket_after_list
 tags:
-- Error
-- Errors
-- JavaScript
-- SyntaxError
+  - Error
+  - Errors
+  - JavaScript
+  - SyntaxError
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<p>The JavaScript exception "missing ] after element list" occurs when there is an error
-  with the array initializer syntax somewhere. Likely there is a closing bracket
-  ("<code>]</code>") or a comma ("<code>,</code>") missing.</p>
+The JavaScript exception "missing ] after element list" occurs when there is an error
+with the array initializer syntax somewhere. Likely there is a closing bracket
+("`]`") or a comma ("`,`") missing.
 
-<h2 id="Message">Message</h2>
+## Message
 
-<pre class="brush: js">SyntaxError: missing ] after element list
-</pre>
+```js
+SyntaxError: missing ] after element list
+```
 
-<h2 id="Error_type">Error type</h2>
+## Error type
 
-<p>{{jsxref("SyntaxError")}}.</p>
+{{jsxref("SyntaxError")}}.
 
-<h2 id="What_went_wrong">What went wrong?</h2>
+## What went wrong?
 
-<p>There is an error with the array initializer syntax somewhere. Likely there is a
-  closing bracket ("<code>]</code>") or a comma ("<code>,</code>") missing.</p>
+There is an error with the array initializer syntax somewhere. Likely there is a
+closing bracket ("`]`") or a comma ("`,`") missing.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Incomplete_array_initializer">Incomplete array initializer</h3>
+### Incomplete array initializer
 
-<pre class="brush: js example-bad">var list = [1, 2,
+```js example-bad
+var list = [1, 2,
 
 var instruments = [
   'Ukulele',
@@ -40,11 +42,12 @@ var instruments = [
 };
 
 var data = [{foo: 'bar'} {bar: 'foo'}];
-</pre>
+```
 
-<p>Correct would be:</p>
+Correct would be:
 
-<pre class="brush: js example-good">var list = [1, 2];
+```js example-good
+var list = [1, 2];
 
 var instruments = [
  'Ukulele',
@@ -52,10 +55,9 @@ var instruments = [
  'Piano'
 ];
 
-var data = [{foo: 'bar'}, {bar: 'foo'}];</pre>
+var data = [{foo: 'bar'}, {bar: 'foo'}];
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Array")}}</li>
-</ul>
+- {{jsxref("Array")}}

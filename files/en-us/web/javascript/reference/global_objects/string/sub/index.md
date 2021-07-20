@@ -2,61 +2,62 @@
 title: String.prototype.sub()
 slug: Web/JavaScript/Reference/Global_Objects/String/sub
 tags:
-- Deprecated
-- HTML wrapper methods
-- JavaScript
-- Method
-- Prototype
-- String
-- Polyfill
+  - Deprecated
+  - HTML wrapper methods
+  - JavaScript
+  - Method
+  - Prototype
+  - String
+  - Polyfill
 browser-compat: javascript.builtins.String.sub
 ---
-<div>{{JSRef}} {{deprecated_header}}</div>
+{{JSRef}} {{deprecated_header}}
 
-<p>The <strong><code>sub()</code></strong> method creates a {{HTMLElement("sub")}} HTML
-  element that causes a string to be displayed as subscript.</p>
+The **`sub()`** method creates a {{HTMLElement("sub")}} HTML
+element that causes a string to be displayed as subscript.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">sub()</pre>
+```js
+sub()
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A string containing a {{HTMLElement("sub")}} HTML element.</p>
+A string containing a {{HTMLElement("sub")}} HTML element.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The <code>sub()</code> method embeds a string in a <code>&lt;sub&gt;</code> element:
-  "<code>&lt;sub&gt;str&lt;/sub&gt;</code>".</p>
+The `sub()` method embeds a string in a `<sub>` element:
+"`<sub>str</sub>`".
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_sub_and_sup_methods">Using sub() and sup() methods</h3>
+### Using sub() and sup() methods
 
-<p>The following example uses the <code>sub()</code> and
-  {{jsxref("String.prototype.sup()", "sup()")}} methods to format a string:</p>
+The following example uses the `sub()` and
+{{jsxref("String.prototype.sup()", "sup()")}} methods to format a string:
 
-<pre class="brush: js">var superText = 'superscript';
+```js
+var superText = 'superscript';
 var subText = 'subscript';
 
 console.log('This is what a ' + superText.sup() + ' looks like.');
-// "This is what a &lt;sup&gt;superscript&lt;/sup&gt; looks like."
+// "This is what a <sup>superscript</sup> looks like."
 
 console.log('This is what a ' + subText.sub() + ' looks like.');
-// "This is what a &lt;sub&gt;subscript&lt;/sub&gt; looks like."
-</pre>
+// "This is what a <sub>subscript</sub> looks like."
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>A polyfill of <code>String.prototype.sub</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-string-and-regexp"><code>core-js</code></a></li>
-  <li>{{jsxref("String.prototype.sup()")}}</li>
-</ul>
+- A polyfill of `String.prototype.sub` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- {{jsxref("String.prototype.sup()")}}

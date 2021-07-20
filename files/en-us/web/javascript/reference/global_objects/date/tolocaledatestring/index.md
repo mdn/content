@@ -2,88 +2,88 @@
 title: Date.prototype.toLocaleDateString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString
 tags:
-- Date
-- IANA Timezone Format
-- Internationalization
-- JavaScript
-- Method
-- Prototype
-- Reference
+  - Date
+  - IANA Timezone Format
+  - Internationalization
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
 browser-compat: javascript.builtins.Date.toLocaleDateString
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>toLocaleDateString()</code></strong> method returns a string with a
-  language sensitive representation of the date portion of this date. The new
-  <code>locales</code> and <code>options</code> arguments let applications specify the
-  language whose formatting conventions should be used and allow to customize the behavior
-  of the function. In older implementations, which ignore the <code>locales</code> and
-  <code>options</code> arguments, the locale used and the form of the string returned are
-  entirely implementation dependent.</p>
+The **`toLocaleDateString()`** method returns a string with a
+language sensitive representation of the date portion of this date. The new
+`locales` and `options` arguments let applications specify the
+language whose formatting conventions should be used and allow to customize the behavior
+of the function. In older implementations, which ignore the `locales` and
+`options` arguments, the locale used and the form of the string returned are
+entirely implementation dependent.
 
-<div>{{EmbedInteractiveExample("pages/js/date-tolocaledatestring.html")}}</div>
+{{EmbedInteractiveExample("pages/js/date-tolocaledatestring.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush: js">
+```js
 toLocaleDateString()
 toLocaleDateString(locales)
 toLocaleDateString(locales, options)
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>The <code>locales</code> and <code>options</code> arguments customize the behavior of
-  the function and let applications specify the language whose formatting conventions
-  should be used. In implementations, which ignore the <code>locales</code> and
-  <code>options</code> arguments, the locale used and the form of the string returned are
-  entirely implementation dependent.</p>
+The `locales` and `options` arguments customize the behavior of
+the function and let applications specify the language whose formatting conventions
+should be used. In implementations, which ignore the `locales` and
+`options` arguments, the locale used and the form of the string returned are
+entirely implementation dependent.
 
-<p>See the {{jsxref("Intl/DateTimeFormat/DateTimeFormat", "Intl.DateTimeFormat()")}}
-  constructor for details on these parameters and how to use them.</p>
+See the {{jsxref("Intl/DateTimeFormat/DateTimeFormat", "Intl.DateTimeFormat()")}}
+constructor for details on these parameters and how to use them.
 
-<p>The default value for each date-time component property is {{jsxref("undefined")}}, but
-  if the <code>weekday</code>, <code>year</code>, <code>month</code>, <code>day</code>
-  properties are all {{jsxref("undefined")}}, then <code>year</code>, <code>month</code>,
-  and <code>day</code> are assumed to be <code>"numeric"</code>.</p>
+The default value for each date-time component property is {{jsxref("undefined")}}, but
+if the `weekday`, `year`, `month`, `day`
+properties are all {{jsxref("undefined")}}, then `year`, `month`,
+and `day` are assumed to be `"numeric"`.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A string representing the date portion of the given {{jsxref("Global_Objects/Date",
-  "Date")}} instance according to language-specific conventions.</p>
+A string representing the date portion of the given {{jsxref("Global_Objects/Date",
+  "Date")}} instance according to language-specific conventions.
 
-<h2 id="Performance">Performance</h2>
+## Performance
 
-<p>When formatting large numbers of dates, it is better to create an
-  {{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}} object and use the
-  function provided by its {{jsxref("DateTimeFormat.prototype.format", "format")}}
-  property.</p>
+When formatting large numbers of dates, it is better to create an
+{{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}} object and use the
+function provided by its {{jsxref("DateTimeFormat.prototype.format", "format")}}
+property.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_toLocaleDateString">Using toLocaleDateString()</h3>
+### Using toLocaleDateString()
 
-<p>In basic use without specifying a locale, a formatted string in the default locale and
-  with default options is returned.</p>
+In basic use without specifying a locale, a formatted string in the default locale and
+with default options is returned.
 
-<pre class="brush: js">var date = new Date(Date.UTC(2012, 11, 12, 3, 0, 0));
+```js
+var date = new Date(Date.UTC(2012, 11, 12, 3, 0, 0));
 
 // toLocaleDateString() without arguments depends on the implementation,
 // the default locale, and the default time zone
 console.log(date.toLocaleDateString());
 // → "12/11/2012" if run in en-US locale with time zone America/Los_Angeles
-</pre>
+```
 
-<h3 id="Checking_for_support_for_locales_and_options_arguments">Checking for support for
-  locales and options arguments</h3>
+### Checking for support for locales and options arguments
 
-<p>The <code>locales</code> and <code>options</code> arguments are not supported in all
-  browsers yet. To check whether an implementation supports them already, you can use the
-  requirement that illegal language tags are rejected with a {{jsxref("RangeError")}}
-  exception:</p>
+The `locales` and `options` arguments are not supported in all
+browsers yet. To check whether an implementation supports them already, you can use the
+requirement that illegal language tags are rejected with a {{jsxref("RangeError")}}
+exception:
 
-<pre class="brush: js">function toLocaleDateStringSupportsLocales() {
+```js
+function toLocaleDateStringSupportsLocales() {
   try {
     new Date().toLocaleDateString('i');
   } catch (e) {
@@ -91,16 +91,17 @@ console.log(date.toLocaleDateString());
   }
   return false;
 }
-</pre>
+```
 
-<h3 id="Using_locales">Using locales</h3>
+### Using locales
 
-<p>This example shows some of the variations in localized date formats. In order to get
-  the format of the language used in the user interface of your application, make sure to
-  specify that language (and possibly some fallback languages) using the
-  <code>locales</code> argument:</p>
+This example shows some of the variations in localized date formats. In order to get
+the format of the language used in the user interface of your application, make sure to
+specify that language (and possibly some fallback languages) using the
+`locales` argument:
 
-<pre class="brush: js">var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+```js
+var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // formats below assume the local time zone of the locale;
 // America/Los_Angeles for the US
@@ -123,7 +124,7 @@ console.log(date.toLocaleDateString('fa-IR'));
 
 // Arabic in most Arabic speaking countries uses real Arabic digits
 console.log(date.toLocaleDateString('ar-EG'));
-// → "<span dir="rtl">٢٠‏/١٢‏/٢٠١٢</span>"
+// → "٢٠‏/١٢‏/٢٠١٢"
 
 // for Japanese, applications may want to use the Japanese calendar,
 // where 2012 was the year 24 of the Heisei era
@@ -134,14 +135,15 @@ console.log(date.toLocaleDateString('ja-JP-u-ca-japanese'));
 // Balinese, include a fallback language, in this case Indonesian
 console.log(date.toLocaleDateString(['ban', 'id']));
 // → "20/12/2012"
-</pre>
+```
 
-<h3 id="Using_options">Using options</h3>
+### Using options
 
-<p>The results provided by <code>toLocaleDateString()</code> can be customized using the
-  <code>options</code> argument:</p>
+The results provided by `toLocaleDateString()` can be customized using the
+`options` argument:
 
-<pre class="brush: js">var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+```js
+var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // request a weekday along with a long date
 var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
@@ -153,21 +155,19 @@ options.timeZone = 'UTC';
 options.timeZoneName = 'short';
 console.log(date.toLocaleDateString('en-US', options));
 // → "Thursday, December 20, 2012, UTC"
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}}</li>
-  <li>{{jsxref("Date.prototype.toLocaleString()")}}</li>
-  <li>{{jsxref("Date.prototype.toLocaleTimeString()")}}</li>
-  <li>{{jsxref("Date.prototype.toString()")}}</li>
-</ul>
+- {{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}}
+- {{jsxref("Date.prototype.toLocaleString()")}}
+- {{jsxref("Date.prototype.toLocaleTimeString()")}}
+- {{jsxref("Date.prototype.toString()")}}

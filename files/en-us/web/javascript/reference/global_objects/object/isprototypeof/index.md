@@ -10,61 +10,56 @@ tags:
   - isPrototype
 browser-compat: javascript.builtins.Object.isPrototypeOf
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <code><strong>isPrototypeOf()</strong></code> method checks if an object exists in
-  another object's prototype chain.</p>
+The **`isPrototypeOf()`** method checks if an object exists in
+another object's prototype chain.
 
-<div>{{EmbedInteractiveExample("pages/js/object-prototype-isprototypeof.html")}}</div>
+{{EmbedInteractiveExample("pages/js/object-prototype-isprototypeof.html")}}
 
-
-<div class="note">
-  <p><strong>Note:</strong> <code>isPrototypeOf()</code> differs from the {{jsxref("Operators/instanceof",
+> **Note:** `isPrototypeOf()` differs from the {{jsxref("Operators/instanceof",
     "instanceof")}} operator. In the expression
-    "<code>object instanceof AFunction</code>", the <code>object</code> prototype chain is
-    checked against <code>AFunction.prototype</code>, not against <code>AFunction</code>
-    itself.</p>
-</div>
+> "`object instanceof AFunction`", the `object` prototype chain is
+> checked against `AFunction.prototype`, not against `AFunction`
+> itself.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">isPrototypeOf(object)</pre>
+```js
+isPrototypeOf(object)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>object</var></code></dt>
-  <dd>The object whose prototype chain will be searched.</dd>
-</dl>
+- `object`
+  - : The object whose prototype chain will be searched.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref("Boolean")}} indicating whether the calling object lies in the prototype
-  chain of the specified object.</p>
+A {{jsxref("Boolean")}} indicating whether the calling object lies in the prototype
+chain of the specified object.
 
-<h3 id="Errors_thrown">Errors thrown</h3>
+### Errors thrown
 
-<dl>
-  <dt>{{jsxref("TypeError")}}</dt>
-  <dd>A {{jsxref("TypeError")}} is thrown if <code><var>prototypeObj</var></code> is
-    undefined or null.</dd>
-</dl>
+- {{jsxref("TypeError")}}
+  - : A {{jsxref("TypeError")}} is thrown if `prototypeObj` is
+    undefined or null.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The <code>isPrototypeOf()</code> method allows you to check whether or not an object
-  exists within another object's prototype chain.</p>
+The `isPrototypeOf()` method allows you to check whether or not an object
+exists within another object's prototype chain.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_isPrototypeOf">Using isPrototypeOf</h3>
+### Using isPrototypeOf
 
-<p>This example demonstrates that <code>Baz.prototype</code>,
-  <code>Bar.prototype</code>, <code>Foo.prototype</code> and <code>Object.prototype</code>
-  exist in the prototype chain for object <code>baz</code>:</p>
+This example demonstrates that `Baz.prototype`,
+`Bar.prototype`, `Foo.prototype` and `Object.prototype`
+exist in the prototype chain for object `baz`:
 
-<pre class="brush: js">function Foo() {}
+```js
+function Foo() {}
 function Bar() {}
 function Baz() {}
 
@@ -76,9 +71,9 @@ const bar = new Bar();
 const baz = new Baz();
 
 // prototype chains:
-// foo: Foo &lt;- Object
-// bar: Bar &lt;- Foo &lt;- Object
-// baz: Baz &lt;- Bar &lt;- Foo &lt;- Object
+// foo: Foo <- Object
+// bar: Bar <- Foo <- Object
+// baz: Baz <- Bar <- Foo <- Object
 console.log(Baz.prototype.isPrototypeOf(baz));    // true
 console.log(Baz.prototype.isPrototypeOf(bar));    // false
 console.log(Baz.prototype.isPrototypeOf(foo));    // false
@@ -87,33 +82,29 @@ console.log(Bar.prototype.isPrototypeOf(foo));    // false
 console.log(Foo.prototype.isPrototypeOf(baz));    // true
 console.log(Foo.prototype.isPrototypeOf(bar));    // true
 console.log(Object.prototype.isPrototypeOf(baz)); // true
-</pre>
+```
 
-<p>The <code>isPrototypeOf()</code> method — along with the {{jsxref("Operators/instanceof", "instanceof")}} operator — comes in particularly handy if you have code that can only function when dealing with objects descended from a specific prototype chain; e.g., to guarantee that certain methods or properties will be present on that object.</p>
+The `isPrototypeOf()` method — along with the {{jsxref("Operators/instanceof", "instanceof")}} operator — comes in particularly handy if you have code that can only function when dealing with objects descended from a specific prototype chain; e.g., to guarantee that certain methods or properties will be present on that object.
 
-<p>For example, to execute some code that’s only safe to run if a <code>baz</code> object has <code>Foo.prototype</code> in its prototype chain, you can do this:
-</p>
+For example, to execute some code that’s only safe to run if a `baz` object has `Foo.prototype` in its prototype chain, you can do this:
 
-<pre class="brush: js">if (Foo.prototype.isPrototypeOf(baz)) {
+```js
+if (Foo.prototype.isPrototypeOf(baz)) {
   // do something safe
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Operators/instanceof", "instanceof")}}</li>
-  <li>{{jsxref("Object.getPrototypeOf()")}}</li>
-  <li>
-    <div>{{jsxref("Object.setPrototypeOf()")}}</div>
-  </li>
-  <li>{{jsxref("Object/proto")}} </li>
-</ul>
+- {{jsxref("Operators/instanceof", "instanceof")}}
+- {{jsxref("Object.getPrototypeOf()")}}
+- {{jsxref("Object.setPrototypeOf()")}}
+- {{jsxref("Object/proto")}}

@@ -2,44 +2,43 @@
 title: ArrayBuffer.isView()
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/isView
 tags:
-- ArrayBuffer
-- JavaScript
-- Method
-- Reference
-- TypedArrays
+  - ArrayBuffer
+  - JavaScript
+  - Method
+  - Reference
+  - TypedArrays
 browser-compat: javascript.builtins.ArrayBuffer.isView
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>ArrayBuffer.isView()</code></strong> method determines whether the
-  passed value is one of the <code>ArrayBuffer</code> views, such as <a
-    href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray">typed array
-    objects</a> or a {{jsxref("DataView")}}.</p>
+The **`ArrayBuffer.isView()`** method determines whether the
+passed value is one of the `ArrayBuffer` views, such as [typed array
+objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) or a {{jsxref("DataView")}}.
 
-<div>{{EmbedInteractiveExample("pages/js/arraybuffer-isview.html","shorter")}}</div>
+{{EmbedInteractiveExample("pages/js/arraybuffer-isview.html","shorter")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+ArrayBuffer.isView(value)
+```
 
-<pre class="brush: js">ArrayBuffer.isView(<var>value</var>)</pre>
+### Parameters
 
-<h3 id="Parameters">Parameters</h3>
+- `value`
+  - : The value to be checked.
 
-<dl>
-  <dt><code><var>value</var></code></dt>
-  <dd>The value to be checked.</dd>
-</dl>
+### Return value
 
-<h3 id="Return_value">Return value</h3>
+`true` if the given argument is one of the {{jsxref("ArrayBuffer")}} views;
+otherwise, `false`.
 
-<p><code>true</code> if the given argument is one of the {{jsxref("ArrayBuffer")}} views;
-  otherwise, <code>false</code>.</p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Using isView
 
-<h3 id="Using_isView">Using isView</h3>
-
-<pre class="brush: js">ArrayBuffer.isView();                    // false
+```js
+ArrayBuffer.isView();                    // false
 ArrayBuffer.isView([]);                  // false
 ArrayBuffer.isView({});                  // false
 ArrayBuffer.isView(null);                // false
@@ -53,18 +52,16 @@ ArrayBuffer.isView(new Int8Array(10).subarray(0, 3)); // true
 const buffer = new ArrayBuffer(2);
 const dv = new DataView(buffer);
 ArrayBuffer.isView(dv); // true
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/JavaScript/Typed_arrays">JavaScript typed arrays</a></li>
-</ul>
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)

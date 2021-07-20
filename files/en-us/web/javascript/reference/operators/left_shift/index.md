@@ -9,51 +9,52 @@ tags:
   - Reference
 browser-compat: javascript.operators.left_shift
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>The <strong>left shift operator (<code>&lt;&lt;</code>)</strong> shifts the first operand the specified number of bits to the left. Excess bits shifted off to the left are discarded. Zero bits are shifted in from the right.</p>
+The **left shift operator (`<<`)** shifts the first operand the specified number of bits to the left. Excess bits shifted off to the left are discarded. Zero bits are shifted in from the right.
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-left-shift.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-left-shift.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+a << b
+```
 
-<pre class="brush: js">a &lt;&lt; b</pre>
+## Description
 
-<h2 id="Description">Description</h2>
+This operator shifts the first operand the specified number of bits to the left. Excess bits shifted off to the left are discarded. Zero bits are shifted in from the right.
 
-<p>This operator shifts the first operand the specified number of bits to the left. Excess bits shifted off to the left are discarded. Zero bits are shifted in from the right.</p>
+For example, `9 << 2` yields 36:
 
-<p>For example, <code>9 &lt;&lt; 2</code> yields 36:</p>
-
-<pre class="brush: js">.    9 (base 10): 00000000000000000000000000001001 (base 2)
+```js
+.    9 (base 10): 00000000000000000000000000001001 (base 2)
                   --------------------------------
-9 &lt;&lt; 2 (base 10): 00000000000000000000000000100100 (base 2) = 36 (base 10)
-</pre>
+9 << 2 (base 10): 00000000000000000000000000100100 (base 2) = 36 (base 10)
+```
 
-<p>Bitwise shifting any number <code>x</code> to the left by <code>y</code> bits yields <code>x * 2 ** y</code>.<br>
- So e.g.: <code>9 &lt;&lt; 3</code> translates to: <code>9 * (2 ** 3) = 9 * (8) = 72</code>.</p>
+Bitwise shifting any number `x` to the left by `y` bits yields `x * 2 ** y`.
+So e.g.: `9 << 3` translates to: `9 * (2 ** 3) = 9 * (8) = 72`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_left_shift">Using left shift</h3>
+### Using left shift
 
-<pre class="brush: js">9 &lt;&lt; 3; // 72
+```js
+9 << 3; // 72
 
 // 9 * (2 ** 3) = 9 * (8) = 72
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Bitwise">Bitwise operators in the JS guide</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Left_shift_assignment">Left shift assignment operator</a></li>
-</ul>
+- [Bitwise operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Bitwise)
+- [Left shift assignment operator](/en-US/docs/Web/JavaScript/Reference/Operators/Left_shift_assignment)

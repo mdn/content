@@ -2,71 +2,67 @@
 title: Set() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Set/Set
 tags:
-- Constructor
-- JavaScript
-- Reference
-- set
-- Polyfill
+  - Constructor
+  - JavaScript
+  - Reference
+  - set
+  - Polyfill
 browser-compat: javascript.builtins.Set.Set
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><span class="seoSummary">The <strong><code>Set</code> constructor</strong> lets you
-    create <code>Set</code> objects that store unique values of any type, whether <a
-      href="/en-US/docs/Glossary/Primitive">primitive values</a> or object
-    references.</span></p>
+The **`Set` constructor** lets you
+create `Set` objects that store unique values of any type, whether [primitive values](/en-US/docs/Glossary/Primitive) or object
+references.
 
-<div>{{EmbedInteractiveExample("pages/js/set-prototype-constructor.html")}}</div>
+{{EmbedInteractiveExample("pages/js/set-prototype-constructor.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 new Set()
 new Set(iterable)
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>iterable</var></code> {{optional_inline}}</dt>
-  <dd>
-    <p>If an <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...of">iterable
-        object</a> is passed, all of its elements will be added to the new
-      <code>Set</code>.</p>
+- `iterable` {{optional_inline}}
 
-    <p>If you don't specify this parameter, or its value is <code>null</code>, the new
-      <code>Set</code> is empty.</p>
-  </dd>
-</dl>
+  - : If an [iterable
+    object](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) is passed, all of its elements will be added to the new
+    `Set`.
 
-<h3 id="Return_value">Return value</h3>
+    If you don't specify this parameter, or its value is `null`, the new
+    `Set` is empty.
 
-<p>A new <code>Set</code> object.</p>
+### Return value
 
-<h2 id="Examples">Examples</h2>
+A new `Set` object.
 
-<h3 id="Using_the_Set_object">Using the <code>Set</code> object</h3>
+## Examples
 
-<pre class="brush: js">let mySet = new Set()
+### Using the `Set` object
+
+```js
+let mySet = new Set()
 
 mySet.add(1)           // Set [ 1 ]
 mySet.add(5)           // Set [ 1, 5 ]
 mySet.add(5)           // Set [ 1, 5 ]
 mySet.add('some text') // Set [ 1, 5, 'some text' ]
 let o = {a: 1, b: 2}
-mySet.add(o)</pre>
+mySet.add(o)
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>A polyfill of <code>Set</code> is available in <a href="https://github.com/zloirock/core-js#set"><code>core-js</code></a></li>
-  <li>{{jsxref("Set")}}</li>
-</ul>
+- A polyfill of `Set` is available in [`core-js`](https://github.com/zloirock/core-js#set)
+- {{jsxref("Set")}}

@@ -2,82 +2,83 @@
 title: Array.prototype.copyWithin()
 slug: Web/JavaScript/Reference/Global_Objects/Array/copyWithin
 tags:
-- Array
-- ECMAScript 2015
-- JavaScript
-- Method
-- Prototype
-- Reference
-- Polyfill
+  - Array
+  - ECMAScript 2015
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
+  - Polyfill
 browser-compat: javascript.builtins.Array.copyWithin
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <code><strong>copyWithin()</strong></code> method shallow copies part of an array
-  to another location in the same array and returns it without modifying its length.</p>
+The **`copyWithin()`** method shallow copies part of an array
+to another location in the same array and returns it without modifying its length.
 
-<div>{{EmbedInteractiveExample("pages/js/array-copywithin.html")}}</div>
+{{EmbedInteractiveExample("pages/js/array-copywithin.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 copyWithin(target)
 copyWithin(target, start)
 copyWithin(target, start, end)
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>target</code></dt>
-  <dd>
-    <p>Zero-based index at which to copy the sequence to. If negative, <code>target</code>
-    will be counted from the end.</p>
-    <p>If <code>target</code> is at or greater than <code>arr.length</code>, nothing will
-    be copied. If <code>target</code> is positioned after <code>start</code>, the copied
-    sequence will be trimmed to fit <code>arr.length</code>.</p>
-  </dd>
-  <dt><code>start</code> {{optional_inline}}</dt>
-  <dd>
-    <p>Zero-based index at which to start copying elements from. If negative,
-    <code>start</code> will be counted from the end.</p>
-    <p>If <code>start</code> is omitted, <code>copyWithin</code> will copy from index
-    <code>0</code>.</p>
-  </dd>
-  <dt><code>end</code> {{optional_inline}}</dt>
-  <dd>
-    <p>Zero-based index at which to end copying elements from. <code>copyWithin</code>
-    copies up to but not including <code>end</code>. If negative, <code>end</code> will be
-    counted from the end.</p>
-    <p>If <code>end</code> is omitted, <code>copyWithin</code> will copy until the last
-    index (default to <code>arr.length</code>).</p>
-  </dd>
-</dl>
+- `target`
 
-<h3 id="Return_value">Return value</h3>
+  - : Zero-based index at which to copy the sequence to. If negative, `target`
+    will be counted from the end.
 
-<p>The modified array.</p>
+    If `target` is at or greater than `arr.length`, nothing will
+    be copied. If `target` is positioned after `start`, the copied
+    sequence will be trimmed to fit `arr.length`.
 
-<h2 id="Description">Description</h2>
+- `start` {{optional_inline}}
 
-<p>The <code>copyWithin</code> works like C and C++'s <code>memmove</code>, and is a
-  high-performance method to shift the data of an {{jsxref("Array")}}. This especially
-  applies to the {{jsxref("TypedArray/copyWithin", "TypedArray")}} method of the same
-  name. The sequence is copied and pasted as one operation; pasted sequence will have the
-  copied values even when the copy and paste region overlap.</p>
+  - : Zero-based index at which to start copying elements from. If negative,
+    `start` will be counted from the end.
 
-<p>The <code>copyWithin</code> function is intentionally <em>generic</em>, it does not
-  require that its <code>this</code> value be an {{jsxref("Array")}} object.</p>
+    If `start` is omitted, `copyWithin` will copy from index
+    `0`.
 
-<p>The <code>copyWithin</code> method is a mutable method. It does not alter the length of
-  <code>this</code>, but it will change its content and create new properties, if
-  necessary.</p>
+- `end` {{optional_inline}}
 
-<h2 id="Examples">Examples</h2>
+  - : Zero-based index at which to end copying elements from. `copyWithin`
+    copies up to but not including `end`. If negative, `end` will be
+    counted from the end.
 
-<h3 id="Using_copyWithin">Using copyWithin</h3>
+    If `end` is omitted, `copyWithin` will copy until the last
+    index (default to `arr.length`).
 
-<pre class="brush: js">[1, 2, 3, 4, 5].copyWithin(-2)
+### Return value
+
+The modified array.
+
+## Description
+
+The `copyWithin` works like C and C++'s `memmove`, and is a
+high-performance method to shift the data of an {{jsxref("Array")}}. This especially
+applies to the {{jsxref("TypedArray/copyWithin", "TypedArray")}} method of the same
+name. The sequence is copied and pasted as one operation; pasted sequence will have the
+copied values even when the copy and paste region overlap.
+
+The `copyWithin` function is intentionally _generic_, it does not
+require that its `this` value be an {{jsxref("Array")}} object.
+
+The `copyWithin` method is a mutable method. It does not alter the length of
+`this`, but it will change its content and create new properties, if
+necessary.
+
+## Examples
+
+### Using copyWithin
+
+```js
+[1, 2, 3, 4, 5].copyWithin(-2)
 // [1, 2, 3, 1, 2]
 
 [1, 2, 3, 4, 5].copyWithin(0, 3)
@@ -101,21 +102,19 @@ i32a.copyWithin(0, 2)
 // On platforms that are not yet ES2015 compliant:
 [].copyWithin.call(new Int32Array([1, 2, 3, 4, 5]), 0, 3, 4);
 // Int32Array [4, 2, 3, 4, 5]
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>A polyfill of <code>Array.prototype.copyWithin</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-array"><code>core-js</code></a></li>
-  <li><a href="https://github.com/behnammodi/polyfill/blob/master/array.polyfill.js">A
-    polyfill</a></li>
-  <li>{{jsxref("Array")}}</li>
-</ul>
+- A polyfill of `Array.prototype.copyWithin` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [A
+  polyfill](https://github.com/behnammodi/polyfill/blob/master/array.polyfill.js)
+- {{jsxref("Array")}}

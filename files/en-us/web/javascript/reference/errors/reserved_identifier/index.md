@@ -7,85 +7,84 @@ tags:
   - JavaScript
   - SyntaxError
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<p>The JavaScript exception "<em>variable</em> is a reserved identifier" occurs when <a
-    href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#keywords">reserved
-    keywords</a> are used as identifiers.</p>
+The JavaScript exception "_variable_ is a reserved identifier" occurs when [reserved
+keywords](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#keywords) are used as identifiers.
 
-<h2 id="Message">Message</h2>
+## Message
 
-<pre class="brush: js">SyntaxError: The use of a future reserved word for an identifier is invalid (Edge)
+```js
+SyntaxError: The use of a future reserved word for an identifier is invalid (Edge)
 SyntaxError: "x" is a reserved identifier (Firefox)
-SyntaxError: Unexpected reserved word (Chrome)</pre>
+SyntaxError: Unexpected reserved word (Chrome)
+```
 
-<h2 id="Error_type">Error type</h2>
+## Error type
 
-<p>{{jsxref("SyntaxError")}}</p>
+{{jsxref("SyntaxError")}}
 
-<h2 id="What_went_wrong">What went wrong?</h2>
+## What went wrong?
 
-<p><a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#keywords">Reserved
-    keywords</a> will throw in if they are used as identifiers. These are reserved in
-  strict mode and sloppy mode:</p>
+[Reserved
+keywords](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#keywords) will throw in if they are used as identifiers. These are reserved in
+strict mode and sloppy mode:
 
-<ul>
-  <li><code>enum</code></li>
-</ul>
+- `enum`
 
-<p>The following are only reserved when they are found in strict mode code:</p>
+The following are only reserved when they are found in strict mode code:
 
-<ul class="threecolumns">
-  <li><code>implements</code></li>
-  <li><code>interface</code></li>
-  <li>{{jsxref("Statements/let", "let")}}</li>
-  <li><code>package</code></li>
-  <li><code>private</code></li>
-  <li><code>protected</code></li>
-  <li><code>public</code></li>
-  <li><code>static</code></li>
-</ul>
+- `implements`
+- `interface`
+- {{jsxref("Statements/let", "let")}}
+- `package`
+- `private`
+- `protected`
+- `public`
+- `static`
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Strict_and_non-strict_reserved_keywords">Strict and non-strict reserved keywords
-</h3>
+### Strict and non-strict reserved keywords
 
-<p>The <code>enum</code> identifier is generally reserved.</p>
+The `enum` identifier is generally reserved.
 
-<pre class="brush: js example-bad">var enum = { RED: 0, GREEN: 1, BLUE: 2 };
+```js example-bad
+var enum = { RED: 0, GREEN: 1, BLUE: 2 };
 // SyntaxError: enum is a reserved identifier
-</pre>
+```
 
-<p>In strict mode code, more identifiers are reserved.</p>
+In strict mode code, more identifiers are reserved.
 
-<pre class="brush: js example-bad">"use strict";
+```js example-bad
+"use strict";
 var package = ["potatoes", "rice", "fries"];
 // SyntaxError: package is a reserved identifier
-</pre>
+```
 
-<p>You'll need to rename these variables.</p>
+You'll need to rename these variables.
 
-<pre class="brush: js example-good">var colorEnum = { RED: 0, GREEN: 1, BLUE: 2 };
-var list = ["potatoes", "rice", "fries"];</pre>
+```js example-good
+var colorEnum = { RED: 0, GREEN: 1, BLUE: 2 };
+var list = ["potatoes", "rice", "fries"];
+```
 
-<h3 id="Update_older_browsers">Update older browsers</h3>
+### Update older browsers
 
-<p>If you are using an older browser that does not yet implement
-  <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/let">let</a></code> or
-  <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/class">class</a></code>,
-  for example, you should update to a more recent browser version that does support these
-  new language features.</p>
+If you are using an older browser that does not yet implement
+[`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) or
+[`class`](/en-US/docs/Web/JavaScript/Reference/Statements/class),
+for example, you should update to a more recent browser version that does support these
+new language features.
 
-<pre class="brush: js">"use strict";
+```js
+"use strict";
 class DocArchiver {}
 
 // SyntaxError: class is a reserved identifier
 // (throws in older browsers only, e.g. Firefox 44 and older)
-</pre>
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="https://wiki.c2.com/?GoodVariableNames">Good variable names</a></li>
-</ul>
+- [Good variable names](https://wiki.c2.com/?GoodVariableNames)

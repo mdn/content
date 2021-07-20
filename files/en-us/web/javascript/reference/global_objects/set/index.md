@@ -12,83 +12,73 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Set
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><span class="seoSummary">The <strong><code>Set</code></strong> object lets you store unique values of any type, whether {{Glossary("Primitive", "primitive values")}} or object references.</span></p>
+The **`Set`** object lets you store unique values of any type, whether {{Glossary("Primitive", "primitive values")}} or object references.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p><code>Set</code> objects are collections of values. You can iterate through the elements of a set in insertion order. A value in the <code>Set</code> <strong>may only occur once</strong>; it is unique in the <code>Set</code>'s collection.</p>
+`Set` objects are collections of values. You can iterate through the elements of a set in insertion order. A value in the `Set` **may only occur once**; it is unique in the `Set`'s collection.
 
-<h3 id="Value_equality">Value equality</h3>
+### Value equality
 
-<p>Because each value in the <code>Set</code> has to be unique, the value equality will be checked. In an earlier version of ECMAScript specification, this was not based on the same algorithm as the one used in the <code>===</code> operator. Specifically, for <code>Set</code>s, <code>+0</code> (which is strictly equal to <code>-0</code>) and <code>-0</code> were different values. However, this was changed in the ECMAScript 2015 specification. See <em>"Key equality for -0 and 0"</em> in the <a href="#browser_compatibility">browser compatibility</a> table for details.</p>
+Because each value in the `Set` has to be unique, the value equality will be checked. In an earlier version of ECMAScript specification, this was not based on the same algorithm as the one used in the `===` operator. Specifically, for `Set`s, `+0` (which is strictly equal to `-0`) and `-0` were different values. However, this was changed in the ECMAScript 2015 specification. See _"Key equality for -0 and 0"_ in the [browser compatibility](#browser_compatibility) table for details.
 
-<p>{{jsxref("NaN")}} and {{jsxref("undefined")}} can also be stored in a Set. All <code>NaN</code> values are equated (i.e. <code>NaN</code> is considered the same as <code>NaN</code>, even though <code>NaN !== NaN</code>).</p>
+{{jsxref("NaN")}} and {{jsxref("undefined")}} can also be stored in a Set. All `NaN` values are equated (i.e. `NaN` is considered the same as `NaN`, even though `NaN !== NaN`).
 
-<h3 id="performance">Performance</h3>
-<p>The <code>Set</code> <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/has"><code>has</code></a> method checks if a value is in a <code>Set</code> object, using an approach that is, on average, quicker than testing most of the elements that have previously been added to the <code>Set</code> object. In particular, it is, on average, faster than the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes"><code>Array.prototype.includes</code></a> method when an <code>Array</code> object has a <code>length</code> equal to a <code>Set</code> object’s <code>size</code>.</p>
+### Performance
 
-<h2 id="Constructor">Constructor</h2>
+The `Set` [`has`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/has) method checks if a value is in a `Set` object, using an approach that is, on average, quicker than testing most of the elements that have previously been added to the `Set` object. In particular, it is, on average, faster than the [`Array.prototype.includes`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) method when an `Array` object has a `length` equal to a `Set` object’s `size`.
 
-<dl>
- <dt>{{jsxref("Set/Set", "Set()")}}</dt>
- <dd>Creates a new <code>Set</code> object.</dd>
-</dl>
+## Constructor
 
-<h2 id="Static_properties">Static properties</h2>
+- {{jsxref("Set/Set", "Set()")}}
+  - : Creates a new `Set` object.
 
-<dl>
- <dt>{{jsxref("Set.@@species", "get Set[@@species]")}}</dt>
- <dd>The constructor function that is used to create derived objects.</dd>
-</dl>
+## Static properties
 
-<h2 id="Instance_properties">Instance properties</h2>
+- {{jsxref("Set.@@species", "get Set[@@species]")}}
+  - : The constructor function that is used to create derived objects.
 
-<dl>
- <dt>{{jsxref("Set.prototype.size")}}</dt>
- <dd>Returns the number of values in the <code>Set</code> object.</dd>
-</dl>
+## Instance properties
 
-<h2 id="Instance_methods">Instance methods</h2>
+- {{jsxref("Set.prototype.size")}}
+  - : Returns the number of values in the `Set` object.
 
-<dl>
- <dt>{{jsxref("Set.add", "Set.prototype.add(<var>value</var>)")}}</dt>
- <dd>Appends <code><var>value</var></code> to the <code>Set</code> object. Returns the <code>Set</code> object with added value.</dd>
- <dt>{{jsxref("Set.prototype.clear()")}}</dt>
- <dd>Removes all elements from the <code>Set</code> object.</dd>
- <dt>{{jsxref("Set.delete", "Set.prototype.delete(<var>value</var>)")}}</dt>
- <dd>Removes the element associated to the <code><var>value</var></code> and returns a boolean asserting whether an element was successfully removed or not. <code>Set.prototype.has(<var>value</var>)</code> will return <code>false</code> afterwards.</dd>
- <dt>{{jsxref("Set.has", "Set.prototype.has(<var>value</var>)")}}</dt>
- <dd>Returns a boolean asserting whether an element is present with the given value in the <code>Set</code> object or not.</dd>
-</dl>
+## Instance methods
 
-<h3 id="Iteration_methods">Iteration methods</h3>
+- {{jsxref("Set.add", "Set.prototype.add(<var>value</var>)")}}
+  - : Appends `value` to the `Set` object. Returns the `Set` object with added value.
+- {{jsxref("Set.prototype.clear()")}}
+  - : Removes all elements from the `Set` object.
+- {{jsxref("Set.delete", "Set.prototype.delete(<var>value</var>)")}}
+  - : Removes the element associated to the `value` and returns a boolean asserting whether an element was successfully removed or not. `Set.prototype.has(value)` will return `false` afterwards.
+- {{jsxref("Set.has", "Set.prototype.has(<var>value</var>)")}}
+  - : Returns a boolean asserting whether an element is present with the given value in the `Set` object or not.
 
-<dl>
- <dt>{{jsxref("Set.prototype.@@iterator()", "Set.prototype[@@iterator]()")}}</dt>
- <dd>Returns a new iterator object that yields the <strong>values</strong> for each element in the <code>Set</code> object in insertion order.</dd>
- <dt>{{jsxref("Set.prototype.values()")}}</dt>
- <dd>Returns a new iterator object that yields the <strong>values</strong> for each element in the <code>Set</code> object in insertion order.</dd>
+### Iteration methods
 
- <dt>{{jsxref("Set.prototype.keys()")}}</dt>
- <dd>An alias for {{jsxref("Set.prototype.values()")}}.</dd>
+- {{jsxref("Set.prototype.@@iterator()", "Set.prototype[@@iterator]()")}}
+  - : Returns a new iterator object that yields the **values** for each element in the `Set` object in insertion order.
+- {{jsxref("Set.prototype.values()")}}
+  - : Returns a new iterator object that yields the **values** for each element in the `Set` object in insertion order.
+- {{jsxref("Set.prototype.keys()")}}
+  - : An alias for {{jsxref("Set.prototype.values()")}}.
+- {{jsxref("Set.prototype.entries()")}}
 
- <dt>{{jsxref("Set.prototype.entries()")}}</dt>
- <dd>
- <p>Returns a new iterator object that contains <strong>an array of <code>[<var>value</var>, <var>value</var>]</code></strong> for each element in the <code>Set</code> object, in insertion order.</p>
+  - : Returns a new iterator object that contains **an array of `[value, value]`** for each element in the `Set` object, in insertion order.
 
- <p>This is similar to the {{jsxref("Map")}} object, so that each entry's <em>key</em> is the same as its <em>value</em> for a <code>Set</code>.</p>
- </dd>
- <dt>{{jsxref("Set.forEach", "Set.prototype.forEach(<var>callbackFn</var>[, <var>thisArg</var>])")}}</dt>
- <dd>Calls <code><var>callbackFn</var></code> once for each value present in the <code>Set</code> object, in insertion order. If a <code><var>thisArg</var></code> parameter is provided, it will be used as the <code>this</code> value for each invocation of <code><var>callbackFn</var></code>.</dd>
-</dl>
+    This is similar to the {{jsxref("Map")}} object, so that each entry's _key_ is the same as its _value_ for a `Set`.
 
-<h2 id="Examples">Examples</h2>
+- {{jsxref("Set.forEach", "Set.prototype.forEach(<var>callbackFn</var>[, <var>thisArg</var>])")}}
+  - : Calls `callbackFn` once for each value present in the `Set` object, in insertion order. If a `thisArg` parameter is provided, it will be used as the `this` value for each invocation of `callbackFn`.
 
-<h3 id="Using_the_Set_object">Using the Set object</h3>
+## Examples
 
-<pre class="brush: js">const mySet1 = new Set()
+### Using the Set object
+
+```js
+const mySet1 = new Set()
 
 mySet1.add(1)           // Set [ 1 ]
 mySet1.add(5)           // Set [ 1, 5 ]
@@ -116,11 +106,12 @@ mySet1.size         // 4, since we just removed one value
 console.log(mySet1)
 // logs Set(4) [ 1, "some text", {…}, {…} ] in Firefox
 // logs Set(4) { 1, "some text", {…}, {…} } in Chrome
-</pre>
+```
 
-<h3 id="Iterating_Sets">Iterating Sets</h3>
+### Iterating Sets
 
-<pre class="brush: js">// iterate over items in set
+```js
+// iterate over items in set
 // logs the items in the order: 1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}
 for (let item of mySet1) console.log(item)
 
@@ -134,7 +125,7 @@ for (let item of mySet1.values()) console.log(item)
 // (key and value are the same here)
 for (let [key, value] of mySet1.entries()) console.log(key)
 
-// convert Set object to an Array object, with <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from">Array.from</a>
+// convert Set object to an Array object, with Array.from
 const myArr = Array.from(mySet1) // [1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}]
 
 // the following will also work if run in an HTML document
@@ -147,10 +138,10 @@ mySet2.size                    // 4
 [...mySet2]                    // [1, 2, 3, 4]
 
 // intersect can be simulated via
-const intersection = new Set([...mySet1].filter(x =&gt; mySet2.has(x)))
+const intersection = new Set([...mySet1].filter(x => mySet2.has(x)))
 
 // difference can be simulated via
-const difference = new Set([...mySet1].filter(x =&gt; !mySet2.has(x)))
+const difference = new Set([...mySet1].filter(x => !mySet2.has(x)))
 
 // Iterate set entries with forEach()
 mySet1.forEach(function(value) {
@@ -160,11 +151,13 @@ mySet1.forEach(function(value) {
 // 1
 // 2
 // 3
-// 4</pre>
+// 4
+```
 
-<h3 id="Implementing_basic_set_operations">Implementing basic set operations</h3>
+### Implementing basic set operations
 
-<pre class="brush: js">function isSuperset(set, subset) {
+```js
+function isSuperset(set, subset) {
     for (let elem of subset) {
         if (!set.has(elem)) {
             return false
@@ -221,12 +214,12 @@ union(setA, setC)               // returns Set {1, 2, 3, 4, 5, 6}
 intersection(setA, setC)        // returns Set {3, 4}
 symmetricDifference(setA, setC) // returns Set {1, 2, 5, 6}
 difference(setA, setC)          // returns Set {1, 2}
+```
 
-</pre>
+### Relation with Array objects
 
-<h3 id="Relation_with_Array_objects">Relation with Array objects</h3>
-
-<pre class="brush: js">let myArray = ['value1', 'value2', 'value3']
+```js
+let myArray = ['value1', 'value2', 'value3']
 
 // Use the regular Set constructor to transform an Array into a Set
 let mySet = new Set(myArray)
@@ -235,54 +228,57 @@ mySet.has('value1')     // returns true
 
 // Use the spread operator to transform a set into an Array.
 console.log([...mySet]) // Will show you exactly the same Array as myArray
-</pre>
+```
 
-<h3 id="Remove_duplicate_elements_from_the_array">Remove duplicate elements from the array</h3>
+### Remove duplicate elements from the array
 
-<pre class="brush: js">// Use to remove duplicate elements from the array
+```js
+// Use to remove duplicate elements from the array
 
 const numbers = [2,3,4,4,2,3,3,4,4,5,5,6,6,7,5,32,3,4,5]
 
 console.log([...new Set(numbers)])
 
-// [2, 3, 4, 5, 6, 7, 32]</pre>
+// [2, 3, 4, 5, 6, 7, 32]
+```
 
-<h3 id="Relation_with_Strings">Relation with Strings</h3>
+### Relation with Strings
 
-<pre class="brush: js">let text = 'India'
+```js
+let text = 'India'
 
 const mySet = new Set(text)  // Set(5) {'I', 'n', 'd', 'i', 'a'}
 mySet.size  // 5
 
-//case sensitive &amp; duplicate omission
+//case sensitive & duplicate omission
 new Set("Firefox")  // Set(7) { "F", "i", "r", "e", "f", "o", "x" }
 new Set("firefox")  // Set(6) { "f", "i", "r", "e", "o", "x" }
-</pre>
+```
 
-<h3 id="Use_Set_to_ensure_the_uniqueness_of_a_list_of_values">Use Set to ensure the uniqueness of a list of values</h3>
+### Use Set to ensure the uniqueness of a list of values
 
-<pre class="brush: js">const array = Array
+```js
+const array = Array
   .from(document.querySelectorAll('[id]'))
   .map(function(e) {
       return e.id
   });
 
 const set = new Set(array);
-console.assert(set.size == array.length);</pre>
+console.assert(set.size == array.length);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>A polyfill of <code>Set</code> is available in <a href="https://github.com/zloirock/core-js#set"><code>core-js</code></a></li>
- <li>{{jsxref("Map")}}</li>
- <li>{{jsxref("WeakMap")}}</li>
- <li>{{jsxref("WeakSet")}}</li>
-</ul>
+- A polyfill of `Set` is available in [`core-js`](https://github.com/zloirock/core-js#set)
+- {{jsxref("Map")}}
+- {{jsxref("WeakMap")}}
+- {{jsxref("WeakSet")}}

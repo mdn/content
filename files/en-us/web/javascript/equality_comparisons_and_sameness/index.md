@@ -13,40 +13,35 @@ tags:
   - SameValueZero
   - Sameness
 ---
-<div>{{jsSidebar("Intermediate")}}</div>
+{{jsSidebar("Intermediate")}}
 
-<p>There are four equality algorithms in ES2015:</p>
+There are four equality algorithms in ES2015:
 
-<ul>
- <li>Abstract Equality Comparison (<code>==</code>)</li>
- <li>Strict Equality Comparison (<code>===</code>): used by <code>Array.prototype.indexOf</code>, <code>Array.prototype.lastIndexOf</code>, and <code>case</code>-matching</li>
- <li>SameValueZero: used by <code>%TypedArray%</code> and <code>ArrayBuffer</code> constructors, as well as <code>Map</code> and <code>Set</code> operations, and also <code>String.prototype.includes </code>and <code>Array.prototype.includes</code> since ES2016</li>
- <li>SameValue: used in all other places</li>
-</ul>
+- Abstract Equality Comparison (`==`)
+- Strict Equality Comparison (`===`): used by `Array.prototype.indexOf`, `Array.prototype.lastIndexOf`, and `case`-matching
+- SameValueZero: used by `%TypedArray%` and `ArrayBuffer` constructors, as well as `Map` and `Set` operations, and also `String.prototype.includes `and `Array.prototype.includes` since ES2016
+- SameValue: used in all other places
 
-<p>JavaScript provides three different value-comparison operations:</p>
+JavaScript provides three different value-comparison operations:
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators#identity">===</a> - Strict Equality Comparison ("strict equality", "identity", "triple equals")</li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators#equality_operators">==</a> - Abstract Equality Comparison ("loose equality", "double equals")</li>
- <li>{{jsxref("Object.is")}} provides SameValue (new in ES2015).</li>
-</ul>
+- [===](/en-US/docs/Web/JavaScript/Reference/Operators#identity) - Strict Equality Comparison ("strict equality", "identity", "triple equals")
+- [==](/en-US/docs/Web/JavaScript/Reference/Operators#equality_operators) - Abstract Equality Comparison ("loose equality", "double equals")
+- {{jsxref("Object.is")}} provides SameValue (new in ES2015).
 
-<p>Which operation you choose depends on what sort of comparison you are looking to perform. Briefly:</p>
+Which operation you choose depends on what sort of comparison you are looking to perform. Briefly:
 
-<ul>
- <li>double equals (<code>==</code>) will perform a type conversion when comparing two things, and will handle <code>NaN</code>, <code>-0</code>, and <code>+0</code> specially to conform to IEEE 754 (so <code>NaN != NaN</code>, and <code>-0 == +0</code>);</li>
- <li>triple equals (<code>===</code>) will do the same comparison as double equals (including the special handling for <code>NaN</code>, <code>-0</code>, and <code>+0</code>) but without type conversion; if the types differ, <code>false</code> is returned.</li>
- <li><code>Object.is</code> does no type conversion and no special handling for <code>NaN</code>, <code>-0</code>, and <code>+0</code> (giving it the same behavior as <code>===</code> except on those special numeric values).</li>
-</ul>
+- double equals (`==`) will perform a type conversion when comparing two things, and will handle `NaN`, `-0`, and `+0` specially to conform to IEEE 754 (so `NaN != NaN`, and `-0 == +0`);
+- triple equals (`===`) will do the same comparison as double equals (including the special handling for `NaN`, `-0`, and `+0`) but without type conversion; if the types differ, `false` is returned.
+- `Object.is` does no type conversion and no special handling for `NaN`, `-0`, and `+0` (giving it the same behavior as `===` except on those special numeric values).
 
-<p>Note that the distinction between these all have to do with their handling of primitives; none of them compares whether the parameters are conceptually similar in structure. For any non-primitive objects <code>x</code> and <code>y</code> which have the same structure but are distinct objects themselves, all of the above forms will evaluate to <code>false</code>.</p>
+Note that the distinction between these all have to do with their handling of primitives; none of them compares whether the parameters are conceptually similar in structure. For any non-primitive objects `x` and `y` which have the same structure but are distinct objects themselves, all of the above forms will evaluate to `false`.
 
-<h2 id="Strict_equality_using">Strict equality using <code>===</code></h2>
+## Strict equality using `===`
 
-<p>Strict equality compares two values for equality. Neither value is implicitly converted to some other value before being compared. If the values have different types, the values are considered unequal. If the values have the same type, are not numbers, and have the same value, they're considered equal. Finally, if both values are numbers, they're considered equal if they're both not <code>NaN</code> and are the same value, or if one is <code>+0</code> and one is <code>-0</code>.</p>
+Strict equality compares two values for equality. Neither value is implicitly converted to some other value before being compared. If the values have different types, the values are considered unequal. If the values have the same type, are not numbers, and have the same value, they're considered equal. Finally, if both values are numbers, they're considered equal if they're both not `NaN` and are the same value, or if one is `+0` and one is `-0`.
 
-<pre class="brush: js">var num = 0;
+```js
+var num = 0;
 var obj = new String('0');
 var str = '0';
 
@@ -60,150 +55,65 @@ console.log(obj === str); // false
 console.log(null === undefined); // false
 console.log(obj === null); // false
 console.log(obj === undefined); // false
-</pre>
+```
 
-<p>Strict equality is almost always the correct comparison operation to use. For all values except numbers, it uses the obvious semantics: a value is only equal to itself. For numbers it uses slightly different semantics to gloss over two different edge cases. The first is that floating point zero is either positively or negatively signed. This is useful in representing certain mathematical solutions, but as most situations don't care about the difference between <code>+0</code> and <code>-0</code>, strict equality treats them as the same value. The second is that floating point includes the concept of a not-a-number value, <code>NaN</code>, to represent the solution to certain ill-defined mathematical problems: negative infinity added to positive infinity, for example. Strict equality treats <code>NaN</code> as unequal to every other value -- including itself. (The only case in which <code>(x !== x)</code> is <code>true</code> is when <code>x</code> is <code>NaN</code>.)</p>
+Strict equality is almost always the correct comparison operation to use. For all values except numbers, it uses the obvious semantics: a value is only equal to itself. For numbers it uses slightly different semantics to gloss over two different edge cases. The first is that floating point zero is either positively or negatively signed. This is useful in representing certain mathematical solutions, but as most situations don't care about the difference between `+0` and `-0`, strict equality treats them as the same value. The second is that floating point includes the concept of a not-a-number value, `NaN`, to represent the solution to certain ill-defined mathematical problems: negative infinity added to positive infinity, for example. Strict equality treats `NaN` as unequal to every other value -- including itself. (The only case in which `(x !== x)` is `true` is when `x` is `NaN`.)
 
-<h2 id="Loose_equality_using">Loose equality using ==</h2>
+## Loose equality using ==
 
-<p>The behavior for performing loose equality using <code>==</code> is as follows:</p>
+The behavior for performing loose equality using `==` is as follows:
 
-<ul>
-  <li>Loose equality compares two values for equality <em>after</em> converting both values to a common type. After conversions (one or both sides may undergo conversions), the final equality comparison is performed exactly as <code>===</code> performs it.</li>
+- Loose equality compares two values for equality _after_ converting both values to a common type. After conversions (one or both sides may undergo conversions), the final equality comparison is performed exactly as `===` performs it.
+- Loose equality is _symmetric_: `A == B` always has identical semantics to `B == A` for any values of `A` and `B` (except for the order of applied conversions).
+- `undefined` and `null` are loosely equal; that is, `undefined == null` is true, and `null == undefined` is true
 
-  <li>Loose equality is <em>symmetric</em>: <code>A == B</code> always has identical semantics to <code>B == A</code> for any values of <code>A</code> and <code>B</code> (except for the order of applied conversions).</li>
+Traditionally, and according to ECMAScript, all primitives and objects are loosely unequal to `undefined` and `null`. But most browsers permit a very narrow class of objects (specifically, the `document.all` object for any page), in some contexts, to act as if they _emulate_ the value `undefined`. Loose equality is one such context: `null == A` and `undefined == A` evaluate to true if, and only if, A is an object that _emulates_ `undefined`. In all other cases an object is never loosely equal to `undefined` or `null`.
 
-  <li><code>undefined</code> and <code>null</code> are loosely equal; that is, <code>undefined&nbsp;==&nbsp;null</code> is true, and <code>null&nbsp;==&nbsp;undefined</code> is true</li>
-</ul>
+Loose equality comparisons among other combinations of operand types are performed as shown in the tables below. The following notations are used in the tables:
 
-<p>Traditionally, and according to ECMAScript, all primitives and objects are loosely unequal to <code>undefined</code> and <code>null</code>. But most browsers permit a very narrow class of objects (specifically, the <code>document.all</code> object for any page), in some contexts, to act as if they <em>emulate</em> the value <code>undefined</code>. Loose equality is one such context: <code>null == A</code> and <code>undefined == A</code> evaluate to true if, and only if, A is an object that <em>emulates</em> <code>undefined</code>. In all other cases an object is never loosely equal to <code>undefined</code> or <code>null</code>.</p>
+- `ToNumber(A)` attempts to convert its argument to a number before comparison. Its behavior is equivalent to `+A` (the unary + operator).
+- `ToPrimitive(A)` attempts to convert its object argument to a primitive value, by invoking varying sequences of `A.toString()` and `A.valueOf()` methods on `A`.
+- `ℝ(A)` attempts to convert its argument to an ECMAScript [mathematical value](https://tc39.es/ecma262/#mathematical-value).
+- `StringToBigInt(A)` attempts to convert its argument to a `BigInt` by applying the ECMAScript [`StringToBigInt`](https://tc39.es/ecma262/#sec-stringtobigint) algorithm.
 
-<p>Loose equality comparisons among other combinations of operand types are performed as shown in the tables below. The following notations are used in the tables:</p>
+**number** primitive `A` compared to operand `B`:
 
-<ul>
-  <li><code>ToNumber(A)</code> attempts to convert its argument to a number before comparison. Its behavior is equivalent to <code>+A</code> (the unary + operator).</li>
-  <li><code>ToPrimitive(A)</code> attempts to convert its object argument to a primitive value, by invoking varying sequences of <code>A.toString()</code> and <code>A.valueOf()</code> methods on <code>A</code>.</li>
-  <li><code>ℝ(A)</code> attempts to convert its argument to an ECMAScript <a href="https://tc39.es/ecma262/#mathematical-value">mathematical value</a>.</li>
-  <li><code>StringToBigInt(A)</code> attempts to convert its argument to a <code>BigInt</code> by applying the ECMAScript <a href="https://tc39.es/ecma262/#sec-stringtobigint"><code>StringToBigInt</code></a> algorithm.</li>
-</ul>
+| number    | bigint             | string              | boolean             | Object                |
+| --------- | ------------------ | ------------------- | ------------------- | --------------------- |
+| `A === B` | `ℝ(A) equals ℝ(B)` | `A === ToNumber(B)` | `A === ToNumber(B)` | `A == ToPrimitive(B)` |
 
-<p><strong>number</strong> primitive <code>A</code> compared to operand <code>B</code>:</p>
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th>number</th>
-      <th>bigint</th>
-      <th>string</th>
-      <th>boolean</th>
-      <th>Object</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>A&nbsp;===&nbsp;B</code></td>
-      <td><code>ℝ(A)&nbsp;equals&nbsp;ℝ(B)</code></td>
-      <td><code>A&nbsp;===&nbsp;ToNumber(B)</code></td>
-      <td><code>A&nbsp;===&nbsp;ToNumber(B)</code></td>
-      <td><code>A&nbsp;==&nbsp;ToPrimitive(B)</code></td>
-    </tr>
-  </tbody>
-</table>
+**bigint** primitive `A` compared to operand `B`:
 
-<p><strong>bigint</strong> primitive <code>A</code> compared to operand <code>B</code>:</p>
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th>number</th>
-      <th>bigint</th>
-      <th>string</th>
-      <th>boolean</th>
-      <th>Object</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>ℝ(A)&nbsp;equals&nbsp;ℝ(B)</code></td>
-      <td><code>A&nbsp;===&nbsp;B</code></td>
-      <td><code>A&nbsp;===&nbsp;StringToBigInt(B)</code></td>
-      <td><code>A&nbsp;==&nbsp;ToNumber(B)</code></td>
-      <td><code>A&nbsp;==&nbsp;ToPrimitive(B)</code></td>
-    </tr>
-  </tbody>
-</table>
+| number             | bigint    | string                    | boolean            | Object                |
+| ------------------ | --------- | ------------------------- | ------------------ | --------------------- |
+| `ℝ(A) equals ℝ(B)` | `A === B` | `A === StringToBigInt(B)` | `A == ToNumber(B)` | `A == ToPrimitive(B)` |
 
-<p><strong>string</strong> primitive <code>A</code> compared to operand <code>B</code>:</p>
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th>number</th>
-      <th>bigint</th>
-      <th>string</th>
-      <th>boolean</th>
-      <th>Object</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>ToNumber(A)&nbsp;===&nbsp;B</code></td>
-      <td><code>StringToBigInt(A)&nbsp;===&nbsp;B</code></td>
-      <td><code>A&nbsp;===&nbsp;B</code></td>
-      <td><code>ToNumber(A)&nbsp;===&nbsp;ToNumber(B)</code></td>
-      <td><code>A&nbsp;==&nbsp;ToPrimitive(B)</code></td>
-    </tr>
- </tbody>
-</table>
+**string** primitive `A` compared to operand `B`:
 
-<p><strong>boolean</strong> primitive <code>A</code> compared to operand <code>B</code>:</p>
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th>number</th>
-      <th>bigint</th>
-      <th>string</th>
-      <th>boolean</th>
-      <th>Object</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>ToNumber(A)&nbsp;===&nbsp;B</code></td>
-      <td><code>ToNumber(A)&nbsp;==&nbsp;B</code></td>
-      <td><code>ToNumber(A)&nbsp;===&nbsp;ToNumber(B)</code></td>
-      <td><code>A&nbsp;===&nbsp;B</code></td>
-      <td><code>ToNumber(A)&nbsp;==&nbsp;ToPrimitive(B)</code></td>
-    </tr>
- </tbody>
-</table>
+| number              | bigint                    | string    | boolean                       | Object                |
+| ------------------- | ------------------------- | --------- | ----------------------------- | --------------------- |
+| `ToNumber(A) === B` | `StringToBigInt(A) === B` | `A === B` | `ToNumber(A) === ToNumber(B)` | `A == ToPrimitive(B)` |
 
-<p><strong>Object</strong> <code>A</code> compared to operand <code>B</code>:</p>
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th>number</th>
-      <th>bigint</th>
-      <th>string</th>
-      <th>boolean</th>
-      <th>Object</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>ToPrimitive(A)&nbsp;==&nbsp;B</code></td>
-      <td><code>ToPrimitive(A)&nbsp;==&nbsp;B</code></td>
-      <td><code>ToPrimitive(A)&nbsp;==&nbsp;B</code></td>
-      <td><code>ToPrimitive(A)&nbsp;==&nbsp;ToNumber(B)</code></td>
-      <td><code>A&nbsp;===&nbsp;B</code></td>
-    </tr>
- </tbody>
-</table>
+**boolean** primitive `A` compared to operand `B`:
 
-<p>In most cases, using loose equality is discouraged. The result of a comparison using strict equality is easier to predict, and may evaluate more quickly due to the lack of type coercion.</p>
+| number              | bigint             | string                        | boolean   | Object                          |
+| ------------------- | ------------------ | ----------------------------- | --------- | ------------------------------- |
+| `ToNumber(A) === B` | `ToNumber(A) == B` | `ToNumber(A) === ToNumber(B)` | `A === B` | `ToNumber(A) == ToPrimitive(B)` |
 
-<h3 id="example">Example</h3>
+**Object** `A` compared to operand `B`:
 
-<p>The following example demonstrates loose equality comparisons involving the number primitive <code>0</code>, the bigint primitive <code>0n</code>, the string primitive <code>'0'</code>, and an object whose <code>toString()</code> value is <code>'0'</code>.</p>
+| number                | bigint                | string                | boolean                         | Object    |
+| --------------------- | --------------------- | --------------------- | ------------------------------- | --------- |
+| `ToPrimitive(A) == B` | `ToPrimitive(A) == B` | `ToPrimitive(A) == B` | `ToPrimitive(A) == ToNumber(B)` | `A === B` |
 
-<pre class="brush: js">const num = 0;
+In most cases, using loose equality is discouraged. The result of a comparison using strict equality is easier to predict, and may evaluate more quickly due to the lack of type coercion.
+
+### Example
+
+The following example demonstrates loose equality comparisons involving the number primitive `0`, the bigint primitive `0n`, the string primitive `'0'`, and an object whose `toString()` value is `'0'`.
+
+```js
+const num = 0;
 const big = 0n;
 const str = '0';
 const obj = new String('0');
@@ -215,311 +125,108 @@ console.log(str == big); // true
 console.log(num == obj); // true
 console.log(big == obj); // true
 console.log(str == obj); // true
-</pre>
+```
 
-<h2 id="Same-value_equality">Same-value equality</h2>
+## Same-value equality
 
-<p>Same-value equality addresses a final use case: determining whether two values are <em>functionally identical</em> in all contexts. (This use case demonstrates an instance of the <a href="https://en.wikipedia.org/wiki/Liskov_substitution_principle">Liskov substitution principle</a>.) One instance occurs when an attempt is made to mutate an immutable property:</p>
+Same-value equality addresses a final use case: determining whether two values are _functionally identical_ in all contexts. (This use case demonstrates an instance of the [Liskov substitution principle](https://en.wikipedia.org/wiki/Liskov_substitution_principle).) One instance occurs when an attempt is made to mutate an immutable property:
 
-<pre class="brush: js">// Add an immutable NEGATIVE_ZERO property to the Number constructor.
+```js
+// Add an immutable NEGATIVE_ZERO property to the Number constructor.
 Object.defineProperty(Number, 'NEGATIVE_ZERO',
                       { value: -0, writable: false, configurable: false, enumerable: false });
 
 function attemptMutation(v) {
   Object.defineProperty(Number, 'NEGATIVE_ZERO', { value: v });
 }
-</pre>
+```
 
-<p><code>Object.defineProperty</code> will throw an exception when attempting to change an immutable property, but it does nothing if no actual change is requested. If <code>v</code> is <code>-0</code>, no change has been requested, and no error will be thrown. Internally, when an immutable property is redefined, the newly-specified value is compared against the current value using same-value equality.</p>
+`Object.defineProperty` will throw an exception when attempting to change an immutable property, but it does nothing if no actual change is requested. If `v` is `-0`, no change has been requested, and no error will be thrown. Internally, when an immutable property is redefined, the newly-specified value is compared against the current value using same-value equality.
 
-<p>Same-value equality is provided by the {{jsxref("Object.is")}} method.</p>
+Same-value equality is provided by the {{jsxref("Object.is")}} method.
 
-<h2 id="Same-value-zero_equality">Same-value-zero equality</h2>
+## Same-value-zero equality
 
-<p>Similar to same-value equality, but +0 and -0 are considered equal.</p>
+Similar to same-value equality, but +0 and -0 are considered equal.
 
-<h2 id="Abstract_equality_strict_equality_and_same_value_in_the_specification">Abstract equality, strict equality, and same value in the specification</h2>
+## Abstract equality, strict equality, and same value in the specification
 
-<p>In ES5, the comparison performed by <a href="/en-US/docs/Web/JavaScript/Reference/Operators"><code>==</code></a> is described in <a href="http://ecma-international.org/ecma-262/5.1/#sec-11.9.3">Section 11.9.3, The Abstract Equality Algorithm</a>. The <a href="/en-US/docs/Web/JavaScript/Reference/Operators"><code>===</code></a> comparison is <a href="http://ecma-international.org/ecma-262/5.1/#sec-11.9.6">11.9.6, The Strict Equality Algorithm</a>. (Go look at these. They're brief and readable. Hint: read the strict equality algorithm first.) ES5 also describes, in <a href="http://ecma-international.org/ecma-262/5.1/#sec-9.12">Section 9.12, The SameValue Algorithm</a> for use internally by the JS engine. It's largely the same as the Strict Equality Algorithm, except that 11.9.6.4 and 9.12.4 differ in handling {{jsxref("Number")}}s. ES2015 proposes to expose this algorithm through {{jsxref("Object.is")}}.</p>
+In ES5, the comparison performed by [`==`](/en-US/docs/Web/JavaScript/Reference/Operators) is described in [Section 11.9.3, The Abstract Equality Algorithm](http://ecma-international.org/ecma-262/5.1/#sec-11.9.3). The [`===`](/en-US/docs/Web/JavaScript/Reference/Operators) comparison is [11.9.6, The Strict Equality Algorithm](http://ecma-international.org/ecma-262/5.1/#sec-11.9.6). (Go look at these. They're brief and readable. Hint: read the strict equality algorithm first.) ES5 also describes, in [Section 9.12, The SameValue Algorithm](http://ecma-international.org/ecma-262/5.1/#sec-9.12) for use internally by the JS engine. It's largely the same as the Strict Equality Algorithm, except that 11.9.6.4 and 9.12.4 differ in handling {{jsxref("Number")}}s. ES2015 proposes to expose this algorithm through {{jsxref("Object.is")}}.
 
-<p>We can see that with double and triple equals, with the exception of doing a type check upfront in 11.9.6.1, the Strict Equality Algorithm is a subset of the Abstract Equality Algorithm, because 11.9.6.2–7 correspond to 11.9.3.1.a–f.</p>
+We can see that with double and triple equals, with the exception of doing a type check upfront in 11.9.6.1, the Strict Equality Algorithm is a subset of the Abstract Equality Algorithm, because 11.9.6.2–7 correspond to 11.9.3.1.a–f.
 
-<h2 id="A_model_for_understanding_equality_comparisons">A model for understanding equality comparisons?</h2>
+## A model for understanding equality comparisons?
 
-<p>Prior to ES2015, you might have said of double equals and triple equals that one is an "enhanced" version of the other. For example, someone might say that double equals is an extended version of triple equals, because the former does everything that the latter does, but with type conversion on its operands. E.g., <code>6 == "6"</code>. (Alternatively, someone might say that double equals is the baseline, and triple equals is an enhanced version, because it requires the two operands to be the same type, so it adds an extra constraint. Which one is the better model for understanding depends on how you choose to view things.)</p>
+Prior to ES2015, you might have said of double equals and triple equals that one is an "enhanced" version of the other. For example, someone might say that double equals is an extended version of triple equals, because the former does everything that the latter does, but with type conversion on its operands. E.g., `6 == "6"`. (Alternatively, someone might say that double equals is the baseline, and triple equals is an enhanced version, because it requires the two operands to be the same type, so it adds an extra constraint. Which one is the better model for understanding depends on how you choose to view things.)
 
-<p>However, this way of thinking about the built-in sameness operators is not a model that can be stretched to allow a place for ES2015's {{jsxref("Object.is")}} on this "spectrum". {{jsxref("Object.is")}} isn't "looser" than double equals or "stricter" than triple equals, nor does it fit somewhere in between (i.e., being both stricter than double equals, but looser than triple equals). We can see from the sameness comparisons table below that this is due to the way that {{jsxref("Object.is")}} handles {{jsxref("NaN")}}. Notice that if <code>Object.is(NaN, NaN)</code> evaluated to <code>false</code>, we <em>could</em> say that it fits on the loose/strict spectrum as an even stricter form of triple equals, one that distinguishes between <code>-0</code> and <code>+0</code>. The {{jsxref("NaN")}} handling means this is untrue, however. Unfortunately, {{jsxref("Object.is")}} has to be thought of in terms of its specific characteristics, rather than its looseness or strictness with regard to the equality operators.</p>
+However, this way of thinking about the built-in sameness operators is not a model that can be stretched to allow a place for ES2015's {{jsxref("Object.is")}} on this "spectrum". {{jsxref("Object.is")}} isn't "looser" than double equals or "stricter" than triple equals, nor does it fit somewhere in between (i.e., being both stricter than double equals, but looser than triple equals). We can see from the sameness comparisons table below that this is due to the way that {{jsxref("Object.is")}} handles {{jsxref("NaN")}}. Notice that if `Object.is(NaN, NaN)` evaluated to `false`, we _could_ say that it fits on the loose/strict spectrum as an even stricter form of triple equals, one that distinguishes between `-0` and `+0`. The {{jsxref("NaN")}} handling means this is untrue, however. Unfortunately, {{jsxref("Object.is")}} has to be thought of in terms of its specific characteristics, rather than its looseness or strictness with regard to the equality operators.
 
-<table class="standard-table">
- <caption>Sameness Comparisons</caption>
- <thead>
-  <tr>
-   <th scope="col">x</th>
-   <th scope="col">y</th>
-   <th scope="col"><code>==</code></th>
-   <th scope="col"><code>===</code></th>
-   <th scope="col"><code>Object.is</code></th>
-   <th scope="col"><code>SameValueZero</code></th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>undefined</code></td>
-   <td><code>undefined</code></td>
-   <td><code>✅ true</code></td>
-   <td><code>✅ true</code></td>
-   <td><code>✅ true</code></td>
-   <td><code>✅ true</code></td>
-  </tr>
-  <tr>
-   <td><code>null</code></td>
-   <td><code>null</code></td>
-   <td><code>✅ true</code></td>
-   <td><code>✅ true</code></td>
-   <td><code>✅ true</code></td>
-   <td><code>✅ true</code></td>
-  </tr>
-  <tr>
-   <td><code>true</code></td>
-   <td><code>true</code></td>
-   <td><code>✅ true</code></td>
-   <td><code>✅ true</code></td>
-   <td><code>✅ true</code></td>
-   <td><code>✅ true</code></td>
-  </tr>
-  <tr>
-   <td><code>false</code></td>
-   <td><code>false</code></td>
-   <td><code>✅ true</code></td>
-   <td><code>✅ true</code></td>
-   <td><code>✅ true</code></td>
-   <td><code>✅ true</code></td>
-  </tr>
-  <tr>
-   <td><code>'foo'</code></td>
-   <td><code>'foo'</code></td>
-   <td><code>✅ true</code></td>
-   <td><code>✅ true</code></td>
-   <td><code>✅ true</code></td>
-   <td><code>✅ true</code></td>
-  </tr>
-  <tr>
-   <td><code>0</code></td>
-   <td><code>0</code></td>
-   <td><code>✅ true</code></td>
-   <td><code>✅ true</code></td>
-   <td><code>✅ true</code></td>
-   <td><code>✅ true</code></td>
-  </tr>
-  <tr>
-   <td><code>+0</code></td>
-   <td><code>-0</code></td>
-   <td><code>✅ true</code></td>
-   <td><code>✅ true</code></td>
-   <td><code>❌ false</code></td>
-   <td><code>✅ true</code></td>
-  </tr>
-  <tr>
-   <td><code>+0</code></td>
-   <td><code>0</code></td>
-   <td><code>✅ true</code></td>
-   <td><code>✅ true</code></td>
-   <td><code>✅ true</code></td>
-   <td><code>✅ true</code></td>
-  </tr>
-  <tr>
-   <td><code>-0</code></td>
-   <td><code>0</code></td>
-   <td><code>✅ true</code></td>
-   <td><code>✅ true</code></td>
-   <td><code>❌ false</code></td>
-   <td><code>✅ true</code></td>
-  </tr>
-  <tr>
-   <td><code>0n</code></td>
-   <td><code>-0n</code></td>
-   <td><code>✅ true</code></td>
-   <td><code>✅ true</code></td>
-   <td><code>✅ true</code></td>
-   <td><code>✅ true</code></td>
-  </tr>
-  <tr>
-   <td><code>0</code></td>
-   <td><code>false</code></td>
-   <td><code>✅ true</code></td>
-   <td><code>❌ false</code></td>
-   <td><code>❌ false</code></td>
-   <td><code>❌ false</code></td>
-  </tr>
-  <tr>
-   <td><code>""</code></td>
-   <td><code>false</code></td>
-   <td><code>✅ true</code></td>
-   <td><code>❌ false</code></td>
-   <td><code>❌ false</code></td>
-   <td><code>❌ false</code></td>
-  </tr>
-  <tr>
-   <td><code>""</code></td>
-   <td><code>0</code></td>
-   <td><code>✅ true</code></td>
-   <td><code>❌ false</code></td>
-   <td><code>❌ false</code></td>
-   <td><code>❌ false</code></td>
-  </tr>
-  <tr>
-   <td><code>'0'</code></td>
-   <td><code>0</code></td>
-   <td><code>✅ true</code></td>
-   <td><code>❌ false</code></td>
-   <td><code>❌ false</code></td>
-   <td><code>❌ false</code></td>
-  </tr>
-  <tr>
-   <td><code>'17'</code></td>
-   <td><code>17</code></td>
-   <td><code>✅ true</code></td>
-   <td><code>❌ false</code></td>
-   <td><code>❌ false</code></td>
-   <td><code>❌ false</code></td>
-  </tr>
-  <tr>
-   <td><code>[1, 2]</code></td>
-   <td><code>'1,2'</code></td>
-   <td><code>✅ true</code></td>
-   <td><code>❌ false</code></td>
-   <td><code>❌ false</code></td>
-   <td><code>❌ false</code></td>
-  </tr>
-  <tr>
-   <td><code>new String('foo')</code></td>
-   <td><code>'foo'</code></td>
-   <td><code>✅ true</code></td>
-   <td><code>❌ false</code></td>
-   <td><code>❌ false</code></td>
-   <td><code>❌ false</code></td>
-  </tr>
-  <tr>
-   <td><code>null</code></td>
-   <td><code>undefined</code></td>
-   <td><code>✅ true</code></td>
-   <td><code>❌ false</code></td>
-   <td><code>❌ false</code></td>
-   <td><code>❌ false</code></td>
-  </tr>
-  <tr>
-   <td><code>null</code></td>
-   <td><code>false</code></td>
-   <td><code>❌ false</code></td>
-   <td><code>❌ false</code></td>
-   <td><code>❌ false</code></td>
-   <td><code>❌ false</code></td>
-  </tr>
-  <tr>
-   <td><code>undefined</code></td>
-   <td><code>false</code></td>
-   <td><code>❌ false</code></td>
-   <td><code>❌ false</code></td>
-   <td><code>❌ false</code></td>
-   <td><code>❌ false</code></td>
-  </tr>
-  <tr>
-   <td><code>{ foo: 'bar' }</code></td>
-   <td><code>{ foo: 'bar' }</code></td>
-   <td><code>❌ false</code></td>
-   <td><code>❌ false</code></td>
-   <td><code>❌ false</code></td>
-   <td><code>❌ false</code></td>
-  </tr>
-  <tr>
-   <td><code>new String('foo')</code></td>
-   <td><code>new String('foo')</code></td>
-   <td><code>❌ false</code></td>
-   <td><code>❌ false</code></td>
-   <td><code>❌ false</code></td>
-   <td><code>❌ false</code></td>
-  </tr>
-  <tr>
-   <td><code>0</code></td>
-   <td><code>null</code></td>
-   <td><code>❌ false</code></td>
-   <td><code>❌ false</code></td>
-   <td><code>❌ false</code></td>
-   <td><code>❌ false</code></td>
-  </tr>
-  <tr>
-   <td><code>0</code></td>
-   <td><code>NaN</code></td>
-   <td><code>❌ false</code></td>
-   <td><code>❌ false</code></td>
-   <td><code>❌ false</code></td>
-   <td><code>❌ false</code></td>
-  </tr>
-  <tr>
-   <td><code>'foo'</code></td>
-   <td><code>NaN</code></td>
-   <td><code>❌ false</code></td>
-   <td><code>❌ false</code></td>
-   <td><code>❌ false</code></td>
-   <td><code>❌ false</code></td>
-  </tr>
-  <tr>
-   <td><code>NaN</code></td>
-   <td><code>NaN</code></td>
-   <td><code>❌ false</code></td>
-   <td><code>❌ false</code></td>
-   <td><code>✅ true</code></td>
-   <td><code>✅ true</code></td>
-  </tr>
- </tbody>
-</table>
+| x                   | y                   | `==`       | `===`      | `Object.is` | `SameValueZero` |
+| ------------------- | ------------------- | ---------- | ---------- | ----------- | --------------- |
+| `undefined`         | `undefined`         | `✅ true`  | `✅ true`  | `✅ true`   | `✅ true`       |
+| `null`              | `null`              | `✅ true`  | `✅ true`  | `✅ true`   | `✅ true`       |
+| `true`              | `true`              | `✅ true`  | `✅ true`  | `✅ true`   | `✅ true`       |
+| `false`             | `false`             | `✅ true`  | `✅ true`  | `✅ true`   | `✅ true`       |
+| `'foo'`             | `'foo'`             | `✅ true`  | `✅ true`  | `✅ true`   | `✅ true`       |
+| `0`                 | `0`                 | `✅ true`  | `✅ true`  | `✅ true`   | `✅ true`       |
+| `+0`                | `-0`                | `✅ true`  | `✅ true`  | `❌ false`  | `✅ true`       |
+| `+0`                | `0`                 | `✅ true`  | `✅ true`  | `✅ true`   | `✅ true`       |
+| `-0`                | `0`                 | `✅ true`  | `✅ true`  | `❌ false`  | `✅ true`       |
+| `0n`                | `-0n`               | `✅ true`  | `✅ true`  | `✅ true`   | `✅ true`       |
+| `0`                 | `false`             | `✅ true`  | `❌ false` | `❌ false`  | `❌ false`      |
+| `""`                | `false`             | `✅ true`  | `❌ false` | `❌ false`  | `❌ false`      |
+| `""`                | `0`                 | `✅ true`  | `❌ false` | `❌ false`  | `❌ false`      |
+| `'0'`               | `0`                 | `✅ true`  | `❌ false` | `❌ false`  | `❌ false`      |
+| `'17'`              | `17`                | `✅ true`  | `❌ false` | `❌ false`  | `❌ false`      |
+| `[1, 2]`            | `'1,2'`             | `✅ true`  | `❌ false` | `❌ false`  | `❌ false`      |
+| `new String('foo')` | `'foo'`             | `✅ true`  | `❌ false` | `❌ false`  | `❌ false`      |
+| `null`              | `undefined`         | `✅ true`  | `❌ false` | `❌ false`  | `❌ false`      |
+| `null`              | `false`             | `❌ false` | `❌ false` | `❌ false`  | `❌ false`      |
+| `undefined`         | `false`             | `❌ false` | `❌ false` | `❌ false`  | `❌ false`      |
+| `{ foo: 'bar' }`    | `{ foo: 'bar' }`    | `❌ false` | `❌ false` | `❌ false`  | `❌ false`      |
+| `new String('foo')` | `new String('foo')` | `❌ false` | `❌ false` | `❌ false`  | `❌ false`      |
+| `0`                 | `null`              | `❌ false` | `❌ false` | `❌ false`  | `❌ false`      |
+| `0`                 | `NaN`               | `❌ false` | `❌ false` | `❌ false`  | `❌ false`      |
+| `'foo'`             | `NaN`               | `❌ false` | `❌ false` | `❌ false`  | `❌ false`      |
+| `NaN`               | `NaN`               | `❌ false` | `❌ false` | `✅ true`   | `✅ true`       |
 
-<h2 id="When_to_use_jsxrefObject.is_versus_triple_equals">When to use Object.is versus triple equals</h2>
+## When to use Object.is versus triple equals
 
-<p>In general, the only time {{jsxref("Object.is")}}'s special behavior towards zeros is likely to be of interest is in the pursuit of certain meta-programming schemes, especially regarding property descriptors, when it is desirable for your work to mirror some of the characteristics of {{jsxref("Object.defineProperty")}}. If your use case does not require this, it is suggested to avoid {{jsxref("Object.is")}} and use <a href="/en-US/docs/Web/JavaScript/Reference/Operators"><code>===</code></a> instead. Even if your requirements involve having comparisons between two {{jsxref("NaN")}} values evaluate to <code>true</code>, generally it is easier to special-case the {{jsxref("NaN")}} checks (using the {{jsxref("isNaN")}} method available from previous versions of ECMAScript) than it is to work out how surrounding computations might affect the sign of any zeros you encounter in your comparison.</p>
+In general, the only time {{jsxref("Object.is")}}'s special behavior towards zeros is likely to be of interest is in the pursuit of certain meta-programming schemes, especially regarding property descriptors, when it is desirable for your work to mirror some of the characteristics of {{jsxref("Object.defineProperty")}}. If your use case does not require this, it is suggested to avoid {{jsxref("Object.is")}} and use [`===`](/en-US/docs/Web/JavaScript/Reference/Operators) instead. Even if your requirements involve having comparisons between two {{jsxref("NaN")}} values evaluate to `true`, generally it is easier to special-case the {{jsxref("NaN")}} checks (using the {{jsxref("isNaN")}} method available from previous versions of ECMAScript) than it is to work out how surrounding computations might affect the sign of any zeros you encounter in your comparison.
 
-<p>Here's a non-exhaustive list of built-in methods and operators that might cause a distinction between <code>-0</code> and <code>+0</code> to manifest itself in your code:</p>
+Here's a non-exhaustive list of built-in methods and operators that might cause a distinction between `-0` and `+0` to manifest itself in your code:
 
-<dl>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Operators#-_.28unary_negation.29"><code>- (unary negation)</code></a></dt>
- <dd>
- <pre class="brush: js">let stoppingForce = obj.mass * -obj.velocity;</pre>
+<dl><dt><a href="/en-US/docs/Web/JavaScript/Reference/Operators#-_.28unary_negation.29"><code>- (unary negation)</code></a></dt><dd><pre class="brush: js">let stoppingForce = obj.mass * -obj.velocity;</pre><p>If <code>obj.velocity</code> is <code>0</code> (or computes to <code>0</code>), a <code>-0</code> is introduced at that place and propagates out into <code>stoppingForce</code>.</p></dd></dl>
 
- <p>If <code>obj.velocity</code> is <code>0</code> (or computes to <code>0</code>), a <code>-0</code> is introduced at that place and propagates out into <code>stoppingForce</code>.</p>
- </dd>
-</dl>
+- {{jsxref("Math.atan2")}}, {{jsxref("Math.ceil")}}, {{jsxref("Math.pow")}}, {{jsxref("Math.round")}}
+  - : In some cases,it's possible for a `-0` to be introduced into an expression as a return value of these methods even when no `-0` exists as one of the parameters. For example, using {{jsxref("Math.pow")}} to raise {{jsxref("Infinity", "-Infinity")}} to the power of any negative, odd exponent evaluates to `-0`. Refer to the documentation for the individual methods.
+- {{jsxref("Math.floor")}}, {{jsxref("Math.max")}}, {{jsxref("Math.min")}}, {{jsxref("Math.sin")}}, {{jsxref("Math.sqrt")}}, {{jsxref("Math.tan")}}
+  - : It's possible to get a `-0` return value out of these methods in some cases where a `-0` exists as one of the parameters. E.g., `Math.min(-0, +0)` evaluates to `-0`. Refer to the documentation for the individual methods.
+- [`~`](/en-US/docs/Web/JavaScript/Reference/Operators), [`<<`](/en-US/docs/Web/JavaScript/Reference/Operators), [`>>`](/en-US/docs/Web/JavaScript/Reference/Operators)
+  - : Each of these operators uses the ToInt32 algorithm internally. Since there is only one representation for 0 in the internal 32-bit integer type, `-0` will not survive a round trip after an inverse operation. E.g., both `Object.is(~~(-0), -0)` and `Object.is(-0 << 2 >> 2, -0)` evaluate to `false`.
 
-<dl>
- <dt>{{jsxref("Math.atan2")}}, {{jsxref("Math.ceil")}}, {{jsxref("Math.pow")}}, {{jsxref("Math.round")}}</dt>
- <dd>In some cases,it's possible for a <code>-0</code> to be introduced into an expression as a return value of these methods even when no <code>-0</code> exists as one of the parameters. For example, using {{jsxref("Math.pow")}} to raise {{jsxref("Infinity", "-Infinity")}} to the power of any negative, odd exponent evaluates to <code>-0</code>. Refer to the documentation for the individual methods.</dd>
- <dt>{{jsxref("Math.floor")}}, {{jsxref("Math.max")}}, {{jsxref("Math.min")}}, {{jsxref("Math.sin")}}, {{jsxref("Math.sqrt")}}, {{jsxref("Math.tan")}}</dt>
- <dd>It's possible to get a <code>-0</code> return value out of these methods in some cases where a <code>-0</code> exists as one of the parameters. E.g., <code>Math.min(-0, +0)</code> evaluates to <code>-0</code>. Refer to the documentation for the individual methods.</dd>
- <dt><code><a href="/en-US/docs/Web/JavaScript/Reference/Operators">~</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators">&lt;&lt;</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators">&gt;&gt;</a></code></dt>
- <dd>Each of these operators uses the ToInt32 algorithm internally. Since there is only one representation for 0 in the internal 32-bit integer type, <code>-0</code> will not survive a round trip after an inverse operation. E.g., both <code>Object.is(~~(-0), -0)</code> and <code>Object.is(-0 &lt;&lt; 2 &gt;&gt; 2, -0)</code> evaluate to <code>false</code>.</dd>
-</dl>
+Relying on {{jsxref("Object.is")}} when the signedness of zeros is not taken into account can be hazardous. Of course, when the intent is to distinguish between `-0` and `+0`, it does exactly what's desired.
 
-<p>Relying on {{jsxref("Object.is")}} when the signedness of zeros is not taken into account can be hazardous. Of course, when the intent is to distinguish between <code>-0</code> and <code>+0</code>, it does exactly what's desired.</p>
+## Caveat: Object.is and NaN
 
-<h2 id="Caveat_jsxrefObject.is_and_NaN">Caveat: Object.is and NaN</h2>
+The {{jsxref("Object.is")}} specification treats all instances of {{jsxref("NaN")}} as the same object. However, since [typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays) are available, we can have distinct instances, which don't behave identically in all contexts. For example:
 
-<p>The {{jsxref("Object.is")}} specification treats all instances of {{jsxref("NaN")}} as the same object. However, since <a href="/en-US/docs/Web/JavaScript/Typed_arrays">typed arrays</a> are available, we can have distinct instances, which don't behave identically in all contexts. For example:</p>
-
-<pre class="brush: js">var f2b = x =&gt; new Uint8Array(new Float64Array([x]).buffer);
-var b2f = x =&gt; new Float64Array(x.buffer)[0];
+```js
+var f2b = x => new Uint8Array(new Float64Array([x]).buffer);
+var b2f = x => new Float64Array(x.buffer)[0];
 var n = f2b(NaN);
 n[0] = 1;
 var nan2 = b2f(n);
 nan2;
-// &gt; NaN
+// > NaN
 Object.is(nan2, NaN);
-// &gt; true
+// > true
 f2b(NaN);
-// &gt; Uint8Array(8) [0, 0, 0, 0, 0, 0, 248,127)
+// > Uint8Array(8) [0, 0, 0, 0, 0, 0, 248,127)
 f2b(nan2);
-// &gt; Uint8Array(8) [1, 0, 0, 0, 0, 0, 248,127)</pre>
+// > Uint8Array(8) [1, 0, 0, 0, 0, 0, 248,127)
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://dorey.github.io/JavaScript-Equality-Table/">JS Comparison Table</a></li>
-</ul>
+- [JS Comparison Table](https://dorey.github.io/JavaScript-Equality-Table/)
