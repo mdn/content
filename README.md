@@ -384,7 +384,7 @@ As we outlined above, the step-by-step process in general would be:
     git checkout main
     git pull mdn main
     # Run "yarn" again just to ensure you've
-    # installed the latest Yari dependency.
+    # installed the latest Yarn dependency.
     yarn
     git checkout -b my-add
     ```
@@ -427,7 +427,7 @@ the entire tree. For example, let's say you want to move the entire
     git checkout main
     git pull mdn main
     # Run "yarn" again just to ensure you've
-    # installed the latest Yari dependency.
+    # installed the latest Yarn dependency.
     yarn
     git checkout -b my-move
     ```
@@ -486,7 +486,7 @@ entire `/en-US/Learn/Accessibility` tree:
     git checkout main
     git pull mdn main
     # Run "yarn" again just to ensure you've
-    # installed the latest Yari dependency.
+    # installed the latest Yarn dependency.
     yarn
     git checkout -b my-delete
     ```
@@ -523,7 +523,7 @@ The best way to do this is to use the `yarn content add-redirect` command:
     git checkout main
     git pull mdn main
     # Run "yarn" again just to ensure you've
-    # installed the latest Yari dependency.
+    # installed the latest Yarn dependency.
     yarn
     git checkout -b my-delete
     ```
@@ -560,7 +560,7 @@ the latest content from the `main` branch of the `mdn` remote.
     git checkout main
     git pull mdn main
     # Run "yarn" again just to ensure you've
-    # installed the latest Yari dependency.
+    # installed the latest Yarn dependency.
     yarn
     git checkout -b my-images
     ```
