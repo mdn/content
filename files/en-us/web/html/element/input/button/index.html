@@ -34,10 +34,6 @@ browser-compat: html.elements.input.input-button
    <td>{{domxref("Element/click_event", "click")}}</td>
   </tr>
   <tr>
-   <td><strong>Supported common attributes</strong></td>
-   <td>{{htmlattrxref("type", "input")}} and {{htmlattrxref("value", "input")}}</td>
-  </tr>
-  <tr>
    <td><strong>IDL attributes</strong></td>
    <td><code>value</code></td>
   </tr>
@@ -48,23 +44,28 @@ browser-compat: html.elements.input.input-button
  </tbody>
 </table>
 
-<h2 id="Value">Value</h2>
+<h2 id="Attributes">Attributes</h2>
 
-<p>An <code>&lt;input type="button"&gt;</code> elements' {{htmlattrxref("value", "input")}} attribute contains a {{domxref("DOMString")}} that is used as the button's label.</p>
+<p>In addition to the <a href="/en-US/docs/Web/HTML/Global_attributes">Global Attributes</a>, the following {{HTMLElement("input")}} attributes apply when using <code>type="button"</code>:</p>
 
-<div id="summary-example3">
+<dl>
+  <dt><code>value</code></dt>
+  <dd>A {{domxref("DOMString")}} that is used as the button's label.</dd>
+</dl>
+
+<h3 id="summary-example3">Simple example</h3>
+
 <pre class="brush: html">&lt;input type="button" value="Click Me"&gt;</pre>
-</div>
 
 <p>{{EmbedLiveSample("summary-example3", 650, 30)}}</p>
 
-<p>If you don't specify a <code>value</code>, you get an empty button:</p>
+<h3 id="summary-example1">Example with empty value</h3>
+<p>If you don't specify a <code>value</code>, you get an empty button</p>
 
-<div id="summary-example1">
 <pre class="brush: html">&lt;input type="button"&gt;</pre>
-</div>
 
 <p>{{EmbedLiveSample("summary-example1", 650, 30)}}</p>
+
 
 <h2 id="Using_buttons">Using buttons</h2>
 
