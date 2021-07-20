@@ -9021,6 +9021,7 @@
 /en-US/docs/Web/API/XR/requestSession	/en-US/docs/Web/API/XRSystem/requestSession
 /en-US/docs/Web/API/XR/supportsSession	/en-US/docs/Web/API/XRSystem/isSessionSupported
 /en-US/docs/Web/API/XREnvironmentBlendMode	/en-US/docs/Web/API/XRSession/environmentBlendMode
+/en-US/docs/Web/API/XRFrameRequestCallback	/en-US/docs/Web/API/XRSession/requestAnimationFrame
 /en-US/docs/Web/API/XRReferenceSpaceType	/en-US/docs/Web/API/XRSession/requestReferenceSpace
 /en-US/docs/Web/API/XRRenderState/XRRenderState.inlineVerticalFieldOfView	/en-US/docs/Web/API/XRRenderState/inlineVerticalFieldOfView
 /en-US/docs/Web/API/XRRenderStateInit	/en-US/docs/Web/API/XRSession/updateRenderState
