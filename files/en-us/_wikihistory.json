@@ -94324,13 +94324,6 @@
       "bershanskiy"
     ]
   },
-  "Web/API/XRHandedness": {
-    "modified": "2020-12-06T13:01:26.637Z",
-    "contributors": [
-      "Wind1808",
-      "Sheppy"
-    ]
-  },
   "Web/API/XRInputSource": {
     "modified": "2020-10-15T22:22:14.250Z",
     "contributors": [
