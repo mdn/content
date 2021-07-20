@@ -567,34 +567,6 @@ browser-compat: api.RTCPeerConnection
 
 <h2 id="Constants">Constants</h2>
 
-
-<h3 id="RTCIceGatheringState_enum">RTCIceGatheringState enum</h3>
-
-<p>The <code>RTCIceGatheringState</code> enum defines string constants which reflect the current status of ICE gathering, as returned using the {{domxref("RTCPeerConnection.iceGatheringState")}} property. You can detect when this value changes by watching for an event of type {{event("icegatheringstatechange")}}.</p>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Constant</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>"new"</code></td>
-   <td>The peer connection was just created and hasn't done any networking yet.</td>
-  </tr>
-  <tr>
-   <td><code>"gathering"</code></td>
-   <td>The ICE agent is in the process of gathering candidates for the connection.</td>
-  </tr>
-  <tr>
-   <td><code>"complete"</code></td>
-   <td>The ICE agent has finished gathering candidates. If something happens that requires collecting new candidates, such as a new interface being added or the addition of a new ICE server, the state will revert to "gathering" to gather those candidates.</td>
-  </tr>
- </tbody>
-</table>
-
 <h3 id="RTCSignalingState_enum">RTCSignalingState enum</h3>
 
 <p>The <code>RTCSignalingState</code> enum specifies the possible values of {{domxref("RTCPeerConnection.signalingState")}}, which indicates where in the process of signaling the exchange of offer and answer the connection currently is.</p>
