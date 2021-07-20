@@ -9028,7 +9028,8 @@
 /en-US/docs/Web/API/XRRenderStateInit	/en-US/docs/Web/API/XRSession/updateRenderState
 /en-US/docs/Web/API/XRSessionInit	/en-US/docs/Web/API/XRSystem/requestSession
 /en-US/docs/Web/API/XRSessionMode	/en-US/docs/Web/API/XRSystem/requestSession
-/en-US/docs/Web/API/XRTargetRayModoe	/en-US/docs/Web/API/XRTargetRayMode
+/en-US/docs/Web/API/XRTargetRayMode	/en-US/docs/Web/API/XRInputSource/targetRayMode
+/en-US/docs/Web/API/XRTargetRayModoe	/en-US/docs/Web/API/XRInputSource/targetRayMode
 /en-US/docs/Web/API/XRVisibilityState	/en-US/docs/Web/API/XRSession/visibilityState
 /en-US/docs/Web/API/console.assert	/en-US/docs/Web/API/console/assert
 /en-US/docs/Web/API/console.dir	/en-US/docs/Web/API/console/dir

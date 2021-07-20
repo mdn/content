@@ -94990,13 +94990,6 @@
       "sideshowbarker"
     ]
   },
-  "Web/API/XRTargetRayMode": {
-    "modified": "2020-12-08T08:59:04.844Z",
-    "contributors": [
-      "Wind1808",
-      "Sheppy"
-    ]
-  },
   "Web/API/XRView": {
     "modified": "2020-10-15T22:24:50.173Z",
     "contributors": [
