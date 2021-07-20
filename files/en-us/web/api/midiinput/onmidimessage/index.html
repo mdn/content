@@ -11,7 +11,7 @@ browser-compat: api.MIDIInput.onmidimessage
 ---
 <div>{{APIRef("Web MIDI API")}}{{securecontext_header}}</div>
 
-<p class="summary">The <strong><code>onmidimessage</code></strong> EventHandler of the {{domxref("MIDIInput")}} interface is an {{event("Event_handlers", "event handler")}} that processes <code>midimessage</code> events.</p>
+<p class="summary">The <strong><code>onmidimessage</code></strong> {{event("Event_handlers", "event handler")}} of the {{domxref("MIDIInput")}} interface processes <code>midimessage</code> events.</p>
 
 <p> The event fires when the MIDI port corresponding to this {{domxref("MIDIInput")}} finishes receiving one or more MIDI messages. An instance of {{domxref("MIDIMessageEvent")}} containing the message that was received is passed to this event handler.</p>
 
@@ -22,7 +22,7 @@ MIDIInput.addEventListener('midimessage', function);</pre>
 
 <h2 id="Examples">Examples</h2>
 
-<p>In the following example <code>onmidimessage</code> events are listened for on all input ports. When a message is received the {{domxref("MIDIMessageEvent.data")}} is printed to the console.</p>
+<p>In the following example <code>onmidimessage</code> events are listened for on all input ports. When a message is received the {{domxref("MIDIMessageEvent.data")}} property is printed to the console.</p>
 
 <pre class="brush:js">inputs.forEach((input) => {
   input.onmidimessage = function(message) {
