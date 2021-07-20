@@ -94656,13 +94656,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/XRReferenceSpaceType": {
-    "modified": "2020-10-15T22:23:32.744Z",
-    "contributors": [
-      "Sheppy",
-      "yomotsu"
-    ]
-  },
   "Web/API/XRRenderState": {
     "modified": "2020-10-15T22:21:53.905Z",
     "contributors": [
