@@ -13,10 +13,10 @@ browser-compat: api.ServiceWorkerRegistration.updateViaCache
 <div>{{APIRef("Service Workers API")}}</div>
 
 <p>The <code><strong>updateViaCache()</strong></code> method of the
-  {{domxref("ServiceWorkerRegistration")}} interface <b>that updates via cache mode</b>, 
-  which is "imports", "all", or "none". It is initially set to "imports". Requests for 
-  importScripts still go via the HTTP cache. <b>updateViaCache</b> offers control over this
-  behaviour.</p>
+  {{domxref("ServiceWorkerRegistration")}} interface updates the cache using
+  the mode specified in the call to {{domxref('ServiceWorkerContainer.register')}}.
+  Requests for `importScripts` still go via the HTTP cache. `updateViaCache` offers
+  control over this behavior.</p>
 
 <div class="note">
   <p><strong>Note</strong>: This feature is available in <a
