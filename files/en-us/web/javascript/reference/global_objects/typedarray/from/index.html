@@ -25,19 +25,18 @@ browser-compat: javascript.builtins.TypedArray.from
 
 <pre class="brush: js">
 // Arrow function
-TypedArray.from(arrayLike, (currentValue) => { ... } )
-TypedArray.from(arrayLike, (currentValue, index) => { ... } )
-TypedArray.from(arrayLike, (currentValue, index, array) => { ... } )
+TypedArray.from(arrayLike, (element) => { ... } )
+TypedArray.from(arrayLike, (element, index) => { ... } )
 
 // Mapping function
 TypedArray.from(arrayLike, mapFn)
 TypedArray.from(arrayLike, mapFn, thisArg)
 
 // Inline mapping function
-TypedArray.from(arrayLike, function mapFn(currentValue) { ... })
-TypedArray.from(arrayLike, function mapFn(currentValue, index) { ... })
-TypedArray.from(arrayLike, function mapFn(currentValue, index, array){ ... })
-TypedArray.from(arrayLike, function mapFn(currentValue, index, array) { ... }, thisArg)
+TypedArray.from(arrayLike, function mapFn(element) { ... })
+TypedArray.from(arrayLike, function mapFn(element, index) { ... })
+TypedArray.from(arrayLike, function mapFn(element) { ... }, thisArg)
+TypedArray.from(arrayLike, function mapFn(element, index) { ... }, thisArg)
 </pre>
 
 <p>Where <code><var>TypedArray</var></code> is one of:</p>
