@@ -2,105 +2,100 @@
 title: Array.prototype.includes()
 slug: Web/JavaScript/Reference/Global_Objects/Array/includes
 tags:
-- Array
-- JavaScript
-- Method
-- Prototype
-- Reference
-- inArray
-- in_array
-- Polyfill
+  - Array
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
+  - inArray
+  - in_array
+  - Polyfill
 browser-compat: javascript.builtins.Array.includes
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <code><strong>includes()</strong></code> method determines whether an array
-  includes a certain value among its entries, returning <code>true</code> or
-  <code>false</code> as appropriate.</p>
+The **`includes()`** method determines whether an array
+includes a certain value among its entries, returning `true` or
+`false` as appropriate.
 
-<div>{{EmbedInteractiveExample("pages/js/array-includes.html")}}</div>
+{{EmbedInteractiveExample("pages/js/array-includes.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush: js">
+```js
 includes(searchElement)
 includes(searchElement, fromIndex)
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>searchElement</var></code></dt>
-  <dd>
-    <p>The value to search for.</p>
+- `searchElement`
 
-    <div class="notecard note">
-      <p><strong>Note:</strong> When comparing strings and characters,
-        <code>includes()</code> is <em>case-sensitive</em>.</p>
-    </div>
-  </dd>
-  <dt><code><var>fromIndex</var></code> {{optional_inline}}</dt>
-  <dd>
-    <p>The position in this array at which to begin searching for
-    <code><var>searchElement</var></code>.</p>
-    <p>The first element to be searched is found at <code><var>fromIndex</var></code> for
-    positive values of <code><var>fromIndex</var></code>, or at
-    <code><var>arr</var>.length + <var>fromIndex</var></code> for negative values of
-    <code><var>fromIndex</var></code> (using the {{interwiki("wikipedia", "absolute
-    value")}} of <code><var>fromIndex</var></code> as the number of elements from the end
-    of the array at which to start the search).</p>
-    <p>Defaults to <code>0</code>.</p>
-  </dd>
-</dl>
+  - : The value to search for.
 
-<h3 id="Return_value">Return value</h3>
+    > **Note:** When comparing strings and characters,
+    > `includes()` is _case-sensitive_.
 
-<p>A {{jsxref("Boolean")}} which is <code>true</code> if the value
-  <code><var>searchElement</var></code> is found within the array (or the part of the array
-  indicated by the index <code><var>fromIndex</var></code>, if specified).</p>
+- `fromIndex` {{optional_inline}}
 
-<p>Values of zero are all considered to be equal, regardless of sign. (That is,
-  <code>-0</code> is considered to be equal to both <code>0</code> and <code>+0</code>),
-  but <code>false</code> is <em>not</em> considered to be the same as <code>0</code>.</p>
+  - : The position in this array at which to begin searching for
+    `searchElement`.
 
-<div class="note">
-  <p><strong>Note:</strong> Technically speaking, <code>includes()</code> uses the
-    <code><a href="/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#Same-value-zero_equality">sameValueZero</a></code>
-    algorithm to determine whether the given element is found.</p>
-</div>
+    The first element to be searched is found at `fromIndex` for
+    positive values of `fromIndex`, or at
+    `arr.length + fromIndex` for negative values of
+    `fromIndex` (using the {{interwiki("wikipedia", "absolute
+    value")}} of `fromIndex` as the number of elements from the end
+    of the array at which to start the search).
 
-<h2 id="Examples">Examples</h2>
+    Defaults to `0`.
 
-<pre class="brush: js">
+### Return value
+
+A {{jsxref("Boolean")}} which is `true` if the value
+`searchElement` is found within the array (or the part of the array
+indicated by the index `fromIndex`, if specified).
+
+Values of zero are all considered to be equal, regardless of sign. (That is,
+`-0` is considered to be equal to both `0` and `+0`),
+but `false` is _not_ considered to be the same as `0`.
+
+> **Note:** Technically speaking, `includes()` uses the
+> [`sameValueZero`](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#Same-value-zero_equality)
+> algorithm to determine whether the given element is found.
+
+## Examples
+
+```js
 [1, 2, 3].includes(2)         // true
 [1, 2, 3].includes(4)         // false
 [1, 2, 3].includes(3, 3)      // false
 [1, 2, 3].includes(3, -1)     // true
 [1, 2, NaN].includes(NaN)     // true
 ["1", "2", "3"].includes(3)   // false
-</pre>
+```
 
-<h3 id="fromIndex_is_greater_than_or_equal_to_the_array_length">
-  <code><var>fromIndex</var></code> is greater than or equal to the array length</h3>
+### `fromIndex` is greater than or equal to the array length
 
-<p>If <code><var>fromIndex</var></code> is greater than or equal to the length of the
-  array, <code>false</code> is returned. The array will not be searched.</p>
+If `fromIndex` is greater than or equal to the length of the
+array, `false` is returned. The array will not be searched.
 
-<pre class="brush: js">let arr = ['a', 'b', 'c']
+```js
+let arr = ['a', 'b', 'c']
 
 arr.includes('c', 3)    // false
 arr.includes('c', 100)  // false
-</pre>
+```
 
-<h3 id="Computed_index_is_less_than_0">Computed index is less than 0</h3>
+### Computed index is less than 0
 
-<p>If <code><var>fromIndex</var></code> is negative, the computed index is calculated to
-  be used as a position in the array at which to begin searching for
-  <code><var>searchElement</var></code>. If the computed index is less or equal than
-  <code>-1 * <var>arr</var>.length</code>, the entire array will be searched.</p>
+If `fromIndex` is negative, the computed index is calculated to
+be used as a position in the array at which to begin searching for
+`searchElement`. If the computed index is less or equal than
+`-1 * arr.length`, the entire array will be searched.
 
-<pre class="brush: js">// array length is 3
+```js
+// array length is 3
 // fromIndex is -100
 // computed index is 3 + (-100) = -97
 
@@ -110,39 +105,37 @@ arr.includes('a', -100) // true
 arr.includes('b', -100) // true
 arr.includes('c', -100) // true
 arr.includes('a', -2)   // false
-</pre>
+```
 
-<h3 id="includes_used_as_a_generic_method">includes() used as a generic method</h3>
+### includes() used as a generic method
 
-<p><code>includes()</code> method is intentionally generic. It does not require
-  <code>this</code> value to be an Array object, so it can be applied to other kinds of
-  objects (e.g. array-like objects).</p>
+`includes()` method is intentionally generic. It does not require
+`this` value to be an Array object, so it can be applied to other kinds of
+objects (e.g. array-like objects).
 
-<p>The example below illustrates <code>includes()</code> method called on the function's
-  <a href="/en-US/docs/Web/JavaScript/Reference/Functions/arguments">arguments</a> object.
-</p>
+The example below illustrates `includes()` method called on the function's
+[arguments](/en-US/docs/Web/JavaScript/Reference/Functions/arguments) object.
 
-<pre class="brush: js">(function() {
+```js
+(function() {
   console.log(Array.prototype.includes.call(arguments, 'a'))  // true
   console.log(Array.prototype.includes.call(arguments, 'd'))  // false
-})('a','b','c') </pre>
+})('a','b','c') 
+```
 
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>A polyfill of <code>Array.prototype.includes</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-array"><code>core-js</code></a></li>
-  <li>{{jsxref("TypedArray.prototype.includes()")}}</li>
-  <li>{{jsxref("String.prototype.includes()")}}</li>
-  <li>{{jsxref("Array.prototype.indexOf()")}}</li>
-  <li>{{jsxref("Array.prototype.find()")}}</li>
-  <li>{{jsxref("Array.prototype.findIndex()")}}</li>
-</ul>
+- A polyfill of `Array.prototype.includes` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- {{jsxref("TypedArray.prototype.includes()")}}
+- {{jsxref("String.prototype.includes()")}}
+- {{jsxref("Array.prototype.indexOf()")}}
+- {{jsxref("Array.prototype.find()")}}
+- {{jsxref("Array.prototype.findIndex()")}}

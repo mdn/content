@@ -2,41 +2,41 @@
 title: WeakSet.prototype.add()
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet/add
 tags:
-- ECMAScript 2015
-- JavaScript
-- Method
-- Prototype
-- WeakSet
+  - ECMAScript 2015
+  - JavaScript
+  - Method
+  - Prototype
+  - WeakSet
 browser-compat: javascript.builtins.WeakSet.add
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <code><strong>add()</strong></code> method appends a new object to the end of a
-  <code>WeakSet</code> object.</p>
+The **`add()`** method appends a new object to the end of a
+`WeakSet` object.
 
-<div>{{EmbedInteractiveExample("pages/js/weakset-prototype-add.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/weakset-prototype-add.html", "taller")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">add(value)
-</pre>
+```js
+add(value)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>value</dt>
-  <dd>Required. The object to add to the <code>WeakSet</code> collection.</dd>
-</dl>
+- value
+  - : Required. The object to add to the `WeakSet` collection.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>The <code>WeakSet</code> object.</p>
+The `WeakSet` object.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_add">Using add</h3>
+### Using add
 
-<pre class="brush: js">var ws = new WeakSet();
+```js
+var ws = new WeakSet();
 
 ws.add(window); // add the window object to the WeakSet
 
@@ -45,20 +45,19 @@ ws.has(window); // true
 // Weakset only takes objects as arguments
 ws.add(1);
 // results in "TypeError: Invalid value used in weak set" in Chrome
-// and "TypeError: 1 is not a non-null object" in Firefox</pre>
+// and "TypeError: 1 is not a non-null object" in Firefox
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("WeakSet")}}</li>
-  <li>{{jsxref("WeakSet.prototype.delete()")}}</li>
-  <li>{{jsxref("WeakSet.prototype.has()")}}</li>
-</ul>
+- {{jsxref("WeakSet")}}
+- {{jsxref("WeakSet.prototype.delete()")}}
+- {{jsxref("WeakSet.prototype.has()")}}

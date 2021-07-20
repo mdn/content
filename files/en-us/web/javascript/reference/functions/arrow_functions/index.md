@@ -2,60 +2,53 @@
 title: Arrow function expressions
 slug: Web/JavaScript/Reference/Functions/Arrow_functions
 tags:
-- ECMAScript 2015
-- Functions
-- Intermediate
-- JavaScript
-- Language feature
-- Reference
+  - ECMAScript 2015
+  - Functions
+  - Intermediate
+  - JavaScript
+  - Language feature
+  - Reference
 browser-compat: javascript.functions.arrow_functions
 ---
-<div>{{jsSidebar("Functions")}}</div>
+{{jsSidebar("Functions")}}
 
-<p>An <strong>arrow function expression</strong> is a compact alternative to a traditional
-  <a href="/en-US/docs/Web/JavaScript/Reference/Operators/function">function
-    expression</a>, but is limited and can't be used in all situations.</p>
+An **arrow function expression** is a compact alternative to a traditional
+[function
+expression](/en-US/docs/Web/JavaScript/Reference/Operators/function), but is limited and can't be used in all situations.
 
-<p><strong>Differences &amp; Limitations:</strong></p>
+**Differences & Limitations:**
 
-<ul>
-  <li>Does not have its own bindings to
-    <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/this">this</a></code> or
-    <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/super">super</a></code>,
-    and should not be used as
-    <code><a href="/en-US/docs/Glossary/Method">methods</a></code>.</li>
-  <li>Does not have
-    <code><a href="/en-US/docs/Web/JavaScript/Reference/Functions/arguments">arguments</a></code>,
-    or
-    <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/new.target">new.target</a></code> keywords.
-  </li>
-  <li>Not suitable for
-    <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call">call</a></code>,
-    <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply">apply</a></code>
-    and <a
-      href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind"><code>bind</code></a>
-    methods, which generally rely on establishing a <a
-      href="/en-US/docs/Glossary/Scope">scope</a>.</li>
-  <li>Can not be used as
-    <a href="/en-US/docs/Glossary/constructor">constructors</a>.</li>
-  <li>Can not use
-    <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/yield">yield</a></code>,
-    within its body.</li>
-</ul>
+- Does not have its own bindings to
+  [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) or
+  [`super`](/en-US/docs/Web/JavaScript/Reference/Operators/super),
+  and should not be used as
+  [`methods`](/en-US/docs/Glossary/Method).
+- Does not have
+  [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments),
+  or
+  [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target) keywords.
+- Not suitable for
+  [`call`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call),
+  [`apply`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply)
+  and [`bind`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)
+  methods, which generally rely on establishing a [scope](/en-US/docs/Glossary/Scope).
+- Can not be used as
+  [constructors](/en-US/docs/Glossary/constructor).
+- Can not use
+  [`yield`](/en-US/docs/Web/JavaScript/Reference/Operators/yield),
+  within its body.
 
-<div>{{EmbedInteractiveExample("pages/js/functions-arrow.html")}}</div>
+{{EmbedInteractiveExample("pages/js/functions-arrow.html")}}
 
-<h3 id="Comparing_traditional_functions_to_arrow_functions">Comparing traditional
-  functions to arrow functions</h3>
+### Comparing traditional functions to arrow functions
 
-<p>Let's decompose a "traditional function" down to the simplest "arrow function"
-  step-by-step:</p>
+Let's decompose a "traditional function" down to the simplest "arrow function"
+step-by-step:
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Each step along the way is a valid "arrow function".</p>
-</div>
+> **Note:** Each step along the way is a valid "arrow function".
 
-<pre class="brush: js">// Traditional Function
+```js
+// Traditional Function
 function (a){
   return a + 100;
 }
@@ -63,31 +56,31 @@ function (a){
 // Arrow Function Break Down
 
 // 1. Remove the word "function" and place arrow between the argument and opening body bracket
-(a) =&gt; {
+(a) => {
   return a + 100;
 }
 
 // 2. Remove the body braces and word "return" -- the return is implied.
-(a) =&gt; a + 100;
+(a) => a + 100;
 
 // 3. Remove the argument parentheses
-a =&gt; a + 100;</pre>
+a => a + 100;
+```
 
-<div class="notecard note">
-  <p><strong>Note:</strong> As shown above, the { braces } and ( parentheses ) and "return" are optional, but
-    may be required.</p>
-</div>
+> **Note:** As shown above, the { braces } and ( parentheses ) and "return" are optional, but
+> may be required.
 
-<p>For example, if you have <strong>multiple arguments</strong> or <strong>no
-    arguments</strong>, you'll need to re-introduce parentheses around the arguments:</p>
+For example, if you have **multiple arguments** or **no
+arguments**, you'll need to re-introduce parentheses around the arguments:
 
-<pre class="brush: js">// Traditional Function
+```js
+// Traditional Function
 function (a, b){
   return a + b + 100;
 }
 
 // Arrow Function
-(a, b) =&gt; a + b + 100;
+(a, b) => a + b + 100;
 
 // Traditional Function (no arguments)
 let a = 4;
@@ -99,151 +92,167 @@ function (){
 // Arrow Function (no arguments)
 let a = 4;
 let b = 2;
-() =&gt; a + b + 100;</pre>
+() => a + b + 100;
+```
 
-<p>Likewise, if the body requires <strong>additional lines</strong> of processing, you'll
-  need to re-introduce braces <strong>PLUS the "return"</strong> (arrow functions do not
-  magically guess what or when you want to "return"):</p>
+Likewise, if the body requires **additional lines** of processing, you'll
+need to re-introduce braces **PLUS the "return"** (arrow functions do not
+magically guess what or when you want to "return"):
 
-<pre class="brush: js">// Traditional Function
+```js
+// Traditional Function
 function (a, b){
   let chuck = 42;
   return a + b + chuck;
 }
 
 // Arrow Function
-(a, b) =&gt; {
+(a, b) => {
   let chuck = 42;
   return a + b + chuck;
-}</pre>
+}
+```
 
-<p>And finally, for <strong>named functions</strong> we treat arrow expressions like
-  variables:</p>
+And finally, for **named functions** we treat arrow expressions like
+variables:
 
-<pre class="brush: js">// Traditional Function
+```js
+// Traditional Function
 function bob (a){
   return a + 100;
 }
 
 // Arrow Function
-let bob = a =&gt; a + 100;</pre>
+let bob = a => a + 100;
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<h3 id="Basic_syntax">Basic syntax</h3>
+### Basic syntax
 
-<p class="brush: js">One param. With simple expression return is not needed:
-</p>
+One param. With simple expression return is not needed:
 
-<pre class="brush: js">param =&gt; expression</pre>
+```js
+param => expression
+```
 
-<p class="brush: js">Multiple params require parentheses. With simple
-  expression return is not needed:</p>
+Multiple params require parentheses. With simple
+expression return is not needed:
 
-<pre class="brush: js">(param1, paramN) =&gt; expression</pre>
+```js
+(param1, paramN) => expression
+```
 
-<p class="brush: js">Multiline statements require body braces and return:
-</p>
+Multiline statements require body braces and return:
 
-<pre class="brush: js">param =&gt; {
+```js
+param => {
   let a = 1;
   return a + param;
-}</pre>
+}
+```
 
-<p class="brush: js">Multiple params require parentheses. Multiline statements
-  require body braces and return:</p>
+Multiple params require parentheses. Multiline statements
+require body braces and return:
 
-<pre class="brush: js">(param1, paramN) =&gt; {
+```js
+(param1, paramN) => {
    let a = 1;
    return a + param1 + paramN;
-}</pre>
+}
+```
 
-<h3 id="Advanced_syntax">Advanced syntax</h3>
+### Advanced syntax
 
-<p class="brush: js">To return an object literal expression requires
-  parentheses around expression:</p>
+To return an object literal expression requires
+parentheses around expression:
 
-<pre
-  class="brush: js">params =&gt; ({foo: "a"}) // returning the object {foo: "a"}</pre>
+```js
+params => ({foo: "a"}) // returning the object {foo: "a"}
+```
 
-<p class="brush: js"><a
-    href="/en-US/docs/Web/JavaScript/Reference/Functions/Rest_parameters">Rest
-    parameters</a> are supported:</p>
+[Rest
+parameters](/en-US/docs/Web/JavaScript/Reference/Functions/Rest_parameters) are supported:
 
-<pre class="brush: js">(a, b, ...r) =&gt; expression</pre>
+```js
+(a, b, ...r) => expression
+```
 
-<p class="brush: js"><a
-    href="/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters">Default
-    parameters</a> are supported:</p>
+[Default
+parameters](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters) are supported:
 
-<pre class="brush: js">(a=400, b=20, c) =&gt; expression</pre>
+```js
+(a=400, b=20, c) => expression
+```
 
-<p class="brush: js"><a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">Destructuring</a>
-  within params supported:</p>
+[Destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+within params supported:
 
-<pre class="brush: js">([a, b] = [10, 20]) =&gt; a + b;  // result is 30
-({ a, b } = { a: 10, b: 20 }) =&gt; a + b; // result is 30
-</pre>
+```js
+([a, b] = [10, 20]) => a + b;  // result is 30
+({ a, b } = { a: 10, b: 20 }) => a + b; // result is 30
+```
 
-<h2 id="Description">Description</h2>
+## Description
 
-<h3 id="Arrow_functions_used_as_methods">Arrow functions used as methods</h3>
+### Arrow functions used as methods
 
-<p>As stated previously, arrow function expressions are best suited for non-method
-  functions. Let's see what happens when we try to use them as methods:</p>
+As stated previously, arrow function expressions are best suited for non-method
+functions. Let's see what happens when we try to use them as methods:
 
-<pre class="brush: js">'use strict';
+```js
+'use strict';
 
 var obj = { // does not create a new scope
   i: 10,
-  b: () =&gt; console.log(this.i, this),
+  b: () => console.log(this.i, this),
   c: function() {
     console.log(this.i, this);
   }
 }
 
 obj.b(); // prints undefined, Window {...} (or the global object)
-obj.c(); // prints 10, Object {...}</pre>
+obj.c(); // prints 10, Object {...}
+```
 
-<p>Arrow functions do not have their own <code>this</code>. Another example involving
-  {{jsxref("Object.defineProperty()")}}:</p>
+Arrow functions do not have their own `this`. Another example involving
+{{jsxref("Object.defineProperty()")}}:
 
-<pre class="brush: js">'use strict';
+```js
+'use strict';
 
 var obj = {
   a: 10
 };
 
 Object.defineProperty(obj, 'b', {
-  get: () =&gt; {
+  get: () => {
     console.log(this.a, typeof this.a, this); // undefined 'undefined' Window {...} (or the global object)
     return this.a + 10; // represents global object 'Window', therefore 'this.a' returns 'undefined'
   }
 });
-</pre>
+```
 
-<h3 id="call_apply_and_bind">call, apply and bind</h3>
+### call, apply and bind
 
-<p>The
-  <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call">call</a></code>,
-  <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply">apply</a></code>
-  and <a
-    href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind"><code>bind</code>
-  </a>methods are <strong>NOT suitable</strong> for Arrow functions -- as they were
-  designed to allow methods to execute within different scopes -- because <strong>Arrow
-    functions establish "this" based on the scope the Arrow function is defined
-    within.</strong></p>
+The
+[`call`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call),
+[`apply`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply)
+and [`bind`
+](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)methods are **NOT suitable** for Arrow functions -- as they were
+designed to allow methods to execute within different scopes -- because **Arrow
+functions establish "this" based on the scope the Arrow function is defined
+within.**
 
-<p>For example
-  <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call">call</a></code>,
-  <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply">apply</a></code>
-  and <a
-    href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind"><code>bind</code>
-  </a>work as expected with Traditional functions, because we establish the scope for each
-  of the methods:</p>
+For example
+[`call`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call),
+[`apply`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply)
+and [`bind`
+](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)work as expected with Traditional functions, because we establish the scope for each
+of the methods:
 
-<pre class="brush: js">// ----------------------
+```js
+// ----------------------
 // Traditional Example
 // ----------------------
 // A simplistic object with its very own "this".
@@ -270,12 +279,14 @@ console.log(result) // result 106
 
 // bind
 var result = add.bind(obj) // establishing the scope as "obj"
-console.log(result(1, 2, 3)) // result 106</pre>
+console.log(result(1, 2, 3)) // result 106
+```
 
-<p>With Arrow functions, since our <code>add</code> function is essentially created on the
-  <code>window</code> (global) scope, it will assume <code>this</code> is the window.</p>
+With Arrow functions, since our `add` function is essentially created on the
+`window` (global) scope, it will assume `this` is the window.
 
-<pre class="brush: js">// ----------------------
+```js
+// ----------------------
 // Arrow Example
 // ----------------------
 
@@ -288,7 +299,7 @@ var obj = {
 window.num = 2020; // yikes!
 
 // Arrow Function
-var add = (a, b, c) =&gt; this.num + a + b + c;
+var add = (a, b, c) => this.num + a + b + c;
 
 // call
 console.log(add.call(obj, 1, 2, 3)) // result 2026
@@ -300,16 +311,16 @@ console.log(add.apply(obj, arr)) // result 2026
 // bind
 const bound = add.bind(obj)
 console.log(bound(1, 2, 3)) // result 2026
-</pre>
+```
 
-<p>Perhaps the greatest benefit of using Arrow functions is with DOM-level methods
-  (setTimeout, setInterval, addEventListener) that usually required some kind of closure,
-  call, apply or bind to ensure the function executed in the proper scope.</p>
+Perhaps the greatest benefit of using Arrow functions is with DOM-level methods
+(setTimeout, setInterval, addEventListener) that usually required some kind of closure,
+call, apply or bind to ensure the function executed in the proper scope.
 
-<p><strong>Traditional Example:</strong></p>
+**Traditional Example:**
 
-<pre
-  class="brush: js">var obj = {
+```js
+var obj = {
     count : 10,
     doSomethingLater : function (){
         setTimeout(function(){ // the function executes on the window scope
@@ -319,128 +330,144 @@ console.log(bound(1, 2, 3)) // result 2026
     }
 }
 
-obj.doSomethingLater(); // console prints "NaN", because the property "count" is not in the window scope.</pre>
+obj.doSomethingLater(); // console prints "NaN", because the property "count" is not in the window scope.
+```
 
-<p><strong>Arrow Example:</strong></p>
+**Arrow Example:**
 
-<pre class="brush: js">var obj = {
+```js
+var obj = {
     count : 10,
     doSomethingLater : function(){ // of course, arrow functions are not suited for methods
-        setTimeout( () =&gt; { // since the arrow function was created within the "obj", it assumes the object's "this"
+        setTimeout( () => { // since the arrow function was created within the "obj", it assumes the object's "this"
             this.count++;
             console.log(this.count);
         }, 300);
     }
 }
 
-obj.doSomethingLater();</pre>
+obj.doSomethingLater();
+```
 
-<h3 id="No_binding_of_arguments">No binding of <code>arguments</code></h3>
+### No binding of `arguments`
 
-<p>Arrow functions do not have their own <a
-    href="/en-US/docs/Web/JavaScript/Reference/Functions/arguments"><code>arguments</code>
-    object</a>. Thus, in this example, <code>arguments</code> is a reference to the
-  arguments of the enclosing scope:</p>
+Arrow functions do not have their own [`arguments`
+object](/en-US/docs/Web/JavaScript/Reference/Functions/arguments). Thus, in this example, `arguments` is a reference to the
+arguments of the enclosing scope:
 
-<pre class="brush: js">var arguments = [1, 2, 3];
-var arr = () =&gt; arguments[0];
+```js
+var arguments = [1, 2, 3];
+var arr = () => arguments[0];
 
 arr(); // 1
 
 function foo(n) {
-  var f = () =&gt; arguments[0] + n; // foo's implicit arguments binding. arguments[0] is n
+  var f = () => arguments[0] + n; // foo's implicit arguments binding. arguments[0] is n
   return f();
 }
 
-foo(3); // 3 + 3 = 6</pre>
+foo(3); // 3 + 3 = 6
+```
 
-<p>In most cases, using <a
-    href="/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters">rest
-    parameters</a> is a good alternative to using an <code>arguments</code> object.</p>
+In most cases, using [rest
+parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters) is a good alternative to using an `arguments` object.
 
-<pre class="brush: js">function foo(n) {
-  var f = (...args) =&gt; args[0] + n;
+```js
+function foo(n) {
+  var f = (...args) => args[0] + n;
   return f(10);
 }
 
-foo(1); // 11</pre>
+foo(1); // 11
+```
 
-<h3 id="Use_of_the_new_operator">Use of the <code>new</code> operator</h3>
+### Use of the `new` operator
 
-<p>Arrow functions cannot be used as constructors and will throw an error when used with
-  <code>new</code>.</p>
+Arrow functions cannot be used as constructors and will throw an error when used with
+`new`.
 
-<pre class="brush: js">var Foo = () =&gt; {};
-var foo = new Foo(); // TypeError: Foo is not a constructor</pre>
+```js
+var Foo = () => {};
+var foo = new Foo(); // TypeError: Foo is not a constructor
+```
 
-<h3 id="Use_of_prototype_property">Use of <code>prototype</code> property</h3>
+### Use of `prototype` property
 
-<p>Arrow functions do not have a <code>prototype</code> property.</p>
+Arrow functions do not have a `prototype` property.
 
-<pre class="brush: js">var Foo = () =&gt; {};
+```js
+var Foo = () => {};
 console.log(Foo.prototype); // undefined
-</pre>
+```
 
-<h3 id="Use_of_the_yield_keyword">Use of the <code>yield</code> keyword</h3>
+### Use of the `yield` keyword
 
-<p>The
-  <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/yield">yield</a></code>
-  keyword may not be used in an arrow function's body (except when permitted within
-  functions further nested within it). As a consequence, arrow functions cannot be used as
-  generators.</p>
+The
+[`yield`](/en-US/docs/Web/JavaScript/Reference/Operators/yield)
+keyword may not be used in an arrow function's body (except when permitted within
+functions further nested within it). As a consequence, arrow functions cannot be used as
+generators.
 
-<h3 id="Function_body">Function body</h3>
+### Function body
 
-<p>Arrow functions can have either a "concise body" or the usual "block body".</p>
+Arrow functions can have either a "concise body" or the usual "block body".
 
-<p>In a concise body, only an expression is specified, which becomes the implicit return
-  value. In a block body, you must use an explicit <code>return</code> statement.</p>
+In a concise body, only an expression is specified, which becomes the implicit return
+value. In a block body, you must use an explicit `return` statement.
 
-<pre class="brush: js">var func = x =&gt; x * x;
+```js
+var func = x => x * x;
 // concise body syntax, implied "return"
 
-var func = (x, y) =&gt; { return x + y; };
+var func = (x, y) => { return x + y; };
 // with block body, explicit "return" needed
-</pre>
+```
 
-<h3 id="Returning_object_literals">Returning object literals</h3>
+### Returning object literals
 
-<p>Keep in mind that returning object literals using the concise body syntax
-  <code>params =&gt; {object:literal}</code> will not work as expected.</p>
+Keep in mind that returning object literals using the concise body syntax
+`params => {object:literal}` will not work as expected.
 
-<pre class="brush: js">var func = () =&gt; { foo: 1 };
+```js
+var func = () => { foo: 1 };
 // Calling func() returns undefined!
 
-var func = () =&gt; { foo: function() {} };
-// SyntaxError: function statement requires a name</pre>
+var func = () => { foo: function() {} };
+// SyntaxError: function statement requires a name
+```
 
-<p>This is because the code inside braces ({}) is parsed as a sequence of statements (i.e.
-  <code>foo</code> is treated like a label, not a key in an object literal).</p>
+This is because the code inside braces ({}) is parsed as a sequence of statements (i.e.
+`foo` is treated like a label, not a key in an object literal).
 
-<p>You must wrap the object literal in parentheses:</p>
+You must wrap the object literal in parentheses:
 
-<pre class="brush: js">var func = () =&gt; ({ foo: 1 });</pre>
+```js
+var func = () => ({ foo: 1 });
+```
 
-<h3 id="Line_breaks">Line breaks</h3>
+### Line breaks
 
-<p>An arrow function cannot contain a line break between its parameters and its arrow.</p>
+An arrow function cannot contain a line break between its parameters and its arrow.
 
-<pre class="brush: js">var func = (a, b, c)
-  =&gt; 1;
-// SyntaxError: expected expression, got '=&gt;'</pre>
+```js
+var func = (a, b, c)
+  => 1;
+// SyntaxError: expected expression, got '=>'
+```
 
-<p>However, this can be amended by putting the line break after the arrow or using
-  parentheses/braces as seen below to ensure that the code stays pretty and fluffy. You
-  can also put line breaks between arguments.</p>
+However, this can be amended by putting the line break after the arrow or using
+parentheses/braces as seen below to ensure that the code stays pretty and fluffy. You
+can also put line breaks between arguments.
 
-<pre class="brush: js">var func = (a, b, c) =&gt;
+```js
+var func = (a, b, c) =>
   1;
 
-var func = (a, b, c) =&gt; (
+var func = (a, b, c) => (
   1
 );
 
-var func = (a, b, c) =&gt; {
+var func = (a, b, c) => {
   return 1
 };
 
@@ -448,85 +475,85 @@ var func = (
   a,
   b,
   c
-) =&gt; 1;
+) => 1;
 
-// no SyntaxError thrown</pre>
+// no SyntaxError thrown
+```
 
-<h3 id="Parsing_order">Parsing order</h3>
+### Parsing order
 
-<p>Although the arrow in an arrow function is not an operator, arrow functions have
-  special parsing rules that interact differently with <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence">operator
-    precedence</a> compared to regular functions.</p>
+Although the arrow in an arrow function is not an operator, arrow functions have
+special parsing rules that interact differently with [operator
+precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence) compared to regular functions.
 
-<pre class="brush: js">let callback;
+```js
+let callback;
 
 callback = callback || function() {}; // ok
 
-callback = callback || () =&gt; {};
+callback = callback || () => {};
 // SyntaxError: invalid arrow-function arguments
 
-callback = callback || (() =&gt; {});    // ok
-</pre>
+callback = callback || (() => {});    // ok
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Basic_usage">Basic usage</h3>
+### Basic usage
 
-<pre class="brush: js">// An empty arrow function returns undefined
-let empty = () =&gt; {};
+```js
+// An empty arrow function returns undefined
+let empty = () => {};
 
-(() =&gt; 'foobar')();
+(() => 'foobar')();
 // Returns "foobar"
 // (this is an Immediately Invoked Function Expression)
 
-var simple = a =&gt; a &gt; 15 ? 15 : a;
+var simple = a => a > 15 ? 15 : a;
 simple(16); // 15
 simple(10); // 10
 
-let max = (a, b) =&gt; a &gt; b ? a : b;
+let max = (a, b) => a > b ? a : b;
 
 // Easy array filtering, mapping, ...
 
 var arr = [5, 6, 13, 0, 1, 18, 23];
 
-var sum = arr.reduce((a, b) =&gt; a + b);
+var sum = arr.reduce((a, b) => a + b);
 // 66
 
-var even = arr.filter(v =&gt; v % 2 == 0);
+var even = arr.filter(v => v % 2 == 0);
 // [6, 0, 18]
 
-var double = arr.map(v =&gt; v * 2);
+var double = arr.map(v => v * 2);
 // [10, 12, 26, 0, 2, 36, 46]
 
 // More concise promise chains
-promise.then(a =&gt; {
+promise.then(a => {
   // ...
-}).then(b =&gt; {
+}).then(b => {
   // ...
 });
 
 // Parameterless arrow functions that are visually easier to parse
-setTimeout( () =&gt; {
+setTimeout( () => {
   console.log('I happen sooner');
-  setTimeout( () =&gt; {
+  setTimeout( () => {
     // deeper code
     console.log('I happen later');
   }, 1);
 }, 1);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/">"ES6 In
-      Depth: Arrow functions" on hacks.mozilla.org</a></li>
-</ul>
+- ["ES6 In
+  Depth: Arrow functions" on hacks.mozilla.org](https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/)

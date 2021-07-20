@@ -2,46 +2,45 @@
 title: WeakMap.prototype.set()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/set
 tags:
-- ECMAScript 2015
-- JavaScript
-- Method
-- Prototype
-- WeakMap
+  - ECMAScript 2015
+  - JavaScript
+  - Method
+  - Prototype
+  - WeakMap
 browser-compat: javascript.builtins.WeakMap.set
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>set()</code></strong> method adds a new element with a specified key
-  and value to a <code>WeakMap</code> object.</p>
+The **`set()`** method adds a new element with a specified key
+and value to a `WeakMap` object.
 
-<div>{{EmbedInteractiveExample("pages/js/weakmap-prototype-set.html")}}</div>
+{{EmbedInteractiveExample("pages/js/weakmap-prototype-set.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+set(key, value)
+```
 
-<pre
-  class="brush: js">set(key, value)</pre>
+### Parameters
 
-<h3 id="Parameters">Parameters</h3>
+- `key`
+  - : Required. Must be `object`. The key of the element to add to the
+    `WeakMap` object.
+- `value`
+  - : Required. Any value. The value of the element to add to the `WeakMap`
+    object.
 
-<dl>
-  <dt><code><var>key</var></code></dt>
-  <dd>Required. Must be <code>object</code>. The key of the element to add to the
-    <code>WeakMap</code> object.</dd>
-  <dt><code><var>value</var></code></dt>
-  <dd>Required. Any value. The value of the element to add to the <code>WeakMap</code>
-    object.</dd>
-</dl>
+### Return value
 
-<h3 id="Return_value">Return value</h3>
+The `WeakMap` object.
 
-<p>The <code>WeakMap</code> object.</p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Using the set() method
 
-<h3 id="Using_the_set_method">Using the set() method</h3>
-
-<pre class="brush: js">var wm = new WeakMap();
+```js
+var wm = new WeakMap();
 var obj = {};
 
 // Add new elements to the WeakMap
@@ -49,20 +48,18 @@ wm.set(obj, 'foo').set(window, 'bar'); // chainable
 
 // Update an element in the WeakMap
 wm.set(obj, 'baz');
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("WeakMap")}}</li>
-  <li>{{jsxref("WeakMap.prototype.get()")}}</li>
-  <li>{{jsxref("WeakMap.prototype.has()")}}</li>
-</ul>
+- {{jsxref("WeakMap")}}
+- {{jsxref("WeakMap.prototype.get()")}}
+- {{jsxref("WeakMap.prototype.has()")}}

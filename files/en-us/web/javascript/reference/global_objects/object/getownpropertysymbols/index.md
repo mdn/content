@@ -9,39 +9,39 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Object.getOwnPropertySymbols
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>Object.getOwnPropertySymbols()</code></strong> method returns an array of all symbol properties found directly upon a given object.</p>
+The **`Object.getOwnPropertySymbols()`** method returns an array of all symbol properties found directly upon a given object.
 
-<div>{{EmbedInteractiveExample("pages/js/object-getownpropertysymbols.html")}}</div>
+{{EmbedInteractiveExample("pages/js/object-getownpropertysymbols.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+Object.getOwnPropertySymbols(obj)
+```
 
-<pre class="brush: js">Object.getOwnPropertySymbols(<var>obj</var>)</pre>
+### Parameters
 
-<h3 id="Parameters">Parameters</h3>
+- `obj`
+  - : The object whose symbol properties are to be returned.
 
-<dl>
- <dt><code><var>obj</var></code></dt>
- <dd>The object whose symbol properties are to be returned.</dd>
-</dl>
+### Return value
 
-<h3 id="Return_value">Return value</h3>
+An array of all symbol properties found directly upon the given object.
 
-<p>An array of all symbol properties found directly upon the given object.</p>
+## Description
 
-<h2 id="Description">Description</h2>
+Similar to {{jsxref("Object.getOwnPropertyNames()")}}, you can get all symbol properties of a given object as an array of symbols. Note that {{jsxref("Object.getOwnPropertyNames()")}} itself does not contain the symbol properties of an object and only the string properties.
 
-<p>Similar to {{jsxref("Object.getOwnPropertyNames()")}}, you can get all symbol properties of a given object as an array of symbols. Note that {{jsxref("Object.getOwnPropertyNames()")}} itself does not contain the symbol properties of an object and only the string properties.</p>
+As all objects have no own symbol properties initially, `Object.getOwnPropertySymbols()` returns an empty array unless you have set symbol properties on your object.
 
-<p>As all objects have no own symbol properties initially, <code>Object.getOwnPropertySymbols()</code> returns an empty array unless you have set symbol properties on your object.</p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Using getOwnPropertySymbols
 
-<h3 id="Using_getOwnPropertySymbols">Using getOwnPropertySymbols</h3>
-
-<pre class="brush: js">var obj = {};
+```js
+var obj = {};
 var a = Symbol('a');
 var b = Symbol.for('b');
 
@@ -53,20 +53,18 @@ var objectSymbols = Object.getOwnPropertySymbols(obj);
 console.log(objectSymbols.length); // 2
 console.log(objectSymbols);        // [Symbol(a), Symbol(b)]
 console.log(objectSymbols[0]);     // Symbol(a)
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>A polyfill of <code>Object.getOwnPropertySymbols</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-symbol"><code>core-js</code></a></li>
- <li>{{jsxref("Object.getOwnPropertyNames()")}}</li>
- <li>{{jsxref("Symbol")}}</li>
-</ul>
+- A polyfill of `Object.getOwnPropertySymbols` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-symbol)
+- {{jsxref("Object.getOwnPropertyNames()")}}
+- {{jsxref("Symbol")}}

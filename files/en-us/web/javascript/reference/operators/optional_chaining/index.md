@@ -10,114 +10,114 @@ tags:
   - Reference
 browser-compat: javascript.operators.optional_chaining
 ---
-<div>{{JSSidebar("Operators")}}</div>
+{{JSSidebar("Operators")}}
 
-<p>The <strong>optional chaining</strong> operator (<strong><code>?.</code></strong>)
-  enables you to read the value of a property located deep within a chain of connected objects
-  without having to check that each reference in the chain is valid.</p>
+The **optional chaining** operator (**`?.`**)
+enables you to read the value of a property located deep within a chain of connected objects
+without having to check that each reference in the chain is valid.
 
-<p>The <code>?.</code> operator is like the
-    <code>.</code> chaining operator, except that instead of causing an error if a
-    reference is <a href="/en-US/docs/Glossary/Nullish">nullish</a> ({{JSxRef("null")}} or
-    {{JSxRef("undefined")}}), the expression short-circuits with a return value of
-    <code>undefined</code>. When used with function calls, it returns
-  <code>undefined</code> if the given function does not exist.</p>
+The `?.` operator is like the
+`.` chaining operator, except that instead of causing an error if a
+reference is [nullish](/en-US/docs/Glossary/Nullish) ({{JSxRef("null")}} or
+{{JSxRef("undefined")}}), the expression short-circuits with a return value of
+`undefined`. When used with function calls, it returns
+`undefined` if the given function does not exist.
 
-<p>This results in shorter and simpler expressions when accessing chained properties when
-  the possibility exists that a reference may be missing. It can also be helpful while
-  exploring the content of an object when there's no known guarantee as to which
-  properties are required.</p>
+This results in shorter and simpler expressions when accessing chained properties when
+the possibility exists that a reference may be missing. It can also be helpful while
+exploring the content of an object when there's no known guarantee as to which
+properties are required.
 
-<p>Optional chaining cannot be used on a non-declared root object, but can be used with an undefined root object.</p>
+Optional chaining cannot be used on a non-declared root object, but can be used with an undefined root object.
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-optionalchainingoperator.html",
-  "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-optionalchainingoperator.html",
+  "taller")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush: js">
+```js
 obj.val?.prop
 obj.val?.[expr]
 obj.arr?.[index]
 obj.func?.(args)
-</pre>
+```
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The optional chaining operator provides a way to simplify accessing values through
-  connected objects when it's possible that a reference or function may be
-  <code>undefined</code> or <code>null</code>.</p>
+The optional chaining operator provides a way to simplify accessing values through
+connected objects when it's possible that a reference or function may be
+`undefined` or `null`.
 
-<p>For example, consider an object <code>obj</code> which has a nested structure. Without
-  optional chaining, looking up a deeply-nested subproperty requires validating the
-  references in between, such as:</p>
+For example, consider an object `obj` which has a nested structure. Without
+optional chaining, looking up a deeply-nested subproperty requires validating the
+references in between, such as:
 
-<pre
-  class="brush: js">let nestedProp = obj.first &amp;&amp; obj.first.second;</pre>
+```js
+let nestedProp = obj.first && obj.first.second;
+```
 
-<p>The value of <code>obj.first</code> is confirmed to be non-<code>null</code> (and
-  non-<code>undefined</code>) before then accessing the value of
-  <code>obj.first.second</code>. This prevents the error that would occur if you accessed
-  <code>obj.first.second</code> directly without testing <code>obj.first</code>.</p>
+The value of `obj.first` is confirmed to be non-`null` (and
+non-`undefined`) before then accessing the value of
+`obj.first.second`. This prevents the error that would occur if you accessed
+`obj.first.second` directly without testing `obj.first`.
 
-<p>With the optional chaining operator (<code>?.</code>), however, you don't have to
-  explicitly test and short-circuit based on the state of <code>obj.first</code> before
-  trying to access <code>obj.first.second</code>:</p>
+With the optional chaining operator (`?.`), however, you don't have to
+explicitly test and short-circuit based on the state of `obj.first` before
+trying to access `obj.first.second`:
 
-<pre class="brush: js">let nestedProp = obj.first?.second;</pre>
+```js
+let nestedProp = obj.first?.second;
+```
 
-<p>By using the <code>?.</code> operator instead of just <code>.</code>, JavaScript knows
-  to implicitly check to be sure <code>obj.first</code> is not <code>null</code> or
-  <code>undefined</code> before attempting to access <code>obj.first.second</code>. If
-  <code>obj.first</code> is <code>null</code> or <code>undefined</code>, the expression
-  automatically short-circuits, returning <code>undefined</code>.</p>
+By using the `?.` operator instead of just `.`, JavaScript knows
+to implicitly check to be sure `obj.first` is not `null` or
+`undefined` before attempting to access `obj.first.second`. If
+`obj.first` is `null` or `undefined`, the expression
+automatically short-circuits, returning `undefined`.
 
-<p>This is equivalent to the following, except that the temporary variable is in fact not
-  created:</p>
+This is equivalent to the following, except that the temporary variable is in fact not
+created:
 
-<pre class="brush: js">let temp = obj.first;
+```js
+let temp = obj.first;
 let nestedProp = ((temp === null || temp === undefined) ? undefined : temp.second);
-</pre>
+```
 
-<h3 id="Optional_chaining_with_function_calls">Optional chaining with function calls</h3>
+### Optional chaining with function calls
 
-<p>You can use optional chaining when attempting to call a method which may not exist.
-  This can be helpful, for example, when using an API in which a method might be
-  unavailable, either due to the age of the implementation or because of a feature which
-  isn't available on the user's device.</p>
+You can use optional chaining when attempting to call a method which may not exist.
+This can be helpful, for example, when using an API in which a method might be
+unavailable, either due to the age of the implementation or because of a feature which
+isn't available on the user's device.
 
-<p>Using optional chaining with function calls causes the expression to automatically
-  return <code>undefined</code> instead of throwing an exception if the method isn't
-  found:</p>
+Using optional chaining with function calls causes the expression to automatically
+return `undefined` instead of throwing an exception if the method isn't
+found:
 
-<pre class="brush: js">let result = someInterface.customMethod?.();</pre>
+```js
+let result = someInterface.customMethod?.();
+```
 
-<div class="notecard note">
-  <p><strong>Note:</strong> If there is a property with such a name and which is not a
-    function, using <code>?.</code> will still raise a {{JSxRef("TypeError")}} exception
-    (<code>someInterface.customMethod is not a function</code>).</p>
-</div>
+> **Note:** If there is a property with such a name and which is not a
+> function, using `?.` will still raise a {{JSxRef("TypeError")}} exception
+> (`someInterface.customMethod is not a function`).
 
-<div class="notecard note">
-  <p><strong>Note:</strong> If <code>someInterface</code> itself is <code>null</code> or
-    <code>undefined</code>, a {{JSxRef("TypeError")}} exception will still be
-    raised (<code>someInterface is null</code>). If you expect that
-    <code>someInterface</code> itself may be <code>null</code> or <code>undefined</code>,
-    you have to use <code>?.</code> at this position as
-    well: <code>someInterface?.customMethod?.()</code></p>
-</div>
+> **Note:** If `someInterface` itself is `null` or
+> `undefined`, a {{JSxRef("TypeError")}} exception will still be
+> raised (`someInterface is null`). If you expect that
+> `someInterface` itself may be `null` or `undefined`,
+> you have to use `?.` at this position as
+> well: `someInterface?.customMethod?.()`
 
-<h4 id="Dealing_with_optional_callbacks_or_event_handlers">Dealing with optional callbacks
-  or event handlers</h4>
+#### Dealing with optional callbacks or event handlers
 
-<p>If you use callbacks or fetch methods from an object with <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Object_destructuring">a
-    destructuring assignment</a>, you may have non-existent values that you cannot call as
-  functions unless you have tested their existence. Using <code>?.</code>, you can avoid
-  this extra test:</p>
+If you use callbacks or fetch methods from an object with [a
+destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Object_destructuring), you may have non-existent values that you cannot call as
+functions unless you have tested their existence. Using `?.`, you can avoid
+this extra test:
 
-<pre class="brush: js">// Written as of ES2019
+```js
+// Written as of ES2019
 function doSomething(onContent, onError) {
   try {
     // ... do something with the data
@@ -128,9 +128,10 @@ function doSomething(onContent, onError) {
     }
   }
 }
-</pre>
+```
 
-<pre class="brush: js">// Using optional chaining with function calls
+```js
+// Using optional chaining with function calls
 function doSomething(onContent, onError) {
   try {
    // ... do something with the data
@@ -139,61 +140,65 @@ function doSomething(onContent, onError) {
     onError?.(err.message); // no exception if onError is undefined
   }
 }
-</pre>
+```
 
-<h3 id="Optional_chaining_with_expressions">Optional chaining with expressions</h3>
+### Optional chaining with expressions
 
-<p>You can also use the optional chaining operator when accessing properties with an
-  expression using <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors#Bracket_notation">the
-    bracket notation of the property accessor</a>:</p>
+You can also use the optional chaining operator when accessing properties with an
+expression using [the
+bracket notation of the property accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors#Bracket_notation):
 
-<pre class="brush: js">let nestedProp = obj?.['prop' + 'Name'];
-</pre>
+```js
+let nestedProp = obj?.['prop' + 'Name'];
+```
 
-<h3 id="Optional_chaining_not_valid_on_the_left-hand_side_of_an_assignment">Optional
-  chaining not valid on the left-hand side of an assignment</h3>
+### Optional chaining not valid on the left-hand side of an assignment
 
-<pre
-  class="brush: js">let object = {};
-object?.property = 1; // Uncaught SyntaxError: Invalid left-hand side in assignment</pre>
+```js
+let object = {};
+object?.property = 1; // Uncaught SyntaxError: Invalid left-hand side in assignment
+```
 
-<h3 id="Array_item_access_with_optional_chaining">Array item access with optional chaining
-</h3>
+### Array item access with optional chaining
 
-<pre class="brush: js">let arrayItem = arr?.[42];</pre>
+```js
+let arrayItem = arr?.[42];
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Basic_example">Basic example</h3>
+### Basic example
 
-<p>This example looks for the value of the <code>name</code> property for the member
-  <code>bar</code> in a map when there is no such member. The result is therefore
-  <code>undefined</code>.</p>
+This example looks for the value of the `name` property for the member
+`bar` in a map when there is no such member. The result is therefore
+`undefined`.
 
-<pre class="brush: js">let myMap = new Map();
+```js
+let myMap = new Map();
 myMap.set("foo", {name: "baz", desc: "inga"});
 
-let nameBar = myMap.get("bar")?.name;</pre>
+let nameBar = myMap.get("bar")?.name;
+```
 
-<h3 id="Short-circuiting_evaluation">Short-circuiting evaluation</h3>
+### Short-circuiting evaluation
 
-<p>When using optional chaining with expressions, if the left operand is <code>null</code>
-  or <code>undefined</code>, the expression will not be evaluated. For instance:</p>
+When using optional chaining with expressions, if the left operand is `null`
+or `undefined`, the expression will not be evaluated. For instance:
 
-<pre class="brush: js">let potentiallyNullObj = null;
+```js
+let potentiallyNullObj = null;
 let x = 0;
 let prop = potentiallyNullObj?.[x++];
 
 console.log(x); // 0 as x was not incremented
-</pre>
+```
 
-<h3 id="Stacking_the_optional_chaining_operator">Stacking the optional chaining operator
-</h3>
+### Stacking the optional chaining operator
 
-<p>With nested structures, it is possible to use optional chaining multiple times:</p>
+With nested structures, it is possible to use optional chaining multiple times:
 
-<pre class="brush: js">let customer = {
+```js
+let customer = {
   name: "Carl",
   details: {
     age: 82,
@@ -204,33 +209,32 @@ let customerCity = customer.details?.address?.city;
 
 // … this also works with optional chaining function call
 let customerName = customer.name?.getName?.(); // method does not exist, customerName is undefined
-</pre>
+```
 
-<h3 id="Combining_with_the_nullish_coalescing_operator">Combining with the nullish
-  coalescing operator</h3>
+### Combining with the nullish coalescing operator
 
-<p>The {{JSxRef("Operators/Nullish_Coalescing_Operator", "nullish coalescing operator",
+The {{JSxRef("Operators/Nullish_Coalescing_Operator", "nullish coalescing operator",
   '', 1)}} may be used after optional chaining in order to build a default value when none
-  was found:</p>
+was found:
 
-<pre class="brush: js">let customer = {
+```js
+let customer = {
   name: "Carl",
   details: { age: 82 }
 };
 const customerCity = customer?.city ?? "Unknown city";
-console.log(customerCity); // Unknown city</pre>
+console.log(customerCity); // Unknown city
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{JSxRef("Operators/Nullish_Coalescing_Operator", "Nullish Coalescing Operator",
-    '', 1)}}</li>
-</ul>
+- The {{JSxRef("Operators/Nullish_Coalescing_Operator", "Nullish Coalescing Operator",
+    '', 1)}}

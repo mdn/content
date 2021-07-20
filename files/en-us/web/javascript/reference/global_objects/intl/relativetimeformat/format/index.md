@@ -12,37 +12,39 @@ tags:
   - RelativeTimeFormat
 browser-compat: javascript.builtins.Intl.RelativeTimeFormat.format
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>Intl.RelativeTimeFormat.prototype.format()</code></strong> method formats a <code>value</code> and <code>unit</code> according to the locale and formatting options of this {{jsxref("Intl.RelativeTimeFormat")}} object.</p>
+The **`Intl.RelativeTimeFormat.prototype.format()`** method formats a `value` and `unit` according to the locale and formatting options of this {{jsxref("Intl.RelativeTimeFormat")}} object.
 
-<div>{{EmbedInteractiveExample("pages/js/intl-relativetimeformat-prototype-format.html")}}</div>
+{{EmbedInteractiveExample("pages/js/intl-relativetimeformat-prototype-format.html")}}
+
 <!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">format(value, unit)</pre>
+```js
+format(value, unit)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-	<dt><code><var>value</var></code></dt>
-	<dd>Numeric value to use in the internationalized relative time message.</dd>
-	<dt><code><var>unit</var></code></dt>
-	<dd>Unit to use in the relative time internationalized message. Possible values are: "<code>year</code>", "<code>quarter</code>", "<code>month</code>", "<code>week</code>", "<code>day</code>", "<code>hour</code>", "<code>minute</code>", "<code>second</code>". Plural forms are also permitted.</dd>
-</dl>
+- `value`
+  - : Numeric value to use in the internationalized relative time message.
+- `unit`
+  - : Unit to use in the relative time internationalized message. Possible values are: "`year`", "`quarter`", "`month`", "`week`", "`day`", "`hour`", "`minute`", "`second`". Plural forms are also permitted.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The function returned by the <code>format</code> getter formats a value and a unit into a string according to the locale and formatting options of this {{jsxref("Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat")}} object.</p>
+The function returned by the `format` getter formats a value and a unit into a string according to the locale and formatting options of this {{jsxref("Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat")}} object.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Basic_format_usage">Basic format usage</h3>
+### Basic format usage
 
-<p>The following example shows how to create a relative time formatter using the English language.</p>
+The following example shows how to create a relative time formatter using the English language.
 
-<pre class="brush: js">// Create a relative time formatter in your locale
+```js
+// Create a relative time formatter in your locale
 // with default values explicitly passed in.
 const rtf = new Intl.RelativeTimeFormat("en", {
     localeMatcher: "best fit", // other values: "lookup"
@@ -52,42 +54,42 @@ const rtf = new Intl.RelativeTimeFormat("en", {
 
 // Format relative time using negative value (-1).
 rtf.format(-1, "day");
-// &gt; "1 day ago"
+// > "1 day ago"
 
 // Format relative time using positive  value (1).
 rtf.format(1, "day");
-// &gt; "in 1 day"</pre>
+// > "in 1 day"
+```
 
-<h3 id="Using_the_auto_option">Using the auto option</h3>
+### Using the auto option
 
-<p>If <code>numeric:auto</code> option is passed, it will produce the string <code>yesterday</code>, <code>today</code>, or <code>tomorrow</code> instead of <code>1 day ago</code>, <code>in 0 days</code>, or <code>in 1 day</code>. This allows to not always have to use numeric values in the output.</p>
+If `numeric:auto` option is passed, it will produce the string `yesterday`, `today`, or `tomorrow` instead of `1 day ago`, `in 0 days`, or `in 1 day`. This allows to not always have to use numeric values in the output.
 
-<pre class="brush: js">// Create a relative time formatter in your locale
+```js
+// Create a relative time formatter in your locale
 // with numeric: "auto" option value passed in.
 const rtf = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
 
 // Format relative time using negative value (-1).
 rtf.format(-1, "day");
-// &gt; "yesterday"
+// > "yesterday"
 
 rtf.format(0, "day");
-// &gt; "today"
+// > "today"
 
 // Format relative time using positive day unit (1).
 rtf.format(1, "day");
-// &gt; "tomorrow"
-</pre>
+// > "tomorrow"
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>{{jsxref("Intl.RelativeTimeFormat")}}</li>
-</ul>
+- {{jsxref("Intl.RelativeTimeFormat")}}

@@ -8,19 +8,19 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.Date
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>Creates a JavaScript <strong><code>Date</code></strong>
-    instance that represents a single moment in time in a platform-independent
-    format.<code>Date</code> objects contain a <code>Number</code> that represents
-  milliseconds since 1 January 1970 UTC.</p>
+Creates a JavaScript **`Date`**
+instance that represents a single moment in time in a platform-independent
+format.`Date` objects contain a `Number` that represents
+milliseconds since 1 January 1970 UTC.
 
-<div>{{EmbedInteractiveExample("pages/js/date-constructor.html")}}</div>
+{{EmbedInteractiveExample("pages/js/date-constructor.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush: js">new Date()
+```js
+new Date()
 new Date(value)
 new Date(dateString)
 
@@ -30,144 +30,116 @@ new Date(year, monthIndex, day, hours)
 new Date(year, monthIndex, day, hours, minutes)
 new Date(year, monthIndex, day, hours, minutes, seconds)
 new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds)
-</pre>
+```
 
-<div class="notecard note">
-  <p><strong>Note:</strong> The only correct way to instantiate a new <code>Date</code>
-    object is by using the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/new"><code>new</code></a> operator. If you call the <code>Date</code>
-    object directly, such as <code>now = Date()</code>, the returned value is a string
-    rather than a <code>Date</code> object.</p>
-</div>
+> **Note:** The only correct way to instantiate a new `Date`
+> object is by using the [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) operator. If you call the `Date`
+> object directly, such as `now = Date()`, the returned value is a string
+> rather than a `Date` object.
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>There are four basic forms for the <code>Date()</code> constructor:</p>
+There are four basic forms for the `Date()` constructor:
 
-<ol>
-  <li>
-    <h4 id="No_parameters">No parameters</h4>
+1.  #### No parameters
 
-    <p>When no parameters are provided, the newly-created <code>Date</code> object
-      represents the current date and time as of the time of instantiation.</p>
-  </li>
-  <li>
-    <h4 id="Time_value_or_timestamp_number">Time value or timestamp number</h4>
+    When no parameters are provided, the newly-created `Date` object
+    represents the current date and time as of the time of instantiation.
 
-    <dl>
-      <dt><code><var>value</var></code></dt>
-      <dd>An integer value representing the number of milliseconds since January 1, 1970,
+2.  #### Time value or timestamp number
+
+    - `value`
+      - : An integer value representing the number of milliseconds since January 1, 1970,
         00:00:00 UTC (the ECMAScript epoch, equivalent to the UNIX epoch), with leap
-        seconds ignored. Keep in mind that most <a
-          href="https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_16">UNIX
-          Timestamp</a> functions are only accurate to the nearest second.</dd>
-    </dl>
-  </li>
-  <li>
-    <h4 id="Timestamp_string">Timestamp string</h4>
+        seconds ignored. Keep in mind that most [UNIX
+        Timestamp](https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_16) functions are only accurate to the nearest second.
 
-    <dl>
-      <dt><code><var>dateString</var></code></dt>
-      <dd>A string value representing a date, specified in a format recognized by the
-        {{jsxref("Date.parse()")}} method. (These formats are <a
-          href="https://datatracker.ietf.org/doc/html/rfc2822#page-14">IETF-compliant RFC 2822
-          timestamps</a>, and also strings in a <a
-          href="https://www.ecma-international.org/ecma-262/11.0/#sec-date.parse">version
-          of ISO8601</a>.)
-        <div class="note">
-          <p><strong>Note:</strong> Parsing of date strings with the <code>Date</code>
-            constructor (and <code>Date.parse()</code>, which works the same way) is
-            <em>strongly discouraged</em> due to browser differences and inconsistencies.
-          </p>
+3.  #### Timestamp string
 
-          <ul>
-            <li>Support for <a href="https://datatracker.ietf.org/doc/html/rfc2822">RFC 2822</a>
-              format strings is by convention only.</li>
-            <li>Support for ISO 8601 formats differs in that date-only strings (e.g.
-              <code>"1970-01-01"</code>) are treated as UTC, not local.</li>
-          </ul>
-        </div>
-      </dd>
-    </dl>
-  </li>
-  <li>
-    <h4 id="Individual_date_and_time_component_values">Individual date and time component
-      values</h4>
+    - `dateString`
 
-    <p>Given at least a year and month, this form of <code>Date()</code> returns a
-      <code>Date</code> object whose component values (year, month, day, hour, minute,
-      second, and millisecond) all come from the following parameters. Any missing fields
-      are given the lowest possible value (<code>1</code> for <code><var>day</var></code>
-      and <code>0</code> for every other component). The parameter values are all
-      evaluated against the local time zone, rather than UTC.</p>
+      - : A string value representing a date, specified in a format recognized by the
+        {{jsxref("Date.parse()")}} method. (These formats are [IETF-compliant RFC 2822
+        timestamps](https://datatracker.ietf.org/doc/html/rfc2822#page-14), and also strings in a [version
+        of ISO8601](https://www.ecma-international.org/ecma-262/11.0/#sec-date.parse).)
 
-    <dl>
-      <dt><code><var>year</var></code></dt>
-      <dd>
-        <p>Integer value representing the year.</p>
+        > **Note:** Parsing of date strings with the `Date`
+        > constructor (and `Date.parse()`, which works the same way) is
+        > _strongly discouraged_ due to browser differences and inconsistencies.
+        >
+        > - Support for [RFC 2822](https://datatracker.ietf.org/doc/html/rfc2822)
+        >   format strings is by convention only.
+        > - Support for ISO 8601 formats differs in that date-only strings (e.g.
+        >   `"1970-01-01"`) are treated as UTC, not local.
 
-        <p>Values from <code>0</code> to <code>99</code> map to the years
-          <code>1900</code> to <code>1999</code>. All other values are the actual year.
-          See the <a
-            href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#two_digit_years_map_to_1900_%e2%80%93_1999">example</a>.
-        </p>
-      </dd>
-      <dt><code><var>monthIndex</var></code></dt>
-      <dd>Integer value representing the month, beginning with <code>0</code> for January
-        to <code>11</code> for December. If a value greater than <code>11</code> is passed in, 
-        then those months will be added to the date; for example, <code>new Date(1990, 12, 1)</code> will return January 1st, 1991</dd>
-      <dt><code><var>day</var></code> {{optional_inline}}</dt>
-      <dd>Integer value representing the day of the month. The default is <code>1</code>.
-      </dd>
-      <dt><code><var>hours</var></code> {{optional_inline}}</dt>
-      <dd>Integer value representing the hour of the day. The default is <code>0</code>
-        (midnight).</dd>
-      <dt><code><var>minutes</var></code> {{optional_inline}}</dt>
-      <dd>Integer value representing the minute segment of a time. The default is
-        <code>0</code> minutes past the hour.</dd>
-      <dt><code><var>seconds</var></code> {{optional_inline}}</dt>
-      <dd>Integer value representing the second segment of a time. The default is
-        <code>0</code> seconds past the minute.</dd>
-      <dt><code><var>milliseconds</var></code> {{optional_inline}}</dt>
-      <dd>Integer value representing the millisecond segment of a time. The default is
-        <code>0</code> milliseconds past the second.</dd>
-    </dl>
-  </li>
-</ol>
+4.  #### Individual date and time component values
 
-<h3 id="return_value">Return value</h3>
+    Given at least a year and month, this form of `Date()` returns a
+    `Date` object whose component values (year, month, day, hour, minute,
+    second, and millisecond) all come from the following parameters. Any missing fields
+    are given the lowest possible value (`1` for `day`
+    and `0` for every other component). The parameter values are all
+    evaluated against the local time zone, rather than UTC.
 
-<p>Calling <code>new Date()</code> (the <code>Date()</code>constructor) returns a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date"><code>Date</code></a> object. If called with an invalid date string, it returns a <code>Date</code> object whose <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toString"><code>toString()</code></a> method returns the literal string <code>Invalid Date</code>.</p>
+    - `year`
 
-<p>Calling the <code>Date()</code> function (without the <code>new</code> keyword) returns a string. If called with an invalid date string, the <code>Date()</code> function returns the literal string <code>Invalid Date</code>.</p>
+      - : Integer value representing the year.
 
-<h2 id="Examples">Examples</h2>
+        Values from `0` to `99` map to the years
+        `1900` to `1999`. All other values are the actual year.
+        See the [example](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#two_digit_years_map_to_1900_%e2%80%93_1999).
 
-<h3 id="Several_ways_to_create_a_Date_object">Several ways to create a Date object</h3>
+    - `monthIndex`
+      - : Integer value representing the month, beginning with `0` for January
+        to `11` for December. If a value greater than `11` is passed in,
+        then those months will be added to the date; for example, `new Date(1990, 12, 1)` will return January 1st, 1991
+    - `day` {{optional_inline}}
+      - : Integer value representing the day of the month. The default is `1`.
+    - `hours` {{optional_inline}}
+      - : Integer value representing the hour of the day. The default is `0`
+        (midnight).
+    - `minutes` {{optional_inline}}
+      - : Integer value representing the minute segment of a time. The default is
+        `0` minutes past the hour.
+    - `seconds` {{optional_inline}}
+      - : Integer value representing the second segment of a time. The default is
+        `0` seconds past the minute.
+    - `milliseconds` {{optional_inline}}
+      - : Integer value representing the millisecond segment of a time. The default is
+        `0` milliseconds past the second.
 
-<p>The following examples show several ways to create JavaScript dates:</p>
+### Return value
 
-<div class="note">
-  <p><strong>Note:</strong> Parsing of date strings with the <code>Date</code> constructor
-    (and <code>Date.parse</code>, they are equivalent) is strongly discouraged due to
-    browser differences and inconsistencies.</p>
-</div>
+Calling `new Date()` (the `Date()`constructor) returns a [`Date`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) object. If called with an invalid date string, it returns a `Date` object whose [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toString) method returns the literal string `Invalid Date`.
 
-<pre class="brush: js">let today = new Date()
+Calling the `Date()` function (without the `new` keyword) returns a string. If called with an invalid date string, the `Date()` function returns the literal string `Invalid Date`.
+
+## Examples
+
+### Several ways to create a Date object
+
+The following examples show several ways to create JavaScript dates:
+
+> **Note:** Parsing of date strings with the `Date` constructor
+> (and `Date.parse`, they are equivalent) is strongly discouraged due to
+> browser differences and inconsistencies.
+
+```js
+let today = new Date()
 let birthday = new Date('December 17, 1995 03:24:00')
 let birthday = new Date('1995-12-17T03:24:00')
 let birthday = new Date(1995, 11, 17)            // the month is 0-indexed
-let birthday = new Date(1995, 11, 17, 3, 24, 0)</pre>
+let birthday = new Date(1995, 11, 17, 3, 24, 0)
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Date")}}</li>
-</ul>
+- {{jsxref("Date")}}

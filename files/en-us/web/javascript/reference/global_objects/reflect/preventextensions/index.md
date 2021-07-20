@@ -2,95 +2,92 @@
 title: Reflect.preventExtensions()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/preventExtensions
 tags:
-- ECMAScript 2015
-- JavaScript
-- Method
-- Reference
-- Reflect
-- Polyfill
+  - ECMAScript 2015
+  - JavaScript
+  - Method
+  - Reference
+  - Reflect
+  - Polyfill
 browser-compat: javascript.builtins.Reflect.preventExtensions
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The static
-    <strong><code>Reflect.preventExtensions()</code></strong> method prevents new
-    properties from ever being added to an object (i.e., prevents future extensions to the
-    object). It is similar to {{jsxref("Object.preventExtensions()")}}, but with
-  some <a href="#difference_from_object.preventExtensions">differences</a>.</p>
+The static
+**`Reflect.preventExtensions()`** method prevents new
+properties from ever being added to an object (i.e., prevents future extensions to the
+object). It is similar to {{jsxref("Object.preventExtensions()")}}, but with
+some [differences](#difference_from_object.preventExtensions).
 
-<div>{{EmbedInteractiveExample("pages/js/reflect-preventextensions.html")}}</div>
+{{EmbedInteractiveExample("pages/js/reflect-preventextensions.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+Reflect.preventExtensions(target)
+```
 
-<pre class="brush: js">Reflect.preventExtensions(<var>target</var>)
-</pre>
+### Parameters
 
-<h3 id="Parameters">Parameters</h3>
+- `target`
+  - : The target object on which to prevent extensions.
 
-<dl>
-  <dt><code><var>target</var></code></dt>
-  <dd>The target object on which to prevent extensions.</dd>
-</dl>
+### Return value
 
-<h3 id="Return_value">Return value</h3>
+A {{jsxref("Boolean")}} indicating whether or not the target was successfully set to
+prevent extensions.
 
-<p>A {{jsxref("Boolean")}} indicating whether or not the target was successfully set to
-  prevent extensions.</p>
+### Exceptions
 
-<h3 id="Exceptions">Exceptions</h3>
+A {{jsxref("TypeError")}}, if `target` is not an
+{{jsxref("Object")}}.
 
-<p>A {{jsxref("TypeError")}}, if <code><var>target</var></code> is not an
-  {{jsxref("Object")}}.</p>
+## Description
 
-<h2 id="Description">Description</h2>
+The `Reflect.preventExtensions()` method allows you to prevent new
+properties from ever being added to an object (i.e., prevents future extensions to the
+object). It is similar to {{jsxref("Object.preventExtensions()")}}.
 
-<p>The <code>Reflect.preventExtensions()</code> method allows you to prevent new
-  properties from ever being added to an object (i.e., prevents future extensions to the
-  object). It is similar to {{jsxref("Object.preventExtensions()")}}.</p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Using Reflect.preventExtensions()
 
-<h3 id="Using_Reflect.preventExtensions">Using Reflect.preventExtensions()</h3>
+See also {{jsxref("Object.preventExtensions()")}}.
 
-<p>See also {{jsxref("Object.preventExtensions()")}}.</p>
-
-<pre class="brush: js">// Objects are extensible by default.
+```js
+// Objects are extensible by default.
 let empty = {}
 Reflect.isExtensible(empty)  // === true
 
 // ...but that can be changed.
 Reflect.preventExtensions(empty)
 Reflect.isExtensible(empty)  // === false
-</pre>
+```
 
-<h3 id="Difference_from_Object.preventExtensions">Difference from
-  Object.preventExtensions()</h3>
+### Difference from Object.preventExtensions()
 
-<p>If the <code><var>target</var></code> argument to this method is not an object (a
-  primitive), then it will cause a {{jsxref("TypeError")}}. With
-  {{jsxref("Object.preventExtensions()")}}, a non-object <code><var>target</var></code>
-  will be coerced to an object.</p>
+If the `target` argument to this method is not an object (a
+primitive), then it will cause a {{jsxref("TypeError")}}. With
+{{jsxref("Object.preventExtensions()")}}, a non-object `target`
+will be coerced to an object.
 
-<pre class="brush: js">Reflect.preventExtensions(1)
+```js
+Reflect.preventExtensions(1)
 // TypeError: 1 is not an object
 
 Object.preventExtensions(1)
 // 1
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>A polyfill of <code>Reflect.preventExtensions</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-reflect"><code>core-js</code></a></li>
-  <li>{{jsxref("Reflect")}}</li>
-  <li>{{jsxref("Object.isExtensible()")}}</li>
-</ul>
+- A polyfill of `Reflect.preventExtensions` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
+- {{jsxref("Reflect")}}
+- {{jsxref("Object.isExtensible()")}}

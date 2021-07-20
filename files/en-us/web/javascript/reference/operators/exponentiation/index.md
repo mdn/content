@@ -2,110 +2,114 @@
 title: Exponentiation (**)
 slug: Web/JavaScript/Reference/Operators/Exponentiation
 tags:
-- JavaScript
-- Language feature
-- Operator
-- Reference
+  - JavaScript
+  - Language feature
+  - Operator
+  - Reference
 browser-compat: javascript.operators.exponentiation
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>The exponentiation operator (<code>**</code>) returns the result of raising the first
-  operand to the power of the second operand. It is equivalent to <code>Math.pow</code>,
-  except it also accepts BigInts as operands.</p>
+The exponentiation operator (`**`) returns the result of raising the first
+operand to the power of the second operand. It is equivalent to `Math.pow`,
+except it also accepts BigInts as operands.
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-exponentiation.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-exponentiation.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">x ** y</pre>
+```js
+x ** y
+```
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The exponentiation operator is
-  right-associative: <code><var>a</var> ** <var>b</var> ** <var>c</var></code> is equal to
-  <code><var>a</var> ** (<var>b</var> ** <var>c</var>)</code>.</p>
+The exponentiation operator is
+right-associative: `a ** b ** c` is equal to
+`a ** (b ** c)`.
 
-<p>In most languages, such as PHP, Python, and others that have an exponentiation operator
-  (<code>**</code>), the exponentiation operator is defined to have a higher precedence
-  than unary operators, such as unary <code>+</code> and unary <code>-</code>, but there
-  are a few exceptions. For example, in Bash, the <code>**</code> operator is defined to
-  have a lower precedence than unary operators.</p>
+In most languages, such as PHP, Python, and others that have an exponentiation operator
+(`**`), the exponentiation operator is defined to have a higher precedence
+than unary operators, such as unary `+` and unary `-`, but there
+are a few exceptions. For example, in Bash, the `**` operator is defined to
+have a lower precedence than unary operators.
 
-<p>In JavaScript, it is impossible to write an ambiguous exponentiation expression. That
-  is, you cannot put a unary operator (<code>+/-/~/!/delete/void/typeof</code>)
-  immediately before the base number; doing so will cause a SyntaxError.</p>
+In JavaScript, it is impossible to write an ambiguous exponentiation expression. That
+is, you cannot put a unary operator (`+/-/~/!/delete/void/typeof`)
+immediately before the base number; doing so will cause a SyntaxError.
 
-<pre class="brush: js">-2 ** 2;
+```js
+-2 ** 2;
 // 4 in Bash, -4 in other languages.
 // This is invalid in JavaScript, as the operation is ambiguous.
 
 -(2 ** 2);
 // -4 in JavaScript and the author's intention is unambiguous.
-</pre>
+```
 
-<p>Note that some programming languages use the caret symbol <kbd>^</kbd> for
-  exponentiation, but JavaScript uses that symbol for the <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR">bitwise
-    logical XOR operator</a>.</p>
+Note that some programming languages use the caret symbol <kbd>^</kbd> for
+exponentiation, but JavaScript uses that symbol for the [bitwise
+logical XOR operator](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Basic_exponentiation">Basic exponentiation</h3>
+### Basic exponentiation
 
-<pre class="brush: js">2 ** 3   // 8
+```js
+2 ** 3   // 8
 3 ** 2   // 9
 3 ** 2.5 // 15.588457268119896
 10 ** -1 // 0.1
 NaN ** 2 // NaN
-</pre>
+```
 
-<h3 id="Associativity">Associativity</h3>
+### Associativity
 
-<pre class="brush: js">2 ** 3 ** 2   // 512
+```js
+2 ** 3 ** 2   // 512
 2 ** (3 ** 2) // 512
-(2 ** 3) ** 2 // 64</pre>
+(2 ** 3) ** 2 // 64
+```
 
-<h3 id="Usage_with_unary_operators">Usage with unary operators</h3>
+### Usage with unary operators
 
-<p>To invert the sign of the result of an exponentiation expression:</p>
+To invert the sign of the result of an exponentiation expression:
 
-<pre class="brush: js">-(2 ** 2) // -4
-</pre>
+```js
+-(2 ** 2) // -4
+```
 
-<p>To force the base of an exponentiation expression to be a negative number:</p>
+To force the base of an exponentiation expression to be a negative number:
 
-<pre class="brush: js">(-2) ** 2 // 4
-</pre>
+```js
+(-2) ** 2 // 4
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Addition">Addition
-      operator</a></li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction">Subtraction
-      operator</a></li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Division">Division
-      operator</a></li>
-  <li><a
-      href="/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication">Multiplication
-      operator</a></li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Remainder">Remainder
-      operator</a></li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Increment">Increment
-      operator</a></li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Decrement">Decrement
-      operator</a></li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Unary_negation">Unary
-      negation operator</a></li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus">Unary plus
-      operator</a></li>
-</ul>
+- [Addition
+  operator](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)
+- [Subtraction
+  operator](/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction)
+- [Division
+  operator](/en-US/docs/Web/JavaScript/Reference/Operators/Division)
+- [Multiplication
+  operator](/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication)
+- [Remainder
+  operator](/en-US/docs/Web/JavaScript/Reference/Operators/Remainder)
+- [Increment
+  operator](/en-US/docs/Web/JavaScript/Reference/Operators/Increment)
+- [Decrement
+  operator](/en-US/docs/Web/JavaScript/Reference/Operators/Decrement)
+- [Unary
+  negation operator](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_negation)
+- [Unary plus
+  operator](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus)

@@ -9,42 +9,43 @@ tags:
   - Symbol
 browser-compat: javascript.builtins.Symbol.valueOf
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>valueOf()</code></strong> method returns the primitive value of a Symbol object.</p>
+The **`valueOf()`** method returns the primitive value of a Symbol object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">valueOf()</pre>
+```js
+valueOf()
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>The primitive value of the specified {{jsxref("Symbol")}} object.</p>
+The primitive value of the specified {{jsxref("Symbol")}} object.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The <code>valueOf()</code> method of {{jsxref("Symbol")}} returns the primitive value of a Symbol object as a Symbol data type.</p>
+The `valueOf()` method of {{jsxref("Symbol")}} returns the primitive value of a Symbol object as a Symbol data type.
 
-<p>JavaScript calls the <code>valueOf()</code> method to convert an object to a primitive value. You rarely need to invoke the <code>valueOf()</code> method yourself; JavaScript automatically invokes it when encountering an object where a primitive value is expected.</p>
+JavaScript calls the `valueOf()` method to convert an object to a primitive value. You rarely need to invoke the `valueOf()` method yourself; JavaScript automatically invokes it when encountering an object where a primitive value is expected.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_valueOf">Using valueOf()</h3>
+### Using valueOf()
 
-<pre class="brush: js">const sym = Symbol("example");
+```js
+const sym = Symbol("example");
 sym === sym.valueOf(); // true
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("Object.prototype.valueOf()")}}</li>
-</ul>
+- {{jsxref("Object.prototype.valueOf()")}}

@@ -2,62 +2,57 @@
 title: continue
 slug: Web/JavaScript/Reference/Statements/continue
 tags:
-- JavaScript
-- Language feature
-- Statement
+  - JavaScript
+  - Language feature
+  - Statement
 browser-compat: javascript.statements.continue
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p>The <strong><code>continue</code> statement</strong> terminates execution of the
-  statements in the current iteration of the current or labeled loop, and continues
-  execution of the loop with the next iteration.</p>
+The **`continue` statement** terminates execution of the
+statements in the current iteration of the current or labeled loop, and continues
+execution of the loop with the next iteration.
 
-<div>{{EmbedInteractiveExample("pages/js/statement-continue.html")}}</div>
+{{EmbedInteractiveExample("pages/js/statement-continue.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+continue [label];
+```
 
-<pre class="brush: js">continue [<var>label</var>];</pre>
+- `label`
+  - : Identifier associated with the label of the statement.
 
-<dl>
-  <dt><code><var>label</var></code></dt>
-  <dd>Identifier associated with the label of the statement.</dd>
-</dl>
+## Description
 
-<h2 id="Description">Description</h2>
+In contrast to the {{jsxref("Statements/break", "break")}} statement,
+`continue` does not terminate the execution of the loop entirely: instead,
 
-<p>In contrast to the {{jsxref("Statements/break", "break")}} statement,
-  <code>continue</code> does not terminate the execution of the loop entirely: instead,
-</p>
+- In a {{jsxref("Statements/while", "while")}} loop, it jumps back to the condition.
 
-<ul>
-  <li>In a {{jsxref("Statements/while", "while")}} loop, it jumps back to the condition.
-  </li>
-</ul>
+<!---->
 
-<ul>
-  <li>In a {{jsxref("Statements/for", "for")}} loop, it jumps to the update expression.
-  </li>
-</ul>
+- In a {{jsxref("Statements/for", "for")}} loop, it jumps to the update expression.
 
-<p>The <code>continue</code> statement can include an optional label that allows the
-  program to jump to the next iteration of a labeled loop statement instead of the current
-  loop. In this case, the <code>continue</code> statement needs to be nested within this
-  labeled statement.</p>
+The `continue` statement can include an optional label that allows the
+program to jump to the next iteration of a labeled loop statement instead of the current
+loop. In this case, the `continue` statement needs to be nested within this
+labeled statement.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_continue_with_while">Using continue with while</h3>
+### Using continue with while
 
-<p>The following example shows a {{jsxref("Statements/while", "while")}} loop that has a
-  <code>continue</code> statement that executes when the value of <code>i</code> is 3.
-  Thus, <code>n</code> takes on the values 1, 3, 7, and 12.</p>
+The following example shows a {{jsxref("Statements/while", "while")}} loop that has a
+`continue` statement that executes when the value of `i` is 3.
+Thus, `n` takes on the values 1, 3, 7, and 12.
 
-<pre class="brush: js">var i = 0;
+```js
+var i = 0;
 var n = 0;
 
-while (i &lt; 5) {
+while (i < 5) {
   i++;
 
   if (i === 3) {
@@ -66,30 +61,31 @@ while (i &lt; 5) {
 
   n += i;
 }
-</pre>
+```
 
-<h3 id="Using_continue_with_a_label">Using continue with a label</h3>
+### Using continue with a label
 
-<p>In the following example, a statement labeled <code>checkiandj</code> contains a
-  statement labeled <code>checkj</code>. If <code>continue</code> is encountered, the
-  program continues at the top of the <code>checkj</code> statement. Each time
-  <code>continue</code> is encountered, <code>checkj</code> reiterates until its condition
-  returns false. When false is returned, the remainder of the <code>checkiandj</code>
-  statement is completed.</p>
+In the following example, a statement labeled `checkiandj` contains a
+statement labeled `checkj`. If `continue` is encountered, the
+program continues at the top of the `checkj` statement. Each time
+`continue` is encountered, `checkj` reiterates until its condition
+returns false. When false is returned, the remainder of the `checkiandj`
+statement is completed.
 
-<p>If <code>continue</code> had a label of <code>checkiandj</code>, the program would
-  continue at the top of the <code>checkiandj</code> statement.</p>
+If `continue` had a label of `checkiandj`, the program would
+continue at the top of the `checkiandj` statement.
 
-<p>See also {{jsxref("Statements/label", "label", "", 1)}}.</p>
+See also {{jsxref("Statements/label", "label", "", 1)}}.
 
-<pre class="brush: js">var i = 0;
+```js
+var i = 0;
 var j = 8;
 
-checkiandj: while (i &lt; 4) {
+checkiandj: while (i < 4) {
   console.log('i: ' + i);
   i += 1;
 
-  checkj: while (j &gt; 4) {
+  checkj: while (j > 4) {
     console.log('j: ' + j);
     j -= 1;
 
@@ -100,11 +96,12 @@ checkiandj: while (i &lt; 4) {
   console.log('i = ' + i);
   console.log('j = ' + j);
 }
-</pre>
+```
 
-<p>Output:</p>
+Output:
 
-<pre class="brush: js">i: 0
+```js
+i: 0
 
 // start checkj
 j: 8
@@ -129,19 +126,17 @@ j = 4
 i: 3
 i = 4
 j = 4
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Statements/break", "break")}}</li>
-  <li>{{jsxref("Statements/label", "label", "", 1)}}</li>
-</ul>
+- {{jsxref("Statements/break", "break")}}
+- {{jsxref("Statements/label", "label", "", 1)}}

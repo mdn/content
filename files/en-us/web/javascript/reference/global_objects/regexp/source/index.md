@@ -10,44 +10,41 @@ tags:
   - Regular Expressions
 browser-compat: javascript.builtins.RegExp.source
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>source</code></strong> property returns a {{jsxref("String")}} containing the source text of the regexp object, and it doesn't contain the two forward slashes on both sides and any flags.</p>
+The **`source`** property returns a {{jsxref("String")}} containing the source text of the regexp object, and it doesn't contain the two forward slashes on both sides and any flags.
 
-<div>{{EmbedInteractiveExample("pages/js/regexp-prototype-source.html")}}</div>
+{{EmbedInteractiveExample("pages/js/regexp-prototype-source.html")}}{{js_property_attributes(0, 0, 1)}}
 
+## Examples
 
-<div>{{js_property_attributes(0, 0, 1)}}</div>
+### Using source
 
-<h2 id="Examples">Examples</h2>
-
-<h3 id="Using_source">Using source</h3>
-
-<pre class="brush: js">var regex = /fooBar/ig;
+```js
+var regex = /fooBar/ig;
 
 console.log(regex.source); // "fooBar", doesn't contain /.../ and "ig".
-</pre>
+```
 
-<h3 id="Empty_regular_expressions_and_escaping">Empty regular expressions and escaping</h3>
+### Empty regular expressions and escaping
 
-<p>Starting with ECMAScript 5, the <code>source</code> property no longer returns an empty string for empty regular expressions. Instead, the string <code>(?:)</code> is returned. In addition, line terminators (such as "\n") are escaped now.</p>
+Starting with ECMAScript 5, the `source` property no longer returns an empty string for empty regular expressions. Instead, the string `(?:)` is returned. In addition, line terminators (such as "\n") are escaped now.
 
-<pre class="brush: js">new RegExp().source; // "(?:)"
+```js
+new RegExp().source; // "(?:)"
 
 new RegExp('\n').source === '\n';  // true, prior to ES5
 new RegExp('\n').source === '\\n'; // true, starting with ES5
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("RegExp.prototype.flags")}}</li>
-</ul>
+- {{jsxref("RegExp.prototype.flags")}}

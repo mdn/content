@@ -2,63 +2,61 @@
 title: await
 slug: Web/JavaScript/Reference/Operators/await
 tags:
-- Function
-- JavaScript
-- Language feature
-- Operator
-- Primary Expression
+  - Function
+  - JavaScript
+  - Language feature
+  - Operator
+  - Primary Expression
 browser-compat: javascript.operators.await
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>The <code>await</code> operator is used to wait for a {{jsxref("Promise")}}. It can only be used inside an {{jsxref("Statements/async_function", "async function")}} within regular JavaScript code; however it can be used on its own with <a href="/en-US/docs/Web/JavaScript/Guide/Modules">JavaScript modules.</a></p>
+The `await` operator is used to wait for a {{jsxref("Promise")}}. It can only be used inside an {{jsxref("Statements/async_function", "async function")}} within regular JavaScript code; however it can be used on its own with [JavaScript modules.](/en-US/docs/Web/JavaScript/Guide/Modules)
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">[rv] = await expression</pre>
+```js
+[rv] = await expression
+```
 
-<dl>
-  <dt><code>expression</code></dt>
-  <dd>A {{jsxref("Promise")}} or any value to wait for.</dd>
-  <dt><code>rv</code></dt>
-  <dd>
-    <p>Returns the fulfilled value of the promise, or the value itself if it's not a
-      <code>Promise</code>.</p>
-  </dd>
-</dl>
+- `expression`
+  - : A {{jsxref("Promise")}} or any value to wait for.
+- `rv`
+  - : Returns the fulfilled value of the promise, or the value itself if it's not a
+    `Promise`.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The <code>await</code> expression causes <code>async</code> function execution to pause
-  until a <code>Promise</code> is settled (that is, fulfilled or rejected), and to resume
-  execution of the <code>async</code> function after fulfillment. When resumed, the value
-  of the <code>await</code> expression is that of the fulfilled <code>Promise</code>.</p>
+The `await` expression causes `async` function execution to pause
+until a `Promise` is settled (that is, fulfilled or rejected), and to resume
+execution of the `async` function after fulfillment. When resumed, the value
+of the `await` expression is that of the fulfilled `Promise`.
 
-<p>If the <code>Promise</code> is rejected, the <code>await</code> expression throws the
-  rejected value.</p>
+If the `Promise` is rejected, the `await` expression throws the
+rejected value.
 
-<p>If the value of the <em>expression</em> following the <code>await</code> operator is
-  not a <code>Promise</code>, it's converted to a <a
-    href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve">resolved
-    Promise</a>.</p>
+If the value of the _expression_ following the `await` operator is
+not a `Promise`, it's converted to a [resolved
+Promise](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve).
 
-<p>An <code>await</code> splits execution flow, allowing the caller of the async function
-  to resume execution. After the <code>await</code> defers the continuation of the async
-  function, execution of subsequent statements ensues. If this <code>await</code> is the
-  last expression executed by its function, execution continues by returning to the
-  function's caller a pending <code>Promise</code> for completion of the
-  <code>await</code>'s function and resuming execution of that caller.</p>
+An `await` splits execution flow, allowing the caller of the async function
+to resume execution. After the `await` defers the continuation of the async
+function, execution of subsequent statements ensues. If this `await` is the
+last expression executed by its function, execution continues by returning to the
+function's caller a pending `Promise` for completion of the
+`await`'s function and resuming execution of that caller.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Awaiting_a_promise_to_be_fulfilled">Awaiting a promise to be fulfilled</h3>
+### Awaiting a promise to be fulfilled
 
-<p>If a <code>Promise</code> is passed to an <code>await</code> expression, it waits for
-  the <code>Promise</code> to be fulfilled and returns the fulfilled value.</p>
+If a `Promise` is passed to an `await` expression, it waits for
+the `Promise` to be fulfilled and returns the fulfilled value.
 
-<pre class="brush: js">function resolveAfter2Seconds(x) {
-  return new Promise(resolve =&gt; {
-    setTimeout(() =&gt; {
+```js
+function resolveAfter2Seconds(x) {
+  return new Promise(resolve => {
+    setTimeout(() => {
       resolve(x);
     }, 2000);
   });
@@ -70,14 +68,15 @@ async function f1() {
 }
 
 f1();
-</pre>
+```
 
-<h3 id="Thenable_objects">Thenable objects</h3>
+### Thenable objects
 
-<p>{{jsxref("Global_Objects/Promise/then", "Thenable objects")}} will be fulfilled just
-  the same.</p>
+{{jsxref("Global_Objects/Promise/then", "Thenable objects")}} will be fulfilled just
+the same.
 
-<pre class="brush: js">async function f2() {
+```js
+async function f2() {
   const thenable = {
     then: function(resolve, _reject) {
       resolve('resolved!')
@@ -87,25 +86,28 @@ f1();
 }
 
 f2();
-</pre>
+```
 
-<h3 id="Conversion_to_promise">Conversion to promise</h3>
+### Conversion to promise
 
-<p>If the value is not a <code>Promise</code>, it converts the value to a resolved
-  <code>Promise</code>, and waits for it.</p>
+If the value is not a `Promise`, it converts the value to a resolved
+`Promise`, and waits for it.
 
-<pre class="brush: js">async function f3() {
+```js
+async function f3() {
   var y = await 20;
   console.log(y); // 20
 }
 
-f3();</pre>
+f3();
+```
 
-<h3 id="Promise_rejection">Promise rejection</h3>
+### Promise rejection
 
-<p>If the <code>Promise</code> is rejected, the rejected value is thrown.</p>
+If the `Promise` is rejected, the rejected value is thrown.
 
-<pre class="brush: js">async function f4() {
+```js
+async function f4() {
   try {
     var z = await Promise.reject(30);
   } catch(e) {
@@ -113,43 +115,43 @@ f3();</pre>
   }
 }
 
-f4();</pre>
+f4();
+```
 
-<h3 id="Handling_rejected_promises">Handling rejected promises</h3>
+### Handling rejected promises
 
-<p>Handle rejected <code>Promise</code> without try block.</p>
+Handle rejected `Promise` without try block.
 
-<pre class="brush: js">var response = await promisedFunction().catch((err) =&gt; { console.error(err); });
+```js
+var response = await promisedFunction().catch((err) => { console.error(err); });
 // response will be undefined if the promise is rejected
-</pre>
+```
 
-<h3 id="Top-level-await">Top level await</h3>
+### Top level await
 
-<p>You can use the <code>await</code> keyword on its own (outside of an async function) within a <a href="/en-US/docs/Web/JavaScript/Guide/Modules">JavaScript module</a>. This means modules, with child modules that use <code>await</code>, wait for the child module to execute before they themselves run. All while not blocking other child modules from loading.</p>
+You can use the `await` keyword on its own (outside of an async function) within a [JavaScript module](/en-US/docs/Web/JavaScript/Guide/Modules). This means modules, with child modules that use `await`, wait for the child module to execute before they themselves run. All while not blocking other child modules from loading.
 
-<p>Here is an example of a simple module using the <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a> and specifying await within the <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/export">export statement</a></code>. Any modules that include this will wait for the fetch to resolve before running any code.</p>
+Here is an example of a simple module using the [Fetch API](/en-US/docs/Web/API/Fetch_API) and specifying await within the [`export statement`](/en-US/docs/Web/JavaScript/Reference/Statements/export). Any modules that include this will wait for the fetch to resolve before running any code.
 
-<pre class="brush: js">
+```js
 // fetch request
 const colors = fetch('../data/colors.json')
   .then(response => response.json());
 
 export default await colors;
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Statements/async_function", "async function")}}</li>
-  <li>{{jsxref("Operators/async_function", "async function expression")}}</li>
-  <li>{{jsxref("AsyncFunction")}} object</li>
-  <li><a href="https://v8.dev/features/top-level-await">Top level await</a> on v8.dev</li>
-</ul>
+- {{jsxref("Statements/async_function", "async function")}}
+- {{jsxref("Operators/async_function", "async function expression")}}
+- {{jsxref("AsyncFunction")}} object
+- [Top level await](https://v8.dev/features/top-level-await) on v8.dev

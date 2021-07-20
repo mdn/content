@@ -2,84 +2,79 @@
 title: Date.prototype.setMonth()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setMonth
 tags:
-- Date
-- JavaScript
-- Method
-- Prototype
-- Reference
+  - Date
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
 browser-compat: javascript.builtins.Date.setMonth
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>setMonth()</code></strong> method sets the month for a specified date
-  according to the currently set year.</p>
+The **`setMonth()`** method sets the month for a specified date
+according to the currently set year.
 
-<div>{{EmbedInteractiveExample("pages/js/date-setmonth.html")}}</div>
+{{EmbedInteractiveExample("pages/js/date-setmonth.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 setMonth(monthValue)
 setMonth(monthValue, dayValue)
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>monthValue</var></code></dt>
-  <dd>A zero-based integer representing the month of the year offset from the start of the
+- `monthValue`
+  - : A zero-based integer representing the month of the year offset from the start of the
     year. So, 0 represents January, 11 represents December, -1 represents December of the
-    previous year, and 12 represents January of the following year.</dd>
-  <dt><code><var>dayValue</var></code></dt>
-  <dd>Optional. An integer from 1 to 31, representing the day of the month.</dd>
-</dl>
+    previous year, and 12 represents January of the following year.
+- `dayValue`
+  - : Optional. An integer from 1 to 31, representing the day of the month.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>The number of milliseconds between 1 January 1970 00:00:00 UTC and the updated date.
-</p>
+The number of milliseconds between 1 January 1970 00:00:00 UTC and the updated date.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>If you do not specify the <code><var>dayValue</var></code> parameter, the value
-  returned from the {{jsxref("Date.prototype.getDate()", "getDate()")}} method is used.
-</p>
+If you do not specify the `dayValue` parameter, the value
+returned from the {{jsxref("Date.prototype.getDate()", "getDate()")}} method is used.
 
-<p>If a parameter you specify is outside of the expected range, <code>setMonth()</code>
-  attempts to update the date information in the {{jsxref("Date")}} object accordingly.
-  For example, if you use 15 for <code><var>monthValue</var></code>, the year will be
-  incremented by 1, and 3 will be used for month.</p>
+If a parameter you specify is outside of the expected range, `setMonth()`
+attempts to update the date information in the {{jsxref("Date")}} object accordingly.
+For example, if you use 15 for `monthValue`, the year will be
+incremented by 1, and 3 will be used for month.
 
-<p>The current day of month will have an impact on the behavior of this method.
-  Conceptually it will add the number of days given by the current day of the month to the
-  1st day of the new month specified as the parameter, to return the new date. For
-  example, if the current value is 31st August 2016, calling setMonth with a value of 1
-  will return 2nd March 2016. This is because in 2016 February had 29 days.</p>
+The current day of month will have an impact on the behavior of this method.
+Conceptually it will add the number of days given by the current day of the month to the
+1st day of the new month specified as the parameter, to return the new date. For
+example, if the current value is 31st August 2016, calling setMonth with a value of 1
+will return 2nd March 2016. This is because in 2016 February had 29 days.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_setMonth">Using setMonth()</h3>
+### Using setMonth()
 
-<pre class="brush: js">var theBigDay = new Date();
+```js
+var theBigDay = new Date();
 theBigDay.setMonth(6);
 
 //Watch out for end of month transitions
 var endOfMonth = new Date(2016, 7, 31);
 endOfMonth.setMonth(1);
 console.log(endOfMonth); //Wed Mar 02 2016 00:00:00
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Date.prototype.getMonth()")}}</li>
-  <li>{{jsxref("Date.prototype.setUTCMonth()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getMonth()")}}
+- {{jsxref("Date.prototype.setUTCMonth()")}}

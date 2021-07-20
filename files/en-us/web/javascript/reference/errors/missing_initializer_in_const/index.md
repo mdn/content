@@ -2,79 +2,79 @@
 title: 'SyntaxError: missing = in const declaration'
 slug: Web/JavaScript/Reference/Errors/Missing_initializer_in_const
 tags:
-- Error
-- JavaScript
-- SyntaxError
+  - Error
+  - JavaScript
+  - SyntaxError
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<p>The JavaScript exception "missing = in const declaration" occurs when a const
-  declaration was not given a value in the same statement (like
-  <code>const RED_FLAG;</code>). You need to provide one
-  (<code>const RED_FLAG = '#ff0'</code>).</p>
+The JavaScript exception "missing = in const declaration" occurs when a const
+declaration was not given a value in the same statement (like
+`const RED_FLAG;`). You need to provide one
+(`const RED_FLAG = '#ff0'`).
 
-<h2 id="Message">Message</h2>
+## Message
 
-<pre class="brush: js">SyntaxError: Const must be initialized (Edge)
+```js
+SyntaxError: Const must be initialized (Edge)
 SyntaxError: missing = in const declaration (Firefox)
 SyntaxError: Missing initializer in const declaration (Chrome)
-</pre>
+```
 
-<h2 id="Error_type">Error type</h2>
+## Error type
 
-<p>{{jsxref("SyntaxError")}}</p>
+{{jsxref("SyntaxError")}}
 
-<h2 id="What_went_wrong">What went wrong?</h2>
+## What went wrong?
 
-<p>A constant is a value that cannot be altered by the program during normal execution. It
-  cannot change through re-assignment, and it can't be redeclared. In JavaScript,
-  constants are declared using the
-  <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/const">const</a></code>
-  keyword. An initializer for a constant is required; that is, you must specify its value
-  in the same statement in which it's declared (which makes sense, given that it can't be
-  changed later).</p>
+A constant is a value that cannot be altered by the program during normal execution. It
+cannot change through re-assignment, and it can't be redeclared. In JavaScript,
+constants are declared using the
+[`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const)
+keyword. An initializer for a constant is required; that is, you must specify its value
+in the same statement in which it's declared (which makes sense, given that it can't be
+changed later).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Missing_const_initializer">Missing const initializer</h3>
+### Missing const initializer
 
-<p>Unlike <code>var</code> or <code>let</code>, you must specify a value for a
-  <code>const</code> declaration. This throws:</p>
+Unlike `var` or `let`, you must specify a value for a
+`const` declaration. This throws:
 
-<pre class="brush: js example-bad">const COLUMNS;
-// SyntaxError: missing = in const declaration</pre>
+```js example-bad
+const COLUMNS;
+// SyntaxError: missing = in const declaration
+```
 
-<h3 id="Fixing_the_error">Fixing the error</h3>
+### Fixing the error
 
-<p>There are multiple options to fix this error. Check what was intended to be achieved
-  with the constant in question.</p>
+There are multiple options to fix this error. Check what was intended to be achieved
+with the constant in question.
 
-<h4 id="Adding_a_constant_value">Adding a constant value</h4>
+#### Adding a constant value
 
-<p>Specify the constant value in the same statement in which it's declared:</p>
+Specify the constant value in the same statement in which it's declared:
 
-<pre class="brush: js example-good">const COLUMNS = 80;</pre>
+```js example-good
+const COLUMNS = 80;
+```
 
-<h4 id="const_let_or_var"><code>const</code>, <code>let</code> or <code>var</code>?</h4>
+#### `const`, `let` or `var`?
 
-<p>Do not use <code>const</code> if you weren't meaning to declare a constant. Maybe you
-  meant to declare a block-scoped variable with
-  <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/let">let</a></code> or
-  global variable with
-  <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/var">var</a></code>. Both
-  don't require an initial value.</p>
+Do not use `const` if you weren't meaning to declare a constant. Maybe you
+meant to declare a block-scoped variable with
+[`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) or
+global variable with
+[`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var). Both
+don't require an initial value.
 
-<pre class="brush: js example-good">let columns;
-</pre>
+```js example-good
+let columns;
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>
-    <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/const">const</a></code>
-  </li>
-  <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/let">let</a></code>
-  </li>
-  <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/var">var</a></code>
-  </li>
-</ul>
+- [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const)
+- [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let)
+- [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var)

@@ -2,100 +2,96 @@
 title: delete operator
 slug: Web/JavaScript/Reference/Operators/delete
 tags:
-- JavaScript
-- Language feature
-- Memory Management
-- Object
-- Operator
-- Reference
-- Release
-- Unary
-- delete
+  - JavaScript
+  - Language feature
+  - Memory Management
+  - Object
+  - Operator
+  - Reference
+  - Release
+  - Unary
+  - delete
 browser-compat: javascript.operators.delete
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>The JavaScript <strong><code>delete</code> operator</strong>
-		removes a property from an object; if no more references to the same property are
-		held, it is eventually released automatically.</p>
+The JavaScript **`delete` operator**
+removes a property from an object; if no more references to the same property are
+held, it is eventually released automatically.
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-deleteoperator.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-deleteoperator.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">delete expression</pre>
+```js
+delete expression
+```
 
-<p>Where <code><var>expression</var></code> should evaluate to a <a
-		href="/en-US/docs/Glossary/property/JavaScript">property</a> reference, e.g.:</p>
+Where `expression` should evaluate to a [property](/en-US/docs/Glossary/property/JavaScript) reference, e.g.:
 
-<pre class="brush: js">delete <var>object</var>.<var>property</var>
-delete <var>object</var>['<var>property</var>']
-</pre>
+```js
+delete object.property
+delete object['property']
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-	<dt><code><var>object</var></code></dt>
-	<dd>The name of an object, or an expression evaluating to an object.</dd>
-	<dt><code><var>property</var></code></dt>
-	<dd>The property to delete.</dd>
-</dl>
+- `object`
+  - : The name of an object, or an expression evaluating to an object.
+- `property`
+  - : The property to delete.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p><code>true</code> for all cases except when the property is an
-	{{jsxref("Object.hasOwnProperty", "own")}} {{jsxref("Errors/Cant_delete",
-	"non-configurable")}} property, in which case, <code>false</code> is returned in
-	non-strict mode.</p>
+`true` for all cases except when the property is an
+{{jsxref("Object.hasOwnProperty", "own")}} {{jsxref("Errors/Cant_delete",
+	"non-configurable")}} property, in which case, `false` is returned in
+non-strict mode.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>Throws {{jsxref("TypeError")}} in <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">
-	strict mode</a> if the property is an own non-configurable property.</p>
+Throws {{jsxref("TypeError")}} in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) if the property is an own non-configurable property.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Unlike what common belief suggests (perhaps due to other programming languages like <a
-		href="https://docs.microsoft.com/en-us/cpp/cpp/delete-operator-cpp?view=vs-2019">delete
-		in C++</a>), the <code>delete</code> operator has <strong>nothing</strong> to do
-	with directly freeing memory. Memory management is done indirectly via breaking
-	references. See the <a href="/en-US/docs/Web/JavaScript/Memory_Management">memory
-		management</a> page for more details.</p>
+Unlike what common belief suggests (perhaps due to other programming languages like [delete
+in C++](https://docs.microsoft.com/en-us/cpp/cpp/delete-operator-cpp?view=vs-2019)), the `delete` operator has **nothing** to do
+with directly freeing memory. Memory management is done indirectly via breaking
+references. See the [memory
+management](/en-US/docs/Web/JavaScript/Memory_Management) page for more details.
 
-<p>The <code><strong>delete</strong></code> operator removes a given property from an
-	object. On successful deletion, it will return <code>true</code>, else
-	<code>false</code> will be returned.</p>
+The **`delete`** operator removes a given property from an
+object. On successful deletion, it will return `true`, else
+`false` will be returned.
 
-<p>However, it is important to consider the following scenarios:</p>
+However, it is important to consider the following scenarios:
 
-<ul>
-	<li>If the property which you are trying to delete does not exist, <code>delete</code>
-		will not have any effect and will return <code>true</code>.</li>
-	<li>If a property with the same name exists on the object's prototype chain, then,
-		after deletion, the object will use the property from the prototype chain (in
-		other words, <code>delete</code> only has an effect on own properties).</li>
-	<li>Any property declared with {{jsxref("Statements/var","var")}} cannot be deleted
-		from the global scope or from a function's scope.
-		<ul>
-			<li>As such, <code>delete</code> cannot delete any functions in the global
-				scope (whether this is part from a function definition or a function
-				expression).</li>
-			<li>Functions which are part of an object (apart from the global scope) can be
-				deleted with <code>delete</code>.</li>
-		</ul>
-	</li>
-	<li>Any property declared with {{jsxref("Statements/let","let")}} or
-		{{jsxref("Statements/const","const")}} cannot be deleted from the scope within
-		which they were defined.</li>
-	<li>Non-configurable properties cannot be removed. This includes properties of
-		built-in objects like {{jsxref("Math")}}, {{jsxref("Array")}},
-		{{jsxref("Object")}} and properties that are created as non-configurable with
-		methods like {{jsxref("Object.defineProperty()")}}.</li>
-</ul>
+- If the property which you are trying to delete does not exist, `delete`
+  will not have any effect and will return `true`.
+- If a property with the same name exists on the object's prototype chain, then,
+  after deletion, the object will use the property from the prototype chain (in
+  other words, `delete` only has an effect on own properties).
+- Any property declared with {{jsxref("Statements/var","var")}} cannot be deleted
+  from the global scope or from a function's scope.
 
-<p>The following snippet gives a simple example:</p>
+  - As such, `delete` cannot delete any functions in the global
+    scope (whether this is part from a function definition or a function
+    expression).
+  - Functions which are part of an object (apart from the global scope) can be
+    deleted with `delete`.
 
-<pre class="brush: js">var Employee = {
+- Any property declared with {{jsxref("Statements/let","let")}} or
+  {{jsxref("Statements/const","const")}} cannot be deleted from the scope within
+  which they were defined.
+- Non-configurable properties cannot be removed. This includes properties of
+  built-in objects like {{jsxref("Math")}}, {{jsxref("Array")}},
+  {{jsxref("Object")}} and properties that are created as non-configurable with
+  methods like {{jsxref("Object.defineProperty()")}}.
+
+The following snippet gives a simple example:
+
+```js
+var Employee = {
   age: 28,
   name: 'abc',
   designation: 'developer'
@@ -107,25 +103,27 @@ console.log(delete Employee.age);    // returns true
 // When trying to delete a property that does
 // not exist, true is returned
 console.log(delete Employee.salary); // returns true
-</pre>
+```
 
-<h3 id="Non-configurable_properties">Non-configurable properties</h3>
+### Non-configurable properties
 
-<p>When a property is marked as non-configurable, <code>delete</code> won't have any
-	effect, and will return <code>false</code>. In strict mode this will raise a
-	<code>TypeError</code>.</p>
+When a property is marked as non-configurable, `delete` won't have any
+effect, and will return `false`. In strict mode this will raise a
+`TypeError`.
 
-<pre class="brush: js">var Employee = {};
+```js
+var Employee = {};
 Object.defineProperty(Employee, 'name', {configurable: false});
 
 console.log(delete Employee.name);  // returns false
-</pre>
+```
 
-<p>{{jsxref("Statements/var","var")}}, {{jsxref("Statements/let","let")}}, and
-	{{jsxref("Statements/const","const")}} create non-configurable properties that cannot
-	be deleted with the <code>delete</code> operator:</p>
+{{jsxref("Statements/var","var")}}, {{jsxref("Statements/let","let")}}, and
+{{jsxref("Statements/const","const")}} create non-configurable properties that cannot
+be deleted with the `delete` operator:
 
-<pre class="brush: js">var nameOther = 'XYZ';
+```js
+var nameOther = 'XYZ';
 
 // We can access this global property using:
 Object.getOwnPropertyDescriptor(window, 'nameOther');
@@ -133,24 +131,26 @@ Object.getOwnPropertyDescriptor(window, 'nameOther');
 // output: Object {value: "XYZ",
 //                  writable: true,
 //                  enumerable: true,
-//                  <strong>configurable: false</strong>}
+//                  configurable: false}
 
 // Since "nameOther" is added using with the
 // var keyword, it is marked as "non-configurable"
 
-delete nameOther;   // return false</pre>
+delete nameOther;   // return false
+```
 
-<p>In strict mode, this would have raised an exception.</p>
+In strict mode, this would have raised an exception.
 
-<h3 id="Strict_vs._non-strict_mode">Strict vs. non-strict mode</h3>
+### Strict vs. non-strict mode
 
-<p>When in strict mode, if <code>delete</code> is used on a direct reference to a
-	variable, a function argument or a function name, it will throw a
-	{{jsxref("SyntaxError")}}<strong>. </strong>Therefore, to avoid syntax errors in
-	strict mode, you must use the <code>delete</code> operator in the form of
-	<code>delete object.property</code> or <code>delete object['property']</code>.</p>
+When in strict mode, if `delete` is used on a direct reference to a
+variable, a function argument or a function name, it will throw a
+{{jsxref("SyntaxError")}}**.** Therefore, to avoid syntax errors in
+strict mode, you must use the `delete` operator in the form of
+`delete object.property` or `delete object['property']`.
 
-<pre class="brush: js">Object.defineProperty(globalThis, 'variable1', { value: 10, configurable: true, });
+```js
+Object.defineProperty(globalThis, 'variable1', { value: 10, configurable: true, });
 Object.defineProperty(globalThis, 'variable2', { value: 10, configurable: false, });
 
 // SyntaxError in strict mode.
@@ -158,38 +158,40 @@ console.log(delete variable1); // true
 
 // SyntaxError in strict mode.
 console.log(delete variable2); // false
-</pre>
+```
 
-<pre class="brush: js">function func(param) {
+```js
+function func(param) {
   // SyntaxError in strict mode.
   console.log(delete param); // false
 }
 
 // SyntaxError in strict mode.
 console.log(delete func); // false
-</pre>
+```
 
-<h3 id="Cross-browser_notes">Cross-browser notes</h3>
+### Cross-browser notes
 
-<p>Although ECMAScript makes iteration order of objects implementation-dependent, it may
-	appear that all major browsers support an iteration order based on the earliest added
-	property coming first (at least for properties not on the prototype). However, in the
-	case of Internet Explorer, when one uses <code>delete</code> on a property, some
-	confusing behavior results, preventing other browsers from using simple objects like
-	object literals as ordered associative arrays. In Explorer, while the property
-	<em>value</em> is indeed set to <code>undefined</code>, if one later adds back a
-	property with the same name, the property will be iterated in its <em>old</em>
-	position--not at the end of the iteration sequence as one might expect after having
-	deleted the property and then added it back.</p>
+Although ECMAScript makes iteration order of objects implementation-dependent, it may
+appear that all major browsers support an iteration order based on the earliest added
+property coming first (at least for properties not on the prototype). However, in the
+case of Internet Explorer, when one uses `delete` on a property, some
+confusing behavior results, preventing other browsers from using simple objects like
+object literals as ordered associative arrays. In Explorer, while the property
+_value_ is indeed set to `undefined`, if one later adds back a
+property with the same name, the property will be iterated in its _old_
+position--not at the end of the iteration sequence as one might expect after having
+deleted the property and then added it back.
 
-<p>If you want to use an ordered associative array in a cross-browser environment, use a
-	{{jsxref("Map")}} object if available, or simulate this structure with two separate
-	arrays (one for the keys and the other for the values), or build an array of
-	single-property objects, etc.</p>
+If you want to use an ordered associative array in a cross-browser environment, use a
+{{jsxref("Map")}} object if available, or simulate this structure with two separate
+arrays (one for the keys and the other for the values), or build an array of
+single-property objects, etc.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">// Creates the property adminName on the global scope.
+```js
+// Creates the property adminName on the global scope.
 adminName = 'xyz';
 
 // Creates the property empCount on the global scope.
@@ -214,7 +216,7 @@ delete empCount;       // returns false
 // delete can be used to remove properties from objects.
 delete EmployeeDetails.name; // returns true
 
-<strong>//</strong> Even when the property does not exist, delete returns "true".
+// Even when the property does not exist, delete returns "true".
 delete EmployeeDetails.salary; // returns true
 
 // delete does not affect built-in static properties.
@@ -230,14 +232,15 @@ function f() {
   // delete doesn't affect local variable names
   delete z;     // returns false
 }
-</pre>
+```
 
-<h3 id="delete_and_the_prototype_chain"><code>delete</code> and the prototype chain</h3>
+### `delete` and the prototype chain
 
-<p>In the following example, we delete an own property of an object while a property with
-	the same name is available on the prototype chain:</p>
+In the following example, we delete an own property of an object while a property with
+the same name is available on the prototype chain:
 
-<pre class="brush: js">function Foo() {
+```js
+function Foo() {
   this.bar = 10;
 }
 
@@ -263,57 +266,61 @@ delete Foo.prototype.bar; // returns true
 // The "bar" property can no longer be
 // inherited from Foo since it has been
 // deleted.
-console.log(foo.bar); // undefined</pre>
+console.log(foo.bar); // undefined
+```
 
-<h3 id="Deleting_array_elements">Deleting array elements</h3>
+### Deleting array elements
 
-<p>When you delete an array element, the array <code>length</code> is not affected. This
-	holds even if you delete the last element of the array.</p>
+When you delete an array element, the array `length` is not affected. This
+holds even if you delete the last element of the array.
 
-<p>When the <code>delete</code> operator removes an array element, that element is no
-	longer in the array. In the following example, <code>trees[3]</code> is removed with
-	<code>delete</code>.</p>
+When the `delete` operator removes an array element, that element is no
+longer in the array. In the following example, `trees[3]` is removed with
+`delete`.
 
-<pre class="brush: js">var trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
+```js
+var trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
 delete trees[3];
 if (3 in trees) {
     // this is not executed
-}</pre>
+}
+```
 
-<p>If you want an array element to exist but have an undefined value, use the
-	<code>undefined</code> value instead of the <code>delete</code> operator. In the
-	following example, <code>trees[3]</code> is assigned the value <code>undefined</code>,
-	but the array element still exists:</p>
+If you want an array element to exist but have an undefined value, use the
+`undefined` value instead of the `delete` operator. In the
+following example, `trees[3]` is assigned the value `undefined`,
+but the array element still exists:
 
-<pre class="brush: js">var trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
+```js
+var trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
 trees[3] = undefined;
 if (3 in trees) {
     // this is executed
-}</pre>
+}
+```
 
-<p>If instead, you want to remove an array element by changing the contents of the array,
-	use the {{jsxref("Array.splice()", "splice()")}} method. In the following example,
-	<code>trees[3]</code> is removed from the array completely using
-	{{jsxref("Array.splice()", "splice()")}}:</p>
+If instead, you want to remove an array element by changing the contents of the array,
+use the {{jsxref("Array.splice()", "splice()")}} method. In the following example,
+`trees[3]` is removed from the array completely using
+{{jsxref("Array.splice()", "splice()")}}:
 
-<pre class="brush: js">var trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
+```js
+var trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
 trees.splice(3,1);
 console.log(trees); // ["redwood", "bay", "cedar", "maple"]
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li><a href="http://perfectionkills.com/understanding-delete/">In depth analysis on
-			delete</a></li>
-	<li>{{jsxref("Reflect.deleteProperty()")}}</li>
-	<li>{{jsxref("Map.prototype.delete()")}}</li>
-</ul>
+- [In depth analysis on
+  delete](http://perfectionkills.com/understanding-delete/)
+- {{jsxref("Reflect.deleteProperty()")}}
+- {{jsxref("Map.prototype.delete()")}}

@@ -14,382 +14,313 @@ tags:
   - l10n:priority
   - programming
 ---
-<div>{{JsSidebar}}</div>
-
-<p>This part of the JavaScript section on MDN serves as a repository of facts about the JavaScript language. Read more <a href="/en-US/docs/Web/JavaScript/Reference/About">about this reference</a>.</p>
-
-<h2 id="Built-ins">Built-ins</h2>
-
-<p><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects">JavaScript standard built-in objects</a>, along with their methods and properties.</p>
-
-<h3 id="Value_properties">Value properties</h3>
-
-<ul>
-  <li>{{JSxRef("globalThis")}}</li>
-  <li>{{JSxRef("Infinity")}}</li>
-  <li>{{JSxRef("NaN")}}</li>
-  <li>{{JSxRef("undefined")}}</li>
-</ul>
-
-<h3 id="Function_properties">Function properties</h3>
-
-<ul>
-  <li>{{JSxRef("Global_Objects/eval", "eval()")}}</li>
-  <li>{{JSxRef("Global_Objects/isFinite", "isFinite()")}}</li>
-  <li>{{JSxRef("Global_Objects/isNaN", "isNaN()")}}</li>
-  <li>{{JSxRef("Global_Objects/parseFloat", "parseFloat()")}}</li>
-  <li>{{JSxRef("Global_Objects/parseInt", "parseInt()")}}</li>
-  <li>{{JSxRef("Global_Objects/decodeURI", "decodeURI()")}}</li>
-  <li>{{JSxRef("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}</li>
-  <li>{{JSxRef("Global_Objects/encodeURI", "encodeURI()")}}</li>
-  <li>{{JSxRef("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}</li>
-</ul>
-
-<h3 id="Fundamental_objects">Fundamental objects</h3>
-
-<ul>
-  <li>{{JSxRef("Object")}}</li>
-  <li>{{JSxRef("Function")}}</li>
-  <li>{{JSxRef("Boolean")}}</li>
-  <li>{{JSxRef("Symbol")}}</li>
-</ul>
-
-<h3 id="Error_objects">Error objects</h3>
-
-<ul>
-  <li>{{JSxRef("Error")}}</li>
-  <li>{{JSxRef("EvalError")}}</li>
-  <li>{{JSxRef("RangeError")}}</li>
-  <li>{{JSxRef("ReferenceError")}}</li>
-  <li>{{JSxRef("SyntaxError")}}</li>
-  <li>{{JSxRef("TypeError")}}</li>
-  <li>{{JSxRef("URIError")}}</li>
-  <li>{{JSxRef("AggregateError")}}</li>
-</ul>
-
-<h3 id="Numbers_dates">Numbers &amp; dates</h3>
-
-<ul>
-  <li>{{JSxRef("Number")}}</li>
-  <li>{{JSxRef("BigInt")}}</li>
-  <li>{{JSxRef("Math")}}</li>
-  <li>{{JSxRef("Date")}}</li>
-</ul>
-
-<h3 id="Text_processing">Text processing</h3>
-
-<ul>
-  <li>{{JSxRef("String")}}</li>
-  <li>{{JSxRef("RegExp")}}</li>
-</ul>
-
-<h3 id="Indexed_Collections">Indexed Collections</h3>
-
-<ul>
-  <li>{{JSxRef("Array")}}</li>
-  <li>{{JSxRef("Int8Array")}}</li>
-  <li>{{JSxRef("Uint8Array")}}</li>
-  <li>{{JSxRef("Uint8ClampedArray")}}</li>
-  <li>{{JSxRef("Int16Array")}}</li>
-  <li>{{JSxRef("Uint16Array")}}</li>
-  <li>{{JSxRef("Int32Array")}}</li>
-  <li>{{JSxRef("Uint32Array")}}</li>
-  <li>{{JSxRef("BigInt64Array")}}</li>
-  <li>{{JSxRef("BigUint64Array")}}</li>
-  <li>{{JSxRef("Float32Array")}}</li>
-  <li>{{JSxRef("Float64Array")}}</li>
-</ul>
-
-<h3 id="Keyed_collections">Keyed collections</h3>
-
-<ul>
-  <li>{{JSxRef("Map")}}</li>
-  <li>{{JSxRef("Set")}}</li>
-  <li>{{JSxRef("WeakMap")}}</li>
-  <li>{{JSxRef("WeakSet")}}</li>
-</ul>
-
-<h3 id="Structured_data">Structured data</h3>
-
-<ul>
-  <li>{{JSxRef("ArrayBuffer")}}</li>
-  <li>{{JSxRef("SharedArrayBuffer")}}</li>
-  <li>{{JSxRef("DataView")}}</li>
-  <li>{{JSxRef("Atomics")}}</li>
-  <li>{{JSxRef("JSON")}}</li>
-</ul>
-
-<h3 id="memory_management">Memory management</h3>
-
-<ul>
-  <li>{{JSxRef("WeakRef")}}</li>
-  <li>{{JsxRef("FinalizationRegistry")}}</li>
-</ul>
-
-<h3 id="Control_abstraction">Control abstraction</h3>
-
-<ul>
-  <li>{{JSxRef("Promise")}}</li>
-  <li>{{JSxRef("GeneratorFunction")}}</li>
-  <li>{{JSxRef("AsyncGeneratorFunction")}}</li>
-  <li>{{JSxRef("Generator")}}</li>
-  <li>{{JSxRef("AsyncGenerator")}}</li>
-  <li>{{JSxRef("AsyncFunction")}}</li>
-</ul>
-
-<h3 id="Reflection">Reflection</h3>
-
-<ul>
-  <li>{{JSxRef("Reflect")}}</li>
-  <li>{{JSxRef("Proxy")}}</li>
-</ul>
-
-<h3 id="Internationalization">Internationalization</h3>
-
-<ul>
-  <li>{{JSxRef("Intl")}}</li>
-  <li>{{JSxRef("Global_Objects/Intl/Collator", "Intl.Collator")}}</li>
-  <li>{{JSxRef("Global_Objects/Intl/DateTimeFormat", "Intl.DateTimeFormat")}}</li>
-  <li>{{JSxRef("Global_Objects/Intl/DisplayNames", "Intl.DisplayNames")}}</li>
-  <li>{{JSxRef("Global_Objects/Intl/ListFormat", "Intl.ListFormat")}}</li>
-  <li>{{JSxRef("Global_Objects/Intl/Locale", "Intl.Locale")}}</li>
-  <li>{{JSxRef("Global_Objects/Intl/NumberFormat", "Intl.NumberFormat")}}</li>
-  <li>{{JSxRef("Global_Objects/Intl/PluralRules", "Intl.PluralRules")}}</li>
-  <li>{{JSxRef("Global_Objects/Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat")}}</li>
-</ul>
-
-<h3 id="WebAssembly">WebAssembly</h3>
-
-<ul>
-  <li>{{JSxRef("WebAssembly")}}</li>
-  <li>{{JSxRef("WebAssembly.Module")}}</li>
-  <li>{{JSxRef("WebAssembly.Instance")}}</li>
-  <li>{{JSxRef("WebAssembly.Memory")}}</li>
-  <li>{{JSxRef("WebAssembly.Table")}}</li>
-  <li>{{JSxRef("WebAssembly.CompileError")}}</li>
-  <li>{{JSxRef("WebAssembly.LinkError")}}</li>
-  <li>{{JSxRef("WebAssembly.RuntimeError")}}</li>
-</ul>
-
-<h2 id="Statements">Statements</h2>
-
-<p><a href="/en-US/docs/Web/JavaScript/Reference/Statements">JavaScript statements and declarations</a></p>
-
-<h3 id="Control_flow">Control flow</h3>
-
-<ul>
-  <li>{{jsxref("Statements/block", "Block", "", 1)}}</li>
-  <li>{{jsxref("Statements/Empty", "Empty statement", "", 1)}}</li>
-  <li>{{jsxref("Statements/break", "break")}}</li>
-  <li>{{jsxref("Statements/continue", "continue")}}</li>
-  <li>{{jsxref("Statements/if...else", "if...else")}}</li>
-  <li>{{jsxref("Statements/switch", "switch")}}</li>
-  <li>{{jsxref("Statements/throw", "throw")}}</li>
-  <li>{{jsxref("Statements/try...catch", "try...catch")}}</li>
-</ul>
-
-<h3 id="Declarations">Declarations</h3>
-
-<ul>
-  <li>{{jsxref("Statements/var", "var")}}</li>
-  <li>{{jsxref("Statements/let", "let")}}</li>
-  <li>{{jsxref("Statements/const", "const")}}</li>
-</ul>
-
-<h3 id="Functions_and_classes">Functions and classes</h3>
-
-<ul>
-  <li>{{jsxref("Statements/function", "function")}}</li>
-  <li>{{jsxref("Statements/function*", "function*")}}</li>
-  <li>{{jsxref("Statements/async_function", "async function")}}</li>
-  <li>{{jsxref("Statements/return", "return")}}</li>
-  <li>{{jsxref("Statements/class", "class")}}</li>
-</ul>
-
-<h3 id="Iterations">Iterations</h3>
-
-<ul>
-  <li>{{jsxref("Statements/do...while", "do...while")}}</li>
-  <li>{{jsxref("Statements/for", "for")}}</li>
-  <li>{{jsxref("Statements/for_each...in", "for each...in")}}</li>
-  <li>{{jsxref("Statements/for...in", "for...in")}}</li>
-  <li>{{jsxref("Statements/for...of", "for...of")}}</li>
-  <li>{{jsxref("Statements/for-await...of", "for await...of")}}</li>
-  <li>{{jsxref("Statements/while", "while")}}</li>
-</ul>
-
-<h3 id="Other">Other</h3>
-
-<ul>
-  <li>{{jsxref("Statements/debugger", "debugger")}}</li>
-  <li>{{jsxref("Statements/export", "export")}}</li>
-  <li>{{jsxref("Statements/import", "import")}}</li>
-  <li>{{jsxref("Statements/label", "label")}}</li>
-  <li>{{jsxref("Statements/with", "with")}}</li>
-</ul>
-
-<h2 id="Expressions_and_operators">Expressions and operators</h2>
-
-<p><a href="/en-US/docs/Web/JavaScript/Reference/Operators">JavaScript expressions and operators</a>. </p>
-
-<h3 id="Primary_expressions">Primary expressions</h3>
-
-<ul>
-  <li>{{JSxRef("Operators/this", "this")}}</li>
-  <li>{{JSxRef("Operators/function", "function")}}</li>
-  <li>{{JSxRef("Operators/class", "class")}}</li>
-  <li>{{JSxRef("Operators/function*", "function*")}}</li>
-  <li>{{JSxRef("Operators/yield", "yield")}}</li>
-  <li>{{JSxRef("Operators/yield*", "yield*")}}</li>
-  <li>{{JSxRef("Operators/async_function", "async function")}}</li>
-  <li>{{JSxRef("Operators/await", "await")}}</li>
-  <li>{{JSxRef("Global_Objects/Array", "[]")}}</li>
-  <li>{{JSxRef("Operators/Object_initializer", "{}")}}</li>
-  <li>{{JSxRef("Global_Objects/RegExp", "/ab+c/i")}}</li>
-  <li>{{JSxRef("Operators/Grouping", "( )")}}</li>
-  <li>{{JSxRef("null")}}</li>
-</ul>
-
-<h3 id="Left-hand-side_expressions">Left-hand-side expressions</h3>
-
-<ul>
-  <li>{{JSxRef("Operators/Property_accessors", "Property accessors", "", 1)}}</li>
-  <li>{{JSxRef("Operators/Optional_chaining", "<code>?.</code> (Optional chaining)", "", 1)}}
-  </li>
-  <li>{{JSxRef("Operators/new", "new")}}</li>
-  <li>{{JSxRef("Operators/new%2Etarget", "new.target")}}</li>
-  <li>{{JSxRef("Statements/import%2Emeta", "import.meta")}}</li>
-  <li>{{JSxRef("Operators/super", "super")}}</li>
-  <li>{{JSxRef("Operators/Spread_syntax", "...obj")}}</li>
-</ul>
-
-<h3 id="Increment_decrement">Increment &amp; decrement</h3>
-
-<ul>
-  <li>{{JSxRef("Operators/Increment", "A++")}}</li>
-  <li>{{JSxRef("Operators/Decrement", "A--")}}</li>
-  <li>{{JSxRef("Operators/Increment", "++A")}}</li>
-  <li>{{JSxRef("Operators/Decrement", "--A")}}</li>
-</ul>
-
-<h3 id="Unary_operators">Unary operators</h3>
-
-<ul>
-  <li>{{JSxRef("Operators/delete", "delete")}}</li>
-  <li>{{JSxRef("Operators/void", "void")}}</li>
-  <li>{{JSxRef("Operators/typeof", "typeof")}}</li>
-  <li>{{JSxRef("Operators/Unary_plus", "+")}}</li>
-  <li>{{JSxRef("Operators/Unary_negation", "-")}}</li>
-  <li>{{JSxRef("Operators/Bitwise_NOT", "~")}}</li>
-  <li>{{JSxRef("Operators/Logical_NOT", "!")}}</li>
-</ul>
-
-<h3 id="Arithmetic_operators">Arithmetic operators</h3>
-
-<ul>
-  <li>{{JSxRef("Operators/Addition", "+")}}</li>
-  <li>{{JSxRef("Operators/Subtraction", "-")}}</li>
-  <li>{{JSxRef("Operators/Division", "/")}}</li>
-  <li>{{JSxRef("Operators/Multiplication", "*")}}</li>
-  <li>{{JSxRef("Operators/Remainder", "%")}}</li>
-  <li>{{JSxRef("Operators/Exponentiation", "**")}}</li>
-</ul>
-
-<h3 id="Relational_operators">Relational operators</h3>
-
-<ul>
-  <li>{{JSxRef("Operators/in", "in")}}</li>
-  <li>{{JSxRef("Operators/instanceof", "instanceof")}}</li>
-  <li>{{JSxRef("Operators/Less_than", "&lt;")}}</li>
-  <li>{{JSxRef("Operators/Greater_than", "&gt;")}}</li>
-  <li>{{JSxRef("Operators/Less_than_or_equal", "&lt;=")}}</li>
-  <li>{{JSxRef("Operators/Greater_than_or_equal", "&gt;=")}}</li>
-</ul>
-
-<h3 id="Equality_operators">Equality operators</h3>
-
-<ul>
-  <li>{{JSxRef("Operators/Equality", "==")}}</li>
-  <li>{{JSxRef("Operators/Inequality", "!=")}}</li>
-  <li>{{JSxRef("Operators/Strict_equality", "===")}}</li>
-  <li>{{JSxRef("Operators/Strict_inequality", "!==")}}</li>
-</ul>
-
-<h3 id="Bitwise_shift_operators">Bitwise shift operators</h3>
-
-<ul>
-  <li>{{JSxRef("Operators/Left_shift", "&lt;&lt;")}}</li>
-  <li>{{JSxRef("Operators/Right_shift", "&gt;&gt;")}}</li>
-  <li>{{JSxRef("Operators/Unsigned_right_shift", "&gt;&gt;&gt;")}}</li>
-</ul>
-
-<h3 id="Binary_bitwise_operators">Binary bitwise operators</h3>
-
-<ul>
-  <li>{{JSxRef("Operators/Bitwise_AND", "&amp;")}}</li>
-  <li>{{JSxRef("Operators/Bitwise_OR", "|")}}</li>
-  <li>{{JSxRef("Operators/Bitwise_XOR", "^")}}</li>
-</ul>
-
-<h3 id="Binary_logical_operators">Binary logical operators</h3>
-
-<ul>
-  <li>{{JSxRef("Operators/Logical_AND", "&amp;&amp;")}}</li>
-  <li>{{JSxRef("Operators/Logical_OR", "||")}}</li>
-  <li>{{JSxRef("Operators/Nullish_coalescing_operator", "??")}}</li>
-</ul>
-
-<h3 id="Conditional_ternary_operator">Conditional (ternary) operator</h3>
-
-<ul>
-  <li>{{JSxRef("Operators/Conditional_Operator", "(condition ? ifTrue : ifFalse)")}}</li>
-</ul>
-
-<h3 id="Assignment_operators">Assignment operators</h3>
-
-<ul>
-  <li>{{JSxRef("Operators/Assignment", "=")}}</li>
-  <li>{{JSxRef("Operators/Multiplication_assignment", "*=")}}</li>
-  <li>{{JSxRef("Operators/Exponentiation_assignment", "**=")}}</li>
-  <li>{{JSxRef("Operators/Division_assignment", "/=")}}</li>
-  <li>{{JSxRef("Operators/Remainder_assignment", "%=")}}</li>
-  <li>{{JSxRef("Operators/Addition_assignment", "+=")}}</li>
-  <li>{{JSxRef("Operators/Subtraction_assignment", "-=")}}</li>
-   <li>{{JSxRef("Operators/Left_shift_assignment", "&lt;&lt;=")}}</li>
-  <li>{{JSxRef("Operators/Right_shift_assignment", "&gt;&gt;=")}}</li>
-  <li>{{JSxRef("Operators/Unsigned_right_shift_assignment", "&gt;&gt;&gt;=")}}</li>
-   <li>{{JSxRef("Operators/Bitwise_AND_assignment", "&amp;=")}}</li>
-  <li>{{JSxRef("Operators/Bitwise_XOR_assignment", "^=")}}</li>
-  <li>{{JSxRef("Operators/Bitwise_OR_assignment", "|=")}}</li>
-  <li>{{JSxRef("Operators/Logical_AND_assignment", "&amp;&amp;=")}}</li>
-  <li>{{JSxRef("Operators/Logical_OR_assignment", "||=")}}</li>
-  <li>{{JSxRef("Operators/Logical_nullish_assignment", "??=")}}</li>
-  <li>{{JSxRef("Operators/Destructuring_assignment", "[a, b] = [1, 2]")}}</li>
-  <li>{{JSxRef("Operators/Destructuring_assignment", "{a, b} = {a:1, b:2}")}}</li>
-</ul>
-
-<h3 id="comma_operators">Comma operators</h3>
-
-<ul>
-  <li>{{JSxRef("Operators/Comma_Operator", ",")}}</li>
-</ul>
-
-<h2 id="Functions">Functions</h2>
-
-<p>This chapter documents how to work with <a href="/en-US/docs/Web/JavaScript/Reference/Functions">JavaScript functions</a> to develop your applications.</p>
-
-<ul>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Functions/arguments"><code>arguments</code></a></li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">Arrow functions</a></li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters">Default parameters</a></li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters">Rest parameters</a></li>
-</ul>
-
-<h2 id="Additional_reference_pages">Additional reference pages</h2>
-
-<ul>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar">Lexical grammar</a></li>
-  <li><a href="/en-US/docs/Web/JavaScript/Data_structures">Data types and data structures</a></li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">Strict mode</a></li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features">Deprecated features</a></li>
-</ul>
+{{JsSidebar}}
+
+This part of the JavaScript section on MDN serves as a repository of facts about the JavaScript language. Read more [about this reference](/en-US/docs/Web/JavaScript/Reference/About).
+
+## Built-ins
+
+[JavaScript standard built-in objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects), along with their methods and properties.
+
+### Value properties
+
+- {{JSxRef("globalThis")}}
+- {{JSxRef("Infinity")}}
+- {{JSxRef("NaN")}}
+- {{JSxRef("undefined")}}
+
+### Function properties
+
+- {{JSxRef("Global_Objects/eval", "eval()")}}
+- {{JSxRef("Global_Objects/isFinite", "isFinite()")}}
+- {{JSxRef("Global_Objects/isNaN", "isNaN()")}}
+- {{JSxRef("Global_Objects/parseFloat", "parseFloat()")}}
+- {{JSxRef("Global_Objects/parseInt", "parseInt()")}}
+- {{JSxRef("Global_Objects/decodeURI", "decodeURI()")}}
+- {{JSxRef("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}
+- {{JSxRef("Global_Objects/encodeURI", "encodeURI()")}}
+- {{JSxRef("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}
+
+### Fundamental objects
+
+- {{JSxRef("Object")}}
+- {{JSxRef("Function")}}
+- {{JSxRef("Boolean")}}
+- {{JSxRef("Symbol")}}
+
+### Error objects
+
+- {{JSxRef("Error")}}
+- {{JSxRef("EvalError")}}
+- {{JSxRef("RangeError")}}
+- {{JSxRef("ReferenceError")}}
+- {{JSxRef("SyntaxError")}}
+- {{JSxRef("TypeError")}}
+- {{JSxRef("URIError")}}
+- {{JSxRef("AggregateError")}}
+
+### Numbers & dates
+
+- {{JSxRef("Number")}}
+- {{JSxRef("BigInt")}}
+- {{JSxRef("Math")}}
+- {{JSxRef("Date")}}
+
+### Text processing
+
+- {{JSxRef("String")}}
+- {{JSxRef("RegExp")}}
+
+### Indexed Collections
+
+- {{JSxRef("Array")}}
+- {{JSxRef("Int8Array")}}
+- {{JSxRef("Uint8Array")}}
+- {{JSxRef("Uint8ClampedArray")}}
+- {{JSxRef("Int16Array")}}
+- {{JSxRef("Uint16Array")}}
+- {{JSxRef("Int32Array")}}
+- {{JSxRef("Uint32Array")}}
+- {{JSxRef("BigInt64Array")}}
+- {{JSxRef("BigUint64Array")}}
+- {{JSxRef("Float32Array")}}
+- {{JSxRef("Float64Array")}}
+
+### Keyed collections
+
+- {{JSxRef("Map")}}
+- {{JSxRef("Set")}}
+- {{JSxRef("WeakMap")}}
+- {{JSxRef("WeakSet")}}
+
+### Structured data
+
+- {{JSxRef("ArrayBuffer")}}
+- {{JSxRef("SharedArrayBuffer")}}
+- {{JSxRef("DataView")}}
+- {{JSxRef("Atomics")}}
+- {{JSxRef("JSON")}}
+
+### Memory management
+
+- {{JSxRef("WeakRef")}}
+- {{JsxRef("FinalizationRegistry")}}
+
+### Control abstraction
+
+- {{JSxRef("Promise")}}
+- {{JSxRef("GeneratorFunction")}}
+- {{JSxRef("AsyncGeneratorFunction")}}
+- {{JSxRef("Generator")}}
+- {{JSxRef("AsyncGenerator")}}
+- {{JSxRef("AsyncFunction")}}
+
+### Reflection
+
+- {{JSxRef("Reflect")}}
+- {{JSxRef("Proxy")}}
+
+### Internationalization
+
+- {{JSxRef("Intl")}}
+- {{JSxRef("Global_Objects/Intl/Collator", "Intl.Collator")}}
+- {{JSxRef("Global_Objects/Intl/DateTimeFormat", "Intl.DateTimeFormat")}}
+- {{JSxRef("Global_Objects/Intl/DisplayNames", "Intl.DisplayNames")}}
+- {{JSxRef("Global_Objects/Intl/ListFormat", "Intl.ListFormat")}}
+- {{JSxRef("Global_Objects/Intl/Locale", "Intl.Locale")}}
+- {{JSxRef("Global_Objects/Intl/NumberFormat", "Intl.NumberFormat")}}
+- {{JSxRef("Global_Objects/Intl/PluralRules", "Intl.PluralRules")}}
+- {{JSxRef("Global_Objects/Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat")}}
+
+### WebAssembly
+
+- {{JSxRef("WebAssembly")}}
+- {{JSxRef("WebAssembly.Module")}}
+- {{JSxRef("WebAssembly.Instance")}}
+- {{JSxRef("WebAssembly.Memory")}}
+- {{JSxRef("WebAssembly.Table")}}
+- {{JSxRef("WebAssembly.CompileError")}}
+- {{JSxRef("WebAssembly.LinkError")}}
+- {{JSxRef("WebAssembly.RuntimeError")}}
+
+## Statements
+
+[JavaScript statements and declarations](/en-US/docs/Web/JavaScript/Reference/Statements)
+
+### Control flow
+
+- {{jsxref("Statements/block", "Block", "", 1)}}
+- {{jsxref("Statements/Empty", "Empty statement", "", 1)}}
+- {{jsxref("Statements/break", "break")}}
+- {{jsxref("Statements/continue", "continue")}}
+- {{jsxref("Statements/if...else", "if...else")}}
+- {{jsxref("Statements/switch", "switch")}}
+- {{jsxref("Statements/throw", "throw")}}
+- {{jsxref("Statements/try...catch", "try...catch")}}
+
+### Declarations
+
+- {{jsxref("Statements/var", "var")}}
+- {{jsxref("Statements/let", "let")}}
+- {{jsxref("Statements/const", "const")}}
+
+### Functions and classes
+
+- {{jsxref("Statements/function", "function")}}
+- {{jsxref("Statements/function*", "function*")}}
+- {{jsxref("Statements/async_function", "async function")}}
+- {{jsxref("Statements/return", "return")}}
+- {{jsxref("Statements/class", "class")}}
+
+### Iterations
+
+- {{jsxref("Statements/do...while", "do...while")}}
+- {{jsxref("Statements/for", "for")}}
+- {{jsxref("Statements/for_each...in", "for each...in")}}
+- {{jsxref("Statements/for...in", "for...in")}}
+- {{jsxref("Statements/for...of", "for...of")}}
+- {{jsxref("Statements/for-await...of", "for await...of")}}
+- {{jsxref("Statements/while", "while")}}
+
+### Other
+
+- {{jsxref("Statements/debugger", "debugger")}}
+- {{jsxref("Statements/export", "export")}}
+- {{jsxref("Statements/import", "import")}}
+- {{jsxref("Statements/label", "label")}}
+- {{jsxref("Statements/with", "with")}}
+
+## Expressions and operators
+
+[JavaScript expressions and operators](/en-US/docs/Web/JavaScript/Reference/Operators).
+
+### Primary expressions
+
+- {{JSxRef("Operators/this", "this")}}
+- {{JSxRef("Operators/function", "function")}}
+- {{JSxRef("Operators/class", "class")}}
+- {{JSxRef("Operators/function*", "function*")}}
+- {{JSxRef("Operators/yield", "yield")}}
+- {{JSxRef("Operators/yield*", "yield*")}}
+- {{JSxRef("Operators/async_function", "async function")}}
+- {{JSxRef("Operators/await", "await")}}
+- {{JSxRef("Global_Objects/Array", "[]")}}
+- {{JSxRef("Operators/Object_initializer", "{}")}}
+- {{JSxRef("Global_Objects/RegExp", "/ab+c/i")}}
+- {{JSxRef("Operators/Grouping", "( )")}}
+- {{JSxRef("null")}}
+
+### Left-hand-side expressions
+
+- {{JSxRef("Operators/Property_accessors", "Property accessors", "", 1)}}
+- {{JSxRef("Operators/Optional_chaining", "<code>?.</code> (Optional chaining)", "", 1)}}
+- {{JSxRef("Operators/new", "new")}}
+- {{JSxRef("Operators/new%2Etarget", "new.target")}}
+- {{JSxRef("Statements/import%2Emeta", "import.meta")}}
+- {{JSxRef("Operators/super", "super")}}
+- {{JSxRef("Operators/Spread_syntax", "...obj")}}
+
+### Increment & decrement
+
+- {{JSxRef("Operators/Increment", "A++")}}
+- {{JSxRef("Operators/Decrement", "A--")}}
+- {{JSxRef("Operators/Increment", "++A")}}
+- {{JSxRef("Operators/Decrement", "--A")}}
+
+### Unary operators
+
+- {{JSxRef("Operators/delete", "delete")}}
+- {{JSxRef("Operators/void", "void")}}
+- {{JSxRef("Operators/typeof", "typeof")}}
+- {{JSxRef("Operators/Unary_plus", "+")}}
+- {{JSxRef("Operators/Unary_negation", "-")}}
+- {{JSxRef("Operators/Bitwise_NOT", "~")}}
+- {{JSxRef("Operators/Logical_NOT", "!")}}
+
+### Arithmetic operators
+
+- {{JSxRef("Operators/Addition", "+")}}
+- {{JSxRef("Operators/Subtraction", "-")}}
+- {{JSxRef("Operators/Division", "/")}}
+- {{JSxRef("Operators/Multiplication", "*")}}
+- {{JSxRef("Operators/Remainder", "%")}}
+- {{JSxRef("Operators/Exponentiation", "**")}}
+
+### Relational operators
+
+- {{JSxRef("Operators/in", "in")}}
+- {{JSxRef("Operators/instanceof", "instanceof")}}
+- {{JSxRef("Operators/Less_than", "&lt;")}}
+- {{JSxRef("Operators/Greater_than", "&gt;")}}
+- {{JSxRef("Operators/Less_than_or_equal", "&lt;=")}}
+- {{JSxRef("Operators/Greater_than_or_equal", "&gt;=")}}
+
+### Equality operators
+
+- {{JSxRef("Operators/Equality", "==")}}
+- {{JSxRef("Operators/Inequality", "!=")}}
+- {{JSxRef("Operators/Strict_equality", "===")}}
+- {{JSxRef("Operators/Strict_inequality", "!==")}}
+
+### Bitwise shift operators
+
+- {{JSxRef("Operators/Left_shift", "&lt;&lt;")}}
+- {{JSxRef("Operators/Right_shift", "&gt;&gt;")}}
+- {{JSxRef("Operators/Unsigned_right_shift", "&gt;&gt;&gt;")}}
+
+### Binary bitwise operators
+
+- {{JSxRef("Operators/Bitwise_AND", "&amp;")}}
+- {{JSxRef("Operators/Bitwise_OR", "|")}}
+- {{JSxRef("Operators/Bitwise_XOR", "^")}}
+
+### Binary logical operators
+
+- {{JSxRef("Operators/Logical_AND", "&amp;&amp;")}}
+- {{JSxRef("Operators/Logical_OR", "||")}}
+- {{JSxRef("Operators/Nullish_coalescing_operator", "??")}}
+
+### Conditional (ternary) operator
+
+- {{JSxRef("Operators/Conditional_Operator", "(condition ? ifTrue : ifFalse)")}}
+
+### Assignment operators
+
+- {{JSxRef("Operators/Assignment", "=")}}
+- {{JSxRef("Operators/Multiplication_assignment", "*=")}}
+- {{JSxRef("Operators/Exponentiation_assignment", "**=")}}
+- {{JSxRef("Operators/Division_assignment", "/=")}}
+- {{JSxRef("Operators/Remainder_assignment", "%=")}}
+- {{JSxRef("Operators/Addition_assignment", "+=")}}
+- {{JSxRef("Operators/Subtraction_assignment", "-=")}}
+- {{JSxRef("Operators/Left_shift_assignment", "&lt;&lt;=")}}
+- {{JSxRef("Operators/Right_shift_assignment", "&gt;&gt;=")}}
+- {{JSxRef("Operators/Unsigned_right_shift_assignment", "&gt;&gt;&gt;=")}}
+- {{JSxRef("Operators/Bitwise_AND_assignment", "&amp;=")}}
+- {{JSxRef("Operators/Bitwise_XOR_assignment", "^=")}}
+- {{JSxRef("Operators/Bitwise_OR_assignment", "|=")}}
+- {{JSxRef("Operators/Logical_AND_assignment", "&amp;&amp;=")}}
+- {{JSxRef("Operators/Logical_OR_assignment", "||=")}}
+- {{JSxRef("Operators/Logical_nullish_assignment", "??=")}}
+- {{JSxRef("Operators/Destructuring_assignment", "[a, b] = [1, 2]")}}
+- {{JSxRef("Operators/Destructuring_assignment", "{a, b} = {a:1, b:2}")}}
+
+### Comma operators
+
+- {{JSxRef("Operators/Comma_Operator", ",")}}
+
+## Functions
+
+This chapter documents how to work with [JavaScript functions](/en-US/docs/Web/JavaScript/Reference/Functions) to develop your applications.
+
+- [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments)
+- [Arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
+- [Default parameters](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters)
+- [Rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters)
+
+## Additional reference pages
+
+- [Lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar)
+- [Data types and data structures](/en-US/docs/Web/JavaScript/Data_structures)
+- [Strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)
+- [Deprecated features](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)

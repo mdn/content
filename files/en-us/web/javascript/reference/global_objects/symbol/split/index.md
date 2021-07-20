@@ -9,22 +9,20 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Symbol.split
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>Symbol.split</code></strong> well-known symbol specifies the method that splits a string at the indices that match a regular expression. This function is called by the {{jsxref("String.prototype.split()")}} method.</p>
+The **`Symbol.split`** well-known symbol specifies the method that splits a string at the indices that match a regular expression. This function is called by the {{jsxref("String.prototype.split()")}} method.
 
-<p>For more information, see {{jsxref("RegExp.@@split", "RegExp.prototype[@@split]()")}} and {{jsxref("String.prototype.split()")}}.</p>
+For more information, see {{jsxref("RegExp.@@split", "RegExp.prototype[@@split]()")}} and {{jsxref("String.prototype.split()")}}.
 
-<div>{{EmbedInteractiveExample("pages/js/symbol-split.html")}}</div>
+{{EmbedInteractiveExample("pages/js/symbol-split.html")}}{{js_property_attributes(0,0,0)}}
 
+## Examples
 
-<div>{{js_property_attributes(0,0,0)}}</div>
+### Custom reverse split
 
-<h2 id="Examples">Examples</h2>
-
-<h3 id="Custom_reverse_split">Custom reverse split</h3>
-
-<pre class="brush: js">class ReverseSplit {
+```js
+class ReverseSplit {
   [Symbol.split](string) {
     const array = string.split(' ');
     return array.reverse();
@@ -32,22 +30,21 @@ browser-compat: javascript.builtins.Symbol.split
 }
 
 console.log('Another one bites the dust'.split(new ReverseSplit()));
-// expected output: [ "dust", "the", "bites", "one", "Another" ]</pre>
+// expected output: [ "dust", "the", "bites", "one", "Another" ]
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>A polyfill of <code>Symbol.split</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-symbol"><code>core-js</code></a></li>
- <li>{{jsxref("Symbol.match")}}</li>
- <li>{{jsxref("Symbol.replace")}}</li>
- <li>{{jsxref("Symbol.search")}}</li>
- <li>{{jsxref("RegExp.@@split", "RegExp.prototype[@@split]()")}}</li>
-</ul>
+- A polyfill of `Symbol.split` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-symbol)
+- {{jsxref("Symbol.match")}}
+- {{jsxref("Symbol.replace")}}
+- {{jsxref("Symbol.search")}}
+- {{jsxref("RegExp.@@split", "RegExp.prototype[@@split]()")}}

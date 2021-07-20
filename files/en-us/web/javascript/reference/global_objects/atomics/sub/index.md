@@ -2,78 +2,74 @@
 title: Atomics.sub()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/sub
 tags:
-- Atomics
-- JavaScript
-- Method
-- Shared Memory
+  - Atomics
+  - JavaScript
+  - Method
+  - Shared Memory
 browser-compat: javascript.builtins.Atomics.sub
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The static <strong><code>Atomics.sub()</code></strong> method substracts a given value
-  at a given position in the array and returns the old value at that position. This atomic
-  operation guarantees that no other write happens until the modified value is written
-  back.</p>
+The static **`Atomics.sub()`** method substracts a given value
+at a given position in the array and returns the old value at that position. This atomic
+operation guarantees that no other write happens until the modified value is written
+back.
 
-<div>{{EmbedInteractiveExample("pages/js/atomics-sub.html")}}</div>
+{{EmbedInteractiveExample("pages/js/atomics-sub.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">Atomics.sub(<var>typedArray</var>, <var>index</var>, <var>value</var>)
-</pre>
+```js
+Atomics.sub(typedArray, index, value)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>typedArray</var></code></dt>
-  <dd>An integer typed array. One of {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}},
+- `typedArray`
+  - : An integer typed array. One of {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}},
     {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}},
     {{jsxref("Uint32Array")}}, {{jsxref("BigInt64Array")}}, or
-    {{jsxref("BigUint64Array")}}.</dd>
-  <dt><code><var>index</var></code></dt>
-  <dd>The position in the <code><var>typedArray</var></code> to subtract a
-    <code><var>value</var></code> from.</dd>
-  <dt><code><var>value</var></code></dt>
-  <dd>The number to subtract.</dd>
-</dl>
+    {{jsxref("BigUint64Array")}}.
+- `index`
+  - : The position in the `typedArray` to subtract a
+    `value` from.
+- `value`
+  - : The number to subtract.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>The old value at the given position
-  (<code><var>typedArray</var>[<var>index</var>]</code>).</p>
+The old value at the given position
+(`typedArray[index]`).
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<ul>
-  <li>Throws a {{jsxref("TypeError")}}, if <code><var>typedArray</var></code> is not one
-    of the allowed integer types.</li>
-  <li>Throws a {{jsxref("RangeError")}}, if <code><var>index</var></code> is out of bounds
-    in the <code><var>typedArray</var></code>.</li>
-</ul>
+- Throws a {{jsxref("TypeError")}}, if `typedArray` is not one
+  of the allowed integer types.
+- Throws a {{jsxref("RangeError")}}, if `index` is out of bounds
+  in the `typedArray`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_sub">Using sub</h3>
+### Using sub
 
-<pre class="brush: js">const sab = new SharedArrayBuffer(1024);
+```js
+const sab = new SharedArrayBuffer(1024);
 const ta = new Uint8Array(sab);
 ta[0] = 48;
 
 Atomics.sub(ta, 0, 12); // returns 48, the old value
 Atomics.load(ta, 0); // 36
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Atomics")}}</li>
-  <li>{{jsxref("Atomics.add()")}}</li>
-</ul>
+- {{jsxref("Atomics")}}
+- {{jsxref("Atomics.add()")}}

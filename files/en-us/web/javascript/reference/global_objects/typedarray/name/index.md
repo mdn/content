@@ -8,24 +8,22 @@ tags:
   - TypedArrays
 browser-compat: javascript.builtins.TypedArray.name
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <code><strong>TypedArray.name</strong></code> property represents a string value of the typed array constructor name.</p>
+The **`TypedArray.name`** property represents a string value of the typed array constructor name.
 
-<div>{{EmbedInteractiveExample("pages/js/typedarray-name.html","shorter")}}</div>
+{{EmbedInteractiveExample("pages/js/typedarray-name.html","shorter")}}{{js_property_attributes(0,0,0)}}
 
+## Description
 
-<div>{{js_property_attributes(0,0,0)}}</div>
+`TypedArray` objects differ from each other in the number of bytes per element and in the way the bytes are interpreted. The `name` property describes of what data type the array consists. The first part can be `Int` for "integer" or `Uint` for an "unsigned integer", also `Float` for "floating point" is used. The second part is a number describing the bit-size of the array. Finally, the object type is `Array`, with `ClampedArray` as a special case. Please see {{jsxref("Uint8ClampedArray")}} for more details.
 
-<h2 id="Description">Description</h2>
+## Examples
 
-<p><code>TypedArray</code> objects differ from each other in the number of bytes per element and in the way the bytes are interpreted. The <code>name</code> property describes of what data type the array consists. The first part can be <code>Int</code> for "integer" or <code>Uint</code> for an "unsigned integer", also <code>Float</code> for "floating point" is used. The second part is a number describing the bit-size of the array. Finally, the object type is <code>Array</code>, with <code>ClampedArray</code> as a special case. Please see {{jsxref("Uint8ClampedArray")}} for more details.</p>
+### Using name
 
-<h2 id="Examples">Examples</h2>
-
-<h3 id="Using_name">Using name</h3>
-
-<pre class="brush:js">Int8Array.name;         // "Int8Array"
+```js
+Int8Array.name;         // "Int8Array"
 Uint8Array.name;        // "Uint8Array"
 Uint8ClampedArray.name; // "Uint8ClampedArray"
 Int16Array.name;        // "Int16Array"
@@ -33,19 +31,18 @@ Uint16Array.name;       // "Uint16Array"
 Int32Array.name;        // "Int32Array"
 Uint32Array.name;       // "Uint32Array"
 Float32Array.name;      // "Float32Array"
-Float64Array.name;      // "Float64Array"</pre>
+Float64Array.name;      // "Float64Array"
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Typed_arrays">JavaScript typed arrays</a></li>
- <li>{{jsxref("TypedArray")}}</li>
-</ul>
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- {{jsxref("TypedArray")}}

@@ -2,20 +2,21 @@
 title: 'SyntaxError: JSON.parse: bad parsing'
 slug: Web/JavaScript/Reference/Errors/JSON_bad_parse
 tags:
-- Error
-- Errors
-- JSON
-- JavaScript
-- SyntaxError
+  - Error
+  - Errors
+  - JSON
+  - JavaScript
+  - SyntaxError
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<p>The JavaScript exceptions thrown by {{jsxref("JSON.parse()")}} occur when string failed
-  to be parsed as JSON.</p>
+The JavaScript exceptions thrown by {{jsxref("JSON.parse()")}} occur when string failed
+to be parsed as JSON.
 
-<h2 id="Message">Message</h2>
+## Message
 
-<pre class="brush: js">SyntaxError: JSON.parse: unterminated string literal
+```js
+SyntaxError: JSON.parse: unterminated string literal
 SyntaxError: JSON.parse: bad control character in string literal
 SyntaxError: JSON.parse: bad character in string literal
 SyntaxError: JSON.parse: bad Unicode escape
@@ -46,73 +47,78 @@ SyntaxError: JSON.parse: property names must be double-quoted strings
 SyntaxError: JSON.parse: expected property name or '}'
 SyntaxError: JSON.parse: unexpected character
 SyntaxError: JSON.parse: unexpected non-whitespace character after JSON data
-SyntaxError: JSON.parse Error: Invalid character at position {0} (Edge)</pre>
+SyntaxError: JSON.parse Error: Invalid character at position {0} (Edge)
+```
 
-<h2 id="Error_type">Error type</h2>
+## Error type
 
-<p>{{jsxref("SyntaxError")}}</p>
+{{jsxref("SyntaxError")}}
 
-<h2 id="What_went_wrong">What went wrong?</h2>
+## What went wrong?
 
-<p>{{jsxref("JSON.parse()")}} parses a string as JSON. This string has to be valid JSON
-  and will throw this error if incorrect syntax was encountered.</p>
+{{jsxref("JSON.parse()")}} parses a string as JSON. This string has to be valid JSON
+and will throw this error if incorrect syntax was encountered.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="JSON.parse_does_not_allow_trailing_commas"><code>JSON.parse()</code> does not
-  allow trailing commas</h3>
+### `JSON.parse()` does not allow trailing commas
 
-<p>Both lines will throw a SyntaxError:</p>
+Both lines will throw a SyntaxError:
 
-<pre class="brush: js example-bad">JSON.parse('[1, 2, 3, 4,]');
+```js example-bad
+JSON.parse('[1, 2, 3, 4,]');
 JSON.parse('{"foo": 1,}');
 // SyntaxError JSON.parse: unexpected character
 // at line 1 column 14 of the JSON data
-</pre>
+```
 
-<p>Omit the trailing commas to parse the JSON correctly:</p>
+Omit the trailing commas to parse the JSON correctly:
 
-<pre class="brush: js example-good">JSON.parse('[1, 2, 3, 4]');
-JSON.parse('{"foo": 1}');</pre>
+```js example-good
+JSON.parse('[1, 2, 3, 4]');
+JSON.parse('{"foo": 1}');
+```
 
-<h3 id="Property_names_must_be_double-quoted_strings">Property names must be double-quoted
-  strings</h3>
+### Property names must be double-quoted strings
 
-<p>You cannot use single-quotes around properties, like 'foo'.</p>
+You cannot use single-quotes around properties, like 'foo'.
 
-<pre class="brush: js example-bad">JSON.parse("{'foo': 1}");
+```js example-bad
+JSON.parse("{'foo': 1}");
 // SyntaxError: JSON.parse: expected property name or '}'
-// at line 1 column 2 of the JSON data</pre>
+// at line 1 column 2 of the JSON data
+```
 
-<p>Instead write "foo":</p>
+Instead write "foo":
 
-<pre class="brush: js example-good">JSON.parse('{"foo": 1}');</pre>
+```js example-good
+JSON.parse('{"foo": 1}');
+```
 
-<h3 id="Leading_zeros_and_decimal_points">Leading zeros and decimal points</h3>
+### Leading zeros and decimal points
 
-<p>You cannot use leading zeros, like 01, and decimal points must be followed by at least
-  one digit.</p>
+You cannot use leading zeros, like 01, and decimal points must be followed by at least
+one digit.
 
-<pre class="brush: js example-bad">JSON.parse('{"foo": 01}');
+```js example-bad
+JSON.parse('{"foo": 01}');
 // SyntaxError: JSON.parse: expected ',' or '}' after property value
 // in object at line 1 column 2 of the JSON data
 
 JSON.parse('{"foo": 1.}');
 // SyntaxError: JSON.parse: unterminated fractional number
 // at line 1 column 2 of the JSON data
-</pre>
+```
 
-<p>Instead write just 1 without a zero and use at least one digit after a decimal point:
-</p>
+Instead write just 1 without a zero and use at least one digit after a decimal point:
 
-<pre class="brush: js example-good">JSON.parse('{"foo": 1}');
+```js example-good
+JSON.parse('{"foo": 1}');
 JSON.parse('{"foo": 1.0}');
-</pre>
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("JSON")}}</li>
-  <li>{{jsxref("JSON.parse()")}}</li>
-  <li>{{jsxref("JSON.stringify()")}}</li>
-</ul>
+- {{jsxref("JSON")}}
+- {{jsxref("JSON.parse()")}}
+- {{jsxref("JSON.stringify()")}}

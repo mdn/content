@@ -2,67 +2,63 @@
 title: DataView.prototype.setUint8()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/setUint8
 tags:
-- DataView
-- JavaScript
-- Method
-- Prototype
-- TypedArrays
+  - DataView
+  - JavaScript
+  - Method
+  - Prototype
+  - TypedArrays
 browser-compat: javascript.builtins.DataView.setUint8
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>setUint8()</code></strong> method stores an unsigned 8-bit integer
-  (byte) value at the specified byte offset from the start of the {{jsxref("DataView")}}.
-</p>
+The **`setUint8()`** method stores an unsigned 8-bit integer
+(byte) value at the specified byte offset from the start of the {{jsxref("DataView")}}.
 
-<div>{{EmbedInteractiveExample("pages/js/dataview-setuint8.html")}}</div>
+{{EmbedInteractiveExample("pages/js/dataview-setuint8.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">setUint8(byteOffset, value)</pre>
+```js
+setUint8(byteOffset, value)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>byteOffset</var></code></dt>
-  <dd>The offset, in byte, from the start of the view where to store the data.</dd>
-  <dt><code><var>value</var></code></dt>
-  <dd>The value to set.</dd>
-</dl>
+- `byteOffset`
+  - : The offset, in byte, from the start of the view where to store the data.
+- `value`
+  - : The value to set.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>{{jsxref("undefined")}}.</p>
+{{jsxref("undefined")}}.
 
-<h3 id="Errors_thrown">Errors thrown</h3>
+### Errors thrown
 
-<dl>
-  <dt>{{jsxref("RangeError")}}</dt>
-  <dd>Thrown if the <code>byteOffset</code> is set such as it would store beyond the end
-    of the view.</dd>
-</dl>
+- {{jsxref("RangeError")}}
+  - : Thrown if the `byteOffset` is set such as it would store beyond the end
+    of the view.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_the_setUint8_method">Using the setUint8 method</h3>
+### Using the setUint8 method
 
-<pre class="brush:js">var buffer = new ArrayBuffer(8);
+```js
+var buffer = new ArrayBuffer(8);
 var dataview = new DataView(buffer);
 dataview.setUint8(1, 3);
 dataview.getUint8(1); // 3
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("DataView")}}</li>
-  <li>{{jsxref("ArrayBuffer")}}</li>
-</ul>
+- {{jsxref("DataView")}}
+- {{jsxref("ArrayBuffer")}}

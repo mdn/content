@@ -11,100 +11,88 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.PluralRules.PluralRules
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>Intl.PluralRules()</code></strong> constructor creates
-	{{jsxref("Intl/PluralRules", "Intl.PluralRules")}} objects.</p>
+The **`Intl.PluralRules()`** constructor creates
+{{jsxref("Intl/PluralRules", "Intl.PluralRules")}} objects.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 new Intl.PluralRules()
 new Intl.PluralRules(locales)
 new Intl.PluralRules(locales, options)
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-	<dt><code><var>locales</var></code> {{optional_inline}}</dt>
-	<dd>
-		<p>A string with a BCP 47 language tag, or an array of such strings. For the
-			general form and interpretation of the <code><var>locales</var></code>
-			argument, see the {{jsxref("Global_Objects/Intl", "Intl",
-			"#Locale_identification_and_negotiation", 1)}} page.</p>
-	</dd>
-	<dt><code><var>options</var></code> {{optional_inline}}</dt>
-	<dd>
-		<p>An object with some or all of the following properties:</p>
+- `locales` {{optional_inline}}
+  - : A string with a BCP 47 language tag, or an array of such strings. For the
+    general form and interpretation of the `locales`
+    argument, see the {{jsxref("Global_Objects/Intl", "Intl",
+			"#Locale_identification_and_negotiation", 1)}} page.
+- `options` {{optional_inline}}
 
-		<dl>
-			<dt><code>localeMatcher</code></dt>
-			<dd>The locale matching algorithm to use. Possible values are
-				"<code>lookup</code>" and "<code>best fit</code>"; the default is
-				"<code>best fit</code>". For information about this option, see the
-				{{jsxref("Global_Objects/Intl", "Intl", "#Locale_negotiation", 1)}} page.
-			</dd>
-			<dt><code>type</code></dt>
-			<dd>The type to use. Possible values are:
-				<ul>
-					<li>"<code>cardinal</code>" for cardinal numbers (refering to the
-						quantity of things). This is the default value.</li>
-					<li>"<code>ordinal</code>" for ordinal number (refering to the
-						ordering or ranking of things, e.g. "1st", "2nd", "3rd" in
-						English).</li>
-				</ul>
-			</dd>
-		</dl>
+  - : An object with some or all of the following properties:
 
-		<p>The following properties fall into two groups:
-			<code>minimumIntegerDigits</code>, <code>minimumFractionDigits</code>, and
-			<code>maximumFractionDigits</code> in one group,
-			<code>minimumSignificantDigits</code> and
-			<code>maximumSignificantDigits</code> in the other. If at least one property
-			from the second group is defined, then the first group is ignored.</p>
+    - `localeMatcher`
+      - : The locale matching algorithm to use. Possible values are
+        "`lookup`" and "`best fit`"; the default is
+        "`best fit`". For information about this option, see the
+        {{jsxref("Global_Objects/Intl", "Intl", "#Locale_negotiation", 1)}} page.
+    - `type`
 
-		<dl>
-			<dt><code>minimumIntegerDigits</code></dt>
-			<dd>The minimum number of integer digits to use. Possible values are from 1 to
-				21; the default is 1.</dd>
-			<dt><code>minimumFractionDigits</code></dt>
-			<dd>The minimum number of fraction digits to use. Possible values are from 0
-				to 20; the default for plain number and percent formatting is 0; the
-				default for currency formatting is the number of minor unit digits
-				provided by the <a
-					href="https://www.currency-iso.org/en/home/tables/table-a1.html">ISO
-					4217 currency code list</a> (2 if the list doesn't provide that
-				information).</dd>
-			<dt><code>maximumFractionDigits</code></dt>
-			<dd>The maximum number of fraction digits to use. Possible values are from 0
-				to 20; the default for plain number formatting is the larger of
-				<code>minimumFractionDigits</code> and 3; the default for currency
-				formatting is the larger of <code>minimumFractionDigits</code> and the
-				number of minor unit digits provided by the <a
-					href="https://www.currency-iso.org/en/home/tables/table-a1.html">ISO
-					4217 currency code list</a> (2 if the list doesn't provide that
-				information); the default for percent formatting is the larger of
-				<code>minimumFractionDigits</code> and 0.</dd>
-			<dt><code>minimumSignificantDigits</code></dt>
-			<dd>The minimum number of significant digits to use. Possible values are from
-				1 to 21; the default is 1.</dd>
-			<dt><code>maximumSignificantDigits</code></dt>
-			<dd>The maximum number of significant digits to use. Possible values are from
-				1 to 21; the default is 21.</dd>
-		</dl>
-	</dd>
-</dl>
+      - : The type to use. Possible values are:
 
-<h2 id="Examples">Examples</h2>
+        - "`cardinal`" for cardinal numbers (refering to the
+          quantity of things). This is the default value.
+        - "`ordinal`" for ordinal number (refering to the
+          ordering or ranking of things, e.g. "1st", "2nd", "3rd" in
+          English).
 
-<h3 id="Basic_usage">Basic usage</h3>
+    The following properties fall into two groups:
+    `minimumIntegerDigits`, `minimumFractionDigits`, and
+    `maximumFractionDigits` in one group,
+    `minimumSignificantDigits` and
+    `maximumSignificantDigits` in the other. If at least one property
+    from the second group is defined, then the first group is ignored.
 
-<p>In basic use without specifying a locale, a formatted string in the default locale and
-	with default options is returned. This is useful to distinguish between singular and
-	plural forms, e.g. "dog" and "dogs".</p>
+    - `minimumIntegerDigits`
+      - : The minimum number of integer digits to use. Possible values are from 1 to
+        21; the default is 1.
+    - `minimumFractionDigits`
+      - : The minimum number of fraction digits to use. Possible values are from 0
+        to 20; the default for plain number and percent formatting is 0; the
+        default for currency formatting is the number of minor unit digits
+        provided by the [ISO
+        4217 currency code list](https://www.currency-iso.org/en/home/tables/table-a1.html) (2 if the list doesn't provide that
+        information).
+    - `maximumFractionDigits`
+      - : The maximum number of fraction digits to use. Possible values are from 0
+        to 20; the default for plain number formatting is the larger of
+        `minimumFractionDigits` and 3; the default for currency
+        formatting is the larger of `minimumFractionDigits` and the
+        number of minor unit digits provided by the [ISO
+        4217 currency code list](https://www.currency-iso.org/en/home/tables/table-a1.html) (2 if the list doesn't provide that
+        information); the default for percent formatting is the larger of
+        `minimumFractionDigits` and 0.
+    - `minimumSignificantDigits`
+      - : The minimum number of significant digits to use. Possible values are from
+        1 to 21; the default is 1.
+    - `maximumSignificantDigits`
+      - : The maximum number of significant digits to use. Possible values are from
+        1 to 21; the default is 21.
 
-<pre class="brush: js">var pr = new Intl.PluralRules();
+## Examples
+
+### Basic usage
+
+In basic use without specifying a locale, a formatted string in the default locale and
+with default options is returned. This is useful to distinguish between singular and
+plural forms, e.g. "dog" and "dogs".
+
+```js
+var pr = new Intl.PluralRules();
 
 pr.select(0);
 // → 'other' if in US English locale
@@ -114,16 +102,17 @@ pr.select(1);
 
 pr.select(2);
 // → 'other' if in US English locale
-</pre>
+```
 
-<h3 id="Using_options">Using options</h3>
+### Using options
 
-<p>The results can be customized using the <code>options</code> argument, which has one
-	property called <code>type</code> which you can set to <code>ordinal</code>. This is
-	useful to figure out the ordinal indicator, e.g. "1st", "2nd", "3rd", "4th", "42nd"
-	and so forth.</p>
+The results can be customized using the `options` argument, which has one
+property called `type` which you can set to `ordinal`. This is
+useful to figure out the ordinal indicator, e.g. "1st", "2nd", "3rd", "4th", "42nd"
+and so forth.
 
-<pre class="brush: js">var pr = new Intl.PluralRules('en-US', { type: 'ordinal' });
+```js
+var pr = new Intl.PluralRules('en-US', { type: 'ordinal' });
 
 const suffixes = new Map([
   ['one',   'st'],
@@ -131,7 +120,7 @@ const suffixes = new Map([
   ['few',   'rd'],
   ['other', 'th'],
 ]);
-const formatOrdinals = (n) =&gt; {
+const formatOrdinals = (n) => {
   const rule = pr.select(n);
   const suffix = suffixes.get(rule);
   return `${n}${suffix}`;
@@ -146,19 +135,17 @@ formatOrdinals(11);  // '11th'
 formatOrdinals(21);  // '21st'
 formatOrdinals(42);  // '42nd'
 formatOrdinals(103); // '103rd'
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>{{jsxref("Intl.PluralRules")}}</li>
-	<li>{{jsxref("Global_Objects/Intl", "Intl")}}</li>
-</ul>
+- {{jsxref("Intl.PluralRules")}}
+- {{jsxref("Global_Objects/Intl", "Intl")}}

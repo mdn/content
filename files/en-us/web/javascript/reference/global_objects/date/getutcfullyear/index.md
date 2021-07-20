@@ -2,56 +2,56 @@
 title: Date.prototype.getUTCFullYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCFullYear
 tags:
-- Date
-- JavaScript
-- Method
-- Prototype
-- Reference
+  - Date
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
 browser-compat: javascript.builtins.Date.getUTCFullYear
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>getUTCFullYear()</code></strong> method returns the year in the
-  specified date according to universal time.</p>
+The **`getUTCFullYear()`** method returns the year in the
+specified date according to universal time.
 
-<div>{{EmbedInteractiveExample("pages/js/date-getutcfullyear.html")}}</div>
+{{EmbedInteractiveExample("pages/js/date-getutcfullyear.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+getUTCFullYear()
+```
 
-<pre class="brush: js">getUTCFullYear()</pre>
+### Return value
 
-<h3 id="Return_value">Return value</h3>
+A number representing the year in the given date according to universal time.
 
-<p>A number representing the year in the given date according to universal time.</p>
+## Description
 
-<h2 id="Description">Description</h2>
+The value returned by `getUTCFullYear()` is an absolute number that is
+compliant with year-2000, for example, 1995.
 
-<p>The value returned by <code>getUTCFullYear()</code> is an absolute number that is
-  compliant with year-2000, for example, 1995.</p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Using getUTCFullYear()
 
-<h3 id="Using_getUTCFullYear">Using getUTCFullYear()</h3>
+The following example assigns the four-digit value of the current year to the variable
+`year`.
 
-<p>The following example assigns the four-digit value of the current year to the variable
-  <code>year</code>.</p>
-
-<pre class="brush: js">var today = new Date();
+```js
+var today = new Date();
 var year = today.getUTCFullYear();
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Date.prototype.getFullYear()")}}</li>
-  <li>{{jsxref("Date.prototype.setFullYear()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getFullYear()")}}
+- {{jsxref("Date.prototype.setFullYear()")}}

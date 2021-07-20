@@ -2,64 +2,60 @@
 title: Error.prototype.toSource()
 slug: Web/JavaScript/Reference/Global_Objects/Error/toSource
 tags:
-- JavaScript
-- Method
-- Non-standard
-- Prototype
+  - JavaScript
+  - Method
+  - Non-standard
+  - Prototype
 browser-compat: javascript.builtins.Error.toSource
 ---
-<div>{{JSRef}} {{non-standard_header}}</div>
+{{JSRef}} {{non-standard_header}}
 
-<p>The <code><strong>toSource()</strong></code> method returns code that could eval to the
-  same error.</p>
+The **`toSource()`** method returns code that could eval to the
+same error.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">toSource()</pre>
+```js
+toSource()
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A string containing the source code of the error.</p>
+A string containing the source code of the error.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_toSource">Using toSource</h3>
+### Using toSource
 
-<p>Calling the <code>toSource</code> method of an {{jsxref("Error")}} instance (including
-  <em><a
-      href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error#Error_types">NativeErrors</a></em>)
-  will return a string containing the source code of the error. This string can be
-  evaluated to create an (approximately) equal object. Naturally, the string containing
-  the source follows the structure of the {{jsxref("Error")}} constructor. For example:
-</p>
+Calling the `toSource` method of an {{jsxref("Error")}} instance (including
+_[NativeErrors](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error#Error_types)_)
+will return a string containing the source code of the error. This string can be
+evaluated to create an (approximately) equal object. Naturally, the string containing
+the source follows the structure of the {{jsxref("Error")}} constructor. For example:
 
-<pre class="brush: js">(new<em>name</em>(<em>message</em> ,<em>fileName</em>,<em>lineNumber</em>))
-</pre>
+```js
+(newname(message ,fileName,lineNumber))
+```
 
-<p>where these attributes correspond to the respective properties of the error instance.
-</p>
+where these attributes correspond to the respective properties of the error instance.
 
-<div class="note">
-  <p><strong>Note:</strong> Be aware that the properties used by the <code>toSource</code>
-    method in the creation of this string are mutable and may not accurately reflect the
-    function used to create an error instance or the filename or line number where the
-    actual error occurred.</p>
-</div>
+> **Note:** Be aware that the properties used by the `toSource`
+> method in the creation of this string are mutable and may not accurately reflect the
+> function used to create an error instance or the filename or line number where the
+> actual error occurred.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any standard.</p>
+Not part of any standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Error.prototype.fileName")}}</li>
-  <li>{{jsxref("Error.prototype.lineNumber")}}</li>
-  <li>{{jsxref("Error.prototype.message")}}</li>
-  <li>{{jsxref("Error.prototype.name")}}</li>
-  <li>{{jsxref("Object.prototype.toSource()")}}</li>
-</ul>
+- {{jsxref("Error.prototype.fileName")}}
+- {{jsxref("Error.prototype.lineNumber")}}
+- {{jsxref("Error.prototype.message")}}
+- {{jsxref("Error.prototype.name")}}
+- {{jsxref("Object.prototype.toSource()")}}

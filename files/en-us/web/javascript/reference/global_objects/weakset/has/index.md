@@ -2,64 +2,60 @@
 title: WeakSet.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet/has
 tags:
-- ECMAScript 2015
-- JavaScript
-- Method
-- Prototype
-- WeakSet
+  - ECMAScript 2015
+  - JavaScript
+  - Method
+  - Prototype
+  - WeakSet
 browser-compat: javascript.builtins.WeakSet.has
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>has()</code></strong> method returns a boolean indicating whether an
-  object exists in a <code>WeakSet</code> or not.</p>
+The **`has()`** method returns a boolean indicating whether an
+object exists in a `WeakSet` or not.
 
-<div>{{EmbedInteractiveExample("pages/js/weakset-prototype-has.html")}}</div>
+{{EmbedInteractiveExample("pages/js/weakset-prototype-has.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+has(value)
+```
 
-<pre class="brush: js">has(value)</pre>
+### Parameters
 
-<h3 id="Parameters">Parameters</h3>
+- `value`
+  - : Required. The object to test for presence in the `WeakSet`.
 
-<dl>
-  <dt><code><var>value</var></code></dt>
-  <dd>Required. The object to test for presence in the <code>WeakSet</code>.</dd>
-</dl>
+### Return value
 
-<h3 id="Return_value">Return value</h3>
+- Boolean
+  - : Returns `true` if an element with the specified value exists in the
+    `WeakSet` object; otherwise `false`.
 
-<dl>
-  <dt>Boolean</dt>
-  <dd>Returns <code>true</code> if an element with the specified value exists in the
-    <code>WeakSet</code> object; otherwise <code>false</code>.</dd>
-</dl>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Using the has method
 
-<h3 id="Using_the_has_method">Using the has method</h3>
-
-<pre class="brush: js">var ws = new WeakSet();
+```js
+var ws = new WeakSet();
 var obj = {};
 ws.add(window);
 
 mySet.has(window);  // returns true
 mySet.has(obj);     // returns false
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("WeakSet")}}</li>
-  <li>{{jsxref("WeakSet.prototype.add()")}}</li>
-  <li>{{jsxref("WeakSet.prototype.delete()")}}</li>
-</ul>
+- {{jsxref("WeakSet")}}
+- {{jsxref("WeakSet.prototype.add()")}}
+- {{jsxref("WeakSet.prototype.delete()")}}

@@ -2,73 +2,71 @@
 title: String.prototype.big()
 slug: Web/JavaScript/Reference/Global_Objects/String/big
 tags:
-- Deprecated
-- HTML wrapper methods
-- JavaScript
-- Method
-- Prototype
-- Reference
-- String
-- Polyfill
+  - Deprecated
+  - HTML wrapper methods
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
+  - String
+  - Polyfill
 browser-compat: javascript.builtins.String.big
 ---
-<div>{{JSRef}} {{deprecated_header}}</div>
+{{JSRef}} {{deprecated_header}}
 
-<p>The <strong><code>big()</code></strong> method creates a {{HTMLElement("big")}} HTML
-  element that causes a string to be displayed in a big font.</p>
+The **`big()`** method creates a {{HTMLElement("big")}} HTML
+element that causes a string to be displayed in a big font.
 
-<div class="note">
-  <p><strong>Note:</strong> The &lt;big&gt; element has been removed in <a
-      href="/en-US/docs/Web/Guide/HTML/HTML5">HTML5</a> and shouldn't be used anymore.
-    Instead web developers should use <a href="/en-US/docs/Web/CSS">CSS</a> properties.
-  </p>
-</div>
+> **Note:** The \<big> element has been removed in [HTML5](/en-US/docs/Web/Guide/HTML/HTML5) and shouldn't be used anymore.
+> Instead web developers should use [CSS](/en-US/docs/Web/CSS) properties.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">big()</pre>
+```js
+big()
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A string containing a {{HTMLElement("big")}} HTML element.</p>
+A string containing a {{HTMLElement("big")}} HTML element.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The <code>big()</code> method embeds a string in a <code>&lt;big&gt;</code> element:
-  "<code>&lt;big&gt;str&lt;/big&gt;</code>".</p>
+The `big()` method embeds a string in a `<big>` element:
+"`<big>str</big>`".
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_big">Using big()</h3>
+### Using big()
 
-<p>The following example uses string methods to change the size of a string:</p>
+The following example uses string methods to change the size of a string:
 
-<pre class="brush: js">var worldString = 'Hello, world';
+```js
+var worldString = 'Hello, world';
 
-console.log(worldString.small());     // &lt;small&gt;Hello, world&lt;/small&gt;
-console.log(worldString.big());       // &lt;big&gt;Hello, world&lt;/big&gt;
-console.log(worldString.fontsize(7)); // &lt;font size=&quot;7&quot;&gt;Hello, world&lt;/font&gt;
-</pre>
+console.log(worldString.small());     // <small>Hello, world</small>
+console.log(worldString.big());       // <big>Hello, world</big>
+console.log(worldString.fontsize(7)); // <font size="7">Hello, world</font>
+```
 
-<p>With the {{domxref("HTMLElement/style", "element.style")}} object you can get
-  the element's <code>style</code> attribute and manipulate it more generically, for
-  example:</p>
+With the {{domxref("HTMLElement/style", "element.style")}} object you can get
+the element's `style` attribute and manipulate it more generically, for
+example:
 
-<pre class="brush: js">document.getElementById('yourElemId').style.fontSize = '2em';
-</pre>
+```js
+document.getElementById('yourElemId').style.fontSize = '2em';
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>A polyfill of <code>String.prototype.big</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-string-and-regexp"><code>core-js</code></a></li>
-  <li>{{jsxref("String.prototype.fontsize()")}}</li>
-  <li>{{jsxref("String.prototype.small()")}}</li>
-</ul>
+- A polyfill of `String.prototype.big` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- {{jsxref("String.prototype.fontsize()")}}
+- {{jsxref("String.prototype.small()")}}

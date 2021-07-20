@@ -2,52 +2,49 @@
 title: Unsigned right shift assignment (>>>=)
 slug: Web/JavaScript/Reference/Operators/Unsigned_right_shift_assignment
 tags:
-- Assignment operator
-- JavaScript
-- Language feature
-- Operator
-- Reference
+  - Assignment operator
+  - JavaScript
+  - Language feature
+  - Operator
+  - Reference
 browser-compat: javascript.operators.unsigned_right_shift_assignment
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>The unsigned right shift assignment operator (<em><code>&gt;&gt;&gt;=</code></em>)
-  moves the specified amount of bits to the right and assigns the result to the variable.
-</p>
+The unsigned right shift assignment operator (_`>>>=`_)
+moves the specified amount of bits to the right and assigns the result to the variable.
 
-<div>
-  {{EmbedInteractiveExample("pages/js/expressions-unsigned-right-shift-assignment.html")}}
-</div>
+{{EmbedInteractiveExample("pages/js/expressions-unsigned-right-shift-assignment.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">x &gt;&gt;&gt;= y // x = x &gt;&gt;&gt; y</pre>
+```js
+x >>>= y // x = x >>> y
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_unsigned_right_shift_assignment">Using unsigned right shift assignment</h3>
+### Using unsigned right shift assignment
 
-<pre class="brush: js">let a = 5; //   (00000000000000000000000000000101)
-a &gt;&gt;&gt;= 2;  // 1 (00000000000000000000000000000001)
+```js
+let a = 5; //   (00000000000000000000000000000101)
+a >>>= 2;  // 1 (00000000000000000000000000000001)
 
 let b = -5; // (-00000000000000000000000000000101)
-b &gt;&gt;&gt;= 2;   // 1073741822 (00111111111111111111111111111110)</pre>
+b >>>= 2;   // 1073741822 (00111111111111111111111111111110)
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a
-      href="/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment">Assignment
-      operators in the JS guide</a></li>
-  <li><a
-      href="/en-US/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift">Unsigned
-      right shift operator</a></li>
-</ul>
+- [Assignment
+  operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment)
+- [Unsigned
+  right shift operator](/en-US/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift)

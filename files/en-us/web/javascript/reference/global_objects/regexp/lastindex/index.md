@@ -9,70 +9,65 @@ tags:
   - Regular Expressions
 browser-compat: javascript.builtins.RegExp.lastIndex
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>lastIndex</code></strong> is a read/write integer property of {{jsXref("RegExp")}} instances that specifies the index at which to start the next match.</p>
+**`lastIndex`** is a read/write integer property of {{jsXref("RegExp")}} instances that specifies the index at which to start the next match.
 
-<p>Note that <code>lastIndex</code> is not a property of the  {{jsXref("RegExp")}} prototype but is instead only exposed from  {{jsXref("RegExp")}} instances.</p>
+Note that `lastIndex` is not a property of the {{jsXref("RegExp")}} prototype but is instead only exposed from {{jsXref("RegExp")}} instances.
 
-<div>{{EmbedInteractiveExample("pages/js/regexp-lastindex.html")}}</div>
+{{EmbedInteractiveExample("pages/js/regexp-lastindex.html")}}{{js_property_attributes(1, 0, 0)}}
 
-<div>{{js_property_attributes(1, 0, 0)}}</div>
+## Description
 
-<h2 id="Description">Description</h2>
+This property is set only if the regular expression instance used the `g` flag to indicate a global search, or the `y` flag to indicate a sticky search. The following rules apply when {{jsxref("RegExp.prototype.test()", "test()")}} and {{jsxref("RegExp.prototype.exec()", "exec()")}} are called on a given input:
 
-<p>This property is set only if the regular expression instance used the <code>g</code> flag to indicate a global search, or the <code>y</code> flag to indicate a sticky search. The following rules apply when {{jsxref("RegExp.prototype.test()", "test()")}} and {{jsxref("RegExp.prototype.exec()", "exec()")}} are called on a given input:</p>
+- If `lastIndex` is greater than the length of the input, `exec()` or `test()` will not find a match, and `lastIndex` will be set to 0.
+- If `lastIndex` is equal to or less than the length of the input, `exec()` or `test()` will attempt to match the input starting from `lastIndex`.
 
-<ul>
-<li>If <code>lastIndex</code> is greater than the length of the input, <code>exec()</code> or <code>test()</code> will not find a match, and <code>lastIndex</code> will be set to 0.</li>
-<li>If <code>lastIndex</code> is equal to or less than the length of the input, <code>exec()</code> or <code>test()</code> will attempt to match the input starting from <code>lastIndex</code>.
-  <ul>
-    <li>If <code>exec()</code> or <code>test()</code> find a match, then <code>lastIndex</code> will be set to the position of the end of the matched string in the input.</li>
-    <li>If <code>exec()</code> or <code>test()</code> do not find a match, then <code>lastIndex</code> will be set to 0.</li>
-  </ul>
-</li>
-</ul>
+  - If `exec()` or `test()` find a match, then `lastIndex` will be set to the position of the end of the matched string in the input.
+  - If `exec()` or `test()` do not find a match, then `lastIndex` will be set to 0.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_lastIndex">Using lastIndex</h3>
+### Using lastIndex
 
-<p>Consider the following sequence of statements:</p>
+Consider the following sequence of statements:
 
-<pre class="brush: js">var re = /(hi)?/g;
-</pre>
+```js
+var re = /(hi)?/g;
+```
 
-<p>Matches the empty string.</p>
+Matches the empty string.
 
-<pre class="brush: js">console.log(re.exec('hi'));
+```js
+console.log(re.exec('hi'));
 console.log(re.lastIndex);
-</pre>
+```
 
-<p>Returns <code>["hi", "hi"]</code> with <code>lastIndex</code> equal to 2.</p>
+Returns `["hi", "hi"]` with `lastIndex` equal to 2.
 
-<pre class="brush: js">console.log(re.exec('hi'));
+```js
+console.log(re.exec('hi'));
 console.log(re.lastIndex);
-</pre>
+```
 
-<p>Returns <code>["", undefined]</code>, an empty array whose zeroth element is the match string. In this case, the empty string because <code>lastIndex</code> was 2 (and still is 2) and <code>hi</code> has length 2.</p>
+Returns `["", undefined]`, an empty array whose zeroth element is the match string. In this case, the empty string because `lastIndex` was 2 (and still is 2) and `hi` has length 2.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{JSxRef("RegExp.prototype.dotAll")}}</li>
- <li>{{JSxRef("RegExp.prototype.global")}}</li>
- <li>{{JSxRef("RegExp.prototype.hasIndices")}}</li>
- <li>{{JSxRef("RegExp.prototype.ignoreCase")}}</li>
- <li>{{JSxRef("RegExp.prototype.multiline")}}</li>
- <li>{{JSxRef("RegExp.prototype.source")}}</li>
- <li>{{JSxRef("RegExp.prototype.sticky")}}</li>
- <li>{{JSxRef("RegExp.prototype.unicode")}}</li>
-</ul>
+- {{JSxRef("RegExp.prototype.dotAll")}}
+- {{JSxRef("RegExp.prototype.global")}}
+- {{JSxRef("RegExp.prototype.hasIndices")}}
+- {{JSxRef("RegExp.prototype.ignoreCase")}}
+- {{JSxRef("RegExp.prototype.multiline")}}
+- {{JSxRef("RegExp.prototype.source")}}
+- {{JSxRef("RegExp.prototype.sticky")}}
+- {{JSxRef("RegExp.prototype.unicode")}}

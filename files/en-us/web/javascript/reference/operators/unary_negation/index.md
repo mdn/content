@@ -2,73 +2,72 @@
 title: Unary negation (-)
 slug: Web/JavaScript/Reference/Operators/Unary_negation
 tags:
-- JavaScript
-- Language feature
-- Operator
-- Reference
+  - JavaScript
+  - Language feature
+  - Operator
+  - Reference
 browser-compat: javascript.operators.unary_negation
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>The unary negation operator (<code>-</code>) precedes its operand and negates it.</p>
+The unary negation operator (`-`) precedes its operand and negates it.
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-unary-negation.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-unary-negation.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+-x
+```
 
-<pre class="brush: js">-x</pre>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Negating numbers
 
-<h3 id="Negating_numbers">Negating numbers</h3>
-
-<pre class="brush: js">const x = 3;
+```js
+const x = 3;
 const y = -x;
 
 // y = -3
 // x = 3
-</pre>
+```
 
-<h3 id="Negating_non-numbers">Negating non-numbers</h3>
+### Negating non-numbers
 
-<p>The unary negation operator can convert a non-number into a number.</p>
+The unary negation operator can convert a non-number into a number.
 
-<pre class="brush: js">const x = "4";
+```js
+const x = "4";
 const y = -x;
 
 // y = -4
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Addition">Addition
-      operator</a></li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction">Subtraction
-      operator</a></li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Division">Division
-      operator</a></li>
-  <li><a
-      href="/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication">Multiplication
-      operator</a></li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Remainder">Remainder
-      operator</a></li>
-  <li><a
-      href="/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation">Exponentiation
-      operator</a></li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Increment">Increment
-      operator</a></li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Decrement">Decrement
-      operator</a></li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus">Unary plus
-      operator</a></li>
-</ul>
+- [Addition
+  operator](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)
+- [Subtraction
+  operator](/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction)
+- [Division
+  operator](/en-US/docs/Web/JavaScript/Reference/Operators/Division)
+- [Multiplication
+  operator](/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication)
+- [Remainder
+  operator](/en-US/docs/Web/JavaScript/Reference/Operators/Remainder)
+- [Exponentiation
+  operator](/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation)
+- [Increment
+  operator](/en-US/docs/Web/JavaScript/Reference/Operators/Increment)
+- [Decrement
+  operator](/en-US/docs/Web/JavaScript/Reference/Operators/Decrement)
+- [Unary plus
+  operator](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus)

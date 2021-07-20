@@ -2,54 +2,51 @@
 title: JSON.parse()
 slug: Web/JavaScript/Reference/Global_Objects/JSON/parse
 tags:
-- ECMAScript 5
-- JSON
-- JavaScript
-- Method
-- Reference
+  - ECMAScript 5
+  - JSON
+  - JavaScript
+  - Method
+  - Reference
 browser-compat: javascript.builtins.JSON.parse
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><span class="seoSummary">The <strong><code>JSON.parse()</code></strong> method parses a
-    JSON string, constructing the JavaScript value or object described by the string. An
-    optional <strong>reviver</strong> function can be provided to perform a transformation
-    on the resulting object before it is returned.</span></p>
+The **`JSON.parse()`** method parses a
+JSON string, constructing the JavaScript value or object described by the string. An
+optional **reviver** function can be provided to perform a transformation
+on the resulting object before it is returned.
 
-<div>{{EmbedInteractiveExample("pages/js/json-parse.html")}}</div>
+{{EmbedInteractiveExample("pages/js/json-parse.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush: js">
+```js
 JSON.parse(text)
 JSON.parse(text, reviver)
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>text</var></code></dt>
-  <dd>The string to parse as JSON. See the {{jsxref("JSON")}} object for a description of
-    JSON syntax.</dd>
-  <dt><code><var>reviver</var></code> {{optional_inline}}</dt>
-  <dd>If a function, this prescribes how the value originally produced by parsing is
-    transformed, before being returned.</dd>
-</dl>
+- `text`
+  - : The string to parse as JSON. See the {{jsxref("JSON")}} object for a description of
+    JSON syntax.
+- `reviver` {{optional_inline}}
+  - : If a function, this prescribes how the value originally produced by parsing is
+    transformed, before being returned.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>The {{jsxref("Object")}}, {{jsxref("Array")}}, string, number, boolean, or null value
-  corresponding to the given JSON <code><var>text</var></code>.</p>
+The {{jsxref("Object")}}, {{jsxref("Array")}}, string, number, boolean, or null value
+corresponding to the given JSON `text`.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>Throws a {{jsxref("SyntaxError")}} exception if the string to parse is not valid JSON.
-</p>
+Throws a {{jsxref("SyntaxError")}} exception if the string to parse is not valid JSON.
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<pre class="brush: js">// From https://github.com/douglascrockford/JSON-js/blob/master/json2.js
+```js
+// From https://github.com/douglascrockford/JSON-js/blob/master/json2.js
 if (typeof JSON.parse !== "function") {
     var rx_one = /^[\],:{}\s]*$/;
     var rx_two = /\\(?:["\\\/bfnrt]|u[0-9a-fA-F]{4})/g;
@@ -71,7 +68,7 @@ if (typeof JSON.parse !== "function") {
             var k;
             var v;
             var value = holder[key];
-            if (value &amp;&amp; typeof value === "object") {
+            if (value && typeof value === "object") {
                 for (k in value) {
                     if (Object.prototype.hasOwnProperty.call(value, k)) {
                         v = walk(value, k);
@@ -144,37 +141,39 @@ if (typeof JSON.parse !== "function") {
 
         throw new SyntaxError("JSON.parse");
     };
-}</pre>
+}
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_JSON.parse">Using JSON.parse()</h3>
+### Using JSON.parse()
 
-<pre class="brush: js">JSON.parse('{}');              // {}
+```js
+JSON.parse('{}');              // {}
 JSON.parse('true');            // true
 JSON.parse('"foo"');           // "foo"
 JSON.parse('[1, 5, "false"]'); // [1, 5, "false"]
 JSON.parse('null');            // null
-</pre>
+```
 
-<h3 id="Using_the_reviver_parameter">Using the reviver parameter</h3>
+### Using the reviver parameter
 
-<p>If a <code><var>reviver</var></code> is specified, the value computed by parsing is
-  <em>transformed</em> before being returned. Specifically, the computed value and all its
-  properties (beginning with the most nested properties and proceeding to the original
-  value itself) are individually run through the <code><var>reviver</var></code>. Then it
-  is called, with the object containing the property being processed as <code>this</code>,
-  and with the property name as a string, and the property value as arguments. If the
-  <code><var>reviver</var></code> function returns {{jsxref("undefined")}} (or returns no
-  value, for example, if execution falls off the end of the function), the property is
-  deleted from the object. Otherwise, the property is redefined to be the return value.
-</p>
+If a `reviver` is specified, the value computed by parsing is
+_transformed_ before being returned. Specifically, the computed value and all its
+properties (beginning with the most nested properties and proceeding to the original
+value itself) are individually run through the `reviver`. Then it
+is called, with the object containing the property being processed as `this`,
+and with the property name as a string, and the property value as arguments. If the
+`reviver` function returns {{jsxref("undefined")}} (or returns no
+value, for example, if execution falls off the end of the function), the property is
+deleted from the object. Otherwise, the property is redefined to be the return value.
 
-<p>If the <code><var>reviver</var></code> only transforms some values and not others, be
-  certain to return all untransformed values as-is, otherwise, they will be deleted from
-  the resulting object.</p>
+If the `reviver` only transforms some values and not others, be
+certain to return all untransformed values as-is, otherwise, they will be deleted from
+the resulting object.
 
-<pre class="brush: js">JSON.parse('{"p": 5}', (key, value) =&gt;
+```js
+JSON.parse('{"p": 5}', (key, value) =>
   typeof value === 'number'
     ? value * 2 // return value * 2 for numbers
     : value     // return everything else unchanged
@@ -182,7 +181,7 @@ JSON.parse('null');            // null
 
 // { p: 10 }
 
-JSON.parse('{"1": 1, "2": 2, "3": {"4": 4, "5": {"6": 6}}}', (key, value) =&gt; {
+JSON.parse('{"1": 1, "2": 2, "3": {"4": 4, "5": {"6": 6}}}', (key, value) => {
   console.log(key); // log the current property name, the last is "".
   return value;     // return the unchanged property value.
 });
@@ -194,33 +193,31 @@ JSON.parse('{"1": 1, "2": 2, "3": {"4": 4, "5": {"6": 6}}}', (key, value) =&gt; 
 // 5
 // 3
 // ""
-</pre>
+```
 
-<h3 id="JSON.parse_does_not_allow_trailing_commas">JSON.parse() does not allow trailing
-  commas</h3>
+### JSON.parse() does not allow trailing commas
 
-<pre class="brush: js example-bad">// both will throw a SyntaxError
+```js example-bad
+// both will throw a SyntaxError
 JSON.parse('[1, 2, 3, 4, ]');
 JSON.parse('{"foo" : 1, }');
-</pre>
+```
 
-<h3 id="JSON.parse_does_not_allow_single_quotes">JSON.parse() does not allow single quotes
-</h3>
+### JSON.parse() does not allow single quotes
 
-<pre class="brush: js example-bad">// will throw a SyntaxError
+```js example-bad
+// will throw a SyntaxError
 JSON.parse("{'foo': 1}");
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("JSON.stringify()")}}</li>
-</ul>
+- {{jsxref("JSON.stringify()")}}

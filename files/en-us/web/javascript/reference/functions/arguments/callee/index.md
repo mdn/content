@@ -9,45 +9,52 @@ tags:
   - arguments
 browser-compat: javascript.functions.arguments.callee
 ---
-<div>{{jsSidebar("Functions")}}</div>
+{{jsSidebar("Functions")}}
 
-<p>The <strong><code>arguments.callee</code></strong> property contains the currently executing function.</p>
+The **`arguments.callee`** property contains the currently executing function.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p><code>callee</code> is a property of the <code>arguments</code> object. It can be used to refer to the currently executing function inside the function body of that function. This is useful when the name of the function is unknown, such as within a function expression with no name (also called "anonymous functions").</p>
+`callee` is a property of the `arguments` object. It can be used to refer to the currently executing function inside the function body of that function. This is useful when the name of the function is unknown, such as within a function expression with no name (also called "anonymous functions").
 
-<div class="warning"><p><strong>Warning:</strong> The 5th edition of ECMAScript (ES5) forbids use of <code>arguments.callee()</code> in <a href="/en-US/docs/JavaScript/Reference/Functions_and_function_scope/Strict_mode">strict mode</a>. Avoid using <code>arguments.callee()</code> by either giving function expressions a name or use a function declaration where a function must call itself.</p></div>
+> **Warning:** The 5th edition of ECMAScript (ES5) forbids use of `arguments.callee()` in [strict mode](/en-US/docs/JavaScript/Reference/Functions_and_function_scope/Strict_mode). Avoid using `arguments.callee()` by either giving function expressions a name or use a function declaration where a function must call itself.
 
-<h3 id="Why_was_arguments.callee_removed_from_ES5_strict_mode">Why was <code>arguments.callee</code> removed from ES5 strict mode?</h3>
+### Why was `arguments.callee` removed from ES5 strict mode?
 
-<p>(adapted from <a href="http://stackoverflow.com/a/235760/578288">a Stack Overflow answer by olliej</a>)</p>
+(adapted from [a Stack Overflow answer by olliej](http://stackoverflow.com/a/235760/578288))
 
-<p>Early versions of JavaScript did not allow named function expressions, and for this reason you could not make a recursive function expression.</p>
+Early versions of JavaScript did not allow named function expressions, and for this reason you could not make a recursive function expression.
 
-<p>For example, this syntax worked:</p>
+For example, this syntax worked:
 
-<pre class="brush: js">function factorial (n) {
-    return !(n &gt; 1) ? 1 : factorial(n - 1) * n;
+```js
+function factorial (n) {
+    return !(n > 1) ? 1 : factorial(n - 1) * n;
 }
 
-[1, 2, 3, 4, 5].map(factorial);</pre>
+[1, 2, 3, 4, 5].map(factorial);
+```
 
-<p>but:</p>
+but:
 
-<pre class="brush: js">[1, 2, 3, 4, 5].map(function(n) {
-    return !(n &gt; 1) ? 1 : /* what goes here? */ (n - 1) * n;
-});</pre>
+```js
+[1, 2, 3, 4, 5].map(function(n) {
+    return !(n > 1) ? 1 : /* what goes here? */ (n - 1) * n;
+});
+```
 
-<p>did not. To get around this <code>arguments.callee</code> was added so you could do</p>
+did not. To get around this `arguments.callee` was added so you could do
 
-<pre class="brush: js">[1, 2, 3, 4, 5].map(function(n) {
-    return !(n &gt; 1) ? 1 : arguments.callee(n - 1) * n;
-});</pre>
+```js
+[1, 2, 3, 4, 5].map(function(n) {
+    return !(n > 1) ? 1 : arguments.callee(n - 1) * n;
+});
+```
 
-<p>However, this was actually a really bad solution as this (in conjunction with other <code>arguments</code>, <code>callee</code>, and <code>caller</code> issues) make inlining and tail recursion impossible in the general case (you can achieve it in select cases through tracing, etc., but even the best code is suboptimal due to checks that would not otherwise be necessary.) The other major issue is that the recursive call will get a different <code>this</code> value, e.g.:</p>
+However, this was actually a really bad solution as this (in conjunction with other `arguments`, `callee`, and `caller` issues) make inlining and tail recursion impossible in the general case (you can achieve it in select cases through tracing, etc., but even the best code is suboptimal due to checks that would not otherwise be necessary.) The other major issue is that the recursive call will get a different `this` value, e.g.:
 
-<pre class="brush: js">var global = this;
+```js
+var global = this;
 
 var sillyFunction = function(recursed) {
     if (!recursed) { return arguments.callee(true); }
@@ -58,51 +65,57 @@ var sillyFunction = function(recursed) {
     }
 }
 
-sillyFunction();</pre>
+sillyFunction();
+```
 
-<p>ECMAScript 3 resolved these issues by allowing named function expressions. For example:</p>
+ECMAScript 3 resolved these issues by allowing named function expressions. For example:
 
-<pre class="brush: js">[1, 2, 3, 4, 5].map(function factorial(n) {
-    return !(n &gt; 1) ? 1 : factorial(n - 1)*n;
-});</pre>
+```js
+[1, 2, 3, 4, 5].map(function factorial(n) {
+    return !(n > 1) ? 1 : factorial(n - 1)*n;
+});
+```
 
-<p>This has numerous benefits:</p>
+This has numerous benefits:
 
-<ul>
- <li>the function can be called like any other from inside your code</li>
- <li>it does not create a variable in the outer scope (<a href="https://kangax.github.io/nfe/#example_1_function_expression_identifier_leaks_into_an_enclosing_scope">except for IE 8 and below</a>)</li>
- <li>it has better performance than accessing the arguments object</li>
-</ul>
+- the function can be called like any other from inside your code
+- it does not create a variable in the outer scope ([except for IE 8 and below](https://kangax.github.io/nfe/#example_1_function_expression_identifier_leaks_into_an_enclosing_scope))
+- it has better performance than accessing the arguments object
 
-<p>Another feature that was deprecated was <code>arguments.callee.caller</code>, or more specifically <code>Function.caller</code>. Why is this? Well, at any point in time you can find the deepest caller of any function on the stack, and as I said above looking at the call stack has one single major effect: it makes a large number of optimizations impossible, or much more difficult. For example, if you cannot guarantee that a function <code>f</code> will not call an unknown function, it is not possible to inline <code>f</code>. Basically it means that any call site that may have been trivially inlinable accumulates a large number of guards:</p>
+Another feature that was deprecated was `arguments.callee.caller`, or more specifically `Function.caller`. Why is this? Well, at any point in time you can find the deepest caller of any function on the stack, and as I said above looking at the call stack has one single major effect: it makes a large number of optimizations impossible, or much more difficult. For example, if you cannot guarantee that a function `f` will not call an unknown function, it is not possible to inline `f`. Basically it means that any call site that may have been trivially inlinable accumulates a large number of guards:
 
-<pre class="brush: js">function f(a, b, c, d, e) { return a ? b * c : d * e; }</pre>
+```js
+function f(a, b, c, d, e) { return a ? b * c : d * e; }
+```
 
-<p>If the JavaScript interpreter cannot guarantee that all the provided arguments are numbers at the point that the call is made, it needs to either insert checks for all the arguments before the inlined code, or it cannot inline the function. Now in this particular case a smart interpreter should be able to rearrange the checks to be more optimal and not check any values that would not be used. However in many cases that's just not possible and therefore it becomes impossible to inline.</p>
+If the JavaScript interpreter cannot guarantee that all the provided arguments are numbers at the point that the call is made, it needs to either insert checks for all the arguments before the inlined code, or it cannot inline the function. Now in this particular case a smart interpreter should be able to rearrange the checks to be more optimal and not check any values that would not be used. However in many cases that's just not possible and therefore it becomes impossible to inline.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_arguments.callee_in_an_anonymous_recursive_function">Using <code>arguments.callee</code> in an anonymous recursive function</h3>
+### Using `arguments.callee` in an anonymous recursive function
 
-<p>A recursive function must be able to refer to itself. Typically, a function refers to itself by its name. However, an anonymous function (which can be created by a <a href="/en-US/docs/Web/JavaScript/Reference/Operators/function">function expression</a> or the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code> constructor</a>) does not have a name. Therefore if there is no accessible variable referring to it, the only way the function can refer to itself is by <code>arguments.callee</code>.</p>
+A recursive function must be able to refer to itself. Typically, a function refers to itself by its name. However, an anonymous function (which can be created by a [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function) or the [`Function` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function)) does not have a name. Therefore if there is no accessible variable referring to it, the only way the function can refer to itself is by `arguments.callee`.
 
-<p>The following example defines a function, which, in turn, defines and returns a factorial function. This example isn't very practical, and there are nearly no cases where the same result cannot be achieved with <a href="/en-US/docs/Web/JavaScript/Reference/Operators/function">named function expressions</a>.</p>
+The following example defines a function, which, in turn, defines and returns a factorial function. This example isn't very practical, and there are nearly no cases where the same result cannot be achieved with [named function expressions](/en-US/docs/Web/JavaScript/Reference/Operators/function).
 
-<pre class="brush: js">function create() {
+```js
+function create() {
    return function(n) {
-      if (n &lt;= 1)
+      if (n <= 1)
          return 1;
       return n * arguments.callee(n - 1);
    };
 }
 
-var result = create()(5); // returns 120 (5 * 4 * 3 * 2 * 1)</pre>
+var result = create()(5); // returns 120 (5 * 4 * 3 * 2 * 1)
+```
 
-<h3 id="A_use_of_arguments.callee_with_no_good_alternative">A use of <code>arguments.callee</code> with no good alternative</h3>
+### A use of `arguments.callee` with no good alternative
 
-<p>However, in a case like the following, there are not alternatives to <code>arguments.callee</code>, so its deprecation could be a bug (see <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=725398">bug 725398</a>):</p>
+However, in a case like the following, there are not alternatives to `arguments.callee`, so its deprecation could be a bug (see [bug 725398](https://bugzilla.mozilla.org/show_bug.cgi?id=725398)):
 
-<pre class="brush: js">function createPerson(sIdentity) {
+```js
+function createPerson(sIdentity) {
     var oPerson = new Function('alert(arguments.callee.identity);');
     oPerson.identity = sIdentity;
     return oPerson;
@@ -110,18 +123,17 @@ var result = create()(5); // returns 120 (5 * 4 * 3 * 2 * 1)</pre>
 
 var john = createPerson('John Smith');
 
-john();</pre>
+john();
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("Function")}}</li>
-</ul>
+- {{jsxref("Function")}}

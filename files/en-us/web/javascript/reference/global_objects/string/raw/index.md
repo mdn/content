@@ -10,68 +10,64 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.raw
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The static <strong><code>String.raw()</code></strong> method
-    is a tag function of <a
-      href="/en-US/docs/Web/JavaScript/Reference/Template_literals">template literals</a>.
-    This is <em>similar</em> to the <code>r</code> prefix in Python, or the <code>@</code>
-    prefix in C# for string literals. (But it is not <em>identical</em>; see explanations
-    in <a href="https://bugs.chromium.org/p/v8/issues/detail?id=5016">this issue</a>.)
-    It's used to get the raw string form of template literals, that is, substitutions (e.g.
-    <code>${foo}</code>) are processed, but escapes (e.g. <code>\n</code>) are not.</p>
+The static **`String.raw()`** method
+is a tag function of [template literals](/en-US/docs/Web/JavaScript/Reference/Template_literals).
+This is _similar_ to the `r` prefix in Python, or the `@`
+prefix in C# for string literals. (But it is not _identical_; see explanations
+in [this issue](https://bugs.chromium.org/p/v8/issues/detail?id=5016).)
+It's used to get the raw string form of template literals, that is, substitutions (e.g.
+`${foo}`) are processed, but escapes (e.g. `\n`) are not.
 
-<div>{{EmbedInteractiveExample("pages/js/string-raw.html")}}</div>
+{{EmbedInteractiveExample("pages/js/string-raw.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">String.raw(callSite, ...substitutions)
+```js
+String.raw(callSite, ...substitutions)
 
 String.raw`templateString`
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>callSite</var></code></dt>
-  <dd>Well-formed template call site object, like
-    <code>{ raw: ['foo', 'bar', 'baz'] }</code>.</dd>
-  <dt><code><var>...substitutions</var></code></dt>
-  <dd>Contains substitution values.</dd>
-  <dt><code><var>templateString</var></code></dt>
-  <dd>A {{jsxref("template_literals", "template literal", "", 1)}}, optionally with
-    substitutions (<code>${...}</code>).</dd>
-</dl>
+- `callSite`
+  - : Well-formed template call site object, like
+    `{ raw: ['foo', 'bar', 'baz'] }`.
+- `...substitutions`
+  - : Contains substitution values.
+- `templateString`
+  - : A {{jsxref("template_literals", "template literal", "", 1)}}, optionally with
+    substitutions (`${...}`).
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>The raw string form of a given template literal.</p>
+The raw string form of a given template literal.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt>{{jsxref("TypeError")}}</dt>
-  <dd>A {{jsxref("TypeError")}} is thrown if the first argument is not a well-formed
-    object.</dd>
-</dl>
+- {{jsxref("TypeError")}}
+  - : A {{jsxref("TypeError")}} is thrown if the first argument is not a well-formed
+    object.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>In most cases, <code>String.raw()</code> is used with template literal. The first
-  syntax mentioned above is only rarely used, because the JavaScript engine will call this
-  with proper arguments for you, (just like with other <a
-    href="/en-US/docs/Web/JavaScript/Reference/Template_literals#tagged_template_literals">tag
-    functions</a>).</p>
+In most cases, `String.raw()` is used with template literal. The first
+syntax mentioned above is only rarely used, because the JavaScript engine will call this
+with proper arguments for you, (just like with other [tag
+functions](/en-US/docs/Web/JavaScript/Reference/Template_literals#tagged_template_literals)).
 
-<p><code>String.raw()</code> is the only built-in tag function of template literals. It
-  works just like the default template function and performs concatenation. You can even
-  re-implement it with normal JavaScript code.</p>
+`String.raw()` is the only built-in tag function of template literals. It
+works just like the default template function and performs concatenation. You can even
+re-implement it with normal JavaScript code.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_String.raw">Using String.raw()</h3>
+### Using String.raw()
 
-<pre class="brush: js">String.raw`Hi\n${2+3}!`;
+```js
+String.raw`Hi\n${2+3}!`;
 // 'Hi\\n5!', the character after 'Hi'
 // is not a newline character,
 // '\' and 'n' are two characters.
@@ -103,23 +99,19 @@ String.raw({
 // The following is equivalent to
 // `t${0}e${1}s${2}t`:
 String.raw({ raw: 'test' }, 0, 1, 2); // 't0e1s2t'
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>A polyfill of <code>String.raw</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-string-and-regexp"><code>core-js</code></a></li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Template_literals">Template literals</a>
-  </li>
-  <li>{{jsxref("String")}}</li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar">Lexical grammar</a>
-  </li>
-</ul>
+- A polyfill of `String.raw` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Template literals](/en-US/docs/Web/JavaScript/Reference/Template_literals)
+- {{jsxref("String")}}
+- [Lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar)

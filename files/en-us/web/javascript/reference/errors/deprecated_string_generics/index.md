@@ -2,18 +2,19 @@
 title: 'Warning: String.x is deprecated; use String.prototype.x instead'
 slug: Web/JavaScript/Reference/Errors/Deprecated_String_generics
 tags:
-- Error
-- JavaScript
-- Warning
+  - Error
+  - JavaScript
+  - Warning
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<p>The JavaScript warning about string generics occurs in Firefox versions prior to 68.
-  String generics have been removed starting with Firefox 68.</p>
+The JavaScript warning about string generics occurs in Firefox versions prior to 68.
+String generics have been removed starting with Firefox 68.
 
-<h2 id="Message">Message</h2>
+## Message
 
-<pre class="brush: js">Warning: String.charAt            is deprecated; use String.prototype.charAt            instead
+```js
+Warning: String.charAt            is deprecated; use String.prototype.charAt            instead
 Warning: String.charCodeAt        is deprecated; use String.prototype.charCodeAt        instead
 Warning: String.concat            is deprecated; use String.prototype.concat            instead
 Warning: String.contains          is deprecated; use String.prototype.contains          instead
@@ -38,37 +39,41 @@ Warning: String.toUpperCase       is deprecated; use String.prototype.toUpperCas
 Warning: String.trim              is deprecated; use String.prototype.trim              instead
 Warning: String.trimLeft          is deprecated; use String.prototype.trimLeft          instead
 Warning: String.trimRight         is deprecated; use String.prototype.trimRight         instead
-</pre>
+```
 
-<h2 id="Error_type">Error type</h2>
+## Error type
 
-<p>Warning. JavaScript execution won't be halted.</p>
+Warning. JavaScript execution won't be halted.
 
-<h2 id="What_went_wrong">What went wrong?</h2>
+## What went wrong?
 
-<p>The non-standard generic {{jsxref("String")}} methods are deprecated and have been
-  removed in Firefox 68 and later. String generics provide <code>String</code> instance
-  methods on the <code>String</code> object allowing <code>String</code> methods to be
-  applied to any object.</p>
+The non-standard generic {{jsxref("String")}} methods are deprecated and have been
+removed in Firefox 68 and later. String generics provide `String` instance
+methods on the `String` object allowing `String` methods to be
+applied to any object.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Deprecated_syntax">Deprecated syntax</h3>
+### Deprecated syntax
 
-<pre class="brush: js example-bad">var num = 15;
-String.replace(num, /5/, '2');</pre>
+```js example-bad
+var num = 15;
+String.replace(num, /5/, '2');
+```
 
-<h3 id="Standard_syntax">Standard syntax</h3>
+### Standard syntax
 
-<pre class="brush: js example-good">var num = 15;
+```js example-good
+var num = 15;
 String(num).replace(/5/, '2');
-</pre>
+```
 
-<h2 id="Shim">Shim</h2>
+## Shim
 
-<p>The following is a shim to provide support to non-supporting browsers:</p>
+The following is a shim to provide support to non-supporting browsers:
 
-<pre class="brush: js">/*globals define*/
+```js
+/*globals define*/
 // Assumes all supplied String instance methods already present
 // (one may use shims for these if not available)
 (function() {
@@ -95,13 +100,12 @@ String(num).replace(/5/, '2');
       };
     };
 
-  for (i = 0; i &lt; methodCount; i++) {
+  for (i = 0; i < methodCount; i++) {
     assignStringGeneric(methods[i]);
   }
-}());</pre>
+}());
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("String")}}</li>
-</ul>
+- {{jsxref("String")}}

@@ -2,59 +2,57 @@
 title: Array.prototype.keys()
 slug: Web/JavaScript/Reference/Global_Objects/Array/keys
 tags:
-- Array
-- ECMAScript 2015
-- Iterator
-- JavaScript
-- Method
-- Prototype
-- Reference
-- Polyfill
+  - Array
+  - ECMAScript 2015
+  - Iterator
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
+  - Polyfill
 browser-compat: javascript.builtins.Array.keys
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>keys()</code></strong> method returns a new <strong>Array
-    Iterator</strong> object that contains the keys for each index in the array.</p>
+The **`keys()`** method returns a new **Array
+Iterator** object that contains the keys for each index in the array.
 
-<div>{{EmbedInteractiveExample("pages/js/array-keys.html")}}</div>
+{{EmbedInteractiveExample("pages/js/array-keys.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+keys()
+```
 
-<pre class="brush: js">keys()</pre>
+### Return value
 
-<h3 id="Return_value">Return value</h3>
+A new {{jsxref("Array")}} iterator object.
 
-<p>A new {{jsxref("Array")}} iterator object.</p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Key iterator doesn't ignore holes
 
-<h3 id="Key_iterator_doesnt_ignore_holes">Key iterator doesn't ignore holes</h3>
-
-<pre class="brush: js">var arr = ['a', , 'c'];
+```js
+var arr = ['a', , 'c'];
 var sparseKeys = Object.keys(arr);
 var denseKeys = [...arr.keys()];
 console.log(sparseKeys); // ['0', '2']
 console.log(denseKeys);  // [0, 1, 2]
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>A polyfill of <code>Array.prototype.keys</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-array"><code>core-js</code></a></li>
-  <li>{{jsxref("Array.prototype.values()")}}</li>
-  <li>{{jsxref("Array.prototype.entries()")}}</li>
-  <li><a
-      href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols">Iteration protocols</a>
-  </li>
-  <li><a href="https://github.com/behnammodi/polyfill/blob/master/array.polyfill.js">A polyfill</a></li>
-</ul>
+- A polyfill of `Array.prototype.keys` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- {{jsxref("Array.prototype.values()")}}
+- {{jsxref("Array.prototype.entries()")}}
+- [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
+- [A polyfill](https://github.com/behnammodi/polyfill/blob/master/array.polyfill.js)

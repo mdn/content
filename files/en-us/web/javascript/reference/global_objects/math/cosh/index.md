@@ -2,113 +2,95 @@
 title: Math.cosh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/cosh
 tags:
-- JavaScript
-- Math
-- Method
-- Reference
-- Polyfill
+  - JavaScript
+  - Math
+  - Method
+  - Reference
+  - Polyfill
 browser-compat: javascript.builtins.Math.cosh
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>Math.cosh()</code></strong> function returns the hyperbolic cosine of
-  a number, that can be expressed using the {{jsxref("Math.E", "constant e", "", 1)}}:</p>
+The **`Math.cosh()`** function returns the hyperbolic cosine of
+a number, that can be expressed using the {{jsxref("Math.E", "constant e", "", 1)}}:
 
-<p><math display="block">
-    <semantics>
-      <mrow>
-        <mstyle mathvariant="monospace">
-          <mo lspace="0em" rspace="thinmathspace">Math.cosh(x)</mo>
-        </mstyle>
-        <mo>=</mo>
-        <mfrac>
-          <mrow>
-            <msup>
-              <mi>e</mi>
-              <mi>x</mi>
-            </msup>
-            <mo>+</mo>
-            <msup>
-              <mi>e</mi>
-              <mrow>
-                <mo>-</mo>
-                <mi>x</mi>
-              </mrow>
-            </msup>
-          </mrow>
-          <mn>2</mn>
-        </mfrac>
-      </mrow>
-      <annotation encoding="TeX">\mathtt{\operatorname{Math.cosh(x)}} = \frac{e^x +
-        e^{-x}}{2}</annotation>
-    </semantics>
-  </math></p>
+<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mo lspace="0em" rspace="thinmathspace">Math.cosh(x)</mo>
+</mstyle><mo>=</mo>
+<mfrac><mrow><msup><mi>e</mi>
+<mi>x</mi>
+</msup><mo>+</mo>
+<msup><mi>e</mi>
+<mrow><mo>-</mo>
+<mi>x</mi>
+</mrow></msup></mrow><mn>2</mn>
+</mfrac></mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.cosh(x)}} = \frac{e^x +
+e^{-x}}{2}</annotation></semantics></math>
 
-<div>{{EmbedInteractiveExample("pages/js/math-cosh.html")}}</div>
+{{EmbedInteractiveExample("pages/js/math-cosh.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+Math.cosh(x)
+```
 
-<pre class="brush: js">Math.cosh(<var>x</var>)</pre>
+### Parameters
 
-<h3 id="Parameters">Parameters</h3>
+- `x`
+  - : A number.
 
-<dl>
-  <dt><code><var>x</var></code></dt>
-  <dd>A number.</dd>
-</dl>
+### Return value
 
-<h3 id="Return_value">Return value</h3>
+The hyperbolic cosine of the given number.
 
-<p>The hyperbolic cosine of the given number.</p>
+## Description
 
-<h2 id="Description">Description</h2>
+Because `cosh()` is a static method of `Math`, you always use it
+as `Math.cosh()`, rather than as a method of a `Math` object you
+created (`Math` is not a constructor).
 
-<p>Because <code>cosh()</code> is a static method of <code>Math</code>, you always use it
-  as <code>Math.cosh()</code>, rather than as a method of a <code>Math</code> object you
-  created (<code>Math</code> is not a constructor).</p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Using Math.cosh()
 
-<h3 id="Using_Math.cosh">Using Math.cosh()</h3>
-
-<pre class="brush: js">Math.cosh(0);  // 1
+```js
+Math.cosh(0);  // 1
 Math.cosh(1);  // 1.5430806348152437
 Math.cosh(-1); // 1.5430806348152437
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>This can be emulated with the help of the {{jsxref("Math.exp()")}} function:</p>
+This can be emulated with the help of the {{jsxref("Math.exp()")}} function:
 
-<pre class="brush: js">Math.cosh = Math.cosh || function(x) {
+```js
+Math.cosh = Math.cosh || function(x) {
   return (Math.exp(x) + Math.exp(-x)) / 2;
 }
-</pre>
+```
 
-<p>or using only one call to the {{jsxref("Math.exp()")}} function:</p>
+or using only one call to the {{jsxref("Math.exp()")}} function:
 
-<pre class="brush: js">Math.cosh = Math.cosh || function(x) {
+```js
+Math.cosh = Math.cosh || function(x) {
   var y = Math.exp(x);
   return (y + 1 / y) / 2;
 };
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>A polyfill of <code>Math.cosh</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-math"><code>core-js</code></a></li>
-  <li>{{jsxref("Math.acosh()")}}</li>
-  <li>{{jsxref("Math.asinh()")}}</li>
-  <li>{{jsxref("Math.atanh()")}}</li>
-  <li>{{jsxref("Math.sinh()")}}</li>
-  <li>{{jsxref("Math.tanh()")}}</li>
-</ul>
+- A polyfill of `Math.cosh` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-math)
+- {{jsxref("Math.acosh()")}}
+- {{jsxref("Math.asinh()")}}
+- {{jsxref("Math.atanh()")}}
+- {{jsxref("Math.sinh()")}}
+- {{jsxref("Math.tanh()")}}

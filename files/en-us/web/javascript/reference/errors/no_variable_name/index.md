@@ -7,89 +7,97 @@ tags:
   - JavaScript
   - SyntaxError
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<p>The JavaScript exception "missing variable name" is a common error experienced by developers. It mostly occurs due to a typo or a forgotten variable name.</p>
+The JavaScript exception "missing variable name" is a common error experienced by developers. It mostly occurs due to a typo or a forgotten variable name.
 
-<h2 id="Message">Message</h2>
+## Message
 
-<pre class="brush: js">SyntaxError: missing variable name (Firefox)
-SyntaxError: Unexpected token = (Chrome)</pre>
+```js
+SyntaxError: missing variable name (Firefox)
+SyntaxError: Unexpected token = (Chrome)
+```
 
-<h2 id="Error_type">Error type</h2>
+## Error type
 
-<p>{{jsxref("SyntaxError")}}</p>
+{{jsxref("SyntaxError")}}
 
-<h2 id="What_went_wrong">What went wrong?</h2>
+## What went wrong?
 
-<p>A variable is missing a name. The cause is most likely a typo or a forgotten variable name.
-  Make sure that you've provided the name of the variable before the <code>=</code> sign.</p>
+A variable is missing a name. The cause is most likely a typo or a forgotten variable name.
+Make sure that you've provided the name of the variable before the `=` sign.
 
-<p>When declaring multiple variables at the same time, make sure that the previous lines/declaration does not end with a comma instead
-  of a semi-colon.</p>
+When declaring multiple variables at the same time, make sure that the previous lines/declaration does not end with a comma instead
+of a semi-colon.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Missing_a_variable_name">Missing a variable name</h3>
+### Missing a variable name
 
-<pre class="brush: js example-bad">var = "foo";
-</pre>
+```js example-bad
+var = "foo";
+```
 
-<p>Coming up with a descriptive variable name is challenging for most developers. It gets easier over time.</p>
+Coming up with a descriptive variable name is challenging for most developers. It gets easier over time.
 
-<pre class="brush: js example-good">var description = "foo";</pre>
+```js example-good
+var description = "foo";
+```
 
-<h3 id="Reserved_keywords_cant_be_variable_names">Reserved keywords can't be variable
-  names</h3>
+### Reserved keywords can't be variable names
 
-<p>There are a few variable names that are <a
-    href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#keywords">reserved
-    keywords</a>. You can't use these. Sorry :(</p>
+There are a few variable names that are [reserved
+keywords](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#keywords). You can't use these. Sorry :(
 
-<pre class="brush: js example-bad">var debugger = "whoop";
+```js example-bad
+var debugger = "whoop";
 // SyntaxError: missing variable name
-</pre>
+```
 
-<h3 id="Declaring_multiple_variables">Declaring multiple variables</h3>
+### Declaring multiple variables
 
-<p>Pay special attention to commas when declaring multiple variables. Is there an excess
-  comma? Did you accidentally add commas instead of semicolons?</p>
+Pay special attention to commas when declaring multiple variables. Is there an excess
+comma? Did you accidentally add commas instead of semicolons?
 
-<pre class="brush: js example-bad">var x, y = "foo",
+```js example-bad
+var x, y = "foo",
 var x, = "foo"
 
 var first = document.getElementById('one'),
 var second = document.getElementById('two'),
 
 // SyntaxError: missing variable name
-</pre>
+```
 
-<p>The fixed version:</p>
+The fixed version:
 
-<pre class="brush: js example-good">var x, y = "foo";
+```js example-good
+var x, y = "foo";
 var x = "foo";
 
 var first = document.getElementById('one');
-var second = document.getElementById('two');</pre>
+var second = document.getElementById('two');
+```
 
-<h3 id="Arrays">Arrays</h3>
+### Arrays
 
-<p>{{jsxref("Array")}} literals in JavaScript need square brackets around the values. This
-  won't work:</p>
+{{jsxref("Array")}} literals in JavaScript need square brackets around the values. This
+won't work:
 
-<pre class="brush: js example-bad">var arr = 1,2,3,4,5;
+```js example-bad
+var arr = 1,2,3,4,5;
 // SyntaxError: missing variable name
-</pre>
+```
 
-<p>This would be correct:</p>
+This would be correct:
 
-<pre class="brush: js example-good">var arr = [1,2,3,4,5];</pre>
+```js example-good
+var arr = [1,2,3,4,5];
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="http://wiki.c2.com/?GoodVariableNames">Good variable names</a></li>
-  <li>{{jsxref("Statements/var", "var")}}</li>
-  <li><a href="/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#declarations">Variable
-      declarations in the JavaScript Guide</a></li>
-</ul>
+- [Good variable names](http://wiki.c2.com/?GoodVariableNames)
+- {{jsxref("Statements/var", "var")}}
+- [Variable
+  declarations in the JavaScript Guide](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#declarations)

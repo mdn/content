@@ -2,43 +2,43 @@
 title: WeakRef.prototype.deref()
 slug: Web/JavaScript/Reference/Global_Objects/WeakRef/deref
 tags:
-- JavaScript
-- Method
-- Prototype
-- Reference
-- WeakRef
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
+  - WeakRef
 browser-compat: javascript.builtins.WeakRef.deref
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <code>deref</code> method returns the {{jsxref("WeakRef")}} instance's target
-  object, or <code>undefined</code> if the target object has been garbage-collected.</p>
+The `deref` method returns the {{jsxref("WeakRef")}} instance's target
+object, or `undefined` if the target object has been garbage-collected.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">deref()</pre>
+```js
+deref()
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>The target object of the WeakRef, or <code>undefined</code> if the object has been
-  garbage-collected.</p>
+The target object of the WeakRef, or `undefined` if the object has been
+garbage-collected.
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>See the <a
-    href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakRef#notes_on_weakrefs">Notes
-    on WeakRefs</a> section of the {{jsxref("WeakRef")}} page for some important notes.
-</p>
+See the [Notes
+on WeakRefs](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakRef#notes_on_weakrefs) section of the {{jsxref("WeakRef")}} page for some important notes.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_deref">Using deref</h3>
+### Using deref
 
-<p>See the <a
-    href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakRef#examples">Examples</a>
-  section of the {{jsxref("WeakRef")}} page for the complete example.</p>
+See the [Examples](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakRef#examples)
+section of the {{jsxref("WeakRef")}} page for the complete example.
 
-<pre class="brush: js">const tick = () =&gt; {
+```js
+const tick = () => {
   // Get the element from the weak reference, if it still exists
   const element = this.ref.deref();
   if (element) {
@@ -49,18 +49,17 @@ browser-compat: javascript.builtins.WeakRef.deref
     this.stop();
     this.ref = null;
   }
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("WeakRef")}}</li>
-</ul>
+- {{jsxref("WeakRef")}}

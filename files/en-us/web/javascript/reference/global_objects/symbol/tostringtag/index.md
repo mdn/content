@@ -10,77 +10,78 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Symbol.toStringTag
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>Symbol.toStringTag</code></strong> well-known symbol is a string valued property that is used in the creation of the default string description of an object. It is accessed internally by the {{jsxref("Object.prototype.toString()")}} method.</p>
+The **`Symbol.toStringTag`** well-known symbol is a string valued property that is used in the creation of the default string description of an object. It is accessed internally by the {{jsxref("Object.prototype.toString()")}} method.
 
-<div>{{EmbedInteractiveExample("pages/js/symbol-tostringtag.html")}}</div>
+{{EmbedInteractiveExample("pages/js/symbol-tostringtag.html")}}{{js_property_attributes(0,0,0)}}
 
+## Examples
 
-<div>{{js_property_attributes(0,0,0)}}</div>
+### Default tags
 
-<h2 id="Examples">Examples</h2>
-
-<h3 id="Default_tags">Default tags</h3>
-
-<pre class="brush: js">Object.prototype.toString.call('foo');     // "[object String]"
+```js
+Object.prototype.toString.call('foo');     // "[object String]"
 Object.prototype.toString.call([1, 2]);    // "[object Array]"
 Object.prototype.toString.call(3);         // "[object Number]"
 Object.prototype.toString.call(true);      // "[object Boolean]"
 Object.prototype.toString.call(undefined); // "[object Undefined]"
 Object.prototype.toString.call(null);      // "[object Null]"
 // ... and more
-</pre>
+```
 
-<h3 id="Built-in_toStringTag_symbols">Built-in toStringTag symbols</h3>
+### Built-in toStringTag symbols
 
-<pre class="brush: js">Object.prototype.toString.call(new Map());       // "[object Map]"
+```js
+Object.prototype.toString.call(new Map());       // "[object Map]"
 Object.prototype.toString.call(function* () {}); // "[object GeneratorFunction]"
 Object.prototype.toString.call(Promise.resolve()); // "[object Promise]"
 // ... and more
-</pre>
+```
 
-<h3 id="Custom_classes_default_to_object_tag">Custom classes default to object tag</h3>
+### Custom classes default to object tag
 
-<p>When creating your own class, JavaScript defaults to the "Object" tag:</p>
+When creating your own class, JavaScript defaults to the "Object" tag:
 
-<pre class="brush: js">class ValidatorClass {}
+```js
+class ValidatorClass {}
 
 Object.prototype.toString.call(new ValidatorClass()); // "[object Object]"
-</pre>
+```
 
-<h3 id="Custom_tag_with_toStringTag">Custom tag with toStringTag</h3>
+### Custom tag with toStringTag
 
-<p>Now, with the help of <code>toStringTag</code>, you are able to set your own custom tag:</p>
+Now, with the help of `toStringTag`, you are able to set your own custom tag:
 
-<pre class="brush: js">class ValidatorClass {
+```js
+class ValidatorClass {
   get [Symbol.toStringTag]() {
     return 'Validator';
   }
 }
 
 Object.prototype.toString.call(new ValidatorClass()); // "[object Validator]"
-</pre>
+```
 
-<h3 id="toStringTag_available_on_all_DOM_prototype_objects">toStringTag available on all DOM prototype objects</h3>
+### toStringTag available on all DOM prototype objects
 
-<p>Due to a <a href="https://github.com/heycam/webidl/pull/357">WebIDL spec change</a> in mid-2020, browsers are adding a <code>Symbol.toStringTag</code> property to all DOM prototype objects. For example, to acccess the <code>Symbol.toStringTag</code> property on {{domxref("HTMLButtonElement")}}:</p>
+Due to a [WebIDL spec change](https://github.com/heycam/webidl/pull/357) in mid-2020, browsers are adding a `Symbol.toStringTag` property to all DOM prototype objects. For example, to acccess the `Symbol.toStringTag` property on {{domxref("HTMLButtonElement")}}:
 
-<pre class="brush: js">let test = document.createElement('button');
+```js
+let test = document.createElement('button');
 test.toString(); // Returns [object HTMLButtonElement]
-test[Symbol.toStringTag];  // Returns HTMLButtonElement</pre>
+test[Symbol.toStringTag];  // Returns HTMLButtonElement
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>A polyfill of <code>Symbol.toStringTag</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-symbol"><code>core-js</code></a></li>
- <li>{{jsxref("Object.prototype.toString()")}}</li>
-</ul>
+- A polyfill of `Symbol.toStringTag` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-symbol)
+- {{jsxref("Object.prototype.toString()")}}

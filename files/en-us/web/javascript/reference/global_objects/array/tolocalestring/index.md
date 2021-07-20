@@ -2,50 +2,49 @@
 title: Array.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toLocaleString
 tags:
-- Array
-- Internationalization
-- JavaScript
-- Method
-- Prototype
+  - Array
+  - Internationalization
+  - JavaScript
+  - Method
+  - Prototype
 browser-compat: javascript.builtins.Array.toLocaleString
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>toLocaleString()</code></strong> method returns a string representing
-  the elements of the array. The elements are converted to Strings using their
-  <code>toLocaleString</code> methods and these Strings are separated by a locale-specific
-  String (such as a comma “,”).</p>
+The **`toLocaleString()`** method returns a string representing
+the elements of the array. The elements are converted to Strings using their
+`toLocaleString` methods and these Strings are separated by a locale-specific
+String (such as a comma “,”).
 
-<div>{{EmbedInteractiveExample("pages/js/array-tolocalestring.html","shorter")}}</div>
+{{EmbedInteractiveExample("pages/js/array-tolocalestring.html","shorter")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 toLocaleString();
 toLocaleString(locales);
 toLocaleString(locales, options);
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>locales</code> {{optional_inline}}</dt>
-  <dd>A string with a BCP 47 language tag, or an array of such strings. For the general
-    form and interpretation of the <code>locales</code> argument, see the
-    {{jsxref("Intl")}} page.</dd>
-  <dt><code>options</code> {{optional_inline}}</dt>
-  <dd>An object with configuration properties, for numbers see
+- `locales` {{optional_inline}}
+  - : A string with a BCP 47 language tag, or an array of such strings. For the general
+    form and interpretation of the `locales` argument, see the
+    {{jsxref("Intl")}} page.
+- `options` {{optional_inline}}
+  - : An object with configuration properties, for numbers see
     {{jsxref("Number.prototype.toLocaleString()")}}, and for dates see
-    {{jsxref("Date.prototype.toLocaleString()")}}.</dd>
-</dl>
+    {{jsxref("Date.prototype.toLocaleString()")}}.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A string representing the elements of the array.</p>
+A string representing the elements of the array.
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<pre class="brush: js">// https://tc39.github.io/ecma402/#sup-array.prototype.tolocalestring
+```js
+// https://tc39.github.io/ecma402/#sup-array.prototype.tolocalestring
 if (!Array.prototype.toLocaleString) {
   Object.defineProperty(Array.prototype, 'toLocaleString', {
     value: function(locales, options) {
@@ -57,7 +56,7 @@ if (!Array.prototype.toLocaleString) {
       var a = Object(this);
 
       // 2. Let len be ? ToLength(? Get(A, "length")).
-      var len = a.length &gt;&gt;&gt; 0;
+      var len = a.length >>> 0;
 
       // 3. Let separator be the String value for the
       //    list-separator String appropriate for the
@@ -90,8 +89,8 @@ if (!Array.prototype.toLocaleString) {
       // 8. Let k be 1.
       var k = 1;
 
-      // 9. Repeat, while k &lt; len
-      while (k &lt; len) {
+      // 9. Repeat, while k < len
+      while (k < len) {
         // a. Let S be a String value produced by
         //   concatenating R and separator.
         var s = r + separator;
@@ -126,52 +125,49 @@ if (!Array.prototype.toLocaleString) {
     }
   });
 }
-</pre>
+```
 
-<p>If you need to support truly obsolete JavaScript engines that don't support
-  <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty</a></code>,
-  it's best not to polyfill <code>Array.prototype</code> methods at all, as you can't make
-  them non-enumerable.</p>
+If you need to support truly obsolete JavaScript engines that don't support
+[`Object.defineProperty`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty),
+it's best not to polyfill `Array.prototype` methods at all, as you can't make
+them non-enumerable.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_locales_and_options">Using locales and options</h3>
+### Using locales and options
 
-<p>The elements of the array are converted to strings using their
-  <code>toLocaleString</code> methods.</p>
+The elements of the array are converted to strings using their
+`toLocaleString` methods.
 
-<ul>
-  <li><code>Object</code>: {{jsxref("Object.prototype.toLocaleString()")}}</li>
-  <li><code>Number</code>: {{jsxref("Number.prototype.toLocaleString()")}}</li>
-  <li><code>Date</code>: {{jsxref("Date.prototype.toLocaleString()")}}</li>
-</ul>
+- `Object`: {{jsxref("Object.prototype.toLocaleString()")}}
+- `Number`: {{jsxref("Number.prototype.toLocaleString()")}}
+- `Date`: {{jsxref("Date.prototype.toLocaleString()")}}
 
-<p>Always display the currency for the strings and numbers in the <code>prices</code>
-  array:</p>
+Always display the currency for the strings and numbers in the `prices`
+array:
 
-<pre class="brush: js">var prices = ['￥7', 500, 8123, 12];
+```js
+var prices = ['￥7', 500, 8123, 12];
 prices.toLocaleString('ja-JP', { style: 'currency', currency: 'JPY' });
 
 // "￥7,￥500,￥8,123,￥12"
-</pre>
+```
 
-<p>For more examples, see also the {{jsxref("Intl")}}, {{jsxref("NumberFormat")}}, and
-  {{jsxref("DateTimeFormat")}} pages.</p>
+For more examples, see also the {{jsxref("Intl")}}, {{jsxref("NumberFormat")}}, and
+{{jsxref("DateTimeFormat")}} pages.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Array.prototype.toString()")}}</li>
-  <li>{{jsxref("Intl")}}</li>
-  <li>{{jsxref("Object.prototype.toLocaleString()")}}</li>
-  <li>{{jsxref("Number.prototype.toLocaleString()")}}</li>
-  <li>{{jsxref("Date.prototype.toLocaleString()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.toString()")}}
+- {{jsxref("Intl")}}
+- {{jsxref("Object.prototype.toLocaleString()")}}
+- {{jsxref("Number.prototype.toLocaleString()")}}
+- {{jsxref("Date.prototype.toLocaleString()")}}

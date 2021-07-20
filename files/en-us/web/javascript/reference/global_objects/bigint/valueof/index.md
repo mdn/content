@@ -2,48 +2,47 @@
 title: BigInt.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/valueOf
 tags:
-- BigInt
-- JavaScript
-- Method
-- Prototype
-- valueOf()
+  - BigInt
+  - JavaScript
+  - Method
+  - Prototype
+  - valueOf()
 browser-compat: javascript.builtins.BigInt.valueOf
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>valueOf()</code></strong> method returns the wrapped primitive value
-  of a {{jsxref("BigInt")}} object.</p>
+The **`valueOf()`** method returns the wrapped primitive value
+of a {{jsxref("BigInt")}} object.
 
-<div>{{EmbedInteractiveExample("pages/js/bigint-valueof.html","shorter")}}</div>
+{{EmbedInteractiveExample("pages/js/bigint-valueof.html","shorter")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>bigIntObj</var>.valueOf()</pre>
+```js
+bigIntObj.valueOf()
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A BigInt representing the primitive value of the specified {{jsxref("BigInt")}} object.
-</p>
+A BigInt representing the primitive value of the specified {{jsxref("BigInt")}} object.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_valueOf">Using <code>valueOf</code></h3>
+### Using `valueOf`
 
-<pre class="brush: js">typeof Object(1n); // object
+```js
+typeof Object(1n); // object
 typeof Object(1n).valueOf(); // bigint
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat}}
 
-<p>{{Compat}}</p>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
-  <li>{{jsxref("BigInt.prototype.toString()")}}</li>
-</ul>
+- {{jsxref("BigInt.prototype.toString()")}}

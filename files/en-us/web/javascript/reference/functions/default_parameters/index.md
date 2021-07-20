@@ -2,84 +2,87 @@
 title: Default parameters
 slug: Web/JavaScript/Reference/Functions/Default_parameters
 tags:
-- ECMAScript 2015
-- Functions
-- JavaScript
-- Language feature
+  - ECMAScript 2015
+  - Functions
+  - JavaScript
+  - Language feature
 browser-compat: javascript.functions.default_parameters
 ---
-<div>{{jsSidebar("Functions")}}</div>
+{{jsSidebar("Functions")}}
 
-<p><strong>Default function parameters</strong> allow named
-    parameters to be initialized with default values if no value or <code>undefined</code>
-    is passed.</p>
+**Default function parameters** allow named
+parameters to be initialized with default values if no value or `undefined`
+is passed.
 
-<div>{{EmbedInteractiveExample("pages/js/functions-default.html")}}</div>
+{{EmbedInteractiveExample("pages/js/functions-default.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 function fnName(param1 = defaultValue1, ..., paramN = defaultValueN) { ... }
-</pre>
+```
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>In JavaScript, function parameters default to {{jsxref("undefined")}}. However, it's
-  often useful to set a different default value. This is where default parameters can
-  help.</p>
+In JavaScript, function parameters default to {{jsxref("undefined")}}. However, it's
+often useful to set a different default value. This is where default parameters can
+help.
 
-<p>In the past, the general strategy for setting defaults was to test parameter values in
-  the function body and assign a value if they are <code>undefined</code>.</p>
+In the past, the general strategy for setting defaults was to test parameter values in
+the function body and assign a value if they are `undefined`.
 
-<p>In the following example, if no value is provided for <code><var>b</var></code> when
-  <code>multiply</code> is called, <code><var>b</var></code>'s value would be
-  <code>undefined</code> when evaluating <code><var>a</var> * <var>b</var></code> and
-  <code>multiply</code> would return <code>NaN</code>.</p>
+In the following example, if no value is provided for `b` when
+`multiply` is called, `b`'s value would be
+`undefined` when evaluating `a * b` and
+`multiply` would return `NaN`.
 
-<pre class="brush: js">function multiply(a, b) {
+```js
+function multiply(a, b) {
   return a * b
 }
 
 multiply(5, 2)  // 10
 multiply(5)     // NaN !
-</pre>
+```
 
-<p>To guard against this, something like the second line would be used, where
-  <code><var>b</var></code> is set to <code>1</code> if <code>multiply</code> is called
-  with only one argument:</p>
+To guard against this, something like the second line would be used, where
+`b` is set to `1` if `multiply` is called
+with only one argument:
 
-<pre class="brush: js">function multiply(a, b) {
+```js
+function multiply(a, b) {
   b = (typeof b !== 'undefined') ?  b : 1
   return a * b
 }
 
 multiply(5, 2)  // 10
 multiply(5)     // 5
-</pre>
+```
 
-<p>With default parameters in ES2015, checks in the function body are no longer necessary.
-  Now, you can assign <code>1</code> as the default value for <code><var>b</var></code> in
-  the function head:</p>
+With default parameters in ES2015, checks in the function body are no longer necessary.
+Now, you can assign `1` as the default value for `b` in
+the function head:
 
-<pre class="brush: js">function multiply(a, b = 1) {
+```js
+function multiply(a, b = 1) {
   return a * b
 }
 
 multiply(5, 2)          // 10
 multiply(5)             // 5
 multiply(5, undefined)  // 5
-</pre>
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Passing_undefined_vs._other_falsy_values">Passing <code>undefined</code> vs. other
-  falsy values</h3>
+### Passing `undefined` vs. other falsy values
 
-<p>In the second call in this example, even if the first argument is set explicitly to
-  <code>undefined</code> (though not <code>null</code> or other {{glossary("falsy")}}
-  values), the value of the <code><var>num</var></code> argument is still the default.</p>
+In the second call in this example, even if the first argument is set explicitly to
+`undefined` (though not `null` or other {{glossary("falsy")}}
+values), the value of the `num` argument is still the default.
 
-<pre class="brush: js">function test(num = 1) {
+```js
+function test(num = 1) {
   console.log(typeof num)
 }
 
@@ -89,25 +92,27 @@ test(undefined)  // 'number' (num is set to 1 too)
 // test with other falsy values:
 test('')         // 'string' (num is set to '')
 test(null)       // 'object' (num is set to null)
-</pre>
+```
 
-<h3 id="Evaluated_at_call_time">Evaluated at call time</h3>
+### Evaluated at call time
 
-<p>The default argument is evaluated at <em>call time</em>. So, unlike (for example)
-  Python, a new object is created each time the function is called.</p>
+The default argument is evaluated at _call time_. So, unlike (for example)
+Python, a new object is created each time the function is called.
 
-<pre class="brush: js">function append(value, array = []) {
+```js
+function append(value, array = []) {
   array.push(value)
   return array
 }
 
 append(1)  // [1]
 append(2)  // [2], not [1, 2]
-</pre>
+```
 
-<p>This even applies to functions and variables:</p>
+This even applies to functions and variables:
 
-<pre class="brush: js">function callSomething(thing = something()) {
+```js
+function callSomething(thing = something()) {
   return thing
 }
 
@@ -119,25 +124,26 @@ function something() {
 
 callSomething()  // 1
 callSomething()  // 2
-</pre>
+```
 
-<h3 id="Earlier_parameters_are_available_to_later_default_parameters">Earlier parameters
-  are available to later default parameters</h3>
+### Earlier parameters are available to later default parameters
 
-<p>Parameters defined earlier (to the left) are available to later default parameters:</p>
+Parameters defined earlier (to the left) are available to later default parameters:
 
-<pre class="brush: js">function greet(name, greeting, message = greeting + ' ' + name) {
+```js
+function greet(name, greeting, message = greeting + ' ' + name) {
   return [name, greeting, message]
 }
 
 greet('David', 'Hi')                     // ["David", "Hi", "Hi David"]
 greet('David', 'Hi', 'Happy Birthday!')  // ["David", "Hi", "Happy Birthday!"]
-</pre>
+```
 
-<p>This functionality can be approximated like this, which demonstrates how many edge
-  cases are handled:</p>
+This functionality can be approximated like this, which demonstrates how many edge
+cases are handled:
 
-<pre class="brush: js">function go() {
+```js
+function go() {
   return ':P'
 }
 
@@ -172,80 +178,79 @@ withDefaults.call({value: '=^_^='});
 
 withoutDefaults.call({value: '=^_^='});
 // [undefined, 5, 5, ":P", {value:"=^_^="}, arguments, "=^_^="]
-</pre>
+```
 
-<h3 id="Scope_Effects">Scope Effects</h3>
+### Scope Effects
 
-<p>If default parameters are defined for one or more parameter, then a <a
-    href="https://tc39.es/ecma262/#sec-functiondeclarationinstantiation">second
-    scope</a> (Environment Record) is created, specifically for the identifiers within the
-  parameter list. This scope is a parent of the scope created for the function body.</p>
+If default parameters are defined for one or more parameter, then a [second
+scope](https://tc39.es/ecma262/#sec-functiondeclarationinstantiation) (Environment Record) is created, specifically for the identifiers within the
+parameter list. This scope is a parent of the scope created for the function body.
 
-<p>This means that functions and variables declared in the function body cannot be
-  referred to from default value parameter initializers; attempting to do so throws a
-  run-time {{jsxref("ReferenceError")}}.</p>
+This means that functions and variables declared in the function body cannot be
+referred to from default value parameter initializers; attempting to do so throws a
+run-time {{jsxref("ReferenceError")}}.
 
-<p>It also means that variables declared inside the function body using
-  <code>var</code> will mask parameters of the same name, instead of the usual behavior
-  of duplicate <code>var</code> declarations having no effect.</p>
+It also means that variables declared inside the function body using
+`var` will mask parameters of the same name, instead of the usual behavior
+of duplicate `var` declarations having no effect.
 
-<p>The following function will throw a <code>ReferenceError</code> when invoked, because
-  the default parameter value does not have access to the child scope of the function
-  body:</p>
+The following function will throw a `ReferenceError` when invoked, because
+the default parameter value does not have access to the child scope of the function
+body:
 
-<pre class="brush: js example-bad">function f(a = go()) { // Throws a `ReferenceError` when `f` is invoked.
+```js example-bad
+function f(a = go()) { // Throws a `ReferenceError` when `f` is invoked.
   function go() { return ':P' }
 }
-</pre>
+```
 
-<p>...and this function will print <code>undefined</code> because variable
-  <code>var a</code> is hoisted only to the top of the scope created for the function body
-  (and not the parent scope created for the parameter list):</p>
+...and this function will print `undefined` because variable
+`var a` is hoisted only to the top of the scope created for the function body
+(and not the parent scope created for the parameter list):
 
-<pre class="brush: js example-bad">function f(a, b = () =&gt; console.log(a)) {
+```js example-bad
+function f(a, b = () => console.log(a)) {
   var a = 1
   b() // Prints `undefined`, because default parameter values exist in their own scope
 }
-</pre>
+```
 
-<h3 id="Parameters_without_defaults_after_default_parameters">Parameters without defaults
-  after default parameters</h3>
+### Parameters without defaults after default parameters
 
-<p>Parameters are still set left-to-right, overwriting default parameters even if there
-  are later parameters without defaults.</p>
+Parameters are still set left-to-right, overwriting default parameters even if there
+are later parameters without defaults.
 
-<pre class="brush: js">function f(x = 1, y) {
+```js
+function f(x = 1, y) {
   return [x, y]
 }
 
 f()   // [1, undefined]
 f(2)  // [2, undefined]
-</pre>
+```
 
-<h3 id="Destructured_parameter_with_default_value_assignment">Destructured parameter with
-  default value assignment</h3>
+### Destructured parameter with default value assignment
 
-<p>You can use default value assignment with the
-  {{jsxref("Operators/Destructuring_assignment", "destructuring assignment", "", 1)}}
-  notation:</p>
+You can use default value assignment with the
+{{jsxref("Operators/Destructuring_assignment", "destructuring assignment", "", 1)}}
+notation:
 
-<pre class="brush: js">function f([x, y] = [1, 2], {z: z} = {z: 3}) {
+```js
+function f([x, y] = [1, 2], {z: z} = {z: 3}) {
   return x + y + z
 }
 
-f()  // 6</pre>
+f()  // 6
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a       href="http://wiki.ecmascript.org/doku.php?id=harmony:parameter_default_values"
-      rel="external">Original proposal at ecmascript.org</a></li>
-</ul>
+- [Original proposal at ecmascript.org](http://wiki.ecmascript.org/doku.php?id=harmony:parameter_default_values)

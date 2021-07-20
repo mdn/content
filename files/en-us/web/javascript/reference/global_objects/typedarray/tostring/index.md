@@ -2,67 +2,67 @@
 title: TypedArray.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/toString
 tags:
-- ECMAScript 2015
-- JavaScript
-- Method
-- Prototype
-- TypedArray
+  - ECMAScript 2015
+  - JavaScript
+  - Method
+  - Prototype
+  - TypedArray
 browser-compat: javascript.builtins.TypedArray.toString
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>toString()</code></strong> method returns a string representing the
-  specified array and its elements. This method has the same algorithm as
-  {{jsxref("Array.prototype.toString()")}}. <em>TypedArray</em> is one of the <a
-    href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">typed
-    array types</a> here.</p>
+The **`toString()`** method returns a string representing the
+specified array and its elements. This method has the same algorithm as
+{{jsxref("Array.prototype.toString()")}}. _TypedArray_ is one of the [typed
+array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) here.
 
-<div>{{EmbedInteractiveExample("pages/js/typedarray-tostring.html","shorter")}}</div>
+{{EmbedInteractiveExample("pages/js/typedarray-tostring.html","shorter")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+toString()
+```
 
-<pre class="brush: js">toString()</pre>
+### Return value
 
-<h3 id="Return_value">Return value</h3>
+A string representing the elements of the typed array.
 
-<p>A string representing the elements of the typed array.</p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+The {{jsxref("TypedArray")}} objects override the `toString` method of
+{{jsxref("Object")}}. For `TypedArray` objects, the `toString`
+method joins the array and returns one string containing each typed array element
+separated by commas. For example, the following code creates a typed array and uses
+`toString` to convert the array to a string.
 
-<p>The {{jsxref("TypedArray")}} objects override the <code>toString</code> method of
-  {{jsxref("Object")}}. For <code>TypedArray</code> objects, the <code>toString</code>
-  method joins the array and returns one string containing each typed array element
-  separated by commas. For example, the following code creates a typed array and uses
-  <code>toString</code> to convert the array to a string.</p>
-
-<pre class="brush: js">var numbers = new Uint8Array([2, 5, 8, 1, 4])
+```js
+var numbers = new Uint8Array([2, 5, 8, 1, 4])
 numbers.toString(); // "2,5,8,1,4"
-</pre>
+```
 
-<p>JavaScript calls the <code>toString</code> method automatically when a typed array is
-  to be represented as a text value or when an array is referred to in a string
-  concatenation.</p>
+JavaScript calls the `toString` method automatically when a typed array is
+to be represented as a text value or when an array is referred to in a string
+concatenation.
 
-<h3 id="Compatibility">Compatibility</h3>
+### Compatibility
 
-<p>If a browser doesn't support the <code>TypedArray.prototype.toString()</code> method
-  yet, JavaScript will call the <code>toString</code> method of {{jsxref("Object")}}:</p>
+If a browser doesn't support the `TypedArray.prototype.toString()` method
+yet, JavaScript will call the `toString` method of {{jsxref("Object")}}:
 
-<pre class="brush: js">var numbers = new Uint8Array([2, 5, 8, 1, 4])
+```js
+var numbers = new Uint8Array([2, 5, 8, 1, 4])
 numbers.toString(); // "[object Uint8Array]"
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("TypedArray.prototype.join()")}}</li>
-</ul>
+- {{jsxref("TypedArray.prototype.join()")}}

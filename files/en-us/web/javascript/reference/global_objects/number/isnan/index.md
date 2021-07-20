@@ -10,51 +10,51 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Number.isNaN
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>Number.isNaN()</code></strong> method determines whether the passed
-  value is {{jsxref("NaN")}} and its type is {{jsxref("Number")}}. It is a more robust
-  version of the original, global {{jsxref("isNaN", "isNaN()")}}.</p>
+The **`Number.isNaN()`** method determines whether the passed
+value is {{jsxref("NaN")}} and its type is {{jsxref("Number")}}. It is a more robust
+version of the original, global {{jsxref("isNaN", "isNaN()")}}.
 
-<div>{{EmbedInteractiveExample("pages/js/number-isnan.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/number-isnan.html", "taller")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+Number.isNaN(value)
+```
 
-<pre class="brush: js">Number.isNaN(<var>value</var>)</pre>
+### Parameters
 
-<h3 id="Parameters">Parameters</h3>
+- `value`
+  - : The value to be tested for {{jsxref("NaN")}}.
 
-<dl>
-  <dt><code><var>value</var></code></dt>
-  <dd>The value to be tested for {{jsxref("NaN")}}.</dd>
-</dl>
+### Return value
 
-<h3 id="Return_value">Return value</h3>
+**true** if the given value is {{jsxref("NaN")}} and its type is
+{{jsxref("Number")}}; otherwise, **false**.
 
-<p><strong>true</strong> if the given value is {{jsxref("NaN")}} and its type is
-  {{jsxref("Number")}}; otherwise, <strong>false</strong>.</p>
+## Description
 
-<h2 id="Description">Description</h2>
-
-<p>Due to both equality operators, {{jsxref("Operators", "==",
+Due to both equality operators, {{jsxref("Operators", "==",
   "#Equality")}} and {{jsxref("Operators", "===", "#Identity")}},
-  evaluating to <code>false</code> when checking if {{jsxref("NaN")}} <em>is</em>
-  {{jsxref("NaN")}}, the function <code>Number.isNaN()</code> has become necessary. This
-  situation is unlike all other possible value comparisons in JavaScript.</p>
+evaluating to `false` when checking if {{jsxref("NaN")}} _is_
+{{jsxref("NaN")}}, the function `Number.isNaN()` has become necessary. This
+situation is unlike all other possible value comparisons in JavaScript.
 
-<p>In comparison to the global {{jsxref("isNaN", "isNaN()")}} function,
-  <code>Number.isNaN()</code> doesn't suffer the problem of forcefully converting the
-  parameter to a number. This means it is now safe to pass values that would normally
-  convert to {{jsxref("NaN")}}, but aren't actually the same value as {{jsxref("NaN")}}.
-  This also means that only values of the type number, that are also {{jsxref("NaN")}},
-  return <code>true</code>.</p>
+In comparison to the global {{jsxref("isNaN", "isNaN()")}} function,
+`Number.isNaN()` doesn't suffer the problem of forcefully converting the
+parameter to a number. This means it is now safe to pass values that would normally
+convert to {{jsxref("NaN")}}, but aren't actually the same value as {{jsxref("NaN")}}.
+This also means that only values of the type number, that are also {{jsxref("NaN")}},
+return `true`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_isNaN">Using isNaN</h3>
+### Using isNaN
 
-<pre class="brush: js">Number.isNaN(NaN);        // true
+```js
+Number.isNaN(NaN);        // true
 Number.isNaN(Number.NaN); // true
 Number.isNaN(0 / 0);      // true
 
@@ -72,30 +72,29 @@ Number.isNaN('37');
 Number.isNaN('37.37');
 Number.isNaN('');
 Number.isNaN(' ');
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>The following works because NaN is the only value in JavaScript which is not equal to
-  itself.</p>
+The following works because NaN is the only value in JavaScript which is not equal to
+itself.
 
-<pre class="brush: js">Number.isNaN = Number.isNaN || function isNaN(input) {
-    return typeof input === 'number' &amp;&amp; input !== input;
+```js
+Number.isNaN = Number.isNaN || function isNaN(input) {
+    return typeof input === 'number' && input !== input;
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>A polyfill of <code>Number.isNaN</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-number"><code>core-js</code></a></li>
-  <li>{{jsxref("Number")}}</li>
-  <li>{{jsxref("isNaN", "isNaN()")}}</li>
-</ul>
+- A polyfill of `Number.isNaN` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-number)
+- {{jsxref("Number")}}
+- {{jsxref("isNaN", "isNaN()")}}

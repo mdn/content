@@ -8,106 +8,102 @@ tags:
   - Syntax
   - l10n:priority
 ---
-<div>{{jsSidebar("JavaScript Guide")}}
-  {{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling",
-  "Web/JavaScript/Guide/Functions")}}</div>
+{{jsSidebar("JavaScript Guide")}}
+{{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling",
+  "Web/JavaScript/Guide/Functions")}}
 
-<p>Loops offer a quick and easy way to do something repeatedly. This
-  chapter of the <a href="/en-US/docs/Web/JavaScript/Guide">JavaScript Guide</a>
-  introduces the different iteration statements available to JavaScript.</p>
+Loops offer a quick and easy way to do something repeatedly. This
+chapter of the [JavaScript Guide](/en-US/docs/Web/JavaScript/Guide)
+introduces the different iteration statements available to JavaScript.
 
-<p>You can think of a loop as a computerized version of the game where you tell someone to
-  take <em>X</em> steps in one direction, then <em>Y</em> steps in another. For example,
-  the idea "Go five steps to the east" could be expressed this way as a loop:</p>
+You can think of a loop as a computerized version of the game where you tell someone to
+take _X_ steps in one direction, then _Y_ steps in another. For example,
+the idea "Go five steps to the east" could be expressed this way as a loop:
 
-<pre class="brush: js">for (let step = 0; step &lt; 5; step++) {
+```js
+for (let step = 0; step < 5; step++) {
   // Runs 5 times, with values of step 0 through 4.
   console.log('Walking east one step');
 }
-</pre>
+```
 
-<p>There are many different kinds of loops, but they all essentially do the same thing:
-  they repeat an action some number of times. (Note that it's possible that number could
-  be zero!)</p>
+There are many different kinds of loops, but they all essentially do the same thing:
+they repeat an action some number of times. (Note that it's possible that number could
+be zero!)
 
-<p>The various loop mechanisms offer different ways to determine the start and end points
-  of the loop. There are various situations that are more easily served by one type of
-  loop over the others.</p>
+The various loop mechanisms offer different ways to determine the start and end points
+of the loop. There are various situations that are more easily served by one type of
+loop over the others.
 
-<p>The statements for loops provided in JavaScript are:</p>
+The statements for loops provided in JavaScript are:
 
-<ul>
-  <li><a href="#for_statement">for statement</a></li>
-  <li><a href="#do...while_statement">do...while statement</a></li>
-  <li><a href="#while_statement">while statement</a></li>
-  <li><a href="#labeled_statement">labeled statement</a></li>
-  <li><a href="#break_statement">break statement</a></li>
-  <li><a href="#continue_statement">continue statement</a></li>
-  <li><a href="#for...in_statement">for...in statement</a></li>
-  <li><a href="#for...of_statement">for...of statement</a></li>
-</ul>
+- [for statement](#for_statement)
+- [do...while statement](#do...while_statement)
+- [while statement](#while_statement)
+- [labeled statement](#labeled_statement)
+- [break statement](#break_statement)
+- [continue statement](#continue_statement)
+- [for...in statement](#for...in_statement)
+- [for...of statement](#for...of_statement)
 
-<h2 id="for_statement"><code>for</code> statement</h2>
+## `for` statement
 
-<p>A {{jsxref("statements/for","for")}} loop repeats until a specified condition evaluates
-  to <code>false</code>. The JavaScript <code>for</code> loop is similar to the Java and C
-  <code>for</code> loop.</p>
+A {{jsxref("statements/for","for")}} loop repeats until a specified condition evaluates
+to `false`. The JavaScript `for` loop is similar to the Java and C
+`for` loop.
 
-<p>A <code>for</code> statement looks as follows:</p>
+A `for` statement looks as follows:
 
-<pre class="brush: js">for ([initialExpression]; [conditionExpression]; [incrementExpression])
+```js
+for ([initialExpression]; [conditionExpression]; [incrementExpression])
   statement
-</pre>
+```
 
-<p>When a <code>for</code> loop executes, the following occurs:</p>
+When a `for` loop executes, the following occurs:
 
-<ol>
-  <li>The initializing expression <code>initialExpression</code>, if any, is executed.
+1.  The initializing expression `initialExpression`, if any, is executed.
     This expression usually initializes one or more loop counters, but the syntax allows
     an expression of any degree of complexity. This expression can also declare variables.
-  </li>
-  <li>The <code>conditionExpression</code> expression is evaluated. If the value of
-    <code>conditionExpression</code> is true, the loop statements execute. If the value of
-    <code>condition</code> is false, the <code>for</code> loop terminates. (If the
-    <code>condition</code> expression is omitted entirely, the condition is assumed to be
-    true.)</li>
-  <li>The <code>statement</code> executes. To execute multiple statements, use a block
-    statement (<code>{ ... }</code>) to group those statements.</li>
-  <li>If present, the update expression <code>incrementExpression</code> is executed.</li>
-  <li>Control returns to Step 2.</li>
-</ol>
+2.  The `conditionExpression` expression is evaluated. If the value of
+    `conditionExpression` is true, the loop statements execute. If the value of
+    `condition` is false, the `for` loop terminates. (If the
+    `condition` expression is omitted entirely, the condition is assumed to be
+    true.)
+3.  The `statement` executes. To execute multiple statements, use a block
+    statement (`{ ... }`) to group those statements.
+4.  If present, the update expression `incrementExpression` is executed.
+5.  Control returns to Step 2.
 
-<h3 id="Example">Example</h3>
+### Example
 
-<p>In the example below, the function contains a <code>for</code> statement that counts
-  the number of selected options in a scrolling list (a <a
-    href="/en-US/docs/Web/HTML/Element/select"
-    title="The HTML &lt;select&gt; element represents a control that provides a menu of options"><code>&lt;select&gt;</code></a>
-  element that allows multiple selections). The <code>for</code> statement declares the
-  variable <code>i</code> and initializes it to <code>0</code>. It checks that
-  <code>i</code> is less than the number of options in the <code>&lt;select&gt;</code>
-  element, performs the succeeding <code>if</code> statement, and increments
-  <code>i</code> by after each pass through the loop.</p>
+In the example below, the function contains a `for` statement that counts
+the number of selected options in a scrolling list (a [`<select>`](/en-US/docs/Web/HTML/Element/select "The HTML <select> element represents a control that provides a menu of options")
+element that allows multiple selections). The `for` statement declares the
+variable `i` and initializes it to `0`. It checks that
+`i` is less than the number of options in the `<select>`
+element, performs the succeeding `if` statement, and increments
+`i` by after each pass through the loop.
 
-<pre class="brush: html">&lt;form name="selectForm"&gt;
-  &lt;p&gt;
-    &lt;label for="musicTypes"&gt;Choose some music types, then click the button below:&lt;/label&gt;
-    &lt;select id="musicTypes" name="musicTypes" multiple="multiple"&gt;
-      &lt;option selected="selected"&gt;R&amp;B&lt;/option&gt;
-      &lt;option&gt;Jazz&lt;/option&gt;
-      &lt;option&gt;Blues&lt;/option&gt;
-      &lt;option&gt;New Age&lt;/option&gt;
-      &lt;option&gt;Classical&lt;/option&gt;
-      &lt;option&gt;Opera&lt;/option&gt;
-    &lt;/select&gt;
-  &lt;/p&gt;
-  &lt;p&gt;&lt;input id="btn" type="button" value="How many are selected?" /&gt;&lt;/p&gt;
-&lt;/form&gt;
+```html
+<form name="selectForm">
+  <p>
+    <label for="musicTypes">Choose some music types, then click the button below:</label>
+    <select id="musicTypes" name="musicTypes" multiple="multiple">
+      <option selected="selected">R&B</option>
+      <option>Jazz</option>
+      <option>Blues</option>
+      <option>New Age</option>
+      <option>Classical</option>
+      <option>Opera</option>
+    </select>
+  </p>
+  <p><input id="btn" type="button" value="How many are selected?" /></p>
+</form>
 
-&lt;script&gt;
+<script>
 function howMany(selectObject) {
   let numberSelected = 0;
-  for (let i = 0; i &lt; selectObject.options.length; i++) {
+  for (let i = 0; i < selectObject.options.length; i++) {
     if (selectObject.options[i].selected) {
       numberSelected++;
     }
@@ -119,174 +115,178 @@ let btn = document.getElementById('btn');
 btn.addEventListener('click', function() {
   alert('Number of options selected: ' + howMany(document.selectForm.musicTypes));
 });
-&lt;/script&gt;
+</script>
+```
 
-</pre>
+## `do...while` statement
 
-<h2 id="do...while_statement"><code>do...while</code> statement</h2>
+The {{jsxref("statements/do...while", "do...while")}} statement repeats until a
+specified condition evaluates to false.
 
-<p>The {{jsxref("statements/do...while", "do...while")}} statement repeats until a
-  specified condition evaluates to false.</p>
+A `do...while` statement looks as follows:
 
-<p>A <code>do...while</code> statement looks as follows:</p>
-
-<pre class="brush: js">do
-  <em>statement</em>
+```js
+do
+  statement
 while (condition);
-</pre>
+```
 
-<p><em><code>statement</code></em> is always executed once before the condition is
-  checked. (To execute multiple statements, use a block statement (<code>{ ... }</code>)
-  to group those statements.)</p>
+_`statement`_ is always executed once before the condition is
+checked. (To execute multiple statements, use a block statement (`{ ... }`)
+to group those statements.)
 
-<p>If <code>condition</code> is <code>true</code>, the statement executes again. At the
-  end of every execution, the condition is checked. When the condition is
-  <code>false</code>, execution stops, and control passes to the statement following
-  <code>do...while</code>.</p>
+If `condition` is `true`, the statement executes again. At the
+end of every execution, the condition is checked. When the condition is
+`false`, execution stops, and control passes to the statement following
+`do...while`.
 
-<h3 id="Example_2">Example</h3>
+### Example
 
-<p>In the following example, the <code>do</code> loop iterates at least once and
-  reiterates until <code><em>i</em></code> is no longer less than <code>5</code>.</p>
+In the following example, the `do` loop iterates at least once and
+reiterates until `i` is no longer less than `5`.
 
-<pre class="brush: js">let i = 0;
+```js
+let i = 0;
 do {
   i += 1;
   console.log(i);
-} while (i &lt; 5);</pre>
+} while (i < 5);
+```
 
-<h2 id="while_statement"><code>while</code> statement</h2>
+## `while` statement
 
-<p>A {{jsxref("statements/while","while")}} statement executes its statements as long as a
-  specified condition evaluates to <code>true</code>. A <code>while</code> statement looks
-  as follows:</p>
+A {{jsxref("statements/while","while")}} statement executes its statements as long as a
+specified condition evaluates to `true`. A `while` statement looks
+as follows:
 
-<pre class="brush: js">while (<em>condition</em>)
-  <em>statement</em>
-</pre>
+```js
+while (condition)
+  statement
+```
 
-<p>If the <em><code>condition </code></em>becomes <code>false</code>,
-  <code>statement</code> within the loop stops executing and control passes to the
-  statement following the loop.</p>
+If the *`condition `*becomes `false`,
+`statement` within the loop stops executing and control passes to the
+statement following the loop.
 
-<p>The condition test occurs <em>before</em> <code>statement</code> in the loop is
-  executed. If the condition returns <code>true</code>, <code>statement</code> is executed
-  and the <em><code>condition</code></em> is tested again. If the condition returns
-  <code>false</code>, execution stops, and control is passed to the statement following
-  <code>while</code>.</p>
+The condition test occurs _before_ `statement` in the loop is
+executed. If the condition returns `true`, `statement` is executed
+and the _`condition`_ is tested again. If the condition returns
+`false`, execution stops, and control is passed to the statement following
+`while`.
 
-<p>To execute multiple statements, use a block statement (<code>{ ... }</code>) to group
-  those statements.</p>
+To execute multiple statements, use a block statement (`{ ... }`) to group
+those statements.
 
-<h3 id="Example_1">Example 1</h3>
+### Example 1
 
-<p>The following <code>while</code> loop iterates as long as <em><code>n</code></em> is
-  less than <code>3</code>:</p>
+The following `while` loop iterates as long as _`n`_ is
+less than `3`:
 
-<pre class="brush: js">let n = 0;
+```js
+let n = 0;
 let x = 0;
-while (n &lt; 3) {
+while (n < 3) {
   n++;
   x += n;
 }
-</pre>
+```
 
-<p>With each iteration, the loop increments <code>n</code> and adds that value to
-  <code>x</code>. Therefore, <code>x</code> and <code>n</code> take on the following
-  values:</p>
+With each iteration, the loop increments `n` and adds that value to
+`x`. Therefore, `x` and `n` take on the following
+values:
 
-<ul>
-  <li>After the first pass: <code>n</code> = <code>1</code> and <code>x</code> =
-    <code>1</code></li>
-  <li>After the second pass: <code>n</code> = <code>2</code> and <code>x</code> =
-    <code>3</code></li>
-  <li>After the third pass: <code>n</code> = <code>3</code> and <code>x</code> =
-    <code>6</code></li>
-</ul>
+- After the first pass: `n` = `1` and `x` =
+  `1`
+- After the second pass: `n` = `2` and `x` =
+  `3`
+- After the third pass: `n` = `3` and `x` =
+  `6`
 
-<p>After completing the third pass, the condition <code>n &lt; 3</code> is no longer
-  <code>true</code>, so the loop terminates.</p>
+After completing the third pass, the condition `n < 3` is no longer
+`true`, so the loop terminates.
 
-<h3 id="Example_2_2">Example 2</h3>
+### Example 2
 
-<p>Avoid infinite loops. Make sure the condition in a loop eventually becomes
-  <code>false</code>—otherwise, the loop will never terminate! The statements in the
-  following <code>while</code> loop execute forever because the condition never becomes
-  <code>false</code>:</p>
+Avoid infinite loops. Make sure the condition in a loop eventually becomes
+`false`—otherwise, the loop will never terminate! The statements in the
+following `while` loop execute forever because the condition never becomes
+`false`:
 
-<pre class="example-bad brush: js">// Infinite loops are bad!
+```js example-bad
+// Infinite loops are bad!
 while (true) {
   console.log('Hello, world!');
-}</pre>
+}
+```
 
-<h2 id="labeled_statement"><code>labeled</code> statement</h2>
+## `labeled` statement
 
-<p>A {{jsxref("statements/label","label")}} provides a statement with an identifier that
-  lets you refer to it elsewhere in your program. For example, you can use a label to
-  identify a loop, and then use the <code>break</code> or <code>continue</code> statements
-  to indicate whether a program should interrupt the loop or continue its execution.</p>
+A {{jsxref("statements/label","label")}} provides a statement with an identifier that
+lets you refer to it elsewhere in your program. For example, you can use a label to
+identify a loop, and then use the `break` or `continue` statements
+to indicate whether a program should interrupt the loop or continue its execution.
 
-<p>The syntax of the labeled statement looks like the following:</p>
+The syntax of the labeled statement looks like the following:
 
-<pre class="brush: js">label :
+```js
+label :
    statement
-</pre>
+```
 
-<p>The value of <code><em>label</em></code> may be any JavaScript identifier that is not a
-  reserved word. The <code><em>statement</em></code> that you identify with a label may be
-  any statement.</p>
+The value of `label` may be any JavaScript identifier that is not a
+reserved word. The `statement` that you identify with a label may be
+any statement.
 
-<h3 id="Example_3">Example</h3>
+### Example
 
-<p>In this example, the label <code>markLoop</code> identifies a <code>while</code> loop.
-</p>
+In this example, the label `markLoop` identifies a `while` loop.
 
-<pre class="brush: js">markLoop:
+```js
+markLoop:
 while (theMark === true) {
    doSomething();
-}</pre>
+}
+```
 
-<h2 id="break_statement"><code>break</code> statement</h2>
+## `break` statement
 
-<p>Use the {{jsxref("statements/break","break")}} statement to terminate a loop,
-  <code>switch</code>, or in conjunction with a labeled statement.</p>
+Use the {{jsxref("statements/break","break")}} statement to terminate a loop,
+`switch`, or in conjunction with a labeled statement.
 
-<ul>
-  <li>When you use <code>break</code> without a label, it terminates the innermost
-    enclosing <code>while</code>, <code>do-while</code>, <code>for</code>, or
-    <code>switch</code> immediately and transfers control to the following statement.</li>
-  <li>When you use <code>break</code> with a label, it terminates the specified labeled
-    statement.</li>
-</ul>
+- When you use `break` without a label, it terminates the innermost
+  enclosing `while`, `do-while`, `for`, or
+  `switch` immediately and transfers control to the following statement.
+- When you use `break` with a label, it terminates the specified labeled
+  statement.
 
-<p>The syntax of the <code>break</code> statement looks like this:</p>
+The syntax of the `break` statement looks like this:
 
-<pre class="brush: js">break;
-break [<em>label</em>];
-</pre>
+```js
+break;
+break [label];
+```
 
-<ol>
-  <li>The first form of the syntax terminates the innermost enclosing loop or
-    <code>switch.</code></li>
-  <li>The second form of the syntax terminates the specified enclosing labeled statement.
-  </li>
-</ol>
+1.  The first form of the syntax terminates the innermost enclosing loop or
+    `switch.`
+2.  The second form of the syntax terminates the specified enclosing labeled statement.
 
-<h3 id="Example_1_2">Example 1</h3>
+### Example 1
 
-<p>The following example iterates through the elements in an array until it finds the
-  index of an element whose value is <code>theValue</code>:</p>
+The following example iterates through the elements in an array until it finds the
+index of an element whose value is `theValue`:
 
-<pre class="brush: js">for (let i = 0; i &lt; a.length; i++) {
+```js
+for (let i = 0; i < a.length; i++) {
   if (a[i] === theValue) {
     break;
   }
-}</pre>
+}
+```
 
-<h3 id="Example_2_Breaking_to_a_label"><strong>Example 2:</strong> Breaking to a label
-</h3>
+### **Example 2:** Breaking to a label
 
-<pre class="brush: js">let x = 0;
+```js
+let x = 0;
 let z = 0;
 labelCancelLoops: while (true) {
   console.log('Outer loops: ' + x);
@@ -295,48 +295,48 @@ labelCancelLoops: while (true) {
   while (true) {
     console.log('Inner loops: ' + z);
     z += 1;
-    if (z === 10 &amp;&amp; x === 10) {
+    if (z === 10 && x === 10) {
       break labelCancelLoops;
     } else if (z === 10) {
       break;
     }
   }
 }
-</pre>
+```
 
-<h2 id="continue_statement"><code>continue</code> statement</h2>
+## `continue` statement
 
-<p>The {{jsxref("statements/continue","continue")}} statement can be used to restart a
-  <code>while</code>, <code>do-while</code>, <code>for</code>, or <code>label</code>
-  statement.</p>
+The {{jsxref("statements/continue","continue")}} statement can be used to restart a
+`while`, `do-while`, `for`, or `label`
+statement.
 
-<ul>
-  <li>When you use <code>continue</code> without a label, it terminates the current
-    iteration of the innermost enclosing <code>while</code>, <code>do-while</code>, or
-    <code>for</code> statement and continues execution of the loop with the next
-    iteration. In contrast to the <code>break</code> statement, <code>continue</code> does
-    not terminate the execution of the loop entirely. In a <code>while</code> loop, it
-    jumps back to the condition. In a <code>for</code> loop, it jumps to the
-    <code>increment-expression</code>.</li>
-  <li>When you use <code>continue</code> with a label, it applies to the looping statement
-    identified with that label.</li>
-</ul>
+- When you use `continue` without a label, it terminates the current
+  iteration of the innermost enclosing `while`, `do-while`, or
+  `for` statement and continues execution of the loop with the next
+  iteration. In contrast to the `break` statement, `continue` does
+  not terminate the execution of the loop entirely. In a `while` loop, it
+  jumps back to the condition. In a `for` loop, it jumps to the
+  `increment-expression`.
+- When you use `continue` with a label, it applies to the looping statement
+  identified with that label.
 
-<p>The syntax of the <code>continue</code> statement looks like the following:</p>
+The syntax of the `continue` statement looks like the following:
 
-<pre class="brush: js">continue [<em>label</em>];
-</pre>
+```js
+continue [label];
+```
 
-<h3 id="Example_1_3">Example 1</h3>
+### Example 1
 
-<p>The following example shows a <code>while</code> loop with a <code>continue</code>
-  statement that executes when the value of <code>i</code> is <code>3</code>. Thus,
-  <code>n</code> takes on the values <code>1</code>, <code>3</code>, <code>7</code>, and
-  <code>12</code>.</p>
+The following example shows a `while` loop with a `continue`
+statement that executes when the value of `i` is `3`. Thus,
+`n` takes on the values `1`, `3`, `7`, and
+`12`.
 
-<pre class="brush: js">let i = 0;
+```js
+let i = 0;
 let n = 0;
-while (i &lt; 5) {
+while (i < 5) {
   i++;
   if (i === 3) {
     continue;
@@ -348,7 +348,7 @@ while (i &lt; 5) {
 
 let i = 0;
 let n = 0;
-while (i &lt; 5) {
+while (i < 5) {
   i++;
   if (i === 3) {
      // continue;
@@ -357,31 +357,32 @@ while (i &lt; 5) {
   console.log(n);
 }
 // 1,3,6,10,15
-</pre>
+```
 
-<h3 id="Example_2_3">Example 2</h3>
+### Example 2
 
-<p>A statement labeled <em><code>checkiandj</code></em> contains a statement labeled
-  <em><code>checkj</code></em>. If <code>continue</code> is encountered, the program
-  terminates the current iteration of <em><code>checkj</code></em> and begins the next
-  iteration. Each time <code>continue</code> is encountered, <em><code>checkj</code></em>
-  reiterates until its condition returns <code>false</code>. When <code>false</code> is
-  returned, the remainder of the <em><code>checkiandj</code></em> statement is completed,
-  and <em><code>checkiandj</code></em> reiterates until its condition returns
-  <code>false</code>. When <code>false</code> is returned, the program continues at the
-  statement following <em><code>checkiandj</code></em>.</p>
+A statement labeled _`checkiandj`_ contains a statement labeled
+_`checkj`_. If `continue` is encountered, the program
+terminates the current iteration of _`checkj`_ and begins the next
+iteration. Each time `continue` is encountered, _`checkj`_
+reiterates until its condition returns `false`. When `false` is
+returned, the remainder of the _`checkiandj`_ statement is completed,
+and _`checkiandj`_ reiterates until its condition returns
+`false`. When `false` is returned, the program continues at the
+statement following _`checkiandj`_.
 
-<p>If <code>continue</code> had a label of <em><code>checkiandj</code></em>, the program
-  would continue at the top of the <em><code>checkiandj</code></em> statement.</p>
+If `continue` had a label of _`checkiandj`_, the program
+would continue at the top of the _`checkiandj`_ statement.
 
-<pre class="brush: js">let i = 0;
+```js
+let i = 0;
 let j = 10;
 checkiandj:
-  while (i &lt; 4) {
+  while (i < 4) {
     console.log(i);
     i += 1;
     checkj:
-      while (j &gt; 4) {
+      while (j > 4) {
         console.log(j);
         j -= 1;
         if ((j % 2) === 0) {
@@ -391,71 +392,76 @@ checkiandj:
       }
       console.log('i = ' + i);
       console.log('j = ' + j);
-  }</pre>
+  }
+```
 
-<h2 id="for...in_statement"><code>for...in</code> statement</h2>
+## `for...in` statement
 
-<p>The {{jsxref("statements/for...in","for...in")}} statement iterates a specified
-  variable over all the enumerable properties of an object. For each distinct property,
-  JavaScript executes the specified statements. A <code>for...in</code> statement looks as
-  follows:</p>
+The {{jsxref("statements/for...in","for...in")}} statement iterates a specified
+variable over all the enumerable properties of an object. For each distinct property,
+JavaScript executes the specified statements. A `for...in` statement looks as
+follows:
 
-<pre class="brush: js">for (variable in object)
+```js
+for (variable in object)
   statement
-</pre>
+```
 
-<h3 id="Example_4">Example</h3>
+### Example
 
-<p>The following function takes as its argument an object and the object's name. It then
-  iterates over all the object's properties and returns a string that lists the property
-  names and their values.</p>
+The following function takes as its argument an object and the object's name. It then
+iterates over all the object's properties and returns a string that lists the property
+names and their values.
 
-<pre class="brush: js">function dump_props(obj, obj_name) {
+```js
+function dump_props(obj, obj_name) {
   let result = '';
   for (let i in obj) {
-    result += obj_name + '.' + i + ' = ' + obj[i] + '&lt;br&gt;';
+    result += obj_name + '.' + i + ' = ' + obj[i] + '<br>';
   }
-  result += '&lt;hr&gt;';
+  result += '<hr>';
   return result;
 }
-</pre>
+```
 
-<p>For an object <code>car</code> with properties <code>make</code> and
-  <code>model</code>, <code>result</code> would be:</p>
+For an object `car` with properties `make` and
+`model`, `result` would be:
 
-<pre class="brush: js">car.make = Ford
+```js
+car.make = Ford
 car.model = Mustang
-</pre>
+```
 
-<h3 id="Arrays">Arrays</h3>
+### Arrays
 
-<p>Although it may be tempting to use this as a way to iterate over {{jsxref("Array")}}
-  elements, the <code>for...in</code> statement will return the name of your user-defined
-  properties in addition to the numeric indexes.</p>
+Although it may be tempting to use this as a way to iterate over {{jsxref("Array")}}
+elements, the `for...in` statement will return the name of your user-defined
+properties in addition to the numeric indexes.
 
-<p>Therefore, it is better to use a traditional {{jsxref("statements/for","for")}} loop
-  with a numeric index when iterating over arrays, because the <code>for...in</code>
-  statement iterates over user-defined properties in addition to the array elements, if
-  you modify the Array object (such as adding custom properties or methods).</p>
+Therefore, it is better to use a traditional {{jsxref("statements/for","for")}} loop
+with a numeric index when iterating over arrays, because the `for...in`
+statement iterates over user-defined properties in addition to the array elements, if
+you modify the Array object (such as adding custom properties or methods).
 
-<h2 id="for...of_statement"><code>for...of</code> statement</h2>
+## `for...of` statement
 
-<p>The {{jsxref("statements/for...of","for...of")}} statement creates a loop Iterating
-  over <a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols">iterable objects</a> (including
-  {{jsxref("Array")}}, {{jsxref("Map")}}, {{jsxref("Set")}},
-  {{jsxref("functions/arguments","arguments")}} object and so on), invoking a custom
-  iteration hook with statements to be executed for the value of each distinct property.
-</p>
+The {{jsxref("statements/for...of","for...of")}} statement creates a loop Iterating
+over [iterable objects](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) (including
+{{jsxref("Array")}}, {{jsxref("Map")}}, {{jsxref("Set")}},
+{{jsxref("functions/arguments","arguments")}} object and so on), invoking a custom
+iteration hook with statements to be executed for the value of each distinct property.
 
-<pre class="brush: js">for (<em>variable</em> of <em>object</em>)
-  <em>statement</em>
-</pre>
+```js
+for (variable of object)
+  statement
+```
 
-<p>The following example shows the difference between a <code>for...of</code> loop and a
-  {{jsxref("statements/for...in","for...in")}} loop. While <code>for...in</code> iterates
-  over property names, <code>for...of</code> iterates over property values:</p>
+The following example shows the difference between a `for...of` loop and a
+{{jsxref("statements/for...in","for...in")}} loop. While `for...in` iterates
+over property names, `for...of` iterates over property values:
 
-<pre class="brush:js">const arr = [3, 5, 7];
+```js
+const arr = [3, 5, 7];
 arr.foo = 'hello';
 
 for (let i in arr) {
@@ -465,7 +471,7 @@ for (let i in arr) {
 for (let i of arr) {
    console.log(i); // logs 3, 5, 7
 }
-</pre>
+```
 
-<p>{{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling",
-  "Web/JavaScript/Guide/Functions")}}</p>
+{{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling",
+  "Web/JavaScript/Guide/Functions")}}

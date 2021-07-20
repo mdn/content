@@ -10,56 +10,51 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.WeakMap
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><span class="seoSummary">The <strong><code>WeakMap</code></strong> object is a collection of key/value pairs in which the keys are weakly referenced. The keys must be objects and the values can be arbitrary values.</span></p>
+The **`WeakMap`** object is a collection of key/value pairs in which the keys are weakly referenced. The keys must be objects and the values can be arbitrary values.
 
-<p>You can learn more about <code>WeakMap</code>s in the <a href="/en-US/docs/Web/JavaScript/Guide/Keyed_collections#WeakMap_object">WeakMap object</a> guide (under <a href="/en-US/docs/Web/JavaScript/Guide/Keyed_collections">Keyed collections</a>).</p>
+You can learn more about `WeakMap`s in the [WeakMap object](/en-US/docs/Web/JavaScript/Guide/Keyed_collections#WeakMap_object) guide (under [Keyed collections](/en-US/docs/Web/JavaScript/Guide/Keyed_collections)).
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Keys of WeakMaps are of the type <code>Object</code> only. {{Glossary("Primitive", "Primitive data types")}} as keys are not allowed (e.g. a {{jsxref("Symbol")}} can't be a <code>WeakMap</code> key).</p>
+Keys of WeakMaps are of the type `Object` only. {{Glossary("Primitive", "Primitive data types")}} as keys are not allowed (e.g. a {{jsxref("Symbol")}} can't be a `WeakMap` key).
 
-<h3 id="Why_WeakMap">Why <em>Weak</em>Map?</h3>
+### Why *Weak*Map?
 
-<p>A map API <em>could</em> be implemented in JavaScript with two arrays (one for keys, one for values) shared by the four API methods. Setting elements on this map would involve pushing a key and value onto the end of each of those arrays simultaneously. As a result, the indices of the key and value would correspond to both arrays. Getting values from the map would involve iterating through all keys to find a match, then using the index of this match to retrieve the corresponding value from the array of values.</p>
+A map API _could_ be implemented in JavaScript with two arrays (one for keys, one for values) shared by the four API methods. Setting elements on this map would involve pushing a key and value onto the end of each of those arrays simultaneously. As a result, the indices of the key and value would correspond to both arrays. Getting values from the map would involve iterating through all keys to find a match, then using the index of this match to retrieve the corresponding value from the array of values.
 
-<p>Such an implementation would have two main inconveniences:</p>
+Such an implementation would have two main inconveniences:
 
-<ol>
- <li>The first one is an <em>O(<var>n</var>)</em> set and search (<var>n</var> being the number of keys in the map) since both operations must iterate through the list of keys to find a matching value.</li>
- <li>The second inconvenience is a memory leak because the arrays ensure that references to each key and each value are maintained indefinitely. These references prevent the keys from being garbage collected, even if there are no other references to the object. This would also prevent the corresponding values from being garbage collected.</li>
-</ol>
+1.  The first one is an *O(*n*)* set and search (_n_ being the number of keys in the map) since both operations must iterate through the list of keys to find a matching value.
+2.  The second inconvenience is a memory leak because the arrays ensure that references to each key and each value are maintained indefinitely. These references prevent the keys from being garbage collected, even if there are no other references to the object. This would also prevent the corresponding values from being garbage collected.
 
-<p>By contrast, native <code>WeakMap</code>s hold "weak" references to key objects. As such native <code>WeakMap</code>s do not prevent garbage collection, which eventually removes references to the key object. "Weak" references also avoid preventing garbage collection of values in the map. <code>WeakMap</code>s can be particularly useful constructs when mapping keys to information about the key that is valuable <em>only if</em> the key has not been garbage collected.</p>
+By contrast, native `WeakMap`s hold "weak" references to key objects. As such native `WeakMap`s do not prevent garbage collection, which eventually removes references to the key object. "Weak" references also avoid preventing garbage collection of values in the map. `WeakMap`s can be particularly useful constructs when mapping keys to information about the key that is valuable _only if_ the key has not been garbage collected.
 
-<p><strong>Because the references are weak, <code>WeakMap</code> keys are not enumerable.</strong> There is no method to obtain a list of the keys. If there was, the list would depend on the state of garbage collection, introducing non-determinism. If you want to have a list of keys, you should use a {{jsxref("Map")}}.</p>
+**Because the references are weak, `WeakMap` keys are not enumerable.** There is no method to obtain a list of the keys. If there was, the list would depend on the state of garbage collection, introducing non-determinism. If you want to have a list of keys, you should use a {{jsxref("Map")}}.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{jsxref("WeakMap/WeakMap", "WeakMap()")}}</dt>
- <dd>Creates a new <code>WeakMap</code> object.</dd>
-</dl>
+- {{jsxref("WeakMap/WeakMap", "WeakMap()")}}
+  - : Creates a new `WeakMap` object.
 
-<h2 id="Instance_methods">Instance methods</h2>
+## Instance methods
 
-<dl>
- <dt>{{jsxref("WeakMap.delete", "WeakMap.prototype.delete(<var>key</var>)")}}</dt>
- <dd>Removes any value associated to the <code><var>key</var></code>. <code>WeakMap.prototype.has(<var>key</var>)</code> will return <code>false</code> afterwards.</dd>
- <dt>{{jsxref("WeakMap.get", "WeakMap.prototype.get(<var>key</var>)")}}</dt>
- <dd>Returns the value associated to the <code><var>key</var></code>, or <code>undefined</code> if there is none.</dd>
- <dt>{{jsxref("WeakMap.has", "WeakMap.prototype.has(<var>key</var>)")}}</dt>
- <dd>Returns a Boolean asserting whether a value has been associated to the <code><var>key</var></code> in the <code>WeakMap</code> object or not.</dd>
- <dt>{{jsxref("WeakMap.set", "WeakMap.prototype.set(<var>key</var>, <var>value</var>)")}}</dt>
- <dd>Sets the <code><var>value</var></code> for the <code><var>key</var></code> in the <code>WeakMap</code> object. Returns the <code>WeakMap</code> object.</dd>
-</dl>
+- {{jsxref("WeakMap.delete", "WeakMap.prototype.delete(<var>key</var>)")}}
+  - : Removes any value associated to the `key`. `WeakMap.prototype.has(key)` will return `false` afterwards.
+- {{jsxref("WeakMap.get", "WeakMap.prototype.get(<var>key</var>)")}}
+  - : Returns the value associated to the `key`, or `undefined` if there is none.
+- {{jsxref("WeakMap.has", "WeakMap.prototype.has(<var>key</var>)")}}
+  - : Returns a Boolean asserting whether a value has been associated to the `key` in the `WeakMap` object or not.
+- {{jsxref("WeakMap.set", "WeakMap.prototype.set(<var>key</var>, <var>value</var>)")}}
+  - : Sets the `value` for the `key` in the `WeakMap` object. Returns the `WeakMap` object.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_WeakMap">Using WeakMap</h3>
+### Using WeakMap
 
-<pre class="brush: js">const wm1 = new WeakMap(),
+```js
+const wm1 = new WeakMap(),
       wm2 = new WeakMap(),
       wm3 = new WeakMap();
 const o1 = {},
@@ -86,11 +81,12 @@ wm3.get(o1); // 37
 wm1.has(o1); // true
 wm1.delete(o1);
 wm1.has(o1); // false
-</pre>
+```
 
-<h3 id="Implementing_a_WeakMap-like_class_with_a_.clear_method">Implementing a WeakMap-like class with a .clear() method</h3>
+### Implementing a WeakMap-like class with a .clear() method
 
-<pre class="brush: js">class ClearableWeakMap {
+```js
+class ClearableWeakMap {
   constructor(init) {
     this._wm = new WeakMap(init);
   }
@@ -111,23 +107,21 @@ wm1.has(o1); // false
     return this;
   }
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>A polyfill of <code>WeakMap</code> is available in <a href="https://github.com/zloirock/core-js#weakmap"><code>core-js</code></a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Keyed_collections#WeakMap_object"><code>WeakMap</code> in the JavaScript guide</a></li>
- <li><a href="http://fitzgeraldnick.com/weblog/53/">Hiding Implementation Details with ECMAScript 6 WeakMaps</a></li>
- <li>{{jsxref("Map")}}</li>
- <li>{{jsxref("Set")}}</li>
- <li>{{jsxref("WeakSet")}}</li>
-</ul>
+- A polyfill of `WeakMap` is available in [`core-js`](https://github.com/zloirock/core-js#weakmap)
+- [`WeakMap` in the JavaScript guide](/en-US/docs/Web/JavaScript/Guide/Keyed_collections#WeakMap_object)
+- [Hiding Implementation Details with ECMAScript 6 WeakMaps](http://fitzgeraldnick.com/weblog/53/)
+- {{jsxref("Map")}}
+- {{jsxref("Set")}}
+- {{jsxref("WeakSet")}}

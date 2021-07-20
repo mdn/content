@@ -2,80 +2,73 @@
 title: WebAssembly.validate()
 slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/validate
 tags:
-- API
-- JavaScript
-- Method
-- Object
-- Reference
-- WebAssembly
-- validate
+  - API
+  - JavaScript
+  - Method
+  - Object
+  - Reference
+  - WebAssembly
+  - validate
 browser-compat: javascript.builtins.WebAssembly.validate
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>WebAssembly.validate()</code></strong> function validates a given <a
-    href="/en-US/docs/Web/JavaScript/Typed_arrays">typed array</a> of WebAssembly binary
-  code, returning whether the bytes form a valid wasm module (<code>true</code>) or not
-  (<code>false</code>).</p>
+The **`WebAssembly.validate()`** function validates a given [typed array](/en-US/docs/Web/JavaScript/Typed_arrays) of WebAssembly binary
+code, returning whether the bytes form a valid wasm module (`true`) or not
+(`false`).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">WebAssembly.validate(bufferSource)</pre>
+```js
+WebAssembly.validate(bufferSource)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>bufferSource</code></dt>
-  <dd>A <a href="/en-US/docs/Web/JavaScript/Typed_arrays">typed array</a> or <a
-      href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a>
-    containing WebAssembly binary code to be validated.</dd>
-</dl>
+- `bufferSource`
+  - : A [typed array](/en-US/docs/Web/JavaScript/Typed_arrays) or [ArrayBuffer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
+    containing WebAssembly binary code to be validated.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A boolean that specifies whether <code>bufferSource</code> is valid wasm code
-  (<code>true</code>) or not (<code>false</code>).</p>
+A boolean that specifies whether `bufferSource` is valid wasm code
+(`true`) or not (`false`).
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>If <code>bufferSource</code> is not a <a
-    href="/en-US/docs/Web/JavaScript/Typed_arrays">typed array</a> or <a
-    href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a>,
-  a {{jsxref("TypeError")}} is thrown.</p>
+If `bufferSource` is not a [typed array](/en-US/docs/Web/JavaScript/Typed_arrays) or [ArrayBuffer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer),
+a {{jsxref("TypeError")}} is thrown.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_validate">Using validate</h3>
+### Using validate
 
-<p>The following example (see the validate.html <a
-    href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/validate.html">source
-    code</a>, and <a
-    href="https://mdn.github.io/webassembly-examples/js-api-examples/validate.html">see it
-    live too</a>) fetches a .wasm module and converts it into a typed array. The
-  <code>validate()</code> method is then used to check whether the module is valid.</p>
+The following example (see the validate.html [source
+code](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/validate.html), and [see it
+live too](https://mdn.github.io/webassembly-examples/js-api-examples/validate.html)) fetches a .wasm module and converts it into a typed array. The
+`validate()` method is then used to check whether the module is valid.
 
-<pre class="brush: js">fetch('simple.wasm').then(response =&gt;
+```js
+fetch('simple.wasm').then(response =>
   response.arrayBuffer()
 ).then(function(bytes) {
   var valid = WebAssembly.validate(bytes);
   console.log("The given bytes are "
     + (valid ? "" : "not ") + "a valid wasm module");
 });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/WebAssembly">WebAssembly</a> overview page</li>
-  <li><a href="/en-US/docs/WebAssembly/Concepts">WebAssembly concepts</a></li>
-  <li><a href="/en-US/docs/WebAssembly/Using_the_JavaScript_API">Using the WebAssembly
-      JavaScript API</a></li>
-</ul>
+- [WebAssembly](/en-US/docs/WebAssembly) overview page
+- [WebAssembly concepts](/en-US/docs/WebAssembly/Concepts)
+- [Using the WebAssembly
+  JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)

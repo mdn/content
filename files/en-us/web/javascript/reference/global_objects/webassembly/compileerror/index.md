@@ -11,50 +11,45 @@ tags:
   - WebAssembly
 browser-compat: javascript.builtins.WebAssembly.CompileError
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <code><strong>WebAssembly.CompileError</strong></code> object indicates an error during WebAssembly decoding or validation.</p>
+The **`WebAssembly.CompileError`** object indicates an error during WebAssembly decoding or validation.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/CompileError/CompileError"><code>WebAssembly.CompileError()</code></a></dt>
- <dd>Creates a new <code>WebAssembly.CompileError</code> object.</dd>
-</dl>
+- [`WebAssembly.CompileError()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/CompileError/CompileError)
+  - : Creates a new `WebAssembly.CompileError` object.
 
-<h2 id="Instance_properties">Instance properties</h2>
+## Instance properties
 
-<dl>
- <dt>{{jsxref("Error.prototype.message", "WebAssembly.CompileError.prototype.message")}}</dt>
- <dd>Error message. Inherited from {{jsxref("Error")}}.</dd>
- <dt>{{jsxref("Error.prototype.name", "WebAssembly.CompileError.prototype.name")}}</dt>
- <dd>Error name. Inherited from {{jsxref("Error")}}.</dd>
- <dt>{{jsxref("Error.prototype.fileName", "WebAssembly.CompileError.prototype.fileName")}}</dt>
- <dd>Path to file that raised this error. Inherited from {{jsxref("Error")}}.</dd>
- <dt>{{jsxref("Error.prototype.lineNumber", "WebAssembly.CompileError.prototype.lineNumber")}}</dt>
- <dd>Line number in file that raised this error. Inherited from {{jsxref("Error")}}.</dd>
- <dt>{{jsxref("Error.prototype.columnNumber", "WebAssembly.CompileError.prototype.columnNumber")}}</dt>
- <dd>Column number in line that raised this error. Inherited from {{jsxref("Error")}}.</dd>
- <dt>{{jsxref("Error.prototype.stack", "WebAssembly.CompileError.prototype.stack")}}</dt>
- <dd>Stack trace. Inherited from {{jsxref("Error")}}.</dd>
-</dl>
+- {{jsxref("Error.prototype.message", "WebAssembly.CompileError.prototype.message")}}
+  - : Error message. Inherited from {{jsxref("Error")}}.
+- {{jsxref("Error.prototype.name", "WebAssembly.CompileError.prototype.name")}}
+  - : Error name. Inherited from {{jsxref("Error")}}.
+- {{jsxref("Error.prototype.fileName", "WebAssembly.CompileError.prototype.fileName")}}
+  - : Path to file that raised this error. Inherited from {{jsxref("Error")}}.
+- {{jsxref("Error.prototype.lineNumber", "WebAssembly.CompileError.prototype.lineNumber")}}
+  - : Line number in file that raised this error. Inherited from {{jsxref("Error")}}.
+- {{jsxref("Error.prototype.columnNumber", "WebAssembly.CompileError.prototype.columnNumber")}}
+  - : Column number in line that raised this error. Inherited from {{jsxref("Error")}}.
+- {{jsxref("Error.prototype.stack", "WebAssembly.CompileError.prototype.stack")}}
+  - : Stack trace. Inherited from {{jsxref("Error")}}.
 
-<h2 id="Instance_methods">Instance methods</h2>
+## Instance methods
 
-<dl>
- <dt>{{jsxref("Error.prototype.toSource", "WebAssembly.CompileError.prototype.toSource()")}}</dt>
- <dd>Returns code that could eval to the same error. Inherited from {{jsxref("Error")}}.</dd>
- <dt>{{jsxref("Error.prototype.toString", "WebAssembly.CompileError.prototype.toString()")}}</dt>
- <dd>Returns a string representing the specified <code>Error</code> object.. Inherited from {{jsxref("Error")}}.</dd>
-</dl>
+- {{jsxref("Error.prototype.toSource", "WebAssembly.CompileError.prototype.toSource()")}}
+  - : Returns code that could eval to the same error. Inherited from {{jsxref("Error")}}.
+- {{jsxref("Error.prototype.toString", "WebAssembly.CompileError.prototype.toString()")}}
+  - : Returns a string representing the specified `Error` object.. Inherited from {{jsxref("Error")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Creating_a_new_CompileError_instance">Creating a new CompileError instance</h3>
+### Creating a new CompileError instance
 
-<p>The following snippet creates a new <code>CompileError</code> instance, and logs its details to the console:</p>
+The following snippet creates a new `CompileError` instance, and logs its details to the console:
 
-<pre class="brush: js">try {
+```js
+try {
   throw new WebAssembly.CompileError('Hello', 'someFile', 10);
 } catch (e) {
   console.log(e instanceof CompileError); // true
@@ -64,20 +59,19 @@ browser-compat: javascript.builtins.WebAssembly.CompileError
   console.log(e.lineNumber);              // 10
   console.log(e.columnNumber);            // 0
   console.log(e.stack);                   // returns the location where the code was run
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/WebAssembly">WebAssembly</a> overview page</li>
- <li><a href="/en-US/docs/WebAssembly/Concepts">WebAssembly concepts</a></li>
- <li><a href="/en-US/docs/WebAssembly/Using_the_JavaScript_API">Using the WebAssembly JavaScript API</a></li>
-</ul>
+- [WebAssembly](/en-US/docs/WebAssembly) overview page
+- [WebAssembly concepts](/en-US/docs/WebAssembly/Concepts)
+- [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)

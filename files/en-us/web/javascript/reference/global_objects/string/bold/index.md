@@ -2,60 +2,62 @@
 title: String.prototype.bold()
 slug: Web/JavaScript/Reference/Global_Objects/String/bold
 tags:
-- Deprecated
-- HTML wrapper methods
-- JavaScript
-- Method
-- Prototype
-- Reference
-- String
-- Polyfill
+  - Deprecated
+  - HTML wrapper methods
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
+  - String
+  - Polyfill
 browser-compat: javascript.builtins.String.bold
 ---
-<div>{{JSRef}} {{deprecated_header}}</div>
+{{JSRef}} {{deprecated_header}}
 
-<p>The <strong><code>bold()</code></strong> method creates a {{HTMLElement("b")}} HTML
-  element that causes a string to be displayed as bold.</p>
+The **`bold()`** method creates a {{HTMLElement("b")}} HTML
+element that causes a string to be displayed as bold.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">bold()</pre>
+```js
+bold()
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A string containing a {{HTMLElement("b")}} HTML element.</p>
+A string containing a {{HTMLElement("b")}} HTML element.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The <code>bold()</code> method embeds a string in a <code>&lt;b&gt;</code> element:
-  "<code>&lt;b&gt;str&lt;/b&gt;</code>".</p>
+The `bold()` method embeds a string in a `<b>` element:
+"`<b>str</b>`".
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_bold">Using bold()</h3>
+### Using bold()
 
-<p>The following example uses string methods to change the formatting of a string:</p>
+The following example uses string methods to change the formatting of a string:
 
-<pre class="brush: js">var worldString = 'Hello, world';
+```js
+var worldString = 'Hello, world';
 
-console.log(worldString.blink());   // &lt;blink&gt;Hello, world&lt;/blink&gt;
-console.log(worldString.bold());    // &lt;b&gt;Hello, world&lt;/b&gt;
-console.log(worldString.italics()); // &lt;i&gt;Hello, world&lt;/i&gt;
-console.log(worldString.strike());  // &lt;strike&gt;Hello, world&lt;/strike&gt;</pre>
+console.log(worldString.blink());   // <blink>Hello, world</blink>
+console.log(worldString.bold());    // <b>Hello, world</b>
+console.log(worldString.italics()); // <i>Hello, world</i>
+console.log(worldString.strike());  // <strike>Hello, world</strike>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>A polyfill of <code>String.prototype.bold</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-string-and-regexp"><code>core-js</code></a></li>
-  <li>{{jsxref("String.prototype.blink()")}}</li>
-  <li>{{jsxref("String.prototype.italics()")}}</li>
-  <li>{{jsxref("String.prototype.strike()")}}</li>
-</ul>
+- A polyfill of `String.prototype.bold` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- {{jsxref("String.prototype.blink()")}}
+- {{jsxref("String.prototype.italics()")}}
+- {{jsxref("String.prototype.strike()")}}

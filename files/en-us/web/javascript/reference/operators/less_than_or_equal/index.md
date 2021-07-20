@@ -8,81 +8,89 @@ tags:
   - Reference
 browser-compat: javascript.operators.less_than_or_equal
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>The less than or equal operator (<code>&lt;=</code>) returns <code>true</code> if the left operand is less than or equal to the right operand, and <code>false</code> otherwise.</p>
+The less than or equal operator (`<=`) returns `true` if the left operand is less than or equal to the right operand, and `false` otherwise.
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-less-than-or-equal.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-less-than-or-equal.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+x <= y
+```
 
-<pre class="brush: js">x &lt;= y</pre>
+## Description
 
-<h2 id="Description">Description</h2>
+The operands are compared using the [Abstract Relational Comparison](https://tc39.es/ecma262/#sec-abstract-relational-comparison) algorithm. See the documentation for the [Less than](/en-US/docs/Web/JavaScript/Reference/Operators/Less_than) operator for a summary of this algorithm.
 
-<p>The operands are compared using the <a class="external external-icon" href="https://tc39.es/ecma262/#sec-abstract-relational-comparison" rel="noopener">Abstract Relational Comparison</a> algorithm. See the documentation for the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Less_than">Less than</a> operator for a summary of this algorithm.</p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### String to string comparison
 
-<h3 id="String_to_string_comparison">String to string comparison</h3>
+```js
+console.log("a" <= "b");     // true
+console.log("a" <= "a");     // true
+console.log("a" <= "3");     // false
+```
 
-<pre class="brush: js">console.log("a" &lt;= "b");     // true
-console.log("a" &lt;= "a");     // true
-console.log("a" &lt;= "3");     // false
-</pre>
+### String to number comparison
 
-<h3 id="String_to_number_comparison">String to number comparison</h3>
+```js
+console.log("5" <= 3);       // false
+console.log("3" <= 3);       // true
+console.log("3" <= 5);       // true
 
-<pre class="brush: js">console.log("5" &lt;= 3);       // false
-console.log("3" &lt;= 3);       // true
-console.log("3" &lt;= 5);       // true
+console.log("hello" <= 5);   // false
+console.log(5 <= "hello");   // false
+```
 
-console.log("hello" &lt;= 5);   // false
-console.log(5 &lt;= "hello");   // false</pre>
+### Number to Number comparison
 
-<h3 id="Number_to_Number_comparison">Number to Number comparison</h3>
+```js
+console.log(5 <= 3);         // false
+console.log(3 <= 3);         // true
+console.log(3 <= 5);         // true
+```
 
-<pre class="brush: js">console.log(5 &lt;= 3);         // false
-console.log(3 &lt;= 3);         // true
-console.log(3 &lt;= 5);         // true</pre>
+### Number to BigInt comparison
 
-<h3 id="Number_to_BigInt_comparison">Number to BigInt comparison</h3>
+```js
+console.log(5n <= 3);        // false
+console.log(3 <= 3n);        // true
+console.log(3 <= 5n);        // true
+```
 
-<pre class="brush: js">console.log(5n &lt;= 3);        // false
-console.log(3 &lt;= 3n);        // true
-console.log(3 &lt;= 5n);        // true</pre>
+### Comparing Boolean, null, undefined, NaN
 
-<h3 id="Comparing_Boolean_null_undefined_NaN">Comparing Boolean, null, undefined, NaN</h3>
+```js
+console.log(true <= false);  // false
+console.log(true <= true);   // true
+console.log(false <= true);  // true
 
-<pre class="brush: js">console.log(true &lt;= false);  // false
-console.log(true &lt;= true);   // true
-console.log(false &lt;= true);  // true
+console.log(true <= 0);      // false
+console.log(true <= 1);      // true
 
-console.log(true &lt;= 0);      // false
-console.log(true &lt;= 1);      // true
+console.log(null <= 0);      // true
+console.log(1 <= null);      // false
 
-console.log(null &lt;= 0);      // true
-console.log(1 &lt;= null);      // false
+console.log(undefined <= 3); // false
+console.log(3 <= undefined); // false
 
-console.log(undefined &lt;= 3); // false
-console.log(3 &lt;= undefined); // false
+console.log(3 <= NaN);       // false
+console.log(NaN <= 3);       // false
+```
 
-console.log(3 &lt;= NaN);       // false
-console.log(NaN &lt;= 3);       // false</pre>
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than">Greater than operator</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than_or_equal">Greater than or equal operator</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Less_than">Less than operator</a></li>
-</ul>
+- [Greater than operator](/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than)
+- [Greater than or equal operator](/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than_or_equal)
+- [Less than operator](/en-US/docs/Web/JavaScript/Reference/Operators/Less_than)

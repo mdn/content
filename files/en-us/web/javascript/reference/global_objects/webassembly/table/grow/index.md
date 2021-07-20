@@ -2,71 +2,71 @@
 title: WebAssembly.Table.prototype.grow()
 slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/grow
 tags:
-- API
-- JavaScript
-- Method
-- Reference
-- WebAssembly
-- grow
-- table
+  - API
+  - JavaScript
+  - Method
+  - Reference
+  - WebAssembly
+  - grow
+  - table
 browser-compat: javascript.builtins.WebAssembly.Table.grow
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <code><strong>grow()</strong></code> prototype method of
-  the {{jsxref("WebAssembly.Table")}} object increases the size of the Table instance by a
-  specified number of elements.</p>
+The **`grow()`** prototype method of
+the {{jsxref("WebAssembly.Table")}} object increases the size of the Table instance by a
+specified number of elements.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">grow(number)</pre>
+```js
+grow(number)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><em>number</em></dt>
-  <dd>The number of elements you want to grow the table by.</dd>
-</dl>
+- _number_
+  - : The number of elements you want to grow the table by.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>The previous length of the table.</p>
+The previous length of the table.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>If the <code>grow()</code> operation fails for whatever reason, a
-  {{jsxref("RangeError")}} is thrown.</p>
+If the `grow()` operation fails for whatever reason, a
+{{jsxref("RangeError")}} is thrown.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_grow">Using grow</h3>
+### Using grow
 
-<p>The following example creates a new WebAssembly Table instance with an initial size of
-  2 and a maximum size of 10.</p>
+The following example creates a new WebAssembly Table instance with an initial size of
+2 and a maximum size of 10.
 
-<pre
-  class="brush: js">var table = new WebAssembly.Table({ element: "anyfunc", initial: 2, maximum: 10 });</pre>
+```js
+var table = new WebAssembly.Table({ element: "anyfunc", initial: 2, maximum: 10 });
+```
 
-<p>You can then grow the table by 1 with the following:</p>
+You can then grow the table by 1 with the following:
 
-<pre class="brush: js">console.log(table.length);   // "2"
+```js
+console.log(table.length);   // "2"
 console.log(table.grow(1));  // "2"
 console.log(table.length);   // "3"
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/WebAssembly">WebAssembly</a> overview page</li>
-  <li><a href="/en-US/docs/WebAssembly/Concepts">WebAssembly concepts</a></li>
-  <li><a href="/en-US/docs/WebAssembly/Using_the_JavaScript_API">Using the WebAssembly
-      JavaScript API</a></li>
-</ul>
+- [WebAssembly](/en-US/docs/WebAssembly) overview page
+- [WebAssembly concepts](/en-US/docs/WebAssembly/Concepts)
+- [Using the WebAssembly
+  JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)

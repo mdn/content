@@ -2,74 +2,69 @@
 title: Atomics.store()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/store
 tags:
-- Atomics
-- JavaScript
-- Method
-- Shared Memory
+  - Atomics
+  - JavaScript
+  - Method
+  - Shared Memory
 browser-compat: javascript.builtins.Atomics.store
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The static <code><strong>Atomics</strong></code><strong><code>.store()</code></strong>
-  method stores a given value at the given position in the array and returns that value.
-</p>
+The static **`Atomics`\*\***`.store()`\*\*
+method stores a given value at the given position in the array and returns that value.
 
-<div>{{EmbedInteractiveExample("pages/js/atomics-store.html")}}</div>
+{{EmbedInteractiveExample("pages/js/atomics-store.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+Atomics.store(typedArray, index, value)
+```
 
-<pre class="brush: js">Atomics.store(<var>typedArray</var>, <var>index</var>, <var>value</var>)
-</pre>
+### Parameters
 
-<h3 id="Parameters">Parameters</h3>
-
-<dl>
-  <dt><code><var>typedArray</var></code></dt>
-  <dd>An integer typed array. One of {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}},
+- `typedArray`
+  - : An integer typed array. One of {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}},
     {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}},
     {{jsxref("Uint32Array")}}, {{jsxref("BigInt64Array")}}, or
-    {{jsxref("BigUint64Array")}}.</dd>
-  <dt><code><var>index</var></code></dt>
-  <dd>The position in the <code><var>typedArray</var></code> to store a
-    <code><var>value</var></code> in.</dd>
-  <dt><code><var>value</var></code></dt>
-  <dd>The number to store.</dd>
-</dl>
+    {{jsxref("BigUint64Array")}}.
+- `index`
+  - : The position in the `typedArray` to store a
+    `value` in.
+- `value`
+  - : The number to store.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>The value that has been stored.</p>
+The value that has been stored.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<ul>
-  <li>Throws a {{jsxref("TypeError")}}, if <code><var>typedArray</var></code> is not one
-    of the allowed integer types.</li>
-  <li>Throws a {{jsxref("RangeError")}}, if <code><var>index</var></code> is out of bounds
-    in the <code><var>typedArray</var></code>.</li>
-</ul>
+- Throws a {{jsxref("TypeError")}}, if `typedArray` is not one
+  of the allowed integer types.
+- Throws a {{jsxref("RangeError")}}, if `index` is out of bounds
+  in the `typedArray`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_store">Using store()</h3>
+### Using store()
 
-<pre class="brush: js">var sab = new SharedArrayBuffer(1024);
+```js
+var sab = new SharedArrayBuffer(1024);
 var ta = new Uint8Array(sab);
 
-Atomics.store(ta, 0, 12); // 12</pre>
+Atomics.store(ta, 0, 12); // 12
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Atomics")}}</li>
-  <li>{{jsxref("Atomics.load()")}}</li>
-</ul>
+- {{jsxref("Atomics")}}
+- {{jsxref("Atomics.load()")}}

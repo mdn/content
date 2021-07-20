@@ -2,60 +2,57 @@
 title: Promise.race()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/race
 tags:
-- ECMAScript 2015
-- JavaScript
-- Method
-- Promise
-- Reference
+  - ECMAScript 2015
+  - JavaScript
+  - Method
+  - Promise
+  - Reference
 browser-compat: javascript.builtins.Promise.race
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <code><strong>Promise.race()</strong></code> method returns a promise that fulfills
-  or rejects as soon as one of the promises in an iterable fulfills or rejects, with the
-  value or reason from that promise.</p>
+The **`Promise.race()`** method returns a promise that fulfills
+or rejects as soon as one of the promises in an iterable fulfills or rejects, with the
+value or reason from that promise.
 
-<div>{{EmbedInteractiveExample("pages/js/promise-race.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/promise-race.html", "taller")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+Promise.race(iterable);
+```
 
-<pre class="brush: js">Promise.race(<var>iterable</var>);</pre>
+### Parameters
 
-<h3 id="Parameters">Parameters</h3>
+- `iterable`
+  - : An iterable object, such as an {{jsxref("Array")}}. See [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol).
 
-<dl>
-  <dt><code>iterable</code></dt>
-  <dd>An iterable object, such as an {{jsxref("Array")}}. See <a
-      href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol">iterable</a>.
-  </dd>
-</dl>
+### Return value
 
-<h3 id="Return_value">Return value</h3>
+A **pending** {{jsxref("Promise")}} that **asynchronously**
+yields the value of the first promise in the given iterable to fulfill or reject.
 
-<p>A <strong>pending</strong> {{jsxref("Promise")}} that <strong>asynchronously</strong>
-  yields the value of the first promise in the given iterable to fulfill or reject.</p>
+## Description
 
-<h2 id="Description">Description</h2>
+The `race` function returns a `Promise` that is settled the same
+way (and takes the same value) as the first promise that settles amongst the promises of
+the iterable passed as an argument.
 
-<p>The <code>race</code> function returns a <code>Promise</code> that is settled the same
-  way (and takes the same value) as the first promise that settles amongst the promises of
-  the iterable passed as an argument.</p>
+If the iterable passed is empty, the promise returned will be forever pending.
 
-<p>If the iterable passed is empty, the promise returned will be forever pending.</p>
+If the iterable contains one or more non-promise value and/or an already settled
+promise, then `Promise.race` will resolve to the first of these values found
+in the iterable.
 
-<p>If the iterable contains one or more non-promise value and/or an already settled
-  promise, then <code>Promise.race</code> will resolve to the first of these values found
-  in the iterable.</p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Asynchronicity of Promise.race
 
-<h3 id="Asynchronicity_of_Promise.race">Asynchronicity of Promise.race</h3>
+This following example demonstrates the asynchronicity of `Promise.race`:
 
-<p>This following example demonstrates the asynchronicity of <code>Promise.race</code>:
-</p>
-
-<pre class="brush: js">// we are passing as argument an array of promises that are already resolved,
+```js
+// we are passing as argument an array of promises that are already resolved,
 // to trigger Promise.race as soon as possible
 var resolvedPromisesArray = [Promise.resolve(33), Promise.resolve(44)];
 
@@ -70,13 +67,15 @@ setTimeout(function(){
 });
 
 // logs, in order:
-// Promise { &lt;state&gt;: "pending" }
+// Promise { <state>: "pending" }
 // the stack is now empty
-// Promise { &lt;state&gt;: "fulfilled", &lt;value&gt;: 33 }</pre>
+// Promise { <state>: "fulfilled", <value>: 33 }
+```
 
-<p>An empty iterable causes the returned promise to be forever pending:</p>
+An empty iterable causes the returned promise to be forever pending:
 
-<pre class="brush: js">var foreverPendingPromise = Promise.race([]);
+```js
+var foreverPendingPromise = Promise.race([]);
 console.log(foreverPendingPromise);
 setTimeout(function(){
     console.log('the stack is now empty');
@@ -84,16 +83,17 @@ setTimeout(function(){
 });
 
 // logs, in order:
-// Promise { &lt;state&gt;: "pending" }
+// Promise { <state>: "pending" }
 // the stack is now empty
-// Promise { &lt;state&gt;: "pending" }
-</pre>
+// Promise { <state>: "pending" }
+```
 
-<p>If the iterable contains one or more non-promise value and/or an already settled
-  promise, then <code>Promise.race</code> will resolve to the first of these values found
-  in the array:</p>
+If the iterable contains one or more non-promise value and/or an already settled
+promise, then `Promise.race` will resolve to the first of these values found
+in the array:
 
-<pre class="brush: js">var foreverPendingPromise = Promise.race([]);
+```js
+var foreverPendingPromise = Promise.race([]);
 var alreadyFulfilledProm = Promise.resolve(100);
 
 var arr = [foreverPendingPromise, alreadyFulfilledProm, "non-Promise value"];
@@ -110,21 +110,21 @@ setTimeout(function(){
 });
 
 // logs, in order:
-// Promise { &lt;state&gt;: "pending" }
-// Promise { &lt;state&gt;: "pending" }
+// Promise { <state>: "pending" }
+// Promise { <state>: "pending" }
 // the stack is now empty
-// Promise { &lt;state&gt;: "fulfilled", &lt;value&gt;: 100 }
-// Promise { &lt;state&gt;: "fulfilled", &lt;value&gt;: "non-Promise value" }
-</pre>
+// Promise { <state>: "fulfilled", <value>: 100 }
+// Promise { <state>: "fulfilled", <value>: "non-Promise value" }
+```
 
-<h3 id="Using_Promise.race_–_examples_with_setTimeout">Using Promise.race – examples with
-  setTimeout</h3>
+### Using Promise.race – examples with setTimeout
 
-<pre class="brush: js">var p1 = new Promise(function(resolve, reject) {
-    setTimeout(() =&gt; resolve('one'), 500);
+```js
+var p1 = new Promise(function(resolve, reject) {
+    setTimeout(() => resolve('one'), 500);
 });
 var p2 = new Promise(function(resolve, reject) {
-    setTimeout(() =&gt; resolve('two'), 100);
+    setTimeout(() => resolve('two'), 100);
 });
 
 Promise.race([p1, p2])
@@ -134,10 +134,10 @@ Promise.race([p1, p2])
 });
 
 var p3 = new Promise(function(resolve, reject) {
-    setTimeout(() =&gt; resolve('three'), 100);
+    setTimeout(() => resolve('three'), 100);
 });
 var p4 = new Promise(function(resolve, reject) {
-    setTimeout(() =&gt; reject(new Error('four')), 500);
+    setTimeout(() => reject(new Error('four')), 500);
 });
 
 Promise.race([p3, p4])
@@ -149,10 +149,10 @@ Promise.race([p3, p4])
 });
 
 var p5 = new Promise(function(resolve, reject) {
-    setTimeout(() =&gt; resolve('five'), 500);
+    setTimeout(() => resolve('five'), 500);
 });
 var p6 = new Promise(function(resolve, reject) {
-    setTimeout(() =&gt; reject(new Error('six')), 100);
+    setTimeout(() => reject(new Error('six')), 100);
 });
 
 Promise.race([p5, p6])
@@ -162,13 +162,14 @@ Promise.race([p5, p6])
   console.log(error.message); // "six"
   // p6 is faster, so it rejects
 });
-</pre>
+```
 
-<h3 id="Comparison_with_Promise.any">Comparison with Promise.any</h3>
+### Comparison with Promise.any
 
-<p><code>Promise.race</code> takes the first settled {{jsxref("Promise")}}.</p>
+`Promise.race` takes the first settled {{jsxref("Promise")}}.
 
-<pre class="brush: js">const promise1 = new Promise((resolve, reject) => {
+```js
+const promise1 = new Promise((resolve, reject) => {
   setTimeout(resolve, 500, 'one');
 });
 
@@ -183,11 +184,12 @@ Promise.race([promise1, promise2]).then((value) => {
   console.log('failed with reason:', reason);
 });
 // expected output: "failed with reason: two"
-</pre>
+```
 
-<p>{{jsxref("Promise.any")}} takes the first fulfilled {{jsxref("Promise")}}.</p>
+{{jsxref("Promise.any")}} takes the first fulfilled {{jsxref("Promise")}}.
 
-<pre class="brush: js">const promise1 = new Promise((resolve, reject) => {
+```js
+const promise1 = new Promise((resolve, reject) => {
   setTimeout(resolve, 500, 'one');
 });
 
@@ -202,19 +204,17 @@ Promise.any([promise1, promise2]).then((value) => {
   console.log('failed with reason:', reason);
 });
 // expected output: "succeeded with value: one"
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Promise")}}</li>
-  <li>{{jsxref("Promise.all()")}}</li>
-</ul>
+- {{jsxref("Promise")}}
+- {{jsxref("Promise.all()")}}

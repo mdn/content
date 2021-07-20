@@ -2,95 +2,90 @@
 title: Array.prototype.join()
 slug: Web/JavaScript/Reference/Global_Objects/Array/join
 tags:
-- Array
-- JavaScript
-- Method
-- Prototype
-- Reference
+  - Array
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
 browser-compat: javascript.builtins.Array.join
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><span class="seoSummary">The <code><strong>join()</strong></code> method creates and
-    returns a new string by concatenating all of the elements in an array (or an <a
-      href="/en-US/docs/Web/JavaScript/Guide/Indexed_collections#Working_with_array-like_objects">array-like
-      object</a>), separated by commas or a specified separator string. If the array has
-    only one item, then that item will be returned without using the separator.</span></p>
+The **`join()`** method creates and
+returns a new string by concatenating all of the elements in an array (or an [array-like
+object](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#Working_with_array-like_objects)), separated by commas or a specified separator string. If the array has
+only one item, then that item will be returned without using the separator.
 
-<div>{{EmbedInteractiveExample("pages/js/array-join.html")}}</div>
+{{EmbedInteractiveExample("pages/js/array-join.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 join()
 join(separator)
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>separator</var></code> {{optional_inline}}</dt>
-  <dd>Specifies a string to separate each pair of adjacent elements of the array. The
+- `separator` {{optional_inline}}
+  - : Specifies a string to separate each pair of adjacent elements of the array. The
     separator is converted to a string if necessary. If omitted, the array elements are
-    separated with a comma (","). If <code>separator</code> is an empty string, all
-    elements are joined without any characters in between them.</dd>
-</dl>
+    separated with a comma (","). If `separator` is an empty string, all
+    elements are joined without any characters in between them.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A string with all array elements joined. If <code><em>arr</em>.length</code> is
-  <code>0</code>, the empty string is returned.</p>
+A string with all array elements joined. If `arr.length` is
+`0`, the empty string is returned.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The string conversions of all array elements are joined into one string.</p>
+The string conversions of all array elements are joined into one string.
 
-<div class="warning">
-  <p><strong>Warning:</strong> If an element is <code>undefined</code>, <code>null</code> or an empty array
-    <code>[]</code>, it is converted to an empty string.</p>
-</div>
+> **Warning:** If an element is `undefined`, `null` or an empty array
+> `[]`, it is converted to an empty string.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Joining_an_array_four_different_ways">Joining an array four different ways</h3>
+### Joining an array four different ways
 
-<p>The following example creates an array, <code>a</code>, with three elements, then joins
-  the array four times: using the default separator, then a comma and a space, then a plus
-  and an empty string.</p>
+The following example creates an array, `a`, with three elements, then joins
+the array four times: using the default separator, then a comma and a space, then a plus
+and an empty string.
 
-<pre class="brush: js">var a = ['Wind', 'Water', 'Fire'];
+```js
+var a = ['Wind', 'Water', 'Fire'];
 a.join();      // 'Wind,Water,Fire'
 a.join(', ');  // 'Wind, Water, Fire'
 a.join(' + '); // 'Wind + Water + Fire'
-a.join('');    // 'WindWaterFire'</pre>
+a.join('');    // 'WindWaterFire'
+```
 
-<h3 id="Joining_an_array-like_object">Joining an array-like object</h3>
+### Joining an array-like object
 
-<p>The following example joins array-like object
-  (<code><a href="/en-US/docs/Web/JavaScript/Reference/Functions/arguments">arguments</a></code>),
-  by calling {{jsxref("Function.prototype.call")}} on <code>Array.prototype.join</code>.
-</p>
+The following example joins array-like object
+([`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments)),
+by calling {{jsxref("Function.prototype.call")}} on `Array.prototype.join`.
 
-<pre class="brush: js">function f(a, b, c) {
+```js
+function f(a, b, c) {
   var s = Array.prototype.join.call(arguments);
   console.log(s); // '1,a,true'
 }
 f(1, 'a', true);
 //expected output: "1,a,true"
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("String.prototype.split()")}}</li>
-  <li>{{jsxref("Array.prototype.toString()")}}</li>
-  <li>{{jsxref("TypedArray.prototype.join()")}}</li>
-</ul>
+- {{jsxref("String.prototype.split()")}}
+- {{jsxref("Array.prototype.toString()")}}
+- {{jsxref("TypedArray.prototype.join()")}}

@@ -2,90 +2,96 @@
 title: 'SyntaxError: missing : after property id'
 slug: Web/JavaScript/Reference/Errors/Missing_colon_after_property_id
 tags:
-- Error
-- Errors
-- JavaScript
-- SyntaxError
+  - Error
+  - Errors
+  - JavaScript
+  - SyntaxError
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<p>The JavaScript exception "missing : after property id" occurs when objects are created
-  using the <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer">object
-    initializer</a> syntax. A colon (<code>:</code>) separates keys and values for the
-  object's properties. Somehow, this colon is missing or misplaced.</p>
+The JavaScript exception "missing : after property id" occurs when objects are created
+using the [object
+initializer](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer) syntax. A colon (`:`) separates keys and values for the
+object's properties. Somehow, this colon is missing or misplaced.
 
-<h2 id="Message">Message</h2>
+## Message
 
-<pre class="brush: js">SyntaxError: Expected ':' (Edge)
+```js
+SyntaxError: Expected ':' (Edge)
 SyntaxError: missing : after property id (Firefox)
-</pre>
+```
 
-<h2 id="Error_type">Error type</h2>
+## Error type
 
-<p>{{jsxref("SyntaxError")}}</p>
+{{jsxref("SyntaxError")}}
 
-<h2 id="What_went_wrong">What went wrong?</h2>
+## What went wrong?
 
-<p>When creating objects with the <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer">object
-    initializer</a> syntax, a colon (<code>:</code>) separates keys and values for the
-  object's properties.</p>
+When creating objects with the [object
+initializer](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer) syntax, a colon (`:`) separates keys and values for the
+object's properties.
 
-<pre class="brush: js">var obj = { propertyKey: 'value' };
-</pre>
+```js
+var obj = { propertyKey: 'value' };
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Colons_vs._equal_signs">Colons vs. equal signs</h3>
+### Colons vs. equal signs
 
-<p>This code fails, as the equal sign can't be used this way in this object initializer
-  syntax.</p>
+This code fails, as the equal sign can't be used this way in this object initializer
+syntax.
 
-<pre class="brush: js example-bad">var obj = { propertyKey = 'value' };
+```js example-bad
+var obj = { propertyKey = 'value' };
 // SyntaxError: missing : after property id
-</pre>
+```
 
-<p>Correct would be to use a colon, or to use square brackets to assign a new property
-  after the object has been created already.</p>
+Correct would be to use a colon, or to use square brackets to assign a new property
+after the object has been created already.
 
-<pre class="brush: js example-good">var obj = { propertyKey: 'value' };
+```js example-good
+var obj = { propertyKey: 'value' };
 
 // or alternatively
 
 var obj = { };
 obj['propertyKey'] = 'value';
-</pre>
+```
 
-<h3 id="Empty_properties">Empty properties</h3>
+### Empty properties
 
-<p>You can't create empty properties like this:</p>
+You can't create empty properties like this:
 
-<pre class="brush: js example-bad">var obj = { propertyKey; };
+```js example-bad
+var obj = { propertyKey; };
 // SyntaxError: missing : after property id
-</pre>
+```
 
-<p>If you need to define a property without a value, you might use {{jsxref("null")}} as a
-  value.</p>
+If you need to define a property without a value, you might use {{jsxref("null")}} as a
+value.
 
-<pre class="brush: js example-good">var obj = { propertyKey: null };</pre>
+```js example-good
+var obj = { propertyKey: null };
+```
 
-<h3 id="Computed_properties">Computed properties</h3>
+### Computed properties
 
-<p>If you create a property key from an expression, you need to use square brackets.
-  Otherwise the property name can't be computed:</p>
+If you create a property key from an expression, you need to use square brackets.
+Otherwise the property name can't be computed:
 
-<pre class="brush: js example-bad">var obj = { 'b'+'ar': 'foo' };
+```js example-bad
+var obj = { 'b'+'ar': 'foo' };
 // SyntaxError: missing : after property id
-</pre>
+```
 
-<p>Put the expression in brackets <code>[]</code>:</p>
+Put the expression in brackets `[]`:
 
-<pre class="brush: js example-good">var obj = { ['b'+'ar']: 'foo' };</pre>
+```js example-good
+var obj = { ['b'+'ar']: 'foo' };
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer">Object
-      initializer</a></li>
-</ul>
+- [Object
+  initializer](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer)

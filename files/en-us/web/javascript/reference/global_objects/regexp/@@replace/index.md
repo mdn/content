@@ -1,88 +1,90 @@
 ---
-title: 'RegExp.prototype[@@replace]()'
+title: RegExp.prototype[@@replace]()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@replace
 tags:
-- JavaScript
-- Method
-- Prototype
-- Reference
-- RegExp
-- Regular Expressions
-- Polyfill
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
+  - RegExp
+  - Regular Expressions
+  - Polyfill
 browser-compat: javascript.builtins.RegExp.@@replace
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>[@@replace]()</code></strong> method replaces some or all matches of
-  a <code>this</code> pattern in a string by a <code>replacement</code>, and returns the
-  result of the replacement as a new string. The <code>replacement</code> can be a string
-  or a function to be called for each match.</p>
+The **`[@@replace]()`** method replaces some or all matches of
+a `this` pattern in a string by a `replacement`, and returns the
+result of the replacement as a new string. The `replacement` can be a string
+or a function to be called for each match.
 
-<div>{{EmbedInteractiveExample("pages/js/regexp-prototype-@@replace.html")}}</div>
+{{EmbedInteractiveExample("pages/js/regexp-prototype-@@replace.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+regexp[Symbol.replace](str, newSubStr|function)
+```
 
-<pre class="brush: js"><var>regexp</var>[Symbol.replace](<var>str<var>, <var>newSubStr</var>|<var>function</var>)</var></var></pre>
+### Parameters
 
-<h3 id="Parameters">Parameters</h3>
-
-<dl>
-  <dt><code><var>str</var></code></dt>
-  <dd>A {{jsxref("String")}} that is a target of the replacement.</dd>
-  <dt><code><var>newSubStr</var></code> (replacement)</dt>
-  <dd>The {{jsxref("String")}} that replaces the substring. A number of special
+- `str`
+  - : A {{jsxref("String")}} that is a target of the replacement.
+- `newSubStr` (replacement)
+  - : The {{jsxref("String")}} that replaces the substring. A number of special
     replacement patterns are supported; see the {{jsxref("String.prototype.replace",
     "Specifying a string as a parameter", "#Specifying_a_string_as_a_parameter", 1)}}
-    section in {{jsxref("String.prototype.replace()")}} page.</dd>
-  <dt><code><var>function</var></code> (replacement)</dt>
-  <dd>A function to be invoked to create the new substring. The arguments supplied to this
+    section in {{jsxref("String.prototype.replace()")}} page.
+- `function` (replacement)
+  - : A function to be invoked to create the new substring. The arguments supplied to this
     function are described in the {{jsxref("String.prototype.replace", "Specifying a
     function as a parameter", "#Specifying_a_function_as_a_parameter", 1)}} section in
-    {{jsxref("String.prototype.replace()")}} page.</dd>
-</dl>
+    {{jsxref("String.prototype.replace()")}} page.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A new string with some or all matches of a pattern replaced by a replacement.</p>
+A new string with some or all matches of a pattern replaced by a replacement.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>This method is called internally in {{jsxref("String.prototype.replace()")}} if the
-  <code>pattern</code> argument is a {{jsxref("RegExp")}} object.  For example, following
-  two examples return same result.</p>
+This method is called internally in {{jsxref("String.prototype.replace()")}} if the
+`pattern` argument is a {{jsxref("RegExp")}} object.  For example, following
+two examples return same result.
 
-<pre class="brush: js">'abc'.replace(/a/, 'A');
+```js
+'abc'.replace(/a/, 'A');
 
-/a/[Symbol.replace]('abc', 'A');</pre>
+/a/[Symbol.replace]('abc', 'A');
+```
 
-<p>This method exists for customizing replace behavior in <code>RegExp</code> subclass.
-</p>
+This method exists for customizing replace behavior in `RegExp` subclass.
 
-<p>If pattern argument is <strong>not</strong> a {{jsxref("RegExp")}} object,
-  {{jsxref("String.prototype.replace()")}} doesn't call this method, nor creates a
-  {{jsxref("RegExp")}} object.</p>
+If pattern argument is **not** a {{jsxref("RegExp")}} object,
+{{jsxref("String.prototype.replace()")}} doesn't call this method, nor creates a
+{{jsxref("RegExp")}} object.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Direct_call">Direct call</h3>
+### Direct call
 
-<p>This method can be used in almost the same way as
-  {{jsxref("String.prototype.replace()")}}, except the different <code>this</code> and the
-  different arguments order.</p>
+This method can be used in almost the same way as
+{{jsxref("String.prototype.replace()")}}, except the different `this` and the
+different arguments order.
 
-<pre class="brush: js">var re = /-/g;
+```js
+var re = /-/g;
 var str = '2016-01-01';
 var newstr = re[Symbol.replace](str, '.');
 console.log(newstr);  // 2016.01.01
-</pre>
+```
 
-<h3 id="Using_replace_in_subclasses">Using @@replace in subclasses</h3>
+### Using @@replace in subclasses
 
-<p>Subclasses of {{jsxref("RegExp")}} can override the <code>[@@replace]()</code> method
-  to modify the default behavior.</p>
+Subclasses of {{jsxref("RegExp")}} can override the `[@@replace]()` method
+to modify the default behavior.
 
-<pre class="brush: js">class MyRegExp extends RegExp {
+```js
+class MyRegExp extends RegExp {
   constructor(pattern, flags, count) {
     super(pattern, flags);
     this.count = count;
@@ -90,7 +92,7 @@ console.log(newstr);  // 2016.01.01
   [Symbol.replace](str, replacement) {
     // Perform @@replace |count| times.
     var result = str;
-    for (var i = 0; i &lt; this.count; i++) {
+    for (var i = 0; i < this.count; i++) {
       result = RegExp.prototype[Symbol.replace].call(this, result, replacement);
     }
     return result;
@@ -100,24 +102,23 @@ console.log(newstr);  // 2016.01.01
 var re = new MyRegExp('\\d', '', 3);
 var str = '01234567';
 var newstr = str.replace(re, '#'); // String.prototype.replace calls re[@@replace].
-console.log(newstr); // ###34567</pre>
+console.log(newstr); // ###34567
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>A polyfill of <code>RegExp.prototype[@@replace]</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-string-and-regexp"><code>core-js</code></a></li>
-  <li>{{jsxref("String.prototype.replace()")}}</li>
-  <li>{{jsxref("RegExp.prototype.@@match()", "RegExp.prototype[@@match]()")}}</li>
-  <li>{{jsxref("RegExp.prototype.@@search()", "RegExp.prototype[@@search]()")}}</li>
-  <li>{{jsxref("RegExp.prototype.@@split()", "RegExp.prototype[@@split]()")}}</li>
-  <li>{{jsxref("RegExp.prototype.exec()")}}</li>
-  <li>{{jsxref("RegExp.prototype.test()")}}</li>
-</ul>
+- A polyfill of `RegExp.prototype[@@replace]` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- {{jsxref("String.prototype.replace()")}}
+- {{jsxref("RegExp.prototype.@@match()", "RegExp.prototype[@@match]()")}}
+- {{jsxref("RegExp.prototype.@@search()", "RegExp.prototype[@@search]()")}}
+- {{jsxref("RegExp.prototype.@@split()", "RegExp.prototype[@@split]()")}}
+- {{jsxref("RegExp.prototype.exec()")}}
+- {{jsxref("RegExp.prototype.test()")}}

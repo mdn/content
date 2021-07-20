@@ -10,49 +10,50 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.Locale.minimize
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The
-		<strong><code>Intl.Locale.prototype.minimize()</code></strong> method attempts to
-		remove information about the locale that would be added by calling
-		{{jsxref("Intl/Locale/maximize", "Locale.maximize()")}}.</p>
+The
+**`Intl.Locale.prototype.minimize()`** method attempts to
+remove information about the locale that would be added by calling
+{{jsxref("Intl/Locale/maximize", "Locale.maximize()")}}.
 
-<div>{{EmbedInteractiveExample("pages/js/intl-locale-prototype-minimize.html", "taller")}}
-</div>
+{{EmbedInteractiveExample("pages/js/intl-locale-prototype-minimize.html", "taller")}}
+
 <!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">minimize()</pre>
+```js
+minimize()
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref("Intl/Locale", "Locale")}} instance whose <code>baseName</code> property returns
-	the result of the <a
-		href="https://www.unicode.org/reports/tr35/#Likely_Subtags">Remove Likely
-		Subtags</a> algorithm executed against <em>{{jsxref("Intl/Locale/baseName",
-		"locale.baseName")}}</em>.</p>
+A {{jsxref("Intl/Locale", "Locale")}} instance whose `baseName` property returns
+the result of the [Remove Likely
+Subtags](https://www.unicode.org/reports/tr35/#Likely_Subtags) algorithm executed against _{{jsxref("Intl/Locale/baseName",
+		"locale.baseName")}}_.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>This method carries out the reverse of {{jsxref("Intl/Locale/maximize", "maximize()")}},
-	removing any language, script, or region subtags from the locale language identifier
-	(essentially the contents of <code>baseName</code>). This is useful when there are
-	superfluous subtags in the language identifier; for instance, "en-Latn" can be
-	simplified to "en", since "Latn" is the only script used to write English.
-	<code>minimize()</code> only affects the main subtags that comprise the <a
-		href="https://www.unicode.org/reports/tr35/#Language_Locale_Field_Definitions">language
-		identifier</a>: language, script, and region subtags. Other subtags after the "-u"
-	in the locale identifier are called extension subtags and are not affected by the
-	<code>minimize()</code> method. Examples of these subtags include
-	{{jsxref("Intl/Locale/hourCycle", "Locale.hourCycle")}}, {{jsxref("Intl/Locale/calendar",
-	"Locale.calendar")}}, and {{jsxref("Intl/Locale/numeric", "Locale.numeric")}}.</p>
+This method carries out the reverse of {{jsxref("Intl/Locale/maximize", "maximize()")}},
+removing any language, script, or region subtags from the locale language identifier
+(essentially the contents of `baseName`). This is useful when there are
+superfluous subtags in the language identifier; for instance, "en-Latn" can be
+simplified to "en", since "Latn" is the only script used to write English.
+`minimize()` only affects the main subtags that comprise the [language
+identifier](https://www.unicode.org/reports/tr35/#Language_Locale_Field_Definitions): language, script, and region subtags. Other subtags after the "-u"
+in the locale identifier are called extension subtags and are not affected by the
+`minimize()` method. Examples of these subtags include
+{{jsxref("Intl/Locale/hourCycle", "Locale.hourCycle")}}, {{jsxref("Intl/Locale/calendar",
+	"Locale.calendar")}}, and {{jsxref("Intl/Locale/numeric", "Locale.numeric")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_minimize">Using minimize</h3>
+### Using minimize
 
-<pre class="brush: js">let myLocale = new Intl.Locale("fr-Latn-FR", {hourCycle: "h24", calendar: "gregory"});
+```js
+let myLocale = new Intl.Locale("fr-Latn-FR", {hourCycle: "h24", calendar: "gregory"});
 console.log(myLocale.baseName); // Prints "fr-Latn-FR"
 console.log(myLocale.toString()); // Prints "fr-Latn-FR-u-ca-gregory-hc-h24"
 
@@ -64,19 +65,18 @@ console.log(myLocMinimized.baseName);
 
 // Prints "fr-u-ca-gregory-hc-h24".
 // Note that the extension tags (after "-u") remain unchanged.
-console.log(myLocMinimized.toString());</pre>
+console.log(myLocMinimized.toString());
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>{{jsxref("Intl.Locale")}}</li>
-	<li>{{jsxref("Intl/Locale/baseName", "Intl.Locale.baseName")}}</li>
-</ul>
+- {{jsxref("Intl.Locale")}}
+- {{jsxref("Intl/Locale/baseName", "Intl.Locale.baseName")}}

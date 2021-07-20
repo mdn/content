@@ -2,78 +2,77 @@
 title: Set.prototype.delete()
 slug: Web/JavaScript/Reference/Global_Objects/Set/delete
 tags:
-- ECMAScript 2015
-- JavaScript
-- Method
-- Prototype
-- Reference
-- set
+  - ECMAScript 2015
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
+  - set
 browser-compat: javascript.builtins.Set.delete
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>delete()</code></strong> method removes a specified value from a
-  <code>Set</code> object, if it is in the set.</p>
+The **`delete()`** method removes a specified value from a
+`Set` object, if it is in the set.
 
-<div>{{EmbedInteractiveExample("pages/js/set-prototype-delete.html")}}</div>
+{{EmbedInteractiveExample("pages/js/set-prototype-delete.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+delete(value)
+```
 
-<pre class="brush: js">delete(value)</pre>
+### Parameters
 
-<h3 id="Parameters">Parameters</h3>
+- `value`
+  - : The value to remove from `mySet`.
 
-<dl>
-  <dt><code><var>value</var></code></dt>
-  <dd>The value to remove from <code><var>mySet</var></code>.</dd>
-</dl>
+### Return value
 
-<h3 id="Return_value">Return value</h3>
+Returns `true` if `value` was already in
+`mySet`; otherwise `false`.
 
-<p>Returns <code>true</code> if <code><var>value</var></code> was already in
-  <code><var>mySet</var></code>; otherwise <code>false</code>.</p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Using the delete() method
 
-<h3 id="Using_the_delete_method">Using the delete() method</h3>
-
-<pre class="brush: js">const mySet = new Set();
+```js
+const mySet = new Set();
 mySet.add('foo');
 
 mySet.delete('bar'); // Returns false. No "bar" element found to be deleted.
 mySet.delete('foo'); // Returns true. Successfully removed.
 
 mySet.has('foo');    // Returns false. The "foo" element is no longer present.
-</pre>
+```
 
-<p>Let's checkout below how to delete an Object from a Set.</p>
+Let's checkout below how to delete an Object from a Set.
 
-<pre class="brush: js">const setObj = new Set();   // Create a new set.
+```js
+const setObj = new Set();   // Create a new set.
 
 setObj.add({x: 10, y: 20}); // Add object in the set.
 
 setObj.add({x: 20, y: 30}); // Add object in the set.
 
-// Delete any point with `x &gt; 10`.
+// Delete any point with `x > 10`.
 setObj.forEach(function(point){
-  if (point.x &gt; 10){
+  if (point.x > 10){
     setObj.delete(point)
   }
 })
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Set")}}</li>
-  <li>{{jsxref("Set.prototype.clear()")}}</li>
-</ul>
+- {{jsxref("Set")}}
+- {{jsxref("Set.prototype.clear()")}}

@@ -2,74 +2,70 @@
 title: ArrayBuffer.prototype.slice()
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/slice
 tags:
-- ArrayBuffer
-- JavaScript
-- Method
-- Prototype
-- Reference
+  - ArrayBuffer
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
 browser-compat: javascript.builtins.ArrayBuffer.slice
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>slice()</code></strong> method returns a new <code>ArrayBuffer</code>
-  whose contents are a copy of this <code>ArrayBuffer</code>'s bytes from
-  <code>begin</code>, inclusive, up to <code>end</code>, exclusive.</p>
+The **`slice()`** method returns a new `ArrayBuffer`
+whose contents are a copy of this `ArrayBuffer`'s bytes from
+`begin`, inclusive, up to `end`, exclusive.
 
-<div>{{EmbedInteractiveExample("pages/js/arraybuffer-slice.html")}}</div>
+{{EmbedInteractiveExample("pages/js/arraybuffer-slice.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush: js">
+```js
 slice(begin)
 slice(begin, end)
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>begin</var></code></dt>
-  <dd>Zero-based byte index at which to begin slicing.</dd>
-  <dt><code><var>end</var></code> {{optional_inline}}</dt>
-  <dd>Byte index before which to end slicing. If end is unspecified, the new
-    <code>ArrayBuffer</code> contains all bytes from begin to the end of this
-    <code>ArrayBuffer</code>. If negative, it will make the Byte index begin from the last
-    Byte.</dd>
-</dl>
+- `begin`
+  - : Zero-based byte index at which to begin slicing.
+- `end` {{optional_inline}}
+  - : Byte index before which to end slicing. If end is unspecified, the new
+    `ArrayBuffer` contains all bytes from begin to the end of this
+    `ArrayBuffer`. If negative, it will make the Byte index begin from the last
+    Byte.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A new {{jsxref("ArrayBuffer")}} object.</p>
+A new {{jsxref("ArrayBuffer")}} object.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The <code>slice()</code> method copies up to, but not including, the byte indicated by
-  the <code>end</code> parameter. If either <code>begin</code> or <code>end</code> is
-  negative, it refers to an index from the end of the array, as opposed to from the
-  beginning.</p>
+The `slice()` method copies up to, but not including, the byte indicated by
+the `end` parameter. If either `begin` or `end` is
+negative, it refers to an index from the end of the array, as opposed to from the
+beginning.
 
-<p>The range specified by the <code>begin</code> and <code>end</code> parameters is
-  clamped to the valid index range for the current array. If the computed length of the
-  new <code>ArrayBuffer</code> would be negative, it is clamped to zero.</p>
+The range specified by the `begin` and `end` parameters is
+clamped to the valid index range for the current array. If the computed length of the
+new `ArrayBuffer` would be negative, it is clamped to zero.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Copying_an_ArrayBuffer">Copying an ArrayBuffer</h3>
+### Copying an ArrayBuffer
 
-<pre class="brush: js">const buf1 = new ArrayBuffer(8);
+```js
+const buf1 = new ArrayBuffer(8);
 const buf2 = buf1.slice(0);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("ArrayBuffer")}}</li>
-</ul>
+- {{jsxref("ArrayBuffer")}}

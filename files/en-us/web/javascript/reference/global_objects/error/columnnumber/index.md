@@ -8,31 +8,30 @@ tags:
   - Prototype
 browser-compat: javascript.builtins.Error.columnNumber
 ---
-<div>{{JSRef}} {{non-standard_header}}</div>
+{{JSRef}} {{non-standard_header}}
 
-<p>The <code><strong>columnNumber</strong></code> property contains the column number in the line of the file that raised this error.</p>
+The **`columnNumber`** property contains the column number in the line of the file that raised this error.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_columnNumber">Using columnNumber</h3>
+### Using columnNumber
 
-<pre class="brush: js">var e = new Error('Could not parse input');
+```js
+var e = new Error('Could not parse input');
 throw e;
 console.log(e.columnNumber) // 0
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any standard.</p>
+Not part of any standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("Error.prototype.stack")}}</li>
- <li>{{jsxref("Error.prototype.lineNumber")}}</li>
- <li>{{jsxref("Error.prototype.fileName")}}</li>
-</ul>
+- {{jsxref("Error.prototype.stack")}}
+- {{jsxref("Error.prototype.lineNumber")}}
+- {{jsxref("Error.prototype.fileName")}}

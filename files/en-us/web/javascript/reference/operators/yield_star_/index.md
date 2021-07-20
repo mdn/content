@@ -2,49 +2,50 @@
 title: yield*
 slug: Web/JavaScript/Reference/Operators/yield*
 tags:
-- ECMAScript 2015
-- Generators
-- Iterable
-- Iterator
-- JavaScript
-- Language feature
-- Operator
-- Reference
+  - ECMAScript 2015
+  - Generators
+  - Iterable
+  - Iterator
+  - JavaScript
+  - Language feature
+  - Operator
+  - Reference
 browser-compat: javascript.operators.yield_star
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p><span class="seoSummary">The <strong><code>yield*</code> expression</strong> is used to
-    delegate to another {{jsxref("Statements/function*", "generator")}} or iterable
-    object.</span></p>
+The **`yield*` expression** is used to
+delegate to another {{jsxref("Statements/function*", "generator")}} or iterable
+object.
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-yieldasterisk.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-yieldasterisk.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">yield* expression</pre>
+```js
+yield* expression
+```
 
-<dl>
-  <dt><code><var>expression</var></code></dt>
-  <dd>The expression which returns an iterable object.</dd>
-</dl>
+- `expression`
+  - : The expression which returns an iterable object.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The <code>yield*</code> expression iterates over the operand and <code>yield</code>s
-  each value returned by it.</p>
+The `yield*` expression iterates over the operand and `yield`s
+each value returned by it.
 
-<p>The value of <code>yield*</code> expression itself is the value returned by that
-  iterator when it's closed (i.e., when <code>done</code> is <code>true</code>).</p>
+The value of `yield*` expression itself is the value returned by that
+iterator when it's closed (i.e., when `done` is `true`).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Delegating_to_another_generator">Delegating to another generator</h3>
+### Delegating to another generator
 
-<p>In following code, values yielded by <code>g1()</code> are returned from
-  <code>next()</code> calls just like those which are yielded by <code>g2()</code>.</p>
+In following code, values yielded by `g1()` are returned from
+`next()` calls just like those which are yielded by `g2()`.
 
-<pre class="brush: js">function* g1() {
+```js
+function* g1() {
   yield 2;
   yield 3;
   yield 4;
@@ -64,15 +65,16 @@ console.log(iterator.next()); // {value: 3, done: false}
 console.log(iterator.next()); // {value: 4, done: false}
 console.log(iterator.next()); // {value: 5, done: false}
 console.log(iterator.next()); // {value: undefined, done: true}
-</pre>
+```
 
-<h3 id="Other_Iterable_objects">Other Iterable objects</h3>
+### Other Iterable objects
 
-<p>Besides generator objects, <code>yield*</code> can also <code>yield</code> other kinds
-  of iterables (e.g., arrays, strings, or {{jsxref("Functions/arguments", "arguments")}}
-  objects).</p>
+Besides generator objects, `yield*` can also `yield` other kinds
+of iterables (e.g., arrays, strings, or {{jsxref("Functions/arguments", "arguments")}}
+objects).
 
-<pre class="brush: js">function* g3() {
+```js
+function* g3() {
   yield* [1, 2];
   yield* '34';
   yield* Array.from(arguments);
@@ -87,14 +89,14 @@ console.log(iterator.next()); // {value: "4", done: false}
 console.log(iterator.next()); // {value: 5, done: false}
 console.log(iterator.next()); // {value: 6, done: false}
 console.log(iterator.next()); // {value: undefined, done: true}
-</pre>
+```
 
-<h3 id="The_value_of_yield*_expression_itself">The value of <code>yield*</code> expression
-  itself</h3>
+### The value of `yield*` expression itself
 
-<p><code>yield*</code> is an expression, not a statement—so it evaluates to a value.</p>
+`yield*` is an expression, not a statement—so it evaluates to a value.
 
-<pre class="brush: js">function* g4() {
+```js
+function* g4() {
   yield* [1, 2, 3];
   return 'foo';
 }
@@ -111,22 +113,20 @@ console.log(iterator.next()); // {value: 1, done: false}
 console.log(iterator.next()); // {value: 2, done: false}
 console.log(iterator.next()); // {value: 3, done: false} done is false because g5 generator isn't finished, only g4
 console.log(iterator.next()); // {value: 'foo', done: true}
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/JavaScript/Guide/The_Iterator_protocol">The Iterator
-      protocol</a></li>
-  <li>{{jsxref("Statements/function*", "function*")}}</li>
-  <li>{{jsxref("Operators/function*", "function* expression")}}</li>
-  <li>{{jsxref("Operators/yield", "yield")}}</li>
-</ul>
+- [The Iterator
+  protocol](/en-US/docs/Web/JavaScript/Guide/The_Iterator_protocol)
+- {{jsxref("Statements/function*", "function*")}}
+- {{jsxref("Operators/function*", "function* expression")}}
+- {{jsxref("Operators/yield", "yield")}}

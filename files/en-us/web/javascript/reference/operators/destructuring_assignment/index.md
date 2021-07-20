@@ -12,16 +12,16 @@ tags:
   - Operator
 browser-compat: javascript.operators.destructuring
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>The <strong>destructuring assignment</strong> syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables.</p>
+The **destructuring assignment** syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables.
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-destructuringassignment.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-destructuringassignment.html", "taller")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush: js">let a, b, rest;
+```js
+let a, b, rest;
 [a, b] = [10, 20];
 console.log(a); // 10
 console.log(b); // 20
@@ -40,85 +40,95 @@ console.log(b); // 20
 console.log(a); // 10
 console.log(b); // 20
 console.log(rest); // {c: 30, d: 40}
-</pre>
+```
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The object and array literal expressions provide an easy way to create <em>ad hoc</em> packages of data.</p>
+The object and array literal expressions provide an easy way to create _ad hoc_ packages of data.
 
-<pre class="brush: js">const x = [1, 2, 3, 4, 5];</pre>
+```js
+const x = [1, 2, 3, 4, 5];
+```
 
-<p>The destructuring assignment uses similar syntax, but on the left-hand side of the assignment to define what values to unpack from the sourced variable.</p>
+The destructuring assignment uses similar syntax, but on the left-hand side of the assignment to define what values to unpack from the sourced variable.
 
-<pre class="brush: js">const x = [1, 2, 3, 4, 5];
+```js
+const x = [1, 2, 3, 4, 5];
 const [y, z] = x;
 console.log(y); // 1
 console.log(z); // 2
-</pre>
+```
 
-<p>Similarly, you can destructure arrays on the left-hand side of the assignment</p>
+Similarly, you can destructure arrays on the left-hand side of the assignment
 
-<pre class="brush: js">const [firstElement, secondElement] = list;
+```js
+const [firstElement, secondElement] = list;
 // is equivalent to:
 // const firstElement = list[0];
 // const secondElement = list[1];
-</pre>
+```
 
-<p>This capability is similar to features present in languages such as Perl and Python.</p>
+This capability is similar to features present in languages such as Perl and Python.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Array_destructuring">Array destructuring</h3>
+### Array destructuring
 
-<h4 id="Basic_variable_assignment">Basic variable assignment</h4>
+#### Basic variable assignment
 
-<pre class="brush: js">const foo = ['one', 'two', 'three'];
+```js
+const foo = ['one', 'two', 'three'];
 
 const [red, yellow, green] = foo;
 console.log(red); // "one"
 console.log(yellow); // "two"
 console.log(green); // "three"
-</pre>
+```
 
-<h4 id="Assignment_separate_from_declaration">Assignment separate from declaration</h4>
+#### Assignment separate from declaration
 
-<p>A variable can be assigned its value via destructuring, separate from the variable's declaration.</p>
+A variable can be assigned its value via destructuring, separate from the variable's declaration.
 
-<pre class="brush: js">let a, b;
+```js
+let a, b;
 
 [a, b] = [1, 2];
 console.log(a); // 1
 console.log(b); // 2
-</pre>
+```
 
-<p>In an array destructuring from an array of length <var>N</var> specified on the right-hand side of the assignment, if the number of variables specified on the left-hand side of the assignment is greater than <var>N</var>, only the first <var>N</var> variables are assigned values. The values of the remaining variables will be undefined.</p>
-<pre class="brush: js">const foo = ['one', 'two'];
+In an array destructuring from an array of length _N_ specified on the right-hand side of the assignment, if the number of variables specified on the left-hand side of the assignment is greater than _N_, only the first _N_ variables are assigned values. The values of the remaining variables will be undefined.
+
+```js
+const foo = ['one', 'two'];
 
 const [red, yellow, green, blue] = foo;
 console.log(red); // "one"
 console.log(yellow); // "two"
 console.log(green); // undefined
 console.log(blue);  //undefined
-</pre>
+```
 
-<h4 id="Default_values">Default values</h4>
+#### Default values
 
-<p>A variable can be assigned a default, in the case that the value unpacked from the array is <code>undefined</code>.</p>
+A variable can be assigned a default, in the case that the value unpacked from the array is `undefined`.
 
-<pre class="brush: js">let a, b;
+```js
+let a, b;
 
 [a=5, b=7] = [1];
 console.log(a); // 1
 console.log(b); // 7
-</pre>
+```
 
-<h4 id="Swapping_variables">Swapping variables</h4>
+#### Swapping variables
 
-<p>Two variables values can be swapped in one destructuring expression.</p>
+Two variables values can be swapped in one destructuring expression.
 
-<p>Without destructuring assignment, swapping two values requires a temporary variable (or, in some low-level languages, the <a href="https://en.wikipedia.org/wiki/XOR_swap_algorithm">XOR-swap trick</a>).</p>
+Without destructuring assignment, swapping two values requires a temporary variable (or, in some low-level languages, the [XOR-swap trick](https://en.wikipedia.org/wiki/XOR_swap_algorithm)).
 
-<pre class="brush: js">let a = 1;
+```js
+let a = 1;
 let b = 3;
 
 [a, b] = [b, a];
@@ -128,16 +138,16 @@ console.log(b); // 1
 const arr = [1,2,3];
 [arr[2], arr[1]] = [arr[1], arr[2]];
 console.log(arr); // [1,3,2]
+```
 
-</pre>
+#### Parsing an array returned from a function
 
-<h4 id="Parsing_an_array_returned_from_a_function">Parsing an array returned from a function</h4>
+It's always been possible to return an array from a function. Destructuring can make working with an array return value more concise.
 
-<p>It's always been possible to return an array from a function. Destructuring can make working with an array return value more concise.</p>
+In this example, `f()` returns the values `[1, 2]` as its output, which can be parsed in a single line with destructuring.
 
-<p>In this example, <code>f()</code> returns the values <code>[1, 2]</code> as its output, which can be parsed in a single line with destructuring.</p>
-
-<pre class="brush: js">function f() {
+```js
+function f() {
   return [1, 2];
 }
 
@@ -145,13 +155,14 @@ let a, b;
 [a, b] = f();
 console.log(a); // 1
 console.log(b); // 2
-</pre>
+```
 
-<h4 id="Ignoring_some_returned_values">Ignoring some returned values</h4>
+#### Ignoring some returned values
 
-<p>You can ignore return values that you're not interested in:</p>
+You can ignore return values that you're not interested in:
 
-<pre class="brush: js">function f() {
+```js
+function f() {
   return [1, 2, 3];
 }
 
@@ -161,34 +172,39 @@ console.log(b); // 3
 
 const [c] = f();
 console.log(c); // 1
-</pre>
+```
 
-<p>You can also ignore all returned values:</p>
+You can also ignore all returned values:
 
-<pre class="brush: js">[,,] = f();
-</pre>
+```js
+[,,] = f();
+```
 
-<h4 id="Assigning_the_rest_of_an_array_to_a_variable">Assigning the rest of an array to a variable</h4>
+#### Assigning the rest of an array to a variable
 
-<p>When destructuring an array, you can unpack and assign the remaining part of it to a variable using the rest pattern:</p>
+When destructuring an array, you can unpack and assign the remaining part of it to a variable using the rest pattern:
 
-<pre class="brush: js">const [a, ...b] = [1, 2, 3];
+```js
+const [a, ...b] = [1, 2, 3];
 console.log(a); // 1
-console.log(b); // [2, 3]</pre>
+console.log(b); // [2, 3]
+```
 
-<p>Be aware that a {{jsxref("SyntaxError")}} will be thrown if a trailing comma is used on the right-hand side of a rest element:</p>
+Be aware that a {{jsxref("SyntaxError")}} will be thrown if a trailing comma is used on the right-hand side of a rest element:
 
-<pre class="brush: js example-bad">const [a, ...b,] = [1, 2, 3];
+```js example-bad
+const [a, ...b,] = [1, 2, 3];
 
 // SyntaxError: rest element may not have a trailing comma
 // Always consider using rest operator as the last element
-</pre>
+```
 
-<h4 id="Unpacking_values_from_a_regular_expression_match">Unpacking values from a regular expression match</h4>
+#### Unpacking values from a regular expression match
 
-<p>When the regular expression <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec"> exec()</a></code> method finds a match, it returns an array containing first the entire matched portion of the string and then the portions of the string that matched each parenthesized group in the regular expression. Destructuring assignment allows you to unpack the parts out of this array easily, ignoring the full match if it is not needed.</p>
+When the regular expression [`exec()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) method finds a match, it returns an array containing first the entire matched portion of the string and then the portions of the string that matched each parenthesized group in the regular expression. Destructuring assignment allows you to unpack the parts out of this array easily, ignoring the full match if it is not needed.
 
-<pre class="brush: js">function parseProtocol(url) {
+```js
+function parseProtocol(url) {
   const parsedURL = /^(\w+)\:\/\/([^\/]+)\/(.*)$/.exec(url);
   if (!parsedURL) {
     return false;
@@ -203,13 +219,14 @@ console.log(b); // [2, 3]</pre>
 
 console.log(parseProtocol('https://developer.mozilla.org/en-US/docs/Web/JavaScript'));
 // "https"
-</pre>
+```
 
-<h3 id="Object_destructuring">Object destructuring</h3>
+### Object destructuring
 
-<h4 id="Basic_assignment">Basic assignment</h4>
+#### Basic assignment
 
-<pre class="brush: js">const user = {
+```js
+const user = {
     id: 42,
     is_verified: true
 };
@@ -218,65 +235,69 @@ const {id, is_verified} = user;
 
 console.log(id); // 42
 console.log(is_verified); // true
-</pre>
+```
 
-<h4 id="Assignment_without_declaration">Assignment without declaration</h4>
+#### Assignment without declaration
 
-<p>A variable can be assigned its value with destructuring separate from its declaration.</p>
+A variable can be assigned its value with destructuring separate from its declaration.
 
-<pre class="brush: js">let a, b;
+```js
+let a, b;
 
-({a, b} = {a: 1, b: 2});</pre>
+({a, b} = {a: 1, b: 2});
+```
 
-<div class="note">
-<p><strong>Note:</strong> The parentheses <code>( ... )</code> around the assignment statement are required when using object literal destructuring assignment without a declaration.</p>
+> **Note:** The parentheses `( ... )` around the assignment statement are required when using object literal destructuring assignment without a declaration.
+>
+> `{a, b} = {a: 1, b: 2}` is not valid stand-alone syntax, as the `{a, b}` on the left-hand side is considered a block and not an object literal.
+>
+> However, `({a, b} = {a: 1, b: 2})` is valid, as is `const {a, b} = {a: 1, b: 2}`
+>
+> Your `( ... )` expression needs to be preceded by a semicolon or it may be used to execute a function on the previous line.
 
-<p><code>{a, b} = {a: 1, b: 2}</code> is not valid stand-alone syntax, as the <code>{a, b}</code> on the left-hand side is considered a block and not an object literal.</p>
+#### Assigning to new variable names
 
-<p>However, <code>({a, b} = {a: 1, b: 2})</code> is valid, as is <code>const {a, b} = {a: 1, b: 2}</code></p>
+A property can be unpacked from an object and assigned to a variable with a different name than the object property.
 
-<p>Your <code>( ... )</code> expression needs to be preceded by a semicolon or it may be used to execute a function on the previous line.</p>
-</div>
-
-<h4 id="Assigning_to_new_variable_names">Assigning to new variable names</h4>
-
-<p>A property can be unpacked from an object and assigned to a variable with a different name than the object property.</p>
-
-<pre class="brush: js">const o = {p: 42, q: true};
+```js
+const o = {p: 42, q: true};
 const {p: foo, q: bar} = o;
 
 console.log(foo); // 42
-console.log(bar); // true</pre>
+console.log(bar); // true
+```
 
-<p>Here, for example, <code>const {p: foo} = o</code> takes from the object <code>o</code> the property named <code>p</code> and assigns it to a local variable named <code>foo</code>.</p>
+Here, for example, `const {p: foo} = o` takes from the object `o` the property named `p` and assigns it to a local variable named `foo`.
 
-<h4 id="Default_values_2">Default values</h4>
+#### Default values
 
-<p>A variable can be assigned a default, in the case that the value unpacked from the object is <code>undefined</code>.</p>
+A variable can be assigned a default, in the case that the value unpacked from the object is `undefined`.
 
-<pre class="brush: js">const {a = 10, b = 5} = {a: 3};
+```js
+const {a = 10, b = 5} = {a: 3};
 
 console.log(a); // 3
-console.log(b); // 5</pre>
+console.log(b); // 5
+```
 
-<h4 id="Assigning_to_new_variables_names_and_providing_default_values">Assigning to new variables names and providing default values</h4>
+#### Assigning to new variables names and providing default values
 
-<p>A property can be both</p>
+A property can be both
 
-<ul>
- <li>Unpacked from an object and assigned to a variable with a different name.</li>
- <li>Assigned a default value in case the unpacked value is <code>undefined</code>.</li>
-</ul>
+- Unpacked from an object and assigned to a variable with a different name.
+- Assigned a default value in case the unpacked value is `undefined`.
 
-<pre class="brush: js">const {a: aa = 10, b: bb = 5} = {a: 3};
+```js
+const {a: aa = 10, b: bb = 5} = {a: 3};
 
 console.log(aa); // 3
 console.log(bb); // 5
-</pre>
+```
 
-<h4 id="Unpacking_fields_from_objects_passed_as_a_function_parameter">Unpacking fields from objects passed as a function parameter</h4>
+#### Unpacking fields from objects passed as a function parameter
 
-<pre class="brush: js">const user = {
+```js
+const user = {
   id: 42,
   displayName: 'jdoe',
   fullName: {
@@ -294,13 +315,15 @@ function whois({displayName, fullName: {firstName: name}}) {
 }
 
 console.log(userId(user)); // 42
-console.log(whois(user));  // "jdoe is John"</pre>
+console.log(whois(user));  // "jdoe is John"
+```
 
-<p>This unpacks the <code>id</code>, <code>displayName</code> and <code>firstName</code> from the user object and prints them.</p>
+This unpacks the `id`, `displayName` and `firstName` from the user object and prints them.
 
-<h4 id="Setting_a_function_parameters_default_value">Setting a function parameter's default value</h4>
+#### Setting a function parameter's default value
 
-<pre class="brush: js">function drawChart({size = 'big', coords = {x: 0, y: 0}, radius = 25} = {}) {
+```js
+function drawChart({size = 'big', coords = {x: 0, y: 0}, radius = 25} = {}) {
   console.log(size, coords, radius);
   // do some chart drawing
 }
@@ -308,15 +331,15 @@ console.log(whois(user));  // "jdoe is John"</pre>
 drawChart({
   coords: {x: 18, y: 30},
   radius: 30
-});</pre>
+});
+```
 
-<div class="note">
-<p><strong>Note:</strong> In the function signature for <strong><code>drawChart</code></strong> above, the destructured left-hand side is assigned to an empty object literal on the right-hand side: <code>{size = 'big', coords = {x: 0, y: 0}, radius = 25} = {}</code>. You could have also written the function without the right-hand side assignment. However, if you leave out the right-hand side assignment, the function will look for at least one argument to be supplied when invoked, whereas in its current form, you can call <code><strong>drawChart()</strong></code> without supplying any parameters. The current design is useful if you want to be able to call the function without supplying any parameters, the other can be useful when you want to ensure an object is passed to the function.</p>
-</div>
+> **Note:** In the function signature for **`drawChart`** above, the destructured left-hand side is assigned to an empty object literal on the right-hand side: `{size = 'big', coords = {x: 0, y: 0}, radius = 25} = {}`. You could have also written the function without the right-hand side assignment. However, if you leave out the right-hand side assignment, the function will look for at least one argument to be supplied when invoked, whereas in its current form, you can call **`drawChart()`** without supplying any parameters. The current design is useful if you want to be able to call the function without supplying any parameters, the other can be useful when you want to ensure an object is passed to the function.
 
-<h4 id="Nested_object_and_array_destructuring">Nested object and array destructuring</h4>
+#### Nested object and array destructuring
 
-<pre class="brush: js">const metadata = {
+```js
+const metadata = {
   title: 'Scratchpad',
   translations: [
     {
@@ -340,11 +363,13 @@ let {
 } = metadata;
 
 console.log(englishTitle); // "Scratchpad"
-console.log(localeTitle);  // "JavaScript-Umgebung"</pre>
+console.log(localeTitle);  // "JavaScript-Umgebung"
+```
 
-<h4 id="For_of_iteration_and_destructuring">For of iteration and destructuring</h4>
+#### For of iteration and destructuring
 
-<pre class="brush: js">const people = [
+```js
+const people = [
   {
     name: 'Mike Smith',
     family: {
@@ -371,42 +396,47 @@ for (const {name: n, family: {father: f}} of people) {
 
 // "Name: Mike Smith, Father: Harry Smith"
 // "Name: Tom Jones, Father: Richard Jones"
-</pre>
+```
 
-<h4 id="Computed_object_property_names_and_destructuring">Computed object property names and destructuring</h4>
+#### Computed object property names and destructuring
 
-<p>Computed property names, like on <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#Computed_property_names">object literals</a>, can be used with destructuring.</p>
+Computed property names, like on [object literals](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#Computed_property_names), can be used with destructuring.
 
-<pre class="brush: js">let key = 'z';
+```js
+let key = 'z';
 let {[key]: foo} = {z: 'bar'};
 
 console.log(foo); // "bar"
-</pre>
+```
 
-<h4 id="Rest_in_Object_Destructuring">Rest in Object Destructuring</h4>
+#### Rest in Object Destructuring
 
-<p>The <a class="external external-icon" href="https://github.com/tc39/proposal-object-rest-spread">Rest/Spread Properties for ECMAScript</a> proposal (stage 4) adds the <a href="/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters">rest</a> syntax to destructuring. Rest properties collect the remaining own enumerable property keys that are not already picked off by the destructuring pattern.</p>
+The [Rest/Spread Properties for ECMAScript](https://github.com/tc39/proposal-object-rest-spread) proposal (stage 4) adds the [rest](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters) syntax to destructuring. Rest properties collect the remaining own enumerable property keys that are not already picked off by the destructuring pattern.
 
-<pre class="brush: js">let {a, b, ...rest} = {a: 10, b: 20, c: 30, d: 40}
+```js
+let {a, b, ...rest} = {a: 10, b: 20, c: 30, d: 40}
 a; // 10
 b; // 20
-rest; // { c: 30, d: 40 }</pre>
+rest; // { c: 30, d: 40 }
+```
 
-<h4 id="Invalid_JavaScript_identifier_as_a_property_name">Invalid JavaScript identifier as a property name</h4>
+#### Invalid JavaScript identifier as a property name
 
-<p>Destructuring can be used with property names that are not valid JavaScript {{glossary("Identifier", "identifiers")}} by providing an alternative identifier that is valid.</p>
+Destructuring can be used with property names that are not valid JavaScript {{glossary("Identifier", "identifiers")}} by providing an alternative identifier that is valid.
 
-<pre class="brush: js">const foo = { 'fizz-buzz': true };
+```js
+const foo = { 'fizz-buzz': true };
 const { 'fizz-buzz': fizzBuzz } = foo;
 
 console.log(fizzBuzz); // "true"
-</pre>
+```
 
-<h4 id="Combined_Array_and_Object_Destructuring">Combined Array and Object Destructuring</h4>
+#### Combined Array and Object Destructuring
 
-<p>Array and Object destructuring can be combined. Say you want the third element in the array <code>props</code> below, and then you want the <code>name</code> property in the object, you can do the following:</p>
+Array and Object destructuring can be combined. Say you want the third element in the array `props` below, and then you want the `name` property in the object, you can do the following:
 
-<pre class="brush: js">const props = [
+```js
+const props = [
   { id: 1, name: 'Fizz'},
   { id: 2, name: 'Buzz'},
   { id: 3, name: 'FizzBuzz'}
@@ -415,29 +445,29 @@ console.log(fizzBuzz); // "true"
 const [,, { name }] = props;
 
 console.log(name); // "FizzBuzz"
-</pre>
+```
 
-<h4 id="The_prototype_chain_is_looked_up_when_the_object_is_deconstructed">The prototype chain is looked up when the object is deconstructed </h4>
+#### The prototype chain is looked up when the object is deconstructed 
 
-<p>When deconstructing an object, if a property is not accessed in itself, it will continue to look up along the prototype chain.</p>
+When deconstructing an object, if a property is not accessed in itself, it will continue to look up along the prototype chain.
 
-<pre class="brush: js">let obj = {self: '123'};
+```js
+let obj = {self: '123'};
 obj.__proto__.prot = '456';
 const {self, prot} = obj;
 // self "123"
-// prot "456" (Access to the prototype chain)</pre>
+// prot "456" (Access to the prototype chain)
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Assignment_Operators">Assignment operators</a></li>
- <li><a href="https://hacks.mozilla.org/2015/05/es6-in-depth-destructuring/">"ES6 in Depth: Destructuring" on hacks.mozilla.org</a></li>
-</ul>
+- [Assignment operators](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment_Operators)
+- ["ES6 in Depth: Destructuring" on hacks.mozilla.org](https://hacks.mozilla.org/2015/05/es6-in-depth-destructuring/)

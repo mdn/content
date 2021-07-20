@@ -11,50 +11,52 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.Locale.maximize
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The
-		<strong><code>Intl.Locale.prototype.maximize()</code></strong> method gets the
-		most likely values for the language, script, and region of the locale based on
-		existing values.</p>
+The
+**`Intl.Locale.prototype.maximize()`** method gets the
+most likely values for the language, script, and region of the locale based on
+existing values.
 
-<div>{{EmbedInteractiveExample("pages/js/intl-locale-prototype-maximize.html")}}</div>
+{{EmbedInteractiveExample("pages/js/intl-locale-prototype-maximize.html")}}
+
 <!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">maximize()</pre>
+```js
+maximize()
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref("Intl/Locale", "Locale")}} instance whose <code>baseName</code> property returns
-	the result of the <a href="https://www.unicode.org/reports/tr35/#Likely_Subtags">Add
-		Likely Subtags</a> algorithm executed against <em>{{jsxref("Intl/Locale/baseName",
-		"locale.baseName")}}</em>.</p>
+A {{jsxref("Intl/Locale", "Locale")}} instance whose `baseName` property returns
+the result of the [Add
+Likely Subtags](https://www.unicode.org/reports/tr35/#Likely_Subtags) algorithm executed against _{{jsxref("Intl/Locale/baseName",
+		"locale.baseName")}}_.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Sometimes, it is convenient to be able to identify the most likely locale language
-	identifier subtags based on an incomplete langauage ID. The Add Likely Subtags
-	algorithm gives us this functionality. For instance, given the language ID "en", the
-	algorithm would return "en-Latn-US", since English can only be written in the Latin
-	script, and is most likely to be used in the United States, as it is the largest
-	English-speaking country in the world. This functionality is provided to JavaScript
-	programmers via the <code>maximize()</code> method. <code>maximize()</code> only
-	affects the main subtags that comprise the <a
-		href="https://www.unicode.org/reports/tr35/#Language_Locale_Field_Definitions"
-		rel="noopener">language identifier</a>: language, script, and region subtags.
-	Other subtags after the "-u" in the locale identifier are called extension subtags and
-	are not affected by the <code>maximize()</code> method. Examples of these subtags
-	include {{jsxref("Intl/Locale/hourCycle", "Locale.hourCycle")}},
-	{{jsxref("Intl/Locale/calendar", "Locale.calendar")}}, and {{jsxref("Intl/Locale/numeric",
-	"Locale.numeric")}}.</p>
+Sometimes, it is convenient to be able to identify the most likely locale language
+identifier subtags based on an incomplete langauage ID. The Add Likely Subtags
+algorithm gives us this functionality. For instance, given the language ID "en", the
+algorithm would return "en-Latn-US", since English can only be written in the Latin
+script, and is most likely to be used in the United States, as it is the largest
+English-speaking country in the world. This functionality is provided to JavaScript
+programmers via the `maximize()` method. `maximize()` only
+affects the main subtags that comprise the [language identifier](https://www.unicode.org/reports/tr35/#Language_Locale_Field_Definitions): language, script, and region subtags.
+Other subtags after the "-u" in the locale identifier are called extension subtags and
+are not affected by the `maximize()` method. Examples of these subtags
+include {{jsxref("Intl/Locale/hourCycle", "Locale.hourCycle")}},
+{{jsxref("Intl/Locale/calendar", "Locale.calendar")}}, and {{jsxref("Intl/Locale/numeric",
+	"Locale.numeric")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_maximize">Using maximize</h3>
+### Using maximize
 
-<pre class="brush: js">let myLocale = new Intl.Locale("fr", {hourCycle: "h24", calendar: "gregory"});
+```js
+let myLocale = new Intl.Locale("fr", {hourCycle: "h24", calendar: "gregory"});
 console.log(myLocale.baseName); // Prints "fr"
 console.log(myLocale.toString()); // Prints "fr-u-ca-gregory-hc-h24"
 let myLocMaximized = myLocale.maximize();
@@ -65,21 +67,20 @@ console.log(myLocMaximized.baseName);
 
 // Prints "fr-Latn-FR-u-ca-gregory-hc-h24".
 // Note that the extension tags (after "-u") remain unchanged.
-console.log(myLocMaximized.toString()); </pre>
+console.log(myLocMaximized.toString()); 
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>{{jsxref("Intl.Locale")}}</li>
-	<li>{{jsxref("Intl/Locale/baseName", "Intl.Locale.baseName")}}</li>
-	<li><a href="https://www.unicode.org/reports/tr35/#Likely_Subtags">Unicode's Likely
-			Subtags spec</a></li>
-</ul>
+- {{jsxref("Intl.Locale")}}
+- {{jsxref("Intl/Locale/baseName", "Intl.Locale.baseName")}}
+- [Unicode's Likely
+  Subtags spec](https://www.unicode.org/reports/tr35/#Likely_Subtags)

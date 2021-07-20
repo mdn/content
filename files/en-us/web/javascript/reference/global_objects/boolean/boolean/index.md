@@ -2,65 +2,62 @@
 title: Boolean() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Boolean/Boolean
 tags:
-- Boolean
-- Constructor
-- JavaScript
-- Reference
+  - Boolean
+  - Constructor
+  - JavaScript
+  - Reference
 browser-compat: javascript.builtins.Boolean.Boolean
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>Boolean()</code></strong> constructor is used to create
-  {{jsxref("Boolean")}} objects.</p>
+The **`Boolean()`** constructor is used to create
+{{jsxref("Boolean")}} objects.
 
-<div>{{EmbedInteractiveExample("pages/js/boolean-constructor.html","shorter")}}</div>
+{{EmbedInteractiveExample("pages/js/boolean-constructor.html","shorter")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 new Boolean()
 new Boolean(value)
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>value</code> {{optional_inline}}</dt>
-  <dd>The initial value of the <code>Boolean</code> object.</dd>
-</dl>
+- `value` {{optional_inline}}
+  - : The initial value of the `Boolean` object.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Creating_Boolean_objects_with_an_initial_value_of_false">Creating
-  <code>Boolean</code> objects with an initial value of <code>false</code></h3>
+### Creating `Boolean` objects with an initial value of `false`
 
-<pre class="brush: js">var bNoParam = new Boolean();
+```js
+var bNoParam = new Boolean();
 var bZero = new Boolean(0);
 var bNull = new Boolean(null);
 var bEmptyString = new Boolean('');
 var bfalse = new Boolean(false);
-</pre>
+```
 
-<h3 id="Creating_Boolean_objects_with_an_initial_value_of_true">Creating
-  <code>Boolean</code> objects with an initial value of <code>true</code></h3>
+### Creating `Boolean` objects with an initial value of `true`
 
-<pre class="brush: js">var btrue = new Boolean(true);
+```js
+var btrue = new Boolean(true);
 var btrueString = new Boolean('true');
 var bfalseString = new Boolean('false');
 var bSuLin = new Boolean('Su Lin');
 var bArrayProto = new Boolean([]);
-var bObjProto = new Boolean({});</pre>
+var bObjProto = new Boolean({});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Glossary/Boolean">Boolean</a></li>
-</ul>
+- [Boolean](/en-US/docs/Glossary/Boolean)

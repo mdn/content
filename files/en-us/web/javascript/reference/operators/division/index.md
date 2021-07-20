@@ -2,71 +2,72 @@
 title: Division (/)
 slug: Web/JavaScript/Reference/Operators/Division
 tags:
-- JavaScript
-- Language feature
-- Operator
-- Reference
+  - JavaScript
+  - Language feature
+  - Operator
+  - Reference
 browser-compat: javascript.operators.division
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>The division operator (<code>/</code>) produces the quotient of its operands where the
-  left operand is the dividend and the right operand is the divisor.</p>
+The division operator (`/`) produces the quotient of its operands where the
+left operand is the dividend and the right operand is the divisor.
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-division.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-division.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">x / y</pre>
+```js
+x / y
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Basic_division">Basic division</h3>
+### Basic division
 
-<pre class="brush: js">1 / 2              // 0.5
+```js
+1 / 2              // 0.5
 
 Math.floor(3 / 2) // 1
 
 1.0 / 2.0         // 0.5
-</pre>
+```
 
-<h3 id="Division_by_zero">Division by zero</h3>
+### Division by zero
 
-<pre class="brush: js">2.0 / 0     // Infinity
+```js
+2.0 / 0     // Infinity
 
 2.0 / 0.0   // Infinity, because 0.0 === 0
 
-2.0 / -0.0  // -Infinity</pre>
+2.0 / -0.0  // -Infinity
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Addition">Addition
-      operator</a></li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction">Subtraction
-      operator</a></li>
-  <li><a
-      href="/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication">Multiplication
-      operator</a></li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Remainder">Remainder
-      operator</a></li>
-  <li><a
-      href="/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation">Exponentiation
-      operator</a></li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Increment">Increment
-      operator</a></li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Decrement">Decrement
-      operator</a></li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Unary_negation">Unary
-      negation operator</a></li>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus">Unary plus
-      operator</a></li>
-</ul>
+- [Addition
+  operator](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)
+- [Subtraction
+  operator](/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction)
+- [Multiplication
+  operator](/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication)
+- [Remainder
+  operator](/en-US/docs/Web/JavaScript/Reference/Operators/Remainder)
+- [Exponentiation
+  operator](/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation)
+- [Increment
+  operator](/en-US/docs/Web/JavaScript/Reference/Operators/Increment)
+- [Decrement
+  operator](/en-US/docs/Web/JavaScript/Reference/Operators/Decrement)
+- [Unary
+  negation operator](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_negation)
+- [Unary plus
+  operator](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus)

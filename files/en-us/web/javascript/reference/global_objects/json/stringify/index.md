@@ -2,102 +2,98 @@
 title: JSON.stringify()
 slug: Web/JavaScript/Reference/Global_Objects/JSON/stringify
 tags:
-- JSON
-- JavaScript
-- Method
-- Objects
-- Reference
-- stringify
-- Polyfill
+  - JSON
+  - JavaScript
+  - Method
+  - Objects
+  - Reference
+  - stringify
+  - Polyfill
 browser-compat: javascript.builtins.JSON.stringify
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>JSON.stringify()</code></strong> method converts a JavaScript object
-  or value to a JSON string, optionally replacing values if a replacer function is
-  specified or optionally including only the specified properties if a replacer array is
-  specified.</p>
+The **`JSON.stringify()`** method converts a JavaScript object
+or value to a JSON string, optionally replacing values if a replacer function is
+specified or optionally including only the specified properties if a replacer array is
+specified.
 
-<div>{{EmbedInteractiveExample("pages/js/json-stringify.html")}}</div>
+{{EmbedInteractiveExample("pages/js/json-stringify.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 JSON.stringify(value)
 JSON.stringify(value, replacer)
 JSON.stringify(value, replacer, space)
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>value</var></code></dt>
-  <dd>The value to convert to a JSON string.</dd>
-  <dt><code><var>replacer</var></code> {{optional_inline}}</dt>
-  <dd>A function that alters the behavior of the stringification process, or an array of
+- `value`
+  - : The value to convert to a JSON string.
+- `replacer` {{optional_inline}}
+  - : A function that alters the behavior of the stringification process, or an array of
     {{JSxRef("String")}} and {{JSxRef("Number")}} that serve as an allowlist for
     selecting/filtering the properties of the value object to be included in the JSON
     string. If this value is {{JSxRef("null")}} or not provided, all properties of the
-    object are included in the resulting JSON string.</dd>
-  <dt><code><var>space</var></code> {{optional_inline}}</dt>
-  <dd>A {{JSxRef("String")}} or {{JSxRef("Number")}} object that's used to insert white
+    object are included in the resulting JSON string.
+- `space` {{optional_inline}}
+
+  - : A {{JSxRef("String")}} or {{JSxRef("Number")}} object that's used to insert white
     space into the output JSON string for readability purposes.
-    <p>If this is a <code>Number</code>, it indicates the number of space characters to
-      use as white space for indenting purposes; this number is capped at 10 (if it is greater, the value is just
-      <code>10</code>). Values less than 1 indicate that no space should be used.</p>
 
-    <p>If this is a <code>String</code>, the string (or the first 10 characters of the
-      string, if it's longer than that) is used as white space. If this parameter is not
-      provided (or is {{JSxRef("null")}}), no white space is used.</p>
-  </dd>
-</dl>
+    If this is a `Number`, it indicates the number of space characters to
+    use as white space for indenting purposes; this number is capped at 10 (if it is greater, the value is just
+    `10`). Values less than 1 indicate that no space should be used.
 
-<h3 id="Return_value">Return value</h3>
+    If this is a `String`, the string (or the first 10 characters of the
+    string, if it's longer than that) is used as white space. If this parameter is not
+    provided (or is {{JSxRef("null")}}), no white space is used.
 
-<p>A JSON string representing the given value, or undefined.</p>
+### Return value
 
-<h3 id="Exceptions">Exceptions</h3>
+A JSON string representing the given value, or undefined.
 
-<ul>
-  <li>Throws a {{JSxRef("TypeError")}} ("cyclic object value") exception when a circular
-    reference is found.</li>
-  <li>Throws a {{JSxRef("TypeError")}} ("BigInt value can't be serialized in JSON") when
-    trying to stringify a {{jsxref("BigInt")}} value.</li>
-</ul>
+### Exceptions
 
-<h2 id="Description">Description</h2>
+- Throws a {{JSxRef("TypeError")}} ("cyclic object value") exception when a circular
+  reference is found.
+- Throws a {{JSxRef("TypeError")}} ("BigInt value can't be serialized in JSON") when
+  trying to stringify a {{jsxref("BigInt")}} value.
 
-<p><code>JSON.stringify()</code> converts a value to JSON notation representing it:</p>
+## Description
 
-<ul>
-  <li>If the value has a <code><a href="#tojson_behavior">toJSON()</a></code> method, it's
-    responsible to define what data will be serialized.</li>
-  <li>{{JSxRef("Boolean")}}, {{JSxRef("Number")}}, and {{JSxRef("String")}} objects are
-    converted to the corresponding primitive values during stringification, in accord with
-    the traditional conversion semantics.</li>
-  <li>{{JSxRef("undefined")}}, {{JSxRef("Function")}}s, and {{JSxRef("Symbol")}}s are not
-    valid JSON values. If any such values are encountered during conversion they are
-    either omitted (when found in an object) or changed to {{JSxRef("null")}} (when found
-    in an array). <code>JSON.stringify()</code> can return <code>undefined</code> when
-    passing in "pure" values like <code>JSON.stringify(function(){})</code> or
-    <code>JSON.stringify(undefined)</code>.</li>
-  <li>All {{JSxRef("Symbol")}}-keyed properties will be completely ignored, even when
-    using the <code><var>replacer</var></code> function.</li>
-  <li>The instances of {{JSxRef("Date")}} implement the <code>toJSON()</code> function by
-    returning a string (the same as <code>date.toISOString()</code>). Thus, they are
-    treated as strings.</li>
-  <li>The numbers {{JSxRef("Infinity")}} and {{JSxRef("NaN")}}, as well as the value
-    {{JSxRef("null")}}, are all considered <code>null</code>.</li>
-  <li>All the other {{JSxRef("Object")}} instances (including {{JSxRef("Map")}},
-    {{JSxRef("Set")}}, {{JSxRef("WeakMap")}}, and {{JSxRef("WeakSet")}}) will have only
-    their enumerable properties serialized.</li>
-</ul>
+`JSON.stringify()` converts a value to JSON notation representing it:
 
-<h2 id="Examples">Examples</h2>
+- If the value has a [`toJSON()`](#tojson_behavior) method, it's
+  responsible to define what data will be serialized.
+- {{JSxRef("Boolean")}}, {{JSxRef("Number")}}, and {{JSxRef("String")}} objects are
+  converted to the corresponding primitive values during stringification, in accord with
+  the traditional conversion semantics.
+- {{JSxRef("undefined")}}, {{JSxRef("Function")}}s, and {{JSxRef("Symbol")}}s are not
+  valid JSON values. If any such values are encountered during conversion they are
+  either omitted (when found in an object) or changed to {{JSxRef("null")}} (when found
+  in an array). `JSON.stringify()` can return `undefined` when
+  passing in "pure" values like `JSON.stringify(function(){})` or
+  `JSON.stringify(undefined)`.
+- All {{JSxRef("Symbol")}}-keyed properties will be completely ignored, even when
+  using the `replacer` function.
+- The instances of {{JSxRef("Date")}} implement the `toJSON()` function by
+  returning a string (the same as `date.toISOString()`). Thus, they are
+  treated as strings.
+- The numbers {{JSxRef("Infinity")}} and {{JSxRef("NaN")}}, as well as the value
+  {{JSxRef("null")}}, are all considered `null`.
+- All the other {{JSxRef("Object")}} instances (including {{JSxRef("Map")}},
+  {{JSxRef("Set")}}, {{JSxRef("WeakMap")}}, and {{JSxRef("WeakSet")}}) will have only
+  their enumerable properties serialized.
 
-<h3 id="Using_JSON.stringify">Using JSON.stringify</h3>
+## Examples
 
-<pre class="brush: js">JSON.stringify({});                    // '{}'
+### Using JSON.stringify
+
+```js
+JSON.stringify({});                    // '{}'
 JSON.stringify(true);                  // 'true'
 JSON.stringify('foo');                 // '"foo"'
 JSON.stringify([1, 'false', false]);   // '[1,"false",false]'
@@ -158,50 +154,44 @@ JSON.stringify( Object.create(null, { x: { value: 'x', enumerable: false }, y: {
 // BigInt values throw
 JSON.stringify({x: 2n});
 // TypeError: BigInt value can't be serialized in JSON
-</pre>
+```
 
-<h3 id="The_replacer_parameter">The replacer parameter</h3>
+### The replacer parameter
 
-<p>The <code><var>replacer</var></code> parameter can be either a function or an array.
-</p>
+The `replacer` parameter can be either a function or an array.
 
-<p><strong>As a function</strong>, it takes two parameters: the <var>key</var> and the
-  <var>value</var> being stringified. The object in which the key was found is provided as
-  the <code><var>replacer</var></code>'s <code>this</code> parameter.</p>
+**As a function**, it takes two parameters: the _key_ and the
+_value_ being stringified. The object in which the key was found is provided as
+the `replacer`'s `this` parameter.
 
-<p>Initially, the <code><var>replacer</var></code> function is called with an empty string
-  as key representing the object being stringified. It is then called for each property on
-  the object or array being stringified.</p>
+Initially, the `replacer` function is called with an empty string
+as key representing the object being stringified. It is then called for each property on
+the object or array being stringified.
 
-<p>It should return the value that should be added to the JSON string, as follows:</p>
+It should return the value that should be added to the JSON string, as follows:
 
-<ul>
-  <li>If you return a {{JSxRef("Number")}}, {{JSxRef("String")}}, {{JSxRef("Boolean")}},
-    or {{JSxRef("null")}}, the stringified version of that value is used as the property's
-    value.</li>
-  <li>If you return a {{JSxRef("Function")}}, {{JSxRef("Symbol")}}, or
-    {{JSxRef("undefined")}}, the property is not included in the output.</li>
-  <li>If you return any other object, the object is recursively stringified, calling the
-    <code><var>replacer</var></code> function on each property.</li>
-</ul>
+- If you return a {{JSxRef("Number")}}, {{JSxRef("String")}}, {{JSxRef("Boolean")}},
+  or {{JSxRef("null")}}, the stringified version of that value is used as the property's
+  value.
+- If you return a {{JSxRef("Function")}}, {{JSxRef("Symbol")}}, or
+  {{JSxRef("undefined")}}, the property is not included in the output.
+- If you return any other object, the object is recursively stringified, calling the
+  `replacer` function on each property.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> You cannot use the <code><var>replacer</var></code> function
-    to remove values from an array. If you return <code>undefined</code> or a function
-    then <code>null</code> is used instead.</p>
-</div>
+> **Note:** You cannot use the `replacer` function
+> to remove values from an array. If you return `undefined` or a function
+> then `null` is used instead.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> If you wish the <code><var>replacer</var></code> to
-    distinguish an initial object from a key with an empty string property (since both
-    would give the empty string as key and potentially an object as value), you will have
-    to keep track of the iteration count (if it is beyond the first iteration, it is a
-    genuine empty string key).</p>
-</div>
+> **Note:** If you wish the `replacer` to
+> distinguish an initial object from a key with an empty string property (since both
+> would give the empty string as key and potentially an object as value), you will have
+> to keep track of the iteration count (if it is beyond the first iteration, it is a
+> genuine empty string key).
 
-<h4 id="Example_replacer_as_a_function">Example replacer, as a function</h4>
+#### Example replacer, as a function
 
-<pre class="brush: js">function replacer(key, value) {
+```js
+function replacer(key, value) {
   // Filtering out properties
   if (typeof value === 'string') {
     return undefined;
@@ -212,63 +202,61 @@ JSON.stringify({x: 2n});
 var foo = {foundation: 'Mozilla', model: 'box', week: 45, transport: 'car', month: 7};
 JSON.stringify(foo, replacer);
 // '{"week":45,"month":7}'
-</pre>
+```
 
-<h4 id="Example_replacer_as_an_array">Example <var>replacer</var>, as an array</h4>
+#### Example _replacer_, as an array
 
-<p>If <code><var>replacer</var></code> is an array, the array's values indicate the names
-  of the properties in the object that should be included in the resulting JSON string.
-</p>
+If `replacer` is an array, the array's values indicate the names
+of the properties in the object that should be included in the resulting JSON string.
 
-<pre class="brush: js">JSON.stringify(foo, ['week', 'month']);
+```js
+JSON.stringify(foo, ['week', 'month']);
 // '{"week":45,"month":7}', only keep "week" and "month" properties
-</pre>
+```
 
-<h3 id="The_space_argument">The space argument</h3>
+### The space argument
 
-<p>The <code>space</code> argument may be used to control spacing in the final string.</p>
+The `space` argument may be used to control spacing in the final string.
 
-<ul>
-  <li><strong>If it is a number</strong>, successive levels in the stringification will
-    each be indented by this many space characters (up to 10).</li>
-  <li><strong>If it is a string</strong>, successive levels will be indented by this
-    string (or the first ten characters of it).</li>
-</ul>
+- **If it is a number**, successive levels in the stringification will
+  each be indented by this many space characters (up to 10).
+- **If it is a string**, successive levels will be indented by this
+  string (or the first ten characters of it).
 
-<pre class="brush: js">JSON.stringify({ a: 2 }, null, ' ');
+```js
+JSON.stringify({ a: 2 }, null, ' ');
 // '{
 //  "a": 2
 // }'
-</pre>
+```
 
-<p>Using a tab character mimics standard pretty-print appearance:</p>
+Using a tab character mimics standard pretty-print appearance:
 
-<pre class="brush: js">JSON.stringify({ uno: 1, dos: 2 }, null, '\t');
+```js
+JSON.stringify({ uno: 1, dos: 2 }, null, '\t');
 // returns the string:
 // '{
 //     "uno": 1,
 //     "dos": 2
 // }'
-</pre>
+```
 
-<h3 id="toJSON_behavior">toJSON() behavior</h3>
+### toJSON() behavior
 
-<p>If an object being stringified has a property named <code>toJSON</code> whose value is
-  a function, then the <code>toJSON()</code> method customizes JSON stringification
-  behavior: instead of the object being serialized, the value returned by the
-  <code>toJSON()</code> method when called will be serialized.
-  <code>JSON.stringify()</code> calls <code>toJSON</code> with one parameter:</p>
+If an object being stringified has a property named `toJSON` whose value is
+a function, then the `toJSON()` method customizes JSON stringification
+behavior: instead of the object being serialized, the value returned by the
+`toJSON()` method when called will be serialized.
+`JSON.stringify()` calls `toJSON` with one parameter:
 
-<ul>
-  <li>if this object is a property value, the property name</li>
-  <li>if it is in an array, the index in the array, as a string</li>
-  <li>an empty string if <code>JSON.stringify()</code> was directly called on this object
-  </li>
-</ul>
+- if this object is a property value, the property name
+- if it is in an array, the index in the array, as a string
+- an empty string if `JSON.stringify()` was directly called on this object
 
-<p>For example:</p>
+For example:
 
-<pre class="brush: js">var obj = {
+```js
+var obj = {
     data: 'data',
 
     toJSON (key) {
@@ -287,46 +275,44 @@ JSON.stringify({ obj }); // Shorthand property names (ES2015).
 
 JSON.stringify([ obj ]);
 // '["Now I am a nested object under key '0'"]'
-</pre>
+```
 
-<h3 id="Issue_with_JSON.stringify_when_serializing_circular_references">Issue with
-  JSON.stringify() when serializing circular references</h3>
+### Issue with JSON.stringify() when serializing circular references
 
-<p>Note that since the <a href="https://www.json.org/">JSON format</a> doesn't support
-  object references (although an <a
-    href="https://datatracker.ietf.org/doc/html/draft-pbryan-zyp-json-ref-03">IETF draft
-    exists</a>), a {{JSxRef("TypeError")}} will be thrown if one attempts to encode an
-  object with circular references.</p>
+Note that since the [JSON format](https://www.json.org/) doesn't support
+object references (although an [IETF draft
+exists](https://datatracker.ietf.org/doc/html/draft-pbryan-zyp-json-ref-03)), a {{JSxRef("TypeError")}} will be thrown if one attempts to encode an
+object with circular references.
 
-<pre class="brush: js example-bad">const circularReference = {};
+```js example-bad
+const circularReference = {};
 circularReference.myself = circularReference;
 
 // Serializing circular references throws "TypeError: cyclic object value"
 JSON.stringify(circularReference);
-</pre>
+```
 
-<p>To serialize circular references you can use a library that supports them (e.g. <a
-    href="https://github.com/douglascrockford/JSON-js/blob/master/cycle.js">cycle.js</a>
-  by Douglas Crockford) or implement a solution by yourself, which will require finding
-  and replacing (or removing) the cyclic references by serializable values.</p>
+To serialize circular references you can use a library that supports them (e.g. [cycle.js](https://github.com/douglascrockford/JSON-js/blob/master/cycle.js)
+by Douglas Crockford) or implement a solution by yourself, which will require finding
+and replacing (or removing) the cyclic references by serializable values.
 
-<h3 id="Issue_with_plain_JSON.stringify_for_use_as_JavaScript">Issue with plain
-  JSON.stringify for use as JavaScript</h3>
+### Issue with plain JSON.stringify for use as JavaScript
 
-<p>Historically, JSON was not a completely strict subset of JavaScript. The literal code
-  points U+2028 LINE SEPARATOR and U+2029 PARAGRAPH SEPARATOR could appear literally in
-  string literals and property names in JSON text. But they could not appear literally in
-  similar context in JavaScript text, only using Unicode escapes as <code>\u2028</code> and
-  <code>\u2029</code>. This recently changed: now both code points may appear literally in
-  strings in JSON and JavaScript both.</p>
+Historically, JSON was not a completely strict subset of JavaScript. The literal code
+points U+2028 LINE SEPARATOR and U+2029 PARAGRAPH SEPARATOR could appear literally in
+string literals and property names in JSON text. But they could not appear literally in
+similar context in JavaScript text, only using Unicode escapes as `\u2028` and
+`\u2029`. This recently changed: now both code points may appear literally in
+strings in JSON and JavaScript both.
 
-<p>Therefore, if compatibility with older JavaScript engines is required, it is perilous
-  to directly substitute the string returned by <code>JSON.stringify</code> into a
-  JavaScript string to be passed to <code>eval</code> or <code>new Function</code> or as
-  part of a <a href="https://en.wikipedia.org/wiki/JSONP">JSONP</a> URL, and the following
-  utility can be used:</p>
+Therefore, if compatibility with older JavaScript engines is required, it is perilous
+to directly substitute the string returned by `JSON.stringify` into a
+JavaScript string to be passed to `eval` or `new Function` or as
+part of a [JSONP](https://en.wikipedia.org/wiki/JSONP) URL, and the following
+utility can be used:
 
-<pre class="brush: js">function jsFriendlyJSONStringify (s) {
+```js
+function jsFriendlyJSONStringify (s) {
     return JSON.stringify(s).
         replace(/\u2028/g, '\\u2028').
         replace(/\u2029/g, '\\u2029');
@@ -348,15 +334,14 @@ eval('(' + jsFriendlyJSONStringify(s) + ')');
 // console.log in Firefox unescapes the Unicode if
 //   logged to console, so we use alert
 alert(jsFriendlyJSONStringify(s)); // {"a":"\u2028","b":"\u2029"}
-</pre>
+```
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Properties of non-array objects are not guaranteed to be
-    stringified in any particular order. Do not rely on ordering of properties within the
-    same object within the stringification.</p>
-</div>
+> **Note:** Properties of non-array objects are not guaranteed to be
+> stringified in any particular order. Do not rely on ordering of properties within the
+> same object within the stringification.
 
-<pre class="brush: js">var a = JSON.stringify({ foo: "bar", baz: "quux" })
+```js
+var a = JSON.stringify({ foo: "bar", baz: "quux" })
 //'{"foo":"bar","baz":"quux"}'
 var b = JSON.stringify({ baz: "quux", foo: "bar" })
 //'{"baz":"quux","foo":"bar"}'
@@ -364,16 +349,16 @@ console.log(a !== b) // true
 
 // some memoization functions use JSON.stringify to serialize arguments,
 // which may cause a cache miss when encountering the same object like above
-</pre>
+```
 
-<h3 id="Example_of_using_JSON.stringify_with_localStorage">Example of using
-  JSON.stringify() with localStorage</h3>
+### Example of using JSON.stringify() with localStorage
 
-<p>In a case where you want to store an object created by your user and allowing it to be
-  restored even after the browser has been closed, the following example is a model for
-  the applicability of <code>JSON.stringify()</code>:</p>
+In a case where you want to store an object created by your user and allowing it to be
+restored even after the browser has been closed, the following example is a model for
+the applicability of `JSON.stringify()`:
 
-<pre class="brush: js">// Creating an example of JSON
+```js
+// Creating an example of JSON
 var session = {
   'screens': [],
   'state': true
@@ -396,44 +381,43 @@ var restoredSession = JSON.parse(localStorage.getItem('session'));
 // Now restoredSession variable contains the object that was saved
 // in localStorage
 console.log(restoredSession);
-</pre>
+```
 
-<h3 id="Well-formed_JSON.stringify">Well-formed JSON.stringify()</h3>
+### Well-formed JSON.stringify()
 
-<p>Engines implementing the <a
-    href="https://github.com/tc39/proposal-well-formed-stringify">well-formed
-    JSON.stringify specification</a> will stringify lone surrogates, any code point from
-  U+D800 to U+DFFF, using Unicode escape sequences rather than literally. Before this
-  change <code>JSON.stringify</code> would output lone surrogates if the input contained
-  any lone surrogates; such strings could not be encoded in valid UTF-8 or UTF-16:</p>
+Engines implementing the [well-formed
+JSON.stringify specification](https://github.com/tc39/proposal-well-formed-stringify) will stringify lone surrogates, any code point from
+U+D800 to U+DFFF, using Unicode escape sequences rather than literally. Before this
+change `JSON.stringify` would output lone surrogates if the input contained
+any lone surrogates; such strings could not be encoded in valid UTF-8 or UTF-16:
 
-<pre
-  class="brush: js no-line-numbers">JSON.stringify("\uD800"); // '"�"'</pre>
+```js
+JSON.stringify("\uD800"); // '"�"'
+```
 
-<p>But with this change <code>JSON.stringify</code> represents lone surrogates using JSON
-  escape sequences that <em>can</em> be encoded in valid UTF-8 or UTF-16:</p>
+But with this change `JSON.stringify` represents lone surrogates using JSON
+escape sequences that _can_ be encoded in valid UTF-8 or UTF-16:
 
-<pre
-  class="brush: js no-line-numbers">JSON.stringify("\uD800"); // '"\\ud800"'</pre>
+```js
+JSON.stringify("\uD800"); // '"\\ud800"'
+```
 
-<p>This change should be backwards-compatible as long as you pass the result of
-  <code>JSON.stringify</code> to APIs such as <code>JSON.parse</code> that will accept any
-  valid JSON text, because they will treat Unicode escapes of lone surrogates as identical
-  to the lone surrogates themselves. <em>Only</em> if you are directly interpreting the
-  result of <code>JSON.stringify</code> do you need to carefully handle
-  <code>JSON.stringify</code>'s two possible encodings of these code points.</p>
+This change should be backwards-compatible as long as you pass the result of
+`JSON.stringify` to APIs such as `JSON.parse` that will accept any
+valid JSON text, because they will treat Unicode escapes of lone surrogates as identical
+to the lone surrogates themselves. _Only_ if you are directly interpreting the
+result of `JSON.stringify` do you need to carefully handle
+`JSON.stringify`'s two possible encodings of these code points.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>A polyfill of modern <code>JSON.stringify</code> behavior (symbol and well-formed unicode) is available in <a href="https://github.com/zloirock/core-js#ecmascript-function"><code>core-js</code></a></li>
-  <li>{{JSxRef("JSON.parse()")}}</li>
-</ul>
+- A polyfill of modern `JSON.stringify` behavior (symbol and well-formed unicode) is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-function)
+- {{JSxRef("JSON.parse()")}}

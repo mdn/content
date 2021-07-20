@@ -2,73 +2,75 @@
 title: RegExp.prototype.exec()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/exec
 tags:
-- JavaScript
-- Method
-- Prototype
-- Reference
-- RegExp
-- Regular Expressions
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
+  - RegExp
+  - Regular Expressions
 browser-compat: javascript.builtins.RegExp.exec
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><span class="seoSummary">The <strong><code>exec()</code></strong> method executes a
-    search for a match in a specified string. Returns a result array, or
-    {{jsxref("null")}}.</span></p>
+The **`exec()`** method executes a
+search for a match in a specified string. Returns a result array, or
+{{jsxref("null")}}.
 
-<p>JavaScript {{jsxref("RegExp")}} objects are <strong>stateful</strong> when they have
-  the {{jsxref("RegExp.global", "global")}} or {{jsxref("RegExp.sticky", "sticky")}} flags
-  set (e.g. <code>/foo/g</code> or <code>/foo/y</code>). They store a
-  {{jsxref("RegExp.lastIndex", "lastIndex")}} from the previous match. Using this
-  internally, <code>exec()</code> can be used to iterate over multiple matches in a string
-  of text (with capture groups), as opposed to getting just the matching strings with
-  {{jsxref("String.prototype.match()")}}.</p>
+JavaScript {{jsxref("RegExp")}} objects are **stateful** when they have
+the {{jsxref("RegExp.global", "global")}} or {{jsxref("RegExp.sticky", "sticky")}} flags
+set (e.g. `/foo/g` or `/foo/y`). They store a
+{{jsxref("RegExp.lastIndex", "lastIndex")}} from the previous match. Using this
+internally, `exec()` can be used to iterate over multiple matches in a string
+of text (with capture groups), as opposed to getting just the matching strings with
+{{jsxref("String.prototype.match()")}}.
 
-<p>A newer function has been proposed to simplify matching multiple parts of a string
-  (with capture groups): {{jsxref("String.prototype.matchAll()")}}.</p>
+A newer function has been proposed to simplify matching multiple parts of a string
+(with capture groups): {{jsxref("String.prototype.matchAll()")}}.
 
-<p>If you are executing a match to find <code>true</code> or <code>false</code>, use
-  {{jsxref("RegExp.prototype.test()")}} method instead.</p>
-<p>If you are executing a match to find its index position in the string, use
-  {{jsxref("String.prototype.search()")}} method instead.</p>
+If you are executing a match to find `true` or `false`, use
+{{jsxref("RegExp.prototype.test()")}} method instead.
 
-<div>{{EmbedInteractiveExample("pages/js/regexp-prototype-exec.html")}}</div>
+If you are executing a match to find its index position in the string, use
+{{jsxref("String.prototype.search()")}} method instead.
 
-<h2 id="Syntax">Syntax</h2>
+{{EmbedInteractiveExample("pages/js/regexp-prototype-exec.html")}}
 
-<pre class="brush: js">exec(str)</pre>
+## Syntax
 
-<h3 id="Parameters">Parameters</h3>
+```js
+exec(str)
+```
 
-<dl>
-  <dt><code><var>str</var></code></dt>
-  <dd>The string against which to match the regular expression.</dd>
-</dl>
+### Parameters
 
-<h3 id="Return_value">Return value</h3>
+- `str`
+  - : The string against which to match the regular expression.
 
-<p>If the match succeeds, the <code>exec()</code> method returns an array (with extra
-  properties <code>index</code>, <code>input</code>, and if the <code>d</code> flag is
-  set, <code>indices</code>; see below) and updates the
-  {{jsxref("RegExp.lastIndex", "lastIndex")}} property of the regular expression object.
-  The returned array has the matched text as the first item, and then one item for each
-  parenthetical capture group of the matched text.</p>
+### Return value
 
-<p>If the match fails, the <code>exec()</code> method returns {{jsxref("null")}}, and sets
-  {{jsxref("RegExp.lastIndex", "lastIndex")}} to <code>0</code>.</p>
+If the match succeeds, the `exec()` method returns an array (with extra
+properties `index`, `input`, and if the `d` flag is
+set, `indices`; see below) and updates the
+{{jsxref("RegExp.lastIndex", "lastIndex")}} property of the regular expression object.
+The returned array has the matched text as the first item, and then one item for each
+parenthetical capture group of the matched text.
 
-<h2 id="Description">Description</h2>
+If the match fails, the `exec()` method returns {{jsxref("null")}}, and sets
+{{jsxref("RegExp.lastIndex", "lastIndex")}} to `0`.
 
-<p>Consider the following example:</p>
+## Description
 
-<pre class="brush: js">// Match "quick brown" followed by "jumps", ignoring characters in between
+Consider the following example:
+
+```js
+// Match "quick brown" followed by "jumps", ignoring characters in between
 // Remember "brown" and "jumps"
 // Ignore case
 let re = /quick\s(brown).+?(jumps)/igd;
 let result = re.exec('The Quick Brown Fox Jumps Over The Lazy Dog');
-</pre>
+```
 
-<p>The following table shows the state of <code>result</code> after running this script:</p>
+The following table shows the state of `result` after running this script:
 
 <table class="standard-table">
   <thead>
@@ -88,12 +90,10 @@ let result = re.exec('The Quick Brown Fox Jumps Over The Lazy Dog');
       <td><code>[1], ...[<var>n</var>]</code></td>
       <td>
         <p>The parenthesized substring matches, if any.</p>
-
         <p>The number of possible parenthesized substrings is unlimited.</p>
       </td>
       <td>
         <p><code>result[1] === "Brown"</code></p>
-
         <p><code>result[2] === "Jumps"</code></p>
       </td>
     </tr>
@@ -104,15 +104,17 @@ let result = re.exec('The Quick Brown Fox Jumps Over The Lazy Dog');
     </tr>
     <tr>
       <td><code>indices</code></td>
-      <td>An array where each entry represents a substring match.
-        Each substring match itself is an array where the first entry
-        represents its start index and the second entry its end index.<br/>
-        The <code>indices</code> array additionally has a <code>groups</code>
-        property which holds an object of all named capturing groups. The keys
-        are the names of the capturing groups and each value is an array with
-        the first item being the start entry and the second entry being the
-        end index of the capturing group. If the regular expression doesn't
-        contain any capturing groups, <code>groups</code> is <code>undefined</code>.
+      <td>
+        An array where each entry represents a substring match. Each substring
+        match itself is an array where the first entry represents its start
+        index and the second entry its end index.<br />The
+        <code>indices</code> array additionally has a
+        <code>groups</code> property which holds an object of all named
+        capturing groups. The keys are the names of the capturing groups and
+        each value is an array with the first item being the start entry and the
+        second entry being the end index of the capturing group. If the regular
+        expression doesn't contain any capturing groups, <code>groups</code> is
+        <code>undefined</code>.
       </td>
       <td>
         <p><code>indices[0] === Array [ 4, 25 ]</code></p>
@@ -130,7 +132,7 @@ let result = re.exec('The Quick Brown Fox Jumps Over The Lazy Dog');
   </tbody>
 </table>
 
-<p>The following table shows the state of <code>re</code> after running this script:</p>
+The following table shows the state of `re` after running this script:
 
 <table class="standard-table">
   <thead>
@@ -145,7 +147,6 @@ let result = re.exec('The Quick Brown Fox Jumps Over The Lazy Dog');
       <td><code>lastIndex</code></td>
       <td>
         <p>The index at which to start the next match.</p>
-
         <p>If <code>g</code> is absent, this will always be <code>0</code>.</p>
       </td>
       <td><code>25</code></td>
@@ -153,8 +154,8 @@ let result = re.exec('The Quick Brown Fox Jumps Over The Lazy Dog');
     <tr>
       <td><code>dotAll</code></td>
       <td>
-        Indicates if the <code>s</code> flag was used to let <code>.</code>
-        match newlines.
+        Indicates if the <code>s</code> flag was used to let
+        <code>.</code> match newlines.
       </td>
       <td><code>false</code></td>
     </tr>
@@ -162,8 +163,9 @@ let result = re.exec('The Quick Brown Fox Jumps Over The Lazy Dog');
       <td><code>hasIndices</code></td>
       <td>
         Indicates if the <code>d</code> flag was used to generate an
-        <code>indices</code> property in the returned value containing
-        start and end indices of the substring matches.</td>
+        <code>indices</code> property in the returned value containing start and
+        end indices of the substring matches.
+      </td>
       <td><code>true</code></td>
     </tr>
     <tr>
@@ -178,7 +180,9 @@ let result = re.exec('The Quick Brown Fox Jumps Over The Lazy Dog');
     </tr>
     <tr>
       <td><code>multiline</code></td>
-      <td>Indicates if the <code>m</code> flag was used to search across multiple lines.
+      <td>
+        Indicates if the <code>m</code> flag was used to search across multiple
+        lines.
       </td>
       <td><code>false</code></td>
     </tr>
@@ -190,40 +194,40 @@ let result = re.exec('The Quick Brown Fox Jumps Over The Lazy Dog');
     <tr>
       <td><code>sticky</code></td>
       <td>
-        Indicates if the <code>y</code> flag was used to match
-        only from the index indicated by the <code>lastIndex</code>
-        property.
+        Indicates if the <code>y</code> flag was used to match only from the
+        index indicated by the <code>lastIndex</code> property.
       </td>
       <td><code>false</code></td>
     </tr>
     <tr>
       <td><code>unicode</code></td>
       <td>
-        Indicates if the <code>u</code> flag was used to
-        treat the pattern as a sequence of Unicode code points.
+        Indicates if the <code>u</code> flag was used to treat the pattern as a
+        sequence of Unicode code points.
       </td>
       <td><code>false</code></td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Finding_successive_matches">Finding successive matches</h3>
+### Finding successive matches
 
-<p>If your regular expression uses the "<code>g</code>" flag, you can use the
-  <code>exec()</code> method multiple times to find successive matches in the same string.
-  When you do so, the search starts at the substring of <code><var>str</var></code>
-  specified by the regular expression's {{jsxref("RegExp.lastIndex", "lastIndex")}}
-  property ({{jsxref("RegExp.prototype.test()", "test()")}} will also advance the
-  {{jsxref("RegExp.lastIndex", "lastIndex")}} property). Note that the
-  {{jsxref("RegExp.lastIndex", "lastIndex")}} property will not be reset when searching a
-  different string, it will start its search at its existing {{jsxref("RegExp.lastIndex",
-  "lastIndex")}} .</p>
+If your regular expression uses the "`g`" flag, you can use the
+`exec()` method multiple times to find successive matches in the same string.
+When you do so, the search starts at the substring of `str`
+specified by the regular expression's {{jsxref("RegExp.lastIndex", "lastIndex")}}
+property ({{jsxref("RegExp.prototype.test()", "test()")}} will also advance the
+{{jsxref("RegExp.lastIndex", "lastIndex")}} property). Note that the
+{{jsxref("RegExp.lastIndex", "lastIndex")}} property will not be reset when searching a
+different string, it will start its search at its existing {{jsxref("RegExp.lastIndex",
+  "lastIndex")}} .
 
-<p>For example, assume you have this script:</p>
+For example, assume you have this script:
 
-<pre class="brush: js">let myRe = /ab*/g;
+```js
+let myRe = /ab*/g;
 let str = 'abbcdefabh';
 let myArray;
 while ((myArray = myRe.exec(str)) !== null) {
@@ -231,51 +235,48 @@ while ((myArray = myRe.exec(str)) !== null) {
   msg += 'Next match starts at ' + myRe.lastIndex;
   console.log(msg);
 }
-</pre>
+```
 
-<p>This script displays the following text:</p>
+This script displays the following text:
 
-<pre class="brush: plain">Found abb. Next match starts at 3
+```plain
+Found abb. Next match starts at 3
 Found ab. Next match starts at 9
-</pre>
+```
 
-<div class="warning">
-  <p><strong>Warning:</strong> <strong>Do <em>not</em> place the regular expression
-      literal (or {{jsxref("RegExp")}} constructor) within the <code>while</code>
-      condition! </strong></p>
+> **Warning:** **Do _not_ place the regular expression
+> literal (or {{jsxref("RegExp")}} constructor) within the `while`
+> condition!**
+>
+> It will create an infinite loop if there is a match, due to the
+> {{jsxref("RegExp.lastIndex", "lastIndex")}} property being reset upon each iteration.
+>
+> Also, be sure that the global flag ("`g`") is set, or it will also cause
+> an infinite loop.
 
-  <p>It will create an infinite loop if there is a match, due to the
-    {{jsxref("RegExp.lastIndex", "lastIndex")}} property being reset upon each iteration.
-  </p>
+### Using exec() with RegExp literals
 
-  <p>Also, be sure that the global flag ("<code>g</code>") is set, or it will also cause
-    an infinite loop.</p>
-</div>
+You can also use `exec()` without creating a {{jsxref("RegExp")}} object
+explicitly:
 
-<h3 id="Using_exec_with_RegExp_literals">Using exec() with RegExp literals</h3>
-
-<p>You can also use <code>exec()</code> without creating a {{jsxref("RegExp")}} object
-  explicitly:</p>
-
-<pre class="brush: js">let matches = /(hello \S+)/.exec('This is a hello world!');
+```js
+let matches = /(hello \S+)/.exec('This is a hello world!');
 console.log(matches[1]);
-</pre>
+```
 
-<p>This will log a message containing <code>'hello world!'</code>.</p>
+This will log a message containing `'hello world!'`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">Regular
-      Expressions</a> chapter in the <a href="/en-US/docs/Web/JavaScript/Guide">JavaScript
-      Guide</a></li>
-  <li>{{jsxref("RegExp")}}</li>
-</ul>
+- [Regular
+  Expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) chapter in the [JavaScript
+  Guide](/en-US/docs/Web/JavaScript/Guide)
+- {{jsxref("RegExp")}}

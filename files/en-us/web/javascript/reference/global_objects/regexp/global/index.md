@@ -10,26 +10,24 @@ tags:
   - Regular Expressions
 browser-compat: javascript.builtins.RegExp.global
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>global</code></strong> property indicates whether or not the "<code>g</code>" flag is used with the regular expression. <code>global</code> is a read-only property of an individual regular expression instance.</p>
+The **`global`** property indicates whether or not the "`g`" flag is used with the regular expression. `global` is a read-only property of an individual regular expression instance.
 
-<div>{{EmbedInteractiveExample("pages/js/regexp-prototype-global.html")}}</div>
+{{EmbedInteractiveExample("pages/js/regexp-prototype-global.html")}}{{js_property_attributes(0, 0, 1)}}
 
+## Description
 
-<div>{{js_property_attributes(0, 0, 1)}}</div>
+The value of `global` is a {{jsxref("Boolean")}} and `true` if the "`g`" flag was used; otherwise, `false`. The "`g`" flag indicates that the regular expression should be tested against all possible matches in a string. A regular expression defined as both `global` ("`g`") and `sticky` ("`y`") will ignore the `global` flag and perform sticky matches.
 
-<h2 id="Description">Description</h2>
+You cannot change this property directly.
 
-<p>The value of <code>global</code> is a {{jsxref("Boolean")}} and <code>true</code> if the "<code>g</code>" flag was used; otherwise, <code>false</code>. The "<code>g</code>" flag indicates that the regular expression should be tested against all possible matches in a string. A regular expression defined as both <code>global</code> ("<code>g</code>") and <code>sticky</code> ("<code>y</code>") will ignore the <code>global</code> flag and perform sticky matches.</p>
+## Examples
 
-<p>You cannot change this property directly.</p>
+### Using global
 
-<h2 id="Examples">Examples</h2>
-
-<h3 id="Using_global">Using global</h3>
-
-<pre class="brush: js">var regex = new RegExp('foo', 'g');
+```js
+var regex = new RegExp('foo', 'g');
 
 console.log(regex.global);  // true
 
@@ -43,25 +41,24 @@ var regex1 = new RegExp('foo');
 
 var str2 = str.replace(regex1, '');
 
-console.log(str2);  // Output: examplefoo</pre>
+console.log(str2);  // Output: examplefoo
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("RegExp.lastIndex")}}</li>
- <li>{{JSxRef("RegExp.prototype.dotAll")}}</li>
- <li>{{JSxRef("RegExp.prototype.hasIndices")}}</li>
- <li>{{JSxRef("RegExp.prototype.ignoreCase")}}</li>
- <li>{{JSxRef("RegExp.prototype.multiline")}}</li>
- <li>{{JSxRef("RegExp.prototype.source")}}</li>
- <li>{{JSxRef("RegExp.prototype.sticky")}}</li>
- <li>{{JSxRef("RegExp.prototype.unicode")}}</li>
-</ul>
+- {{jsxref("RegExp.lastIndex")}}
+- {{JSxRef("RegExp.prototype.dotAll")}}
+- {{JSxRef("RegExp.prototype.hasIndices")}}
+- {{JSxRef("RegExp.prototype.ignoreCase")}}
+- {{JSxRef("RegExp.prototype.multiline")}}
+- {{JSxRef("RegExp.prototype.source")}}
+- {{JSxRef("RegExp.prototype.sticky")}}
+- {{JSxRef("RegExp.prototype.unicode")}}

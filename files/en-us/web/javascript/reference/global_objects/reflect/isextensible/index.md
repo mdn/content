@@ -2,58 +2,56 @@
 title: Reflect.isExtensible()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/isExtensible
 tags:
-- ECMAScript 2015
-- JavaScript
-- Method
-- Reference
-- Reflect
-- Polyfill
+  - ECMAScript 2015
+  - JavaScript
+  - Method
+  - Reference
+  - Reflect
+  - Polyfill
 browser-compat: javascript.builtins.Reflect.isExtensible
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The static
-    <strong><code>Reflect.isExtensible()</code></strong> method determines if an object is
-    extensible (whether it can have new properties added to it). It is similar to
-    {{jsxref("Object.isExtensible()")}}, but with some <a
-      href="#Difference_to_Object.isExtensible">differences</a>.</p>
+The static
+**`Reflect.isExtensible()`** method determines if an object is
+extensible (whether it can have new properties added to it). It is similar to
+{{jsxref("Object.isExtensible()")}}, but with some [differences](#Difference_to_Object.isExtensible).
 
-<div>{{EmbedInteractiveExample("pages/js/reflect-isextensible.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/reflect-isextensible.html", "taller")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+Reflect.isExtensible(target)
+```
 
-<pre class="brush: js">Reflect.isExtensible(<var>target</var>)
-</pre>
+### Parameters
 
-<h3 id="Parameters">Parameters</h3>
+- `target`
+  - : The target object which to check if it is extensible.
 
-<dl>
-  <dt><code><var>target</var></code></dt>
-  <dd>The target object which to check if it is extensible.</dd>
-</dl>
+### Return value
 
-<h3 id="Return_value">Return value</h3>
+A {{jsxref("Boolean")}} indicating whether or not the target is extensible.
 
-<p>A {{jsxref("Boolean")}} indicating whether or not the target is extensible.</p>
+### Exceptions
 
-<h3 id="Exceptions">Exceptions</h3>
+A {{jsxref("TypeError")}}, if `target` is not an {{jsxref("Object")}}.
 
-<p>A {{jsxref("TypeError")}}, if <code>target</code> is not an {{jsxref("Object")}}.</p>
+## Description
 
-<h2 id="Description">Description</h2>
+The `Reflect.isExtensible` method allows you determine if an object is
+extensible (whether it can have new properties added to it). It is the same method as
+{{jsxref("Object.isExtensible()")}}.
 
-<p>The <code>Reflect.isExtensible</code> method allows you determine if an object is
-  extensible (whether it can have new properties added to it). It is the same method as
-  {{jsxref("Object.isExtensible()")}}.</p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Using Reflect.isExtensible()
 
-<h3 id="Using_Reflect.isExtensible">Using Reflect.isExtensible()</h3>
+See also {{jsxref("Object.isExtensible()")}}.
 
-<p>See also {{jsxref("Object.isExtensible()")}}.</p>
-
-<pre class="brush: js">// New objects are extensible.
+```js
+// New objects are extensible.
 let empty = {}
 Reflect.isExtensible(empty)  // === true
 
@@ -68,34 +66,33 @@ Reflect.isExtensible(sealed)  // === false
 // Frozen objects are also by definition non-extensible.
 let frozen = Object.freeze({})
 Reflect.isExtensible(frozen)  // === false
-</pre>
+```
 
-<h3 id="Difference_to_Object.isExtensible">Difference to Object.isExtensible()</h3>
+### Difference to Object.isExtensible()
 
-<p>If the <code><var>target</var></code> argument to this method is not an object (a
-  primitive), then it will cause a {{jsxref("TypeError")}}. With
-  {{jsxref("Object.isExtensible()")}}, a non-object first argument will be coerced to an
-  object at first.</p>
+If the `target` argument to this method is not an object (a
+primitive), then it will cause a {{jsxref("TypeError")}}. With
+{{jsxref("Object.isExtensible()")}}, a non-object first argument will be coerced to an
+object at first.
 
-<pre class="brush: js">Reflect.isExtensible(1)
+```js
+Reflect.isExtensible(1)
 // TypeError: 1 is not an object
 
 Object.isExtensible(1)
 // false
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>A polyfill of <code>Reflect.isExtensible</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-reflect"><code>core-js</code></a></li>
-  <li>{{jsxref("Reflect")}}</li>
-  <li>{{jsxref("Object.isExtensible()")}}</li>
-</ul>
+- A polyfill of `Reflect.isExtensible` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
+- {{jsxref("Reflect")}}
+- {{jsxref("Object.isExtensible()")}}

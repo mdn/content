@@ -9,62 +9,60 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.getCanonicalLocales
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>Intl.getCanonicalLocales()</code></strong> method returns an array
-	containing the canonical locale names. Duplicates will be omitted and elements will be
-	validated as structurally valid language tags.</p>
+The **`Intl.getCanonicalLocales()`** method returns an array
+containing the canonical locale names. Duplicates will be omitted and elements will be
+validated as structurally valid language tags.
 
-<div>{{EmbedInteractiveExample("pages/js/intl-getcanonicallocales.html")}}</div>
+{{EmbedInteractiveExample("pages/js/intl-getcanonicallocales.html")}}
+
 <!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">Intl.getCanonicalLocales(<var>locales</var>)</pre>
+```js
+Intl.getCanonicalLocales(locales)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-	<dt><code><var>locales</var></code></dt>
-	<dd>A list of {{jsxref("String")}} values for which to get the canonical locale names.
-	</dd>
-</dl>
+- `locales`
+  - : A list of {{jsxref("String")}} values for which to get the canonical locale names.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An array containing the canonical locale names.</p>
+An array containing the canonical locale names.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_getCanonicalLocales">Using getCanonicalLocales</h3>
+### Using getCanonicalLocales
 
-<pre class="brush: js">Intl.getCanonicalLocales('EN-US'); // ["en-US"]
+```js
+Intl.getCanonicalLocales('EN-US'); // ["en-US"]
 Intl.getCanonicalLocales(['EN-US', 'Fr']); // ["en-US", "fr"]
 
 Intl.getCanonicalLocales('EN_US');
 // RangeError:'EN_US' is not a structurally valid language tag
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p><a href="https://formatjs.io/docs/polyfills/intl-getcanonicallocales">formatjs
-		Intl.getCanonicalLocales polyfill</a></p>
+[formatjs
+Intl.getCanonicalLocales polyfill](https://formatjs.io/docs/polyfills/intl-getcanonicallocales)
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>{{jsxref("Intl/NumberFormat/supportedLocalesOf",
-		"Intl.NumberFormat.supportedLocalesOf()")}}</li>
-	<li>{{jsxref("Intl/DateTimeFormat/supportedLocalesOf",
-		"Intl.DateTimeFormat.supportedLocalesOf()")}}</li>
-	<li>{{jsxref("Intl/Collator/supportedLocalesOf", "Intl.Collator.supportedLocalesOf()")}}
-	</li>
-</ul>
+- {{jsxref("Intl/NumberFormat/supportedLocalesOf",
+		"Intl.NumberFormat.supportedLocalesOf()")}}
+- {{jsxref("Intl/DateTimeFormat/supportedLocalesOf",
+		"Intl.DateTimeFormat.supportedLocalesOf()")}}
+- {{jsxref("Intl/Collator/supportedLocalesOf", "Intl.Collator.supportedLocalesOf()")}}

@@ -9,102 +9,94 @@ tags:
   - Reference
 browser-compat: javascript.operators.new
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p><span class="seoSummary">The <strong><code>new</code> operator</strong> lets developers
-    create an instance of a user-defined object type or of one of the built-in object
-    types that has a constructor function.</span></p>
+The **`new` operator** lets developers
+create an instance of a user-defined object type or of one of the built-in object
+types that has a constructor function.
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-newoperator.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-newoperator.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">new constructor[([arguments])]</pre>
+```js
+new constructor[([arguments])]
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>constructor</var></code></dt>
-  <dd>A class or function that specifies the type of the object instance.</dd>
-  <dt><code><var>arguments</var></code></dt>
-  <dd>A list of values that the <code><var>constructor</var></code> will be called with.
-  </dd>
-</dl>
+- `constructor`
+  - : A class or function that specifies the type of the object instance.
+- `arguments`
+  - : A list of values that the `constructor` will be called with.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The <strong><code>new</code></strong> keyword does the following things:</p>
+The **`new`** keyword does the following things:
 
-<ol>
-  <li>Creates a blank, plain JavaScript object.</li>
-  <li>Adds a property to the new object (<code>__proto__</code>) that links to the constructor function's prototype object
-    <div class="notecard note">
-      <p><strong>Note:</strong> Properties/objects added to the construction function prototype are therefore accessible to all instances created from the constructor function (using <code>new</code>).</p>
-      </div>
-  </li>
-  <li>Binds the newly created object instance as the <code>this</code> context
-    (i.e. all references to <code>this</code> in the constructor function now refer to the object created in the first step).</li>
-  <li>Returns <code>this</code> if the function doesn't return an object.</li>
-</ol>
+1.  Creates a blank, plain JavaScript object.
+2.  Adds a property to the new object (`__proto__`) that links to the constructor function's prototype object
 
-<p>Creating a user-defined object requires two steps:</p>
+    > **Note:** Properties/objects added to the construction function prototype are therefore accessible to all instances created from the constructor function (using `new`).
 
-<ol>
-  <li>Define the object type by writing a function that specifies its name and properties.
-    For example, a constructor function to create an object <code>Foo</code>might look like this:
-<pre class="brush: js">
-function Foo(bar1, bar2) {
-  this.bar1 = bar1;
-  this.bar2 = bar2;
-}
-</pre>
-  </li>
-  <li>Create an instance of the object with <code>new</code>.
-    <pre class="brush: js">var myFoo = new Foo('Bar 1', 2021);</pre>
-  </li>
-</ol>
+3.  Binds the newly created object instance as the `this` context
+    (i.e. all references to `this` in the constructor function now refer to the object created in the first step).
+4.  Returns `this` if the function doesn't return an object.
 
-<div class="notecard note">
-<p><strong>Note:</strong> An object can have a property that is itself another object. See the
-  examples below.</p>
-</div>
+Creating a user-defined object requires two steps:
 
-<p>When the code <code>new <em>Foo</em>(...)</code> is executed, the following things
-  happen:</p>
+1.  Define the object type by writing a function that specifies its name and properties.
+    For example, a constructor function to create an object `Foo`might look like this:
 
-<ol>
-  <li>A new object is created, inheriting from <code><em>Foo</em>.prototype</code>.</li>
-  <li>The constructor function <code><em>Foo</em></code> is called with the specified
+    ```js
+    function Foo(bar1, bar2) {
+      this.bar1 = bar1;
+      this.bar2 = bar2;
+    }
+    ```
+
+2.  Create an instance of the object with `new`.
+
+    ```js
+    var myFoo = new Foo('Bar 1', 2021);
+    ```
+
+> **Note:** An object can have a property that is itself another object. See the
+> examples below.
+
+When the code `new Foo(...)` is executed, the following things
+happen:
+
+1.  A new object is created, inheriting from `Foo.prototype`.
+2.  The constructor function `Foo` is called with the specified
     arguments, and with
-    <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/this">this</a></code>
-    bound to the newly created object. <code>new <em>Foo</em></code> is equivalent to
-    <code>new <em>Foo</em>()</code>, i.e. if no argument list is specified,
-    <code><em>Foo</em></code> is called without arguments.</li>
-  <li>The object (not null, false, 3.1415 or other primitive types) returned by the
-    constructor function becomes the result of the whole <code>new</code> expression. If
+    [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this)
+    bound to the newly created object. `new Foo` is equivalent to
+    `new Foo()`, i.e. if no argument list is specified,
+    `Foo` is called without arguments.
+3.  The object (not null, false, 3.1415 or other primitive types) returned by the
+    constructor function becomes the result of the whole `new` expression. If
     the constructor function doesn't explicitly return an object, the object created in
     step 1 is used instead (normally constructors don't return a value, but they can
-    choose to do so if they want to override the normal object creation process).</li>
-</ol>
+    choose to do so if they want to override the normal object creation process).
 
-<p>You can always add a property to a previously defined object instance. For example, the
-  statement <code>car1.color = "black"</code> adds a property <code>color</code> to
-  <code>car1</code>, and assigns it a value of "<code>black</code>".</p>
+You can always add a property to a previously defined object instance. For example, the
+statement `car1.color = "black"` adds a property `color` to
+`car1`, and assigns it a value of "`black`".
 
-<p>However, this does not affect any other objects. To add the new property to all objects of the same type,
-  you must add the property to the definition of the <code>Car</code> object type.</p>
+However, this does not affect any other objects. To add the new property to all objects of the same type,
+you must add the property to the definition of the `Car` object type.
 
-<p>You can add a shared property to a previously defined object type by using the
-  <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function.prototype</a></code>
-  property. This defines a property that is shared by all objects created with that
-  function, rather than by just one instance of the object type. The following code adds a
-  color property with value <code>"original color"</code> to all objects of type
-  <code>Car</code>, and then overwrites that value with the string "<code>black</code>"
-  only in the instance object <code>car1</code>. For more information, see <a
-    href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">prototype</a>.
-</p>
+You can add a shared property to a previously defined object type by using the
+[`Function.prototype`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function)
+property. This defines a property that is shared by all objects created with that
+function, rather than by just one instance of the object type. The following code adds a
+color property with value `"original color"` to all objects of type
+`Car`, and then overwrites that value with the string "`black`"
+only in the instance object `car1`. For more information, see [prototype](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function).
 
-<pre class="brush: js">function Car() {}
+```js
+function Car() {}
 car1 = new Car();
 car2 = new Car();
 
@@ -120,98 +112,101 @@ console.log(Object.getPrototypeOf(car1).color); // 'original color'
 console.log(Object.getPrototypeOf(car2).color); // 'original color'
 console.log(car1.color);   // 'black'
 console.log(car2.color);   // 'original color'
-</pre>
+```
 
-<div class="notecard note">
-  <p><strong>Note:</strong> While the constructor function can be invoked like any regular function (i.e. without the <code>new</code> operator),
-    in this case a new Object is not created and the value of <code>this</code> is also different.</p>
-</div>
+> **Note:** While the constructor function can be invoked like any regular function (i.e. without the `new` operator),
+> in this case a new Object is not created and the value of `this` is also different.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Object_type_and_object_instance">Object type and object instance</h3>
+### Object type and object instance
 
-<p>Suppose you want to create an object type for cars. You want this type of object to be
-  called <code>Car</code>, and you want it to have properties for make, model, and year.
-  To do this, you would write the following function:</p>
+Suppose you want to create an object type for cars. You want this type of object to be
+called `Car`, and you want it to have properties for make, model, and year.
+To do this, you would write the following function:
 
-<pre class="brush: js">function Car(make, model, year) {
+```js
+function Car(make, model, year) {
   this.make = make;
   this.model = model;
   this.year = year;
 }
-</pre>
+```
 
-<p>Now you can create an object called <code>myCar</code> as follows:</p>
+Now you can create an object called `myCar` as follows:
 
-<pre class="brush: js">var myCar = new Car('Eagle', 'Talon TSi', 1993);
-</pre>
+```js
+var myCar = new Car('Eagle', 'Talon TSi', 1993);
+```
 
-<p>This statement creates <code>myCar</code> and assigns it the specified values for its
-  properties. Then the value of <code>myCar.make</code> is the string "Eagle",
-  <code>myCar.year</code> is the integer 1993, and so on.</p>
+This statement creates `myCar` and assigns it the specified values for its
+properties. Then the value of `myCar.make` is the string "Eagle",
+`myCar.year` is the integer 1993, and so on.
 
-<p>You can create any number of <code>car</code> objects by calls to <code>new</code>. For
-  example:</p>
+You can create any number of `car` objects by calls to `new`. For
+example:
 
-<pre class="brush: js">var kensCar = new Car('Nissan', '300ZX', 1992);
-</pre>
+```js
+var kensCar = new Car('Nissan', '300ZX', 1992);
+```
 
-<h3 id="Object_property_that_is_itself_another_object">Object property that is itself
-  another object</h3>
+### Object property that is itself another object
 
-<p>Suppose you define an object called <code>Person</code> as follows:</p>
+Suppose you define an object called `Person` as follows:
 
-<pre class="brush: js">function Person(name, age, sex) {
+```js
+function Person(name, age, sex) {
   this.name = name;
   this.age = age;
   this.sex = sex;
 }
-</pre>
+```
 
-<p>And then instantiate two new <code>Person</code> objects as follows:</p>
+And then instantiate two new `Person` objects as follows:
 
-<pre class="brush: js">var rand = new Person('Rand McNally', 33, 'M');
+```js
+var rand = new Person('Rand McNally', 33, 'M');
 var ken = new Person('Ken Jones', 39, 'M');
-</pre>
+```
 
-<p>Then you can rewrite the definition of <code>Car</code> to include an
-  <code>owner</code> property that takes a <code>Person</code> object, as follows:</p>
+Then you can rewrite the definition of `Car` to include an
+`owner` property that takes a `Person` object, as follows:
 
-<pre class="brush: js">function Car(make, model, year, owner) {
+```js
+function Car(make, model, year, owner) {
   this.make = make;
   this.model = model;
   this.year = year;
   this.owner = owner;
 }
-</pre>
+```
 
-<p>To instantiate the new objects, you then use the following:</p>
+To instantiate the new objects, you then use the following:
 
-<pre class="brush: js">var car1 = new Car('Eagle', 'Talon TSi', 1993, rand);
+```js
+var car1 = new Car('Eagle', 'Talon TSi', 1993, rand);
 var car2 = new Car('Nissan', '300ZX', 1992, ken);
-</pre>
+```
 
-<p>Instead of passing a literal string or integer value when creating the new objects, the
-  above statements pass the objects <code>rand</code> and <code>ken</code> as the
-  parameters for the owners. To find out the name of the owner of <code>car2</code>, you
-  can access the following property:</p>
+Instead of passing a literal string or integer value when creating the new objects, the
+above statements pass the objects `rand` and `ken` as the
+parameters for the owners. To find out the name of the owner of `car2`, you
+can access the following property:
 
-<pre class="brush: js">car2.owner.name
-</pre>
+```js
+car2.owner.name
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Function")}}</li>
-  <li>{{jsxref("Reflect.construct()")}}</li>
-  <li>{{jsxref("Object")}}</li>
-</ul>
+- {{jsxref("Function")}}
+- {{jsxref("Reflect.construct()")}}
+- {{jsxref("Object")}}

@@ -1,5 +1,5 @@
 ---
-title: 'get ArrayBuffer[@@species]'
+title: get ArrayBuffer[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/@@species
 tags:
   - ArrayBuffer
@@ -8,42 +8,44 @@ tags:
   - TypedArrays
 browser-compat: javascript.builtins.ArrayBuffer.@@species
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>ArrayBuffer[@@species]</code></strong> accessor property returns the <code>ArrayBuffer</code> constructor.</p>
+The **`ArrayBuffer[@@species]`** accessor property returns the `ArrayBuffer` constructor.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The species accessor property returns the default constructor for <code>ArrayBuffer</code> objects. Subclass constructors may over-ride it to change the constructor assignment.</p>
+The species accessor property returns the default constructor for `ArrayBuffer` objects. Subclass constructors may over-ride it to change the constructor assignment.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Species_in_ordinary_objects">Species in ordinary objects</h3>
+### Species in ordinary objects
 
-<p>The species property returns the default constructor function, which is the <code>ArrayBuffer</code> constructor for <code>ArrayBuffer</code> objects:</p>
+The species property returns the default constructor function, which is the `ArrayBuffer` constructor for `ArrayBuffer` objects:
 
-<pre class="brush: js">ArrayBuffer[Symbol.species]; // function ArrayBuffer()</pre>
+```js
+ArrayBuffer[Symbol.species]; // function ArrayBuffer()
+```
 
-<h3 id="Species_in_derived_objects">Species in derived objects</h3>
+### Species in derived objects
 
-<p>In a derived collection object (e.g. your custom array buffer <code>MyArrayBuffer</code>), the <code>MyArrayBuffer</code> species is the <code>MyArrayBuffer</code> constructor. However, you might want to overwrite this, in order to return parent <code>ArrayBuffer</code> objects in your derived class methods:</p>
+In a derived collection object (e.g. your custom array buffer `MyArrayBuffer`), the `MyArrayBuffer` species is the `MyArrayBuffer` constructor. However, you might want to overwrite this, in order to return parent `ArrayBuffer` objects in your derived class methods:
 
-<pre class="brush: js">class MyArrayBuffer extends ArrayBuffer {
+```js
+class MyArrayBuffer extends ArrayBuffer {
   // Overwrite MyArrayBuffer species to the parent ArrayBuffer constructor
   static get [Symbol.species]() { return ArrayBuffer; }
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("ArrayBuffer")}}</li>
- <li>{{jsxref("Symbol.species")}}</li>
-</ul>
+- {{jsxref("ArrayBuffer")}}
+- {{jsxref("Symbol.species")}}

@@ -2,27 +2,26 @@
 title: TypedArray.prototype.forEach()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/forEach
 tags:
-- ECMAScript 2015
-- JavaScript
-- Method
-- Prototype
-- Reference
-- TypedArray
-- TypedArrays
-- Polyfill
+  - ECMAScript 2015
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
+  - TypedArray
+  - TypedArrays
+  - Polyfill
 browser-compat: javascript.builtins.TypedArray.forEach
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>forEach()</code></strong> method executes a provided function once
-  per array element. This method has the same algorithm as
-  {{jsxref("Array.prototype.forEach()")}}. <em>TypedArray</em> is one of the <a
-    href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">typed
-    array types</a> here.</p>
+The **`forEach()`** method executes a provided function once
+per array element. This method has the same algorithm as
+{{jsxref("Array.prototype.forEach()")}}. _TypedArray_ is one of the [typed
+array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) here.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 // Arrow function
 forEach((element) => { ... } )
 forEach((element, index) => { ... } )
@@ -37,75 +36,70 @@ forEach(function callbackFn(element) { ... })
 forEach(function callbackFn(element, index) { ... })
 forEach(function callbackFn(element, index, array){ ... })
 forEach(function callbackFn(element, index, array) { ... }, thisArg)
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>callbackFn</var></code></dt>
-  <dd>Function that produces an element of the new typed array, taking three arguments:
-    <dl>
-      <dt><code><var>element</var></code></dt>
-      <dd>The current element being processed in the typed array.</dd>
-      <dt><code><var>index</var></code></dt>
-      <dd>The index of the current element being processed in the array.</dd>
-      <dt><code><var>array</var></code></dt>
-      <dd>The array <code>forEach()</code> was called upon.</dd>
-    </dl>
-  </dd>
-  <dt><code><var>thisArg</var></code> {{optional_inline}}</dt>
-  <dd>Value to use as <code>this</code> when executing <code><var>callbackFn</var></code>.
-  </dd>
-</dl>
+- `callbackFn`
 
-<h3 id="Return_value">Return value</h3>
+  - : Function that produces an element of the new typed array, taking three arguments:
 
-<p>{{jsxref("undefined")}}.</p>
+    - `element`
+      - : The current element being processed in the typed array.
+    - `index`
+      - : The index of the current element being processed in the array.
+    - `array`
+      - : The array `forEach()` was called upon.
 
-<h2 id="Description">Description</h2>
+- `thisArg` {{optional_inline}}
+  - : Value to use as `this` when executing `callbackFn`.
 
-<p>The <code>forEach()</code> method executes the provided
-  <code><var>callbackFn</var></code> once for each element present in the typed array in
-  ascending order. It is not invoked for indexes that have been deleted or elided.
-  However, it is executed for elements that are present and have the value
-  {{jsxref("undefined")}}.</p>
+### Return value
 
-<p><code><var>callbackFn</var></code> is invoked with <strong>three arguments</strong>:</p>
+{{jsxref("undefined")}}.
 
-<ul>
-  <li>the <strong>element value</strong></li>
-  <li>the <strong>element index</strong></li>
-  <li>the <strong>typed array being traversed</strong></li>
-</ul>
+## Description
 
-<p>If a <code><var>thisArg</var></code> parameter is provided to <code>forEach()</code>,
-  it will be passed to <code><var>callbackFn</var></code> when invoked, for use as its
-  <code>this</code> value.  Otherwise, the value {{jsxref("undefined")}} will be passed
-  for use as its <code>this</code> value. The <code>this</code> value ultimately
-  observable by <code><var>callbackFn</var></code> is determined according to <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/this">the usual rules for
-    determining the <code>this</code> seen by a function</a>.</p>
+The `forEach()` method executes the provided
+`callbackFn` once for each element present in the typed array in
+ascending order. It is not invoked for indexes that have been deleted or elided.
+However, it is executed for elements that are present and have the value
+{{jsxref("undefined")}}.
 
-<p>The range of elements processed by <code>forEach()</code> is set before the first
-  invocation of <code>callbackFn</code>. Elements that are appended to the typed array after
-  the call to <code>forEach()</code> begins will not be visited by
-  <code><var>callbackFn</var></code> . If the values of existing elements of the typed array
-  are changed, the value passed to <code><var>callbackFn</var></code> will be the value at
-  the time <code>forEach()</code> visits them; elements that are deleted before being
-  visited are not visited.</p>
+`callbackFn` is invoked with **three arguments**:
 
-<p><code>forEach()</code> executes the <code>callbackFn</code> function once for each typed
-  array element; unlike {{jsxref("TypedArray.prototype.every()", "every()")}} and
-  {{jsxref("TypedArray.prototype.some()", "some()")}} it, always returns the value
-  {{jsxref("undefined")}}.</p>
+- the **element value**
+- the **element index**
+- the **typed array being traversed**
 
-<h2 id="Examples">Examples</h2>
+If a `thisArg` parameter is provided to `forEach()`,
+it will be passed to `callbackFn` when invoked, for use as its
+`this` value.  Otherwise, the value {{jsxref("undefined")}} will be passed
+for use as its `this` value. The `this` value ultimately
+observable by `callbackFn` is determined according to [the usual rules for
+determining the `this` seen by a function](/en-US/docs/Web/JavaScript/Reference/Operators/this).
 
-<h3 id="Logging_the_contents_of_a_typed_array">Logging the contents of a typed array</h3>
+The range of elements processed by `forEach()` is set before the first
+invocation of `callbackFn`. Elements that are appended to the typed array after
+the call to `forEach()` begins will not be visited by
+`callbackFn` . If the values of existing elements of the typed array
+are changed, the value passed to `callbackFn` will be the value at
+the time `forEach()` visits them; elements that are deleted before being
+visited are not visited.
 
-<p>The following code logs a line for each element in a typed array:</p>
+`forEach()` executes the `callbackFn` function once for each typed
+array element; unlike {{jsxref("TypedArray.prototype.every()", "every()")}} and
+{{jsxref("TypedArray.prototype.some()", "some()")}} it, always returns the value
+{{jsxref("undefined")}}.
 
-<pre class="brush: js">function logArrayElements(element, index, array) {
+## Examples
+
+### Logging the contents of a typed array
+
+The following code logs a line for each element in a typed array:
+
+```js
+function logArrayElements(element, index, array) {
   console.log('a[' + index + '] = ' + element);
 }
 
@@ -115,22 +109,20 @@ new Uint8Array([0, 1, 2, 3]).forEach(logArrayElements);
 // a[1] = 1
 // a[2] = 2
 // a[3] = 3
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>A polyfill of <code>TypedArray.prototype.forEach</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-typed-arrays"><code>core-js</code></a></li>
-  <li>{{jsxref("TypedArray.prototype.map()")}}</li>
-  <li>{{jsxref("TypedArray.prototype.every()")}}</li>
-  <li>{{jsxref("TypedArray.prototype.some()")}}</li>
-  <li>{{jsxref("Array.prototype.forEach()")}}</li>
-</ul>
+- A polyfill of `TypedArray.prototype.forEach` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- {{jsxref("TypedArray.prototype.map()")}}
+- {{jsxref("TypedArray.prototype.every()")}}
+- {{jsxref("TypedArray.prototype.some()")}}
+- {{jsxref("Array.prototype.forEach()")}}

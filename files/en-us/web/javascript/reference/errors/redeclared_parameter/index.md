@@ -2,69 +2,69 @@
 title: 'SyntaxError: redeclaration of formal parameter "x"'
 slug: Web/JavaScript/Reference/Errors/Redeclared_parameter
 tags:
-- Error
-- Errors
-- JavaScript
-- SyntaxError
+  - Error
+  - Errors
+  - JavaScript
+  - SyntaxError
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<p>The JavaScript exception "redeclaration of formal parameter" occurs when the same
-  variable name occurs as a function parameter and is then redeclared using a
-  {{jsxref("Statements/let", "let")}} assignment in a function body again.</p>
+The JavaScript exception "redeclaration of formal parameter" occurs when the same
+variable name occurs as a function parameter and is then redeclared using a
+{{jsxref("Statements/let", "let")}} assignment in a function body again.
 
-<h2 id="Message">Message</h2>
+## Message
 
-<pre class="brush: js">SyntaxError: Let/Const redeclaration (Edge)
+```js
+SyntaxError: Let/Const redeclaration (Edge)
 SyntaxError: redeclaration of formal parameter "x" (Firefox)
 SyntaxError: Identifier "x" has already been declared (Chrome)
-</pre>
+```
 
-<h2 id="Error_type">Error type</h2>
+## Error type
 
-<p>{{jsxref("SyntaxError")}}</p>
+{{jsxref("SyntaxError")}}
 
-<h2 id="What_went_wrong">What went wrong?</h2>
+## What went wrong?
 
-<p>The same variable name occurs as a function parameter and is then redeclared using a
-  {{jsxref("Statements/let", "let")}} assignment in a function body again. Redeclaring the
-  same variable within the same function or block scope using <code>let</code> is not
-  allowed in JavaScript.</p>
+The same variable name occurs as a function parameter and is then redeclared using a
+{{jsxref("Statements/let", "let")}} assignment in a function body again. Redeclaring the
+same variable within the same function or block scope using `let` is not
+allowed in JavaScript.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Redeclared_argument">Redeclared argument</h3>
+### Redeclared argument
 
-<p>In this case, the variable "arg" redeclares the argument.</p>
+In this case, the variable "arg" redeclares the argument.
 
-<pre class="brush: js example-bad">function f(arg) {
+```js example-bad
+function f(arg) {
   let arg = 'foo';
 }
 
 // SyntaxError: redeclaration of formal parameter "arg"
-</pre>
+```
 
-<p>If you want to change the value of "arg" in the function body, you can do so, but you
-  do not need to declare the same variable again. In other words: you can omit the
-  <code>let</code> keyword. If you want to create a new variable, you need to rename it as
-  conflicts with the function parameter already.</p>
+If you want to change the value of "arg" in the function body, you can do so, but you
+do not need to declare the same variable again. In other words: you can omit the
+`let` keyword. If you want to create a new variable, you need to rename it as
+conflicts with the function parameter already.
 
-<pre class="brush: js example-good">function f(arg) {
+```js example-good
+function f(arg) {
   arg = 'foo';
 }
 
 function f(arg) {
   let bar = 'foo';
 }
-</pre>
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Statements/let", "let")}}</li>
-  <li>{{jsxref("Statements/const", "const")}}</li>
-  <li>{{jsxref("Statements/var", "var")}}</li>
-  <li><a href="/en-US/docs/Web/JavaScript/Guide/Grammar_and_Types#Declarations">Declaring
-      variables</a> in the <a href="/en-US/docs/Web/JavaScript/Guide">JavaScript Guide</a>
-  </li>
-</ul>
+- {{jsxref("Statements/let", "let")}}
+- {{jsxref("Statements/const", "const")}}
+- {{jsxref("Statements/var", "var")}}
+- [Declaring
+  variables](/en-US/docs/Web/JavaScript/Guide/Grammar_and_Types#Declarations) in the [JavaScript Guide](/en-US/docs/Web/JavaScript/Guide)

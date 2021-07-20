@@ -10,47 +10,43 @@ tags:
   - Regular Expressions
 browser-compat: javascript.builtins.RegExp.multiline
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>multiline</code></strong> property indicates whether or not the "<code>m</code>" flag is used with the regular expression. <code>multiline</code> is a read-only property of an individual regular expression instance.</p>
+The **`multiline`** property indicates whether or not the "`m`" flag is used with the regular expression. `multiline` is a read-only property of an individual regular expression instance.
 
-<div>{{EmbedInteractiveExample("pages/js/regexp-prototype-multiline.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/regexp-prototype-multiline.html", "taller")}}{{js_property_attributes(0, 0, 1)}}
 
+## Description
 
-<div>{{js_property_attributes(0, 0, 1)}}</div>
+The value of `multiline` is a {{jsxref("Boolean")}} and is true if the "`m`" flag was used; otherwise, false. The "`m`" flag indicates that a multiline input string should be treated as multiple lines. For example, if "`m`" is used, "`^`" and "`$`" change from matching at only the start or end of the entire string to the start or end of any line within the string.
 
-<h2 id="Description">Description</h2>
+You cannot change this property directly.
 
-<p>The value of <code>multiline</code> is a {{jsxref("Boolean")}} and is true if the "<code>m</code>" flag was used; otherwise, false. The "<code>m</code>" flag indicates that a multiline input string should be treated as multiple lines. For example, if "<code>m</code>" is used, "<code>^</code>" and "<code>$</code>" change from matching at only the start or end of the entire string to the start or end of any line within the string.</p>
+## Examples
 
-<p>You cannot change this property directly.</p>
+### Using multiline
 
-<h2 id="Examples">Examples</h2>
-
-<h3 id="Using_multiline">Using multiline</h3>
-
-<pre class="brush: js">var regex = new RegExp('foo', 'm');
+```js
+var regex = new RegExp('foo', 'm');
 
 console.log(regex.multiline); // true
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("RegExp.lastIndex")}}</li>
- <li>{{JSxRef("RegExp.prototype.dotAll")}}</li>
- <li>{{JSxRef("RegExp.prototype.global")}}</li>
- <li>{{JSxRef("RegExp.prototype.hasIndices")}}</li>
- <li>{{JSxRef("RegExp.prototype.ignoreCase")}}</li>
- <li>{{JSxRef("RegExp.prototype.source")}}</li>
- <li>{{JSxRef("RegExp.prototype.sticky")}}</li>
- <li>{{JSxRef("RegExp.prototype.unicode")}}</li>
-</ul>
+- {{jsxref("RegExp.lastIndex")}}
+- {{JSxRef("RegExp.prototype.dotAll")}}
+- {{JSxRef("RegExp.prototype.global")}}
+- {{JSxRef("RegExp.prototype.hasIndices")}}
+- {{JSxRef("RegExp.prototype.ignoreCase")}}
+- {{JSxRef("RegExp.prototype.source")}}
+- {{JSxRef("RegExp.prototype.sticky")}}
+- {{JSxRef("RegExp.prototype.unicode")}}

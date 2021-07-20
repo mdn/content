@@ -2,91 +2,88 @@
 title: String.prototype.endsWith()
 slug: Web/JavaScript/Reference/Global_Objects/String/endsWith
 tags:
-- JavaScript
-- Method
-- Prototype
-- Reference
-- String
-- Polyfill
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
+  - String
+  - Polyfill
 browser-compat: javascript.builtins.String.endsWith
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>endsWith()</code></strong> method determines
-    whether a string ends with the characters of a specified string, returning
-    <code>true</code> or <code>false</code> as appropriate.</p>
+The **`endsWith()`** method determines
+whether a string ends with the characters of a specified string, returning
+`true` or `false` as appropriate.
 
-<div>{{EmbedInteractiveExample("pages/js/string-endswith.html")}}</div>
+{{EmbedInteractiveExample("pages/js/string-endswith.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush: js">
+```js
 endsWith(searchString)
 endsWith(searchString, length)
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>searchString</var></code></dt>
-  <dd>The characters to be searched for at the end of <code><var>str</var></code>.</dd>
-  <dt><code><var>length</var></code> {{optional_inline}}</dt>
-  <dd>If provided, it is used as the length of <code><var>str</var></code>. Defaults to
-    <code><var>str</var>.length</code>.</dd>
-</dl>
+- `searchString`
+  - : The characters to be searched for at the end of `str`.
+- `length` {{optional_inline}}
+  - : If provided, it is used as the length of `str`. Defaults to
+    `str.length`.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p><strong><code>true</code></strong> if the given characters are found at the end of the
-  string; otherwise, <strong><code>false</code></strong>.</p>
+**`true`** if the given characters are found at the end of the
+string; otherwise, **`false`**.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>This method lets you determine whether or not a string ends with another string. This
-  method is case-sensitive.</p>
+This method lets you determine whether or not a string ends with another string. This
+method is case-sensitive.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_endsWith">Using endsWith()</h3>
+### Using endsWith()
 
-<pre class="brush: js">let str = 'To be, or not to be, that is the question.'
+```js
+let str = 'To be, or not to be, that is the question.'
 
 console.log(str.endsWith('question.'))  // true
 console.log(str.endsWith('to be'))      // false
 console.log(str.endsWith('to be', 19))  // true
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>This method has been added to the ECMAScript 6 specification and may not be available
-  in all JavaScript implementations yet. However, you can polyfill
-  <code>String.prototype.endsWith()</code> with the following snippet:</p>
+This method has been added to the ECMAScript 6 specification and may not be available
+in all JavaScript implementations yet. However, you can polyfill
+`String.prototype.endsWith()` with the following snippet:
 
-<pre class="brush: js">if (!String.prototype.endsWith) {
+```js
+if (!String.prototype.endsWith) {
   String.prototype.endsWith = function(search, this_len) {
-    if (this_len === undefined || this_len &gt; this.length) {
+    if (this_len === undefined || this_len > this.length) {
       this_len = this.length;
     }
     return this.substring(this_len - search.length, this_len) === search;
   };
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>A polyfill of <code>String.prototype.endsWith</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-string-and-regexp"><code>core-js</code></a></li>
-  <li>{{jsxref("String.prototype.startsWith()")}}</li>
-  <li>{{jsxref("String.prototype.includes()")}}</li>
-  <li>{{jsxref("String.prototype.indexOf()")}}</li>
-  <li>{{jsxref("String.prototype.lastIndexOf()")}}</li>
-</ul>
+- A polyfill of `String.prototype.endsWith` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- {{jsxref("String.prototype.startsWith()")}}
+- {{jsxref("String.prototype.includes()")}}
+- {{jsxref("String.prototype.indexOf()")}}
+- {{jsxref("String.prototype.lastIndexOf()")}}

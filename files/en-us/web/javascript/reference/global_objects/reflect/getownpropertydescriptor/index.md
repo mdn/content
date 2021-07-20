@@ -2,63 +2,60 @@
 title: Reflect.getOwnPropertyDescriptor()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/getOwnPropertyDescriptor
 tags:
-- ECMAScript 2015
-- JavaScript
-- Method
-- Reference
-- Reflect
-- Polyfill
+  - ECMAScript 2015
+  - JavaScript
+  - Method
+  - Reference
+  - Reflect
+  - Polyfill
 browser-compat: javascript.builtins.Reflect.getOwnPropertyDescriptor
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The static
-    <strong><code>Reflect.getOwnPropertyDescriptor()</code></strong> method is similar to
-    {{jsxref("Object.getOwnPropertyDescriptor()")}}. It returns a property descriptor of
-    the given property if it exists on the object, {{jsxref("undefined")}}
-    otherwise.</p>
+The static
+**`Reflect.getOwnPropertyDescriptor()`** method is similar to
+{{jsxref("Object.getOwnPropertyDescriptor()")}}. It returns a property descriptor of
+the given property if it exists on the object, {{jsxref("undefined")}}
+otherwise.
 
-<div>{{EmbedInteractiveExample("pages/js/reflect-getownpropertydescriptor.html")}}</div>
+{{EmbedInteractiveExample("pages/js/reflect-getownpropertydescriptor.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+Reflect.getOwnPropertyDescriptor(target, propertyKey)
+```
 
-<pre class="brush: js">Reflect.getOwnPropertyDescriptor(<var>target</var>, <var>propertyKey</var>)
-</pre>
+### Parameters
 
-<h3 id="Parameters">Parameters</h3>
+- `target`
+  - : The target object in which to look for the property.
+- `propertyKey`
+  - : The name of the property to get an own property descriptor for.
 
-<dl>
-  <dt><code><var>target</var></code></dt>
-  <dd>The target object in which to look for the property.</dd>
-  <dt><code><var>propertyKey</var></code></dt>
-  <dd>The name of the property to get an own property descriptor for.</dd>
-</dl>
+### Return value
 
-<h3 id="Return_value">Return value</h3>
+A property descriptor object if the property exists in `target`
+object; otherwise, {{jsxref("undefined")}}.
 
-<p>A property descriptor object if the property exists in <code><var>target</var></code>
-  object; otherwise, {{jsxref("undefined")}}.</p>
+### Exceptions
 
-<h3 id="Exceptions">Exceptions</h3>
+A {{jsxref("TypeError")}}, if `target` is not an
+{{jsxref("Object")}}.
 
-<p>A {{jsxref("TypeError")}}, if <code><var>target</var></code> is not an
-  {{jsxref("Object")}}.</p>
+## Description
 
-<h2 id="Description">Description</h2>
+The `Reflect.getOwnPropertyDescriptor` method returns a property descriptor
+of the given property if it exists in the `target` object,
+{{jsxref("undefined")}} otherwise. The only difference to
+{{jsxref("Object.getOwnPropertyDescriptor()")}} is how non-object targets are handled.
 
-<p>The <code>Reflect.getOwnPropertyDescriptor</code> method returns a property descriptor
-  of the given property if it exists in the <code><var>target</var></code> object,
-  {{jsxref("undefined")}} otherwise. The only difference to
-  {{jsxref("Object.getOwnPropertyDescriptor()")}} is how non-object targets are handled.
-</p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Using Reflect.getOwnPropertyDescriptor()
 
-<h3 id="Using_Reflect.getOwnPropertyDescriptor">Using Reflect.getOwnPropertyDescriptor()
-</h3>
-
-<pre class="brush: js">Reflect.getOwnPropertyDescriptor({x: 'hello'}, 'x')
+```js
+Reflect.getOwnPropertyDescriptor({x: 'hello'}, 'x')
 // {value: "hello", writable: true, enumerable: true, configurable: true}
 
 Reflect.getOwnPropertyDescriptor({x: 'hello'}, 'y')
@@ -66,34 +63,33 @@ Reflect.getOwnPropertyDescriptor({x: 'hello'}, 'y')
 
 Reflect.getOwnPropertyDescriptor([], 'length')
 // {value: 0, writable: true, enumerable: false, configurable: false}
-</pre>
+```
 
-<h3 id="Difference_to_Object.getOwnPropertyDescriptor">Difference to
-  Object.getOwnPropertyDescriptor()</h3>
+### Difference to Object.getOwnPropertyDescriptor()
 
-<p>If the <code><var>target</var></code> argument to this method is not an object (a
-  primitive), then it will cause a {{jsxref("TypeError")}}. With
-  {{jsxref("Object.getOwnPropertyDescriptor")}}, a non-object first argument will be
-  coerced to an object at first.</p>
+If the `target` argument to this method is not an object (a
+primitive), then it will cause a {{jsxref("TypeError")}}. With
+{{jsxref("Object.getOwnPropertyDescriptor")}}, a non-object first argument will be
+coerced to an object at first.
 
-<pre class="brush: js">Reflect.getOwnPropertyDescriptor('foo', 0)
+```js
+Reflect.getOwnPropertyDescriptor('foo', 0)
 // TypeError: "foo" is not non-null object
 
 Object.getOwnPropertyDescriptor('foo', 0)
-// { value: "f", writable: false, enumerable: true, configurable: false }</pre>
+// { value: "f", writable: false, enumerable: true, configurable: false }
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>A polyfill of <code>Reflect.getOwnPropertyDescriptor</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-reflect"><code>core-js</code></a></li>
-  <li>{{jsxref("Reflect")}}</li>
-  <li>{{jsxref("Object.getOwnPropertyDescriptor()")}}</li>
-</ul>
+- A polyfill of `Reflect.getOwnPropertyDescriptor` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
+- {{jsxref("Reflect")}}
+- {{jsxref("Object.getOwnPropertyDescriptor()")}}

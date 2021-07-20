@@ -9,29 +9,32 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Symbol.matchAll
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <code><strong>Symbol.matchAll</strong></code> well-known symbol returns an iterator, that yields matches of the regular expression against a string. This function is called by the {{jsxref("String.prototype.matchAll()")}} method.</p>
+The **`Symbol.matchAll`** well-known symbol returns an iterator, that yields matches of the regular expression against a string. This function is called by the {{jsxref("String.prototype.matchAll()")}} method.
 
-<div>{{EmbedInteractiveExample("pages/js/symbol-matchall.html","shorter")}}</div>
+{{EmbedInteractiveExample("pages/js/symbol-matchall.html","shorter")}}
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>This Symbol is used for {{jsxref("String.prototype.matchAll()")}} and specifically in {{jsxref("RegExp.@@matchAll", "RegExp.prototype[@@matchAll]()")}}. The following two examples return same result:</p>
+This Symbol is used for {{jsxref("String.prototype.matchAll()")}} and specifically in {{jsxref("RegExp.@@matchAll", "RegExp.prototype[@@matchAll]()")}}. The following two examples return same result:
 
-<pre class="brush: js">'abc'.matchAll(/a/);
+```js
+'abc'.matchAll(/a/);
 
-/a/[Symbol.matchAll]('abc');</pre>
+/a/[Symbol.matchAll]('abc');
+```
 
-<p>This method exists for customizing match behavior within {{jsxref("RegExp")}} subclasses.</p>
+This method exists for customizing match behavior within {{jsxref("RegExp")}} subclasses.
 
-<p>{{js_property_attributes(0,0,0)}}</p>
+{{js_property_attributes(0,0,0)}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_Symbol.matchAll">Using Symbol.matchAll</h3>
+### Using Symbol.matchAll
 
-<pre class="brush: js">let re = /[0-9]+/g;
+```js
+let re = /[0-9]+/g;
 let str = '2016-01-02|2019-03-07';
 
 const numbers = {
@@ -43,22 +46,20 @@ const numbers = {
 
 console.log(Array.from(str.matchAll(numbers)));
 //  Array ["2016", "01", "02", "2019", "03", "07"]
-</pre>
+```
 
-<p>See {{jsxref("String.prototype.matchAll()")}} and {{jsxref("RegExp.@@matchAll", "RegExp.prototype[@@matchAll]()")}} for more examples.</p>
+See {{jsxref("String.prototype.matchAll()")}} and {{jsxref("RegExp.@@matchAll", "RegExp.prototype[@@matchAll]()")}} for more examples.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>A polyfill of <code>Symbol.matchAll</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-symbol"><code>core-js</code></a></li>
- <li>{{jsxref("String.prototype.matchAll()")}}</li>
- <li>{{jsxref("RegExp.@@matchAll", "RegExp.prototype[@@matchAll]()")}}</li>
-</ul>
+- A polyfill of `Symbol.matchAll` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-symbol)
+- {{jsxref("String.prototype.matchAll()")}}
+- {{jsxref("RegExp.@@matchAll", "RegExp.prototype[@@matchAll]()")}}

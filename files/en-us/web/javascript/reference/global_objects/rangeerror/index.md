@@ -8,53 +8,48 @@ tags:
   - RangeError
 browser-compat: javascript.builtins.RangeError
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <code><strong>RangeError</strong></code> object indicates an error when a value is not in the set or range of allowed values.</p>
+The **`RangeError`** object indicates an error when a value is not in the set or range of allowed values.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>A <code>RangeError</code> is thrown when trying to pass a value as an argument to a function that does not allow a range that includes the value.</p>
+A `RangeError` is thrown when trying to pass a value as an argument to a function that does not allow a range that includes the value.
 
-<p>This can be encountered when:</p>
+This can be encountered when:
 
-<ul>
- <li>passing a value that is not one of the allowed string values to {{jsxref("String.prototype.normalize()")}}, or</li>
- <li>when attempting to create an array of an illegal length with the {{jsxref("Array")}} constructor, or</li>
- <li>when passing bad values to the numeric methods {{jsxref("Number.prototype.toExponential()")}}, {{jsxref("Number.prototype.toFixed()")}} or {{jsxref("Number.prototype.toPrecision()")}}.</li>
-</ul>
+- passing a value that is not one of the allowed string values to {{jsxref("String.prototype.normalize()")}}, or
+- when attempting to create an array of an illegal length with the {{jsxref("Array")}} constructor, or
+- when passing bad values to the numeric methods {{jsxref("Number.prototype.toExponential()")}}, {{jsxref("Number.prototype.toFixed()")}} or {{jsxref("Number.prototype.toPrecision()")}}.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{jsxref("RangeError/RangeError", "RangeError()")}}</dt>
- <dd>Creates a new <code>RangeError</code> object.</dd>
-</dl>
+- {{jsxref("RangeError/RangeError", "RangeError()")}}
+  - : Creates a new `RangeError` object.
 
-<h2 id="Instance_properties">Instance properties</h2>
+## Instance properties
 
-<dl>
- <dt>{{jsxref("Error.prototype.message", "RangeError.prototype.message")}}</dt>
- <dd>Error message. Although ECMA-262 specifies that {{jsxref("RangeError")}} should provide its own <code>message</code> property, in <a href="/en-US/docs/Mozilla/Projects/SpiderMonkey">SpiderMonkey</a>, it inherits {{jsxref("Error.prototype.message")}}.</dd>
- <dt>{{jsxref("Error.prototype.name", "RangeError.prototype.name")}}</dt>
- <dd>Error name. Inherited from {{jsxref("Error")}}.</dd>
- <dt>{{jsxref("Error.prototype.fileName", "RangeError.prototype.fileName")}}</dt>
- <dd>Path to file that raised this error. Inherited from {{jsxref("Error")}}.</dd>
- <dt>{{jsxref("Error.prototype.lineNumber", "RangeError.prototype.lineNumber")}}</dt>
- <dd>Line number in file that raised this error. Inherited from {{jsxref("Error")}}.</dd>
- <dt>{{jsxref("Error.prototype.columnNumber", "RangeError.prototype.columnNumber")}}</dt>
- <dd>Column number in line that raised this error. Inherited from {{jsxref("Error")}}.</dd>
- <dt>{{jsxref("Error.prototype.stack", "RangeError.prototype.stack")}}</dt>
- <dd>Stack trace. Inherited from {{jsxref("Error")}}.</dd>
-</dl>
+- {{jsxref("Error.prototype.message", "RangeError.prototype.message")}}
+  - : Error message. Although ECMA-262 specifies that {{jsxref("RangeError")}} should provide its own `message` property, in [SpiderMonkey](/en-US/docs/Mozilla/Projects/SpiderMonkey), it inherits {{jsxref("Error.prototype.message")}}.
+- {{jsxref("Error.prototype.name", "RangeError.prototype.name")}}
+  - : Error name. Inherited from {{jsxref("Error")}}.
+- {{jsxref("Error.prototype.fileName", "RangeError.prototype.fileName")}}
+  - : Path to file that raised this error. Inherited from {{jsxref("Error")}}.
+- {{jsxref("Error.prototype.lineNumber", "RangeError.prototype.lineNumber")}}
+  - : Line number in file that raised this error. Inherited from {{jsxref("Error")}}.
+- {{jsxref("Error.prototype.columnNumber", "RangeError.prototype.columnNumber")}}
+  - : Column number in line that raised this error. Inherited from {{jsxref("Error")}}.
+- {{jsxref("Error.prototype.stack", "RangeError.prototype.stack")}}
+  - : Stack trace. Inherited from {{jsxref("Error")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_RangeError_for_numeric_values">Using RangeError (for numeric values)</h3>
+### Using RangeError (for numeric values)
 
-<pre class="brush: js">function check(n)
+```js
+function check(n)
 {
-    if( !(n &gt;= -500 &amp;&amp; n &lt;= 500) )
+    if( !(n >= -500 && n <= 500) )
     {
         throw new RangeError("The argument must be between -500 and 500.")
     }
@@ -70,11 +65,13 @@ catch(error)
     {
         // Handle the error
     }
-}</pre>
+}
+```
 
-<h3 id="Using_RangeError_for_non-numeric_values">Using RangeError (for non-numeric values)</h3>
+### Using RangeError (for non-numeric values)
 
-<pre class="brush: js">function check(value)
+```js
+function check(value)
 {
     if(["apple", "banana", "carrot"].includes(value) === false)
     {
@@ -93,23 +90,21 @@ catch(error)
         // Handle the error
     }
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("Error")}}</li>
- <li>{{jsxref("Array")}}</li>
- <li>{{jsxref("Number.toExponential()")}}</li>
- <li>{{jsxref("Number.toFixed()")}}</li>
- <li>{{jsxref("Number.toPrecision()")}}</li>
- <li>{{jsxref("String.prototype.normalize()")}}</li>
-</ul>
+- {{jsxref("Error")}}
+- {{jsxref("Array")}}
+- {{jsxref("Number.toExponential()")}}
+- {{jsxref("Number.toFixed()")}}
+- {{jsxref("Number.toPrecision()")}}
+- {{jsxref("String.prototype.normalize()")}}

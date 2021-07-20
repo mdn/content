@@ -7,36 +7,35 @@ tags:
   - Prototype
 browser-compat: javascript.builtins.Error.name
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <code><strong>name</strong></code> property represents a name for the type of error. The initial value is "Error".</p>
+The **`name`** property represents a name for the type of error. The initial value is "Error".
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>By default, {{jsxref("Error")}} instances are given the name "Error". The <code>name</code> property, in addition to the {{jsxref("Error.prototype.message", "message")}} property, is used by the {{jsxref("Error.prototype.toString()")}} method to create a string representation of the error.</p>
+By default, {{jsxref("Error")}} instances are given the name "Error". The `name` property, in addition to the {{jsxref("Error.prototype.message", "message")}} property, is used by the {{jsxref("Error.prototype.toString()")}} method to create a string representation of the error.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Throwing_a_custom_error">Throwing a custom error</h3>
+### Throwing a custom error
 
-<pre class="brush: js">var e = new Error('Malformed input'); // e.name is 'Error'
+```js
+var e = new Error('Malformed input'); // e.name is 'Error'
 
 e.name = 'ParseError';
 throw e;
 // e.toString() would return 'ParseError: Malformed input'
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("Error.prototype.message")}}</li>
- <li>{{jsxref("Error.prototype.toString()")}}</li>
-</ul>
+- {{jsxref("Error.prototype.message")}}
+- {{jsxref("Error.prototype.toString()")}}

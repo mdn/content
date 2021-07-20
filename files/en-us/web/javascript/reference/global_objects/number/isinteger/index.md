@@ -2,48 +2,48 @@
 title: Number.isInteger()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isInteger
 tags:
-- JavaScript
-- Method
-- Number
-- Reference
-- Polyfill
+  - JavaScript
+  - Method
+  - Number
+  - Reference
+  - Polyfill
 browser-compat: javascript.builtins.Number.isInteger
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>Number.isInteger()</code></strong> method determines whether the
-  passed value is an integer.</p>
+The **`Number.isInteger()`** method determines whether the
+passed value is an integer.
 
-<div>{{EmbedInteractiveExample("pages/js/number-isinteger.html")}}</div>
+{{EmbedInteractiveExample("pages/js/number-isinteger.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+Number.isInteger(value)
+```
 
-<pre class="brush: js">Number.isInteger(<var>value</var>)</pre>
+### Parameters
 
-<h3 id="Parameters">Parameters</h3>
+- `value`
+  - : The value to be tested for being an integer.
 
-<dl>
-  <dt><code><var>value</var></code></dt>
-  <dd>The value to be tested for being an integer.</dd>
-</dl>
+### Return value
 
-<h3 id="Return_value">Return value</h3>
+A {{jsxref("Boolean")}} indicating whether or not the given value is an integer.
 
-<p>A {{jsxref("Boolean")}} indicating whether or not the given value is an integer.</p>
+## Description
 
-<h2 id="Description">Description</h2>
+If the target value is an integer, return `true`, otherwise return
+`false`. If the value is {{jsxref("NaN")}} or {{jsxref("Infinity")}}, return
+`false`. The method will also return `true` for floating point
+numbers that can be represented as integer.
 
-<p>If the target value is an integer, return <code>true</code>, otherwise return
-  <code>false</code>. If the value is {{jsxref("NaN")}} or {{jsxref("Infinity")}}, return
-  <code>false</code>. The method will also return <code>true</code> for floating point
-  numbers that can be represented as integer.</p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Using isInteger
 
-<h3 id="Using_isInteger">Using isInteger</h3>
-
-<pre class="brush: js">Number.isInteger(0);         // true
+```js
+Number.isInteger(0);         // true
 Number.isInteger(1);         // true
 Number.isInteger(-100000);   // true
 Number.isInteger(99999999999999999999999); // true
@@ -62,28 +62,27 @@ Number.isInteger([1]);       // false
 Number.isInteger(5.0);       // true
 Number.isInteger(5.000000000000001); // false
 Number.isInteger(5.0000000000000001); // true
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<pre class="brush: js">Number.isInteger = Number.isInteger || function(value) {
-  return typeof value === 'number' &amp;&amp;
-    isFinite(value) &amp;&amp;
+```js
+Number.isInteger = Number.isInteger || function(value) {
+  return typeof value === 'number' &&
+    isFinite(value) &&
     Math.floor(value) === value;
 };
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>A polyfill of <code>Number.isInteger</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-number"><code>core-js</code></a></li>
-  <li>The {{jsxref("Number")}} object it belongs to.</li>
-</ul>
+- A polyfill of `Number.isInteger` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-number)
+- The {{jsxref("Number")}} object it belongs to.

@@ -8,35 +8,33 @@ tags:
   - Prototype
 browser-compat: javascript.builtins.ArrayBuffer.byteLength
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>byteLength</code></strong> accessor property represents the length of an {{jsxref("ArrayBuffer")}} in bytes.</p>
+The **`byteLength`** accessor property represents the length of an {{jsxref("ArrayBuffer")}} in bytes.
 
-<div>{{EmbedInteractiveExample("pages/js/arraybuffer-bytelength.html")}}</div>
+{{EmbedInteractiveExample("pages/js/arraybuffer-bytelength.html")}}
 
+## Description
 
-<h2 id="Description">Description</h2>
+The `byteLength` property is an accessor property whose set accessor function is `undefined`, meaning that you can only read this property. The value is established when the array is constructed and cannot be changed. This property returns 0 if this `ArrayBuffer` has been detached.
 
-<p>The <code>byteLength</code> property is an accessor property whose set accessor function is <code>undefined</code>, meaning that you can only read this property. The value is established when the array is constructed and cannot be changed. This property returns 0 if this <code>ArrayBuffer</code> has been detached.</p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Using byteLength
 
-<h3 id="Using_byteLength">Using byteLength</h3>
-
-<pre class="brush:js">var buffer = new ArrayBuffer(8);
+```js
+var buffer = new ArrayBuffer(8);
 buffer.byteLength; // 8
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("ArrayBuffer")}}</li>
-</ul>
+- {{jsxref("ArrayBuffer")}}

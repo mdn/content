@@ -2,89 +2,82 @@
 title: String.prototype.toLocaleLowerCase()
 slug: Web/JavaScript/Reference/Global_Objects/String/toLocaleLowerCase
 tags:
-- Internationalization
-- JavaScript
-- Method
-- Prototype
-- Reference
-- String
+  - Internationalization
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
+  - String
 browser-compat: javascript.builtins.String.toLocaleLowerCase
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>toLocaleLowerCase()</code></strong> method returns the calling string
-  value converted to lower case, according to any locale-specific case mappings.</p>
+The **`toLocaleLowerCase()`** method returns the calling string
+value converted to lower case, according to any locale-specific case mappings.
 
-<div>{{EmbedInteractiveExample("pages/js/string-tolocalelowercase.html")}}</div>
+{{EmbedInteractiveExample("pages/js/string-tolocalelowercase.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush: js">
+```js
 toLocaleLowerCase()
 toLocaleLowerCase(locale)
 toLocaleLowerCase([locale1, locale2, ...])
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>locale</code> {{optional_inline}}</dt>
-  <dd>The <code>locale</code> parameter indicates the locale to be used to convert to
+- `locale` {{optional_inline}}
+  - : The `locale` parameter indicates the locale to be used to convert to
     lower case according to any locale-specific case mappings. If multiple locales are
-    given in an {{jsxref("Array")}}, the <a
-      href="https://tc39.github.io/ecma402/#sec-bestavailablelocale">best available
-      locale</a> is used. The default locale is the host environment’s current locale.
-  </dd>
-</dl>
+    given in an {{jsxref("Array")}}, the [best available
+    locale](https://tc39.github.io/ecma402/#sec-bestavailablelocale) is used. The default locale is the host environment’s current locale.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A new string representing the calling string converted to lower case, according to any
-  locale-specific case mappings.</p>
+A new string representing the calling string converted to lower case, according to any
+locale-specific case mappings.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<ul>
-  <li>A {{jsxref("RangeError")}} ("invalid language tag: xx_yy") is thrown if a
-    <code>locale</code> argument isn't a valid language tag.</li>
-  <li>A {{jsxref("TypeError")}} ("invalid element in locales argument") is thrown if an
-    array element isn't of type string.</li>
-</ul>
+- A {{jsxref("RangeError")}} ("invalid language tag: xx_yy") is thrown if a
+  `locale` argument isn't a valid language tag.
+- A {{jsxref("TypeError")}} ("invalid element in locales argument") is thrown if an
+  array element isn't of type string.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The <code>toLocaleLowerCase()</code> method returns the value of the string converted
-  to lower case according to any locale-specific case mappings.
-  <code>toLocaleLowerCase()</code> does not affect the value of the string itself. In most
-  cases, this will produce the same result as {{jsxref("String.prototype.toLowerCase()",
+The `toLocaleLowerCase()` method returns the value of the string converted
+to lower case according to any locale-specific case mappings.
+`toLocaleLowerCase()` does not affect the value of the string itself. In most
+cases, this will produce the same result as {{jsxref("String.prototype.toLowerCase()",
   "toLowerCase()")}}, but for some locales, such as Turkish, whose case mappings do not
-  follow the default case mappings in Unicode, there may be a different result.</p>
+follow the default case mappings in Unicode, there may be a different result.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_toLocaleLowerCase">Using toLocaleLowerCase()</h3>
+### Using toLocaleLowerCase()
 
-<pre class="brush: js">'ALPHABET'.toLocaleLowerCase(); // 'alphabet'
+```js
+'ALPHABET'.toLocaleLowerCase(); // 'alphabet'
 
 '\u0130'.toLocaleLowerCase('tr') === 'i';    // true
 '\u0130'.toLocaleLowerCase('en-US') === 'i'; // false
 
 let locales = ['tr', 'TR', 'tr-TR', 'tr-u-co-search', 'tr-x-turkish'];
-'\u0130'.toLocaleLowerCase(locales) === 'i'; // true</pre>
+'\u0130'.toLocaleLowerCase(locales) === 'i'; // true
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("String.prototype.toLocaleUpperCase()")}}</li>
-  <li>{{jsxref("String.prototype.toLowerCase()")}}</li>
-  <li>{{jsxref("String.prototype.toUpperCase()")}}</li>
-</ul>
+- {{jsxref("String.prototype.toLocaleUpperCase()")}}
+- {{jsxref("String.prototype.toLowerCase()")}}
+- {{jsxref("String.prototype.toUpperCase()")}}
