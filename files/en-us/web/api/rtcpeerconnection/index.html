@@ -565,43 +565,6 @@ browser-compat: api.RTCPeerConnection
   </dd>
 </dl>
 
-<h2 id="Constants">Constants</h2>
-
-<h3 id="RTCSignalingState_enum">RTCSignalingState enum</h3>
-
-<p>The <code>RTCSignalingState</code> enum specifies the possible values of {{domxref("RTCPeerConnection.signalingState")}}, which indicates where in the process of signaling the exchange of offer and answer the connection currently is.</p>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Constant</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>"stable"</code></td>
-   <td>There is no ongoing exchange of offer and answer underway. This may mean that the {{domxref("RTCPeerConnection")}} object is new, in which case both the {{domxref("RTCPeerConnection.localDescription", "localDescription")}} and {{domxref("RTCPeerConnection.remoteDescription", "remoteDescription")}} are <code>null</code>; it may also mean that negotiation is complete and a connection has been established.</td>
-  </tr>
-  <tr>
-   <td><code>"have-local-offer"</code></td>
-   <td>The local peer has called {{domxref("RTCPeerConnection.setLocalDescription()")}}, passing in SDP representing an offer (usually created by calling {{domxref("RTCPeerConnection.createOffer()")}}), and the offer has been applied successfully.</td>
-  </tr>
-  <tr>
-   <td><code>"have-remote-offer"</code></td>
-   <td>The remote peer has created an offer and used the signaling server to deliver it to the local peer, which has set the offer as the remote description by calling {{domxref("RTCPeerConnection.setRemoteDescription()")}}.</td>
-  </tr>
-  <tr>
-   <td><code>"have-local-pranswer"</code></td>
-   <td>The offer sent by the remote peer has been applied and an answer has been created (usually by calling {{domxref("RTCPeerConnection.createAnswer()")}}) and applied by calling {{domxref("RTCPeerConnection.setLocalDescription()")}}. This provisional answer describes the supported media formats and so forth, but may not have a complete set of ICE candidates included. Further candidates will be delivered separately later.</td>
-  </tr>
-  <tr>
-   <td><code>"have-remote-pranswer"</code></td>
-   <td>A provisional answer has been received and successfully applied in response to an offer previously sent and established by calling <code>setLocalDescription()</code>.</td>
-  </tr>
- </tbody>
-</table>
-
 <h2 id="Specifications">Specifications</h2>
 
 {{Specifications}}
