@@ -40,6 +40,13 @@ tags:
 
 <p><em>There is no active learning available yet. <a href="/en-US/docs/MDN/Contribute/Getting_started">Please, consider contributing</a>.</em></p>
 
+Active Learning
+<p>The next step after Project Ideation is to map out a workable learning strategy. </p>
+<p>Learning is never an easy activity, whether it’s something new or old. Irrespective of what you are trying to learn, commitment is a key prerequisite to learning actively. If you are not committed, you can be easily distracted. </p>
+The same thing applies if you are trying to design your website. Because learning is a process, you need to understand that the curve is steep; that there are highs and lows and sometimes, you will feel like giving up. This is where active learning helps push you forward towards the achievement of your end goal. It also helps keep you on track and you know that with each additional time you spend trying to accomplish your goal, the closer you are.</p>
+How then can you learn actively? You must be involved. Basically, that is it. Whether you are reading a written content, like MDN documentation or watching a video tutorial, merely trying to take whatever new information you are exposed to will not help you, you need to participate. You need to try things on your own (put in a list). </p>
+If you are learning HTML tables, for instance, after seeing the instructor’s solution, you need to try it on your own and then try to improve on it by adding your own ideas. Let’s say your lecture material has an HTML table with 2 rows and 2 columns, you can implement this first and then go further to implement a table with 3 rows and 2 columns, 5 rows and 7 columns and so on. By so doing, it becomes easier to retain whatever new concepts you have learnt.</p>
+
 <h2 id="Deeper_dive">Deeper dive</h2>
 
 <p>A project never starts with the technical side. Musicians will never make any music unless they first have an idea of what they want to play—and the same is true for painters, writers, and web developers. Technique comes second.</p>
