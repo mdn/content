@@ -57,14 +57,14 @@ browser-compat: api.XRSystem.requestSession
        </ul>
   </dd>
   <dt><code>options</code> {{optional_inline}}</dt>
-  <dd>An object that can contain two properties (<code>requiredFeatures</code> and <code>optionalFeatures</code>)
-  to configure the new {{domxref("XRSession")}}. If none are included, the device will use a default feature
+  <dd>An object to configure the {{domxref("XRSession")}}. If none are included, the device will use a default feature
   configuration for all options. For more information, see <a href="#session_features">Session features</a> below.
   <ul>
     <li><code>requiredFeatures</code> {{optional_inline}}: An array of values which the returned {{domxref("XRSession")}}
       <em>must</em> support.</li>
     <li><code>optionalFeatures</code> {{optional_inline}}: An array of values identifying features which the returned
      {{domxref("XRSession")}} may optionally support.</li>
+     <li><code>domOverlay</code> {{optional_inline}}: An object with a required <code>root</code> property that specifies the overlay element that will be displayed to the user as the content of the DOM overlay.</li>
     </ul>
   </dd>
 </dl>
@@ -109,6 +109,8 @@ sessions support both the <code>viewer</code> and <code>local</code> referen
 
 <p>Because immersive sessions are required to support the <code>local</code> reference space,
 any request to open an immersive {{domxref("XRSession")}} is required to obtain explicit or implicit user consent.</p>
+
+<p>To request the use of a DOM overlay element, add the string <code>dom-overlay</code> to either <code>requiredFeatures</code> or <code>optionalFeatures</code>.</p>
 
 <h3 id="Inline_sessions">Inline sessions</h3>
 
@@ -221,6 +223,17 @@ function onButtonClicked() {
 
 <pre class="brush: js">
 navigator.xr.requestSession('immersive-vr', { requiredFeatures: ['unbounded'] })
+</pre>
+
+<h3>Requesting a session with a DOM overlay</h3>
+
+<pre class="brush: js">
+navigator.xr.requestSession(‘immersive-ar’, {
+  optionalFeatures: ["dom-overlay"],
+  domOverlay: {
+    root: document.getElementById("xr-overlay")
+  }
+}
 </pre>
 
 <h2 id="Specifications">Specifications</h2>
