@@ -21,21 +21,21 @@ pair in the `Map` object, in insertion order.
 
 ```js
 // Arrow function
-forEach(() => { ... } )
-forEach((value) => { ... } )
-forEach((value, key) => { ... } )
-forEach((value, key, map) => { ... } )
+myMap.forEach(() => { ... } )
+myMap.forEach((value) => { ... } )
+myMap.forEach((value, key) => { ... } )
+myMap.forEach((value, key, map) => { ... } )
 
 // Callback function
-forEach(callbackFn)
-forEach(callbackFn, thisArg)
+myMap.forEach(callbackFn)
+myMap.forEach(callbackFn, thisArg)
 
 // Inline callback function
-forEach(function callbackFn() { ... })
-forEach(function callbackFn(value) { ... })
-forEach(function callbackFn(value, key) { ... })
-forEach(function callbackFn(value, key, map) { ... })
-forEach(function callbackFn(value, key, map) { ... }, thisArg)
+myMap.forEach(function callbackFn() { ... })
+myMap.forEach(function callbackFn(value) { ... })
+myMap.forEach(function callbackFn(value, key) { ... })
+myMap.forEach(function callbackFn(value, key, map) { ... })
+myMap.forEach(function callbackFn(value, key, map) { ... }, thisArg)
 ```
 
 ### Parameters
