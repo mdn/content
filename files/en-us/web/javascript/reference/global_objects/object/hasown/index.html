@@ -1,0 +1,153 @@
+---
+title: Object.hasOwn()
+slug: Web/JavaScript/Reference/Global_Objects/Object/hasOwn
+tags:
+  - JavaScript
+  - Method
+  - Object
+  - hasOwn
+browser-compat: javascript.builtins.Object.hasOwn
+---
+<div>{{JSRef}}</div>
+
+<p>The <strong><code>Object.hasOwn()</code></strong> static method returns <code>true</code> if the specified object has the indicated property as its <em>own</em> property.
+  If the property is inherited, or does not exist, the method returns <code>false</code>.</p>
+
+<div class="notecard note">
+  <p><strong>Note:</strong> <code>Object.hasOwn()</code> is intended as a replacement for {{jsxref("Object.hasOwnProperty()")}}.</p>
+</div>
+
+<div>{{EmbedInteractiveExample("pages/js/object-hasown.html")}}</div>
+
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js">Object.hasOwn(instance,prop)</pre>
+
+<h3 id="Parameters">Parameters</h3>
+
+<dl>
+  <dt><var>instance</var></dt>
+  <dd>The JavaScript object instance to test.
+  </dd>
+  <dt><var>prop</var></dt>
+  <dd>The {{jsxref("String")}} name or {{Glossary("Symbol")}} of the property to test.
+  </dd>
+</dl>
+
+<h3 id="Return_value">Return value</h3>
+
+<p><code>true</code> if the specified object has directly defined the specified property. Otherwise <code>false</code></p>
+
+<h2 id="Description">Description</h2>
+
+<p>The <strong><code>Object.hasOwn()</code></strong> method returns <code>true</code> if the specified property is a direct property of the object — even if the property value is <code>null</code> or <code>undefined</code>.
+  The method returns <code>false</code> if the property is inherited, or has not been declared at all.</p>
+
+<p>It is recommended over {{jsxref("Object.hasOwnProperty()")}} because it works for objects created using <code>Object.create(null)</code> and with objects that have overridden the inherited <code>hasOwnProperty()</code> method.
+  While it is possible to workaround these problems by calling <code>Object.prototype.hasOwnProperty()</code> on an external object, <code>Object.hasOwn()</code> is more intuitive.</p>
+ 
+<h2 id="Examples">Examples</h2>
+
+<h3>Using hasOwn to test for a property's existence</h3>
+
+<p>The following example shows how to test whether an object directly defines ('owns') a particular property:</p>
+
+<pre class="brush: js">let object1 = {};
+object1.prop = 'exists';
+
+// Normal way to use the method
+if (Object.hasOwn(object1, 'prop')) {
+  // true - 'prop' is defined
+}
+  
+// Own property values can be null or undefined
+object1.prop_value_null = null;
+Object.hasOwn(object1, 'prop_value_null');  // true
+object1.prop_value_undefined = undefined;
+Object.hasOwn(object1, 'prop_value_undefined');  // true
+  
+// Inherited and undeclared properties return false
+Object.hasOwn(object1,'toString');  // false
+Object.hasOwn(object1,'prop_not_defined');  // false
+</pre>
+
+<h3 id="Iterating_over_the_properties_of_an_object">Iterating over the properties of an object</h3>
+
+<p>The following example shows how to iterate over the enumerable properties of an object without executing on inherited properties.</p>
+
+<pre class="brush: js">let buz = {
+  fog: 'stack'
+};
+
+for (let name in buz) {
+  if (Object.hasOwn(buz, name)) {
+    console.log('this is fog (' +
+      name + ') for sure. Value: ' + buz[name]);
+  }
+  else {
+    console.log(name); // toString or something else
+  }
+}
+</pre>
+
+<p>Note that the {{jsxref("Statements/for...in", "for...in")}} loop only iterates enumerable items: the absence of non-enumerable properties emitted from the loop does not imply that 
+  <code>hasOwn</code> itself is confined strictly to enumerable items (as with {{jsxref("Object.getOwnPropertyNames()")}}).</p>
+
+<h3 id="checking_if_an_array_index_exists">Checking if an Array index exists</h3>
+
+  <p>The elements of an {{jsxref("Array")}} are defined as direct properties, so you can use <code>hasOwn()</code> method to check whether a particular index exists:</p>
+    
+    <pre class="brush: js">let fruits = ['Apple', 'Banana','Watermelon', 'Orange'];
+    Object.hasOwn(fruits, 3);   // true ('Orange')
+    Object.hasOwn(fruits, 4);   // false - not defined
+    </pre>
+
+<h3 id="problematic_cases_for_hasownproperty">Problematic cases for hasOwnProperty</h3>
+
+<p>This section demonstrate that <code>hasOwn()</code> is immune to the problems that affect <code>hasOwnProperty</code>.
+  Firstly, it can be used with objects that have reimplemented <code>hasOwnProperty()</code>:</p>
+
+<pre class="brush: js">let foo = {
+    hasOwnProperty: function() {
+    return false;
+  },
+  bar: 'The dragons be out of office'
+};
+
+if (Object.hasOwn(foo, 'bar')) {
+  console.log(foo.bar); //true - remplementation of hasOwnProperty() does not affect Object
+}
+</pre>
+
+<p>It can also be used to test objects created using {{jsxref("Object.create()","Object.create(null)")}}.
+  These do not inherit from <code>Object.prototype</code>, and so <code>hasOwnProperty()</code> is inaccessible.</p>
+
+<pre class="brush: js">let foo = Object.create(null);
+foo.prop = 'exists';
+if (Object.hasOwn(foo, 'prop')) {
+  console.log(foo.prop); //true - works irrespective of how the object is created.
+}
+</pre>
+
+
+<h2 id="Specifications">Specifications</h2>
+
+{{Specifications}}
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+  <li>{{jsxref("Object.hasOwnProperty()")}}</li>
+  <li><a href="/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties">Enumerability and
+      ownership of properties</a></li>
+  <li>{{jsxref("Object.getOwnPropertyNames()")}}</li>
+  <li>{{jsxref("Statements/for...in", "for...in")}}</li>
+  <li>{{jsxref("Operators/in", "in")}}</li>
+  <li><a href="/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain">JavaScript
+      Guide: Inheritance revisited</a></li>
+</ul>
