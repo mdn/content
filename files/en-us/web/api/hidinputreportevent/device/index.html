@@ -1,0 +1,40 @@
+---
+title: HIDInputReportEvent.device
+slug: Web/API/HIDInputReportEvent/device
+tags:
+  - API
+  - Property
+  - Reference
+  - device
+  - HIDInputReportEvent
+browser-compat: api.HIDInputReportEvent.device
+---
+<div>{{securecontext_header}}{{DefaultAPISidebar("WebHID API")}}</div>
+
+<p class="summary">The <strong><code>device</code></strong> read-only property of the {{domxref("HIDInputReportEvent")}} interface returns the {{domxref("HIDDevice")}} instance that represents the device sending the report.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js">let device = HIDInputReportEvent.device;</pre>
+
+<h3>Value</h3>
+<p>A {{domxref("HIDDevice")}}.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<p>In the following example <code>device</code> is a {{domxref("HIDDevice")}} instance, representing the device sending the report. The <code>productName</code> of this device is logged to the console.</p>
+
+<pre class="brush: js">device.addEventListener("inputreport", event => {
+  const { data, device, reportId } = event;
+  console.log(device.productName);
+});</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<p>{{Specifications}}</p>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>
+
+
