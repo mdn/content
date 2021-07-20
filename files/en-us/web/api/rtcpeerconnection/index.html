@@ -567,38 +567,6 @@ browser-compat: api.RTCPeerConnection
 
 <h2 id="Constants">Constants</h2>
 
-<h3 id="RTCBundlePolicy_enum">RTCBundlePolicy enum</h3>
-
-<p>The <code>RTCBundlePolicy</code> enum defines string constants which are used to request a specific policy for gathering ICE candidates if the remote peer isn't "BUNDLE-aware" (compatible with the <a href="https://webrtcstandards.info/sdp-bundle/">SDP BUNDLE standard</a> for bundling multiple media streams on a single transport link). All browser implementations are BUNDLE-aware.</p>
-
-<p>If the remote endpoint is BUNDLE-aware, all media tracks and data channels are bundled onto a single transport at the completion of negotiation, regardless of policy used, and any superfluous transports that were created initially are closed at that point.</p>
-
-<div class="note">
-<p><strong>Note:</strong> In technical terms, a BUNDLE lets all media flow between two peers flow across a single <strong>5-tuple</strong>; that is, from a single IP and port on one peer to a single IP and port on the other peer, using the same transport protocol.</p>
-</div>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Constant</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>"balanced"</code></td>
-   <td>The ICE agent initially creates one {{domxref("RTCDtlsTransport")}} for each type of content added: audio, video, and data channels. If the remote endpoint is not BUNDLE-aware, then each of these DTLS transports then handles all the communication for one type of data.</td>
-  </tr>
-  <tr>
-   <td><code>"max-compat"</code></td>
-   <td>The ICE agent initially creates one {{domxref("RTCDtlsTransport")}} per media track and a separate one for data channels. If the remote endpoint is not BUNDLE-aware, everything is negotiated on these separate DTLS transports.</td>
-  </tr>
-  <tr>
-   <td><code>"max-bundle"</code></td>
-   <td>The ICE agent initially creates only a single {{domxref("RTCDtlsTransport")}} to carry all of the <code>RTCPeerConnection</code>'s data. If the remote endpoint is not BUNDLE-aware, then only a single track will be negotiated and the rest ignored.</td>
-  </tr>
- </tbody>
-</table>
 
 <h3 id="RTCIceGatheringState_enum">RTCIceGatheringState enum</h3>
 
@@ -623,56 +591,6 @@ browser-compat: api.RTCPeerConnection
   <tr>
    <td><code>"complete"</code></td>
    <td>The ICE agent has finished gathering candidates. If something happens that requires collecting new candidates, such as a new interface being added or the addition of a new ICE server, the state will revert to "gathering" to gather those candidates.</td>
-  </tr>
- </tbody>
-</table>
-
-<h3 id="RTCIceTransportPolicy_enum">RTCIceTransportPolicy enum</h3>
-
-<p>The <code>RTCIceTransportPolicy</code> enum defines string constants which can be used to limit the transport policies of the ICE candidates to be considered during the connection process.</p>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Constant</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>"all"</code></td>
-   <td>All ICE candidates will be considered.</td>
-  </tr>
-  <tr>
-   <td><code>"public" </code>{{deprecated_inline}}</td>
-   <td>Only ICE candidates with public IP addresses will be considered. <em>Removed from the specification's May 13, 2016 working draft.</em></td>
-  </tr>
-  <tr>
-   <td><code>"relay"</code></td>
-   <td>Only ICE candidates whose IP addresses are being relayed, such as those being passed through a TURN server, will be considered.</td>
-  </tr>
- </tbody>
-</table>
-
-<h3 id="RTCRtcpMuxPolicy_enum">RTCRtcpMuxPolicy enum</h3>
-
-<p>The <code>RTCRtcpMuxPolicy</code> enum defines string constants which specify what ICE candidates are gathered to support non-multiplexed RTCP. <strong>&lt;&lt;&lt;add a link to info about multiplexed RTCP.</strong></p>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Constant</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>"negotiate"</code></td>
-   <td>Instructs the ICE agent to gather both {{Glossary("RTP")}} and {{Glossary("RTCP")}} candidates. If the remote peer can multiplex RTCP, then RTCP candidates are multiplexed atop the corresponding RTP candidates. Otherwise, both the RTP and RTCP candidates are returned, separately.</td>
-  </tr>
-  <tr>
-   <td><code>"require"</code></td>
-   <td>Tells the ICE agent to gather ICE candidates for only RTP, and to multiplex RTCP atop them. If the remote peer doesn't support RTCP multiplexing, then session negotiation fails.</td>
   </tr>
  </tbody>
 </table>
