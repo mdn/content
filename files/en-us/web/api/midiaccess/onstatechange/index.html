@@ -11,7 +11,7 @@ browser-compat: api.MIDIAccess.onstatechange
 ---
 <div>{{securecontext_header}}{{APIRef("Web MIDI API")}}</div>
 
-<p class="summary">The <strong><code>onstatechange</code></strong> EventHandler of the {{domxref("MIDIAccess")}} interface is an {{event("Event_handlers", "Event Handler")}} that processes statechange events.</p>
+<p class="summary">The <strong><code>onstatechange</code></strong> {{event("Event_handlers", "Event Handler")}} of the {{domxref("MIDIAccess")}} interface processes statechange events.</p>
 
 <p>The event fires when a new MIDI port is added or when an existing port changes state.</p>
 
@@ -26,7 +26,6 @@ MIDIAccess.addEventListener('statechange', function);</pre>
 
 <pre class="brush: js">navigator.requestMIDIAccess()
   .then(function(access) {
-
      access.onstatechange = function(e) {
        console.log(e.port.name, e.port.manufacturer, e.port.state);
      };
@@ -39,5 +38,4 @@ MIDIAccess.addEventListener('statechange', function);</pre>
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <p>{{Compat}}</p>
-
 
