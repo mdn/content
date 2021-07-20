@@ -1,0 +1,89 @@
+---
+title: HTMLPortalElement.postMessage()
+slug: Web/API/HTMLPortalElement/postMessage
+tags:
+  - API
+  - HTML DOM
+  - HTMLPortalElement
+  - Portals 
+  - Method
+  - Reference
+---
+
+<div>{{APIRef("HTML DOM")}}</div>
+
+<p class="summary">The <strong><code>postMessage()</code></strong> method of the {{domxref("HTMLPortalElement")}} interface enables messaging between the page embedding the {{htmlelement("portal")}} element and the page which is in the portal.</p>
+
+<p>All pages will have a <code>window.portalHost</code> property. This property is non-null if the page is in a portal.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox"><var>HTMLPortalElement</var>.postMessage(<var>message</var>,<var>postMessageOptions</var>);</pre>
+
+<h3 id="Parameters">Parameters</h3>
+
+<dl>
+    <dt>message</dt>
+    <dd>The message to be passed. This may be any value or JavaScript object.</dd>
+    <dt>postMessageOptions {{Optional_Inline}}</dt>
+    <dd>An optional {{jsxref("array")}} of {{domxref("Transferable")}} objects.</dd>
+</dl>
+
+<h3 id="Returns">Return value</h3>
+
+<p>{{jsxref('undefined')}}</p>
+
+<h3 id="Exceptions">Exceptions</h3>
+
+<dl>
+    <dt>InvalidStateError</dt>
+    <dd>Thrown if the portal does not have a browsing context.</dd>
+</dl>
+
+<div class="notecard note">
+    <p>Note: The <code>postMessage()</code> method only functions if the <code>portalHost</code> and portaled content are same origin, in order to prevent cross-site tracking. If the portaled content is cross-origin no <code>message</code> events will be sent to <code>window.portalHost</code> and <code>window.portalHost.postMessage()</code> will not deliver any message.</p>
+</div>
+
+<h2 id="Examples">Examples</h2>
+
+<p>The <a href="https://github.com/WICG/portals/tree/master/demos/portal-embed-demo">Portal Embed Demo</a> attached to the specification uses <code>postMessage</code> to pass information about the play state of the embedded content to the portal.</p>
+
+<pre class="brush:js">play.addEventListener('click', (evt) => {
+  const isPlaying = play.getAttribute('playing');
+  if (isPlaying === 'true') {
+    this.portal.postMessage({ control: 'pause' }, this.src.origin);
+    play.setAttribute('playing', false);
+  } else {
+    this.portal.postMessage({ control: 'play' }, this.src.origin);
+    play.setAttribute('playing', true);
+  }
+});</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+    <td>{{SpecName('Portals', "#dom-htmlportalelement-postmessage", "HTMLPortalElement.postMessage")}}</td>
+    <td>{{Spec2('Portals')}}</td>
+    <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+
+<p>{{Compat("api.HTMLPortalElement.postMessage")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+    <li><a href="https://web.dev/hands-on-portals/">Hands-on with Portals</a></li>
+</ul>

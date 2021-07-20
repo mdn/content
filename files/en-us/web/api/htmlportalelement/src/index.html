@@ -1,0 +1,57 @@
+---
+title: HTMLPortalElement.src
+slug: Web/API/HTMLPortalElement/src
+tags:
+  - API
+  - HTML DOM
+  - HTMLPortalElement
+  - Portals 
+  - Property
+  - Reference
+---
+
+<div>{{APIRef("HTML DOM")}}</div>
+
+<p class="summary">The <strong><code>src</code></strong> property of the {{domxref("HTMLPortalElement")}} interface reflects the {{htmlattrxref("src", "portal")}} HTML attribute. This contains the address of the content to be embedded.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox notranslate">var <var>src</var> = <var>HTMLPortalElement</var>.src;
+<var>HTMLPortalElement</var>.src = <var>src</var></pre>
+
+<h3>Value</h3>
+<p>A {{domxref("USVString")}} which is a valid, non-empty URL.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<pre class="brush:js">const portal = document.createElement('portal');
+portal.src = 'https://example.com' // The page to navigate to</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+    <td>{{SpecName('Portals', "#dom-htmlportalelement-src", "HTMLPortalElement.src")}}</td>
+    <td>{{Spec2('Portals')}}</td>
+    <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+
+<p>{{Compat("api.HTMLPortalElement.src")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+    <li><a href="https://web.dev/hands-on-portals/">Hands-on with Portals</a></li>
+</ul>
