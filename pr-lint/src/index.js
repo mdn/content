@@ -25,7 +25,7 @@ async function main() {
     // to come up with a better title.
     // See https://github.com/mdn/content/issues/782
     return (
-      'Pull request title can\'t just be "Update index.html" or "Update index.md"\n' +
+      `Pull request title can't just be "${title}"\n` +
       "Please update the pull request to be more descriptive. " +
       "For example 'fix typo on Web/JavaScript'."
     );
