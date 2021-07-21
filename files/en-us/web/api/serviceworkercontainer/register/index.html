@@ -62,9 +62,12 @@ browser-compat: api.ServiceWorkerContainer.register
           </li>
         </ul>
       </li>
-      <li><code>updateViaCache</code>: <a href="/en-US/docs/web/api/serviceworkerregistration">
-        Service Worker Registration</a> has a cache mode linked with it, which can be "imports", 
-        "all", or "none". It's set to "imports" by default. 
+      <li><code>updateViaCache</code>: A string indicating how much of a service worker's resources will be updated when a call is made to {{domxref('ServiceWorkerRegistration.updateViaCache')}}. Valid values are:
+      <ul>
+        <li><code>'all'</code>: The service worker script and all of its imports will be updated.</li>
+        <li><code>'imports'</code>: Only imports referenced by the service worker script will be updated. This is the default.</li>
+        <li><code>'none'</code>: Neither the service worker, nor its imports will be updated.</li>
+      </ul>
       </li>
     </ul>
   </dd>
