@@ -39,11 +39,16 @@ browser-compat: api.XRInputSourcesChangeEvent.XRInputSourcesChangeEvent
 
 <dl>
   <dt><code>type</code></dt>
-  <dd>A {{domxref("DOMString")}} indicating the type of event which has occurred. This
+  <dd>A string indicating the type of event which has occurred. This
     string must always be <code>inputsourceschange</code>.</dd>
   <dt><code>eventInitDict</code></dt>
-  <dd>An object conforming to the {{domxref("XRInputSourcesChangeEventInit")}} dictionary,
-    prodividing the initial values for the event.</dd>
+  <dd>An object that provides options to configure the event. It may contain the following properties:
+    <ul>
+      <li><code>added</code>: An array of zero or more {{domxref("XRInputSource")}} objects, each representing one input device which is newly available to use.</li>
+      <li><code>removed</code>: An array of zero or more {{domxref("XRInputSource")}} objects representing the input devices which are no longer available.</li>
+      <li><code>session</code>: The {{domxref("XRSession")}} to which the event applies.</li>
+    </ul>
+  </dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>

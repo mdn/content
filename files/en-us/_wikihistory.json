@@ -94483,30 +94483,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/XRInputSourcesChangeEventInit": {
-    "modified": "2020-10-15T22:27:51.490Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
-  "Web/API/XRInputSourcesChangeEventInit/added": {
-    "modified": "2020-10-15T22:27:51.338Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
-  "Web/API/XRInputSourcesChangeEventInit/removed": {
-    "modified": "2020-10-15T22:27:51.869Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
-  "Web/API/XRInputSourcesChangeEventInit/session": {
-    "modified": "2020-10-15T22:27:49.445Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
   "Web/API/XRPermissionDescriptor": {
     "modified": "2020-10-15T22:28:59.254Z",
     "contributors": [
