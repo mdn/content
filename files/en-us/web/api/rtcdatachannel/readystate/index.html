@@ -13,7 +13,7 @@ browser-compat: api.RTCDataChannel.readyState
 ---
 <div>{{APIRef("WebRTC")}}{{SeeCompatTable}}</div>
 
-<p><span class="seoSummary">The read-only <code>RTCDataChannel</code> property <code><strong>readyState</strong></code> returns an enum of type <code>RTCDataChannelState</code> which indicates the state of the data channel's underlying data connection.</span></p>
+<p>The read-only <code>RTCDataChannel</code> property <code><strong>readyState</strong></code> returns a string which indicates the state of the data channel's underlying data connection.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -22,38 +22,39 @@ browser-compat: api.RTCDataChannel.readyState
 
 <h3 id="Values">Values</h3>
 
-<p>A string which is one of the values in the {{anch("RTCDataChannelState enum", "RTCDataChannelState")}} enum, indicating the current state of the underlying data transport.</p>
+<p>A string indicating the current state of the underlying data transport, which is one of the following values:</p>
 
-<h4 id="RTCDataChannelState_enum">RTCDataChannelState enum</h4>
+<dl>
+  <dt><code>connecting</code></dt>
+  <dd>
+    The user agent (browser) is in the process of creating the underlying data transport;
+    this is the state of a new {{domxref("RTCDataChannel")}} after being created by {{domxref("RTCPeerConnection.createDataChannel()")}},
+    on the peer which started the connection process.
+  </dd>
 
-<p>The <code>RTCDataChannelState</code> enum defines string constants which reflect the current status of the {{domxref("RTCDataChannel")}}'s underlying data connection.</p>
+  <dt><code>open</code></dt>
+  <dd>
+    The underlying data transport has been established
+    and data can be transferred bidirectionally across it.
+    This is the default state of a new {{domxref("RTCDataChannel")}} created by the WebRTC layer
+    when the remote peer created the channel
+    and delivered it to the site or app
+    in a {{event("datachannel")}} event.
+  </dd>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Constant</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>"connecting"</code></td>
-   <td>The user agent (browser) is in the process of creating the underlying data transport; that is, whatever network level connection is used to link the two peers together is in the process of being set up. This is the state of a new {{domxref("RTCDataChannel")}} after being created by {{domxref("RTCPeerConnection.createDataChannel()")}} (on the peer which started the connection process).</td>
-  </tr>
-  <tr>
-   <td><code>"open"</code></td>
-   <td>The underlying data transport has been established and data can be transferred bidirectionally across it. This is the default state of a new {{domxref("RTCDataChannel")}} created by the WebRTC layer when the remote peer created the channel and delivered to the site or app in a {{event("datachannel")}} event of type {{domxref("RTCDataChannelEvent")}}.</td>
-  </tr>
-  <tr>
-   <td><code>"closing"</code></td>
-   <td>The process of closing the underlying data transport has begun. It is no longer possible to queue new messages to be sent, but previously queued messages may still be send or received before entering the <code>"closed"</code> state.</td>
-  </tr>
-  <tr>
-   <td><code>"closed"</code></td>
-   <td>The underlying data transport has closed, or the attempt to make the connection failed.</td>
-  </tr>
- </tbody>
-</table>
+  <dt><code>closing</code></dt>
+  <dd>
+    The process of closing the underlying data transport has begun.
+    It is no longer possible to queue new messages to be sent,
+    but previously queued messages may still be send or received
+    before entering the <code>closed</code> state.
+  </dd>
+
+  <dt><code>closed</code></dt>
+  <dd>The underlying data transport has closed,
+    or the attempt to make the connection failed.
+  </dd>
+</dl>
 
 <h2 id="Example">Example</h2>
 
