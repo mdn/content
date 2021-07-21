@@ -51,6 +51,22 @@ browser-compat: api.ServiceWorkerContainer.register
         registration is set to the directory where the service worker script is located.
         See the <a href="#examples">Examples</a> section for more information on how it
         works.</li>
+      <li><code>type</code>: A <a href="/en-US/docs/Web/API/DOMString">DOMString</a> 
+        specifying the type of worker to create. The value can be <code>classic</code> 
+        or <code>module</code>. If not specified, the default used is <code>classic</code>.
+        <ul>
+          <li><code>classic</code>:</li>
+          <li><code>module</code>:Setting 'module' type by the constructor's type attribute, 
+            worker scripts are loaded as ES modules and the import statement is available on 
+            worker contexts. Web developers can more easily construct composable programmes 
+            and spread them among a page and workers with this functionality. 
+          </li>
+        </ul>
+      </li>
+      <li><code>updateViaCache</code>: <a href="/en-US/docs/web/api/serviceworkerregistration">
+        Service Worker Registration</a> has a cache mode linked with it, which can be "imports", 
+        "all", or "none". It's set to "imports" by default. 
+      </li>
     </ul>
   </dd>
 </dl>

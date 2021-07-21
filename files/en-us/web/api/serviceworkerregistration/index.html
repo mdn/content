@@ -72,6 +72,8 @@ browser-compat: api.ServiceWorkerRegistration
  <dd>Checks the server for an updated version of the service worker without consulting caches.</dd>
  <dt>{{domxref("ServiceWorkerRegistration.unregister()")}}</dt>
  <dd>Unregisters the service worker registration and returns a {{jsxref("Promise")}}. The service worker will finish any ongoing operations before it is unregistered.</dd>
+ <dt>{{domxref("ServiceWorkerRegistration.updateViaCache")}}</dt>
+ <dd>Updates the service worker registration. The extent of the update depends on the cache mode, which was set by {{domxref('ServiceWorkerContainer.register')}}.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
