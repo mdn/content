@@ -22,7 +22,7 @@ Language is one of the core features of a locale. The Unicode specification trea
 
 ## Examples
 
-### Setting the language in the locale identifer string argument
+### Setting the language in the locale identifier string argument
 
 In order to be a valid Unicode locale identifier, a string must start with the language subtag. The main argument to the {{jsxref("Intl/Locale/Locale", "Locale")}} constructor must be a valid Unicode locale identifier, so whenever the constructor is used, it must be passed an identifier with a language subtag.
 
