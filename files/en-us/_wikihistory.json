@@ -94928,18 +94928,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/XRSessionEventInit": {
-    "modified": "2020-10-15T22:27:48.801Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
-  "Web/API/XRSessionEventInit/session": {
-    "modified": "2020-10-15T22:27:48.954Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
   "Web/API/XRSpace": {
     "modified": "2020-10-15T22:22:29.366Z",
     "contributors": [
