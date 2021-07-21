@@ -3,7 +3,6 @@ title: RTCDataChannel.onclose
 slug: Web/API/RTCDataChannel/onclose
 tags:
   - Event Handler
-  - Experimental
   - Property
   - RTCDataChannel
   - Reference
@@ -11,7 +10,7 @@ tags:
   - onclose
 browser-compat: api.RTCDataChannel.onclose
 ---
-<p>{{APIRef("WebRTC")}}{{SeeCompatTable}}</p>
+<p>{{APIRef("WebRTC")}}</p>
 
 <p>The <code><strong>RTCDataChannel.onclose</strong></code> property is an
   <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> which specifies a function to be called by the browser when
@@ -33,7 +32,7 @@ browser-compat: api.RTCDataChannel.onclose
 
 <p>In this sample from a hypothetical instant messaging client, a data channel is created,
   then handlers for the {{event("open")}} and {{event("close")}} events are set up to
-  enable and disable user interface objects based on the state of the channel.  This way,
+  enable and disable user interface objects based on the state of the channel. This way,
   the message entry field and the send button are only enabled for use when the connection
   is actually open.</p>
 

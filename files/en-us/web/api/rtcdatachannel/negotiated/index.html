@@ -16,10 +16,10 @@ browser-compat: api.RTCDataChannel.negotiated
 ---
 <p>{{APIRef("WebRTC")}}</p>
 
-<p><span class="seoSummary">The read-only <code>RTCDataChannel</code> property
+<p>The read-only <code>RTCDataChannel</code> property
     <code><strong>negotiated</strong></code> indicates whether the
     {{domxref("RTCDataChannel")}}'s connection was negotiated by the Web app
-    (<code>true</code>) or by the WebRTC layer (<code>false</code>).</span> <strong>The
+    (<code>true</code>) or by the WebRTC layer (<code>false</code>). <strong>The
     default is <code>false</code>.</strong></p>
 
 <p>See {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Using_data_channels", "Creating a
@@ -39,7 +39,7 @@ browser-compat: api.RTCDataChannel.negotiated
 <h2 id="Example">Example</h2>
 
 <p>The code snippet below checks the value of <code>negotiated</code>; if it's
-  <code>true</code>, a  function called <code>shutdownRemoteChannel()</code> is called
+  <code>true</code>, a function called <code>shutdownRemoteChannel()</code> is called
   with the channel's {{domxref("RTCDataChannel.id", "id")}}; presumably this would be
   implemented to transmit a shutdown signal to the remote peer prior to terminating the
   connection.</p>
