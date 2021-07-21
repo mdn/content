@@ -12,12 +12,11 @@ tags:
   - stream
 browser-compat: api.RTCDataChannel.stream
 ---
-<p>{{APIRef("WebRTC")}}{{deprecated_header}}{{non-standard_header}}</p>
+<p>{{APIRef("WebRTC")}}{{deprecated_header}}</p>
 
-<p><span class="seoSummary">The deprecated (and never part of the official specification)
-    read-only <code>RTCDataChannel</code> property <code><strong>stream</strong></code>
+<p>The deprecated read-only <code>RTCDataChannel</code> property <code><strong>stream</strong></code>
     returns an ID number (between 0 and 65,535) which uniquely identifies the
-    {{domxref("RTCDataChannel")}}.</span> This ID is set at the time the data channel is
+    {{domxref("RTCDataChannel")}}. This ID is set at the time the data channel is
   created, either by the user agent (if {{domxref("RTCDataChannel.negotiated")}} is
   <code>false</code>) or by the site or app script (if <code>negotiated</code> is
   <code>true</code>).</p>
@@ -43,6 +42,10 @@ browser-compat: api.RTCDataChannel.stream
 <pre>var dataChannel = pc.createDataChannel("SampleChannel");
 <code>
 console.log("Data channel stream ID: " + </code>dataChannel.stream<code>);</code></pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<p>This feature is not part of any current specification. It is not on track to become a standard.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
