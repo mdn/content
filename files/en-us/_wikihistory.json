@@ -95037,48 +95037,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/XRWebGLLayerInit": {
-    "modified": "2020-10-15T22:25:30.391Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
-  "Web/API/XRWebGLLayerInit/alpha": {
-    "modified": "2020-10-15T22:25:34.957Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
-  "Web/API/XRWebGLLayerInit/antialias": {
-    "modified": "2020-10-15T22:25:35.189Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
-  "Web/API/XRWebGLLayerInit/depth": {
-    "modified": "2020-10-15T22:25:33.463Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
-  "Web/API/XRWebGLLayerInit/framebufferScaleFactor": {
-    "modified": "2020-10-15T22:25:35.259Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
-  "Web/API/XRWebGLLayerInit/ignoreDepthValues": {
-    "modified": "2020-10-15T22:25:35.737Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
-  "Web/API/XRWebGLLayerInit/stencil": {
-    "modified": "2020-10-15T22:25:34.539Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
   "Web/API/XSLTProcessor": {
     "modified": "2020-10-15T21:43:51.327Z",
     "contributors": [
