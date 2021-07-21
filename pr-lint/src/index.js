@@ -17,7 +17,7 @@ async function main() {
   }
 
   const { title } = contextPullRequest;
-  if ((title === "Update index.html") || (title === "Update index.md")) {
+  if (title === "Update index.html" || title === "Update index.md") {
     // These are the default titles you get when you use the GitHub UI to
     // edit a file and following web form steps to create a PR.
     // These PRs are hard to triage and to organize because of the
