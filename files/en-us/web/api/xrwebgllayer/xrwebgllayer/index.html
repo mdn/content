@@ -46,10 +46,16 @@ browser-compat: api.XRWebGLLayer.XRWebGLLayer
     WebXR session.</dd>
   <dt><code>layerInit</code> {{optional_inline}}</dt>
   <dd>
-    <p>An object conforming to the {{domxref("XRWebGLLayerInit")}} dictionary, providing
-      configuration options for the new <code>XRWebGLLayer</code>. The options available
+    <p>An object providing configuration options for the new <code>XRWebGLLayer</code>. The available options
       are:</p>
-    {{page("/en-US/docs/Web/API/XRWebGLLayerInit", "Properties")}}
+    <ul>
+      <li><code>alpha</code>: The frame buffer's color buffer will be established with an alpha channel if the <code>alpha</code> Boolean property is <code>true</code>. Otherwise, the color buffer will not have an alpha channel. The default value is <code>true</code>.</li>
+      <li><code>antialias</code>: A Boolean value which is <code>true</code> if anti-aliasing is to be used when rendering in the context; otherwise <code>false</code>. The browser selects the anti-aliasing method to use; there is no support for requesting a specific mode yet.  The default value is <code>true</code>.</li>
+      <li><code>depth</code>: A Boolean value which, if <code>true</code>, requests that the new layer have a depth buffer; otherwise, no depth layer is allocated. The default is <code>true</code>.</li>
+      <li><code>framebufferScaleFactor</code>: A floating-point value which is used to scale the image during compositing, with a value of 1.0 represents the default pixel size for the frame buffer. The static {{domxref("XRWebGLLayer")}} function {{domxref("XRWebGLLayer.getNativeFramebufferScaleFactor()")}} returns the scale that would result in a 1:1 pixel ratio, thereby ensuring that the rendering is occurring at the device's native resolution. The default is 1.0.</li>
+      <li><code>ignoreDepthValues</code>: A Boolean value which indicates whether or not to ignore the contents of the depth buffer while compositing the scene. The default is <code>false</code>.</li>
+      <li><code>stencil</code>: A Boolean value which, if <code>true</code>, requests that the new layer include a stencil buffer. Otherwise, no stencil buffer is allocated. The default is <code>false</code>.</li>
+    </ul>
   </dd>
 </dl>
 
@@ -82,6 +88,23 @@ browser-compat: api.XRWebGLLayer.XRWebGLLayer
   <dd>The resources (including memory buffers) needed for the layer to operate could not
     be allocated.</dd>
 </dl>
+
+<h2 id="Example">Example</h2>
+
+<p>In this example, a new {{domxref("XRWebGLLayer")}} is created for a WebXR session,
+  <code>xrSession</code>.</p>
+
+<pre class="brush: js">xrSession.updateRenderState({
+  baseLayer: new XRWebGLLayer(xrSession, gl, {
+     alpha: false,
+     antialias: false,
+     depth: false,
+     framebufferScaleFactor: 0.5,
+     ignoreDepthValues: true,
+     stencil: false
+  });
+});
+</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

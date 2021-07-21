@@ -9044,6 +9044,13 @@
 /en-US/docs/Web/API/XRTargetRayMode	/en-US/docs/Web/API/XRInputSource/targetRayMode
 /en-US/docs/Web/API/XRTargetRayModoe	/en-US/docs/Web/API/XRInputSource/targetRayMode
 /en-US/docs/Web/API/XRVisibilityState	/en-US/docs/Web/API/XRSession/visibilityState
+/en-US/docs/Web/API/XRWebGLLayerInit	/en-US/docs/Web/API/XRWebGLLayer/XRWebGLLayer
+/en-US/docs/Web/API/XRWebGLLayerInit/alpha	/en-US/docs/Web/API/XRWebGLLayer/XRWebGLLayer
+/en-US/docs/Web/API/XRWebGLLayerInit/antialias	/en-US/docs/Web/API/XRWebGLLayer/XRWebGLLayer
+/en-US/docs/Web/API/XRWebGLLayerInit/depth	/en-US/docs/Web/API/XRWebGLLayer/XRWebGLLayer
+/en-US/docs/Web/API/XRWebGLLayerInit/framebufferscalefactor	/en-US/docs/Web/API/XRWebGLLayer/XRWebGLLayer
+/en-US/docs/Web/API/XRWebGLLayerInit/ignoredepthvalues	/en-US/docs/Web/API/XRWebGLLayer/XRWebGLLayer
+/en-US/docs/Web/API/XRWebGLLayerInit/stencil	/en-US/docs/Web/API/XRWebGLLayer/XRWebGLLayer
 /en-US/docs/Web/API/console.assert	/en-US/docs/Web/API/console/assert
 /en-US/docs/Web/API/console.dir	/en-US/docs/Web/API/console/dir
 /en-US/docs/Web/API/console.error	/en-US/docs/Web/API/console/error
