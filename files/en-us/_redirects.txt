@@ -9024,6 +9024,10 @@
 /en-US/docs/Web/API/XREye	/en-US/docs/Web/API/XRView/eye
 /en-US/docs/Web/API/XRFrameRequestCallback	/en-US/docs/Web/API/XRSession/requestAnimationFrame
 /en-US/docs/Web/API/XRHandedness	/en-US/docs/Web/API/XRInputSource/handedness
+/en-US/docs/Web/API/XRInputSourcesChangeEventInit	/en-US/docs/Web/API/XRInputSourcesChangeEvent/XRInputSourcesChangeEvent
+/en-US/docs/Web/API/XRInputSourcesChangeEventInit/added	/en-US/docs/Web/API/XRInputSourcesChangeEvent/XRInputSourcesChangeEvent
+/en-US/docs/Web/API/XRInputSourcesChangeEventInit/removed	/en-US/docs/Web/API/XRInputSourcesChangeEvent/XRInputSourcesChangeEvent
+/en-US/docs/Web/API/XRInputSourcesChangeEventInit/session	/en-US/docs/Web/API/XRInputSourcesChangeEvent/XRInputSourcesChangeEvent
 /en-US/docs/Web/API/XRReferenceSpaceType	/en-US/docs/Web/API/XRSession/requestReferenceSpace
 /en-US/docs/Web/API/XRRenderState/XRRenderState.inlineVerticalFieldOfView	/en-US/docs/Web/API/XRRenderState/inlineVerticalFieldOfView
 /en-US/docs/Web/API/XRRenderStateInit	/en-US/docs/Web/API/XRSession/updateRenderState
