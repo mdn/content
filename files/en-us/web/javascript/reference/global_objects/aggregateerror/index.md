@@ -24,6 +24,8 @@ The **`AggregateError`** object represents an error when several errors need to 
   - : Error message, defaults to `""`.
 - {{JSxRef("Error.prototype.name", "AggregateError.prototype.name")}}
   - : Error name, defaults to `AggregateError`.
+- `AggregateError`: `errors`
+  - : An array that essentially reflects the iterable with which the `AggregateError` was instantiated; for example, if the `AggregateError` was created using the {{JSxRef("AggregateError/AggregateError", "AggregateError()")}} constructor, an array produced from whatever iterable was passed to the constructor as its first argument.
 
 ## Examples
 
