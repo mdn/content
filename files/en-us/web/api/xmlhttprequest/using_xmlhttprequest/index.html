@@ -2,18 +2,18 @@
 title: Using XMLHttpRequest
 slug: Web/API/XMLHttpRequest/Using_XMLHttpRequest
 tags:
-- AJAX
-- AJAXfile
-- Advanced
-- DOM
-- Guide
-- HTTP
-- JXON
-- MakeBrowserAgnostic
-- Tutorial
-- XHR
-- XML
-- XMLHttpRequest
+  - AJAX
+  - AJAXfile
+  - Advanced
+  - DOM
+  - Guide
+  - HTTP
+  - JXON
+  - MakeBrowserAgnostic
+  - Tutorial
+  - XHR
+  - XML
+  - XMLHttpRequest
 ---
 <div>{{APIRef("XMLHttpRequest")}}</div>
 
@@ -46,7 +46,7 @@ oReq.send();</pre>
   not specified, the <code>XMLHttpRequest</code> is processed asynchronously, otherwise
   the process is handled synchronously. A detailed discussion and demonstrations of these
   two types of requests can be found on the <a
-    href="/en-US/docs/DOM/XMLHttpRequest/Synchronous_and_Asynchronous_Requests">synchronous
+    href="/en-US/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests">synchronous
     and asynchronous requests</a> page. Do not use synchronous requests outside Web
   Workers.</p>
 
@@ -155,7 +155,7 @@ oReq.responseType = "arraybuffer";
 oReq.send();</pre>
 
 <p>For more examples check out the <a
-    href="/en-US/docs/DOM/XMLHttpRequest/Sending_and_Receiving_Binary_Data">Sending and
+    href="/en-US/docs/Web/API/XMLHttpRequest/Sending_and_Receiving_Binary_Data">Sending and
     Receiving Binary Data</a> page</p>
 
 <h2 id="Monitoring_progress">Monitoring progress</h2>
@@ -277,7 +277,7 @@ function loadEnd(e) {
 
 <ul>
   <li>using only AJAX</li>
-  <li>using the {{domxref("XMLHttpRequest.FormData", "FormData")}} API</li>
+  <li>using the {{domxref("FormData")}} API</li>
 </ul>
 
 <p>Using the <code>FormData</code> API is the simplest and fastest, but has the
@@ -684,7 +684,7 @@ print_r($_FILES);
 
 <h3 id="Using_FormData_objects">Using FormData objects</h3>
 
-<p>The {{domxref("XMLHttpRequest.FormData", "FormData")}} constructor lets you compile a
+<p>The {{domxref("FormData")}} constructor lets you compile a
   set of key/value pairs to send using <code>XMLHttpRequest</code>. Its primary use is in
   sending form data, but can also be used independently from a form in order to transmit
   user keyed data. The transmitted data is in the same format the form's
@@ -692,9 +692,9 @@ print_r($_FILES);
   "multipart/form-data". FormData objects can be utilized in a number of ways with an
   <code>XMLHttpRequest</code>. For examples, and explanations of how one can utilize
   FormData with XMLHttpRequests, see the <a
-    href="/en-US/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects">Using FormData
+    href="/en-US/docs/Web/API/FormData/Using_FormData_Objects">Using FormData
     Objects</a> page. For didactic purposes here is <strong>a <em>translation</em> of <a
-      href="#A_little_vanilla_framework">the previous example</a> transformed to use the
+      href="#a_little_vanilla_framework">the previous example</a> transformed to use the
     <code>FormData</code> API</strong>. Note the brevity of the code:</p>
 
   <pre class="brush: html">&lt;!doctype html&gt;
@@ -824,7 +824,7 @@ function AJAXSubmit (oFormElement) {
     objects are not <a
       href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">stringifiable</a>
     objects</strong>. If you want to stringify a submitted data, use <a
-    href="#A_little_vanilla_framework">the previous <em>pure</em>-AJAX example</a>. Note
+    href="#a_little_vanilla_framework">the previous <em>pure</em>-AJAX example</a>. Note
   also that, although in this example there are some <code>file</code> {{
   HTMLElement("input") }} fields, <strong>when you submit a form through the
     <code>FormData</code> API you do not need to use the {{domxref("FileReader")}} API
@@ -953,18 +953,18 @@ oReq.send(null);</pre>
 <h2 id="See_also">See also</h2>
 
 <ol>
-  <li><a href="/en-US/docs/AJAX/Getting_Started">MDN AJAX introduction</a></li>
+  <li><a href="/en-US/docs/Web/Guide/AJAX/Getting_Started">MDN AJAX introduction</a></li>
   <li><a href="/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest">HTML in
       XMLHttpRequest</a></li>
-  <li><a href="/en-US/docs/Web/HTTP/Access_control_CORS">HTTP access control</a></li>
+  <li><a href="/en-US/docs/Web/HTTP/CORS">HTTP access control</a></li>
   <li><a
-      href="/en-US/docs/How_to_check_the_security_state_of_an_XMLHTTPRequest_over_SSL">How
+      href="/en-US/docs/Web/API/XMLHttpRequest/How_to_check_the_secruity_state_of_an_XMLHTTPRequest_over_SSL">How
       to check the security state of an XMLHTTPRequest over SSL</a></li>
-  <li><a href="http://www.peej.co.uk/articles/rich-user-experience.html">XMLHttpRequest -
+  <li><a href="https://www.peej.co.uk/articles/rich-user-experience.html">XMLHttpRequest -
       REST and the Rich User Experience</a></li>
   <li><a href="https://msdn.microsoft.com/library/ms535874">Microsoft documentation</a>
   </li>
-  <li><a href="http://jibbering.com/2002/4/httprequest.html">"Using the XMLHttpRequest
+  <li><a href="https://jibbering.com/2002/4/httprequest.html">"Using the XMLHttpRequest
       Object" (jibbering.com)</a></li>
   <li><a href="https://xhr.spec.whatwg.org/">The <code>XMLHttpRequest</code> object:
       WHATWG specification</a></li>
