@@ -6,9 +6,16 @@ tags:
   - Glossary
   - JavaScript
 ---
-<p>Hoisting is a term you will <em>not</em> find used in any normative specification prose prior to <a href="https://www.ecma-international.org/ecma-262/6.0/index.html">ECMAScript® 2015 Language Specification</a>. Hoisting was thought up as a general way of thinking about how execution contexts (specifically the creation and execution phases) work in JavaScript. However, the concept can be a little confusing at first.</p>
 
-<p>Conceptually, for example, a strict definition of hoisting suggests that variable and function declarations are physically moved to the top of your code, but this is not in fact what happens. Instead, the variable and function declarations are put into memory during the <em>compile</em> phase, but stay exactly where you typed them in your code.</p>
+<p>JavaScript <strong>Hoisting</strong> refers to the process whereby the compiler allocates memory for variable and function declarations prior to execution of the code. Declarations that are made using <code>var</code> are initialized with a default value of <code>undefined</code>. Declarations made using <code>let</code> and <code>const</code> are not initialized as part of hoisting.</p>
+
+<p>Conceptually hoisting is often presented as the compiler "splitting variable declaration and initialization, and moving (just) the declarations to the top of the code".
+  This allows variables to appear in code before they are defined.
+  Note however that the any variable initialization in the original code will not happen until the line of code is executed.</p>
+
+<div class="notecard note">
+  <p><strong>Note:</strong> The term hoisting is not used in any normative specification prose prior to <a href="https://www.ecma-international.org/ecma-262/6.0/index.html">ECMAScript® 2015 Language Specification</a>. Hoisting was thought up as a general way of thinking about how execution contexts (specifically the creation and execution phases) work in JavaScript.</p>
+</div>
 
 <h2 id="Learn_more">Learn more</h2>
 
@@ -45,27 +52,17 @@ The result of the code above is: "My cat's name is Chloe"
 
 <h3 id="Only_declarations_are_hoisted">Only declarations are hoisted</h3>
 
-<p>JavaScript only hoists declarations, not initializations. If a variable is declared and initialized after using it, the value will be undefined. For example:</p>
+<p>JavaScript only hoists declarations, not initializations. If a variable is used in code and then declared and initialized, the value when it is used will be its default initialization (<code>undefined</code> for a variable declared using <code>var</code>, otherwise uninitialized).
+  For example:</p>
 
-<pre class="brush: js">console.log(num); // Returns undefined, as only declaration was hoisted, no initialization has happened at this stage
+<pre class="brush: js">console.log(num); // Returns 'undefined' from hoisted var declaration (not 6)
 var num; // Declaration
 num = 6; // Initialization</pre>
 
-<p>The example below only has initialization. No hoisting happens so trying to read the variable results in ReferenceError exception.</p>
+<p>The example below only has initialization. No hoisting happens so trying to read the variable results in <code>ReferenceError</code> exception.</p>
 
 <pre class="brush: js">console.log(num); // Throws ReferenceError exception
 num = 6; // Initialization</pre>
-
-<p>Initializations using <code>let</code> and <code>const</code> are also not hoisted. </p>
-
-<pre class="brush: js">// Example with let:
-a = 1; // initialization.
-let a; // Throws ReferenceError: Cannot access 'a' before initialization
-
-// Example with const:
-a = 1; // initialization.
-const a; // Throws SyntaxError: Missing initializer in const declaration
-</pre>
 
 <p>Below are more examples demonstrating hoisting.</p>
 
@@ -84,6 +81,14 @@ a = 'Cran'; // Initialize a
 b = 'berry'; // Initialize b
 
 console.log(a + "" + b); // 'Cranberry'</pre>
+
+<h3 id="Only_declarations_are_hoisted">Let and const hoisting</h3>
+
+<p>Variables declared with <code>let</code> and <code>const</code> are also hoisted, but unlike for <code>var</code> the variables are not initialized with a default value of <code>undefined</code>.
+  Until the line in which they initialized is executed, any code that accesses these variables will throw an exception.</p>
+
+<p>For information and examples see <a href="/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz"><code>let</code> > temporal dead zone</a>.</p>
+
 
 <h3 id="Technical_reference">Technical reference</h3>
 

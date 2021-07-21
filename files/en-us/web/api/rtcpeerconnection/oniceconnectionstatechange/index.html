@@ -2,20 +2,19 @@
 title: RTCPeerConnection.oniceconnectionstatechange
 slug: Web/API/RTCPeerConnection/oniceconnectionstatechange
 tags:
-- Event Handler
-- Experimental
-- Property
-- RTCPeerConnection
-- Reference
-- WebRTC
-- oniceconnectionstatechange
+  - Event Handler
+  - Property
+  - RTCPeerConnection
+  - Reference
+  - WebRTC
+  - oniceconnectionstatechange
 browser-compat: api.RTCPeerConnection.oniceconnectionstatechange
 ---
-<p>{{APIRef("WebRTC")}}{{SeeCompatTable}}</p>
+<p>{{APIRef("WebRTC")}}</p>
 
 <p>The <code><strong>RTCPeerConnection.oniceconnectionstatechange</strong></code> property
   is an event handler which specifies a function to be called when the
-  {{event("iceconnectionstatechange")}} event is fired on an
+  {{DOMxRef("RTCPeerConnection/iceconnectionstatechange_event", "iceconnectionstatechange")}} event is fired on an
   {{domxref("RTCPeerConnection")}} instance. This happens when the state of the
   connection's ICE agent, as represented by the
   {{domxref("RTCPeerConnection.iceConnectionState", "iceConnectionState")}} property,
@@ -29,7 +28,7 @@ browser-compat: api.RTCPeerConnection.oniceconnectionstatechange
 <h3 id="Value">Value</h3>
 
 <p>This event handler can be set to function which is passed a single input parameter: an
-  {{domxref("Event")}} object describing the {{event("iceconnectionstatechange")}} event
+  {{domxref("Event")}} object describing the {{DOMxRef("RTCPeerConnection/iceconnectionstatechange_event", "iceconnectionstatechange")}} event
   which occurred. Your code can look at the value of
   {{domxref("RTCPeerConnection.iceConnectionState")}} to determine what the new state is.
 </p>
@@ -64,6 +63,6 @@ browser-compat: api.RTCPeerConnection.oniceconnectionstatechange
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li>The {{event("iceconnectionstatechange")}} event and its type, {{domxref("Event")}}.
+  <li>The {{DOMxRef("RTCPeerConnection/iceconnectionstatechange_event", "iceconnectionstatechange")}} event and its type, {{domxref("Event")}}.
   </li>
 </ul>

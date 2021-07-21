@@ -2,27 +2,30 @@
 title: RTCPeerConnection.createOffer()
 slug: Web/API/RTCPeerConnection/createOffer
 tags:
-- API
-- Media
-- Method
-- RTCPeerConnection
-- Reference
-- SDP
-- WebRTC
-- createOffer
+  - API
+  - Media
+  - Method
+  - RTCPeerConnection
+  - Reference
+  - SDP
+  - WebRTC
+  - createOffer
 browser-compat: api.RTCPeerConnection.createOffer
 ---
 <div>{{APIRef("WebRTC")}}</div>
 
-<p><span class="seoSummary">The <strong><code>createOffer()</code></strong> method of the
-    {{domxref("RTCPeerConnection")}} interface initiates the creation of an
-    {{Glossary("SDP")}} offer for the purpose of starting a new WebRTC connection to a
-    remote peer.</span> The SDP offer includes information about any
-  {{domxref("MediaStreamTrack")}}s already attached to the WebRTC session, codec, and
-  options supported by the browser, and any candidates already gathered by the
-  {{Glossary("ICE")}} agent, for the purpose of being sent over the signaling channel to a
-  potential peer to request a connection or to update the configuration of an existing
-  connection.</p>
+<p>The <strong><code>createOffer()</code></strong> method
+  of the {{domxref("RTCPeerConnection")}} interface
+  initiates the creation of an {{Glossary("SDP")}} offer
+  for the purpose of starting a new WebRTC connection to a remote peer.
+  The SDP offer includes information
+  about any {{domxref("MediaStreamTrack")}} objects
+  already attached to the WebRTC session, codec, and options supported by the browser,
+  and any candidates already gathered by the {{Glossary("ICE")}} agent,
+  for the purpose of being sent over the signaling channel
+  to a potential peer
+  to request a connection
+  or to update the configuration of an existing connection.</p>
 
 <p>The return value is a {{domxref("Promise")}} which, when the offer has been created, is
   resolved with a {{domxref("RTCSessionDescription")}} object containing the newly-created
@@ -153,7 +156,7 @@ browser-compat: api.RTCPeerConnection.createOffer
 
 <h2 id="Example">Example</h2>
 
-<p>Here we see a handler for the {{event("negotiationneeded")}} event which creates the
+<p>Here we see a handler for the {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} event which creates the
   offer and sends it to the remote system over a signaling channel.</p>
 
 <div class="note">
@@ -166,18 +169,18 @@ browser-compat: api.RTCPeerConnection.createOffer
     fulfillment handler, depend entirely on your design.</p>
 </div>
 
-<pre class="brush: js">  myPeerConnection.createOffer().then(function(offer) {
-    return myPeerConnection.setLocalDescription(offer);
-  })
-  .then(function() {
-    sendToServer({
-      name: myUsername,
-      target: targetUsername,
-      type: "video-offer",
-      sdp: myPeerConnection.localDescription
-    });
-  })
-  .catch(function(reason) {
+<pre class="brush: js">  myPeerConnection.createOffer().then(function(offer) {
+    return myPeerConnection.setLocalDescription(offer);
+  })
+  .then(function() {
+    sendToServer({
+      name: myUsername,
+      target: targetUsername,
+      type: "video-offer",
+      sdp: myPeerConnection.localDescription
+    });
+  })
+  .catch(function(reason) {
     // An error occurred, so handle the failure to connect
   });</pre>
 

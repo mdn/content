@@ -2,21 +2,20 @@
 title: RTCPeerConnection.ontrack
 slug: Web/API/RTCPeerConnection/ontrack
 tags:
-- Event Handler
-- Experimental
-- Property
-- RTCPeerConnection
-- Reference
-- WebRTC
-- ontrack
+  - Event Handler
+  - Property
+  - RTCPeerConnection
+  - Reference
+  - WebRTC
+  - ontrack
 browser-compat: api.RTCPeerConnection.ontrack
 ---
 <div>{{APIRef("WebRTC")}}</div>
 
-<p><span class="seoSummary">The {{domxref("RTCPeerConnection")}} property
+<p>The {{domxref("RTCPeerConnection")}} property
     <strong><code>ontrack</code></strong> is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> which
-    specifies a function to be called when the {{event("track")}} event occurs, indicating
-    that a track has been added to the {{domxref("RTCPeerConnection")}}.</span> The
+    specifies a function to be called when the {{DOMxRef("RTCPeerConnection/track_event", "track")}} event occurs, indicating
+    that a track has been added to the {{domxref("RTCPeerConnection")}}. The
   function receives as input the event object, of type {{domxref("RTCTrackEvent")}}; this
   event is sent when a new incoming {{domxref("MediaStreamTrack")}} has been created and
   associated with an {{domxref("RTCRtpReceiver")}} object which has been added to the set
@@ -44,8 +43,8 @@ browser-compat: api.RTCPeerConnection.ontrack
   will be used to display the incoming video.</p>
 
 <pre class="brush: js">pc.ontrack = function(event) {
-  document.getElementById("received_video").srcObject = event.streams[0];
-  document.getElementById("hangup-button").disabled = false;
+  document.getElementById("received_video").srcObject = event.streams[0];
+  document.getElementById("hangup-button").disabled = false;
 };
 </pre>
 
@@ -66,5 +65,5 @@ browser-compat: api.RTCPeerConnection.ontrack
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li>The {{event("track")}} event and its type, {{domxref("RTCTrackEvent")}}.</li>
+  <li>The {{DOMxRef("RTCPeerConnection/track_event", "track")}} event and its type, {{domxref("RTCTrackEvent")}}.</li>
 </ul>

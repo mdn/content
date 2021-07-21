@@ -8,7 +8,7 @@ tags:
   - Web MIDI API
 browser-compat: api.MIDIAccess
 ---
-<p>{{SeeCompatTable}}{{APIRef("Web MIDI API")}} </p>
+<div>{{securecontext_header}}{{APIRef("Web MIDI API")}}</div>
 
 <p>The <strong><code>MIDIAccess</code></strong> interface of the <a href="/en-US/docs/Web/API/Web_MIDI_API">Web MIDI API</a> provides methods for listing MIDI input and output devices, and obtaining access to those devices.</p>
 
@@ -31,6 +31,10 @@ browser-compat: api.MIDIAccess
 </dl>
 
 <h2 id="Examples">Examples</h2>
+
+<p>The {{domxref("Navigator.requestMIDIAccess()")}} method returns a promise that resolves with a {{domxref("MIDIAccess")}} object. Information about the input and output ports is returned.</p>
+
+<p>When a port changes state, information about that port is printed to the console.</p>
 
 <pre class="brush: js">navigator.requestMIDIAccess()
   .then(function(access) {

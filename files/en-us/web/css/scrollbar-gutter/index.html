@@ -28,7 +28,7 @@ scrollbar-gutter: auto;
 
 /* "stable" keyword, with optional modifier */
 scrollbar-gutter: stable;
-scrollbar-gutter: stable mirror;
+scrollbar-gutter: stable both-edges;
 
 /* Global values */
 scrollbar-gutter: inherit;
@@ -43,7 +43,7 @@ scrollbar-gutter: unset;</pre>
  <dd>The initial value. Classic scrollbars create a gutter when <code>overflow</code> is <code>scroll</code>, or when <code>overflow</code> is <code>auto</code> and the box is overflowing. Overlay scrollbars do not consume space.</dd>
  <dt><code>stable</code></dt>
  <dd>When using classic scrollbars, the gutter will be present if <code>overflow</code> is <code>auto</code>, <code>scroll</code>, or <code>hidden</code> even if the box is not overflowing. When using overlay scrollbars, the gutter will not be present.</dd>
- <dt><code>mirror</code></dt>
+ <dt><code>both-edges</code></dt>
  <dd>If a gutter would be present on one of the inline start/end edges of the box, another will be present on the opposite edge as well.</dd>
 </dl>
 
@@ -71,7 +71,7 @@ scrollbar-gutter: unset;</pre>
 <p>Add symmetric spacing to both sides of the box so the content is centered:</p>
 
 <pre class="brush: css">.container {
-    scrollbar-gutter: stable mirror;
+    scrollbar-gutter: stable both-edges;
 }
 </pre>
 
