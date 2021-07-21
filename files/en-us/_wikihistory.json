@@ -94595,24 +94595,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/XRReferenceSpaceEventInit": {
-    "modified": "2020-10-15T22:28:04.831Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
-  "Web/API/XRReferenceSpaceEventInit/referenceSpace": {
-    "modified": "2020-10-15T22:28:04.989Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
-  "Web/API/XRReferenceSpaceEventInit/transform": {
-    "modified": "2020-10-15T22:28:05.005Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
   "Web/API/XRRenderState": {
     "modified": "2020-10-15T22:21:53.905Z",
     "contributors": [
