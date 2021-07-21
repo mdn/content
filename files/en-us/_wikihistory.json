@@ -94432,24 +94432,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/XRInputSourceEventInit": {
-    "modified": "2020-10-15T22:28:03.039Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
-  "Web/API/XRInputSourceEventInit/frame": {
-    "modified": "2020-10-15T22:28:03.243Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
-  "Web/API/XRInputSourceEventInit/inputSource": {
-    "modified": "2020-10-15T22:28:03.981Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
   "Web/API/XRInputSourcesChangeEvent": {
     "modified": "2020-10-15T22:27:48.967Z",
     "contributors": [

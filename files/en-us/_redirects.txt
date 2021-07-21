@@ -9024,6 +9024,9 @@
 /en-US/docs/Web/API/XREye	/en-US/docs/Web/API/XRView/eye
 /en-US/docs/Web/API/XRFrameRequestCallback	/en-US/docs/Web/API/XRSession/requestAnimationFrame
 /en-US/docs/Web/API/XRHandedness	/en-US/docs/Web/API/XRInputSource/handedness
+/en-US/docs/Web/API/XRInputSourceEventInit	/en-US/docs/Web/API/XRInputSourceEvent/XRInputSourceEvent
+/en-US/docs/Web/API/XRInputSourceEventInit/frame	/en-US/docs/Web/API/XRInputSourceEvent/XRInputSourceEvent
+/en-US/docs/Web/API/XRInputSourceEventInit/inputSource	/en-US/docs/Web/API/XRInputSourceEvent/XRInputSourceEvent
 /en-US/docs/Web/API/XRInputSourcesChangeEventInit	/en-US/docs/Web/API/XRInputSourcesChangeEvent/XRInputSourcesChangeEvent
 /en-US/docs/Web/API/XRInputSourcesChangeEventInit/added	/en-US/docs/Web/API/XRInputSourcesChangeEvent/XRInputSourcesChangeEvent
 /en-US/docs/Web/API/XRInputSourcesChangeEventInit/removed	/en-US/docs/Web/API/XRInputSourcesChangeEvent/XRInputSourcesChangeEvent
