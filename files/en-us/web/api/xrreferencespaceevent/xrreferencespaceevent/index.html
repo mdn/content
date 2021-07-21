@@ -5,7 +5,7 @@ tags:
 - API
 - AR
 - Constructor
-- Eventss
+- Events
 - Mixed
 - Reality
 - Reference
@@ -44,18 +44,27 @@ browser-compat: api.XRReferenceSpaceEvent.XRReferenceSpaceEvent
     this is always <code>reset</code>.</dd>
   <dt><code>eventInitDict</code></dt>
   <dd>
-    <p>An object based on the {{domxref("XRReferenceSpaceEventInit")}} dictionary,
-      containing data used to initialize the new event object. The properties of this
-      object are:</p>
-
-    <p>{{page("/en-US/docs/Web/API/XRReferenceSpaceEventInit", "Properties")}}</p>
+    <p>An object to configure the event. The properties are:</p>
+    <ul>
+      <li><code>referenceSpace</code>: The {{domxref("XRReferenceSpace")}} from which the event originates.</li>
+      <li><code>transform</code>: An {{domxref("XRRigidTransform")}} which maps the old coordinate system (from before the changes indicated by this event) to the new coordiante system.</li>
+    </ul>
   </dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A new <code>XRReferenceSpaceEvent</code> object, initialized as defined by the input
-  parameters.</p>
+<p>A new <code>XRReferenceSpaceEvent</code> object, initialized as defined by the input parameters.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<p>This simple snippet calls the constructor to create a new reference space event of type {{domxref("XRReferenceSpace.reset_event", "reset")}}.</p>
+
+<pre class="brush: js">let refSpaceEvent = new XRReferenceSpaceEvent("reset", {
+  referenceSpace: myRefSpace,
+  transform: myTransform
+});
+</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
