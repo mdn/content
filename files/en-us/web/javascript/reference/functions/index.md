@@ -280,7 +280,7 @@ the `new` operator) has the same effect as invoking it as a constructor.
 ### Default parameters
 
 Default function parameters allow formal parameters to be initialized with default
-values if no value or `undefined` is passed. For more details, see[ default
+values if no value or `undefined` is passed. For more details, see [default
 parameters](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters).
 
 ### Rest parameters
