@@ -125,7 +125,7 @@ There are a number of built-in means of detecting, iterating/enumerating, and re
               href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames"
               >getOwnPropertyNames</a
             ></code
-          > 
+          >
         </p>
         <p>
           <code
@@ -219,7 +219,7 @@ There are a number of built-in means of detecting, iterating/enumerating, and re
               href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames"
               >getOwnPropertyNames</a
             ></code
-          > 
+          >
         </p>
         <p>
           <code

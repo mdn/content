@@ -124,7 +124,7 @@ The table below details the differences between the methods available on the `
         itself if its prototype was set successfully. Throws
         a <code>TypeError</code> if the prototype being set was anything other
         than an <code>Object</code> or <code>null</code>, or if the prototype
-        for the object being modified is non-extensible. 
+        for the object being modified is non-extensible.
       </td>
       <td>
         {{jsxref("Reflect.setPrototypeOf()")}}

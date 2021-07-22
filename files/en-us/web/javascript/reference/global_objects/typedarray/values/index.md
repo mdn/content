@@ -60,7 +60,7 @@ iterator.next()["value"];      // "c"
 iterator.next();               // Object { value: "d", done: false }
 iterator.next();               // Object { value: "e", done: false }
 iterator.next();               // Object { value: undefined, done: true }
-iteraror.next().value;         // undefined 
+iteraror.next().value;         // undefined
 ```
 
 > **Warning:** One-use: the array iterator object is one use or temporary object
@@ -78,7 +78,7 @@ console.log(letter);
 } // undefined
 ```
 
-**reason:** When `next().done=true`  or 
+**reason:** When `next().done=true` or
 `currentIndex>length` the `for..of` loop ends. See [Iteration
 protocols.](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
 

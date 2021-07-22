@@ -218,7 +218,7 @@ param => expression
 ```
 
 - `param`
-  - : The name of an argument. Zero arguments need to be indicated with `()`. 
+  - : The name of an argument. Zero arguments need to be indicated with `()`.
     For only one argument, the parentheses are not required.
     (like `foo => 1`)
 - `statements` or `expression`
