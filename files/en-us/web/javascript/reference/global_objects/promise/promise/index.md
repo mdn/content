@@ -35,7 +35,7 @@ new Promise(executor)
         function(resolutionFunc, rejectionFunc){
           // typically, some asynchronous operation.
         }
-        ```
+    ```
 
     `resolutionFunc` and `rejectionFunc` are also functions, and you can give them whatever actual names you want. Their signatures are simple: they accept a single parameter of any type.
 
@@ -43,7 +43,7 @@ new Promise(executor)
     ```js
         resolutionFunc(value) // call on resolved
         rejectionFunc(reason) // call on rejected
-        ```
+    ```
 
     The `resolutionFunc` `value` parameter can be another promise object, in which case the promise gets dynamically inserted into the [promise chain](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#chained_promises).
 
