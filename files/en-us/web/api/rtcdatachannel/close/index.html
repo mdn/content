@@ -22,7 +22,7 @@ browser-compat: api.RTCDataChannel.close
 
 <p>Closure of the data channel is not instantaneous. Most of the process of closing the
   connection is handled asynchronously; you can detect when the channel has finished
-  closing by watching for a {{event("close")}} event on the data channel.</p>
+  closing by watching for a {{DOMxRef("RTCDataChannel.close_event", "close")}} event on the data channel.</p>
 
 <p>The sequence of events which occurs in response to this method being called:</p>
 
@@ -35,9 +35,13 @@ browser-compat: api.RTCDataChannel.close
   <li>The underlying data transport is closed.</li>
   <li>The {{domxref("RTCDataChannel.readyState")}} property is set to
     <code>closed</code>.</li>
-  <li>If the transport was closed with an error, the <code>RTCDataChannel</code> is sent a
-    {{event("NetworkError")}} event.</li>
-  <li>A {{domxref("close")}} event is sent to the channel.</li>
+  <li>
+    If the transport was closed with an error,
+    the <code>RTCDataChannel</code> is sent
+    an {{DOMxRef("RTCDataChannel.error_event", "error")}} event
+    with its {{DOMxRef("DOMException.name", "name")}} set to <code>NetworkError</code>.
+  </li>
+  <li>A {{domxref("RTCDataChannel.close_event", "close")}} event is sent to the channel.</li>
 </ol>
 
 <h2 id="Syntax">Syntax</h2>
@@ -88,5 +92,5 @@ dc.onclose = function (
   <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></li>
   <li>{{domxref("RTCDataChannel")}}</li>
   <li>{{domxref("RTCDataChannel.readyState")}}</li>
-  <li>{{event("close")}} event</li>
+  <li>{{DOMxRef("RTCDataChannel.close_event", "close")}} event</li>
 </ul>

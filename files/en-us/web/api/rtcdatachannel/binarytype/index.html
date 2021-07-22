@@ -21,7 +21,7 @@ browser-compat: api.RTCDataChannel.binaryType
     default is <code>blob</code>.</p>
 
 <p>When a binary message is received on the data channel, the resulting
-  {{event("message")}} event's {{domxref("MessageEvent.data")}} property is an object of
+  {{DOMxRef("RTCDataChannel.message_event", "message")}} event's {{domxref("MessageEvent.data")}} property is an object of
   the type specified by the <code>binaryType</code>.</p>
 
 <h2 id="Syntax">Syntax</h2>
@@ -47,7 +47,7 @@ browser-compat: api.RTCDataChannel.binaryType
 <h2 id="Example">Example</h2>
 
 <p>This code configures a data channel to receive binary data in
-  {{jsxref("ArrayBuffer")}} objects, and establishes a listener for {{event("message")}}
+  {{jsxref("ArrayBuffer")}} objects, and establishes a listener for {{DOMxRef("RTCDataChannel.message_event", "message")}}
   events which constructs a string representing the received data as a list of hexadecimal
   byte values.</p>
 
