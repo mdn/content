@@ -48,7 +48,7 @@ tags:
 
 <p>So what can we do about the overflowing issue?</p>
 
-<p>As we learned in <a href="/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS">our previous lesson</a>, a common technique is to make the {{cssxref("max-width")}} of an image 100%. This will enable the image to become smaller in size than the box but not larger. This technique will work with other replaced elements such as <code><a href="/en-US/docs/Web/HTML/Element/video">&lt;video&gt;</a></code>s, or <code><a href="/en-US/docs/Web/HTML/Element/iframe">&lt;iframe&gt;</a></code>s.</p>
+<p>As we learned in <a href="/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS">our previous lesson</a>, a common technique is to make the {{cssxref("max-width")}} of an image 100%. This will enable the image to become smaller in size than the box but not larger. This technique will also work with other replaced elements such as <code><a href="/en-US/docs/Web/HTML/Element/video">&lt;video&gt;</a></code>s, or <code><a href="/en-US/docs/Web/HTML/Element/iframe">&lt;iframe&gt;</a></code>s.</p>
 
 <p><strong>Try adding <code>max-width: 100%</code> to the <code>&lt;img&gt;</code> element in the example above. You will see that the smaller image remains unchanged, but the larger one becomes smaller to fit into the box.</strong></p>
 
@@ -56,17 +56,17 @@ tags:
 
 <p>The {{cssxref("object-fit")}} property can help you here. When using <code>object-fit</code> the replaced element can be sized to fit a box in a variety of ways.</p>
 
-<p>Below we have used the value <code>cover</code>, which sizes the image down, maintaining the aspect ratio so that it neatly fills the box. As the aspect ratio is maintained some parts of the image will be cropped by the box.</p>
+<p>Below we have used the value <code>cover</code>, which sizes the image down, maintaining the aspect ratio so that it neatly fills the box. As the aspect ratio is maintained, some parts of the image will be cropped by the box.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/images/object-fit.html", '100%', 1000)}}</p>
 
-<p>If we use <code>contain</code> as a value the image will be scaled down until it is small enough to fit inside the box. This will result in "letterboxing" if it is not the same aspect ratio as the box.</p>
+<p>If we use <code>contain</code> as a value, the image will be scaled down until it is small enough to fit inside the box. This will result in "letterboxing" if it is not the same aspect ratio as the box.</p>
 
 <p>You could also try the value of <code>fill</code>, which will fill the box but not maintain the aspect ratio.</p>
 
 <h2 id="Replaced_elements_in_layout">Replaced elements in layout</h2>
 
-<p>When using various CSS layout techniques on replaced elements, you may well find that they behave slightly differently to other elements. For example, in a flex or grid layout elements are stretched by default to fill the entire area. Images will not stretch, and instead will be aligned to the start of the grid area or flex container.</p>
+<p>When using various CSS layout techniques on replaced elements, you may well find that they behave slightly differently from other elements. For example, in a flex or grid layout elements are stretched by default to fill the entire area. Images will not stretch, and instead will be aligned to the start of the grid area or flex container.</p>
 
 <p>You can see this happening in the example below where we have a two column, two row grid container, which has four items in it. All of the <code>&lt;div&gt;</code> elements have a background color and stretch to fill the row and column. The image, however, does not stretch.</p>
 
@@ -74,14 +74,14 @@ tags:
 
 <p>If you are following these lessons in order then you may not have looked at layout yet. Just keep in mind that replaced elements, when they become part of a grid or flex layout, have different default behaviors, essentially to avoid them being stretched strangely by the layout.</p>
 
-<p>To force the image to stretch to fill the grid cell it is in, you'd have to do something like following:</p>
+<p>To force the image to stretch to fill the grid cell it is in, you'd have to do something like the following:</p>
 
 <pre class="brush: css">img {
   width: 100%;
   height: 100%;
 }</pre>
 
-<p>This would however stretch the image, so probably isn't what you'd want to do.</p>
+<p>This would, however, stretch the image, so it's probably not what you'd want to do.</p>
 
 <h2 id="Form_elements">Form elements</h2>
 
