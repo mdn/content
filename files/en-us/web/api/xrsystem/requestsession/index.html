@@ -102,19 +102,44 @@ browser-compat: api.XRSystem.requestSession
 
 <h2 id="Session_features">Session features</h2>
 
-<h3 id="Immersive_sessions">Immersive sessions</h3>
-
-<p>All immersive (both <code>immersive-vr</code> and <code>immersive-ar</code>)  
-sessions support both the <code>viewer</code> and <code>local</code> reference spaces.</p>
-
-<p>Because immersive sessions are required to support the <code>local</code> reference space,
-any request to open an immersive {{domxref("XRSession")}} is required to obtain explicit or implicit user consent.</p>
-
-<p>To request the use of a DOM overlay element, add the string <code>dom-overlay</code> to either <code>requiredFeatures</code> or <code>optionalFeatures</code>.</p>
-
-<h3 id="Inline_sessions">Inline sessions</h3>
-
-<p>All <code>inline</code> WebXR sessions support the <code>viewer</code> reference space.</p>
+<table class="standard-table">
+  <thead>
+   <tr>
+    <th scope="col">Name</th>
+    <th scope="col">Description</th>
+   </tr>
+  </thead>
+  <tbody>
+   <tr>
+    <td><code>bounded-floor</code></td>
+    <td>Similar to the <code>local</code> type, except the user is not expected to move outside a predetermined boundary, given by the {{domxref("XRBoundedReferenceSpace.boundsGeometry", "boundsGeometry")}} in the returned object.</td>
+   </tr>
+   <tr>
+    <td><code>dom-overlay</code></td>
+    <td>Enable allowing to specify a DOM overlay element that will be displayed to the user.</td>
+   </tr>
+   <tr>
+    <td><code>local</code></td>
+    <td>Enable a tracking space whose native origin is located near the viewer's position at the time the session was created. The exact position depends on the underlying platform and implementation. The user isn't expected to move much if at all beyond their starting position, and tracking is optimized for this use case.</td>
+   </tr>
+   <tr>
+    <td><code>local-floor</code></td>
+    <td>Similar to the <code>local</code> type, except the starting position is placed in a safe location for the viewer to stand, where the value of the y axis is 0 at floor level. If that floor level isn't known, the {{Glossary("user agent")}} will estimate the floor level. If the estimated floor level is non-zero, the browser is expected to round it such a way as to avoid fingerprinting (likely to the nearest centimeter).</td>
+   </tr>
+   <tr>
+    <td><code>secondary-views</code></td>
+    <td>Enable {{domxref("XRView")}} objects to be a secondary views. This can be used for  first-person observer views used for video capture, or "quad views" where there are two views per eye with differing resolution and fields of view. </td>
+   </tr>
+   <tr>
+    <td><code>unbounded</code></td>
+    <td>Enable a tracking space which allows the user total freedom of movement, possibly over extremely long distances from their origin point. The viewer isn't tracked at all; tracking is optimized for stability around the user's current position, so the native origin may drift as needed to accommodate that need.</td>
+   </tr>
+   <tr>
+    <td><code>viewer</code></td>
+    <td>Enable a tracking space whose native origin tracks the viewer's position and orientation.</td>
+   </tr>
+  </tbody>
+ </table>
 
 <h3 id="Security_requirements">Security requirements</h3>
 
