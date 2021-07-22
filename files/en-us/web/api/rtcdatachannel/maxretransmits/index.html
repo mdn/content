@@ -2,8 +2,6 @@
 title: RTCDataChannel.maxRetransmits
 slug: Web/API/RTCDataChannel/maxRetransmits
 tags:
-  - Experimental
-  - NeedsExample
   - Property
   - RTCDataChannel
   - Read-only
@@ -12,13 +10,13 @@ tags:
   - maxRetransmits
 browser-compat: api.RTCDataChannel.maxRetransmits
 ---
-<p>{{APIRef("WebRTC")}}{{SeeCompatTable}}</p>
+<p>{{APIRef("WebRTC")}}</p>
 
-<p><span class="seoSummary">The read-only <code>RTCDataChannel</code> property
+<p>The read-only <code>RTCDataChannel</code> property
     <code><strong>maxRetransmits</strong></code> returns the maximum number of times the
     browser should try to retransmit a message before giving up, as set when the data
     channel was created, or <code>null</code>, which indicates that there is no
-    maximum.</span> This can only be set when the {{domxref("RTCDataChannel")}} is created
+    maximum. This can only be set when the {{domxref("RTCDataChannel")}} is created
   by calling {{domxref("RTCPeerConnection.createDataChannel()")}}, using the
   <code>maxRetransmits</code> field in the specified <code>options</code>.</p>
 

@@ -2,7 +2,6 @@
 title: RTCDataChannel.bufferedAmountLowThreshold
 slug: Web/API/RTCDataChannel/bufferedAmountLowThreshold
 tags:
-  - Experimental
   - Property
   - RTCDataChannel
   - Reference
@@ -10,14 +9,14 @@ tags:
   - bufferedAmountLowThreshold
 browser-compat: api.RTCDataChannel.bufferedAmountLowThreshold
 ---
-<p>{{APIRef("WebRTC")}}{{SeeCompatTable}}</p>
+<p>{{APIRef("WebRTC")}}</p>
 
-<p><span class="seoSummary">The <code>RTCDataChannel</code> property
+<p>The <code>RTCDataChannel</code> property
     <code><strong>bufferedAmountLowThreshold</strong></code> is used to specify the number
     of bytes of buffered outgoing data that is considered "low." The default value is
-    0.</span> When the number of buffered outgoing bytes, as indicated by the
+    0. hen the number of buffered outgoing bytes, as indicated by the
   {{domxref("RTCDataChannel.bufferedAmount", "bufferedAmount")}} property, falls to or
-  below this value, a {{event("bufferedamountlow")}} event is fired. This event may be
+  below this value, a {{DOMxRef("RTCDataChannel.bufferedamountlow_event", "bufferedamountlow")}} event is fired. This event may be
   used, for example, to implement code which queues more messages to be sent whenever
   there's room to buffer them. Listeners may be added with
   {{domxref("RTCDataChannel.onbufferedamountlow", "onbufferedamountlow")}} or
@@ -47,7 +46,7 @@ browser-compat: api.RTCDataChannel.bufferedAmountLowThreshold
 <h2 id="Example">Example</h2>
 
 <p>In this snippet of code, <code>bufferedAmountLowThreshold</code> is set to 64kB, and a
-  handler for the {{event("bufferedamountlow")}} event is established by setting the
+  handler for the {{DOMxRef("RTCDataChannel.bufferedamountlow_event", "bufferedamountlow")}} event is established by setting the
   {{domxref("RTCDataChannel.onbufferedamountlow")}} property to a function which should
   send more data into the buffer by calling {{domxref("RTCDataChannel.send", "send()")}}.
 </p>
@@ -76,6 +75,6 @@ dc.onbufferedamountlow = function() {
       channels</a></li>
   <li>{{domxref("RTCDataChannel")}}</li>
   <li>{{domxref("RTCDataChannel.bufferedAmount")}}</li>
-  <li>{{event("bufferedamountlow")}} event</li>
+  <li>{{DOMxRef("RTCDataChannel.bufferedamountlow_event", "bufferedamountlow")}} event</li>
   <li>{{domxref("RTCDataChannel.onbufferedamountlow")}}</li>
 </ul>

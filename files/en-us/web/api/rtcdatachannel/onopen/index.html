@@ -3,7 +3,6 @@ title: RTCDataChannel.onopen
 slug: Web/API/RTCDataChannel/onopen
 tags:
   - Event Handler
-  - Experimental
   - Property
   - RTCDataChannel
   - Reference
@@ -11,11 +10,11 @@ tags:
   - onopen
 browser-compat: api.RTCDataChannel.onopen
 ---
-<p>{{APIRef("WebRTC")}}{{SeeCompatTable}}</p>
+<p>{{APIRef("WebRTC")}}</p>
 
 <p>The <code><strong>RTCDataChannel.onopen</strong></code> property is an
   <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> which specifies a function to be called when the
-  {{event("open")}} event is fired; this is a simple {{domxref("Event")}} which is sent
+  {{DOMxRef("RTCDataChannel.open_event", "open")}} event is fired; this is a simple {{domxref("Event")}} which is sent
   when the data channel's underlying data transport—the link over which the
   {{domxref("RTCDataChannel")}}'s messages flow—is established or re-established.</p>
 
@@ -26,14 +25,14 @@ browser-compat: api.RTCDataChannel.onopen
 
 <h3 id="Value">Value</h3>
 
-<p>A function which the browser will call to handle the {{event("open")}} event. The
+<p>A function which the browser will call to handle the {{DOMxRef("RTCDataChannel.open_event", "open")}} event. The
   function receives as its only input parameter the event itself, of type
   {{domxref("Event")}}.</p>
 
 <h2 id="Example">Example</h2>
 
 <p>This example adds a new data channel to an existing {{domxref("RTCPeerConnection")}},
-  <code>myPeerConnection</code>. It then establishes an {{event("open")}} event handler
+  <code>myPeerConnection</code>. It then establishes an {{DOMxRef("RTCDataChannel.open_event", "open")}} event handler
   which updates some user interface elements to prepare them for being used to send
   messages over the data channel.</p>
 
@@ -61,7 +60,7 @@ dc.onopen = function(event) {
 
 <ul>
   <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></li>
-  <li>The {{event("open")}} event and its type, {{domxref("Event")}}.</li>
+  <li>The {{DOMxRef("RTCDataChannel.open_event", "open")}} event and its type, {{domxref("Event")}}.</li>
   <li>{{domxref("RTCDataChannel.onclose")}}</li>
-  <li>The {{event("close")}} event and its type, {{domxref("Event")}}.</li>
+  <li>The {{DOMxRef("RTCDataChannel.close_event", "close")}} event and its type, {{domxref("Event")}}.</li>
 </ul>

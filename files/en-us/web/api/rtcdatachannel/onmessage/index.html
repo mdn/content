@@ -2,20 +2,19 @@
 title: RTCDataChannel.onmessage
 slug: Web/API/RTCDataChannel/onmessage
 tags:
-- Event Handler
-- Experimental
-- Property
-- RTCDataChannel
-- Reference
-- WebRTC
-- onmessage
+  - Event Handler
+  - Property
+  - RTCDataChannel
+  - Reference
+  - WebRTC
+  - onmessage
 browser-compat: api.RTCDataChannel.onmessage
 ---
-<p>{{APIRef("WebRTC")}}{{SeeCompatTable}}</p>
+<p>{{APIRef("WebRTC")}}</p>
 
 <p>The <code><strong>RTCDataChannel.onmessage</strong></code> property stores an
   <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> which specifies a function to be called when the
-  {{event("message")}} event is fired on the channel. This event is represented by the
+  {{DOMxRef("RTCDataChannel.message_event", "message")}} event is fired on the channel. This event is represented by the
   {{domxref("MessageEvent")}} interface. This event is sent to the channel when a message
   is received from the other peer.</p>
 
@@ -26,7 +25,7 @@ browser-compat: api.RTCDataChannel.onmessage
 
 <h3 id="Value">Value</h3>
 
-<p>A function which the browser will call to handle the {{event("message")}} event. The
+<p>A function which the browser will call to handle the {{DOMxRef("RTCDataChannel.message_event", "message")}} event. The
   function receives as its sole input parameter a {{domxref("MessageEvent")}} object
   describing the event.</p>
 
@@ -63,5 +62,5 @@ dc.onmessage = function(event) {
   <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></li>
   <li>{{domxref("RTCPeerConnection")}}</li>
   <li>{{domxref("RTCDataChannel")}}</li>
-  <li>The {{event("message")}} event and its type, {{domxref("MessageEvent")}}.</li>
+  <li>The {{DOMxRef("RTCDataChannel.message_event", "message")}} event and its type, {{domxref("MessageEvent")}}.</li>
 </ul>

@@ -2,7 +2,6 @@
 title: RTCDataChannel.binaryType
 slug: Web/API/RTCDataChannel/binaryType
 tags:
-  - Experimental
   - Property
   - RTCDataChannel
   - Reference
@@ -10,19 +9,19 @@ tags:
   - binaryType
 browser-compat: api.RTCDataChannel.binaryType
 ---
-<p>{{APIRef("WebRTC")}}{{SeeCompatTable}}{{draft}}</p>
+<p>{{APIRef("WebRTC")}}</p>
 
-<p><span class="seoSummary">The property <code><strong>binaryType</strong></code> on the
+<p>The property <code><strong>binaryType</strong></code> on the
     {{domxref("RTCDataChannel")}} interface is a {{domxref("DOMString")}} which specifies
-    the type of JavaScript object which should be used to represent binary data received
+    the type of object which should be used to represent binary data received
     on the {{domxref("RTCDataChannel")}}. Values allowed by the
     {{domxref("WebSocket.binaryType")}} property are also permitted here:
-    <code>"blob"</code> if {{domxref("Blob")}} objects are being used or
-    <code>"arraybuffer"</code> if {{domxref("ArrayBuffer")}} objects are being used. The
-    default is <code>"blob"</code>.</span></p>
+    <code>blob</code> if {{domxref("Blob")}} objects are being used or
+    <code>arraybuffer</code> if {{jsxref("ArrayBuffer")}} objects are being used. The
+    default is <code>blob</code>.</p>
 
 <p>When a binary message is received on the data channel, the resulting
-  {{event("message")}} event's {{domxref("MessageEvent.data")}} property is an object of
+  {{DOMxRef("RTCDataChannel.message_event", "message")}} event's {{domxref("MessageEvent.data")}} property is an object of
   the type specified by the <code>binaryType</code>.</p>
 
 <h2 id="Syntax">Syntax</h2>
@@ -41,14 +40,14 @@ browser-compat: api.RTCDataChannel.binaryType
   <dd>Received binary messages' contents will be contained in {{domxref("Blob")}} objects.
   </dd>
   <dt><code>"arraybuffer"</code></dt>
-  <dd>Received binary messages' contents will be contained in {{domxref("ArrayBuffer")}}
+  <dd>Received binary messages' contents will be contained in {{jsxref("ArrayBuffer")}}
     objects.</dd>
 </dl>
 
 <h2 id="Example">Example</h2>
 
 <p>This code configures a data channel to receive binary data in
-  {{domxref("ArrayBuffer")}} objects, and establishes a listener for {{event("message")}}
+  {{jsxref("ArrayBuffer")}} objects, and establishes a listener for {{DOMxRef("RTCDataChannel.message_event", "message")}}
   events which constructs a string representing the received data as a list of hexadecimal
   byte values.</p>
 

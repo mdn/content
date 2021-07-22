@@ -3,7 +3,6 @@ title: RTCDataChannel.onbufferedamountlow
 slug: Web/API/RTCDataChannel/onbufferedamountlow
 tags:
 - Event Handler
-- Experimental
 - Networking
 - Property
 - RTCDataChannel
@@ -13,11 +12,11 @@ tags:
 - onbufferedamountlow
 browser-compat: api.RTCDataChannel.onbufferedamountlow
 ---
-<p>{{APIRef("WebRTC")}}{{SeeCompatTable}}</p>
+<p>{{APIRef("WebRTC")}}</p>
 
 <p>The <strong><code>RTCDataChannel.onbufferedamountlow</code></strong> property is an
   <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> which specifies a function the browser calls when the
-  {{event("bufferedamountlow")}} event is sent to the {{domxref("RTCDataChannel")}}. This
+  {{DOMxRef("RTCDataChannel.bufferedamountlow_event", "bufferedamountlow")}} event is sent to the {{domxref("RTCDataChannel")}}. This
   event, which is represented by a simple {{domxref("Event")}} object, is sent when the
   amount of data buffered to be sent falls to or below the threshold specified by the
   channel's {{domxref("RTCDataChannel.bufferedAmountLowThreshold",
@@ -33,13 +32,13 @@ browser-compat: api.RTCDataChannel.onbufferedamountlow
 
 <h3 id="Value">Value</h3>
 
-<p>A function which the browser will call to handle the {{event("bufferedamountlow")}}
+<p>A function which the browser will call to handle the {{DOMxRef("RTCDataChannel.bufferedamountlow_event", "bufferedamountlow")}}
   event. This function receives as its only input parameter a simple {{domxref("Event")}}
   object representing the event which has occurred.</p>
 
 <h2 id="Example">Example</h2>
 
-<p>This example responds to the {{event("bufferedamountlow")}} event by fetching up to
+<p>This example responds to the {{DOMxRef("RTCDataChannel.bufferedamountlow_event", "bufferedamountlow")}} event by fetching up to
   64kB of a file represented by an object <code>source</code> and calling
   {{domxref("RTCDataChannel.send()")}} to queue up the retrieved data for sending on the
   data channel.</p>

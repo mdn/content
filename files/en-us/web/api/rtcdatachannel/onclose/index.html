@@ -3,7 +3,6 @@ title: RTCDataChannel.onclose
 slug: Web/API/RTCDataChannel/onclose
 tags:
   - Event Handler
-  - Experimental
   - Property
   - RTCDataChannel
   - Reference
@@ -11,11 +10,11 @@ tags:
   - onclose
 browser-compat: api.RTCDataChannel.onclose
 ---
-<p>{{APIRef("WebRTC")}}{{SeeCompatTable}}</p>
+<p>{{APIRef("WebRTC")}}</p>
 
 <p>The <code><strong>RTCDataChannel.onclose</strong></code> property is an
   <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> which specifies a function to be called by the browser when
-  the {{event("close")}} event is received by the {{domxref("RTCDataChannel")}}. This is a
+  the {{DOMxRef("RTCDataChannel.close_event", "close")}} event is received by the {{domxref("RTCDataChannel")}}. This is a
   simple {{domxref("Event")}} which indicates that the data channel has closed down.</p>
 
 <h2 id="Syntax">Syntax</h2>
@@ -25,15 +24,15 @@ browser-compat: api.RTCDataChannel.onclose
 
 <h3 id="Value">Value</h3>
 
-<p>A function which the browser will call to handle the {{event("close")}} event. The
+<p>A function which the browser will call to handle the {{DOMxRef("RTCDataChannel.close_event", "close")}} event. The
   function receives as its sole input parameter the event itself, as an object of type
   {{domxref("Event")}}.</p>
 
 <h2 id="Example">Example</h2>
 
 <p>In this sample from a hypothetical instant messaging client, a data channel is created,
-  then handlers for the {{event("open")}} and {{event("close")}} events are set up to
-  enable and disable user interface objects based on the state of the channel.  This way,
+  then handlers for the {{DOMxRef("RTCDataChannel.open_event", "open")}} and {{DOMxRef("RTCDataChannel.close_event", "close")}} events are set up to
+  enable and disable user interface objects based on the state of the channel. This way,
   the message entry field and the send button are only enabled for use when the connection
   is actually open.</p>
 
@@ -64,7 +63,7 @@ dc.onclose = function(event) {
 
 <ul>
   <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></li>
-  <li>The {{event("close")}} event and its type, {{domxref("Event")}}.</li>
+  <li>The {{DOMxRef("RTCDataChannel.close_event", "close")}} event and its type, {{domxref("Event")}}.</li>
   <li>{{domxref("RTCDataChannel.onopen")}}</li>
-  <li>The {{event("open")}} event and its type, {{domxref("Event")}}.</li>
+  <li>The {{DOMxRef("RTCDataChannel.open_event", "open")}} event and its type, {{domxref("Event")}}.</li>
 </ul>

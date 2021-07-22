@@ -3,7 +3,6 @@ title: RTCDataChannel.onerror
 slug: Web/API/RTCDataChannel/onerror
 tags:
   - Event Handler
-  - Experimental
   - Property
   - RTCDataChannel
   - Reference
@@ -11,12 +10,12 @@ tags:
   - onerror
 browser-compat: api.RTCDataChannel.onerror
 ---
-<p>{{APIRef("WebRTC")}}{{SeeCompatTable}}</p>
+<p>{{APIRef("WebRTC")}}</p>
 
 <p>The <code><strong>RTCDataChannel.onerror</strong></code> property is an
   <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> which specifies a function to be called when the
-  {{event("error")}} event is received. When an error occurs on the data channel, the
-  function receives as input an {{domxref("ErrorEvent")}} object describing the error
+  {{DOMxRef("RTCDataChannel.error_event", "error")}} event is received. When an error occurs on the data channel, the
+  function receives as input an {{domxref("RTCErrorEvent")}} object describing the error
   which occurred.</p>
 
 <h2 id="Syntax">Syntax</h2>
@@ -26,7 +25,7 @@ browser-compat: api.RTCDataChannel.onerror
 
 <h3 id="Value">Value</h3>
 
-<p>A function which the browser will call to handle the {{event("error")}} event when it
+<p>A function which the browser will call to handle the {{DOMxRef("RTCDataChannel.error_event", "error")}} event when it
   occurs on the data channel. This function receives as its only input an
   {{domxref("ErrorEvent")}} object describing the event which was received. That event
   object, in turn, describes the error that took place.</p>
@@ -66,5 +65,5 @@ dc.onerror = function(event) {
 
 <ul>
   <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></li>
-  <li>The {{event("error")}} event and its type, {{domxref("ErrorEvent")}}.</li>
+  <li>The {{DOMxRef("RTCDataChannel.error_event", "error")}} event and its type, {{domxref("ErrorEvent")}}.</li>
 </ul>
