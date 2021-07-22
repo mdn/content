@@ -19,20 +19,20 @@ this in one place.
 
 This table checks this project against the [OWD prioritization criteria](https://github.com/openwebdocs/project/blob/main/steering-committee/prioritization-criteria.md).
 
-* **Effort**: Medium/High: Each page (60) is fairly large and may require some
+- **Effort**: Medium/High: Each page (60) is fairly large and may require some
   research.
-* **Dependencies**: Need to find accessibility experts to help.
-* **Community enablement**: Yes. Each page is a self-contained task.
-* **Momentum**: Low/Medium. The tech itself is fairly stable, but a11y is
+- **Dependencies**: Need to find accessibility experts to help.
+- **Community enablement**: Yes. Each page is a self-contained task.
+- **Momentum**: Low/Medium. The tech itself is fairly stable, but a11y is
   something we want to push.
-* **Enabling learners**: Not really. The MDN Learn section contains ARIA basics
+- **Enabling learners**: Not really. The MDN Learn section contains ARIA basics
   already.
-* **Enabling professionals**: Yes.
-* **Underrepresented topics / Ethical web**: Yes. We want to push forward the
+- **Enabling professionals**: Yes.
+- **Underrepresented topics / Ethical web**: Yes. We want to push forward the
   importance of a11y and make it easier to action.
-* **Operational necessities**: In a way, yes. Without a11y, certain groups
+- **Operational necessities**: In a way, yes. Without a11y, certain groups
   cannot use the web.
-* **Addressing the needs of the web industry**: Accessibility not seen as a
+- **Addressing the needs of the web industry**: Accessibility not seen as a
   major pain point in Web DNA, but is that just because people don't understand
   it?
 
@@ -58,45 +58,45 @@ We need to write those pages.
 Using [categorization of roles](https://www.w3.org/TR/wai-aria-1.1/#roles_categorization)
 as an exhaustive list, the following roles lack a page:
 
-* command (abstract, should not be used in content)
-* composite (abstract, should not be used in content)
-* input (abstract, should not be used in content)
-* landmark (abstract, should not be used in content)
-* range (abstract, should not be used in content)
-* roletype (abstract, should not be used in content)
-* section (abstract, should not be used in content)
-* sectionhead (abstract, should not be used in content)
-* select (abstract, should not be used in content)
-* structure (abstract, should not be used in content)
-* widget (abstract, should not be used in content)
-* window (abstract, should not be used in content)
-* menuitem (widget role)
-* menuitemcheckbox (widget role)
-* menuitemradio (widget role)
-* option (widget role)
-* scrollbar (widget role)
-* searchbox (widget role)
-* separator (when focusable, widget role)
-* spinbutton (widget role)
-* treeitem (widget role)
-* combobox (composite role)
-* menu (composite role)
-* menubar (composite role)
-* tablist (composite role)
-* tree (composite role)
-* treegrid (composite role)
-* columnheader (document structure role)
-* definition (document structure role)
-* directory (document structure role)
-* feed (document structure role)
-* math (document structure role)
-* none (document structure role)
-* note (document structure role)
-* rowheader (document structure role)
-* separator (when not focusable, document structure role)
-* term (document structure role)
-* tooltip (document structure role)
-* marquee (live region role)
+- command (abstract, should not be used in content)
+- composite (abstract, should not be used in content)
+- input (abstract, should not be used in content)
+- landmark (abstract, should not be used in content)
+- range (abstract, should not be used in content)
+- roletype (abstract, should not be used in content)
+- section (abstract, should not be used in content)
+- sectionhead (abstract, should not be used in content)
+- select (abstract, should not be used in content)
+- structure (abstract, should not be used in content)
+- widget (abstract, should not be used in content)
+- window (abstract, should not be used in content)
+- menuitem (widget role)
+- menuitemcheckbox (widget role)
+- menuitemradio (widget role)
+- option (widget role)
+- scrollbar (widget role)
+- searchbox (widget role)
+- separator (when focusable, widget role)
+- spinbutton (widget role)
+- treeitem (widget role)
+- combobox (composite role)
+- menu (composite role)
+- menubar (composite role)
+- tablist (composite role)
+- tree (composite role)
+- treegrid (composite role)
+- columnheader (document structure role)
+- definition (document structure role)
+- directory (document structure role)
+- feed (document structure role)
+- math (document structure role)
+- none (document structure role)
+- note (document structure role)
+- rowheader (document structure role)
+- separator (when not focusable, document structure role)
+- term (document structure role)
+- tooltip (document structure role)
+- marquee (live region role)
 
 Don't forget to update the link in
 [MDN's list of ARIA roles](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques)
