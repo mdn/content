@@ -38,7 +38,7 @@ padStart(targetLength, padString)
   - : The string to pad the current `str` with. If
     `padString` is too long to stay within the
     `targetLength`, it will be truncated from the end. The default
-    value is "` `" (`U+0020 'SPACE'`).
+    value is " " (`U+0020 'SPACE'`).
 
 ### Return value
 

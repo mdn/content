@@ -79,7 +79,7 @@ Different scopes have different execution environments. This means that they hav
 different built-ins (different global object, different constructors, etc.). This may
 result in unexpected results. For instance,
 `[] instanceof window.frames[0].Array` will return `false`,
-because ` Array.prototype !== ``window.frames[0].Array.prototype` and arrays
+because `Array.prototype !== window.frames[0].Array.prototype` and arrays
 inherit from the former.
 
 This may not make sense at first, but for scripts dealing with multiple frames or

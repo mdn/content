@@ -164,7 +164,7 @@ while (condition)
   statement
 ```
 
-If the *`condition `*becomes `false`,
+If the *`condition`* becomes `false`,
 `statement` within the loop stops executing and control passes to the
 statement following the loop.
 

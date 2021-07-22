@@ -103,7 +103,7 @@ Static members are not directly accessible using the {{JSxRef("Operators/this", 
 non-static methods. You need to call them using the class name:
 `CLASSNAME.STATIC_METHOD_NAME()` /
 `CLASSNAME.STATIC_PROPERTY_NAME` or by calling the method as a property of
-the `constructor`: `this.constructor.STATIC_METHOD_NAME() `/
+the `constructor`: `this.constructor.STATIC_METHOD_NAME()` /
 `this.constructor.STATIC_PROPERTY_NAME`
 
 ```js
