@@ -32,7 +32,7 @@ browser-compat: api.RTCDataChannel.bufferedAmount
 
 <p>Whenever this value decreases to fall to or below the value specified in the
   {{domxref("RTCDataChannel.bufferedAmountLowThreshold", "bufferedAmountLowThreshold")}}
-  property, the user agent fires the {{event("bufferedamountlow")}} event. This event may
+  property, the user agent fires the {{DOMxRef("RTCDataChannel.bufferedamountlow_event", "bufferedamountlow")}} event. This event may
   be used, for example, to implement code which queues more messages to be sent whenever
   there's room to buffer them.</p>
 
@@ -79,6 +79,6 @@ function showBufferedAmount(channel) {
       channels</a></li>
   <li>{{domxref("RTCDataChannel")}}</li>
   <li>{{domxref("RTCDataChannel.bufferedAmountLowThreshold")}}</li>
-  <li>{{event("bufferedamountlow")}} event</li>
+  <li>{{DOMxRef("RTCDataChannel.bufferedamountlow_event", "bufferedamountlow")}} event</li>
   <li>{{domxref("RTCDataChannel.onbufferedamountlow")}}</li>
 </ul>
