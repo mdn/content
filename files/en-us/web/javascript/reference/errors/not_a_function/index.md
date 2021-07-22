@@ -178,7 +178,9 @@ export default helpers;
 
 The correct import usage (`App.js`):
 
-    import helpers from './helpers'
+```js
+import helpers from './helpers'
+```
 
 ## See also
 

@@ -92,10 +92,12 @@ listed in the following table:
 Like most expressions, assignments like `x = y` have a return value. It can
 be retrieved by e.g. assigning the expression or logging it:
 
-    const z = (x = y); // Or equivalently: const z = x = y;
+```js
+const z = (x = y); // Or equivalently: const z = x = y;
 
-    console.log(z); // Log the return value of the assignment x = y.
-    console.log(x = y); // Or log the return value directly.
+console.log(z); // Log the return value of the assignment x = y.
+console.log(x = y); // Or log the return value directly.
+```
 
 The return value matches the expression to the right of the `=` sign in the
 “Meaning” column of the table above. That means that `(x = y)` returns
@@ -447,8 +449,10 @@ Conceptually, the bitwise logical operators work as follows:
   discarded. For example, the following integer with more than 32 bits will be converted
   to a 32 bit integer:
 
-      Before: 1110 0110 1111 1010 0000 0000 0000 0110 0000 0000 0001
-      After:               1010 0000 0000 0000 0110 0000 0000 0001
+  ```
+  Before: 1110 0110 1111 1010 0000 0000 0000 0110 0000 0000 0001
+  After:               1010 0000 0000 0000 0110 0000 0000 0001
+  ```
 
 - Each bit in the first operand is paired with the corresponding bit in the second
   operand: first bit to first bit, second bit to second bit, and so on.

@@ -17,7 +17,9 @@ browser-compat: javascript.builtins.Promise.any
 
 ## Syntax
 
-    Promise.any(iterable);
+```js
+Promise.any(iterable);
+```
 
 ### Parameters
 
