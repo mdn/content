@@ -22,7 +22,7 @@ browser-compat: api.MIDIConnectionEvent.port
 
 <h2 id="Examples">Examples</h2>
 
-<p>The {{domxref("Navigator.requestMIDIAccess()")}} method returns a promise that resolves with a {{domxref("MIDIAccess")}} object. When a port changes state, a <code>MIDIConnectionEvent</code> is passed to {{domxref("MIDIAccess.onstatechange")}}, information about the port can then be printed to the console.</p>
+<p>The {{domxref("Navigator.requestMIDIAccess()")}} method returns a promise that resolves with a {{domxref("MIDIAccess")}} object. When a port changes state, a <code>MIDIConnectionEvent</code> is passed to {{domxref("MIDIAccess.onstatechange")}}. Information about the port can then be printed to the console.</p>
 
 <pre class="brush: js">navigator.requestMIDIAccess()
   .then(function(access) {
@@ -39,5 +39,4 @@ browser-compat: api.MIDIConnectionEvent.port
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <p>{{Compat}}</p>
-
 
