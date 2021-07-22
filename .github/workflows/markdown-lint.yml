@@ -1,12 +1,12 @@
-name: Markdown lint (project files)
+name: Markdown lint
 
 on:
   pull_request:
     branches:
       - main
     paths:
-      - '*.md'
-      - 'rfcs/**/*.md'
+      - '**/*.md'
+      - '!LICENSE.md'
       - .github/workflows/markdown-lint.yml
 
 
@@ -24,4 +24,4 @@ jobs:
 
       - name: Lint markdown files
         run: |
-          npx markdownlint-cli '*.md' -i LICENSE.md -i CODE_OF_CONDUCT.md
+          npx markdownlint-cli . -i node_modules/ -i LICENSE.md
