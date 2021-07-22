@@ -36,7 +36,7 @@ tags:
 
 <p>Often, you can allow the peer connection to handle negotiating the {{domxref("RTCDataChannel")}} connection for you. To do this, call</p>
 
-<p>{{domxref("RTCPeerConnection.createDataChannel", "createDataChannel()")}} without specifying a value for the {{domxref("RTCDataChannelInit.negotiated", "negotiated")}} property, or specifying the property with a value of <code>false</code>. This will automatically trigger the <code>RTCPeerConnection</code> to handle the negotiations for you, causing the remote peer to create a data channel and linking the two together across the network.</p>
+<p>{{domxref("RTCPeerConnection.createDataChannel", "createDataChannel()")}} without specifying a value for the <code>negotiated</code> property, or specifying the property with a value of <code>false</code>. This will automatically trigger the <code>RTCPeerConnection</code> to handle the negotiations for you, causing the remote peer to create a data channel and linking the two together across the network.</p>
 
 <p>The <code>RTCDataChannel</code> object is returned immediately by <code>createDataChannel()</code>; you can tell when the connection has been made successfully by watching for the {{domxref("RTCDataChannel.open_event", "open")}} event to be sent to the <code>RTCDataChannel</code>.</p>
 
@@ -49,7 +49,7 @@ dataChannel.addEventListener("open", (event) =&gt; {
 
 <h3 id="Manual_negotiation">Manual negotiation</h3>
 
-<p>To manually negotiate the data channel connection, you need to first create a new {{domxref("RTCDataChannel")}} object using the {{domxref("RTCPeerConnection.createDataChannel", "createDataChannel()")}} method on the {{domxref("RTCPeerConnection")}}, specifying in the options a {{domxref("RTCDataChannelInit.negotiated", "negotiated")}} property set to <code>true</code>. This signals to the peer connection to not attempt to negotiate the channel on your behalf.</p>
+<p>To manually negotiate the data channel connection, you need to first create a new {{domxref("RTCDataChannel")}} object using the {{domxref("RTCPeerConnection.createDataChannel", "createDataChannel()")}} method on the {{domxref("RTCPeerConnection")}}, specifying in the options a <code>negotiated</code> property set to <code>true</code>. This signals to the peer connection to not attempt to negotiate the channel on your behalf.</p>
 
 <p>Then negotiate the connection out-of-band, using a web server or other means. This process should signal to the remote peer that it should create its own <code>RTCDataChannel</code> with the <code>negotiated</code> property also set to <code>true</code>, using the same {{domxref("RTCDataChannel.id", "id")}}. This will link the two objects across the <code>RTCPeerConnection</code>.</p>
 
