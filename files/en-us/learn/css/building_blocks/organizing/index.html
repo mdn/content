@@ -198,9 +198,9 @@ blockquote { ... }
 
 <h4 id="OOCSS">OOCSS</h4>
 
-<p>Most of the approaches that you will encounter owe something to the concept of Object Oriented CSS (OOCSS), an approach made popular by <a href="https://github.com/stubbornella/oocss/wiki">the work of Nicole Sullivan</a>. The basic idea of OOCSS is to separate your CSS into reusable objects, which can be used anywhere you need on your site. The standard example of OOCSS is the pattern described as <a href="/en-US/docs/Web/CSS/Layout_cookbook/Media_objects">The Media Object</a>. This is a pattern with a fixed size image, video or other element on one side, and flexible content on the other. It's a pattern we see all over websites for comments, listings, and so on.</p>
+<p>Most of the approaches you will encounter owe something to the concept of Object Oriented CSS (OOCSS), an approach made popular by <a href="https://github.com/stubbornella/oocss/wiki">the work of Nicole Sullivan</a>. The basic idea of OOCSS is to separate your CSS into reusable objects, which can be used anywhere you need on your site. The standard example of OOCSS is the pattern described as <a href="/en-US/docs/Web/CSS/Layout_cookbook/Media_objects">The Media Object</a>. This is a pattern with a fixed size image, video or other element on one side, and flexible content on the other. It's a pattern we see all over websites for comments, listings, and so on.</p>
 
-<p>If you are not taking an OOCSS approach you might create custom CSS for the different places this pattern is used, for example creating a class called <code>comment</code> with a bunch of rules for the component parts, then a class called <code>list-item</code> with almost the same rules as the <code>comment</code> class except for some tiny differences. The differences between these two components is that the list-item has a bottom border, and images in comments have a border whereas list-item images do not.</p>
+<p>If you are not taking an OOCSS approach you might create a custom CSS for the different places this pattern is used, for example, by creating two classes, one called <code>comment</code> with a bunch of rules for the component parts, and another called <code>list-item</code> with almost the same rules as the <code>comment</code> class except for some tiny differences. The differences between these two components are the list-item has a bottom border, and images in comments have a border whereas list-item images do not.</p>
 
 <pre class="brush: css">.comment {
   display: grid;
@@ -244,7 +244,7 @@ blockquote { ... }
   border-bottom: 1px solid grey;
 } </pre>
 
-<p>In your HTML the comment would need both the <code>media</code> and <code>comment</code> classes applied:</p>
+<p>In your HTML, the comment would need both the <code>media</code> and <code>comment</code> classes applied:</p>
 
 <pre class="brush: html">&lt;div class="media comment"&gt;
   &lt;img /&gt;
