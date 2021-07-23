@@ -16,7 +16,7 @@ browser-compat: api.CSSStyleSheet
 ---
 <div>{{APIRef("CSSOM")}}</div>
 
-<p><span class="seoSummary">The <strong><code>CSSStyleSheet</code></strong> interface represents a single <a href="/en-US/docs/Web/CSS">CSS</a> stylesheet, and lets you inspect and modify the list of rules contained in the stylesheet.</span> It inherits properties and methods from its parent, {{domxref("StyleSheet")}}.</p>
+<p>The <strong><code>CSSStyleSheet</code></strong> interface represents a single <a href="/en-US/docs/Web/CSS">CSS</a> stylesheet, and lets you inspect and modify the list of rules contained in the stylesheet. It inherits properties and methods from its parent, {{domxref("StyleSheet")}}.</p>
 
 <p>A stylesheet consists of a collection of {{domxref("CSSRule")}} objects representing each of the rules in the stylesheet. The rules are contained in a {{domxref("CSSRuleList")}}, which can be obtained from the stylesheet's {{domxref("CSSStyleSheet.cssRules", "cssRules")}} property.</p>
 
@@ -36,17 +36,9 @@ browser-compat: api.CSSStyleSheet
 <p><em>Inherits properties from its parent, {{domxref("StyleSheet")}}.</em></p>
 
 <dl>
- <dt id="cssRules">{{domxref("CSSStyleSheet.cssRules", "cssRules")}} {{ReadOnlyInline}}</dt>
- <dd>
- <p>Returns a live {{domxref("CSSRuleList")}} which maintains an up-to-date list of the {{domxref("CSSRule")}} objects that comprise the stylesheet.</p>
-
- <p>This is normally used to access individual rules like this:</p>
-
- <pre><code>styleSheet.cssRules[i] // where i = 0..cssRules.length-1</code></pre>
-
- <p>To add or remove items in <code>cssRules</code>, use the <code>CSSStyleSheet</code>'s {{domxref("CSSStyleSheet.insertRule", "insertRule()")}} and {{domxref("CSSStyleSheet.deleteRule", "deleteRule()")}} methods.</p>
- </dd>
- <dt id="ownerRule">{{domxref("CSSStyleSheet.ownerRule", "ownerRule")}} {{ReadOnlyInline}}</dt>
+ <dt>{{domxref("CSSStyleSheet.cssRules")}} {{ReadOnlyInline}}</dt>
+ <dd>Returns a live {{domxref("CSSRuleList")}} which maintains an up-to-date list of the {{domxref("CSSRule")}} objects that comprise the stylesheet.</dd>
+ <dt>{{domxref("CSSStyleSheet.ownerRule")}} {{ReadOnlyInline}}</dt>
  <dd>If this stylesheet is imported into the document using an {{cssxref("@import")}} rule, the <code>ownerRule</code> property returns the corresponding {{domxref("CSSImportRule")}}; otherwise, this property's value is <code>null</code>.</dd>
 </dl>
 
@@ -55,15 +47,19 @@ browser-compat: api.CSSStyleSheet
 <p><em>Inherits methods from its parent, {{domxref("StyleSheet")}}.</em></p>
 
 <dl>
- <dt id="deleteRule">{{domxref("CSSStyleSheet.deleteRule", "deleteRule()")}}</dt>
+ <dt>{{domxref("CSSStyleSheet.deleteRule()")}}</dt>
  <dd>Deletes the rule at the specified index into the stylesheet's rule list.</dd>
- <dt id="insertRule">{{domxref("CSSStyleSheet.insertRule", "insertRule()")}}</dt>
+ <dt>{{domxref("CSSStyleSheet.insertRule()")}}</dt>
+ <dd>Inserts a new rule at the specified position in the stylesheet, given the textual representation of the rule.</dd>
+ <dt>{{domxref("CSSStyleSheet.replace()")}}</dt>
+ <dd>Inserts a new rule at the specified position in the stylesheet, given the textual representation of the rule.</dd>
+ <dt>{{domxref("CSSStyleSheet.replaceSync()")}}</dt>
  <dd>Inserts a new rule at the specified position in the stylesheet, given the textual representation of the rule.</dd>
 </dl>
 
 <h2 id="Legacy_properties">Legacy properties</h2>
 
-<p><em>These properties are legacy properties first introduced by Microsoft long ago; they shouldn't be used but are not likely to be removed anytime soon.</em></p>
+<p><em>These properties are legacy properties as introduced by Microsoft; these are maintained for compatibility with existing sites.</em></p>
 
 <dl>
  <dt>{{domxref("CSSStyleSheet.rules", "rules")}} {{ReadOnlyInline}}</dt>
@@ -72,7 +68,7 @@ browser-compat: api.CSSStyleSheet
 
 <h2 id="Legacy_methods">Legacy methods</h2>
 
-<p><em>These methods are legacy methods first introduced by Microsoft; they should not be used if they can be avoided, but are not in danger of being removed anytime soon.</em></p>
+<p><em>These methods are legacy methods as introduced by Microsoft; these are maintained for compatibility with existing sites.</em></p>
 
 <dl>
  <dt>{{domxref("CSSStyleSheet.addRule", "addRule()")}}</dt>
