@@ -80,30 +80,25 @@ Object.hasOwn(object1,'prop_not_defined');  // false
 
 ### Iterating over the properties of an object
 
-The following example shows how to iterate over the enumerable properties of an
-object without executing on inherited properties.
+To iterate over the enumerable properties of an object, you should use:
 
 ```js
-let buz = {
-  fog: 'stack'
-};
-
-for (let name in buz) {
-  if (Object.hasOwn(buz, name)) {
-    console.log('this is fog (' +
-      name + ') for sure. Value: ' + buz[name]);
-  }
-  else {
-    console.log(name); // toString or something else
-  }
+let example = { foo: true, bar: true };
+for (let name of Object.keys(example)) {
+  // ...
 }
 ```
 
-Note that the {{jsxref("Statements/for...in", "for...in")}} loop
-only iterates enumerable items: the absence of non-enumerable properties emitted
-from the loop does not imply that `hasOwn` itself is confined strictly to
-enumerable items (as with
-{{jsxref("Object.getOwnPropertyNames()")}}).
+But if you need to use `for..in` you can use `Object.hasOwn()` to skip the inherited properties:
+
+```js
+let example = { foo: true, bar: true };
+for (let name in example) {
+  if (Object.hasOwn(example, name)) {
+    // ...
+  }
+}
+```
 
 ### Checking if an Array index exists
 
