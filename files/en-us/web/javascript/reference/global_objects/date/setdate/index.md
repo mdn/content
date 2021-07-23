@@ -50,7 +50,7 @@ date being set to 1 day before the last day of the previous month.
 ### Using setDate()
 
 ```js
-const theBigDay = new Date(1962, 6, 7, 12); // noon of 1962-07-07 (7th of July 1962)
+const theBigDay = new Date(1962, 6, 7, 12); // noon of 1962-07-07 (7th of July 1962)   *month is zero-indexed
 theBigDay.setDate(24);  // 1962-07-24 (24th of July 1962)
 theBigDay.setDate(32);  // 1962-08-01 (1st of August 1962)
 theBigDay.setDate(22);  // 1962-08-22 (22nd of August 1962)
@@ -58,6 +58,8 @@ theBigDay.setDate(0);   // 1962-07-31 (31st of July 1962)
 theBigDay.setDate(98);  // 1962-10-06 (6th of October 1962)
 theBigDay.setDate(-50); // 1962-08-11 (11th of August 1962)
 ```
+
+\* month is zero-indexed: [Date() Constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/Date)
 
 ## Specifications
 
