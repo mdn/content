@@ -59,8 +59,6 @@ theBigDay.setDate(98);  // 1962-10-06 (6th of October 1962)
 theBigDay.setDate(-50); // 1962-08-11 (11th of August 1962)
 ```
 
-\* month is zero-indexed: [Date() Constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/Date)
-
 ## Specifications
 
 {{Specifications}}
@@ -71,5 +69,6 @@ theBigDay.setDate(-50); // 1962-08-11 (11th of August 1962)
 
 ## See also
 
+- {{jsxref("Date.Date()", "Date()")}}
 - {{jsxref("Date.prototype.getDate()")}}
 - {{jsxref("Date.prototype.setUTCDate()")}}
