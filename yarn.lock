@@ -34,22 +34,21 @@
     lodash.isundefined "^3.0.1"
     lodash.uniq "^4.5.0"
 
-"@mdn/browser-compat-data@3.3.11":
-  version "3.3.11"
-  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-3.3.11.tgz#de8f3d3c1fed81415791bf15603089279f207c6f"
-  integrity sha512-lZj43fIFrNiUCOBJixccekZQrOqIBq9SWNR9sYyeUmqxl6aWjpUMcngfxbcjvxgb7tmJPl12pI6s6cQwI5oqHA==
+"@mdn/browser-compat-data@3.3.12":
+  version "3.3.12"
+  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-3.3.12.tgz#b5796d7c201da38c3e8e1494aa62b04bf9ee57ec"
+  integrity sha512-XC9Agp7J5JuD/yfSk212MS2iWZnmcdK+JGPh8bULBrTiduFNttcuBGrHfhyy8YNY3BSIO46J8GkcWPln7fe6wA==
 
-"@mdn/yari@0.4.621":
-  version "0.4.621"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.621.tgz#f797d40d42e85c0c886af5283946dc8cd73bf791"
-  integrity sha512-NU+UdSBNy78upPurlF+5Ncrhk6iJNgVvdxFhduW9Kksnxbo+ZHv2pidu1iwPNQurrY4FFqQIaS/bTzzM8VfurQ==
+"@mdn/yari@0.4.629":
+  version "0.4.629"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.629.tgz#ac05d8d8c82f75b85107ee371602cd2db7fc7d47"
+  integrity sha512-Ag+u+uy6Y89o/xRxxlNbedeW+yW3DM/nHuPbIH2k81M/B8UPUlV+y/AgkrMl0SuNcDRd93cUEsTIdr49D16fBg==
   dependencies:
     "@caporal/core" "2.0.2"
     "@fast-csv/parse" "4.3.6"
-    "@mdn/browser-compat-data" "3.3.11"
-    "@stripe/stripe-js" "^1.16.0"
+    "@mdn/browser-compat-data" "3.3.12"
     accept-language-parser "1.5.0"
-    browser-specs "^2.3.0"
+    browser-specs "^2.4.0"
     chalk "4.1.1"
     cheerio "1.0.0-rc.6"
     cli-progress "^3.9.0"
@@ -140,11 +139,6 @@
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-4.0.0.tgz#2ff674e9611b45b528896d820d3d7a812de2f0e4"
   integrity sha512-FyD2meJpDPjyNQejSjvnhpgI/azsQkA4lGbuu5BQZfjvJ9cbRZXzeWL2HceCekW4lixO9JPesIIQkSoLjeJHNQ==
-
-"@stripe/stripe-js@^1.16.0":
-  version "1.16.0"
-  resolved "https://registry.yarnpkg.com/@stripe/stripe-js/-/stripe-js-1.16.0.tgz#73bce24fb7f47d719caa6b151e58e49b4167d463"
-  integrity sha512-ZSHbiwTrISoaTbpercmYGuY7QTg7HxfFyNgbJBaYbwHWbzMhpEdGTsmMpaBXIU6iiqwEEDaIyD8O6yJ+H5DWCg==
 
 "@szmarczak/http-timer@^4.0.5":
   version "4.0.5"
@@ -553,10 +547,10 @@ braces@^3.0.1:
   dependencies:
     fill-range "^7.0.1"
 
-browser-specs@^2.3.0:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/browser-specs/-/browser-specs-2.3.0.tgz#fa30d48d3a3978039196c1f7465c1754bc62b506"
-  integrity sha512-6bF7WWEDG7d+z3cLIwHVKA6FBzLuwOa4OhzDPRya+akWKEpBqTqHfR+inqJP6nEldW0XhmfpfqDhB4aBj7+v3A==
+browser-specs@^2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/browser-specs/-/browser-specs-2.4.0.tgz#b9b234920b944c2c7e614b3ff81e48b0fb2d1547"
+  integrity sha512-akHID8mE9Ju6W7/fIh88d84ofdrfLEXo248QjoiLWEE0NyI8LbM1KAqvt71ywToVGrUEZVPwwVzy24DcChIJzA==
 
 buffer-alloc-unsafe@^1.1.0:
   version "1.1.0"
