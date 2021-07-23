@@ -102,8 +102,11 @@ background-size: unset;
   <li>If the image has only one intrinsic dimension and has intrinsic proportions, it's rendered at the size corresponding to that one dimension. The other dimension is computed using the specified dimension and the intrinsic proportions.</li>
   <li>If the image has only one intrinsic dimension but has no intrinsic proportions, it's rendered using the specified dimension and the other dimension of the background positioning area.</li>
  </ul>
- <div class="note"><strong>Note:</strong> SVG images have a <code><a href="/en-US/docs/Web/SVG/Attribute/preserveAspectRatio">preserveAspectRatio</a></code> attribute that defaults to the equivalent of <code>contain</code>; an explicit <code>background-size</code> causes <code>preserveAspectRatio</code> to be ignored.</div></li>
- 
+ <div class="note">
+  <p><strong>Note:</strong> SVG images have a <code><a href="/en-US/docs/Web/SVG/Attribute/preserveAspectRatio">preserveAspectRatio</a></code> attribute that defaults to the equivalent of <code>contain</code>; an explicit <code>background-size</code> causes <code>preserveAspectRatio</code> to be ignored.</p>
+ </div>
+</li>
+
 <li><p><strong>If the <code>background-size</code> has one <code>auto</code> component and one non-<code>auto</code> component:</strong></p>
  <ul>
   <li>If the image has intrinsic proportions, it's stretched to the specified dimension. The unspecified dimension is computed using the specified dimension and the intrinsic proportions.</li>

@@ -84,7 +84,9 @@ shape-outside: unset;
  <dd>The float area is extracted and computed based on the alpha channel of the specified {{cssxref("&lt;image&gt;")}} as defined by {{cssxref("shape-image-threshold")}}.</dd>
 </dl>
 
-<div class="note"><strong>Note:</strong> {{glossary("User agent", "User agents")}} must use the potentially CORS-enabled fetch method defined by the HTML5 specification for all URLs in a <code>shape-outside</code> value. When fetching, user agents must use "Anonymous" mode, set the referrer source to the stylesheet's URL, and set the origin to the URL of the containing document. If this results in network errors such that there is no valid fallback image, the effect is as if the value <code><strong>none</strong></code> had been specified.</div>
+<div class="note">
+  <p><strong>Note:</strong> {{glossary("User agent", "User agents")}} must use the potentially CORS-enabled fetch method defined by the HTML5 specification for all URLs in a <code>shape-outside</code> value. When fetching, user agents must use "Anonymous" mode, set the referrer source to the stylesheet's URL, and set the origin to the URL of the containing document. If this results in network errors such that there is no valid fallback image, the effect is as if the value <code><strong>none</strong></code> had been specified.</p>
+</div>
 
 <h2 id="Interpolation">Interpolation</h2>
 

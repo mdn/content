@@ -51,7 +51,9 @@ tags:
  <li>Each stacking context is self-contained: after the element's contents are stacked, the whole element is considered in the stacking order of the parent stacking context.</li>
 </ul>
 
-<div class="note"><strong>Note:</strong> The hierarchy of stacking contexts is a subset of the hierarchy of HTML elements because only certain elements create stacking contexts. We can say that elements that do not create their own stacking contexts are <em>assimilated</em> by the parent stacking context.</div>
+<div class="note">
+  <p><strong>Note:</strong> The hierarchy of stacking contexts is a subset of the hierarchy of HTML elements because only certain elements create stacking contexts. We can say that elements that do not create their own stacking contexts are <em>assimilated</em> by the parent stacking context.</p>
+</div>
 
 <h2 id="The_example">The example</h2>
 
@@ -78,7 +80,7 @@ tags:
 <p>It is important to note that DIV #4, DIV #5 and DIV #6 are children of DIV #3, so stacking of those elements is completely resolved within DIV#3. Once stacking and rendering within DIV #3 is completed, the whole DIV #3 element is passed for stacking in the root element with respect to its sibling's DIV.</p>
 
 <div class="note">
-<p><strong>Notes:</strong></p>
+<p><strong>Note:</strong></p>
 
 <ul>
  <li>DIV #4 is rendered under DIV #1 because DIV #1's z-index (5) is valid within the stacking context of the root element, while DIV #4's z-index (6) is valid within the stacking context of DIV #3. So, DIV #4 is under DIV #1, because DIV #4 belongs to DIV #3, which has a lower z-index value.</li>

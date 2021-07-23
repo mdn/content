@@ -22,7 +22,7 @@ browser-compat: css.properties.clear
 <p>The floats that are relevant to be cleared are the earlier floats within the same <a href="/en-US/docs/Web/Guide/CSS/Block_formatting_context">block formatting context</a>.</p>
 
 <div class="note">
-<p>If an element contains only floated elements, its height collapses to nothing. If you want it to always be able to resize, so that it contains floating elements inside it, you need to self-clear its children. This is called <strong>clearfix</strong>, and one way to do it is to add <code>clear</code> to a replaced {{cssxref("::after")}} <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-element</a> on it.</p>
+<p><strong>Note:</strong> If an element contains only floated elements, its height collapses to nothing. If you want it to always be able to resize, so that it contains floating elements inside it, you need to self-clear its children. This is called <strong>clearfix</strong>, and one way to do it is to add <code>clear</code> to a replaced {{cssxref("::after")}} <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-element</a> on it.</p>
 
 <pre class="brush: css">#container::after {
   content: "";
