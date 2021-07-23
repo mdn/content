@@ -100,7 +100,7 @@ for (var i = 0; i &lt; 2; i++) {
   button.innerText = "Button " + i;
   button.onclick = (function (copyOfI) {
     return function() {alert(copyOfI);};
-  }(i));
+  })(i);
   document.body.appendChild(button);
 }
 console.log(i); // 2</pre>

@@ -17,7 +17,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Setup Node.js environment
-        uses: actions/setup-node@v2.1.5
+        uses: actions/setup-node@v2.3.0
         with:
           node-version: "12"
 
@@ -55,7 +55,7 @@ jobs:
           # Now, this gets used by the `git diff ...` inside get-diff-action.
           git config --global core.quotePath false
 
-      - uses: technote-space/get-diff-action@v4.1.1
+      - uses: technote-space/get-diff-action@v4.2
         id: git_diff_content
         with:
           PATTERNS: files/**/*.+(html|md)
@@ -68,7 +68,7 @@ jobs:
 
           # This is so that if there's a single 'unsafe_html' flaw, it
           # completely fails the build.
-          # But all other flaws should be 'warn' so that we can include
+          # But all other flaws should be 'warn', so that we can include
           # information about the flaws when we analyze the built PR.
           BUILD_FLAW_LEVELS: "unsafe_html: error, *:warn"
 
@@ -90,7 +90,7 @@ jobs:
           # where there are interesting cookies, it's a safe choice.
           BUILD_LIVE_SAMPLES_BASE_URL: ""
 
-          # In these builds we never care for or need the ability to sign in.
+          # In these builds, we never care for or need the ability to sign in.
           # This environment variable will disable that functionality entirely.
           REACT_APP_DISABLE_AUTH: true
 
@@ -142,7 +142,7 @@ jobs:
           name: build
           path: build/
 
-      - uses: technote-space/get-diff-action@v4.1.1
+      - uses: technote-space/get-diff-action@v4.2
         with:
           PATTERNS: files/**/*.+(png|jpeg|jpg|gif|svg|webp)
           ABSOLUTE: true
@@ -156,7 +156,7 @@ jobs:
           export CONTENT_ROOT=$(pwd)/files
           yarn filecheck ${{ env.GIT_DIFF_FILES }}
 
-      - uses: technote-space/get-diff-action@v4.1.1
+      - uses: technote-space/get-diff-action@v4.2
         id: git_diff_redirects
         with:
           PATTERNS: files/**/_redirects.txt

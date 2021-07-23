@@ -32,7 +32,7 @@ tags:
 
 <h3 id="Constraint_validation">Constraint validation</h3>
 
-<p>If the input’s value is not the empty string and the value does not match the entire regular expression, there is a from a {{domxref('ValidityState.patternMismatch','patternMismatch')}}.<br>
+<p>If the input's value is not the empty string and the value does not match the entire regular expression, there is a constraint violation reported by the {{domxref('ValidityState')}} object's {{domxref('ValidityState.patternMismatch','patternMismatch')}} property being <code>true</code>.<br>
  The pattern's regular expression, when matched against the value, must have its start anchored to the start of the string and its end anchored to the end of the string, which is slightly different from JavaScript regular expressions: in the case of pattern attribute, we are matching against the entire value, not just any subset, as if a <code>^(?:</code> were implied at the start of the pattern and <code>)$</code> at the end.</p>
 
 <h2 id="Examples">Examples</h2>

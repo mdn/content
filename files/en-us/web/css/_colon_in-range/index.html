@@ -21,7 +21,9 @@ input:in-range {
 
 <p>This pseudo-class is useful for giving the user a visual indication that a field's current value is within the permitted limits.</p>
 
-<div class="note"><strong>Note:</strong> This pseudo-class only applies to elements that have (and can take) a range limitation. In the absence of such a limitation, the element can neither be "in-range" nor "out-of-range."</div>
+<div class="note">
+  <p><strong>Note:</strong> This pseudo-class only applies to elements that have (and can take) a range limitation. In the absence of such a limitation, the element can neither be "in-range" nor "out-of-range."</p>
+</div>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -73,7 +75,7 @@ input:out-of-range + label::after {
 <p>{{EmbedLiveSample('Examples', 600, 140)}}</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: An empty <code>&lt;input&gt;</code> does not count as out of range, and will not be selected using the <code>:out-of-range</code> pseudo-class selector. The <code><a href="/en-US/docs/Web/CSS/:blank">:blank</a></code> pseudo-class exists to select blank inputs, although at the time of writing this is experimental and not well-supported. You could also use the <code>required</code> attribute and the <code><a href="/en-US/docs/Web/CSS/:invalid">:invalid</a></code> pseudo-class to provide more general logic and styling for making inputs mandatory (<code>:invalid</code> will style blank <em>and</em> out-of-range inputs).</p>
+<p><strong>Note:</strong> An empty <code>&lt;input&gt;</code> does not count as out of range, and will not be selected using the <code>:out-of-range</code> pseudo-class selector. The <code><a href="/en-US/docs/Web/CSS/:blank">:blank</a></code> pseudo-class exists to select blank inputs, although at the time of writing this is experimental and not well-supported. You could also use the <code>required</code> attribute and the <code><a href="/en-US/docs/Web/CSS/:invalid">:invalid</a></code> pseudo-class to provide more general logic and styling for making inputs mandatory (<code>:invalid</code> will style blank <em>and</em> out-of-range inputs).</p>
 </div>
 
 <h2 id="Specifications">Specifications</h2>
@@ -82,12 +84,7 @@ input:out-of-range + label::after {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-<div>
-
 <p>{{Compat}}</p>
-</div>
-</div>
 
 <h2 id="See_also">See also</h2>
 

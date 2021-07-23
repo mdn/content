@@ -1,0 +1,54 @@
+---
+title: Request.bodyUsed
+slug: Web/API/Request/bodyUsed
+tags:
+  - API
+  - Fetch
+  - Property
+  - Reference
+  - bodyUsed
+  - Request
+browser-compat: api.Request.bodyUsed
+---
+<div>{{APIRef("Fetch")}}</div>
+
+<p>The read-only <strong><code>bodyUsed</code></strong> property of the
+  {{domxref("Request")}} interface is a {{jsxref("Boolean")}} that indicates
+  whether the request body has been read yet.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js">request.bodyUsed;</pre>
+
+<h3 id="Value">Value</h3>
+
+<p>A {{jsxref("Boolean")}}.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<pre class="brush: js">
+const request = new Request('/myEndpoint', {
+  method: 'POST',
+  body: 'Hello world'
+});
+
+request.bodyUsed; // false
+
+request.text().then(function(bodyAsText) {
+  console.log(request.bodyUsed); // true
+});
+</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+{{Specifications}}
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+  <li>{{domxref("Request.body")}}</li>
+</ul>

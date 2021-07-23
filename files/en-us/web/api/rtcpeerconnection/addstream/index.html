@@ -2,13 +2,12 @@
 title: RTCPeerConnection.addStream()
 slug: Web/API/RTCPeerConnection/addStream
 tags:
-- Deprecated
-- Experimental
-- Method
-- RTCPeerConnection
-- Reference
-- WebRTC
-- addStream
+  - Deprecated
+  - Method
+  - RTCPeerConnection
+  - Reference
+  - WebRTC
+  - addStream
 browser-compat: api.RTCPeerConnection.addStream
 ---
 <p>{{APIRef("WebRTC")}}{{deprecated_header}}</p>
@@ -22,7 +21,7 @@ browser-compat: api.RTCPeerConnection.addStream
 <p>If the {{domxref("RTCPeerConnection.signalingState", "signalingState")}} is set to
   <code>closed</code>, an <code>InvalidStateError</code> is raised. If the
   {{domxref("RTCPeerConnection.signalingState", "signalingState")}} is set to
-  <code>stable</code>, the event {{event("negotiationneeded")}} is sent on the
+  <code>stable</code>, the event {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} is sent on the
   {{domxref("RTCPeerConnection")}} to indicate that {{Glossary("ICE")}} negotiation must
   be repeated to consider the new stream.</p>
 
@@ -72,7 +71,7 @@ browser-compat: api.RTCPeerConnection.addStream
 
 <p>The exception is in Chrome, where <code>addStream()</code> <em>does</em> make the peer
   connection sensitive to later stream changes (though such changes do not fire the
-  {{event("negotiationneeded")}} event). If you are relying on the Chrome behavior, note
+  {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} event). If you are relying on the Chrome behavior, note
   that other browsers do not have it. You can write web compatible code using feature
   detection instead:</p>
 

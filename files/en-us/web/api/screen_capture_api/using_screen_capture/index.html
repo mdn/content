@@ -203,7 +203,7 @@ stopElem.addEventListener("click", function(evt) {
 
 <h5 id="Logging_content">Logging content</h5>
 
-<p>To make logging of errors and other issues easy, this example overrides certain {{domxref("Console")}} methods to output their messages to the {{HTMLElement("pre")}} block whose ID is <code>log</code>.</p>
+<p>To make logging of errors and other issues easy, this example overrides certain {{domxref("console")}} methods to output their messages to the {{HTMLElement("pre")}} block whose ID is <code>log</code>.</p>
 
 <pre class="brush: js">console.log = msg =&gt; logElem.innerHTML += `${msg}&lt;br&gt;`;
 console.error = msg =&gt; logElem.innerHTML += `&lt;span class="error"&gt;${msg}&lt;/span&gt;&lt;br&gt;`;
@@ -283,7 +283,7 @@ Click the Start Capture button to begin.&lt;/p&gt;
  <li>A {{HTMLElement("button")}} labeled "Start Capture" which, when clicked, calls the <code>startCapture()</code> function to request access to, and begin capturing, screen contents.</li>
  <li>A second button, "Stop Capture", which upon being clicked calls <code>stopCapture()</code> to terminate capture of screen contents.</li>
  <li>A {{HTMLElement("video")}} into which the captured screen contents are streamed.</li>
- <li>A {{HTMLElement("pre")}} block into which logged text is placed by the intercepted {{domxref("Console")}}method.</li>
+ <li>A {{HTMLElement("pre")}} block into which logged text is placed by the intercepted {{domxref("console")}} method.</li>
 </ol>
 
 <h4 id="CSS">CSS</h4>

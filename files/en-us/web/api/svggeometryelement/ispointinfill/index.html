@@ -52,10 +52,10 @@ browser-compat: api.SVGGeometryElement.isPointInFill
 
 <pre class="brush: js">var circle = document.getElementById('circle');
 
-// Point not in circle
+// Point is outside
 console.log('Point at 10,10:', circle.isPointInFill(new DOMPoint(10, 10)));
 
-// Point in circle
+// Point is inside
 console.log('Point at 40,30:', circle.isPointInFill(new DOMPoint(40, 30)));</pre>
 
 <h3 id="Result">Result</h3>

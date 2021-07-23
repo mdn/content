@@ -1,0 +1,59 @@
+---
+title: ElementInternals.willValidate
+slug: Web/API/ElementInternals/willValidate
+tags:
+  - API
+  - Property
+  - Reference
+  - willValidate
+  - ElementInternals
+browser-compat: api.ElementInternals.willValidate
+---
+<div>{{DefaultAPISidebar("DOM")}}</div>
+
+<p class="summary">The <strong><code>willValidate</code></strong> read-only property of the {{domxref("ElementInternals")}} interface returns true if the element is a submittable element that is a candidate for <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a>.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js">let willValidate = ElementInternals.willValidate;
+</pre>
+
+<h3>Value</h3>
+<p>A {{jsxref("Boolean")}}, true if the element is a candidate for constraint validation.</p>
+
+<h3>Exceptions</h3>
+
+<dl>
+  <dt>{{domxref("DOMException")}} <code>NotSupportedError</code></dt>
+  <dd>Thrown if the element does not have its <code>formAssociated</code> property set to <code>true</code>.</dd>
+</dl>
+
+<h2 id="Examples">Examples</h2>
+
+<p>The following example shows a custom checkbox component with <code>formAssociated</code> set to <code>true</code>, the value of <code>willValidate</code> is logged to the console.</p>
+
+<pre class="brush: js">class CustomCheckbox extends HTMLElement {
+  static formAssociated = true;
+
+  constructor() {
+    super();
+    this.internals_ = this.attachInternals();
+
+    /* ... */
+
+  }
+  window.customElements.define("custom-checkbox", CustomCheckbox);
+})();
+
+let element = document.getElementById("custom-checkbox");
+console.log(element.internals_.willValidate); // true</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<p>{{Specifications}}</p>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>
+
+

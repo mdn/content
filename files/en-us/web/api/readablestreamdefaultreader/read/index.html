@@ -109,7 +109,6 @@ browser-compat: api.ReadableStreamDefaultReader.read
 
   let re = /\r\n|\n|\r/gm;
   let startIndex = 0;
-  let result;
 
   for (;;) {
     let result = re.exec(chunk);

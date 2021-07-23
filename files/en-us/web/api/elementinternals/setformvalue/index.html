@@ -1,0 +1,58 @@
+---
+title: ElementInternals.setFormValue()
+slug: Web/API/ElementInternals/setFormValue
+tags:
+  - API
+  - Method
+  - Reference
+  - setFormValue
+  - ElementInternals
+browser-compat: api.ElementInternals.setFormValue
+---
+<div>{{DefaultAPISidebar("DOM")}}</div>
+
+<p class="summary">The <strong><code>setFormValue()</code></strong> method of the {{domxref("ElementInternals")}} interface sets the element's submission value and state, communicating these to the user agent.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js">ElementInternals.setFormValue(value);
+ElementInternals.setFormValue(value, state);</pre>
+
+<h3 id="Parameters">Parameters</h3>
+
+<dl>
+  <dt><code>value</code></dt>
+  <dd>A {{domxref("File")}}, or a {{domxref("USVString","string")}}, or {{domxref("FormData")}} as the value to be submitted to the server.</dd>
+  <dt><code>state</code>{{Optional_Inline}}</dt>
+  <dd>A {{domxref("File")}}, or a {{domxref("USVString","string")}}, or {{domxref("FormData")}} representing the input made by the user. This allows the application to re-display the information that the user submitted, in the form that they submitted it, if required.</dd>
+</dl>
+
+<div class="notecard note">
+  <h4>Note:</h4>
+  <p>In general, <code>state</code> is used to pass information specified by a user, the <code>value</code> is suitable for submission to a server, post sanitization. For example, if a custom element asked a user to submit a date, the user might enter "3/15/2019". This would be the <code>state</code>. The server expects a date format of <code>2019-03-15</code>, the date in this format would be passed as the <code>value</code>.</p>
+</div>
+
+<h3 id="Returns">Return value</h3>
+
+<p>Undefined.</p>
+
+<h3 id="Exceptions">Exceptions</h3>
+
+<dl>
+  <dt>{{domxref("DOMException")}} <code>NotSupportedError</code></dt>
+  <dd>Thrown if the element does not have its <code>formAssociated</code> property set to <code>true</code>.</dd>
+</dl>
+
+<h2 id="Examples">Examples</h2>
+
+<p>In the following example, a checkbox custom element sets <code>on</code> as the value to send to the server, and <code>checked</code> as the state.</p>
+
+<pre class="brush: js">this.internals_.setFormValue("on","checked");</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<p>{{Specifications}}</p>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>

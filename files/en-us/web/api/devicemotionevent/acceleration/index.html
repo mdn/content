@@ -17,7 +17,9 @@ browser-compat: api.DeviceMotionEvent.acceleration
 
 <p>The <code>acceleration</code> property returns the amount of acceleration recorded by
   the device, in <a href="https://en.wikipedia.org/wiki/Meter_per_second_squared">meters
-    per second squared (m/s²)</a>.</p>
+    per second squared (m/s²)</a>. The acceleration value does not include the effect of
+    the gravity force, in constrast to
+    {{DOMxRef("DeviceMotionEvent.accelerationIncludingGravity")}}.</p>
 
 <div class="notecard note">
   <p><strong>Note:</strong> If the hardware doesn't know how to remove gravity from the
@@ -61,9 +63,10 @@ browser-compat: api.DeviceMotionEvent.acceleration
   <li>{{DOMxRef("window.ondevicemotion")}}</li>
   <li>{{Event("deviceorientation")}}</li>
   <li>{{DOMxRef("DeviceOrientationEvent")}}</li>
-  <li><a href="/en-US/docs/Web/API/Detecting_device_orientation">Detecting device
+  <li>{{DOMxRef("LinearAccelerationSensor")}}</li>
+  <li><a href="/en-US/docs/Web/Events/Detecting_device_orientation">Detecting device
       orientation</a></li>
-  <li><a href="/en-US/docs/Web/Guide/Events/Orientation_and_motion_data_explained"
+  <li><a href="/en-US/docs/Web/Events/Orientation_and_motion_data_explained"
       title="Orientation and motion data explained">Orientation and motion data
       explained</a></li>
 </ul>

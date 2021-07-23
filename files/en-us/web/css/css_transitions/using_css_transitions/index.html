@@ -22,9 +22,13 @@ tags:
 
 <p>The Web author can define which property has to be animated and in which way. This allows the creation of complex transitions. As it doesn't make sense to animate some properties, the <a href="/en-US/docs/Web/CSS/CSS_animated_properties">list of animatable properties</a> is limited to a finite set.</p>
 
-<div class="note">Note: The set of properties that can be animated is changing as the specification develops.</div>
+<div class="note">
+  <p><strong>Note:</strong> The set of properties that can be animated is changing as the specification develops.</p>
+</div>
 
-<p class="note">The <code>auto</code> value is often a very complex case. The specification recommends not animating from and to <code>auto</code>. Some user agents, like those based on Gecko, implement this requirement and others, like those based on WebKit, are less strict. Using animations with <code>auto</code> may lead to unpredictable results, depending on the browser and its version, and should be avoided.</p>
+<div class="note">
+  <p><strong>Note:</strong> The <code>auto</code> value is often a very complex case. The specification recommends not animating from and to <code>auto</code>. Some user agents, like those based on Gecko, implement this requirement and others, like those based on WebKit, are less strict. Using animations with <code>auto</code> may lead to unpredictable results, depending on the browser and its version, and should be avoided.</p>
+</div>
 
 <h2 id="Defining_transitions">Defining transitions</h2>
 
@@ -167,7 +171,7 @@ a:focus {
 <h2 id="JavaScript_examples">JavaScript examples</h2>
 
 <div class="note">
-<p>Care should be taken when using a transition immediately after:</p>
+<p><strong>Note:</strong> Care should be taken when using a transition immediately after:</p>
 
 <ul>
  <li>adding the element to the DOM using <code>.appendChild()</code></li>
@@ -231,7 +235,9 @@ document.addEventListener('click', function(ev){
 <pre class="brush: js">el.addEventListener("transitionrun", signalStart, true);
 el.addEventListener("transitionstart", signalStart, true);</pre>
 
-<div class="note"><strong>Note</strong>: The <code>transitionend</code> event doesn't fire if the transition is aborted before the transition is completed because either the element is made {{cssxref("display")}}<code>: none</code> or the animating property's value is changed.</div>
+<div class="note">
+  <p><strong>Note:</strong> The <code>transitionend</code> event doesn't fire if the transition is aborted before the transition is completed because either the element is made {{cssxref("display")}}<code>: none</code> or the animating property's value is changed.</p>
+</div>
 
 <h2 id="Specifications">Specifications</h2>
 

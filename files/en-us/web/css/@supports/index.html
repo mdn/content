@@ -90,7 +90,7 @@ browser-compat: css.at-rules.supports
 </pre>
 
 <div class="notecard note">
-<p><strong>Note</strong>: When using both <code>and</code> and <code>or</code> operators, the parentheses must be used to define the order in which they apply. Otherwise, the condition is invalid and the whole rule is ignored.</p>
+<p><strong>Note:</strong> When using both <code>and</code> and <code>or</code> operators, the parentheses must be used to define the order in which they apply. Otherwise, the condition is invalid and the whole rule is ignored.</p>
 </div>
 
 <h2 id="Formal_syntax">Formal syntax</h2>
@@ -131,9 +131,9 @@ browser-compat: css.at-rules.supports
   }
 }</pre>
 
-<h3 id="Testing_for_the_support_of_a_selector">Testing for the support of a selector (eg. {{CSSxRef(":is", ":is()")}})</h3>
+<h3 id="Testing_for_the_support_of_a_selector">Testing for the support of a selector</h3>
 
-<p>{{SeeCompatTable}}</p>
+<p>The CSS Conditional Rules Level 4 specification adds the ability to test for support of a selector—for example {{cssxref(":is",":is()")}}.</p>
 
 <pre class="brush: css highlight[6, 14]">/* This rule won't be applied in browsers which don't support :is() */
 :is(ul, ol) &gt; li {
@@ -148,7 +148,7 @@ browser-compat: css.at-rules.supports
   }
 }
 
-/* Note: By far, there's no browser that supports the `of` argument of :nth-child(…) */
+/* Note: So far, there's no browser that supports the `of` argument of :nth-child(…) */
 @supports selector(:nth-child(1n of a, b)) {
   /* This rule needs to be inside the @supports block, otherwise
      it will be partially applied in browsers which don't support

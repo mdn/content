@@ -460,7 +460,7 @@ bob.save(function (err) {
   //Bob now exists, so lets create a story
   var story = new Story({
     title: "Bob goes sledding",
-    author: bob._id    // assign the _id from the our author Bob. This ID is created by default!
+    author: bob._id    // assign the _id from our author Bob. This ID is created by default!
   });
 
   story.save(function (err) {
@@ -679,10 +679,16 @@ AuthorSchema
 });
 
 // Virtual for author's lifespan
-AuthorSchema
-</strong>.virtual('lifespan')
-.get(function () {
-  return (this.date_of_death.getYear() - this.date_of_birth.getYear()).toString();
+AuthorSchema.virtual('lifespan').get(function() {
+  var lifetime_string = '';
+  if (this.date_of_birth) {
+    lifetime_string = DateTime.fromJSDate(this.date_of_birth).toLocaleString(DateTime.DATE_MED);
+  }
+  lifetime_string += ' - ';
+  if (this.date_of_death) {
+    lifetime_string += DateTime.fromJSDate(this.date_of_death).toLocaleString(DateTime.DATE_MED)
+  }
+  return lifetime_string;
 });
 
 // Virtual for author's URL

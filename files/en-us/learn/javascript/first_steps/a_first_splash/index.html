@@ -531,7 +531,7 @@ greeting;</pre>
 <ol>
  <li><strong>A starting value</strong>: In this case we are starting a count at 1, but this could be any number you like. You could replace the letter <code>i</code> with any name you like too, but <code>i</code> is used as a convention because it's short and easy to remember.</li>
  <li><strong>A condition</strong>: Here we have specified <code>i &lt; 21</code> — the loop will keep going until <code>i</code> is no longer less than 21. When <code>i</code> reaches 21, the loop will no longer run.</li>
- <li><strong>An incrementor</strong>: We have specified <code>i++</code>, which means "add 1 to i". The loop will run once for every value of <code>i</code>, until <code>i</code> reaches a value of 21 (as discussed above). In this case, we are printing the value of <code>i</code> out to the console on every iteration using {{domxref("Console.log", "console.log()")}}.</li>
+ <li><strong>An incrementor</strong>: We have specified <code>i++</code>, which means "add 1 to i". The loop will run once for every value of <code>i</code>, until <code>i</code> reaches a value of 21 (as discussed above). In this case, we are printing the value of <code>i</code> out to the console on every iteration using {{domxref("console.log", "console.log()")}}.</li>
 </ol>
 
 <p>Now let's look at the loop in our number guessing game — the following can be found inside the <code>resetGame()</code> function:</p>
@@ -549,7 +549,7 @@ for (let i = 0 ; i &lt; resetParas.length ; i++) {
 
 <pre class="brush: js">guessField.focus();</pre>
 
-<p>This line uses the {{domxref("HTMLOrForeignElement/focus", "focus()")}} method to automatically put the text cursor into the {{htmlelement("input")}} text field as soon as the page loads, meaning that the user can start typing their first guess right away, without having to click the form field first. It's only a small addition, but it improves usability — giving the user a good visual clue as to what they've got to do to play the game.</p>
+<p>This line uses the {{domxref("HTMLElement/focus", "focus()")}} method to automatically put the text cursor into the {{htmlelement("input")}} text field as soon as the page loads, meaning that the user can start typing their first guess right away, without having to click the form field first. It's only a small addition, but it improves usability — giving the user a good visual clue as to what they've got to do to play the game.</p>
 
 <p>Let's analyze what's going on here in a bit more detail. In JavaScript, most of the items you will manipulate in your code are objects. An object is a collection of related functionality stored in a single grouping. You can create your own objects, but that is quite advanced and we won't be covering it until much later in the course. For now, we'll just briefly discuss the built-in objects that your browser contains, which allow you to do lots of useful things.</p>
 

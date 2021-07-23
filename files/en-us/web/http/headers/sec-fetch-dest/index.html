@@ -64,7 +64,7 @@ Sec-Fetch-Dest: xslt
 
 <div class="notecard note">
 	<h4>Note</h4>
-	<p>These directives correspond to the values in {{domxref("RequestDestination")}} (as returned by {{domxref("Request.destination")}}).</p>
+	<p>These directives correspond to the values returned by {{domxref("Request.destination")}}).</p>
 </div>
 
 <dl>
@@ -77,7 +77,7 @@ Sec-Fetch-Dest: xslt
 	<dt><code>embed</code></dt>
 	<dd>The destination is embedded content. This might originate from an HTML {{HTMLElement("embed")}} tag.</dd>
 	<dt><code>empty</code></dt>
-	<dd>The destination is the empty string. This is used for destinations that do not have their own value. For exmaple <code>fetch()</code>, {{domxref("navigator.sendBeacon()")}}, {{domxref("EventSource")}}, {{domxref("XMLHttpRequest")}}, {{domxref("WebSocket")}}, etc.</dd>
+	<dd>The destination is the empty string. This is used for destinations that do not have their own value. For example <code>fetch()</code>, {{domxref("navigator.sendBeacon()")}}, {{domxref("EventSource")}}, {{domxref("XMLHttpRequest")}}, {{domxref("WebSocket")}}, etc.</dd>
 	<dt><code>font</code></dt>
 	<dd>The destination is a font. This might originate from CSS {{cssxref("@font-face")}}.</dd>
 	<dt><code>frame</code></dt>
@@ -93,7 +93,7 @@ Sec-Fetch-Dest: xslt
 	<dt><code>paintworklet</code></dt>
 	<dd>The destination is a paint worklet. This might originate from a call to {{domxref('Worklet.addModule', 'CSS.PaintWorklet.addModule()')}}.</dd>
 	<dt><code>report</code></dt>
-	<dd>The destination is a report (for exmaple, a content security policy report).</dd>
+	<dd>The destination is a report (for example, a content security policy report).</dd>
 	<dt><code>script</code></dt>
 	<dd>The destination is a script. This might originate from an HTML {{HTMLElement("script")}} tag or a call to {{domxref("WorkerGlobalScope.importScripts()")}}.</dd>
 	<dt><code>serviceworker</code></dt>

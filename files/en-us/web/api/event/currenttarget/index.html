@@ -41,10 +41,10 @@ browser-compat: api.Event.currentTarget
 var ps = document.getElementsByTagName('p');
 
 for(var i = 0; i &lt; ps.length; i++){
-  // Console: print the clicked &lt;p&gt; element
+  // console: print the clicked &lt;p&gt; element
   ps[i].addEventListener('click', hide, false);
 }
-// Console: print &lt;body&gt;
+// console: print &lt;body&gt;
 document.body.addEventListener('click', hide, false);
 
 // Click around and make paragraphs disappear
@@ -53,7 +53,7 @@ document.body.addEventListener('click', hide, false);
 <div class="note">
   <p><strong>Note:</strong> The value of <code>event.currentTarget</code>
     is <strong>only</strong> available while the event is being handled. If you
-    <code><a href="/en-US/docs/Web/API/Console/log">console.log()</a></code> the
+    {{DOMxRef("console.log()")}} the
     <code>event</code> object, storing it in a variable, and <em>then</em> look for the
     <code>currentTarget</code> key in the console, its value will be <code>null</code>.
     Instead, you can either directly <code>console.log(event.currentTarget)</code> to be

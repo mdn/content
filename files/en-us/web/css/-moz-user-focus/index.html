@@ -29,7 +29,9 @@ browser-compat: css.properties.-moz-user-focus
 
 <p>{{cssinfo}}</p>
 
-<div class="note"><strong>Note:</strong> This property doesn't work for XUL {{XULElem("textbox")}} elements, because the <code>textbox</code> itself never takes focus. Instead, XBL creates an anonymous HTML {{HTMLElement("input")}} element inside the <code>textbox</code>, and that element is what receives focus. You can stop the <code>textbox</code> from taking keyboard focus by setting its tab index to <code>-1</code>, and from taking mouse focus by preventing the default action of <code>mousedown</code> events.</div>
+<div class="note">
+  <p><strong>Note:</strong> This property doesn't work for XUL {{XULElem("textbox")}} elements, because the <code>textbox</code> itself never takes focus. Instead, XBL creates an anonymous HTML {{HTMLElement("input")}} element inside the <code>textbox</code>, and that element is what receives focus. You can stop the <code>textbox</code> from taking keyboard focus by setting its tab index to <code>-1</code>, and from taking mouse focus by preventing the default action of <code>mousedown</code> events.</p>
+</div>
 
 <h2 id="Syntax">Syntax</h2>
 
