@@ -11,7 +11,7 @@ browser-compat: api.CSSRuleList.item
 ---
 <p>{{ APIRef("CSSOM") }}</p>
 
-<p class="summary">The <strong><code>item()</code></strong> method of the {{domxref("CSSRuleList")}} interface returns the single {{domxref("CSSRule")}} which is at the position of the <code>index</code> parameter in the collection.</p>
+<p class="summary">The <strong><code>item()</code></strong> method of the {{domxref("CSSRuleList")}} interface returns the {{domxref("CSSRule")}} object at the specified <code>index</code> or <code>null</code> if the specified <code>index</code> doesn't exist.</p>
 
 <p>If no item exists at that index, the method will return <code>null</code>.</p>
 
@@ -44,5 +44,4 @@ console.log(myRules[0]);</pre>
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <p>{{Compat}}</p>
-
 
