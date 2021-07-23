@@ -65,31 +65,39 @@ objects created using `Object.create(null)` (as these don't inherit from
 
 ### Using hasOwnProperty to test for an own property's existence
 
-The following example hows how to determine whether the `o` object contains a
-property named `prop`.
+The following code hows how to determine whether the `example` object contains a property named `prop`.
 
 ```js
-o = new Object();
-o.hasOwnProperty('prop');   // false
-o.prop = 'exists';
-o.hasOwnProperty('prop');   // true - 'prop' has been defined
-o.prop = null;
-o.hasOwnProperty('prop');   // true - own property exists wtih value of null
-o.prop = undefined;
-o.hasOwnProperty('prop');   // true - own property exists with value of undefined
+let example = {};
+example.hasOwnProperty('prop');   // false
+
+example.prop = 'exists';
+example.hasOwnProperty('prop');   // true - 'prop' has been defined
+
+example.prop = null;
+example.hasOwnProperty('prop');   // true - own property exists wtih value of null
+
+example.prop = undefined;
+example.hasOwnProperty('prop');   // true - own property exists with value of undefined
 ```
 
 ### Direct vs. inherited properties
 
-The following example differentiates between direct properties and properties
-inherited through the prototype chain:
+The following example differentiates between direct properties and properties inherited through the prototype chain:
 
 ```js
-o = new Object();
-o.prop = 'exists';
-o.hasOwnProperty('prop');             // returns true
-o.hasOwnProperty('toString');         // returns false
-o.hasOwnProperty('hasOwnProperty');   // returns false
+let example = {};
+example.prop = 'exists';
+
+// `hasOwnProperty` will only return true for direct properties:
+example.hasOwnProperty('prop');             // returns true
+example.hasOwnProperty('toString');         // returns false
+example.hasOwnProperty('hasOwnProperty');   // returns false
+
+// The `in` operator will return true for direct or inherited properties:
+'prop' in example;                          // returns true
+'toString' in example;                      // returns true
+'hasOwnProperty' in example;                // returns true
 ```
 
 ### Iterating over the properties of an object

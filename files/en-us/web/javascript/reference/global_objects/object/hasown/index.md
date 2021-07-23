@@ -53,34 +53,46 @@ external object, `Object.hasOwn()` is more intuitive.
 
 ## Examples
 
-### Using hasOwn to test for a property's existence
+### Using hasOwn to test for a property's existence 
 
-The following example shows how to test whether an object directly defines
-('owns') a particular property:
+The following code hows how to determine whether the `example` object contains a property named `prop`.
+ 
+```js
+let example = {};
+Object.hasOwn(example, 'prop');   // false = 'prop' has not been defined
+
+example.prop = 'exists';
+Object.hasOwn(example, 'prop');   // true - 'prop' has been defined
+
+example.prop = null;
+Object.hasOwn(example, 'prop');   // true - own property exists wtih value of null
+
+example.prop = undefined;
+Object.hasOwn(example, 'prop');   // true - own property exists with value of undefined
+```
+
+### Direct vs. inherited properties
+
+The following example differentiates between direct properties and properties inherited through the prototype chain:
 
 ```js
-let object1 = {};
-object1.prop = 'exists';
+let example = {}
+example.prop = 'exists';
 
-// Normal way to use the method
-if (Object.hasOwn(object1, 'prop')) {
-  // true - 'prop' is defined
-}
-  
-// Own property values can be null or undefined
-object1.prop_value_null = null;
-Object.hasOwn(object1, 'prop_value_null');  // true
-object1.prop_value_undefined = undefined;
-Object.hasOwn(object1, 'prop_value_undefined');  // true
-  
-// Inherited and undeclared properties return false
-Object.hasOwn(object1,'toString');  // false
-Object.hasOwn(object1,'prop_not_defined');  // false
+// `hasOwn` will only return true for direct properties:
+Object.hasOwn(example, 'prop');             // returns true
+Object.hasOwn(example, 'toString');         // returns false
+Object.hasOwn(example, 'hasOwnProperty');   // returns false
+
+// The `in` operator will return true for direct or inherited properties:
+'prop' in example;                          // returns true
+'toString' in example;                      // returns true
+'hasOwnProperty' in example;                // returns true
 ```
 
 ### Iterating over the properties of an object
 
-To iterate over the enumerable properties of an object, you should use:
+To iterate over the enumerable properties of an object, you _should_ use:
 
 ```js
 let example = { foo: true, bar: true };
@@ -89,7 +101,7 @@ for (let name of Object.keys(example)) {
 }
 ```
 
-But if you need to use `for..in` you can use `Object.hasOwn()` to skip the inherited properties:
+But if you need to use `for..in`, you can use `Object.hasOwn()` to skip the inherited properties:
 
 ```js
 let example = { foo: true, bar: true };
