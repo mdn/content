@@ -10,12 +10,11 @@ browser-compat: javascript.builtins.Object.hasOwn
 ---
 {{JSRef}}
 
-The **`Object.hasOwn()`** static method returns `true` if the specified object
-has the indicated property as its _own_ property. If the property is inherited,
-or does not exist, the method returns `false`.
+The **`Object.hasOwn()`** static method returns `true` if the specified object has the indicated property as its _own_ property.
+If the property is inherited, or does not exist, the method returns `false`.
 
-> **Note:** `Object.hasOwn()` is intended as a replacement for
-> {{jsxref("Object.hasOwnProperty()")}}.
+
+> **Note:** `Object.hasOwn()` is intended as a replacement for {{jsxref("Object.hasOwnProperty()")}}.
 
 {{EmbedInteractiveExample("pages/js/object-hasown.html")}}
 
@@ -41,9 +40,10 @@ Otherwise `false`
 ## Description
 
 The **`Object.hasOwn()`** method returns `true` if the specified property is a
-direct property of the object — even if the property value is `null` or
-`undefined`. The method returns `false` if the property is inherited, or has not
-been declared at all.
+direct property of the object — even if the property value is `null` or `undefined`.
+The method returns `false` if the property is inherited, or has not been declared at all.
+Unlike the {{jsxref("Operators/in", "in")}} operator, this
+method does not check for the specified property in the object's prototype chain.
 
 It is recommended over {{jsxref("Object.hasOwnProperty()")}} because
 it works for objects created using `Object.create(null)` and with objects that
