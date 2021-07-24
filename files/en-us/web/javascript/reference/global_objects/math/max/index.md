@@ -71,7 +71,7 @@ element in a numeric array, by comparing each value:
 var arr = [1,2,3];
 var max = arr.reduce(function(a, b) {
     return Math.max(a, b);
-});
+}, 0);
 ```
 
 The following function uses {{jsxref("Function.prototype.apply()")}} to get the maximum
