@@ -12,17 +12,78 @@ tags:
   - Reference
 browser-compat: api.RTCDtlsTransport
 ---
-<p>{{DefaultAPISidebar("WebRTC")}}</p>
+<p>{{APIRef("WebRTC")}}</p>
 
 <p>The <strong><code>RTCDtlsTransport</code></strong> interface provides access to information about the Datagram Transport Layer Security (<strong>{{Glossary("DTLS")}}</strong>) transport over which a {{domxref("RTCPeerConnection")}}'s {{Glossary("RTP")}} and {{Glossary("RTCP")}} packets are sent and received by its {{domxref("RTCRtpSender")}} and {{domxref("RTCRtpReceiver")}} objects.</p>
 
-<p>A DTLS transport is also used to provide information about {{Glossary("SCTP")}} packets transmitted and received by an connection's <a href="/en-US/docs/Web/API/RTCDataChannel">data channels</a>.</p>
+<p>A <code>RTCDtlsTransport</code> object is also used to provide information about {{Glossary("SCTP")}} packets transmitted and received by an connection's <a href="/en-US/docs/Web/API/RTCDataChannel">data channels</a>.</p>
 
 <p>Features of the DTLS transport include the addition of security to the underlying transport; the <code>RTCDtlsTransport</code> interface can be used to obtain information about the underlying transport and the security added to it by the DTLS layer.</p>
 
 <p>{{InheritanceDiagram}}</p>
 
-<div>{{InterfaceOverview("WebRTC")}}</div>
+<h2 id="Properties">Properties</h2>
+
+<p><em>Also inherits properties from {{DOMxRef("EventTarget")}}.</em></p>
+
+<dl>
+  <dt>{{DOMxRef("RTCDtlsTransport.iceTransport", "iceTransport")}} {{ReadOnlyInline}}</dt>
+  <dd>
+    Returns a reference to the underlying {{DOMxRef("RTCIceTransport")}} object.
+  </dd>
+
+  <dt>{{DOMxRef("RTCDtlsTransport.state", "state")}} {{ReadOnlyInline}}</dt>
+  <dd>
+    Returns a string
+    which describes the underlying Datagram Transport Layer Security (<strong>{{Glossary("DTLS")}}</strong>) transport state.
+    It can be one of the following values:
+    <code>new</code>, <code>connecting</code>, <code>connected</code>, <code>closed</code>, or <code>failed</code>.
+  </dd>
+</dl>
+
+<h3 id="Event_handlers">Event handlers</h3>
+
+<dl>
+  <dt>{{DOMxRef("RTCDtlsTransport.onerror", "onerror")}}</dt>
+  <dd>
+    Is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a>
+    which specifies a function the browser calls
+    when the{{DOMxRef("RTCDtlsTransport.error_event", "error")}} event is received.
+  </dd>
+
+  <dt>{{DOMxRef("RTCDtlsTransport.onstatechange", "onstatechange")}}</dt>
+  <dd>
+    Is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a>
+    which specifies a function the browser calls
+    when the{{DOMxRef("RTCDtlsTransport.statechange_event", "statechange")}} event is received.
+  </dd>
+</dl>
+
+<h2 id="Methods">Methods</h2>
+
+<p><em>Also inherits properties from {{DOMxRef("EventTarget")}}.</em></p>
+<dl>
+  <dt>{{DOMxRef("RTCDtlsTransport.getRemoteCertificates", "getRemoteCertificates()")}}</dt>
+  <dd>
+    Returns an array of {{DOMxRef("ArrayBuffer")}} containing the certificates of the remote peer of the connectioin.
+  </dd>
+</dl>
+
+<h2 id="Events">Events</h2>
+
+<dl>
+  <dt>{{DOMxRef("RTCDtlsTransport.error_event", "error")}}</dt>
+  <dd>
+    Sent when a transport-level error occurs on the {{domxref("RTCPeerConnection")}}.</p>
+
+  </dd>
+
+  <dt>{{DOMxRef("RTCDtlsTransport.statechange_event", "statechange")}}</dt>
+  <dd>
+    Sent when the {{DOMxRef("RTCDtlsTransport.state", "state")}} of the DTLS transport changes.
+  </dd>
+
+</dl>
 
 <h2 id="Description">Description</h2>
 
@@ -53,7 +114,7 @@ const pc = new RTCPeerConnection(rtcConfig);
 
 <p>When the connection is using BUNDLE, each <code>RTCDtlsTransport</code> object represents a group of {{domxref("RTCRtpTransceiver")}} objects. If the connection was created using <code>max-compat</code> mode, each transport is responsible for handling all of the communications for a given type of media (audio, video, or data channel). Thus, a connection that has any number of audio and video channels will always have exactly one DTLS transport for audio and one for video communications.</p>
 
-<p>Because transports are established early in the negotiation process, it's likely that it won't be known until after they're created whether or not the remote peer supports bundling or not. For this reason, you'll sometimes see separate transports created at first, one for each track, then see them get bundled up once it's known that bundling is possible. If your code accesses  {{domxref("RTCRtpSender")}}s and/or {{domxref("RTCRtpReceiver")}}s directly, you may encounter situations where they're initially separate, then half or more of them get closed and the senders and receivers updated to refer to the appropriate remaining <code>RTCDtlsTransport</code> objects.</p>
+<p>Because transports are established early in the negotiation process, it's likely that it won't be known until after they're created whether or not the remote peer supports bundling or not. For this reason, you'll sometimes see separate transports created at first, one for each track, then see them get bundled up once it's known that bundling is possible. If your code accesses {{domxref("RTCRtpSender")}}s and/or {{domxref("RTCRtpReceiver")}}s directly, you may encounter situations where they're initially separate, then half or more of them get closed and the senders and receivers updated to refer to the appropriate remaining <code>RTCDtlsTransport</code> objects.</p>
 
 <h3 id="Data_channels">Data channels</h3>
 
