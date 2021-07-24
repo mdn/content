@@ -39286,26 +39286,6 @@
       "wbamberg"
     ]
   },
-  "Web/API/Document/popupNode": {
-    "modified": "2020-10-15T21:11:12.992Z",
-    "contributors": [
-      "wbamberg",
-      "ExE-Boss",
-      "fscholz",
-      "valtlai",
-      "teoli",
-      "Sebastianz",
-      "MHasan",
-      "kscarfone",
-      "gurdev_singh",
-      "Sheppy",
-      "Enn",
-      "Neil",
-      "Waldo",
-      "Nickolay",
-      "SylvainPasche"
-    ]
-  },
   "Web/API/Document/preferredStyleSheetSet": {
     "modified": "2020-10-15T21:13:11.203Z",
     "contributors": [
@@ -39775,24 +39755,6 @@
       "Ptak82",
       "Dria",
       "JesseW"
-    ]
-  },
-  "Web/API/Document/tooltipNode": {
-    "modified": "2020-10-15T21:04:24.259Z",
-    "contributors": [
-      "ExE-Boss",
-      "mfluehr",
-      "Tigt",
-      "fscholz",
-      "stevenwdv",
-      "teoli",
-      "MHasan",
-      "kscarfone",
-      "Prachi_Dighe",
-      "Sheppy",
-      "ziyunfei",
-      "Waldo",
-      "SylvainPasche"
     ]
   },
   "Web/API/Document/touchcancel_event": {
