@@ -810,7 +810,7 @@ body {
 
 <h3 id="JavaScript_Content">JavaScript Content</h3>
 
-<pre class="brush: js"><code class="language-js">'use strict';
+<pre class="brush: js">'use strict';
 
 /**
  * UI-InputSliderManager
@@ -850,25 +850,25 @@ var InputSliderManager = (function InputSliderManager() {
 		var startX = null;
 		var start_value = 0;
 
-		slider.addEventListener("click", function(e) {
+		slider.addEventListener(&quot;click&quot;, function(e) {
 			setValue(obj.topic, obj.value + obj.step * sign);
 		});
 
-		slider.addEventListener("mousedown", function(e) {
+		slider.addEventListener(&quot;mousedown&quot;, function(e) {
 			startX = e.clientX;
 			start_value = obj.value;
-			document.body.style.cursor = "e-resize";
-			document.addEventListener("mousemove", sliderMotion);
+			document.body.style.cursor = &quot;e-resize&quot;;
+			document.addEventListener(&quot;mousemove&quot;, sliderMotion);
 		});
 
-		document.addEventListener("mouseup", function(e) {
-			document.removeEventListener("mousemove", sliderMotion);
-			document.body.style.cursor = "auto";
-			slider.style.cursor = "pointer";
+		document.addEventListener(&quot;mouseup&quot;, function(e) {
+			document.removeEventListener(&quot;mousemove&quot;, sliderMotion);
+			document.body.style.cursor = &quot;auto&quot;;
+			slider.style.cursor = &quot;pointer&quot;;
 		});
 
 		var sliderMotion = function sliderMotion(e) {
-			slider.style.cursor = "e-resize";
+			slider.style.cursor = &quot;e-resize&quot;;
 			var delta = (e.clientX - startX) / obj.sensitivity | 0;
 			var value = delta * obj.step + start_value;
 			setValue(obj.topic, value);
@@ -1021,10 +1021,10 @@ var ButtonManager = (function CheckBoxManager() {
 		var name = node.getAttribute('data-label');
 		var align = node.getAttribute('data-text-on');
 
-		state = (state === "true");
+		state = (state === &quot;true&quot;);
 
-		var checkbox = document.createElement("input");
-		var label = document.createElement("label");
+		var checkbox = document.createElement(&quot;input&quot;);
+		var label = document.createElement(&quot;label&quot;);
 
 		var id = 'checkbox-' + topic;
 		checkbox.id = id;
@@ -1099,7 +1099,7 @@ var ButtonManager = (function CheckBoxManager() {
 
 })();
 
-window.addEventListener("load", function() {
+window.addEventListener(&quot;load&quot;, function() {
 	BorderRadius.init();
 });
 
@@ -1178,10 +1178,10 @@ var BorderRadius = (function BorderRadius() {
 
 	var UnitSelector = function UnitSelector(topic) {
 
-		this.container = document.createElement("div");
-		this.select = document.createElement("select");
+		this.container = document.createElement(&quot;div&quot;);
+		this.select = document.createElement(&quot;select&quot;);
 		for (var i in units) {
-			var option = document.createElement("option");
+			var option = document.createElement(&quot;option&quot;);
 			option.value = i;
 			option.textContent = units[i];
 			this.select.appendChild(option);
@@ -1240,7 +1240,7 @@ var BorderRadius = (function BorderRadius() {
 
 		radius.className = 'radius';
 
-		var unit_selector = document.getElementById("unit-selection");
+		var unit_selector = document.getElementById(&quot;unit-selection&quot;);
 		var unitW = new UnitSelector(this.topic + '-w');
 		var unitH = new UnitSelector(this.topic + '-h');
 		var unitR = new UnitSelector(this.topic);
@@ -1268,13 +1268,13 @@ var BorderRadius = (function BorderRadius() {
 		if (x === 'right' &amp;&amp; y == 'bottom') handle.className = 'handle handle-bottom-right';
 		if (x === 'left' &amp;&amp; y == 'bottom') 	handle.className = 'handle handle-bottom-left';
 
-		handle.addEventListener("mousedown", function(e) {
+		handle.addEventListener(&quot;mousedown&quot;, function(e) {
 			active = true;
 			this.radius.style.display = 'block';
 			PreviewMouseTracking.subscribe(this.updateContainer.bind(this));
 		}.bind(this));
 
-		document.addEventListener("mouseup", function(e) {
+		document.addEventListener(&quot;mouseup&quot;, function(e) {
 			this.radius.style.display = 'none';
 			if (active === true)
 				PreviewMouseTracking.unsubscribe(this.updateContainer.bind(this));
@@ -1489,7 +1489,7 @@ var BorderRadius = (function BorderRadius() {
 		var updateUIWidth = function updateUIWidth(value) {
 			var pwidth = subject.parentElement.clientWidth;
 			var left = (pwidth - value) / 2;
-			subject.style.width = value + "px";
+			subject.style.width = value + &quot;px&quot;;
 
 			for (var i = 0; i &lt; 4; i++)
 				radius_containers[i].updateUnits(0);
@@ -1498,8 +1498,8 @@ var BorderRadius = (function BorderRadius() {
 		var updateUIHeight = function updateUIHeight(value) {
 			var pheight = subject.parentElement.clientHeight;
 			var top = (pheight - value) / 2;
-			subject.style.height = value + "px";
-			subject.style.top = top - border_width + "px";
+			subject.style.height = value + &quot;px&quot;;
+			subject.style.top = top - border_width + &quot;px&quot;;
 
 			for (var i = 0; i &lt; 4; i++)
 				radius_containers[i].updateUnits(1);
@@ -1509,18 +1509,18 @@ var BorderRadius = (function BorderRadius() {
 			var p = subject.parentElement.clientWidth;
 			var v = preview_ui.clientWidth;
 			console.log(p, v, (p - v ) / 2);
-			preview_ui.style.left = (p - v) / 2 + "px" ;
+			preview_ui.style.left = (p - v) / 2 + &quot;px&quot; ;
 		}
 
 		var updatePreviewUIHeight = function updatePreviewUIHeight() {
 			var p = subject.parentElement.clientHeight;
 			var v = preview_ui.clientHeight;
 			console.log(p, v, (p - v ) / 2);
-			preview_ui.style.top = (p - v) / 2 + "px" ;
+			preview_ui.style.top = (p - v) / 2 + &quot;px&quot; ;
 		}
 
 		var updateOutput = function updateOutput(corner, radius) {
-			var values = radius.split(" ");
+			var values = radius.split(&quot; &quot;);
 
 			borders1[corner] = values[0];
 			borders2[corner] = values[0];
@@ -1528,8 +1528,8 @@ var BorderRadius = (function BorderRadius() {
 			if (values.length === 2)
 				borders2[corner] = values[1];
 
-			var border_1_value = borders1.join(" ");
-			var border_2_value = borders2.join(" ");
+			var border_1_value = borders1.join(&quot; &quot;);
+			var border_2_value = borders2.join(&quot; &quot;);
 			var border_radius = 'border-radius: ' + border_1_value;
 
 			if (border_2_value !== border_1_value)
@@ -1540,21 +1540,21 @@ var BorderRadius = (function BorderRadius() {
 		}
 
 		var init = function init() {
-			preview = getElemById("preview");
-			subject = getElemById("subject");
-			output = getElemById("output");
-			preview_ui = getElemById("radius-ui-sliders");
+			preview = getElemById(&quot;preview&quot;);
+			subject = getElemById(&quot;subject&quot;);
+			output = getElemById(&quot;output&quot;);
+			preview_ui = getElemById(&quot;radius-ui-sliders&quot;);
 
 			var elem = document.querySelectorAll('.radius-container');
 			var size = elem.length;
 			for (var i = 0; i &lt; size; i++)
 				radius_containers[i] = new RadiusContainer(elem[i]);
 
-			InputSliderManager.subscribe("width", updateUIWidth);
-			InputSliderManager.subscribe("height", updateUIHeight);
+			InputSliderManager.subscribe(&quot;width&quot;, updateUIWidth);
+			InputSliderManager.subscribe(&quot;height&quot;, updateUIHeight);
 
-			InputSliderManager.setValue("width", subject.clientWidth);
-			InputSliderManager.setValue("height", subject.clientHeight);
+			InputSliderManager.setValue(&quot;width&quot;, subject.clientWidth);
+			InputSliderManager.setValue(&quot;height&quot;, subject.clientHeight);
 		}
 
 		return {
@@ -1570,7 +1570,7 @@ var BorderRadius = (function BorderRadius() {
 	var init = function init() {
 		ButtonManager.init();
 		InputSliderManager.init();
-		PreviewMouseTracking.init("preview");
+		PreviewMouseTracking.init(&quot;preview&quot;);
 		Tool.init();
 	}
 
@@ -1580,7 +1580,7 @@ var BorderRadius = (function BorderRadius() {
 
 })();
 
-</code></pre>
+</pre>
 </div>
 
 <div>{{ EmbedLiveSample('border-radius-generator', 700, 900) }}</div>
