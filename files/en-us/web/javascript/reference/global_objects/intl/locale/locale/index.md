@@ -55,8 +55,8 @@ property of the configuration object to your desired hour cycle type, and then p
 into the constructor:
 
 ```js
-let us12hour = new Intl.Locale("en-US", {hourCycle: "h12"});
-console.log(us12hour.hourCycle); // Prints "h12"
+let locale = new Intl.Locale("en-US", { hourCycle: "h12" });
+console.log(locale.hourCycle); // Prints "h12"
 ```
 
 ## Polyfill
