@@ -63,7 +63,7 @@ var dataArray = new Uint8Array(bufferLength);</pre>
 
 <h2 id="Creating_a_waveformoscilloscope">Creating a waveform/oscilloscope</h2>
 
-<p>To create the oscilloscope visualisation (hat tip to <a href="http://soledadpenades.com/">Soledad Penadés</a> for the original code in <a href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L123-L167">Voice-change-O-matic</a>), we first follow the standard pattern described in the previous section to set up the buffer:</p>
+<p>To create the oscilloscope visualisation (hat tip to <a href="https://soledadpenades.com/">Soledad Penadés</a> for the original code in <a href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L123-L167">Voice-change-O-matic</a>), we first follow the standard pattern described in the previous section to set up the buffer:</p>
 
 <pre class="brush: js">analyser.fftSize = 2048;
 var bufferLength = analyser.frequencyBinCount;
