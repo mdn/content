@@ -23,11 +23,18 @@ browser-compat: api.URLSearchParams.forEach
 
 <h3 id="Parameters">Parameters</h3>
 
-<dl>
-  <dt>callback</dt>
-  <dd>A callback function that is executed against each parameter, with the param value
-    provided as its parameter.</dd>
-</dl>
+- `callback`
+  - : Function to execute on each element, which is passed the following arguments:
+
+    - `value`
+      - : The value of the current entry being processed in the URLSearchParams.
+    - `key`
+      - : The key of the current entry being processed in the URLSearchParams.
+    - `searchParams`
+      - : The URLSearchParams `forEach()` was called upon.
+
+- `thisArg` {{optional_inline}}
+  - : Value to use as `this` when executing `callback`.
 
 <h3 id="Return_value">Return value</h3>
 
