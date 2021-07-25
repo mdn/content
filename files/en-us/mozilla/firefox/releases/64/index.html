@@ -124,7 +124,7 @@ tags:
 
 <ul>
  <li>The {{domxref("Window.event")}} property, added in Firefox 63 to aid with web compat issues, has been put behind a pref (<code>dom.window.event.enabled</code>) and disabled by default in release versions for now due to other issues that have been uncovered ({{bug(1493869)}}). Note that this was actually done late in the Firefox 63 release cycle, but we are mentioning it here just in case.</li>
- <li>The {{domxref("LocalMediaStream")}} interface and its <code>stop()</code> method have been removed ({{bug(1258143)}}). This method is no longer available with the deprecation of <code>LocalMediaStream</code>. See {{SectionOnPage("/en-US/docs/Web/API/MediaStreamTrack/stop", "Stopping a video stream")}} to learn how to stop an entire stream.</li>
+ <li>The <code>LocalMediaStream</code> interface and its <code>stop()</code> method have been removed ({{bug(1258143)}}). This method is no longer available with the deprecation of <code>LocalMediaStream</code>. See {{SectionOnPage("/en-US/docs/Web/API/MediaStreamTrack/stop", "Stopping a video stream")}} to learn how to stop an entire stream.</li>
  <li>The <code>AudioStreamTrack</code> and <code>VideoStreamTrack</code> interfaces have been removed, as both have been deprecated for some time ({{bug(1377146)}}). Their functionality has been merged into {{domxref("MediaStreamTrack")}}; tracks are now identified by the value of their {{domxref("MediaStreamTrack.kind", "kind")}} property, such as <code>audio</code> or <code>video</code>.</li>
 </ul>
 

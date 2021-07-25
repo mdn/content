@@ -13,7 +13,7 @@ tags:
 <p><strong>CSS selectors</strong> define the elements to which a set of CSS rules apply.</span></p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: There are no selectors or combinators to select parent items, siblings of parents, or children of parent siblings.</p>
+<p><strong>Note:</strong> There are no selectors or combinators to select parent items, siblings of parents, or children of parent siblings.</p>
 </div>
 
 <h2 id="Basic_selectors">Basic selectors</h2>
@@ -66,9 +66,9 @@ tags:
  <strong>Syntax:</strong> <code><var>A</var> ~ <var>B</var></code><br>
  <strong>Example:</strong> <code>p ~ span</code> will match all {{HTMLElement("span")}} elements that follow a {{HTMLElement("p")}}, immediately or not.</dd>
  <dt><a href="/en-US/docs/Web/CSS/Adjacent_sibling_combinator">Adjacent sibling combinator</a></dt>
- <dd>The <code>+</code> combinator selects adjacent siblings. This means that the second element directly follows the first, and both share the same parent.<br>
+ <dd>The <code>+</code> combinator matches the second element only if it <em>immediately</em> follows the first element.<br>
  <strong>Syntax:</strong> <code><var>A</var> + <var>B</var></code><br>
- <strong>Example:</strong> <code>h2 + p</code> will match all {{HTMLElement("p")}} elements that directly follow an {{HTMLElement("h2")}}.</dd>
+ <strong>Example:</strong> <code>h2 + p</code> will match all {{HTMLElement("p")}} elements that <em>immediately</em> follows {{HTMLElement("h2")}} element.</dd>
  <dt><a href="/en-US/docs/Web/CSS/Column_combinator">Column combinator</a> {{Experimental_Inline}}</dt>
  <dd>The <code>||</code> combinator selects nodes which belong to a column.<br>
  <strong>Syntax:</strong> <code><var>A</var> || <var>B</var></code><br>

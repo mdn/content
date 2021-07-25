@@ -2,15 +2,14 @@
 title: RTCPeerConnection.sctp
 slug: Web/API/RTCPeerConnection/sctp
 tags:
-- Experimental
-- Property
-- RTCPeerConnection
-- Reference
-- SCTP
-- WebRTC
+  - Property
+  - RTCPeerConnection
+  - Reference
+  - SCTP
+  - WebRTC
 browser-compat: api.RTCPeerConnection.sctp
 ---
-<p>{{APIRef("WebRTC")}}{{SeeCompatTable}}</p>
+<p>{{APIRef("WebRTC")}}</p>
 
 <p>The read-only <strong><code>sctp</code></strong> property on the
   {{domxref("RTCPeerConnection")}} interface returns an {{domxref("RTCSctpTransport")}}
@@ -37,10 +36,10 @@ browser-compat: api.RTCPeerConnection.sctp
 
 var channel = pc.createDataChannel("Mydata");
 channel.onopen = function(event) {
-  channel.send('sending a message');
+  channel.send('sending a message');
 }
 channel.onmessage = function(event) {
-  console.log(event.data);
+  console.log(event.data);
 }
 
 // Determine the largest message size that can be sent

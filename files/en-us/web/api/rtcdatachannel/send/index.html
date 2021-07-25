@@ -17,9 +17,11 @@ browser-compat: api.RTCDataChannel.send
 ---
 <div>{{APIRef("WebRTC")}}</div>
 
-<p><span class="seoSummary">The <code><strong>send()</strong></code> method of the
-    {{domxref("RTCDataChannel")}} interface sends data across the data channel to the
-    remote peer.</span> This can be done any time except during the initial process of
+<p>
+  The <code><strong>send()</strong></code> method of the
+  {{domxref("RTCDataChannel")}} interface sends data across the data channel to the
+  remote peer.
+  This can be done any time except during the initial process of
   creating the underlying transport channel. Data sent before connecting is buffered if
   possible (or an error occurs if it's not possible), and is also buffered if sent while
   the connection is closing or closed.</p>
@@ -107,5 +109,5 @@ function sendMessage(msg) {
   <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></li>
   <li>{{domxref("RTCDataChannel")}}</li>
   <li>{{domxref("RTCDataChannel.readyState")}}</li>
-  <li>{{event("close")}} event</li>
+  <li>{{DOMxRef("RTCDataChannel.close_event", "close")}} event</li>
 </ul>

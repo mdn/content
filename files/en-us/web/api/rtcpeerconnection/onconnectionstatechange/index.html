@@ -2,26 +2,28 @@
 title: RTCPeerConnection.onconnectionstatechange
 slug: Web/API/RTCPeerConnection/onconnectionstatechange
 tags:
-- API
-- Connection State
-- Event Handler
-- ICE
-- Property
-- RTCPeerConnection
-- Reference
-- WebRTC
-- onconnectionstatechange
+  - API
+  - Connection State
+  - Event Handler
+  - ICE
+  - Property
+  - RTCPeerConnection
+  - Reference
+  - WebRTC
+  - onconnectionstatechange
 browser-compat: api.RTCPeerConnection.onconnectionstatechange
 ---
 <p>{{APIRef("WebRTC")}}</p>
 
-<p><span class="seoSummary">The
-    <strong><code>RTCPeerConnection.onconnectionstatechange</code></strong> property
-    specifies an {{event("Event_handlers", "event handler")}} which is called to handle the
-    {{event("connectionstatechange")}} event when it occurs on an instance of
-    {{domxref("RTCPeerConnection")}}. This happens whenever the aggregate state of the
-    connection changes.</span> The aggregate state is a combination of the states of all
-  of the individual network transports being used by the connection.</p>
+<p>
+  The <strong><code>RTCPeerConnection.onconnectionstatechange</code></strong> property
+  specifies an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a>
+  which is called to handle the {{DOMxRef("RTCPeerConnection/connectionstatechange_event", "connectionstatechange")}} event
+  when it occurs on an instance of {{domxref("RTCPeerConnection")}}.
+  This happens whenever the aggregate state of the connection changes.
+  The aggregate state is a combination
+  of the states of all of the individual network transports
+  being used by the connection.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -30,7 +32,7 @@ browser-compat: api.RTCPeerConnection.onconnectionstatechange
 
 <h3 id="Value">Value</h3>
 
-<p>A function which is called by the browser when the {{event("connectionstatechange")}}
+<p>A function which is called by the browser when the {{DOMxRef("RTCPeerConnection/connectionstatechange_event", "connectionstatechange")}}
   event occurs on the {{domxref("RTCPeerConnection")}}. The function receives as input a
   single parameter, which is an object of type {{domxref("Event")}}. The event object
   contains no special information of note; you can look at the value of the peer
@@ -65,6 +67,6 @@ browser-compat: api.RTCPeerConnection.onconnectionstatechange
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li>The {{event("connectionstatechange")}} event and its type, {{domxref("Event")}}.
+  <li>The {{DOMxRef("RTCPeerConnection/connectionstatechange_event", "connectionstatechange")}} event and its type, {{domxref("Event")}}.
   </li>
 </ul>

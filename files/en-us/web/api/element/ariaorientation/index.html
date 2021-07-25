@@ -34,16 +34,17 @@ browser-compat: api.Element.ariaOrientation
 
 <h2 id="Examples">Examples</h2>
 
-<p>In this example the <code>aria-orientation</code> attribute on the element with an ID of <code>handle_zoomSlider</code> is set to "vertical". Using <code>ariaOrientation</code> we update the value to "horizontal".</p>
+<p>In this example the <code>aria-orientation</code> attribute on the element with an ID of <code>handle_zoomSlider</code> is set to "<code>vertical</code>". Using <code>ariaOrientation</code> we update the value to "<code>horizontal</code>".</p>
 
-<pre class="brush: html">&lt;a href="#" id="handle_zoomSlider"
+<pre class="brush: html">&lt;div id="handle_zoomSlider"
   role="slider"
   aria-orientation="vertical"
   aria-valuemin="0"
   aria-valuemax="17"
-  aria-valuenow="14" >
+  aria-valuenow="14" 
+  tabindex="0">
 &lt;span&gt;11&lt;/span&gt;
-&lt;/a&gt;</pre>
+&lt;/div&gt;</pre>
 
 <pre class="brush: js">let el = document.getElementById('handle_zoomSlider');
 console.log(el.ariaOrientation); // "vertical"

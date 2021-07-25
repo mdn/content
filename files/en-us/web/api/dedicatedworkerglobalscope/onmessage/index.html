@@ -12,7 +12,7 @@ browser-compat: api.DedicatedWorkerGlobalScope.onmessage
 ---
 <p>{{APIRef("Web Workers API")}}</p>
 
-<p>The <strong><code>onmessage</code></strong> property of the {{domxref("DedicatedWorkerGlobalScope")}} interface represents an {{event("Event_handlers", "event handler")}} to be called when the {{event("message")}} event occurs — i.e. when a message is sent to the worker using the {{domxref("Worker.postMessage")}} method.</p>
+<p>The <strong><code>onmessage</code></strong> property of the {{domxref("DedicatedWorkerGlobalScope")}} interface represents an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> to be called when the {{event("message")}} event occurs — i.e. when a message is sent to the worker using the {{domxref("Worker.postMessage")}} method.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -25,7 +25,7 @@ browser-compat: api.DedicatedWorkerGlobalScope.onmessage
 <pre class="brush: js">var myWorker = new Worker("worker.js");
 
 first.onchange = function() {
-  myWorker.postMessage([first.value,second.value]);
+  myWorker.postMessage([first.value, second.value]);
   console.log('Message posted to worker');
 }
 

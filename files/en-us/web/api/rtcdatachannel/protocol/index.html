@@ -2,8 +2,6 @@
 title: RTCDataChannel.protocol
 slug: Web/API/RTCDataChannel/protocol
 tags:
-  - Experimental
-  - NeedsExample
   - Property
   - Protocol
   - RTCDataChannel
@@ -12,12 +10,12 @@ tags:
   - WebRTC
 browser-compat: api.RTCDataChannel.protocol
 ---
-<p>{{APIRef("WebRTC")}}{{SeeCompatTable}}</p>
+<p>{{APIRef("WebRTC")}}</p>
 
 <p>The read-only <code>RTCDataChannel</code> property
-  <code><strong>protocol</strong></code> returns a {{Domxref("DOMString")}} containing the
+  <code><strong>protocol</strong></code> returns a string containing the
   name of the subprotocol in use. If no protocol was specified when the data channel was
-  created, then this property's value is "" (the empty string).</p>
+  created, then this property's value is the empty string (<code>""</code>).</p>
 
 <div class="note">
   <p>The permitted values of this property are defined by the Web site or app using the

@@ -49,7 +49,7 @@ returns a promise that resolves with a {{domxref("BackgroundFetchRegistration")}
 
 <p>A background fetch may fetch a number of files. In our example the fetch requests an MP3 and a JPEG. This enables a package of files that the user sees as one item (for example a podcast and artwork) to be downloaded at once.</p>
 
-<pre class="brush:css">navigator.serviceWorker.ready.then(async (swReg) => {
+<pre class="brush:js">navigator.serviceWorker.ready.then(async (swReg) => {
   const bgFetch = await swReg.backgroundFetch.fetch('my-fetch', ['/ep-5.mp3', 'ep-5-artwork.jpg'], {
     title: 'Episode 5: Interesting things.',
     icons: [{

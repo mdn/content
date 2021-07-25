@@ -91,13 +91,10 @@ background-size: unset;
 
 <p>Based on the intrinsic dimensions and proportions, the rendered size of the background image is computed as follows:</p>
 
-<dl>
- <dt>If both components of <code>background-size</code> are specified and are not <code>auto</code>:</dt>
- <dd>The background image is rendered at the specified size.</dd>
- <dt>If the <code>background-size</code> is <code>contain</code> or <code>cover</code>:</dt>
- <dd>While preserving its intrinsic proportions, the image is rendered at the largest size contained within, or covering, the background positioning area. If the image has no intrinsic proportions, then it's rendered at the size of the background positioning area.</dd>
- <dt>If the <code>background-size</code> is <code>auto</code> or <code>auto auto</code>:</dt>
- <dd>
+<ul>
+<li><p><strong>If both components of <code>background-size</code> are specified and are not <code>auto</code>:</strong> The background image is rendered at the specified size.</p></li>
+<li><p><strong>If the <code>background-size</code> is <code>contain</code> or <code>cover</code>:</strong> While preserving its intrinsic proportions, the image is rendered at the largest size contained within, or covering, the background positioning area. If the image has no intrinsic proportions, then it's rendered at the size of the background positioning area.</p></li>
+<li><p><strong>If the <code>background-size</code> is <code>auto</code> or <code>auto auto</code>:</strong></p>
  <ul>
   <li>If the image has both horizontal and vertical intrinsic dimensions, it's rendered at that size.</li>
   <li>If the image has no intrinsic dimensions and has no intrinsic proportions, it's rendered at the size of the background positioning area.</li>
@@ -105,18 +102,18 @@ background-size: unset;
   <li>If the image has only one intrinsic dimension and has intrinsic proportions, it's rendered at the size corresponding to that one dimension. The other dimension is computed using the specified dimension and the intrinsic proportions.</li>
   <li>If the image has only one intrinsic dimension but has no intrinsic proportions, it's rendered using the specified dimension and the other dimension of the background positioning area.</li>
  </ul>
- </dd>
- <dd>
- <div class="note"><strong>Note:</strong> SVG images have a <code><a href="/en-US/docs/Web/SVG/Attribute/preserveAspectRatio">preserveAspectRatio</a></code> attribute that defaults to the equivalent of <code>contain</code>; an explicit <code>background-size</code> causes <code>preserveAspectRatio</code> to be ignored.</div>
- </dd>
- <dt>If the <code>background-size</code> has one <code>auto</code> component and one non-<code>auto</code> component:</dt>
- <dd>
+ <div class="note">
+  <p><strong>Note:</strong> SVG images have a <code><a href="/en-US/docs/Web/SVG/Attribute/preserveAspectRatio">preserveAspectRatio</a></code> attribute that defaults to the equivalent of <code>contain</code>; an explicit <code>background-size</code> causes <code>preserveAspectRatio</code> to be ignored.</p>
+ </div>
+</li>
+
+<li><p><strong>If the <code>background-size</code> has one <code>auto</code> component and one non-<code>auto</code> component:</strong></p>
  <ul>
   <li>If the image has intrinsic proportions, it's stretched to the specified dimension. The unspecified dimension is computed using the specified dimension and the intrinsic proportions.</li>
   <li>If the image has no intrinsic proportions, it's stretched to the specified dimension. The unspecified dimension is computed using the image's corresponding intrinsic dimension, if there is one. If there is no such intrinsic dimension, it becomes the corresponding dimension of the background positioning area.</li>
  </ul>
- </dd>
-</dl>
+</li>
+</ul>
 
 <div class="note">
 <p><strong>Note:</strong> Background sizing for vector images that lack intrinsic dimensions or proportions is not yet fully implemented in all browsers. Be careful about relying on the behavior described above, and test in multiple browsers to be sure the results are acceptable.</p>

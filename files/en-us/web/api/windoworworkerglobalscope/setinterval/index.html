@@ -28,9 +28,9 @@ browser-compat: api.WindowOrWorkerGlobalScope.setInterval
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js"><em>var intervalID</em> = <em>scope</em>.setInterval(<em>func</em>, [<em>delay</em>, <em>arg1</em>, <em>arg2</em>, ...]);
-var <em>intervalID</em> = <em>scope</em>.setInterval(function[, delay]);
-<em>var intervalID</em> = <em>scope</em>.setInterval(<em>code</em>, [<em>delay]</em>);
+<pre class="brush: js"><em>var intervalID</em> = setInterval(<em>func</em>, [<em>delay</em>, <em>arg1</em>, <em>arg2</em>, ...]);
+var <em>intervalID</em> = setInterval(function[, delay]);
+<em>var intervalID</em> = setInterval(<em>code</em>, [<em>delay]</em>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -82,7 +82,7 @@ var <em>intervalID</em> = <em>scope</em>.setInterval(function[, delay]);
 
 <p>The following example demonstrates <code>setInterval()</code>'s basic syntax.</p>
 
-<pre class="brush:js">var intervalID = window.setInterval(myCallback, 500, 'Parameter 1', 'Parameter 2');
+<pre class="brush:js">var intervalID = setInterval(myCallback, 500, 'Parameter 1', 'Parameter 2');
 
 function myCallback(a, b)
 {

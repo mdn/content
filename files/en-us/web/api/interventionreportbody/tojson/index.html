@@ -1,0 +1,50 @@
+---
+title: InterventionReportBody.toJSON()
+slug: Web/API/InterventionReportBody/toJSON
+tags:
+  - API
+  - Method
+  - Reference
+  - toJSON
+  - InterventionReportBody
+browser-compat: api.InterventionReportBody.toJSON
+---
+<div>{{APIRef("Reporting API")}}</div>
+
+<p class="summary">The <strong><code>toJSON()</code></strong> method of the {{domxref("InterventionReportBody")}} interface is a <em>serializer</em>, and returns a JSON representation of the <code>InterventionReportBody</code> object.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js">InterventionReportBody.toJSON();</pre>
+
+<h3 id="Parameters">Parameters</h3>
+
+<p>None.</p>
+
+<h3 id="Returns">Return value</h3>
+
+<p>A JSON object that is the serialization of the {{domxref("InterventionReportBody")}} object.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<p>In this example we create a new {{domxref("ReportingObserver")}} to observe intervention reports, then return a JSON representation of the first entry.</p>
+
+<pre class="brush: js">let options = {
+  types: ['intervention'],
+  buffered: true
+}
+
+let observer = new ReportingObserver(function(reports, observer) {
+  let firstReport = reports[0];
+  console.log(firstReport.toJSON());
+}, options);</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<p>{{Specifications}}</p>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>
+
+

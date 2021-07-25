@@ -529,7 +529,7 @@ gl_Position = projection * model * vec4(position, 1.0);
 
 <p>So the first step in reducing the number of polygons we need to compute and render, we turn this pyramid into the viewing frustum. The two planes we'll use to chop away vertices in order to reduce the polygon count are the <strong>near clipping plane</strong> and the <strong>far clipping plane</strong>.</p>
 
-<p>In WebXR, the near and far clipping planes are defined by specifying the distance from the lens to the closest point on a plane which is perpendicular to the viewing direction. Anything closer to the lens than the near clipping plane or farther from it than the far clipping plane is removed. This results in the viewing frustum, which looks like this:</p>
+<p>In WebGL, the near and far clipping planes are defined by specifying the distance from the lens to the closest point on a plane which is perpendicular to the viewing direction. Anything closer to the lens than the near clipping plane or farther from it than the far clipping plane is removed. This results in the viewing frustum, which looks like this:</p>
 
 <img alt="A depiction of the camera's view frustum; the near and far planes have removed part of the volume, reducing the polygon count." src="cameraviewfustum.svg">
 

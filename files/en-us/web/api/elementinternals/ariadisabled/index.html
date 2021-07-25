@@ -1,0 +1,49 @@
+---
+title: ElementInternals.ariaDisabled
+slug: Web/API/ElementInternals/ariaDisabled
+tags:
+  - API
+  - Property
+  - Reference
+  - ariaDisabled
+  - AriaAttributes
+  - AriaMixin
+  - ElementInternals
+browser-compat: api.ElementInternals.ariaDisabled
+---
+<div>{{DefaultAPISidebar("DOM")}}</div>
+
+<p class="summary">The <strong><code>ariaDisabled</code></strong> property of the {{domxref("ElementInternals")}} interface reflects the value of the <code>aria-disabled</code> attribute, which indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.</p>
+
+<div class="notecard note">
+  <h4>Note:</h4>
+  <p>Setting aria attributes on <code>ElementInternals</code> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <a href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</a>.</p>
+</div>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js">let ariaDisabled = ElementInternals.ariaDisabled;
+ElementInternals.ariaDisabled = ariaDisabled;</pre>
+
+<h3>Value</h3>
+<p>A {{domxref("DOMString")}} with one of the following values:</p>
+
+<dl>
+  <dt><code>"true"</code></dt>
+  <dd>The element and all focusable descendants are disabled, but perceivable, and their values cannot be changed by the user.</dd>
+  <dt><code>"false"</code></dt>
+  <dd>The element is enabled.</dl>
+
+<h2 id="Examples">Examples</h2>
+
+<p>In this example the value of <code>ariaDisabled</code> is set to "true".</p>
+
+<pre class="brush: js">this.internals_.ariaDisabled = "true";</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+{{Specifications}}
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>

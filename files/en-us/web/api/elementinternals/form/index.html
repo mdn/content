@@ -1,0 +1,55 @@
+---
+title: ElementInternals.form
+slug: Web/API/ElementInternals/form
+tags:
+  - API
+  - Property
+  - Reference
+  - form
+  - ElementInternals
+browser-compat: api.ElementInternals.form
+---
+<div>{{DefaultAPISidebar("DOM")}}</div>
+
+<p class="summary">The <strong><code>form</code></strong> read-only property of the {{domxref("ElementInternals")}} interface returns the {{domxref("HTMLFormElement")}} associated with this element.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js">let form = ElementInternals.form;
+</pre>
+
+<h3>Value</h3>
+<p>An {{domxref("HTMLFormElement")}}.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<p>The following example shows a custom checkbox component inside a form with an ID of <code>myForm</code>. Printing <code>form.length</code> to the console, gives us the value of {{domxref("HTMLFormElement.length")}}.</p>
+
+<pre class="brush: html">&lt;form id="myForm"&gt;&lt;custom-checkbox id="join-checkbox"&gt;&lt;/custom-checkbox&gt;
+  &lt;custom-label for="custom-checkbox"&gt;Join newsletter&lt;/custom-label&gt;&lt;/form&gt;</pre>
+
+<pre class="brush: js">class CustomCheckbox extends HTMLElement {
+  static formAssociated = true;
+
+  constructor() {
+    super();
+    this.internals_ = this.attachInternals();
+  }
+
+  /* ... */
+
+  window.customElements.define("custom-checkbox", CustomCheckbox);
+})();
+
+let element = document.getElementById("custom-checkbox");
+console.log(element.internals_.form.length);</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<p>{{Specifications}}</p>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>
+
+
