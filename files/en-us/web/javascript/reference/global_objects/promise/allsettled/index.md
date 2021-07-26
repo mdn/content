@@ -60,7 +60,7 @@ reflects what value each promise was fulfilled (or rejected) with.
 
 ### Using Promise.allSettled
 
-#### {{jsxref("Promise.prototype.then()")}}
+#### {{JSxRef("Promise.then", "Promise.prototype.then()")}}
 ```js
 Promise.allSettled([
   Promise.resolve(33),
@@ -78,7 +78,7 @@ Promise.allSettled([
 // ]
 ```
 
-#### {{jsxref("await")}}
+#### {{jsxref("Operators/await", "await")}}
 ```js
 const values = await Promise.allSettled([
   Promise.resolve(33),
