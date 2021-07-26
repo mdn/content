@@ -118,7 +118,7 @@ const searchParams3 = new URLSearchParams(url.search);
 searchParams3.has('query') // true
 
 const base64 = btoa(String.fromCharCode(19,224,23,64,31,128)); // base64 is "E+AXQB+A"
-const searchParams = new URLSearchParams('q=foo&bin='" + base64); // q=foo&bin=E+AXQB+A
+const searchParams = new URLSearchParams('q=foo&bin=' + base64); // q=foo&bin=E+AXQB+A
 const getBin = searchParams.get('bin'); // "E AXQB A" + char is replaced by spaces
 btoa(atob(getBin)); // "EAXQBA==" no error thrown
 btoa(String.fromCharCode(16,5,208,4)) // "EAXQBA==" decodes to wrong binary value
