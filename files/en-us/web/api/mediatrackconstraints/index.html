@@ -30,7 +30,18 @@ browser-compat: api.MediaTrackConstraints
 
 <h3 id="ConstrainDouble">ConstrainDouble</h3>
 
-<p>To be written...</p>
+<p>The <code>ConstrainDouble</code> constraint type is used to specify a constraint for a property whose value is a double-precision floating-point number.  Its value may either be set to a number or an object containing the following properties:</p>
+
+<dl>
+  <dt><code>max</code></dt>
+   <dd>A floating-point value specifying the largest permissible value of the property it describes.</dd>
+   <dt><code>min</code></dt>
+   <dd>A floating-point value specifying the smallest permissible value of the property it describes.</dd>
+  <dt><code>exact</code></dt>
+  <dd>A double-precision floating-point number specifying a specific, required, value the property must have to be considered acceptable.</dd>
+  <dt><code>ideal</code></dt>
+  <dd>A double-precision floating-point number specifying a value the property would ideally have, but which can be considered optional if necessary to find a match.</dd>
+</dl>
 
 <h2 id="Properties">Properties</h2>
 
