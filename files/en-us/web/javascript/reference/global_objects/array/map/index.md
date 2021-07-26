@@ -111,6 +111,8 @@ Due to the algorithm defined in the specification, if the array which `map`
 was called upon is sparse, resulting array will also be sparse keeping same indices
 blank.
 
+**Warning:** Concurrent modification of the kind described in the previous paragraph frequently leads to hard-to-understand code and is generally to be avoided (except in special cases).
+
 ## Polyfill
 
 `map` was added to the ECMA-262 standard in the 5th edition. Therefore, it
