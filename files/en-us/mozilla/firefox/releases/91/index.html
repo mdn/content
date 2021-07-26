@@ -44,6 +44,10 @@ tags:
 
 <h3 id="HTTP">HTTP</h3>
 
+<ul>
+  <li>The <a href="/en-US/docs/Web/API/Gamepad_API">Gamepad API</a> now requires a <a href="/en-US/docs/Web/Security/Secure_Contexts">secure context</a> ({{bug(1704005)}}).</li>
+</ul>
+
 <h4 id="removals_http">Removals</h4>
 
 <h3 id="Security">Security</h3>
@@ -53,6 +57,11 @@ tags:
 <h3 id="APIs">APIs</h3>
 
 <h4 id="DOM">DOM</h4>
+
+<ul>
+  <li>The <a href="/en-US/docs/Web/API/Gamepad_API">Gamepad API</a> is now protected by {{httpheader('Feature-Policy/gamepad','Feature-Policy: gamepad')}}. If disallowed by the <a href="/en-US/docs/Web/HTTP/Feature_Policy">feature policy</a>, calls to {{domxref('Navigator.getGamepads()')}} will throw a <code>SecurityError</code> {{domxref('DOMException')}}, and the {{event("gamepadconnected")}} and {{event("gamepaddisconnected")}} events will not fire ({{bug(1704005)}}).</li>
+</ul>
+
 
 <h4 id="Media_WebRTC_and_Web_Audio">Media, WebRTC, and Web Audio</h4>
 
