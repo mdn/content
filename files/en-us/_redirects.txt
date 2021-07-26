@@ -1755,7 +1755,6 @@
 /en-US/docs/DOM/TouchEvent.targetTouches	/en-US/docs/Web/API/TouchEvent/targetTouches
 /en-US/docs/DOM/TouchEvent.touches	/en-US/docs/Web/API/TouchEvent/touches
 /en-US/docs/DOM/TouchList	/en-US/docs/Web/API/TouchList
-/en-US/docs/DOM/TouchList.identifiedTouch	/en-US/docs/Web/API/TouchList/identifiedTouch
 /en-US/docs/DOM/TouchList.item	/en-US/docs/Web/API/TouchList/item
 /en-US/docs/DOM/TouchList.length	/en-US/docs/Web/API/TouchList/length
 /en-US/docs/DOM/Touch_events	/en-US/docs/Web/API/Touch_events
@@ -3090,7 +3089,6 @@
 /en-US/docs/Document_Object_Model_(DOM)/TouchEvent.targetTouches	/en-US/docs/Web/API/TouchEvent/targetTouches
 /en-US/docs/Document_Object_Model_(DOM)/TouchEvent.touches	/en-US/docs/Web/API/TouchEvent/touches
 /en-US/docs/Document_Object_Model_(DOM)/TouchList	/en-US/docs/Web/API/TouchList
-/en-US/docs/Document_Object_Model_(DOM)/TouchList.identifiedTouch	/en-US/docs/Web/API/TouchList/identifiedTouch
 /en-US/docs/Document_Object_Model_(DOM)/TouchList.item	/en-US/docs/Web/API/TouchList/item
 /en-US/docs/Document_Object_Model_(DOM)/TouchList.length	/en-US/docs/Web/API/TouchList/length
 /en-US/docs/Document_Object_Model_(DOM)/Touch_events	/en-US/docs/Web/API/Touch_events
@@ -8643,7 +8641,6 @@
 /en-US/docs/Web/API/TouchEvent.targetTouches	/en-US/docs/Web/API/TouchEvent/targetTouches
 /en-US/docs/Web/API/TouchEvent.touches	/en-US/docs/Web/API/TouchEvent/touches
 /en-US/docs/Web/API/TouchEvent/TouchEvent()	/en-US/docs/Web/API/TouchEvent/TouchEvent
-/en-US/docs/Web/API/TouchList.identifiedTouch	/en-US/docs/Web/API/TouchList/identifiedTouch
 /en-US/docs/Web/API/TouchList.item	/en-US/docs/Web/API/TouchList/item
 /en-US/docs/Web/API/TouchList.length	/en-US/docs/Web/API/TouchList/length
 /en-US/docs/Web/API/TrackDefaultList/TrackDefault	/en-US/docs/Web/API/TrackDefaultList

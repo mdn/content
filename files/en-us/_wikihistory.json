@@ -81597,20 +81597,6 @@
       "jtyjty99999"
     ]
   },
-  "Web/API/TouchList/identifiedTouch": {
-    "modified": "2020-10-15T21:07:43.096Z",
-    "contributors": [
-      "bershanskiy",
-      "mfluehr",
-      "fscholz",
-      "coagmano",
-      "Sheppy",
-      "AFBarstow",
-      "MattBrubeck",
-      "jsx",
-      "kscarfone"
-    ]
-  },
   "Web/API/TouchList/item": {
     "modified": "2020-10-15T21:11:11.901Z",
     "contributors": [
