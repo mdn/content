@@ -20,8 +20,7 @@ tags:
 
 <p>My mark-up is a container with elements inside for a header, footer, main content, navigation, sidebar, and a block into which I am intending to place advertising.</p>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
   .wrapper {
     max-width: 1024px;
     margin: 0 auto;
@@ -41,7 +40,6 @@ tags:
     padding: 0;
   }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;header class="main-head"&gt;The header&lt;/header&gt;
@@ -148,8 +146,7 @@ tags:
 
 <p>If you have been working with one of the many frameworks or grid systems you may be accustomed to laying out your site on a 12- or 16-column flexible grid. We can create this type of system using CSS Grid Layout. As a simple example, I am creating a 12-column flexible grid that has 12 <code>1fr</code>-unit column tracks, they all have a start line named <code>col-start</code>. This means that we will have twelve grid lines named <code>col-start</code>.</p>
 
-<div class="hidden">
-<pre class="brush: css">.wrapper {
+<pre class="brush: css hidden">.wrapper {
   max-width: 1024px;
   margin: 0 auto;
   font: 1.2em Helvetica, arial, sans-serif;
@@ -161,7 +158,6 @@ tags:
   padding: 10px;
 }
 </pre>
-</div>
 
 <pre class="brush: css">.wrapper {
   display: grid;
@@ -213,8 +209,7 @@ tags:
 
 <p>To see how this layout method works in practice, we can create the same layout that we created with {{cssxref("grid-template-areas")}}, this time using the 12-column grid system. I am starting with the same markup as used for the grid template areas example.</p>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
   .wrapper {
     max-width: 1024px;
     margin: 0 auto;
@@ -234,7 +229,6 @@ tags:
     padding: 0;
   }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;header class="main-head"&gt;The header&lt;/header&gt;
@@ -390,8 +384,7 @@ tags:
 &lt;/ul&gt;
 </pre>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
     img {max-width: 100%; display: block;}
     body {
         font: 1.2em Helvetica, arial, sans-serif;
@@ -409,7 +402,6 @@ tags:
       padding: 20px;
     }
 </pre>
-</div>
 
 <p>We are going to create a grid with a flexible number of flexible columns. I want them never to become smaller than 200 pixels, and then to share any available remaining space equally – so we always get equal width column tracks. We achieve this with the <code>minmax()</code> function in our repeat notation for track sizing.</p>
 
@@ -455,8 +447,7 @@ tags:
 
 <p>I can cause a grid to backfill those gaps by setting {{cssxref("grid-auto-flow")}}<code>: dense </code> on the grid container. Take care when doing this however as it does take items away from their logical source order. You should only do this if your items do not have a set order – and be aware of the <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility#visual_not_logical_re-ordering">issues</a> of the tab order following the source and not your reordered display.</p>
 
-<div class="hidden">
-<pre class="brush: html">&lt;ul class="listing"&gt;
+<pre class="brush: html hidden">&lt;ul class="listing"&gt;
   &lt;li&gt;
     &lt;h2&gt;Item One&lt;/h2&gt;
     &lt;div class="body"&gt;&lt;p&gt;The content of this listing item goes here.&lt;/p&gt;&lt;/div&gt;
@@ -488,7 +479,7 @@ tags:
 &lt;/ul&gt;
 </pre>
 
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
     img {max-width: 100%; display: block;}
     body {
         font: 1.2em Helvetica, arial, sans-serif;
@@ -522,7 +513,6 @@ tags:
   padding: 10px;
 }
 </pre>
-</div>
 
 <pre class="brush: css">.listing {
   list-style: none;

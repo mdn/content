@@ -14,8 +14,7 @@ tags:
 
 <p>You can assign some or all of the lines in your grid a name when you define your grid with the <code>grid-template-rows</code> and <code>grid-template-columns</code> properties. To demonstrate I’ll use the simple layout created in the guide on line-based placement. This time I’ll create the grid using named lines.</p>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -31,7 +30,6 @@ tags:
   color: #d9480f;
 }
 </pre>
-</div>
 
 <p>When defining the grid, I name my lines inside square brackets. Those names can be anything you like. I have defined a name for the start and end of the container, both for rows and columns. Then defined the centre block of the grid as <code>content-start</code> and <code>content-end</code> again, both for columns and rows although you do not need to name all of the lines on your grid. You might choose to name just some key lines for your layout.</p>
 
@@ -90,8 +88,7 @@ tags:
 
 <p>While you can choose any name, if you append <code>-start</code> and <code>-end</code> to the lines around an area, as I have in the example above, grid will create you a named area of the main name used. Taking the above example, I have <code>content-start</code> and <code>content-end</code> both for rows and for columns. This means I get a grid area named <code>content</code>, and could place something in that area should I wish to.</p>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -107,7 +104,6 @@ tags:
   color: #d9480f;
 }
 </pre>
-</div>
 
 <p>I’m using the same grid definitions as above, however this time I am going to place a single item into the named area <code>content</code>.</p>
 
@@ -162,8 +158,7 @@ tags:
 
 <p>To position <code>overlay</code> using these implicit named lines is the same as positioning an item using lines that we have named.</p>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -179,7 +174,6 @@ tags:
   color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: css">.wrapper {
   display: grid;
@@ -239,8 +233,7 @@ tags:
 
 <p>In this next example I am creating a grid with twelve equal width columns. Before defining the 1fr size of the column track I am also defining a line name of <code>[col-start]</code>. This means that we will end up with a grid that has 12 column lines all named <code>col-start</code> before a <code>1fr</code> width column.</p>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -256,7 +249,6 @@ tags:
   color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: css">.wrapper {
   display: grid;
@@ -315,8 +307,7 @@ tags:
 
 <p>If you have used a track list then you can use the <code>span</code> keyword not just to span a number of lines but also to span a number of lines of a certain name.</p>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -332,7 +323,6 @@ tags:
   color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: css">.wrapper {
   display: grid;
@@ -372,8 +362,7 @@ tags:
 
 <p>We can then use that framework to layout our page. For example, to create a three column layout with a header and footer, I might have the following markup.</p>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -389,7 +378,6 @@ tags:
   color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;header class="main-header"&gt;I am the header&lt;/header&gt;

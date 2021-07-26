@@ -49,8 +49,7 @@ tags:
  <li><code>last baseline</code></li>
 </ul>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -66,7 +65,6 @@ tags:
     color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: css">.wrapper {
   display: grid;
@@ -112,8 +110,7 @@ tags:
 
 <p>In this next example, I am using the <code>align-self</code> property, to demonstrate the different alignment values. The first area, is showing the default behavior of <code>align-self</code>, which is to stretch. The second item, has an <code>align-self</code> value of <code>start</code>, the third <code>end</code> and the fourth <code>center</code>.</p>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -129,7 +126,6 @@ tags:
     color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: css">.wrapper {
   display: grid;
@@ -195,8 +191,7 @@ tags:
 
 <p>Once again the default is <code>stretch</code>, other than for items with an intrinsic aspect ratio. This means that by default, grid items will cover their grid area, unless you change that by setting alignment. The first item in the example demonstrates this default alignment:</p>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -212,7 +207,6 @@ tags:
     color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: css">.wrapper {
   display: grid;
@@ -266,8 +260,7 @@ tags:
 
 <p>By combining the align and justify properties we can easily center an item inside a grid area.</p>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -283,7 +276,6 @@ tags:
     color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: css">.wrapper {
   display: grid;
@@ -334,7 +326,6 @@ tags:
 
 <p>The default behavior in grid layout is <code>start</code>, which is why our grid tracks are in the top left corner of the grid, aligned against the start grid lines:</p>
 
-<div class="hidden">
 <pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
@@ -393,8 +384,7 @@ tags:
 
 <p>If I add <code>align-content</code> to my container, with a value of <code>end</code>, the tracks all move to the end line of the grid container in the block dimension:</p>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -410,7 +400,6 @@ tags:
     color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: css">.wrapper {
   display: grid;
@@ -453,8 +442,7 @@ tags:
 
 <p>We can also use values for this property that you may be familiar with from flexbox; the space distribution values of <code>space-between</code>, <code>space-around</code> and <code>space-evenly</code>. If we update {{cssxref("align-content")}} to <code>space-between</code>, you can see how the elements on our grid space out:</p>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -470,7 +458,6 @@ tags:
     color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: css">.wrapper {
   display: grid;
@@ -521,8 +508,7 @@ tags:
 
 <p>Using the same example, I am setting {{cssxref("justify-content")}} to <code>space-around</code>. This once again causes tracks which span more than one column track to gain extra space:</p>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -538,7 +524,6 @@ tags:
     color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: css">.wrapper {
   display: grid;
@@ -584,8 +569,7 @@ tags:
 
 <p>In this next example, I have given item 1 a left margin of <code>auto</code>. You can see how the content is now pushed over to the right side of the area, as the auto margin takes up remaining space, after room for the content of that item has been assigned:</p>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -601,7 +585,6 @@ tags:
     color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: css">.wrapper {
   display: grid;
