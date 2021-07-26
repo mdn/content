@@ -116,8 +116,7 @@ animation-timing-function: unset;
 <div>
 <h3 id="Cubic-Bezier_examples">Cubic-Bezier examples</h3>
 
-<div class="hidden">
-<pre class="brush:html">&lt;div class="parent"&gt;
+<pre class="brush:html hidden">&lt;div class="parent"&gt;
   &lt;div class="ease"&gt;ease&lt;/div&gt;
   &lt;div class="easein"&gt;ease-in&lt;/div&gt;
   &lt;div class="easeout"&gt;ease-out&lt;/div&gt;
@@ -126,7 +125,7 @@ animation-timing-function: unset;
   &lt;div class="cb"&gt;cubic-bezier(0.2,-2,0.8,2)&lt;/div&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush:css;">.parent &gt; div[class] {
+<pre class="brush:css hidden">.parent &gt; div[class] {
     animation-name: changeme;
     animation-duration: 10s;
     animation-iteration-count: infinite;
@@ -149,7 +148,6 @@ animation-timing-function: unset;
    }
 }
 </pre>
-</div>
 
 <pre class="brush: css">.ease {
    animation-timing-function: ease;
@@ -176,8 +174,7 @@ animation-timing-function: unset;
 <div>
 <h3 id="Step_examples">Step examples</h3>
 
-<div class="hidden">
-<pre class="brush:html">&lt;div class="parent"&gt;
+<pre class="brush:html hidden">&lt;div class="parent"&gt;
   &lt;div class="jump-start"&gt;jump-start&lt;/div&gt;
   &lt;div class="jump-end"&gt;jump-end&lt;/div&gt;
   &lt;div class="jump-both"&gt;jump-both&lt;/div&gt;
@@ -188,7 +185,7 @@ animation-timing-function: unset;
   &lt;div class="step-end"&gt;step-end&lt;/div&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush:css;">.parent &gt; div[class] {
+<pre class="brush:css hidden">.parent &gt; div[class] {
     animation-name: changeme;
     animation-duration: 10s;
     animation-iteration-count: infinite;
@@ -211,7 +208,6 @@ animation-timing-function: unset;
    }
 }
 </pre>
-</div>
 
 <pre class="brush: css">.jump-start {
    animation-timing-function: steps(5, jump-start);
