@@ -100,7 +100,7 @@ tags:
 
 <h3 id="Styling_some_links">Styling some links</h3>
 
-<p>Now we've looked at the default states in some detail, let's look at a typical set of link styles.</p>
+<p>Now that we've looked at the default states in some detail, let's look at a typical set of link styles.</p>
 
 <p>To start off with, we'll write out our empty rulesets:</p>
 
@@ -128,7 +128,7 @@ a:active {
 
 }</pre>
 
-<p>This order is important because the link styles build on one another, for example the styles in the first rule will apply to all the subsequent ones, and when a link is being activated, it is usually also being hovered over. If you put these in the wrong order, and you're changing the same properties in each ruleset, things won't work as you expect. To remember the order, you could try using a mnemonic like <strong>L</strong>o<strong>V</strong>e <strong>F</strong>ears <strong>HA</strong>te.</p>
+<p>This order is important because link styles build on one another. For example, the styles in the first rule will apply to all the subsequent ones. When a link is activated, it's usually also hovered over. If you put these in the wrong order, and you're changing the same properties in each ruleset, things won't work as you expect. To remember the order, you could try using a mnemonic like <strong>L</strong>o<strong>V</strong>e <strong>F</strong>ears <strong>HA</strong>te.</p>
 
 <p>Now let's add some more information to get this styled properly:</p>
 
@@ -190,7 +190,7 @@ Firefox&lt;/a&gt;, &lt;a href="#"&gt;Google Chrome&lt;/a&gt;, and
  <li>Next, we use the <code>a:link</code> and <code>a:visited</code> selectors to set a couple of color variations on unvisited and visited links, so they are distinct.</li>
  <li>The next two rules use <code>a:focus</code> and <code>a:hover</code> to set focused and hovered links to have different background colors, plus an underline to make the link stand out even more. Two points to note here are:
   <ul>
-   <li>The underline has been created using {{cssxref("border-bottom")}}, not {{cssxref("text-decoration")}} — some people prefer this because the former has better styling options than the latter, and is drawn a bit lower, so doesn't cut across the descenders of the word being underlined (e.g. the tails on g and y).</li>
+   <li>The underline has been created using {{cssxref("border-bottom")}}, not {{cssxref("text-decoration")}} — some people prefer this because the former has better styling options than the latter. It's also drawn a bit lower so it doesn't cut across the descenders of the word being underlined (e.g., the tails on g and y).</li>
    <li>The {{cssxref("border-bottom")}} value has been set as <code>1px solid</code>, with no color specified. Doing this makes the border adopt the same color as the element's text, which is useful in cases like this where the text is a different color in each case.</li>
   </ul>
  </li>
