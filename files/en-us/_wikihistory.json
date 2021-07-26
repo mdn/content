@@ -84192,14 +84192,6 @@
       "fscholz"
     ]
   },
-  "Web/API/WEBGL_compressed_texture_atc": {
-    "modified": "2020-10-15T21:43:40.739Z",
-    "contributors": [
-      "fscholz",
-      "nmve",
-      "teoli"
-    ]
-  },
   "Web/API/WEBGL_compressed_texture_etc": {
     "modified": "2020-10-15T21:43:38.248Z",
     "contributors": [
