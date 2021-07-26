@@ -18,7 +18,7 @@ browser-compat: api.WindowOrWorkerGlobalScope.clearTimeout
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js"><em>scope</em>.clearTimeout(<em>timeoutID</em>)
+<pre class="brush: js">clearTimeout(<em>timeoutID</em>)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -53,13 +53,13 @@ browser-compat: api.WindowOrWorkerGlobalScope.clearTimeout
       this.cancel();
     }
 
-    this.timeoutID = window.setTimeout(function(msg) {
+    this.timeoutID = setTimeout(function(msg) {
       this.remind(msg);
     }.bind(this), 1000, 'Wake up!');
   },
 
   cancel: function() {
-    window.clearTimeout(this.timeoutID);
+    clearTimeout(this.timeoutID);
   }
 };
 window.onclick = function() { alarm.setup(); };
@@ -72,30 +72,7 @@ window.onclick = function() { alarm.setup(); };
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', 'webappapis.html#dom-cleartimeout',
-        'WindowOrWorkerGlobalScope.clearTimeout()')}}</td>
-      <td>{{Spec2("HTML WHATWG")}}</td>
-      <td>Method moved to the <code>WindowOrWorkerGlobalScope</code> mixin in the latest
-        spec.</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', 'webappapis.html#dom-cleartimeout',
-        'clearTimeout()')}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

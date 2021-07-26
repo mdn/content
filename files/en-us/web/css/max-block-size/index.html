@@ -29,7 +29,6 @@ browser-compat: css.properties.max-block-size
 
 <div>{{EmbedInteractiveExample("pages/css/max-block-size.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -49,6 +48,7 @@ max-block-size: fit-content(20em);
 /* Global values */
 max-block-size: inherit;
 max-block-size: initial;
+max-block-size: revert;
 max-block-size: unset;
 </pre>
 
@@ -82,11 +82,11 @@ max-block-size: unset;
 </table>
 
 <div class="note">
-<p>The <code>writing-mode</code> values <code>sideways-lr</code> and <code>sideways-rl</code> were removed from the CSS Writing Modes Level 3 specification late in its design process. They may be restored in Level 4.</p>
+<p><strong>Note:</strong> The <code>writing-mode</code> values <code>sideways-lr</code> and <code>sideways-rl</code> were removed from the CSS Writing Modes Level 3 specification late in its design process. They may be restored in Level 4.</p>
 </div>
 
 <div class="note">
-<p>The writing modes <code>lr</code>, <code>lr-tb</code>, <code>rl</code>, <code>rb</code>, and <code>rb-tl</code> are no longer allowed in {{Glossary("HTML")}} contexts; they may only be used in {{Glossary("SVG")}} 1.x contexts.</p>
+<p><strong>Note:</strong> The writing modes <code>lr</code>, <code>lr-tb</code>, <code>rl</code>, <code>rb</code>, and <code>rb-tl</code> are no longer allowed in {{Glossary("HTML")}} contexts; they may only be used in {{Glossary("SVG")}} 1.x contexts.</p>
 </div>
 
 <h2 id="Formal_definition">Formal definition</h2>
@@ -161,22 +161,7 @@ max-block-size: unset;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Logical Properties", "#propdef-max-block-size", "max-block-size")}}</td>
-   <td>{{Spec2("CSS Logical Properties")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

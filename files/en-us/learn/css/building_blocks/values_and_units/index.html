@@ -37,11 +37,11 @@ tags:
 <p>In CSS specifications and on the property pages here on MDN you will be able to spot value types as they will be surrounded by angle brackets, such as <code><a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a></code> or <code><a href="/en-US/docs/Web/CSS/length">&lt;length&gt;</a></code>. When you see the value type <code>&lt;color&gt;</code> as valid for a particular property, that means you can use any valid color as a value for that property, as listed on the <code><a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a></code> reference page.</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: You'll also see CSS values referred to as <em>data types</em>. The terms are basically interchangeable — when you see something in CSS referred to as a data type, it is really just a fancy way of saying value type. The term <em>value</em> refers to any particular expression supported by a value type that you choose to use.</p>
+<p><strong>Note</strong>: You'll also see CSS value types referred to as <em>data types</em>. The terms are basically interchangeable — when you see something in CSS referred to as a data type, it is really just a fancy way of saying value type. The term <em>value</em> refers to any particular expression supported by a value type that you choose to use.</p>
 </div>
 
 <div class="notecard note">
-<p><strong>Note</strong>: Yes, CSS value types tend to be denoted using angle brackets, to differentiate them from CSS properties (e.g. the {{cssxref("color")}} property, versus the <a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a> data type). You might get confused between CSS data types and HTML elements too, as they both use angle brackets, but this is unlikely — they are used in very different contexts.</p>
+<p><strong>Note</strong>: Yes, CSS value types tend to be denoted using angle brackets to differentiate them from CSS properties (e.g., the {{cssxref("color")}} property, versus the <a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a> data type). You might get confused between CSS data types and HTML elements too, as they both use angle brackets, but this is unlikely — they are used in very different contexts.</p>
 </div>
 
 <p>In the following example, we have set the color of our heading using a keyword, and the background using the <code>rgb()</code> function:</p>
@@ -52,7 +52,7 @@ tags:
 }
 </pre>
 
-<p>A value type in CSS is a way to define a collection of allowable values. This means that if you see <code>&lt;color&gt;</code> as valid you don't need to wonder which of the different types of color value can be used — keywords, hex values, <code>rgb()</code> functions, etc. You can use <em>any</em> available <code>&lt;color&gt;</code> values, assuming they are supported by your browser. The page on MDN for each value will give you information about browser support. For example, if you look at the page for <code><a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a></code> you will see that the browser compatibility section lists different types of color value and support for them.</p>
+<p>A value type in CSS is a way to define a collection of allowable values. This means that if you see <code>&lt;color&gt;</code> as valid you don't need to wonder which of the different types of color value can be used — keywords, hex values, <code>rgb()</code> functions, etc. You can use <em>any</em> available <code>&lt;color&gt;</code> values, assuming they are supported by your browser. The page on MDN for each value will give you information about browser support. For example, if you look at the page for <code><a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a></code> you will see that the browser compatibility section lists different types of color values and support for them.</p>
 
 <p>Let's have a look at some of the types of values and units you may frequently encounter, with examples so that you can try out different possible values.</p>
 
@@ -300,7 +300,8 @@ tags:
 <p><strong>In this example, try changing the alpha channel values to see how it affects the color output. </strong></p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: At some point modern browsers were updated so that <code>rgba()</code> and <code>rgb()</code>, and <code>hsl()</code> and <code>hsla()</code> (see below), became pure aliases of each other and started to behave exactly the same. So for example both <code>rgba()</code> and <code>rgb()</code> accept colors with and without alpha channel values. Try changing the above example's <code>rgba()</code> functions to <code>rgb()</code> and see if the colors still work! Which style you use is up to you, but separating out non-transparent and transparent color definitions to use the different functions gives (very) slightly better browser support and can act as a visual indicator of where transparent colors are being defined in your code.</p>
+<h4>Note:</h4>
+<p>As of CSS Colors Level 4, <code>rgba()</code> is an alias for <code>rgb()</code> and <code>hsla()</code> is an alias for <code>hsl()</code> (see below).In browsers that implement the Level 4 standard, they accept the same parameters and behave the same way. So for example both <code>rgba()</code> and <code>rgb()</code> accept colors with and without alpha channel values. Try changing the above example's <code>rgba()</code> functions to <code>rgb()</code> and see if the colors still work! Which style you use is up to you, but separating out non-transparent and transparent color definitions to use the different functions gives (very) slightly better browser support and can act as a visual indicator of where transparent colors are being defined in your code.</p>
 </div>
 
 <h3 id="HSL_and_HSLA_values">HSL and HSLA values</h3>

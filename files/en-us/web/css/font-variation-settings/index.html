@@ -15,7 +15,6 @@ browser-compat: css.properties.font-variation-settings
 
 <div>{{EmbedInteractiveExample("pages/css/font-variation-settings.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -28,6 +27,7 @@ font-variation-settings: "XHGT" 0.7;
 /* Global values */
 font-variation-settings: inherit;
 font-variation-settings: initial;
+font-variation-settings: revert;
 font-variation-settings: unset;
 </pre>
 
@@ -92,7 +92,7 @@ font-variation-settings: unset;
 <p>Custom axes can be anything the font designer wants to vary in their font, for example ascender or descender heights, the size of serifs, or anything else they can imagine. Any axis can be used as long as it is given a unique 4-character axis. Some will end up becoming more common, and may even become registered over time.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Registered axis tags are identified using lower-case tags, whereas custom axes should be given upper-case tags. Note that font designers aren't forced follow this practice in any way, and some won't. The important takeaway here is that axis tags are case-sensitive.</p>
+<p><strong>Note:</strong> Registered axis tags are identified using lower-case tags, whereas custom axes should be given upper-case tags. Note that font designers aren't forced follow this practice in any way, and some won't. The important takeaway here is that axis tags are case-sensitive.</p>
 </div>
 
 <p>In order to use variable fonts on your operating system, you need to make sure that it is up to date. For example Linux OSes need the latest Linux Freetype version, and macOS prior to 10.13 does not support variable fonts. If your operating system is not up to date, you will not be able to use variable fonts in web pages or the Firefox Developer Tools.</p>
@@ -123,22 +123,7 @@ font-variation-settings: unset;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Fonts', '#descdef-font-face-font-variation-settings', 'font-variation-settings')}}</td>
-   <td>{{Spec2('CSS4 Fonts')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

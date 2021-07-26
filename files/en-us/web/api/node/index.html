@@ -2,23 +2,22 @@
 title: Node
 slug: Web/API/Node
 tags:
-- API
-- DOM
-- Document
-- Element
-- Interface
-- Node
-- Reference
-- Structure
-- hierarchy
+  - API
+  - DOM
+  - Document
+  - Element
+  - Interface
+  - Node
+  - Reference
+  - Structure
+  - hierarchy
 browser-compat: api.Node
 ---
 <p>{{APIRef("DOM")}}</p>
 
-<p><span class="seoSummary">The
-    {{Glossary("DOM")}} <strong><code>Node</code></strong> interface is an abstract base
+<p>The {{Glossary("DOM")}} <strong><code>Node</code></strong> interface is an abstract base
     class upon which many other DOM API objects are based, thus letting those object types
-    to be used similarly and often interchangeably.</span> As an abstract class, there is
+    to be used similarly and often interchangeably. As an abstract class, there is
   no such thing as a plain <code>Node</code> object. All objects that implement
   <code>Node</code> functionality are based on one of its subclasses. Most notable are
   {{domxref("Document")}}, {{domxref("Element")}}, and {{domxref("DocumentFragment")}}.
@@ -27,12 +26,11 @@ browser-compat: api.Node
 <p>In addition, every kind of DOM node is represented by an interface based on
   <code>Node</code>. These include {{DOMxRef("Attr")}}, {{DOMxRef("CharacterData")}}
   (which {{DOMxRef("Text")}}, {{DOMxRef("Comment")}}, {{DOMxRef("CDATASection")}} and
-  {{DOMxRef("ProcessingInstruction")}} are all based on), {{DOMxRef("DocumentType")}},
-  {{DOMxRef("Notation")}}, {{DOMxRef("Entity")}}, and {{DOMxRef("EntityReference")}}.</p>
+  {{DOMxRef("ProcessingInstruction")}} are all based on), and {{DOMxRef("DocumentType")}}.</p>
 
 <p>In some cases, a particular feature of the base <code>Node</code> interface may not
-  apply to one of its child interfaces; in that case, the inheriting node may
-  return <code>null</code> or throw an exception, depending on circumstances. For example,
+  apply to one of its child interfaces; in that case, the inheriting node may
+  return <code>null</code> or throw an exception, depending on circumstances. For example,
   attempting to add children to a node type that cannot have children will throw an
   exception.</p>
 
@@ -88,7 +86,7 @@ browser-compat: api.Node
           <td><code>1</code></td>
         </tr>
         <tr>
-          <td><code>ATTRIBUTE_NODE</code> {{Deprecated_Inline}}</td>
+          <td><code>ATTRIBUTE_NODE</code> {{Deprecated_Inline}}</td>
           <td><code>2</code></td>
         </tr>
         <tr>
@@ -100,11 +98,11 @@ browser-compat: api.Node
           <td><code>4</code></td>
         </tr>
         <tr>
-          <td><code>ENTITY_REFERENCE_NODE</code> {{Deprecated_Inline}}</td>
+          <td><code>ENTITY_REFERENCE_NODE</code> {{Deprecated_Inline}}</td>
           <td><code>5</code></td>
         </tr>
         <tr>
-          <td><code>ENTITY_NODE</code> {{Deprecated_Inline}}</td>
+          <td><code>ENTITY_NODE</code> {{Deprecated_Inline}}</td>
           <td><code>6</code></td>
         </tr>
         <tr>
@@ -128,7 +126,7 @@ browser-compat: api.Node
           <td><code>11</code></td>
         </tr>
         <tr>
-          <td><code>NOTATION_NODE</code> {{Deprecated_Inline}}</td>
+          <td><code>NOTATION_NODE</code> {{Deprecated_Inline}}</td>
           <td><code>12</code></td>
         </tr>
       </tbody>
@@ -172,23 +170,23 @@ browser-compat: api.Node
   <dd>Compares the position of the current node against another node in any other
     document.</dd>
   <dt>{{DOMxRef("Node.contains()")}}</dt>
-  <dd>Returns a {{jsxref("Boolean")}} value indicating whether or not a node is a
+  <dd>Returns <code>true</code> or <code>false</code> value indicating whether or not a node is a
     descendant of the calling node.</dd>
   <dt>{{domxref("Node.getBoxQuads()")}} {{experimental_inline}}</dt>
   <dd>Returns a list of the node's CSS boxes relative to another node.</dd>
   <dt>{{DOMxRef("Node.getRootNode()")}}</dt>
   <dd>Returns the context object's root which optionally includes the shadow root if it is
-    available. </dd>
+    available.</dd>
   <dt>{{DOMxRef("Node.hasChildNodes()")}}</dt>
   <dd>Returns a {{jsxref("Boolean")}} indicating whether or not the element has any child
     nodes.</dd>
   <dt>{{DOMxRef("Node.insertBefore()")}}</dt>
-  <dd>Inserts a {{DOMxRef("Node")}} before the reference node as a child of a specified
+  <dd>Inserts a {{DOMxRef("Node")}} before the reference node as a child of a specified
     parent node.</dd>
   <dt>{{DOMxRef("Node.isDefaultNamespace()")}}</dt>
-  <dd>Accepts a namespace URI as an argument and returns a {{jsxref("Boolean")}} with a
-    value of <code>true</code> if the namespace is the default namespace on the given node
-    or <code>false</code> if not.</dd>
+  <dd>Accepts a namespace URI as an argument and returns a {{jsxref("Boolean")}} with a
+    value of <code>true</code> if the namespace is the default namespace on the given node
+    or <code>false</code> if not.</dd>
   <dt>{{DOMxRef("Node.isEqualNode()")}}</dt>
   <dd>Returns a {{jsxref("Boolean")}} which indicates whether or not two nodes are of the
     same type and all their defining data points match.</dd>
@@ -196,12 +194,12 @@ browser-compat: api.Node
   <dd>Returns a {{jsxref("Boolean")}} value indicating whether or not the two nodes are
     the same (that is, they reference the same object).</dd>
   <dt>{{DOMxRef("Node.lookupPrefix()")}}</dt>
-  <dd>Returns a {{DOMxRef("DOMString")}} containing the prefix for a given namespace URI,
-    if present, and <code>null</code> if not. When multiple prefixes are possible, the
+  <dd>Returns a {{DOMxRef("DOMString")}} containing the prefix for a given namespace URI,
+    if present, and <code>null</code> if not. When multiple prefixes are possible, the
     result is implementation-dependent.</dd>
   <dt>{{DOMxRef("Node.lookupNamespaceURI()")}}</dt>
   <dd>Accepts a prefix and returns the namespace URI associated with it on the given node
-    if found (and <code>null</code> if not). Supplying <code>null</code> for the prefix
+    if found (and <code>null</code> if not). Supplying <code>null</code> for the prefix
     will return the default namespace.</dd>
   <dt>{{DOMxRef("Node.normalize()")}}</dt>
   <dd>Clean up all the text nodes under this element (merge adjacent, remove empty).</dd>
@@ -216,17 +214,13 @@ browser-compat: api.Node
 <h3 id="Obsolete_methods">Obsolete methods</h3>
 
 <dl>
-  <dt>{{DOMxRef("Node.getUserData()")}} {{deprecated_inline}}</dt>
-  <dd>Allows a user to get some {{DOMxRef("DOMUserData")}} from the node.</dd>
-  <dt>{{DOMxRef("Node.hasAttributes()")}} {{deprecated_inline}}</dt>
-  <dd>Returns a {{jsxref("Boolean")}} indicating if the element has any attributes, or
+  <dt>{{DOMxRef("Node.hasAttributes()")}} {{deprecated_inline}}</dt>
+  <dd>Returns <code>true</code> or <code>false</code> indicating if the element has any attributes, or
     not.</dd>
-  <dt>{{DOMxRef("Node.isSupported()")}} {{deprecated_inline}}</dt>
-  <dd>Returns a {{jsxref("Boolean")}} flag containing the result of a test whether the DOM
+  <dt>{{DOMxRef("Node.isSupported()")}} {{deprecated_inline}}</dt>
+  <dd>Returns <code>true</code> or <code>false</code> containing the result of a test whether the DOM
     implementation implements a specific feature and this feature is supported by the
     specific node.</dd>
-  <dt>{{DOMxRef("Node.setUserData()")}} {{deprecated_inline}}</dt>
-  <dd>Allows a user to attach, or remove, {{DOMxRef("DOMUserData")}} to the node.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
@@ -247,7 +241,7 @@ removeAllChildren(document.body)</pre>
 
 <h3 id="Recurse_through_child_nodes">Recurse through child nodes</h3>
 
-<p>The following function recursively calls a callback function for each node contained by
+<p>The following function recursively calls a callback function for each node contained by
   a root node (including the root itself):</p>
 
 <pre class="brush: js">function eachNode(rootNode, callback) {
@@ -261,7 +255,7 @@ removeAllChildren(document.body)</pre>
 
 	if (false === callback(rootNode)) {
 		return false
-    }
+  }
 
 	if (rootNode.hasChildNodes()) {
 		const nodes = rootNode.childNodes
@@ -288,7 +282,7 @@ removeAllChildren(document.body)</pre>
   {{jsxref("Array")}} instead, which contains <code><var>rootNode</var></code> and all
   nodes contained within.</p>
 
-<p>If <code><var>callback</var></code> is provided, and it returns {{jsxref("Boolean")}}
+<p>If <code><var>callback</var></code> is provided, and it returns
   <code>false</code> when called, the current recursion level is aborted, and the function
   resumes execution at the last parent's level. This can be used to abort loops once a
   node has been found (such as searching for a text node which contains a certain string).
@@ -301,7 +295,7 @@ removeAllChildren(document.body)</pre>
   <dd>The <code>Node</code> object whose descendants will be recursed through.</dd>
   <dt><code><var>callback</var></code> {{optional_inline}}</dt>
   <dd>An optional callback <a
-      href="/en-US/docs/JavaScript/Reference/Global_Objects/Function">function</a> that
+      href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a> that
     receives a <code>Node</code> as its only argument. If omitted, <code>eachNode</code>
     returns an {{jsxref("Array")}} of every node contained within
     <code><var>rootNode</var></code> (including the root itself).</dd>
@@ -311,7 +305,7 @@ removeAllChildren(document.body)</pre>
 
 <p>The following example prints the <a
     href="/en-US/docs/Web/API/Node/textContent"><code>textContent</code></a> properties of
-  each <code>&lt;span&gt;</code> tag in a <code>&lt;div&gt;</code> element named
+  each <code>&lt;span&gt;</code> element in a <code>&lt;div&gt;</code> element named
   <code>"box"</code>:</p>
 
 <pre class="brush: html">&lt;div id="box"&gt;
@@ -351,17 +345,17 @@ eachNode(box, function(node) {
 	eachNode(parentNode, function(node){
 		if (endScan) {
 			return false
-        }
+    }
 
 		// Ignore anything which isn't a text node
 		if (node.nodeType !== Node.TEXT_NODE) {
 			return
-        }
+    }
 
 		if (typeof pattern === "string") {
 			if (-1 !== node.textContent.indexOf(pattern)) {
 				matches.push(node)
-            }
+      }
 		}
 		else if (pattern.test(node.textContent)) {
 			if (!pattern.global) {
@@ -369,8 +363,8 @@ eachNode(box, function(node) {
 				matches = node
 			}
 			else {
-                matches.push(node)
-            }
+        matches.push(node)
+      }
 		}
 	})
 

@@ -56,7 +56,7 @@ Content-Security-Policy: frame-ancestors &lt;source&gt; &lt;source&gt;;
 
 <dl>
  <dt>&lt;host-source&gt;</dt>
- <dd>Internet hosts by name or IP address, as well as an optional <a href="/en-US/docs/URIs_and_URLs">URL scheme</a> and/or port number, separated by spaces. The site's address may include an optional leading wildcard (the asterisk character, <code>'*'</code>), and you may use a wildcard (again, <code>'*'</code>) as the port number, indicating that all legal ports are valid for the source. Single quotes surrounding the host are not allowed.<br>
+ <dd>Internet hosts by name or IP address, as well as an optional {{Glossary("URL")}} scheme and/or port number, separated by spaces. The site's address may include an optional leading wildcard (the asterisk character, <code>'*'</code>), and you may use a wildcard (again, <code>'*'</code>) as the port number, indicating that all legal ports are valid for the source. Single quotes surrounding the host are not allowed.<br>
  Examples:
  <ul>
   <li><code>http://*.example.com</code>: Matches all attempts to load from any subdomain of example.com using the <code>http:</code> URL scheme.</li>
@@ -91,25 +91,7 @@ Content-Security-Policy: frame-ancestors 'self' https://www.example.org;</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{specName("CSP 3.0", "#directive-frame-ancestors", "frame-ancestors")}}</td>
-   <td>{{Spec2('CSP 3.0')}}</td>
-   <td>No changes.</td>
-  </tr>
-  <tr>
-   <td>{{specName("CSP 1.1", "#directive-frame-ancestors", "frame-ancestors")}}</td>
-   <td>{{Spec2('CSP 1.1')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

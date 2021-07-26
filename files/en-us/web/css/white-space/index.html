@@ -16,7 +16,6 @@ browser-compat: css.properties.white-space
 
 <div>{{EmbedInteractiveExample("pages/css/white-space.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <p>The property specifies two things:</p>
 
@@ -42,6 +41,7 @@ white-space: break-spaces;
 /* Global values */
 white-space: inherit;
 white-space: initial;
+white-space: revert;
 white-space: unset;
 </pre>
 
@@ -136,8 +136,7 @@ white-space: unset;
 </table>
 
 <div class="notecard note">
-  <h4>Notes</h4>
-  <p>There is a distinction made between <strong>spaces</strong> and <strong>other space separators</strong>. These are defined as follows:</p>
+  <p><strong>Note:</strong> There is a distinction made between <strong>spaces</strong> and <strong>other space separators</strong>. These are defined as follows:</p>
   <dl>
     <dt>spaces</dt>
     <dd>Spaces (U+0020), tabs (U+0009), and segment breaks (such as newlines).</dd>
@@ -235,27 +234,7 @@ select.addEventListener("change", function(e) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Text", "#propdef-white-space", "white-space")}}</td>
-   <td>{{Spec2("CSS3 Text")}}</td>
-   <td>Precisely defines the breaking algorithms.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS2.1", "text.html#white-space-prop", "white-space")}}</td>
-   <td>{{Spec2("CSS2.1")}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

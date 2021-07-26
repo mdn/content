@@ -15,30 +15,17 @@ browser-compat: api.WorkerLocation.search
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js"><em>string</em> = <em>object</em>.search;</pre>
+<pre class="brush: js"><em>string</em> = <em>location</em>.search;</pre>
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js">// In a Web worker, on the page https://developer.mozilla.org/en-US/docs/WorkerLocation.href?t=67
-var result = window.self.search; // Returns:'?t=67'
+<pre class="brush: js">// In a Web worker, on the page https://developer.mozilla.org/en-US/docs/Web?t=67
+var result = location.search; // Returns:'?t=67'
 </pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<tbody>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-		<tr>
-			<td>{{SpecName('HTML WHATWG', 'workers.html#dom-workerlocation-search', 'WorkerLocation.search')}}</td>
-			<td>{{Spec2('HTML WHATWG')}}</td>
-			<td>Initial definition.</td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

@@ -12,7 +12,7 @@ tags:
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p class="summary"><strong><dfn>Hypertext Transfer Protocol (HTTP)</dfn></strong> is an <a href="https://en.wikipedia.org/wiki/Application_Layer">application-layer</a> protocol for transmitting hypermedia documents, such as HTML. It was designed for communication between web browsers and web servers, but it can also be used for other purposes. HTTP follows a classical <a href="https://en.wikipedia.org/wiki/Client%E2%80%93server_model">client-server model</a>, with a client opening a connection to make a request, then waiting until it receives a response. HTTP is a <a href="https://en.wikipedia.org/wiki/Stateless_protocol">stateless protocol</a>, meaning that the server does not keep any data (state) between two requests. Though often based on a TCP/IP layer, it can be used on any reliable <a href="https://en.wikipedia.org/wiki/Transport_Layer">transport layer</a>, that is, a protocol that doesn't lose messages silently like UDP does. <a href="https://en.wikipedia.org/wiki/Reliable_User_Datagram_Protocol">RUDP</a> — the reliable update of UDP — is a suitable alternative.</p>
+<p class="summary"><strong><dfn>Hypertext Transfer Protocol (HTTP)</dfn></strong> is an <a href="https://en.wikipedia.org/wiki/Application_Layer">application-layer</a> protocol for transmitting hypermedia documents, such as HTML. It was designed for communication between web browsers and web servers, but it can also be used for other purposes. HTTP follows a classical <a href="https://en.wikipedia.org/wiki/Client%E2%80%93server_model">client-server model</a>, with a client opening a connection to make a request, then waiting until it receives a response. HTTP is a <a href="https://en.wikipedia.org/wiki/Stateless_protocol">stateless protocol</a>, meaning that the server does not keep any data (state) between two requests.</p>
 
 <h2 id="Tutorials">Tutorials</h2>
 
@@ -45,7 +45,7 @@ tags:
 
 <dl>
  <dt><a href="/en-US/docs/Web/HTTP/Headers">HTTP Headers</a></dt>
- <dd>HTTP message headers are used to describe a resource, or the behavior of the server or the client. Custom proprietary headers can be added using the <code>X-</code> prefix; others in an <a href="https://www.iana.org/assignments/message-headers/message-headers.xhtml#perm-headers">IANA registry</a>, whose original content was defined in <a href="https://datatracker.ietf.org/doc/html/rfc4229">RFC 4229</a>. IANA also maintains a <a href="https://www.iana.org/assignments/message-headers/message-headers.xhtml#prov-headers">registry of proposed new HTTP message headers</a>.</dd>
+ <dd>HTTP message headers are used to describe a resource, or the behavior of the server or the client. Header fields are kept in an <a href="https://www.iana.org/assignments/message-headers/message-headers.xhtml#perm-headers">IANA registry</a>. IANA also maintains a <a href="https://www.iana.org/assignments/message-headers/message-headers.xhtml#prov-headers">registry of proposed new HTTP message headers</a>.</dd>
  <dt><a href="/en-US/docs/Web/HTTP/Methods">HTTP Request Methods</a></dt>
  <dd>The different operations that can be done with HTTP: {{HTTPMethod("GET")}}, {{HTTPMethod("POST")}}, and also less common requests like {{HTTPMethod("OPTIONS")}}, {{HTTPMethod("DELETE")}}, or {{HTTPMethod("TRACE")}}.</dd>
  <dt><a href="/en-US/docs/Web/HTTP/Status">HTTP Status Response Codes</a></dt>

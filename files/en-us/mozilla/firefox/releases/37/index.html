@@ -77,7 +77,7 @@ tags:
  </li>
  <li>In keeping with the evolving WebRTC specification, we have deprecated {{domxref("RTCIceServer.url")}} in favor of {{domxref("RTCIceServer.urls")}}, which lets you specify more than one URL for a given ICE server.</li>
  <li>Some key names of <code>KeyboardEvent.key</code> are changed for conforming <a href="https://dvcs.w3.org/hg/dom3events/raw-file/tip/html/DOM3Events-key.html">the latest DOM Level 3 Events spec</a>. See <a href="/en-US/docs/Web/API/KeyboardEvent/key#key_values">the tables of <code>KeyboardEvent.key</code> values in MDN</a>. The green cells are new values. And purple values are still unstable. Be careful if you use them (meta bug for these changes is {{bug(900372)}}).</li>
- <li>The {{domxref("Console")}} interface is now working on {{domxref("ServiceWorker")}} and {{domxref("SharedWorker")}}. It was previously available but not working ({{bug(1058644)}}).</li>
+ <li>The {{domxref("console")}} interface is now working on {{domxref("ServiceWorker")}} and {{domxref("SharedWorker")}}. It was previously available but not working ({{bug(1058644)}}).</li>
  <li>The value of {{domxref("KeyboardEvent.key")}} was incorrectly being reported as <code>"RomanCharacters"</code> when the <kbd>英数</kbd> (<kbd>Eisu</kbd>) key was pressed. Now it correctly returns <code>"Eisu"</code>.</li>
 </ul>
 

@@ -25,8 +25,7 @@ browser-compat: css.properties.flex-basis
 </figure>
 
 <div class="notecard note">
-  <h4>Note:</h4>
-<p><strong>Note:</strong> in case both <code>flex-basis</code> (other than <code>auto</code>) and <code>width</code> (or <code>height</code> in case of <code>flex-direction: column</code>) are set for an element, <code>flex-basis</code> has priority.</p>
+  <p><strong>Note:</strong> in case both <code>flex-basis</code> (other than <code>auto</code>) and <code>width</code> (or <code>height</code> in case of <code>flex-direction: column</code>) are set for an element, <code>flex-basis</code> has priority.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
@@ -48,6 +47,7 @@ flex-basis: content;
 /* Global values */
 flex-basis: inherit;
 flex-basis: initial;
+flex-basis: revert;
 flex-basis: unset;
 </pre>
 
@@ -59,19 +59,16 @@ flex-basis: unset;
  <dt><code id="width">&lt;'width'&gt;</code></dt>
  <dd>An absolute {{cssxref("&lt;length&gt;")}}, a {{cssxref("&lt;percentage&gt;")}} of the parent flex container's main size property, or the keyword <code>auto</code>. Negative values are invalid. Defaults to <code>auto</code>.</dd>
  <dt><code id="content">content</code></dt>
- <dd>Indicates automatic sizing, based on the flex item’s content.</dd>
  <dd>
- <div class="note"><strong>Note:</strong> This value was not present in the initial release of Flexible Box Layout, and thus some older implementations will not support it. The equivalent effect can be had by using <code>auto</code> together with a main size (<a href="https://drafts.csswg.org/css2/visudet.html#propdef-width">width</a> or <a href="https://drafts.csswg.org/css2/visudet.html#propdef-height">height</a>) of <code>auto</code>.</div>
-
- <div class="note">
- <p><strong>History:</strong></p>
-
- <ul>
-  <li>Originally, <code>flex-basis:auto</code> meant "look at my <code>width</code> or <code>height</code> property".</li>
-  <li>Then, <code>flex-basis:auto</code> was changed to mean automatic sizing, and "main-size" was introduced as the "look at my <code>width</code> or <code>height</code> property" keyword. It was implemented in {{bug("1032922")}}.</li>
-  <li>Then, that change was reverted in {{bug("1093316")}}, so <code>auto</code> once again means "look at my <code>width</code> or <code>height</code> property"; and a new <code>content</code> keyword is being introduced to trigger automatic sizing. ({{bug("1105111")}} covers adding that keyword).</li>
- </ul>
- </div>
+  <p>Indicates automatic sizing, based on the flex item’s content.</p>
+  <div class="note">
+   <p><strong>Note:</strong> This value was not present in the initial release of Flexible Box Layout, and thus some older implementations will not support it. The equivalent effect can be had by using <code>auto</code> together with a main size (<a href="https://drafts.csswg.org/css2/visudet.html#propdef-width">width</a> or <a href="https://drafts.csswg.org/css2/visudet.html#propdef-height">height</a>) of <code>auto</code>.</p>
+   <ul>
+    <li>Originally, <code>flex-basis:auto</code> meant "look at my <code>width</code> or <code>height</code> property".</li>
+    <li>Then, <code>flex-basis:auto</code> was changed to mean automatic sizing, and "main-size" was introduced as the "look at my <code>width</code> or <code>height</code> property" keyword. It was implemented in {{bug("1032922")}}.</li>
+    <li>Then, that change was reverted in {{bug("1093316")}}, so <code>auto</code> once again means "look at my <code>width</code> or <code>height</code> property"; and a new <code>content</code> keyword is being introduced to trigger automatic sizing. ({{bug("1105111")}} covers adding that keyword).</li>
+   </ul>
+  </div>
  </dd>
 </dl>
 
@@ -190,22 +187,7 @@ flex-basis: unset;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th>Specification</th>
-   <th>Status</th>
-   <th>Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Flexbox', '#propdef-flex-basis', 'flex-basis')}}</td>
-   <td>{{Spec2('CSS3 Flexbox')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

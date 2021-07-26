@@ -8,6 +8,7 @@ tags:
   - Reference
   - display
   - recipe:css-property
+browser-compat: css.properties.display
 ---
 <div>{{CSSRef}}</div>
 
@@ -51,6 +52,7 @@ display: list-item;
 /* Global values */
 display: inherit;
 display: initial;
+display: revert;
 display: unset;
 </pre>
 
@@ -62,7 +64,7 @@ display: unset;
 
 <dl>
  <dt>{{CSSxRef("&lt;display-outside&gt;")}}</dt>
- <dd>These keywords specify the element’s outer display type, which is essentially its role in flow layout.</dd>
+ <dd>These keywords specify the element's outer display type, which is essentially its role in flow layout.</dd>
 </dl>
 
 <p>{{page("/en-US/docs/Web/CSS/display-outside", "Syntax")}}</p>
@@ -71,7 +73,7 @@ display: unset;
 
 <dl>
  <dt>{{CSSxRef("&lt;display-inside&gt;")}}</dt>
- <dd>These keywords specify the element’s inner display type, which defines the type of formatting context that its contents are laid out in (assuming it is a non-replaced element).</dd>
+ <dd>These keywords specify the element's inner display type, which defines the type of formatting context that its contents are laid out in (assuming it is a non-replaced element).</dd>
 </dl>
 
 <p>{{page("/en-US/docs/Web/CSS/display-inside", "Syntax")}}</p>
@@ -231,7 +233,7 @@ display: unset;
 <p>We've included {{cssxref("padding")}} and {{cssxref("background-color")}} on the containers and their children, so that it is easier to see the effect the display values are having.</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: We've not included any of the modern two-value syntax, as support for that is still fairly limited.</p>
+<p><strong>Note:</strong> We've not included any of the modern two-value syntax, as support for that is still fairly limited.</p>
 </div>
 
 <h4 id="HTML">HTML</h4>
@@ -311,56 +313,16 @@ updateDisplay();</pre>
 <p>{{EmbedLiveSample('display_value_comparison','100%', 440)}}</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: You can find more examples in the pages for each separate display data type, linked above.</p>
+<p><strong>Note:</strong> You can find more examples in the pages for each separate display data type, linked above.</p>
 </div>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Display', '#the-display-properties', 'display')}}</td>
-   <td>{{Spec2('CSS3 Display')}}</td>
-   <td>Added <code>run-in</code>, <code>flow</code>, <code>flow-root</code>, <code>contents</code>, and multi-keyword values.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Ruby', '#ruby-display', 'display')}}</td>
-   <td>{{Spec2('CSS3 Ruby')}}</td>
-   <td>Added <code>ruby</code>, <code>ruby-base</code>, <code>ruby-text</code>, <code>ruby-base-container</code>, and <code>ruby-text-container</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Grid', '#grid-containers', 'display')}}</td>
-   <td>{{Spec2('CSS3 Grid')}}</td>
-   <td>Added the grid box model values.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Flexbox', '#flex-containers', 'display')}}</td>
-   <td>{{Spec2('CSS3 Flexbox')}}</td>
-   <td>Added the flexible box model values.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'visuren.html#display-prop', 'display')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Added the table model values and <code>inline-block<em>.</em></code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#display', 'display')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Initial definition. Basic values: <code>none</code>, <code>block</code>, <code>inline</code>, and <code>list-item</code>.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.display", 10)}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

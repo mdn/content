@@ -51,7 +51,7 @@ Content-Security-Policy: script-src-elem &lt;source&gt;;
 
 <h3 id="Sources">Sources</h3>
 
-dl>
+<dl>
   <dt>&lt;host-source&gt;</dt>
   <dd>Internet hosts by name or IP address, as well as an optional <a href="/en-US/docs/Learn/Common_questions/What_is_a_URL">URL scheme</a> and/or port number. The site's address may include an optional leading wildcard (the asterisk character, <code>'*'</code>), and you may use a wildcard (again, <code>'*'</code>) as the port number, indicating that all legal ports are valid for the source.<br>
   Examples:
@@ -76,7 +76,7 @@ dl>
   <dt><code>'unsafe-eval'</code></dt>
   <dd>Allows the use of <code>eval()</code> and similar methods for creating code from strings. You must include the single quotes.</dd>
   <dt id="unsafe-hashes"><code>'unsafe-hashes'</code></dt>
-  <dd>Allows enabling specific inline <a href="/en-US/docs/Web/Guide/Events/Event_handlers">event handlers</a>. If you only need to allow inline event handlers and not inline {{HTMLElement("script")}} elements or <code>javascript:</code> URLs, this is a safer method than using the <code>unsafe-inline</code> expression.</dd>
+  <dd>Allows enabling specific inline <a href="/en-US/docs/Web/Events/Event_handlers">event handlers</a>. If you only need to allow inline event handlers and not inline {{HTMLElement("script")}} elements or <code>javascript:</code> URLs, this is a safer method than using the <code>unsafe-inline</code> expression.</dd>
   <dt><code>'unsafe-inline'</code></dt>
   <dd>Allows the use of inline resources, such as inline {{HTMLElement("script")}} elements, <code>javascript:</code> URLs, and inline event handlers. The single quotes are required.</dd>
   <dt><code>'none'</code></dt>
@@ -117,22 +117,7 @@ dl>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{specName("CSP 3.0", "#directive-script-src-elem", "script-src-elem")}}</td>
-   <td>{{Spec2("CSP 3.0")}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

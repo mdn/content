@@ -2,12 +2,12 @@
 title: Node.cloneNode()
 slug: Web/API/Node/cloneNode
 tags:
-- API
-- DOM
-- DOM Reference
-- Method
-- NeedsBrowserCompatibility
-- Reference
+  - API
+  - DOM
+  - DOM Reference
+  - Method
+  - NeedsBrowserCompatibility
+  - Reference
 browser-compat: api.Node.cloneNode
 ---
 <div>{{APIRef("DOM")}}</div>
@@ -43,26 +43,6 @@ browser-compat: api.Node.cloneNode
 
     <p><code><var>deep</var></code> has no effect on empty elements (such as
       the {{HTMLElement("img")}} and {{HTMLElement("input")}} elements).</p>
-
-    <div class="note">
-      <p><strong>Note:</strong> In the DOM4 specification (since Gecko 13.0
-        {{geckoRelease(13)}}), the optional <code><var>deep</var></code> argument defaults
-        to <code>true</code>. </p>
-
-      <p><strong>This behavior has been changed in the latest spec!</strong>
-        Although <code><var>deep</var></code> it still optional, it now defaults to
-        <code>false</code>.</p>
-
-      <p><strong>You should <em>always</em> provide an explicit value for backward and
-          forward compatibility.</strong></p>
-
-      <ul>
-        <li>With Gecko 28.0 {{geckoRelease(28)}}), the console warned developers not to
-          omit the argument.</li>
-        <li>Starting with Gecko 29.0 {{geckoRelease(29)}}), a shallow clone is defaulted
-          instead of a deep clone.</li>
-      </ul>
-    </div>
   </dd>
 </dl>
 
@@ -77,7 +57,7 @@ let p_prime = p.cloneNode(true)
 <p id="not-event-listeners">Cloning a node copies all of its attributes and their values,
   including intrinsic (inline) listeners. It does <em>not</em> copy event listeners added
   using <a
-    href="/en-US/docs/DOM/element.addEventListener"><code>addEventListener()</code></a> or
+    href="/en-US/docs/Web/API/EventTarget/addEventListener"><code>addEventListener()</code></a> or
   those assigned to element properties (e.g.,
   <code><var>node</var>.onclick = <var>someFunction</var></code>). Additionally, for a
   {{HTMLElement("canvas")}} element, the painted image is not copied.</p>

@@ -71,19 +71,19 @@ tags:
 
 <h2 id="Logical_properties_and_values">Logical properties and values</h2>
 
-<p>The reason to talk about writing modes and direction at this point in your learning however, is because of the fact we have already looked at a lot of properties which are tied to the physical dimensions of the screen, and make most sense when in a horizontal writing mode.</p>
+<p>The reason to talk about writing modes and direction at this point in your learning is that we have already looked at a lot of properties that are tied to the physical dimensions of the screen, and these make more sense when in a horizontal writing mode.</p>
 
 <p>Let's take a look at our two boxes again — one with a <code>horizontal-tb</code> writing mode and one with <code>vertical-rl</code>. I have given both of these boxes a {{cssxref("width")}}. You can see that when the box is in the vertical writing mode, it still has a width, and this is causing the text to overflow.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/writing-modes/width.html", '100%', 1200)}}</p>
 
-<p>What we really want in this scenario, is to essentially swap height and width along with the writing mode. When we're in a vertical writing mode we want the box to expand in the block dimension just like it does in the horizontal mode.</p>
+<p>What we really want in this scenario is to essentially swap height with width in accordance to the writing mode. When we're in a vertical writing mode we want the box to expand in the block dimension just like it does in the horizontal mode.</p>
 
 <p>To make this easier, CSS has recently developed a set of mapped properties. These essentially replace physical properties — things like <code>width</code> and <code>height</code> — with <strong>logical</strong>, or <strong>flow relative</strong> versions.</p>
 
 <p>The property mapped to <code>width</code> when in a horizontal writing mode is called {{cssxref("inline-size")}} — it refers to the size in the inline dimension. The property for <code>height</code> is named {{cssxref("block-size")}} and is the size in the block dimension. You can see how this works in the example below where we have replaced <code>width</code> with <code>inline-size</code>.</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/writing-modes/inline-size.html", '100%', 1200)}}</p>
+<p>{{EmbedGHLiveSample("css-examples/learn/writing-modes/inline-size.html", '100%', 950)}}</p>
 
 <h3 id="Logical_margin_border_and_padding_properties">Logical margin, border, and padding properties</h3>
 
@@ -111,7 +111,7 @@ tags:
 
 <p><strong>Change the writing mode on this example to <code>vertical-rl</code> to see what happens to the image. Change <code>inline-start</code> to <code>inline-end</code> to change the float.</strong></p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/writing-modes/float.html", '100%', 1200)}}</p>
+<p>{{EmbedGHLiveSample("css-examples/learn/writing-modes/float.html", '100%', 850)}}</p>
 
 <p>Here we are also using logical margin values to ensure the margin is in the correct place no matter what the writing mode is.</p>
 

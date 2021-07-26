@@ -202,7 +202,7 @@ request.send();</pre>
 
 <p>After that, you can see the {{jsxref("Promise.then",".then()")}} method chained onto the end of <code>fetch()</code> — this method is a part of {{jsxref("Promise","Promises")}}, a modern JavaScript feature for performing asynchronous operations. <code>fetch()</code> returns a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">promise</a>, which resolves to the response sent back from the server — we use <code>.then()</code> to run some follow-up code after the promise resolves, which is the function we've defined inside it. This is the equivalent of the <code>onload</code> event handler in the XHR version.</p>
 
-<p>This function is automatically given the response from the server as a parameter when the <code>fetch()</code> promise resolves. Inside the function we grab the response and run its {{domxref("Body.text","text()")}} method, which basically returns the response as raw text. This is the equivalent of <code>request.responseType = 'text'</code> in the XHR version.</p>
+<p>This function is automatically given the response from the server as a parameter when the <code>fetch()</code> promise resolves. Inside the function we grab the response and run its {{domxref("Response.text","text()")}} method, which basically returns the response as raw text. This is the equivalent of <code>request.responseType = 'text'</code> in the XHR version.</p>
 
 <p>You'll see that <code>text()</code> also returns a promise, so we chain another <code>.then()</code> onto it, inside of which we define a function to receive the raw text that the <code>text()</code> promise resolves to.</p>
 
@@ -250,7 +250,7 @@ myFetch.then(function(response) {
   });
 }</pre>
 
-<p>The response object has a method {{domxref("Body.text","text()")}} that takes the raw data contained in the response body and turns it into plain text — the format we want it in. It also returns a promise (which resolves to the resulting text string), so here we use another {{jsxref("Promise.then",".then()")}}, inside of which we define another function that dictates what we want to do with that text string. We are just setting the <code><a href="/en-US/docs/Web/API/Node/textContent">textContent</a></code> property of our poem's {{htmlelement("pre")}} element to equal the text string, so this works out pretty simple.</p>
+<p>The response object has a method {{domxref("Response.text","text()")}} that takes the raw data contained in the response body and turns it into plain text — the format we want it in. It also returns a promise (which resolves to the resulting text string), so here we use another {{jsxref("Promise.then",".then()")}}, inside of which we define another function that dictates what we want to do with that text string. We are just setting the <code><a href="/en-US/docs/Web/API/Node/textContent">textContent</a></code> property of our poem's {{htmlelement("pre")}} element to equal the text string, so this works out pretty simple.</p>
 
 <p>It is also worth noting that you can directly chain multiple promise blocks (<code>.then()</code> blocks, but there are other types too) onto the end of one another, passing the result of each block to the next block as you travel down the chain. This makes promises very powerful.</p>
 
@@ -297,7 +297,7 @@ myFetch.then(function(response) {
 
 <p>The <code>fetch()</code> function returns a promise. If this completes successfully, the function inside the first <code>.then()</code> block contains the <code>response</code> returned from the network.</p>
 
-<p>Inside this function we run {{domxref("Body.json","json()")}} on the response, not {{domxref("Body.text","text()")}}, as we want to return our response as structured JSON data, not plain text.</p>
+<p>Inside this function we run {{domxref("Response.json","json()")}} on the response, not {{domxref("Response.text","text()")}}, as we want to return our response as structured JSON data, not plain text.</p>
 
 <p>Next, we chain another <code>.then()</code> onto the end of our first one, the success function that contains the <code>json</code> returned from the <code>response.json()</code> promise. We set this to be the value of the <code>products</code> variable, then run <code>initialize(products)</code>, which starts the process of displaying all the products in the user interface.</p>
 
@@ -326,7 +326,7 @@ myFetch.then(function(response) {
   showProduct(objectURL, product);
 });</pre>
 
-<p>This works in much the same way as the previous one, except that instead of using {{domxref("Body.json","json()")}}, we use {{domxref("Body.blob","blob()")}}. In this case we want to return our response as an image file, and the data format we use for that is <a href="/en-US/docs/Web/API/Blob">Blob</a> (the term is an abbreviation of "Binary Large Object" and can basically be used to represent large file-like objects, such as images or video files).</p>
+<p>This works in much the same way as the previous one, except that instead of using {{domxref("Response.json","json()")}}, we use {{domxref("Response.blob","blob()")}}. In this case we want to return our response as an image file, and the data format we use for that is <a href="/en-US/docs/Web/API/Blob">Blob</a> (the term is an abbreviation of "Binary Large Object" and can basically be used to represent large file-like objects, such as images or video files).</p>
 
 <p>Once we've successfully received our blob, we create an object URL out of it using {{domxref("URL.createObjectURL()", "createObjectURL()")}}. This returns a temporary internal URL that points to an object referenced inside the browser. These are not very readable, but you can see what one looks like by opening up the Can Store app, Ctrl-/Right-clicking on an image, and selecting the "View image" option (which might vary slightly depending on what browser you are using). The object URL will be visible inside the address bar, and should be something like this:</p>
 

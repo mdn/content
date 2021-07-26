@@ -35,6 +35,7 @@ grid-row-start: 5 somegridarea span;
 /* Global values */
 grid-row-start: inherit;
 grid-row-start: initial;
+grid-row-start: revert;
 grid-row-start: unset;
 </pre>
 
@@ -54,11 +55,10 @@ grid-row-start: unset;
  <dt><code>auto</code></dt>
  <dd>Is a keyword indicating that the property contributes nothing to the grid item’s placement, indicating auto-placement, an automatic span, or a default span of <code>1</code>.</dd>
  <dt><code>&lt;custom-ident&gt;</code></dt>
- <dd>If there is a named line with the name '&lt;custom-ident&gt;-start', it contributes the first such line to the grid item’s placement.</dd>
  <dd>
- <p class="note"><strong>Note:</strong> Named grid areas automatically generate implicit named lines of this form, so specifying <code>grid-row-start: foo;</code> will choose the start edge of that named grid area (unless another line named <code>foo-start</code> was explicitly specified before it).</p>
-
- <p>Otherwise, this is treated as if the integer <code>1</code> had been specified along with the <code>&lt;custom-ident&gt;</code>.</p>
+   <p>If there is a named line with the name '&lt;custom-ident&gt;-start', it contributes the first such line to the grid item’s placement.</p>
+   <p><strong>Note:</strong> Named grid areas automatically generate implicit named lines of this form, so specifying <code>grid-row-start: foo;</code> will choose the start edge of that named grid area (unless another line named <code>foo-start</code> was explicitly specified before it).</p>
+   <p>Otherwise, this is treated as if the integer <code>1</code> had been specified along with the <code>&lt;custom-ident&gt;</code>.</p>
  </dd>
  <dt><code>&lt;integer&gt; &amp;&amp; &lt;custom-ident&gt;?</code></dt>
  <dd>Contributes the nth grid line to the grid item’s placement. If a negative integer is given, it instead counts in reverse, starting from the end edge of the explicit grid.
@@ -153,22 +153,7 @@ grid-row-start: unset;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Grid", "#propdef-grid-row-start", "grid-row-start")}}</td>
-   <td>{{Spec2("CSS3 Grid")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

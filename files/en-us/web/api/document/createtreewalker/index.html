@@ -16,7 +16,7 @@ browser-compat: api.Document.createTreeWalker
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js"><em>document</em>.createTreeWalker(<em>root</em>[, <em>whatToShow</em>[, <em>filter</em>[, <em>entityReferenceExpansion</em>]]]);
+<pre class="brush: js"><em>document</em>.createTreeWalker(<em>root</em>[, <em>whatToShow</em>[, <em>filter</em>[, <em>expandEntityReferences</em>]]]);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -85,25 +85,17 @@ browser-compat: api.Document.createTreeWalker
         <tr>
           <td><code>NodeFilter.SHOW_ENTITY</code> {{deprecated_inline}}</td>
           <td><code>32</code></td>
-          <td>Shows {{domxref("Entity")}} nodes. This is meaningful only when creating a
-            {{domxref("TreeWalker")}} with an {{domxref("Entity")}} node as its root; in
-            this case, it means that the {{domxref("Entity")}} node will appear in the
-            first position of the traversal. Since entities are not part of the document
-            tree, they do not appear when traversing over the document tree.</td>
+          <td>Legacy, no more usable.</td>
         </tr>
         <tr>
           <td><code>NodeFilter.SHOW_ENTITY_REFERENCE</code> {{deprecated_inline}}</td>
           <td><code>16</code></td>
-          <td>Shows {{domxref("EntityReference")}} nodes.</td>
+          <td>Legacy, no more usable.</td>
         </tr>
         <tr>
           <td><code>NodeFilter.SHOW_NOTATION</code> {{deprecated_inline}}</td>
           <td><code>2048</code></td>
-          <td>Shows {{domxref("Notation")}} nodes. This is meaningful only when creating a
-            {{domxref("TreeWalker")}} with a {{domxref("Notation")}} node as its root; in
-            this case, it means that the {{domxref("Notation")}} node will appear in the
-            first position of the traversal. Since entities are not part of the document
-            tree, they do not appear when traversing over the document tree.</td>
+          <td>Legacy, no more usable.</td>
         </tr>
         <tr>
           <td><code>NodeFilter.SHOW_PROCESSING_INSTRUCTION</code></td>
@@ -123,9 +115,9 @@ browser-compat: api.Document.createTreeWalker
     <code>acceptNode</code>, which is called by the {{domxref("TreeWalker")}} to determine
     whether or not to accept a node that has passed the <code>whatToShow</code> check.
   </dd>
-  <dt><code>entityReferenceExpansion</code> {{optional_inline}} {{deprecated_inline}}</dt>
-  <dd>A {{domxref("Boolean")}} flag indicating if when discarding an
-    {{domxref("EntityReference")}} its whole sub-tree must be discarded at the same time.
+  <dt><code>expandEntityReferences</code> {{optional_inline}} {{deprecated_inline}}</dt>
+  <dd>A boolean flag indicating if when discarding an
+    entity reference its whole sub-tree must be discarded at the same time.
   </dd>
 </dl>
 

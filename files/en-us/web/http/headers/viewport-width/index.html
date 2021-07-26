@@ -1,0 +1,85 @@
+---
+title: Viewport-Width
+slug: Web/HTTP/Headers/Viewport-Width
+tags:
+  - Viewport-Width
+  - Client hints
+  - HTTP
+  - HTTP Header
+  - Request header
+  - Deprecated
+  - Non-standard
+  - Exerimental
+browser-compat: http.headers.Viewport-Width
+---
+<div>{{HTTPSidebar}} {{deprecated_header}}{{securecontext_header}}</div>
+
+<p>The <strong><code>Viewport-Width</code></strong> <a href="/en-US/docs/Glossary/Client_hints">device client hint</a> request header provides the client's layout viewport width in {{Glossary("CSS pixel","CSS pixels")}}. The value is rounded up to the smallest following integer (i.e. ceiling value).</p>
+
+<table class="properties">
+  <tbody>
+   <tr>
+    <th scope="row">Header type</th>
+    <td>{{Glossary("Request header")}}, {{Glossary("Client hints","Client hint")}}</td>
+   </tr>
+   <tr>
+    <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <td>no</td>
+   </tr>
+  </tbody>
+ </table>
+ 
+<p>The hint can be used with other screen-specific hints to deliver images optimized for a specific screen size, or to omit resources that are not needed for a particular screen width.</p>
+
+<p>If the <code>Viewport-Width</code> header appears more than once in a message the last occurrence is used.</p>
+
+<div class="notecard note">
+  <p><strong>Note:</strong></p>
+    <ul>
+      <li>Client Hints are accessible only on secure origins (via TLS).</li>
+      <li>A server has to opt in to receive the <code>Viewport-Width</code> header from the client, by sending the {{HTTPHeader("Accept-CH")}} response header.</li>
+      <li>Servers that opt in to the <code>Viewport-Width</code> client hint will typically also specify it in the {{HTTPHeader("Vary")}} header. This informs caches that the server may send different responses based on the header value in a request.</li>
+      <li><code>Viewport-Width</code> was removed from the original client hints specification in <a href="https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-client-hints-07">draft-ietf-httpbis-client-hints-07</a>. The proposed replacement is <a href="https://wicg.github.io/responsive-image-client-hints/#sec-ch-viewport-width"><code>Sec-CH-Viewport-Width</code></a> (Responsive Image Client Hints).</li>
+    </ul>
+</div>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: http">Viewport-Width: &lt;number&gt;</pre>
+
+<h2 id="Directives">Directives</h2>
+
+<dl>
+ <dt><code> &lt;number&gt;</code></dt>
+ <dd>The width of the user's viewport in {{Glossary("CSS pixel","CSS pixels")}}, rounded up to the nearest integer.</dd>
+</dl>
+
+<h2 id="Examples">Examples</h2>
+
+<p>A server must first opt in to receive the <code>Viewport-Width</code> header by sending the response header {{HTTPHeader("Accept-CH")}} containing the directive <code>Viewport-Width</code>.</p>
+
+<pre class="brush: http">Accept-CH: Viewport-Width</pre>
+
+<p>Then on subsequent requests the client might send <code>Viewport-Width</code> header back:</p>
+
+<pre class="brush: http">Viewport-Width: 320</pre>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+  <li><a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/client-hints">Adapting to Users with Client Hints</a> (developer.google.com)</li>
+ <li>Device client hints
+  <ul>
+    <li>{{HTTPHeader("Content-DPR")}}</li>
+    <li>{{HTTPHeader("Device-Memory")}}</li>
+    <li>{{HTTPHeader("DPR")}}</li>
+    <li>{{HTTPHeader("Width")}}</li>
+   </ul>
+ </li>
+ <li>{{HTTPHeader("Accept-CH")}}</li>
+ <li><a href="/en-US/docs/Web/HTTP/Caching#varying_responses">HTTP Caching > Varying responses</a> and {{HTTPHeader("Vary")}}</li>
+</ul>

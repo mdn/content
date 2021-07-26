@@ -28,9 +28,9 @@ browser-compat: api.WindowOrWorkerGlobalScope.setInterval
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js"><em>var intervalID</em> = <em>scope</em>.setInterval(<em>func</em>, [<em>delay</em>, <em>arg1</em>, <em>arg2</em>, ...]);
-var <em>intervalID</em> = <em>scope</em>.setInterval(function[, delay]);
-<em>var intervalID</em> = <em>scope</em>.setInterval(<em>code</em>, [<em>delay]</em>);
+<pre class="brush: js"><em>var intervalID</em> = setInterval(<em>func</em>, [<em>delay</em>, <em>arg1</em>, <em>arg2</em>, ...]);
+var <em>intervalID</em> = setInterval(function[, delay]);
+<em>var intervalID</em> = setInterval(<em>code</em>, [<em>delay]</em>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -82,7 +82,7 @@ var <em>intervalID</em> = <em>scope</em>.setInterval(function[, delay]);
 
 <p>The following example demonstrates <code>setInterval()</code>'s basic syntax.</p>
 
-<pre class="brush:js">var intervalID = window.setInterval(myCallback, 500, 'Parameter 1', 'Parameter 2');
+<pre class="brush:js">var intervalID = setInterval(myCallback, 500, 'Parameter 1', 'Parameter 2');
 
 function myCallback(a, b)
 {
@@ -749,28 +749,7 @@ MiniDaemon.prototype.start = function (bReverse) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th>Specification</th>
-      <th>Status</th>
-      <th>Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', 'webappapis.html#dom-setinterval',
-        'WindowOrWorkerGlobalScope.setInterval()')}}</td>
-      <td>{{Spec2("HTML WHATWG")}}</td>
-      <td>Method moved to the <code>WindowOrWorkerGlobalScope</code> mixin in the latest
-        spec.</td>
-    </tr>
-    <tr>
-      <td>{{SpecName("HTML WHATWG", "webappapis.html#dom-setinterval",
-        "WindowTimers.setInterval()")}}</td>
-      <td>{{Spec2("HTML WHATWG")}}</td>
-      <td>Initial definition (DOM Level 0)</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

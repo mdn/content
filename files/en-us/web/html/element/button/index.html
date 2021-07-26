@@ -55,7 +55,7 @@ browser-compat: html.elements.button
 
 <dl>
  <dt>{{htmlattrdef("autofocus")}}</dt>
- <dd>This Boolean attribute specifies that the button should have input <a href="/en-US/docs/Web/API/HTMLOrForeignElement/focus">focus</a> when the page loads. <strong>Only one element in a document can have this attribute.</strong></dd>
+ <dd>This Boolean attribute specifies that the button should have input <a href="/en-US/docs/Web/API/HTMLElement/focus">focus</a> when the page loads. <strong>Only one element in a document can have this attribute.</strong></dd>
  <dt>{{htmlattrdef("autocomplete")}} {{non-standard_inline}}</dt>
  <dd>This attribute on a {{HTMLElement("button")}} is nonstandard and Firefox-specific. Unlike other browsers, <a href="https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing">Firefox persists the dynamic disabled state</a> of a {{HTMLElement("button")}} across page loads. Setting <code>autocomplete="off"</code> on the button disables this feature; see {{bug(654072)}}.</dd>
  <dt>{{htmlattrdef("disabled")}}</dt>
@@ -101,7 +101,7 @@ browser-compat: html.elements.button
  </ul>
  </dd>
  <dt>{{htmlattrdef("name")}}</dt>
- <dd>The name of the button, submitted as a pair with the button’s <code>value</code> as part of the form data.</dd>
+ <dd>The name of the button, submitted as a pair with the button’s <code>value</code> as part of the form data, when that button is used to submit the form.</dd>
  <dt>{{htmlattrdef("type")}}</dt>
  <dd>The default behavior of the button. Possible values are:
  <ul>
@@ -111,7 +111,7 @@ browser-compat: html.elements.button
  </ul>
  </dd>
  <dt>{{htmlattrdef("value")}}</dt>
- <dd>Defines the value associated with the button’s <code>name</code> when it’s submitted with the form data. This value is passed to the server in params when the form is submitted.</dd>
+ <dd>Defines the value associated with the button’s <code>name</code> when it’s submitted with the form data. This value is passed to the server in params when the form is submitted uing this button.</dd>
 </dl>
 
 <h2 id="Notes">Notes</h2>

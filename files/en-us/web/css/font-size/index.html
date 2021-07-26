@@ -41,6 +41,7 @@ font-size: 80%;
 /* Global values */
 font-size: inherit;
 font-size: initial;
+font-size: revert;
 font-size: unset;
 </pre>
 
@@ -88,7 +89,9 @@ font-size: unset;
 
 <p>Font sizing settings can also be used in combination. For example, if a parent element is set to <code>16px</code> and its child element is set to <code>larger</code>, the child element displays larger than the parent element on the page.</p>
 
-<div class="note"><strong>Note:</strong> Defining font sizes in <code>px</code> is <em><a href="https://en.wikipedia.org/wiki/Web_accessibility">not accessible</a></em>, because the user cannot change the font size in some browsers. For example, users with limited vision may wish to set the font size much larger than the size chosen by a web designer. Avoid using them for font sizes if you wish to create an inclusive design.</div>
+<div class="note">
+  <p><strong>Note:</strong> Defining font sizes in <code>px</code> is <em><a href="https://en.wikipedia.org/wiki/Web_accessibility">not accessible</a></em>, because the user cannot change the font size in some browsers. For example, users with limited vision may wish to set the font size much larger than the size chosen by a web designer. Avoid using them for font sizes if you wish to create an inclusive design.</p>
+</div>
 
 <h3 id="Ems">Ems</h3>
 
@@ -151,7 +154,7 @@ span {
 
 <p>{{EmbedLiveSample("Rems", 400, 40)}}</p>
 
-<p>In this example, the words “outer inner outer” are all displayed at 16px (assuming that the browser's <code>font-size</code> has been left at the default value of 10px).</p>
+<p>In this example, the words “outer inner outer” are all displayed at 16px (assuming that the browser's <code>font-size</code> has been left at the default value of 16px).</p>
 
 <h3 id="Ex">Ex</h3>
 
@@ -200,37 +203,7 @@ span {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Fonts', '#font-size-prop', 'font-size')}}</td>
-   <td>{{Spec2('CSS4 Fonts')}}</td>
-   <td>Adds <code>xxx-large</code> keyword.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Fonts', '#font-size-prop', 'font-size')}}</td>
-   <td>{{Spec2('CSS3 Fonts')}}</td>
-   <td>No change.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'fonts.html#propdef-font-size', 'font-size')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>No change.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#font-size', 'font-size')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

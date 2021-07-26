@@ -16,7 +16,7 @@ tags:
 - requestAnimationFrame()
 browser-compat: api.XRSession.requestAnimationFrame
 ---
-<div>{{securecontext_header}}{{APIRef("WebXR")}}</div>
+<div>{{APIRef("WebXR Device API")}}</div>
 
 <p><span class="seoSummary">The {{domxref("XRSession")}}
     method <code><strong>requestAnimationFrame()</strong></code>, much like the
@@ -83,7 +83,7 @@ browser-compat: api.XRSession.requestAnimationFrame
 <div class="notecard note">
   <p><strong>Note:</strong> A real application should check that the device and the User
     Agent support WebXR API at all and then that they both support the desired session
-    type via {{DOMxRef("XR.isSessionSupported()")}}.</p>
+    type via {{DOMxRef("XRSystem.isSessionSupported()")}}.</p>
 </div>
 
 <pre class="brush: js">// Obtain XR object
@@ -151,24 +151,7 @@ function onXRSessionEnded() {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("WebXR","#dom-xrsession-requestanimationframe","XRSession.requestAnimationFrame")}}
-      </td>
-      <td>{{Spec2("WebXR")}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

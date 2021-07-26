@@ -15,7 +15,6 @@ browser-compat: css.properties.grid-row
 
 <div>{{EmbedInteractiveExample("pages/css/grid-row.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <p>If two &lt;grid-line&gt; values are specified, the <code>grid-row-start</code> longhand is set to the value before the slash, and the <code>grid-row-end</code> longhand is set to the value after the slash.</p>
 
@@ -53,6 +52,7 @@ grid-row: 5 somegridarea span / 2 span;
 /* Global values */
 grid-row: inherit;
 grid-row: initial;
+grid-row: revert;
 grid-row: unset;
 </pre>
 
@@ -63,8 +63,10 @@ grid-row: unset;
  <dd>Is a keyword indicating that the property contributes nothing to the grid item’s placement, indicating auto-placement, an automatic span, or a default span of <code>1</code>.</dd>
  <dt><code>&lt;custom-ident&gt;</code></dt>
  <dd>If there is a named line with the name '&lt;custom-ident&gt;-start'/'&lt;custom-ident&gt;-end', it contributes the first such line to the grid item’s placement.
- <p class="note"><strong>Note:</strong> Named grid areas automatically generate implicit named lines of this form, so specifying <code>grid-row: foo;</code> will choose the start/end edge of that named grid area (unless another line named <code>foo-start</code>/<code>foo-end</code> was explicitly specified before it).</p>
-
+ <div class="note">
+   <p><strong>Note:</strong> Named grid areas automatically generate implicit named lines of this form, so specifying <code>grid-row: foo;</code> will choose the start/end edge of that named grid area (unless another line named <code>foo-start</code>/<code>foo-end</code> was explicitly specified before it).</p>
+ </div>
+ 
  <p>Otherwise, this is treated as if the integer <code>1</code> had been specified along with the <code>&lt;custom-ident&gt;</code>.</p>
  </dd>
  <dt><code>&lt;integer&gt; &amp;&amp; &lt;custom-ident&gt;?</code></dt>
@@ -131,22 +133,7 @@ grid-row: unset;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Grid", "#propdef-grid-row", "grid-row")}}</td>
-   <td>{{Spec2("CSS3 Grid")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

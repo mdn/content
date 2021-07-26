@@ -10,11 +10,9 @@ tags:
   - Sensor APIs
   - Sensors
 ---
-<div>{{APIRef("Generic Sensor API")}}</div>
+<div>{{APIRef("Sensor API")}}</div>
 
-<div class="summary">
-<p>The Sensor APIs are a set of interfaces built to a common design that expose device sensors in a consistent way to the web platform.</p>
-</div>
+<p>The <strong>Sensor APIs</strong> are a set of interfaces built to a common design that expose device sensors in a consistent way to the web platform.</p>
 
 <h2 id="sensor_apis_concepts_and_usage">Sensor APIs concepts and usage</h2>
 
@@ -44,7 +42,7 @@ if (window.AmbientLightSensor) {
 
 <h3 id="defensive_programming">Defensive programming</h3>
 
-<p>As stated in Feature Detection, checking for a particular sensor API is insufficient for feature detection. The existence of an actual sensor must be confirmed as well. This is where defensive programming is needed. Defensive programming requires three strategies.</p>
+<p>As stated in Feature Detection, checking for a particular sensor API is insufficient for feature detection. The existence of an actual sensor must be confirmed as well. This is where defensive programming is needed. Defensive programming requires three strategies.</p>
 
 <ul>
  <li>Checking for thrown errors when instantiating a sensor object.</li>
@@ -55,7 +53,7 @@ if (window.AmbientLightSensor) {
 <p>The code example below illustrates these principles. The {{jsxref('statements/try...catch', 'try...catch')}} block catches errors thrown during sensor instantiation. It implements a handler for {{domxref('Sensor.onerror')}} to catch errors thrown during use. The only time anything is shown to the user is when <a href="/en-US/docs/Web/API/Permissions_API">permissions</a> need to be requested and when the sensor type isn't supported by the device.</p>
 
 <div class="note">
-<p>If a feature policy blocks use of a feature it is because your code is inconsistent with the policies set on your server. This is not something that would ever be shown to a user. See {{httpheader('Feature-Policy')}} for implementation instructions.</p>
+<p>If a feature policy blocks use of a feature it is because your code is inconsistent with the policies set on your server. This is not something that would ever be shown to a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implementation instructions.</p>
 </div>
 
 <pre class="brush: js">let accelerometer = null;
@@ -85,7 +83,7 @@ try {
 
 <h3 id="permissions_and_feature_policy">Permissions and Feature Policy</h3>
 
-<p>Sensor readings may not be taken unless the user grants permission to a specific sensor type. Do this using the {{domxref('Permissions')}} API. A brief example, shown below, requests permission before attempting to use the sensor.</p>
+<p>Sensor readings may not be taken unless the user grants permission to a specific sensor type. Do this using the <a href="/en-US/docs/Web/API/Permissions_API">Permissions API</a>. A brief example, shown below, requests permission before attempting to use the sensor.</p>
 
 <pre class="brush: js">navigator.permissions.query({ name: 'accelerometer' })
 .then(result =&gt; {
@@ -118,7 +116,7 @@ sensor.onerror = event =&gt; {
  <tbody>
   <tr>
    <td><code>AbsoluteOrientationSensor</code></td>
-   <td><code>'accelerometer'</code>, <code>'gyroscope'</code>, and <code>'magnetometer'</code></td>
+   <td><code>'accelerometer'</code>, <code>'gyroscope'</code>, and <code>'magnetometer'</code></td>
   </tr>
   <tr>
    <td><code>Accelerometer</code></td>
@@ -146,14 +144,14 @@ sensor.onerror = event =&gt; {
   </tr>
   <tr>
    <td><code>RelativeOrientationSensor</code></td>
-   <td><code>'accelerometer'</code>, and <code>'gyroscope'</code></td>
+   <td><code>'accelerometer'</code>, and <code>'gyroscope'</code></td>
   </tr>
  </tbody>
 </table>
 
 <h3 id="readings">Readings</h3>
 
-<p>Sensor readings are received through the {{domxref('Sensor.onreading')}} callback which is inherited by all sensor types. Reading frequency is decided by you, accomplished with an option passed to a sensor's constructor. The option is a number that specifies the number of readings per second. A whole number or decimal may be used, the latter for frequencies less than a second. The actual reading frequency depends device hardware and consequently may be less than requested.</p>
+<p>Sensor readings are received through the {{domxref('Sensor.onreading')}} callback which is inherited by all sensor types. Reading frequency is decided by you, accomplished with an option passed to a sensor's constructor. The option is a number that specifies the number of readings per second. A whole number or decimal may be used, the latter for frequencies less than a second. The actual reading frequency depends device hardware and consequently may be less than requested.</p>
 
 <p>The following example illustrates this using the {{domxref('Magnetometer')}} sensor.</p>
 
@@ -174,7 +172,7 @@ magSensor.start();
 
 <dl>
  <dt>{{domxref('AbsoluteOrientationSensor')}}{{securecontext_inline}}</dt>
- <dd>Describes the device's physical orientation in relation to the Earth's reference coordinate system.</dd>
+ <dd>Describes the device's physical orientation in relation to the Earth's reference coordinate system.</dd>
  <dt>{{domxref('Accelerometer')}}{{securecontext_inline}}</dt>
  <dd>Provides the acceleration applied to the device along all three axes.</dd>
  <dt>{{domxref('AmbientLightSensor')}}{{securecontext_inline}}</dt>
@@ -184,13 +182,13 @@ magSensor.start();
  <dt>{{domxref('Gyroscope')}}{{securecontext_inline}}</dt>
  <dd>Provides the angular velocity of the device along all three axes.</dd>
  <dt>{{domxref('LinearAccelerationSensor')}}{{securecontext_inline}}</dt>
- <dd>Provides the acceleration applied to the device along all three axes, but without the contribution of gravity.</dd>
+ <dd>Provides the acceleration applied to the device along all three axes, but without the contribution of gravity.</dd>
  <dt>{{domxref('Magnetometer')}}{{securecontext_inline}}</dt>
- <dd>Provides information about the magnetic field as detected by the device’s primary magnetometer sensor.</dd>
+ <dd>Provides information about the magnetic field as detected by the device's primary magnetometer sensor.</dd>
  <dt>{{domxref('OrientationSensor')}}{{securecontext_inline}}</dt>
- <dd>The base class for the {{domxref('AbsoluteOrientationSensor')}}. This interface cannot be used directly, instead it provides properties and methods accessed by interfaces that inherit from it.</dd>
+ <dd>The base class for the {{domxref('AbsoluteOrientationSensor')}}. This interface cannot be used directly, instead it provides properties and methods accessed by interfaces that inherit from it.</dd>
  <dt>{{domxref('RelativeOrientationSensor')}}{{securecontext_inline}}</dt>
- <dd>Describes the device's physical orientation without regard to the Earth's reference coordinate system.   </dd>
+ <dd>Describes the device's physical orientation without regard to the Earth's reference coordinate system.</dd>
  <dt>{{domxref('Sensor')}}{{securecontext_inline}}</dt>
  <dd>The base class for all the other sensor interfaces. This interface cannot be used directly. Instead it provides properties, event handlers, and methods accessed by interfaces that inherit from it.</dd>
  <dt>{{domxref('SensorErrorEvent')}}{{securecontext_inline}}</dt>

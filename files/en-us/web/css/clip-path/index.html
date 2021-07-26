@@ -47,6 +47,7 @@ clip-path: padding-box circle(50px at 0 100px);
 /* Global values */
 clip-path: inherit;
 clip-path: initial;
+clip-path: revert;
 clip-path: unset;
 </pre>
 
@@ -60,31 +61,31 @@ clip-path: unset;
  <dt>{{cssxref("&lt;basic-shape&gt;")}}</dt>
  <dd>A shape whose size and position is defined by the <code>&lt;geometry-box&gt;</code> value. If no geometry box is specified, the <code>border-box</code> will be used as the reference box.</dd>
  <dt><code><var>&lt;geometry-box&gt;</var></code></dt>
- <dd>If specified in combination with a <code><var>&lt;basic-shape&gt;</var></code>, this value defines the reference box for the basic shape. If specified by itself, it causes the edges of the specified box, including any corner shaping (such as a {{cssxref("border-radius")}}), to be the clipping path. The geometry box can be one of the following values:</dd>
  <dd>
- <dl>
-  <dt><code>margin-box</code></dt>
-  <dd>Uses the <a href="/en-US/docs/Web/CSS/CSS_Shapes/From_box_values#margin-box">margin box</a> as the reference box.</dd>
-  <dt><code>border-box</code></dt>
-  <dd>Uses the <a href="/en-US/docs/Web/CSS/CSS_Shapes/From_box_values#border-box">border box</a> as the reference box.</dd>
-  <dt><code>padding-box</code></dt>
-  <dd>Uses the <a href="/en-US/docs/Web/CSS/CSS_Shapes/From_box_values#padding-box">padding box</a> as the reference box.</dd>
-  <dt><code>content-box</code></dt>
-  <dd>Uses the <a href="/en-US/docs/Web/CSS/CSS_Shapes/From_box_values#content-box">content box</a> as the reference box.</dd>
-  <dt><code>fill-box</code></dt>
-  <dd>Uses the object bounding box as the reference box.</dd>
-  <dt><code>stroke-box</code></dt>
-  <dd>Uses the stroke bounding box as the reference box.</dd>
-  <dt><code>view-box</code></dt>
-  <dd>Uses the nearest SVG viewport as the reference box. If a {{SVGAttr("viewBox")}} attribute is specified for the element creating the SVG viewport, the reference box is positioned at the origin of the coordinate system established by the <code>viewBox</code> attribute and the dimension of the size of the reference box is set to the width and height values of the <code>viewBox</code> attribute.</dd>
- </dl>
+  <p>If specified in combination with a <code><var>&lt;basic-shape&gt;</var></code>, this value defines the reference box for the basic shape. If specified by itself, it causes the edges of the specified box, including any corner shaping (such as a {{cssxref("border-radius")}}), to be the clipping path. The geometry box can be one of the following values:</p>
+  <dl>
+   <dt><code>margin-box</code></dt>
+   <dd>Uses the <a href="/en-US/docs/Web/CSS/CSS_Shapes/From_box_values#margin-box">margin box</a> as the reference box.</dd>
+   <dt><code>border-box</code></dt>
+   <dd>Uses the <a href="/en-US/docs/Web/CSS/CSS_Shapes/From_box_values#border-box">border box</a> as the reference box.</dd>
+   <dt><code>padding-box</code></dt>
+   <dd>Uses the <a href="/en-US/docs/Web/CSS/CSS_Shapes/From_box_values#padding-box">padding box</a> as the reference box.</dd>
+   <dt><code>content-box</code></dt>
+   <dd>Uses the <a href="/en-US/docs/Web/CSS/CSS_Shapes/From_box_values#content-box">content box</a> as the reference box.</dd>
+   <dt><code>fill-box</code></dt>
+   <dd>Uses the object bounding box as the reference box.</dd>
+   <dt><code>stroke-box</code></dt>
+   <dd>Uses the stroke bounding box as the reference box.</dd>
+   <dt><code>view-box</code></dt>
+   <dd>Uses the nearest SVG viewport as the reference box. If a {{SVGAttr("viewBox")}} attribute is specified for the element creating the SVG viewport, the reference box is positioned at the origin of the coordinate system established by the <code>viewBox</code> attribute and the dimension of the size of the reference box is set to the width and height values of the <code>viewBox</code> attribute.</dd>
+  </dl>
  </dd>
  <dt><code>none</code></dt>
  <dd>No clipping path is created.</dd>
 </dl>
 
 <div class="note">
-<p><strong>Note</strong>: A computed value other than <strong><code>none</code></strong> results in the creation of a new <a href="/en-US/docs/CSS/Understanding_z-index/The_stacking_context">stacking context</a> the same way that CSS {{cssxref("opacity")}} does for values other than <code>1</code>.</p>
+<p><strong>Note:</strong> A computed value other than <strong><code>none</code></strong> results in the creation of a new <a href="/en-US/docs/CSS/Understanding_z-index/The_stacking_context">stacking context</a> the same way that CSS {{cssxref("opacity")}} does for values other than <code>1</code>.</p>
 </div>
 
 <h2 id="Formal_definition">Formal definition</h2>
@@ -525,7 +526,7 @@ svg text.em {
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html">&lt;img id="clipped" src="https://mdn.mozillademos.org/files/12668/MDN.svg"
+<pre class="brush: html">&lt;img id="clipped" src="mdn.svg"
     alt="MDN logo"&gt;
 &lt;svg height="0" width="0"&gt;
   &lt;defs&gt;
@@ -571,32 +572,7 @@ clipPathSelect.addEventListener("change", function (evt) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Masks", "#the-clip-path", 'clip-path')}}</td>
-   <td>{{Spec2('CSS Masks')}}</td>
-   <td>Extends its application to HTML elements. The <code>clip-path</code> property replaces the deprecated {{cssxref("clip")}} property.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('SVG1.1', 'masking.html#ClipPathProperty', 'clip-path')}}</td>
-   <td>{{Spec2('SVG1.1')}}</td>
-   <td>Initial definition (applies to SVG elements only).</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS Shapes 2", "#supported-basic-shapes", 'path')}}</td>
-   <td>{{Spec2('CSS Shapes 2')}}</td>
-   <td>Defines <code>path()</code>.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

@@ -30,6 +30,7 @@ text-rendering: geometricPrecision;
 /* Global values */
 text-rendering: inherit;
 text-rendering: initial;
+text-rendering: revert;
 text-rendering: unset;
 </pre>
 
@@ -58,7 +59,9 @@ text-rendering: unset;
 
  <p>But the <code>geometricPrecision</code> property — when fully supported by the rendering engine — lets you scale your text fluidly. For large scale factors, you might see less-than-beautiful text rendering, but the size is what you would expect—neither rounded up nor down to the nearest font size supported by Windows or Linux.</p>
 
- <p class="note"><strong>Note</strong>: WebKit precisely applies the specified value, but Gecko treats the value the same as <code>optimizeLegibility</code>.</p>
+ <div class="note">
+   <p><strong>Note:</strong> WebKit precisely applies the specified value, but Gecko treats the value the same as <code>optimizeLegibility</code>.</p>
+ </div>
  </dd>
 </dl>
 
@@ -112,27 +115,7 @@ text-rendering: unset;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('SVG2', 'painting.html#TextRenderingProperty', 'text-rendering')}}</td>
-   <td>{{Spec2('SVG2')}}</td>
-   <td>No change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('SVG1.1', 'painting.html#TextRenderingProperty', 'text-rendering')}}</td>
-   <td>{{Spec2('SVG1.1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

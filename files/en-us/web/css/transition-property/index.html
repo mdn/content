@@ -15,7 +15,9 @@ browser-compat: css.properties.transition-property
 
 <div>{{EmbedInteractiveExample("pages/css/transition-property.html")}}</div>
 
-<div class="note"><strong>Note:</strong> The <a href="/en-US/docs/Web/CSS/CSS_animated_properties">set of properties that can be animated</a> is subject to change. As such, you should avoid including any properties in the list that don't currently animate, as someday they might, causing unexpected results.</div>
+<div class="note">
+  <p><strong>Note:</strong> The <a href="/en-US/docs/Web/CSS/CSS_animated_properties">set of properties that can be animated</a> is subject to change. As such, you should avoid including any properties in the list that don't currently animate, as someday they might, causing unexpected results.</p>
+</div>
 
 <p>If you specify a shorthand property (e.g., {{cssxref("background")}}), all of its longhand sub-properties that can be animated will be.</p>
 
@@ -38,6 +40,7 @@ transition-property: all, -moz-specific, sliding;
 /* Global values */
 transition-property: inherit;
 transition-property: initial;
+transition-property: revert;
 transition-property: unset;
 </pre>
 
@@ -89,22 +92,7 @@ transition-property: unset;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName('CSS3 Transitions', '#transition-property-property', 'transition-property')}}</td>
-			<td>{{Spec2('CSS3 Transitions')}}</td>
-			<td>Initial definition</td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

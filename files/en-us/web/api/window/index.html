@@ -52,6 +52,8 @@ browser-compat: api.Window
 <p>Note that properties which are objects (e.g.,. for overriding the prototype of built-in elements) are listed in a separate section below.</p>
 
 <dl>
+ <dt>{{domxref("Window.navigator", "Window.clientInformation")}} {{readOnlyInline}}</dt>
+ <dd>An alias for {{domxref("Window.navigator")}}.</dd>
  <dt>{{domxref("Window.closed")}} {{readOnlyInline}}</dt>
  <dd>This property indicates whether the current window is closed or not.</dd>
  <dt>{{domxref("Window.console")}} {{ReadOnlyInline}}</dt>
@@ -311,7 +313,7 @@ browser-compat: api.Window
  <dt>{{domxref("WindowOrWorkerGlobalScope.clearTimeout()")}}</dt>
  <dd>Cancels the delayed execution set using {{domxref("WindowOrWorkerGlobalScope.setTimeout()")}}.</dd>
  <dt>{{domxref("WindowOrWorkerGlobalScope.createImageBitmap()")}}</dt>
- <dd>Accepts a variety of different image sources, and returns a {{domxref("Promise")}} which resolves to an {{domxref("ImageBitmap")}}. Optionally the source is cropped to the rectangle of pixels originating at <em>(sx, sy)</em> with width sw, and height sh.</dd>
+ <dd>Accepts a variety of different image sources, and returns a {{jsxref("Promise")}} which resolves to an {{domxref("ImageBitmap")}}. Optionally the source is cropped to the rectangle of pixels originating at <em>(sx, sy)</em> with width sw, and height sh.</dd>
  <dt>{{domxref("WindowOrWorkerGlobalScope.fetch()")}}</dt>
  <dd>Starts the process of fetching a resource from the network.</dd>
  <dt>{{domxref("EventTarget.removeEventListener")}}</dt>
@@ -352,8 +354,6 @@ browser-compat: api.Window
  <dd>Called when the page is installed as a webapp. See {{domxref("Window/appinstalled_event", "appinstalled")}} event.</dd>
  <dt>{{domxref("Window.onbeforeinstallprompt")}} {{non-standard_inline}}</dt>
  <dd>An event handler property dispatched before a user is prompted to save a web site to a home screen on mobile.</dd>
- <dt><code>Window.ondevicelight</code> {{deprecated_inline}}</dt>
- <dd>An event handler property for any ambient light levels changes (see {{domxref("DeviceLightEvent")}}).</dd>
  <dt>{{domxref("Window.ondevicemotion")}}</dt>
  <dd>Called if accelerometer detects a change (For mobile devices)</dd>
  <dt>{{domxref("Window.ondeviceorientation")}}</dt>
@@ -432,7 +432,7 @@ browser-compat: api.Window
  <dt>{{domxref("GlobalEventHandlers.onload")}}</dt>
  <dd>Called after all resources and the DOM are fully loaded. WILL NOT get called when the page is loaded from cache, such as with back button.</dd>
  <dt>{{domxref("WindowEventHandlers.onmessage")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("message")}} event is raised.</dd>
+ <dd>Is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> representing the code to be called when the {{event("message")}} event is raised.</dd>
  <dt>{{domxref("GlobalEventHandlers.onmousedown")}}</dt>
  <dd>Called when ANY mouse button is pressed.</dd>
  <dt>{{domxref("GlobalEventHandlers.onmousemove")}}</dt>
@@ -464,7 +464,7 @@ browser-compat: api.Window
  <dt>{{domxref("GlobalEventHandlers.onselect")}}</dt>
  <dd>Called after text in an input field is selected</dd>
  <dt>{{domxref("GlobalEventHandlers.onselectionchange")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("selectionchange")}} event is raised.</dd>
+ <dd>Is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> representing the code to be called when the {{event("selectionchange")}} event is raised.</dd>
  <dt>{{domxref("WindowEventHandlers.onstorage")}}</dt>
  <dd>Called when there is a change in session storage or local storage. See {{event("storage")}} event</dd>
  <dt>{{domxref("GlobalEventHandlers.onsubmit")}}</dt>
@@ -697,18 +697,7 @@ browser-compat: api.Window
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#the-window-object', 'Window')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

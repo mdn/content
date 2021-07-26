@@ -22,7 +22,7 @@ browser-compat: api.HTMLDialogElement
 
 <dl>
  <dt>{{domxref("HTMLDialogElement.open")}}</dt>
- <dd>A {{domxref("Boolean")}} reflecting the {{htmlattrxref("open", "dialog")}} HTML attribute, indicating whether the dialog is available for interaction.</dd>
+ <dd>A boolean value reflecting the {{htmlattrxref("open", "dialog")}} HTML attribute, indicating whether the dialog is available for interaction.</dd>
  <dt>{{domxref("HTMLDialogElement.returnValue")}}</dt>
  <dd>A {{domxref("DOMString")}} that sets or returns the return value for the dialog.</dd>
 </dl>
@@ -43,6 +43,9 @@ browser-compat: api.HTMLDialogElement
 <h2 id="Events">Events</h2>
 
 <dl>
+ <dt>{{domxref("HTMLDialogElement/cancel_event", "cancel")}}</dt>
+ <dd>Fired when the user instructs the browser that they wish to dismiss the current open dialog.<br>
+ Also available via the {{domxref("GlobalEventHandlers/oncancel", "oncancel")}} property.</dd>
  <dt>{{domxref("HTMLDialogElement/close_event", "close")}}</dt>
  <dd>Fired when the dialog is closed.<br>
  Also available via the {{domxref("GlobalEventHandlers/onclose", "onclose")}} property.</dd>

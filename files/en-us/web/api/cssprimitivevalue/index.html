@@ -14,6 +14,16 @@ browser-compat: api.CSSPrimitiveValue
 
 <p>The <code><strong>CSSPrimitiveValue</strong></code> interface derives from the {{DOMxRef("CSSValue")}} interface and represents the current computed value of a CSS property.</p>
 
+<div class="notecard note">
+  <p><strong>Note:</strong> This interface was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do
+  not implement it.</p>
+  <p>To achieve your purpose, you can use:</p>
+  <ul>
+    <li>the untyped <a href="/en-US/docs/Web/API/CSS_Object_Model">CSS Object Model</a>, widely supported, or</li>
+    <li>the modern <a href="/en-US/docs/Web/API/CSS_Typed_OM_API">CSS Typed Object Model API</a>, less supported and considered experimental.</li>
+  </ul>
+</div>
+
 <p>This interface represents a single CSS value. It may be used to determine the value of a specific style property currently set in a block or to set a specific style property explicitly within the block. An instance of this interface might be obtained from the {{DOMxRef("CSSStyleDeclaration.getPropertyCSSValue()", "getPropertyCSSValue()")}} method of the {{DOMxRef("CSSStyleDeclaration")}} interface. A <code>CSSPrimitiveValue</code> object only occurs in a context of a CSS property.</p>
 
 <p>Conversions are allowed between absolute values (from millimeters to centimeters, from degrees to radians, and so on) but not between relative values. (For example, a pixel value cannot be converted to a centimeter value.) Percentage values can't be converted since they are relative to the parent value (or another property value). There is one exception for color percentage values: since a color percentage value is relative to the range 0-255, a color percentage value can be converted to a number (see also the {{DOMxRef("RGBColor")}} interface).</p>
@@ -163,7 +173,10 @@ browser-compat: api.CSSPrimitiveValue
 
 <h2 id="Specifications">Specifications</h2>
 
-{{Specifications}}
+<p>This feature was originally defined in the <a href="https://www.w3.org/TR/DOM-Level-2-Style">DOM Style Level 2</a> specification, but has been dropped from any
+  standardization effort since then.</p>
+
+<p>It has been superseded by a modern, but incompatible, <a href="/en-US/docs/Web/API/CSS_Typed_OM_API">CSS Typed Object Model API</a> that is now on the standard track.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

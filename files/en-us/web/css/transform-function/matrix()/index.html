@@ -7,7 +7,7 @@ tags:
   - CSS Transforms
   - Function
   - Reference
-browser-compat: css.types.transform-function
+browser-compat: css.types.transform-function.matrix
 ---
 <div>{{CSSRef}}</div>
 
@@ -25,10 +25,6 @@ browser-compat: css.types.transform-function
 
 <p>The <code>matrix()</code> function is specified with six values. The constant values are implied and not passed as
   parameters; the other parameters are described in the column-major order.</p>
-
-<div class="note"><strong>Note:</strong> Until Firefox 16, Gecko accepted a {{cssxref("&lt;length&gt;")}} value for
-  <var>tx</var> and <var>ty</var>.
-</div>
 
 <pre class="brush: css">matrix(<var>a</var>, <var>b</var>, <var>c</var>, <var>d</var>, <var>tx</var>, <var>ty</var>)
 </pre>
@@ -252,22 +248,7 @@ browser-compat: css.types.transform-function
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName("CSS3 Transforms", "#funcdef-transform-matrix", "matrix()")}}</td>
-      <td>{{Spec2("CSS3 Transforms")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

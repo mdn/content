@@ -16,7 +16,6 @@ browser-compat: css.properties.place-content
 
 <div>{{EmbedInteractiveExample("pages/css/place-content.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Constituent_properties">Constituent properties</h2>
 
@@ -52,12 +51,13 @@ place-content: stretch space-evenly;
 /* Global values */
 place-content: inherit;
 place-content: initial;
+place-content: revert;
 place-content: unset;</pre>
 
 <p>The first value is the {{CSSxRef("align-content")}} property value, the second the {{CSSxRef("justify-content")}} one.</p>
 
-<div class="warning">
-<p><strong>Important</strong>: If the second value is not present, the first value is used for both, provided it is a valid value for both. If it is invalid for one or the other, the whole value will be invalid.</p>
+<div class="note">
+ <p><strong>Note:</strong> If the second value is not present, the first value is used for both, provided it is a valid value for both. If it is invalid for one or the other, the whole value will be invalid.</p>
 </div>
 
 <h3 id="Values">Values</h3>
@@ -222,22 +222,7 @@ div &gt; div {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Box Alignment", "#propdef-place-content", "place content")}}</td>
-   <td>{{Spec2("CSS3 Box Alignment")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

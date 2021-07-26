@@ -245,30 +245,45 @@ tags:
  <li>Now you've made one row, have a go at making one or two more — each row needs to be wrapped in an additional <code>&lt;tr&gt;</code> element, with each cell contained in a <code>&lt;td&gt;</code>.</li>
 </ol>
 
+<h3>Result</h3>
+
 <p>This should result in a table that looks something like the following:</p>
 
-<table>
- <tbody>
-  <tr>
-   <td>Hi, I'm your first cell.</td>
-   <td>I'm your second cell.</td>
-   <td>I'm your third cell.</td>
-   <td>I'm your fourth cell.</td>
-  </tr>
-  <tr>
-   <td>Second row, first cell.</td>
-   <td>Cell 2.</td>
-   <td>Cell 3.</td>
-   <td>Cell 4.</td>
-  </tr>
- </tbody>
-</table>
+<pre class="brush: html hidden">
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Hi, I'm your first cell.&lt;/td&gt;
+    &lt;td&gt;I'm your second cell.&lt;/td&gt;
+    &lt;td&gt;I'm your third cell.&lt;/td&gt;
+    &lt;td&gt;I'm your fourth cell.&lt;/td&gt;
+  &lt;/tr&gt;
+
+  &lt;tr&gt;
+    &lt;td&gt;Second row, first cell.&lt;/td&gt;
+    &lt;td&gt;Cell 2.&lt;/td&gt;
+    &lt;td&gt;Cell 3.&lt;/td&gt;
+    &lt;td&gt;Cell 4.&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</pre>
+
+<pre class="brush: css hidden">
+  table {
+    border-collapse: collapse;
+  }
+  td, th {
+    border: 1px solid black;
+    padding: 10px 20px;
+  }
+</pre>
+
+{{EmbedLiveSample("Result")}}
 
 <div class="note">
 <p><strong>Note</strong>: You can also find this on GitHub as <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/simple-table.html">simple-table.html</a> (<a href="https://mdn.github.io/learning-area/html/tables/basic/simple-table.html">see it live also</a>).</p>
 </div>
 
-<h2 id="Adding_headers_with_&lt;th&gt;_elements">Adding headers with &lt;th&gt; elements</h2>
+<h2 id="Adding_headers_with_th_elements">Adding headers with &lt;th&gt; elements</h2>
 
 <p>Now let's turn our attention to table headers — special cells that go at the start of a row or column and define the type of data that row or column contains (as an example, see the "Person" and "Age" cells in the first example shown in this article). To illustrate why they are useful, have a look at the following table example. First the source code:</p>
 
@@ -310,47 +325,19 @@ tags:
   &lt;/tr&gt;
 &lt;/table&gt;</pre>
 
+<pre class="brush: css hidden">
+  table {
+    border-collapse: collapse;
+  }
+  td, th {
+    border: 1px solid black;
+    padding: 10px 20px;
+  }
+</pre>
+
 <p>Now the actual rendered table:</p>
 
-<table>
- <tbody>
-  <tr>
-   <td></td>
-   <td>Knocky</td>
-   <td>Flor</td>
-   <td>Ella</td>
-   <td>Juan</td>
-  </tr>
-  <tr>
-   <td>Breed</td>
-   <td>Jack Russell</td>
-   <td>Poodle</td>
-   <td>Streetdog</td>
-   <td>Cocker Spaniel</td>
-  </tr>
-  <tr>
-   <td>Age</td>
-   <td>16</td>
-   <td>9</td>
-   <td>10</td>
-   <td>5</td>
-  </tr>
-  <tr>
-   <td>Owner</td>
-   <td>Mother-in-law</td>
-   <td>Me</td>
-   <td>Me</td>
-   <td>Sister-in-law</td>
-  </tr>
-  <tr>
-   <td>Eating Habits</td>
-   <td>Eats everyone's leftovers</td>
-   <td>Nibbles at food</td>
-   <td>Hearty eater</td>
-   <td>Will eat till he explodes</td>
-  </tr>
- </tbody>
-</table>
+{{EmbedLiveSample("Adding_headers_with_th_elements", "", "250")}}
 
 <p>The problem here is that, while you can kind of make out what's going on, it is not as easy to cross reference data as it could be. If the column and row headings stood out in some way, it would be much better.</p>
 
@@ -410,35 +397,19 @@ tags:
   &lt;/tr&gt;
 &lt;/table&gt;</pre>
 
+<pre class="brush: css hidden">
+  table {
+    border-collapse: collapse;
+  }
+  td, th {
+    border: 1px solid black;
+    padding: 10px 20px;
+  }
+</pre>
+
 <p>But the output doesn't give us quite what we want:</p>
 
-<table>
- <tbody>
-  <tr>
-   <th>Animals</th>
-  </tr>
-  <tr>
-   <th>Hippopotamus</th>
-  </tr>
-  <tr>
-   <th>Horse</th>
-   <td>Mare</td>
-  </tr>
-  <tr>
-   <td>Stallion</td>
-  </tr>
-  <tr>
-   <th>Crocodile</th>
-  </tr>
-  <tr>
-   <th>Chicken</th>
-   <td>Hen</td>
-  </tr>
-  <tr>
-   <td>Rooster</td>
-  </tr>
- </tbody>
-</table>
+{{EmbedLiveSample("Allowing_cells_to_span_multiple_rows_and_columns", "", "350")}}
 
 <p>We need a way to get "Animals", "Hippopotamus", and "Crocodile" to span across two columns, and "Horse" and "Chicken" to span downwards over two rows. Fortunately, table headers and cells have the <code>colspan</code> and <code>rowspan</code> attributes, which allow us to do just those things. Both accept a unitless number value, which equals the number of rows or columns you want spanned. For example, <code>colspan="2"</code> makes a cell span two columns.</p>
 
@@ -459,6 +430,8 @@ tags:
 </table>
 
 <h2 id="Providing_common_styling_to_columns">Providing common styling to columns</h2>
+
+<h3 id="Styling_without_col">Styling without &lt;col&gt;</h3>
 
 <p>There is one last feature we'll tell you about in this article before we move on. HTML has a method of defining styling information for an entire column of data all in one place — the <strong><code><a href="/en-US/docs/Web/HTML/Element/col">&lt;col&gt;</a></code></strong> and <strong><code><a href="/en-US/docs/Web/HTML/Element/colgroup">&lt;colgroup&gt;</a></code></strong> elements. These exist because it can be a bit annoying and inefficient having to specify styling on columns — you generally have to specify your styling information on <em>every</em> <code>&lt;td&gt;</code> or <code>&lt;th&gt;</code> in the column, or use a complex selector such as {{cssxref(":nth-child")}}.</p>
 
@@ -483,26 +456,25 @@ tags:
   &lt;/tr&gt;
 &lt;/table&gt;</pre>
 
+<pre class="brush: css hidden">
+  table {
+    border-collapse: collapse;
+  }
+  td, th {
+    border: 1px solid black;
+    padding: 10px 20px;
+  }
+</pre>
+
 <p>Which gives us the following result:</p>
 
-<table>
- <tbody>
-  <tr>
-   <th>Data 1</th>
-   <th style="background-color: yellow;">Data 2</th>
-  </tr>
-  <tr>
-   <td>Calcutta</td>
-   <td style="background-color: yellow;">Orange</td>
-  </tr>
-  <tr>
-   <td>Robots</td>
-   <td style="background-color: yellow;">Jazz</td>
-  </tr>
- </tbody>
-</table>
+{{EmbedLiveSample("Styling_without_col", "", "200")}}
 
-<p>This isn't ideal, as we have to repeat the styling information across all three cells in the column (we'd probably have a <code>class</code> set on all three in a real project and specify the styling in a separate stylesheet). Instead of doing this, we can specify the information once, on a <code>&lt;col&gt;</code> element. <code>&lt;col&gt;</code> elements are  specified inside a <code>&lt;colgroup&gt;</code> container just below the opening <code>&lt;table&gt;</code> tag. We could create the same effect as we see above by specifying our table as follows:</p>
+<p>This isn't ideal, as we have to repeat the styling information across all three cells in the column (we'd probably have a <code>class</code> set on all three in a real project and specify the styling in a separate stylesheet).</p>
+
+<h3 id="Styling_with_col">Styling with &lt;col&gt;</h3>
+
+<p>Instead of doing this, we can specify the information once, on a <code>&lt;col&gt;</code> element. <code>&lt;col&gt;</code> elements are  specified inside a <code>&lt;colgroup&gt;</code> container just below the opening <code>&lt;table&gt;</code> tag. We could create the same effect as we see above by specifying our table as follows:</p>
 
 <pre class="brush: html">&lt;table&gt;
   &lt;colgroup&gt;
@@ -565,7 +537,7 @@ tags:
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/HTML/Tables/Basics">HTML table basics</a></li>
+ <li><strong>HTML table basics</strong></li>
  <li><a href="/en-US/docs/Learn/HTML/Tables/Advanced">HTML table advanced features and accessibility</a></li>
  <li><a href="/en-US/docs/Learn/HTML/Tables/Structuring_planet_data">Structuring planet data</a></li>
 </ul>

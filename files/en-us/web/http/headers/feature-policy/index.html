@@ -92,6 +92,9 @@ browser-compat: http.headers.Feature-Policy
  <dd>Controls whether tasks should execute in frames while they're outside of the visible viewport.</dd>
  <dt>{{httpheader('Feature-Policy/fullscreen','fullscreen')}}</dt>
  <dd>Controls whether the current document is allowed to use {{DOMxRef("Element.requestFullScreen()")}}. When this policy is disabled, the returned {{JSxRef("Promise")}} rejects with a {{JSxRef("TypeError")}}.</dd>
+ <dt>{{httpheader('Feature-Policy/gamepad','gamepad')}}</dt>
+ <dd>Controls whether the current document is allowed to use the <a href="/en-US/docs/Web/API/Gamepad_API">Gamepad API</a>.
+  When this policy is disabled, calls to {{domxref('Navigator.getGamepads()')}} will throw a <code>SecurityError</code> {{domxref('DOMException')}}, and the {{event("gamepadconnected")}} and {{event("gamepaddisconnected")}} events will not fire.</dd>
  <dt>{{httpheader('Feature-Policy/geolocation','geolocation')}}</dt>
  <dd>Controls whether the current document is allowed to use the {{domxref('Geolocation')}} Interface. When this policy is disabled, calls to {{domxref('Geolocation.getCurrentPosition','getCurrentPosition()')}} and {{domxref('Geolocation.watchPosition','watchPosition()')}} will cause those functions' callbacks to be invoked with a {{domxref('GeolocationPositionError')}} code of <code>PERMISSION_DENIED</code>.</dd>
  <dt>{{httpheader('Feature-Policy/gyroscope','gyroscope')}}</dt>

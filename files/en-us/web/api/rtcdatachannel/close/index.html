@@ -22,29 +22,27 @@ browser-compat: api.RTCDataChannel.close
 
 <p>Closure of the data channel is not instantaneous. Most of the process of closing the
   connection is handled asynchronously; you can detect when the channel has finished
-  closing by watching for a {{event("close")}} event on the data channel.</p>
+  closing by watching for a {{DOMxRef("RTCDataChannel.close_event", "close")}} event on the data channel.</p>
 
 <p>The sequence of events which occurs in response to this method being called:</p>
 
 <ol>
-  <li>{{domxref("RTCDataChannel.readyState")}} is set to <code>"closing"</code>.</li>
+  <li>{{domxref("RTCDataChannel.readyState")}} is set to <code>closing</code>.</li>
   <li>A background task is established to handle the remainder of the steps below, and
     <code>close()</code> returns to the caller.</li>
   <li>The transport layer deals with any buffered messages; the protocol layer decides
     whether to send them or discard them.</li>
   <li>The underlying data transport is closed.</li>
   <li>The {{domxref("RTCDataChannel.readyState")}} property is set to
-    <code>"closed"</code>.</li>
-  <li>If the transport was closed with an error, the <code>RTCDataChannel</code> is sent a
-    {{event("NetworkError")}} event.</li>
-  <li>A {{domxref("close")}} event is sent to the channel.</li>
+    <code>closed</code>.</li>
+  <li>
+    If the transport was closed with an error,
+    the <code>RTCDataChannel</code> is sent
+    an {{DOMxRef("RTCDataChannel.error_event", "error")}} event
+    with its {{DOMxRef("DOMException.name", "name")}} set to <code>NetworkError</code>.
+  </li>
+  <li>A {{domxref("RTCDataChannel.close_event", "close")}} event is sent to the channel.</li>
 </ol>
-
-<div class="note">
-  <p>In Firefox, the {{domxref("RTCDataChannel")}} interface was implemented under the
-    name <code>DataChannel</code> until Firefox 24, so this method was called
-    <code>DataChannel.close()</code>.</p>
-</div>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -94,5 +92,5 @@ dc.onclose = function (
   <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></li>
   <li>{{domxref("RTCDataChannel")}}</li>
   <li>{{domxref("RTCDataChannel.readyState")}}</li>
-  <li>{{event("close")}} event</li>
+  <li>{{DOMxRef("RTCDataChannel.close_event", "close")}} event</li>
 </ul>

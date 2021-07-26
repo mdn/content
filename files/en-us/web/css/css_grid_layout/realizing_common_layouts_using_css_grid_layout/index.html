@@ -22,44 +22,43 @@ tags:
 
 <div class="hidden">
 <pre class="brush: css">* {box-sizing: border-box;}
+  .wrapper {
+    max-width: 1024px;
+    margin: 0 auto;
+    font: 1.2em Helvetica, arial, sans-serif;
+  }
 
-    .wrapper {
-        max-width: 1024px;
-        margin: 0 auto;
-        font: 1.2em Helvetica, arial, sans-serif;
-    }
+  .wrapper &gt; * {
+    border: 2px solid #f08c00;
+    background-color: #ffec99;
+    border-radius: 5px;
+    padding: 10px;
+  }
 
-    .wrapper &gt; * {
-        border: 2px solid #f08c00;
-        background-color: #ffec99;
-        border-radius: 5px;
-        padding: 10px;
-    }
-
-    nav ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
 </pre>
 </div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
-        &lt;header class="main-head"&gt;The header&lt;/header&gt;
-        &lt;nav class="main-nav"&gt;
-            &lt;ul&gt;
-                &lt;li&gt;&lt;a href=""&gt;Nav 1&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href=""&gt;Nav 2&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href=""&gt;Nav 3&lt;/a&gt;&lt;/li&gt;
-            &lt;/ul&gt;
-        &lt;/nav&gt;
-        &lt;article class="content"&gt;
-            &lt;h1&gt;Main article area&lt;/h1&gt;
-            &lt;p&gt;In this layout, we display the areas in source order for any screen less that 500 pixels wide. We go to a two column layout, and then to a three column layout by redefining the grid, and the placement of items on the grid.&lt;/p&gt;
-        &lt;/article&gt;
-        &lt;aside class="side"&gt;Sidebar&lt;/aside&gt;
-        &lt;div class="ad"&gt;Advertising&lt;/div&gt;
-        &lt;footer class="main-footer"&gt;The footer&lt;/footer&gt;
+  &lt;header class="main-head"&gt;The header&lt;/header&gt;
+  &lt;nav class="main-nav"&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=""&gt;Nav 1&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=""&gt;Nav 2&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=""&gt;Nav 3&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+  &lt;article class="content"&gt;
+    &lt;h1&gt;Main article area&lt;/h1&gt;
+    &lt;p&gt;In this layout, we display the areas in source order for any screen less that 500 pixels wide. We go to a two column layout, and then to a three column layout by redefining the grid, and the placement of items on the grid.&lt;/p&gt;
+  &lt;/article&gt;
+  &lt;aside class="side"&gt;Sidebar&lt;/aside&gt;
+  &lt;div class="ad"&gt;Advertising&lt;/div&gt;
+  &lt;footer class="main-footer"&gt;The footer&lt;/footer&gt;
 &lt;/div&gt;
 </pre>
 
@@ -216,43 +215,44 @@ tags:
 
 <div class="hidden">
 <pre class="brush: css">* {box-sizing: border-box;}
+  .wrapper {
+    max-width: 1024px;
+    margin: 0 auto;
+    font: 1.2em Helvetica, arial, sans-serif;
+  }
 
-    .wrapper {
-        max-width: 1024px;
-        margin: 0 auto;
-        font: 1.2em Helvetica, arial, sans-serif;
-    }
+  .wrapper &gt; * {
+    border: 2px solid #f08c00;
+    background-color: #ffec99;
+    border-radius: 5px;
+    padding: 10px;
+  }
 
-    .wrapper &gt; * {
-        border: 2px solid #f08c00;
-        background-color: #ffec99;
-        border-radius: 5px;
-        padding: 10px;
-    }
-
-    nav ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
 </pre>
 </div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
-        &lt;header class="main-head"&gt;The header&lt;/header&gt;
-        &lt;nav class="main-nav"&gt;
-            &lt;ul&gt;
-                &lt;li&gt;&lt;a href=""&gt;Nav 1&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href=""&gt;Nav 2&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href=""&gt;Nav 3&lt;/a&gt;&lt;/li&gt;
-            &lt;/ul&gt;
-        &lt;/nav&gt;
-        &lt;article class="content"&gt;&lt;h1&gt;Main article area&lt;/h1&gt;
-        &lt;p&gt;In this layout, we display the areas in source order for any screen less that 500 pixels wide. We go to a two column layout, and then to a three column layout by redefining the grid, and the placement of items on the grid.&lt;/p&gt;&lt;/article&gt;
-        &lt;aside class="side"&gt;Sidebar&lt;/aside&gt;
-        &lt;div class="ad"&gt;Advertising&lt;/div&gt;
-        &lt;footer class="main-footer"&gt;The footer&lt;/footer&gt;
-    &lt;/div&gt;
+  &lt;header class="main-head"&gt;The header&lt;/header&gt;
+  &lt;nav class="main-nav"&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=""&gt;Nav 1&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=""&gt;Nav 2&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=""&gt;Nav 3&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+  &lt;article class="content"&gt;
+    &lt;h1&gt;Main article area&lt;/h1&gt;
+    &lt;p&gt;In this layout, we display the areas in source order for any screen less that 500 pixels wide. We go to a two column layout, and then to a three column layout by redefining the grid, and the placement of items on the grid.&lt;/p&gt;
+  &lt;/article&gt;
+  &lt;aside class="side"&gt;Sidebar&lt;/aside&gt;
+  &lt;div class="ad"&gt;Advertising&lt;/div&gt;
+  &lt;footer class="main-footer"&gt;The footer&lt;/footer&gt;
+&lt;/div&gt;
 </pre>
 
 <p>I can then set up our grid, as for the example 12-column layout above.</p>
@@ -278,7 +278,6 @@ tags:
 <p>The ad panel is below the sidebar, so starts at grid row line 4. Then we have the content and footer starting at col-start 4 and spanning 9 tracks taking them to the end of the grid.</p>
 
 <pre class="brush: css">@media (min-width: 500px) {
-
   .side {
     grid-column: col-start / span 3;
     grid-row: 3;
@@ -342,32 +341,52 @@ tags:
 <pre class="brush: html">&lt;ul class="listing"&gt;
   &lt;li&gt;
     &lt;h2&gt;Item One&lt;/h2&gt;
-    &lt;div class="body"&gt;&lt;p&gt;The content of this listing item goes here.&lt;/p&gt;&lt;/div&gt;
-    &lt;div class="cta"&gt;&lt;a href=""&gt;Call to action!&lt;/a&gt;&lt;/div&gt;
+    &lt;div class="body"&gt;
+      &lt;p&gt;The content of this listing item goes here.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="cta"&gt;
+      &lt;a href=""&gt;Call to action!&lt;/a&gt;
+    &lt;/div&gt;
   &lt;/li&gt;
-   &lt;li&gt;
-     &lt;h2&gt;Item Two&lt;/h2&gt;
-     &lt;div class="body"&gt;&lt;p&gt;The content of this listing item goes here.&lt;/p&gt;&lt;/div&gt;
-     &lt;div class="cta"&gt;&lt;a href=""&gt;Call to action!&lt;/a&gt;&lt;/div&gt;
-   &lt;/li&gt;
-   &lt;li class="wide"&gt;
-     &lt;h2&gt;Item Three&lt;/h2&gt;
-     &lt;div class="body"&gt;&lt;p&gt;The content of this listing item goes here.&lt;/p&gt;
-     &lt;p&gt;This one has more text than the other items.&lt;/p&gt;
-     &lt;p&gt;Quite a lot more&lt;/p&gt;
-     &lt;p&gt;Perhaps we could do something different with it?&lt;/p&gt;&lt;/div&gt;
-     &lt;div class="cta"&gt;&lt;a href=""&gt;Call to action!&lt;/a&gt;&lt;/div&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-     &lt;h2&gt;Item Four&lt;/h2&gt;
-     &lt;div class="body"&gt;&lt;p&gt;The content of this listing item goes here.&lt;/p&gt;&lt;/div&gt;
-     &lt;div class="cta"&gt;&lt;a href=""&gt;Call to action!&lt;/a&gt;&lt;/div&gt;
-    &lt;/li&gt;
-     &lt;li&gt;
-     &lt;h2&gt;Item Five&lt;/h2&gt;
-     &lt;div class="body"&gt;&lt;p&gt;The content of this listing item goes here.&lt;/p&gt;&lt;/div&gt;
-      &lt;div class="cta"&gt;&lt;a href=""&gt;Call to action!&lt;/a&gt;&lt;/div&gt;
-    &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h2&gt;Item Two&lt;/h2&gt;
+    &lt;div class="body"&gt;
+      &lt;p&gt;The content of this listing item goes here.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="cta"&gt;
+      &lt;a href=""&gt;Call to action!&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li class="wide"&gt;
+    &lt;h2&gt;Item Three&lt;/h2&gt;
+    &lt;div class="body"&gt;
+      &lt;p&gt;The content of this listing item goes here.&lt;/p&gt;
+      &lt;p&gt;This one has more text than the other items.&lt;/p&gt;
+      &lt;p&gt;Quite a lot more&lt;/p&gt;
+      &lt;p&gt;Perhaps we could do something different with it?&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="cta"&gt;
+      &lt;a href=""&gt;Call to action!&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h2&gt;Item Four&lt;/h2&gt;
+    &lt;div class="body"&gt;
+      &lt;p&gt;The content of this listing item goes here.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="cta"&gt;
+      &lt;a href=""&gt;Call to action!&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h2&gt;Item Five&lt;/h2&gt;
+    &lt;div class="body"&gt;
+      &lt;p&gt;The content of this listing item goes here.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="cta"&gt;
+      &lt;a href=""&gt;Call to action!&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 </pre>
 
@@ -527,6 +546,6 @@ tags:
 <p>The best way to learn to use grid layout is to continue to build examples like the ones we have covered here. Pick something that you normally build using your framework of choice, or using floats, and see if you can build it using grid. Don’t forget to find examples that are impossible to build with current methods. That might mean taking inspiration from magazines or other non-web sources. Grid Layout opens up possibilities that we have not had before, we don’t need to be tied to the same old layouts to use it.</p>
 
 <ul>
- <li>For inspiration see the <a href="http://labs.jensimmons.com/"><em>Layout Labs</em> from Jen Simmons</a>, she has been creating layouts based on a range of sources.</li>
- <li>For additional common layout patterns see <em><a href="http://gridbyexample.com">Grid by Example</a></em>, where there are many smaller examples of grid layout and also some larger UI patterns and full page layouts.</li>
+ <li>For inspiration see the <a href="https://labs.jensimmons.com/"><em>Layout Labs</em> from Jen Simmons</a>, she has been creating layouts based on a range of sources.</li>
+ <li>For additional common layout patterns see <em><a href="https://gridbyexample.com">Grid by Example</a></em>, where there are many smaller examples of grid layout and also some larger UI patterns and full page layouts.</li>
 </ul>

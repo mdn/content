@@ -295,7 +295,7 @@ debuggerClient.attachConsole(tab.consoleActor, listeners, onAttachConsole)
 
 <h2 id="Console_API_messages">Console API messages</h2>
 
-<p>The <a href="/en-US/docs/Web/API/Console"><code>window.console</code> API</a> calls send internal messages throughout Gecko which allow us to do whatever we want for each call. The Web Console actor sends these messages to the remote debugging client.</p>
+<p>The <a href="/en-US/docs/Web/API/console"><code>window.console</code> API</a> calls send internal messages throughout Gecko which allow us to do whatever we want for each call. The Web Console actor sends these messages to the remote debugging client.</p>
 
 <p>We use the <code>ObjectActor</code> from <a href="https://mxr.mozilla.org/mozilla-central/source/toolkit/devtools/debugger/server/dbg-script-actors.js">dbg-script-actors.js</a> without a <code>ThreadActor</code>, to avoid slowing down the page scripts - the debugger deoptimizes JavaScript execution in the target page. The <a href="https://wiki.mozilla.org/Remote_Debugging_Protocol#Grip_Lifetimes">lifetime of object actors</a> in the Web Console is different than the lifetime of these objects in the debugger - which is usually per pause or per thread. The Web Console manages the lifetime of <code>ObjectActors</code> manually.</p>
 

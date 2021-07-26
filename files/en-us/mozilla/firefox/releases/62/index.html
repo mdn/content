@@ -93,8 +93,8 @@ tags:
  <li>The {{domxref("Navigator.registerContentHandler()")}} method has been disabled by default in preparation for being removed entirely, as it's been obsolete for some time ({{bug(1460481)}}).</li>
  <li>The {{domxref("DataTransfer.DataTransfer", "DataTransfer()")}} constructor has been implemented ({{bug(1351193)}}).</li>
  <li>{{domxref("Document.domain")}} can no longer return <code>null</code> ({{bug(819475)}}). If the domain cannot be identified, then <code>domain</code> returns an empty string instead of <code>null</code>.</li>
- <li>Added the {{domxref("Console.timeLog()")}} method to display the current value of a console timer while continuing to track the time ({{bug(1458466)}}).</li>
- <li>Added {{domxref("Console.countReset()")}} to reset a console counter value ({{bug(1459279)}}).</li>
+ <li>Added the {{domxref("console.timeLog()")}} method to display the current value of a console timer while continuing to track the time ({{bug(1458466)}}).</li>
+ <li>Added {{domxref("console.countReset()")}} to reset a console counter value ({{bug(1459279)}}).</li>
 </ul>
 
 <h4 id="DOM_events">DOM events</h4>
@@ -116,7 +116,7 @@ tags:
 
 <ul>
  <li>The {{event("userproximity")}} and {{event("deviceproximity")}} events (see also {{domxref("UserProximityEvent")}} and {{domxref("DeviceProximityEvent")}}) have been disabled by default behind the <code>device.sensors.proximity.enabled</code> preference ({{bug(1462308)}}).</li>
- <li>The {{event("devicelight")}} event (see also {{domxref("DeviceLightEvent")}}) has been disabled by default behind the <code>device.sensors.ambientLight.enabled</code> preference ({{bug(1462308)}}).</li>
+ <li>The <code>devicelight</code> event of type <code>DeviceLightEvent</code> has been disabled by default behind the <code>device.sensors.ambientLight.enabled</code> preference ({{bug(1462308)}}).</li>
  <li>The {{event("DOMSubtreeModified")}} and {{event("DOMAttrModified")}} <a href="/en-US/docs/Web/API/MutationEvent">mutation events</a> are no longer thrown when the {{htmlattrxref("style")}} attribute is changed via the CSSOM ({{bug(1460295)}}, see also this <a href="https://www.fxsitecompat.com/en-CA/docs/2018/domattrmodified-and-domsubtreemodified-events-are-no-longer-fired-when-style-attribute-is-changed-via-cssom/">site compatibility post</a>).</li>
  <li>Support for {{domxref("CSSStyleDeclaration.getPropertyCSSValue()")}} has been removed ({{bug(1408301)}}).</li>
  <li>Support for {{domxref("CSSValue")}}, {{domxref("CSSPrimitiveValue")}}, and {{domxref("CSSValueList")}} has been removed ({{bug(1459871)}}).</li>

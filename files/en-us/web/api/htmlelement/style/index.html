@@ -8,6 +8,7 @@ tags:
   - Property
   - Reference
   - Style
+browser-compat: api.HTMLElement.style
 ---
 <div>{{APIRef("CSSOM")}}</div>
 
@@ -40,7 +41,7 @@ tags:
 
 <p>Therefore, to add specific styles to an element without altering other style values, it is generally preferable to set individual properties on the {{domxref("CSSStyleDeclaration")}} object. For example, <code>element.style.backgroundColor = "red"</code>.</p>
 
-<p>A style declaration is reset by setting it to <code>null</code> or an empty string, e.g., <code>elt.style.color = null</code>. Internet Explorer requires setting it to an empty string, and does not do anything when setting it to <code>null</code>.</p>
+<p>A style declaration is reset by setting it to <code>null</code> or an empty string, e.g., <code>elt.style.color = null</code>.</p>
 
 <h3 id="Getting_style_information">Getting style information</h3>
 
@@ -80,26 +81,11 @@ color = 'red' &gt; 'rgb(255, 0, 0)'
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSSOM', '#dom-elementcssinlinestyle-style', 'the <code>style</code> attribute')}}</td>
-   <td>{{Spec2('CSSOM')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.HTMLElement.style")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

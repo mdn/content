@@ -16,6 +16,10 @@ browser-compat: api.CompositionEvent.locale
   {{domxref("CompositionEvent")}} interface returns the locale of current input method
   (for example, the keyboard layout locale if the composition is associated with IME).</p>
 
+<p class="notecard warning">Even for browsers supporting it, don't trust the value contained in this property.
+  Even if technically it is accessible, the way to set it up when creating a {{domxref("CompositionEvent")}}
+is not guaranteed to be coherent.</p>
+
 <h2 id="Syntax">Syntax</h2>
 
 <pre
@@ -27,8 +31,8 @@ browser-compat: api.CompositionEvent.locale
 
 <h2 id="Specifications">Specifications</h2>
 
-{{Specifications}}
-
+<p>This property was in early versions of different specifications. It is now only kept for compatibility purposes, and the way
+to set its value when creating a {{domxref("CompositionEvent")}} is <a href="https://github.com/w3c/uievents/issues/48">not well defined</a>.</p>
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <p>{{Compat}}</p>

@@ -193,23 +193,29 @@ textarea.onkeyup = function(){
 
 <p>There are some serious {{anch("Security concerns")}} to consider with <code>&lt;iframe&gt;</code>s, as we'll discuss below, but this doesn't mean that you shouldn't use them in your websites — it just requires some knowledge and careful thinking. Let's explore the code in a bit more detail. Say you wanted to include the MDN glossary on one of your web pages — you could try something like this:</p>
 
-<pre>&lt;iframe src="https://developer.mozilla.org/en-US/docs/Glossary"
-        width="100%" height="500" frameborder="0"
-        allowfullscreen sandbox&gt;
-  &lt;p&gt;
-    &lt;a href="/en-US/docs/Glossary"&gt;
-       Fallback link for browsers that don't support iframes
-    &lt;/a&gt;
-  &lt;/p&gt;
-&lt;/iframe&gt;</pre>
+<pre class="brush: html">
+&lt;head&gt;
+  &lt;style&gt; iframe { border: none } &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;iframe src="https://developer.mozilla.org/en-US/docs/Glossary"
+          width="100%" height="500" allowfullscreen sandbox&gt;
+    &lt;p&gt;
+      &lt;a href="/en-US/docs/Glossary"&gt;
+         Fallback link for browsers that don't support iframes
+      &lt;/a&gt;
+    &lt;/p&gt;
+  &lt;/iframe&gt;
+&lt;/body&gt;
+</pre>
 
 <p>This example includes the basic essentials needed to use an <code>&lt;iframe&gt;</code>:</p>
 
 <dl>
+ <dt><a href="/en-US/docs/Web/CSS/border"><code>border: none</code></a></dt>
+ <dd>If used, the <code>&lt;iframe&gt;</code> is displayed without a surrounding border. Otherwise, by default, browsers display the <code>&lt;iframe&gt;</code> with a surrounding border (which is generally undesirable).</dd>
  <dt>{{htmlattrxref('allowfullscreen','iframe')}}</dt>
  <dd>If set, the <code>&lt;iframe&gt;</code> is able to be placed in fullscreen mode using the <a href="/en-US/docs/Web/API/Fullscreen_API">Fullscreen API</a> (somewhat beyond the scope of this article.)</dd>
- <dt>{{htmlattrxref('frameborder','iframe')}}</dt>
- <dd>If set to 1, this tells the browser to draw a border between this frame and other frames, which is the default behavior. 0 removes the border. Using this isn't really recommended any more, as the same effect can be better achieved using {{cssxref('border')}}<code>: none;</code> in your {{Glossary('CSS')}}.</dd>
  <dt>{{htmlattrxref('src','iframe')}}</dt>
  <dd>This attribute, as with {{htmlelement("video")}}/{{htmlelement("img")}}, contains a path pointing to the URL of the document to be embedded.</dd>
  <dt>{{htmlattrxref('width','iframe')}} and {{htmlattrxref('height','iframe')}}</dt>
@@ -253,7 +259,7 @@ textarea.onkeyup = function(){
  <li>HTTPS prevents embedded content from accessing content in your parent document, and vice versa.</li>
 </ol>
 
-<p>Using HTTPS requires a security certificate, which can be expensive (although <a href="https://letsencrypt.org/">Let's Encrypt</a> makes things easier) — if you can't get one, you may serve your parent document with HTTP. However, because of the second benefit of HTTPS above, <em>no matter what the cost, you must never embed third-party content with HTTP. </em>(In the best case scenario, your user's Web browser will give them a scary warning.) All reputable companies that make content available for embedding via an <code>&lt;iframe&gt;</code> will make it available via HTTPS — look at the URLs inside the <code>&lt;iframe&gt;</code> <code>src</code> attribute when you are embedding content from Google Maps or YouTube, for example.</p>
+<p>HTTPS-enabling your site requires a special security certificate to be installed. Many hosting providers offer HTTPS-enabled hosting without you needing to do any setup on your own to put a certificate in place. But if you <em>do</em> need to set up HTTPS support for your site on your own, <a href="https://letsencrypt.org/">Let's Encrypt</a> provides tools and instructions you can use for automatically creating and installing the necessary certificate — with built-in support for the most widely-used web servers, including the Apache web server, Nginx, and others. The Let's Encrypt tooling is designed to make the process as easy as possible, so there’s really no good reason to avoid using it or other available means to HTTPS-enable your site.</p>
 
 <div class="note">
 <p><strong>Note</strong>: <a href="/en-US/docs/Learn/Common_questions/Using_Github_pages">GitHub pages</a> allow content to be served via HTTPS by default, so it is useful for hosting content. If you are using a different hosting provider and are not sure, ask them about it.</p>
@@ -385,7 +391,6 @@ textarea.onkeyup = function(){
 <ul>
  <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML">Images in HTML</a></li>
  <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content">Video and audio content</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies">From &lt;object&gt; to &lt;iframe&gt; — other embedding technologies</a></li>
  <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web">Adding vector graphics to the Web</a></li>
  <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">Responsive images</a></li>
  <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page">Mozilla splash page</a></li>

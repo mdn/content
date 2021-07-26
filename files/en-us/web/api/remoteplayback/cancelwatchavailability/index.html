@@ -1,0 +1,63 @@
+---
+title: RemotePlayback.cancelWatchAvailability()
+slug: Web/API/RemotePlayback/cancelWatchAvailability
+tags:
+  - API
+  - Method
+  - Reference
+  - cancelWatchAvailability
+  - RemotePlayback
+browser-compat: api.RemotePlayback.cancelWatchAvailability
+---
+<div>{{DefaultAPISidebar("Remote Playback API")}}</div>
+
+<p class="summary">The <strong><code>cancelWatchAvailability()</code></strong> method of the {{domxref("RemotePlayback")}} interface cancels the request to watch for one or all available devices.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js">RemotePlayback.cancelWatchAvailability();
+RemotePlayback.cancelWatchAvailability(id);</pre>
+
+<h3 id="Parameters">Parameters</h3>
+
+<dl>
+  <dt><code>id</code>{{Optional_Inline}}</dt>
+  <dd><p>The <code>callbackId</code> of a particular remote playback device.</p>
+    <p>If a <code>callbackId</code> of a specific device is passed in, then that device will be removed from the list of watched devices. Otherwise, the whole list will be cleared.</p></dd>
+</dl>
+
+<h3 id="Returns">Return value</h3>
+
+<p>A {{jsxref("Promise")}} that resolves with <code>undefined</code>.</p>
+
+<h3 id="Exceptions">Exceptions</h3>
+
+<dl>
+  <dt>{{domxref("DOMException")}} <code>InvalidStateError</code></dt>
+  <dd>Thrown if {{domxref("HTMLMediaElement.disableRemotePlayback","disableRemotePlayback")}} is <code>true</code> for the media element.</dd>
+  <dt>{{domxref("DOMException")}} <code>NotFoundError</code></dt>
+  <dd>Thrown if an <code>id</code> is passed but it does not match any available <code>callbackId</code>.</dd>
+</dl>
+
+<h2 id="Examples">Examples</h2>
+
+<p>Once a remote playback device has been identified and is connected, the monitoring of available devices can be stopped using <code>cancelWatchAvailability().</code></p>
+
+<pre class="brush: js">function switchToRemoteUI() {
+  // Indicate that the state is 'connecting' or 'connected' to the user.
+  // For example, hide the video element as only controls are needed.
+  videoElem.style.display = "none";
+
+  // Stop monitoring the availability of remote playback devices.
+  videoElem.remote.cancelWatchAvailability();
+};</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<p>{{Specifications}}</p>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>
+
+

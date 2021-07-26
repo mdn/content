@@ -65,9 +65,9 @@ tags:
 var moon = new Image();
 var earth = new Image();
 function init() {
-  sun.src = 'https://mdn.mozillademos.org/files/1456/Canvas_sun.png';
-  moon.src = 'https://mdn.mozillademos.org/files/1443/Canvas_moon.png';
-  earth.src = 'https://mdn.mozillademos.org/files/1429/Canvas_earth.png';
+  sun.src = 'canvas_sun.png';
+  moon.src = 'canvas_moon.png';
+  earth.src = 'canvas_earth.png';
   window.requestAnimationFrame(draw);
 }
 
@@ -114,7 +114,7 @@ init();
 <pre class="brush: html">&lt;canvas id="canvas" width="300" height="300"&gt;&lt;/canvas&gt;</pre>
 </div>
 
-<p>{{EmbedLiveSample("An_animated_solar_system", "310", "310", "https://mdn.mozillademos.org/files/202/Canvas_animation1.png")}}</p>
+<p>{{EmbedLiveSample("An_animated_solar_system", "310", "310", "canvas_animation1.png")}}</p>
 
 <h2 id="An_animated_clock">An animated clock</h2>
 
@@ -223,7 +223,7 @@ window.requestAnimationFrame(clock);</pre>
 <pre class="brush: html">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
 </div>
 
-<p>{{EmbedLiveSample("An_animated_clock", "180", "180", "https://mdn.mozillademos.org/files/203/Canvas_animation2.png")}}</p>
+<p>{{EmbedLiveSample("An_animated_clock", "180", "180", "canvas_animation2.png")}}</p>
 
 <h2 id="A_looping_panorama">A looping panorama</h2>
 
@@ -234,7 +234,7 @@ window.requestAnimationFrame(clock);</pre>
 // User Variables - customize these to change the image being scrolled, its
 // direction, and the speed.
 
-img.src = 'https://mdn.mozillademos.org/files/4553/Capitan_Meadows,_Yosemite_National_Park.jpg';
+img.src = 'capitan_meadows_yosemite_national_park.jpg';
 var CanvasXSize = 800;
 var CanvasYSize = 200;
 var speed = 30; // lower is faster

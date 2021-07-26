@@ -15,7 +15,11 @@ browser-compat: css.properties.unicode-bidi
 
 <p>The <code>unicode-bidi</code> and {{cssxref("direction")}} properties are the only properties that are not affected by the {{cssxref("all")}} shorthand.</p>
 
-<p class="warning"><strong>Note:</strong> This property is intended for Document Type Definition (DTD) designers. Web designers and similar authors <strong>should not</strong> override it.</p>
+<div class="warning">
+  <p><strong>Warning:</strong> This property is intended for Document Type Definition (DTD) designers. Web designers and similar authors <strong>should not</strong> override it.</p>
+</div>
+
+<h2 id="Syntax">Syntax</h2>
 
 <pre class="brush: css">/* Keyword values */
 unicode-bidi: normal;
@@ -24,12 +28,12 @@ unicode-bidi: isolate;
 unicode-bidi: bidi-override;
 unicode-bidi: isolate-override;
 unicode-bidi: plaintext;
+
 /* Global values */
 unicode-bidi: inherit;
 unicode-bidi: initial;
+unicode-bidi: revert;
 unicode-bidi: unset;</pre>
-
-<h2 id="Syntax">Syntax</h2>
 
 <h3 id="Values">Values</h3>
 
@@ -83,27 +87,7 @@ unicode-bidi: unset;</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Writing Modes', '#unicode-bidi', 'unicode-bidi')}}</td>
-   <td>{{Spec2('CSS3 Writing Modes')}}</td>
-   <td>Added <code>plaintext</code>, <code>isolate</code>, and <code>isolate-override</code> keywords.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'visuren.html#propdef-unicode-bidi', 'unicode-bidi')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

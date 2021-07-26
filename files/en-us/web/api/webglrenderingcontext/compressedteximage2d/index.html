@@ -122,13 +122,6 @@ void <var>gl</var>.compressedTexImage3D(<var>target</var>, <var>level</var>, <va
           <li><code>ext.COMPRESSED_RGB_ETC1_WEBGL</code></li>
         </ul>
       </li>
-      <li>When using the {{domxref("WEBGL_compressed_texture_atc")}} extension:
-        <ul>
-          <li><code>ext.COMPRESSED_RGB_ATC_WEBGL</code></li>
-          <li><code>ext.COMPRESSED_RGBA_ATC_EXPLICIT_ALPHA_WEBGL</code></li>
-          <li><code>ext.COMPRESSED_RGBA_ATC_INTERPOLATED_ALPHA_WEBGL</code></li>
-        </ul>
-      </li>
       <li>When using the {{domxref("WEBGL_compressed_texture_astc")}} extension:
         <ul>
           <li><code>ext.COMPRESSED_RGBA_ASTC_4x4_KHR<br>
@@ -218,32 +211,7 @@ gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('WebGL', "#COMPRESSEDTEXIMAGE2D", "compressedTexImage2D")}}</td>
-      <td>{{Spec2('WebGL')}}</td>
-      <td>Initial definition for WebGL.</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('OpenGL ES 2.0', "glCompressedTexImage2D.xml",
-        "glCompressedTexImage2D")}}</td>
-      <td>{{Spec2('OpenGL ES 2.0')}}</td>
-      <td>Man page of the (similar) OpenGL ES 2.0 API.</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('OpenGL ES 3.0', "glCompressedTexImage2D.xhtml",
-        "glCompressedTexImage2D")}}</td>
-      <td>{{Spec2('OpenGL ES 3.0')}}</td>
-      <td>Man page of the (similar) OpenGL ES 3.0 API.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
@@ -266,7 +234,6 @@ gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
   <li>{{domxref("WEBGL_compressed_texture_etc")}}</li>
   <li>{{domxref("WEBGL_compressed_texture_pvrtc")}}</li>
   <li>{{domxref("WEBGL_compressed_texture_etc1")}}</li>
-  <li>{{domxref("WEBGL_compressed_texture_atc")}}</li>
   <li>{{domxref("WEBGL_compressed_texture_astc")}}</li>
   <li>{{domxref("EXT_texture_compression_bptc")}}</li>
   <li>{{domxref("EXT_texture_compression_rgtc")}}</li>

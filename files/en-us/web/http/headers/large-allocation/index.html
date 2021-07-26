@@ -2,12 +2,12 @@
 title: Large-Allocation
 slug: Web/HTTP/Headers/Large-Allocation
 tags:
-- HTTP
-- HTTP Header
-- Non-standard
-- Reference
-- Response Header
-- header
+  - HTTP
+  - HTTP Header
+  - Non-standard
+  - Reference
+  - Response Header
+  - header
 browser-compat: http.headers.Large-Allocation
 ---
 <div>{{HTTPSidebar}}</div>
@@ -103,16 +103,6 @@ Large-Allocation: 500
         processes.</li>
     </ul>
   </dd>
-  <dt>A <code>Large-Allocation</code> header was ignored due to the document not being
-    loaded out of process.</dt>
-  <dd>Firefox has moved to a <a
-      href="/en-US/docs/Mozilla/Firefox/Multiprocess_Firefox">multiprocess
-      architecture</a>, and this architecture is required in order to support the
-    <code>Large-Allocation</code> header. Some <a
-      href="/en-US/docs/Mozilla/Add-ons/SDK">legacy Addons</a> can prevent Firefox from
-    using this new, faster, multiprocess architecture. If you have one of these Addons
-    installed, then we will continue to use the old single process architecuture for
-    compatibility, and cannot handle the <code>Large-Allocation</code> header.</dd>
   <dt>This page would be loaded in a new process due to a <code>Large-Allocation</code>
     header, however <code>Large-Allocation</code> process creation is disabled on
     non-Win32 platforms.</dt>

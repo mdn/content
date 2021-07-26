@@ -2,7 +2,6 @@
 title: RTCDataChannel.bufferedAmount
 slug: Web/API/RTCDataChannel/bufferedAmount
 tags:
-  - Experimental
   - Property
   - RTCDataChannel
   - Read-only
@@ -11,11 +10,11 @@ tags:
   - bufferedAmount
 browser-compat: api.RTCDataChannel.bufferedAmount
 ---
-<p>{{APIRef("WebRTC")}}{{SeeCompatTable}}</p>
+<p>{{APIRef("WebRTC")}}</p>
 
-<p><span class="seoSummary">The read-only <code>RTCDataChannel</code> property
+<p>The read-only <code>RTCDataChannel</code> property
     <code><strong>bufferedAmount</strong></code> returns the number of bytes of data
-    currently queued to be sent over the data channel.</span> The queue may build up as a
+    currently queued to be sent over the data channel. The queue may build up as a
   result of calls to the {{domxref("RTCDataChannel.send", "send()")}} method. This only
   includes data buffered by the user agent itself; it doesn't include any framing overhead
   or buffering done by the operating system or network hardware.</p>
@@ -33,7 +32,7 @@ browser-compat: api.RTCDataChannel.bufferedAmount
 
 <p>Whenever this value decreases to fall to or below the value specified in the
   {{domxref("RTCDataChannel.bufferedAmountLowThreshold", "bufferedAmountLowThreshold")}}
-  property, the user agent fires the {{event("bufferedamountlow")}} event. This event may
+  property, the user agent fires the {{DOMxRef("RTCDataChannel.bufferedamountlow_event", "bufferedamountlow")}} event. This event may
   be used, for example, to implement code which queues more messages to be sent whenever
   there's room to buffer them.</p>
 
@@ -80,6 +79,6 @@ function showBufferedAmount(channel) {
       channels</a></li>
   <li>{{domxref("RTCDataChannel")}}</li>
   <li>{{domxref("RTCDataChannel.bufferedAmountLowThreshold")}}</li>
-  <li>{{event("bufferedamountlow")}} event</li>
+  <li>{{DOMxRef("RTCDataChannel.bufferedamountlow_event", "bufferedamountlow")}} event</li>
   <li>{{domxref("RTCDataChannel.onbufferedamountlow")}}</li>
 </ul>

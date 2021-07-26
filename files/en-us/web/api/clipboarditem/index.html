@@ -62,7 +62,7 @@ browser-compat: api.ClipboardItem
 
 <h3 id="Writing_To_Clipboard">Writing To Clipboard</h3>
 
-<p>Here we're writing a new {{domxref("ClipboardItem.ClipboardItem()")}} to the {{domxref("Clipboard API", "clipboard")}} by requesting a png image using the {{domxref("Fetch API")}}, and in turn, the {{domxref("Body.blob()", "responses' blob()")}} method, to create the new {{domxref("ClipboardItem")}}.</p>
+<p>Here we're writing a new {{domxref("ClipboardItem.ClipboardItem()")}} to the {{domxref("Clipboard API", "clipboard")}} by requesting a png image using the {{domxref("Fetch API")}}, and in turn, the {{domxref("Response.blob()", "responses' blob()")}} method, to create the new {{domxref("ClipboardItem")}}.</p>
 
 <pre class="brush: js">async function writeClipImg() {
   try {

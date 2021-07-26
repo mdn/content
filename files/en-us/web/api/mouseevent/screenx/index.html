@@ -17,6 +17,8 @@ browser-compat: api.MouseEvent.screenX
   {{domxref("MouseEvent")}} interface provides the horizontal coordinate (offset) of the
   mouse pointer in global (screen) coordinates.</p>
 
+<p><strong>Note:</strong> In a multiscreen environment, screens aligned horizontally will be treated as a single device, and so the range of the <code>screenX</code> value will increase to the combined width of the screens.</p>
+
 <h2 id="Syntax">Syntax</h2>
 
 <pre class="brush: js">var <em>x</em> = <em>instanceOfMouseEvent</em>.screenX

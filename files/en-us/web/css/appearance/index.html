@@ -21,7 +21,7 @@ browser-compat: css.properties.appearance
 <p>The <strong><code>-moz-appearance</code></strong> property was used in <a href="/en-US/docs/Mozilla/Tech/XUL/Tutorial">XUL</a> stylesheets to design custom widgets with platform-appropriate styling. It was also used in the <a href="/en-US/docs/XBL">XBL</a> implementations of the widgets that ship with the Mozilla platform. Starting with Gecko/Firefox 80, these uses were changed to <code><strong>-moz-default-appearance</strong></code>, which should never be used outside of internal stylesheets.</p>
 
 <div class="note">
-<p><strong>Compatibility note</strong>: If you wish to use this property on websites, you should test it very carefully. Although it is supported in most modern browsers, its implementation varies. In older browsers, even the keyword <code>none</code> does not have the same effect on all form elements across different browsers, and some do not support it at all. The differences are smaller in the newest browsers.</p>
+<p><strong>Note:</strong> If you wish to use this property on websites, you should test it very carefully. Although it is supported in most modern browsers, its implementation varies. In older browsers, even the keyword <code>none</code> does not have the same effect on all form elements across different browsers, and some do not support it at all. The differences are smaller in the newest browsers.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
@@ -53,6 +53,12 @@ appearance: progress-bar;
 /* Partial list of available values in WebKit/Blink (as well as Gecko and Edge) */
 -webkit-appearance: media-mute-button;
 -webkit-appearance: caret;
+
+/* Global values */
+appearance: inherit;
+appearance: initial;
+appearance: revert;
+appearance: unset;
 </pre>
 
 <h3 id="Values">Values</h3>
@@ -552,22 +558,7 @@ appearance: progress-bar;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName("CSS4 Basic UI", "#appearance-switching", "appearance")}}</td>
-			<td>{{Spec2("CSS4 Basic UI")}}</td>
-			<td>Initial definition.</td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

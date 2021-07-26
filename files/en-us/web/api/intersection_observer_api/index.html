@@ -104,7 +104,7 @@ observer.observe(target);
 };
 </pre>
 
-<p>The list of entries received by the callback includes one entry for each target which reporting a change in its intersection status. Check the value of the {{domxref("IntersectionObserverEntry.isIntersecting", "isIntersecting")}} property to see if the entry represents an element that currently intersects with the root.</p>
+<p>The list of entries received by the callback includes one entry for each target which reported a change in its intersection status. Check the value of the {{domxref("IntersectionObserverEntry.isIntersecting", "isIntersecting")}} property to see if the entry represents an element that currently intersects with the root.</p>
 
 <p>Be aware that your callback is executed on the main thread. It should operate as quickly as possible; if anything time-consuming needs to be done, use {{domxref("Window.requestIdleCallback()")}}.</p>
 
@@ -317,7 +317,7 @@ startup();
  <li>Starting at the target's immediate parent block and moving outward, each containing block's clipping (if any) is applied to the intersection rectangle. A block's clipping is determined based on the intersection of the two blocks and the clipping mode (if any) specified by the {{cssxref("overflow")}} property. Setting <code>overflow</code> to anything but <code>visible</code> causes clipping to occur.</li>
  <li>If one of the containing elements is the root of a nested browsing context (such as the document contained in an {{HTMLElement("iframe")}}, the intersection rectangle is clipped to the containing context's viewport, and recursion upward through the containers continues with the container's containing block. So if the top level of an <code>&lt;iframe&gt;</code> is reached, the intersection rectangle is clipped to the frame's viewport, then the frame's parent element is the next block recursed through toward the intersection root.</li>
  <li>When recursion upward reaches the intersection root, the resulting rectangle is mapped to the intersection root's coordinate space.</li>
- <li>The resulting rectangle is then updated by intersecting it with the <a href="/en-US/docs/Web/API/Intersection_Observer_API#root-intersection-rectangle">root intersection rectangle</a>.</li>
+ <li>The resulting rectangle is then updated by intersecting it with the <a href="#root-intersection-rectangle">root intersection rectangle</a>.</li>
  <li>This rectangle is, finally, mapped to the coordinate space of the target's {{domxref("document")}}.</li>
 </ol>
 

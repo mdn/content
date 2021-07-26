@@ -25,14 +25,19 @@ paint-order: markers; /* draw the markers first, then fill and stroke */
 /* Multiple values */
 paint-order: stroke fill; /* draw the stroke first, then the fill, then the markers */
 paint-order: markers stroke fill; /* draw markers, then stroke, then fill */
-</pre>
+
+/* Global values */
+paint-order: inherit;
+paint-order: initial;
+paint-order: revert;
+paint-order: unset;</pre>
 
 <p>If no value is specified, the default paint order is <code>fill</code>, <code>stroke</code>, <code>markers</code>.</p>
 
 <p>When one value is specified, that one is painted first, followed by the other two in their default order relative to one another. When two values are specified, they will be painted in the order they are specified in, followed by the unspecified one.</p>
 
 <div class="note">
-<p><strong>Note</strong>: In the case of this property, markers are only appropriate when drawing SVG shapes involving the use of the <code>marker-*</code> properties (e.g. <code><a href="/en-US/docs/Web/SVG/Attribute/marker-start">marker-start</a></code>) and <code><a href="/en-US/docs/Web/SVG/Element/marker">&lt;marker&gt;</a></code> element. They do not apply to HTML text, so in that case, you can only determine the order of <code>stroke</code> and <code>fill</code>.</p>
+<p><strong>Note:</strong> In the case of this property, markers are only appropriate when drawing SVG shapes involving the use of the <code>marker-*</code> properties (e.g. <code><a href="/en-US/docs/Web/SVG/Attribute/marker-start">marker-start</a></code>) and <code><a href="/en-US/docs/Web/SVG/Element/marker">&lt;marker&gt;</a></code> element. They do not apply to HTML text, so in that case, you can only determine the order of <code>stroke</code> and <code>fill</code>.</p>
 </div>
 
 <h3 id="Values">Values</h3>
@@ -86,22 +91,7 @@ paint-order: markers stroke fill; /* draw markers, then stroke, then fill */
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG2", "painting.html#PaintOrder", "paint-order")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
