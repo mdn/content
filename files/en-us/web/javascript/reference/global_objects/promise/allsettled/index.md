@@ -60,6 +60,7 @@ reflects what value each promise was fulfilled (or rejected) with.
 
 ### Using Promise.allSettled
 
+#### {{jsxref("Promise.prototype.then()")}}
 ```js
 Promise.allSettled([
   Promise.resolve(33),
@@ -68,6 +69,24 @@ Promise.allSettled([
   Promise.reject(new Error('an error'))
 ])
 .then(values => console.log(values));
+
+// [
+//   {status: "fulfilled", value: 33},
+//   {status: "fulfilled", value: 66},
+//   {status: "fulfilled", value: 99},
+//   {status: "rejected",  reason: Error: an error}
+// ]
+```
+
+#### {{jsxref("await")}}
+```js
+const values = await Promise.allSettled([
+  Promise.resolve(33),
+  new Promise(resolve => setTimeout(() => resolve(66), 0)),
+  99,
+  Promise.reject(new Error('an error'))
+])
+console.log(values)
 
 // [
 //   {status: "fulfilled", value: 33},
