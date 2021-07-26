@@ -74,7 +74,7 @@ searchParams.getAll('topic'); // ["api"]
 searchParams.get('foo') === null; // true
 searchParams.append('topic', 'webdev');
 searchParams.toString(); // "q=URLUtils.searchParams&amp;topic=api&amp;topic=webdev"
-searchParams.set('topic', "More webdev");
+searchParams.set('topic', 'More webdev');
 searchParams.toString(); // "q=URLUtils.searchParams&amp;topic=More+webdev"
 searchParams.delete('topic');
 searchParams.toString(); // "q=URLUtils.searchParams"
