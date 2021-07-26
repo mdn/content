@@ -64,21 +64,17 @@ image-rendering: unset;</pre>
 
 <p>In practical use, the <code>pixelated</code> and <code>crisp-edges</code> rules can be combined to provide some fallback for each other. (Just prepend the actual rules with the fallback.) The <a href="/en-US/docs/Web/API/Canvas_API">Canvas API</a> can provide a <a href="http://phrogz.net/tmp/canvas_image_zoom.html">fallback solution for <code>pixelated</code></a> through manual image data manipulation or with <code><a href="/en-US/docs/Web/API/CanvasRenderingContext2D/imageSmoothingEnabled">imageSmoothingEnabled</a></code>.</p>
 
-<div class="hidden">
-<pre class="brush: html">&lt;div&gt;
+<pre class="brush: html hidden">&lt;div&gt;
   &lt;img class="auto" alt="auto" src="blumen.jpg" /&gt;
   &lt;img class="pixelated" alt="pixelated" src="blumen.jpg" /&gt;
   &lt;img class="crisp-edges" alt="crisp-edges" src="blumen.jpg" /&gt;
 &lt;/div&gt;
 </pre>
-</div>
 
-<div class="hidden">
-<pre class="brush: css">img {
+<pre class="brush: css hidden">img {
   height: 200px;
 }
 </pre>
-</div>
 
 <h4 id="CSS">CSS</h4>
 

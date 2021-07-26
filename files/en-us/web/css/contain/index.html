@@ -133,8 +133,7 @@ article {
   &lt;p&gt;More content here.&lt;/p&gt;
 &lt;/article&gt;</pre>
 
-<div class="hidden">
-<pre class="brush: css">img {
+<pre class="brush: css hidden">img {
   float: left;
   border: 3px solid black;
 }
@@ -142,7 +141,6 @@ article {
 article {
   border: 1px solid black;
 }</pre>
-</div>
 
 <p>As you can see, because of the way floats work, the first image ends up inside the area of the second article:</p>
 
@@ -152,8 +150,7 @@ article {
 
 <p>If we give each <code>article</code> the <code>contain</code> property with a value of <code>content</code>, when new elements are inserted the browser understands it only needs to recalculate the containing element's subtree, and not anything outside it:</p>
 
-<div class="hidden">
-<pre class="brush: html">&lt;h1&gt;My blog&lt;/h1&gt;
+<pre class="brush: html hidden">&lt;h1&gt;My blog&lt;/h1&gt;
 &lt;article&gt;
   &lt;h2&gt;Heading of a nice article&lt;/h2&gt;
   &lt;p&gt;Content here.&lt;/p&gt;
@@ -164,7 +161,6 @@ article {
   &lt;img src="graphic.jpg" alt="photo"&gt;
   &lt;p&gt;More content here.&lt;/p&gt;
 &lt;/article&gt;</pre>
-</div>
 
 <pre class="brush: css">img {
   float: left;

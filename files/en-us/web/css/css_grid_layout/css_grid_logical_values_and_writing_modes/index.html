@@ -67,8 +67,7 @@ tags:
 
 <p>The value <code>horizontal-tb</code> is the default for text on the web. It is the direction in which you are reading this guide. The other properties will change the way that text flows in our document, matching the different writing modes found around the world. Again, for full details of these see <a href="https://24ways.org/2016/css-writing-modes/">Jen’s article</a>. As a simple example, I have two paragraphs below. The first uses the default <code>horizontal-tb</code>, and the second uses <code>vertical-rl</code>. In the mode text still runs left to right, however the direction of the text is vertical - inline text now runs down the page, from top to bottom.</p>
 
-<div class="hidden">
-<pre class="brush: css">.wrapper &gt; p {
+<pre class="brush: css hidden">.wrapper &gt; p {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
@@ -78,7 +77,6 @@ tags:
     max-width: 300px;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
    &lt;p style="writing-mode: horizontal-tb"&gt;I have writing mode set to the default &lt;code&gt;horizontal-tb&lt;/code&gt;&lt;/p&gt;
@@ -96,8 +94,7 @@ tags:
 
 <p>The grid in this example has three columns and two row tracks. This means there are three tracks running down the block axis. In default writing mode, grid auto-places items starting at the top left, moving along to the right, filling up the three cells on the inline axis. It then moves onto the next line, creating a new Row track, and fills in more items:</p>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -113,7 +110,6 @@ tags:
     color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: css">.wrapper {
   display: grid;
@@ -138,8 +134,7 @@ gap: 10px;
 
 <p>If we add <code>writing-mode: vertical-lr</code> to the grid container, we can see that the block and inline Axis are now running in a different direction. The block or <em>column</em> axis now runs across the page from left to right, Inline runs down the page, creating rows from top to bottom.</p>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -155,7 +150,6 @@ gap: 10px;
     color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: css">.wrapper {
   writing-mode: vertical-lr;
@@ -185,8 +179,7 @@ gap: 10px;
 
 <p>In this next example, I am using alignment to align items inside a grid that is set to <code>writing-mode: vertical-lr</code>. The <code>start</code> and <code>end</code> properties work in exactly the same way that they do in the default writing mode, and remain logical in a way that using left and right, top and bottom to align items would not do. This occurs once we've flipped the grid onto the side, like this:</p>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -202,7 +195,6 @@ gap: 10px;
     color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: css">.wrapper {
   writing-mode: vertical-lr;
@@ -260,8 +252,7 @@ gap: 10px;
  <li>Item 3 starts at column line 1, spanning to column line 3.</li>
 </ul>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -277,7 +268,6 @@ gap: 10px;
     color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: css">.wrapper {
   display: grid;
@@ -310,8 +300,7 @@ gap: 10px;
 
 <p>If I now add the {{cssxref("direction")}} property with a value of <code>rtl</code> to the grid container, line 1 becomes the right hand side of the grid, and line -1 on the left.</p>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -327,7 +316,6 @@ gap: 10px;
     color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: css">.wrapper {
   direction: rtl;
