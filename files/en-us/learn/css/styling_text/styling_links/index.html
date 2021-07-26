@@ -285,7 +285,7 @@ window.addEventListener("load", drawOutput);
 
 <h2 id="Including_icons_on_links">Including icons on links</h2>
 
-<p>A common practice is to include icons on links to provide more of an indicator as to what kind of content the link points to. Let's look at a really simple example that adds an icon to external links (links that lead to other sites.) Such an icon usually looks like a little arrow pointing out of a box — for this example, we'll use <a href="https://icons8.com/web-app/741/external-link">this great example from icons8.com</a>.</p>
+<p>A common practice is to include icons on links to provide more of an indicator as to what kind of content the link points to. Let's look at a really simple example that adds an icon to external links (links that lead to other sites.) Such an icon usually looks like a little arrow pointing out of a box. For this example, we'll use <a href="https://icons8.com/web-app/741/external-link">this great example from icons8.com</a>.</p>
 
 <p>Let's look at some HTML and CSS that will give us the effect we want. First, some simple HTML to style:</p>
 
@@ -335,15 +335,15 @@ a[href*="http"] {
 
 <p>{{ EmbedLiveSample('Including_icons_on_links', '100%', 150) }}</p>
 
-<p>So what's going on here? We'll skip over most of the CSS, as it's just the same information you've looked at before. The last rule however is interesting — here we are inserting a custom background image on external links in a similar manner to how we handled <a href="/en-US/docs/Learn/CSS/Styling_text/Styling_lists#using_a_custom_bullet_image">custom bullets on list items</a> in the last article — this time however we are using {{cssxref("background")}} shorthand instead of the individual properties. We set the path to the image we want to insert, specify <code>no-repeat</code> so we only get one copy inserted, and then specify the position as 100% of the way over to the right of the text content, and 0 pixels from the top.</p>
+<p>So what's going on here? We'll skip over most of the CSS, as it's just the same information you've looked at before. The last rule, however, is interesting: we're inserting a custom background image on external links in a similar manner to how we handled <a href="/en-US/docs/Learn/CSS/Styling_text/Styling_lists#using_a_custom_bullet_image">custom bullets on list items</a> in the last article. This time, however, we're using the {{cssxref("background")}} shorthand instead of the individual properties. We set the path to the image we want to insert, specify <code>no-repeat</code> so we only get one copy inserted, and then specify the position as 100% of the way to the right of the text content, and 0 pixels from the top.</p>
 
-<p>We also use {{cssxref("background-size")}} to specify the size we want the background image to be shown at — it is useful to have a larger icon and then resize it like this as needed for responsive web design purposes. This does however only work with IE 9 and later, so if you need to support those older browsers, you'll just have to resize the image and insert it as is.</p>
+<p>We also use {{cssxref("background-size")}} to specify the size we want the background image to be shown at. It's useful to have a larger icon and then resize it like this as needed for responsive web design purposes. This does, however, only work with IE 9 and later. So if you need to support older browsers, you'll just have to resize the image and insert it as is.</p>
 
 <p>Finally, we set some {{cssxref("padding-right")}} on the links to make space for the background image to appear in, so we aren't overlapping it with the text.</p>
 
-<p>A final word — how did we select just external links? Well, if you are writing your <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks">HTML links</a> properly, you should only be using absolute URLs for external links — it is more efficient to use relative links to link to other parts of your own site (as with the first link). The text "http" should therefore only appear in external links (like the second and third ones), and we can select this with an <a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors#attribute_selectors">attribute selector</a>: <code>a[href*="http"]</code> selects {{htmlelement("a")}} elements, but only if they have an {{htmlattrxref("href","a")}} attribute with a value that contains "http" somewhere inside it.</p>
+<p>A final word: how did we select just external links? Well, if you are writing your <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks">HTML links</a> properly, you should only be using absolute URLs for external links — it is more efficient to use relative links to link to other parts of your own site (as with the first link). The text "http" should therefore only appear in external links (like the second and third ones), and we can select this with an <a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors#attribute_selectors">attribute selector</a>: <code>a[href*="http"]</code> selects {{htmlelement("a")}} elements, but only if they have an {{htmlattrxref("href","a")}} attribute with a value that contains "http" somewhere inside it.</p>
 
-<p>So that's it — try revisiting the active learning section above and trying this new technique out!</p>
+<p>So that's it. Try revisiting the active learning section above and trying this new technique out!</p>
 
 <div class="notecard note">
 <p><strong>Note</strong>: The <code>href</code> values look strange — we've used dummy links here that don't really go anywhere. The reason for this is that if we used real links, you would be able to load an external site in the <code>&lt;iframe&gt;</code> the live example is embedded in, thereby losing the example.</p>
