@@ -12,6 +12,8 @@ browser-compat: api.CSSRuleList
 
 <p>A <code>CSSRuleList</code> represents an ordered collection of read-only {{domxref("CSSRule")}} objects.</p>
 
+<p>To edit the underlying rules returned by <code>CSSRule</code> objects, use {{domxref("CSSStyleSheet.insertRule()")}} and {{domxref("CSSStyleSheet.deleteRule()")}}, which are methods of {{domxref("CSSStyleSheet")}}.</p>
+
 <p>The interface has no constructor. An instance of <code>CSSRuleList</code> is returned by {{domxref("CSSStyleSheet.cssRules")}} and {{domxref("CSSKeyframesRule.cssRules")}}.</p>
 
 <h2 id="Properties">Properties</h2>
@@ -27,11 +29,6 @@ browser-compat: api.CSSRuleList
   <dt>{{domxref("CSSRuleList.item()")}}</dt>
   <dd>Gets a single {{domxref("CSSRule")}}.</dd>
 </dl>
-
-<div class="notecard note">
-  <h4>Note:</h4>
-  <p>Note that being <em>indirect-modify</em> (<a href="https://www.w3.org/TR/cssom/#cssstylesheet">changeable</a> but <a href="https://www.w3.org/TR/cssom/#cssrulelist">only having</a> read-methods), rules are <strong>NOT</strong> added or removed from the list directly, but instead here, only via its parent stylesheet. In fact, {{domxref("CSSStyleSheet.insertRule",".insertRule()")}} and {{domxref("CSSStyleSheet.deleteRule",".deleteRule()")}} are not even methods of CSSRuleList, but only of {{domxref("CSSStyleSheet")}}. If however, for some reason the list does need to be modified but has no parent stylesheet (perhaps being a <em><a href="https://www.w3.org/TR/cssom/#cssstylesheet">livecopy</a></em> of a list that does), it cannot just be assigned one (as it has <a href="https://www.w3.org/TR/cssom/#cssrulelist">no such property</a>), and neither can it be assigned to one (as stylesheet.css<code>Rules </code>is <a href="https://www.w3.org/TR/cssom/#cssstylesheet">read-only</a>), but it must unfortunately be <strong>inserted</strong> into one, rule by rule, and unless combining lists, after any existing list therein is deleted, rule by rule.</p>
-</div>
 
 <h2 id="Examples">Examples</h2>
 
