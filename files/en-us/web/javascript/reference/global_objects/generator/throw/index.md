@@ -32,12 +32,12 @@ throw(exception)
 
 An {{jsxref("Global_Objects/Object", "Object")}} with two properties:
 
-<dl><dt><code>done</code> (boolean)</dt><dd><ul><li>Has the value <code>true</code> if the iterator is past the end of the iterated
-sequence. In this case <code>value</code> optionally specifies the <em>return
-value</em> of the iterator.</li><li>Has the value <code>false</code> if the iterator was able to produce the next
-value in the sequence. This is equivalent of not specifying the <code>done</code>
-property altogether.</li></ul></dd><dt><code>value</code></dt><dd>Any JavaScript value returned by the iterator. Can be omitted when <code>done</code>
-is <code>true</code>.</dd></dl>
+- `done`
+  - : A boolean value:
+    - `true` if the iterator is past the end of the iterated sequence. In this case `value` optionally specifies the return value of the iterator.
+    - `false` if the iterator was able to produce the next value in the sequence. This is equivalent to not specifying the `done` property altogether.
+- `value`
+  - : Any JavaScript value returned by the iterator. Can be omitted when `done` is true.
 
 ## Examples
 
