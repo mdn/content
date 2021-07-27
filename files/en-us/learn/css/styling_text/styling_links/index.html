@@ -64,8 +64,9 @@ tags:
 
 <p>{{ EmbedLiveSample('Default_styles', '100%', 120) }}</p>
 
-<div class="note">
-<p><strong>Note:</strong> All the links in the examples on this page are fake links — a <code>#</code> (hash/pound sign) is put in place of the real URL. This is because if the real links were included, clicking on them would break the examples (you'd end up with an error or a page loaded in the embedded example that you couldn't get back from.) <code>#</code> just links to the current page.</p>
+<div class="notecard note">
+  <h4>Note:</h4>
+<p>All the links in the examples on this page are fake links — a <code>#</code> (hash/pound sign) is put in place of the real URL. This is because if the real links were included, clicking on them would break the examples (you'd end up with an error or a page loaded in the embedded example that you couldn't get back from.) <code>#</code> just links to the current page.</p>
 </div>
 
 <p>You'll notice a few things as you explore the default styles:</p>
@@ -91,11 +92,12 @@ tags:
 <ul>
  <li>{{cssxref("color")}} for the text color.</li>
  <li>{{cssxref("cursor")}} for the mouse pointer style — you shouldn't turn this off unless you've got a very good reason.</li>
- <li>{{cssxref("outline")}} for the text outline. An outline is similar to a border. The only difference is that a border takes up space in the box and an outline doesn't; it just sits over the top of the background. The outline is a useful accessibility aid, so think carefully before turning it off; you should at least double up the styles given to the link hover state on the focus state too.</li>
+ <li>{{cssxref("outline")}} for the text outline. An outline is similar to a border. The only difference is that a border takes up space in the box and an outline doesn't; it just sits over the top of the background. The outline is a useful accessibility aid, so should not be removed without adding another method of indicating the focused link.</li>
 </ul>
 
-<div class="note">
-<p><strong>Note:</strong> You are not just limited to the above properties to style your links — you are free to use any properties you like. Just try not to go too crazy!</p>
+<div class="notecard note">
+<h4>Note</h4>
+<p>You are not just limited to the above properties to style your links — you are free to use any properties you like.</p>
 </div>
 
 <h3 id="Styling_some_links">Styling some links</h3>
@@ -346,11 +348,13 @@ a[href*="#"] {
 <p>So that's it. Try revisiting the active learning section above and trying this new technique out!</p>
 
 <div class="notecard note">
-<p><strong>Note:</strong> The <code>href</code> values look strange — we've used dummy links here that don't really go anywhere. The reason for this is that if we used real links, you would be able to load an external site in the <code>&lt;iframe&gt;</code> the live example is embedded in, thereby losing the example.</p>
+  <h4>Note:</h4>
+<p>The <code>href</code> values look strange — we've used dummy links here that don't really go anywhere. The reason for this is that if we used real links, you would be able to load an external site in the <code>&lt;iframe&gt;</code> the live example is embedded in, thereby losing the example.</p>
 </div>
 
-<div class="note">
-<p><strong>Note:</strong> Don't worry if you are not familiar with <a href="/en-US/docs/Learn/CSS/Building_blocks">backgrounds</a> and <a href="/en-US/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks">responsive web design</a> yet; these are explained in other places.</p>
+<div class="notecard note">
+  <h4>Note:</h4>
+<p>Don't worry if you are not familiar with <a href="/en-US/docs/Learn/CSS/Building_blocks">backgrounds</a> and <a href="/en-US/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks">responsive web design</a> yet; these are explained in other places.</p>
 </div>
 
 <h2 id="Styling_links_as_buttons">Styling links as buttons</h2>
@@ -428,8 +432,9 @@ a:active {
  </li>
 </ul>
 
-<div class="note">
-<p><strong>Note:</strong> You may have noticed that the list items in the HTML are all put on the same line as each other. This is done because spaces/line breaks in between inline block elements create spaces on the page, just like the spaces in between words; however, such spaces would break our horizontal navigation menu layout. So we've removed them. You can find more information about this problem (and solutions) at <a href="https://css-tricks.com/fighting-the-space-between-inline-block-elements/">Fighting the space between inline block elements</a>.</p>
+<div class="notecard note">
+  <h4>Note:</h4>
+<p>You may have noticed that the list items in the HTML are all put on the same line as each other. This is done because spaces/line breaks in between inline block elements create spaces on the page, just like the spaces in between words; however, such spaces would break our horizontal navigation menu layout. So we've removed them. You can find more information about this problem (and solutions) at <a href="https://css-tricks.com/fighting-the-space-between-inline-block-elements/">Fighting the space between inline block elements</a>.</p>
 </div>
 
 <h2 id="Test_your_skills!">Test your skills!</h2>
@@ -449,7 +454,7 @@ a:active {
 <ul>
  <li><a href="/en-US/docs/Learn/CSS/Styling_text/Fundamentals">Fundamental text and font styling</a></li>
  <li><a href="/en-US/docs/Learn/CSS/Styling_text/Styling_lists">Styling lists</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Styling_text/Styling_links">Styling links</a></li>
+ <li><strong>Styling links</strong></li>
  <li><a href="/en-US/docs/Learn/CSS/Styling_text/Web_fonts">Web fonts</a></li>
  <li><a href="/en-US/docs/Learn/CSS/Styling_text/Typesetting_a_homepage">Typesetting a community school homepage</a></li>
 </ul>
