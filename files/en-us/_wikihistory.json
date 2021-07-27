@@ -34356,29 +34356,6 @@
       "fscholz"
     ]
   },
-  "Web/API/ConstrainBoolean": {
-    "modified": "2020-10-15T21:49:41.944Z",
-    "contributors": [
-      "sideshowbarker",
-      "lucian95",
-      "Sheppy"
-    ]
-  },
-  "Web/API/ConstrainDOMString": {
-    "modified": "2020-10-18T18:07:45.437Z",
-    "contributors": [
-      "taylorjdawson",
-      "sideshowbarker",
-      "lucian95",
-      "Sheppy"
-    ]
-  },
-  "Web/API/ConstrainULong": {
-    "modified": "2020-10-15T22:26:33.190Z",
-    "contributors": [
-      "sideshowbarker"
-    ]
-  },
   "Web/API/Constraint_validation": {
     "modified": "2019-12-02T00:01:55.418Z",
     "contributors": [
@@ -40464,14 +40441,6 @@
       "Andreas Wuest",
       "Nickolay",
       "Gor1"
-    ]
-  },
-  "Web/API/DoubleRange": {
-    "modified": "2020-10-15T21:49:40.615Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "Sheppy"
     ]
   },
   "Web/API/DragEvent": {
@@ -82260,12 +82229,6 @@
       "Shaver",
       "JesseW",
       "cbiesinger"
-    ]
-  },
-  "Web/API/ULongRange": {
-    "modified": "2020-10-15T22:26:35.933Z",
-    "contributors": [
-      "sideshowbarker"
     ]
   },
   "Web/API/URL": {

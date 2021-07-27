@@ -7162,10 +7162,13 @@
 /en-US/docs/Web/API/ConstantSourceNode/onended	/en-US/docs/Web/API/AudioScheduledSourceNode/onended
 /en-US/docs/Web/API/ConstantSourceNode/start	/en-US/docs/Web/API/AudioScheduledSourceNode/start
 /en-US/docs/Web/API/ConstantSourceNode/stop	/en-US/docs/Web/API/AudioScheduledSourceNode/stop
-/en-US/docs/Web/API/ConstrainBooleanParameters	/en-US/docs/Web/API/ConstrainBoolean
-/en-US/docs/Web/API/ConstrainDOMStringParameters	/en-US/docs/Web/API/ConstrainDOMString
+/en-US/docs/Web/API/ConstrainBoolean	/en-US/docs/Web/API/MediaTrackConstraints
+/en-US/docs/Web/API/ConstrainBooleanParameters	/en-US/docs/Web/API/MediaTrackConstraints
+/en-US/docs/Web/API/ConstrainDOMString	/en-US/docs/Web/API/MediaTrackConstraints
+/en-US/docs/Web/API/ConstrainDOMStringParameters	/en-US/docs/Web/API/MediaTrackConstraints
 /en-US/docs/Web/API/ConstrainDouble	/en-US/docs/Web/API/MediaTrackConstraints
-/en-US/docs/Web/API/ConstrainLong	/en-US/docs/Web/API/ConstrainULong
+/en-US/docs/Web/API/ConstrainLong	/en-US/docs/Web/API/MediaTrackConstraints
+/en-US/docs/Web/API/ConstrainULong	/en-US/docs/Web/API/MediaTrackConstraints
 /en-US/docs/Web/API/Constraint_validation/invalid_event	/en-US/docs/Web/API/HTMLInputElement/invalid_event
 /en-US/docs/Web/API/ConvolverNode.buffer	/en-US/docs/Web/API/ConvolverNode/buffer
 /en-US/docs/Web/API/ConvolverNode.normalize	/en-US/docs/Web/API/ConvolverNode/normalize
@@ -7331,6 +7334,7 @@
 /en-US/docs/Web/API/Document_Object_Model/Events	/en-US/docs/Learn/JavaScript/Building_blocks/Events
 /en-US/docs/Web/API/Document_Object_Model/Preface	/en-US/docs/Web/API/Document_Object_Model
 /en-US/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM	/en-US/docs/Web/API/Document_Object_Model/Whitespace
+/en-US/docs/Web/API/DoubleRange	/en-US/docs/Web/API/MediaTrackConstraints
 /en-US/docs/Web/API/DynamicsCompressorNode.attack	/en-US/docs/Web/API/DynamicsCompressorNode/attack
 /en-US/docs/Web/API/DynamicsCompressorNode.knee	/en-US/docs/Web/API/DynamicsCompressorNode/knee
 /en-US/docs/Web/API/DynamicsCompressorNode.ratio	/en-US/docs/Web/API/DynamicsCompressorNode/ratio
@@ -7958,7 +7962,7 @@
 /en-US/docs/Web/API/LockedFile.readAsText	/en-US/docs/Web/API/LockedFile/readAsText
 /en-US/docs/Web/API/LockedFile.truncate	/en-US/docs/Web/API/LockedFile/truncate
 /en-US/docs/Web/API/LockedFile.write	/en-US/docs/Web/API/LockedFile/write
-/en-US/docs/Web/API/LongRange	/en-US/docs/Web/API/ULongRange
+/en-US/docs/Web/API/LongRange	/en-US/docs/Web/API/MediaTrackConstraints
 /en-US/docs/Web/API/MSContentZoom	/en-US/docs/Web/API/Element/msContentZoom_event
 /en-US/docs/Web/API/MSLaunchUri	/en-US/docs/Web/API/Navigator/msLaunchUri
 /en-US/docs/Web/API/MSManipulationStateChanged	/en-US/docs/Web/API/Element/MSManipulationStateChanged_event
@@ -8674,6 +8678,7 @@
 /en-US/docs/Web/API/UIEvent.which	/en-US/docs/Web/API/KeyboardEvent/which
 /en-US/docs/Web/API/UIEvent/UIEvent.detail	/en-US/docs/Web/API/UIEvent/detail
 /en-US/docs/Web/API/UIEvent/cancelBubble	/en-US/docs/Web/API/Event/cancelBubble
+/en-US/docs/Web/API/ULongRange	/en-US/docs/Web/API/MediaTrackConstraints
 /en-US/docs/Web/API/URL.URL	/en-US/docs/Web/API/URL/URL
 /en-US/docs/Web/API/URL.createObjectURL	/en-US/docs/Web/API/URL/createObjectURL
 /en-US/docs/Web/API/URL.revokeObjectURL	/en-US/docs/Web/API/URL/revokeObjectURL
