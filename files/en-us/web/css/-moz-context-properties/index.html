@@ -68,13 +68,13 @@ browser-compat: css.properties.-moz-context-properties
   stroke: purple;
 }</pre>
 
-<p>Now that you've done this, the SVG image can use the values of the {{cssxref("fill")}} and {{cssxref("stroke")}} properties, for example:</p>
+<p>Now that you've done this, the SVG image can use the values of the {{SVGAttr("fill")}} and {{SVGAttr("stroke")}} properties, for example:</p>
 
 <pre class="brush: html">&lt;img class="img1" src="data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg'&gt;
                        &lt;rect width='100%' height='100%' stroke-width='30px'
                        fill='context-fill red' stroke='context-stroke' fill-opacity='0.5'/&gt;&lt;/svg&gt;"&gt;</pre>
 
-<p>Here we've set the image <code>src</code> to a data URI containing a simple SVG image; the <code>&lt;rect&gt;</code> inside has been made to take its <code>fill</code> and <code>stroke</code> values from the {{cssxref("fill")}} and {{cssxref("stroke")}} set on the <code>&lt;img&gt;</code> element by giving them the <code>context-fill</code>/<code>context-stroke</code> keywords in their values, along with a fallback color for the fill (red) which will be used in the case that the SVG is loaded standalone in a top-level window (where it will have no context element to provide context values). Note that if a color is set directly on the SVG, but then the context color is also specified, the context color overrides the direct color.</p>
+<p>Here we've set the image <code>src</code> to a data URI containing a simple SVG image; the <code>&lt;rect&gt;</code> inside has been made to take its <code>fill</code> and <code>stroke</code> values from the {{SVGAttr("fill")}} and {{SVGAttr("stroke")}} set on the <code>&lt;img&gt;</code> element by giving them the <code>context-fill</code>/<code>context-stroke</code> keywords in their values, along with a fallback color for the fill (red) which will be used in the case that the SVG is loaded standalone in a top-level window (where it will have no context element to provide context values). Note that if a color is set directly on the SVG, but then the context color is also specified, the context color overrides the direct color.</p>
 
 <div class="note">
 <p><strong>Note:</strong> You can find a <a href="https://mdn.github.io/css-examples/moz-context-properties/">working example on Github</a>.</p>

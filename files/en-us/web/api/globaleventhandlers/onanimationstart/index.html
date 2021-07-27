@@ -18,14 +18,12 @@ browser-compat: api.GlobalEventHandlers.onanimationstart
 ---
 <div>{{APIRef("CSS3 Animations")}}</div>
 
-<p>An event handler for the {{event("animationstart")}} event. This event is sent when a
-  <a href="/en-US/docs/Web/CSS/CSS_Animations">CSS Animation</a> starts to play.</p>
+<p>An event handler for the {{event("animationstart")}} event. This event is sent when a <a href="/en-US/docs/Web/CSS/CSS_Animations">CSS Animation</a> starts to play.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre class="brush: js">var <em>animStartHandler</em> = <em>target</em>.onanimationstart;
-
-<em>target</em>.onanimationstart = <em>{{jsxref("Function")}}</em>
+<em>target</em>.onanimationstart = Function</em>
 </pre>
 
 <h3 id="Value">Value</h3>
@@ -146,8 +144,7 @@ browser-compat: api.GlobalEventHandlers.onanimationstart
 <p>Before we get to the animation code, we define a function which logs information to a
   box on the user's screen. We'll use this to show information about the events we
   receive. Note the use of {{domxref("AnimationEvent.animationName")}} and
-  {{domxref("AnimationEvent.elapsedTime")}} to get information about the event which
-  occurred.</p>
+  {{domxref("AnimationEvent.elapsedTime")}} to get information about the event which occurred.</p>
 
 <pre class="brush: js">function log(msg, event) {
   let logBox = document.getElementById("log");

@@ -78,10 +78,7 @@ image-orientation: flip; /* No rotation, only applies a horizontal flip */</pre>
 }
 </pre>
 
-<div class="hidden">
-<h4 id="HTML">HTML</h4>
-
-<pre class="brush: html">&lt;img id="image" src="mdn.svg"
+<pre class="brush: html hidden">&lt;img id="image" src="mdn.svg"
     alt="Orientation taken from the image"&gt;
 &lt;select id="imageOrientation"&gt;
   &lt;option value="from-image"&gt;from-image&lt;/option&gt;
@@ -89,14 +86,11 @@ image-orientation: flip; /* No rotation, only applies a horizontal flip */</pre>
 &lt;/select&gt;
 </pre>
 
-<h4 id="JavaScript">JavaScript</h4>
-
-<pre class="brush: js">var imageOrientation = document.getElementById("imageOrientation");
+<pre class="brush: js hidden">var imageOrientation = document.getElementById("imageOrientation");
 imageOrientation.addEventListener("change", function (evt) {
   document.getElementById("image").style.imageOrientation = evt.target.value;
 });
 </pre>
-</div>
 
 <h4 id="Result">Result</h4>
 

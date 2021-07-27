@@ -60,6 +60,7 @@ tags:
 
 <ul>
   <li>The <a href="/en-US/docs/Web/API/Gamepad_API">Gamepad API</a> is now protected by {{httpheader('Feature-Policy/gamepad','Feature-Policy: gamepad')}}. If disallowed by the <a href="/en-US/docs/Web/HTTP/Feature_Policy">feature policy</a>, calls to {{domxref('Navigator.getGamepads()')}} will throw a <code>SecurityError</code> {{domxref('DOMException')}}, and the {{event("gamepadconnected")}} and {{event("gamepaddisconnected")}} events will not fire ({{bug(1704005)}}).</li>
+  <li><code>Window.clientInformation</code> has been added as an alias for {{domxref("Window.navigator")}}, in order to match recent specification updates and improve compatibility with other major browsers ({{bug(1717072)}}).</li>
 </ul>
 
 
