@@ -192,7 +192,7 @@ tags:
 
 <h2 id="font-face_in_more_detail">@font-face in more detail</h2>
 
-<p>Let's explore that <code>@font-face</code> syntax generated for you by fontsquirrel. This is what one of the blocks looks like:</p>
+<p>Let's explore that <code>@font-face</code> syntax generated for you by fontsquirrel. This is what one of the rulesets looks like:</p>
 
 <pre class="brush: css">@font-face {
   font-family: 'zantrokeregular';
@@ -205,9 +205,9 @@ tags:
 <p>Let's go through it to see what it does:</p>
 
 <ul>
- <li><code>font-family</code>: This line specifies the name you want to refer to the font as. You can put this as anything you like, as long as you use it consistently throughout your CSS.</li>
- <li><code>src</code>: These lines specify the paths to the font files to be imported into your CSS (the <code>url</code> part), and the format of each font file (the <code>format</code> part). The latter part in each case is optional, but it is useful to declare it because it allows browsers to find a font they can use faster. Multiple declarations can be listed, separated by commas. As the browser will search through them and use the first one it can find that it understands, it is best to put newer, better formats like WOFF2 earlier on.</li>
- <li>{{cssxref("font-weight")}}/{{cssxref("font-style")}}: These lines specify what weight the font has, and whether it is italic or not. If you are importing multiple weights of the same font, you can specify what their weight/style is and then use different values of {{cssxref("font-weight")}}/{{cssxref("font-style")}} to choose between them, rather than having to call all the different members of the font family different names. <a href="https://www.456bereastreet.com/archive/201012/font-face_tip_define_font-weight_and_font-style_to_keep_your_css_simple/">@font-face tip: define font-weight and font-style to keep your CSS simple</a> by Roger Johansson shows what to do in more detail.</li>
+ <li><code>font-family</code>: This line specifies the name you want to refer to the font as. This can be anything you like as long as you use it consistently throughout your CSS.</li>
+ <li><code>src</code>: These lines specify the paths to the font files to be imported into your CSS (the <code>url</code> part), and the format of each font file (the <code>format</code> part). The latter part in each case is optional, but is useful to declare because it allows browsers to more quickly determine which font they can use. Multiple declarations can be listed, separated by commas. Because the browser will search through them according to the rules of the cascade, it's best to state your preferred formats, like WOFF2, at the beginning.</li>
+ <li>{{cssxref("font-weight")}}/{{cssxref("font-style")}}: These lines specify what weight the font has and whether it is italic or not. If you are importing multiple weights of the same font, you can specify what their weight/style is and then use different values of {{cssxref("font-weight")}}/{{cssxref("font-style")}} to choose between them, rather than having to call all the different members of the font family different names. <a href="https://www.456bereastreet.com/archive/201012/font-face_tip_define_font-weight_and_font-style_to_keep_your_css_simple/">@font-face tip: define font-weight and font-style to keep your CSS simple</a> by Roger Johansson shows what to do in more detail.</li>
 </ul>
 
 <div class="note">
