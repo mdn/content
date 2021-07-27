@@ -40443,14 +40443,6 @@
       "Gor1"
     ]
   },
-  "Web/API/DoubleRange": {
-    "modified": "2020-10-15T21:49:40.615Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "Sheppy"
-    ]
-  },
   "Web/API/DragEvent": {
     "modified": "2020-10-15T21:29:10.598Z",
     "contributors": [
@@ -82237,12 +82229,6 @@
       "Shaver",
       "JesseW",
       "cbiesinger"
-    ]
-  },
-  "Web/API/ULongRange": {
-    "modified": "2020-10-15T22:26:35.933Z",
-    "contributors": [
-      "sideshowbarker"
     ]
   },
   "Web/API/URL": {
