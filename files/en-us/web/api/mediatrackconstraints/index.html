@@ -65,6 +65,21 @@ browser-compat: api.MediaTrackConstraints
   <dd>A {{domxref("DOMString")}}, or an array of <code>DOMString<code>s, specifying ideal values for the property. If possible, one of the listed values will be used, but if it's not possible, the user agent will use the closest possible match.</dd>
 </dl>
 
+<h3 id="ConstrainULong">ConstrainULong</h3>
+
+<p>The <code>ConstrainULong</code> constraint type is used to specify a constraint for a property whose value is an integer.  Its value may either be set to a number or an object containing the following properties:</p>
+
+<dl>
+  <dt><code>max</code></dt>
+   <dd>An integer specifying the largest permissible value of the property it describes. If the value cannot remain equal to or less than this value, matching will fail.</dd>
+   <dt><code>min</code></dt>
+   <dd>An integer specifying the smallest permissible value of the property it describes. If the value cannot remain equal to or greater than this value, matching will fail.</dd>
+  <dt><code>exact</code></dt>
+  <dd>An integer specifying a specific, required, value the property must have to be considered acceptable.</dd>
+  <dt><code>ideal</code></dt>
+  <dd>An integer specifying an ideal value for the property. If possible, this value will be used, but if it's not possible, the user agent will use the closest possible match.</dd>
+</dl>
+
 <h2 id="Properties">Properties</h2>
 
 <p>Some combination—but not necessarily all—of the following properties will exist on the object. This may be because a given browser doesn't support the property, or because it doesn't apply. For example, because {{Glossary("RTP")}} doesn't provide some of these values during negotiation of a WebRTC connection, a track associated with a {{domxref("RTCPeerConnection")}} will not include certain values, such as {{domxref("MediaTrackConstraints.facingMode", "facingMode")}} or {{domxref("MediaTrackConstraints.groupId", "groupId")}}.</p>
@@ -84,7 +99,7 @@ browser-compat: api.MediaTrackConstraints
  <dt>{{domxref("MediaTrackConstraints.autoGainControl", "autoGainControl")}}</dt>
  <dd>A <a href="#ConstrainBoolean"><code>ConstrainBoolean</code></a> object which specifies whether automatic gain control is preferred and/or required.</dd>
  <dt>{{domxref("MediaTrackConstraints.channelCount", "channelCount")}}</dt>
- <dd>A {{domxref("ConstrainULong")}} specifying the channel count or range of channel counts which are acceptable and/or required.</dd>
+ <dd>A <a href="#ConstrainULong"><code>ConstrainULong</code></a> specifying the channel count or range of channel counts which are acceptable and/or required.</dd>
  <dt>{{domxref("MediaTrackConstraints.echoCancellation", "echoCancellation")}}</dt>
  <dd>A <a href="#ConstrainBoolean"><code>ConstrainBoolean</code></a> object specifying whether or not echo cancellation is preferred and/or required.</dd>
  <dt>{{domxref("MediaTrackConstraints.latency", "latency")}}</dt>
@@ -92,9 +107,9 @@ browser-compat: api.MediaTrackConstraints
  <dt>{{domxref("MediaTrackConstraints.noiseSuppression", "noiseSuppression")}}</dt>
  <dd>A <a href="#ConstrainBoolean"><code>ConstrainBoolean</code></a> which specifies whether noise suppression is preferred and/or required.</dd>
  <dt>{{domxref("MediaTrackConstraints.sampleRate", "sampleRate")}}</dt>
- <dd>A {{domxref("ConstrainULong")}} specifying the sample rate or range of sample rates which are acceptable and/or required.</dd>
+ <dd>A <a href="#ConstrainULong"><code>ConstrainULong</code></a> specifying the sample rate or range of sample rates which are acceptable and/or required.</dd>
  <dt>{{domxref("MediaTrackConstraints.sampleSize", "sampleSize")}}</dt>
- <dd>A {{domxref("ConstrainULong")}} specifying the sample size or range of sample sizes which are acceptable and/or required.</dd>
+ <dd>A <a href="#ConstrainULong"><code>ConstrainULong</code></a> specifying the sample size or range of sample sizes which are acceptable and/or required.</dd>
  <dt>{{domxref("MediaTrackConstraints.volume", "volume")}}</dt>
  <dd>A <a href="#ConstrainDouble"><code>ConstrainDouble</code></a> specifying the volume or range of volumes which are acceptable and/or required.</dd>
 </dl>
@@ -142,9 +157,9 @@ browser-compat: api.MediaTrackConstraints
  <dt>{{domxref("MediaTrackConstraints.frameRate", "frameRate")}}</dt>
  <dd>A <a href="#ConstrainDouble"><code>ConstrainDouble</code></a> specifying the frame rate or range of frame rates which are acceptable and/or required.</dd>
  <dt>{{domxref("MediaTrackConstraints.height", "height")}}</dt>
- <dd>A {{domxref("ConstrainULong")}} specifying the video height or range of heights which are acceptable and/or required.</dd>
+ <dd>A <a href="#ConstrainULong"><code>ConstrainULong</code></a> specifying the video height or range of heights which are acceptable and/or required.</dd>
  <dt>{{domxref("MediaTrackConstraints.width", "width")}}</dt>
- <dd>A {{domxref("ConstrainULong")}} specifying the video width or range of widths which are acceptable and/or required.</dd>
+ <dd>A <a href="#ConstrainULong"><code>ConstrainULong</code></a> specifying the video width or range of widths which are acceptable and/or required.</dd>
  <dt><span id="resizemode">resizeMode</span></dt>
  <dd>A <a href="#ConstrainDOMString"><code>ConstrainDOMString</code></a> object specifying a mode or an array of modes the UA can use to derive the resolution of a video track. Allowed values are <code>none</code> and <code>crop-and-scale</code>. <code>none</code> means that the user agent uses the resolution provided by the camera, its driver or the OS. <code>crop-and-scale</code> means that the user agent can use cropping and downscaling on the camera output  in order to satisfy other constraints that affect the resolution.</dd>
 </dl>
