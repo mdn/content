@@ -15,7 +15,7 @@ browser-compat: api.Worker.postMessage
 
 <p>The <code><strong>postMessage()</strong></code> method of the {{domxref("Worker")}} interface sends a message to the worker's inner scope. This accepts a single parameter, which is the data to send to the worker. The data may be any value or JavaScript object handled by the <a href="/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">structured clone</a> algorithm, which includes cyclical references.</p>
 
-<p>Note this method blocks the thread which receives the message.</p>
+<p>The {{domxref("Worker")}} <code>postMessage()</code> method delegates to the {{domxref("MessagePort")}} {{domxref("MessagePort.postMessage", "postMessage()")}} method, which adds a task on the event loop corresponding to the receiving {{domxref("MessagePort")}}.</p>
 
 <p>The <code>Worker</code> can send back information to the thread that spawned it using the {{domxref("DedicatedWorkerGlobalScope.postMessage")}} method.</p>
 
