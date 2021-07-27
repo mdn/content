@@ -72,7 +72,9 @@ If a `thisArg` parameter is provided to `filter`, it will be used as the callbac
 
 `filter()` does not mutate the array on which it is called.
 
-The range of elements processed by `filter()` is set before the first invocation of `callbackFn`. Elements which are appended to the array (from `callbackFn`) after the call to `filter()` begins will not be visited by `callbackFn`. If existing elements of the array are deleted in the same way they will not be visited.
+The range of elements processed by `filter()` is set before the first invocation of `callbackFn`. Elements which are assigned to indexes already visited, or to indexes outside the range, will not be visited by `callbackFn`. If existing elements of the array are deleted in the same way they will not be visited.
+
+**Warning:** Concurrent modification of the kind described in the previous paragraph frequently leads to hard-to-understand code and is generally to be avoided (except in special cases).
 
 ## Polyfill
 

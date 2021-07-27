@@ -39286,26 +39286,6 @@
       "wbamberg"
     ]
   },
-  "Web/API/Document/popupNode": {
-    "modified": "2020-10-15T21:11:12.992Z",
-    "contributors": [
-      "wbamberg",
-      "ExE-Boss",
-      "fscholz",
-      "valtlai",
-      "teoli",
-      "Sebastianz",
-      "MHasan",
-      "kscarfone",
-      "gurdev_singh",
-      "Sheppy",
-      "Enn",
-      "Neil",
-      "Waldo",
-      "Nickolay",
-      "SylvainPasche"
-    ]
-  },
   "Web/API/Document/preferredStyleSheetSet": {
     "modified": "2020-10-15T21:13:11.203Z",
     "contributors": [
@@ -39775,24 +39755,6 @@
       "Ptak82",
       "Dria",
       "JesseW"
-    ]
-  },
-  "Web/API/Document/tooltipNode": {
-    "modified": "2020-10-15T21:04:24.259Z",
-    "contributors": [
-      "ExE-Boss",
-      "mfluehr",
-      "Tigt",
-      "fscholz",
-      "stevenwdv",
-      "teoli",
-      "MHasan",
-      "kscarfone",
-      "Prachi_Dighe",
-      "Sheppy",
-      "ziyunfei",
-      "Waldo",
-      "SylvainPasche"
     ]
   },
   "Web/API/Document/touchcancel_event": {
@@ -81635,20 +81597,6 @@
       "jtyjty99999"
     ]
   },
-  "Web/API/TouchList/identifiedTouch": {
-    "modified": "2020-10-15T21:07:43.096Z",
-    "contributors": [
-      "bershanskiy",
-      "mfluehr",
-      "fscholz",
-      "coagmano",
-      "Sheppy",
-      "AFBarstow",
-      "MattBrubeck",
-      "jsx",
-      "kscarfone"
-    ]
-  },
   "Web/API/TouchList/item": {
     "modified": "2020-10-15T21:11:11.901Z",
     "contributors": [
@@ -84242,14 +84190,6 @@
     "modified": "2020-10-15T21:52:42.341Z",
     "contributors": [
       "fscholz"
-    ]
-  },
-  "Web/API/WEBGL_compressed_texture_atc": {
-    "modified": "2020-10-15T21:43:40.739Z",
-    "contributors": [
-      "fscholz",
-      "nmve",
-      "teoli"
     ]
   },
   "Web/API/WEBGL_compressed_texture_etc": {

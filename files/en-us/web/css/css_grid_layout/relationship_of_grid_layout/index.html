@@ -22,8 +22,7 @@ tags:
 
 <p>I have also set the {{cssxref("flex-wrap")}} property to <code>wrap</code>, so that if the space in the container becomes too narrow to maintain the flex basis, items will wrap onto a new row.</p>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -39,7 +38,6 @@ tags:
   color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div&gt;One&lt;/div&gt;
@@ -70,8 +68,7 @@ tags:
 
 <p>In this next example, I create the same layout using Grid. This time we have three <code>1fr</code> column tracks. We do not need to set anything on the items themselves; they will lay themselves out one into each cell of the created grid. As you can see they stay in a strict grid, lining up in rows and columns. With five items, we get a gap on the end of row two.</p>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -87,7 +84,6 @@ tags:
   color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div&gt;One&lt;/div&gt;
@@ -131,8 +127,7 @@ tags:
 
 <p>In the first example, which uses flexbox, I have a container with three items inside. The wrapper {{cssxref("min-height")}} is set, so it defines the height of the flex container. I have set {{cssxref("align-items")}} on the flex container to <code>flex-end</code> so the items will line up at the end of the flex container. I have also set the {{cssxref("align-self")}} property on <code>box1</code> so it will override the default and stretch to the height of the container and on <code>box2</code> so it aligns to the start of the flex container.</p>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -148,7 +143,6 @@ tags:
   color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div class="box1"&gt;One&lt;/div&gt;
@@ -176,8 +170,7 @@ tags:
 
 <p>This second example uses a grid to create the same layout. This time we are using the box alignment properties as they apply to a grid layout. So we align to <code>start</code> and <code>end</code> rather than <code>flex-start</code> and <code>flex-end</code>. In the case of a grid layout, we are aligning the items inside their grid area. In this case that is a single grid cell, but it could be an area made up of several grid cells.</p>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -193,7 +186,6 @@ tags:
   color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div class="box1"&gt;One&lt;/div&gt;
@@ -232,8 +224,7 @@ tags:
 
 <p>In this next example, I have used the <code>auto-fill</code> keyword in place of an integer in the repeat notation and set the track listing to 200 pixels. This means that grid will create as many 200 pixels column tracks as will fit in the container.</p>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -249,7 +240,6 @@ tags:
   color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div&gt;One&lt;/div&gt;
@@ -270,8 +260,7 @@ tags:
 
 <p>This isn’t quite the same as flexbox. In the flexbox example, the items are larger than the 200 pixel basis before wrapping. We can achieve the same in grid by combining <code>auto-fit</code> and the {{cssxref("minmax()", "minmax()")}} function. In this next example, I create auto filled tracks with <code>minmax</code>. I want my tracks to be a minimum of 200 pixels, so I set the maximum to be <code>1fr</code>. Once the browser has worked out how many times 200 pixels will fit into the container–also taking account of grid gaps–it will treat the <code>1fr</code> maximum as an instruction to share out the remaining space between the items.</p>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -287,7 +276,6 @@ tags:
   color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div&gt;One&lt;/div&gt;
@@ -316,8 +304,7 @@ tags:
 
 <p>In the below example I have a wrapper containing four child items. Item three is absolutely positioned and also placed on the grid using line-based placement. The grid container has <code>position: relative</code> and so becomes the positioning context of this item.</p>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -333,7 +320,6 @@ tags:
   color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div class="box1"&gt;One&lt;/div&gt;
@@ -383,8 +369,7 @@ tags:
 
 <p>I have given <code>.box3</code> position relative and then positioned the sub-item with the offset properties. In this case, the positioning context is the grid area.</p>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -400,7 +385,6 @@ tags:
   color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div class="box1"&gt;One&lt;/div&gt;
@@ -454,8 +438,7 @@ tags:
 
 <p>In the following markup, I have a grid and the first item on the grid is set to span all three column tracks. It contains three nested items. As these items are not direct children, they don’t become part of the grid layout and so display using regular block layout.</p>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -477,7 +460,6 @@ tags:
   padding: 1em;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div class="box box1"&gt;
@@ -510,8 +492,7 @@ tags:
 
 <p>If I now add <code>display:</code> <code>contents</code> to the rules for <code>box1</code>, the box for that item vanishes and the sub-items now become grid items and lay themselves out using the auto-placement rules.</p>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -533,7 +514,6 @@ tags:
   padding: 1em;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div class="box box1"&gt;

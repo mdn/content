@@ -45,7 +45,7 @@ distortion.connect(audioCtx.destination);</pre>
 
 <p>To capture data, you need to use the methods {{ domxref("AnalyserNode.getFloatFrequencyData()") }} and {{ domxref("AnalyserNode.getByteFrequencyData()") }} to capture frequency data, and {{ domxref("AnalyserNode.getByteTimeDomainData()") }} and {{ domxref("AnalyserNode.getFloatTimeDomainData()") }} to capture waveform data.</p>
 
-<p>These methods copy data into a specified array, so you need to create a new array to receive the data before invoking one. The first one produces 32-bit floating point numbers, and the second and third ones produce 8-bit unsigned integers, therefore a standard JavaScript array won't do — you need to use a {{ domxref("Float32Array") }} or {{ domxref("Uint8Array") }} array, depending on what data you are handling.</p>
+<p>These methods copy data into a specified array, so you need to create a new array to receive the data before invoking one. The first one produces 32-bit floating point numbers, and the second and third ones produce 8-bit unsigned integers, therefore a standard JavaScript array won't do — you need to use a {{jsxref("Float32Array")}} or {{jsxref("Uint8Array")}} array, depending on what data you are handling.</p>
 
 <p>So for example, say we are dealing with an fft size of 2048. We return the {{ domxref("AnalyserNode.frequencyBinCount") }} value, which is half the fft, then call Uint8Array() with the frequencyBinCount as its length argument — this is how many data points we will be collecting, for that fft size.</p>
 
@@ -63,7 +63,7 @@ var dataArray = new Uint8Array(bufferLength);</pre>
 
 <h2 id="Creating_a_waveformoscilloscope">Creating a waveform/oscilloscope</h2>
 
-<p>To create the oscilloscope visualisation (hat tip to <a href="http://soledadpenades.com/">Soledad Penadés</a> for the original code in <a href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L123-L167">Voice-change-O-matic</a>), we first follow the standard pattern described in the previous section to set up the buffer:</p>
+<p>To create the oscilloscope visualisation (hat tip to <a href="https://soledadpenades.com/">Soledad Penadés</a> for the original code in <a href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L123-L167">Voice-change-O-matic</a>), we first follow the standard pattern described in the previous section to set up the buffer:</p>
 
 <pre class="brush: js">analyser.fftSize = 2048;
 var bufferLength = analyser.frequencyBinCount;

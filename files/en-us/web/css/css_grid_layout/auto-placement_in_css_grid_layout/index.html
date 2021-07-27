@@ -14,8 +14,7 @@ tags:
 
 <p>If you give the items no placement information they will position themselves on the grid, one in each grid cell.</p>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -31,7 +30,7 @@ tags:
     color: #d9480f;
 }
 </pre>
-</div>
+
 
 <pre class="brush: css">.wrapper {
   display: grid;
@@ -62,8 +61,7 @@ tags:
 
 <p>You can however control the size of these rows with the property <code>grid-auto-rows</code>. To cause all created rows to be 100 pixels tall for example you would use:</p>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -79,7 +77,6 @@ tags:
     color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
     &lt;div&gt;One&lt;/div&gt;
@@ -104,8 +101,7 @@ tags:
 
 <p>You can use {{cssxref("minmax()","minmax()")}} in your value for {{cssxref("grid-auto-rows")}} enabling the creation of rows that are a minimum size but then grow to fit content if it is taller.</p>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -121,7 +117,6 @@ tags:
     color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
      &lt;div&gt;One&lt;/div&gt;
@@ -152,8 +147,7 @@ tags:
 
 <p>You can also pass in a track listing, this will repeat. The following track listing will create an initial implicit row track as 100 pixels and a second as <code>200px</code>. This will continue for as long as content is added to the implicit grid. </p>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -169,7 +163,6 @@ tags:
     color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
    &lt;div&gt;One&lt;/div&gt;
@@ -208,8 +201,7 @@ tags:
 }
 </pre>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -225,7 +217,6 @@ tags:
     color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
    &lt;div&gt;One&lt;/div&gt;
@@ -253,8 +244,8 @@ tags:
 
 <p>The first thing grid will do is place any items that have a position. In the example below I have 12 grid items. Item 2 and item 5 have been placed using line based placement on the grid. You can see how those items are placed and the other items then auto-place in the spaces. The auto-placed items will place themselves before the placed items in DOM order, they don’t start after the position of a placed item that comes before them.</p>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -270,7 +261,6 @@ tags:
     color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
    &lt;div&gt;One&lt;/div&gt;
@@ -312,8 +302,8 @@ tags:
 
 <p>You can see how this then leaves gaps in the grid, as for the auto-placed items if grid comes across an item that doesn’t fit into a track, it will move to the next row until it finds a space the item can fit in.</p>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 .wrapper {
     border: 2px solid #f76707;
     border-radius: 5px;
@@ -328,7 +318,6 @@ tags:
     color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
    &lt;div&gt;One&lt;/div&gt;
@@ -377,8 +366,8 @@ tags:
 
 <p>Having done this, grid will now backfill the gaps, as it moves through the grid it leaves gaps as before, but then if it finds an item that will fit in a previous gap it will pick it up and take it out of DOM order to place it in the gap. As with any other reordering in grid this does not change the logical order. Tab order for example, will still follow the document order. We will take a look at the potential accessibility issues of Grid Layout in a later guide, but you should take care when creating this disconnect between the visual order and display order.</p>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 .wrapper {
     border: 2px solid #f76707;
     border-radius: 5px;
@@ -393,7 +382,6 @@ tags:
     color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
    &lt;div&gt;One&lt;/div&gt;
@@ -458,8 +446,7 @@ tags:
 
 <p>Auto-placement can also help you lay out interface items which do have logical order. An example is the definition list in this next example. Definition lists are an interesting challenge to style as they are flat, there is nothing wrapping the groups of <code>dt</code> and <code>dd</code> items. In my example I am allowing auto-placement to place the items, however I have classes that start a <code>dt</code> in column 1, and <code>dd</code> in column 2, this ensure that terms go on one side and definitions on the other - no matter how many of each we have.</p>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -467,7 +454,6 @@ tags:
     background-color: #fff4e6;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
    &lt;dl&gt;

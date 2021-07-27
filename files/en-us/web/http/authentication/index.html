@@ -56,7 +56,7 @@ tags:
 Proxy-Authenticate: &lt;type&gt; realm=&lt;realm&gt;
 </pre>
 
-<p>Here, <code>&lt;type&gt;</code> is the authentication scheme ("Basic" is the most common scheme and <a href="/en-US/docs/Web/HTTP/Authentication#basic_authentication_scheme">introduced below</a>). The <em>realm</em> is used to describe the protected area or to indicate the scope of protection. This could be a message like "Access to the staging site" or similar, so that the user knows to which space they are trying to get access to.</p>
+<p>Here, <code>&lt;type&gt;</code> is the authentication scheme ("Basic" is the most common scheme and <a href="#basic_authentication_scheme">introduced below</a>). The <em>realm</em> is used to describe the protected area or to indicate the scope of protection. This could be a message like "Access to the staging site" or similar, so that the user knows to which space they are trying to get access to.</p>
 
 <h3 id="Authorization_and_Proxy-Authorization_headers">Authorization and Proxy-Authorization headers</h3>
 
@@ -84,7 +84,7 @@ Proxy-Authorization: &lt;type&gt; &lt;credentials&gt;
  <dt><strong>Mutual</strong></dt>
  <dd>See {{rfc(8120)}}</dd>
  <dt><strong>AWS4-HMAC-SHA256</strong></dt>
- <dd>See <a href="http://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html">AWS docs</a></dd>
+ <dd>See <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html">AWS docs</a></dd>
 </dl>
 
 <h2 id="Basic_authentication_scheme">Basic authentication scheme</h2>

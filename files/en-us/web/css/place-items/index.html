@@ -111,8 +111,7 @@ place-items: unset;
 
 <h3 id="Placing_items_in_a_flex_container">Placing items in a flex container</h3>
 
-<div class="hidden">
-<pre class="brush: css;">div &gt; div {
+<pre class="brush: css hidden">div &gt; div {
   box-sizing: border-box;
   border: 2px solid #8c8c8c;
   width: 50px;
@@ -160,9 +159,7 @@ select {
   margin-top: 10px;
 }</pre>
 
-<h4 id="HTML">HTML</h4>
-
-<pre class="brush: html">&lt;div id="container" class="flex"&gt;
+<pre class="brush: html hidden">&lt;div id="container" class="flex"&gt;
   &lt;div id="item1"&gt;1&lt;/div&gt;
   &lt;div id="item2"&gt;2&lt;/div&gt;
   &lt;div id="item3"&gt;3&lt;/div&gt;
@@ -206,9 +203,7 @@ select {
 &lt;/div&gt;
 </pre>
 
-<h4 id="JavaScript">JavaScript</h4>
-
-<pre class="brush: js">var values = document.getElementById('values');
+<pre class="brush: js hidden">var values = document.getElementById('values');
 var display = document.getElementById('display');
 var container = document.getElementById('container');
 
@@ -220,7 +215,6 @@ display.addEventListener('change', function (evt) {
   container.className = evt.target.value;
 });
 </pre>
-</div>
 
 <h4 id="CSS">CSS</h4>
 

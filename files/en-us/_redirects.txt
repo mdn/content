@@ -1755,7 +1755,6 @@
 /en-US/docs/DOM/TouchEvent.targetTouches	/en-US/docs/Web/API/TouchEvent/targetTouches
 /en-US/docs/DOM/TouchEvent.touches	/en-US/docs/Web/API/TouchEvent/touches
 /en-US/docs/DOM/TouchList	/en-US/docs/Web/API/TouchList
-/en-US/docs/DOM/TouchList.identifiedTouch	/en-US/docs/Web/API/TouchList/identifiedTouch
 /en-US/docs/DOM/TouchList.item	/en-US/docs/Web/API/TouchList/item
 /en-US/docs/DOM/TouchList.length	/en-US/docs/Web/API/TouchList/length
 /en-US/docs/DOM/Touch_events	/en-US/docs/Web/API/Touch_events
@@ -1885,7 +1884,6 @@
 /en-US/docs/DOM/document.onreadystatechange	/en-US/docs/Web/API/Document/readystatechange_event
 /en-US/docs/DOM/document.open	/en-US/docs/Web/API/Document/open
 /en-US/docs/DOM/document.plugins	/en-US/docs/Web/API/Document/plugins
-/en-US/docs/DOM/document.popupNode	/en-US/docs/Web/API/Document/popupNode
 /en-US/docs/DOM/document.preferredStyleSheetSet	/en-US/docs/Web/API/Document/preferredStyleSheetSet
 /en-US/docs/DOM/document.queryCommandSupported	/en-US/docs/Web/API/Document/queryCommandSupported
 /en-US/docs/DOM/document.readyState	/en-US/docs/Web/API/Document/readyState
@@ -1896,7 +1894,6 @@
 /en-US/docs/DOM/document.styleSheets	/en-US/docs/Web/API/Document/styleSheets
 /en-US/docs/DOM/document.textContent	/en-US/docs/Web/API/Node/textContent
 /en-US/docs/DOM/document.title	/en-US/docs/Web/API/Document/title
-/en-US/docs/DOM/document.tooltipNode	/en-US/docs/Web/API/Document/tooltipNode
 /en-US/docs/DOM/document.vlinkColor	/en-US/docs/Web/API/Document/vlinkColor
 /en-US/docs/DOM/document.width	/en-US/docs/Web/API/Document/width
 /en-US/docs/DOM/document.write	/en-US/docs/Web/API/Document/write
@@ -2403,12 +2400,10 @@
 /en-US/docs/DOM:document.nodePrincipal	/en-US/docs/Web/API/Node
 /en-US/docs/DOM:document.open	/en-US/docs/Web/API/Document/open
 /en-US/docs/DOM:document.plugins	/en-US/docs/Web/API/Document/plugins
-/en-US/docs/DOM:document.popupNode	/en-US/docs/Web/API/Document/popupNode
 /en-US/docs/DOM:document.referrer	/en-US/docs/Web/API/Document/referrer
 /en-US/docs/DOM:document.styleSheets	/en-US/docs/Web/API/Document/styleSheets
 /en-US/docs/DOM:document.textContent	/en-US/docs/Web/API/Node/textContent
 /en-US/docs/DOM:document.title	/en-US/docs/Web/API/Document/title
-/en-US/docs/DOM:document.tooltipNode	/en-US/docs/Web/API/Document/tooltipNode
 /en-US/docs/DOM:document.vlinkColor	/en-US/docs/Web/API/Document/vlinkColor
 /en-US/docs/DOM:document.width	/en-US/docs/Web/API/Document/width
 /en-US/docs/DOM:document.write	/en-US/docs/Web/API/Document/write
@@ -3094,7 +3089,6 @@
 /en-US/docs/Document_Object_Model_(DOM)/TouchEvent.targetTouches	/en-US/docs/Web/API/TouchEvent/targetTouches
 /en-US/docs/Document_Object_Model_(DOM)/TouchEvent.touches	/en-US/docs/Web/API/TouchEvent/touches
 /en-US/docs/Document_Object_Model_(DOM)/TouchList	/en-US/docs/Web/API/TouchList
-/en-US/docs/Document_Object_Model_(DOM)/TouchList.identifiedTouch	/en-US/docs/Web/API/TouchList/identifiedTouch
 /en-US/docs/Document_Object_Model_(DOM)/TouchList.item	/en-US/docs/Web/API/TouchList/item
 /en-US/docs/Document_Object_Model_(DOM)/TouchList.length	/en-US/docs/Web/API/TouchList/length
 /en-US/docs/Document_Object_Model_(DOM)/Touch_events	/en-US/docs/Web/API/Touch_events
@@ -3181,7 +3175,6 @@
 /en-US/docs/Document_Object_Model_(DOM)/document.onreadystatechange	/en-US/docs/Web/API/Document/readystatechange_event
 /en-US/docs/Document_Object_Model_(DOM)/document.open	/en-US/docs/Web/API/Document/open
 /en-US/docs/Document_Object_Model_(DOM)/document.plugins	/en-US/docs/Web/API/Document/plugins
-/en-US/docs/Document_Object_Model_(DOM)/document.popupNode	/en-US/docs/Web/API/Document/popupNode
 /en-US/docs/Document_Object_Model_(DOM)/document.preferredStyleSheetSet	/en-US/docs/Web/API/Document/preferredStyleSheetSet
 /en-US/docs/Document_Object_Model_(DOM)/document.queryCommandSupported	/en-US/docs/Web/API/Document/queryCommandSupported
 /en-US/docs/Document_Object_Model_(DOM)/document.readyState	/en-US/docs/Web/API/Document/readyState
@@ -3192,7 +3185,6 @@
 /en-US/docs/Document_Object_Model_(DOM)/document.styleSheets	/en-US/docs/Web/API/Document/styleSheets
 /en-US/docs/Document_Object_Model_(DOM)/document.textContent	/en-US/docs/Web/API/Node/textContent
 /en-US/docs/Document_Object_Model_(DOM)/document.title	/en-US/docs/Web/API/Document/title
-/en-US/docs/Document_Object_Model_(DOM)/document.tooltipNode	/en-US/docs/Web/API/Document/tooltipNode
 /en-US/docs/Document_Object_Model_(DOM)/document.vlinkColor	/en-US/docs/Web/API/Document/vlinkColor
 /en-US/docs/Document_Object_Model_(DOM)/document.width	/en-US/docs/Web/API/Document/width
 /en-US/docs/Document_Object_Model_(DOM)/document.write	/en-US/docs/Web/API/Document/write
@@ -8649,7 +8641,6 @@
 /en-US/docs/Web/API/TouchEvent.targetTouches	/en-US/docs/Web/API/TouchEvent/targetTouches
 /en-US/docs/Web/API/TouchEvent.touches	/en-US/docs/Web/API/TouchEvent/touches
 /en-US/docs/Web/API/TouchEvent/TouchEvent()	/en-US/docs/Web/API/TouchEvent/TouchEvent
-/en-US/docs/Web/API/TouchList.identifiedTouch	/en-US/docs/Web/API/TouchList/identifiedTouch
 /en-US/docs/Web/API/TouchList.item	/en-US/docs/Web/API/TouchList/item
 /en-US/docs/Web/API/TouchList.length	/en-US/docs/Web/API/TouchList/length
 /en-US/docs/Web/API/TrackDefaultList/TrackDefault	/en-US/docs/Web/API/TrackDefaultList
@@ -9145,7 +9136,6 @@
 /en-US/docs/Web/API/document.origin	/en-US/docs/Web/API/Document/origin
 /en-US/docs/Web/API/document.plugins	/en-US/docs/Web/API/Document/plugins
 /en-US/docs/Web/API/document.pointerLockElement	/en-US/docs/Web/API/Document/pointerLockElement
-/en-US/docs/Web/API/document.popupNode	/en-US/docs/Web/API/Document/popupNode
 /en-US/docs/Web/API/document.preferredStyleSheetSet	/en-US/docs/Web/API/Document/preferredStyleSheetSet
 /en-US/docs/Web/API/document.queryCommandState	/en-US/docs/Web/API/Document/queryCommandState
 /en-US/docs/Web/API/document.queryCommandSupported	/en-US/docs/Web/API/Document/queryCommandSupported
@@ -9157,7 +9147,6 @@
 /en-US/docs/Web/API/document.styleSheets	/en-US/docs/Web/API/Document/styleSheets
 /en-US/docs/Web/API/document.textContent	/en-US/docs/Web/API/Node/textContent
 /en-US/docs/Web/API/document.title	/en-US/docs/Web/API/Document/title
-/en-US/docs/Web/API/document.tooltipNode	/en-US/docs/Web/API/Document/tooltipNode
 /en-US/docs/Web/API/document.vlinkColor	/en-US/docs/Web/API/Document/vlinkColor
 /en-US/docs/Web/API/document.width	/en-US/docs/Web/API/Document/width
 /en-US/docs/Web/API/document.write	/en-US/docs/Web/API/Document/write
