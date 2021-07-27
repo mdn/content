@@ -20,7 +20,7 @@ slug: Mozilla/Projects/NSS/NSS_3.12.5_release_notes
 
 <p>The CVS tag for the NSS 3.12.5 release is <code>NSS_3_12_5_RTM</code>. </p>
 
-<p>NSS 3.12.5 requires <a class="external" href="https://www.mozilla.org/projects/nspr/release-notes/" rel="external nofollow" title="http://www.mozilla.org/projects/nspr/release-notes/">NSPR 4.8</a>.</p>
+<p>NSS 3.12.5 requires <a class="external" href="https://www.mozilla.org/projects/nspr/release-notes/" rel="external nofollow">NSPR 4.8</a>.</p>
 
 <p>You can check out the source from CVS by</p>
 
@@ -32,7 +32,7 @@ cvs co -r NSS_3_12_5_RTM NSS</div>
 <p>NSS 3.12.5 source is also available on <code>ftp.mozilla.org</code> for secure HTTPS download:</p>
 
 <ul>
- <li>Source tarball: <a class="link-https" href="https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_12_5_RTM/src/" rel="external nofollow" title="https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_12_5_RTM/src/">https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_12_5_RTM/src/</a>.</li>
+ <li>Source tarball: <a class="link-https" href="https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_12_5_RTM/src/" rel="external nofollow">https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_12_5_RTM/src/</a>.</li>
 </ul>
 
 <p><a name="new"></a></p>
@@ -202,19 +202,19 @@ cvs co -r NSS_3_12_5_RTM NSS</div>
 <p>The following bugs have been fixed in NSS 3.12.5.</p>
 
 <ul>
- <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=510435" rel="external nofollow" title="https://bugzilla.mozilla.org/show_bug.cgi?id=510435">Bug 510435</a>: Remove unused make variable DSO_LDFLAGS</li>
- <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=510436" rel="external nofollow" title="https://bugzilla.mozilla.org/show_bug.cgi?id=510436">Bug 510436</a>: Add macros for build numbers (4th component of version number) to nssutil.h</li>
- <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=511227" rel="external nofollow" title="https://bugzilla.mozilla.org/show_bug.cgi?id=511227">Bug 511227</a>: Firefox 3.0.13 fails to compile on FreeBSD/powerpc</li>
- <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=511312" rel="external nofollow" title="https://bugzilla.mozilla.org/show_bug.cgi?id=511312">Bug 511312</a>: NSS fails to load softoken, looking for sqlite3.dll</li>
- <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=511781" rel="external nofollow" title="https://bugzilla.mozilla.org/show_bug.cgi?id=511781">Bug 511781</a>: Add new TLS 1.2 cipher suites implemented in Windows 7 to ssltap</li>
- <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=516101" rel="external nofollow" title="https://bugzilla.mozilla.org/show_bug.cgi?id=516101">Bug 516101</a>: If PK11_ImportCert fails, it leaves the certificate undiscoverable by CERT_PKIXVerifyCert</li>
- <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=518443" rel="external nofollow" title="https://bugzilla.mozilla.org/show_bug.cgi?id=518443">Bug 518443</a>: PK11_ImportAndReturnPrivateKey leaks an arena</li>
- <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=518446" rel="external nofollow" title="https://bugzilla.mozilla.org/show_bug.cgi?id=518446">Bug 518446</a>: PK11_DEREncodePublicKey leaks a CERTSubjectPublicKeyInfo</li>
- <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=518457" rel="external nofollow" title="https://bugzilla.mozilla.org/show_bug.cgi?id=518457">Bug 518457</a>: SECKEY_EncodeDERSubjectPublicKeyInfo and PK11_DEREncodePublicKey are duplicate</li>
- <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=522510" rel="external nofollow" title="https://bugzilla.mozilla.org/show_bug.cgi?id=522510">Bug 522510</a>: Add deprecated comments to key.h and pk11func.h</li>
- <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=522580" rel="external nofollow" title="https://bugzilla.mozilla.org/show_bug.cgi?id=522580">Bug 522580</a>: NSS uses PORT_Memcmp for comparing secret data.</li>
- <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=525056" rel="external nofollow" title="https://bugzilla.mozilla.org/show_bug.cgi?id=525056">Bug 525056</a>: Timing attack against ssl3ext.c:ssl3_ServerHandleSessionTicketXtn()</li>
- <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=526689" rel="external nofollow" title="https://bugzilla.mozilla.org/show_bug.cgi?id=526689">Bug 526689</a>: SSL3 &amp; TLS Renegotiation Vulnerability</li>
+ <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=510435" rel="external nofollow">Bug 510435</a>: Remove unused make variable DSO_LDFLAGS</li>
+ <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=510436" rel="external nofollow">Bug 510436</a>: Add macros for build numbers (4th component of version number) to nssutil.h</li>
+ <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=511227" rel="external nofollow">Bug 511227</a>: Firefox 3.0.13 fails to compile on FreeBSD/powerpc</li>
+ <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=511312" rel="external nofollow">Bug 511312</a>: NSS fails to load softoken, looking for sqlite3.dll</li>
+ <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=511781" rel="external nofollow">Bug 511781</a>: Add new TLS 1.2 cipher suites implemented in Windows 7 to ssltap</li>
+ <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=516101" rel="external nofollow">Bug 516101</a>: If PK11_ImportCert fails, it leaves the certificate undiscoverable by CERT_PKIXVerifyCert</li>
+ <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=518443" rel="external nofollow">Bug 518443</a>: PK11_ImportAndReturnPrivateKey leaks an arena</li>
+ <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=518446" rel="external nofollow">Bug 518446</a>: PK11_DEREncodePublicKey leaks a CERTSubjectPublicKeyInfo</li>
+ <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=518457" rel="external nofollow">Bug 518457</a>: SECKEY_EncodeDERSubjectPublicKeyInfo and PK11_DEREncodePublicKey are duplicate</li>
+ <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=522510" rel="external nofollow">Bug 522510</a>: Add deprecated comments to key.h and pk11func.h</li>
+ <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=522580" rel="external nofollow">Bug 522580</a>: NSS uses PORT_Memcmp for comparing secret data.</li>
+ <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=525056" rel="external nofollow">Bug 525056</a>: Timing attack against ssl3ext.c:ssl3_ServerHandleSessionTicketXtn()</li>
+ <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=526689" rel="external nofollow">Bug 526689</a>: SSL3 &amp; TLS Renegotiation Vulnerability</li>
 </ul>
 
 <p><a name="docs"></a></p>
@@ -223,7 +223,7 @@ cvs co -r NSS_3_12_5_RTM NSS</div>
 <div id="section_13">
 <h1 id="Documentation">Documentation</h1>
 
-<p>For a list of the primary NSS documentation pages on mozilla.org, see <a class="external" href="https://www.mozilla.org/projects/security/pki/nss/#documentation" rel="external nofollow" title="http://www.mozilla.org/projects/security/pki/nss/#documentation">NSS Documentation</a>. New and revised documents available since the release of NSS 3.11 include the following:</p>
+<p>For a list of the primary NSS documentation pages on mozilla.org, see <a class="external" href="https://www.mozilla.org/projects/security/pki/nss/#documentation" rel="external nofollow">NSS Documentation</a>. New and revised documents available since the release of NSS 3.11 include the following:</p>
 
 <ul>
  <li><a href="https://dev.mozilla.jp/localmdc/localmdc_5142.html" rel="internal">Build Instructions</a></li>
@@ -236,13 +236,13 @@ cvs co -r NSS_3_12_5_RTM NSS</div>
 <div id="section_14">
 <h1 id="Compatibility">Compatibility</h1>
 
-<p>NSS 3.12.5 shared libraries are backward compatible with all older NSS 3.x shared libraries. A program linked with older NSS 3.x shared libraries will work with NSS 3.12.5 shared libraries without recompiling or relinking.  Furthermore, applications that restrict their use of NSS APIs to the functions listed in <a class="external" href="https://www.mozilla.org/projects/security/pki/nss/ref/nssfunctions.html" rel="external nofollow" title="http://www.mozilla.org/projects/security/pki/nss/ref/nssfunctions.html">NSS Public Functions</a> will remain compatible with future versions of the NSS shared libraries. <a name="feedback"></a></p>
+<p>NSS 3.12.5 shared libraries are backward compatible with all older NSS 3.x shared libraries. A program linked with older NSS 3.x shared libraries will work with NSS 3.12.5 shared libraries without recompiling or relinking.  Furthermore, applications that restrict their use of NSS APIs to the functions listed in <a class="external" href="https://www.mozilla.org/projects/security/pki/nss/ref/nssfunctions.html" rel="external nofollow">NSS Public Functions</a> will remain compatible with future versions of the NSS shared libraries. <a name="feedback"></a></p>
 </div>
 
 <div id="section_15">
 <h1 id="Feedback">Feedback</h1>
 
-<p>Bugs discovered should be reported by filing a bug report with <a class="link-https" href="https://bugzilla.mozilla.org/" rel="external nofollow" title="https://bugzilla.mozilla.org/">mozilla.org Bugzilla</a> (product NSS).</p>
+<p>Bugs discovered should be reported by filing a bug report with <a class="link-https" href="https://bugzilla.mozilla.org/" rel="external nofollow">mozilla.org Bugzilla</a> (product NSS).</p>
 </div>
 </div>
 
