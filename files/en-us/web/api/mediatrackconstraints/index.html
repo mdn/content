@@ -54,6 +54,17 @@ browser-compat: api.MediaTrackConstraints
   <dd>A double-precision floating-point number specifying an ideal value for the property. If possible, this value will be used, but if it's not possible, the user agent will use the closest possible match.</dd>
 </dl>
 
+<h3 id="ConstrainDOMString">ConstrainDOMString</h3>
+
+<p>The <code>ConstrainDOMString</code> constraint type is used to specify a constraint for a property whose value is a string.  Its value may either be set to a string, an array of strings, or an object containing the following properties:</p>
+
+<dl>
+  <dt><code>exact</code></dt>
+  <dd>A {{domxref("DOMString")}}, or an array of <code>DOMString<code>s, one of which must be the value of the property. If the property can't be set to one of the listed values, matching will fail.</dd>
+  <dt><code>ideal</code></dt>
+  <dd>A {{domxref("DOMString")}}, or an array of <code>DOMString<code>s, specifying ideal values for the property. If possible, one of the listed values will be used, but if it's not possible, the user agent will use the closest possible match.</dd>
+</dl>
+
 <h2 id="Properties">Properties</h2>
 
 <p>Some combination—but not necessarily all—of the following properties will exist on the object. This may be because a given browser doesn't support the property, or because it doesn't apply. For example, because {{Glossary("RTP")}} doesn't provide some of these values during negotiation of a WebRTC connection, a track associated with a {{domxref("RTCPeerConnection")}} will not include certain values, such as {{domxref("MediaTrackConstraints.facingMode", "facingMode")}} or {{domxref("MediaTrackConstraints.groupId", "groupId")}}.</p>
@@ -62,9 +73,9 @@ browser-compat: api.MediaTrackConstraints
 
 <dl>
  <dt>{{domxref("MediaTrackConstraints.deviceId", "deviceId")}}</dt>
- <dd>A {{domxref("ConstrainDOMString")}} object specifying a device ID or an array of device IDs which are acceptable and/or required.</dd>
+ <dd>A <a href="#ConstrainDOMString"><code>ConstrainDOMString</code></a> object specifying a device ID or an array of device IDs which are acceptable and/or required.</dd>
  <dt>{{domxref("MediaTrackConstraints.groupId", "groupId")}}</dt>
- <dd>A {{domxref("ConstrainDOMString")}} object specifying a group ID or an array of group IDs which are acceptable and/or required.</dd>
+ <dd>A <a href="#ConstrainDOMString"><code>ConstrainDOMString</code></a> object specifying a group ID or an array of group IDs which are acceptable and/or required.</dd>
 </dl>
 
 <h3 id="Properties_of_audio_tracks">Properties of audio tracks</h3>
@@ -127,7 +138,7 @@ browser-compat: api.MediaTrackConstraints
  <dt>{{domxref("MediaTrackConstraints.aspectRatio", "aspectRatio")}}</dt>
  <dd>A <a href="#ConstrainDouble"><code>ConstrainDouble</code></a> specifying the video aspect ratio or range of aspect ratios which are acceptable and/or required.</dd>
  <dt>{{domxref("MediaTrackConstraints.facingMode", "facingMode")}}</dt>
- <dd>A {{domxref("ConstrainDOMString")}} object specifying a facing or an array of facings which are acceptable and/or required.</dd>
+ <dd>A <a href="#ConstrainDOMString"><code>ConstrainDOMString</code></a> object specifying a facing or an array of facings which are acceptable and/or required.</dd>
  <dt>{{domxref("MediaTrackConstraints.frameRate", "frameRate")}}</dt>
  <dd>A <a href="#ConstrainDouble"><code>ConstrainDouble</code></a> specifying the frame rate or range of frame rates which are acceptable and/or required.</dd>
  <dt>{{domxref("MediaTrackConstraints.height", "height")}}</dt>
@@ -135,7 +146,7 @@ browser-compat: api.MediaTrackConstraints
  <dt>{{domxref("MediaTrackConstraints.width", "width")}}</dt>
  <dd>A {{domxref("ConstrainULong")}} specifying the video width or range of widths which are acceptable and/or required.</dd>
  <dt><span id="resizemode">resizeMode</span></dt>
- <dd>A {{domxref("ConstrainDOMString")}} object specifying a mode or an array of modes the UA can use to derive the resolution of a video track. Allowed values are <code>none</code> and <code>crop-and-scale</code>. <code>none</code> means that the user agent uses the resolution provided by the camera, its driver or the OS. <code>crop-and-scale</code> means that the user agent can use cropping and downscaling on the camera output  in order to satisfy other constraints that affect the resolution.</dd>
+ <dd>A <a href="#ConstrainDOMString"><code>ConstrainDOMString</code></a> object specifying a mode or an array of modes the UA can use to derive the resolution of a video track. Allowed values are <code>none</code> and <code>crop-and-scale</code>. <code>none</code> means that the user agent uses the resolution provided by the camera, its driver or the OS. <code>crop-and-scale</code> means that the user agent can use cropping and downscaling on the camera output  in order to satisfy other constraints that affect the resolution.</dd>
 </dl>
 
 <h3 id="Properties_of_shared_screen_tracks">Properties of shared screen tracks</h3>
@@ -145,7 +156,7 @@ browser-compat: api.MediaTrackConstraints
 <dl>
  <dt>{{domxref("MediaTrackConstraints.cursor", "cursor")}}</dt>
  <dd>
- <p>A {{domxref("ConstrainDOMString")}} which specifies whether or not to include the mouse cursor in the generated track, and if so, whether or not to hide it while not moving. The value may be a single one of the following strings, or an array of them to allow the browser flexibility in deciding what to do about the cursor.</p>
+ <p>A <a href="#ConstrainDOMString"><code>ConstrainDOMString</code></a> which specifies whether or not to include the mouse cursor in the generated track, and if so, whether or not to hide it while not moving. The value may be a single one of the following strings, or an array of them to allow the browser flexibility in deciding what to do about the cursor.</p>
 
  <dl>
   <dt><code>always</code></dt>
@@ -158,7 +169,7 @@ browser-compat: api.MediaTrackConstraints
  </dd>
  <dt>{{domxref("MediaTrackConstraints.displaySurface", "displaySurface")}}</dt>
  <dd>
- <p>A {{domxref("ConstrainDOMString")}} which specifies the types of display surface that may be selected by the user. This may be a single one of the following strings, or a list of them to allow multiple source surfaces:</p>
+ <p>A <a href="#ConstrainDOMString"><code>ConstrainDOMString</code></a> which specifies the types of display surface that may be selected by the user. This may be a single one of the following strings, or a list of them to allow multiple source surfaces:</p>
 
  <dl>
   <dt><code>application</code></dt>
