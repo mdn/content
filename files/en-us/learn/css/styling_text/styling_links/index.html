@@ -290,8 +290,8 @@ window.addEventListener("load", drawOutput);
 <p>Let's look at some HTML and CSS that will give us the effect we want. First, some simple HTML to style:</p>
 
 <pre class="brush: html">&lt;p&gt;For more information on the weather, visit our &lt;a href="#"&gt;weather page&lt;/a&gt;,
-look at &lt;a href="http://#"&gt;weather on Wikipedia&lt;/a&gt;, or check
-out &lt;a href="http://#"&gt;weather on Extreme Science&lt;/a&gt;.&lt;/p&gt;</pre>
+look at &lt;a href="#"&gt;weather on Wikipedia&lt;/a&gt;, or check
+out &lt;a href="#"&gt;weather on Extreme Science&lt;/a&gt;.&lt;/p&gt;</pre>
 
 <p>Next, the CSS:</p>
 
@@ -327,7 +327,7 @@ a:active {
   color: red;
 }
 
-a[href*="http"] {
+a[href*="#"] {
   background: url('external-link-52.png') no-repeat 100% 0;
   background-size: 16px 16px;
   padding-right: 19px;
