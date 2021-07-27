@@ -28,6 +28,17 @@ browser-compat: api.MediaTrackConstraints
 
 <p>To learn more about how constraints work, see <a href="/en-US/docs/Web/API/Media_Streams_API/Constraints">Capabilities, constraints, and settings</a>.</p>
 
+<h3 id="ConstrainBoolean">ConstrainBoolean</h3>
+
+<p>The <code>ConstrainDouble</code> constraint type is used to specify a constraint for a property whose value is a Boolean value.  Its value may either be set to a Boolean (<code>true</code> or <code>false</code>) or an object containing the following properties:</p>
+
+<dl>
+  <dt><code>exact</code></dt>
+  <dd>A Boolean specifying a specific, required, value the property must have to be considered acceptable.</dd>
+  <dt><code>ideal</code></dt>
+  <dd>A Boolean specifying a value the property would ideally have, but which can be considered optional if necessary to find a match.</dd>
+</dl>
+
 <h3 id="ConstrainDouble">ConstrainDouble</h3>
 
 <p>The <code>ConstrainDouble</code> constraint type is used to specify a constraint for a property whose value is a double-precision floating-point number.  Its value may either be set to a number or an object containing the following properties:</p>
@@ -60,15 +71,15 @@ browser-compat: api.MediaTrackConstraints
 
 <dl>
  <dt>{{domxref("MediaTrackConstraints.autoGainControl", "autoGainControl")}}</dt>
- <dd>A {{domxref("ConstrainBoolean")}} object which specifies whether automatic gain control is preferred and/or required.</dd>
+ <dd>A <a href="#ConstrainBoolean"><code>ConstrainBoolean</code></a> object which specifies whether automatic gain control is preferred and/or required.</dd>
  <dt>{{domxref("MediaTrackConstraints.channelCount", "channelCount")}}</dt>
  <dd>A {{domxref("ConstrainULong")}} specifying the channel count or range of channel counts which are acceptable and/or required.</dd>
  <dt>{{domxref("MediaTrackConstraints.echoCancellation", "echoCancellation")}}</dt>
- <dd>A {{domxref("ConstrainBoolean")}} object specifying whether or not echo cancellation is preferred and/or required.</dd>
+ <dd>A <a href="#ConstrainBoolean"><code>ConstrainBoolean</code></a> object specifying whether or not echo cancellation is preferred and/or required.</dd>
  <dt>{{domxref("MediaTrackConstraints.latency", "latency")}}</dt>
  <dd>A <a href="#ConstrainDouble"><code>ConstrainDouble</code></a> specifying the latency or range of latencies which are acceptable and/or required.</dd>
  <dt>{{domxref("MediaTrackConstraints.noiseSuppression", "noiseSuppression")}}</dt>
- <dd>A {{domxref("ConstrainBoolean")}} which specifies whether noise suppression is preferred and/or required.</dd>
+ <dd>A <a href="#ConstrainBoolean"><code>ConstrainBoolean</code></a> which specifies whether noise suppression is preferred and/or required.</dd>
  <dt>{{domxref("MediaTrackConstraints.sampleRate", "sampleRate")}}</dt>
  <dd>A {{domxref("ConstrainULong")}} specifying the sample rate or range of sample rates which are acceptable and/or required.</dd>
  <dt>{{domxref("MediaTrackConstraints.sampleSize", "sampleSize")}}</dt>
@@ -161,7 +172,7 @@ browser-compat: api.MediaTrackConstraints
  </dl>
  </dd>
  <dt>{{domxref("MediaTrackConstraints.logicalSurface", "logicalSurface")}}</dt>
- <dd>A {{domxref("ConstrainBoolean")}} value which may contain a single Boolean value or a set of them, indicating whether or not to allow the user to choose source surfaces which do not directly correspond to display areas. These may include backing buffers for windows to allow capture of window contents that are hidden by other windows in front of them, or buffers containing larger documents that need to be scrolled through to see the entire contents in their windows.</dd>
+ <dd>A <a href="#ConstrainBoolean"><code>ConstrainBoolean</code></a> value which may contain a single Boolean value or a set of them, indicating whether or not to allow the user to choose source surfaces which do not directly correspond to display areas. These may include backing buffers for windows to allow capture of window contents that are hidden by other windows in front of them, or buffers containing larger documents that need to be scrolled through to see the entire contents in their windows.</dd>
 </dl>
 
 <h2 id="Specifications">Specifications</h2>

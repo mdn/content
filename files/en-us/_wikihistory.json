@@ -34356,14 +34356,6 @@
       "fscholz"
     ]
   },
-  "Web/API/ConstrainBoolean": {
-    "modified": "2020-10-15T21:49:41.944Z",
-    "contributors": [
-      "sideshowbarker",
-      "lucian95",
-      "Sheppy"
-    ]
-  },
   "Web/API/ConstrainDOMString": {
     "modified": "2020-10-18T18:07:45.437Z",
     "contributors": [
