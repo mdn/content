@@ -37,13 +37,13 @@ tags:
 
 <h2 id="Font_families_recap">Font families recap</h2>
 
-<p>As we looked at in <a href="/en-US/docs/Learn/CSS/Styling_text/Fundamentals">Fundamental text and font styling</a>, the fonts applied to your HTML can be controlled using the {{cssxref("font-family")}} property. This takes one or more font family names, and the browser travels down the list until it finds a font it has available on the system it is running on:</p>
+<p>As we looked at in <a href="/en-US/docs/Learn/CSS/Styling_text/Fundamentals">Fundamental text and font styling</a>, the fonts applied to your HTML can be controlled using the {{cssxref("font-family")}} property. This takes one or more font family names. When displaying a webpage, a browser will travel down a list of font-family values until it finds a font available on the system it is running on:</p>
 
 <pre class="brush: css">p {
   font-family: Helvetica, "Trebuchet MS", Verdana, sans-serif;
 }</pre>
 
-<p>This system works well, but traditionally web developers' font choices were limited. There are only a handful of fonts that you can guarantee to be available across all common systems — the so-called <a href="/en-US/docs/Learn/CSS/Styling_text/Fundamentals#web_safe_fonts">Web-safe fonts</a>. You can use the font stack to specify preferable fonts, followed by web-safe alternatives, followed by the default system font, but this adds overhead in terms of testing to make sure that your designs look ok with each font.</p>
+<p>This system works well, but traditionally web developers' font choices were limited. There are only a handful of fonts that you can guarantee to be available across all common systems — the so-called <a href="/en-US/docs/Learn/CSS/Styling_text/Fundamentals#web_safe_fonts">Web-safe fonts</a>. You can use the font stack to specify preferred fonts, followed by web-safe alternatives, followed by the default system font. However, this increases your workload because of the testing required to make sure that your designs cohere with each font.</p>
 
 <h2 id="Web_fonts">Web fonts</h2>
 
