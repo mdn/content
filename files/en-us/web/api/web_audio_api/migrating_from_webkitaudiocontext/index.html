@@ -77,7 +77,7 @@ src.stop(2);</pre>
 
 <h2 id="Remove_synchronous_buffer_creation">Remove synchronous buffer creation</h2>
 
-<p>In the old WebKit implementation of Web Audio, there were two versions of <code>createBuffer()</code>, one which created an initially empty buffer, and one which took an existing {{domxref("ArrayBuffer")}} containing encoded audio, decoded it and returned the result in the form of an {{domxref("AudioBuffer")}}.  The latter version of <code>createBuffer()</code> was potentially expensive, because it had to decode the audio buffer synchronously, and with the buffer being arbitrarily large, it could take a lot of time for this method to complete its work, and no other part of your web page's code could execute in the mean time.</p>
+<p>In the old WebKit implementation of Web Audio, there were two versions of <code>createBuffer()</code>, one which created an initially empty buffer, and one which took an existing {{jsxref("ArrayBuffer")}} containing encoded audio, decoded it and returned the result in the form of an {{domxref("AudioBuffer")}}. The latter version of <code>createBuffer()</code> was potentially expensive, because it had to decode the audio buffer synchronously, and with the buffer being arbitrarily large, it could take a lot of time for this method to complete its work, and no other part of your web page's code could execute in the mean time.</p>
 
 <p>Because of these problems, this version of the <code>createBuffer()</code> method has been removed, and you should use the asynchronous <code>decodeAudioData()</code> method instead.</p>
 
