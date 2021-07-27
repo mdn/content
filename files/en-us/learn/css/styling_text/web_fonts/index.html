@@ -149,8 +149,8 @@ tags:
 
 <ol>
  <li>Rename the unzipped directory to something easy and simple, like <code>fonts</code>.</li>
- <li>Open up the <code>stylesheet.css</code> file and copy both the <code>@font-face</code> blocks contained inside into your <code>web-font-start.css</code> file — you need to put them at the very top, before any of your CSS, as the fonts need to be imported before you can use them on your site.</li>
- <li>Each of the <code>url()</code> functions points to a font file that we want to import into our CSS — we need to make sure the paths to the files are correct, so add <code>fonts/</code> to the start of each path (adjust as necessary).</li>
+ <li>Open up the <code>stylesheet.css</code> file and copy the two <code>@font-face</code> rulesets into your <code>web-font-start.css</code> file — you need to put them at the very top, before any of your CSS, as the fonts need to be imported before you can use them on your site.</li>
+ <li>Each of the <code>url()</code> functions points to a font file that we want to import into our CSS. We need to make sure the paths to the files are correct, so add <code>fonts/</code> to the start of each path (adjust as necessary).</li>
  <li>Now you can use these fonts in your font stacks, just like any web safe or default system font. For example:
    <pre class="brush: css">@font-face {
     font-family: 'zantrokeregular';
