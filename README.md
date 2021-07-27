@@ -79,8 +79,11 @@ If you choose an option other than the GitHub UI, you want to install
 
 These are some important things to keep in mind about the MDN content.
 
-- **A document's main content is written in an `index.html` or an `index.md` file** -- We're currently in the process of converting our content from HTML into Markdown. Pages that are in HTML have their content in a file called "index.html".
- Pages that are in Markdown  have their content in a file called "index.md".
+- **A document's main content is written in an `index.html` or an `index.md`
+file** -- We're currently in the process of converting our content from HTML
+into Markdown. Pages that are in HTML have their content in a file called
+"index.html". Pages that are in Markdown  have their content in a file called
+"index.md".
 - **Documents are folders** --  Documents are always
 represented by a folder (e.g., [`files/en-us/web/javascript`](files/en-us/web/javascript)),
 and that folder will contain the content of that specific document as an
@@ -97,7 +100,7 @@ separated by whitespace. When you move a document, you'll need to add a
 redirect to this file specifying that its old URI now redirects to its new URI.
 Both of these tasks are done using the `yarn content move` tool — see
 [Moving one or more documents](#moving-one-or-more-documents).
-* **Don't edit the `_redirects.txt` file manually!**
+- **Don't edit the `_redirects.txt` file manually!**
 If both an `index.html` or `index.md` file and a redirect exist for a document, the
 document takes precedence and the redirect is ignored.
 - **A document's `index.html` or `index.md` starts with "front-matter"** -- Each
@@ -225,10 +228,10 @@ within your browser.
     ```
 
     When you preview a page you can press a button to open its associated
-    document's `index.html` or `index.md` file in your preferred editor. For this to work,
-    you need to set an environment variable called `EDITOR` before starting
-    the preview server. For example, if you prefer VS Code as your editor,
-    you'll want to do something like this:
+    document's `index.html` or `index.md` file in your preferred editor.
+    For this to work, you need to set an environment variable called `EDITOR`
+    before starting the preview server. For example, if you prefer VS Code as
+    your editor, you'll want to do something like this:
 
     ```sh
     export EDITOR=code
@@ -259,14 +262,15 @@ within your browser.
     Now, it should be set like that even after you've closed and started a new
     terminal window.
 
-1. Make your desired changes to one or more `index.html` or `index.md` files using
-your preferred code editor. **When thinking about your desired changes, it's
-important to keep the following in mind:**
+1. Make your desired changes to one or more `index.html` or `index.md` files
+using your preferred code editor. **When thinking about your desired changes,
+it's important to keep the following in mind:**
     - **Make sure you've read the
     [MDN guidelines](https://developer.mozilla.org/en-US/docs/MDN/Guidelines),
     including the
     [Writing style guide](https://developer.mozilla.org/en-US/docs/MDN/Guidelines/Writing_style_guide).**
-    - **If you're editing a Markdown file, see the [guide to writing Markdown for MDN](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Markdown_in_MDN).**
+    - **If you're editing a Markdown file, see the
+    [guide to writing Markdown for MDN](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Markdown_in_MDN).**
     - **Large chunks of work can be difficult to review, so try to group your
     changes into the smallest logical chunks that make sense, and create a
     separate pull request for each logical chunk.**
@@ -297,7 +301,8 @@ and then push the branch to your fork. Remember, the default name that
     git push -u origin my-work
     ```
 
-1. You're now ready to create a [pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
+1. You're now ready to create a
+[pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
 
 1. Once you've created your pull request, sit back, relax, and wait for
 a review.
@@ -362,8 +367,8 @@ making the change and anything else we need to know about it.
 ### Adding a new document
 
 Adding a new document is relatively straightforward, especially if you can
-start by copying the `index.html` or `index.md` of a similar document. There are only a
-few things to keep in mind:
+start by copying the `index.html` or `index.md` of a similar document.
+There are only a few things to keep in mind:
 
 - Documents can be authored in either Markdown or HTML. However, we're converting
   the site to Markdown one section at a time, and don't want to mix authoring
@@ -371,15 +376,15 @@ few things to keep in mind:
   documentation. So if you are adding a new document under
   `files/en-us/web/javascript`, make it a Markdown file. Otherwise make it an
   HTML file.
-- Remember that a document is represented by an `index.html` or `index.md` file within its
-  own folder.
+- Remember that a document is represented by an `index.html` or `index.md` file
+  within its own folder.
 - Determine where in the document hierarchy your document belongs. For
   example, if you're
   creating a new CSS document for a new property `foo`, you'll want to create
   a new folder
   `files/en-us/web/css/foo/` and its `files/en-us/web/css/foo/index.html` file.
-- Remember that a document's `index.html` or `index.md` file must start with front-matter
-  that defines the `title`, `slug`, and
+- Remember that a document's `index.html` or `index.md` file must start with
+  front-matter that defines the `title`, `slug`, and
   [`tags`](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Howto/Tag)
   (if any) for the document. You might find it helpful to refer
   to the front-matter within a similar document's `index.html` or `index.md`.
