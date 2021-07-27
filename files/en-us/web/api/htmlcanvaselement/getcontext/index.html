@@ -105,6 +105,12 @@ var <em>ctx</em> = <em>canvas</em>.getContext(<em>contextType</em>, <em>contextA
       <li><code><strong>failIfMajorPerformanceCaveat</strong></code>: Boolean that
         indicates if a context will be created if the system performance is low or if no
         hardware GPU is available.</li>
+      <li><code><strong>xrCompatible</strong></code>: Boolean that hints to the user agent
+         to use a compatible graphics adapter for an
+         <a href="/en-US/docs/Web/API/WebXR_Device_API">immersive XR device</a>. Setting this
+         synchronous flag at context creation is discouraged; rather call the asynchronous
+         {{domxref("WebGLRenderingContext.makeXRCompatible()")}} method the moment you
+         intend to start an XR session.</li>
       <li><code><strong>powerPreference</strong></code>: A hint to the user agent
         indicating what configuration of GPU is suitable for the WebGL context. Possible
         values are:
