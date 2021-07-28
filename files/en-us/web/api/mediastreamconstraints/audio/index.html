@@ -39,8 +39,8 @@ browser-compat: api.MediaStreamConstraints.audio
 </p>
 
 <dl>
-  <dt>{{jsxref("Boolean")}}</dt>
-  <dd>If a Boolean value is specified, it indicates whether or not an audio track should
+  <dt>A boolean value</dt>
+  <dd>If specified, it indicates whether or not an audio track should
     be included in the returned stream; if it's <code>true</code>, an audio track is
     included; if no audio source is available or if permission is not given to use the
     audio source, the call to <code>getUserMedia()</code> will fail. If
@@ -69,7 +69,7 @@ browser-compat: api.MediaStreamConstraints.audio
 
   <pre class="brush: html">&lt;p&gt;Click the start button below to begin the demonstration.&lt;/p&gt;
 &lt;div id="startButton" class="button"&gt;
-  Start
+  Start
 &lt;/div&gt;
 &lt;audio id="audio" autoplay controls&gt;&lt;/audio&gt;&lt;br&gt;
 &lt;div id="log"&gt;&lt;/div&gt;</pre>
@@ -135,7 +135,7 @@ function log(msg) {
 
   <pre class="brush: html">&lt;p&gt;Click the start button below to begin the demonstration.&lt;/p&gt;
 &lt;div id="startButton" class="button"&gt;
-  Start
+  Start
 &lt;/div&gt;
 &lt;audio id="audio" autoplay controls&gt;&lt;/audio&gt;&lt;br&gt;
 &lt;div id="log"&gt;&lt;/div&gt;</pre>
@@ -179,8 +179,8 @@ function log(msg) {
   navigator.mediaDevices.getUserMedia({
     audio: {
       sampleSize: 8,
-      echoCancellation: true
-    }
+      echoCancellation: true
+    }
   }).then(stream =&gt; audioElement.srcObject = stream)
     .catch(err =&gt; log(err.name + ": " + err.message));
 }, false);</pre>
