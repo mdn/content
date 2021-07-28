@@ -39,7 +39,7 @@ tags:
 
 <p>Something that can trip up newcomers to DevTools is the difference between what you see when you <a href="/en-US/docs/Tools/View_source">view the source</a> of a webpage, or look at the HTML file you put on the server, and what you can see in the <a href="/en-US/docs/Tools/Page_Inspector/UI_Tour#html_pane">HTML Pane</a> of the DevTools. While it looks roughly similar to what you can see via View Source there are some differences.</p>
 
-<p>In the rendered DOM the browser may have corrected some badly-written HTML for you. If you incorrectly closed an element, for instance by opening an <code>&lt;h2&gt;</code> but closing with an <code>&lt;/h3&gt;</code>, the browser will figure out what you were meaning to do and the HTML in the DOM will correctly close the open <code>&lt;h2&gt;</code> with an <code>&lt;/h2&gt;</code>. The browser will also normalize all of the HTML, and the DOM will also show any changes made by JavaScript.</p>
+<p>In the rendered DOM the browser may have normalized the HTML, for example by correcting some badly-written HTML for you. If you incorrectly closed an element, for instance by opening an <code>&lt;h2&gt;</code> but closing with an <code>&lt;/h3&gt;</code>, the browser will figure out what you were meaning to do and the HTML in the DOM will correctly close the open <code>&lt;h2&gt;</code> with an <code>&lt;/h2&gt;</code>. The DOM will also show any changes made by JavaScript.</p>
 
 <p>View Source, in comparison, is the HTML source code as stored on the server. The <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#html_tree">HTML tree</a> in your DevTools shows exactly what the browser is rendering at any given time, so it gives you an insight into what is really going on.</p>
 
@@ -80,7 +80,8 @@ tags:
 <p><img alt="The DevTools Panel, adding a new property to the rules, with the autocomplete for font- open" src="inspecting3-font-size.png" style="border-style: solid; border-width: 1px;"></p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: There are other useful features in the Rules view too, for example declarations with invalid values are crossed out. You can find out more at <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS">Examine and edit CSS</a>.</p>
+<h4>Note:</h4>
+<p>There are other useful features in the Rules view too, for example declarations with invalid values are crossed out. You can find out more at <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS">Examine and edit CSS</a>.</p>
 </div>
 
 <h2 id="Understanding_the_box_model">Understanding the box model</h2>
@@ -98,7 +99,8 @@ tags:
 <p><img alt="The Layout section of the DevTools" src="inspecting4-box-model.png" style="border-style: solid; border-width: 1px;"></p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: Find out more in <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_the_box_model">Examining and Inspecting the Box Model</a>.</p>
+  <h4>Note:</h4>
+  <p>Find out more in <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_the_box_model">Examining and Inspecting the Box Model</a>.</p>
 </div>
 
 <h2 id="Solving_specificity_issues">Solving specificity issues</h2>
@@ -202,6 +204,6 @@ tags:
  <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS">Sizing items in CSS</a></li>
  <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Images_media_form_elements">Images, media, and form elements</a></li>
  <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Styling_tables">Styling tables</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS">Debugging CSS</a></li>
+ <li><strong>Debugging CSS</strong></li>
  <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Organizing">Organizing your CSS</a></li>
 </ol>
