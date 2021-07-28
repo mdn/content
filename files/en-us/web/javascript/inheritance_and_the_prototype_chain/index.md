@@ -39,8 +39,8 @@ let F = function () {
 let o = new F(); // {a: 1, b: 2}
 
 // add properties in F function's prototype
-f.prototype.b = 3;
-f.prototype.c = 4;
+F.prototype.b = 3;
+F.prototype.c = 4;
 
 // do not set the prototype F.prototype = {b:3,c:4}; this will break the prototype chain
 // o.[[Prototype]] has properties b and c.
