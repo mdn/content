@@ -58,15 +58,15 @@ target.addEventListener(type, listener, useCapture, wantsUntrusted); // wantsUnt
     options are:
     <dl>
       <dt><code>capture</code></dt>
-      <dd>A {{jsxref("Boolean")}} indicating that events of this type will be dispatched
+      <dd>A boolean value indicating that events of this type will be dispatched
         to the registered <code><var>listener</var></code> before being dispatched to any
         <code>EventTarget</code> beneath it in the DOM tree.</dd>
       <dt><code>once</code></dt>
-      <dd>A {{jsxref("Boolean")}} indicating that the <code><var>listener</var></code>
+      <dd>A boolean value indicating that the <code><var>listener</var></code>
         should be invoked at most once after being added. If <code>true</code>, the
         <code><var>listener</var></code> would be automatically removed when invoked.</dd>
       <dt><code>passive</code></dt>
-      <dd>A {{jsxref("Boolean")}} that, if <code>true</code>, indicates that the function
+      <dd>A boolean value that, if <code>true</code>, indicates that the function
         specified by <code><var>listener</var></code> will never call
         {{domxref("Event.preventDefault", "preventDefault()")}}. If a passive listener
         does call <code>preventDefault()</code>, the user agent will do nothing other than
@@ -75,13 +75,13 @@ target.addEventListener(type, listener, useCapture, wantsUntrusted); // wantsUnt
       <dt><code>signal</code></dt>
       <dd>An {{domxref("AbortSignal")}}. The listener will be removed when the given <code>AbortSignal</code>’s {{domxref("AbortController/abort()", "abort()")}} method is called.</dd>
       <dt><code>mozSystemGroup</code> {{non-standard_inline}}</dt>
-      <dd>A {{jsxref("Boolean")}} indicating that the listener should be added to the
+      <dd>A boolean value indicating that the listener should be added to the
         system group. Available only in code running in XBL or in the
         {{glossary("chrome")}} of the Firefox browser.</dd>
     </dl>
   </dd>
   <dt><code><var>useCapture</var></code> {{optional_inline}}</dt>
-  <dd>A {{jsxref("Boolean")}} indicating whether events of this type will be dispatched to
+  <dd>A boolean value indicating whether events of this type will be dispatched to
     the registered <code><var>listener</var></code> <em>before</em> being dispatched to
     any <code>EventTarget</code> beneath it in the DOM tree. Events that are bubbling
     upward through the tree will not trigger a listener designated to use capture. Event
