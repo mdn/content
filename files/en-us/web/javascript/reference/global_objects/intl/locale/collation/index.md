@@ -147,8 +147,8 @@ Like other locale subtags, the collation type can be added to the {{jsxref("Intl
 In the [Unicode locale string spec](https://www.unicode.org/reports/tr35/), collation types are locale key "extension subtags". These subtags add additional data about the locale, and are added to locale identifiers by using the `-u` extension. Thus, the collation type can be added to the initial locale identifier string that is passed into the {{jsxref("Intl/Locale/Locale", "Locale")}} constructor. To add the collation type, first add the `-u` extension to the string. Next, add the `-co` extension to indicate that you are adding a collation type. Finally, add the collation to the string.
 
 ```js
-let stringColl = new Intl.Locale("en-Latn-US-u-co-emoji");
-console.log(stringColl.collation); // Prints "emoji"
+let locale = new Intl.Locale("en-Latn-US-u-co-emoji");
+console.log(locale.collation); // Prints "emoji"
 ```
 
 ### Adding a collation type via the configuration object argument
@@ -156,8 +156,8 @@ console.log(stringColl.collation); // Prints "emoji"
 The {{jsxref("Intl/Locale/Locale", "Intl.Locale")}} constructor has an optional configuration object argument, which can contain any of several extension types, including collation types. Set the `collation` property of the configuration object to your desired collation type, and then pass it into the constructor.
 
 ```js
-let configColl = new Intl.Locale("en-Latn-US", {collation: "emoji"});
-console.log(configColl.collation); // Prints "emoji"
+let locale = new Intl.Locale("en-Latn-US", { collation: "emoji" });
+console.log(locale.collation); // Prints "emoji"
 ```
 
 ## Specifications

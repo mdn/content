@@ -136,8 +136,7 @@ white-space: unset;
 </table>
 
 <div class="notecard note">
-  <h4>Notes</h4>
-  <p>There is a distinction made between <strong>spaces</strong> and <strong>other space separators</strong>. These are defined as follows:</p>
+  <p><strong>Note:</strong> There is a distinction made between <strong>spaces</strong> and <strong>other space separators</strong>. These are defined as follows:</p>
   <dl>
     <dt>spaces</dt>
     <dd>Spaces (U+0020), tabs (U+0009), and segment breaks (such as newlines).</dd>
@@ -174,8 +173,7 @@ white-space: unset;
 
 <h4 id="HTML">HTML</h4>
 
-<div class="hidden" id="See_it_in_action_LiveSample">
-<pre class="brush: html">&lt;div id="css-code" class="box"&gt;
+<pre class="brush: html hidden">&lt;div id="css-code" class="box"&gt;
   p { white-space:
   &lt;select&gt;
     &lt;option&gt;normal&lt;/option&gt;
@@ -196,7 +194,7 @@ white-space: unset;
     Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush: css">.box {
+<pre class="brush: css hidden">.box {
   width: 300px;
   padding: 16px;
   border-radius: 10px;
@@ -220,12 +218,12 @@ white-space: unset;
   font-size: 14px;
 }</pre>
 
-<pre class="brush: js">var select  = document.querySelector("#css-code select");
+<pre class="brush: js hidden">var select  = document.querySelector("#css-code select");
 var results = document.querySelector("#results p");
 select.addEventListener("change", function(e) {
   results.setAttribute("style", "white-space: "+e.target.value);
 })</pre>
-</div>
+
 
 <pre class="brush: html">&lt;p&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt; </pre>
 

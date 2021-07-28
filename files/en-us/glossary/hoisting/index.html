@@ -11,7 +11,7 @@ tags:
 
 <p>Conceptually hoisting is often presented as the compiler "splitting variable declaration and initialization, and moving (just) the declarations to the top of the code".
   This allows variables to appear in code before they are defined.
-  Note however that the any variable initialization in the original code will not happen until the line of code is executed.</p>
+  Note however, that any variable initialization in the original code will not happen until the line of code is executed.</p>
 
 <div class="notecard note">
   <p><strong>Note:</strong> The term hoisting is not used in any normative specification prose prior to <a href="https://www.ecma-international.org/ecma-262/6.0/index.html">ECMAScript® 2015 Language Specification</a>. Hoisting was thought up as a general way of thinking about how execution contexts (specifically the creation and execution phases) work in JavaScript.</p>
@@ -46,7 +46,7 @@ The result of the code above is: "My cat's name is Chloe"
 */
 </pre>
 
-<p>Even though we call the function in our code first, before the function is written, the code still works. This is because of how context execution works in JavaScript.</p>
+<p>Even though we call the function in our code first, before the function is written, the code still works, because this is how context execution works in JavaScript.</p>
 
 <p>Hoisting works well with other data types and variables. The variables can be initialized and used before they are declared.</p>
 
@@ -85,7 +85,7 @@ console.log(a + "" + b); // 'Cranberry'</pre>
 <h3 id="Only_declarations_are_hoisted">Let and const hoisting</h3>
 
 <p>Variables declared with <code>let</code> and <code>const</code> are also hoisted, but unlike for <code>var</code> the variables are not initialized with a default value of <code>undefined</code>.
-  Until the line in which they initialized is executed, any code that accesses these variables will throw an exception.</p>
+  Until the line in which they are initialized is executed, any code that accesses these variables will throw an exception.</p>
 
 <p>For information and examples see <a href="/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz"><code>let</code> > temporal dead zone</a>.</p>
 

@@ -303,7 +303,7 @@ Note that [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_
       <td rowspan="2">18</td>
       <td>
         {{jsxref("Operators","Postfix
-                Increment","#Increment", 1)}}
+                Increment","#increment_and_decrement", 1)}}
       </td>
       <td rowspan="2">n/a</td>
       <td><code>… ++</code></td>
@@ -311,7 +311,7 @@ Note that [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_
     <tr>
       <td>
         {{jsxref("Operators","Postfix
-                Decrement","#Decrement", 1)}}
+                Decrement","#increment_and_decrement", 1)}}
       </td>
       <td><code>… --</code></td>
     </tr>
@@ -351,17 +351,15 @@ Note that [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_
     </tr>
     <tr>
       <td>
-        <a href="/en-US/docs/Web/JavaScript/Reference/Operators#increment"
-          >Prefix Increment</a
-        >
+        {{jsxref("Operators","Prefix
+                Increment","#increment_and_decrement", 1)}}
       </td>
       <td><code>++ …</code></td>
     </tr>
     <tr>
       <td>
-        <a href="/en-US/docs/Web/JavaScript/Reference/Operators#decrement"
-          >Prefix Decrement</a
-        >
+        {{jsxref("Operators","Prefix
+                Decrement","#increment_and_decrement", 1)}}
       </td>
       <td><code>-- …</code></td>
     </tr>

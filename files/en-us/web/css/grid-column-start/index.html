@@ -56,8 +56,10 @@ grid-column-start: unset;
  <dd>A keyword indicating that the property contributes nothing to the grid item’s placement, indicating auto-placement, an automatic span, or a default span of <code>1</code>.</dd>
  <dt><code>&lt;custom-ident&gt;</code></dt>
  <dd>If there is a named line with the name <code>&lt;custom-ident&gt;-start</code>, it contributes the first such line to the grid item’s placement.
- <p class="note"><strong>Note:</strong> Named grid areas automatically generate implicit named lines of this form, so specifying <code>grid-column-start: foo;</code> will choose the start edge of that named grid area (unless another line named <code>foo-start</code> was explicitly specified before it).</p>
-
+ <div class="note">
+   <p><strong>Note:</strong> Named grid areas automatically generate implicit named lines of this form, so specifying <code>grid-column-start: foo;</code> will choose the start edge of that named grid area (unless another line named <code>foo-start</code> was explicitly specified before it).</p>
+ </div>
+ 
  <p>Otherwise, this is treated as if the integer <code>1</code> had been specified along with the <code>&lt;custom-ident&gt;</code>.</p>
  </dd>
  <dt><code>&lt;integer&gt; &amp;&amp; &lt;custom-ident&gt;?</code></dt>
@@ -121,8 +123,7 @@ grid-column-start: unset;
 }
 </pre>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -145,7 +146,6 @@ grid-column-start: unset;
   padding: 1em;
 }
 </pre>
-</div>
 
 <h4 id="Result">Result</h4>
 

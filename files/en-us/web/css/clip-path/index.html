@@ -85,7 +85,7 @@ clip-path: unset;
 </dl>
 
 <div class="note">
-<p><strong>Note</strong>: A computed value other than <strong><code>none</code></strong> results in the creation of a new <a href="/en-US/docs/CSS/Understanding_z-index/The_stacking_context">stacking context</a> the same way that CSS {{cssxref("opacity")}} does for values other than <code>1</code>.</p>
+<p><strong>Note:</strong> A computed value other than <strong><code>none</code></strong> results in the creation of a new <a href="/en-US/docs/CSS/Understanding_z-index/The_stacking_context">stacking context</a> the same way that CSS {{cssxref("opacity")}} does for values other than <code>1</code>.</p>
 </div>
 
 <h2 id="Formal_definition">Formal definition</h2>
@@ -100,8 +100,7 @@ clip-path: unset;
 
 <h3 id="Comparison_of_HTML_and_SVG">Comparison of HTML and SVG</h3>
 
-<div class="hidden" id="clip-path">
-<pre class="brush: html">&lt;svg class="defs"&gt;
+<pre id="clip-path" class="brush: html hidden">&lt;svg class="defs"&gt;
   &lt;defs&gt;
     &lt;clipPath id="myPath" clipPathUnits="objectBoundingBox"&gt;
       &lt;path d="M0.5,1 C0.5,1,0,0.7,0,0.3 A0.25,0.25,1,1,1,0.5,0.3 A0.25,0.25,1,1,1,1,0.3 C1,0.7,0.5,1,0.5,1 Z" /&gt;
@@ -518,7 +517,6 @@ svg text {
 svg text.em {
   font-style: italic;
 }</pre>
-</div>
 
 <p>{{EmbedLiveSample("Comparison_of_HTML_and_SVG", "100%", 800, "", "", "example-outcome-frame")}}</p>
 
@@ -556,15 +554,11 @@ svg text.em {
 }
 </pre>
 
-<div class="hidden">
-<h4 id="JavaScript">JavaScript</h4>
-
-<pre class="brush: js">const clipPathSelect = document.getElementById("clipPath");
+<pre class="brush: js hidden">const clipPathSelect = document.getElementById("clipPath");
 clipPathSelect.addEventListener("change", function (evt) {
   document.getElementById("clipped").style.clipPath = evt.target.value;
 });
 </pre>
-</div>
 
 <h4 id="Result">Result</h4>
 

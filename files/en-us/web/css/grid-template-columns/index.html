@@ -75,9 +75,8 @@ grid-template-columns: unset;
   <p>If used outside of {{cssxref("minmax()", "minmax()")}} notation, <code>auto</code> represents the range between the minimum and maximum described above. This behaves similarly to <code>minmax(min-content,max-content)</code> in most cases.</p>
 
  <div class="notecard note">
-   <h4>Note:</h4>
-   <p><code>auto</code> track sizes (and only <code>auto</code> track sizes) can be stretched by the {{cssxref("align-content")}} and {{cssxref("justify-content")}} properties. Therefore by default, an <code>auto</code> sized track will take up any remaining space in the grid container.</p>
-</div>
+   <p><strong>Note:</strong> <code>auto</code> track sizes (and only <code>auto</code> track sizes) can be stretched by the {{cssxref("align-content")}} and {{cssxref("justify-content")}} properties. Therefore by default, an <code>auto</code> sized track will take up any remaining space in the grid container.</p>
+ </div>
  </dd>
  <dt id="fit-content()"><code>{{cssxref("fit-content()", "fit-content( [ &lt;length&gt; | &lt;percentage&gt; ] )")}}</code></dt>
  <dd>Represents the formula <code>min(max-content, max(auto, <var>argument</var>))</code>, which is calculated similar to <code>auto</code> (i.e. <code>minmax(auto, max-content)</code>), except that the track size is clamped at <var>argument</var> if it is greater than the <code>auto</code> minimum.</dd>
@@ -90,10 +89,8 @@ grid-template-columns: unset;
 </dl>
 
 <div class="notecard warning">
-  <h4>Note</h4>
-<p>The <code>masonry</code> value is from Level 3 of the Grid specification and currently only has an experimental implementation behind a flag in Firefox.</p>
-
-<p>The <code>subgrid</code> value is from Level 2 of the Grid specification and currently only has implementation in Firefox 71 and onwards.</p>
+ <p><strong>Warning:</strong> The <code>masonry</code> value is from Level 3 of the Grid specification and currently only has an experimental implementation behind a flag in Firefox.</p>
+ <p>The <code>subgrid</code> value is from Level 2 of the Grid specification and currently only has implementation in Firefox 71 and onwards.</p>
 </div>
 
 <h2 id="Formal_definition">Formal definition</h2>

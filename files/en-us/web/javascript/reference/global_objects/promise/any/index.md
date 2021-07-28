@@ -11,7 +11,7 @@ browser-compat: javascript.builtins.Promise.any
 ---
 {{JSRef}}
 
-`Promise.any()` takes an iterable of {{JSxRef("Promise")}} objects and, as soon as one of the promises in the iterable fulfills, returns a single promise that resolves with the value from that promise. If no promises in the iterable fulfill (if all of the given promises are rejected), then the returned promise is rejected with an {{JSxRef("AggregateError")}}, a new subclass of {{JSxRef("Error")}} that groups together individual errors. Essentially, this method is the opposite of {{JSxRef("Promise.all()")}}.
+`Promise.any()` takes an iterable of {{JSxRef("Promise")}} objects and, as soon as one of the promises in the iterable fulfills, returns a single promise that resolves with the value from that promise. If no promises in the iterable fulfill (if all of the given promises are rejected), then the returned promise is rejected with an {{JSxRef("AggregateError")}}, a new subclass of {{JSxRef("Error")}} that groups together individual errors.
 
 {{EmbedInteractiveExample("pages/js/promise-any.html")}}
 

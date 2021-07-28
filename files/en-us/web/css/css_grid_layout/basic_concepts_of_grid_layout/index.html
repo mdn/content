@@ -59,8 +59,7 @@ tags:
 }
 </pre>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -76,7 +75,6 @@ tags:
   color: #d9480f;
 }
 </pre>
-</div>
 
 <p>{{ EmbedLiveSample('The_Grid_container', '200', '330') }}</p>
 
@@ -115,8 +113,8 @@ tags:
 }
 </pre>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -132,7 +130,6 @@ tags:
   color: #d9480f;
 }
 </pre>
-</div>
 
 <p>{{ EmbedLiveSample('basic_example', '610', '140') }}</p>
 
@@ -155,8 +152,7 @@ tags:
 }
 </pre>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -173,7 +169,6 @@ tags:
 }
 
 </pre>
-</div>
 
 <p>{{ EmbedLiveSample('the_fr_unit', '220', '140') }}</p>
 
@@ -196,8 +191,7 @@ tags:
 }
 </pre>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -214,7 +208,6 @@ tags:
 }
 
 </pre>
-</div>
 
 <p>{{ EmbedLiveSample('unequal_fractions', '220', '140') }}</p>
 
@@ -237,8 +230,7 @@ tags:
 }
 </pre>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -255,7 +247,6 @@ tags:
 }
 
 </pre>
-</div>
 
 <p>{{ EmbedLiveSample('mixing_fractions_and_absolute_sizes', '220', '140') }}</p>
 
@@ -319,8 +310,7 @@ tags:
 }
 </pre>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -336,7 +326,6 @@ tags:
   color: #d9480f;
 }
 </pre>
-</div>
 
 <p>{{ EmbedLiveSample('The_implicit_and_explicit_grid', '230', '420') }}</p>
 
@@ -353,8 +342,7 @@ tags:
 }
 </pre>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -370,7 +358,6 @@ tags:
   color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div&gt;One&lt;/div&gt;
@@ -431,8 +418,7 @@ tags:
 }
 </pre>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -448,7 +434,7 @@ tags:
   color: #d9480f;
 }
 </pre>
-</div>
+
 
 <p>{{ EmbedLiveSample('Positioning_items_against_lines', '230', '420') }}</p>
 
@@ -493,8 +479,7 @@ tags:
 &lt;/div&gt;
 </pre>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   column-gap: 10px;
@@ -512,7 +497,6 @@ tags:
   color: #d9480f;
 }
 </pre>
-</div>
 
 <p>{{ EmbedLiveSample('Gutters') }}</p>
 
@@ -538,8 +522,7 @@ tags:
 }
 </pre>
 
-<div class="hidden">
-  <pre class="brush: html">&lt;div class="wrapper"&gt;
+<pre class="brush: html hidden">&lt;div class="wrapper"&gt;
     &lt;div class="box box1"&gt;
       &lt;div class="nested"&gt;a&lt;/div&gt;
       &lt;div class="nested"&gt;b&lt;/div&gt;
@@ -550,7 +533,7 @@ tags:
     &lt;div class="box box4"&gt;Four&lt;/div&gt;
     &lt;div class="box box5"&gt;Five&lt;/div&gt;
   &lt;/div&gt;
-  </pre>
+</pre>
 
 <pre class="brush: css">* {box-sizing: border-box;}
 
@@ -592,7 +575,7 @@ tags:
 <p>In the working draft of the Level 2 Grid specification there is a feature called <em>subgrid</em>, which would let us create nested grids that use the track definition of the parent grid.</p>
 
 <div class="note">
-<p><strong>Note</strong>: This feature shipped in Firefox 71, which is currently the only browser to implement subgrid.</p>
+<p><strong>Note:</strong> This feature shipped in Firefox 71, which is currently the only browser to implement subgrid.</p>
 </div>
 
 <p>In the current specification, we would edit the above nested grid example to change the track definition of <code>grid-template-columns: repeat(3, 1fr)</code>, to <code>grid-template-columns: subgrid</code>. The nested grid will then use the parent grid tracks to layout items.</p>
@@ -644,8 +627,7 @@ tags:
 }
 </pre>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -661,7 +643,6 @@ tags:
   color: #d9480f;
 }
 </pre>
-</div>
 
 <p>{{ EmbedLiveSample('overlapping_without_z-index', '230', '460') }}</p>
 
@@ -693,8 +674,7 @@ tags:
 }
 </pre>
 
-<div class="hidden">
-<pre class="brush: html">&lt;div class="wrapper"&gt;
+<pre class="brush: html hidden">&lt;div class="wrapper"&gt;
   &lt;div class="box box1"&gt;One&lt;/div&gt;
   &lt;div class="box box2"&gt;Two&lt;/div&gt;
   &lt;div class="box box3"&gt;Three&lt;/div&gt;
@@ -703,7 +683,7 @@ tags:
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -719,7 +699,6 @@ tags:
   color: #d9480f;
 }
 </pre>
-</div>
 
 <p>{{ EmbedLiveSample('Controlling_the_order', '230', '460') }}</p>
 
