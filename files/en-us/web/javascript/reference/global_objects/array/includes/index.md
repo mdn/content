@@ -91,8 +91,8 @@ arr.includes('c', 100)  // false
 
 If `fromIndex` is negative, the computed index is calculated to
 be used as a position in the array at which to begin searching for
-`searchElement`. If the computed index is less or equal than
-`-1 * arr.length`, the entire array will be searched.
+`searchElement`. If the computed index is less than or equal to
+`0`, the entire array will be searched.
 
 ```js
 // array length is 3
