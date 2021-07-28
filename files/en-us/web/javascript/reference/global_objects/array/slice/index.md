@@ -11,7 +11,7 @@ browser-compat: javascript.builtins.Array.slice
 ---
 {{JSRef}}
 
-The **`slice()`** method returns a shallow copy of a portion of
+The **`slice()`** method returns a Deep copy of a portion of
 an array into a new array object selected from `start` to `end`
 (`end` not included) where `start` and `end` represent
 the index of items in that array. The original array will not be modified.
@@ -65,13 +65,13 @@ A new array containing the extracted elements.
 
 ## Description
 
-`slice` does not alter the original array. It returns a shallow copy of
+`slice` does not alter the original array. It returns a Deep copy of
 elements from the original array. Elements of the original array are copied into the
 returned array as follows:
 
 - For object `slice` copies object references into the new array. Both the
-  original and new array refer to the same object. If an object changes, the changes are
-  visible to both the new and original arrays.
+  original and new array refer to objects with different memory Address. If an object changes, the changes are
+  not visible to the other Object.
 - For strings, numbers and booleans (not {{jsxref("String")}}, {{jsxref("Number")}}
   and {{jsxref("Boolean")}} objects), `slice` copies the values into the new
   array. Changes to the string, number, or boolean in one array do not affect the other
