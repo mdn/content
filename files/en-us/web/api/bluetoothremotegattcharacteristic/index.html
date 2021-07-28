@@ -9,6 +9,7 @@ tags:
   - Interface
   - Reference
   - Web Bluetooth API
+browser-compat: api.BluetoothRemoteGATTCharacteristic
 ---
 <div>{{APIRef("Bluetooth API")}}{{SeeCompatTable}}</div>
 
@@ -26,6 +27,8 @@ tags:
     getDescriptors(optional BluetoothDescriptorUUID <dfn>descriptor</dfn>);
   Promise&lt;DataView&gt; readValue();
   Promise&lt;void&gt; writeValue(BufferSource <dfn>value</dfn>);
+  Promise&lt;void&gt; writeValueWithResponse(BufferSource <dfn>value</dfn>);
+  Promise&lt;void&gt; writeValueWithoutResponse(BufferSource <dfn>value</dfn>);
   Promise&lt;void&gt; startNotifications();
   Promise&lt;void&gt; stopNotifications();
 };
@@ -54,8 +57,12 @@ BluetoothRemoteGATTCharacteristic implements CharacteristicEventHandlers;</pre>
  <dd>Returns a {{JSxRef("Promise")}} that resolves to an {{JSxRef("Array")}} of all {{DOMxRef("BluetoothRemoteGATTDescriptor")}} objects for a given descriptor UUID.</dd>
  <dt>{{DOMxRef("BluetoothRemoteGATTCharacteristic.readValue()")}}</dt>
  <dd>Returns a {{JSxRef("Promise")}} that resolves to an {{JSxRef("ArrayBuffer")}} holding a duplicate of the <code>value</code> property if it is available and supported. Otherwise it throws an error.</dd>
- <dt>{{DOMxRef("BluetoothRemoteGATTCharacteristic.writeValue()")}}</dt>
- <dd>Sets the value property to the bytes contained in an {{JSxRef("ArrayBuffer")}} and returns a {{JSxRef("Promise")}}.</dd>
+ <dt>{{DOMxRef("BluetoothRemoteGATTCharacteristic.writeValue()", "BluetoothRemoteGATTCharacteristic.writeValue(<var>value</var>)")}}</dt>
+ <dd>Sets the <code>value</code> property to the bytes contained in a given {{JSxRef("ArrayBuffer")}}, calls <a href="https://webbluetoothcg.github.io/web-bluetooth/#writecharacteristicvalue"><code>WriteCharacteristicValue</code>(<var>this</var>=<code>this</code>, <var>value=value</var>, <var>response</var>=<code>"optional"</code>)</a>, and returns the resulting {{JSxRef("Promise")}}.</dd>
+ <dt>{{DOMxRef("BluetoothRemoteGATTCharacteristic.writeValueWithResponse()", "BluetoothRemoteGATTCharacteristic.writeValueWithResponse(<var>value</var>)")}}</dt>
+ <dd>Sets the <code>value</code> property to the bytes contained in a given {{JSxRef("ArrayBuffer")}}, calls <a href="https://webbluetoothcg.github.io/web-bluetooth/#writecharacteristicvalue"><code>WriteCharacteristicValue</code>(<var>this</var>=<code>this</code>, <var>value=value</var>, <var>response</var>=<code>"required"</code>)</a>, and returns the resulting {{JSxRef("Promise")}}.</dd>
+ <dt>{{DOMxRef("BluetoothRemoteGATTCharacteristic.writeValueWithoutResponse()", "BluetoothRemoteGATTCharacteristic.writeValueWithoutResponse(<var>value</var>)")}}</dt>
+ <dd>Sets the <code>value</code> property to the bytes contained in a given {{JSxRef("ArrayBuffer")}}, calls <a href="https://webbluetoothcg.github.io/web-bluetooth/#writecharacteristicvalue"><code>WriteCharacteristicValue</code>(<var>this</var>=<code>this</code>, <var>value=value</var>, <var>response</var>=<code>"never"</code>)</a>, and returns the resulting {{JSxRef("Promise")}}.</dd>
  <dt>{{DOMxRef("BluetoothRemoteGATTCharacteristic.startNotifications()")}}</dt>
  <dd>Returns a {{JSxRef("Promise")}} when <code>navigator.bluetooth</code> is added to the active notification context.</dd>
  <dt>{{DOMxRef("BluetoothRemoteGATTCharacteristic.stopNotifications()")}}</dt>
@@ -64,21 +71,8 @@ BluetoothRemoteGATTCharacteristic implements CharacteristicEventHandlers;</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Web Bluetooth", "#bluetoothremotegattcharacteristic", "BluetoothRemoteGATTCharacteristic")}}</td>
-   <td>{{Spec2("Web Bluetooth")}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.BluetoothRemoteGATTCharacteristic")}}</p>
+<p>{{Compat}}</p>

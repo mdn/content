@@ -17,26 +17,32 @@ tags:
 - XR
 - XRView
 - augmented
+browser-compat: api.XRView.eye
 ---
-<p>{{APIRef("WebXR Device API")}}{{SecureContext_Header}}</p>
+<p>{{APIRef("WebXR Device API")}}</p>
 
 <p>The {{domxref("XRView")}} interface's read-only <code><strong>eye</strong></code>
-  property is a string taken from the {{domxref("XREye")}} enumerated type, indicating
-  which eye's viewpoint the <code>XRView</code> represents: <code>left</code> or
+  property is a string indicating which eye's viewpoint the <code>XRView</code> represents: <code>left</code> or
   <code>right</code>. For views which represent neither eye, such as monoscopic views,
   this property's value is <code>none</code>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js">let <em>eye</em> = <em>xrView</em>.eye;
+<pre class="brush: js"><em>view</em>.eye;
 </pre>
 
 <h3 id="Value">Value</h3>
 
-<p>A {{domxref("DOMString")}} whose value is one of the strings enumerated by the
-  {{domxref("XREye")}} type:</p>
+<p>A string that can be one of the following values:</p>
 
-<p>{{page("/en-US/docs/Web/API/XREye", "Values")}}</p>
+<dl>
+  <dt><code>left</code></dt>
+  <dd>The {{domxref("XRView")}} represents the point-of-view of the viewer's left eye.</dd>
+  <dt><code>right</code></dt>
+  <dd>The view represents the viewer's right eye.</dd>
+  <dt><code>none</code></dt>
+  <dd>The <code>XRView</code> describes a monoscopic view, or the view otherwise doesn't represent a particular eye's point-of-view.</dd>
+</dl>
 
 <h2 id="Usage_notes">Usage notes</h2>
 
@@ -88,23 +94,8 @@ for (let view of xrPose.views) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName("WebXR","#dom-xrview-eye","XRView.eye")}}</td>
-      <td>{{Spec2("WebXR")}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>{{Compat("api.XRView.eye")}}</div>
+<div>{{Compat}}</div>

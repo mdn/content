@@ -1,0 +1,57 @@
+---
+title: SVGMarkerElement.setOrientToAngle()
+slug: Web/API/SVGMarkerElement/setOrientToAngle
+tags:
+  - API
+  - Method
+  - Reference
+  - setOrientToAngle
+  - SVGMarkerElement
+browser-compat: api.SVGMarkerElement.setOrientToAngle
+---
+<div>{{APIRef("SVG")}}</div>
+
+<p class="summary">The <strong><code>setOrientToAngle()</code></strong> method of the {{domxref("SVGMarkerElement")}} interface sets the value of the <code>orient</code> attribute to the value in the {{domxref("SVGAngle")}} passed in.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox">setOrientToAngle(angle);</pre>
+
+<h3 id="Parameters">Parameters</h3>
+
+<dl>
+  <dt><code>angle</code></dt>
+  <dd>An {{domxref("SVGAngle")}}.</dd>
+</dl>
+
+<h2 id="Examples">Examples</h2>
+
+<p>In the following example the value of the <code>orient</code> attribute is updated using <code>setOrientToAngle()</code> using an {{domxref("SVGAngle")}} created using {{domxref("SVGSVGElement.createSVGAngle()")}}.</p>
+
+<pre class="brush: html">&lt;svg id="svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"&gt;
+  &lt;defs&gt;
+    &lt;marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5"
+        markerWidth="6" markerHeight="6"
+        orient="90"&gt;
+      &lt;path d="M 0 0 L 10 5 L 0 10 z" /&gt;
+    &lt;/marker&gt;
+  &lt;/defs&gt;
+&lt;/svg&gt;</pre>
+
+<pre class="brush: js">let svg = document.getElementById("svg");
+let marker = document.getElementById("arrow");
+console.log(marker.orientAngle.baseVal.value); // value in SVG above - 90
+let angle = svg.createSVGAngle();
+angle.value = "110";
+marker.setOrientToAngle(angle);
+console.log(marker.orientAngle.baseVal.value); // new value - 110</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+{{Specifications}}
+
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>
+

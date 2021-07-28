@@ -7,10 +7,11 @@ tags:
   - Method
   - Reference
   - Web Audio API
+browser-compat: api.AudioBuffer.getChannelData
 ---
 <p>{{ APIRef("Web Audio API") }}</p>
 
-<p>The <strong><code>getChannelData()</code></strong> method of the {{ domxref("AudioBuffer") }} Interface returns a {{domxref("Float32Array")}} containing the PCM data associated with the channel, defined by the channel parameter (with 0 representing the first channel).</p>
+<p>The <strong><code>getChannelData()</code></strong> method of the {{ domxref("AudioBuffer") }} Interface returns a {{jsxref("Float32Array")}} containing the PCM data associated with the channel, defined by the channel parameter (with 0 representing the first channel).</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -26,7 +27,7 @@ var nowBuffering = myArrayBuffer.getChannelData(channel);</pre>
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A {{domxref("Float32Array")}}.</p>
+<p>A {{jsxref("Float32Array")}}.</p>
 
 <h2 id="Example">Example</h2>
 
@@ -74,24 +75,11 @@ button.onclick = function() {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#dom-audiobuffer-getchanneldata', 'getChannelData')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.AudioBuffer.getChannelData")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

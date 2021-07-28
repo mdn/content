@@ -7,6 +7,7 @@ tags:
   - Reference
   - Web Workers
   - Worker
+browser-compat: api.Worker.Worker
 ---
 <p>{{APIRef("Web Workers API")}}</p>
 
@@ -58,24 +59,11 @@ first.onchange = function() {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "#dom-worker", "Worker()")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Worker.Worker")}}</p>
+<p>{{Compat}}</p>
 
 <div class="note">
 <p><strong>Note</strong>: A browser can be marked as providing full support for <code>Worker()</code> even though it does not support worker scripts written as modules. As of Mar 1, 2019, only <a href="https://web.dev/module-workers/">Chrome 80+</a> supports this feature, while <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1247687">Firefox has an open feature request</a>.  No other browsers are known to have support for production usage of worker scripts written as modules. Without that support, worker scripts written as modules and modules used by worker scripts have to be transpiled or otherwise converted to non-module code in order to run.</p>

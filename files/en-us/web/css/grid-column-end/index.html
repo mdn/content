@@ -7,6 +7,7 @@ tags:
   - CSS Property
   - Reference
   - 'recipe:css-property'
+browser-compat: css.properties.grid-column-end
 ---
 <div>{{CSSRef}}</div>
 
@@ -34,6 +35,7 @@ grid-column-end: 5 somegridarea span;
 /* Global values */
 grid-column-end: inherit;
 grid-column-end: initial;
+grid-column-end: revert;
 grid-column-end: unset;
 </pre>
 
@@ -44,7 +46,9 @@ grid-column-end: unset;
  <dd>Is a keyword indicating that the property contributes nothing to the grid item’s placement, indicating auto-placement, an automatic span, or a default span of <code>1</code>.</dd>
  <dt><code>&lt;custom-ident&gt;</code></dt>
  <dd>If there is a named line with the name '&lt;custom-ident&gt;-end', it contributes the first such line to the grid item’s placement.
- <p class="note"><strong>Note:</strong> Named grid areas automatically generate implicit named lines of this form, so specifying <code>grid-column-end: foo;</code> will choose the end edge of that named grid area (unless another line named <code>foo-end</code> was explicitly specified before it).</p>
+ <div class="note">
+   <p><strong>Note:</strong> Named grid areas automatically generate implicit named lines of this form, so specifying <code>grid-column-end: foo;</code> will choose the end edge of that named grid area (unless another line named <code>foo-end</code> was explicitly specified before it).</p>
+ </div>
 
  <p>Otherwise, this is treated as if the integer <code>1</code> had been specified along with the <code>&lt;custom-ident&gt;</code>.</p>
  </dd>
@@ -109,8 +113,7 @@ grid-column-end: unset;
 }
 </pre>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -133,7 +136,6 @@ grid-column-end: unset;
   padding: 1em;
 }
 </pre>
-</div>
 
 <h4 id="Result">Result</h4>
 
@@ -141,26 +143,11 @@ grid-column-end: unset;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Grid", "#propdef-grid-column-end", "grid-column-end")}}</td>
-   <td>{{Spec2("CSS3 Grid")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.grid-column-end")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -7,6 +7,7 @@ tags:
   - Non-standard
   - Reference
   - recipe:css-property
+browser-compat: css.properties.font-smooth
 ---
 <div>{{ CSSRef }} {{ Non-standard_header }}</div>
 
@@ -21,10 +22,15 @@ font-smooth: always;
 
 /* &lt;length&gt; value */
 font-smooth: 2em;
-</pre>
+
+/* Global values */
+font-smooth: inherit;
+font-smooth: initial;
+font-smooth: revert;
+font-smooth: unset;</pre>
 
 <div class="note">
-<p><strong>WebKit</strong> implements a similar property, but with different values: <strong><code>-webkit-font-smoothing</code></strong>. It only works on Mac OS X/macOS.</p>
+<p><strong>Note:</strong> WebKit implements a similar property, but with different values: <strong><code>-webkit-font-smoothing</code></strong>. It only works on Mac OS X/macOS.</p>
 
 <ul>
  <li><code>auto</code> - Let the browser decide (Uses subpixel anti-aliasing when available; this is the default)</li>
@@ -35,7 +41,7 @@ font-smooth: 2em;
 </div>
 
 <div class="note">
-<p><strong>Firefox</strong> implements a similar property, but with different values: <strong><code>-moz-osx-font-smoothing</code></strong>. It only works on Mac OS X/macOS.</p>
+<p><strong>Note:</strong> Firefox implements a similar property, but with different values: <strong><code>-moz-osx-font-smoothing</code></strong>. It only works on Mac OS X/macOS.</p>
 
 <ul>
  <li><code>auto</code> - Allow the browser to select an optimization for font smoothing, typically <code>grayscale</code>.</li>
@@ -94,7 +100,7 @@ p {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.font-smooth")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

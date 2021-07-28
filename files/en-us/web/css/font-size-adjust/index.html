@@ -7,6 +7,7 @@ tags:
   - CSS Property
   - Reference
   - 'recipe:css-property'
+browser-compat: css.properties.font-size-adjust
 ---
 <p>The <strong><code>font-size-adjust</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets the size of lower-case letters relative to the current font size (which defines the size of upper-case letters).</p>
 
@@ -17,9 +18,13 @@ font-size-adjust: none;
    letters half the specified font size */
 font-size-adjust: 0.5;
 
+/* Two values - added in the Level 5 spec */
+font-size-adjust: ex-height 0.5;
+
 /* Global values */
 font-size-adjust: inherit;
 font-size-adjust: initial;
+font-size-adjust: revert;
 font-size-adjust: unset;
 </pre>
 
@@ -40,6 +45,22 @@ font-size-adjust: 0.5;
 <dl>
  <dt><code>none</code></dt>
  <dd>Choose the size of the font based only on the {{ Cssxref("font-size") }} property.</dd>
+ <dt>ex-height | cap-height | ch-width | ic-width | ic-height</dt>
+ <dd>Specifies the font metric to normalize on. Defaults to <code>ex-height</code>. One of:
+   <dl>
+     <dt><code>ex-height</code></dt>
+     <dd>Normalize the aspect value of the fonts, using the x-height divided by the font size.</dd>
+     <dt><code>cap-height</code></dt>
+     <dd>Normalize the cap-height of the fonts, using the cap-height by the font size.</dd>
+     <dt><code>ch-width</code></dt>
+     <dd>Normalize the horizontal narrow pitch of the fonts, using the advance width of “0” (ZERO, U+0030) divided by the font size.</dd>
+     <dt><code>ic-width</code></dt>
+     <dd>Normalize the horizontal wide pitch of the font, using the advance width of “水” (CJK water ideograph, U+6C34) divided by the font size.</dd>
+     <dt><code>ic-height</code></dt>
+     <dd>Normalize the vertical wide pitch of the font, using the advance height of “水” (CJK water ideograph, U+6C34) divided by the font size.</dd>
+   </dl>
+ </dt>
+ </dd>
  <dt>{{cssxref("&lt;number&gt;")}}</dt>
  <dd>
  <p>Choose the size of the font so that its lowercase letters (as determined by the x-height of the font) are the specified number times the {{ Cssxref("font-size") }}.</p>
@@ -81,7 +102,7 @@ font-size-adjust: 0.5;
 
 .adjtimes {
   font-family: Times, serif;
-  font-size-adjust: 0.58;
+  font-size-adjust: ex-height 0.58;
   font-size: 10px;
 }
 </pre>
@@ -92,30 +113,11 @@ font-size-adjust: 0.5;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS3 Fonts', '#propdef-font-size-adjust', 'font-size-adjust') }}</td>
-   <td>{{ Spec2('CSS3 Fonts') }}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
-
-<div class="note">
-<p>The CSS property <code>font-size-adjust</code> was initially defined in CSS 2, but dropped in CSS 2.1. It has been newly defined in CSS 3.</p>
-</div>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.font-size-adjust")}}</p>
+<p>{{Compat}}</p>
 
 <div>{{CSSRef}}</div>
 

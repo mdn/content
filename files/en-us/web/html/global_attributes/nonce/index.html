@@ -5,6 +5,7 @@ tags:
   - Global attributes
   - HTML
   - Reference
+browser-compat: html.global_attributes.nonce
 ---
 <div>{{HTMLSidebar("Global_attributes")}}</div>
 
@@ -56,7 +57,7 @@ crypto.randomBytes(16).toString('base64');
 <p>For security reasons, the <code>nonce</code> content attribute is hidden (an empty string will be returned).</p>
 <pre class="brush: js example-bad">script.getAttribute('nonce'); // returns empty string</pre>
 
-<p>The <a href="/en-US/docs/Web/API/HTMLOrForeignElement/nonce"><code>nonce</code></a> property is the only way to access nonces:</p>
+<p>The <a href="/en-US/docs/Web/API/HTMLElement/nonce"><code>nonce</code></a> property is the only way to access nonces:</p>
 <pre class="brush: js example-good">script.nonce; // returns nonce value</pre>
 
 <p>Nonce hiding helps prevent attackers from exfiltrating nonce data via mechanisms that can grab data
@@ -68,27 +69,16 @@ from content attributes like this:</p>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "urls-and-fetching.html#attr-nonce", "nonce")}}</td>
-  </tr>
- </tbody>
-</table>
+<p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("html.global_attributes.nonce")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/HTMLOrForeignElement/nonce"><code>HTMLOrForeignElement.nonce</code></a></li>
+ <li><a href="/en-US/docs/Web/API/HTMLElement/nonce"><code>HTMLElement.nonce</code></a></li>
  <li><a href="/en-US/docs/Web/HTTP/CSP">Content Security Policy</a></li>
  <li>CSP: <a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src"><code>script-src</code></a></li>
 </ul>

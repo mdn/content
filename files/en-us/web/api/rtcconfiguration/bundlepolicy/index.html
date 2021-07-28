@@ -17,6 +17,7 @@ tags:
 - WebRTC API
 - WebRTC Device API
 - bundlePolicy
+browser-compat: api.RTCConfiguration.bundlePolicy
 ---
 <p>{{DefaultAPISidebar("WebRTC")}}</p>
 
@@ -41,9 +42,8 @@ rtcConfiguration.bundlePolicy = <em>policy</em>;
 <h3 id="Value">Value</h3>
 
 <p>A {{domxref("DOMString")}} identifying the SDP bundling policy to use for the RTP
-  streams used by the {{domxref("RTCPeerConnection")}}. This string, which must be a
-  member of the <code>RTCBundlePolicy</code> enumeration, has the following possible
-  values:</p>
+  streams used by the {{domxref("RTCPeerConnection")}}.
+  This string has the following possible values:</p>
 
 <dl>
   <dt><code>balanced</code></dt>
@@ -116,24 +116,11 @@ let pc = new RTCPeerConnection(config);</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('WebRTC 1.0','#dom-rtcconfiguration-bundlepolicy','RTCConfiguration.bundlePolicy')}}</td>
-      <td>{{Spec2('WebRTC 1.0')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCConfiguration.bundlePolicy")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

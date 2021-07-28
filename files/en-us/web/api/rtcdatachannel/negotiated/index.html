@@ -2,23 +2,24 @@
 title: RTCDataChannel.negotiated
 slug: Web/API/RTCDataChannel/negotiated
 tags:
-- Networking
-- Property
-- RTCDataChannel
-- Read-only
-- Reference
-- WebRTC
-- WebRTC API
-- data
-- datachannel
-- negotiated
+  - Networking
+  - Property
+  - RTCDataChannel
+  - Read-only
+  - Reference
+  - WebRTC
+  - WebRTC API
+  - data
+  - datachannel
+  - negotiated
+browser-compat: api.RTCDataChannel.negotiated
 ---
 <p>{{APIRef("WebRTC")}}</p>
 
-<p><span class="seoSummary">The read-only <code>RTCDataChannel</code> property
+<p>The read-only <code>RTCDataChannel</code> property
     <code><strong>negotiated</strong></code> indicates whether the
     {{domxref("RTCDataChannel")}}'s connection was negotiated by the Web app
-    (<code>true</code>) or by the WebRTC layer (<code>false</code>).</span> <strong>The
+    (<code>true</code>) or by the WebRTC layer (<code>false</code>). <strong>The
     default is <code>false</code>.</strong></p>
 
 <p>See {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Using_data_channels", "Creating a
@@ -38,7 +39,7 @@ tags:
 <h2 id="Example">Example</h2>
 
 <p>The code snippet below checks the value of <code>negotiated</code>; if it's
-  <code>true</code>, a  function called <code>shutdownRemoteChannel()</code> is called
+  <code>true</code>, a function called <code>shutdownRemoteChannel()</code> is called
   with the channel's {{domxref("RTCDataChannel.id", "id")}}; presumably this would be
   implemented to transmit a shutdown signal to the remote peer prior to terminating the
   connection.</p>
@@ -50,32 +51,16 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{ SpecName('WebRTC 1.0', '#dom-datachannel-negotiated',
-        'RTCDataChannel.negotiated') }}</td>
-      <td>{{ Spec2('WebRTC 1.0') }}</td>
-      <td>Initial specification.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCDataChannel.negotiated")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/Web/Guide/API/WebRTC">WebRTC</a></li>
+  <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></li>
   <li><a href="/en-US/docs/Web/API/WebRTC_API/Using_data_channels">Using WebRTC data
       channels</a></li>
   <li>{{domxref("RTCDataChannel")}}</li>

@@ -8,10 +8,11 @@ tags:
   - Experimental
   - NeedsContent
   - Plugins
+browser-compat: api.PluginArray
 ---
 <p>{{APIRef("HTML DOM")}}{{deprecated_header}}</p>
 
-<p>The <code>PluginArray</code> interface is used to store a list of {{DOMxRef("Plugin")}} objects describing the available <a href="/en-US/docs/Mozilla/Add-ons/Plugins">plugins</a>; it's returned by the {{DOMxRef("NavigatorPlugins.plugins", "navigator.plugins")}} property. The <code>PluginArray</code> is not a JavaScript array, but has the <code>length</code> property and supports accessing individual items using bracket notation (<code>plugins[2]</code>), as well as via <code>item(<var>index</var>)</code> and <code>namedItem(<em>"name"</em>)</code> methods.</p>
+<p>The <code>PluginArray</code> interface is used to store a list of {{DOMxRef("Plugin")}} objects describing the available <a href="/en-US/docs/Mozilla/Add-ons/Plugins">plugins</a>; it's returned by the {{DOMxRef("Navigator.plugins", "navigator.plugins")}} property. The <code>PluginArray</code> is not a JavaScript array, but has the <code>length</code> property and supports accessing individual items using bracket notation (<code>plugins[2]</code>), as well as via <code>item(<var>index</var>)</code> and <code>namedItem(<em>"name"</em>)</code> methods.</p>
 
 <div class="note">
 <p><strong>Note</strong>: Own properties of <code>PluginArray</code> objects are no longer enumerable in the latest browser versions.</p>
@@ -80,25 +81,10 @@ for(var i = 0; i &lt; pluginsLength; i++) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "#pluginarray", "PluginArray")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.PluginArray")}}</p>
+<p>{{Compat}}</p>
 
 <p>In addition to listing each plugin as a pseudo-array by zero-indexed numeric properties, Firefox provides properties that are the plugin name directly on the PluginArray object.</p>

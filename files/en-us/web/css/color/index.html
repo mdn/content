@@ -15,14 +15,14 @@ tags:
   - Web
   - color
   - 'recipe:css-property'
+browser-compat: css.properties.color
 ---
 <div>{{CSSRef}}</div>
 
-<p><span class="seoSummary">The <strong><code>color</code></strong> CSS property sets the foreground <a href="/en-US/docs/Web/CSS/color_value">color value</a> of an element's text and <a href="/en-US/docs/Web/CSS/text-decoration">text decorations</a>, and sets the {{cssxref("currentcolor")}} value.</span> <code>currentcolor</code> may be used as an indirect value on <em>other</em> properties and is the default for other color properties, such as {{cssxref("border-color")}}.</p>
+<p>The <strong><code>color</code></strong> CSS property sets the foreground <a href="/en-US/docs/Web/CSS/color_value">color value</a> of an element's text and <a href="/en-US/docs/Web/CSS/text-decoration">text decorations</a>, and sets the {{cssxref("currentcolor")}} value. <code>currentcolor</code> may be used as an indirect value on <em>other</em> properties and is the default for other color properties, such as {{cssxref("border-color")}}.</p>
 
 <div>{{EmbedInteractiveExample("pages/css/color.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <p>For an overview of using color in HTML, see <a href="/en-US/docs/Web/HTML/Applying_color">Applying color to HTML elements using CSS</a>.</p>
 
@@ -62,6 +62,7 @@ color: hsla(30.2 100% 50% / 60%);
 /* Global values */
 color: inherit;
 color: initial;
+color: revert;
 color: unset;
 </pre>
 
@@ -117,44 +118,11 @@ p { color: hsla(0, 100%, 50%, 0.5); }
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Colors', '#the-color-property', 'color')}}</td>
-   <td>{{Spec2('CSS4 Colors')}}</td>
-   <td>Adds commaless syntaxes for the <code>rgb()</code>, <code>rgba()</code>, <code>hsl()</code>, and <code>hsla()</code> functions. Allows alpha values in <code>rgb()</code> and <code>hsl()</code>, turning <code>rgba()</code> and <code>hsla()</code> into (deprecated) aliases for them.<br>
-    Adds color keyword <code>rebeccapurple</code>.<br>
-    Adds 4- and 8-digit hex color values, where the last digit(s) represents the alpha value.<br>
-    Adds <code>hwb()</code>, <code>device-cmyk()</code>, and <code>color()</code> functions.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Colors', '#color', 'color')}}</td>
-   <td>{{Spec2('CSS3 Colors')}}</td>
-   <td>Deprecates system-colors. Adds SVG colors. Adds the <code>rgba()</code>, <code>hsl()</code>, and <code>hsla()</code> functions.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'colors.html#colors', 'color')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Adds the <code>orange</code> color and the system colors.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#color', 'color')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.color")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

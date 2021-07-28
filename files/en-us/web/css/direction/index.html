@@ -7,10 +7,11 @@ tags:
   - CSS Property
   - Reference
   - 'recipe:css-property'
+browser-compat: css.properties.direction
 ---
 <div>{{CSSRef}}</div>
 
-<p><span class="seoSummary">The <strong><code>direction</code></strong> CSS property sets the direction of text, table columns, and horizontal overflow.</span> Use <code>rtl</code> for languages written from right to left (like Hebrew or Arabic), and <code>ltr</code> for those written from left to right (like English and most other languages).</p>
+<p>The <strong><code>direction</code></strong> CSS property sets the direction of text, table columns, and horizontal overflow. Use <code>rtl</code> for languages written from right to left (like Hebrew or Arabic), and <code>ltr</code> for those written from left to right (like English and most other languages).</p>
 
 <div>{{EmbedInteractiveExample("pages/css/direction.html")}}</div>
 
@@ -31,6 +32,7 @@ direction: rtl;
 /* Global values */
 direction: inherit;
 direction: initial;
+direction: revert;
 direction: unset;
 </pre>
 
@@ -58,7 +60,6 @@ direction: unset;
 <h3 id="Setting_right-to-left_direction">Setting right-to-left direction</h3>
 
 <p>In the example below are two strings of text, both which are displaying using <code>direction: rtl</code>. While the Arabic text is displayed correctly with this setting, the English text now has a full stop in an unusual location.</p>
-<div id="Example">
 
 <pre class="brush: css">blockquote {
   direction: rtl;
@@ -73,37 +74,16 @@ direction: unset;
 &lt;blockquote&gt;
 &lt;p&gt;هذه الفقرة باللغة العربية ، لذا يجب الانتقال من اليمين إلى اليسار.&lt;p&gt;
 &lt;/blockquote&gt;</pre>
-</div>
 
-<p>{{EmbedLiveSample('Example', '100%', 600)}}</p>
+<p>{{EmbedLiveSample('Setting_right-to-left_direction', '100%', 200)}}</p>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Writing Modes', '#direction', 'direction')}}</td>
-   <td>{{Spec2('CSS3 Writing Modes')}}</td>
-   <td>No change.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'visuren.html#direction', 'direction')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.direction")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -1,21 +1,21 @@
 ---
-title: Console.timeLog()
-slug: Web/API/Console/timeLog
+title: console.timeLog()
+slug: Web/API/console/timeLog
 tags:
   - API
   - DOM
   - Debugging
   - Method
   - Web Development
-  - console
   - web console
+browser-compat: api.console.timeLog
 ---
 <div>{{APIRef("Console API")}}</div>
 
-<p>Logs the current value of a timer that was previously started by calling
+<p>The <strong><code>console.timeLog()</code></strong> method logs the current value of a timer that was previously started by calling
   {{domxref("console.time()")}} to the console.</p>
 
-<p>See <a href="/en-US/docs/Web/API/Console#timers">Timers</a> in the documentation for
+<p>See <a href="/en-US/docs/Web/API/console#timers">Timers</a> in the documentation for
   details and examples.</p>
 
 <p>{{AvailableInWorkers}}</p>
@@ -63,9 +63,7 @@ console.timeEnd("answer time");
 <p>The output from the example above shows the time taken by the user to dismiss the first
   alert box, followed by the time it took for the user to dismiss the second alert:</p>
 
-<p><img class="default internal"
-    src="timer_output.png"
-    style="border: 1px solid black; margin: 0px auto;"></p>
+<p><img class="default internal" src="timer_output.png"></p>
 
 <p>Notice that the timer's name is displayed when the timer value is logged using
   <code>timeLog()</code> and again when it's stopped. In addition, the call to timeEnd()
@@ -74,30 +72,9 @@ console.timeEnd("answer time");
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName("Console API", "#timelog", "console.timeLog()")}}</td>
-      <td>{{Spec2("Console API")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Console.timeLog")}}</p>
+<p>{{Compat}}</p>
 
-<h2 id="See_also">See also</h2>
-
-<ul>
-  <li><a href="http://www.opera.com/dragonfly/documentation/console/">Opera Dragonfly
-      documentation: Console</a></li>
-</ul>

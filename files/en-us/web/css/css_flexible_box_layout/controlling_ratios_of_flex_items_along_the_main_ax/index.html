@@ -17,7 +17,7 @@ tags:
 ---
 <div>{{CSSRef}}</div>
 
-<p class="summary">In this guide we will be exploring the three properties that are applied to flex items, which enable us to control the size and flexibility of the items along the main axis — {{CSSxRef("flex-grow")}}, {{CSSxRef("flex-shrink")}}, and {{CSSxRef("flex-basis")}}. Fully understanding how these properties work with growing and shrinking items is the real key to mastering flexbox.</p>
+<p>In this guide we will be exploring the three properties that are applied to flex items, which enable us to control the size and flexibility of the items along the main axis — {{CSSxRef("flex-grow")}}, {{CSSxRef("flex-shrink")}}, and {{CSSxRef("flex-basis")}}. Fully understanding how these properties work with growing and shrinking items is the real key to mastering flexbox.</p>
 
 <h2 id="A_first_look">A first look</h2>
 
@@ -55,7 +55,7 @@ tags:
 
 <p>If your browser does not yet support these keywords both paragraphs will be rendered as normal paragraphs in block flow; the below screenshots show the expected rendering.</p>
 
-<p><img alt="The first paragraph is wrapped to the longest word, the second stretched out so as to cause overflow." src="ratios-size.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="The first paragraph is wrapped to the longest word, the second stretched out so as to cause overflow." src="ratios-size.png"></p>
 
 <p>Remember this behavior and what effects <code>min-content</code> and <code>max-content</code> have as we explore <code>flex-grow</code> and <code>flex-shrink</code> later in this article.</p>
 
@@ -63,11 +63,11 @@ tags:
 
 <p>To talk about these properties we need to understand the concept of <strong>positive and negative free space</strong>. When a flex container has positive free space, it has more space than is required to display the flex items inside the container. For example, if I have a 500 pixel-wide container, {{CSSxRef("flex-direction")}} is <code>row</code>, and I have three flex items each 100 pixels wide, then I have 200 pixels of positive free space, which could be distributed between the items if I wanted them to fill the container.</p>
 
-<p><img alt="Image showing space left over after items have been displayed." src="basics7.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="Image showing space left over after items have been displayed." src="basics7.png"></p>
 
 <p>We have negative free space when the natural size of the items adds up to larger than the available space in the flex container. If I have a 500 pixel-wide container like the one above, but the three flex items are each 200 pixels wide, the total space I need will be 600 pixels, so I have 100 pixels of negative free space. This could be removed from the items in order to make them fit the container.</p>
 
-<p><img alt="The items overflow the container" src="ratios1.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="The items overflow the container" src="ratios1.png"></p>
 
 <p>It is this distribution of positive free space and removal of negative free space that we need to understand in order to understand the flex properties.</p>
 
@@ -101,11 +101,11 @@ tags:
 
 <p>In this case the <code>flex-basis</code> value is <code>auto</code> and the items don’t have a width set, and so are auto-sized. This means that flexbox is looking at the <code>max-content</code> size of the items. After laying the items out we have some positive free space in the flex container, shown in this image as the hatched area:</p>
 
-<p><img alt="Images shows the positive free space as a hatched area" src="ratios2.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="Images shows the positive free space as a hatched area" src="ratios2.png"></p>
 
 <p>We are working with a <code>flex-basis</code> equal to the content size so the available space to distribute is subtracted from the total available space (the width of the flex container), and the leftover space is then shared out equally among each item. Our bigger item ends up bigger because it started from a bigger size, even though it has the same amount of spare space assigned to it as the others:</p>
 
-<p><img alt="The positive space is distributed between items" src="ratios3.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="The positive space is distributed between items" src="ratios3.png"></p>
 
 <p>If what you actually want is three equally-sized items, even if they start out at different sizes, you should use this:</p>
 

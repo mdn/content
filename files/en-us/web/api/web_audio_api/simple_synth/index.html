@@ -185,7 +185,7 @@ let mainGainNode = null;
 
 <ol>
  <li><code>audioContext</code> is set to reference the global {{domxref("AudioContext")}} object (or <code>webkitAudioContext</code> if necessary).</li>
- <li><code>oscillators</code> is set up to be ready to contain a list of all currently-playing oscillators. It starts off empty, since there are none playing yet.</li>
+ <li><code>oscList</code> is set up to be ready to contain a list of all currently-playing oscillators. It starts off empty, since there are none playing yet.</li>
  <li><code>mainGainNode</code> is set to null; during the setup process, it will be configured to contain a {{domxref("GainNode")}} which all playing oscillators will connect to and play through to allow the overall volume to be controlled using a single slider control.</li>
 </ol>
 
@@ -376,7 +376,7 @@ let cosineTerms = null;
   </tr>
   <tr>
    <th scope="row">2</th>
-   <td colspan="12" style="text-align: center;">. . .</td>
+   <td colspan="12">. . .</td>
   </tr>
  </tbody>
 </table>
@@ -443,7 +443,7 @@ let cosineTerms = null;
 setup();</pre>
 
 <ol>
- <li>The table which maps note names and octaves to their frequenies is created by calling <code>createNoteTable()</code>.</li>
+ <li>The table which maps note names and octaves to their frequencies is created by calling <code>createNoteTable()</code>.</li>
  <li>An event handler is established (by calling our old friend {{domxref("EventTarget.addEventListener", "addEventListener()")}} to handle {{event("change")}} events on the main gain control. This will update the main gain node's volume to the new value of the control.</li>
  <li>Next, we iterate over each octave in the note frequencies table. For each octave, we use {{jsxref("Object.entries()")}} to get a list of the notes in that octave.</li>
  <li>Create a {{HTMLElement("div")}} to contain that octave's notes (so we can have a small bit of space drawn between octaves), and set its class name to "octave"</li>

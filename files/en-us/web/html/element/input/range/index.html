@@ -12,14 +12,13 @@ tags:
   - Reference
   - Web
   - slider
+browser-compat: html.elements.input.input-range
 ---
 <div>{{HTMLRef("Input_types")}}</div>
 
 <p><span class="seoSummary">{{HTMLElement("input")}} elements of type <strong><code>range</code></strong> let the user specify a numeric value which must be no less than a given value, and no more than another given value. The precise value, however, is not considered important. This is typically represented using a slider or dial control rather than a text entry box like the {{HTMLElement('input/number', 'number')}} input type.</span> Because this kind of widget is imprecise, it shouldn't typically be used unless the control's exact value isn't important.</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-range.html", "tabbed-standard")}}</div>
-
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <p>If the user's browser doesn't support type <code>range</code>, it will fall back and treat it as a <code>{{HTMLElement('input/text', 'text')}}</code> input.</p>
 
@@ -99,23 +98,23 @@ tags:
  </tbody>
 </table>
 
-<p id="htmlattrdeflist">{{page("/en-US/docs/Web/HTML/Element/input/text", "htmlattrdeflist", 0, 1, 2)}}</p>
+<p id="attr-list">{{page("/en-US/docs/Web/HTML/Element/input/text", "attr-list", 0, 1, 2)}}</p>
 
 <p>See the <a href="#a_range_control_with_hash_marks">range control with hash marks</a> below for an example of how the options on a range are denoted in supported browsers</p>
 
-<h3 id="htmlattrdefmax">{{htmlattrdef("max")}}</h3>
+<h3 id="attr-max"><code id="max">max</code></h3>
 
-<p>The greatest value in the range of permitted values. If the {{htmlattrxref("value", "input")}} entered into the element exceeds this, the element fails <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a>. If the value of the <code><a href="/en-US/docs/Web/HTML/Attributes/max">max</a></code> attribute isn't a number, then the element has no maximum value.</p>
+<p>The greatest value in the range of permitted values. If the {{htmlattrxref("value", "input")}} entered into the element exceeds this, the element fails <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a>. If the value of the <code><a href="/en-US/docs/Web/HTML/Attributes/max">max</a></code> attribute isn't a number, then the element has no maximum value.</p>
 
 <p>This value must be greater than or equal to the value of the <code><a href="/en-US/docs/Web/HTML/Attributes/min">min</a></code> attribute. See the HTML <a href="/en-US/docs/Web/HTML/Attributes/max"><code>max</code></a> attribute.</p>
 
-<h3 id="htmlattrdefmin">{{htmlattrdef("min")}}</h3>
+<h3 id="attr-min"><code id="min">min</code></h3>
 
-<p>The lowest value in the range of permitted values. If the {{htmlattrxref("value", "input")}} of the element is less than this, the element fails <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a>. If a value is specified for <code>min</code> that isn't a valid number, the input has no minimum value.</p>
+<p>The lowest value in the range of permitted values. If the {{htmlattrxref("value", "input")}} of the element is less than this, the element fails <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a>. If a value is specified for <code>min</code> that isn't a valid number, the input has no minimum value.</p>
 
 <p>This value must be less than or equal to the value of the <code><a href="/en-US/docs/Web/HTML/Attributes/max">max</a></code> attribute. See the <a href="/en-US/docs/Web/HTML/Attributes/min">HTML <code>min </code>attribute.</a></p>
 
-<h3 id="htmlattrdefstep">{{htmlattrdef("step")}}</h3>
+<h3 id="attr-step"><code id="step">step</code></h3>
 
 <p>{{page("/en-US/docs/Web/HTML/Element/input/number", "step-include")}}</p>
 
@@ -132,16 +131,15 @@ tags:
  </thead>
  <tbody>
   <tr>
-   <td><code>{{anch("attr-orient")}}</code></td>
+   <td><code>{{anch("orient")}}</code></td>
    <td>Sets the orientation of the range slider. <strong>Firefox only.</strong></td>
   </tr>
  </tbody>
 </table>
 
-<dl>
- <dt>{{htmlattrdef("orient")}} {{non-standard_inline}}</dt>
- <dd id="orient-include">Similar to the -moz-orient non-standard CSS property impacting the {{htmlelement('progress')}} and {{htmlelement('meter')}} elements, the <code>orient</code> attribute defines the orientation of the range slider. Values include <code>horizontal</code>, meaning the range is rendered horizontally, and <code>vertical</code>, where the range is rendered vertically.</dd>
-</dl>
+<h3 id="attr-orient"><code id="orient">orient</code> {{non-standard_inline}}</h3>
+
+<p id="orient-include">Similar to the -moz-orient non-standard CSS property impacting the {{htmlelement('progress')}} and {{htmlelement('meter')}} elements, the <code>orient</code> attribute defines the orientation of the range slider. Values include <code>horizontal</code>, meaning the range is rendered horizontally, and <code>vertical</code>, where the range is rendered vertically.</p>
 
 <div class="notecard note">
 <p>Note: The following input attributes do not apply to the input range: <code>accept</code>, <code>alt</code>, <code>checked</code>, <code>dirname</code>, <code>formaction</code>, <code>formenctype</code>, <code>formmethod</code>, <code>formnovalidate</code>, <code>formtarget</code>, <code>height</code>, <code>maxlength</code>, <code>minlength</code>, <code>multiple</code>, <code>pattern</code>, <code>placeholder</code>, <code>readonly</code>, <code>required</code>, <code>size</code>, <code>src</code>, and <code>width</code>. Any of these attributes, if included, will be ignored.</p>
@@ -334,9 +332,10 @@ tags:
 <pre class="brush: html">&lt;input type="range" id="volume" min="0" max="11" value="7" step="1"&gt;</pre>
 </div>
 
-<p>{{EmbedLiveSample("Orientation_sample1", 200, 200, "https://mdn.mozillademos.org/files/14983/Orientation_sample1.png")}}</p>
+<p>{{EmbedLiveSample("Orientation_sample1", 200, 200, "orientation_sample1.png")}}</p>
 
 <p>This control is horizontal (at least on most if not all major browsers; others might vary).</p>
+</div>
 
 <h3 id="Standards">Standards</h3>
 
@@ -356,8 +355,7 @@ tags:
 
 <h4 id="Result">Result</h4>
 
-<p>{{EmbedLiveSample("Orientation_sample2", 200, 200, "https://mdn.mozillademos.org/files/14985/Orientation_sample2.png")}}</p>
-</div>
+<p>{{EmbedLiveSample("Orientation_sample2", 200, 200, "orientation_sample2.png")}}</p>
 </div>
 
 <p>Unfortunately, no major browsers currently support vertical range controls directly.</p>
@@ -398,7 +396,7 @@ tags:
 
 <p>The size of the control is set to be 150 pixels long by 20 pixels tall. The margins are set to 0 and the {{cssxref("transform-origin")}} is shifted to the middle of the space the slider rotates through; since the slider is configured to be 150 pixels wide, it rotates through a box which is 150 pixels on each side. Offsetting the origin by 75px on each axis means we will rotate around the center of that space. Finally, we rotate counter-clockwise by 90°. The result: a range input which is rotated so the maximum value is at the top and the minimum value is at the bottom.</p>
 
-<p>{{EmbedLiveSample("transform_rotate-90deg", 200, 200, "https://mdn.mozillademos.org/files/14987/Orientation_sample3.png")}}</p>
+<p>{{EmbedLiveSample("transform_rotate-90deg", 200, 200, "orientation_sample3.png")}}</p>
 
 <h3 id="appearance_property">appearance property</h3>
 
@@ -479,31 +477,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'forms.html#range-state-(type=range)', '&lt;input type="range"&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Initial definition</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', 'sec-forms.html#range-state-typerange', '&lt;input type="range"&gt;')}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+<p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("html.elements.input.input-range")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

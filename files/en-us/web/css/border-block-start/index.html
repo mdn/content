@@ -13,6 +13,7 @@ tags:
   - border-block-start-style
   - border-block-start-width
   - 'recipe:css-shorthand-property'
+browser-compat: css.properties.border-block-start
 ---
 <div>{{CSSRef}}</div>
 
@@ -35,7 +36,12 @@ tags:
 <pre class="brush:css  no-line-numbers">border-block-start: 1px;
 border-block-start: 2px dotted;
 border-block-start: medium dashed blue;
-</pre>
+
+/* Global values */
+border-block-start: inherit;
+border-block-start: initial;
+border-block-start: revert;
+border-block-start: unset;</pre>
 
 <p><code>border-block-start</code> can be used to set the values for one or more of {{cssxref("border-block-start-width")}}, {{cssxref("border-block-start-style")}}, and {{cssxref("border-block-start-color")}}. The physical border to which it maps depends on the element's writing mode, directionality, and text orientation. It corresponds to the {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, or {{cssxref("border-left")}} property depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.</p>
 
@@ -90,26 +96,11 @@ border-block-start: medium dashed blue;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Logical Properties", "#propdef-border-block-start", "border-block-start")}}</td>
-   <td>{{Spec2("CSS Logical Properties")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.border-block-start")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

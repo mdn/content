@@ -56,8 +56,7 @@ tags:
  <dd>The specified proxy should be used</dd>
  <dt><code>HTTPS <em>host:port</em></code></dt>
  <dd>The specified HTTPS proxy should be used</dd>
- <dt><code>SOCKS4 <em>host:port</em></code></dt>
- <dt><code>SOCKS5 <em>host:port</em></code></dt>
+ <dt><code>SOCKS4 <em>host:port</em></code>, <code>SOCKS5 <em>host:port</em></code></dt>
  <dd>The specified SOCKS server (with the specified SOCK version) should be used</dd>
 </dl>
 
@@ -133,12 +132,12 @@ tags:
  </li>
  <li>Logging utility
   <ul>
-   <li>{{domxref("Window/alert", "alert()")}}</li>
+   <li><code><a href="#alert">alert()</a></code></li>
   </ul>
  </li>
  <li>There was one associative array (object) already defined, because at the time JavaScript code was unable to define it by itself:
   <ul>
-   <li><code>ProxyConfig.bindings</code> {{obsolete_inline}}</li>
+   <li><code>ProxyConfig.bindings</code> {{deprecated_inline}}</li>
   </ul>
  </li>
 </ul>
@@ -539,6 +538,28 @@ timerange(12, "GMT");         // returns true from noon to 1pm, in GMT timezone
 timerange(9, 17);             // returns true from 9am to 5pm
 timerange(8, 30, 17, 00);     // returns true from 8:30am to 5:00pm
 timerange(0, 0, 0, 0, 0, 30); // returns true between midnight and 30 seconds past midnight</pre>
+
+<h3 id="alert">alert()</h3>
+
+<h4 id="Syntax_14">Syntax</h4>
+
+<pre class="brush: html">
+alert(message)
+</pre>
+
+<h4 id="Parameters_15">Parameters</h4>
+
+<dl>
+ <dt>message</dt>
+ <dd>The string to log</dd>
+</dl>
+
+<p>Logs the message in the browser console.</p>
+
+<h4 id="Examples_12">Examples</h4>
+
+<pre class="brush: js">alert(host + " = " + dnsResolve(host));            // logs the host name and its IP address
+alert("Error: shouldn't reach this clause.");      // log a simple message</pre>
 
 <h2 id="Example_1">Example 1</h2>
 

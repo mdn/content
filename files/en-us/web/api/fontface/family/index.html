@@ -10,8 +10,9 @@ tags:
 - Property
 - Reference
 - family
+browser-compat: api.FontFace.family
 ---
-<div>{{draft}}{{APIRef("CSS Font Loading API")}}{{SeeCompatTable}}</div>
+<div>{{APIRef("CSS Font Loading API")}}</div>
 
 <p><span class="seoSummary">The <code><strong>FontFace.family</strong></code> property
     allows the author to get or set the font family of a {{domxref("FontFace")}} object.
@@ -20,8 +21,8 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js"><em>instanceOfFontFace</em>.family = 'font family name';
-var fontFace = <em>instanceOfFontFace</em>.family; // "font family name"</pre>
+<pre class="brush: js">instanceOfFontFace.family = 'font family name';
+let fontFace = instanceOfFontFace.family; // "font family name"</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -29,7 +30,7 @@ var fontFace = <em>instanceOfFontFace</em>.family; // "font family name"</pre>
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js">var fontFace = new FontFace('Roboto', 'url(https://fonts.example.com/roboto.woff2)');
+<pre class="brush: js">let fontFace = new FontFace('Roboto', 'url(https://fonts.example.com/roboto.woff2)');
 console.log(fontFace.family); // 'Roboto'
 
 fontFace.family = 'newRoboto';
@@ -38,21 +39,8 @@ console.log(fontFace.family); // 'newRoboto'
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('CSS3 Font Loading','#dom-fontface-family','family')}}</td>
-      <td>{{Spec2('CSS3 Font Loading')}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+<p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.FontFace.family")}}</p>
+<p>{{Compat}}</p>

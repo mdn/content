@@ -7,6 +7,7 @@ tags:
   - CSS Property
   - Reference
   - 'recipe:css-property'
+browser-compat: css.properties.list-style-type
 ---
 <div>{{CSSRef}}</div>
 
@@ -41,6 +42,7 @@ list-style-type: none;
 /* Global values */
 list-style-type: inherit;
 list-style-type: initial;
+list-style-type: revert;
 list-style-type: unset;
 </pre>
 
@@ -72,431 +74,126 @@ list-style-type: unset;
  <dt><a id="none"><code>none</code></a></dt>
  <dd>No item marker is shown.</dd>
  <dt><code>disc</code></dt>
- <dd>
- <ul style="list-style-type: disc;">
-  <li>A filled circle (default value)</li>
- </ul>
- </dd>
+ <dd>A filled circle (default value).</dd>
  <dt><code>circle</code></dt>
- <dd>
- <ul style="list-style-type: circle;">
-  <li>A hollow circle</li>
- </ul>
- </dd>
+ <dd>A hollow circle.</dd>
  <dt><code>square</code></dt>
- <dd>
- <ul style="list-style-type: square;">
-  <li>A filled square</li>
- </ul>
- </dd>
+ <dd>A filled square.</dd>
  <dt><code>decimal</code></dt>
- <dd>
- <ul style="list-style-type: decimal;">
-  <li>Decimal numbers</li>
-  <li>Beginning with 1</li>
- </ul>
- </dd>
+ <dd>Decimal numbers, beginning with 1.</dd>
  <dt><code>cjk-decimal</code> {{experimental_inline}}</dt>
- <dd>
- <ul>
-  <li>Han decimal numbers</li>
-  <li>E.g. 一, 二, 三, ..., 九八, 九九, 一〇〇</li>
- </ul>
- </dd>
+ <dd>Han decimal numbers.</dd>
  <dt><code>decimal-leading-zero</code></dt>
- <dd>
- <ul style="list-style-type: decimal-leading-zero;">
-  <li>Decimal numbers</li>
-  <li>Padded by initial zeros</li>
-  <li>E.g. 01, 02, 03, … 98, 99</li>
- </ul>
- </dd>
+ <dd>Decimal numbers, padded by initial zeros.</dd>
  <dt><code>lower-roman</code></dt>
- <dd>
- <ul style="list-style-type: lower-roman;">
-  <li>Lowercase roman numerals</li>
-  <li>E.g. i, ii, iii, iv, v…</li>
- </ul>
- </dd>
+ <dd>Lowercase roman numerals.</dd>
  <dt><code>upper-roman</code></dt>
- <dd>
- <ul style="list-style-type: upper-roman;">
-  <li>Uppercase roman numerals</li>
-  <li>E.g. I, II, III, IV, V…</li>
- </ul>
- </dd>
+ <dd>Uppercase roman numerals.</dd>
  <dt><code>lower-greek</code></dt>
- <dd>
- <ul style="list-style-type: lower-greek;">
-  <li>Lowercase classical Greek</li>
-  <li>alpha, beta, gamma…</li>
-  <li>E.g. α, β, γ…</li>
- </ul>
- </dd>
- <dt><code>lower-alpha</code></dt>
- <dt><code>lower-latin</code></dt>
- <dd>
- <ul style="list-style-type: lower-alpha;">
-  <li>Lowercase ASCII letters</li>
-  <li>E.g. a, b, c, … z</li>
-  <li><code>lower-latin</code> is unsupported in IE7 and earlier</li>
-  <li>See {{anch("Browser compatibility")}} section.</li>
- </ul>
- </dd>
- <dt><code>upper-alpha</code></dt>
- <dt><code>upper-latin</code></dt>
- <dd>
- <ul style="list-style-type: upper-alpha;">
-  <li>Uppercase ASCII letters</li>
-  <li>E.g. A, B, C, … Z</li>
-  <li><code>upper-latin</code> is unsupported in IE7 and earlier</li>
- </ul>
- </dd>
- <dt><code>arabic-indic</code></dt>
- <dt><code>-moz-arabic-indic</code></dt>
- <dd>
- <ul>
-  <li>Example</li>
- </ul>
- </dd>
+ <dd>Lowercase classical Greek.</dd>
+ <dt><code>lower-alpha</code>, <code>lower-latin</code></dt>
+ <dd>Lowercase ASCII letters.</dd>
+ <dt><code>upper-alpha</code>, <code>upper-latin</code></dt>
+ <dd>Uppercase ASCII letters.</dd>
+ <dt><code>arabic-indic</code>, <code>-moz-arabic-indic</code></dt>
+ <dd>Arabic-Indic numbers.</dd>
  <dt><code>armenian</code></dt>
- <dd>
- <ul style="list-style-type: armenian;">
-  <li>Traditional Armenian numbering</li>
-  <li>(ayb/ayp, ben/pen, gim/keem…</li>
- </ul>
- </dd>
- <dt><code>bengali</code></dt>
- <dt><code>-moz-bengali</code></dt>
- <dd>
- <ul>
-  <li>Example</li>
- </ul>
- </dd>
+ <dd>Traditional Armenian numbering.</dd>
+ <dt><code>bengali</code>, <code>-moz-bengali</code></dt>
+ <dd></dd>
  <dt><code>cambodian</code> {{experimental_inline}}*</dt>
- <dd>
- <ul style="list-style-type: cambodian;">
-  <li>Example</li>
-  <li>Is a synonym for <code>khmer</code></li>
- </ul>
- </dd>
- <dt><code>cjk-earthly-branch</code></dt>
- <dt><code>-moz-cjk-earthly-branch</code></dt>
- <dd>
- <ul>
-  <li>Example</li>
- </ul>
- </dd>
- <dt><code>cjk-heavenly-stem</code></dt>
- <dt><code>-moz-cjk-heavenly-stem</code></dt>
- <dd>
- <ul>
-  <li>Example</li>
- </ul>
- </dd>
+ <dd></dd>
+ <dt><code>cjk-earthly-branch</code>, <code>-moz-cjk-earthly-branch</code></dt>
+ <dd></dd>
+ <dt><code>cjk-heavenly-stem</code>, <code>-moz-cjk-heavenly-stem</code></dt>
+ <dd></dd>
  <dt><code>cjk-ideographic</code>{{experimental_inline}}</dt>
- <dd>
- <ul style="list-style-type: cjk-ideographic;">
-  <li>Identical to <code>trad-chinese-informal</code></li>
-  <li>E.g. 一萬一千一百一十一</li>
- </ul>
- </dd>
- <dt><code>devanagari</code></dt>
- <dt><code>-moz-devanagari</code></dt>
- <dd>
- <ul>
-  <li>Example</li>
- </ul>
- </dd>
+ <dd>Identical to <code>trad-chinese-informal</code>.</dd>
+ <dt><code>devanagari</code>, <code>-moz-devanagari</code></dt>
+ <dd></dd>
  <dt><code>ethiopic-numeric</code> {{experimental_inline}}</dt>
- <dd>
- <ul style="list-style-type: ethiopic-numeric;">
-  <li>Example</li>
- </ul>
- </dd>
+ <dd></dd>
  <dt><code>georgian</code></dt>
- <dd>
- <ul style="list-style-type: georgian;">
-  <li>Traditional Georgian numbering</li>
-  <li>E.g. an, ban, gan, … he, tan, in…</li>
- </ul>
- </dd>
- <dt><code>gujarati</code></dt>
- <dt><code>-moz-gujarati</code></dt>
- <dd>
- <ul>
-  <li>Example</li>
- </ul>
- </dd>
- <dt><code>gurmukhi</code></dt>
- <dt><code>-moz-gurmukhi</code></dt>
- <dd>
- <ul>
-  <li>Example</li>
- </ul>
- </dd>
+ <dd>Traditional Georgian numbering.</dd>
+ <dt><code>gujarati</code>, <code>-moz-gujarati</code></dt>
+ <dd></dd>
+ <dt><code>gurmukhi</code>, <code>-moz-gurmukhi</code></dt>
+ <dd></dd>
  <dt><code>hebrew</code> {{experimental_inline}}</dt>
- <dd>
- <ul style="list-style-type: hebrew;">
-  <li>Traditional Hebrew numbering</li>
- </ul>
- </dd>
+ <dd>Traditional Hebrew numbering</dd>
  <dt><code>hiragana</code> {{experimental_inline}}</dt>
- <dd>
- <ul style="list-style-type: hiragana;">
-  <li>E.g. あ, い, う, え, お, か, き…</li>
-  <li>(Japanese)</li>
- </ul>
- </dd>
+ <dd></dd>
  <dt><code>hiragana-iroha</code> {{experimental_inline}}</dt>
- <dd>
- <ul style="list-style-type: hiragana-iroha;">
-  <li>E.g. い, ろ, は, に, ほ, へ, と…</li>
-  <li>{{interwiki('wikipedia', 'Iroha')}} is the old japanese ordering of syllabs.</li>
- </ul>
- </dd>
+ <dd>{{interwiki('wikipedia', 'Iroha')}} is the old japanese ordering of syllabs.</dd>
  <dt><code>japanese-formal</code> {{experimental_inline}}</dt>
- <dd>
- <ul style="list-style-type: japanese-formal;">
-  <li>Japanese formal numbering to be used in legal or financial document.</li>
-  <li>E.g., 壱萬壱阡壱百壱拾壱</li>
-  <li>The kanjis are designed so that they can't be modified to look like another correct one</li>
- </ul>
- </dd>
+ <dd>Japanese formal numbering to be used in legal or financial documents. The kanjis are designed so that they can't be modified to look like another correct one.</dd>
  <dt><code>japanese-informal</code> {{experimental_inline}}</dt>
- <dd>
- <ul style="list-style-type: japanese-informal;">
-  <li>Japanese informal numbering</li>
- </ul>
- </dd>
- <dt><code>kannada</code></dt>
- <dt><code>-moz-kannada</code></dt>
- <dd>
- <ul>
-  <li>Example</li>
- </ul>
- </dd>
- <dt style="list-style-type: katakana;"><code>katakana</code> {{experimental_inline}}</dt>
- <dd>
- <ul style="list-style-type: katakana;">
-  <li>E.g. ア, イ, ウ, エ, オ, カ, キ…</li>
-  <li>(Japanese)</li>
- </ul>
- </dd>
+ <dd>Japanese informal numbering.</dd>
+ <dt><code>kannada</code>, <code>-moz-kannada</code></dt>
+ <dd></dd>
+ <dt><code>katakana</code> {{experimental_inline}}</dt>
+ <dd></dd>
  <dt><code>katakana-iroha</code> {{experimental_inline}}</dt>
- <dd>
- <ul style="list-style-type: katakana-iroha;">
-  <li>E.g. イ, ロ, ハ, ニ, ホ, ヘ, ト…</li>
-  <li>{{interwiki('wikipedia', 'Iroha')}} is the old japanese ordering of syllabs.</li>
- </ul>
- </dd>
- <dt><code>khmer</code></dt>
- <dt><code>-moz-khmer</code></dt>
- <dd>
- <ul>
-  <li>Example</li>
- </ul>
- </dd>
+ <dd></dd>
+ <dt><code>khmer</code>, <code>-moz-khmer</code></dt>
+ <dd></dd>
  <dt><code>korean-hangul-formal</code> {{experimental_inline}}</dt>
- <dd>
- <ul style="list-style-type: korean-hangul-formal;">
-  <li>Korean hangul numbering.</li>
-  <li>E.g., 일만 일천일백일십일</li>
- </ul>
- </dd>
+ <dd>Korean hangul numbering.</dd>
  <dt><code>korean-hanja-formal</code> {{experimental_inline}}</dt>
- <dd>
- <ul style="list-style-type: korean-hanja-formal;">
-  <li>Formal Korean Han numbering.</li>
-  <li>E.g. 壹萬 壹仟壹百壹拾壹</li>
- </ul>
- </dd>
+ <dd>Formal Korean Han numbering.</dd>
  <dt><code>korean-hanja-informal</code> {{experimental_inline}}</dt>
- <dd>
- <ul style="list-style-type: korean-hanja-informal;">
-  <li>Korean hanja numbering.</li>
-  <li>E.g., 萬 一千百十一</li>
- </ul>
- </dd>
- <dt><code>lao</code></dt>
- <dt><code>-moz-lao</code></dt>
- <dd>
- <ul>
-  <li>Example</li>
- </ul>
- </dd>
+ <dd>Korean hanja numbering.</dd>
+ <dt><code>lao</code>, <code>-moz-lao</code></dt>
+ <dd></dd>
  <dt><code>lower-armenian</code> {{experimental_inline}}*</dt>
- <dd>
- <ul style="list-style-type: lower-armenian;">
-  <li>Example</li>
- </ul>
- </dd>
- <dt><code>malayalam</code></dt>
- <dt><code>-moz-malayalam</code></dt>
- <dd>
- <ul>
-  <li>Example</li>
- </ul>
- </dd>
+ <dd></dd>
+ <dt><code>malayalam</code>, <code>-moz-malayalam</code></dt>
+ <dd></dd>
  <dt><code>mongolian</code> {{experimental_inline}}</dt>
- <dd>
- <ul style="list-style-type: mongolian;">
-  <li>Example</li>
- </ul>
- </dd>
- <dt><code>myanmar</code></dt>
- <dt><code>-moz-myanmar</code></dt>
- <dd>
- <ul>
-  <li>Example</li>
- </ul>
- </dd>
- <dt><code>oriya</code></dt>
- <dt><code>-moz-oriya</code></dt>
- <dd>
- <ul>
-  <li>Example</li>
- </ul>
- </dd>
- <dt><code>persian</code> {{experimental_inline}}</dt>
- <dt><code>-moz-persian</code></dt>
- <dd>
- <ul>
-  <li>Example</li>
- </ul>
- </dd>
+ <dd></dd>
+ <dt><code>myanmar</code>, <code>-moz-myanmar</code></dt>
+ <dd></dd>
+ <dt><code>oriya</code>, <code>-moz-oriya</code></dt>
+ <dd></dd>
+ <dt><code>persian</code> {{experimental_inline}}, <code>-moz-persian</code></dt>
+ <dd></dd>
  <dt><code>simp-chinese-formal</code> {{experimental_inline}}</dt>
- <dd>
- <ul style="list-style-type: simp-chinese-formal;">
-  <li>Simplified Chinese formal numbering.</li>
-  <li>E.g. 壹万壹仟壹佰壹拾壹</li>
- </ul>
- </dd>
+ <dd>Simplified Chinese formal numbering.</dd>
  <dt><code>simp-chinese-informal</code> {{experimental_inline}}</dt>
- <dd>
- <ul style="list-style-type: simp-chinese-informal;">
-  <li>Simplified Chinese informal numbering.</li>
-  <li>E.g. 一万一千一百一十一</li>
- </ul>
- </dd>
- <dt><code>tamil</code> {{experimental_inline}}</dt>
- <dt><code>-moz-tamil</code></dt>
- <dd>
- <ul>
-  <li>Example</li>
- </ul>
- </dd>
- <dt><code>telugu</code></dt>
- <dt><code>-moz-telugu</code></dt>
- <dd>
- <ul>
-  <li>Example</li>
- </ul>
- </dd>
- <dt><code>thai</code></dt>
- <dt><code>-moz-thai</code></dt>
- <dd>
- <ul>
-  <li>Example</li>
- </ul>
- </dd>
+ <dd>Simplified Chinese informal numbering.</dd>
+ <dt><code>tamil</code> {{experimental_inline}}, <code>-moz-tamil</code></dt>
+ <dd></dd>
+ <dt><code>telugu</code>, <code>-moz-telugu</code></dt>
+ <dd></dd>
+ <dt><code>thai</code>, <code>-moz-thai</code></dt>
+ <dd></dd>
  <dt><code>tibetan</code> {{experimental_inline}}*</dt>
- <dd>
- <ul style="list-style-type: tibetan;">
-  <li>Example</li>
- </ul>
- </dd>
+ <dd></dd>
  <dt><code>trad-chinese-formal</code> {{experimental_inline}}</dt>
- <dd>
- <ul style="list-style-type: trad-chinese-formal;">
-  <li>Traditional Chinese formal numbering.</li>
-  <li>E.g. 壹萬壹仟壹佰壹拾壹</li>
- </ul>
- </dd>
+ <dd>Traditional Chinese formal numbering.</dd>
  <dt><code>trad-chinese-informal</code> {{experimental_inline}}</dt>
- <dd>
- <ul style="list-style-type: trad-chinese-informal;">
-  <li>Traditional Chinese informal numbering.</li>
-  <li>E.g. 一萬一千一百一十一</li>
- </ul>
- </dd>
+ <dd>Traditional Chinese informal numbering.</dd>
  <dt><code>upper-armenian</code> {{experimental_inline}}*</dt>
- <dd>
- <ul style="list-style-type: upper-armenian;">
-  <li>Example</li>
- </ul>
- </dd>
+ <dd></dd>
  <dt><code>disclosure-open</code> {{experimental_inline}}</dt>
- <dd>
- <ul style="list-style-type: disclosure-open;">
-  <li>Symbol indicating that a disclosure widget such as {{HTMLElement("details")}} is opened.</li>
- </ul>
- </dd>
+ <dd>Symbol indicating that a disclosure widget such as {{HTMLElement("details")}} is opened.</dd>
  <dt><code>disclosure-closed</code> {{experimental_inline}}</dt>
- <dd>
- <ul style="list-style-type: disclosure-closed;">
-  <li>Symbol indicating that a disclosure widget, like {{HTMLElement("details")}} is closed.</li>
- </ul>
- </dd>
+ <dd>Symbol indicating that a disclosure widget, like {{HTMLElement("details")}} is closed.</dd>
 </dl>
 
 <h3 id="Non-standard_extensions">Non-standard extensions</h3>
 
 <p>A few more predefined types are provided by Mozilla (Firefox), Blink (Chrome and Opera) and WebKit (Safari) to support list types in other languages. See the compatibility table to check which browsers supports which extension.</p>
 
-<dl>
- <dt><code>-moz-ethiopic-halehame</code></dt>
- <dd>
- <ul>
-  <li>Example</li>
- </ul>
- </dd>
- <dt><code>-moz-ethiopic-halehame-am</code></dt>
- <dd>
- <ul>
-  <li>Example</li>
- </ul>
- </dd>
- <dt><code>ethiopic-halehame-ti-er</code></dt>
- <dt><code>-moz-ethiopic-halehame-ti-er</code></dt>
- <dd>
- <ul>
-  <li>Example</li>
- </ul>
- </dd>
- <dt><code>ethiopic-halehame-ti-et</code></dt>
- <dt><code>-moz-ethiopic-halehame-ti-et</code></dt>
- <dd>
- <ul>
-  <li>Example</li>
- </ul>
- </dd>
- <dt><code>hangul</code></dt>
- <dt><code>-moz-hangul</code></dt>
- <dd>
- <ul>
-  <li>Example</li>
-  <li>Example</li>
-  <li>Example</li>
- </ul>
- </dd>
- <dt><code>hangul-consonant</code></dt>
- <dt><code>-moz-hangul-consonant</code></dt>
- <dd>
- <ul>
-  <li>Example</li>
-  <li>Example</li>
-  <li>Example</li>
- </ul>
- </dd>
- <dt><code>urdu</code></dt>
- <dt><code>-moz-urdu</code></dt>
- <dd>
- <ul>
-  <li>Example</li>
- </ul>
- </dd>
-</dl>
+<ul>
+ <li><code>-moz-ethiopic-halehame</code></li>
+ <li><code>-moz-ethiopic-halehame-am</code></li>
+ <li><code>ethiopic-halehame-ti-er</code>, <code>-moz-ethiopic-halehame-ti-er</code></li>
+ <li><code>ethiopic-halehame-ti-et</code>, <code>-moz-ethiopic-halehame-ti-et</code></li>
+ <li><code>hangul</code>, <code>-moz-hangul</code></li>
+ <li><code>hangul-consonant</code>, <code>-moz-hangul-consonant</code></li>
+ <li><code>urdu</code>, <code>-moz-urdu</code></li>
+</ul>
 
 <h2 id="Accessibility_concerns">Accessibility concerns</h2>
 
@@ -563,42 +260,329 @@ ol.shortcut {
 
 <p>{{EmbedLiveSample("Setting_list_item_markers","200","300")}}</p>
 
+<h3 id="all_list_style_types">All list style types</h3>
+
+<h4>HTML</h4>
+
+<pre class="brush: html">
+&lt;ol&gt;
+  &lt;li&gt;Apollo&lt;/li&gt;
+  &lt;li&gt;Hubble&lt;/li&gt;
+  &lt;li&gt;Chandra&lt;/li&gt;
+  &lt;li&gt;Cassini-Huygens&lt;/li&gt;
+  &lt;li&gt;Spitzer&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2&gt;Choose a list style type:&lt;/h2&gt;
+
+&lt;div class="container"&gt;
+
+  &lt;label for="disc"&gt;
+    &lt;input type="radio" id="disc" name="type" value="disc"&gt;disc
+  &lt;/label&gt;
+
+  &lt;label for="circle"&gt;
+    &lt;input type="radio" id="circle" name="type" value="circle"&gt;circle
+  &lt;/label&gt;
+
+  &lt;label for="square"&gt;
+    &lt;input type="radio" id="square" name="type" value="square"&gt;square
+  &lt;/label&gt;
+
+  &lt;label for="decimal"&gt;
+    &lt;input type="radio" id="decimal" name="type" value="decimal"&gt;decimal
+  &lt;/label&gt;
+
+  &lt;label for="cjk-decimal"&gt;
+    &lt;input type="radio" id="cjk-decimal" name="type" value="cjk-decimal"&gt;cjk-decimal
+  &lt;/label&gt;
+
+  &lt;label for="decimal-leading-zero"&gt;
+    &lt;input type="radio" id="decimal-leading-zero" name="type" value="decimal-leading-zero"&gt;decimal-leading-zero
+  &lt;/label&gt;
+
+  &lt;label for="lower-roman"&gt;
+    &lt;input type="radio" id="lower-roman" name="type" value="lower-roman"&gt;lower-roman
+  &lt;/label&gt;
+
+  &lt;label for="upper-roman"&gt;
+    &lt;input type="radio" id="upper-roman" name="type" value="upper-roman"&gt;upper-roman
+  &lt;/label&gt;
+
+  &lt;label for="lower-greek"&gt;
+    &lt;input type="radio" id="lower-greek" name="type" value="lower-greek"&gt;lower-greek
+  &lt;/label&gt;
+
+  &lt;label for="lower-alpha"&gt;
+    &lt;input type="radio" id="lower-alpha" name="type" value="lower-alpha"&gt;lower-alpha, lower-latin
+  &lt;/label&gt;
+
+  &lt;label for="upper-alpha"&gt;
+    &lt;input type="radio" id="upper-alpha" name="type" value="upper-alpha"&gt;upper-alpha, upper-latin
+  &lt;/label&gt;
+
+  &lt;label for="arabic-indic"&gt;
+    &lt;input type="radio" id="arabic-indic" name="type" value="arabic-indic"&gt;arabic-indic
+  &lt;/label&gt;
+
+  &lt;label for="armenian"&gt;
+    &lt;input type="radio" id="armenian" name="type" value="armenian"&gt;armenian
+  &lt;/label&gt;
+
+  &lt;label for="bengali"&gt;
+    &lt;input type="radio" id="bengali" name="type" value="bengali"&gt;bengali
+  &lt;/label&gt;
+
+  &lt;label for="cambodian"&gt;
+    &lt;input type="radio" id="cambodian" name="type" value="cambodian"&gt;cambodian
+  &lt;/label&gt;
+
+  &lt;label for="cjk-earthly-branch"&gt;
+    &lt;input type="radio" id="cjk-earthly-branch" name="type" value="cjk-earthly-branch"&gt;cjk-earthly-branch
+  &lt;/label&gt;
+
+  &lt;label for="cjk-heavenly-stem"&gt;
+    &lt;input type="radio" id="cjk-heavenly-stem" name="type" value="cjk-heavenly-stem"&gt;cjk-heavenly-stem
+  &lt;/label&gt;
+
+  &lt;label for="cjk-ideographic"&gt;
+    &lt;input type="radio" id="cjk-ideographic" name="type" value="cjk-ideographic"&gt;cjk-ideographic
+  &lt;/label&gt;
+
+  &lt;label for="devanagari"&gt;
+    &lt;input type="radio" id="devanagari" name="type" value="devanagari"&gt;devanagari
+  &lt;/label&gt;
+
+  &lt;label for="ethiopic-numeric"&gt;
+    &lt;input type="radio" id="ethiopic-numeric" name="type" value="ethiopic-numeric"&gt;ethiopic-numeric
+  &lt;/label&gt;
+
+  &lt;label for="georgian"&gt;
+    &lt;input type="radio" id="georgian" name="type" value="georgian"&gt;georgian
+  &lt;/label&gt;
+
+  &lt;label for="gujarati"&gt;
+    &lt;input type="radio" id="gujarati" name="type" value="gujarati"&gt;gujarati
+  &lt;/label&gt;
+
+  &lt;label for="gurmukhi"&gt;
+    &lt;input type="radio" id="gurmukhi" name="type" value="gurmukhi"&gt;gurmukhi
+  &lt;/label&gt;
+
+  &lt;label for="hebrew"&gt;
+    &lt;input type="radio" id="hebrew" name="type" value="hebrew"&gt;hebrew
+  &lt;/label&gt;
+
+  &lt;label for="hiragana"&gt;
+    &lt;input type="radio" id="hiragana" name="type" value="hiragana"&gt;hiragana
+  &lt;/label&gt;
+
+  &lt;label for="hiragana-iroha"&gt;
+    &lt;input type="radio" id="hiragana-iroha" name="type" value="hiragana-iroha"&gt;hiragana-iroha
+  &lt;/label&gt;
+
+  &lt;label for="japanese-formal"&gt;
+    &lt;input type="radio" id="japanese-formal" name="type" value="japanese-formal"&gt;japanese-formal
+  &lt;/label&gt;
+
+  &lt;label for="japanese-informal"&gt;
+    &lt;input type="radio" id="japanese-informal" name="type" value="japanese-informal"&gt;japanese-informal
+  &lt;/label&gt;
+
+  &lt;label for="kannada"&gt;
+    &lt;input type="radio" id="kannada" name="type" value="kannada"&gt;kannada
+  &lt;/label&gt;
+
+  &lt;label for="katakana"&gt;
+    &lt;input type="radio" id="katakana" name="type" value="katakana"&gt;katakana
+  &lt;/label&gt;
+
+  &lt;label for="katakana-iroha"&gt;
+    &lt;input type="radio" id="katakana-iroha" name="type" value="katakana-iroha"&gt;katakana-iroha
+  &lt;/label&gt;
+
+  &lt;label for="khmer"&gt;
+    &lt;input type="radio" id="khmer" name="type" value="khmer"&gt;khmer
+  &lt;/label&gt;
+
+  &lt;label for="korean-hangul-formal"&gt;
+    &lt;input type="radio" id="korean-hangul-formal" name="type" value="korean-hangul-formal"&gt;korean-hangul-formal
+  &lt;/label&gt;
+
+  &lt;label for="korean-hanja-formal"&gt;
+    &lt;input type="radio" id="korean-hanja-formal" name="type" value="korean-hanja-formal"&gt;korean-hanja-formal
+  &lt;/label&gt;
+
+  &lt;label for="korean-hanja-informal"&gt;
+    &lt;input type="radio" id="korean-hanja-informal" name="type" value="korean-hanja-informal"&gt;korean-hanja-informal
+  &lt;/label&gt;
+
+  &lt;label for="lao"&gt;
+    &lt;input type="radio" id="lao" name="type" value="lao"&gt;lao
+  &lt;/label&gt;
+
+  &lt;label for="lower-armenian"&gt;
+    &lt;input type="radio" id="lower-armenian" name="type" value="lower-armenian"&gt;lower-armenian
+  &lt;/label&gt;
+
+  &lt;label for="malayalam"&gt;
+    &lt;input type="radio" id="malayalam" name="type" value="malayalam"&gt;malayalam
+  &lt;/label&gt;
+
+  &lt;label for="mongolian"&gt;
+    &lt;input type="radio" id="mongolian" name="type" value="mongolian"&gt;mongolian
+  &lt;/label&gt;
+
+  &lt;label for="myanmar"&gt;
+    &lt;input type="radio" id="myanmar" name="type" value="myanmar"&gt;myanmar
+  &lt;/label&gt;
+
+  &lt;label for="oriya"&gt;
+    &lt;input type="radio" id="oriya" name="type" value="oriya"&gt;oriya
+  &lt;/label&gt;
+
+  &lt;label for="persian"&gt;
+    &lt;input type="radio" id="persian" name="type" value="persian"&gt;persian
+  &lt;/label&gt;
+
+  &lt;label for="simp-chinese-formal"&gt;
+    &lt;input type="radio" id="simp-chinese-formal" name="type" value="simp-chinese-formal"&gt;simp-chinese-formal
+  &lt;/label&gt;
+
+  &lt;label for="simp-chinese-informal"&gt;
+    &lt;input type="radio" id="simp-chinese-informal" name="type" value="simp-chinese-informal"&gt;simp-chinese-informal
+  &lt;/label&gt;
+
+  &lt;label for="tamil"&gt;
+    &lt;input type="radio" id="tamil" name="type" value="tamil"&gt;tamil
+  &lt;/label&gt;
+
+  &lt;label for="telegu"&gt;
+    &lt;input type="radio" id="telegu" name="type" value="telegu"&gt;telegu
+  &lt;/label&gt;
+
+  &lt;label for="thai"&gt;
+    &lt;input type="radio" id="thai" name="type" value="thai"&gt;thai
+  &lt;/label&gt;
+
+  &lt;label for="tibetan"&gt;
+    &lt;input type="radio" id="tibetan" name="type" value="tibetan"&gt;tibetan
+  &lt;/label&gt;
+
+  &lt;label for="trad-chinese-formal"&gt;
+    &lt;input type="radio" id="trad-chinese-formal" name="type" value="trad-chinese-formal"&gt;trad-chinese-formal
+  &lt;/label&gt;
+
+  &lt;label for="trad-chinese-informal"&gt;
+    &lt;input type="radio" id="trad-chinese-informal" name="type" value="trad-chinese-informal"&gt;trad-chinese-informal
+  &lt;/label&gt;
+
+  &lt;label for="upper-armenian"&gt;
+    &lt;input type="radio" id="upper-armenian" name="type" value="upper-armenian"&gt;upper-armenian
+  &lt;/label&gt;
+
+  &lt;label for="disclosure-open"&gt;
+    &lt;input type="radio" id="disclosure-open" name="type" value="disclosure-open"&gt;disclosure-open
+  &lt;/label&gt;
+
+  &lt;label for="disclosure-closed"&gt;
+    &lt;input type="radio" id="disclosure-closed" name="type" value="disclosure-closed"&gt;disclosure-closed
+  &lt;/label&gt;
+
+  &lt;label for="-moz-ethiopic-halehame"&gt;
+    &lt;input type="radio" id="-moz-ethiopic-halehame" name="type" value="-moz-ethiopic-halehame"&gt;-moz-ethiopic-halehame
+  &lt;/label&gt;
+
+  &lt;label for="-moz-ethiopic-halehame-am"&gt;
+    &lt;input type="radio" id="-moz-ethiopic-halehame-am" name="type" value="-moz-ethiopic-halehame-am"&gt;-moz-ethiopic-halehame-am
+  &lt;/label&gt;
+
+  &lt;label for="ethiopic-halehame-ti-er"&gt;
+    &lt;input type="radio" id="ethiopic-halehame-ti-er" name="type" value="ethiopic-halehame-ti-er"&gt;ethiopic-halehame-ti-er
+  &lt;/label&gt;
+
+  &lt;label for="ethiopic-halehame-ti-et"&gt;
+    &lt;input type="radio" id="ethiopic-halehame-ti-et" name="type" value="ethiopic-halehame-ti-et"&gt;ethiopic-halehame-ti-et
+  &lt;/label&gt;
+
+  &lt;label for="hangul"&gt;
+    &lt;input type="radio" id="hangul" name="type" value="hangul"&gt;hangul
+  &lt;/label&gt;
+
+  &lt;label for="hangul-consonant"&gt;
+    &lt;input type="radio" id="hangul-consonant" name="type" value="hangul-consonant"&gt;hangul-consonant
+  &lt;/label&gt;
+
+  &lt;label for="urdu"&gt;
+    &lt;input type="radio" id="urdu" name="type" value="urdu"&gt;urdu
+  &lt;/label&gt;
+
+  &lt;label for="-moz-ethiopic-halehame-ti-er"&gt;
+    &lt;input type="radio" id="-moz-ethiopic-halehame-ti-er" name="type" value="-moz-ethiopic-halehame-ti-er"&gt;-moz-ethiopic-halehame-ti-er
+  &lt;/label&gt;
+
+  &lt;label for="-moz-ethiopic-halehame-ti-et"&gt;
+    &lt;input type="radio" id="-moz-ethiopic-halehame-ti-et" name="type" value="-moz-ethiopic-halehame-ti-et"&gt;-moz-ethiopic-halehame-ti-et
+  &lt;/label&gt;
+
+  &lt;label for="-moz-hangul"&gt;
+    &lt;input type="radio" id="-moz-hangul" name="type" value="-moz-hangul"&gt;-moz-hangul
+  &lt;/label&gt;
+
+  &lt;label for="-moz-hangul-consonant"&gt;
+    &lt;input type="radio" id="-moz-hangul-consonant" name="type" value="-moz-hangul-consonant"&gt;-moz-hangul-consonant
+  &lt;/label&gt;
+
+  &lt;label for="-moz-urdu"&gt;
+    &lt;input type="radio" id="-moz-urdu" name="type" value="-moz-urdu"&gt;-moz-urdu
+  &lt;/label&gt;
+
+&lt;/div&gt;
+</pre>
+
+<h4>CSS</h4>
+
+<pre class="brush: css">
+
+ol {
+  font-size: 1.2rem;
+}
+
+.container {
+  column-count: 3;
+}
+
+label {
+  display: block;
+}
+
+input {
+  margin: .4rem;
+}
+</pre>
+
+<h4>JavaScript</h4>
+
+<pre class="brush: js">
+const container = document.querySelector(".container");
+container.addEventListener("change", event => {
+  const list = document.querySelector("ol");
+  list.setAttribute("style", `list-style-type: ${event.target.value}`);
+});
+
+</pre>
+
+<h4>Result</h4>
+
+{{EmbedLiveSample("all_list_style_types", "600", "800")}}
+
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Counter Styles', '#extending-css2', 'list-style-type')}}</td>
-   <td>{{Spec2("CSS3 Counter Styles")}}</td>
-   <td>Redefines CSS2.1 counters.<br>
-    Extends the syntax to support <code>@counter-style</code> rules.<br>
-    Defines using <code>@counter-style</code> the usual style types: <code>hebrew</code>, <code>cjk-ideographic</code>, <code>hiragana</code>, <code>hiragana-iroha</code>, <code>katakana</code>, <code>katakana-iroha</code>, <code>japanese-formal</code>, <code>japanese-informal</code>, <code>simp-chinese-formal</code>, <code>trad-chinese-formal</code>, <code>simp-chinese-formal</code>, <code>trad-chinese-formal</code>,<code>korean-hangul-formal</code>, <code>korean-hanja-informal</code>, <code>korean-hanja-formal</code>, <code>cjk-decimal</code>, <code>ethiopic-numeric</code>, <code>disclosure-open</code> and <code>disclosure-closed</code>.<br>
-    Extends <code>&lt;counter-style&gt;</code> with the <code>symbols()</code> functional notation.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Lists', '#propdef-list-style-type', 'list-style-type')}}</td>
-   <td>{{Spec2('CSS3 Lists')}}</td>
-   <td>Modify syntax to support for identifiers used in <code>@counter-style</code> rules to keywords.<br>
-    Support for a simple <code>&lt;string&gt;</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'generate.html#propdef-list-style-type', 'list-style-type')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.list-style-type")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

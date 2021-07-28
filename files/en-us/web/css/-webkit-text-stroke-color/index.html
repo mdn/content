@@ -8,6 +8,7 @@ tags:
   - Reference
   - WebKit
   - 'recipe:css-property'
+browser-compat: css.properties.-webkit-text-stroke-color
 ---
 <div>{{CSSRef}}{{Non-standard_header}}</div>
 
@@ -60,14 +61,10 @@ tags:
 }
 </pre>
 
-<div class="hidden">
-<h4 id="JavaScript">JavaScript</h4>
-
-<pre class="brush: js">var colorPicker = document.querySelector("input");
+<pre class="brush: js hidden">var colorPicker = document.querySelector("input");
 colorPicker.addEventListener("change", function(evt) {
   document.querySelector("p").style.webkitTextStrokeColor = evt.target.value;
 });</pre>
-</div>
 
 <h4 id="Results">Results</h4>
 
@@ -75,32 +72,11 @@ colorPicker.addEventListener("change", function(evt) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Compat', '#the-webkit-text-stroke-color', '-webkit-text-stroke-color')}}</td>
-   <td>{{Spec2('Compat')}}</td>
-   <td>Initial standardization</td>
-  </tr>
-  <tr>
-   <td><a class="external external-icon" href="https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266--webkit-text-stroke-color" hreflang="en" lang="en">Safari CSS Reference<br>
-    <small lang="en-US">'-webkit-text-stroke-color' in that document.</small></a></td>
-   <td>Non-standard unofficial documentation</td>
-   <td>Initial documentation</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.-webkit-text-stroke-color")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

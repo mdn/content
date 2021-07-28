@@ -27,8 +27,7 @@ tags:
 <p>It's worth noting that the sizing algorithm only cares about the image's dimensions and proportions, or lack thereof. An SVG image with fixed dimensions will be treated just like a raster image of the same size.</p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>If you are trying to stretch your SVG to a different aspect ratio with CSS&mdash;for example in order to stretch it over the page background&mdash;make sure your SVG includes <code>preserveAspectRatio="none"</code>. Find out more about {{svgattr("preserveAspectRatio")}}.</p>
+  <p><strong>Note:</strong> If you are trying to stretch your SVG to a different aspect ratio with CSS&mdash;for example in order to stretch it over the page background&mdash;make sure your SVG includes <code>preserveAspectRatio="none"</code>. Find out more about {{svgattr("preserveAspectRatio")}}.</p>
 </div>
 
 <h2 id="Source_image_examples">Source image examples</h2>
@@ -75,7 +74,9 @@ tags:
 
 <p>Now let's see some examples of what happens as we apply different scaling to these images. In each of the examples below, the enclosing rectangles are 300 pixels wide and 200 pixels tall. In addition, the backgrounds have {{ cssxref("background-repeat") }} set to no-repeat for clarity.</p>
 
-<div class="note"><strong>Note:</strong> The screenshots below show the <strong>expected</strong> rendering. Not all browsers currently render these correctly.</div>
+<div class="note">
+  <p><strong>Note:</strong> The screenshots below show the <strong>expected</strong> rendering. Not all browsers currently render these correctly.</p>
+</div>
 
 <h3 id="Specifying_fixed_lengths_for_both_dimensions">Specifying fixed lengths for both dimensions</h3>
 

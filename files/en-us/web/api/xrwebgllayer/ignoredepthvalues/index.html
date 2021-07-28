@@ -19,8 +19,9 @@ tags:
 - XRWebGLLayer
 - augmented
 - ignoreDepthValues
+browser-compat: api.XRWebGLLayer.ignoreDepthValues
 ---
-<p>{{securecontext_header}}{{APIRef("WebXR Device API")}}</p>
+<p>{{APIRef("WebXR Device API")}}</p>
 
 <p><span class="seoSummary">The read-only {{domxref("XRWebGLLayer")}} property
     <strong><code>ignoreDepthValues</code></strong> is a Boolean value which is
@@ -29,11 +30,8 @@ tags:
     position of vertices, this property is <code>false</code>.</span></p>
 
 <p>The value of <code>ignoreDepthValues</code> can only be set when the
-  {{domxref("XRWebGLLayer")}} is instantiated, by setting the corresponding value in the
-  {{domxref("XRWebGLLayerInit")}} object specified as the <a
-    href="/en-US/docs/Web/API/XRWebGLLayer/XRWebGLLayer">constructor's</a> <code>layerInit</code> parameter.
-  As a parameter you're likely to set yourself, it is unlikely you'll need to read it
-  later, but it's available if the need arises.</p>
+  {{domxref("XRWebGLLayer")}} is instantiated, by setting the corresponding value in the <a
+    href="/en-US/docs/Web/API/XRWebGLLayer/XRWebGLLayer">constructor's</a> <code>layerInit</code> parameter.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -86,26 +84,11 @@ let glLayer = new XRWebGLLayer(xrSession, gl, glLayerOptions);</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('WebXR','#dom-xrwebgllayer-ignoredepthvalues','XRWebGLLayer.ignoreDepthValues')}}
-      </td>
-      <td>{{Spec2('WebXR')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.XRWebGLLayer.ignoreDepthValues")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

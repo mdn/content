@@ -6,6 +6,7 @@ tags:
   - DOM
   - Interface
   - Node
+browser-compat: api.CharacterData
 ---
 <p>{{APIRef("DOM")}}</p>
 
@@ -33,59 +34,35 @@ tags:
 <p><em><code>CharacterData</code> inherits methods from its parent, {{domxref("Node")}}.</em></p>
 
 <dl>
+ <dt>{{domxref("CharacterData.after()")}}</dt>
+ <dd>Inserts a set of {{domxref("Node")}} or {{domxref("DOMString")}} objects in the children list of the
+  <code>CharacterData</code>'s parent, just after the <code>CharacterData</code> object.</dd>
  <dt>{{domxref("CharacterData.appendData()")}}</dt>
  <dd>Appends the given {{domxref("DOMString")}} to the <code>CharacterData.data</code> string; when this method returns, <code>data</code> contains the concatenated {{domxref("DOMString")}}.</dd>
+ <dt>{{domxref("CharacterData.before()")}}</dt>
+ <dd>Inserts a set of {{domxref("Node")}} or {{domxref("DOMString")}} objects in the children list of the
+  <code>CharacterData</code>'s parent, just before the <code>CharacterData</code> object.</dd>
  <dt>{{domxref("CharacterData.deleteData()")}}</dt>
  <dd>Removes the specified amount of characters, starting at the specified offset, from the <code>CharacterData.data</code> string; when this method returns, <code>data</code> contains the shortened {{domxref("DOMString")}}.</dd>
  <dt>{{domxref("CharacterData.insertData()")}}</dt>
  <dd>Inserts the specified characters, at the specified offset, in the <code>CharacterData.data</code> string; when this method returns, <code>data</code> contains the modified {{domxref("DOMString")}}.</dd>
- <dt>{{domxref("ChildNode.remove()")}} {{experimental_inline}}</dt>
+ <dt>{{domxref("CharacterData.remove()")}}</dt>
  <dd>Removes the object from its parent children list.</dd>
  <dt>{{domxref("CharacterData.replaceData()")}}</dt>
  <dd>Replaces the specified amount of characters, starting at the specified offset, with the specified {{domxref("DOMString")}}; when this method returns, <code>data</code> contains the modified {{domxref("DOMString")}}.</dd>
+ <dt>{{DOMxRef("CharacterData.replaceWith()")}}</dt>
+ <dd>Replaces the characters in the children list of its parent with a set of {{domxref("Node")}} or {{domxref("DOMString")}} objects.</dd>
  <dt>{{domxref("CharacterData.substringData()")}}</dt>
  <dd>Returns a {{domxref("DOMString")}} containing the part of <code>CharacterData.data</code> of the specified length and starting at the specified offset.</dd>
 </dl>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#characterdata', 'CharacterData')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Added implementation of the {{domxref("ChildNode")}} and {{domxref("Element")}} interface.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Core', 'core.html#ID-FF21A306', 'CharacterData')}}</td>
-   <td>{{Spec2('DOM3 Core')}}</td>
-   <td>No change from {{SpecName('DOM2 Core')}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Core', 'core.html#ID-FF21A306', 'CharacterData')}}</td>
-   <td>{{Spec2('DOM2 Core')}}</td>
-   <td>No change from {{SpecName('DOM1')}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-core.html#ID-FF21A306', 'CharacterData')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div class="hidden">
-<p>The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-</div>
-
-<p>{{Compat("api.CharacterData")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

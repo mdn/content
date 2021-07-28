@@ -11,16 +11,17 @@ tags:
   - Reference
   - Web
   - clamp
+browser-compat: css.types.clamp
 ---
 <div>{{CSSRef}}</div>
 
 <p>The <strong><code>clamp()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Functions">function</a> clamps a value between an upper and lower bound. <code>clamp()</code> enables selecting a middle value within a range of values between a defined minimum and maximum. It takes three parameters: a minimum value, a preferred value, and a maximum allowed value. The <code>clamp()</code> function can be used anywhere a {{CSSxRef("&lt;length&gt;")}}, {{CSSxRef("&lt;frequency&gt;")}}, {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;time&gt;")}}, {{CSSxRef("&lt;percentage&gt;")}}, {{CSSxRef("&lt;number&gt;")}}, or {{CSSxRef("&lt;integer&gt;")}} is allowed.</p>
 
-<p><code>clamp(MIN, VAL, MAX)</code> is resolved as <code>{{CSSxRef("max", "max")}}(MIN, {{CSSxRef("min", "min")}}(VAL, MAX))</code></p>
+<p><code>clamp(MIN, VAL, MAX)</code> is resolved as <code>{{CSSxRef("max()")}}(MIN, {{CSSxRef("min()")}}(VAL, MAX))</code></p>
 
 <div>{{EmbedInteractiveExample("pages/css/function-clamp.html")}}</div>
 
-<p>Note that using <code>clamp()</code> for font sizes, as in these examples, allows you to set a font-size that grows with the size of the viewport, but doesn't go below a minimum font-size or above a maximum font-size. It has the same effect as the code in <a href="https://css-tricks.com/snippets/css/fluid-typography/">Fluid Typography</a> but in one line, and without the use of media queries.</p>
+<p>Note that using <code>clamp()</code> for font sizes, as in these examples, allows you to set a font-size that grows with the size of the viewport, but doesn't go below a minimum font-size or above a maximum font-size. It has the same effect as the code in <a href="https://css-tricks.com/snippets/css/fluid-typography/">Fluid Typography</a> but in one line, and without the use of media queries.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -32,7 +33,7 @@ tags:
 
 <p>The maximum value is the largest (most positive) expression value to which the value of the property will be assigned if the preferred value is greater than this upper bound.</p>
 
-<p>The expressions can be math functions (see {{CSSxRef("calc")}} for more information), literal values, or other expressions, such as {{CSSxRef("attr", "attr()")}}, that evaluate to a valid argument type (like {{CSSxRef("&lt;length&gt;")}}), or nested {{CSSxRef("min")}} and {{CSSxRef("max")}} functions. As math expressions, so you can use addition, subtraction, multiplication and division without using the <code>calc()</code> function itself. You may also use parentheses to establish computation order when needed.</p>
+<p>The expressions can be math functions (see {{CSSxRef("calc()")}} for more information), literal values, or other expressions, such as {{CSSxRef("attr()")}}, that evaluate to a valid argument type (like {{CSSxRef("&lt;length&gt;")}}), or nested {{CSSxRef("min()")}} and {{CSSxRef("max()")}} functions. As math expressions, so you can use addition, subtraction, multiplication and division without using the <code>calc()</code> function itself. You may also use parentheses to establish computation order when needed.</p>
 
 <p>You can use different units for each value in your expressions, and different units in any math function making up any of the arguments.</p>
 
@@ -42,7 +43,7 @@ tags:
  <li>Math expressions involving percentages for widths and heights on table columns, table column groups, table rows, table row groups, and table cells in both auto and fixed layout tables <em>may</em> be treated as if <code>auto</code> had been specified.</li>
  <li>It is permitted to nest <code>max()</code> and <code>min()</code> functions as expression values, in which case the inner ones are treated as simple parentheses. The expressions are full math expressions, so you can use direct addition, subtraction, multiplication and division without using the calc() function itself.</li>
  <li>The expression can be values combining the addition ( + ), subtraction ( - ), multiplication ( * ) and division ( / ) operators, using standard operator precedence rules. Make sure to put a space on each side of the + and - operands. The operands in the expression may be any {{CSSxRef("&lt;length&gt;")}} syntax value. You can use different units for each value in your expression. You may also use parentheses to establish computation order when needed.</li>
- <li>Oftentimes you will want to use {{CSSxRef("min")}} and {{CSSxRef("max")}} within a <code>clamp()</code> function.</li>
+ <li>Oftentimes you will want to use {{CSSxRef("min()")}} and {{CSSxRef("max()")}} within a <code>clamp()</code> function.</li>
 </ul>
 
 <h3 id="Formal_syntax">Formal syntax</h3>
@@ -53,7 +54,7 @@ tags:
 
 <h3 id="min_max_and_clamp_comparison">min, max, and clamp comparison</h3>
 
-<p>In this example we have a simple responsive example that makes use of <code><a href="/en-US/docs/Web/CSS/min">min()</a></code>, <code><a href="/en-US/docs/Web/CSS/max">max()</a></code>, and <code>clamp()</code> for some of the sizes.</p>
+<p>In this example we have a simple responsive example that makes use of {{CSSxRef("min()")}}, {{CSSxRef("max()")}}, and {{CSSxRef("clamp()")}} for some of the sizes.</p>
 
 <p>The <code><a href="/en-US/docs/Web/HTML/Element/body">&lt;body&gt;</a></code> element's <code><a href="/en-US/docs/Web/CSS/width">width</a></code> is set as <code>min(1000px, calc(70% + 100px))</code>. This means that the width will be set at <code>1000px</code>, unless the result of <code>calc(70% + 100px)</code> is less than <code>1000px</code>, in which case it will be set to that value instead. <code>min()</code> allows you set a maximum value.</p>
 
@@ -93,32 +94,17 @@ p {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS4 Values", "#funcdef-clamp", "clamp()")}}</td>
-   <td>{{Spec2('CSS4 Values')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.types.clamp")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{CSSxRef("calc")}}</li>
- <li>{{CSSxRef("max")}}</li>
- <li>{{CSSxRef("min")}}</li>
- <li><a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/Values_and_units">CSS Values</a></li>
+ <li>{{CSSxRef("calc()")}}</li>
+ <li>{{CSSxRef("max()")}}</li>
+ <li>{{CSSxRef("min()")}}</li>
+ <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Values_and_units">CSS Values</a></li>
 </ul>

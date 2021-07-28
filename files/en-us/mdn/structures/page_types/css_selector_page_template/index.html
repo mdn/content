@@ -6,6 +6,7 @@ tags:
   - Reference
   - Selector
   - Template
+browser-compat: css.selectors.NameOfTheSelector
 ---
 <p>{{MDNSidebar}}</p>
 
@@ -31,11 +32,11 @@ tags:
 
 <p>In an CSS selector subpage, you need to include the following tags (see the <em>Tags</em> section at the bottom of the editor UI): <strong>CSS</strong>, <strong>Reference</strong>, <strong>Layout</strong>, <em>the name of the Selector</em> (e.g. <strong>:hover</strong>), <strong>Layout, Selectors, Basic Selectors/Combinators/Pseudo-classes/Pseudo-elements/other category</strong> as appropriate, <strong>Experimental</strong> (if the technology is <a href="/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental">experimental</a>), and <strong>Deprecated</strong> (if it is <a href="/en-US/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete">deprecated</a>).</p>
 
-<h3 id="Browser_compatibility">Browser compatibility</h3>
+<h3 id="Browser_compatibility_and_specifications">Browser compatibility and specifications</h3>
 
-<p>To fill in the browser compat data, you first need to fill in an entry for the API into our <a href="https://github.com/mdn/browser-compat-data">Browser compat data repo</a> — see our <a href="/en-US/docs/MDN/Structures/Compatibility_tables#the_new_way_the_browser_compat_data_repo_and_dynamic_tables">guide on how to do this</a>. Note that for CSS properties, most of the work has already been done — you just need to check that an entry is available.</p>
+<p>To fill in the browser compat data and specifications sections, you first need to fill in an entry for the API into our <a href="https://github.com/mdn/browser-compat-data">Browser compat data repo</a> — see our <a href="/en-US/docs/MDN/Structures/Compatibility_tables#the_new_way_the_browser_compat_data_repo_and_dynamic_tables">guide on how to do this</a>.</p>
 
-<p>Once that is done, you can show the compat data for the method with a \{{Compat()}} macro call.</p>
+<p>Once that is done, you can show the compat data for the CSS selector with a \{{Compat}} macro call and its specification information with a \{{Specifications}} macro call.</p>
 
 <h3 id="CSSSyntax_section"><code>\{{CSSSyntax}}</code> section</h3>
 
@@ -73,26 +74,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName("NameOfSpecificationFromSpecName", "#document-fragment-linking-directly-to-selector-definition", "NameOfTheSelector")}}</td>
-			<td>{{Spec2("NameOfSpecificationFromSpecName")}}</td>
-			<td>Initial definition.</td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility_2">Browser compatibility</h2>
 
-<p>{{Compat("css.selectors.NameOfTheSelector")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

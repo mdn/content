@@ -15,42 +15,59 @@ tags:
 
 <p>If the value for {{SVGAttr("result")}} appears multiple times within a given {{SVGElement("filter")}} element, then a reference to that result will use the closest preceding filter primitive with the given value for attribute {{SVGAttr("result")}}.</p>
 
-<p>Fourteen elements are using this attribute: {{SVGElement("feBlend")}}, {{SVGElement("feColorMatrix")}}, {{SVGElement("feComponentTransfer")}}, {{SVGElement("feComposite")}}, {{SVGElement("feConvolveMatrix")}}, {{SVGElement("feDiffuseLighting")}}, {{SVGElement("feDisplacementMap")}}, {{SVGElement("feDropShadow")}}, {{SVGElement("feGaussianBlur")}}, {{SVGElement("feMergeNode")}}, {{SVGElement("feMorphology")}}, {{SVGElement("feOffset")}}, {{SVGElement("feSpecularLighting")}}, {{SVGElement("feTile")}}</p>
+<p>You can use this attribute with the following SVG elements:</p>
+
+<ul>
+  <li>{{SVGElement("feBlend")}}</li>
+  <li>{{SVGElement("feColorMatrix")}}</li>
+  <li>{{SVGElement("feComponentTransfer")}}</li>
+  <li>{{SVGElement("feComposite")}}</li>
+  <li>{{SVGElement("feConvolveMatrix")}}</li>
+  <li>{{SVGElement("feDiffuseLighting")}}</li>
+  <li>{{SVGElement("feDisplacementMap")}}</li>
+  <li>{{SVGElement("feDropShadow")}}</li>
+  <li>{{SVGElement("feGaussianBlur")}}</li>
+  <li>{{SVGElement("feMergeNode")}}</li>
+  <li>{{SVGElement("feMorphology")}}</li>
+  <li>{{SVGElement("feOffset")}}</li>
+  <li>{{SVGElement("feSpecularLighting")}}</li>
+  <li>{{SVGElement("feTile")}}</li>
+</ul>
 
 <h2 id="Usage_notes">Usage notes</h2>
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code>SourceGraphic</code> | <code>SourceAlpha</code> | <code>BackgroundImage</code> | <code>BackgroundAlpha</code> | <code>FillPaint</code> | <code>StrokePaint</code> | <code>&lt;filter-primitive-reference&gt;</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>SourceGraphic</code> for first filter primitive, otherwise result of previous filter primitive</td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td><code>SourceGraphic</code> | <code>SourceAlpha</code> | <code>BackgroundImage</code> | <code>BackgroundAlpha</code> | <code>FillPaint</code> | <code>StrokePaint</code> | <code>&lt;filter-primitive-reference&gt;</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>SourceGraphic</code> for first filter primitive, otherwise result of previous filter primitive</td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
 <dl>
- <dt><code>SourceGraphic</code></dt>
- <dd>This keyword represents the graphics elements that were the original input into the {{SVGElement("filter")}} element.</dd>
- <dt><code>SourceAlpha</code></dt>
- <dd>This keyword represents the graphics elements that were the original input into the <code>&lt;filter&gt;</code> element. <code>SourceAlpha</code> has all of the same rules as <code>SourceGraphic</code> except that only the alpha channel is used.</dd>
- <dt><code>BackgroundImage</code></dt>
- <dd>This keyword represents an image snapshot of the SVG document under the filter region at the time that the <code>&lt;filter&gt;</code> element was invoked.</dd>
- <dt><code>BackgroundAlpha</code></dt>
- <dd>Same as <code>BackgroundImage</code> except only the alpha channel is used.</dd>
- <dt><code>FillPaint</code></dt>
- <dd>This keyword represents the value of the {{SVGAttr("fill")}} property on the target element for the filter effect. In many cases, the <code>FillPaint</code> is opaque everywhere, but that might not be the case if a shape is painted with a gradient or pattern which itself includes transparent or semi-transparent parts.</dd>
- <dt><code>StrokePaint</code></dt>
- <dd>This keyword represents the value of the {{SVGAttr("stroke")}} property on the target element for the filter effect. In many cases, the <code>StrokePaint</code> is opaque everywhere, but that might not be the case if a shape is painted with a gradient or pattern which itself includes transparent or semi-transparent parts.</dd>
- <dt><code>&lt;filter-primitive-reference&gt;</code></dt>
- <dd>This value is an assigned name for the filter primitive in the form of a {{cssxref("custom-ident")}}. If supplied, then graphics that result from processing this filter primitive can be referenced by an in attribute on a subsequent filter primitive within the same filter element. If no value is provided, the output will only be available for re-use as the implicit input into the next filter primitive if that filter primitive provides no value for its in attribute.</dd>
+  <dt><code>SourceGraphic</code></dt>
+  <dd>This keyword represents the graphics elements that were the original input into the {{SVGElement("filter")}} element.</dd>
+  <dt><code>SourceAlpha</code></dt>
+  <dd>This keyword represents the graphics elements that were the original input into the <code>&lt;filter&gt;</code> element. <code>SourceAlpha</code> has all of the same rules as <code>SourceGraphic</code> except that only the alpha channel is used.</dd>
+  <dt><code>BackgroundImage</code></dt>
+  <dd>This keyword represents an image snapshot of the SVG document under the filter region at the time that the <code>&lt;filter&gt;</code> element was invoked.</dd>
+  <dt><code>BackgroundAlpha</code></dt>
+  <dd>Same as <code>BackgroundImage</code> except only the alpha channel is used.</dd>
+  <dt><code>FillPaint</code></dt>
+  <dd>This keyword represents the value of the {{SVGAttr("fill")}} property on the target element for the filter effect. In many cases, the <code>FillPaint</code> is opaque everywhere, but that might not be the case if a shape is painted with a gradient or pattern which itself includes transparent or semi-transparent parts.</dd>
+  <dt><code>StrokePaint</code></dt>
+  <dd>This keyword represents the value of the {{SVGAttr("stroke")}} property on the target element for the filter effect. In many cases, the <code>StrokePaint</code> is opaque everywhere, but that might not be the case if a shape is painted with a gradient or pattern which itself includes transparent or semi-transparent parts.</dd>
+  <dt><code>&lt;filter-primitive-reference&gt;</code></dt>
+  <dd>This value is an assigned name for the filter primitive in the form of a {{cssxref("custom-ident")}}. If supplied, then graphics that result from processing this filter primitive can be referenced by an in attribute on a subsequent filter primitive within the same filter element. If no value is provided, the output will only be available for re-use as the implicit input into the next filter primitive if that filter primitive provides no value for its in attribute.</dd>
 </dl>
 
 <h2 id="Workaround_for_backgroundImage">Workaround for BackgroundImage</h2>
@@ -58,8 +75,8 @@ tags:
 <p><code>BackgroundImage</code> is not supported as a filter source in modern browsers (see the <a href="/en-US/docs/Web/SVG/Element/feComposite#browser_compatibility">feComposite compatibility table</a>). We therefore need to import one of the images to blend inside the filter itself, using an <code>&lt;feImage&gt;</code> element.</p>
 
 <div class="notecard note">
-      <h4>Note</h4>
-      <p>Firefox <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=455986">Bug 455986</a> means that <code>feImage</code> cannot load partial images, including circles, rectangles, paths or other fragments defined in the document. So that this example works on more browsers, a full external image of the logo is loaded.</p>
+  <h4>Note</h4>
+  <p>Firefox <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=455986">Bug 455986</a> means that <code>feImage</code> cannot load partial images, including circles, rectangles, paths or other fragments defined in the document. So that this example works on more browsers, a full external image of the logo is loaded.</p>
 </div>
 
 
@@ -73,7 +90,7 @@ tags:
       &lt;feBlend in="BackgroundImage" in2="SourceGraphic" mode="multiply"/&gt;
     &lt;/filter&gt;
   &lt;/defs&gt;
-  &lt;image xlink:href="https://developer.mozilla.org/files/6457/mdn_logo_only_color.png" x="10%" y="10%" width="80%" height="80%"/&gt;
+  &lt;image xlink:href="mdn_logo_only_color.png" x="10%" y="10%" width="80%" height="80%"/&gt;
   &lt;circle cx="50%" cy="40%" r="40%" fill="#c00" style="filter:url(#backgroundMultiply);" /&gt;
 &lt;/svg&gt;
 
@@ -81,7 +98,7 @@ tags:
   &lt;defs&gt;
     &lt;filter id="imageMultiply"&gt;
       &lt;!-- This is a workaround. --&gt;
-      &lt;feImage xlink:href="https://developer.mozilla.org/files/6457/mdn_logo_only_color.png" x="10%" y="10%" width="80%" height="80%"/&gt;
+      &lt;feImage xlink:href="mdn_logo_only_color.png" x="10%" y="10%" width="80%" height="80%"/&gt;
       &lt;feBlend in2="SourceGraphic" mode="multiply"/&gt;
     &lt;/filter&gt;
   &lt;/defs&gt;
@@ -96,23 +113,23 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Filters 1.0", "filters.html#FilterPrimitiveInAttribute", "in")}}</td>
-   <td>{{Spec2("Filters 1.0")}}</td>
-   <td>No change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "#element-attrdef-filter-primitive-in", "in")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName("Filters 1.0", "filters.html#FilterPrimitiveInAttribute", "in")}}</td>
+      <td>{{Spec2("Filters 1.0")}}</td>
+      <td>No change</td>
+    </tr>
+    <tr>
+      <td>{{SpecName("SVG1.1", "#element-attrdef-filter-primitive-in", "in")}}</td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>

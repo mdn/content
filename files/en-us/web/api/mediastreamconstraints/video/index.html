@@ -14,6 +14,7 @@ tags:
 - Reference
 - Video
 - getusermedia
+browser-compat: api.MediaStreamConstraints.video
 ---
 <div>{{APIRef("Media Capture and Streams")}}</div>
 
@@ -37,8 +38,8 @@ tags:
 </p>
 
 <dl>
-  <dt>{{jsxref("Boolean")}}</dt>
-  <dd>If a Boolean value is specified, it indicates whether or not a video track should be
+  <dt>A boolean value</dt>
+  <dd>If specified, it indicates whether or not a video track should be
     included in the returned stream; if it's <code>true</code>, a video track is included;
     if no video source is available or if permission is not given to use the video source,
     the call to <code>getUserMedia()</code> will fail. If <code>false</code>, no video
@@ -62,7 +63,7 @@ tags:
 
   <pre class="brush: html">&lt;p&gt;Click the start button below to begin the demonstration.&lt;/p&gt;
 &lt;div id="startButton" class="button"&gt;
-  Start
+  Start
 &lt;/div&gt;
 &lt;video id="video" width="160" height="120" autoplay&gt;&lt;/video&gt;&lt;br&gt;
 &lt;div id="log"&gt;&lt;/div&gt;</pre>
@@ -127,7 +128,7 @@ function log(msg) {
 
   <pre class="brush: html">&lt;p&gt;Click the start button below to begin the demonstration.&lt;/p&gt;
 &lt;div id="startButton" class="button"&gt;
-  Start
+  Start
 &lt;/div&gt;
 &lt;video id="video" width="160" height="120" autoplay&gt;&lt;/video&gt;&lt;br&gt;
 &lt;div id="log"&gt;&lt;/div&gt;</pre>
@@ -192,27 +193,11 @@ function log(msg) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{ SpecName('Media Capture', '#dom-mediastreamconstraints-video',
-        'MediaStreamConstraints.video') }}</td>
-      <td>{{ Spec2('Media Capture') }}</td>
-      <td>Initial specification.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.MediaStreamConstraints.video")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

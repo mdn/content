@@ -83,7 +83,6 @@ tags:
 <p>If you wanted to instead display custom error messages, you could use JavaScript like the following:</p>
 
 <pre class="brush: js">const nameInput = document.querySelector('input');
-const form = document.querySelector('form');
 
 nameInput.addEventListener('input', () =&gt; {
   nameInput.setCustomValidity('');
@@ -117,30 +116,7 @@ nameInput.addEventListener('invalid', () =&gt; {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{ SpecName('HTML WHATWG', 'forms.html#the-constraint-validation-api', 'constraint validation API') }}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('HTML5.1', 'sec-forms.html#the-constraint-validation-api', 'constraint validation API') }}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>No change from the previous snapshot {{SpecName('HTML5 W3C')}}.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('HTML5 W3C', 'forms.html#the-constraint-validation-api', 'constraint validation API') }}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>First snapshot of  {{SpecName('HTML WHATWG')}} containing this interface.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications("api.ValidityState")}}
 
 <h2 id="See_also">See also</h2>
 

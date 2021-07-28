@@ -12,6 +12,7 @@ tags:
   - Interface
   - Non-standard
   - Reference
+browser-compat: api.FileSystemFlags
 ---
 <p>{{APIRef("File System API")}}{{SeeCompatTable}}</p>
 
@@ -38,11 +39,12 @@ tags:
 <h3 id="Values_and_results">Values and results</h3>
 
 <p>The table below describes the result of each possible combination of these flags depending on whether or not the target file or directory path already exists.</p>
+<p>Note that, when <code>create</code> is <code>false</code>, the value of <code>exclusive</code> is irrelevant and ignored.</p>
 
 <table class="standard-table">
  <thead>
   <tr>
-   <th colspan="2" scope="col" style="text-align: center;">Option values</th>
+   <th colspan="2" scope="col">Option values</th>
    <th rowspan="2" scope="col">File/directory condition</th>
    <th rowspan="2" scope="col">Result</th>
   </tr>
@@ -54,13 +56,13 @@ tags:
  <tbody>
   <tr>
    <td><code>false</code></td>
-   <td>n/a<sup>[1]</sup></td>
+   <td>n/a</td>
    <td>Path exists and matches the desired type (depending on whether the function called is <code>getFile()</code> or <code>getDirectory()</code></td>
    <td>The <code>successCallback</code> is called with a {{domxref("FileSystemFileEntry")}} if <code>getFile()</code> was called or a {{domxref("FileSystemDirectoryEntry")}} if <code>getDirectory()</code> was called.</td>
   </tr>
   <tr>
    <td><code>false</code></td>
-   <td>n/a<sup>[1]</sup></td>
+   <td>n/a</td>
    <td>Path exists but doesn't match the desired type</td>
    <td>The <code>errorCallback</code> is called with an appropriate error code (if the callback was provided).</td>
   </tr>
@@ -91,30 +93,13 @@ tags:
  </tbody>
 </table>
 
-<p>[1] When <code>create</code> is <code>false</code>, the value of <code>exclusive</code> is irrelevant and ignored.</p>
-
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('File System API', '#dictdef-filesystemflags', 'FileSystemFlags') }}</td>
-   <td>{{ Spec2('File System API') }}</td>
-   <td>Initial specification.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.FileSystemFlags")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

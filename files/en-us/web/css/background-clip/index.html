@@ -7,6 +7,7 @@ tags:
   - CSS Property
   - Reference
   - 'recipe:css-property'
+browser-compat: css.properties.background-clip
 ---
 <p>{{CSSRef}}</p>
 
@@ -14,7 +15,6 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/css/background-clip.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <p>If the element has no {{cssxref("background-image")}} or {{cssxref("background-color")}}, this property will only have a visual effect when the border has transparent regions or partially opaque regions (due to {{cssxref("border-style")}} or {{cssxref("border-image")}}); otherwise, the border masks the difference.</p>
 
@@ -37,6 +37,7 @@ background-clip: text;
 /* Global values */
 background-clip: inherit;
 background-clip: initial;
+background-clip: revert;
 background-clip: unset;
 </pre>
 
@@ -49,7 +50,7 @@ background-clip: unset;
  <dd>The background extends to the outside edge of the padding. No background is drawn beneath the border.</dd>
  <dt><code>content-box</code></dt>
  <dd>The background is painted within (clipped to) the content box.</dd>
- <dt><code id="text">text</code> {{experimental_inline}}</dt>
+ <dt><code>text</code> {{experimental_inline}}</dt>
  <dd>The background is painted within (clipped to) the foreground text.</dd>
 </dl>
 
@@ -99,31 +100,11 @@ background-clip: unset;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Backgrounds', '#the-background-clip', 'background-clip')}}</td>
-   <td>{{Spec2('CSS3 Backgrounds')}}</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS4 Backgrounds', '#background-clip', 'background-clip')}}</td>
-   <td>{{Spec2('CSS4 Backgrounds')}}</td>
-   <td>Add <code>text</code> value.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.background-clip")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

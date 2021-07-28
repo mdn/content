@@ -7,10 +7,11 @@ tags:
   - CSS Property
   - Reference
   - 'recipe:css-property'
+browser-compat: css.properties.background-repeat
 ---
 <div>{{CSSRef}}</div>
 
-<p>The <strong><code>background-repeat</code></strong> <a href="/en-US/docs/CSS">CSS</a> property sets how background images are repeated. A background image can be repeated along the horizontal and vertical axes, or not repeated at all.</p>
+<p>The <strong><code>background-repeat</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets how background images are repeated. A background image can be repeated along the horizontal and vertical axes, or not repeated at all.</p>
 
 <div>{{EmbedInteractiveExample("pages/css/background-repeat.html")}}</div>
 
@@ -35,6 +36,7 @@ background-repeat: no-repeat round;
 /* Global values */
 background-repeat: inherit;
 background-repeat: initial;
+background-repeat: revert;
 background-repeat: unset;
 </pre>
 
@@ -42,62 +44,61 @@ background-repeat: unset;
 
 <dl>
  <dt><code>&lt;repeat-style&gt;</code></dt>
- <dd>The one-value syntax is a shorthand for the full two-value syntax:</dd>
  <dd>
- <table class="standard-table">
-  <tbody>
-   <tr>
-    <td><strong>Single value</strong></td>
-    <td><strong>Two-value equivalent</strong></td>
-   </tr>
-   <tr>
-    <td><code>repeat-x</code></td>
-    <td><code>repeat no-repeat</code></td>
-   </tr>
-   <tr>
-    <td><code>repeat-y</code></td>
-    <td><code>no-repeat repeat</code></td>
-   </tr>
-   <tr>
-    <td><code>repeat</code></td>
-    <td><code>repeat repeat</code></td>
-   </tr>
-   <tr>
-    <td><code>space</code></td>
-    <td><code>space space</code></td>
-   </tr>
-   <tr>
-    <td><code>round</code></td>
-    <td><code>round round</code></td>
-   </tr>
-   <tr>
-    <td><code>no-repeat</code></td>
-    <td><code>no-repeat no-repeat</code></td>
-   </tr>
-  </tbody>
- </table>
- In the two-value syntax, the first value represents the horizontal repetition behavior and the second value represents the vertical behavior. Here is an explanation of how each option works for either direction:</dd>
- <dd>
- <table class="standard-table">
-  <tbody>
-   <tr>
-    <td><code>repeat</code></td>
-    <td>The image is repeated as much as needed to cover the whole background image painting area. The last image will be clipped if it doesn't fit.</td>
-   </tr>
-   <tr>
-    <td><code>space</code></td>
-    <td>The image is repeated as much as possible without clipping. The first and last images are pinned to either side of the element, and whitespace is distributed evenly between the images. The {{cssxref("background-position")}} property is ignored unless only one image can be displayed without clipping. The only case where clipping happens using <code>space</code> is when there isn't enough room to display one image.</td>
-   </tr>
-   <tr>
-    <td><code>round</code></td>
-    <td>As the allowed space increases in size, the repeated images will stretch (leaving no gaps) until there is room (space left &gt;= half of the image width) for another one to be added. When the next image is added, all of the current ones compress to allow room. Example: An image with an original width of 260px, repeated three times, might stretch until each repetition is 300px wide, and then another image will be added. They will then compress to 225px.</td>
-   </tr>
-   <tr>
-    <td><code>no-repeat</code></td>
-    <td>The image is not repeated (and hence the background image painting area will not necessarily be entirely covered). The position of the non-repeated background image is defined by the {{cssxref("background-position")}} CSS property.</td>
-   </tr>
-  </tbody>
- </table>
+  <p>The one-value syntax is a shorthand for the full two-value syntax:</p>
+  <table class="standard-table">
+   <tbody>
+    <tr>
+     <td><strong>Single value</strong></td>
+     <td><strong>Two-value equivalent</strong></td>
+    </tr>
+    <tr>
+     <td><code>repeat-x</code></td>
+     <td><code>repeat no-repeat</code></td>
+    </tr>
+    <tr>
+     <td><code>repeat-y</code></td>
+     <td><code>no-repeat repeat</code></td>
+    </tr>
+    <tr>
+     <td><code>repeat</code></td>
+     <td><code>repeat repeat</code></td>
+    </tr>
+    <tr>
+     <td><code>space</code></td>
+     <td><code>space space</code></td>
+    </tr>
+    <tr>
+     <td><code>round</code></td>
+     <td><code>round round</code></td>
+    </tr>
+    <tr>
+     <td><code>no-repeat</code></td>
+     <td><code>no-repeat no-repeat</code></td>
+    </tr>
+   </tbody>
+  </table>
+  <p>In the two-value syntax, the first value represents the horizontal repetition behavior and the second value represents the vertical behavior. Here is an explanation of how each option works for either direction:</p>
+  <table class="standard-table">
+   <tbody>
+    <tr>
+     <td><code>repeat</code></td>
+     <td>The image is repeated as much as needed to cover the whole background image painting area. The last image will be clipped if it doesn't fit.</td>
+    </tr>
+    <tr>
+     <td><code>space</code></td>
+     <td>The image is repeated as much as possible without clipping. The first and last images are pinned to either side of the element, and whitespace is distributed evenly between the images. The {{cssxref("background-position")}} property is ignored unless only one image can be displayed without clipping. The only case where clipping happens using <code>space</code> is when there isn't enough room to display one image.</td>
+    </tr>
+    <tr>
+     <td><code>round</code></td>
+     <td>As the allowed space increases in size, the repeated images will stretch (leaving no gaps) until there is room (space left &gt;= half of the image width) for another one to be added. When the next image is added, all of the current ones compress to allow room. Example: An image with an original width of 260px, repeated three times, might stretch until each repetition is 300px wide, and then another image will be added. They will then compress to 225px.</td>
+    </tr>
+    <tr>
+     <td><code>no-repeat</code></td>
+     <td>The image is not repeated (and hence the background image painting area will not necessarily be entirely covered). The position of the non-repeated background image is defined by the {{cssxref("background-position")}} CSS property.</td>
+    </tr>
+   </tbody>
+  </table>
  </dd>
 </dl>
 
@@ -151,7 +152,7 @@ li {
   margin-bottom: 12px;
 }
 div {
-    background-image: url(https://mdn.mozillademos.org/files/12005/starsolid.gif);
+    background-image: url(starsolid.gif);
     width: 160px;
     height: 70px;
 }
@@ -178,7 +179,7 @@ div {
 
 /* Multiple images */
 .seven {
-  background-image:  url(https://mdn.mozillademos.org/files/12005/starsolid.gif),
+  background-image:  url(starsolid.gif),
                      url(https://developer.mozilla.org/static/img/favicon32.png);
   background-repeat: repeat-x,
                      repeat-y;
@@ -193,38 +194,11 @@ div {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Backgrounds', '#the-background-repeat', 'background-repeat')}}</td>
-   <td>{{Spec2('CSS3 Backgrounds')}}</td>
-   <td>Adds support for multiple background images, the two-value syntax allowing distinct repetition behavior for the horizontal and vertical directions, the <code>space</code> and <code>round</code> keywords, and for backgrounds on inline-level elements by precisely defining the background painting area.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'colors.html#propdef-background-repeat', 'background-repeat')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>No significant changes.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#background-repeat', 'background-repeat')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-
-<p>{{Compat("css.properties.background-repeat")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -10,6 +10,7 @@ tags:
   - NeedsExample
   - Reference
   - recipe:css-property
+browser-compat: css.properties.mask-border-slice
 ---
 <div>{{CSSRef}}</div>
 
@@ -35,6 +36,7 @@ mask-border-slice: 10% fill 7 12;
 /* Global values */
 mask-border-slice: inherit;
 mask-border-slice: initial;
+mask-border-slice: revert;
 mask-border-slice: unset;
 </pre>
 
@@ -64,7 +66,7 @@ mask-border-slice: unset;
 
 <p>The slicing process creates nine regions in total: four corners, four edges, and a middle region. Four slice lines, set a given distance from their respective sides, control the size of the regions.</p>
 
-<p><a href="border-image-slice.png"><img alt="The nine regions defined by the border-image or border-image-slice properties" src="border-image-slice.png" style="margin: 1px; padding: 1em;"></a></p>
+<p><a href="border-image-slice.png"><img alt="The nine regions defined by the border-image or border-image-slice properties" src="border-image-slice.png"></a></p>
 
 <p>The above diagram illustrates the location of each region.</p>
 
@@ -97,35 +99,20 @@ mask-border-slice: unset;
 <pre class="brush: css">-webkit-mask-box-image-slice: 30 fill;</pre>
 
 <div class="notecard note">
-<p><strong>Note</strong>: The <code><a href="/en-US/docs/Web/CSS/mask-border">mask-border</a></code> page features a working example (using the out-of-date prefixed border mask properties supported in Chromium), so you can get an idea of the effect.</p>
+<p><strong>Note:</strong> The <code><a href="/en-US/docs/Web/CSS/mask-border">mask-border</a></code> page features a working example (using the out-of-date prefixed border mask properties supported in Chromium), so you can get an idea of the effect.</p>
 </div>
 
 <div class="notecard note">
-<p><strong>Note</strong>: The fill keyword needs to be included if you want the element's content to be visible.</p>
+<p><strong>Note:</strong> The fill keyword needs to be included if you want the element's content to be visible.</p>
 </div>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Masks", "#propdef-mask-border-slice", "mask-border-slice")}}</td>
-   <td>{{Spec2("CSS Masks")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.mask-border-slice")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

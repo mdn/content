@@ -7,6 +7,7 @@ tags:
   - CSS Property
   - Reference
   - recipe:css-property
+browser-compat: css.properties.position
 ---
 <div>{{CSSRef}}</div>
 
@@ -14,11 +15,20 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/css/position.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<p>The <code>position</code> property is specified as a single keyword chosen from the list of values below.</p>
+<pre class="brush: css">position: static;
+position: relative;
+position: absolute;
+position: fixed;
+position: sticky;
+
+/* Global values */
+position: inherit;
+position: initial;
+position: revert;
+position: unset;</pre>
 
 <h3 id="Values">Values</h3>
 
@@ -26,17 +36,25 @@ tags:
  <dt id="static"><code>static</code></dt>
  <dd>The element is positioned according to the normal flow of the document. The {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, {{cssxref("left")}}, and {{cssxref("z-index")}} properties have <em>no effect</em>. This is the default value.</dd>
  <dt id="relative"><code>relative</code></dt>
- <dd>The element is positioned according to the normal flow of the document, and then offset <em>relative to itself</em> based on the values of <code>top</code>, <code>right</code>, <code>bottom</code>, and <code>left</code>. The offset does not affect the position of any other elements; thus, the space given for the element in the page layout is the same as if position were <code>static</code>.</dd>
- <dd>This value creates a new <a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context">stacking context</a> when the value of <code>z-index</code> is not <code>auto</code>. Its effect on <code>table-*-group</code>, <code>table-row</code>, <code>table-column</code>, <code>table-cell</code>, and <code>table-caption</code> elements is undefined.</dd>
+ <dd>
+   <p>The element is positioned according to the normal flow of the document, and then offset <em>relative to itself</em> based on the values of <code>top</code>, <code>right</code>, <code>bottom</code>, and <code>left</code>. The offset does not affect the position of any other elements; thus, the space given for the element in the page layout is the same as if position were <code>static</code>.</p>
+   <p>This value creates a new <a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context">stacking context</a> when the value of <code>z-index</code> is not <code>auto</code>. Its effect on <code>table-*-group</code>, <code>table-row</code>, <code>table-column</code>, <code>table-cell</code>, and <code>table-caption</code> elements is undefined.</p>
+ </dd>
  <dt id="absolute"><code>absolute</code></dt>
- <dd>The element is removed from the normal document flow, and no space is created for the element in the page layout. It is positioned relative to its closest positioned ancestor, if any; otherwise, it is placed relative to the initial <a href="/en-US/docs/Web/CSS/Containing_block">containing block</a>. Its final position is determined by the values of <code>top</code>, <code>right</code>, <code>bottom</code>, and <code>left</code>.</dd>
- <dd>This value creates a new <a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context">stacking context</a> when the value of <code>z-index</code> is not <code>auto</code>. The margins of absolutely positioned boxes do not <a href="/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing">collapse</a> with other margins.</dd>
+ <dd>
+   <p>The element is removed from the normal document flow, and no space is created for the element in the page layout. It is positioned relative to its closest positioned ancestor, if any; otherwise, it is placed relative to the initial <a href="/en-US/docs/Web/CSS/Containing_block">containing block</a>. Its final position is determined by the values of <code>top</code>, <code>right</code>, <code>bottom</code>, and <code>left</code>.</p>
+   <p>This value creates a new <a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context">stacking context</a> when the value of <code>z-index</code> is not <code>auto</code>. The margins of absolutely positioned boxes do not <a href="/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing">collapse</a> with other margins.</p>
+ </dd>
  <dt id="fixed"><code>fixed</code></dt>
- <dd>The element is removed from the normal document flow, and no space is created for the element in the page layout. It is positioned relative to the initial <a href="/en-US/docs/Web/CSS/Containing_block">containing block</a> established by the {{glossary("viewport")}}, except when one of its ancestors has a <code>transform</code>, <code>perspective</code>, or <code>filter</code> property set to something other than <code>none</code> (see the <a href="https://www.w3.org/TR/css-transforms-1/#propdef-transform">CSS Transforms Spec</a>), in which case that ancestor behaves as the containing block. (Note that there are browser inconsistencies with <code>perspective</code> and <code>filter</code> contributing to containing block formation.) Its final position is determined by the values of <code>top</code>, <code>right</code>, <code>bottom</code>, and <code>left</code>.</dd>
- <dd>This value always creates a new <a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context">stacking context</a>. In printed documents, the element is placed in the same position on <em>every page</em>.</dd>
+ <dd>
+   <p>The element is removed from the normal document flow, and no space is created for the element in the page layout. It is positioned relative to the initial <a href="/en-US/docs/Web/CSS/Containing_block">containing block</a> established by the {{glossary("viewport")}}, except when one of its ancestors has a <code>transform</code>, <code>perspective</code>, or <code>filter</code> property set to something other than <code>none</code> (see the <a href="https://www.w3.org/TR/css-transforms-1/#propdef-transform">CSS Transforms Spec</a>), in which case that ancestor behaves as the containing block. (Note that there are browser inconsistencies with <code>perspective</code> and <code>filter</code> contributing to containing block formation.) Its final position is determined by the values of <code>top</code>, <code>right</code>, <code>bottom</code>, and <code>left</code>.</p>
+   <p>This value always creates a new <a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context">stacking context</a>. In printed documents, the element is placed in the same position on <em>every page</em>.</p>
+ </dd>
  <dt id="sticky"><code>sticky</code></dt>
- <dd>The element is positioned according to the normal flow of the document, and then offset relative to its <em>nearest scrolling ancestor</em> and <a href="/en-US/docs/Web/CSS/Containing_block">containing block</a> (nearest block-level ancestor), including table-related elements, based on the values of <code>top</code>, <code>right</code>, <code>bottom</code>, and <code>left</code>. The offset does not affect the position of any other elements.</dd>
- <dd>This value always creates a new <a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context">stacking context</a>. Note that a sticky element "sticks" to its nearest ancestor that has a "scrolling mechanism" (created when <code>overflow</code> is <code>hidden</code>, <code>scroll</code>, <code>auto</code>, or <code>overlay</code>), even if that ancestor isn't the nearest actually scrolling ancestor. This effectively inhibits any "sticky" behavior (see the <a href="https://github.com/w3c/csswg-drafts/issues/865">GitHub issue on W3C CSSWG</a>).</dd>
+ <dd>
+   <p>The element is positioned according to the normal flow of the document, and then offset relative to its <em>nearest scrolling ancestor</em> and <a href="/en-US/docs/Web/CSS/Containing_block">containing block</a> (nearest block-level ancestor), including table-related elements, based on the values of <code>top</code>, <code>right</code>, <code>bottom</code>, and <code>left</code>. The offset does not affect the position of any other elements.</p>
+   <p>This value always creates a new <a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context">stacking context</a>. Note that a sticky element "sticks" to its nearest ancestor that has a "scrolling mechanism" (created when <code>overflow</code> is <code>hidden</code>, <code>scroll</code>, <code>auto</code>, or <code>overlay</code>), even if that ancestor isn't the nearest actually scrolling ancestor. This effectively inhibits any "sticky" behavior (see the <a href="https://github.com/w3c/csswg-drafts/issues/865">GitHub issue on W3C CSSWG</a>).</p>
+ </dd>
 </dl>
 
 <h2 id="Description">Description</h2>
@@ -132,7 +150,7 @@ tags:
 
 &lt;p&gt;We are separated by our margins. Because of margin collapsing, we are separated by the width of one of our margins, not both.&lt;/p&gt;
 
-&lt;p&gt;inline elements &lt;span&gt;like this one&lt;/span&gt; and &lt;span&gt;this one&lt;/span&gt; sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements &lt;span&gt;wrap onto a new line if possible — like this one containing text&lt;/span&gt;, or just go on to a new line if not, much like this image will do: &lt;img src="https://mdn.mozillademos.org/files/13360/long.jpg"&gt;&lt;/p&gt;</pre>
+&lt;p&gt;inline elements &lt;span&gt;like this one&lt;/span&gt; and &lt;span&gt;this one&lt;/span&gt; sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements &lt;span&gt;wrap onto a new line if possible — like this one containing text&lt;/span&gt;, or just go on to a new line if not, much like this image will do: &lt;img src="long.jpg"&gt;&lt;/p&gt;</pre>
 
 <h4 id="CSS_2">CSS</h4>
 
@@ -317,31 +335,11 @@ dd + dd {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'visuren.html#propdef-position', 'position')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Positioning','#position-property','position')}}</td>
-   <td>{{Spec2('CSS3 Positioning')}}</td>
-   <td>Adds <code>sticky</code> property value.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.position")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

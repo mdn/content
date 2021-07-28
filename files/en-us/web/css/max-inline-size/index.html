@@ -13,10 +13,11 @@ tags:
   - Writing Mode
   - max-inline-size
   - 'recipe:css-property'
+browser-compat: css.properties.max-inline-size
 ---
 <div>{{CSSRef}}</div>
 
-<p><span class="seoSummary">The <strong><code>max-inline-size</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property defines the horizontal or vertical maximum size of an element's block, depending on its writing mode. It corresponds to either the {{cssxref("max-width")}} or the {{cssxref("max-height")}} property, depending on the value of {{cssxref("writing-mode")}}.</span></p>
+<p>The <strong><code>max-inline-size</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property defines the horizontal or vertical maximum size of an element's block, depending on its writing mode. It corresponds to either the {{cssxref("max-width")}} or the {{cssxref("max-height")}} property, depending on the value of {{cssxref("writing-mode")}}.</p>
 
 <p>If the writing mode is vertically oriented, the value of <code>max-inline-size</code> relates to the maximal height of the element; otherwise, it relates to the maximal width of the element. A related property is {{cssxref("max-block-size")}}, which defines the other dimension of the element.</p>
 
@@ -40,6 +41,7 @@ max-inline-size: fit-content(20em);
 /* Global values */
 max-inline-size: inherit;
 max-inline-size: initial;
+max-inline-size: revert;
 max-inline-size: unset;
 </pre>
 
@@ -79,26 +81,11 @@ max-inline-size: unset;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Logical Properties", "#propdef-max-inline-size", "max-inline-size")}}</td>
-   <td>{{Spec2("CSS Logical Properties")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.max-inline-size")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

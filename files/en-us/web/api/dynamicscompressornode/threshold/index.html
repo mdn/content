@@ -8,6 +8,7 @@ tags:
   - Reference
   - Web Audio API
   - threshold
+browser-compat: api.DynamicsCompressorNode.threshold
 ---
 <p>{{ APIRef("Web Audio API") }}</p>
 
@@ -30,34 +31,26 @@ compressor.threshold.value = -50;
 
 <p>An {{domxref("AudioParam")}}.</p>
 
-<div class="note">
-<p><strong>Note</strong>: Though the {{domxref("AudioParam")}} returned is read-only, the value it represents is not.</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>Though the {{domxref("AudioParam")}} returned is read-only, the value it represents is not.</p>
 </div>
 
 <h2 id="Example">Example</h2>
 
-<p>{{page("/en-US/docs/Web/API/AudioContext.createDynamicsCompressor","Example")}}</p>
+<pre class="brush: js">var audioCtx = new AudioContext();
+var compressor = audioCtx.createDynamicsCompressor();
+compressor.threshold.value = -50;</pre>
+
+<p>See <a href="/en-US/docs/Web/API/BaseAudioContext/createDynamicsCompressor#example"><code>BaseAudioContext.createDynamicsCompressor()</code></a> for more complete example code.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#dom-dynamicscompressornode-threshold', 'threshold')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.DynamicsCompressorNode.threshold")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

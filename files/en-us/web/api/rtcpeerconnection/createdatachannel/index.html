@@ -2,25 +2,27 @@
 title: RTCPeerConnection.createDataChannel()
 slug: Web/API/RTCPeerConnection/createDataChannel
 tags:
-- API
-- Experimental
-- Media
-- Method
-- RTCPeerConnection
-- Reference
-- WebRTC
-- createDataChannel
+  - API
+  - Media
+  - Method
+  - RTCPeerConnection
+  - Reference
+  - WebRTC
+  - createDataChannel
+browser-compat: api.RTCPeerConnection.createDataChannel
 ---
 <p>{{APIRef("WebRTC")}}</p>
 
-<p><span class="seoSummary">The <strong><code>createDataChannel()</code></strong> method
-    on the {{domxref("RTCPeerConnection")}} interface creates a new channel linked with
-    the remote peer, over which any kind of data may be transmitted.</span> This can be
-  useful for back-channel content such as images, file transfer, text chat, game update
+<p>The <strong><code>createDataChannel()</code></strong> method
+  on the {{domxref("RTCPeerConnection")}} interface
+  creates a new channel linked with the remote peer,
+  over which any kind of data may be transmitted.
+  This can be useful for back-channel content,
+  such as images, file transfer, text chat, game update
   packets, and so forth.</p>
 
 <p>If the new data channel is the first one added to the connection, renegotiation is
-  started by delivering a {{event("negotiationneeded")}} event.</p>
+  started by delivering a {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} event.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -119,7 +121,7 @@ tags:
 <h2 id="Examples">Examples</h2>
 
 <p>This example shows how to create a data channel and set up handlers for the
-  {{event("open")}} and {{event("message")}} events to send and receive messages on it
+  {{DOMxRef("RTCDataChannel/open_event", "open")}} and {{DOMxRef("RTCDataChannel/message_event", "message")}} events to send and receive messages on it
   (For brievity, the example assumes onnegotiationneeded is set up).</p>
 
 <pre class="brush: js">// Offerer side
@@ -166,25 +168,11 @@ channel.onmessage = function(event) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('WebRTC 1.0', '#dom-peerconnection-createdatachannel',
-        'createDataChannel()')}}</td>
-      <td>{{Spec2('WebRTC 1.0')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCPeerConnection.createDataChannel")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

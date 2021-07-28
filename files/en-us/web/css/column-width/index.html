@@ -7,10 +7,11 @@ tags:
   - CSS Property
   - Reference
   - 'recipe:css-property'
+browser-compat: css.properties.column-width
 ---
 <div>{{CSSRef}}</div>
 
-<p><span class="seoSummary">The <strong><code>column-width</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets the ideal column width in a multi-column layout.</span> The container will have as many columns as can fit without any of them having a width less than the <code>column-width</code> value. If the width of the container is narrower than the specified value, the single column's width will be smaller than the declared column width.</p>
+<p>The <strong><code>column-width</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets the ideal column width in a multi-column layout. The container will have as many columns as can fit without any of them having a width less than the <code>column-width</code> value. If the width of the container is narrower than the specified value, the single column's width will be smaller than the declared column width.</p>
 
 <div>{{EmbedInteractiveExample("pages/css/column-width.html")}}</div>
 
@@ -29,6 +30,7 @@ column-width: 3.3vw;
 /* Global values */
 column-width: inherit;
 column-width: initial;
+column-width: revert;
 column-width: unset;
 </pre>
 
@@ -74,31 +76,11 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh 
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Sizing', '#column-sizing', 'column-width')}}</td>
-   <td>{{Spec2('CSS3 Sizing')}}</td>
-   <td>Adds intrinsic sizes via the keywords <code>min-content</code>, <code>max-content</code>, and <code>fit-content</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Multicol', '#cw', 'column-width')}}</td>
-   <td>{{Spec2('CSS3 Multicol')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.column-width")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

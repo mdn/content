@@ -2,12 +2,13 @@
 title: SubtleCrypto.deriveBits()
 slug: Web/API/SubtleCrypto/deriveBits
 tags:
-- API
-- Crypto
-- Method
-- Reference
-- SubtleCrypto
-- deriveBits
+  - API
+  - Crypto
+  - Method
+  - Reference
+  - SubtleCrypto
+  - deriveBits
+browser-compat: api.SubtleCrypto.deriveBits
 ---
 <p>{{APIRef("Web Crypto API")}}{{SecureContext_header}}</p>
 
@@ -33,34 +34,34 @@ tags:
 
 <p>This function supports the same derivation algorithms as <code>deriveKey()</code>:
   ECDH, HKDF, and PBKDF2. See <a
-    href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#Supported_algorithms">Supported
+    href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#supported_algorithms">Supported
     algorithms</a> for some more detail on these algorithms.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js">const <em>result</em> = crypto<code>.subtle.deriveBits(
+<pre class="brush: js">const <em>result</em> = crypto.subtle.deriveBits(
     <em>algorithm</em>,
     <em>baseKey</em>,
     <em>length
-</em>)</code>;
+</em>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <ul>
   <li><code><em>algorithm</em></code> is an object defining the <a
-      href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#Supported_algorithms">derivation
+      href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#supported_algorithms">derivation
       algorithm</a> to use.
 
     <ul>
-      <li>To use <a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#ECDH">ECDH</a>, pass
+      <li>To use <a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#ecdh">ECDH</a>, pass
         an
         <code><a href="/en-US/docs/Web/API/EcdhKeyDeriveParams">EcdhKeyDeriveParams</a></code>
         object.</li>
-      <li>To use <a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#HKDF">HKDF</a>, pass
+      <li>To use <a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#hkdf">HKDF</a>, pass
         an <code><a href="/en-US/docs/Web/API/HkdfParams">HkdfParams</a></code> object.
       </li>
-      <li>To use <a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#PBKDF2">PBKDF2</a>,
+      <li>To use <a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#pbkdf2">PBKDF2</a>,
         pass a <code><a href="/en-US/docs/Web/API/Pbkdf2Params">Pbkdf2Params</a></code>
         object.</li>
     </ul>
@@ -72,7 +73,7 @@ tags:
     <code>CryptoKey</code> using
     <code><a href="/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey()</a></code>.
   </li>
-  <li><code><em>length</em></code> is a number representing the number of bits to derive.
+  <li><code><em>length</em></code> is a number representing the number of bits to derive. To be compatible with all browsers, the number should be a multiple of 8.
   </li>
 </ul>
 
@@ -93,9 +94,11 @@ tags:
 <p>The promise is rejected when one of the following exceptions are encountered:</p>
 
 <dl>
+  <dt>{{exception("OperationError")}}</dt>
+  <dd>Raised if the <em>length</em> parameter of the <code>deriveBits()</code> call is null, and also in some cases if the <em>length</em> parameter is not a multiple of 8.</dd>
   <dt>{{exception("InvalidAccessError")}}</dt>
   <dd>Raised when the base key is not a key for the requested derivation algorithm or if
-    the {{domxref("CryptoKey.usages")}} value of that key doesn't contain
+    the <a href="/en-US/docs/Web/API/CryptoKey#usages"><code>usages</code></a> value of that key doesn't contain
     <code>deriveKey</code>.</dd>
   <dt>{{exception("NotSupported")}}</dt>
   <dd>Raised when trying to use an algorithm that is either unknown or isn't suitable for
@@ -106,7 +109,7 @@ tags:
 <h2 id="Supported_algorithms">Supported algorithms</h2>
 
 <p>See the <a
-    href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#Supported_algorithms">Supported
+    href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#supported_algorithms">Supported
     algorithms section of the <code>deriveKey()</code> documentation</a>.</p>
 
 <h2 id="Examples">Examples</h2>
@@ -237,25 +240,11 @@ deriveBitsButton.addEventListener("click", () =&gt; {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{ SpecName('Web Crypto API', '#dfn-SubtleCrypto-method-deriveBits',
-        'SubtleCrypto.deriveBits()') }}</td>
-      <td>{{ Spec2('Web Crypto API') }}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.SubtleCrypto.deriveBits")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

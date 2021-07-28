@@ -13,14 +13,14 @@ tags:
   - Shape
   - 'recipe:css-property'
   - shape-image-threshold
+browser-compat: css.properties.shape-image-threshold
 ---
 <div>{{CSSRef}}</div>
 
-<p><span class="seoSummary">The <strong><code>shape-image-threshold</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets the alpha channel threshold used to extract the shape using an image as the value for {{cssxref("shape-outside")}}.</span></p>
+<p>The <strong><code>shape-image-threshold</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets the alpha channel threshold used to extract the shape using an image as the value for {{cssxref("shape-outside")}}.</p>
 
 <div>{{EmbedInteractiveExample("pages/css/shape-image-threshold.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <p>Any pixels whose alpha component's value is greater than the threshold are considered to be part of the shape for the purposes of determining its boundaries. For example, a value of <code>0.5</code> means that the shape will enclose all the pixels that are more than 50% opaque.</p>
 
@@ -32,6 +32,7 @@ shape-image-threshold: 0.7;
 /* Global values */
 shape-image-threshold: inherit;
 shape-image-threshold: initial;
+shape-image-threshold: revert;
 shape-image-threshold: unset;
 </pre>
 
@@ -96,26 +97,11 @@ shape-image-threshold: unset;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS Shapes', '#shape-image-threshold-property', 'shape-image-threshold')}}</td>
-   <td>{{Spec2('CSS Shapes')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.shape-image-threshold")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

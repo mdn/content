@@ -1,6 +1,6 @@
 ---
 title: '::after (:after)'
-slug: 'Web/CSS/::after'
+slug: Web/CSS/::after
 tags:
   - CSS
   - Layout
@@ -8,10 +8,11 @@ tags:
   - Reference
   - Selector
   - Web
+browser-compat: css.selectors.after
 ---
 <p>{{CSSRef}}</p>
 
-<p><span class="seoSummary">In CSS, <strong><code>::after</code></strong> creates a <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-element</a> that is the last child of the selected element. It is often used to add cosmetic content to an element with the {{CSSxRef("content")}} property.</span> It is inline by default.</p>
+<p>In CSS, <strong><code>::after</code></strong> creates a <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-element</a> that is the last child of the selected element. It is often used to add cosmetic content to an element with the {{CSSxRef("content")}} property. It is inline by default.</p>
 
 <pre class="brush: css no-line-numbers language-css">/* Add an arrow after links */
 a::after {
@@ -85,7 +86,7 @@ a::after {
 
 <h3 id="Tooltips">Tooltips</h3>
 
-<p>This example uses <code>::after</code>, in conjunction with the <a href="/en-US/docs/Web/CSS/attr"><code>attr()</code></a> CSS expression and a <code>data-descr</code> <a href="/en-US/docs/Web/HTML/Global_attributes/data-*">custom data attribute</a>, to create tooltips. No JavaScript is required!</p>
+<p>This example uses <code>::after</code>, in conjunction with the <a href="/en-US/docs/Web/CSS/attr()"><code>attr()</code></a> CSS expression and a <code>data-descr</code> <a href="/en-US/docs/Web/HTML/Global_attributes/data-*">custom data attribute</a>, to create tooltips. No JavaScript is required!</p>
 
 <p>We can also support keyboard users with this technique, by adding a <code>tabindex</code> of <code>0</code> to make each <code>span</code> keyboard focusable, and using a CSS <code>:focus</code> selector. This shows how flexible <code>::before</code> and <code>::after</code> can be, though for the most accessible experience a semantic disclosure widget created in some other way (such as with <a href="/en-US/docs/Web/HTML/Element/details">details and summary</a> elements) is likely to be more appropriate.</p>
 
@@ -128,41 +129,11 @@ span[data-descr]:focus::after {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Pseudo-Elements', '#selectordef-after', '::after')}}</td>
-   <td>{{Spec2('CSS4 Pseudo-Elements')}}</td>
-   <td>No significant changes to the previous specification.</td>
-  </tr>
-  <tr>
-   <td>{{Specname("CSS3 Animations", "", "animations on pseudo-element properties")}}</td>
-   <td>{{Spec2("CSS3 Animations")}}</td>
-   <td>Allows animations on properties defined on pseudo-elements.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Selectors', '#gen-content', '::after')}}</td>
-   <td>{{Spec2('CSS3 Selectors')}}</td>
-   <td>Introduces the two-colon syntax.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'generate.html#before-after-content', '::after')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Initial definition, using the one-colon syntax.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.selectors.after")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

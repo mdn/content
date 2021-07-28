@@ -48,8 +48,6 @@ tags:
 <figcaption><strong><em>Starting screen capture: <code>Promise</code> style</em></strong>
 
 <pre class="brush: js">function startCapture(displayMediaOptions) {
- let captureStream = null;
-
  return navigator.mediaDevices.getDisplayMedia(displayMediaOptions)
     .catch(err =&gt; { console.error("Error:" + err); return null; });
 }</pre>
@@ -61,7 +59,7 @@ tags:
 <figure>
 <figcaption><strong><em>Example of a window allowing the user to select a display surface to capture</em></strong></figcaption>
 
-<p><a href="Chrome-Screen-Capture-Window.png"><img alt="Screenshot of Chrome's window for picking a source surface" src="chrome-screen-capture-window.png" style="height: 520px; width: 619px;"></a></p>
+<p><a href="Chrome-Screen-Capture-Window.png"><img alt="Screenshot of Chrome's window for picking a source surface" src="chrome-screen-capture-window.png"></a></p>
 </figure>
 
 <p>You can then use the captured stream, <code>captureStream</code>, for anything that accepts a stream as input. The {{anch("Examples", "examples")}} below show a few ways to make use of the stream.</p>
@@ -84,25 +82,7 @@ tags:
 <p><strong>Note:</strong> Unlike most uses of constraints in media APIs, here it's solely used to define the stream configuration, and <em>not</em> to filter the available choices.</p>
 </div>
 
-<p>There are three new constraints added to <code>MediaTrackConstraints</code> (as well as to {{domxref("MediaTrackSupportedConstraints")}} and {{domxref("MediaTrackSettings")}}) for configuring a screen capture stream:</p>
-
-<dl>
- <dt>{{domxref("MediaTrackConstraints.cursor", "cursor")}}</dt>
- <dd>
- <p>Indicates whether or not to capture the mouse cursor, and if so, whether to do so all the time or only while the mouse is in motion. The possible values are:</p>
-
- <dl>
-  <dt><code>always</code></dt>
-  <dd>The mouse cursor should always be captured in the generated stream.</dd>
-  <dt><code>motion</code></dt>
-  <dd>The cursor should only be visible while moving, and, at the discretion of the {{Glossary("user agent")}}, for a brief time before after moving. Then the cursor is removed from the stream.</dd>
-  <dt><code>never</code></dt>
-  <dd>The cursor should never be visible in the generated stream.</dd>
- </dl>
- </dd>
- <dt>{{domxref("MediaTrackConstraints.logicalSurface", "logicalSurface")}}</dt>
- <dd>A Boolean which if <code>true</code> indicates that the capture should include offscreen areas of the source, if there are any.</dd>
-</dl>
+<p>See <a href="/en-US/docs/Web/API/MediaTrackConstraints#properties_of_shared_screen_tracks">Properties of shared screen tracks</a> for details about additional constraints for configuring a screen-capture stream that are added to {{domxref("MediaTrackConstraints")}}, {{domxref("MediaTrackSupportedConstraints")}}, and {{domxref("MediaTrackSettings")}}).</p>
 
 <p>None of the constraints are applied in any way until after the content to capture has been selected. The contraints alter what you see in the resulting stream.</p>
 
@@ -151,7 +131,7 @@ tags:
 <p>Capturing audio is always optional, and even when web content requests a stream with both audio and video, the returned {{domxref("MediaStream")}} may still have only one video track, with no audio.</p>
 
 <div class="notecard note">
-<p><strong>Note:</strong> Some properties are not widely implemented and might not be used by the engine. <code>cursor</code>, for example, <a href="/en-US/docs/Web/API/MediaTrackConstraints/cursor#Browser_compatibility">has limited support</a>.</p>
+<p><strong>Note:</strong> Some properties are not widely implemented and might not be used by the engine. <code>cursor</code>, for example, <a href="/en-US/docs/Web/API/MediaTrackConstraints/cursor#browser_compatibility">has limited support</a>.</p>
 </div>
 
 <h2 id="Using_the_captured_stream">Using the captured stream</h2>
@@ -193,7 +173,7 @@ tags:
 <p>The object <code>displayMediaOptions</code> contains the {{domxref("MediaStreamConstraints")}} to pass into <code>getDisplayMedia()</code>; here, the {{domxref("MediaTrackConstraints.cursor", "cursor")}} property is set to <code>always</code>, indicating that the mouse cursor should always be included in the captured media.</p>
 
 <div class="notecard note">
-<p><strong>Note:</strong> Some properties are not widely implemented and might not be used by the engine. <code>cursor</code>, for example, <a href="/en-US/docs/Web/API/MediaTrackConstraints/cursor#Browser_compatibility">has limited support</a>.</p>
+<p><strong>Note:</strong> Some properties are not widely implemented and might not be used by the engine. <code>cursor</code>, for example, <a href="/en-US/docs/Web/API/MediaTrackConstraints/cursor#browser_compatibility">has limited support</a>.</p>
 </div>
 
 <p>Finally, event listeners are established to detect user clicks on the start and stop buttons.</p>
@@ -223,7 +203,7 @@ stopElem.addEventListener("click", function(evt) {
 
 <h5 id="Logging_content">Logging content</h5>
 
-<p>To make logging of errors and other issues easy, this example overrides certain {{domxref("Console")}} methods to output their messages to the {{HTMLElement("pre")}} block whose ID is <code>log</code>.</p>
+<p>To make logging of errors and other issues easy, this example overrides certain {{domxref("console")}} methods to output their messages to the {{HTMLElement("pre")}} block whose ID is <code>log</code>.</p>
 
 <pre class="brush: js">console.log = msg =&gt; logElem.innerHTML += `${msg}&lt;br&gt;`;
 console.error = msg =&gt; logElem.innerHTML += `&lt;span class="error"&gt;${msg}&lt;/span&gt;&lt;br&gt;`;
@@ -303,7 +283,7 @@ Click the Start Capture button to begin.&lt;/p&gt;
  <li>A {{HTMLElement("button")}} labeled "Start Capture" which, when clicked, calls the <code>startCapture()</code> function to request access to, and begin capturing, screen contents.</li>
  <li>A second button, "Stop Capture", which upon being clicked calls <code>stopCapture()</code> to terminate capture of screen contents.</li>
  <li>A {{HTMLElement("video")}} into which the captured screen contents are streamed.</li>
- <li>A {{HTMLElement("pre")}} block into which logged text is placed by the intercepted {{domxref("Console")}}method.</li>
+ <li>A {{HTMLElement("pre")}} block into which logged text is placed by the intercepted {{domxref("console")}} method.</li>
 </ol>
 
 <h4 id="CSS">CSS</h4>

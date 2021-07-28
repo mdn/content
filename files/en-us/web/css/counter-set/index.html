@@ -7,6 +7,7 @@ tags:
   - CSS Lists
   - CSS Property
   - 'recipe:css-property'
+browser-compat: css.properties.counter-set
 ---
 <div>{{CSSRef}}</div>
 
@@ -33,6 +34,7 @@ counter-set: none;
 /* Global values */
 counter-set: inherit;
 counter-set: initial;
+counter-set: revert;
 counter-set: unset;
 </pre>
 
@@ -49,7 +51,7 @@ counter-set: unset;
  <dt>{{cssxref("custom-ident", "&lt;custom-ident&gt;")}}</dt>
  <dd>The name of the counter to set.</dd>
  <dt>{{cssxref("&lt;integer&gt;")}}</dt>
- <dd>The value to set the counter to on each occurrence of the element. Defaults to <code>0</code> if not specified. If there isn't currently a counter of the given name on the element, the element will create a new counter of the given name with a starting value of 0 (though it may then immediately set or increment that value to something different).</dd>
+ <dd>The value to set the counter to on each occurrence of the element. Defaults to <code>0</code> if not specified. If there isn't currently a counter of the given name on the element, the element will create a new counter of the given name with a starting value of 0 (though it may then immediately set or increment that value to something different).</dd>
  <dt><code>none</code></dt>
  <dd>No counter set is to be performed. This can be used to override a <code>counter-set</code> defined in a less specific rule.</dd>
 </dl>
@@ -75,26 +77,11 @@ counter-set: unset;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Lists', '#propdef-counter-set', 'counter-set')}}</td>
-   <td>{{Spec2('CSS3 Lists')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.counter-set")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

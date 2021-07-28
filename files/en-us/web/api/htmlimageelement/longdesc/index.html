@@ -7,25 +7,25 @@ tags:
   - HTML DOM
   - HTMLImageElement
   - Long description
-  - Obsolete
   - Property
   - Reference
   - description
   - img
   - longDesc
+  - Deprecated
+browser-compat: api.HTMLImageElement.longDesc
 ---
 <p>{{APIRef("HTML DOM")}}{{deprecated_header}}</p>
 
-<p><span
-    class="seoSummary">The <em>deprecated</em> property <code><strong>longDesc</strong></code> on
+<p>The <em>deprecated</em> property <code><strong>longDesc</strong></code> on
     the {{domxref("HTMLImageElement")}} interface specifies the URL of a text or HTML file
-    which contains a long-form description of the image.</span> This can be used to
+    which contains a long-form description of the image. This can be used to
   provide optional added details beyond the short description provided in the
   {{htmlattrxref("title")}} attribute.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js"><em>descURL</em> = <em>htmlImageElement</em>.longDesc;
+<pre class="brush: js"><em>descURL</em> = <em>htmlImageElement</em>.longDesc;
 <em>htmlImageElement</em>.longDesc = <em>descURL</em>;
 </pre>
 
@@ -37,14 +37,14 @@ tags:
 
 <p>For example, if the image is a <a
     href="/en-US/docs/Web/Media/Formats/Image_types#png">PNG</a> of a flowchart.
-  The <code>longDesc</code> property could be used to provide an explanation of the flow
+  The <code>longDesc</code> property could be used to provide an explanation of the flow
   of control represented by the chart, using only text. This can be used by readers both
   as an explanation, but also as a substitute for visually-impaired users.</p>
 
 <h2 id="Usage_notes">Usage notes</h2>
 
-<p>This property is <em>deprecated</em> and should no longer be used. Instead of
-  using <code>longDesc</code> to provide a link to a detailed description of an image,
+<p>This property is <em>deprecated</em> and should no longer be used. Instead of
+  using <code>longDesc</code> to provide a link to a detailed description of an image,
   encapsulate the image within a link using the {{HTMLElement("a")}} element.</p>
 
 <p>Consider the following older HTML:</p>
@@ -52,14 +52,14 @@ tags:
 <pre
   class="brush: html">&lt;img src="taco-tuesday.jpg" longDesc="image-descriptions/taco-tuesday.html"&gt;</pre>
 
-<p>Here, the <code>longDesc</code> is used to indicate that the user should be able to
-  access a detailed description of the image <code>taco-tuesday.jpg</code> in the HTML
-  file <code>image-descriptions/taco-tuesday.html</code>.</p>
+<p>Here, the <code>longDesc</code> is used to indicate that the user should be able to
+  access a detailed description of the image <code>taco-tuesday.jpg</code> in the HTML
+  file <code>image-descriptions/taco-tuesday.html</code>.</p>
 
 <p>This can be easily converted into modern HTML:</p>
 
 <pre class="brush: html">&lt;a href="image-descriptions/taco-tuesday.html"&gt;
-  &lt;img src="taco-tuesday.jpg"&gt;
+  &lt;img src="taco-tuesday.jpg"&gt;
 &lt;/a&gt;
 </pre>
 
@@ -68,25 +68,8 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName("HTML4.01", "struct/objects.html#adef-longdesc-IMG",
-        "HTMLImageElement.longDesc")}}</td>
-      <td>{{Spec2("HTML4.01")}}</td>
-      <td>Provides an actual description of this property; the HTML5 spec only says it's
-        deprecated.</td>
-    </tr>
-  </tbody>
-</table>
+<p>This feature is not part of any current specification. It is no longer on track to become a standard.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.HTMLImageElement.longDesc")}}</p>
+<p>{{Compat}}</p>

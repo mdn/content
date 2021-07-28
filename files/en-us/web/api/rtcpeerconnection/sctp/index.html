@@ -2,14 +2,14 @@
 title: RTCPeerConnection.sctp
 slug: Web/API/RTCPeerConnection/sctp
 tags:
-- Experimental
-- Property
-- RTCPeerConnection
-- Reference
-- SCTP
-- WebRTC
+  - Property
+  - RTCPeerConnection
+  - Reference
+  - SCTP
+  - WebRTC
+browser-compat: api.RTCPeerConnection.sctp
 ---
-<p>{{APIRef("WebRTC")}}{{SeeCompatTable}}</p>
+<p>{{APIRef("WebRTC")}}</p>
 
 <p>The read-only <strong><code>sctp</code></strong> property on the
   {{domxref("RTCPeerConnection")}} interface returns an {{domxref("RTCSctpTransport")}}
@@ -36,10 +36,10 @@ tags:
 
 var channel = pc.createDataChannel("Mydata");
 channel.onopen = function(event) {
-  channel.send('sending a message');
+  channel.send('sending a message');
 }
 channel.onmessage = function(event) {
-  console.log(event.data);
+  console.log(event.data);
 }
 
 // Determine the largest message size that can be sent
@@ -50,27 +50,11 @@ var maxMessageSize = sctp.maxMessageSize;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{ SpecName('WebRTC 1.0', '#dom-rtcpeerconnection-sctp',
-        'RTCPeerConnection.sctp') }}</td>
-      <td>{{ Spec2('WebRTC 1.0') }}</td>
-      <td>Initial specification.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCPeerConnection.sctp")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

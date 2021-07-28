@@ -7,6 +7,7 @@ tags:
 - Reference
 - URL API
 - URLSearchParams
+browser-compat: api.URLSearchParams.URLSearchParams
 ---
 <p>{{ApiRef("URL API")}}</p>
 
@@ -30,7 +31,7 @@ tags:
   <li>A {{domxref("USVString")}}, which will be parsed from
     <code>application/x-www-form-urlencoded</code> format. A leading <code>'?'</code>
     character is ignored.</li>
-  <li>A sequence of {{domxref("USVString")}} pairs, representing names/values.</li>
+  <li>A literal sequence of name-value string pairs, or any object — such as a {{domxref("FormData")}} object — with an <a href="/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#iterators">iterator</a> that produces a sequence of string pairs. Note that that {{domxref("File")}} entries will be serialized as <code>[object File]</code> rather than as their filename (as they would in an <code>application/x-www-form</code>-urlencoded form).</li>
   <li>A record of {{domxref("USVString")}} keys and {{domxref("USVString")}} values.</li>
 </ul>
 
@@ -60,24 +61,8 @@ var params4 = new URLSearchParams({"foo": "1", "bar": "2"});
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('URL', '#dom-urlsearchparams-urlsearchparams', "URLSearchParams()")}}
-      </td>
-      <td>{{Spec2('URL')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.URLSearchParams.URLSearchParams")}}</p>
+<p>{{Compat}}</p>

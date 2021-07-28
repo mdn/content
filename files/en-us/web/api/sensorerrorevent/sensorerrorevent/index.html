@@ -1,5 +1,5 @@
 ---
-title: SensorErrorEvent.SensorErrorEvent()
+title: SensorErrorEvent()
 slug: Web/API/SensorErrorEvent/SensorErrorEvent
 tags:
 - API
@@ -11,17 +11,17 @@ tags:
 - Sensor APIs
 - SensorErrorEvent
 - Sensors
+browser-compat: api.SensorErrorEvent.SensorErrorEvent
 ---
-<div>{{APIRef("Generic Sensor API")}}</div>
+<div>{{APIRef("Sensor API")}}</div>
 
-<p><span class="seoSummary">The <strong><code>SensorErrorEvent</code></strong> constructor
-    creates a new {{domxref("SensorErrorEvent")}} object which provides information about
-    errors thrown by any of the interfaces based on {{domxref('Sensor')}}.</span></p>
+<p>The <strong><code>SensorErrorEvent</code></strong> constructor
+    creates a new {{domxref("SensorErrorEvent")}} object which provides information about
+    errors thrown by any of the interfaces based on {{domxref('Sensor')}}.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js"><var>sensorErrorEvent</var> = new SensorErrorEvent(<var>type</var>, {error: <var>domException</var>});</pre>
+<pre class="brush: js">sensorErrorEvent = new SensorErrorEvent(type, {error: domException});</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -38,21 +38,8 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Generic Sensor','#dom-sensorerrorevent-sensorerrorevent','SensorErrorEvent')}}</td>
-      <td>{{Spec2('Generic Sensor')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.SensorErrorEvent.SensorErrorEvent")}}</p>
+<p>{{Compat}}</p>

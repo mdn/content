@@ -20,12 +20,12 @@ tags:
 - XRSessionMode
 - augmented
 - mode
+browser-compat: api.XRPermissionDescriptor.mode
 ---
 <p>{{APIRef("WebXR Device API")}}{{SecureContext_header}}</p>
 
 <p>The <code><strong>mode</strong></code> property of
-  the {{domxref("XRPermissionDescriptor")}} dictionary is a string taken from the
-  {{domxref("XRSessionMode")}} enumerated type, specifying which Web XR session mode
+  the {{domxref("XRPermissionDescriptor")}} dictionary is a string, specifying which Web XR session mode
   (<code>inline</code>, <code>immersive-vr</code>, or <code>immersive-ar</code>) the
   described permissions will be used for.</p>
 
@@ -43,10 +43,25 @@ tags:
 
 <h3 id="Value">Value</h3>
 
-<p>A {{domxref("DOMString")}} whose value is one of the strings found in
-  the {{domxref("XRSessionMode")}} enumerated type:</p>
+<p>A {{domxref("DOMString")}} whose value is one of the following strings</p>
 
-<p>{{page("/en-US/docs/Web/API/XRSessionMode", "Values")}}</p>
+  <ul>
+    <li>{{experimental_inline}} <code>immersive-ar</code>: The session's output will be given exclusive access to the immersive device,
+     but the rendered content will be blended with the real-world environment.
+     The session's {{DOMxRef("XRSession.environmentBlendMode", "environmentBlendMode")}} indicates the method
+     to be used to blend the content together.
+    </li>
+    <li><code>immersive-vr</code>: Indicates that the rendered session will be displayed using an immersive XR device
+     in VR mode; it is not intended to be overlaid or integrated into the surrounding environment.
+     The {{DOMxRef("XRSession.environmentBlendMode", "environmentBlendMode")}} is expected to be
+     <code>opaque</code> if possible, but might be <code>additive</code> if the hardware requires it.
+    </li>
+    <li><code>inline</code>: The output is presented inline within the context of an element in a standard HTML document,
+     rather than occupying the full visual space. Inline sessions can be presented in either mono or stereo mode,
+     and may or may not have viewer tracking available. Inline sessions don't require special hardware and should be
+     available on any {{Glossary("user agent")}} offering WebXR API support.
+    </li>
+   </ul>
 
 <h2 id="Usage_notes">Usage notes</h2>
 
@@ -87,28 +102,11 @@ if (navigator.permissions) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName('WebXR','#dom-xrpermissiondescriptor-mode','XRPermissionDescriptor.mode')}}
-      </td>
-      <td>{{Spec2('WebXR')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.XRPermissionDescriptor.mode")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

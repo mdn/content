@@ -10,6 +10,7 @@ tags:
   - Reference
   - Storage
   - openKeyCursor
+browser-compat: api.IDBIndex.openKeyCursor
 ---
 <p>{{ APIRef("IndexedDB") }}</p>
 
@@ -94,8 +95,6 @@ var <em>request</em> = <em>myIndex</em>.openKeyCursor(<em>range</em>, <em>direct
 
 <h2 id="Example">Example</h2>
 
-<div class="note"></div>
-
 <p>In the following example we open a transaction and an object store, then get the
   index <code>lName</code> from a simple contacts database. We then open a key cursor on
   the index using <code>openKeyCursor()</code> — this works the same as opening a cursor
@@ -130,30 +129,11 @@ var <em>request</em> = <em>myIndex</em>.openKeyCursor(<em>range</em>, <em>direct
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('IndexedDB', '#dom-idbindex-openkeycursor', 'openKeyCursor()')}}</td>
-      <td>{{Spec2('IndexedDB')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName("IndexedDB 2", "#dom-idbindex-openkeycursor", "openKeyCursor()")}}
-      </td>
-      <td>{{Spec2("IndexedDB 2")}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.IDBIndex.openKeyCursor")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

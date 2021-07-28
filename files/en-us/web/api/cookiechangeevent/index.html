@@ -1,0 +1,68 @@
+---
+title: CookieChangeEvent
+slug: Web/API/CookieChangeEvent
+tags:
+  - API
+  - Interface
+  - Reference
+  - CookieChangeEvent
+browser-compat: api.CookieChangeEvent
+---
+<div>{{securecontext_header}}{{DefaultAPISidebar("Cookie Store")}}</div>
+
+<p class="summary">The <strong><code>CookieChangeEvent</code></strong> interface of the {{domxref('Cookie Store API')}} is the event type passed to {{domxref("CookieStore.onchange()")}} when any cookie changes have occurred. A cookie change consists of a cookie and a type (either "changed" or "deleted").</p>
+
+<p>Cookie changes that will cause the <code>CookieChangeEvent</code> to be dispatched are:</p>
+
+<ul>
+  <li>A cookie is newly created and not immediately removed. In this case <code>type</code> is "changed".</li>
+  <li>A cookie is newly created and immediately removed. In this case <code>type</code> is "deleted"</li>
+  <li>A cookie is removed. In this case <code>type</code> is "deleted".</li>
+</ul>
+
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>A cookie that is replaced due to the insertion of another cookie with the same name, domain, and path, is ignored and does not trigger a change event.</p>
+</div>
+
+<h2 id="Constructor">Constructor</h2>
+
+<dl>
+  <dt>{{domxref("CookieChangeEvent.CookieChangeEvent()")}}</dt>
+  <dd>Creates a new <code>CookieChangeEvent</code>.</dd>
+</dl>
+
+<h2 id="Properties">Properties</h2>
+
+<p><em>This interface also inherits properties from {{domxref("Event")}}.</em></p>
+
+<dl>
+  <dt>{{domxref("CookieChangeEvent.changed")}}{{ReadOnlyInline}}</dt>
+  <dd>Returns an array containing one or more changed cookies.</dd>
+  <dt>{{domxref("CookieChangeEvent.deleted")}}{{ReadOnlyInline}}</dt>
+  <dd>Returns an array containing one or more deleted cookies.</dd>
+</dl>
+
+<h2 id="Examples">Examples</h2>
+
+<p>In this example when the cookie is set, the event listener logs the event to the console. This is a <code>CookieChangeEvent</code> object with the {{domxref("CookieChangeEvent.changed","changed")}} property containing an object representing the cookie that has just been set.</p>
+
+<pre class="brush:js">cookieStore.addEventListener('change', (event) => {
+  console.log(event);
+});
+
+const one_day = 24 * 60 * 60 * 1000;
+cookieStore.set({
+  name: "cookie1",
+  value: "cookie1-value",
+  expires: Date.now() + one_day,
+  domain: "example.com"
+});</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+{{Specifications}}
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>

@@ -10,16 +10,17 @@ tags:
 
 <p>To start, you need to create an {{domxref("XSLTProcessor")}} object:</p>
 
-<div style="overflow: hidden;">
-<pre class="brush: js">var processor = new XSLTProcessor();
-</pre>
-</div>
+
+<pre class="brush: js">var processor = new XSLTProcessor();</pre>
 
 <h3 id="Specifying_the_stylesheet">Specifying the stylesheet</h3>
 
 <p>Before you can use it, you must import a stylesheet with the {{domxref("XSLTProcessor.importStylesheet()")}} method. It has a single parameter, which is the DOM Node of the XSLT stylesheet to import.</p>
 
-<p>{{ note("The import is live, meaning that if you alter the stylesheet DOM after importing it, this will be reflected in the processing. Rather than modifying the DOM it is recommended to use stylesheet parameters which are usually easier and can give better performance.") }}</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>The import is live, meaning that if you alter the stylesheet DOM after importing it, this will be reflected in the processing. Rather than modifying the DOM it is recommended to use stylesheet parameters which are usually easier and can give better performance.</p>
+</div>
 
 <pre class="brush: js">var testTransform = document.implementation.createDocument("", "test", null);
 // just an example to get a transform into a script as a DOM

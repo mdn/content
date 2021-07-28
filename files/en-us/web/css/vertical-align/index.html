@@ -6,6 +6,7 @@ tags:
   - CSS Property
   - Reference
   - 'recipe:css-property'
+browser-compat: css.properties.vertical-align
 ---
 <div>{{CSSRef}}</div>
 
@@ -13,93 +14,13 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/css/vertical-align.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <p>The vertical-align property can be used in two contexts:</p>
 
 <ul>
- <li>To vertically align an inline element's box inside its containing line box. For example, it could be used to vertically position an {{HTMLElement("img")}} in a line of text:</li>
+ <li>To vertically align an inline element's box inside its containing line box. For example, it could be used to <a href="#vertical_alignment_in_a_line_box">vertically position an image in a line of text</a>.</li>
+ <li>To vertically align <a href="#vertical_alignment_in_a_table_cell">the content of a cell in a table</a>.</li>
 </ul>
-
-<div id="vertical-align-inline">
-<pre class="hidden brush: html">&lt;p&gt;
-top:&lt;img style="vertical-align:top" src="https://mdn.mozillademos.org/files/15189/star.png"/&gt;
-middle:&lt;img style="vertical-align:middle" src="https://mdn.mozillademos.org/files/15189/star.png"/&gt;
-bottom:&lt;img style="vertical-align:bottom" src="https://mdn.mozillademos.org/files/15189/star.png"/&gt;
-super:&lt;img style="vertical-align:super" src="https://mdn.mozillademos.org/files/15189/star.png"/&gt;
-sub:&lt;img style="vertical-align:sub" src="https://mdn.mozillademos.org/files/15189/star.png"/&gt;
-&lt;/p&gt;
-&lt;p&gt;
-text-top:&lt;img style="vertical-align:text-top" src="https://mdn.mozillademos.org/files/15189/star.png"/&gt;
-text-bottom:&lt;img  style="vertical-align:text-bottom" src="https://mdn.mozillademos.org/files/15189/star.png"/&gt;
-0.2em:&lt;img style="vertical-align:0.2em" src="https://mdn.mozillademos.org/files/15189/star.png"/&gt;
--1em:&lt;img  style="vertical-align:-1em" src="https://mdn.mozillademos.org/files/15189/star.png"/&gt;
-20%:&lt;img style="vertical-align:20%" src="https://mdn.mozillademos.org/files/15189/star.png"/&gt;
--100%:&lt;img  style="vertical-align:-100%" src="https://mdn.mozillademos.org/files/15189/star.png"/&gt;
-&lt;/p&gt;
-
-</pre>
-
-<pre class="hidden brush: css">#* {
-  box-sizing: border-box;
-}
-
-img {
-  margin-right: 0.5em;
-}
-
-p {
-  height: 3em;
-  padding: 0 .5em;
-  font-family: monospace;
-  text-decoration: underline overline;
-  margin-left: auto;
-  margin-right: auto;
-  width: 80%;
-}
-</pre>
-</div>
-
-<p>{{EmbedLiveSample("vertical-align-inline", '100%', 140, "", "", "example-outcome-frame")}}</p>
-
-<ul>
- <li>To vertically align the content of a cell in a table:</li>
-</ul>
-
-<div id="vertical-align-table">
-<pre class="hidden brush: html">&lt;table&gt;
-  &lt;tr&gt;
-    &lt;td style="vertical-align: baseline"&gt;baseline&lt;/td&gt;
-    &lt;td style="vertical-align: top"&gt;top&lt;/td&gt;
-    &lt;td style="vertical-align: middle"&gt;middle&lt;/td&gt;
-    &lt;td style="vertical-align: bottom"&gt;bottom&lt;/td&gt;
-    &lt;td&gt;
-      &lt;p&gt;There is a theory which states that if ever anyone discovers exactly what the Universe is for and why it is here, it will instantly disappear and be replaced by something even more bizarre and inexplicable.&lt;/p&gt;
-&lt;p&gt;There is another theory which states that this has already happened.&lt;/p&gt;
-    &lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;
-
-</pre>
-
-<pre class="hidden brush: css">table {
-  margin-left: auto;
-  margin-right: auto;
-  width: 80%;
-}
-
-table, th, td {
-  border: 1px solid black;
-}
-
-td {
-  padding: 0.5em;
-  font-family: monospace;
-}
-</pre>
-</div>
-
-<p>{{EmbedLiveSample("vertical-align-table", '100%', 210, "", "", "example-outcome-frame")}}</p>
 
 <p>Note that <code>vertical-align</code> only applies to inline, inline-block and table-cell elements: you can't use it to vertically align <a href="/en-US/docs/Web/HTML/Block-level_elements">block-level elements</a>.</p>
 
@@ -125,6 +46,7 @@ vertical-align: 20%;
 /* Global values */
 vertical-align: inherit;
 vertical-align: initial;
+vertical-align: revert;
 vertical-align: unset;
 </pre>
 
@@ -197,10 +119,10 @@ vertical-align: unset;
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html">&lt;div&gt;An &lt;img src="https://mdn.mozillademos.org/files/12245/frame_image.svg" alt="link" width="32" height="32" /&gt; image with a default alignment.&lt;/div&gt;
-&lt;div&gt;An &lt;img class="top" src="https://mdn.mozillademos.org/files/12245/frame_image.svg" alt="link" width="32" height="32" /&gt; image with a text-top alignment.&lt;/div&gt;
-&lt;div&gt;An &lt;img class="bottom" src="https://mdn.mozillademos.org/files/12245/frame_image.svg" alt="link" width="32" height="32" /&gt; image with a text-bottom alignment.&lt;/div&gt;
-&lt;div&gt;An &lt;img class="middle" src="https://mdn.mozillademos.org/files/12245/frame_image.svg" alt="link" width="32" height="32" /&gt; image with a middle alignment.&lt;/div&gt;
+<pre class="brush: html">&lt;div&gt;An &lt;img src="frame_image.svg" alt="link" width="32" height="32" /&gt; image with a default alignment.&lt;/div&gt;
+&lt;div&gt;An &lt;img class="top" src="frame_image.svg" alt="link" width="32" height="32" /&gt; image with a text-top alignment.&lt;/div&gt;
+&lt;div&gt;An &lt;img class="bottom" src="frame_image.svg" alt="link" width="32" height="32" /&gt; image with a text-bottom alignment.&lt;/div&gt;
+&lt;div&gt;An &lt;img class="middle" src="frame_image.svg" alt="link" width="32" height="32" /&gt; image with a middle alignment.&lt;/div&gt;
 </pre>
 
 <h4 id="CSS">CSS</h4>
@@ -214,33 +136,102 @@ img.middle { vertical-align: middle; }
 
 <p>{{EmbedLiveSample("Basic_example")}}</p>
 
+<h3 id="vertical_alignment_in_a_line_box">Vertical alignment in a line box</h3>
+
+<h4>HTML</h4>
+
+<pre class="brush: html">&lt;p&gt;
+top:         &lt;img style="vertical-align: top" src="star.png"/&gt;
+middle:      &lt;img style="vertical-align: middle" src="star.png"/&gt;
+bottom:      &lt;img style="vertical-align: bottom" src="star.png"/&gt;
+super:       &lt;img style="vertical-align: super" src="star.png"/&gt;
+sub:         &lt;img style="vertical-align: sub" src="star.png"/&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+text-top:    &lt;img style="vertical-align: text-top" src="star.png"/&gt;
+text-bottom: &lt;img style="vertical-align: text-bottom" src="star.png"/&gt;
+0.2em:       &lt;img style="vertical-align: 0.2em" src="star.png"/&gt;
+-1em:        &lt;img style="vertical-align: -1em" src="star.png"/&gt;
+20%:         &lt;img style="vertical-align: 20%" src="star.png"/&gt;
+-100%:       &lt;img style="vertical-align: -100%" src="star.png"/&gt;
+&lt;/p&gt;
+
+</pre>
+
+<pre class="hidden brush: css">#* {
+  box-sizing: border-box;
+}
+
+img {
+  margin-right: 0.5em;
+}
+
+p {
+  height: 3em;
+  padding: 0 .5em;
+  font-family: monospace;
+  text-decoration: underline overline;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+</pre>
+
+<h4>Result</h4>
+
+<p>{{EmbedLiveSample("vertical_alignment_in_a_line_box", '100%', 160, "", "")}}</p>
+
+<h3 id="vertical_alignment_in_a_table_cell">Vertical alignment in a table cell</h3>
+
+<h4>HTML</h4>
+
+<pre class="brush: html">&lt;table&gt;
+  &lt;tr&gt;
+    &lt;td style="vertical-align: baseline"&gt;baseline&lt;/td&gt;
+    &lt;td style="vertical-align: top"&gt;top&lt;/td&gt;
+    &lt;td style="vertical-align: middle"&gt;middle&lt;/td&gt;
+    &lt;td style="vertical-align: bottom"&gt;bottom&lt;/td&gt;
+    &lt;td&gt;
+      &lt;p&gt;There is a theory which states that if ever anyone discovers exactly
+      what the Universe is for and why it is here, it will instantly disappear and
+      be replaced by something even more bizarre and inexplicable.&lt;/p&gt;
+      &lt;p&gt;There is another theory which states that this has already happened.&lt;/p&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</pre>
+
+<h4>CSS</h4>
+
+<pre class="brush: css">table {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+td {
+  padding: 0.5em;
+  font-family: monospace;
+}
+</pre>
+
+<h4>Result</h4>
+
+<p>{{EmbedLiveSample("vertical_alignment_in_a_table_cell", '100%', 230, "", "")}}</p>
+
+
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'visudet.html#propdef-vertical-align', 'vertical-align')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Adds the {{cssxref("&lt;length&gt;")}} value and allows it to be applied to elements with a {{cssxref("display")}} type of <code>table-cell</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#vertical-align', 'vertical-align')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.vertical-align")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

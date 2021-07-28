@@ -16,8 +16,9 @@ tags:
 - XRSessionEvent
 - augmented
 - events
+browser-compat: api.XRSessionEvent.XRSessionEvent
 ---
-<p>{{APIRef("WebXR Device API")}}{{SecureContext_Header}}</p>
+<p>{{APIRef("WebXR Device API")}}</p>
 
 <p><span class="seoSummary">The WebXR Device API's
     <code><strong>XRSessionEvent()</strong></code> constructor creates and returns a new
@@ -39,11 +40,10 @@ tags:
     types")}} for a list of the permitted values.</dd>
   <dt><code>eventInitDict</code></dt>
   <dd>
-    <p>An object conforming to the {{domxref("XRSessionEventInit")}} dictionary which
-      contains values to be applied to the newly-created event object. Permitted values
-      are:</p>
-
-    <p>{{page("/en-US/docs/Web/API/XRSessionEventInit", "Properties")}}</p>
+    <p>An object with the following values:</p>
+    <ul>
+      <li><code>session</code>: The {{domxref("XRSession")}} to which the event is to be delivered.</li>
+    </ul>
   </dd>
 </dl>
 
@@ -63,24 +63,8 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName("WebXR", "#dom-xrsessionevent-xrsessionevent", "XRSessionEvent()
-        constructor")}}</td>
-      <td>{{Spec2("WebXR")}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>{{Compat("api.XRSessionEvent.XRSessionEvent")}}</div>
+<div>{{Compat}}</div>

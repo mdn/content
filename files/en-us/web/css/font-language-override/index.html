@@ -8,7 +8,8 @@ tags:
   - Reference
   - font-language-override
   - l10n
-  - 'recipe:css-property'
+  - recipe:css-property
+browser-compat: css.properties.font-language-override
 ---
 <div>{{CSSRef}}</div>
 
@@ -24,6 +25,7 @@ font-language-override: "TRK";  /* Use Turkish glyphs */
 /* Global values */
 font-language-override: initial;
 font-language-override: inherit;
+font-language-override: revert;
 font-language-override: unset;
 </pre>
 
@@ -41,7 +43,7 @@ font-language-override: unset;
  <dt><code>normal</code></dt>
  <dd>Tells the browser to use font glyphs that are appropriate for the language specified by the <code>lang</code> attribute. This is the default value.</dd>
  <dt>{{cssxref("string")}}</dt>
- <dd>Tells the browser to use font glyphs that are appropriate for the language specified by the string. The string must match a language tag found in the <a href="http://www.microsoft.com/typography/otspec/languagetags.htm">OpenType language system</a>. For example, "ENG" is English, and "KOR" is Korean.</dd>
+ <dd>Tells the browser to use font glyphs that are appropriate for the language specified by the string. The string must match a language tag found in the <a href="https://www.microsoft.com/typography/otspec/languagetags.htm">OpenType language system</a>. For example, "ENG" is English, and "KOR" is Korean.</dd>
 </dl>
 
 <h2 id="Formal_definition">Formal definition</h2>
@@ -58,8 +60,8 @@ font-language-override: unset;
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html">&lt;p class="para1"&gt;Default language setting.&lt;/p&gt;
-&lt;p class="para2"&gt;This is a string with the &lt;code&gt;font-language-override&lt;/code&gt; set to <code>Danish.</code>&lt;/p&gt;
+<pre class="brush: html">&lt;p class=&quot;para1&quot;&gt;Default language setting.&lt;/p&gt;
+&lt;p class=&quot;para2&quot;&gt;This is a string with the &lt;code&gt;font-language-override&lt;/code&gt; set to Danish.&lt;/p&gt;
 </pre>
 
 <h4 id="CSS">CSS</h4>
@@ -78,26 +80,11 @@ p.para2 {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Fonts', '#propdef-font-language-override', 'font-language-override')}}</td>
-   <td>{{Spec2('CSS4 Fonts')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.font-language-override")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

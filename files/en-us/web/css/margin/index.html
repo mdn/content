@@ -6,18 +6,24 @@ tags:
   - CSS Property
   - Property
   - 'recipe:css-shorthand-property'
+browser-compat: css.properties.margin
 ---
 <div>{{CSSRef}}</div>
 
-<p>The <strong><code>margin</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets the <a href="/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">margin area</a> on all four sides of an element. It is a <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand</a> for {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, and {{cssxref("margin-left")}}.</p>
+<p>The <strong><code>margin</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> shorthand property sets the <a href="/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">margin area</a> on all four sides of an element.
 
 <div>{{EmbedInteractiveExample("pages/css/margin.html")}}</div>
 
-<p>The top and bottom margins have no effect on <em>non-<a href="/en-US/docs/Web/CSS/Replaced_element">replaced</a></em> inline elements, such as {{HTMLElement("span")}} or {{HTMLElement("code")}}.</p>
+<h2 id="Constituent_properties">Constituent properties</h2>
 
-<div class="note">
-<p><strong>Note:</strong> Margins create extra space around an element. In contrast, {{cssxref("padding")}} creates extra space <em>within</em> an element.</p>
-</div>
+<p>This property is a shorthand for the following CSS properties:</p>
+
+<ul>
+ <li>{{cssxref("margin-bottom")}}</li>
+ <li>{{cssxref("margin-left")}}</li>
+ <li>{{cssxref("margin-right")}}</li>
+ <li>{{cssxref("margin-top")}}</li>
+</ul>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -37,6 +43,7 @@ margin: 2px 1em 0 auto;
 /* Global values */
 margin: inherit;
 margin: initial;
+margin: revert;
 margin: unset;
 </pre>
 
@@ -60,7 +67,27 @@ margin: unset;
  <dd>The browser selects a suitable margin to use. For example, in certain cases this value can be used to center an element.</dd>
 </dl>
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+<h2 id="Description">Description</h2>
+
+<p>This property can be used to set a margin on all four sides of an element. Margins create extra space <em>around</em> an element, unlike {{cssxref("padding")}}, which creates extra space <em>within</em> an element.</p>
+
+<p>The top and bottom margins have no effect on <em>non-<a href="/en-US/docs/Web/CSS/Replaced_element">replaced</a></em> inline elements, such as {{HTMLElement("span")}} or {{HTMLElement("code")}}.</p>
+
+<h3 id="Horizontal_centering">Horizontal centering</h3>
+
+<p>To center something horizontally in modern browsers, you can use {{cssxref("display")}}<code>: flex; </code>{{cssxref("justify-content")}}<code>: center;</code> .</p>
+
+<p>However, in older browsers like IE8-9 that do not support Flexible Box Layout, these are not available. In order to center an element inside its parent, use <code>margin: 0 auto;</code>.</p>
+
+<h3 id="Margin_collapsing">Margin collapsing</h3>
+
+<p>Elements' top and bottom margins are sometimes collapsed into a single margin that is equal to the larger of the two margins. See <a href="/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing">Mastering margin collapsing</a> for more information.</p>
+
+<h2 id="Formal_definition">Formal definition</h2>
+
+<p>{{cssinfo}}</p>
+
+<h2 id="Formal_syntax">Formal syntax</h2>
 
 {{csssyntax}}
 
@@ -115,52 +142,13 @@ margin: auto;               /* top and bottom: 0 margin     */
                             /* Box is horizontally centered */
 </pre>
 
-<h2 id="Notes">Notes</h2>
-
-<h3 id="Horizontal_centering">Horizontal centering</h3>
-
-<p>To center something horizontally in modern browsers, you can use {{cssxref("display")}}<code>: flex; </code>{{cssxref("justify-content")}}<code>: center;</code> .</p>
-
-<p>However, in older browsers like IE8-9 that do not support Flexible Box Layout, these are not available. In order to center an element inside its parent, use <code>margin: 0 auto;</code>.</p>
-
-<h3 id="Margin_collapsing">Margin collapsing</h3>
-
-<p>Elements' top and bottom margins are sometimes collapsed into a single margin that is equal to the larger of the two margins. See <a href="/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing">Mastering margin collapsing</a> for more information.</p>
-
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS3 Box', '#margin', 'margin') }}</td>
-   <td>{{ Spec2('CSS3 Box') }}</td>
-   <td>No significant change.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS2.1', 'box.html#margin-properties', 'margin') }}</td>
-   <td>{{ Spec2('CSS2.1') }}</td>
-   <td>Removes the effect of top and bottom margins on inline elements.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS1', '#margin', 'margin') }}</td>
-   <td>{{ Spec2('CSS1') }}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
-
-<p>{{cssinfo}}</p>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.margin")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

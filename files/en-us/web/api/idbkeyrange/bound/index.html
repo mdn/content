@@ -10,6 +10,7 @@ tags:
 - Reference
 - Storage
 - bound
+browser-compat: api.IDBKeyRange.bound
 ---
 <p>{{ APIRef("IndexedDB") }}</p>
 
@@ -48,10 +49,10 @@ var <em>myIDBKeyRange</em> = <em>IDBKeyRange</em>.bound(<em>lower</em>, <em>uppe
 
 <p>{{domxref("IDBKeyRange")}}: The newly created key range.</p>
 
-<h3 id="Exceptions"><span style="line-height: 1.5;">Exceptions</span></h3>
+<h3 id="Exceptions">Exceptions</h3>
 
-<p><span style="line-height: 1.5;">This method may raise a {{domxref("DOMException")}} of
-    the following type:</span></p>
+<p>This method may raise a {{domxref("DOMException")}} of
+    the following type:</p>
 
 <table class="standard-table">
   <thead>
@@ -85,10 +86,8 @@ var <em>myIDBKeyRange</em> = <em>IDBKeyRange</em>.bound(<em>lower</em>, <em>uppe
   declaring <code>keyRangeValue</code> as its optional key range value. This means that
   the cursor will only retrieve records with keys inside that range. This range includes
   the values "A" and "F", as we haven't declared that they should be open  bounds. If we
-  used <span
-    style="background-color: #fafbfc; font-family: consolas,monaco,andale mono,monospace; font-size: 1rem; line-height: 19px; white-space: pre;">IDBKeyRange.bound("A",
-    "F", true, true);</span>, then the range would not include "A" and "F", only the
-  values between them.</p>
+  used <code>IDBKeyRange.bound("A", "F", true, true);</code>, then the range would not
+  include <code>"A"</code> and <code>"F"</code>, only the values between them.</p>
 
 <div class="note">
   <p><strong>Note</strong>: For a more complete example allowing you to experiment with
@@ -99,7 +98,7 @@ var <em>myIDBKeyRange</em> = <em>IDBKeyRange</em>.bound(<em>lower</em>, <em>uppe
       too</a>.)</p>
 </div>
 
-<pre class="brush: js" style="font-size: 14px;">function displayData() {
+<pre class="brush: js">function displayData() {
   var keyRangeValue = IDBKeyRange.bound("A", "F");
 
   var transaction = db.transaction(['fThings'], 'readonly');
@@ -121,31 +120,11 @@ var <em>myIDBKeyRange</em> = <em>IDBKeyRange</em>.bound(<em>lower</em>, <em>uppe
 
 <h2 id="Specifications">Specifications</h2>
 
-<div>
-  <table class="standard-table">
-    <tbody>
-      <tr>
-        <th scope="col">Specification</th>
-        <th scope="col">Status</th>
-        <th scope="col">Comment</th>
-      </tr>
-      <tr>
-        <td>{{SpecName('IndexedDB', '#dom-idbkeyrange-bound', 'bound()')}}</td>
-        <td>{{Spec2('IndexedDB')}}</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>{{SpecName("IndexedDB 2", "#dom-idbkeyrange-bound", "bound()")}}</td>
-        <td>{{Spec2("IndexedDB 2")}}</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.IDBKeyRange.bound")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

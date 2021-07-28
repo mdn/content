@@ -9,6 +9,7 @@ tags:
   - CSS Fonts
   - CSS Property
   - Reference
+browser-compat: css.at-rules.font-face.src
 ---
 <div>{{CSSRef}}</div>
 
@@ -38,9 +39,9 @@ src: local(font), url(path/to/font.svg) format("svg"),
 
 <dl>
  <dt><code>&lt;url&gt; [ format( &lt;string&gt;# ) ]?</code></dt>
- <dd>Specifies an external reference consisting of a {{cssxref("&lt;url&gt;")}}, followed by an optional hint using the <code id="format()">format()</code> function to describe the format of the font resource referenced by that URL. The format hint contains a comma-separated list of format strings that denote well-known font formats. If a user agent doesn't support the specified formats, it skips downloading the font resource. If no format hints are supplied, the font resource is always downloaded.</dd>
+ <dd>Specifies an external reference consisting of a {{cssxref("&lt;url&gt;")}}, followed by an optional hint using the <code>format()</code> function to describe the format of the font resource referenced by that URL. The format hint contains a comma-separated list of format strings that denote well-known font formats. If a user agent doesn't support the specified formats, it skips downloading the font resource. If no format hints are supplied, the font resource is always downloaded.</dd>
  <dt><code>&lt;font-face-name&gt;</code></dt>
- <dd>Specifies the name of a locally-installed font face using the <code id="local()">local()</code> function, which uniquely identifies a single font face within a larger family. The name can optionally be enclosed in quotes.</dd>
+ <dd>Specifies the name of a locally-installed font face using the <code>local()</code> function, which uniquely identifies a single font face within a larger family. The name can optionally be enclosed in quotes.</dd>
 </dl>
 
 <h2 id="Description">Description</h2>
@@ -71,26 +72,11 @@ src: local(font), url(path/to/font.svg) format("svg"),
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Fonts', '#src-desc', 'src')}}</td>
-   <td>{{Spec2('CSS3 Fonts')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.at-rules.font-face.src")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

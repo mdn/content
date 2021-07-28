@@ -17,6 +17,7 @@ tags:
   - recvonly
   - sendonly
   - sendrecv
+browser-compat: api.RTCRtpTransceiverDirection
 ---
 <div>{{APIRef("WebRTC")}}</div>
 
@@ -29,57 +30,44 @@ tags:
 <table class="standard-table">
  <thead>
   <tr>
-   <th scope="row" style="vertical-align: top;">Value</th>
-   <th scope="col" style="vertical-align: top;"><code>RTCRtpSender</code> behavior</th>
-   <th scope="col" style="vertical-align: top;"><code>RTCRtpReceiver</code> behavior</th>
+   <th scope="row">Value</th>
+   <th scope="col"><code>RTCRtpSender</code> behavior</th>
+   <th scope="col"><code>RTCRtpReceiver</code> behavior</th>
   </tr>
  </thead>
  <tbody>
   <tr>
-   <th scope="row" style="vertical-align: top;"><a id="sendrecv"><code>"sendrecv"</code></a></th>
-   <td style="vertical-align: top;">Offers to send {{Glossary("RTP")}} data, and will do so if the other peer accepts the connection and at least one of the sender's encodings is active<sup>1</sup>.</td>
-   <td style="vertical-align: top;">Offers to receive RTP data, and does so if the other peer accepts.</td>
+   <th scope="row"><a id="sendrecv"><code>"sendrecv"</code></a></th>
+   <td>Offers to send {{Glossary("RTP")}} data, and will do so if the other peer accepts the connection and at least one of the sender's encodings is active.</td>
+   <td>Offers to receive RTP data, and does so if the other peer accepts.</td>
   </tr>
   <tr>
-   <th scope="row" style="vertical-align: top;"><a id="sendonly"><code>"sendonly"</code></a></th>
-   <td style="vertical-align: top;">Offers to send RTP data, and will do so if the other peer accepts the connection and at least one of the sender's encodings is active<sup>1</sup>.</td>
-   <td style="vertical-align: top;">Does <em>not</em> offer to receive RTP data and will not do so.</td>
+   <th scope="row"><a id="sendonly"><code>"sendonly"</code></a></th>
+   <td>Offers to send RTP data, and will do so if the other peer accepts the connection and at least one of the sender's encodings is active.</td>
+   <td>Does <em>not</em> offer to receive RTP data and will not do so.</td>
   </tr>
   <tr>
-   <th scope="row" style="vertical-align: top;"><a id="recvonly"><code>"recvonly"</code></a></th>
-   <td style="vertical-align: top;">Does <em>not</em> offer to send RTP data, and will not do so.</td>
-   <td style="vertical-align: top;">Offers to receive RTP data, and will do so if the other peer offers.</td>
+   <th scope="row"><a id="recvonly"><code>"recvonly"</code></a></th>
+   <td>Does <em>not</em> offer to send RTP data, and will not do so.</td>
+   <td>Offers to receive RTP data, and will do so if the other peer offers.</td>
   </tr>
   <tr>
-   <th scope="row" style="vertical-align: top;"><a id="inactive"><code>"inactive"</code></a></th>
-   <td style="vertical-align: top;">Does <em>not</em> offer to send RTP data, and will not do so.</td>
-   <td style="vertical-align: top;">Does <em>not</em> offer to receive RTP data and will not do so.</td>
+   <th scope="row"><a id="inactive"><code>"inactive"</code></a></th>
+   <td>Does <em>not</em> offer to send RTP data, and will not do so.</td>
+   <td>Does <em>not</em> offer to receive RTP data and will not do so.</td>
   </tr>
  </tbody>
 </table>
 
-<p>[1] To determine if a sender has at least one active encoding, the {{Glossary("user agent")}} gets its parameters using {{domxref("RTCRtpSender.getParameters()")}}, then looks at the parameters' {{domxref("RTCRtpParameters.encodings", "encodings")}} property; if any of the listed encodings has its {{domxref("RTCRtpEncodingParameters.active", "active")}} property set to <code>true</code>, the sender has an active encoding.</p>
+<p> To determine if a sender has at least one active encoding, the {{Glossary("user agent")}} gets its parameters using {{domxref("RTCRtpSender.getParameters()")}}, then looks at the parameters' {{domxref("RTCRtpParameters.encodings", "encodings")}} property; if any of the listed encodings has its {{domxref("RTCRtpEncodingParameters.active", "active")}} property set to <code>true</code>, the sender has an active encoding.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("WebRTC 1.0", "#dom-rtcrtptransceiverdirection", "RTCRtpTransceiverDirection")}}</td>
-   <td>{{Spec2("WebRTC 1.0")}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCRtpTransceiverDirection")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

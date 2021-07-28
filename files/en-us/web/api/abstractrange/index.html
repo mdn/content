@@ -11,6 +11,7 @@ tags:
   - Interface
   - Range
   - Reference
+browser-compat: api.AbstractRange
 ---
 <div>{{APIRef("DOM WHATWG")}}</div>
 
@@ -101,7 +102,7 @@ document.body.appendChild(contents);
 
 <p>After loading the HTML and constructing the DOM representation of the document, the resulting DOM tree looks like this:</p>
 
-<p><a href="https://mdn.mozillademos.org/files/16886/SimpleDOM.svg"><img alt="Diagram of the DOM for a simple web page" src="simpledom.svg"></a></p>
+<p><a href="simpledom.svg"><img alt="Diagram of the DOM for a simple web page" src="simpledom.svg"></a></p>
 
 <p>In this diagram, the nodes representing HTML elements are shown in green. Eah row beneath them shows the next layer of depth into the DOM tree. Blue nodes are text nodes, containing the text that gets shown onscreen. Each element's contents are linked below it in the tree, potentially spawning a series of branches below as elements include other elements and text nodes.</p>
 
@@ -172,25 +173,8 @@ document.body.appendChild(fragment);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#abstractrange', 'AbstractRange')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-
-<p>{{Compat("api.AbstractRange")}}</p>
+<p>{{Compat}}</p>

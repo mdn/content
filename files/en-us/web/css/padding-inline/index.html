@@ -4,10 +4,22 @@ slug: Web/CSS/padding-inline
 tags:
   - CSS
   - 'recipe:css-shorthand-property'
+browser-compat: css.properties.padding-inline
 ---
 <div>{{CSSRef}}</div>
 
 <p>The <strong><code>padding-inline</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand property</a> defines the logical inline start and end padding of an element, which maps to physical padding properties depending on the element's writing mode, directionality, and text orientation.</p>
+
+<h2 id="Constituent_properties">Constituent properties</h2>
+
+<p>This property is a shorthand for the following CSS properties:</p>
+
+<ul>
+  <li><a href="/en-US/docs/Web/CSS/padding-inline-end"><code>padding-inline-end</code></a></li>
+  <li><a href="/en-US/docs/Web/CSS/padding-inline-start"><code>padding-inline-start</code></a></li>
+ </ul>
+
+<h2 id="Syntax">Syntax</h2>
 
 <pre class="brush:css no-line-numbers">/* &lt;length&gt; values */
 padding-inline: 10px 20px;  /* An absolute length */
@@ -20,23 +32,20 @@ padding-inline: 5% 2%; /* relative to the nearest block container's width */
 /* Global values */
 padding-inline: inherit;
 padding-inline: initial;
+padding-inline: revert;
 padding-inline: unset;
 </pre>
 
-<h2 id="Constituent_properties">Constituent properties</h2>
-
-<p>This property is a shorthand for the following CSS properties:</p>
-
-<ul>
- <li><a href="/en-US/docs/Web/CSS/padding-inline-end"><code>padding-inline-end</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/padding-inline-start"><code>padding-inline-start</code></a></li>
-</ul>
-
-<h2 id="Syntax">Syntax</h2>
+<p>The <code>padding-inline</code> property may be specified with one or two values. If one value is given, it is used as the value for both {{cssxref("padding-inline-start")}} and {{cssxref("padding-inline-end")}}. If two values are given, the first is used for {{cssxref("padding-inline-start")}} and the second for {{cssxref("padding-inline-end")}}.</p>
 
 <h3 id="Values">Values</h3>
 
-<p>The <code>padding-inline</code> property takes the same values as the {{cssxref("padding-left")}} property.</p>
+<dl>
+  <dt>{{cssxref("&lt;length&gt;")}}</dt>
+  <dd>The size of the padding as a fixed value. Must be nonnegative.</dd>
+  <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
+  <dd>The size of the padding as a percentage, relative to the <em>inline-size</em> of the containing block. Must be nonnegative.</dd>
+</dl>
 
 <h2 id="Description">Description</h2>
 
@@ -81,26 +90,11 @@ padding-inline: unset;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Logical Properties", "#propdef-padding-inline", "padding-inline")}}</td>
-   <td>{{Spec2("CSS Logical Properties")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.padding-inline")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

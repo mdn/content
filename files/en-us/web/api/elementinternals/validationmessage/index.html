@@ -1,0 +1,37 @@
+---
+title: ElementInternals.validationMessage
+slug: Web/API/ElementInternals/validationMessage
+tags:
+  - API
+  - Property
+  - Reference
+  - validationMessage
+  - ElementInternals
+browser-compat: api.ElementInternals.validationMessage
+---
+<div>{{DefaultAPISidebar("DOM")}}</div>
+
+<p class="summary">The <strong><code>validationMessage</code></strong> read-only property of the {{domxref("ElementInternals")}} interface returns the validation message for the element.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js">let validationMessage = ElementInternals.validationMessage;
+</pre>
+
+<h3>Value</h3>
+<p>A {{domxref("DOMString","string")}} containing the validation message of this element.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<p>In the following example the validation message is set with {{domxref("ElementInternals.setValidity()")}}, and then returned with <code>validationMessage</code>.</p>
+
+<pre class="brush: js">this.internals_.setValidity({'valueMissing':true},"my message");
+console.log(this.internals_.validationMessage); // "my message"</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<p>{{Specifications}}</p>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>

@@ -9,6 +9,7 @@ tags:
 - Method
 - Reference
 - observe
+browser-compat: api.IntersectionObserver.observe
 ---
 <div>{{APIRef("Intersection Observer API")}}{{SeeCompatTable}}</div>
 
@@ -44,33 +45,37 @@ tags:
 
 <p><code>undefined</code>.</p>
 
+<h2 id="Examples">Examples</h2>
+
+<pre class="brush: js">
+// Register IntersectionObserver
+const io = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    // Add 'active' class if observation target is inside viewport
+    if (entry.intersectionRatio > 0) {
+      entry.target.classList.add('active');
+    }
+    // Remove 'active' class otherwise
+    else {
+      entry.target.classList.remove('active');
+    }
+  })
+})
+
+// Declares what to observe, and observes its properties.
+const boxElList = document.querySelectorAll('.box');
+boxElList.forEach((el) => {
+  io.observe(el);
+})
+</pre>
+
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('IntersectionObserver','#dom-intersectionobserver-observe','IntersectionObserver.observe()')}}
-      </td>
-      <td>{{Spec2('IntersectionObserver')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured
-  data. If you'd like to contribute to the data, please check out <a
-    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
-  and send us a pull request.</p>
-
-<p>{{Compat("api.IntersectionObserver.observe")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

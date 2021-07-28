@@ -20,6 +20,7 @@ tags:
   - XRReferenceSpace
   - matrix
   - transform
+browser-compat: api.XRReferenceSpace
 ---
 <p>{{APIRef("WebXR Device API")}}{{secureContext_header}}</p>
 
@@ -55,13 +56,54 @@ tags:
 
 <h2 id="Reference_space_types">Reference space types</h2>
 
-<p>{{page("/en-US/docs/Web/API/XRReferenceSpaceType", "Values")}}</p>
+<p>The types of reference space are listed in the table below, with brief information about their use cases and which interface is used to implement them.</p>
+
+<table class="standard-table" id="value-list">
+ <thead>
+  <tr>
+   <th scope="col">XRReferenceSpaceType</th>
+   <th scope="col">Description</th>
+   <th scope="col">Interface</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>bounded-floor</code></td>
+   <td>Similar to the <code>local</code> type, except the user is not expected to move outside a predetermined boundary, given by the {{domxref("XRBoundedReferenceSpace.boundsGeometry", "boundsGeometry")}} in the returned object.</td>
+   <td>{{domxref("XRBoundedReferenceSpace")}}</td>
+  </tr>
+  <tr>
+   <td><code>local</code></td>
+   <td>
+    <p>A tracking space whose native origin is located near the viewer's position at the time the session was created. The exact position depends on the underlying platform and implementation. The user isn't expected to move much if at all beyond their starting position, and tracking is optimized for this use case.</p>
+
+    <p>For devices with six degrees of freedom (6DoF) tracking, the <code>local</code> reference space tries to keep the origin stable relative to the environment.</p>
+   </td>
+   <td>{{domxref("XRReferenceSpace")}}</td>
+  </tr>
+  <tr>
+   <td><code>local-floor</code></td>
+   <td>Similar to the <code>local</code> type, except the starting position is placed in a safe location for the viewer to stand, where the value of the y axis is 0 at floor level. If that floor level isn't known, the {{Glossary("user agent")}} will estimate the floor level. If the estimated floor level is non-zero, the browser is expected to round it such a way as to avoid fingerprinting (likely to the nearest centimeter).</td>
+   <td>{{domxref("XRReferenceSpace")}}</td>
+  </tr>
+  <tr>
+   <td><code>unbounded</code></td>
+   <td>A tracking space which allows the user total freedom of movement, possibly over extremely long distances from their origin point. The viewer isn't tracked at all; tracking is optimized for stability around the user's current position, so the native origin may drift as needed to accommodate that need.</td>
+   <td>{{domxref("XRReferenceSpace")}}</td>
+  </tr>
+  <tr>
+   <td><code>viewer</code></td>
+   <td>A tracking space whose native origin tracks the viewer's position and orientation. This is used for environments in which the user can physically move around, and is supported by all instances of {{domxref("XRSession")}}, both immersive and inline, though it's most useful for inline sessions. It's particularly useful when determining the distance between the viewer and an input, or when working with offset spaces. Otherwise, typically, one of the other reference space types will be used more often.</td>
+   <td>{{domxref("XRReferenceSpace")}}</td>
+  </tr>
+ </tbody>
+</table>
 
 <h2 id="Usage_notes">Usage notes</h2>
 
 <h3 id="Creating_an_XRReferenceSpace">Creating an XRReferenceSpace</h3>
 
-<p>There are two situations in which you need to obtain an <code>XRReferenceSpace</code>. The first is when you set up your scene and need to obtain a reference space to represent the user's viewpoint on the world for the duration of the {{domxref("XRSession")}}. To do that, call the {{domxref("XRSession")}} method {{domxref("XRSession.requestReferenceSpace", "requestReferenceSpace()")}}, specifying the <a href="/en-US/docs/Web/API/XRReferenceSpaceType">reference space type</a> you wish to obtain.</p>
+<p>There are two situations in which you need to obtain an <code>XRReferenceSpace</code>. The first is when you set up your scene and need to obtain a reference space to represent the user's viewpoint on the world for the duration of the {{domxref("XRSession")}}. To do that, call the {{domxref("XRSession")}} method {{domxref("XRSession.requestReferenceSpace", "requestReferenceSpace()")}}, specifying the reference space type you wish to obtain.</p>
 
 <pre>xrSession.requestReferenceSpace("local").then((refSpace) =&gt; {
   xrReferenceSpace = refSpace;
@@ -84,28 +126,10 @@ xrReferenceSpace = xrReferenceSpace.getOffsetReferenceSpace(offsetTransform);</p
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebXR','#xrreferencespace-interface','XRReferenceSpace')}}</td>
-   <td>{{Spec2('WebXR')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-<div class="hidden">
-<p>The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-</div>
-
-<p>{{Compat("api.XRReferenceSpace")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -6,12 +6,13 @@ tags:
 - HTTP Header
 - Reference
 - Request header
+browser-compat: http.headers.If-Unmodified-Since
 ---
 <div>{{HTTPSidebar}}</div>
 
 <p>The <strong><code>If-Unmodified-Since</code></strong> request HTTP header makes the
   request conditional: the server will send back the requested resource, or accept it in
-  the case of a {{HTTPMethod("POST")}} or another non-{{Glossary("safe")}} method, only if
+  the case of a {{HTTPMethod("POST")}} or another non-{{Glossary("Safe/HTTP", "safe")}} method, only if
   it has not been last modified after the given date. If the resource has been modified
   after the given date, the response will be a {{HTTPStatus("412")}} (Precondition Failed)
   error.</p>
@@ -19,7 +20,7 @@ tags:
 <p>There are two common use cases:</p>
 
 <ul>
-  <li>In conjunction with non-{{Glossary("safe")}} methods, like {{HTTPMethod("POST")}},
+  <li>In conjunction with non-{{Glossary("Safe/HTTP", "safe")}} methods, like {{HTTPMethod("POST")}},
     it can be used to implement an <a
       href="https://en.wikipedia.org/wiki/Optimistic_concurrency_control">optimistic
       concurrency control</a>, like done by some wikis: editions are rejected if the
@@ -79,29 +80,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Title</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{RFC("7232", "If-Unmodified-Since", "3.4")}}</td>
-      <td>Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data.
-  If you'd like to contribute to the data, please check out <a
-    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
-  and send us a pull request.</p>
-
-<p>{{Compat("http.headers.If-Unmodified-Since")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

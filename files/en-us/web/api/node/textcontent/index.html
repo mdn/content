@@ -7,6 +7,7 @@ tags:
 - Node
 - Property
 - Reference
+browser-compat: api.Node.textContent
 ---
 <div>{{APIRef("DOM")}}</div>
 
@@ -77,8 +78,8 @@ tags:
 			</li>
 		</ul>
 	</li>
-	<li>Unlike <code>textContent</code>, altering <code>innerText</code> in Internet
-		Explorer (version 11 and below) removes child nodes from the element and
+	<li>Both <code>textContent</code> and <code>innerText</code> remove child nodes when altered,
+    but altering <code>innerText</code> in Internet Explorer (version 11 and below) also
 		<em>permanently destroys</em> all descendant text nodes. It is impossible to
 		insert the nodes again into any other element or into the same element after doing
 		so.</li>
@@ -115,26 +116,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName('DOM WHATWG','#dom-node-textcontent','Node.textContent')}}</td>
-			<td>{{Spec2('DOM WHATWG')}}</td>
-			<td></td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Node.textContent")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

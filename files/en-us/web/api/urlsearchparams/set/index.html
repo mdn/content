@@ -7,6 +7,7 @@ tags:
 - URL API
 - URLSearchParams
 - set
+browser-compat: api.URLSearchParams.set
 ---
 <p>{{ApiRef("URL API")}}</p>
 
@@ -44,7 +45,7 @@ let params = new URLSearchParams(url.search);
 
 //Add a third parameter.
 params.set('baz', 3);
-params.toString(); // <span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox objectBox-string">"foo=1&amp;bar=2&amp;baz=3"</span></span></span></span>
+params.toString(); // "foo=1&amp;bar=2&amp;baz=3"
 
 </pre>
 
@@ -112,26 +113,11 @@ console.info( url, url.toString() )
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName('URL', '#dom-urlsearchparams-set', "set()")}}</td>
-			<td>{{Spec2('URL')}}</td>
-			<td>Initial definition.</td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
 
-	<p>{{Compat("api.URLSearchParams.set")}}</p>
+	<p>{{Compat}}</p>
 </div>

@@ -11,26 +11,17 @@ tags:
   - Variables
   - env
   - env()
+browser-compat: css.properties.custom-property.env
 ---
 <div>{{CSSRef}}</div>
 
-<p><span class="seoSummary">The <strong><code>env()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Functions">function</a> can be used to insert the value of a user agent-defined environment variable into your CSS, in a similar fashion to the {{cssxref("var")}} function and <a href="/en-US/docs/Web/CSS/--*">custom properties</a>. The difference is that, as well as being user-agent defined rather than user-defined, environment variables are globally scoped to a document, whereas custom properties are scoped to the element(s) on which they are declared. </span></p>
-
-<p>To tell the browser to use the whole available space on the screen, and so enabling us to use the <code>env()</code> variables, we need to add a new viewport meta value:</p>
-
-<pre class="brush: html; no-line-numbers">&lt;meta name="viewport" content="viewport-fit=cover" /&gt;</pre>
-
-<pre class="brush: css; no-line-numbers">body {
-  padding:
-    env(safe-area-inset-top, 20px)
-    env(safe-area-inset-right, 20px)
-    env(safe-area-inset-bottom, 20px)
-    env(safe-area-inset-left, 20px);
-}</pre>
+<p>The <strong><code>env()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Functions">function</a> can be used to insert the value of a user agent-defined environment variable into your CSS, in a similar fashion to the {{cssxref("var()")}} function and <a href="/en-US/docs/Web/CSS/--*">custom properties</a>. The difference is that, as well as being user-agent defined rather than user-defined, environment variables are globally scoped to a document, whereas custom properties are scoped to the element(s) on which they are declared. </p>
 
 <p>In addition, unlike custom properties, which cannot be used outside of declarations, the <code>env()</code> function can be used in place of any part of a property value, or any part of a descriptor (e.g. in <a href="/en-US/docs/Web/CSS/@media">Media query rules</a>). As the spec evolves, it may also be usable in other places such as selectors.</p>
 
 <p>Originally provided by the iOS browser to allow developers to place their content in a safe area of the viewport, the <code>safe-area-inset-*</code> values defined in the specification can be used to help ensure content is visible even to viewers using non‑rectangular displays.</p>
+
+<p>For example, a common issue solved by <code>env()</code> is that of device notifications covering up some of the app user interface. By positioning fixed elements using <code>env()</code> you can ensure that they display in a safe area of the viewport.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -50,8 +41,8 @@ env(safe-area-inset-left, 1.4rem);
 <h3 id="Values">Values</h3>
 
 <dl>
- <dt><code id="safe-area-inset-top" style="white-space: nowrap;">safe-area-inset-top</code>, <code id="safe-area-inset-right" style="white-space: nowrap;">safe-area-inset-right</code>, <code id="safe-area-inset-bottom" style="white-space: nowrap;">safe-area-inset-bottom</code>, <code id="safe-area-inset-left" style="white-space: nowrap;">safe-area-inset-left</code></dt>
- <dd>The <code style="white-space: nowrap;">safe-area-inset-*</code> variables are four environment variables that define a rectangle by its top, right, bottom, and left insets from the edge of the viewport, which is safe to put content into without risking it being cut off by the shape of a non‑rectangular display. For rectangular viewports, like your average laptop monitor, their value is equal to zero. For non-rectangular displays — like a round watch face — the four values set by the user agent form a rectangle such that all content inside the rectangle is visible.</dd>
+ <dt><code id="safe-area-inset-top">safe-area-inset-top</code>, <code id="safe-area-inset-right">safe-area-inset-right</code>, <code id="safe-area-inset-bottom">safe-area-inset-bottom</code>, <code id="safe-area-inset-left">safe-area-inset-left</code></dt>
+ <dd>The <code>safe-area-inset-*</code> variables are four environment variables that define a rectangle by its top, right, bottom, and left insets from the edge of the viewport, which is safe to put content into without risking it being cut off by the shape of a non‑rectangular display. For rectangular viewports, like your average laptop monitor, their value is equal to zero. For non-rectangular displays — like a round watch face — the four values set by the user agent form a rectangle such that all content inside the rectangle is visible.</dd>
 </dl>
 
 <p><strong>Note</strong>: Unlike other CSS properties, user agent-defined property names are case-sensitive.</p>
@@ -60,7 +51,75 @@ env(safe-area-inset-left, 1.4rem);
 
 {{CSSSyntax}}
 
+<h2>Usage</h2>
+
+<p>To tell the browser to use the whole available space on the screen, and so enabling us to use the <code>env()</code> variables, we need to add a new viewport meta value:</p>
+
+<pre class="brush: html; no-line-numbers">&lt;meta name="viewport" content="viewport-fit=cover" /&gt;</pre>
+
+<p>You can then use <code>env()</code> in your CSS:</p>
+
+<pre class="brush: css;">body {
+  padding:
+    env(safe-area-inset-top, 20px)
+    env(safe-area-inset-right, 20px)
+    env(safe-area-inset-bottom, 20px)
+    env(safe-area-inset-left, 20px);
+}</pre>
+
 <h2 id="Examples">Examples</h2>
+
+<h3 id="Example1">Using <code>env()</code> to ensure buttons are not obscured by device UI</h3>
+
+<p>In the following example <code>env()</code> is used to ensure that fixed app toolbar buttons are not obscured by device notifications appearing at the bottom of the screen. On the desktop <code>safe-area-inset-bottom</code> is <code>0</code>. However, in devices that display notifications at the bottom of the screen, such as iOS, it contains a value that leaves space for the notification to display. This can then be used in the value for {{cssxref("padding-bottom")}} to create a gap that appears natural on that device.</p>
+
+<pre class="brush: html">&lt;main&gt;Main content of app here&lt;/main&gt;
+&lt;footer&gt;
+  &lt;button&gt;Go here&lt;/button&gt;
+  &lt;button&gt;Or here&lt;/button&gt;
+&lt;/footer&gt;
+</pre>
+
+<pre class="brush: css">body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font: 1em system-ui;
+}
+
+main {
+  flex: 1;
+  background-color: #eee;
+  padding: 1em;
+}
+
+footer {
+  flex: none;
+  display: flex;
+  gap: 1em;
+  justify-content: space-evenly;
+  background: black;
+  padding: 1em 1em calc(1em + env(safe-area-inset-bottom));
+  /* adds the safe-area-inset-bottom value to the initial 1em of padding.
+  a larger black area will display for a device that has a positive value for this variable. */
+  position: sticky;
+  bottom: 0;
+}
+
+button {
+  padding: 1em;
+  background: white;
+  color: black;
+  margin: 0;
+  width: 100%;
+  border: none;
+  font: 1em system-ui;
+}
+</pre>
+
+<p>{{EmbedLiveSample("Example1", "200px", "500px")}}</p>
+
+<h3 id="Example2">Using the fallback value</h3>
 
 <p>The below example makes use of the optional second parameter of <code>env()</code>, which allows you to provide a fallback value in case the environment variable is not available.</p>
 
@@ -83,7 +142,7 @@ env(safe-area-inset-left, 1.4rem);
     env(SAFE-AREA-INSET-LEFT, 50px);
 }</pre>
 
-<p>{{EmbedLiveSample("Examples")}}</p>
+<p>{{EmbedLiveSample("Example2", "350px", "250px")}}</p>
 
 <h3 id="Example_values">Example values</h3>
 
@@ -99,33 +158,18 @@ padding: env(x, 50px, 20px); /* ignored because '50px, 20px' is not a valid padd
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Environment Variables", "#env-function", "env()")}}</td>
-   <td>{{Spec2("CSS3 Environment Variables")}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.custom-property.env")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{CSSxRef("var", "var(…)")}}</li>
+ <li>{{CSSxRef("var()", "var(…)")}}</li>
  <li><a href="/en-US/docs/Web/CSS/CSS_Variables">CSS Custom Properties for Cascading Variables</a></li>
  <li><a href="/en-US/docs/Web/CSS/--*">Custom Properties (--*)</a></li>
- <li><a href="/en-US/docs/Web/CSS/Using_CSS_variables">Using CSS custom properties (variables)</a></li>
- <li>{{CSSxRef("@viewport/viewport-fit", "viewport-fit (@viewport)")}}</li>
+ <li><a href="/en-US/docs/Web/CSS/Using_CSS_custom_properties">Using CSS custom properties (variables)</a></li>
+ <li>{{CSSxRef("@viewport", "viewport-fit (@viewport)")}}</li>
 </ul>

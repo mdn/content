@@ -8,18 +8,26 @@ tags:
   - Experimental
   - Reference
   - 'recipe:css-property'
+browser-compat: css.properties.border-inline-color
 ---
 <div>{{CSSRef}}</div>
 
 <p>The <strong><code>border-inline-color</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property defines the color of the logical inline borders of an element, which maps to a physical border color depending on the element's writing mode, directionality, and text orientation. It corresponds to the {{cssxref("border-top-color")}} and {{cssxref("border-bottom-color")}}, or {{cssxref("border-right-color")}} and {{cssxref("border-left-color")}} property depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.</p>
 
-<pre class="brush:css no-line-numbers">border-inline-color: yellow;
-border-inline-color: #F5F6F7;
-</pre>
+<div>{{EmbedInteractiveExample("pages/css/border-inline-color.html")}}</div>
 
 <p>The border color in the other dimension can be set with {{cssxref("border-block-color")}} which sets {{cssxref("border-block-start-color")}}, and {{cssxref("border-block-end-color")}}.</p>
 
 <h2 id="Syntax">Syntax</h2>
+
+<pre class="brush:css no-line-numbers">border-inline-color: yellow;
+border-inline-color: #F5F6F7;
+
+/* Global values */
+border-inline-color: inherit;
+border-inline-color: initial;
+border-inline-color: revert;
+border-inline-color: unset;</pre>
 
 <h3 id="Values">Values</h3>
 
@@ -67,26 +75,11 @@ border-inline-color: #F5F6F7;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Logical Properties", "#propdef-border-inline-color", "border-inline-color")}}</td>
-   <td>{{Spec2("CSS Logical Properties")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.border-inline-color")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

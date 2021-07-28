@@ -1,0 +1,100 @@
+---
+title: WebUSB API
+slug: Web/API/WebUSB_API
+tags:
+  - API
+  - Web USB
+  - Overview
+  - Reference
+---
+<div>{{securecontext_header}}{{DefaultAPISidebar("Web USB API")}}</div>
+
+<p class="summary">The <strong>WebUSB API</strong> provides a way to expose non-standard Universal Serial Bus (USB) compatible devices services to the web, to make USB safer and easier to use.</p>
+
+<h2>Concepts and Usage</h2>
+
+<p>USB is the de-facto standard for wired peripherals. The USB devices that you connect to your computer are typically grouped into a number of device classes&mdash;such as keyboards, mice, video devices, and so on. These are supported using the operating system's class driver. Many of these are also web accessible via the {{domxref("WebHID API")}}.
+
+<p>In addition to these standardized devices, there are a large number of devices that don't fit into any class. These need custom drivers, and are inaccessible from the web due to the native code required to take advantage of them. Installing one of these devices often involves searching on a manufacturer's website for drivers and, should you wish to use the device on another computer, repeating the process again.</p>
+
+<p>WebUSB provides a way for these non-standardized USB device services to be exposed to the web. This means that hardware manufacturers will be able to provide a way for their device to be accessed from the web, without having to provide their own API.</p>
+
+<p>When connecting a new WebUSB-compatible device, the browser displays a notification providing a link to the manufacturer's website. On arriving at the site the browser prompts for permission to connect to the device, then the device is ready for use. No drivers need be downloaded and installed.</p>
+
+<h2 id="Interfaces">Interfaces</h2>
+
+<dl>
+  <dt>{{domxref("USB")}}</dt>
+  <dd>Provides attributes and methods for finding and connecting USB devices from a web page.</dd>
+  <dt>{{domxref("USBConnectionEvent")}}</dt>
+  <dd>The event type passed to {{domxref("USB.onconnect")}} or {{domxref("USB.ondisconnect")}} when the user agent detects a new USB device has been connected to, or disconnected from the host.</dd>
+  <dt>{{domxref("USBDevice")}}</dt>
+  <dd>Provides access to metadata about a paired USB device and methods for controlling it.</dd>
+  <dt>{{domxref("USBInTransferResult")}}</dt>
+  <dd>Represents the result from requesting a transfer of data from the USB device to the USB host.</dd>
+  <dt>{{domxref("USBIsochronousInTransferPacket")}}</dt>
+  <dd>Represents the status of an individual packet from a request to transfer data from the USB device to the USB host over an isochronous endpoint.</dd>
+  <dt>{{domxref("USBIsochronousInTransferResult")}}</dt>
+  <dd>Represents the result from requesting a transfer of data from the USB device to the USB host.</dd>
+  <dt>{{domxref("USBIsochronousOutTransferPacket")}}</dt>
+  <dd>Represents the status of an individual packet from a request to transfer data from the USB host to the USB device over an isochronous endpoint.</dd>
+  <dt>{{domxref("USBIsochronousOutTransferResult")}}</dt>
+  <dd>Represents the result from requesting a transfer of data from the USB host to the USB device.</dd>
+  <dt>{{domxref("USBConfiguration")}}</dt>
+  <dd>Provides information about a particular configuration of a USB device and the interfaces that it supports.</dd>
+  <dt>{{domxref("USBInterface")}}</dt>
+  <dd>Provides information about an interface provided by the USB device.</dd>
+  <dt>{{domxref("USBAlternateInterface")}}</dt>
+  <dd>Provides information about a particular configuration of an interface provided by the USB device.</dd>
+  <dt>{{domxref("USBEndPoint")}}</dt>
+  <dd>Provides information about an endpoint provided by the USB device.</dd>
+</dl>
+
+<h2 id="Examples">Examples</h2>
+
+<h3>Accessing a connected device</h3>
+
+<p>The following example demonstrates how to access a connected Arduino device using {{domxref("USB.requestDevice()")}}, which has a vendorId of <code>0x2341</code>.</p>
+
+<pre class="brush: js">navigator.usb.requestDevice({ filters: [{ vendorId: 0x2341 }] })
+  .then(device => {
+    console.log(device.productName);      // "Arduino Micro"
+    console.log(device.manufacturerName); // "Arduino LLC"
+  })
+  .catch(error => { console.error(error); });</pre>
+
+<h3>Finding all connected devices</h3>
+
+<p>You can find all connected devices with {{domxref("USB.getDevices()")}}. In the following example, with the Arduino device connected, product and manufacturer name are printed to the console.</p>
+
+<pre class="brush: js">navigator.usb.getDevices().then(devices => {
+  devices.forEach(device => {
+    console.log(device.productName);      // "Arduino Micro"
+    console.log(device.manufacturerName); // "Arduino LLC"
+  });
+})</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Web USB')}}</td>
+   <td>{{Spec2('Web USB')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+  <li><a href="https://web.dev/usb/">Access USB Devices on the Web</a></li>
+</ul>

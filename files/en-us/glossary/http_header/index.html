@@ -8,22 +8,14 @@ tags:
 ---
 <p>An <strong>HTTP header</strong> is a field of an HTTP request or response that passes additional context and metadata about the request or response. For example, a request message can use headers to indicate it's preferred media formats, while a response can use header to indicate the media format of the returned body. Headers are case-insensitive, begin at the start of a line and are immediately followed by a <code>':'</code> and a header-dependent value. The value finishes at the next CRLF or at the end of the message.</p>
 
-<p>The current specification has a number of header categories, including:</p>
+<p>The HTTP and Fetch specifications refer to a number of header categories, including:</p>
 
 <ul>
  <li>{{Glossary("Request header")}}: Headers containing more information about the resource to be fetched or about the client itself.</li>
  <li>{{Glossary("Response header")}}: Headers with additional information about the response, like its location or about the server itself (name, version, …).</li>
- <li><strong>Representation metadata header</strong>: metadata about the resource in the message body (e.g. language, length, media type, etc.).</li>
+ <li>{{Glossary("Representation header")}}: metadata about the resource in the message body (e.g. encoding, media type, etc.).</li>
+ <li>{{Glossary("Fetch metadata request header")}}: Headers with metadata about the resource in the message body (e.g. encoding, media type, etc.).</li>
 </ul>
-
-<div class="notecard note">
-<p>Older versions of the specification referred to:</p>
-
-<ul>
- <li>{{Glossary("General header")}}: Headers applying to both requests and responses but with no relation to the data eventually transmitted in the body.</li>
- <li>{{Glossary("Entity header")}}: Headers containing more information about the body of the entity, like its content length or its MIME-type (this is a superset of what are now referred to as the Representation metadata headers)</li>
-</ul>
-</div>
 
 <p>A basic request with one header:</p>
 
@@ -54,6 +46,17 @@ X-Cache: Hit from cloudfront
 X-Cache-Info: cached
 </pre>
 
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>Older versions of the specification referred to:</p>
+  
+  <ul>
+   <li>{{Glossary("General header")}}: Headers applying to both requests and responses but with no relation to the data eventually transmitted in the body.</li>
+   <li>{{Glossary("Entity header")}}: Headers containing more information about the body of the entity, like its content length or its MIME-type (this is a superset of what are now referred to as the Representation metadata headers)</li>
+  </ul>
+  </div>
+  
+
 <section id="Quick_links">
 <ol>
  <li>Specifications
@@ -69,10 +72,10 @@ X-Cache-Info: cached
  <li><a href="/en-US/docs/Glossary">Glossary</a>
   <ol>
    <li>{{Glossary("HTTP header")}}</li>
-   <li>{{Glossary("General header")}}</li>
    <li>{{Glossary("Request header")}}</li>
    <li>{{Glossary("Response header")}}</li>
-   <li>{{Glossary("Entity header")}}</li>
+   <li>{{Glossary("Representation header")}}</li>
+   <li>{{Glossary("Fetch metadata request header")}}</li>
    <li>{{Glossary("Forbidden header name")}}</li>
    <li>{{Glossary("Forbidden response header name")}}</li>
    <li>{{Glossary("CORS-safelisted request header")}}</li>

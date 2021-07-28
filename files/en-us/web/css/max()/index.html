@@ -11,6 +11,7 @@ tags:
   - Reference
   - Web
   - max
+browser-compat: css.types.max
 ---
 <div>{{CSSRef}}</div>
 
@@ -24,7 +25,7 @@ tags:
 
 <p>The <code>max()</code> function takes one or more comma-separated expressions as its parameter, with the largest (most positive) expression value used as the value of the property to which it is assigned.</p>
 
-<p>The expressions can be math expressions (using arithmetic operators), literal values, or other expressions, such as {{CSSxRef("attr", "attr()")}}, that evaluate to a valid argument type (like {{CSSxRef("&lt;length&gt;")}}), or nested {{CSSxRef("min", "min()")}} and <code>max()</code> functions.</p>
+<p>The expressions can be math expressions (using arithmetic operators), literal values, or other expressions, such as {{CSSxRef("attr()", "attr()")}}, that evaluate to a valid argument type (like {{CSSxRef("&lt;length&gt;")}}), or nested {{CSSxRef("min()", "min()")}} and <code>max()</code> functions.</p>
 
 <p>You can use different units for each value in your expression. You may also use parentheses to establish computation order when needed.</p>
 
@@ -69,7 +70,7 @@ h1.responsive {
 
 <h2 id="Accessibility_concerns">Accessibility concerns</h2>
 
-<p>When <code>max()</code> is used for controlling text size, make sure the text is always large enough to read. A suggestion is to use the {{CSSxRef("min", "min()")}} function nested within a <code>max()</code> that has as its second value a <a href="/en-US/docs/Web/CSS/length#Relative_length_units">relative length unit</a> that is always large enough to read. For example:</p>
+<p>When <code>max()</code> is used for controlling text size, make sure the text is always large enough to read. A suggestion is to use the {{CSSxRef("min()", "min()")}} function nested within a <code>max()</code> that has as its second value a <a href="/en-US/docs/Web/CSS/length#relative_length_units">relative length unit</a> that is always large enough to read. For example:</p>
 
 <pre class="brush: css;">small {
   font-size: max(min(0.5vw, 0.5em), 1rem);
@@ -78,38 +79,23 @@ h1.responsive {
 <p>This ensures a minimum size of <em>1rem</em>, with a text size that scales if the page is zoomed.</p>
 
 <ul>
- <li><a href="/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">MDN Understanding WCAG, Guideline 1.4 explanations</a></li>
+ <li><a href="/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">MDN Understanding WCAG, Guideline 1.4 explanations</a></li>
  <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html">Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0</a></li>
 </ul>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS4 Values", "#funcdef-max", "max()")}}</td>
-   <td>{{Spec2("CSS4 Values")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.types.max")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{CSSxRef("calc", "calc()")}}</li>
- <li>{{CSSxRef("clamp", "clamp()")}}</li>
- <li>{{CSSxRef("min", "min()")}}</li>
- <li><a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/Values_and_units">CSS Values</a></li>
+ <li>{{CSSxRef("calc()", "calc()")}}</li>
+ <li>{{CSSxRef("clamp()", "clamp()")}}</li>
+ <li>{{CSSxRef("min()", "min()")}}</li>
+ <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Values_and_units">CSS Values</a></li>
 </ul>

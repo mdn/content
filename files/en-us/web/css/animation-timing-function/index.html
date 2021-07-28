@@ -6,7 +6,8 @@ tags:
   - CSS Animations
   - CSS Property
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
+browser-compat: css.properties.animation-timing-function
 ---
 <div>{{CSSRef}}</div>
 
@@ -14,7 +15,6 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/css/animation-timing-function.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <p>It is often convenient to use the shorthand property {{cssxref("animation")}} to set all animation properties at once.</p>
 
@@ -47,6 +47,7 @@ animation-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1.0, 0.1);
 /* Global values */
 animation-timing-function: inherit;
 animation-timing-function: initial;
+animation-timing-function: revert;
 animation-timing-function: unset;
 </pre>
 
@@ -99,7 +100,7 @@ animation-timing-function: unset;
 </dl>
 
 <div class="note">
-<p><strong>Note</strong>: When you specify multiple comma-separated values on an <code>animation-*</code> property, they will be assigned to the animations specified in the {{cssxref("animation-name")}} property in different ways depending on how many there are. For more information, see <a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations#Setting_multiple_animation_property_values">Setting multiple animation property values</a>.</p>
+<p><strong>Note:</strong> When you specify multiple comma-separated values on an <code>animation-*</code> property, they will be assigned to the animations specified in the {{cssxref("animation-name")}} property in different ways depending on how many there are. For more information, see <a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations#setting_multiple_animation_property_values">Setting multiple animation property values</a>.</p>
 </div>
 
 <h2 id="Formal_definition">Formal definition</h2>
@@ -115,8 +116,7 @@ animation-timing-function: unset;
 <div>
 <h3 id="Cubic-Bezier_examples">Cubic-Bezier examples</h3>
 
-<div class="hidden">
-<pre class="brush:html">&lt;div class="parent"&gt;
+<pre class="brush:html hidden">&lt;div class="parent"&gt;
   &lt;div class="ease"&gt;ease&lt;/div&gt;
   &lt;div class="easein"&gt;ease-in&lt;/div&gt;
   &lt;div class="easeout"&gt;ease-out&lt;/div&gt;
@@ -125,7 +125,7 @@ animation-timing-function: unset;
   &lt;div class="cb"&gt;cubic-bezier(0.2,-2,0.8,2)&lt;/div&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush:css;">.parent &gt; div[class] {
+<pre class="brush:css hidden">.parent &gt; div[class] {
     animation-name: changeme;
     animation-duration: 10s;
     animation-iteration-count: infinite;
@@ -148,7 +148,6 @@ animation-timing-function: unset;
    }
 }
 </pre>
-</div>
 
 <pre class="brush: css">.ease {
    animation-timing-function: ease;
@@ -175,8 +174,7 @@ animation-timing-function: unset;
 <div>
 <h3 id="Step_examples">Step examples</h3>
 
-<div class="hidden">
-<pre class="brush:html">&lt;div class="parent"&gt;
+<pre class="brush:html hidden">&lt;div class="parent"&gt;
   &lt;div class="jump-start"&gt;jump-start&lt;/div&gt;
   &lt;div class="jump-end"&gt;jump-end&lt;/div&gt;
   &lt;div class="jump-both"&gt;jump-both&lt;/div&gt;
@@ -187,7 +185,7 @@ animation-timing-function: unset;
   &lt;div class="step-end"&gt;step-end&lt;/div&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush:css;">.parent &gt; div[class] {
+<pre class="brush:css hidden">.parent &gt; div[class] {
     animation-name: changeme;
     animation-duration: 10s;
     animation-iteration-count: infinite;
@@ -210,7 +208,6 @@ animation-timing-function: unset;
    }
 }
 </pre>
-</div>
 
 <pre class="brush: css">.jump-start {
    animation-timing-function: steps(5, jump-start);
@@ -242,32 +239,17 @@ animation-timing-function: unset;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Animations', '#animation-timing-function', 'animation-timing-function')}}</td>
-   <td>{{Spec2('CSS3 Animations')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.animation-timing-function")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
  <li><a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations" title="CSS developer guide about CSS animations">Using CSS animations</a></li>
- <li>{{cssxref('timing-function')}}</li>
+ <li>{{cssxref('easing-function')}}</li>
  <li>JavaScript {{domxref("AnimationEvent")}} API</li>
- <li><a href="http://cubic-bezier.com">cubic-bezier.com</a></li>
+ <li><a href="https://cubic-bezier.com">cubic-bezier.com</a></li>
 </ul>

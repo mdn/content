@@ -7,6 +7,7 @@ tags:
   - CSS Property
   - Reference
   - recipe:css-property
+browser-compat: css.properties.flex-wrap
 ---
 <div>{{ CSSRef}}</div>
 
@@ -25,6 +26,7 @@ flex-wrap: wrap-reverse;
 /* Global values */
 flex-wrap: inherit;
 flex-wrap: initial;
+flex-wrap: revert;
 flex-wrap: unset;
 </pre>
 
@@ -84,40 +86,40 @@ flex-wrap: unset;
 .content,
 .content1,
 .content2 {
-    color: #fff;
-    font: 100 24px/100px sans-serif;
-    height: 150px;
-    text-align: center;
+  color: #fff;
+  font: 100 24px/100px sans-serif;
+  height: 150px;
+  text-align: center;
 }
 
 .content div,
 .content1 div,
 .content2 div {
-    height: 50%;
-    width: 300px;
+  height: 50%;
+  width: 300px;
 }
 .red {
-    background: orangered;
+  background: orangered;
 }
 .green {
-    background: yellowgreen;
+  background: yellowgreen;
 }
 .blue {
-    background: steelblue;
+  background: steelblue;
 }
 
 /* Flexbox Styles */
 .content {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 .content1 {
-    display: flex;
-    flex-wrap: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
 }
 .content2 {
-    display: flex;
-    flex-wrap: wrap-reverse;
+  display: flex;
+  flex-wrap: wrap-reverse;
 }
 
 </pre>
@@ -129,26 +131,11 @@ flex-wrap: unset;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th>Specification</th>
-   <th>Status</th>
-   <th>Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS3 Flexbox', '#flex-wrap-property', 'flex-wrap') }}</td>
-   <td>{{ Spec2('CSS3 Flexbox') }}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.flex-wrap")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

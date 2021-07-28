@@ -11,6 +11,7 @@ tags:
 - Process
 - Reference
 - Web Audio API
+browser-compat: api.AudioWorkletProcessor.process
 ---
 <p>{{APIRef("Web Audio API")}}</p>
 
@@ -58,7 +59,7 @@ tags:
     <p>Each sample value is in range of <code>[-1 .. 1]</code>.</p>
 
     <p>The number of <em>inputs</em> and thus the length of that array is fixed at the
-      construction of the node (see {{domxref("AudioWorkletNodeOptions")}}). If there is
+      construction of the node (see {{domxref("AudioWorkletNode")}}). If there is
       no active node connected to the <em>n</em>-th input of the node,
       <code>inputs[n]</code> will be an empty array (zero input channels available).</p>
 
@@ -197,25 +198,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Web Audio API', '#dom-audioworkletprocessor-process', 'process()')}}
-      </td>
-      <td>{{Spec2('Web Audio API')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.AudioWorkletProcessor.process")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

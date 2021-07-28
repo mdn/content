@@ -13,6 +13,7 @@ tags:
   - border-inline-end-style
   - border-inline-end-width
   - 'recipe:css-shorthand-property'
+browser-compat: css.properties.border-inline-end
 ---
 <div>{{CSSRef}}</div>
 
@@ -35,7 +36,12 @@ tags:
 <pre class="brush:css no-line-numbers">border-inline-end: 1px;
 border-inline-end: 2px dashed;
 border-inline-end: medium dashed blue;
-</pre>
+
+/* Global values */
+border-inline-end: inherit;
+border-inline-end: initial;
+border-inline-end: revert;
+border-inline-end: unset;</pre>
 
 <p>The physical border to which <code>border-inline-end</code> maps depends on the element's writing mode, directionality, and text orientation. It corresponds to the {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, or {{cssxref("border-left")}} property depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.</p>
 
@@ -90,26 +96,11 @@ border-inline-end: medium dashed blue;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Logical Properties", "#propdef-border-inline-end", "border-inline-end")}}</td>
-   <td>{{Spec2("CSS Logical Properties")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.border-inline-end")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

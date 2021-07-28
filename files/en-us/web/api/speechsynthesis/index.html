@@ -10,6 +10,7 @@ tags:
   - Web Speech API
   - speech
   - synthesis
+browser-compat: api.SpeechSynthesis
 ---
 <p>{{APIRef("Web Speech API")}}{{SeeCompatTable}}</p>
 
@@ -21,11 +22,11 @@ tags:
 
 <dl>
  <dt>{{domxref("SpeechSynthesis.paused")}} {{readonlyinline}}</dt>
- <dd>A {{domxref("Boolean")}} that returns <code>true</code> if the <code>SpeechSynthesis</code> object is in a paused state.</dd>
+ <dd>A boolean value that returns <code>true</code> if the <code>SpeechSynthesis</code> object is in a paused state.</dd>
  <dt>{{domxref("SpeechSynthesis.pending")}} {{readonlyinline}}</dt>
- <dd>A {{domxref("Boolean")}} that returns <code>true</code> if the utterance queue contains as-yet-unspoken utterances.</dd>
+ <dd>A boolean value that returns <code>true</code> if the utterance queue contains as-yet-unspoken utterances.</dd>
  <dt>{{domxref("SpeechSynthesis.speaking")}} {{readonlyinline}}</dt>
- <dd>A {{domxref("Boolean")}} that returns <code>true</code> if an utterance is currently in the process of being spoken — even if <code>SpeechSynthesis</code> is in a paused state.</dd>
+ <dd>A boolean value that returns <code>true</code> if an utterance is currently in the process of being spoken — even if <code>SpeechSynthesis</code> is in a paused state.</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
@@ -120,24 +121,11 @@ inputForm.onsubmit = function(event) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Speech API', '#tts-section', 'SpeechSynthesis')}}</td>
-   <td>{{Spec2('Web Speech API')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.SpeechSynthesis")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

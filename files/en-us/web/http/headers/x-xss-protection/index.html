@@ -7,10 +7,11 @@ tags:
   - Security
   - XSS
   - header
+browser-compat: http.headers.X-XSS-Protection
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p>The HTTP <strong><code>X-XSS-Protection</code></strong> response header is a feature of Internet Explorer, Chrome and Safari that stops pages from loading when they detect reflected cross-site scripting ({{Glossary("XSS")}}) attacks. Although these protections are largely unnecessary in modern browsers when sites implement a strong {{HTTPHeader("Content-Security-Policy")}} that disables the use of inline JavaScript (<code>'unsafe-inline'</code>), they can still provide protections for users of older web browsers that don't yet support {{Glossary("CSP")}}.</p>
+<p>The HTTP <strong><code>X-XSS-Protection</code></strong> response header is a feature of Internet Explorer, Chrome and Safari that stops pages from loading when they detect reflected cross-site scripting ({{Glossary("Cross-site_scripting", "XSS")}}) attacks. Although these protections are largely unnecessary in modern browsers when sites implement a strong {{HTTPHeader("Content-Security-Policy")}} that disables the use of inline JavaScript (<code>'unsafe-inline'</code>), they can still provide protections for users of older web browsers that don't yet support {{Glossary("CSP")}}.</p>
 
 <div class="note">
 <ul>
@@ -80,7 +81,7 @@ X-XSS-Protection: 1; report=&lt;reporting-uri&gt;
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("http.headers.X-XSS-Protection")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

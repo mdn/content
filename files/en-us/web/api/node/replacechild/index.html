@@ -7,6 +7,7 @@ tags:
 - Method
 - Node
 - Reference
+browser-compat: api.Node.replaceChild
 ---
 <div>{{APIRef("DOM")}}</div>
 
@@ -14,7 +15,7 @@ tags:
 	within the given (parent) node.</p>
 
 <p>Note the idiosyncratic argument order (new before old).
-	<code><a href="/en-US/docs/Web/API/ChildNode/replaceWith">ChildNode.replaceWith()</a></code>
+	<code><a href="/en-US/docs/Web/API/Element/replaceWith">Element.replaceWith()</a></code>
 	may be easier to read and use.</p>
 
 <h2 id="Syntax">Syntax</h2>
@@ -72,31 +73,15 @@ parentDiv.replaceChild(sp1, sp2);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName("DOM WHATWG", "#dom-node-replacechild", "Node: replaceChild")}}
-			</td>
-			<td>{{Spec2("DOM WHATWG")}}</td>
-			<td></td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Node.replaceChild")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
 	<li>{{domxref("Node.removeChild")}}</li>
-	<li>{{domxref("ChildNode.replaceWith")}}</li>
+	<li>{{domxref("Element.replaceWith")}}</li>
 </ul>

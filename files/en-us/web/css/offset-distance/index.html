@@ -11,6 +11,7 @@ tags:
   - motion-offset
   - offset-distance
   - 'recipe:css-property'
+browser-compat: css.properties.offset-distance
 ---
 <div>{{CSSRef}}</div>
 
@@ -27,12 +28,20 @@ offset-distance: 0;
 offset-distance: 50%;
 
 /* a fixed length positioned along the path */
-offset-distance: 40px;</pre>
+offset-distance: 40px;
+
+/* Global values */
+offset-distance: inherit;
+offset-distance: initial;
+offset-distance: revert;
+offset-distance: unset;</pre>
 
 <dl>
  <dt><code>{{cssxref('&lt;length-percentage&gt;')}}</code></dt>
- <dd>A length that specifies how far the element is along the path (defined with {{cssxref('offset-path')}}).</dd>
- <dd>100% represents the total length of the path (when the <code>offset-path</code> is defined as a basic shape or <code>path()</code>).</dd>
+ <dd>
+   <p>A length that specifies how far the element is along the path (defined with {{cssxref('offset-path')}}).</p>
+   <p>100% represents the total length of the path (when the <code>offset-path</code> is defined as a basic shape or <code>path()</code>).</p>
+ </dd>
 </dl>
 
 <h2 id="Formal_definition">Formal definition</h2>
@@ -79,26 +88,11 @@ offset-distance: 40px;</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th>Specification</th>
-   <th>Status</th>
-   <th>Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Motion Path Level 1', '#offset-distance-property', 'offset-distance')}}</td>
-   <td>{{Spec2('Motion Path Level 1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.offset-distance")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

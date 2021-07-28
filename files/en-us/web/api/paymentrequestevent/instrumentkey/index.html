@@ -1,12 +1,13 @@
 ---
 title: PaymentRequestEvent.instrumentKey
 slug: Web/API/PaymentRequestEvent/instrumentKey
+browser-compat: api.PaymentRequestEvent.instrumentKey
 ---
-<p>{{SeeCompatTable}}{{APIRef("Payment Request API")}}</p>
+<p>{{APIRef("Payment Request API")}}{{deprecated_header}}{{non-standard_header}}</p>
 
 <p>The <strong><code>instrumentKey</code></strong> read-only property of the
     {{domxref("PaymentRequestEvent")}} interface returns a
-    {{domxref("PaymentInstrument")}} object reflecting the payment instrument selected by
+    <code>PaymentInstrument</code> object reflecting the payment instrument selected by
     the user or an empty string if the user has not registered or chosen a payment
     instrument.</p>
 
@@ -17,26 +18,12 @@ slug: Web/API/PaymentRequestEvent/instrumentKey
 
 <h3 id="Value">Value</h3>
 
-<p>A {{domxref("PaymentInstrument")}} object.</p>
+<p>A <code>PaymentInstrument</code> object.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-    <tbody>
-        <tr>
-            <th scope="col">Specification</th>
-            <th scope="col">Status</th>
-            <th scope="col">Comment</th>
-        </tr>
-        <tr>
-            <td>{{SpecName('Payment Handler','#instrumentkey-attribute','instrumentKey')}}
-            </td>
-            <td>{{Spec2('Payment Handler')}}</td>
-            <td>Initial definition.</td>
-        </tr>
-    </tbody>
-</table>
+<p>This feature is no longer part of any specification.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.PaymentRequestEvent.instrumentKey")}}</p>
+<p>{{Compat}}</p>

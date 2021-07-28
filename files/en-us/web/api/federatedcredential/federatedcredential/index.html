@@ -1,5 +1,5 @@
 ---
-title: FederatedCredential
+title: FederatedCredential()
 slug: Web/API/FederatedCredential/FederatedCredential
 tags:
   - API
@@ -9,11 +9,12 @@ tags:
   - NeedsExample
   - Reference
   - credential management
+browser-compat: api.FederatedCredential.FederatedCredential
 ---
-<p>{{APIRef("")}}{{Non-standard_header}}</p>
+<p>{{APIRef("Credential Management API")}}{{Non-standard_header}}</p>
 
-<p><span class="seoSummary">The <strong><code>FederatedCredential</code></strong>
-    constructor creates a new {{domxref("FederatedCredential")}} object.</span> In
+<p>The <strong><code>FederatedCredential()</code></strong>
+    constructor creates a new {{domxref("FederatedCredential")}} object. In
   supporting browsers, an instance of this class may be passed the <code>credential</code>
   received from the <code>init</code> object for global {{domxref('WindowOrWorkerGlobalScope.fetch')}}.</p>
 
@@ -25,7 +26,7 @@ tags:
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
-  <dt><em>init</em> </dt>
+  <dt><em>init</em></dt>
   <dd>Options are:
     <ul>
       <li><code>provider</code>: A {{domxref("USVString")}}; identifying the credential
@@ -36,21 +37,8 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Credential Management')}}</td>
-      <td>{{Spec2('Credential Management')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.FederatedCredential.FederatedCredential")}}</p>
+<p>{{Compat}}</p>

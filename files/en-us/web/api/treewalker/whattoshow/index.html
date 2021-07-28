@@ -6,6 +6,7 @@ tags:
 - DOM
 - Property
 - TreeWalker
+browser-compat: api.TreeWalker.whatToShow
 ---
 <p>{{ APIRef("DOM") }}</p>
 
@@ -68,25 +69,17 @@ tags:
     <tr>
       <td><code>NodeFilter.SHOW_ENTITY</code> {{deprecated_inline}}</td>
       <td><code>32</code></td>
-      <td>Shows {{ domxref("Entity") }} nodes. This is meaningful only when creating a {{
-        domxref("TreeWalker") }} with an {{ domxref("Entity") }} node as its root; in this
-        case, it means that the {{ domxref("Entity") }} node will appear in the first
-        position of the traversal. Since entities are not part of the document tree, they
-        do not appear when traversing over the document tree.</td>
+      <td>Legacy, no more used.</td>
     </tr>
     <tr>
       <td><code>NodeFilter.SHOW_ENTITY_REFERENCE</code> {{deprecated_inline}}</td>
       <td><code>16</code></td>
-      <td>Shows {{ domxref("EntityReference") }} nodes.</td>
+      <td>Legacy, no more used.</td>
     </tr>
     <tr>
       <td><code>NodeFilter.SHOW_NOTATION</code> {{deprecated_inline}}</td>
       <td><code>2048</code></td>
-      <td>Shows {{ domxref("Notation") }} nodes. This is meaningful only when creating a
-        {{ domxref("TreeWalker") }} with a {{ domxref("Notation") }} node as its root; in
-        this case, it means that the {{ domxref("Notation") }} node will appear in the
-        first position of the traversal. Since entities are not part of the document tree,
-        they do not appear when traversing over the document tree.</td>
+      <td>Legacy, no more used.</td>
     </tr>
     <tr>
       <td><code>NodeFilter.SHOW_PROCESSING_INSTRUCTION</code></td>
@@ -122,31 +115,11 @@ if( (treeWalker.whatToShow == NodeFilter.SHOW_ALL) ||
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('DOM WHATWG', '#dom-treewalker-whattoshow',
-        'TreeWalker.whatToShow')}}</td>
-      <td>{{Spec2('DOM WHATWG')}}</td>
-      <td>No change from {{SpecName('DOM2 Traversal_Range')}}</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('DOM2 Traversal_Range',
-        'traversal.html#Traversal-TreeWalker-whatToShow', 'TreeWalker.whatToShow')}}</td>
-      <td>{{Spec2('DOM2 Traversal_Range')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.TreeWalker.whatToShow")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

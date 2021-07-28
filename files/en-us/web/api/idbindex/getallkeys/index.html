@@ -7,6 +7,7 @@ tags:
 - IndexedDB
 - Method
 - Reference
+browser-compat: api.IDBIndex.getAllKeys
 ---
 <p>{{ APIRef("IndexedDB") }}</p>
 
@@ -32,7 +33,7 @@ var <em>allKeysRequest</em> = <em>IDBIndex</em>.getAllKeys(<em>query</em>, <em>c
   <dt><em>count</em> {{optional_inline}}</dt>
   <dd>The number records to return. If this value exceeds the number of records in the
     query, the browser will only retrieve the first item. If it is lower than
-    <code>0</code> or greater than <code>2<sup>32</sup>-1</code> a {{jsxref("TypeError")}}
+    <code>0</code> or greater than <code>2^32 - 1</code> a {{jsxref("TypeError")}}
     exception will be thrown.</dd>
 </dl>
 
@@ -66,7 +67,7 @@ var <em>allKeysRequest</em> = <em>IDBIndex</em>.getAllKeys(<em>query</em>, <em>c
 </table>
 
 <p>A {{jsxref("TypeError")}} exception is thrown if the <code>count</code> parameter is
-  not between <code>0</code> and <code>2<sup>32</sup>-1</code> included.</p>
+  not between <code>0</code> and <code>2^32 - 1</code> included.</p>
 
 <h2 id="Example">Example</h2>
 
@@ -79,29 +80,11 @@ getAllKeysRequest.onsuccess = function() {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('IndexedDB 2', '#dom-idbindex-getallkeys', 'getAll()')}}</td>
-      <td>{{Spec2('IndexedDB 2')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-    <tr>
-      <td>{{SpecName("IndexedDB 2", "#dom-idbindex-getallkeys", "getAll()")}}</td>
-      <td>{{Spec2("IndexedDB 2")}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.IDBIndex.getAllKeys")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

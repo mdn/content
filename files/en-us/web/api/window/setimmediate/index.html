@@ -2,13 +2,15 @@
 title: Window.setImmediate()
 slug: Web/API/Window/setImmediate
 tags:
-- API
-- HTML DOM
-- Method
-- Non-standard
-- Reference
-- Window
-- setImmediate
+  - API
+  - HTML DOM
+  - Method
+  - Non-standard
+  - Reference
+  - Window
+  - setImmediate
+  - Polyfill
+browser-compat: api.Window.setImmediate
 ---
 <div>{{APIRef("HTML DOM")}}{{Non-standard_header}}</div>
 
@@ -19,7 +21,7 @@ tags:
 <div class="note">This method is not expected to become standard, and is only implemented
   by recent builds of Internet Explorer and Node.js 0.10+. It meets resistance both from
   <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=686201">Gecko</a> (Firefox) and <a
-    href="http://code.google.com/p/chromium/issues/detail?id=146172">Webkit</a>
+    href="https://code.google.com/p/chromium/issues/detail?id=146172">Webkit</a>
   (Google/Apple).</div>
 
 <h2 id="Syntax">Syntax</h2>
@@ -39,19 +41,18 @@ var <em>immediateID</em> = setImmediate(<em>func</em>);
 <h2 id="Notes">Notes</h2>
 
 <p>The {{DOMxRef("Window.clearImmediate", "clearImmediate")}} method can be used to clear
-  the immediate actions, just like {{DOMxRef("Window.clearTimeout", "clearTimeout")}} for
-  {{DOMxRef("window.setTimeout", "setTimeout")}}.</p>
+  the immediate actions, just like {{DOMxRef("WindowOrWorkerGlobalScope/clearTimeout", "clearTimeout")}} for
+  {{DOMxRef("WindowOrWorkerGlobalScope/setTimeout", "setTimeout")}}.</p>
 
 <p>This method can be used instead of the <code>setTimeout(fn, 0)</code> method to execute
   <a
-    href="http://www.nczonline.net/blog/2009/08/11/timed-array-processing-in-javascript/">heavy
+    href="https://www.nczonline.net/blog/2009/08/11/timed-array-processing-in-javascript/">heavy
     operations</a>. </p>
 
 <p>The feature can be emulated in a few different ways:</p>
 
 <ul>
-  <li><span style="line-height: 22px;">{{DOMxRef("Window.postMessage",
-      "postMessage")}} </span>can be used to trigger an immediate but yielding callback.
+  <li>{{DOMxRef("Window.postMessage", "postMessage")}} can be used to trigger an immediate but yielding callback.
     Do note that Internet Explorer 8 includes a synchronous version of
     <code>postMessage</code>, which means it cannot be used as a fallback.</li>
   <li>{{DOMxRef("MessageChannel")}} can be used reliably inside of Web Workers whereas the
@@ -68,33 +69,18 @@ var <em>immediateID</em> = setImmediate(<em>func</em>);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><a href="https://w3c.github.io/setImmediate/#si-setImmediate"
-          hreflang="en" lang="en">Efficient Script Yielding<br>
-          <small lang="en-US">The definition of '<code>setImmediate</code>' in that
-            specification.</small></a></td>
-      <td><span class="spec-ED">Editor's Draft</span></td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+<p>Not part of any current specifications. The
+<a href="https://w3c.github.io/setImmediate/#si-setImmediate">Efficient Script Yielding</a>
+specification is no longer being worked on.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Window.setImmediate")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
+  <li>A polyfill of <code>setImmediate</code> is available in <a href="https://github.com/zloirock/core-js#setimmediate"><code>core-js</code></a></li>
   <li>{{DOMxRef("Window.clearImmediate()")}}</li>
   <li><a class="external"
       href="http://ie.microsoft.com/testdrive/Performance/setImmediateSorting/Default.html">Microsoft

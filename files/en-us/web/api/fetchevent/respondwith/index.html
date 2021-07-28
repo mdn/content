@@ -11,6 +11,7 @@ tags:
 - Service Workers
 - Workers
 - respondWith
+browser-compat: api.FetchEvent.respondWith
 ---
 <p>{{APIRef("Service Workers API")}}</p>
 
@@ -92,28 +93,16 @@ tags:
 
 <h3 id="Exceptions">Exceptions</h3>
 
-<table class="standard-table" style="height: 140px; width: 1236px;">
-	<thead>
-		<tr>
-			<th scope="col">Exception</th>
-			<th scope="col">Notes</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td><code>NetworkError</code></td>
-			<td>A network error is triggered on certain combinations of
-				{{domxref("Request.mode","FetchEvent.request.mode")}} and
-				{{domxref("Response.type")}}  values, as hinted at in the "global rules"
-				listed above.</td>
-		</tr>
-		<tr>
-			<td><code>InvalidStateError</code></td>
-			<td>The event has not been dispatched or <code>respondWith()</code> has
-				already been invoked.</td>
-		</tr>
-	</tbody>
-</table>
+<dl>
+  <dt><code>NetworkError</code></dt>
+  <dd>A network error is triggered on certain combinations of
+    {{domxref("Request.mode","FetchEvent.request.mode")}} and
+    {{domxref("Response.type")}}  values, as hinted at in the "global rules"
+    listed above.</dd>
+  <dt><code>InvalidStateError</code></dt>
+  <dd>The event has not been dispatched or <code>respondWith()</code> has
+    already been invoked.</dd>
+</dl>
 
 <h2 id="Examples">Examples</h2>
 
@@ -142,27 +131,13 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<tbody>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-		<tr>
-			<td>{{SpecName('Service Workers', '#dom-fetchevent-respondwith',
-				'respondWith()')}}</td>
-			<td>{{Spec2('Service Workers')}}</td>
-			<td>Initial definition.</td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
 
-	<p>{{Compat("api.FetchEvent.respondWith")}}</p>
+	<p>{{Compat}}</p>
 </div>
 
 <h2 id="See_also">See also</h2>

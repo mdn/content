@@ -7,6 +7,7 @@ tags:
   - CSS Property
   - Reference
   - 'recipe:css-shorthand-property'
+browser-compat: css.properties.grid-area
 ---
 <div>{{CSSRef}}</div>
 
@@ -59,6 +60,7 @@ grid-area: 2 span / another-grid-area span;
 /* Global values */
 grid-area: inherit;
 grid-area: initial;
+grid-area: revert;
 grid-area: unset;</pre>
 
 <h3 id="Values">Values</h3>
@@ -68,7 +70,9 @@ grid-area: unset;</pre>
  <dd>Is a keyword indicating that the property contributes nothing to the grid item’s placement, indicating auto-placement or a default span of <code>1</code>.</dd>
  <dt><code>&lt;custom-ident&gt;</code></dt>
  <dd>If there is a named line with the name '<code>&lt;custom-ident&gt;-start</code>'/'<code>&lt;custom-ident&gt;-end</code>', it contributes the first such line to the grid item’s placement.
- <p class="note"><strong>Note:</strong> Named grid areas automatically generate implicit named lines of this form, so specifying <code>grid-area: foo;</code> will choose the start/end edge of that named grid area (unless another line named <code>foo-start</code>/<code>foo-end</code> was explicitly specified before it).</p>
+ <div class="note">
+   <p><strong>Note:</strong> Named grid areas automatically generate implicit named lines of this form, so specifying <code>grid-area: foo;</code> will choose the start/end edge of that named grid area (unless another line named <code>foo-start</code>/<code>foo-end</code> was explicitly specified before it).</p>
+ </div>
 
  <p>Otherwise, this is treated as if the integer <code>1</code> had been specified along with the <code>&lt;custom-ident&gt;</code>.</p>
  </dd>
@@ -134,26 +138,11 @@ grid-area: unset;</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Grid", "#propdef-grid-area", "grid-area")}}</td>
-   <td>{{Spec2("CSS3 Grid")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.grid-area")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

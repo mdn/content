@@ -8,20 +8,28 @@ tags:
   - Experimental
   - Reference
   - 'recipe:css-property'
+browser-compat: css.properties.border-inline-width
 ---
 <div>{{CSSRef}}</div>
 
 <p>The <strong><code>border-inline-width</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property defines the width of the logical inline borders of an element, which maps to a physical border width depending on the element's writing mode, directionality, and text orientation. It corresponds to the {{cssxref("border-top-width")}} and {{cssxref("border-bottom-width")}}, or {{cssxref("border-left-width")}}, and {{cssxref("border-right-width")}} property depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.</p>
 
-<pre class="brush:css no-line-numbers">/* &lt;'border-width'&gt; values */
-border-inline-width: 5px 10px;
-border-inline-width: 5px;
-border-inline-width: thick;
-</pre>
+<div>{{EmbedInteractiveExample("pages/css/border-inline-width.html")}}</div>
 
 <p>The border width in the other dimension can be set with {{cssxref("border-block-width")}}, which sets {{cssxref("border-block-start-width")}}, and {{cssxref("border-block-end-width")}}.</p>
 
 <h2 id="Syntax">Syntax</h2>
+
+<pre class="brush:css no-line-numbers">/* &lt;'border-width'&gt; values */
+border-inline-width: 5px 10px;
+border-inline-width: 5px;
+border-inline-width: thick;
+
+/* Global values */
+border-inline-width: inherit;
+border-inline-width: initial;
+border-inline-width: revert;
+border-inline-width: unset;</pre>
 
 <h3 id="Values">Values</h3>
 
@@ -65,26 +73,11 @@ border-inline-width: thick;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Logical Properties", "#propdef-border-inline-width", "border-inline-width")}}</td>
-   <td>{{Spec2("CSS Logical Properties")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.border-inline-width")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

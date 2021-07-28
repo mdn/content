@@ -43,14 +43,14 @@ tags:
 <p>There are some key principles a web app should try to observe to be identified as a PWA. It should be:</p>
 
 <ul>
-	<li><a href="/en-US/docs/Web/Progressive_web_apps/Introduction#advantages_of_web_applications#Discoverable">Discoverable</a>, so the contents can be found through search engines.</li>
-	<li><a href="/en-US/docs/Web/Progressive_web_apps/Introduction#advantages_of_web_applications#Installable">Installable</a>, so it can be available on the device's home screen or app launcher.</li>
-	<li><a href="/en-US/docs/Web/Progressive_web_apps/Introduction#advantages_of_web_applications#Linkable">Linkable</a>, so you can share it by sending a URL.</li>
-	<li><a href="/en-US/docs/Web/Progressive_web_apps/Introduction#advantages_of_web_applications#Network_independent">Network independent</a>, so it works offline or with a poor network connection.</li>
-	<li><a href="/en-US/docs/Web/Progressive_web_apps/Introduction#advantages_of_web_applications#Progressive">Progressive</a>, so it's still usable on a basic level on older browsers, but fully-functional on the latest ones.</li>
-	<li><a href="/en-US/docs/Web/Progressive_web_apps/Introduction#advantages_of_web_applications#Re-engageable">Re-engageable</a>, so it's able to send notifications whenever there's new content available.</li>
-	<li><a href="/en-US/docs/Web/Progressive_web_apps/Introduction#advantages_of_web_applications#Responsive">Responsive</a>, so it's usable on any device with a screen and a browser—mobile phones, tablets, laptops, TVs, refrigerators, etc.</li>
-	<li><a href="/en-US/docs/Web/Progressive_web_apps/Introduction#advantages_of_web_applications#Safe">Safe</a>, so the connections between the user, the app, and your server are secured against any third parties trying to get access to sensitive data.</li>
+	<li><a href="#discoverability">Discoverable</a>, so the contents can be found through search engines.</li>
+	<li><a href="#installability">Installable</a>, so it can be available on the device's home screen or app launcher.</li>
+	<li><a href="#linkability">Linkable</a>, so you can share it by sending a URL.</li>
+	<li><a href="#network_independence">Network independent</a>, so it works offline or with a poor network connection.</li>
+	<li><a href="#progressive_enhancement_support">Progressive</a>, so it's still usable on a basic level on older browsers, but fully-functional on the latest ones.</li>
+	<li><a href="#re-engageability">Re-engageable</a>, so it's able to send notifications whenever there's new content available.</li>
+	<li><a href="#responsiveness">Responsive</a>, so it's usable on any device with a screen and a browser—mobile phones, tablets, laptops, TVs, refrigerators, etc.</li>
+	<li><a href="#safety">Safe</a>, so the connections between the user, the app, and your server are secured against any third parties trying to get access to sensitive data.</li>
 </ul>
 
 <p>Offering these features and making use of all the {{anch("Advantages of web applications", "advantages")}} offered by web applications can create a compelling, highly flexible offering for your users and customers.</p>
@@ -74,7 +74,7 @@ tags:
 
 <p>Early stage emerging startups like <a href="https://www.couponmoto.com/"> couponmoto</a> have also started using progressive web apps to drive more consumer engagement, showing that they can help small as well as big companies to (re-)engage users more effectively.</p>
 
-<p>You can check the list at <a href="https://pwa.rocks/"> pwa.rocks</a> for more examples. Particularly worth mentioning is the<a href="https://hnpwa.com/"> hnpwa.com</a> page—this lists an example implementation of the Hacker News website (instead of the usual TodoMVC app), in which you can see the use of various front-end frameworks.</p>
+<p>Particularly worth mentioning is the<a href="https://hnpwa.com/"> hnpwa.com</a> page—this lists an example implementation of the Hacker News website (instead of the usual TodoMVC app), in which you can see the use of various front-end frameworks.</p>
 
 <p>You can even generate PWAs online using the<a href="https://www.pwabuilder.com/"> PWABuilder</a> website.</p>
 
@@ -90,7 +90,7 @@ tags:
 
 <p><img alt="" src="discoverable.svg" style="float: left; margin-right: 1em;">The eventual aim is that web apps should have better representation in search engines, be easier to expose, catalog and rank, and have metadata usable by browsers to give them special capabilities.</p>
 
-<p>Some of the capabilities have already been enabled on certain web-based platforms by proprietary technologies like <a href="http://ogp.me/">Open Graph</a>, which provides a format for specifying similar metadata in the {{Glossary("HTML")}} {{HTMLElement("head")}} block using {{HTMLElement("meta")}} tags.</p>
+<p>Some of the capabilities have already been enabled on certain web-based platforms by proprietary technologies like <a href="https://ogp.me/">Open Graph</a>, which provides a format for specifying similar metadata in the {{Glossary("HTML")}} {{HTMLElement("head")}} block using {{HTMLElement("meta")}} tags.</p>
 
 <p>The relevant web standard here is the <a href="/en-US/docs/Web/Manifest">Web app manifest</a>, which defines features of an app such as name, icon, splash screen, and theme colors in a {{Glossary("JSON")}}-formatted manifest file. This is for use in contexts such as app listings and device home screens.</p>
 
@@ -154,13 +154,13 @@ tags:
 
 <p>The key ingredient required for PWAs is <a href="/en-US/docs/Web/API/Service_Worker_API"> service worker</a> support. Thankfully service workers are <a href="https://jakearchibald.github.io/isserviceworkerready/"> now supported on all major browsers</a> on desktop and mobile.</p>
 
-<p>Other features such as<a href="/en-US/docs/Web/Manifest"> Web App Manifest</a>,<a href="/en-US/docs/Web/API/Push_API"> Push</a> <a href="/en-US/docs/Web/API/Notifications_API">Notifications</a>, and<a href="/en-US/docs/Web/Progressive_web_apps/Add_to_home_screen"> Add to Home Screen</a> functionality have wide support too. Currently, Safari has limited support for Web App Manifest and Add to Home Screen and no support for web push notifications. However, other major browsers support all these features.</p>
+<p>Other features such as <a href="/en-US/docs/Web/Manifest">Web App Manifest</a>, <a href="/en-US/docs/Web/API/Push_API">Push</a> <a href="/en-US/docs/Web/API/Notifications_API">Notifications</a>, and <a href="/en-US/docs/Web/Progressive_web_apps/Add_to_home_screen">Add to Home Screen</a> functionality have wide support too. Currently, Safari has limited support for Web App Manifest and Add to Home Screen and no support for web push notifications. However, other major browsers support all these features.</p>
 
 <p>Above all you should follow the progressive enhancement rule: use technologies that enhance the appearance and utility of your app when they're available, but still offer the basic functionality of your app when those features are unavailable. Presenting a trusted website with a good performance is a consequence of using these enhancements; this in turn means building web apps which follow better practices. This way everybody will be able to use the app, but those with modern browsers will benefit from PWA features even more.</p>
 
 <h2 id="An_example_application">An example application</h2>
 
-<p>In this series of articles we will examine the source code of a super simple website that lists information about games submitted to the <a href="http://js13kgames.com/aframe">A-Frame category</a> in the <a href="http://2017.js13kgames.com/">js13kGames 2017</a> competition. You don't have to think about what the actual content on the website is; the main point is to learn how to use PWA features in your own projects.</p>
+<p>In this series of articles we will examine the source code of a super simple website that lists information about games submitted to the <a href="https://js13kgames.com/aframe">A-Frame category</a> in the <a href="https://2017.js13kgames.com/">js13kGames 2017</a> competition. You don't have to think about what the actual content on the website is; the main point is to learn how to use PWA features in your own projects.</p>
 
 <p>You can <a href="https://mdn.github.io/pwa-examples/js13kpwa/">see this app in action</a> online, and the source code is <a href="https://github.com/mdn/pwa-examples/tree/master/js13kpwa">available on GitHub</a>. We'll be examining this code carefully over the course of this series of articles.</p>
 

@@ -65,7 +65,7 @@ ctx.fillStyle = 'rgba(255, 165, 0, 1)';
 
 <p>The result looks like this:</p>
 
-<p>{{EmbedLiveSample("A_fillStyle_example", 160, 160, "https://mdn.mozillademos.org/files/5417/Canvas_fillstyle.png")}}</p>
+<p>{{EmbedLiveSample("A_fillStyle_example", 160, 160, "canvas_fillstyle.png")}}</p>
 
 <h3 id="A_strokeStyle_example">A <code>strokeStyle</code> example</h3>
 
@@ -93,7 +93,7 @@ ctx.fillStyle = 'rgba(255, 165, 0, 1)';
 
 <p>The result looks like this:</p>
 
-<p>{{EmbedLiveSample("A_strokeStyle_example", "180", "180", "https://mdn.mozillademos.org/files/253/Canvas_strokestyle.png")}}</p>
+<p>{{EmbedLiveSample("A_strokeStyle_example", "180", "180", "canvas_strokestyle.png")}}</p>
 
 <h2 id="Transparency">Transparency</h2>
 
@@ -150,7 +150,7 @@ ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
 <pre class="brush: js">draw();</pre>
 </div>
 
-<p>{{EmbedLiveSample("A_globalAlpha_example", "180", "180", "https://mdn.mozillademos.org/files/232/Canvas_globalalpha.png")}}</p>
+<p>{{EmbedLiveSample("A_globalAlpha_example", "180", "180", "canvas_globalalpha.png")}}</p>
 
 <h3 id="An_example_using_rgba">An example using <code>rgba()</code></h3>
 
@@ -184,7 +184,7 @@ ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
 <pre class="brush: js">draw();</pre>
 </div>
 
-<p>{{EmbedLiveSample("An_example_using_rgba()", "180", "180", "https://mdn.mozillademos.org/files/246/Canvas_rgba.png")}}</p>
+<p>{{EmbedLiveSample("An_example_using_rgba()", "180", "180", "canvas_rgba.png")}}</p>
 
 <h2 id="Line_styles">Line styles</h2>
 
@@ -235,7 +235,7 @@ ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
 <pre class="brush: js">draw();</pre>
 </div>
 
-<p>{{EmbedLiveSample("A_lineWidth_example", "180", "180", "https://mdn.mozillademos.org/files/239/Canvas_linewidth.png")}}</p>
+<p>{{EmbedLiveSample("A_lineWidth_example", "180", "180", "canvas_linewidth.png")}}</p>
 
 <p>Obtaining crisp lines requires understanding how paths are stroked. In the images below, the grid represents the canvas coordinate grid. The squares between gridlines are actual on-screen pixels. In the first grid image below, a rectangle from (2,1) to (5,5) is filled. The entire area between them (light red) falls on pixel boundaries, so the resulting filled rectangle will have crisp edges.</p>
 
@@ -257,9 +257,7 @@ ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
 
 <h3 id="A_lineCap_example">A <code>lineCap</code> example</h3>
 
-<p>The <code>lineCap</code> property determines how the end points of every line are drawn. There are three possible values for this property and those are: <code>butt</code>, <code>round</code> and <code>square</code>. By default this property is set to <code>butt</code>.</p>
-
-<p><img alt="" src="canvas_linecap.png" style="float: right;"></p>
+<p>The <code>lineCap</code> property determines how the end points of every line are drawn. There are three possible values for this property and those are: <code>butt</code>, <code>round</code> and <code>square</code>. By default this property is set to <code>butt</code>:</p>
 
 <dl>
  <dt><code>butt</code></dt>
@@ -306,15 +304,13 @@ ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
 <pre class="brush: js">draw();</pre>
 </div>
 
-<p>{{EmbedLiveSample("A_lineCap_example", "180", "180", "https://mdn.mozillademos.org/files/236/Canvas_linecap.png")}}</p>
+<p>{{EmbedLiveSample("A_lineCap_example", "180", "180", "Canvas_linecap.png")}}</p>
 
 <h3 id="A_lineJoin_example">A <code>lineJoin</code> example</h3>
 
 <p>The <code>lineJoin</code> property determines how two connecting segments (of lines, arcs or curves) with non-zero lengths in a shape are joined together (degenerate segments with zero lengths, whose specified endpoints and control points are exactly at the same position, are skipped).</p>
 
-<p>There are three possible values for this property: <code>round</code>, <code>bevel</code> and <code>miter</code>. By default this property is set to <code>miter</code>. Note that the <code>lineJoin</code> setting has no effect if the two connected segments have the same direction, because no joining area will be added in this case.</p>
-
-<p><img alt="" src="canvas_linejoin.png" style="float: right;"></p>
+<p>There are three possible values for this property: <code>round</code>, <code>bevel</code> and <code>miter</code>. By default this property is set to <code>miter</code>. Note that the <code>lineJoin</code> setting has no effect if the two connected segments have the same direction, because no joining area will be added in this case:</p>
 
 <dl>
  <dt><code>round</code></dt>
@@ -350,7 +346,7 @@ ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
 <pre class="brush: js">draw();</pre>
 </div>
 
-<p>{{EmbedLiveSample("A_lineJoin_example", "180", "180", "https://mdn.mozillademos.org/files/237/Canvas_linejoin.png")}}</p>
+<p>{{EmbedLiveSample("A_lineJoin_example", "180", "180", "Canvas_linejoin.png")}}</p>
 
 <h3 id="A_demo_of_the_miterLimit_property">A demo of the <code>miterLimit</code> property</h3>
 
@@ -424,7 +420,7 @@ ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
 draw();</pre>
 </div>
 
-<p>{{EmbedLiveSample("A_demo_of_the_miterLimit_property", "400", "180", "https://mdn.mozillademos.org/files/240/Canvas_miterlimit.png")}}</p>
+<p>{{EmbedLiveSample("A_demo_of_the_miterLimit_property", "400", "180", "canvas_miterlimit.png")}}</p>
 
 <h3 id="Using_line_dashes">Using line dashes</h3>
 
@@ -457,7 +453,7 @@ function march() {
 
 march();</pre>
 
-<p>{{EmbedLiveSample("Using_line_dashes", "120", "120", "https://mdn.mozillademos.org/files/9853/marching-ants.png")}}</p>
+<p>{{EmbedLiveSample("Using_line_dashes", "120", "120", "marching-ants.png")}}</p>
 
 <h2 id="Gradients">Gradients</h2>
 
@@ -531,7 +527,7 @@ lineargradient.addColorStop(1, 'black');
 
 <p>In the second gradient, we didn't assign the starting color (at position 0.0) since it wasn't strictly necessary, because it will automatically assume the color of the next color stop. Therefore, assigning the black color at position 0.5 automatically makes the gradient, from the start to this stop, black.</p>
 
-<p>{{EmbedLiveSample("A_createLinearGradient_example", "180", "180", "https://mdn.mozillademos.org/files/235/Canvas_lineargradient.png")}}</p>
+<p>{{EmbedLiveSample("A_createLinearGradient_example", "180", "180", "canvas_lineargradient.png")}}</p>
 
 <h3 id="A_createRadialGradient_example">A <code>createRadialGradient</code> example</h3>
 
@@ -583,7 +579,7 @@ lineargradient.addColorStop(1, 'black');
 
 <p>The last color stop in each of the four gradients uses a fully transparent color. If you want to have a nice transition from this to the previous color stop, both colors should be equal. This isn't very obvious from the code because it uses two different CSS color methods as a demonstration, but in the first gradient <code>#019F62 = rgba(1,159,98,1)</code>.</p>
 
-<p>{{EmbedLiveSample("A_createRadialGradient_example", "180", "180", "https://mdn.mozillademos.org/files/244/Canvas_radialgradient.png")}}</p>
+<p>{{EmbedLiveSample("A_createRadialGradient_example", "180", "180", "canvas_radialgradient.png")}}</p>
 
 
 <!-- ------------------------ -->
@@ -627,7 +623,7 @@ lineargradient.addColorStop(1, 'black');
 
 <p>The first gradient is positioned in the center of the first rectangle and moves a green color stop at the start, to a white one at the end. The angle starts at 2 radians, which is noticeable because of the beginning/end line pointing south east.</p>
 
-<p>The second gradient is also positioned at the center of it's second rectangle. This one has multiple colour stops, alternating from black to white at each quarter of the rotation. This gives us the checkered effect.</p>
+<p>The second gradient is also positioned at the center of it's second rectangle. This one has multiple color stops, alternating from black to white at each quarter of the rotation. This gives us the checkered effect.</p>
 
 <p>{{EmbedLiveSample("A_createConicGradient_example", "180", "180", "canvas_conicgrad.png")}}</p>
 
@@ -674,7 +670,7 @@ var ptrn = ctx.createPattern(img, 'repeat');
 
   // create new image object to use as pattern
   var img = new Image();
-  img.src = 'https://mdn.mozillademos.org/files/222/Canvas_createpattern.png';
+  img.src = 'canvas_createpattern.png';
   img.onload = function() {
 
     // create pattern
@@ -694,7 +690,7 @@ var ptrn = ctx.createPattern(img, 'repeat');
 <p>The result looks like this:</p>
 </div>
 
-<p>{{EmbedLiveSample("A_createPattern_example", "180", "180", "https://mdn.mozillademos.org/files/222/Canvas_createpattern.png")}}</p>
+<p>{{EmbedLiveSample("A_createPattern_example", "180", "180", "canvas_createpattern.png")}}</p>
 
 <h2 id="Shadows">Shadows</h2>
 
@@ -745,7 +741,7 @@ var ptrn = ctx.createPattern(img, 'repeat');
 <pre class="brush: js">draw();</pre>
 </div>
 
-<p>{{EmbedLiveSample("A_shadowed_text_example", "180", "100", "https://mdn.mozillademos.org/files/2505/shadowed-string.png")}}</p>
+<p>{{EmbedLiveSample("A_shadowed_text_example", "180", "100", "shadowed-string.png")}}</p>
 
 <p>We will look at the <code>font</code> property and <code>fillText</code> method in the next chapter about <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text">drawing text</a>.</p>
 
@@ -776,6 +772,6 @@ var ptrn = ctx.createPattern(img, 'repeat');
 <pre class="brush: js">draw();</pre>
 </div>
 
-<p>{{EmbedLiveSample("Canvas_fill_rules", "110", "110", "https://mdn.mozillademos.org/files/9855/fill-rule.png")}}</p>
+<p>{{EmbedLiveSample("Canvas_fill_rules", "110", "110", "fill-rule.png")}}</p>
 
 <p>{{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}</p>

@@ -7,6 +7,7 @@ tags:
   - CSS Property
   - Reference
   - recipe:css-property
+browser-compat: css.properties.font-kerning
 ---
 <div>{{CSSRef}}</div>
 
@@ -18,11 +19,19 @@ tags:
 
 <p>In the image below, for instance, the examples on the left do not use kerning, while the ones on the right do:</p>
 
-<p><img alt="Example of font-kerning" src="font-kerning.png" style="display: block; margin: auto;"></p>
+<p><img alt="Example of font-kerning" src="font-kerning.png"></p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<p>The <code>font-kerning</code> property is specified as one of the keyword values listed below.</p>
+<pre class="brush: css">font-kerning: auto;
+font-kerning: normal;
+font-kerning: none;
+
+/* Global values */
+font-kerning: inherit;
+font-kerning: initial;
+font-kerning: revert;
+font-kerning: unset;</pre>
 
 <h3 id="Values">Values</h3>
 
@@ -87,26 +96,11 @@ nokern.textContent = input.value;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Fonts', '#propdef-font-kerning', 'font-kerning')}}</td>
-   <td>{{Spec2('CSS3 Fonts')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.font-kerning")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

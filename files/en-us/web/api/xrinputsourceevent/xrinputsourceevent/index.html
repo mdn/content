@@ -20,8 +20,9 @@ tags:
 - augmented
 - controllers
 - events
+browser-compat: api.XRInputSourceEvent.XRInputSourceEvent
 ---
-<p>{{APIRef("WebXR Device API")}}{{SecureContext_Header}}</p>
+<p>{{APIRef("WebXR Device API")}}</p>
 
 <p><span class="seoSummary">The <code><strong>XRInputSourceEvent()</strong></code>
     constructor creates and returns a new {{domxref("XRInputSourceEvent")}} object
@@ -43,8 +44,12 @@ tags:
       below.</p>
   </dd>
   <dt><code>eventInitDict</code></dt>
-  <dd>An object based on the {{domxref("XRInputSourceEventInit")}} dictionary which
-    contains the values to assign to the new event's properties.</dd>
+  <dd>An object to configure the event with the following properties:
+    <ul>
+      <li><code>frame</code>: An {{domxref("XRFrame")}} object representing the event frame during which the event took place. This event is <em>not</em> associated with the animation process, and has no viewer information contained within it.</li>
+      <li><code>inputSource</code>: An {{domxref("XRInputSource")}} object representing the input device from which the event is being sent.</li>
+    </ul>
+  </dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -58,27 +63,22 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<p>{{page("/en-US/docs/Web/API/XRInputSourceEvent", "Examples")}}</p>
+<p>This example creates a new {{domxref("XRSession.select_event", "select")}} event and
+  sends it to the {{domxref("XRSession")}}.</p>
+
+<pre class="brush: js">let event = new XRInputSourceEvent("select", {
+  frame: eventFrame,
+  inputSource: source
+};
+if (event) {
+  xrSession.dispatchEvent(event);
+}
+</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName("WebXR","#xrinputsourceevent","XRInputSourceEvent")}}</td>
-      <td>{{Spec2("WebXR")}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>{{Compat("api.XRInputSourceEvent.XRInputSourceEvent")}}</div>
+<div>{{Compat}}</div>

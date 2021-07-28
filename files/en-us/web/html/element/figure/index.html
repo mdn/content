@@ -9,20 +9,19 @@ tags:
   - Presentation
   - Reference
   - figure
+browser-compat: html.elements.figure
 ---
 <div>{{HTMLRef}}</div>
 
-<p><span class="seoSummary">The <strong>HTML <code>&lt;figure&gt;</code> (Figure With Optional Caption) element</strong> represents self-contained content, potentially with an optional caption, which is specified using the {{HTMLElement("figcaption")}} element.</span> The figure, its caption, and its contents are referenced as a single unit.</p>
+<p>The <strong><code>&lt;figure&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element represents self-contained content, potentially with an optional caption, which is specified using the {{HTMLElement("figcaption")}} element. The figure, its caption, and its contents are referenced as a single unit.</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/figure.html","tabbed-shorter")}}</div>
-
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <table class="properties">
  <tbody>
   <tr>
    <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>, <a href="/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#sectioning_roots">sectioning root</a>, palpable content.</td>
+   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>, <a href="/en-US/docs/Web/HTML/Element/Heading_Elements#sectioning_roots">sectioning root</a>, palpable content.</td>
   </tr>
   <tr>
    <th scope="row">Permitted content</th>
@@ -59,7 +58,7 @@ tags:
 
 <ul>
  <li>Usually a <code>&lt;figure&gt;</code> is an image, illustration, diagram, code snippet, etc., that is referenced in the main flow of a document, but that can be moved to another part of the document or to an appendix without affecting the main flow.</li>
- <li>Being a <a href="/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#sectioning_roots">sectioning root</a>, the outline of the content of the <code>&lt;figure&gt;</code> element is excluded from the main outline of the document.</li>
+ <li>Being a <a href="/en-US/docs/Web/HTML/Element/Heading_Elements#sectioning_roots">sectioning root</a>, the outline of the content of the <code>&lt;figure&gt;</code> element is excluded from the main outline of the document.</li>
  <li>A caption can be associated with the <code>&lt;figure&gt;</code> element by inserting a {{HTMLElement("figcaption")}} inside it (as the first or the last child). The first <code>&lt;figcaption&gt;</code> element found in the figure is presented as the figure's caption.</li>
 </ul>
 
@@ -70,14 +69,14 @@ tags:
 <pre class="brush: html">&lt;!-- Just an image --&gt;
 &lt;figure&gt;
   &lt;img
-  src="https://developer.mozilla.org/static/img/favicon144.png"
+  src="favicon-192x192.png"
   alt="The beautiful MDN logo."&gt;
 &lt;/figure&gt;
 
 &lt;!-- Image with a caption --&gt;
 &lt;figure&gt;
   &lt;img
-  src="https://developer.mozilla.org/static/img/favicon144.png"
+  src="favicon-192x192.png"
   alt="The beautiful MDN logo."&gt;
   &lt;figcaption&gt;MDN Logo&lt;/figcaption&gt;
 &lt;/figure&gt;
@@ -134,38 +133,11 @@ Love is a spirit all compact of fire,
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'semantics.html#the-figure-element', '&lt;figure&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.2', 'grouping-content.html#the-figure-element', '&lt;figure&gt;')}}</td>
-   <td>{{Spec2('HTML5.2')}}</td>
-   <td>No changes from HTML 5.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'grouping-content.html#the-figure-element', '&lt;figure&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+<p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
-
-<p>{{Compat("html.elements.figure")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

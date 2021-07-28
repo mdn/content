@@ -1,0 +1,49 @@
+---
+title: InterventionReportBody.sourceFile
+slug: Web/API/InterventionReportBody/sourceFile
+tags:
+  - API
+  - Property
+  - Reference
+  - sourceFile
+  - InterventionReportBody
+browser-compat: api.InterventionReportBody.sourceFile
+---
+<div>{{APIRef("Reporting API")}}</div>
+
+<p class="summary">The <strong><code>sourceFile</code></strong> read-only property of the {{domxref("InterventionReportBody")}} interface returns the path to the source file where the intervention occurred.</p>
+
+<div class="notecard note">
+  <h4>Note:</h4>
+  <p>This property can be used with {{domxref("InterventionReportBody.lineNumber")}} and {{domxref("InterventionReportBody.columnNumber")}} to locate the column and line in the file where the feature is used.</p>
+</div>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js">let sourceFile = InterventionReportBody.sourceFile;</pre>
+
+<h3>Value</h3>
+<p>A {{domxref("DOMString","string")}}, or <code>null</code> if the path is not known.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<p>In this example we create a new {{domxref("ReportingObserver")}} to observe intervention reports, then print the value of <code>sourceFile</code> to the console.</p>
+
+<pre class="brush: js">let options = {
+  types: ['intervention'],
+  buffered: true
+}
+
+let observer = new ReportingObserver(function(reports, observer) {
+  let firstReport = reports[0];
+  console.log(firstReport.type); // intervention
+  console.log(firstReport.body.sourceFile);
+}, options);</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<p>{{Specifications}}</p>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>

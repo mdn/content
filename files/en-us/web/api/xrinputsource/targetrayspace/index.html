@@ -25,8 +25,9 @@ tags:
 - source
 - space
 - target
+browser-compat: api.XRInputSource.targetRaySpace
 ---
-<p>{{APIRef("WebXR")}}{{securecontext_header}}</p>
+<p>{{APIRef("WebXR Device API")}}</p>
 
 <p><span class="seoSummary">The read-only {{domxref("XRInputSource")}} property
     <code><strong>targetRaySpace</strong></code> returns an {{domxref("XRSpace")}}
@@ -85,37 +86,34 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<p>{{page("/en-US/docs/Web/API/XRTargetRayMode", "Examples")}}</p>
+<p>This fragment of code shows part of a function to be called once every frame. It looks for inputs which have a non-<code>null</code> {{domxref("XRInputSource.targetRaySpace", "targetRaySpace")}}. Inputs which have a value for this property represent inputs that project a target ray outward from the user.</p>
+
+<p>For each such input, this example looks for inputs whose {{domxref("XRInputSource.targetRayMode", "targetRayMode")}} is <code>tracked-pointer</code>, indicating that the input is in fact intended to represent a targeting device rather than a gazing device, screen tap, or mouse click. For tracked pointers, a function <code>myRenderTargetRayAsBeam()</code> is called to render a beam from the input controller's virtual position outward in the direction it's pointing.</p>
+
+<p>The code should continue to perform tasks such as drawing controllers or any objects representative of the user's hands' positions in the virtual space, as well as any other input-related tasks.</p>
+
+<pre class="brush: js">function updateInputSources(session, frame, refSpace) {
+  for (let source of session.getInputSources()) {
+    let targetRayPose = frame.getPose(inputSource.targetRaySpace, refSpace);
+
+    if (targetRayPose) {
+      if (source.targetRayMode == "tracked-pointer") {
+        myRenderTargetRayAsBeam(targetRayPose);
+      }
+    }
+
+    /* ... */
+  }
+}
+</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('WebXR','#dom-xrinputsource-targetrayspace','XRInputSource.targetRaySpace')}}
-      </td>
-      <td>{{Spec2('WebXR')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div class="hidden">
-  <p>The compatibility table in this page is generated from structured data. If you'd like
-    to contribute to the data, please check out <a
-      href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
-    and send us a pull request.</p>
-</div>
-
-<p>{{Compat("api.XRInputSource.targetRaySpace")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

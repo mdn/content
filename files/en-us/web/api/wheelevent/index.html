@@ -7,6 +7,7 @@ tags:
   - Interface
   - Reference
   - WheelEvent
+browser-compat: api.WheelEvent
 ---
 <p>{{APIRef("DOM Events")}}</p>
 
@@ -33,7 +34,7 @@ tags:
 
 <p><em>This interface inherits properties from its ancestors, {{DOMxRef("MouseEvent")}}, {{DOMxRef("UIEvent")}}, and {{DOMxRef("Event")}}.</em></p>
 
-<dl id="raw_prop">
+<dl>
  <dt>{{DOMxRef("WheelEvent.deltaX")}}{{ReadOnlyInline}}</dt>
  <dd>Returns a <code>double</code> representing the horizontal scroll amount.</dd>
  <dt>{{DOMxRef("WheelEvent.deltaY")}}{{ReadOnlyInline}}</dt>
@@ -59,17 +60,30 @@ tags:
    <tr>
     <td><code>WheelEvent.DOM_DELTA_LINE</code></td>
     <td><code>0x01</code></td>
-    <td>The <code>delta*</code> values are specified in lines.</td>
+    <td>The <code>delta*</code> values are specified in lines. Each mouse click scrolls a line of content, where the method used to calculate line height is browser dependent.</td>
    </tr>
    <tr>
     <td><code>WheelEvent.DOM_DELTA_PAGE</code></td>
     <td><code>0x02</code></td>
-    <td>The <code>delta*</code> values are specified in pages.</td>
+    <td>The <code>delta*</code> values are specified in pages. Each mouse click scrolls a page of content.</td>
    </tr>
   </tbody>
  </table>
  </dd>
+
+ <dt>{{DOMxRef("WheelEvent.wheelDelta")}}{{ReadOnlyInline}} {{deprecated_inline}}</dt>
+ <dd>Returns an integer (32-bit) representing the distance in pixels.</dd>
+ <dt>{{DOMxRef("WheelEvent.wheelDeltaX")}}{{ReadOnlyInline}} {{deprecated_inline}}</dt>
+ <dd>Returns an integer representing the horizontal scroll amount.</dd>
+ <dt>{{DOMxRef("WheelEvent.wheelDeltaY")}}{{ReadOnlyInline}} {{deprecated_inline}}</dt>
+ <dd>Returns an integer representing the vertical scroll amount.</dd>
 </dl>
+
+
+<div class="notecard note">
+  <p><strong>Note:</strong> <a href="/en-US/docs/Web/API/Element/mousewheel_event">Element: mousewheel event</a> has additional documentation about the deprecated properties <code>wheelDelta</code>, <code>wheelDeltaX</code>, <code>wheelDeltaY</code>.
+  </p>
+</div>
 
 <h2 id="Methods">Methods</h2>
 
@@ -77,31 +91,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("UI Events", "#interface-wheelevent", "The <code>WheelEvent</code> interface")}}</td>
-   <td>{{Spec2("UI Events")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Events', '#interface-wheelevent', 'WheelEvent')}}</td>
-   <td>{{Spec2('DOM3 Events')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+<p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.WheelEvent")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

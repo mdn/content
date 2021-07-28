@@ -8,6 +8,7 @@ tags:
   - Reference
   - Web Audio API
   - complete
+browser-compat: api.OfflineAudioContext.complete_event
 ---
 <p>{{DefaultAPISidebar("Web Audio API")}}</p>
 
@@ -42,7 +43,7 @@ tags:
 
 <p>When processing is complete, you might want to use the <code>oncomplete</code> handler the prompt the user that the audio can now be played, and enable the play button:</p>
 
-<pre class="brush: js"><code class="language-js"><span class="keyword token">let</span> </code>offlineAudioCtx<code class="language-js"> <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">OfflineAudioContext</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code>
+<pre class="brush: js">let offlineAudioCtx = new OfflineAudioContext();
 
 offlineAudioCtx.addEventListener('complete', () =&gt; {
   console.log('Offline audio processing now complete');
@@ -52,7 +53,7 @@ offlineAudioCtx.addEventListener('complete', () =&gt; {
 
 <p>You can also set up the event handler using the {{domxref("OfflineAudioContext.oncomplete")}} property:</p>
 
-<pre class="brush: js"><code class="language-js"><span class="keyword token">let</span> </code>offlineAudioCtx<code class="language-js"> <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">OfflineAudioContext</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code>
+<pre class="brush: js">let offlineAudioCtx = new OfflineAudioContext();
 
 offlineAudioCtx.oncomplete = function() {
   console.log('Offline audio processing now complete');
@@ -62,28 +63,15 @@ offlineAudioCtx.oncomplete = function() {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#OfflineAudioCompletionEvent', 'OfflineAudioCompletionEvent')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.OfflineAudioContext.complete_event")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
  <li>{{domxref("OfflineAudioContext.oncomplete")}}</li>
- <li><a href="/en-US/docs/Web_Audio_API">Web Audio API</a></li>
+ <li><a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a></li>
 </ul>

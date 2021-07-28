@@ -8,11 +8,22 @@ tags:
   - Read-only
   - Reference
   - primitiveValue
+browser-compat: api.CSSPrimitiveValue.primitiveType
 ---
-<div>{{APIRef("DOM")}}</div>
+<div>{{APIRef("CSSOM")}}</div>
 
 <p>The <code><strong>primitiveType</strong></code> read-only property of the
   {{domxref("CSSPrimitiveValue")}} interface represents the type of a CSS value.</p>
+
+<div class="notecard note">
+  <p><strong>Note:</strong> This property was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do
+  not implement it.</p>
+  <p>To achieve your purpose, you can use:</p>
+  <ul>
+    <li>the untyped <a href="/en-US/docs/Web/API/CSS_Object_Model">CSS Object Model</a>, widely supported, or</li>
+    <li>the modern <a href="/en-US/docs/Web/API/CSS_Typed_OM_API">CSS Typed Object Model API</a>, less supported and considered experimental.</li>
+  </ul>
+</div>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -174,25 +185,14 @@ console.log(cssValue.primitiveType);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('DOM2 Style', 'css.html#CSS-CSSPrimitiveValue-primitiveType',
-        'CSSPrimitiveValue.primitiveType')}}</td>
-      <td>{{Spec2('DOM2 Style')}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+<p>This feature was originally defined in the <a href="https://www.w3.org/TR/DOM-Level-2-Style">DOM Style Level 2</a> specification, but has been dropped from any
+  standardization effort since then.</p>
+
+<p>It has been superseded by a modern, but incompatible, <a href="/en-US/docs/Web/API/CSS_Typed_OM_API">CSS Typed Object Model API</a> that is now on the standard track.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.CSSPrimitiveValue.primitiveType")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

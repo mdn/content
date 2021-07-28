@@ -6,6 +6,7 @@ tags:
   - CSS Grid
   - CSS Property
   - Reference
+browser-compat: css.properties.grid-auto-rows
 ---
 <div>{{CSSRef}}</div>
 
@@ -51,6 +52,7 @@ grid-auto-rows: 100px minmax(100px, auto) 10% 0.5fr fit-content(400px);
 /* Global values */
 grid-auto-rows: inherit;
 grid-auto-rows: initial;
+grid-auto-rows: revert;
 grid-auto-rows: unset;
 </pre>
 
@@ -74,9 +76,9 @@ grid-auto-rows: unset;
  <dt>{{cssxref("fit-content()", "fit-content( [ &lt;length&gt; | &lt;percentage&gt; ] )")}}</dt>
  <dd>Represents the formula <code>min(max-content, max(auto, <var>argument</var>))</code>, which is calculated similar to <code>auto</code> (i.e. <code>minmax(auto, max-content)</code>), except that the track size is clamped at <var>argument</var> if it is greater than the <code>auto</code> minimum.</dd>
  <dt><code>auto</code></dt>
- <dd>Is a keyword that is identical to maximal content if it's a maximum. As a minimum it represents the largest minimum size (as specified by {{cssxref("min-width")}}/{{cssxref("min-height")}}) of the grid items occupying the grid track.</dd>
  <dd>
- <p class="note">Note: <code>auto</code> track sizes (and only <code>auto</code> track sizes) can be stretched by the {{cssxref("align-content")}} and {{cssxref("justify-content")}} properties.</p>
+   <p>Is a keyword that is identical to maximal content if it's a maximum. As a minimum it represents the largest minimum size (as specified by {{cssxref("min-width")}}/{{cssxref("min-height")}}) of the grid items occupying the grid track.</p>
+   <p>Note: <code>auto</code> track sizes (and only <code>auto</code> track sizes) can be stretched by the {{cssxref("align-content")}} and {{cssxref("justify-content")}} properties.</p>
  </dd>
 </dl>
 
@@ -121,26 +123,11 @@ grid-auto-rows: unset;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Grid", "#propdef-grid-auto-rows", "grid-auto-rows")}}</td>
-   <td>{{Spec2("CSS3 Grid")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.grid-auto-rows")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

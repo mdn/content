@@ -8,6 +8,7 @@ tags:
   - NeedsExample
   - Reference
   - recipe:css-property
+browser-compat: css.properties.border-image-slice
 ---
 <div>{{CSSRef}}</div>
 
@@ -17,14 +18,14 @@ tags:
 
 <p>The slicing process creates nine regions in total: four corners, four edges, and a middle region. Four slice lines, set a given distance from their respective sides, control the size of the regions.</p>
 
-<p><a href="/en-US/docs/Web/CSS/border-image-slice/border-image-slice.png"><img alt="The nine regions defined by the border-image or border-image-slice properties" src="border-image-slice.png" style="margin: 1px; padding: 1em;"></a></p>
+<p><a href="/en-US/docs/Web/CSS/border-image-slice/border-image-slice.png"><img alt="The nine regions defined by the border-image or border-image-slice properties" src="border-image-slice.png"></a></p>
 
 <p>The above diagram illustrates the location of each region.</p>
 
 <ul>
- <li>Zones 1-4 are <span id="corner-regions">corner regions</span>. Each one is used a single time to form the corners of the final border image.</li>
- <li>Zones 5-8 are <span id="edge-regions">edge regions</span>. These are <a href="/en-US/docs/Web/CSS/border-image-repeat">repeated, scaled, or otherwise modified</a> in the final border image to match the dimensions of the element.</li>
- <li>Zone 9 is the <span id="middle-region">middle region</span>. It is discarded by default, but is used like a background image if the keyword <code>fill</code> is set.</li>
+ <li>Zones 1-4 are corner regions. Each one is used a single time to form the corners of the final border image.</li>
+ <li>Zones 5-8 are edge regions. These are <a href="/en-US/docs/Web/CSS/border-image-repeat">repeated, scaled, or otherwise modified</a> in the final border image to match the dimensions of the element.</li>
+ <li>Zone 9 is the middle region. It is discarded by default, but is used like a background image if the keyword <code>fill</code> is set.</li>
 </ul>
 
 <p>The {{cssxref("border-image-repeat")}}, {{cssxref("border-image-width")}}, and {{cssxref("border-image-outset")}} properties determine how these regions are used to form the final border image.</p>
@@ -49,6 +50,7 @@ border-image-slice: 10% fill 7 12;
 /* Global values */
 border-image-slice: inherit;
 border-image-slice: initial;
+border-image-slice: revert;
 border-image-slice: unset;
 </pre>
 
@@ -88,7 +90,7 @@ border-image-slice: unset;
 
 <p>The following example shows a simple <code>&lt;div&gt;</code> with a border image set on it. The source image for the borders is as follows:</p>
 
-<p><img alt="nice multi-colored diamonds" src="border-diamonds.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="nice multi-colored diamonds" src="border-diamonds.png"></p>
 
 <p>The diamonds are 30px across, therefore setting 30 pixels as the value for both <code><a href="/en-US/docs/Web/CSS/border-width">border-width</a></code> and <code>border-image-slice</code> will get you complete and fairly crisp diamonds in your border:</p>
 
@@ -168,26 +170,11 @@ sliceSlider.addEventListener('input', () =&gt; {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Backgrounds', '#the-border-image-slice', 'border-image-slice')}}</td>
-   <td>{{Spec2('CSS3 Backgrounds')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.border-image-slice")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

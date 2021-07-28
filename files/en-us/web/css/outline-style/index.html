@@ -7,6 +7,7 @@ tags:
   - CSS Property
   - Reference
   - 'recipe:css-property'
+browser-compat: css.properties.outline-style
 ---
 <div>{{CSSRef}}</div>
 
@@ -33,6 +34,7 @@ outline-style: outset;
 /* Global values */
 outline-style: inherit;
 outline-style: initial;
+outline-style: revert;
 outline-style: unset;
 </pre>
 
@@ -41,46 +43,26 @@ outline-style: unset;
 <h3 id="Values">Values</h3>
 
 <dl>
- <dt>
- <p><code>auto</code></p>
- </dt>
- <dd style="outline: 8px auto red;">Permits the user agent to render a custom outline style.</dd>
- <dt>
- <p><code>none</code></p>
- </dt>
+ <dt><code>auto</code></dt>
+ <dd>Permits the user agent to render a custom outline style.</dd>
+ <dt><code>none</code></dt>
  <dd>No outline is used. The {{cssxref("outline-width")}} is <code>0</code>.</dd>
- <dt>
- <p><code>dotted</code></p>
- </dt>
- <dd style="outline: 8px dotted red;">The outline is a series of dots.</dd>
- <dt>
- <p><code>dashed</code></p>
- </dt>
- <dd style="outline: 8px dashed red;">The outline is a series of short line segments.</dd>
- <dt>
- <p><code>solid</code></p>
- </dt>
- <dd style="outline: 8px solid red;">The outline is a single line.</dd>
- <dt>
- <p><code>double</code></p>
- </dt>
- <dd style="outline: 8px double red;">The outline is two single lines. The {{cssxref("outline-width")}} is the sum of the two lines and the space between them.</dd>
- <dt>
- <p><code>groove</code></p>
- </dt>
- <dd style="outline: 8px groove red;">The outline looks as though it were carved into the page.</dd>
- <dt>
- <p><code>ridge</code></p>
- </dt>
- <dd style="outline: 8px ridge red;">The opposite of <code>groove</code>: the outline looks as though it were extruded from the page.</dd>
- <dt>
- <p><code>inset</code></p>
- </dt>
- <dd style="outline: 8px inset red;">The outline makes the box look as though it were embedded in the page.</dd>
- <dt>
- <p><code>outset</code></p>
- </dt>
- <dd style="outline: 8px outset red;">The opposite of <code>inset</code>: the outline makes the box look as though it were coming out of the page.</dd>
+ <dt><code>dotted</code></dt>
+ <dd>The outline is a series of dots.</dd>
+ <dt><code>dashed</code></dt>
+ <dd>The outline is a series of short line segments.</dd>
+ <dt><code>solid</code></dt>
+ <dd>The outline is a single line.</dd>
+ <dt><code>double</code></dt>
+ <dd>The outline is two single lines. The {{cssxref("outline-width")}} is the sum of the two lines and the space between them.</dd>
+ <dt><code>groove</code></dt>
+ <dd>The outline looks as though it were carved into the page.</dd>
+ <dt><code>ridge</code></dt>
+ <dd>The opposite of <code>groove</code>: the outline looks as though it were extruded from the page.</dd>
+ <dt><code>inset</code></dt>
+ <dd>The outline makes the box look as though it were embedded in the page.</dd>
+ <dt><code>outset</code></dt>
+ <dd>The opposite of <code>inset</code>: the outline makes the box look as though it were coming out of the page.</dd>
 </dl>
 
 <h2 id="Formal_definition">Formal definition</h2>
@@ -222,31 +204,11 @@ outline-style: unset;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Basic UI', '#outline-style', 'outline-style')}}</td>
-   <td>{{Spec2('CSS3 Basic UI')}}</td>
-   <td>Added <code>auto</code> value.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'ui.html#propdef-outline-style', 'outline-style')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.outline-style")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

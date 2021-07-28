@@ -17,6 +17,7 @@ tags:
   - XR
   - XRView
   - camera
+browser-compat: api.XRView
 ---
 <p>{{APIRef("WebXR Device API")}}{{SecureContext_Header}}</p>
 
@@ -27,6 +28,8 @@ tags:
 <dl>
  <dt>{{domxref("XRView.eye", "eye")}} {{ReadOnlyInline}}</dt>
  <dd>Which of the two eyes (<code>left</code>) or (<code>right</code>) for which this <code>XRView</code> represents the perspective. This value is used to ensure that any content which is pre-rendered for presenting to a specific eye is distributed or positioned correctly. The value can also be <code>none</code> if the <code>XRView</code> is presenting monoscopic data (such as a 2D image, a full-screen view of text. or a close-up view of something that doesn't need to appear in 3D).</dd>
+ <dt>{{domxref("XRView.isFirstPersonObserver", "isFirstPersonObserver")}} {{ReadOnlyInline}}</dt>
+ <dd>Returns a boolean indicating if the <code>XRView</code> is a first-person observer view.</dd>
  <dt>{{domxref("XRView.projectionMatrix", "projectionMatrix")}} {{ReadOnlyInline}}</dt>
  <dd>The projection matrix that will transform the scene to appear correctly given the point-of-view indicated by <code>eye</code>. This matrix should be used directly in order to avoid presentation distortions that may lead to potentially serious user discomfort.</dd>
  <dt>{{domxref("XRView.transform", "transform")}} {{ReadOnlyInline}}</dt>
@@ -89,7 +92,7 @@ mat4.transpose(normalMatrix, normalMatrix);
 
 <p>To programmatically move and/or rotate (often referred to as <strong>teleporting</strong>) an object, you need to create a new reference space for that object which applies a transform that encapsulates the desired changes. The <code>createTeleportTransform()</code> function returns the transform needed to move and rotate an object whose current situation is described by the reference space <code>refSpace</code> to a new position and orientation which is computed using previously recorded mouse and keyboard input data which has generated offsets for yaw, pitch, and position along all three axes.</p>
 
-<pre class="brush: html">function applyMouseMovement(refSpace) {
+<pre class="brush: js">function applyMouseMovement(refSpace) {
   if (!mouseYaw &amp;&amp; !mousePitch &amp;&amp; !axialDistance &amp;&amp;
       !transverseDistance &amp;&amp; !verticalDistance) {
     return refSpace;
@@ -139,23 +142,8 @@ mat4.transpose(normalMatrix, normalMatrix);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("WebXR","#xrview-interface","XRView")}}</td>
-   <td>{{Spec2("WebXR")}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>{{Compat("api.XRView")}}</div>
+<div>{{Compat}}</div>

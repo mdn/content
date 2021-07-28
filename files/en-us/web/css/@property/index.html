@@ -8,6 +8,7 @@ tags:
   - Web
   - Property
   - Houdini
+browser-compat: css.at-rules.property
 ---
 <div>{{CSSRef}}{{SeeCompatTable}}</div>
 
@@ -23,9 +24,20 @@ tags:
   initial-value: #c0ffee;
 }</pre>
 
+<h3>Descriptors</h3>
+
+<dl>
+  <dt>{{cssxref("@property/syntax","syntax")}}</dt>
+  <dd>Describes the allowable syntax for the property.</dd>
+  <dt>{{cssxref("@property/inherits","inherits")}}</dt>
+  <dd>Controls whether the custom property registration specified by <code>@property</code> inherits by default.</dd>
+  <dt>{{cssxref("@property/initial-value","initial-value")}}</dt>
+  <dd>Sets the initial value for the property.</dd>
+</dl>
+
 <p>A valid <code>@property</code> rule represents a custom property registration, with the property name being the serialization of the in the rule’s prelude.</p>
 
-<p><code>@property</code> rules require a <strong>syntax</strong> and <strong>inherits</strong> descriptor; if either are missing, the entire rule is invalid and must be ignored. The <strong>initial-value</strong> descriptor is optional only if the syntax is the universal syntax definition, otherwise the descriptor is required; if it’s missing, the entire rule is invalid and must be ignored.</p>
+<p><code>@property</code> rules require a {{cssxref("@property/syntax","syntax")}} and {{cssxref("@property/inherits","inherits")}} descriptor; if either are missing, the entire rule is invalid and must be ignored. The {{cssxref("@property/initial-value","initial-value")}} descriptor is optional only if the syntax is the universal syntax definition, otherwise the descriptor is required; if it’s missing, the entire rule is invalid and must be ignored.</p>
 
 <p>Unknown descriptors are invalid and ignored, but do not invalidate the <code>@property</code> rule.</p>
 
@@ -58,26 +70,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS Properties and Values API', '#at-property-rule')}}</td>
-   <td>{{Spec2('CSS Properties and Values API')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
-
-<p>{{Compat("css.at-rules.property")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

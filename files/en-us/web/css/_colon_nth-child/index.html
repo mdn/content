@@ -8,6 +8,7 @@ tags:
   - Reference
   - Selector
   - Web
+browser-compat: css.selectors.nth-child
 ---
 <div>{{CSSRef}}</div>
 
@@ -43,10 +44,12 @@ li:nth-child(2) {
 <dl>
  <dt><code>&lt;An+B&gt;</code></dt>
  <dd>Represents elements in a list whose indices match those found in a custom pattern of numbers, defined by <code>An+B</code>, where:<br>
- <code>A</code> is an integer step size,<br>
- <code>B</code> is an integer offset,<br>
- <code>n</code> is all positive integers, starting from 0.</dd>
- <dd>It can be read as the <em>An+B</em>th element of a list.</dd>
+  <ul>
+    <li><code>A</code> is an integer step size,</li>
+    <li><code>B</code> is an integer offset,</li>
+    <li><code>n</code> is all nonnegative integers, starting from 0.</li>
+ </ul>
+ It can be read as the <em>An+B</em>th element of a list.</dd>
 </dl>
 
 <h3 id="Formal_syntax">Formal syntax</h3>
@@ -162,31 +165,11 @@ div em {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Selectors', '#nth-child-pseudo', ':nth-child')}}</td>
-   <td>{{Spec2('CSS4 Selectors')}}</td>
-   <td>Adds <code>of &lt;selector&gt;</code> syntax and specifies that matching elements are not required to have a parent.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Selectors', '#nth-child-pseudo', ':nth-child')}}</td>
-   <td>{{Spec2('CSS3 Selectors')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.selectors.nth-child")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

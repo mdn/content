@@ -8,12 +8,13 @@ tags:
 - HTML
 - Method
 - Reference
+browser-compat: api.Document.getElementsByName
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p><span class="seoSummary">The <strong><code>getElementsByName()</code></strong> method
+<p>The <strong><code>getElementsByName()</code></strong> method
     of the {{domxref("Document")}} object returns a {{domxref("NodeList")}} Collection of
-    elements with a given {{domxref("element.name","name")}} in the document.</span></p>
+    elements with a given <code>name</code> attribute in the document.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -46,7 +47,7 @@ tags:
 
 <h2 id="Notes">Notes</h2>
 
-<p>The {{domxref("element.name","name")}} attribute can only be applied in (X)HTML
+<p>The <code>name</code> attribute can only be applied in (X)HTML
   documents.</p>
 
 <p>The returned {{domxref("NodeList")}} Collection contains <em>all</em> elements with the
@@ -74,33 +75,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', '#dom-document-getelementsbyname',
-        "Document.getElementsByName()")}}</td>
-      <td>{{ Spec2('HTML WHATWG') }}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName("DOM2 HTML", "html.html#ID-71555259",
-        "Document.getElementsByName()")}}</td>
-      <td>{{Spec2("DOM2 HTML")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Document.getElementsByName")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

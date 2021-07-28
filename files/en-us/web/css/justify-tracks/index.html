@@ -9,12 +9,13 @@ tags:
   - grid
   - justify-tracks
   - masonry
+browser-compat: css.properties.justify-tracks
 ---
 <div>{{CSSRef}}</div>
 
 <p>{{SeeCompatTable}}</p>
 
-<p>The <strong><code>justify-tracks</code></strong> CSS property sets the alignment in the masonry axis for grid containers that have <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout">masonry</a> in their inline axis.</p>
+<p>The <strong><code>justify-tracks</code></strong> CSS property sets the alignment in the masonry axis for grid containers that have <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout">masonry</a> in their inline axis.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -27,6 +28,7 @@ justify-tracks: start,center,end;
 /* Global values */
 justify-tracks: inherit;
 justify-tracks: initial;
+justify-tracks: revert;
 justify-tracks: unset;
 
 </pre>
@@ -39,30 +41,30 @@ justify-tracks: unset;
 
 <dl>
  <dt><code>start</code></dt>
- <dd>The items are packed flush to each other toward the start edge of the alignment container in the masonry axis.</dd>
+ <dd>The items are packed flush to each other toward the start edge of the alignment container in the masonry axis.</dd>
  <dt><code>end</code></dt>
- <dd>The items are packed flush to each other toward the end edge of the alignment container in the masonry axis.</dd>
+ <dd>The items are packed flush to each other toward the end edge of the alignment container in the masonry axis.</dd>
  <dt><code>center</code></dt>
  <dd>The items are packed flush to each other toward the center of the alignment container along the masonry axis.</dd>
  <dt><code>normal</code></dt>
  <dd>Acts as <code>start</code>.</dd>
  <dt><code>space-between</code></dt>
- <dd>The items are evenly distributed within the alignment container along the masonry axis. The spacing between each pair of adjacent items is the same. The first item is flush with the main-start edge, and the last item is flush with the main-end edge.</dd>
+ <dd>The items are evenly distributed within the alignment container along the masonry axis. The spacing between each pair of adjacent items is the same. The first item is flush with the main-start edge, and the last item is flush with the main-end edge.</dd>
  <dt><code>space-around</code></dt>
- <dd>The items are evenly distributed within the alignment container along the masonry axis. The spacing between each pair of adjacent items is the same. The empty space before the first and after the last item equals half of the space between each pair of adjacent items.</dd>
+ <dd>The items are evenly distributed within the alignment container along the masonry axis. The spacing between each pair of adjacent items is the same. The empty space before the first and after the last item equals half of the space between each pair of adjacent items.</dd>
  <dt><code>space-evenly</code></dt>
- <dd>The items are evenly distributed within the alignment container along the masonry axis. The spacing between each pair of adjacent items, the main-start edge and the first item, and the main-end edge and the last item, are all exactly the same.</dd>
+ <dd>The items are evenly distributed within the alignment container along the masonry axis. The spacing between each pair of adjacent items, the main-start edge and the first item, and the main-end edge and the last item, are all exactly the same.</dd>
  <dt><code>stretch</code></dt>
  <dd>
  <p>The items stretch along the masonry axis to fill the content box. Items with definite size do not stretch.</p>
  </dd>
  <dt><code>left</code></dt>
  <dd>
- <p>The items are packed flush to each other toward the left edge of the alignment container. </p>
+ <p>The items are packed flush to each other toward the left edge of the alignment container.</p>
  </dd>
  <dt><code>right</code></dt>
  <dd>
- <p>The items are packed flush to each other toward the right edge of the alignment container. </p>
+ <p>The items are packed flush to each other toward the right edge of the alignment container.</p>
  </dd>
 </dl>
 
@@ -82,33 +84,14 @@ justify-tracks: unset;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Grid 3", "#propdef-justify-tracks", "justify-tracks")}}</td>
-   <td>{{Spec2("CSS Grid 3")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div class="hidden">
-<p>The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-</div>
-
-<p>{{Compat("css.properties.align-tracks")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>Related CSS properties: {{cssxref("align-tracks")}}, {{cssxref("masonry-auto-flow")}}</li>
+ <li>Related CSS properties: {{cssxref("align-tracks")}}, {{cssxref("masonry-auto-flow")}}</li>
 </ul>

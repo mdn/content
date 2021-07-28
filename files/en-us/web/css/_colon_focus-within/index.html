@@ -1,6 +1,6 @@
 ---
 title: ':focus-within'
-slug: 'Web/CSS/:focus-within'
+slug: Web/CSS/:focus-within
 tags:
   - ':focus'
   - ':focus-within'
@@ -10,10 +10,11 @@ tags:
   - Reference
   - Selector
   - Web
+browser-compat: css.selectors.focus-within
 ---
 <div>{{CSSRef}}</div>
 
-<p>The <strong><code>:focus-within</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> represents an element that has received focus or <em>contains</em> an element that has received focus. In other words, it represents an element that is itself matched by the {{CSSxRef(":focus")}} pseudo-class or has a descendant that is matched by <code>:focus</code>. (This includes descendants in <a href="/en-US/docs/Web/Web_Components/Shadow_DOM">shadow trees</a>.)</p>
+<p>The <strong><code>:focus-within</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> matches an element if the element or any of its descendants are focused. In other words, it represents an element that is itself matched by the {{CSSxRef(":focus")}} pseudo-class or has a descendant that is matched by <code>:focus</code>. (This includes descendants in <a href="/en-US/docs/Web/Web_Components/Using_shadow_DOM">shadow trees</a>.)</p>
 
 <pre class="brush: css no-line-numbers">/* Selects a &lt;div&gt; when one of its descendants is focused */
 div:focus-within {
@@ -66,26 +67,11 @@ input {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName("CSS4 Selectors", "#the-focus-within-pseudo", ":focus-within")}}</td>
-			<td>{{Spec2("CSS4 Selectors")}}</td>
-			<td>Initial definition.</td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.selectors.focus-within")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

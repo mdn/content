@@ -11,11 +11,12 @@ tags:
 - isFinal
 - recognition
 - speech
+browser-compat: api.SpeechRecognitionResult.isFinal
 ---
 <p>{{APIRef("Web Speech API")}}{{ SeeCompatTable() }}</p>
 
 <p>The <code><strong>isFinal</strong></code> read-only property of the
-  {{domxref("SpeechRecognitionResult")}} interface is a {{domxref("Boolean")}} that states
+  {{domxref("SpeechRecognitionResult")}} interface is a boolean value that states
   whether this result is final (<code>true</code>) or not (<code>false</code>) — if so,
   then this is the final time this result will be returned; if not, then this result is an
   interim result, and may be updated later on.</p>
@@ -27,7 +28,7 @@ tags:
 
 <h3 id="Returns">Returns</h3>
 
-<p>A {{domxref("Boolean")}}.</p>
+<p>A boolean value.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -49,25 +50,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Web Speech API', '#dom-speechrecognitionresult-isfinal',
-        'isFinal')}}</td>
-      <td>{{Spec2('Web Speech API')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.SpeechRecognitionResult.isFinal")}}</p>
+<p>{{Compat}}</p>
 
 <h3 id="Firefox_OS_permissions">Firefox OS permissions</h3>
 

@@ -1,5 +1,5 @@
 ---
-title: FontFace.FontFace()
+title: FontFace()
 slug: Web/API/FontFace/FontFace
 tags:
 - API
@@ -9,16 +9,17 @@ tags:
 - FontFace
 - Fonts
 - Reference
+browser-compat: api.FontFace.FontFace
 ---
-<div>{{draft}}{{APIRef("CSS Font Loading API")}}{{SeeCompatTable}}</div>
+<div>{{APIRef("CSS Font Loading API")}}</div>
 
 <p>The <code><strong>FontFace()</strong></code> constructor creates a new
   {{domxref("FontFace")}} object.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js">var fontFace = new FontFace(family, source, descriptors);</pre>
+<pre class="brush: js">new FontFace(family, source);
+new FontFace(family, source, descriptors);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -35,15 +36,28 @@ tags:
     </ul>
   </dd>
   <dt>descriptors {{optional_inline}}</dt>
-  <dd>A set of optional descriptors passed as an object. It can have the following keys:
-    <ul>
-      <li><code>family</code>: Family</li>
-      <li><code>style</code>: Style</li>
-      <li><code>weight</code>: Weight</li>
-      <li><code>stretch</code>: Stretch</li>
-      <li><code>unicodeRange</code>: Unicode range</li>
-      <li><code>variant</code>: variant</li>
-      <li><code>featureSettings</code>: Feature settings</li>
+  <dd>A set of optional descriptors passed as an object. It can contain any of the descriptors available for <code>@font-face</code>:
+    <dl>
+      <dt><code>ascentOverride</code></dt>
+      <dd>With an allowable value for {{cssxref("@font-face/ascent-override")}}.</dd>
+      <dt><code>descentOverride</code></dt>
+      <dd>With an allowable value for {{cssxref("@font-face/descent-override")}}.</dd>
+      <dt><code>featureSettings</code></dt>
+      <dd>With an allowable value for {{cssxref("@font-face/font-feature-settings")}}.</dd>
+      <dt><code>lineGapOverride</code></dt>
+      <dd>With an allowable value for {{cssxref("@font-face/line-gap-override")}}.</dd>
+      <dt><code>stretch</code></dt>
+      <dd>With an allowable value for {{cssxref("@font-face/font-stretch")}}.</dd>
+      <dt><code>style</code></dt>
+      <dd>With an allowable value for {{cssxref("@font-face/font-style")}}.</dd>
+      <dt><code>unicodeRange</code></dt>
+      <dd>With an allowable value for {{cssxref("@font-face/unicode-range")}}.</dd>
+      <dt><code>variant</code></dt>
+      <dd>With an allowable value for {{cssxref("@font-face/font-variant")}}.</dd>
+      <dt><code>variationSettings</code></dt>
+      <dd>With an allowable value for {{cssxref("@font-face/font-variation-settings")}}.</dd>
+      <dt><code>weight</code></dt>
+      <dd>With an allowable value for {{cssxref("@font-face/font-weight")}}.</dd>
     </ul>
   </dd>
 </dl>
@@ -63,24 +77,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('CSS3 Font Loading','#font-face-constructor','FontFace Constructor')}}</td>
-      <td>{{Spec2('CSS3 Font Loading')}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+<p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.FontFace.FontFace")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

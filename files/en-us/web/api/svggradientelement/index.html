@@ -7,6 +7,7 @@ tags:
   - Reference
   - SVG
   - SVG DOM
+browser-compat: api.SVGGradientElement
 ---
 <div>{{APIRef("SVG")}}</div>
 
@@ -48,15 +49,17 @@ tags:
 
 <h2 id="Properties">Properties</h2>
 
-<p><em>This interface also inherits properties from its parent, {{domxref("SVGElement")}}, and implements those of {{domxref("SVGURIReference")}}.</em></p>
+<p><em>This interface also inherits properties from its parent, {{domxref("SVGElement")}}.</em></p>
 
 <dl>
+ <dt>{{domxref("SVGGradientElement.href")}} {{ReadOnlyInline}}</dt>
+ <dd>An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("href")}} or {{SVGAttr("xlink:href")}} attribute of the given element.</dd>
  <dt>{{domxref("SVGGradientElement.gradientUnits")}} {{ReadOnlyInline}}</dt>
- <dd>Returns an {{domxref("SVGAnimatedEnumeration")}} corresponding to the {{SVGAttr("gradientUnits")}} attribute on the given element. Takes one of the constants defined in {{domxref("SVGUnitTypes")}}.</dd>
+ <dd>An {{domxref("SVGAnimatedEnumeration")}} corresponding to the {{SVGAttr("gradientUnits")}} attribute on the given element. This property takes one of the constants defined in {{domxref("SVGUnitTypes")}}.</dd>
  <dt>{{domxref("SVGGradientElement.gradientTransform")}} {{ReadOnlyInline}}</dt>
- <dd>Returns an {{domxref("SVGAnimatedTransformList")}} corresponding to attribute {{SVGAttr("gradientTransform")}} on the given element.</dd>
+ <dd>An {{domxref("SVGAnimatedTransformList")}} corresponding to the {{SVGAttr("gradientTransform")}} attribute on the given element.</dd>
  <dt>{{domxref("SVGGradientElement.spreadMethod")}} {{ReadOnlyInline}}</dt>
- <dd>Returns an {{domxref("SVGAnimatedEnumeration")}} corresponding to attribute {{SVGAttr("spreadMethod")}} on the given element. One of the spread method types defined on this interface.</dd>
+ <dd>An {{domxref("SVGAnimatedEnumeration")}} corresponding to the {{SVGAttr("spreadMethod")}} attribute on the given element. One of the spread method types defined on this interface.</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
@@ -65,26 +68,8 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG2", "pservers.html#InterfaceSVGGradientElement", "SVGGradientElement")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>Removed inheritance of {{domxref("SVGExternalResourcesRequired")}}, {{domxref("SVGStylable")}}, and {{domxref("SVGUnitTypes")}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "pservers.html#InterfaceSVGGradientElement", "SVGGradientElement")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.SVGGradientElement")}}</p>
+<p>{{Compat}}</p>

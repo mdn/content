@@ -1,0 +1,85 @@
+---
+title: Firefox 91 for developers
+slug: Mozilla/Firefox/Releases/91
+tags:
+  - '91'
+  - Firefox
+  - Mozilla
+  - Release
+---
+<p>{{FirefoxSidebar}}{{draft}}</p>
+
+<p class="summary">This article provides information about the changes in Firefox 91 that will affect developers. Firefox 91 is the current <a href="https://www.mozilla.org/en-US/firefox/channel/desktop/#beta">Beta version of Firefox</a>, and will ship on <a href="https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates">August 8, 2021</a>.</p>
+
+<h2 id="Changes_for_web_developers">Changes for web developers</h2>
+
+<h3 id="Developer_Tools">Developer Tools</h3>
+
+<h3 id="HTML">HTML</h3>
+
+<h4 id="removals_html">Removals</h4>
+
+<h3 id="CSS">CSS</h3>
+
+<ul>
+  <li>A fix to how the {{cssxref("@counter-style/pad")}} descriptor handles the negative sign ({{bug(1714445)}}).</li>
+  <li>The <code>-moz-tab-size</code> property has been unprefixed to the standard {{cssxref("tab-size")}}, and the prefixed version maintained as an alias ({{bug(737785)}}).</li>
+</ul>
+
+<h4 id="removals_css">Removals</h4>
+
+<ul>
+  <li>The non-standard {{cssxref("-moz-outline-radius")}} property has been removed ({{bug(1715984)}}). The property has not been usable by web developers since Firefox 88, this completes the removal.</li>
+</ul>
+
+<h3 id="JavaScript">JavaScript</h3>
+
+<ul>
+  <li>{{jsxref("Intl/DateTimeFormat/formatRange", "Intl.DateTimeFormat.prototype.formatRange()")}} and {{jsxref("Intl/DateTimeFormat/formatRangeToParts", "Intl.DateTimeFormat.prototype.formatRangeToParts()")}} are now supported in release builds. The <code>formatRange()</code> method returns a localized and formatted string for the range between two {{jsxref("Date")}} objects (e.g. "1/05/21 – 1/10/21"). The <code>formatRangeToParts()</code> method returns an array containing the locale-specific <em>parts</em> of a formatted date range ({{bug(1653024)}}).</li>
+
+  <li>The {{jsxref("Intl/DateTimeFormat/DateTimeFormat", "Intl.DateTimeFormat() constructor")}} allows four new <code>timeZoneName</code> options for formatting how the timezone is displayed. These include the localized GMT formats <code>shortOffset</code> and <code>longOffset</code>, and the generic non-location formats <code>shortGeneric</code> and <code>longGeneric</code> ({{bug(1653024)}}).</li>
+ </ul>
+
+<h4 id="removals_js">Removals</h4>
+
+<h3 id="HTTP">HTTP</h3>
+
+<ul>
+  <li>The <a href="/en-US/docs/Web/API/Gamepad_API">Gamepad API</a> now requires a <a href="/en-US/docs/Web/Security/Secure_Contexts">secure context</a> ({{bug(1704005)}}).</li>
+</ul>
+
+<h4 id="removals_http">Removals</h4>
+
+<h3 id="Security">Security</h3>
+
+<h4 id="removals_sec">Removals</h4>
+
+<h3 id="APIs">APIs</h3>
+
+<h4 id="DOM">DOM</h4>
+
+<ul>
+  <li>The <a href="/en-US/docs/Web/API/Gamepad_API">Gamepad API</a> is now protected by {{httpheader('Feature-Policy/gamepad','Feature-Policy: gamepad')}}. If disallowed by the <a href="/en-US/docs/Web/HTTP/Feature_Policy">feature policy</a>, calls to {{domxref('Navigator.getGamepads()')}} will throw a <code>SecurityError</code> {{domxref('DOMException')}}, and the {{event("gamepadconnected")}} and {{event("gamepaddisconnected")}} events will not fire ({{bug(1704005)}}).</li>
+  <li><code>Window.clientInformation</code> has been added as an alias for {{domxref("Window.navigator")}}, in order to match recent specification updates and improve compatibility with other major browsers ({{bug(1717072)}}).</li>
+</ul>
+
+
+<h4 id="Media_WebRTC_and_Web_Audio">Media, WebRTC, and Web Audio</h4>
+
+<h4 id="removals_media">Removals</h4>
+
+<h3 id="WebAssembly">WebAssembly</h3>
+
+<h4 id="removals_wasm">Removals</h4>
+
+<h3 id="webdriver_conformance_marionette">WebDriver conformance (Marionette)</h3>
+
+<h4 id="removals_webdriver">Removals</h4>
+
+<h2 id="Changes_for_add-on_developers">Changes for add-on developers</h2>
+
+<h4 id="removals_webext">Removals</h4>
+
+<h2 id="Older_versions">Older versions</h2>
+
+<p>{{Firefox_for_developers(90)}}</p>

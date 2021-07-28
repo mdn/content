@@ -9,6 +9,7 @@ tags:
   - Error code
   - Exception
   - Reference
+browser-compat: api.DOMException
 ---
 <p>{{ APIRef("DOM") }}</p>
 
@@ -29,7 +30,7 @@ tags:
  <dt>{{domxref("DOMException.code")}} {{deprecated_inline}} {{readOnlyInline}}</dt>
  <dd>Returns a <code>short</code> that contains one of the error code constants, or <code>0</code> if none match. This field is used for historical reasons. New DOM exceptions don't use this anymore: they put this info in the {{domxref("DOMException.name")}} attribute.</dd>
  <dt>{{domxref("DOMException.message")}} {{readOnlyInline}}</dt>
- <dd>Returns a {{ domxref("DOMString") }} representing a message or description associated with the given <a href="/en-US/docs/Web/API/DOMException#error_names">error name</a>.</dd>
+ <dd>Returns a {{ domxref("DOMString") }} representing a message or description associated with the given <a href="#error_names">error name</a>.</dd>
  <dt>{{domxref("DOMException.name")}} {{readOnlyInline}}</dt>
  <dd>Returns a {{domxref("DOMString")}} that contains one of the strings associated with an <a href="#error_names">error name</a>.</dd>
 </dl>
@@ -37,6 +38,14 @@ tags:
 <h2 id="Error_names">Error names</h2>
 
 <p>Common error names are listed here. Some APIs define their own sets of names, so this is not necessarily a complete list.</p>
+
+<p>Note that the following deprecated historical errors don’t have an error name but instead have only a legacy constant code value and a legacy constant name:</p>
+
+<ul>
+  <li>Legacy code value: <code>2</code>, legacy constant name: <code>DOMSTRING_SIZE_ERR</code></li>
+  <li>Legacy code value: <code>6</code>, legacy constant name: <code>NO_DATA_ALLOWED_ERR</code></li>
+  <li>Legacy code value: <code>16</code>, legacy constant name: <code>VALIDATION_ERR</code></li>
+</ul>
 
 <div class="note">
 <p><strong>Note</strong>: Because historically the errors were identified by a numeric value that corresponded with a named variable defined to have that value, some of the entries below indicate the legacy code value and constant name that were used in the past.</p>
@@ -59,6 +68,8 @@ tags:
  <dd>The operation is not supported. (Legacy code value: <code>9</code> and legacy constant name: <code>NOT_SUPPORTED_ERR</code>)</dd>
  <dt><a id="exception-InvalidStateError"><code>InvalidStateError</code></a></dt>
  <dd>The object is in an invalid state. (Legacy code value: <code>11</code> and legacy constant name: <code>INVALID_STATE_ERR</code>)</dd>
+ <dt><a id="exception-InUseAttributeError"><code>InUseAttributeError</code></a></dt>
+ <dd>The attribute is in use. (Legacy code value: <code>10</code> and legacy constant name: <code>INUSE_ATTRIBUTE_ERR</code>)</dd>
  <dt><a id="exception-SyntaxError"><code>SyntaxError</code></a></dt>
  <dd>The string did not match the expected pattern. (Legacy code value: <code>12</code> and legacy constant name: <code>SYNTAX_ERR</code>)</dd>
  <dt><a id="exception-InvalidModificationError"><code>InvalidModificationError</code></a></dt>
@@ -109,24 +120,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebIDL', '#idl-DOMException', 'constructor')}}</td>
-   <td>{{Spec2('WebIDL')}}</td>
-   <td>Adds the constructor for the <code>DOMException</code> class. Adds the <code>NotReadableError</code>, <code>UnknownError</code>, <code>ConstraintError</code>, <code>DataError</code>, <code>TransactionInactiveError</code>, <code>ReadOnlyError</code>, <code>VersionError</code>, <code>OperationError</code>, and <code>NotAllowedError</code> values.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.DOMException")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

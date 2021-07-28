@@ -7,6 +7,7 @@ tags:
   - CSS Property
   - Reference
   - recipe:css-shorthand-property
+browser-compat: css.properties.border-image
 ---
 <div>{{CSSRef}}</div>
 
@@ -43,7 +44,12 @@ border-image: linear-gradient(red, blue) 27 / 35px;
 
 /* source | slice | width | outset | repeat */
 border-image: url("/images/border.png") 27 23 / 50px 30px / 1rem round space;
-</pre>
+
+/* Global values */
+border-image: inherit;
+border-image: initial;
+border-image: revert;
+border-image: unset;</pre>
 
 <p>The <code>border-image</code> property may be specified with anywhere from one to five of the values listed below.</p>
 
@@ -108,7 +114,7 @@ border-image: url("/images/border.png") 27 23 / 50px 30px / 1rem round space;
   padding: 10px;
 
   border-image:
-      url("https://mdn.mozillademos.org/files/4127/border.png")  /* source */
+      url("border.png")  /* source */
       27 /                    /* slice */
       36px 28px 18px 8px /    /* width */
       18px 14px 9px 4px       /* outset */
@@ -143,28 +149,11 @@ border-image: url("/images/border.png") 27 23 / 50px 30px / 1rem round space;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Backgrounds', '#the-border-image', 'border-image')}}</td>
-   <td>{{Spec2('CSS3 Backgrounds')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
-
-<p>{{cssinfo}}</p>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.border-image")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

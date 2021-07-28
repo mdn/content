@@ -211,8 +211,6 @@ tags:
 
 <p>The <code>rel</code> attribute has no default value. If the attribute is omitted or if none of the values in the attribute are supported, then the document has no particular relationship with the destination resource other than there being a hyperlink between the two. In this case, on {{htmlelement('link')}} and {{htmlelement('form')}}, if the <code>rel</code> attribute is absent, has no keywords, or if not one or more of the space-separated keywords above, then the element does not create any links. {{htmlelement('a')}} and {{htmlelement('area')}} will still created links, but without a defined relationship.</p>
 
-<p>Like all HTML keyword attribute values, these values are case-insensitive.</p>
-
 <h2 id="Values">Values</h2>
 
 <p>If there are multiple <code>&lt;link rel="icon"&gt;</code>s, the browser uses their <a href="media"><code>media</code></a> attribute, <a href="type"><code>type</code></a> and <a href="sizes"><code>sizes</code></a> attributes to select the most appropriate icon. If several icons are equally appropriate, the last one is used. If the most appropriate icon is later found to be inappropriate, for example, because it uses an unsupported format, the browser proceeds to the next-most appropriate, and so on.</p>
@@ -348,7 +346,7 @@ tags:
   &lt;!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: --&gt;
   &lt;link rel="apple-touch-icon-precomposed" href="/static/img/favicon57.de33179910ae.png"&gt;
   &lt;!-- basic favicon --&gt;
-  &lt;link rel="shortcut icon" href="/static/img/favicon32.7f3da72dcea1.png"&gt;</pre>
+  &lt;link rel="icon" href="/static/img/favicon32.7f3da72dcea1.png"&gt;</pre>
 	</dd>
 </dl>
 
@@ -370,7 +368,7 @@ tags:
 		<tr>
 			<td>{{SpecName('HTML WHATWG', 'links.html#linkTypes', 'rel attribute')}}</td>
 			<td>{{Spec2('HTML WHATWG')}}</td>
-			<td>Added <code>opener</code>. Made <code>noopener</code> default  for <code>target="_blank"</code>.</td>
+			<td>Added <code>opener</code>. Made <code>noopener</code> default for <code>target="_blank"</code>.</td>
 		</tr>
 		<tr>
 			<td>{{SpecName('HTML5 W3C', 'links.html#linkTypes', 'rel attribute')}}</td>
@@ -412,8 +410,6 @@ tags:
 </table>
 
 <h2 id="Browser_compatibility_2">Browser compatibility</h2>
-
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
 
 <p>{{Compat("html.elements.link.rel")}}</p>
 

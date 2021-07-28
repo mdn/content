@@ -71,7 +71,7 @@ tags:
 
 <p>Open the HTML index file. You'll see a number of features; the HTML is dominated by the video player and its controls:</p>
 
-<pre>&lt;div class="player"&gt;
+<pre class="brush: html">&lt;div class="player"&gt;
   &lt;video controls&gt;
     &lt;source src="video/sintel-short.mp4" type="video/mp4"&gt;
     &lt;source src="video/sintel-short.webm" type="video/webm"&gt;
@@ -394,7 +394,7 @@ function windForward() {
 
 <h4 id="Updating_the_elapsed_time">Updating the elapsed time</h4>
 
-<p>The very last piece of our media player to implement is the time elapsed displays. To do this we'll run a function to update the time displays every time the {{event("timeupdate")}} event is fired on the <code>&lt;video&gt;</code> element. The frequency with which this event fires depends on your browser, CPU power, etc (<a href="http://stackoverflow.com/questions/9678177/how-often-does-the-timeupdate-event-fire-for-an-html5-video">see this stackoverflow post</a>).</p>
+<p>The very last piece of our media player to implement is the time elapsed displays. To do this we'll run a function to update the time displays every time the {{event("timeupdate")}} event is fired on the <code>&lt;video&gt;</code> element. The frequency with which this event fires depends on your browser, CPU power, etc (<a href="https://stackoverflow.com/questions/9678177/how-often-does-the-timeupdate-event-fire-for-an-html5-video">see this stackoverflow post</a>).</p>
 
 <p>Add the following <code>addEventListener()</code> line just below the others:</p>
 

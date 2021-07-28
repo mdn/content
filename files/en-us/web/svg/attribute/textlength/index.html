@@ -12,6 +12,7 @@ tags:
   - length
   - size
   - width
+browser-compat: svg.attributes.textLength
 ---
 <div>{{SVGRef}}</div>
 
@@ -19,7 +20,14 @@ tags:
 
 <p>By using <code>textLength</code>, you can ensure that your SVG text displays at the same width regardless of conditions including web fonts failing to load (or not having loaded yet).</p>
 
-<p>Four elements are using this attribute: {{SVGElement("text")}}, {{SVGElement("textPath")}}, {{SVGElement("tref")}}, and {{SVGElement("tspan")}}</p>
+<p>You can use this attribute with the following SVG elements:</p>
+
+<ul>
+  <li>{{SVGElement("text")}}</li>
+  <li>{{SVGElement("textPath")}}</li>
+  <li>{{SVGElement("tref")}}</li>
+  <li>{{SVGElement("tspan")}}</li>
+</ul>
 
 <div id="topExample">
 <div class="hidden">
@@ -162,7 +170,7 @@ widthSlider.dispatchEvent(new Event("input"));
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("svg.attributes.textLength")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

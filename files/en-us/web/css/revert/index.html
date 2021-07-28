@@ -11,10 +11,11 @@ tags:
   - Reference
   - Style
   - revert
+browser-compat: css.types.global_keywords.revert
 ---
 <div>{{CSSRef}}</div>
 
-<p><span class="seoSummary">The <strong><code>revert</code></strong> CSS keyword reverts the cascaded value of the property from its current value to the value the property would have had if no changes had been made by the current <strong>{{Glossary("style origin")}}</strong> to the current element.</span> Thus, it resets the property to its inherited value if it inherits from its parent or to the default value established by the user agent's stylesheet (or by user styles, if any exist). It can be applied to any CSS property, including the CSS shorthand {{cssxref("all")}}.</p>
+<p>The <strong><code>revert</code></strong> CSS keyword reverts the cascaded value of the property from its current value to the value the property would have had if no changes had been made by the current <strong>{{Glossary("style origin")}}</strong> to the current element. Thus, it resets the property to its inherited value if it inherits from its parent or to the default value established by the user agent's stylesheet (or by user styles, if any exist). It can be applied to any CSS property, including the CSS shorthand {{cssxref("all")}}.</p>
 
 <p>This removes from the cascade all of the styles that have been overridden until the style being rolled back to is reached.</p>
 
@@ -29,11 +30,11 @@ tags:
 <p>Revert will not affect rules applied to children of an element you reset (but will remove effects of a parent rule on a child). So if you have a <code>color: green</code> for all sections and <code>all: revert</code> on a specific section the color of the section will be black. But if you have a rule to make all paragraphs red then all paragraphs will still be red in all sections.</p>
 
 <div class="notecard note">
-<p>Revert is just a value. It is still possible to override <code>revert</code> value using <a href="/en-US/docs/Web/CSS/Specificity">specificity</a>.</p>
+<p><strong>Note:</strong> Revert is just a value. It is still possible to override <code>revert</code> value using <a href="/en-US/docs/Web/CSS/Specificity">specificity</a>.</p>
 </div>
 
 <div class="note">
-<p>The <code>revert</code> keyword is different from and should not be confused with {{cssxref("initial")}}, which uses the <a href="/en-US/docs/Web/CSS/initial_value">initial value</a> defined on a per-property basis by the CSS specifications. In contrast, user-agent stylesheets set default values on the basis of CSS selectors.</p>
+<p><strong>Note:</strong> The <code>revert</code> keyword is different from and should not be confused with {{cssxref("initial")}}, which uses the <a href="/en-US/docs/Web/CSS/initial_value">initial value</a> defined on a per-property basis by the CSS specifications. In contrast, user-agent stylesheets set default values on the basis of CSS selectors.</p>
 
 <p>For example, the <a href="/en-US/docs/Web/CSS/initial_value">initial value</a> for the {{cssxref("display")}} property is <code>inline</code>, whereas a normal user-agent stylesheet sets the default {{cssxref("display")}} value of {{HTMLElement("div")}}s to <code>block</code>, of {{HTMLElement("table")}}s to <code>table</code>, etc.</p>
 </div>
@@ -101,29 +102,14 @@ section.with-revert { color: revert }
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Cascade', '#default', 'revert')}}</td>
-   <td>{{Spec2('CSS4 Cascade')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
 <div>
 
-<p>{{Compat("css.types.global_keywords.revert")}}</p>
+<p>{{Compat}}</p>
 </div>
 </div>
 

@@ -20,6 +20,7 @@ tags:
   - augmented
   - events
   - inputsourceschange
+browser-compat: api.XRInputSourcesChangeEvent
 ---
 <p>{{APIRef("WebXR Device API")}} {{SecureContext_Header}}</p>
 
@@ -29,7 +30,7 @@ tags:
 
 <dl>
  <dt>{{domxref("XRInputSourcesChangeEvent.XRInputSourcesChangeEvent", "XRInputSourcesChangeEvent()")}}</dt>
- <dd>Creates and returns a new <code>XRInputSourcesChangeEvent</code> object configured as indicated by the given {{domxref("XRInputSourcesChangeEventInit")}} object. The specified type must be <code>inputsourceschange</code>, which is the only event that uses this interface.</dd>
+ <dd>Creates and returns a new <code>XRInputSourcesChangeEvent</code> object. The specified type must be <code>inputsourceschange</code>, which is the only event that uses this interface.</dd>
 </dl>
 
 <h2 id="Properties">Properties</h2>
@@ -75,23 +76,8 @@ function onInputSourcesChange(event) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("WebXR","#xrinputsourceschangeevent","XRInputSourcesChangeEvent")}}</td>
-   <td>{{Spec2("WebXR")}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>{{Compat("api.XRInputSourcesChangeEvent")}}</div>
+<div>{{Compat}}</div>

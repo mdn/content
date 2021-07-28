@@ -15,6 +15,7 @@ tags:
 - Web
 - WebRTC
 - getusermedia
+browser-compat: api.MediaStreamConstraints.audio
 ---
 <div>{{APIRef("Media Capture and Streams")}}</div>
 
@@ -38,8 +39,8 @@ tags:
 </p>
 
 <dl>
-  <dt>{{jsxref("Boolean")}}</dt>
-  <dd>If a Boolean value is specified, it indicates whether or not an audio track should
+  <dt>A boolean value</dt>
+  <dd>If specified, it indicates whether or not an audio track should
     be included in the returned stream; if it's <code>true</code>, an audio track is
     included; if no audio source is available or if permission is not given to use the
     audio source, the call to <code>getUserMedia()</code> will fail. If
@@ -68,7 +69,7 @@ tags:
 
   <pre class="brush: html">&lt;p&gt;Click the start button below to begin the demonstration.&lt;/p&gt;
 &lt;div id="startButton" class="button"&gt;
-  Start
+  Start
 &lt;/div&gt;
 &lt;audio id="audio" autoplay controls&gt;&lt;/audio&gt;&lt;br&gt;
 &lt;div id="log"&gt;&lt;/div&gt;</pre>
@@ -134,7 +135,7 @@ function log(msg) {
 
   <pre class="brush: html">&lt;p&gt;Click the start button below to begin the demonstration.&lt;/p&gt;
 &lt;div id="startButton" class="button"&gt;
-  Start
+  Start
 &lt;/div&gt;
 &lt;audio id="audio" autoplay controls&gt;&lt;/audio&gt;&lt;br&gt;
 &lt;div id="log"&gt;&lt;/div&gt;</pre>
@@ -178,8 +179,8 @@ function log(msg) {
   navigator.mediaDevices.getUserMedia({
     audio: {
       sampleSize: 8,
-      echoCancellation: true
-    }
+      echoCancellation: true
+    }
   }).then(stream =&gt; audioElement.srcObject = stream)
     .catch(err =&gt; log(err.name + ": " + err.message));
 }, false);</pre>
@@ -199,27 +200,11 @@ function log(msg) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{ SpecName('Media Capture', '#dom-mediastreamconstraints-audio',
-        'MediaStreamConstraints.audio') }}</td>
-      <td>{{ Spec2('Media Capture') }}</td>
-      <td>Initial specification.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.MediaStreamConstraints.audio")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

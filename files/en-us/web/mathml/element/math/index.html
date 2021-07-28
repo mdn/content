@@ -5,6 +5,7 @@ tags:
   - MathML
   - MathML Reference
   - MathML:Element
+browser-compat: mathml.elements.math
 ---
 <div>{{MathMLRef}}</div>
 
@@ -35,7 +36,7 @@ tags:
 	<p>If not present, its default value is <code>inline</code>.</p>
 	</dd>
 	<dt id="attr-mode">mode {{deprecated_inline}}</dt>
-	<dd>Deprecated in favor of the <a href="/en-US/docs/Web/MathML/Element/math#attr-display">display attribute</a>.<br>
+	<dd>Deprecated in favor of the <a href="#attr-display">display attribute</a>.<br>
 	Possible values are: <code>display</code> (which has the same effect as <code>display="block"</code>) and <code>inline</code>.</dd>
 </dl>
 
@@ -111,36 +112,16 @@ tags:
 &lt;/body&gt;
 &lt;/html&gt;</pre>
 
-<p><strong>Notes</strong>: XHTML documents with MathML must be served as <code>application/xhtml+xml</code>. You can achieve that easily by adding the <code>.xhtml</code> extension to your local files. For Apache servers you can <a href="http://httpd.apache.org/docs/2.4/mod/mod_mime.html#addtype">configure your <code>.htaccess</code> file</a> to map extensions to the correct Mime type. Since you notate your MathML in an XML document, also be sure you write a well-formed XML document.</p>
+<p><strong>Notes</strong>: XHTML documents with MathML must be served as <code>application/xhtml+xml</code>. You can achieve that easily by adding the <code>.xhtml</code> extension to your local files. For Apache servers you can <a href="https://httpd.apache.org/docs/2.4/mod/mod_mime.html#addtype">configure your <code>.htaccess</code> file</a> to map extensions to the correct Mime type. Since you notate your MathML in an XML document, also be sure you write a well-formed XML document.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{ SpecName('MathML3', 'chapter2.html#interf.toplevel', 'The Top-Level math Element') }}</td>
-			<td>{{ Spec2('MathML3') }}</td>
-			<td>Current specification</td>
-		</tr>
-		<tr>
-			<td>{{ SpecName('MathML2', 'chapter7.html#interf.toplevel', 'The Top-Level math Element') }}</td>
-			<td>{{ Spec2('MathML2') }}</td>
-			<td>Initial specification</td>
-		</tr>
-	</tbody>
-</table>
+<p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 
-<p>{{Compat("mathml.elements.math")}}</p>
+<p>{{Compat}}</p>
 
 
 <h2 id="Firefox-specific_notes">Firefox-specific notes</h2>

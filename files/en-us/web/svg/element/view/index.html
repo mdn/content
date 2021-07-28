@@ -6,6 +6,7 @@ tags:
   - NeedsExample
   - Reference
   - SVG
+browser-compat: svg.elements.view
 ---
 <div>{{SVGRef}}</div>
 
@@ -23,7 +24,6 @@ tags:
  <li><a href="/en-US/docs/Web/SVG/Attribute#aria_attributes">Aria attributes</a> »</li>
  <li><a href="/en-US/docs/Web/SVG/Attribute#core_attributes">Core attributes</a> »</li>
  <li><a href="/en-US/docs/Web/SVG/Attribute#global_event_attributes">Global event attributes</a> »</li>
- <li>{{SVGAttr("externalResourcesRequired")}}</li>
 </ul>
 
 <h3 id="Specific_attributes">Specific attributes</h3>
@@ -39,7 +39,8 @@ tags:
 
 <h3 id="SVG">SVG</h3>
 
-<pre class="brush: html">&lt;svg width="600" height="200" viewBox="0 0 600 200"
+<pre class="brush: svg">
+&lt;svg width="600" height="200" viewBox="0 0 600 200"
     xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
   &lt;defs&gt;
@@ -66,9 +67,15 @@ tags:
   &lt;/a&gt;
 &lt;/svg&gt;</pre>
 
+<h3 id="HTML">HTML</h3>
+
+<pre class="brush: html">
+&lt;object data="data:image/svg+xml;charset=utf-8;base64,PHN2ZyB3aWR0aD0iNjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDYwMCAyMDAiDQogICAgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIg0KICAgIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4NCiAgPGRlZnM%2BDQogICAgPHJhZGlhbEdyYWRpZW50IGlkPSJncmFkaWVudCI%2BDQogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjOGNmZmEwIiAvPg0KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjOGNhMGZmIiAvPg0KICAgIDwvcmFkaWFsR3JhZGllbnQ%2BDQogIDwvZGVmcz4NCg0KICA8Y2lyY2xlIHI9IjUwIiBjeD0iMTgwIiBjeT0iNTAiIHN0eWxlPSJmaWxsOnVybCgjZ3JhZGllbnQpIi8%2BDQoNCiAgPHZpZXcgaWQ9ImhhbGZTaXplVmlldyIgdmlld0JveD0iMCAwIDEyMDAgNDAwIi8%2BDQogIDx2aWV3IGlkPSJub3JtYWxTaXplVmlldyIgdmlld0JveD0iMCAwIDYwMCAyMDAiLz4NCiAgPHZpZXcgaWQ9ImRvdWJsZVNpemVWaWV3IiB2aWV3Qm94PSIwIDAgMzAwIDEwMCIvPg0KDQogIDxhIHhsaW5rOmhyZWY9IiNoYWxmU2l6ZVZpZXciPg0KICAgIDx0ZXh0IHg9IjUiIHk9IjIwIiBmb250LXNpemU9IjIwIj5oYWxmIHNpemU8L3RleHQ%2BDQogIDwvYT4NCiAgPGEgeGxpbms6aHJlZj0iI25vcm1hbFNpemVWaWV3Ij4NCiAgICA8dGV4dCB4PSI1IiB5PSI0MCIgZm9udC1zaXplPSIyMCI%2Bbm9ybWFsIHNpemU8L3RleHQ%2BDQogIDwvYT4NCiAgPGEgeGxpbms6aHJlZj0iI2RvdWJsZVNpemVWaWV3Ij4NCiAgICA8dGV4dCB4PSI1IiB5PSI2MCIgZm9udC1zaXplPSIyMCI%2BZG91YmxlIHNpemU8L3RleHQ%2BDQogIDwvYT4NCjwvc3ZnPg%3D%3D" type="image/svg+xml"&gt;&lt;/object&gt;
+</pre>
+
 <h3 id="Result">Result</h3>
 
-<p>{{EmbedLiveSample("Example", 600, 200)}}</p>
+<p>{{EmbedLiveSample("Example", "85ch", "240px")}}</p>
 
 <h2 id="DOM_Interface">DOM Interface</h2>
 
@@ -76,29 +83,9 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('SVG2', 'linking.html#ViewElement', '&lt;view&gt;')}}</td>
-   <td>{{Spec2('SVG2')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('SVG1.1', 'linking.html#ViewElement', '&lt;view&gt;')}}</td>
-   <td>{{Spec2('SVG1.1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 
-<p>{{Compat("svg.elements.view")}}</p>
+<p>{{Compat}}</p>

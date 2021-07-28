@@ -9,13 +9,14 @@ tags:
   - Reference
   - Transitions
   - 'recipe:css-property'
+browser-compat: css.properties.will-change
 ---
 <div>{{CSSRef}}</div>
 
-<p><span class="seoSummary">The <strong><code>will-change</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property hints to browsers how an element is expected to change. Browsers may set up optimizations before an element is actually changed.</span> These kinds of optimizations can increase the responsiveness of a page by doing potentially expensive work before they are actually required.</p>
+<p>The <strong><code>will-change</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property hints to browsers how an element is expected to change. Browsers may set up optimizations before an element is actually changed. These kinds of optimizations can increase the responsiveness of a page by doing potentially expensive work before they are actually required.</p>
 
 <div class="warning">
-<p><strong>Important:</strong> <code>will-change</code> is intended to be used as a last resort, in order to try to deal with existing performance problems. It should not be used to anticipate performance problems.</p>
+ <p><strong>Warning:</strong> <code>will-change</code> is intended to be used as a last resort, in order to try to deal with existing performance problems. It should not be used to anticipate performance problems.</p>
 </div>
 
 <pre class="brush:css no-line-numbers">/* Keyword values */
@@ -29,6 +30,7 @@ will-change: left, top;        /* Example of two &lt;animatable-feature&gt; */
 /* Global values */
 will-change: inherit;
 will-change: initial;
+will-change: revert;
 will-change: unset;
 </pre>
 
@@ -112,26 +114,11 @@ function removeHint() {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS Will Change', '#will-change', 'will-change')}}</td>
-   <td>{{Spec2('CSS Will Change')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.will-change")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

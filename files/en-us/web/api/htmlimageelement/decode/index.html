@@ -15,6 +15,7 @@ tags:
 - async
 - asynchronous
 - decoding
+browser-compat: api.HTMLImageElement.decode
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
@@ -61,7 +62,7 @@ tags:
 <h2 id="Examples">Examples</h2>
 
 <p>The following example shows how to use the <code>decode()</code> method to control when
-  an image is appended to the DOM. Without a {{domxref('Promise')}}-returning method, you
+  an image is appended to the DOM. Without a {{jsxref('Promise')}}-returning method, you
   would add the image to the DOM in a {{event("load")}} event handler, such as by using
   the {{domxref("GlobalEventHandlers.onload", "img.onload")}} event handler, and by
   handling the error in the {{event("error")}} event's handler.</p>
@@ -79,21 +80,8 @@ img.decode()
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML WHATWG','#dom-img-decode','decode()')}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.HTMLImageElement.decode")}}</p>
+<p>{{Compat}}</p>

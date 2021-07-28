@@ -13,8 +13,9 @@ tags:
   - onshippingoptionchange
   - payment
   - shippingoptionchange
+browser-compat: api.PaymentRequest.shippingoptionchange_event
 ---
-<p>{{securecontext_header}}{{APIRef("Payment Request API")}}</p>
+<p>{{securecontext_header}}{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}</p>
 
 <p><span class="seoSummary">For payment requests that request shipping information, and for which shipping options are offered, the <code><strong>shippingoptionchange</strong></code> event is sent to the {{domxref("PaymentRequest")}} whenever the user chooses a shipping option from the list of available options.</span> The string identifying the currently-selected shipping option can be found in the {{domxref("PaymentRequest.shippingOption", "shippingOption")}} property.</p>
 
@@ -68,28 +69,11 @@ tags:
   event.updateWith({ total });
 };</pre>
 
-<h2 id="Specifications">Specifications</h2>
-
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Payment','#dfn-shippingoptionchange','shippingoptionchange')}}</td>
-   <td>{{Spec2('Payment')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
-
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
 
-<p>{{Compat("api.PaymentRequest.shippingoptionchange_event")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

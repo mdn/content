@@ -8,6 +8,7 @@ tags:
   - Reference
   - Reporting API
   - ReportingObserver
+browser-compat: api.ReportingObserver
 ---
 <div>{{SeeCompatTable}}{{APIRef("Reporting API")}}</div>
 
@@ -72,7 +73,7 @@ let observer = new ReportingObserver(function(reports, observer) {
 
 <p>This causes a deprecation report to be generated; because of the event handler we set up inside the <code>ReportingObserver()</code> constructor, we can now click the button to display the report details.</p>
 
-<p><img alt="image of a jolly bearded man with various stats displayed below it about a deprecated feature" src="reporting_api_example.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="image of a jolly bearded man with various stats displayed below it about a deprecated feature" src="reporting_api_example.png"></p>
 
 <div class="notecard note">
 <p><strong>Note</strong>: If you look at the <a href="https://github.com/mdn/dom-examples/blob/master/reporting-api/deprecation_report.html">complete source code</a>, you'll notice that we actually call the deprecated <code>getUserMedia()</code> method twice. After the first time we call {{domxref("ReportingObserver.takeRecords()")}}, which returns the first generated report and empties the queue. Because of this, when the button is pressed only the second report is listed.</p>
@@ -80,24 +81,11 @@ let observer = new ReportingObserver(function(reports, observer) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Reporting API","#interface-reporting-observer","ReportingObserver")}}</td>
-   <td>{{Spec2("Reporting API")}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.ReportingObserver")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

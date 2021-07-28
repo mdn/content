@@ -6,11 +6,12 @@ tags:
   - CSS Animations
   - CSS Property
   - CSS Property Animations
-  - 'recipe:css-property'
+  - recipe:css-property
+browser-compat: css.properties.animation-iteration-count
 ---
 <div>{{CSSRef}}</div>
 
-<p>The <strong><code>animation-iteration-count</code></strong> <a href="/en-US/docs/CSS">CSS</a> property sets the number of times an animation sequence should be played before stopping.</p>
+<p>The <strong><code>animation-iteration-count</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets the number of times an animation sequence should be played before stopping.</p>
 
 <p>If multiple values are specified, each time the animation is played the next value in the list is used, cycling back to the first value after the last one is used.</p>
 
@@ -28,7 +29,13 @@ animation-iteration-count: 3;
 animation-iteration-count: 2.4;
 
 /* Multiple values */
-animation-iteration-count: 2, 0, infinite;</pre>
+animation-iteration-count: 2, 0, infinite;
+
+/* Global values */
+animation-iteration-count: inherit;
+animation-iteration-count: initial;
+animation-iteration-count: revert;
+animation-iteration-count: unset;</pre>
 
 <p>The <strong><code>animation-iteration-count</code></strong> property is specified as one or more comma-separated values.</p>
 
@@ -42,7 +49,7 @@ animation-iteration-count: 2, 0, infinite;</pre>
 </dl>
 
 <div class="note">
-<p><strong>Note</strong>: When you specify multiple values on an <code>animation-*</code> property, they will be assigned to the animations specified in the {{cssxref("animation-name")}} property in different ways depending on how many there are. For more information, see <a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations#Setting_multiple_animation_property_values">Setting multiple animation property values</a>.</p>
+<p><strong>Note:</strong> When you specify multiple values on an <code>animation-*</code> property, they will be assigned to the animations specified in the {{cssxref("animation-name")}} property in different ways depending on how many there are. For more information, see <a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations#setting_multiple_animation_property_values">Setting multiple animation property values</a>.</p>
 </div>
 
 <h2 id="Formal_definition">Formal definition</h2>
@@ -88,26 +95,11 @@ animation-iteration-count: 2, 0, infinite;</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{ SpecName('CSS3 Animations', '#animation-iteration-count', 'animation-iteration-count') }}</td>
-			<td>{{ Spec2('CSS3 Animations') }}</td>
-			<td>Initial definition.</td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.animation-iteration-count")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

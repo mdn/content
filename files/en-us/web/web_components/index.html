@@ -159,49 +159,21 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML WHATWG","scripting.html#the-template-element","&lt;template&gt; element")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>The definition of {{HTMLElement("template")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML WHATWG","custom-elements.html#custom-elements","custom elements")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>The definition of <a href="/en-US/docs/Web/Web_Components/Using_custom_elements">HTML Custom Elements</a>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM WHATWG","#shadow-trees","shadow trees")}}</td>
-   <td>{{Spec2("DOM WHATWG")}}</td>
-   <td>The definition of <a href="/en-US/docs/Web/Web_Components/Using_shadow_DOM">Shadow DOM</a>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML Imports", "", "")}}</td>
-   <td>{{Spec2("HTML Imports")}}</td>
-   <td>Initial <a href="/en-US/docs/Web/Web_Components/HTML_Imports">HTML Imports</a> definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("Shadow DOM", "", "")}}</td>
-   <td>{{Spec2("Shadow DOM")}}</td>
-   <td>Initial <a href="/en-US/docs/Web/Web_Components/Using_shadow_DOM">Shadow DOM</a> definition.</td>
-  </tr>
- </tbody>
-</table>
+<h3>The <code>template</code> element and custom elements</h3>
+
+{{Specifications("html.elements.template")}}
+
+<h3>The shadow DOM</h3>
+
+{{Specifications("api.ShadowRoot")}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <p>In general:</p>
 
 <ul>
- <li>Web components are supported by default in Firefox (version 63), Chrome, and Opera.</li>
+ <li>Web components are supported by default in Firefox (version 63), Chrome, Opera, and Edge (version 79).</li>
  <li>Safari supports a number of web component features, but less than the above browsers.</li>
- <li>Edge is working on an implementation.</li>
 </ul>
 
 <p>For detailed browser support of specific features, you'll have to consult the reference pages listed above.</p>
@@ -213,7 +185,7 @@ tags:
  <li><a href="https://www.dataformsjs.com/">DataFormsJS</a> — Open source web components library — Set of Web Components that can be used to build Single Page Apps (SPA), Display JSON data from API’s and Web Services, and bind data to different elements on screen. All Web Components are plain JavaScript and require no build process.</li>
  <li><a href="https://fast.design/" rel="noopener">FAST</a> is a web component library built by Microsoft which offers several packages to leverage depending on your project needs. <a href="https://github.com/microsoft/fast/tree/master/packages/web-components/fast-element" rel="noopener">Fast Element</a> is a lightweight means to easily build performant, memory-efficient, standards-compliant Web Components. <a href="https://github.com/microsoft/fast/tree/master/packages/web-components/fast-foundation" rel="noopener">Fast Foundation</a> is a library of Web Component classes, templates, and other utilities built on fast-element intended to be composed into registered Web Components.</li>
  <li><a href="https://github.com/hybridsjs/hybrids">Hybrids</a> — Open source web components library, which favors plain objects and pure functions over <code>class</code> and <code>this</code> syntax. It provides a simple and functional API for creating custom elements.</li>
- <li><a href="https://www.polymer-project.org/">Polymer</a> — Google's web components framework — a set of polyfills, enhancements, and examples. Currently the easiest way to use web components cross-browser.</li>
+ <li><a href="https://lit.dev/">Lit</a> — Google's web components library, the core of which is a component base class designed to reduce boilerplate while providing reactive state, scoped styles, and a declarative template system.</li>
  <li><a href="https://github.com/devpunks/snuggsi#readme">Snuggsi</a> — Easy Web Components in ~1kB <em>Including polyfill</em> — All you need is a browser and basic understanding of HTML, CSS, and JavaScript classes to be productive.</li>
  <li><a href="https://github.com/slimjs/slim.js">Slim.js</a> — Open source web components library — a high-performant library for rapid and easy component authoring; extensible and pluggable and cross-framework compatible.</li>
  <li><a href="https://stenciljs.com/">Stencil</a> — Toolchain for building reusable, scalable design systems in web components.</li>

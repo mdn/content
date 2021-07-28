@@ -1,17 +1,22 @@
 ---
 title: 'Feature-Policy: screen-wake-lock'
 slug: Web/HTTP/Headers/Feature-Policy/screen-wake-lock
+tags:
+  - Directive
+  - Feature Policy
+  - Feature-Policy
+  - HTTP
+  - Reference
+  - screen-wake-lock
+  - Experimental
+browser-compat: http.headers.Feature-Policy.screen-wake-lock
 ---
 <p>{{HTTPSidebar}} {{SeeCompatTable}}</p>
-
-<div class="hidden">
-<p><strong>Note:</strong> This API is still actively being developed and available only behind a flag on select browsers and platforms.</p>
-</div>
 
 <p><span class="seoSummary">The HTTP {{HTTPHeader("Feature-Policy")}} header <strong><code>screen-wake-lock</code></strong> directive controls whether the current document is allowed to use <a href="/en-US/docs/Web/API/Screen_Wake_Lock_API">Screen Wake Lock API</a> to indicate that device should not dim or turn off the screen.</span></p>
 
 <div class="notecard note">
-<p><strong>Note:</strong> In earlier specification drafts this directive was called {{HTTPHeader("Feature-Policy/wake-lock","wake-lock")}}.</p>
+<p><strong>Note:</strong> In earlier specification drafts this directive was called <code>wake-lock</code>")}}.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
@@ -19,8 +24,8 @@ slug: Web/HTTP/Headers/Feature-Policy/screen-wake-lock
 <pre>Feature-Policy: screen-wake-lock &lt;allowlist&gt;;</pre>
 
 <dl>
- <dt>&lt;allowlist&gt;</dt>
- <dd>{{page('Web/HTTP/Feature_Policy/Using_Feature_Policy', 'allowlist')}}</dd>
+  <dt>&lt;allowlist&gt;</dt>
+  <dd>A list of origins for which the feature is allowed. See <a href="/en-US/docs/Web/HTTP/Headers/Feature-Policy#syntax"><code>Feature-Policy</code></a>.</dd>
 </dl>
 
 <h2 id="Default_policy">Default policy</h2>
@@ -53,11 +58,7 @@ slug: Web/HTTP/Headers/Feature-Policy/screen-wake-lock
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div class="hidden">
-<p>The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-</div>
-
-<p>{{Compat("http.headers.Feature-Policy.screen-wake-lock")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

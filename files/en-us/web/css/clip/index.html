@@ -8,10 +8,11 @@ tags:
   - Deprecated
   - Reference
   - 'recipe:css-property'
+browser-compat: css.properties.clip
 ---
 <div>{{CSSRef}}</div>
 
-<p><span class="seoSummary">The <strong><code>clip</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property defines a visible portion of an element. The <code>clip</code> property applies only to absolutely positioned elements — that is, elements with {{cssxref("position","position:absolute")}} or {{cssxref("position","position:fixed")}}.</span></p>
+<p>The <strong><code>clip</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property defines a visible portion of an element. The <code>clip</code> property applies only to absolutely positioned elements — that is, elements with {{cssxref("position","position:absolute")}} or {{cssxref("position","position:fixed")}}.</p>
 
 <pre class="brush:css no-line-numbers">/* Keyword value */
 clip: auto;
@@ -22,6 +23,7 @@ clip: rect(1px, 10em, 3rem, 2ch);
 /* Global values */
 clip: inherit;
 clip: initial;
+clip: revert;
 clip: unset;</pre>
 
 <h2 id="Syntax">Syntax</h2>
@@ -33,11 +35,13 @@ clip: unset;</pre>
 <h3 id="Values">Values</h3>
 
 <dl>
- <dt>{{cssxref("&lt;shape&gt;")}}</dt>
- <dd>A rectangular {{cssxref("&lt;shape&gt;")}} of the form <code>rect(&lt;top&gt;, &lt;right&gt;, &lt;bottom&gt;, &lt;left&gt;)</code>. The <code>&lt;top&gt;</code> and <code>&lt;bottom&gt;</code> values are offsets from the <em>inside top border edge</em> of the box, while <code>&lt;right&gt;</code> and <code>&lt;left&gt;</code> are offsets from the <em>inside left border edge</em> of the box — that is, the extent of the padding box.</dd>
- <dd>The <code>&lt;top&gt;</code>, <code>&lt;right&gt;</code>, <code>&lt;bottom&gt;</code>, and <code>&lt;left&gt;</code> values may be either a {{cssxref("&lt;length&gt;")}} or <code>auto</code>. If any side's value is <code>auto</code>, the element is clipped to that side's <em>inside border edge</em>.</dd>
+ <dt>{{cssxref("shape")}}</dt>
+ <dd>
+  <p>A rectangular {{cssxref("shape")}} of the form <code>rect(&lt;top&gt;, &lt;right&gt;, &lt;bottom&gt;, &lt;left&gt;)</code>. The <code>&lt;top&gt;</code> and <code>&lt;bottom&gt;</code> values are offsets from the <em>inside top border edge</em> of the box, while <code>&lt;right&gt;</code> and <code>&lt;left&gt;</code> are offsets from the <em>inside left border edge</em> of the box — that is, the extent of the padding box.</p>
+  <p>The <code>&lt;top&gt;</code>, <code>&lt;right&gt;</code>, <code>&lt;bottom&gt;</code>, and <code>&lt;left&gt;</code> values may be either a {{cssxref("&lt;length&gt;")}} or <code>auto</code>. If any side's value is <code>auto</code>, the element is clipped to that side's <em>inside border edge</em>.</p>
+ </dd>
  <dt><code>auto</code></dt>
- <dd>The element does not clip (default). This is different from <code>rect(auto, auto, auto, auto)</code>, which clips to the element’s inside border edges.</dd>
+ <dd>The element does not clip (default). This is different from <code>rect(auto, auto, auto, auto)</code>, which clips to the element's inside border edges.</dd>
 </dl>
 
 <h2 id="Formal_definition">Formal definition</h2>
@@ -98,31 +102,11 @@ clip: unset;</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS Masks', '#clip-property', 'clip')}}</td>
-   <td>{{Spec2('CSS Masks')}}</td>
-   <td>Deprecates <code>clip</code> property, suggests {{cssxref("clip-path")}} as replacement.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'visufx.html#clipping', 'clip')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.clip")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -12,7 +12,7 @@ tags:
 ---
 <p>{{CSSRef}}</p>
 
-<p class="summary">Flexbox was designed as a single dimensional layout, meaning that it deals with laying out items as a row or as a column — but not both at once. There is however the ability to wrap flex items onto new lines, creating new rows if {{cssxref("flex-direction")}} is <code>row</code> and new columns if <code>flex-direction</code> is <code>column</code>. In this guide I will explain how this works, what it is designed for and what situations really require <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a> rather than flexbox.</p>
+<p>Flexbox was designed as a single dimensional layout, meaning that it deals with laying out items as a row or as a column — but not both at once. There is however the ability to wrap flex items onto new lines, creating new rows if {{cssxref("flex-direction")}} is <code>row</code> and new columns if <code>flex-direction</code> is <code>column</code>. In this guide I will explain how this works, what it is designed for and what situations really require <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a> rather than flexbox.</p>
 
 <h2 id="Making_things_wrap">Making things wrap</h2>
 
@@ -79,7 +79,7 @@ tags:
 <p>In the following live example I have a non-wrapped flex container. The third item has more content than the others yet is set to <code>visibility: collapse</code> and therefore the flex container is retaining a <em>strut</em> of the height required to display this item. If you remove <code>visibility: collapse</code> from the CSS or change the value to <code>visible</code>, you will see the item disappear and the space redistribute between non-collapsed items; the height of the flex container should not change.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Use Firefox for the below two examples as Chrome and Safari treat collapse as hidden.</p>
+<p><strong>Note:</strong> Use Firefox for the below two examples as Chrome and Safari treat collapse as hidden.</p>
 </div>
 
 <p>{{EmbedGHLiveSample("css-examples/flexbox/wrapping/visibility-collapse.html", '100%', 650)}}</p>

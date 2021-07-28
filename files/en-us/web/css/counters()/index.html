@@ -7,6 +7,7 @@ tags:
   - CSS Function
   - Function
   - Reference
+browser-compat: css.types.counters
 ---
 <p>{{CSSRef}}</p>
 
@@ -32,8 +33,8 @@ counters(countername, '.', upper-roman)</pre>
 
 <dl>
  <dt>{{cssxref("&lt;custom-ident&gt;")}}</dt>
- <dd>A name identifying the counters, which is the same case-sensitive name used for the {{cssxref("counter-reset")}} and  {{cssxref("counter-increment")}}. The name cannot start with two dashes and can't be <code>none</code>, <code>unset</code>, <code>initial</code>, or <code>inherit</code>.</dd>
- <dt><code style="white-space: nowrap;">&lt;counter-style&gt;</code></dt>
+ <dd>A name identifying the counters, which is the same case-sensitive name used for the {{cssxref("counter-reset")}} and {{cssxref("counter-increment")}}. The name cannot start with two dashes and can't be <code>none</code>, <code>unset</code>, <code>initial</code>, or <code>inherit</code>.</dd>
+ <dt><code>&lt;counter-style&gt;</code></dt>
  <dd>A counter style name or <code><a href="/en-US/docs/Web/CSS/symbols">symbols()</a></code> function, where a counter style name is a numeric, alphabetic, or symbolic simple predefined counter style, a complex longhand east Asian or Ethiopic predefined counter style, or other <a href="/en-US/docs/Web/CSS/CSS_Counter_Styles">predefined counter style</a>. If omitted, the counter-style defaults to decimal</dd>
  <dt>{{cssxref("&lt;string&gt;")}}</dt>
  <dd>Any number of text characters. Non-Latin characters must be encoded using their Unicode escape sequences: for example, <code>\000A9</code> represents the copyright symbol.</dd>
@@ -85,7 +86,7 @@ li::marker {
    content:  counters(listCounter, '.', upper-roman) ') ';
 }
 li::before {
-  content:  counters(listCounter, ".") " == " counters(listCounter, ".", lower-roman) ;
+  content:  counters(listCounter, ".") " == " counters(listCounter, ".", lower-roman) ;
 }</pre>
 
 <h4 id="Result">Result</h4>
@@ -132,7 +133,7 @@ li::marker {
    content: counters(count, '.', upper-alpha) ') ';
 }
 li::before {
-  content: counters(count, ".", <dfn>decimal-leading-zero</dfn>) " == " counters(count, ".", lower-alpha);
+  content: counters(count, ".", <dfn>decimal-leading-zero</dfn>) " == " counters(count, ".", lower-alpha);
 }</pre>
 
 <h4 id="Result_2">Result</h4>
@@ -141,31 +142,11 @@ li::before {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Lists", "#counter-functions", "CSS Counters")}}</td>
-   <td>{{Spec2("CSS3 Lists")}}</td>
-   <td>No change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS2.1", "generate.html#counter-styles", "CSS Counters")}}</td>
-   <td>{{Spec2("CSS2.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.types.counters")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

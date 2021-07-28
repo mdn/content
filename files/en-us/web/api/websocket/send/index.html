@@ -7,6 +7,7 @@ tags:
 - Reference
 - Web API
 - WebSocket
+browser-compat: api.WebSocket.send
 ---
 <p>{{APIRef("Web Sockets API")}}</p>
 
@@ -30,7 +31,7 @@ tags:
       <dd>A text string. The string is added to the buffer in UTF-8 format, and the value
         of <code>bufferedAmount</code> is increased by the number of bytes required to
         represent the UTF-8 string.</dd>
-      <dt>{{domxref("ArrayBuffer")}}</dt>
+      <dt>{{jsxref("ArrayBuffer")}}</dt>
       <dd>You can send the underlying binary data used by a typed array object; its binary
         data contents are queued in the buffer, increasing the value of
         <code>bufferedAmount</code> by the requisite number of bytes.</dd>
@@ -69,23 +70,8 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', '#dom-websocket-send', 'WebSocket: send')}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.WebSocket.send")}}</p>
+<p>{{Compat}}</p>

@@ -18,6 +18,7 @@ tags:
   - XRPermissionDescriptor
   - augmented
   - descriptor
+browser-compat: api.XRPermissionDescriptor
 ---
 <p>{{APIRef("WebXR Device API")}}{{SecureContext_header}}</p>
 
@@ -31,11 +32,11 @@ tags:
 
 <dl>
 	<dt>{{domxref("XRPermissionDescriptor.mode", "mode")}} </dt>
-	<dd>An {{domxref("XRSessionMode")}} value indicating the XR mode (<code>inline</code>, <code>immersive-vr</code>, or <code>immersive-ar</code>) for which the permissions are requested.</dd>
+	<dd>An string indicating the XR mode (<code>inline</code>, <code>immersive-vr</code>, or <code>immersive-ar</code>) for which the permissions are requested.</dd>
 	<dt>{{domxref("XRPermissionDescriptor.optionalFeatures", "optionalFeatures")}}</dt>
-	<dd>An array of strings, each specifying the name of a WebXR feature which is requested but not required for the app to function. The available features are the same as those used by {{domxref("XRSessionInit")}}; see {{SectionOnPage("/en-US/docs/Web/API/XRSessionInit", "Default features")}} for further information.</dd>
+	<dd>An array of strings, each specifying the name of a WebXR feature which is requested but not required for the app to function.</dd>
 	<dt>{{domxref("XRPermissionDescriptor.requiredFeatures", "requiredFeatures")}}</dt>
-	<dd>An array of strings giving the names of the <a href="/en-US/docs/Web/API/XRSessionInit#Default_features">WebXR features</a> for which permission <em>must</em> be obtained in order to use your app or site.</dd>
+	<dd>An array of strings giving the names of the WebXR features for which permission <em>must</em> be obtained in order to use your app or site.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
@@ -79,26 +80,11 @@ if (navigator.permissions) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName('WebXR','#dictdef-xrpermissiondescriptor','XRPermissionDescriptor')}}</td>
-			<td>{{Spec2('WebXR')}}</td>
-			<td>Initial definition.</td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.XRPermissionDescriptor")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

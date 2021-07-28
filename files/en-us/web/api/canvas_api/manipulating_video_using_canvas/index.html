@@ -125,10 +125,9 @@ tags:
 <pre class="brush: js">  processor.computeFrame = function computeFrame() {
     this.ctx1.drawImage(this.video, 0, 0, this.width, this.height);
     const frame = this.ctx1.getImageData(0, 0, this.width, this.height);
-    const data = frame.data;
-    const l = data.length / 4;
+    const length = frame.data.length;
 
-    for (let i = 0; i &lt; l; i += 4) {
+    for (let i = 0; i &lt; length; i += 4) {
       const red = data[i + 0];
       const green = data[i + 1];
       const blue = data[i + 2];

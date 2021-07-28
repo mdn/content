@@ -2,17 +2,18 @@
 title: XMLHttpRequest.send()
 slug: Web/API/XMLHttpRequest/send
 tags:
-- AJAX
-- API
-- HTTP request
-- Method
-- NeedsContent
-- NeedsExample
-- Reference
-- XHR
-- XHR Request
-- XMLHttpRequest
-- send
+  - AJAX
+  - API
+  - HTTP request
+  - Method
+  - NeedsContent
+  - NeedsExample
+  - Reference
+  - XHR
+  - XHR Request
+  - XMLHttpRequest
+  - send
+browser-compat: api.XMLHttpRequest.send
 ---
 <div>{{APIRef('XMLHttpRequest')}}</div>
 
@@ -88,7 +89,7 @@ tags:
 
 <h2 id="Example_GET">Example: GET</h2>
 
-<pre class="brush: js"><code>var xhr = new XMLHttpRequest();
+<pre class="brush: js">var xhr = new XMLHttpRequest();
 xhr.open('GET', '/server', true);
 
 xhr.onload = function () {
@@ -97,51 +98,36 @@ xhr.onload = function () {
 
 xhr.send(null);
 // xhr.send('string');
-</code>// <code>xhr.send(new Blob());
+// xhr.send(new Blob());
 // xhr.send(new Int8Array());
-// xhr.send(document);</code>
+// xhr.send(document);
 </pre>
 
 <h2 id="Example_POST">Example: POST</h2>
 
-<pre class="brush: js"><code>var xhr = new XMLHttpRequest();
-xhr.open("POST", '/server', true);
+<pre class="brush: js">var xhr = new XMLHttpRequest();
+xhr.open(&quot;POST&quot;, '/server', true);
 
 //Send the proper header information along with the request
-xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+xhr.setRequestHeader(&quot;Content-Type&quot;, &quot;application/x-www-form-urlencoded&quot;);
 
 xhr.onreadystatechange = function() { // Call a function when the state changes.
     if (this.readyState === XMLHttpRequest.DONE &amp;&amp; this.status === 200) {
         // Request finished. Do processing here.
     }
 }
-xhr.send("foo=bar&amp;lorem=ipsum");
+xhr.send(&quot;foo=bar&amp;lorem=ipsum&quot;);
 // xhr.send(new Int8Array());
-// xhr.send(document);</code>
+// xhr.send(document);
 </pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('XMLHttpRequest', '#the-send()-method', 'send()')}}</td>
-      <td>{{Spec2('XMLHttpRequest')}}</td>
-      <td>WHATWG living standard</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>{{Compat("api.XMLHttpRequest.send")}}</div>
+<div>{{Compat}}</div>
 
 <h2 id="See_also">See also</h2>
 

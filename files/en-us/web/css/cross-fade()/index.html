@@ -9,10 +9,11 @@ tags:
   - Function
   - Reference
   - Web
+browser-compat: css.types.image.cross-fade
 ---
 <p>{{CSSRef}}</p>
 
-<p><span class="seoSummary">The <strong><code>cross-fade()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Functions">function</a> can be used to blend two or more images at a defined transparency.</span> It can be used for many simple image manipulations, such as tinting an image with a solid color or highlighting a particular area of the page by combining an image with a radial gradient.</p>
+<p>The <strong><code>cross-fade()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Functions">function</a> can be used to blend two or more images at a defined transparency. It can be used for many simple image manipulations, such as tinting an image with a solid color or highlighting a particular area of the page by combining an image with a radial gradient.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -20,7 +21,7 @@ tags:
 
 <h3 id="Specification_syntax">Specification syntax</h3>
 
-<p>The <code>cross-fade()</code> function takes a list of images with a percentage defining how much of each image is retained in terms of opacity when it is blended with the other images. The percent value must be coded without quotes, must contain the “%” symbol, and its value must be between 0% and 100%.</p>
+<p>The <code>cross-fade()</code> function takes a list of images with a percentage defining how much of each image is retained in terms of opacity when it is blended with the other images. The percent value must be coded without quotes, must contain the <code>'%'</code> symbol, and its value must be between 0% and 100%.</p>
 
 <p>The function can be used in CSS anywhere an ordinary image reference can be used.</p>
 
@@ -101,12 +102,12 @@ cross-fade(url(white.png), url(black.png), 100%); /* fully white */
     width: 300px;
     height: 300px;
     background-image: -webkit-cross-fade(
-        url('https://mdn.mozillademos.org/files/8543/br.png'),
-        url('https://mdn.mozillademos.org/files/8545/tr.png'),
+        url('br.png'),
+        url('tr.png'),
         75%);
     background-image: cross-fade(
-        url('https://mdn.mozillademos.org/files/8543/br.png'),
-        url('https://mdn.mozillademos.org/files/8545/tr.png'),
+        url('br.png'),
+        url('tr.png'),
         75%);
 }</pre>
 
@@ -116,26 +117,11 @@ cross-fade(url(white.png), url(black.png), 100%); /* fully white */
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th>Specification</th>
-   <th>Status</th>
-   <th>Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Images', '#cross-fade-function', 'cross-fade()')}}</td>
-   <td>{{Spec2('CSS4 Images')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.types.image.cross-fade")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

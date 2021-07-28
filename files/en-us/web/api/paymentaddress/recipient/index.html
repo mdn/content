@@ -9,8 +9,9 @@ tags:
 - Property
 - Reference
 - paymentAddress
+browser-compat: api.PaymentAddress.recipient
 ---
-<div>{{APIRef("Payment Request API")}}</div>
+<div>{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}</div>
 
 <p>The read-only <strong><code>recipient</code></strong> property of the
   {{domxref('PaymentAddress')}} interface returns a string containing the name of the
@@ -27,25 +28,6 @@ tags:
   purchase, or the name of a contact person in other contexts. If no name is available,
   this string is empty.</p>
 
-<h2 id="Specifications">Specifications</h2>
-
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('Payment','#dom-paymentaddress-recipient','PaymentAddress.recipient')}}
-      </td>
-      <td>{{Spec2('Payment')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
-
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.PaymentAddress.recipient")}}</p>
+<p>{{Compat}}</p>

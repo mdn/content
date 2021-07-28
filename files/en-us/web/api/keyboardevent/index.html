@@ -15,6 +15,7 @@ tags:
   - UI Events
   - keyboard
   - user input
+browser-compat: api.KeyboardEvent
 ---
 <div>{{APIRef("DOM Events")}}</div>
 
@@ -94,15 +95,15 @@ tags:
 
 <dl>
  <dt>{{domxref("KeyboardEvent.altKey")}} {{Readonlyinline}}</dt>
- <dd>Returns a {{jsxref("Boolean")}} that is <code>true</code> if the <kbd>Alt</kbd> ( <kbd>Option</kbd> or <kbd>⌥</kbd> on OS X) key was active when the key event was generated.</dd>
+ <dd>Returns a boolean value that is <code>true</code> if the <kbd>Alt</kbd> ( <kbd>Option</kbd> or <kbd>⌥</kbd> on OS X) key was active when the key event was generated.</dd>
  <dt>{{domxref("KeyboardEvent.code")}} {{Readonlyinline}}</dt>
  <dd>Returns a {{domxref("DOMString")}} with the code value of the physical key represented by the event.
- <div class="warning"><strong>Warning:</strong> This ignores the user's keyboard layout, so that if the user presses the key at the "Y" position in a QWERTY keyboard layout (near the middle of the row above the home row), this will always return "KeyY", even if the user has a QWERTZ keyboard (which would mean the user expects a "Z" and all the other properties would indicate a "Z") or a Dvorak keyboard layout (where the user would expect an "F").</div>
+ <div class="warning"><strong>Warning:</strong> This ignores the user's keyboard layout, so that if the user presses the key at the "Y" position in a QWERTY keyboard layout (near the middle of the row above the home row), this will always return "KeyY", even if the user has a QWERTZ keyboard (which would mean the user expects a "Z" and all the other properties would indicate a "Z") or a Dvorak keyboard layout (where the user would expect an "F"). If you want to display the correct keystrokes to the user, you can use {{domxref("Keyboard.getLayoutMap()")}}.</div>
  </dd>
  <dt>{{domxref("KeyboardEvent.ctrlKey")}} {{Readonlyinline}}</dt>
- <dd>Returns a {{jsxref("Boolean")}} that is <code>true</code> if the <kbd>Ctrl</kbd> key was active when the key event was generated.</dd>
+ <dd>Returns a boolean value that is <code>true</code> if the <kbd>Ctrl</kbd> key was active when the key event was generated.</dd>
  <dt>{{domxref("KeyboardEvent.isComposing")}} {{Readonlyinline}}</dt>
- <dd>Returns a {{jsxref("Boolean")}} that is <code>true</code> if the event is fired between after <code>compositionstart</code> and before <code>compositionend</code>.</dd>
+ <dd>Returns a boolean value that is <code>true</code> if the event is fired between after <code>compositionstart</code> and before <code>compositionend</code>.</dd>
  <dt>{{domxref("KeyboardEvent.key")}} {{Readonlyinline}}</dt>
  <dd>Returns a {{domxref("DOMString")}} representing the key value of the key represented by the event.</dd>
  <dt>{{domxref("KeyboardEvent.locale")}} {{Readonlyinline}}</dt>
@@ -112,11 +113,11 @@ tags:
  <dt>{{domxref("KeyboardEvent.location")}} {{Readonlyinline}}</dt>
  <dd>Returns a {{jsxref("Number")}} representing the location of the key on the keyboard or other input device. A list of the constants identifying the locations is shown above in {{anch("Keyboard locations")}}.</dd>
  <dt>{{domxref("KeyboardEvent.metaKey")}} {{Readonlyinline}}</dt>
- <dd>Returns a {{jsxref("Boolean")}} that is <code>true</code> if the <kbd>Meta</kbd> key (on Mac keyboards, the <kbd>⌘ Command</kbd> key; on Windows keyboards, the Windows key (<kbd>⊞</kbd>)) was active when the key event was generated.</dd>
+ <dd>Returns a boolean value that is <code>true</code> if the <kbd>Meta</kbd> key (on Mac keyboards, the <kbd>⌘ Command</kbd> key; on Windows keyboards, the Windows key (<kbd>⊞</kbd>)) was active when the key event was generated.</dd>
  <dt>{{domxref("KeyboardEvent.repeat")}} {{Readonlyinline}}</dt>
- <dd>Returns a {{jsxref("Boolean")}} that is <code>true</code> if the key is being held down such that it is automatically repeating.</dd>
+ <dd>Returns a boolean value that is <code>true</code> if the key is being held down such that it is automatically repeating.</dd>
  <dt>{{domxref("KeyboardEvent.shiftKey")}} {{Readonlyinline}}</dt>
- <dd>Returns a {{jsxref("Boolean")}} that is <code>true</code> if the <kbd>Shift</kbd> key was active when the key event was generated.</dd>
+ <dd>Returns a boolean value that is <code>true</code> if the <kbd>Shift</kbd> key was active when the key event was generated.</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
@@ -125,7 +126,7 @@ tags:
 
 <dl>
  <dt>{{domxref("KeyboardEvent.getModifierState()")}}</dt>
- <dd>Returns a {{jsxref("Boolean")}} indicating if a modifier key such as <kbd>Alt</kbd>, <kbd>Shift</kbd>, <kbd>Ctrl</kbd>, or <kbd>Meta</kbd>, was pressed when the event was created.</dd>
+ <dd>Returns a boolean value indicating if a modifier key such as <kbd>Alt</kbd>, <kbd>Shift</kbd>, <kbd>Ctrl</kbd>, or <kbd>Meta</kbd>, was pressed when the event was created.</dd>
 </dl>
 
 <h2 id="Obsolete_methods">Obsolete methods</h2>
@@ -176,7 +177,7 @@ tags:
 <h3 id="Obsolete_events">Obsolete events</h3>
 
 <dl>
- <dt>{{domxref("Document.keypress_event", "keypress")}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("Document.keypress_event", "keypress")}} {{deprecated_inline}}</dt>
  <dd>A key that normally produces a character value has been pressed. This event was highly device-dependent and is obsolete. You should not use it.</dd>
 </dl>
 
@@ -292,33 +293,18 @@ document.addEventListener('keyup', (event) =&gt; {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('UI Events', '#interface-keyboardevent', 'KeyboardEvent')}}</td>
-   <td>{{Spec2('UI Events')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <p>The <code>KeyboardEvent</code> interface specification went through numerous draft versions, first under DOM Events Level 2 where it was dropped as no consensus arose, then under DOM Events Level 3. This led to the implementation of non-standard initialization methods, the early DOM Events Level 2 version, {{domxref("KeyboardEvent.initKeyEvent()")}} by Gecko browsers and the early DOM Events Level 3 version, {{domxref("KeyboardEvent.initKeyboardEvent()")}} by others. Both have been superseded by the modern usage of a constructor: {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}}.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.KeyboardEvent")}}</p>
+<p>{{Compat}}</p>
 
 <h3 id="Compatibility_notes">Compatibility notes</h3>
 
 <ul>
- <li>As of Firefox 65, the <code>keypress</code> event is no longer fired for <a href="/en-US/docs/Web/API/KeyboardEvent/keyCode#Non-printable_keys_(function_keys)">non-printable keys</a> ({{bug(968056)}}), except for the <kbd>Enter</kbd> key, and the <kbd>Shift</kbd> + <kbd>Enter</kbd> and <kbd>Ctrl</kbd> + <kbd>Enter</kbd> key combinations (these were kept for cross-browser compatibility purposes).</li>
+ <li>As of Firefox 65, the <code>keypress</code> event is no longer fired for <a href="/en-US/docs/Web/API/KeyboardEvent/keyCode#non-printable_keys_(function_keys)">non-printable keys</a> ({{bug(968056)}}), except for the <kbd>Enter</kbd> key, and the <kbd>Shift</kbd> + <kbd>Enter</kbd> and <kbd>Ctrl</kbd> + <kbd>Enter</kbd> key combinations (these were kept for cross-browser compatibility purposes).</li>
 </ul>
 
 <h2 id="See_also">See also</h2>

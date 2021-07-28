@@ -11,6 +11,7 @@ tags:
   - mouse
   - mouseleave
   - move
+browser-compat: api.Element.mouseleave_event
 ---
 <p>{{APIRef}}</p>
 
@@ -39,15 +40,18 @@ tags:
 
 <p><code>mouseleave</code> and {{event('mouseout')}} are similar but differ in that <code>mouseleave</code> does not bubble and <code>mouseout</code> does. This means that <code>mouseleave</code> is fired when the pointer has exited the element <em>and</em> all of its descendants, whereas <code>mouseout</code> is fired when the pointer leaves the element <em>or</em> leaves one of the element's descendants (even if the pointer is still within the element).</p>
 
-<div style="column-width: 455px; border: 1px solid; padding: 5px; margin-bottom: 10px;">
-<div style="text-align: center;"><img class="default internal" src="mouseleave.png"></div>
+<h4>Behavior of <code>mouseleave</code> events:</h4>
+
+<img class="default internal" src="mouseleave.png">
 
 <p>One <code>mouseleave</code> event is sent to each element of the hierarchy when leaving them. Here four events are sent to the four elements of the hierarchy when the pointer moves from the text to an area outside of the most outer div represented here.</p>
 
-<div style="text-align: center;"><img class="default internal" src="mouseout.png"></div>
+<h4>Behavior of <code>mouseout</code> events:</h4>
+
+<img class="default internal" src="mouseout.png">
 
 <p>One single <code>mouseout</code> event is sent to the deepest element of the DOM tree, then it bubbles up the hierarchy until it is canceled by a handler or reaches the root.</p>
-</div>
+
 
 <h2 id="Examples">Examples</h2>
 
@@ -114,28 +118,11 @@ function addListItem(text) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('UI Events', '#event-type-mouseleave', 'mouseleave')}}</td>
-   <td>{{Spec2('UI Events')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Events', '#event-type-mouseleave', 'mouseleave')}}</td>
-   <td>{{Spec2('DOM3 Events')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Element.mouseleave_event")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

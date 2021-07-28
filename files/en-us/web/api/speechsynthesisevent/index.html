@@ -10,6 +10,7 @@ tags:
   - Web Speech API
   - speech
   - synthesis
+browser-compat: api.SpeechSynthesisEvent
 ---
 <p>{{APIRef("Web Speech API")}}{{SeeCompatTable}}</p>
 
@@ -23,7 +24,7 @@ tags:
 	<dt>{{domxref("SpeechSynthesisEvent.charIndex")}} {{readonlyinline}}</dt>
 	<dd>Returns the index position of the character in the {{domxref("SpeechSynthesisUtterance.text")}} that was being spoken when the event was triggered.</dd>
 	<dt>{{domxref("SpeechSynthesisEvent.elapsedTime")}} {{readonlyinline}}</dt>
-	<dd>Returns the elapsed time in milliseconds after the {{domxref("SpeechSynthesisUtterance.text")}} started being spoken that the event was triggered at.</dd>
+	<dd>Returns the elapsed time in seconds after the {{domxref("SpeechSynthesisUtterance.text")}} started being spoken that the event was triggered at.</dd>
 	<dt>{{domxref("SpeechSynthesisEvent.name")}} {{readonlyinline}}</dt>
 	<dd>Returns the name associated with certain types of events occurring as the {{domxref("SpeechSynthesisUtterance.text")}} is being spoken: the name of the <a href="https://www.w3.org/TR/speech-synthesis/#S3.3.2">SSML</a> marker reached in the case of a {{event("mark")}} event, or the type of boundary reached in the case of a {{event("boundary")}} event.</dd>
 	<dt>{{domxref("SpeechSynthesisEvent.utterance")}} {{readonlyinline}}</dt>
@@ -37,35 +38,22 @@ tags:
 <h2 id="Examples">Examples</h2>
 
 <pre class="brush: js language-js">utterThis.onpause = function(event) {
-  var char = event.utterance.text.charAt(event.charIndex);
-  console.log('Speech paused at character ' + event.charIndex + ' of "' +
-  event.utterance.text + '", which is "' + char + '".');
+  var char = event.utterance.text.charAt(event.charIndex);
+  console.log('Speech paused at character ' + event.charIndex + ' of "' +
+  event.utterance.text + '", which is "' + char + '".');
 }
 
 utterThis.onboundary = function(event) {
-  console.log(event.name + ' boundary reached after ' + event.elapsedTime + ' milliseconds.');
+  console.log(event.name + ' boundary reached after ' + event.elapsedTime + ' seconds.');
 }</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<tbody>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-		<tr>
-			<td>{{SpecName('Web Speech API', '#speechsynthesisevent', 'SpeechSynthesisEvent')}}</td>
-			<td>{{Spec2('Web Speech API')}}</td>
-			<td></td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.SpeechSynthesisEvent")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

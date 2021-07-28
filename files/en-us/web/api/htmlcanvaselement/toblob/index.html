@@ -7,17 +7,15 @@ tags:
 - HTMLCanvasElement
 - Method
 - Reference
+browser-compat: api.HTMLCanvasElement.toBlob
 ---
 <div>{{APIRef("Canvas API")}}</div>
 
 <p>The <strong><code>HTMLCanvasElement.toBlob()</code></strong> method creates a
   {{domxref("Blob")}} object representing the image contained in the canvas; this file may
-  be cached on the disk or stored in memory at the discretion of the user agent. If
-  <code>type</code> is not specified, the image type is <code>image/png</code>. The
-  created image is in a resolution of 96dpi.</p>
+  be cached on the disk or stored in memory at the discretion of the user agent.
 
-<p>The third argument is used when creating images using lossy compression (such as
-  <code>image/jpeg</code>) to specify the quality of the output.</p>
+  <p>The created image is in a resolution of 96dpi.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -32,12 +30,14 @@ tags:
     argument.</dd>
   <dt><code>mimeType</code> {{optional_inline}}</dt>
   <dd>A {{domxref("DOMString")}} indicating the image format. The default type is
-    <code>image/png</code>.</dd>
+    <code>image/png</code>; that type is also used if the given type isn't supported.</dd>
   <dt><code>qualityArgument</code> {{optional_inline}}</dt>
-  <dd>A {{jsxref("Number")}} between <code>0</code> and <code>1</code> indicating image
+  <dd>A {{jsxref("Number")}} between <code>0</code> and <code>1</code>, indicating image
     quality if the requested type is <code>image/jpeg </code>or <code>image/webp</code>.
     If this argument is anything else, the default values 0.92 and 0.80 are used for
-    image/jpeg and image/webp respectively. Other arguments are ignored.</dd>
+    image/jpeg and image/webp respectively. Other arguments are ignored.
+    <p>This argument is used when creating images using lossy compression (such as <code>image/jpeg</code>), to specify the quality of the output.</p>
+    </dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -165,38 +165,11 @@ canvas.toBlob(blobCallback('passThisString'), 'image/vnd.microsoft.icon',
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', "scripting.html#dom-canvas-toblob",
-        "HTMLCanvasElement.toBlob")}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td>No change since the latest snapshot, {{SpecName('HTML5 W3C')}}</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML5.1', "scripting-1.html#dom-canvas-toblob",
-        "HTMLCanvasElement.toBlob")}}</td>
-      <td>{{Spec2('HTML5.1')}}</td>
-      <td>No change</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML5 W3C', "scripting-1.html#dom-canvas-toblob",
-        "HTMLCanvasElement.toBlob")}}</td>
-      <td>{{Spec2('HTML5 W3C')}}</td>
-      <td>Snapshot of the {{SpecName('HTML WHATWG')}} containing the initial definition.
-      </td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.HTMLCanvasElement.toBlob")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

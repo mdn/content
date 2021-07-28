@@ -20,8 +20,9 @@ tags:
 - XRWebGLLayer
 - augmented
 - new
+browser-compat: api.XRWebGLLayer.XRWebGLLayer
 ---
-<p>{{APIRef("WebXR Device API")}}{{secureContext_header}}</p>
+<p>{{APIRef("WebXR Device API")}}</p>
 
 <p><span class="seoSummary">The <a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR
       Device API</a> <code><strong>XRWebGLLayer()</strong></code> constructor creates and
@@ -45,10 +46,16 @@ tags:
     WebXR session.</dd>
   <dt><code>layerInit</code> {{optional_inline}}</dt>
   <dd>
-    <p>An object conforming to the {{domxref("XRWebGLLayerInit")}} dictionary, providing
-      configuration options for the new <code>XRWebGLLayer</code>. The options available
+    <p>An object providing configuration options for the new <code>XRWebGLLayer</code>. The available options
       are:</p>
-    {{page("/en-US/docs/Web/API/XRWebGLLayerInit", "Properties")}}
+    <ul>
+      <li><code>alpha</code>: The frame buffer's color buffer will be established with an alpha channel if the <code>alpha</code> Boolean property is <code>true</code>. Otherwise, the color buffer will not have an alpha channel. The default value is <code>true</code>.</li>
+      <li><code>antialias</code>: A Boolean value which is <code>true</code> if anti-aliasing is to be used when rendering in the context; otherwise <code>false</code>. The browser selects the anti-aliasing method to use; there is no support for requesting a specific mode yet.  The default value is <code>true</code>.</li>
+      <li><code>depth</code>: A Boolean value which, if <code>true</code>, requests that the new layer have a depth buffer; otherwise, no depth layer is allocated. The default is <code>true</code>.</li>
+      <li><code>framebufferScaleFactor</code>: A floating-point value which is used to scale the image during compositing, with a value of 1.0 represents the default pixel size for the frame buffer. The static {{domxref("XRWebGLLayer")}} function {{domxref("XRWebGLLayer.getNativeFramebufferScaleFactor()")}} returns the scale that would result in a 1:1 pixel ratio, thereby ensuring that the rendering is occurring at the device's native resolution. The default is 1.0.</li>
+      <li><code>ignoreDepthValues</code>: A Boolean value which indicates whether or not to ignore the contents of the depth buffer while compositing the scene. The default is <code>false</code>.</li>
+      <li><code>stencil</code>: A Boolean value which, if <code>true</code>, requests that the new layer include a stencil buffer. Otherwise, no stencil buffer is allocated. The default is <code>false</code>.</li>
+    </ul>
   </dd>
 </dl>
 
@@ -82,26 +89,30 @@ tags:
     be allocated.</dd>
 </dl>
 
+<h2 id="Example">Example</h2>
+
+<p>In this example, a new {{domxref("XRWebGLLayer")}} is created for a WebXR session,
+  <code>xrSession</code>.</p>
+
+<pre class="brush: js">xrSession.updateRenderState({
+  baseLayer: new XRWebGLLayer(xrSession, gl, {
+     alpha: false,
+     antialias: false,
+     depth: false,
+     framebufferScaleFactor: 0.5,
+     ignoreDepthValues: true,
+     stencil: false
+  });
+});
+</pre>
+
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('WebXR','#dom-xrwebgllayer-xrwebgllayer','XRWebGLLayer()')}}</td>
-      <td>{{Spec2('WebXR')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.XRWebGLLayer.XRWebGLLayer")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

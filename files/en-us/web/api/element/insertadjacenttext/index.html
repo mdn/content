@@ -9,6 +9,7 @@ tags:
 - Method
 - Reference
 - insertAdjacentText
+browser-compat: api.Element.insertAdjacentText
 ---
 <div>{{APIRef("DOM")}}</div>
 
@@ -28,13 +29,13 @@ tags:
   <dd>A {{domxref("DOMString")}} representing the position relative to the
     <code>element</code>; must be one of the following strings:
     <ul>
-      <li><code style="color: red;">'beforebegin'</code>: Before the <code>element</code>
+      <li><code>'beforebegin'</code>: Before the <code>element</code>
         itself.</li>
-      <li><code style="color: green;">'afterbegin'</code>: Just inside the
+      <li><code>'afterbegin'</code>: Just inside the
         <code>element</code>, before its first child.</li>
-      <li><code style="color: blue;">'beforeend'</code>: Just inside the
+      <li><code>'beforeend'</code>: Just inside the
         <code>element</code>, after its last child.</li>
-      <li><code style="color: magenta;">'afterend'</code>: After the <code>element</code>
+      <li><code>'afterend'</code>: After the <code>element</code>
         itself.</li>
     </ul>
   </dd>
@@ -65,13 +66,13 @@ tags:
 
 <h3 id="Visualization_of_position_names">Visualization of position names</h3>
 
-<pre>&lt;!-- <strong><code style="color: red;">beforebegin</code></strong> --&gt;
-<code style="font-weight: bold;">&lt;p&gt;</code>
-  &lt;!-- <strong><code style="color: green;">afterbegin</code></strong> --&gt;
+<pre>&lt;!-- <strong><code>beforebegin</code></strong> --&gt;
+<code>&lt;p&gt;</code>
+  &lt;!-- <strong><code>afterbegin</code></strong> --&gt;
   foo
-  &lt;!-- <strong><code style="color: blue;">beforeend</code></strong> --&gt;
-<code style="font-weight: bold;">&lt;/p&gt;</code>
-&lt;!-- <strong><code style="color: magenta;">afterend</code></strong> --&gt;</pre>
+  &lt;!-- <strong><code>beforeend</code></strong> --&gt;
+<code>&lt;/p&gt;</code>
+&lt;!-- <strong><code>afterend</code></strong> --&gt;</pre>
 
 <div class="note"><strong>Note:</strong> The <code>beforebegin</code> and
   <code>afterend</code> positions work only if the node is in a tree and has an element
@@ -115,27 +116,11 @@ afterBtn.addEventListener('click', function() {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('DOM WHATWG', '#dom-element-insertadjacenttext',
-        'insertAdjacentText()')}}</td>
-      <td>{{ Spec2('DOM WHATWG') }}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Element.insertAdjacentText")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

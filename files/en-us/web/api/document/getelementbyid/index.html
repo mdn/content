@@ -11,6 +11,7 @@ tags:
   - Web
   - getElementById
   - id
+browser-compat: api.Document.getElementById
 ---
 <div>{{ ApiRef("DOM") }}</div>
 
@@ -99,50 +100,20 @@ element.id = 'testqq';
 var el = document.getElementById('testqq'); // el will be null!
 </pre>
 
-<p><strong>Non-HTML documents</strong>. The DOM implementation must have information that says which attributes are of type ID. Attributes with the name "id" are not of type ID unless so defined in the document's DTD. The <code>id</code> attribute is defined to be of ID type in the common cases of <a href="/en-US/docs/Glossary/XHTML">XHTML</a>, <a href="/en-US/docs/XUL">XUL</a>, and other. Implementations that do not know whether attributes are of type ID or not are expected to return <code>null</code>.</p>
+<p><strong>Non-HTML documents</strong>. The DOM implementation must have information that says which attributes are of type ID. Attributes with the name "id" are not of type ID unless so defined in the document's DTD. The <code>id</code> attribute is defined to be of ID type in the common cases of <a href="/en-US/docs/Glossary/XHTML">XHTML</a>, XUL, and other. Implementations that do not know whether attributes are of type ID or not are expected to return <code>null</code>.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM1','level-one-html.html#method-getElementById','getElementById')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>Initial definition for the interface</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Core','core.html#ID-getElBId','getElementById')}}</td>
-   <td>{{Spec2('DOM2 Core')}}</td>
-   <td>Supersede DOM 1</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Core','core.html#ID-getElBId','getElementById')}}</td>
-   <td>{{Spec2('DOM3 Core')}}</td>
-   <td>Supersede DOM 2</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG','#dom-nonelementparentnode-getelementbyid','getElementById')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Intend to supersede DOM 3</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Document.getElementById")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
  <li>{{domxref("Document")}} reference for other methods and properties you can use to get references to elements in the document.</li>
  <li>{{domxref("Document.querySelector()")}} for selectors via queries like <code>'div.myclass'</code></li>
- <li><a href="/en-US/docs/xml/xml:id">xml:id</a> - has a utility method for allowing <code>getElementById()</code> to obtain 'xml:id' in XML documents (such as returned by Ajax calls)</li>
+ <li><a href="https://www.w3.org/TR/xml-id/">xml:id</a> - has a utility method for allowing <code>getElementById()</code> to obtain 'xml:id' in XML documents (such as returned by Ajax calls)</li>
 </ul>

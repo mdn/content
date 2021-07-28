@@ -8,6 +8,7 @@ tags:
   - Experimental
   - Reference
   - image-resolution
+browser-compat: css.properties.image-resolution
 ---
 <div>{{CSSRef}}{{SeeCompatTable}}</div>
 
@@ -26,6 +27,7 @@ image-resolution: 300dpi snap;
 /* Global values */
 image-resolution: inherit;
 image-resolution: initial;
+image-resolution: revert;
 image-resolution: unset;</pre>
 
 <h3 id="Values">Values</h3>
@@ -36,7 +38,7 @@ image-resolution: unset;</pre>
  <dt><code>from-image</code></dt>
  <dd>Uses the intrinsic resolution as specified by the image format. If the image does not specify its own resolution, the explicitly specified resolution is used (if given), else it defaults to <code>1dppx</code> (1 image pixel per CSS px unit).</dd>
  <dt><code>snap</code></dt>
- <dd>If the <code>snap</code> keyword is provided, the computed resolution is the specified resolution rounded to the nearest value that would map one image pixel to an integer number of device pixels. If the resolution is taken from the image, then the used intrinsic resolution is the image’s native resolution similarly adjusted.</dd>
+ <dd>If the <code>snap</code> keyword is provided, the computed resolution is the specified resolution rounded to the nearest value that would map one image pixel to an integer number of device pixels. If the resolution is taken from the image, then the used intrinsic resolution is the image's native resolution similarly adjusted.</dd>
 </dl>
 
 <div class="notecard note">
@@ -75,29 +77,16 @@ image-resolution: unset;</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS4 Images", "#the-image-resolution", "image-resolution")}}</td>
-   <td>{{Spec2("CSS4 Images")}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>The <code>image-resolution</code> property is currently unsupported by browsers. <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=1086473">Chromium bug: 1086473</a>.</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
  <li>Other image-related CSS properties: {{cssxref("object-fit")}}, {{cssxref("object-position")}}, {{cssxref("image-orientation")}}, {{cssxref("image-rendering")}}.</li>
+ <li><a href="https://bugs.chromium.org/p/chromium/issues/detail?id=1086473">Chromium bug: 1086473</a>.</li>
+
 </ul>

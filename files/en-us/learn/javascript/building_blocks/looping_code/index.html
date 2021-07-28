@@ -487,7 +487,7 @@ while (condition) {
 
 <p>This works in a very similar way to the <code>for</code> loop, except that the initializer variable is set before the loop, and the final-expression is included inside the loop after the code to run, rather than these two items being included inside the parentheses. The condition is included inside the parentheses, which are preceded by the <code>while</code> keyword rather than <code>for</code>.</p>
 
-<p>The same three items are still present, and they are still defined in the same order as they are in the for loop. This makes sense, as you still have to have an initializer defined before you can check whether it has reached the point where the condition is no longer true; the final-expression is then run after the code inside the loop has run (an iteration has been completed), which will only happen if the condition is still true.</p>
+<p>The same three items are still present, and they are still defined in the same order as they are in the for loop. This is because you must have an initializer defined before you can check whether or not the condition is true. The final-expression is then run after the code inside the loop has run (an iteration has been completed), which will only happen if the condition is still true.</p>
 
 <p>Let's have a look again at our cats list example, but rewritten to use a while loop:</p>
 
@@ -926,7 +926,7 @@ do {
 
 <ul>
  <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/conditionals">Making decisions in your code — conditionals</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code">Looping code</a></li>
+ <li><strong>Looping code</strong></li>
  <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Functions">Functions — reusable blocks of code</a></li>
  <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Build_your_own_function">Build your own function</a></li>
  <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Return_values">Function return values</a></li>

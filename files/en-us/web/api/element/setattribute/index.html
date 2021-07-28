@@ -10,6 +10,7 @@ tags:
 - NeedsSpecTable
 - Reference
 - setAttribute
+browser-compat: api.Element.setAttribute
 ---
 <p>{{APIRef("DOM")}}</p>
 
@@ -39,9 +40,8 @@ tags:
 </dl>
 
 <p>Boolean attributes are considered to be <code>true</code> if they're present on the
-  element at all, regardless of their actual <code>value</code>; as a rule, you should
-  specify the empty string (<code>""</code>) in <code>value</code> (some people use the
-  attribute's name; this works but is non-standard). See the {{anch("Example",
+  element at all. You should set <code>value</code> to the empty string (<code>""</code>)
+  or the attribute's name, with no leading or trailing whitespace. See the {{anch("Example",
   "example")}} below for a practical demonstration.</p>
 
 <p>Since the specified <code>value</code> gets converted into a string, specifying
@@ -107,24 +107,11 @@ b.setAttribute("disabled", "");
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('DOM WHATWG','#dom-element-setattribute','setAttribute()')}}</td>
-      <td>{{Spec2('DOM WHATWG')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Element.setAttribute")}}</p>
+<p>{{Compat}}</p>
 
 <h3 id="Notes">Gecko notes</h3>
 

@@ -7,6 +7,7 @@ tags:
   - Reference
   - SVG
   - SVG DOM
+browser-compat: api.SVGFEGaussianBlurElement
 ---
 <div>{{APIRef("SVG")}}</div>
 
@@ -48,22 +49,32 @@ tags:
 
 <h2 id="Properties">Properties</h2>
 
-<p><em>This interface also inherits properties from its parent interface, {{domxref("SVGElement")}}, and also implements properties of {{domxref("SVGFilterPrimitiveStandardAttributes")}}.</em></p>
+<p><em>This interface also inherits properties from its parent interface, {{domxref("SVGElement")}}.</em></p>
 
 <dl>
+ <dt>{{domxref("SVGFEGaussianBlurElement.edgeMode")}} {{ReadOnlyInline}}</dt>
+ <dd>An {{domxref("SVGAnimatedEnumeration")}} corresponding to the {{SVGAttr("edgeMode")}} attribute of the given element. Takes one of the <code>SVG_EDGEMODE_*</code> constants defined on this interface.</dd>
+ <dt>{{domxref("SVGFEGaussianBlurElement.height")}} {{ReadOnlyInline}}</dt>
+ <dd>An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("height")}} attribute of the given element.</dd>
  <dt>{{domxref("SVGFEGaussianBlurElement.in1")}} {{ReadOnlyInline}}</dt>
  <dd>An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("in")}} attribute of the given element.</dd>
+ <dt>{{domxref("SVGFEGaussianBlurElement.result")}} {{ReadOnlyInline}}</dt>
+ <dd>An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("result")}} attribute of the given element.</dd>
  <dt>{{domxref("SVGFEGaussianBlurElement.stdDeviationX")}} {{ReadOnlyInline}}</dt>
  <dd>An {{domxref("SVGAnimatedNumber")}} corresponding to the (possibly automatically computed) X component of the {{SVGAttr("stdDeviation")}} attribute of the given element.</dd>
  <dt>{{domxref("SVGFEGaussianBlurElement.stdDeviationY")}} {{ReadOnlyInline}}</dt>
  <dd>An {{domxref("SVGAnimatedNumber")}} corresponding to the (possibly automatically computed) Y component of the {{SVGAttr("stdDeviation")}} attribute of the given element.</dd>
- <dt>{{domxref("SVGFEGaussianBlurElement.edgeMode")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGAnimatedEnumeration")}} corresponding to the {{SVGAttr("edgeMode")}} attribute of the given element. Takes one of the <code>SVG_EDGEMODE_*</code> constants defined on this interface.</dd>
+ <dt>{{domxref("SVGFEGaussianBlurElement.width")}} {{ReadOnlyInline}}</dt>
+ <dd>An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("width")}} attribute of the given element.</dd>
+ <dt>{{domxref("SVGFEGaussianBlurElement.x")}} {{ReadOnlyInline}}</dt>
+ <dd>An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("x")}} attribute of the given element.</dd>
+ <dt>{{domxref("SVGFEGaussianBlurElement.y")}} {{ReadOnlyInline}}</dt>
+ <dd>An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("y")}} attribute of the given element.</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
 
-<p><em>This interface also inherits methods of its parent, {{domxref("SVGElement")}}, and also implements methods of {{domxref("SVGFilterPrimitiveStandardAttributes")}}.</em></p>
+<p><em>This interface also inherits methods of its parent, {{domxref("SVGElement")}}.</em></p>
 
 <dl>
  <dt>{{domxref("SVGFEGaussianBlurElement.setStdDeviation()")}}</dt>
@@ -72,29 +83,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Filters 1.0", "#InterfaceSVGFEGaussianBlurElement", "SVGFEGaussianBlurElement")}}</td>
-   <td>{{Spec2("Filters 1.0")}}</td>
-   <td>Added <code>edgeMode</code> property.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "filters.html#InterfaceSVGFEGaussianBlurElement", "SVGFEGaussianBlurElement")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.SVGFEGaussianBlurElement")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

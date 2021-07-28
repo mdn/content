@@ -19,8 +19,9 @@ tags:
 - XR
 - XRInputSourcesChangeEvent
 - augmented
+browser-compat: api.XRInputSourcesChangeEvent.XRInputSourcesChangeEvent
 ---
-<p>{{APIRef("WebXR Device API")}} {{SecureContext_Header}}</p>
+<p>{{APIRef("WebXR Device API")}}</p>
 
 <p><span class="seoSummary">The <code><strong>XRInputSourcesChangeEvent()</strong></code>
     constructor creates and returns a new {{domxref("XRInputSourcesChangeEvent")}} object,
@@ -38,11 +39,16 @@ tags:
 
 <dl>
   <dt><code>type</code></dt>
-  <dd>A {{domxref("DOMString")}} indicating the type of event which has occurred. This
+  <dd>A string indicating the type of event which has occurred. This
     string must always be <code>inputsourceschange</code>.</dd>
   <dt><code>eventInitDict</code></dt>
-  <dd>An object conforming to the {{domxref("XRInputSourcesChangeEventInit")}} dictionary,
-    prodividing the initial values for the event.</dd>
+  <dd>An object that provides options to configure the event. It may contain the following properties:
+    <ul>
+      <li><code>added</code>: An array of zero or more {{domxref("XRInputSource")}} objects, each representing one input device which is newly available to use.</li>
+      <li><code>removed</code>: An array of zero or more {{domxref("XRInputSource")}} objects representing the input devices which are no longer available.</li>
+      <li><code>session</code>: The {{domxref("XRSession")}} to which the event applies.</li>
+    </ul>
+  </dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -67,25 +73,8 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("WebXR","#dom-xrinputsourceschangeevent-xrinputsourceschangeevent","XRInputSourcesChangeEvent()")}}
-      </td>
-      <td>{{Spec2("WebXR")}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>{{Compat("api.XRInputSourcesChangeEvent.XRInputSourcesChangeEvent")}}</div>
+<div>{{Compat}}</div>

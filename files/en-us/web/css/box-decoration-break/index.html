@@ -8,6 +8,7 @@ tags:
   - Experimental
   - Reference
   - recipe:css-property
+browser-compat: css.properties.box-decoration-break
 ---
 <div>{{CSSRef}}</div>
 
@@ -36,6 +37,7 @@ box-decoration-break: clone;
 /* Global values */
 box-decoration-break: initial;
 box-decoration-break: inherit;
+box-decoration-break: revert;
 box-decoration-break: unset;
 </pre>
 
@@ -111,13 +113,13 @@ box-decoration-break: clone;
 
 <p>Fragmenting the above block into three columns results in:</p>
 
-<p><img alt="A screenshot of the rendering of the fragmented block used in the examples styled with box-decoration-break:slice." src="box-decoration-break-block-slice.png" style="max-width: none;"></p>
+<p><img alt="A screenshot of the rendering of the fragmented block used in the examples styled with box-decoration-break:slice." src="box-decoration-break-block-slice.png"></p>
 
 <p>Note that stacking these pieces vertically will result in the non-fragmented rendering.</p>
 
 <p>Now, the same example but styled with <code>box-decoration-break: clone</code> results in:</p>
 
-<p><img alt="A screenshot of the rendering of the fragmented block used in the examples styled with box-decoration-break:clone." src="box-decoration-break-block-clone.png" style="max-width: none;"></p>
+<p><img alt="A screenshot of the rendering of the fragmented block used in the examples styled with box-decoration-break:clone." src="box-decoration-break-block-clone.png"></p>
 
 <p>Note here that each fragment has an identical replicated border, box-shadow, and background.</p>
 
@@ -125,26 +127,11 @@ box-decoration-break: clone;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS3 Fragmentation', '#break-decoration', 'box-decoration-break') }}</td>
-   <td>{{ Spec2('CSS3 Fragmentation') }}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.box-decoration-break")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

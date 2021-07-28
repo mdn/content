@@ -10,6 +10,7 @@ tags:
 - Reference
 - Storage
 - Update
+browser-compat: api.IDBCursor.update
 ---
 <div>{{APIRef("IndexedDB")}}</div>
 
@@ -97,18 +98,13 @@ tags:
   <code>cursor.value</code> into an update call, hence the below example using an
   intermediary <code>updateData</code> variable.</p>
 
-<p>T<span style="line-height: 1.5;">he cursor does not require us to select the data based
+<p>The cursor does not require us to select the data based
     on a key; we can just grab all of it. Also note that in each iteration of the loop,
-    you can grab data from the current record under the cursor object using </span><code
-    style="font-style: normal; line-height: 1.5;">cursor.value.foo</code><span
-    style="line-height: 1.5;">. For a complete working example, see our <a
+    you can grab data from the current record under the cursor object using <code>cursor.value.foo</code>. For a complete working example, see our <a
       class="external external-icon"
       href="https://github.com/mdn/indexeddb-examples/tree/master/idbcursor"
-      style="white-space: pre-line;">IDBCursor example</a></span><span
-    style="line-height: 1.5;"> (</span><a class="external external-icon"
-    href="https://mdn.github.io/indexeddb-examples/idbcursor/"
-    style="white-space: pre-line; line-height: 1.5;">view example live</a><span
-    style="line-height: 1.5;">.)</span></p>
+      >IDBCursor example</a> (<a class="external external-icon"
+    href="https://mdn.github.io/indexeddb-examples/idbcursor/">view example live</a>.)</p>
 
 <pre class="brush: js">function updateResult() {
   list.textContent = '';
@@ -140,29 +136,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('IndexedDB', '#dom-idbcursor-update', 'update()')}}</td>
-      <td>{{Spec2('IndexedDB')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName("IndexedDB 2", "#dom-idbcursor-update", "update()")}}</td>
-      <td>{{Spec2("IndexedDB 2")}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.IDBCursor.update")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

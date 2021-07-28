@@ -8,6 +8,7 @@ tags:
 - NeedsBrowserCompatibility
 - Property
 - Read-only
+browser-compat: api.Event.currentTarget
 ---
 <div>{{APIRef("DOM")}}</div>
 
@@ -40,10 +41,10 @@ tags:
 var ps = document.getElementsByTagName('p');
 
 for(var i = 0; i &lt; ps.length; i++){
-  // Console: print the clicked &lt;p&gt; element
+  // console: print the clicked &lt;p&gt; element
   ps[i].addEventListener('click', hide, false);
 }
-// Console: print &lt;body&gt;
+// console: print &lt;body&gt;
 document.body.addEventListener('click', hide, false);
 
 // Click around and make paragraphs disappear
@@ -52,7 +53,7 @@ document.body.addEventListener('click', hide, false);
 <div class="note">
   <p><strong>Note:</strong> The value of <code>event.currentTarget</code>
     is <strong>only</strong> available while the event is being handled. If you
-    <code><a href="/en-US/docs/Web/API/Console/log">console.log()</a></code> the
+    {{DOMxRef("console.log()")}} the
     <code>event</code> object, storing it in a variable, and <em>then</em> look for the
     <code>currentTarget</code> key in the console, its value will be <code>null</code>.
     Instead, you can either directly <code>console.log(event.currentTarget)</code> to be
@@ -64,42 +65,11 @@ document.body.addEventListener('click', hide, false);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th>Specification</th>
-      <th>Status</th>
-      <th>Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName("DOM WHATWG", "#dom-event-currenttarget", "Event.currentTarget")}}
-      </td>
-      <td>{{Spec2("DOM WHATWG")}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName("DOM4", "#dom-event-currenttarget", "Event.currentTarget")}}</td>
-      <td>{{Spec2("DOM4")}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName("DOM3 Events", "#dfn-current-event-target", "current event target")}}
-      </td>
-      <td>{{Spec2("DOM3 Events")}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName("DOM2 Events", "#Events-Event-currentTarget",
-        "Event.currentTarget")}}</td>
-      <td>{{Spec2("DOM2 Events")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Event.currentTarget")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

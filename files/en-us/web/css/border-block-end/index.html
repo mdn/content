@@ -12,6 +12,7 @@ tags:
   - border-block-end-style
   - border-block-end-width
   - 'recipe:css-shorthand-property'
+browser-compat: css.properties.border-block-end
 ---
 <div>{{CSSRef}}</div>
 
@@ -34,7 +35,12 @@ tags:
 <pre class="brush:css no-line-numbers">border-block-end: 1px;
 border-block-end: 2px dotted;
 border-block-end: medium dashed blue;
-</pre>
+
+/* Global values */
+border-block-end: inherit;
+border-block-end: initial;
+border-block-end: revert;
+border-block-end: unset;</pre>
 
 <p><code>border-block-end</code> can be used to set the values for one or more of {{cssxref("border-block-end-width")}}, {{cssxref("border-block-end-style")}}, and {{cssxref("border-block-end-color")}}. The physical border to which it maps depends on the element's writing mode, directionality, and text orientation. It corresponds to the {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, or {{cssxref("border-left")}} property depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.</p>
 
@@ -91,26 +97,11 @@ border-block-end: medium dashed blue;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Logical Properties", "#propdef-border-block-end", "border-block-end")}}</td>
-   <td>{{Spec2("CSS Logical Properties")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.border-block-end")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

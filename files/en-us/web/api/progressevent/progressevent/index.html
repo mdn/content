@@ -2,10 +2,11 @@
 title: ProgressEvent()
 slug: Web/API/ProgressEvent/ProgressEvent
 tags:
-- API
-- Constructor
-- DOM Events
-- ProgressEvent
+  - API
+  - Constructor
+  - DOM Events
+  - ProgressEvent
+browser-compat: api.ProgressEvent.ProgressEvent
 ---
 <p>{{APIRef("DOM Events")}}</p>
 
@@ -14,7 +15,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js"><em>progressEvent</em> = new ProgressEvent(<em>type<code>, </code></em>{lengthComputable: <em>aBooleanValue</em>, loaded: <code><em>aNumber</em>, total:<em> aNumber</em></code>});
+<pre class="brush: js">progressEvent = new ProgressEvent(type, {lengthComputable: aBooleanValue, loaded: aNumber, total: aNumber});
 </pre>
 
 <h3 id="Arguments">Arguments</h3>
@@ -27,7 +28,7 @@ tags:
   <dd>Is a {{domxref("DOMString")}} representing the name of the type of the
     <code>ProgressEvent</code>. It is case-sensitive.</dd>
   <dt><code>lengthComputable</code> {{optional_inline}}</dt>
-  <dd>Is a {{domxref("Boolean")}} flag indicating if the total work to be done, and the
+  <dd>Is a boolean flag indicating if the total work to be done, and the
     amount of work already done, by the underlying process is calculable. In other words,
     it tells if the progress is measurable or not. It defaults to <code>false</code>.</dd>
   <dt><code>loaded</code> {{optional_inline}}</dt>
@@ -45,25 +46,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('XMLHttpRequest', '#dom-progressevent-progressevent',
-        'ProgressEvent()')}}</td>
-      <td>{{Spec2('XMLHttpRequest')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.ProgressEvent.ProgressEvent")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

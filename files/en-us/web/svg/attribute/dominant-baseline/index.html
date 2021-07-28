@@ -5,10 +5,11 @@ tags:
   - Reference
   - SVG
   - SVG Attribute
+browser-compat: svg.attributes.presentation.dominant-baseline
 ---
 <div>{{SVGRef}}</div>
 
-<p>The <strong><code>dominant-baseline</code></strong> attribute specifies the dominant baseline, which is the baseline used to align the box’s text and inline-level contents. It also indicates the default alignment baseline of any boxes participating in baseline alignment in the box’s alignment context.</p>
+<p>The <strong><code>dominant-baseline</code></strong> attribute specifies the dominant baseline, which is the baseline used to align the box’s text and inline-level contents. It also indicates the default alignment baseline of any boxes participating in baseline alignment in the box's alignment context.</p>
 
 <p>It is used to determine or re-determine a scaled-baseline-table. A scaled-baseline-table is a compound value with three components:</p>
 
@@ -22,9 +23,17 @@ tags:
 
 <p>If there is no baseline table in the nominal font, or if the baseline table lacks an entry for the desired baseline, then the browser may use heuristics to determine the position of the desired baseline.</p>
 
-<p class="note"><strong>Note:</strong> As a presentation attribute, <code>dominant-baseline</code> can be used as a CSS property. See {{cssxref("dominant-baseline", "CSS dominant-baseline")}} for further information.</p>
+<p class="note"><strong>Note:</strong> As a presentation attribute, <code>dominant-baseline</code> can be used as a CSS property.</p>
 
-<p>As a presentation attribute, it can be applied to any element but it only has effect on the text content elements, including: {{SVGElement("altGlyph")}}, {{SVGElement("text")}}, {{SVGElement("textPath")}}, {{SVGElement("tref")}}, and {{SVGElement("tspan")}}</p>
+<p>You can use this attribute with the following SVG elements:</p>
+
+<ul>
+  <li>{{SVGElement("altGlyph")}}</li>
+  <li>{{SVGElement("text")}}</li>
+  <li>{{SVGElement("textPath")}}</li>
+  <li>{{SVGElement("tref")}}</li>
+  <li>{{SVGElement("tspan")}}</li>
+</ul>
 
 <div id="topExample">
 <div class="hidden">
@@ -72,7 +81,7 @@ text {
  <dd>
  <p>If this property occurs on a {{SVGElement("text")}} element, then the computed value depends on the value of the {{SVGAttr("writing-mode")}} attribute.</p>
 
- <p>If the {{SVGAttr("writing-mode")}} is horizontal, then the value of the dominant-baseline component is <code>alphabetic</code>. Otherwise, if the {{SVGAttr("writing-mode")}} is vertical, then the value of the dominant-baseline component is <code>central</code>. </p>
+ <p>If the {{SVGAttr("writing-mode")}} is horizontal, then the value of the dominant-baseline component is <code>alphabetic</code>. Otherwise, if the {{SVGAttr("writing-mode")}} is vertical, then the value of the dominant-baseline component is <code>central</code>.</p>
 
  <p>If this property occurs on a {{SVGElement("tspan")}}, {{SVGElement("tref")}}, {{SVGElement("altGlyph")}}, or {{SVGElement("textPath")}} element, then the dominant-baseline and the baseline-table components remain the same as those of the parent text content element.</p>
 
@@ -179,10 +188,4 @@ text {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("svg.attributes.presentation.dominant-baseline")}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{cssxref("dominant-baseline","CSS dominant-baseline")}}</li>
-</ul>
+<p>{{Compat}}</p>

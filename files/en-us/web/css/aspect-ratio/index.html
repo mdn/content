@@ -8,6 +8,7 @@ tags:
   - Reference
   - aspect-ratio
   - 'recipe:css-property'
+browser-compat: css.properties.aspect-ratio
 ---
 <div>{{CSSRef}}</div>
 
@@ -18,6 +19,7 @@ tags:
 /* Global values */
 aspect-ratio: inherit;
 aspect-ratio: initial;
+aspect-ratio: revert;
 aspect-ratio: unset;
 </pre>
 
@@ -25,7 +27,7 @@ aspect-ratio: unset;
 
 <dl>
  <dt>{{cssxref("&lt;auto&gt;")}}</dt>
- <dd>Replaced elements with an intrinsic aspect ratio use <em>that</em> aspect ratio, otherwise the box has no preferred aspect ratio. Size calculations involving intrinsic aspect ratio always work with the content box dimensions.</dd>
+ <dd><a href="/en-US/docs/Web/CSS/Replaced_element">Replaced elements</a> with an intrinsic aspect ratio use <em>that</em> aspect ratio, otherwise the box has no preferred aspect ratio. Size calculations involving intrinsic aspect ratio always work with the content box dimensions.</dd>
  <dt>{{cssxref("&lt;ratio&gt;")}}</dt>
  <dd>The box’s preferred aspect ratio is the specified ratio of <code>width</code> / <code>height</code>. Size calculations involving preferred aspect ratio work with the dimensions of the box specified by <code>box-sizing</code>.</dd>
 </dl>
@@ -48,7 +50,7 @@ aspect-ratio: 16 / 9;
 
 <h2 id="Mapping_width_and_height_to_aspect-ratio">Mapping width and height to aspect-ratio</h2>
 
-<p>Browsers have added an internal <code>aspect-ratio</code> property that applies to replaced elements and other related elements that accept <code>width</code> and <code>height</code> attributes. This appears in the browser's internal UA stylesheet. </p>
+<p>Browsers have added an internal <code>aspect-ratio</code> property that applies to <a href="/en-US/docs/Web/CSS/Replaced_element">replaced elements</a> and other related elements that accept <code>width</code> and <code>height</code> attributes. This appears in the browser's internal UA stylesheet. </p>
 
 <p>In Firefox, the internal stylesheet rule looks like this:</p>
 
@@ -60,26 +62,11 @@ aspect-ratio: 16 / 9;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Sizing', '#aspect-ratio', 'aspect-ratio')}}</td>
-   <td>{{Spec2('CSS4 Sizing')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.aspect-ratio")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

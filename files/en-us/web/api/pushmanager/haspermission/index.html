@@ -7,10 +7,15 @@ tags:
   - Method
   - PushManager
   - Reference
+browser-compat: api.PushManager.hasPermission
 ---
 <div>{{deprecated_header}}{{ApiRef("Push API")}}</div>
 
-<p>The <strong><code>PushManager.hasPermission()</code></strong> method of the {{domxref("PushManager")}} interface returns a {{jsxref("Promise")}} that resolves to the <code>PushPermissionStatus</code> of the requesting webapp, which will be one of <code>granted</code>, <code>denied</code>, or <code>default</code>.</p>
+<p>The <strong><code>PushManager.hasPermission()</code></strong> method of the {{domxref("PushManager")}} interface returns a {{jsxref("Promise")}} that resolves to the <code>PushPermissionStatus</code> of the requesting webapp, which will be one of <code>granted</code>, <code>denied</code>, or <code>default</code>.</p>
+
+<div class="notecard note">
+  <p>This feature has been superseded by the {{domxref("PushManager.permissionState()")}} method.</p>
+</div>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -22,26 +27,13 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Push API')}}</td>
-   <td>{{Spec2('Push API')}}</td>
-   <td>Defines the <code>PushManager</code> interface.</td>
-  </tr>
- </tbody>
-</table>
+<p>This feature is not part of any specification anymore. It is no longer on track to become a standard.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
 <div>
 
-<p>{{Compat("api.PushManager.hasPermission")}}</p>
+<p>{{Compat}}</p>
 </div>
 </div>

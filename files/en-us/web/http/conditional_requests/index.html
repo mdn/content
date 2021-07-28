@@ -17,8 +17,8 @@ tags:
 <p>The different behaviors are defined by the method of the request used, and by the set of headers used for a precondition:</p>
 
 <ul>
- <li>for {{glossary("safe")}} methods, like {{HTTPMethod("GET")}}, which usually tries to fetch a document, the conditional request can be used to send back the document, if relevant only. Therefore, this spares bandwidth.</li>
- <li>for {{glossary("safe", "unsafe")}} methods, like {{HTTPMethod("PUT")}}, which usually uploads a document, the conditional request can be used to upload the document, only if the original it is based on is the same as that stored on the server.</li>
+ <li>for {{glossary("Safe/HTTP", "safe")}} methods, like {{HTTPMethod("GET")}}, which usually tries to fetch a document, the conditional request can be used to send back the document, if relevant only. Therefore, this spares bandwidth.</li>
+ <li>for {{glossary("Safe/HTTP", "unsafe")}} methods, like {{HTTPMethod("PUT")}}, which usually uploads a document, the conditional request can be used to upload the document, only if the original it is based on is the same as that stored on the server.</li>
 </ul>
 
 <h2 id="Validators">Validators</h2>

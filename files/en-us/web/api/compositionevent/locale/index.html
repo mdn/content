@@ -8,12 +8,17 @@ tags:
 - Locale
 - Property
 - Reference
+browser-compat: api.CompositionEvent.locale
 ---
 <div>{{deprecated_header}}{{APIRef("DOM Events")}}</div>
 
 <p>The <code><strong>locale</strong></code> read-only property of the
   {{domxref("CompositionEvent")}} interface returns the locale of current input method
   (for example, the keyboard layout locale if the composition is associated with IME).</p>
+
+<p class="notecard warning">Even for browsers supporting it, don't trust the value contained in this property.
+  Even if technically it is accessible, the way to set it up when creating a {{domxref("CompositionEvent")}}
+is not guaranteed to be coherent.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -26,26 +31,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('DOM3 Events')}}</td>
-      <td>{{Spec2('DOM3 Events')}}</td>
-      <td>No longer in the spec, but still supported.</td>
-    </tr>
-  </tbody>
-</table>
-
+<p>This property was in early versions of different specifications. It is now only kept for compatibility purposes, and the way
+to set its value when creating a {{domxref("CompositionEvent")}} is <a href="https://github.com/w3c/uievents/issues/48">not well defined</a>.</p>
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.CompositionEvent.locale")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

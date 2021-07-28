@@ -126,9 +126,48 @@ let radiansToDegrees = (rad) =&gt; rad / RADIANS_PER_DEGREE;
 
 <p>All of this is the browser's responsibility to handle, providing consistent behavior regardless of how capable each of the underlying reference spaces are. No matter how powerful or simple the individual XR device is, code written using WebXR will still work, within the limitations of the available hardware.</p>
 
-<p>Regardless of the type of reference space you choose, its type is {{domxref("XRReferenceSpace")}} or is a type derived from <code>XRReferenceSpace</code>. The currently available reference space types, which are defined by the {{domxref("XRReferenceSpaceType")}} enumeration, are shown below.</p>
+<p>Regardless of the type of reference space you choose, its type is {{domxref("XRReferenceSpace")}} or is a type derived from <code>XRReferenceSpace</code>. The currently available reference space types, are shown below.</p>
 
-<p>{{page("/en-US/docs/Web/API/XRReferenceSpaceType", "Values")}}</p>
+<table class="standard-table" id="value-list">
+ <thead>
+  <tr>
+   <th scope="col">XRReferenceSpaceType</th>
+   <th scope="col">Description</th>
+   <th scope="col">Interface</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>bounded-floor</code></td>
+   <td>Similar to the <code>local</code> type, except the user is not expected to move outside a predetermined boundary, given by the {{domxref("XRBoundedReferenceSpace.boundsGeometry", "boundsGeometry")}} in the returned object.</td>
+   <td>{{domxref("XRBoundedReferenceSpace")}}</td>
+  </tr>
+  <tr>
+   <td><code>local</code></td>
+   <td>
+    <p>A tracking space whose native origin is located near the viewer's position at the time the session was created. The exact position depends on the underlying platform and implementation. The user isn't expected to move much if at all beyond their starting position, and tracking is optimized for this use case.</p>
+
+    <p>For devices with six degrees of freedom (6DoF) tracking, the <code>local</code> reference space tries to keep the origin stable relative to the environment.</p>
+   </td>
+   <td>{{domxref("XRReferenceSpace")}}</td>
+  </tr>
+  <tr>
+   <td><code>local-floor</code></td>
+   <td>Similar to the <code>local</code> type, except the starting position is placed in a safe location for the viewer to stand, where the value of the y axis is 0 at floor level. If that floor level isn't known, the {{Glossary("user agent")}} will estimate the floor level. If the estimated floor level is non-zero, the browser is expected to round it such a way as to avoid fingerprinting (likely to the nearest centimeter).</td>
+   <td>{{domxref("XRReferenceSpace")}}</td>
+  </tr>
+  <tr>
+   <td><code>unbounded</code></td>
+   <td>A tracking space which allows the user total freedom of movement, possibly over extremely long distances from their origin point. The viewer isn't tracked at all; tracking is optimized for stability around the user's current position, so the native origin may drift as needed to accommodate that need.</td>
+   <td>{{domxref("XRReferenceSpace")}}</td>
+  </tr>
+  <tr>
+   <td><code>viewer</code></td>
+   <td>A tracking space whose native origin tracks the viewer's position and orientation. This is used for environments in which the user can physically move around, and is supported by all instances of {{domxref("XRSession")}}, both immersive and inline, though it's most useful for inline sessions. It's particularly useful when determining the distance between the viewer and an input, or when working with offset spaces. Otherwise, typically, one of the other reference space types will be used more often.</td>
+   <td>{{domxref("XRReferenceSpace")}}</td>
+  </tr>
+ </tbody>
+</table>
 
 <p>The remainder of this guide explores how to select the right reference space for your app's needs.</p>
 
@@ -180,7 +219,7 @@ let radiansToDegrees = (rad) =&gt; rad / RADIANS_PER_DEGREE;
 
 <p>The compatibility issues that arise may be as fundamental as being unable to support <code>immersive-ar</code> mode (augmented reality sessions) on a VR-only headset, or may involve a request for one or more required options which cannot be met when attempting to create the XR session.</p>
 
-<p>XR sessions are created using the {{domxref("XRSystem.requestSession", "navigator.xr.requestSession()")}} method. One of its optional parameters is an object conforming to the {{domxref("XRSessionInit")}} dictionary which you can use to specify required and/or optional features that the session must (or should ideally) support. Currently, the only supported options are strings identifying the standard reference spaces. Using these, you can ensure before your code even runs that you have access to a WebXR session that can support the reference space type you require or prefer.</p>
+<p>XR sessions are created using the {{domxref("XRSystem.requestSession", "navigator.xr.requestSession()")}} method. One of its optional parameters is an object which you can use to specify required and/or optional features that the session must (or should ideally) support. Currently, the only supported options are strings identifying the standard reference spaces. Using these, you can ensure before your code even runs that you have access to a WebXR session that can support the reference space type you require or prefer.</p>
 
 <div class="notecard note">
 <h4>Note</h4>

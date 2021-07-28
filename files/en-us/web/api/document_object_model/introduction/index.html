@@ -173,7 +173,7 @@ table.summary = "note: increased border";
  <li><code>{{domxref("document.createElement", "", "", "1")}}(name)</code></li>
  <li><code>parentNode.{{domxref("Node.appendChild", "appendChild", "", "1")}}(node)</code></li>
  <li><code>element.{{domxref("element.innerHTML", "innerHTML", "", "1")}}</code></li>
- <li><code>element.{{domxref("ElementCSSInlineStyle/style", "style", "", "1")}}.left</code></li>
+ <li><code>element.{{domxref("HTMLElement/style", "style", "", "1")}}.left</code></li>
  <li><code>element.{{domxref("element.setAttribute", "setAttribute", "", "1")}}()</code></li>
  <li><code>element.{{domxref("element.getAttribute", "getAttribute", "", "1")}}()</code></li>
  <li><code>element.{{domxref("EventTarget.addEventListener", "addEventListener", "", "1")}}()</code></li>
@@ -202,8 +202,8 @@ table.summary = "note: increased border";
 &lt;/head&gt;
 &lt;body&gt;
   &lt;div style="margin: .5in; height: 400px;"&gt;
-    &lt;p&gt;&lt;b&gt;&lt;code&gt;text&lt;/code&gt;&lt;/b&gt;&lt;/p&gt;
     &lt;form&gt;
+      &lt;p&gt;&lt;b&gt;&lt;code&gt;text&lt;/code&gt;&lt;/b&gt;&lt;/p&gt;
       &lt;select onChange="setBodyAttr('text',
         this.options[this.selectedIndex].value);"&gt;
         &lt;option value="black"&gt;black&lt;/option&gt;
@@ -239,4 +239,4 @@ table.summary = "note: increased border";
 <figcaption>Figure 0.1 Sample DOM Test Page</figcaption>
 <img src="dom_ref_introduction_to_the_dom.gif"></figure>
 
-<p>In this example, the drop-down menus dynamically update such DOM—accessible aspects of the web page as its background color (<code>bgColor</code>), the color of the hyperlinks (<code>aLink</code>), and color of the text (<code>text</code>). However, you design your test pages, testing the interfaces as you read about them is an important part of learning how to use the DOM effectively.</p>
+<p>In this example, the drop-down menus dynamically update such DOM—accessible aspects of the web page as its background color (<code>bgColor</code>), the color of the hyperlinks (<code>aLink</code>), and color of the text (<code>text</code>). However you design your test pages, testing the interfaces as you read about them is an important part of learning how to use the DOM effectively.</p>

@@ -10,14 +10,13 @@ tags:
   - Reference
   - checkbox
   - form
+browser-compat: html.elements.input.input-checkbox
 ---
 <div>{{HTMLRef}}</div>
 
 <p>{{htmlelement("input")}} elements of type <strong><code>checkbox</code></strong> are rendered by default as boxes that are checked (ticked) when activated, like you might see in an official government paper form. The exact appearance depends upon the operating system configuration under which the browser is running. Generally this is a square but it may have rounded corners. A checkbox allows you to select single values for submission in a form (or not).</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-checkbox.html", "tabbed-standard")}}</div>
-
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a> and send us a pull request.</div>
 
 <div class="notecard note">
   <h4>Note</h4>
@@ -99,7 +98,7 @@ tags:
 	</tbody>
 </table>
 
-<h3 id="htmlattrdefchecked">{{htmlattrdef("checked")}}</h3>
+<h3 id="attr-checked"><code id="checked">checked</code></h3>
 
 <p>A Boolean attribute indicating whether or not this checkbox is checked by default (when the page loads). It does <em>not</em> indicate whether this checkbox is currently checked: if the checkbox’s state is changed, this content attribute does not reflect the change. (Only the {{domxref("HTMLInputElement")}}’s <code>checked</code> IDL attribute is updated.)</p>
 
@@ -110,7 +109,7 @@ tags:
 
 <p>Unlike other browsers, Firefox by default <a href="https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing">persists the dynamic checked state</a> of an <code>&lt;input&gt;</code> across page loads. Use the {{htmlattrxref("autocomplete","input")}} attribute to control this feature.</p>
 
-<h3 id="htmlattrdefindeterminate">{{htmlattrdef("indeterminate")}}</h3>
+<h3 id="attr-indeterminate"><code id="indeterminate">indeterminate</code></h3>
 
 <p>If the <code>indeterminate</code> attribute is present on the {{HTMLElement("input")}} element defining a checkbox, the checkbox's value is neither <code>true</code> nor <code>false</code>, but is instead <strong>indeterminate</strong>, meaning that its state cannot be determined or stated in pure binary terms. This may happen, for instance, if the state of the checkbox depends on multiple other checkboxes, and those checkboxes have different values.</p>
 
@@ -121,7 +120,7 @@ tags:
   <p>No browser currently supports <code>indeterminate</code> as an attribute. It must be set via JavaScript. See {{anch("Indeterminate state checkboxes")}} for details.</p>
 </div>
 
-<h3 id="htmlattrdefvalue">{{htmlattrdef("value")}}</h3>
+<h3 id="attr-value"><code id="value">value</code></h3>
 
 <p>The <code>value</code> attribute is one which all {{HTMLElement("input")}}s share; however, it serves a special purpose for inputs of type <code>checkbox</code>: when a form is submitted, only checkboxes which are currently checked are submitted to the server, and the reported value is the value of the <code>value</code> attribute. If the <code>value</code> is not otherwise specified, it is the string <code>on</code> by default. This is demonstrated in the section {{anch("Value")}} above.</p>
 
@@ -149,7 +148,7 @@ tags:
 
 <p>{{EmbedLiveSample('Handling_multiple_checkboxes', 600, 100)}}</p>
 
-<p>In this example you will see that we've given each checkbox the same <code>name</code>. If both checkboxes are checked and then the form is submitted, you'll get a string of name/value pairs submitted like this: <code>interest=coding&amp;interest=music</code>. When this string reaches the server, you need to parse it other than as an associative array, so all values, not only the last value, of <code>interest</code> are captured. For one technique used with PHP, see <a class="question-hyperlink" href="http://stackoverflow.com/questions/18745456/handle-multiple-checkboxes-with-a-single-serverside-variable">Handle Multiple Checkboxes with a Single Serverside Variable</a>, for example.</p>
+<p>In this example you will see that we've given each checkbox the same <code>name</code>. If both checkboxes are checked and then the form is submitted, you'll get a string of name/value pairs submitted like this: <code>interest=coding&amp;interest=music</code>. When this string reaches the server, you need to parse it other than as an associative array, so all values, not only the last value, of <code>interest</code> are captured. For one technique used with PHP, see <a class="question-hyperlink" href="https://stackoverflow.com/questions/18745456/handle-multiple-checkboxes-with-a-single-serverside-variable">Handle Multiple Checkboxes with a Single Serverside Variable</a>, for example.</p>
 
 <h3 id="Checking_boxes_by_default">Checking boxes by default</h3>
 
@@ -235,7 +234,7 @@ tags:
 
 <h2 id="Validation">Validation</h2>
 
-<p>Checkboxes do support <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">validation</a> (offered to all {{HTMLElement("input")}}s). However, most of the {{domxref("ValidityState")}}s will always be <code>false</code>. If the checkbox has the {{htmlattrxref("required", "input")}} attribute, but is not checked, then {{domxref("ValidityState.valueMissing")}} will be <code>true</code>.</p>
+<p>Checkboxes do support <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">validation</a> (offered to all {{HTMLElement("input")}}s). However, most of the {{domxref("ValidityState")}}s will always be <code>false</code>. If the checkbox has the {{htmlattrxref("required", "input")}} attribute, but is not checked, then {{domxref("ValidityState.valueMissing")}} will be <code>true</code>.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -323,31 +322,11 @@ otherCheckbox.addEventListener('change', () =&gt; {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName('HTML WHATWG', 'forms.html#checkbox-state-(type=checkbox)', '&lt;input type="checkbox"&gt;')}}</td>
-			<td>{{Spec2('HTML WHATWG')}}</td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>{{SpecName('HTML5 W3C', 'sec-forms.html#checkbox-state-(type=checkbox)', '&lt;input type="checkbox"&gt;')}}</td>
-			<td>{{Spec2('HTML5 W3C')}}</td>
-			<td></td>
-		</tr>
-	</tbody>
-</table>
+<p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("html.elements.input.input-checkbox")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

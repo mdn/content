@@ -1,0 +1,81 @@
+---
+title: TransformStreamDefaultController
+slug: Web/API/TransformStreamDefaultController
+tags:
+  - API
+  - Interface
+  - Reference
+  - TransformStreamDefaultController
+browser-compat: api.TransformStreamDefaultController
+---
+<div>{{DefaultAPISidebar("Streams API")}}</div>
+
+<p class="summary">The <strong><code>TransformStreamDefaultController</code></strong> interface of the {{domxref('Streams API','','',' ')}} provides methods to manipulate the associated {{domxref("ReadableStream")}} and {{domxref("WritableStream")}}.</p>
+
+<p>When constructing a {{domxref("TransformStream")}}, the <code>TransformStreamDefaultController</code> is created. It therefore has no constructor. The way to get an instance of <code>TransformStreamDefaultController</code> is via the callback methods of {{domxref("TransformStream.TransformStream()")}}.</p>
+
+<h2 id="Properties">Properties</h2>
+
+<dl>
+  <dt>{{domxref("TransformStreamDefaultController.desiredSize")}}{{readonlyinline}}</dt>
+  <dd>Returns the desired size to fill the readable side of the stream's internal queue.</dd>
+</dl>
+
+<h2 id="Methods">Methods</h2>
+
+<dl>
+  <dt>{{domxref("TransformStreamDefaultController.enqueue()")}}</dt>
+  <dd>Enqueues a chunk (single piece of data) in the readable side of the stream.</dd>
+  <dt>{{domxref("TransformStreamDefaultController.error()")}}</dt>
+  <dd>Errors both the readable and writable side of the transform stream.</dd>
+  <dt>{{domxref("TransformStreamDefaultController.terminate()")}}</dt>
+  <dd>Closes the readable side and errors the writable side of the stream.</dd>
+</dl>
+
+<h2 id="Examples">Examples</h2>
+
+<p>In the following example, a transform stream passes through all chunks it receives as {{jsxref("Uint8Array")}} values, using the {{domxref("TransformStreamDefaultController.error()","error()")}} and {{domxref("TransformStreamDefaultController.enqueue()","enqueue()")}} methods.</p>
+
+<pre class="brush: js">const transformContent = {
+  start() {}, // required.
+  async transform(chunk, controller) {
+    chunk = await chunk
+    switch (typeof chunk) {
+      case 'object':
+        // just say the stream is done I guess
+        if (chunk === null) controller.terminate()
+        else if (ArrayBuffer.isView(chunk))
+          controller.enqueue(new Uint8Array(chunk.buffer, chunk.byteOffset, chunk.byteLength))
+        else if (Array.isArray(chunk) &amp;&amp; chunk.every(value =&gt; typeof value === 'number'))
+          controller.enqueue(new Uint8Array(chunk))
+        else if ('function' === typeof chunk.valueOf &amp;&amp; chunk.valueOf() !== chunk)
+          this.transform(chunk.valueOf(), controller) // hack
+        else if ('toJSON' in chunk) this.transform(JSON.stringify(chunk), controller)
+        break
+      case 'symbol':
+        controller.error("Cannot send a symbol as a chunk part")
+        break
+      case 'undefined':
+        controller.error("Cannot send undefined as a chunk part")
+        break
+      default:
+        controller.enqueue(this.textencoder.encode(String(chunk)))
+        break
+  },
+  flush() { /* do any destructor work here */ }
+}
+
+class AnyToU8Stream extends TransformStream {
+  constructor() {
+    super({...transformContent, textencoder: new TextEncoder()})
+  }
+}
+</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+{{Specifications}}
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>

@@ -7,6 +7,7 @@ tags:
   - CSS Property
   - Reference
   - 'recipe:css-property'
+browser-compat: css.properties.background-position
 ---
 <div>{{CSSRef}}</div>
 
@@ -43,57 +44,59 @@ background-position: top right 10px;
 /* Global values */
 background-position: inherit;
 background-position: initial;
+background-position: revert;
 background-position: unset;
 </pre>
 
-<p>The <code>background-position</code> property is specified as one or more <code><a href="#position">&lt;position&gt;</a></code> values, separated by commas.</p>
+<p>The <code>background-position</code> property is specified as one or more <code>&lt;position&gt;</code> values, separated by commas.</p>
 
 <h3 id="Values">Values</h3>
 
 <dl>
- <dt id="position"><code>&lt;position&gt;</code></dt>
- <dd>A {{cssxref("&lt;position&gt;")}}. A position defines an x/y coordinate, to place an item relative to the edges of an element's box. It can be defined using one to four values. If two non-keyword values are used, the first value represents the horizontal position and the second represents the vertical position. If only one value is specified, the second value is assumed to be <code>center</code>. If three or four values are used, the length-percentage values are offsets for the preceding keyword value(s).</dd>
+ <dt><code>&lt;position&gt;</code></dt>
  <dd>
- <p><strong>1-value syntax:</strong> the value may be:</p>
+  <p>A {{cssxref("&lt;position&gt;")}}. A position defines an x/y coordinate, to place an item relative to the edges of an element's box. It can be defined using one to four values. If two non-keyword values are used, the first value represents the horizontal position and the second represents the vertical position. If only one value is specified, the second value is assumed to be <code>center</code>. If three or four values are used, the length-percentage values are offsets for the preceding keyword value(s).</p>
+  <p><strong>1-value syntax:</strong> the value may be:</p>
 
- <ul>
-  <li>The keyword value <code>center</code>, which centers the image.</li>
-  <li>One of the keyword values <code>top</code>, <code>left</code>, <code>bottom</code>, <code>right</code>. This specifies an edge against which to place the item. The other dimension is then set to 50%, so the item is placed in the middle of the edge specified.</li>
-  <li>A {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}}. This specifies the X coordinate relative to the left edge, with the Y coordinate set to 50%.</li>
- </ul>
+  <ul>
+   <li>The keyword value <code>center</code>, which centers the image.</li>
+   <li>One of the keyword values <code>top</code>, <code>left</code>, <code>bottom</code>, <code>right</code>. This specifies an edge against which to place the item. The other dimension is then set to 50%, so the item is placed in the middle of the edge specified.</li>
+   <li>A {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}}. This specifies the X coordinate relative to the left edge, with the Y coordinate set to 50%.</li>
+  </ul>
 
- <p><strong>2-value syntax:</strong> one value defines X and the other defines Y. Each value may be:</p>
+  <p><strong>2-value syntax:</strong> one value defines X and the other defines Y. Each value may be:</p>
 
- <ul>
-  <li>One of the keyword values <code>top</code>, <code>left</code>, <code>bottom</code>, <code>right</code>. If <code>left</code> or <code>right</code> are given here, then this defines X and the other given value defines Y. If <code>top</code> or <code>bottom</code> are given, then this defines Y and the other value defines X.</li>
-  <li>A {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}}. If the other value is <code>left</code> or <code>right</code>, then this value defines Y, relative to the top edge. If the other value is <code>top</code> or <code>bottom</code>, then this value defines X, relative to the left edge. If both values are <code>&lt;length&gt;</code> or <code>&lt;percentage&gt;</code> values, then the first defines X and the second Y.</li>
-  <li>Note that: If one value is <code>top</code> or <code>bottom</code>, then the other value may not be <code>top</code> or <code>bottom</code>. If one value is <code>left</code> or <code>right</code>, then the other value may not be <code>left</code> or <code>right</code>. This means, e.g., that <code>top top</code> and <code>left right</code> are not valid.</li>
-  <li>The default value is <code>top left</code> or <code>0% 0%</code>.</li>
- </ul>
- </dd>
- <dd>
- <p><strong>3-value syntax:</strong> Two values are keyword values, and the third is the offset for the preceding value:</p>
+  <ul>
+   <li>One of the keyword values <code>top</code>, <code>left</code>, <code>bottom</code>, <code>right</code>. If <code>left</code> or <code>right</code> are given here, then this defines X and the other given value defines Y. If <code>top</code> or <code>bottom</code> are given, then this defines Y and the other value defines X.</li>
+   <li>A {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}}. If the other value is <code>left</code> or <code>right</code>, then this value defines Y, relative to the top edge. If the other value is <code>top</code> or <code>bottom</code>, then this value defines X, relative to the left edge. If both values are <code>&lt;length&gt;</code> or <code>&lt;percentage&gt;</code> values, then the first defines X and the second Y.</li>
+   <li>Note that: If one value is <code>top</code> or <code>bottom</code>, then the other value may not be <code>top</code> or <code>bottom</code>. If one value is <code>left</code> or <code>right</code>, then the other value may not be <code>left</code> or <code>right</code>. This means, e.g., that <code>top top</code> and <code>left right</code> are not valid.</li>
+   <li>The default value is <code>top left</code> or <code>0% 0%</code>.</li>
+  </ul>
 
- <ul>
-  <li>The first value is one of the keyword values <code>top</code>, <code>left</code>, <code>bottom</code>, <code>right</code>, or <code>center</code>. If <code>left</code> or <code>right</code> are given here, then this defines X. If <code>top</code> or <code>bottom</code> are given, then this defines Y and the other keyword value defines X.</li>
-  <li>The {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}} value, if it is the second value, is the offset for the first value. If it is the third value, it is the offset for the second value.</li>
-  <li>The single length or percentage value is an offset for the keyword value that precedes it. The combination of one keyword with two {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}} values is not valid.</li>
- </ul>
- </dd>
- <dd>
- <p><strong>4-value syntax:</strong> The first and third values are keyword value defining X and Y. The second and fourth values are offsets for the preceding X and Y keyword values:</p>
+  <p><strong>3-value syntax:</strong> Two values are keyword values, and the third is the offset for the preceding value:</p>
 
- <ul>
-  <li>The first value and third values one of the keyword values <code>top</code>, <code>left</code>, <code>bottom</code>, <code>right</code>. If <code>left</code> or <code>right</code> are given here, then this defines X. If <code>top</code> or <code>bottom</code> are given, then this defines Y and the other keyword value defines X.</li>
-  <li>The second and fourth values are {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}} values. The second value is the offset for the first keyword. The fourth value is the offset for the second keyword.</li>
- </ul>
- </dd>
- <dd>
- <p><strong>Regarding Percentages:</strong></p>
- </dd>
- <dd>The percentage offset of the given background image's position is relative to the container. A value of 0% means that the left (or top) edge of the background image is aligned with the corresponding left (or top) edge of the container, or the 0% mark of the image will be on the 0% mark of the container. A value of 100% means that the <em>right</em> (or <em>bottom</em>) edge of the background image is aligned with the <em>right</em> (or <em>bottom</em>) edge of the container, or the 100% mark of the image will be on the 100% mark of the container. Thus a value of 50% horizontally or vertically centers the background image as the 50% of the image will be at the 50% mark of the container. Similarly, <code>background-position: 25% 75%</code> means the spot on the image that is 25% from the left and 75% from the top will be placed at the spot of the container that is 25% from the container's left and 75% from the container's top.</dd>
- <dd>Essentially what happens is the background image dimension is <em>subtracted</em> from the corresponding container dimension, and then a percentage of the resulting value is used as the direct offset from the left (or top) edge.</dd>
- <dd>
+  <ul>
+   <li>The first value is one of the keyword values <code>top</code>, <code>left</code>, <code>bottom</code>, <code>right</code>, or <code>center</code>. If <code>left</code> or <code>right</code> are given here, then this defines X. If <code>top</code> or <code>bottom</code> are given, then this defines Y and the other keyword value defines X.</li>
+   <li>The {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}} value, if it is the second value, is the offset for the first value. If it is the third value, it is the offset for the second value.</li>
+   <li>The single length or percentage value is an offset for the keyword value that precedes it. The combination of one keyword with two {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}} values is not valid.</li>
+  </ul>
+
+  <p><strong>4-value syntax:</strong> The first and third values are keyword value defining X and Y. The second and fourth values are offsets for the preceding X and Y keyword values:</p>
+
+  <ul>
+   <li>The first value and third values one of the keyword values <code>top</code>, <code>left</code>, <code>bottom</code>, <code>right</code>. If <code>left</code> or <code>right</code> are given here, then this defines X. If <code>top</code> or <code>bottom</code> are given, then this defines Y and the other keyword value defines X.</li>
+   <li>The second and fourth values are {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}} values. The second value is the offset for the first keyword. The fourth value is the offset for the second keyword.</li>
+  </ul>
+
+</dd>
+</dl>
+
+
+ <h3>Regarding Percentages:</h3>
+ 
+ <p>The percentage offset of the given background image's position is relative to the container. A value of 0% means that the left (or top) edge of the background image is aligned with the corresponding left (or top) edge of the container, or the 0% mark of the image will be on the 0% mark of the container. A value of 100% means that the <em>right</em> (or <em>bottom</em>) edge of the background image is aligned with the <em>right</em> (or <em>bottom</em>) edge of the container, or the 100% mark of the image will be on the 100% mark of the container. Thus a value of 50% horizontally or vertically centers the background image as the 50% of the image will be at the 50% mark of the container. Similarly, <code>background-position: 25% 75%</code> means the spot on the image that is 25% from the left and 75% from the top will be placed at the spot of the container that is 25% from the container's left and 75% from the container's top.</p>
+ <p>Essentially what happens is the background image dimension is <em>subtracted</em> from the corresponding container dimension, and then a percentage of the resulting value is used as the direct offset from the left (or top) edge.</p>
+
  <p><code>(container width - image width) * (position x%) = (x offset value)<br>
   (container height - image height) * (position y%) = (y offset value)</code></p>
 
@@ -120,8 +123,6 @@ background-position: unset;
  </ul>
 
  <p>It's worth mentioning that if your background-size is equal to the container size for a given axis, then a <em>percentage</em> position for that axis will have no effect because the "container-image difference" will be zero. You will need to offset using absolute values.</p>
- </dd>
-</dl>
 
 <h2 id="Formal_definition">Formal definition</h2>
 
@@ -156,17 +157,17 @@ div {
 
 /* These examples use the `background` shorthand property */
 .exampleone {
-  background: url("https://mdn.mozillademos.org/files/11987/startransparent.gif") #FFEE99 2.5cm bottom no-repeat;
+  background: url("startransparent.gif") #FFEE99 2.5cm bottom no-repeat;
 }
 .exampletwo {
-  background: url("https://mdn.mozillademos.org/files/11987/startransparent.gif") #FFEE99 left 4em bottom 1em no-repeat;
+  background: url("startransparent.gif") #FFEE99 left 4em bottom 1em no-repeat;
 }
 
 /* Multiple background images: Each image is matched with the
    corresponding position, from first specified to last. */
 .examplethree {
-  background-image:    url("https://mdn.mozillademos.org/files/11987/startransparent.gif"),
-                       url("https://mdn.mozillademos.org/files/7693/catfront.png");
+  background-image:    url("startransparent.gif"),
+                       url("catfront.png");
   background-position: 0px 0px,
                        right 3em bottom 2em;
 }</pre>
@@ -177,44 +178,11 @@ div {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Backgrounds', '#background-position', 'background-position')}}</td>
-   <td>{{Spec2('CSS3 Backgrounds')}}</td>
-   <td>Adds support for multiple backgrounds and the four-value syntax. Modifies the percentage definition to match implementations.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'colors.html#propdef-background-position', 'background-position')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Allows for keyword values and {{cssxref("&lt;length&gt;")}} and {{cssxref("&lt;percentage&gt;")}} values to be mixed.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#background-position', 'background-position')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-
-<p>{{Compat("css.properties.background-position")}}</p>
-
-<h3 id="Quantum_CSS_notes">Quantum CSS notes</h3>
-
-<ul>
- <li>Gecko has a bug meaning that <code>background-position</code> can't be {{cssxref("transition","transitioned")}} between two values containing different numbers of {{cssxref("&lt;position&gt;")}} values, for example <code>background-position: 10px 10px;</code> and <code>background-position: 20px 20px, 30px 30px;</code> (see {{bug(1390446)}}). Firefox's new parallel CSS engine (also known as <a href="https://wiki.mozilla.org/Quantum">Quantum CSS</a> or <a href="https://wiki.mozilla.org/Quantum/Stylo">Stylo</a>, planned for release in Firefox 57) fixes this.</li>
-</ul>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

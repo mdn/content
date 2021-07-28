@@ -1,0 +1,39 @@
+---
+title: TransformStreamDefaultController.desiredSize
+slug: Web/API/TransformStreamDefaultController/desiredSize
+tags:
+  - API
+  - Property
+  - Reference
+  - desiredSize
+  - TransformStreamDefaultController
+browser-compat: api.TransformStreamDefaultController.desiredSize
+---
+<div>{{DefaultAPISidebar("Streams API")}}</div>
+
+<p class="summary">The <strong><code>desiredSize</code></strong> read-only property of the {{domxref("TransformStreamDefaultController")}} interface returns the desired size to fill the queue of the associated {{domxref("ReadableStream")}}.</p>
+
+<p>The internal queue of a <code>ReadableStream</code> contains chunks that have been enqueued, but not yet read. The browser determines the <strong>desired size</strong> to fill the stream, and it is this value returned by the <code>desiredSize</code> property.</p>
+
+<p>If the <code>desiredSize</code> is <code>0</code> then the queue is full. Therefore you can use this information to <a href="/en-US/docs/Web/API/Streams_API/Concepts#backpressure">manually apply backpressure</a> to manage the queue.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox">let desiredSize = TransformStreamDefaultController.desiredSize;</pre>
+
+<h3>Value</h3>
+<p>The desired size.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<p>In the next example the <code>desiredSize</code> is logged to the console.</p>
+
+<pre class="brush: js">console.log(controller.desiredSize);</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+{{Specifications}}
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>

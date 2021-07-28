@@ -7,13 +7,14 @@ tags:
 - HTTP Header
 - Reference
 - Request header
+browser-compat: http.headers.If-Modified-Since
 ---
 <div>{{HTTPSidebar}}</div>
 
 <p>The <strong><code>If-Modified-Since</code></strong> request HTTP header makes the
   request conditional: the server will send back the requested resource, with a
   {{HTTPStatus("200")}} status, only if it has been last modified after the given date. If
-  the request has not been modified since, the response will be a {{HTTPStatus("304")}}
+  the resource has not been modified since, the response will be a {{HTTPStatus("304")}}
   without any body; the {{HTTPHeader("Last-Modified")}} response header of a previous
   request will contain the date of last modification. Unlike
   {{HTTPHeader("If-Unmodified-Since")}}, <code>If-Modified-Since</code> can only be used
@@ -75,29 +76,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Title</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{RFC("7232", "If-Modified-Since", "3.3")}}</td>
-      <td>Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data.
-  If you'd like to contribute to the data, please check out <a
-    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
-  and send us a pull request.</p>
-
-<p>{{Compat("http.headers.If-Modified-Since")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

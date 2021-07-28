@@ -7,6 +7,7 @@ tags:
   - Reference
   - Response Header
   - header
+browser-compat: http.headers.WWW-Authenticate
 ---
 <div>{{HTTPSidebar}}</div>
 
@@ -36,7 +37,7 @@ tags:
 
 <dl>
 	<dt>&lt;type&gt;</dt>
-	<dd><a href="/en-US/docs/Web/HTTP/Authentication#authentication_schemes">Authentication type</a>. A common type is <a href="/en-US/docs/Web/HTTP/Authentication#basic_authentication_scheme">"Basic"</a>. IANA maintains a <a href="http://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml">list of Authentication schemes</a>.</dd>
+	<dd><a href="/en-US/docs/Web/HTTP/Authentication#authentication_schemes">Authentication type</a>. A common type is <a href="/en-US/docs/Web/HTTP/Authentication#basic_authentication_scheme">"Basic"</a>. IANA maintains a <a href="https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml">list of Authentication schemes</a>.</dd>
 	<dt>realm=&lt;realm&gt;</dt>
 	<dd>A description of the protected area. If no realm is specified, clients often display a formatted hostname instead.</dd>
 	<dt>charset=&lt;charset&gt;</dt>
@@ -54,28 +55,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Title</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{RFC("7235", "WWW-Authenticate", "4.1")}}</td>
-			<td>HTTP/1.1: Authentication</td>
-		</tr>
-		<tr>
-			<td>{{RFC("7617")}}</td>
-			<td>The 'Basic' HTTP Authentication Scheme</td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("http.headers.WWW-Authenticate")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

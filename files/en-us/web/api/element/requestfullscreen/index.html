@@ -2,19 +2,20 @@
 title: Element.requestFullscreen()
 slug: Web/API/Element/requestFullScreen
 tags:
-- API
-- DOM
-- Element
-- Full
-- Fullscreen API
-- Graphics
-- Method
-- Reference
-- Video
-- full screen
-- fullscreen
-- requestFullscreen
-- screen
+  - API
+  - DOM
+  - Element
+  - Full
+  - Fullscreen API
+  - Graphics
+  - Method
+  - Reference
+  - Video
+  - full screen
+  - fullscreen
+  - requestFullscreen
+  - screen
+browser-compat: api.Element.requestFullscreen
 ---
 <div>{{APIRef("Fullscreen API")}}</div>
 
@@ -30,11 +31,6 @@ tags:
   detached from the original document, then the document receives these events instead.
 </p>
 
-<p>Earlier implementations of the Fullscreen API would always send these events to the
-  document rather than the element, and you may need to be able to handle that situation.
-  Check {{SectionOnPage("/en-US/docs/Web/Events/fullscreen", "Browser compatibility")}}
-  for specifics on when each browser made this change.</p>
-
 <div class="note">
   <p><strong>Note:</strong> This method must be called while responding to a user
     interaction or a device orientation change; otherwise it will fail.</p>
@@ -49,12 +45,25 @@ tags:
 
 <dl>
   <dt><code>options</code> {{optional_inline}}</dt>
-  <dd>A {{domxref("FullscreenOptions")}} object  providing options that control the
-    behavior of the transition to full-screen mode. Currently, the only option is
-    {{domxref("FullscreenOptions.navigationUI", "navigationUI")}}, which controls whether
-    or not to show navigation UI while the element is in full-screen mode. The default
-    value is <code>"auto"</code>, which indicates that the browser should decide what to
-    do.</dd>
+  <dd>An object that controls the behavior of the transition to full-screen mode. See below for available options.</dd>
+</dl>
+
+<h3>Options</h3>
+
+<dl>
+  <dt><code>navigationUI</code></dt>
+  <dd>Controls whether or not to show navigation UI while the element is in full-screen mode.
+    The default value is "auto", which indicates that the browser should decide what to do.
+    <ul>
+      <li><code>"hide"</code>: The browser's navigation interface will be hidden
+        and the entire dimensions of the screen will be allocated to the display of the element.</li>
+      <li><code>"show"</code>: The browser will present page navigation controls and possibly other
+        user interface; the dimensions of the element (and the perceived size of the screen) will be clamped
+        to leave room for this user interface.</li>
+      <li><code>"auto"</code>: The browser will choose which of the above settings to apply.
+        This is the default value.</li>
+  </ul>
+  </dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -118,6 +127,8 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
+<h3>Requesting full-screen mode</h3>
+
 <p>This function toggles the first {{HTMLElement("video")}} element found in the document
   into and out of full-screen mode.</p>
 
@@ -145,31 +156,32 @@ tags:
 <p>You can <a href="https://fullscreen-requestfullscreen-demo.glitch.me/">see this example
     in action</a> or <a
     href="https://glitch.com/edit/#!/fullscreen-requestfullscreen-demo">view or remix the
-    code</a> on <a href="http://glitch.com/">Glitch</a>.</p>
+    code</a> on <a href="https://glitch.com/">Glitch</a>.</p>
+
+<h3>Using navigationUI</h3>
+
+<p>In this example, the entire document is placed into full-screen mode by calling
+  {{DOMxRef("Element.requestFullscreen", "requestFullscreen()")}} on the document's
+  {{DOMxRef("Document.documentElement")}}, which is the document's root
+  {{HTMLElement("html")}} element.</p>
+
+<pre class="brush: js">let elem = document.documentElement;
+
+elem.requestFullscreen({ navigationUI: "show" }).then(() => {}).catch(err =&gt; {
+  alert(`An error occurred while trying to switch into full-screen mode: ${err.message} (${err.name})`);
+});
+</pre>
+
+<p>The promise's resolve handler does nothing, but if the promise is rejected, an error
+  message is displayed by calling {{DOMxRef("Window.alert", "alert()")}}.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName("Fullscreen", "#dom-element-requestfullscreen",
-        "Element.requestFullscreen()")}}</td>
-      <td>{{Spec2("Fullscreen")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Element.requestFullscreen")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

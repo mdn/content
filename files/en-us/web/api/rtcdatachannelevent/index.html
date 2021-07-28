@@ -3,20 +3,34 @@ title: RTCDataChannelEvent
 slug: Web/API/RTCDataChannelEvent
 tags:
   - API
-  - Experimental
   - Interface
   - RTCDataChannelEvent
   - Reference
   - WebRTC
   - datachannel
+browser-compat: api.RTCDataChannelEvent
 ---
-<p>{{APIRef("WebRTC")}}{{SeeCompatTable}}</p>
+<p>{{APIRef("WebRTC")}}</p>
 
-<p>The <strong><code>RTCDataChannelEvent()</code></strong> constructor returns a new {{domxref("RTCDataChannelEvent")}} object, which represents a {{domxref("datachannel")}} event. These events sent to an {{domxref("RTCPeerConnection")}} when its remote peer is asking to open an {{domxref("RTCDataChannel")}} between the two peers.</p>
+The <strong><code>RTCDataChannelEvent</code></strong> interface
+represents an event related to a specific {{DOMxRef("RTCDataChannel")}}.
 
-<p>You will rarely if ever construct an <code>RTCDataChannelEvent</code> by hand; instead, the WebRTC layer will generate and deliver them to you at the appropriate time. Just listen for the {{domxref("RTCPeerConnection.datachannel_event", "datachannel")}} event to be received by the <code>RTCPeerConnection</code> and when you receive it, use the {{domxref("RTCDataChannelEvent.channel")}} property to gain access to the data channel which has been opened.</p>
+<p>{{InheritanceDiagram}}</p>
 
-<div>{{InterfaceOverview("WebRTC")}}</div>
+<h2 id="Constructor">Constructor</h2>
+<dl>
+  <dt>{{DOMxRef("RTCDataChannelEvent.RTCDataChannelEvent", "RTCDataChannelEvent()")}}</dt>
+  <dd>Creates a new <code>RTCDataChannelEvent</code>.</dd>
+</dl>
+
+<h2 id="Properties">Properties</h2>
+
+<p><em>Also inherits properties from {{DOMxRef("Event")}}.</em></p>
+
+<dl>
+  <dt>{{DOMxRef("RTCDataChannelEvent.channel", "channel")}} {{ReadOnlyInline}}</dt>
+  <dd>Returns the {{domxref("RTCDataChannel")}} associated with the event.</dd>
+</dl>
 
 <h2 id="Examples">Examples</h2>
 
@@ -34,31 +48,18 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{ SpecName('WebRTC 1.0', '#rtcdatachannelevent', 'RTCDataChannelEvent') }}</td>
-   <td>{{Spec2('WebRTC 1.0')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCDataChannelEvent")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/Guide/API/WebRTC">WebRTC</a></li>
+ <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></li>
  <li>{{domxref("RTCDataChannel")}}</li>
- <li>{{domxref("RTCDataChannel.ondatachannel")}}</li>
+ <li>{{domxref("RTCPeerConnection.ondatachannel")}}</li>
  <li><a href="/en-US/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample">A simple RTCDataChannel sample</a></li>
- <li>{{domxref("RTCPeerConnection")}} (the target interface for {{event("datachannel")}} events)</li>
+ <li>{{domxref("RTCPeerConnection")}} (the target interface for {{DOMxRef("RTCPeerConnection.datachannel_event", "datachannel")}} events)</li>
 </ul>

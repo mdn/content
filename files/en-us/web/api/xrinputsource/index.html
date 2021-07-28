@@ -15,6 +15,7 @@ tags:
   - WebXR Device API
   - XRInputSource
   - control
+browser-compat: api.XRInputSource
 ---
 <div>{{securecontext_header}}{{APIRef("WebXR Device API")}}</div>
 
@@ -53,13 +54,11 @@ tags:
 
 <p>If the device provides an indication of the direction in which it is pointed, this is done using a <strong>target ray</strong>. This is a ray extending from the position of the device outward in the direction in which it is pointed.</p>
 
-<div style="width: 42em;">
-<figure style="background: #eee; padding: 0.5em; border: 1px solid #aaa; border-radius: 1em; max-width: 504px; padding: 1em; margin: 1em auto;">
-<figcaption><strong>A target ray emitted by a hand controller.</strong></figcaption>
-<img alt="A screenshot showing a target ray being emitted by a hand controller" src="example-target-ray.gif"></figure>
-</div>
+<p><strong>A target ray emitted by a hand controller.</strong></p>
 
-<p class="cleared">If the device includes a trigger or other squeezable input, such as a hand gesture device that recognizes when the user squeezes their fist, that action is called a <strong>primary squeeze action</strong>. A primary squeeze action should correspond to a gripping act in reality, such as taking hold of an object or pressing a trigger on a tool or weapon. When a squeeze action begins, such as by the user pressing the trigger or tightening their grip, a {{domxref("XRSession.squeezestart_event", "squeezestart")}} event is sent to the <code>XRSession</code>. Once the action is completed and the user has released the trigger or the grip, a {{domxref("XRSession.squeeze_event", "squeeze")}} event is sent. This is followed by a {{domxref("XRSession.squeezeend_event", "squeezeend")}}, which is also sent if the action is aborted rather than completed.</p>
+<p><img alt="A screenshot showing a target ray being emitted by a hand controller" src="example-target-ray.gif"></p>
+
+<p>If the device includes a trigger or other squeezable input, such as a hand gesture device that recognizes when the user squeezes their fist, that action is called a <strong>primary squeeze action</strong>. A primary squeeze action should correspond to a gripping act in reality, such as taking hold of an object or pressing a trigger on a tool or weapon. When a squeeze action begins, such as by the user pressing the trigger or tightening their grip, a {{domxref("XRSession.squeezestart_event", "squeezestart")}} event is sent to the <code>XRSession</code>. Once the action is completed and the user has released the trigger or the grip, a {{domxref("XRSession.squeeze_event", "squeeze")}} event is sent. This is followed by a {{domxref("XRSession.squeezeend_event", "squeezeend")}}, which is also sent if the action is aborted rather than completed.</p>
 
 <p>If the device has a button or other pressable input control, it is a <strong>primary input source</strong>, and this button is a <strong>primary action</strong>. A primary action may occur when the user presses a button, clicks on a touchpad or the top button of a thumb stick, or uses a hand gesture or spoken command that invokes the button-like action. When a primary action begins, a {{domxref("XRSession.selectstart_event", "selectstart")}} event is sent to the {{domxref("XRSession")}}. When the action has completed (such as when the user releases the button), a {{domxref("XRSession.select_event", "select")}} event is sent. Finally, once that is done—or if the user aborts the action—a {{domxref("XRSession.selectend_event", "selectend")}} event is sent to the session object.</p>
 
@@ -75,24 +74,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebXR','#xrinputsource-interface','XRInputSource')}}</td>
-   <td>{{Spec2('WebXR')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.XRInputSource")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -11,10 +11,11 @@ tags:
   - Style
   - Visibility
   - Web
+browser-compat: css.properties.content-visibility
 ---
 <p>{{CSSRef}}</p>
 
-<p><span class="seoSummary">The <strong><code>content-visibility</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property controls whether or not an element renders its contents at all, along with forcing a strong set of containments, allowing user agents to potentially omit large swathes of layout and rendering work until it becomes needed.</span> Basically it enables the user agent to skip an element's rendering work (including layout and painting) until it is needed — which makes the initial page load much faster.</p>
+<p>The <strong><code>content-visibility</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property controls whether or not an element renders its contents at all, along with forcing a strong set of containments, allowing user agents to potentially omit large swathes of layout and rendering work until it becomes needed. Basically it enables the user agent to skip an element's rendering work (including layout and painting) until it is needed — which makes the initial page load much faster.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -24,7 +25,9 @@ content-visibility: hidden;
 content-visibility: auto;
 
 /* Global values */
+content-visibility: inherit;
 content-visibility: initial;
+content-visibility: revert;
 content-visibility: unset;
 </pre>
 
@@ -92,26 +95,11 @@ section {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS Containment 2', '#content-visibility')}}</td>
-   <td>{{Spec2('CSS Containment 2')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.content-visibility")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

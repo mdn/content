@@ -11,10 +11,11 @@ tags:
   - TextEncoder
   - WebExtensions
   - webRequest
+browser-compat: webextensions.api.webRequest.StreamFilter.ondata
 ---
 <div>{{AddonSidebar()}}</div>
 
-<p>An event handler that will be called repeatedly when response data is available. The handler is passed an <code>event</code> object which contains a <code>data</code> property, which contains a chunk of the response data as an {{domxref("ArrayBuffer")}}.</p>
+<p>An event handler that will be called repeatedly when response data is available. The handler is passed an <code>event</code> object which contains a <code>data</code> property, which contains a chunk of the response data as an {{jsxref("ArrayBuffer")}}.</p>
 
 <p>To decode the data use either {{domxref("TextDecoder")}} or {{domxref("Blob")}}.</p>
 
@@ -318,6 +319,4 @@ browser.webRequest.onBeforeRequest.addListener(
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-
-<p>{{Compat("webextensions.api.webRequest.StreamFilter.ondata", 10)}}</p>
+<p>{{Compat}}</p>

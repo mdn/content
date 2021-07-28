@@ -10,6 +10,7 @@ tags:
   - SVG
   - SVG DOM
   - SVGImageElement
+browser-compat: api.SVGImageElement
 ---
 <div>{{APIRef("SVG")}}</div>
 
@@ -22,10 +23,12 @@ tags:
 <p><em>This interface also inherits properties from its parent, {{domxref("SVGGraphicsElement")}}.</em></p>
 
 <dl>
+	<dt>{{domxref("SVGImageElement.href")}} {{ReadOnlyInline}}</dt>
+	<dd>An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("href")}} or {{SVGAttr("xlink:href")}} attribute of the given {{SVGElement("image")}} element.</dd>
 	<dt>{{domxref("SVGImageElement.crossOrigin")}}</dt>
 	<dd>A {{domxref("DOMString")}} corresponding to the {{SVGAttr("crossorigin")}} attribute of the given {{SVGElement("image")}} element.</dd>
 	<dt>{{domxref("SVGImageElement.decoding")}}</dt>
-	<dd>Returns a {{domxref("DOMString")}} representing a hint given to the browser on how it should decode the image.</dd>
+	<dd>A {{domxref("DOMString")}} representing a hint given to the browser on how it should decode the image.</dd>
 	<dt>{{domxref("SVGImageElement.height")}} {{ReadOnlyInline}}</dt>
 	<dd>An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("height")}} attribute of the given {{SVGElement("image")}} element.</dd>
 	<dt>{{domxref("SVGImageElement.preserveAspectRatio")}} {{ReadOnlyInline}}</dt>
@@ -49,27 +52,9 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<tbody>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-		<tr>
-			<td>{{SpecName("SVG2", "embedded.html#InterfaceSVGImageElement", "SVGImageElement")}}</td>
-			<td>{{Spec2("SVG2")}}</td>
-			<td>Changed the inheritance from {{domxref("SVGElement")}} to {{domxref("SVGGraphicsElement")}}, removed the implemented interfaces {{domxref("SVGTests")}}, {{domxref("SVGLangSpace")}}, {{domxref("SVGExternalResourcesRequired")}}, {{domxref("SVGStylable")}}, and {{domxref("SVGTransformable")}} and added the <code>crossOrigin</code> property.</td>
-		</tr>
-		<tr>
-			<td>{{SpecName("SVG1.1", "struct.html#InterfaceSVGImageElement", "SVGImageElement")}}</td>
-			<td>{{Spec2("SVG1.1")}}</td>
-			<td>Initial definition</td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 
-<p>{{Compat("api.SVGImageElement")}}</p>
+<p>{{Compat}}</p>

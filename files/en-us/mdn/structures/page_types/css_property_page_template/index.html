@@ -6,6 +6,7 @@ tags:
   - Property
   - Reference
   - Template
+browser-compat: path.to.feature.NameOfTheProperty
 ---
 <div>{{MDNSidebar}}</div>
 
@@ -18,10 +19,9 @@ tags:
 
 <h3 id="Top_macros">Top macros</h3>
 
-<p>There are four macro calls at the top of the template by default. You should update or delete them according to the advice below:</p>
+<p>A number of macro calls appear at the top of the content section. You should update or delete them according to the advice below:</p>
 
 <ul>
-	<li>\{{draft()}} — this generates a <strong>Draft</strong> banner that indicates that the page is not yet complete, and should only be removed when the first draft of the page is completely finished. After it is ready to be published, you can remove this.</li>
 	<li>\{{SeeCompatTable}} — this generates a <strong>This is an experimental technology</strong> banner that indicates the technology is <a href="/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental">experimental</a>). If the technology you are documenting is not experimental, you can remove this. If it is experimental, and the technology is hidden behind a pref in Firefox, you should also fill in an entry for it in the <a href="/en-US/docs/Mozilla/Firefox/Experimental_features">Experimental features in Firefox</a> page.</li>
 	<li>\{{deprecated_header}} — this generates a <strong>Deprecated</strong> banner that indicates the technology is <a href="/en-US/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete">deprecated</a>. If it isn't, then you can remove the macro call.</li>
 	<li>
@@ -33,11 +33,11 @@ tags:
 
 <p>In an CSS property subpage, you need to include the following tags (see the <em>Tags</em> section at the bottom of the editor UI): <strong>CSS</strong>, <strong>Reference</strong>, <strong>CSS Property</strong>, <em>the name of the Property</em> (e.g. <strong>background-color</strong>), <strong>Layout, Graphics, CSS Background/CSS Colors/other category</strong> as appropriate, <strong>Experimental</strong> (if the technology is <a href="/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental">experimental</a>), and <strong>Deprecated</strong> (if it is <a href="/en-US/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete">deprecated</a>).</p>
 
-<h3 id="Browser_compatibility">Browser compatibility</h3>
+<h3 id="Browser_compatibility_and_specifications">Browser compatibility and specifications</h3>
 
-<p>To fill in the browser compat data, you first need to fill in an entry for the API into our <a href="https://github.com/mdn/browser-compat-data">Browser compat data repo</a> — see our <a href="/en-US/docs/MDN/Structures/Compatibility_tables#the_new_way_the_browser_compat_data_repo_and_dynamic_tables">guide on how to do this</a>. Note that for CSS properties, most of the work has already been done — you just need to check that an entry is available.</p>
+<p>To fill in the browser compat data and specifications sections, you first need to fill in an entry for the API into our <a href="https://github.com/mdn/browser-compat-data">Browser compat data repo</a> — see our <a href="/en-US/docs/MDN/Structures/Compatibility_tables#the_new_way_the_browser_compat_data_repo_and_dynamic_tables">guide on how to do this</a>.</p>
 
-<p>Once that is done, you can show the compat data for the method with a \{{Compat()}} macro call.</p>
+<p>Once that is done, you can show the compat data for the CSS property with a \{{Compat}} macro call and its specification information with a \{{Specifications}} macro call.</p>
 
 <h3 id="cssinfo_and_csssyntax_sections">\{{cssinfo}} and \{{csssyntax}} sections</h3>
 
@@ -91,30 +91,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Comment</th>
-			<th scope="col">Feedback</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName("NameOfSpecificationFromSpecName","#document-fragment-linking-directly-to-property-definition","NameOfTheProperty")}}</td>
-			<td>Useful comment if there is one. Otherwise remove column</td>
-			<td>Link to useful place to give feedback on the particular spec, e.g. Github issues. If there isn't one, remove column.</td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility_2">Browser compatibility</h2>
 
-<div class="hidden">
-<p>The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-</div>
-
-<p>{{Compat("path.to.feature.NameOfTheProperty")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

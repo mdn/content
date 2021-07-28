@@ -5,7 +5,7 @@ tags:
 - API
 - AR
 - Constructor
-- Eventss
+- Events
 - Mixed
 - Reality
 - Reference
@@ -19,8 +19,9 @@ tags:
 - XRReferenceSpaceEvent
 - augmented
 - events
+browser-compat: api.XRReferenceSpaceEvent.XRReferenceSpaceEvent
 ---
-<p>{{APIRef("WebXR Device API")}}{{SecureContext_header}}</p>
+<p>{{APIRef("WebXR Device API")}}</p>
 
 <p><span class="seoSummary">The <code><strong>XRReferenceSpaceEvent()</strong></code>
     constructor is used to create a new {{domxref("XRReferenceSpaceEvent")}} object, which
@@ -43,45 +44,32 @@ tags:
     this is always <code>reset</code>.</dd>
   <dt><code>eventInitDict</code></dt>
   <dd>
-    <p>An object based on the {{domxref("XRReferenceSpaceEventInit")}} dictionary,
-      containing data used to initialize the new event object. The properties of this
-      object are:</p>
-
-    <p>{{page("/en-US/docs/Web/API/XRReferenceSpaceEventInit", "Properties")}}</p>
+    <p>An object to configure the event. The properties are:</p>
+    <ul>
+      <li><code>referenceSpace</code>: The {{domxref("XRReferenceSpace")}} from which the event originates.</li>
+      <li><code>transform</code>: An {{domxref("XRRigidTransform")}} which maps the old coordinate system (from before the changes indicated by this event) to the new coordiante system.</li>
+    </ul>
   </dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A new <code>XRReferenceSpaceEvent</code> object, initialized as defined by the input
-  parameters.</p>
+<p>A new <code>XRReferenceSpaceEvent</code> object, initialized as defined by the input parameters.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<p>This simple snippet calls the constructor to create a new reference space event of type {{domxref("XRReferenceSpace.reset_event", "reset")}}.</p>
+
+<pre class="brush: js">let refSpaceEvent = new XRReferenceSpaceEvent("reset", {
+  referenceSpace: myRefSpace,
+  transform: myTransform
+});
+</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('WebXR','#dom-xrreferencespaceevent-xrreferencespaceevent','XRReferenceSpaceEvent()')}}
-      </td>
-      <td>{{Spec2('WebXR')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div class="hidden">
-  <p>The compatibility table in this page is generated from structured data. If you'd like
-    to contribute to the data, please check out <a
-      href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and
-    send us a pull request.</p>
-</div>
-
-<p>{{Compat("api.XRReferenceSpaceEvent.XRReferenceSpaceEvent")}}</p>
+<p>{{Compat}}</p>

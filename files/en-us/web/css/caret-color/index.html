@@ -15,10 +15,11 @@ tags:
   - caret-color
   - contenteditable
   - 'recipe:css-property'
+browser-compat: css.properties.caret-color
 ---
 <div>{{CSSRef}}</div>
 
-<p><span class="seoSummary">The <strong><code>caret-color</code></strong> CSS property sets the color of the <strong>insertion caret</strong>, the visible marker where the next character typed will be inserted. This is sometimes referred to as the <strong>text input cursor</strong>.</span> The caret appears in elements such as {{HTMLElement("input")}} or those with the {{htmlattrxref("contenteditable")}} attribute. The caret is typically a thin vertical line that flashes to help make it more noticeable. By default, it is black, but its color can be altered with this property.</p>
+<p>The <strong><code>caret-color</code></strong> CSS property sets the color of the <strong>insertion caret</strong>, the visible marker where the next character typed will be inserted. This is sometimes referred to as the <strong>text input cursor</strong>. The caret appears in elements such as {{HTMLElement("input")}} or those with the {{htmlattrxref("contenteditable")}} attribute. The caret is typically a thin vertical line that flashes to help make it more noticeable. By default, it is black, but its color can be altered with this property.</p>
 
 <div>{{EmbedInteractiveExample("pages/css/caret-color.html")}}</div>
 
@@ -36,7 +37,12 @@ caret-color: red;
 caret-color: #5729e9;
 caret-color: rgb(0, 200, 0);
 caret-color: hsla(228, 4%, 24%, 0.8);
-</pre>
+
+/* Global values */
+caret-color: inherit;
+caret-color: initial;
+caret-color: revert;
+caret-color: unset;</pre>
 
 <h3 id="Values">Values</h3>
 
@@ -92,26 +98,11 @@ p.custom {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 UI", "#propdef-caret-color", "caret-color")}}</td>
-   <td>{{Spec2("CSS3 UI")}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.caret-color")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

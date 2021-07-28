@@ -4,6 +4,7 @@ slug: Web/API/Range
 tags:
   - API
   - DOM
+browser-compat: api.Range
 ---
 <p>{{APIRef("DOM")}}</p>
 
@@ -19,7 +20,7 @@ tags:
 
 <dl>
  <dt>{{domxref("Range.collapsed")}} {{readonlyInline}}</dt>
- <dd>Returns a {{domxref("Boolean")}} indicating whether the range's start and end points are at the same position.</dd>
+ <dd>Returns a boolean value indicating whether the range's start and end points are at the same position.</dd>
  <dt>{{domxref("Range.commonAncestorContainer")}} {{readonlyInline}}</dt>
  <dd>Returns the deepest {{ domxref("Node") }} that contains the <code>startContainer</code> and <code>endContainer</code> nodes.</dd>
  <dt>{{domxref("Range.endContainer")}} {{readonlyInline}}</dt>
@@ -80,7 +81,7 @@ tags:
  <dd>Releases the <code>Range</code> from use to improve performance.</dd>
  <dt>{{ domxref("Range.toString()")}}</dt>
  <dd>Returns the text of the <code>Range</code>.</dd>
- <dt>{{ domxref("Range.compareNode()")}} {{ Obsolete_inline }}{{non-standard_inline}}</dt>
+ <dt>{{ domxref("Range.compareNode()")}} {{deprecated_inline}}{{non-standard_inline}}</dt>
  <dd>Returns a constant representing whether the {{domxref("Node")}} is before, after, inside, or surrounding the range.</dd>
  <dt>{{ domxref("Range.comparePoint()")}} {{experimental_inline}}</dt>
  <dd>Returns -1, 0, or 1 indicating whether the point occurs before, inside, or after the <code>Range</code>.</dd>
@@ -98,47 +99,14 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#interface-range', 'Range')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Do not use <code>RangeException</code> anymore, use <code>DOMException</code> instead.<br>
-    Made the second parameter of <code>collapse()</code> optional.<br>
-    Added the methods <code>isPointInRange()</code>, <code>comparePoint()</code>, and <code>intersectsNode()</code>.<br>
-    Added the constructor <code>Range()</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM Parsing', '#extensions-to-the-range-interface', 'Extensions to Range')}}</td>
-   <td>{{Spec2('DOM Parsing')}}</td>
-   <td>Added the method <code>createContextualFragment()</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSSOM View', '#extensions-to-the-range-interface', 'Extensions to Range')}}</td>
-   <td>{{Spec2('CSSOM View')}}</td>
-   <td>Added the methods <code>getClientRects()</code> and <code>getBoundingClientRect()</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Traversal_Range', 'ranges.html#Level-2-Range-Interface', 'Range')}}</td>
-   <td>{{Spec2('DOM2 Traversal_Range')}}</td>
-   <td>Initial specification.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Range")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/DOM/DOM_Reference">The DOM interfaces index</a></li>
+ <li><a href="/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</a></li>
 </ul>

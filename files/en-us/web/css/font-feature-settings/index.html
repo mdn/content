@@ -7,6 +7,7 @@ tags:
   - CSS Property
   - Reference
   - 'recipe:css-property'
+browser-compat: css.properties.font-feature-settings
 ---
 <div>{{CSSRef}}</div>
 
@@ -28,6 +29,7 @@ font-feature-settings: "smcp", "swsh" 2;
 /* Global values */
 font-feature-settings: inherit;
 font-feature-settings: initial;
+font-feature-settings: revert;
 font-feature-settings: unset;</pre>
 
 Whenever possible, Web authors should instead use the {{cssxref("font-variant")}} shorthand property or an associated longhand property such as {{cssxref("font-variant-ligatures")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-east-asian")}}, {{cssxref("font-variant-alternates")}}, {{cssxref("font-variant-numeric")}} or {{cssxref("font-variant-position")}}.<br>
@@ -41,7 +43,7 @@ These lead to more effective, predictable, understandable results than <code>fon
  <dd>Text is laid out using default settings.</dd>
  <dt><code>&lt;feature-tag-value&gt;</code></dt>
  <dd>When rendering text, the list of OpenType feature tag value is passed to the text layout engine to enable or disable font features. The tag is always a {{cssxref("&lt;string&gt;")}} of 4 ASCII characters. If it has more or less characters, or if it contains characters outside the <code>U+20</code> – <code>U+7E</code> codepoint range, the whole property is invalid.<br>
- The value is a positive integer. The two keywords <code>on</code> and <code>off</code> are synonyms for <code>1</code> and <code>0</code> respectively. If no value is set, the default is <code>1</code>. For non-Boolean OpenType features (e.g. <a href="http://www.microsoft.com/typography/otspec/features_pt.htm#salt">stylistic alternates</a>), the value implies a particular glyph to be selected; for Boolean values, it is a switch.</dd>
+ The value is a positive integer. The two keywords <code>on</code> and <code>off</code> are synonyms for <code>1</code> and <code>0</code> respectively. If no value is set, the default is <code>1</code>. For non-Boolean OpenType features (e.g. <a href="https://www.microsoft.com/typography/otspec/features_pt.htm#salt">stylistic alternates</a>), the value implies a particular glyph to be selected; for Boolean values, it is a switch.</dd>
 </dl>
 
 <h2 id="Formal_definition">Formal definition</h2>
@@ -90,26 +92,11 @@ td.tabular { font-feature-settings: "tnum"; }
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Fonts', '#propdef-font-feature-settings', 'font-feature-settings')}}</td>
-   <td>{{Spec2('CSS3 Fonts')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.font-feature-settings")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
@@ -123,7 +110,6 @@ td.tabular { font-feature-settings: "tnum"; }
  <li>{{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}</li>
  <li>{{cssxref("@font-face/src", "src")}}</li>
  <li>{{cssxref("@font-face/unicode-range", "unicode-range")}}</li>
- <li><a href="http://www.microsoft.com/typography/otspec/featurelist.htm">OpenType Feature Tags</a> list</li>
- <li><a href="http://blogs.msdn.com/b/ie/archive/2012/01/09/css-corner-using-the-whole-font.aspx">Using the whole font</a><br>
-  <em>(<strong>Note:</strong> The <code>-moz</code> syntax is the old one. On Gecko, use the <code>-ms</code> syntax but with <code>-moz</code>.)</em></li>
+ <li><a href="https://www.microsoft.com/typography/otspec/featurelist.htm">OpenType Feature Tags</a> list</li>
+
 </ul>

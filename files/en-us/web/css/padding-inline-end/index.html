@@ -10,6 +10,7 @@ tags:
   - padding-inline
   - padding-inline-end
   - 'recipe:css-property'
+browser-compat: css.properties.padding-inline-end
 ---
 <div>{{CSSRef}}</div>
 
@@ -17,7 +18,6 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/css/padding-inline-end.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -31,16 +31,22 @@ padding-inline-end: 5%;       /* A padding relative to the block container's wid
 /* Global values */
 padding-inline-end: inherit;
 padding-inline-end: initial;
+padding-inline-end: revert;
 padding-inline-end: unset;
 </pre>
 
 <h3 id="Values">Values</h3>
 
-<p>The <code>padding-inline-end</code> property takes the same values as the {{cssxref("padding-left")}} property.</p>
+<dl>
+  <dt>{{cssxref("&lt;length&gt;")}}</dt>
+  <dd>The size of the padding as a fixed value. Must be nonnegative.</dd>
+  <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
+  <dd>The size of the padding as a percentage, relative to the <em>inline-size</em> of the containing block. Must be nonnegative.</dd>
+</dl>
 
 <h2 id="Description">Description</h2>
 
-<p>This property corresponds to the {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, or {{cssxref("padding-left")}} property depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.</p>
+<p>The <code>padding-inline-end</code> property is defined in the specification as taking the same values as the {{cssxref("padding-top")}} property. However, the phsyical property it maps to depends on the values set for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}. Therefore, it could map to {{cssxref("padding-bottom")}}, {{cssxref("padding-right")}}, or {{cssxref("padding-left")}}</p>
 
 <p>It relates to {{cssxref("padding-block-start")}}, {{cssxref("padding-block-end")}}, and {{cssxref("padding-inline-start")}}, which define the other paddings of the element.</p>
 
@@ -83,26 +89,11 @@ padding-inline-end: unset;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Logical Properties", "#propdef-padding-inline-end", "padding-inline-end")}}</td>
-   <td>{{Spec2("CSS Logical Properties")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.padding-inline-end")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

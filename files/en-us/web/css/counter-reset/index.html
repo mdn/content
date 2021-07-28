@@ -6,11 +6,12 @@ tags:
   - CSS Counter
   - CSS Lists
   - CSS Property
-  - 'recipe:css-property'
+  - recipe:css-property
+browser-compat: css.properties.counter-reset
 ---
 <div>{{CSSRef}}</div>
 
-<p>The <strong><code>counter-reset</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property resets a <a href="/en-US/docs/Web/Guide/CSS/Counters">CSS counter</a> to a given value.</p>
+<p>The <strong><code>counter-reset</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property resets a <a href="/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters">CSS counter</a> to a given value. This property will create a new counter of the given name. To change the value of an existing counter use {{cssxref("counter-set")}}, or {{cssxref("counter-increment")}}.</p>
 
 <div>{{EmbedInteractiveExample("pages/css/counter-reset.html")}}</div>
 
@@ -35,6 +36,7 @@ counter-reset: none;
 /* Global values */
 counter-reset: inherit;
 counter-reset: initial;
+counter-reset: revert;
 counter-reset: unset;
 </pre>
 
@@ -76,39 +78,19 @@ counter-reset: unset;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Lists', '#counter-reset', 'counter-reset')}}</td>
-   <td>{{Spec2('CSS3 Lists')}}</td>
-   <td>No change.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'generate.html#propdef-counter-reset', 'counter-reset')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.counter-reset")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/CSS/Counters">Using CSS Counters</a></li>
+ <li><a href="/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters">Using CSS Counters</a></li>
  <li>{{cssxref("counter-increment")}}</li>
  <li>{{cssxref("counter-set")}}</li>
  <li>{{cssxref("@counter-style")}}</li>
- <li>{{cssxref("counter")}} and {{cssxref("counters")}} functions</li>
+ <li>{{cssxref("counter()")}} and {{cssxref("counters()")}} functions</li>
  <li>{{cssxref("content")}} property</li>
 </ul>

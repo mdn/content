@@ -13,6 +13,7 @@ tags:
   - border-inline-start-style
   - border-inline-start-width
   - 'recipe:css-shorthand-property'
+browser-compat: css.properties.border-inline-start
 ---
 <div>{{CSSRef}}</div>
 
@@ -35,7 +36,12 @@ tags:
 <pre class="brush:css no-line-numbers">border-inline-start: 1px;
 border-inline-start: 2px dotted;
 border-inline-start: medium dashed green;
-</pre>
+
+/* Global values */
+border-inline-start: inherit;
+border-inline-start: initial;
+border-inline-start: revert;
+border-inline-start: unset;</pre>
 
 <p>The physical border to which <code>border-inline-start</code> maps depends on the element's writing mode, directionality, and text orientation. It corresponds to the {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, or {{cssxref("border-left")}} property depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.</p>
 
@@ -88,26 +94,11 @@ border-inline-start: medium dashed green;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Logical Properties", "#propdef-border-inline-start", "border-inline-start")}}</td>
-   <td>{{Spec2("CSS Logical Properties")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.border-inline-start")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

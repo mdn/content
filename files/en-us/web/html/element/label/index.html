@@ -8,14 +8,13 @@ tags:
   - HTML forms
   - Reference
   - Web
+browser-compat: html.elements.label
 ---
 <div>{{HTMLRef}}</div>
 
-<p>The <strong>HTML <code>&lt;label&gt;</code> element</strong> represents a caption for an item in a user interface.</p>
+<p>The <strong><code>&lt;label&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element represents a caption for an item in a user interface.</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/label.html", "tabbed-shorter")}}</div>
-
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a> and send us a pull request.</div>
 
 <p>Associating a <code>&lt;label&gt;</code> with an {{htmlelement("input")}} element offers some major advantages:</p>
 
@@ -46,7 +45,7 @@ tags:
 
 <dl>
  <dt>{{htmlattrdef("for")}}</dt>
- <dd>The {{htmlattrxref("id")}} of a <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_labelable">labelable</a> form-related element in the same document as the <code>&lt;label&gt;</code> element. The first element in the document with an <code>id</code> matching the value of the <code>for</code> attribute is the <em>labeled control</em> for this label element if it is a <a href="https://html.spec.whatwg.org/multipage/forms.html#category-label">labelable element</a>. If it is not labelable then the <code>for</code> attribute has no effect. If there are other elements that also match the <code>id</code> value, later in the document, they are not considered.
+ <dd>The {{htmlattrxref("id")}} of a <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Form_labelable">labelable</a> form-related element in the same document as the <code>&lt;label&gt;</code> element. The first element in the document with an <code>id</code> matching the value of the <code>for</code> attribute is the <em>labeled control</em> for this label element if it is a <a href="https://html.spec.whatwg.org/multipage/forms.html#category-label">labelable element</a>. If it is not labelable then the <code>for</code> attribute has no effect. If there are other elements that also match the <code>id</code> value, later in the document, they are not considered.
  <div class="note"><strong>Note</strong>: A <code>&lt;label&gt;</code> element can have both a <code>for</code> attribute and a contained control element, as long as the <code>for</code> attribute points to the contained control element.</div>
  </dd>
 </dl>
@@ -130,7 +129,7 @@ tags:
   </tr>
   <tr>
    <th scope="row">Permitted content</th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">Phrasing content</a>, but no descendant <code>label</code> elements. No <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_labelable">labelable</a> elements other than the labeled control are allowed.</td>
+   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">Phrasing content</a>, but no descendant <code>label</code> elements. No <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Form_labelable">labelable</a> elements other than the labeled control are allowed.</td>
   </tr>
   <tr>
    <th scope="row">Tag omission</th>
@@ -157,39 +156,8 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'forms.html#the-label-element', '&lt;label&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'sec-forms.html#the-label-element', '&lt;label&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'interact/forms.html#h-17.9.1', '&lt;label&gt;')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td><a class="external external-icon" href="https://www.w3.org/TR/REC-html40-971218/interact/forms.html#h-17.9.1" hreflang="en" lang="en" rel="noopener">HTML 4.0 Specification<br>
-    <small lang="en-US">The definition of '&lt;label&gt;' in that specification.</small></a></td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+<p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("html.elements.label")}}</p>
+<p>{{Compat}}</p>

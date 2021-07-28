@@ -9,7 +9,7 @@ tags:
 ---
 <div>{{CSSRef}}</div>
 
-<p class="summary"><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a> introduces a two-dimensional grid system to CSS. Grids can be used to lay out major page areas or small user interface elements. This article introduces the CSS Grid Layout and the new terminology that is part of the CSS Grid Layout Level 1 specification. The features shown in this overview will then be explained in greater detail in the rest of this guide. </p>
+<p><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a> introduces a two-dimensional grid system to CSS. Grids can be used to lay out major page areas or small user interface elements. This article introduces the CSS Grid Layout and the new terminology that is part of the CSS Grid Layout Level 1 specification. The features shown in this overview will then be explained in greater detail in the rest of this guide. </p>
 
 <h2 id="What_is_a_grid">What is a grid?</h2>
 
@@ -59,8 +59,7 @@ tags:
 }
 </pre>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -76,29 +75,29 @@ tags:
   color: #d9480f;
 }
 </pre>
-</div>
 
 <p>{{ EmbedLiveSample('The_Grid_container', '200', '330') }}</p>
 
 <p>All the direct children are now grid items. In a web browser, you won’t see any difference to how these items are displayed before turning them into a grid, as grid has created a single column grid for the items. At this point, you may find it useful to work with the <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts">Grid Inspector</a>, available as part of Firefox's Developer Tools. If you view this example in Firefox and inspect the grid, you will see a small icon next to the value <code>grid</code>. Click this and then the grid on this element will be overlaid in the browser window.</p>
 
-<p><img alt="Using the Grid Highlighter in DevTools to view a grid" src="1-grid-inspector.png" style="height: 753px; width: 900px;"></p>
+<p><img alt="Using the Grid Highlighter in DevTools to view a grid" src="1-grid-inspector.png"></p>
 
 <p>As you learn and then work with the CSS Grid Layout this tool will give you a better idea of what is happening with your grids visually.</p>
 
 <p>If we want to start making this more grid-like we need to add column tracks.</p>
 
-<h2 id="Grid_Tracks">Grid Tracks</h2>
+<h2 id="grid_tracks">Grid tracks</h2>
 
 <p>We define rows and columns on our grid with the {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}} properties. These define grid tracks. A <em>grid track</em> is the space between any two lines on the grid. In the below image you can see a track highlighted – this is the first row track in our grid.</p>
 
-<p><img alt="" src="1_grid_track.png" style="height: 261px; width: 392px;"></p>
+<p><img alt="" src="1_grid_track.png"></p>
+
+<h3 id="basic_example">Basic example</h3>
 
 <p>I can add to our earlier example by adding the <code>grid-template-columns</code> property, then defining the size of the column tracks.</p>
 
 <p>I have now created a grid with three 200-pixel-wide column tracks. The child items will be laid out on this grid one in each grid cell.</p>
 
-<div id="grid_first">
 <pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div&gt;One&lt;/div&gt;
   &lt;div&gt;Two&lt;/div&gt;
@@ -114,8 +113,8 @@ tags:
 }
 </pre>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -131,16 +130,13 @@ tags:
   color: #d9480f;
 }
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('grid_first', '610', '140') }}</p>
-</div>
+<p>{{ EmbedLiveSample('basic_example', '610', '140') }}</p>
 
-<h3 id="The_fr_Unit">The fr Unit</h3>
+<h3 id="the_fr_unit">The fr unit</h3>
 
 <p>Tracks can be defined using any length unit. Grid also introduces an additional length unit to help us create flexible grid tracks. The new <code>fr</code> unit represents a fraction of the available space in the grid container. The next grid definition would create three equal width tracks that grow and shrink according to the available space.</p>
 
-<div id="fr_unit_ls">
 <pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div&gt;One&lt;/div&gt;
   &lt;div&gt;Two&lt;/div&gt;
@@ -156,8 +152,7 @@ tags:
 }
 </pre>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -174,12 +169,21 @@ tags:
 }
 
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('fr_unit_ls', '220', '140') }}</p>
-</div>
+<p>{{ EmbedLiveSample('the_fr_unit', '220', '140') }}</p>
+
+<h3 id="unequal_fractions">Unequal fractions</h3>
 
 <p>In this next example, we create a definition with a <code>2fr</code> track then two <code>1fr</code> tracks. The available space is split into four. Two parts are given to the first track and one part each to the next two tracks.</p>
+
+<pre class="brush: html">&lt;div class="wrapper"&gt;
+  &lt;div&gt;One&lt;/div&gt;
+  &lt;div&gt;Two&lt;/div&gt;
+  &lt;div&gt;Three&lt;/div&gt;
+  &lt;div&gt;Four&lt;/div&gt;
+  &lt;div&gt;Five&lt;/div&gt;
+&lt;/div&gt;
+</pre>
 
 <pre class="brush: css">.wrapper {
   display: grid;
@@ -187,13 +191,64 @@ tags:
 }
 </pre>
 
+<pre class="brush: css hidden">* {box-sizing: border-box;}
+
+.wrapper {
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+}
+
+.wrapper &gt; div {
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
+}
+
+</pre>
+
+<p>{{ EmbedLiveSample('unequal_fractions', '220', '140') }}</p>
+
+<h3 id="mixing_fractions_and_absolute_sizes">Mixing fractions and absolute sizes</h3>
+
 <p>In this final example, we mix absolute sized tracks with fraction units. The first track is 500 pixels, so the fixed width is taken away from the available space. The remaining space is divided into three and assigned in proportion to the two flexible tracks.</p>
+
+<pre class="brush: html">&lt;div class="wrapper"&gt;
+  &lt;div&gt;One&lt;/div&gt;
+  &lt;div&gt;Two&lt;/div&gt;
+  &lt;div&gt;Three&lt;/div&gt;
+  &lt;div&gt;Four&lt;/div&gt;
+  &lt;div&gt;Five&lt;/div&gt;
+&lt;/div&gt;
+</pre>
 
 <pre class="brush: css">.wrapper {
   display: grid;
   grid-template-columns: 500px 1fr 2fr;
 }
 </pre>
+
+<pre class="brush: css hidden">* {box-sizing: border-box;}
+
+.wrapper {
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+}
+
+.wrapper &gt; div {
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
+}
+
+</pre>
+
+<p>{{ EmbedLiveSample('mixing_fractions_and_absolute_sizes', '220', '140') }}</p>
 
 <h3 id="Track_listings_with_repeat_notation">Track listings with repeat() notation</h3>
 
@@ -255,8 +310,7 @@ tags:
 }
 </pre>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -272,7 +326,6 @@ tags:
   color: #d9480f;
 }
 </pre>
-</div>
 
 <p>{{ EmbedLiveSample('The_implicit_and_explicit_grid', '230', '420') }}</p>
 
@@ -289,8 +342,7 @@ tags:
 }
 </pre>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -306,7 +358,6 @@ tags:
   color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div&gt;One&lt;/div&gt;
@@ -326,7 +377,7 @@ tags:
 
 <p>It should be noted that when we define a grid we define the grid tracks, not the lines. Grid then gives us numbered lines to use when positioning items. In our three column, two row grid we have four column lines.</p>
 
-<p><img alt="Diagram showing numbered grid lines." src="1_diagram_numbered_grid_lines.png" style="height: 456px; width: 764px;"></p>
+<p><img alt="Diagram showing numbered grid lines." src="1_diagram_numbered_grid_lines.png"></p>
 
 <p>Lines are numbered according to the writing mode of the document. In a left-to-right language, line 1 is on the left-hand side of the grid. In a right-to-left language, it is on the right-hand side of the grid. Lines can also be named, and we will look at how to do this in a later guide in this series.</p>
 
@@ -367,8 +418,7 @@ tags:
 }
 </pre>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -384,7 +434,7 @@ tags:
   color: #d9480f;
 }
 </pre>
-</div>
+
 
 <p>{{ EmbedLiveSample('Positioning_items_against_lines', '230', '420') }}</p>
 
@@ -394,13 +444,13 @@ tags:
 
 <p>A <em>grid cell</em> is the smallest unit on a grid. Conceptually it is like a table cell. As we saw in our earlier examples, once a grid is defined as a parent the child items will lay themselves out in one cell each of the defined grid. In the below image, I have highlighted the first cell of the grid.</p>
 
-<p><img alt="The first cell of the grid highlighted" src="1_grid_cell.png" style="height: 233px; width: 350px;"></p>
+<p><img alt="The first cell of the grid highlighted" src="1_grid_cell.png"></p>
 
 <h2 id="Grid_areas">Grid areas</h2>
 
 <p>Items can span one or more cells both by row or by column, and this creates a <em>grid area</em>. Grid areas must be rectangular – it isn’t possible to create an L-shaped area for example. The highlighted grid area spans two row and two column tracks.</p>
 
-<p><img alt="A grid area" src="1_grid_area.png" style="height: 238px; width: 357px;"></p>
+<p><img alt="A grid area" src="1_grid_area.png"></p>
 
 <h2 id="Gutters">Gutters</h2>
 
@@ -429,8 +479,7 @@ tags:
 &lt;/div&gt;
 </pre>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   column-gap: 10px;
@@ -448,7 +497,6 @@ tags:
   color: #d9480f;
 }
 </pre>
-</div>
 
 <p>{{ EmbedLiveSample('Gutters') }}</p>
 
@@ -458,21 +506,9 @@ tags:
 
 <p>A grid item can become a grid container. In the following example, I have the three-column grid that I created earlier, with our two positioned items. In this case the first item has some sub-items. As these items are not direct children of the grid they do not participate in grid layout and so display in a normal document flow.</p>
 
-<div id="nesting">
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-  &lt;div class="box box1"&gt;
-    &lt;div class="nested"&gt;a&lt;/div&gt;
-    &lt;div class="nested"&gt;b&lt;/div&gt;
-    &lt;div class="nested"&gt;c&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class="box box2"&gt;Two&lt;/div&gt;
-  &lt;div class="box box3"&gt;Three&lt;/div&gt;
-  &lt;div class="box box4"&gt;Four&lt;/div&gt;
-  &lt;div class="box box5"&gt;Five&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+<p><img alt="Nested grid in flow" src="1_nested_grids_in_flow.png"></p>
 
-<p><img alt="Nested grid in flow" src="1_nested_grids_in_flow.png" style="height: 512px; width: 900px;"></p>
+<h3 id="nesting_without_subgrid">Nesting without subgrid</h3>
 
 <p>If I set <code>box1</code> to <code>display: grid</code> I can give it a track definition and it too will become a grid. The items then lay out on this new grid.</p>
 
@@ -486,7 +522,19 @@ tags:
 }
 </pre>
 
-<div class="hidden">
+<pre class="brush: html hidden">&lt;div class="wrapper"&gt;
+    &lt;div class="box box1"&gt;
+      &lt;div class="nested"&gt;a&lt;/div&gt;
+      &lt;div class="nested"&gt;b&lt;/div&gt;
+      &lt;div class="nested"&gt;c&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="box box2"&gt;Two&lt;/div&gt;
+    &lt;div class="box box3"&gt;Three&lt;/div&gt;
+    &lt;div class="box box4"&gt;Four&lt;/div&gt;
+    &lt;div class="box box5"&gt;Five&lt;/div&gt;
+  &lt;/div&gt;
+</pre>
+
 <pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
@@ -517,9 +565,8 @@ tags:
 }
 </pre>
 </div>
-</div>
 
-<p>{{ EmbedLiveSample('nesting', '600', '340') }}</p>
+<p>{{ EmbedLiveSample('nesting_without_subgrid', '600', '340') }}</p>
 
 <p>In this case the nested grid has no relationship to the parent. As you can see in the example it has not inherited the {{cssxref("gap")}} of the parent and the lines in the nested grid do not align to the lines in the parent grid.</p>
 
@@ -528,7 +575,7 @@ tags:
 <p>In the working draft of the Level 2 Grid specification there is a feature called <em>subgrid</em>, which would let us create nested grids that use the track definition of the parent grid.</p>
 
 <div class="note">
-<p><strong>Note</strong>: This feature shipped in Firefox 71, which is currently the only browser to implement subgrid.</p>
+<p><strong>Note:</strong> This feature shipped in Firefox 71, which is currently the only browser to implement subgrid.</p>
 </div>
 
 <p>In the current specification, we would edit the above nested grid example to change the track definition of <code>grid-template-columns: repeat(3, 1fr)</code>, to <code>grid-template-columns: subgrid</code>. The nested grid will then use the parent grid tracks to layout items.</p>
@@ -545,9 +592,12 @@ tags:
 
 <h2 id="Layering_items_with_z-index">Layering items with <code>z-index</code></h2>
 
-<p>Grid items can occupy the same cell. If we return to our example with items positioned by line number, we can change this to make two items overlap.</p>
+<p>Grid items can occupy the same cell, and in this case we can use the {{cssxref("z-index")}} property to control the order in which overlapping items stack.</p>
 
-<div id="l_ex">
+<h3 id="overlapping_without_z-index">Overlapping without z-index</h3>
+
+<p>If we return to our example with items positioned by line number, we can change this to make two items overlap.</p>
+
 <pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div class="box box1"&gt;One&lt;/div&gt;
   &lt;div class="box box2"&gt;Two&lt;/div&gt;
@@ -577,8 +627,7 @@ tags:
 }
 </pre>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -594,10 +643,8 @@ tags:
   color: #d9480f;
 }
 </pre>
-</div>
-</div>
 
-<p>{{ EmbedLiveSample('l_ex', '230', '420') }}</p>
+<p>{{ EmbedLiveSample('overlapping_without_z-index', '230', '460') }}</p>
 
 <p>The item <code>box2</code> is now overlapping <code>box1</code>, it displays on top as it comes later in the source order.</p>
 
@@ -627,8 +674,7 @@ tags:
 }
 </pre>
 
-<div class="hidden">
-<pre class="brush: html">&lt;div class="wrapper"&gt;
+<pre class="brush: html hidden">&lt;div class="wrapper"&gt;
   &lt;div class="box box1"&gt;One&lt;/div&gt;
   &lt;div class="box box2"&gt;Two&lt;/div&gt;
   &lt;div class="box box3"&gt;Three&lt;/div&gt;
@@ -637,7 +683,7 @@ tags:
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -653,9 +699,8 @@ tags:
   color: #d9480f;
 }
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Controlling_the_order', '230', '420') }}</p>
+<p>{{ EmbedLiveSample('Controlling_the_order', '230', '460') }}</p>
 
 <h2 id="Next_Steps">Next Steps</h2>
 

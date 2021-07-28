@@ -11,10 +11,11 @@ tags:
   - Web
   - recipe:css-property
   - text-decoration-skip-ink
+browser-compat: css.properties.text-decoration-skip-ink
 ---
 <div>{{CSSRef}}</div>
 
-<p><span class="seoSummary">The <strong><code>text-decoration-skip-ink</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property specifies how overlines and underlines are drawn when they pass over glyph ascenders and descenders.</span></p>
+<p>The <strong><code>text-decoration-skip-ink</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property specifies how overlines and underlines are drawn when they pass over glyph ascenders and descenders.</p>
 
 <div>{{EmbedInteractiveExample("pages/css/text-decoration-skip-ink.html")}}</div>
 
@@ -30,6 +31,7 @@ text-decoration-skip-ink: all;
 /* Global keywords */
 text-decoration-skip: inherit;
 text-decoration-skip: initial;
+text-decoration-skip-ink: revert;
 text-decoration-skip: unset;
 </pre>
 
@@ -41,8 +43,10 @@ text-decoration-skip: unset;
  <dt><code>auto</code></dt>
  <dd>The default — the browser <em>may</em> interrupt underlines and overlines so that they do not touch or closely approach a glyph. That is, they are interrupted where they would otherwise cross over a glyph.</dd>
  <dt><code>all</code></dt>
- <dd>The browser <em>must</em> interrupt underlines and overlines so that they do not touch or closely approach a glyph. This can be helpful with certain Chinese, Japanese, or Korean (CJK) fonts, where the <code>auto</code> behavior might not create interruptions.</dd>
- <dd><img alt='An example of "text-decoration-skip-ink".' src="decoration-skip-ink.png"></dd>
+ <dd>
+   <p>The browser <em>must</em> interrupt underlines and overlines so that they do not touch or closely approach a glyph. This can be helpful with certain Chinese, Japanese, or Korean (CJK) fonts, where the <code>auto</code> behavior might not create interruptions.</p>
+   <img alt='An example of "text-decoration-skip-ink".' src="decoration-skip-ink.png">
+ </dd>
 </dl>
 
 <h2 id="Formal_definition">Formal definition</h2>
@@ -86,26 +90,11 @@ text-decoration-skip: unset;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS4 Text Decoration", "#text-decoration-skip-ink-property", "text-decoration-skip-ink")}}</td>
-   <td>{{Spec2("CSS4 Text Decoration")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.text-decoration-skip-ink")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

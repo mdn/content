@@ -9,15 +9,13 @@ tags:
   - Non-standard
   - Reference
   - 'recipe:css-shorthand-property'
+browser-compat: css.properties.border-block
 ---
 <div>{{CSSRef}}</div>
 
 <p>The <strong><code>border-block</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property is a <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand property</a> for setting the individual logical block border property values in a single place in the style sheet.</p>
 
-<pre class="brush:css no-line-numbers">border-block: 1px;
-border-block: 2px dotted;
-border-block: medium dashed blue;
-</pre>
+<div>{{EmbedInteractiveExample("pages/css/border-block.html")}}</div>
 
 <p><code>border-block</code> can be used to set the values for one or more of {{cssxref("border-block-width")}}, {{cssxref("border-block-style")}}, and {{cssxref("border-block-color")}} setting both the start and end in the block dimension at once. The physical borders to which it maps depends on the element's writing mode, directionality, and text orientation. It corresponds to the {{cssxref("border-top")}} and {{cssxref("border-bottom")}} or {{cssxref("border-right")}}, and {{cssxref("border-left")}} properties depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.</p>
 
@@ -34,6 +32,16 @@ border-block: medium dashed blue;
 </ul>
 
 <h2 id="Syntax">Syntax</h2>
+
+<pre class="brush:css no-line-numbers">border-block: 1px;
+border-block: 2px dotted;
+border-block: medium dashed blue;
+
+/* Global values */
+border-block: inherit;
+border-block: initial;
+border-block: revert;
+border-block: unset;</pre>
 
 <h3 id="Values">Values</h3>
 
@@ -86,26 +94,11 @@ border-block: medium dashed blue;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Logical Properties", "#propdef-border-block", "border-block")}}</td>
-   <td>{{Spec2("CSS Logical Properties")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.border-block")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

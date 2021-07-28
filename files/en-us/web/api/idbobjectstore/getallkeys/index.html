@@ -8,6 +8,7 @@ tags:
 - Method
 - Reference
 - Storage
+browser-compat: api.IDBObjectStore.getAllKeys
 ---
 <p>{{ APIRef("IndexedDB") }}</p>
 
@@ -45,7 +46,7 @@ var request = <em>objectStore</em>.getAllKeys(<em>query</em>, <em>count</em>);</
   <dd>A value that is or resolves to an {{domxref("IDBKeyRange")}}.</dd>
   <dt><em>count</em> {{optional_inline}}</dt>
   <dd>Specifies the number of values to return if more than one is found. If it is lower
-    than <code>0</code> or greater than <code>2<sup>32</sup>-1</code> a
+    than <code>0</code> or greater than <code>2^32 - 1</code> a
     {{jsxref("TypeError")}} exception will be thrown.</dd>
 </dl>
 
@@ -86,25 +87,11 @@ var request = <em>objectStore</em>.getAllKeys(<em>query</em>, <em>count</em>);</
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName("IndexedDB 2", "#dom-idbobjectstore-getallkeys", "getAllKeys()")}}
-      </td>
-      <td>{{Spec2("IndexedDB 2")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.IDBObjectStore.getAllKeys")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

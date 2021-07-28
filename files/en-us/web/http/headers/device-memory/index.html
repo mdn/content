@@ -2,81 +2,87 @@
 title: Device-Memory
 slug: Web/HTTP/Headers/Device-Memory
 tags:
+  - Device-Memory
   - Client hints
   - Device Memory API
   - HTTP
   - HTTP Header
+  - Request header
+  - Experimental
+browser-compat: http.headers.Device-Memory
 ---
-<div>{{HTTPSidebar}}{{securecontext_header}}{{SeeCompatTable}}</div>
+<div>{{HTTPSidebar}} {{SeeCompatTable}} {{securecontext_header}}</div>
 
-<p>The <strong><code>Device-Memory</code></strong> header is a <a href="/en-US/docs/Web/API/Device_Memory_API">Device Memory API</a> header that works like <a href="/en-US/docs/Glossary/Client_hints">Client Hints</a> header which represents the approximate amount of RAM client device has.</p>
+<p>The <strong><code>Device-Memory</code></strong> {{Glossary("Client hints","device client hint")}} request header field indicates the approximate amount of available RAM on the client device. The header is part of the <a href="/en-US/docs/Web/API/Device_Memory_API">Device Memory API</a>.</p>
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Request header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>?</td>
-  </tr>
- </tbody>
-</table>
+  <tbody>
+   <tr>
+    <th scope="row">Header type</th>
+    <td>{{Glossary("Request header")}}, {{Glossary("Client hints","Client hint")}}</td>
+   </tr>
+   <tr>
+    <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <td>no</td>
+   </tr>
+  </tbody>
+ </table>
 
 <div class="notecard note">
-<p><strong>Note:</strong> Client Hints are accessible only on secure origins (via TLS). Server has to opt in to receive <code>Device-Memory</code> header from the client by sending {{HTTPHeader("Accept-CH")}} and {{HTTPHeader("Accept-CH-Lifetime")}} response headers.</p>
+  <p><strong>Note:</strong></p>
+    <ul>
+      <li>Client Hints are accessible only on secure origins (via TLS).</li>
+      <li>A server has to opt in to receive the <code>Device-Memory</code> header from the client, by sending the {{HTTPHeader("Accept-CH")}} response header.</li>
+      <li>Servers that opt in to the <code>Device-Memory</code> client hint will typically also specify it in the {{HTTPHeader("Vary")}} header. This informs caches that the server may send different responses based on the header value in a request.</li>
+    </ul>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<p>The amount of device RAM can be used as a fingerprinting variable, so values for the header are intentionally coarse to reduce the potential for its misuse. The header takes on the following values: <code>0.25</code>, <code>0.5</code>, <code>1</code>, <code>2</code>, <code>4</code>, <code>8</code>.</p>
+<pre class="brush: http">Device-Memory: &lt;number&gt;</pre>
 
-<pre class="brush: html">Device-Memory: &lt;number&gt;
-</pre>
+<h2 id="Directives">Directives</h2>
+
+<dl>
+ <dt><code> &lt;number&gt;</code></dt>
+ <dd>The approximate amount of device RAM. Possible values are: <code>0.25</code>, <code>0.5</code>, <code>1</code>, <code>2</code>, <code>4</code>, <code>8</code>.</dd>
+</dl>
+
+<p>The amount of device RAM can be used as a fingerprinting variable, so values for the header are intentionally coarse to reduce the potential for its misuse.</p>
 
 <h2 id="Examples">Examples</h2>
 
-<p>Server first needs to opt in to receive <code>Device-Memory</code> header by sending the response headers {{HTTPHeader("Accept-CH")}} containing <code>Device-Memory</code> and {{HTTPHeader("Accept-CH-Lifetime")}}.</p>
+<p>The server first needs to opt in to receive <code>Device-Memory</code> header by sending the response headers {{HTTPHeader("Accept-CH")}} containing <code>Device-Memory</code>.</p>
 
-<pre>Accept-CH: Device-Memory
-Accept-CH-Lifetime: 86400
+<pre class="brush: http">Accept-CH: Device-Memory
 </pre>
 
 <p>Then on subsequent requests the client might send <code>Device-Memory</code> header back:</p>
 
-<pre>Device-Memory: 1
-</pre>
+<pre class="brush: http">Device-Memory: 1</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Device Memory","#sec-device-memory-client-hint-header","Device-Memory")}}</td>
-   <td>{{Spec2('Device Memory')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+<p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("http.headers.Device-Memory")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Device_Memory_API">Device Memory API</a></li>
+  <li><a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/client-hints">Adapting to Users with Client Hints</a> (developer.google.com)</li>
+  <li><a href="/en-US/docs/Web/API/Device_Memory_API">Device Memory API</a></li>
+  <li>{{DOMxRef("Navigator.deviceMemory")}}</li>
+ <li>Device client hints
+  <ul>
+    <li>{{HTTPHeader("Content-DPR")}}</li>
+    <li>{{HTTPHeader("DPR")}}</li>
+    <li>{{HTTPHeader("Viewport-Width")}}</li>
+    <li>{{HTTPHeader("Width")}}</li>
+   </ul>
+ </li>
  <li>{{HTTPHeader("Accept-CH")}}</li>
- <li>{{HTTPHeader("Accept-CH-Lifetime")}}</li>
- <li>{{HTTPHeader("Vary")}}</li>
- <li>{{DOMxRef("Navigator.deviceMemory")}}</li>
+ <li><a href="/en-US/docs/Web/HTTP/Caching#varying_responses">HTTP Caching > Varying responses</a> and {{HTTPHeader("Vary")}}</li>
 </ul>

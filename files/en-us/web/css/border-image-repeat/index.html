@@ -7,6 +7,7 @@ tags:
   - CSS Property
   - Reference
   - 'recipe:css-property'
+browser-compat: css.properties.border-image-repeat
 ---
 <div>{{CSSRef}}</div>
 
@@ -28,6 +29,7 @@ border-image-repeat: round stretch;
 /* Global values */
 border-image-repeat: inherit;
 border-image-repeat: initial;
+border-image-repeat: revert;
 border-image-repeat: unset;
 </pre>
 
@@ -70,15 +72,12 @@ border-image-repeat: unset;
   margin-bottom: 1rem;
   padding: 1rem;
   border: 40px solid;
-  border-image: url("https://mdn.mozillademos.org/files/4127/border.png") 27;
+  border-image: url("border.png") 27;
   border-image-repeat: stretch;  /* Can be changed in the live sample */
 }
 </pre>
 
-<div class="hidden">
-<h4 id="HTML">HTML</h4>
-
-<pre class="brush: html">&lt;div id="bordered"&gt;You can try out various border repetition rules on me!&lt;/div&gt;
+<pre class="brush: html hidden">&lt;div id="bordered"&gt;You can try out various border repetition rules on me!&lt;/div&gt;
 
 &lt;select id="repetition"&gt;
   &lt;option value="stretch"&gt;stretch&lt;/option&gt;
@@ -90,14 +89,11 @@ border-image-repeat: unset;
 &lt;/select&gt;
 </pre>
 
-<h4 id="JavaScript">JavaScript</h4>
-
-<pre class="brush: js">var repetition = document.getElementById("repetition");
+<pre class="brush: js hidden">var repetition = document.getElementById("repetition");
 repetition.addEventListener("change", function (evt) {
   document.getElementById("bordered").style.borderImageRepeat = evt.target.value;
 });
 </pre>
-</div>
 
 <h4 id="Results">Results</h4>
 
@@ -105,26 +101,11 @@ repetition.addEventListener("change", function (evt) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Backgrounds', '#the-border-image-repeat', 'border-image-repeat')}}</td>
-   <td>{{Spec2('CSS3 Backgrounds')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.border-image-repeat")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

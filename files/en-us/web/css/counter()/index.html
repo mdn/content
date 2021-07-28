@@ -7,6 +7,7 @@ tags:
   - CSS Function
   - Function
   - Reference
+browser-compat: css.types.counter
 ---
 <p>{{CSSRef}}</p>
 
@@ -32,9 +33,9 @@ counter(countername, upper-roman)</pre>
 
 <dl>
  <dt>{{cssxref("&lt;custom-ident&gt;")}}</dt>
- <dd>A name identifying the counter, which is the same case-sensitive name used for the {{cssxref("counter-reset")}} and  {{cssxref("counter-increment")}}. The name cannot start with two dashes and can't be <code>none</code>, <code>unset</code>, <code>initial</code>, or <code>inherit</code>.</dd>
- <dt><code style="white-space: nowrap;">&lt;counter-style&gt;</code></dt>
- <dd>A {{cssxref("&lt;list-style-type&gt;")}} name, {{cssxref("&lt;@counter-style&gt;")}} name or {{cssxref("symbols()")}} function, where a counter style name is a <code>numeric</code>, <code>alphabetic</code>, or <code>symbolic</code> simple predefined counter style, a complex longhand east Asian or Ethiopic predefined counter style, or other <a href="/en-US/docs/Web/CSS/CSS_Counter_Styles">predefined counter style</a>. If omitted, the counter-style defaults to <code>decimal</code>.</dd>
+ <dd>A name identifying the counter, which is the same case-sensitive name used for the {{cssxref("counter-reset")}} and {{cssxref("counter-increment")}}. The name cannot start with two dashes and can't be <code>none</code>, <code>unset</code>, <code>initial</code>, or <code>inherit</code>.</dd>
+ <dt><code>&lt;counter-style&gt;</code></dt>
+ <dd>A {{cssxref("&lt;list-style-type&gt;")}} name, {{cssxref("&lt;@counter-style&gt;")}} name or {{cssxref("symbols()")}} function, where a counter style name is a <code>numeric</code>, <code>alphabetic</code>, or <code>symbolic</code> simple predefined counter style, a complex longhand east Asian or Ethiopic predefined counter style, or other <a href="/en-US/docs/Web/CSS/CSS_Counter_Styles">predefined counter style</a>. If omitted, the counter-style defaults to <code>decimal</code>.</dd>
 </dl>
 
 <h3 id="Formal_syntax">Formal syntax</h3>
@@ -62,7 +63,7 @@ li {
   counter-increment: listCounter;
 }
 li::after {
-  content: "[" counter(listCounter) "] == ["
+  content: "[" counter(listCounter) "] == ["
                counter(listCounter, upper-roman) "]";
 }</pre>
 
@@ -89,7 +90,7 @@ li {
   counter-increment: count;
 }
 li::after {
-  content: "[" counter(count, <dfn>decimal-leading-zero</dfn>) "] == ["
+  content: "[" counter(count, <dfn>decimal-leading-zero</dfn>) "] == ["
                counter(count, lower-alpha) "]";
 }</pre>
 
@@ -99,31 +100,11 @@ li::after {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Lists", "#counter-functions", "CSS Counters")}}</td>
-   <td>{{Spec2("CSS3 Lists")}}</td>
-   <td>No change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS2.1", "generate.html#counter-styles", "CSS Counters")}}</td>
-   <td>{{Spec2("CSS2.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.types.counter")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

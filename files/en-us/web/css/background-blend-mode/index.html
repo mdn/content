@@ -6,6 +6,7 @@ tags:
   - CSS Property
   - Compositing and Blending
   - 'recipe:css-property'
+browser-compat: css.properties.background-blend-mode
 ---
 <div>{{CSSRef}}</div>
 
@@ -26,6 +27,7 @@ background-blend-mode: darken, luminosity;
 /* Global values */
 background-blend-mode: initial;
 background-blend-mode: inherit;
+background-blend-mode: revert;
 background-blend-mode: unset;
 </pre>
 
@@ -80,7 +82,7 @@ background-blend-mode: unset;
 <pre class="brush: css hidden">#div {
     width: 300px;
     height: 300px;
-    background: url('https://mdn.mozillademos.org/files/8543/br.png'),url('https://mdn.mozillademos.org/files/8545/tr.png');
+    background: url('br.png'),url('tr.png');
     background-blend-mode: screen;
 }</pre>
 
@@ -93,26 +95,11 @@ console.log(document.getElementById('div'));</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{ SpecName('Compositing', '#background-blend-mode', 'background-blend-mode') }}</td>
-			<td>{{ Spec2('Compositing') }}</td>
-			<td>Initial definition</td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.background-blend-mode")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

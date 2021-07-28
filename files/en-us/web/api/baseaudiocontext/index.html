@@ -10,6 +10,7 @@ tags:
   - Reference
   - Web Audio API
   - sound
+browser-compat: api.BaseAudioContext
 ---
 <div>{{APIRef("Web Audio API")}}</div>
 
@@ -85,7 +86,7 @@ tags:
  <dt>{{domxref("BaseAudioContext.createWaveShaper()")}}</dt>
  <dd>Creates a {{domxref("WaveShaperNode")}}, which is used to implement non-linear distortion effects.</dd>
  <dt>{{domxref("BaseAudioContext.decodeAudioData()")}}</dt>
- <dd>Asynchronously decodes audio file data contained in an {{domxref("ArrayBuffer")}}. In this case, the ArrayBuffer is usually loaded from an {{domxref("XMLHttpRequest")}}'s <code>response</code> attribute after setting the <code>responseType</code> to <code>arraybuffer</code>. This method only works on complete files, not fragments of audio files.</dd>
+ <dd>Asynchronously decodes audio file data contained in an {{jsxref("ArrayBuffer")}}. In this case, the <code>ArrayBuffer</code> is usually loaded from an {{domxref("XMLHttpRequest")}}'s <code>response</code> attribute after setting the <code>responseType</code> to <code>arraybuffer</code>. This method only works on complete files, not fragments of audio files.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
@@ -106,28 +107,15 @@ const finish = audioContext.destination;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#BaseAudioContext', 'BaseAudioContext')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.BaseAudioContext")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
-<ul style="margin-left: 40px;">
+<ul>
  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
  <li>{{domxref("AudioContext")}}</li>
  <li>{{domxref("OfflineAudioContext")}}</li>

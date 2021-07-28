@@ -6,11 +6,12 @@ tags:
   - CSS Animations
   - CSS Property
   - Reference
-  - 'recipe:css-shorthand-property'
+  - recipe:css-shorthand-property
+browser-compat: css.properties.animation
 ---
 <div>{{CSSRef}}</div>
 
-<p><span class="seoSummary">The <strong><code>animation</code></strong> <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand</a> <a href="/en-US/docs/Web/CSS">CSS</a> property applies an animation between styles.</span> It is a shorthand for {{cssxref("animation-name")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-timing-function")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-fill-mode")}}, and {{cssxref("animation-play-state")}}.</p>
+<p>The <strong><code>animation</code></strong> <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand</a> <a href="/en-US/docs/Web/CSS">CSS</a> property applies an animation between styles. It is a shorthand for {{cssxref("animation-name")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-timing-function")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-fill-mode")}}, and {{cssxref("animation-play-state")}}.</p>
 
 <div>{{EmbedInteractiveExample("pages/css/animation.html")}}</div>
 
@@ -25,182 +26,7 @@ animation: slidein 3s linear 1s;
 animation: slidein 3s;
 </pre>
 
-<div class="hidden" id="animation">
-<pre class="brush: html">&lt;div class="grid"&gt;
-  &lt;div class="col"&gt;
-    &lt;div class="note"&gt;
-      Given the following animation:
-      &lt;pre&gt;@keyframes slidein {
-  from { transform: scaleX(0); }
-  to   { transform: scaleX(1); }
-}&lt;/pre&gt;
-    &lt;/div&gt;
-    &lt;div class="row"&gt;
-      &lt;div class="cell"&gt;
-        &lt;button class="play"&gt;&lt;/button&gt;
-      &lt;/div&gt;
-      &lt;div class="cell flx"&gt;
-        &lt;div class="overlay"&gt;animation: 3s ease-in 1s 2 reverse both paused slidein;&lt;/div&gt;
-        &lt;div class="animation a1"&gt;&lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="row"&gt;
-      &lt;div class="cell"&gt;
-        &lt;button class="pause"&gt;&lt;/button&gt;
-      &lt;/div&gt;
-      &lt;div class="cell flx"&gt;
-        &lt;div class="overlay"&gt;animation: 3s linear 1s slidein;&lt;/div&gt;
-        &lt;div class="animation a2"&gt;&lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="row"&gt;
-      &lt;div class="cell"&gt;
-        &lt;button class="pause"&gt;&lt;/button&gt;
-      &lt;/div&gt;
-      &lt;div class="cell flx"&gt;
-        &lt;div class="overlay"&gt;animation: 3s slidein;&lt;/div&gt;
-        &lt;div class="animation a3"&gt;&lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
-
-<pre class="brush: css">html,body {
-  height: 100%;
-  box-sizing: border-box;
-}
-
-pre { margin-bottom: 0; }
-svg { width: 1.5em; height: 1.5em; }
-
-button {
-  width: 27px;
-  height: 27px;
-  background-size: 16px;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 3px;
-  cursor: pointer;
-}
-
-button.play {
-  background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cstyle%3Epath%20%7Bdisplay%3Anone%7D%20path%3Atarget%7Bdisplay%3Ablock%7D%3C%2Fstyle%3E%3Cpath%20id%3D%22play%22%20d%3D%22M3%2C3%20L3%2C13%20L13%2C8%20Z%22%20%2F%3E%3Cpath%20id%3D%22pause%22%20d%3D%22M5%2C4%20L7%2C4%20L7%2C13%20L5%2C13%20Z%20M9%2C4%20L11%2C4%20L11%2C13%20L9%2C13%20Z%22%20%2F%3E%3Cpath%20id%3D%22restart%22%20d%3D%22M13%2C9%20A5%2C5%2C1%2C1%2C1%2C8%2C4%20L8%2C2%20L12%2C5%20L8%2C8%20L8%2C6%20A3%2C3%2C1%2C1%2C0%2C11%2C9%20A1%2C1%2C1%2C1%2C1%2C13%2C9%20z%22%20%2F%3E%3C%2Fsvg%3E#play');
-}
-
-button.pause {
-  background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cstyle%3Epath%20%7Bdisplay%3Anone%7D%20path%3Atarget%7Bdisplay%3Ablock%7D%3C%2Fstyle%3E%3Cpath%20id%3D%22play%22%20d%3D%22M3%2C3%20L3%2C13%20L13%2C8%20Z%22%20%2F%3E%3Cpath%20id%3D%22pause%22%20d%3D%22M5%2C4%20L7%2C4%20L7%2C13%20L5%2C13%20Z%20M9%2C4%20L11%2C4%20L11%2C13%20L9%2C13%20Z%22%20%2F%3E%3Cpath%20id%3D%22restart%22%20d%3D%22M13%2C9%20A5%2C5%2C1%2C1%2C1%2C8%2C4%20L8%2C2%20L12%2C5%20L8%2C8%20L8%2C6%20A3%2C3%2C1%2C1%2C0%2C11%2C9%20A1%2C1%2C1%2C1%2C1%2C13%2C9%20z%22%20%2F%3E%3C%2Fsvg%3E#pause');
-}
-
-button.restart {
-  background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cstyle%3Epath%20%7Bdisplay%3Anone%7D%20path%3Atarget%7Bdisplay%3Ablock%7D%3C%2Fstyle%3E%3Cpath%20id%3D%22play%22%20d%3D%22M3%2C3%20L3%2C13%20L13%2C8%20Z%22%20%2F%3E%3Cpath%20id%3D%22pause%22%20d%3D%22M5%2C4%20L7%2C4%20L7%2C13%20L5%2C13%20Z%20M9%2C4%20L11%2C4%20L11%2C13%20L9%2C13%20Z%22%20%2F%3E%3Cpath%20id%3D%22restart%22%20d%3D%22M13%2C9%20A5%2C5%2C1%2C1%2C1%2C8%2C4%20L8%2C2%20L12%2C5%20L8%2C8%20L8%2C6%20A3%2C3%2C1%2C1%2C0%2C11%2C9%20A1%2C1%2C1%2C1%2C1%2C13%2C9%20z%22%20%2F%3E%3C%2Fsvg%3E#restart');
-}
-
-.grid {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  background: #EEE;
-  font: 1em monospace;
-}
-
-.row {
-  display: flex;
-  flex: 1 auto;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.col {
-  display: flex;
-  flex: 1 auto;
-  flex-direction: column;
-}
-
-.cell {
-  box-sizing: border-box;
-  margin: .5em;
-  padding: 0;
-  background-color: #FFF;
-  overflow: hidden;
-  text-align: left;
-}
-
-.flx {
-  flex: 1 0;
-}
-
-.note {
-  background: #fff3d4;
-  padding: 1em;
-  margin: .5em;
-  font: .8em sans-serif;
-  text-align: left;
-  flex: none;
-}
-
-.overlay { padding: .5em; }
-
-@keyframes slidein {
-  from { transform: scaleX(0); }
-  to { transform: scaleX(1); }
-}
-
-.a1 { animation: 3s ease-in 1s 2 reverse both paused slidein; }
-.a2 { animation: 3s linear 1s slidein; }
-.a3 { animation: 3s slidein; }
-
-.animation {
-  background: #3F87A6;
-  width: 100%;
-  height: calc(100% - 1.5em);
-  transform-origin: left center;
-}</pre>
-
-<pre class="brush: js">window.addEventListener('load', function () {
-  var ANIMATION = Array.from(document.querySelectorAll('.animation'));
-  var BUTTON    = Array.from(document.querySelectorAll('button'));
-
-  function toggleButton (btn, type) {
-    btn.classList.remove('play', 'pause', 'restart');
-    btn.classList.add(type);
-    btn.title = type.toUpperCase(type);
-  }
-
-  function playPause (i) {
-    var btn  = BUTTON[i];
-    var anim = ANIMATION[i];
-
-    if (btn.classList.contains('play')) {
-      anim.style.animationPlayState = 'running';
-      toggleButton(btn, 'pause');
-    } else if (btn.classList.contains('pause')) {
-      anim.style.animationPlayState = 'paused';
-      toggleButton(btn, 'play');
-    } else {
-      anim.classList.remove('a' + (i + 1));
-      setTimeout(function () {
-        toggleButton(btn, i === 0 ? 'play' : 'pause');
-        anim.style.animationPlayState = '';
-        anim.classList.add('a' + (i + 1));
-      }, 100)
-    }
-  }
-
-  ANIMATION.forEach(function (node, index) {
-    node.addEventListener('animationstart', function () { toggleButton(BUTTON[index], 'pause');   });
-    node.addEventListener('animationend',   function () { toggleButton(BUTTON[index], 'restart'); });
-  });
-
-  BUTTON.forEach(function (btn, index) {
-    btn.addEventListener('click', function () { playPause(index); });
-  });
-})</pre>
-</div>
-
-<p>{{EmbedLiveSample("animation", "100%", 260, "", "", "example-outcome-frame")}}</p>
-
-<p>A <a href="/en-US/docs/Web/Guide/CSS/Using_CSS_transitions#Which_CSS_properties_are_animatable">description of which properties are animatable</a> is available; it's worth noting that this description is also valid for <a href="/en-US/docs/Web/Guide/CSS/Using_CSS_transitions">CSS transitions</a>.</p>
+<p>A <a href="/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions#which_css_properties_are_animatable">description of which properties are animatable</a> is available; it's worth noting that this description is also valid for <a href="/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">CSS transitions</a>.</p>
 
 <h2 id="Constituent_properties">Constituent properties</h2>
 
@@ -244,13 +70,13 @@ button.restart {
 <h3 id="Values">Values</h3>
 
 <dl>
-	<dt><code id="&lt;single-animation-iteration-count&gt;">&lt;single-animation-iteration-count&gt;</code></dt>
+	<dt><code>&lt;single-animation-iteration-count&gt;</code></dt>
 	<dd>The number of times the animation is played. The value must be one of those available in {{cssxref("animation-iteration-count")}}.</dd>
-	<dt id="&lt;single-animation-direction&gt;"><code>&lt;single-animation-direction&gt;</code></dt>
+	<dt><code>&lt;single-animation-direction&gt;</code></dt>
 	<dd>The direction in which the animation is played. The value must be one of those available in {{cssxref("animation-direction")}}.</dd>
-	<dt id="&lt;single-animation-fill-mode&gt;"><code>&lt;single-animation-fill-mode&gt;</code></dt>
+	<dt><code>&lt;single-animation-fill-mode&gt;</code></dt>
 	<dd>Determines how styles should be applied to the animation's target before and after its execution. The value must be one of those available in {{cssxref("animation-fill-mode")}}.</dd>
-	<dt id="&lt;single-animation-play-state&gt;"><code>&lt;single-animation-play-state&gt;</code></dt>
+	<dt><code>&lt;single-animation-play-state&gt;</code></dt>
 	<dd>Determines whether the animation is playing or not. The value must be one of those available in {{cssxref("animation-play-state")}}.</dd>
 </dl>
 
@@ -264,7 +90,7 @@ button.restart {
 	<li><a href="https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity">Designing Safer Web Animation For Motion Sensitivity · An A List Apart Article</a></li>
 	<li><a href="https://css-tricks.com/introduction-reduced-motion-media-query/">An Introduction to the Reduced Motion Media Query | CSS-Tricks</a></li>
 	<li><a href="https://webkit.org/blog/7551/responsive-design-for-motion/">Responsive Design for Motion | WebKit</a></li>
-	<li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.2_%E2%80%94_Enough_Time_Provide_users_enough_time_to_read_and_use_content">MDN Understanding WCAG, Guideline 2.2 explanations</a></li>
+	<li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.2_%e2%80%94_enough_time_provide_users_enough_time_to_read_and_use_content">MDN Understanding WCAG, Guideline 2.2 explanations</a></li>
 	<li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-pause.html">Understanding Success Criterion 2.2.2 | W3C Understanding WCAG 2.0</a></li>
 </ul>
 
@@ -321,30 +147,15 @@ button.restart {
 
 <p>{{EmbedLiveSample('Cylon_Eye')}}</p>
 
-<p>See <a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations#Examples">Using CSS animations</a> for additional examples.</p>
+<p>See <a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations#examples">Using CSS animations</a> for additional examples.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName('CSS3 Animations', '#animation', 'animation')}}</td>
-			<td>{{Spec2('CSS3 Animations')}}</td>
-			<td>Initial definition.</td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.animation")}}</p>
+<p>{{Compat}}</p>
 
 <h3 id="Quantum_CSS_notes">Quantum CSS notes</h3>
 

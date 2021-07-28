@@ -178,7 +178,7 @@ tags:
 <pre class="brush: css">.container {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
-    grid-gap: 20px;
+    gap: 20px;
 }</pre>
 
 <p>These gaps can be any length unit or a percentage, but not an <code>fr</code> unit.</p>
@@ -197,7 +197,7 @@ tags:
 .container {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
-  grid-gap: 20px;
+  gap: 20px;
 }
 
 .container &gt; div {
@@ -241,7 +241,7 @@ tags:
 <pre class="brush: css">.container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
+    gap: 20px;
 }</pre>
 
 <p>You will now get 3 <code>1fr</code> tracks just as before. The first value passed to the repeat function is how many times you want the listing to repeat, while the second value is a track listing, which may be one or more tracks that you want to repeat.</p>
@@ -302,7 +302,7 @@ tags:
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: minmax(100px, auto);
-    grid-gap: 20px;
+    gap: 20px;
 }</pre>
 
 <p>If you add extra content you will see that the track expands to allow it to fit. Note that the expansion happens right along the row.</p>
@@ -347,7 +347,7 @@ tags:
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-auto-rows: minmax(100px, auto);
-  grid-gap: 20px;
+  gap: 20px;
 }</pre>
 </div>
 
@@ -415,7 +415,7 @@ footer {
                 .container {
                     display: grid;
                     grid-template-columns: 1fr 3fr;
-                    grid-gap: 20px;
+                    gap: 20px;
                 }
 header {
     grid-column: 1 / 3;
@@ -486,7 +486,7 @@ aside {
       "sidebar content"
       "footer footer";
   grid-template-columns: 1fr 3fr;
-  grid-gap: 20px;
+  gap: 20px;
 }
 
 header {
@@ -537,7 +537,7 @@ aside {
   "sidebar content"
   "footer footer";
   grid-template-columns: 1fr 3fr;
-  grid-gap: 20px;
+  gap: 20px;
 }
 
 header {
@@ -627,7 +627,7 @@ footer {
 .container {
   display: grid;
   grid-template-columns: repeat(12, minmax(0,1fr));
-  grid-gap: 20px;
+  gap: 20px;
 }
 
 header {

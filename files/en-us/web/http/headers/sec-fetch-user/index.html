@@ -2,13 +2,19 @@
 title: Sec-Fetch-User
 slug: Web/HTTP/Headers/Sec-Fetch-User
 tags:
+  - Sec-Fetch-User
   - Fetch metadate request headers
   - HTTP
-  - HTTP Headers
+  - HTTP Header
+  - Reference
+  - Request header
+browser-compat: http.headers.Sec-Fetch-User
 ---
-<p>{{HTTPSidebar}}{{Draft}}</p>
+<p>{{HTTPSidebar}}</p>
 
-<p>The <strong><code>Sec-Fetch-User</code></strong> fetch metadata header is only sent for requests initiated by user activation, and its value will always be <code>?1</code>.</p>
+<p>The <strong><code>Sec-Fetch-User</code></strong> {{Glossary("Fetch metadata request header", "fetch metadata request header")}} is only sent for requests initiated by user activation, and its value will always be <code>?1</code>.</p>
+
+<p>A server can use this header to identify whether a navigation request from a document, iframe, etc., was originated by the user.</p>
 
 <table class="properties">
  <tbody>
@@ -18,56 +24,52 @@ tags:
   </tr>
   <tr>
    <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>yes, since it has prefix <code>Sec-</code></td>
+   <td>yes (prefix <code>Sec-</code>)</td>
   </tr>
   <tr>
    <th scope="row">{{Glossary("CORS-safelisted request header")}}</th>
-   <td></td>
+   <td>no</td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: html">
-Sec-Fetch-User: ?1
+<pre class="brush: http">Sec-Fetch-User: ?1
 </pre>
 
-<h2 id="Value">Value</h2>
+<h2 id="Directives">Directives</h2>
 
 <p>The value will always be <code>?1</code>. When a request is triggered by something other than a user activation, the spec requires browsers to omit the header completely.</p>
 
 <h2 id="Examples">Examples</h2>
 
-<p>TODO</p>
+<p>If a user clicks on a page link to another page on the same origin, the resulting request would have the following headers:</p>
+
+<pre class="brush: http">Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Fetch Metadata','#sec-fetch-user-header', 'Sec-Fetch-User')}}</td>
-   <td>{{Spec2("Fetch Metadata")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+<p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("http.headers.Sec-Fetch-User")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{HTTPHeader("Sec-Fetch-Dest")}}</li>
- <li>{{HTTPHeader("Sec-Fetch-Mode")}}</li>
- <li>{{HTTPHeader("Sec-Fetch-Site")}}</li>
-</ul>
+  <li>Related headers
+   <ul>
+    <li>{{HTTPHeader("Sec-Fetch-Dest")}}</li>
+    <li>{{HTTPHeader("Sec-Fetch-Mode")}}</li>
+    <li>{{HTTPHeader("Sec-Fetch-Site")}}</li>
+    </ul>
+  </li>
+  <li><a href="https://web.dev/fetch-metadata/">Protect your resources from web attacks with Fetch Metadata</a> (web.dev)</li> 
+  <li><a href="https://secmetadata.appspot.com/">Fetch Metadata Request Headers playground</a> (secmetadata.appspot.com)</li>
+ </ul>

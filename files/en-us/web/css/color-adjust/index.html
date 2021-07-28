@@ -16,15 +16,22 @@ tags:
   - Web
   - color-adjust
   - 'recipe:css-property'
+browser-compat: css.properties.color-adjust
 ---
 <div>{{CSSRef}}</div>
 
-<p><span class="seoSummary">The <strong><code>color-adjust</code></strong> CSS property sets what, if anything, the {{Glossary("user agent")}} may do to optimize the appearance of the element on the output device.</span> By default, the browser is allowed to make any adjustments to the element's appearance it determines to be necessary and prudent given the type and capabilities of the output device.</p>
+<p>The <strong><code>color-adjust</code></strong> CSS property sets what, if anything, the {{Glossary("user agent")}} may do to optimize the appearance of the element on the output device. By default, the browser is allowed to make any adjustments to the element's appearance it determines to be necessary and prudent given the type and capabilities of the output device.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre class="brush: css">color-adjust: economy;
-color-adjust: exact;</pre>
+color-adjust: exact;
+
+/* Global values */
+color-adjust: inherit;
+color-adjust: initial;
+color-adjust: revert;
+color-adjust: unset;</pre>
 
 <p>The <code>color-adjust</code> property's value must be one of the following keywords.</p>
 
@@ -66,16 +73,16 @@ color-adjust: exact;</pre>
 <h4 id="CSS">CSS</h4>
 
 <pre class="brush: css">.my-box {
-  background-color: black;
-  background-image: linear-gradient(rgba(0, 0, 180, 0.5), rgba(70, 140, 220, 0.5));
-  color: #900;
-  width: 15rem;
-  height: 6rem;
-  text-align: center;
-  font: 24px "Helvetica", sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background-color: black;
+  background-image: linear-gradient(rgba(0, 0, 180, 0.5), rgba(70, 140, 220, 0.5));
+  color: #900;
+  width: 15rem;
+  height: 6rem;
+  text-align: center;
+  font: 24px "Helvetica", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color-adjust: exact;
 }
 </pre>
@@ -83,7 +90,7 @@ color-adjust: exact;</pre>
 <h4 id="HTML">HTML</h4>
 
 <pre class="brush: html">&lt;div class="my-box"&gt;
-  &lt;p&gt;Need more contrast!&lt;/p&gt;
+  &lt;p&gt;Need more contrast!&lt;/p&gt;
 &lt;/div&gt;</pre>
 
 <h4 id="Result">Result</h4>
@@ -92,28 +99,11 @@ color-adjust: exact;</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName('CSS Color Adjust', '#propdef-color-adjust', 'color-adjust')}}</td>
-			<td>{{Spec2('CSS Color Adjust')}}</td>
-			<td>Initial definition.</td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
-
-<p>{{Compat("css.properties.color-adjust")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

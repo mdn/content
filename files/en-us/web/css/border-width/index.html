@@ -7,6 +7,7 @@ tags:
   - CSS Property
   - Reference
   - 'recipe:css-shorthand-property'
+browser-compat: css.properties.border-width
 ---
 <div>{{CSSRef}}</div>
 
@@ -47,6 +48,7 @@ border-width: 1px 2em 0 4rem;
 /* Global keywords */
 border-width: inherit;
 border-width: initial;
+border-width: revert;
 border-width: unset;
 </pre>
 
@@ -64,37 +66,17 @@ border-width: unset;
 <dl>
  <dt><code>&lt;line-width&gt;</code></dt>
  <dd>Defines the width of the border, either as an explicit nonnegative {{cssxref("&lt;length&gt;")}} or a keyword. If it's a keyword, it must be one of the following values:
- <table class="standard-table">
-  <tbody>
-   <tr>
-    <td style="vertical-align: middle;"><code>thin</code></td>
-    <td style="vertical-align: middle;">
-     <div style="margin: 0.5em; width: 3em; height: 3em; border-style: solid; border-width: thin; background-color: palegreen; display: block;"></div>
-    </td>
-    <td style="vertical-align: middle;">A thin border</td>
-   </tr>
-   <tr>
-    <td style="vertical-align: middle;"><code>medium</code></td>
-    <td style="vertical-align: middle;">
-     <div style="margin: 0.5em; width: 3em; height: 3em; border-style: solid; border-width: medium; background-color: palegreen; display: block;"></div>
-    </td>
-    <td style="vertical-align: middle;">A medium border</td>
-   </tr>
-   <tr>
-    <td style="vertical-align: middle;"><code>thick</code></td>
-    <td style="vertical-align: middle;">
-     <div style="margin: 0.5em; width: 3em; height: 3em; border-style: solid; border-width: thick; background-color: palegreen; display: block;"></div>
-    </td>
-    <td style="vertical-align: middle;">A thick border</td>
-   </tr>
-  </tbody>
- </table>
-
- <div class="note">
- <p><strong>Note:</strong> Because the specification doesn't define the exact thickness denoted by each keyword, the precise result when using one of them is implementation-specific. Nevertheless, they always follow the pattern <code>thin ≤ medium ≤ thick</code>, and the values are constant within a single document.</p>
- </div>
+   <ul>
+     <li><code>thin</code></li>
+     <li><code>medium</code></li>
+     <li><code>thick</code></li>
+  </ul>
  </dd>
 </dl>
+
+<div class="note">
+ <p><strong>Note:</strong> Because the specification doesn't define the exact thickness denoted by each keyword, the precise result when using one of them is implementation-specific. Nevertheless, they always follow the pattern <code>thin ≤ medium ≤ thick</code>, and the values are constant within a single document.</p>
+</div>
 
 <h2 id="Formal_definition">Formal definition</h2>
 
@@ -149,36 +131,11 @@ p {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Backgrounds', '#the-border-width', 'border-width')}}</td>
-   <td>{{Spec2('CSS3 Backgrounds')}}</td>
-   <td>No direct change; the {{cssxref("&lt;length&gt;")}} CSS data type extension has an effect on this property.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'box.html#border-width-properties', 'border-width')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Added the constraint that values' meaning must be constant inside a document.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#border-width', 'border-width')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.border-width")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -1,0 +1,59 @@
+---
+title: SVGPointList.appendItem()
+slug: Web/API/SVGPointList/appendItem
+tags:
+  - API
+  - Method
+  - Reference
+  - appendItem
+  - SVGPointList
+browser-compat: api.SVGPointList.appendItem
+---
+<div>{{APIRef("SVG")}}</div>
+
+<p class="summary">The <strong><code>appendItem()</code></strong> method of the {{domxref("SVGPointList")}} interface adds a {{domxref("SVGPoint","point")}} to the end of the list.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js">SVGPointList.appendItem(obj);</pre>
+
+<dl>
+  <dt><code>obj</code></dt>
+  <dd>An {{domxref("SVGPoint")}} object containing the coordinates of the point to be appended.</dd>
+</dl>
+
+<h3 id="Returns">Return value</h3>
+
+<p>The {{domxref("SVGPoint")}} object that was appended.</p>
+
+<h3 id="Exceptions">Exceptions</h3>
+
+<dl>
+  <dt>{{domxref("DOMException")}} <code>NoModicationAllowedError</code></dt>
+  <dd>Thrown if the list is read-only.</dd>
+</dl>
+
+<h2 id="Examples">Examples</h2>
+
+<p>The following example shows an SVG which contains a {{SVGElement("polyline")}} with five coordinate pairs. A new {{domxref("SVGPoint")}} is created, and appended to the list.</p>
+
+<pre class="brush: html">&lt;svg id="svg" viewBox="-10 -10 120 120" xmlns="http://www.w3.org/2000/svg"&gt;
+  &lt;polyline id="example" stroke="black" fill="none"
+   points="50,0 21,90 98,35 2,35 79,90"/&gt;
+</svg></pre>
+
+<pre class="brush: js">let example = document.getElementById("example");
+let svgpoint = document.getElementById("svg").createSVGPoint();
+svgpoint.y = 10;
+svgpoint.x = 10;
+console.log(example.points.appendItem(svgpoint));</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<p>{{Specifications}}</p>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+
+<p>{{Compat}}</p>

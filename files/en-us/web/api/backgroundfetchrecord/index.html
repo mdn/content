@@ -1,0 +1,49 @@
+---
+title: BackgroundFetchRecord
+slug: Web/API/BackgroundFetchRecord
+tags:
+  - API
+  - Interface
+  - Reference
+  - BackgroundFetchRecord
+browser-compat: api.BackgroundFetchRecord
+---
+<div>{{DefaultAPISidebar("Background Fetch API")}}</div>
+
+<p class="summary">The <strong><code>BackgroundFetchRecord</code></strong> interface of the {{domxref('Background Fetch API','','',' ')}} represents an individual request and response.</p>
+
+<p>A <code>BackgroundFetchRecord</code> is created by the {{domxref("BackgroundFetchManager.fetch()","BackgroundFetchManager.fetch()")}} method, therefore there is no constructor for this interface.</p>
+
+<p>There will be one <code>BackgroundFetchRecord</code> for each resource requested by <code>fetch()</code>.</p>
+
+<h2 id="Properties">Properties</h2>
+
+<dl>
+  <dt>{{domxref("BackgroundFetchRecord.request","request")}}{{ReadOnlyInline}}</dt>
+  <dd>Returns a {{domxref("Request")}}.</dd>
+  <dt>{{domxref("BackgroundFetchRecord.responseReady","responseReady")}}{{ReadOnlyInline}}</dt>
+  <dd>Returns a promise that resolves with a {{domxref("Response")}}.</dd>
+</dl>
+
+<h2 id="Examples">Examples</h2>
+
+<p>In this example an individual <code>BackgroundFetchRecord</code> is returned using {{domxref("BackgroundFetchManager.fetch()","BackgroundFetchManager.fetch()")}}. The {{domxref("BackgroundFetchRecord.request")}} and {{domxref("BackgroundFetchRecord.responseReady")}} are returned and logged to the console.</p>
+
+<pre class="brush: js">bgFetch.match('/ep-5.mp3').then(async (record) => {
+  if (!record) {
+    console.log('No record found');
+    return;
+  }
+
+  console.log(`Here's the request`, record.request);
+  const response = await record.responseReady;
+  console.log(`And here's the response`, response);
+});</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+{{Specifications}}
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>

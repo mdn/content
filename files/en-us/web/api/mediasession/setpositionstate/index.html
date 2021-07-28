@@ -16,13 +16,14 @@ tags:
 - rate
 - setPositionState
 - speed
+browser-compat: api.MediaSession.setPositionState
 ---
 <p>{{APIRef("Media Session API")}}</p>
 
-<p><span class="seoSummary">The {{domxref("MediaSession")}} method
+<p>The {{domxref("MediaSession")}} method
     <code><strong>setPositionState()</strong></code> is used to update the current
     document's media playback position and speed for presentation by user's device in any
-    kind of interface that provides details about ongoing media.</span> This can be
+    kind of interface that provides details about ongoing media. This can be
   particularly useful if your code implements a player for type of media not directly
   supported by the browser.</p>
 
@@ -38,9 +39,18 @@ tags:
 
 <dl>
   <dt><code>stateDict</code> {{optional_inline}}</dt>
-  <dd>An object conforming to the {{domxref("MediaPositionState")}} dictionary, providing
-    updated information about the playback position and speed of the document's ongoing
-    media. If the object is empty, the existing playback state information is cleared.
+  <dd>An object providing updated information about the playback position and speed
+    of the document's ongoing media. If the object is empty, the existing playback
+    state information is cleared. This object is a dictionary that contains the following
+    parameters:
+    <dl>
+      <dt><code>duration</code></dt>
+      <dd>A floating-point value giving the total duration of the current media in seconds. This should always be a positive number, with positive infinity (<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity">Infinity</a></code>) indicating media without a defined end, such as a live stream.</dd>
+      <dt><code>playbackRate</code></dt>
+      <dd>A floating-point value indicating the rate at which the media is being played, as a ratio relative to its normal playback speed. Thus, a value of 1 is playing at normal speed, 2 is playing at double speed, and so forth. Negative values indicate that the media is playing in reverse; -1 indicates playback at the normal speed but backward, -2 is double speed in reverse, and so on.</dd>
+      <dt><code>position</code></dt>
+      <dd>A floating-point value indicating the last reported playback position of the media in seconds. This must always be a positive value.</dd>
+     </dl>
   </dd>
 </dl>
 
@@ -56,12 +66,11 @@ tags:
     <p>This error can occur in an array of circumstances:</p>
 
     <ul>
-      <li>The specified {{domxref("MediaPositionState")}} object's
-        {{domxref("MediaPositionState.duration", "duration")}} is missing, negative, or
+      <li>The specified object's <code>duration</code> is missing, negative, or
         <code>null</code>.</li>
-      <li>{{domxref("MediaPositionState.position", "position")}} is missing or null, or is
+      <li>Its <code>position</code> is missing or null, or is
         either negative or greater than <code>duration</code>.</li>
-      <li>The {{domxref("MediaPositionState.playbackRate", "playbackRate")}} is zero.</li>
+      <li>Its <code>playbackRate</code> is zero.</li>
     </ul>
   </dd>
 </dl>
@@ -97,29 +106,8 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('Media Session','#dom-mediasession-setpositionstate','MediaSession.setPositionState()')}}
-      </td>
-      <td>{{Spec2('Media Session')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table on this page is generated from structured data.
-  If you'd like to contribute to the data, please check out <a
-    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
-  and send us a pull request.</p>
-
-<p>{{Compat("api.MediaSession.setPositionState")}}</p>
+<p>{{Compat}}</p>

@@ -23,8 +23,9 @@ tags:
   - getNativeFramebufferScaleFactor
   - native
   - resolution
+browser-compat: api.XRWebGLLayer.getNativeFramebufferScaleFactor
 ---
-<p>{{securecontext_header}}{{APIRef("WebXR Device API")}}</p>
+<p>{{APIRef("WebXR Device API")}}</p>
 
 <p><span class="seoSummary">The static method
     <code><strong>XRWebGLLayer.getNativeFramebufferScaleFactor()</strong></code> returns a
@@ -33,14 +34,13 @@ tags:
     device's frame buffer.</span></p>
 
 <p>This information can be used when creating a new <code>XRWebGLLayer</code> to configure
-  the {{domxref("XRWebGLLayerInit")}} property
-  {{domxref("XRWebGLLayerInit.framebufferScaleFactor", "framebufferScaleFactor")}} in the
-  options specified when calling the <code>XRWebGLLayer()</code> constructor. See the
+  the <code>framebufferScaleFactor</code> in the <code>layerInit</code> configuration object
+  specified when calling the <code>XRWebGLLayer()</code> constructor. See the
   {{anch("Usage notes")}} and {{anch("Examples")}} for details.</p>
 
 <p>If the scaling factor is 1.0, then the frame buffer pixels and the native display
   pixels are the same size. If the scaling factor is greater than zero, then the frame
-  buffer is smaller than the diplay's native dimensions, resulting in the output being
+  buffer is smaller than the display's native dimensions, resulting in the output being
   up-scaled for display to the screen after rendering into the frame buffer. If the
   scaling factor is less than zero, the frame buffer is <em>larger</em> than the native
   resolution of the display, resulting in the frame buffer's contents being scaled down
@@ -138,9 +138,8 @@ tags:
   calling <code>XRWebGLLayer</code>'s <code>getNativeFramebufferScaleFactor()</code>
   static function to get the scale factor needed to reach the native resolution, and we
   then pass that into the {{domxref("XRWebGLLayer.XRWebGLLayer", "WebGLLayer()")}}
-  constructor as the value of the {{domxref("XRWebGLLayerInit.framebufferScaleFactor",
-  "framebufferScaleFactor")}} property in its <code>layerInit</code> dictionary, which is
-  an {{domxref("XRWebGLLayerInit")}} object.</p>
+  constructor as the value of the <code>framebufferScaleFactor</code>
+  property in its <code>layerInit</code> configuration object.</p>
 
 <p>That gets us a new {{domxref("XRWebGLLayer")}} object representing a rendering surface
   we can use for the {{domxref("XRSession")}}; we set it as the rendering surface for
@@ -159,24 +158,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('WebXR','#dom-xrwebgllayer-getnativeframebufferscalefactor','static XRWebGLLayer.getNativeFramebufferScaleFactor()')}}</td>
-      <td>{{Spec2('WebXR')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.XRWebGLLayer.getNativeFramebufferScaleFactor")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

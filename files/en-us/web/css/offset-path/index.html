@@ -9,7 +9,8 @@ tags:
   - Reference
   - motion-path
   - offset-path
-  - 'recipe:css-property'
+  - recipe:css-property
+browser-compat: css.properties.offset-path
 ---
 <div>{{CSSRef}}</div>
 
@@ -41,6 +42,7 @@ offset-path: stroke-box;
 /* Global values */
 offset-path: inherit;
 offset-path: initial;
+offset-path: revert;
 offset-path: unset;
 </pre>
 
@@ -52,17 +54,17 @@ offset-path: unset;
  <dt><code>url()</code></dt>
  <dd>References the ID of an SVG shape -- <code>circle</code>, <code>ellipse</code>, <code>line</code>, <code>path</code>, <code>polygon</code>, <code>polyline</code>, or <code>rect</code> -- using the shape's geometry as the path.</dd>
  <dt><code>&lt;basic-shape&gt;</code></dt>
- <dd>Specifies a <a href="/en-US/docs/Web/CSS/CSS_Shapes/Basic_Shapes">CSS shape</a> including <code>circle()</code>, <code>ellipse()</code>, <code>inset()</code>, <code>polygon()</code>, or <code>path()</code>.</dd>
  <dd>
- <dl>
-  <dt><code>path()</code></dt>
-  <dd>A path string defined with SVG coordinate syntax.</dd>
- </dl>
+  <p>Specifies a <a href="/en-US/docs/Web/CSS/CSS_Shapes/Basic_Shapes">CSS shape</a> including <code>circle()</code>, <code>ellipse()</code>, <code>inset()</code>, <code>polygon()</code>, or <code>path()</code>.</p>
+  <dl>
+   <dt><code>path()</code></dt>
+   <dd>A path string defined with SVG coordinate syntax.</dd>
+  </dl>
  </dd>
  <dt><code>none</code></dt>
  <dd>Specifies no motion path at all.</dd>
 </dl>
-
+ 
 <h2 id="Description">Description</h2>
 
 <p>This property defines a path an animated element can follow. An offset path is either a specified path with one or multiple sub-paths or the geometry of a not-styled basic shape. The element’s exact position on the offset path is determined by the {{cssxref("offset-distance")}} property. Each shape or path must define an initial position for the computed value of <code>0</code> for {{cssxref("offset-distance")}} and an initial direction which specifies the rotation of the object to the initial position.</p>
@@ -147,35 +149,18 @@ offset-path: unset;
 
 <h2 id="Specifications">Specifications</h2>
 
-<p>&lt;body&gt;</p>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th>Specification</th>
-   <th>Status</th>
-   <th>Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Motion Path Level 1', '#offset-path-property', 'offset-path')}}</td>
-   <td>{{Spec2('Motion Path Level 1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.offset-path")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
  <li>{{cssxref("offset")}}</li>
  <li>{{cssxref("offset-distance")}}</li>
- <li>{{cssxref("offset-rotation")}}</li>
+ <li>{{cssxref("offset-rotate")}}</li>
  <li><a href="/en-US/docs/Web/SVG/Tutorial/Paths">SVG &lt;path&gt; </a></li>
 </ul>
 
@@ -183,7 +168,7 @@ offset-path: unset;
 
 <ul>
  <li><a href="https://codepen.io/team/css-tricks/pen/WZdKMq">Examples of the various values</a></li>
- <li><a href="http://codepen.io/ericwilligers/pen/jrbJPp">Triangle</a></li>
- <li><a href="http://codepen.io/ericwilligers/pen/bwVkNa">Scissors</a></li>
+ <li><a href="https://codepen.io/ericwilligers/pen/jrbJPp">Triangle</a></li>
+ <li><a href="https://codepen.io/ericwilligers/pen/bwVkNa">Scissors</a></li>
  <li><a href="https://jsfiddle.net/ericwilligers/r1snqdan/">Eyes</a></li>
 </ul>

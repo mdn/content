@@ -6,6 +6,7 @@ tags:
 - HTML DOM
 - Property
 - Reference
+browser-compat: api.Window.name
 ---
 <div>{{APIRef}}</div>
 
@@ -31,8 +32,7 @@ window.name = <var>string</var>;
   if it was reloaded).</p>
 
 <p><code>Window.name</code> has also been used in some frameworks for providing
-  cross-domain messaging (e.g. <a
-    href="http://www.thomasfrank.se/sessionvars.html">SessionVars</a> and Dojo's <a
+  cross-domain messaging (e.g. Dojo's <a
     href="https://www.sitepen.com/blog/2008/07/22/windowname-transport/">dojox.io.windowName</a>)
   as a more secure alternative to JSONP. Modern web applications hosting sensitive data
   should, however, not rely on <code>window.name</code> for cross-domain messaging — that
@@ -59,26 +59,8 @@ window.name = <var>string</var>;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', 'browsers.html#dom-name', 'Window.name')}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML5 W3C', 'browsers.html#dom-name', 'Window.name')}}</td>
-      <td>{{Spec2('HTML5 W3C')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Window.name")}}</p>
+<p>{{Compat}}</p>

@@ -7,10 +7,11 @@ tags:
   - CSS Text Decoration
   - Reference
   - 'recipe:css-shorthand-property'
+browser-compat: css.properties.text-decoration
 ---
 <div>{{CSSRef}}</div>
 
-<p><span class="seoSummary">The <strong><code>text-decoration</code></strong> <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand</a> <a href="/en-US/docs/Web/CSS">CSS</a> property sets the appearance of decorative lines on text.</span> It is a shorthand for {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-style")}}, and the newer {{cssxref("text-decoration-thickness")}} property.</p>
+<p>The <strong><code>text-decoration</code></strong> <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand</a> <a href="/en-US/docs/Web/CSS">CSS</a> property sets the appearance of decorative lines on text. It is a shorthand for {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-style")}}, and the newer {{cssxref("text-decoration-thickness")}} property.</p>
 
 <div>{{EmbedInteractiveExample("pages/css/text-decoration.html")}}</div>
 
@@ -28,6 +29,16 @@ tags:
 </ul>
 
 <h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: css">text-decoration: underline;
+text-decoration: overline red;
+text-decoration: none;
+
+/* Global values */
+text-decoration: inherit;
+text-decoration: initial;
+text-decoration: revert;
+text-decoration: unset;</pre>
 
 <p id="Values">The <code>text-decoration</code> property is specified as one or more space-separated values representing the various longhand text-decoration properties.</p>
 
@@ -102,41 +113,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName('CSS4 Text Decoration')}}</td>
-			<td>{{Spec2('CSS4 Text Decoration')}}</td>
-			<td>Adds {{cssxref("text-decoration-thickness")}}; note that this isn't yet officially part of the shorthand — this is as yet unspecified.</td>
-		</tr>
-		<tr>
-			<td>{{SpecName('CSS3 Text Decoration', '#text-decoration-property', 'text-decoration')}}</td>
-			<td>{{Spec2('CSS3 Text Decoration')}}</td>
-			<td>Transformed into a shorthand property. Added support for the value of {{cssxref('text-decoration-style')}}.</td>
-		</tr>
-		<tr>
-			<td>{{SpecName('CSS2.1', 'text.html#lining-striking-props', 'text-decoration')}}</td>
-			<td>{{Spec2('CSS2.1')}}</td>
-			<td>No significant changes.</td>
-		</tr>
-		<tr>
-			<td>{{SpecName('CSS1', '#text-decoration', 'text-decoration')}}</td>
-			<td>{{Spec2('CSS1')}}</td>
-			<td>Initial definition.</td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.text-decoration")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

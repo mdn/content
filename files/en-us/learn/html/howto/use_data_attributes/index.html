@@ -11,11 +11,11 @@ tags:
 ---
 <div>{{LearnSidebar}}</div>
 
-<p><a href="/en-US/docs/Web/Guide/HTML/HTML5">HTML5</a> is designed with extensibility in mind for data that should be associated with a particular element but need not have any defined meaning. <a href="/en-US/docs/Web/HTML/Global_attributes/data-*"><code>data-*</code> attributes</a> allow us to store extra information on standard, semantic HTML elements without other hacks such as non-standard attributes, extra properties on DOM, or {{domxref("Node.setUserData()")}}.</p>
+<p><a href="/en-US/docs/Glossary/HTML5">HTML5</a> is designed with extensibility in mind for data that should be associated with a particular element but need not have any defined meaning. <a href="/en-US/docs/Web/HTML/Global_attributes/data-*"><code>data-*</code> attributes</a> allow us to store extra information on standard, semantic HTML elements without other hacks such as non-standard attributes, or extra properties on DOM.</p>
 
 <h2 id="HTML_syntax">HTML syntax</h2>
 
-<p>The syntax is simple. Any attribute on any element whose attribute name starts with <code>data-</code> is a data attribute. Say you have an article and you want to store some extra information that doesn’t have any visual representation. Just use <code>data</code> attributes for that:</p>
+<p>The syntax is simple. Any attribute on any element whose attribute name starts with <code>data-</code> is a data attribute. Say you have an article and you want to store some extra information that doesn't have any visual representation. Just use <code>data</code> attributes for that:</p>
 
 <pre class="brush: html">&lt;article
   id="electric-cars"
@@ -27,11 +27,13 @@ tags:
 
 <h2 id="JavaScript_access">JavaScript access</h2>
 
-<p>Reading the values of these attributes out in <a href="/en-US/docs/Web/JavaScript">JavaScript</a> is also very simple. You could use {{domxref("Element.getAttribute", "getAttribute()")}} with their full HTML name to read them, but the standard defines a simpler way: a {{domxref("DOMStringMap")}} you can read out via a {{domxref("HTMLOrForeignElement/dataset", "dataset")}} property.</p>
+<p>Reading the values of these attributes out in <a href="/en-US/docs/Web/JavaScript">JavaScript</a> is also very simple. You could use {{domxref("Element.getAttribute", "getAttribute()")}} with their full HTML name to read them, but the standard defines a simpler way: a {{domxref("DOMStringMap")}} you can read out via a {{domxref("HTMLElement/dataset", "dataset")}} property.</p>
 
 <p>To get a <code>data</code> attribute through the <code>dataset</code> object, get the property by the part of the attribute name after <code>data-</code> (note that dashes are converted to camelCase).</p>
 
 <pre class="brush: js">const article = document.querySelector('#electric-cars');
+// The following would also work:
+// const article = document.getElementById("electric-cars")
 
 article.dataset.columns // "3"
 article.dataset.indexNumber // "12314"
@@ -76,6 +78,6 @@ article[data-columns='4'] {
 
 <ul>
  <li>This article is adapted from <a href="https://hacks.mozilla.org/2012/10/using-data-attributes-in-javascript-and-css/">Using data attributes in JavaScript and CSS on hacks.mozilla.org</a>.</li>
- <li>Custom attributes are also supported in SVG 2; see {{domxref("HTMLOrForeignElement/dataset", "SVGElement.dataset")}} and {{SVGAttr("data-*")}} for more information.</li>
+ <li>Custom attributes are also supported in SVG 2; see {{domxref("SVGElement.dataset")}} and {{SVGAttr("data-*")}} for more information.</li>
  <li><a href="https://www.sitepoint.com/use-html5-data-attributes/">How to use HTML5 data attributes</a> (Sitepoint)</li>
 </ul>

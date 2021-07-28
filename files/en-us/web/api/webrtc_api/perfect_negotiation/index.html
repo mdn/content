@@ -50,13 +50,10 @@ tags:
 
 <p>First, the signaling channel needs to be opened and the {{domxref("RTCPeerConnection")}} needs to be created. The {{Glossary("STUN")}} server listed here is obviously not a real one; you'll need to replace <code>stun.myserver.tld</code> with the address of a real STUN server.</p>
 
-<pre class="brush: js">const constraints = { audio: true, video: true };
+<pre class="brush: js">
 const config = {
   iceServers: [{ urls: "stun:stun.mystunserver.tld" }]
 };
-
-const selfVideo = document.querySelector("video.selfview");
-const remoteVideo = document.querySelector("video.remoteview");
 
 const signaler = new SignalingChannel();
 const pc = new RTCPeerConnection(config);
@@ -66,9 +63,15 @@ const pc = new RTCPeerConnection(config);
 
 <h3 id="Connecting_to_a_remote_peer">Connecting to a remote peer</h3>
 
-<p>The <code>start()</code> function shown here can be called by either of the two end-points that want to talk to one another. It doesn't matter who does it first; the negotiation will just work.</p>
 
-<pre class="brush: js">async function start() {
+
+<pre class="brush: js">
+const constraints = { audio: true, video: true };
+const selfVideo = document.querySelector("video.selfview");
+const remoteVideo = document.querySelector("video.remoteview");
+
+
+async function start() {
   try {
     const stream = await navigator.mediaDevices.getUserMedia(constraints);
 
@@ -82,6 +85,7 @@ const pc = new RTCPeerConnection(config);
 }
 </pre>
 
+<p>The <code>start()</code> function shown above can be called by either of the two end-points that want to talk to one another. It doesn't matter who does it first; the negotiation will just work.</p>
 <p>This isn't appreciably different from older WebRTC connection establishment code. The user's camera and microphone are obtained by calling {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}. The resulting media tracks are then added to the {{domxref("RTCPeerConnection")}} by passing them into {{domxref("RTCPeerConnection.addTrack", "addTrack()")}}. Then, finally, the media source for the self-view {{HTMLElement("video")}} element indicated by the <code>selfVideo</code> constant is set to the camera and microphone stream, allowing the local user to see what the other peer sees.</p>
 
 <h3 id="Handling_incoming_tracks">Handling incoming tracks</h3>
@@ -127,7 +131,7 @@ pc.onnegotiationneeded = async () =&gt; {
 };
 </pre>
 
-<p>Note that <code>setLocalDescription()</code> without arguments automatically creates and sets the appropriate description based on the current {{domxref("RTCPeerConnection.signalingState", "signalingState")}}. The set description is either an answer to the most recent offer from the remote peer <em>or</em> a freshly-created offer if there's no negotiation underway. Here, it will be always be an <code>offer</code>, because the negotiationneeded event is only fired in <code>stable</code> state.</p>
+<p>Note that <code>setLocalDescription()</code> without arguments automatically creates and sets the appropriate description based on the current {{domxref("RTCPeerConnection.signalingState", "signalingState")}}. The set description is either an answer to the most recent offer from the remote peer <em>or</em> a freshly-created offer if there's no negotiation underway. Here, it will always be an <code>offer</code>, because the negotiationneeded event is only fired in <code>stable</code> state.</p>
 
 <p>We set a Boolean variable, <code>makingOffer</code> to <code>true</code> to mark that we're preparing an offer. To avoid races, we'll use this value later instead of the signaling state to determine whether or not an offer is being processed because the value of {{domxref("RTCPeerConnection.signalingState", "signalingState")}} changes asynchronously, introducing a glare opportunity.</p>
 
@@ -352,7 +356,7 @@ signaler.onmessage = async ({ data: { description, candidate } }) =&gt; {
 
 <h3 id="Explicit_restartIce_method_added">Explicit restartIce() method added</h3>
 
-<p>The techniques previously used to trigger an <a href="/en-US/docs/Web/API/WebRTC_API/Session_lifetime#ICE_restart">ICE restart</a> while handling the event{{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}} have significant flaws. These flaws have made it difficult to safely and reliably trigger a restart during negotiation. The perfect negotiation improvements have fixed this by adding a new {{domxref("RTCPeerConnection.restartIce", "restartIce()")}} method to <code>RTCPeerConnection</code>.</p>
+<p>The techniques previously used to trigger an <a href="/en-US/docs/Web/API/WebRTC_API/Session_lifetime#ice_restart">ICE restart</a> while handling the event{{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}} have significant flaws. These flaws have made it difficult to safely and reliably trigger a restart during negotiation. The perfect negotiation improvements have fixed this by adding a new {{domxref("RTCPeerConnection.restartIce", "restartIce()")}} method to <code>RTCPeerConnection</code>.</p>
 
 <h4 id="The_old_way_2">The old way</h4>
 

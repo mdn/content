@@ -7,6 +7,7 @@ tags:
   - Layout
   - Reference
   - recipe:css-property
+browser-compat: css.properties.writing-mode
 ---
 <div>{{CSSRef}}</div>
 
@@ -26,6 +27,7 @@ writing-mode: vertical-lr;
 /* Global values */
 writing-mode: inherit;
 writing-mode: initial;
+writing-mode: revert;
 writing-mode: unset;</pre>
 
 <p>The <code>writing-mode</code> property is specified as one of the values listed below. The flow direction in horizontal scripts is also affected by the <a href="https://www.w3.org/International/questions/qa-scripts.en">directionality of that script</a>, either left-to-right (<code>ltr</code>, like English and most other languages) or right-to-left (<code>rtl</code>, like Hebrew or Arabic).</p>
@@ -123,10 +125,7 @@ writing-mode: unset;</pre>
 
 <h4 id="CSS">CSS</h4>
 
-<div class="hidden">
-<p>Some preparatory CSS just to make things look a little better:</p>
-
-<pre class="brush: css">table {
+<pre class="brush: css hidden">table {
   border-collapse:collapse;
 }
 td, th {
@@ -139,7 +138,6 @@ th {
   height:75px;
   width:75px;
 }</pre>
-</div>
 
 <p>The CSS that adjusts the directionality of the content looks like this:</p>
 
@@ -184,31 +182,11 @@ th {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName("CSS4 Writing Modes", "#block-flow", "writing-mode")}}</td>
-			<td>{{Spec2("CSS4 Writing Modes")}}</td>
-			<td>Add <code>sideways-lr</code> and <code>sideways-rl</code></td>
-		</tr>
-		<tr>
-			<td>{{SpecName("CSS3 Writing Modes", "#block-flow", "writing-mode")}}</td>
-			<td>{{Spec2("CSS3 Writing Modes")}}</td>
-			<td>Initial definition</td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.writing-mode")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

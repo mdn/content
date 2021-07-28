@@ -8,6 +8,7 @@ tags:
   - CSS Counter Styles
   - CSS Descriptor
   - Reference
+browser-compat: css.at-rules.counter-style.system
 ---
 <div>{{CSSRef}}</div>
 
@@ -84,14 +85,12 @@ system: extends decimal;
 
 <h4 id="CSS">CSS</h4>
 
-<div class="hidden">
-<pre class="brush: html">&lt;ul&gt;
+<pre class="brush: html hidden">&lt;ul&gt;
   &lt;li&gt;One&lt;/li&gt;
   &lt;li&gt;Two&lt;/li&gt;
   &lt;li&gt;Three&lt;/li&gt;
 &lt;/ul&gt;
 </pre>
-</div>
 
 <pre class="brush: css">@counter-style fisheye {
  system: cyclic;
@@ -119,15 +118,14 @@ ul {
 
 <h4 id="CSS_2">CSS</h4>
 
-<div class="hidden">
-<pre class="brush: html">&lt;ul&gt;
+
+<pre class="brush: html hidden">&lt;ul&gt;
  &lt;li&gt;One&lt;/li&gt;
  &lt;li&gt;Two&lt;/li&gt;
  &lt;li&gt;Three&lt;/li&gt;
  &lt;li&gt;Four&lt;/li&gt;
  &lt;li&gt;Five&lt;/li&gt;
 &lt;/ul&gt;</pre>
-</div>
 
 <pre class="brush: css">@counter-style circled-digits {
  system: fixed;
@@ -158,8 +156,8 @@ ul {
 
 <h4 id="CSS_3">CSS</h4>
 
-<div class="hidden">
-<pre class="brush: html">&lt;ul&gt;
+
+<pre class="brush: html hidden">&lt;ul&gt;
  &lt;li&gt;One&lt;/li&gt;
  &lt;li&gt;Two&lt;/li&gt;
  &lt;li&gt;Three&lt;/li&gt;
@@ -169,7 +167,6 @@ ul {
  &lt;li&gt;Seven&lt;/li&gt;
  &lt;li&gt;Eight&lt;/li&gt;
 &lt;/ul&gt;</pre>
-</div>
 
 <pre class="brush: css">@counter-style abc {
  system: symbolic;
@@ -200,8 +197,7 @@ ul {
 
 <h4 id="CSS_4">CSS</h4>
 
-<div class="hidden">
-<pre class="brush: html">&lt;ul&gt;
+<pre class="brush: html hidden">&lt;ul&gt;
  &lt;li&gt;One&lt;/li&gt;
  &lt;li&gt;Two&lt;/li&gt;
  &lt;li&gt;Three&lt;/li&gt;
@@ -212,7 +208,6 @@ ul {
  &lt;li&gt;Eight&lt;/li&gt;
 &lt;/ul&gt;
 </pre>
-</div>
 
 <pre class="brush: css">@counter-style abc {
  system: alphabetic;
@@ -247,8 +242,8 @@ ul {
 <h4 id="CSS_5">CSS<br>
   </h4>
 
-<div class="hidden">
-<pre class="brush: html">&lt;ul&gt;
+
+<pre class="brush: html hidden">&lt;ul&gt;
  &lt;li&gt;One&lt;/li&gt;
  &lt;li&gt;Two&lt;/li&gt;
  &lt;li&gt;Three&lt;/li&gt;
@@ -258,7 +253,6 @@ ul {
  &lt;li&gt;Seven&lt;/li&gt;
  &lt;li&gt;Eight&lt;/li&gt;
 &lt;/ul&gt;</pre>
-</div>
 
 <pre class="brush: css">@counter-style abc {
  system: numeric;
@@ -280,8 +274,8 @@ ul {
 
 <h4 id="CSS_6">CSS</h4>
 
-<div class="hidden">
-<pre class="brush: html">&lt;ul class="list"&gt;
+
+<pre class="brush: html hidden">&lt;ul class="list"&gt;
  &lt;li&gt;One&lt;/li&gt;
  &lt;li&gt;Two&lt;/li&gt;
  &lt;li&gt;Three&lt;/li&gt;
@@ -293,7 +287,6 @@ ul {
  &lt;li&gt;Nine&lt;/li&gt;
  &lt;li&gt;Ten&lt;/li&gt;
 &lt;/ul&gt;</pre>
-</div>
 
 <pre class="brush: css">@counter-style numbers {
  system: numeric;
@@ -374,30 +367,15 @@ ul {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Counter Styles', '#counter-style-system', 'system')}}</td>
-   <td>{{Spec2('CSS3 Counter Styles')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.at-rules.counter-style.system")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
  <li>{{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}</li>
- <li>{{cssxref("symbols", "symbols()")}}, the functional notation creating anonymous counter styles.</li>
+ <li>{{cssxref("symbols()", "symbols()")}}, the functional notation creating anonymous counter styles.</li>
 </ul>

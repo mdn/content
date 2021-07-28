@@ -10,14 +10,13 @@ tags:
   - Reference
   - gap
   - 'recipe:css-property'
+browser-compat: css.properties.gap
 ---
 <div>{{CSSRef}}</div>
 
-<p><span class="seoSummary">The <strong><code>gap</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets the gaps ({{glossary("gutters")}}) between rows and columns. It is a <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand</a> for {{CSSxRef("row-gap")}} and {{CSSxRef("column-gap")}}.</span></p>
+<p>The <strong><code>gap</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets the gaps ({{glossary("gutters")}}) between rows and columns. It is a <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand</a> for {{CSSxRef("row-gap")}} and {{CSSxRef("column-gap")}}.</p>
 
 <div>{{EmbedInteractiveExample("pages/css/gap.html")}}</div>
-
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -48,10 +47,11 @@ gap: calc(20px + 10%) calc(10% - 5px);
 /* Global values */
 gap: inherit;
 gap: initial;
+gap: revert;
 gap: unset;
 </pre>
 
-<p>This property is specified as a value for <code>&lt;'row-gap'&gt;</code> followed optionally by a value for <code>&lt;'column-gap'&gt;</code>. If <code>&lt;'column-gap'&gt;</code> is omitted, it’s set to the same value as <code>&lt;'row-gap'&gt;</code>.</p>
+<p>This property is specified as a value for <code>&lt;'row-gap'&gt;</code> followed optionally by a value for <code>&lt;'column-gap'&gt;</code>. If <code>&lt;'column-gap'&gt;</code> is omitted, it's set to the same value as <code>&lt;'row-gap'&gt;</code>.</p>
 
 <p><code>&lt;'row-gap'&gt;</code> and <code>&lt;'column-gap'&gt;</code> are each specified as a <code>&lt;length&gt;</code> or a <code>&lt;percentage&gt;</code>.</p>
 
@@ -171,36 +171,11 @@ gap: unset;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Box Alignment", "#propdef-gap", "gap")}}</td>
-   <td>{{Spec2("CSS3 Box Alignment")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<h3 id="Support_in_Flex_layout">Support in Flex layout</h3>
-
-<p>{{Compat("css.properties.gap.flex_context")}}</p>
-
-<h3 id="Support_in_Grid_layout">Support in Grid layout</h3>
-
-<p>{{Compat("css.properties.gap.grid_context")}}</p>
-
-<h3 id="Support_in_Multi-column_layout">Support in Multi-column layout</h3>
-
-<p>{{Compat("css.properties.gap.multicol_context")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

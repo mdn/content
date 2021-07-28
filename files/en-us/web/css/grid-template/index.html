@@ -7,6 +7,7 @@ tags:
   - CSS Property
   - Reference
   - recipe:css-shorthand-property
+browser-compat: css.properties.grid-template
 ---
 <div>{{CSSRef}}</div>
 
@@ -47,6 +48,7 @@ grid-template: [header-top] "a a a"     [header-bottom]
 /* Global values */
 grid-template: inherit;
 grid-template: initial;
+grid-template: revert;
 grid-template: unset;
 </pre>
 
@@ -60,11 +62,15 @@ grid-template: unset;
  <dt><code>[ &lt;line-names&gt;? &lt;string&gt; &lt;track-size&gt;? &lt;line-names&gt;? ]+ [ / &lt;explicit-track-list&gt; ]?</code></dt>
  <dd>Sets {{cssxref("grid-template-areas")}} to the strings listed, {{cssxref("grid-template-rows")}} to the track sizes following each string (filling in <code>auto</code> for any missing sizes), and splicing in the named lines defined before/after each size, and {{cssxref("grid-template-columns")}} to the track listing specified after the slash (or <code>none</code>, if not specified).<br>
 
- <p class="note">Note: The {{cssxref("repeat()")}} function isn’t allowed in these track listings, as the tracks are intended to visually line up one-to-one with the rows/columns in the “ASCII art”.</p>
+ <div class="note">
+   <p><strong>Note:</strong> The {{cssxref("repeat()")}} function isn’t allowed in these track listings, as the tracks are intended to visually line up one-to-one with the rows/columns in the “ASCII art”.</p>
+ </div>
  </dd>
 </dl>
 
-<p class="note"><strong>Note:</strong> The {{cssxref("grid")}} shorthand accepts the same syntax, but also resets the implicit grid properties to their initial values. Use <code>grid</code> (as opposed to <code>grid-template</code>) to prevent these values from cascading in separately.</p>
+<div class="note">
+  <p><strong>Note:</strong> The {{cssxref("grid")}} shorthand accepts the same syntax, but also resets the implicit grid properties to their initial values. Use <code>grid</code> (as opposed to <code>grid-template</code>) to prevent these values from cascading in separately.</p>
+</div>
 
 <h2 id="Formal_definition">Formal definition</h2>
 
@@ -125,26 +131,11 @@ footer {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Grid", "#propdef-grid-template", "grid-template")}}</td>
-   <td>{{Spec2("CSS3 Grid")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.grid-template")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

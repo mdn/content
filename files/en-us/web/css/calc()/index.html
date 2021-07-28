@@ -11,6 +11,7 @@ tags:
   - Reference
   - Web
   - calc
+browser-compat: css.types.calc
 ---
 <div>{{CSSRef}}</div>
 
@@ -18,7 +19,6 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/css/function-calc.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -71,7 +71,7 @@ width: calc(100% - 80px);</pre>
 
 <h2 id="Usage_with_integers">Usage with integers</h2>
 
-<p>When <strong><code>calc()</code></strong> is used where an {{cssxref("&lt;integer&gt;")}} is expected, the value will be rounded to the nearest integer. For example:</p>
+<p>When <strong><code>calc()</code></strong> is used where an {{cssxref("&lt;integer&gt;")}} is expected, the value will be rounded to the nearest integer. For example:</p>
 
 <pre class="brush: css">.modal {
   z-index: calc(3 / 2);
@@ -79,7 +79,7 @@ width: calc(100% - 80px);</pre>
 
 <p>This will give <code>.modal</code> a final <code>z-index</code> value of 2.</p>
 
-<p><strong>Note:</strong> The Chrome browser currently won’t accept some values returned by <strong><code>calc()</code></strong> when an integer is expected. This includes any division, even if it results in an integer. ie. <code>z-index: calc(4 / 2);</code> will not be accepted.</p>
+<p><strong>Note:</strong> The Chrome browser currently won't accept some values returned by <strong><code>calc()</code></strong> when an integer is expected. This includes any division, even if it results in an integer. ie. <code>z-index: calc(4 / 2);</code> will not be accepted.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -150,26 +150,11 @@ width: calc(100% - 80px);</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Values', '#calc-notation', 'calc()')}}</td>
-   <td>{{Spec2('CSS3 Values')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.types.calc")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

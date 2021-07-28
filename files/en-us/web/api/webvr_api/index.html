@@ -6,7 +6,7 @@ tags:
   - Deprecated
   - Experimental
   - Landing
-  - Obsolete
+  - Deprecated
   - Reference
   - VR
   - Virtual Reality
@@ -22,7 +22,7 @@ tags:
 
 <p>Any VR devices attached to your computer will be returned by the {{DOMxRef("Navigator.getVRDisplays()")}} method; each one will be represented by a {{DOMxRef("VRDisplay")}} object.</p>
 
-<p><img alt='Sketch of a person in a chair with wearing goggles labelled "Head mounted display (HMD)" facing a monitor with a webcam labelled "Position sensor"' src="hw-setup.png" style="display: block; margin: 0px auto;"></p>
+<img alt='Sketch of a person in a chair with wearing goggles labelled "Head mounted display (HMD)" facing a monitor with a webcam labelled "Position sensor"' src="hw-setup.png">
 
 <p>{{DOMxRef("VRDisplay")}} is the central interface in the WebVR API — via its properties and methods you can access functionality to:</p>
 
@@ -144,25 +144,9 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("GamepadExtensions")}}</td>
-   <td>{{Spec2("GamepadExtensions")}}</td>
-   <td>Defines the <a href="/en-US/docs/Web/API/Gamepad_API#experimental_gamepad_extensions">Experimental Gamepad extensions</a>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("WebVR 1.1")}}</td>
-   <td>{{Spec2("WebVR 1.1")}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+<p>This API was specified in the old <a href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</a> that has been superseded by the <a href="https://immersive-web.github.io/webxr/">WebXR Device API</a>. It is no longer on track to becoming a standard.</p>
+<p>Until all browsers have implemented the new <a href="/en-US/docs/Web/API/WebXR_Device_API/Fundamentals">WebXR APIs</a>, it is recommended to rely on frameworks, like <a href="https://aframe.io/">A-Frame</a>, <a href="https://www.babylonjs.com/">Babylon.js</a>, or <a href="https://threejs.org/">Three.js</a>, or a <a href="https://github.com/immersive-web/webxr-polyfill">polyfill</a>, to develop WebXR applications that will work across all browsers <a href="https://developer.oculus.com/documentation/oculus-browser/browser-vr-xr/">[1]</a>.</p>
+
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
@@ -181,5 +165,5 @@ tags:
  <li><a href="https://github.com/MozVR/vr-web-examples/tree/master/threejs-vr-boilerplate">threejs-vr-boilerplate</a> — A useful starter template for writing WebVR apps into.</li>
  <li><a href="https://github.com/googlevr/webvr-polyfill/">Web VR polyfill</a> — JavaScript implementation of WebVR.</li>
  <li><a href="https://www.supermedium.com">Supermedium</a> — A pure WebVR browser to easily access the best WebVR content.</li>
- <li><a href="http://webvr.directory/">WebVR Directory</a> — List of quality WebVR sites.</li>
+ <li><a href="https://webvr.directory/">WebVR Directory</a> — List of quality WebVR sites.</li>
 </ul>

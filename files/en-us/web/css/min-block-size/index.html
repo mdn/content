@@ -9,10 +9,11 @@ tags:
   - Reference
   - min-block-size
   - 'recipe:css-property'
+browser-compat: css.properties.min-block-size
 ---
 <div>{{CSSRef}}</div>
 
-<p><span class="seoSummary">The <strong><code>min-block-size</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property defines the minimum horizontal or vertical size of an element's block, depending on its writing mode. It corresponds to either the {{cssxref("min-width")}} or the {{cssxref("min-height")}} property, depending on the value of {{cssxref("writing-mode")}}.</span></p>
+<p>The <strong><code>min-block-size</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property defines the minimum horizontal or vertical size of an element's block, depending on its writing mode. It corresponds to either the {{cssxref("min-width")}} or the {{cssxref("min-height")}} property, depending on the value of {{cssxref("writing-mode")}}.</p>
 
 <p>If the writing mode is vertically oriented, the value of <code>min-block-size</code> relates to the minimum width of the element; otherwise, it relates to the minimum height of the element. A related property is {{cssxref("min-inline-size")}}, which defines the other dimension of the element.</p>
 
@@ -35,6 +36,7 @@ min-block-size: fit-content(20em);
 /* Global values */
 min-block-size: inherit;
 min-block-size: initial;
+min-block-size: revert;
 min-block-size: unset;
 </pre>
 
@@ -73,26 +75,11 @@ min-block-size: unset;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Logical Properties", "#propdef-min-block-size", "min-block-size")}}</td>
-   <td>{{Spec2("CSS Logical Properties")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.min-block-size")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

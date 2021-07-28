@@ -8,6 +8,7 @@ tags:
   - Data Type
   - Layout
   - Reference
+browser-compat: css.types.transform-function
 ---
 <div>{{CSSRef}}</div>
 
@@ -95,9 +96,9 @@ tags:
 
 <h3 id="Cartesian_coordinates">Cartesian coordinates</h3>
 
-<p><a href="/en-US/docs/Web/CSS/transform-function/coord_in_r2.png"><img src="coord_in_r2.png" style="float: right;"></a></p>
-
 <p>In the Cartesian coordinate system, a two-dimensional point is described using two values: an x coordinate (abscissa) and a y coordinate (ordinate). This is represented by the vector notation <code>(x, y)</code>.</p>
+
+<p><img src="coord_in_r2.png"></p>
 
 <p>In CSS (and most computer graphics), the origin <code>(0, 0)</code> represents the <em>top-left</em> corner of any element. Positive coordinates are down and to the right of the origin, while negative ones are up and to the left. Thus, a point that's 2 units to the right and 5 units down would be <code>(2, 5)</code>, while a point 3 units to the left and 12 units up would be <code>(-3, -12)</code>.</p>
 
@@ -105,15 +106,15 @@ tags:
 
 <p>Transformation functions alter the appearance of an element by manipulating the values of its coordinates. A linear transformation function is described using a 2×2 matrix, like this:</p>
 
-<p style="text-align: center;"><math> <mfenced> <mtable> <mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd></mtr> <mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd></mtr> </mtable> </mfenced> </math></p>
+<p><math> <mfenced> <mtable> <mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd></mtr> <mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd></mtr> </mtable> </mfenced> </math></p>
 
 <p>The function is applied to an element by using matrix multiplication. Thus, each coordinate changes based on the values in the matrix:</p>
 
-<p style="text-align: center;"><math> <mfenced> <mtable> <mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd></mtr> <mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd></mtr> </mtable> </mfenced> <mfenced> <mtable> <mtr><mtd><mi>x</mi></mtd></mtr><mtr><mtd><mi>y</mi></mtd></mtr> </mtable> </mfenced> <mo>=</mo> <mfenced> <mtable> <mtr> <mtd><mi>a</mi><mi>x</mi><mo>+</mo><mi>c</mi><mi>y</mi></mtd> </mtr> <mtr> <mtd><mi>b</mi><mi>x</mi><mo>+</mo><mi>d</mi><mi>y</mi></mtd> </mtr> </mtable> </mfenced> </math></p>
+<p><math> <mfenced> <mtable> <mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd></mtr> <mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd></mtr> </mtable> </mfenced> <mfenced> <mtable> <mtr><mtd><mi>x</mi></mtd></mtr><mtr><mtd><mi>y</mi></mtd></mtr> </mtable> </mfenced> <mo>=</mo> <mfenced> <mtable> <mtr> <mtd><mi>a</mi><mi>x</mi><mo>+</mo><mi>c</mi><mi>y</mi></mtd> </mtr> <mtr> <mtd><mi>b</mi><mi>x</mi><mo>+</mo><mi>d</mi><mi>y</mi></mtd> </mtr> </mtable> </mfenced> </math></p>
 
 <p>It is even possible to apply several transformations in a row:</p>
 
-<p style="text-align: center;"><math> <mfenced> <mtable> <mtr> <mtd><msub><mi>a</mi><mn>1</mn></msub></mtd> <mtd><msub><mi>c</mi><mn>1</mn></msub></mtd> </mtr> <mtr> <mtd><msub><mi>b</mi><mn>1</mn></msub></mtd> <mtd><msub><mi>d</mi><mn>1</mn></msub></mtd> </mtr> </mtable> </mfenced> <mfenced> <mtable> <mtr> <mtd><msub><mi>a</mi><mn>2</mn></msub></mtd> <mtd><msub><mi>c</mi><mn>2</mn></msub></mtd> </mtr> <mtr> <mtd><msub><mi>b</mi><mn>2</mn></msub></mtd> <mtd><msub><mi>d</mi><mn>2</mn></msub></mtd> </mtr> </mtable> </mfenced> <mo>=</mo> <mfenced> <mtable> <mtr> <mtd> <msub><mi>a</mi><mn>1</mn></msub> <msub><mi>a</mi><mn>2</mn></msub> <mo>+</mo> <msub><mi>c</mi><mn>1</mn></msub> <msub><mi>b</mi><mn>2</mn></msub> </mtd> <mtd> <msub><mi>a</mi><mn>1</mn></msub> <msub><mi>c</mi><mn>2</mn></msub> <mo>+</mo> <msub><mi>c</mi><mn>1</mn></msub> <msub><mi>d</mi><mn>2</mn></msub> </mtd> </mtr> <mtr> <mtd> <msub><mi>b</mi><mn>1</mn></msub> <msub><mi>a</mi><mn>2</mn></msub> <mo>+</mo> <msub><mi>d</mi><mn>1</mn></msub> <msub><mi>b</mi><mn>2</mn></msub> </mtd> <mtd> <msub><mi>b</mi><mn>1</mn></msub> <msub><mi>c</mi><mn>2</mn></msub> <mo>+</mo> <msub><mi>d</mi><mn>1</mn></msub> <msub><mi>d</mi><mn>2</mn></msub> </mtd> </mtr> </mtable> </mfenced> </math></p>
+<p><math> <mfenced> <mtable> <mtr> <mtd><msub><mi>a</mi><mn>1</mn></msub></mtd> <mtd><msub><mi>c</mi><mn>1</mn></msub></mtd> </mtr> <mtr> <mtd><msub><mi>b</mi><mn>1</mn></msub></mtd> <mtd><msub><mi>d</mi><mn>1</mn></msub></mtd> </mtr> </mtable> </mfenced> <mfenced> <mtable> <mtr> <mtd><msub><mi>a</mi><mn>2</mn></msub></mtd> <mtd><msub><mi>c</mi><mn>2</mn></msub></mtd> </mtr> <mtr> <mtd><msub><mi>b</mi><mn>2</mn></msub></mtd> <mtd><msub><mi>d</mi><mn>2</mn></msub></mtd> </mtr> </mtable> </mfenced> <mo>=</mo> <mfenced> <mtable> <mtr> <mtd> <msub><mi>a</mi><mn>1</mn></msub> <msub><mi>a</mi><mn>2</mn></msub> <mo>+</mo> <msub><mi>c</mi><mn>1</mn></msub> <msub><mi>b</mi><mn>2</mn></msub> </mtd> <mtd> <msub><mi>a</mi><mn>1</mn></msub> <msub><mi>c</mi><mn>2</mn></msub> <mo>+</mo> <msub><mi>c</mi><mn>1</mn></msub> <msub><mi>d</mi><mn>2</mn></msub> </mtd> </mtr> <mtr> <mtd> <msub><mi>b</mi><mn>1</mn></msub> <msub><mi>a</mi><mn>2</mn></msub> <mo>+</mo> <msub><mi>d</mi><mn>1</mn></msub> <msub><mi>b</mi><mn>2</mn></msub> </mtd> <mtd> <msub><mi>b</mi><mn>1</mn></msub> <msub><mi>c</mi><mn>2</mn></msub> <mo>+</mo> <msub><mi>d</mi><mn>1</mn></msub> <msub><mi>d</mi><mn>2</mn></msub> </mtd> </mtr> </mtable> </mfenced> </math></p>
 
 <p>With this notation, it is possible to describe, and therefore compose, most common transformations: rotations, scaling, or skewing. (In fact, all transformations that are linear functions can be described.) Composite transformations are effectively applied in order from right to left.</p>
 
@@ -257,31 +258,11 @@ selectElem.addEventListener('change', () =&gt; {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS Transforms 2', '#transform-functions', '&lt;transform-function&gt;')}}</td>
-   <td>{{Spec2('CSS Transforms 2')}}</td>
-   <td>Added 3D transform functions.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Transforms', '#transform-functions', '&lt;transform-function&gt;')}}</td>
-   <td>{{Spec2('CSS3 Transforms')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.types.transform-function")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

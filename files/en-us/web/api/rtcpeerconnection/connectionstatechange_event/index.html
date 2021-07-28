@@ -1,10 +1,22 @@
 ---
 title: 'RTCPeerConnection: connectionstatechange event'
 slug: Web/API/RTCPeerConnection/connectionstatechange_event
+tags:
+  - Event
+  - RTCPeerConnection
+  - Reference
+  - WebRTC
+  - connectionstatechange
+browser-compat: api.RTCPeerConnection.connectionstatechange_event
 ---
-<div>{{WebRTCSidebar}}</div>
+<div>{{APIRef("WebRTC")}}</div>
 
-<p><span class="seoSummary">The <strong><code>connectionstatechange</code></strong> event is sent to the {{domxref("RTCPeerConnection.ontrack", "ontrack")}} event handler on an {{domxref("RTCPeerConnection")}} object after a new track has been added to an {{domxref("RTCRtpReceiver")}} which is part of the connection.</span> The new connection state can be found in {{domxref("RTCPeerConnection.connectionState", "connectionState")}}, and is one of the strings in the {{domxref("RTCPeerConnectionState")}} enumerated type.</p>
+<p>The <strong><code>connectionstatechange</code></strong> event is sent to the {{domxref("RTCPeerConnection.onconnectionstatechange", "onconnectionstatechange")}} event handler on an {{domxref("RTCPeerConnection")}} object after a new track has been added to an {{domxref("RTCRtpReceiver")}} which is part of the connection.
+  The new connection state can be found in {{domxref("RTCPeerConnection.connectionState", "connectionState")}},
+  and is one of the string values:
+  <code>new</code>, <code>connecting</code>, <code>connected</code>, <code>disconnected</code>,
+  <code>failed</code>, or <code>closed</code>.
+</p>
 
 <table class="properties">
  <tbody>
@@ -67,26 +79,11 @@ slug: Web/API/RTCPeerConnection/connectionstatechange_event
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('WebRTC 1.0', '#event-connectionstatechange', 'connectionstatechange')}}</td>
-   <td>{{Spec2('WebRTC 1.0')}}</td>
-   <td>Initial specification.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCPeerConnection.connectionstatechange_event")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
@@ -94,5 +91,5 @@ slug: Web/API/RTCPeerConnection/connectionstatechange_event
  <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a></li>
  <li><a href="/en-US/docs/Web/API/WebRTC_API/Connectivity">WebRTC connectivity</a></li>
  <li><a href="/en-US/docs/Web/API/WebRTC_API/Session_lifetime">Lifetime of a WebRTC session</a></li>
- <li>{{domxref("RTCPeerConnectionState")}}</li>
+ <li>{{domxref("RTCPeerConnection.connectionState")}}</li>
 </ul>

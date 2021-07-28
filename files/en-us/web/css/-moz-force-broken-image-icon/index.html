@@ -7,6 +7,7 @@ tags:
   - Non-standard
   - Reference
   - 'recipe:css-property'
+browser-compat: css.properties.-moz-force-broken-image-icon
 ---
 <div>{{Non-standard_header}}{{CSSRef}}</div>
 
@@ -21,7 +22,9 @@ tags:
  <dd>A value of <code>1</code> means that the broken image icon is shown even if the image has an {{HTMLElement("img", "<code>alt</code>", "#attr-alt")}} attribute. When the value <code>0</code> is used the image will act as usual and only display the <code>alt</code> attribute.</dd>
 </dl>
 
-<div class="note"><strong>Note:</strong> Even if the value is set to <code>1</code> the <code>alt</code> attribute will still be displayed, alongside the broken image icon.</div>
+<div class="note">
+  <p><strong>Note:</strong> Even if the value is set to <code>1</code> the <code>alt</code> attribute will still be displayed, alongside the broken image icon.</p>
+</div>
 
 <h2 id="Formal_definition">Formal definition</h2>
 
@@ -49,7 +52,9 @@ tags:
 
 <p>{{ EmbedLiveSample('Examples','125','125','/files/4619/broken%20image%20link.png') }}</p>
 
-<div class="note"><strong>Note:</strong> Unless the image has a specified height and width the broken image icon will not be displayed but the alt attribute will also be hidden if <code>-moz-force-broken-image-icon</code> is set to <code>1</code>.</div>
+<div class="note">
+  <p><strong>Note:</strong> Unless the image has a specified height and width the broken image icon will not be displayed but the alt attribute will also be hidden if <code>-moz-force-broken-image-icon</code> is set to <code>1</code>.</p>
+</div>
 
 <h2 id="Notes">Notes</h2>
 
@@ -64,7 +69,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.-moz-force-broken-image-icon")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -6,13 +6,13 @@ tags:
 - Location
 - Property
 - Reference
+browser-compat: api.Location.pathname
 ---
 <p>{{ApiRef("Location")}}</p>
 
 <p>The <strong><code>pathname</code></strong> property of the {{domxref("Location")}}
-  interface is a {{domxref("USVString")}} containing an initial <code>'/'</code> followed
-  by the path of the URL (or the empty string if there is no path).</p>
-
+interface is a {{domxref("USVString")}} containing the path of the URL for the location, which will be the empty string if there is no path.</p>
+  
 <h2 id="Syntax">Syntax</h2>
 
 <pre class="brush: js"><em>string</em> = <em>object</em>.pathname;
@@ -28,21 +28,8 @@ var result = anchor.pathname; // Returns:'/en-US/docs/Location.pathname'
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', '#dom-location-pathname', 'pathname')}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Location.pathname")}}</p>
+<p>{{Compat}}</p>

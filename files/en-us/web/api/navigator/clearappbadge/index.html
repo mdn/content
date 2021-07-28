@@ -1,0 +1,54 @@
+---
+title: Navigator.clearAppBadge()
+slug: Web/API/Navigator/clearAppBadge
+tags:
+  - API
+  - Badging API
+  - Method
+  - Reference
+  - clearAppBadge
+  - Navigator
+browser-compat: api.Navigator.clearAppBadge
+---
+<div>{{DefaultAPISidebar("Badging API")}}</div>
+
+<p class="summary">The <strong><code>clearAppBadge()</code></strong> method of the {{domxref("Navigator")}} interface clears a badge on the current app's icon by setting it to <code>nothing</code>. The value <code>nothing</code> indictes that no badge is currently set, and the status of the badge is <em>cleared</em>.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox">let promise = Navigator.clearAppBadge();</pre>
+
+<h3 id="Parameters">Parameters</h3>
+
+<p>None.</p>
+
+<h3 id="Returns">Return value</h3>
+
+<p>A {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}}.</p>
+
+<h3 id="Exceptions">Exceptions</h3>
+
+<dl>
+  <dt><code>NotSupportedError</code></dt>
+  <dd>The {{domxref("Navigator")}} does not have a document that this action can be acted on.</dd>
+</dl>
+
+<h2 id="Examples">Examples</h2>
+
+<p>Once all messages in an application have been read, call <code>clearAppBadge()</code> to clear the badge and remove the notification.</p>
+
+<pre class="brush: js">navigator.clearAppBadge()</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+{{Specifications}}
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>
+
+<h2>See also</h2>
+
+<ul>
+  <li><a href="https://web.dev/badging-api/">Badging for app icons</a></li>
+</ul>

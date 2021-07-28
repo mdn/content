@@ -10,10 +10,11 @@ tags:
   - Reference
   - Web
   - recipe:css-property
+browser-compat: css.properties.text-decoration-skip
 ---
 <div>{{CSSRef}}</div>
 
-<p><span class="seoSummary">The <strong><code>text-decoration-skip</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets what parts of an element’s content any text decoration affecting the element must skip over.</span> It controls all text decoration lines drawn by the element and also any text decoration lines drawn by its ancestors.</p>
+<p>The <strong><code>text-decoration-skip</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets what parts of an element’s content any text decoration affecting the element must skip over. It controls all text decoration lines drawn by the element and also any text decoration lines drawn by its ancestors.</p>
 
 <div class="notecard note">
 <p><strong>Note:</strong> Most other browsers are converging on supporting the simpler {{cssxref("text-decoration-skip-ink")}} property.</p>
@@ -34,6 +35,7 @@ text-decoration-skip: objects edges box-decoration;
 /* Global values */
 text-decoration-skip: inherit;
 text-decoration-skip: initial;
+text-decoration-skip: revert;
 text-decoration-skip: unset;
 </pre>
 
@@ -53,8 +55,10 @@ text-decoration-skip: unset;
  <dt><code>trailing-spaces</code></dt>
  <dd>The same as <code>spaces</code>, except that only trailing spaces are skipped.</dd>
  <dt><code>edges</code></dt>
- <dd>The start and end of the text decoration is inset slightly (e.g., by half of the line thickness) from the content edge of the decorating box. Thus, adjacent elements receive separate underlines. (This is important in Chinese, where underlining is a form of punctuation.)</dd>
- <dd><img alt='An example of "text-decoration-skip: edges;".' src="decoration-skip-edges.png"></dd>
+ <dd>
+   <p>The start and end of the text decoration is inset slightly (e.g., by half of the line thickness) from the content edge of the decorating box. Thus, adjacent elements receive separate underlines. (This is important in Chinese, where underlining is a form of punctuation.)</p>
+   <img alt='An example of "text-decoration-skip: edges;".' src="decoration-skip-edges.png">
+ </dd>
  <dt><code>box-decoration</code></dt>
  <dd>The text decoration is skipped over the box's margin, border, and padding areas. This only has an effect on decorations imposed by an ancestor; a <em>decorating box</em> never draws over its own box decoration.</dd>
 </dl>
@@ -90,26 +94,11 @@ text-decoration-skip: unset;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS4 Text Decoration", "#text-decoration-skipping", "text-decoration-skip")}}</td>
-   <td>{{Spec2("CSS4 Text Decoration")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.text-decoration-skip")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

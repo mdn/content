@@ -7,6 +7,7 @@ tags:
   - CSS Text Decoration
   - Reference
   - 'recipe:css-shorthand-property'
+browser-compat: css.properties.text-emphasis
 ---
 <div>{{CSSRef}}</div>
 
@@ -19,7 +20,7 @@ tags:
 <p>The size of the emphasis symbol, like ruby symbols, is about 50% of the size of the font, and <code>text-emphasis</code> may affect line height when the current leading is not enough for the marks.</p>
 
 <div class="note">
-<p><code>text-emphasis</code> doesn't reset the value of {{cssxref("text-emphasis-position")}}. This is because if the style and the color of emphasis marks may vary in a text, it is extremely unlikely that their position will. In the very rare cases when this is needed, the property {{cssxref("text-emphasis-position")}}.</p>
+<p><strong>Note:</strong> <code>text-emphasis</code> doesn't reset the value of {{cssxref("text-emphasis-position")}}. This is because if the style and the color of emphasis marks may vary in a text, it is extremely unlikely that their position will. In the very rare cases when this is needed, the property {{cssxref("text-emphasis-position")}}.</p>
 </div>
 
 <h2 id="Constituent_properties">Constituent properties</h2>
@@ -55,6 +56,7 @@ text-emphasis: filled sesame #555;
 /* Global values */
 text-emphasis: inherit;
 text-emphasis: initial;
+text-emphasis: revert;
 text-emphasis: unset;
 </pre>
 
@@ -113,28 +115,11 @@ text-emphasis: unset;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Text Decoration', '#text-emphasis-property', 'text-emphasis')}}</td>
-   <td>{{Spec2('CSS3 Text Decoration')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-
-<p>{{Compat("css.properties.text-emphasis")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

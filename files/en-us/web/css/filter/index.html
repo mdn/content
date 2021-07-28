@@ -8,16 +8,16 @@ tags:
   - SVG
   - SVG Filter
   - 'recipe:css-property'
+browser-compat: css.properties.filter
 ---
 <div>{{CSSRef}}</div>
 
-<p><span class="seoSummary">The <strong><code>filter</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property applies graphical effects like blur or color shift to an element. Filters are commonly used to adjust the rendering of images, backgrounds, and borders.</span></p>
+<p>The <strong><code>filter</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property applies graphical effects like blur or color shift to an element. Filters are commonly used to adjust the rendering of images, backgrounds, and borders.</p>
 
 <p>Included in the CSS standard are several functions that achieve predefined effects. You can also reference an SVG filter with a URL to an <a href="/en-US/docs/Web/SVG/Element/filter">SVG filter element</a>.</p>
 
 <div>{{EmbedInteractiveExample("pages/css/filter.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -45,6 +45,7 @@ filter: none;
 /* Global values */
 filter: inherit;
 filter: initial;
+filter: revert;
 filter: unset;
 </pre>
 
@@ -85,8 +86,8 @@ filter: unset;
 
 <pre class="brush: css">filter: blur(5px)
 </pre>
-<div id="blur_example" class="hidden">
-<pre class="brush: html">  &lt;table class="standard-table"&gt;
+
+<pre class="brush: html hidden">  &lt;table class="standard-table"&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th style="text-align: left;" scope="col"&gt;Original image&lt;/th&gt;
@@ -97,24 +98,24 @@ filter: unset;
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;img id="img1" class="internal default" src="/files/3710/Test_Form_2.jpg" style="width: 100%;" /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img id="img2" class="internal default" src="/files/3710/Test_Form_2.jpg" style="width: 100%;" /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img id="img1" class="internal default" src="test_form_2.jpeg" style="width: 100%;" /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img id="img2" class="internal default" src="test_form_2.jpeg" style="width: 100%;" /&gt;&lt;/td&gt;
       &lt;td&gt;
         &lt;div class="svg-container"&gt;
           &lt;svg id="img3" overflow="visible" viewbox="0 0 212 161" color-interpolation-filters="sRGB"&gt;
             &lt;filter id="svgBlur" x="-5%" y="-5%" width="110%" height="110%"&gt;
               &lt;feGaussianBlur in="SourceGraphic" stdDeviation="3.5"/&gt;
             &lt;/filter&gt;
-            &lt;image xlink:href="/files/3710/Test_Form_2.jpeg" filter="url(#svgBlur)" width="212px" height="161px"/&gt;
+            &lt;image xlink:href="test_form_2.jpeg" filter="url(#svgBlur)" width="212px" height="161px"/&gt;
           &lt;/svg&gt;
         &lt;/div&gt;
       &lt;/td&gt;
-      &lt;td&gt;&lt;img id="img4" class="internal default" src="/files/3711/Test_Form_2_s.jpg" style="width: 100%;" /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img id="img4" class="internal default" src="test_form_2_s.jpg" style="width: 100%;" /&gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;</pre>
 
-<pre class="brush: css">html {
+<pre class="brush: css hidden">html {
   height:100%;
 }
 body {
@@ -156,15 +157,14 @@ table.standard-table td {
   height:100%;
 }
 </pre>
-</div>
 
-<pre class="brush: html">&lt;svg style="position: absolute; top: -99999px" xmlns="http://www.w3.org/2000/svg"&gt;
+<pre class="brush: svg">&lt;svg style="position: absolute; top: -99999px" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;filter id="svgBlur" x="-5%" y="-5%" width="110%" height="110%"&gt;
     &lt;feGaussianBlur in="SourceGraphic" stdDeviation="5"/&gt;
   &lt;/filter&gt;
 &lt;/svg&gt;</pre>
 
-<div>{{EmbedLiveSample('blur_example','100%','236px','','', 'no-codepen')}}</div>
+<div>{{EmbedLiveSample('blur','100%','236px','','', 'no-codepen')}}</div>
 
 <h4 id="brightness">brightness()</h4>
 
@@ -172,7 +172,7 @@ table.standard-table td {
 
 <pre class="brush: css">filter: brightness(2)</pre>
 
-<pre class="brush: html">&lt;svg style="position: absolute; top: -99999px" xmlns="http://www.w3.org/2000/svg"&gt;
+<pre class="brush: svg">&lt;svg style="position: absolute; top: -99999px" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;filter id="brightness"&gt;
     &lt;feComponentTransfer&gt;
       &lt;feFuncR type="linear" slope="[amount]"/&gt;
@@ -182,8 +182,7 @@ table.standard-table td {
   &lt;/filter&gt;
 &lt;/svg&gt;</pre>
 
-<div id="brightness_example" class="hidden">
-<pre class="brush: html">&lt;table class="standard-table"&gt;
+<pre class="brush: html hidden">&lt;table class="standard-table"&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th style="text-align: left;" scope="col"&gt;Original image&lt;/th&gt;
@@ -194,8 +193,8 @@ table.standard-table td {
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;img id="img1" class="internal default" src="/files/3708/Test_Form.jpg" style="width: 100%;" /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img id="img2" class="internal default" src="/files/3708/Test_Form.jpg" style="width: 100%;" /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img id="img1" class="internal default" src="test_form.jpg" style="width: 100%;" /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img id="img2" class="internal default" src="test_form.jpg" style="width: 100%;" /&gt;&lt;/td&gt;
       &lt;td&gt;&lt;div class="svg-container"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" id="img3" viewbox="0 0 286 217" color-interpolation-filters="sRGB"&gt;
  &lt;filter id="brightness"&gt;
     &lt;feComponentTransfer&gt;
@@ -204,15 +203,15 @@ table.standard-table td {
         &lt;feFuncB type="linear" slope="2"/&gt;
     &lt;/feComponentTransfer&gt;
   &lt;/filter&gt;
-  &lt;image xlink:href="/files/3708/Test_Form.jpg" filter="url(#brightness)" width="286px" height="217px" /&gt;
+  &lt;image xlink:href="test_form.jpg" filter="url(#brightness)" width="286px" height="217px" /&gt;
 &lt;/svg&gt;&lt;div&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img id="img4" class="internal default" src="/files/3709/Test_Form_s.jpg" style="width: 100%;" /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img id="img4" class="internal default" src="test_form_s.jpg" style="width: 100%;" /&gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 </pre>
 
-<pre class="brush: css">html {
+<pre class="brush: css hidden">html {
   height:100%;
 }
 body {
@@ -255,9 +254,8 @@ table.standard-table td {
   height:100%;
 }
 </pre>
-</div>
 
-<p>{{EmbedLiveSample('brightness_example','100%','231px','','', 'no-codepen')}}</p>
+<p>{{EmbedLiveSample('brightness','100%','231px','','', 'no-codepen')}}</p>
 
 <h4 id="contrast">contrast()</h4>
 
@@ -266,7 +264,7 @@ table.standard-table td {
 <pre class="brush: css">filter: contrast(200%)
 </pre>
 
-<pre class="brush: html">&lt;svg style="position: absolute; top: -99999px" xmlns="http://www.w3.org/2000/svg"&gt;
+<pre class="brush: svg">&lt;svg style="position: absolute; top: -99999px" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;filter id="contrast"&gt;
     &lt;feComponentTransfer&gt;
       &lt;feFuncR type="linear" slope="[amount]" intercept="-(0.5 * [amount]) + 0.5"/&gt;
@@ -277,8 +275,7 @@ table.standard-table td {
 &lt;/svg&gt;
 </pre>
 
-<div id="contrast_example" class="hidden">
-<pre class="brush: html">&lt;table class="standard-table"&gt;
+<pre class="brush: html hidden">&lt;table class="standard-table"&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th style="text-align: left;" scope="col"&gt;Original image&lt;/th&gt;
@@ -289,8 +286,8 @@ table.standard-table td {
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;img id="img1" class="internal default" src="/files/3712/Test_Form_3.jpeg" style="width: 100%;" /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img id="img2" class="internal default" src="/files/3712/Test_Form_3.jpeg" style="width: 100%;" /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img id="img1" class="internal default" src="test_form_3.jpeg" style="width: 100%;" /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img id="img2" class="internal default" src="test_form_3.jpeg" style="width: 100%;" /&gt;&lt;/td&gt;
       &lt;td&gt;&lt;div class="svg-container"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" id="img3" viewbox="0 0 240 151" color-interpolation-filters="sRGB"&gt;
  &lt;filter id="contrast"&gt;
     &lt;feComponentTransfer&gt;
@@ -299,15 +296,15 @@ table.standard-table td {
       &lt;feFuncB type="linear" slope="2" intercept="-0.5"/&gt;
     &lt;/feComponentTransfer&gt;
   &lt;/filter&gt;
-  &lt;image xlink:href="/files/3712/Test_Form_3.jpeg" filter="url(#contrast)" width="240px" height="151px" /&gt;
+  &lt;image xlink:href="test_form_3.jpeg" filter="url(#contrast)" width="240px" height="151px" /&gt;
 &lt;/svg&gt;&lt;div&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img id="img4" class="internal default" src="/files/3713/Test_Form_3_s.jpg" style="width: 100%;" /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img id="img4" class="internal default" src="test_form_3_s.jpg" style="width: 100%;" /&gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 </pre>
 
-<pre class="brush: css">html {
+<pre class="brush: css hidden">html {
   height:100%;
 }
 body {
@@ -350,9 +347,8 @@ table.standard-table td {
   height:100%;
 }
 </pre>
-</div>
 
-<div>{{EmbedLiveSample('contrast_example','100%','203px','','', 'no-codepen')}}</div>
+<div>{{EmbedLiveSample('contrast','100%','203px','','', 'no-codepen')}}</div>
 
 <h4 id="drop-shadow">drop-shadow()</h4>
 
@@ -370,7 +366,7 @@ table.standard-table td {
 
 <pre class="brush: css">filter: drop-shadow(16px 16px 10px black)</pre>
 
-<pre class="brush: html">&lt;svg style="position: absolute; top: -999999px" xmlns="http://www.w3.org/2000/svg"&gt;
+<pre class="brush: svg">&lt;svg style="position: absolute; top: -999999px" xmlns="http://www.w3.org/2000/svg"&gt;
  &lt;filter id="drop-shadow"&gt;
     &lt;feGaussianBlur in="SourceAlpha" stdDeviation="[radius]"/&gt;
     &lt;feOffset dx="[offset-x]" dy="[offset-y]" result="offsetblur"/&gt;
@@ -384,8 +380,7 @@ table.standard-table td {
 &lt;/svg&gt;
 </pre>
 
-<div id="shadow_example" class="hidden">
-<pre class="brush: html">&lt;table class="standard-table"&gt;
+<pre class="brush: html hidden">&lt;table class="standard-table"&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th style="text-align: left;" scope="col"&gt;Original image&lt;/th&gt;
@@ -396,13 +391,13 @@ table.standard-table td {
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;img id="img1" class="internal default" src="/files/3714/Test_Form_4.jpeg" style="width: 100%;" /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img id="img2" class="internal default" src="/files/3714/Test_Form_4.jpeg" style="width: 100%;" /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img id="img1" class="internal default" src="test_form_4.jpeg" style="width: 100%;" /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img id="img2" class="internal default" src="test_form_4.jpeg" style="width: 100%;" /&gt;&lt;/td&gt;
       &lt;td&gt;
         &lt;div class="svg-container"&gt;
           &lt;svg xmlns="http://www.w3.org/2000/svg" id="img3" overflow="visible" viewbox="0 0 213 161" color-interpolation-filters="sRGB"&gt;
             &lt;defs&gt;
-              &lt;image id="MyImage" xlink:href="/files/3714/Test_Form_4.jpeg" width="213px" height="161px"/&gt;
+              &lt;image id="MyImage" xlink:href="test_form_4.jpeg" width="213px" height="161px"/&gt;
             &lt;/defs&gt;
             &lt;filter id="drop-shadow" x="-50%" y="-50%" width="200%" height="200%"&gt;
               &lt;feOffset dx="9" dy="9" in="SourceAlpha"/&gt;
@@ -413,16 +408,16 @@ table.standard-table td {
           &lt;/svg&gt;
         &lt;/div&gt;
       &lt;/td&gt;
-      &lt;td&gt;&lt;img id="img4" class="internal default" src="/files/3715/Test_Form_4_s.jpg" style="width: 100%;" /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img id="img4" class="internal default" src="test_form_4_s.jpg" style="width: 100%;" /&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;img alt="Test_Form_4 distorted border - Original image" id="img11" class="internal default" src="/files/8467/Test_Form_4_irregular-shape_opacity-gradient.png" style="width: 100%;" /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img alt="Test_Form_4 distorted border - Live example" id="img12" class="internal default" src="/files/8467/Test_Form_4_irregular-shape_opacity-gradient.png" style="width: 100%;" /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img alt="test_form_4 distorted border - Original image" id="img11" class="internal default" src="test_form_4_irregular-shape_opacity-gradient.png" style="width: 100%;" /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img alt="test_form_4 distorted border - Live example" id="img12" class="internal default" src="test_form_4_irregular-shape_opacity-gradient.png" style="width: 100%;" /&gt;&lt;/td&gt;
       &lt;td&gt;
         &lt;div class="svg-container"&gt;
           &lt;svg xmlns="http://www.w3.org/2000/svg" id="img13" overflow="visible" viewbox="0 0 213 161" color-interpolation-filters="sRGB"&gt;
             &lt;defs&gt;
-              &lt;image id="MyImage2" xlink:href="/files/8467/Test_Form_4_irregular-shape_opacity-gradient.png" width="213px" height="161px"/&gt;
+              &lt;image id="MyImage2" xlink:href="test_form_4_irregular-shape_opacity-gradient.png" width="213px" height="161px"/&gt;
             &lt;/defs&gt;
             &lt;filter id="drop-shadow2" x="-50%" y="-50%" width="200%" height="200%"&gt;
               &lt;feOffset dx="5" dy="5.5" in="SourceAlpha"/&gt;
@@ -436,13 +431,13 @@ table.standard-table td {
           &lt;/svg&gt;
         &lt;/div&gt;
       &lt;/td&gt;
-      &lt;td&gt;&lt;img alt="Test_Form_4 distorted border drop shadow - Static example" id="img14" class="internal default" src="/files/8469/Test_Form_4_irregular-shape_opacity-gradient_drop-shadow.png" style="width: 100%;" /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img alt="test_form_4 distorted border drop shadow - Static example" id="img14" class="internal default" src="test_form_4_irregular-shape_opacity-gradient_drop-shadow.png" style="width: 100%;" /&gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 </pre>
 
-<pre class="brush: css">html {
+<pre class="brush: css hidden">html {
   height:100%;
 }
 body {
@@ -498,9 +493,8 @@ table.standard-table td {
   height:auto;
 }
 </pre>
-</div>
 
-<div>{{EmbedLiveSample('shadow_example','100%','300px','','', 'no-codepen')}}</div>
+<div>{{EmbedLiveSample('drop-shadow','100%','400px','','', 'no-codepen')}}</div>
 
 <h4 id="grayscale">grayscale()</h4>
 
@@ -508,8 +502,7 @@ table.standard-table td {
 
 <pre class="brush: css">filter: grayscale(100%)</pre>
 
-<div id="grayscale_example" class="hidden">
-<pre class="brush: html">&lt;table class="standard-table"&gt;
+<pre class="brush: html hidden">&lt;table class="standard-table"&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th style="text-align: left;" scope="col"&gt;Original image&lt;/th&gt;
@@ -520,8 +513,8 @@ table.standard-table td {
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;img id="img1" class="internal default" src="/files/3716/Test_Form_5.jpeg" style="width: 100%;" /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img id="img2" class="internal default" src="/files/3716/Test_Form_5.jpeg" style="width: 100%;" /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img id="img1" class="internal default" src="test_form_5.jpeg" style="width: 100%;" /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img id="img2" class="internal default" src="test_form_5.jpeg" style="width: 100%;" /&gt;&lt;/td&gt;
       &lt;td&gt;&lt;div class="svg-container"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" id="img3" viewbox="0 0 276 184" color-interpolation-filters="sRGB"&gt;
  &lt;filter id="grayscale"&gt;
     &lt;feColorMatrix type="matrix"
@@ -530,15 +523,15 @@ table.standard-table td {
                        0.2126 0.7152 0.0722 0 0
                        0 0 0 1 0"/&gt;
   &lt;/filter&gt;
-  &lt;image xlink:href="/files/3716/Test_Form_5.jpeg" filter="url(#grayscale)" width="276px" height="184px" /&gt;
+  &lt;image xlink:href="test_form_5.jpeg" filter="url(#grayscale)" width="276px" height="184px" /&gt;
 &lt;/svg&gt;&lt;div&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img id="img4" class="internal default" src="/files/3717/Test_Form_5_s.jpg" style="width: 100%;" /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img id="img4" class="internal default" src="test_form_5_s.jpg" style="width: 100%;" /&gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 </pre>
 
-<pre class="brush: css">html {
+<pre class="brush: css hidden">html {
   height:100%;
 }
 body {
@@ -581,9 +574,8 @@ table.standard-table td {
   height:100%;
 }
 </pre>
-</div>
 
-<div>{{EmbedLiveSample('grayscale_example','100%','209px','','', 'no-codepen')}}</div>
+<div>{{EmbedLiveSample('grayscale','100%','209px','','', 'no-codepen')}}</div>
 
 <h4 id="hue-rotate">hue-rotate()</h4>
 
@@ -591,8 +583,7 @@ table.standard-table td {
 
 <pre class="brush: css">filter: hue-rotate(90deg)</pre>
 
-<div id="huerotate_example" class="hidden">
-<pre class="brush: html">&lt;table class="standard-table"&gt;
+<pre class="brush: html hidden">&lt;table class="standard-table"&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th style="text-align: left;" scope="col"&gt;Original image&lt;/th&gt;
@@ -603,22 +594,22 @@ table.standard-table td {
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;img id="img1" class="internal default" src="/files/3718/Test_Form_6.jpeg" style="width: 100%;" /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img id="img2" class="internal default" src="/files/3718/Test_Form_6.jpeg" style="width: 100%;" /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img id="img1" class="internal default" src="test_form_6.jpeg" style="width: 100%;" /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img id="img2" class="internal default" src="test_form_6.jpeg" style="width: 100%;" /&gt;&lt;/td&gt;
       &lt;td&gt;&lt;div class="svg-container"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" id="img3" viewbox="0 0 266 190" color-interpolation-filters="sRGB"&gt;
  &lt;filter id="hue-rotate"&gt;
     &lt;feColorMatrix type="hueRotate"
                values="90"/&gt;
   &lt;/filter&gt;
-  &lt;image xlink:href="/files/3718/Test_Form_6.jpeg" filter="url(#hue-rotate)" width="266px" height="190px" /&gt;
+  &lt;image xlink:href="test_form_6.jpeg" filter="url(#hue-rotate)" width="266px" height="190px" /&gt;
 &lt;/svg&gt;&lt;div&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img id="img4" class="internal default" src="/files/3719/Test_Form_6_s.jpg" style="width: 100%;" /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img id="img4" class="internal default" src="test_form_6_s.jpg" style="width: 100%;" /&gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 </pre>
 
-<pre class="brush: css">html {
+<pre class="brush: css hidden">html {
   height:100%;
 }
 body {
@@ -661,7 +652,6 @@ table.standard-table td {
   height:100%;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;svg style="position: absolute; top: -999999px" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;filter id="svgHueRotate"&gt;
@@ -669,7 +659,7 @@ table.standard-table td {
   &lt;/filter&gt;
 &lt;/svg&gt;</pre>
 
-<p>{{EmbedLiveSample('huerotate_example','100%','221px','','', 'no-codepen')}}</p>
+<p>{{EmbedLiveSample('hue-rotate','100%','221px','','', 'no-codepen')}}</p>
 
 <h4 id="invert">invert()</h4>
 
@@ -677,8 +667,7 @@ table.standard-table td {
 
 <pre class="brush: css">filter: invert(100%)</pre>
 
-<div id="invert_example" class="hidden">
-<pre class="brush: html">&lt;table class="standard-table"&gt;
+<pre class="brush: html hidden">&lt;table class="standard-table"&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th style="text-align: left;" scope="col"&gt;Original image&lt;/th&gt;
@@ -689,8 +678,8 @@ table.standard-table td {
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;img id="img1" class="internal default" src="/files/3720/Test_Form_7.jpeg" style="width: 100%;" /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img id="img2" class="internal default" src="/files/3720/Test_Form_7.jpeg" style="width: 100%;" /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img id="img1" class="internal default" src="test_form_7.jpeg" style="width: 100%;" /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img id="img2" class="internal default" src="test_form_7.jpeg" style="width: 100%;" /&gt;&lt;/td&gt;
       &lt;td&gt;&lt;div class="svg-container"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" id="img3" viewbox="0 0 183 276" color-interpolation-filters="sRGB"&gt;
  &lt;filter id="invert"&gt;
     &lt;feComponentTransfer&gt;
@@ -699,15 +688,15 @@ table.standard-table td {
         &lt;feFuncB type="table" tableValues="1 0"/&gt;
     &lt;/feComponentTransfer&gt;
  &lt;/filter&gt;
- &lt;image xlink:href="/files/3720/Test_Form_7.jpeg" filter="url(#invert)" width="183px" height="276px" /&gt;
+ &lt;image xlink:href="test_form_7.jpeg" filter="url(#invert)" width="183px" height="276px" /&gt;
 &lt;/svg&gt;&lt;div&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img id="img4" class="internal default" src="/files/3721/Test_Form_7_s.jpg" style="width: 100%;" /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img id="img4" class="internal default" src="test_form_7_s.jpg" style="width: 100%;" /&gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 </pre>
 
-<pre class="brush: css">html {
+<pre class="brush: css hidden">html {
   height:100%;
 }
 body {
@@ -750,9 +739,8 @@ table.standard-table td {
   height:100%;
 }
 </pre>
-</div>
 
-<p>{{EmbedLiveSample('invert_example','100%','407px','','', 'no-codepen')}}</p>
+<p>{{EmbedLiveSample('invert','100%','407px','','', 'no-codepen')}}</p>
 
 <h4 id="opacity">opacity()</h4>
 
@@ -760,8 +748,7 @@ table.standard-table td {
 
 <pre class="brush: css">filter: opacity(50%)</pre>
 
-<div id="opacity_example" class="hidden">
-<pre class="brush: html">&lt;table class="standard-table"&gt;
+<pre class="brush: html hidden">&lt;table class="standard-table"&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th style="text-align: left;" scope="col"&gt;Original image&lt;/th&gt;
@@ -772,23 +759,23 @@ table.standard-table td {
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;img id="img1" class="internal default" src="/files/3725/Test_Form_14.jpeg" style="width: 100%;" /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img id="img2" class="internal default" src="/files/3725/Test_Form_14.jpeg" style="width: 100%;" /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img id="img1" class="internal default" src="test_form_14.jpeg" style="width: 100%;" /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img id="img2" class="internal default" src="test_form_14.jpeg" style="width: 100%;" /&gt;&lt;/td&gt;
       &lt;td&gt;&lt;div class="svg-container"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" id="img3" viewbox="0 0 276 183" color-interpolation-filters="sRGB"&gt;
  &lt;filter id="opacity"&gt;
     &lt;feComponentTransfer&gt;
         &lt;feFuncA type="table" tableValues="0 0.5"&gt;
     &lt;/feComponentTransfer&gt;
  &lt;/filter&gt;
- &lt;image xlink:href="/files/3725/Test_Form_14.jpeg" filter="url(#opacity)" width="276px" height="183px" /&gt;
+ &lt;image xlink:href="test_form_14.jpeg" filter="url(#opacity)" width="276px" height="183px" /&gt;
 &lt;/svg&gt;&lt;div&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img id="img4" class="internal default" src="/files/3726/Test_Form_14_s.jpg" style="width: 100%;" /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img id="img4" class="internal default" src="test_form_14_s.jpg" style="width: 100%;" /&gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 </pre>
 
-<pre class="brush: css">html {
+<pre class="brush: css hidden">html {
   height:100%;
 }
 body {
@@ -831,9 +818,8 @@ table.standard-table td {
   height:100%;
 }
 </pre>
-</div>
 
-<p>{{EmbedLiveSample('opacity_example','100%','210px','','', 'no-codepen')}}</p>
+<p>{{EmbedLiveSample('opacity','100%','210px','','', 'no-codepen')}}</p>
 
 <h4 id="saturate">saturate()</h4>
 
@@ -841,8 +827,7 @@ table.standard-table td {
 
 <pre class="brush: css">filter: saturate(200%)</pre>
 
-<div id="saturate_example" class="hidden">
-<pre class="brush: html">&lt;table class="standard-table"&gt;
+<pre class="brush: html hidden">&lt;table class="standard-table"&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th style="text-align: left;" scope="col"&gt;Original image&lt;/th&gt;
@@ -853,22 +838,22 @@ table.standard-table td {
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;img id="img1" class="internal default" src="/files/3722/Test_Form_9.jpeg" style="width: 100%;" /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img id="img2" class="internal default" src="/files/3722/Test_Form_9.jpeg" style="width: 100%;" /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img id="img1" class="internal default" src="test_form_9.jpeg" style="width: 100%;" /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img id="img2" class="internal default" src="test_form_9.jpeg" style="width: 100%;" /&gt;&lt;/td&gt;
       &lt;td&gt;&lt;div class="svg-container"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" id="img3" viewbox="0 0 201 239" color-interpolation-filters="sRGB"&gt;
  &lt;filter id="saturate"&gt;
     &lt;feColorMatrix type="saturate"
                values="2"/&gt;
  &lt;/filter&gt;
- &lt;image xlink:href="/files/3722/Test_Form_9.jpeg" filter="url(#saturate)" width="201px" height="239px" /&gt;
+ &lt;image xlink:href="test_form_9.jpeg" filter="url(#saturate)" width="201px" height="239px" /&gt;
 &lt;/svg&gt;&lt;div&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img id="img4" class="internal default" src="/files/3724/Test_Form_9_s.jpeg" style="width: 100%;" /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img id="img4" class="internal default" src="test_form_9_s.jpg" style="width: 100%;" /&gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 </pre>
 
-<pre class="brush: css">html {
+<pre class="brush: css hidden">html {
   height:100%;
 }
 body {
@@ -911,9 +896,8 @@ table.standard-table td {
   height:100%;
 }
 </pre>
-</div>
 
-<p>{{EmbedLiveSample('saturate_example','100%','332px','','', 'no-codepen')}}</p>
+<p>{{EmbedLiveSample('saturate','100%','332px','','', 'no-codepen')}}</p>
 
 <h4 id="sepia">sepia()</h4>
 
@@ -921,8 +905,7 @@ table.standard-table td {
 
 <pre class="brush: css">filter: sepia(100%)</pre>
 
-<div id="sepia_example" class="hidden">
-<pre class="brush: html">&lt;table class="standard-table"&gt;
+<pre class="brush: html hidden">&lt;table class="standard-table"&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th style="text-align: left;" scope="col"&gt;Original image&lt;/th&gt;
@@ -933,8 +916,8 @@ table.standard-table td {
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;img id="img1" class="internal default" src="/files/3727/Test_Form_12.jpeg" style="width: 100%;" /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img id="img2" class="internal default" src="/files/3727/Test_Form_12.jpeg" style="width: 100%;" /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img id="img1" class="internal default" src="test_form_12.jpeg" style="width: 100%;" /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img id="img2" class="internal default" src="test_form_12.jpeg" style="width: 100%;" /&gt;&lt;/td&gt;
       &lt;td&gt;&lt;div class="svg-container"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" id="img3" viewbox="0 0 259 194" color-interpolation-filters="sRGB"&gt;
  &lt;filter id="sepia"&gt;
     &lt;feColorMatrix type="matrix"
@@ -943,15 +926,15 @@ table.standard-table td {
                        0.272 0.534 0.131 0 0
                        0 0 0 1 0"/&gt;
  &lt;/filter&gt;
- &lt;image xlink:href="/files/3727/Test_Form_12.jpeg" filter="url(#sepia)" width="259px" height="194px" /&gt;
+ &lt;image xlink:href="test_form_12.jpeg" filter="url(#sepia)" width="259px" height="194px" /&gt;
 &lt;/svg&gt;&lt;div&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img id="img4" class="internal default" src="/files/3728/Test_Form_12_s.jpg" style="width: 100%;" /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img id="img4" class="internal default" src="test_form_12_s.jpg" style="width: 100%;" /&gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 </pre>
 
-<pre class="brush: css">html {
+<pre class="brush: css hidden">html {
   height:100%;
 }
 body {
@@ -994,9 +977,8 @@ table.standard-table td {
   height:100%;
 }
 </pre>
-</div>
 
-<p>{{EmbedLiveSample('sepia_example','100%','229px','','', 'no-codepen')}}</p>
+<p>{{EmbedLiveSample('sepia','100%','229px','','', 'no-codepen')}}</p>
 
 <h2 id="Combining_functions">Combining functions</h2>
 
@@ -1004,8 +986,7 @@ table.standard-table td {
 
 <pre class="brush: css">filter: contrast(175%) brightness(103%)</pre>
 
-<div id="combination_example" class="hidden">
-<pre class="brush: html">&lt;table class="standard-table"&gt;
+<pre class="brush: html hidden">&lt;table class="standard-table"&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th style="text-align: left;" scope="col"&gt;Original image&lt;/th&gt;
@@ -1015,15 +996,15 @@ table.standard-table td {
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;img id="img1" class="internal default" src="/files/3729/Test_Form_8.jpeg" style="width: 100%;" /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img id="img2" class="internal default" src="/files/3729/Test_Form_8.jpeg" style="width: 100%;" /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img id="img4" class="internal default" src="/files/3730/Test_Form_8_s.jpeg" style="width: 100%;" /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img id="img1" class="internal default" src="test_form_8.jpeg" style="width: 100%;" /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img id="img2" class="internal default" src="test_form_8.jpeg" style="width: 100%;" /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img id="img4" class="internal default" src="test_form_8_s.jpg" style="width: 100%;" /&gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 </pre>
 
-<pre class="brush: css">html {
+<pre class="brush: css hidden">html {
   height:100%;
 }
 body {
@@ -1067,9 +1048,8 @@ table.standard-table td {
   height:100%;
 }
 </pre>
-</div>
 
-<p>{{EmbedLiveSample('combination_example','100%','209px','','', 'no-codepen')}}</p>
+<p>{{EmbedLiveSample('Combining_functions','100%','209px','','', 'no-codepen')}}</p>
 
 <h2 id="Formal_definition">Formal definition</h2>
 
@@ -1109,26 +1089,11 @@ img {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Filters 1.0', '#FilterProperty', 'filter')}}</td>
-   <td>{{Spec2('Filters 1.0')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.filter")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
@@ -1136,5 +1101,4 @@ img {
  <li><a class="internal" href="/en-US/docs/Web/SVG/Applying_SVG_effects_to_HTML_content">Applying SVG effects to HTML content</a></li>
  <li>The {{cssxref("mask")}} property</li>
  <li><a class="internal" href="/en-US/docs/Web/SVG">SVG</a></li>
- <li><a href="http://www.html5rocks.com/en/tutorials/filters/understanding-css/">Understanding CSS filters</a>, HTML5Rocks! article</li>
 </ul>

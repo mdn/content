@@ -14,6 +14,7 @@ tags:
 - WebXR Device API
 - XR
 - isSessionSupported
+browser-compat: api.XRSystem.isSessionSupported
 ---
 <div>{{APIRef("WebXR Device API")}}</div>
 
@@ -22,23 +23,26 @@ tags:
     <code>true</code> if the specified WebXR session mode is supported by the user's WebXR
     device. Otherwise, the promise resolves with <code>false</code>.</span></p>
 
-<p class="summary">If the no devices are available or the browser doesn't have permission
+<p class="summary">If no devices are available or the browser doesn't have permission
   to use the XR device, the promise is rejected with an appropriate
   {{domxref("DOMException")}}.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js">var <em>isSupportedPromise = xr</em>.isSessionSupported(<em>xrSessionMode</em>)</pre>
+<pre class="brush: js">xr.isSessionSupported(mode)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
-  <dt><code>xrSessionMode</code></dt>
-  <dd>A {{domxref("DOMString")}} specifying the WebXR session mode for which support is to
-    be checked. This string must be one of <code>inline</code> (to present the WebXR
-    content inline within the context of an HTML document) or <code>immersive-vr</code>
-    for a fully-immersive virtual experience.</dd>
+  <dt><code>mode</code></dt>
+  <dd>A {{jsxref("String")}} specifying the WebXR session mode for which support is to
+    be checked. Possible modes to check for:
+    <ul>
+      <li><code>immersive-ar</code> {{experimental_inline}}</li>
+      <li><code>immersive-vr</code></li>
+      <li><code>inline</code></li>
+     </ul>
+  </dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -99,24 +103,8 @@ function onButtonClicked() {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName("WebXR","#dom-xrsystem-issessionsupported","isSessionSupported()")}}
-      </td>
-      <td>{{Spec2("WebXR")}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>{{Compat("api.XRSystem.isSessionSupported")}}</div>
+<div>{{Compat}}</div>

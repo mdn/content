@@ -8,6 +8,7 @@ tags:
   - Reference
   - Report
   - Reporting API
+browser-compat: api.Report
 ---
 <div>{{SeeCompatTable}}{{APIRef("Reporting API")}}</div>
 
@@ -59,7 +60,7 @@ let observer = new ReportingObserver(function(reports, observer) {
 
 <p>Because of the event handler we set up inside the <code>ReportingObserver()</code> constructor, we can now click the button to display the report details.</p>
 
-<p><img alt="image of a jolly bearded man with various stats displayed below it about a deprecated feature" src="reporting_api_example.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="image of a jolly bearded man with various stats displayed below it about a deprecated feature" src="reporting_api_example.png"></p>
 
 <p>The report details are displayed via the <code>displayReports()</code> fuction, which takes the observer callback's <code>reports</code> parameter as its parameter:</p>
 
@@ -89,24 +90,11 @@ let observer = new ReportingObserver(function(reports, observer) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Reporting API","#dom-report","Report")}}</td>
-   <td>{{Spec2("Reporting API")}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Report")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

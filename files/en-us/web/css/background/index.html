@@ -6,15 +6,15 @@ tags:
   - CSS Background
   - CSS Property
   - Reference
-  - 'recipe:css-shorthand-property'
+  - recipe:css-shorthand-property
+browser-compat: css.properties.background
 ---
 <p>{{CSSRef("CSS Background")}}</p>
 
-<p><span class="seoSummary">The <strong><code>background</code></strong> <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand</a> <a href="/en-US/docs/Web/CSS">CSS</a> property sets all background style properties at once, such as color, image, origin and size, or repeat method.</span></p>
+<p>The <strong><code>background</code></strong> <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand</a> <a href="/en-US/docs/Web/CSS">CSS</a> property sets all background style properties at once, such as color, image, origin and size, or repeat method.</p>
 
 <div>{{EmbedInteractiveExample("pages/css/background.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Constituent_properties">Constituent properties</h2>
 
@@ -44,7 +44,12 @@ background: border-box red;
 
 /* A single image, centered and scaled */
 background: no-repeat center/80% url("../img/image.png");
-</pre>
+
+/* Global values */
+background: inherit;
+background: initial;
+background: revert;
+background: unset;</pre>
 
 <p>The <code>background</code> property is specified as one or more background layers, separated by commas.</p>
 
@@ -53,34 +58,34 @@ background: no-repeat center/80% url("../img/image.png");
 <ul>
  <li>Each layer may include zero or one occurrences of any of the following values:
   <ul>
-   <li><code><a href="#attachment">&lt;attachment&gt;</a></code></li>
-   <li><code><a href="#bg-image">&lt;bg-image&gt;</a></code></li>
-   <li><code><a href="#position">&lt;position&gt;</a></code></li>
-   <li><code><a href="#bg-size">&lt;bg-size&gt;</a></code></li>
-   <li><code><a href="#repeat-style">&lt;repeat-style&gt;</a></code></li>
+   <li><code>&lt;attachment&gt;</code></li>
+   <li><code>&lt;bg-image&gt;</code></li>
+   <li><code>&lt;position&gt;</code></li>
+   <li><code>&lt;bg-size&gt;</code></li>
+   <li><code>&lt;repeat-style&gt;</code></li>
   </ul>
  </li>
- <li>The <code><a href="#bg-size">&lt;bg-size&gt;</a></code> value may only be included immediately after <code><a href="#position">&lt;position&gt;</a></code>, separated with the '/' character, like this: "<code>center/80%</code>".</li>
- <li>The <code><a href="#box">&lt;box&gt;</a></code> value may be included zero, one, or two times. If included once, it sets both {{cssxref("background-origin")}} and {{cssxref("background-clip")}}. If it is included twice, the first occurrence sets {{cssxref("background-origin")}}, and the second sets {{cssxref("background-clip")}}.</li>
- <li>The <code><a href="#background-color">&lt;background-color&gt;</a></code> value may only be included in the last layer specified.</li>
+ <li>The <code>&lt;bg-size&gt;</code> value may only be included immediately after <code>&lt;position&gt;</code>, separated with the '/' character, like this: "<code>center/80%</code>".</li>
+ <li>The <code>&lt;box&gt;</code> value may be included zero, one, or two times. If included once, it sets both {{cssxref("background-origin")}} and {{cssxref("background-clip")}}. If it is included twice, the first occurrence sets {{cssxref("background-origin")}}, and the second sets {{cssxref("background-clip")}}.</li>
+ <li>The <code>&lt;background-color&gt;</code> value may only be included in the last layer specified.</li>
 </ul>
 
 <h3 id="Values">Values</h3>
 
 <dl>
- <dt id="attachment"><code>&lt;attachment&gt;</code></dt>
+ <dt><code>&lt;attachment&gt;</code></dt>
  <dd>See {{cssxref("background-attachment")}}</dd>
- <dt id="box"><code>&lt;box&gt;</code></dt>
+ <dt><code>&lt;box&gt;</code></dt>
  <dd>See {{cssxref("background-clip")}} and {{cssxref("background-origin")}}</dd>
- <dt id="background-color"><code>&lt;background-color&gt;</code></dt>
+ <dt><code>&lt;background-color&gt;</code></dt>
  <dd>See {{cssxref("background-color")}}</dd>
- <dt id="bg-image"><code>&lt;bg-image&gt;</code></dt>
+ <dt><code>&lt;bg-image&gt;</code></dt>
  <dd>See {{Cssxref("background-image")}}</dd>
- <dt id="position"><code>&lt;position&gt;</code></dt>
+ <dt><code>&lt;position&gt;</code></dt>
  <dd>See {{cssxref("background-position")}}</dd>
- <dt id="repeat-style"><code>&lt;repeat-style&gt;</code></dt>
+ <dt><code>&lt;repeat-style&gt;</code></dt>
  <dd>See {{cssxref("background-repeat")}}</dd>
- <dt id="bg-size"><code>&lt;bg-size&gt;</code></dt>
+ <dt><code>&lt;bg-size&gt;</code></dt>
  <dd>See {{cssxref("background-size")}}.</dd>
 </dl>
 
@@ -89,7 +94,7 @@ background: no-repeat center/80% url("../img/image.png");
 <p>Browsers do not provide any special information on background images to assistive technology. This is important primarily for screen readers, as a screen reader will not announce its presence and therefore convey nothing to its users. If the image contains information critical to understanding the page's overall purpose, it is better to describe it semantically in the document.</p>
 
 <ul>
- <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.1_%E2%80%94_Providing_text_alternatives_for_non-text_content">MDN Understanding WCAG, Guideline 1.1 explanations</a></li>
+ <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_%e2%80%94_providing_text_alternatives_for_non-text_content">MDN Understanding WCAG, Guideline 1.1 explanations</a></li>
  <li><a href="https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html">Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0</a></li>
 </ul>
 
@@ -121,7 +126,7 @@ background: no-repeat center/80% url("../img/image.png");
 }
 
 .topbanner {
-  background: url("https://mdn.mozillademos.org/files/11983/starsolid.gif") #99f repeat-y fixed;
+  background: url("starsolid.gif") #99f repeat-y fixed;
 }
 </pre>
 
@@ -131,38 +136,11 @@ background: no-repeat center/80% url("../img/image.png");
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Backgrounds', '#the-background', 'background')}}</td>
-   <td>{{Spec2('CSS3 Backgrounds')}}</td>
-   <td>The shorthand property has been extended to support multiple backgrounds and the new {{cssxref("background-size")}}, {{cssxref("background-origin")}} and {{cssxref("background-clip")}} properties.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'colors.html#propdef-background', 'background')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>No significant changes</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#background', 'background')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-
-<p>{{Compat("css.properties.background")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

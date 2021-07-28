@@ -2,15 +2,15 @@
 title: RTCPeerConnection.setConfiguration()
 slug: Web/API/RTCPeerConnection/setConfiguration
 tags:
-- Configuration
-- Experimental
-- Method
-- RTCPeerConnection
-- Reference
-- WebRTC
-- setConfiguration
+  - Configuration
+  - Method
+  - RTCPeerConnection
+  - Reference
+  - WebRTC
+  - setConfiguration
+browser-compat: api.RTCPeerConnection.setConfiguration
 ---
-<p>{{APIRef("WebRTC")}}{{SeeCompatTable}}</p>
+<p>{{APIRef("WebRTC")}}</p>
 
 <p>The <strong><code>RTCPeerConnection.setConfiguration()</code></strong> method sets the
   current configuration of the {{domxref("RTCPeerConnection")}} based on the values
@@ -80,11 +80,12 @@ tags:
 <p>In this example, it has already been determined that ICE restart is needed, and that
   negotiation needs to be done using a different ICE server.</p>
 
-<pre class="brush: js">var restartConfig = { iceServers: [{
-                          urls: "turn:asia.myturnserver.net",
-                          username: "allie@oopcode.com",
-                          credential: "topsecretpassword"
-                      }]
+<pre class="brush: js">var restartConfig = {
+  iceServers: [{
+    urls: "turn:asia.myturnserver.net",
+    username: "allie@oopcode.com",
+    credential: "topsecretpassword"
+  }]
 };
 
 myPeerConnection.setConfiguration(restartConfig);
@@ -107,25 +108,11 @@ myPeerConnection.createOffer({"iceRestart": true}).then(function(offer) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('WebRTC 1.0', '#dom-rtcpeerconnection-setconfiguration',
-        'setConfiguration()')}}</td>
-      <td>{{Spec2('WebRTC 1.0')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCPeerConnection.setConfiguration")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

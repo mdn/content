@@ -8,19 +8,27 @@ tags:
   - Experimental
   - Reference
   - 'recipe:css-property'
+browser-compat: css.properties.border-block-width
 ---
 <div>{{CSSRef}}</div>
 
 <p>The <strong><code>border-block-width</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property defines the width of the logical block borders of an element, which maps to a physical border width depending on the element's writing mode, directionality, and text orientation. It corresponds to the {{cssxref("border-top-width")}} and {{cssxref("border-bottom-width")}}, or {{cssxref("border-left-width")}}, and {{cssxref("border-right-width")}} property depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.</p>
 
-<pre class="brush:css no-line-numbers">/* &lt;'border-width'&gt; values */
-border-block-width: 5px;
-border-block-width: thick;
-</pre>
+<div>{{EmbedInteractiveExample("pages/css/border-block-width.html")}}</div>
 
 <p>The border width in the other dimension can be set with {{cssxref("border-inline-width")}}, which sets {{cssxref("border-inline-start-width")}}, and {{cssxref("border-inline-end-width")}}.</p>
 
 <h2 id="Syntax">Syntax</h2>
+
+<pre class="brush:css no-line-numbers">/* &lt;'border-width'&gt; values */
+border-block-width: 5px;
+border-block-width: thick;
+
+/* Global values */
+border-block-width: inherit;
+border-block-width: initial;
+border-block-width: revert;
+border-block-width: unset;</pre>
 
 <h3 id="Values">Values</h3>
 
@@ -68,26 +76,11 @@ border-block-width: thick;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Logical Properties", "#propdef-border-block-width", "border-block-width")}}</td>
-   <td>{{Spec2("CSS Logical Properties")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.border-block-width")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

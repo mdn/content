@@ -12,7 +12,7 @@ tags:
 ---
 <div>{{CSSRef}}</div>
 
-<p class="summary"><strong><dfn>Shorthand properties</dfn></strong> are CSS properties that let you set the values of multiple other CSS properties simultaneously. Using a shorthand property, you can write more concise (and often more readable) style sheets, saving time and energy.</p>
+<p><strong><dfn>Shorthand properties</dfn></strong> are CSS properties that let you set the values of multiple other CSS properties simultaneously. Using a shorthand property, you can write more concise (and often more readable) style sheets, saving time and energy.</p>
 
 <p>The CSS specification defines shorthand properties to group the definition of common properties acting on the same theme. For instance, the CSS {{cssxref("background")}} property is a shorthand property that's able to define the values of {{cssxref("background-color")}}, {{cssxref("background-image")}}, {{cssxref("background-repeat")}}, and {{cssxref("background-position")}}. Similarly, the most common font-related properties can be defined using the shorthand {{cssxref("font")}}, and the different margins around a box can be defined using the {{cssxref("margin")}} shorthand.</p>
 
@@ -31,10 +31,10 @@ background: url(images/bg.gif) no-repeat left top;
  <li>Shorthand properties try not to force a specific order for the values of the properties they replace. This works well when these properties use values of different types, as the order has no importance, but this does not work as easily when several properties can have identical values. Handling of these cases are grouped in several categories:
   <ol>
    <li>Shorthands handling properties related to edges of a box, like {{cssxref("border-style")}}, {{cssxref("margin")}} or {{cssxref("padding")}}, always use a consistent 1-to-4-value syntax representing those edges:
-    <table>
+    <table class="standard-table">
      <tbody>
       <tr>
-       <td style="width: 79px;"><img src="border1.png"></td>
+       <td><img src="border1.png"></td>
        <td><em>The 1-value syntax</em>: <code>border-width: 1em</code> — The unique value represents all edges</td>
       </tr>
       <tr>
@@ -55,10 +55,10 @@ background: url(images/bg.gif) no-repeat left top;
     </table>
    </li>
    <li>Similarly, shorthands handling properties related to corners of a box, like {{cssxref("border-radius")}}, always use a consistent 1-to-4-value syntax representing those corners:
-    <table>
+    <table class="standard-table">
      <tbody>
       <tr>
-       <td style="width: 69px;"><img src="corner1.png"></td>
+       <td><img src="corner1.png"></td>
        <td><em>The 1-value syntax</em>: <code>border-radius: 1em</code> — The unique value represents all corners</td>
       </tr>
       <tr>

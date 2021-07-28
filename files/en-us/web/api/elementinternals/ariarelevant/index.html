@@ -1,0 +1,50 @@
+---
+title: ElementInternals.ariaRelevant
+slug: Web/API/ElementInternals/ariaRelevant
+tags:
+  - API
+  - Property
+  - Reference
+  - ariaRelevant
+  - AriaAttributes
+  - AriaMixin
+  - ElementInternals
+browser-compat: api.ElementInternals.ariaRelevant
+---
+<div>{{DefaultAPISidebar("DOM")}}</div>
+
+<p class="summary">The <strong><code>ariaRelevant</code></strong> property of the {{domxref("ElementInternals")}} interface reflects the value of the <a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-relevant_attribute"><code>aria-relevant</code></a> attribute, which indicates what notifications the user agent will trigger when the accessibility tree within a live region is modified. This is used to describe what changes in an <code>aria-live</code> region are relevant and should be announced.</p>
+
+<div class="notecard note">
+  <h4>Note:</h4>
+  <p>Setting aria attributes on <code>ElementInternals</code> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <a href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</a>.</p>
+</div>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js">let ariaRelevant = ElementInternals.ariaRelevant;
+ElementInternals.ariaRelevant = ariaRelevant;</pre>
+
+<h3>Value</h3>
+<p>A {{domxref("DOMString")}} containing one or more of the following values, space separated:</p>
+
+<dl>
+  <dt>"additions"</dt>
+  <dd>Additions of Element Nodes within the live region should be considered relevant.</dd>
+  <dt>"removals"</dt>
+  <dd>Deletion of Nodes from the live region should be considered relevant.</dd>
+  <dt>"text"</dt>
+  <dd>Changes to the textual content of existing nodes should be considered relevant.</dd>
+  <dt>"all"</dt>
+  <dd>Equivalent to <code>"additions removals text"</code>.</dd>
+</dl>
+
+<h2 id="Examples">Examples</h2>
+
+<p>In this example the value of <code>ariaRelevant</code> is set to "all".</p>
+
+<pre class="brush: js">this.internals_.ariaRelevant = "all";</pre>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>

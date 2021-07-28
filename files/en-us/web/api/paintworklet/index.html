@@ -11,10 +11,19 @@ tags:
   - Reference
   - Worklet
   - paintWorklet
+browser-compat: api.PaintWorkletGlobalScope
 ---
 <p>{{APIRef("CSS Painting API")}} {{SeeCompatTable}}</p>
 
 <p class="summary">The <strong><code>PaintWorklet</code></strong> interface of the {{domxref('CSS Painting API','','',' ')}} programmatically generates an image where a CSS property expects a file. Access this interface through {{DOMxRef("CSS.paintWorklet")}}.</p>
+
+<h2 id="privacy_concerns">Privacy concerns</h2>
+
+<p>To avoid leaking visited links, this feature is currently disabled in Chrome-based browsers for {{HTMLElement("a")}} elements with an {{HTMLAttrXref("href", "a")}} attribute, and for children of such elements. For details, see the following:</p>
+<ul>
+  <li>The CSS Painting API <a href="https://drafts.css-houdini.org/css-paint-api/#privacy-considerations">Privacy Considerations section</a></li>
+  <li>The CSS Painting API spec issue <a href="https://github.com/w3c/css-houdini-drafts/issues/791">“CSS Paint API leaks browsing history”</a></li>
+</ul>
 
 <h2 id="Properties">Properties</h2>
 
@@ -96,29 +105,15 @@ registerPaint('checkerboard', CheckerboardPainter);</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS Painting API','#paintworkletglobalscope','PaintWorkletGlobalScope')}}</td>
-   <td>{{Spec2('CSS Painting API')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.PaintWorkletGlobalScope")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
  <li><a href="/en-US/docs/Web/API/CSS_Painting_API">CSS Painting API</a></li>
  <li><a href="/en-US/docs/Web/Houdini">Houdini APIs</a></li>
- <li><a href="/en-US/docs/Web/Houdini/learn">Houdini overview</a></li>
 </ul>

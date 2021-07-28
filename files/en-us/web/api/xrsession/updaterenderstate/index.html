@@ -2,27 +2,28 @@
 title: XRSession.updateRenderState()
 slug: Web/API/XRSession/updateRenderState
 tags:
-- API
-- AR
-- Augmented Reality
-- Experimental
-- Method
-- Reference
-- Update
-- VR
-- Virtual Reality
-- WebXR
-- WebXR Device API
-- XR
-- XRSession
-- render
-- state
-- updateRenderState()
+  - API
+  - AR
+  - Augmented Reality
+  - Experimental
+  - Method
+  - Reference
+  - Update
+  - VR
+  - Virtual Reality
+  - WebXR
+  - WebXR Device API
+  - XR
+  - XRSession
+  - render
+  - state
+  - updateRenderState()
+browser-compat: api.XRSession.updateRenderState
 ---
-<div>{{draft}}{{securecontext_header}}{{APIRef("WebXR Device API")}}</div>
+<div>{{APIRef("WebXR Device API")}}</div>
 
 <p><span class="seoSummary">The <code>updateRenderState()</code> method of the
-    {{DOMxRef("XRSession")}} interface of <a href="/en-US/docs/Web/API/WebXR_API">WebXR
+    {{DOMxRef("XRSession")}} interface of <a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR
       API</a> schedules changes to be applied to the active render state prior to
     rendering of the next frame.</span></p>
 
@@ -35,14 +36,22 @@ tags:
 
 <dl>
   <dt><code>newState</code></dt>
-  <dd>An object conforming to the {{domxref("XRRenderStateInit")}} dictionary specifying
-    the properties of the session's {{domxref("XRSession.renderState", "renderState")}} to
-    update before rendering the next frame.</dd>
+  <dd>An object specifying the properties of the session's
+    {{domxref("XRSession.renderState", "renderState")}} to update before rendering the next frame.</dd>
 </dl>
 
-<p>The specified object may have any combination of the following fields.</p>
+<p>The specified object may have any combination of the following properties:</p>
 
-<p>{{page("/en-US/docs/Web/API/XRRenderStateInit","Properties")}}</p>
+<dl>
+  <dt><code>baseLayer</code> {{optional_inline}}</dt>
+  <dd>An {{domxref("XRWebGLLayer")}} object from which the WebXR compositor will obtain imagery. This is <code>null</code> by default.</dd>
+  <dt><code>depthFar</code> {{optional_inline}}</dt>
+  <dd>A floating-point value specifying the distance in meters from the viewer to the <strong>far clip plane</strong>, which is a plane parallel to the display surface beyond which no further rendering will occur. All rendering will take place between the distances specified by <code>depthNear</code> and <code>depthFar</code>. This is 1000 meters (1 kilometer) by default.</dd>
+  <dt><code>depthNear</code> {{optional_inline}}</dt>
+  <dd>A floating-point value indicating the distance in meters from the viewer to a plane parallel to the display surface to be the <strong>near clip plane</strong>. No part of the scene on the viewer's side of this plane will be rendered. This is 0.1 meters (10 centimeters) by default.</dd>
+  <dt><code>inlineVerticalFieldOfView</code> {{optional_inline}}</dt>
+  <dd>A floating-point value indicating the default field of view, in radians, to be used when computing the projection matrix for an <code>inline</code> {{domxref("XRSession")}}. The projection matrix calculation also takes into account the output canvas's aspect ratio. This property <em>must not</em> be specified for immersive sessions, so the value is <code>null</code> by default for immersive sessions. The default value is otherwise π * 0.5 (half of the value of pi).</dd>
+ </dl>
 
 <h3 id="Return_value">Return value</h3>
 
@@ -61,11 +70,10 @@ tags:
     <ul>
       <li>The {{domxref("XRSession")}} has already ended, so you cannot change its render
         state.</li>
-      <li>The {{domxref("XRRenderStateInit.baseLayer", "baseLayer")}} specified
+      <li>The <code>baseLayer</code> specified
         in <code>newState</code> was created by an <code>XRSession</code> other than the
         one on which <code>updateRenderState()</code> was called.</li>
-      <li>The {{domxref("XRRenderStateInit.inlineVerticalFieldOfView",
-        "inlineVerticalFieldOfView")}} property was set, but the session is immersive and
+      <li>The <code>inlineVerticalFieldOfView</code> property was set, but the session is immersive and
         therefore does not allow this property to be used.</li>
     </ul>
   </dd>
@@ -90,28 +98,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("WebXR","#dom-xrsession-updaterenderstate","XRSession.updateRenderState()")}}
-      </td>
-      <td>{{Spec2("WebXR")}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>{{Compat("api.XRSession.updateRenderState")}}</div>
+<div>{{Compat}}</div>
 
 <h2 id="See_also">See also</h2>
 

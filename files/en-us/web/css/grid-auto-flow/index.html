@@ -7,6 +7,7 @@ tags:
   - CSS Property
   - Reference
   - 'recipe:css-property'
+browser-compat: css.properties.grid-auto-flow
 ---
 <div>{{CSSRef}}</div>
 
@@ -26,6 +27,7 @@ grid-auto-flow: column dense;
 /* Global values */
 grid-auto-flow: inherit;
 grid-auto-flow: initial;
+grid-auto-flow: revert;
 grid-auto-flow: unset;
 </pre>
 
@@ -44,10 +46,10 @@ grid-auto-flow: unset;
 	<dt><code>column</code></dt>
 	<dd>Items are placed by filling each column in turn, adding new columns as necessary.</dd>
 	<dt><code>dense</code></dt>
-	<dd>"dense" packing algorithm attempts to fill in holes earlier in the grid, if smaller items come up later. This may cause items to appear out-of-order, when doing so would fill in holes left by larger items.</dd>
 	<dd>
-	<p>If it is omitted, a "sparse" algorithm is used, where the placement algorithm only ever moves "forward" in the grid when placing items, never backtracking to fill holes. This ensures that all of the auto-placed items appear "in order", even if this leaves holes that could have been filled by later items.</p>
-	</dd>
+    <p>"dense" packing algorithm attempts to fill in holes earlier in the grid, if smaller items come up later. This may cause items to appear out-of-order, when doing so would fill in holes left by larger items.</p>
+    <p>If it is omitted, a "sparse" algorithm is used, where the placement algorithm only ever moves "forward" in the grid when placing items, never backtracking to fill holes. This ensures that all of the auto-placed items appear "in order", even if this leaves holes that could have been filled by later items.</p>
+  </dd>
 </dl>
 
 <h2 id="Formal_definition">Formal definition</h2>
@@ -137,26 +139,11 @@ inputElem.addEventListener('change', changeGridAutoFlow);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName("CSS3 Grid", "#propdef-grid-auto-flow", "grid-auto-flow")}}</td>
-			<td>{{Spec2("CSS3 Grid")}}</td>
-			<td>Initial definition</td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.grid-auto-flow")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

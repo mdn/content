@@ -8,18 +8,19 @@ tags:
   - Reference
   - ScriptProcessorNode
   - Web Audio API
+browser-compat: api.ScriptProcessorNode
 ---
 <p>{{APIRef("Web Audio API")}}{{deprecated_header}}</p>
 
 <p>The <code>ScriptProcessorNode</code> interface allows the generation, processing, or analyzing of audio using JavaScript.</p>
 
 <div class="note">
-<p><strong>Note</strong>: As of the August 29 2014 Web Audio API spec publication, this feature has been marked as deprecated, and was replaced by <a href="https://webaudio.github.io/web-audio-api/#audioworklet">AudioWorklet</a> (see {{domxref("AudioWorkletNode")}}).</p>
+  <p><strong>Note</strong>: This feature was replaced by <a href="/en-US/docs/Web/API/AudioWorklet">AudioWorklets</a> and the {{domxref("AudioWorkletNode")}} interface.</p>
 </div>
 
 <p>The <code>ScriptProcessorNode</code> interface is an {{domxref("AudioNode")}} audio-processing module that is linked to two buffers, one containing the input audio data, one containing the processed output audio data. An event, implementing the {{domxref("AudioProcessingEvent")}} interface, is sent to the object each time the input buffer contains new data, and the event handler terminates when it has filled the output buffer with data.</p>
 
-<p><img alt="The ScriptProcessorNode stores the input in a buffer, send the audioprocess event. The EventHandler takes the input buffer and fill the output buffer which is sent to the output by the ScriptProcessorNode." src="webaudioscriptprocessingnode.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="The ScriptProcessorNode stores the input in a buffer, send the audioprocess event. The EventHandler takes the input buffer and fill the output buffer which is sent to the output by the ScriptProcessorNode." src="webaudioscriptprocessingnode.png"></p>
 
 <p>The size of the input and output buffer are defined at the creation time, when the {{domxref("BaseAudioContext.createScriptProcessor")}} method is called (both are defined by {{domxref("BaseAudioContext.createScriptProcessor")}}'s <code>bufferSize</code> parameter). The buffer size must be a power of 2 between <code>256</code> and <code>16384</code>, that is <code>256</code>, <code>512</code>, <code>1024</code>, <code>2048</code>, <code>4096</code>, <code>8192</code> or <code>16384</code>. Small numbers lower the <em>latency</em>, but large number may be necessary to avoid audio breakup and glitches.</p>
 
@@ -75,28 +76,17 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<p>{{page("/en-US/docs/Web/API/AudioContext.createScriptProcessor","Example")}}</p>
+<p>See <a href="/en-US/docs/Web/API/BaseAudioContext/createScriptProcessor#example"><code>BaseAudioContext.createScriptProcessor()</code></a> for example code.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#the-scriptprocessornode-interface---deprecated', 'ScriptProcessorNode')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+<p>Since the August 29 2014 <a href="https://www.w3.org/TR/webaudio/#ScriptProcessorNode">Web Audio API specification</a> publication, this feature has been deprecated. It is no longer on track to become a standard.</p>
+
+<p>It was replaced by <a href="/en-US/docs/Web/API/AudioWorklet">AudioWorklets</a> and the {{domxref("AudioWorkletNode")}} interface.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.ScriptProcessorNode")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

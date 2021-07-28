@@ -19,12 +19,12 @@ tags:
 <p>The <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a> provides a JavaScript interface for accessing and manipulating parts of the HTTP pipeline, such as requests and responses. It also provides a global {{domxref("WindowOrWorkerGlobalScope/fetch","fetch()")}} method that provides an easy, logical way to fetch resources asynchronously across the network.</p>
 </div>
 
-<p>This kind of functionality was previously achieved using {{domxref("XMLHttpRequest")}}. Fetch provides a better alternative that can be easily used by other technologies such as {{domxref("Service_Worker_API", "Service Workers")}}. Fetch also provides a single logical place to define other HTTP-related concepts such as CORS and extensions to HTTP.</p>
+<p>This kind of functionality was previously achieved using {{domxref("XMLHttpRequest")}}. Fetch provides a better alternative that can be easily used by other technologies such as {{domxref("Service_Worker_API", "Service Workers")}}. Fetch also provides a single logical place to define other HTTP-related concepts such as <a href="/en-US/docs/Web/HTTP/CORS">CORS</a> and extensions to HTTP.</p>
 
 <p>The <code>fetch</code> specification differs from <code>jQuery.ajax()</code> in the following significant ways:</p>
 
 <ul>
- <li>The Promise returned from <code>fetch()</code> <strong>won’t reject on HTTP error status</strong> even if the response is an HTTP 404 or 500. Instead, it will resolve normally (with <code>ok</code> status set to false), and it will only reject on network failure or if anything prevented the request from completing.</li>
+ <li>The Promise returned from <code>fetch()</code> <strong>won’t reject on HTTP error status</strong> even if the response is an HTTP 404 or 500. Instead, as soon as the server responds with headers, the Promise will resolve normally (with the {{domxref("Response/ok", "ok")}} property of the response set to false if the response isn’t in the range 200–299), and it will only reject on network failure or if anything prevented the request from completing.</li>
  <li><code>fetch()</code> <strong>won’t send cross-origin cookies</strong> unless you set the <em>credentials</em> <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch#parameters">init option</a>. (Since <a href="https://github.com/whatwg/fetch/pull/585" rel="nofollow noopener">April 2018</a>. The spec changed the default credentials policy to <code>same-origin</code>. Firefox changed since 61.0b13.)</li>
 </ul>
 
@@ -37,11 +37,11 @@ tags:
 
 <p>Here we are fetching a JSON file across the network and printing it to the console. The simplest use of <code>fetch()</code> takes one argument — the path to the resource you want to fetch — and returns a promise containing the response (a {{domxref("Response")}} object).</p>
 
-<p>This is just an HTTP response, not the actual JSON. To extract the JSON body content from the response, we use the {{domxref("Body.json","json()")}} method (defined on the {{domxref("Body")}} mixin, which is implemented by both the {{domxref("Request")}} and {{domxref("Response")}} objects.)</p>
+<p>This is just an HTTP response, not the actual JSON. To extract the JSON body content from the response, we use the {{domxref("Response.json()")}} method.</p>
 
 <div class="notecard note">
   <h4>Note</h4>
-  <p>The Body mixin also has similar methods to extract other types of body content; see the {{anch("Body")}} section for more.</p>
+  <p>See the {{anch("Body")}} section for similar methods to extract other types of body content.</p>
 </div>
 
 <p>Fetch requests are controlled by the <code>connect-src</code> directive of <a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy">Content Security Policy</a> rather than the directive of the resources it's retrieving.</p>
@@ -379,7 +379,7 @@ try {
 <ul>
  <li>{{domxref("Response.status")}} — An integer (default value 200) containing the response status code.</li>
  <li>{{domxref("Response.statusText")}} — A string (default value ""), which corresponds to the HTTP status code message. Note that HTTP/2 <a href="https://fetch.spec.whatwg.org/#concept-response-status-message">does not support</a> status messages.</li>
- <li>{{domxref("Response.ok")}} — seen in use above, this is a shorthand for checking that status is in the range 200-299 inclusive. This returns a {{jsxref("Boolean")}}.</li>
+ <li>{{domxref("Response.ok")}} — seen in use above, this is a shorthand for checking that status is in the range 200-299 inclusive. This returns a boolean value.</li>
 </ul>
 
 <p>They can also be created programmatically via JavaScript, but this is only really useful in {{domxref("Service_Worker_API", "ServiceWorkers")}}, when you are providing a custom response to a received request using a {{domxref("FetchEvent.respondWith","respondWith()")}} method:</p>
@@ -416,14 +416,14 @@ addEventListener('fetch', function(event) {
  <li>{{domxref("FormData")}}</li>
 </ul>
 
-<p>The {{domxref("Body")}} mixin defines the following methods to extract a body (implemented by both {{domxref("Request")}} and {{domxref("Response")}}). These all return a promise that is eventually resolved with the actual content.</p>
+<p>The {{domxref("Request")}} and {{domxref("Response")}} interfaces share the following methods to extract a body. These all return a promise that is eventually resolved with the actual content.</p>
 
 <ul>
- <li>{{domxref("Body.arrayBuffer","arrayBuffer()")}}</li>
- <li>{{domxref("Body.blob","blob()")}}</li>
- <li>{{domxref("Body.json","json()")}}</li>
- <li>{{domxref("Body.text","text()")}}</li>
- <li>{{domxref("Body.formData","formData()")}}</li>
+ <li>{{domxref("Request.arrayBuffer()")}} / {{domxref("Response.arrayBuffer()")}}</li>
+ <li>{{domxref("Request.blob()")}} / {{domxref("Response.blob()")}}</li>
+ <li>{{domxref("Request.formData()")}} / {{domxref("Response.formData()")}}</li>
+ <li>{{domxref("Request.json()")}} / {{domxref("Response.json()")}}</li>
+ <li>{{domxref("Request.text()")}} / {{domxref("Response.text()")}}</li>
 </ul>
 
 <p>This makes usage of non-textual data much easier than it was with XHR.</p>

@@ -7,10 +7,11 @@ tags:
   - CSS Property
   - Reference
   - 'recipe:css-property'
+browser-compat: css.properties.font-variant-alternates
 ---
 <div>{{CSSRef}}</div>
 
-<p><span class="seoSummary">The <strong><code>font-variant-alternates</code></strong> CSS property controls the usage of alternate glyphs. These alternate glyphs may be referenced by alternative names defined in {{cssxref("@font-feature-values")}}.</span></p>
+<p>The <strong><code>font-variant-alternates</code></strong> CSS property controls the usage of alternate glyphs. These alternate glyphs may be referenced by alternative names defined in {{cssxref("@font-feature-values")}}.</p>
 
 <pre class="brush:css no-line-numbers">/* Keyword values */
 font-variant-alternates: normal;
@@ -28,6 +29,7 @@ font-variant-alternates: swash(ident1) annotation(ident2);
 /* Global values */
 font-variant-alternates: initial;
 font-variant-alternates: inherit;
+font-variant-alternates: revert;
 font-variant-alternates: unset;
 </pre>
 
@@ -59,7 +61,9 @@ font-variant-alternates: unset;
  <dd>This function enables <a href="https://en.wikipedia.org/wiki/Swash_%28typography%29">swash</a> glyphs. The parameter is a font-specific name mapped to a number. It corresponds to the OpenType values <code>swsh</code> and <code>cswh</code>, like <code>swsh 2</code> and <code>cswh 2</code>.</dd>
  <dt><code><a name="ornaments()"></a>ornaments()</code></dt>
  <dd>This function enables ornaments, like <a href="https://en.wikipedia.org/wiki/Fleuron_%28typography%29">fleurons</a> and other dingbat glyphs. The parameter is a font-specific name mapped to a number. It corresponds to the OpenType value <code>ornm</code>, like <code>ornm 2</code>.
- <div class="note"><strong>Note:</strong> In order to preserve text semantics, font designers should include ornaments that don't match Unicode dingbat characters as ornamental variants of the bullet character (U+2022). Be aware that some existing fonts don't follow this advice.</div>
+ <div class="note">
+   <p><strong>Note:</strong> In order to preserve text semantics, font designers should include ornaments that don't match Unicode dingbat characters as ornamental variants of the bullet character (U+2022). Be aware that some existing fonts don't follow this advice.</p>
+ </div>
  </dd>
  <dt><code><a name="annotation()"></a>annotation()</code></dt>
  <dd>This function enables annotations, like circled digits or inverted characters. The parameter is a font-specific name mapped to a number. It corresponds to the OpenType value <code>nalt</code>, like <code>nalt 2</code>.</dd>
@@ -110,7 +114,7 @@ p {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.font-variant-alternates")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See-also">See Also</h2>
 

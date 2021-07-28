@@ -9,7 +9,7 @@ tags:
   - Reference
   - Streams
 ---
-<div>{{SeeCompatTable}}{{DefaultAPISidebar("Streams")}}</div>
+<div>{{DefaultAPISidebar("Streams")}}</div>
 
 <p>The Streams API allows JavaScript to programmatically access streams of data received over the network and process them as desired by the developer.</p>
 
@@ -23,11 +23,11 @@ tags:
 
 <p>With Streams being available to JavaScript, this all changes — you can now start processing raw data with JavaScript bit by bit as soon as it is available on the client-side, without needing to generate a buffer, string, or blob.</p>
 
-<p><img alt="" src="concept.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="" src="concept.png"></p>
 
 <p>There are more advantages too — you can detect when streams start or end, chain streams together, handle errors and cancel streams as required, and react to the speed of the stream is being read at.</p>
 
-<p>The basic usage of Streams hinges around making responses available as streams. For example, the response {{domxref("Body")}} returned by a successful <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch request</a> can be exposed as a {{domxref("ReadableStream")}}, and you can then read it using a reader created with {{domxref("ReadableStream.getReader()")}}, cancel it with {{domxref("ReadableStream.cancel()")}}, etc.</p>
+<p>The basic usage of Streams hinges around making responses available as streams. For example, the response body returned by a successful <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch request</a> can be exposed as a {{domxref("ReadableStream")}}, and you can then read it using a reader created with {{domxref("ReadableStream.getReader()")}}, cancel it with {{domxref("ReadableStream.cancel()")}}, etc.</p>
 
 <p>More complicated uses involve creating your own stream using the {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} constructor, for example to process data inside a <a href="/en-US/docs/Web/API/Service_Worker_API">service worker</a>.</p>
 
@@ -61,6 +61,15 @@ tags:
  <dd>Represents a controller allowing control of a {{domxref("WritableStream")}}'s state. When constructing a <code>WritableStream</code>, the underlying sink is given a corresponding <code>WritableStreamDefaultController</code> instance to manipulate.</dd>
 </dl>
 
+<h3 id="Transform_Streams">Transform Streams</h3>
+
+<dl>
+  <dt>{{domxref("TransformStream")}}</dt>
+  <dd>Represents a set of transformable data.</dd>
+  <dt>{{domxref("TransformStreamDefaultController")}}</dt>
+  <dd>Provides methods to manipulate the {{domxref("ReadableStream")}} and {{domxref("WritableStream")}} associated with a transform stream.</dd>
+</dl>
+
 <h3 id="Related_stream_APIs_and_operations">Related stream APIs and operations</h3>
 
 <dl>
@@ -75,8 +84,8 @@ tags:
 <dl>
  <dt>{{domxref("Request")}}</dt>
  <dd>When a new <code>Request</code> object is constructed, you can pass it a {{domxref("ReadableStream")}} in the <code>body</code> property of its <code>RequestInit</code> dictionary.  This <code>Request</code> could then be passed to a {{domxref("WindowOrWorkerGlobalScope.fetch()")}} to commence fetching the stream.</dd>
- <dt>{{domxref("Body")}}</dt>
- <dd>The response {{domxref("Body")}} returned by a successful <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch request</a> is exposed by default as a {{domxref("ReadableStream")}}, and can have a reader attached to it, etc.</dd>
+ <dt>{{domxref("Response.body")}}</dt>
+ <dd>The response body returned by a successful <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch request</a> is exposed by default as a {{domxref("ReadableStream")}}, and can have a reader attached to it, etc.</dd>
 </dl>
 
 <h3 id="ByteStream-related_interfaces">ByteStream-related interfaces</h3>
@@ -131,11 +140,6 @@ tags:
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-<div class="hidden">
-<p>The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-</div>
-
 <h3 id="ReadableStream">ReadableStream</h3>
 
 <p>{{Compat("api.ReadableStream")}}</p>

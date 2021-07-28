@@ -7,6 +7,7 @@ tags:
   - CanvasRenderingContext2D
   - Method
   - Reference
+browser-compat: api.CanvasRenderingContext2D.createPattern
 ---
 <div>{{APIRef}}</div>
 
@@ -87,7 +88,7 @@ tags:
 var ctx = canvas.getContext('2d');
 
 var img = new Image();
-img.src = 'https://mdn.mozillademos.org/files/222/Canvas_createpattern.png';
+img.src = 'canvas_createpattern.png';
 img.onload = function() {
   var pattern = ctx.createPattern(img, 'repeat');
   ctx.fillStyle = pattern;
@@ -135,25 +136,11 @@ document.body.appendChild(canvas);</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-createpattern",
-        "CanvasRenderingContext2D.createPattern")}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.CanvasRenderingContext2D.createPattern")}}</p>
+<p>{{Compat}}</p>
 
 <h3 id="Gecko-specific_notes">Gecko-specific notes</h3>
 

@@ -1,6 +1,6 @@
 ---
 title: console.log()
-slug: Web/API/Console/log
+slug: Web/API/console/log
 tags:
   - API
   - DOM
@@ -9,18 +9,16 @@ tags:
   - Method
   - Reference
   - Web Development
-  - console
-  - console.dir()
   - console.log()
   - difference
   - web console
+browser-compat: api.console.log
 ---
 <p>{{APIRef("Console API")}}</p>
 
-<p><span class="seoSummary">The {{domxref("Console")}} method
-    <strong><code>log()</code></strong> outputs a message to the web console.</span> The
-  message may be a single string (with optional substitution values), or it may be any one
-  or more JavaScript objects.</p>
+<p>The <strong><code>console.log()</code></strong> method outputs a message to the web console.
+   The message may be a single string (with optional substitution values), or it may be any one
+   or more JavaScript objects.</p>
 
 <p>{{AvailableInWorkers}}</p>
 
@@ -48,7 +46,7 @@ console.log(<var>msg</var> [, <var>subst1</var>, ..., <var>substN</var>]);
   </dd>
 </dl>
 
-<p>See <a href="/en-US/docs/Web/API/Console#outputting_text_to_the_console">Outputting text to
+<p>See <a href="/en-US/docs/Web/API/console#outputting_text_to_the_console">Outputting text to
     the console</a> in the documentation of {{domxref("console")}} for details.</p>
 
 <h2 id="Difference_between_log_and_dir">Difference between log() and dir()</h2>
@@ -87,41 +85,18 @@ console.log(<var>msg</var> [, <var>subst1</var>, ..., <var>substN</var>]);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName("Console API", "#log", "console.log()")}}</td>
-      <td>{{Spec2("Console API")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Console.log")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a class="external"
-      href="http://www.opera.com/dragonfly/documentation/console/">Opera Dragonfly
-      documentation: Console</a></li>
   <li><a href="https://msdn.microsoft.com/library/gg589530">MSDN: Using
       the F12 Tools Console to View Errors and Status</a></li>
-  <li><a href="http://getfirebug.com/wiki/index.php/Console_API">Firebug wiki: Console
-      API</a> - Firebug supports additional features in its console.log() implementation,
-    such as <a
-      href="http://www.softwareishard.com/blog/firebug/firebug-tip-styled-logging/">styled
-      logging</a>.</li>
   <li><a
-      href="http://nodejs.org/docs/latest/api/console.html#console_console_log_data">NodeJS:
+      href="https://nodejs.org/docs/latest/api/console.html#console_console_log_data">NodeJS:
       Console API</a></li>
 </ul>

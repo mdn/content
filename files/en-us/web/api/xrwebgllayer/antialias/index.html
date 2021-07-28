@@ -21,8 +21,9 @@ tags:
 - appearance
 - augmented
 - rendering
+browser-compat: api.XRWebGLLayer.antialias
 ---
-<p>{{securecontext_header}}{{APIRef("WebXR Device API")}}</p>
+<p>{{APIRef("WebXR Device API")}}</p>
 
 <p><span class="seoSummary">The read-only {{domxref("XRWebGLLayer")}} property
     <code><strong>antialias</strong></code> is a Boolean value which is <code>true</code>
@@ -52,10 +53,9 @@ tags:
 <h2 id="Usage_notes">Usage notes</h2>
 
 <p>Since this is a read-only property, you can set the antialiasing mode only when
-  initially creating the <code>XRWebGLLayer</code>, by specifying the
-  {{domxref("XRWebGLLayerInit.antialias", "antialias")}} object in the
-  {{domxref("XRWebGLLayer.XRWebGLLayer", "XRWebGLLayer()")}}
-  constructor's <code>layerInit</code> parameter.</p>
+  initially creating the <code>XRWebGLLayer</code>, by specifying the <code>antialias</code>
+  property in the {{domxref("XRWebGLLayer.XRWebGLLayer", "XRWebGLLayer()")}}
+  constructor's <code>layerInit</code> configuration object.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -75,25 +75,11 @@ if (!glLayer.antialias) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('WebXR','#dom-xrwebgllayer-antialias','XRWebGLLayer.antialias')}}
-      </td>
-      <td>{{Spec2('WebXR')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.XRWebGLLayer.antialias")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -6,6 +6,7 @@ tags:
   - Reference
   - SVG
   - SVGAElement
+browser-compat: api.SVGAElement
 ---
 <div>{{APIRef("SVG")}}</div>
 
@@ -13,13 +14,13 @@ tags:
 
 <h2 id="Properties">Properties</h2>
 
-<p><em>This interface also inherits properties from its parent, {{domxref("SVGGraphicsElement")}}, and implements properties from {{domxref("SVGURIReference")}} and {{domxref("HTMLHyperlinkElementUtils")}}.</em></p>
+<p><em>This interface also inherits properties from its parent, {{domxref("SVGGraphicsElement")}}, and implements properties from {{domxref("HTMLHyperlinkElementUtils")}}.</em></p>
 
 <dl>
  <dt>{{domxref("SVGAElement.download")}}</dt>
  <dd>See {{domxref("HTMLAnchorElement.download")}}.</dd>
- <dt>{{domxref("SVGAElement.href")}}</dt>
- <dd>See {{domxref("HTMLAnchorElement.href")}}.</dd>
+ <dt>{{domxref("SVGAElement.href")}} {{ReadOnlyInline}}</dt>
+ <dd>Is an {{domxref("SVGAnimatedString")}} that reflects the {{SVGAttr("href")}} or {{SVGAttr("xlink:href")}} attribute.</dd>
  <dt>{{domxref("SVGAElement.hreflang")}}</dt>
  <dd>Is a {{domxref("DOMString")}} that reflects the <code>hreflang</code> attribute, indicating the language of the linked resource.</dd>
  <dt>{{domxref("SVGAElement.ping")}}</dt>
@@ -60,31 +61,11 @@ linkRef.onclick = function(){
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG2", "linking.html#InterfaceSVGAElement")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>Replaced inheritance from {{domxref("SVGElement")}} by {{domxref("SVGGraphicsElement")}} and removed the interface implementations of {{domxref("SVGTests")}}, {{domxref("SVGLangSpace")}}, {{domxref("SVGExternalResourcesRequired")}}, {{domxref("SVGStylable")}}, and {{domxref("SVGTransformable")}} by {{domxref("HTMLHyperlinkElementUtils")}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "linking.html#InterfaceSVGAElement")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.SVGAElement")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -1,0 +1,85 @@
+---
+title: Response.json()
+slug: Web/API/Response/json
+tags:
+  - API
+  - Fetch
+  - JSON
+  - Method
+  - Reference
+  - Response
+browser-compat: api.Response.json
+---
+<div>{{APIRef("Fetch API")}}</div>
+
+<p>The <strong><code>json()</code></strong> method of the {{DOMxRef("Response")}} interface takes
+  a {{DOMxRef("Response")}} stream and reads it to completion. It returns a promise which
+  resolves with the result of parsing the body text as {{JSxRef("JSON")}}.</p>
+
+<p>Note that despite the method being named <code>json()</code>, the result is not JSON but is instead the result of taking JSON as input and parsing it to produce a JavaScript object.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js"><em>response</em>.json().then(<em>data</em> =&gt; {
+  // do something with your data
+});</pre>
+
+<h3 id="Parameters">Parameters</h3>
+
+<p>None.</p>
+
+<h3 id="Return_value">Return value</h3>
+
+<p>A {{jsxref("Promise")}} that resolves to a JavaScript object. This object could be
+  anything that can be represented by JSON — an object, an array, a string, a number...
+</p>
+
+<h2 id="Example">Example</h2>
+
+<p>In our <a href="https://github.com/mdn/fetch-examples/tree/master/fetch-json">fetch
+    json example</a> (run <a href="https://mdn.github.io/fetch-examples/fetch-json/">fetch
+    json live</a>), we create a new request using the {{DOMxRef("Request.Request",
+  "Request()")}} constructor, then use it to fetch a <code>.json</code> file. When the
+  fetch is successful, we read and parse the data using <code>json()</code>, then read
+  values out of the resulting objects as you'd expect and insert them into list items to
+  display our product data.</p>
+
+<pre class="brush: js highlight[5]">const myList = document.querySelector('ul');
+const myRequest = new Request('products.json');
+
+fetch(myRequest)
+  .then(response =&gt; response.json())
+  .then(data =&gt; {
+    for (const product of data.products) {
+      let listItem = document.createElement('li');
+      listItem.appendChild(
+        document.createElement('strong')
+      ).textContent = product.Name;
+      listItem.append(
+        ` can be found in ${
+          product.Location
+        }. Cost: `
+      );
+      listItem.appendChild(
+        document.createElement('strong')
+      ).textContent = `£${product.Price}`;
+      myList.appendChild(listItem);
+    }
+  })
+  .catch(console.error);</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+{{Specifications}}
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+  <li><a href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a></li>
+  <li><a href="/en-US/docs/Web/HTTP/CORS">Cross-Origin Resource Sharing (CORS)</a></li>
+  <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
+</ul>

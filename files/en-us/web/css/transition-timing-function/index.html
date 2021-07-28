@@ -7,6 +7,7 @@ tags:
   - CSS Transitions
   - Reference
   - 'recipe:css-property'
+browser-compat: css.properties.transition-timing-function
 ---
 <div>{{CSSRef}}</div>
 
@@ -49,6 +50,7 @@ transition-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1.0, 0.1);
 /* Global values */
 transition-timing-function: inherit;
 transition-timing-function: initial;
+transition-timing-function: revert;
 transition-timing-function: unset;</pre>
 
 <h3 id="Values">Values</h3>
@@ -114,8 +116,7 @@ transition-timing-function: unset;</pre>
 
 <h3 id="Cubic-Bezier_examples">Cubic-Bezier examples</h3>
 
-<div class="hidden">
-<pre class="brush:html">&lt;div class="parent"&gt;
+<pre class="brush:html hidden">&lt;div class="parent"&gt;
   &lt;div class="ease"&gt;ease&lt;/div&gt;
   &lt;div class="easein"&gt;ease-in&lt;/div&gt;
   &lt;div class="easeout"&gt;ease-out&lt;/div&gt;
@@ -124,7 +125,7 @@ transition-timing-function: unset;</pre>
   &lt;div class="cb"&gt;cubic-bezier(0.2,-2,0.8,2)&lt;/div&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush:css;">.parent {}
+<pre class="brush:css hidden">.parent {}
 .parent &gt; div[class] {
     width: 12em;
     min-width: 12em;
@@ -146,7 +147,7 @@ transition-timing-function: unset;</pre>
 }
 </pre>
 
-<pre class="brush:js">function updateTransition() {
+<pre class="brush:js hidden">function updateTransition() {
   var els = document.querySelectorAll(".parent &gt; div[class]");
   for(var c = els.length, i = 0; i &lt; c; i++) {
      els[i].classList.toggle("box1");
@@ -155,7 +156,6 @@ transition-timing-function: unset;</pre>
 
 var intervalID = window.setInterval(updateTransition, 10000);
 </pre>
-</div>
 
 <pre class="brush: css">.ease {
    transition-timing-function: ease;
@@ -180,8 +180,8 @@ var intervalID = window.setInterval(updateTransition, 10000);
 
 <h3 id="Step_examples">Step examples</h3>
 
-<div class="hidden">
-<pre class="brush:html">&lt;div class="parent"&gt;
+
+<pre class="brush:html hidden">&lt;div class="parent"&gt;
   &lt;div class="jump-start"&gt;jump-start&lt;/div&gt;
   &lt;div class="jump-end"&gt;jump-end&lt;/div&gt;
   &lt;div class="jump-both"&gt;jump-both&lt;/div&gt;
@@ -190,7 +190,7 @@ var intervalID = window.setInterval(updateTransition, 10000);
   &lt;div class="step-end"&gt;step-end&lt;/div&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush:css;">.parent {}
+<pre class="brush:css hidden">.parent {}
 .parent &gt; div[class] {
     width: 12em;
     min-width: 12em;
@@ -212,7 +212,7 @@ var intervalID = window.setInterval(updateTransition, 10000);
 }
 </pre>
 
-<pre class="brush:js">function updateTransition() {
+<pre class="brush:js hidden">function updateTransition() {
   var els = document.querySelectorAll(".parent &gt; div[class]");
   for(var c = els.length, i = 0; i &lt; c; i++) {
      els[i].classList.toggle("box1");
@@ -221,7 +221,6 @@ var intervalID = window.setInterval(updateTransition, 10000);
 
 var intervalID = window.setInterval(updateTransition, 10000);
 </pre>
-</div>
 
 <pre class="brush: css">.jump-start {
    transition-timing-function: steps(5, jump-start);
@@ -246,26 +245,11 @@ var intervalID = window.setInterval(updateTransition, 10000);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{ SpecName('CSS3 Transitions', '#transition-timing-function-property', 'transition-timing-function') }}</td>
-			<td>{{ Spec2('CSS3 Transitions') }}</td>
-			<td>Initial definition</td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.transition-timing-function")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

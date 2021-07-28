@@ -8,6 +8,7 @@ tags:
   - HTTP
   - Sandbox
   - Security
+browser-compat: http.headers.csp.Content-Security-Policy.sandbox
 ---
 <div>{{HTTPSidebar}}</div>
 
@@ -44,6 +45,8 @@ Content-Security-Policy: sandbox &lt;value&gt;;
 <p>where <code>&lt;value&gt;</code> can optionally be one of the following values:</p>
 
 <dl>
+  <dt><code>allow-downloads</code></dt>
+  <dd>Allows for downloads after the user clicks a button or link.</dd>
   <dt><code>allow-downloads-without-user-activation</code> {{experimental_inline}}</dt>
   <dd>Allows for downloads to occur without a gesture from the user.</dd>
   <dt><code>allow-forms</code></dt>
@@ -90,34 +93,11 @@ Content-Security-Policy: sandbox &lt;value&gt;;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{specName("CSP 3.0", "#directive-sandbox", "sandbox")}}</td>
-      <td>{{Spec2('CSP 3.0')}}</td>
-      <td>No changes.</td>
-    </tr>
-    <tr>
-      <td>{{specName("CSP 1.1", "#directive-sandbox", "sandbox")}}</td>
-      <td>{{Spec2('CSP 1.1')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data.
-  If you'd like to contribute to the data, please check out <a
-    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
-  and send us a pull request.</p>
-
-<p>{{Compat("http.headers.csp.Content-Security-Policy.sandbox")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

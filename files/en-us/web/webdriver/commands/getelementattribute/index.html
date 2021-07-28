@@ -6,6 +6,7 @@ tags:
   - Get Element Tag Name
   - Reference
   - WebDriver
+browser-compat: webdriver.commands.GetElementAttribute
 ---
 <p>The <em>Get Element Attribute</em> <a href="/en-US/docs/Web/WebDriver/Command">command</a> of the <a href="/en-US/docs/Web/WebDriver">WebDriver</a> API returns the attribute of the referenced <a href="/en-US/docs/Web/WebDriver/WebElement">web element</a>. If for example the element is an {{HTMLElement("img")}}, the returned attribute is <code>"//TODO"</code>, which is equivalent to calling {{domxref("Element.getAttribute")}} on the element. For XML/XHTML documents it may be cased differently.</p>
 
@@ -67,21 +68,8 @@ print(search_box.get_attribute("id"))
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<tbody>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-		<tr>
-			<td>{{SpecName('WebDriver', '#dfn-get-element-attribute', 'Get Element Attribute')}}</td>
-			<td>{{Spec2('WebDriver')}}</td>
-			<td>Initial definition</td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("webdriver.commands.GetElementAttribute")}}</p>
+<p>{{Compat}}</p>

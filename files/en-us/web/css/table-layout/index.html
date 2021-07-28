@@ -7,6 +7,7 @@ tags:
   - CSS Tables
   - Reference
   - 'recipe:css-property'
+browser-compat: css.properties.table-layout
 ---
 <div>{{CSSRef}}</div>
 
@@ -32,8 +33,10 @@ table-layout: unset;
 	<dt>{{Cssxref("auto")}}</dt>
 	<dd>By default, most browsers use an automatic table layout algorithm. The widths of the table and its cells are adjusted to fit the content.</dd>
 	<dt><code>fixed</code></dt>
-	<dd>Table and column widths are set by the widths of <code>table</code> and <code>col</code> elements or by the width of the first row of cells. Cells in subsequent rows do not affect column widths.</dd>
-	<dd>Under the "fixed" layout method, the entire table can be rendered once the first table row has been downloaded and analyzed. This can speed up rendering time over the "automatic" layout method, but subsequent cell content might not fit in the column widths provided. Cells use the {{Cssxref("overflow")}} property to determine whether to clip any overflowing content, but only if the table has a known width; otherwise, they won't overflow the cells.</dd>
+	<dd>
+    <p>Table and column widths are set by the widths of <code>table</code> and <code>col</code> elements or by the width of the first row of cells. Cells in subsequent rows do not affect column widths.</p>
+    <p>Under the "fixed" layout method, the entire table can be rendered once the first table row has been downloaded and analyzed. This can speed up rendering time over the "automatic" layout method, but subsequent cell content might not fit in the column widths provided. Cells use the {{Cssxref("overflow")}} property to determine whether to clip any overflowing content, but only if the table has a known width; otherwise, they won't overflow the cells.</p>
+  </dd>
 </dl>
 
 <h2 id="Formal_definition">Formal definition</h2>
@@ -80,26 +83,11 @@ td {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName('CSS2.1', 'tables.html#width-layout', 'table-layout')}}</td>
-			<td>{{Spec2('CSS2.1')}}</td>
-			<td>Initial definition.</td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.table-layout")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -8,10 +8,11 @@ tags:
   - Layout
   - Reference
   - 'recipe:css-shorthand-property'
+browser-compat: css.properties.border
 ---
 <div>{{CSSRef("CSS Borders")}}</div>
 
-<p><span class="seoSummary">The <strong><code>border</code></strong> <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand</a> <a href="/en-US/docs/Web/CSS">CSS</a> property sets an element's border.</span> It sets the values of {{Cssxref("border-width")}}, {{Cssxref("border-style")}}, and {{Cssxref("border-color")}}.</p>
+<p>The <strong><code>border</code></strong> <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand</a> <a href="/en-US/docs/Web/CSS">CSS</a> property sets an element's border. It sets the values of {{Cssxref("border-width")}}, {{Cssxref("border-style")}}, and {{Cssxref("border-color")}}.</p>
 
 <div>{{EmbedInteractiveExample("pages/css/border.html")}}</div>
 
@@ -54,11 +55,11 @@ border: unset;
 <h3 id="Values">Values</h3>
 
 <dl>
- <dt id="&lt;line-width&gt;"><code>&lt;line-width&gt;</code></dt>
+ <dt><code>&lt;line-width&gt;</code></dt>
  <dd>Sets the thickness of the border. Defaults to <code>medium</code> if absent. See {{Cssxref("border-width")}}.</dd>
- <dt id="&lt;line-style&gt;"><code>&lt;line-style&gt;</code></dt>
+ <dt><code>&lt;line-style&gt;</code></dt>
  <dd>Sets the style of the border. Defaults to <code>none</code> if absent. See {{Cssxref("border-style")}}.</dd>
- <dt id="&lt;color&gt;">{{cssxref("&lt;color&gt;")}}</dt>
+ <dt>{{cssxref("&lt;color&gt;")}}</dt>
  <dd>Sets the color of the border. Defaults to <code>currentcolor</code> if absent. See {{Cssxref("border-color")}}.</dd>
 </dl>
 
@@ -113,37 +114,11 @@ border: unset;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Backgrounds', '#the-border-shorthands', 'border')}}</td>
-   <td>{{Spec2('CSS3 Backgrounds')}}</td>
-   <td>Removes <em>specific</em> support for <code>transparent</code>, as it is now a valid {{cssxref("&lt;color&gt;")}}; this has no practical impact.<br>
-    Though it cannot be set to a custom value using the shorthand, <code>border</code> now resets {{cssxref("border-image")}} to its initial value (<code>none</code>).</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'box.html#border-shorthand-properties', 'border')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Accepts the <code>inherit</code> keyword. Also accepts <code>transparent</code> as a valid color.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#border', 'border')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.border")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -10,14 +10,13 @@ tags:
 - Reference
 - Web Bluetooth API
 - writeValue
+browser-compat: api.BluetoothRemoteGATTCharacteristic.writeValue
 ---
 <p>{{Deprecated_header}}</p>
 
-<p>Use <code>writeValueWithResponse()</code> and <code>writeValueWithoutResponse()</code> instead.</p>
+<p>Use {{DOMxRef("BluetoothRemoteGATTCharacteristic.writeValueWithResponse()")}} and {{DOMxRef("BluetoothRemoteGATTCharacteristic.writeValueWithoutResponse()")}} instead.</p>
 
-<p>The <strong><code>BluetoothRemoteGATTCharacteristic.writeValue()</code></strong> method
-  sets the value property to the bytes contained in an {{jsxref("ArrayBuffer")}} and
-  returns a {{jsxref("Promise")}}.</p>
+<p>The<strong><code>BluetoothRemoteGATTCharacteristic.writeValue()</code></strong> method sets a {{domxref("BluetoothRemoteGATTCharacteristic")}} object’s <code>value</code> property to the bytes contained in a given {{JSxRef("ArrayBuffer")}}, calls <a href="https://webbluetoothcg.github.io/web-bluetooth/#writecharacteristicvalue"><code>WriteCharacteristicValue</code>(<var>this</var>=<code>this</code>, <var>value=value</var>, <var>response</var>=<code>"optional"</code>)</a>, and returns the resulting {{JSxRef("Promise")}}.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -37,24 +36,10 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName("Web Bluetooth", "#dom-bluetoothremotegattcharacteristic-writevalue",
-        "writeValue()")}}</td>
-      <td>{{Spec2("Web Bluetooth")}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.BluetoothRemoteGATTCharacteristic.writeValue")}}</p>
+<p>{{Compat}}</p>
 
 <div>{{APIRef("Web Bluetooth")}}</div>

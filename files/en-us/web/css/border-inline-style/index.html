@@ -8,20 +8,23 @@ tags:
   - Experimental
   - Reference
   - 'recipe:css-property'
+browser-compat: css.properties.border-inline-style
 ---
 <div>{{CSSRef}}</div>
 
 <p>The <strong><code>border-inline-style</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property defines the style of the logical inline borders of an element, which maps to a physical border style depending on the element's writing mode, directionality, and text orientation. It corresponds to the {{cssxref("border-top-style")}} and {{cssxref("border-bottom-style")}}, or {{cssxref("border-left-style")}} and {{cssxref("border-right-style")}} properties depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.</p>
 
-<pre class="brush:css no-line-numbers">/* &lt;'border-style'&gt; values */
-border-inline-style: dashed;
-border-inline-style: dotted;
-border-inline-style: groove;
-</pre>
+<div>{{EmbedInteractiveExample("pages/css/border-inline-style.html")}}</div>
 
 <p>The border style in the other dimension can be set with {{cssxref("border-block-style")}}, which sets {{cssxref("border-block-start-style")}}, and {{cssxref("border-block-end-style")}}.</p>
 
 <h2 id="Syntax">Syntax</h2>
+
+<pre class="brush:css no-line-numbers">/* &lt;'border-style'&gt; values */
+border-inline-style: dashed;
+border-inline-style: dotted;
+border-inline-style: revert;
+border-inline-style: groove;</pre>
 
 <h3 id="Values">Values</h3>
 
@@ -65,26 +68,11 @@ border-inline-style: groove;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Logical Properties", "#propdef-border-inline-style", "border-inline-style")}}</td>
-   <td>{{Spec2("CSS Logical Properties")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.border-inline-style")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

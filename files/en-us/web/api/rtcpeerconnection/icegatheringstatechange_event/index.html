@@ -12,12 +12,15 @@ tags:
   - WebRTC
   - WebRTC API
   - events
+  - Event
   - icegatheringstatechange
   - state
+browser-compat: api.RTCPeerConnection.icegatheringstatechange_event
 ---
 <div>{{APIRef("WebRTC")}}</div>
 
-<p><span class="seoSummary">The <strong><code>icegatheringstatechange</code></strong> event is sent to the {{domxref("RTCPeerConnection.onicegatheringstatechange", "onicegatheringstatechange")}} event handler on an {{domxref("RTCPeerConnection")}} when the state of the {{Glossary("ICE")}} candidate gathering process changes.</span> This signifies that the value of the connection's {{domxref("RTCPeerConnection.iceGatheringState", "iceGatheringState")}} property has changed.</p>
+<p>The <strong><code>icegatheringstatechange</code></strong> event is sent to the {{domxref("RTCPeerConnection.onicegatheringstatechange", "onicegatheringstatechange")}} event handler on an {{domxref("RTCPeerConnection")}} when the state of the {{Glossary("ICE")}} candidate gathering process changes.
+  This signifies that the value of the connection's {{domxref("RTCPeerConnection.iceGatheringState", "iceGatheringState")}} property has changed.</p>
 
 <p>When ICE firststarts to gather connection candidates, the value changes from <code>new</code> to <code>gathering</code> to indicate that the process of collecting candidate configurations for the connection has begun. When the value changes to <code>complete</code>, all of the transports that make up the <code>RTCPeerConnection</code> have finished gathering ICE candidates.</p>
 
@@ -81,26 +84,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('WebRTC 1.0', '#event-icegatheringstatechange', 'icecandidatestatechange')}}</td>
-   <td>{{Spec2('WebRTC 1.0')}}</td>
-   <td>Initial specification.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCPeerConnection.icegatheringstatechange_event")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

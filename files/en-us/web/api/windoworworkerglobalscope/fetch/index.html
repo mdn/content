@@ -11,6 +11,7 @@ tags:
   - Reference
   - WindowOrWorkerGlobalScope
   - request
+browser-compat: api.WindowOrWorkerGlobalScope.fetch
 ---
 <p>{{APIRef("Fetch API")}}</p>
 
@@ -99,6 +100,8 @@ tags:
           </dd>
         </dl>
       </dd>
+      <dt><code>cache</code></dt>
+      <dd>A string indicating how the request will interact with the browser’s <a href="/en-US/docs/Web/HTTP/Caching">HTTP cache</a>. The possible values, <code>default</code>, <code>no-store</code>, <code>reload</code>, <code>no-cache</code>, <code>force-cache</code>, and <code>only-if-cached</code>, are documented in the article for the {{domxref("Request/cache", "cache")}} property of the {{domxref("Request")}} object.</dd>
 <dt><code>redirect</code></dt>
 <dd>How to handle a <code>redirect</code> response:
     <ul>
@@ -141,7 +144,7 @@ tags:
 
 <dl>
   <dt><code>AbortError</code></dt>
-  <dd>The request was aborted due to a call to the {{domxref("AbortController")}} method
+  <dd>The request was aborted due to a call to the {{domxref("AbortController")}}
     {{domxref("AbortController.abort", "abort()")}} method.</dd>
   <dt><code>TypeError</code></dt>
   <dd>The specified URL string includes user credentials. This information should instead
@@ -155,7 +158,7 @@ tags:
     href="https://mdn.github.io/fetch-examples/fetch-request/">Fetch Request live</a>) we
   create a new {{domxref("Request")}} object using the relevant constructor, then fetch it
   using a <code>fetch()</code> call. Since we are fetching an image, we run
-  {{domxref("Body.blob()")}} on the response to give it the proper MIME type so it will be
+  {{domxref("Response.blob()")}} on the response to give it the proper MIME type so it will be
   handled properly, then create an Object URL of it and display it in an
   {{htmlelement("img")}} element.</p>
 
@@ -185,7 +188,7 @@ fetch(myRequest)
 <pre class="brush: js">const myImage = document.querySelector('img');
 
 let myHeaders = new Headers();
-myHeaders.append('Content-Type', 'image/jpeg');
+myHeaders.append('Accept', 'image/jpeg');
 
 const myInit = {
   method: 'GET',
@@ -212,7 +215,7 @@ fetch(myRequest, myInit).then(function(response) {
 <pre class="brush: js">const myInit = {
   method: 'GET',
   headers: {
-    'Content-Type': 'image/jpeg'
+    'Accept': 'image/jpeg'
   },
   mode: 'cors',
   cache: 'default'
@@ -223,38 +226,11 @@ let myRequest = new Request('flowers.jpg', myInit);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('Fetch','#fetch-method','fetch()')}}</td>
-      <td>{{Spec2('Fetch')}}</td>
-      <td>Defined in a <code>WindowOrWorkerGlobalScope</code> partial in the newest spec.
-      </td>
-    </tr>
-    <tr>
-      <td>{{SpecName('Fetch','#dom-global-fetch','fetch()')}}</td>
-      <td>{{Spec2('Fetch')}}</td>
-      <td>Initial definition</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('Credential Management')}}</td>
-      <td>{{Spec2('Credential Management')}}</td>
-      <td>Adds {{domxref("FederatedCredential")}} or {{domxref("PasswordCredential")}}
-        instance as a possible value for <code>init.credentials</code>.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.WindowOrWorkerGlobalScope.fetch")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

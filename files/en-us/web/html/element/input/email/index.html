@@ -8,14 +8,13 @@ tags:
   - HTML forms
   - Input Type
   - Reference
+browser-compat: html.elements.input.input-email
 ---
 <div>{{HTMLRef}}</div>
 
 <p><span class="seoSummary">{{HTMLElement("input")}} elements of type <code><strong>email</strong></code> are used to let the user enter and edit an e-mail address, or, if the <code><a href="/en-US/docs/Web/HTML/Attributes/multiple">multiple</a></code> attribute is specified, a list of e-mail addresses.</span></p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-email.html", "tabbed-shorter")}}</div>
-
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <p>The input value is automatically validated to ensure that it's either empty or a properly-formatted e-mail address (or list of addresses) before the form can be submitted. The {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS pseudo-classes are automatically applied as appropriate to visually denote whether the current value of the field is a valid e-mail address or not.</p>
 
@@ -105,21 +104,21 @@ tags:
  </tbody>
 </table>
 
-<p id="htmlattrdeflist">{{page("/en-US/docs/Web/HTML/Element/input/text", "htmlattrdeflist", 0, 1, 2)}}</p>
+<p id="attr-list">{{page("/en-US/docs/Web/HTML/Element/input/text", "attr-list", 0, 1, 2)}}</p>
 
-<h3 id="htmlattrdefmaxlength">{{htmlattrdef("maxlength")}}</h3>
+<h3 id="attr-maxlength"><code id="maxlength">maxlength</code></h3>
 
 <p>The maximum number of characters (as UTF-16 code units) the user can enter into the <code>email</code> input. This must be an integer value 0 or higher. If no <code>maxlength</code> is specified, or an invalid value is specified, the <code>email</code> input has no maximum length. This value must also be greater than or equal to the value of <code>minlength</code>.</p>
 
-<p>The input will fail <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a> if the length of the text value of the field is greater than <code>maxlength</code> UTF-16 code units long. Constraint validation is only applied when the value is changed by the user.</p>
+<p>The input will fail <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a> if the length of the text value of the field is greater than <code>maxlength</code> UTF-16 code units long. Constraint validation is only applied when the value is changed by the user.</p>
 
-<h3 id="htmlattrdefminlength">{{htmlattrdef("minlength")}}</h3>
+<h3 id="attr-minlength"><code id="minlength">minlength</code></h3>
 
 <p>The minimum number of characters (as UTF-16 code units) the user can enter into the <code>email</code> input. This must be an non-negative integer value smaller than or equal to the value specified by <code>maxlength</code>. If no <code>minlength</code> is specified, or an invalid value is specified, the <code>email</code> input has no minimum length.</p>
 
-<p>The input will fail <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a> if the length of the text entered into the field is fewer than <code>minlength</code> UTF-16 code units long. Constraint validation is only applied when the value is changed by the user.</p>
+<p>The input will fail <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a> if the length of the text entered into the field is fewer than <code>minlength</code> UTF-16 code units long. Constraint validation is only applied when the value is changed by the user.</p>
 
-<h3 id="htmlattrdefmultiple">{{htmlattrdef("multiple")}}</h3>
+<h3 id="attr-multiple"><code id="multiple">multiple</code></h3>
 
 <p>A Boolean attribute which, if present, indicates that the user can enter a list of multiple e-mail addresses, separated by commas and, optionally, whitespace characters. See {{anch("Allowing multiple e-mail addresses")}} for an example, or <a href="/en-US/docs/Web/HTML/Attributes/multiple">HTML attribute: multiple</a> for more details.</p>
 
@@ -127,17 +126,17 @@ tags:
 <p><strong>Note:</strong> Normally, if you specify the {{htmlattrxref("required", "input")}} attribute, the user must enter a valid e-mail address for the field to be considered valid. However, if you add the <code>multiple</code> attribute, a list of zero e-mail addresses (an empty string, or one which is entirely whitespace) is a valid value. In other words, the user does not have to enter even one e-mail address when <code>multiple</code> is specified, regardless of the value of <code>required</code>.</p>
 </div>
 
-<h3 id="htmlattrdefpattern">{{htmlattrdef("pattern")}}</h3>
+<h3 id="attr-pattern"><code id="pattern">pattern</code></h3>
 
 <p>{{page("/en-US/docs/Web/HTML/Element/input/text", "pattern-include")}}</p>
 
 <p>See the section {{anch("Pattern validation")}} for details and an example.</p>
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "htmlattrdefplaceholder", 0, 1, 2)}}</p>
+<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "attr-placeholder", 0, 1, 2)}}</p>
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "htmlattrdefreadonly", 0, 1, 2)}}</p>
+<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "attr-readonly", 0, 1, 2)}}</p>
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "htmlattrdefsize", 0, 1, 2)}}</p>
+<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "attr-size", 0, 1, 2)}}</p>
 
 <h2 id="Using_email_inputs">Using email inputs</h2>
 
@@ -310,7 +309,7 @@ label::after {
  &lt;div class="emailBox"&gt;
    &lt;label for="emailAddress"&gt;Your e-mail address&lt;/label&gt;&lt;br&gt;
    &lt;input id="emailAddress" type="email" size="64" maxLength="64" required
-          placeholder="username@beststartupever.com" pattern=".+@beststartupever.com"
+          placeholder="username@beststartupever.com" pattern=".+@beststartupever\.com"
           title="Please provide only a Best Startup Ever corporate e-mail address"&gt;
  &lt;/div&gt;
 
@@ -369,28 +368,11 @@ label::after {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#email-state-(type=email)', '&lt;input type="email"&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+<p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
-
-<p>{{Compat("html.elements.input.input-email")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

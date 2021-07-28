@@ -8,28 +8,44 @@ tags:
   - Interface
   - Reference
   - Reporting API
+browser-compat: api.DeprecationReportBody
 ---
-<div>{{SeeCompatTable}}{{APIRef("Reporting API")}}</div>
+<div>{{APIRef("Reporting API")}}</div>
 
-<p class="summary">The <code>DeprecationReportBody</code> interface of the <a href="/en-US/docs/Web/API/Reporting_API">Reporting API</a> represents the body of a deprecation report (the return value of its {{domxref("Report.body")}} property).</p>
+<p class="summary">The <code>DeprecationReportBody</code> interface of the <a href="/en-US/docs/Web/API/Reporting_API">Reporting API</a> represents the body of a deprecation report.</p>
 
-<p class="summary">A deprecation report is generated when a deprecated feature (e.g. a deprecated API method) is used on a document being observed by a {{domxref("ReportingObserver")}}.</p>
+<p>A deprecation report is generated when a deprecated feature (for example a deprecated API method) is used on a document being observed by a {{domxref("ReportingObserver")}}. In addition to the support of this API, receiving useful deprecation warnings relies on browser vendors adding these warnings for deprecated features.</p>
+
+<h2 id="Constructor">Constructor</h2>
+
+<p>An instance of <code>DeprecationReportBody</code> is returned as the value of {{domxref("Report.body")}} when {{domxref("Report.Type")}} is <code>deprecation</code>. The interface has no constructor.</p>
 
 <h2 id="Properties">Properties</h2>
 
+<p>This interface also inherits properties from {{domxref("ReportBody")}}.</p>
+
 <dl>
- <dt><code>id</code></dt>
- <dd>A string representing the deprecated feature that generated the report, for example <code>NavigatorGetUserMedia</code>. This can be used to group reports by deprecated feature.</dd>
- <dt><code>anticipatedRemoval</code></dt>
+ <dt>{{domxref("DeprecationReportBody.id")}}</dt>
+ <dd>A string representing the feature or API that is deprecated, for example <code>NavigatorGetUserMedia</code>. This can be used to group reports by deprecated feature.</dd>
+ <dt>{{domxref("DeprecationReportBody.anticipatedRemoval")}}</dt>
  <dd>A {{jsxref("Date")}} object (rendered as a string) representing the date when the feature is expected to be removed from the current browser. If the date is not known, this property will return <code>null</code>.</dd>
- <dt><code>message</code></dt>
+ <dt>{{domxref("DeprecationReportBody.message")}}</dt>
  <dd>A string containing a human-readable description of the deprecation, including information such as what newer feature has superseded it, if any. This typically matches the message a browser will display in its DevTools console when a deprecated feature is used, if one is available.</dd>
- <dt><code>sourceFile</code></dt>
+ <dt>{{domxref("DeprecationReportBody.sourceFile")}}</dt>
  <dd>A string containing the path to the source file where the deprecated feature was used, if known, or <code>null</code> otherwise.</dd>
- <dt><code>lineNumber</code></dt>
+ <dt>{{domxref("DeprecationReportBody.lineNumber")}}</dt>
  <dd>A number representing the line in the source file in which the deprecated feature was used, if known, or <code>null</code> otherwise.</dd>
- <dt><code>columnNumber</code></dt>
+ <dt>{{domxref("DeprecationReportBody.columnNumber")}}</dt>
  <dd>A number representing the column in the source file in which the deprecated feature was used, if known, or <code>null</code> otherwise.</dd>
+</dl>
+
+<h2 id="Methods">Methods</h2>
+
+<p>This interface also inherits methods from {{domxref("ReportBody")}}.</p>
+
+<dl>
+  <dt>{{domxref("DeprecationReportBody.toJSON()")}}</dt>
+  <dd>A <em>serializer</em> which returns a JSON representation of the <code>InterventionReportBody</code> object.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
@@ -51,7 +67,7 @@ let observer = new ReportingObserver(function(reports, observer) {
 
 <p>Because of the event handler we set up inside the <code>ReportingObserver()</code> constructor, we can now click the button to display the report details.</p>
 
-<p><img alt="image of a jolly bearded man with various stats displayed below it about a deprecated feature" src="reporting_api_example.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="image of a jolly bearded man with various stats displayed below it about a deprecated feature" src="reporting_api_example.png"></p>
 
 <p>The report details are displayed via the <code>displayReports()</code> fuction, which takes the observer callback's <code>reports</code> parameter as its parameter:</p>
 
@@ -81,27 +97,15 @@ let observer = new ReportingObserver(function(reports, observer) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Reporting API","#deprecation-report","DeprecationReportBody")}}</td>
-   <td>{{Spec2("Reporting API")}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.DeprecationReportBody")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
  <li><a href="/en-US/docs/Web/API/Reporting_API">Reporting API</a></li>
+ <li><a href="https://developers.google.com/web/updates/2018/09/reportingapi">The Reporting API</a></li>
 </ul>

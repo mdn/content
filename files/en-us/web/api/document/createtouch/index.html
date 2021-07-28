@@ -10,21 +10,19 @@ tags:
 - Reference
 - createTouch
 - touch
+browser-compat: api.Document.createTouch
 ---
 <div>{{APIRef("DOM")}}{{Deprecated_Header}}</div>
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Before {{Gecko("25.0")}}, this method was defined on the
-    {{DOMxRef("DocumentTouch")}} mixin.</p>
-</div>
+<p>The <strong><code>Document.createTouch()</code></strong> method creates and returns a new {{DOMxRef("Touch")}} object.</p>
 
-<p>The <strong><code>Document.createTouch()</code></strong> method <span
-    class="seosummary">creates and returns a new {{DOMxRef("Touch")}} object.</span></p>
+<div class="notecard note">
+  <p><strong>Note:</strong> Use the {{domxref("TouchEvent.TouchEvent", "TouchEvent()")}} constructor.</p>
+</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js">var <var>touch</var> = DocumentTouch.createTouch(view, target, identifier, pageX, pageY,
-                                      screenX, screenY);
+<pre class="brush: js">var touch = document.createTouch(view, target, identifier, pageX, pageY, screenX, screenY);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -77,7 +75,7 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<p>This example illustrates using the {{DOMxRef("Document.createTouch()")}} method to
+<p>This example illustrates using the <code>Document.createTouch()</code> method to
   create {{DOMxRef("Touch")}} objects.</p>
 
 <p>In following code snippet, two {{DOMxRef("Touch")}} objects are created for the
@@ -91,28 +89,11 @@ var touch2 = document.createTouch(window, target, 2, 25, 30, 45, 50);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName("Touch Events",
-        "#widl-Document-createTouch-Touch-WindowProxy-view-EventTarget-target-long-identifier-long-pageX-long-pageY-long-screenX-long-screenY",
-        "Document.createTouch()")}}</td>
-      <td>{{Spec2("Touch Events")}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+<p>This feature is not part of any current specification. It is no longer on track to become a standard.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Document.createTouch")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

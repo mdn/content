@@ -2,25 +2,26 @@
 title: RTCPeerConnection.addIceCandidate()
 slug: Web/API/RTCPeerConnection/addIceCandidate
 tags:
-- API
-- ICE
-- Media
-- Method
-- RTCPeerConnection
-- Reference
-- SDP
-- Web
-- WebRTC
-- WebRTC API
-- addIceCandidate
+  - API
+  - ICE
+  - Media
+  - Method
+  - RTCPeerConnection
+  - Reference
+  - SDP
+  - Web
+  - WebRTC
+  - WebRTC API
+  - addIceCandidate
+browser-compat: api.RTCPeerConnection.addIceCandidate
 ---
 <div>{{APIRef("WebRTC")}}</div>
 
-<p><span class="seoSummary">When a web site or app using {{domxref("RTCPeerConnection")}}
+<p>>When a web site or app using {{domxref("RTCPeerConnection")}}
 		receives a new ICE candidate from the remote peer over its signaling channel, it
 		delivers the newly-received candidate to the browser's {{Glossary("ICE")}} agent
 		by calling
-		<code><strong>RTCPeerConnection.addIceCandidate()</strong></code>.</span> This
+		<code><strong>RTCPeerConnection.addIceCandidate()</strong></code>. This
 	adds this new remote candidate to the <code>RTCPeerConnection</code>'s remote
 	description, which describes the state of the remote end of the connection.</p>
 
@@ -174,27 +175,11 @@ signalingChannel.onmessage = receivedString =&gt; {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{ SpecName('WebRTC 1.0', '#dom-peerconnection-addicecandidate',
-				'RTCPeerConnection.addIceCandidate()') }}</td>
-			<td>{{ Spec2('WebRTC 1.0') }}</td>
-			<td>Initial specification.</td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCPeerConnection.addIceCandidate")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

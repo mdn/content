@@ -10,6 +10,7 @@ tags:
   - PushSubscription
   - Reference
   - Service Workers
+browser-compat: api.PushSubscription
 ---
 <div>{{SeeCompatTable}}{{ApiRef("Push API")}} </div>
 
@@ -34,11 +35,11 @@ tags:
 
 <dl>
  <dt>{{domxref("PushSubscription.getKey()")}}</dt>
- <dd>Returns an {{domxref("ArrayBuffer")}} which contains the client's public key, which can then be sent to a server and used in encrypting push message data.</dd>
+ <dd>Returns an {{jsxref("ArrayBuffer")}} which contains the client's public key, which can then be sent to a server and used in encrypting push message data.</dd>
  <dt>{{domxref("PushSubscription.toJSON()")}}</dt>
  <dd>Standard serializer — returns a JSON representation of the subscription properties.</dd>
  <dt>{{domxref("PushSubscription.unsubscribe()")}}</dt>
- <dd>Starts the asynchronous process of unsubscribing from the push service, returning a {{jsxref("Promise")}} that resolves to a {{domxref("Boolean")}} when the current subscription is successfully unregistered.</dd>
+ <dd>Starts the asynchronous process of unsubscribing from the push service, returning a {{jsxref("Promise")}} that resolves to a boolean value when the current subscription is successfully unregistered.</dd>
 </dl>
 
 <h2 id="Example">Example</h2>
@@ -55,24 +56,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Push API", "#pushsubscription-interface", "PushSubscription")}}</td>
-   <td>{{Spec2("Push API")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.PushSubscription")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

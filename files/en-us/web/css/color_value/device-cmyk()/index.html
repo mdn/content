@@ -8,6 +8,7 @@ tags:
   - Reference
   - Web
   - device-cmyk
+browser-compat: css.types.color.device-cmyk
 ---
 <div>{{CSSRef}}</div>
 
@@ -26,28 +27,17 @@ device-cmyk(0 81% 81% 30% / .5, rgb(178 34 34));
 
 <dl>
   <dt>Functional notation: <code>device-cmyk( &lt;cmyk-component&gt;{4} [ / &lt;alpha-value&gt; ]? , &lt;color&gt;? )</code></dt>
-  <dd><code>&lt;cmyk-component&gt;</code> is a list of 4 {{cssxref("number")}} or {{cssxref("percentage")}} values providing the cyan, magenta, yellow, and black components of CMYK color.</dd>
-  <dd><code> / &lt;alpha-value&gt;</code> (alpha) can be a {{cssxref("&lt;number&gt;")}} between <code>0</code> and <code>1</code>, or a {{cssxref("&lt;percentage&gt;")}}, where the number <code>1</code> corresponds to <code>100%</code> (full opacity).</dd>
-  <dd><code>&lt;color&gt;</code> is an optional fallback {{cssxref("&lt;color&gt;")}} to use if the user agent does not know how to translate the CMYK color to RGB.</dd>
- </dl>
+  <dd>
+    <p><code>&lt;cmyk-component&gt;</code> is a list of 4 {{cssxref("number")}} or {{cssxref("percentage")}} values providing the cyan, magenta, yellow, and black components of CMYK color.</p>
+    <p><code> / &lt;alpha-value&gt;</code> (alpha) can be a {{cssxref("&lt;number&gt;")}} between <code>0</code> and <code>1</code>, or a {{cssxref("&lt;percentage&gt;")}}, where the number <code>1</code> corresponds to <code>100%</code> (full opacity).</p>
+    <p><code>&lt;color&gt;</code> is an optional fallback {{cssxref("&lt;color&gt;")}} to use if the user agent does not know how to translate the CMYK color to RGB.</p>
+  </dd>
+</dl>
 
- <table class="standard-table">
-  <thead>
-   <tr>
-    <th scope="col">Specification</th>
-    <th scope="col">Status</th>
-    <th scope="col">Comment</th>
-   </tr>
-  </thead>
-  <tbody>
-   <tr>
-    <td>{{SpecName('CSS4 Colors', '#device-cmyk')}}</td>
-    <td>{{Spec2('CSS4 Colors')}}</td>
-    <td>Initial definition</td>
-   </tr>
-  </tbody>
-</table>
+<h2 id="Specifications">Specifications</h2>
+
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.types.color.device-cmyk")}}</p>
+<p>{{Compat}}</p>

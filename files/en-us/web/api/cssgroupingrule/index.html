@@ -6,41 +6,24 @@ tags:
   - CSSOM
   - Interface
   - Reference
+browser-compat: api.CSSGroupingRule
 ---
 <p>{{ APIRef("CSSOM") }}</p>
 
 <p>The <strong><code>CSSGroupingRule</code></strong> interface of the {{domxref("CSS Object Model")}} represents any CSS {{CSSXref("at-rule")}} that contains other rules nested within it.</p>
 
-<p>Objects deriving from it:</p>
+<h2 id="Properties">Properties</h2>
 
-<ul>
- <li>{{domxref("CSSConditionRule")}} and its children: {{domxref("CSSMediaRule")}} and {{domxref("CSSSupportsRule")}}.</li>
- <li>{{domxref("CSSPageRule")}}</li>
-</ul>
-
-<h2 id="Syntax">Syntax</h2>
-
-<p>The syntax is described using the <a href="http://dev.w3.org/2006/webapi/WebIDL/">WebIDL</a> format.</p>
-
-<pre>interface CSSGroupingRule : CSSRule {
-    readonly attribute CSSRuleList cssRules;
-    unsigned long insertRule (DOMString rule, unsigned long index);
-    void deleteRule (unsigned long index);
-}
-</pre>
-
-<h2 id="Properties_common_to_all_CSSGroupingRule_instances">Properties common to all CSSGroupingRule instances</h2>
-
-<p>The <code>CSSGroupingRule</code> derives from {{domxref("CSSRule")}} and inherits all properties of this class. It has one specific property:</p>
+<p><em>This interface also inherits properties from {{domxref("CSSRule")}}.</em></p>
 
 <dl>
- <dt id="cssRules">{{domxref("CSSGroupingRule.cssRules")}} {{readonlyinline}}</dt>
+ <dt id="cssRules">{{domxref("CSSGroupingRule.cssRules")}}{{readonlyinline}}</dt>
  <dd>Returns a {{domxref("CSSRuleList")}} of the CSS rules in the media rule.</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
 
-<p><em>Inherits methods from its ancestor {{domxref("CSSRule")}}.</em></p>
+<p><em>This interface also inherits methods from {{domxref("CSSRule")}}.</em></p>
 
 <dl>
  <dt id="deleteRule">{{domxref("CSSGroupingRule.deleteRule")}}</dt>
@@ -51,26 +34,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSSOM', '#cssgroupingrule', 'CSSGroupingRule') }}</td>
-   <td>{{ Spec2('CSSOM') }}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.CSSGroupingRule")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

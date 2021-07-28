@@ -12,30 +12,6 @@ hosted within the [MDN Organization](https://github.com/mdn) on GitHub.
   for an overview of how to join, and [Contributing to MDN](https://developer.mozilla.org/en-US/docs/MDN/Contribute)
   for a filtered list of tasks.
 
-<!-- You can quickly regenerate this TOC by running:
-  npx markdown-toc@1.2.0 --bullets='-' --no-firsth1 README.md -->
-
-- [Code of Conduct](#code-of-conduct)
-- [License](#license)
-- [Making contributions](#making-contributions)
-  - [Setup](#setup)
-  - [Fundamental concepts](#fundamental-concepts)
-  - [Simple changes](#simple-changes)
-  - [More substantial changes](#more-substantial-changes)
-  - [Pull request etiquette](#pull-request-etiquette)
-  - [Adding a new document](#adding-a-new-document)
-  - [Moving one or more documents](#moving-one-or-more-documents)
-  - [Deleting a document](#deleting-a-document)
-  - [Redirecting a document](#redirecting-a-document)
-  - [Adding images](#adding-images)
-  - [Updating a browser compatibility table](#updating-a-browser-compatibility-table)
-  - [Adding code examples](#adding-code-examples)
-  - [Archiving and unarchiving pages](#archiving-and-unarchiving-pages)
-  - [Making a change that depends on a macro update](#making-a-change-that-depends-on-a-macro-update)
-- [Frequently asked questions (FAQ)](#frequently-asked-questions-faq)
-  - [When will my change show up on the production MDN site?](#when-will-my-change-show-up-on-the-production-mdn-site)
-  - [Can I copy content from other places to put on MDN?](#can-i-copy-content-from-other-sources-to-put-on-MDN)
-
 ## Code of Conduct
 
 Everyone participating in this project is expected to follow our
@@ -103,15 +79,20 @@ If you choose an option other than the GitHub UI, you want to install
 
 These are some important things to keep in mind about the MDN content.
 
+- **A document's main content is written in an `index.html` or an `index.md`
+file** -- We're currently in the process of converting our content from HTML
+into Markdown. Pages that are in HTML have their content in a file called
+"index.html". Pages that are in Markdown  have their content in a file called
+"index.md".
 - **Documents are folders** --  Documents are always
 represented by a folder (e.g., [`files/en-us/web/javascript`](files/en-us/web/javascript)),
 and that folder will contain the content of that specific document as an
-`index.html` file (e.g., [`files/en-us/web/javascript/index.html`](files/en-us/web/javascript/index.html)).
+`index.html` or `index.md` file (e.g., [`files/en-us/web/javascript/index.md`](files/en-us/web/javascript/index.md)).
 - **Documents are hierarchical** - A document folder may contain other folders,
-where those folders would represent child documents (e.g., [`files/en-us/web/javascript/closures/index.html`](files/en-us/web/javascript/closures/index.html)).
+where those folders would represent child documents (e.g., [`files/en-us/web/javascript/closures/index.md`](files/en-us/web/javascript/closures/index.md)).
 - **Document folders may contain image files** -- A document folder may also
 contain image files, which are referenced within that document's
-`index.html` file.
+`index.html` or `index.md` file.
 - **All redirects are specified in a single file** -- All of the redirects
 are specified within [`files/en-us/_redirects.txt`](files/en-us/_redirects.txt),
 one redirect per line. Each line specifies a `from` and `to` URI
@@ -119,15 +100,15 @@ separated by whitespace. When you move a document, you'll need to add a
 redirect to this file specifying that its old URI now redirects to its new URI.
 Both of these tasks are done using the `yarn content move` tool — see
 [Moving one or more documents](#moving-one-or-more-documents).
-**Don't edit the `_redirects.txt` file manually!**
-If both an `index.html` file and a redirect exist for a document, the
+- **Don't edit the `_redirects.txt` file manually!**
+If both an `index.html` or `index.md` file and a redirect exist for a document, the
 document takes precedence and the redirect is ignored.
-- **A document's `index.html` starts with "front-matter"** -- Each
-document's `index.html` file must begin with some [YAML](https://en.wikipedia.org/wiki/YAML)
+- **A document's `index.html` or `index.md` starts with "front-matter"** -- Each
+document's `index.html` or `index.md` file must begin with some [YAML](https://en.wikipedia.org/wiki/YAML)
 called front-matter that defines some important information about the
 document: `title`, `slug`, and [`tags`](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Howto/Tag)
 (if any). Here's an example that shows the front-matter from the
-[JavaScript landing page](files/en-us/web/javascript/index.html):
+[JavaScript landing page](files/en-us/web/javascript/index.md):
 
     ```yaml
     ---
@@ -148,7 +129,7 @@ If you just want to make a simple change to a single file, like fixing a typo,
 the GitHub UI is the simplest way to do that. For example, if you've found
 a typo within the [JavaScript landing page](https://developer.mozilla.org/en-US/docs/Web/JavaScript),
 you can sign into GitHub, go to <https://github.com/mdn/content>,
-navigate to the source file `files/en-us/web/javascript/index.html`,
+navigate to the source file `files/en-us/web/javascript/index.md`,
 and then click on the edit (pencil) button.
 
 > **Tip:** Click the **Source on GitHub** link in the footer of any MDN page
@@ -247,10 +228,10 @@ within your browser.
     ```
 
     When you preview a page you can press a button to open its associated
-    document's `index.html` file in your preferred editor. For this to work,
-    you need to set an environment variable called `EDITOR` before starting
-    the preview server. For example, if you prefer VS Code as your editor,
-    you'll want to do something like this:
+    document's `index.html` or `index.md` file in your preferred editor.
+    For this to work, you need to set an environment variable called `EDITOR`
+    before starting the preview server. For example, if you prefer VS Code as
+    your editor, you'll want to do something like this:
 
     ```sh
     export EDITOR=code
@@ -281,20 +262,22 @@ within your browser.
     Now, it should be set like that even after you've closed and started a new
     terminal window.
 
-1. Make your desired changes to one or more `index.html` files using
-your preferred code editor. **When thinking about your desired changes, it's
-important to keep the following in mind:**
+1. Make your desired changes to one or more `index.html` or `index.md` files
+using your preferred code editor. **When thinking about your desired changes,
+it's important to keep the following in mind:**
     - **Make sure you've read the
     [MDN guidelines](https://developer.mozilla.org/en-US/docs/MDN/Guidelines),
     including the
     [Writing style guide](https://developer.mozilla.org/en-US/docs/MDN/Guidelines/Writing_style_guide).**
+    - **If you're editing a Markdown file, see the
+    [guide to writing Markdown for MDN](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Markdown_in_MDN).**
     - **Large chunks of work can be difficult to review, so try to group your
     changes into the smallest logical chunks that make sense, and create a
     separate pull request for each logical chunk.**
 
 1. Once you've made and saved your changes, open a browser, and navigate
 to the page(s) you've changed. For example, if you changed
-`files/en-us/web/javascript/index.html`, open
+`files/en-us/web/javascript/index.md`, open
 `http://localhost:5000/en-us/docs/web/javascript` in your browser.
 
 1. You might have noticed that at the top of each page that you preview,
@@ -318,7 +301,8 @@ and then push the branch to your fork. Remember, the default name that
     git push -u origin my-work
     ```
 
-1. You're now ready to create a [pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
+1. You're now ready to create a
+[pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
 
 1. Once you've created your pull request, sit back, relax, and wait for
 a review.
@@ -383,21 +367,27 @@ making the change and anything else we need to know about it.
 ### Adding a new document
 
 Adding a new document is relatively straightforward, especially if you can
-start by copying the `index.html` of a similar document. There are only a
-few things to keep in mind:
+start by copying the `index.html` or `index.md` of a similar document.
+There are only a few things to keep in mind:
 
-- Remember that a document is represented by an `index.html` file within its
-  own folder.
+- Documents can be authored in either Markdown or HTML. However, we're converting
+  the site to Markdown one section at a time, and don't want to mix authoring
+  formats within a section. At this point we have only converted the JavaScript
+  documentation. So if you are adding a new document under
+  `files/en-us/web/javascript`, make it a Markdown file. Otherwise make it an
+  HTML file.
+- Remember that a document is represented by an `index.html` or `index.md` file
+  within its own folder.
 - Determine where in the document hierarchy your document belongs. For
   example, if you're
   creating a new CSS document for a new property `foo`, you'll want to create
   a new folder
   `files/en-us/web/css/foo/` and its `files/en-us/web/css/foo/index.html` file.
-- Remember that a document's `index.html` file must start with front-matter
-  that defines the `title`, `slug`, and
+- Remember that a document's `index.html` or `index.md` file must start with
+  front-matter that defines the `title`, `slug`, and
   [`tags`](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Howto/Tag)
   (if any) for the document. You might find it helpful to refer
-  to the front-matter within a similar document's `index.html`.
+  to the front-matter within a similar document's `index.html` or `index.md`.
 
 As we outlined above, the step-by-step process in general would be:
 
@@ -413,7 +403,8 @@ As we outlined above, the step-by-step process in general would be:
     git checkout -b my-add
     ```
 
-1. Create one or more new document folders, each with their own `index.html` file.
+1. Create one or more new document folders, each with their own `index.html`
+or `index.md` file.
 
 1. Add and commit your new files, as well as push your new branch to your fork:
 
@@ -572,7 +563,8 @@ pushing your branch to your fork:
 
 Adding an image to a document is easy as well. All you need to do is add
 your image file within the document's folder, and then reference the image
-from within the document's `index.html` file using an `<img>` element.
+from within the document's `index.html` or `index.md` file, using an `<img>`
+or [the equivalent Markdown syntax](https://github.github.com/gfm/#images).
 It's as easy as that. Let's walk through an example:
 
 1. You should be getting used to this by now, as we've done it several
@@ -744,7 +736,7 @@ In such situations:
 
 ## Frequently asked questions (FAQ)
 
-### When will my change show up on the production MDN site
+### When will my change show up on the production MDN site?
 
 After your pull request is merged, it may take up to 48 hours before the
 change goes live on the production <https://developer.mozilla.org/> site,
@@ -761,7 +753,7 @@ has been deployed to the production site.
 And use <https://whatsdeployed.io/s/16d/mdn/translated-content> for changes
 to the <https://github.com/mdn/translated-content> repo.
 
-### Can I copy content from other sources to put on MDN
+### Can I copy content from other sources to put on MDN?
 
 In general, we do not approve of copying content from other sources and putting
 it on MDN. MDN should be made up of original content wherever possible. If we

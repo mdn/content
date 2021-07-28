@@ -9,6 +9,7 @@ tags:
   - Web Components
   - custom elements
   - whenDefined
+browser-compat: api.CustomElementRegistry.whenDefined
 ---
 <p>{{APIRef("CustomElementRegistry")}}</p>
 
@@ -76,39 +77,30 @@ tags:
 &lt;/nav&gt;
 </pre>
 
-<pre class="brush: js">const container = document.getElementById('menu-container');
+<pre class="brush: js">
+const container = document.getElementById('menu-container');
 const placeholder = container.querySelector('.menu-placeholder');
 // Fetch all the children of menu that are not yet defined.
 const undefinedElements = container.querySelectorAll(':not(:defined)');
 
-const promises = [...undefinedElements].map(
-  button =&gt; customElements.whenDefined(button.localName)
-);
+async function removePlaceholder(){
+  const promises = [...undefinedElements].map(
+    button =&gt; customElements.whenDefined(button.localName)
+  );
 
-// Wait for all the children to be upgraded,
-// then remove the placeholder.
-await Promise.all(promises);
-container.removeChild(placeholder);
+  // Wait for all the children to be upgraded
+  await Promise.all(promises);
+  // then remove the placeholder
+  container.removeChild(placeholder);
+}
+
+removePlaceholder();
 </pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName("HTML WHATWG", "#dom-customelementregistry-whendefined",
-        "customElements.whenDefined()")}}</td>
-      <td>{{Spec2("HTML WHATWG")}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.CustomElementRegistry.whenDefined")}}</p>
+<p>{{Compat}}</p>

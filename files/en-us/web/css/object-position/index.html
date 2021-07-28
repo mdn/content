@@ -12,10 +12,11 @@ tags:
   - css layout
   - object-position
   - 'recipe:css-property'
+browser-compat: css.properties.object-position
 ---
 <div>{{CSSRef}}</div>
 
-<p><span class="seoSummary">The <strong><code>object-position</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property specifies the alignment of the selected <a href="/en-US/docs/Web/CSS/Replaced_element">replaced element</a>'s contents within the element's box.</span> Areas of the box which aren't covered by the replaced element's object will show the element's background.</p>
+<p>The <strong><code>object-position</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property specifies the alignment of the selected <a href="/en-US/docs/Web/CSS/Replaced_element">replaced element</a>'s contents within the element's box. Areas of the box which aren't covered by the replaced element's object will show the element's background.</p>
 
 <p>You can adjust how the replaced element's object's intrinsic size (that is, its natural size) is adjusted to fit within the element's box using the {{cssxref("object-fit")}} property.</p>
 
@@ -30,6 +31,7 @@ object-position: 100px 50px;
 /* Global values */
 object-position: inherit;
 object-position: initial;
+object-position: revert;
 object-position: unset;
 </pre>
 
@@ -60,8 +62,8 @@ object-position: unset;
 
 <p>Here we see HTML that includes two {{HTMLElement("img")}} elements, each displaying the MDN logo.</p>
 
-<pre class="brush: html">&lt;img id="object-position-1" src="https://mdn.mozillademos.org/files/12668/MDN.svg" alt="MDN Logo"/&gt;
-&lt;img id="object-position-2" src="https://mdn.mozillademos.org/files/12668/MDN.svg" alt="MDN Logo"/&gt;
+<pre class="brush: html">&lt;img id="object-position-1" src="mdn.svg" alt="MDN Logo"/&gt;
+&lt;img id="object-position-2" src="mdn.svg" alt="MDN Logo"/&gt;
 </pre>
 
 <h4 id="CSS">CSS</h4>
@@ -94,26 +96,11 @@ object-position: unset;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Images', '#the-object-position', 'object-position')}}</td>
-   <td>{{Spec2('CSS3 Images')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.object-position")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

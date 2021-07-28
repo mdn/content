@@ -10,6 +10,7 @@ tags:
 - Reference
 - copy
 - importNode
+browser-compat: api.Document.importNode
 ---
 <div>{{APIRef("DOM")}}</div>
 
@@ -47,25 +48,6 @@ tags:
         <code><var>externalNode</var></code> is imported — the new node has no children.
       </li>
     </ul>
-
-    <div class="note">
-      <p><strong>Note:</strong> In the DOM4 specification, <code><var>deep</var></code>
-        was an optional argument with a default value of <code>true</code>.</p>
-
-      <p><strong>This default has changed in the latest spec!</strong> The new default
-        value is <strong><code>false</code></strong>.</p>
-
-      <p><strong>Best Practice:</strong> Though it's still an optional argument, you
-        should always provide the <code><var>deep</var></code> argument for backward
-        <em>and</em> forward compatibility.</p>
-
-      <ul>
-        <li>With Gecko 28.0 {{geckoRelease(28)}}, the console warns developers not to omit
-          the argument.</li>
-        <li>Starting with Gecko 29.0 {{geckoRelease(29)}}), a shallow clone is defaulted
-          instead of a deep clone.</li>
-      </ul>
-    </div>
   </dd>
 </dl>
 
@@ -94,33 +76,11 @@ document.getElementById("container").appendChild(newNode);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName("DOM WHATWG", "#dom-document-importnode", "document.importNode()")}}
-      </td>
-      <td>{{Spec2("DOM WHATWG")}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName("DOM2 Core", "core.html#Core-Document-importNode",
-        "document.importNode()")}}</td>
-      <td>{{Spec2("DOM2 Core")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Document.importNode")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -1,20 +1,11 @@
 ---
 title: ServiceWorkerGlobalScope.onsync
 slug: Web/API/ServiceWorkerGlobalScope/onsync
+browser-compat: api.ServiceWorkerGlobalScope.onsync
 ---
 <p>{{APIRef("")}}</p>
 
-<p>The <strong><code>ServiceWorkerGlobalScope.onsync</code></strong> event of the
-    {{domxref("ServiceWorkerGlobalScope")}} interface is<span
-        style="line-height: 1.5;"> fired whenever a </span><code
-        style="font-style: normal; font-weight: normal; line-height: 1.5;"><a href="/en-US/docs/Web/Events/SyncEvent">SyncEvent</a></code><span
-        style="line-height: 1.5;"> event occurs. This is triggered when a call
-        to </span><a href="/en-US/docs/Web/API/SyncManager/register"
-        style="line-height: 1.5;"
-        title="The register method of the SyncManager interface returns a Promise that resolves to a SyncRegistration instance."><code>SyncManager.register</code></a><span
-        style="line-height: 1.5;"> is made from a service worker client page. The attempt
-        to sync is made either immediately if the network is available or as soon as the
-        network becomes available. </span></p>
+<p>The <strong><code>ServiceWorkerGlobalScope.onsync</code></strong> event of the {{domxref("ServiceWorkerGlobalScope")}} interface is fired whenever a <code><a href="/en-US/docs/Web/Events/SyncEvent">SyncEvent</a></code> event occurs. This is triggered when a call to <a href="/en-US/docs/Web/API/SyncManager/register" title="The register method of the SyncManager interface returns a Promise that resolves to a SyncRegistration instance."><code>SyncManager.register</code></a> is made from a service worker client page. The attempt to sync is made either immediately if the network is available or as soon as the network becomes available.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -23,19 +14,8 @@ self.addEventListener('sync', function(SyncEvent) { ... })</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-    <tbody>
-        <tr>
-            <th>Specification</th>
-        </tr>
-        <tr>
-            <td><a
-                    href="https://wicg.github.io/background-sync/spec/#dom-serviceworkerglobalscope-onsync">Web
-                    Background Synchronization</a></td>
-        </tr>
-    </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.ServiceWorkerGlobalScope.onsync")}}</p>
+<p>{{Compat}}</p>

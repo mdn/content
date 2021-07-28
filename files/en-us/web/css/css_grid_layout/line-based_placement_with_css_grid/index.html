@@ -18,8 +18,7 @@ tags:
 
 <p><img alt="Our Grid highlighted in DevTools" src="3_hilighted_grid.png"></p>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -35,7 +34,6 @@ tags:
     color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: css">.wrapper {
    display: grid;
@@ -58,7 +56,6 @@ tags:
 
 <p>We can use line-based placement to control where these items sit on the grid. I would like the first item to start on the far left of the grid and span a single column track. It should also start on the first row line, at the top of the grid and span to the fourth row line.</p>
 
-<div id="Line_Number">
 <pre class="brush: css">.box1 {
    grid-column-start: 1;
    grid-column-end: 2;
@@ -71,8 +68,7 @@ tags:
 
 <p>Addressing each item individually we can place all four items spanning row and column tracks. Note that we can leave cells empty if we wish. One of the very nice things about Grid Layout is this ability to have white space in our designs without having to push things around using margins to prevent floats from rising up into the space we have left.</p>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -91,7 +87,6 @@ tags:
     color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
    &lt;div class="box1"&gt;One&lt;/div&gt;
@@ -127,16 +122,13 @@ tags:
 }
 </pre>
 
-<p>{{ EmbedLiveSample('Line_Number', '300', '330') }}</p>
-</div>
+<p>{{ EmbedLiveSample('Positioning_items_by_line_number', '300', '330') }}</p>
 
-<div id="Grid_Shorthands">
 <h2 id="The_grid-column_and_grid-row_shorthands">The <code>grid-column</code> and <code>grid-row</code> shorthands</h2>
 
 <p>We have quite a lot of code here to position each item. It should come as no surprise to know there is a {{glossary("shorthand properties", "shorthand")}}. The {{cssxref("grid-column-start")}} and {{cssxref("grid-column-end")}} properties can be combined into {{cssxref("grid-column")}}, {{cssxref("grid-row-start")}} and {{cssxref("grid-row-end")}} into {{cssxref("grid-row")}}.</p>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -155,7 +147,6 @@ tags:
     color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
    &lt;div class="box1"&gt;One&lt;/div&gt;
@@ -183,16 +174,18 @@ tags:
 }
 </pre>
 
-<p>{{ EmbedLiveSample('Grid_Shorthands', '300', '330') }}</p>
+<p>{{ EmbedLiveSample('The_grid-column_and_grid-row_shorthands', '300', '330') }}</p>
 </div>
 
-<h3 id="Default_spans">Default spans</h3>
+<h2 id="Default_spans">Default spans</h2>
 
-<p>In the above examples I specified every end row and column line, in order to demonstrate the properties, however in practice if an item only spans one track you can omit the <code>grid-column-end</code> or <code>grid-row-end</code> value. Grid defaults to spanning one track. This means that our initial, long-hand, example would look like this:</p>
+<p>In the above examples I specified every end row and column line, in order to demonstrate the properties, however in practice if an item only spans one track you can omit the <code>grid-column-end</code> or <code>grid-row-end</code> value. Grid defaults to spanning one track.</p>
 
-<div id="End_Lines">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<h3 id="Default_spans_with_longhand_placement">Default spans with longhand placement</h3>
+
+<p>This means that our initial, long-hand, example would look like this:</p>
+
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -211,7 +204,6 @@ tags:
     color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
    &lt;div class="box1"&gt;One&lt;/div&gt;
@@ -242,14 +234,13 @@ tags:
 }
 </pre>
 
-<p>{{ EmbedLiveSample('End_Lines', '300', '330') }}</p>
-</div>
+<p>{{ EmbedLiveSample('Default_spans_with_longhand_placement', '300', '330') }}</p>
+
+<h3 id="Default_spans_with_shorthand_placement">Default spans with shorthand placement</h3>
 
 <p>Our shorthand would look like the following code, with no forward slash and second value for the items spanning one track only.</p>
 
-<div id="New_Shorthand">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -268,7 +259,6 @@ tags:
     color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
    &lt;div class="box1"&gt;One&lt;/div&gt;
@@ -296,8 +286,7 @@ tags:
 }
 </pre>
 
-<p>{{ EmbedLiveSample('New_Shorthand', '300', '330') }}</p>
-</div>
+<p>{{ EmbedLiveSample('Default_spans_with_shorthand_placement', '300', '330') }}</p>
 
 <h2 id="The_grid-area_property">The <code>grid-area</code> property</h2>
 
@@ -310,8 +299,7 @@ tags:
  <li>grid-column-end</li>
 </ul>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -330,7 +318,6 @@ tags:
     color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
    &lt;div class="box1"&gt;One&lt;/div&gt;
@@ -375,8 +362,7 @@ tags:
 
 <p>In this next example I have flipped the layout we were working with by working from the right and bottom of our grid when placing the items.</p>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -395,7 +381,6 @@ tags:
     color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
    &lt;div class="box1"&gt;One&lt;/div&gt;
@@ -454,8 +439,7 @@ tags:
 
 <p>Gaps only appear between tracks of the grid, they do not add space to the top and bottom, left or right of the container. We can add gaps to our earlier example by using these properties on the grid container.</p>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -474,7 +458,6 @@ tags:
     color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
    &lt;div class="box1"&gt;One&lt;/div&gt;
@@ -529,8 +512,7 @@ tags:
 
 <p>In addition to specifying the start and end lines by number, you can specify a start line and then the number of tracks you would like the area to span.</p>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -549,7 +531,6 @@ tags:
     color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
    &lt;div class="box1"&gt;One&lt;/div&gt;

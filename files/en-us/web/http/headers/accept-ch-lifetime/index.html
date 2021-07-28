@@ -2,33 +2,45 @@
 title: Accept-CH-Lifetime
 slug: Web/HTTP/Headers/Accept-CH-Lifetime
 tags:
-- Client hints
-- HTTP
-- header
+  - Accept-CH-Lifetime
+  - Client hints
+  - HTTP
+  - HTTP Header
+  - Response header
+  - Deprecated
+  - Non-standard
+  - Experimental
+browser-compat: http.headers.Accept-CH-Lifetime
 ---
-<div>{{HTTPSidebar}}{{securecontext_header}}{{SeeCompatTable}}</div>
+<div>{{HTTPSidebar}}{{securecontext_header}}{{Deprecated_header}}</div>
+<div class="notecard warning">
+  <p><strong>Warning:</strong> The header was removed from the specification in <a href="https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-client-hints-08">draft 8</a>.</p>
+</div>
 
 <p>The <code><strong>Accept-CH-Lifetime</strong></code> header is set by the server to
-  specify the persistence of {{HTTPHeader("Accept-CH")}} header value that specifies for
-  which <a href="/en-US/docs/Glossary/Client_hints">Client Hints</a> headers client should
+  specify the persistence of the <a href="/en-US/docs/Glossary/Client_hints">client hint headers</a> it specified using {{HTTPHeader("Accept-CH")}}, that the client should
   include in subsequent requests.</p>
 
 <table class="properties">
   <tbody>
-    <tr>
-      <th scope="row">Header type</th>
-      <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>?</td>
-    </tr>
+   <tr>
+    <th scope="row">Header type</th>
+    <td>{{Glossary("Response header")}}</td>
+   </tr>
+   <tr>
+    <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <td>no</td>
+   </tr>
+   <tr>
+    <th scope="row">{{Glossary("CORS-safelisted response header")}}</th>
+    <td>no</td>
+   </tr>
   </tbody>
-</table>
+ </table>
 
 <div class="notecard note">
   <p><strong>Note:</strong> Client Hints are accessible only on secure origins (via TLS).
-    Accept-CH and Accept-CH-Lifetime headers should be persisted for all secure requests
+    {{HTTPHeader("Accept-CH")}} and {{HTTPHeader("Accept-CH-Lifetime")}} headers should be persisted for all secure requests
     to ensure Client Hints are sent reliably.</p>
 </div>
 
@@ -45,12 +57,7 @@ Accept-CH-Lifetime: 86400
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data.
-  If you'd like to contribute to the data, please check out <a
-    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
-  and send us a pull request.</p>
-
-<p>{{Compat("http.headers.Accept-CH-Lifetime")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

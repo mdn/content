@@ -8,10 +8,11 @@ tags:
   - Reference
   - Web
   - supports
+browser-compat: css.at-rules.supports
 ---
 <div>{{CSSRef}}</div>
 
-<p>The <strong><code>@supports</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/At-rule">at-rule</a> lets you specify declarations that depend on a browser's support for one or more specific CSS features. This is called a <em>feature query</em>. The rule may be placed at the top level of your code or nested inside any other <a href="/en-US/docs/Web/CSS/At-rule#Conditional_group_rules">conditional group at-rule</a>.</p>
+<p>The <strong><code>@supports</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/At-rule">at-rule</a> lets you specify declarations that depend on a browser's support for one or more specific CSS features. This is called a <em>feature query</em>. The rule may be placed at the top level of your code or nested inside any other <a href="/en-US/docs/Web/CSS/At-rule#conditional_group_rules">conditional group at-rule</a>.</p>
 
 <pre class="brush: css; no-line-numbers">@supports (display: grid) {
   div {
@@ -70,8 +71,8 @@ tags:
 
 <p>Multiple conjunctions can be juxtaposed without the need of more parentheses. The following are both equivalent:</p>
 
-<pre class="brush: css">@supports (display: table-cell) and (display: list-item) and (display:run-in) {}
-@supports (display: table-cell) and ((display: list-item) and (display:run-in)) {}</pre>
+<pre class="brush: css">@supports (display: table-cell) and (display: list-item) and (display:contents) {}
+@supports (display: table-cell) and ((display: list-item) and (display:contents)) {}</pre>
 
 <h3 id="The_or_operator">The or operator</h3>
 
@@ -89,7 +90,7 @@ tags:
 </pre>
 
 <div class="notecard note">
-<p><strong>Note</strong>: When using both <code>and</code> and <code>or</code> operators, the parentheses must be used to define the order in which they apply. Otherwise, the condition is invalid and the whole rule is ignored.</p>
+<p><strong>Note:</strong> When using both <code>and</code> and <code>or</code> operators, the parentheses must be used to define the order in which they apply. Otherwise, the condition is invalid and the whole rule is ignored.</p>
 </div>
 
 <h2 id="Formal_syntax">Formal syntax</h2>
@@ -130,9 +131,9 @@ tags:
   }
 }</pre>
 
-<h3 id="Testing_for_the_support_of_a_selector">Testing for the support of a selector (eg. {{CSSxRef(":is", ":is()")}})</h3>
+<h3 id="Testing_for_the_support_of_a_selector">Testing for the support of a selector</h3>
 
-<p>{{SeeCompatTable}}</p>
+<p>The CSS Conditional Rules Level 4 specification adds the ability to test for support of a selector—for example {{cssxref(":is",":is()")}}.</p>
 
 <pre class="brush: css highlight[6, 14]">/* This rule won't be applied in browsers which don't support :is() */
 :is(ul, ol) &gt; li {
@@ -147,7 +148,7 @@ tags:
   }
 }
 
-/* Note: By far, there's no browser that supports the `of` argument of :nth-child(…) */
+/* Note: So far, there's no browser that supports the `of` argument of :nth-child(…) */
 @supports selector(:nth-child(1n of a, b)) {
   /* This rule needs to be inside the @supports block, otherwise
      it will be partially applied in browsers which don't support
@@ -164,31 +165,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS4 Conditional", "#at-supports-ext", "@supports")}}</td>
-   <td>{{Spec2("CSS4 Conditional")}}</td>
-   <td>Adds the <code>selector()</code> function.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS3 Conditional", "#at-supports", "@supports")}}</td>
-   <td>{{Spec2("CSS3 Conditional")}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.at-rules.supports")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

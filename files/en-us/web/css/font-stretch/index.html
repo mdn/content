@@ -7,10 +7,15 @@ tags:
   - CSS Property
   - Reference
   - recipe:css-property
+browser-compat: css.properties.font-stretch
 ---
 <p>{{CSSRef}}</p>
 
-<p><span class="seoSummary">The <strong><code>font-stretch</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property selects a normal, condensed, or expanded face from a font.</span></p>
+<p>The <strong><code>font-stretch</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property selects a normal, condensed, or expanded face from a font.</p>
+
+<div>{{EmbedInteractiveExample("pages/css/font-stretch.html")}}</div>
+
+<h2 id="Syntax">Syntax</h2>
 
 <pre class="brush:css no-line-numbers">/* Keyword values */
 font-stretch: ultra-condensed;
@@ -31,10 +36,9 @@ font-stretch: 200%;
 /* Global values */
 font-stretch: inherit;
 font-stretch: initial;
+font-stretch: revert;
 font-stretch: unset;
 </pre>
-
-<h2 id="Syntax">Syntax</h2>
 
 <p>This property may be specified as a single keyword value or a single {{cssxref("&lt;percentage&gt;")}} value.</p>
 
@@ -52,7 +56,7 @@ font-stretch: unset;
  <p>A {{cssxref("&lt;percentage&gt;")}} value between 50% and 200% (inclusive). Negative values are not allowed for this property.</p>
 
  <div class="note">
- <p>In earlier versions of the <code>font-stretch</code> specification, the property accepts only the nine keyword values.</p>
+<p><strong>Note:</strong> In earlier versions of the <code>font-stretch</code> specification, the property accepts only the nine keyword values.</p>
 
  <p><strong>The {{ SpecName('CSS4 Fonts', '#propdef-font-stretch') }} spec</strong> extends the syntax to accept a <code><var>&lt;percentage&gt;</var></code> value as well. This enables variable fonts to offer something more like a <em>continuum</em> of character widths. For TrueType or OpenType variable fonts, the "<code>wdth</code>" variation is used to implement varying widths.</p>
 
@@ -239,27 +243,7 @@ http://scripts.sil.org/cms/scripts/page.php?item_id=OFL_web
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS4 Fonts', '#propdef-font-stretch', 'font-stretch') }}</td>
-   <td>{{ Spec2('CSS4 Fonts') }}</td>
-   <td>Adds the <code><var>&lt;percentage&gt;</var></code> syntax for variable fonts.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS3 Fonts', '#propdef-font-stretch', 'font-stretch') }}</td>
-   <td>{{ Spec2('CSS3 Fonts') }}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <div class="note">
 <p><strong>Note:</strong> The <code>font-stretch</code> property was initially defined in CSS 2, but dropped in CSS 2.1 due to the lack of browser implementation. It was brought back in CSS 3.</p>
@@ -267,7 +251,7 @@ http://scripts.sil.org/cms/scripts/page.php?item_id=OFL_web
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.font-stretch")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

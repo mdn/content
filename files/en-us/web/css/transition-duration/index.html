@@ -7,6 +7,7 @@ tags:
   - CSS Transitions
   - Reference
   - 'recipe:css-property'
+browser-compat: css.properties.transition-duration
 ---
 <div>{{CSSRef}}</div>
 
@@ -27,6 +28,7 @@ transition-duration: 10s, 30s, 230ms;
 /* Global values */
 transition-duration: inherit;
 transition-duration: initial;
+transition-duration: revert;
 transition-duration: unset;
 </pre>
 
@@ -47,292 +49,81 @@ transition-duration: unset;
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="A_series_of_examples_with_increasing_durations">A series of examples with increasing durations</h3>
+<h3 id="example_showing_different_durations">Example showing different durations</h3>
 
-<div>
-<div id="duration_0_5s" style="width: 251px; display: inline-block; margin-right: 1px; margin-bottom: 1px;">
-<p><code>transition-duration: 0.5s</code></p>
+<h4>HTML</h4>
 
-<div class="hidden">
-<pre class="brush:html"> &lt;div class="parent"&gt;
-  &lt;div class="box"&gt;Lorem&lt;/div&gt;
-&lt;/div&gt;
-  </pre>
+<pre class="brush:html">
+  &lt;div class="box duration-1"&gt;0.5 seconds&lt;/div&gt;
 
-<pre class="brush:css;">.parent { width: 250px; height:125px;}
+  &lt;div class="box duration-2"&gt;2 seconds&lt;/div&gt;
+
+  &lt;div class="box duration-3"&gt;4 seconds&lt;/div&gt;
+
+  &lt;button id="change"&gt;Change&lt;/button&gt;
+</pre>
+
+<h4>CSS</h4>
+
+<pre class="brush:css;">
 .box {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    font-size: 20px;
-    left: 0px;
-    top: 0px;
-    position:absolute;
-    -webkit-transition-property: width height background-color font-size left top transform -webkit-transform color;
-    -webkit-transition-duration:0.5s;
-    -webkit-transition-timing-function: ease-in-out;
-    transition-property: width height background-color font-size left top transform -webkit-transform color;
-    transition-duration:0.5s;
-    transition-timing-function: ease-in-out;
+  margin: 20px;
+  padding: 10px;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  font-size: 18px;
+  transition-property: background-color font-size transform color;
+  transition-timing-function: ease-in-out;
 }
-.box1{
-    transform: rotate(270deg);
-    -webkit-transform: rotate(270deg);
-    width: 50px;
-    height: 50px;
-    background-color: blue;
-    color: yellow;
-    font-size: 18px;
-    left: 150px;
-    top:25px;
-    position:absolute;
-    -webkit-transition-property: width height background-color font-size left top transform -webkit-transform color;
-    -webkit-transition-duration:0.5s;
-    -webkit-transition-timing-function: ease-in-out;
-    transition-property: width height background-color font-size left top transform -webkit-transformv color;
-    transition-duration:0.5s;
-    transition-timing-function: ease-in-out;
+
+.transformed-state {
+  transform: rotate(270deg);
+  background-color: blue;
+  color: yellow;
+  font-size: 12px;
+  transition-property: background-color font-size transform color;
+  transition-timing-function: ease-in-out;
+}
+
+.duration-1 {
+  transition-duration: 0.5s;
+}
+
+.duration-2 {
+  transition-duration: 2s;
+}
+
+.duration-3 {
+  transition-duration: 4s;
 }
 </pre>
 
-<pre class="brush:js">function updateTransition() {
-  var el = document.querySelector("div.box");
+<h4>JavaScript</h4>
 
-  if (el) {
-    el.className = "box1";
-  } else {
-    el = document.querySelector("div.box1");
-    el.className = "box";
+<pre class="brush:js">function change() {
+  const elements = document.querySelectorAll("div.box");
+  for (let element of elements) {
+    element.classList.toggle("transformed-state");
   }
-
-  return el;
 }
 
-var intervalID = window.setInterval(updateTransition, 7000);
-</pre>
-</div>
-
-<div>{{EmbedLiveSample("duration_0_5s",275,150)}}</div>
-</div>
-
-<div id="duration_1s" style="width: 251px; display: inline-block; margin-right: 1px; margin-bottom: 1px;">
-<p><code>transition-duration: 1s</code></p>
-
-<div class="hidden">
-<pre class="brush:html"> &lt;div class="parent"&gt;
-  &lt;div class="box"&gt;Lorem&lt;/div&gt;
-&lt;/div&gt;
-  </pre>
-
-<pre class="brush:css;">.parent { width: 250px; height:125px;}
-.box {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    font-size: 20px;
-    left: 0px;
-    top: 0px;
-    position:absolute;
-    -webkit-transition-property: width height background-color font-size left top -webkit-transform color;
-    -webkit-transition-duration:1s;
-    -webkit-transition-timing-function: ease-in-out;
-    transition-property: width height background-color font-size left top transform color;
-    transition-duration:1s;
-    transition-timing-function: ease-in-out;
-}
-.box1{
-    transform: rotate(270deg);
-    -webkit-transform: rotate(270deg);
-    width: 50px;
-    height: 50px;
-    background-color: blue;
-    color: yellow;
-    font-size: 18px;
-    left: 150px;
-    top:25px;
-    position:absolute;
-    -webkit-transition-property: width height background-color font-size left top -webkit-transform transform color;
-    -webkit-transition-duration:1s;
-    -webkit-transition-timing-function: ease-in-out;
-    transition-property: width height background-color font-size left top transform -webkit-transform color;
-    transition-duration:1s;
-    transition-timing-function: ease-in-out;
-}
+const changeButton = document.querySelector("#change");
+changeButton.addEventListener("click", change);
 </pre>
 
-<pre class="brush:js">function updateTransition() {
-  var el = document.querySelector("div.box");
+<h4>Result</h4>
 
-  if (el) {
-    el.className = "box1";
-  } else {
-    el = document.querySelector("div.box1");
-    el.className = "box";
-  }
-
-  return el;
-}
-
-var intervalID = window.setInterval(updateTransition, 7000);
-</pre>
-</div>
-
-<div>{{EmbedLiveSample("duration_1s",275,150)}}</div>
-</div>
-
-<div id="duration_2s" style="width: 251px; display: inline-block; margin-right: 1px; margin-bottom: 1px;">
-<p><code>transition-duration: 2s</code></p>
-
-<div class="hidden">
-<pre class="brush:html"> &lt;div class="parent"&gt;
-  &lt;div class="box"&gt;Lorem&lt;/div&gt;
-&lt;/div&gt;
-  </pre>
-
-<pre class="brush:css;">.parent { width: 250px; height:125px;}
-.box {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    font-size: 20px;
-    left: 0px;
-    top: 0px;
-    position:absolute;
-    -webkit-transition-property: width height background-color font-size left top transform -webkit-transform color;
-    -webkit-transition-duration:2s;
-    -webkit-transition-timing-function: ease-in-out;
-    transition-property: width height background-color font-size left top transform -webkit-transform color;
-    transition-duration:2s;
-    transition-timing-function: ease-in-out;
-}
-.box1{
-    transform: rotate(270deg);
-    -webkit-transform: rotate(270deg);
-    width: 50px;
-    height: 50px;
-    background-color: blue;
-    color: yellow;
-    font-size: 18px;
-    left: 150px;
-    top:25px;
-    position:absolute;
-    -webkit-transition-property: width height background-color font-size left top transform -webkit-transform color;
-    -webkit-transition-duration:2s;
-    -webkit-transition-timing-function: ease-in-out;
-    transition-property: width height background-color font-size left top transform -webkit-transform color;
-    transition-duration:2s;
-    transition-timing-function: ease-in-out;
-}
-</pre>
-
-<pre class="brush:js">function updateTransition() {
-  var el = document.querySelector("div.box");
-
-  if (el) {
-    el.className = "box1";
-  } else {
-    el = document.querySelector("div.box1");
-    el.className = "box";
-  }
-
-  return el;
-}
-
-var intervalID = window.setInterval(updateTransition, 7000);
-</pre>
-</div>
-
-<div>{{EmbedLiveSample("duration_2s",275,150)}}</div>
-</div>
-
-<div id="duration_4s" style="width: 251px; display: inline-block; margin-right: 1px; margin-bottom: 1px;">
-<p><code>transition-duration: 4s</code></p>
-
-<div class="hidden">
-<pre class="brush:html"> &lt;div class="parent"&gt;
-  &lt;div class="box"&gt;Lorem&lt;/div&gt;
-&lt;/div&gt;
-  </pre>
-
-<pre class="brush:css;">.parent { width: 250px; height:125px;}
-.box {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    font-size: 20px;
-    left: 0px;
-    top: 0px;
-    position:absolute;
-    -webkit-transition-property: width height background-color font-size left top transform -webkit-transform color;
-    -webkit-transition-duration:4s;
-    -webkit-transition-timing-function: ease-in-out;
-    transition-property: width height background-color font-size left top transform -webkit-transform color;
-    transition-duration:4s;
-    transition-timing-function: ease-in-out;
-}
-.box1{
-    transform: rotate(270deg);
-    -webkit-transform: rotate(270deg);
-    width: 50px;
-    height: 50px;
-    background-color: blue;
-    color: yellow;
-    font-size: 18px;
-    left: 150px;
-    top:25px;
-    position:absolute;
-    -webkit-transition-property: width height background-color font-size left top transform -webkit-transform color;
-    -webkit-transition-duration:4s;
-    -webkit-transition-timing-function: ease-in-out;
-    transition-property: width height background-color font-size left top transform -webkit-transform color;
-    transition-duration:4s;
-    transition-timing-function: ease-in-out;
-}
-</pre>
-
-<pre class="brush:js">function updateTransition() {
-  var el = document.querySelector("div.box");
-
-  if (el) {
-    el.className = "box1";
-  } else {
-    el = document.querySelector("div.box1");
-    el.className = "box";
-  }
-
-  return el;
-}
-
-var intervalID = window.setInterval(updateTransition, 7000);
-</pre>
-</div>
-
-<div>{{EmbedLiveSample("duration_4s",275,150)}}</div>
-</div>
-</div>
+<div>{{EmbedLiveSample("example_showing_different_durations",275,200)}}</div>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{ SpecName('CSS3 Transitions', '#transition-duration-property', 'transition-duration') }}</td>
-			<td>{{ Spec2('CSS3 Transitions') }}</td>
-			<td>Initial definition</td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.transition-duration")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

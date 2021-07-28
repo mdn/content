@@ -6,6 +6,7 @@ tags:
   - CSS Property
   - Reference
   - recipe:css-property
+browser-compat: css.properties.text-overflow
 ---
 <p>{{CSSRef}}</p>
 
@@ -13,7 +14,6 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/css/text-overflow.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <p>The <code>text-overflow</code> property doesn't force an overflow to occur. To make text overflow its container you have to set other CSS properties: {{cssxref("overflow")}} and {{cssxref("white-space")}}. For example:</p>
 
@@ -26,7 +26,15 @@ white-space: nowrap;</pre>
 
 <p>The <code>text-overflow</code> property may be specified using one or two values. If one value is given, it specifies overflow behavior for the end of the line (the right end for left-to-right text, the left end for right-to-left text). If two values are given, the first specifies overflow behavior for the left end of the line, and the second specifies it for the right end of the line.</p>
 
-<p>Each value is specified as one of:</p>
+<pre class="brush: css">text-overflow: clip;
+text-overflow: ellipsis ellipsis;
+text-overflow: ellipsis " [..]";
+
+/* Global values */
+text-overflow: inherit;
+text-overflow: initial;
+text-overflow: revert;
+text-overflow: unset;</pre>
 
 <ul>
  <li>one of the keyword values: <code><a href="#clip">clip</a></code>, <code><a href="#ellipsis">ellipsis</a></code>, <code><a href="#fade">fade</a></code></li>
@@ -40,14 +48,16 @@ white-space: nowrap;</pre>
  <dt id="clip"><code>clip</code></dt>
  <dd>The default for this property. This keyword value will truncate the text at the limit of the <a href="/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">content area</a>, therefore the truncation can happen in the middle of a character. To clip at the transition between characters you can specify <code>text-overflow</code> as an empty string, if that is supported in your target browsers: <code>text-overflow: '';</code>.</dd>
  <dt id="ellipsis"><code>ellipsis</code></dt>
- <dd>This keyword value will display an ellipsis (<code>'…'</code>, <code style="text-transform: uppercase;">U+2026 Horizontal Ellipsis</code>) to represent clipped text. The ellipsis is displayed inside the <a href="/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">content area</a>, decreasing the amount of text displayed. If there is not enough space to display the ellipsis, it is clipped.</dd>
+ <dd>This keyword value will display an ellipsis (<code>'…'</code>, <code>U+2026 HORIZONTAL ELLIPSIS</code>) to represent clipped text. The ellipsis is displayed inside the <a href="/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">content area</a>, decreasing the amount of text displayed. If there is not enough space to display the ellipsis, it is clipped.</dd>
  <dt id="string"><code>&lt;string&gt;</code> {{experimental_inline}}</dt>
  <dd>The {{cssxref("&lt;string&gt;")}} to be used to represent clipped text. The string is displayed inside the <a href="/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">content area</a>, shortening the size of the displayed text. If there is not enough space to display the string itself, it is clipped.</dd>
  <dt id="fade"><code>fade</code> {{experimental_inline}}</dt>
  <dd>This keyword clips the overflowing inline content and applies a fade-out effect near the edge of the line box with complete transparency at the edge.</dd>
  <dt id="fade_length_percentage"><code>fade( &lt;length&gt; | &lt;percentage&gt; )</code> {{experimental_inline}}</dt>
- <dd>This function clips the overflowing inline content and applies a fade-out effect near the edge of the line box with complete transparency at the edge.</dd>
- <dd>The argument determines the distance over which the fade effect is applied. The {{cssxref("&lt;percentage&gt;")}} is resolved against the width of the line box. Values lower than <code>0</code> are clipped to <code>0</code>. Values greater than the width of the line box are clipped to the width of the line box.</dd>
+ <dd>
+   <p>This function clips the overflowing inline content and applies a fade-out effect near the edge of the line box with complete transparency at the edge.</p>
+   <p>The argument determines the distance over which the fade effect is applied. The {{cssxref("&lt;percentage&gt;")}} is resolved against the width of the line box. Values lower than <code>0</code> are clipped to <code>0</code>. Values greater than the width of the line box are clipped to the width of the line box.</p>
+ </dd>
 </dl>
 
 <h2 id="Formal_definition">Formal definition</h2>
@@ -60,20 +70,45 @@ white-space: nowrap;</pre>
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="CSS">CSS</h3>
+<h3 id="one-value_syntax">One-value syntax</h3>
+
+<p>This example shows different values for <code>text-overflow</code> applied to a paragraph, for left-to-right and right-to-left text.</p>
+
+<h4 id="HTML">HTML</h4>
+
+<pre class="brush: html">
+
+&lt;div class="ltr"&gt;
+  &lt;h2&gt;Left to right text&lt;/h2&gt;
+  &lt;pre&gt;clip&lt;/pre&gt;
+  &lt;p class="overflow-clip"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
+  &lt;pre&gt;ellipsis&lt;/pre&gt;
+  &lt;p class="overflow-ellipsis"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
+  &lt;pre&gt;" [..]"&lt;/pre&gt;
+  &lt;p class="overflow-string"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class="rtl"&gt;
+  &lt;h2&gt;Right to left text&lt;/h2&gt;
+  &lt;pre&gt;clip&lt;/pre&gt;
+  &lt;p class="overflow-clip"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
+  &lt;pre&gt;ellipsis&lt;/pre&gt;
+  &lt;p class="overflow-ellipsis"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
+  &lt;pre&gt;" [..]"&lt;/pre&gt;
+  &lt;p class="overflow-string"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
+&lt;/div&gt;
+</pre>
+
+<h4 id="CSS">CSS</h4>
 
 <pre class="brush: css">p {
   width: 200px;
   border: 1px solid;
   padding: 2px 5px;
 
-  /* BOTH of the following are required for text-overflow */
+  /* Both of the following are required for text-overflow */
   white-space: nowrap;
   overflow: hidden;
-}
-
-.overflow-visible {
-  white-space: initial;
 }
 
 .overflow-clip {
@@ -85,227 +120,98 @@ white-space: nowrap;</pre>
 }
 
 .overflow-string {
-  /* Not supported in most browsers,
-     see the 'Browser compatibility' section below */
   text-overflow: " [..]";
+}
+
+body {
+  display: flex;
+  justify-content: space-around;
+}
+
+.ltr > p {
+  direction: ltr;
+}
+
+.rtl > p {
+  direction: rtl;
 }
 </pre>
 
-<h3 id="HTML">HTML</h3>
+<h4 id="Result">Result</h4>
 
-<pre class="brush: html">&lt;p class="overflow-visible"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
-&lt;p class="overflow-clip"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
-&lt;p class="overflow-ellipsis"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
-&lt;p class="overflow-string"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
+<p>{{EmbedLiveSample('one-value_syntax', 600, 320)}}</p>
+
+<h3 id="two-value_syntax">Two-value syntax</h3>
+
+<p>This example shows the two-value syntax for <code>text-overflow</code>, where you can define different overflow behavior for the start and end of the text.
+To show the effect we have to scroll the line so the start of the line is also hidden.</p>
+
+<h4 id="HTML">HTML</h4>
+
+<pre class="brush: html">
+&lt;pre&gt;clip clip&lt;/pre&gt;
+&lt;p class="overflow-clip-clip"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
+&lt;pre&gt;clip ellipsis&lt;/pre&gt;
+&lt;p class="overflow-clip-ellipsis"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
+&lt;pre&gt;ellipsis ellipsis&lt;/pre&gt;
+&lt;p class="overflow-ellipsis-ellipsis"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
+&lt;pre&gt;ellipsis " [..]"&lt;/pre&gt;
+&lt;p class="overflow-ellipsis-string"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
 </pre>
 
-<h3 id="Result">Result</h3>
+<h4 id="CSS">CSS</h4>
 
-<p>{{EmbedLiveSample('Examples', 300, 220, '', 'Web/CSS/text-overflow')}}</p>
+<pre class="brush: css">p {
+  width: 200px;
+  border: 1px solid;
+  padding: 2px 5px;
 
-<p class="note"><strong>Note:</strong> Live results in the following table may be shown incorrectly due to a limitation of the MDN Editor which removes the all contents of style attributes which have <code>text-overflow</code> properties with string value.</p>
+  /* Both of the following are required for text-overflow */
+  white-space: nowrap;
+  overflow: scroll;
+}
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th rowspan="2" scope="col" style="width: 15em;">CSS value</th>
-   <th colspan="2" scope="col" style="text-align: center;"><code>direction: ltr</code></th>
-   <th colspan="2" scope="col" style="text-align: center;"><code>direction: rtl</code></th>
-  </tr>
-  <tr>
-   <th scope="col">Expected Result</th>
-   <th scope="col">Live result</th>
-   <th scope="col">Expected Result</th>
-   <th scope="col">Live result</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><em>visible overflow</em></td>
-   <td style="font-family: monospace;">1234567890</td>
-   <td style="direction: ltr;">
-    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: visible;">1234567890</div>
-   </td>
-   <td style="font-family: monospace;">0987654321</td>
-   <td style="direction: rtl;">
-    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: visible;">1234567890</div>
-   </td>
-  </tr>
-  <tr>
-   <td><code>text-overflow: clip</code></td>
-   <td style="padding: 1px; font-family: monospace;"><img alt="t-o_clip.png" class="default internal" src="t-o_clip.png"></td>
-   <td style="direction: ltr;">
-    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: clip;">1234567890</div>
-   </td>
-   <td style="padding: 1px; font-family: monospace;"><img alt="t-o_clip_rtl.png" class="default internal" src="t-o_clip_rtl.png"></td>
-   <td style="direction: rtl;">
-    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: clip;">1234567890</div>
-   </td>
-  </tr>
-  <tr>
-   <td><code>text-overflow: ''</code></td>
-   <td style="font-family: monospace;">12345</td>
-   <td style="direction: ltr;">
-    <div>1234567890</div>
-   </td>
-   <td style="font-family: monospace;">54321</td>
-   <td style="direction: rtl;">
-    <div>1234567890</div>
-   </td>
-  </tr>
-  <tr>
-   <td><code>text-overflow: ellipsis</code></td>
-   <td style="font-family: monospace;">1234…</td>
-   <td style="direction: ltr;">
-    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: ellipsis;">1234567890</div>
-   </td>
-   <td style="font-family: monospace;">…4321</td>
-   <td style="direction: rtl;">
-    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: ellipsis;">1234567890</div>
-   </td>
-  </tr>
-  <tr>
-   <td><code>text-overflow: '.'</code></td>
-   <td style="font-family: monospace;">1234.</td>
-   <td style="direction: ltr;">
-    <div>1234567890</div>
-   </td>
-   <td style="font-family: monospace;">.4321</td>
-   <td style="direction: rtl;">
-    <div>1234567890</div>
-   </td>
-  </tr>
-  <tr>
-   <td><code>text-overflow: clip clip</code></td>
-   <td style="font-family: monospace;">123456</td>
-   <td style="direction: ltr;">
-    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: clip clip;">1234567890</div>
-   </td>
-   <td style="font-family: monospace;">654321</td>
-   <td style="direction: rtl;">
-    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: clip clip;">1234567890</div>
-   </td>
-  </tr>
-  <tr>
-   <td><code>text-overflow: clip ellipsis</code></td>
-   <td style="font-family: monospace;">1234…</td>
-   <td style="direction: ltr;">
-    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: clip ellipsis;">1234567890</div>
-   </td>
-   <td style="font-family: monospace;">6543…</td>
-   <td style="direction: rtl;">
-    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: clip ellipsis;">1234567890</div>
-   </td>
-  </tr>
-  <tr>
-   <td><code>text-overflow: clip '.'</code></td>
-   <td style="font-family: monospace;">1234.</td>
-   <td style="direction: ltr;">
-    <div>1234567890</div>
-   </td>
-   <td style="font-family: monospace;">6543.</td>
-   <td style="direction: rtl;">
-    <div>1234567890</div>
-   </td>
-  </tr>
-  <tr>
-   <td><code>text-overflow: ellipsis clip</code></td>
-   <td style="font-family: monospace;">…3456</td>
-   <td style="direction: ltr;">
-    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: ellipsis clip;">1234567890</div>
-   </td>
-   <td style="font-family: monospace;">…4321</td>
-   <td style="direction: rtl;">
-    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: ellipsis clip;">1234567890</div>
-   </td>
-  </tr>
-  <tr>
-   <td><code>text-overflow: ellipsis ellipsis</code></td>
-   <td style="font-family: monospace;">…34…</td>
-   <td style="direction: ltr;">
-    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: ellipsis ellipsis;">1234567890</div>
-   </td>
-   <td style="font-family: monospace;">…43…</td>
-   <td style="direction: rtl;">
-    <div style="font-family: monospace; white-space: nowrap; max-width: 3.35em; overflow: hidden; text-overflow: ellipsis ellipsis;">1234567890</div>
-   </td>
-  </tr>
-  <tr>
-   <td><code>text-overflow: ellipsis '.'</code></td>
-   <td style="font-family: monospace;">…34.</td>
-   <td style="direction: ltr;">
-    <div>1234567890</div>
-   </td>
-   <td style="font-family: monospace;">…43.</td>
-   <td style="direction: rtl;">
-    <div>1234567890</div>
-   </td>
-  </tr>
-  <tr>
-   <td><code>text-overflow: ',' clip</code></td>
-   <td style="font-family: monospace;">,3456</td>
-   <td style="direction: ltr;">
-    <div>1234567890</div>
-   </td>
-   <td style="font-family: monospace;">,4321</td>
-   <td style="direction: rtl;">
-    <div>1234567890</div>
-   </td>
-  </tr>
-  <tr>
-   <td><code>text-overflow: ',' ellipsis</code></td>
-   <td style="font-family: monospace;">,34…</td>
-   <td style="direction: ltr;">
-    <div>1234567890</div>
-   </td>
-   <td style="font-family: monospace;">,43…</td>
-   <td style="direction: rtl;">
-    <div>1234567890</div>
-   </td>
-  </tr>
-  <tr>
-   <td><code>text-overflow: ',' '.'</code></td>
-   <td style="font-family: monospace;">,34.</td>
-   <td style="direction: ltr;">
-    <div>1234567890</div>
-   </td>
-   <td style="font-family: monospace;">,43.</td>
-   <td style="direction: rtl;">
-    <div>1234567890</div>
-   </td>
-  </tr>
- </tbody>
-</table>
+.overflow-clip-clip {
+  text-overflow: clip clip;
+}
+
+.overflow-clip-ellipsis {
+  text-overflow: clip ellipsis;
+}
+
+.overflow-ellipsis-ellipsis {
+  text-overflow: ellipsis ellipsis;
+}
+
+.overflow-ellipsis-string {
+  text-overflow: ellipsis " [..]";
+}
+</pre>
+
+
+<h4 id="JavaScript">JavaScript</h4>
+
+<pre class="brush: js">// Scroll each paragraph so the start is also hidden
+const paras = document.querySelectorAll("p");
+
+for (let para of paras) {
+  para.scroll(100, 0);
+}
+</pre>
+
+<h4 id="Result">Result</h4>
+
+<p>{{EmbedLiveSample('two-value_syntax', 600, 360)}}</p>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><a href="https://drafts.csswg.org/css-overflow-4/#text-overflow">CSS Overflow Module Level 4</a></td>
-   <td></td>
-   <td>Added the values <code>&lt;string&gt;</code> and <code>fade</code> and the <code>fade()</code> function</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Overflow', '#text-overflow', 'text-overflow')}}</td>
-   <td>{{Spec2('CSS3 Overflow')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <p>A previous version of this interface reached the <em>Candidate Recommendation</em> status. As some not-listed-at-risk features needed to be removed, the spec was demoted to the <em>Working Draft</em> level, explaining why browsers implemented this property unprefixed, though not at the CR state.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.text-overflow")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

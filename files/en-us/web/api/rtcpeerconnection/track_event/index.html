@@ -11,11 +11,13 @@ tags:
   - WebRTC
   - WebRTC API
   - events
+  - Event
   - track
+browser-compat: api.RTCPeerConnection.track_event
 ---
-<div>{{WebRTCSidebar}}</div>
+<div>{{APIRef("WebRTC")}}</div>
 
-<p><span class="seoSummary">The <strong><code>track</code></strong> event is sent to the {{domxref("RTCPeerConnection.ontrack", "ontrack")}} event handler on {{domxref("RTCPeerConnection")}}s after a new track has been added to an {{domxref("RTCRtpReceiver")}} which is part of the connection.</span></p>
+<p>The <strong><code>track</code></strong> event is sent to the {{domxref("RTCPeerConnection.ontrack", "ontrack")}} event handler on {{domxref("RTCPeerConnection")}}s after a new track has been added to an {{domxref("RTCRtpReceiver")}} which is part of the connection.</p>
 
 <table class="properties">
  <tbody>
@@ -72,23 +74,8 @@ pc.addEventListener("track", e =&gt; {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('WebRTC 1.0', '#event-track', 'track')}}</td>
-   <td>{{Spec2('WebRTC 1.0')}}</td>
-   <td>Initial specification.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCPeerConnection.track_event")}}</p>
+<p>{{Compat}}</p>

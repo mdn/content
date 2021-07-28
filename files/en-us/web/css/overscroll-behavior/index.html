@@ -8,10 +8,11 @@ tags:
   - Reference
   - overscroll-behavior
   - 'recipe:css-property'
+browser-compat: css.properties.overscroll-behavior
 ---
 <div>{{CSSRef}}</div>
 
-<p><span class="seoSummary">The <strong><code>overscroll-behavior</code></strong> CSS property sets what a browser does when reaching the boundary of a scrolling area. It's a shorthand for {{cssxref("overscroll-behavior-x")}} and {{cssxref("overscroll-behavior-y")}}.</span></p>
+<p>The <strong><code>overscroll-behavior</code></strong> CSS property sets what a browser does when reaching the boundary of a scrolling area. It's a shorthand for {{cssxref("overscroll-behavior-x")}} and {{cssxref("overscroll-behavior-y")}}.</p>
 
 <pre class="brush:css no-line-numbers">/* Keyword values */
 overscroll-behavior: auto; /* default */
@@ -24,6 +25,7 @@ overscroll-behavior: auto contain;
 /* Global values */
 overscroll-behavior: inherit;
 overscroll-behavior: initial;
+overscroll-behavior: revert;
 overscroll-behavior: unset;
 </pre>
 
@@ -61,7 +63,7 @@ overscroll-behavior: unset;
 
 <p>In our <a href="https://mdn.github.io/css-examples/overscroll-behavior/">overscroll-behavior example</a> (see the <a href="https://github.com/mdn/css-examples/tree/master/overscroll-behavior">source code</a> also), we present a full-page list of fake contacts, and a dialog box containing a chat window. </p>
 
-<p><img alt="A popup chat window titled 'Active chat', showing a conversation between Chris and Bob. Behind the chat window is a contact list titled 'overscroll-behavior demo'." src="example.png" style="border-style: solid; border-width: 1px; display: block; height: 622px; margin: 0px auto; width: 350px;"></p>
+<p><img alt="A popup chat window titled 'Active chat', showing a conversation between Chris and Bob. Behind the chat window is a contact list titled 'overscroll-behavior demo'." src="example.png"></p>
 
 <p>Both of these areas scroll; normally if you scrolled the chat window until you hit a scroll boundary, the underlying contacts window would start to scroll too, which is not desirable. This can be stopped using <code>overscroll-behavior-y</code> (<code>overscroll-behavior</code> would also work) on the chat window, like this:</p>
 
@@ -80,26 +82,11 @@ overscroll-behavior: unset;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS Overscroll Behavior', '#propdef-overscroll-behavior', 'overscroll-behavior')}}</td>
-   <td>{{Spec2('CSS Overscroll Behavior')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.overscroll-behavior")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

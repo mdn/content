@@ -11,13 +11,15 @@ tags:
 - Sensor
 - Sensor APIs
 - Sensors
+browser-compat: api.OrientationSensor.quaternion
 ---
-<div>{{APIRef("Generic Sensor API")}}</div>
+<div>{{APIRef("Sensor API")}}</div>
 
-<p><span class="seoSummary">The <strong><code>quaternion</code></strong> read-only
+<p>The <strong><code>quaternion</code></strong> read-only
     property of the {{domxref("OrientationSensor")}} interface returns a four element
     {{jsxref('Array')}} whose elements contain the components of the unit
-    {{Glossary("quaternion")}} representing the device's orientation. </span></p>
+    {{Glossary("quaternion")}} representing the device's orientation.
+</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -29,7 +31,7 @@ tags:
 
 <h3 id="Value">Value</h3>
 
-<p>A {{jsxref('Array')}} whose values are the x, y, z, and w components of the quaternion
+<p>An {{jsxref('Array')}} whose values are the x, y, z, and w components of the quaternion
   representing the device orientation.</p>
 
 <h2 id="Example">Example</h2>
@@ -38,22 +40,8 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Orientation Sensor','#orientationsensor-quaternion','quaternion')}}
-      </td>
-      <td>{{Spec2('Orientation Sensor')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.OrientationSensor.quaternion")}}</p>
+<p>{{Compat}}</p>

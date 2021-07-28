@@ -7,6 +7,7 @@ tags:
   - CSS Property
   - Reference
   - recipe:css-shorthand-property
+browser-compat: css.properties.grid
 ---
 <div>{{CSSRef}}</div>
 
@@ -17,8 +18,7 @@ tags:
 <div>{{EmbedInteractiveExample("pages/css/grid.html")}}</div>
 
 <div class="notecard note">
-  <h4>Note</h4>
-<p>The sub-properties you don’t specify are set to their initial value, as normal for shorthands. Also, the gutter properties are NOT reset by this shorthand.</p>
+  <p><strong>Note:</strong> The sub-properties you don’t specify are set to their initial value, as normal for shorthands. Also, the gutter properties are NOT reset by this shorthand.</p>
 </div>
 
 <h2 id="Constituent_properties">Constituent properties</h2>
@@ -62,6 +62,7 @@ grid: auto-flow dense 40% / [line1] minmax(20em, max-content);
 /* Global values */
 grid: inherit;
 grid: initial;
+grid: revert;
 grid: unset;
 </pre>
 
@@ -124,26 +125,11 @@ grid: unset;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Grid", "#propdef-grid", "grid")}}</td>
-   <td>{{Spec2("CSS3 Grid")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.grid")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
