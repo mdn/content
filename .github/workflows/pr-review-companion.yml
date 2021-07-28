@@ -67,6 +67,13 @@ jobs:
         with:
           python-version: "3.8"
 
+      # See https://www.peterbe.com/plog/install-python-poetry-github-actions-faster
+      - name: Load cached ~/.local
+        uses: actions/cache@v2.1.6
+        with:
+          path: ~/.local
+          key: dotlocal-${{ runner.os }}-${{ hashFiles('.github/workflows/pr-review-companion.yml') }}
+
       - name: Install Python poetry
         uses: snok/install-poetry@v1.1.7
         with:
