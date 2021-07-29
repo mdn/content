@@ -12,6 +12,8 @@ browser-compat: api.CSSRuleList
 
 <p>A <code>CSSRuleList</code> represents an ordered collection of read-only {{domxref("CSSRule")}} objects.</p>
 
+<p>While the <code>CSSRuleList</code> object is read-only, and cannot be directly modified, it is considered a <code>live</code> object, as the content can change over time.</p>
+
 <p>To edit the underlying rules returned by <code>CSSRule</code> objects, use {{domxref("CSSStyleSheet.insertRule()")}} and {{domxref("CSSStyleSheet.deleteRule()")}}, which are methods of {{domxref("CSSStyleSheet")}}.</p>
 
 <p>The interface has no constructor. An instance of <code>CSSRuleList</code> is returned by {{domxref("CSSStyleSheet.cssRules")}} and {{domxref("CSSKeyframesRule.cssRules")}}.</p>
