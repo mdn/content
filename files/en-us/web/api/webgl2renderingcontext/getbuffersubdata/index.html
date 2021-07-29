@@ -47,12 +47,12 @@ browser-compat: api.WebGL2RenderingContext.getBufferSubData
   <dd>A {{domxref("GLintptr")}} specifying the byte offset from which to start reading
     from the buffer.</dd>
   <dt><code>dstData</code></dt>
-  <dd>An {{jsxref("ArrayBufferView")}} to copy the data to. If <code>dstData</code> is a
+  <dd>An {{domxref("ArrayBufferView")}} to copy the data to. If <code>dstData</code> is a
     {{jsxref("DataView")}} then <code>dstOffset</code> and <code>length</code> are
     interpreted in bytes, otherwise <code>dstData</code>'s element type is used.</dd>
   <dt>dstOffset {{optional_inline}}</dt>
-  <dd>A {{domxref("GLuint")}} specifying the element index offset where to start writing
-    the buffer.</dd>
+  <dd>A {{domxref("GLuint")}} specifying the element index offset to start writing in
+    <code>dstData</code>.</dd>
   <dt><code>length</code> {{optional_inline}}</dt>
   <dd>A {{domxref("GLuint")}} specifying the number of elements to copy. If this is 0 or
     not specified, <code>getBufferSubData</code> will copy until the end of
