@@ -21,7 +21,7 @@ browser-compat: api.NavigatorUAData.getHighEntropyValues
 
 <dl>
   <dt><code>hints</code></dt>
-  <dd>A sequence containing the hints to be returned. One or more of:
+  <dd>An array containing the hints to be returned, one or more of:
     <ul>
       <li><code>"architecture"</code></li>
       <li><code>"bitness"</code></li>
@@ -34,7 +34,7 @@ browser-compat: api.NavigatorUAData.getHighEntropyValues
 
 <h3 id="Returns">Return value</h3>
 
-<p>A dictionary object containing some or all of the following values, based on the hints requested:</p>
+<p>An object containing some or all of the following values, based on the hints requested:</p>
 
 <dl>
   <dt><code>architecture</code></dt>
@@ -58,7 +58,7 @@ browser-compat: api.NavigatorUAData.getHighEntropyValues
 
 <h2 id="Examples">Examples</h2>
 
-<p>In the following value a number of hints are requested using the <code>getHighEntropyValues()</code> method. When the promise resolves, this information is printed to the console.</p>
+<p>In the following example a number of hints are requested using the <code>getHighEntropyValues()</code> method. When the promise resolves, this information is printed to the console.</p>
 
 <pre class="brush:js">navigator.userAgentData.getHighEntropyValues(
   ["architecture",
@@ -74,5 +74,4 @@ browser-compat: api.NavigatorUAData.getHighEntropyValues
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <p>{{Compat}}</p>
-
 
