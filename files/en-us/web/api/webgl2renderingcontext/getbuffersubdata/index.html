@@ -47,13 +47,16 @@ browser-compat: api.WebGL2RenderingContext.getBufferSubData
   <dd>A {{domxref("GLintptr")}} specifying the byte offset from which to start reading
     from the buffer.</dd>
   <dt><code>dstData</code></dt>
-  <dd>An {{jsxref("ArrayBuffer")}} or {{jsxref("SharedArrayBuffer")}} to which to write
-    the buffer data.</dd>
-  <dt>srcOffset {{optional_inline}}</dt>
-  <dd>A {{domxref("GLuint")}} specifying the element index offset where to start reading
+  <dd>An {{jsxref("ArrayBufferView")}} to copy the data to. If <code>dstData</code> is a
+    {{jsxref("DataView")}} then <code>dstOffset</code> and <code>length</code> are
+    interpreted in bytes, otherwise <code>dstData</code>'s element type is used.</dd>
+  <dt>dstOffset {{optional_inline}}</dt>
+  <dd>A {{domxref("GLuint")}} specifying the element index offset where to start writing
     the buffer.</dd>
   <dt><code>length</code> {{optional_inline}}</dt>
-  <dd>A {{domxref("GLuint")}} defaulting to 0.</dd>
+  <dd>A {{domxref("GLuint")}} specifying the number of elements to copy. If this is 0 or
+    not specified, <code>getBufferSubData</code> will copy until the end of
+    <code>dstData</code>.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -86,7 +89,7 @@ gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
 gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(vertices), gl.STATIC_DRAW);
 
 var arrBuffer = new ArrayBuffer(vertices.length * Float32Array.BYTES_PER_ELEMENT);
-gl.getBufferSubData(gl.ARRAY_BUFFER, 0, arrBuffer);
+gl.getBufferSubData(gl.ARRAY_BUFFER, 0, new Float32Array(arrBuffer));
 </pre>
 
 <h2 id="Specifications">Specifications</h2>
