@@ -132,10 +132,7 @@ justify-content: unset;
 }
 </pre>
 
-<div class="hidden">
-<h4 id="HTML">HTML</h4>
-
-<pre class="brush: html">&lt;div id="container"&gt;
+<pre class="brush: html hidden">&lt;div id="container"&gt;
   &lt;div&gt;&lt;/div&gt;
   &lt;div&gt;&lt;/div&gt;
   &lt;div&gt;&lt;/div&gt;
@@ -157,15 +154,12 @@ justify-content: unset;
   &lt;option value="stretch"&gt;stretch&lt;/option&gt;
 &lt;/select&gt;</pre>
 
-<h4 id="JavaScript">JavaScript</h4>
-
-<pre class="brush: js">var justifyContent = document.getElementById("justifyContent");
+<pre class="brush: js hidden">var justifyContent = document.getElementById("justifyContent");
 justifyContent.addEventListener("change", function (evt) {
   document.getElementById("container").style.justifyContent =
       evt.target.value;
 });
 </pre>
-</div>
 
 <h4 id="Result">Result</h4>
 

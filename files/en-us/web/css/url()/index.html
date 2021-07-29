@@ -70,6 +70,7 @@ content: url(star.svg) url(star.svg) url(star.svg) url(star.svg) url(star.svg);
 <dl>
 	<dt><code>&lt;string&gt;</code></dt>
 	<dd>
+  <p>A string which may specify a URL or the ID of an SVG shape.</p>
 	<dl>
 		<dt>&lt;url&gt;</dt>
 		<dd>A url, which is a relative or absolute address, or pointer, to the web resource to be included, or a data uri, optionally in single or double quotes. Quotes are required if the URL includes parentheses, whitespace, or quotes, unless these characters are escaped, or if the address includes control characters above 0x7e. Double quotes cannot occur inside double quotes and single quotes cannot occur inside single quotes unless escaped. The following are all valid and equivalent:
@@ -135,11 +136,9 @@ content: url(star.svg) url(star.svg) url(star.svg) url(star.svg) url(star.svg);
 
 <h4 id="CSS_2">CSS</h4>
 
-<div class="hidden">
-<pre class="brush: css">.background {
+<pre class="brush: css hidden">.background {
   height: 100vh;
 }</pre>
-</div>
 
 <pre class="brush: css highlight[6]">.background {
   background: yellow;

@@ -118,8 +118,7 @@ place-content: unset;</pre>
 &lt;/div&gt;
 </pre>
 
-<div class="hidden">
-<pre class="brush:html">&lt;code&gt;writing-mode:&lt;/code&gt;&lt;select id="writingMode"&gt;
+<pre class="brush:html hidden">&lt;code&gt;writing-mode:&lt;/code&gt;&lt;select id="writingMode"&gt;
   &lt;option value="horizontal-tb" selected&gt;horizontal-tb&lt;/option&gt;
   &lt;option value="vertical-rl"&gt;vertical-rl&lt;/option&gt;
   &lt;option value="vertical-lr"&gt;vertical-lr&lt;/option&gt;
@@ -165,7 +164,7 @@ place-content: unset;</pre>
 &lt;/select&gt;&lt;code&gt;;&lt;/code&gt;
 </pre>
 
-<pre class="brush: js">var update = function () {
+<pre class="brush: js hidden">var update = function () {
    document.getElementById("container").style.placeContent = document.getElementById("alignContentAlignment").value + " " + document.getElementById("justifyContentAlignment").value;
 }
 
@@ -184,7 +183,6 @@ direction.addEventListener("change", function (evt) {
    document.getElementById("container").style.direction = evt.target.value;
 });
 </pre>
-</div>
 
 <h4 id="CSS">CSS</h4>
 

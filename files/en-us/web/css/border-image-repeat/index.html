@@ -77,10 +77,7 @@ border-image-repeat: unset;
 }
 </pre>
 
-<div class="hidden">
-<h4 id="HTML">HTML</h4>
-
-<pre class="brush: html">&lt;div id="bordered"&gt;You can try out various border repetition rules on me!&lt;/div&gt;
+<pre class="brush: html hidden">&lt;div id="bordered"&gt;You can try out various border repetition rules on me!&lt;/div&gt;
 
 &lt;select id="repetition"&gt;
   &lt;option value="stretch"&gt;stretch&lt;/option&gt;
@@ -92,14 +89,11 @@ border-image-repeat: unset;
 &lt;/select&gt;
 </pre>
 
-<h4 id="JavaScript">JavaScript</h4>
-
-<pre class="brush: js">var repetition = document.getElementById("repetition");
+<pre class="brush: js hidden">var repetition = document.getElementById("repetition");
 repetition.addEventListener("change", function (evt) {
   document.getElementById("bordered").style.borderImageRepeat = evt.target.value;
 });
 </pre>
-</div>
 
 <h4 id="Results">Results</h4>
 

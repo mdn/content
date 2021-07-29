@@ -232,15 +232,14 @@ flex: unset;
 }
 </pre>
 
-<div class="hidden">
-<pre class="brush: js">var flex = document.getElementById("flex");
+<pre class="brush: js hidden">var flex = document.getElementById("flex");
 var raw = document.getElementById("raw");
 flex.addEventListener("click", function() {
   raw.style.display = raw.style.display == "none" ? "block" : "none";
 });
 </pre>
 
-<pre class="brush: css">#flex-container {
+<pre class="brush: css hidden">#flex-container {
   width: 100%;
   font-family: Consolas, Arial, sans-serif;
 }
@@ -254,7 +253,6 @@ flex.addEventListener("click", function() {
   border: 1px solid #000;
 }
 </pre>
-</div>
 
 <h4 id="Result">Result</h4>
 
