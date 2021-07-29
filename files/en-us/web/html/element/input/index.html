@@ -1129,7 +1129,7 @@ input[min][max] {}
 
 <p>The last line, setting the custom validity message to the error string is vital. If the user makes an error, and the validity is set, it will fail to submit, even if all of the values are valid, until the message is <code>null</code>.</p>
 
-<h4 id="Example">Example</h4>
+<h4 id="custom_validation_error_example">Custom validation error example</h4>
 
 <p>If you want to present a custom error message when a field fails to validate, you need to use the <a href="/en-US/docs/Web/API/Constraint_validation#constraint_validation_interfaces">Constraint validation features</a> available on <code>&lt;input&gt;</code> (and related) elements. Take the following form:</p>
 
@@ -1161,7 +1161,7 @@ nameInput.addEventListener('invalid', () =&gt; {
 
 <p>The example renders like so:</p>
 
-<p>{{EmbedLiveSample('Client-side_validation')}}</p>
+<p>{{EmbedLiveSample('custom_validation_error_example')}}</p>
 
 <p>In brief:</p>
 
