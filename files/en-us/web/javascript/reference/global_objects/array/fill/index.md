@@ -48,8 +48,8 @@ The modified array, filled with `value`.
 - `fill` is a mutator method: it will change the array itself and return it, not a copy of it.
 - If the first parameter is an object, each slot in the array will reference that object.
 
-<div class="note notecard" markdown="1">
-Note: Using Array.Fill() on an empty array would not modify it as the array has nothing to be modified. To use Array.Fill() when declaring an array, make sure to assign slots to the array.
+<div class="note notecard">
+<b>Note</b>: Using Array.prototype.fill() on an empty array would not modify it as the array has nothing to be modified. To use Array.prototype.fill() when declaring an array, make sure to assign slots to the array.
 <a href="#using_fill_to_populate_an_empty_array">See example</a>
 </div>
 
