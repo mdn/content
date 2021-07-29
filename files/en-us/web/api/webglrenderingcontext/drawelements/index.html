@@ -42,7 +42,14 @@ browser-compat: api.WebGLRenderingContext.drawElements
     </ul>
   </dd>
   <dt>count</dt>
-  <dd>A {{domxref("GLsizei")}} specifying the number of elements to be rendered.</dd>
+  <dd>A {{domxref("GLsizei")}} specifying the number of elements of the bound element array
+    buffer to be rendered. For example, to draw a wireframe triangle with <code>gl.LINES</code>
+    the count should be 2 endpoints per line &times; 3 lines = 6 elements. However to draw the
+    same wireframe triangle with <code>gl.LINE_STRIP</code> the element array buffer does not
+    repeat the indices for the end of the first line/start of the second line, and end of the
+    second line/start of the third line, so <code>count</code> will be four. To draw the same
+    triangle with <code>gl.LINE_LOOP</code> the element array buffer does not repeat the
+    first/last vertex either so <code>count</code> will be three.</dd>
   <dt>type</dt>
   <dd>A {{domxref("GLenum")}} specifying the type of the values in the element array
     buffer. Possible values are:
