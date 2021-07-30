@@ -187,14 +187,14 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
 Accept-Language: en-us,en;q=0.5
 Accept-Encoding: gzip,deflate
 Connection: keep-alive
-Origin: http://foo.example
+Origin: https://foo.example
 Access-Control-Request-Method: POST
 Access-Control-Request-Headers: X-PINGOTHER, Content-Type
 
 HTTP/1.1 204 No Content
 Date: Mon, 01 Dec 2008 01:15:39 GMT
 Server: Apache/2
-Access-Control-Allow-Origin: http://foo.example
+Access-Control-Allow-Origin: https://foo.example
 Access-Control-Allow-Methods: POST, GET, OPTIONS
 Access-Control-Allow-Headers: X-PINGOTHER, Content-Type
 Access-Control-Max-Age: 86400
@@ -213,12 +213,12 @@ Access-Control-Request-Headers: X-PINGOTHER, Content-Type
 
 <p>Lines 13 - 22 above are the response that the server sends back, which indicate that the request method (<code>POST</code>) and request headers (<code>X-PINGOTHER</code>) are acceptable. In particular, let's look at lines 16-19:</p>
 
-<pre class="brush: none">Access-Control-Allow-Origin: http://foo.example
+<pre class="brush: none">Access-Control-Allow-Origin: https://foo.example
 Access-Control-Allow-Methods: POST, GET, OPTIONS
 Access-Control-Allow-Headers: X-PINGOTHER, Content-Type
 Access-Control-Max-Age: 86400</pre>
 
-<p>The server responds with <code>Access-Control-Allow-Origin: http://foo.example</code>, restricting access to just the requesting origin domain. It also responds with <code>Access-Control-Allow-Methods</code>, which says that <code>POST</code> and <code>GET</code> are viable methods to query the resource in question (this header is similar to the {{HTTPHeader("Allow")}} response header, but used strictly within the context of access control).</p>
+<p>The server responds with <code>Access-Control-Allow-Origin: https://foo.example</code>, restricting access to just the requesting origin domain. It also responds with <code>Access-Control-Allow-Methods</code>, which says that <code>POST</code> and <code>GET</code> are viable methods to query the resource in question (this header is similar to the {{HTTPHeader("Allow")}} response header, but used strictly within the context of access control).</p>
 
 <p>The server also sends <code>Access-Control-Allow-Headers</code> with a value of "<code>X-PINGOTHER, Content-Type</code>", confirming that these are permitted headers to be used with the actual request. Like <code>Access-Control-Allow-Methods</code>, <code>Access-Control-Allow-Headers</code> is a comma separated list of acceptable headers.</p>
 
@@ -296,10 +296,10 @@ Content-Type: text/plain
 
 <p>The most interesting capability exposed by both {{domxref("XMLHttpRequest")}} or <a href="/en-US/docs/Web/API/Fetch_API">Fetch</a> and CORS is the ability to make "credentialed" requests that are aware of <a href="/en-US/docs/Web/HTTP/Cookies">HTTP cookies</a> and HTTP Authentication information. By default, in cross-site <code>XMLHttpRequest</code> or <a href="/en-US/docs/Web/API/Fetch_API">Fetch</a> invocations, browsers will <strong>not</strong> send credentials. A specific flag has to be set on the <code>XMLHttpRequest</code> object or the {{domxref("Request")}} constructor when it is invoked.</p>
 
-<p>In this example, content originally loaded from <code class="plain">http://foo.example</code> makes a simple GET request to a resource on <code class="plain">http://bar.other</code> which sets Cookies. Content on foo.example might contain JavaScript like this:</p>
+<p>In this example, content originally loaded from <code class="plain">https://foo.example</code> makes a simple GET request to a resource on <code class="plain">https://bar.other</code> which sets Cookies. Content on foo.example might contain JavaScript like this:</p>
 
 <pre class="brush: js">const invocation = new XMLHttpRequest();
-const url = 'http://bar.other/resources/credentialed-content/';
+const url = 'https://bar.other/resources/credentialed-content/';
 
 function callOtherDomain() {
   if (invocation) {
@@ -323,8 +323,8 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
 Accept-Language: en-us,en;q=0.5
 Accept-Encoding: gzip,deflate
 Connection: keep-alive
-Referer: http://foo.example/examples/credential.html
-Origin: http://foo.example
+Referer: https://foo.example/examples/credential.html
+Origin: https://foo.example
 Cookie: pageAccess=2
 
 HTTP/1.1 200 OK
@@ -345,7 +345,7 @@ Content-Type: text/plain
 [text/plain payload]
 </pre>
 
-<p>Although line 10 contains the Cookie destined for the content on <code class="plain">http://bar.other</code>, if bar.other did not respond with an {{HTTPHeader("Access-Control-Allow-Credentials")}}<code>: true</code> (line 17) the response would be ignored and not made available to web content.</p>
+<p>Although line 10 contains the Cookie destined for the content on <code class="plain">https://bar.other</code>, if bar.other did not respond with an {{HTTPHeader("Access-Control-Allow-Credentials")}}<code>: true</code> (line 17) the response would be ignored and not made available to web content.</p>
 
 <h4 id="Preflight_requests_and_credentials">Preflight requests and credentials</h4>
 
@@ -361,7 +361,7 @@ Content-Type: text/plain
 
 <p>When responding to a credentialed request, the server <strong>must</strong> specify an origin in the value of the <code>Access-Control-Allow-Origin</code> header, instead of specifying the "<code>*</code>" wildcard.</p>
 
-<p>Because the request headers in the above example include a <code>Cookie</code> header, the request would fail if the value of the <code>Access-Control-Allow-Origin</code> header was "*". But it does not fail: Because the value of the <code>Access-Control-Allow-Origin</code> header is "<code class="plain">http://foo.example</code>" (an actual origin) rather than the "<code>*</code>" wildcard, the credential-cognizant content is returned to the invoking web content.</p>
+<p>Because the request headers in the above example include a <code>Cookie</code> header, the request would fail if the value of the <code>Access-Control-Allow-Origin</code> header was "*". But it does not fail: Because the value of the <code>Access-Control-Allow-Origin</code> header is "<code class="plain">https://foo.example</code>" (an actual origin) rather than the "<code>*</code>" wildcard, the credential-cognizant content is returned to the invoking web content.</p>
 
 <p>Note that the <code>Set-Cookie</code> response header in the example above also sets a further cookie. In case of failure, an exception—depending on the API used—is raised.</p>
 
