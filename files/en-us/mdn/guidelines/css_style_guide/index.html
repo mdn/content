@@ -24,71 +24,6 @@ tags:
 
 <p>This section lists the inline styles available for style content blocks on MDN.</p>
 
-<h3 id=".hidden"><code>.hidden</code></h3>
-
-<p>Allows you to hide content in the final rendered view. Typically this is used to provide HTML, CSS, and JavaScript to the script that creates the live code samples while only displaying the relevant language to the reader.</p>
-
-<h4 id="Example_syntax_3">Example syntax</h4>
-
-<pre class="brush: html">&lt;h4 id="Hidden_Code_Sample"&gt;Hidden code Sample&lt;/h4&gt;
-
-&lt;div class="hidden"&gt;
-&lt;h5 id="HTML"&gt;HTML&lt;/h5&gt;
-
-&lt;pre class="brush: html;"&gt;
-&amp;lt;button id="test"&amp;gt; Click me &amp;lt;/button&amp;gt;
-
-&lt;h5 id="CSS"&gt;CSS&lt;/h5&gt;
-
-&lt;pre class="brush: css;"&gt;
-button {
-    background-color: #a00;
-    color:#fff;
-    font-size: 20px;
-}
-&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h5 id="JavaScript_Content"&gt;JavaScript Content&lt;/h5&gt;
-
-&lt;pre class="brush: js;"&gt;
-document.getElementById("test").addEventListener("click", works);
-function works() {
-    window.alert("you clicked it!");
-}
-&lt;/pre&gt;
-
-&lt;p&gt;\{{EmbedLiveSample("Hidden_Code_Sample")}}&lt;/p&gt;
-</pre>
-
-<h4 id="Hidden_code_sample">Hidden code sample</h4>
-
-<div class="hidden">
-<h5 id="HTML">HTML</h5>
-
-<pre class="brush: html">&lt;button id="test"&gt;Click Me&lt;/button&gt;
-</pre>
-
-<h5 id="CSS">CSS</h5>
-
-<pre class="brush: css">button{
-    background-color: #a00;
-    color:#fff;
-    font-size: 20px;
-}
-</pre>
-</div>
-
-<h5 id="JavaScript">JavaScript</h5>
-
-<pre class="brush: js">document.getElementById("test").addEventListener("click", works);
-function works(){
-    window.alert("you clicked it!");
-}
-</pre>
-
-<p>{{EmbedLiveSample("Hidden_code_sample", "100%", 150)}}</p>
-
 <h3 id=".seoSummary"><code>.seoSummary</code></h3>
 
 <p>This is a class that has no visible effect on content on the page, however, if the class is applied to an element (usually a {{HTMLElement("span")}}) KumaScript will use the element's content to create <code>description</code> {{HTMLElement("meta")}} tags. These provide a short description to be used in search engines and sharing sites like Facebook and Twitter.</p>
@@ -220,6 +155,72 @@ Which gives you the following output:
 &lt;pre class="brush: html example-bad"&gt;
   &amp;lt;input type="text"&amp;gt;
 &lt;/pre&gt;</pre>
+
+
+<h3 id=".hidden"><code>.hidden</code></h3>
+
+<p>Allows you to hide <code>&lt;pre&gt;</code> blocks in the final rendered view. This is used to provide HTML, CSS, and JavaScript to the script that creates the live code samples while only displaying the relevant language to the reader.</p>
+
+<h4 id="Example_syntax_3">Example syntax</h4>
+
+<pre class="brush: html">&lt;h4 id="Hidden_Code_Sample"&gt;Hidden code Sample&lt;/h4&gt;
+
+&lt;div class="hidden"&gt;
+&lt;h5 id="HTML"&gt;HTML&lt;/h5&gt;
+
+&lt;pre class="brush: html;"&gt;
+&amp;lt;button id="test"&amp;gt; Click me &amp;lt;/button&amp;gt;
+
+&lt;h5 id="CSS"&gt;CSS&lt;/h5&gt;
+
+&lt;pre class="brush: css;"&gt;
+button {
+    background-color: #a00;
+    color:#fff;
+    font-size: 20px;
+}
+&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h5 id="JavaScript_Content"&gt;JavaScript Content&lt;/h5&gt;
+
+&lt;pre class="brush: js;"&gt;
+document.getElementById("test").addEventListener("click", works);
+function works() {
+    window.alert("you clicked it!");
+}
+&lt;/pre&gt;
+
+&lt;p&gt;\{{EmbedLiveSample("Hidden_Code_Sample")}}&lt;/p&gt;
+</pre>
+
+<h4 id="Hidden_code_sample">Hidden code sample</h4>
+
+<div class="hidden">
+<h5 id="HTML">HTML</h5>
+
+<pre class="brush: html">&lt;button id="test"&gt;Click Me&lt;/button&gt;
+</pre>
+
+<h5 id="CSS">CSS</h5>
+
+<pre class="brush: css">button{
+    background-color: #a00;
+    color:#fff;
+    font-size: 20px;
+}
+</pre>
+</div>
+
+<h5 id="JavaScript">JavaScript</h5>
+
+<pre class="brush: js">document.getElementById("test").addEventListener("click", works);
+function works(){
+    window.alert("you clicked it!");
+}
+</pre>
+
+<p>{{EmbedLiveSample("Hidden_code_sample", "100%", 150)}}</p>
 
 <h3 id=".note.notecard"><code>.note.notecard</code></h3>
 
