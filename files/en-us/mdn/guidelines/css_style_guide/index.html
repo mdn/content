@@ -20,31 +20,6 @@ tags:
 
 <p>Please keep in that these styles have been developed to cover the most common situations that arise while styling article content, and that whenever possible, you should try to use the available classes; diverging too much from the standard content look-and-feel isn't good for consistency and readability. If you feel that your page absolutely requires some kind of special custom styling, you should <a href="/en-US/docs/MDN/Contribute/Getting_started#step_4_ask_for_help">talk to us</a> about it.</p>
 
-<h2 id="Inline_styles">Inline styles</h2>
-
-<p>This section lists the inline styles available for style content blocks on MDN.</p>
-
-<h3 id=".seoSummary"><code>.seoSummary</code></h3>
-
-<p>This is a class that has no visible effect on content on the page, however, if the class is applied to an element (usually a {{HTMLElement("span")}}) KumaScript will use the element's content to create <code>description</code> {{HTMLElement("meta")}} tags. These provide a short description to be used in search engines and sharing sites like Facebook and Twitter.</p>
-
-<div class="notecard note">
-  <p><strong>Note:</strong> If <code>.seoSummary</code> is not explicitly specified on a page, the first paragraph is automatically set as the SEO summary.</p>
-</div>
-
-<p>The below example is taken from the <a href="/en-US/docs/Mozilla/Add-ons">Mozilla Add-ons</a> page.</p>
-
-<h4 id="Example_syntax_4">Example syntax</h4>
-
-<pre class="brush: html">&lt;span class="seoSummary"&gt;
-  Add-ons allow developers to extend and modify the functionality of Firefox.
-&lt;/span&gt;</pre>
-
-<h4 id="Example_of_the_generated_HTMLElementmeta_elements">Example of the generated {{HTMLElement("meta")}} element</h4>
-
-<pre class="brush: html;">&lt;meta name="description"
-      content="Add-ons allow developers to extend and modify the functionality of Firefox."&gt;</pre>
-
 <h2 id="Block_level_styles">Block level styles</h2>
 
 <p>This section lists the block-level styles available for style content blocks on MDN.</p>
