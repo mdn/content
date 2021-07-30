@@ -25,27 +25,27 @@ foo     = true;  // foo is now a boolean
 
 The latest ECMAScript standard defines nine types:
 
-- Six **Data Types** that are [primitives](/en-US/docs/Glossary/Primitive), checked by [typeof](/en-US/docs/Web/JavaScript/Reference/Operators/typeof) operator:
+- Six **Data Types** that are [primitives](/en-US/docs/Glossary/Primitive), checked by [`typeof`](/en-US/docs/Web/JavaScript/Reference/Operators/typeof) operator:
 
-  - [undefined](/en-US/docs/Glossary/undefined) : `typeof instance === "undefined"`
+  - [`undefined`](/en-US/docs/Glossary/undefined) : `typeof instance === "undefined"`
   - [Boolean](/en-US/docs/Glossary/Boolean) : `typeof instance === "boolean"`
   - [Number](/en-US/docs/Glossary/Number) : `typeof instance === "number"`
   - [String](/en-US/docs/Glossary/String) : `typeof instance === "string"`
   - [BigInt](/en-US/docs/Glossary/BigInt) : `typeof instance === "bigint"`
   - [Symbol](/en-US/docs/Glossary/Symbol) : `typeof instance === "symbol"`
 
-- **Structural** **Types**:
+- **Structural Types**:
 
-  - [Object](/en-US/docs/Glossary/Object) : `typeof instance === "object"`. Special non-data but **Structural** **type** for any [constructed](/en-US/docs/Learn/JavaScript/Objects#the_constructor) object instance also used as data structures: new {{jsxref("Object")}}, new {{jsxref("Array")}}, new {{jsxref("Map")}}, new {{jsxref("Set")}}, new {{jsxref("WeakMap")}}, new {{jsxref("WeakSet")}}, new {{jsxref("Date")}} and almost everything made with [new keyword](/en-US/docs/Web/JavaScript/Reference/Operators/new);
-  - [Function](/en-US/docs/Glossary/Function) : a non-data structure, though it also answers for `typeof` operator: `typeof instance === "function"`. This is merely a special shorthand for Functions, though every Function constructor is derived from Object constructor.
+  - [Object](/en-US/docs/Glossary/Object) : `typeof instance === "object"`. Special non-data but **Structural type** for any [constructed](/en-US/docs/Learn/JavaScript/Objects#the_constructor) object instance also used as data structures: `new {{jsxref("Object")}}`, `new {{jsxref("Array")}}`, `new {{jsxref("Map")}}`, `new {{jsxref("Set")}}`, `new {{jsxref("WeakMap")}}`, `new {{jsxref("WeakSet")}}`, `new {{jsxref("Date")}}` and almost everything made with [`new` keyword](/en-US/docs/Web/JavaScript/Reference/Operators/new);
+  - [Function](/en-US/docs/Glossary/Function) : a non-data structure, though it also answers for `typeof` operator: `typeof instance === "function"`. This is merely a special shorthand for Functions, though every Function constructor is derived from `Object` constructor.
 
 - **Structural Root** Primitive:
 
-  - **[null](/en-US/docs/Glossary/Null)** : `typeof instance === "object"`. Special [primitive](/en-US/docs/Glossary/Primitive) type having additional usage for its value: if object is not inherited, then `null` is shown;
+  - [`null`](/en-US/docs/Glossary/Null) : `typeof instance === "object"`. Special [primitive](/en-US/docs/Glossary/Primitive) type having additional usage for its value: if object is not inherited, then `null` is shown;
 
-Keep in mind the only valuable purpose of `typeof` operator usage is checking the Data Type. If we wish to check any Structural Type derived from Object it is pointless to use `typeof` for that, as we will always receive `"object"`. The proper way to check what sort of Object we are using is the {{jsxref("Operators/instanceof", "instanceof")}} keyword. But even in that case there might be misconceptions.
+Keep in mind the only valuable purpose of `typeof` operator usage is checking the Data Type. If we wish to check any Structural Type derived from `Object` it is pointless to use `typeof` for that, as we will always receive `"object"`. The proper way to check what sort of Object we are using is the {{jsxref("Operators/instanceof", "instanceof")}} keyword. But even in that case there might be misconceptions.
 
-As we can see the meaning of every primitive type is obvious except of undefined and null which are almost the same. This happens as the concept of Time is strictly connected with the purpose of algorithms. We can purport something that does not yet exist or does not exist anymore: **undefined**. But when we wish to be able to represent something that exists being empty, we have to invent another keyword. And that is what **null** stands for: the beginning of structural meaning.
+As we can see the meaning of every primitive type is obvious except of `undefined` and `null` which are almost the same. This happens as the concept of Time is strictly connected with the purpose of algorithms. We can purport something that does not yet exist or does not exist anymore: **`undefined`**. But when we wish to be able to represent something that exists being empty, we have to invent another keyword. And that is what **`null`** stands for: the beginning of structural meaning.
 
 ## Primitive values
 
@@ -94,11 +94,11 @@ It may be necessary to use such techniques in very constrained environments, lik
 
 ### BigInt type
 
-The {{jsxref("BigInt")}} type is a numeric primitive in JavaScript that can represent integers with arbitrary precision. With `BigInt`s, you can safely store and operate on large integers even beyond the safe integer limit for `Number`s.
+The BigInt type is a numeric primitive in JavaScript that can represent integers with arbitrary precision. With BigInts, you can safely store and operate on large integers even beyond the safe integer limit for Numbers.
 
-A `BigInt` is created by appending `n` to the end of an integer or by calling the constructor.
+A BigInt is created by appending `n` to the end of an integer or by calling the constructor.
 
-You can obtain the safest value that can be incremented with `Number`s by using the constant {{jsxref("Number.MAX_SAFE_INTEGER")}}. With the introduction of `BigInt`s, you can operate with numbers beyond the {{jsxref("Number.MAX_SAFE_INTEGER")}}.
+You can obtain the safest value that can be incremented with Numbers by using the constant {{jsxref("Number.MAX_SAFE_INTEGER")}}. With the introduction of BigInts, you can operate with numbers beyond the {{jsxref("Number.MAX_SAFE_INTEGER")}}.
 
 This example demonstrates, where incrementing the {{jsxref("Number.MAX_SAFE_INTEGER")}} returns the expected result:
 
@@ -109,15 +109,15 @@ This example demonstrates, where incrementing the {{jsxref("Number.MAX_SAFE_INTE
 9007199254740993n
 ```
 
-You can use the operators `+`, `*`, `-`, `**`, and `%` with `BigInt`s—just like with `Number`s. A `BigInt` is not strictly equal to a `Number`, but it is loosely so.
+You can use the operators `+`, `*`, `-`, `**`, and `%` with BigInts—just like with Numbers. A BigInt is not strictly equal to a Number, but it is loosely so.
 
-A `BigInt` behaves like a `Number` in cases where it is converted to `Boolean`: `if`, `||`, `&&`, `Boolean`, `!`.
+A BigInt behaves like a Number in cases where it is converted to boolean: `if`, `||`, `&&`, `Boolean`, `!`.
 
-`BigInt`s cannot be operated on interchangeably with `Number`s. Instead a {{jsxref("TypeError")}} will be thrown.
+`BigInt`s cannot be operated on interchangeably with Numbers. Instead a {{jsxref("TypeError")}} will be thrown.
 
 ### String type
 
-JavaScript's {{jsxref("String")}} type is used to represent textual data. It is a set of "elements" of 16-bit unsigned integer values. Each element in the String occupies a position in the String. The first element is at index `0`, the next at index `1`, and so on. The length of a String is the number of elements in it.
+JavaScript's String type is used to represent textual data. It is a set of "elements" of 16-bit unsigned integer values. Each element in the String occupies a position in the String. The first element is at index `0`, the next at index `1`, and so on. The length of a String is the number of elements in it.
 
 Unlike some programming languages (such as C), JavaScript strings are immutable. This means that once a string is created, it is not possible to modify it.
 
@@ -239,7 +239,7 @@ Associates a key with one of two accessor functions (`get` and `set`) to retriev
 
 ### "Normal" objects, and functions
 
-A JavaScript object is a mapping between _keys_ and _values_. Keys are strings (or {{jsxref("Symbol")}}s), and _values_ can be anything. This makes objects a natural fit for [hashmaps](https://en.wikipedia.org/wiki/Hash_table).
+A JavaScript object is a mapping between _keys_ and _values_. Keys are strings (or Symbols), and _values_ can be anything. This makes objects a natural fit for [hashmaps](https://en.wikipedia.org/wiki/Hash_table).
 
 Functions are regular objects with the additional capability of being _callable_.
 
