@@ -12,13 +12,8 @@ tags:
 <p>{{MDNSidebar}}</p>
 
 <div class="notecard warning">
-
-<h4>Warning</h4>
-
-<p>We're currently in the process of converting all MDN content from HTML into Markdown. Currently you can write pages in HTML or in Markdown, but we don't want to mix formats within a section.</p>
-
-<p>At the moment only the JavaScript documentation is in Markdown (pages under <a href="/en-US/docs/Web/JavaScript">https://developer.mozilla.org/en-US/docs/Web/JavaScript</a>). So if you're writing content in that part of the site, this page is <em>not</em> applicable, and you should instead follow the guidelines in the <a href="/en-US/docs/MDN/Contribute/Markdown_in_MDN">Markdown in MDN</a> guide.</p>
-
+  <p><strong>Warning:</strong> We're currently in the process of converting all MDN content from HTML into Markdown. Currently you can write pages in HTML or in Markdown, but we don't want to mix formats within a section.</p>
+  <p>At the moment only the JavaScript documentation is in Markdown (pages under <a href="/en-US/docs/Web/JavaScript">https://developer.mozilla.org/en-US/docs/Web/JavaScript</a>). So if you're writing content in that part of the site, this page is <em>not</em> applicable, and you should instead follow the guidelines in the <a href="/en-US/docs/MDN/Contribute/Markdown_in_MDN">Markdown in MDN</a> guide.</p>
 </div>
 
 <p class="summary"><span class="seoSummary">MDN has many built-in global styles available for use when styling and laying out articles, and this article is a guide to the available classes and when to use them.</span></p>
@@ -99,8 +94,7 @@ function works(){
 <p>This is a class that has no visible effect on content on the page, however, if the class is applied to an element (usually a {{HTMLElement("span")}}) KumaScript will use the element's content to create <code>description</code> {{HTMLElement("meta")}} tags. These provide a short description to be used in search engines and sharing sites like Facebook and Twitter.</p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>If <code>.seoSummary</code> is not explicitly specified on a page, the first paragraph is automatically set as the SEO summary.</p>
+  <p><strong>Note:</strong> If <code>.seoSummary</code> is not explicitly specified on a page, the first paragraph is automatically set as the SEO summary.</p>
 </div>
 
 <p>The below example is taken from the <a href="/en-US/docs/Mozilla/Add-ons">Mozilla Add-ons</a> page.</p>
@@ -192,8 +186,7 @@ Which gives you the following output:
 </details>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>You can include an <code>open</code> attribute on the <code>&lt;details&gt;</code> element to make it opened by default.</p>
+  <p><strong>Note:</strong> You can include an <code>open</code> attribute on the <code>&lt;details&gt;</code> element to make it opened by default.</p>
 </div>
 
 <h3 id=".example-bad_and_.example-good"><code style="white-space: nowrap;">.example-bad</code> and <code style="white-space: nowrap;">.example-good</code></h3>
@@ -233,17 +226,13 @@ Which gives you the following output:
 <p>Turns a section of content into a note box, which is normally a useful note that tangentially relates to the current subject but doesn't directly fit into the flow of information.</p>
 
 <div class="notecard note">
-<h4>Note</h4>
-<p>This is how we usually present a note in an MDN article.</p>
+  <p><strong>Note:</strong> This is how we usually present a note in an MDN article.</p>
 </div>
-
-<p>We've used an <code>&lt;h4&gt;</code> for the heading in this example, but you should choose the level of heading that makes sense for your note's position in the document hierarchy — <code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>, or <code>&lt;h4&gt;</code>.</p>
 
 <h4 id="Example_syntax_12">Example syntax</h4>
 
 <pre class="brush: html">&lt;div class="notecard note"&gt;
-  &lt;h4&gt;Note&lt;/h4&gt;
-  &lt;p&gt;This is how we usually present a note in an MDN article.&lt;/p&gt;
+  &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; This is how we usually present a note in an MDN article.&lt;/p&gt;
 &lt;/div&gt;</pre>
 
 <h3 id=".notecard.warning"><code>.notecard.warning</code></h3>
@@ -251,17 +240,13 @@ Which gives you the following output:
 <p>Turns a section of content into a warning box, which normally communicates a vital fact that the reader needs to be really careful about (e.g., they need to do something, or avoid something to avoid serious issues.)</p>
 
 <div class="notecard warning">
-  <h4>Warning</h4>
-  <p>Here be dragons!</p>
+  <p><strong>Warning:</strong> Here be dragons!</p>
 </div>
-
-<p>We've used an <code>&lt;h4&gt;</code> for the heading in this example, but you should choose the level of heading that makes sense for your note's position in the document hierarchy — <code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>, or <code>&lt;h4&gt;</code>.</p>
 
 <h4 id="Example_syntax_17">Example syntax</h4>
 
 <pre class="brush: html">&lt;div class="notecard warning"&gt;
-  &lt;h4&gt;Warning&lt;/h4&gt;
-  &lt;p&gt;Here be dragons!&lt;/p&gt;
+  &lt;p&gt;&lt;strong&gt;Warning:&lt;/strong&gt; Here be dragons!&lt;/p&gt;
 &lt;/div&gt;</pre>
 
 <h2 id="Table_styles">Table styles</h2>
