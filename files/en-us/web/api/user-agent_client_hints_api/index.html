@@ -20,6 +20,8 @@ browser-compat: api.NavigatorUAData
 
 <p>User agent Client Hints aims to provide this information in a more privacy-preserving way by enforcing a model where the server requests a set of information. The browser decides what to return. This approach means that a user-agent could provide settings that allow a user to hide some of the information that could fingerprint them from such requests.</p>
 
+<p>In order to decide what to return, the information accessed via this API is split into two groups—<strong>low entropy</strong> and <strong>high entropy</strong> hints. Low entropy hints are those that do not give away much information, the API makes these easily accessible with every request. High entropy hints have the potential to give away more information and therefore are gated in such a way that the browser can make a decision as to whether to provide them. This decision could potentially be based on user preferences, or behind a permission request.</p>
+
 <h3>Use cases for User-Agent Client Hints</h3>
 
 <p>The <a href="">User-Agent Client Hints Explainer</a> explains some potential use cases for the API. These include:</p>
