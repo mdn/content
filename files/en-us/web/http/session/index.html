@@ -77,7 +77,7 @@ name=Joe%20User&amp;request=Send%20me%20one%20of%20your%20catalogue
 <p>After the connected agent has sent its request, the web server processes it, and ultimately returns a response. Similar to a client request, a server response is formed of text directives, separated by CRLF, though divided into three blocks:</p>
 
 <ol>
- <li>The first line, the <em>status line</em>, consists of an acknowledgment of the HTTP version used, followed by a status request (and its brief meaning in human-readable text).</li>
+ <li>The first line, the <em>status line</em>, consists of an acknowledgment of the HTTP version used, followed by a response status (and its brief meaning in human-readable text).</li>
  <li>Subsequent lines represent specific HTTP headers, giving the client information about the data sent (e.g. type, data size, compression algorithm used, hints about caching). Similarly to the block of HTTP headers for a client request, these HTTP headers form a block ending with an empty line.</li>
  <li>The final block is a data block, which contains the optional data.</li>
 </ol>
