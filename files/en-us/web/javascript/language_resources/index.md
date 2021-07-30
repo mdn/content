@@ -267,13 +267,6 @@ See [Wikipedia ECMAScript entry](https://en.wikipedia.org/wiki/ECMAScript) for m
 
 You can participate in or just track the work on the next revisions of the ECMAScript Language Specification, code-named "Harmony", and the ECMAScript Internationalization API Specification via public wiki and the [es-discuss mailing list](https://mail.mozilla.org/listinfo/es-discuss) linked from [ecmascript.org](https://www.ecmascript.org/community.php).
 
-## Implementations
-
-- [SpiderMonkey](/en-US/docs/SpiderMonkey) - the JavaScript engine used in various Mozilla products, including Firefox;
-- [Rhino](/en-US/docs/Rhino) - the JavaScript engine is written in Java;
-- [Tamarin](/en-US/docs/Tamarin) - the ActionScript virtual machine (used in the Adobe® Flash® Player);
-- [Other implementations](https://en.wikipedia.org/wiki/List_of_ECMAScript_engines) (Wikipedia).
-
 ## See also
 
 - [Brendan Eich's blog](https://brendaneich.com/). Brendan is the creator of JavaScript and the SpiderMonkey JS engine. He still works with the ECMA working group to evolve the language.
