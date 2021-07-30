@@ -89,7 +89,7 @@ searchParams.get('foo'); // bar
 
 // Having duplicate parameters only returns the first value
 let paramStr = 'foo=bar&foo=baz';
-let searchParams = new URLSearchParams(paramsObj);
+let searchParams = new URLSearchParams(paramStr);
 
 searchParams.toString(); // "foo=bar&foo=baz"
 searchParams.has('foo'); // bar
