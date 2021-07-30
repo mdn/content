@@ -20,7 +20,9 @@ tags:
 
 <p>Please keep in that these styles have been developed to cover the most common situations that arise while styling article content, and that whenever possible, you should try to use the available classes; diverging too much from the standard content look-and-feel isn't good for consistency and readability. If you feel that your page absolutely requires some kind of special custom styling, you should <a href="/en-US/docs/MDN/Contribute/Getting_started#step_4_ask_for_help">talk to us</a> about it.</p>
 
-<h2 id="Code_syntax_highlighting">Code syntax highlighting</h2>
+<h2>Styling code blocks</h2>
+
+<h3 id="Code_syntax_highlighting">Code syntax highlighting</h3>
 
 <p>To create a code example block on MDN, you wrap it in a <code>&lt;pre&gt;</code> element:</p>
 
@@ -73,24 +75,24 @@ Which gives you the following output:
 
 <p>If no appropriate language is available, just use no brush value, or <code>brush: plain</code>, to get code without syntax highlighting.</p>
 
-<h2 id=".example-bad_and_.example-good">.example-bad and .example-good</h2>
+<h3 id=".example-bad_and_.example-good">.example-bad and .example-good</h3>
 
 <p>Good and bad examples can be highlighted using the <code>.example-good</code> and <code>.example-bad</code> classes. These are used on <code>&lt;pre&gt;</code> blocks denoting sample code snippets.</p>
 
-<h3 id="Good_code_example">Good code example</h3>
+<h4 id="Good_code_example">Good code example</h4>
 
 <pre class="brush: html example-good">&lt;label for="test"&gt;Form label:&lt;/label&gt;
 &lt;input type="text" id="test"&gt;
 </pre>
 
-<h3 id="Bad_code_example">Bad code example</h3>
+<h4 id="Bad_code_example">Bad code example</h4>
 
 <pre class="brush: html example-bad">&lt;input type="text"&gt;
 </pre>
 
 <p><strong>You should use headings with these classes, as shown below</strong> — CSS is unable to add localized language to the page identifying whether they're good or bad so this is important for people who rely on screen readers, and people with different cultural backgrounds (green and red are not universally good and bad.)</p>
 
-<h3 id="Example_syntax_10">Example syntax</h3>
+<h4 id="Example_syntax_10">Example syntax</h4>
 
 <pre class="brush: html">&lt;h5 id="Good_code_example"&gt;Good code example&lt;/h5&gt;
 
@@ -106,11 +108,11 @@ Which gives you the following output:
 &lt;/pre&gt;</pre>
 
 
-<h2 id=".hidden">.hidden</h2>
+<h3 id=".hidden">.hidden</h3>
 
 <p>Allows you to hide <code>&lt;pre&gt;</code> blocks in the final rendered view. This is used to provide HTML, CSS, and JavaScript to the script that creates the live code samples while only displaying the relevant language to the reader.</p>
 
-<h3 id="Example_syntax_3">Example syntax</h3>
+<h4 id="Example_syntax_3">Example syntax</h4>
 
 <pre class="brush: html">&lt;h4 id="Hidden_Code_Sample"&gt;Hidden code Sample&lt;/h4&gt;
 
@@ -143,15 +145,15 @@ function works() {
 &lt;p&gt;\{{EmbedLiveSample("Hidden_Code_Sample")}}&lt;/p&gt;
 </pre>
 
-<h3 id="Hidden_code_sample">Hidden code sample</h3>
+<h4 id="Hidden_code_sample">Hidden code sample</h4>
 
 <div class="hidden">
-<h4 id="HTML">HTML</h4>
+<h5 id="HTML">HTML</h5>
 
 <pre class="brush: html">&lt;button id="test"&gt;Click Me&lt;/button&gt;
 </pre>
 
-<h4 id="CSS">CSS</h4>
+<h5 id="CSS">CSS</h5>
 
 <pre class="brush: css">button{
     background-color: #a00;
@@ -161,7 +163,7 @@ function works() {
 </pre>
 </div>
 
-<h4 id="JavaScript">JavaScript</h4>
+<h5 id="JavaScript">JavaScript</h5>
 
 <pre class="brush: js">document.getElementById("test").addEventListener("click", works);
 function works(){
