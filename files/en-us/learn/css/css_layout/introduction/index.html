@@ -334,18 +334,18 @@ p {
 
 <h2 id="Positioning_techniques">Positioning techniques</h2>
 
-<p>Positioning allows you to move an element from where it would be placed when in normal flow to another location. Positioning isn’t a method for creating your main page layouts, it is more about managing and fine-tuning the position of specific items on the page.</p>
+<p>Positioning allows you to move an element from where it would outherwise be placed in normal flow over to another location. Positioning isn’t a method for creating the main layouts of a page; it's more about managing and fine-tuning the position of specific items on a page.</p>
 
-<p>There are however useful techniques for certain layout patterns that rely on the {{cssxref("position")}} property. Understanding positioning also helps in understanding normal flow, and what it is to move an item out of normal flow.</p>
+<p>There are, however, useful techniques for obtaining specific layout patterns that rely on the {{cssxref("position")}} property. Understanding positioning also helps in understanding normal flow, e.g., what it means to move an item out of normal flow.</p>
 
 <p>There are five types of positioning you should know about:</p>
 
 <ul>
- <li><strong>Static positioning</strong> is the default that every element gets — it just means "put the element into its normal position in the document layout flow — nothing special to see here".</li>
- <li><strong>Relative positioning</strong> allows you to modify an element's position on the page, moving it relative to its position in normal flow — including making it overlap other elements on the page.</li>
- <li><strong>Absolute positioning</strong> moves an element completely out of the page's normal layout flow, like it is sitting on its own separate layer. From there, you can fix it in a position relative to the edges of the page's <code>&lt;html&gt;</code> element (or its nearest positioned ancestor element). This is useful for creating complex layout effects such as tabbed boxes where different content panels sit on top of one another and are shown and hidden as desired, or information panels that sit off screen by default, but can be made to slide on screen using a control button.</li>
- <li><strong>Fixed positioning</strong> is very similar to absolute positioning, except that it fixes an element relative to the browser viewport, not another element. This is useful for creating effects such as a persistent navigation menu that always stays in the same place on the screen as the rest of the content scrolls.</li>
- <li><strong>Sticky positioning</strong> is a newer positioning method which makes an element act like <code>position: static</code> until it hits a defined offset from the viewport, at which point it acts like <code>position: fixed</code>.</li>
+ <li><strong>Static positioning</strong> is the default that every element gets. It just means "put the element into its normal position in the document layout flow — nothing special to see here".</li>
+ <li><strong>Relative positioning</strong> allows you to modify an element's position on the page, moving it relative to its position in normal flow, as well as making it overlap other elements on the page.</li>
+ <li><strong>Absolute positioning</strong> moves an element completely out of the page's normal layout flow, like it's sitting on its own separate layer. From there, you can fix it to a position relative to the edges of the <code>&lt;html&gt;</code> element (or its nearest positioned ancestor element). This is useful for creating complex layout effects, such as tabbed boxes where different content panels sit on top of one another and are shown and hidden as desired, or information panels that sit off screen by default, but can be made to slide on screen using a control button.</li>
+ <li><strong>Fixed positioning</strong> is very similar to absolute positioning except that it fixes an element relative to the browser viewport, not another element. This is useful for creating effects such as a persistent navigation menu that always stays in the same place on the screen as the rest of the content scrolls.</li>
+ <li><strong>Sticky positioning</strong> is a newer positioning method that makes an element act like <code>position: static</code> until it hits a defined offset from the viewport, at which point it acts like <code>position: fixed</code>.</li>
 </ul>
 
 <h3 id="Simple_positioning_example">Simple positioning example</h3>
@@ -380,7 +380,7 @@ p {
 
 <h3 id="Relative_positioning">Relative positioning</h3>
 
-<p>Relative positioning allows you to offset an item from the position in normal flow it would have by default. This means you could achieve a task such as moving an icon down a bit so it lines up with a text label. To do this, we could add the following rule to add relative positioning:</p>
+<p>Relative positioning allows you to offset an item from its default position in normal flow. This means you could achieve a task such as moving an icon down a bit so it lines up with a text label. To do this, we could add the following rule to add relative positioning:</p>
 
 <pre class="brush: css">.positioned {
   position: relative;
@@ -388,7 +388,7 @@ p {
   left: 30px;
 }</pre>
 
-<p>Here we give our middle paragraph a {{cssxref("position")}} value of <code>relative</code> — this doesn't do anything on its own, so we also add {{cssxref("top")}} and {{cssxref("left")}} properties. These serve to move the affected element down and to the right — this might seem like the opposite of what you were expecting, but you need to think of it as the element being pushed on its left and top sides, which result in it moving right and down.</p>
+<p>Here we give our middle paragraph a {{cssxref("position")}} value of <code>relative</code>. This doesn't do anything on its own, so we also add {{cssxref("top")}} and {{cssxref("left")}} properties. These serve to move the affected element down and to the right. This might seem like the opposite of what you were expecting, but you need to think of it as the element being pushed on its left and top sides, which results in it moving right and down.</p>
 
 <p>Adding this code will give the following result:</p>
 
@@ -430,7 +430,7 @@ p {
 
 <h3 id="Absolute_positioning">Absolute positioning</h3>
 
-<p>Absolute positioning is used to completely remove an element from normal flow, and place it using offsets from the edges of a containing block.</p>
+<p>Absolute positioning is used to completely remove an element from normal flow and instead position it using offsets from the edges of a containing block.</p>
 
 <p>Going back to our original non-positioned example, we could add the following CSS rule to implement absolute positioning:</p>
 
@@ -440,7 +440,7 @@ p {
   left: 30px;
 }</pre>
 
-<p>Here we give our middle paragraph a {{cssxref("position")}} value of <code>absolute</code>, and the same {{cssxref("top")}} and {{cssxref("left")}} properties as before. Adding this code, however, will give the following result:</p>
+<p>Here we give our middle paragraph a {{cssxref("position")}} value of <code>absolute</code> and the same {{cssxref("top")}} and {{cssxref("left")}} properties as before. Adding this code will produce the following result:</p>
 
 <div id="Absolute_1">
 <div class="hidden">
@@ -478,13 +478,13 @@ p {
 
 <p>{{ EmbedLiveSample('Absolute_1', '100%', 300) }}</p>
 
-<p>This is very different! The positioned element has now been completely separated from the rest of the page layout and sits over the top of it. The other two paragraphs now sit together as if their positioned sibling doesn't exist. The {{cssxref("top")}} and {{cssxref("left")}} properties have a different effect on absolutely positioned elements than they do on relatively positioned elements. In this case the offsets have been calculated from the top and left of the page. It is possible to change the parent element that becomes this container and we will take a look at that in the lesson on <a href="/en-US/docs/Learn/CSS/CSS_layout/Positioning">positioning</a>.</p>
+<p>This is very different! The positioned element has now been completely separated from the rest of the page layout and sits over the top of it. The other two paragraphs now sit together as if their positioned sibling doesn't exist. The {{cssxref("top")}} and {{cssxref("left")}} properties have a different effect on absolutely positioned elements than they do on relatively positioned elements. In this case the offsets have been calculated from the top and left of the page. It's possible to change the parent element that becomes this container. We'll take a look at that in the lesson on <a href="/en-US/docs/Learn/CSS/CSS_layout/Positioning">positioning</a>.</p>
 
 <h3 id="Fixed_positioning">Fixed positioning</h3>
 
-<p>Fixed positioning removes our element from document flow in the same way as absolute positioning. However, instead of the offsets being applied from the container, they are applied from the viewport. As the item remains fixed in relation to the viewport we can create effects such as a menu which remains fixed as the page scrolls beneath it.</p>
+<p>Fixed positioning removes our element from document flow in the same way as absolute positioning. However, instead of the offsets being applied from the container, they are applied from the viewport. Because the item remains fixed in relation to the viewport, we can create effects such as a menu that remains fixed as the page scrolls beneath it.</p>
 
-<p>For this example our HTML is three paragraphs of text, in order that we can cause the page to scroll, and a box to which we will give <code>position: fixed</code>.</p>
+<p>For this example, our HTML containes three paragraphs of text so that we can scroll through the page, as well as a box with the property of <code>position: fixed</code>.</p>
 
 <pre class="brush: html">&lt;h1&gt;Fixed positioning&lt;/h1&gt;
 
@@ -536,7 +536,7 @@ p {
 
 <h3 id="Sticky_positioning">Sticky positioning</h3>
 
-<p>Sticky positioning is the final positioning method that we have at our disposal. It mixes the default static positioning with fixed positioning. When an item has <code>position: sticky</code> it will scroll in normal flow until it hits offsets from the viewport that we have defined. At that point it becomes "stuck" as if it had <code>position: fixed</code> applied.</p>
+<p>Sticky positioning is the final positioning method that we have at our disposal. It mixes static positioning with fixed positioning. When an item has <code>position: sticky</code>, it'll scroll in normal flow until it hits offsets from the viewport that we have defined. At that point it becomes "stuck" as if it had <code>position: fixed</code> applied.</p>
 
 <div id="Sticky_1">
 <div class="hidden">
