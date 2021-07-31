@@ -97,11 +97,11 @@ tags:
 
 <h2 id="Flexbox">Flexbox</h2>
 
-<p>Flexbox is the short name for the <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">Flexible Box Layout</a> Module, designed to make it easy for us to lay things out in one dimension — either as a row or as a column. To use flexbox, you apply <code>display: flex</code> to the parent element of the elements you want to lay out; all its direct children then become flex items. We can see this in a simple example.</p>
+<p>Flexbox is the short name for the <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">Flexible Box Layout</a> CSS module, designed to make it easy for us to lay things out in one dimension — either as a row or as a column. To use flexbox, you apply <code>display: flex</code> to the parent element of the elements you want to lay out; all its direct children then become <em>flex items</em>. We can see this in a simple example.</p>
 
-<p>The HTML markup below gives us a containing element, with a class of <code>wrapper</code>, inside which are three {{htmlelement("div")}} elements. By default these would display as block elements, below one another, in our English language document.</p>
+<p>The HTML markup below gives us a containing element with a class of <code>wrapper</code>, inside of which are three {{htmlelement("div")}} elements. By default these would display as block elements, i.e., below one another, in our English language document.</p>
 
-<p>However, if we add <code>display: flex</code> to the parent, the three items now arrange themselves into columns. This is due to them becoming <em>flex items</em> and being affected by some initial values that flexbox sets on the flex container. They are displayed in a row, because the initial value of {{cssxref("flex-direction")}} set on their parent is <code>row</code>. They all appear to stretch to the height of the tallest item, because the initial value of the {{cssxref("align-items")}} property set on their parent is <code>stretch</code>. This means that the items stretch to the height of the flex container, which in this case is defined by the tallest item. The items all line up at the start of the container, leaving any extra space at the end of the row.</p>
+<p>However, if we add <code>display: flex</code> to the parent, the three items now arrange themselves into columns. This is due to them becoming <em>flex items</em> and being affected by some initial values that flexbox sets on the flex container. They are displayed in a row because the property {{cssxref("flex-direction")}} of the parent element has an initial value of <code>row</code>. They all appear to stretch in height because the property {{cssxref("align-items")}} of their parent element has an initial value of <code>stretch</code>. This means that the items stretch to the height of the flex container, which in this case is defined by the tallest item. The items all line up at the start of the container, leaving any extra space at the end of the row.</p>
 
 <div id="Flex_1">
 <div class="hidden">
@@ -132,9 +132,9 @@ tags:
 
 <p>{{ EmbedLiveSample('Flex_1', '300', '200') }}</p>
 
-<p>In addition to the above properties that can be applied to the flex container, there are properties that can be applied to the flex items. These properties, among other things, can change the way that the items flex, enabling them to expand and contract to fit into the available space.</p>
+<p>In addition to properties that can be applied to a <em>flex container</em>, there are also properties that can be applied to <em>flex items</em>. These properties, among other things, can change the way that items <em>flex</em>, enabling them to expand or contract according to available space.</p>
 
-<p>As a simple example of this, we can add the {{cssxref("flex")}} property to all of our child items, with a value of <code>1</code>. This will cause all of the items to grow and fill the container, rather than leaving space at the end. If there is more space then the items will become wider; if there is less space they will become narrower. In addition, if you add another element to the markup the items will all become smaller to make space for it — they will adjust size to take up the same amount of space, whatever that is.</p>
+<p>As a simple example, we can add the {{cssxref("flex")}} property to all of our child items, and give it a value of <code>1</code>. This will cause all of the items to grow and fill the container, rather than leaving space at the end. If there is more space then the items will become wider; if there is less space they will become narrower. In addition, if you add another element to the markup, the other items will all become smaller to make space for it; the items all together continue taking up all the space.</p>
 
 <div id="Flex_2">
 <div class="hidden">
@@ -170,7 +170,7 @@ tags:
 <p>{{ EmbedLiveSample('Flex_2', '300', '200') }}</p>
 
 <div class="note">
-<p><strong>Note</strong>: This has been a very short introduction to what is possible in Flexbox, to find out more, see our <a href="/en-US/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a> article.</p>
+<p><strong>Note</strong>: This has been a very short introduction to what is possible in Flexbox. To find out more, see our <a href="/en-US/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a> article.</p>
 </div>
 
 <h2 id="Grid_Layout">Grid Layout</h2>
