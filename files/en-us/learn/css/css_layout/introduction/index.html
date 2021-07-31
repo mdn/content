@@ -653,11 +653,11 @@ form p {
 
 <h2 id="Multi-column_layout">Multi-column layout</h2>
 
-<p>The multi-column layout module gives us a way to lay out content in columns, similar to how text flows in a newspaper. While reading up and down columns is less useful in a web context as you don’t want to force users to scroll up and down, arranging content into columns can be a useful technique.</p>
+<p>The multi-column layout CSS module provides us a way to lay out content in columns, similar to how text flows in a newspaper. While reading up and down columns is less useful in a web context due to the users having to scroll up and down, arranging content into columns can, nevertheless, be a useful technique.</p>
 
-<p>To turn a block into a multicol container we use either the {{cssxref("column-count")}} property, which tells the browser how many columns we would like to have, or the {{cssxref("column-width")}} property, which tells the browser to fill the container with as many columns of at least that width.</p>
+<p>To turn a block into a multi-column container, we use either the {{cssxref("column-count")}} property, which tells the browser <em>how many</em> columns we would like to have, or the {{cssxref("column-width")}} property, which tells the browser to fill the container with as many columns as possible of a <em>specified width</em>.</p>
 
-<p>In the below example we start with a block of HTML inside a containing <code>&lt;div&gt;</code> element with a class of <code>container</code>.</p>
+<p>In the below example, we start with a block of HTML inside a <code>&lt;div&gt;</code> container with a class of <code>container</code>.</p>
 
 <pre class="brush: html">&lt;div class="container"&gt;
     &lt;h1&gt;Multi-column layout&lt;/h1&gt;
@@ -668,7 +668,7 @@ form p {
 &lt;/div&gt;
 </pre>
 
-<p>We are using a <code>column-width</code> of 200 pixels on that container, causing the browser to create as many 200-pixel columns as will fit in the container and then share the remaining space between the created columns.</p>
+<p>We're using a <code>column-width</code> of 200 pixels on that container, causing the browser to create as many 200 pixel columns as will fit. Whatever space is left between the columns will be shared.</p>
 
 <div id="Multicol_1">
 <div class="hidden">
