@@ -177,7 +177,7 @@ tags:
 
 <p>While flexbox is designed for one-dimensional layout, Grid Layout is designed for two dimensions — lining things up in rows and columns.</p>
 
-<p>Once again, you can switch on Grid Layout with a specific value of display — <code>display: grid</code>. The below example uses similar markup to the flex example, with a container and some child elements. In addition to using <code>display: grid</code>, we are also defining some row and column tracks on the parent using the {{cssxref("grid-template-rows")}} and {{cssxref("grid-template-columns")}} properties respectively. We've defined three columns each of <code>1fr</code> and two rows of <code>100px</code>. I don’t need to put any rules on the child elements; they are automatically placed into the cells our grid has created.</p>
+<p>Similar to flexbox, we enable Grid Layout with its specific display value — <code>display: grid</code>. The below example uses similar markup to the flex example, with a container and some child elements. In addition to using <code>display: grid</code>, we also define some row and column <em>tracks</em> for the parent using the {{cssxref("grid-template-rows")}} and {{cssxref("grid-template-columns")}} properties respectively. We've defined three columns, each of <code>1fr</code>, as well as two rows of <code>100px</code>. We don’t need to put any rules on the child elements; they're automatically placed into the cells our grid's created.</p>
 
 <div id="Grid_1">
 <div class="hidden">
@@ -214,7 +214,7 @@ tags:
 
 <p>{{ EmbedLiveSample('Grid_1', '300', '330') }}</p>
 
-<p>Once you have a grid, you can explicitly place your items on it, rather than relying on the auto-placement behavior seen above. In the second example below we have defined the same grid, but this time with three child items. We've set the start and end line of each item using the {{cssxref("grid-column")}} and {{cssxref("grid-row")}} properties. This causes the items to span multiple tracks.</p>
+<p>Once you have a grid, you can explicitly place your items on it, rather than relying on the auto-placement behavior seen above. In the next example below, we've defined the same grid, but this time with three child items. We've set the start and end line of each item using the {{cssxref("grid-column")}} and {{cssxref("grid-row")}} properties. This causes the items to span multiple tracks.</p>
 
 <div id="Grid_2">
 <div class="hidden">
@@ -264,10 +264,10 @@ tags:
 <p>{{ EmbedLiveSample('Grid_2', '300', '330') }}</p>
 
 <div class="note">
-<p><strong>Note</strong>: These two examples are just a small part of the power of Grid layout; to find out more see our <a href="/en-US/docs/Learn/CSS/CSS_layout/Grids">Grid Layout</a> article.</p>
+<p><strong>Note</strong>: These two examples reveal just a small sample of the power of Grid layout. To learn more, see our <a href="/en-US/docs/Learn/CSS/CSS_layout/Grids">Grid Layout</a> article.</p>
 </div>
 
-<p>The rest of this guide covers other layout methods, which are less important for the main layout structures of your page but can still help you achieve specific tasks. By understanding the nature of each layout task, you will soon find that when you look at a particular component of your design the type of layout best suited to it will often be clear.</p>
+<p>The rest of this guide covers other layout methods that are less important for the main layout of your page, but still help to achieve specific tasks. By understanding the nature of each layout task you will soon find that when you look at a particular component of your design, the type of layout most suitable for it will often be clear.</p>
 
 <h2 id="Floats">Floats</h2>
 
