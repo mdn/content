@@ -581,13 +581,13 @@ p {
 
 <h2 id="Table_layout">Table layout</h2>
 
-<p>HTML tables are fine for displaying tabular data, but many years ago — before even basic CSS was supported reliably across browsers — web developers used to also use tables for entire web page layouts — putting their headers, footers, different columns, etc. in various table rows and columns. This worked at the time, but it has many problems — table layouts are inflexible, very heavy on markup, difficult to debug, and semantically wrong (e.g., screen reader users have problems navigating table layouts).</p>
+<p>HTML tables are fine for displaying tabular data, but many years ago — before even basic CSS was supported reliably across browsers — web developers used to also use tables for entire web page layouts, putting their headers, footers, columns, etc. into various table rows and columns. This worked at the time, but it has many problems: table layouts are inflexible, very heavy on markup, difficult to debug, and semantically wrong (e.g., screen reader users have problems navigating table layouts).</p>
 
-<p>The way that a table looks on a webpage when you use table markup is due to a set of CSS properties that define table layout. These properties can be used to lay out elements that are not tables, a use which is sometimes described as "using CSS tables".</p>
+<p>The way that a table looks on a webpage when you use table markup is due to a set of CSS properties that define table layout. These same properties can also be used to lay out elements that aren't tables, a use which is sometimes described as "using CSS tables".</p>
 
-<p>The example below shows one such use; using CSS tables for layout should be considered a legacy method at this point, for those situations where you have very old browsers without support for Flexbox or Grid.</p>
+<p>The example below shows one such use. It must be noted, using CSS tables for layout should be considered a legacy method at this point, for those situations where you have very old browsers that lack support for Flexbox or Grid.</p>
 
-<p>Let's look at an example. First, some simple markup that creates an HTML form. Each input element has a label, and we've also included a caption inside a paragraph. Each label/input pair is wrapped in a {{htmlelement("div")}}, for layout purposes.</p>
+<p>Let's look at an example. First, some simple markup that creates an HTML form. Each input element has a label, and we've also included a caption inside a paragraph. Each label/input pair is wrapped in a {{htmlelement("div")}} for layout purposes.</p>
 
 <pre class="brush: html">&lt;form&gt;
   &lt;p&gt;First of all, tell us your name and age.&lt;/p&gt;
@@ -605,9 +605,9 @@ p {
   &lt;/div&gt;
 &lt;/form&gt;</pre>
 
-<p>Now, the CSS for our example. Most of the CSS is fairly ordinary, except for the uses of the {{cssxref("display")}} property. The {{htmlelement("form")}}, {{htmlelement("div")}}s, and {{htmlelement("label")}}s and {{htmlelement("input")}}s have been told to display like a table, table rows, and table cells respectively — basically, they'll act like HTML table markup, causing the labels and inputs to line up nicely by default. All we then have to do is add a bit of sizing, margin, etc. to make everything look a bit nicer and we're done.</p>
+<p>As for the CSS, most of it's fairly ordinary except for the uses of the {{cssxref("display")}} property. The {{htmlelement("form")}}, {{htmlelement("div")}}s, and {{htmlelement("label")}}s and {{htmlelement("input")}}s have been told to display like a table, table rows, and table cells respectively. Basically, they'll act like HTML table markup, causing the labels and inputs to line up nicely by default. All we then have to do is add a bit of sizing, margin, etc., to make everything look a bit nicer and we're done.</p>
 
-<p>You'll notice that the caption paragraph has been given <code>display: table-caption;</code> — which makes it act like a table {{htmlelement("caption")}} — and <code>caption-side: bottom;</code> to tell the caption to sit on the bottom of the table for styling purposes, even though the markup is before the <code>&lt;input&gt;</code> elements in the source. This allows for a nice bit of flexibility.</p>
+<p>You'll notice that the caption paragraph has been given <code>display: table-caption;</code>, which makes it act like a table {{htmlelement("caption")}}, and <code>caption-side: bottom;</code> to tell the caption to sit on the bottom of the table for styling purposes, even though the markup is before the <code>&lt;input&gt;</code> elements in the source. This allows for a nice bit of flexibility.</p>
 
 <pre class="brush: css">html {
   font-family: sans-serif;
