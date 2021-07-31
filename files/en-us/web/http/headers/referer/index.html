@@ -13,7 +13,7 @@ browser-compat: http.headers.Referer
 
 <p>The <code><strong>Referer</strong></code> HTTP request header contains an absolute or partial address of the page making the request. When following a link, this would be the address of the page containing the link. When making resource requests to another domain, this would be the address of the page using the resource. The <code>Referer</code> header allows servers to identify where people are visiting them from, which can then be used for analytics, logging, optimized caching, and more.</p>
 
-<p>The <code>Referer</code> header may not contain URL fragments (i.e. "#section") or "username:password" information. It can potentially contain an <em>origin</em>, <em>path</em>, and <em>querystring</em>. What is sent, if anything, depends on the <em>referrer policy</em> for the request. See {{HTTPHeader("Referrer-Policy")}} for <a href="/en-US/docs/Web/HTTP/Headers/Referrer-Policy#directives">information</a> and <a href="/en-US/docs/Web/HTTP/Headers/Referrer-Policy#examples">examples</a>.
+<p>The <code>Referer</code> header may not contain URI fragments (i.e. "#section") or "username:password" information. It can potentially contain an <em>origin</em>, <em>path</em>, and <em>querystring</em>. What is sent, if anything, depends on the <em>referrer policy</em> for the request. See {{HTTPHeader("Referrer-Policy")}} for <a href="/en-US/docs/Web/HTTP/Headers/Referrer-Policy#directives">information</a> and <a href="/en-US/docs/Web/HTTP/Headers/Referrer-Policy#examples">examples</a>.
 
 <div class="notecard note">
   <h4>Note</h4>
@@ -47,7 +47,7 @@ browser-compat: http.headers.Referer
 
 <dl>
  <dt>&lt;url&gt;</dt>
- <dd>An absolute or partial address of the web page making the request. URL fragments (i.e. "#section") and userinfo (i.e. "username:password" in "https://username:password@example.com/foo/bar/") are not included. Origin, path, and querystring may be included, depending on the <a href="/en-US/docs/Web/HTTP/Headers/Referrer-Policy#directives">referrer policy</a>.</dd>
+ <dd>An absolute or partial address of the web page making the request. URI fragments (i.e. "#section") and userinfo (i.e. "username:password" in "https://username:password@example.com/foo/bar/") are not included. Origin, path, and querystring may be included, depending on the <a href="/en-US/docs/Web/HTTP/Headers/Referrer-Policy#directives">referrer policy</a>.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
