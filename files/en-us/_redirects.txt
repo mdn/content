@@ -1842,7 +1842,6 @@
 /en-US/docs/DOM/document.doctype	/en-US/docs/Web/API/Document/doctype
 /en-US/docs/DOM/document.documentElement	/en-US/docs/Web/API/document/documentElement
 /en-US/docs/DOM/document.documentURI	/en-US/docs/Web/API/Document/documentURI
-/en-US/docs/DOM/document.documentURIObject	/en-US/docs/Web/API/Document/documentURIObject
 /en-US/docs/DOM/document.domain	/en-US/docs/Web/API/Document/domain
 /en-US/docs/DOM/document.elementFromPoint	/en-US/docs/Web/API/Document/elementFromPoint
 /en-US/docs/DOM/document.embeds	/en-US/docs/Web/API/Document/embeds
@@ -2373,7 +2372,6 @@
 /en-US/docs/DOM:document.designMode	/en-US/docs/Web/API/Document/designMode
 /en-US/docs/DOM:document.doctype	/en-US/docs/Web/API/Document/doctype
 /en-US/docs/DOM:document.documentElement	/en-US/docs/Web/API/document/documentElement
-/en-US/docs/DOM:document.documentURIObject	/en-US/docs/Web/API/Document/documentURIObject
 /en-US/docs/DOM:document.domain	/en-US/docs/Web/API/Document/domain
 /en-US/docs/DOM:document.elementFromPoint	/en-US/docs/Web/API/Document/elementFromPoint
 /en-US/docs/DOM:document.embeds	/en-US/docs/Web/API/Document/embeds
@@ -3137,7 +3135,6 @@
 /en-US/docs/Document_Object_Model_(DOM)/document.doctype	/en-US/docs/Web/API/Document/doctype
 /en-US/docs/Document_Object_Model_(DOM)/document.documentElement	/en-US/docs/Web/API/document/documentElement
 /en-US/docs/Document_Object_Model_(DOM)/document.documentURI	/en-US/docs/Web/API/Document/documentURI
-/en-US/docs/Document_Object_Model_(DOM)/document.documentURIObject	/en-US/docs/Web/API/Document/documentURIObject
 /en-US/docs/Document_Object_Model_(DOM)/document.domain	/en-US/docs/Web/API/Document/domain
 /en-US/docs/Document_Object_Model_(DOM)/document.elementFromPoint	/en-US/docs/Web/API/Document/elementFromPoint
 /en-US/docs/Document_Object_Model_(DOM)/document.embeds	/en-US/docs/Web/API/Document/embeds
@@ -9097,7 +9094,6 @@
 /en-US/docs/Web/API/document.doctype	/en-US/docs/Web/API/Document/doctype
 /en-US/docs/Web/API/document.documentElement	/en-US/docs/Web/API/document/documentElement
 /en-US/docs/Web/API/document.documentURI	/en-US/docs/Web/API/Document/documentURI
-/en-US/docs/Web/API/document.documentURIObject	/en-US/docs/Web/API/Document/documentURIObject
 /en-US/docs/Web/API/document.domain	/en-US/docs/Web/API/Document/domain
 /en-US/docs/Web/API/document.elementFromPoint	/en-US/docs/Web/API/Document/elementFromPoint
 /en-US/docs/Web/API/document.embeds	/en-US/docs/Web/API/Document/embeds

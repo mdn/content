@@ -37753,25 +37753,6 @@
       "Matej Lednar"
     ]
   },
-  "Web/API/Document/documentURIObject": {
-    "modified": "2020-10-15T21:04:21.490Z",
-    "contributors": [
-      "mfuji09",
-      "mfluehr",
-      "Tigt",
-      "fscholz",
-      "teoli",
-      "MHasan",
-      "kscarfone",
-      "nehasharma",
-      "Sheppy",
-      "ziyunfei",
-      "Mgjbot",
-      "Shoot",
-      "Nickolay",
-      "Waldo"
-    ]
-  },
   "Web/API/Document/domain": {
     "modified": "2020-11-09T22:06:15.283Z",
     "contributors": [
