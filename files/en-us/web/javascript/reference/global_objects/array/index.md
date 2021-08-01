@@ -335,7 +335,7 @@ The properties and elements returned from this match are as follows:
 - {{jsxref("Array.prototype.reduce()")}}
   - : Apply a function against an accumulator and each value of the array (from left-to-right) as to reduce it to a single value.
 - {{jsxref("Array.prototype.reduceRight()")}}
-  - : Apply a function against an accumulator> and each value of the array (from right-to-left) as to reduce it to a single value.
+  - : Apply a function against an accumulator and each value of the array (from right-to-left) as to reduce it to a single value.
 - {{jsxref("Array.prototype.reverse()")}}
   - : Reverses the order of the elements of an array _in place_. (First becomes the last, last becomes first.)
 - {{jsxref("Array.prototype.shift()")}}
