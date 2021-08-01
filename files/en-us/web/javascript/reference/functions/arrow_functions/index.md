@@ -24,9 +24,7 @@ expression](/en-US/docs/Web/JavaScript/Reference/Operators/function), but is lim
   and should not be used as
   [`methods`](/en-US/docs/Glossary/Method).
 - Does not have
-  [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments),
-  or
-  [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target) keywords.
+  [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target) keyword.
 - Not suitable for
   [`call`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call),
   [`apply`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply)
