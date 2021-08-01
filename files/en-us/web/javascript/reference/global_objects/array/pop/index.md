@@ -76,7 +76,7 @@ console.log(myFish); // {0:'angel', 1:'clown', 2:'mandarin', length: 3}
 console.log(popped); // 'sturgeon'
 ```
 
-### Using an object in array-like fashion
+### Using an object in an array-like fashion
 
 As mentioned, `push` and `pop` are intentionally generic and we can use that to
 our advantage. We can use `Array.prototype.push` and `Array.prototype.pop` methods
