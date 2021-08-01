@@ -80699,23 +80699,6 @@
       "jpmedley"
     ]
   },
-  "Web/API/Text/isElementContentWhitespace": {
-    "modified": "2020-10-15T21:06:49.084Z",
-    "contributors": [
-      "RainSlide",
-      "nakhodkiin",
-      "sideshowbarker",
-      "fscholz",
-      "teoli",
-      "afreen",
-      "Reachmeatshivam",
-      "Sheppy",
-      "ziyunfei",
-      "Ruakh",
-      "Jürgen Jeka",
-      "bcombee"
-    ]
-  },
   "Web/API/Text/replaceWholeText": {
     "modified": "2020-10-15T21:10:09.962Z",
     "contributors": [
