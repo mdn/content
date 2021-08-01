@@ -51986,14 +51986,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/HTMLImageElement/lowSrc": {
-    "modified": "2020-11-24T11:09:18.826Z",
-    "contributors": [
-      "foolip",
-      "sideshowbarker",
-      "Sheppy"
-    ]
-  },
   "Web/API/HTMLImageElement/name": {
     "modified": "2020-10-15T22:23:10.098Z",
     "contributors": [
