@@ -63,6 +63,9 @@ tags:
     and the {{event("gamepadconnected")}} and {{event("gamepaddisconnected")}} events will not fire.
     The default <code>allowlist</code> is <code>*</code>; This default will be updated to <code>self</code> in a future release in order to match the specification. ({{bug(1704005)}}).</li>
   <li><code>Window.clientInformation</code> has been added as an alias for {{domxref("Window.navigator")}}, in order to match recent specification updates and improve compatibility with other major browsers ({{bug(1717072)}}).</li>
+  <li>The <a href="/en-US/docs/Web/API/Visual_Viewport_API">Visual Viewport API</a> is now enabled by default on Firefox desktop releases (it has been enabled on Firefox for Android since version 68).
+    The API provides access to information describing the position of the {{Glossary("visual viewport")}} relative to the document as well as to the window's content area.
+    It also provides events that allow changes to the viewport to be monitored. ({{bug(1551302)}}).</li>
 </ul>
 
 
