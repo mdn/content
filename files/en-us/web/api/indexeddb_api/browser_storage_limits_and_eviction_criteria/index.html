@@ -89,7 +89,7 @@ tags:
 
 <p>The maximum browser storage space is dynamic — it is based on your hard drive size. The <strong>global limit</strong> is calculated as 50% of free disk space. In Firefox, an internal browser tool called the Quota Manager keeps track of how much disk space each origin is using up, and deletes data if necessary.</p>
 
-<p>So if your hard drive is 500 GB, then the total storage for a browser is 250 GB. If this is exceeded, a process called <strong>origin eviction</strong> comes into play, deleting an entire origin's worth of data until the storage amount goes under the limit again. There is no trimming effect put in place to delete parts of origins — deleting one database of an origin could cause problems with inconsistency.</p>
+<p>So if the free space on your hard drive is 500 GB, then the total storage for a browser is 250 GB. If this is exceeded, a process called <strong>origin eviction</strong> comes into play, deleting an entire origin's worth of data until the storage amount goes under the limit again. There is no trimming effect put in place to delete parts of origins — deleting one database of an origin could cause problems with inconsistency.</p>
 
 <p>There's also another limit called <strong>group limit</strong> — this is defined as 20% of the global limit, but it has a minimum of 10 MB and a maximum of 2 GB. Each origin is part of a group (group of origins). There's one group for each eTLD+1 domain. For example:</p>
 
