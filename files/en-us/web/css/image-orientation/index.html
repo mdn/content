@@ -16,12 +16,11 @@ tags:
   - 'recipe:css-property'
 browser-compat: css.properties.image-orientation
 ---
-<div>{{deprecated_header}}</div>
 
-<p>The <strong><code>image-orientation</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property specifies a layout-independent correction to the orientation of an image. It should <em>not</em> be used for any other orientation adjustments; instead, the {{cssxref("transform")}} property should be used with the <code>rotate</code> {{cssxref("&lt;transform-function&gt;")}}.</p>
+<p>The <strong><code>image-orientation</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property specifies a layout-independent correction to the orientation of an image.</p>
 
-<div class="warning">
-<p><strong>Warning:</strong> This property is deprecated in the specification. Its functionality may be moved into properties on the {{HTMLElement("img")}} and/or {{HTMLElement("picture")}} elements, with the possible exception of <code>from-image</code>. The <code>flip</code> and <code>&lt;angle&gt;</code> values were made obsolete in Firefox 63.</p>
+<div class="notecard note">
+  <p><strong>Note:</strong> Values other than <code>from-image</code> and <code>none</code> are described as deprecated in the specification.</p>
 </div>
 
 <pre class="brush:css no-line-numbers">/* keyword values */
@@ -31,12 +30,14 @@ image-orientation: from-image; /* Use EXIF data from the image */
 /* Global values */
 image-orientation: inherit;
 image-orientation: initial;
+image-resolution: revert;
 image-orientation: unset;
 
-/* Obsolete Values. {{deprecated_inline}} */
+/* Optional values, deprecated in CSS */
 image-orientation: 90deg; /* Rotate 90deg */
 image-orientation: 90deg flip; /* Rotate 90deg, and flip it horizontally */
-image-orientation: flip; /* No rotation, only applies a horizontal flip */</pre>
+image-orientation: flip; /* No rotation, only applies a horizontal flip */
+</pre>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -47,9 +48,9 @@ image-orientation: flip; /* No rotation, only applies a horizontal flip */</pre>
  <dd>Does not apply any additional image rotation; the image is oriented as encoded or as other CSS property values dictate.</dd>
  <dt><code>from-image</code></dt>
  <dd>Default initial value. The {{interwiki("wikipedia", "EXIF")}} information contained in the image is used to rotate the image appropriately.</dd>
- <dt>{{cssxref("&lt;angle&gt;")}} {{non-standard_inline}}{{deprecated_inline}}</dt>
- <dd>The {{cssxref("&lt;angle&gt;")}} of rotation to apply to the image. It is rounded to the nearest <code>90deg</code> (<code>0.25turn</code>).</dd>
- <dt><code>flip</code> {{non-standard_inline}}{{deprecated_inline}}</dt>
+ <dt>{{cssxref("&lt;angle&gt;")}}{{deprecated_inline}}</dt>
+ <dd>The {{cssxref("&lt;angle&gt;")}} of rotation to apply to the image. It is rounded to the nearest <code>90deg</code> (<code>0.25turn</code>). Positive values cause the image to be rotated to the right (clockwise), negative values to the left (anti-clockwise).</dd>
+ <dt><code>flip</code>{{deprecated_inline}}</dt>
  <dd>The image is flipped horizontally (i.e., reflected) after the rotation given by the {{cssxref("&lt;angle&gt;")}} value is applied. If no {{cssxref("&lt;angle&gt;")}} is given, <code>0deg</code> is used.</dd>
 </dl>
 
