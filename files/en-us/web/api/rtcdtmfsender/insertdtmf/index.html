@@ -29,7 +29,7 @@ browser-compat: api.RTCDTMFSender.insertDTMF
   <code>insertDTMF()</code> replaces any already-pending tones from the <code>toneBuffer</code>. 
   You can abort sending queued tones by specifying an empty string (<code>""</code>) as the set of tones to play.
   Since <code>insertDTMF()</code> replaces the tone buffer, in order to add to the DTMF tones being played, it is necessary to call 
-  insertDTMF with a string containing both the remaining tones (stored in the <code>toneBuffer</code>) and the new tones appended together.</p>
+  <code>insertDTMF</code> with a string containing both the remaining tones (stored in the <code>toneBuffer</code>) and the new tones appended together.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
