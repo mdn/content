@@ -29,7 +29,14 @@ browser-compat: api.CSSStyleSheet
 
 <p>Another rule might be an <em>at-rule</em> such as {{cssxref("@import")}} or {{cssxref("@media")}}, and so forth.</p>
 
-<p>See the {{anch("Notes")}} section for the various ways a <code>CSSStyleSheet</code> object can be obtained.</p>
+<p>See the {{anch("Obtaining a StyleSheet")}} section for the various ways a <code>CSSStyleSheet</code> object can be obtained. A <code>CSSStyleSheet</code> object can also be directly constructed. The constructor, and the {{domxref("CSSStyleSheet.replace()")}}, and {{domxref("CSSStyleSheet.replaceSync()")}} methods are newer additions to the specification, enabling <em>Constructable Stylesheets</em>.</p>
+
+<h2 id="Constructor">Constructor</h2>
+
+<dl>
+  <dt>{{domxref("CSSStyleSheet.CSSStyleSheet()")}}</dt>
+  <dd>Creates a new <code>CSSStyleSheet</code> object.</dd>
+</dl>
 
 <h2 id="Properties">Properties</h2>
 
@@ -37,7 +44,10 @@ browser-compat: api.CSSStyleSheet
 
 <dl>
  <dt>{{domxref("CSSStyleSheet.cssRules")}} {{ReadOnlyInline}}</dt>
- <dd>Returns a live {{domxref("CSSRuleList")}} which maintains an up-to-date list of the {{domxref("CSSRule")}} objects that comprise the stylesheet.</dd>
+ <dd>Returns a live {{domxref("CSSRuleList")}} which maintains an up-to-date list of the {{domxref("CSSRule")}} objects that comprise the stylesheet.
+    <div class="notecard note"><p><strong>Note: </strong>In some browsers, if a stylesheet is loaded from a different domain, accessing <code>cssRules</code> results in <code>SecurityError</code>.</p></div>
+
+ </dd>
  <dt>{{domxref("CSSStyleSheet.ownerRule")}} {{ReadOnlyInline}}</dt>
  <dd>If this stylesheet is imported into the document using an {{cssxref("@import")}} rule, the <code>ownerRule</code> property returns the corresponding {{domxref("CSSImportRule")}}; otherwise, this property's value is <code>null</code>.</dd>
 </dl>
@@ -52,9 +62,9 @@ browser-compat: api.CSSStyleSheet
  <dt>{{domxref("CSSStyleSheet.insertRule()")}}</dt>
  <dd>Inserts a new rule at the specified position in the stylesheet, given the textual representation of the rule.</dd>
  <dt>{{domxref("CSSStyleSheet.replace()")}}</dt>
- <dd>Inserts a new rule at the specified position in the stylesheet, given the textual representation of the rule.</dd>
+ <dd>Asynchronously replaces the content of the stylesheet and returns a {{jsxref("Promise")}} that resolves with the updated <code>CSSStyleSheet</code>.</dd>
  <dt>{{domxref("CSSStyleSheet.replaceSync()")}}</dt>
- <dd>Inserts a new rule at the specified position in the stylesheet, given the textual representation of the rule.</dd>
+ <dd>Synchronously replaces the content of the stylesheet.</dd>
 </dl>
 
 <h2 id="Legacy_properties">Legacy properties</h2>
@@ -81,13 +91,11 @@ browser-compat: api.CSSStyleSheet
  <dd>Functionally identical to {{domxref("CSSStyleSheet.deleteRule", "deleteRule()")}}; removes the rule at the specified index from the stylesheet's rule list.</dd>
 </dl>
 
-<h2 id="Notes">Notes</h2>
-
-<p>In some browsers, if a stylesheet is loaded from a different domain, accessing <code>cssRules</code> results in <code>SecurityError</code>.</p>
+<h2 id="Obtaining_a_Stylesheet">Obtaining a StyleSheet</h2>
 
 <p>A stylesheet is associated with at most one {{domxref("Document")}}, which it applies to (unless {{domxref("StyleSheet.disabled", "disabled", "", 1)}}). A list of <code>CSSStyleSheet</code> objects for a given document can be obtained using the {{domxref("Document.styleSheets")}} property. A specific style sheet can also be accessed from its <em>owner</em> object (<code>Node</code> or <code>CSSImportRule</code>), if any.</p>
 
-<p>A <code>CSSStyleSheet</code> object is created and inserted into the document's {{domxref("Document.styleSheets")}} list automatically by the browser, when a stylesheet is loaded for a document. As the stylesheet list cannot be modified directly, there's no useful way to create a new <code>CSSStyleSheet</code> object manually (although <a href="https://wicg.github.io/construct-stylesheets/">Constructable Stylesheet Objects</a> is coming to the web platform soon and is already supported in Blink). To create a new stylesheet, insert a {{HTMLElement("style")}} or {{HTMLElement("link")}} element into the document.</p>
+<p>A <code>CSSStyleSheet</code> object is created and inserted into the document's {{domxref("Document.styleSheets")}} list automatically by the browser, when a stylesheet is loaded for a document.</p>
 
 <p>A (possibly incomplete) list of ways a stylesheet can be associated with a document follows:</p>
 
@@ -158,4 +166,5 @@ browser-compat: api.CSSStyleSheet
 <ul>
  <li><a href="/en-US/docs/Web/API/CSS_Object_Model">CSS Object Model</a></li>
  <li><a href="/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information">Using dynamic styling information</a></li>
+ <li><a href="https://developers.google.com/web/updates/2019/02/constructable-stylesheets">Constructable Stylesheets</a></li>
 </ul>
