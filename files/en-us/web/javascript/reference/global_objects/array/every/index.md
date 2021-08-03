@@ -199,6 +199,8 @@ The following example tests if all the elements of an array are present in anoth
 
 ```js
 function isSubset(array1, array2) {
+  // returns true if array2 is a subset of array1
+  
   return array2.every(function (element) {
     return array1.includes(element);
   });
