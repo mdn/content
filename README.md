@@ -152,6 +152,8 @@ with us first!
 You can [chat with us](https://chat.mozilla.org/#/room/#mdn:mozilla.org) or
 [file an issue](https://github.com/mdn/content/issues).
 
+If you get asked to edit files in your pull request created this way, go to the files tab of the PR, pick the file you want, click the three dots menu in the upper right corner and go to Edit File. The changes will result in a new commit.
+
 ### More substantial changes
 
 If you need to do some work that requires changes to more than one file, like
