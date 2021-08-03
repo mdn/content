@@ -5751,7 +5751,6 @@
 /en-US/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy/Errors/CookieBlockedTracker	/en-US/docs/Web/Privacy/Storage_Access_Policy/Errors/CookieBlockedTracker
 /en-US/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy/Errors/CookiePartitionedForeign	/en-US/docs/Web/Privacy/Storage_Access_Policy/Errors/CookiePartitionedForeign
 /en-US/docs/Mozilla/Firefox/Privacy/Tracking_Protection	/en-US/docs/Web/Privacy/Tracking_Protection
-/en-US/docs/Mozilla/Firefox/Releases/36/Site_Compatibility_for_Firefox_36	/en-US/docs/Mozilla/Firefox/Releases/36/Site_Compatibility
 /en-US/docs/Mozilla/Firefox/Releases/Firefox_23_for_developers	/en-US/docs/Mozilla/Firefox/Releases/23
 /en-US/docs/Mozilla/Firefox/Releases/Firefox_41_for_developers	/en-US/docs/Mozilla/Firefox/Releases/41
 /en-US/docs/Mozilla/Firefox/Releases/Firefox_47_for_developers	/en-US/docs/Mozilla/Firefox/Releases/47
@@ -6332,14 +6331,6 @@
 /en-US/docs/Server_Sent_Events	/en-US/docs/Web/API/Server-sent_events
 /en-US/docs/ServiceWorkerClients.getAll	/en-US/docs/Web/API/Clients/matchAll
 /en-US/docs/Simple_Bugzilla_Search_(external)	https://bugzilla.mozilla.org/query.cgi?format=specific
-/en-US/docs/Site_Compatibility_for_Firefox_17	/en-US/docs/Mozilla/Firefox/Releases/17/Site_compatibility
-/en-US/docs/Site_Compatibility_for_Firefox_18	/en-US/docs/Mozilla/Firefox/Releases/18/Site_compatibility
-/en-US/docs/Site_Compatibility_for_Firefox_19	/en-US/docs/Mozilla/Firefox/Releases/19/Site_compatibility
-/en-US/docs/Site_Compatibility_for_Firefox_20	/en-US/docs/Mozilla/Firefox/Releases/20/Site_compatibility
-/en-US/docs/Site_Compatibility_for_Firefox_21	/en-US/docs/Mozilla/Firefox/Releases/21/Site_compatibility
-/en-US/docs/Site_Compatibility_for_Firefox_22	/en-US/docs/Mozilla/Firefox/Releases/22/Site_compatibility
-/en-US/docs/Site_Compatibility_for_Firefox_23	/en-US/docs/Mozilla/Firefox/Releases/23/Site_compatibility
-/en-US/docs/Site_Compatibility_for_Firefox_24	/en-US/docs/Mozilla/Firefox/Releases/24/Site_compatibility
 /en-US/docs/Style	/en-US/docs/Web/API/FontFace/style
 /en-US/docs/StyleSheet	/en-US/docs/Web/API/StyleSheet
 /en-US/docs/StyleSheet/disabled	/en-US/docs/Web/API/StyleSheet/disabled
