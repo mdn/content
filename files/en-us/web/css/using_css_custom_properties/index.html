@@ -101,7 +101,6 @@ tags:
 <h2 id="Using_the_root_pseudo-class">Using the :root pseudo-class</h2>
 
 <p>Notice the repetitive CSS in the example above. The background color is set to <code>brown</code> in several places. For some CSS declarations, it is possible to declare this higher in the cascade and let CSS inheritance solve this problem naturally. For non-trivial projects, this is not always possible. By declaring a custom property on the {{cssxref(":root")}} pseudo-class and using it where needed throughout the document, a CSS author can reduce the need for repetition:</p>
-</div>
 
 <pre class="brush:css; highlight:[2, 7, 24,30,36]">:root {
   --main-bg-color: brown;
