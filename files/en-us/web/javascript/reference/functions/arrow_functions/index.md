@@ -162,7 +162,7 @@ params => ({foo: "a"}) // returning the object {foo: "a"}
 ```
 
 [Rest
-parameters](/en-US/docs/Web/JavaScript/Reference/Functions/Rest_parameters) are supported:
+parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters) are supported:
 
 ```js
 (a, b, ...r) => expression
