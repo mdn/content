@@ -45,31 +45,31 @@ text-align: unset;
 <p>The <code>text-align</code> property is specified in one of the following ways:</p>
 
 <ul>
- <li>Using the keyword values <code><a href="#start">start</a></code>, <code><a href="#end">end</a></code>, <code><a href="#left">left</a></code>, <code><a href="#right">right</a></code>, <code><a href="#center">center</a></code>, <code><a href="#justify">justify</a></code>, <code><a href="#justify-all">justify-all</a></code>, or <code><a href="#match-parent">match-parent</a></code>.</li>
- <li>Using a <code><a href="#string">&lt;string&gt;</a></code> value only, in which case the other value defaults to <code><a href="#right">right</a></code>.</li>
+ <li>Using the keyword values <code>start</code>, <code>end</code>, <code>left</code>, <code>right</code>, <code>center</code>, <code>justify</code>, <code>justify-all</code>, or <code>match-parent</code>.</li>
+ <li>Using a <code>&lt;string&gt;</code> value only, in which case the other value defaults to <code>right</code>.</li>
  <li>Using both a keyword value and a <code><a href="#string">&lt;string&gt;</a></code> value.</li>
 </ul>
 
 <h3 id="Values">Values</h3>
 
 <dl>
- <dt id="start"><code>start</code></dt>
+ <dt><code>start</code></dt>
  <dd>The same as <code>left</code> if direction is left-to-right and <code>right</code> if direction is right-to-left.</dd>
- <dt id="end"><code>end</code></dt>
+ <dt><code>end</code></dt>
  <dd>The same as <code>right</code> if direction is left-to-right and <code>left</code> if direction is right-to-left.</dd>
- <dt id="left"><code>left</code></dt>
+ <dt><code>left</code></dt>
  <dd>The inline contents are aligned to the left edge of the line box.</dd>
- <dt id="right"><code>right</code></dt>
+ <dt><code>right</code></dt>
  <dd>The inline contents are aligned to the right edge of the line box.</dd>
- <dt id="center"><code>center</code></dt>
+ <dt><code>center</code></dt>
  <dd>The inline contents are centered within the line box.</dd>
- <dt id="justify"><code>justify</code></dt>
+ <dt><code>justify</code></dt>
  <dd>The inline contents are justified. Text should be spaced to line up its left and right edges to the left and right edges of the line box, except for the last line.</dd>
- <dt id="justify-all"><code>justify-all</code> {{experimental_inline}}</dt>
+ <dt><code>justify-all</code> {{experimental_inline}}</dt>
  <dd>Same as <code>justify</code>, but also forces the last line to be justified.</dd>
- <dt id="match-parent"><code>match-parent</code></dt>
+ <dt><code>match-parent</code></dt>
  <dd>Similar to <code>inherit</code>, but the values <code>start</code> and <code>end</code> are calculated according to the parent's {{cssxref("direction")}} and are replaced by the appropriate <code>left</code> or <code>right</code> value.</dd>
- <dt id="string">{{cssxref("&lt;string&gt;")}} {{experimental_inline}}</dt>
+ <dt>{{cssxref("&lt;string&gt;")}} {{experimental_inline}}</dt>
  <dd>When applied to a table cell, specifies the alignment character around which the cell's contents will align.</dd>
 </dl>
 
