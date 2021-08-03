@@ -99,7 +99,7 @@ tags:
 
 <p>Flexbox is the short name for the <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">Flexible Box Layout</a> CSS module, designed to make it easy for us to lay things out in one dimension — either as a row or as a column. To use flexbox, you apply <code>display: flex</code> to the parent element of the elements you want to lay out; all its direct children then become <em>flex items</em>. We can see this in a simple example.</p>
 
-<p>The HTML markup below gives us a containing element with a class of <code>wrapper</code>, inside of which are three {{htmlelement("div")}} elements. By default these would display as block elements, i.e., below one another, in our English language document.</p>
+<p>The HTML markup below gives us a containing element with a class of <code>wrapper</code>, inside of which are three {{htmlelement("div")}} elements. By default these would display as block elements, that is, below one another in our English language document.</p>
 
 <p>However, if we add <code>display: flex</code> to the parent, the three items now arrange themselves into columns. This is due to them becoming <em>flex items</em> and being affected by some initial values that flexbox sets on the flex container. They are displayed in a row because the property {{cssxref("flex-direction")}} of the parent element has an initial value of <code>row</code>. They all appear to stretch in height because the property {{cssxref("align-items")}} of their parent element has an initial value of <code>stretch</code>. This means that the items stretch to the height of the flex container, which in this case is defined by the tallest item. The items all line up at the start of the container, leaving any extra space at the end of the row.</p>
 
