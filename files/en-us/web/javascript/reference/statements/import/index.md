@@ -303,5 +303,5 @@ for (const link of document.querySelectorAll("nav > a")) {
   Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/)
 - Hacks blog post by Lin Clark: [ES modules:
   A cartoon deep-dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/)
-- Axel Rauschmayer's book: ["Exploring JS: Modules"](http://exploringjs.com/es6/ch_modules.html)
+- Axel Rauschmayer's book: ["Exploring JS: Modules"](https://exploringjs.com/es6/ch_modules.html)
 - The Modern JavaScript Tutorial(javascript.info): [Export and Import](https://javascript.info/import-export)

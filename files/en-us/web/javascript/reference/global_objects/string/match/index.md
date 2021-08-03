@@ -123,8 +123,7 @@ console.log(matches_array);
 // ['A', 'B', 'C', 'D', 'E', 'a', 'b', 'c', 'd', 'e']
 ```
 
-> **Note:** See also {{jsxref("String.prototype.matchAll()")}} and [Advanced
-> searching with flags](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#Advanced_searching_with_flags).
+> **Note:** See also {{jsxref("String.prototype.matchAll()")}} and [Advanced searching with flags](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags).
 
 ### Using named capturing groups
 

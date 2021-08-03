@@ -19,29 +19,22 @@ expression](/en-US/docs/Web/JavaScript/Reference/Operators/function), but is lim
 **Differences & Limitations:**
 
 - Does not have its own bindings to
-  [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) or
-  [`super`](/en-US/docs/Web/JavaScript/Reference/Operators/super),
-  and should not be used as
-  [`methods`](/en-US/docs/Glossary/Method).
-- Does not have
-  [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target) keyword.
+  [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) or [`super`](/en-US/docs/Web/JavaScript/Reference/Operators/super),
+  and should not be used as [`methods`](/en-US/docs/Glossary/Method).
+- Does not have [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target) keyword.
 - Not suitable for
   [`call`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call),
   [`apply`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply)
   and [`bind`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)
   methods, which generally rely on establishing a [scope](/en-US/docs/Glossary/Scope).
-- Can not be used as
-  [constructors](/en-US/docs/Glossary/constructor).
-- Can not use
-  [`yield`](/en-US/docs/Web/JavaScript/Reference/Operators/yield),
-  within its body.
+- Can not be used as [constructors](/en-US/docs/Glossary/Constructor).
+- Can not use [`yield`](/en-US/docs/Web/JavaScript/Reference/Operators/yield), within its body.
 
 {{EmbedInteractiveExample("pages/js/functions-arrow.html")}}
 
 ### Comparing traditional functions to arrow functions
 
-Let's decompose a "traditional function" down to the simplest "arrow function"
-step-by-step:
+Let's decompose a "traditional function" down to the simplest "arrow function" step-by-step:
 
 > **Note:** Each step along the way is a valid "arrow function".
 
