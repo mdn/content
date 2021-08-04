@@ -24,7 +24,7 @@ notation).
 ```js
 new Float32Array(); // new in ES2017
 new Float32Array(length);
-new Float32Array(typedArray);
+new Float32Array(float32Array);
 new Float32Array(object);
 
 new Float32Array(buffer);
@@ -38,13 +38,8 @@ new Float32Array(buffer, byteOffset, length);
   - : When called with a `length` argument, an internal array buffer
     is created in memory, of size `length` _multiplied by
     `BYTES_PER_ELEMENT`_ bytes, containing zeros.
-- `typedArray`
-  - : When called with a `typedArray` argument, which can be an
-    object of any of the typed array types (such as `Int32Array`), the
-    `typedArray` gets copied into a new typed array. Each value in
-    `typedArray` is converted to the corresponding type of the
-    constructor before being copied into the new array. The length of the new typed array
-    will be same as the length of the `typedArray` argument.
+- `float32Array`
+  - : A `Float32Array` to copy.
 - `object`
   - : When called with an `object` argument, a new typed array is
     created as if by the `TypedArray.from()` method.
