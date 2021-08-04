@@ -168,12 +168,12 @@ tags:
 <p>{{ EmbedLiveSample('Grid_2', '100%', 400) }}</p>
 
 <div class="note">
-<p><strong>Note</strong>: The <code>fr</code> unit distributes <em>available</em> space, not <em>all</em> space. Therefore if one of your tracks has something large inside it there will be less free space to share out.</p>
+<p><strong>Note</strong>: The <code>fr</code> unit distributes <em>available</em> space, not <em>all</em> space. Therefore, if one of your tracks has something large inside it, there will be less free space to share.</p>
 </div>
 
 <h3 id="Gaps_between_tracks">Gaps between tracks</h3>
 
-<p>To create gaps between tracks we use the properties {{cssxref("column-gap")}} for gaps between columns, {{cssxref("row-gap")}} for gaps between rows, and {{cssxref("gap")}} to set both at once.</p>
+<p>To create gaps between tracks we use the properties {{cssxref("column-gap")}} for gaps between columns, {{cssxref("row-gap")}} for gaps between rows, and {{cssxref("gap")}} as a shorthand for both.</p>
 
 <pre class="brush: css">.container {
     display: grid;
@@ -181,7 +181,7 @@ tags:
     gap: 20px;
 }</pre>
 
-<p>These gaps can be any length unit or a percentage, but not an <code>fr</code> unit.</p>
+<p>These gaps can be any length unit or percentage, but not an <code>fr</code> unit.</p>
 
 <div id="Grid_3">
 <div class="hidden">
@@ -224,7 +224,7 @@ tags:
 <p>{{ EmbedLiveSample('Grid_3', '100%', 400) }}</p>
 
 <div class="note">
-<p><strong>Note</strong>: The <code>*gap</code> properties used to be prefixed by <code>grid-</code>, but this has been changed in the spec, as the intention is to make them usable in multiple layout methods. The prefixed versions will be maintained as an alias so will be safe to use for some time. To be on the safe side, you could double up and add both properties to make your code more bulletproof.</p>
+<p><strong>Note</strong>: The <code>*gap</code> properties used to be prefixed by <code>grid-</code>, but this has been changed in the spec in order to make them usable in multiple layout methods. The prefixed versions will be maintained as an alias, so they'll be safe to use for some time. To be on the safe side, you could double up and add both properties to make your code more bulletproof.</p>
 </div>
 
 <pre class="brush: css">.container {
