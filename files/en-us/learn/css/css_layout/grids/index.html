@@ -309,9 +309,9 @@ tags:
 
 <h3 id="As_many_columns_as_will_fit">As many columns as will fit</h3>
 
-<p>We can combine some of the things we have learned about track listing, repeat notation and {{cssxref("minmax()")}} to create a useful pattern. Sometimes it is helpful to be able to ask grid to create as many columns as will fit into the container. We do this by setting the value of <code>grid-template-columns</code> using {{cssxref("repeat()")}} notation, but instead of passing in a number, pass in the keyword <code>auto-fill</code>. For the second parameter of the function we use <code>minmax()</code>, with a minimum value equal to the minimum track size that we would like to have, and a maximum of <code>1fr</code>.</p>
+<p>We can combine some of the lessons we've learned about track listing, repeat notation, and {{cssxref("minmax()")}} to create a useful pattern. Sometimes it's helpful to be able to ask grid to create as many columns as will fit into the container. We do this by setting the value of <code>grid-template-columns</code> using the {{cssxref("repeat()")}} function, but instead of passing in a number, pass in the keyword <code>auto-fill</code>. For the second parameter of the function we use <code>minmax()</code> with a minimum value equal to the minimum track size that we would like to have and a maximum of <code>1fr</code>.</p>
 
-<p>Try this in your file now, using the below CSS:</p>
+<p>Try this in your file now using the CSS below:</p>
 
 <div id="Grid_5">
 <div class="hidden">
@@ -353,7 +353,7 @@ tags:
 
 <p>{{ EmbedLiveSample('Grid_5', '100%', 400) }}</p>
 
-<p>This works because grid is creating as many 200 pixel columns as will fit into the container, then sharing whatever space is leftover between all of the columns — the maximum is 1fr which, as we already know, distributes space evenly between tracks.</p>
+<p>This works because grid is creating as many 200 pixel columns as will fit into the container, then sharing whatever space is leftover among all the columns. The maximum is 1fr which, as we already know, distributes space evenly between tracks.</p>
 
 <h2 id="Line-based_placement">Line-based placement</h2>
 
