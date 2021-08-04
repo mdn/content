@@ -111,7 +111,7 @@ tags:
 
 <h3 id="Flexible_grids_with_the_fr_unit">Flexible grids with the <strong>fr</strong> unit</h3>
 
-<p>In addition to creating grids using lengths and percentages, we can use the <code>fr</code> unit to flexibly size grid rows and columns. This unit represents one fraction of the available space in the grid container.</p>
+<p>In addition to creating grids using lengths and percentages, we can use the <code>fr</code> (<em>fraction</em>) unit to flexibly size grid tracks. <a href="https://mozilladevelopers.github.io/playground/css-grid/04-fr-unit/">MDN</a> defines the <code>fr</code> unit as a unit which represents a fraction of the available space in the grid container. 1fr is one part of the whole. That means if there's only one part in our layout, then 1fr will take up the whole part. Likewise, if there's two parts in our layout and each one has the value of 1fr, then each will take up 50% of the layout. Let's see this in practice.</p>
 
 <p>Change your track listing to the following definition, creating three <code>1fr</code> tracks.</p>
 
@@ -120,14 +120,14 @@ tags:
     grid-template-columns: 1fr 1fr 1fr;
 }</pre>
 
-<p>You should now see that you have flexible tracks. The <code>fr</code> unit distributes space in proportion, therefore you can give different positive values to your tracks, for example if you change the definition like so:</p>
+<p>You should now see that you have flexible tracks. The <code>fr</code> unit distributes space proportionally. So if you specify different positive values for your tracks like so:</p>
 
 <pre class="brush: css">.container {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
 }</pre>
 
-<p>The first track now gets <code>2fr</code> of the available space and the other two tracks get <code>1fr</code>, making the first track larger. You can mix <code>fr</code> units and fixed length tracks — in such a case the space needed for the fixed tracks is taken away before the space is distributed to the other tracks.</p>
+<p>The first track now gets <code>2fr</code> of the available space and the other two tracks get <code>1fr</code>, making the first track larger. You can mix <code>fr</code> units with fixed length units — in such a case the space needed for the fixed tracks is used up first; the remaining space is then distributed to the other tracks.</p>
 
 <div id="Grid_2">
 <div class="hidden">
