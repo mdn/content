@@ -151,7 +151,7 @@ flex-wrap: wrap;</pre>
 
 <p>Now when you refresh, you'll see that the third {{htmlelement("article")}} takes up twice as much of the available width as the other two. There are now four proportion units available in total (since 1 + 1 + 2 = 4). The first two flex items have one unit each, so they each take 1/4 of the available space. The third one has two units, so it takes up 2/4 of the available space (or one-half).</p>
 
-<p>You can also specify a value for a minimum size within the flex value. Try updating your existing article rules like so:</p>
+<p>You can also specify a minimum size value within the flex value. Try updating your existing article rules like so:</p>
 
 <pre class="brush: css">article {
   flex: 1 200px;
@@ -165,16 +165,16 @@ article:nth-of-type(3) {
 
 <p><img alt="" src="flexbox-example1.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
-<p>The real value of flexbox can be seen in its flexibility/responsiveness — if you resize the browser window, or add another {{htmlelement("article")}} element, the layout continues to work just fine.</p>
+<p>The real value of flexbox can be seen in its flexibility/responsiveness. If you resize the browser window or add another {{htmlelement("article")}} element, the layout continues to work just fine.</p>
 
 <h2 id="flex_shorthand_versus_longhand">flex: shorthand versus longhand</h2>
 
 <p>{{cssxref("flex")}} is a shorthand property that can specify up to three different values:</p>
 
 <ul>
- <li>The unitless proportion value we discussed above. This can be specified individually using the {{cssxref("flex-grow")}} longhand property.</li>
- <li>A second unitless proportion value — {{cssxref("flex-shrink")}} — that comes into play when the flex items are overflowing their container. This specifies how much of the overflowing amount is taken away from each flex item's size, to stop them overflowing their container. This is quite an advanced flexbox feature, and we won't be covering it any further in this article.</li>
- <li>The minimum size value we discussed above. This can be specified individually using the {{cssxref("flex-basis")}} longhand value.</li>
+ <li>The unitless proportion value we discussed above. This can be specified separately using the {{cssxref("flex-grow")}} longhand property.</li>
+ <li>A second unitless proportion value, {{cssxref("flex-shrink")}}, which comes into play when the flex items are overflowing their container. This value specifies how much an item will shrink in order to prevent overflow. This is quite an advanced flexbox feature and we won't be covering it any further in this article.</li>
+ <li>The minimum size value we discussed above. This can be specified separately using the {{cssxref("flex-basis")}} longhand value.</li>
 </ul>
 
 <p>We'd advise against using the longhand flex properties unless you really have to (for example, to override something previously set). They lead to a lot of extra code being written, and they can be somewhat confusing.</p>
