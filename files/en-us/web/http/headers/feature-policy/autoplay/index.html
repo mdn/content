@@ -13,12 +13,12 @@ browser-compat: http.headers.Feature-Policy.autoplay
 ---
 <div>{{HTTPSidebar}} {{SeeCompatTable}}</div>
 
-<p><span class="seoSummary">The HTTP {{HTTPHeader("Feature-Policy")}} header
+<p>The HTTP {{HTTPHeader("Feature-Policy")}} header
     <code>autoplay</code> directive controls whether the current document is allowed to
-    autoplay media requested through the {{domxref("HTMLMediaElement")}} interface.</span>
+    autoplay media requested through the {{domxref("HTMLMediaElement")}} interface.
   When this policy is enabled and there were no user gestures, the {{jsxref("Promise")}}
   returned by {{domxref("HTMLMediaElement.play()")}} will reject with
-  a {{domxref("DOMException")}}. The {{htmlattrxref("autoplay", "audio")}} attribute on
+  a {{domxref("DOMException")}}. The {{htmlattrxref("autoplay", "audio")}} attribute on
   {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements will be ignored.</p>
 
 <p>For more details on autoplay and autoplay blocking, see the article <a
