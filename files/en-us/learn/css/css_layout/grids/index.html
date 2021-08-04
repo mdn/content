@@ -294,9 +294,9 @@ tags:
 
 <h3 id="The_minmax_function">The minmax() function</h3>
 
-<p>Our 100-pixel tall tracks won’t be very useful if we add content into those tracks that is taller than 100 pixels, in which case it would cause an overflow. It might be better to have tracks that are <em>at least</em> 100 pixels tall and can still expand if more content gets into them. A fairly basic fact about the web is that you never really know how tall something is going to be; additional content or larger font sizes can cause problems with designs that attempt to be pixel perfect in every dimension.</p>
+<p>Our 100-pixel tall tracks won’t be very useful if we add content into those tracks that is taller than 100 pixels, in which case it would cause an overflow. It might be better to have tracks that are <em>at least</em> 100 pixels tall and can still expand if more content becomes added. A fairly basic fact about the web is that you never really know how tall something is going to be — additional content or larger font sizes can cause problems with designs that attempt to be pixel perfect in every dimension.</p>
 
-<p>The {{cssxref("minmax()")}} function lets us set a minimum and maximum size for a track, for example <code>minmax(100px, auto)</code>. The minimum size is 100 pixels, but the maximum is <code>auto</code>, which will expand to fit the content. Try changing <code>grid-auto-rows</code> to use a minmax value:</p>
+<p>The {{cssxref("minmax()")}} function lets us set a minimum and maximum size for a track, for example, <code>minmax(100px, auto)</code>. The minimum size is 100 pixels, but the maximum is <code>auto</code>, which will expand to accomodate more content. Try changing <code>grid-auto-rows</code> to use a minmax value:</p>
 
 <pre class="brush: css">.container {
     display: grid;
@@ -305,7 +305,7 @@ tags:
     gap: 20px;
 }</pre>
 
-<p>If you add extra content you will see that the track expands to allow it to fit. Note that the expansion happens right along the row.</p>
+<p>If you add extra content, you'll see that the track expands to allow it to fit. Note that the expansion happens right along the row.</p>
 
 <h3 id="As_many_columns_as_will_fit">As many columns as will fit</h3>
 
