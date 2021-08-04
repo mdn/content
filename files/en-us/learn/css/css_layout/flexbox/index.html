@@ -122,7 +122,7 @@ tags:
 
 <h2 id="flex-flow_shorthand">flex-flow shorthand</h2>
 
-<p>At this point it is worth noting that a shorthand exists for {{cssxref("flex-direction")}} and {{cssxref("flex-wrap")}} — {{cssxref("flex-flow")}}. So for example, you can replace</p>
+<p>At this point it's worth noting that a shorthand exists for {{cssxref("flex-direction")}} and {{cssxref("flex-wrap")}}: {{cssxref("flex-flow")}}. So, for example, you can replace</p>
 
 <pre class="brush: css">flex-direction: row;
 flex-wrap: wrap;</pre>
@@ -133,7 +133,7 @@ flex-wrap: wrap;</pre>
 
 <h2 id="Flexible_sizing_of_flex_items">Flexible sizing of flex items</h2>
 
-<p>Let's now return to our first example, and look at how we can control what proportion of space flex items take up compared to the other flex items. Fire up your local copy of <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox0.html">flexbox0.html</a>, or take a copy of <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox1.html">flexbox1.html</a> as a new starting point (<a href="https://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox1.html">see it live</a>).</p>
+<p>Let's now return to our first example and look at how we can control what proportion of space flex items take up compared to the other flex items. Fire up your local copy of <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox0.html">flexbox0.html</a>, or take a copy of <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox1.html">flexbox1.html</a> as a new starting point (<a href="https://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox1.html">see it live</a>).</p>
 
 <p>First, add the following rule to the bottom of your CSS:</p>
 
@@ -141,7 +141,7 @@ flex-wrap: wrap;</pre>
   flex: 1;
 }</pre>
 
-<p>This is a unitless proportion value that dictates how much of the available space along the main axis each flex item will take up compared to other flex items. In this case, we are giving each {{htmlelement("article")}} element the same value (a value of 1), which means they will all take up an equal amount of the spare space left after things like padding and margin have been set. It is relative to other flex items, meaning that giving each flex item a value of 400000 would have exactly the same effect.</p>
+<p>This is a unitless proportion value that dictates how much available space along the main axis each flex item will take up compared to other flex items. In this case, we're giving each {{htmlelement("article")}} element the same value (a value of 1), which means they'll all take up an equal amount of the spare space left after properties like padding and margin have been set. This value is proportionally shared among the flex items: giving each flex item a value of 400000 would have exactly the same effect.</p>
 
 <p>Now add the following rule below the previous one:</p>
 
@@ -149,9 +149,9 @@ flex-wrap: wrap;</pre>
   flex: 2;
 }</pre>
 
-<p>Now when you refresh, you'll see that the third {{htmlelement("article")}} takes up twice as much of the available width as the other two. There are now four proportion units available in total (since 1 + 1 + 2 = 4). The first two flex items have one unit each, so they take 1/4 of the available space each. The third one has two units, so it takes up 2/4 of the available space (or one-half).</p>
+<p>Now when you refresh, you'll see that the third {{htmlelement("article")}} takes up twice as much of the available width as the other two. There are now four proportion units available in total (since 1 + 1 + 2 = 4). The first two flex items have one unit each, so they each take 1/4 of the available space. The third one has two units, so it takes up 2/4 of the available space (or one-half).</p>
 
-<p>You can also specify a minimum size value inside the flex value. Try updating your existing article rules like so:</p>
+<p>You can also specify a value for a minimum size within the flex value. Try updating your existing article rules like so:</p>
 
 <pre class="brush: css">article {
   flex: 1 200px;
@@ -161,7 +161,7 @@ article:nth-of-type(3) {
   flex: 2 200px;
 }</pre>
 
-<p>This basically states "Each flex item will first be given 200px of the available space. After that, the rest of the available space will be shared out according to the proportion units." Try refreshing and you'll see a difference in how the space is shared.</p>
+<p>This basically states, "Each flex item will first be given 200px of the available space. After that, the rest of the available space will be shared according to the proportion units." Try refreshing and you'll see a difference in how the space is shared.</p>
 
 <p><img alt="" src="flexbox-example1.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
