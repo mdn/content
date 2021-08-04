@@ -53,7 +53,7 @@ tags:
 
 <p><img alt="Image showing the starting point of Flexbox tutorial" src="bih741v.png"></p>
 
-<p>You'll see that we have a {{htmlelement("header")}} element with a top level heading inside it, and a {{htmlelement("section")}} element containing three {{htmlelement("article")}}s. We're going to use these to create a fairly standard three column layout.</p>
+<p>You'll see that we have a {{htmlelement("header")}} element with a top level heading inside it and a {{htmlelement("section")}} element containing three {{htmlelement("article")}}s. We're going to use these to create a fairly standard three column layout.</p>
 
 <h2 id="Specifying_what_elements_to_lay_out_as_flexible_boxes">Specifying what elements to lay out as flexible boxes</h2>
 
@@ -63,13 +63,13 @@ tags:
   display: flex;
 }</pre>
 
-<p>This causes the &lt;section&gt; element to become a <strong>flex container</strong>, and its children to become <strong>flex items</strong>. The result of this should be something like so:</p>
+<p>This causes the &lt;section&gt; element to become a <strong>flex container</strong> and its children to become <strong>flex items</strong>. The result of this should be something like so:</p>
 
 <p><img alt="" src="flexbox-example2.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
-<p>So, this single declaration gives us everything we need — incredible, right? We have our multiple column layout with equal-sized columns, and the columns are all the same height. This is because the default values given to flex items (the children of the flex container) are set up to solve common problems such as this.</p>
+<p>So, this single declaration gives us everything we need. Incredible, right? We have our multiple column layout with equal-sized columns, and the columns are all the same height. This is because the default values given to flex items (the children of the flex container) are set up to solve common problems such as this.</p>
 
-<p>To be clear, let's reiterate what is happening here. The element we've given a   {{cssxref("display")}} value of <code>flex</code> to is acting like a block-level element in terms of how it interacts with the rest of the page, but its children are being laid out as flex items. The next section will explain in more detail what this means. Note also that you can use a <code>display</code> value of <code>inline-flex</code> if you wish to lay out an element's children as flex items, but have that element behave like an inline element.</p>
+<p>To be clear, let's reiterate what is happening here. The element we've given a {{cssxref("display")}} value of <code>flex</code> to is acting like a block-level element in terms of how it interacts with the rest of the page, but its children are laid out as flex items. The next section will explain in more detail what this means. Note also that you can use a <code>display</code> value of <code>inline-flex</code> if you wish to lay out an element's children as flex items, but have that element behave like an inline element.</p>
 
 <h2 id="The_flex_model">The flex model</h2>
 
