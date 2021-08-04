@@ -256,7 +256,7 @@ article:nth-of-type(3) {
 
 <h2 id="Nested_flex_boxes">Nested flex boxes</h2>
 
-<p>It is possible to create some pretty complex layouts with flexbox. It is perfectly ok to set a flex item to also be a flex container, so that its children are also laid out like flexible boxes. Have a look at <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/complex-flexbox.html">complex-flexbox.html</a> (<a href="https://mdn.github.io/learning-area/css/css-layout/flexbox/complex-flexbox.html">see it live also</a>).</p>
+<p>It's possible to create some pretty complex layouts with flexbox. It's perfectly ok to set a flex item to also be a flex container, so that its children are also laid out like flexible boxes. Have a look at <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/complex-flexbox.html">complex-flexbox.html</a> (<a href="https://mdn.github.io/learning-area/css/css-layout/flexbox/complex-flexbox.html">see it live also</a>).</p>
 
 <p><img alt="" src="flexbox-example7.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
@@ -278,7 +278,7 @@ article:nth-of-type(3) {
   display: flex;
 }</pre>
 
-<p>Next, we set some flex values on the {{htmlelement("article")}}s themselves. Take special note of the 2nd rule here — we are setting the third {{htmlelement("article")}} to have its children laid out like flex items too, but this time we are laying them out like a column.</p>
+<p>Next, we set some flex values on the {{htmlelement("article")}}s themselves. Take special note of the 2nd rule here: we're setting the third {{htmlelement("article")}} to have its children laid out like flex items too, but this time we're laying them out like a column.</p>
 
 <pre class="brush: css">article {
   flex: 1 200px;
@@ -291,7 +291,7 @@ article:nth-of-type(3) {
 }
 </pre>
 
-<p>Next, we select the first {{htmlelement("div")}}. We first use <code>flex:1 100px;</code> to effectively give it a minimum height of 100px, then we set its children (the {{htmlelement("button")}} elements) to also be laid out like flex items. Here we lay them out in a wrapping row, and align them in the center of the available space, as we did in the individual button example we saw earlier.</p>
+<p>Next, we select the first {{htmlelement("div")}}. We first use <code>flex:1 100px;</code> to effectively give it a minimum height of 100px, then we set its children (the {{htmlelement("button")}} elements) to also be laid out like flex items. Here we lay them out in a wrapping row and align them in the center of the available space as we did with the individual button example we saw earlier.</p>
 
 <pre class="brush: css">article:nth-of-type(3) div:first-child {
   flex:1 100px;
@@ -301,7 +301,7 @@ article:nth-of-type(3) {
   justify-content: space-around;
 }</pre>
 
-<p>Finally, we set some sizing on the button, but more interestingly we give it a flex value of 1 auto. This has a very interesting effect, which you'll see if you try resizing your browser window width. The buttons will take up as much space as they can, and sit as many on the same line as they can, but when they can no longer fit comfortably on the same line, they'll drop down to create new lines.</p>
+<p>Finally, we set some sizing on the button. This time by giving it a flex value of 1 auto. This has a very interesting effect, which you'll see if you try resizing your browser window width. The buttons will take up as much space as they can. As many will fit on a line as is comfortable; beyond that, they'll drop to a new line.</p>
 
 <pre class="brush: css">button {
   flex: 1 auto;
