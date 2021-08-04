@@ -181,7 +181,7 @@ article:nth-of-type(3) {
 
 <h2 id="Horizontal_and_vertical_alignment">Horizontal and vertical alignment</h2>
 
-<p>You can also use flexbox features to align flex items along the main or cross axis. Let's explore this by looking at a new example — <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flex-align0.html">flex-align0.html</a> (<a href="https://mdn.github.io/learning-area/css/css-layout/flexbox/flex-align0.html">see it live also</a>) — which we are going to turn into a neat, flexible button/toolbar. At the moment you'll see a horizontal menu bar, with some buttons jammed into the top left-hand corner.</p>
+<p>You can also use flexbox features to align flex items along the main or cross axis. Let's explore this by looking at a new example: <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flex-align0.html">flex-align0.html</a> (<a href="https://mdn.github.io/learning-area/css/css-layout/flexbox/flex-align0.html">see it live also</a>). We're going to turn this into a neat, flexible button/toolbar. At the moment you'll see a horizontal menu bar with some buttons jammed into the top left-hand corner.</p>
 
 <p><img alt="" src="flexbox-example5.png" style="display: block; margin: 0px auto;"></p>
 
@@ -197,12 +197,12 @@ article:nth-of-type(3) {
 
 <p><img alt="" src="flexbox_center_space-around.png"></p>
 
-<p>Refresh the page and you'll see that the buttons are now nicely centered, horizontally and vertically. We've done this via two new properties.</p>
+<p>Refresh the page and you'll see that the buttons are now nicely centered horizontally and vertically. We've done this via two new properties.</p>
 
 <p>{{cssxref("align-items")}} controls where the flex items sit on the cross axis.</p>
 
 <ul>
- <li>By default, the value is <code>stretch</code>, which stretches all flex items to fill the parent in the direction of the cross axis. If the parent doesn't have a fixed width in the cross axis direction, then all flex items will become as long as the longest flex item. This is how our first example got equal height columns by default.</li>
+ <li>By default, the value is <code>stretch</code>, which stretches all flex items to fill the parent in the direction of the cross axis. If the parent doesn't have a fixed width in the cross axis direction, then all flex items will become as long as the longest flex item. This is how our first example had columns of equal height by default.</li>
  <li>The <code>center</code> value that we used in our above code causes the items to maintain their intrinsic dimensions, but be centered along the cross axis. This is why our current example's buttons are centered vertically.</li>
  <li>You can also have values like <code>flex-start</code> and <code>flex-end</code>, which will align all items at the start and end of the cross axis respectively. See {{cssxref("align-items")}} for the full details.</li>
 </ul>
@@ -215,15 +215,15 @@ article:nth-of-type(3) {
 
 <p><img alt="" src="flexbox_first-child_flex-end.png"></p>
 
-<p>Have a look at what effect this has, and remove it again when you've finished.</p>
+<p>Have a look at what effect this has and remove it again when you've finished.</p>
 
 <p>{{cssxref("justify-content")}} controls where the flex items sit on the main axis.</p>
 
 <ul>
  <li>The default value is <code>flex-start</code>, which makes all the items sit at the start of the main axis.</li>
  <li>You can use <code>flex-end</code> to make them sit at the end.</li>
- <li><code>center</code> is also a value for <code>justify-content</code>, and will make the flex items sit in the center of the main axis.</li>
- <li>The value we've used above, <code>space-around</code>, is useful — it distributes all the items evenly along the main axis, with a bit of space left at either end.</li>
+ <li><code>center</code> is also a value for <code>justify-content</code>. It'll make the flex items sit in the center of the main axis.</li>
+ <li>The value we've used above, <code>space-around</code>, is useful — it distributes all the items evenly along the main axis with a bit of space left at either end.</li>
  <li>There is another value, <code>space-between</code>, which is very similar to <code>space-around</code> except that it doesn't leave any space at either end.</li>
 </ul>
 
