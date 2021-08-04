@@ -13,14 +13,13 @@ browser-compat: http.headers.Set-Cookie.SameSite
 <p>The <strong><code>SameSite</code></strong> attribute of the {{HTTPHeader("Set-Cookie")}} HTTP response header allows you to declare if your cookie should be restricted to a <a href="/en-US/docs/Web/HTTP/Cookies#third-party_cookies">first-party</a> or same-site context.</p>
 
 <div class="notecard note">
-<p>Standards related to the Cookie <code>SameSite</code> attribute recently changed such that:</p>
+  <p><strong>Note:</strong> Standards related to the Cookie <code>SameSite</code> attribute recently changed such that:</p>
+  <ul>
+    <li>The cookie-sending behavior if <code>SameSite</code> is not specified is <code>SameSite=Lax</code>. Previously the default was that cookies were sent for all requests.</li>
+  <li>Cookies with <code>SameSite=None</code> must now also specify the <code>Secure</code> attribute (they require a secure context/HTTPS).</li>
+  </ul>
 
-<ul>
- <li>The cookie-sending behavior if <code>SameSite</code> is not specified is <code>SameSite=Lax</code>. Previously the default was that cookies were sent for all requests.</li>
- <li>Cookies with <code>SameSite=None</code> must now also specify the <code>Secure</code> attribute (they require a secure context/HTTPS).</li>
-</ul>
-
-<p>This article documents the new standard. See <a href="#browser_compatibility">Browser Compatibility</a> below for information about specific versions where the behavior changed.</p>
+  <p>This article documents the new standard. See <a href="#browser_compatibility">Browser Compatibility</a> below for information about specific versions where the behavior changed.</p>
 </div>
 
 <h2 id="Values">Values</h2>
@@ -29,12 +28,12 @@ browser-compat: http.headers.Set-Cookie.SameSite
 
 <h3 id="Lax"><code>Lax</code></h3>
 
-<p>Cookies are not sent on normal cross-site subrequests (for example to load images or frames into a third party site), but are sent when a user is <em>navigating to</em> the origin site (i.e. when following a link).</p>
+<p>Cookies are not sent on normal cross-site subrequests (for example to load images or frames into a third party site), but are sent when a user is <em>navigating to</em> the origin site (i.e., when following a link).</p>
 
 <p>This is the default cookie value if <code>SameSite</code> has not been explicitly specified in recent browser versions (see the "SameSite: Defaults to Lax" feature in the Browser Compatibility).</p>
 
 <div class="notecard note">
-<p><code>Lax</code> replaced <code>None</code> as the default value in order to ensure that users have reasonably robust defense against some classes of cross-site request forgery ({{Glossary("CSRF")}}) attacks.</p>
+  <p><strong>Note:</strong> <code>Lax</code> replaced <code>None</code> as the default value in order to ensure that users have reasonably robust defense against some classes of cross-site request forgery ({{Glossary("CSRF")}}) attacks.</p>
 </div>
 
 <h3 id="Strict"><code>Strict</code></h3>
@@ -66,10 +65,12 @@ This Set-Cookie was blocked because it had the "SameSite=None" attribute but did
 <p>A <a href="#secure"><code>Secure</code></a> cookie is only sent to the server with an encrypted request over the HTTPS protocol. Note that insecure sites (<code>http:</code>) can't set cookies with the <code>Secure</code> directive.</p>
 
 <div class="notecard note">
-<p>On older browser versions you might get a warning that the cookie will be blocked in future. For example:</p>
-
-<pre class="brush: html">Cookie “<em>myCookie</em>” will be soon rejected because it has the “SameSite” attribute set to “None” or an invalid value, without the “secure” attribute. To know more about the “SameSite” attribute, read https://developer.mozilla.org/docs/Web/HTTP/Headers/Set-Cookie/SameSite
-</pre>
+  <p><strong>Note:</strong> On older browser versions you might get a warning that the cookie will be blocked in future. For example:</p>
+  <p>
+    Cookie <code>myCookie</code> will be soon rejected
+    because it has the <code>SameSite</code> attribute set to <code>None</code>
+    or an invalid value, without the <code>secure</code> attribute.
+  </p>
 </div>
 
 <h3 id="Cookies_without_SameSite_default_to_SameSiteLax">Cookies without <code>SameSite</code> default to <code>SameSite=Lax</code></h3>

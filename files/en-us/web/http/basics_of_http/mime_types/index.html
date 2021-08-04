@@ -28,13 +28,18 @@ tags:
     href="https://www.iana.org/assignments/media-types/media-types.xhtml">Media Types</a>
   page.</p>
 
-<div class="warning">
-  <p><strong>Important:</strong> Browsers use the MIME type, <em>not the file
-      extension</em>, to determine how to process a URL, so it's important that web
-    servers send the correct MIME type in the response's {{HTTPHeader("Content-Type")}}
-    header. If this is not correctly configured, browsers are likely to misinterpret the
-    contents of files and sites will not work correctly, and downloaded files may be
-    mishandled.</p>
+<div class="notecard warning">
+  <p>
+    <strong>Warning:</strong> Browsers use the MIME type,
+    <em>not the file extension</em>,
+    to determine how to process a URL,
+    so it's important
+    that web servers send the correct MIME type in the response's {{HTTPHeader("Content-Type")}} header.
+    If this is not correctly configured,
+    browsers are likely to misinterpret the contents of files,
+    sites will not work correctly,
+    and downloaded files may be mishandled.
+  </p>
 </div>
 
 <h2 id="Structure_of_a_MIME_type">Structure of a MIME type</h2>
@@ -231,7 +236,7 @@ tags:
   browsers assume they can display it.</p>
 
 <div class="notecard note">
-  <p>Note that <code>text/plain</code> does not mean "any kind of textual data." If they
+  <p><strong>Note:</strong> <code>text/plain</code> does not mean "any kind of textual data." If they
     expect a specific kind of textual data, they will likely not consider it a match.
     Specifically if they download a <code>text/plain</code> file from a
     {{HTMLElement("link")}} element declaring a CSS file, they will not recognize it as a

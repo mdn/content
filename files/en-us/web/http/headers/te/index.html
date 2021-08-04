@@ -13,9 +13,11 @@ browser-compat: http.headers.TE
   the user agent is willing to accept. (you could informally call it
   <em><code>Accept-Transfer-Encoding</code></em>, which would be more intuitive).</p>
 
-<div class="note"><a href="https://datatracker.ietf.org/doc/html/rfc7540#section-8.1.2.2">In HTTP/2
-    - the <code>TE</code> header field is only accepted if the <code>trailers</code> value
-    is set.</a></div>
+<div class="notecard note">
+  <p><strong>Note:</strong> <a href="https://datatracker.ietf.org/doc/html/rfc7540#section-8.1.2.2">In HTTP/2,
+    the <code>TE</code> header field is only accepted
+    if the <code>trailers</code> value is set.</a></p>
+</div>
 
 <p>See also the {{HTTPHeader("Transfer-Encoding")}} response header for more details on
   transfer encodings. Note that <code>chunked</code> is always acceptable for HTTP/1.1

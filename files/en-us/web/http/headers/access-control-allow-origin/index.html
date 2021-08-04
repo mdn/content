@@ -49,7 +49,9 @@ Access-Control-Allow-Origin: null
  <dd>Specifies an origin. Only a single origin can be specified. If the server supports clients from multiple origins, it must return the origin for the specific client making the request.</dd>
  <dt><code>null</code></dt>
  <dd>Specifies the origin "null".
- <div class="note"><strong>Note:</strong> <code>null</code> <a href="https://w3c.github.io/webappsec-cors-for-developers/#avoid-returning-access-control-allow-origin-null">should not be used</a>: "It may seem safe to return <code>Access-Control-Allow-Origin: "null"</code>, but the serialization of the Origin of any resource that uses a non-hierarchical scheme (such as <code>data:</code> or <code>file:</code>) and sandboxed documents is defined to be "null". Many User Agents will grant such documents access to a response with an <code>Access-Control-Allow-Origin: "null"</code> header, and any origin can create a hostile document with a "null" Origin. The "null" value for the ACAO header should therefore be avoided."</div>
+  <div class="notecard note">
+    <p><strong>Note:</strong> <code>null</code> <a href="https://w3c.github.io/webappsec-cors-for-developers/#avoid-returning-access-control-allow-origin-null">should not be used</a>: "It may seem safe to return <code>Access-Control-Allow-Origin: "null"</code>, but the serialization of the Origin of any resource that uses a non-hierarchical scheme (such as <code>data:</code> or <code>file:</code>) and sandboxed documents is defined to be "null". Many User Agents will grant such documents access to a response with an <code>Access-Control-Allow-Origin: "null"</code> header, and any origin can create a hostile document with a "null" Origin. The "null" value for the ACAO header should therefore be avoided."</p>
+  </div>
  </dd>
 </dl>
 
