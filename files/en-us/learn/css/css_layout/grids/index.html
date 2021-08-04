@@ -53,9 +53,9 @@ tags:
 
 <h3 id="Defining_a_grid">Defining a grid</h3>
 
-<p>As a starting point, download and open <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/0-starting-point.html">the starting point file</a> in your text editor and browser (you can also<a href="https://mdn.github.io/learning-area/css/css-layout/grids/0-starting-point.html"> see it live here</a>). You will see an example with a container, which has some child items. By default these display in normal flow so the boxes display one below the other. We will be working with this file for the first part of this lesson, making changes to see how grid behaves.</p>
+<p>As a starting point, download and open <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/0-starting-point.html">the starting point file</a> in your text editor and browser (you can also<a href="https://mdn.github.io/learning-area/css/css-layout/grids/0-starting-point.html"> see it live here</a>). You will see an example with a container, which has some child items. By default these display in normal flow, so the boxes display one below the other. We'll be working with this file for the first part of this lesson, making changes to see how its grid behaves.</p>
 
-<p>To define a grid we use the <code>grid</code> value of the {{cssxref("display")}} property. As with Flexbox, this switches on Grid Layout, and all of the direct children of the container become grid items. Add this to the CSS inside your file:</p>
+<p>To define a grid we use the <code>grid</code> value of the {{cssxref("display")}} property. As with Flexbox, this enables Grid Layout; all of the direct children of the container become grid items. Add this to the CSS inside your file:</p>
 
 <pre class="brush: css">.container {
     display: grid;
@@ -63,14 +63,14 @@ tags:
 
 <p>Unlike flexbox, the items will not immediately look any different. Declaring <code>display: grid</code> gives you a one column grid, so your items will continue to display one below the other as they do in normal flow.</p>
 
-<p>To see something that looks more grid-like, we will need to add some columns to the grid. Let's add three 200-pixel columns here. You can use any length unit, or percentages to create these column tracks.</p>
+<p>To see something that looks more grid-like, we'll need to add some columns to the grid. Let's add three 200-pixel columns. You can use any length unit or percentage to create these column tracks.</p>
 
 <pre class="brush: css">.container {
     display: grid;
     grid-template-columns: 200px 200px 200px;
 }</pre>
 
-<p>Add the 2nd declaration to your CSS rule, then reload the page, and you should see that the items have rearranged themselves one into each cell of the created grid.</p>
+<p>Add the 2nd declaration to your CSS rule, then reload the page. You should see that the items have rearranged themselves such that there's one in each cell of the grid.</p>
 
 <div id="Grid_1">
 <div class="hidden">
@@ -109,7 +109,7 @@ tags:
 
 <p>{{ EmbedLiveSample('Grid_1', '100%', 400) }}</p>
 
-<h3 id="Flexible_grids_with_the_fr_unit">Flexible grids with the fr unit</h3>
+<h3 id="Flexible_grids_with_the_fr_unit">Flexible grids with the <strong>fr</strong> unit</h3>
 
 <p>In addition to creating grids using lengths and percentages, we can use the <code>fr</code> unit to flexibly size grid rows and columns. This unit represents one fraction of the available space in the grid container.</p>
 
