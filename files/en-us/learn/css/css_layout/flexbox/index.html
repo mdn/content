@@ -102,7 +102,7 @@ tags:
 
 <h2 id="Wrapping">Wrapping</h2>
 
-<p>One issue that arises when you have a fixed amount of width or height in your layout is that eventually your flexbox children will overflow their container, breaking the layout. Have a look at our <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox-wrap0.html">flexbox-wrap0.html</a> example, and try <a href="https://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox-wrap0.html">viewing it live</a> (take a local copy of this file now if you want to follow along with this example):</p>
+<p>One issue that arises when you have a fixed width or height in your layout is that eventually your flexbox children will overflow their container, breaking the layout. Have a look at our <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox-wrap0.html">flexbox-wrap0.html</a> example and try <a href="https://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox-wrap0.html">viewing it live</a> (take a local copy of this file now if you want to follow along with this example):</p>
 
 <p><img alt="" src="flexbox-example3.png" style="display: block; margin: 0px auto;"></p>
 
@@ -114,11 +114,11 @@ tags:
 
 <pre class="brush: css">flex: 200px;</pre>
 
-<p>Try this now; you'll see that the layout looks much better with this included:</p>
+<p>Try this now. You'll see that the layout looks much better with this included:</p>
 
-<p><img alt="" src="flexbox-example4.png" style="display: block; margin: 0px auto;">We now have multiple rows — as many flexbox children are fitted onto each row as makes sense, and any overflow is moved down to the next line. The <code>flex: 200px</code> declaration set on the articles means that each will be at least 200px wide. We'll discuss this property in more detail later on. You might also notice that the last few children on the last row are each made wider so that the entire row is still filled.</p>
+<p><img alt="" src="flexbox-example4.png" style="display: block; margin: 0px auto;">We now have multiple rows. Each row has as many flexbox children fitted into it as is sensible. Any overflow is moved down to the next line. The <code>flex: 200px</code> declaration set on the articles means that each will be at least 200px wide. We'll discuss this property in more detail later on. You might also notice that the last few children on the last row are each made wider so that the entire row is still filled.</p>
 
-<p>But there's more we can do here. First of all, try changing your {{cssxref("flex-direction")}} property value to <code>row-reverse</code> — now you'll see that you still have your multiple row layout, but it starts from the opposite corner of the browser window and flows in reverse.</p>
+<p>But there's more we can do here. First of all, try changing your {{cssxref("flex-direction")}} property value to <code>row-reverse</code>. Now you'll see that you still have your multiple row layout, but it starts from the opposite corner of the browser window and flows in reverse.</p>
 
 <h2 id="flex-flow_shorthand">flex-flow shorthand</h2>
 
