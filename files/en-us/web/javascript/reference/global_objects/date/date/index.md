@@ -96,8 +96,7 @@ There are four basic forms for the `Date()` constructor:
     - `day` {{optional_inline}}
       - : Integer value representing the day of the month. The default is `1`.
     - `hours` {{optional_inline}}
-      - : Integer value representing the hour of the day, uses 24 hours, The default is `0`
-        (midnight) and max value is 23.
+      - : Integer value between `0` and `23` representing the hour of the day. Defaults to `0`.
     - `minutes` {{optional_inline}}
       - : Integer value representing the minute segment of a time. The default is
         `0` minutes past the hour.
