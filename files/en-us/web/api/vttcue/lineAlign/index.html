@@ -31,6 +31,18 @@ VTTCue.lineAlign = a;</pre>
 
 <h2 id="Examples">Examples</h2>
 
+<p>In the following example a new {{domxref("VTTCue")}} is created, then the value of <code>lineAlign</code> is set to <code>"center"</code>. The value is then printed to the console.</p>
+
+<pre class="brush: js">let video = document.querySelector('video');
+let track = video.addTextTrack("captions", "Captions", "en");
+track.mode = "showing";
+
+let cue1 = new VTTCue(0, 0.9, 'Hildy!');
+cue1.lineAlign = 'center';
+console.log(cue1.lineAlign);
+
+track.addCue(cue1);
+</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
