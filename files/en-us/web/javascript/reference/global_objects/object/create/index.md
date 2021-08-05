@@ -320,7 +320,7 @@ function MyClass() {
 // inherit one class
 MyClass.prototype = Object.create(SuperClass.prototype);
 // mixin another
-Object.assign(Object.getPrototypeOf(MyClass.prototype), OtherSuperClass.prototype);
+Object.assign(MyClass.prototype, OtherSuperClass.prototype);
 // re-assign constructor
 MyClass.prototype.constructor = MyClass;
 
