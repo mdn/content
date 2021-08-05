@@ -44,7 +44,7 @@ browser-compat: http.headers.Keep-Alive
  <dt><code><var>parameters</var></code></dt>
  <dd>A comma-separated list of parameters, each consisting of an identifier and a value separated by the equal sign (<code>'='</code>). The following identifiers are possible:
  <ul>
-  <li><code>timeout</code>: indicating the <em>minimum</em> amount of time an idle connection has to be kept opened (in seconds). Note that timeouts longer than the TCP timeout may be ignored if no keep-alive TCP message is set at the transport level.</li>
+  <li><code>timeout</code>: An integer representing the time in seconds that the host will allow an idle connection to remain open before it is closed. A connection is idle if no data is sent or received by a host. A host may keep an idle connection open for longer than <code>timeout</code> seconds, but the host should attempt to retain a connection for at least <code>timeout</code> seconds.</li>
   <li><code>max</code>: indicating the maximum number of requests that can be sent on this connection before closing it. Unless <code>0</code>, this value is ignored for non-pipelined connections as another request will be sent in the next response. An HTTP pipeline can use it to limit the pipelining.</li>
  </ul>
  </dd>
@@ -78,4 +78,5 @@ Server: Apache
 <ul>
  <li>{{HTTPHeader("Connection")}}</li>
  <li><a href="/en-US/docs/Web/HTTP/Connection_management_in_HTTP_1.x">Connection management in HTTP/1.x</a></li>
+ <li><a href="https://datatracker.ietf.org/doc/html/draft-thomson-hybi-http-timeout-03#section-2">Keep-Alive Header</a> IETF Internet Draft</li>
 </ul>
