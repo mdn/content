@@ -17,7 +17,7 @@ browser-compat: http.headers.Date
 <div class="notecard warning">
 	<p><strong>Warning:</strong> <code>Date</code> is listed
     in the <a href="https://fetch.spec.whatwg.org/#forbidden-header-name">forbidden header names</a>
-    in the fetch spec - so this code will not send <code>Date</code> header:</p>
+    in the fetch spec, so this code will not send the <code>Date</code> header:</p>
 
 	  <pre class="brush: js">fetch('https://httpbin.org/get', {
       'headers': {
