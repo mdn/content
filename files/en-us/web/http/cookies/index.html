@@ -37,8 +37,8 @@ tags:
 
 <p>Cookies were once used for general client-side storage. While this was legitimate when they were the only way to store data on the client, it is now recommended to use modern storage APIs. Cookies are sent with every request, so they can worsen performance (especially for mobile data connections). Modern APIs for client storage are the <a href="/en-US/docs/Web/API/Web_Storage_API" title="DOM Storage">Web Storage API</a> (<code>localStorage</code> and <code>sessionStorage</code>) and <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a>.</p>
 
-<div class="note">
-<p>To see stored cookies (and other storage that a web page can use), you can enable the <a href="/en-US/docs/Tools/Storage_Inspector">Storage Inspector</a> in Developer Tools and select Cookies from the storage tree.</p>
+<div class="notecard note">
+  <p><strong>Note:</strong> To see stored cookies (and other storage that a web page can use), you can enable the <a href="/en-US/docs/Tools/Storage_Inspector">Storage Inspector</a> in Developer Tools and select Cookies from the storage tree.</p>
 </div>
 
 <h2 id="Creating_cookies">Creating cookies</h2>
@@ -66,14 +66,14 @@ Set-Cookie: tasty_cookie=strawberry
 Host: www.example.org
 Cookie: yummy_cookie=choco; tasty_cookie=strawberry</pre>
 
-<div class="note"><strong>Note:</strong> Here's how to use the <code>Set-Cookie</code> header in various server-side applications:
-
-<ul>
- <li><a href="https://secure.php.net/manual/en/function.setcookie.php">PHP</a></li>
- <li><a href="https://nodejs.org/dist/latest-v14.x/docs/api/http.html#http_response_setheader_name_value">Node.JS</a></li>
- <li><a href="https://docs.python.org/3/library/http.cookies.html">Python</a></li>
- <li><a href="https://api.rubyonrails.org/classes/ActionDispatch/Cookies.html">Ruby on Rails</a></li>
-</ul>
+<div class="notecard note">
+  <p><strong>Note:</strong> Here's how to use the <code>Set-Cookie</code> header in various server-side applications:</p>
+  <ul>
+    <li><a href="https://secure.php.net/manual/en/function.setcookie.php">PHP</a></li>
+    <li><a href="https://nodejs.org/dist/latest-v14.x/docs/api/http.html#http_response_setheader_name_value">Node.JS</a></li>
+    <li><a href="https://docs.python.org/3/library/http.cookies.html">Python</a></li>
+    <li><a href="https://api.rubyonrails.org/classes/ActionDispatch/Cookies.html">Ruby on Rails</a></li>
+  </ul>
 </div>
 
 <h3 id="Define_the_lifetime_of_a_cookie">Define the lifetime of a cookie</h3>
@@ -89,8 +89,8 @@ Cookie: yummy_cookie=choco; tasty_cookie=strawberry</pre>
 
 <pre>Set-Cookie: id=a3fWa; Expires=Thu, 31 Oct 2021 07:28:00 GMT;</pre>
 
-<div class="note">
-<p><strong>Note</strong>: When an <code>Expires</code> date is set, the time and date set is relative to the client the cookie is being set on, not the server.</p>
+<div class="notecard note">
+  <p><strong>Note:</strong> When an <code>Expires</code> date is set, the time and date set is relative to the client the cookie is being set on, not the server.</p>
 </div>
 
 <p>If your site authenticates users, it should regenerate and resend session cookies, even ones that already exist, whenever the user authenticates. This technique helps prevent <a href="/en-US/docs/Web/Security/Types_of_attacks#session_fixation">session fixation attacks</a>, where a third party can reuse a user's session.</p>
@@ -140,7 +140,7 @@ Cookie: yummy_cookie=choco; tasty_cookie=strawberry</pre>
 <pre>Set-Cookie: mykey=myvalue; SameSite=Strict</pre>
 
 <div class="notecard note">
-<p>Standard related to <code>SameSite</code> recently changed (MDN documents the new behavior above). See the cookies <a href="/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite#browser_compatibility">Browser compatibility</a> table for information about how the attribute is handled in specific browser versions:</p>
+<p><strong>Note:</strong> Standard related to <code>SameSite</code> recently changed (MDN documents the new behavior above). See the cookies <a href="/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite#browser_compatibility">Browser compatibility</a> table for information about how the attribute is handled in specific browser versions:</p>
 
 <ul>
  <li><code>SameSite=Lax</code> is the new default if <code>SameSite</code> is not specified. Previously the default was that cookies were sent for all requests.</li>
@@ -165,8 +165,8 @@ Cookie: yummy_cookie=choco; tasty_cookie=strawberry</pre>
 
 <p>Cookies with these prefixes that are not compliant with their restrictions are rejected by the browser. Note that this ensures that if a subdomain were to create a cookie with a prefix, it would either be confined to the subdomain or be ignored completely. As the application server checks for a specific cookie name only when determining if the user is authenticated or a CSRF token is correct, this effectively acts as a defense measure against session fixation.</p>
 
-<div class="note">
-<p>On the application server, the web application <em>must</em> check for the full cookie name including the prefix—user agents <em>do not</em> strip the prefix from the cookie before sending it in a request's {{HTTPHeader("Cookie")}} header.</p>
+<div class="notecard note">
+  <p><strong>Note:</strong> On the application server, the web application <em>must</em> check for the full cookie name including the prefix—user agents <em>do not</em> strip the prefix from the cookie before sending it in a request's {{HTTPHeader("Cookie")}} header.</p>
 </div>
 
 <p>For more information about cookie prefixes and the current state of browser support, see the <a href="/en-US/docs/Web/HTTP/Headers/Set-Cookie#cookie_prefixes">Prefixes section of the Set-Cookie reference article</a>.</p>
@@ -186,8 +186,8 @@ console.log(document.cookie);
 
 <h2 id="Security">Security</h2>
 
-<div class="note">
-<p>Information should be stored in cookies with the understanding that all cookie values are visible to, and can be changed by, the end-user. Depending on the application, it may be desirable to use an opaque identifier which is looked-up by the server or to investigate alternative authentication/confidentiality mechanisms such as JSON Web Tokens.</p>
+<div class="notecard note">
+  <p><strong>Note:</strong> Information should be stored in cookies with the understanding that all cookie values are visible to, and can be changed by, the end-user. Depending on the application, it may be desirable to use an opaque identifier which is looked-up by the server or to investigate alternative authentication/confidentiality mechanisms such as JSON Web Tokens.</p>
 </div>
 
 <p>Ways to mitigate attacks involving cookies:</p>
@@ -206,7 +206,7 @@ console.log(document.cookie);
 <p>A third party server can build up a profile of a user's browsing history and habits based on cookies sent to it by the same browser when accessing multiple sites. Firefox, by default, blocks third-party cookies that are known to contain trackers. Third-party cookies (or just tracking cookies) may also be blocked by other browser settings or extensions. Cookie blocking can cause some third-party components (such as social media widgets) to not function as intended.</p>
 
 <div class="notecard note">
-<p>Servers can (and should) set the cookie <a href="/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite">SameSite attribute</a> to specify whether or not cookies may be sent to third party sites.</p>
+  <p><strong>Note:</strong> Servers can (and should) set the cookie <a href="/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite">SameSite attribute</a> to specify whether or not cookies may be sent to third party sites.</p>
 </div>
 
 <h3 id="Cookie-related_regulations">Cookie-related regulations</h3>

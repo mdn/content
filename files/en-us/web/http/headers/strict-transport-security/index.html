@@ -62,12 +62,14 @@ Strict-Transport-Security: max-age=&lt;expire-time&gt;; preload
   a site using HTTP and should automatically convert all attempts to access the site using
   HTTP to HTTPS requests instead.</p>
 
-<div class="note"><strong>Note:</strong> The <code>Strict-Transport-Security</code> header
+<div class="notecard note">
+  <p><strong>Note:</strong> The <code>Strict-Transport-Security</code> header
   is <strong>ignored</strong> by the browser when your site is accessed using HTTP; this
   is because an attacker may intercept HTTP connections and inject the header or remove
   it. When your site is accessed over HTTPS with no certificate errors, the browser knows
   your site is HTTPS capable and will honor the <code>Strict-Transport-Security</code>
-  header.</div>
+  header.</p>
+</div>
 
 <h3 id="An_example_scenario">An example scenario</h3>
 

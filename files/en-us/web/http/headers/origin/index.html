@@ -14,8 +14,7 @@ browser-compat: http.headers.Origin
 <p>The <strong><code>Origin</code></strong> request header indicates where a request originates from. It doesn't include any path information. It is similar to the {{HTTPHeader("Referer")}} header, but, unlike that header, it doesn't disclose the whole path.</p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>Basically, browsers add the {{httpheader("Origin")}} request header to:</p>
+  <p><strong>Note:</strong> Basically, browsers add the {{httpheader("Origin")}} request header to:</p>
   <ul>
     <li>all {{Glossary("CORS", "cross origin")}} requests.</li>
     <li><a href="/en-US/docs/Web/Security/Same-origin_policy">same-origin</a> requests except for {{HTTPMethod("GET")}} or {{HTTPMethod("HEAD")}} requests (i.e. they are added to same-origin {{HTTPMethod("POST")}}, {{HTTPMethod("OPTIONS")}}, {{HTTPMethod("PUT")}}, {{HTTPMethod("PATCH")}}, and {{HTTPMethod("DELETE")}} requests).</li>
