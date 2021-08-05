@@ -12,13 +12,13 @@ browser-compat: http.headers.Feature-Policy.gamepad
 ---
 <div>{{HTTPSidebar}} {{SeeCompatTable}}</div>
 
-<p>The HTTP {{HTTPHeader("Feature-Policy")}} header <code>gamepad</code> directive controls whether the current document is allowed to use the <a href="/en-US/docs/Web/API/Gamepad_API">Gamepad API</a>. 
+<p>The HTTP {{HTTPHeader("Feature-Policy")}} header <code>gamepad</code> directive controls whether the current document is allowed to use the <a href="/en-US/docs/Web/API/Gamepad_API">Gamepad API</a>.
   When this policy is disabled, calls to {{domxref('Navigator.getGamepads()')}} will throw a <code>SecurityError</code> {{domxref('DOMException')}}.
   In addition, the {{event("gamepadconnected")}} and {{event("gamepaddisconnected")}} events will not fire.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: http">Feature-Policy: gamepad &lt;allowlist&gt;;</pre>
+<pre>Feature-Policy: gamepad &lt;allowlist&gt;;</pre>
 
 <dl>
   <dt>&lt;allowlist&gt;</dt>
@@ -47,7 +47,7 @@ browser-compat: http.headers.Feature-Policy.gamepad
 
 <p>Then include an {{HTMLElement('iframe','allow','#Attributes')}} attribute on the <code>&lt;iframe&gt;</code> element:</p>
 
-<pre class="brush: http">&lt;iframe src="https://other.com/game" allow="gamepad"&gt;&lt;/iframe&gt;</pre>
+<pre>&lt;iframe src="https://other.com/game" allow="gamepad"&gt;&lt;/iframe&gt;</pre>
 
 <p>iframe attributes can selectively enable features in certain frames, and not in others, even if those frames contain documents from the same origin.</p>
 

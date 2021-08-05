@@ -38,7 +38,7 @@ browser-compat: http.headers.downlink
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: http">Downlink: &lt;number&gt;</pre>
+<pre>Downlink: &lt;number&gt;</pre>
 
 <h2 id="Directives">Directives</h2>
 
@@ -51,11 +51,11 @@ browser-compat: http.headers.downlink
 
 <p>A server first needs to opt in to receive the <code>Downlink</code> header by sending the {{HTTPHeader("Accept-CH")}} response header containing <code>Downlink</code>.</p>
 
-<pre class="brush: http">Accept-CH: Downlink</pre>
+<pre>Accept-CH: Downlink</pre>
 
 <p>Then on subsequent requests the client might send a <code>Downlink</code> header back:</p>
 
-<pre class="brush: http">Downlink: 1.7</pre>
+<pre>Downlink: 1.7</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
