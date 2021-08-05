@@ -12,13 +12,13 @@ browser-compat: http.headers.Feature-Policy.geolocation
 ---
 <div>{{HTTPSidebar}} {{SeeCompatTable}}</div>
 
-<p><span class="seoSummary">The HTTP {{HTTPHeader("Feature-Policy")}} header
+<p>The HTTP {{HTTPHeader("Feature-Policy")}} header
     <code>geolocation</code> directive controls whether the current document is allowed to
     use the {{domxref('Geolocation')}} Interface. When this policy is enabled, calls to
     {{domxref('Geolocation.getCurrentPosition','getCurrentPosition()')}} and
     {{domxref('Geolocation.watchPosition','watchPosition()')}} will cause those functions'
     callbacks to be invoked with a {{domxref('GeolocationPositionError')}} code of
-    <code>PERMISSION_DENIED</code>.</span></p>
+    <code>PERMISSION_DENIED</code>.</p>
 
 <p>By default, the Geolocation API can be used within top-level documents and their
   same-origin child frames. This directive allows or prevents cross-origin frames from
