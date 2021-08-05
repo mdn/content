@@ -52,7 +52,7 @@ browser-compat: api.AuthenticatorAssertionResponse.authenticatorData
   timeout: 60000
 };
 
-navigator.credentials.get({  publickey: options })
+navigator.credentials.get({  publicKey: options })
   .then(function (assertionPKCred) {
     var authenticatorData = assertionPKCred.response.authenticatorData;
     // Maybe try to convert the authenticatorData to see what's inside
