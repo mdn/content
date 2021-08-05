@@ -39,7 +39,7 @@ tags:
 
 <p>A grid is a collection of horizontal and vertical lines creating a pattern against which we can line up our design elements. They help us to create layouts in which our elements won't jump around or change width as we move from page to page, providing greater consistency on our websites.</p>
 
-<p>A grid will typically have <strong>columns</strong>, <strong>rows</strong>, and gaps between each. The columns and rows are commonly referred to as <strong>tracks</strong>, while the gaps are commonly referred to as <strong>gutters</strong>.</p>
+<p>A grid will typically have <strong>columns</strong>, <strong>rows</strong>, and gaps between each. The columns and rows are technically referred to as <strong>tracks</strong> in the specs, while the gaps are commonly referred to as <strong>gutters</strong>.</p>
 
 <p><img alt="" src="grid.png" style="display: block; margin: 0px auto;"></p>
 
@@ -111,7 +111,7 @@ tags:
 
 <h3 id="Flexible_grids_with_the_fr_unit">Flexible grids with the <strong>fr</strong> unit</h3>
 
-<p>In addition to creating grids using lengths and percentages, we can use the <code>fr</code> (<em>fraction</em>) unit to flexibly size grid tracks. <a href="https://mozilladevelopers.github.io/playground/css-grid/04-fr-unit/">MDN</a> defines the <code>fr</code> unit as a unit which represents a fraction of the available space in the grid container. 1fr is one part of the whole. That means if there's only one part in our layout, then 1fr will take up the whole part. Likewise, if there's two parts in our layout and each one has the value of 1fr, then each will take up 50% of the layout. Let's see this in practice.</p>
+<p>In addition to creating grids using lengths and percentages, we can use the <code>fr</code> unit to flexibly size grid rows and columns. This unit represents one fraction of the available space in the grid container.</p>
 
 <p>Change your track listing to the following definition, creating three <code>1fr</code> tracks.</p>
 
