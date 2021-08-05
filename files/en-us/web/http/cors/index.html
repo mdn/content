@@ -115,7 +115,7 @@ xhr.send();
 
 <p>Let's look at what the browser will send to the server in this case, and let's see how the server responds:</p>
 
-<pre class="brush: shell">GET /resources/public-data/ HTTP/1.1
+<pre>GET /resources/public-data/ HTTP/1.1
 Host: bar.other
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:71.0) Gecko/20100101 Firefox/71.0
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
@@ -175,7 +175,7 @@ xhr.send('&lt;person&gt;&lt;name&gt;Arun&lt;/name&gt;&lt;/person&gt;');
 
 <p>Let's look at the full exchange between client and server. The first exchange is the <em>preflight request/response</em>:</p>
 
-<pre class="brush: shell">OPTIONS /doc HTTP/1.1
+<pre>OPTIONS /doc HTTP/1.1
 Host: bar.other
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:71.0) Gecko/20100101 Firefox/71.0
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
@@ -200,7 +200,7 @@ Connection: Keep-Alive
 
 <p>Lines 1 - 10 above represent the preflight request with the {{HTTPMethod("OPTIONS")}} method. The browser determines that it needs to send this based on the request parameters that the JavaScript code snippet above was using, so that the server can respond whether it is acceptable to send the request with the actual request parameters. OPTIONS is an HTTP/1.1 method that is used to determine further information from servers, and is a {{Glossary("Safe/HTTP", "safe")}} method, meaning that it can't be used to change the resource. Note that along with the OPTIONS request, two other request headers are sent (lines 9 and 10 respectively):</p>
 
-<pre class="brush: none">Access-Control-Request-Method: POST
+<pre>Access-Control-Request-Method: POST
 Access-Control-Request-Headers: X-PINGOTHER, Content-Type
 </pre>
 
@@ -208,7 +208,7 @@ Access-Control-Request-Headers: X-PINGOTHER, Content-Type
 
 <p>Lines 13 - 22 above are the response that the server sends back, which indicate that the request method (<code>POST</code>) and request headers (<code>X-PINGOTHER</code>) are acceptable. In particular, let's look at lines 16-19:</p>
 
-<pre class="brush: none">Access-Control-Allow-Origin: https://foo.example
+<pre>Access-Control-Allow-Origin: https://foo.example
 Access-Control-Allow-Methods: POST, GET, OPTIONS
 Access-Control-Allow-Headers: X-PINGOTHER, Content-Type
 Access-Control-Max-Age: 86400</pre>
@@ -221,7 +221,7 @@ Access-Control-Max-Age: 86400</pre>
 
 <p>Once the preflight request is complete, the real request is sent:</p>
 
-<pre class="brush: shell">POST /doc HTTP/1.1
+<pre>POST /doc HTTP/1.1
 Host: bar.other
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:71.0) Gecko/20100101 Firefox/71.0
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
@@ -310,7 +310,7 @@ function callOtherDomain() {
 
 <p>Here is a sample exchange between client and server:</p>
 
-<pre class="brush: shell">GET /resources/credentialed-content/ HTTP/1.1
+<pre>GET /resources/credentialed-content/ HTTP/1.1
 Host: bar.other
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:71.0) Gecko/20100101 Firefox/71.0
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
@@ -374,14 +374,14 @@ Content-Type: text/plain
 
 <p>A returned resource may have one {{HTTPHeader("Access-Control-Allow-Origin")}} header, with the following syntax:</p>
 
-<pre class="brush: none">Access-Control-Allow-Origin: &lt;origin&gt; | *
+<pre>Access-Control-Allow-Origin: &lt;origin&gt; | *
 </pre>
 
 <p><code>Access-Control-Allow-Origin</code> specifies either a single origin, which tells browsers to allow that origin to access the resource; or else — for requests <strong>without</strong> credentials — the "<code>*</code>" wildcard, to tell browsers to allow any origin to access the resource.</p>
 
 <p>For example, to allow code from the origin <code>https://mozilla.org</code> to access the resource, you can specify:</p>
 
-<pre class="brush: none">Access-Control-Allow-Origin: https://mozilla.org
+<pre>Access-Control-Allow-Origin: https://mozilla.org
 Vary: Origin</pre>
 
 <p>If the server specifies a single origin (that may dynamically change based on the requesting origin as part of a allowlist) rather than the "<code>*</code>" wildcard, then the server should also include <code>Origin</code> in the {{HTTPHeader("Vary")}} response header — to indicate to clients that server responses will differ based on the value of the {{HTTPHeader("Origin")}} request header.</p>
@@ -390,12 +390,12 @@ Vary: Origin</pre>
 
 <p>The {{HTTPHeader("Access-Control-Expose-Headers")}} header adds the specified headers to the allowlist that JavaScript (such as {{domxref("XMLHttpRequest.getResponseHeader()","getResponseHeader()")}}) in browsers is allowed to access.</p>
 
-<pre class="brush: none">Access-Control-Expose-Headers: &lt;header-name&gt;[, &lt;header-name&gt;]*
+<picture>Access-Control-Expose-Headers: &lt;header-name&gt;[, &lt;header-name&gt;]*
 </pre>
 
 <p>For example, the following:</p>
 
-<pre class="brush: none">Access-Control-Expose-Headers: X-My-Custom-Header, X-Another-Custom-Header
+<pre>Access-Control-Expose-Headers: X-My-Custom-Header, X-Another-Custom-Header
 </pre>
 
 <p>…would allow the <code>X-My-Custom-Header</code> and <code>X-Another-Custom-Header</code> headers to be exposed to the browser.</p>
@@ -404,7 +404,7 @@ Vary: Origin</pre>
 
 <p>The {{HTTPHeader("Access-Control-Max-Age")}} header indicates how long the results of a preflight request can be cached. For an example of a preflight request, see the above examples.</p>
 
-<pre class="brush: none">Access-Control-Max-Age: &lt;delta-seconds&gt;
+<pre>Access-Control-Max-Age: &lt;delta-seconds&gt;
 </pre>
 
 <p>The <code>delta-seconds</code> parameter indicates the number of seconds the results can be cached.</p>
@@ -413,7 +413,7 @@ Vary: Origin</pre>
 
 <p>The {{HTTPHeader("Access-Control-Allow-Credentials")}} header indicates whether or not the response to the request can be exposed when the <code>credentials</code> flag is true. When used as part of a response to a preflight request, this indicates whether or not the actual request can be made using credentials. Note that simple <code>GET</code> requests are not preflighted, and so if a request is made for a resource with credentials, if this header is not returned with the resource, the response is ignored by the browser and not returned to web content.</p>
 
-<pre class="brush: none">Access-Control-Allow-Credentials: true
+<pre>Access-Control-Allow-Credentials: true
 </pre>
 
 <p><a class="internal" href="#requests_with_credentials">Credentialed requests</a> are discussed above.</p>
@@ -422,7 +422,7 @@ Vary: Origin</pre>
 
 <p>The {{HTTPHeader("Access-Control-Allow-Methods")}} header specifies the method or methods allowed when accessing the resource. This is used in response to a preflight request. The conditions under which a request is preflighted are discussed above.</p>
 
-<pre class="brush: none">Access-Control-Allow-Methods: &lt;method&gt;[, &lt;method&gt;]*
+<pre>Access-Control-Allow-Methods: &lt;method&gt;[, &lt;method&gt;]*
 </pre>
 
 <p>An example of a <a class="internal" href="#preflighted_requests">preflight request is given above</a>, including an example which sends this header to the browser.</p>
@@ -431,7 +431,7 @@ Vary: Origin</pre>
 
 <p>The {{HTTPHeader("Access-Control-Allow-Headers")}} header is used in response to a <a class="internal" href="#preflighted_requests">preflight request</a> to indicate which HTTP headers can be used when making the actual request. This header is the server side response to the browser's {{HTTPHeader("Access-Control-Request-Headers")}} header.</p>
 
-<pre class="brush: none">Access-Control-Allow-Headers: &lt;header-name&gt;[, &lt;header-name&gt;]*
+<pre>Access-Control-Allow-Headers: &lt;header-name&gt;[, &lt;header-name&gt;]*
 </pre>
 
 <h2 id="The_HTTP_request_headers">The HTTP request headers</h2>
@@ -442,7 +442,7 @@ Vary: Origin</pre>
 
 <p>The {{HTTPHeader("Origin")}} header indicates the origin of the cross-site access request or preflight request.</p>
 
-<pre class="brush: none">Origin: &lt;origin&gt;
+<pre>Origin: &lt;origin&gt;
 </pre>
 
 <p>The origin is a URL indicating the server from which the request initiated. It does not include any path information, but only the server name.</p>
@@ -457,7 +457,7 @@ Vary: Origin</pre>
 
 <p>The {{HTTPHeader("Access-Control-Request-Method")}} is used when issuing a preflight request to let the server know what HTTP method will be used when the actual request is made.</p>
 
-<pre class="brush: none">Access-Control-Request-Method: &lt;method&gt;
+<pre>Access-Control-Request-Method: &lt;method&gt;
 </pre>
 
 <p>Examples of this usage can be <a class="internal" href="#preflighted_requests">found above.</a></p>
@@ -466,7 +466,7 @@ Vary: Origin</pre>
 
 <p>The {{HTTPHeader("Access-Control-Request-Headers")}} header is used when issuing a preflight request to let the server know what HTTP headers will be used when the actual request is made (such as with {{domxref("XMLHttpRequest.setRequestHeader()","setRequestHeader()")}}). This browser side header will be answered by the complementary server side header of {{HTTPHeader("Access-Control-Allow-Headers")}}.</p>
 
-<pre class="brush: none">Access-Control-Request-Headers: &lt;field-name&gt;[, &lt;field-name&gt;]*
+<pre>Access-Control-Request-Headers: &lt;field-name&gt;[, &lt;field-name&gt;]*
 </pre>
 
 <p>Examples of this usage can be <a class="internal" href="#preflighted_requests">found above</a>.</p>

@@ -106,12 +106,12 @@ tags:
 <ol>
  <li>Open a TCP connection: The TCP connection is used to send a request, or several, and receive an answer. The client may open a new connection, reuse an existing connection, or open several TCP connections to the servers.</li>
  <li>Send an HTTP message: HTTP messages (before HTTP/2) are human-readable. With HTTP/2, these simple messages are encapsulated in frames, making them impossible to read directly, but the principle remains the same. For example:
-  <pre class="line-numbers  language-html"><code class="language-html">GET / HTTP/1.1
+  <pre>GET / HTTP/1.1
 Host: developer.mozilla.org
-Accept-Language: fr</code></pre>
+Accept-Language: fr</pre>
  </li>
  <li>Read the response sent by the server, such as:
-  <pre class="line-numbers  language-html"><code class="language-html">HTTP/1.1 200 OK
+  <pre>HTTP/1.1 200 OK
 Date: Sat, 09 Oct 2010 14:28:02 GMT
 Server: Apache
 Last-Modified: Tue, 01 Dec 2009 20:18:22 GMT
@@ -120,7 +120,7 @@ Accept-Ranges: bytes
 Content-Length: 29769
 Content-Type: text/html
 
-&lt;!DOCTYPE html... (here comes the 29769 bytes of the requested web page)</code></pre>
+&lt;!DOCTYPE html... (here comes the 29769 bytes of the requested web page)</pre>
  </li>
  <li>Close or reuse the connection for further requests.</li>
 </ol>

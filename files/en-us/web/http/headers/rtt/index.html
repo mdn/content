@@ -38,7 +38,7 @@ browser-compat: http.headers.rtt
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: http">RTT: &lt;number&gt;</pre>
+<pre>RTT: &lt;number&gt;</pre>
 
 <h2 id="Directives">Directives</h2>
 
@@ -51,11 +51,11 @@ browser-compat: http.headers.rtt
 
 <p>A server first needs to opt in to receive the <code>RTT</code> header by sending the {{HTTPHeader("Accept-CH")}} response header containing <code>RTT</code>.</p>
 
-<pre class="brush: http">Accept-CH: RTT</pre>
+<pre>Accept-CH: RTT</pre>
 
 <p>Then on subsequent requests the client might send an <code>RTT</code> header back:</p>
 
-<pre class="brush: http">RTT: 125</pre>
+<pre>RTT: 125</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -80,4 +80,4 @@ browser-compat: http.headers.rtt
  <li><a href="/en-US/docs/Web/HTTP/Caching#varying_responses">HTTP Caching > Varying responses</a> and {{HTTPHeader("Vary")}}</li>
  <li>{{domxref("NetworkInformation.effectiveType")}}</li>
 </ul>
- 
+
