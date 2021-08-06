@@ -255,7 +255,7 @@ tags:
 
 <h2 id="Clearing_boxes_wrapped_around_a_float">Clearing boxes wrapped around a float</h2>
 
-<p>You now know how to clear something following a floated element, but let's see what happens if you have a tall float and a short paragraph, with a box wrapped around both elements. Change your document so that the first paragraph and our floated box are wrapped with a {{htmlelement("div")}} with a class of <code>wrapper</code>.</p>
+<p>You now know how to clear something following a floated element, but let's see what happens if you have a tall float and a short paragraph, with a box wrapped around <em>both</em> elements. Change your document so that the first paragraph and the floated box are jointly wrapped with a {{htmlelement("div")}}, which has a class of <code>wrapper</code>.</p>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div class="box"&gt;Float&lt;/div&gt;
@@ -278,7 +278,7 @@ tags:
     clear: left;
 }</pre>
 
-<p>You will see that, just like in the example where we put a background color on the paragraph, the background color runs behind the float.</p>
+<p>You'll see that, just like in the example where we put a background color on the paragraph, the background color runs behind the float.</p>
 
 <div id="Float_4">
 <div class="hidden">
