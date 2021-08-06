@@ -145,8 +145,15 @@ try {
 }
 ```
 
-> **Note** You should also use the `cause` property if re-throwing [custom error types](#custom_error_types). 
-
+You can also use the `cause` property in [custom error types](#custom_error_types), provided the subclasses' constructor passes the `options` parameter when calling `super()`:
+```js
+class MyError extends Error {
+  constructor(/* some arguments */) {
+    // Needs to pass both `message` and `options` to install the "cause" property. 
+    super(message, options);
+  }
+}
+```
 
 ### Custom Error Types
 
