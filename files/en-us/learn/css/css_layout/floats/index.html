@@ -323,7 +323,7 @@ tags:
 
 <p>{{ EmbedLiveSample('Float_4', '100%', 600) }}</p>
 
-<p>Once again, this is because the float has been taken out of normal flow. Clearing the following element doesn't help with this box clearing problem, where you want the bottom of the box to wrap the floated item and wrapping content even if the content is shorter. There are three potential ways to deal with this, two of which work in all browsers — yet are slightly hacky — and a third new way that deals with this situation properly.</p>
+<p>Once again, this is because the float has been taken out of normal flow. Clearing the following element won't work as it did before. This is a problem if you want the box to wrap jointly around the floated item as well as the text of the first paragraph that wraps around the float, while also having the following content cleared of the box. There are three potential ways to deal with this, two of which work in all browsers — yet are slightly hacky — and a third, newer way that deals with this situation properly.</p>
 
 <h3 id="The_clearfix_hack">The clearfix hack</h3>
 
