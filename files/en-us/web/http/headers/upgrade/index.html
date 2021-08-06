@@ -11,10 +11,10 @@ browser-compat: http.headers.Upgrade
 ---
 <p>{{HTTPSidebar}}</p>
 
-<p>The HTTP 1.1 (only) <code>Upgrade</code> header can be used to upgrade an already established client/server connection to a different protocol (over the same transport protocol). For example, it can be used by a client to upgrade a connection from HTTP 1.1 to HTTP 2.0, or an HTTP or HTTPS connection into a WebSocket.</p>
+<p>The HTTP 1.1 (only) <code>Upgrade</code> header can be used to upgrade an already established client/server connection to a different protocol (over the same transport protocol). For example, it can be used by a client to upgrade a connection from HTTP 1.1 to HTTP 2.0, or an HTTP or HTTPS connection into a WebSocket.</p>
 
 <div class="notecard warning">
-<p>HTTP/2 explicitly disallows the use of this mechanism/header; it is specific to HTTP/1.1.</p>
+  <p><strong>Warning:</strong> HTTP/2 explicitly disallows the use of this mechanism/header; it is specific to HTTP/1.1.</p>
 </div>
 
 <table class="properties">
@@ -42,7 +42,7 @@ Connection: upgrade
 Upgrade: example/1, foo/2</pre>
 
 <div class="notecard note">
-<p><strong>Note</strong>: <code>Connection: upgrade</code> must be set whenever <code>Upgrade</code> is sent.</p>
+  <p><strong>Note:</strong> <code>Connection: upgrade</code> must be set whenever <code>Upgrade</code> is sent.</p>
 </div>
 
 <p>The server can choose to ignore the request, for any reason, in which case it should just respond as though the <code>Upgrade</code> header had not been sent (for example, with a  {{HTTPStatus(200, "200 OK")}}).</p>

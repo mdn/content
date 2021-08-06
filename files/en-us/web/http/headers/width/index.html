@@ -47,7 +47,7 @@ browser-compat: http.headers.Width
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: http">Width: &lt;number&gt;</pre>
+<pre>Width: &lt;number&gt;</pre>
 
 <h2 id="Directives">Directives</h2>
 
@@ -61,11 +61,11 @@ browser-compat: http.headers.Width
 
 <p>The server first needs to opt in to receive the <code>Width</code> header by sending the response headers {{HTTPHeader("Accept-CH")}} containing <code>Width</code>.</p>
 
-<pre class="brush: http">Accept-CH: Width</pre>
+<pre>Accept-CH: Width</pre>
 
 <p>Then on subsequent requests the client might send <code>Width</code> header back:</p>
 
-<pre class="brush: http">Width: 1920</pre>
+<pre>Width: 1920</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

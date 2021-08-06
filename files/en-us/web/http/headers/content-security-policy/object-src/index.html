@@ -23,13 +23,13 @@ browser-compat: http.headers.csp.Content-Security-Policy.object-src
 <p>To set allowed types for {{HTMLElement("object")}}, {{HTMLElement("embed")}}, and
   {{HTMLElement("applet")}} elements, use the {{CSP("plugin-types")}} directive.</p>
 
-<p class="note">Elements controlled by <code>object-src</code> are perhaps coincidentally
-  considered legacy HTML elements and aren't receiving new standardized features (such as
-  the security attributes <code>sandbox</code> or <code>allow</code> for
-  <code>&lt;iframe&gt;</code>). Therefore it is <a
-    href="https://csp.withgoogle.com/docs/strict-csp.html">recommended</a> to restrict
-  this fetch-directive (e.g. explicitly set <code>object-src 'none'</code> if possible).
-</p>
+<div class="notecard note">
+  <p><strong>Note:</strong> Elements controlled by <code>object-src</code> are perhaps coincidentally
+    considered legacy HTML elements and aren't receiving new standardized features (such as
+    the security attributes <code>sandbox</code> or <code>allow</code> for
+    <code>&lt;iframe&gt;</code>). Therefore it is <a href="https://csp.withgoogle.com/docs/strict-csp.html">recommended</a> to restrict
+    this fetch-directive (e.g. explicitly set <code>object-src 'none'</code> if possible).</p>
+</div>
 
 <table class="properties">
   <tbody>

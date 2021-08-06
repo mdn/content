@@ -15,13 +15,8 @@ browser-compat: api.GainNode.GainNode
 
 <p>The <strong><code>GainNode()</code></strong> constructor of the <a
 		href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> creates a new
-	{{domxref("GainNode")}} object which an {{domxref("AudioNode")}} that represents a
+	{{domxref("GainNode")}} object which is an {{domxref("AudioNode")}} that represents a
 	change in volume.</p>
-
-<div class="note">
-	<p><strong>Note</strong>: You should typically call
-		{{domxref("BaseAudioContext.createGain")}} to create a gain node.</p>
-</div>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -34,7 +29,7 @@ browser-compat: api.GainNode.GainNode
 
 <dl>
 	<dt><code>context</code></dt>
-	<dd>A reference to an {{domxref("AudioContext")}}.</dd>
+	<dd>A reference to a {{domxref("BaseAudioContext")}}, e.g. an {{domxref("AudioContext")}}.</dd>
 	<dt><code>options</code> {{optional_inline}}</dt>
 	<dd>Options are as follows:
 		<ul>

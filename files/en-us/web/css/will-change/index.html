@@ -38,7 +38,7 @@ will-change: unset;
 
 <ul>
  <li>
-  <p id="Don't_apply_will-change_to_too_many_elements"><em>Don't apply will-change to too many elements.</em> The browser already tries as hard as it can to optimize everything. Some of the stronger optimizations that are likely to be tied to <code>will-change</code> end up using a lot of a machine’s resources, and when overused like this can cause the page to slow down or consume a lot of resources.</p>
+  <p><em>Don't apply will-change to too many elements.</em> The browser already tries as hard as it can to optimize everything. Some of the stronger optimizations that are likely to be tied to <code>will-change</code> end up using a lot of a machine’s resources, and when overused like this can cause the page to slow down or consume a lot of resources.</p>
  </li>
  <li>
   <p><em>Use sparingly.</em> The normal behavior for optimizations that the browser make is to remove the optimizations as soon as it can and revert back to normal. But adding <code>will-change</code> directly in a stylesheet implies that the targeted elements are always a few moments away from changing and the browser will keep the optimizations for much longer time than it would have otherwise. So it is a good practice to switch <code>will-change</code> on and off using script code before and after the change occurs.</p>
@@ -47,7 +47,7 @@ will-change: unset;
   <p><em>Don't apply will-change to elements to perform premature optimization</em>. If your page is performing well, don't add the <code>will-change</code> property to elements just to wring out a little more speed. <code>will-change</code> is intended to be used as something of a last resort, in order to try to deal with existing performance problems. It should not be used to anticipate performance problems. Excessive use of <code>will-change</code> will result in excessive memory use and will cause more complex rendering to occur as the browser attempts to prepare for the possible change. This will lead to worse performance.</p>
  </li>
  <li>
-  <p id="Give_it_sufficient_time_to_work"><em>Give it sufficient time to work</em>. This property is intended as a method for authors to let the user-agent know about properties that are likely to change ahead of time. Then the browser can choose to apply any ahead-of-time optimizations required for the property change before the property change actually happens. So it is important to give the browser some time to actually do the optimizations. Find some way to predict at least slightly ahead of time that something will change, and set <code>will-change</code> then.</p>
+  <p><em>Give it sufficient time to work</em>. This property is intended as a method for authors to let the user-agent know about properties that are likely to change ahead of time. Then the browser can choose to apply any ahead-of-time optimizations required for the property change before the property change actually happens. So it is important to give the browser some time to actually do the optimizations. Find some way to predict at least slightly ahead of time that something will change, and set <code>will-change</code> then.</p>
  </li>
  <li>
   <p><em>Be aware, that will-change may actually influence the visual appearance of elements</em>, when used with property values, that create a <a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context">stacking context</a> (e.g. will-change: opacity), as the stacking context is created up front.</p>

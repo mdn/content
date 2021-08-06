@@ -88,8 +88,7 @@ tags:
 <p>Next, you should configure your server to map the .pac filename extension to the MIME type.</p>
 
 <div class="notecard note">
-<h4>Notes</h4>
-
+  <p><strong>Note:</strong></p>
 <ul>
  <li>The JavaScript function should always be saved to a file by itself but not be embedded in a HTML file or any other file.</li>
  <li>The examples at the end of this document are complete. There is no additional syntax needed to save it into a file and use it. (Of course, the JavaScripts must be edited to reflect your site's domain name and/or subnets.)</li>
@@ -143,13 +142,11 @@ tags:
 </ul>
 
 <div class="notecard note">
-  <h4>Note</h4>
-<p>pactester (part of the <a href="https://github.com/pacparser/pacparser">pacparser </a>package) was used to test the following syntax examples.</p>
-
-<ul>
- <li>The PAC file is named <code>proxy.pac</code></li>
- <li>Command line: <code>pactester -p ~/pacparser-master/tests/proxy.pac -u http://www.mozilla.org</code> (passes the <code>host</code> parameter <code>www.mozilla.org</code> and the <code>url</code> parameter <code>http://www.mozilla.org</code>)</li>
-</ul>
+  <p><strong>Note:</strong> pactester (part of the <a href="https://github.com/pacparser/pacparser">pacparser </a>package) was used to test the following syntax examples.</p>
+  <ul>
+    <li>The PAC file is named <code>proxy.pac</code></li>
+    <li>Command line: <code>pactester -p ~/pacparser-master/tests/proxy.pac -u http://www.mozilla.org</code> (passes the <code>host</code> parameter <code>www.mozilla.org</code> and the <code>url</code> parameter <code>http://www.mozilla.org</code>)</li>
+  </ul>
 </div>
 
 <h3 id="isPlainHostName">isPlainHostName()</h3>
@@ -324,8 +321,8 @@ function FindProxyForURL(url, host) {
 
 <p>Returns the server IP address of the machine Firefox is running on, as a string in the dot-separated integer format.</p>
 
-<div class="warning">
-<p>myIpAddress() returns the same IP address as the server address returned by <strong><code>nslookup localhost</code></strong> on a Linux machine. It does not return the public IP address.</p>
+<div class="notecard warning">
+  <p><strong>Warning:</strong> myIpAddress() returns the same IP address as the server address returned by <strong><code>nslookup localhost</code></strong> on a Linux machine. It does not return the public IP address.</p>
 </div>
 
 <h4 id="Example_3">Example</h4>
@@ -373,10 +370,10 @@ dnsDomainLevels("www.mozilla.org"); // 2
 
 <p>Support for particular glob expression syntax varies across browsers:
   <code>*</code> (match any number of characters) and <code>?</code> (match one character) are always supported,
-  while <code>[characters]</code> and <code>[^characters]</code> are additionally supported by some implementations (including Firefox). </p>
+  while <code>[characters]</code> and <code>[^characters]</code> are additionally supported by some implementations (including Firefox).</p>
 
 <div class="notecard note">
-<p>If supported by the client, JavaScript regular expressions typically provide a more powerful and consistent way to pattern-match URLs (and other strings).</p>
+  <p><strong>Note:</strong> If supported by the client, JavaScript regular expressions typically provide a more powerful and consistent way to pattern-match URLs (and other strings).</p>
 </div>
 
 
@@ -392,8 +389,7 @@ shExpMatch("http://home.netscape.com/people/montulli/index.html", "*/ari/*"); //
 <pre class="brush: js">weekdayRange(<var>wd1</var>, <var>wd2</var>, [<var>gmt</var>])</pre>
 
 <div class="notecard note">
-  <h4>Notes</h4>
-<p>(Before Firefox 49) wd1 must be less than wd2 if you want the function to evaluate these parameters as a range. See the warning below.</p>
+  <p><strong>Note:</strong> (Before Firefox 49) wd1 must be less than wd2 if you want the function to evaluate these parameters as a range. See the warning below.</p>
 </div>
 
 <h4 id="Parameters_12">Parameters</h4>
@@ -414,8 +410,13 @@ shExpMatch("http://home.netscape.com/people/montulli/index.html", "*/ari/*"); //
 
 <p>If both <strong>wd1</strong> and <strong>wd1</strong> are defined, the condition is true if the current weekday is in between those two <em>ordered</em> weekdays. Bounds are inclusive, <em>but the bounds are ordered</em>. If the "GMT" parameter is specified, times are taken to be in GMT. Otherwise, the local timezone is used.</p>
 
-<div class="warning">
-<p><strong>The order of the days matters</strong>; Before Firefox 49, <code>weekdayRange("<em>SUN", "SAT"</em>)</code> will always evaluate to true. Now <code>weekdayRange("<em>WED", "SUN"</em>)</code> will only evaluate true if the current day is Wednesday or Sunday.</p>
+<div class="notecard warning">
+  <p>
+    <strong>Warning:</strong> <em>The order of the days matters</em>.
+    Before Firefox 49, <code>weekdayRange("<em>SUN", "SAT"</em>)</code> will always evaluate to <code>true</code>.
+    Now <code>weekdayRange("<em>WED", "SUN"</em>)</code> will only evaluate to <code>true</code>
+    if the current day is Wednesday or Sunday.
+  </p>
 </div>
 
 <h4 id="Examples_9">Examples</h4>
@@ -439,8 +440,7 @@ dateRange(&lt;month1&gt;, &lt;year1&gt;, &lt;month2&gt;, &lt;year2&gt;, [gmt])
 dateRange(&lt;day1&gt;, &lt;month1&gt;, &lt;year1&gt;, &lt;day2&gt;, &lt;month2&gt;, &lt;year2&gt;, [gmt])</pre>
 
 <div class="notecard note">
-  <h4>Note</h4>
-<p>(Before Firefox 49) day1 must be less than day2, month1 must be less than month2, and year1 must be less than year2 if you want the function to evaluate these parameters as a range. See the warning below.</p>
+  <p><strong>Note:</strong> (Before Firefox 49) day1 must be less than day2, month1 must be less than month2, and year1 must be less than year2 if you want the function to evaluate these parameters as a range. See the warning below.</p>
 </div>
 
 <h4 id="Parameters_13">Parameters</h4>
@@ -469,8 +469,7 @@ dateRange(&lt;day1&gt;, &lt;month1&gt;, &lt;year1&gt;, &lt;day2&gt;, &lt;month2&
 <p>If only a single value is specified (from each category: day, month, year), the function returns a true value only on days that match that specification. If both values are specified, the result is true between those times, including bounds, <em>but the bounds are ordered</em>.</p>
 
 <div class="notecard warning">
-  <h4>Warning</h4>
-<p><strong>The order of the days, months, and years matter</strong>; Before Firefox 49, <code>dateRange("<em>JAN", "DEC"</em>)</code> will always evaluate to <code>true</code>. Now <code>dateRange("<em>DEC", "JAN"</em>)</code> will only evaluate true if the current month is December or January.</p>
+  <p><strong>Warning:</strong> <strong>The order of the days, months, and years matter</strong>; Before Firefox 49, <code>dateRange("<em>JAN", "DEC"</em>)</code> will always evaluate to <code>true</code>. Now <code>dateRange("<em>DEC", "JAN"</em>)</code> will only evaluate true if the current month is December or January.</p>
 </div>
 
 <h4 id="Examples_10">Examples</h4>
@@ -506,8 +505,7 @@ dateRange(1995, 1997);
 timeRange(&lt;hour1&gt;, &lt;min1&gt;, &lt;sec1&gt;, &lt;hour2&gt;, &lt;min2&gt;, &lt;sec2&gt;, [gmt])</pre>
 
 <div class="notecard note">
-  <h4>Note</h4>
-<p>(Before Firefox 49) the category hour1, min1, sec1 must be less than the category hour2, min2, sec2 if you want the function to evaluate these parameters as a range. See the warning below.</p>
+  <p><strong>Note:</strong> (Before Firefox 49) the category hour1, min1, sec1 must be less than the category hour2, min2, sec2 if you want the function to evaluate these parameters as a range. See the warning below.</p>
 </div>
 
 <h4 id="Parameters_14">Parameters</h4>
@@ -526,8 +524,7 @@ timeRange(&lt;hour1&gt;, &lt;min1&gt;, &lt;sec1&gt;, &lt;hour2&gt;, &lt;min2&gt;
 <p>If only a single value is specified (from each category: hour, minute, second), the function returns a true value only at times that match that specification. If both values are specified, the result is true between those times, including bounds, <em>but the bounds are ordered</em>.</p>
 
 <div class="notecard warning">
-  <h4>Warning</h4>
-<p><strong>The order of the hour, minute, second matter</strong>; Before Firefox 49, <code>timeRange(<em>0, 23</em>)</code> will always evaluate to true. Now <code>timeRange(<em>23, 0</em>)</code> will only evaluate true if the current hour is 23:00 or midnight.</p>
+  <p><strong>Warning:</strong> <strong>The order of the hour, minute, second matter</strong>; Before Firefox 49, <code>timeRange(<em>0, 23</em>)</code> will always evaluate to true. Now <code>timeRange(<em>23, 0</em>)</code> will only evaluate true if the current hour is 23:00 or midnight.</p>
 </div>
 
 <h4 id="Examples_11">Examples</h4>
@@ -566,8 +563,7 @@ alert("Error: shouldn't reach this clause.");      // log a simple message</pre>
 <h3 id="Use_proxy_for_everything_except_local_hosts">Use proxy for everything except local hosts</h3>
 
 <div class="notecard note">
-  <h4>Note</h4>
-<p>Since all of the examples that follow are very specific, they have not been tested.</p>
+  <p><strong>Note:</strong> Since all of the examples that follow are very specific, they have not been tested.</p>
 </div>
 
 <p>All hosts which aren't fully qualified, or the ones that are in local domain, will be connected to directly. Everything else will go through <code>w3proxy.mozilla.org:8080</code>. If the proxy goes down, connections become direct automatically:</p>
@@ -581,8 +577,7 @@ alert("Error: shouldn't reach this clause.");      // log a simple message</pre>
 }</pre>
 
 <div class="notecard note">
-  <h4>Note</h4>
-<p>This is the simplest and most efficient autoconfig file for cases where there's only one proxy.</p>
+  <p><strong>Note:</strong> This is the simplest and most efficient autoconfig file for cases where there's only one proxy.</p>
 </div>
 
 <h2 id="Example_2_2">Example 2</h2>
@@ -606,8 +601,7 @@ alert("Error: shouldn't reach this clause.");      // log a simple message</pre>
 <p>The above example will use the proxy for everything except local hosts in the mozilla.org domain, with the further exception that hosts <code>www.mozilla.org</code> and <code>merchant.mozilla.org</code> will go through the proxy.</p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-<p>The order of the above exceptions for efficiency: <code>localHostOrDomainIs()</code> functions only get executed for URLs that are in local domain, not for every URL. Be careful to note the parentheses around the <em>or</em> expression before the <em>and</em> expression to achieve the above-mentioned efficient behavior.</p>
+  <p><strong>Note:</strong> The order of the above exceptions for efficiency: <code>localHostOrDomainIs()</code> functions only get executed for URLs that are in local domain, not for every URL. Be careful to note the parentheses around the <em>or</em> expression before the <em>and</em> expression to achieve the above-mentioned efficient behavior.</p>
 </div>
 
 <h2 id="Example_3_2">Example 3</h2>
@@ -729,7 +723,7 @@ alert("Error: shouldn't reach this clause.");      // log a simple message</pre>
   else if (url.startsWith("ftp:"))
     return "PROXY ftp-proxy.mydomain.com:8080";
 
-  else if (url.startsWith(“gopher:"))
+  else if (url.startsWith("gopher:"))
     return "PROXY gopher-proxy.mydomain.com:8080";
 
   else if (url.startsWith("https:") || url.startsWith("snews:"))
@@ -741,8 +735,7 @@ alert("Error: shouldn't reach this clause.");      // log a simple message</pre>
 }</pre>
 
 <div class="notecard note">
-  <h4>Note</h4>
-<p>The same can be accomplished using the <code><a href="#shexpmatch">shExpMatch()</a></code> function described earlier.</p>
+  <p><strong>Note:</strong> The same can be accomplished using the <code><a href="#shexpmatch">shExpMatch()</a></code> function described earlier.</p>
 </div>
 
 <p>For example:</p>
@@ -754,15 +747,14 @@ if (shExpMatch(url, "http:*")) {
 // ...</pre>
 
 <div class="notecard note">
-<p>The autoconfig file can be output by a CGI script. This is useful, for example, when making the autoconfig file act differently based on the client IP address (the <code>REMOTE_ADDR</code> environment variable in CGI).</p>
-
-<p>Usage of <code>isInNet()</code>, <code>isResolvable()</code> and <code>dnsResolve()</code> functions should be carefully considered, as they require the DNS server to be consulted. All the other autoconfig-related functions are mere string-matching functions that don't require the use of a DNS server. If a proxy is used, the proxy will perform its DNS lookup which would double the impact on the DNS server. Most of the time these functions are not necessary to achieve the desired result.</p>
+  <p><strong>Note:</strong> The autoconfig file can be output by a CGI script. This is useful, for example, when making the autoconfig file act differently based on the client IP address (the <code>REMOTE_ADDR</code> environment variable in CGI).</p>
+  <p>Usage of <code>isInNet()</code>, <code>isResolvable()</code> and <code>dnsResolve()</code> functions should be carefully considered, as they require the DNS server to be consulted. All the other autoconfig-related functions are mere string-matching functions that don't require the use of a DNS server. If a proxy is used, the proxy will perform its DNS lookup which would double the impact on the DNS server. Most of the time these functions are not necessary to achieve the desired result.</p>
 </div>
 
 <h2 id="History_and_implementation">History and implementation</h2>
 
 <p>Proxy auto-config was introduced into Netscape Navigator 2.0 in the late 1990s, at the same time when JavaScript was introduced. Open-sourcing Netscape eventually lead to Firefox itself.</p>
 
-<p>The most "original" implementation of PAC and its JavaScript libraries is, therefore, <code>nsProxyAutoConfig.js</code> found in early versions of Firefox. These utilities are found in many other open-source systems including <a href="https://cs.chromium.org/chromium/src/services/proxy_resolver/pac_js_library.h">Chromium</a>. Firefox later integrated the file into <code><a href="https://dxr.mozilla.org/mozilla-central/source/netwerk/base/ProxyAutoConfig.cpp">ProxyAutoConfig.cpp</a></code> as a C++ string literal. To extract it into its own file, it suffices to copy the chunk into JavaScript with a <code>console.log</code> directive to print it.</p>
+<p>The most "original" implementation of PAC and its JavaScript libraries is, therefore, <code>nsProxyAutoConfig.js</code> found in early versions of Firefox. These utilities are found in many other open-source systems including <a href="https://cs.chromium.org/chromium/src/services/proxy_resolver/pac_js_library.h">Chromium</a>. Firefox later integrated the file into <code><a href="https://dxr.mozilla.org/mozilla-central/source/netwerk/base/ProxyAutoConfig.cpp">ProxyAutoConfig.cpp</a></code> as a C++ string literal. To extract it into its own file, it suffices to copy the chunk into JavaScript with a <code>console.log</code> directive to print it.</p>
 
 <p>Microsoft in general made its own implementation. There used to be <a href="https://en.wikipedia.org/wiki/Proxy_auto-config#Old_Microsoft_problems">some problems with their libraries</a>, but most are resolved by now. They have defined <a href="https://docs.microsoft.com/en-us/windows/win32/winhttp/ipv6-extensions-to-navigator-auto-config-file-format">some new "Ex" suffixed functions</a> around the address handling parts to support IPv6. The feature is supported by Chromium, but not yet by Firefox (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=558253">bugzilla #558253</a>).</p>

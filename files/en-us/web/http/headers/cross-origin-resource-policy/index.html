@@ -11,15 +11,17 @@ browser-compat: http.headers.Cross-Origin-Resource-Policy
 ---
 <div>{{HTTPSidebar}}</div>
 
-<div class="note">
-  <p><strong>Note:</strong> Due to a <a
-      href="https://bugs.chromium.org/p/chromium/issues/detail?id=1074261">bug in
-      Chrome</a>, setting Cross-Origin-Resource-Policy can break PDF rendering, preventing
-    visitors from being able to read past the first page of some PDFs. Due to a <a
-      href="https://bugzilla.mozilla.org/show_bug.cgi?id=1638323">bug in Firefox</a>,
-    setting Cross-Origin-Resource-Policy can prevent some resources (such as PDFs) from
-    being downloaded in some circumstances. Exercise caution using this header in a
-    production environment.</p>
+<div class="notecard note">
+  <p>
+    <strong>Note:</strong> Due to a <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=1074261">bug in Chrome</a>,
+    setting Cross-Origin-Resource-Policy can break PDF rendering,
+    preventing visitors from being able to read past the first page of some PDFs.
+    Due to a <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1638323">bug in Firefox</a>,
+    setting Cross-Origin-Resource-Policy can prevent some resources
+    (such as PDFs)
+    from being downloaded in some circumstances.
+    Exercise caution using this header in a production environment.
+  </p>
 </div>
 
 <p>The HTTP <strong><code>Cross-Origin-Resource-Policy</code></strong> response header

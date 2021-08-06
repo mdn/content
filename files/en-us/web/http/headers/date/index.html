@@ -15,16 +15,15 @@ browser-compat: http.headers.Date
 	at which the message was originated.</p>
 
 <div class="notecard warning">
-	<p>Note that <code>Date</code> is listed in the <a
-			href="https://fetch.spec.whatwg.org/#forbidden-header-name"
-			rel="nofollow noreferrer">forbidden header names</a> in the fetch spec - so
-		this code will not send <code>Date</code> header:</p>
+	<p><strong>Warning:</strong> <code>Date</code> is listed
+    in the <a href="https://fetch.spec.whatwg.org/#forbidden-header-name">forbidden header names</a>
+    in the fetch spec, so this code will not send the <code>Date</code> header:</p>
 
-	<pre class="brush: js">fetch('https://httpbin.org/get', {
-    'headers': {
+	  <pre class="brush: js">fetch('https://httpbin.org/get', {
+      'headers': {
         'Date': (new Date()).toUTCString()
-    }
-})</pre>
+      }
+    })</pre>
 </div>
 
 <table class="properties">
