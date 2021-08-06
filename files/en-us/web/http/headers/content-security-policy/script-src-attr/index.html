@@ -57,7 +57,7 @@ Content-Security-Policy: script-src-attr &lt;source&gt;;
 
 <h3 id="Sources">Sources</h3>
 
-dl>
+<dl>
   <dt>&lt;host-source&gt;</dt>
   <dd>Internet hosts by name or IP address, as well as an optional <a href="/en-US/docs/Learn/Common_questions/What_is_a_URL">URL scheme</a> and/or port number. The site's address may include an optional leading wildcard (the asterisk character, <code>'*'</code>), and you may use a wildcard (again, <code>'*'</code>) as the port number, indicating that all legal ports are valid for the source.<br>
   Examples:
@@ -88,7 +88,7 @@ dl>
   <dt><code>'none'</code></dt>
   <dd>Refers to the empty set; that is, no URLs match. The single quotes are required.</dd>
   <dt>'nonce-&lt;base64-value&gt;'</dt>
-  <dd>An allow-list for specific inline scripts using a cryptographic nonce (number used once). The server must generate a unique nonce value each time it transmits a policy. It is critical to provide an unguessable nonce, as bypassing a resource's policy is otherwise trivial. See <a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#unsafe_inline_script">unsafe inline script</a> for an example. Specifying nonce makes a modern browser ignore <code>'unsafe-inline'</code> which could still be set for older browsers without nonce support.
+  <dd>An allow-list for specific inline scripts using a cryptographic nonce (number used once). The server must generate a unique nonce value each time it transmits a policy. It is critical to provide an unguessable nonce, as bypassing a resource^s policy is otherwise trivial. See <a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#unsafe_inline_script">unsafe inline script</a> for an example. Specifying nonce makes a modern browser ignore <code>'unsafe-inline'</code> which could still be set for older browsers without nonce support.
     <div class="notecard note">
       <p><strong>Note:</strong> The CSP <code>nonce</code> source can only be applied to <em>nonceable</em> elements (e.g., as the {{HTMLElement("img")}} element has no <code>nonce</code> attribute, there is no way to associate it with this CSP source).</p>
     </div>
