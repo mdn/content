@@ -25,19 +25,12 @@ browser-compat: api.TextTrack.mode
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js">var <em>mode</em> = <em>textTrack</em>.mode;
-
-<em>textTrack</em>.mode = "disabled" | "hidden" | "showing";</pre>
+<pre class="brush: js">let mode = textTrack.mode;
+textTrack.mode = a;</pre>
 
 <h3 id="Value">Value</h3>
 
-<p>A {{domxref("DOMString")}} which indicates the track's current mode. The text track
-  mode is one of the values listed below, under {{anch("Text track mode constants")}}.</p>
-
-<h4 id="Text_track_mode_constants">Text track mode constants</h4>
-
-<p>The text track mode—sometimes identified using the IDL enum
-  <code>TextTrackMode</code>—must be one of the following values:</p>
+<p>A {{domxref("DOMString")}} which indicates the track's current mode. One of:</p>
 
 <dl>
   <dt><code>disabled</code></dt>

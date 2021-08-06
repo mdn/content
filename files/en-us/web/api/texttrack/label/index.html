@@ -1,0 +1,41 @@
+---
+title: TextTrack.label
+slug: Web/API/TextTrack/label
+tags:
+  - API
+  - Property
+  - Reference
+  - label
+  - TextTrack
+browser-compat: api.TextTrack.label
+---
+<div>{{APIRef("WebVTT")}}</div>
+
+<p class="summary">The <strong><code>label</code></strong> read-only property of the {{domxref("TextTrack")}} interface returns a human-readable label for the text track, if it is available.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js">let label = TextTrack.label;</pre>
+
+<h3>Value</h3>
+<p>A {{domxref("DOMString","string")}} containing the <code>label</code>, or an empty string.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<p>In the following example the value of <code>label</code> is printed to the console.</p>
+
+<pre class="brush: js">let video = document.querySelector('video');
+let track = video.addTextTrack("captions", "Captions", "en");
+track.mode = "showing";
+console.log(track.label);
+</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<p>{{Specifications}}</p>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>
+
+
