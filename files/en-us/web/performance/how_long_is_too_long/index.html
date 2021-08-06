@@ -19,11 +19,11 @@ tags:
 
 <p>In optimizing for performance, do set an ambitious first load goal, such as 5 seconds over the mobile 3G network and 1.5 seconds on an office T1 line, with even more ambitious page load goals for subsequent page loads, leveraging service workers and caching. There are different suggested times for initially loading the page versus loading additional assets, responding to user interaction, and ensuring smooth animations:</p>
 
-<h3 id="Idling_goal">Idling goal</h3>
+<h2 id="Idling_goal">Idling goal</h2>
 
 <p>Browsers are single threaded (though background threads are supported for web workers). This means that user interaction, painting, and script execution are all on the same thread. If the thread is busy doing complex JavaScript execution, the main thread will not be available to react to user input, such as pressing a button. For this reason, script execution should be limited in scope, divided into chunks of code that can be executed in 50ms or less. This makes the thread available for user interactions.</p>
 
-<h3 id="Animation_goal">Animation goal</h3>
+<h2 id="Animation_goal">Animation goal</h2>
 
 <p>For scrolling and other animations to look smooth and feel responsive, the content repaints should occur at 60 frames per second (60fps), which is once every 16.7ms. The 16.7 milliseconds includes scripting, reflow, and repaint. Realize a document takes about 6ms to render a frame, leaving about 10ms for the rest. Anything less than 60fps, especially an un-even or changing frame rate, will appear janky.</p>
 
