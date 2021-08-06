@@ -41,7 +41,7 @@ function bar(x) {
 console.log(bar(7)) //returns 42
 ```
 
-When calling `bar`, a first frame is created containing `bar`'s arguments and local variables. When `bar` calls `foo`, a second frame is created and pushed on top of the first one containing `foo`'s arguments and local variables. When `foo` returns, the top frame element is popped out of the stack (leaving only `bar`'s call frame). When `bar` returns, the stack is empty.
+When calling `bar`, a first frame is created containing references to `bar`'s arguments and local variables. When `bar` calls `foo`, a second frame is created and pushed on top of the first one containing references to `foo`'s arguments and local variables. When `foo` returns, the top frame element is popped out of the stack (leaving only `bar`'s call frame). When `bar` returns, the stack is empty. Note that the arguments and local variables may continue to exist as they are stored outside the stack so they can be accessed by any [nested functions](/en-US/docs/Web/JavaScript/Guide/Functions#nested_functions_and_closures) long after their outer function has returned.
 
 ### Heap
 
