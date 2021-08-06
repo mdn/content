@@ -1,6 +1,6 @@
 ---
-title: Intl.Segmenter.Segments.containing.@@iterator
-slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/Segments/@@iterator
+title: Intl.Segmenter.Segments.next()
+slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/Segments/next
 tags:
   - JavaScript
   - Intl
