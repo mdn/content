@@ -17,7 +17,7 @@ tags:
 
 <div>{{PreviousMenuNext("Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout")}}</div>
 
-<p class="summary">Originally for floating images inside blocks of text, the {{cssxref("float")}} property became one of the most commonly used tools for creating multiple column layouts on webpages. With the advent of flexbox and grid it has now returned to its original purpose, as this article explains.</p>
+<p class="summary">Originally for floating images inside blocks of text, the {{cssxref("float")}} property became one of the most commonly used tools for creating multiple column layouts on webpages. With the advent of flexbox and grid it's now returned to its original purpose, as this article explains.</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -44,9 +44,9 @@ tags:
 
 <h2 id="A_simple_float_example">A simple float example</h2>
 
-<p>Let's explore how to use floats. We'll start with a really simple example involving floating a block of text around an element. You can follow along by creating a new <code>index.html</code> file on your computer, filling it with a <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html">simple HTML template</a>, and inserting the below code into it at the appropriate places. At the bottom of the section, you can see a live example of what the final code should look like.</p>
+<p>Let's explore the use of floats. We'll start with a really simple example involving floating a block of text around an element. You can follow along by creating a new <code>index.html</code> file on your computer, filling it with a <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html">simple HTML template</a>, and inserting the below code into it at the appropriate places. At the bottom of the section, you can see a live example of what the final code should look like.</p>
 
-<p>First, we'll start off with some simple HTML — add the following to your HTML body, removing anything that was inside there before:</p>
+<p>First, we'll start off with some simple HTML. Add the following to your HTML body, removing anything that was inside there before:</p>
 
 <pre class="brush: html">&lt;h1&gt;Simple float example&lt;/h1&gt;
 
@@ -75,7 +75,7 @@ tags:
   padding: 1em;
 }</pre>
 
-<p>If you save and refresh now, you'll see something much like what you'd expect — the box is sitting above the text, in normal flow. To float the text around it add the {{cssxref("float")}} and {{cssxref("margin-right")}} properties to the <code>.box</code> rule:</p>
+<p>If you save and refresh, you'll see something much like what you'd expect: the box is sitting above the text, in normal flow. To float the text around it, add the {{cssxref("float")}} and {{cssxref("margin-right")}} properties to the <code>.box</code> rule:</p>
 
 <pre class="brush: css">.box {
   float: left;
@@ -126,11 +126,11 @@ tags:
 
 <p>{{ EmbedLiveSample('Float_1', '100%', 500) }}</p>
 
-<p>So let's think about how the float works — the element with the float set on it (the {{htmlelement("div")}} element in this case) is taken out of the normal layout flow of the document and stuck to the left-hand side of its parent container ({{htmlelement("body")}}, in this case). Any content that comes below the floated element in the normal layout flow will now wrap around it, filling up the space to the right-hand side of it as far up as the top of the floated element. There, it will stop.</p>
+<p>Let's think about how the float works. The element with the float set on it (the {{htmlelement("div")}} element in this case) is taken out of the normal layout flow of the document and stuck to the left-hand side of its parent container ({{htmlelement("body")}}, in this case). Any content that would come below the floated element in the normal layout flow will now wrap around it instead, filling up the space to the right-hand side of it as far up as the top of the floated element. There, it will stop.</p>
 
-<p>Floating the content to the right has exactly the same effect, but in reverse — the floated element will stick to the right, and the content will wrap around it to the left. Try changing the float value to <code>right</code> and replace {{cssxref("margin-right")}} with {{cssxref("margin-left")}} in the last ruleset to see what the result is.</p>
+<p>Floating the content to the right has exactly the same effect, but in reverse: the floated element will stick to the right, and the content will wrap around it to the left. Try changing the float value to <code>right</code> and replace {{cssxref("margin-right")}} with {{cssxref("margin-left")}} in the last ruleset to see what the result is.</p>
 
-<p>While we can add a margin to the float to push the text away, we can't add a margin to the text to move it away from the float. This is because a floated element is taken out of normal flow, and the boxes of the following items actually run behind the float. You can demonstrate this by making some changes to your example.</p>
+<p>While we can add a margin to the float to push the text away, we can't add a margin to the text to move it away from the float. This is because a floated element is taken out of normal flow and the boxes of the following items actually run behind the float. You can see this by making some changes to your example.</p>
 
 <p>Add a class of <code>special</code> to the first paragraph of text, the one immediately following the floated box, then in your CSS add the following rules. These will give our following paragraph a background color.</p>
 
