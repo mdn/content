@@ -391,7 +391,7 @@ tags:
 
 <p>An alternative method is to set the {{cssxref("overflow")}} property of the wrapper to a value other than <code>visible</code>.</p>
 
-<p>Remove the clearfix CSS you added in the last section, and instead add <code>overflow: auto</code> to the rules for wrapper. Once again, the box should clear.</p>
+<p>Remove the clearfix CSS you added in the last section; instead add <code>overflow: auto</code> to the rules for wrapper. Once again, the box should clear.</p>
 
 <pre class="brush: css">.wrapper {
   background-color: rgb(79,185,227);
@@ -443,7 +443,7 @@ tags:
 
 <p>{{ EmbedLiveSample('Float_6', '100%', 600) }}</p>
 
-<p>This example works by creating what is known as a <strong>block formatting context</strong> (BFC). This is like a mini layout inside your page, inside which everything is contained, therefore our floated element is contained inside the BFC and the background runs behind both items. This will usually work, however, in certain cases you might find unwanted scrollbars or clipped shadows due to unintended consequences of using overflow.</p>
+<p>This example works by creating what's known as a <strong>block formatting context</strong> (BFC). This is like a mini layout inside your page, inside of which everything is contained. This means our floated element is contained inside the BFC, and the background runs behind both items. This will usually work; however, in certain cases you might find unwanted scrollbars or clipped shadows due to unintended consequences of using overflow.</p>
 
 <h3 id="display_flow-root">display: flow-root</h3>
 
