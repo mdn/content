@@ -38,7 +38,7 @@ browser-compat: http.headers.ect
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: http">ECT: &lt;value&gt;</pre>
+<pre>ECT: &lt;value&gt;</pre>
 
 <h2 id="Directives">Directives</h2>
 
@@ -51,11 +51,11 @@ browser-compat: http.headers.ect
 
 <p>A server first needs to opt in to receive the <code>ECT</code> header by sending the {{HTTPHeader("Accept-CH")}} response header containing <code>ECT</code>.</p>
 
-<pre class="brush: http">Accept-CH: ECT</pre>
+<pre>Accept-CH: ECT</pre>
 
 <p>Then on subsequent requests the client might send an <code>ECT</code> header back:</p>
 
-<pre class="brush: http">ECT: 2g</pre>
+<pre>ECT: 2g</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

@@ -4,6 +4,7 @@ slug: Web/API/VRDisplayEvent/display
 tags:
   - API
   - Experimental
+  - Deprecated
   - Property
   - Reference
   - VR
@@ -31,7 +32,9 @@ browser-compat: api.VRDisplayEvent.display
 
 <h2 id="Examples">Examples</h2>
 
-<p>{{page("/Web/API/VRDisplayEvent", "Examples")}}</p>
+<pre class="brush: js">window.addEventListener('vrdisplaypresentchange', function(e) {
+    console.log('Display ' + e.display.displayId + ' presentation has changed. Reason given: ' + e.reason + '.');
+  })</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

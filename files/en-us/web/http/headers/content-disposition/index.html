@@ -41,13 +41,13 @@ browser-compat: http.headers.Content-Disposition
 Content-Disposition: attachment
 Content-Disposition: attachment; filename="filename.jpg"</pre>
 
-<div class="note">
-<p><strong>Notes:</strong> Chrome, and Firefox 82 and later, prioritize the HTML <a href="/en-US/docs/Web/HTML/Element/a">&lt;a&gt; element's</a> <code>download</code> attribute over the <code>Content-Disposition</code> <code>inline</code> parameter (for <a href="/en-US/docs/Web/Security/Same-origin_policy">same-origin URLs</a>). Earlier Firefox versions prioritize the header and will display the content inline.</p>
+<div class="notecard note">
+  <p><strong>Note:</strong> Chrome, and Firefox 82 and later, prioritize the HTML <a href="/en-US/docs/Web/HTML/Element/a">&lt;a&gt; element's</a> <code>download</code> attribute over the <code>Content-Disposition</code> <code>inline</code> parameter (for <a href="/en-US/docs/Web/Security/Same-origin_policy">same-origin URLs</a>). Earlier Firefox versions prioritize the header and will display the content inline.</p>
 </div>
 
 <h3 id="As_a_header_for_a_multipart_body">As a header for a multipart body</h3>
 
-<p>A <code>multipart/form-data</code> body requires a <code>Content-Disposition</code> header to provide information for each subpart of the form (e.g. for every form field and any files that are part of field data). The first directive is always <code>form-data</code>, and the header <em>must</em> also include a <code>name</code> parameter to identify the relevant field. Additional directives are case-insensitive and have arguments that use quoted-string syntax after the <code>'='</code> sign. Multiple parameters are separated by a semi-colon (<code>';'</code>).</p>
+<p>A <code>multipart/form-data</code> body requires a <code>Content-Disposition</code> header to provide information for each subpart of the form (e.g. for every form field and any files that are part of field data). The first directive is always <code>form-data</code>, and the header <em>must</em> also include a <code>name</code> parameter to identify the relevant field. Additional directives are case-insensitive and have arguments that use quoted-string syntax after the <code>'='</code> sign. Multiple parameters are separated by a semi-colon (<code>';'</code>).</p>
 
 <pre class="brush: html">Content-Disposition: form-data; name="fieldName"
 Content-Disposition: form-data; name="fieldName"; filename="filename.jpg"</pre>
@@ -67,7 +67,7 @@ Content-Disposition: form-data; name="fieldName"; filename="filename.jpg"</pre>
 </dl>
 
 <div class="notecard warning">
-<p>The string following <code>filename</code> should always be put into quotes; but, for compatibility reasons, many browsers try to parse unquoted names that contain spaces.</p>
+  <p><strong>Warning:</strong> The string following <code>filename</code> should always be put into quotes; but, for compatibility reasons, many browsers try to parse unquoted names that contain spaces.</p>
 </div>
 
 <h2 id="Examples">Examples</h2>

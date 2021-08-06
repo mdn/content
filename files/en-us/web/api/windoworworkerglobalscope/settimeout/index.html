@@ -87,7 +87,7 @@ var <var>timeoutID</var> = setTimeout(<var>code</var>[, <var>delay</var>]);
 
 <pre class="brush: js">const myArray = ['zero', 'one', 'two'];
 myArray.myMethod = function (sProperty) {
-  alert(arguments.length &gt; 0 ? this[sProperty] : this);
+  console.log(arguments.length &gt; 0 ? this[sProperty] : this);
 };
 
 myArray.myMethod(); // prints "zero,one,two"
@@ -153,12 +153,12 @@ setTimeout(myBoundMethod, 1.5*1000, "1"); // prints "one" after 1.5 seconds
 </p>
 
 <pre class="brush: js example-bad">// Don't do this
-setTimeout("alert('Hello World!');", 500);
+setTimeout("console.log('Hello World!');", 500);
 </pre>
 
 <pre class="brush: js example-good">// Do this instead
 setTimeout(function() {
-  alert('Hello World!');
+  console.log('Hello World!');
 }, 500);
 </pre>
 
@@ -303,27 +303,40 @@ foo has been called</pre>
 
 <p>The following example sets up two simple buttons in a web page and hooks them to the
   <code>setTimeout()</code> and <code>clearTimeout()</code> routines. Pressing the first
-  button will set a timeout which calls an alert dialog after two seconds and stores the
+  button will set a timeout which shows a message after two seconds and stores the
   timeout id for use by <code>clearTimeout()</code>. You may optionally cancel this
   timeout by pressing on the second button.</p>
 
 <h4 id="HTML">HTML</h4>
 
 <pre class="brush: html">
-&lt;button onclick="delayedAlert();"&gt;Show an alert box after two seconds&lt;/button&gt;
-&lt;button onclick="clearAlert();"&gt;Cancel alert before it happens&lt;/button&gt;
+&lt;button onclick="delayedMessage();"&gt;Show an message after two seconds&lt;/button&gt;
+&lt;button onclick="clearMessage();"&gt;Cancel message before it happens&lt;/button&gt;
+
+&lt;div id="output"&gt;&lt;/div&gt;
 </pre>
 
 <h4 id="JavaScript">JavaScript</h4>
 
 <pre class="brush: js">let timeoutID;
 
-function delayedAlert() {
-  timeoutID = setTimeout(window.alert, 2*1000, 'That was really slow!');
+function setOutput(outputContent) {
+  document.querySelector('#output').textContent = outputContent;
 }
 
-function clearAlert() {
+function delayedMessage() {
+  setOutput('');
+  timeoutID = setTimeout(setOutput, 2*1000, 'That was really slow!');
+}
+
+function clearMessage() {
   clearTimeout(timeoutID);
+}
+</pre>
+
+<pre class="brush: css hidden">
+#output {
+  padding: .5rem 0;
 }
 </pre>
 

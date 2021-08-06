@@ -32,9 +32,8 @@ browser-compat: css.types.basic-shape
 <dl>
  <dt><code>{{cssxref("basic-shape/inset()","inset()")}}</code></dt>
  <dd>
- <pre class="brush: css">inset( &lt;shape-arg&gt;{1,4} [round &lt;border-radius&gt;]? )</pre>
-
  <p>Defines an inset rectangle.</p>
+ <pre class="brush: css">inset( &lt;shape-arg&gt;{1,4} [round &lt;border-radius&gt;]? )</pre>
 
  <p>When all of the first four arguments are supplied they represent the top, right, bottom and left offsets from the reference box inward that define the positions of the edges of the inset rectangle. These arguments follow the syntax of the margin shorthand, that let you set all four insets with one, two or four values.</p>
 
@@ -44,6 +43,7 @@ browser-compat: css.types.basic-shape
  </dd>
  <dt><code>{{cssxref("basic-shape/circle()","circle()")}}</code></dt>
  <dd>
+ <p>Defines a circle using a radius and a position.</p>
  <pre class="brush: css">circle( [&lt;shape-radius&gt;]? [at &lt;position&gt;]? )</pre>
 
  <p>The <code>&lt;shape-radius&gt;</code> argument represents <em>r</em>, the radius of the circle. Negative values are invalid. A percentage value here is resolved from the used width and height of the reference box as <code>sqrt(width^2+height^2)/sqrt(2)</code>.</p>
@@ -52,25 +52,28 @@ browser-compat: css.types.basic-shape
  </dd>
  <dt><code>{{cssxref("basic-shape/ellipse()","ellipse()")}}</code></dt>
  <dd>
+ <p>Defines an ellipse using two radii and a position.</p>
  <pre class="brush: css">ellipse( [&lt;shape-radius&gt;{2}]? [at &lt;position&gt;]? )</pre>
 
- <p>The <code>&lt;shape-radius&gt;</code> arguments represent r<sub>x</sub> and r<sub>y</sub>, the x-axis and y-axis radii of the ellipse, in that order. Negative values for either radius are invalid. Percentage values here are resolved against the used width (for the r<sub>x</sub> value) and the used height (for the r<sub>y</sub> value) of the reference box.</p>
+ <p>The <code>&lt;shape-radius&gt;</code> arguments represent rx and ry, the x-axis and y-axis radii of the ellipse, in that order. Negative values for either radius are invalid. Percentage values here are resolved against the used width (for the rx value) and the used height (for the ry value) of the reference box.</p>
 
  <p>The position argument defines the center of the ellipse. This defaults to center if omitted.</p>
  </dd>
  <dt><code>{{cssxref("basic-shape/polygon()","polygon()")}}</code></dt>
  <dd>
+ <p>Defines a polygon using an SVG {{SVGAttr("fill-rule")}} and a set of vertices.</p>
  <pre class="brush: css">polygon( [&lt;fill-rule&gt;,]? [&lt;shape-arg&gt; &lt;shape-arg&gt;]# )</pre>
 
- <p><code>&lt;fill-rule&gt;</code> represents the <a href="/en-US/docs/Web/SVG/Attribute/fill-rule">filling rule</a> used to determine the interior of the polygon. Possible values are <code>nonzero</code> and <code>evenodd</code>. Default value when omitted is <code>nonzero</code>.</p>
+ <p><code>&lt;fill-rule&gt;</code> represents the {{SVGAttr("fill-rule")}} used to determine the interior of the polygon. Possible values are <code>nonzero</code> and <code>evenodd</code>. Default value when omitted is <code>nonzero</code>.</p>
 
- <p>Each pair argument in the list represents <em>x<sub>i</sub></em> and <em>y<sub>i</sub></em> - the x and y axis coordinates of the i<sup>th</sup> vertex of the polygon.</p>
+ <p>Each pair argument in the list represents <em>xi</em> and <em>yi</em> - the x and y axis coordinates of the vertex of the polygon at position i.</p>
  </dd>
  <dt><code>path()</code></dt>
  <dd>
+ <p>Defines a shape using an SVG {{SVGAttr("fill-rule")}} and an SVG <a href="/en-US/docs/Web/SVG/Attribute/d">path definition</a>.</p>
  <pre class="brush: css">path( [&lt;fill-rule&gt;,]? &lt;string&gt;)</pre>
 
- <p>The optional <code>&lt;fill-rule&gt;</code> represents the <a href="/en-US/docs/Web/SVG/Attribute/fill-rule">filling rule</a> used to determine the interior of the path. Possible values are <code>nonzero</code> and <code>evenodd</code>. Default value when omitted is <code>nonzero</code>.</p>
+ <p>The optional <code>&lt;fill-rule&gt;</code> represents the {{SVGAttr("fill-rule")}} used to determine the interior of the path. Possible values are <code>nonzero</code> and <code>evenodd</code>. Default value when omitted is <code>nonzero</code>.</p>
 
  <p>The required &lt;string&gt; is an <a href="/en-US/docs/Web/SVG/Attribute/d">SVG Path</a> string encompassed in quotes</p>
  </dd>

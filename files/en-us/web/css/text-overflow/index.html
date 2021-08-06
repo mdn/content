@@ -14,7 +14,6 @@ browser-compat: css.properties.text-overflow
 
 <div>{{EmbedInteractiveExample("pages/css/text-overflow.html")}}</div>
 
-
 <p>The <code>text-overflow</code> property doesn't force an overflow to occur. To make text overflow its container you have to set other CSS properties: {{cssxref("overflow")}} and {{cssxref("white-space")}}. For example:</p>
 
 <pre class="brush: css no-line-numbers">overflow: hidden;
@@ -37,23 +36,23 @@ text-overflow: revert;
 text-overflow: unset;</pre>
 
 <ul>
- <li>one of the keyword values: <code><a href="#clip">clip</a></code>, <code><a href="#ellipsis">ellipsis</a></code>, <code><a href="#fade">fade</a></code></li>
- <li>the function <code><a href="#fade_length_percentage">fade()</a></code>, which is passed a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} to control the fade distance</li>
- <li>a <code><a href="#string">&lt;string&gt;</a></code>.</li>
+ <li>one of the keyword values: <code>clip</code>, <code>ellipsis</code>, <code>fade</code></li>
+ <li>the function <code>fade()</code>, which is passed a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} to control the fade distance</li>
+ <li>a <code>&lt;string&gt;</code>.</li>
 </ul>
 
 <h3 id="Values">Values</h3>
 
 <dl>
- <dt id="clip"><code>clip</code></dt>
+ <dt><code>clip</code></dt>
  <dd>The default for this property. This keyword value will truncate the text at the limit of the <a href="/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">content area</a>, therefore the truncation can happen in the middle of a character. To clip at the transition between characters you can specify <code>text-overflow</code> as an empty string, if that is supported in your target browsers: <code>text-overflow: '';</code>.</dd>
- <dt id="ellipsis"><code>ellipsis</code></dt>
+ <dt><code>ellipsis</code></dt>
  <dd>This keyword value will display an ellipsis (<code>'…'</code>, <code>U+2026 HORIZONTAL ELLIPSIS</code>) to represent clipped text. The ellipsis is displayed inside the <a href="/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">content area</a>, decreasing the amount of text displayed. If there is not enough space to display the ellipsis, it is clipped.</dd>
- <dt id="string"><code>&lt;string&gt;</code> {{experimental_inline}}</dt>
+ <dt><code>&lt;string&gt;</code> {{experimental_inline}}</dt>
  <dd>The {{cssxref("&lt;string&gt;")}} to be used to represent clipped text. The string is displayed inside the <a href="/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">content area</a>, shortening the size of the displayed text. If there is not enough space to display the string itself, it is clipped.</dd>
- <dt id="fade"><code>fade</code> {{experimental_inline}}</dt>
+ <dt><code>fade</code> {{experimental_inline}}</dt>
  <dd>This keyword clips the overflowing inline content and applies a fade-out effect near the edge of the line box with complete transparency at the edge.</dd>
- <dt id="fade_length_percentage"><code>fade( &lt;length&gt; | &lt;percentage&gt; )</code> {{experimental_inline}}</dt>
+ <dt><code>fade( &lt;length&gt; | &lt;percentage&gt; )</code> {{experimental_inline}}</dt>
  <dd>
    <p>This function clips the overflowing inline content and applies a fade-out effect near the edge of the line box with complete transparency at the edge.</p>
    <p>The argument determines the distance over which the fade effect is applied. The {{cssxref("&lt;percentage&gt;")}} is resolved against the width of the line box. Values lower than <code>0</code> are clipped to <code>0</code>. Values greater than the width of the line box are clipped to the width of the line box.</p>

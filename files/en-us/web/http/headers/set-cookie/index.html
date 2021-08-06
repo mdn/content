@@ -12,13 +12,13 @@ browser-compat: http.headers.Set-Cookie
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p><span class="seoSummary">The <strong><code>Set-Cookie</code></strong> HTTP response header is used to send a cookie from the server to the user agent, so the user agent can send it back to the server later. To send multiple cookies, multiple <strong><code>Set-Cookie</code></strong></span> headers should be sent in the same response.</p>
+<p>The <strong><code>Set-Cookie</code></strong> HTTP response header is used to send a cookie from the server to the user agent, so the user agent can send it back to the server later. To send multiple cookies, multiple <strong><code>Set-Cookie</code></strong> headers should be sent in the same response.</p>
 
 <div class="notecard warning">
-<p>Browsers block frontend JavaScript code from accessing the <code>Set Cookie</code> header, as required by the Fetch spec, which defines <code>Set-Cookie</code> as a <a href="https://fetch.spec.whatwg.org/#forbidden-response-header-name">forbidden response-header name</a> that <a href="https://fetch.spec.whatwg.org/#ref-for-forbidden-response-header-name%E2%91%A0">must be filtered out</a> from any response exposed to frontend code.</p>
+  <p><strong>Warning:</strong> Browsers block frontend JavaScript code from accessing the <code>Set Cookie</code> header, as required by the Fetch spec, which defines <code>Set-Cookie</code> as a <a href="https://fetch.spec.whatwg.org/#forbidden-response-header-name">forbidden response-header name</a> that <a href="https://fetch.spec.whatwg.org/#ref-for-forbidden-response-header-name%E2%91%A0">must be filtered out</a> from any response exposed to frontend code.</p>
 </div>
 
-<p>For more information, see the guide on <a href="/en-US/docs/Web/HTTP/Cookies">Using HTTP cookies</a>.</p>
+<p>For more information, see the guide on <a href="/en-US/docs/Web/HTTP/Cookies">Using HTTP cookies</a>.</p>
 
 <table class="properties">
  <tbody>
@@ -74,7 +74,7 @@ Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;; Domain=&lt;domain-value&gt
  <p>If unspecified, the cookie becomes a <strong>session cookie</strong>. A session finishes when the client shuts down, and session cookies will be removed.</p>
 
  <div class="notecard warning">
- <p><strong>Warning:</strong> Many web browsers have a <em>session restore</em> feature that will save all tabs and restore them next time the browser is used. Session cookies will also be restored, as if the browser was never closed.</p>
+   <p><strong>Warning:</strong> Many web browsers have a <em>session restore</em> feature that will save all tabs and restore them next time the browser is used. Session cookies will also be restored, as if the browser was never closed.</p>
  </div>
 
  <p>When an Expires date is set, the deadline is relative to the <em>client</em> the cookie is being set on, not the server.</p>
@@ -93,26 +93,25 @@ Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;; Domain=&lt;domain-value&gt
  <dd>A path that must exist in the requested URL, or the browser won't send the <code>Cookie</code> header.</dd>
  <dd>The forward slash (<code>/</code>) character is interpreted as a directory separator, and subdirectories will be matched as well: for <code>Path=/docs</code>, <code>/docs</code>, <code>/docs/Web/</code>, and <code>/docs/Web/HTTP</code> will all match.</dd>
  <dt id="Secure"><code>Secure</code> {{optional_inline}}</dt>
- <dd>Cookie is only sent to the server when a request is made with the <code>https:</code> scheme (except on localhost), and therefore is more resistent to <a href="/en-US/docs/Glossary/MitM">man-in-the-middle</a> attacks.
- <p class="note"><strong>Note:</strong> Do not assume that <code>Secure</code> prevents all access to sensitive information in cookies (session keys, login details, etc.). Cookies with this attribute can still be read/modified with access to the client's hard disk, or from JavaScript if the <code>HttpOnly</code> cookie attribute is not set.</p>
-
- <p class="note"><strong>Note:</strong> Insecure sites (<code>http:</code>) can't set cookies with the <code>Secure</code> attribute (since Chrome 52 and Firefox 52). For Firefox, the <code>https:</code> requirements are ignored when the <code>Secure</code> attribute is set by localhost (since Firefox 75).</p>
+ <dd>Cookie is only sent to the server when a request is made with the <code>https:</code> scheme (except on localhost), and therefore is more resistent to <a href="/en-US/docs/Glossary/MitM">man-in-the-middle</a> attacks.
+  <div class="notecard note">
+    <p><strong>Note:</strong> Do not assume that <code>Secure</code> prevents all access to sensitive information in cookies (session keys, login details, etc.). Cookies with this attribute can still be read/modified with access to the client's hard disk, or from JavaScript if the <code>HttpOnly</code> cookie attribute is not set.</p>
+    <p>Insecure sites (<code>http:</code>) can't set cookies with the <code>Secure</code> attribute (since Chrome 52 and Firefox 52). For Firefox, the <code>https:</code> requirements are ignored when the <code>Secure</code> attribute is set by localhost (since Firefox 75).</p>
+  </div>
  </dd>
  <dt id="HttpOnly"><code>HttpOnly</code> {{optional_inline}}</dt>
  <dd>Forbids JavaScript from accessing the cookie, for example, through the {{domxref("Document.cookie")}} property. Note that a cookie that has been created with HttpOnly will still be sent with JavaScript-initiated requests, e.g. when calling {{domxref("XMLHttpRequest.send()")}} or {{domxref("WindowOrWorkerGlobalScope.fetch")}}. This mitigates attacks against cross-site scripting ({{Glossary("Cross-site_scripting", "XSS")}}).</dd>
  <dt id="SameSite"><code>SameSite=&lt;samesite-value&gt;</code> {{optional_inline}}</dt>
  <dd>Controls whether a cookie is sent with cross-origin requests, providing some protection against cross-site request forgery attacks ({{Glossary("CSRF")}}).</dd>
  <dd>
- <div class="note">
- <p>Standards related to the <a href="/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite">SameSite Cookies</a> recently changed such that:</p>
-
- <ol>
-  <li>The cookie-sending behavior if <code>SameSite</code> is not specified is <code>SameSite=Lax</code>. Previously the default was that cookies were sent for all requests.</li>
-  <li>Cookies with <code>SameSite=None</code> must now<br>
-   also specify the <code>Secure</code> attribute (i.e. they require a secure context).</li>
- </ol>
-
- <p>The options below covers the new behavior. See the <a href="/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite#browser_compatibility">Browser compatibility</a> table for information about specific browser implementation (rows: "<code>SameSite</code>: Defaults to <code>Lax</code>" and "<code>SameSite</code>: Secure context required").</p>
+ <div class="notecard note">
+  <p><strong>Note:</strong> Standards related to the <a href="/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite">SameSite Cookies</a> recently changed such that:</p>
+  <ol>
+    <li>The cookie-sending behavior if <code>SameSite</code> is not specified is <code>SameSite=Lax</code>. Previously the default was that cookies were sent for all requests.</li>
+    <li>Cookies with <code>SameSite=None</code> must now<br>
+    also specify the <code>Secure</code> attribute (i.e. they require a secure context).</li>
+  </ol>
+  <p>The options below covers the new behavior. See the <a href="/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite#browser_compatibility">Browser compatibility</a> table for information about specific browser implementation (rows: "<code>SameSite</code>: Defaults to <code>Lax</code>" and "<code>SameSite</code>: Secure context required").</p>
  </div>
  Inline options are:
 
@@ -163,7 +162,7 @@ Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;; Domain=&lt;domain-value&gt
 <p>In addition, cookies with the <code>__Host-</code> prefix must have a path of <code>/</code> (meaning any path at the host) and must not have a <code>Domain</code> attribute.</p>
 
 <div class="notecard warning">
-<p>For clients that don't implement cookie prefixes, you cannot count on these additional assurances, and prefixed cookies will always be accepted.</p>
+  <p><strong>Warning:</strong> For clients that don't implement cookie prefixes, you cannot count on these additional assurances, and prefixed cookies will always be accepted.</p>
 </div>
 
 <pre>// Both accepted when from a secure origin (HTTPS)

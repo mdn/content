@@ -4,6 +4,7 @@ slug: Web/API/VREyeParameters
 tags:
   - API
   - Experimental
+  - Deprecated
   - Landing
   - Reference
   - VR
@@ -22,8 +23,8 @@ browser-compat: api.VREyeParameters
 
 <p>This interface is accessible through the {{domxref("VRDisplay.getEyeParameters()")}} method.</p>
 
-<div class="warning">
-<p>The values in this interface should not be used to compute view or projection matrices. In order to ensure the widest possible hardware compatibility use the matrices provided by {{domxref("VRFrameData")}}.</p>
+<div class="notecard warning">
+<p><strong>Warning:</strong> The values in this interface should not be used to compute view or projection matrices. In order to ensure the widest possible hardware compatibility use the matrices provided by {{domxref("VRFrameData")}}.</p>
 </div>
 
 <h2 id="Properties">Properties</h2>
@@ -33,9 +34,9 @@ browser-compat: api.VREyeParameters
 	<dd><dfn>Represents the o</dfn>ffset from the center point between the user's eyes to the center of the eye, measured in meters.</dd>
 	<dt>{{domxref("VREyeParameters.fieldOfView")}}  {{deprecated_inline}} {{readonlyInline}}</dt>
 	<dd><dfn>Describes t</dfn>he current field of view for the eye, which can vary as the user adjusts their interpupillary distance (IPD).</dd>
-	<dt>{{domxref("VREyeParameters.renderWidth")}} {{readonlyInline}}</dt>
+	<dt>{{domxref("VREyeParameters.renderWidth")}} {{deprecated_inline}} {{readonlyInline}}</dt>
 	<dd>Describes the recommended render target width of each eye viewport, in pixels.</dd>
-	<dt>{{domxref("VREyeParameters.renderHeight")}} {{readonlyInline}}</dt>
+	<dt>{{domxref("VREyeParameters.renderHeight")}} {{deprecated_inline}} {{readonlyInline}}</dt>
 	<dd>Describes the recommended render target height of each eye viewport, in pixels.</dd>
 </dl>
 

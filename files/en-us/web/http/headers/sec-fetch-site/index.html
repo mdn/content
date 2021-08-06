@@ -15,7 +15,7 @@ browser-compat: http.headers.Sec-Fetch-Site
 <p>The <strong><code>Sec-Fetch-Site</code></strong> {{Glossary("Fetch metadata request header", "fetch metadata request header")}} indicates the relationship between a request initiator's origin and the origin of the requested resource.</p>
 
 <p>In other words, this header tells a server whether a request for a resource is coming from the same origin, the same site, a different site, or is a "user initiated" request. The server can then use this information to decide if the request should be allowed.</p>
-  
+
 <p>Same-origin requests would usually be allowed by default, but what happens for requests from other origins may further depend on what resource is being requested, or information in other {{Glossary("Fetch metadata request header","Fetch metadata request headers")}}. By default, requests that are not accepted should be rejected with a {{HTTPStatus("403")}} response code.</p>
 
 <table class="properties">
@@ -36,7 +36,7 @@ browser-compat: http.headers.Sec-Fetch-Site
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: http">Sec-Fetch-Site: cross-site
+<pre>Sec-Fetch-Site: cross-site
 Sec-Fetch-Site: same-origin
 Sec-Fetch-Site: same-site
 Sec-Fetch-Site: none
@@ -61,7 +61,7 @@ Sec-Fetch-Site: none
  <p>A fetch request to <code>https://mysite.example/foo.json</code> originating from a web page on <code>https://mysite.example</code> (with the same port) is a same-origin request.
 The browser will generate the <code>Sec-Fetch-Site: same-origin</code> header as shown below, and the server will typically allow the request:</p>
 
- <pre class="brush: http">GET /foo.json
+ <pre>GET /foo.json
 Sec-Fetch-Dest: empty
 Sec-Fetch-Mode: cors
 Sec-Fetch-Site: same-origin
@@ -69,7 +69,7 @@ Sec-Fetch-Site: same-origin
 
 <p>A fetch request to the same URL from another site, for example <code>potentially-evil.com</code>, causes the browser to generate a different header (e.g. <code>Sec-Fetch-Site: cross-site</code>), which the server can choose to accept or reject:</p>
 
-<pre class="brush: http">GET /foo.json
+<pre>GET /foo.json
 Sec-Fetch-Dest: empty
 Sec-Fetch-Mode: cors
 Sec-Fetch-Site: cross-site
@@ -93,6 +93,6 @@ Sec-Fetch-Site: cross-site
     <li>{{HTTPHeader("Sec-Fetch-Dest")}}</li>
    </ul>
  </li>
- <li><a href="https://web.dev/fetch-metadata/">Protect your resources from web attacks with Fetch Metadata</a> (web.dev)</li> 
+ <li><a href="https://web.dev/fetch-metadata/">Protect your resources from web attacks with Fetch Metadata</a> (web.dev)</li>
  <li><a href="https://secmetadata.appspot.com/">Fetch Metadata Request Headers playground</a> (secmetadata.appspot.com)</li>
 </ul>

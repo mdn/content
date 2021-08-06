@@ -2823,15 +2823,6 @@
       "Jesse"
     ]
   },
-  "Glossary/GIJ": {
-    "modified": "2019-01-16T20:27:05.268Z",
-    "contributors": [
-      "klez",
-      "mbuttler",
-      "maybe",
-      "Jeremie"
-    ]
-  },
   "Glossary/GPL": {
     "modified": "2019-03-23T23:03:44.532Z",
     "contributors": [
@@ -37753,25 +37744,6 @@
       "Matej Lednar"
     ]
   },
-  "Web/API/Document/documentURIObject": {
-    "modified": "2020-10-15T21:04:21.490Z",
-    "contributors": [
-      "mfuji09",
-      "mfluehr",
-      "Tigt",
-      "fscholz",
-      "teoli",
-      "MHasan",
-      "kscarfone",
-      "nehasharma",
-      "Sheppy",
-      "ziyunfei",
-      "Mgjbot",
-      "Shoot",
-      "Nickolay",
-      "Waldo"
-    ]
-  },
   "Web/API/Document/domain": {
     "modified": "2020-11-09T22:06:15.283Z",
     "contributors": [
@@ -51982,14 +51954,6 @@
     "modified": "2020-10-15T22:23:10.524Z",
     "contributors": [
       "mfuji09",
-      "sideshowbarker",
-      "Sheppy"
-    ]
-  },
-  "Web/API/HTMLImageElement/lowSrc": {
-    "modified": "2020-11-24T11:09:18.826Z",
-    "contributors": [
-      "foolip",
       "sideshowbarker",
       "Sheppy"
     ]
@@ -80707,23 +80671,6 @@
       "jpmedley"
     ]
   },
-  "Web/API/Text/isElementContentWhitespace": {
-    "modified": "2020-10-15T21:06:49.084Z",
-    "contributors": [
-      "RainSlide",
-      "nakhodkiin",
-      "sideshowbarker",
-      "fscholz",
-      "teoli",
-      "afreen",
-      "Reachmeatshivam",
-      "Sheppy",
-      "ziyunfei",
-      "Ruakh",
-      "Jürgen Jeka",
-      "bcombee"
-    ]
-  },
   "Web/API/Text/replaceWholeText": {
     "modified": "2020-10-15T21:10:09.962Z",
     "contributors": [
@@ -104288,14 +104235,6 @@
       "gabriel_ivanica",
       "Sheppy",
       "ethertank"
-    ]
-  },
-  "Web/CSS/Tools/Linear-gradient_Generator": {
-    "modified": "2020-07-07T12:40:33.079Z",
-    "contributors": [
-      "wbamberg",
-      "gabriel_ivanica",
-      "teoli"
     ]
   },
   "Web/CSS/Tutorials": {

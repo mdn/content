@@ -21,8 +21,8 @@ tags:
 
 <p><img alt="Compares the performance of the three HTTP/1.x connection models: short-lived connections, persistent connections, and HTTP pipelining." src="http1_x_connections.png"></p>
 
-<div class="note">
-<p>HTTP/2 adds additional models for connection management.</p>
+<div class="notecard note">
+  <p><strong>Note:</strong> HTTP/2 adds additional models for connection management.</p>
 </div>
 
 <p>It's important point to note that connection management in HTTP applies to the connection between two consecutive nodes, which is <a href="/en-US/docs/Web/HTTP/Headers#hbh">hop-by-hop</a> and not <a href="/en-US/docs/Web/HTTP/Headers#e2e">end-to-end</a>. The model used in connections between a client and its first proxy may differ from the model between a proxy and the destination server (or any intermediate proxies). The HTTP headers involved in defining the connection model, like {{HTTPHeader("Connection")}} and {{HTTPHeader("Keep-Alive")}}, are <a href="/en-US/docs/Web/HTTP/Headers#hbh">hop-by-hop</a> headers with their values able to be changed by intermediary nodes.</p>
@@ -37,8 +37,8 @@ tags:
 
 <p>This model is the default model used in HTTP/1.0 (if there is no {{HTTPHeader("Connection")}} header, or if its value is set to <code>close</code>). In HTTP/1.1, this model is only used when the {{HTTPHeader("Connection")}} header is sent with a value of <code>close</code>.</p>
 
-<div class="note">
-<p>Unless dealing with a very old system, which doesn't support a persistent connection, there is no compelling reason to use this model.</p>
+<div class="notecard note">
+  <p><strong>Note:</strong> Unless dealing with a very old system, which doesn't support a persistent connection, there is no compelling reason to use this model.</p>
 </div>
 
 <h2 id="Persistent_connections">Persistent connections</h2>
@@ -55,16 +55,14 @@ tags:
 
 <h2 id="HTTP_pipelining">HTTP pipelining</h2>
 
-<div class="note">
-<p>HTTP pipelining is not activated by default in modern browsers:</p>
-
-<ul>
- <li>Buggy <a href="https://en.wikipedia.org/wiki/Proxy_server">proxies</a> are still common and these lead to strange and erratic behaviors that Web developers cannot foresee and diagnose easily.</li>
- <li>Pipelining is complex to implement correctly: the size of the resource being transferred, the effective <a href="https://en.wikipedia.org/wiki/Round-trip_delay_time">RTT</a> that will be used, as well as the effective bandwidth, have a direct incidence on the improvement provided by the pipeline. Without knowing these, important messages may be delayed behind unimportant ones. The notion of important even evolves during page layout! HTTP pipelining therefore brings a marginal improvement in most cases only.</li>
- <li>Pipelining is subject to the <a href="https://en.wikipedia.org/wiki/Head-of-line_blocking">HOL</a> problem.</li>
-</ul>
-
-<p>For these reasons, pipelining has been superseded by a better algorithm, <em>multiplexing</em>, that is used by HTTP/2.</p>
+<div class="notecard note">
+  <p><strong>Note:</strong> HTTP pipelining is not activated by default in modern browsers:</p>
+  <ul>
+    <li>Buggy <a href="https://en.wikipedia.org/wiki/Proxy_server">proxies</a> are still common and these lead to strange and erratic behaviors that Web developers cannot foresee and diagnose easily.</li>
+    <li>Pipelining is complex to implement correctly: the size of the resource being transferred, the effective <a href="https://en.wikipedia.org/wiki/Round-trip_delay_time">RTT</a> that will be used, as well as the effective bandwidth, have a direct incidence on the improvement provided by the pipeline. Without knowing these, important messages may be delayed behind unimportant ones. The notion of important even evolves during page layout! HTTP pipelining therefore brings a marginal improvement in most cases only.</li>
+    <li>Pipelining is subject to the <a href="https://en.wikipedia.org/wiki/Head-of-line_blocking">HOL</a> problem.</li>
+  </ul>
+  <p>For these reasons, pipelining has been superseded by a better algorithm, <em>multiplexing</em>, that is used by HTTP/2.</p>
 </div>
 
 <p>By default, <a href="/en-US/docs/Web/HTTP">HTTP</a> requests are issued sequentially. The next request is only issued once the response to the current request has been received. As they are affected by network latencies and bandwidth limitations, this can result in significant delay before the next request is <em>seen</em> by the server.</p>
@@ -77,8 +75,8 @@ tags:
 
 <h2 id="Domain_sharding">Domain sharding</h2>
 
-<div class="note">
-<p>Unless you have a very specific immediate need, don't use this deprecated technique; switch to HTTP/2 instead. In HTTP/2, domain sharding is no longer useful: the HTTP/2 connection is able to handle parallel unprioritized requests very well. Domain sharding is even detrimental to performance. Most HTTP/2 implementations use a technique called <a href="https://daniel.haxx.se/blog/2016/08/18/http2-connection-coalescing/">connection coalescing</a> to revert eventual domain sharding.</p>
+<div class="notecard note">
+  <p><strong>Note:</strong> Unless you have a very specific immediate need, don't use this deprecated technique; switch to HTTP/2 instead. In HTTP/2, domain sharding is no longer useful: the HTTP/2 connection is able to handle parallel unprioritized requests very well. Domain sharding is even detrimental to performance. Most HTTP/2 implementations use a technique called <a href="https://daniel.haxx.se/blog/2016/08/18/http2-connection-coalescing/">connection coalescing</a> to revert eventual domain sharding.</p>
 </div>
 
 <p>As an HTTP/1.x connection is serializing requests, even without any ordering, it can't be optimal without large enough available bandwidth. As a solution, browsers open several connections to each domain, sending parallel requests. Default was once 2 to 3 connections, but this has now increased to a more common use of 6 parallel connections. There is a risk of triggering <a href="/en-US/docs/Glossary/DOS_attack">DoS</a> protection on the server side if attempting more than this number.</p>

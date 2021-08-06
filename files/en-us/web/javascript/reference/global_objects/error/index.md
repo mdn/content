@@ -18,10 +18,10 @@ Runtime errors result in new `Error` objects being created and thrown.
 
 ### Error types
 
-Besides the generic `Error` constructor, there are other core error constructors in JavaScript. For client-side exceptions, see [Exception handling statements](/en-US/docs/Web/JavaScript/Guide/Statements#Exception_handling_statements).
+Besides the generic `Error` constructor, there are other core error constructors in JavaScript. For client-side exceptions, see [Exception handling statements](/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#exception_handling_statements).
 
 - {{JSxRef("EvalError")}}
-  - : Creates an instance representing an error that occurs regarding the global function {{JSxRef("eval", "eval()")}}.
+  - : Creates an instance representing an error that occurs regarding the global function {{JSxRef("Global_Objects/eval", "eval()")}}.
 - {{JSxRef("RangeError")}}
   - : Creates an instance representing an error that occurs when a numeric variable or parameter is outside of its valid range.
 - {{JSxRef("ReferenceError")}}
@@ -75,7 +75,8 @@ Besides the generic `Error` constructor, there are other core error constructors
 
 ### Throwing a generic error
 
-Usually you create an `Error` object with the intention of raising it using the {{JSxRef("Statements/throw", "throw")}} keyword. You can handle the error using the {{JSxRef("Statements/try...catch", "try...catch")}} construct:
+Usually you create an `Error` object with the intention of raising it using the {{JSxRef("Statements/throw", "throw")}} keyword.
+You can handle the error using the {{JSxRef("Statements/try...catch", "try...catch")}} construct:
 
 ```js
 try {
@@ -85,7 +86,7 @@ try {
 }
 ```
 
-### Handling a specific error
+### Handling a specific error type
 
 You can choose to handle only specific error types by testing the error type with the error's {{JSxRef("Object.prototype.constructor", "constructor")}} property or, if you're writing for modern JavaScript engines, {{JSxRef("Operators/instanceof", "instanceof")}} keyword:
 
@@ -107,11 +108,58 @@ try {
 }
 ```
 
+### Differentiate between similar errors
+
+Sometimes a block of code can fail for reasons that require different handling, but which throw very similar errors (i.e. with the same type and message).
+
+If you don't have control over the original errors that are thrown, one option is to catch them and throw new <code>Error</code> objects that have more specific messages.
+The original error should be passed to the new <code>Error</code> in the constructor `option` parameter (`cause` property), as this ensures that the original error and stack trace are available to higher level try/catch blocks.
+
+The example below shows this for two methods that would otherwise fail with similar errors (`doFailSomeWay()` and `doFailAnotherWay()`):
+
+```js
+function doWork() {
+  try {
+    doFailSomeWay();
+  } catch (err) {
+    throw new Error('Failed in some way', { cause: err });
+  }
+  try {
+    doFailAnotherWay();
+  } catch (err) {
+    throw new Error('Failed in another way', { cause: err });
+  }
+}
+
+try {
+  doWork();
+} catch (err) {
+  switch(err.message) {
+    case 'Failed in some way':
+      handleFailSomeWay(err.cause);
+      break;
+    case 'Failed in another way':
+      handleFailAnotherWay(err.cause);
+      break;
+  }
+}
+```
+
+You can also use the `cause` property in [custom error types](#custom_error_types), provided the subclasses' constructor passes the `options` parameter when calling `super()`:
+```js
+class MyError extends Error {
+  constructor(/* some arguments */) {
+    // Needs to pass both `message` and `options` to install the "cause" property. 
+    super(message, options);
+  }
+}
+```
+
 ### Custom Error Types
 
 You might want to define your own error types deriving from `Error` to be able to `throw new MyError()` and use `instanceof MyError` to check the kind of error in the exception handler.  This results in cleaner and more consistent error handling code.
 
-See ["What's a good way to extend Error in JavaScript?"](http://stackoverflow.com/questions/1382107/whats-a-good-way-to-extend-error-in-javascript) on StackOverflow for an in-depth discussion.
+See ["What's a good way to extend Error in JavaScript?"](https://stackoverflow.com/questions/1382107/whats-a-good-way-to-extend-error-in-javascript) on StackOverflow for an in-depth discussion.
 
 #### ES6 Custom Error Class
 
@@ -186,6 +234,7 @@ try {
   console.error(e.message); //bazMessage
 }
 ```
+
 
 ## Specifications
 

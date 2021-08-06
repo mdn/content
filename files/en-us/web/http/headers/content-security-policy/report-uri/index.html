@@ -16,18 +16,21 @@ browser-compat: http.headers.csp.Content-Security-Policy.report-uri
   attempts to violate the Content Security Policy. These violation reports consist of JSON
   documents sent via an HTTP POST request to the specified URI.</p>
 
-<div class="warning">
-  <p>Though the {{CSP("report-to")}} directive is intended to replace the deprecated
-    <code><strong>report-uri</strong></code> directive, {{CSP("report-to")}} isn’t
-    supported in most browsers yet. So for compatibility with current browsers while also
-    adding forward compatibility when browsers get {{CSP("report-to")}} support, you can
-    specify both <code><strong>report-uri</strong></code> and {{CSP("report-to")}}:</p>
+<div class="notecard warning">
+  <p>
+    <strong>Warning:</strong> Though the {{CSP("report-to")}} directive is intended to replace the deprecated <code><strong>report-uri</strong></code> directive,
+    {{CSP("report-to")}} isn't supported in most browsers yet.
+    So for compatibility with current browsers
+    while also adding forward compatibility when browsers get {{CSP("report-to")}} support,
+    you can specify both <code><strong>report-uri</strong></code> and {{CSP("report-to")}}:
+  </p>
 
-  <pre
-    class="brush: html">Content-Security-Policy: ...; report-uri https://endpoint.com; report-to groupname</pre>
+  <pre class="brush: html">Content-Security-Policy: ...; report-uri https://endpoint.com; report-to groupname</pre>
 
-  <p>In browsers that support {{CSP("report-to")}}, the
-    <code><strong>report-uri</strong></code> directive will be ignored.</p>
+  <p>
+    In browsers that support {{CSP("report-to")}},
+    the <code><strong>report-uri</strong></code> directive will be ignored.
+  </p>
 </div>
 
 <p>The directive has no effect in and of itself, but only gains meaning in combination
@@ -71,7 +74,7 @@ Content-Security-Policy: report-uri &lt;uri&gt; &lt;uri&gt;;</pre>
   the following that logs the JSON detailing the violation and, if the violation is the
   first one added to the log file, sends an email to an administrator:</p>
 
-<pre class="brush: php">&lt;?php
+<pre>&lt;?php
 
 // Start configure
 $log_file = dirname(__FILE__) . '/csp-violations.log';

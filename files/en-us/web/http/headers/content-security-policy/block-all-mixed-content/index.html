@@ -18,7 +18,9 @@ browser-compat: http.headers.csp.Content-Security-Policy.block-all-mixed-content
 
 <p>All <a href="/en-US/docs/Web/Security/Mixed_content">mixed content</a> resource requests are blocked, including both active and passive mixed content. This also applies to {{HTMLElement("iframe")}} documents, ensuring the entire page is mixed content-free.</p>
 
-<p class="note">The {{CSP("upgrade-insecure-requests")}} directive is evaluated before <code>block-all-mixed-content</code>. If the former is set, the latter does nothing, so set one directive or the other – not both, unless you want to force HTTPS on older browsers that do not force it after a redirect to HTTP.</p>
+<div class="notecard note">
+  <p><strong>Note:</strong> The {{CSP("upgrade-insecure-requests")}} directive is evaluated before <code>block-all-mixed-content</code>. If the former is set, the latter does nothing, so set one directive or the other – not both, unless you want to force HTTPS on older browsers that do not force it after a redirect to HTTP.</p>
+</div>
 
 <h2 id="Syntax">Syntax</h2>
 

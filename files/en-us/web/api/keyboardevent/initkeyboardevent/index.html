@@ -7,6 +7,7 @@ tags:
 - KeyboardEvent
 - Method
 - Reference
+browser-compat: api.KeyboardEvent.initKeyboardEvent
 ---
 <p>{{APIRef("DOM Events")}}{{Deprecated_Header}}</p>
 
@@ -48,3 +49,14 @@ tags:
   <dt><em><code>metaKey</code></em></dt>
   <dd>Whether the Meta key modifier is active.</dd>
 </dl>
+
+
+<h2 id="Specifications">Specifications</h2>
+
+{{Specifications}}
+
+<p>The <code>KeyboardEvent</code> interface specification went through numerous draft versions, first under DOM Events Level 2 where it was dropped as no consensus arose, then under DOM Events Level 3. This led to the implementation of non-standard initialization methods, the early DOM Events Level 2 version, {{domxref("KeyboardEvent.initKeyEvent()")}} by Gecko browsers and the early DOM Events Level 3 version, {{domxref("KeyboardEvent.initKeyboardEvent()")}} by others. Both have been superseded by the modern usage of a constructor: {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}}.</p>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>

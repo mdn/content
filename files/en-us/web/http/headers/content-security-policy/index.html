@@ -56,10 +56,12 @@ browser-compat: http.headers.csp.Content-Security-Policy
         workers</a> and nested browsing contexts loaded using elements such as
       {{HTMLElement("frame")}} and {{HTMLElement("iframe")}}.</p>
 
-    <div class="warning">
-      <p>Instead of <strong><code>child-src</code></strong>, if you want to regulate
-        nested browsing contexts and workers, you should use the {{CSP("frame-src")}} and
-        {{CSP("worker-src")}} directives, respectively.</p>
+    <div class="notecard warning">
+      <p>
+        <strong>Warning:</strong> Instead of <strong><code>child-src</code></strong>,
+        if you want to regulate nested browsing contexts and workers,
+        you should use the {{CSP("frame-src")}} and {{CSP("worker-src")}} directives, respectively.
+      </p>
     </div>
   </dd>
   <dt>{{CSP("connect-src")}}</dt>
@@ -81,13 +83,16 @@ browser-compat: http.headers.csp.Content-Security-Policy
     {{HTMLElement("video")}} and {{HTMLElement("track")}} elements.</dd>
   <dt>{{CSP("object-src")}}</dt>
   <dd>Specifies valid sources for the {{HTMLElement("object")}}, {{HTMLElement("embed")}},
-    and {{HTMLElement("applet")}} elements.</dd>
-  <dd class="note">Elements controlled by <code>object-src</code> are perhaps
-    coincidentally considered legacy HTML elements and are not receiving new standardized
-    features (such as the security attributes <code>sandbox</code> or <code>allow</code>
-    for <code>&lt;iframe&gt;</code>). Therefore it is <strong>recommended</strong> to
-    restrict this fetch-directive (e.g., explicitly set <code>object-src 'none'</code> if
-    possible).</dd>
+    and {{HTMLElement("applet")}} elements.
+    <div class="notecard note">
+      <p><strong>Note:</strong> Elements controlled by <code>object-src</code> are perhaps
+        coincidentally considered legacy HTML elements and are not receiving new standardized
+        features (such as the security attributes <code>sandbox</code> or <code>allow</code>
+        for <code>&lt;iframe&gt;</code>). Therefore it is <strong>recommended</strong> to
+        restrict this fetch-directive (e.g., explicitly set <code>object-src 'none'</code> if
+        possible).</p>
+    </div>
+  </dd>
   <dt>{{CSP("prefetch-src")}}{{experimental_inline}}</dt>
   <dd>Specifies valid sources to be prefetched or prerendered.</dd>
   <dt>{{CSP("script-src")}}</dt>
@@ -153,19 +158,22 @@ browser-compat: http.headers.csp.Content-Security-Policy
   <dd>Instructs the user agent to report attempts to violate the Content Security Policy.
     These violation reports consist of {{Glossary("JSON")}} documents sent via an HTTP
     <code>POST</code> request to the specified URI.
-    <div class="warning">
-      <p>Though the {{CSP("report-to")}} directive is intended to replace the deprecated
-        <code><strong>report-uri</strong></code> directive, {{CSP("report-to")}} is not
-        supported in most browsers yet. So for compatibility with current browsers while
-        also adding forward compatibility when browsers get {{CSP("report-to")}} support,
-        you can specify both <code><strong>report-uri</strong></code> and
-        {{CSP("report-to")}}:</p>
+    <div class="notecard warning">
+      <p>
+        <strong>Warning:</strong> Though the {{CSP("report-to")}} directive is intended
+        to replace the deprecated <code><strong>report-uri</strong></code> directive,
+        {{CSP("report-to")}} is not supported in most browsers yet.
+        So for compatibility with current browsers
+        while also adding forward compatibility when browsers get {{CSP("report-to")}} support,
+        you can specify both <code><strong>report-uri</strong></code> and {{CSP("report-to")}}:
+      </p>
 
-      <pre
-        class="brush: html">Content-Security-Policy: ...; report-uri https://endpoint.example.com; report-to groupname</pre>
+      <pre class="brush: html">Content-Security-Policy: ...; report-uri https://endpoint.example.com; report-to groupname</pre>
 
-      <p>In browsers that support {{CSP("report-to")}}, the
-        <code><strong>report-uri</strong></code> directive will be ignored.</p>
+      <p>
+        In browsers that support {{CSP("report-to")}},
+        the <code><strong>report-uri</strong></code> directive will be ignored.
+      </p>
     </div>
   </dd>
   <dt>{{CSP("report-to")}}{{experimental_inline}}</dt>

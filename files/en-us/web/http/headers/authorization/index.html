@@ -12,7 +12,7 @@ tags:
 
 <p>The HTTP <strong><code>Authorization</code></strong> request header contains the
   credentials to authenticate a user agent with a server, usually, but not
-  necessarily, after the server has responded with a {{HTTPStatus("401")}}
+  necessarily, after the server has responded with a {{HTTPStatus("401")}}
   <code>Unauthorized</code> status and the {{HTTPHeader("WWW-Authenticate")}} header.</p>
 
 <table class="properties">
@@ -60,7 +60,7 @@ tags:
         encoded (<code>YWxhZGRpbjpvcGVuc2VzYW1l</code>).</li>
     </ul>
 
-    <div class="note">
+    <div class="notecard note">
       <p><strong>Note</strong>: Base64 encoding does not mean encryption or hashing! This
         method is equally secure as sending the credentials in clear text (base64 is a
         reversible encoding). Prefer to use HTTPS in conjunction with Basic

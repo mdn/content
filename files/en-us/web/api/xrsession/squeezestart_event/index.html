@@ -26,7 +26,9 @@ browser-compat: api.XRSession.squeezestart_event
 ---
 <p>{{APIRef("WebXR Device API")}}</p>
 
-<p><span class="seoSummary">The <a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR</a> event <code><strong>squeezestart</strong></code> is sent to an {{domxref("XRSession")}} when the user begins a <a href="/en-US/docs/Web/API/WebXR_Device_API/Inputs#Primary_squeeze_actions">primary squeeze action</a> on one of its input sources.</span> Primary squeeze actions are actions which are meant to represent gripping or squeezing using your hands, and may be simulated using triggers on hand controllers.</p>
+<p>The <a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR</a> event <code><strong>squeezestart</strong></code> is sent to an {{domxref("XRSession")}} when the user begins a <a href="/en-US/docs/Web/API/WebXR_Device_API/Inputs#primary_squeeze_actions">primary squeeze action</a> on one of its input sources.</p>
+
+<p>Primary squeeze actions are actions which are meant to represent gripping or squeezing using your hands, and may be simulated using triggers on hand controllers.</p>
 
 <table class="properties">
  <tbody>
@@ -53,7 +55,7 @@ browser-compat: api.XRSession.squeezestart_event
 
 <h2 id="Examples">Examples</h2>
 
-<p>The following example uses {{domxref("EventTarget.addEventListener", "addEventListener()")}} to establish handlers for the squeezeion events: {{domxref("XRSession.squeezestart_event", "squeezestart")}}, {{domxref("XRSession.squeezeend_event", "squeezeend")}}, and {{domxref("XRSession.squeeze_event", "squeeze")}}. This snippet is the core of an event handler to allow the user to grab objects in the scene and move them around.</p>
+<p>The following example uses {{domxref("EventTarget.addEventListener", "addEventListener()")}} to establish handlers for the squeeze events: {{domxref("XRSession.squeezestart_event", "squeezestart")}}, {{domxref("XRSession.squeezeend_event", "squeezeend")}}, and {{domxref("XRSession.squeeze_event", "squeeze")}}. This snippet is the core of an event handler to allow the user to grab objects in the scene and move them around.</p>
 
 <p>In this case, a single function is used to handle all three events, allowing them to share certain code that's the same regardless of which of the three events is received. Only after completing those tasks does the <code>onSqueezeEvent()</code> function below dispatch the action out to a specialized function to handle things.</p>
 
