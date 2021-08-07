@@ -331,7 +331,7 @@ p:nth-of-type(1) {
 
 <p>Let's put together a simple example to show what we mean. First of all, delete the existing <code>p:nth-of-type(1)</code> and <code>.positioned</code> rules from your CSS.</p>
 
-<p>Now, update the <code>body</code> rule to remove the <code>position: relative;</code> declaration and add a fixed height, like so:</p>
+<p>Now update the <code>body</code> rule to remove the <code>position: relative;</code> declaration and add a fixed height, like so:</p>
 
 <pre class="brush: css">body {
   width: 500px;
@@ -339,7 +339,7 @@ p:nth-of-type(1) {
   margin: 0 auto;
 }</pre>
 
-<p>Now we're going to give the {{htmlelement("h1")}} element <code>position: fixed;</code>, and get it to sit at the top of the viewport. Add the following rule to your CSS:</p>
+<p>Now we're going to give the {{htmlelement("h1")}} element <code>position: fixed;</code> and have it sit at the top of the viewport. Add the following rule to your CSS:</p>
 
 <pre class="brush: css">h1 {
   position: fixed;
@@ -350,9 +350,9 @@ p:nth-of-type(1) {
   padding: 10px;
 }</pre>
 
-<p>The <code>top: 0;</code> is required to make it stick to the top of the screen. We give the heading the same width as the content column and then give it a white background and some padding and margin, so the content won't be visible underneath it.</p>
+<p>The <code>top: 0;</code> is required to make it stick to the top of the screen. We give the heading the same width as the content column and then a white background and some padding and margin so the content won't be visible underneath it.</p>
 
-<p>If you save and refresh now, you'll see a fun little effect whereby the heading stays fixed, and the content appears to scroll up and disappear underneath it. But we could improve this more — at the moment some of the content starts off underneath the heading. This is because the positioned heading no longer appears in the document flow, so the rest of the content moves up to the top. We need to move it all down a bit; we can do this by setting some top margin on the first paragraph. Add this now:</p>
+<p>If you save and refresh, you'll see a fun little effect of the heading staying fixed — the content appears to scroll up and disappear underneath it. But notice how some of the content is initially clipped under the heading. This is because the positioned heading no longer appears in the document flow, so the rest of the content moves up to the top. We could improve this by moving the paragraphs all down a bit. We can do this by setting some top margin on the first paragraph. Add this now:</p>
 
 <pre class="brush: css">p:nth-of-type(1) {
   margin-top: 60px;
