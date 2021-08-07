@@ -309,33 +309,6 @@ console.log('Is rect an instance of Shape?', rect instanceof Shape); // true
 rect.move(1, 1); // Outputs, 'Shape moved.'
 ```
 
-If you wish to inherit from multiple objects, then mixins are a possibility.
-
-```js
-function MyClass() {
-  SuperClass.call(this);
-  OtherSuperClass.call(this);
-}
-
-// inherit one class
-MyClass.prototype = Object.create(SuperClass.prototype);
-// mixin another
-Object.assign(MyClass.prototype, OtherSuperClass.prototype);
-// re-assign constructor
-MyClass.prototype.constructor = MyClass;
-
-MyClass.prototype.myMethod = function() {
-  // do something
-};
-```
-
-{{jsxref("Object.assign()")}} copies properties from the OtherSuperClass prototype to
-the MyClass prototype, making them available to all instances of MyClass.
-`Object.assign()` was introduced with ES2015 and [can
-be polyfilled](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign#polyfill). If support for older browsers is necessary,
-[`jQuery.extend()`](https://api.jquery.com/jQuery.extend/) or
-[`_.assign()`](https://lodash.com/docs/#assign) can be used.
-
 ### Using propertiesObject argument with Object.create()
 
 ```js
