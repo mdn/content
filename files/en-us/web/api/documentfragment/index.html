@@ -64,6 +64,8 @@ browser-compat: api.DocumentFragment
 
 <p>An empty <code>DocumentFragment</code> can be created using the {{domxref("document.createDocumentFragment()")}} method or the constructor.</p>
 
+<p><strong>Caution:</strong>It's possible to create constructs that HTML doesn't allow with <code>DocumentFragment</code>s. When those <code>DocumentFragment</code>s are inserted into a <code>Document</code> object, the HTML parser will mutate the <code>Document</code> to create a valid <code>HTMLDocument</code></p>
+
 <h2 id="Example">Example</h2>
 
 <h3 id="HTML">HTML</h3>
