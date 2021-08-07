@@ -8,9 +8,9 @@ tags:
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p class="summary"><strong>Cross-Origin Resource Policy</strong> is a policy set by the <a href="/en-US/docs/Web/HTTP/Headers/Cross-Origin-Resource-Policy"><code>Cross-Origin-Resource-Policy</code> HTTP header</a> that lets web sites and applications opt in to protection against certain requests from other origins (such as those issued with elements like <code>&lt;script&gt;</code> and <code>&lt;img&gt;</code>), to mitigate speculative side-channel attacks, like <a href="https://en.wikipedia.org/wiki/Spectre_(security_vulnerability)">Spectre</a>, as well as Cross-Site Script Inclusion attacks.</p>
+<p><strong>Cross-Origin Resource Policy</strong> is a policy set by the <a href="/en-US/docs/Web/HTTP/Headers/Cross-Origin-Resource-Policy"><code>Cross-Origin-Resource-Policy</code> HTTP header</a> that lets web sites and applications opt in to protection against certain requests from other origins (such as those issued with elements like <code>&lt;script&gt;</code> and <code>&lt;img&gt;</code>), to mitigate speculative side-channel attacks, like <a href="https://en.wikipedia.org/wiki/Spectre_(security_vulnerability)">Spectre</a>, as well as Cross-Site Script Inclusion attacks.</p>
 
-<p class="summary">CORP is an additional layer of protection beyond the default {{Glossary("same-origin policy")}}. Cross-Origin Resource Policy complements <a href="https://fetch.spec.whatwg.org/#corb">Cross-Origin Read Blocking</a> (CORB), which is a mechanism to prevent some cross-origin reads by default.</p>
+<p>CORP is an additional layer of protection beyond the default {{Glossary("same-origin policy")}}. Cross-Origin Resource Policy complements <a href="https://fetch.spec.whatwg.org/#corb">Cross-Origin Read Blocking</a> (CORB), which is a mechanism to prevent some cross-origin reads by default.</p>
 
 <div class="notecard note">
   <p><strong>Note:</strong> The policy is only effective for <a href="https://fetch.spec.whatwg.org/#concept-request-mode"><code>no-cors</code></a> requests, which are issued by default for CORS-safelisted methods/headers.</p>
