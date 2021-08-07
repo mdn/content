@@ -248,9 +248,9 @@ span {
 
 <h3 id="Introducing_z-index">Introducing z-index</h3>
 
-<p>All this absolute positioning is good fun, but there is another thing we haven't considered yet — when elements start to overlap, what determines which elements appear on top of which other elements? In the example we've seen so far, we only have one positioned element in the positioning context, and it appears on the top, since positioned elements win over non-positioned elements. What about when we have more than one?</p>
+<p>All this absolute positioning is good fun, but there's another feature we haven't considered yet. When elements start to overlap, what determines which elements appear over others and which elements appear under others? In the example we've seen so far, we only have one positioned element in the positioning context, and it appears on the top since positioned elements win over non-positioned elements. What about when we have more than one?</p>
 
-<p>Try adding the following to your CSS, to make the first paragraph absolutely positioned too:</p>
+<p>Try adding the following to your CSS to make the first paragraph absolutely positioned too:</p>
 
 <pre class="brush: css">p:nth-of-type(1) {
   position: absolute;
@@ -259,9 +259,9 @@ span {
   right: 30px;
 }</pre>
 
-<p>At this point you'll see the first paragraph colored lime, moved out of the document flow, and positioned a bit above from where it originally was. It is also stacked below the original <code>.positioned</code> paragraph, where the two overlap. This is because the <code>.positioned</code> paragraph is the second paragraph in the source order, and positioned elements later in the source order win over positioned elements earlier in the source order.</p>
+<p>At this point you'll see the first paragraph colored lime, moved out of the document flow, and positioned a bit above from where it originally was. It's also stacked below the original <code>.positioned</code> paragraph where the two overlap. This is because the <code>.positioned</code> paragraph is the second paragraph in the source order, and positioned elements later in the source order win over positioned elements earlier in the source order.</p>
 
-<p>Can you change the stacking order? Yes, you can, by using the {{cssxref("z-index")}} property. "z-index" is a reference to the z-axis. You may recall from previous points in the course where we discussed web pages using horizontal (x-axis) and vertical (y-axis) coordinates to work out positioning for things like background images and drop shadow offsets. (0,0) is at the top left of the page (or element), and the x- and y-axes run across to the right and down the page (for left to right languages, anyway.)</p>
+<p>Can you change the stacking order? Yes, you can, by using the {{cssxref("z-index")}} property. "z-index" is a reference to the z-axis. You may recall from previous points in the course where we discussed web pages using horizontal (x-axis) and vertical (y-axis) coordinates to work out positioning for things like background images and drop shadow offsets. For languages that run left to right, (0,0) is at the top left of the page (or element), and the x- and y-axes run across to the right and down the page.</p>
 
 <p>Web pages also have a z-axis: an imaginary line that runs from the surface of your screen, towards your face (or whatever else you like to have in front of the screen). {{cssxref("z-index")}} values affect where positioned elements sit on that axis; positive values move them higher up the stack, and negative values move them lower down the stack. By default, positioned elements all have a <code>z-index</code> of <code>auto</code>, which is effectively 0.</p>
 
