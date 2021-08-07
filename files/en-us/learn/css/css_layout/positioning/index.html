@@ -319,15 +319,15 @@ p:nth-of-type(1) {
 
 <p>{{ EmbedLiveSample('Introducing_z-index', '100%', 400) }}</p>
 
-<p>Note that <code>z-index</code> only accepts unitless index values; you can't specify that you want one element to be 23 pixels up the Z-axis — it doesn't work like that. Higher values will go above lower values, and it is up to you what values you use. Using 2 and 3 would give the same effect as 300 and 40000.</p>
+<p>Note that <code>z-index</code> only accepts unitless index values; you can't specify that you want one element to be 23 pixels up the Z-axis — it doesn't work like that. Higher values will go above lower values and it's up to you what values you use. Using values of 2 or 3 would give the same effect as values of 300 or 40000.</p>
 
 <div class="note">
-<p><strong>Note</strong>: You can see the example at this point live at <code><a href="https://mdn.github.io/learning-area/css/css-layout/positioning/5_z-index.html">5_z-index.html</a></code> (<a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/5_z-index.html">see source code</a>).</p>
+<p><strong>Note</strong>: You can see an example for this live at <code><a href="https://mdn.github.io/learning-area/css/css-layout/positioning/5_z-index.html">5_z-index.html</a></code> (<a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/5_z-index.html">see source code</a>).</p>
 </div>
 
 <h2 id="Fixed_positioning">Fixed positioning</h2>
 
-<p>Let's now look at fixed positioning. This works in exactly the same way as absolute positioning, with one key difference: whereas absolute positioning fixes an element in place relative to its nearest positioned ancestor (the initial containing block if there isn't one),<strong> fixed positioning</strong> <em>usually</em> fixes an element in place relative to the visible portion of the viewport, except if one of its ancestors is a fixed containing block due to its <a href="/en-US/docs/Web/CSS/transform">transform property</a> being different from none. This means that you can create useful UI items that are fixed in place, like persisting navigation menus that are always visible no matter how much the page scrolls.</p>
+<p>Let's now look at fixed positioning. This works in exactly the same way as absolute positioning, with one key difference: whereas absolute positioning fixes an element in place relative to its nearest positioned ancestor (the initial containing block if there isn't one),<strong> fixed positioning</strong> <em>usually</em> fixes an element in place relative to the visible portion of the viewport. (An exception to this occurs if one of the element's ancestors is a fixed containing block because its <a href="/en-US/docs/Web/CSS/transform">transform property</a> has a value other than <em>none</em>.) This means that you can create useful UI items that are fixed in place, like persistent navigation menus that are always visible no matter how much the page scrolls.</p>
 
 <p>Let's put together a simple example to show what we mean. First of all, delete the existing <code>p:nth-of-type(1)</code> and <code>.positioned</code> rules from your CSS.</p>
 
