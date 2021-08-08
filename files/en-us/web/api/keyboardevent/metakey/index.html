@@ -39,15 +39,19 @@ browser-compat: api.KeyboardEvent.metaKey
 
 <h2 id="Example">Example</h2>
 
+<pre class="brush: html">&lt;button onclick="ismetaKey(event)"&gt;Click me with the meta key&lt;/button&gt;
+
+&lt;p id="output"&gt;&lt;/p&gt;
+</pre>
+
 <pre class="brush: js">function ismetaKey(e) {
-  alert("metaKey = " + e.metaKey);
+  document.querySelector("#output").textContent = "metaKey pressed? " + e.metaKey;
 }
 </pre>
 
-<pre class="brush: html">&lt;button onclick="ismetaKey(event)"&gt;Click me with the meta key&lt;/button&gt;
-</pre>
+<h4 id="Result">Result</h4>
 
-<p>{{ EmbedLiveSample('Example', 400, 36) }}</p>
+<p>{{ EmbedLiveSample('Example', 400, 90) }}</p>
 
 <h2 id="Specifications">Specifications</h2>
 
