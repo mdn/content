@@ -1225,7 +1225,6 @@
 /en-US/docs/DOM/DOMImplementation.createDocument	/en-US/docs/Web/API/DOMImplementation/createDocument
 /en-US/docs/DOM/DOMImplementation.createDocumentType	/en-US/docs/Web/API/DOMImplementation/createDocumentType
 /en-US/docs/DOM/DOMImplementation.createHTMLDocument	/en-US/docs/Web/API/DOMImplementation/createHTMLDocument
-/en-US/docs/DOM/DOMObject	/en-US/docs/Web/API/DOMObject
 /en-US/docs/DOM/DOMParser	/en-US/docs/Web/API/DOMParser
 /en-US/docs/DOM/DOMString	/en-US/docs/Web/API/DOMString
 /en-US/docs/DOM/DOMStringList	/en-US/docs/Web/API/DOMStringList
@@ -2791,7 +2790,6 @@
 /en-US/docs/Document_Object_Model_(DOM)/DOMImplementation.createDocument	/en-US/docs/Web/API/DOMImplementation/createDocument
 /en-US/docs/Document_Object_Model_(DOM)/DOMImplementation.createDocumentType	/en-US/docs/Web/API/DOMImplementation/createDocumentType
 /en-US/docs/Document_Object_Model_(DOM)/DOMImplementation.createHTMLDocument	/en-US/docs/Web/API/DOMImplementation/createHTMLDocument
-/en-US/docs/Document_Object_Model_(DOM)/DOMObject	/en-US/docs/Web/API/DOMObject
 /en-US/docs/Document_Object_Model_(DOM)/DOMString	/en-US/docs/Web/API/DOMString
 /en-US/docs/Document_Object_Model_(DOM)/DOMStringList	/en-US/docs/Web/API/DOMStringList
 /en-US/docs/Document_Object_Model_(DOM)/DOMStringMap	/en-US/docs/Web/API/DOMStringMap
