@@ -89,7 +89,7 @@ tags:
 }
 </pre>
 
-<p>The browser will now give you as many columns as it can of the size that you specify; any remaining space is then shared between the existing columns. This means that you will not get exactly the width that you specify, unless your container is exactly divisible by that width.</p>
+<p>The browser will now give you as many columns as it can of the size that you specify; any remaining space is then shared between the existing columns. This means that you won't get exactly the width that you specify unless your container is exactly divisible by that width.</p>
 
 <div id="Multicol_2">
 <div class="hidden">
@@ -128,7 +128,7 @@ tags:
 
 <h2 id="Styling_the_columns">Styling the columns</h2>
 
-<p>The columns created by multicol cannot be styled individually. There is no way to make one column bigger than other columns, or to change the background or text color of a single column. You have two opportunities to change the way that columns display:</p>
+<p>The columns created by multicol cannot be styled individually. There's no way to make one column bigger than other columns or to change the background or text color of a single column. You have two opportunities to change the way that columns display:</p>
 
 <ul>
  <li>Changing the size of the gap between columns using the {{cssxref("column-gap")}}.</li>
@@ -142,7 +142,7 @@ tags:
   column-gap: 20px;
 }</pre>
 
-<p>You can play around with different values — the property accepts any length unit. Now add a rule between the columns, with <code>column-rule</code>. In a similar way to the {{cssxref("border")}} property that you encountered in previous lessons, <code>column-rule</code> is a shorthand for {{cssxref("column-rule-color")}}, {{cssxref("column-rule-style")}}, and {{cssxref("column-rule-width")}}, and accepts the same values as <code>border</code>.</p>
+<p>You can play around with different values — the property accepts any length unit. Now add a rule between the columns with <code>column-rule</code>. In a similar way to the {{cssxref("border")}} property that you encountered in previous lessons, <code>column-rule</code> is a shorthand for {{cssxref("column-rule-color")}}, {{cssxref("column-rule-style")}}, and {{cssxref("column-rule-width")}}, and accepts the same values as <code>border</code>.</p>
 
 <pre class="brush: css">.container {
   column-count: 3;
@@ -187,7 +187,7 @@ tags:
 
 <p>{{ EmbedLiveSample('Multicol_3', '100%', 400) }}</p>
 
-<p>Something to take note of is that the rule does not take up any width of its own. It lies across the gap you created with <code>column-gap</code>. To make more space either side of the rule you will need to increase the <code>column-gap</code> size.</p>
+<p>Something to take note of is that the rule doesn't take up any width of its own. It lies across the gap you created with <code>column-gap</code>. To make more space on either side of the rule, you'll need to increase the <code>column-gap</code> size.</p>
 
 <h2 id="Spanning_columns">Spanning columns</h2>
 
