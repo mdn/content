@@ -50,24 +50,24 @@ tags:
 
 <p>The <code>cubic-bezier()</code> functional notation defines a <a href="https://en.wikipedia.org/wiki/B%C3%A9zier_curve#Cubic_B.C3.A9zier_curves">cubic Bézier curve</a>. As these curves are continuous, they are often used to smooth down the start and end of the interpolation and are therefore sometimes called <em>easing functions</em>.</p>
 
-<p>A cubic Bézier curve is defined by four points P<sub>0</sub>, P<sub>1</sub>, P<sub>2</sub>, and P<sub>3</sub>. P<sub>0</sub> and P<sub>3</sub> are the start and the end of the curve and, in CSS these points are fixed as the coordinates are ratios (the abscissa the ratio of time, the ordinate the ratio of the output range). P<sub>0</sub> is <code>(0, 0)</code> and represents the initial time or position and the initial state, P<sub>3</sub> is <code>(1, 1)</code> and represents the final time or position and the final state.</p>
+<p>A cubic Bézier curve is defined by four points P0, P1, P2, and P3. P0 and P3 are the start and the end of the curve and, in CSS these points are fixed as the coordinates are ratios (the abscissa the ratio of time, the ordinate the ratio of the output range). P0 is <code>(0, 0)</code> and represents the initial time or position and the initial state, P3 is <code>(1, 1)</code> and represents the final time or position and the final state.</p>
 
-<p>Not all cubic Bézier curves are suitable as easing functions as not all are <a href="https://en.wikipedia.org/wiki/Function_%28mathematics%29">mathematical functions</a>; i.e., curves that for a given abscissa have zero or one value. With P<sub>0</sub> and P<sub>3</sub> fixed as defined by CSS, a cubic Bézier curve is a function, and is therefore valid, if and only if the abscissas of P<sub>1</sub> and P<sub>2</sub> are both in the <code>[0, 1]</code> range.</p>
+<p>Not all cubic Bézier curves are suitable as easing functions as not all are <a href="https://en.wikipedia.org/wiki/Function_%28mathematics%29">mathematical functions</a>; i.e., curves that for a given abscissa have zero or one value. With P0 and P3 fixed as defined by CSS, a cubic Bézier curve is a function, and is therefore valid, if and only if the abscissas of P1 and P2 are both in the <code>[0, 1]</code> range.</p>
 
-<p>Cubic Bézier curves with the P<sub>1</sub> or P<sub>2</sub> ordinate outside the <code>[0, 1]</code> range may generate <em>bouncing</em> effects.</p>
+<p>Cubic Bézier curves with the P1 or P2 ordinate outside the <code>[0, 1]</code> range may generate <em>bouncing</em> effects.</p>
 
 <p>When you specify an invalid <code>cubic-bezier</code> curve, CSS ignores the whole property.</p>
 
 <h5 id="Syntax_2">Syntax</h5>
 
-<pre class="brush: css">cubic-bezier(<var>x<sub>1</sub></var>, <var>y<sub>1</sub></var>, <var>x<sub>2</sub></var>, <var>y<sub>2</sub></var>)
+<pre class="brush: css">cubic-bezier(x1, y1, x2, y2)
 </pre>
 
 <p>where:</p>
 
 <dl>
- <dt><strong><var>x<sub>1</sub></var>, <var>y<sub>1</sub></var>, <var>x<sub>2</sub></var>, <var>y<sub>2</sub></var></strong></dt>
- <dd>Are {{cssxref("&lt;number&gt;")}} values representing the abscissas, and ordinates of the P<sub>1</sub> and P<sub>2</sub> points defining the cubic Bézier curve. x<sub>1</sub> and x<sub>2</sub> must be in the range [0, 1] or the value is invalid.</dd>
+ <dt><strong>x1, y1, x2, y2</strong></dt>
+ <dd>Are {{cssxref("&lt;number&gt;")}} values representing the abscissas, and ordinates of the P1 and P2 points defining the cubic Bézier curve. x1 and x2 must be in the range [0, 1] or the value is invalid.</dd>
 </dl>
 
 <h4 id="Keywords_for_common_cubic-bezier_easing_functions">Keywords for common cubic-bezier easing functions</h4>

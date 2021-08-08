@@ -62,7 +62,7 @@ Content-length: 16
 
 <p>If the target resource does not have a current representation and the <code>PUT</code> request successfully creates one, then the origin server must inform the user agent by sending a {{HTTPStatus("201")}} (<code>Created</code>) response.</p>
 
-<pre class="newpage">HTTP/1.1 201 Created
+<pre>HTTP/1.1 201 Created
 Content-Location: /new.html</pre>
 
 <p>If the target resource does have a current representation and that representation is successfully modified in accordance with the state of the enclosed representation, then the origin server must send either a {{HTTPStatus("200")}} (<code>OK</code>) or a {{HTTPStatus("204")}} (<code>No Content</code>) response to indicate successful completion of the request.</p>

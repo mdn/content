@@ -9,7 +9,7 @@ browser-compat: http.status.501
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p><span class="seoSummary">The HyperText Transfer Protocol (HTTP) <code><strong>501 Not Implemented</strong></code> server error response code means that <strong>the server does not support the functionality required to fulfill the request</strong>.</span></p>
+<p>The HyperText Transfer Protocol (HTTP) <code><strong>501 Not Implemented</strong></code> server error response code means that <strong>the server does not support the functionality required to fulfill the request</strong>.</p>
 
 <p>This status can also send a {{HTTPHeader("Retry-After")}} header, telling the requester when to check back to see if the functionality is supported by then.</p>
 
@@ -17,11 +17,12 @@ browser-compat: http.status.501
 
 <p>If the server <em>does</em> recognize the method, but intentionally does not support it, the appropriate response is {{HTTPStatus(405, "405 Method Not Allowed")}}.</p>
 
-<div class="note">
-<ul>
- <li>A 501 error is not something you can fix, but requires a fix by the web server you are trying to access.</li>
- <li>A 501 response is cacheable by default; that is, unless caching headers instruct otherwise.</li>
-</ul>
+<div class="notecard note">
+  <p><strong>Note:</strong> </p>
+  <ul>
+    <li>A 501 error is not something you can fix, but requires a fix by the web server you are trying to access.</li>
+    <li>A 501 response is cacheable by default; that is, unless caching headers instruct otherwise.</li>
+  </ul>
 </div>
 
 <h2 id="Status">Status</h2>

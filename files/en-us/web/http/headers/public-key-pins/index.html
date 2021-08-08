@@ -13,10 +13,13 @@ browser-compat: http.headers.Public-Key-Pins
 ---
 <div>{{HTTPSidebar}}{{deprecated_header}}</div>
 
-<div class="notecard note"><strong>Note:</strong> Public Key Pinning mechanism was
-  deprecated in favor of <a
-    href="/en-US/docs/Web/Security/Certificate_Transparency">Certificate
-    Transparency</a> and {{HTTPHeader("Expect-CT")}} header.</div>
+<div class="notecard note">
+  <p>
+    <strong>Note:</strong> Public Key Pinning mechanism was deprecated
+    in favor of <a href="/en-US/docs/Web/Security/Certificate_Transparency">Certificate Transparency</a>
+    and {{HTTPHeader("Expect-CT")}} header.
+  </p>
+</div>
 
 <p>The HTTP <code><strong>Public-Key-Pins</strong></code> response header used to
   associate a specific cryptographic public {{Glossary("key")}} with a certain web server
@@ -69,11 +72,12 @@ browser-compat: http.headers.Public-Key-Pins
 
 <h2 id="Example">Example</h2>
 
-<div class="warning">
-  <p
-    id="HPKP_has_the_potential_to_lock_out_users_for_a_long_time_if_used_incorrectly!_The_use_of_backup_certificates_andor_pinning_the_CA_certificate_is_recommend.">
-    HPKP has the potential to lock out users for a long time if used incorrectly! The use
-    of backup certificates and/or pinning the CA certificate is recommended.</p>
+<div class="notecard warning">
+  <p>
+    <strong>Warning:</strong> HPKP has the potential to lock out users for a long time
+    if used incorrectly!
+    The use of backup certificates and/or pinning the CA certificate is recommended.
+  </p>
 </div>
 
 <pre>Public-Key-Pins:

@@ -47,7 +47,7 @@ browser-compat: http.headers.Save-Data
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: http">Save-Data: &lt;sd-token&gt;</pre>
+<pre>Save-Data: &lt;sd-token&gt;</pre>
 
 <h2 id="Directives">Directives</h2>
 
@@ -75,7 +75,7 @@ Save-Data: on</pre>
 
 <p>Response:</p>
 
-<pre class="brush: http">HTTP/1.0 200 OK
+<pre>HTTP/1.0 200 OK
 Content-Length: 102832
 Vary: Accept-Encoding, Save-Data
 Cache-Control: public, max-age=31536000
@@ -88,13 +88,13 @@ Content-Type: image/jpeg
 
 <p>Request:</p>
 
-<pre class="brush: http">GET /image.jpg HTTP/1.0
+<pre>GET /image.jpg HTTP/1.0
 Host: example.com
 </pre>
 
 <p>Response:</p>
 
-<pre class="brush: http">HTTP/1.0 200 OK
+<pre>HTTP/1.0 200 OK
 Content-Length: 481770
 Vary: Accept-Encoding, Save-Data
 Cache-Control: public, max-age=31536000

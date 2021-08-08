@@ -10,7 +10,9 @@ tags:
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p class="summary">HTML {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements allow media presentation without the need for the user to install any plug-ins or other software to do so. <span class="seoSummary">This guide covers a few server configuration changes that may be necessary for your web server to correctly serve Ogg media files.</span> This information may also be useful if you encounter other media types your server isn't already configured to recognize.</p>
+<p class="summary">HTML {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements allow media presentation without the need for the user to install any plug-ins or other software to do so.
+  This guide covers a few server configuration changes that may be necessary for your web server to correctly serve Ogg media files.
+  This information may also be useful if you encounter other media types your server isn't already configured to recognize.</p>
 
 <h2 id="Serve_media_with_the_correct_MIME_type">Serve media with the correct MIME type</h2>
 
@@ -43,7 +45,9 @@ AddType application/ogg .ogg
 
 <p>By default, <a href="https://v2v.cc/~j/ffmpeg2theora/"><code>ffmpeg2theora</code></a> uses one key frame every 64 frames (or about every 2 seconds at 30 frames per second), which works pretty well.</p>
 
-<div class="note"><strong>Note:</strong> Of course, the more key frames you use, the larger your video file is, so you may need to experiment a bit to get the right balance between file size and seek performance.</div>
+<div class="notecard note">
+  <p><strong>Note:</strong> Of course, the more key frames you use, the larger your video file is, so you may need to experiment a bit to get the right balance between file size and seek performance.</p>
+</div>
 
 <h2 id="Consider_using_the_preload_attribute">Consider using the preload attribute</h2>
 
@@ -55,8 +59,8 @@ AddType application/ogg .ogg
 
 <h3 id="Serve_X-Content-Duration_headers">Serve X-Content-Duration headers</h3>
 
-<div class="note">
-<p><strong>Note</strong>: As of <a href="/en-US/docs/Mozilla/Firefox/Releases/41">Firefox 41</a>, the <code>X-Content-Duration</code> header is no longer supported. See {{Bug(1160695)}} for more details.</p>
+<div class="notecard note">
+  <p><strong>Note:</strong> As of <a href="/en-US/docs/Mozilla/Firefox/Releases/41">Firefox 41</a>, the <code>X-Content-Duration</code> header is no longer supported. See {{Bug(1160695)}} for more details.</p>
 </div>
 
 <p>The Ogg format doesn't encapsulate the duration of media, so for the progress bar on the video controls to display the duration of the video, Gecko needs to determine the length of the media using other means.</p>

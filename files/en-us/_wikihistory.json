@@ -35116,17 +35116,6 @@
       "gingerchris"
     ]
   },
-  "Web/API/DOMObject": {
-    "modified": "2019-03-23T23:59:07.618Z",
-    "contributors": [
-      "Sheppy",
-      "Sebastianz",
-      "teoli",
-      "kscarfone",
-      "ethertank",
-      "Brettz9"
-    ]
-  },
   "Web/API/DOMParser": {
     "modified": "2020-10-25T22:15:37.690Z",
     "contributors": [
