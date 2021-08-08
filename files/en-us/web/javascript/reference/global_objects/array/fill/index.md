@@ -50,7 +50,7 @@ The modified array, filled with `value`.
 
 <div class="note notecard">
 <b>Note</b>: Using Array.prototype.fill() on an empty array would not modify it as the array has nothing to be modified. To use Array.prototype.fill() when declaring an array, make sure to assign slots to the array.
-<a href="#using_fill_to_populate_an_empty_array">See example</a>
+<a href="#using_fill_to_populate_an_empty_array">See Example</a>
 </div>
 
 ## Polyfill
