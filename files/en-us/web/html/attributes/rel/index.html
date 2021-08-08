@@ -95,7 +95,7 @@ tags:
 		<tr>
 			<td><code><a href="/en-US/docs/Web/HTML/Link_types/manifest">manifest</a></code></td>
 			<td>Web app manifest</td>
-			<td class="not-allowed">Link</td>
+			<td>Link</td>
 			<td>Not allowed</td>
 			<td class="not-allowed">Not allowed</td>
 		</tr>
@@ -213,15 +213,9 @@ tags:
 
 <h2 id="Values">Values</h2>
 
-<p>If there are multiple <code>&lt;link rel="icon"&gt;</code>s, the browser uses their <a href="media"><code>media</code></a> attribute, <a href="type"><code>type</code></a> and <a href="sizes"><code>sizes</code></a> attributes to select the most appropriate icon. If several icons are equally appropriate, the last one is used. If the most appropriate icon is later found to be inappropriate, for example, because it uses an unsupported format, the browser proceeds to the next-most appropriate, and so on.</p>
-
-<p><strong>Note:</strong> Apple's iOS does not use this link type, nor the <a href="sizes"><code>sizes</code></a> attribute, like others mobile browsers do, to select a webpage icon for Web Clip or a start-up placeholder. Instead, it uses the non-standard <a class="external external-icon" href="https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4"><code>apple-touch-icon</code></a> and <a class="external external-icon" href="https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW6"><code>apple-touch-startup-image</code></a> respectively.</p>
-
-<p class="note">The <code>shortcut</code> link type is often seen before <code>icon</code>, but this link type is non-conforming, ignored and <strong>web authors must not use it anymore</strong>.</p>
-
 <dl>
 	<dt>{{htmlattrdef("alternate")}}</dt>
-	<dd>Indicates an alternate representation of the current document. Valid for link, a, and area, the meaning depends on the values of the other attributes.
+	<dd>Indicates an alternate representation of the current document. Valid for {{htmlelement('link')}}, {{htmlelement('a')}}, and {{htmlelement('area')}}, the meaning depends on the values of the other attributes.
 	<ul>
 		<li>With the <code>{{anch('stylesheet')}}</code> keyword on a <code>&lt;link&gt;</code>, it creates an alternate stylesheet.
 		<pre class="brush:html">&lt;!-- a persistent style sheet --&gt;

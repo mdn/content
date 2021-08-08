@@ -33,19 +33,6 @@ If neither the beginning or end of `str` has any whitespace, a new string is sti
 
 To return a new string with whitespace trimmed from just one end, use {{jsxref("String.prototype.trimStart()", "trimStart()")}} or {{jsxref("String.prototype.trimEnd()", "trimEnd()")}}.
 
-## Polyfill
-
-Running the following code before any other code will create `trim()` if
-it's not natively available.
-
-```js
-if (!String.prototype.trim) {
-  String.prototype.trim = function () {
-    return this.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '');
-  };
-}
-```
-
 ## Examples
 
 ### Using `trim()`
@@ -67,6 +54,5 @@ console.log(orig.trim()); // 'foo'
 
 ## See also
 
-- A polyfill of `String.prototype.trim` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.trimStart()")}}
 - {{jsxref("String.prototype.trimEnd()")}}

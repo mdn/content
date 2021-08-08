@@ -61,7 +61,7 @@ Values of zero are all considered to be equal, regardless of sign. (That is,
 but `false` is _not_ considered to be the same as `0`.
 
 > **Note:** Technically speaking, `includes()` uses the
-> [`sameValueZero`](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#Same-value-zero_equality)
+> [`sameValueZero`](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value-zero_equality)
 > algorithm to determine whether the given element is found.
 
 ## Examples

@@ -16,13 +16,10 @@ browser-compat: http.headers.Feature-Policy
 <div>{{HTTPSidebar}} {{SeeCompatTable}}</div>
 
 <div class="notecard warning">
-  <h4>Warning</h4>
-  <p>The header has now been renamed to <code>Permissions-Policy</code> in the spec, and this article will eventually be updated to reflect that change.</p>
-  </div>
+  <p><strong>Warning:</strong> The header has now been renamed to <code>Permissions-Policy</code> in the spec, and this article will eventually be updated to reflect that change.</p>
+</div>
 
-<p><span class="seoSummary">The HTTP <strong><code>Feature-Policy</code></strong> header provides a mechanism to allow and deny the use of browser features in its own frame, and in content within any {{HTMLElement("iframe")}} elements in the document.</span></p>
-
-
+<p>The HTTP <strong><code>Feature-Policy</code></strong> header provides a mechanism to allow and deny the use of browser features in its own frame, and in content within any {{HTMLElement("iframe")}} elements in the document.</p>
 
 <p>For more information, see the main <a href="/en-US/docs/Web/HTTP/Feature_Policy">Feature Policy</a> article.</p>
 
@@ -41,7 +38,7 @@ browser-compat: http.headers.Feature-Policy
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: http">Feature-Policy: &lt;directive&gt; &lt;allowlist&gt;</pre>
+<pre>Feature-Policy: &lt;directive&gt; &lt;allowlist&gt;</pre>
 
 <dl>
  <dt><code>&lt;directive&gt;</code></dt>
@@ -53,12 +50,14 @@ browser-compat: http.headers.Feature-Policy
    <li><code>*</code>: The feature will be allowed in this document, and all nested browsing contexts (iframes) regardless of their origin.</li>
    <li><code>'self'</code>: The feature will be allowed in this document, and in all nested browsing contexts (iframes) in the same origin. The feature is not allowed in cross-origin documents in nested browsing contexts.</li>
    <li><code>'src'</code>: (In an iframe <code>allow</code> attribute only) The feature will be allowed in this iframe, as long as the document loaded into it comes from the same origin as the URL in the iframe's {{HTMLElement('iframe','src','#Attributes')}} attribute.
-    <div class="note">The <code>'src'</code> origin is used in the iframe <code>allow</code> attribute only, and is the <em>default</em> <code>allowlist</code> value. </div>
+    <div class="notecard note">
+      <p><strong>Note:</strong> The <code>'src'</code> origin is used in the iframe <code>allow</code> attribute only, and is the <em>default</em> <code>allowlist</code> value.</p>
+    </div>
    </li>
    <li><code>'none'</code>: The feature is disabled in top-level and nested browsing contexts.</li>
    <li>&lt;origin(s)&gt;: The feature is allowed for specific origins (for example, https://example.com). Origins should be separated by a space.</li>
   </ul>
-  
+
   <p>The values <code>*</code> (enable for all origins) or <code>'none'</code> (disable for all origins) may only be used alone, while <code>'self'</code> and <code>'src'</code> may be used with one or more origins.</p>
   <p>Features have a <em>default</em> allowlist, which is one of: <code>*</code>, <code>'self'</code>, or <code>'none'</code>.</p>
 </dd>

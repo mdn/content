@@ -34,7 +34,13 @@ browser-compat: api.FileSystemDirectoryHandle.entries
 
 <h2 id="Examples">Examples</h2>
 
-<p>Todo</p>
+<pre class="brush: js">
+const dirHandle = await window.showDirectoryPicker()
+
+for await (const [key, value] of dirHandle.entries()) {
+    console.log({ key, value })
+}
+</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

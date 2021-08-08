@@ -39,7 +39,7 @@ browser-compat: http.headers.Device-Memory
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: http">Device-Memory: &lt;number&gt;</pre>
+<pre>Device-Memory: &lt;number&gt;</pre>
 
 <h2 id="Directives">Directives</h2>
 
@@ -54,12 +54,12 @@ browser-compat: http.headers.Device-Memory
 
 <p>The server first needs to opt in to receive <code>Device-Memory</code> header by sending the response headers {{HTTPHeader("Accept-CH")}} containing <code>Device-Memory</code>.</p>
 
-<pre class="brush: http">Accept-CH: Device-Memory
+<pre>Accept-CH: Device-Memory
 </pre>
 
 <p>Then on subsequent requests the client might send <code>Device-Memory</code> header back:</p>
 
-<pre class="brush: http">Device-Memory: 1</pre>
+<pre>Device-Memory: 1</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
