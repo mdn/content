@@ -173,19 +173,27 @@ const [month, day, year]       = [date.getMonth(), date.getDate(), date.getFullY
 const [hour, minutes, seconds] = [date.getHours(), date.getMinutes(), date.getSeconds()];
 ```
 
-### Two digit years map to 1900 – 1999
+### Interpretation of two-digit years
 
-Values from `0` to `99` map to the years `1900` to `1999`. All other values are the actual year .
-
-In order to create and get dates between the years `0` and `99` the {{jsxref("Date.prototype.setFullYear()")}} and {{jsxref("Date.prototype.getFullYear()")}} methods should be used.
+`new Date()` exhibits legacy undesirable, inconsistent behavior with two-digit year values; specifically, when a `new Date()` call is given a two-digit year value, that year value does not get treated as a literal year and used as-is but instead gets interpreted as a relative offset — in some cases as an offset from the year `1900`, but in other cases, as an offset from the year `2000`.
 
 ```js
-let date = new Date(98, 1)  // Sun Feb 01 1998 00:00:00 GMT+0000 (GMT)
+let date = new Date(98, 1)         // Sun Feb 01 1998 00:00:00 GMT+0000 (GMT)
+let date = new Date(22, 1)         // Wed Feb 01 1922 00:00:00 GMT+0000 (GMT)
+let date = new Date("2/1/22")      // Tue Feb 01 2022 00:00:00 GMT+0000 (GMT)
 
-// Deprecated method; 98 maps to 1998 here as well
-date.setYear(98)            // Sun Feb 01 1998 00:00:00 GMT+0000 (GMT)
+// Legacy method; always interprets two-digit year values as relative to 1900
+date.setYear(98); date.toString()  // Sun Feb 01 1998 00:00:00 GMT+0000 (GMT)
+date.setYear(22); date.toString()  // Wed Feb 01 1922 00:00:00 GMT+0000 (GMT)
+```
 
-date.setFullYear(98)        // Sat Feb 01 0098 00:00:00 GMT+0000 (BST)
+So, to create and get dates between the years `0` and `99`, instead use the preferred {{jsxref("Date.prototype.setFullYear()", "setFullYear()")}} and {{jsxref("Date.prototype.getFullYear()", "getFullYear()")}} methods:.
+
+```js
+// Preferred method; never interprets any value as being a relative offset,
+// but instead uses the year value as-is
+date.setFullYear(98); date.getFullYear()  // 98 (not 1998)
+date.setFullYear(22); date.getFullYear()  // 22 (not 1922, not 2022)
 ```
 
 ### Calculating elapsed time

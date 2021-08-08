@@ -13,7 +13,7 @@ tags:
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p><span class="seoSummary">The <a href="/en-US/docs/Web/HTTP">HTTP/1.1 protocol</a> provides a special mechanism that can be used to upgrade an already established connection to a different protocol, using the {{HTTPHeader("Upgrade")}} header field.</span></p>
+<p>The <a href="/en-US/docs/Web/HTTP">HTTP/1.1 protocol</a> provides a special mechanism that can be used to upgrade an already established connection to a different protocol, using the {{HTTPHeader("Upgrade")}} header field.</p>
 
 <p>This mechanism is optional; it cannot be used to insist on a protocol change. Implementations can choose not to take advantage of an upgrade even if they support the new protocol, and in practice, this mechanism is used mostly to bootstrap a WebSockets connection.</p>
 
@@ -48,8 +48,8 @@ Upgrade: example/1, foo/2</pre>
 
 <p>The {{domxref("WebSocket.WebSocket", "WebSocket()")}} constructor does all the work of creating an initial HTTP/1.1 connection then handling the handshaking and upgrade process for you.</p>
 
-<div class="note">
-<p>You can also use the <code>"wss://"</code> URL scheme to open a secure WebSocket connection.</p>
+<div class="notecard note">
+  <p><strong>Note:</strong> You can also use the <code>"wss://"</code> URL scheme to open a secure WebSocket connection.</p>
 </div>
 
 <p>If you need to create a WebSocket connection from scratch, you'll have to handle the handshaking process yourself. After creating the initial HTTP/1.1 session, you need to request the upgrade by adding to a standard request the {{HTTPHeader("Upgrade")}} and {{HTTPHeader("Connection")}} headers, as follows:</p>

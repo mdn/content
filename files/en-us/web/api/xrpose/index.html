@@ -7,7 +7,6 @@ tags:
   - API
   - AR
   - Interface
-  - NeedsExample
   - Orientation
   - Position
   - Reality
@@ -27,7 +26,7 @@ browser-compat: api.XRPose
 ---
 <p>{{APIRef("WebXR Device API")}}{{securecontext_header}}</p>
 
-<p><span class="seoSummary"><code>XRPose</code> is a <a href="/en-US/docs/Web/API/WebXR_API">WebXR API</a> interface representing a position and orientation in the 3D space, relative to the {{domxref("XRSpace")}} within which it resides.</span> The <code>XRSpace</code>—which is either an {{domxref("XRReferenceSpace")}} or an {{domxref("XRBoundedReferenceSpace")}}—defines the coordinate system used for the pose and, in the case of an {{domxref("XRViewerPose")}}, its underlying views.</p>
+<p><span class="seoSummary"><code>XRPose</code> is a <a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR API</a> interface representing a position and orientation in the 3D space, relative to the {{domxref("XRSpace")}} within which it resides.</span> The <code>XRSpace</code>—which is either an {{domxref("XRReferenceSpace")}} or an {{domxref("XRBoundedReferenceSpace")}}—defines the coordinate system used for the pose and, in the case of an {{domxref("XRViewerPose")}}, its underlying views.</p>
 
 <p>To obtain the <code>XRPose</code> for the <code>XRSpace</code> used as the local coordinate system of an object, call {{domxref("XRFrame.getPose()")}}, specifying that local <code>XRSpace</code> and the space to which you wish to convert:</p>
 
@@ -44,10 +43,14 @@ browser-compat: api.XRPose
 <h2 id="Properties">Properties</h2>
 
 <dl>
- <dt>{{DOMxRef("XRPose.transform")}} {{readonlyInline}}</dt>
- <dd>A {{DOMxRef("XRRigidTransform")}} which provides the position and orientation of the pose relative to the base {{DOMxRef("XRSpace")}}.</dd>
+ <dt>{{DOMxRef("XRPose.angularVelocity")}} {{readonlyInline}}</dt>
+ <dd>A {{DOMxRef("DOMPointReadOnly")}} describing the angular velocity in radians per second relative to the base {{DOMxRef("XRSpace")}}.</dd>
  <dt>{{DOMxRef("XRPose.emulatedPosition")}} {{readonlyInline}}</dt>
  <dd>A Boolean value which is <code>false</code> if the position and orientation given by {{DOMxRef("XRPose.transform", "transform")}} is obtained directly from a full six degree of freedom (6DoF) XR device (that is, a device which tracks not only the pitch, yaw, and roll of the head but also the forward, backward, and side-to-side motion of the viewer). If any component of the <code>transform</code> is computed or created artificially (such as by using mouse or keyboard controls to move through space), this value is instead <code>true</code>, indicating that the <code>transform</code> is in part emulated in software.</dd>
+ <dt>{{DOMxRef("XRPose.linearVelocity")}} {{readonlyInline}}</dt>
+ <dd>A {{DOMxRef("DOMPointReadOnly")}} describing the linear velocity in meters per second relative to the base {{DOMxRef("XRSpace")}}.</dd>
+ <dt>{{DOMxRef("XRPose.transform")}} {{readonlyInline}}</dt>
+ <dd>A {{DOMxRef("XRRigidTransform")}} which provides the position and orientation of the pose relative to the base {{DOMxRef("XRSpace")}}.</dd>
 </dl>
 
 <h2 id="Specifications">Specifications</h2>

@@ -16,8 +16,8 @@ browser-compat: http.headers.X-Frame-Options
 
 <p>The added security is provided only if the user accessing the document is using a browser that supports <code>X-Frame-Options</code>.</p>
 
-<div class="note">
-<p><strong>Note:</strong> The {{HTTPHeader("Content-Security-Policy")}} HTTP header has a {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} directive which <a href="https://www.w3.org/TR/CSP2/#frame-ancestors-and-frame-options">obsoletes</a> this header for supporting browsers.</p>
+<div class="notecard note">
+  <p><strong>Note:</strong> The {{HTTPHeader("Content-Security-Policy")}} HTTP header has a {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} directive which <a href="https://www.w3.org/TR/CSP2/#frame-ancestors-and-frame-options">obsoletes</a> this header for supporting browsers.</p>
 </div>
 
 <table class="properties">
@@ -56,8 +56,8 @@ X-Frame-Options: SAMEORIGIN
 
 <h2 id="Examples">Examples</h2>
 
-<div class="note">
-<p><strong>Note:</strong> Setting X-Frame-Options inside the  {{HTMLElement("meta")}} element is useless! For instance, <code>&lt;meta http-equiv="X-Frame-Options" content="deny"&gt;</code> has no effect. Do not use it!  <code>X-Frame-Options</code> works only by setting through the HTTP header, as in the examples below.</p>
+<div class="notecard note">
+  <p><strong>Note:</strong> Setting X-Frame-Options inside the {{HTMLElement("meta")}} element is useless! For instance, <code>&lt;meta http-equiv="X-Frame-Options" content="deny"&gt;</code> has no effect. Do not use it! <code>X-Frame-Options</code> works only by setting through the HTTP header, as in the examples below.</p>
 </div>
 
 <h3 id="Configuring_Apache">Configuring Apache</h3>
@@ -83,7 +83,7 @@ X-Frame-Options: SAMEORIGIN
 
 <p>To configure IIS to send the <code>X-Frame-Options</code> header, add this to your site's <code>Web.config</code> file:</p>
 
-<pre class="brush: xml">&lt;system.webServer&gt;
+<pre>&lt;system.webServer&gt;
   ...
 
   &lt;httpProtocol&gt;

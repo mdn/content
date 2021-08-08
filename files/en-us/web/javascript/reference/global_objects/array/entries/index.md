@@ -44,7 +44,7 @@ for (const [index, element] of a.entries())
 // 2 'c'
 ```
 
-### Using a [for…of](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loop
+### Using a `for…of` loop
 
 ```js
 var a = ['a', 'b', 'c'];

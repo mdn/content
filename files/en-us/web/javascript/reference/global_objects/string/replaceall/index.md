@@ -50,13 +50,12 @@ replaceAll(substr, replacerFunction)
 - `newSubstr` (replacement)
   - : The {{jsxref("String")}} that replaces the substring specified by the specified
     `regexp` or `substr` parameter. A number
-    of special replacement patterns are supported; see the "[Specifying a string as a parameter](#Specifying_a_string_as_a_parameter)"
+    of special replacement patterns are supported; see the "[Specifying a string as a parameter](#specifying_a_string_as_a_parameter)"
     section below.
 - `replacerFunction` (replacement)
-  - : A function to be invoked to create the new substring to be used to replace the
-    matches to the given `regexp` or `substr`.
-    The arguments supplied to this function are described in the "[Specifying a function as a
-    parameter](#Specifying_a_function_as_a_parameter)" section below.
+  - : A function to be invoked to create the new substring to be used to replace the matches to the given `regexp` or `substr`.
+    The arguments supplied to this function are described in the 
+    "[Specifying a function as a parameter](#specifying_a_function_as_a_parameter)" section below.
 
 ### Return value
 
@@ -64,8 +63,7 @@ A new string, with all matches of a pattern replaced by a replacement.
 
 ## Description
 
-This method does not change the calling {{jsxref("String")}} object. It returns a new
-string.
+This method does not change the calling {{jsxref("String")}} object. It returns a new string.
 
 ### Specifying a string as a parameter
 

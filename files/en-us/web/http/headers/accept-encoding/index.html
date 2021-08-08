@@ -22,14 +22,12 @@ browser-compat: http.headers.Accept-Encoding
 
 <p>As long as the <code>identity</code> value, meaning no encoding, is not explicitly forbidden, by an <code>identity;q=0</code> or a <code>*;q=0</code> without another explicitly set value for identity, the server must never send back a {{HTTPStatus("406")}} <code>Not Acceptable</code> error.</p>
 
-<div class="note"><strong>Notes:</strong>
-
-<ul>
- <li>
-  <p>An IANA registry maintains <a href="https://www.iana.org/assignments/http-parameters/http-parameters.xml#http-parameters-1">a complete list of official content encodings</a>.</p>
- </li>
- <li>Two others content encoding, <code>bzip</code> and <code>bzip2</code>, are sometimes used, though not standard. They implement the algorithm used by these two UNIX programs. Note that the first one was discontinued due to patent licensing problems.</li>
-</ul>
+<div class="notecard note">
+  <p><strong>Note:</strong></p>
+  <ul>
+    <li><p>An IANA registry maintains <a href="https://www.iana.org/assignments/http-parameters/http-parameters.xml#http-parameters-1">a complete list of official content encodings</a>.</p></li>
+    <li>Two others content encoding, <code>bzip</code> and <code>bzip2</code>, are sometimes used, though not standard. They implement the algorithm used by these two UNIX programs. Note that the first one was discontinued due to patent licensing problems.</li>
+  </ul>
 </div>
 
 <table class="properties">

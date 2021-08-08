@@ -51,7 +51,7 @@ browser-compat: api.AuthenticatorAssertionResponse.userHandle
   timeout: 60000
 };
 
-navigator.credentials.get({  publickey: options })
+navigator.credentials.get({  publicKey: options })
   .then(function (assertionPKCred) {
     var userHandle = assertionPKCred.response.userHandle;
 

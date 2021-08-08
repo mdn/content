@@ -12,7 +12,7 @@ tags:
 
 <p>The HTTP <strong><code>Authorization</code></strong> request header contains the
   credentials to authenticate a user agent with a server, usually, but not
-  necessarily, after the server has responded with a {{HTTPStatus("401")}}
+  necessarily, after the server has responded with a {{HTTPStatus("401")}}
   <code>Unauthorized</code> status and the {{HTTPHeader("WWW-Authenticate")}} header.</p>
 
 <table class="properties">
@@ -36,35 +36,29 @@ tags:
 
 <dl>
   <dt>&lt;type&gt;</dt>
-  <dd><a href="/en-US/docs/Web/HTTP/Authentication#authentication_schemes">Authentication
-      type</a>. A common type is <a
-      href="/en-US/docs/Web/HTTP/Authentication#basic_authentication_scheme">"Basic"</a>.
-    Other types:
-    <ul>
-      <li><a
-          href="https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml">IANA
-          registry of Authentication schemes</a></li>
-      <li><a
-          href="https://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html">Authentification
-          for AWS servers (<code>AWS4-HMAC-SHA256</code>)</a></li>
-    </ul>
+  <dd>
+    <p>The <a href="/en-US/docs/Web/HTTP/Authentication#authentication_schemes">Authentication type</a>, that is which algorithm will be used for authentication. A common type is <a href="/en-US/docs/Web/HTTP/Authentication#basic_authentication_scheme"><code>"Basic"</code></a>.</p>
+    <p>Other types common types can be found at the <a href="https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml">IANA registry of Authentication schemes</a>.</p>
+    <div class="notecard note">
+      <p>
+        <strong>Note:</strong> AWS S3 servers use a specific authentication,
+        <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html"><code>AWS4-HMAC-SHA256</code></a>.
+      </p>
+    </div>
   </dd>
   <dt>&lt;credentials&gt;</dt>
-  <dd>If the "Basic" authentication scheme is used, the credentials are constructed like
-    this:
-    <ul>
-      <li>The username and the password are combined with a colon
-        (<code>aladdin:opensesame</code>).</li>
-      <li>The resulting string is <a
-          href="/en-US/docs/Glossary/Base64">base64</a>
-        encoded (<code>YWxhZGRpbjpvcGVuc2VzYW1l</code>).</li>
-    </ul>
+  <dd>
+    If the <code>"Basic"</code> authentication scheme is used,
+    the credentials are constructed
+    by first combining the username and the password with a colon (<code>aladdin:opensesame</code>),
+    then by encoding the resulting string in <a href="/en-US/docs/Glossary/Base64"><code>base64</code></a> (<code>YWxhZGRpbjpvcGVuc2VzYW1l</code>).
 
-    <div class="note">
-      <p><strong>Note</strong>: Base64 encoding does not mean encryption or hashing! This
-        method is equally secure as sending the credentials in clear text (base64 is a
-        reversible encoding). Prefer to use HTTPS in conjunction with Basic
-        Authentication.</p>
+    <div class="notecard note">
+      <p><strong>Note:</strong> {{Glossary("Base64")}}-encoding does not mean encryption or hashing!
+        As base64 is a reversible encoding,
+        this method is equally (in)secure
+        as sending the credentials in clear text.
+        So you should alwaysuse {{Glossary("HTTPS")}} in conjunction with <code>Basic</code> authentication.</p>
     </div>
   </dd>
 </dl>

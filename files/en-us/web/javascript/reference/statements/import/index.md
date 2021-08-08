@@ -38,7 +38,6 @@ import * as name from "module-name";
 import { export1 } from "module-name";
 import { export1 as alias1 } from "module-name";
 import { export1 , export2 } from "module-name";
-import { foo , bar } from "module-name/path/to/specific/un-exported/file";
 import { export1 , export2 as alias2 , [...] } from "module-name";
 import defaultExport, { export1 [ , [...] ] } from "module-name";
 import defaultExport, * as name from "module-name";
@@ -303,5 +302,5 @@ for (const link of document.querySelectorAll("nav > a")) {
   Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/)
 - Hacks blog post by Lin Clark: [ES modules:
   A cartoon deep-dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/)
-- Axel Rauschmayer's book: ["Exploring JS: Modules"](http://exploringjs.com/es6/ch_modules.html)
+- Axel Rauschmayer's book: ["Exploring JS: Modules"](https://exploringjs.com/es6/ch_modules.html)
 - The Modern JavaScript Tutorial(javascript.info): [Export and Import](https://javascript.info/import-export)

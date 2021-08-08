@@ -17,24 +17,18 @@ browser-compat: api.Gamepad.mapping
 	{{domxref("Gamepad")}} interface returns a string indicating whether the browser has
 	remapped the controls on the device to a known layout.</p>
 
-<p>Currently there is only one supported known layout–the <a
-		href="https://dvcs.w3.org/hg/gamepad/raw-file/default/gamepad.html#remapping">standard
-		gamepad</a>. If the browser is able to map controls on the device to that layout
-	the <code>mapping</code> property will be set to the string <code>standard</code>.</p>
+<p>The currently supported known layouts are:</p>
 
-<h2 id="Syntax">Syntax</h2>
+<ul>
+  <li>"standard" for the <a href="https://w3c.github.io/gamepad/#remapping">standard gamepad</a>.</li>
+  <li>"xr-standard for the <a href="https://immersive-web.github.io/webxr-gamepads-module/#xr-standard-heading">standard XR gamepad</a>. See also {{domxref("XRInputSource.gamepad")}}.</li>
+</ul>
 
-<pre
-	class="brush: js"><span class="idlInterface" id="idl-def-Gamepad"><span class="idlAttribute">readonly    attribute <span class="idlAttrType">DOMString</span>           <span class="idlAttrName">mapping</span>;</span></span></pre>
+<h2 id="Examples">Examples</h2>
 
-<h2 id="Example">Example</h2>
-
-<pre class="brush: js">var gp = navigator.getGamepads()[0];
+<pre class="brush: js">let gp = navigator.getGamepads()[0];
 console.log(gp.mapping);</pre>
 
-<h2 id="Value">Value</h2>
-
-<p>A {{domxref("string")}}.</p>
 
 <h2 id="Specifications">Specifications</h2>
 

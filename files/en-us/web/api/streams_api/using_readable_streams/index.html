@@ -57,7 +57,10 @@ fetch('./tortoise.png')
 // Retrieve its body as ReadableStream
 .then(response =&gt; response.body)
 .then(body =&gt; {
-  const reader = body.getReader();</pre>
+  const reader = body.getReader();
+  // ...
+  });
+</pre>
 
 <p>Invoking this method creates a reader and locks it to the stream — no other reader may read this stream until this reader is released, e.g. by invoking {{domxref("ReadableStreamDefaultReader.releaseLock()")}}.</p>
 
@@ -67,7 +70,10 @@ fetch('./tortoise.png')
   fetch('./tortoise.png')
   // Retrieve its body as ReadableStream
   .then(response =&gt; {
-    const reader = response.body.getReader();</pre>
+    const reader = response.body.getReader();
+    // ...
+  });
+</pre>
 
 <h3 id="Reading_the_stream">Reading the stream</h3>
 
