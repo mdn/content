@@ -11,7 +11,7 @@ browser-compat: api.DOMException.DOMException
 <p>{{ APIRef("DOM") }}</p>
 
 <p>The <strong><code>DOMException()</code></strong> constructor returns a
-  <code>DOMException</code> object with a specified message and name.</p>
+  <code>{{domxref("DOMException")}}</code> object with a specified message and name.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -44,6 +44,8 @@ var domException = new DOMException(message, name);</pre>
 
 <pre class="brush: html">
 &lt;button&gt;Trigger DOM Exception&lt;/button&gt;
+
+&lt;p id="output"&gt;&lt;/p&gt;
 </pre>
 
 <h3>JavaScript</h3>
@@ -53,16 +55,16 @@ const button = document.querySelector('button');
 
 button.onclick = function() {
     try {
-        throw new DOMException("Custom DOM Exception");
+        throw new DOMException("Custom DOM Exception Triggered.");
     } catch(error) {
-        alert(`Error: ${error.message}`);
+        document.querySelector("#output").textContent = `Error: ${error.message}`;
     }
 }
 </pre>
 
 <h3>Result</h3>
 
-<p>{{ EmbedLiveSample('Examples', '100%', 60) }}</p>
+<p>{{ EmbedLiveSample('Examples', '100%', 100) }}</p>
 
 <h2 id="Specifications">Specifications</h2>
 
