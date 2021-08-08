@@ -34,9 +34,9 @@ tags:
 
 <p>Let's explore how to use multiple-column layout — often referred to as <em>multicol</em>. You can follow along by <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/multicol/0-starting-point.html">downloading the multicol starting point file</a> and adding the CSS into the appropriate places. At the bottom of the section you can see an example of what the final code should look like.</p>
 
-<p>Our starting point contains some very simple HTML; a wrapper with a class of <code>container</code> inside which is a heading and some paragraphs.</p>
+<p>Our starting point file contains some very simple HTML: a wrapper with a class of <code>container</code>, inside of which is a heading and some paragraphs.</p>
 
-<p>The {{htmlelement("div")}} with a class of container will become our multicol container. We switch on multicol by using one of two properties {{cssxref("column-count")}} or {{cssxref("column-width")}}. The <code>column-count</code> property will create as many columns as the value you give it, so if you add the following CSS to your stylesheet and reload the page, you will get three columns:</p>
+<p>The {{htmlelement("div")}} with a class of container will become our multicol container. We enable multicol by using one of two properties: {{cssxref("column-count")}} or {{cssxref("column-width")}}. The <code>column-count</code> property takes a number as its value and creates that number of columns. If you add the following CSS to your stylesheet and reload the page, you'll get three columns:</p>
 
 <pre class="brush: css">.container {
   column-count: 3;
