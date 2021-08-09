@@ -37,20 +37,18 @@ browser-compat: api.RTCIceCandidate
 <h2 id="Properties">Properties</h2>
 
 <dl>
+	<dt>{{domxref("RTCIceCandidate.address", "address")}} {{readonlyInline}}</dt>
+	<dd>A {{domxref("DOMString")}} containing the IP address of the candidate.</dd>
 	<dt>{{domxref("RTCIceCandidate.candidate", "candidate")}} {{readonlyInline}}</dt>
 	<dd>A {{domxref("DOMString")}} representing the transport address for the candidate that can be used for connectivity checks. The format of this address is a <code>candidate-attribute</code> as defined in {{RFC(5245)}}. This string is empty (<code>""</code>) if the <code>RTCIceCandidate</code> is an "end of candidates" indicator.</dd>
 	<dt>{{domxref("RTCIceCandidate.component", "component")}} {{ReadOnlyInline}}</dt>
 	<dd>A string which indicates whether the candidate is an RTP or an RTCP candidate; its value is either <code>rtp</code> or <code>rtcp</code>, and is derived from the  <code>"component-id"</code> field in the <code>candidate</code> a-line string. </dd>
 	<dt>{{domxref("RTCIceCandidate.foundation", "foundation")}} {{readonlyInline}}</dt>
 	<dd>Returns a {{domxref("DOMString")}} containing a unique identifier that is the same for any candidates of the same type, share the same base (the address from which the ICE agent sent the candidate), and come from the same {{Glossary("STUN")}} server. This is used to help optimize ICE performance while prioritizing and correlating candidates that appear on multiple {{domxref("RTCIceTransport")}} objects.</dd>
-	<dt>{{domxref("RTCIceCandidate/address", "ip")}} {{readonlyInline}}</dt>
-	<dd>A {{domxref("DOMString")}} containing the IP address of the candidate.</dd>
 	<dt>{{domxref("RTCIceCandidate.port", "port")}} {{readonlyInline}}</dt>
 	<dd>An integer value indicating the candidate's port number.</dd>
 	<dt>{{domxref("RTCIceCandidate.priority", "priority")}} {{readonlyInline}}</dt>
 	<dd>A long integer value indicating the candidate's priority.</dd>
-	<dt>{{domxref("RTCIceCandidate.address", "address")}} {{readonlyInline}}</dt>
-	<dd>The address of the candidate.</dd>
 	<dt>{{domxref("RTCIceCandidate.protocol", "protocol")}} {{readonlyInline}}</dt>
 	<dd>A string indicating whether the candidate's protocol is <code>"tcp"</code> or <code>"udp"</code>.</dd>
 	<dt>{{domxref("RTCIceCandidate.relatedAddress", "relatedAddress")}} {{readonlyInline}}</dt>
