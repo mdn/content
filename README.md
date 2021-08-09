@@ -344,7 +344,7 @@ your fork (`git push`).
 
 1. An alternative strategy is `git rebase` of `main` on your branch.
 This will rewrite the git history and might confuse reviewers as notifications
-from GitHub leed to nowhere. Your changes are replayed on top of the current
+from GitHub lead to nowhere. Your changes are replayed on top of the current
 main branch at that point in time. Any additional changes should be made as
 commits.
 
