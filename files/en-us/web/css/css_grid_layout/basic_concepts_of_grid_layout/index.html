@@ -172,7 +172,7 @@ tags:
 
 <p>{{ EmbedLiveSample('The_fr_unit', '220', '140') }}</p>
 
-<h3>Unequal fractions</h3>
+<h3>Unequal sizes</h3>
 
 <p>In this next example, we create a definition with a <code>2fr</code> track then two <code>1fr</code> tracks. The available space is split into four. Two parts are given to the first track and one part each to the next two tracks.</p>
 
@@ -209,11 +209,11 @@ tags:
 
 </pre>
 
-<p>{{ EmbedLiveSample('Unequal_fractions', '220', '140') }}</p>
+<p>{{ EmbedLiveSample('Unequal_sizes', '220', '140') }}</p>
 
-<h3>Mixing fractions and absolute sizes</h3>
+<h3>Mixing flexible and absolute sizes</h3>
 
-<p>In this final example, we mix absolute sized tracks with fraction units. The first track is 500 pixels, so the fixed width is taken away from the available space. The remaining space is divided into three and assigned in proportion to the two flexible tracks.</p>
+<p>In this final example, we mix absolute sized tracks with <code>fr</code> units. The first track is 500 pixels, so the fixed width is taken away from the available space. The remaining space is divided into three and assigned in proportion to the two flexible tracks.</p>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div&gt;One&lt;/div&gt;
@@ -248,7 +248,7 @@ tags:
 
 </pre>
 
-<p>{{ EmbedLiveSample('Mixing_fractions_and_absolute_sizes', '220', '140') }}</p>
+<p>{{ EmbedLiveSample('Mixing_flexible_and_absolute_sizes', '220', '140') }}</p>
 
 <h3 id="Track_listings_with_repeat_notation">Track listings with repeat() notation</h3>
 
@@ -327,7 +327,7 @@ tags:
 }
 </pre>
 
-<p>{{ EmbedLiveSample('The_implicit_and_explicit_grid', '230', '420') }}</p>
+<p>{{ EmbedLiveSample('The_implicit_and_explicit_grid', '230', '450') }}</p>
 
 <h3>Track sizing and minmax</h3>
 
@@ -436,9 +436,34 @@ tags:
 </pre>
 
 
-<p>{{ EmbedLiveSample('Positioning_items_against_lines', '230', '420') }}</p>
+<p>{{ EmbedLiveSample('Positioning_items_against_lines', '230', '450') }}</p>
 
-<p>Don't forget that you can use the <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts">Grid Inspector</a> in Firefox Developer Tools to see how the items are positioned against the lines of the grid.</p>
+<div class="notecard note">
+  <p><strong>Note:</strong> Don't forget that you can use the <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts">Grid Inspector</a> in Firefox Developer Tools to see how the items are positioned against the lines of the grid.</p>
+</div>
+
+<h3>Line-positioning shorthands</h3>
+
+<p>The longhand values used above can be compressed onto one line for columns with {{cssxref("grid-column")}}, and one line for rows with {{cssxref("grid-row")}}. The following example would give the same positioning as in the previous code, but with far less CSS. The value before the forward slash character (<code>/</code>) is the start line, the value after the end line.</p>
+
+<p>You can omit the end value if the area only spans one track.</p>
+
+<pre class="brush: css">.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 100px;
+}
+
+.box1 {
+  grid-column: 1 / 4;
+  grid-row: 1 / 3;
+}
+
+.box2 {
+  grid-column: 1 / 3;
+  grid-row: 5;
+}
+</pre>
 
 <h2 id="Grid_cells">Grid cells</h2>
 
@@ -465,9 +490,9 @@ tags:
 </pre>
 
 <div class="note">
-<p><strong>Note:</strong> When grid first shipped in browsers the {{cssxref("column-gap")}}, {{cssxref("row-gap")}} and {{cssxref("gap")}} were prefixed with the <code>grid-</code> prefix as {{cssxref("grid-column-gap")}}, {{cssxref("grid-row-gap")}} and {{cssxref("grid-gap")}} respectively.<br>
+<p><strong>Note:</strong> When grid first shipped in browsers the {{cssxref("column-gap")}}, {{cssxref("row-gap")}} and {{cssxref("gap")}} were prefixed with the <code>grid-</code> prefix as {{cssxref("column-gap")}}, {{cssxref("row-gap")}} and {{cssxref("gap")}} respectively.<br>
  <br>
- Browsers are updating to remove this prefix, however the prefixed versions will be maintained as aliases making them safe to use. </p>
+ Browsers all now support unprefixed values, however the prefixed versions will be maintained as aliases making them safe to use. </p>
 </div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
