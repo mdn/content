@@ -8369,6 +8369,7 @@
 /en-US/docs/Web/API/RTCIceComponent	/en-US/docs/Web/API/RTCIceCandidate/component
 /en-US/docs/Web/API/RTCIceConnectionState	/en-US/docs/Web/API/RTCPeerConnection/iceConnectionState
 /en-US/docs/Web/API/RTCIceGatheringState	/en-US/docs/Web/API/RTCPeerConnection/iceGatheringState
+/en-US/docs/Web/API/RTCIceTcpCandidateType	/en-US/docs/Web/API/RTCIceCandidate/tcpType
 /en-US/docs/Web/API/RTCInboundRtpStreamStats/lastPacketReceivedTimesta	/en-US/docs/Web/API/RTCInboundRtpStreamStats/lastPacketReceivedTimestamp
 /en-US/docs/Web/API/RTCOutboundRtpStreamStats/perDscpPacketsReceived	/en-US/docs/Web/API/RTCOutboundRtpStreamStats/perDscpPacketsSent
 /en-US/docs/Web/API/RTCPeerConnection.addStream	/en-US/docs/Web/API/RTCPeerConnection/addStream
