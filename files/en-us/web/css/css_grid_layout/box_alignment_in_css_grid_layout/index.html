@@ -33,7 +33,7 @@ tags:
 
 <p>The {{cssxref("align-self")}} and {{cssxref("align-items")}} properties control alignment on the block axis. When we use these properties, we are changing the alignment of the item within the grid area you have placed it.</p>
 
-<h3 id="using_align-items">Using align-items</h3>
+<h3>Using align-items</h3>
 
 <p>In the following example, I have four grid areas within my grid. I can use the {{cssxref("align-items")}} property on the grid container, to align the items using one of the following values:</p>
 
@@ -100,13 +100,13 @@ tags:
 &lt;/div&gt;
 </pre>
 
-<p>{{ EmbedLiveSample('using_align-items', '500', '500') }}</p>
+<p>{{ EmbedLiveSample('Using_align-items', '500', '500') }}</p>
 
 <p>Keep in mind that once you set <code>align-items: start</code>, the height of each child <code>&lt;div&gt;</code> will be determined by the contents of the <code>&lt;div&gt;</code>.  This is in contrast to omitting <code><a href="/en-US/docs/Web/CSS/align-items">align-items</a></code> completely, in which case the height of each <code>&lt;div&gt;</code> stretches to fill its grid area.</p>
 
 <p>The {{cssxref("align-items")}} property sets the {{cssxref("align-self")}} property for all of the child grid items. This means that you can set the property individually, by using <code>align-self</code> on a grid item.</p>
 
-<h3 id="using_align-self">Using align-self</h3>
+<h3>Using align-self</h3>
 
 <p>In this next example, I am using the <code>align-self</code> property, to demonstrate the different alignment values. The first area, is showing the default behavior of <code>align-self</code>, which is to stretch. The second item, has an <code>align-self</code> value of <code>start</code>, the third <code>end</code> and the fourth <code>center</code>.</p>
 
@@ -163,7 +163,7 @@ tags:
 &lt;/div&gt;
 </pre>
 
-<p>{{ EmbedLiveSample('using_align-self', '500', '500') }}</p>
+<p>{{ EmbedLiveSample('Using_align-self', '500', '500') }}</p>
 
 <h3 id="Items_with_an_intrinsic_aspect_ratio">Items with an intrinsic aspect ratio</h3>
 
@@ -171,7 +171,7 @@ tags:
 
 <p>This behavior has now been clarified in the specification, with browsers yet to implement the correct behavior. Until that happens, you can ensure that items do not stretch, such as images, which are direct children of the grid, by setting {{cssxref("align-self")}} and {{cssxref("justify-self")}} to start. This will mimic the correct behavior once implemented.</p>
 
-<h2 id="Justifying_Items_on_the_Inline_Axis">Justifying Items on the Inline Axis</h2>
+<h2>Justifying Items on the Inline Axis</h2>
 
 <p>As {{cssxref("align-items")}} and {{cssxref("align-self")}} deal with the alignment of items on the block axis, {{cssxref("justify-items")}} and {{cssxref("justify-self")}} do the same job on the inline axis. The values you can choose from are the same as for <code>align-self</code>.</p>
 
@@ -256,7 +256,7 @@ tags:
  <br>
  The {{CSSxRef("place-self")}} property is shorthand for {{CSSxRef("align-self")}} and {{CSSxRef("justify-self")}}.</p>
 
-<h2 id="Center_an_item_in_the_area">Center an item in the area</h2>
+<h2>Center an item in the area</h2>
 
 <p>By combining the align and justify properties we can easily center an item inside a grid area.</p>
 
@@ -322,7 +322,7 @@ tags:
 
 <p>The <code>align-content</code> property is applied to the grid container as it works on the entire grid.</p>
 
-<h3 id="default_alignment">Default alignment</h3>
+<h3>Default alignment</h3>
 
 <p>The default behavior in grid layout is <code>start</code>, which is why our grid tracks are in the top left corner of the grid, aligned against the start grid lines:</p>
 
@@ -378,9 +378,9 @@ tags:
 &lt;/div&gt;
 </pre>
 
-<p>{{ EmbedLiveSample('default_alignment', '500', '550') }}</p>
+<p>{{ EmbedLiveSample('Default_alignment', '500', '550') }}</p>
 
-<h3 id="align-content_end">Setting align-content: end</h3>
+<h3>Setting align-content: end</h3>
 
 <p>If I add <code>align-content</code> to my container, with a value of <code>end</code>, the tracks all move to the end line of the grid container in the block dimension:</p>
 
@@ -436,9 +436,9 @@ tags:
 &lt;/div&gt;
 </pre>
 
-<p>{{ EmbedLiveSample('align-content_end', '500', '550') }}</p>
+<p>{{ EmbedLiveSample('Setting_align-content_end', '500', '550') }}</p>
 
-<h3 id="align-content_end_space-between">Setting align-content: space-between</h3>
+<h3>Setting align-content: space-between</h3>
 
 <p>We can also use values for this property that you may be familiar with from flexbox; the space distribution values of <code>space-between</code>, <code>space-around</code> and <code>space-evenly</code>. If we update {{cssxref("align-content")}} to <code>space-between</code>, you can see how the elements on our grid space out:</p>
 
@@ -494,7 +494,7 @@ tags:
 &lt;/div&gt;
 </pre>
 
-<p>{{ EmbedLiveSample('align-content_end_space-between', '500', '600') }}</p>
+<p>{{ EmbedLiveSample('Setting_align-content_space-between', '500', '600') }}</p>
 
 <p>It is worth noting, that using these space distribution values may cause items on your grid to become larger. If an item spans more than one grid track, as further space is added between the tracks, that item needs to become large to absorb the space. We’re always working in a strict grid. Therefore, if you decide to use these values, ensure that the content of your tracks can cope with the extra space, or that you have used alignment properties on the items, to cause them to move to the start rather than stretch.</p>
 
@@ -502,7 +502,7 @@ tags:
 
 <p><img alt="Demonstrating how items become larger if we use space-between." src="7_space-between.png"></p>
 
-<h2 id="Justifying_the_grid_tracks_on_the_inline_axis">Justifying the grid tracks on the inline axis</h2>
+<h2>Justifying the grid tracks on the inline axis</h2>
 
 <p>On the inline axis, we can use {{cssxref("justify-content")}} to perform the same type of alignment that we used {{cssxref("align-content")}} for in the block axis.</p>
 
@@ -563,7 +563,7 @@ tags:
 
 <p>{{ EmbedLiveSample('Justifying_the_grid_tracks_on_the_inline_axis', '500', '550') }}</p>
 
-<h2 id="Alignment_and_auto_margins">Alignment and auto margins</h2>
+<h2>Alignment and auto margins</h2>
 
 <p>Another way to align items inside their area, is to use auto margins. If you have ever centered your layout in the viewport, by setting the right and left margin of the container block to <code>auto</code>, you know that an auto margin absorbs all of the available space. By setting the margin to <code>auto</code> on both sides, it pushes the block into the middle as both margins attempt to take all of the space.</p>
 
