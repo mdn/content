@@ -14,14 +14,18 @@ browser-compat: api.BaseAudioContext.createChannelMerger
 ---
 <p>{{ APIRef("Web Audio API") }}</p>
 
-<p>The <code>createChannelMerger()</code> method of the {{ domxref("BaseAudioContext")
-  }} interface creates a {{domxref("ChannelMergerNode")}}, which combines channels from
-  multiple audio streams into a single audio stream.</p>
+<p>The <code>createChannelMerger()</code> method of the {{domxref("BaseAudioContext")}} interface creates a {{domxref("ChannelMergerNode")}},
+  which combines channels from multiple audio streams into a single audio stream.</p>
+
+<div class="notecard note">
+  <p><strong>Note:</strong> The {{domxref("ChannelMergerNode.ChannelMergerNode", "ChannelMergerNode()")}} constructor is the
+    recommended way to create a {{domxref("ChannelMergerNode")}}; see
+    <a href="/en-US/docs/Web/API/AudioNode#creating_an_audionode">Creating an AudioNode</a>.</p>
+</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js">baseAudioContext.createChannelMerger(<em>numberOfInputs</em>);</pre>
+<pre class="brush: js">createChannelMerger(<em>numberOfInputs</em>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -39,11 +43,11 @@ browser-compat: api.BaseAudioContext.createChannelMerger
 
 <p>The following example shows how you could separate a stereo track (say, a piece of
   music), and process the left and right channel differently. To use them, you need to use
-  the second and third parameters of the {{domxref("AudioNode/connect", "AudioNode.connect(AudioNode")}}
+  the second and third parameters of the {{domxref("AudioNode/connect", "AudioNode.connect(AudioNode)")}}
   method, which allow you to specify both the index of the channel to connect from and the
   index of the channel to connect to.</p>
 
-<pre class="brush: js;highlight[7,16,17,24]">var ac = new AudioContext();
+<pre class="brush: js">var ac = new AudioContext();
 ac.decodeAudioData(someStereoBuffer, function(data) {
  var source = ac.createBufferSource();
  source.buffer = data;
@@ -80,6 +84,5 @@ ac.decodeAudioData(someStereoBuffer, function(data) {
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
-  </li>
+  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
 </ul>

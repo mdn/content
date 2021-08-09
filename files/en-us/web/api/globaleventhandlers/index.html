@@ -12,7 +12,7 @@ browser-compat: api.GlobalEventHandlers
 ---
 <div>{{ApiRef("HTML DOM")}}</div>
 
-<p><span class="seoSummary">The <strong><code>GlobalEventHandlers</code></strong> mixin describes the event handlers common to several interfaces like {{domxref("HTMLElement")}}, {{domxref("Document")}}, or {{domxref("Window")}}.</span> Each of these interfaces can, of course, add more event handlers in addition to the ones listed below.</p>
+<p>The <strong><code>GlobalEventHandlers</code></strong> mixin describes the event handlers common to several interfaces like {{domxref("HTMLElement")}}, {{domxref("Document")}}, or {{domxref("Window")}}. Each of these interfaces can, of course, add more event handlers in addition to the ones listed below.</p>
 
 <div class="note">
 <p><strong>Note</strong>: <code>GlobalEventHandlers</code> is a mixin and not an interface; you can't actually create an object of type <code>GlobalEventHandlers</code>.</p>
@@ -43,7 +43,7 @@ browser-compat: api.GlobalEventHandlers
  <dt>{{domxref("GlobalEventHandlers.onblur")}}</dt>
  <dd>Is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> representing the code to be called when the {{event("blur")}} event is raised.</dd>
  <dt>{{domxref("GlobalEventHandlers.onerror")}}</dt>
- <dd>Is an {{domxref("OnErrorEventHandler")}} representing the code to be called when the {{event("error")}} event is raised.</dd>
+ <dd>Is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> representing the code to be called when the {{event("error")}} event is raised.</dd>
  <dt>{{domxref("GlobalEventHandlers.onfocus")}}</dt>
  <dd>Is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> representing the code to be called when the {{event("focus")}} event is raised.</dd>
  <dt>{{domxref("GlobalEventHandlers.oncancel")}}</dt>
@@ -87,7 +87,7 @@ browser-compat: api.GlobalEventHandlers
  <dt>{{domxref("GlobalEventHandlers.onended")}}</dt>
  <dd>Is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> representing the code to be called when the {{event("ended")}} event is raised.</dd>
  <dt>{{domxref("GlobalEventHandlers.onformdata")}}</dt>
- <dd>Is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> for processing {{event("formdata")}} events, fired after the entry list representing the form's data is constructed.</dd>
+ <dd>Is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> for processing {{domxref("HTMLFormElement/formdata_event", "formdata")}} events, fired after the entry list representing the form's data is constructed.</dd>
  <dt>{{domxref("GlobalEventHandlers.ongotpointercapture")}}</dt>
  <dd>Is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> representing the code to be called when the {{event("gotpointercapture")}} event type is raised.</dd>
  <dt>{{domxref("GlobalEventHandlers.oninput")}}</dt>
@@ -195,7 +195,7 @@ browser-compat: api.GlobalEventHandlers
  <dt>{{domxref("GlobalEventHandlers.ontouchmove")}} {{Non-standard_inline}} {{Experimental_inline}}</dt>
  <dd>Is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> representing the code to be called when the {{event("touchmove")}} event is raised.</dd>
  <dt>{{domxref("GlobalEventHandlers.ontouchstart")}} {{Non-standard_inline}} {{Experimental_inline}}</dt>
- <dd>Is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> representing the code to be called when the {{event("touchstart")}} event is raised.</dd>
+ <dd>Is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> representing the code to be called when the {{domxref("Element/touchstart_event", "touchstart")}} event is raised.</dd>
  <dt>{{domxref("GlobalEventHandlers.ontransitioncancel")}}</dt>
  <dd>An <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> called when a {{event("transitioncancel")}} event is sent, indicating that a <a href="/en-US/docs/Web/CSS/CSS_Transitions">CSS transition</a> has been cancelled.</dd>
  <dt>{{domxref("GlobalEventHandlers.ontransitionend")}}</dt>

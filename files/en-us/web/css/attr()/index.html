@@ -13,7 +13,9 @@ browser-compat: css.types.attr
 ---
 <div>{{CSSRef}}</div>
 
-<div class="notecard note"><strong>Note:</strong> The <code>attr()</code> function can be used with any CSS property, but support for properties other than {{CSSxRef("content")}} is experimental, and support for the type-or-unit parameter is sparse.</div>
+<div class="notecard note">
+  <p><strong>Note:</strong> The <code>attr()</code> function can be used with any CSS property, but support for properties other than {{CSSxRef("content")}} is experimental, and support for the type-or-unit parameter is sparse.</p>
+</div>
 
 <p>The <strong><code>attr()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Functions">function</a> is used to retrieve the value of an attribute of the selected element and use it in the stylesheet. It can also be used on <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-elements</a>, in which case the value of the attribute on the pseudo-element's originating element is returned.</p>
 
@@ -166,11 +168,9 @@ attr(data-something, "default");
 
 <h4 id="CSS_2">CSS</h4>
 
-<div class="hidden">
-<pre class="brush: css">.background {
+<pre class="brush: css hidden">.background {
   height: 100vh;
 }</pre>
-</div>
 
 <pre class="brush: css highlight[6]">.background {
   background-color: red;

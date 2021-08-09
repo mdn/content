@@ -19,7 +19,7 @@ browser-compat: css.types.image.gradient.repeating-conic-gradient
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: css language-css" id="css">/* Starburst: a blue on blue starburst: the gradient
+<pre class="brush: css">/* Starburst: a blue on blue starburst: the gradient
    is a starburst of lighter and darker blue,
    centered in the upper left quadrant,
    offset by 3degrees so there is no up/down straight line */
@@ -52,12 +52,12 @@ background: repeating-conic-gradient(
 
 <p>If neither the first nor the last color stops include a color stop angle greater than 0deg or less than 360 degrees respectively, the conic-gradient will not repeat.</p>
 
-<p>As with any gradient, a repeating-conic gradient has <a href="/en-US/docs/Web/CSS/image#no_intrinsic">no intrinsic dimensions</a>; i.e., it has no natural or preferred size, nor a preferred ratio. Its concrete size will match the size of the element it applies to, or the size the <code>&lt;image&gt;</code> is set to if it's set to something other than the element's size.</p>
+<p>As with any gradient, a repeating-conic gradient has <a href="/en-US/docs/Web/CSS/image#description">no intrinsic dimensions</a>; i.e., it has no natural or preferred size, nor a preferred ratio. Its concrete size will match the size of the element it applies to, or the size the <code>&lt;image&gt;</code> is set to if it's set to something other than the element's size.</p>
 
 <p>Because <code>&lt;gradient&gt;</code>s belong to the <code>&lt;image&gt;</code> data type, they can only be used where <code>&lt;image&gt;</code>s can be used. For this reason, <code>repeating-conic-gradient()</code> won't work on {{CSSxRef("background-color")}} and other properties that use the {{CSSxRef("&lt;color&gt;")}} data type.</p>
 
 <div class="notecard note">
-<p>To create a conic gradient that does not repeat, make the gradient a full 360 degree rotation, or use the {{CSSxRef("gradient/conic-gradient()")}} function instead.</p>
+<p><strong>Note:</strong> To create a conic gradient that does not repeat, make the gradient a full 360 degree rotation, or use the {{CSSxRef("gradient/conic-gradient()")}} function instead.</p>
 </div>
 
 <h3 id="Understanding_repeating_conic_gradients">Understanding repeating conic gradients</h3>
@@ -113,15 +113,13 @@ repeating-conic-gradient(from -45deg, red 45deg, orange, yellow, green, blue 225
 
 <h3 id="Black_and_white_starburst">Black and white starburst</h3>
 
-<div class="hidden">
-<pre class="brush: css">div {
+<pre class="brush: css hidden">div {
   width: 200px;
   height: 200px;
 }</pre>
 
-<pre class="brush: html">&lt;div&gt;&lt;/div&gt;
+<pre class="brush: html hidden">&lt;div&gt;&lt;/div&gt;
 </pre>
-</div>
 
 <pre class="brush: css">div {
   background-image:
@@ -135,15 +133,13 @@ repeating-conic-gradient(from -45deg, red 45deg, orange, yellow, green, blue 225
 
 <p>This gradient repeats 18 times, but since we only see the right half, we only see 9 repeats.</p>
 
-<div class="hidden">
-<pre class="brush: css">div {
+<pre class="brush: css hidden">div {
   width: 200px;
   height: 200px;
 }</pre>
 
-<pre class="brush: html">&lt;div&gt;&lt;/div&gt;
+<pre class="brush: html hidden">&lt;div&gt;&lt;/div&gt;
 </pre>
-</div>
 
 <pre class="brush: css">div {
   background: repeating-conic-gradient(

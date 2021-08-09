@@ -15,12 +15,13 @@ browser-compat: css.properties.border-radius
 
 <div>{{EmbedInteractiveExample("pages/css/border-radius.html")}}</div>
 
-
 <p>The radius applies to the whole {{cssxref("background")}}, even if the element has no border; the exact position of the clipping is defined by the {{cssxref("background-clip")}} property.</p>
 
 <p>The <code>border-radius</code> property does not apply to table elements when {{cssxref("border-collapse")}} is <code>collapse</code>.</p>
 
-<div class="note"><strong>Note:</strong> As with any shorthand property, individual sub-properties cannot inherit, such as in <code>border-radius:0 0 inherit inherit</code>, which would partially override existing definitions. Instead, the individual longhand properties have to be used.</div>
+<div class="note">
+  <p><strong>Note:</strong> As with any shorthand property, individual sub-properties cannot inherit, such as in <code>border-radius:0 0 inherit inherit</code>, which would partially override existing definitions. Instead, the individual longhand properties have to be used.</p>
+</div>
 
 <h2 id="Constituent_properties">Constituent properties</h2>
 
@@ -81,37 +82,37 @@ border-radius: unset;
  <tbody>
   <tr>
    <td><em>radius</em></td>
-   <td><img alt="all-corner.png" class="default internal" src="all-corner.png"></td>
+   <td><img alt="all-corner.png" src="all-corner.png"></td>
    <td>Is a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} denoting a radius to use for the border in each corner of the border. It is used only in the one-value syntax.</td>
   </tr>
   <tr>
    <td><em>top-left-and-bottom-right</em></td>
-   <td><img alt="top-left-bottom-right.png" class="default internal" src="top-left-bottom-right.png"></td>
+   <td><img alt="top-left-bottom-right.png" src="top-left-bottom-right.png"></td>
    <td>Is a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} denoting a radius to use for the border in the top-left and bottom-right corners of the element's box. It is used only in the two-value syntax.</td>
   </tr>
   <tr>
    <td><em>top-right-and-bottom-left</em></td>
-   <td><img alt="top-right-bottom-left.png" class="default internal" src="top-right-bottom-left.png"></td>
+   <td><img alt="top-right-bottom-left.png" src="top-right-bottom-left.png"></td>
    <td>Is a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} denoting a radius to use for the border in the top-right and bottom-left corners of the element's box. It is used only in the two- and three-value syntaxes.</td>
   </tr>
   <tr>
    <td><em>top-left</em></td>
-   <td><img alt="top-left.png" class="default internal" src="top-left.png"></td>
+   <td><img alt="top-left.png" src="top-left.png"></td>
    <td>Is a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} denoting a radius to use for the border in the top-left corner of the element's box. It is used only in the three- and four-value syntaxes.</td>
   </tr>
   <tr>
    <td><em>top-right</em></td>
-   <td><img alt="top-right.png" class="default internal" src="top-right.png"></td>
+   <td><img alt="top-right.png" src="top-right.png"></td>
    <td>Is a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} denoting a radius to use for the border in the top-right corner of the element's box. It is used only in the four-value syntax.</td>
   </tr>
   <tr>
    <td><em>bottom-right</em></td>
-   <td><img alt="bottom-rigth.png" class="default internal" src="bottom-rigth.png"></td>
+   <td><img alt="bottom-rigth.png" src="bottom-rigth.png"></td>
    <td>Is a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} denoting a radius to use for the border in the bottom-right corner of the element's box. It is used only in the three- and four-value syntaxes.</td>
   </tr>
   <tr>
    <td><em>bottom-left</em></td>
-   <td><img alt="bottom-left.png" class="default internal" src="bottom-left.png"></td>
+   <td><img alt="bottom-left.png" src="bottom-left.png"></td>
    <td>Is a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} denoting a radius to use for the border in the bottom-left corner of the element's box. It is used only in the four-value syntax.</td>
   </tr>
  </tbody>
@@ -152,7 +153,7 @@ border-bottom-left-radius:  3px 4px;
 
 {{csssyntax}}
 
-<h2 id="examples">Examples</h2>
+<h2>Examples</h2>
 
 <pre class="brush: html hidden">
   &lt;pre id="example-1"&gt;
@@ -239,7 +240,7 @@ pre#example-7 {
 }
 </pre>
 
-{{EmbedLiveSample("examples", "200", "1150")}}
+{{EmbedLiveSample("Examples", "200", "1150")}}
 
 <h3 id="Live_Samples">Live Samples</h3>
 

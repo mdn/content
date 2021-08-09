@@ -140,7 +140,7 @@ p.awesome {
  <li><a href="https://stackoverflow.com/questions/2042497/when-to-use-important-to-save-the-day-when-working-with-css">https://stackoverflow.com/questions/2042497/when-to-use-important-to-save-the-day-when-working-with-css</a></li>
 </ul>
 
-<h3 id="The_is_and_not_exceptions">The :is() and :not() exceptions</h3>
+<h3>The :is() and :not() exceptions</h3>
 
 <p>The matches-any pseudo-class {{CSSxRef(":is", ":is()")}} {{Experimental_Inline}} and the negation pseudo-class {{CSSxRef(":not", ":not()")}} are <em>not</em> considered a pseudo-class in the specificity calculation. But selectors placed into the pseudo-class count as normal selectors when determining the count of <a href="#selector_types">selector types</a>.</p>
 
@@ -169,9 +169,7 @@ div:not(.outer) p {
 
 <p>{{EmbedLiveSample("The_is_and_not_exceptions")}}</p>
 
-<h3 id="The_where_exception">The :where() exception {{Experimental_Inline}}</h3>
-
-<p>{{SeeCompatTable}}</p>
+<h3>The :where() exception</h3>
 
 <p>The specificity-adjustment pseudo-class {{CSSxRef(":where", ":where()")}} {{Experimental_Inline}} always has its specificity replaced with zero.</p>
 
@@ -186,8 +184,7 @@ div p {
 }
 </pre>
 
-<div class="hidden">
-<pre class="brush: css;">#no-where-support {
+<pre class="brush: css hidden">#no-where-support {
   margin: 0.5em;
   border: 1px solid red;
 }
@@ -196,16 +193,13 @@ div p {
   display: none !important;
 }
 </pre>
-</div>
 
 <p>... when used with the following HTML ...</p>
 
-<div class="hidden">
-<pre class="brush: html;">&lt;div id="no-where-support"&gt;
+<pre class="brush: html hidden">&lt;div id="no-where-support"&gt;
 ⚠️ Your browser doesn't support the &lt;code&gt;&lt;a href="https://developer.mozilla.org/docs/Web/CSS/:where" target="_top"&gt;:where()&lt;/a&gt;&lt;/code&gt; pseudo-class.
 &lt;/div&gt;
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="outer"&gt;
   &lt;p&gt;This is in the outer div.&lt;/p&gt;
@@ -219,7 +213,7 @@ div p {
 
 <p>{{EmbedLiveSample("The_where_exception")}}</p>
 
-<h3 id="Form-based_specificity">Form-based specificity</h3>
+<h3>Form-based specificity</h3>
 
 <p>Specificity is based on the form of a selector. In the following case, the selector <code>*[id="foo"]</code> counts as an attribute selector for the purpose of determining the selector's specificity, even though it selects an ID.</p>
 
@@ -245,7 +239,7 @@ div p {
 
 <p>This is because it matches the same element but the ID selector has a higher specificity.</p>
 
-<h3 id="Tree_proximity_ignorance">Tree proximity ignorance</h3>
+<h3>Tree proximity ignorance</h3>
 
 <p>The proximity of an element to other elements that are referenced in a given selector has no impact on specificity. The following style declaration ...</p>
 
@@ -273,7 +267,7 @@ html h1 {
 
 <p>This is because the two declarations have equal <a href="#selector_types">selector type</a> counts, but the <code>html h1</code> selector is declared last.</p>
 
-<h3 id="Directly_targeted_elements_vs._inherited_styles">Directly targeted elements vs. inherited styles</h3>
+<h3>Directly targeted elements vs. inherited styles</h3>
 
 <p>Styles for a directly targeted element will always take precedence over inherited styles, regardless of the specificity of the inherited rule. This CSS ...</p>
 

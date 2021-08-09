@@ -2,28 +2,26 @@
 title: RTCIceTransport.ongatheringstatechange
 slug: Web/API/RTCIceTransport/ongatheringstatechange
 tags:
-- API
-- Candidates
-- Connectivity
-- Event Handler
-- Gathering
-- ICE
-- Negotiation
-- Property
-- RTCIceTransport
-- Reference
-- WebRTC
-- WebRTC API
-- ongatheringstatechange
+  - API
+  - Candidates
+  - Connectivity
+  - Event Handler
+  - Gathering
+  - ICE
+  - Negotiation
+  - Property
+  - RTCIceTransport
+  - Reference
+  - WebRTC
+  - WebRTC API
+  - ongatheringstatechange
 browser-compat: api.RTCIceTransport.ongatheringstatechange
 ---
 <div>{{APIRef("WebRTC")}}</div>
 
-<p><span class="seoSummary">The <code><strong>ongatheringstatechange</strong></code> event
-    handler for the {{domxref("RTCIceTransport")}} interface specifies an event handler
-    that is to be called when the {{event("gatheringstatechange")}} event occurs on the
-    transport.</span> This event is delivered whenever the transport's
-  {{domxref("RTCIceTransport.gatheringState", "gatheringState")}} property changes.</p>
+<p>The <code><strong>ongatheringstatechange</strong></code> event handler for the {{domxref("RTCIceTransport")}} interface specifies an event handler that is to be called when the {{event("gatheringstatechange")}} event occurs on the transport.</p>
+    
+<p>This event is delivered whenever the transport's {{domxref("RTCIceTransport.gatheringState", "gatheringState")}} property changes.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -37,10 +35,17 @@ browser-compat: api.RTCIceTransport.ongatheringstatechange
   {{domxref("RTCIceTransport.gatheringState", "gatheringState")}}.</p>
 
 <p>The gathering state indicates whether or not the ICE agent has begun gathering
-  candidates, and if so, whether or not gathering has finished. Its possible values are:
-</p>
+  candidates, and if so, whether or not gathering has finished. Its possible values are:</p>
 
-<p>{{page("/en-US/docs/Web/API/RTCIceGathererState", "Values")}}</p>
+  <dl>
+    <dt><code>"new"</code></dt>
+    <dd>The {{domxref("RTCIceTransport")}} is newly created and has not yet started to gather ICE candidates.</dd>
+    <dt><code>"gathering"</code></dt>
+    <dd>The transport is in the process of gathering candidates.</dd>
+    <dt><code>"complete"</code></dt>
+    <dd>The transport has finished gathering ICE candidates and has sent the end-of-candidates indicator to the remote device. The transport won't gather any further candidates unless an <a href="/en-US/docs/Web/API/WebRTC_API/Session_lifetime#ice_restart">ICE restart</a> occurs, at which point the gathering process starts over from scratch.</dd>
+   </dl>
+   
 
 <h2 id="Example">Example</h2>
 

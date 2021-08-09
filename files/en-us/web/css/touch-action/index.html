@@ -37,7 +37,7 @@ touch-action: unset;
 <p>When a gesture is started, the browser intersects the <code>touch-action</code> values of the touched element and its ancestors, up to the one that implements the gesture (in other words, the first containing scrolling element). This means that in practice, <code>touch-action</code> is typically applied only to top-level elements which have some custom behavior, without needing to specify <code>touch-action</code> explicitly on any of that element's descendants.</p>
 
 <div class="notecard note">
-<p>After a gesture starts, changes to <code>touch-action</code> will not have any impact on the behavior of the current gesture.</p>
+<p><strong>Note:</strong> After a gesture starts, changes to <code>touch-action</code> will not have any impact on the behavior of the current gesture.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
@@ -45,26 +45,26 @@ touch-action: unset;
 <p>The <code>touch-action</code> property may be specified as either:</p>
 
 <ul>
- <li>One of the keywords <code><a href="#auto">auto</a></code>, <code><a href="#none">none</a></code>, <code><a href="#manipulation">manipulation</a></code>, <em>or</em></li>
- <li>One of the keywords <code><a href="#pan-x">pan-x</a></code>, <code><a href="#pan-keywords">pan-left</a></code>, <code><a href="#pan-keywords">pan-right</a></code>, and/or one of the keywords <code><a href="#pan-y">pan-y</a></code>, <code><a href="#pan-keywords">pan-up</a></code>, <code><a href="#pan-keywords">pan-down</a></code>, plus optionally the keyword <code><a href="#pinch-zoom">pinch-zoom</a></code>.</li>
+ <li>One of the keywords <code>auto</code>, <code>none</code>, <code><a href="#manipulation">manipulation</a></code>, <em>or</em></li>
+ <li>One of the keywords <code>pan-x</code>, <code>pan-left</code>, <code>pan-right</code>, and/or one of the keywords <code>pan-y</code>, <code>pan-up</code>, <code>pan-down</code>, plus optionally the keyword <code>pinch-zoom</code>.</li>
 </ul>
 
 <h3 id="Values">Values</h3>
 
 <dl>
- <dt id="auto"><code>auto</code></dt>
+ <dt><code>auto</code></dt>
  <dd>Enable browser handling of all panning and zooming gestures.</dd>
- <dt id="none"><code>none</code></dt>
+ <dt><code>none</code></dt>
  <dd>Disable browser handling of all panning and zooming gestures.</dd>
- <dt id="pan-x"><code>pan-x</code></dt>
+ <dt><code>pan-x</code></dt>
  <dd>Enable single-finger horizontal panning gestures. May be combined with <strong>pan-y</strong>, <strong>pan-up</strong>, <strong>pan-down</strong> and/or <strong>pinch-zoom</strong>.</dd>
- <dt id="pan-y"><code>pan-y</code></dt>
+ <dt><code>pan-y</code></dt>
  <dd>Enable single-finger vertical panning gestures. May be combined with <strong>pan-x</strong>, <strong>pan-left</strong>, <strong>pan-right</strong> and/or <strong>pinch-zoom</strong>.</dd>
- <dt id="manipulation"><code>manipulation</code></dt>
+ <dt><code>manipulation</code></dt>
  <dd>Enable panning and pinch zoom gestures, but disable additional non-standard gestures such as double-tap to zoom. Disabling double-tap to zoom removes the need for browsers to delay the generation of <strong>click</strong> events when the user taps the screen. This is an alias for "<strong>pan-x pan-y pinch-zoom</strong>" (which, for compatibility, is itself still valid).</dd>
- <dt id="pan-keywords"><code>pan-left</code>, <code>pan-right</code>, <code>pan-up</code>, <code>pan-down</code> {{experimental_inline}}</dt>
+ <dt><code>pan-left</code>, <code>pan-right</code>, <code>pan-up</code>, <code>pan-down</code> {{experimental_inline}}</dt>
  <dd>Enable single-finger gestures that begin by scrolling in the given direction(s). Once scrolling has started, the direction may still be reversed. Note that scrolling "up" (<strong>pan-up</strong>) means that the user is dragging their finger downward on the screen surface, and likewise <strong>pan-left</strong> means the user is dragging their finger to the right. Multiple directions may be combined except when there is a simpler representation (for example, <strong>"pan-left pan-right</strong>" is invalid since "<strong>pan-x</strong>" is simpler, but "<strong>pan-left pan-down</strong>" is valid).</dd>
- <dt id="pinch-zoom"><code>pinch-zoom</code></dt>
+ <dt><code>pinch-zoom</code></dt>
  <dd>Enable multi-finger panning and zooming of the page. This may be combined with any of the <strong>pan-</strong> values.</dd>
 </dl>
 

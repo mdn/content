@@ -16,9 +16,11 @@ browser-compat: http.headers.Expires
 <p>Invalid dates, like the value 0, represent a date in the past and mean that the
   resource is already expired.</p>
 
-<div class="note">If there is a {{HTTPHeader("Cache-Control")}} header with the
-  <code>max-age</code> or <code>s-maxage</code> directive in the response, the
-  <code>Expires</code> header is ignored.</div>
+<div class="notecard note">
+  <p><strong>Note:</strong> If there is a {{HTTPHeader("Cache-Control")}} header
+    with the <code>max-age</code> or <code>s-maxage</code> directive in the response,
+    the <code>Expires</code> header is ignored.</p>
+</div>
 
 <table class="properties">
   <tbody>

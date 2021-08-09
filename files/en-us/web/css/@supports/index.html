@@ -90,7 +90,7 @@ browser-compat: css.at-rules.supports
 </pre>
 
 <div class="notecard note">
-<p><strong>Note</strong>: When using both <code>and</code> and <code>or</code> operators, the parentheses must be used to define the order in which they apply. Otherwise, the condition is invalid and the whole rule is ignored.</p>
+<p><strong>Note:</strong> When using both <code>and</code> and <code>or</code> operators, the parentheses must be used to define the order in which they apply. Otherwise, the condition is invalid and the whole rule is ignored.</p>
 </div>
 
 <h2 id="Formal_syntax">Formal syntax</h2>
@@ -135,7 +135,7 @@ browser-compat: css.at-rules.supports
 
 <p>The CSS Conditional Rules Level 4 specification adds the ability to test for support of a selector—for example {{cssxref(":is",":is()")}}.</p>
 
-<pre class="brush: css highlight[6, 14]">/* This rule won't be applied in browsers which don't support :is() */
+<pre class="brush: css">/* This rule won't be applied in browsers which don't support :is() */
 :is(ul, ol) &gt; li {
   … /* CSS applied when the :is(…) selector is supported */
 }

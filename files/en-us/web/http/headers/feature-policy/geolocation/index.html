@@ -12,13 +12,13 @@ browser-compat: http.headers.Feature-Policy.geolocation
 ---
 <div>{{HTTPSidebar}} {{SeeCompatTable}}</div>
 
-<p><span class="seoSummary">The HTTP {{HTTPHeader("Feature-Policy")}} header
+<p>The HTTP {{HTTPHeader("Feature-Policy")}} header
     <code>geolocation</code> directive controls whether the current document is allowed to
     use the {{domxref('Geolocation')}} Interface. When this policy is enabled, calls to
     {{domxref('Geolocation.getCurrentPosition','getCurrentPosition()')}} and
     {{domxref('Geolocation.watchPosition','watchPosition()')}} will cause those functions'
     callbacks to be invoked with a {{domxref('GeolocationPositionError')}} code of
-    <code>PERMISSION_DENIED</code>.</span></p>
+    <code>PERMISSION_DENIED</code>.</p>
 
 <p>By default, the Geolocation API can be used within top-level documents and their
   same-origin child frames. This directive allows or prevents cross-origin frames from
@@ -26,7 +26,7 @@ browser-compat: http.headers.Feature-Policy.geolocation
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: http">Feature-Policy: geolocation &lt;allowlist&gt;;</pre>
+<pre>Feature-Policy: geolocation &lt;allowlist&gt;;</pre>
 
 <dl>
   <dt>&lt;allowlist&gt;</dt>
@@ -59,8 +59,7 @@ browser-compat: http.headers.Feature-Policy.geolocation
 <p>Then include an {{HTMLElement('iframe','allow','#Attributes')}} attribute on the
   <code>&lt;iframe&gt;</code> element:</p>
 
-<pre
-  class="brush: http">&lt;iframe src="https://other.com/map" allow="geolocation"&gt;&lt;/iframe&gt;</pre>
+<pre>&lt;iframe src="https://other.com/map" allow="geolocation"&gt;&lt;/iframe&gt;</pre>
 
 <p>iframe attributes can selectively enable features in certain frames, and not in others,
   even if those frames contain documents from the same origin.</p>

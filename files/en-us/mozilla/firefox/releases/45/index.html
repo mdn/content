@@ -93,7 +93,7 @@ tags:
 <ul>
  <li>{{domxref("Clients.get()")}} and {{domxref("FetchEvent.clientId")}} have been implemented ({{bug(1222464)}}.)</li>
  <li>{{domxref("Clients.openWindow()")}} has been implemented ({{bug(1172870)}}.)</li>
- <li>The options object that can be passed as a parameter when invoking {{domxref("Clients.matchAll()")}} can now include an <code>includeUncontrolled</code> property. This is a {{domxref("Boolean")}} — if set to <code>true</code>, the matching operation will return all service worker clients who share the same origin as the current service worker. Otherwise, it returns only the service worker clients controlled by the current service worker. The default is <code>false</code>.</li>
+ <li>The options object that can be passed as a parameter when invoking {{domxref("Clients.matchAll()")}} can now include an <code>includeUncontrolled</code> property. This is a boolean value — if set to <code>true</code>, the matching operation will return all service worker clients who share the same origin as the current service worker. Otherwise, it returns only the service worker clients controlled by the current service worker. The default is <code>false</code>.</li>
 </ul>
 
 <h4 id="WebRTC">WebRTC</h4>
@@ -173,12 +173,6 @@ tags:
 
 <ul>
  <li>WebIDL constructors could be called without the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/new"><code>new</code></a> operator in chrome context.  Now such code will raise a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError"><code>TypeError</code></a> as in Web content since Firefox 30. For example, <code>var req = XMLHttpRequest();</code> needs to be <code>var req = new XMLHttpRequest();</code>.</li>
-</ul>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="https://www.fxsitecompat.com/en-US/versions/45/">Site Compatibility for Firefox 45</a></li>
 </ul>
 
 <h2 id="Older_versions">Older versions</h2>

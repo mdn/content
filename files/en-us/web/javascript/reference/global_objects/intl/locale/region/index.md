@@ -27,9 +27,8 @@ The region is an essential part of the locale identifier, as it places the local
 The region is the third part of a valid Unicode language identifier string, and can be set by adding it to the locale identifier string that is passed into the {{jsxref("Intl/Locale/Locale", "Locale")}} constructor. The region is a mandatory part of a
 
 ```js
-let regionStr = new Intl.Locale("en-Latn-US");
-
-console.log(regionStr.region); // Prints "US"
+let locale = new Intl.Locale("en-Latn-US");
+console.log(locale.region); // Prints "US"
 ```
 
 ### Setting the region via the configuration object
@@ -37,9 +36,8 @@ console.log(regionStr.region); // Prints "US"
 The {{jsxref("Intl/Locale/Locale", "Locale")}} constructor takes a configuration object, which can be used to set the region subtag and property.
 
 ```js
-let regionObj = new Intl.Locale("fr-Latn", {region: "FR"});
-
-console.log(regionObj.region); // Prints "FR"
+let locale = new Intl.Locale("fr-Latn", { region: "FR" });
+console.log(locale.region); // Prints "FR"
 ```
 
 ## Specifications

@@ -10,13 +10,13 @@ tags:
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p class="summary"><span class="seoSummary"><strong>HTTP</strong> is</span> a {{Glossary("protocol")}} which allows the fetching of resources, such as HTML documents. It is <span class="seoSummary">the foundation of any data exchange on the Web and it is a client-server protocol, which means requests are initiated by the recipient, usually the Web browser. A complete document is reconstructed from the different sub-documents fetched, for instance text, layout description, images, videos, scripts, and more</span>.</p>
+<p class="summary"><strong>HTTP</strong> is a {{Glossary("protocol")}} which allows the fetching of resources, such as HTML documents. It is the foundation of any data exchange on the Web and it is a client-server protocol, which means requests are initiated by the recipient, usually the Web browser. A complete document is reconstructed from the different sub-documents fetched, for instance text, layout description, images, videos, scripts, and more.</p>
 
 <p><img alt="A Web document is the composition of different resources" src="fetching_a_page.png"></p>
 
 <p>Clients and servers communicate by exchanging individual messages (as opposed to a stream of data). The messages sent by the client, usually a Web browser, are called <em>requests</em> and the messages sent by the server as an answer are called <em>responses</em>.</p>
 
-<p><img alt="HTTP as an application layer protocol, on top of TCP (transport layer) and IP (network layer) and below the presentation layer." src="http-layers.png" style="float: left; padding-bottom: 15px; padding-right: 20px;">Designed in the early 1990s, HTTP is an extensible protocol which has evolved over time. It is an application layer protocol that is sent over {{Glossary("TCP")}}, or over a {{Glossary("TLS")}}-encrypted TCP connection, though any reliable transport protocol could theoretically be used. Due to its extensibility, it is used to not only fetch hypertext documents, but also images and videos or to post content to servers, like with HTML form results. HTTP can also be used to fetch parts of documents to update Web pages on demand.</p>
+<p><img alt="HTTP as an application layer protocol, on top of TCP (transport layer) and IP (network layer) and below the presentation layer." src="http-layers.png">Designed in the early 1990s, HTTP is an extensible protocol which has evolved over time. It is an application layer protocol that is sent over {{Glossary("TCP")}}, or over a {{Glossary("TLS")}}-encrypted TCP connection, though any reliable transport protocol could theoretically be used. Due to its extensibility, it is used to not only fetch hypertext documents, but also images and videos or to post content to servers, like with HTML form results. HTTP can also be used to fetch parts of documents to update Web pages on demand.</p>
 
 <h2 id="Components_of_HTTP-based_systems">Components of HTTP-based systems</h2>
 
@@ -106,12 +106,12 @@ tags:
 <ol>
  <li>Open a TCP connection: The TCP connection is used to send a request, or several, and receive an answer. The client may open a new connection, reuse an existing connection, or open several TCP connections to the servers.</li>
  <li>Send an HTTP message: HTTP messages (before HTTP/2) are human-readable. With HTTP/2, these simple messages are encapsulated in frames, making them impossible to read directly, but the principle remains the same. For example:
-  <pre class="line-numbers  language-html"><code class="language-html">GET / HTTP/1.1
+  <pre>GET / HTTP/1.1
 Host: developer.mozilla.org
-Accept-Language: fr</code></pre>
+Accept-Language: fr</pre>
  </li>
  <li>Read the response sent by the server, such as:
-  <pre class="line-numbers  language-html"><code class="language-html">HTTP/1.1 200 OK
+  <pre>HTTP/1.1 200 OK
 Date: Sat, 09 Oct 2010 14:28:02 GMT
 Server: Apache
 Last-Modified: Tue, 01 Dec 2009 20:18:22 GMT
@@ -120,7 +120,7 @@ Accept-Ranges: bytes
 Content-Length: 29769
 Content-Type: text/html
 
-&lt;!DOCTYPE html... (here comes the 29769 bytes of the requested web page)</code></pre>
+&lt;!DOCTYPE html... (here comes the 29769 bytes of the requested web page)</pre>
  </li>
  <li>Close or reuse the connection for further requests.</li>
 </ol>

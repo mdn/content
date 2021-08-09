@@ -15,7 +15,7 @@ browser-compat: css.types.image.image
 <p>The <strong><code>image()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Functions">function</a> defines an {{CSSxRef("&lt;image&gt;")}} in a similar fashion to the {{CSSxRef("url()")}} function, but with added functionality including specifying the image's directionality, displaying just a part of that image defined by a media fragment, and specifying a solid color as a fallback in case none of the specified images are able to be rendered.</p>
 
 <div class="notecard note">
-<p><strong>Disambiguation:</strong> {{DOMxRef("HTMLImageElement/Image", '<code>Image()</code>, the <code>HTMLImageElement</code> constructor', '', 1)}}.</p>
+<p><strong>Note:</strong> The CSS <code>image()</code> function should not confused with {{DOMxRef("HTMLImageElement/Image", '<code>Image()</code>, the <code>HTMLImageElement</code> constructor', '', 1)}}.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
@@ -106,9 +106,7 @@ xywh=percent:25,25,50,50    /* results in a 50%x50% image at x=25% and y=25% */<
 
 <h3 id="Putting_color_on_top_of_a_background_image">Putting color on top of a background image</h3>
 
-<div class="hidden">
-<pre class="brush: css;">.quarterlogo {height: 200px; width: 200px; border: 1px solid;}</pre>
-</div>
+<pre class="brush: css hidden">.quarterlogo {height: 200px; width: 200px; border: 1px solid;}</pre>
 
 <pre class="brush: css;">.quarterlogo {
   background-image:

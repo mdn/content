@@ -11,16 +11,16 @@ browser-compat: http.headers.X-XSS-Protection
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p>The HTTP <strong><code>X-XSS-Protection</code></strong> response header is a feature of Internet Explorer, Chrome and Safari that stops pages from loading when they detect reflected cross-site scripting ({{Glossary("XSS")}}) attacks. Although these protections are largely unnecessary in modern browsers when sites implement a strong {{HTTPHeader("Content-Security-Policy")}} that disables the use of inline JavaScript (<code>'unsafe-inline'</code>), they can still provide protections for users of older web browsers that don't yet support {{Glossary("CSP")}}.</p>
+<p>The HTTP <strong><code>X-XSS-Protection</code></strong> response header is a feature of Internet Explorer, Chrome and Safari that stops pages from loading when they detect reflected cross-site scripting ({{Glossary("Cross-site_scripting", "XSS")}}) attacks. Although these protections are largely unnecessary in modern browsers when sites implement a strong {{HTTPHeader("Content-Security-Policy")}} that disables the use of inline JavaScript (<code>'unsafe-inline'</code>), they can still provide protections for users of older web browsers that don't yet support {{Glossary("CSP")}}.</p>
 
-<div class="note">
-<ul>
- <li>Chrome has <a href="https://www.chromestatus.com/feature/5021976655560704">removed their XSS Auditor</a></li>
- <li>Firefox has not, and <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=528661">will not implement <code>X-XSS-Protection</code></a></li>
- <li>Edge has <a href="https://blogs.windows.com/windowsexperience/2018/07/25/announcing-windows-10-insider-preview-build-17723-and-build-18204/">retired their XSS filter</a></li>
-</ul>
-
-<p>This means that if you do not need to support legacy browsers, it is recommended that you use <code><a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy">Content-Security-Policy</a></code> without allowing <code>unsafe-inline</code> scripts instead.</p>
+<div class="notecard note">
+  <p><strong>Note:</strong> </p>
+  <ul>
+    <li>Chrome has <a href="https://www.chromestatus.com/feature/5021976655560704">removed their XSS Auditor</a></li>
+    <li>Firefox has not, and <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=528661">will not implement <code>X-XSS-Protection</code></a></li>
+    <li>Edge has <a href="https://blogs.windows.com/windowsexperience/2018/07/25/announcing-windows-10-insider-preview-build-17723-and-build-18204/">retired their XSS filter</a></li>
+  </ul>
+  <p>This means that if you do not need to support legacy browsers, it is recommended that you use <code><a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy">Content-Security-Policy</a></code> without allowing <code>unsafe-inline</code> scripts instead.</p>
 </div>
 
 <table class="properties">
@@ -63,7 +63,7 @@ X-XSS-Protection: 1; report=&lt;reporting-uri&gt;
 
 <p>PHP</p>
 
-<pre class="brush: php">header("X-XSS-Protection: 1; mode=block");</pre>
+<pre>header("X-XSS-Protection: 1; mode=block");</pre>
 
 <p>Apache (.htaccess)</p>
 

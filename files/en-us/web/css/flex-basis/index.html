@@ -19,14 +19,13 @@ browser-compat: css.properties.flex-basis
 
 <p>The demo then changes the <code>flex-basis</code> on the first item. It will then grow and shrink from that flex-basis. This means that, for example, when the <code>flex-basis</code> of the first item is <code>200px</code>, it will start out at 200px but then shrink to fit the space available with the other items being at least <code>min-content</code> sized.</p>
 
-<figure>
-  <figcaption><p>The image below shows how the Firefox <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_Flexbox_layouts">Flexbox Inspector</a> helps you understand the size items become.</p></figcaption>
-  <p><img src="firefox-flex-basis.png" alt="The Firefox Flexbox Inspector showing the size of the item once it has shrunk."></p>
-</figure>
+<p>The image below shows how the Firefox <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_Flexbox_layouts">Flexbox Inspector</a> helps you understand the size items become:</p>
+
+<img src="firefox-flex-basis.png" alt="The Firefox Flexbox Inspector showing the size of the item once it has shrunk.">
+
 
 <div class="notecard note">
-  <h4>Note:</h4>
-<p><strong>Note:</strong> in case both <code>flex-basis</code> (other than <code>auto</code>) and <code>width</code> (or <code>height</code> in case of <code>flex-direction: column</code>) are set for an element, <code>flex-basis</code> has priority.</p>
+  <p><strong>Note:</strong> in case both <code>flex-basis</code> (other than <code>auto</code>) and <code>width</code> (or <code>height</code> in case of <code>flex-direction: column</code>) are set for an element, <code>flex-basis</code> has priority.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
@@ -52,14 +51,14 @@ flex-basis: revert;
 flex-basis: unset;
 </pre>
 
-<p>The <code>flex-basis</code> property is specified as either the keyword <code><a href="#content">content</a></code> or a <code><a href="#width">&lt;'width'&gt;</a></code>.</p>
+<p>The <code>flex-basis</code> property is specified as either the keyword <code>content</code> or a <code>&lt;'width'&gt;</code>.</p>
 
 <h3 id="Values">Values</h3>
 
 <dl>
- <dt><code id="width">&lt;'width'&gt;</code></dt>
+ <dt><code>&lt;'width'&gt;</code></dt>
  <dd>An absolute {{cssxref("&lt;length&gt;")}}, a {{cssxref("&lt;percentage&gt;")}} of the parent flex container's main size property, or the keyword <code>auto</code>. Negative values are invalid. Defaults to <code>auto</code>.</dd>
- <dt><code id="content">content</code></dt>
+ <dt><code>content</code></dt>
  <dd>
   <p>Indicates automatic sizing, based on the flex item’s content.</p>
   <div class="note">

@@ -18,7 +18,7 @@ tags:
 <p>In addition to broad feature sets like ligatures or lining figures (numerals that line up evenly as opposed to 'oldstyle', which look more like lower-case letters), there are also very specific ones such as stylistic sets (which might include several specific variants of glyphs meant to be used together), alternates (which might be one or more variants of the letter 'a'), or even language-specific alterations for East Asian languages. In the latter case, these alterations are actually necessary to properly express the language, so they go beyond the more stylistic preference of most other OpenType features.</p>
 
 <div class="warning">
-<p><strong>Caution</strong>: There are many CSS attributes defined to leverage font features, but unfortunately many are not fully implemented. They are all defined and shown here, but many will only work using the lower-level {{cssxref("font-feature-settings")}} property. It's possible to write CSS to work both ways but this can become cumbersome. The issue with using <code>font-feature-settings</code> for everything is that every time you want to change one of the individual features, you have to redefine the entire string (similar to manipulating variable fonts with {{cssxref("font-variation-settings")}}).</p>
+<p><strong>Warning:</strong> There are many CSS attributes defined to leverage font features, but unfortunately many are not fully implemented. They are all defined and shown here, but many will only work using the lower-level {{cssxref("font-feature-settings")}} property. It's possible to write CSS to work both ways but this can become cumbersome. The issue with using <code>font-feature-settings</code> for everything is that every time you want to change one of the individual features, you have to redefine the entire string (similar to manipulating variable fonts with {{cssxref("font-variation-settings")}}).</p>
 </div>
 
 <h2 id="Discovering_availability_of_features_in_fonts">Discovering availability of features in fonts</h2>
@@ -38,7 +38,7 @@ tags:
 <p>While none of these features individually will render a site useless due to their absence, each of them in turn can make a site easier to use and more memorable for its attention to detail.</p>
 
 <blockquote>
-<p>OpenType features are like secret compartments in fonts. Unlock them and you'll find ways to make fonts look and behave differently in subtle and dramatic ways. Not all OpenType features are appropriate to use all of the time, but some features are critical for great typography. <cite><em>-- Tim Brown, Head of Typography at Adobe</em>.</cite></p>
+<p>OpenType features are like secret compartments in fonts. Unlock them and you'll find ways to make fonts look and behave differently in subtle and dramatic ways. Not all OpenType features are appropriate to use all of the time, but some features are critical for great typography. <em>-- Tim Brown, Head of Typography at Adobe</em>.</p>
 </blockquote>
 
 <h3 id="Sometimes_its_substance_not_just_style">Sometimes it's substance, not just style</h3>
@@ -50,7 +50,7 @@ tags:
 <p>There are a number of different features to consider. They are grouped and explained here according to the main attributes and options covered in the W3C specifications.</p>
 
 <div class="note">
-<p><strong>Note</strong>: The examples below show the properties and some example combinations, along with the lower-level syntax equivalents. They may not match exactly due to browser implementation inconsistencies, but in many cases the first example will match the second. The typefaces shown are Playfair Display, Source Serif Pro, IBM Plex Serif, Dancing Script, and Kokoro (all available and free to use, most are on Google Fonts and other services).</p>
+<p><strong>Note:</strong> The examples below show the properties and some example combinations, along with the lower-level syntax equivalents. They may not match exactly due to browser implementation inconsistencies, but in many cases the first example will match the second. The typefaces shown are Playfair Display, Source Serif Pro, IBM Plex Serif, Dancing Script, and Kokoro (all available and free to use, most are on Google Fonts and other services).</p>
 </div>
 
 <h3 id="Kerning_cssxreffont-kerning">Kerning ({{cssxref("font-kerning")}})</h3>
@@ -140,7 +140,7 @@ tags:
 <div>{{EmbedGHLiveSample("css-examples/font-features/font-variant-east-asian.html", '100%', 750)}}</div>
 
 <div class="note">
-<p><strong>Note</strong>: these glyphs were copied out of a font sample and are not intended as prose.</p>
+<p><strong>Note:</strong> these glyphs were copied out of a font sample and are not intended as prose.</p>
 </div>
 
 <h3 id="Font_variant_shorthand_Cssxreffont-variant">Font variant shorthand ({{Cssxref("font-variant")}})</h3>
@@ -168,10 +168,10 @@ tags:
   font-feature-settings: "liga" 0, "dlig" 0;
 }</pre>
 
-<h4 class="brush: css" id="More_on_font-feature-settings_codes">More on font-feature-settings codes</h4>
+<h4 id="More_on_font-feature-settings_codes">More on font-feature-settings codes</h4>
 
 <ul>
- <li class="brush: css"><a href="https://sparanoid.com/lab/opentype-features/">'The Complete CSS Demo for OpenType Features'</a> (can't vouch for the truth of the name, but it's pretty big)</li>
+ <li><a href="https://sparanoid.com/lab/opentype-features/">'The Complete CSS Demo for OpenType Features'</a> (can't vouch for the truth of the name, but it's pretty big)</li>
  <li><a href="https://en.wikipedia.org/wiki/List_of_typographic_features">A list of OpenType features on Wikipedia</a></li>
 </ul>
 

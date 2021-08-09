@@ -28,7 +28,7 @@ browser-compat: http.headers.Viewport-Width
    </tr>
   </tbody>
  </table>
- 
+
 <p>The hint can be used with other screen-specific hints to deliver images optimized for a specific screen size, or to omit resources that are not needed for a particular screen width.</p>
 
 <p>If the <code>Viewport-Width</code> header appears more than once in a message the last occurrence is used.</p>
@@ -45,7 +45,7 @@ browser-compat: http.headers.Viewport-Width
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: http">Viewport-Width: &lt;number&gt;</pre>
+<pre>Viewport-Width: &lt;number&gt;</pre>
 
 <h2 id="Directives">Directives</h2>
 
@@ -58,11 +58,11 @@ browser-compat: http.headers.Viewport-Width
 
 <p>A server must first opt in to receive the <code>Viewport-Width</code> header by sending the response header {{HTTPHeader("Accept-CH")}} containing the directive <code>Viewport-Width</code>.</p>
 
-<pre class="brush: http">Accept-CH: Viewport-Width</pre>
+<pre>Accept-CH: Viewport-Width</pre>
 
 <p>Then on subsequent requests the client might send <code>Viewport-Width</code> header back:</p>
 
-<pre class="brush: http">Viewport-Width: 320</pre>
+<pre>Viewport-Width: 320</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

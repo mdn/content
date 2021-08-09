@@ -149,8 +149,7 @@ Cache-Control: public
 <pre>Vary: Accept-Encoding</pre>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>Use <code>Vary</code> with care—it can easily reduce the effectiveness of caching! A caching server should use <a href="#normalization">normalization</a> to reduce duplicated cache entries and unnecessary requests to the origin server. This is particularly true when using <code>Vary</code> with headers and header values that can have many values.</p>
+  <p><strong>Note:</strong> Use <code>Vary</code> with care—it can easily reduce the effectiveness of caching! A caching server should use <a href="#normalization">normalization</a> to reduce duplicated cache entries and unnecessary requests to the origin server. This is particularly true when using <code>Vary</code> with headers and header values that can have many values.</p>
 </div>
 
 <p>The <code>Vary</code> header can also be useful for serving different content to desktop and mobile users, or to allow search engines to discover the mobile version of a page (and perhaps also tell them that no <a href="https://en.wikipedia.org/wiki/Cloaking">Cloaking</a> is intended). This is usually achieved with the <code>Vary: User-Agent</code> header, and works because the {{HTTPHeader("User-Agent")}} header value is different for mobile and desktop clients.</p>

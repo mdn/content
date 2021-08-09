@@ -21,7 +21,7 @@ execution of the loop with the next iteration.
 continue [label];
 ```
 
-- `label`
+- `label` {{optional_inline}}
   - : Identifier associated with the label of the statement.
 
 ## Description

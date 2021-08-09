@@ -53,7 +53,7 @@ tags:
 
 <h3 id="How_is_browser_idle_time_determined.3F">How is browser idle time determined?</h3>
 
-<p>In the current implementation (Mozilla 1.2), idle time is determined using the <code>nsIWebProgressListener</code> API. We attach a listener to the toplevel <code>nsIWebProgress</code> object ("@<a class="linkification-ext external" href="https://mozilla.org/docloaderservice;1" title="Linkification: https://mozilla.org/docloaderservice;1">mozilla.org/docloaderservice;1</a>"). From this, we receive document start &amp; stop notifications, and we approximate idle time as the period between the last document stop and the next document start. The last document stop notification occurs roughly when the onLoad handler would fire for the toplevel document. This is when we kick off prefetch requests. If a subframe contains prefetching hints, prefetching will not begin until the top-most frame and all its "child" frames finish loading.</p>
+<p>In the current implementation (Mozilla 1.2), idle time is determined using the <code>nsIWebProgressListener</code> API. We attach a listener to the toplevel <code>nsIWebProgress</code> object ("@mozilla.org/docloaderservice;1"). From this, we receive document start &amp; stop notifications, and we approximate idle time as the period between the last document stop and the next document start. The last document stop notification occurs roughly when the onLoad handler would fire for the toplevel document. This is when we kick off prefetch requests. If a subframe contains prefetching hints, prefetching will not begin until the top-most frame and all its "child" frames finish loading.</p>
 
 <h3 id="What_happens_if_I_click_on_a_link_while_something_is_being_prefetched.3F">What happens if I click on a link while something is being prefetched?</h3>
 
@@ -87,7 +87,7 @@ tags:
 
 <h3 id="Is_there_a_preference_to_disable_link_prefetching.3F">Is there a preference to disable link prefetching?</h3>
 
-<p>Yes, there is a hidden preference that you can set to disable link prefetching. Add this line to your prefs.js file located in your profile directory (or make the appropriate change via <a class="linkification-ext" href="/about:config" title="Linkification: about:config">about:config</a>):</p>
+<p>Yes, there is a hidden preference that you can set to disable link prefetching. Add this line to your prefs.js file located in your profile directory (or make the appropriate change via <code>about:config</code>:</p>
 
 <pre class="eval">user_pref("network.prefetch-next", false);
 </pre>
@@ -106,21 +106,19 @@ tags:
 
 <h3 id="Privacy_implications">Privacy implications</h3>
 
-<p>Along with the referral and URL-following implications already mentioned above, prefetching will generally cause the cookies of the prefetched site to be accessed. (For example, if you google amazon, the google results page will prefetch <a class="linkification-ext external" href="https://www.amazon.com" title="Linkification: https://www.amazon.com">www.amazon.com</a>, causing amazon cookies to be sent back and forth. You can block 3rd party cookies in Firefox, see <a href="https://support.mozilla.com/en-US/kb/Disabling%20third%20party%20cookies" title="https://support.mozilla.com/en-US/kb/Disabling third party cookies">Disabling third party cookies</a>.)</p>
+<p>Along with the referral and URL-following implications already mentioned above, prefetching will generally cause the cookies of the prefetched site to be accessed. (For example, if you google amazon, the google results page will prefetch <code>www.amazon.com</code>, causing amazon cookies to be sent back and forth. You can block 3rd party cookies in Firefox, see <a href="https://support.mozilla.com/en-US/kb/Disabling%20third%20party%20cookies">Disabling third party cookies</a>.)</p>
 
 <h3 id="What_about....3F">What about...?</h3>
 
 <p>If you have any questions or comments about link prefetching, please feel free to send them my way :-)</p>
 
-<h4 id="See_also...">See also...</h4>
+<h4 id="See_also">See also</h4>
 
 <p><a href="https://www.edochan.com/programming/pf.htm">Prefetching Hints</a></p>
 
-<div class="originaldocinfo">
 <h2 id="Original_Document_Information">Original Document Information</h2>
 
 <ul>
  <li>Author(s): Darin Fisher (darin at meer dot net)</li>
  <li>Last Updated Date: Updated: March 3, 2003</li>
 </ul>
-</div>

@@ -14,8 +14,7 @@ browser-compat: css.selectors.user-valid
 <p>The <strong><code>:user-valid</code></strong> CSS <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> represents any validated form element whose value validates correctly based on its <a href="/en-US/docs/Learn/Forms#constraint_validation">validation constraints</a>. However, unlike {{cssxref(":valid")}} it only matches once the user has interacted with it.</p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>The pseudo-class behaves in the same way as the non-standard <code>:-moz-ui-valid</code> pseudo-class.</p>
+  <p><strong>Note:</strong> The pseudo-class behaves in the same way as the non-standard <code>:-moz-ui-valid</code> pseudo-class.</p>
 </div>
 
 <p>This pseudo-class is applied according to the following rules:</p>
@@ -35,7 +34,7 @@ browser-compat: css.selectors.user-valid
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="Setting_valid">Setting a color and symbol on :user-valid</h3>
+<h3>Setting a color and symbol on :user-valid</h3>
 
 <p>In the following example, the green border and ✅ only display once the user has interacted with the field.
 Try changing the email address to another valid email to see it in action.</p>
@@ -55,7 +54,7 @@ input:user-valid + span::before {
   color: green;
 }</pre>
 
-<p>{{EmbedLiveSample("Setting_valid", 140, 100)}}</p>
+<p>{{EmbedLiveSample("Setting_a_color_and_symbol_on_user-valid", 140, 100)}}</p>
 
 <h2 id="Specifications">Specifications</h2>
 

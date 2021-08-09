@@ -9,7 +9,7 @@ tags:
 ---
 <div>{{CSSRef}}</div>
 
-<p>In Spring of 2017, we saw for the first time a major specification like Grid being shipped into browsers almost simultaneously, and we now have CSS Grid Layout support in the public versions of Firefox, Chrome, Opera, Safari and Edge. However, while evergreen browsers mean that many of us are going to see the majority of users having Grid Layout support very quickly, there are also old or non-supporting browsers to contend with. In this guide we will walk through a variety of strategies for support.</span></p>
+<p>In Spring of 2017, we saw for the first time a major specification like Grid being shipped into browsers almost simultaneously, and we now have CSS Grid Layout support in the public versions of Firefox, Chrome, Opera, Safari and Edge. However, while evergreen browsers mean that many of us are going to see the majority of users having Grid Layout support very quickly, there are also old or non-supporting browsers to contend with. In this guide we will walk through a variety of strategies for support.</p>
 
 <h2 id="The_supporting_browsers">The supporting browsers</h2>
 
@@ -48,7 +48,7 @@ tags:
 
 <p>It is worth noting that you do not have to use grid in an <em>all or nothing</em> way. You could start by enhancing elements in your design with grid, that could otherwise display using an older method. Overwriting of legacy methods with grid layout works surprisingly well, due to the way grid interacts with these other methods.</p>
 
-<h3 id="Floats">Floats</h3>
+<h3>Floats</h3>
 
 <p>We have typically used <a href="/en-US/docs/Learn/CSS/CSS_layout/Floats">floats</a> to create multiple column layouts. If you have floated an item, which is also a grid item in a supporting browser, the float will no longer apply to the item. The fact is that <em>a grid item takes precedence.</em> In the example below, I have a simple media object. In a non-supporting browser, I use {{cssxref("float")}}, however I have also defined the container as a grid container, in order to use the alignment properties that are implemented in CSS Grids.</p>
 
@@ -101,12 +101,11 @@ img {
 
 <p>The above example is very simple, and we can get away without needing to write code that would be a problem to browsers that do not support grid, and legacy code is not an issue to our grid supporting browsers. However, things are not always so simple.</p>
 
-<h4 id="a_more_complex_example">A more complex example</h4>
+<h4>A more complex example</h4>
 
 <p>In this next example, I have a set of floated cards. I have given the cards a {{cssxref("width")}}, in order to {{cssxref("float")}} them. To create gaps between the cards, I use a {{cssxref("margin")}} on the items, and then a negative margin on the container:</p>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -123,7 +122,6 @@ img {
     color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: css">.wrapper ul {
     overflow: hidden;
@@ -162,7 +160,7 @@ img {
 &lt;/div&gt;
 </pre>
 
-<p>{{ EmbedLiveSample('a_more_complex_example', '550', '450') }}</p>
+<p>{{ EmbedLiveSample('A_more_complex_example', '550', '450') }}</p>
 
 <p>The example demonstrates the typical problem that we have with floated layouts: if additional content is added to any one card, the layout breaks.</p>
 
@@ -176,7 +174,7 @@ img {
 
 <p>If I reset the width to <code>auto</code>, then this will stop the float behavior happening for older browsers. I need to be able to define the width for older browsers, and remove the width for grid supporting browsers. Thanks to <a href="/en-US/docs/Web/CSS/@supports">CSS Feature Queries</a> I can do this, right in my CSS.</p>
 
-<h4 id="a_solution_using_feature_queries">A solution using feature queries</h4>
+<h4>A solution using feature queries</h4>
 
 <p><em>Feature queries</em> will look very familiar if you have ever used a <a href="/en-US/docs/Web/CSS/Media_Queries">media query</a> to create a responsive layout. Rather than checking a {{glossary("viewport")}} width, or some feature of the browser or device, we check for support of a CSS property and value pair using an {{cssxref("@supports")}} rule. Inside the feature query, we can then write any CSS we need to apply our modern layout, and remove anything required for the older layout.</p>
 
@@ -191,8 +189,7 @@ img {
 
 <p>I use an <code>@supports</code> rule to check for support of <code>display: grid</code>. I then do my grid code on the {{HTMLElement("ul")}}, set my width and {{cssxref("min-height")}} on the {{HTMLElement("li")}} to <code>auto</code>. I also remove the margins and negative margins, and replace the spacing with the {{cssxref("gap")}} property. This means I don’t get a final margin on the last row of boxes. The layout now works, even if there is more content in one of the cards, than the others:</p>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -209,7 +206,6 @@ img {
     color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: css">.wrapper ul {
     overflow: hidden;
@@ -262,16 +258,15 @@ img {
 &lt;/div&gt;
 </pre>
 
-<p>{{ EmbedLiveSample('a_solution_using_feature_queries', '550', '480') }}</p>
+<p>{{ EmbedLiveSample('A_solution_using_feature_queries', '550', '480') }}</p>
 
-<h2 id="Overwriting_other_values_of_display">Overwriting other values of <code>display</code></h2>
+<h2>Overwriting other values of <code>display</code></h2>
 
 <p>Due to the problems of creating grids of items using floats, many of us would use a different method to the floated method shown above to layout a set of cards. Using <code>display: inline-block</code> is an alternate method.</p>
 
 <p>Once again I can use feature queries to overwrite a layout that uses <code>display: inline-block</code>, and again I don’t need to overwrite everything. An item that is set to <code>inline-block</code> becomes a grid item, and so the behavior of <code>inline-block</code> no longer applies. I have used the {{cssxref("vertical-align")}} property on my item when in the <code>inline-block</code> display mode, but this property does not apply to grid items and, therefore, is ignored once the item becomes a grid item:</p>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -289,7 +284,6 @@ img {
     color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: css">.wrapper ul {
     margin: 0 -10px;

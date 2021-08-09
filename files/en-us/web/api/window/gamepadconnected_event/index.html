@@ -28,6 +28,8 @@ browser-compat: api.Window.gamepadconnected_event
  </tbody>
 </table>
 
+<p>The event will not fire if disallowed by the document's {{httpheader('Feature-Policy/gamepad','gamepad')}} <a href="/en-US/docs/Web/HTTP/Feature_Policy">Feature Policy</a>.</p>
+
 <h2 id="Examples">Examples</h2>
 
 <pre class="brush:js">window.addEventListener('gamepadconnected', event =&gt; {

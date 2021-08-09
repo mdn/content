@@ -41,7 +41,7 @@ tags:
 
 <h3 id="Strong_validation">Strong validation</h3>
 
-<p id="sect1">Strong validation consists of guaranteeing that the resource is, byte to byte, identical to the one it is compared too. This is mandatory for some conditional headers, and the default for the others. Strong validation is very strict and may be difficult to guarantee at the server level, but it does guarantee no data loss at any time, sometimes at the expense of performance.</p>
+<p>Strong validation consists of guaranteeing that the resource is, byte to byte, identical to the one it is compared too. This is mandatory for some conditional headers, and the default for the others. Strong validation is very strict and may be difficult to guarantee at the server level, but it does guarantee no data loss at any time, sometimes at the expense of performance.</p>
 
 <p>It is quite difficult to have a unique identifier for strong validation with {{HTTPHeader("Last-Modified")}}. Often this is done using an {{HTTPHeader("ETag")}} with the MD5 hash of the resource (or a derivative).</p>
 

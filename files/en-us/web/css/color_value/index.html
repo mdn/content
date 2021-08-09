@@ -87,7 +87,7 @@ browser-compat: css.types.color
 </ul>
 </div>
 
-<table id="colors_table">
+<table>
  <thead>
   <tr>
    <th scope="col">Specification</th>
@@ -846,25 +846,25 @@ browser-compat: css.types.color
  </tbody>
 </table>
 
-<h3 id="transparent_keyword"><code id="transparent">transparent</code> keyword</h3>
+<h3 id="transparent_keyword"><code>transparent</code> keyword</h3>
 
 <p>The <code>transparent</code> keyword represents a fully transparent color. This makes the background behind the colored item completely visible. Technically, <code>transparent</code> is a shortcut for <code>rgba(0,0,0,0)</code>.</p>
 
 <div class="note">
-<p><strong>Compatibility note:</strong> To prevent unexpected behavior, such as in a {{cssxref("gradient")}}, the current CSS spec states that <code>transparent</code> should be calculated in the <a href="https://www.w3.org/TR/2012/CR-css3-images-20120417/#color-stop-syntax">alpha-premultiplied color space</a>. However, be aware that older browsers may treat it as black with an alpha value of <code>0</code>.</p>
+<p><strong>Note:</strong> To prevent unexpected behavior, such as in a {{cssxref("gradient")}}, the current CSS spec states that <code>transparent</code> should be calculated in the <a href="https://www.w3.org/TR/2012/CR-css3-images-20120417/#color-stop-syntax">alpha-premultiplied color space</a>. However, be aware that older browsers may treat it as black with an alpha value of <code>0</code>.</p>
 </div>
 
 <div class="note">
-<p><strong>Historical note:</strong> <code>transparent</code> wasn't a true color in CSS Level 2 (Revision 1). It was a special keyword that could be used instead of a regular <code>&lt;color&gt;</code> value on two CSS properties: {{Cssxref("background")}} and {{Cssxref("border")}}. It was essentially added to allow developers to override an inherited solid color. With the advent of alpha channels in CSS Colors Level 3, <code>transparent</code> was redefined as a true color. It can now be used wherever a <code>&lt;color&gt;</code> value can be used.</p>
+<p><strong>Note:</strong> <code>transparent</code> wasn't a true color in CSS Level 2 (Revision 1). It was a special keyword that could be used instead of a regular <code>&lt;color&gt;</code> value on two CSS properties: {{Cssxref("background")}} and {{Cssxref("border")}}. It was essentially added to allow developers to override an inherited solid color. With the advent of alpha channels in CSS Colors Level 3, <code>transparent</code> was redefined as a true color. It can now be used wherever a <code>&lt;color&gt;</code> value can be used.</p>
 </div>
 
-<h3 id="currentcolor_keyword"><code id="currentColor">currentColor</code> keyword</h3>
+<h3 id="currentcolor_keyword"><code>currentColor</code> keyword</h3>
 
 <p>The <code>currentColor</code> keyword represents the value of an element's {{Cssxref("color")}} property. This lets you use the <code>color</code> value on properties that do not receive it by default.</p>
 
 <p>If <code>currentColor</code> is used as the value of the <code>color</code> property, it instead takes its value from the inherited value of the <code>color</code> property.</p>
 
-<h4 id="currentcolor_example">currentColor example</h4>
+<h4>currentColor example</h4>
 
 <pre class="brush: html">&lt;div style="color:blue; border: 1px dashed currentColor;"&gt;
   The color of this text is blue.
@@ -872,7 +872,7 @@ browser-compat: css.types.color
   This block is surrounded by a blue border.
 &lt;/div&gt;</pre>
 
-<p>{{EmbedLiveSample('currentcolor_example', 600, 80)}}</p>
+<p>{{EmbedLiveSample('currentColor_example', 600, 80)}}</p>
 
 <h3 id="RGB_colors">RGB colors</h3>
 
@@ -880,7 +880,7 @@ browser-compat: css.types.color
 
 <h4 id="Syntax_2">Syntax</h4>
 
-<p>RGB colors can be expressed through both hexadecimal (prefixed with <code>#</code>) and functional (<code id="rgb()">rgb()</code>, <code id="rgba()">rgba()</code>) notations.</p>
+<p>RGB colors can be expressed through both hexadecimal (prefixed with <code>#</code>) and functional (<code>rgb()</code>, <code>rgba()</code>) notations.</p>
 
 <div class="note">
 <p><strong>Note:</strong> As of CSS Colors Level 4, <code>rgba()</code> is an alias for <code>rgb()</code>. In browsers that implement the Level 4 standard, they accept the same parameters and behave the same way.</p>
@@ -907,10 +907,10 @@ browser-compat: css.types.color
 
 <h4 id="Syntax_3">Syntax</h4>
 
-<p>HSL colors are expressed through the functional <code id="hsl()">hsl()</code> and <code id="hsla()">hsla()</code> notations.</p>
+<p>HSL colors are expressed through the functional <code>hsl()</code> and <code>hsla()</code> notations.</p>
 
 <div class="note">
-<p><strong>Note</strong>: As of CSS Colors Level 4, <code>hsla()</code> is an alias for <code>hsl()</code>. In browsers that implement the Level 4 standard, they accept the same parameters and behave the same way.</p>
+<p><strong>Note:</strong> As of CSS Colors Level 4, <code>hsla()</code> is an alias for <code>hsl()</code>. In browsers that implement the Level 4 standard, they accept the same parameters and behave the same way.</p>
 </div>
 
 <dl>
@@ -931,7 +931,7 @@ browser-compat: css.types.color
 <p>The keywords in the following list are defined by the CSS Color Module Level 4 specification.</p>
 
 <div class="notecard note">
-<p>Note that these keywords are <em>case insensitive</em>, but are listed here with mixed case for readability.</p>
+<p><strong>Note:</strong> Note that these keywords are <em>case insensitive</em>, but are listed here with mixed case for readability.</p>
 </div>
 
 <dl>
@@ -1146,11 +1146,13 @@ browser-compat: css.types.color
  <dd>
  <p>Text color for highlighted items in HTML {{HTMLElement("select")}}s. Should be used with the <code>-moz-html-CellHighlight</code> background color. Prior to Gecko 1.9, use <code>-moz-CellHighlightText</code>.</p>
  </dd>
- <dt>-moz-mac-accentdarkestshadow, -moz-mac-accentdarkshadow, -moz-mac-accentface, -moz-mac-accentlightesthighlight, -moz-mac-accentlightshadow, -moz-mac-accentregularhighlight, -moz-mac-accentregularshadow, -moz-mac-chrome-active</dt>
+ <dt>-moz-mac-accentdarkestshadow, -moz-mac-accentdarkshadow, -moz-mac-accentface, -moz-mac-accentlightesthighlight, -moz-mac-accentlightshadow, -moz-mac-accentregularhighlight, -moz-mac-accentregularshadow</dt>
  <dd>
+ <p>Accent colors.</p>
  </dd>
- <dt>-moz-mac-chrome-inactive</dt>
+ <dt>-moz-mac-chrome-active, -moz-mac-chrome-inactive</dt>
  <dd>
+ <p>Colors for inactive and active browser chrome.</p>
  </dd>
  <dt>-moz-mac-focusring, -moz-mac-menuselect, -moz-mac-menushadow, -moz-mac-menutextselect, -moz-MenuHover</dt>
  <dd>
@@ -1221,13 +1223,13 @@ browser-compat: css.types.color
 </dl>
 
 <h3 id="Lab_colors">Lab colors</h3>
-  
+
 <p>CSS Color 4 introduced Lab colors.
 Lab colors are specified via the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/lab()"><code>lab()</code></a> functional notation.
 They are not limited to a specific color space, and can represent the entire spectrum of human vision.</p>
-  
+
 <h3 id="LCH_colors">LCH colors</h3>
-  
+
 <p>CSS Color 4 introduced LCH colors.
 LCH colors are specified via the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/lch()"><code>lch()</code></a> functional notation.
 They are not limited to a specific color space, and can represent the entire spectrum of human vision.</p>
@@ -1235,15 +1237,15 @@ They are not limited to a specific color space, and can represent the entire spe
 <p>In fact, LCH is the polar form of Lab. It is more human friendly than Lab, as its chroma and hue components specify qualities of the desired color, as opposed to mixing.
 It is similar to HSL in that way, although it is far more perceptually uniform.
 Unlike HSL that describes both <code>hsl(60 100% 50%)</code> <code>hsl(240 100% 50%)</code> as having the same lightness, LCH (and Lab) correctly ascribes different lightnesses to them:
-the former (yellow) has an L of 97.6 and the latter (blue) an L of 29.6. 
+the former (yellow) has an L of 97.6 and the latter (blue) an L of 29.6.
 Therefore, LCH can be used to create palettes across entirely different colors, with predictable results.
 Please note that LCH hue is not the same as HSL hue and LCH chroma is not the same as HSL saturation, although they do share some conceptual similarities.</p>
 
-  
+
 <h3 id="color_colors">color() colors</h3>
-  
+
 <p>CSS Color 4 introduced this notation.
-Colors specified via the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/color()"><code>color()</code></a> function can specify a color in any of the predefined color spaces, 
+Colors specified via the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/color()"><code>color()</code></a> function can specify a color in any of the predefined color spaces,
   as well as custom color spaces, defined via the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@color-profile"><code>@color-profile</code></a> rule.</p>
 
 <h2 id="Interpolation">Interpolation</h2>
@@ -1256,7 +1258,7 @@ Colors specified via the <a href="https://developer.mozilla.org/en-US/docs/Web/C
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="Color_value_tester">Color value tester</h3>
+<h3>Color value tester</h3>
 
 <p>In this example we provide a <code>&lt;div&gt;</code> and a text input. Entering a valid color into the input causes the <code>&lt;div&gt;</code> to adopt that color, allowing you to test our color values.</p>
 
@@ -1274,10 +1276,7 @@ Colors specified via the <a href="https://developer.mozilla.org/en-US/docs/Web/C
   height: 200px;
 }</pre>
 
-<div class="hidden">
-<h4 id="JavaScript">JavaScript</h4>
-
-<pre class="brush: js">const inputElem = document.querySelector('input');
+<pre class="brush: js hidden">const inputElem = document.querySelector('input');
 const divElem = document.querySelector('div');
 
 function validTextColor(stringToTest) {
@@ -1303,7 +1302,6 @@ inputElem.addEventListener('change', () =&gt; {
     divElem.textContent = 'Invalid color value';
   }
 });</pre>
-</div>
 
 <h4 id="Result">Result</h4>
 

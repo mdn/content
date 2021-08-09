@@ -37,7 +37,7 @@ browser-compat: css.types.image
 	<li>Images with <em>intrinsic dimensions</em> (a natural size), like a JPEG, PNG, or other <a href="https://en.wikipedia.org/wiki/Raster_graphics">raster format</a>.</li>
 	<li>Images with <em>multiple intrinsic dimensions</em>, existing in multiple versions inside a single file, like some .ico formats. (In this case, the intrinsic dimensions will be those of the image largest in area and the aspect ratio most similar to the containing box.)</li>
 	<li>Images with no intrinsic dimensions but with <em>an intrinsic aspect ratio</em> between its width and height, like an SVG or other <a href="https://en.wikipedia.org/wiki/Vector_graphics">vector format</a>.</li>
-	<li id="no_intrinsic">Images with <em>neither intrinsic dimensions, nor an intrinsic aspect ratio</em>, like a CSS gradient.</li>
+	<li>Images with <em>neither intrinsic dimensions, nor an intrinsic aspect ratio</em>, like a CSS gradient.</li>
 </ul>
 
 <p>CSS determines an object's <em>concrete size</em> using (1) its <em>intrinsic dimensions</em>; (2) its <em>specified size</em>, defined by CSS properties like {{CSSxRef("width")}}, {{CSSxRef("height")}}, or {{CSSxRef("background-size")}}; and (3) its <em>default size</em>, determined by the kind of property the image is used with:</p>
@@ -97,7 +97,9 @@ browser-compat: css.types.image
 	<li>If the specified size defines <em>neither the width nor the height</em>, the concrete object size is calculated so that it matches the intrinsic aspect ratio of the image but without exceeding the default object size in any dimension. If the image has no intrinsic aspect ratio, the intrinsic aspect ratio of the object it applies to is used; if this object has none, the missing width or height are taken from the default object size.</li>
 </ul>
 
-<div class="note"><strong>Note:</strong> Not all browsers support every type of image on every property. See the <a href="#browser_compatibility">browser compatibility section</a> for details.</div>
+<div class="note">
+  <p><strong>Note:</strong> Not all browsers support every type of image on every property. See the <a href="#browser_compatibility">browser compatibility section</a> for details.</p>
+</div>
 
 <h2 id="Accessibility_concerns">Accessibility concerns</h2>
 

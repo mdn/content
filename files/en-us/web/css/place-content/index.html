@@ -56,8 +56,8 @@ place-content: unset;</pre>
 
 <p>The first value is the {{CSSxRef("align-content")}} property value, the second the {{CSSxRef("justify-content")}} one.</p>
 
-<div class="warning">
-<p><strong>Important</strong>: If the second value is not present, the first value is used for both, provided it is a valid value for both. If it is invalid for one or the other, the whole value will be invalid.</p>
+<div class="note">
+ <p><strong>Note:</strong> If the second value is not present, the first value is used for both, provided it is a valid value for both. If it is invalid for one or the other, the whole value will be invalid.</p>
 </div>
 
 <h3 id="Values">Values</h3>
@@ -118,8 +118,7 @@ place-content: unset;</pre>
 &lt;/div&gt;
 </pre>
 
-<div class="hidden">
-<pre class="brush:html">&lt;code&gt;writing-mode:&lt;/code&gt;&lt;select id="writingMode"&gt;
+<pre class="brush:html hidden">&lt;code&gt;writing-mode:&lt;/code&gt;&lt;select id="writingMode"&gt;
   &lt;option value="horizontal-tb" selected&gt;horizontal-tb&lt;/option&gt;
   &lt;option value="vertical-rl"&gt;vertical-rl&lt;/option&gt;
   &lt;option value="vertical-lr"&gt;vertical-lr&lt;/option&gt;
@@ -165,7 +164,7 @@ place-content: unset;</pre>
 &lt;/select&gt;&lt;code&gt;;&lt;/code&gt;
 </pre>
 
-<pre class="brush: js">var update = function () {
+<pre class="brush: js hidden">var update = function () {
    document.getElementById("container").style.placeContent = document.getElementById("alignContentAlignment").value + " " + document.getElementById("justifyContentAlignment").value;
 }
 
@@ -184,7 +183,6 @@ direction.addEventListener("change", function (evt) {
    document.getElementById("container").style.direction = evt.target.value;
 });
 </pre>
-</div>
 
 <h4 id="CSS">CSS</h4>
 

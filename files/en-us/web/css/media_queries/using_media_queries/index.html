@@ -41,17 +41,19 @@ tags:
 <p><em>Media types</em> describe the general category of a device. Except when using the <code>not</code> or <code>only</code> logical operators, the media type is optional and the <code>all</code> type will be implied.</p>
 
 <dl>
- <dt><a id="all"><code>all</code></a></dt>
+ <dt><code>all</code></dt>
  <dd>Suitable for all devices.</dd>
- <dt><a id="print"><code>print</code></a></dt>
+ <dt><code>print</code></dt>
  <dd>Intended for paged material and documents viewed on a screen in print preview mode. (Please see <a href="/en-US/docs/Web/CSS/Paged_Media">paged media</a> for information about formatting issues that are specific to these formats.)</dd>
- <dt><a id="screen"><code>screen</code></a></dt>
+ <dt><code>screen</code></dt>
  <dd>Intended primarily for screens.</dd>
- <dt><a id="speech"><code>speech</code></a></dt>
+ <dt><code>speech</code></dt>
  <dd>Intended for speech synthesizers.</dd>
 </dl>
 
-<div class="note"><strong>Deprecated media types:</strong> CSS2.1 and <a href="https://drafts.csswg.org/mediaqueries-3/#background">Media Queries 3</a> defined several additional media types (<code>tty</code>, <code>tv</code>, <code>projection</code>, <code>handheld</code>, <code>braille</code>, <code>embossed</code>, and <code>aural</code>), but they were deprecated in <a href="http://dev.w3.org/csswg/mediaqueries/#media-types">Media Queries 4</a> and shouldn't be used. The <code>aural</code> type has been replaced by <code>speech</code>, which is similar.</div>
+<div class="note">
+  <p><strong>Note:</strong> CSS2.1 and <a href="https://drafts.csswg.org/mediaqueries-3/#background">Media Queries 3</a> defined several additional media types (<code>tty</code>, <code>tv</code>, <code>projection</code>, <code>handheld</code>, <code>braille</code>, <code>embossed</code>, and <code>aural</code>), but they were deprecated in <a href="http://dev.w3.org/csswg/mediaqueries/#media-types">Media Queries 4</a> and shouldn't be used. The <code>aural</code> type has been replaced by <code>speech</code>, which is similar.</p>
+</div>
 
 <h3 id="Media_features">Media features</h3>
 
@@ -238,7 +240,7 @@ tags:
 
 <pre class="brush: css">@media screen, print { ... }</pre>
 
-<p>See <a class="internal" href="#Media_types">Media types</a> for a list of all media types. Because they describe devices in only very broad terms, just a few are available; to target more specific attributes, use <em>media features</em> instead.</p>
+<p>See <a href="#Media_types">Media types</a> for a list of all media types. Because they describe devices in only very broad terms, just a few are available; to target more specific attributes, use <em>media features</em> instead.</p>
 
 <h2 id="Targeting_media_features">Targeting media features</h2>
 

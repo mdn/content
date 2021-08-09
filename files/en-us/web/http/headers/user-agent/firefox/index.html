@@ -11,7 +11,7 @@ tags:
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p>This document describes the user agent string used in Firefox 4 and later and applications based on <a href="/en-US/docs/Mozilla/Gecko">Gecko</a> 2.0 and later. For a breakdown of changes to the string in Gecko 2.0, see <a href="https://hacks.mozilla.org/2010/09/final-user-agent-string-for-firefox-4/">Final User Agent string for Firefox 4</a> (blog post). See also this document on <a href="/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent">user agent sniffing</a> and this <a href="https://hacks.mozilla.org/2013/09/user-agent-detection-history-and-checklist/">Hacks blog post</a>.</p>
+<p>This document describes the user agent string used in Firefox 4 and later and applications based on Gecko 2.0 and later. For a breakdown of changes to the string in Gecko 2.0, see <a href="https://hacks.mozilla.org/2010/09/final-user-agent-string-for-firefox-4/">Final User Agent string for Firefox 4</a> (blog post). See also this document on <a href="/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent">user agent sniffing</a> and this <a href="https://hacks.mozilla.org/2013/09/user-agent-detection-history-and-checklist/">Hacks blog post</a>.</p>
 
 <h2 id="General_form">General form</h2>
 
@@ -25,7 +25,7 @@ tags:
   <p><code><var>platform</var></code> describes the native platform the browser is running on (e.g. Windows, Mac, Linux or Android), and whether or not it's a mobile phone. Firefox OS phones say "<code>Mobile</code>"; the web is the platform. Note that <code><var>platform</var></code> can consist of multiple "; "-separated tokens. See below for further details and examples.</p>
 
   <div class="notecard note">
-  <p>Though fixed in Firefox 69, previous 32-bit versions of Firefox running on 64-bit processors would report that the system is using a 32-bit CPU.</p>
+    <p><strong>Note:</strong> Though fixed in Firefox 69, previous 32-bit versions of Firefox running on 64-bit processors would report that the system is using a 32-bit CPU.</p>
   </div>
  </li>
  <li><code>rv:<var>geckoversion</var></code> indicates the release version of Gecko (such as "<code>17.0</code>"). In recent browsers, <code><var>geckoversion</var></code> is the same as <code><var>firefoxversion</var></code>.</li>
@@ -35,7 +35,9 @@ tags:
  <li>From Firefox 10 on mobile, <code><var>geckotrail</var></code> is the same as <code><var>firefoxversion</var></code>.</li>
 </ul>
 
-<div class="note">The recommended way of sniffing for Gecko-based browsers (if you <em>have to</em> sniff for the browser engine instead of using feature detection) is by the presence of the "<code>Gecko</code>" and "<code>rv:</code>" strings, since some other browsers include a "<code>like Gecko</code>" token.</div>
+<div class="notecard note">
+  <p><strong>Note:</strong> The recommended way of sniffing for Gecko-based browsers (if you <em>have to</em> sniff for the browser engine instead of using feature detection) is by the presence of the "<code>Gecko</code>" and "<code>rv:</code>" strings, since some other browsers include a "<code>like Gecko</code>" token.</p>
+</div>
 
 <p>For other products based on Gecko, the string can take one of two forms, where the tokens have the same meaning except those noted below:</p>
 
@@ -51,8 +53,8 @@ tags:
 
 <h2 id="Mobile_and_Tablet_indicators">Mobile and Tablet indicators</h2>
 
-<div class="note">
-<p>Only from Firefox 11 to 68.</p>
+<div class="notecard note">
+  <p><strong>Note:</strong> Only from Firefox 11 to 68.</p>
 </div>
 
 <p>The <code><var>platform</var></code> part of the UA string indicates if Firefox is running on a phone-sized or tablet device. When Firefox runs on a device that has the phone form factor, there is a <code>Mobile;</code> token in the <code><var>platform</var></code> part of the UA string. When Firefox runs on a tablet device, there is a <code>Tablet;</code> token in the <code><var>platform</var></code> part of the UA string instead. For example:</p>
@@ -60,11 +62,15 @@ tags:
 <pre>Mozilla/5.0 (Android 4.4; <strong>Mobile</strong>; rv:41.0) Gecko/41.0 Firefox/41.0
 Mozilla/5.0 (Android 4.4; <strong>Tablet</strong>; rv:41.0) Gecko/41.0 Firefox/41.0</pre>
 
-<div class="note">The version numbers are not relevant. Avoid inferring materials based on these.</div>
+<div class="notecard note">
+  <p><strong>Note:</strong> The version numbers are not relevant. Avoid inferring materials based on these.</p>
+</div>
 
 <p>The preferred way to target content to a device form factor is to use CSS Media Queries. However, if you use UA sniffing to target content to a device form factor, please look for <strong>Mobi</strong> (to include Opera Mobile, which uses "Mobi") for the phone form factor and do <strong>not</strong> assume any correlation between "Android" and the device form factor. This way, your code will work if/when Firefox ships on other phone/tablet operating systems or Android is used for laptops. Also, please use touch detection to find touch devices rather than looking for "Mobi" or "Tablet", since there may be touch devices which are not tablets.</p>
 
-<div class="note">Firefox OS devices identify themselves without any operating system indication; for example: "Mozilla/5.0 (Mobile; rv:15.0) Gecko/15.0 Firefox/15.0". The web is the platform.</div>
+<div class="notecard note">
+  <p><strong>Note:</strong> Firefox OS devices identify themselves without any operating system indication; for example: "Mozilla/5.0 (Mobile; rv:15.0) Gecko/15.0 Firefox/15.0". The web is the platform.</p>
+</div>
 
 <h2 id="Windows">Windows</h2>
 
@@ -378,8 +384,8 @@ Mozilla/5.0 (Android 4.4; <strong>Tablet</strong>; rv:41.0) Gecko/41.0 Firefox/4
  </tbody>
 </table>
 
-<div class="note">
-<p>It's easy to find the correspondences by looking at the <a href="https://hg.mozilla.org/releases">Mercurial repository names</a>: repositories starting by <code>mozilla-b2g</code> are the release repositories for Firefox OS, and have both Firefox OS and Gecko versions in their names.</p>
+<div class="notecard note">
+  <p><strong>Note:</strong> It's easy to find the correspondences by looking at the <a href="https://hg.mozilla.org/releases">Mercurial repository names</a>: repositories starting by <code>mozilla-b2g</code> are the release repositories for Firefox OS, and have both Firefox OS and Gecko versions in their names.</p>
 </div>
 
 <p>Firefox OS has a four-digit version number: <code>X.X.X.Y</code>. The first two digits are owned by the Mozilla product team and denote versions with new features (eg: v1.1, 1.2, etc). The third digit is incremented with regular version tags (about every 6 weeks) for security updates, and the fourth is owned by the OEM.</p>
@@ -452,19 +458,16 @@ Mozilla/5.0 (Android 4.4; <strong>Tablet</strong>; rv:41.0) Gecko/41.0 Firefox/4
 
 <h2 id="Implementation_notes_for_applications_vendors_and_extensions">Implementation notes for applications, vendors, and extensions</h2>
 
-<p>Prior to Firefox 4 and Gecko 2.0, it was possible for extensions to add user agent parts through the <code>general.useragent.extra.<em>identifier</em></code> preferences, (see the <a href="/en-US/docs/Web/HTTP/Headers/User-Agent/Firefox">obsolete User Agent Strings Reference</a>). But that has not been possible since {{ Bug(581008) }}.</p>
+<p>Prior to Firefox 4 and Gecko 2.0, it was possible for extensions to add user agent parts through the <code>general.useragent.extra.<em>identifier</em></code> preferences. But that has not been possible since {{ Bug(581008) }}.</p>
 
 <p>In the past, specific plug-ins, add-ons or extensions added user agent parts to notify sites they were installed. The recommended way to do this, if it's absolutely necessary (remember that it slows down every request) is to <a href="/en-US/docs/Setting_HTTP_request_headers">set a custom HTTP header</a>.</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="http://lawrencemandel.com/2012/07/27/decision-made-firefox-os-user-agent-string/">Firefox OS User Agent String</a> (blog post w/<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=777710">bug 777710</a> reference)</li>
+ <li><a href="https://lawrencemandel.com/2012/07/27/decision-made-firefox-os-user-agent-string/">Firefox OS User Agent String</a> (blog post w/<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=777710">bug 777710</a> reference)</li>
  <li><a href="https://hacks.mozilla.org/2010/09/final-user-agent-string-for-firefox-4/">Final User Agent string for Firefox 4</a> (blog post)</li>
  <li>Recommendations on <a href="/en-US/docs/Browser_Detection_and_Cross_Browser_Support">sniffing the UA string for cross-browser support</a></li>
  <li><a href="/en-US/docs/Web/API/Window/navigator" rel="internal">window.navigator.userAgent</a></li>
  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1169772">Add Android version to Fennec UA String (bug 1169772)</a></li>
 </ul>
-
-<hr>
-<p>Comments to <a class="link-news" href="news://news.mozilla.org/netscape.public.mozilla.netlib">mozilla.dev.platform</a></p>

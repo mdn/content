@@ -36,7 +36,7 @@ browser-compat: css.properties.font
 
 <p>The <code>font</code> property may be specified as either a single keyword, which will select a system font, or as a shorthand for various font-related properties.</p>
 
-<p>If <code>font</code> is specified as a system keyword, it must be one of: <code><a href="#caption">caption</a></code>, <code><a href="#icon">icon</a></code>, <code><a href="#menu">menu</a></code>, <code><a href="#message-box">message-box</a></code>, <code><a href="#small-caption">small-caption</a></code>, <code><a href="#status-bar">status-bar</a></code>.</p>
+<p>If <code>font</code> is specified as a system keyword, it must be one of: <code>caption</code>, <code>icon</code>, <code>menu</code>, <code>>message-box</code>, <code>small-caption</code>, <code>status-bar</code>.</p>
 
 <p>If <code>font</code> is specified as a shorthand for several font-related properties, then:</p>
 
@@ -66,36 +66,36 @@ browser-compat: css.properties.font
 <h3 id="Values">Values</h3>
 
 <dl>
- <dt id="font-style"><code>&lt;'font-style'&gt;</code></dt>
+ <dt><code>&lt;'font-style'&gt;</code></dt>
  <dd>See the {{cssxref("font-style")}} CSS property.</dd>
- <dt id="font-variant"><code>&lt;'font-variant'&gt;</code></dt>
+ <dt><code>&lt;'font-variant'&gt;</code></dt>
  <dd>See the {{cssxref("font-variant")}} CSS property.</dd>
- <dt id="font-weight"><code>&lt;'font-weight'&gt;</code></dt>
+ <dt><code>&lt;'font-weight'&gt;</code></dt>
  <dd>See the {{cssxref("font-weight")}} CSS property.</dd>
- <dt id="font-stretch"><code>&lt;'font-stretch'&gt;</code></dt>
+ <dt><code>&lt;'font-stretch'&gt;</code></dt>
  <dd>See the {{cssxref("font-stretch")}} CSS property.</dd>
- <dt id="font-size"><code>&lt;'font-size'&gt;</code></dt>
+ <dt><code>&lt;'font-size'&gt;</code></dt>
  <dd>See the {{cssxref("font-size")}} CSS property.</dd>
- <dt id="line-height"><code>&lt;'line-height'&gt;</code></dt>
+ <dt><code>&lt;'line-height'&gt;</code></dt>
  <dd>See the {{cssxref("line-height")}} CSS property.</dd>
- <dt id="font-family"><code>&lt;'font-family'&gt;</code></dt>
+ <dt><code>&lt;'font-family'&gt;</code></dt>
  <dd>See the {{cssxref("font-family")}} CSS property.</dd>
 </dl>
 
 <h4 id="System_font_values">System font values</h4>
 
 <dl>
- <dt id="caption"><code>caption</code></dt>
+ <dt><code>caption</code></dt>
  <dd>The system font used for captioned controls (e.g., buttons, drop-downs, etc.).</dd>
- <dt id="icon"><code>icon</code></dt>
+ <dt><code>icon</code></dt>
  <dd>The system font used to label icons.</dd>
- <dt id="menu"><code>menu</code></dt>
+ <dt><code>menu</code></dt>
  <dd>The system font used in menus (e.g., dropdown menus and menu lists).</dd>
- <dt id="message-box"><code>message-box</code></dt>
+ <dt><code>message-box</code></dt>
  <dd>The system font used in dialog boxes.</dd>
- <dt id="small-caption"><code>small-caption</code></dt>
+ <dt><code>small-caption</code></dt>
  <dd>The system font used for labeling small controls.</dd>
- <dt id="status-bar"><code>status-bar</code></dt>
+ <dt><code>status-bar</code></dt>
  <dd>The system font used in window status bars.</dd>
  <dt>Prefixed system font keywords</dt>
  <dd>Browsers often implement several more, prefixed, keywords: Gecko implements <code>-moz-window</code>, <code>-moz-document</code>, <code>-moz-desktop</code>, <code>-moz-info</code>, <code>-moz-dialog</code>, <code>-moz-button</code>, <code>-moz-pull-down-menu</code>, <code>-moz-list</code>, and <code>-moz-field</code>.</dd>
@@ -132,12 +132,9 @@ p { font: bold italic large serif }
 p { font: status-bar }
 </pre>
 
-<h3 id="live_sample">Live sample</h3>
+<h3>Live sample</h3>
 
-<div class="hidden">
-<h4 id="HTML">HTML</h4>
-
-<pre class="brush: html">&lt;p&gt;
+<pre class="brush: html hidden">&lt;p&gt;
     Change the radio buttons below to see the generated shorthand and its effect.
 &lt;/p&gt;
 &lt;form action="createShortHand()"&gt;
@@ -231,9 +228,7 @@ p { font: status-bar }
 &lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;
 </pre>
 
-<h4 id="CSS">CSS</h4>
-
-<pre class="brush: css">body, input {
+<pre class="brush: css hidden">body, input {
   font: 14px arial;
   overflow: hidden;
 }
@@ -284,9 +279,7 @@ p { font: status-bar }
   display: inline-block;
 }</pre>
 
-<h4 id="JavaScript">JavaScript</h4>
-
-<pre class="brush: js">var textAreas = document.getElementsByClassName("curCss"),
+<pre class="brush: js hidden">var textAreas = document.getElementsByClassName("curCss"),
     shortText = "",
     getCheckedValue,
     setCss,
@@ -337,7 +330,7 @@ injectCss = function(cssFragment) {
 setCss();</pre>
 </div>
 
-<p>{{ EmbedLiveSample('live_sample','100%', '440px')}}</p>
+<p>{{ EmbedLiveSample('Live_sample','100%', '440px')}}</p>
 
 <h2 id="Specifications">Specifications</h2>
 

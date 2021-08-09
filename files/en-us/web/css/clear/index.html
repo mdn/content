@@ -15,14 +15,14 @@ browser-compat: css.properties.clear
 
 <div>{{EmbedInteractiveExample("pages/css/clear.html")}}</div>
 
-<p>When applied to non-floating blocks, it moves the <a href="/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#border-area">border edge</a> of the element down until it is below the <a href="/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#margin-area">margin edge</a> of all relevant floats. The non-floated block's top margin collapses.</p>
+<p>When applied to non-floating blocks, it moves the <a href="/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#border_area">border edge</a> of the element down until it is below the <a href="/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#margin_area">margin edge</a> of all relevant floats. The non-floated block's top margin collapses.</p>
 
 <p>Vertical margins between two floated elements on the other hand will not collapse. When applied to floating elements, the margin edge of the bottom element is moved below the margin edge of all relevant floats. This affects the position of later floats, since later floats cannot be positioned higher than earlier ones.</p>
 
 <p>The floats that are relevant to be cleared are the earlier floats within the same <a href="/en-US/docs/Web/Guide/CSS/Block_formatting_context">block formatting context</a>.</p>
 
 <div class="note">
-<p>If an element contains only floated elements, its height collapses to nothing. If you want it to always be able to resize, so that it contains floating elements inside it, you need to self-clear its children. This is called <strong>clearfix</strong>, and one way to do it is to add <code>clear</code> to a replaced {{cssxref("::after")}} <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-element</a> on it.</p>
+<p><strong>Note:</strong> If an element contains only floated elements, its height collapses to nothing. If you want it to always be able to resize, so that it contains floating elements inside it, you need to self-clear its children. This is called <strong>clearfix</strong>, and one way to do it is to add <code>clear</code> to a replaced {{cssxref("::after")}} <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-element</a> on it.</p>
 
 <pre class="brush: css">#container::after {
   content: "";
@@ -76,7 +76,7 @@ clear: unset;
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="clear-left">clear: left</h3>
+<h3>clear: left</h3>
 
 <h4 id="HTML">HTML</h4>
 
@@ -115,9 +115,9 @@ p {
 }
 </pre>
 
-<p>{{ EmbedLiveSample('clear-left','100%','250') }}</p>
+<p>{{ EmbedLiveSample('clear_left','100%','250') }}</p>
 
-<h3 id="clear-right">clear: right</h3>
+<h3>clear: right</h3>
 
 <h4 id="HTML_2">HTML</h4>
 
@@ -155,9 +155,9 @@ p {
   width: 50%;
 }</pre>
 
-<p>{{ EmbedLiveSample('clear-right','100%','250') }}</p>
+<p>{{ EmbedLiveSample('clear_right','100%','250') }}</p>
 
-<h3 id="clear-both">clear: both</h3>
+<h3>clear: both</h3>
 
 <h4 id="HTML_3">HTML</h4>
 
@@ -195,7 +195,7 @@ p {
   width: 45%;
 }</pre>
 
-<p>{{ EmbedLiveSample('clear-both','100%','300') }}</p>
+<p>{{ EmbedLiveSample('clear_both','100%','300') }}</p>
 
 <h2 id="Specifications">Specifications</h2>
 

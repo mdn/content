@@ -6,7 +6,7 @@ tags:
   - CSS Background
   - CSS Property
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.background-clip
 ---
 <p>{{CSSRef}}</p>
@@ -41,7 +41,7 @@ background-clip: revert;
 background-clip: unset;
 </pre>
 
-<h3 class="brush: css" id="Values">Values</h3>
+<h3 id="Values">Values</h3>
 
 <dl>
  <dt><code>border-box</code></dt>
@@ -50,9 +50,18 @@ background-clip: unset;
  <dd>The background extends to the outside edge of the padding. No background is drawn beneath the border.</dd>
  <dt><code>content-box</code></dt>
  <dd>The background is painted within (clipped to) the content box.</dd>
- <dt><code>text</code> {{experimental_inline}}</dt>
+ <dt><code>text</code></dt>
  <dd>The background is painted within (clipped to) the foreground text.</dd>
 </dl>
+
+<h2 id="Accessibility_concerns">Accessibility concerns</h2>
+
+<p>When using <code>background-clip: text</code> check that the contrast ratio between the background color and the color of the text placed over it is high enough that people experiencing low vision conditions will be able to read the content of the page.</p>
+
+<p>If the background image does not load, this could also lead to the text becoming unreadable. Add a fallback {{cssxref("background-color")}} to prevent this from happening, and test without the image.</p>
+
+<p>Consider using feature queries with {{cssxref("@supports")}} to test for support of <code>background-clip: text</code> and provide an accessible alternative where it is not supported.</p>
+
 
 <h2 id="Formal_definition">Formal definition</h2>
 
@@ -111,5 +120,5 @@ background-clip: unset;
 <ul>
  <li>The {{cssxref("clip-path")}} property creates a clipping region that defines what part of an <em>entire element</em> should be displayed.</li>
  <li>Background properties: {{cssxref("background")}}, {{cssxref("background-color")}}, {{cssxref("background-image")}}, {{cssxref("background-origin")}}</li>
- <li><a href="/en-US/docs/Web/CSS/box_model">Introduction to the CSS box model</a></li>
+ <li><a href="/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">Introduction to the CSS box model</a></li>
 </ul>

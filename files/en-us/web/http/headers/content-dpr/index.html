@@ -37,7 +37,7 @@ browser-compat: http.headers.Content-DPR
 <p>If the {{HTTPHeader("DPR")}} client hint is used to select an image the server must specify <code>Content-DPR</code> in the response. If the value in <code>Content-DPR</code> is different from the {{HTTPHeader("DPR")}} value in the request (i.e. image DPR is not the same as screen DPR) then the client must use the <code>Content-DPR</code> for determining intrinsic image size and scaling the image.</p>
 
 <p>If the <code>Content-DPR</code> header appears more than once in a message the last occurrence is used.</p>
- 
+
 <div class="notecard note">
   <p><strong>Note:</strong></p>
     <ul>
@@ -47,7 +47,7 @@ browser-compat: http.headers.Content-DPR
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: http">Content-DPR: &lt;number&gt;</pre>
+<pre>Content-DPR: &lt;number&gt;</pre>
 
 <h2 id="Directives">Directives</h2>
 

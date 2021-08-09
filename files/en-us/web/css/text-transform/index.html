@@ -30,7 +30,7 @@ browser-compat: css.properties.text-transform
   <p>In Dutch (<code>nl</code>), the <code>ij</code> digraph becomes <code>IJ</code>, even with <code>text-transform: capitalize</code>, which only puts the first letter of a word in uppercase.</p>
  </li>
  <li>
-  <p>In Greek (<code>el</code>), vowels lose their accent when the whole word is in uppercase (<code>ά</code>/<code>Α</code>), except for the disjunctive <span lang="el">eta</span> (<code>ή</code>/<code>Ή</code>). Also, diphthongs with an accent on the first vowel lose the accent and gain a diaeresis on the second vowel (<code>άι</code>/<code>ΑΪ</code>).</p>
+  <p>In Greek (<code>el</code>), vowels lose their accent when the whole word is in uppercase (<code>ά</code>/<code>Α</code>), except for the disjunctive eta (<code>ή</code>/<code>Ή</code>). Also, diphthongs with an accent on the first vowel lose the accent and gain a diaeresis on the second vowel (<code>άι</code>/<code>ΑΪ</code>).</p>
  </li>
  <li>
   <p>In Greek (<code>el</code>), the lowercase sigma character has two forms: <code>σ</code> and <code>ς</code>. <code>ς</code> is used only when sigma terminates a word. When applying <code>text-transform: lowercase</code> to an uppercase sigma (<code>Σ</code>), the browser needs to choose the right lowercase form based on context.</p>
@@ -66,9 +66,13 @@ text-transform: unset;
  <dd>
  <p>Is a keyword that converts the first <em>letter</em> of each word to uppercase. Other characters remain unchanged (they retain their original case as written in the element's text). A letter is defined as a character that is part of Unicode's Letter or Number general categories {{experimental_inline}}; thus, any punctuation marks or symbols at the beginning of a word are ignored.</p>
 
- <div class="note">Authors should not expect <code>capitalize</code> to follow language-specific title casing conventions (such as skipping articles in English).</div>
+ <div class="note">
+   <p><strong>Note:</strong> Authors should not expect <code>capitalize</code> to follow language-specific title casing conventions (such as skipping articles in English).</p>
+ </div>
 
- <div class="note">The <code>capitalize</code> keyword was under-specified in CSS 1 and CSS 2.1. This resulted in differences between browsers in the way the first letter was calculated (Firefox considered <code>-</code> and <code>_</code> as letters, but other browsers did not. Both Webkit and Gecko incorrectly considered letter-based symbols like <code>ⓐ</code> to be real letters. Internet Explorer 9 was the closest to the CSS 2 definition, but with some weird cases.) By precisely defining the correct behavior, CSS Text Level 3 cleans this mess up. The <code>capitalize</code> line in the browser compatibility table contains the version the different engines started to support this now precisely-defined behavior.</div>
+ <div class="note">
+   <p><strong>Note:</strong> The <code>capitalize</code> keyword was under-specified in CSS 1 and CSS 2.1. This resulted in differences between browsers in the way the first letter was calculated (Firefox considered <code>-</code> and <code>_</code> as letters, but other browsers did not. Both Webkit and Gecko incorrectly considered letter-based symbols like <code>ⓐ</code> to be real letters. Internet Explorer 9 was the closest to the CSS 2 definition, but with some weird cases.) By precisely defining the correct behavior, CSS Text Level 3 cleans this mess up. The <code>capitalize</code> line in the browser compatibility table contains the version the different engines started to support this now precisely-defined behavior.</p>
+ </div>
  </dd>
  <dt><code>uppercase</code></dt>
  <dd>Is a keyword that converts all characters to uppercase.</dd>

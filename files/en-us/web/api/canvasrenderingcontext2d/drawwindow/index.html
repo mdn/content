@@ -21,8 +21,11 @@ browser-compat: api.CanvasRenderingContext2D.drawWindow
 
 <p>This API cannot be used by Web content. It is synchronous, and as such can't capture
   cross-origin (out of process) iframes with Fission.  If you're using it from an
-  extension, you should switch to {{WebExtAPIRef('tabs.captureTab')}}.  If you're writing
-  chrome code, you probably want <a
+  extension, you should switch to {{WebExtAPIRef('tabs.captureTab')}} to capture the 
+  tab's image as a <a class="external" href="/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs" 
+  rel="external">data: url</a> and then render the captured image onto canvas using 
+  {{domxref("CanvasRenderingContext2D.drawImage")}}. If you're writing chrome code, 
+  you probably want <a
     href="https://searchfox.org/mozilla-central/rev/9b282b34b5/dom/chrome-webidl/WindowGlobalActors.webidl#81-98">WindowGlobalParent.drawSnapshot</a>
   from the parent process.</p>
 
@@ -124,7 +127,7 @@ browser-compat: api.CanvasRenderingContext2D.drawWindow
   so on according to the current transformation.</p>
 
 <p>Ted Mielczarek's <a class="external external-icon"
-    href="http://ted.mielczarek.org/code/mozilla/tabpreview/">tab preview</a> extension
+    href="https://ted.mielczarek.org/code/mozilla/tabpreview/">tab preview</a> extension
   uses this technique in chrome to provide thumbnails of web pages, and the source is
   available for reference.</p>
 
@@ -142,4 +145,5 @@ browser-compat: api.CanvasRenderingContext2D.drawWindow
 <ul>
   <li>The interface defining this method: {{domxref("CanvasRenderingContext2D")}}</li>
   <li>{{domxref("CanvasRenderingContext2D.drawWidgetAsOnScreen()")}}</li>
+  <li><a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Using_images">Using images</a></li>
 </ul>

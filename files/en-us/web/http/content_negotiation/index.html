@@ -12,7 +12,7 @@ tags:
 <p class="summary">In <a href="/en-US/docs/Glossary/HTTP">HTTP</a>, <em><strong>content negotiation</strong></em> is the mechanism that is used for serving different representations of a resource at the same URI, so that the user agent can specify which is best suited for the user (for example, which language of a document, which image format, or which content encoding).</p>
 
 <div class="notecard note">
-<p class="summary">Note: Some disadvantages of HTTP content negotiation are explained in <a href="https://wiki.whatwg.org/wiki/Why_not_conneg">a wiki page from WHATWG</a>. HTML5 provides alternatives to content negotiation via, for example, the <a href="/en-US/docs/Web/HTML/Element/source"><code>&lt;source&gt;</code> element</a>.</p>
+  <p><strong>Note:</strong> Some disadvantages of HTTP content negotiation are explained in <a href="https://wiki.whatwg.org/wiki/Why_not_conneg">a wiki page from WHATWG</a>. HTML5 provides alternatives to content negotiation via, for example, the <a href="/en-US/docs/Web/HTML/Element/source"><code>&lt;source&gt;</code> element</a>.</p>
 </div>
 
 <h2 id="Principles_of_content_negotiation">Principles of content negotiation</h2>
@@ -32,7 +32,7 @@ tags:
 
 <h2 id="Server-driven_content_negotiation">Server-driven content negotiation</h2>
 
-<p>In <em>server-driven content negotiation</em>, or proactive content negotiation, the browser (or any other kind of user-agent) sends several HTTP headers along with the URL. These headers describe the preferred choice of the user. The server uses them as hints and an internal algorithm chooses the best content to serve to the client. If it cannot provide a suitable resource, as a fallback it might respond with {{HTTPStatus("406")}} (Not Acceptable) or {{HTTPStatus("415")}} (Unsupported Media Type) and set headers for the types of media that it does support (e.g. using the {{HTTPHeader("Accept-Post")}} or {{HTTPHeader("Accept-Patch")}} for POST and PATCH requests, respectively). The algorithm is server-specific and not defined in the standard. See, for example, the <a href="http://httpd.apache.org/docs/current/en/content-negotiation.html#algorithm">Apache negotiation algorithm</a>.</p>
+<p>In <em>server-driven content negotiation</em>, or proactive content negotiation, the browser (or any other kind of user-agent) sends several HTTP headers along with the URL. These headers describe the preferred choice of the user. The server uses them as hints and an internal algorithm chooses the best content to serve to the client. If it cannot provide a suitable resource, as a fallback it might respond with {{HTTPStatus("406")}} (Not Acceptable) or {{HTTPStatus("415")}} (Unsupported Media Type) and set headers for the types of media that it does support (e.g. using the {{HTTPHeader("Accept-Post")}} or {{HTTPHeader("Accept-Patch")}} for POST and PATCH requests, respectively). The algorithm is server-specific and not defined in the standard. See, for example, the <a href="https://httpd.apache.org/docs/current/en/content-negotiation.html#algorithm">Apache negotiation algorithm</a>.</p>
 
 <p><img alt="" src="httpnegoserver.png"></p>
 
@@ -56,8 +56,8 @@ tags:
 
 <h3 id="The_Accept-CH_header_experimental_inline">The Accept-CH header {{experimental_inline}}</h3>
 
-<div class="note">
-<p>This is part of an <strong>experimental</strong> technology called <em>Client Hints</em>. Initial support is in Chrome 46 or later. The Device-Memory value is in Chrome 61 or later.</p>
+<div class="notecard note">
+  <p><strong>Note:</strong> This is part of an <strong>experimental</strong> technology called <em>Client Hints</em>. Initial support is in Chrome 46 or later. The Device-Memory value is in Chrome 61 or later.</p>
 </div>
 
 <p>The experimental {{HTTPHeader("Accept-CH")}} lists configuration data that can be used by the server to select an appropriate response. Valid values are:</p>
@@ -87,8 +87,8 @@ tags:
 
 <h3 id="The_Accept-CH-Lifetime_header">The Accept-CH-Lifetime header</h3>
 
-<div class="note">
-<p>This is part of an <strong>experimental</strong> technology called <em>Client Hints</em> and is only available in Chrome 61 or later.</p>
+<div class="notecard note">
+  <p><strong>Note:</strong> This is part of an <strong>experimental</strong> technology called <em>Client Hints</em> and is only available in Chrome 61 or later.</p>
 </div>
 
 <p>The {{HTTPHeader("Accept-CH-Lifetime")}} header is used with the <code>Device-Memory</code> value of the <code>Accept-CH</code> header and indicates the amount of time the device should opt-in to sharing the amount of device memory with the server. The value is given in milliseconds and it's use is optional.</p>
@@ -112,8 +112,8 @@ tags:
 
 <h3 id="The_User-Agent_header">The User-Agent header</h3>
 
-<div class="note">
-<p>Though there are legitimate uses of this header for selecting content, <a href="/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent">it is considered bad practice</a> to rely on it to define what features are supported by the user agent.</p>
+<div class="notecard note">
+  <p><strong>Note:</strong> Though there are legitimate uses of this header for selecting content, <a href="/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent">it is considered bad practice</a> to rely on it to define what features are supported by the user agent.</p>
 </div>
 
 <p>The {{HTTPHeader("User-Agent")}} header identifies the browser sending the request. This string may contain a space-separated list of <em>product tokens</em> and <em>comments</em>.</p>

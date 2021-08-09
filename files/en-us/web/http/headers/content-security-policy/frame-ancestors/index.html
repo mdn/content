@@ -50,13 +50,13 @@ Content-Security-Policy: frame-ancestors &lt;source&gt; &lt;source&gt;;
 
 <p>&lt;source&gt; can be one of the following:</p>
 
-<div class="note">
-<p>The <code>frame-ancestors</code> directive’s syntax is similar to a source list of other directives (e.g. {{CSP("default-src")}}), but doesn't allow <code>'unsafe-eval'</code> or <code>'unsafe-inline'</code> for example. It will also not fall back to a <code>default-src</code> setting. Only the sources listed below are allowed:</p>
+<div class="notecard note">
+  <p><strong>Note:</strong> The <code>frame-ancestors</code> directive's syntax is similar to a source list of other directives (e.g. {{CSP("default-src")}}), but doesn't allow <code>'unsafe-eval'</code> or <code>'unsafe-inline'</code> for example. It will also not fall back to a <code>default-src</code> setting. Only the sources listed below are allowed:</p>
 </div>
 
 <dl>
  <dt>&lt;host-source&gt;</dt>
- <dd>Internet hosts by name or IP address, as well as an optional <a href="/en-US/docs/URIs_and_URLs">URL scheme</a> and/or port number, separated by spaces. The site's address may include an optional leading wildcard (the asterisk character, <code>'*'</code>), and you may use a wildcard (again, <code>'*'</code>) as the port number, indicating that all legal ports are valid for the source. Single quotes surrounding the host are not allowed.<br>
+ <dd>Internet hosts by name or IP address, as well as an optional {{Glossary("URL")}} scheme and/or port number, separated by spaces. The site's address may include an optional leading wildcard (the asterisk character, <code>'*'</code>), and you may use a wildcard (again, <code>'*'</code>) as the port number, indicating that all legal ports are valid for the source. Single quotes surrounding the host are not allowed.<br>
  Examples:
  <ul>
   <li><code>http://*.example.com</code>: Matches all attempts to load from any subdomain of example.com using the <code>http:</code> URL scheme.</li>
@@ -65,8 +65,9 @@ Content-Security-Policy: frame-ancestors &lt;source&gt; &lt;source&gt;;
  </ul>
 
  <div class="notecard warning">
- <p>If no URL scheme is specified for a <code>host-source</code> and the iframe is loaded from an <code>https</code> URL, the URL for the page loading the iframe must also be <code>https</code>, per the <a href="https://w3c.github.io/webappsec-csp/#match-url-to-source-expression">Does url match expression in origin with redirect count?</a> section of the CSP spec.</p>
+  <p><strong>Warning:</strong> If no URL scheme is specified for a <code>host-source</code> and the iframe is loaded from an <code>https</code> URL, the URL for the page loading the iframe must also be <code>https</code>, per the <a href="https://w3c.github.io/webappsec-csp/#match-url-to-source-expression">Does url match expression in origin with redirect count?</a> section of the CSP spec.</p>
  </div>
+
  </dd>
  <dt>&lt;scheme-source&gt;</dt>
  <dd>A scheme such as <code>http:</code> or <code>https:</code>. The colon is required and scheme should not be quoted. You can also specify data schemes (not recommended).

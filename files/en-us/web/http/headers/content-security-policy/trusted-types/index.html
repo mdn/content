@@ -12,7 +12,7 @@ browser-compat: http.headers.csp.Content-Security-Policy.trusted-types
 
 <p>The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) <code><strong>trusted-types</strong></code> {{experimental_inline}} directive instructs user agents to restrict the creation of Trusted Types policies - functions that build non-spoofable, typed values intended to be passed to DOM XSS sinks in place of strings.</p>
 
-<p>Together with <code><strong><a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/require-trusted-types-for">require-trusted-types-for</a></strong></code> directive, this allows authors to define rules guarding writing values to the DOM and thus reducing the DOM XSS attack surface to small, isolated parts of the web application codebase, facilitating their monitoring and code review. This directive declares an allow-list of trusted type policy names created with <code>TrustedTypes.createPolicy</code> from Trusted Types API.</p>
+<p>Together with <strong><a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/require-trusted-types-for"><code>require-trusted-types-for</code></a></strong> directive, this allows authors to define rules guarding writing values to the DOM and thus reducing the DOM XSS attack surface to small, isolated parts of the web application codebase, facilitating their monitoring and code review. This directive declares an allow-list of trusted type policy names created with <code>TrustedTypes.createPolicy</code> from Trusted Types API.</p>
 
 <h2 id="Syntax">Syntax</h2>
 

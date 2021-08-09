@@ -26,7 +26,7 @@ tags:
 <p>When drawing 3D graphics, or using a third dimension to layer objects from front to back, the <em>z-coordinate</em> is also used. This specifies the distance away from the viewer if positive and toward the viewer if negative.</p>
 
 <div class="note">
-<p>It's actually possible to change the definitions and orientations of these coordinate systems using CSS properties such as {{cssxref("transform")}}. However, we'll only talk about the standard coordinate system for now.</p>
+<p><strong>Note:</strong> It's actually possible to change the definitions and orientations of these coordinate systems using CSS properties such as {{cssxref("transform")}}. However, we'll only talk about the standard coordinate system for now.</p>
 </div>
 
 <h2 id="Standard_CSSOM_coordinate_systems">Standard CSSOM coordinate systems</h2>
@@ -59,7 +59,7 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<p>Let's take a look at an example. This simple example creates a set of nested boxes. Whenever the mouse enters, moves around inside, or exits the inner box, the corresponding event is handled by updating a set of informational messages within the box, listing out the current mouse coordinates in each of the four available <a href="/en-US/docs/Web/CSS/CSSOM_View/Coordinate_systems">coordinate systems</a>.</p>
+<p>Let's take a look at an example. This simple example creates a set of nested boxes. Whenever the mouse enters, moves around inside, or exits the inner box, the corresponding event is handled by updating a set of informational messages within the box, listing out the current mouse coordinates in each of the four available coordinate systems.</p>
 
 <h3 id="JavaScript">JavaScript</h3>
 
@@ -106,7 +106,7 @@ inner.addEventListener("mouseleave", update, false);</pre>
 
 <h3 id="HTML">HTML</h3>
 
-<p>The HTML for our example is below. Note that within the <code>&lt;div&gt;</code> with the ID <code>"log"</code>, we have a paragraph for each coordinate system, with {{domxref("span")}} used for each of the elements to receive and display the coordinates in each model.</p>
+<p>The HTML for our example is below. Note that within the <code>&lt;div&gt;</code> with the ID <code>"log"</code>, we have a paragraph for each coordinate system, with {{HTMLElement("span")}} used for each of the elements to receive and display the coordinates in each model.</p>
 
 <pre class="brush: html">&lt;div class="outer"&gt;
   &lt;div class="inner"&gt;
@@ -131,9 +131,7 @@ inner.addEventListener("mouseleave", update, false);</pre>
   &lt;/div&gt;
 &lt;/div&gt;</pre>
 
-<details open><summary>
 <h3 id="CSS">CSS</h3>
-</summary>
 
 <p>The CSS is pretty much just for appearances here. The class <code>"outer"</code> is used for the containing box, which is intentionally too wide to show in the MDN window, to allow you to scroll it horizontally. The <code>"inner"</code> box is the one that we track events in and in which we show the mouse coordinates.</p>
 
@@ -163,7 +161,6 @@ inner.addEventListener("mouseleave", update, false);</pre>
   width: 100%;
   text-align: center;
 }</pre>
-</details>
 
 <h3 id="Result">Result</h3>
 

@@ -72,54 +72,9 @@ If a `thisArg` parameter is provided to `filter`, it will be used as the callbac
 
 `filter()` does not mutate the array on which it is called.
 
-The range of elements processed by `filter()` is set before the first invocation of `callbackFn`. Elements which are appended to the array (from `callbackFn`) after the call to `filter()` begins will not be visited by `callbackFn`. If existing elements of the array are deleted in the same way they will not be visited.
+The range of elements processed by `filter()` is set before the first invocation of `callbackFn`. Elements which are assigned to indexes already visited, or to indexes outside the range, will not be visited by `callbackFn`. If existing elements of the array are deleted in the same way they will not be visited.
 
-## Polyfill
-
-`filter()` was added to the ECMA-262 standard in the 5th edition. Therefore, it may not be present in all implementations of the standard.
-
-You can work around this by inserting the following code at the beginning of your scripts, allowing use of `filter()` in ECMA-262 implementations which do not natively support it. This algorithm is exactly equivalent to the one specified in ECMA-262, 5th edition, assuming that `fn.call` evaluates to the original value of {{jsxref("Function.prototype.bind()")}}, and that {{jsxref("Array.prototype.push()")}} has its original value.
-
-```js
-if (!Array.prototype.filter){
-  Array.prototype.filter = function(func, thisArg) {
-    'use strict';
-    if ( ! ((typeof func === 'Function' || typeof func === 'function') && this) )
-        throw new TypeError();
-
-    var len = this.length >>> 0,
-        res = new Array(len), // preallocate array
-        t = this, c = 0, i = -1;
-
-    var kValue;
-    if (thisArg === undefined){
-      while (++i !== len){
-        // checks to see if the key was set
-        if (i in this){
-          kValue = t[i]; // in case t is changed in callback
-          if (func(t[i], i, t)){
-            res[c++] = kValue;
-          }
-        }
-      }
-    }
-    else{
-      while (++i !== len){
-        // checks to see if the key was set
-        if (i in this){
-          kValue = t[i];
-          if (func.call(thisArg, t[i], i, t)){
-            res[c++] = kValue;
-          }
-        }
-      }
-    }
-
-    res.length = c; // shrink down array to proper size
-    return res;
-  };
-}
-```
+**Warning:** Concurrent modification of the kind described in the previous paragraph frequently leads to hard-to-understand code and is generally to be avoided (except in special cases).
 
 ## Examples
 

@@ -49,7 +49,7 @@ rotate: unset;</pre>
  <dd>The name of the axis you want to rotate the affected element around (<code>"x"</code>, "<code>y</code>", or "<code>z"</code>), plus an {{CSSxRef("&lt;angle&gt;")}} specifying the angle to rotate the element through. Equivalent to a <code>rotateX()</code>/<code>rotateY()</code>/<code>rotateZ()</code> (3D rotation) function.</dd>
  <dt>vector plus angle value</dt>
  <dd>Three {{CSSxRef("&lt;number&gt;")}}s representing an origin-centered vector that defines a line around which you want to rotate the element, plus an {{CSSxRef("&lt;angle&gt;")}} specifying the angle to rotate the element through. Equivalent to a <code>rotate3d()</code> (3D rotation) function.</dd>
- <dt id="none"><code>none</code></dt>
+ <dt><code>none</code></dt>
  <dd>Specifies that no rotation should be applied.</dd>
 </dl>
 
@@ -73,8 +73,7 @@ rotate: unset;</pre>
 
 <h4 id="CSS">CSS</h4>
 
-<div class="hidden">
-<pre class="brush: css">* {
+<pre class="brush: css hidden">* {
   box-sizing: border-box;
 }
 
@@ -96,7 +95,6 @@ p {
   text-align: center;
 }
 </pre>
-</div>
 
 <pre class="brush: css">.rotate {
   transition: rotate 1s;

@@ -54,14 +54,10 @@ browser-compat: css.at-rules.media.aspect-ratio
 }
 </pre>
 
-<div class="hidden">
-<h2 id="_Example">_Example</h2>
+<h3 id="Result">Result</h3>
 
-<p>used iframe and DataURL to enable this iframe could resize</p>
 
-<h3 id="HTML_2">HTML</h3>
-
-<pre class="brush: html">&lt;label id="wf" for="w"&gt;width:165&lt;/label&gt;
+<pre class="brush: html hidden">&lt;label id="wf" for="w"&gt;width:165&lt;/label&gt;
 &lt;input id="w" name="w" type="range" min="100" max="250" step="5" value="165"&gt;
 &lt;label id="hf" for="w"&gt;height:165&lt;/label&gt;
 &lt;input id="h" name="h" type="range" min="100" max="250" step="5" value="165"&gt;
@@ -71,15 +67,11 @@ browser-compat: css.at-rules.media.aspect-ratio
 &lt;/iframe&gt;
 </pre>
 
-<h3 id="CSS_2">CSS</h3>
-
-<pre class="brush: css">iframe{
+<pre class="brush: css hidden">iframe{
   display:block;
 }</pre>
 
-<h3 id="JavaScript">JavaScript</h3>
-
-<pre class="brush: js">outer.style.width=outer.style.height="165px"
+<pre class="brush: js hidden">outer.style.width=outer.style.height="165px"
 
 w.onchange=w.oninput=function(){
   outer.style.width=w.value+"px"
@@ -89,11 +81,8 @@ h.onchange=h.oninput=function(){
   outer.style.height=h.value+"px"
   hf.textContent="height:"+h.value
 }</pre>
-</div>
 
-<h3 id="Result">Result</h3>
-
-<div>{{ EmbedLiveSample('_Example', '300px', '350px') }}</div>
+<div>{{ EmbedLiveSample('Result', '300px', '350px') }}</div>
 
 <h2 id="Specifications">Specifications</h2>
 

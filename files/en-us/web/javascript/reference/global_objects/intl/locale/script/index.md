@@ -27,9 +27,8 @@ A script, sometimes called writing system, is one of the core attributes of a lo
 The script is the second part of a valid Unicode language identifier string, and can be set by adding it to the locale identifier string that is passed into the {{jsxref("Intl/Locale/Locale", "Locale")}} constructor. Note that the script is not a required part of a locale identifier.
 
 ```js
-let scriptStr = new Intl.Locale("en-Latn-US");
-
-console.log(scriptStr.script); // Prints "Latn"
+let locale = new Intl.Locale("en-Latn-US");
+console.log(locale.script); // Prints "Latn"
 ```
 
 ### Setting the script via the configuration object
@@ -37,9 +36,8 @@ console.log(scriptStr.script); // Prints "Latn"
 The {{jsxref("Intl/Locale/Locale", "Locale")}} constructor takes a configuration object, which can be used to set the script subtag and property.
 
 ```js
-let scriptObj = new Intl.Locale("fr-FR", {script: "Latn"});
-
-console.log(scriptObj.script); // Prints "Latn"
+let locale = new Intl.Locale("fr-FR", { script: "Latn" });
+console.log(locale.script); // Prints "Latn"
 ```
 
 ## Specifications

@@ -12,17 +12,17 @@ browser-compat: http.headers.Feature-Policy.fullscreen
 ---
 <div>{{HTTPSidebar}} {{SeeCompatTable}}</div>
 
-<p><span class="seoSummary">The HTTP {{HTTPHeader("Feature-Policy")}} header <code>fullscreen</code> directive controls whether the current document is allowed to use {{domxref('Element.requestFullScreen()')}}. When this policy is enabled, the returned {{jsxref('Promise')}} rejects with a {{jsxref('TypeError')}}.</span></p>
+<p>The HTTP {{HTTPHeader("Feature-Policy")}} header <code>fullscreen</code> directive controls whether the current document is allowed to use {{domxref('Element.requestFullScreen()')}}. When this policy is enabled, the returned {{jsxref('Promise')}} rejects with a {{jsxref('TypeError')}}.</p>
 
-<p>By default, top-level documents and their same-origin child frames can request and enter fullscreen mode. This directive allows or prevents cross-origin frames from using fullscreen mode. This includes same-origin frames.</p>
+<p>By default, top-level documents and their same-origin child frames can request and enter fullscreen mode. This directive allows or prevents cross-origin frames from using fullscreen mode. This includes same-origin frames.</p>
 
-<div class="note">
-<p>If both this directive (i.e. via the <code>allow</code> attribute) and the <code>allowfullscreen</code> attribute are present on an <code>&lt;iframe&gt;</code> element, this directive takes precedence. There was a bug whereby the <code>fullscreen</code> directive didn't work unless the <code>allowfullscreen</code> attribute was also present, but this has been fixed as of Firefox 80 ({{bug(1608358)}}).</p>
+<div class="notecard note">
+  <p><strong>Note:</strong> If both this directive (i.e. via the <code>allow</code> attribute) and the <code>allowfullscreen</code> attribute are present on an <code>&lt;iframe&gt;</code> element, this directive takes precedence. There was a bug whereby the <code>fullscreen</code> directive didn't work unless the <code>allowfullscreen</code> attribute was also present, but this has been fixed as of Firefox 80 ({{bug(1608358)}}).</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: http">Feature-Policy: fullscreen &lt;allowlist&gt;;</pre>
+<pre>Feature-Policy: fullscreen &lt;allowlist&gt;;</pre>
 
 <dl>
   <dt>&lt;allowlist&gt;</dt>

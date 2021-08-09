@@ -42,23 +42,23 @@ browser-compat: css.types.length
 </div>
 
 <dl>
- <dt><code id="cap">cap</code> {{experimental_inline}}</dt>
+ <dt><code>cap</code> {{experimental_inline}}</dt>
  <dd>Represents the "cap height" (nominal height of capital letters) of the element’s {{Cssxref("font")}}.</dd>
- <dt><code id="ch">ch</code></dt>
+ <dt><code>ch</code></dt>
  <dd>Represents the width, or more precisely the advance measure, of the glyph "0" (zero, the Unicode character U+0030) in the element's {{Cssxref("font")}}.<br>
  <br>
  In the cases where it is impossible or impractical to determine the measure of the “0” glyph, it must be assumed to be 0.5em wide by 1em tall.</dd>
- <dt><code id="em">em</code></dt>
+ <dt><code>em</code></dt>
  <dd>Represents the calculated {{Cssxref("font-size")}} of the element. If used on the {{Cssxref("font-size")}} property itself, it represents the <em>inherited</em> font-size of the element.</dd>
- <dt><code id="ex">ex</code></dt>
+ <dt><code>ex</code></dt>
  <dd>Represents the <a href="https://en.wikipedia.org/wiki/X-height">x-height</a> of the element's {{Cssxref("font")}}. On fonts with the "x" letter, this is generally the height of lowercase letters in the font; <code>1ex ≈ 0.5em</code> in many fonts.</dd>
- <dt><code id="ic">ic</code> {{experimental_inline}}</dt>
+ <dt><code>ic</code> {{experimental_inline}}</dt>
  <dd>Equal to the used advance measure of the "水" glyph (CJK water ideograph, U+6C34), found in the font used to render it.</dd>
- <dt><code id="lh">lh</code> {{experimental_inline}}</dt>
+ <dt><code>lh</code> {{experimental_inline}}</dt>
  <dd>Equal to the computed value of the {{Cssxref("line-height")}} property of the element on which it is used, converted to an absolute length.</dd>
- <dt><code id="rem">rem</code></dt>
+ <dt><code>rem</code></dt>
  <dd>Represents the {{Cssxref("font-size")}} of the root element (typically {{HTMLElement("html")}}). When used within the root element {{Cssxref("font-size")}}, it represents its initial value (a common browser default is <code>16px</code>, but user-defined preferences may modify this).</dd>
- <dt><code id="rlh">rlh</code> {{experimental_inline}}</dt>
+ <dt><code>rlh</code> {{experimental_inline}}</dt>
  <dd>Equal to the computed value of the {{Cssxref("line-height")}} property on the root element (typically {{HTMLElement("html")}}), converted to an absolute length. When used on the {{Cssxref("font-size")}} or {{Cssxref("line-height")}} properties of the root element, it refers to the properties' initial value.</dd>
 </dl>
 
@@ -67,17 +67,17 @@ browser-compat: css.types.length
 <p>Viewport-percentage lengths define the <code>&lt;length&gt;</code> value relative to the size of the {{glossary("viewport")}}, i.e., the visible portion of the document. Viewport lengths are invalid in {{cssxref("@page")}} declaration blocks.</p>
 
 <dl>
- <dt><code id="vh">vh</code></dt>
+ <dt><code>vh</code></dt>
  <dd>Equal to 1% of the height of the viewport's initial <a href="/en-US/docs/Web/CSS/All_About_The_Containing_Block">containing block</a>.</dd>
- <dt><code id="vw">vw</code></dt>
+ <dt><code>vw</code></dt>
  <dd>Equal to 1% of the width of the viewport's initial <a href="/en-US/docs/Web/CSS/All_About_The_Containing_Block">containing block</a>.</dd>
- <dt><code id="vi">vi</code> {{experimental_inline}}</dt>
- <dd>Equal to 1% of the size of the initial <a href="/en-US/docs/Web/CSS/All_About_The_Containing_Block">containing block</a>, in the direction of the root element’s <a href="/en-US/docs/Web/CSS/CSS_Logical_Properties#inline-dimension">inline axis</a>.</dd>
- <dt><code id="vb">vb</code> {{experimental_inline}}</dt>
- <dd>Equal to 1% of the size of the initial <a href="/en-US/docs/Web/CSS/All_About_The_Containing_Block">containing block</a>, in the direction of the root element’s <a href="/en-US/docs/Web/CSS/CSS_Logical_Properties#block-dimension">block axis</a>.</dd>
- <dt><code id="vmin">vmin</code></dt>
+ <dt><code>vi</code> {{experimental_inline}}</dt>
+ <dd>Equal to 1% of the size of the initial <a href="/en-US/docs/Web/CSS/All_About_The_Containing_Block">containing block</a>, in the direction of the root element’s <a href="/en-US/docs/Web/CSS/CSS_Logical_Properties#block_vs._inline">inline axis</a>.</dd>
+ <dt><code>vb</code> {{experimental_inline}}</dt>
+ <dd>Equal to 1% of the size of the initial <a href="/en-US/docs/Web/CSS/All_About_The_Containing_Block">containing block</a>, in the direction of the root element’s <a href="/en-US/docs/Web/CSS/CSS_Logical_Properties#block_vs._inline">block axis</a>.</dd>
+ <dt><code>vmin">vmin</code></dt>
  <dd>Equal to the smaller of <code>vw</code> and <code>vh</code>.</dd>
- <dt><code id="vmax">vmax</code></dt>
+ <dt><code>vmax</code></dt>
  <dd>Equal to the larger of <code>vw</code> and <code>vh</code>.</dd>
 </dl>
 
@@ -94,22 +94,20 @@ browser-compat: css.types.length
 </div>
 
 <dl>
- <dt><code id="px">px</code></dt>
+ <dt><code>px</code></dt>
  <dd>One pixel. For screen displays, it traditionally represents one device pixel (dot). However, for <em>printers</em> and <em>high-resolution screens</em>, one CSS pixel implies multiple device pixels. <code>1px</code> = 1/96th of <code>1in</code>.</dd>
- <dt><code id="cm">cm</code></dt>
+ <dt><code>cm</code></dt>
  <dd>One centimeter. <code>1cm</code> = <code>96px/2.54</code>.</dd>
- <dt><code id="mm">mm</code></dt>
+ <dt><code>mm</code></dt>
  <dd>One millimeter. <code>1mm</code> = 1/10th of <code>1cm</code>.</dd>
- <dt><code id="q">Q</code> {{experimental_inline}}</dt>
+ <dt><code>Q</code> {{experimental_inline}}</dt>
  <dd>One quarter of a millimeter. <code>1Q</code> = 1/40th of <code>1cm</code>.</dd>
- <dt><code id="in">in</code></dt>
+ <dt><code>in</code></dt>
  <dd>One inch. <code>1in</code> = <code>2.54cm</code> = <code>96px</code>.</dd>
- <dt><code id="pc">pc</code></dt>
+ <dt><code>pc</code></dt>
  <dd>One pica. <code>1pc</code> = <code>12pt</code> = 1/6th of <code>1in</code>.</dd>
- <dt><code id="pt">pt</code></dt>
+ <dt><code>pt</code></dt>
  <dd>One point. <code>1pt</code> = 1/72nd of <code>1in</code>.</dd>
- <dt><code id="mozmm">mozmm</code> {{non-standard_inline}}, removed in Firefox 59</dt>
- <dd>An experimental unit that attempts to render at exactly one millimeter regardless of the size or resolution of the display. This is rarely actually what you want, but may be useful in particular for mobile devices.</dd>
 </dl>
 
 <h2 id="Interpolation">Interpolation</h2>

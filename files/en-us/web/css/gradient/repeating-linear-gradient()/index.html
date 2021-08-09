@@ -22,7 +22,7 @@ browser-compat: css.types.image.gradient.repeating-linear-gradient
 
 <p>The length of the gradient that repeats is the distance between the first and last color stop. If the first color does not have a color-stop-length, the color-stop-length defaults to 0. With each repetition, the positions of the color stops are shifted by a multiple of the length of the basic linear gradient. Thus, the position of each ending color stop coincides with a starting color stop; if the color values are different, this will result in a sharp visual transition. This can be altered with repeating the first color again as the last color.</p>
 
-<p>As with any gradient, a repeating linear gradient has <a href="/en-US/docs/Web/CSS/image#no_intrinsic">no intrinsic dimensions</a>; i.e., it has no natural or preferred size, nor a preferred ratio. Its concrete size will match the size of the element it applies to.</p>
+<p>As with any gradient, a repeating linear gradient has <a href="/en-US/docs/Web/CSS/image#description">no intrinsic dimensions</a>; i.e., it has no natural or preferred size, nor a preferred ratio. Its concrete size will match the size of the element it applies to.</p>
 
 <p>Because <code>&lt;gradient&gt;</code>s belong to the <code>&lt;image&gt;</code> data type, they can only be used where <code>&lt;image&gt;</code>s can be used. For this reason, <code>repeating-linear-gradient()</code> won't work on {{Cssxref("background-color")}} and other properties that use the {{cssxref("&lt;color&gt;")}} data type.</p>
 
@@ -83,12 +83,10 @@ where &lt;side-or-corner&gt; = [left | right] || [top | bottom]
 
 <h3 id="Zebra_stripes">Zebra stripes</h3>
 
-<div class="hidden">
-<pre class="brush: css">body {
+<pre class="brush: css hidden">body {
   width: 100vw;
   height: 100vh;
 }</pre>
-</div>
 
 <pre class="brush: css">body {
   background-image: repeating-linear-gradient(-45deg,
@@ -107,12 +105,10 @@ where &lt;side-or-corner&gt; = [left | right] || [top | bottom]
 
 <h3 id="Ten_repeating_horizontal_bars">Ten repeating horizontal bars</h3>
 
-<div class="hidden">
-<pre class="brush: css">body {
+<pre class="brush: css hidden">body {
   width: 100vw;
   height: 100vh;
 }</pre>
-</div>
 
 <pre class="brush: css">body {
   background-image: repeating-linear-gradient(to bottom,

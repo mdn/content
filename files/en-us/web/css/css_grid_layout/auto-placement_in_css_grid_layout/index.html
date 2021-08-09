@@ -10,12 +10,11 @@ tags:
 
 <p>In addition to the ability to place items accurately onto a created grid, the CSS Grid Layout specification contains rules that control what happens when you create a grid and do not place some or all of the child items. You can see auto-placement in action in the simplest of ways by creating a grid on a set of items.</p>
 
-<h2 id="default_placement">Default placement</h2>
+<h2>Default placement</h2>
 
 <p>If you give the items no placement information they will position themselves on the grid, one in each grid cell.</p>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -31,7 +30,7 @@ tags:
     color: #d9480f;
 }
 </pre>
-</div>
+
 
 <pre class="brush: css">.wrapper {
   display: grid;
@@ -49,21 +48,20 @@ tags:
 &lt;/div&gt;
 </pre>
 
-<p>{{ EmbedLiveSample('default_placement', '500', '230') }}</p>
+<p>{{ EmbedLiveSample('Default_placement', '500', '230') }}</p>
 </div>
 
 <h2 id="Default_rules_for_auto-placement">Default rules for auto-placement</h2>
 
 <p>As you can see with the above example, if you create a grid all child items will lay themselves out one into each grid cell. The default flow is to arrange items by row. Grid will lay an item out into each cell of row 1. If you have created additional rows using the <code>grid-template-rows</code> property then grid will continue placing items in these rows. If the grid does not have enough rows in the explicit grid to place all of the items new <em>implicit</em> rows will be created.</p>
 
-<h3 id="Sizing_rows_in_the_implicit_grid">Sizing rows in the implicit grid</h3>
+<h3>Sizing rows in the implicit grid</h3>
 
 <p>The default for automatically created rows in the implicit grid is for them to be auto-sized. This means that they will contain the content added to them without causing an overflow.</p>
 
 <p>You can however control the size of these rows with the property <code>grid-auto-rows</code>. To cause all created rows to be 100 pixels tall for example you would use:</p>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -79,7 +77,6 @@ tags:
     color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
     &lt;div&gt;One&lt;/div&gt;
@@ -100,12 +97,11 @@ tags:
 
 <p>{{ EmbedLiveSample('Sizing_rows_in_the_implicit_grid', '500', '330') }}</p>
 
-<h3 id="Sizing_rows_using_minmax">Sizing rows using minmax()</h3>
+<h3>Sizing rows using minmax()</h3>
 
 <p>You can use {{cssxref("minmax()","minmax()")}} in your value for {{cssxref("grid-auto-rows")}} enabling the creation of rows that are a minimum size but then grow to fit content if it is taller.</p>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -121,7 +117,6 @@ tags:
     color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
      &lt;div&gt;One&lt;/div&gt;
@@ -148,12 +143,11 @@ tags:
 
 <p>{{ EmbedLiveSample('Sizing_rows_using_minmax', '500', '330') }}</p>
 
-<h3 id="Sizing_rows_using_a_track_listing">Sizing rows using a track listing</h3>
+<h3>Sizing rows using a track listing</h3>
 
 <p>You can also pass in a track listing, this will repeat. The following track listing will create an initial implicit row track as 100 pixels and a second as <code>200px</code>. This will continue for as long as content is added to the implicit grid. </p>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -169,7 +163,6 @@ tags:
     color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
    &lt;div&gt;One&lt;/div&gt;
@@ -193,7 +186,7 @@ tags:
 
 <p>{{ EmbedLiveSample('Sizing_rows_using_a_track_listing', '500', '450') }}</p>
 
-<h3 id="Auto-placement_by_column">Auto-placement by column</h3>
+<h3>Auto-placement by column</h3>
 
 <p>You can also ask grid to auto-place items by column. Using the property {{cssxref("grid-auto-flow")}} with a value of <code>column</code>. In this case grid will add items in rows that you have defined using {{cssxref("grid-template-rows")}}. When it fills up a column it will move onto the next explicit column, or create a new column track in the implicit grid. As with implicit row tracks, these column tracks will be auto sized. You can control the size of implicit column tracks with {{cssxref("grid-auto-columns")}}, this works in the same way as {{cssxref("grid-auto-rows")}}.</p>
 
@@ -208,8 +201,7 @@ tags:
 }
 </pre>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -225,7 +217,6 @@ tags:
     color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
    &lt;div&gt;One&lt;/div&gt;
@@ -249,12 +240,12 @@ tags:
 
 <p>Grid places items that have not been given a grid position in what is described in the specification as “order modified document order”. This means that if you have used the <code>order</code> property at all, the items will be placed by that order, not their DOM order. Otherwise they will stay by default in the order that they are entered in the document source.</p>
 
-<h3 id="Items_with_placement_properties">Items with placement properties</h3>
+<h3>Items with placement properties</h3>
 
 <p>The first thing grid will do is place any items that have a position. In the example below I have 12 grid items. Item 2 and item 5 have been placed using line based placement on the grid. You can see how those items are placed and the other items then auto-place in the spaces. The auto-placed items will place themselves before the placed items in DOM order, they don’t start after the position of a placed item that comes before them.</p>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -270,7 +261,6 @@ tags:
     color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
    &lt;div&gt;One&lt;/div&gt;
@@ -306,14 +296,14 @@ tags:
 
 <p>{{ EmbedLiveSample('Items_with_placement_properties', '500', '500') }}</p>
 
-<h3 id="Deal_with_items_that_span_tracks">Deal with items that span tracks</h3>
+<h3>Deal with items that span tracks</h3>
 
 <p>You can use placement properties while still taking advantage of auto-placement. In this next example I have added to the layout by setting odd items to span two tracks both for rows and columns. I do this with the {{cssxref("grid-column-end")}} and {{cssxref("grid-row-end")}} properties and setting the value of this to <code>span 2</code>. What this means is that the start line of the item will be set by auto-placement, and the end line will span two tracks.</p>
 
 <p>You can see how this then leaves gaps in the grid, as for the auto-placed items if grid comes across an item that doesn’t fit into a track, it will move to the next row until it finds a space the item can fit in.</p>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 .wrapper {
     border: 2px solid #f76707;
     border-radius: 5px;
@@ -328,7 +318,6 @@ tags:
     color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
    &lt;div&gt;One&lt;/div&gt;
@@ -369,7 +358,7 @@ tags:
 
 <p>{{ EmbedLiveSample('Deal_with_items_that_span_tracks', '500', '800') }}</p>
 
-<h3 id="Filling_in_the_gaps">Filling in the gaps</h3>
+<h3>Filling in the gaps</h3>
 
 <p>So far, other than items we have specifically placed, grid is always progressing forward and keeping items in DOM order. This is generally what you want, if you are laying out a form for example you wouldn’t want the labels and fields to become jumbled up in order to fill in some gap. However sometimes, we are laying things out that don’t have a logical order and we would like to create a layout that doesn’t have gaps in it.</p>
 
@@ -377,8 +366,8 @@ tags:
 
 <p>Having done this, grid will now backfill the gaps, as it moves through the grid it leaves gaps as before, but then if it finds an item that will fit in a previous gap it will pick it up and take it out of DOM order to place it in the gap. As with any other reordering in grid this does not change the logical order. Tab order for example, will still follow the document order. We will take a look at the potential accessibility issues of Grid Layout in a later guide, but you should take care when creating this disconnect between the visual order and display order.</p>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 .wrapper {
     border: 2px solid #f76707;
     border-radius: 5px;
@@ -393,7 +382,6 @@ tags:
     color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
    &lt;div&gt;One&lt;/div&gt;
@@ -448,7 +436,7 @@ tags:
 
 <p>Anonymous items are always auto-placed because there is no way to target them. Therefore if you have some unwrapped text for some reason in your grid, be aware that it might show up somewhere unexpected as it will be auto-placed according to the auto-placement rules.</p>
 
-<h3 id="Use_cases_for_auto-placement">Use cases for auto-placement</h3>
+<h3>Use cases for auto-placement</h3>
 
 <p>Auto-placement is useful whenever you have a collection of items. That could be items that do not have a logical order such as a gallery of photos, or product listing. In that case you might choose to use the dense packing mode to fill in any holes in your grid. In my image gallery example I have some landscape and some portrait images. I have set landscape images – with a class of <code>landscape</code> to span two column tracks. I then use <code>grid-auto-flow: dense</code> to create a densely packed grid.</p>
 
@@ -458,8 +446,7 @@ tags:
 
 <p>Auto-placement can also help you lay out interface items which do have logical order. An example is the definition list in this next example. Definition lists are an interesting challenge to style as they are flat, there is nothing wrapping the groups of <code>dt</code> and <code>dd</code> items. In my example I am allowing auto-placement to place the items, however I have classes that start a <code>dt</code> in column 1, and <code>dd</code> in column 2, this ensure that terms go on one side and definitions on the other - no matter how many of each we have.</p>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -467,7 +454,6 @@ tags:
     background-color: #fff4e6;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
    &lt;dl&gt;

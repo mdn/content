@@ -44,10 +44,10 @@ visibility: unset;
  <dd>The element box is invisible (not drawn), but still affects layout as normal. Descendants of the element will be visible if they have <code>visibility</code> set to <code>visible</code>. The element cannot receive focus (such as when navigating through <a href="/en-US/docs/Web/HTML/Global_attributes/tabindex">tab indexes</a>).</dd>
  <dt><code>collapse</code></dt>
  <dd>
+ <p>The <code>collapse</code> keyword has different effects for different elements:</p>
  <ul>
   <li>For {{HTMLElement("table")}} rows, columns, column groups, and row groups, the row(s) or column(s) are hidden and the space they would have occupied is removed (as if <code>{{Cssxref("display")}}: none</code> were applied to the column/row of the table). However, the size of other rows and columns is still calculated as though the cells in the collapsed row(s) or column(s) are present. This value allows for the fast removal of a row or column from a table without forcing the recalculation of widths and heights for the entire table.</li>
   <li>Collapsed flex items and ruby annotations are hidden, and the space they would have occupied is removed.</li>
-  <li>For <a href="/en-US/docs/Mozilla/Tech/XUL">XUL</a> elements, the computed size of the element is always zero, regardless of other styles that would normally affect the size, although margins still take effect.</li>
   <li>For other elements, <code>collapse</code> is treated the same as <code>hidden</code>.</li>
  </ul>
  </dd>
@@ -59,7 +59,7 @@ visibility: unset;
 
 <h2 id="Interpolation">Interpolation</h2>
 
-<p>Visibility values are interpolated between <em>visible</em> and <em>not-visible</em>. One of the start or ending values must therefore be <code>visible</code> or no interpolation can happen. The value is interpolated as a discrete step, where values of the timing function between <code>0</code> and <code>1</code> map to <code class="css">visible</code> and other values of the timing function (which occur only at the start/end of the transition or as a result of <code class="css">cubic-bezier()</code> functions with y values outside of [0, 1]) map to the closer endpoint.</p>
+<p>Visibility values are interpolated between <em>visible</em> and <em>not-visible</em>. One of the start or ending values must therefore be <code>visible</code> or no interpolation can happen. The value is interpolated as a discrete step, where values of the timing function between <code>0</code> and <code>1</code> map to <code>visible</code> and other values of the timing function (which occur only at the start/end of the transition or as a result of <code>cubic-bezier()</code> functions with y values outside of [0, 1]) map to the closer endpoint.</p>
 
 <h2 id="Notes">Notes</h2>
 
