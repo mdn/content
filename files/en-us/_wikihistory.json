@@ -71338,12 +71338,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/RTCIceGathererState": {
-    "modified": "2020-10-15T22:06:40.949Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
   "Web/API/RTCIceParameters": {
     "modified": "2020-10-15T22:06:42.205Z",
     "contributors": [
