@@ -44,10 +44,8 @@ browser-compat: api.RTCIceCandidate.sdpMid
   the candidate.</p>
 
 <div class="note">
-  <p><strong>Note:</strong> Attempting to add a candidate (using
-    {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}}) that has a
-    value of <code>null</code> for either <code>sdpMid</code> or
-    <code>sdpMLineIndex</code> will throw a <code>TypeError</code> exception.</p>
+  <p><strong>Note:</strong> Attempting to add a candidate (using {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}}) that has a
+    value of <code>null</code> for both <code>sdpMid</code> and <code>sdpMLineIndex</code> will throw a <code>TypeError</code> exception.</p>
 </div>
 
 <h2 id="Example">Example</h2>
