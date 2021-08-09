@@ -52,7 +52,7 @@ browser-compat: api.RTCIceCandidate
 	<dt>{{domxref("RTCIceCandidate.address", "address")}} {{readonlyInline}}</dt>
 	<dd>The address of the candidate.</dd>
 	<dt>{{domxref("RTCIceCandidate.protocol", "protocol")}} {{readonlyInline}}</dt>
-	<dd>A string indicating whether the candidate's protocol is <code>"tcp"</code> or <code>"udp"</code>. The string is one of those in the enumerated type <code>RTCIceProtocol</code>.</dd>
+	<dd>A string indicating whether the candidate's protocol is <code>"tcp"</code> or <code>"udp"</code>.</dd>
 	<dt>{{domxref("RTCIceCandidate.relatedAddress", "relatedAddress")}} {{readonlyInline}}</dt>
 	<dd>If the candidate is derived from another candidate, <code>relatedAddress</code> is a {{domxref("DOMString")}} containing that host candidate's IP address. For host candidates, this value is <code>null</code>.</dd>
 	<dt>{{domxref("RTCIceCandidate.relatedPort", "relatedPort")}} {{readonlyInline}}</dt>
@@ -64,7 +64,7 @@ browser-compat: api.RTCIceCandidate
 	<dt>{{domxref("RTCIceCandidate.tcpType", "tcpType")}} {{readonlyInline}}</dt>
 	<dd>If <code>protocol</code> is <code>"tcp"</code>, <code>tcpType</code> represents the type of TCP candidate. Otherwise, <code>tcpType</code> is <code>null</code>.</dd>
 	<dt>{{domxref("RTCIceCandidate.type", "type")}} {{readonlyInline}}</dt>
-	<dd>A {{domxref("DOMString")}} indicating the type of candidate as one of the strings listed on <a href="/en-US/docs/Web/API/RTCIceCandidate/type#Values"><code>RTCIceCandidate.type</code></a>.</dd>
+	<dd>A {{domxref("DOMString")}} indicating the type of candidate as one of the strings listed on <a href="/en-US/docs/Web/API/RTCIceCandidate/type#values"><code>RTCIceCandidate.type</code></a>.</dd>
 	<dt>{{domxref("RTCIceCandidate.usernameFragment", "usernameFragment")}} {{ReadOnlyInline}}</dt>
 	<dd>A {{domxref("DOMString")}} containing a randomly-generated username fragment ("ice-ufrag") which ICE uses for message integrity along with a randomly-generated password ("ice-pwd"). You can use this string to verify generations of ICE generation; each generation of the same ICE process will use the same <code>usernameFragment</code>, even across ICE restarts.</dd>
 </dl>
