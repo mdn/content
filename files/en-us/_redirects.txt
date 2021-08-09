@@ -8369,6 +8369,7 @@
 /en-US/docs/Web/API/RTCIceCandidateType	/en-US/docs/Web/API/RTCIceCandidate/type
 /en-US/docs/Web/API/RTCIceComponent	/en-US/docs/Web/API/RTCIceCandidate/component
 /en-US/docs/Web/API/RTCIceConnectionState	/en-US/docs/Web/API/RTCPeerConnection/iceConnectionState
+/en-US/docs/Web/API/RTCIceGathererState	/en-US/docs/Web/API/RTCIceTransport/gatheringState
 /en-US/docs/Web/API/RTCIceGatheringState	/en-US/docs/Web/API/RTCPeerConnection/iceGatheringState
 /en-US/docs/Web/API/RTCIceProtocol	/en-US/docs/Web/API/RTCIceCandidate/protocol
 /en-US/docs/Web/API/RTCIceTcpCandidateType	/en-US/docs/Web/API/RTCIceCandidate/tcpType
