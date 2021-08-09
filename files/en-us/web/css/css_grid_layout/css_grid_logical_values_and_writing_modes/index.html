@@ -8,7 +8,7 @@ tags:
 ---
 <div>{{CSSRef}}</div>
 
-<p>In these guides, I have already touched on an important feature of grid layout: the support for different writing modes that is built into the specification. For this guide, we will look at this feature of grid and other modern layout methods, learning a little about writing modes and logical vs. physical properties as we do so.</span></p>
+<p>In these guides, I have already touched on an important feature of grid layout: the support for different writing modes that is built into the specification. For this guide, we will look at this feature of grid and other modern layout methods, learning a little about writing modes and logical vs. physical properties as we do so.</p>
 
 <h2 id="Logical_and_physical_properties_and_values">Logical and physical properties and values</h2>
 
@@ -53,7 +53,7 @@ tags:
 
 <p>I’m going to introduce another specification here, that I will be using in my examples: the CSS Writing Modes specification. This spec details how we can use these different writing modes in CSS, not just for the support of languages that have a different writing mode to English, but also for creative purposes. I’ll be using the {{cssxref("writing-mode")}} property to make changes to the writing mode applied to our grid, in order to demonstrate how the logical values work. If you want to dig into writing modes further, however, then I would recommend that you read Jen Simmons excellent article on <a href="https://24ways.org/2016/css-writing-modes/">CSS Writing Modes</a>. This goes into more depth on that specification than we will touch upon here.</p>
 
-<h3 id="writing-mode">writing-mode</h3>
+<h3>writing-mode</h3>
 
 <p>Writing Modes are more than just left to right and right to left text, and the <code>writing-mode</code> property helps us display text running in other directions. The {{cssxref("writing-mode")}} property can have values of:</p>
 
@@ -90,7 +90,7 @@ tags:
 
 <p>If we now take a look at a grid layout example, we can see how changing the writing mode means changing our idea of where the Block and Inline Axis are.</p>
 
-<h3 id="default_writing_mode">Default writing mode</h3>
+<h3>Default writing mode</h3>
 
 <p>The grid in this example has three columns and two row tracks. This means there are three tracks running down the block axis. In default writing mode, grid auto-places items starting at the top left, moving along to the right, filling up the three cells on the inline axis. It then moves onto the next line, creating a new Row track, and fills in more items:</p>
 
@@ -128,9 +128,9 @@ gap: 10px;
 &lt;/div&gt;
 </pre>
 
-<p>{{ EmbedLiveSample('default_writing_mode', '500', '330') }}</p>
+<p>{{ EmbedLiveSample('Default_writing_mode', '500', '330') }}</p>
 
-<h3 id="setting_writing_mode">Setting writing mode</h3>
+<h3>Setting writing mode</h3>
 
 <p>If we add <code>writing-mode: vertical-lr</code> to the grid container, we can see that the block and inline Axis are now running in a different direction. The block or <em>column</em> axis now runs across the page from left to right, Inline runs down the page, creating rows from top to bottom.</p>
 
@@ -169,11 +169,11 @@ gap: 10px;
 &lt;/div&gt;
 </pre>
 
-<p>{{ EmbedLiveSample('setting_writing_mode', '500', '330') }}</p>
+<p>{{ EmbedLiveSample('Setting_writing_mode', '500', '330') }}</p>
 
 <p><img alt="A image showing the direction of Block and Inline when writing-mode is vertical-lr" src="8-vertical-lr.png"></p>
 
-<h2 id="Logical_values_for_alignment">Logical values for alignment</h2>
+<h2>Logical values for alignment</h2>
 
 <p>With the block and inline axis able to change direction, the logical values for the alignment properties start to make more sense.</p>
 
@@ -242,7 +242,7 @@ gap: 10px;
 
 <p>The key thing to remember when placing items by line number, is that line 1 is the start line, no matter which writing mode you are in. Line -1 is the end line, no matter which writing mode you are in.</p>
 
-<h3 id="line-based_placement_with_left_to_right_text">Line-based placement with left to right text</h3>
+<h3>Line-based placement with left to right text</h3>
 
 <p>In this next example, I have a grid which is in the default <code>ltr</code> direction. I have positioned three items using line-based placement.</p>
 
@@ -294,9 +294,9 @@ gap: 10px;
     &lt;/div&gt;
 </pre>
 
-<p>{{ EmbedLiveSample('line-based_placement_with_left_to_right_text', '500', '330') }}</p>
+<p>{{ EmbedLiveSample('Line-based_placement_with_left_to_right_text', '500', '330') }}</p>
 
-<h3 id="line-based_placement_with_right_to_left_text">Line-based placement with right to left text</h3>
+<h3>Line-based placement with right to left text</h3>
 
 <p>If I now add the {{cssxref("direction")}} property with a value of <code>rtl</code> to the grid container, line 1 becomes the right hand side of the grid, and line -1 on the left.</p>
 
@@ -343,7 +343,7 @@ gap: 10px;
     &lt;/div&gt;
 </pre>
 
-<p>{{ EmbedLiveSample('line-based_placement_with_right_to_left_text', '500', '330') }}</p>
+<p>{{ EmbedLiveSample('Line-based_placement_with_right_to_left_text', '500', '330') }}</p>
 
 <p>What this demonstrates, is that if you are switching the direction of your text, either for entire pages or for parts of pages, and are using lines: you may want to name your lines, if you do not want the layout to completely switch direction. For some things, for example, where a grid contains text content, this switching may be exactly what you want. For other usage it may not.</p>
 
@@ -371,7 +371,7 @@ gap: 10px;
 
 <p>This is anti-clockwise! So the reverse of what we do for margins and padding. Once you realize that <code>grid-area</code> sees the world as "block and inline", you can remember that we are setting the two starts, then the two ends. It becomes much more logical once you know!</p>
 
-<h2 id="Mixed_writing_modes_and_grid_layout">Mixed writing modes and grid layout</h2>
+<h2>Mixed writing modes and grid layout</h2>
 
 <p>In addition to displaying documents, using the correct writing mode for the language, writing modes can be used creatively within documents that are otherwise <code>ltr</code>. In this next example I have a grid layout with a set of links down one side. I’ve used writing modes to turn these on their side in the column track:</p>
 

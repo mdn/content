@@ -14,7 +14,7 @@ tags:
 
 <p>The basic difference between CSS Grid Layout and <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">CSS Flexbox Layout</a> is that flexbox was designed for layout in one dimension - either a row <em>or</em> a column. Grid was designed for two-dimensional layout - rows, and columns at the same time. The two specifications share some common features, however, and if you have already learned how to use flexbox, the similarities should help you get to grips with Grid.</p>
 
-<h3 id="One-dimensional_versus_two-dimensional_layout">One-dimensional versus two-dimensional layout</h3>
+<h3>One-dimensional versus two-dimensional layout</h3>
 
 <p>A simple example can demonstrate the difference between one- and two-dimensional layouts.</p>
 
@@ -64,7 +64,7 @@ tags:
 
 <p>A common question then is how to make those items line up. This is where you want a two-dimensional layout method: You want to control the alignment by row and column, and this is where grid comes in.</p>
 
-<h3 id="The_same_layout_with_CSS_grids">The same layout with CSS grids</h3>
+<h3>The same layout with CSS grids</h3>
 
 <p>In this next example, I create the same layout using Grid. This time we have three <code>1fr</code> column tracks. We do not need to set anything on the items themselves; they will lay themselves out one into each cell of the created grid. As you can see they stay in a strict grid, lining up in rows and columns. With five items, we get a gap on the end of row two.</p>
 
@@ -105,8 +105,8 @@ tags:
 <p>A simple question to ask yourself when deciding between grid or flexbox is:</p>
 
 <ul>
- <li>do I only need to control the layout by row <u><em>or</em></u> column – use a flexbox</li>
- <li>do I need to control the layout by row <u><em>and</em></u> column – use a grid</li>
+ <li>do I only need to control the layout by row <em>or</em> column – use a flexbox</li>
+ <li>do I need to control the layout by row <em>and</em> column – use a grid</li>
 </ul>
 
 <h3 id="Content_out_or_layout_in">Content out or layout in?</h3>
@@ -117,7 +117,7 @@ tags:
 
 <p>If you are using flexbox and find yourself disabling some of the flexibility, you probably need to use CSS Grid Layout. An example would be if you are setting a percentage width on a flex item to make it line up with other items in a row above. In that case, a grid is likely to be a better choice.</p>
 
-<h3 id="Box_alignment">Box alignment</h3>
+<h3>Box alignment</h3>
 
 <p>The feature of flexbox that was most exciting to many of us was that it gave us proper alignment control for the first time. It made it easy to center a box on the page. Flex items can stretch to the height of the flex container, meaning that equal height columns were possible. These were things we have wanted to do for a very long time, and have come up with all kinds of hacks to accomplish, at least visually.</p>
 
@@ -166,7 +166,7 @@ tags:
 
 <p>{{ EmbedLiveSample('Box_alignment', '300', '230') }}</p>
 
-<h3 id="Alignment_in_CSS_Grids">Alignment in CSS Grids</h3>
+<h3>Alignment in CSS Grids</h3>
 
 <p>This second example uses a grid to create the same layout. This time we are using the box alignment properties as they apply to a grid layout. So we align to <code>start</code> and <code>end</code> rather than <code>flex-start</code> and <code>flex-end</code>. In the case of a grid layout, we are aligning the items inside their grid area. In this case that is a single grid cell, but it could be an area made up of several grid cells.</p>
 
@@ -218,7 +218,7 @@ tags:
 
 <p>In comparison, the grid version always has three column tracks. The tracks themselves will grow and shrink, but there are always three since we asked for three when defining our grid.</p>
 
-<h4 id="Auto-filling_grid_tracks">Auto-filling grid tracks</h4>
+<h4>Auto-filling grid tracks</h4>
 
 <p>We can create a similar effect to flexbox, while still keeping the content arranged in strict rows and columns, by creating our track listing using repeat notation and the <code>auto-fill</code> and <code>auto-fit</code> properties.</p>
 
@@ -256,7 +256,7 @@ tags:
 
 <p>{{ EmbedLiveSample('Auto-filling_grid_tracks', '500', '170') }}</p>
 
-<h3 id="A_flexible_number_of_tracks">A flexible number of tracks</h3>
+<h3>A flexible number of tracks</h3>
 
 <p>This isn’t quite the same as flexbox. In the flexbox example, the items are larger than the 200 pixel basis before wrapping. We can achieve the same in grid by combining <code>auto-fit</code> and the {{cssxref("minmax()", "minmax()")}} function. In this next example, I create auto filled tracks with <code>minmax</code>. I want my tracks to be a minimum of 200 pixels, so I set the maximum to be <code>1fr</code>. Once the browser has worked out how many times 200 pixels will fit into the container–also taking account of grid gaps–it will treat the <code>1fr</code> maximum as an instruction to share out the remaining space between the items.</p>
 
@@ -298,7 +298,7 @@ tags:
 
 <p>Grid interacts with absolutely positioned elements, which can be useful if you want to position an item inside a grid or grid area. The specification defines the behavior when a grid container is a containing block and a parent of the absolutely positioned item.</p>
 
-<h3 id="A_grid_container_as_containing_block">A grid container as containing block</h3>
+<h3>A grid container as containing block</h3>
 
 <p>To make the grid container a containing block you need to add the position property to the container with a value of relative, just as you would make a containing block for any other absolutely positioned items. Once you have done this, if you give a grid item <code>position: absolute</code> it will take as its containing block the grid container or, if the item also has a grid position, the area of the grid it is placed into.</p>
 
@@ -363,7 +363,7 @@ tags:
 
 <p>Once again the item no longer participates in the grid layout in terms of sizing or when other items are auto-placed.</p>
 
-<h3 id="With_a_grid_area_as_the_parent">With a grid area as the parent</h3>
+<h3>With a grid area as the parent</h3>
 
 <p>If the absolutely positioned item is nested inside a grid area then you can create a positioning context on that area. In the below example we have our grid as before but this time I have nested an item inside <code>.box3</code> of the grid.</p>
 
@@ -434,7 +434,7 @@ tags:
 
 <p>If you set an item to <code>display:</code> <code>contents</code> the box it would normally create disappears, and the boxes of the child elements appear as if they have risen up a level. This means that children of a grid item can become grid items. Sound odd? Here is a simple example.</p>
 
-<h3 id="grid_layout_with_nested_child_elements">Grid layout with nested child elements</h3>
+<h3>Grid layout with nested child elements</h3>
 
 <p>In the following markup, I have a grid and the first item on the grid is set to span all three column tracks. It contains three nested items. As these items are not direct children, they don’t become part of the grid layout and so display using regular block layout.</p>
 
@@ -486,9 +486,9 @@ tags:
 
 </pre>
 
-<p>{{ EmbedLiveSample('grid_layout_with_nested_child_elements', '400', '440') }}</p>
+<p>{{ EmbedLiveSample('Grid_layout_with_nested_child_elements', '400', '440') }}</p>
 
-<h3 id="using_display_contents">Using display_contents</h3>
+<h3>Using display_contents</h3>
 
 <p>If I now add <code>display:</code> <code>contents</code> to the rules for <code>box1</code>, the box for that item vanishes and the sub-items now become grid items and lay themselves out using the auto-placement rules.</p>
 
@@ -540,7 +540,7 @@ tags:
 }
 </pre>
 
-<p>{{ EmbedLiveSample('using_display_contents', '400', '350') }}</p>
+<p>{{ EmbedLiveSample('Using_display_contents', '400', '350') }}</p>
 
 <p>This can be a way to get items nested into the grid to act as if they are part of the grid, and is a way around some of the issues that would be solved by subgrids once they are implemented. You can also use <code>display:</code> <code>contents</code> in a similar way with flexbox to enable nested items to become flex items.</p>
 

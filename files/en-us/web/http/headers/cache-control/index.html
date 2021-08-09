@@ -136,27 +136,20 @@ Cache-Control: stale-if-error=&lt;seconds&gt;
 
 <h3 id="Preventing_caching">Preventing caching</h3>
 
-<p>To disable caching of a resource, you can send the following response header:</p>
+<p>A good way to disable caching of a resource, is to send the following response header:</p>
 
-<dl>
-  <dt>Good:</dt>
-  <dd>
-    <pre class="example-good">Cache-Control: no-store</pre>
+<pre class="example-good">Cache-Control: no-store</pre>
 
-    <div class="notecard note">
-      <p><strong>Note:</strong> The <code>no-store</code> directive will prevent a new resource being cached,
-      but it will not prevent the cache from responding with a non-stale resource that was cached as the result of an earlier request.
-      Setting <code>max-age=0</code> as well forces the cache to revalidate (clears the cache).</p>
+<div class="notecard note">
+  <p><strong>Note:</strong> The <code>no-store</code> directive will prevent a new resource being cached,
+    but it will not prevent the cache from responding with a non-stale resource that was cached as the result of an earlier request.
+    Setting <code>max-age=0</code> as well forces the cache to revalidate (clears the cache).</p>
 
-      <pre>Cache-Control: no-store, max-age=0</pre>
-    </div>
-  </dd>
+  <pre>Cache-Control: no-store, max-age=0</pre>
+</div>
 
-  <dt>Bad:</dt>
-  <dd>
-    <pre class="example-bad">Cache-Control: private,no-cache,no-store,max-age=0,must-revalidate,pre-check=0,post-check=0</pre>
-  </dd>
-</dl>
+<p>On the opposite, this is a bad way to achieve this:</p>
+<pre class="example-bad">Cache-Control: private,no-cache,no-store,max-age=0,must-revalidate,pre-check=0,post-check=0</pre>
 
 <h3 id="Caching_static_assets">Caching static assets</h3>
 

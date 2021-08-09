@@ -10,7 +10,7 @@ tags:
 
 <p>In previous guides we’ve looked at placing items by the lines created by defining grid tracks and also how to place items using named template areas. In this guide we are going to look at how these two things work together when we use named lines. Line naming is incredibly useful, but some of the more baffling looking grid syntax comes from this combination of names and track sizes. Once you work through some examples it should become clearer and easier to work with.</p>
 
-<h2 id="Naming_lines_when_defining_a_grid">Naming lines when defining a grid</h2>
+<h2>Naming lines when defining a grid</h2>
 
 <p>You can assign some or all of the lines in your grid a name when you define your grid with the <code>grid-template-rows</code> and <code>grid-template-columns</code> properties. To demonstrate I’ll use the simple layout created in the guide on line-based placement. This time I’ll create the grid using named lines.</p>
 
@@ -82,7 +82,7 @@ tags:
 
 <p>You may want to give a line more than one name, perhaps it denotes the sidebar-end and the main-start for example. To do this add the names inside the square brackets with whitespace between them <code>[sidebar-end main-start]</code>. You can then refer to that line by either of the names.</p>
 
-<h2 id="Implicit_grid_areas_from_named_lines">Implicit grid areas from named lines</h2>
+<h2>Implicit grid areas from named lines</h2>
 
 <p>When naming the lines, I mentioned that you can name these anything you like. The name is a <a href="https://drafts.csswg.org/css-values-4/#custom-idents">custom ident</a>, an author-defined name. When choosing the name you need to avoid words that might appear in the specification and be confusing - such as <code>span</code>. Idents are not quoted.</p>
 
@@ -126,7 +126,7 @@ tags:
 
 <p>We don’t need to define where our areas are with <code>grid-template-areas</code> as our named lines have created an area for us.</p>
 
-<h2 id="Implicit_Grid_lines_from_named_areas">Implicit Grid lines from named areas</h2>
+<h2>Implicit Grid lines from named areas</h2>
 
 <p>We have seen how named lines create a named area, and this also works in reverse. Named template areas create named lines that you can use to place your items. If we take the layout created in the guide to Grid Template Areas, we can use the lines created by our areas to see how this works.</p>
 
@@ -229,7 +229,7 @@ tags:
 
 <p>If you want to give all of the lines in your grid a unique name then you will need to write out the track definition long-hand rather than using the repeat syntax, as you need to add the name in square brackets while defining the tracks. If you do use the repeat syntax you will end up with multiple lines that have the same name, however this can be very useful too.</p>
 
-<h3 id="twelve_column_grid_using_repeat">12-column grid using repeat()</h3>
+<h3>Twelve-column grid using repeat()</h3>
 
 <p>In this next example I am creating a grid with twelve equal width columns. Before defining the 1fr size of the column track I am also defining a line name of <code>[col-start]</code>. This means that we will end up with a grid that has 12 column lines all named <code>col-start</code> before a <code>1fr</code> width column.</p>
 
@@ -269,20 +269,18 @@ tags:
 }
 </pre>
 
-<p class="brush: html"></p>
-
 <pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div class="item1"&gt;I am placed from col-start line 1 to col-start 5&lt;/div&gt;
   &lt;div class="item2"&gt;I am placed from col-start line 7 spanning 3 lines&lt;/div&gt;
 &lt;/div&gt;</pre>
 
-<p>{{ EmbedLiveSample('twelve_column_grid_using_repeat', '500', '330') }}</p>
+<p>{{ EmbedLiveSample('Twelve-column_grid_using_repeat', '500', '330') }}</p>
 
 <p>If you take a look at this layout in the Firefox Grid Highlighter you can see how the column lines are shown, and how our items are placed against these lines.</p>
 
 <p><img alt="The 12 column grid with items placed. The Grid Highlighter shows the position of the lines." src="5_named_lines1.png"></p>
 
-<h3 id="defining_named_lines_with_a_track_list">Defining named lines with a track list</h3>
+<h3>Defining named lines with a track list</h3>
 
 <p>The repeat syntax can also take a track list, it doesn’t just need to be a single track size that is being repeated. The code below would create an eight track grid, with a narrower <code>1fr</code> width column named <code>col1-start</code> followed by a wider <code>3fr</code> column named <code>col2-start</code>.</p>
 
@@ -345,9 +343,9 @@ tags:
 &lt;/div&gt;
 </pre>
 
-<p>{{ EmbedLiveSample('defining_named_lines_with_a_track_list', '500', '330') }}</p>
+<p>{{ EmbedLiveSample('Defining_named_lines_with_a_track_list', '500', '330') }}</p>
 
-<h3 id="twelve_column_grid_framework">12-column grid framework</h3>
+<h3>Twelve-column grid framework</h3>
 
 <p>Over the last three guides you have discovered that there are a lot of different ways to place items using grid. This can seem a little bit overcomplicated at first, but remember you don’t need to use all of them. In practice I find that for straightforward layouts, using named template areas works well, it gives that nice visual representation of what your layout looks like, and it is then easy to move things around on the grid.</p>
 
@@ -411,7 +409,7 @@ tags:
 }
 </pre>
 
-<p>{{ EmbedLiveSample('twelve_column_grid_framework', '500', '330') }}</p>
+<p>{{ EmbedLiveSample('Twelve-column_grid_framework', '500', '330') }}</p>
 
 <p>Once again, the grid highlighter is helpful to show us how the grid we have placed our items on works.</p>
 

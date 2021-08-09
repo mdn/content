@@ -21,7 +21,7 @@ tags:
 
 <p>Declaring a custom property is done using a custom property name that begins with a double hyphen (<code>--</code>), and a property value that can be any valid CSS value. Like any other property, this is written inside a ruleset, like so:</p>
 
-<pre class="brush:css; highlight:[2]  language-css"><em>element</em> {
+<pre class="brush: css"><em>element</em> {
   --main-bg-color: brown;
 }
 </pre>
@@ -40,7 +40,7 @@ tags:
 
 <p>As mentioned earlier, you use the custom property value by specifying your custom property name inside the {{cssxref("var()", "var()")}} function, in place of a regular property value:</p>
 
-<pre class="brush:css; highlight:[2]  language-css"><em>element</em> {
+<pre class="brush: css"><em>element</em> {
   background-color: var(--main-bg-color);
 }
 </pre>
@@ -49,7 +49,7 @@ tags:
 
 <p>Let's start with this simple CSS that applies the same color to elements of different classes:</p>
 
-<pre class="brush:css; highlight:[3,20,26,32]">.one {
+<pre class="brush: css">.one {
   color: white;
   background-color: brown;
   margin: 10px;
@@ -102,7 +102,7 @@ tags:
 
 <p>Notice the repetitive CSS in the example above. The background color is set to <code>brown</code> in several places. For some CSS declarations, it is possible to declare this higher in the cascade and let CSS inheritance solve this problem naturally. For non-trivial projects, this is not always possible. By declaring a custom property on the {{cssxref(":root")}} pseudo-class and using it where needed throughout the document, a CSS author can reduce the need for repetition:</p>
 
-<pre class="brush:css; highlight:[2, 7, 24,30,36]">:root {
+<pre class="brush: css">:root {
   --main-bg-color: brown;
 }
 

@@ -1225,7 +1225,6 @@
 /en-US/docs/DOM/DOMImplementation.createDocument	/en-US/docs/Web/API/DOMImplementation/createDocument
 /en-US/docs/DOM/DOMImplementation.createDocumentType	/en-US/docs/Web/API/DOMImplementation/createDocumentType
 /en-US/docs/DOM/DOMImplementation.createHTMLDocument	/en-US/docs/Web/API/DOMImplementation/createHTMLDocument
-/en-US/docs/DOM/DOMObject	/en-US/docs/Web/API/DOMObject
 /en-US/docs/DOM/DOMParser	/en-US/docs/Web/API/DOMParser
 /en-US/docs/DOM/DOMString	/en-US/docs/Web/API/DOMString
 /en-US/docs/DOM/DOMStringList	/en-US/docs/Web/API/DOMStringList
@@ -2791,7 +2790,6 @@
 /en-US/docs/Document_Object_Model_(DOM)/DOMImplementation.createDocument	/en-US/docs/Web/API/DOMImplementation/createDocument
 /en-US/docs/Document_Object_Model_(DOM)/DOMImplementation.createDocumentType	/en-US/docs/Web/API/DOMImplementation/createDocumentType
 /en-US/docs/Document_Object_Model_(DOM)/DOMImplementation.createHTMLDocument	/en-US/docs/Web/API/DOMImplementation/createHTMLDocument
-/en-US/docs/Document_Object_Model_(DOM)/DOMObject	/en-US/docs/Web/API/DOMObject
 /en-US/docs/Document_Object_Model_(DOM)/DOMString	/en-US/docs/Web/API/DOMString
 /en-US/docs/Document_Object_Model_(DOM)/DOMStringList	/en-US/docs/Web/API/DOMStringList
 /en-US/docs/Document_Object_Model_(DOM)/DOMStringMap	/en-US/docs/Web/API/DOMStringMap
@@ -5755,6 +5753,7 @@
 /en-US/docs/Mozilla/Firefox/Releases/Firefox_41_for_developers	/en-US/docs/Mozilla/Firefox/Releases/41
 /en-US/docs/Mozilla/Firefox/Releases/Firefox_47_for_developers	/en-US/docs/Mozilla/Firefox/Releases/47
 /en-US/docs/Mozilla/Firefox/Releases/developers	/en-US/docs/Mozilla/Firefox/Releases/63
+/en-US/docs/Mozilla/Performance/Scroll-linked_effects	https://firefox-source-docs.mozilla.org/performance/scroll-linked_effects.html
 /en-US/docs/Mozilla/Virtualenv	https://github.com/mdn/archived-content/tree/main/files/en-us/mozilla/virtualenv
 /en-US/docs/Mozilla_CSS_Extensions	/en-US/docs/Web/CSS/Mozilla_Extensions
 /en-US/docs/Mozilla_MathML_Project/Authoring	/en-US/docs/Web/MathML/Authoring
@@ -8370,7 +8369,10 @@
 /en-US/docs/Web/API/RTCIceCandidateType	/en-US/docs/Web/API/RTCIceCandidate/type
 /en-US/docs/Web/API/RTCIceComponent	/en-US/docs/Web/API/RTCIceCandidate/component
 /en-US/docs/Web/API/RTCIceConnectionState	/en-US/docs/Web/API/RTCPeerConnection/iceConnectionState
+/en-US/docs/Web/API/RTCIceGathererState	/en-US/docs/Web/API/RTCIceTransport/gatheringState
 /en-US/docs/Web/API/RTCIceGatheringState	/en-US/docs/Web/API/RTCPeerConnection/iceGatheringState
+/en-US/docs/Web/API/RTCIceProtocol	/en-US/docs/Web/API/RTCIceCandidate/protocol
+/en-US/docs/Web/API/RTCIceTcpCandidateType	/en-US/docs/Web/API/RTCIceCandidate/tcpType
 /en-US/docs/Web/API/RTCInboundRtpStreamStats/lastPacketReceivedTimesta	/en-US/docs/Web/API/RTCInboundRtpStreamStats/lastPacketReceivedTimestamp
 /en-US/docs/Web/API/RTCOutboundRtpStreamStats/perDscpPacketsReceived	/en-US/docs/Web/API/RTCOutboundRtpStreamStats/perDscpPacketsSent
 /en-US/docs/Web/API/RTCPeerConnection.addStream	/en-US/docs/Web/API/RTCPeerConnection/addStream

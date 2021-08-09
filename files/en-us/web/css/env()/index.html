@@ -69,7 +69,7 @@ env(safe-area-inset-left, 1.4rem);
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="Example1">Using <code>env()</code> to ensure buttons are not obscured by device UI</h3>
+<h3>Using env() to ensure buttons are not obscured by device UI</h3>
 
 <p>In the following example <code>env()</code> is used to ensure that fixed app toolbar buttons are not obscured by device notifications appearing at the bottom of the screen. On the desktop <code>safe-area-inset-bottom</code> is <code>0</code>. However, in devices that display notifications at the bottom of the screen, such as iOS, it contains a value that leaves space for the notification to display. This can then be used in the value for {{cssxref("padding-bottom")}} to create a gap that appears natural on that device.</p>
 
@@ -117,9 +117,9 @@ button {
 }
 </pre>
 
-<p>{{EmbedLiveSample("Example1", "200px", "500px")}}</p>
+<p>{{EmbedLiveSample("Using_env_to_ensure_buttons_are_not_obscured_by_device_UI", "200px", "500px")}}</p>
 
-<h3 id="Example2">Using the fallback value</h3>
+<h3>Using the fallback value</h3>
 
 <p>The below example makes use of the optional second parameter of <code>env()</code>, which allows you to provide a fallback value in case the environment variable is not available.</p>
 
@@ -142,7 +142,7 @@ button {
     env(SAFE-AREA-INSET-LEFT, 50px);
 }</pre>
 
-<p>{{EmbedLiveSample("Example2", "350px", "250px")}}</p>
+<p>{{EmbedLiveSample("Using_the_fallback_value", "350px", "250px")}}</p>
 
 <h3 id="Example_values">Example values</h3>
 
