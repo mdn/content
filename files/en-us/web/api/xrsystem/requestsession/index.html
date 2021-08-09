@@ -65,7 +65,7 @@ browser-compat: api.XRSystem.requestSession
     <li><code>optionalFeatures</code> {{optional_inline}}: An array of values identifying features which the returned
      {{domxref("XRSession")}} may optionally support.</li>
      <li><code>domOverlay</code> {{optional_inline}}: An object with a required <code>root</code> property that specifies the overlay element that will be displayed to the user as the content of the DOM overlay. See the <a href="#requesting_a_session_with_a_dom_overlay">example below</a>.</li>
-     <li><code>depthSensing</code> {{optional_inline}}: An object with two required properties {{domxref("XRSession.depthUsage", "usagePreference")}} and {{domxref("XRSession.depthDataFormat", "dataFormatPreference")}} to configure how to perform depth sensing. See the <a href="#requesting_a_depth_sensing_session">example below</a>.</li>
+     <li><code>depthSensing</code> {{optional_inline}}: An object with two required properties {{domxref("XRSession.depthUsage", "usagePreference")}} and {{domxref("XRSession.depthDataFormat", "dataFormatPreference")}} to configure how to perform depth sensing. See the <a href="#requesting_a_depth-sensing_session">example below</a>.</li>
     </ul>
   </dd>
 </dl>
@@ -249,7 +249,7 @@ navigator.xr.requestSession("immersive-ar", {
 }
 </pre>
 
-<h3 id="Requesting_a_depth_sensing_session">Requesting a depth sensing session</h3>
+<h3 id="Requesting_a_depth-sensing_session">Requesting a depth-sensing session</h3>
 
 <p> Here, the caller is able to handle both CPU- and GPU-optimized usage, as well as both "luminance-alpha" and "float32" formats. The order indicates preference for CPU and "luminance-alpha":
 
