@@ -71362,12 +71362,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/RTCIceProtocol": {
-    "modified": "2020-10-15T22:06:16.004Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
   "Web/API/RTCIceRole": {
     "modified": "2020-10-15T22:06:42.134Z",
     "contributors": [
@@ -71421,12 +71415,6 @@
     "contributors": [
       "sideshowbarker",
       "fscholz",
-      "Sheppy"
-    ]
-  },
-  "Web/API/RTCIceTcpCandidateType": {
-    "modified": "2020-10-15T22:06:15.898Z",
-    "contributors": [
       "Sheppy"
     ]
   },

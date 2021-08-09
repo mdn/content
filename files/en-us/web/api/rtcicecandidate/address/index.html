@@ -19,16 +19,13 @@ browser-compat: api.RTCIceCandidate.address
 ---
 <div>{{APIRef("WebRTC")}}</div>
 
-<p><span class="seoSummary">The <strong>{{domxref("RTCIceCandidate")}}</strong>
-    interface's read-only <strong><code>address</code></strong> property is a string
-    providing the address of the device which is the source of the candidate.</span>
+<p>The <strong>{{domxref("RTCIceCandidate")}}</strong> interface's read-only <strong><code>address</code></strong> property is a string providing the IP address of the device which is the source of the candidate.
   <code>address</code> is <code>null</code> by default if not otherwise specified.</p>
 
 <p>The <code>address</code> field's value is set when the
   {{domxref("RTCIceCandidate.RTCIceCandidate", "RTCIceCandidate()")}} constructor is used.
   You can't specify the <code>address</code> in the options object, but the address is
-  automatically extracted from the {{domxref("RTCIceCandidateInit.candidate",
-  "candidate")}} a-line, if it's formatted properly.</p>
+  automatically extracted from the {{domxref("RTCIceCandidateInit.candidate", "candidate")}} a-line, if it's formatted properly.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
