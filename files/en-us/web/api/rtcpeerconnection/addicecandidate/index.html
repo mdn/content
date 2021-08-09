@@ -44,30 +44,25 @@ addIceCandidate(candidate, successCallback, failureCallback) // deprecated
 		<!-- The spec calls this object an RTCIceCandidateInit -->
 			<dl>
 				<dt><code>candidate</code> {{optional_inline}}</dt>
-				<dd><p>A {{domxref("DOMString")}} describing the properties of the candidate, taken directly
-						from the {{Glossary("SDP")}} attribute <code>"candidate"</code>. The candidate string
-						specifies the network connectivity information for the candidate. If the
-						<code>candidate</code> is an empty string (<code>""</code>), the end of the candidate
-						list has been reached; this candidate is known as the "end-of-candidates" marker.</p>
+				<dd><p>A {{domxref("DOMString")}} describing the properties of the candidate, taken directly from the <a href="/en-US/docs/Web/API/WebRTC_API/Protocols#sdp">SDP</a> attribute <code>"candidate"</code>.
+					The candidate string specifies the network connectivity information for the candidate.
+					If the <code>candidate</code> is an empty string (<code>""</code>), the end of the candidate list has been reached; this candidate is known as the "end-of-candidates" marker.</p>
 					  
-					  <p>The syntax of the candidate string is described in {{RFC(5245, "", 15.1)}}. For an
-						a-line (attribute line) that looks like this:</p>
+					  <p>The syntax of the candidate string is described in {{RFC(5245, "", 15.1)}}.
+						  For an a-line (attribute line) that looks like this:</p>
 					  
 					  <pre>a=candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host</pre>
 					  
 					  <p>the corresponding <code>candidate</code> string's value will be
 						<code>"candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host"</code>.</p>
 					  
-					  <p>The {{Glossary("user agent")}} always prefers candidates with the highest
-						{{domxref("RTCIceCandidate.priority", "priority")}}, all else being equal. In the
-						example above, the priority is <code>2043278322</code>. The attributes are all separated
-						by a single space character, and are in a specific order. The complete list of
-						attributes for this example candidate is:</p>
+					  <p>The {{Glossary("user agent")}} always prefers candidates with the highest {{domxref("RTCIceCandidate.priority", "priority")}}, all else being equal.
+						  In the example above, the priority is <code>2043278322</code>. The attributes are all separated by a single space character, and are in a specific order.
+						  The complete list of attributes for this example candidate is:</p>
 					  
 					  <ul>
 						<li>{{domxref("RTCIceCandidate.foundation", "foundation")}} = 4234997325</li>
-						<li>{{domxref("RTCIceCandidate.component", "component")}} = <code>"rtp"</code> (the
-						  number 1 is encoded to this string; 2 becomes <code>"rtcp"</code>)</li>
+						<li>{{domxref("RTCIceCandidate.component", "component")}} = <code>"rtp"</code> (the number 1 is encoded to this string; 2 becomes <code>"rtcp"</code>)</li>
 						<li>{{domxref("RTCIceCandidate.protocol", "protocol")}} = <code>"udp"</code></li>
 						<li>{{domxref("RTCIceCandidate.priority", "priority")}} = 2043278322</li>
 						<li>{{domxref("RTCIceCandidate/address", "ip")}} = <code>"192.168.0.56"</code></li>
@@ -86,7 +81,7 @@ addIceCandidate(candidate, successCallback, failureCallback) // deprecated
 
 					<p>Additional information can be found in {{domxref("RTCIceCandidate.sdpMid")}}.</p></dd>
 				<dt><code>sdpMLineIndex</code> {{optional_inline}}</dt>
-				<dd>A number property containing the zero-based index of the m-line with which the candidate is associated, within the SDP of the media description, or <code>null</code> if no such associated exists. The default is <code>null</code>.
+				<dd>A number property containing the zero-based index of the m-line with which the candidate is associated, within the <a href="/en-US/docs/Web/API/WebRTC_API/Protocols#sdp">SDP</a> of the media description, or <code>null</code> if no such associated exists. The default is <code>null</code>.
 
 					<p>Additional information can be found in {{domxref("RTCIceCandidate.sdpMLineIndex")}}.</p>
 				</dd>
