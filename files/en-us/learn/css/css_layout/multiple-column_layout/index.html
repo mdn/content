@@ -239,7 +239,7 @@ h2 {
 </div>
 </div>
 
-<p>{{ EmbedLiveSample('Multicol_Span', '100%', 400) }}</p>
+<p>{{ EmbedLiveSample('Multicol_Span', '100%', 550) }}</p>
 
 <h2 id="Columns_and_fragmentation">Columns and fragmentation</h2>
 
@@ -333,13 +333,10 @@ h2 {
 
 <p>{{ EmbedLiveSample('Multicol_4', '100%', 600) }}</p>
 
-<p>To control this behavior, we can use properties from the <a href="/en-US/docs/Web/CSS/CSS_Fragmentation">CSS Fragmentation</a> specification. This specification gives us properties to control the breaking of content in multicol and in paged media. For example, add the property {{cssxref("break-inside")}} with a value of <code>avoid</code> to the rules for <code>.card</code>. This is the container of the heading and text, so we don't want it fragmented.</p>
-
-<p>At the present time, it is also worth adding the older property <code>page-break-inside: avoid</code> for best browser support.</p>
+<p>To control this behavior, we can use properties from the <a href="/en-US/docs/Web/CSS/CSS_Fragmentation">CSS Fragmentation</a> specification. This specification gives us properties to control the breaking of content in multicol and in paged media. For example, by adding the property {{cssxref("break-inside")}} with a value of <code>avoid</code> to the rules for <code>.card</code>. This is the container of the heading and text, so we don't want it fragmented.</p>
 
 <pre class="brush: css">.card {
   break-inside: avoid;
-  page-break-inside: avoid;
   background-color: rgb(207,232,220);
   border: 2px solid rgb(79,185,227);
   padding: 10px;
@@ -347,7 +344,7 @@ h2 {
 }
 </pre>
 
-<p>Reload the page and your boxes should stay in one piece.</p>
+<p>The addition of this property causes the boxes to stay in one piece—they now do not <em>fragment</em> across the columns.</p>
 
 <div id="Multicol_5">
 <div class="hidden">
@@ -463,7 +460,7 @@ h2 {
  <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Grids">Grid</a></li>
  <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Floats">Floats</a></li>
  <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Positioning">Positioning</a></li>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout">Multiple-column layout</a></li>
+ <li><strong>Multiple-column layout</strong></li>
  <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design">Responsive design</a></li>
  <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Media_queries">Beginner's guide to media queries</a></li>
  <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods">Legacy layout methods</a></li>
