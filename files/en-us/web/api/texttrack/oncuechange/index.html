@@ -11,14 +11,12 @@ browser-compat: api.TextTrack.oncuechange
 ---
 <div>{{APIRef("WebVTT")}}</div>
 
-<p class="summary">The <strong><code>oncuechange</code></strong> EventHandler of the {{domxref("TextTrack")}} interface processes  events.</p>
-
-<p> The  event fires when .</p>
+<p class="summary">The <strong><code>oncuechange</code></strong> EventHandler of the {{domxref("TextTrack")}} interface processes  {{domxref("cuechange")}} events, which indicates that one or more cues in the track have become active or stopped being active.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre class="brush: js">TextTrack.oncuechange = function;
-TextTrack.addEventListener('<em>Please replace this text</em>', function);</pre>
+TextTrack.addEventListener('cuechange', function);</pre>
 
 <h2>Example</h2>
 
@@ -33,5 +31,4 @@ TextTrack.addEventListener('<em>Please replace this text</em>', function);</pre>
 <div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
 
 <p>{{Compat}}</p>
-
 

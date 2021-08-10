@@ -36,12 +36,12 @@ browser-compat: api.TextTrack.removeCue
 </dl>
 
 <div class="notecard note">
-  <p><strong>Note:</strong> The {{domxref("TextTrackCue")}} interface is an abstract class used as the basis for other cue types such as {{domxref("VTTCue")}}. Therefore, when removing a cue you will be passing in one of the cue types that inherit from <code>TextTrackCue</code>.</p>
+  <p><strong>Note:</strong> The {{domxref("TextTrackCue")}} interface is an abstract class used as the parent for other cue interfaces such as {{domxref("VTTCue")}}. Therefore, when removing a cue you will be passing in one of the cue types that inherit from <code>TextTrackCue</code>.</p>
 </div>
 
 <h2 id="Examples">Examples</h2>
 
-<p>In the following example a cue added to a video text track using <code>addCue()</code>, then removed using <code>removeCue</code>.</p>
+<p>In the following example a cue is added to a video text track using <code>addCue()</code>, then removed using <code>removeCue</code>.</p>
 
 <pre class="brush: js">let video = document.querySelector('video');
 let track = video.addTextTrack("captions", "Captions", "en");
@@ -58,5 +58,4 @@ track.removeCue(cue);
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <p>{{Compat}}</p>
-
 
