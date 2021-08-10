@@ -28,7 +28,13 @@ VTTCue.position = a;</pre>
   <dt><code>"line-right"</code></dt>
   <dd>Line-right alignment.</dd>
   <dt><code>"auto"</code></dt>
-  <dd>Automatic alignment.</dd>
+  <dd>Automatic alignment, which depends on the text alignment of the cue, intepreted as follows:
+    <ul>
+      <li><strong>line-left:</strong> if the text alignment is left, the cue is using a LTR language and the text alignment is start, or the cue is using a RTL language and the text alignment is end.</li>
+      <li><strong>line-right:</strong> if the text alignment is right, the cue is using a RTL language and the text alignment is start, or the cue is using a LTR language and the text-alignment is end.</li>
+      <li><strong>center:</strong> if there is no text alignment position set.</li>
+    </ul>
+  </dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>

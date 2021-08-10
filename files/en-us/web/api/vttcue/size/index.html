@@ -16,7 +16,7 @@ browser-compat: api.VTTCue.size
 <h2 id="Syntax">Syntax</h2>
 
 <pre class="brush: js">let size = VTTCue.size;
-VTTCue.size = a;</pre>
+VTTCue.size = 50;</pre>
 
 <h3>Value</h3>
 <p>A number representing the size of the cue as a percentage of the video size.</p>
@@ -30,7 +30,7 @@ let track = video.addTextTrack("captions", "Captions", "en");
 track.mode = "showing";
 
 let cue1 = new VTTCue(0, 0.9, 'Hildy!');
-cue1.size = '50';
+cue1.size = 50;
 console.log(cue1.size);
 
 track.addCue(cue1);
