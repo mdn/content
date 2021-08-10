@@ -8,7 +8,7 @@ tags:
   - JavaScript
   - Reference
 ---
-<p><span class="seoSummary">The <strong>structured clone algorithm</strong> copies complex JavaScript objects. It is used internally to transfer data between <a href="/en-US/docs/Web/API/Worker">Workers</a> via {{domxref("Worker.postMessage()", "postMessage()")}}, storing objects with <a href="/en-US/docs/Glossary/IndexedDB">IndexedDB</a>, or copying objects for <a href="#see_also">other APIs</a>.</span> It clones by recursing through the input object while maintaining a map of previously visited references, to avoid infinitely traversing cycles.</p>
+<p><span class="seoSummary">The <strong>structured clone algorithm</strong> copies complex JavaScript objects. It is used internally when invoking {{domxref("WindowOrWorkerGlobalScope.structuredClone()", "structuredClone()")}}, to transfer data between <a href="/en-US/docs/Web/API/Worker">Workers</a> via {{domxref("Worker.postMessage()", "postMessage()")}}, storing objects with <a href="/en-US/docs/Glossary/IndexedDB">IndexedDB</a>, or copying objects for <a href="#see_also">other APIs</a>.</span> It clones by recursing through the input object while maintaining a map of previously visited references, to avoid infinitely traversing cycles.</p>
 
 <h2 id="Things_that_dont_work_with_structured_clone">Things that don't work with structured clone</h2>
 
@@ -108,10 +108,10 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
+ <li>{{ domxref("WindowOrWorkerGlobalScope.structuredClone()", "structuredClone()") }}</li>
  <li><a href="https://www.w3.org/TR/html5/infrastructure.html#safe-passing-of-structured-data">HTML Specification: Safe passing of structured data</a></li>
  <li>{{ domxref("window.history") }}</li>
  <li>{{ domxref("window.postMessage()") }}</li>
  <li><a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a></li>
  <li><a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a></li>
- <li><a href="/en-US/docs/Components.utils.cloneInto">Components.utils.cloneInto</a></li>
 </ul>
