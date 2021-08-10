@@ -599,9 +599,10 @@ DJANGO_SECRET_KEY: eu09(ilk6@4sfdofb=b_2ht@vad*$ehh9-)3u_83+y%(+phh
 
 <p>We similarly set <code>DJANGO_DEBUG</code>:</p>
 
-<pre class="brush: bash">&gt; heroku config:set DJANGO_DEBUG='False'
+<pre class="brush: bash">&gt; heroku config:set DJANGO_DEBUG=False
 
-Setting DJANGO_DEBUG and restarting locallibrary... done, v8</pre>
+Setting DJANGO_DEBUG and restarting locallibrary... done, v8
+DJANGO_DEBUG: False</pre>
 
 <p>If you visit the site now you'll get a "Bad request" error, because the <a href="https://docs.djangoproject.com/en/3.1/ref/settings/#allowed-hosts">ALLOWED_HOSTS</a> setting is <em>required</em> if you have <code>DEBUG=False</code> (as a security measure). Open <strong>/locallibrary/settings.py</strong> and change the <code>ALLOWED_HOSTS</code> setting to include your base app url (e.g. 'locallibrary1234.herokuapp.com') and the URL you normally use on your local development server.</p>
 
