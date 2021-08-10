@@ -19,28 +19,19 @@ browser-compat: api.RTCIceCandidate.relatedPort
 ---
 <div>{{APIRef("WebRTC")}}</div>
 
-<p><span class="seoSummary">The <strong>{{domxref("RTCIceCandidate")}}</strong>
-    interface's read-only <strong><code>relatedPort</code></strong> property indicates the
-    port number of reflexive or relay candidates.</span> If the candidate is a host
-  candidate (that is, its {{domxref("RTCIceCandidate/address", "ip")}} is in fact the real IP
-  address of the remote peer), <code>relatedPort</code> is <code>null</code>.</p>
+<p>The <strong>{{domxref("RTCIceCandidate")}}</strong> interface's read-only <strong><code>relatedPort</code></strong> property indicates the port number of reflexive or relay candidates.</p>
+    
+<p>If the candidate is a host candidate (that is, its {{domxref("RTCIceCandidate/address", "address")}} is in fact the real IP address of the remote peer), <code>relatedPort</code> is <code>null</code>.</p>
 
-<p>The <code>relatedPort</code> field's value is set when the
-  {{domxref("RTCIceCandidate.RTCIceCandidate", "RTCIceCandidate()")}} constructor is used.
-  You can't specify the value of <code>relatedPort</code> in the options object, but the
-  address is automatically extracted from the {{domxref("RTCIceCandidateInit.candidate",
-  "candidate")}} a-line, if it's formatted properly, being taken from its
-  <code>rel-port</code> field.</p>
+<p>The <code>relatedPort</code> field's value is set from the <code>candidateInfo</code> options object passed to the {{domxref("RTCIceCandidate.RTCIceCandidate", "RTCIceCandidate()")}} constructor.
+  You can't specify the value of <code>relatedPort</code> directly in the options object, but its value is automatically extracted from the object's <code>candidate</code> a-line, if it's formatted properly (the <code>rel-port</code> field).</p>
 
-<p>The related address ({{domxref("RTCIceCandidate.relatedAddress", "relatedAddress")}})
-  and port are not used at all by {{Glossary("ICE")}} itself; they are provided for
-  analysis and diagnostic purposes only, and their inclusion may be blocked by security
-  systems, so do not rely on them having non-<code>null</code> values.</p>
+<p>The related address ({{domxref("RTCIceCandidate.relatedAddress", "relatedAddress")}}) and port are not used at all by {{Glossary("ICE")}} itself; they are provided for
+  analysis and diagnostic purposes only, and their inclusion may be blocked by security systems, so do not rely on them having non-<code>null</code> values.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js">var <em>relPort</em> = <em>RTCIceCandidate</em>.relatedPort;</pre>
+<pre class="brush: js">var <em>relPort</em> = <em>RTCIceCandidate</em>.relatedPort;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -49,8 +40,7 @@ browser-compat: api.RTCIceCandidate.relatedPort
   base for that candidate. For relay candidates, the related address and port provide the
   mapped address selected by the TURN server.</p>
 
-<p>For host candidates, <code>relatedPort</code> is <code>null</code>, meaning the field
-  is not included in the candidate's a-line.</p>
+<p>For host candidates, <code>relatedPort</code> is <code>null</code>, meaning the field is not included in the candidate's a-line.</p>
 
 <h2 id="Usage_notes">Usage notes</h2>
 
@@ -64,8 +54,7 @@ browser-compat: api.RTCIceCandidate.relatedPort
 
 <pre>a=candidate:4234997325 1 udp 2043278322 192.168.0.56 6502 typ srflx raddr 192.168.2.77 rport 32768 generation 0</pre>
 
-<p>The remote port, <code>relatedPort</code>, is the number immediately following the
-  <code>"rport"</code> label on the a-line, or 32768.</p>
+<p>The remote port, <code>relatedPort</code>, is the number immediately following the <code>"rport"</code> label on the a-line, or 32768.</p>
 
 <h2 id="Example">Example</h2>
 
@@ -99,11 +88,9 @@ if (relIP &amp;&amp; relPort) {
 
 <ul>
   <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a></li>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API/Protocols">Introduction to WebRTC
-      protocols</a></li>
+  <li><a href="/en-US/docs/Web/API/WebRTC_API/Protocols">Introduction to WebRTC protocols</a></li>
   <li><a href="/en-US/docs/Web/API/WebRTC_API/Connectivity">WebRTC connectivity</a></li>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API/Session_lifetime">Lifetime of a WebRTC
-      session</a></li>
-  <li>{{domxref("RTCIceCanddiate.relatedAddress")}}</li>
+  <li><a href="/en-US/docs/Web/API/WebRTC_API/Session_lifetime">Lifetime of a WebRTC session</a></li>
+  <li>{{domxref("RTCIceCandidate.relatedAddress")}}</li>
   <li>{{domxref("RTCIceCandidate.address")}} and {{domxref("RTCIceCandidate.port")}}</li>
 </ul>

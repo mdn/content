@@ -14,7 +14,7 @@ tags:
 ---
 <div>{{DefaultAPISidebar("Screen Capture API")}}</div>
 
-<p><span class="seoSummary">The Screen Capture API introduces additions to the existing Media Capture and Streams API to let the user select a screen or portion of a screen (such as a window) to capture as a media stream.</span> This stream can then be recorded or shared with others over the network.</p>
+<p>The Screen Capture API introduces additions to the existing Media Capture and Streams API to let the user select a screen or portion of a screen (such as a window) to capture as a media stream. This stream can then be recorded or shared with others over the network.</p>
 
 <h2 id="Screen_Capture_API_concepts_and_usage">Screen Capture API concepts and usage</h2>
 
@@ -47,9 +47,9 @@ tags:
 
 <dl>
  <dt>{{domxref("MediaTrackConstraints.cursor")}}</dt>
- <dd>A <a href="/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDOMString"><code>ConstrainDOMString</code></a> indicating whether or not the cursor should be included in the captured display surface's stream, and if it should always be visible or if it should only be visible while the mouse is in motion.</dd>
+ <dd>A <a href="/en-US/docs/Web/API/MediaTrackConstraints#constraindomstring"><code>ConstrainDOMString</code></a> indicating whether or not the cursor should be included in the captured display surface's stream, and if it should always be visible or if it should only be visible while the mouse is in motion.</dd>
  <dt>{{domxref("MediaTrackConstraints.displaySurface")}}</dt>
- <dd>A <a href="/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDOMString"><code>ConstrainDOMString</code></a> indicating what type of display surface is to be captured. The value is one of <code>application</code>, <code>browser</code>, <code>monitor</code>, or <code>window</code>.</dd>
+ <dd>A <a href="/en-US/docs/Web/API/MediaTrackConstraints#constraindomstring"><code>ConstrainDOMString</code></a> indicating what type of display surface is to be captured. The value is one of <code>application</code>, <code>browser</code>, <code>monitor</code>, or <code>window</code>.</dd>
  <dt>{{domxref("MediaTrackConstraints.logicalSurface")}}</dt>
  <dd>Indicates whether or not the video in the stream represents a logical display surface (that is, one which may not be entirely visible onscreen, or may be completely offscreen). A value of <code>true</code> indicates a logical display surface is to be captured.</dd>
 </dl>
@@ -99,19 +99,13 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
+<table>
   <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
+   <th>Specification</th>
   </tr>
   <tr>
-   <td>{{SpecName('Screen Capture')}}</td>
-   <td>{{Spec2('Screen Capture')}}</td>
-   <td>Initial definition</td>
+   <td><a href="https://w3c.github.io/mediacapture-screen-share/">Screen Capture</a></td>
   </tr>
- </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
