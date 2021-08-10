@@ -19,7 +19,7 @@ browser-compat: api.HTMLCanvasElement.toBlob
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js"><var>canvas</var>.toBlob(<var>callback</var>, <var>mimeType</var>, <var>qualityArgument</var>);
+<pre class="brush: js"><var>canvas</var>.toBlob(<var>callback</var>, <var>type</var>, <var>quality</var>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -28,10 +28,10 @@ browser-compat: api.HTMLCanvasElement.toBlob
   <dt><code>callback</code></dt>
   <dd>A callback function with the resulting {{domxref("Blob")}} object as a single
     argument.</dd>
-  <dt><code>mimeType</code> {{optional_inline}}</dt>
+  <dt><code>type</code> {{optional_inline}}</dt>
   <dd>A {{domxref("DOMString")}} indicating the image format. The default type is
     <code>image/png</code>; that type is also used if the given type isn't supported.</dd>
-  <dt><code>qualityArgument</code> {{optional_inline}}</dt>
+  <dt><code>quality</code> {{optional_inline}}</dt>
   <dd>A {{jsxref("Number")}} between <code>0</code> and <code>1</code>, indicating image
     quality if the requested type is <code>image/jpeg </code>or <code>image/webp</code>.
     If this argument is anything else, the default values 0.92 and 0.80 are used for
