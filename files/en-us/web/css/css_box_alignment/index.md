@@ -11,239 +11,211 @@ tags:
   - flexbox
   - multi-column
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The CSS Box Alignment module specifies CSS features that relate to the alignment of boxes in the various CSS box layout models: block layout, table layout, flex layout, and grid layout. The module aims to create a consistent method of alignment across all of CSS. This document details the general concepts found in the specification.</p>
+The CSS Box Alignment module specifies CSS features that relate to the alignment of boxes in the various CSS box layout models: block layout, table layout, flex layout, and grid layout. The module aims to create a consistent method of alignment across all of CSS. This document details the general concepts found in the specification.
 
-<div class="note">
-<p><strong>Note:</strong> The documentation for each layout method will detail how Box Alignment is applied there.</p>
-</div>
+> **Note:** The documentation for each layout method will detail how Box Alignment is applied there.
 
-<h2 id="Older_alignment_methods">Older alignment methods</h2>
+## Older alignment methods
 
-<p>CSS traditionally had very limited alignment capabilities. We were able to align text using {{cssxref("text-align")}}, center blocks using auto {{cssxref("margin")}}s, and in table or inline-block layouts using the {{cssxref("vertical-align")}} property. Alignment of text is now covered by the <a href="https://www.w3.org/TR/css-inline-3/">Inline Layout</a> and <a href="https://www.w3.org/TR/css-text-3/">CSS Text</a> modules, and for the first time in Box Alignment we have full horizontal and vertical alignment capabilities.</p>
+CSS traditionally had very limited alignment capabilities. We were able to align text using {{cssxref("text-align")}}, center blocks using auto {{cssxref("margin")}}s, and in table or inline-block layouts using the {{cssxref("vertical-align")}} property. Alignment of text is now covered by the [Inline Layout](https://www.w3.org/TR/css-inline-3/) and [CSS Text](https://www.w3.org/TR/css-text-3/) modules, and for the first time in Box Alignment we have full horizontal and vertical alignment capabilities.
 
-<p>If you initially learned <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">Flexbox</a> then you may consider these properties to be part of the Flexbox specification, and some of the properties are indeed listed in Level 1 of Flexbox. However the specification notes that the Box Alignment specification should be referred to as it may add additional capabilities over what is currently in Flexbox.</p>
+If you initially learned [Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout) then you may consider these properties to be part of the Flexbox specification, and some of the properties are indeed listed in Level 1 of Flexbox. However the specification notes that the Box Alignment specification should be referred to as it may add additional capabilities over what is currently in Flexbox.
 
-<h2 id="Basic_examples">Basic examples</h2>
+## Basic examples
 
-<p>The following examples demonstrate how some of the Box Alignment Properties are applied in <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">Grid</a> and <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">Flexbox</a>.</p>
+The following examples demonstrate how some of the Box Alignment Properties are applied in [Grid](/en-US/docs/Web/CSS/CSS_Grid_Layout) and [Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout).
 
-<h3 id="CSS_grid_layout_alignment_example">CSS grid layout alignment example</h3>
+### CSS grid layout alignment example
 
-<p>In this example using Grid Layout, there is extra space in the grid container after laying out the fixed width tracks on the inline (main) axis. This space is distributed using {{cssxref("justify-content")}}. On the block (cross) axis the alignment of the items inside their grid areas is controlled with {{cssxref("align-items")}}. The first item overrides the <code>align-items</code> value set on the group by setting {{cssxref("align-self")}} to <code>center</code>.</p>
+In this example using Grid Layout, there is extra space in the grid container after laying out the fixed width tracks on the inline (main) axis. This space is distributed using {{cssxref("justify-content")}}. On the block (cross) axis the alignment of the items inside their grid areas is controlled with {{cssxref("align-items")}}. The first item overrides the `align-items` value set on the group by setting {{cssxref("align-self")}} to `center`.
 
-<p>{{EmbedGHLiveSample("css-examples/box-alignment/overview/grid-align-items.html", '100%', 500)}}</p>
+{{EmbedGHLiveSample("css-examples/box-alignment/overview/grid-align-items.html", '100%', 500)}}
 
-<h3 id="Flexbox_Alignment_Example">Flexbox Alignment Example</h3>
+### Flexbox Alignment Example
 
-<p>In this example, three flex items are aligned on the main axis using <code>justify-content</code> and on the Cross Axis using <code>align-items</code>. The first item overrides the <code>align-items</code> set on the group by setting <code>align-self</code> to <code>center</code>.</p>
+In this example, three flex items are aligned on the main axis using `justify-content` and on the Cross Axis using `align-items`. The first item overrides the `align-items` set on the group by setting `align-self` to `center`.
 
-<p>{{EmbedGHLiveSample("css-examples/box-alignment/overview/flex-align-items.html", '100%', 500)}}</p>
+{{EmbedGHLiveSample("css-examples/box-alignment/overview/flex-align-items.html", '100%', 500)}}
 
-<h2 id="Key_concepts_and_terminology">Key concepts and terminology</h2>
+## Key concepts and terminology
 
-<p>The specification details some alignment terminology to make it easier to discuss these alignment properties outside of their implementation within a particular layout method. There are also some key concepts which are common to all layout methods.</p>
+The specification details some alignment terminology to make it easier to discuss these alignment properties outside of their implementation within a particular layout method. There are also some key concepts which are common to all layout methods.
 
-<h3 id="Relationship_to_writing_modes">Relationship to writing modes</h3>
+### Relationship to writing modes
 
-<p>Alignment is linked to writing modes in that when we align an item we do not consider whether we are aligning it to the physical dimensions of top, right, bottom and left. Instead we describe alignment in terms of the start and end of the particular dimension we are working with. This ensures that alignment works in the same way whichever writing mode the document has.</p>
+Alignment is linked to writing modes in that when we align an item we do not consider whether we are aligning it to the physical dimensions of top, right, bottom and left. Instead we describe alignment in terms of the start and end of the particular dimension we are working with. This ensures that alignment works in the same way whichever writing mode the document has.
 
-<h3 id="Two_dimensions_of_alignment">Two dimensions of alignment</h3>
+### Two dimensions of alignment
 
-<p>When using the box alignment properties you will align content on one of two axes — the inline (or main) axis, and the block (or cross) axis. The inline axis is the axis along which words in a sentence flow in the writing mode being used — for English, for example, the inline axis is horizontal. The block axis is the axis along which blocks, such as paragraph elements, are laid out and it runs across the Inline axis.</p>
+When using the box alignment properties you will align content on one of two axes — the inline (or main) axis, and the block (or cross) axis. The inline axis is the axis along which words in a sentence flow in the writing mode being used — for English, for example, the inline axis is horizontal. The block axis is the axis along which blocks, such as paragraph elements, are laid out and it runs across the Inline axis.
 
-<p><img alt="" src="two-axes.png"></p>
+![](two-axes.png)
 
-<p>When aligning items on the inline axis you will use the properties which begin with <code>justify-</code>:</p>
+When aligning items on the inline axis you will use the properties which begin with `justify-`:
 
-<ul>
- <li>{{cssxref("justify-items")}}</li>
- <li>{{cssxref("justify-self")}}</li>
- <li>{{cssxref("justify-content")}}</li>
-</ul>
+- {{cssxref("justify-items")}}
+- {{cssxref("justify-self")}}
+- {{cssxref("justify-content")}}
 
-<p>When aligning items on the block axis you will use the properties that begin <code>align-</code>:</p>
+When aligning items on the block axis you will use the properties that begin `align-`:
 
-<ul>
- <li>{{cssxref("align-items")}}</li>
- <li>{{cssxref("align-self")}}</li>
- <li>{{cssxref("align-content")}}</li>
-</ul>
+- {{cssxref("align-items")}}
+- {{cssxref("align-self")}}
+- {{cssxref("align-content")}}
 
-<p>Flexbox adds an additional complication in that the above is true when {{cssxref("flex-direction")}} is set to <code>row</code>. The properties are swapped when flexbox is set to <code>column</code>. Therefore, when working with flexbox it is easier to think about the main and cross axis rather than inline and block. The <code>justify-</code> properties are always used to align on the main axis, the <code>align-</code> properties on the cross axis.</p>
+Flexbox adds an additional complication in that the above is true when {{cssxref("flex-direction")}} is set to `row`. The properties are swapped when flexbox is set to `column`. Therefore, when working with flexbox it is easier to think about the main and cross axis rather than inline and block. The `justify-` properties are always used to align on the main axis, the `align-` properties on the cross axis.
 
-<h3 id="The_alignment_subject">The alignment subject</h3>
+### The alignment subject
 
-<p>The <strong>alignment subject</strong> is the thing that is being aligned. For <code>justify-self</code> or <code>align-self</code>, or when setting these values as a group with <code>justify-items</code> or <code>align-items</code>, this will be the margin box of the element that this property is being used on. The <code>justify-content</code> and <code>align-content</code> properties differ per layout method.</p>
+The **alignment subject** is the thing that is being aligned. For `justify-self` or `align-self`, or when setting these values as a group with `justify-items` or `align-items`, this will be the margin box of the element that this property is being used on. The `justify-content` and `align-content` properties differ per layout method.
 
-<h3 id="The_alignment_container">The alignment container</h3>
+### The alignment container
 
-<p>The <strong>alignment container</strong> is the box the subject is being aligned inside. This will typically be the alignment subject’s containing block. An alignment container may contain one or many alignment subjects.</p>
+The **alignment container** is the box the subject is being aligned inside. This will typically be the alignment subject’s containing block. An alignment container may contain one or many alignment subjects.
 
-<p>The below image shows an alignment container with two alignment subjects inside.</p>
+The below image shows an alignment container with two alignment subjects inside.
 
-<p><img alt="" src="align-container-subjects.png"></p>
+![](align-container-subjects.png)
 
-<h3 id="Fallback_alignment">Fallback alignment</h3>
+### Fallback alignment
 
-<p>If you set an alignment that cannot be fulfilled, then the <strong>fallback alignment</strong> will come into play and deal with the available space. This fallback alignment is specified individually for each layout method and detailed on the page for that method.</p>
+If you set an alignment that cannot be fulfilled, then the **fallback alignment** will come into play and deal with the available space. This fallback alignment is specified individually for each layout method and detailed on the page for that method.
 
-<h2 id="Types_of_alignment">Types of alignment</h2>
+## Types of alignment
 
-<p>There are three different types of alignment that the specification details; these use keyword values.</p>
+There are three different types of alignment that the specification details; these use keyword values.
 
-<ul>
- <li><strong>Positional alignment</strong>: specifying the position of an alignment subject with relation to its alignment container.</li>
- <li><strong>Baseline alignment</strong>: These keywords define alignment as a relationship among the baselines of multiple alignment subjects within an alignment context.</li>
- <li><strong>Distributed alignment</strong>: These keywords define alignment as a distribution of space among alignment subjects.</li>
-</ul>
+- **Positional alignment**: specifying the position of an alignment subject with relation to its alignment container.
+- **Baseline alignment**: These keywords define alignment as a relationship among the baselines of multiple alignment subjects within an alignment context.
+- **Distributed alignment**: These keywords define alignment as a distribution of space among alignment subjects.
 
-<h3 id="Positional_alignment_keyword_values">Positional alignment keyword values</h3>
+### Positional alignment keyword values
 
-<p>The following values are defined for positional alignment, and can be used as values for content alignment with <code>justify-content</code> and <code>align-content</code> and also for self alignment with <code>justify-self</code> and <code>align-self</code>.</p>
+The following values are defined for positional alignment, and can be used as values for content alignment with `justify-content` and `align-content` and also for self alignment with `justify-self` and `align-self`.
 
-<ul>
- <li><code>center</code></li>
- <li><code>start</code></li>
- <li><code>end</code></li>
- <li><code>self-start</code></li>
- <li><code>self-end</code></li>
- <li><code>flex-start</code> for Flexbox only</li>
- <li><code>flex-end</code> for Flexbox only</li>
- <li><code>left</code></li>
- <li><code>right</code></li>
-</ul>
+- `center`
+- `start`
+- `end`
+- `self-start`
+- `self-end`
+- `flex-start` for Flexbox only
+- `flex-end` for Flexbox only
+- `left`
+- `right`
 
-<p>Other than the physical values of <code>left</code> and <code>right</code>, which relate to physical attributes of the screen, all of the other values are logical values and relate to the writing mode of the content.</p>
+Other than the physical values of `left` and `right`, which relate to physical attributes of the screen, all of the other values are logical values and relate to the writing mode of the content.
 
-<p>For example, when working in CSS Grid Layout, if you are working in English and set <code>justify-content</code> to <code>start</code> this will move the items in the inline dimension to the start, which will be the left as sentences in English start on the left. If you were using Arabic, a right to left language, then the same value of <code>start</code> would result in the items moving to the right, as sentences in Arabic start on the right-hand side of the page.</p>
+For example, when working in CSS Grid Layout, if you are working in English and set `justify-content` to `start` this will move the items in the inline dimension to the start, which will be the left as sentences in English start on the left. If you were using Arabic, a right to left language, then the same value of `start` would result in the items moving to the right, as sentences in Arabic start on the right-hand side of the page.
 
-<p>Both of these examples have <code>justify-content: start</code>, however the location of start changes according to the writing mode.</p>
+Both of these examples have `justify-content: start`, however the location of start changes according to the writing mode.
 
-<p><img alt="" src="writing-mode-start.png"></p>
+![](writing-mode-start.png)
 
-<h3 id="Baseline_alignment">Baseline alignment</h3>
+### Baseline alignment
 
-<p>The Baseline alignment keywords are used to align the baselines of boxes across a group of alignment subjects. They can be used as values for content alignment with <code>justify-content</code> and <code>align-content</code> and also for self alignment with <code>justify-self</code> and <code>align-self</code>.</p>
+The Baseline alignment keywords are used to align the baselines of boxes across a group of alignment subjects. They can be used as values for content alignment with `justify-content` and `align-content` and also for self alignment with `justify-self` and `align-self`.
 
-<ul>
- <li><code>baseline</code></li>
- <li><code>first baseline</code></li>
- <li><code>last baseline</code></li>
-</ul>
+- `baseline`
+- `first baseline`
+- `last baseline`
 
-<p>Baseline content alignment — specifying a baseline alignment value for <code>justify-content</code> or <code>align-content</code> — works in layout methods that lay items out in rows. The alignment subjects are baseline aligned against each other by adding padding inside the boxes.</p>
+Baseline content alignment — specifying a baseline alignment value for `justify-content` or `align-content` — works in layout methods that lay items out in rows. The alignment subjects are baseline aligned against each other by adding padding inside the boxes.
 
-<p>Baseline self alignment shifts the boxes to align by baseline by adding a margin outside the boxes. Self alignment is when using <code>justify-self</code> or <code>align-self</code>, or when setting these values as a group with <code>justify-items</code> and <code>align-items</code>.</p>
+Baseline self alignment shifts the boxes to align by baseline by adding a margin outside the boxes. Self alignment is when using `justify-self` or `align-self`, or when setting these values as a group with `justify-items` and `align-items`.
 
-<h3 id="Distributed_alignment">Distributed alignment</h3>
+### Distributed alignment
 
-<p>The <strong>distributed alignment keywords</strong> are used with the <code>align-content</code> and <code>justify-content</code> properties. These keywords define what happens to any additional space after alignment subjects have been displayed. The values are as follows:</p>
+The **distributed alignment keywords** are used with the `align-content` and `justify-content` properties. These keywords define what happens to any additional space after alignment subjects have been displayed. The values are as follows:
 
-<ul>
- <li><code>stretch</code></li>
- <li><code>space-between</code></li>
- <li><code>space-around</code></li>
- <li><code>space-evenly</code></li>
-</ul>
+- `stretch`
+- `space-between`
+- `space-around`
+- `space-evenly`
 
-<p>For example, in Flex Layout items are aligned with <code>flex-start</code> initially. Working in a horizontal top to bottom writing mode such as English, with <code>flex-direction</code> as <code>row</code> the items start on the far left and any available space after displaying the items is placed after the items.</p>
+For example, in Flex Layout items are aligned with `flex-start` initially. Working in a horizontal top to bottom writing mode such as English, with `flex-direction` as `row` the items start on the far left and any available space after displaying the items is placed after the items.
 
-<p><img alt="" src="justify-content-start.png"></p>
+![](justify-content-start.png)
 
-<p>If you set <code>justify-content: space-between</code> on the flex container, the available space is now shared out and placed between the items.</p>
+If you set `justify-content: space-between` on the flex container, the available space is now shared out and placed between the items.
 
-<p><img alt="" src="justify-content-space-between.png"></p>
+![](justify-content-space-between.png)
 
-<p>There needs to be space available in the dimension you wish to align the items in, in order for these keywords to take effect. With no space, there is nothing to distribute.</p>
+There needs to be space available in the dimension you wish to align the items in, in order for these keywords to take effect. With no space, there is nothing to distribute.
 
-<h2 id="Overflow_alignment">Overflow alignment</h2>
+## Overflow alignment
 
-<p>The <code>safe</code> and <code>unsafe</code> keywords help define behavior when an alignment subject is larger than the alignment container. The <code>safe</code> keyword will align to <code>start</code> in the case of a specified alignment causing an overflow, the aim being to avoid “data loss” where part of the item is outside of the boundaries of the alignment container and can’t be scrolled to.</p>
+The `safe` and `unsafe` keywords help define behavior when an alignment subject is larger than the alignment container. The `safe` keyword will align to `start` in the case of a specified alignment causing an overflow, the aim being to avoid “data loss” where part of the item is outside of the boundaries of the alignment container and can’t be scrolled to.
 
-<p>If you specify <code>unsafe</code> then the alignment will be honoured even if it would cause such data loss.</p>
+If you specify `unsafe` then the alignment will be honoured even if it would cause such data loss.
 
-<h2 id="Gaps_between_boxes">Gaps between boxes</h2>
+## Gaps between boxes
 
-<p>The box alignment specification also includes the <code>gap</code>, <code>row-gap</code>, and <code>column-gap</code> properties. These properties enable the setting of a consistent gap between items in a row or column, in any layout method which has items arranged in this way.</p>
+The box alignment specification also includes the `gap`, `row-gap`, and `column-gap` properties. These properties enable the setting of a consistent gap between items in a row or column, in any layout method which has items arranged in this way.
 
-<p>The <code>gap</code> property is a shorthand for <code>row-gap</code> and <code>column-gap</code>, which allows us to set these properties at once:</p>
+The `gap` property is a shorthand for `row-gap` and `column-gap`, which allows us to set these properties at once:
 
-<ul>
- <li>{{cssxref("row-gap")}}</li>
- <li>{{cssxref("column-gap")}}</li>
- <li>{{cssxref("gap")}}</li>
-</ul>
+- {{cssxref("row-gap")}}
+- {{cssxref("column-gap")}}
+- {{cssxref("gap")}}
 
-<p>In the below example, a grid layout uses the <code>gap</code> shorthand to set a <code>10px</code> gap between row tracks, and a <code>2em</code> gap between column tracks.</p>
+In the below example, a grid layout uses the `gap` shorthand to set a `10px` gap between row tracks, and a `2em` gap between column tracks.
 
-<p>{{EmbedGHLiveSample("css-examples/box-alignment/overview/grid-gap.html", '100%', 500)}}</p>
+{{EmbedGHLiveSample("css-examples/box-alignment/overview/grid-gap.html", '100%', 500)}}
 
-<p>In this example I am using the {{cssxref("gap")}} property in addition to {{cssxref("gap")}}. The gap properties were originally prefixed with <code>grid-</code> in the Grid Layout specification and some browsers only support these prefixed versions.</p>
+In this example I am using the {{cssxref("gap")}} property in addition to {{cssxref("gap")}}. The gap properties were originally prefixed with `grid-` in the Grid Layout specification and some browsers only support these prefixed versions.
 
-<ul>
- <li>{{cssxref("row-gap")}}</li>
- <li>{{cssxref("column-gap")}}</li>
- <li>{{cssxref("gap")}}</li>
-</ul>
+- {{cssxref("row-gap")}}
+- {{cssxref("column-gap")}}
+- {{cssxref("gap")}}
 
-<p>The prefixed versions will be maintained as an alias of the unprefixed ones, however you can always double up in the way that you would with vendor prefixes, adding the <code>grid-gap</code> property and then the <code>gap</code> property with the same values.</p>
+The prefixed versions will be maintained as an alias of the unprefixed ones, however you can always double up in the way that you would with vendor prefixes, adding the `grid-gap` property and then the `gap` property with the same values.
 
-<p>Also, be aware that other things may increase the visual gap displayed, for example using the space distribution keywords or adding margins to items.</p>
+Also, be aware that other things may increase the visual gap displayed, for example using the space distribution keywords or adding margins to items.
 
-<h2 id="Pages_detailing_individual_alignment_properties">Pages detailing individual alignment properties</h2>
+## Pages detailing individual alignment properties
 
-<p>As the CSS box alignment properties are implemented differently depending on the specification they interact with, refer to the following pages for each layout type for details of how to use the alignment properties with it:</p>
+As the CSS box alignment properties are implemented differently depending on the specification they interact with, refer to the following pages for each layout type for details of how to use the alignment properties with it:
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox">Box alignment in Flexbox</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Grid_Layout">Box alignment in CSS Grid Layout</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Multi-column_Layout">Box alignment in multiple-column layout</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Block_Abspos_Tables">Box alignment for block, absolutely positioned and table layout</a></li>
-</ul>
+- [Box alignment in Flexbox](/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox)
+- [Box alignment in CSS Grid Layout](/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Grid_Layout)
+- [Box alignment in multiple-column layout](/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Multi-column_Layout)
+- [Box alignment for block, absolutely positioned and table layout](/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Block_Abspos_Tables)
 
-<h2 id="Reference">Reference</h2>
+## Reference
 
-<h3 id="CSS_Properties">CSS Properties</h3>
+### CSS Properties
 
-<ul>
- <li>{{cssxref("justify-content")}}</li>
- <li>{{cssxref("align-content")}}</li>
- <li>{{cssxref("place-content")}}</li>
- <li>{{cssxref("justify-items")}}</li>
- <li>{{cssxref("align-items")}}</li>
- <li>{{cssxref("place-items")}}</li>
- <li>{{cssxref("justify-self")}}</li>
- <li>{{cssxref("align-self")}}</li>
- <li>{{cssxref("place-self")}}</li>
- <li>{{cssxref("row-gap")}}</li>
- <li>{{cssxref("column-gap")}}</li>
- <li>{{cssxref("gap")}}</li>
-</ul>
+- {{cssxref("justify-content")}}
+- {{cssxref("align-content")}}
+- {{cssxref("place-content")}}
+- {{cssxref("justify-items")}}
+- {{cssxref("align-items")}}
+- {{cssxref("place-items")}}
+- {{cssxref("justify-self")}}
+- {{cssxref("align-self")}}
+- {{cssxref("place-self")}}
+- {{cssxref("row-gap")}}
+- {{cssxref("column-gap")}}
+- {{cssxref("gap")}}
 
-<h3 id="Glossary_Entries">Glossary Entries</h3>
+### Glossary Entries
 
-<ul>
- <li>{{Glossary("Cross axis")}}</li>
- <li>{{Glossary("Main axis")}}</li>
- <li>{{Glossary("Alignment container")}}</li>
- <li>{{Glossary("Alignment subject")}}</li>
- <li>{{Glossary("Fallback alignment")}}</li>
-</ul>
+- {{Glossary("Cross axis")}}
+- {{Glossary("Main axis")}}
+- {{Glossary("Alignment container")}}
+- {{Glossary("Alignment subject")}}
+- {{Glossary("Fallback alignment")}}
 
-<h2 id="Guides">Guides</h2>
+## Guides
 
-<ul>
- <li>CSS Flexbox guide: <em><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Basic concepts of Flexbox</a></em></li>
- <li>CSS Flexbox guide: <em><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container">Aligning items in a flex container</a></em></li>
- <li>CSS Grid guide: <em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">Box alignment in CSS Grid layouts</a></em></li>
-</ul>
+- CSS Flexbox guide: _[Basic concepts of Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
+- CSS Flexbox guide: _[Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_
+- CSS Grid guide: _[Box alignment in CSS Grid layouts](/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
 
-<h2 id="External_Resources">External Resources</h2>
+## External Resources
 
-<ul>
- <li><a href="https://rachelandrew.co.uk/css/cheatsheets/box-alignment">Box alignment cheatsheet</a></li>
- <li><a href="https://www.smashingmagazine.com/2016/11/css-grids-flexbox-box-alignment-new-layout-standard/">CSS Grid, Flexbox and Box alignment</a></li>
- <li><a href="https://blogs.igalia.com/jfernandez/2017/05/03/can-i-use-css-box-alignment/">Thoughts on partial implementations of Box alignment</a></li>
-</ul>
+- [Box alignment cheatsheet](https://rachelandrew.co.uk/css/cheatsheets/box-alignment)
+- [CSS Grid, Flexbox and Box alignment](https://www.smashingmagazine.com/2016/11/css-grids-flexbox-box-alignment-new-layout-standard/)
+- [Thoughts on partial implementations of Box alignment](https://blogs.igalia.com/jfernandez/2017/05/03/can-i-use-css-box-alignment/)

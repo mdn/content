@@ -8,18 +8,19 @@ tags:
   - Motion Path
   - Reference
   - offset-anchor
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.offset-anchor
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>offset-anchor</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property specifies the point inside the box of an element travelling along an {{cssxref("offset-path")}} that is actually moving along the path.</p>
+The **`offset-anchor`** [CSS](/en-US/docs/Web/CSS) property specifies the point inside the box of an element travelling along an {{cssxref("offset-path")}} that is actually moving along the path.
 
-<div>{{EmbedInteractiveExample("pages/css/offset-anchor.html")}}</div>
+{{EmbedInteractiveExample("pages/css/offset-anchor.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">/* Keyword values */
+```css
+/* Keyword values */
 offset-anchor: top;
 offset-anchor: bottom;
 offset-anchor: left;
@@ -27,10 +28,10 @@ offset-anchor: right;
 offset-anchor: center;
 offset-anchor: auto;
 
-/* &lt;percentage&gt; values */
+/* <percentage> values */
 offset-anchor: 25% 75%;
 
-/* &lt;length&gt; values */
+/* <length> values */
 offset-anchor: 0 0;
 offset-anchor: 1cm 2cm;
 offset-anchor: 10ch 8em;
@@ -43,51 +44,52 @@ offset-anchor: right 3em bottom 10px;
 offset-anchor: inherit;
 offset-anchor: initial;
 offset-anchor: revert;
-offset-anchor: unset;</pre>
+offset-anchor: unset;
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>auto</code></dt>
- <dd><code>offset-anchor</code> is given the same value as the element's {{cssxref("transform-origin")}}, unless {{cssxref("offset-path")}} is <code>none</code>, in which case it takes its value from {{cssxref("offset-position")}}.</dd>
- <dt><code>&lt;position&gt;</code></dt>
- <dd>A {{cssxref("&lt;position&gt;")}} defines an x/y coordinate, to place an item relative to the edges of an element's box. It can be defined using one to four values. For more specifics, see the {{cssxref("&lt;position&gt;")}} and {{cssxref("background-position")}} reference pages. Note that the 3-value position syntax does not work for any usage of <code>&lt;position&gt;</code>, except for in <code>background(-position)</code>.</dd>
-</dl>
+- `auto`
+  - : `offset-anchor` is given the same value as the element's {{cssxref("transform-origin")}}, unless {{cssxref("offset-path")}} is `none`, in which case it takes its value from {{cssxref("offset-position")}}.
+- `<position>`
+  - : A {{cssxref("&lt;position&gt;")}} defines an x/y coordinate, to place an item relative to the edges of an element's box. It can be defined using one to four values. For more specifics, see the {{cssxref("&lt;position&gt;")}} and {{cssxref("background-position")}} reference pages. Note that the 3-value position syntax does not work for any usage of `<position>`, except for in `background(-position)`.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_various_offset-anchor_values">Setting various offset-anchor values</h3>
+### Setting various offset-anchor values
 
-<p>In the following example, we have three {{htmlelement("div")}} elements nested in {{htmlelement("section")}} elements. Each <code>&lt;div&gt;</code> is given the same {{cssxref("offset-path")}} (a horizontal line 200 pixels long) and animated to move along it. The three are then given different {{cssxref("background-color")}} and <code>offset-anchor</code> values. </p>
+In the following example, we have three {{htmlelement("div")}} elements nested in {{htmlelement("section")}} elements. Each `<div>` is given the same {{cssxref("offset-path")}} (a horizontal line 200 pixels long) and animated to move along it. The three are then given different {{cssxref("background-color")}} and `offset-anchor` values.
 
-<p>Each <code>&lt;section&gt;</code> has been styled with a linear gradient to give it a horizontal line running through its center, to give you a visual display of where the <code>&lt;div&gt;</code>'s offset paths are running.</p>
+Each `<section>` has been styled with a linear gradient to give it a horizontal line running through its center, to give you a visual display of where the `<div>`'s offset paths are running.
 
-<p>This allows you to see what effect the different <code>offset-anchor</code> values have — the first one, <code>auto</code>, causes the <code>&lt;div&gt;</code>'s center point to move along the path. The other two cause the <code>&lt;div&gt;</code>'s top-right and bottom-left points to move along the path, respectively.</p>
+This allows you to see what effect the different `offset-anchor` values have — the first one, `auto`, causes the `<div>`'s center point to move along the path. The other two cause the `<div>`'s top-right and bottom-left points to move along the path, respectively.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;section&gt;
-  &lt;div class="offset-anchor1"&gt;&lt;/div&gt;
-&lt;/section&gt;
-&lt;section&gt;
-  &lt;div class="offset-anchor2"&gt;&lt;/div&gt;
-&lt;/section&gt;
-&lt;section&gt;
-  &lt;div class="offset-anchor3"&gt;&lt;/div&gt;
-&lt;/section&gt;
-</pre>
+```html
+<section>
+  <div class="offset-anchor1"></div>
+</section>
+<section>
+  <div class="offset-anchor2"></div>
+</section>
+<section>
+  <div class="offset-anchor3"></div>
+</section>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   offset-path: path('M 0,20 L 200,20');
   animation: move 3000ms infinite alternate ease-in-out;
   width: 40px;
@@ -122,25 +124,24 @@ section {
   100% {
     offset-distance: 100%;
   }
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Setting_various_offset-anchor_values', '100%', '300')}}</p>
+{{EmbedLiveSample('Setting_various_offset-anchor_values', '100%', '300')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("offset")}}</li>
- <li>{{cssxref("offset-distance")}}</li>
- <li>{{cssxref("offset-rotation")}}</li>
- <li><a href="/en-US/docs/Web/SVG/Tutorial/Paths">SVG <code>&lt;path&gt; </code></a></li>
-</ul>
+- {{cssxref("offset")}}
+- {{cssxref("offset-distance")}}
+- {{cssxref("offset-rotation")}}
+- [SVG `<path>`](/en-US/docs/Web/SVG/Tutorial/Paths)

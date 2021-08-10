@@ -13,73 +13,69 @@ tags:
   - viewport
 browser-compat: css.at-rules.viewport
 ---
-<div>{{CSSRef}}{{deprecated_header}}</div>
+{{CSSRef}}{{deprecated_header}}
 
-<div class="notecard note">
-<p><strong>Note:</strong> See <a href="https://github.com/w3c/csswg-drafts/issues/4766">https://github.com/w3c/csswg-drafts/issues/4766</a> for discussion around @viewport's removal from the standards track.</p>
-</div>
+> **Note:** See <https://github.com/w3c/csswg-drafts/issues/4766> for discussion around @viewport's removal from the standards track.
 
-<p>The <strong><code>@viewport</code></strong> <a href="/en-US/docs/CSS">CSS</a> <a href="/en-US/docs/CSS/At-rule">at-rule</a> lets you configure the {{glossary("viewport")}} through which the document is viewed. It's primarily used for mobile devices, but is also used by desktop browsers that support features like "snap to edge" (such as Microsoft Edge).</p>
+The **`@viewport`** [CSS](/en-US/docs/CSS) [at-rule](/en-US/docs/CSS/At-rule) lets you configure the {{glossary("viewport")}} through which the document is viewed. It's primarily used for mobile devices, but is also used by desktop browsers that support features like "snap to edge" (such as Microsoft Edge).
 
-<p>Lengths specified as percentages are calculated relative to the <strong>initial viewport</strong>, which is the viewport before any user agent or authored styles have had an opportunity to adjust the viewport. This is typically based on the size of the window on desktop browsers that aren't in full screen mode.</p>
+Lengths specified as percentages are calculated relative to the **initial viewport**, which is the viewport before any user agent or authored styles have had an opportunity to adjust the viewport. This is typically based on the size of the window on desktop browsers that aren't in full screen mode.
 
-<p>On mobile devices (or desktop devices that are in full screen mode), the initial viewport is usually the portion of a device's screen that is available for application use. This may be either the full screen or the full screen area minus areas controlled by the operating system (such as a taskbar) or the application-available screen area (either the full screen or the screen minus any areas owned by the operating system or other applications).</p>
+On mobile devices (or desktop devices that are in full screen mode), the initial viewport is usually the portion of a device's screen that is available for application use. This may be either the full screen or the full screen area minus areas controlled by the operating system (such as a taskbar) or the application-available screen area (either the full screen or the screen minus any areas owned by the operating system or other applications).
 
-<pre class="brush: css no-line-numbers">@viewport {
+```css
+@viewport {
   width: 100vw; /*Sets the width of the actual viewport to the device width*/
 }
-</pre>
+```
 
-<div class="notecard note">
-<p><strong>Note:</strong> The use of <code>&lt;meta name="viewport"&gt;</code> tag overrides <code>@viewport</code></p>
-</div>
+> **Note:** The use of `<meta name="viewport">` tag overrides `@viewport`
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The at-rule contains a set of nested {{glossary("descriptor (CSS)", "descriptor")}}s in a CSS block that is delimited by curly braces.</p>
+The at-rule contains a set of nested {{glossary("descriptor (CSS)", "descriptor")}}s in a CSS block that is delimited by curly braces.
 
-<p>A <em>zoom factor</em> of <code>1.0</code> or <code>100%</code> corresponds to no zooming. Larger values zoom in. Smaller values zoom out.</p>
+A _zoom factor_ of `1.0` or `100%` corresponds to no zooming. Larger values zoom in. Smaller values zoom out.
 
-<h3 id="Descriptors">Descriptors</h3>
+### Descriptors
 
-<p>Browser support for <code>@viewport</code> is weak at this time, with support being largely available in Internet Explorer and Edge. Even in those browsers, only a small number of descriptors are available. Browsers will ignore <code>@viewport</code> if they don't support it, and will ignore any descriptors that they don't recognize.</p>
+Browser support for `@viewport` is weak at this time, with support being largely available in Internet Explorer and Edge. Even in those browsers, only a small number of descriptors are available. Browsers will ignore `@viewport` if they don't support it, and will ignore any descriptors that they don't recognize.
 
-<dl>
- <dt><a href="/en-US/docs/Web/CSS/@viewport/min-width"><code>min-width</code></a></dt>
- <dd>Used in the determination of the width of the viewport when the document is first displayed.</dd>
- <dt><a href="/en-US/docs/Web/CSS/@viewport/max-width"><code>max-width</code></a></dt>
- <dd>Used in the determination of the width of the viewport when the document is first displayed.</dd>
- <dt><a href="/en-US/docs/Web/CSS/@viewport/width"><code>width</code></a></dt>
- <dd>A shorthand descriptor for setting both <code>min-width</code> and <code>max-width</code>.</dd>
- <dt><a href="/en-US/docs/Web/CSS/@viewport/min-height"><code>min-height</code></a></dt>
- <dd>Used in the determination of the height of the viewport when the document is first displayed.</dd>
- <dt><a href="/en-US/docs/Web/CSS/@viewport/max-height"><code>max-height</code></a></dt>
- <dd>Used in the determination of the height of the viewport when the document is first displayed.</dd>
- <dt><a href="/en-US/docs/Web/CSS/@viewport/height"><code>height</code></a></dt>
- <dd>A shorthand descriptor for setting both <code>min-height</code> and <code>max-height</code>.</dd>
- <dt><a href="/en-US/docs/Web/CSS/@viewport/zoom"><code>zoom</code></a></dt>
- <dd>Sets the initial zoom factor.</dd>
- <dt><a href="/en-US/docs/Web/CSS/@viewport/min-zoom"><code>min-zoom</code></a></dt>
- <dd>Sets the minimum zoom factor.</dd>
- <dt><a href="/en-US/docs/Web/CSS/@viewport/max-zoom"><code>max-zoom</code></a></dt>
- <dd>Sets the maximum zoom factor.</dd>
- <dt><a href="/en-US/docs/Web/CSS/@viewport/user-zoom"><code>user-zoom</code></a></dt>
- <dd>Controls whether or not the user should be able to change the zoom factor.</dd>
- <dt><a href="/en-US/docs/Web/CSS/@viewport/orientation"><code>orientation</code></a></dt>
- <dd>Controls the document's orientation.</dd>
- <dt>{{cssxref("@viewport/viewport-fit", "viewport-fit")}}</dt>
- <dd>Controls the display of the document on non-rectangular displays.</dd>
-</dl>
+- [`min-width`](/en-US/docs/Web/CSS/@viewport/min-width)
+  - : Used in the determination of the width of the viewport when the document is first displayed.
+- [`max-width`](/en-US/docs/Web/CSS/@viewport/max-width)
+  - : Used in the determination of the width of the viewport when the document is first displayed.
+- [`width`](/en-US/docs/Web/CSS/@viewport/width)
+  - : A shorthand descriptor for setting both `min-width` and `max-width`.
+- [`min-height`](/en-US/docs/Web/CSS/@viewport/min-height)
+  - : Used in the determination of the height of the viewport when the document is first displayed.
+- [`max-height`](/en-US/docs/Web/CSS/@viewport/max-height)
+  - : Used in the determination of the height of the viewport when the document is first displayed.
+- [`height`](/en-US/docs/Web/CSS/@viewport/height)
+  - : A shorthand descriptor for setting both `min-height` and `max-height`.
+- [`zoom`](/en-US/docs/Web/CSS/@viewport/zoom)
+  - : Sets the initial zoom factor.
+- [`min-zoom`](/en-US/docs/Web/CSS/@viewport/min-zoom)
+  - : Sets the minimum zoom factor.
+- [`max-zoom`](/en-US/docs/Web/CSS/@viewport/max-zoom)
+  - : Sets the maximum zoom factor.
+- [`user-zoom`](/en-US/docs/Web/CSS/@viewport/user-zoom)
+  - : Controls whether or not the user should be able to change the zoom factor.
+- [`orientation`](/en-US/docs/Web/CSS/@viewport/orientation)
+  - : Controls the document's orientation.
+- {{cssxref("@viewport/viewport-fit", "viewport-fit")}}
+  - : Controls the display of the document on non-rectangular displays.
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_viewport_size_zoom_and_orientation">Setting viewport size, zoom, and orientation</h3>
+### Setting viewport size, zoom, and orientation
 
-<pre class="brush: css">@viewport {
+```css
+@viewport {
   min-width: 640px;
   max-width: 800px;
 }
@@ -92,19 +88,18 @@ browser-compat: css.at-rules.viewport
 
 @viewport {
   orientation: landscape;
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTMLElement("meta")}}, specifically <code>&lt;meta name="viewport"&gt;</code></li>
- <li><a href="/en-us/docs/Web/HTML/Viewport_meta_tag">Using the viewport meta tag to control layout on mobile browsers</a></li>
-</ul>
+- {{HTMLElement("meta")}}, specifically `<meta name="viewport">`
+- [Using the viewport meta tag to control layout on mobile browsers](/en-us/docs/Web/HTML/Viewport_meta_tag)

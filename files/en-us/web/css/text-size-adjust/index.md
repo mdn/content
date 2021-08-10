@@ -8,18 +8,19 @@ tags:
   - Experimental
   - NeedsExample
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.text-size-adjust
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p>The <strong><code>text-size-adjust</code></strong> <a href="/en-US/docs/Web/API/CSS">CSS</a> property controls the text inflation algorithm used on some smartphones and tablets. Other browsers will ignore this property.</p>
+The **`text-size-adjust`** [CSS](/en-US/docs/Web/API/CSS) property controls the text inflation algorithm used on some smartphones and tablets. Other browsers will ignore this property.
 
-<pre class="brush: css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 text-size-adjust: none;
 text-size-adjust: auto;
 
-/* &lt;percentage&gt; value */
+/* <percentage> value */
 text-size-adjust: 80%;
 
 /* Global values */
@@ -27,58 +28,56 @@ text-size-adjust: inherit;
 text-size-adjust: initial;
 text-size-adjust: revert;
 text-size-adjust: unset;
-</pre>
+```
 
-<p>Because many websites have not been developed with small devices in mind, mobile browsers differ from desktop browsers in the way they render web pages. Instead of laying out pages at the width of the device screen, they lay them out using a {{glossary("viewport")}} that is much wider, usually 800 or 1000 pixels. To map the extra-wide layout back to the original device size, they either show only part of the whole render or scale the viewport down to fit.</p>
+Because many websites have not been developed with small devices in mind, mobile browsers differ from desktop browsers in the way they render web pages. Instead of laying out pages at the width of the device screen, they lay them out using a {{glossary("viewport")}} that is much wider, usually 800 or 1000 pixels. To map the extra-wide layout back to the original device size, they either show only part of the whole render or scale the viewport down to fit.
 
-<p>Since text that has been scaled down to fit a mobile screen may be very small, many mobile browsers apply a text inflation algorithm to enlarge the text to make it more readable. When an element containing text uses 100% of the screen's width, the algorithm increases its text size, but without modifying the layout. The <code>text-size-adjust</code> property allows web authors to disable or modify this behavior, as web pages designed with small screens in mind do not need it.</p>
+Since text that has been scaled down to fit a mobile screen may be very small, many mobile browsers apply a text inflation algorithm to enlarge the text to make it more readable. When an element containing text uses 100% of the screen's width, the algorithm increases its text size, but without modifying the layout. The `text-size-adjust` property allows web authors to disable or modify this behavior, as web pages designed with small screens in mind do not need it.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>text-size-adjust</code> property is specified as <code>none</code>, <code>auto</code>, or a <code>&lt;percentage&gt;</code>.</p>
+The `text-size-adjust` property is specified as `none`, `auto`, or a `<percentage>`.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>none</code></dt>
- <dd>Disables the browser's inflation algorithm.</dd>
- <dt><code>auto</code></dt>
- <dd>Enables the browser's inflation algorithm. This value is used to cancel a <code>none</code> value previously set with CSS.</dd>
- <dt><code>&lt;percentage&gt;</code></dt>
- <dd>Enables the browser's inflation algorithm, specifying a percentage value with which to increase the font size.</dd>
-</dl>
+- `none`
+  - : Disables the browser's inflation algorithm.
+- `auto`
+  - : Enables the browser's inflation algorithm. This value is used to cancel a `none` value previously set with CSS.
+- `<percentage>`
+  - : Enables the browser's inflation algorithm, specifying a percentage value with which to increase the font size.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Basic_disabling_usage">Basic disabling usage</h3>
+### Basic disabling usage
 
-<p>As hinted at above, on a properly designed responsive site the <code>text-size-adjust</code> behavior is not needed, so developers can elect to turn it off by specifying a value of none:</p>
+As hinted at above, on a properly designed responsive site the `text-size-adjust` behavior is not needed, so developers can elect to turn it off by specifying a value of none:
 
-<pre class="brush: css">p {
+```css
+p {
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a class="link-https" href="https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/AdjustingtheTextSize/AdjustingtheTextSize.html#//apple_ref/doc/uid/TP40006510-SW16">Apple's documentation</a></li>
- <li><a href="http://dbaron.org/log/20111126-font-inflation">Gecko's behavior description</a>, by L. David Baron</li>
- <li><a href="https://msdn.microsoft.com/library/windows/apps/ff462082(v=vs.105).aspx#BKMK_AdjustingTextSizewithCustomCSS">Microsoft's documentation</a></li>
-</ul>
+- [Apple's documentation](https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/AdjustingtheTextSize/AdjustingtheTextSize.html#//apple_ref/doc/uid/TP40006510-SW16)
+- [Gecko's behavior description](http://dbaron.org/log/20111126-font-inflation), by L. David Baron
+- [Microsoft's documentation](<https://msdn.microsoft.com/library/windows/apps/ff462082(v=vs.105).aspx#BKMK_AdjustingTextSizewithCustomCSS>)

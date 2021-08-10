@@ -9,22 +9,23 @@ tags:
   - Reference
   - padding-block
   - padding-block-end
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.padding-block-end
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>padding-block-end</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property defines the logical block end padding of an element, which maps to a physical padding depending on the element's writing mode, directionality, and text orientation.</p>
+The **`padding-block-end`** [CSS](/en-US/docs/Web/CSS) property defines the logical block end padding of an element, which maps to a physical padding depending on the element's writing mode, directionality, and text orientation.
 
-<div>{{EmbedInteractiveExample("pages/css/padding-block-end.html")}}</div>
+{{EmbedInteractiveExample("pages/css/padding-block-end.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* &lt;length&gt; values */
+```css
+/* <length> values */
 padding-block-end: 10px;      /* An absolute length */
 padding-block-end: 1em;       /* A length relative to the text size */
 
-/* &lt;percentage&gt; value */
+/* <percentage> value */
 padding-block-end: 5%;        /* A padding relative to the block container's width */
 
 /* Global values */
@@ -32,45 +33,45 @@ padding-block-end: inherit;
 padding-block-end: initial;
 padding-block-end: revert;
 padding-block-end: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
-  <dt>{{cssxref("&lt;length&gt;")}}</dt>
-  <dd>The size of the padding as a fixed value. Must be nonnegative.</dd>
-  <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
-  <dd>The size of the padding as a percentage, relative to the <em>inline-size</em> of the containing block. Must be nonnegative.</dd>
-</dl>
+- {{cssxref("&lt;length&gt;")}}
+  - : The size of the padding as a fixed value. Must be nonnegative.
+- {{cssxref("&lt;percentage&gt;")}}
+  - : The size of the padding as a percentage, relative to the _inline-size_ of the containing block. Must be nonnegative.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The <code>padding-block-end</code> property is defined in the specification as taking the same values as the {{cssxref("padding-top")}} property. However, the phsyical property it maps to depends on the values set for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}. Therefore, it could map to {{cssxref("padding-bottom")}}, {{cssxref("padding-right")}}, or {{cssxref("padding-left")}}</p>
+The `padding-block-end` property is defined in the specification as taking the same values as the {{cssxref("padding-top")}} property. However, the phsyical property it maps to depends on the values set for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}. Therefore, it could map to {{cssxref("padding-bottom")}}, {{cssxref("padding-right")}}, or {{cssxref("padding-left")}}
 
-<p>It relates to {{cssxref("padding-block-start")}}, {{cssxref("padding-inline-start")}}, and {{cssxref("padding-inline-end")}}, which define the other paddings of the element.</p>
+It relates to {{cssxref("padding-block-start")}}, {{cssxref("padding-inline-start")}}, and {{cssxref("padding-inline-end")}}, which define the other paddings of the element.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_block_end_padding_for_vertical_text">Setting block end padding for vertical text</h3>
+### Setting block end padding for vertical text
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;p class="exampleText"&gt;Example text&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div>
+  <p class="exampleText">Example text</p>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   background-color: yellow;
   width: 120px;
   height: 120px;
@@ -80,23 +81,22 @@ padding-block-end: unset;
   writing-mode: vertical-lr;
   padding-block-end: 20px;
   background-color: #C8C800;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Setting_block_end_padding_for_vertical_text", 140, 140)}}</p>
+{{EmbedLiveSample("Setting_block_end_padding_for_vertical_text", 140, 140)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The mapped physical properties: {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, and {{cssxref("padding-left")}}</li>
- <li>{{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}</li>
-</ul>
+- The mapped physical properties: {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, and {{cssxref("padding-left")}}
+- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

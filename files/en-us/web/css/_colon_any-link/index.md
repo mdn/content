@@ -1,6 +1,6 @@
 ---
 title: ':any-link'
-slug: 'Web/CSS/:any-link'
+slug: Web/CSS/:any-link
 tags:
   - ':any-link'
   - CSS
@@ -14,30 +14,35 @@ tags:
   - hyperlinks
 browser-compat: css.selectors.any-link
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>:any-link</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> selector represents an element that acts as the source anchor of a hyperlink, independent of whether it has been visited. In other words, it matches every {{HTMLElement("a")}} or {{HTMLElement("area")}} element that has an <code>href</code> attribute. Thus, it matches all elements that match {{cssxref(":link")}} or {{cssxref(":visited")}}.</p>
+The **`:any-link`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) selector represents an element that acts as the source anchor of a hyperlink, independent of whether it has been visited. In other words, it matches every {{HTMLElement("a")}} or {{HTMLElement("area")}} element that has an `href` attribute. Thus, it matches all elements that match {{cssxref(":link")}} or {{cssxref(":visited")}}.
 
-<pre class="brush: css no-line-numbers">/* Selects any element that would be matched by :link or :visited */
+```css
+/* Selects any element that would be matched by :link or :visited */
 :any-link {
   color: green;
-}</pre>
+}
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;a href="https://example.com"&gt;External link&lt;/a&gt;&lt;br&gt;
-&lt;a href="#"&gt;Internal target link&lt;/a&gt;&lt;br&gt;
-&lt;a&gt;Placeholder link (won't get styled)&lt;/a&gt;</pre>
+```html
+<a href="https://example.com">External link</a><br>
+<a href="#">Internal target link</a><br>
+<a>Placeholder link (won't get styled)</a>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">a:any-link {
+```css
+a:any-link {
   border: 1px solid blue;
   color: orange;
 }
@@ -47,29 +52,25 @@ a:-webkit-any-link {
   border: 1px solid blue;
   color: orange;
 }
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample('Examples')}}</p>
+{{EmbedLiveSample('Examples')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks">Creating hyperlinks</a></li>
- <li>Matches HTML elements: <code><a href="/en-US/docs/Web/HTML/Element/a">&lt;a&gt;</a></code>, <code><a href="/en-US/docs/Web/HTML/Element/area">&lt;area&gt;</a></code>, and <code><a href="/en-US/docs/Web/HTML/Element/link">&lt;link&gt;</a></code> with an {{htmlattrxref("href", "a")}} attribute</li>
- <li>Related CSS selectors:
-  <ul>
-   <li><code><a href="/en-US/docs/Web/CSS/:visited">:visited</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/:link">:link</a></code></li>
-  </ul>
- </li>
-</ul>
+- [Creating hyperlinks](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
+- Matches HTML elements: [`<a>`](/en-US/docs/Web/HTML/Element/a), [`<area>`](/en-US/docs/Web/HTML/Element/area), and [`<link>`](/en-US/docs/Web/HTML/Element/link) with an {{htmlattrxref("href", "a")}} attribute
+- Related CSS selectors:
+
+  - [`:visited`](/en-US/docs/Web/CSS/:visited)
+  - [`:link`](/en-US/docs/Web/CSS/:link)

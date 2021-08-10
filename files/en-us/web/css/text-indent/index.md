@@ -8,25 +8,26 @@ tags:
   - Indent
   - Layout
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
   - text-indent
 browser-compat: css.properties.text-indent
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>text-indent</code></strong> CSS property sets the length of empty space (indentation) that is put before lines of text in a block.</p>
+The **`text-indent`** CSS property sets the length of empty space (indentation) that is put before lines of text in a block.
 
-<div>{{EmbedInteractiveExample("pages/css/text-indent.html")}}</div>
+{{EmbedInteractiveExample("pages/css/text-indent.html")}}
 
-<p>Horizontal spacing is with respect to the left (or right, for right-to-left layout) edge of the containing block-level element's content box.</p>
+Horizontal spacing is with respect to the left (or right, for right-to-left layout) edge of the containing block-level element's content box.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css no-line-numbers">/* &lt;length&gt; values */
+```css
+/* <length> values */
 text-indent: 3mm;
 text-indent: 40px;
 
-/* &lt;percentage&gt; value
+/* <percentage> value
    relative to the containing block width */
 text-indent: 15%;
 
@@ -40,148 +41,154 @@ text-indent: inherit;
 text-indent: initial;
 text-indent: revert;
 text-indent: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt>{{cssxref("&lt;length&gt;")}}</dt>
- <dd>Indentation is specified as an absolute {{cssxref("&lt;length&gt;")}}. Negative values are allowed. See {{cssxref("&lt;length&gt;")}} values for possible units.</dd>
- <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
- <dd>Indentation is a {{cssxref("&lt;percentage&gt;")}} of the containing block's width.</dd>
- <dt><code>each-line</code> {{experimental_inline}}</dt>
- <dd>Indentation affects the first line of the block container as well as each line after a <em>forced line break</em>, but does not affect lines after a <em>soft wrap break</em>.</dd>
- <dt><code>hanging</code> {{experimental_inline}}</dt>
- <dd>Inverts which lines are indented. All lines <em>except</em> the first line will be indented.</dd>
-</dl>
+- {{cssxref("&lt;length&gt;")}}
+  - : Indentation is specified as an absolute {{cssxref("&lt;length&gt;")}}. Negative values are allowed. See {{cssxref("&lt;length&gt;")}} values for possible units.
+- {{cssxref("&lt;percentage&gt;")}}
+  - : Indentation is a {{cssxref("&lt;percentage&gt;")}} of the containing block's width.
+- `each-line` {{experimental_inline}}
+  - : Indentation affects the first line of the block container as well as each line after a _forced line break_, but does not affect lines after a _soft wrap break_.
+- `hanging` {{experimental_inline}}
+  - : Inverts which lines are indented. All lines _except_ the first line will be indented.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Simple_indent">Simple indent</h3>
+### Simple indent
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-    nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.&lt;/p&gt;
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-    nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.&lt;/p&gt;
-</pre>
+```html
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+    nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+    nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   text-indent: 5em;
   background: powderblue;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Simple_indent','100%','100%') }}</p>
+{{ EmbedLiveSample('Simple_indent','100%','100%') }}
 
-<h3 id="Skipping_indentation_on_the_first_paragraph">Skipping indentation on the first paragraph</h3>
+### Skipping indentation on the first paragraph
 
-<p>A common typographic practice when paragraph indentation is present is to skip the indentation for the first paragraph. As the <em>The Chicago Manual of Style</em> puts it, &ldquo;the first line of text following a subhead may begin flush left or be indented by the usual paragraph indention.&rdquo;</p>
+A common typographic practice when paragraph indentation is present is to skip the indentation for the first paragraph. As the _The Chicago Manual of Style_ puts it, “the first line of text following a subhead may begin flush left or be indented by the usual paragraph indention.”
 
-<p>Treating first paragraphs differently from subsequent paragraphs can be done using the <a href="/en-US/docs/Web/CSS/Adjacent_sibling_combinator">adjacent sibling combinator</a>, as in the following example:</p>
+Treating first paragraphs differently from subsequent paragraphs can be done using the [adjacent sibling combinator](/en-US/docs/Web/CSS/Adjacent_sibling_combinator), as in the following example:
 
-<h4 id="HTML2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;h2&gt;Lorem ipsum&lt;/h2&gt;
+```html
+<h2>Lorem ipsum</h2>
 
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu
 venenatis quam. Vivamus euismod eleifend metus vitae pharetra. In vel tempor metus.
 Donec dapibus feugiat euismod. Vivamus interdum tellus dolor. Vivamus blandit eros
 et imperdiet auctor. Mauris sapien nunc, condimentum a efficitur non, elementum ac
 sapien. Cras consequat turpis non augue ullamcorper, sit amet porttitor dui
-interdum.&lt;/p&gt;
+interdum.</p>
 
-&lt;p&gt;Sed laoreet luctus erat at rutrum. Proin velit metus, luctus in sapien in,
+<p>Sed laoreet luctus erat at rutrum. Proin velit metus, luctus in sapien in,
 tincidunt mattis ex. Praesent venenatis orci at sagittis eleifend. Nulla facilisi.
 In feugiat vehicula magna iaculis vehicula. Nulla suscipit tempor odio a semper.
 Donec vitae dapibus ipsum. Donec libero purus, convallis eu efficitur id, pulvinar
 elementum diam. Maecenas mollis blandit placerat. Ut gravida pellentesque nunc, in
-eleifend ante convallis sit amet.&lt;/p&gt;
+eleifend ante convallis sit amet.</p>
 
-&lt;h2&gt;Donec ullamcorper elit nisl&lt;/h2&gt;
+<h2>Donec ullamcorper elit nisl</h2>
 
-&lt;p&gt;Donec ullamcorper elit nisl, sagittis bibendum massa gravida in. Fusce
+<p>Donec ullamcorper elit nisl, sagittis bibendum massa gravida in. Fusce
 tempor in ante gravida iaculis. Integer posuere tempor metus. Vestibulum lacinia,
 nunc et dictum viverra, urna massa aliquam tellus, id mollis sem velit vestibulum
 nulla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames
 ac turpis egestas. Donec vulputate leo ut iaculis ultrices. Cras egestas rhoncus
 lorem. Nunc blandit tempus lectus, rutrum hendrerit orci eleifend id. Ut at quam
-velit.&lt;/p&gt;
+velit.</p>
 
-&lt;p&gt;Aenean rutrum tempor ligula, at luctus ligula auctor vestibulum. Sed
+<p>Aenean rutrum tempor ligula, at luctus ligula auctor vestibulum. Sed
 sollicitudin velit in leo fringilla sollicitudin. Proin eu gravida arcu. Nam
 iaculis malesuada massa, eget aliquet turpis sagittis sed. Sed mollis tellus ac
 dui ullamcorper, nec lobortis diam pellentesque. Quisque dapibus accumsan libero,
-sed euismod ipsum ullamcorper sed.&lt;/p&gt;</pre>
+sed euismod ipsum ullamcorper sed.</p>
+```
 
-<h4 id="CSS2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">p {
+```css
+p {
     text-align: justify;
     margin: 1em 0 0 0;
 }
 p + p {
     text-indent: 2em;
     margin: 0;
-}</pre>
+}
+```
 
-<h4 id="Result2">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Skipping_indentation_on_the_first_paragraph','','500px') }}</p>
+{{ EmbedLiveSample('Skipping_indentation_on_the_first_paragraph','','500px') }}
 
-<h3 id="Percentage_indent">Percentage indent</h3>
+### Percentage indent
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-    nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.&lt;/p&gt;
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-    nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.&lt;/p&gt;</pre>
+```html
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+    nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+    nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   text-indent: 30%;
   background: plum;
-}</pre>
+}
+```
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Percentage_indent','100%','100%') }}</p>
+{{ EmbedLiveSample('Percentage_indent','100%','100%') }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Learn/CSS">Learn to style HTML using CSS</a></li>
- <li>Related CSS properties:
-  <ul>
-   <li><code><a href="/en-US/docs/Web/CSS/text-justify">text-justify</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/text-orientation">text-orientation</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/text-overflow">text-overflow</a></code></li>
-   <li><code><a href="/en-US/docs/Web/SVG/Attribute/text-rendering">text-rendering</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/text-transform">text-transform</a></code></li>
-  </ul>
- </li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Text_Decoration">CSS Text Decoration</a> CSS module</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Text">CSS Text module</a></li>
-</ul>
+- [Learn to style HTML using CSS](/en-US/docs/Learn/CSS)
+- Related CSS properties:
+
+  - [`text-justify`](/en-US/docs/Web/CSS/text-justify)
+  - [`text-orientation`](/en-US/docs/Web/CSS/text-orientation)
+  - [`text-overflow`](/en-US/docs/Web/CSS/text-overflow)
+  - [`text-rendering`](/en-US/docs/Web/SVG/Attribute/text-rendering)
+  - [`text-transform`](/en-US/docs/Web/CSS/text-transform)
+
+- [CSS Text Decoration](/en-US/docs/Web/CSS/CSS_Text_Decoration) CSS module
+- [CSS Text module](/en-US/docs/Web/CSS/CSS_Text)

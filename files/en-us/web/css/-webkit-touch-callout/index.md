@@ -9,63 +9,62 @@ tags:
   - Non-standard
   - Reference
   - WebKit
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.-webkit-touch-callout
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<p>The <code>-webkit-touch-callout</code> <a href="/en-US/docs/Web/CSS">CSS</a> property controls the display of the default callout shown when you touch and hold a touch target.</p>
+The `-webkit-touch-callout` [CSS](/en-US/docs/Web/CSS) property controls the display of the default callout shown when you touch and hold a touch target.
 
-<p>When a target is touched and held on iOS, Safari displays a callout information about the link. This property allows disabling that behavior.</p>
+When a target is touched and held on iOS, Safari displays a callout information about the link. This property allows disabling that behavior.
 
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 -webkit-touch-callout: default;
 -webkit-touch-callout: none;
 
 /* Global values */
 -webkit-touch-callout: initial;
 -webkit-touch-callout: inherit;
--webkit-touch-callout: unset;</pre>
+-webkit-touch-callout: unset;
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>default</code></dt>
- <dd>The default callout is displayed.</dd>
- <dt><code>none</code></dt>
- <dd>The callout is disabled.</dd>
-</dl>
+- `default`
+  - : The default callout is displayed.
+- `none`
+  - : The callout is disabled.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Turn_off_touch_callout">Turn off touch callout</h3>
+### Turn off touch callout
 
-<pre class="brush: css">.example {
+```css
+.example {
   -webkit-touch-callout: none;
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any standard. Apple has a <a href="https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266-_webkit_touch_callout">description in the Safari CSS Reference</a>.</p>
+Not part of any standard. Apple has a [description in the Safari CSS Reference](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266-_webkit_touch_callout).
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/WebKit_Extensions">WebKit CSS extensions</a></li>
- <li><a href="https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266-_webkit_touch_callout">-webkit-touch-callout in the Apple developer documentation</a></li>
-</ul>
+- [WebKit CSS extensions](/en-US/docs/Web/CSS/WebKit_Extensions)
+- [-webkit-touch-callout in the Apple developer documentation](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266-_webkit_touch_callout)

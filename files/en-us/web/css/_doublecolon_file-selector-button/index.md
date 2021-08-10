@@ -1,6 +1,6 @@
 ---
 title: '::file-selector-button'
-slug: 'Web/CSS/::file-selector-button'
+slug: Web/CSS/::file-selector-button
 tags:
   - CSS
   - Non-standard
@@ -10,44 +10,47 @@ tags:
   - WebKit
 browser-compat: css.selectors.file-selector-button
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>::file-selector-button</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-element</a> represents the button of an {{HTMLElement("input") }} of  <code><a href="/en-US/docs/Web/HTML/Element/input/file">type="file"</a></code>.</p>
+The **`::file-selector-button`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents the button of an {{HTMLElement("input") }} of  [`type="file"`](/en-US/docs/Web/HTML/Element/input/file).
 
-<div class="notecard note">
-<p><strong>Note:</strong> Older versions of WebKit/Blink compatible browsers like Chrome, Opera and Safari (indicated by the <code>-webkit</code> prefix) supported a non-standard pseudo-element <code>::-webkit-file-upload-button</code>.</p>
+> **Note:** Older versions of WebKit/Blink compatible browsers like Chrome, Opera and Safari (indicated by the `-webkit` prefix) supported a non-standard pseudo-element `::-webkit-file-upload-button`.
+>
+> Legacy Edge and later versions of IE supported a non-standard pseudo-element `::-ms-browse`.
+>
+> Both of these pseudo-elements serve the same purpose as `::file-selector-button`.
 
-<p>Legacy Edge and later versions of IE supported a non-standard pseudo-element <code>::-ms-browse</code>.</p>
+## Syntax
 
-<p>Both of these pseudo-elements serve the same purpose as <code>::file-selector-button</code>.</p>
-</div>
+```css
+selector::file-selector-button
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Examples
 
-<pre class="brush: css"><var>selector</var>::file-selector-button
-</pre>
+### Basic example
 
-<h2 id="Examples">Examples</h2>
+#### HTML
 
-<h3>Basic example</h3>
+```html
+<form>
+  <label for="fileUpload">Upload file</label>
+  <input type="file" id="fileUpload">
+</form>
+```
 
-<h4 id="HTML">HTML</h4>
+#### CSS
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;label for="fileUpload"&gt;Upload file&lt;/label&gt;
-  &lt;input type="file" id="fileUpload"&gt;
-&lt;/form&gt;</pre>
-
-<h4 id="CSS">CSS</h4>
-
-<pre class="brush: css hidden">form {
+```css hidden
+form {
   display: flex;
   gap: 1em;
   align-items: center;
 }
-</pre>
+```
 
-<pre class="brush: css">input[type=file]::file-selector-button {
+```css
+input[type=file]::file-selector-button {
   border: 2px solid #6c5ce7;
   padding: .2em .4em;
   border-radius: .2em;
@@ -59,34 +62,39 @@ input[type=file]::file-selector-button:hover {
   background-color: #81ecec;
   border: 2px solid #00cec9;
 }
-</pre>
+```
 
-<h4>Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Basic_example", "100%", 150)}}</p>
+{{EmbedLiveSample("Basic_example", "100%", 150)}}
 
-<p>Example with fallback for older browsers supporting the <code>-webkit</code> and <code>-ms</code> prefixes. Note that as a selector you will need to write out the whole code block twice, as an unrecognized selector invalidates the whole list.</p>
+Example with fallback for older browsers supporting the `-webkit` and `-ms` prefixes. Note that as a selector you will need to write out the whole code block twice, as an unrecognized selector invalidates the whole list.
 
-<p>Note that <code>::file-selector-button</code> is a whole element, and as such matches the rules from the UA stylesheet. In particular, fonts and colors won't necessarily inherit from the <code>input</code> element.</p>
+Note that `::file-selector-button` is a whole element, and as such matches the rules from the UA stylesheet. In particular, fonts and colors won't necessarily inherit from the `input` element.
 
-<h3>Fallback example</h3>
-<h4 id="HTML_2">HTML</h4>
+### Fallback example
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;label for="fileUpload"&gt;Upload file&lt;/label&gt;
-  &lt;input type="file" id="fileUpload"&gt;
-&lt;/form&gt;</pre>
+#### HTML
 
-<h4 id="CSS_2">CSS</h4>
+```html
+<form>
+  <label for="fileUpload">Upload file</label>
+  <input type="file" id="fileUpload">
+</form>
+```
 
-<pre class="brush: css hidden">form {
+#### CSS
+
+```css hidden
+form {
   display: flex;
   gap: 1em;
   align-items: center;
 }
-</pre>
+```
 
-<pre class="brush: css">input[type=file]::-ms-browse {
+```css
+input[type=file]::-ms-browse {
   border: 2px solid #6c5ce7;
   padding: .2em .4em;
   border-radius: .2em;
@@ -123,26 +131,24 @@ input[type=file]::file-selector-button:hover {
   background-color: #81ecec;
   border: 2px solid #00cec9;
 }
-</pre>
+```
 
-<h4>Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Fallback_example", "100%", 150)}}</p>
+{{EmbedLiveSample("Fallback_example", "100%", 150)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/WebKit_Extensions">WebKit CSS extensions</a></li>
- <li><a href="/en-US/docs/Web/CSS/Microsoft_Extensions">Microsoft CSS extensions</a></li>
- <li><a href="/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory Entries API</a></li>
- <li><a href="/en-US/docs/Web/API/File_and_Directory_Entries_API/Firefox_support">File and Directory Entries API support in Firefox</a></li>
- <li><code><a href="/en-US/docs/Web/HTML/Element/input/file">&lt;input type="file"&gt;</a></code></li>
-</ul>
+- [WebKit CSS extensions](/en-US/docs/Web/CSS/WebKit_Extensions)
+- [Microsoft CSS extensions](/en-US/docs/Web/CSS/Microsoft_Extensions)
+- [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
+- [File and Directory Entries API support in Firefox](/en-US/docs/Web/API/File_and_Directory_Entries_API/Firefox_support)
+- [`<input type="file">`](/en-US/docs/Web/HTML/Element/input/file)

@@ -6,18 +6,19 @@ tags:
   - CSS Fonts
   - CSS Property
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.font-feature-settings
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>font-feature-settings</code></strong> CSS property controls advanced typographic features in OpenType fonts.</p>
+The **`font-feature-settings`** CSS property controls advanced typographic features in OpenType fonts.
 
-<div>{{EmbedInteractiveExample("pages/css/font-feature-settings.html")}}</div>
+{{EmbedInteractiveExample("pages/css/font-feature-settings.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* Use the default settings */
+```css
+/* Use the default settings */
 font-feature-settings: normal;
 
 /* Set values for OpenType feature tags */
@@ -30,35 +31,35 @@ font-feature-settings: "smcp", "swsh" 2;
 font-feature-settings: inherit;
 font-feature-settings: initial;
 font-feature-settings: revert;
-font-feature-settings: unset;</pre>
+font-feature-settings: unset;
+```
 
-Whenever possible, Web authors should instead use the {{cssxref("font-variant")}} shorthand property or an associated longhand property such as {{cssxref("font-variant-ligatures")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-east-asian")}}, {{cssxref("font-variant-alternates")}}, {{cssxref("font-variant-numeric")}} or {{cssxref("font-variant-position")}}.<br>
-<br>
-These lead to more effective, predictable, understandable results than <code>font-feature-settings</code>, which is a low-level feature designed to handle special cases where no other way exists to enable or access an OpenType font feature. In particular, <code>font-feature-settings</code> shouldn't be used to enable small caps.
+Whenever possible, Web authors should instead use the {{cssxref("font-variant")}} shorthand property or an associated longhand property such as {{cssxref("font-variant-ligatures")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-east-asian")}}, {{cssxref("font-variant-alternates")}}, {{cssxref("font-variant-numeric")}} or {{cssxref("font-variant-position")}}.
 
-<h3 id="Values">Values</h3>
+These lead to more effective, predictable, understandable results than `font-feature-settings`, which is a low-level feature designed to handle special cases where no other way exists to enable or access an OpenType font feature. In particular, `font-feature-settings` shouldn't be used to enable small caps.
 
-<dl>
- <dt><code>normal</code></dt>
- <dd>Text is laid out using default settings.</dd>
- <dt><code>&lt;feature-tag-value&gt;</code></dt>
- <dd>When rendering text, the list of OpenType feature tag value is passed to the text layout engine to enable or disable font features. The tag is always a {{cssxref("&lt;string&gt;")}} of 4 ASCII characters. If it has more or less characters, or if it contains characters outside the <code>U+20</code> – <code>U+7E</code> codepoint range, the whole property is invalid.<br>
- The value is a positive integer. The two keywords <code>on</code> and <code>off</code> are synonyms for <code>1</code> and <code>0</code> respectively. If no value is set, the default is <code>1</code>. For non-Boolean OpenType features (e.g. <a href="https://www.microsoft.com/typography/otspec/features_pt.htm#salt">stylistic alternates</a>), the value implies a particular glyph to be selected; for Boolean values, it is a switch.</dd>
-</dl>
+### Values
 
-<h2 id="Formal_definition">Formal definition</h2>
+- `normal`
+  - : Text is laid out using default settings.
+- `<feature-tag-value>`
+  - : When rendering text, the list of OpenType feature tag value is passed to the text layout engine to enable or disable font features. The tag is always a {{cssxref("&lt;string&gt;")}} of 4 ASCII characters. If it has more or less characters, or if it contains characters outside the `U+20` – `U+7E` codepoint range, the whole property is invalid.
+    The value is a positive integer. The two keywords `on` and `off` are synonyms for `1` and `0` respectively. If no value is set, the default is `1`. For non-Boolean OpenType features (e.g. [stylistic alternates](https://www.microsoft.com/typography/otspec/features_pt.htm#salt)), the value implies a particular glyph to be selected; for Boolean values, it is a switch.
 
-<p>{{cssinfo}}</p>
+## Formal definition
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+{{cssinfo}}
+
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Enabling_various_font_features">Enabling various font features</h3>
+### Enabling various font features
 
-<pre class="brush:css">/* use small-cap alternate glyphs */
+```css
+/* use small-cap alternate glyphs */
 .smallcaps { font-feature-settings: "smcp" on; }
 
 /* convert both upper and lowercase to small caps (affects punctuation also) */
@@ -88,28 +89,25 @@ td.tabular { font-feature-settings: "tnum"; }
   font-family: Gabriola; /* available on Windows 7, and on Mac OS */
   font-feature-settings: "ss07";
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("@font-face/font-display", "font-display")}}</li>
- <li>{{cssxref("@font-face/font-family", "font-family")}}</li>
- <li>{{cssxref("@font-face/font-stretch", "font-stretch")}}</li>
- <li>{{cssxref("@font-face/font-style", "font-style")}}</li>
- <li>{{cssxref("@font-face/font-weight", "font-weight")}}</li>
- <li>{{cssxref("@font-face/font-variant", "font-variant")}}</li>
- <li>{{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}</li>
- <li>{{cssxref("@font-face/src", "src")}}</li>
- <li>{{cssxref("@font-face/unicode-range", "unicode-range")}}</li>
- <li><a href="https://www.microsoft.com/typography/otspec/featurelist.htm">OpenType Feature Tags</a> list</li>
-
-</ul>
+- {{cssxref("@font-face/font-display", "font-display")}}
+- {{cssxref("@font-face/font-family", "font-family")}}
+- {{cssxref("@font-face/font-stretch", "font-stretch")}}
+- {{cssxref("@font-face/font-style", "font-style")}}
+- {{cssxref("@font-face/font-weight", "font-weight")}}
+- {{cssxref("@font-face/font-variant", "font-variant")}}
+- {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}
+- {{cssxref("@font-face/src", "src")}}
+- {{cssxref("@font-face/unicode-range", "unicode-range")}}
+- [OpenType Feature Tags](https://www.microsoft.com/typography/otspec/featurelist.htm) list

@@ -7,94 +7,57 @@ tags:
   - HTML
   - Reference
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>Specifying <strong>alternative style sheets</strong> in a web page provides a way for users to see multiple versions of a page, based on their needs or preferences.</p>
+Specifying **alternative style sheets** in a web page provides a way for users to see multiple versions of a page, based on their needs or preferences.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> This feature is not well supported in browsers without an extension. To offer alternative presentations that work with a user's existing preferences, see the CSS <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features">media features</a> {{cssxref("@media/prefers-color-scheme","prefers-color-scheme")}} and {{cssxref("@media/prefers-contrast","prefers-contrast")}}.</p>
-</div>
+> **Note:** This feature is not well supported in browsers without an extension. To offer alternative presentations that work with a user's existing preferences, see the CSS [media features](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) {{cssxref("@media/prefers-color-scheme","prefers-color-scheme")}} and {{cssxref("@media/prefers-contrast","prefers-contrast")}}.
 
-<p>Firefox lets the user select the stylesheet using the <em>View &gt; Page Style</em> submenu. Other browsers require an extension to enable this functionality. The web page can also provide its own user interface to let the user switch styles.</p>
+Firefox lets the user select the stylesheet using the _View > Page Style_ submenu. Other browsers require an extension to enable this functionality. The web page can also provide its own user interface to let the user switch styles.
 
-<h2 id="An_example_specifying_the_alternative_stylesheets">An example: specifying the alternative stylesheets</h2>
+## An example: specifying the alternative stylesheets
 
-<p>The alternate stylesheets are commonly specified using a {{HTMLElement("link")}} element with <code>rel="alternate stylesheet"</code> and <code>title="..."</code> attributes. For example:</p>
+The alternate stylesheets are commonly specified using a {{HTMLElement("link")}} element with `rel="alternate stylesheet"` and `title="..."` attributes. For example:
 
-<pre class="brush: html">&lt;link href="reset.css" rel="stylesheet" type="text/css"&gt;
+```html
+<link href="reset.css" rel="stylesheet" type="text/css">
 
-&lt;link href="default.css" rel="stylesheet" type="text/css" title="Default Style"&gt;
-&lt;link href="fancy.css" rel="alternate stylesheet" type="text/css" title="Fancy"&gt;
-&lt;link href="basic.css" rel="alternate stylesheet" type="text/css" title="Basic"&gt;
-</pre>
+<link href="default.css" rel="stylesheet" type="text/css" title="Default Style">
+<link href="fancy.css" rel="alternate stylesheet" type="text/css" title="Fancy">
+<link href="basic.css" rel="alternate stylesheet" type="text/css" title="Basic">
+```
 
-<p>In this example, the styles "Default Style", "Fancy", and "Basic" will be listed in the <em>Page Style</em> submenu, with "Default Style" pre-selected. When the user selects a different style, the page will immediately be re-rendered using that style sheet.</p>
+In this example, the styles "Default Style", "Fancy", and "Basic" will be listed in the _Page Style_ submenu, with "Default Style" pre-selected. When the user selects a different style, the page will immediately be re-rendered using that style sheet.
 
-<p>No matter what style is selected, the rules from the reset.css stylesheet will always be applied.</p>
+No matter what style is selected, the rules from the reset.css stylesheet will always be applied.
 
-<h3 id="Try_it_out">Try it out</h3>
+### Try it out
 
-<p><a href="https://mdn.github.io/css-examples/alt-style-sheets/">Try a working example here</a>.</p>
+[Try a working example here](https://mdn.github.io/css-examples/alt-style-sheets/).
 
-<h2 id="Details">Details</h2>
+## Details
 
-<p>Any stylesheet in a document falls into one of the following categories:</p>
+Any stylesheet in a document falls into one of the following categories:
 
-<ul>
- <li><strong>Persistent</strong> (no <code>rel="alternate"</code>, no <code>title=""</code>): always applies to the document.</li>
- <li><strong>Preferred</strong> (no <code>rel="alternate"</code>, with <code>title="..."</code> specified): applied by default, but {{domxref("StyleSheet.disabled", "disabled", "", 1)}} if an alternate stylesheet is selected. <strong>There can only be one preferred stylesheet</strong>, so providing stylesheets with different title attributes will cause some of them to be ignored.</li>
- <li><strong>Alternate</strong> (<code>rel="alternate stylesheet"</code>, <code>title="..."</code> must be specified): disabled by default, can be selected.</li>
-</ul>
+- **Persistent** (no `rel="alternate"`, no `title=""`): always applies to the document.
+- **Preferred** (no `rel="alternate"`, with `title="..."` specified): applied by default, but {{domxref("StyleSheet.disabled", "disabled", "", 1)}} if an alternate stylesheet is selected. **There can only be one preferred stylesheet**, so providing stylesheets with different title attributes will cause some of them to be ignored.
+- **Alternate** (`rel="alternate stylesheet"`, `title="..."` must be specified): disabled by default, can be selected.
 
-<p>When style sheets are referenced with a <code>title</code> attribute on the {{HTMLElement("link", "&lt;link rel=\"stylesheet\"&gt;")}} or {{HTMLElement("style")}} element, the title becomes one of the choices offered to the user. Style sheets linked with the same <code>title</code> are part of the same choice. Style sheets linked without a <code>title</code> attribute are always applied.</p>
+When style sheets are referenced with a `title` attribute on the {{HTMLElement("link", "&lt;link rel=\"stylesheet\"&gt;")}} or {{HTMLElement("style")}} element, the title becomes one of the choices offered to the user. Style sheets linked with the same `title` are part of the same choice. Style sheets linked without a `title` attribute are always applied.
 
-<p>Use <code>rel="stylesheet"</code> to link to the default style, and <code>rel="alternate stylesheet"</code> to link to alternative style sheets. This tells the browser which style sheet title should be selected by default, and makes that default selection apply in browsers that do not support alternate style sheets.</p>
+Use `rel="stylesheet"` to link to the default style, and `rel="alternate stylesheet"` to link to alternative style sheets. This tells the browser which style sheet title should be selected by default, and makes that default selection apply in browsers that do not support alternate style sheets.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#rel-alternate', 'link type "alternate"')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#the-link-is-an-alternative-stylesheet', 'alternative stylesheet')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#attr-style-title', 'the "title" attribute for the style element')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#attr-meta-http-equiv-default-style', 'meta http-equiv="default-style")')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSSOM', '#css-style-sheet-collections', 'CSS Style Sheet Collections')}}</td>
-   <td>{{Spec2('CSSOM')}}</td>
-   <td>The CSS OM specification defines the concepts of the <strong>style sheet set name</strong>, its <strong>disabled flag</strong>, and the <strong>preferred CSS style sheet set name</strong>.<br>
-    It defines how these are determined, and lets the HTML specification define the HTML-specific behaviors by requiring it to define when to <strong><dfn>create a CSS style sheet</dfn></strong>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML4.01", "present/styles.html#h-14.3", "Alternative style sheets")}}</td>
-   <td>{{Spec2("HTML4.01")}}</td>
-   <td>Earlier, the HTML specification itself defined the concept of preferred and alternate stylesheets.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                                            | Status                           | Comment                                                                                                                                                                                                                                                                                                                         |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('HTML WHATWG', '#rel-alternate', 'link type "alternate"')}}                                             | {{Spec2('HTML WHATWG')}} |                                                                                                                                                                                                                                                                                                                                 |
+| {{SpecName('HTML WHATWG', '#the-link-is-an-alternative-stylesheet', 'alternative stylesheet')}}         | {{Spec2('HTML WHATWG')}} |                                                                                                                                                                                                                                                                                                                                 |
+| {{SpecName('HTML WHATWG', '#attr-style-title', 'the "title" attribute for the style element')}}         | {{Spec2('HTML WHATWG')}} |                                                                                                                                                                                                                                                                                                                                 |
+| {{SpecName('HTML WHATWG', '#attr-meta-http-equiv-default-style', 'meta http-equiv="default-style")')}} | {{Spec2('HTML WHATWG')}} |                                                                                                                                                                                                                                                                                                                                 |
+| {{SpecName('CSSOM', '#css-style-sheet-collections', 'CSS Style Sheet Collections')}}                         | {{Spec2('CSSOM')}}         | The CSS OM specification defines the concepts of the **style sheet set name**, its **disabled flag**, and the **preferred CSS style sheet set name**. It defines how these are determined, and lets the HTML specification define the HTML-specific behaviors by requiring it to define when to **_create a CSS style sheet_**. |
+| {{SpecName("HTML4.01", "present/styles.html#h-14.3", "Alternative style sheets")}}                             | {{Spec2("HTML4.01")}}     | Earlier, the HTML specification itself defined the concept of preferred and alternate stylesheets.                                                                                                                                                                                                                              |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("html.elements.link.rel.alternate_stylesheet")}}</p>
+{{Compat("html.elements.link.rel.alternate_stylesheet")}}

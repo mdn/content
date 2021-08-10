@@ -10,72 +10,57 @@ tags:
   - display-listitem
   - list-item
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <code>list-item</code> keyword causes the element to generate a <code>::marker</code> pseudo-element with the content specified by its {{CSSxRef("list-style")}} properties (for example a bullet point) together with a principal box of the specified type for its own contents.</p>
+The `list-item` keyword causes the element to generate a `::marker` pseudo-element with the content specified by its {{CSSxRef("list-style")}} properties (for example a bullet point) together with a principal box of the specified type for its own contents.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>A single value of <code>list-item</code> will cause the element to behave like a list item. This can be used together with {{CSSxRef("list-style-type")}} and {{CSSxRef("list-style-position")}}.</p>
+A single value of `list-item` will cause the element to behave like a list item. This can be used together with {{CSSxRef("list-style-type")}} and {{CSSxRef("list-style-position")}}.
 
-<p><code>list-item</code> can also be combined with any {{CSSxRef("&lt;display-outside&gt;")}} keyword and the <code>flow</code> or <code>flow-root</code> {{CSSxRef("&lt;display-inside&gt;")}} keywords.</p>
+`list-item` can also be combined with any {{CSSxRef("&lt;display-outside&gt;")}} keyword and the `flow` or `flow-root` {{CSSxRef("&lt;display-inside&gt;")}} keywords.
 
-<div class="note">
-<p><strong>Note:</strong> In browsers that support the two-value syntax, if no inner value is specified it will default to <code>flow</code>. If no outer value is specified, the principal box will have an outer display type of <code>block</code>.</p>
-</div>
+> **Note:** In browsers that support the two-value syntax, if no inner value is specified it will default to `flow`. If no outer value is specified, the principal box will have an outer display type of `block`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html;">&lt;div class="fake-list"&gt;I will display as a list item&lt;/div&gt;
-</pre>
+```html
+<div class="fake-list">I will display as a list item</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css;">.fake-list {
+```css
+.fake-list {
   display: list-item;
   list-style-position: inside;
 }
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Examples", "100%", 150)}}</p>
+{{EmbedLiveSample("Examples", "100%", 150)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Display', '#typedef-display-listitem', 'display-listitem')}}</td>
-   <td>{{Spec2('CSS3 Display')}}</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                            | Status                           |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------- |
+| {{SpecName('CSS3 Display', '#typedef-display-listitem', 'display-listitem')}} | {{Spec2('CSS3 Display')}} |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<h3 id="Support_of_list-item">Support of <code>list-item</code></h3>
+### Support of `list-item`
 
-<p>{{Compat("css.properties.display.list-item", 10)}}</p>
+{{Compat("css.properties.display.list-item", 10)}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{CSSxRef("display")}}
-  <ul>
-   <li>{{CSSxRef("&lt;display-outside&gt;")}}</li>
-   <li>{{CSSxRef("&lt;display-inside&gt;")}}</li>
-   <li>{{CSSxRef("&lt;display-internal&gt;")}}</li>
-   <li>{{CSSxRef("&lt;display-box&gt;")}}</li>
-   <li>{{CSSxRef("&lt;display-legacy&gt;")}}</li>
-  </ul>
- </li>
-</ul>
+- {{CSSxRef("display")}}
+
+  - {{CSSxRef("&lt;display-outside&gt;")}}
+  - {{CSSxRef("&lt;display-inside&gt;")}}
+  - {{CSSxRef("&lt;display-internal&gt;")}}
+  - {{CSSxRef("&lt;display-box&gt;")}}
+  - {{CSSxRef("&lt;display-legacy&gt;")}}

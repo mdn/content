@@ -10,31 +10,31 @@ tags:
   - media feature
 browser-compat: css.at-rules.media.device-height
 ---
-<div>{{CSSRef}} {{deprecated_header}}</div>
+{{CSSRef}} {{deprecated_header}}
 
-<p>The <strong><code>device-height</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features">media feature</a> can be used to test the height of an output device's rendering surface.</p>
+The **`device-height`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) can be used to test the height of an output device's rendering surface.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>device-height</code> feature is specified as a {{cssxref("&lt;length&gt;")}} value. It is a range feature, meaning that you can also use the prefixed <strong><code>min-device-height</code></strong> and <code><strong>max-device-height</strong></code> variants to query minimum and maximum values, respectively.</p>
+The `device-height` feature is specified as a {{cssxref("&lt;length&gt;")}} value. It is a range feature, meaning that you can also use the prefixed **`min-device-height`** and **`max-device-height`** variants to query minimum and maximum values, respectively.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Applying_a_special_stylesheet_for_devices_that_are_shorter_than_800_pixels">Applying a special stylesheet for devices that are shorter than 800 pixels</h3>
+### Applying a special stylesheet for devices that are shorter than 800 pixels
 
-<pre class="brush: html">&lt;link rel="stylesheet" media="screen and (max-device-height: 799px)" href="http://foo.bar.com/short-styles.css" /&gt;</pre>
+```html
+<link rel="stylesheet" media="screen and (max-device-height: 799px)" href="http://foo.bar.com/short-styles.css" />
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">Using Media Queries</a></li>
- <li><a href="/en-US/docs/Web/CSS/@media">@media</a></li>
-</ul>
+- [Using Media Queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [@media](/en-US/docs/Web/CSS/@media)

@@ -1,6 +1,6 @@
 ---
 title: '::target-text'
-slug: 'Web/CSS/::target-text'
+slug: Web/CSS/::target-text
 tags:
   - '::target-text'
   - CSS
@@ -10,40 +10,42 @@ tags:
   - Web
 browser-compat: css.selectors.target-text
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p>The <strong><code>::target-text</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-element</a> represents the text that has been scrolled to if the browser supports scroll-to-text fragments. It allows authors to choose how to highlight that section of text.</p>
+The **`::target-text`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents the text that has been scrolled to if the browser supports scroll-to-text fragments. It allows authors to choose how to highlight that section of text.
 
-<pre class="brush: css no-line-numbers">::target-text {
+```css
+::target-text {
   background-color: pink;
-}</pre>
+}
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Highlighting_scroll-to-text">Highlighting scroll-to-text</h3>
+### Highlighting scroll-to-text
 
-<pre class="brush: css no-line-numbers">::target-text {
+```css
+::target-text {
   background-color: rebeccapurple;
   color: white;
   font-weight: bold;
-}</pre>
+}
+```
 
-<p>To see this CSS in action follow the link to <a href="https://mdn.github.io/css-examples/target-text/index.html#:~:text=From%20the%20foregoing%20remarks%20we%20may%20gather%20an%20idea%20of%20the%20importance">scroll-to-text demo</a>.</p>
+To see this CSS in action follow the link to [scroll-to-text demo](https://mdn.github.io/css-examples/target-text/index.html#:~:text=From%20the%20foregoing%20remarks%20we%20may%20gather%20an%20idea%20of%20the%20importance).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://web.dev/text-fragments/">Text fragments</a></li>
-</ul>
+- [Text fragments](https://web.dev/text-fragments/)

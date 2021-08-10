@@ -10,49 +10,29 @@ tags:
   - Overview
   - Reference
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong>CSSOM View</strong> is a module of CSS that lets you manipulate the visual view of a document, in particular its scrolling behavior.</p>
+**CSSOM View** is a module of CSS that lets you manipulate the visual view of a document, in particular its scrolling behavior.
 
-<h2 id="Reference">Reference</h2>
+## Reference
 
-<h3 id="Properties">Properties</h3>
+### Properties
 
-<ul>
- <li>{{cssxref("scroll-behavior")}}</li>
-</ul>
+- {{cssxref("scroll-behavior")}}
 
-<h2 id="Guides">Guides</h2>
+## Guides
 
-<dl>
- <dt><a href="/en-US/docs/Web/CSS/CSSOM_View/Coordinate_systems">Coordinate systems</a></dt>
- <dd>A guide to the coordinate systems used to specify the position of a location in a display context, whether that context is a window on a monitor, a viewport on a mobile device, or a position on a sheet of paper when printing.</dd>
-</dl>
+- [Coordinate systems](/en-US/docs/Web/CSS/CSSOM_View/Coordinate_systems)
+  - : A guide to the coordinate systems used to specify the position of a location in a display context, whether that context is a window on a monitor, a viewport on a mobile device, or a position on a sheet of paper when printing.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSSOM View')}}</td>
-   <td>{{Spec2('CSSOM View')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                        | Status                           | Comment             |
+| ------------------------------------ | -------------------------------- | ------------------- |
+| {{SpecName('CSSOM View')}} | {{Spec2('CSSOM View')}} | Initial definition. |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<h3 id="scroll-behavior_property"><code>scroll-behavior</code> property</h3>
+### `scroll-behavior` property
 
-<div>
-
-<p>{{Compat("css.properties.scroll-behavior")}}</p>
-</div>
+{{Compat("css.properties.scroll-behavior")}}

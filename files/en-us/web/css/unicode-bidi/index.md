@@ -6,22 +6,21 @@ tags:
   - CSS
   - CSS Property
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.unicode-bidi
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>unicode-bidi</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property, together with the {{cssxref("direction")}} property, determines how bidirectional text in a document is handled. For example, if a block of content contains both left-to-right and right-to-left text, the user-agent uses a complex Unicode algorithm to decide how to display the text. The <code>unicode-bidi</code> property overrides this algorithm and allows the developer to control the text embedding.</p>
+The **`unicode-bidi`** [CSS](/en-US/docs/Web/CSS) property, together with the {{cssxref("direction")}} property, determines how bidirectional text in a document is handled. For example, if a block of content contains both left-to-right and right-to-left text, the user-agent uses a complex Unicode algorithm to decide how to display the text. The `unicode-bidi` property overrides this algorithm and allows the developer to control the text embedding.
 
-<p>The <code>unicode-bidi</code> and {{cssxref("direction")}} properties are the only properties that are not affected by the {{cssxref("all")}} shorthand.</p>
+The `unicode-bidi` and {{cssxref("direction")}} properties are the only properties that are not affected by the {{cssxref("all")}} shorthand.
 
-<div class="warning">
-  <p><strong>Warning:</strong> This property is intended for Document Type Definition (DTD) designers. Web designers and similar authors <strong>should not</strong> override it.</p>
-</div>
+> **Warning:** This property is intended for Document Type Definition (DTD) designers. Web designers and similar authors **should not** override it.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">/* Keyword values */
+```css
+/* Keyword values */
 unicode-bidi: normal;
 unicode-bidi: embed;
 unicode-bidi: isolate;
@@ -33,68 +32,67 @@ unicode-bidi: plaintext;
 unicode-bidi: inherit;
 unicode-bidi: initial;
 unicode-bidi: revert;
-unicode-bidi: unset;</pre>
+unicode-bidi: unset;
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>normal</code></dt>
- <dd>The element does not offer an additional level of embedding with respect to the bidirectional algorithm. For inline elements, implicit reordering works across element boundaries.</dd>
- <dt><code>embed</code></dt>
- <dd>If the element is inline, this value opens an additional level of embedding with respect to the bidirectional algorithm. The direction of this embedding level is given by the {{Cssxref("direction")}} property.</dd>
- <dt><code>bidi-override</code></dt>
- <dd>For inline elements this creates an override. For block container elements this creates an override for inline-level descendants not within another block container element. This means that inside the element, reordering is strictly in sequence according to the {{Cssxref("direction")}} property; the implicit part of the bidirectional algorithm is ignored.</dd>
- <dt><code>isolate</code></dt>
- <dd>This keyword indicates that the element's container directionality should be calculated without considering the content of this element. The element is therefore <em>isolated</em> from its siblings. When applying its bidirectional-resolution algorithm, its container element treats it as one or several <code>U+FFFC Object Replacement Character</code>, i.e. like an image.</dd>
- <dt><code>isolate-override</code></dt>
- <dd>This keyword applies the isolation behavior of the <code>isolate</code> keyword to the surrounding content and the override behavior of the <code>bidi-override</code> keyword to the inner content.</dd>
- <dt><code>plaintext</code></dt>
- <dd>This keyword makes the elements directionality calculated without considering its parent bidirectional state or the value of the {{cssxref("direction")}} property. The directionality is calculated using the P2 and P3 rules of the Unicode Bidirectional Algorithm.<br>
- This value allows the display of data that is already formatted using a tool following the Unicode Bidirectional Algorithm.</dd>
-</dl>
+- `normal`
+  - : The element does not offer an additional level of embedding with respect to the bidirectional algorithm. For inline elements, implicit reordering works across element boundaries.
+- `embed`
+  - : If the element is inline, this value opens an additional level of embedding with respect to the bidirectional algorithm. The direction of this embedding level is given by the {{Cssxref("direction")}} property.
+- `bidi-override`
+  - : For inline elements this creates an override. For block container elements this creates an override for inline-level descendants not within another block container element. This means that inside the element, reordering is strictly in sequence according to the {{Cssxref("direction")}} property; the implicit part of the bidirectional algorithm is ignored.
+- `isolate`
+  - : This keyword indicates that the element's container directionality should be calculated without considering the content of this element. The element is therefore _isolated_ from its siblings. When applying its bidirectional-resolution algorithm, its container element treats it as one or several `U+FFFC Object Replacement Character`, i.e. like an image.
+- `isolate-override`
+  - : This keyword applies the isolation behavior of the `isolate` keyword to the surrounding content and the override behavior of the `bidi-override` keyword to the inner content.
+- `plaintext`
+  - : This keyword makes the elements directionality calculated without considering its parent bidirectional state or the value of the {{cssxref("direction")}} property. The directionality is calculated using the P2 and P3 rules of the Unicode Bidirectional Algorithm.
+    This value allows the display of data that is already formatted using a tool following the Unicode Bidirectional Algorithm.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.bible-quote {
+```css
+.bible-quote {
   direction: rtl;
   unicode-bidi: embed;
 }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div class="bible-quote"&gt;
+```html
+<div class="bible-quote">
   A line of text
-&lt;/div&gt;
-&lt;div&gt;
+</div>
+<div>
   Another line of text
-&lt;/div&gt;
-</pre>
+</div>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample('Examples')}}</p>
+{{EmbedLiveSample('Examples')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Cssxref("direction")}}</li>
-</ul>
+- {{Cssxref("direction")}}

@@ -9,159 +9,130 @@ tags:
   - Overview
   - Reference
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<p><strong>CSS Logical Properties and Values</strong> is a module of <a href="/en-US/docs/Web/CSS"><abbr title="Cascading Stylesheets">CSS</abbr></a> introducing logical properties and values that provide the ability to control layout through logical, rather than physical, direction and dimension mappings.</p>
+**CSS Logical Properties and Values** is a module of [CSS](/en-US/docs/Web/CSS) introducing logical properties and values that provide the ability to control layout through logical, rather than physical, direction and dimension mappings.
 
-<p>The module also defines logical properties and values for properties previously defined in <abbr title="Cascading Stylesheets">CSS</abbr> 2.1. Logical properties define direction‐relative equivalents of their corresponding physical properties.</p>
+The module also defines logical properties and values for properties previously defined in CSS 2.1. Logical properties define direction‐relative equivalents of their corresponding physical properties.
 
-<h3 id="block_vs._inline">Block vs. inline</h3>
+### Block vs. inline
 
-<p>Logical properties and values use the abstract terms <em>block</em> and <em>inline</em> to describe the direction in which they flow. The physical meaning of these terms depends on the <a href="/en-US/docs/Web/CSS/CSS_Writing_Modes">writing mode</a>.</p>
+Logical properties and values use the abstract terms _block_ and _inline_ to describe the direction in which they flow. The physical meaning of these terms depends on the [writing mode](/en-US/docs/Web/CSS/CSS_Writing_Modes).
 
-<dl>
- <dt>Block dimension</dt>
- <dd>The dimension perpendicular to the flow of text within a line, i.e., the vertical dimension in horizontal writing modes, and the horizontal dimension in vertical writing modes. For standard English text, it is the vertical dimension.</dd>
- <dt>Inline dimension</dt>
- <dd>The dimension parallel to the flow of text within a line, i.e., the horizontal dimension in horizontal writing modes, and the vertical dimension in vertical writing modes. For standard English text, it is the horizontal dimension.</dd>
-</dl>
+- Block dimension
+  - : The dimension perpendicular to the flow of text within a line, i.e., the vertical dimension in horizontal writing modes, and the horizontal dimension in vertical writing modes. For standard English text, it is the vertical dimension.
+- Inline dimension
+  - : The dimension parallel to the flow of text within a line, i.e., the horizontal dimension in horizontal writing modes, and the vertical dimension in vertical writing modes. For standard English text, it is the horizontal dimension.
 
-<h2 id="Reference">Reference</h2>
+## Reference
 
-<h3 id="Properties_for_sizing">Properties for sizing</h3>
+### Properties for sizing
 
-<ul>
- <li>{{CSSxRef("block-size")}}</li>
- <li>{{CSSxRef("inline-size")}}</li>
- <li>{{CSSxRef("max-block-size")}}</li>
- <li>{{CSSxRef("max-inline-size")}}</li>
- <li>{{CSSxRef("min-block-size")}}</li>
- <li>{{CSSxRef("min-inline-size")}}</li>
-</ul>
+- {{CSSxRef("block-size")}}
+- {{CSSxRef("inline-size")}}
+- {{CSSxRef("max-block-size")}}
+- {{CSSxRef("max-inline-size")}}
+- {{CSSxRef("min-block-size")}}
+- {{CSSxRef("min-inline-size")}}
 
-<h3 id="Properties_for_margins_borders_and_padding">Properties for margins, borders and padding</h3>
+### Properties for margins, borders and padding
 
-<ul>
- <li>{{CSSxRef("border-block")}}</li>
- <li>{{CSSxRef("border-block-color")}}</li>
- <li>{{CSSxRef("border-block-end")}}</li>
- <li>{{CSSxRef("border-block-end-color")}}</li>
- <li>{{CSSxRef("border-block-end-style")}}</li>
- <li>{{CSSxRef("border-block-end-width")}}</li>
- <li>{{CSSxRef("border-block-start")}}</li>
- <li>{{CSSxRef("border-block-start-color")}}</li>
- <li>{{CSSxRef("border-block-start-style")}}</li>
- <li>{{CSSxRef("border-block-start-width")}}</li>
- <li>{{CSSxRef("border-block-style")}}</li>
- <li>{{CSSxRef("border-block-width")}}</li>
- <li>{{CSSxRef("border-color")}} (<code>logical</code> {{Experimental_Inline}} keyword)</li>
- <li>{{CSSxRef("border-inline")}}</li>
- <li>{{CSSxRef("border-inline-color")}}</li>
- <li>{{CSSxRef("border-inline-end")}}</li>
- <li>{{CSSxRef("border-inline-end-color")}}</li>
- <li>{{CSSxRef("border-inline-end-style")}}</li>
- <li>{{CSSxRef("border-inline-end-width")}}</li>
- <li>{{CSSxRef("border-inline-start")}}</li>
- <li>{{CSSxRef("border-inline-start-color")}}</li>
- <li>{{CSSxRef("border-inline-start-style")}}</li>
- <li>{{CSSxRef("border-inline-start-width")}}</li>
- <li>{{CSSxRef("border-inline-style")}}</li>
- <li>{{CSSxRef("border-inline-width")}}</li>
- <li>{{CSSxRef("border-start-start-radius")}}</li>
- <li>{{CSSxRef("border-start-end-radius")}}</li>
- <li>{{CSSxRef("border-end-start-radius")}}</li>
- <li>{{CSSxRef("border-end-end-radius")}}</li>
- <li>{{CSSxRef("border-style")}} (<code>logical</code> {{Experimental_Inline}} keyword)</li>
- <li>{{CSSxRef("border-width")}} (<code>logical</code> {{Experimental_Inline}} keyword)</li>
- <li>{{CSSxRef("margin")}} (<code>logical</code> {{Experimental_Inline}} keyword)</li>
- <li>{{CSSxRef("margin-block")}}</li>
- <li>{{CSSxRef("margin-block-end")}}</li>
- <li>{{CSSxRef("margin-block-start")}}</li>
- <li>{{CSSxRef("margin-inline")}}</li>
- <li>{{CSSxRef("margin-inline-end")}}</li>
- <li>{{CSSxRef("margin-inline-start")}}</li>
- <li>{{CSSxRef("padding")}} (<code>logical</code> {{Experimental_Inline}} keyword)</li>
- <li>{{CSSxRef("padding-block")}}</li>
- <li>{{CSSxRef("padding-block-end")}}</li>
- <li>{{CSSxRef("padding-block-start")}}</li>
- <li>{{CSSxRef("padding-inline")}}</li>
- <li>{{CSSxRef("padding-inline-end")}}</li>
- <li>{{CSSxRef("padding-inline-start")}}</li>
-</ul>
+- {{CSSxRef("border-block")}}
+- {{CSSxRef("border-block-color")}}
+- {{CSSxRef("border-block-end")}}
+- {{CSSxRef("border-block-end-color")}}
+- {{CSSxRef("border-block-end-style")}}
+- {{CSSxRef("border-block-end-width")}}
+- {{CSSxRef("border-block-start")}}
+- {{CSSxRef("border-block-start-color")}}
+- {{CSSxRef("border-block-start-style")}}
+- {{CSSxRef("border-block-start-width")}}
+- {{CSSxRef("border-block-style")}}
+- {{CSSxRef("border-block-width")}}
+- {{CSSxRef("border-color")}} (`logical` {{Experimental_Inline}} keyword)
+- {{CSSxRef("border-inline")}}
+- {{CSSxRef("border-inline-color")}}
+- {{CSSxRef("border-inline-end")}}
+- {{CSSxRef("border-inline-end-color")}}
+- {{CSSxRef("border-inline-end-style")}}
+- {{CSSxRef("border-inline-end-width")}}
+- {{CSSxRef("border-inline-start")}}
+- {{CSSxRef("border-inline-start-color")}}
+- {{CSSxRef("border-inline-start-style")}}
+- {{CSSxRef("border-inline-start-width")}}
+- {{CSSxRef("border-inline-style")}}
+- {{CSSxRef("border-inline-width")}}
+- {{CSSxRef("border-start-start-radius")}}
+- {{CSSxRef("border-start-end-radius")}}
+- {{CSSxRef("border-end-start-radius")}}
+- {{CSSxRef("border-end-end-radius")}}
+- {{CSSxRef("border-style")}} (`logical` {{Experimental_Inline}} keyword)
+- {{CSSxRef("border-width")}} (`logical` {{Experimental_Inline}} keyword)
+- {{CSSxRef("margin")}} (`logical` {{Experimental_Inline}} keyword)
+- {{CSSxRef("margin-block")}}
+- {{CSSxRef("margin-block-end")}}
+- {{CSSxRef("margin-block-start")}}
+- {{CSSxRef("margin-inline")}}
+- {{CSSxRef("margin-inline-end")}}
+- {{CSSxRef("margin-inline-start")}}
+- {{CSSxRef("padding")}} (`logical` {{Experimental_Inline}} keyword)
+- {{CSSxRef("padding-block")}}
+- {{CSSxRef("padding-block-end")}}
+- {{CSSxRef("padding-block-start")}}
+- {{CSSxRef("padding-inline")}}
+- {{CSSxRef("padding-inline-end")}}
+- {{CSSxRef("padding-inline-start")}}
 
-<h3 id="Properties_for_floating_and_positioning">Properties for floating and positioning</h3>
+### Properties for floating and positioning
 
-<ul>
- <li>{{CSSxRef("clear")}} (<code>inline-end</code> and <code>inline-start</code> keywords)</li>
- <li>{{CSSxRef("float")}} (<code>inline-end</code> and <code>inline-start</code> keywords)</li>
- <li>{{CSSxRef("inset")}}</li>
- <li>{{CSSxRef("inset-block")}}</li>
- <li>{{CSSxRef("inset-block-end")}}</li>
- <li>{{CSSxRef("inset-block-start")}}</li>
- <li>{{CSSxRef("inset-inline")}}</li>
- <li>{{CSSxRef("inset-inline-end")}}</li>
- <li>{{CSSxRef("inset-inline-start")}}</li>
-</ul>
+- {{CSSxRef("clear")}} (`inline-end` and `inline-start` keywords)
+- {{CSSxRef("float")}} (`inline-end` and `inline-start` keywords)
+- {{CSSxRef("inset")}}
+- {{CSSxRef("inset-block")}}
+- {{CSSxRef("inset-block-end")}}
+- {{CSSxRef("inset-block-start")}}
+- {{CSSxRef("inset-inline")}}
+- {{CSSxRef("inset-inline-end")}}
+- {{CSSxRef("inset-inline-start")}}
 
-<h3 id="Other_properties">Other properties</h3>
+### Other properties
 
-<ul>
- <li>{{CSSxRef("caption-side")}} (<code>inline-end</code> and <code>inline-start</code> keywords)</li>
- <li>{{CSSxRef("overflow-block")}}</li>
- <li>{{CSSxRef("overflow-inline")}}</li>
- <li>{{CSSxRef("overscroll-behavior-block")}}</li>
- <li>{{CSSxRef("overscroll-behavior-inline")}}</li>
- <li>{{CSSxRef("resize")}} (<code>block</code> and <code>inline</code> keywords)</li>
- <li>{{CSSxRef("text-align")}} (<code>end</code> and <code>start</code> keywords)</li>
-</ul>
+- {{CSSxRef("caption-side")}} (`inline-end` and `inline-start` keywords)
+- {{CSSxRef("overflow-block")}}
+- {{CSSxRef("overflow-inline")}}
+- {{CSSxRef("overscroll-behavior-block")}}
+- {{CSSxRef("overscroll-behavior-inline")}}
+- {{CSSxRef("resize")}} (`block` and `inline` keywords)
+- {{CSSxRef("text-align")}} (`end` and `start` keywords)
 
-<h3 id="Deprecated_properties">Deprecated properties</h3>
+### Deprecated properties
 
-<ul>
- <li>{{CSSxRef("offset-block-end")}} {{Non-standard_Inline}} {{Deprecated_Inline}} (now {{CSSxRef("inset-block-end")}} {{Experimental_Inline}})</li>
- <li>{{CSSxRef("offset-block-start")}} {{Non-standard_Inline}} {{Deprecated_Inline}} (now {{CSSxRef("inset-block-start")}} {{Experimental_Inline}})</li>
- <li>{{CSSxRef("offset-inline-end")}} {{Non-standard_Inline}} {{Deprecated_Inline}} (now {{CSSxRef("inset-inline-end")}} {{Experimental_Inline}})</li>
- <li>{{CSSxRef("offset-inline-start")}} {{Non-standard_Inline}} {{Deprecated_Inline}} (now {{CSSxRef("inset-inline-start")}} {{Experimental_Inline}})</li>
-</ul>
+- {{CSSxRef("offset-block-end")}} {{Non-standard_Inline}} {{Deprecated_Inline}} (now {{CSSxRef("inset-block-end")}} {{Experimental_Inline}})
+- {{CSSxRef("offset-block-start")}} {{Non-standard_Inline}} {{Deprecated_Inline}} (now {{CSSxRef("inset-block-start")}} {{Experimental_Inline}})
+- {{CSSxRef("offset-inline-end")}} {{Non-standard_Inline}} {{Deprecated_Inline}} (now {{CSSxRef("inset-inline-end")}} {{Experimental_Inline}})
+- {{CSSxRef("offset-inline-start")}} {{Non-standard_Inline}} {{Deprecated_Inline}} (now {{CSSxRef("inset-inline-start")}} {{Experimental_Inline}})
 
-<h2 id="Guides">Guides</h2>
+## Guides
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts">Basic concepts of logical properties and values</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Logical_Properties/Sizing">Logical Properties for sizing</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Logical_Properties/Margins_borders_padding">Logical Properties for margins, borders and padding</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Logical_Properties/Floating_and_positioning">Logical Properties for floating and positioning</a></li>
-</ul>
+- [Basic concepts of logical properties and values](/en-US/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts)
+- [Logical Properties for sizing](/en-US/docs/Web/CSS/CSS_Logical_Properties/Sizing)
+- [Logical Properties for margins, borders and padding](/en-US/docs/Web/CSS/CSS_Logical_Properties/Margins_borders_padding)
+- [Logical Properties for floating and positioning](/en-US/docs/Web/CSS/CSS_Logical_Properties/Floating_and_positioning)
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Logical Properties")}}</td>
-   <td>{{Spec2("CSS Logical Properties")}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                        | Status                                           | Comment             |
+| ---------------------------------------------------- | ------------------------------------------------ | ------------------- |
+| {{SpecName("CSS Logical Properties")}} | {{Spec2("CSS Logical Properties")}} | Initial definition. |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>In general:</p>
+In general:
 
-<ul>
- <li>Firefox has support for the mapped properties — where there is a direct mapping from the physical to the logical version.</li>
- <li>Chrome, from version 69, has support for the mapped properties.</li>
- <li>Edge, from version 79, has the same support as Chrome.</li>
- <li>Firefox 66 introduces support for two value shorthands, also behind a flag in Chrome.</li>
- <li>Internet Explorer has no support.</li>
-</ul>
+- Firefox has support for the mapped properties — where there is a direct mapping from the physical to the logical version.
+- Chrome, from version 69, has support for the mapped properties.
+- Edge, from version 79, has the same support as Chrome.
+- Firefox 66 introduces support for two value shorthands, also behind a flag in Chrome.
+- Internet Explorer has no support.
 
-<p>See the individual property pages for full compatibility information.</p>
+See the individual property pages for full compatibility information.

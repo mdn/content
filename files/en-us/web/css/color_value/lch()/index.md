@@ -11,40 +11,39 @@ tags:
   - lch
 browser-compat: css.types.color.lch
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>lch()</code></strong> functional notation expresses a given color in the LCH color space. It has the same L axis as {{cssxref("color_value/lab()","lab()")}}, but uses polar coordinates C (Chroma) and H (Hue).</p>
+The **`lch()`** functional notation expresses a given color in the LCH color space. It has the same L axis as {{cssxref("color_value/lab()","lab()")}}, but uses polar coordinates C (Chroma) and H (Hue).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">lch(29.2345% 44.2 27);
+```css
+lch(29.2345% 44.2 27);
 lch(52.2345% 72.2 56.2);
 lch(52.2345% 72.2 56.2 / .5);
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
-  <dt>Functional notation: <code>lch(L C H [/ A])</code></dt>
-  <dd>
-    <p><code>L</code> specifies the CIE Lightness, and is a {{cssxref("&lt;percentage&gt;")}} between <code>0%</code> representing black and <code>100%</code> representing white.</p>
-    <p>The second argument <code>C</code> is the chroma (roughly representing the "amount of color"). Its minimum useful value is 0, while its maximum is theoretically unbounded (but in practice does not exceed 230).</p>
-    <p>The third argument <code>H</code> is the hue angle. <code>0deg</code> points along the positive "a" axis (toward purplish red), <code>90deg</code> points along the positive "b" axis (toward mustard yellow), <code>180deg</code> points along the negative "a" axis (toward greenish cyan), and <code>270deg</code> points along the negative "b" axis (toward sky blue).</p>
-    <p><code>A</code> (alpha) can be a {{cssxref("&lt;number&gt;")}} between <code>0</code> and <code>1</code>, or a {{cssxref("&lt;percentage&gt;")}}, where the number <code>1</code> corresponds to <code>100%</code> (full opacity).</p>
-  </dd>
-</dl>
+- Functional notation: `lch(L C H [/ A])`
 
-<h2 id="Specifications">Specifications</h2>
+  - : `L` specifies the CIE Lightness, and is a {{cssxref("&lt;percentage&gt;")}} between `0%` representing black and `100%` representing white.
+
+    The second argument `C` is the chroma (roughly representing the "amount of color"). Its minimum useful value is 0, while its maximum is theoretically unbounded (but in practice does not exceed 230).
+
+    The third argument `H` is the hue angle. `0deg` points along the positive "a" axis (toward purplish red), `90deg` points along the positive "b" axis (toward mustard yellow), `180deg` points along the negative "a" axis (toward greenish cyan), and `270deg` points along the negative "b" axis (toward sky blue).
+
+    `A` (alpha) can be a {{cssxref("&lt;number&gt;")}} between `0` and `1`, or a {{cssxref("&lt;percentage&gt;")}}, where the number `1` corresponds to `100%` (full opacity).
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2>See also</h2>
+## See also
 
-<ul>
-  <li><a href="https://lea.verou.me/2020/04/lch-colors-in-css-what-why-and-how/">LCH colors in CSS: what, why, and how?</a></li>
-  <li><a href="https://webkit.org/blog/11577/release-notes-for-safari-technology-preview-122/">Safari Technology Preview 122 release notes</a>: includes <code>lch()</code> and {{cssxref("color_value/lab()",'lab()')}} colors.</li>
-</ul>
+- [LCH colors in CSS: what, why, and how?](https://lea.verou.me/2020/04/lch-colors-in-css-what-why-and-how/)
+- [Safari Technology Preview 122 release notes](https://webkit.org/blog/11577/release-notes-for-safari-technology-preview-122/): includes `lch()` and {{cssxref("color_value/lab()",'lab()')}} colors.

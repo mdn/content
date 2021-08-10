@@ -8,14 +8,15 @@ tags:
   - CSS Property
   - NeedsExample
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.break-inside
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>break-inside</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets how page, column, or region breaks should behave inside a generated box. If there is no generated box, the property is ignored.</p>
+The **`break-inside`** [CSS](/en-US/docs/Web/CSS) property sets how page, column, or region breaks should behave inside a generated box. If there is no generated box, the property is ignored.
 
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 break-inside: auto;
 break-inside: avoid;
 break-inside: avoid-page;
@@ -27,97 +28,82 @@ break-inside: inherit;
 break-inside: initial;
 break-inside: revert;
 break-inside: unset;
-</pre>
+```
 
-<p>Each possible break point (in other words, each element boundary) is affected by three properties: the {{cssxref("break-after")}} value of the previous element, the {{cssxref("break-before")}} value of the next element, and the <code>break-inside</code> value of the containing element.</p>
+Each possible break point (in other words, each element boundary) is affected by three properties: the {{cssxref("break-after")}} value of the previous element, the {{cssxref("break-before")}} value of the next element, and the `break-inside` value of the containing element.
 
-<p>To determine if a break must be done, the following rules are applied:</p>
+To determine if a break must be done, the following rules are applied:
 
-<ol>
- <li>If any of the three concerned values is a <em>forced break value</em> (<code>always</code>, <code>left</code>, <code>right</code>, <code>page</code>, <code>column</code>, or <code>region</code>), it has precedence. If more than one of them are such a break, the value of the element that appears the latest in the flow is used. Thus, the <code>break-before</code> value has precedence over the <code>break-after</code> value, which in turn has precedence over the <code>break-inside</code> value.</li>
- <li>If any of the three concerned values is an <em>avoid break value</em> (<code>avoid</code>, <code>avoid-page</code>, <code>avoid-region</code>, or <code>avoid-column</code>), no such break will be applied at that point.</li>
-</ol>
+1.  If any of the three concerned values is a _forced break value_ (`always`, `left`, `right`, `page`, `column`, or `region`), it has precedence. If more than one of them are such a break, the value of the element that appears the latest in the flow is used. Thus, the `break-before` value has precedence over the `break-after` value, which in turn has precedence over the `break-inside` value.
+2.  If any of the three concerned values is an _avoid break value_ (`avoid`, `avoid-page`, `avoid-region`, or `avoid-column`), no such break will be applied at that point.
 
-<p>Once forced breaks have been applied, soft breaks may be added if needed, but not on element boundaries that resolve in a corresponding <code>avoid</code> value.</p>
+Once forced breaks have been applied, soft breaks may be added if needed, but not on element boundaries that resolve in a corresponding `avoid` value.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>break-inside</code> property is specified as one of the keyword values from the list below.</p>
+The `break-inside` property is specified as one of the keyword values from the list below.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>Allows, but does not force, any break (page, column, or region) to be inserted within the principal box.</dd>
- <dt><code>avoid</code></dt>
- <dd>Avoids any break (page, column, or region) from being inserted within the principal box.</dd>
- <dt><code>avoid-page</code></dt>
- <dd>Avoids any page break within the principal box.</dd>
- <dt><code>avoid-column</code></dt>
- <dd>Avoids any column break within the principal box.</dd>
- <dt><code>avoid-region</code> {{experimental_inline}}</dt>
- <dd>Avoids any region break within the principal box.</dd>
-</dl>
+- `auto`
+  - : Allows, but does not force, any break (page, column, or region) to be inserted within the principal box.
+- `avoid`
+  - : Avoids any break (page, column, or region) from being inserted within the principal box.
+- `avoid-page`
+  - : Avoids any page break within the principal box.
+- `avoid-column`
+  - : Avoids any column break within the principal box.
+- `avoid-region` {{experimental_inline}}
+  - : Avoids any region break within the principal box.
 
-<h2 id="Page_break_aliases">Page break aliases</h2>
+## Page break aliases
 
-<p>For compatibility reasons, the legacy {{cssxref("page-break-inside")}} property should be treated by browsers as an alias of <code>break-inside</code>. This ensures that sites using <code>page-break-inside</code> continue to work as designed. A subset of values should be aliased as follows:</p>
+For compatibility reasons, the legacy {{cssxref("page-break-inside")}} property should be treated by browsers as an alias of `break-inside`. This ensures that sites using `page-break-inside` continue to work as designed. A subset of values should be aliased as follows:
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">page-break-inside</th>
-   <th scope="col">break-inside</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>auto</code></td>
-   <td><code>auto</code></td>
-  </tr>
-  <tr>
-   <td><code>avoid</code></td>
-   <td><code>avoid</code></td>
-  </tr>
- </tbody>
-</table>
+| page-break-inside | break-inside |
+| ----------------- | ------------ |
+| `auto`            | `auto`       |
+| `avoid`           | `avoid`      |
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Avoiding_breaking_inside_a_figure">Avoiding breaking inside a figure</h3>
+### Avoiding breaking inside a figure
 
-<p>In the following example we have a container that contains an <code>&lt;h1&gt;</code> spanning all columns (achieved using <code>column-span: all</code>) and a series of paragraphs laid out in multiple columns using <code>column-width: 200px</code>. We also have a <code>&lt;figure&gt;</code> containing an image and a caption.</p>
+In the following example we have a container that contains an `<h1>` spanning all columns (achieved using `column-span: all`) and a series of paragraphs laid out in multiple columns using `column-width: 200px`. We also have a `<figure>` containing an image and a caption.
 
-<p>By default, it is possible for you to get a break between the image and its caption, which is not what we want. To avoid this, we have set <code>break-inside: avoid</code> on the <code>&lt;figure&gt;</code>, which causes them to always stay together.</p>
+By default, it is possible for you to get a break between the image and its caption, which is not what we want. To avoid this, we have set `break-inside: avoid` on the `<figure>`, which causes them to always stay together.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;article&gt;
-  &lt;h1&gt;Main heading&lt;/h1&gt;
+```html
+<article>
+  <h1>Main heading</h1>
 
-  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae fringilla mauris. Quisque commodo eget nisi sed pretium. Mauris luctus nec lacus in ultricies. Mauris vitae hendrerit arcu, ac scelerisque lacus. Aliquam lobortis in lacus sit amet posuere. Fusce iaculis urna id neque dapibus, eu lacinia lectus dictum.&lt;/p&gt;
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae fringilla mauris. Quisque commodo eget nisi sed pretium. Mauris luctus nec lacus in ultricies. Mauris vitae hendrerit arcu, ac scelerisque lacus. Aliquam lobortis in lacus sit amet posuere. Fusce iaculis urna id neque dapibus, eu lacinia lectus dictum.</p>
 
-  &lt;figure&gt;
-    &lt;img src="https://media.prod.mdn.mozit.cloud/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png"&gt;
-    &lt;figcaption&gt;The Firefox logo — fox wrapped around the world&lt;/figcaption&gt;
-  &lt;/figure&gt;
+  <figure>
+    <img src="https://media.prod.mdn.mozit.cloud/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png">
+    <figcaption>The Firefox logo — fox wrapped around the world</figcaption>
+  </figure>
 
-  &lt;p&gt;Praesent condimentum dui dui, sit amet rutrum diam tincidunt eu. Cras suscipit porta leo sit amet rutrum. Sed vehicula ornare tincidunt. Curabitur a ipsum ac diam mattis volutpat ac ut elit. Nullam luctus justo non vestibulum gravida. Morbi metus libero, pharetra non porttitor a, molestie nec nisi.&lt;/p&gt;
+  <p>Praesent condimentum dui dui, sit amet rutrum diam tincidunt eu. Cras suscipit porta leo sit amet rutrum. Sed vehicula ornare tincidunt. Curabitur a ipsum ac diam mattis volutpat ac ut elit. Nullam luctus justo non vestibulum gravida. Morbi metus libero, pharetra non porttitor a, molestie nec nisi.</p>
 
-  &lt;p&gt;In finibus viverra enim vel suscipit. Quisque consequat velit eu orci malesuada, ut interdum tortor molestie. Proin sed pellentesque augue. Nam risus justo, faucibus non porta a, congue vel massa. Cras luctus lacus nisl, sed tincidunt velit pharetra ac. Duis suscipit faucibus dui sed ultricies.&lt;/p&gt;
-&lt;/article&gt;</pre>
+  <p>In finibus viverra enim vel suscipit. Quisque consequat velit eu orci malesuada, ut interdum tortor molestie. Proin sed pellentesque augue. Nam risus justo, faucibus non porta a, congue vel massa. Cras luctus lacus nisl, sed tincidunt velit pharetra ac. Duis suscipit faucibus dui sed ultricies.</p>
+</article>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">html {
+```css
+html {
   font-family: helvetica, arial, sans-serif;
 }
 
@@ -160,29 +146,28 @@ figcaption {
 article {
   column-width: 200px;
   gap: 20px;
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample('Avoiding_breaking_inside_a_figure', '100%', 600)}}</p>
+{{EmbedLiveSample('Avoiding_breaking_inside_a_figure', '100%', 600)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h3 id="Notes_on_compatibility">Notes on compatibility</h3>
+### Notes on compatibility
 
-<p>Prior to Firefox 65, the older property of {{cssxref("page-break-inside")}} will work in Firefox to prevent breaks in columns, as well as pages. Add both properties for backwards compatibility.</p>
+Prior to Firefox 65, the older property of {{cssxref("page-break-inside")}} will work in Firefox to prevent breaks in columns, as well as pages. Add both properties for backwards compatibility.
 
-<p>For older WebKit-based browsers, the prefixed property <code>-webkit-column-break-inside</code> can be used to control column breaks.</p>
+For older WebKit-based browsers, the prefixed property `-webkit-column-break-inside` can be used to control column breaks.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout">Multiple-column Layout</a></li>
- <li><a href="https://www.smashingmagazine.com/2019/02/css-fragmentation/">Breaking Boxes With CSS Fragmentation</a></li>
-</ul>
+- [Multiple-column Layout](/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
+- [Breaking Boxes With CSS Fragmentation](https://www.smashingmagazine.com/2019/02/css-fragmentation/)

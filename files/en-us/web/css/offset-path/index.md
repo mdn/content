@@ -12,15 +12,16 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.offset-path
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>offset-path</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property specifies a motion path for an element to follow and defines the element's positioning within the parent container or SVG coordinate system.</p>
+The **`offset-path`** [CSS](/en-US/docs/Web/CSS) property specifies a motion path for an element to follow and defines the element's positioning within the parent container or SVG coordinate system.
 
-<div>{{EmbedInteractiveExample("pages/css/offset-path.html")}}</div>
+{{EmbedInteractiveExample("pages/css/offset-path.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css">/* Default */
+```css
+/* Default */
 offset-path: none;
 
 /* Function values */
@@ -44,72 +45,70 @@ offset-path: inherit;
 offset-path: initial;
 offset-path: revert;
 offset-path: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>ray()</code></dt>
- <dd>Taking up to three values, defines a path that is a line segment starting from the position of the box and proceeds in the direction defined by the specified angle similar to the CSS gradient angle where <code>0deg</code> is up, with positive angles increasing in the clockwise direction, with the size value being similar to the CSS radial gradient size values from <code>closest-side</code> to <code>farthest-corner</code>, and the keyterm <code>contain</code>.</dd>
- <dt><code>url()</code></dt>
- <dd>References the ID of an SVG shape -- <code>circle</code>, <code>ellipse</code>, <code>line</code>, <code>path</code>, <code>polygon</code>, <code>polyline</code>, or <code>rect</code> -- using the shape's geometry as the path.</dd>
- <dt><code>&lt;basic-shape&gt;</code></dt>
- <dd>
-  <p>Specifies a <a href="/en-US/docs/Web/CSS/CSS_Shapes/Basic_Shapes">CSS shape</a> including <code>circle()</code>, <code>ellipse()</code>, <code>inset()</code>, <code>polygon()</code>, or <code>path()</code>.</p>
-  <dl>
-   <dt><code>path()</code></dt>
-   <dd>A path string defined with SVG coordinate syntax.</dd>
-  </dl>
- </dd>
- <dt><code>none</code></dt>
- <dd>Specifies no motion path at all.</dd>
-</dl>
- 
-<h2 id="Description">Description</h2>
+- `ray()`
+  - : Taking up to three values, defines a path that is a line segment starting from the position of the box and proceeds in the direction defined by the specified angle similar to the CSS gradient angle where `0deg` is up, with positive angles increasing in the clockwise direction, with the size value being similar to the CSS radial gradient size values from `closest-side` to `farthest-corner`, and the keyterm `contain`.
+- `url()`
+  - : References the ID of an SVG shape -- `circle`, `ellipse`, `line`, `path`, `polygon`, `polyline`, or `rect` -- using the shape's geometry as the path.
+- `<basic-shape>`
 
-<p>This property defines a path an animated element can follow. An offset path is either a specified path with one or multiple sub-paths or the geometry of a not-styled basic shape. The element’s exact position on the offset path is determined by the {{cssxref("offset-distance")}} property. Each shape or path must define an initial position for the computed value of <code>0</code> for {{cssxref("offset-distance")}} and an initial direction which specifies the rotation of the object to the initial position.</p>
+  - : Specifies a [CSS shape](/en-US/docs/Web/CSS/CSS_Shapes/Basic_Shapes) including `circle()`, `ellipse()`, `inset()`, `polygon()`, or `path()`.
 
-<p>Early versions of the spec called this property <code>motion-path</code>. It was changed to <code>offset-path</code> because the property describes static positions, not motion.</p>
+    - `path()`
+      - : A path string defined with SVG coordinate syntax.
 
-<h2 id="Formal_definition">Formal definition</h2>
+- `none`
+  - : Specifies no motion path at all.
 
-<p>{{cssinfo}}</p>
+## Description
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+This property defines a path an animated element can follow. An offset path is either a specified path with one or multiple sub-paths or the geometry of a not-styled basic shape. The element’s exact position on the offset path is determined by the {{cssxref("offset-distance")}} property. Each shape or path must define an initial position for the computed value of `0` for {{cssxref("offset-distance")}} and an initial direction which specifies the rotation of the object to the initial position.
+
+Early versions of the spec called this property `motion-path`. It was changed to `offset-path` because the property describes static positions, not motion.
+
+## Formal definition
+
+{{cssinfo}}
+
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Animating_an_element_with_offset-path">Animating an element with offset-path</h3>
+### Animating an element with offset-path
 
-<p>The <code>offset-path</code> properties in the CSS code sample defines a motion path that is identical to the <code>&lt;path&gt;</code> element in the SVG. The path, as can be seen in the rendering of the SVG code, is a line drawing of a house with a chimney.</p>
+The `offset-path` properties in the CSS code sample defines a motion path that is identical to the `<path>` element in the SVG. The path, as can be seen in the rendering of the SVG code, is a line drawing of a house with a chimney.
 
-<h4 id="SVG">SVG</h4>
+#### SVG
 
-<p>The top and bottom halves of the scissors would appear in the top left of the canvas were they not positioned along the starting point of the motion path defined by <code>offset-path</code>.</p>
+The top and bottom halves of the scissors would appear in the top left of the canvas were they not positioned along the starting point of the motion path defined by `offset-path`.
 
-<pre class="brush: html">&lt;svg xmlns="http://www.w3.org/2000/svg"
+```html
+<svg xmlns="http://www.w3.org/2000/svg"
      width="700"
      height="450"
-     viewBox="350 0 1400 900"&gt;
-  &lt;title&gt;House and Scissors&lt;/title&gt;
-  &lt;rect x="595"
+     viewBox="350 0 1400 900">
+  <title>House and Scissors</title>
+  <rect x="595"
         y="423"
         width="610"
         height="377"
-        fill="blue" /&gt;
-  &lt;polygon points="506,423 900,190 1294,423"
-           fill="yellow" /&gt;
-  &lt;polygon points="993,245 993,190 1086,190 1086,300"
-           fill="red" /&gt;
-  &lt;path id="house" d="M900,190 L993,245 V201 A11,11 0 0,1 1004,190 H1075 A11,11 0 0,1 1086,201 V300 L1294,423 H1216 A11,11 0 0,0 1205,434 V789 A11,11 0 0,1 1194,800 H606 A11,11 0 0,1 595,789 V434 A11,11 0 0,0 584,423 H506 L900,190"
+        fill="blue" />
+  <polygon points="506,423 900,190 1294,423"
+           fill="yellow" />
+  <polygon points="993,245 993,190 1086,190 1086,300"
+           fill="red" />
+  <path id="house" d="M900,190 L993,245 V201 A11,11 0 0,1 1004,190 H1075 A11,11 0 0,1 1086,201 V300 L1294,423 H1216 A11,11 0 0,0 1205,434 V789 A11,11 0 0,1 1194,800 H606 A11,11 0 0,1 595,789 V434 A11,11 0 0,0 584,423 H506 L900,190"
         fill="none"
         stroke="black"
         stroke-width="13"
         stroke-linejoin="round"
-        stroke-linecap="round" /&gt;
-  &lt;path id="firstScissorHalf" class="scissorHalf"
+        stroke-linecap="round" />
+  <path id="firstScissorHalf" class="scissorHalf"
         d="M30,0 H-10 A10,10 0 0,0 -20,10 A20,20 0 1,1 -40,-10 H20 A10,10 0 0,1 30,0 M-40,20 A10,10 1 0,0 -40,0 A10,10 1 0,0 -40,20 M0,0"
         transform="translate(0,0)"
         fill="green"
@@ -117,8 +116,8 @@ offset-path: unset;
         stroke-width="5"
         stroke-linejoin="round"
         stroke-linecap="round"
-        fill-rule="evenodd" /&gt;
-  &lt;path id="secondScissorHalf" class="scissorHalf"
+        fill-rule="evenodd" />
+  <path id="secondScissorHalf" class="scissorHalf"
         d="M30,0 H-10 A10,10 0 0,1 -20,-10 A20,20 0 1,0 -40,10 H20 A10,10 0 0,0 30,0 M-40,-20 A10,10 1 0,0 -40,0 A10,10 1 0,0 -40,-20 M0,0"
         transform="translate(0,0)"
         fill="forestgreen"
@@ -126,12 +125,14 @@ offset-path: unset;
         stroke-width="5"
         stroke-linejoin="round"
         stroke-linecap="round"
-        fill-rule="evenodd" /&gt;
-&lt;/svg&gt;</pre>
+        fill-rule="evenodd" />
+</svg>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.scissorHalf {
+```css
+.scissorHalf {
   offset-path: path('M900,190  L993,245 V201  A11,11 0 0,1 1004,190  H1075  A11,11 0 0,1 1086,201  V300  L1294,423 H1216  A11,11 0 0,0 1205,434  V789  A11,11 0 0,1 1194,800  H606  A11,11 0 0,1 595,789  V434  A11,11 0 0,0 584,423  H506 L900,190');
   animation: followpath 4s linear infinite;
 }
@@ -141,34 +142,31 @@ offset-path: unset;
      motion-offset: 100%;
      offset-distance: 100%;
    }
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Animating_an_element_with_offset-path', '100%', '450')}}</p>
+{{EmbedLiveSample('Animating_an_element_with_offset-path', '100%', '450')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("offset")}}</li>
- <li>{{cssxref("offset-distance")}}</li>
- <li>{{cssxref("offset-rotate")}}</li>
- <li><a href="/en-US/docs/Web/SVG/Tutorial/Paths">SVG &lt;path&gt; </a></li>
-</ul>
+- {{cssxref("offset")}}
+- {{cssxref("offset-distance")}}
+- {{cssxref("offset-rotate")}}
+- [SVG \<path>](/en-US/docs/Web/SVG/Tutorial/Paths)
 
-<p>Other demos:</p>
+Other demos:
 
-<ul>
- <li><a href="https://codepen.io/team/css-tricks/pen/WZdKMq">Examples of the various values</a></li>
- <li><a href="https://codepen.io/ericwilligers/pen/jrbJPp">Triangle</a></li>
- <li><a href="https://codepen.io/ericwilligers/pen/bwVkNa">Scissors</a></li>
- <li><a href="https://jsfiddle.net/ericwilligers/r1snqdan/">Eyes</a></li>
-</ul>
+- [Examples of the various values](https://codepen.io/team/css-tricks/pen/WZdKMq)
+- [Triangle](https://codepen.io/ericwilligers/pen/jrbJPp)
+- [Scissors](https://codepen.io/ericwilligers/pen/bwVkNa)
+- [Eyes](https://jsfiddle.net/ericwilligers/r1snqdan/)

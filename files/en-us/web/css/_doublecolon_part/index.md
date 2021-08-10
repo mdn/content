@@ -1,6 +1,6 @@
 ---
 title: '::part()'
-slug: 'Web/CSS/::part'
+slug: Web/CSS/::part
 tags:
   - '::part'
   - CSS
@@ -13,25 +13,27 @@ tags:
   - Selector
 browser-compat: css.selectors.part
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>::part</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-element</a> represents any element within a <a href="/en-US/docs/Web/Web_Components/Using_shadow_DOM">shadow tree</a> that has a matching {{HTMLAttrxRef("part")}} attribute.</p>
+The **`::part`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents any element within a [shadow tree](/en-US/docs/Web/Web_Components/Using_shadow_DOM) that has a matching {{HTMLAttrxRef("part")}} attribute.
 
-<pre class="brush: css no-line-numbers">custom-element::part(foo) {
+```css
+custom-element::part(foo) {
   /* Styles to apply to the `foo` part */
 }
-</pre>
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
 {{CSSSyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;template id="tabbed-custom-element"&gt;
-&lt;style type="text/css"&gt;
+```html
+<template id="tabbed-custom-element">
+<style type="text/css">
 *, ::before, ::after {
   box-sizing: border-box;
   padding: 1rem;
@@ -39,17 +41,19 @@ browser-compat: css.selectors.part
 :host {
   display: flex;
 }
-&lt;/style&gt;
-&lt;div part="tab active"&gt;Tab 1&lt;/div&gt;
-&lt;div part="tab"&gt;Tab 2&lt;/div&gt;
-&lt;div part="tab"&gt;Tab 3&lt;/div&gt;
-&lt;/template&gt;
+</style>
+<div part="tab active">Tab 1</div>
+<div part="tab">Tab 2</div>
+<div part="tab">Tab 3</div>
+</template>
 
-&lt;tabbed-custom-element&gt;&lt;/tabbed-custom-element&gt;</pre>
+<tabbed-custom-element></tabbed-custom-element>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">tabbed-custom-element::part(tab) {
+```css
+tabbed-custom-element::part(tab) {
   color: #0c0dcc;
   border-bottom: transparent solid 2px;
 }
@@ -74,11 +78,12 @@ tabbed-custom-element::part(active) {
   color: #0060df;
   border-color: #0a84ff !important;
 }
-</pre>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">let template = document.querySelector("#tabbed-custom-element");
+```js
+let template = document.querySelector("#tabbed-custom-element");
 globalThis.customElements.define(template.id, class extends HTMLElement {
   constructor() {
     super();
@@ -86,24 +91,22 @@ globalThis.customElements.define(template.id, class extends HTMLElement {
     this.shadowRoot.appendChild(template.content);
   }
 });
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample('Examples')}}</p>
+{{EmbedLiveSample('Examples')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>The {{HTMLAttrxRef("part")}} attribute - Used to define parts which can be selected by the <code>::part()</code> selector</li>
-	<li>The {{HTMLAttrxRef("exportparts")}} attribute - Used to transitively export shadow parts from a nested shadow tree into a containing light tree.</li>
-	<li><a href="https://github.com/fergald/docs/blob/master/explainers/css-shadow-parts-1.md">Explainer: CSS Shadow ::part and ::theme</a></li>
-</ul>
+- The {{HTMLAttrxRef("part")}} attribute - Used to define parts which can be selected by the `::part()` selector
+- The {{HTMLAttrxRef("exportparts")}} attribute - Used to transitively export shadow parts from a nested shadow tree into a containing light tree.
+- [Explainer: CSS Shadow ::part and ::theme](https://github.com/fergald/docs/blob/master/explainers/css-shadow-parts-1.md)

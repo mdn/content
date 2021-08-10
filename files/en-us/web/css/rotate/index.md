@@ -8,17 +8,18 @@ tags:
   - Rotate
   - Transforms
   - angle
-  - 'recipe:css-property'
+  - recipe:css-property
   - rotation
 browser-compat: css.properties.rotate
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>rotate</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property allows you to specify rotation transforms individually and independently of the {{CSSxRef("transform")}} property. This maps better to typical user interface usage, and saves having to remember the exact order of transform functions to specify in the <code>transform</code> property.</p>
+The **`rotate`** [CSS](/en-US/docs/Web/CSS) property allows you to specify rotation transforms individually and independently of the {{CSSxRef("transform")}} property. This maps better to typical user interface usage, and saves having to remember the exact order of transform functions to specify in the `transform` property.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">/* Keyword values */
+```css
+/* Keyword values */
 rotate: none;
 
 /* Angle value */
@@ -38,42 +39,44 @@ rotate: 1 1 1 90deg;
 rotate: inherit;
 rotate: initial;
 rotate: revert;
-rotate: unset;</pre>
+rotate: unset;
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt>angle value</dt>
- <dd>An {{CSSxRef("&lt;angle&gt;")}} specifying the angle to rotate the affected element through, around the Z axis. Equivalent to a <code>rotate()</code> (2D rotation) function.</dd>
- <dt>x, y, or z axis name plus angle value</dt>
- <dd>The name of the axis you want to rotate the affected element around (<code>"x"</code>, "<code>y</code>", or "<code>z"</code>), plus an {{CSSxRef("&lt;angle&gt;")}} specifying the angle to rotate the element through. Equivalent to a <code>rotateX()</code>/<code>rotateY()</code>/<code>rotateZ()</code> (3D rotation) function.</dd>
- <dt>vector plus angle value</dt>
- <dd>Three {{CSSxRef("&lt;number&gt;")}}s representing an origin-centered vector that defines a line around which you want to rotate the element, plus an {{CSSxRef("&lt;angle&gt;")}} specifying the angle to rotate the element through. Equivalent to a <code>rotate3d()</code> (3D rotation) function.</dd>
- <dt><code>none</code></dt>
- <dd>Specifies that no rotation should be applied.</dd>
-</dl>
+- angle value
+  - : An {{CSSxRef("&lt;angle&gt;")}} specifying the angle to rotate the affected element through, around the Z axis. Equivalent to a `rotate()` (2D rotation) function.
+- x, y, or z axis name plus angle value
+  - : The name of the axis you want to rotate the affected element around (`"x"`, "`y`", or "`z"`), plus an {{CSSxRef("&lt;angle&gt;")}} specifying the angle to rotate the element through. Equivalent to a `rotateX()`/`rotateY()`/`rotateZ()` (3D rotation) function.
+- vector plus angle value
+  - : Three {{CSSxRef("&lt;number&gt;")}}s representing an origin-centered vector that defines a line around which you want to rotate the element, plus an {{CSSxRef("&lt;angle&gt;")}} specifying the angle to rotate the element through. Equivalent to a `rotate3d()` (3D rotation) function.
+- `none`
+  - : Specifies that no rotation should be applied.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Rotate_an_element_on_hover">Rotate an element on hover</h3>
+### Rotate an element on hover
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;p class="rotate"&gt;Rotation&lt;/p&gt;
-&lt;/div&gt;</pre>
+```html
+<div>
+  <p class="rotate">Rotation</p>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css hidden">* {
+```css hidden
+* {
   box-sizing: border-box;
 }
 
@@ -94,34 +97,34 @@ p {
   font-size: 1.2rem;
   text-align: center;
 }
-</pre>
+```
 
-<pre class="brush: css">.rotate {
+```css
+.rotate {
   transition: rotate 1s;
 }
 
 div:hover .rotate {
   rotate: 1 -0.5 1 180deg;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Rotate_an_element_on_hover")}}</p>
+{{EmbedLiveSample("Rotate_an_element_on_hover")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref('translate')}}</li>
- <li>{{cssxref('scale')}}</li>
- <li>{{cssxref('transform')}}</li>
-</ul>
+- {{cssxref('translate')}}
+- {{cssxref('scale')}}
+- {{cssxref('transform')}}
 
-<p>Note: <code>skew</code> is not an independent <code>transform</code> value</p>
+Note: `skew` is not an independent `transform` value

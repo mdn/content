@@ -10,361 +10,262 @@ tags:
   - Responsive Design
   - Web
 ---
-<div>{{CSSRef}}</div>
-
-<p><strong>Media queries</strong> are useful when you want to modify your site or app depending on a device's general type (such as print vs. screen) or specific characteristics and parameters (such as screen resolution or browser {{glossary("viewport")}} width).</p>
-
-<p>Media queries are used for the following:</p>
-
-<ul>
- <li>To conditionally apply styles with the <a href="/en-US/docs/Web/CSS">CSS</a> {{cssxref("@media")}} and {{cssxref("@import")}} <a href="/en-US/docs/Web/CSS/At-rule">at-rules.</a></li>
- <li>To target specific media for the {{HTMLElement("style")}}, {{HTMLElement("link")}}, {{HTMLElement("source")}}, and other <a href="/en-US/docs/Web/HTML">HTML</a> elements with the <code>media=</code> attribute.</li>
- <li>To <a href="/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries">test and monitor media states</a> using the {{domxref("Window.matchMedia()")}} and {{domxref("MediaQueryList.addListener()")}} <a href="/en-US/docs/Web/JavaScript">JavaScript</a> methods.</li>
-</ul>
-
-<div class="note">
-<p><strong>Note:</strong> The examples on this page use CSS's <code>@media</code> for illustrative purposes, but the basic syntax remains the same for all types of media queries.</p>
-</div>
-
-<h2 id="Syntax">Syntax</h2>
-
-<p>A media query is composed of an optional <em>media type</em> and any number of <em>media feature</em> expressions. Multiple queries can be combined in various ways by using <em>logical operators</em>. Media queries are case-insensitive.</p>
-
-<p>A media query computes to true when the media type (if specified) matches the device on which a document is being displayed <em>and</em> all media feature expressions compute as true. Queries involving unknown media types are always false.</p>
-
-<div class="note">
-<p><strong>Note:</strong> A style sheet with a media query attached to its {{HTMLElement("link")}} tag <a href="https://scottjehl.github.com/CSS-Download-Tests/">will still download</a> even if the query returns false. Nevertheless, its contents will not apply unless and until the result of the query changes to true.</p>
-</div>
-
-<h3 id="Media_types">Media types</h3>
-
-<p><em>Media types</em> describe the general category of a device. Except when using the <code>not</code> or <code>only</code> logical operators, the media type is optional and the <code>all</code> type will be implied.</p>
-
-<dl>
- <dt><code>all</code></dt>
- <dd>Suitable for all devices.</dd>
- <dt><code>print</code></dt>
- <dd>Intended for paged material and documents viewed on a screen in print preview mode. (Please see <a href="/en-US/docs/Web/CSS/Paged_Media">paged media</a> for information about formatting issues that are specific to these formats.)</dd>
- <dt><code>screen</code></dt>
- <dd>Intended primarily for screens.</dd>
- <dt><code>speech</code></dt>
- <dd>Intended for speech synthesizers.</dd>
-</dl>
-
-<div class="note">
-  <p><strong>Note:</strong> CSS2.1 and <a href="https://drafts.csswg.org/mediaqueries-3/#background">Media Queries 3</a> defined several additional media types (<code>tty</code>, <code>tv</code>, <code>projection</code>, <code>handheld</code>, <code>braille</code>, <code>embossed</code>, and <code>aural</code>), but they were deprecated in <a href="http://dev.w3.org/csswg/mediaqueries/#media-types">Media Queries 4</a> and shouldn't be used. The <code>aural</code> type has been replaced by <code>speech</code>, which is similar.</p>
-</div>
-
-<h3 id="Media_features">Media features</h3>
-
-<p><em>Media features</em> describe specific characteristics of the {{glossary("user agent")}}, output device, or environment. Media feature expressions test for their presence or value, and are entirely optional. Each media feature expression must be surrounded by parentheses.</p>
-
-<table>
- <thead>
-  <tr>
-   <th>Name</th>
-   <th>Summary</th>
-   <th>Notes</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{cssxref("@media/any-hover", "any-hover")}}</td>
-   <td>Does any available input mechanism allow the user to hover over elements?</td>
-   <td>Added in Media Queries Level 4.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/any-pointer", "any-pointer")}}</td>
-   <td>Is any available input mechanism a pointing device, and if so, how accurate is it?</td>
-   <td>Added in Media Queries Level 4.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/aspect-ratio", "aspect-ratio")}}</td>
-   <td>Width-to-height aspect ratio of the viewport</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/color", "color")}}</td>
-   <td>Number of bits per color component of the output device, or zero if the device isn't color</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/color-gamut", "color-gamut")}}</td>
-   <td>Approximate range of colors that are supported by the user agent and output device</td>
-   <td>Added in Media Queries Level 4.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/color-index", "color-index")}}</td>
-   <td>Number of entries in the output device's color lookup table, or zero if the device does not use such a table</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/device-aspect-ratio", "device-aspect-ratio")}} {{deprecated_inline}}</td>
-   <td>Width-to-height aspect ratio of the output device</td>
-   <td>Deprecated in Media Queries Level 4.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/device-height", "device-height")}} {{deprecated_inline}}</td>
-   <td>Height of the rendering surface of the output device</td>
-   <td>Deprecated in Media Queries Level 4.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/device-width", "device-width")}} {{deprecated_inline}}</td>
-   <td>Width of the rendering surface of the output device</td>
-   <td>Deprecated in Media Queries Level 4.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/display-mode", "display-mode")}}</td>
-   <td>The display mode of the application, as specified in the web app manifest's <a href="/en-US/docs/Web/Manifest#display"><code>display</code></a> member</td>
-   <td>Defined in the <a href="https://w3c.github.io/manifest/#the-display-mode-media-feature">Web App Manifest spec</a>.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/forced-colors", "forced-colors")}}</td>
-   <td>Detect whether user agent restricts color palette</td>
-   <td>Added in Media Queries Level 5.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/grid", "grid")}}</td>
-   <td>Does the device use a grid or bitmap screen?</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/height", "height")}}</td>
-   <td>Height of the viewport</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/hover", "hover")}}</td>
-   <td>Does the primary input mechanism allow the user to hover over elements?</td>
-   <td>Added in Media Queries Level 4.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/inverted-colors", "inverted-colors")}}</td>
-   <td>Is the user agent or underlying OS inverting colors?</td>
-   <td>Added in Media Queries Level 5.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/monochrome", "monochrome")}}</td>
-   <td>Bits per pixel in the output device's monochrome frame buffer, or zero if the device isn't monochrome</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/orientation", "orientation")}}</td>
-   <td>Orientation of the viewport</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/overflow-block", "overflow-block")}}</td>
-   <td>How does the output device handle content that overflows the viewport along the block axis?</td>
-   <td>Added in Media Queries Level 4.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/overflow-inline", "overflow-inline")}}</td>
-   <td>Can content that overflows the viewport along the inline axis be scrolled?</td>
-   <td>Added in Media Queries Level 4.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/pointer", "pointer")}}</td>
-   <td>Is the primary input mechanism a pointing device, and if so, how accurate is it?</td>
-   <td>Added in Media Queries Level 4.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}}</td>
-   <td>Detect if the user prefers a light or dark color scheme</td>
-   <td>Added in Media Queries Level 5.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/prefers-contrast", "prefers-contrast")}}</td>
-   <td>Detects if the user has requested the system increase or decrease the amount of contrast between adjacent colors</td>
-   <td>Added in Media Queries Level 5.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}}</td>
-   <td>The user prefers less motion on the page</td>
-   <td>Added in Media Queries Level 5.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/resolution", "resolution")}}</td>
-   <td>Pixel density of the output device</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/scripting", "scripting")}}</td>
-   <td>Detects whether scripting (i.e. JavaScript) is available</td>
-   <td>Added in Media Queries Level 5.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/update-frequency", "update")}}</td>
-   <td>How frequently the output device can modify the appearance of content</td>
-   <td>Added in Media Queries Level 4.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/width", "width")}}</td>
-   <td>Width of the viewport including width of scrollbar</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
-
-<h3 id="Logical_operators">Logical operators</h3>
-
-<p>The <em>logical operators</em> <code>not</code>, <code>and</code>, and <code>only</code> can be used to compose a complex media query. You can also combine multiple media queries into a single rule by separating them with commas.</p>
-
-<h4 id="and"><code>and</code></h4>
-
-<p>The <code>and</code> operator is used for combining multiple media features together into a single media query, requiring each chained feature to return true in order for the query to be true. It is also used for joining media features with media types.</p>
+{{CSSRef}}
 
-<h4 id="not"><code>not</code></h4>
+**Media queries** are useful when you want to modify your site or app depending on a device's general type (such as print vs. screen) or specific characteristics and parameters (such as screen resolution or browser {{glossary("viewport")}} width).
 
-<p>The <code>not</code> operator is used to negate a media query, returning true if the query would otherwise return false. If present in a comma-separated list of queries, it will only negate the specific query to which it is applied. If you use the <code>not</code> operator, you <em>must also</em> specify a media type.</p>
+Media queries are used for the following:
 
-<div class="note">
-<p><strong>Note:</strong> In Level 3, the <code>not</code> keyword can't be used to negate an individual media feature expression, only an entire media query.</p>
-</div>
+- To conditionally apply styles with the [CSS](/en-US/docs/Web/CSS) {{cssxref("@media")}} and {{cssxref("@import")}} [at-rules.](/en-US/docs/Web/CSS/At-rule)
+- To target specific media for the {{HTMLElement("style")}}, {{HTMLElement("link")}}, {{HTMLElement("source")}}, and other [HTML](/en-US/docs/Web/HTML) elements with the `media=` attribute.
+- To [test and monitor media states](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries) using the {{domxref("Window.matchMedia()")}} and {{domxref("MediaQueryList.addListener()")}} [JavaScript](/en-US/docs/Web/JavaScript) methods.
 
-<h4 id="only"><code>only</code></h4>
+> **Note:** The examples on this page use CSS's `@media` for illustrative purposes, but the basic syntax remains the same for all types of media queries.
 
-<p>The <code>only</code> operator is used to apply a style only if an entire query matches, and is useful for preventing older browsers from applying selected styles. When not using <code>only</code>, older browsers would interpret the query <code>screen and (max-width: 500px)</code> as <code>screen</code>, ignoring the remainder of the query, and applying its styles on all screens. If you use the <code>only</code> operator, you <em>must also</em> specify a media type.</p>
+## Syntax
 
-<h4 id="comma"><code>,</code> (comma)</h4>
+A media query is composed of an optional _media type_ and any number of _media feature_ expressions. Multiple queries can be combined in various ways by using _logical operators_. Media queries are case-insensitive.
 
-<p>Commas are used to combine multiple media queries into a single rule. Each query in a comma-separated list is treated separately from the others. Thus, if any of the queries in a list is true, the entire media statement returns true. In other words, lists behave like a logical <code>or</code> operator.</p>
+A media query computes to true when the media type (if specified) matches the device on which a document is being displayed _and_ all media feature expressions compute as true. Queries involving unknown media types are always false.
 
-<h2 id="Targeting_media_types">Targeting media types</h2>
+> **Note:** A style sheet with a media query attached to its {{HTMLElement("link")}} tag [will still download](https://scottjehl.github.com/CSS-Download-Tests/) even if the query returns false. Nevertheless, its contents will not apply unless and until the result of the query changes to true.
 
-<p>Media types describe the general category of a given device. Although websites are commonly designed with screens in mind, you may want to create styles that target special devices such as printers or audio-based screenreaders. For example, this CSS targets printers:</p>
+### Media types
 
-<pre class="brush: css">@media print { ... }</pre>
+_Media types_ describe the general category of a device. Except when using the `not` or `only` logical operators, the media type is optional and the `all` type will be implied.
 
-<p>You can also target multiple devices. For instance, this <code>@media</code> rule uses two media queries to target both screen and print devices:</p>
+- `all`
+  - : Suitable for all devices.
+- `print`
+  - : Intended for paged material and documents viewed on a screen in print preview mode. (Please see [paged media](/en-US/docs/Web/CSS/Paged_Media) for information about formatting issues that are specific to these formats.)
+- `screen`
+  - : Intended primarily for screens.
+- `speech`
+  - : Intended for speech synthesizers.
 
-<pre class="brush: css">@media screen, print { ... }</pre>
+> **Note:** CSS2.1 and [Media Queries 3](https://drafts.csswg.org/mediaqueries-3/#background) defined several additional media types (`tty`, `tv`, `projection`, `handheld`, `braille`, `embossed`, and `aural`), but they were deprecated in [Media Queries 4](http://dev.w3.org/csswg/mediaqueries/#media-types) and shouldn't be used. The `aural` type has been replaced by `speech`, which is similar.
 
-<p>See <a href="#Media_types">Media types</a> for a list of all media types. Because they describe devices in only very broad terms, just a few are available; to target more specific attributes, use <em>media features</em> instead.</p>
+### Media features
 
-<h2 id="Targeting_media_features">Targeting media features</h2>
+_Media features_ describe specific characteristics of the {{glossary("user agent")}}, output device, or environment. Media feature expressions test for their presence or value, and are entirely optional. Each media feature expression must be surrounded by parentheses.
 
-<p>Media features describe the specific characteristics of a given {{glossary("user agent")}}, output device, or environment. For instance, you can apply specific styles to widescreen monitors, computers that use mice, or to devices that are being used in low-light conditions. This example applies styles when the user's <em>primary</em> input mechanism (such as a mouse) can hover over elements:</p>
+| Name                                                                                                              | Summary                                                                                                                          | Notes                                                                                                   |
+| ----------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| {{cssxref("@media/any-hover", "any-hover")}}                                                      | Does any available input mechanism allow the user to hover over elements?                                                        | Added in Media Queries Level 4.                                                                         |
+| {{cssxref("@media/any-pointer", "any-pointer")}}                                                  | Is any available input mechanism a pointing device, and if so, how accurate is it?                                               | Added in Media Queries Level 4.                                                                         |
+| {{cssxref("@media/aspect-ratio", "aspect-ratio")}}                                              | Width-to-height aspect ratio of the viewport                                                                                     |                                                                                                         |
+| {{cssxref("@media/color", "color")}}                                                                  | Number of bits per color component of the output device, or zero if the device isn't color                                       |                                                                                                         |
+| {{cssxref("@media/color-gamut", "color-gamut")}}                                                  | Approximate range of colors that are supported by the user agent and output device                                               | Added in Media Queries Level 4.                                                                         |
+| {{cssxref("@media/color-index", "color-index")}}                                                  | Number of entries in the output device's color lookup table, or zero if the device does not use such a table                     |                                                                                                         |
+| {{cssxref("@media/device-aspect-ratio", "device-aspect-ratio")}} {{deprecated_inline}} | Width-to-height aspect ratio of the output device                                                                                | Deprecated in Media Queries Level 4.                                                                    |
+| {{cssxref("@media/device-height", "device-height")}} {{deprecated_inline}}                 | Height of the rendering surface of the output device                                                                             | Deprecated in Media Queries Level 4.                                                                    |
+| {{cssxref("@media/device-width", "device-width")}} {{deprecated_inline}}                 | Width of the rendering surface of the output device                                                                              | Deprecated in Media Queries Level 4.                                                                    |
+| {{cssxref("@media/display-mode", "display-mode")}}                                              | The display mode of the application, as specified in the web app manifest's [`display`](/en-US/docs/Web/Manifest#display) member | Defined in the [Web App Manifest spec](https://w3c.github.io/manifest/#the-display-mode-media-feature). |
+| {{cssxref("@media/forced-colors", "forced-colors")}}                                              | Detect whether user agent restricts color palette                                                                                | Added in Media Queries Level 5.                                                                         |
+| {{cssxref("@media/grid", "grid")}}                                                                      | Does the device use a grid or bitmap screen?                                                                                     |                                                                                                         |
+| {{cssxref("@media/height", "height")}}                                                              | Height of the viewport                                                                                                           |                                                                                                         |
+| {{cssxref("@media/hover", "hover")}}                                                                  | Does the primary input mechanism allow the user to hover over elements?                                                          | Added in Media Queries Level 4.                                                                         |
+| {{cssxref("@media/inverted-colors", "inverted-colors")}}                                      | Is the user agent or underlying OS inverting colors?                                                                             | Added in Media Queries Level 5.                                                                         |
+| {{cssxref("@media/monochrome", "monochrome")}}                                                      | Bits per pixel in the output device's monochrome frame buffer, or zero if the device isn't monochrome                            |                                                                                                         |
+| {{cssxref("@media/orientation", "orientation")}}                                                  | Orientation of the viewport                                                                                                      |                                                                                                         |
+| {{cssxref("@media/overflow-block", "overflow-block")}}                                          | How does the output device handle content that overflows the viewport along the block axis?                                      | Added in Media Queries Level 4.                                                                         |
+| {{cssxref("@media/overflow-inline", "overflow-inline")}}                                      | Can content that overflows the viewport along the inline axis be scrolled?                                                       | Added in Media Queries Level 4.                                                                         |
+| {{cssxref("@media/pointer", "pointer")}}                                                              | Is the primary input mechanism a pointing device, and if so, how accurate is it?                                                 | Added in Media Queries Level 4.                                                                         |
+| {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}}                          | Detect if the user prefers a light or dark color scheme                                                                          | Added in Media Queries Level 5.                                                                         |
+| {{cssxref("@media/prefers-contrast", "prefers-contrast")}}                                      | Detects if the user has requested the system increase or decrease the amount of contrast between adjacent colors                 | Added in Media Queries Level 5.                                                                         |
+| {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}}                      | The user prefers less motion on the page                                                                                         | Added in Media Queries Level 5.                                                                         |
+| {{cssxref("@media/resolution", "resolution")}}                                                      | Pixel density of the output device                                                                                               |                                                                                                         |
+| {{cssxref("@media/scripting", "scripting")}}                                                      | Detects whether scripting (i.e. JavaScript) is available                                                                         | Added in Media Queries Level 5.                                                                         |
+| {{cssxref("@media/update-frequency", "update")}}                                                  | How frequently the output device can modify the appearance of content                                                            | Added in Media Queries Level 4.                                                                         |
+| {{cssxref("@media/width", "width")}}                                                                  | Width of the viewport including width of scrollbar                                                                               |                                                                                                         |
 
-<pre class="brush: css">@media (hover: hover) { ... }</pre>
+### Logical operators
 
-<p>Many media features are <em>range features</em>, which means they can be prefixed with "min-" or "max-" to express "minimum condition" or "maximum condition" constraints. For example, this CSS will apply styles only if your browser's {{glossary("viewport")}} width is equal to or narrower than 12450px:</p>
+The _logical operators_ `not`, `and`, and `only` can be used to compose a complex media query. You can also combine multiple media queries into a single rule by separating them with commas.
 
-<pre class="brush: css">@media (max-width: 12450px) { ... }</pre>
+#### `and`
 
-<p>If you create a media feature query without specifying a value, the nested styles will be used as long as the feature's value is not zero (or <code>none</code>, in Level 4). For example, this CSS will apply to any device with a color screen:</p>
+The `and` operator is used for combining multiple media features together into a single media query, requiring each chained feature to return true in order for the query to be true. It is also used for joining media features with media types.
 
-<pre class="brush: css">@media (color) { ... }</pre>
+#### `not`
 
-<p>If a feature doesn't apply to the device on which the browser is running, expressions involving that media feature are always false. For example, the styles nested inside the following query will never be used, because no speech-only device has a screen aspect ratio:</p>
+The `not` operator is used to negate a media query, returning true if the query would otherwise return false. If present in a comma-separated list of queries, it will only negate the specific query to which it is applied. If you use the `not` operator, you _must also_ specify a media type.
 
-<pre class="brush: css">@media speech and (aspect-ratio: 11/5) { ... }</pre>
+> **Note:** In Level 3, the `not` keyword can't be used to negate an individual media feature expression, only an entire media query.
 
-<p>For more <a href="#media_features">media feature</a> examples, please see the reference page for each specific feature.</p>
+#### `only`
 
-<h2 id="Creating_complex_media_queries">Creating complex media queries</h2>
+The `only` operator is used to apply a style only if an entire query matches, and is useful for preventing older browsers from applying selected styles. When not using `only`, older browsers would interpret the query `screen and (max-width: 500px)` as `screen`, ignoring the remainder of the query, and applying its styles on all screens. If you use the `only` operator, you _must also_ specify a media type.
 
-<p>Sometimes you may want to create a media query that depends on multiple conditions. This is where the <em>logical operators</em> come in: <code>not</code>, <code>and</code>, and <code>only</code>. Furthermore, you can combine multiple media queries into a <em>comma-separated list</em>; this allows you to apply the same styles in different situations.</p>
+#### `,` (comma)
 
-<p>In the previous example, we've already seen the <code>and</code> operator used to group a media <em>type</em> with a media <em>feature</em>. The <code>and</code> operator can also combine multiple media features into a single media query. The <code>not</code> operator, meanwhile, negates a media query, basically reversing its normal meaning. The <code>only</code> operator prevents older browsers from applying the styles.</p>
+Commas are used to combine multiple media queries into a single rule. Each query in a comma-separated list is treated separately from the others. Thus, if any of the queries in a list is true, the entire media statement returns true. In other words, lists behave like a logical `or` operator.
 
-<div class="note">
-<p><strong>Note:</strong> In most cases, the <code>all</code> media type is used by default when no other type is specified. However, if you use the <code>not</code> or <code>only</code> operators, you must explicitly specify a media type.</p>
-</div>
+## Targeting media types
 
-<h3 id="Combining_multiple_types_or_features">Combining multiple types or features</h3>
+Media types describe the general category of a given device. Although websites are commonly designed with screens in mind, you may want to create styles that target special devices such as printers or audio-based screenreaders. For example, this CSS targets printers:
 
-<p>The <code>and</code> keyword combines a media feature with a media type <em>or</em> other media features. This example combines two media features to restrict styles to landscape-oriented devices with a width of at least 30 ems:</p>
+```css
+@media print { ... }
+```
 
-<pre class="brush: css">@media (min-width: 30em) and (orientation: landscape) { ... }</pre>
+You can also target multiple devices. For instance, this `@media` rule uses two media queries to target both screen and print devices:
 
-<p>To limit the styles to devices with a screen, you can chain the media features to the <code>screen</code> media type:</p>
+```css
+@media screen, print { ... }
+```
 
-<pre class="brush: css">@media screen and (min-width: 30em) and (orientation: landscape) { ... }</pre>
+See [Media types](#Media_types) for a list of all media types. Because they describe devices in only very broad terms, just a few are available; to target more specific attributes, use _media features_ instead.
 
-<h3 id="Testing_for_multiple_queries">Testing for multiple queries</h3>
+## Targeting media features
 
-<p>You can use a comma-separated list to apply styles when the user's device matches any one of various media types, features, or states. For instance, the following rule will apply its styles if the user's device has either a minimum height of 680px <em>or</em> is a screen device in portrait mode:</p>
+Media features describe the specific characteristics of a given {{glossary("user agent")}}, output device, or environment. For instance, you can apply specific styles to widescreen monitors, computers that use mice, or to devices that are being used in low-light conditions. This example applies styles when the user's _primary_ input mechanism (such as a mouse) can hover over elements:
 
-<pre class="brush: css">@media (min-height: 680px), screen and (orientation: portrait) { ... }</pre>
+```css
+@media (hover: hover) { ... }
+```
 
-<p>Taking the above example, if the user had a printer with a page height of 800px, the media statement would return true because the first query would apply. Likewise, if the user were on a smartphone in portrait mode with a viewport height of 480px, the second query would apply and the media statement would still return true.</p>
+Many media features are _range features_, which means they can be prefixed with "min-" or "max-" to express "minimum condition" or "maximum condition" constraints. For example, this CSS will apply styles only if your browser's {{glossary("viewport")}} width is equal to or narrower than 12450px:
 
-<h3 id="Inverting_a_querys_meaning">Inverting a query's meaning</h3>
+```css
+@media (max-width: 12450px) { ... }
+```
 
-<p>The <code>not</code> keyword inverts the meaning of an entire media query. It will only negate the specific media query it is applied to. (Thus, it will not apply to every media query in a comma-separated list of media queries.) The <code>not</code> keyword can't be used to negate an individual feature query, only an entire media query. The <code>not</code> is evaluated last in the following query:</p>
+If you create a media feature query without specifying a value, the nested styles will be used as long as the feature's value is not zero (or `none`, in Level 4). For example, this CSS will apply to any device with a color screen:
 
-<pre class="brush: css">@media not all and (monochrome) { ... }
-</pre>
+```css
+@media (color) { ... }
+```
 
-<p>... so that the above query is evaluated like this:</p>
+If a feature doesn't apply to the device on which the browser is running, expressions involving that media feature are always false. For example, the styles nested inside the following query will never be used, because no speech-only device has a screen aspect ratio:
 
-<pre class="brush: css">@media not (all and (monochrome)) { ... }
-</pre>
+```css
+@media speech and (aspect-ratio: 11/5) { ... }
+```
 
-<p>... rather than like this:</p>
+For more [media feature](#media_features) examples, please see the reference page for each specific feature.
 
-<pre class="brush: css example-bad">@media (not all) and (monochrome) { ... }</pre>
+## Creating complex media queries
 
-<p>As another example, the following media query:</p>
+Sometimes you may want to create a media query that depends on multiple conditions. This is where the _logical operators_ come in: `not`, `and`, and `only`. Furthermore, you can combine multiple media queries into a _comma-separated list_; this allows you to apply the same styles in different situations.
 
-<pre class="brush: css">@media not screen and (color), print and (color) { ... }
-</pre>
+In the previous example, we've already seen the `and` operator used to group a media _type_ with a media _feature_. The `and` operator can also combine multiple media features into a single media query. The `not` operator, meanwhile, negates a media query, basically reversing its normal meaning. The `only` operator prevents older browsers from applying the styles.
 
-<p>... is evaluated like this:</p>
+> **Note:** In most cases, the `all` media type is used by default when no other type is specified. However, if you use the `not` or `only` operators, you must explicitly specify a media type.
 
-<pre class="brush: css">@media (not (screen and (color))), print and (color) { ... }</pre>
+### Combining multiple types or features
 
-<h3 id="Improving_compatibility_with_older_browsers">Improving compatibility with older browsers</h3>
+The `and` keyword combines a media feature with a media type _or_ other media features. This example combines two media features to restrict styles to landscape-oriented devices with a width of at least 30 ems:
 
-<p>The <code>only</code> keyword prevents older browsers that do not support media queries with media features from applying the given styles. <em>It has no effect on modern browsers.</em></p>
+```css
+@media (min-width: 30em) and (orientation: landscape) { ... }
+```
 
-<pre class="brush: css">@media only screen and (color) { ... }
-</pre>
+To limit the styles to devices with a screen, you can chain the media features to the `screen` media type:
 
-<h2 id="Syntax_improvements_in_Level_4">Syntax improvements in Level 4</h2>
+```css
+@media screen and (min-width: 30em) and (orientation: landscape) { ... }
+```
 
-<p>The Media Queries Level 4 specification includes some syntax improvements to make media queries using features that have a "range" type, for example width or height, less verbose. Level 4 adds a <em>range context</em> for writing such queries. For example, using the <code>max-</code> functionality for width we might write the following:</p>
+### Testing for multiple queries
 
-<div class="note">
-<p><strong>Note:</strong> The Media Queries Level 4 specification has reasonable support in modern browsers, but some media features are not well supported. See the <a href="/en-US/docs/Web/CSS/@media#Browser_compatibility"><code>@media</code> browser compatibility table</a> for more details.</p>
-</div>
+You can use a comma-separated list to apply styles when the user's device matches any one of various media types, features, or states. For instance, the following rule will apply its styles if the user's device has either a minimum height of 680px _or_ is a screen device in portrait mode:
 
-<pre class="brush: css">@media (max-width: 30em) { ... }</pre>
+```css
+@media (min-height: 680px), screen and (orientation: portrait) { ... }
+```
 
-<p>In Media Queries Level 4 this can be written as:</p>
+Taking the above example, if the user had a printer with a page height of 800px, the media statement would return true because the first query would apply. Likewise, if the user were on a smartphone in portrait mode with a viewport height of 480px, the second query would apply and the media statement would still return true.
 
-<pre class="brush: css">@media (width &lt;= 30em) { ... }</pre>
+### Inverting a query's meaning
 
-<p>Using <code>min-</code> and <code>max-</code> we might test for a width between two values like so:</p>
+The `not` keyword inverts the meaning of an entire media query. It will only negate the specific media query it is applied to. (Thus, it will not apply to every media query in a comma-separated list of media queries.) The `not` keyword can't be used to negate an individual feature query, only an entire media query. The `not` is evaluated last in the following query:
 
-<pre class="brush: css">@media (min-width: 30em) and (max-width: 50em) { ... }</pre>
+```css
+@media not all and (monochrome) { ... }
+```
 
-<p>This would convert to the Level 4 syntax as:</p>
+... so that the above query is evaluated like this:
 
-<pre class="brush: css">@media (30em &lt;= width &lt;= 50em ) { ... }
-</pre>
+```css
+@media not (all and (monochrome)) { ... }
+```
 
-<p>Media Queries Level 4 also adds ways to combine media queries using full boolean algebra with <strong>and</strong>, <strong>not</strong>, and <strong>or</strong>.</p>
+... rather than like this:
 
-<h3 id="Negating_a_feature_with_not">Negating a feature with <code>not</code></h3>
+```css example-bad
+@media (not all) and (monochrome) { ... }
+```
 
-<p>Using <code>not()</code> around a media feature negates that feature in the query. For example, <code>not(hover)</code> would match if the device had no hover capability:</p>
+As another example, the following media query:
 
-<pre class="brush: css">@media (not(hover)) { ... }</pre>
+```css
+@media not screen and (color), print and (color) { ... }
+```
 
-<h3 id="Testing_for_multiple_features_with_or">Testing for multiple features with <code>or</code></h3>
+... is evaluated like this:
 
-<p>You can use <code>or</code> to test for a match among more than one feature, resolving to <code>true</code> if any of the features are true. For example, the following query tests for devices that have a monochrome display or hover capability:</p>
+```css
+@media (not (screen and (color))), print and (color) { ... }
+```
 
-<pre class="brush: css">@media (not (color)) or (hover) { ... }
-</pre>
+### Improving compatibility with older browsers
 
-<h2 id="See_also">See also</h2>
+The `only` keyword prevents older browsers that do not support media queries with media features from applying the given styles. _It has no effect on modern browsers._
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries">Testing media queries programmatically</a></li>
- <li><a href="http://davidwalsh.name/animate-media-queries">CSS Animations Between Media Queries</a></li>
- <li><a href="/en-US/docs/Web/CSS/Mozilla_Extensions#Media_features">Extended Mozilla media features</a></li>
- <li><a href="/en-US/docs/Web/CSS/Webkit_Extensions#Media_features">Extended WebKit media features</a></li>
-</ul>
+```css
+@media only screen and (color) { ... }
+```
+
+## Syntax improvements in Level 4
+
+The Media Queries Level 4 specification includes some syntax improvements to make media queries using features that have a "range" type, for example width or height, less verbose. Level 4 adds a _range context_ for writing such queries. For example, using the `max-` functionality for width we might write the following:
+
+> **Note:** The Media Queries Level 4 specification has reasonable support in modern browsers, but some media features are not well supported. See the [`@media` browser compatibility table](/en-US/docs/Web/CSS/@media#Browser_compatibility) for more details.
+
+```css
+@media (max-width: 30em) { ... }
+```
+
+In Media Queries Level 4 this can be written as:
+
+```css
+@media (width <= 30em) { ... }
+```
+
+Using `min-` and `max-` we might test for a width between two values like so:
+
+```css
+@media (min-width: 30em) and (max-width: 50em) { ... }
+```
+
+This would convert to the Level 4 syntax as:
+
+```css
+@media (30em <= width <= 50em ) { ... }
+```
+
+Media Queries Level 4 also adds ways to combine media queries using full boolean algebra with **and**, **not**, and **or**.
+
+### Negating a feature with `not`
+
+Using `not()` around a media feature negates that feature in the query. For example, `not(hover)` would match if the device had no hover capability:
+
+```css
+@media (not(hover)) { ... }
+```
+
+### Testing for multiple features with `or`
+
+You can use `or` to test for a match among more than one feature, resolving to `true` if any of the features are true. For example, the following query tests for devices that have a monochrome display or hover capability:
+
+```css
+@media (not (color)) or (hover) { ... }
+```
+
+## See also
+
+- [Testing media queries programmatically](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries)
+- [CSS Animations Between Media Queries](http://davidwalsh.name/animate-media-queries)
+- [Extended Mozilla media features](/en-US/docs/Web/CSS/Mozilla_Extensions#Media_features)
+- [Extended WebKit media features](/en-US/docs/Web/CSS/Webkit_Extensions#Media_features)

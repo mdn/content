@@ -10,39 +10,37 @@ tags:
   - media feature
 browser-compat: css.at-rules.media.orientation
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>orientation</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features">media feature</a> can be used to test the orientation of the {{glossary("viewport")}} (or the page box, for <a href="/en-US/docs/Web/CSS/Paged_Media">paged media</a>).</p>
+The **`orientation`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) can be used to test the orientation of the {{glossary("viewport")}} (or the page box, for [paged media](/en-US/docs/Web/CSS/Paged_Media)).
 
-<div class="note">
-<p><strong>Note:</strong> This feature does not correspond to <em>device</em> orientation. Opening the soft keyboard on many devices in portrait orientation will cause the viewport to become wider than it is tall, thereby causing the browser to use landscape styles instead of portrait.</p>
-</div>
+> **Note:** This feature does not correspond to _device_ orientation. Opening the soft keyboard on many devices in portrait orientation will cause the viewport to become wider than it is tall, thereby causing the browser to use landscape styles instead of portrait.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>orientation</code> feature is specified as a keyword value chosen from the list below.</p>
+The `orientation` feature is specified as a keyword value chosen from the list below.
 
-<h3 id="Keyword_values">Keyword values</h3>
+### Keyword values
 
-<dl>
- <dt><code>portrait</code></dt>
- <dd>The viewport is in a portrait orientation, i.e.,  the height is greater than or equal to the width.</dd>
- <dt><code>landscape</code></dt>
- <dd>The viewport is in a landscape orientation, i.e., the width is greater than the height.</dd>
-</dl>
+- `portrait`
+  - : The viewport is in a portrait orientation, i.e.,  the height is greater than or equal to the width.
+- `landscape`
+  - : The viewport is in a landscape orientation, i.e., the width is greater than the height.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;Box 1&lt;/div&gt;
-&lt;div&gt;Box 2&lt;/div&gt;
-&lt;div&gt;Box 3&lt;/div&gt;
-</pre>
+```html
+<div>Box 1</div>
+<div>Box 2</div>
+<div>Box 3</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">body {
+```css
+body {
   display: flex;
 }
 
@@ -60,16 +58,17 @@ div {
   body {
     flex-direction: column;
   }
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Examples")}}</p>
+{{EmbedLiveSample("Examples")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

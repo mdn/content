@@ -9,19 +9,20 @@ tags:
   - NeedsCompatTable
   - NeedsExample
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.mask-border-outset
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>mask-border-outset</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property specifies the distance by which an element's <a href="/en-US/docs/Web/CSS/mask-border">mask border</a> is set out from its border box.</p>
+The **`mask-border-outset`** [CSS](/en-US/docs/Web/CSS) property specifies the distance by which an element's [mask border](/en-US/docs/Web/CSS/mask-border) is set out from its border box.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* &lt;length&gt; value */
+```css
+/* <length> value */
 mask-border-outset: 1rem;
 
-/* &lt;number&gt; value */
+/* <number> value */
 mask-border-outset: 1.5;
 
 /* vertical | horizontal */
@@ -38,64 +39,60 @@ mask-border-outset: inherit;
 mask-border-outset: initial;
 mask-border-outset: revert;
 mask-border-outset: unset;
-</pre>
+```
 
-<p>The <code>mask-border-outset</code> property may be specified as one, two, three, or four values. Each value is a {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;number&gt;")}}. Negative values are invalid.</p>
+The `mask-border-outset` property may be specified as one, two, three, or four values. Each value is a {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;number&gt;")}}. Negative values are invalid.
 
-<ul>
- <li>When <strong>one</strong> value is specified, it applies the same outset to <strong>all four sides</strong>.</li>
- <li>When <strong>two</strong> values are specified, the first outset applies to the <strong>top and bottom</strong>, the second to the <strong>left and right</strong>.</li>
- <li>When <strong>three</strong> values are specified, the first outset applies to the <strong>top</strong>, the second to the <strong>left and right</strong>, the third to the <strong>bottom</strong>.</li>
- <li>When <strong>four</strong> values are specified, the outsets apply to the <strong>top</strong>, <strong>right</strong>, <strong>bottom</strong>, and <strong>left</strong> in that order (clockwise).</li>
-</ul>
+- When **one** value is specified, it applies the same outset to **all four sides**.
+- When **two** values are specified, the first outset applies to the **top and bottom**, the second to the **left and right**.
+- When **three** values are specified, the first outset applies to the **top**, the second to the **left and right**, the third to the **bottom**.
+- When **four** values are specified, the outsets apply to the **top**, **right**, **bottom**, and **left** in that order (clockwise).
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt>{{cssxref("&lt;length&gt;")}}</dt>
- <dd>The size of the mask border outset as a dimension.</dd>
- <dt>{{cssxref("&lt;number&gt;")}}</dt>
- <dd>The size of the mask border outset as a multiple of the corresponding {{cssxref("border-width")}}.</dd>
-</dl>
+- {{cssxref("&lt;length&gt;")}}
+  - : The size of the mask border outset as a dimension.
+- {{cssxref("&lt;number&gt;")}}
+  - : The size of the mask border outset as a multiple of the corresponding {{cssxref("border-width")}}.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Basic_usage">Basic usage</h3>
+### Basic usage
 
-<p>This property doesn't appear to be supported anywhere yet. When it eventually starts to be supported, it will serve to move the mask away from the inner edge of the element's border box — you can use it to make the mask start from part way across the border, rather than the inside of it.</p>
+This property doesn't appear to be supported anywhere yet. When it eventually starts to be supported, it will serve to move the mask away from the inner edge of the element's border box — you can use it to make the mask start from part way across the border, rather than the inside of it.
 
-<pre class="brush: css">mask-border-outset: 1rem;</pre>
+```css
+mask-border-outset: 1rem;
+```
 
-<p>Chromium-based browsers support an outdated version of this property — <code>mask-box-image-outset</code> — with a prefix:</p>
+Chromium-based browsers support an outdated version of this property — `mask-box-image-outset` — with a prefix:
 
-<pre class="brush: css">-webkit-mask-box-image-outset: 1rem;</pre>
+```css
+-webkit-mask-box-image-outset: 1rem;
+```
 
-<div class="notecard note">
-<p><strong>Note:</strong> The <code><a href="/en-US/docs/Web/CSS/mask-border">mask-border</a></code> page features a working example (using the out-of-date prefixed border mask properties supported in Chromium), so you can get an idea of the effect.</p>
-</div>
+> **Note:** The [`mask-border`](/en-US/docs/Web/CSS/mask-border) page features a working example (using the out-of-date prefixed border mask properties supported in Chromium), so you can get an idea of the effect.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{cssxref("mask-border")}}</li>
-  <li>{{cssxref("mask-border-mode")}}</li>
-  <li>{{cssxref("mask-border-repeat")}}</li>
-  <li>{{cssxref("mask-border-source")}}</li>
-  <li>{{cssxref("mask-border-width")}}</li>
-</ul>
+- {{cssxref("mask-border")}}
+- {{cssxref("mask-border-mode")}}
+- {{cssxref("mask-border-repeat")}}
+- {{cssxref("mask-border-source")}}
+- {{cssxref("mask-border-width")}}

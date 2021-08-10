@@ -12,33 +12,32 @@ tags:
   - border-color
   - borders
   - colors
-  - 'recipe:css-shorthand-property'
+  - recipe:css-shorthand-property
 browser-compat: css.properties.border-color
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>border-color</code></strong> <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand</a> <a href="/en-US/docs/Web/CSS">CSS</a> property sets the color of an element's border.</p>
+The **`border-color`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets the color of an element's border.
 
-<div>{{EmbedInteractiveExample("pages/css/border-color.html")}}</div>
+{{EmbedInteractiveExample("pages/css/border-color.html")}}
 
-<p>Each side can be set individually using {{CSSxRef("border-top-color")}}, {{CSSxRef("border-right-color")}}, {{CSSxRef("border-bottom-color")}}, and {{CSSxRef("border-left-color")}}; or using the writing mode-aware {{CSSxRef("border-block-start-color")}}, {{CSSxRef("border-block-end-color")}}, {{CSSxRef("border-inline-start-color")}}, and {{CSSxRef("border-inline-end-color")}}.</p>
+Each side can be set individually using {{CSSxRef("border-top-color")}}, {{CSSxRef("border-right-color")}}, {{CSSxRef("border-bottom-color")}}, and {{CSSxRef("border-left-color")}}; or using the writing mode-aware {{CSSxRef("border-block-start-color")}}, {{CSSxRef("border-block-end-color")}}, {{CSSxRef("border-inline-start-color")}}, and {{CSSxRef("border-inline-end-color")}}.
 
-<p>You can find more information about border colors in {{SectionOnPage("/en-US/docs/Web/HTML/Applying_color", "Borders")}}.</p>
+You can find more information about border colors in {{SectionOnPage("/en-US/docs/Web/HTML/Applying_color", "Borders")}}.
 
-<h2 id="Constituent_properties">Constituent properties</h2>
+## Constituent properties
 
-<p>This property is a shorthand for the following CSS properties:</p>
+This property is a shorthand for the following CSS properties:
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/border-bottom-color"><code>border-bottom-color</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/border-left-color"><code>border-left-color</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/border-right-color"><code>border-right-color</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/border-top-color"><code>border-top-color</code></a></li>
-</ul>
+- [`border-bottom-color`](/en-US/docs/Web/CSS/border-bottom-color)
+- [`border-left-color`](/en-US/docs/Web/CSS/border-left-color)
+- [`border-right-color`](/en-US/docs/Web/CSS/border-right-color)
+- [`border-top-color`](/en-US/docs/Web/CSS/border-top-color)
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* &lt;color&gt; values */
+```css
+/* <color> values */
 border-color: red;
 
 /* top and bottom | left and right */
@@ -55,75 +54,73 @@ border-color: inherit;
 border-color: initial;
 border-color: revert;
 border-color: unset;
-</pre>
+```
 
-<p>The <code>border-color</code> property may be specified using one, two, three, or four values.</p>
+The `border-color` property may be specified using one, two, three, or four values.
 
-<ul>
- <li>When <strong>one</strong> value is specified, it applies the same color to <strong>all four sides</strong>.</li>
- <li>When <strong>two</strong> values are specified, the first color applies to the <strong>top and bottom</strong>, the second to the <strong>left and right</strong>.</li>
- <li>When <strong>three</strong> values are specified, the first color applies to the <strong>top</strong>, the second to the <strong>left and right</strong>, the third to the <strong>bottom</strong>.</li>
- <li>When <strong>four</strong> values are specified, the colors apply to the <strong>top</strong>, <strong>right</strong>, <strong>bottom</strong>, and <strong>left</strong> in that order (clockwise).</li>
-</ul>
+- When **one** value is specified, it applies the same color to **all four sides**.
+- When **two** values are specified, the first color applies to the **top and bottom**, the second to the **left and right**.
+- When **three** values are specified, the first color applies to the **top**, the second to the **left and right**, the third to the **bottom**.
+- When **four** values are specified, the colors apply to the **top**, **right**, **bottom**, and **left** in that order (clockwise).
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt>{{CSSxRef("&lt;color&gt;")}}</dt>
- <dd>Defines the color of the border.</dd>
-</dl>
+- {{CSSxRef("&lt;color&gt;")}}
+  - : Defines the color of the border.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Complete_border-color_usage">Complete border-color usage</h3>
+### Complete border-color usage
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div id="justone"&gt;
-  &lt;p&gt;&lt;code&gt;border-color: red;&lt;/code&gt; is equivalent to&lt;/p&gt;
-  &lt;ul&gt;&lt;li&gt;&lt;code&gt;border-top-color: red;&lt;/code&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;code&gt;border-right-color: red;&lt;/code&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;code&gt;border-bottom-color: red;&lt;/code&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;code&gt;border-left-color: red;&lt;/code&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id="horzvert"&gt;
-  &lt;p&gt;&lt;code&gt;border-color: gold red;&lt;/code&gt; is equivalent to&lt;/p&gt;
-  &lt;ul&gt;&lt;li&gt;&lt;code&gt;border-top-color: gold;&lt;/code&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;code&gt;border-right-color: red;&lt;/code&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;code&gt;border-bottom-color: gold;&lt;/code&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;code&gt;border-left-color: red;&lt;/code&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id="topvertbott"&gt;
-  &lt;p&gt;&lt;code&gt;border-color: red cyan gold;&lt;/code&gt; is equivalent to&lt;/p&gt;
-  &lt;ul&gt;&lt;li&gt;&lt;code&gt;border-top-color: red;&lt;/code&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;code&gt;border-right-color: cyan;&lt;/code&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;code&gt;border-bottom-color: gold;&lt;/code&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;code&gt;border-left-color: cyan;&lt;/code&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id="trbl"&gt;
-  &lt;p&gt;&lt;code&gt;border-color: red cyan black gold;&lt;/code&gt; is equivalent to&lt;/p&gt;
-  &lt;ul&gt;&lt;li&gt;&lt;code&gt;border-top-color: red;&lt;/code&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;code&gt;border-right-color: cyan;&lt;/code&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;code&gt;border-bottom-color: black;&lt;/code&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;code&gt;border-left-color: gold;&lt;/code&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div id="justone">
+  <p><code>border-color: red;</code> is equivalent to</p>
+  <ul><li><code>border-top-color: red;</code></li>
+    <li><code>border-right-color: red;</code></li>
+    <li><code>border-bottom-color: red;</code></li>
+    <li><code>border-left-color: red;</code></li>
+  </ul>
+</div>
+<div id="horzvert">
+  <p><code>border-color: gold red;</code> is equivalent to</p>
+  <ul><li><code>border-top-color: gold;</code></li>
+    <li><code>border-right-color: red;</code></li>
+    <li><code>border-bottom-color: gold;</code></li>
+    <li><code>border-left-color: red;</code></li>
+  </ul>
+</div>
+<div id="topvertbott">
+  <p><code>border-color: red cyan gold;</code> is equivalent to</p>
+  <ul><li><code>border-top-color: red;</code></li>
+    <li><code>border-right-color: cyan;</code></li>
+    <li><code>border-bottom-color: gold;</code></li>
+    <li><code>border-left-color: cyan;</code></li>
+  </ul>
+</div>
+<div id="trbl">
+  <p><code>border-color: red cyan black gold;</code> is equivalent to</p>
+  <ul><li><code>border-top-color: red;</code></li>
+    <li><code>border-right-color: cyan;</code></li>
+    <li><code>border-bottom-color: black;</code></li>
+    <li><code>border-left-color: gold;</code></li>
+  </ul>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">#justone {
+```css
+#justone {
   border-color: red;
 }
 
@@ -151,26 +148,24 @@ ul {
   margin: 0;
   list-style: none;
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Complete_border-color_usage", 600, 300)}}</p>
+{{EmbedLiveSample("Complete_border-color_usage", 600, 300)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Border-color related CSS properties: {{CSSxRef("border")}}, {{CSSxRef("border-top-color")}}, {{CSSxRef("border-right-color")}}, {{CSSxRef("border-bottom-color")}}, {{CSSxRef("border-left-color")}},</li>
- <li>Other border-related CSS properties: {{CSSxRef("border-width")}}, {{CSSxRef("border-style")}}</li>
- <li>The {{CSSxRef("&lt;color&gt;")}} data type</li>
- <li>Other color-related properties: {{CSSxRef("color")}}, {{CSSxRef("background-color")}}, {{CSSxRef("outline-color")}}, {{CSSxRef("text-decoration-color")}}, {{CSSxRef("text-emphasis-color")}}, {{CSSxRef("text-shadow")}}, {{CSSxRef("caret-color")}}, and {{CSSxRef("column-rule-color")}}</li>
- <li><a href="/en-US/docs/Web/HTML/Applying_color">Applying color to HTML elements using CSS</a></li>
-</ul>
+- Border-color related CSS properties: {{CSSxRef("border")}}, {{CSSxRef("border-top-color")}}, {{CSSxRef("border-right-color")}}, {{CSSxRef("border-bottom-color")}}, {{CSSxRef("border-left-color")}},
+- Other border-related CSS properties: {{CSSxRef("border-width")}}, {{CSSxRef("border-style")}}
+- The {{CSSxRef("&lt;color&gt;")}} data type
+- Other color-related properties: {{CSSxRef("color")}}, {{CSSxRef("background-color")}}, {{CSSxRef("outline-color")}}, {{CSSxRef("text-decoration-color")}}, {{CSSxRef("text-emphasis-color")}}, {{CSSxRef("text-shadow")}}, {{CSSxRef("caret-color")}}, and {{CSSxRef("column-rule-color")}}
+- [Applying color to HTML elements using CSS](/en-US/docs/Web/HTML/Applying_color)

@@ -8,60 +8,59 @@ tags:
   - Reference
 browser-compat: css.properties.list-style-type.symbols
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>symbols()</code></strong> CSS function lets you define counter styles inline, directly as the value of a property such as {{cssxref("list-style")}}. Unlike {{cssxref("@counter-style")}}, <code>symbols()</code> is <em>anonymous</em> (i.e., it can only be used once). Although less powerful, it is shorter and easier to write than {{cssxref("@counter-style")}}.</p>
+The **`symbols()`** CSS function lets you define counter styles inline, directly as the value of a property such as {{cssxref("list-style")}}. Unlike {{cssxref("@counter-style")}}, `symbols()` is _anonymous_ (i.e., it can only be used once). Although less powerful, it is shorter and easier to write than {{cssxref("@counter-style")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">symbols() = symbols( &lt;symbols-type&gt;? [ &lt;string&gt; | &lt;image&gt; ]+ );
-</pre>
+```css
+symbols() = symbols( <symbols-type>? [ <string> | <image> ]+ );
+```
 
-<p><code>&lt;symbols-type&gt;</code> can be one of the following:</p>
+`<symbols-type>` can be one of the following:
 
-<ul>
-	<li><code>cyclic</code>: The system cycles through the given values in the order of their definition, and returns to the start when it reaches the end.</li>
-	<li><code>numeric</code>: The system interprets the given values as the successive units of a place-value numbering system.</li>
-	<li><code>alphabetic</code>: The system interprets the given values as the digits of an alphabetic numbering system, like a place-value numbering system but without <code>0</code>.</li>
-	<li><code>symbolic</code>: The system cycles through the values, printing them an additional time at each cycle (one time for the first cycle, two times for the second, etc.).</li>
-	<li><code>fixed</code>: The system cycles through the given values once, then falls back to Arabic numerals.</li>
-</ul>
+- `cyclic`: The system cycles through the given values in the order of their definition, and returns to the start when it reaches the end.
+- `numeric`: The system interprets the given values as the successive units of a place-value numbering system.
+- `alphabetic`: The system interprets the given values as the digits of an alphabetic numbering system, like a place-value numbering system but without `0`.
+- `symbolic`: The system cycles through the values, printing them an additional time at each cycle (one time for the first cycle, two times for the second, etc.).
+- `fixed`: The system cycles through the given values once, then falls back to Arabic numerals.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;ol&gt;
-  &lt;li&gt;One&lt;/li&gt;
-  &lt;li&gt;Two&lt;/li&gt;
-  &lt;li&gt;Three&lt;/li&gt;
-  &lt;li&gt;Four&lt;/li&gt;
-  &lt;li&gt;Five&lt;/li&gt;
-&lt;/ol&gt;
-</pre>
+```html
+<ol>
+  <li>One</li>
+  <li>Two</li>
+  <li>Three</li>
+  <li>Four</li>
+  <li>Five</li>
+</ol>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">ol {
+```css
+ol {
   list-style: symbols(cyclic "*" "†" "‡");
 }
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample('Examples','100%',200)}}</p>
+{{EmbedLiveSample('Examples','100%',200)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>{{cssxref("@counter-style")}}</li>
-	<li>{{cssxref("list-style-type")}} and the corresponding shorthand {{cssxref("list-style")}}.</li>
-</ul>
+- {{cssxref("@counter-style")}}
+- {{cssxref("list-style-type")}} and the corresponding shorthand {{cssxref("list-style")}}.

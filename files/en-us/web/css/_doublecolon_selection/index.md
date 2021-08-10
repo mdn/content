@@ -9,46 +9,50 @@ tags:
   - Selector
 browser-compat: css.selectors.selection
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>::selection</code></strong> CSS <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-element</a> applies styles to the part of a document that has been highlighted by the user (such as clicking and dragging the mouse across text).</p>
+The **`::selection`** CSS [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) applies styles to the part of a document that has been highlighted by the user (such as clicking and dragging the mouse across text).
 
-<pre class="brush: css no-line-numbers">::selection {
+```css
+::selection {
   background-color: cyan;
-}</pre>
+}
+```
 
-<h2 id="Allowable_properties">Allowable properties</h2>
+## Allowable properties
 
-<p>Only certain CSS properties can be used with <code>::selection</code>:</p>
+Only certain CSS properties can be used with `::selection`:
 
-<ul>
- <li>{{CSSxRef("color")}}</li>
- <li>{{CSSxRef("background-color")}}</li>
- <li>{{CSSxRef("text-decoration")}} and its associated properties</li>
- <li>{{CSSxRef("text-shadow")}}</li>
- <li>{{SVGAttr("stroke-color")}}, {{SVGAttr("fill-color")}} and {{SVGAttr("stroke-width")}}</li>
-</ul>
+- {{CSSxRef("color")}}
+- {{CSSxRef("background-color")}}
+- {{CSSxRef("text-decoration")}} and its associated properties
+- {{CSSxRef("text-shadow")}}
+- {{SVGAttr("stroke-color")}}, {{SVGAttr("fill-color")}} and {{SVGAttr("stroke-width")}}
 
-<p>In particular, {{CSSxRef("background-image")}} is ignored.</p>
+In particular, {{CSSxRef("background-image")}} is ignored.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">/* Legacy Firefox syntax (version 61 and below) */
+```css
+/* Legacy Firefox syntax (version 61 and below) */
 ::-moz-selection
 
 {{CSSSyntax}}
-</pre>
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">This text has special styles when you highlight it.
-&lt;p&gt;Also try selecting text in this paragraph.&lt;/p&gt;</pre>
+```html
+This text has special styles when you highlight it.
+<p>Also try selecting text in this paragraph.</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css hidden">::-moz-selection {
+```css hidden
+::-moz-selection {
   color: gold;
   background-color: red;
 }
@@ -56,9 +60,11 @@ browser-compat: css.selectors.selection
 p::-moz-selection {
   color: white;
   background-color: blue;
-}</pre>
+}
+```
 
-<pre class="brush: css">/* Make selected text gold on a red background */
+```css
+/* Make selected text gold on a red background */
 ::selection {
   color: gold;
   background-color: red;
@@ -68,42 +74,35 @@ p::-moz-selection {
 p::selection {
   color: white;
   background-color: blue;
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample('Examples')}}</p>
+{{EmbedLiveSample('Examples')}}
 
-<h2 id="Accessibility_concerns">Accessibility concerns</h2>
+## Accessibility concerns
 
-<p><strong>Don't override selected text styles for purely aesthetic reasons</strong> — users can customize them to suit their needs. For people experiencing cognitive concerns or who are less technologically literate, unexpected changes to selection styles may hurt their understanding of the functionality.</p>
+**Don't override selected text styles for purely aesthetic reasons** — users can customize them to suit their needs. For people experiencing cognitive concerns or who are less technologically literate, unexpected changes to selection styles may hurt their understanding of the functionality.
 
-<p>If overridden, it is important to ensure that the <strong>contrast ratio</strong> between the text and background colors of the selection is high enough that people experiencing low vision conditions can read it.</p>
+If overridden, it is important to ensure that the **contrast ratio** between the text and background colors of the selection is high enough that people experiencing low vision conditions can read it.
 
-<p>Color contrast ratio is found by comparing the luminosity of the selected text and the selected text background colors. To meet current <a href="https://www.w3.org/WAI/intro/wcag">Web Content Accessibility Guidelines (WCAG)</a>, text content must have a contrast ratio of <strong>4.5:1</strong>, or 3:1 for larger text such as headings. (WCAG defines large text as between <code>18.66px</code> and <code>24px</code> and <a href="/en-US/docs/Web/CSS/font-weight">bold</a>, or <code>24px</code> or larger.)</p>
+Color contrast ratio is found by comparing the luminosity of the selected text and the selected text background colors. To meet current [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/intro/wcag), text content must have a contrast ratio of **4.5:1**, or 3:1 for larger text such as headings. (WCAG defines large text as between `18.66px` and `24px` and [bold](/en-US/docs/Web/CSS/font-weight), or `24px` or larger.)
 
-<ul>
- <li><a href="https://webaim.org/resources/contrastchecker/">WebAIM: Color Contrast Checker</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">MDN Understanding WCAG, Guideline 1.4 explanations</a></li>
- <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html">Understanding Success Criterion 1.4.3 | W3C Understanding WCAG 2.0</a></li>
-</ul>
+- [WebAIM: Color Contrast Checker](https://webaim.org/resources/contrastchecker/)
+- [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [Understanding Success Criterion 1.4.3 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<div class="note">
-<p><strong>Note:</strong> <code>::selection</code> was in drafts of CSS Selectors Level 3, but it was removed in the Candidate Recommendation phase because its was under-specified (especially with nested elements) and interoperability wasn't achieved <a href="https://lists.w3.org/Archives/Public/www-style/2008Oct/0268.html">(based on discussion in the W3C Style mailing list)</a>. It returned in <a href="https://dev.w3.org/csswg/css-pseudo-4/">Pseudo-Elements Level 4</a>.</p>
-</div>
+> **Note:** `::selection` was in drafts of CSS Selectors Level 3, but it was removed in the Candidate Recommendation phase because its was under-specified (especially with nested elements) and interoperability wasn't achieved [(based on discussion in the W3C Style mailing list)](https://lists.w3.org/Archives/Public/www-style/2008Oct/0268.html). It returned in [Pseudo-Elements Level 4](https://dev.w3.org/csswg/css-pseudo-4/).
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>
-  <p>{{cssxref("pointer-events")}} - control which events are active on the element</p>
- </li>
-</ul>
+- {{cssxref("pointer-events")}} - control which events are active on the element

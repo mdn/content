@@ -7,14 +7,15 @@ tags:
   - CSS Scroll Snap
   - Deprecated
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.scroll-snap-points-x
 ---
-<div>{{CSSRef}}{{deprecated_header}}</div>
+{{CSSRef}}{{deprecated_header}}
 
-<p>The <strong><code>scroll-snap-points-x</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property defines the horizontal positioning of snap points within the content of the scroll container they are applied to.</p>
+The **`scroll-snap-points-x`** [CSS](/en-US/docs/Web/CSS) property defines the horizontal positioning of snap points within the content of the scroll container they are applied to.
 
-<pre class="brush:css no-line-numbers">/* Keyword value */
+```css
+/* Keyword value */
 scroll-snap-points-x: none;
 
 /* Repeating snap points */
@@ -24,42 +25,43 @@ scroll-snap-points-x: repeat(400px);
 scroll-snap-points-x: inherit;
 scroll-snap-points-x: initial;
 scroll-snap-points-x: unset;
-</pre>
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>none</code></dt>
- <dd>The scroll container does not define any snap points. Elements within the scroll container may still define snap points on behalf of the scroll container.</dd>
- <dt><code>repeat(&lt;length-percentage&gt;)</code></dt>
- <dd>Defines an interval at which snap points are defined, starting from the container's relevant start edge. Only positive lengths are allowed. Percentages refer to the width of the container.</dd>
-</dl>
+- `none`
+  - : The scroll container does not define any snap points. Elements within the scroll container may still define snap points on behalf of the scroll container.
+- `repeat(<length-percentage>)`
+  - : Defines an interval at which snap points are defined, starting from the container's relevant start edge. Only positive lengths are allowed. Percentages refer to the width of the container.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_horizontal_scroll_snap_points">Setting horizontal scroll snap points</h3>
+### Setting horizontal scroll snap points
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div id="container"&gt;
-  &lt;div&gt;1&lt;/div&gt;
-  &lt;div&gt;2&lt;/div&gt;
-  &lt;div&gt;3&lt;/div&gt;
-&lt;/div&gt;</pre>
+```html
+<div id="container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">#container {
+```css
+#container {
   width: 200px;
   overflow: auto;
   white-space: nowrap;
@@ -68,7 +70,7 @@ scroll-snap-points-x: unset;
   font-size: 0;
 }
 
-#container &gt; div {
+#container > div {
   width: 200px;
   height: 200px;
   display: inline-block;
@@ -77,29 +79,28 @@ scroll-snap-points-x: unset;
   font-size: 100px;
 }
 
-#container &gt; div:nth-child(even) {
+#container > div:nth-child(even) {
   background-color: #87ea87;
 }
 
-#container &gt; div:nth-child(odd) {
+#container > div:nth-child(odd) {
   background-color: #87ccea;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Setting_horizontal_scroll_snap_points", 220, 220)}}</p>
+{{EmbedLiveSample("Setting_horizontal_scroll_snap_points", 220, 220)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any standard.</p>
+Not part of any standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/CSS/CSS_Scroll_Snap">CSS Scroll Snap</a></li>
-  <li><a href="https://developers.google.com/web/updates/2018/07/css-scroll-snap">Well-Controlled Scrolling with CSS Scroll Snap</a></li>
-</ul>
+- [CSS Scroll Snap](/en-US/docs/Web/CSS/CSS_Scroll_Snap)
+- [Well-Controlled Scrolling with CSS Scroll Snap](https://developers.google.com/web/updates/2018/07/css-scroll-snap)

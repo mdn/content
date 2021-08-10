@@ -7,15 +7,13 @@ tags:
   - Page Breaks
   - Reference
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong>Paged media</strong> properties control the presentation of content for print or any other media that splits content into discrete pages. It allows you to set page breaks, control printable area, style left and right pages differently, and control breaks inside elements. Widely supported properties include:</p>
+**Paged media** properties control the presentation of content for print or any other media that splits content into discrete pages. It allows you to set page breaks, control printable area, style left and right pages differently, and control breaks inside elements. Widely supported properties include:
 
-<ul>
- <li>{{ cssxref("page-break-before") }}</li>
- <li>{{ cssxref("page-break-after") }}</li>
- <li>{{ cssxref("page-break-inside") }}</li>
- <li>{{ cssxref("orphans") }}</li>
- <li>{{ cssxref("widows") }}</li>
- <li>{{ cssxref("@page") }}</li>
-</ul>
+- {{ cssxref("page-break-before") }}
+- {{ cssxref("page-break-after") }}
+- {{ cssxref("page-break-inside") }}
+- {{ cssxref("orphans") }}
+- {{ cssxref("widows") }}
+- {{ cssxref("@page") }}

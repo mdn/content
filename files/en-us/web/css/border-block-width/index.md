@@ -7,20 +7,21 @@ tags:
   - CSS Property
   - Experimental
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.border-block-width
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>border-block-width</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property defines the width of the logical block borders of an element, which maps to a physical border width depending on the element's writing mode, directionality, and text orientation. It corresponds to the {{cssxref("border-top-width")}} and {{cssxref("border-bottom-width")}}, or {{cssxref("border-left-width")}}, and {{cssxref("border-right-width")}} property depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.</p>
+The **`border-block-width`** [CSS](/en-US/docs/Web/CSS) property defines the width of the logical block borders of an element, which maps to a physical border width depending on the element's writing mode, directionality, and text orientation. It corresponds to the {{cssxref("border-top-width")}} and {{cssxref("border-bottom-width")}}, or {{cssxref("border-left-width")}}, and {{cssxref("border-right-width")}} property depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/border-block-width.html")}}</div>
+{{EmbedInteractiveExample("pages/css/border-block-width.html")}}
 
-<p>The border width in the other dimension can be set with {{cssxref("border-inline-width")}}, which sets {{cssxref("border-inline-start-width")}}, and {{cssxref("border-inline-end-width")}}.</p>
+The border width in the other dimension can be set with {{cssxref("border-inline-width")}}, which sets {{cssxref("border-inline-start-width")}}, and {{cssxref("border-inline-end-width")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* &lt;'border-width'&gt; values */
+```css
+/* <'border-width'> values */
 border-block-width: 5px;
 border-block-width: thick;
 
@@ -28,37 +29,38 @@ border-block-width: thick;
 border-block-width: inherit;
 border-block-width: initial;
 border-block-width: revert;
-border-block-width: unset;</pre>
+border-block-width: unset;
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>&lt;'border-width'&gt;</code></dt>
- <dd>The width of the border. See {{ cssxref("border-width") }}.</dd>
-</dl>
+- `<'border-width'>`
+  - : The width of the border. See {{ cssxref("border-width") }}.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Border_width_with_vertical_text">Border width with vertical text</h3>
+### Border width with vertical text
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;p class="exampleText"&gt;Example text&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div>
+  <p class="exampleText">Example text</p>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   background-color: yellow;
   width: 120px;
   height: 120px;
@@ -68,23 +70,22 @@ border-block-width: unset;</pre>
   writing-mode: vertical-lr;
   border: 1px solid blue;
   border-block-width: 5px;
-}</pre>
+}
+```
 
-<h4 id="Results">Results</h4>
+#### Results
 
-<p>{{EmbedLiveSample("Border_width_with_vertical_text", 140, 140)}}</p>
+{{EmbedLiveSample("Border_width_with_vertical_text", 140, 140)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>This property maps to one of the physical border properties: {{cssxref("border-top-width")}}, {{cssxref("border-right-width")}}, {{cssxref("border-bottom-width")}}, and {{cssxref("border-left-width")}}</li>
- <li>{{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}</li>
-</ul>
+- This property maps to one of the physical border properties: {{cssxref("border-top-width")}}, {{cssxref("border-right-width")}}, {{cssxref("border-bottom-width")}}, and {{cssxref("border-left-width")}}
+- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

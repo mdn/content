@@ -11,20 +11,21 @@ tags:
   - Replaced Elements
   - css layout
   - object-position
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.object-position
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>object-position</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property specifies the alignment of the selected <a href="/en-US/docs/Web/CSS/Replaced_element">replaced element</a>'s contents within the element's box. Areas of the box which aren't covered by the replaced element's object will show the element's background.</p>
+The **`object-position`** [CSS](/en-US/docs/Web/CSS) property specifies the alignment of the selected [replaced element](/en-US/docs/Web/CSS/Replaced_element)'s contents within the element's box. Areas of the box which aren't covered by the replaced element's object will show the element's background.
 
-<p>You can adjust how the replaced element's object's intrinsic size (that is, its natural size) is adjusted to fit within the element's box using the {{cssxref("object-fit")}} property.</p>
+You can adjust how the replaced element's object's intrinsic size (that is, its natural size) is adjusted to fit within the element's box using the {{cssxref("object-fit")}} property.
 
-<div>{{EmbedInteractiveExample("pages/css/object-position.html")}}</div>
+{{EmbedInteractiveExample("pages/css/object-position.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* &lt;position&gt; values */
+```css
+/* <position> values */
 object-position: center top;
 object-position: 100px 50px;
 
@@ -33,44 +34,42 @@ object-position: inherit;
 object-position: initial;
 object-position: revert;
 object-position: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt>{{cssxref("&lt;position&gt;")}}</dt>
- <dd>From one to four values that define the 2D position of the element. Relative or absolute offsets can be used.</dd>
-</dl>
+- {{cssxref("&lt;position&gt;")}}
+  - : From one to four values that define the 2D position of the element. Relative or absolute offsets can be used.
 
-<div class="note">
-<p><strong>Note:</strong> The position can be set so that the replaced element is drawn outside its box.</p>
-</div>
+> **Note:** The position can be set so that the replaced element is drawn outside its box.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Positioning_image_content">Positioning image content</h3>
+### Positioning image content
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<p>Here we see HTML that includes two {{HTMLElement("img")}} elements, each displaying the MDN logo.</p>
+Here we see HTML that includes two {{HTMLElement("img")}} elements, each displaying the MDN logo.
 
-<pre class="brush: html">&lt;img id="object-position-1" src="mdn.svg" alt="MDN Logo"/&gt;
-&lt;img id="object-position-2" src="mdn.svg" alt="MDN Logo"/&gt;
-</pre>
+```html
+<img id="object-position-1" src="mdn.svg" alt="MDN Logo"/>
+<img id="object-position-2" src="mdn.svg" alt="MDN Logo"/>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<p>The CSS includes default styling for the <code>&lt;img&gt;</code> element itself, as well as separate styles for each of the two images.</p>
+The CSS includes default styling for the `<img>` element itself, as well as separate styles for each of the two images.
 
-<pre class="brush: css">img {
+```css
+img {
   width: 300px;
   height: 250px;
   border: 1px solid black;
@@ -86,24 +85,22 @@ object-position: unset;
 #object-position-2 {
   object-position: 100% 10%;
 }
-</pre>
+```
 
-<p>The first image is positioned with its left edge inset 10 pixels from the left edge of the element's box. The second image is positioned with its right edge flush against the right edge of the element's box and is located 10% of the way down the height of the element's box.</p>
+The first image is positioned with its left edge inset 10 pixels from the left edge of the element's box. The second image is positioned with its right edge flush against the right edge of the element's box and is located 10% of the way down the height of the element's box.
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Positioning_image_content', '100%','600px') }}</p>
+{{ EmbedLiveSample('Positioning_image_content', '100%','600px') }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Other image-related CSS properties: {{cssxref("object-fit")}}, {{cssxref("image-orientation")}}, {{cssxref("image-rendering")}}, {{cssxref("image-resolution")}}.</li>
-</ul>
+- Other image-related CSS properties: {{cssxref("object-fit")}}, {{cssxref("image-orientation")}}, {{cssxref("image-rendering")}}, {{cssxref("image-resolution")}}.

@@ -9,32 +9,37 @@ tags:
   - Selector
 browser-compat: css.selectors.placeholder-shown
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>:placeholder-shown</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> represents any {{HTMLElement("input")}} or {{HTMLElement("textarea")}} element that is currently displaying <a href="/en-US/docs/Web/HTML/Element/input#attr-placeholder">placeholder text</a>.</p>
+The **`:placeholder-shown`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any {{HTMLElement("input")}} or {{HTMLElement("textarea")}} element that is currently displaying [placeholder text](/en-US/docs/Web/HTML/Element/input#attr-placeholder).
 
-<pre class="brush: css no-line-numbers">/* Selects any element with an active placeholder */
+```css
+/* Selects any element with an active placeholder */
 :placeholder-shown {
   border: 2px solid silver;
-}</pre>
+}
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
 {{CSSSyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Basic_example">Basic example</h3>
+### Basic example
 
-<p>This example applies special font and border styles when the placeholder is shown.</p>
+This example applies special font and border styles when the placeholder is shown.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;input placeholder="Type something here!"&gt;</pre>
+```html
+<input placeholder="Type something here!">
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">input {
+```css
+input {
   border: 1px solid black;
   padding: 3px;
 }
@@ -43,57 +48,65 @@ input:placeholder-shown {
   border-color: teal;
   color: purple;
   font-style: italic;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Basic_example", 200, 80)}}</p>
+{{EmbedLiveSample("Basic_example", 200, 80)}}
 
-<h3 id="Overflowing_text">Overflowing text</h3>
+### Overflowing text
 
-<p>When form fields are too small, placeholder text can get cropped in an undesirable way. You can use the {{cssxref("text-overflow")}} property to alter the way overflowing text is displayed.</p>
+When form fields are too small, placeholder text can get cropped in an undesirable way. You can use the {{cssxref("text-overflow")}} property to alter the way overflowing text is displayed.
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;input id="input1" placeholder="Name, Rank, and Serial Number"&gt;
-&lt;br&gt;&lt;br&gt;
-&lt;input id="input2" placeholder="Name, Rank, and Serial Number"&gt;</pre>
+```html
+<input id="input1" placeholder="Name, Rank, and Serial Number">
+<br><br>
+<input id="input2" placeholder="Name, Rank, and Serial Number">
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">#input2:placeholder-shown {
+```css
+#input2:placeholder-shown {
   text-overflow: ellipsis;
-}</pre>
+}
+```
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Overflowing_text", 200, 80)}}</p>
+{{EmbedLiveSample("Overflowing_text", 200, 80)}}
 
-<h3 id="Customized_input_field">Customized input field</h3>
+### Customized input field
 
-<p>The following example highlights the Branch and ID code fields with a custom style.</p>
+The following example highlights the Branch and ID code fields with a custom style.
 
-<h4 id="HTML_3">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;form id="test"&gt;
-  &lt;p&gt;
-    &lt;label for="name"&gt;Enter Student Name:&lt;/label&gt;
-    &lt;input id="name" placeholder="Student Name"/&gt;
-  &lt;/p&gt;
-  &lt;p&gt;
-    &lt;label for="branch"&gt;Enter Student Branch:&lt;/label&gt;
-    &lt;input id="branch" placeholder="Student Branch"/&gt;
-  &lt;/p&gt;
-  &lt;p&gt;
-    &lt;label for="sid"&gt;Enter Student ID:&lt;/label&gt;
-    &lt;input type="number" pattern="[0-9]{8}" title="8 digit ID" id="sid" class="studentid" placeholder="8 digit id"/&gt;
-  &lt;/p&gt;
-  &lt;input type="submit"/&gt;
-&lt;/form&gt;</pre>
+```html
+<form id="test">
+  <p>
+    <label for="name">Enter Student Name:</label>
+    <input id="name" placeholder="Student Name"/>
+  </p>
+  <p>
+    <label for="branch">Enter Student Branch:</label>
+    <input id="branch" placeholder="Student Branch"/>
+  </p>
+  <p>
+    <label for="sid">Enter Student ID:</label>
+    <input type="number" pattern="[0-9]{8}" title="8 digit ID" id="sid" class="studentid" placeholder="8 digit id"/>
+  </p>
+  <input type="submit"/>
+</form>
+```
 
-<h4 id="CSS_3">CSS</h4>
+#### CSS
 
-<pre class="brush: css; highlight[6]">input {
+```css
+input {
   background-color: #E8E8E8;
   color: black;
 }
@@ -102,24 +115,23 @@ input.studentid:placeholder-shown {
   background-color: yellow;
   color: red;
   font-style: italic;
-}</pre>
+}
+```
 
-<h4 id="Result_3">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Customized_input_field", 200, 180)}}</p>
+{{EmbedLiveSample("Customized_input_field", 200, 180)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The {{CSSxRef("::placeholder")}} pseudo-element styles the placeholder <em>itself</em>.</li>
- <li>Related HTML elements: {{HTMLElement("input")}}, {{HTMLElement("textarea")}}</li>
- <li><a href="/en-US/docs/Learn/Forms">HTML forms</a></li>
-</ul>
+- The {{CSSxRef("::placeholder")}} pseudo-element styles the placeholder _itself_.
+- Related HTML elements: {{HTMLElement("input")}}, {{HTMLElement("textarea")}}
+- [HTML forms](/en-US/docs/Learn/Forms)

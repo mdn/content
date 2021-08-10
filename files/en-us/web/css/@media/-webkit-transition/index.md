@@ -12,55 +12,55 @@ tags:
   - media feature
 browser-compat: css.at-rules.media.-webkit-transition
 ---
-<div>{{ CSSRef }} {{deprecated_header}} {{ Non-standard_header }}</div>
+{{ CSSRef }} {{deprecated_header}} {{ Non-standard_header }}
 
-<p>The <strong><code>-webkit-transition</code></strong> Boolean <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features">media feature</a> is a <a href="/en-US/docs/Web/CSS/WebKit_Extensions">Chrome extension</a> whose value is <code>true</code> if the browsing context supports <a href="/en-US/docs/Web/CSS/CSS_Transitions">CSS transitions</a>. It was never supported in browsers not based on WebKit or Blink.</p>
+The **`-webkit-transition`** Boolean [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) is a [Chrome extension](/en-US/docs/Web/CSS/WebKit_Extensions) whose value is `true` if the browsing context supports [CSS transitions](/en-US/docs/Web/CSS/CSS_Transitions). It was never supported in browsers not based on WebKit or Blink.
 
-<p>Apple has <a href="https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/OtherStandardCSS3Features.html#//apple_ref/doc/uid/TP40007601-SW3">a description in Safari CSS Reference</a>; this is now called <code>transition</code> there.</p>
+Apple has [a description in Safari CSS Reference](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/OtherStandardCSS3Features.html#//apple_ref/doc/uid/TP40007601-SW3); this is now called `transition` there.
 
-<div class="note">
-<p><strong>Note:</strong> You should not use this media feature; it was never specified, has never been widely implemented, and has been removed from all browsers. Use an {{cssxref("@supports")}} feature query instead.</p>
-</div>
+> **Note:** You should not use this media feature; it was never specified, has never been widely implemented, and has been removed from all browsers. Use an {{cssxref("@supports")}} feature query instead.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css line-numbers language-css">@media (-webkit-transition) {
-  /* CSS to use if transitions are supported */
-}</pre>
-
-<h2 id="Examples">Examples</h2>
-
-<h3 id="Use_supports_instead">Use @supports instead</h3>
-
-<p>Do not use the <code>-webkit-transition</code> media feature. Instead, test for transition support using the CSS {{cssxref("@supports")}}<a href="/en-US/docs/Web/CSS/At-rule"> at-rule</a>, like this:</p>
-
-<pre class="brush: css">@supports (transition: initial) {
+```css
+@media (-webkit-transition) {
   /* CSS to use if transitions are supported */
 }
-</pre>
+```
 
-<h3 id="Obsolete_example">Obsolete example</h3>
+## Examples
 
-<p>Before this became obsolete, you could use <code>-webkit-transition</code> in your CSS like this:</p>
+### Use @supports instead
 
-<pre class="brush: css">@media (-webkit-transition) {
+Do not use the `-webkit-transition` media feature. Instead, test for transition support using the CSS {{cssxref("@supports")}}[ at-rule](/en-US/docs/Web/CSS/At-rule), like this:
+
+```css
+@supports (transition: initial) {
   /* CSS to use if transitions are supported */
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+### Obsolete example
 
-<p>Not part of any standard.</p>
+Before this became obsolete, you could use `-webkit-transition` in your CSS like this:
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+```css
+@media (-webkit-transition) {
+  /* CSS to use if transitions are supported */
+}
+```
 
-<p>{{Compat}}</p>
+## Specifications
 
-<h2 id="See_also">See also</h2>
+Not part of any standard.
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">Using media queries</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">Using CSS transitions</a></li>
- <li>{{cssxref("@supports")}}</li>
- <li>{{cssxref("transition")}}</li>
-</ul>
+## Browser compatibility
+
+{{Compat}}
+
+## See also
+
+- [Using media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [Using CSS transitions](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+- {{cssxref("@supports")}}
+- {{cssxref("transition")}}

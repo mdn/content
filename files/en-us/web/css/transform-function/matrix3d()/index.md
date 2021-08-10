@@ -9,133 +9,99 @@ tags:
   - Reference
 browser-compat: css.types.transform-function.matrix3d
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>matrix3d()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a
-		href="/en-US/docs/Web/CSS/CSS_Functions">function</a> defines a 3D transformation as a 4x4 homogeneous matrix.
-	Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.</p>
+The **`matrix3d()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) defines a 3D transformation as a 4x4 homogeneous matrix.
+Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>matrix3d()</code> function is specified with 16 values. They are described in the column-major order.</p>
+The `matrix3d()` function is specified with 16 values. They are described in the column-major order.
 
-<pre class="brush: css">matrix3d(<var>a1</var>, <var>b1</var>, <var>c1</var>, <var>d1</var>, <var>a2</var>, <var>b2</var>, <var>c2</var>, <var>d2</var>, <var>a3</var>, <var>b3</var>, <var>c3</var>, <var>d3</var>, <var>a4</var>, <var>b4</var>, <var>c4</var>, <var>d4</var>)</pre>
+```css
+matrix3d(a1, b1, c1, d1, a2, b2, c2, d2, a3, b3, c3, d3, a4, b4, c4, d4)
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
-	<dt><var>a1</var> <var>b1</var> <var>c1</var> <var>d1</var> <var>a2</var> <var>b2</var> <var>c2</var> <var>d2</var>
-		<var>a3</var> <var>b3</var> <var>c3</var> <var>d3</var>
-	</dt>
-	<dd>Are {{cssxref("&lt;number&gt;")}}s describing the linear transformation.</dd>
-	<dt><var>a4</var> <var>b4</var> <var>c4 d4</var></dt>
-	<dd>Are {{cssxref("&lt;number&gt;")}}s describing the translation to apply.</dd>
-</dl>
+- _a1_ _b1_ _c1_ _d1_ _a2_ _b2_ _c2_ _d2_
+  _a3_ _b3_ _c3_ _d3_
+  - : Are {{cssxref("&lt;number&gt;")}}s describing the linear transformation.
+- _a4_ _b4_ _c4 d4_
+  - : Are {{cssxref("&lt;number&gt;")}}s describing the translation to apply.
 
 <table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Cartesian coordinates on ℝ^2</th>
+  <thead>
+    <tr>
+      <th scope="col">Cartesian coordinates on ℝ^2</th>
       <th scope="col">Homogeneous coordinates on ℝℙ^2</th>
       <th scope="col">Cartesian coordinates on ℝ^3</th>
       <th scope="col">Homogeneous coordinates on ℝℙ^3</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td colspan="2">This transformation applies to the 3D space and can't be represented on the
-				plane.</td>
-			<td>A generic 3D <a href="https://en.wikipedia.org/wiki/Affine_transformation">affine
-					transformation</a> can't be represented using a Cartesian-coordinate matrix, as translations are not
-				linear transformations.</td>
-			<td><math>
-					<mfenced>
-						<mtable>
-							<mtr>
-								<mtd>
-									<mi>a1</mi>
-								</mtd>
-								<mtd>
-									<mi>a2</mi>
-								</mtd>
-								<mtd>
-									<mi>a3</mi>
-								</mtd>
-								<mtd>
-									<mi>a4</mi>
-								</mtd>
-							</mtr>
-							<mtr>
-								<mtd>
-									<mi>b1</mi>
-								</mtd>
-								<mtd>
-									<mi>b2</mi>
-								</mtd>
-								<mtd>
-									<mi>b3</mi>
-								</mtd>
-								<mtd>
-									<mi>b4</mi>
-								</mtd>
-							</mtr>
-							<mtr>
-								<mtd>
-									<mi>c1</mi>
-								</mtd>
-								<mtd>
-									<mi>c2</mi>
-								</mtd>
-								<mtd>
-									<mi>c3</mi>
-								</mtd>
-								<mtd>
-									<mi>c4</mi>
-								</mtd>
-							</mtr>
-							<mtr>
-								<mtd>
-									<mi>d1</mi>
-								</mtd>
-								<mtd>
-									<mi>d2</mi>
-								</mtd>
-								<mtd>
-									<mi>d3</mi>
-								</mtd>
-								<mtd>
-									<mi>d4</mi>
-								</mtd>
-							</mtr>
-						</mtable>
-					</mfenced>
-				</math></td>
-		</tr>
-	</tbody>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td colspan="2">
+        This transformation applies to the 3D space and can't be represented on
+        the plane.
+      </td>
+      <td>
+        A generic 3D
+        <a href="https://en.wikipedia.org/wiki/Affine_transformation"
+          >affine transformation</a
+        >
+        can't be represented using a Cartesian-coordinate matrix, as
+        translations are not linear transformations.
+      </td>
+      <td>
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr
+                ><mtd><mi>a1</mi> </mtd><mtd><mi>a2</mi> </mtd
+                ><mtd><mi>a3</mi> </mtd><mtd><mi>a4</mi> </mtd></mtr
+              ><mtr
+                ><mtd><mi>b1</mi> </mtd><mtd><mi>b2</mi> </mtd
+                ><mtd><mi>b3</mi> </mtd><mtd><mi>b4</mi> </mtd></mtr
+              ><mtr
+                ><mtd><mi>c1</mi> </mtd><mtd><mi>c2</mi> </mtd
+                ><mtd><mi>c3</mi> </mtd><mtd><mi>c4</mi> </mtd></mtr
+              ><mtr
+                ><mtd><mi>d1</mi> </mtd><mtd><mi>d2</mi> </mtd
+                ><mtd><mi>d3</mi> </mtd><mtd><mi>d4</mi></mtd></mtr
+              ></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Cube_squashing_example">Cube squashing example</h3>
+### Cube squashing example
 
-<p>The following example shows a 3D cube created from DOM elements and transforms, which can be hovered/focused to apply
-	a <code>matrix3d()</code> transform to it.</p>
+The following example shows a 3D cube created from DOM elements and transforms, which can be hovered/focused to apply
+a `matrix3d()` transform to it.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;section id="example-element" tabindex="0"&gt;
-  &lt;div class="face front"&gt;1&lt;/div&gt;
-  &lt;div class="face back"&gt;2&lt;/div&gt;
-  &lt;div class="face right"&gt;3&lt;/div&gt;
-  &lt;div class="face left"&gt;4&lt;/div&gt;
-  &lt;div class="face top"&gt;5&lt;/div&gt;
-  &lt;div class="face bottom"&gt;6&lt;/div&gt;
-&lt;/section&gt;
-</pre>
+```html
+<section id="example-element" tabindex="0">
+  <div class="face front">1</div>
+  <div class="face back">2</div>
+  <div class="face right">3</div>
+  <div class="face left">4</div>
+  <div class="face top">5</div>
+  <div class="face bottom">6</div>
+</section>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">#example-element {
+```css
+#example-element {
   width: 100px;
   height: 100px;
   transform-style: preserve-3d;
@@ -188,28 +154,31 @@ browser-compat: css.types.transform-function.matrix3d
 .bottom {
   background: rgba(210,0,210,.7);
   transform: rotateX(-90deg) translateZ(50px);
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<div>{{EmbedLiveSample('Cube_squashing_example', '100%', '300px')}}</div>
+{{EmbedLiveSample('Cube_squashing_example', '100%', '300px')}}
 
-<h3 id="Matrix_translation_and_scale_example">Matrix translation and scale example</h3>
+### Matrix translation and scale example
 
-<p>Another <code>transform3d()</code> example, which implements an animated combined translate and scale.</p>
+Another `transform3d()` example, which implements an animated combined translate and scale.
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="foo"&gt;
+```html
+<div class="foo">
 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 Quos quaerat sit soluta, quisquam exercitationem delectus qui unde in facere
 necessitatibus aut quia porro dolorem nesciunt enim, at consequuntur aliquam esse?
-&lt;/div&gt;
-</pre>
+</div>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">html {
+```css
+html {
   width: 100%;
 }
 body {
@@ -269,25 +238,24 @@ body {
       50,100,0,1.1
     )
   }
-}</pre>
+}
+```
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<div>{{EmbedLiveSample('Matrix_translation_and_scale_example', '100%', '400px')}}</div>
+{{EmbedLiveSample('Matrix_translation_and_scale_example', '100%', '400px')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>{{cssxref("transform")}}</li>
-	<li>{{cssxref("&lt;transform-function&gt;")}}</li>
-	<li><a href="https://dev.opera.com/articles/understanding-the-css-transforms-matrix/">Understanding the CSS
-			Transforms Matrix</a></li>
-</ul>
+- {{cssxref("transform")}}
+- {{cssxref("&lt;transform-function&gt;")}}
+- [Understanding the CSS
+  Transforms Matrix](https://dev.opera.com/articles/understanding-the-css-transforms-matrix/)

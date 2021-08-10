@@ -8,55 +8,38 @@ tags:
   - Overview
   - Reference
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong>Compositing and Blending</strong> is a CSS module that defines how shapes of different elements are combined into a single image.</p>
+**Compositing and Blending** is a CSS module that defines how shapes of different elements are combined into a single image.
 
-<h2 id="Reference">Reference</h2>
+## Reference
 
-<h3 id="Properties">Properties</h3>
+### Properties
 
-<ul>
- <li>{{cssxref("background-blend-mode")}}</li>
- <li>{{cssxref("isolation")}}</li>
- <li>{{cssxref("mix-blend-mode")}}</li>
-</ul>
+- {{cssxref("background-blend-mode")}}
+- {{cssxref("isolation")}}
+- {{cssxref("mix-blend-mode")}}
 
-<h3 id="Data_types">Data types</h3>
+### Data types
 
-<ul>
- <li>{{cssxref("&lt;blend-mode&gt;")}}</li>
-</ul>
+- {{cssxref("&lt;blend-mode&gt;")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Compositing")}}</td>
-   <td>{{Spec2("Compositing")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                        | Status                           | Comment            |
+| ------------------------------------ | -------------------------------- | ------------------ |
+| {{SpecName("Compositing")}} | {{Spec2("Compositing")}} | Initial definition |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<h3 id="background-blend-mode_property"><code>background-blend-mode</code> property</h3>
+### `background-blend-mode` property
 
-<p>{{Compat("css.properties.background-blend-mode")}}</p>
+{{Compat("css.properties.background-blend-mode")}}
 
-<h3 id="isolation_property"><code>isolation</code> property</h3>
+### `isolation` property
 
-<p>{{Compat("css.properties.isolation")}}</p>
+{{Compat("css.properties.isolation")}}
 
-<h3 id="mix-blend-mode_property"><code>mix-blend-mode</code> property</h3>
+### `mix-blend-mode` property
 
-<p>{{Compat("css.properties.mix-blend-mode")}}</p>
+{{Compat("css.properties.mix-blend-mode")}}

@@ -9,80 +9,81 @@ tags:
   - Reference
   - column-count
   - columns
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.column-count
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>column-count</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property breaks an element's content into the specified number of columns.</p>
+The **`column-count`** [CSS](/en-US/docs/Web/CSS) property breaks an element's content into the specified number of columns.
 
-<div>{{EmbedInteractiveExample("pages/css/column-count.html")}}</div>
+{{EmbedInteractiveExample("pages/css/column-count.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* Keyword value */
+```css
+/* Keyword value */
 column-count: auto;
 
-/* &lt;integer&gt; value */
+/* <integer> value */
 column-count: 3;
 
 /* Global values */
 column-count: inherit;
 column-count: initial;
 column-count: revert;
-column-count: unset;</pre>
+column-count: unset;
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>The number of columns is determined by other CSS properties, such as {{cssxref("column-width")}}.</dd>
- <dt>{{cssxref("&lt;integer&gt;")}}</dt>
- <dd>Is a strictly positive {{cssxref("&lt;integer&gt;")}} describing the ideal number of columns into which the content of the element will be flowed. If the {{cssxref("column-width")}} is also set to a non-<code>auto</code> value, it merely indicates the maximum allowed number of columns.</dd>
-</dl>
+- `auto`
+  - : The number of columns is determined by other CSS properties, such as {{cssxref("column-width")}}.
+- {{cssxref("&lt;integer&gt;")}}
+  - : Is a strictly positive {{cssxref("&lt;integer&gt;")}} describing the ideal number of columns into which the content of the element will be flowed. If the {{cssxref("column-width")}} is also set to a non-`auto` value, it merely indicates the maximum allowed number of columns.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
-<h2 id="Examples">Examples</h2>
 
-<h3 id="Splitting_a_paragraph_across_three_columns">Splitting a paragraph across three columns</h3>
+## Examples
 
-<h4 id="HTML">HTML</h4>
+### Splitting a paragraph across three columns
 
-<pre class="brush: html">&lt;p class="content-box"&gt;
+#### HTML
+
+```html
+<p class="content-box">
   This is a bunch of text split into three columns
   using the CSS `column-count` property. The text
   is equally distributed over the columns.
-&lt;/p&gt;
-</pre>
+</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.content-box {
+```css
+.content-box {
   column-count: 3;
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Splitting_a_paragraph_across_three_columns', 'auto', 120)}}</p>
+{{EmbedLiveSample('Splitting_a_paragraph_across_three_columns', 'auto', 120)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout">Multiple-column Layout</a> (Learn Layout)</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Columns/Basic_Concepts_of_Multicol">Basic Concepts of Multicol</a></li>
-</ul>
+- [Multiple-column Layout](/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout) (Learn Layout)
+- [Basic Concepts of Multicol](/en-US/docs/Web/CSS/CSS_Columns/Basic_Concepts_of_Multicol)

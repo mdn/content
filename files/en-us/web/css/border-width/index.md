@@ -6,34 +6,33 @@ tags:
   - CSS Borders
   - CSS Property
   - Reference
-  - 'recipe:css-shorthand-property'
+  - recipe:css-shorthand-property
 browser-compat: css.properties.border-width
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>border-width</code></strong> <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand</a> <a href="/en-US/docs/Web/CSS">CSS</a> property sets the width of an element's border.</p>
+The **`border-width`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets the width of an element's border.
 
-<div>{{EmbedInteractiveExample("pages/css/border-width.html")}}</div>
+{{EmbedInteractiveExample("pages/css/border-width.html")}}
 
-<h2 id="Constituent_properties">Constituent properties</h2>
+## Constituent properties
 
-<p>This property is a shorthand for the following CSS properties:</p>
+This property is a shorthand for the following CSS properties:
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/border-bottom-width"><code>border-bottom-width</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/border-left-width"><code>border-left-width</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/border-right-width"><code>border-right-width</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/border-top-width"><code>border-top-width</code></a></li>
-</ul>
+- [`border-bottom-width`](/en-US/docs/Web/CSS/border-bottom-width)
+- [`border-left-width`](/en-US/docs/Web/CSS/border-left-width)
+- [`border-right-width`](/en-US/docs/Web/CSS/border-right-width)
+- [`border-top-width`](/en-US/docs/Web/CSS/border-top-width)
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 border-width: thin;
 border-width: medium;
 border-width: thick;
 
-/* &lt;length&gt; values */ border-width: 4px;
+/* <length> values */ border-width: 4px;
 border-width: 1.2rem;
 
 /* vertical | horizontal */
@@ -50,60 +49,56 @@ border-width: inherit;
 border-width: initial;
 border-width: revert;
 border-width: unset;
-</pre>
+```
 
-<p>The <code>border-width</code> property may be specified using one, two, three, or four values.</p>
+The `border-width` property may be specified using one, two, three, or four values.
 
-<ul>
- <li>When <strong>one</strong> value is specified, it applies the same width to <strong>all four sides</strong>.</li>
- <li>When <strong>two</strong> values are specified, the first width applies to the <strong>top and bottom</strong>, the second to the <strong>left and right</strong>.</li>
- <li>When <strong>three</strong> values are specified, the first width applies to the <strong>top</strong>, the second to the <strong>left and right</strong>, the third to the <strong>bottom</strong>.</li>
- <li>When <strong>four</strong> values are specified, the widths apply to the <strong>top</strong>, <strong>right</strong>, <strong>bottom</strong>, and <strong>left</strong> in that order (clockwise).</li>
-</ul>
+- When **one** value is specified, it applies the same width to **all four sides**.
+- When **two** values are specified, the first width applies to the **top and bottom**, the second to the **left and right**.
+- When **three** values are specified, the first width applies to the **top**, the second to the **left and right**, the third to the **bottom**.
+- When **four** values are specified, the widths apply to the **top**, **right**, **bottom**, and **left** in that order (clockwise).
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>&lt;line-width&gt;</code></dt>
- <dd>Defines the width of the border, either as an explicit nonnegative {{cssxref("&lt;length&gt;")}} or a keyword. If it's a keyword, it must be one of the following values:
-   <ul>
-     <li><code>thin</code></li>
-     <li><code>medium</code></li>
-     <li><code>thick</code></li>
-  </ul>
- </dd>
-</dl>
+- `<line-width>`
 
-<div class="note">
- <p><strong>Note:</strong> Because the specification doesn't define the exact thickness denoted by each keyword, the precise result when using one of them is implementation-specific. Nevertheless, they always follow the pattern <code>thin ≤ medium ≤ thick</code>, and the values are constant within a single document.</p>
-</div>
+  - : Defines the width of the border, either as an explicit nonnegative {{cssxref("&lt;length&gt;")}} or a keyword. If it's a keyword, it must be one of the following values:
 
-<h2 id="Formal_definition">Formal definition</h2>
+    - `thin`
+    - `medium`
+    - `thick`
 
-<p>{{CSSInfo}}</p>
+> **Note:** Because the specification doesn't define the exact thickness denoted by each keyword, the precise result when using one of them is implementation-specific. Nevertheless, they always follow the pattern `thin ≤ medium ≤ thick`, and the values are constant within a single document.
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal definition
+
+{{CSSInfo}}
+
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="A_mix_of_values_and_lengths">A mix of values and lengths</h3>
+### A mix of values and lengths
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p id="sval"&gt;
-    one value: 6px wide border on all 4 sides&lt;/p&gt;
-&lt;p id="bival"&gt;
-    two different values: 2px wide top and bottom border, 10px wide right and left border&lt;/p&gt;
-&lt;p id="treval"&gt;
-    three different values: 0.3em top, 9px bottom, and zero width right and left&lt;/p&gt;
-&lt;p id="fourval"&gt;
-    four different values: "thin" top, "medium" right, "thick" bottom, and 1em left&lt;/p&gt;</pre>
+```html
+<p id="sval">
+    one value: 6px wide border on all 4 sides</p>
+<p id="bival">
+    two different values: 2px wide top and bottom border, 10px wide right and left border</p>
+<p id="treval">
+    three different values: 0.3em top, 9px bottom, and zero width right and left</p>
+<p id="fourval">
+    four different values: "thin" top, "medium" right, "thick" bottom, and 1em left</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">#sval {
+```css
+#sval {
   border: ridge #ccc;
   border-width: 6px;
 }
@@ -123,23 +118,22 @@ p {
   width: auto;
   margin: 0.25em;
   padding: 0.25em;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('A_mix_of_values_and_lengths', 320, 320) }}</p>
+{{ EmbedLiveSample('A_mix_of_values_and_lengths', 320, 320) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The border-related shorthand properties: {{Cssxref("border")}}, {{Cssxref("border-style")}}, {{Cssxref("border-color")}}</li>
- <li>The border-width-related properties: {{Cssxref("border-bottom-width")}}, {{Cssxref("border-left-width")}}, {{Cssxref("border-right-width")}}, {{Cssxref("border-top-width")}}</li>
-</ul>
+- The border-related shorthand properties: {{Cssxref("border")}}, {{Cssxref("border-style")}}, {{Cssxref("border-color")}}
+- The border-width-related properties: {{Cssxref("border-bottom-width")}}, {{Cssxref("border-left-width")}}, {{Cssxref("border-right-width")}}, {{Cssxref("border-top-width")}}

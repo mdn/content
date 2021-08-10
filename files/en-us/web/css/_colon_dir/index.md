@@ -1,6 +1,6 @@
 ---
 title: ':dir()'
-slug: 'Web/CSS/:dir'
+slug: Web/CSS/:dir
 tags:
   - BiDi
   - CSS
@@ -10,80 +10,77 @@ tags:
   - Selector
 browser-compat: css.selectors.dir
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>:dir()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> matches elements based on the directionality of the text contained in them.</p>
+The **`:dir()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches elements based on the directionality of the text contained in them.
 
-<pre class="brush: css no-line-numbers">/* Selects any element with right-to-left text */
+```css
+/* Selects any element with right-to-left text */
 :dir(rtl) {
   background-color: red;
-}</pre>
+}
+```
 
-<p>The <code>:dir()</code> pseudo-class uses only the <em>semantic</em> value of the directionality, i.e., the one defined in the document itself. It doesn't account for <em>styling</em> directionality, i.e., the directionality set by CSS properties such as {{cssxref("direction")}}.</p>
+The `:dir()` pseudo-class uses only the _semantic_ value of the directionality, i.e., the one defined in the document itself. It doesn't account for _styling_ directionality, i.e., the directionality set by CSS properties such as {{cssxref("direction")}}.
 
-<div class="note">
-<p><strong>Note:</strong> Be aware that the behavior of the <code>:dir()</code> pseudo-class is not equivalent to the <code>[dir=…]</code> <a href="/en-US/docs/Web/CSS/Attribute_selectors">attribute selectors</a>. The latter match the HTML {{htmlattrxref("dir")}} attribute, and ignore elements that lack it — even if they inherit a direction from their parent. (Similarly, <code>[dir=rtl]</code> and <code>[dir=ltr]</code> won't match the <code>auto</code> value.) In contrast, <code>:dir()</code> will match the value calculated by the {{glossary("user agent")}}, even if inherited.</p>
-</div>
+> **Note:** Be aware that the behavior of the `:dir()` pseudo-class is not equivalent to the `[dir=…]` [attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors). The latter match the HTML {{htmlattrxref("dir")}} attribute, and ignore elements that lack it — even if they inherit a direction from their parent. (Similarly, `[dir=rtl]` and `[dir=ltr]` won't match the `auto` value.) In contrast, `:dir()` will match the value calculated by the {{glossary("user agent")}}, even if inherited.
 
-<div class="note">
-<p><strong>Note:</strong> In HTML, the direction is determined by the {{htmlattrxref("dir")}} attribute. Other document types may have different methods.</p>
-</div>
+> **Note:** In HTML, the direction is determined by the {{htmlattrxref("dir")}} attribute. Other document types may have different methods.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>:dir()</code> pseudo-class requires one parameter, representing the text directionality you want to target.</p>
+The `:dir()` pseudo-class requires one parameter, representing the text directionality you want to target.
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>ltr</code></dt>
- <dd>Target left-to-right elements.</dd>
- <dt><code>rtl</code></dt>
- <dd>Target right-to-left elements.</dd>
-</dl>
+- `ltr`
+  - : Target left-to-right elements.
+- `rtl`
+  - : Target right-to-left elements.
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush:html;">&lt;div dir="rtl"&gt;
-  &lt;span&gt;test1&lt;/span&gt;
-  &lt;div dir="ltr"&gt;test2
-    &lt;div dir="auto"&gt;עִבְרִית&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div dir="rtl">
+  <span>test1</span>
+  <div dir="ltr">test2
+    <div dir="auto">עִבְרִית</div>
+  </div>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">:dir(ltr) {
+```css
+:dir(ltr) {
   background-color: yellow;
 }
 
 :dir(rtl) {
   background-color: powderblue;
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{ EmbedLiveSample('Examples') }}</p>
+{{ EmbedLiveSample('Examples') }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Language-related pseudo-classes: {{cssxref(":lang")}}, {{cssxref(":dir")}}</li>
- <li>HTML {{htmlattrxref("lang")}} attribute</li>
- <li>HTML {{htmlattrxref("translate")}} attribute</li>
-</ul>
+- Language-related pseudo-classes: {{cssxref(":lang")}}, {{cssxref(":dir")}}
+- HTML {{htmlattrxref("lang")}} attribute
+- HTML {{htmlattrxref("translate")}} attribute

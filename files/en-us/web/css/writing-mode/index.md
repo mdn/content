@@ -9,17 +9,18 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.writing-mode
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>writing-mode</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets whether lines of text are laid out horizontally or vertically, as well as the direction in which blocks progress. When set for an entire document, it should be set on the root element (<code>html</code> element for HTML documents).</p>
+The **`writing-mode`** [CSS](/en-US/docs/Web/CSS) property sets whether lines of text are laid out horizontally or vertically, as well as the direction in which blocks progress. When set for an entire document, it should be set on the root element (`html` element for HTML documents).
 
-<div>{{EmbedInteractiveExample("pages/css/writing-mode.html")}}</div>
+{{EmbedInteractiveExample("pages/css/writing-mode.html")}}
 
-<p>This property specifies the <em>block flow direction</em>, which is the direction in which block-level containers are stacked, and the direction in which inline-level content flows within a block container. Thus, it also determines the ordering of block-level content.</p>
+This property specifies the _block flow direction_, which is the direction in which block-level containers are stacked, and the direction in which inline-level content flows within a block container. Thus, it also determines the ordering of block-level content.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 writing-mode: horizontal-tb;
 writing-mode: vertical-rl;
 writing-mode: vertical-lr;
@@ -28,104 +29,105 @@ writing-mode: vertical-lr;
 writing-mode: inherit;
 writing-mode: initial;
 writing-mode: revert;
-writing-mode: unset;</pre>
+writing-mode: unset;
+```
 
-<p>The <code>writing-mode</code> property is specified as one of the values listed below. The flow direction in horizontal scripts is also affected by the <a href="https://www.w3.org/International/questions/qa-scripts.en">directionality of that script</a>, either left-to-right (<code>ltr</code>, like English and most other languages) or right-to-left (<code>rtl</code>, like Hebrew or Arabic).</p>
+The `writing-mode` property is specified as one of the values listed below. The flow direction in horizontal scripts is also affected by the [directionality of that script](https://www.w3.org/International/questions/qa-scripts.en), either left-to-right (`ltr`, like English and most other languages) or right-to-left (`rtl`, like Hebrew or Arabic).
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
-	<dt><code>horizontal-tb</code></dt>
-	<dd>For <code>ltr</code> scripts, content flows horizontally from left to right. For <code>rtl</code> scripts, content flows horizontally from right to left. The next horizontal line is positioned below the previous line.</dd>
-	<dt><code>vertical-rl</code></dt>
-	<dd>For <code>ltr</code> scripts, content flows vertically from top to bottom, and the next vertical line is positioned to the left of the previous line. For <code>rtl</code> scripts, content flows vertically from bottom to top, and the next vertical line is positioned to the right of the previous line.</dd>
-	<dt><code>vertical-lr</code></dt>
-	<dd>For <code>ltr</code> scripts, content flows vertically from top to bottom, and the next vertical line is positioned to the right of the previous line. For <code>rtl</code> scripts, content flows vertically from bottom to top, and the next vertical line is positioned to the left of the previous line.</dd>
-	<dt><code>sideways-rl</code> {{experimental_inline}}</dt>
-	<dd>For <code>ltr</code> scripts, content flows vertically from bottom to top. For <code>rtl</code> scripts, content flows vertically from top to bottom. All the glyphs, even those in vertical scripts, are set sideways toward the right.</dd>
-	<dt><code>sideways-lr</code> {{experimental_inline}}</dt>
-	<dd>For <code>ltr</code> scripts, content flows vertically from top to bottom. For <code>rtl</code> scripts, content flows vertically from bottom to top. All the glyphs, even those in vertical scripts, are set sideways toward the left.</dd>
-	<dt><code>lr</code> {{deprecated_inline}}</dt>
-	<dd>Deprecated except for SVG1 documents. For CSS, use <code>horizontal-tb</code> instead.</dd>
-	<dt><code>lr-tb</code> {{deprecated_inline}}</dt>
-	<dd>Deprecated except for SVG1 documents. For CSS, use <code>horizontal-tb</code> instead.</dd>
-	<dt><code>rl</code> {{deprecated_inline}}</dt>
-	<dd>Deprecated except for SVG1 documents. For CSS, use <code>horizontal-tb</code> instead.</dd>
-	<dt><code>tb</code> {{deprecated_inline}}</dt>
-	<dd>Deprecated except for SVG1 documents. For CSS, use <code>vertical-lr</code> instead.</dd>
-	<dt><code>tb-lr</code> {{deprecated_inline}}</dt>
-	<dd>Deprecated except for SVG1 documents. For CSS, use <code>vertical-lr</code> instead.</dd>
-	<dt><code>tb-rl</code> {{deprecated_inline}}</dt>
-	<dd>Deprecated except for SVG1 documents. For CSS, use <code>vertical-rl</code> instead.</dd>
-</dl>
+- `horizontal-tb`
+  - : For `ltr` scripts, content flows horizontally from left to right. For `rtl` scripts, content flows horizontally from right to left. The next horizontal line is positioned below the previous line.
+- `vertical-rl`
+  - : For `ltr` scripts, content flows vertically from top to bottom, and the next vertical line is positioned to the left of the previous line. For `rtl` scripts, content flows vertically from bottom to top, and the next vertical line is positioned to the right of the previous line.
+- `vertical-lr`
+  - : For `ltr` scripts, content flows vertically from top to bottom, and the next vertical line is positioned to the right of the previous line. For `rtl` scripts, content flows vertically from bottom to top, and the next vertical line is positioned to the left of the previous line.
+- `sideways-rl` {{experimental_inline}}
+  - : For `ltr` scripts, content flows vertically from bottom to top. For `rtl` scripts, content flows vertically from top to bottom. All the glyphs, even those in vertical scripts, are set sideways toward the right.
+- `sideways-lr` {{experimental_inline}}
+  - : For `ltr` scripts, content flows vertically from top to bottom. For `rtl` scripts, content flows vertically from bottom to top. All the glyphs, even those in vertical scripts, are set sideways toward the left.
+- `lr` {{deprecated_inline}}
+  - : Deprecated except for SVG1 documents. For CSS, use `horizontal-tb` instead.
+- `lr-tb` {{deprecated_inline}}
+  - : Deprecated except for SVG1 documents. For CSS, use `horizontal-tb` instead.
+- `rl` {{deprecated_inline}}
+  - : Deprecated except for SVG1 documents. For CSS, use `horizontal-tb` instead.
+- `tb` {{deprecated_inline}}
+  - : Deprecated except for SVG1 documents. For CSS, use `vertical-lr` instead.
+- `tb-lr` {{deprecated_inline}}
+  - : Deprecated except for SVG1 documents. For CSS, use `vertical-lr` instead.
+- `tb-rl` {{deprecated_inline}}
+  - : Deprecated except for SVG1 documents. For CSS, use `vertical-rl` instead.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{CSSSyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_multiple_writing_modes">Using multiple writing modes</h3>
+### Using multiple writing modes
 
-<p>This example demonstrates all of the writing modes, showing each with text in various languages.</p>
+This example demonstrates all of the writing modes, showing each with text in various languages.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<p>The HTML is a {{HTMLElement("table")}} with each writing mode in a row with a column showing text in various scripts using that writing mode.</p>
+The HTML is a {{HTMLElement("table")}} with each writing mode in a row with a column showing text in various scripts using that writing mode.
 
-<pre class="brush: html">&lt;table&gt;
-  &lt;tr&gt;
-    &lt;th&gt;Value&lt;/th&gt;
-    &lt;th&gt;Vertical script&lt;/th&gt;
-    &lt;th&gt;Horizontal (LTR) script&lt;/th&gt;
-    &lt;th&gt;Horizontal (RTL) script&lt;/th&gt;
-    &lt;th&gt;Mixed script&lt;/th&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;horizontal-tb&lt;/td&gt;
-    &lt;td class="example Text1"&gt;&lt;span&gt;我家没有电脑。&lt;/span&gt;&lt;/td&gt;
-    &lt;td class="example Text1"&gt;&lt;span&gt;Example text&lt;/span&gt;&lt;/td&gt;
-    &lt;td class="example Text1"&gt;&lt;span&gt;מלל ארוך לדוגמא&lt;/span&gt;&lt;/td&gt;
-    &lt;td class="example Text1"&gt;&lt;span&gt;1994年に至っては&lt;/span&gt;&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;vertical-lr&lt;/td&gt;
-    &lt;td class="example Text2"&gt;&lt;span&gt;我家没有电脑。&lt;/span&gt;&lt;/td&gt;
-    &lt;td class="example Text2"&gt;&lt;span&gt;Example text&lt;/span&gt;&lt;/td&gt;
-    &lt;td class="example Text2"&gt;&lt;span&gt;מלל ארוך לדוגמא&lt;/span&gt;&lt;/td&gt;
-    &lt;td class="example Text2"&gt;&lt;span&gt;1994年に至っては&lt;/span&gt;&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;vertical-rl&lt;/td&gt;
-    &lt;td class="example Text3"&gt;&lt;span&gt;我家没有电脑。&lt;/span&gt;&lt;/td&gt;
-    &lt;td class="example Text3"&gt;&lt;span&gt;Example text&lt;/span&gt;&lt;/td&gt;
-    &lt;td class="example Text3"&gt;&lt;span&gt;מלל ארוך לדוגמא&lt;/span&gt;&lt;/td&gt;
-    &lt;td class="example Text3"&gt;&lt;span&gt;1994年に至っては&lt;/span&gt;&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;sideways-lr&lt;/td&gt;
-    &lt;td class="example Text4"&gt;&lt;span&gt;我家没有电脑。&lt;/span&gt;&lt;/td&gt;
-    &lt;td class="example Text4"&gt;&lt;span&gt;Example text&lt;/span&gt;&lt;/td&gt;
-    &lt;td class="example Text4"&gt;&lt;span&gt;מלל ארוך לדוגמא&lt;/span&gt;&lt;/td&gt;
-    &lt;td class="example Text4"&gt;&lt;span&gt;1994年に至っては&lt;/span&gt;&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;sideways-rl&lt;/td&gt;
-    &lt;td class="example Text5"&gt;&lt;span&gt;我家没有电脑。&lt;/span&gt;&lt;/td&gt;
-    &lt;td class="example Text5"&gt;&lt;span&gt;Example text&lt;/span&gt;&lt;/td&gt;
-    &lt;td class="example Text5"&gt;&lt;span&gt;מלל ארוך לדוגמא&lt;/span&gt;&lt;/td&gt;
-    &lt;td class="example Text5"&gt;&lt;span&gt;1994年に至っては&lt;/span&gt;&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;
-</pre>
+```html
+<table>
+  <tr>
+    <th>Value</th>
+    <th>Vertical script</th>
+    <th>Horizontal (LTR) script</th>
+    <th>Horizontal (RTL) script</th>
+    <th>Mixed script</th>
+  </tr>
+  <tr>
+    <td>horizontal-tb</td>
+    <td class="example Text1"><span>我家没有电脑。</span></td>
+    <td class="example Text1"><span>Example text</span></td>
+    <td class="example Text1"><span>מלל ארוך לדוגמא</span></td>
+    <td class="example Text1"><span>1994年に至っては</span></td>
+  </tr>
+  <tr>
+    <td>vertical-lr</td>
+    <td class="example Text2"><span>我家没有电脑。</span></td>
+    <td class="example Text2"><span>Example text</span></td>
+    <td class="example Text2"><span>מלל ארוך לדוגמא</span></td>
+    <td class="example Text2"><span>1994年に至っては</span></td>
+  </tr>
+  <tr>
+    <td>vertical-rl</td>
+    <td class="example Text3"><span>我家没有电脑。</span></td>
+    <td class="example Text3"><span>Example text</span></td>
+    <td class="example Text3"><span>מלל ארוך לדוגמא</span></td>
+    <td class="example Text3"><span>1994年に至っては</span></td>
+  </tr>
+  <tr>
+    <td>sideways-lr</td>
+    <td class="example Text4"><span>我家没有电脑。</span></td>
+    <td class="example Text4"><span>Example text</span></td>
+    <td class="example Text4"><span>מלל ארוך לדוגמא</span></td>
+    <td class="example Text4"><span>1994年に至っては</span></td>
+  </tr>
+  <tr>
+    <td>sideways-rl</td>
+    <td class="example Text5"><span>我家没有电脑。</span></td>
+    <td class="example Text5"><span>Example text</span></td>
+    <td class="example Text5"><span>מלל ארוך לדוגמא</span></td>
+    <td class="example Text5"><span>1994年に至っては</span></td>
+  </tr>
+</table>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css hidden">table {
+```css hidden
+table {
   border-collapse:collapse;
 }
 td, th {
@@ -137,11 +139,13 @@ th {
 .example {
   height:75px;
   width:75px;
-}</pre>
+}
+```
 
-<p>The CSS that adjusts the directionality of the content looks like this:</p>
+The CSS that adjusts the directionality of the content looks like this:
 
-<pre class="brush:css;">.example.Text1 span, .example.Text1 {
+```css
+.example.Text1 span, .example.Text1 {
   writing-mode: horizontal-tb;
   -webkit-writing-mode: horizontal-tb;
   -ms-writing-mode: horizontal-tb;
@@ -170,33 +174,31 @@ th {
   -webkit-writing-mode: sideways-rl;
   -ms-writing-mode: sideways-rl;
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>This image shows what the output should look like, in case your browser's support for <code>writing-mode</code> is incomplete:</p>
+This image shows what the output should look like, in case your browser's support for `writing-mode` is incomplete:
 
-<p><img alt="" src="screenshot_2020-02-05_21-04-30.png"></p>
+![](screenshot_2020-02-05_21-04-30.png)
 
-<p>{{EmbedLiveSample("Using_multiple_writing_modes", 400, 500)}}</p>
+{{EmbedLiveSample("Using_multiple_writing_modes", 400, 500)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>SVG <code><a href="/en-US/docs/Web/SVG/Attribute/writing-mode">writing-mode</a></code> attribute</li>
-	<li>{{Cssxref("direction")}}</li>
-	<li>{{Cssxref("unicode-bidi")}}</li>
-	<li>{{Cssxref("text-orientation")}}</li>
-	<li>{{Cssxref("text-combine-upright")}}</li>
-	<li><a href="/en-US/docs/Web/CSS/CSS_Logical_Properties">CSS Logical properties</a></li>
-	<li><a href="https://www.w3.org/International/articles/vertical-text/">Styling vertical text (Chinese, Japanese, Korean and Mongolian)</a></li>
-	<li>Extensive browsers support test results: <a href="https://w3c.github.io/i18n-tests/results/writing-mode-vertical">https://w3c.github.io/i18n-tests/results/writing-mode-vertical</a></li>
-</ul>
+- SVG [`writing-mode`](/en-US/docs/Web/SVG/Attribute/writing-mode) attribute
+- {{Cssxref("direction")}}
+- {{Cssxref("unicode-bidi")}}
+- {{Cssxref("text-orientation")}}
+- {{Cssxref("text-combine-upright")}}
+- [CSS Logical properties](/en-US/docs/Web/CSS/CSS_Logical_Properties)
+- [Styling vertical text (Chinese, Japanese, Korean and Mongolian)](https://www.w3.org/International/articles/vertical-text/)
+- Extensive browsers support test results: <https://w3c.github.io/i18n-tests/results/writing-mode-vertical>

@@ -9,155 +9,129 @@ tags:
   - Reference
   - Selectors
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>A CSS <strong>pseudo-element</strong> is a keyword added to a selector that lets you style a specific part of the selected element(s). For example, {{CSSxRef("::first-line")}} can be used to change the font of the first line of a paragraph.</p>
+A CSS **pseudo-element** is a keyword added to a selector that lets you style a specific part of the selected element(s). For example, {{CSSxRef("::first-line")}} can be used to change the font of the first line of a paragraph.
 
-<pre class="brush: css no-line-numbers">/* The first line of every &lt;p&gt; element. */
+```css
+/* The first line of every <p> element. */
 p::first-line {
   color: blue;
   text-transform: uppercase;
-}</pre>
+}
+```
 
-<div class="notecard note">
-<p><strong>Note:</strong> In contrast to pseudo-elements, {{CSSxRef("pseudo-classes")}} can be used to style an element based on its <em>state</em>.</p>
-</div>
+> **Note:** In contrast to pseudo-elements, {{CSSxRef("pseudo-classes")}} can be used to style an element based on its _state_.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">selector::pseudo-element {
+```css
+selector::pseudo-element {
   property: value;
-}</pre>
+}
+```
 
-<p>You can use only one pseudo-element in a selector. It must appear after the simple selectors in the statement.</p>
+You can use only one pseudo-element in a selector. It must appear after the simple selectors in the statement.
 
-<div class="notecard note">
-<p><strong>Note:</strong> As a rule, double colons (<code>::</code>) should be used instead of a single colon (<code>:</code>). This distinguishes pseudo-classes from pseudo-elements. However, since this distinction was not present in older versions of the W3C spec, most browsers support both syntaxes for the original pseudo-elements.</p>
-</div>
+> **Note:** As a rule, double colons (`::`) should be used instead of a single colon (`:`). This distinguishes pseudo-classes from pseudo-elements. However, since this distinction was not present in older versions of the W3C spec, most browsers support both syntaxes for the original pseudo-elements.
 
-<h2 id="Index">Index</h2>
+## Index
 
-<p>Pseudo-elements defined by a set of CSS specifications include the following:</p>
+Pseudo-elements defined by a set of CSS specifications include the following:
 
-<span>A</span>
+A
 
-<ul>
- <li>{{CSSxRef("::after", "::after (:after)")}}</li>
-</ul>
-<span>B</span>
+- {{CSSxRef("::after", "::after (:after)")}}
 
-<ul>
- <li>{{CSSxRef("::backdrop")}} {{Experimental_Inline}}</li>
- <li>{{CSSxRef("::before", "::before (:before)")}}</li>
-</ul>
-<span>C</span>
+B
 
-<ul>
- <li>{{CSSxRef("::cue")}}</li>
- <li>{{CSSxRef("::cue-region")}}</li>
-</ul>
-<span>F</span>
+- {{CSSxRef("::backdrop")}} {{Experimental_Inline}}
+- {{CSSxRef("::before", "::before (:before)")}}
 
-<ul>
- <li>{{CSSxRef("::first-letter", "::first-letter (:first-letter)")}}</li>
- <li>{{CSSxRef("::first-line", "::first-line (:first-line)")}}</li>
- <li>{{CSSxRef("::file-selector-button")}}</li>
-</ul>
-<span>G</span>
+C
 
-<ul>
- <li>{{CSSxRef("::grammar-error")}} {{Experimental_Inline}}</li>
-</ul>
-<span>M</span>
+- {{CSSxRef("::cue")}}
+- {{CSSxRef("::cue-region")}}
 
-<ul>
- <li>{{CSSxRef("::marker")}} {{Experimental_Inline}}</li>
-</ul>
-<span>P</span>
+F
 
-<ul>
- <li>{{CSSxRef("::part", "::part()")}} {{Experimental_Inline}}</li>
- <li>{{CSSxRef("::placeholder")}} {{Experimental_Inline}}</li>
-</ul>
-<span>S</span>
+- {{CSSxRef("::first-letter", "::first-letter (:first-letter)")}}
+- {{CSSxRef("::first-line", "::first-line (:first-line)")}}
+- {{CSSxRef("::file-selector-button")}}
 
-<ul>
- <li>{{CSSxRef("::selection")}}</li>
- <li>{{CSSxRef("::slotted", "::slotted()")}}</li>
- <li>{{CSSxRef("::spelling-error")}} {{Experimental_Inline}}</li>
-</ul>
+G
 
-<span>T</span>
+- {{CSSxRef("::grammar-error")}} {{Experimental_Inline}}
 
-<ul>
- <li>{{CSSxRef("::target-text")}} {{Experimental_Inline}}</li>
-</ul>
+M
 
-<h2 id="Specifications">Specifications</h2>
+- {{CSSxRef("::marker")}} {{Experimental_Inline}}
+
+P
+
+- {{CSSxRef("::part", "::part()")}} {{Experimental_Inline}}
+- {{CSSxRef("::placeholder")}} {{Experimental_Inline}}
+
+S
+
+- {{CSSxRef("::selection")}}
+- {{CSSxRef("::slotted", "::slotted()")}}
+- {{CSSxRef("::spelling-error")}} {{Experimental_Inline}}
+
+T
+
+- {{CSSxRef("::target-text")}} {{Experimental_Inline}}
+
+## Specifications
+
+| Specification                | Status                   | Comment                                     |
+| ---------------------------- | ------------------------ | ------------------------------------------- |
+| {{SpecName("CSS1")}} | {{Spec2("CSS1")}} | Defined pseudo-classes and pseudo-elements. |
+
+## Browser compatibility
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS1")}}</td>
-   <td>{{Spec2("CSS1")}}</td>
-   <td>Defined pseudo-classes and pseudo-elements.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th>Browser</th>
+      <th>Lowest Version</th>
+      <th>Support of</th>
+    </tr>
+    <tr>
+      <td rowspan="2">Internet Explorer</td>
+      <td>8.0</td>
+      <td><code>:pseudo-element</code></td>
+    </tr>
+    <tr>
+      <td>9.0</td>
+      <td><code>:pseudo-element ::pseudo-element</code></td>
+    </tr>
+    <tr>
+      <td rowspan="2">Firefox (Gecko)</td>
+      <td>1.0 (1.0)</td>
+      <td><code>:pseudo-element</code></td>
+    </tr>
+    <tr>
+      <td>1.0 (1.5)</td>
+      <td><code>:pseudo-element ::pseudo-element</code></td>
+    </tr>
+    <tr>
+      <td rowspan="2">Opera</td>
+      <td>4.0</td>
+      <td><code>:pseudo-element</code></td>
+    </tr>
+    <tr>
+      <td>7.0</td>
+      <td><code>:pseudo-element ::pseudo-element</code></td>
+    </tr>
+    <tr>
+      <td>Safari (WebKit)</td>
+      <td>1.0 (85)</td>
+      <td><code>:pseudo-element ::pseudo-element</code></td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## See also
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Browser</th>
-   <th>Lowest Version</th>
-   <th>Support of</th>
-  </tr>
-  <tr>
-   <td rowspan="2">Internet Explorer</td>
-   <td>8.0</td>
-   <td><code>:pseudo-element</code></td>
-  </tr>
-  <tr>
-   <td>9.0</td>
-   <td><code>:pseudo-element ::pseudo-element</code></td>
-  </tr>
-  <tr>
-   <td rowspan="2">Firefox (Gecko)</td>
-   <td>1.0 (1.0)</td>
-   <td><code>:pseudo-element</code></td>
-  </tr>
-  <tr>
-   <td>1.0 (1.5)</td>
-   <td><code>:pseudo-element ::pseudo-element</code></td>
-  </tr>
-  <tr>
-   <td rowspan="2">Opera</td>
-   <td>4.0</td>
-   <td><code>:pseudo-element</code></td>
-  </tr>
-  <tr>
-   <td>7.0</td>
-   <td><code>:pseudo-element ::pseudo-element</code></td>
-  </tr>
-  <tr>
-   <td>Safari (WebKit)</td>
-   <td>1.0 (85)</td>
-   <td><code>:pseudo-element ::pseudo-element</code></td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/CSS/Pseudo-classes">Pseudo-classes</a></li>
-</ul>
+- [Pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes)

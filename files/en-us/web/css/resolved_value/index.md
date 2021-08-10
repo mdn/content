@@ -6,34 +6,19 @@ tags:
   - Guide
   - Reference
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong>resolved value</strong> of a <a href="/en-US/docs/Web/CSS">CSS</a> property is the value returned by {{domxref("Window.getComputedStyle", "getComputedStyle()")}}.</p>
+The **resolved value** of a [CSS](/en-US/docs/Web/CSS) property is the value returned by {{domxref("Window.getComputedStyle", "getComputedStyle()")}}.
 
-<p>For most properties, it is the <a href="/en-US/docs/Web/CSS/computed_value">computed value</a>, but for a few legacy properties (including {{cssxref("width")}} and {{cssxref("height")}}), it is instead the <a href="/en-US/docs/Web/CSS/used_value">used value</a>. See the specification link below for more per-property details.</p>
+For most properties, it is the [computed value](/en-US/docs/Web/CSS/computed_value), but for a few legacy properties (including {{cssxref("width")}} and {{cssxref("height")}}), it is instead the [used value](/en-US/docs/Web/CSS/used_value). See the specification link below for more per-property details.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSSOM", "#resolved-values", "resolved value")}}</td>
-   <td>{{Spec2("CSSOM")}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                    | Status                   | Comment             |
+| -------------------------------------------------------------------------------- | ------------------------ | ------------------- |
+| {{SpecName("CSSOM", "#resolved-values", "resolved value")}} | {{Spec2("CSSOM")}} | Initial definition. |
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("window.getComputedStyle")}}</li>
- <li>{{CSS_key_concepts}}</li>
-</ul>
+- {{domxref("window.getComputedStyle")}}
+- {{CSS_key_concepts}}

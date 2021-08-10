@@ -6,20 +6,21 @@ tags:
   - CSS Text Decoration
   - Property
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
   - text-decoration
   - text-underline-offset
 browser-compat: css.properties.text-underline-offset
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>text-underline-offset</code></strong> <a href="/en-US/docs/CSS">CSS</a> property sets the offset distance of an underline text decoration line (applied using {{cssxref("text-decoration")}}) from its original position.</p>
+The **`text-underline-offset`** [CSS](/en-US/docs/CSS) property sets the offset distance of an underline text decoration line (applied using {{cssxref("text-decoration")}}) from its original position.
 
-<p><code>text-underline-offset</code> is not part of the {{cssxref('text-decoration')}} shorthand. While an element can have multiple <code>text-decoration</code> lines, <code>text-underline-offset</code> only impacts underlining, and <strong>not</strong> other possible line decoration options such as <code>overline</code> or <code>line-through</code>.</p>
+`text-underline-offset` is not part of the {{cssxref('text-decoration')}} shorthand. While an element can have multiple `text-decoration` lines, `text-underline-offset` only impacts underlining, and **not** other possible line decoration options such as `overline` or `line-through`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* Single keyword */
+```css
+/* Single keyword */
 text-underline-offset: auto;
 
 /* length */
@@ -34,38 +35,39 @@ text-underline-offset: inherit;
 text-underline-offset: initial;
 text-underline-offset: revert;
 text-underline-offset: unset;
-</pre>
+```
 
-<p>The <code>text-underline-offset</code> property is specified as a single value from the list below.</p>
+The `text-underline-offset` property is specified as a single value from the list below.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
-	<dt><code>auto</code></dt>
-	<dd>The browser chooses the appropriate offset for underlines.</dd>
-	<dt><code>&lt;length&gt;</code></dt>
-	<dd>Specifies the offset of underlines as a {{cssxref('length')}}, overriding the font file suggestion and the browser default. It is recommended to use <code>em</code> units so the offset scales with the font size.</dd>
-	<dt><code>&lt;percentage&gt;</code></dt>
-	<dd>Specifies the offset of underlines as a {{cssxref('percentage')}} of <strong>1 em</strong> in the element's font. A percentage inherits as a relative value, and so therefore scales with changes in the font. For a given application of this property, the offset is constant across the whole box that the underline is applied to, even if there are child elements with different font sizes or vertical alignment.</dd>
-</dl>
+- `auto`
+  - : The browser chooses the appropriate offset for underlines.
+- `<length>`
+  - : Specifies the offset of underlines as a {{cssxref('length')}}, overriding the font file suggestion and the browser default. It is recommended to use `em` units so the offset scales with the font size.
+- `<percentage>`
+  - : Specifies the offset of underlines as a {{cssxref('percentage')}} of **1 em** in the element's font. A percentage inherits as a relative value, and so therefore scales with changes in the font. For a given application of this property, the offset is constant across the whole box that the underline is applied to, even if there are child elements with different font sizes or vertical alignment.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Demonstration_of_text-underline-offset">Demonstration of text-underline-offset</h3>
+### Demonstration of text-underline-offset
 
-<pre class="brush: html">&lt;p class="oneline"&gt;Here's some text with an offset wavy red underline!&lt;/p&gt;
-&lt;br&gt;
-&lt;p class="twolines"&gt;This text has lines both above and below it. Only the bottom one is offset.&lt;/p&gt;</pre>
+```html
+<p class="oneline">Here's some text with an offset wavy red underline!</p>
+<br>
+<p class="twolines">This text has lines both above and below it. Only the bottom one is offset.</p>
+```
 
-<pre class="brush: css">p {
+```css
+p {
   text-decoration: underline wavy red;
   text-underline-offset: 1em;
 }
@@ -73,21 +75,20 @@ text-underline-offset: unset;
 .twolines {
   text-decoration-color: purple;
   text-decoration-line: underline overline;
-}</pre>
+}
+```
 
-<p>{{ EmbedLiveSample('Examples', '', '', '') }}</p>
+{{ EmbedLiveSample('Examples', '', '', '') }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>{{cssxref("text-decoration")}}</li>
-	<li>{{cssxref("text-decoration-thickness")}}</li>
-</ul>
+- {{cssxref("text-decoration")}}
+- {{cssxref("text-decoration-thickness")}}

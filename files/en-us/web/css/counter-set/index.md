@@ -6,20 +6,19 @@ tags:
   - CSS Counter
   - CSS Lists
   - CSS Property
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.counter-set
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>counter-set</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets a <a href="/en-US/docs/Web/Guide/CSS/Counters">CSS counter</a> to a given value. It manipulates the value of existing counters, and will only create new counters if there isn't already a counter of the given name on the element.</p>
+The **`counter-set`** [CSS](/en-US/docs/Web/CSS) property sets a [CSS counter](/en-US/docs/Web/Guide/CSS/Counters) to a given value. It manipulates the value of existing counters, and will only create new counters if there isn't already a counter of the given name on the element.
 
-<div class="note">
-<p><strong>Note:</strong> The counter's value can be incremented or decremented using the {{cssxref("counter-increment")}} CSS property.</p>
-</div>
+> **Note:** The counter's value can be incremented or decremented using the {{cssxref("counter-increment")}} CSS property.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* Set "my-counter" to 0 */
+```css
+/* Set "my-counter" to 0 */
 counter-set: my-counter;
 
 /* Set "my-counter" to -1 */
@@ -36,60 +35,55 @@ counter-set: inherit;
 counter-set: initial;
 counter-set: revert;
 counter-set: unset;
-</pre>
+```
 
-<p>The <code>counter-set</code> property is specified as either one of the following:</p>
+The `counter-set` property is specified as either one of the following:
 
-<ul>
- <li>A <code>&lt;custom-ident&gt;</code> naming the counter, followed optionally by an <code>&lt;integer&gt;</code>. You may specify as many counters to reset as you want, with each name or name-number pair separated by a space.</li>
- <li>The keyword value <code>none</code>.</li>
-</ul>
+- A `<custom-ident>` naming the counter, followed optionally by an `<integer>`. You may specify as many counters to reset as you want, with each name or name-number pair separated by a space.
+- The keyword value `none`.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt>{{cssxref("custom-ident", "&lt;custom-ident&gt;")}}</dt>
- <dd>The name of the counter to set.</dd>
- <dt>{{cssxref("&lt;integer&gt;")}}</dt>
- <dd>The value to set the counter to on each occurrence of the element. Defaults to <code>0</code> if not specified. If there isn't currently a counter of the given name on the element, the element will create a new counter of the given name with a starting value of 0 (though it may then immediately set or increment that value to something different).</dd>
- <dt><code>none</code></dt>
- <dd>No counter set is to be performed. This can be used to override a <code>counter-set</code> defined in a less specific rule.</dd>
-</dl>
+- {{cssxref("custom-ident", "&lt;custom-ident&gt;")}}
+  - : The name of the counter to set.
+- {{cssxref("&lt;integer&gt;")}}
+  - : The value to set the counter to on each occurrence of the element. Defaults to `0` if not specified. If there isn't currently a counter of the given name on the element, the element will create a new counter of the given name with a starting value of 0 (though it may then immediately set or increment that value to something different).
+- `none`
+  - : No counter set is to be performed. This can be used to override a `counter-set` defined in a less specific rule.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_named_counters">Setting named counters</h3>
+### Setting named counters
 
-<pre class="brush:css">h1 {
+```css
+h1 {
   counter-set: chapter section 1 page;
   /* Sets the chapter and page counters to 0,
      and the section counter to 1 */
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/CSS/Counters">Using CSS Counters</a></li>
- <li>{{cssxref("counter-increment")}}</li>
- <li>{{cssxref("counter-reset")}}</li>
- <li>{{cssxref("@counter-style")}}</li>
- <li>{{cssxref("counter")}} and {{cssxref("counters")}} functions</li>
- <li>{{cssxref("content")}} property</li>
-</ul>
+- [Using CSS Counters](/en-US/docs/CSS/Counters)
+- {{cssxref("counter-increment")}}
+- {{cssxref("counter-reset")}}
+- {{cssxref("@counter-style")}}
+- {{cssxref("counter")}} and {{cssxref("counters")}} functions
+- {{cssxref("content")}} property

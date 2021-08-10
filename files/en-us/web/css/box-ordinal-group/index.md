@@ -6,17 +6,17 @@ tags:
   - CSS Property
   - Non-standard
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.box-ordinal-group
 ---
-<div>{{CSSRef}}{{Non-standard_Header}}</div>
-<div class="notecard warning">
- <p><strong>Warning:</strong> This is a property of the original CSS Flexible Box Layout Module draft, and has been replaced by a newer standard. See <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes">flexbox</a> for information about the current standard.</p>
-</div>
+{{CSSRef}}{{Non-standard_Header}}
 
-<p>The <strong><code>box-ordinal-group</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property assigns the flexbox's child elements to an ordinal group.</p>
+> **Warning:** This is a property of the original CSS Flexible Box Layout Module draft, and has been replaced by a newer standard. See [flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes) for information about the current standard.
 
-<pre class="brush:css no-line-numbers">/* &lt;integer&gt; values */
+The **`box-ordinal-group`** [CSS](/en-US/docs/Web/CSS) property assigns the flexbox's child elements to an ordinal group.
+
+```css
+/* <integer> values */
 box-ordinal-group: 1;
 box-ordinal-group: 5;
 
@@ -24,29 +24,30 @@ box-ordinal-group: 5;
 box-ordinal-group: inherit;
 box-ordinal-group: initial;
 box-ordinal-group: unset;
-</pre>
+```
 
-<p>Ordinal groups may be used in conjunction with the {{CSSxRef("box-direction")}} property to control the order in which the direct children of a box appear. When the computed <code>box-direction</code> is normal, a box will display its elements starting from the lowest numbered ordinal group and ensure that those elements appear to the left (for horizontal boxes) or at the top (for vertical boxes) of the container. Elements with the same ordinal group are flowed in the order they appear in the source document tree. In the reverse direction, the ordinal groups are examined in the same order, except the elements appear reversed.</p>
+Ordinal groups may be used in conjunction with the {{CSSxRef("box-direction")}} property to control the order in which the direct children of a box appear. When the computed `box-direction` is normal, a box will display its elements starting from the lowest numbered ordinal group and ensure that those elements appear to the left (for horizontal boxes) or at the top (for vertical boxes) of the container. Elements with the same ordinal group are flowed in the order they appear in the source document tree. In the reverse direction, the ordinal groups are examined in the same order, except the elements appear reversed.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>box-ordinal-group</code> property is specified as any positive {{CSSxRef("&lt;integer&gt;")}}.</p>
+The `box-ordinal-group` property is specified as any positive {{CSSxRef("&lt;integer&gt;")}}.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{CSSSyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Basic_usage_example">Basic usage example</h3>
+### Basic usage example
 
-<p>In an older version of the spec, <code>box-ordinal-group</code> was included to allow you to change the display order of flex children inside a flex container:</p>
+In an older version of the spec, `box-ordinal-group` was included to allow you to change the display order of flex children inside a flex container:
 
-<pre class="brush: css">article:nth-child(1) {
+```css
+article:nth-child(1) {
   -webkit-box-ordinal-group: 2
   -moz-box-ordinal-group: 2
   box-ordinal-group: 2
@@ -56,22 +57,21 @@ article:nth-child(2) {
   -webkit-box-ordinal-group: 1
   -moz-box-ordinal-group: 1
   box-ordinal-group: 1
-}</pre>
+}
+```
 
-<p>The modern flexbox equivalent is {{cssxref("order")}}.</p>
+The modern flexbox equivalent is {{cssxref("order")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any standard.</p>
+Not part of any standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{CSSxRef("box-flex")}}</li>
- <li>{{CSSxRef("box-flex-group")}}</li>
- <li>{{CSSxRef("box-pack")}}</li>
-</ul>
+- {{CSSxRef("box-flex")}}
+- {{CSSxRef("box-flex-group")}}
+- {{CSSxRef("box-pack")}}

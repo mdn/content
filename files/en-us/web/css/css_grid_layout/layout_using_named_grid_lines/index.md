@@ -6,15 +6,16 @@ tags:
   - CSS Grids
   - Guide
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>In previous guides we’ve looked at placing items by the lines created by defining grid tracks and also how to place items using named template areas. In this guide we are going to look at how these two things work together when we use named lines. Line naming is incredibly useful, but some of the more baffling looking grid syntax comes from this combination of names and track sizes. Once you work through some examples it should become clearer and easier to work with.</p>
+In previous guides we’ve looked at placing items by the lines created by defining grid tracks and also how to place items using named template areas. In this guide we are going to look at how these two things work together when we use named lines. Line naming is incredibly useful, but some of the more baffling looking grid syntax comes from this combination of names and track sizes. Once you work through some examples it should become clearer and easier to work with.
 
-<h2>Naming lines when defining a grid</h2>
+## Naming lines when defining a grid
 
-<p>You can assign some or all of the lines in your grid a name when you define your grid with the <code>grid-template-rows</code> and <code>grid-template-columns</code> properties. To demonstrate I’ll use the simple layout created in the guide on line-based placement. This time I’ll create the grid using named lines.</p>
+You can assign some or all of the lines in your grid a name when you define your grid with the `grid-template-rows` and `grid-template-columns` properties. To demonstrate I’ll use the simple layout created in the guide on line-based placement. This time I’ll create the grid using named lines.
 
-<pre class="brush: css hidden">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -22,27 +23,29 @@ tags:
   background-color: #fff4e6;
 }
 
-.wrapper &gt; div {
+.wrapper > div {
   border: 2px solid #ffa94d;
   border-radius: 5px;
   background-color: #ffd8a8;
   padding: 1em;
   color: #d9480f;
 }
-</pre>
+```
 
-<p>When defining the grid, I name my lines inside square brackets. Those names can be anything you like. I have defined a name for the start and end of the container, both for rows and columns. Then defined the centre block of the grid as <code>content-start</code> and <code>content-end</code> again, both for columns and rows although you do not need to name all of the lines on your grid. You might choose to name just some key lines for your layout.</p>
+When defining the grid, I name my lines inside square brackets. Those names can be anything you like. I have defined a name for the start and end of the container, both for rows and columns. Then defined the centre block of the grid as `content-start` and `content-end` again, both for columns and rows although you do not need to name all of the lines on your grid. You might choose to name just some key lines for your layout.
 
-<pre class="brush: css">.wrapper {
+```css
+.wrapper {
   display: grid;
   grid-template-columns: [main-start] 1fr [content-start] 1fr [content-end] 1fr [main-end];
   grid-template-rows: [main-start] 100px [content-start] 100px [content-end] 100px [main-end];
 }
-</pre>
+```
 
-<p>Once the lines have names, we can use the name to place the item rather than the line number.</p>
+Once the lines have names, we can use the name to place the item rather than the line number.
 
-<pre class="brush: css">.box1 {
+```css
+.box1 {
   grid-column-start: main-start;
   grid-row-start: main-start;
   grid-row-end: main-end;
@@ -64,31 +67,33 @@ tags:
   grid-column-end: main-end;
   grid-row-start: content-end;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-  &lt;div class="box1"&gt;One&lt;/div&gt;
-  &lt;div class="box2"&gt;Two&lt;/div&gt;
-  &lt;div class="box3"&gt;Three&lt;/div&gt;
-  &lt;div class="box4"&gt;Four&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="wrapper">
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
+  <div class="box4">Four</div>
+</div>
+```
 
-<p>{{ EmbedLiveSample('Naming_lines_when_defining_a_grid', '500', '330') }}</p>
+{{ EmbedLiveSample('Naming_lines_when_defining_a_grid', '500', '330') }}
 
-<p>Everything else about line-based placement still works in the same way and you can mix named lines and line numbers. Naming lines is useful when creating a responsive design where you redefine the grid, rather than then needing to redefine the content position by changing the line number in your media queries, you can ensure that the line is always named the same in your definitions.</p>
+Everything else about line-based placement still works in the same way and you can mix named lines and line numbers. Naming lines is useful when creating a responsive design where you redefine the grid, rather than then needing to redefine the content position by changing the line number in your media queries, you can ensure that the line is always named the same in your definitions.
 
-<h3 id="Giving_lines_multiple_names">Giving lines multiple names</h3>
+### Giving lines multiple names
 
-<p>You may want to give a line more than one name, perhaps it denotes the sidebar-end and the main-start for example. To do this add the names inside the square brackets with whitespace between them <code>[sidebar-end main-start]</code>. You can then refer to that line by either of the names.</p>
+You may want to give a line more than one name, perhaps it denotes the sidebar-end and the main-start for example. To do this add the names inside the square brackets with whitespace between them `[sidebar-end main-start]`. You can then refer to that line by either of the names.
 
-<h2>Implicit grid areas from named lines</h2>
+## Implicit grid areas from named lines
 
-<p>When naming the lines, I mentioned that you can name these anything you like. The name is a <a href="https://drafts.csswg.org/css-values-4/#custom-idents">custom ident</a>, an author-defined name. When choosing the name you need to avoid words that might appear in the specification and be confusing - such as <code>span</code>. Idents are not quoted.</p>
+When naming the lines, I mentioned that you can name these anything you like. The name is a [custom ident](https://drafts.csswg.org/css-values-4/#custom-idents), an author-defined name. When choosing the name you need to avoid words that might appear in the specification and be confusing - such as `span`. Idents are not quoted.
 
-<p>While you can choose any name, if you append <code>-start</code> and <code>-end</code> to the lines around an area, as I have in the example above, grid will create you a named area of the main name used. Taking the above example, I have <code>content-start</code> and <code>content-end</code> both for rows and for columns. This means I get a grid area named <code>content</code>, and could place something in that area should I wish to.</p>
+While you can choose any name, if you append `-start` and `-end` to the lines around an area, as I have in the example above, grid will create you a named area of the main name used. Taking the above example, I have `content-start` and `content-end` both for rows and for columns. This means I get a grid area named `content`, and could place something in that area should I wish to.
 
-<pre class="brush: css hidden">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -96,18 +101,19 @@ tags:
   background-color: #fff4e6;
 }
 
-.wrapper &gt; div {
+.wrapper > div {
   border: 2px solid #ffa94d;
   border-radius: 5px;
   background-color: #ffd8a8;
   padding: 1em;
   color: #d9480f;
 }
-</pre>
+```
 
-<p>I’m using the same grid definitions as above, however this time I am going to place a single item into the named area <code>content</code>.</p>
+I’m using the same grid definitions as above, however this time I am going to place a single item into the named area `content`.
 
-<pre class="brush: css">.wrapper {
+```css
+.wrapper {
   display: grid;
   grid-template-columns: [main-start] 1fr [content-start] 1fr [content-end] 1fr [main-end];
   grid-template-rows: [main-start] 100px [content-start] 100px [content-end] 100px [main-end];
@@ -115,50 +121,48 @@ tags:
 .thing {
   grid-area: content;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-  &lt;div class="thing"&gt;I am placed in an area named content.&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="wrapper">
+  <div class="thing">I am placed in an area named content.</div>
+</div>
+```
 
-<p>{{ EmbedLiveSample('Implicit_grid_areas_from_named_lines', '500', '330') }}</p>
+{{ EmbedLiveSample('Implicit_grid_areas_from_named_lines', '500', '330') }}
 
-<p>We don’t need to define where our areas are with <code>grid-template-areas</code> as our named lines have created an area for us.</p>
+We don’t need to define where our areas are with `grid-template-areas` as our named lines have created an area for us.
 
-<h2>Implicit Grid lines from named areas</h2>
+## Implicit Grid lines from named areas
 
-<p>We have seen how named lines create a named area, and this also works in reverse. Named template areas create named lines that you can use to place your items. If we take the layout created in the guide to Grid Template Areas, we can use the lines created by our areas to see how this works.</p>
+We have seen how named lines create a named area, and this also works in reverse. Named template areas create named lines that you can use to place your items. If we take the layout created in the guide to Grid Template Areas, we can use the lines created by our areas to see how this works.
 
-<p>In this example I have added an extra div with a class of <code>overlay</code>. We have named areas created using the <code>grid-area</code> property, then a layout created in <code>grid-template-areas</code>. The area names are:</p>
+In this example I have added an extra div with a class of `overlay`. We have named areas created using the `grid-area` property, then a layout created in `grid-template-areas`. The area names are:
 
-<ul>
- <li><code>hd</code></li>
- <li><code>ft</code></li>
- <li><code>main</code></li>
- <li><code>sd</code></li>
-</ul>
+- `hd`
+- `ft`
+- `main`
+- `sd`
 
-<p>This gives us column and row lines:</p>
+This gives us column and row lines:
 
-<ul>
- <li><code>hd-start</code></li>
- <li><code>hd-end</code></li>
- <li><code>sd-start</code></li>
- <li><code>sd-end</code></li>
- <li><code>main-start</code></li>
- <li><code>main-end</code></li>
- <li><code>ft-start</code></li>
- <li><code>ft-end</code></li>
-</ul>
+- `hd-start`
+- `hd-end`
+- `sd-start`
+- `sd-end`
+- `main-start`
+- `main-end`
+- `ft-start`
+- `ft-end`
 
-<p>You can see the named lines in the image, note that some lines have two names - for example <code>sd-end</code> and <code>main-start</code> refer to the same column line.</p>
+You can see the named lines in the image, note that some lines have two names - for example `sd-end` and `main-start` refer to the same column line.
 
-<p><img alt="An image showing the implicit line names created by our grid areas." src="5_multiple_lines_from_areas.png"></p>
+![An image showing the implicit line names created by our grid areas.](5_multiple_lines_from_areas.png)
 
-<p>To position <code>overlay</code> using these implicit named lines is the same as positioning an item using lines that we have named.</p>
+To position `overlay` using these implicit named lines is the same as positioning an item using lines that we have named.
 
-<pre class="brush: css hidden">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -166,16 +170,17 @@ tags:
   background-color: #fff4e6;
 }
 
-.wrapper &gt; div {
+.wrapper > div {
   border: 2px solid #ffa94d;
   border-radius: 5px;
   background-color: #ffd8a8;
   padding: 1em;
   color: #d9480f;
 }
-</pre>
+```
 
-<pre class="brush: css">.wrapper {
+```css
+.wrapper {
   display: grid;
   grid-template-columns: repeat(9, 1fr);
   grid-auto-rows: minmax(100px, auto);
@@ -201,7 +206,7 @@ tags:
   grid-area: sd;
 }
 
-.wrapper &gt; div.overlay {
+.wrapper > div.overlay {
   z-index: 10;
   grid-column: main-start / main-end;
   grid-row: hd-start / ft-end;
@@ -210,30 +215,32 @@ tags:
   color: rgb(92,148,13);
   font-size: 150%;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-  &lt;div class="header"&gt;Header&lt;/div&gt;
-  &lt;div class="sidebar"&gt;Sidebar&lt;/div&gt;
-  &lt;div class="content"&gt;Content&lt;/div&gt;
-  &lt;div class="footer"&gt;Footer&lt;/div&gt;
-  &lt;div class="overlay"&gt;Overlay&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="wrapper">
+  <div class="header">Header</div>
+  <div class="sidebar">Sidebar</div>
+  <div class="content">Content</div>
+  <div class="footer">Footer</div>
+  <div class="overlay">Overlay</div>
+</div>
+```
 
-<p>{{ EmbedLiveSample('Implicit_Grid_lines_from_named_areas', '500', '330') }}</p>
+{{ EmbedLiveSample('Implicit_Grid_lines_from_named_areas', '500', '330') }}
 
-<p>Given that we have this ability to position create lines from named areas and areas from named lines it is worth taking a little bit of time to plan your naming strategy when starting out creating your grid layout. By selecting names that will make sense to you and your team you will help everyone to use the layouts you create more easily.</p>
+Given that we have this ability to position create lines from named areas and areas from named lines it is worth taking a little bit of time to plan your naming strategy when starting out creating your grid layout. By selecting names that will make sense to you and your team you will help everyone to use the layouts you create more easily.
 
-<h2 id="Multiple_lines_with_the_same_name_with_repeat">Multiple lines with the same name with repeat()</h2>
+## Multiple lines with the same name with repeat()
 
-<p>If you want to give all of the lines in your grid a unique name then you will need to write out the track definition long-hand rather than using the repeat syntax, as you need to add the name in square brackets while defining the tracks. If you do use the repeat syntax you will end up with multiple lines that have the same name, however this can be very useful too.</p>
+If you want to give all of the lines in your grid a unique name then you will need to write out the track definition long-hand rather than using the repeat syntax, as you need to add the name in square brackets while defining the tracks. If you do use the repeat syntax you will end up with multiple lines that have the same name, however this can be very useful too.
 
-<h3>Twelve-column grid using repeat()</h3>
+### Twelve-column grid using repeat()
 
-<p>In this next example I am creating a grid with twelve equal width columns. Before defining the 1fr size of the column track I am also defining a line name of <code>[col-start]</code>. This means that we will end up with a grid that has 12 column lines all named <code>col-start</code> before a <code>1fr</code> width column.</p>
+In this next example I am creating a grid with twelve equal width columns. Before defining the 1fr size of the column track I am also defining a line name of `[col-start]`. This means that we will end up with a grid that has 12 column lines all named `col-start` before a `1fr` width column.
 
-<pre class="brush: css hidden">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -241,71 +248,81 @@ tags:
   background-color: #fff4e6;
 }
 
-.wrapper &gt; div {
+.wrapper > div {
   border: 2px solid #ffa94d;
   border-radius: 5px;
   background-color: #ffd8a8;
   padding: 1em;
   color: #d9480f;
 }
-</pre>
+```
 
-<pre class="brush: css">.wrapper {
+```css
+.wrapper {
   display: grid;
   grid-template-columns: repeat(12, [col-start] 1fr);
-}</pre>
+}
+```
 
-<p>Once you have created the grid you can place items onto it. As we have multiple lines named <code>col-start</code> if you place an item to start after line <code>col-start</code> grid uses the first line named <code>col-start</code>, in our case that will be the far left line. To address another line use the name, plus the number for that line. To place our item from the first line named col-start to the 5th, we can use:</p>
+Once you have created the grid you can place items onto it. As we have multiple lines named `col-start` if you place an item to start after line `col-start` grid uses the first line named `col-start`, in our case that will be the far left line. To address another line use the name, plus the number for that line. To place our item from the first line named col-start to the 5th, we can use:
 
-<pre class="brush: css">.item1 {
+```css
+.item1 {
   grid-column: col-start / col-start 5
 }
-</pre>
+```
 
-<p>You can also use the <code>span</code> keyword here. My next item will be placed from the 7th line named <code>col-start</code> and span 3 lines.</p>
+You can also use the `span` keyword here. My next item will be placed from the 7th line named `col-start` and span 3 lines.
 
-<pre class="brush: css">.item2 {
+```css
+.item2 {
   grid-column: col-start 7 / span 3;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-  &lt;div class="item1"&gt;I am placed from col-start line 1 to col-start 5&lt;/div&gt;
-  &lt;div class="item2"&gt;I am placed from col-start line 7 spanning 3 lines&lt;/div&gt;
-&lt;/div&gt;</pre>
+```html
+<div class="wrapper">
+  <div class="item1">I am placed from col-start line 1 to col-start 5</div>
+  <div class="item2">I am placed from col-start line 7 spanning 3 lines</div>
+</div>
+```
 
-<p>{{ EmbedLiveSample('Twelve-column_grid_using_repeat', '500', '330') }}</p>
+{{ EmbedLiveSample('Twelve-column_grid_using_repeat', '500', '330') }}
 
-<p>If you take a look at this layout in the Firefox Grid Highlighter you can see how the column lines are shown, and how our items are placed against these lines.</p>
+If you take a look at this layout in the Firefox Grid Highlighter you can see how the column lines are shown, and how our items are placed against these lines.
 
-<p><img alt="The 12 column grid with items placed. The Grid Highlighter shows the position of the lines." src="5_named_lines1.png"></p>
+![The 12 column grid with items placed. The Grid Highlighter shows the position of the lines.](5_named_lines1.png)
 
-<h3>Defining named lines with a track list</h3>
+### Defining named lines with a track list
 
-<p>The repeat syntax can also take a track list, it doesn’t just need to be a single track size that is being repeated. The code below would create an eight track grid, with a narrower <code>1fr</code> width column named <code>col1-start</code> followed by a wider <code>3fr</code> column named <code>col2-start</code>.</p>
+The repeat syntax can also take a track list, it doesn’t just need to be a single track size that is being repeated. The code below would create an eight track grid, with a narrower `1fr` width column named `col1-start` followed by a wider `3fr` column named `col2-start`.
 
-<pre class="brush: css">.wrapper {
+```css
+.wrapper {
   grid-template-columns: repeat(4, [col1-start] 1fr [col2-start] 3fr);
 }
-</pre>
+```
 
-<p>If your repeating syntax puts two lines next to each other then they will be merged, and create the same result as giving a line multiple names in a non-repeating track definition. The following definition, creates four <code>1fr</code> tracks, which each have a start and end line.</p>
+If your repeating syntax puts two lines next to each other then they will be merged, and create the same result as giving a line multiple names in a non-repeating track definition. The following definition, creates four `1fr` tracks, which each have a start and end line.
 
-<pre class="brush: css">.wrapper {
+```css
+.wrapper {
   grid-template-columns: repeat(4, [col-start] 1fr [col-end] );
 }
-</pre>
+```
 
-<p>If we write this definition out without using repeat notation it would look like this.</p>
+If we write this definition out without using repeat notation it would look like this.
 
-<pre class="brush: css">.wrapper {
+```css
+.wrapper {
   grid-template-columns: [col-start] 1fr [col-end col-start] 1fr [col-end col-start] 1fr  [col-end col-start] 1fr [col-end];
 }
-</pre>
+```
 
-<p>If you have used a track list then you can use the <code>span</code> keyword not just to span a number of lines but also to span a number of lines of a certain name.</p>
+If you have used a track list then you can use the `span` keyword not just to span a number of lines but also to span a number of lines of a certain name.
 
-<pre class="brush: css hidden">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -313,16 +330,17 @@ tags:
   background-color: #fff4e6;
 }
 
-.wrapper &gt; div {
+.wrapper > div {
   border: 2px solid #ffa94d;
   border-radius: 5px;
   background-color: #ffd8a8;
   padding: 1em;
   color: #d9480f;
 }
-</pre>
+```
 
-<pre class="brush: css">.wrapper {
+```css
+.wrapper {
   display: grid;
   grid-template-columns: repeat(6, [col1-start] 1fr [col2-start] 3fr);
 }
@@ -335,32 +353,35 @@ tags:
   grid-row: 2;
   grid-column: col1-start 2 / span 2 col1-start;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-  &lt;div class="item1"&gt;I am placed from col1-start line 1 to col2-start line 2&lt;/div&gt;
-  &lt;div class="item2"&gt;I am placed from col1-start line 2 spanning 2 lines named col1-start&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="wrapper">
+  <div class="item1">I am placed from col1-start line 1 to col2-start line 2</div>
+  <div class="item2">I am placed from col1-start line 2 spanning 2 lines named col1-start</div>
+</div>
+```
 
-<p>{{ EmbedLiveSample('Defining_named_lines_with_a_track_list', '500', '330') }}</p>
+{{ EmbedLiveSample('Defining_named_lines_with_a_track_list', '500', '330') }}
 
-<h3>Twelve-column grid framework</h3>
+### Twelve-column grid framework
 
-<p>Over the last three guides you have discovered that there are a lot of different ways to place items using grid. This can seem a little bit overcomplicated at first, but remember you don’t need to use all of them. In practice I find that for straightforward layouts, using named template areas works well, it gives that nice visual representation of what your layout looks like, and it is then easy to move things around on the grid.</p>
+Over the last three guides you have discovered that there are a lot of different ways to place items using grid. This can seem a little bit overcomplicated at first, but remember you don’t need to use all of them. In practice I find that for straightforward layouts, using named template areas works well, it gives that nice visual representation of what your layout looks like, and it is then easy to move things around on the grid.
 
-<p>If working with a strict multiple column layout for example the named lines demonstration in the last part of this guide works very well. If you consider grid systems such as those found in frameworks like Foundation or Bootstrap, these are based on a 12 column grid. The framework then imports the code to do all of the calculations to make sure that the columns add up to 100%. With grid layout the only code we need for our grid “framework” is:</p>
+If working with a strict multiple column layout for example the named lines demonstration in the last part of this guide works very well. If you consider grid systems such as those found in frameworks like Foundation or Bootstrap, these are based on a 12 column grid. The framework then imports the code to do all of the calculations to make sure that the columns add up to 100%. With grid layout the only code we need for our grid “framework” is:
 
-<pre class="brush: css">.wrapper {
+```css
+.wrapper {
   display: grid;
   gap: 10px;
   grid-template-columns: repeat(12, [col-start] 1fr);
 }
-</pre>
+```
 
-<p>We can then use that framework to layout our page. For example, to create a three column layout with a header and footer, I might have the following markup.</p>
+We can then use that framework to layout our page. For example, to create a three column layout with a header and footer, I might have the following markup.
 
-<pre class="brush: css hidden">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -368,27 +389,29 @@ tags:
   background-color: #fff4e6;
 }
 
-.wrapper &gt; * {
+.wrapper > * {
   border: 2px solid #ffa94d;
   border-radius: 5px;
   background-color: #ffd8a8;
   padding: 1em;
   color: #d9480f;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-  &lt;header class="main-header"&gt;I am the header&lt;/header&gt;
-  &lt;aside class="side1"&gt;I am sidebar 1&lt;/aside&gt;
-  &lt;article class="content"&gt;I am the main article&lt;/article&gt;
-  &lt;aside class="side2"&gt;I am sidebar 2&lt;/aside&gt;
-  &lt;footer class="main-footer"&gt;I am the footer&lt;/footer&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="wrapper">
+  <header class="main-header">I am the header</header>
+  <aside class="side1">I am sidebar 1</aside>
+  <article class="content">I am the main article</article>
+  <aside class="side2">I am sidebar 2</aside>
+  <footer class="main-footer">I am the footer</footer>
+</div>
+```
 
-<p>I could then place this on my grid layout framework like this.</p>
+I could then place this on my grid layout framework like this.
 
-<pre class="brush: css">.main-header,
+```css
+.main-header,
 .main-footer  {
   grid-column: col-start / span 12;
 }
@@ -407,12 +430,12 @@ tags:
   grid-column: col-start 10 / span 3;
   grid-row: 2;
 }
-</pre>
+```
 
-<p>{{ EmbedLiveSample('Twelve-column_grid_framework', '500', '330') }}</p>
+{{ EmbedLiveSample('Twelve-column_grid_framework', '500', '330') }}
 
-<p>Once again, the grid highlighter is helpful to show us how the grid we have placed our items on works.</p>
+Once again, the grid highlighter is helpful to show us how the grid we have placed our items on works.
 
-<p><img alt="The layout with the grid highlighted." src="5_named_lines2.png"></p>
+![The layout with the grid highlighted.](5_named_lines2.png)
 
-<p>That’s all I need. I don’t need to do any calculations, grid automatically removed my 10 pixel gutter track before assigning the space to the <code>1fr</code> column tracks. As you start to build out your own layouts, you will find that the syntax becomes more familiar and you choose the ways that work best for you and the type of projects you like to build. Try building some common patterns with these various methods, and you will soon find your most productive way to work. Then, in the next guide we will look at how grid can position items for us - without us needing to use placement properties at all!</p>
+That’s all I need. I don’t need to do any calculations, grid automatically removed my 10 pixel gutter track before assigning the space to the `1fr` column tracks. As you start to build out your own layouts, you will find that the syntax becomes more familiar and you choose the ways that work best for you and the type of projects you like to build. Try building some common patterns with these various methods, and you will soon find your most productive way to work. Then, in the next guide we will look at how grid can position items for us - without us needing to use placement properties at all!

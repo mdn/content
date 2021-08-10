@@ -6,38 +6,37 @@ tags:
   - CSS Flexible Boxes
   - CSS Property
   - Reference
-  - 'recipe:css-shorthand-property'
+  - recipe:css-shorthand-property
 browser-compat: css.properties.flex-flow
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>flex-flow</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand property</a> specifies the direction of a flex container, as well as its wrapping behavior.</p>
+The **`flex-flow`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) specifies the direction of a flex container, as well as its wrapping behavior.
 
-<div>{{EmbedInteractiveExample("pages/css/flex-flow.html")}}</div>
+{{EmbedInteractiveExample("pages/css/flex-flow.html")}}
 
-<h2 id="Constituent_properties">Constituent properties</h2>
+## Constituent properties
 
-<p>This property is a shorthand for the following CSS properties:</p>
+This property is a shorthand for the following CSS properties:
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/flex-direction"><code>flex-direction</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/flex-wrap"><code>flex-wrap</code></a></li>
-</ul>
+- [`flex-direction`](/en-US/docs/Web/CSS/flex-direction)
+- [`flex-wrap`](/en-US/docs/Web/CSS/flex-wrap)
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* flex-flow: &lt;'flex-direction'&gt; */
+```css
+/* flex-flow: <'flex-direction'> */
 flex-flow: row;
 flex-flow: row-reverse;
 flex-flow: column;
 flex-flow: column-reverse;
 
-/* flex-flow: &lt;'flex-wrap'&gt; */
+/* flex-flow: <'flex-wrap'> */
 flex-flow: nowrap;
 flex-flow: wrap;
 flex-flow: wrap-reverse;
 
-/* flex-flow: &lt;'flex-direction'&gt; and &lt;'flex-wrap'&gt; */
+/* flex-flow: <'flex-direction'> and <'flex-wrap'> */
 flex-flow: row nowrap;
 flex-flow: column wrap;
 flex-flow: column-reverse wrap-reverse;
@@ -47,41 +46,40 @@ flex-flow: inherit;
 flex-flow: initial;
 flex-flow: revert;
 flex-flow: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<p>See {{cssxref("flex-direction")}} and {{cssxref("flex-wrap")}} for details on the values.</p>
+See {{cssxref("flex-direction")}} and {{cssxref("flex-wrap")}} for details on the values.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_column-reverse_and_wrap">Setting column-reverse and wrap</h3>
+### Setting column-reverse and wrap
 
-<pre class="brush:css">element {
+```css
+element {
   /* Main-axis is the block direction with reversed main-start and main-end. Flex items are laid out in multiple lines */
   flex-flow: column-reverse wrap;
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>CSS Flexbox Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Basic Concepts of Flexbox</a></em></li>
- <li>CSS Flexbox Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items">Ordering flex items</a></em></li>
-</ul>
+- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
+- CSS Flexbox Guide: _[Ordering flex items](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items)_

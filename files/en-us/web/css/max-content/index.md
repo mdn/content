@@ -9,11 +9,12 @@ tags:
   - sizing
 browser-compat: css.properties.width.max-content
 ---
-<p>The <code>max-content</code> sizing keyword represents the intrinsic maximum width of the content. For text content this means that the content will not wrap at all even if it causes overflows.</p>
+The `max-content` sizing keyword represents the intrinsic maximum width of the content. For text content this means that the content will not wrap at all even if it causes overflows.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">/* Used as a length */
+```css
+/* Used as a length */
 width: max-content;
 inline-size: max-content;
 height: max-content;
@@ -26,23 +27,26 @@ grid-template-columns: 200px 1fr max-content;
 max-content: inherit;
 max-content: initial;
 max-content: revert;
-max-content: unset;</pre>
+max-content: unset;
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_max-content_for_box_sizing">Using max-content for box sizing</h3>
+### Using max-content for box sizing
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div id="container"&gt;
-  &lt;div class="item"&gt;Item&lt;/div&gt;
-  &lt;div class="item"&gt;Item with more text in it which will overflow the fixed width box.&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div id="container">
+  <div class="item">Item</div>
+  <div class="item">Item with more text in it which will overflow the fixed width box.</div>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">#container {
+```css
+#container {
   background-color: #8cffa0;
   padding: 10px;
   width: 200px;
@@ -54,27 +58,30 @@ max-content: unset;</pre>
   padding: 5px;
   margin-bottom: 1em;
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Using_max-content_for_box_sizing", "100%", 200)}}</p>
+{{EmbedLiveSample("Using_max-content_for_box_sizing", "100%", 200)}}
 
-<h3 id="Sizing_grid_columns_with_max-content">Sizing grid columns with max-content</h3>
+### Sizing grid columns with max-content
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div id="container"&gt;
-  &lt;div&gt;Item&lt;/div&gt;
-  &lt;div&gt;
+```html
+<div id="container">
+  <div>Item</div>
+  <div>
     Item with more text in it.
-  &lt;/div&gt;
-  &lt;div&gt;Flexible item&lt;/div&gt;
-&lt;/div&gt;</pre>
+  </div>
+  <div>Flexible item</div>
+</div>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">#container {
+```css
+#container {
   display: grid;
   grid-template-columns: max-content max-content 1fr;
   grid-gap: 5px;
@@ -85,28 +92,26 @@ max-content: unset;</pre>
   padding: 10px;
 }
 
-#container &gt; div {
+#container > div {
   background-color: #8ca0ff;
   padding: 5px;
 }
-</pre>
+```
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Sizing_grid_columns_with_max-content", "100%", 200)}}</p>
+{{EmbedLiveSample("Sizing_grid_columns_with_max-content", "100%", 200)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<h3 id="Supported_for_width_and_other_sizing_properties">Supported for width (and other sizing properties)</h3>
+### Supported for width (and other sizing properties)
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Related sizing keywords: {{cssxref("min-content")}}, {{cssxref("fit-content")}} </li>
-</ul>
+- Related sizing keywords: {{cssxref("min-content")}}, {{cssxref("fit-content")}}

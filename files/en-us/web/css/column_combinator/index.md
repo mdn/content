@@ -10,75 +10,79 @@ tags:
   - Tables
 browser-compat: css.selectors.column
 ---
-<div>{{CSSRef("Selectors")}}{{SeeCompatTable}}</div>
+{{CSSRef("Selectors")}}{{SeeCompatTable}}
 
-<p>The <strong>column combinator</strong> (<code>||</code>) is placed between two CSS selectors. It matches only those elements matched by the second selector that belong to the column elements matched by the first.</p>
+The **column combinator** (`||`) is placed between two CSS selectors. It matches only those elements matched by the second selector that belong to the column elements matched by the first.
 
-<pre class="brush: css no-line-numbers">/* Table cells that belong to the "selected" column */
+```css
+/* Table cells that belong to the "selected" column */
 col.selected || td {
   background: gray;
 }
-</pre>
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css"><var>column-selector</var> || <var>cell-selector</var> {
-  <var>/* style properties */</var>
+```css
+column-selector || cell-selector {
+  /* style properties */
 }
-</pre>
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;table border="1"&gt;
-  &lt;colgroup&gt;
-    &lt;col span="2"/&gt;
-    &lt;col class="selected"/&gt;
-  &lt;/colgroup&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;A
-      &lt;td&gt;B
-      &lt;td&gt;C
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td colspan="2"&gt;D&lt;/td&gt;
-      &lt;td&gt;E&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;F&lt;/td&gt;
-      &lt;td colspan="2"&gt;G&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;</pre>
+```html
+<table border="1">
+  <colgroup>
+    <col span="2"/>
+    <col class="selected"/>
+  </colgroup>
+  <tbody>
+    <tr>
+      <td>A
+      <td>B
+      <td>C
+    </tr>
+    <tr>
+      <td colspan="2">D</td>
+      <td>E</td>
+    </tr>
+    <tr>
+      <td>F</td>
+      <td colspan="2">G</td>
+    </tr>
+  </tbody>
+</table>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">col.selected || td {
+```css
+col.selected || td {
   background: gray;
   color: white;
   font-weight: bold;
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Examples", "100%")}}</p>
+{{EmbedLiveSample("Examples", "100%")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>{{HTMLElement("col")}}</li>
-	<li>{{HTMLElement("colgroup")}}</li>
-	<li>{{CSSxRef("grid")}}</li>
-	<li>{{CSSxRef(":nth-col")}}</li>
-	<li>{{CSSxRef(":nth-last-col")}}</li>
-</ul>
+- {{HTMLElement("col")}}
+- {{HTMLElement("colgroup")}}
+- {{CSSxRef("grid")}}
+- {{CSSxRef(":nth-col")}}
+- {{CSSxRef(":nth-last-col")}}

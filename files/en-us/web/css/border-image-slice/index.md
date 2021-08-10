@@ -10,29 +10,28 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.border-image-slice
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>border-image-slice</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property divides the image specified by {{cssxref("border-image-source")}} into regions. These regions form the components of an element's <a href="/en-US/docs/Web/CSS/border-image">border image</a>.</p>
+The **`border-image-slice`** [CSS](/en-US/docs/Web/CSS) property divides the image specified by {{cssxref("border-image-source")}} into regions. These regions form the components of an element's [border image](/en-US/docs/Web/CSS/border-image).
 
-<div>{{EmbedInteractiveExample("pages/css/border-image-slice.html")}}</div>
+{{EmbedInteractiveExample("pages/css/border-image-slice.html")}}
 
-<p>The slicing process creates nine regions in total: four corners, four edges, and a middle region. Four slice lines, set a given distance from their respective sides, control the size of the regions.</p>
+The slicing process creates nine regions in total: four corners, four edges, and a middle region. Four slice lines, set a given distance from their respective sides, control the size of the regions.
 
-<p><a href="/en-US/docs/Web/CSS/border-image-slice/border-image-slice.png"><img alt="The nine regions defined by the border-image or border-image-slice properties" src="border-image-slice.png"></a></p>
+[![The nine regions defined by the border-image or border-image-slice properties](border-image-slice.png)](/en-US/docs/Web/CSS/border-image-slice/border-image-slice.png)
 
-<p>The above diagram illustrates the location of each region.</p>
+The above diagram illustrates the location of each region.
 
-<ul>
- <li>Zones 1-4 are corner regions. Each one is used a single time to form the corners of the final border image.</li>
- <li>Zones 5-8 are edge regions. These are <a href="/en-US/docs/Web/CSS/border-image-repeat">repeated, scaled, or otherwise modified</a> in the final border image to match the dimensions of the element.</li>
- <li>Zone 9 is the middle region. It is discarded by default, but is used like a background image if the keyword <code>fill</code> is set.</li>
-</ul>
+- Zones 1-4 are corner regions. Each one is used a single time to form the corners of the final border image.
+- Zones 5-8 are edge regions. These are [repeated, scaled, or otherwise modified](/en-US/docs/Web/CSS/border-image-repeat) in the final border image to match the dimensions of the element.
+- Zone 9 is the middle region. It is discarded by default, but is used like a background image if the keyword `fill` is set.
 
-<p>The {{cssxref("border-image-repeat")}}, {{cssxref("border-image-width")}}, and {{cssxref("border-image-outset")}} properties determine how these regions are used to form the final border image.</p>
+The {{cssxref("border-image-repeat")}}, {{cssxref("border-image-width")}}, and {{cssxref("border-image-outset")}} properties determine how these regions are used to form the final border image.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* All sides */
+```css
+/* All sides */
 border-image-slice: 30%;
 
 /* vertical | horizontal */
@@ -52,84 +51,85 @@ border-image-slice: inherit;
 border-image-slice: initial;
 border-image-slice: revert;
 border-image-slice: unset;
-</pre>
+```
 
-<p>The <code>border-image-slice</code> property may be specified using one to four <code>&lt;number-percentage&gt;</code> values to represent the position of each image slice. Negative values are invalid; values greater than their corresponding dimension are clamped to <code>100%</code>.</p>
+The `border-image-slice` property may be specified using one to four `<number-percentage>` values to represent the position of each image slice. Negative values are invalid; values greater than their corresponding dimension are clamped to `100%`.
 
-<ul>
- <li>When <strong>one</strong> position is specified, it creates all four slices at the same distance from their respective sides.</li>
- <li>When <strong>two</strong> positions are specified, the first value creates slices measured from the <strong>top and bottom</strong>, the second creates slices measured from the <strong>left and right</strong>.</li>
- <li>When <strong>three</strong> positions are specified, the first value creates a slice measured from the <strong>top</strong>, the second creates slices measured from the <strong>left and right</strong>, the third creates a slice measured from the <strong>bottom</strong>.</li>
- <li>When <strong>four</strong> positions are specified, they create slices measured from the <strong>top</strong>, <strong>right</strong>, <strong>bottom</strong>, and <strong>left</strong> in that order (clockwise).</li>
-</ul>
+- When **one** position is specified, it creates all four slices at the same distance from their respective sides.
+- When **two** positions are specified, the first value creates slices measured from the **top and bottom**, the second creates slices measured from the **left and right**.
+- When **three** positions are specified, the first value creates a slice measured from the **top**, the second creates slices measured from the **left and right**, the third creates a slice measured from the **bottom**.
+- When **four** positions are specified, they create slices measured from the **top**, **right**, **bottom**, and **left** in that order (clockwise).
 
-<p>The optional <code>fill</code> value, if used, can be placed anywhere in the declaration.</p>
+The optional `fill` value, if used, can be placed anywhere in the declaration.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt>{{cssxref("&lt;number&gt;")}}</dt>
- <dd>Represents an edge offset in <em>pixels</em> for raster images and <em>coordinates</em> for vector images. For vector images, the number is relative to the element's size, not the size of the source image, so percentages are generally preferable in these cases.</dd>
- <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
- <dd>Represents an edge offset as a percentage of the source image's size: the width of the image for horizontal offsets, the height for vertical offsets.</dd>
- <dt><code>fill</code></dt>
- <dd>Preserves the middle image region and displays it like a background image, but stacked above the actual {{cssxref("background")}}. Its width and height are sized to match the top and left image regions, respectively.</dd>
-</dl>
+- {{cssxref("&lt;number&gt;")}}
+  - : Represents an edge offset in _pixels_ for raster images and _coordinates_ for vector images. For vector images, the number is relative to the element's size, not the size of the source image, so percentages are generally preferable in these cases.
+- {{cssxref("&lt;percentage&gt;")}}
+  - : Represents an edge offset as a percentage of the source image's size: the width of the image for horizontal offsets, the height for vertical offsets.
+- `fill`
+  - : Preserves the middle image region and displays it like a background image, but stacked above the actual {{cssxref("background")}}. Its width and height are sized to match the top and left image regions, respectively.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Adjustable_border_width_and_slice">Adjustable border width and slice</h3>
+### Adjustable border width and slice
 
-<p>The following example shows a simple <code>&lt;div&gt;</code> with a border image set on it. The source image for the borders is as follows:</p>
+The following example shows a simple `<div>` with a border image set on it. The source image for the borders is as follows:
 
-<p><img alt="nice multi-colored diamonds" src="border-diamonds.png"></p>
+![nice multi-colored diamonds](border-diamonds.png)
 
-<p>The diamonds are 30px across, therefore setting 30 pixels as the value for both <code><a href="/en-US/docs/Web/CSS/border-width">border-width</a></code> and <code>border-image-slice</code> will get you complete and fairly crisp diamonds in your border:</p>
+The diamonds are 30px across, therefore setting 30 pixels as the value for both [`border-width`](/en-US/docs/Web/CSS/border-width) and `border-image-slice` will get you complete and fairly crisp diamonds in your border:
 
-<pre class="brush: css">border-width: 30px;
-border-image-slice: 30;</pre>
+```css
+border-width: 30px;
+border-image-slice: 30;
+```
 
-<p>These are the default values we have used in this example. However, we have also provided two sliders to allow you to dynamically change the values of the above two properties, allowing you to appreciate the effect they have:</p>
+These are the default values we have used in this example. However, we have also provided two sliders to allow you to dynamically change the values of the above two properties, allowing you to appreciate the effect they have:
 
-<p><code>border-image-slice</code> Changes the size of the image slice sampled for use in each border and border corner (and the content area, if the <code>fill</code> keyword is used) — varying this away from 30 causes the border to look somewhat irregular, but can have some interesting effects.</p>
+`border-image-slice` Changes the size of the image slice sampled for use in each border and border corner (and the content area, if the `fill` keyword is used) — varying this away from 30 causes the border to look somewhat irregular, but can have some interesting effects.
 
-<p><code>border-width</code>: Changes the width of the border. The sampled image size is scaled to fit inside the border, which means that if the width is bigger than the slice, the image can start to look somewhat pixelated (unless of course you use an SVG image).</p>
+`border-width`: Changes the width of the border. The sampled image size is scaled to fit inside the border, which means that if the width is bigger than the slice, the image can start to look somewhat pixelated (unless of course you use an SVG image).
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-  &lt;div&gt;&lt;/div&gt;
-&lt;/div&gt;
+```html
+<div class="wrapper">
+  <div></div>
+</div>
 
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;label for="width"&gt;slide to adjust &lt;code&gt;border-width&lt;/code&gt;&lt;/label&gt;
-    &lt;input type="range" min="10" max="45" id="width"&gt;
-    &lt;output id="width-output"&gt;30px&lt;/output&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;label for="slice"&gt;slide to adjust &lt;code&gt;border-image-slice&lt;/code&gt;&lt;/label&gt;
-    &lt;input type="range" min="10" max="45" id="slice"&gt;
-    &lt;output id="slice-output"&gt;30&lt;/output&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</pre>
+<ul>
+  <li>
+    <label for="width">slide to adjust <code>border-width</code></label>
+    <input type="range" min="10" max="45" id="width">
+    <output id="width-output">30px</output>
+  </li>
+  <li>
+    <label for="slice">slide to adjust <code>border-image-slice</code></label>
+    <input type="range" min="10" max="45" id="slice">
+    <output id="slice-output">30</output>
+  </li>
+</ul>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.wrapper {
+```css
+.wrapper {
   width: 400px;
   height: 300px;
 }
 
-div &gt; div {
+div > div {
   width: 300px;
   height: 200px;
   border-width: 30px;
@@ -142,42 +142,43 @@ div &gt; div {
 li {
   display: flex;
   place-content: center;
-}</pre>
+}
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">const widthSlider = document.getElementById('width');
+```js
+const widthSlider = document.getElementById('width');
 const sliceSlider = document.getElementById('slice');
 const widthOutput = document.getElementById('width-output');
 const sliceOutput = document.getElementById('slice-output');
-const divElem = document.querySelector('div &gt; div');
+const divElem = document.querySelector('div > div');
 
-widthSlider.addEventListener('input', () =&gt; {
+widthSlider.addEventListener('input', () => {
   const newValue = widthSlider.value + 'px';
   divElem.style.borderWidth = newValue;
   widthOutput.textContent = newValue;
 })
 
-sliceSlider.addEventListener('input', () =&gt; {
+sliceSlider.addEventListener('input', () => {
   const newValue = sliceSlider.value;
   divElem.style.borderImageSlice = newValue;
   sliceOutput.textContent = newValue;
-})</pre>
+})
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Adjustable_border_width_and_slice', '100%', 400)}}</p>
+{{EmbedLiveSample('Adjustable_border_width_and_slice', '100%', 400)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/Shorthand_properties#tricky_edge_cases">Illustrated description of the 1-to-4-value syntax</a></li>
-</ul>
+- [Illustrated description of the 1-to-4-value syntax](/en-US/docs/Web/CSS/Shorthand_properties#tricky_edge_cases)

@@ -6,26 +6,26 @@ tags:
   - CSS Property
   - CSS Text
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.word-spacing
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>word-spacing</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets the length of space between words and between tags.</p>
+The **`word-spacing`** [CSS](/en-US/docs/Web/CSS) property sets the length of space between words and between tags.
 
-<div>{{EmbedInteractiveExample("pages/css/word-spacing.html")}}</div>
+{{EmbedInteractiveExample("pages/css/word-spacing.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush:css no-line-numbers">/* Keyword value */
+```css
+/* Keyword value */
 word-spacing: normal;
 
-/* &lt;length&gt; values */
+/* <length> values */
 word-spacing: 3px;
 word-spacing: 0.3em;
 
-/* &lt;percentage&gt; values */
+/* <percentage> values */
 word-spacing: 50%;
 word-spacing: 200%;
 
@@ -34,67 +34,65 @@ word-spacing: inherit;
 word-spacing: initial;
 word-spacing: revert;
 word-spacing: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>normal</code></dt>
- <dd>The normal inter-word spacing, as defined by the current font and/or the browser.</dd>
- <dt>{{cssxref("length")}}</dt>
- <dd>Specifies extra spacing in addition to the intrinsic inter-word spacing defined by the font.</dd>
- <dt>{{cssxref("percentage")}}</dt>
- <dd>Specifies extra spacing as a percentage of the affected character’s advance width.</dd>
-</dl>
+- `normal`
+  - : The normal inter-word spacing, as defined by the current font and/or the browser.
+- {{cssxref("length")}}
+  - : Specifies extra spacing in addition to the intrinsic inter-word spacing defined by the font.
+- {{cssxref("percentage")}}
+  - : Specifies extra spacing as a percentage of the affected character’s advance width.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div id="mozdiv1"&gt;Here are many words...&lt;/div&gt;
-&lt;div id="mozdiv2"&gt;...and many more!&lt;/div&gt;</pre>
+```html
+<div id="mozdiv1">Here are many words...</div>
+<div id="mozdiv2">...and many more!</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">#mozdiv1 {
+```css
+#mozdiv1 {
   word-spacing: 15px;
 }
 
 #mozdiv2 {
   word-spacing: 5em;
-} </pre>
+} 
+```
 
-<p>{{ EmbedLiveSample('Examples') }}</p>
+{{ EmbedLiveSample('Examples') }}
 
-<h2 id="Accessibility_concerns">Accessibility concerns</h2>
+## Accessibility concerns
 
-<p>A large positive or negative <code>word-spacing</code> value will make the sentences the styling is applied to unreadable. For text styled with a very large positive value, the words will be so far apart that it will no longer appear to be a sentence. For text styled with a large negative value, the words will overlap each other to the point where the beginning and end of each word is unrecognizable.</p>
+A large positive or negative `word-spacing` value will make the sentences the styling is applied to unreadable. For text styled with a very large positive value, the words will be so far apart that it will no longer appear to be a sentence. For text styled with a large negative value, the words will overlap each other to the point where the beginning and end of each word is unrecognizable.
 
-<p>Legible <code>word-spacing</code> must be determined on a case-by-case basis, as different font families have different character widths. There is no one value that can ensure all font families automatically maintain their legibility.</p>
+Legible `word-spacing` must be determined on a case-by-case basis, as different font families have different character widths. There is no one value that can ensure all font families automatically maintain their legibility.
 
-<ul>
- <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">MDN Understanding WCAG, Guideline 1.4 explanations</a></li>
- <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html" rel="noopener">Understanding Success Criterion 1.4.8 | W3C Understanding WCAG 2.0</a></li>
-</ul>
+- [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [Understanding Success Criterion 1.4.8 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{CSSSyntax}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("letter-spacing")}}</li>
-</ul>
+- {{cssxref("letter-spacing")}}

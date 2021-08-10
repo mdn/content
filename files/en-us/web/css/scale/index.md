@@ -6,16 +6,17 @@ tags:
   - CSS Property
   - Reference
   - Transforms
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.scale
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>scale</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property allows you to specify scale transforms individually and independently of the {{CSSxRef("transform")}} property. This maps better to typical user interface usage, and saves having to remember the exact order of transform functions to specify in the <code>transform</code> value.</p>
+The **`scale`** [CSS](/en-US/docs/Web/CSS) property allows you to specify scale transforms individually and independently of the {{CSSxRef("transform")}} property. This maps better to typical user interface usage, and saves having to remember the exact order of transform functions to specify in the `transform` value.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">/* Keyword values */
+```css
+/* Keyword values */
 scale: none;
 
 /* Single values */
@@ -34,42 +35,44 @@ scale: 2 0.5 2;
 scale: inherit;
 scale: initial;
 scale: revert;
-scale: unset;</pre>
+scale: unset;
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt>Single number value</dt>
- <dd>A {{CSSxRef("&lt;number&gt;")}} specifying a scale factor to make the affected element scale by the same factor along both the X and Y axes. Equivalent to a <code>scale()</code> (2D scaling) function with a single value specified.</dd>
- <dt>Two length/percentage values</dt>
- <dd>Two {{CSSxRef("&lt;number&gt;")}}s that specify the X and Y axis scaling values (respectively) of a 2D scale. Equivalent to a <code>scale()</code> (2D scaling) function with two values specified.</dd>
- <dt>Three length/percentage values</dt>
- <dd>Three {{CSSxRef("&lt;number&gt;")}}s that specify the X, Y, and Z axis scaling values (respectively) of a 3D scale. Equivalent to a <code>scale3d()</code> (3D scaling) function.</dd>
- <dt><code>none</code></dt>
- <dd>Specifies that no scaling should be applied.</dd>
-</dl>
+- Single number value
+  - : A {{CSSxRef("&lt;number&gt;")}} specifying a scale factor to make the affected element scale by the same factor along both the X and Y axes. Equivalent to a `scale()` (2D scaling) function with a single value specified.
+- Two length/percentage values
+  - : Two {{CSSxRef("&lt;number&gt;")}}s that specify the X and Y axis scaling values (respectively) of a 2D scale. Equivalent to a `scale()` (2D scaling) function with two values specified.
+- Three length/percentage values
+  - : Three {{CSSxRef("&lt;number&gt;")}}s that specify the X, Y, and Z axis scaling values (respectively) of a 3D scale. Equivalent to a `scale3d()` (3D scaling) function.
+- `none`
+  - : Specifies that no scaling should be applied.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Scaling_an_element_on_hover">Scaling an element on hover</h3>
+### Scaling an element on hover
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;p class="scale"&gt;Scaling&lt;/p&gt;
-&lt;/div&gt;</pre>
+```html
+<div>
+  <p class="scale">Scaling</p>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">* {
+```css
+* {
   box-sizing: border-box;
 }
 
@@ -98,26 +101,24 @@ p {
 div:hover .scale {
   scale: 2 0.7;
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Scaling_an_element_on_hover")}}</p>
+{{EmbedLiveSample("Scaling_an_element_on_hover")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref('translate')}}</li>
- <li>{{cssxref('rotate')}}</li>
- <li>{{cssxref('transform')}}</li>
-</ul>
+- {{cssxref('translate')}}
+- {{cssxref('rotate')}}
+- {{cssxref('transform')}}
 
-<p>Note: skew is not an independent transform value</p>
+Note: skew is not an independent transform value

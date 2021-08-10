@@ -11,48 +11,48 @@ tags:
   - value
 browser-compat: css.types.dimension
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>&lt;dimension&gt;</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Types">data type</a> represents a {{CSSxRef("&lt;number&gt;")}} with a unit attached to it, for example <code>10px</code>.</p>
+The **`<dimension>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents a {{CSSxRef("&lt;number&gt;")}} with a unit attached to it, for example `10px`.
 
-<p>CSS uses dimensions to specify distances ({{CSSxRef("&lt;length&gt;")}}), durations ({{CSSxRef("&lt;time&gt;")}}), frequencies ({{CSSxRef("&lt;frequency&gt;")}}), resolutions ({{CSSxRef("&lt;resolution&gt;")}}), and other quantities.</p>
+CSS uses dimensions to specify distances ({{CSSxRef("&lt;length&gt;")}}), durations ({{CSSxRef("&lt;time&gt;")}}), frequencies ({{CSSxRef("&lt;frequency&gt;")}}), resolutions ({{CSSxRef("&lt;resolution&gt;")}}), and other quantities.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The syntax of <code>&lt;dimension&gt;</code> is a {{CSSxRef("&lt;number&gt;")}} immediately followed by a unit which is an identifier. Unit identifiers are case insensitive.</p>
+The syntax of `<dimension>` is a {{CSSxRef("&lt;number&gt;")}} immediately followed by a unit which is an identifier. Unit identifiers are case insensitive.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Valid_dimensions">Valid dimensions</h3>
+### Valid dimensions
 
-<pre class="brush: css example-good">12px      12 pixels
+```css example-good
+12px      12 pixels
 1rem      1 rem
 1.2pt     1.2 points
 2200ms    2200 milliseconds
 5s        5 seconds
 200hz     200 Hertz
 200Hz     200 Hertz (values are case insensitive)
-</pre>
+```
 
-<h3 id="Invalid_dimensions">Invalid dimensions</h3>
+### Invalid dimensions
 
-<pre class="brush: css example-bad">12 px       The unit must come immediately after the number.
+```css example-bad
+12 px       The unit must come immediately after the number.
 12"px"      Units are identifiers and therefore unquoted.
 3sec        The seconds unit is abbreviated "s" not "sec".
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Types">CSS data types</a></li>
- <li><a href="/en-US/docs/Learn/CSS">Learn to style HTML using CSS</a></li>
- <li>CSS distances ({{CSSxRef("&lt;length&gt;")}}), durations ({{CSSxRef("&lt;time&gt;")}}), frequencies ({{CSSxRef("&lt;frequency&gt;")}}), and resolutions ({{CSSxRef("&lt;resolution&gt;")}})</li>
-</ul>
+- [CSS data types](/en-US/docs/Web/CSS/CSS_Types)
+- [Learn to style HTML using CSS](/en-US/docs/Learn/CSS)
+- CSS distances ({{CSSxRef("&lt;length&gt;")}}), durations ({{CSSxRef("&lt;time&gt;")}}), frequencies ({{CSSxRef("&lt;frequency&gt;")}}), and resolutions ({{CSSxRef("&lt;resolution&gt;")}})

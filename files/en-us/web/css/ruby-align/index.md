@@ -6,14 +6,15 @@ tags:
   - CSS Property
   - CSS Ruby
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.ruby-align
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <code><strong>ruby-align</strong></code> CSS property defines the distribution of the different ruby elements over the base.</p>
+The **`ruby-align`** CSS property defines the distribution of the different ruby elements over the base.
 
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 ruby-align: start;
 ruby-align: center;
 ruby-align: space-between;
@@ -24,120 +25,132 @@ ruby-align: inherit;
 ruby-align: initial;
 ruby-align: revert;
 ruby-align: unset;
-</pre>
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>start</code></dt>
- <dd>Is a keyword indicating that the ruby will be aligned with the start of the base text.</dd>
- <dt><code>center</code></dt>
- <dd>Is a keyword indicating that the ruby will be aligned at the middle of the base text.</dd>
- <dt><code>space-between</code></dt>
- <dd>Is a keyword indicating that the extra space will be distributed between the elements of the ruby.</dd>
- <dt><code>space-around</code></dt>
- <dd>Is a keyword indicating that the extra space will be distributed between the elements of the ruby, and around it.</dd>
-</dl>
+- `start`
+  - : Is a keyword indicating that the ruby will be aligned with the start of the base text.
+- `center`
+  - : Is a keyword indicating that the ruby will be aligned at the middle of the base text.
+- `space-between`
+  - : Is a keyword indicating that the extra space will be distributed between the elements of the ruby.
+- `space-around`
+  - : Is a keyword indicating that the extra space will be distributed between the elements of the ruby, and around it.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Ruby_aligned_at_the_start_of_the_base_text">Ruby aligned at the start of the base text</h3>
+### Ruby aligned at the start of the base text
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;ruby&gt;
-  &lt;rb&gt;This is a long text to check&lt;/rb&gt;
-  &lt;rp&gt;（&lt;/rp&gt;&lt;rt&gt;short ruby&lt;/rt&gt;&lt;rp&gt;）&lt;/rp&gt;
-&lt;/ruby&gt;</pre>
+```html
+<ruby>
+  <rb>This is a long text to check</rb>
+  <rp>（</rp><rt>short ruby</rt><rp>）</rp>
+</ruby>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">ruby {
+```css
+ruby {
   ruby-align: start;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Ruby_aligned_at_the_start_of_the_base_text", 180, 40)}}</p>
+{{EmbedLiveSample("Ruby_aligned_at_the_start_of_the_base_text", 180, 40)}}
 
-<h3 id="Ruby_aligned_at_the_center_of_the_base_text">Ruby aligned at the center of the base text</h3>
+### Ruby aligned at the center of the base text
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;ruby&gt;
-  &lt;rb&gt;This is a long text to check&lt;/rb&gt;
-  &lt;rp&gt;（&lt;/rp&gt;&lt;rt&gt;short ruby&lt;/rt&gt;&lt;rp&gt;）&lt;/rp&gt;
-&lt;/ruby&gt;</pre>
+```html
+<ruby>
+  <rb>This is a long text to check</rb>
+  <rp>（</rp><rt>short ruby</rt><rp>）</rp>
+</ruby>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">ruby {
+```css
+ruby {
   ruby-align: center;
-}</pre>
+}
+```
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Ruby_aligned_at_the_center_of_the_base_text", 180, 40)}}</p>
+{{EmbedLiveSample("Ruby_aligned_at_the_center_of_the_base_text", 180, 40)}}
 
-<h3 id="Extra_space_distributed_between_ruby_elements">Extra space distributed between ruby elements</h3>
+### Extra space distributed between ruby elements
 
-<h4 id="HTML_3">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;ruby&gt;
-  &lt;rb&gt;This is a long text to check&lt;/rb&gt;
-  &lt;rp&gt;（&lt;/rp&gt;&lt;rt&gt;short ruby&lt;/rt&gt;&lt;rp&gt;）&lt;/rp&gt;
-&lt;/ruby&gt;</pre>
+```html
+<ruby>
+  <rb>This is a long text to check</rb>
+  <rp>（</rp><rt>short ruby</rt><rp>）</rp>
+</ruby>
+```
 
-<h4 id="CSS_3">CSS</h4>
+#### CSS
 
-<pre class="brush: css">ruby {
+```css
+ruby {
   ruby-align: space-between;
-}</pre>
+}
+```
 
-<h4 id="Result_3">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Extra_space_distributed_between_ruby_elements", 180, 40)}}</p>
+{{EmbedLiveSample("Extra_space_distributed_between_ruby_elements", 180, 40)}}
 
-<h3 id="Extra_space_distributed_between_and_around_ruby_elements">Extra space distributed between and around ruby elements</h3>
+### Extra space distributed between and around ruby elements
 
-<h4 id="HTML_4">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;ruby&gt;
-  &lt;rb&gt;This is a long text to check&lt;/rb&gt;
-  &lt;rp&gt;（&lt;/rp&gt;&lt;rt&gt;short ruby&lt;/rt&gt;&lt;rp&gt;）&lt;/rp&gt;
-&lt;/ruby&gt;</pre>
+```html
+<ruby>
+  <rb>This is a long text to check</rb>
+  <rp>（</rp><rt>short ruby</rt><rp>）</rp>
+</ruby>
+```
 
-<h4 id="CSS_4">CSS</h4>
+#### CSS
 
-<pre class="brush: css">ruby {
+```css
+ruby {
   ruby-align: space-around;
-}</pre>
+}
+```
 
-<h4 id="Result_4">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Extra_space_distributed_between_and_around_ruby_elements", 180, 40)}}</p>
+{{EmbedLiveSample("Extra_space_distributed_between_and_around_ruby_elements", 180, 40)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>HTML Ruby elements: {{HTMLElement("ruby")}}, {{HTMLElement("rt")}}, {{HTMLElement("rp")}}, and {{HTMLElement("rtc")}}.</li>
- <li>CSS Ruby properties: {{cssxref("ruby-position")}}, {{cssxref("ruby-merge")}}.</li>
-</ul>
+- HTML Ruby elements: {{HTMLElement("ruby")}}, {{HTMLElement("rt")}}, {{HTMLElement("rp")}}, and {{HTMLElement("rtc")}}.
+- CSS Ruby properties: {{cssxref("ruby-position")}}, {{cssxref("ruby-merge")}}.

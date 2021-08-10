@@ -10,23 +10,24 @@ tags:
   - Web
 browser-compat: css.types.number
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<p>The <strong><code>&lt;number&gt;</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Types">data type</a> represents a number, being either an integer or a number with a fractional component.</p>
+The **`<number>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents a number, being either an integer or a number with a fractional component.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The syntax of <code>&lt;number&gt;</code> extends the syntax of {{CSSxRef("&lt;integer&gt;")}}. A fractional value is represented by a <code>.</code> followed by one or more decimal digits, and may be appended to an integer. There is no unit associated with numbers.</p>
+The syntax of `<number>` extends the syntax of {{CSSxRef("&lt;integer&gt;")}}. A fractional value is represented by a `.` followed by one or more decimal digits, and may be appended to an integer. There is no unit associated with numbers.
 
-<h2 id="Interpolation">Interpolation</h2>
+## Interpolation
 
-<p>When animated, values of the <code>&lt;number&gt;</code> CSS data type are interpolated as real, floating-point numbers. The speed of the interpolation is determined by the <a href="/en-US/docs/Web/CSS/single-transition-timing-function">timing function</a> associated with the animation.</p>
+When animated, values of the `<number>` CSS data type are interpolated as real, floating-point numbers. The speed of the interpolation is determined by the [timing function](/en-US/docs/Web/CSS/single-transition-timing-function) associated with the animation.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Valid_numbers">Valid numbers</h3>
+### Valid numbers
 
-<pre class="brush: css example-good">12          A raw &lt;integer&gt; is also a &lt;number&gt;.
+```css example-good
+12          A raw <integer> is also a <number>.
 4.01        Positive fraction
 -456.8      Negative fraction
 0.0         Zero
@@ -35,25 +36,24 @@ browser-compat: css.types.number
 .60         Fractional number without a leading zero
 10e3        Scientific notation
 -3.4e-2     Complicated scientific notation
-</pre>
+```
 
-<h3 id="Invalid_numbers">Invalid numbers</h3>
+### Invalid numbers
 
-<pre class="brush: css example-bad">12.         Decimal points must be followed by at least one digit.
+```css example-bad
+12.         Decimal points must be followed by at least one digit.
 +-12.2      Only one leading +/- is allowed.
 12.1.1      Only one decimal point is allowed.
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{CSSxRef("&lt;integer&gt;")}}</li>
-</ul>
+- {{CSSxRef("&lt;integer&gt;")}}

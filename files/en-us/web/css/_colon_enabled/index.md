@@ -1,6 +1,6 @@
 ---
 title: ':enabled'
-slug: 'Web/CSS/:enabled'
+slug: Web/CSS/:enabled
 tags:
   - CSS
   - Layout
@@ -10,60 +10,63 @@ tags:
   - Web
 browser-compat: css.selectors.enabled
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>:enabled</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> represents any enabled element. An element is enabled if it can be activated (selected, clicked on, typed into, etc.) or accept focus. The element also has a disabled state, in which it can't be activated or accept focus.</p>
+The **`:enabled`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any enabled element. An element is enabled if it can be activated (selected, clicked on, typed into, etc.) or accept focus. The element also has a disabled state, in which it can't be activated or accept focus.
 
-<pre class="brush: css no-line-numbers">/* Selects any enabled &lt;input&gt; */
+```css
+/* Selects any enabled <input> */
 input:enabled {
   color: blue;
-}</pre>
+}
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following example makes the color of text and button {{htmlElement("input")}}s green when enabled, and gray when disabled. This helps the user understand which elements can be interacted with.</p>
+The following example makes the color of text and button {{htmlElement("input")}}s green when enabled, and gray when disabled. This helps the user understand which elements can be interacted with.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush:html">&lt;form action="url_of_form"&gt;
-  &lt;label for="FirstField"&gt;First field (enabled):&lt;/label&gt;
-  &lt;input type="text" id="FirstField" value="Lorem"&gt;&lt;br&gt;
+```html
+<form action="url_of_form">
+  <label for="FirstField">First field (enabled):</label>
+  <input type="text" id="FirstField" value="Lorem"><br>
 
-  &lt;label for="SecondField"&gt;Second field (disabled):&lt;/label&gt;
-  &lt;input type="text" id="SecondField" value="Ipsum" disabled="disabled"&gt;&lt;br&gt;
+  <label for="SecondField">Second field (disabled):</label>
+  <input type="text" id="SecondField" value="Ipsum" disabled="disabled"><br>
 
-  &lt;input type="button" value="Submit"&gt;
-&lt;/form&gt;</pre>
+  <input type="button" value="Submit">
+</form>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush:css;">input:enabled {
+```css
+input:enabled {
   color: #2b2;
 }
 
 input:disabled {
   color: #aaa;
 }
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Examples", 550, 95)}}</p>
+{{EmbedLiveSample("Examples", 550, 95)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Cssxref(":disabled")}}</li>
-</ul>
+- {{Cssxref(":disabled")}}

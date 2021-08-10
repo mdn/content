@@ -6,16 +6,17 @@ tags:
   - CSS Multi-column Layout
   - CSS Property
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.column-span
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>column-span</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property makes it possible for an element to span across all columns when its value is set to <code>all</code>.</p>
+The **`column-span`** [CSS](/en-US/docs/Web/CSS) property makes it possible for an element to span across all columns when its value is set to `all`.
 
-<div>{{EmbedInteractiveExample("pages/css/column-span.html")}}</div>
+{{EmbedInteractiveExample("pages/css/column-span.html")}}
 
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 column-span: none;
 column-span: all;
 
@@ -24,78 +25,76 @@ column-span: inherit;
 column-span: initial;
 column-span: revert;
 column-span: unset;
-</pre>
+```
 
-<p>An element that spans more than one column is called a <strong>spanning element</strong>.</p>
+An element that spans more than one column is called a **spanning element**.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>column-span</code> property is specified as one of the keyword values listed below.</p>
+The `column-span` property is specified as one of the keyword values listed below.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>none</code></dt>
- <dd>The element does not span multiple columns.</dd>
- <dt><code>all</code></dt>
- <dd>The element spans across all columns. Content in the normal flow that appears before the element is automatically balanced across all columns before the element appears. The element establishes a new block formatting context.</dd>
-</dl>
+- `none`
+  - : The element does not span multiple columns.
+- `all`
+  - : The element spans across all columns. Content in the normal flow that appears before the element is automatically balanced across all columns before the element appears. The element establishes a new block formatting context.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Making_a_heading_span_columns">Making a heading span columns</h3>
+### Making a heading span columns
 
-<p>In this example, the heading is made to span across all the columns of the article.</p>
+In this example, the heading is made to span across all the columns of the article.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;article&gt;
-  &lt;h2&gt;Header spanning all of the columns&lt;/h2&gt;
-  &lt;p&gt;
+```html
+<article>
+  <h2>Header spanning all of the columns</h2>
+  <p>
      The h2 should span all the columns. The rest
      of the text should be distributed among the columns.
-  &lt;/p&gt;
-  &lt;p&gt;This is a bunch of text split into three columns using the CSS `columns` property. The text is equally distributed over the columns.&lt;/p&gt;
-  &lt;p&gt;This is a bunch of text split into three columns using the CSS `columns` property. The text is equally distributed over the columns.&lt;/p&gt;
-  &lt;p&gt;This is a bunch of text split into three columns using the CSS `columns` property. The text is equally distributed over the columns.&lt;/p&gt;
-  &lt;p&gt;This is a bunch of text split into three columns using the CSS `columns` property. The text is equally distributed over the columns.&lt;/p&gt;
-&lt;/article&gt;
-</pre>
+  </p>
+  <p>This is a bunch of text split into three columns using the CSS `columns` property. The text is equally distributed over the columns.</p>
+  <p>This is a bunch of text split into three columns using the CSS `columns` property. The text is equally distributed over the columns.</p>
+  <p>This is a bunch of text split into three columns using the CSS `columns` property. The text is equally distributed over the columns.</p>
+  <p>This is a bunch of text split into three columns using the CSS `columns` property. The text is equally distributed over the columns.</p>
+</article>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush:css">article {
+```css
+article {
   columns: 3;
 }
 
 h2 {
   column-span: all;
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Making_a_heading_span_columns', 'auto', 260)}}</p>
+{{EmbedLiveSample('Making_a_heading_span_columns', 'auto', 260)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/HTML/Inline_elements">Inline elements</a></li>
- <li>{{domxref("HTMLSpanElement")}} </li>
-</ul>
+- [Inline elements](/en-US/docs/Web/HTML/Inline_elements)
+- {{domxref("HTMLSpanElement")}}

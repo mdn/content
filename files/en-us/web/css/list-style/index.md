@@ -6,32 +6,29 @@ tags:
   - CSS Lists
   - CSS Property
   - Reference
-  - 'recipe:css-shorthand-property'
+  - recipe:css-shorthand-property
 browser-compat: css.properties.list-style
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>list-style</code></strong> CSS <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand property</a> allows you to set all the list style properties at once.</p>
+The **`list-style`** CSS [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) allows you to set all the list style properties at once.
 
-<div>{{EmbedInteractiveExample("pages/css/list-style.html")}}</div>
+{{EmbedInteractiveExample("pages/css/list-style.html")}}
 
-<div class="note">
-<p><strong>Note:</strong> This property is applied to list items, i.e., elements with <code>{{cssxref("display")}}: list-item;</code> . <a href="https://www.w3.org/TR/html5/rendering.html#lists">By default</a> this includes {{HTMLElement("li")}} elements. Because this property is inherited, it can be set on a parent element (normally {{HTMLElement("ol")}} or {{HTMLElement("ul")}}) to make the same list styling apply to all the items inside.</p>
-</div>
+> **Note:** This property is applied to list items, i.e., elements with `{{cssxref("display")}}: list-item;` . [By default](https://www.w3.org/TR/html5/rendering.html#lists) this includes {{HTMLElement("li")}} elements. Because this property is inherited, it can be set on a parent element (normally {{HTMLElement("ol")}} or {{HTMLElement("ul")}}) to make the same list styling apply to all the items inside.
 
-<h2 id="Constituent_properties">Constituent properties</h2>
+## Constituent properties
 
-<p>This property is a shorthand for the following CSS properties:</p>
+This property is a shorthand for the following CSS properties:
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/list-style-image"><code>list-style-image</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/list-style-position"><code>list-style-position</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/list-style-type"><code>list-style-type</code></a></li>
-</ul>
+- [`list-style-image`](/en-US/docs/Web/CSS/list-style-image)
+- [`list-style-position`](/en-US/docs/Web/CSS/list-style-position)
+- [`list-style-type`](/en-US/docs/Web/CSS/list-style-type)
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* type */
+```css
+/* type */
 list-style: square;
 
 /* image */
@@ -54,94 +51,92 @@ list-style: inherit;
 list-style: initial;
 list-style: revert;
 list-style: unset;
-</pre>
+```
 
-<p>The <code>list-style</code> property is specified as one, two, or three keywords in any order. If {{cssxref("list-style-type")}} and {{cssxref("list-style-image")}} are both set, then <code>list-style-type</code> is used as a fallback if the image is unavailable.</p>
+The `list-style` property is specified as one, two, or three keywords in any order. If {{cssxref("list-style-type")}} and {{cssxref("list-style-image")}} are both set, then `list-style-type` is used as a fallback if the image is unavailable.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt>{{cssxref("list-style-type")}}</dt>
- <dd>See {{cssxref("list-style-type")}}.</dd>
- <dt>{{cssxref("list-style-image")}}</dt>
- <dd>See {{cssxref("list-style-image")}}.</dd>
- <dt>{{cssxref("list-style-position")}}</dt>
- <dd>See {{cssxref("list-style-position")}}.</dd>
- <dt><code>none</code></dt>
- <dd>No list style is used.</dd>
-</dl>
+- {{cssxref("list-style-type")}}
+  - : See {{cssxref("list-style-type")}}.
+- {{cssxref("list-style-image")}}
+  - : See {{cssxref("list-style-image")}}.
+- {{cssxref("list-style-position")}}
+  - : See {{cssxref("list-style-position")}}.
+- `none`
+  - : No list style is used.
 
-<h2 id="Accessibility_concerns">Accessibility concerns</h2>
+## Accessibility concerns
 
-<p>Safari has an issue whereby unordered lists with a <code>list-style</code> value of <code>none</code> applied to them will not be recognized as a list in the accessibility tree. To address this, add a <a href="https://en.wikipedia.org/wiki/Zero-width_space">zero-width space</a> as <a href="/en-US/docs/Web/CSS/content">pseudo-content</a> before each list item to ensure the list is recognized properly. This ensures the design is unaffected by the bug fix and that list items are not improperly described.</p>
+Safari has an issue whereby unordered lists with a `list-style` value of `none` applied to them will not be recognized as a list in the accessibility tree. To address this, add a [zero-width space](https://en.wikipedia.org/wiki/Zero-width_space) as [pseudo-content](/en-US/docs/Web/CSS/content) before each list item to ensure the list is recognized properly. This ensures the design is unaffected by the bug fix and that list items are not improperly described.
 
-<pre class="brush: css">ul {
+```css
+ul {
   list-style: none;
 }
 
 ul li::before {
   content: "\200B";
 }
-</pre>
+```
 
-<ul>
- <li><a href="https://unfetteredthoughts.net/2017/09/26/voiceover-and-list-style-type-none/">VoiceOver and list-style-type: none – Unfettered Thoughts</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_%E2%80%94_Create_content_that_can_be_presented_in_different_ways">MDN Understanding WCAG, Guideline 1.3 explanations</a></li>
- <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html" rel="noopener">Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0</a></li>
-</ul>
+- [VoiceOver and list-style-type: none – Unfettered Thoughts](https://unfetteredthoughts.net/2017/09/26/voiceover-and-list-style-type-none/)
+- [MDN Understanding WCAG, Guideline 1.3 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_%E2%80%94_Create_content_that_can_be_presented_in_different_ways)
+- [Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_list_style_type_and_position">Setting list style type and position</h3>
+### Setting list style type and position
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">List 1
-&lt;ul class="one"&gt;
-  &lt;li&gt;List Item1&lt;/li&gt;
-  &lt;li&gt;List Item2&lt;/li&gt;
-  &lt;li&gt;List Item3&lt;/li&gt;
-&lt;/ul&gt;
+```html
+List 1
+<ul class="one">
+  <li>List Item1</li>
+  <li>List Item2</li>
+  <li>List Item3</li>
+</ul>
 List 2
-&lt;ul class="two"&gt;
-  &lt;li&gt;List Item A&lt;/li&gt;
-  &lt;li&gt;List Item B&lt;/li&gt;
-  &lt;li&gt;List Item C&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
+<ul class="two">
+  <li>List Item A</li>
+  <li>List Item B</li>
+  <li>List Item C</li>
+</ul>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.one {
+```css
+.one {
   list-style: circle;
 }
 
 .two {
   list-style: square inside;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Setting_list_style_type_and_position', 'auto', 220)}}</p>
+{{EmbedLiveSample('Setting_list_style_type_and_position', 'auto', 220)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Cssxref("list-style-type")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}</li>
-</ul>
+- {{Cssxref("list-style-type")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}

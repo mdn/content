@@ -7,16 +7,17 @@ tags:
   - CSS Property
   - Reference
   - overscroll-behavior-x
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.overscroll-behavior-x
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>overscroll-behavior-x</code></strong> CSS property sets the browser's behavior when the horizontal boundary of a scrolling area is reached.</p>
+The **`overscroll-behavior-x`** CSS property sets the browser's behavior when the horizontal boundary of a scrolling area is reached.
 
-<p>See {{cssxref("overscroll-behavior")}} for a full explanation.</p>
+See {{cssxref("overscroll-behavior")}} for a full explanation.
 
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 overscroll-behavior-x: auto; /* default */
 overscroll-behavior-x: contain;
 overscroll-behavior-x: none;
@@ -26,40 +27,39 @@ overscroll-behavior-x: inherit;
 overscroll-behavior-x: initial;
 overscroll-behavior-x: revert;
 overscroll-behavior-x: unset;
-</pre>
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>overscroll-behavior-x</code> property is specified as a keyword chosen from the list of values below.</p>
+The `overscroll-behavior-x` property is specified as a keyword chosen from the list of values below.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>The default scroll overflow behavior occurs as normal.</dd>
- <dt><code>contain</code></dt>
- <dd>Default scroll overflow behavior is observed inside the element this value is set on (e.g. "bounce" effects or refreshes), but no scroll chaining occurs to neighboring scrolling areas, e.g. underlying elements will not scroll.</dd>
- <dt><code>none</code></dt>
- <dd>No scroll chaining occurs to neighboring scrolling areas, and default scroll overflow behavior is prevented.</dd>
-</dl>
+- `auto`
+  - : The default scroll overflow behavior occurs as normal.
+- `contain`
+  - : Default scroll overflow behavior is observed inside the element this value is set on (e.g. "bounce" effects or refreshes), but no scroll chaining occurs to neighboring scrolling areas, e.g. underlying elements will not scroll.
+- `none`
+  - : No scroll chaining occurs to neighboring scrolling areas, and default scroll overflow behavior is prevented.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Preventing_an_underlying_element_from_scrolling_horizontally">Preventing an underlying element from scrolling horizontally</h3>
+### Preventing an underlying element from scrolling horizontally
 
-<p>In our simple <a href="https://mdn.github.io/css-examples/overscroll-behavior/overscroll-behavior-x">overscroll-behavior-x example</a> (see <a href="https://github.com/mdn/css-examples/blob/master/overscroll-behavior/overscroll-behavior-x.html">source code</a> also), we have two block-level boxes, one inside the other. The outer box has a large {{cssxref("width")}} set on it so the page will scroll horizontally. The inner box has a small width (and {{cssxref("height")}}) set on it so it sits comfortably inside the viewport, but its content is given a large <code>width</code> so it will scroll horizontally.</p>
+In our simple [overscroll-behavior-x example](https://mdn.github.io/css-examples/overscroll-behavior/overscroll-behavior-x) (see [source code](https://github.com/mdn/css-examples/blob/master/overscroll-behavior/overscroll-behavior-x.html) also), we have two block-level boxes, one inside the other. The outer box has a large {{cssxref("width")}} set on it so the page will scroll horizontally. The inner box has a small width (and {{cssxref("height")}}) set on it so it sits comfortably inside the viewport, but its content is given a large `width` so it will scroll horizontally.
 
-<p>By default, when the inner box is scrolled and a scroll boundary is reached, the whole page will begin to scroll, which is probably not what we want. To avoid this, you can set <code>overscroll-behavior-x: contain</code> on the inner box:</p>
+By default, when the inner box is scrolled and a scroll boundary is reached, the whole page will begin to scroll, which is probably not what we want. To avoid this, you can set `overscroll-behavior-x: contain` on the inner box:
 
-<pre class="brush: css">main &gt; div {
+```css
+main > div {
   height: 300px;
   width: 500px;
   overflow: auto;
@@ -67,19 +67,18 @@ overscroll-behavior-x: unset;
   top: 100px;
   left: 100px;
   overscroll-behavior-x: contain;
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://developers.google.com/web/updates/2017/11/overscroll-behavior#demo">Take control of your scroll: customizing pull-to-refresh and overflow effects</a></li>
- <li>The mapped logical properties: {{cssxref("overscroll-behavior-inline")}}, {{cssxref("overscroll-behavior-block")}}</li>
-</ul>
+- [Take control of your scroll: customizing pull-to-refresh and overflow effects](https://developers.google.com/web/updates/2017/11/overscroll-behavior#demo)
+- The mapped logical properties: {{cssxref("overscroll-behavior-inline")}}, {{cssxref("overscroll-behavior-block")}}

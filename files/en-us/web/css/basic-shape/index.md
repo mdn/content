@@ -9,125 +9,138 @@ tags:
   - Reference
 browser-compat: css.types.basic-shape
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>&lt;basic-shape&gt;</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Types">data type</a> represents a shape used in the {{cssxref("clip-path")}}, {{cssxref("shape-outside")}}, and {{cssxref("offset-path")}} properties.</p>
+The **`<basic-shape>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents a shape used in the {{cssxref("clip-path")}}, {{cssxref("shape-outside")}}, and {{cssxref("offset-path")}} properties.
 
-<div>{{EmbedInteractiveExample("pages/css/type-basic-shape.html")}}</div>
+{{EmbedInteractiveExample("pages/css/type-basic-shape.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>&lt;basic-shape&gt;</code> data type is defined with one of the basic shape functions listed below.</p>
+The `<basic-shape>` data type is defined with one of the basic shape functions listed below.
 
-<p>When creating a shape, the reference box is defined by each property that uses <code>&lt;basic-shape&gt;</code> values. The coordinate system for the shape has its origin at the top-left corner of the reference box, with the x-axis running to the right and the y-axis running downwards. All the lengths expressed in percentages are resolved from the used dimensions of the reference box.</p>
+When creating a shape, the reference box is defined by each property that uses `<basic-shape>` values. The coordinate system for the shape has its origin at the top-left corner of the reference box, with the x-axis running to the right and the y-axis running downwards. All the lengths expressed in percentages are resolved from the used dimensions of the reference box.
 
-<p>The default reference box is the <code>margin-box</code>, as demonstrated in the below image which shows a circle created using <code>shape-outside: circle(50%)</code>. The shape is being defined with reference to the margin box.</p>
+The default reference box is the `margin-box`, as demonstrated in the below image which shows a circle created using `shape-outside: circle(50%)`. The shape is being defined with reference to the margin box.
 
-<p><img alt="An image showing a circle inspected with the Firefox DevTools Shape Inspector. The different parts of the box model are highlighted." src="shapes-reference-box.png"></p>
+![An image showing a circle inspected with the Firefox DevTools Shape Inspector. The different parts of the box model are highlighted.](shapes-reference-box.png)
 
-<h3 id="Shape_functions">Shape functions</h3>
+### Shape functions
 
-<p>The following shapes are supported. All <code>&lt;basic-shape&gt;</code> values use functional notation and are defined here using the <a href="/en-US/docs/Web/CSS/Value_definition_syntax">value definition syntax</a>.</p>
+The following shapes are supported. All `<basic-shape>` values use functional notation and are defined here using the [value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax).
 
-<dl>
- <dt><code>{{cssxref("basic-shape/inset()","inset()")}}</code></dt>
- <dd>
- <p>Defines an inset rectangle.</p>
- <pre class="brush: css">inset( &lt;shape-arg&gt;{1,4} [round &lt;border-radius&gt;]? )</pre>
+- `{{cssxref("basic-shape/inset()","inset()")}}`
 
- <p>When all of the first four arguments are supplied they represent the top, right, bottom and left offsets from the reference box inward that define the positions of the edges of the inset rectangle. These arguments follow the syntax of the margin shorthand, that let you set all four insets with one, two or four values.</p>
+  - : Defines an inset rectangle.
 
- <p>The optional <a href="/en-US/docs/Web/CSS/border-radius"><code>&lt;border-radius&gt;</code></a> argument(s) define rounded corners for the inset rectangle using the border-radius shorthand syntax.</p>
+    ```css
+        inset( <shape-arg>{1,4} [round <border-radius>]? )
+        ```
 
- <p>A pair of insets in either dimension that add up to more than the used dimension (such as left and right insets of 75% apiece) define a shape enclosing no area. For this specification, this results in an empty float area.</p>
- </dd>
- <dt><code>{{cssxref("basic-shape/circle()","circle()")}}</code></dt>
- <dd>
- <p>Defines a circle using a radius and a position.</p>
- <pre class="brush: css">circle( [&lt;shape-radius&gt;]? [at &lt;position&gt;]? )</pre>
+    When all of the first four arguments are supplied they represent the top, right, bottom and left offsets from the reference box inward that define the positions of the edges of the inset rectangle. These arguments follow the syntax of the margin shorthand, that let you set all four insets with one, two or four values.
 
- <p>The <code>&lt;shape-radius&gt;</code> argument represents <em>r</em>, the radius of the circle. Negative values are invalid. A percentage value here is resolved from the used width and height of the reference box as <code>sqrt(width^2+height^2)/sqrt(2)</code>.</p>
+    The optional [`<border-radius>`](/en-US/docs/Web/CSS/border-radius) argument(s) define rounded corners for the inset rectangle using the border-radius shorthand syntax.
 
- <p>The {{cssxref("&lt;position&gt;")}} argument defines the center of the circle. This defaults to center if omitted.</p>
- </dd>
- <dt><code>{{cssxref("basic-shape/ellipse()","ellipse()")}}</code></dt>
- <dd>
- <p>Defines an ellipse using two radii and a position.</p>
- <pre class="brush: css">ellipse( [&lt;shape-radius&gt;{2}]? [at &lt;position&gt;]? )</pre>
+    A pair of insets in either dimension that add up to more than the used dimension (such as left and right insets of 75% apiece) define a shape enclosing no area. For this specification, this results in an empty float area.
 
- <p>The <code>&lt;shape-radius&gt;</code> arguments represent rx and ry, the x-axis and y-axis radii of the ellipse, in that order. Negative values for either radius are invalid. Percentage values here are resolved against the used width (for the rx value) and the used height (for the ry value) of the reference box.</p>
+- `{{cssxref("basic-shape/circle()","circle()")}}`
 
- <p>The position argument defines the center of the ellipse. This defaults to center if omitted.</p>
- </dd>
- <dt><code>{{cssxref("basic-shape/polygon()","polygon()")}}</code></dt>
- <dd>
- <p>Defines a polygon using an SVG {{SVGAttr("fill-rule")}} and a set of vertices.</p>
- <pre class="brush: css">polygon( [&lt;fill-rule&gt;,]? [&lt;shape-arg&gt; &lt;shape-arg&gt;]# )</pre>
+  - : Defines a circle using a radius and a position.
 
- <p><code>&lt;fill-rule&gt;</code> represents the {{SVGAttr("fill-rule")}} used to determine the interior of the polygon. Possible values are <code>nonzero</code> and <code>evenodd</code>. Default value when omitted is <code>nonzero</code>.</p>
+    ```css
+        circle( [<shape-radius>]? [at <position>]? )
+        ```
 
- <p>Each pair argument in the list represents <em>xi</em> and <em>yi</em> - the x and y axis coordinates of the vertex of the polygon at position i.</p>
- </dd>
- <dt><code>path()</code></dt>
- <dd>
- <p>Defines a shape using an SVG {{SVGAttr("fill-rule")}} and an SVG <a href="/en-US/docs/Web/SVG/Attribute/d">path definition</a>.</p>
- <pre class="brush: css">path( [&lt;fill-rule&gt;,]? &lt;string&gt;)</pre>
+    The `<shape-radius>` argument represents _r_, the radius of the circle. Negative values are invalid. A percentage value here is resolved from the used width and height of the reference box as `sqrt(width^2+height^2)/sqrt(2)`.
 
- <p>The optional <code>&lt;fill-rule&gt;</code> represents the {{SVGAttr("fill-rule")}} used to determine the interior of the path. Possible values are <code>nonzero</code> and <code>evenodd</code>. Default value when omitted is <code>nonzero</code>.</p>
+    The {{cssxref("&lt;position&gt;")}} argument defines the center of the circle. This defaults to center if omitted.
 
- <p>The required &lt;string&gt; is an <a href="/en-US/docs/Web/SVG/Attribute/d">SVG Path</a> string encompassed in quotes</p>
- </dd>
-</dl>
+- `{{cssxref("basic-shape/ellipse()","ellipse()")}}`
 
-<p>The arguments not defined above are defined as follows:</p>
+  - : Defines an ellipse using two radii and a position.
 
-<pre class="brush: css">&lt;shape-arg&gt; = &lt;length&gt; | &lt;percentage&gt;
-&lt;shape-radius&gt; = &lt;length&gt; | &lt;percentage&gt; | closest-side | farthest-side</pre>
+    ```css
+        ellipse( [<shape-radius>{2}]? [at <position>]? )
+        ```
 
-<p>Defines a radius for a circle or ellipse. If omitted it defaults to <code>closest-side</code>.</p>
+    The `<shape-radius>` arguments represent rx and ry, the x-axis and y-axis radii of the ellipse, in that order. Negative values for either radius are invalid. Percentage values here are resolved against the used width (for the rx value) and the used height (for the ry value) of the reference box.
 
-<p><code>closest-side</code> uses the length from the center of the shape to the closest side of the reference box. For circles, this is the closest side in any dimension. For ellipses, this is the closest side in the radius dimension.</p>
+    The position argument defines the center of the ellipse. This defaults to center if omitted.
 
-<p><code>farthest-side</code> uses the length from the center of the shape to the farthest side of the reference box. For circles, this is the farthest side in any dimension. For ellipses, this is the farthest side in the radius dimension.</p>
+- `{{cssxref("basic-shape/polygon()","polygon()")}}`
 
-<h2 id="Description">Description</h2>
+  - : Defines a polygon using an SVG {{SVGAttr("fill-rule")}} and a set of vertices.
 
-<h3 id="Computed_values_of_basic_shapes">Computed values of basic shapes</h3>
+    ```css
+        polygon( [<fill-rule>,]? [<shape-arg> <shape-arg>]# )
+        ```
 
-<p>The values in a <code>&lt;basic-shape&gt;</code> function are computed as specified, with these exceptions:</p>
+    `<fill-rule>` represents the {{SVGAttr("fill-rule")}} used to determine the interior of the polygon. Possible values are `nonzero` and `evenodd`. Default value when omitted is `nonzero`.
 
-<ul>
- <li>Omitted values are included and compute to their defaults.</li>
- <li>A {{cssxref("&lt;position&gt;")}} value in <code>circle()</code> or <code>ellipse()</code> is computed as a pair of offsets (horizontal then vertical) from the top left origin, each given as a combination of an absolute length and a percentage.</li>
- <li>A <a href="/en-US/docs/Web/CSS/border-radius"><code>&lt;border-radius&gt;</code></a> value in <code>inset()</code> is computed as an expanded list of all eight {{cssxref("length")}} or percentage values.</li>
-</ul>
+    Each pair argument in the list represents _xi_ and _yi_ - the x and y axis coordinates of the vertex of the polygon at position i.
 
-<h3 id="Interpolation_of_basic_shapes">Interpolation of basic shapes</h3>
+- `path()`
 
-<p>When animating between one <code>&lt;basic-shape&gt;</code> and another, the rules below are applied. The values in the shape functions interpolate as a simple list. The list values interpolate as {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, or {{cssxref("calc()")}} where possible. If list values are not one of those types but are identical, those values do interpolate.</p>
+  - : Defines a shape using an SVG {{SVGAttr("fill-rule")}} and an SVG [path definition](/en-US/docs/Web/SVG/Attribute/d).
 
-<ul>
- <li>Both shapes must use the same reference box.</li>
- <li>If both shapes are the same type, that type is <code>ellipse()</code> or <code>circle()</code>, and none of the radii use the <code>closest-side</code> or <code>farthest-side</code> keywords, interpolate between each value in the shape functions.</li>
- <li>If both shapes are of type <code>inset()</code>, interpolate between each value in the shape functions.</li>
- <li>If both shapes are of type <code>polygon()</code>, both polygons have the same number of vertices, and use the same <code>&lt;fill-rule&gt;</code>, interpolate between each value in the shape functions.</li>
- <li>If both shapes are of type <code>path()</code>, both paths strings have the same number and types of path data commands in the same order, interpolate each path data command as real numbers.</li>
- <li>In all other cases no interpolation occurs.</li>
-</ul>
+    ```css
+        path( [<fill-rule>,]? <string>)
+        ```
 
-<h2 id="Examples">Examples</h2>
+    The optional `<fill-rule>` represents the {{SVGAttr("fill-rule")}} used to determine the interior of the path. Possible values are `nonzero` and `evenodd`. Default value when omitted is `nonzero`.
 
-<h3 id="Animated_polygon">Animated polygon</h3>
+    The required \<string> is an [SVG Path](/en-US/docs/Web/SVG/Attribute/d) string encompassed in quotes
 
-<p>In this example, we use the <a href="/en-US/docs/Web/CSS/@keyframes">@keyframes</a> at-rule to animate a clip path between two polygons. Note that both polygons have the same number of vertices, which is necessary for this type of animation to work.</p>
+The arguments not defined above are defined as follows:
 
-<h4 id="HTML">HTML</h4>
+```css
+<shape-arg> = <length> | <percentage>
+<shape-radius> = <length> | <percentage> | closest-side | farthest-side
+```
 
-<pre class="brush: html">&lt;div&gt;&lt;/div&gt;</pre>
+Defines a radius for a circle or ellipse. If omitted it defaults to `closest-side`.
 
-<h4 id="CSS">CSS</h4>
+`closest-side` uses the length from the center of the shape to the closest side of the reference box. For circles, this is the closest side in any dimension. For ellipses, this is the closest side in the radius dimension.
 
-<pre class="brush: css">div {
+`farthest-side` uses the length from the center of the shape to the farthest side of the reference box. For circles, this is the farthest side in any dimension. For ellipses, this is the farthest side in the radius dimension.
+
+## Description
+
+### Computed values of basic shapes
+
+The values in a `<basic-shape>` function are computed as specified, with these exceptions:
+
+- Omitted values are included and compute to their defaults.
+- A {{cssxref("&lt;position&gt;")}} value in `circle()` or `ellipse()` is computed as a pair of offsets (horizontal then vertical) from the top left origin, each given as a combination of an absolute length and a percentage.
+- A [`<border-radius>`](/en-US/docs/Web/CSS/border-radius) value in `inset()` is computed as an expanded list of all eight {{cssxref("length")}} or percentage values.
+
+### Interpolation of basic shapes
+
+When animating between one `<basic-shape>` and another, the rules below are applied. The values in the shape functions interpolate as a simple list. The list values interpolate as {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, or {{cssxref("calc()")}} where possible. If list values are not one of those types but are identical, those values do interpolate.
+
+- Both shapes must use the same reference box.
+- If both shapes are the same type, that type is `ellipse()` or `circle()`, and none of the radii use the `closest-side` or `farthest-side` keywords, interpolate between each value in the shape functions.
+- If both shapes are of type `inset()`, interpolate between each value in the shape functions.
+- If both shapes are of type `polygon()`, both polygons have the same number of vertices, and use the same `<fill-rule>`, interpolate between each value in the shape functions.
+- If both shapes are of type `path()`, both paths strings have the same number and types of path data commands in the same order, interpolate each path data command as real numbers.
+- In all other cases no interpolation occurs.
+
+## Examples
+
+### Animated polygon
+
+In this example, we use the [@keyframes](/en-US/docs/Web/CSS/@keyframes) at-rule to animate a clip path between two polygons. Note that both polygons have the same number of vertices, which is necessary for this type of animation to work.
+
+#### HTML
+
+```html
+<div></div>
+```
+
+#### CSS
+
+```css
+div {
   width: 300px;
   height: 300px;
   background: repeating-linear-gradient(red, orange 50px);
@@ -144,24 +157,23 @@ browser-compat: css.types.basic-shape
   to {
     clip-path: polygon(50% 30%, 100% 0%, 70% 50%, 100% 100%, 50% 70%, 0% 100%, 30% 50%, 0% 0%);
   }
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Animated_polygon','340', '340')}}</p>
+{{EmbedLiveSample('Animated_polygon','340', '340')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Properties that use this data type: {{cssxref("clip-path")}}, {{cssxref("shape-outside")}}</li>
- <li><a href="/en-US/docs/Tools/Page_Inspector/How_to/Edit_CSS_shapes">Edit Shape Paths in CSS — Firefox Developer Tools</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes">Overview of CSS Shapes</a></li>
-</ul>
+- Properties that use this data type: {{cssxref("clip-path")}}, {{cssxref("shape-outside")}}
+- [Edit Shape Paths in CSS — Firefox Developer Tools](/en-US/docs/Tools/Page_Inspector/How_to/Edit_CSS_shapes)
+- [Overview of CSS Shapes](/en-US/docs/Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes)

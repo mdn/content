@@ -6,26 +6,27 @@ tags:
   - CSS Property
   - Reference
   - css scrollbars
-  - 'recipe:css-property'
+  - recipe:css-property
   - scrollbar-color
 browser-compat: css.properties.scrollbar-color
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>scrollbar-color</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets the color of the scrollbar track and thumb.</p>
+The **`scrollbar-color`** [CSS](/en-US/docs/Web/CSS) property sets the color of the scrollbar track and thumb.
 
-<p>The <strong>track</strong> refers to the background of the scrollbar, which is generally fixed regardless of the scrolling position.</p>
+The **track** refers to the background of the scrollbar, which is generally fixed regardless of the scrolling position.
 
-<p>The <strong>thumb</strong> refers to the moving part of the scrollbar, which usually floats on top of the track.</p>
+The **thumb** refers to the moving part of the scrollbar, which usually floats on top of the track.
 
-<div>{{EmbedInteractiveExample("pages/css/scrollbar-color.html")}}</div>
+{{EmbedInteractiveExample("pages/css/scrollbar-color.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">/* Keyword values */
+```css
+/* Keyword values */
 scrollbar-color: auto;
 
-/* &lt;color&gt; values */
+/* <color> values */
 scrollbar-color: rebeccapurple green;   /* Two valid colors.
 The first applies to the thumb of the scrollbar, the second to the track. */
 
@@ -34,76 +35,81 @@ scrollbar-color: inherit;
 scrollbar-color: initial;
 scrollbar-color: revert;
 scrollbar-color: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>&lt;scrollbar-color&gt;</code></dt>
- <dd>Defines the color of the scrollbar.
- <table class="standard-table">
-  <tbody>
-   <tr>
-    <td><code>auto</code></td>
-    <td>Default platform rendering for the track portion of the scrollbar, in the absence of any other related scrollbar color properties.</td>
-   </tr>
-   <tr>
-    <td><code>&lt;color&gt; &lt;color&gt;</code></td>
-    <td>Applies the first color to the scrollbar thumb, the second to the scrollbar track.</td>
-   </tr>
-  </tbody>
- </table>
+- `<scrollbar-color>`
 
- <div class="note">
- <p><strong>Note:</strong> User Agents must apply any <code>scrollbar-color</code> value set on the root element to the viewport.</p>
- </div>
- </dd>
-</dl>
+  - : Defines the color of the scrollbar.
 
-<h2 id="Accessibility_concerns">Accessibility concerns</h2>
+    <table class="standard-table">
+      <tbody>
+        <tr>
+          <td><code>auto</code></td>
+          <td>
+            Default platform rendering for the track portion of the scrollbar, in
+            the absence of any other related scrollbar color properties.
+          </td>
+        </tr>
+        <tr>
+          <td><code>&#x3C;color> &#x3C;color></code></td>
+          <td>
+            Applies the first color to the scrollbar thumb, the second to the
+            scrollbar track.
+          </td>
+        </tr>
+      </tbody>
+    </table>
 
-<p>When using <code>scrollbar-color</code> property with specific color values, authors should ensure the specified colors have enough contrast between them. For keyword values, UAs should ensure the colors they use have enough contrast. See <a href="https://www.w3.org/TR/WCAG20-TECHS/G183.html">Techniques for WCAG 2.0: G183: Using a contrast ratio of 3:1</a>.</p>
+    > **Note:** User Agents must apply any `scrollbar-color` value set on the root element to the viewport.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Accessibility concerns
 
-<p>{{CSSInfo}}</p>
+When using `scrollbar-color` property with specific color values, authors should ensure the specified colors have enough contrast between them. For keyword values, UAs should ensure the colors they use have enough contrast. See [Techniques for WCAG 2.0: G183: Using a contrast ratio of 3:1](https://www.w3.org/TR/WCAG20-TECHS/G183.html).
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal definition
+
+{{CSSInfo}}
+
+## Formal syntax
 
 {{CSSSyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Coloring_overflow_scrollbars">Coloring overflow scrollbars</h3>
+### Coloring overflow scrollbars
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush:css">.scroller {
+```css
+.scroller {
   width: 300px;
   height: 100px;
   overflow-y: scroll;
   scrollbar-color: rebeccapurple green;
-}</pre>
+}
+```
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="scroller"&gt;Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic. Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.&lt;/div&gt;</pre>
+```html
+<div class="scroller">Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic. Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.</div>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<div>{{EmbedLiveSample("Coloring_overflow_scrollbars")}}</div>
+{{EmbedLiveSample("Coloring_overflow_scrollbars")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/scrollbar-width"><code>scrollbar-width</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/overflow"><code>overflow</code></a></li>
-</ul>
+- [`scrollbar-width`](/en-US/docs/Web/CSS/scrollbar-width)
+- [`overflow`](/en-US/docs/Web/CSS/overflow)

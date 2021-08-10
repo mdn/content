@@ -10,67 +10,61 @@ tags:
   - grid
   - sticky footer
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>A sticky footer pattern is one where the footer of your page "sticks" to the bottom of the viewport in cases where the content is shorter than the viewport height. We'll look at a couple of techniques for creating one in this recipe.</p>
+A sticky footer pattern is one where the footer of your page "sticks" to the bottom of the viewport in cases where the content is shorter than the viewport height. We'll look at a couple of techniques for creating one in this recipe.
 
-<p><img alt="A sticky footer pushed to the bottom of a box" src="cookbook-footer.png"></p>
+![A sticky footer pushed to the bottom of a box](cookbook-footer.png)
 
-<h2 id="Requirements">Requirements</h2>
+## Requirements
 
-<p>The Sticky footer pattern needs to meet the following requirements:</p>
+The Sticky footer pattern needs to meet the following requirements:
 
-<ul>
- <li>Footer sticks to the bottom of the viewport when content is short.</li>
- <li>If the content of the page extends past the viewport bottom, the footer then sits below the content as normal.</li>
-</ul>
+- Footer sticks to the bottom of the viewport when content is short.
+- If the content of the page extends past the viewport bottom, the footer then sits below the content as normal.
 
-<h2 id="The_recipe">The recipe</h2>
+## The recipe
 
-<p>{{EmbedGHLiveSample("css-examples/css-cookbook/sticky-footer.html", '100%', 720)}}</p>
+{{EmbedGHLiveSample("css-examples/css-cookbook/sticky-footer.html", '100%', 720)}}
 
-<div class="callout">
-<p><a href="https://github.com/mdn/css-examples/blob/master/css-cookbook/sticky-footer--download.html">Download this example</a></p>
-</div>
+> **Callout:**
+>
+> [Download this example](https://github.com/mdn/css-examples/blob/master/css-cookbook/sticky-footer--download.html)
 
-<div class="note">
-<p><strong>Note:</strong> In this example and the following one we are using a wrapper set to <code>min-height: 100%</code> in order that our live example works. You could also achieve this for a full page by setting a {{cssxref("min-height")}} of <code>100vh</code> on the {{htmlelement("body")}} and then using it as your grid container.</p>
-</div>
+> **Note:** In this example and the following one we are using a wrapper set to `min-height: 100%` in order that our live example works. You could also achieve this for a full page by setting a {{cssxref("min-height")}} of `100vh` on the {{htmlelement("body")}} and then using it as your grid container.
 
-<h2 id="Choices_made">Choices made</h2>
+## Choices made
 
-<p>In the above example we achieve the sticky footer using CSS Grid Layout. The <code>.wrapper</code> has a minimum height of <code>100%</code> which means it is as tall as the container it is in. We then create a single column grid layout with three rows, one row for each part of our layout.</p>
+In the above example we achieve the sticky footer using CSS Grid Layout. The `.wrapper` has a minimum height of `100%` which means it is as tall as the container it is in. We then create a single column grid layout with three rows, one row for each part of our layout.
 
-<p>Grid auto-placement will place our items in source order and so the header goes into the first auto sized track, the main content into the <code>1fr</code> track and the footer into the final auto sized track. The <code>1fr</code> track will take up all available space and so grows to fill the gap.</p>
+Grid auto-placement will place our items in source order and so the header goes into the first auto sized track, the main content into the `1fr` track and the footer into the final auto sized track. The `1fr` track will take up all available space and so grows to fill the gap.
 
-<h2 id="Alternate_method">Alternate method</h2>
+## Alternate method
 
-<p>If you need compatibility with browsers that do not support Grid Layout you can also use Flexbox to create a sticky footer.</p>
+If you need compatibility with browsers that do not support Grid Layout you can also use Flexbox to create a sticky footer.
 
-<p>{{EmbedGHLiveSample("css-examples/css-cookbook/sticky-footer-flexbox.html", '100%', 720)}}</p>
+{{EmbedGHLiveSample("css-examples/css-cookbook/sticky-footer-flexbox.html", '100%', 720)}}
 
-<p>The flexbox example starts out in the same way, but we use <code>display:flex</code> rather than <code>display:grid</code> on the <code>.wrapper</code>; we also set <code>flex-direction</code> to <code>column</code>. Then we set our main content to <code>flex-grow: 1</code> and the other two elements to <code>flex-shrink: 0</code> — this prevents them from shrinking smaller when content fills the main area.</p>
+The flexbox example starts out in the same way, but we use `display:flex` rather than `display:grid` on the `.wrapper`; we also set `flex-direction` to `column`. Then we set our main content to `flex-grow: 1` and the other two elements to `flex-shrink: 0` — this prevents them from shrinking smaller when content fills the main area.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<h4 id="grid-template-rows">grid-template-rows</h4>
+#### grid-template-rows
 
-<p>{{Compat("css.properties.grid-template-rows")}}</p>
+{{Compat("css.properties.grid-template-rows")}}
 
-<h4 id="flex-direction">flex-direction</h4>
+#### flex-direction
 
-<p>{{Compat("css.properties.flex-direction")}}</p>
+{{Compat("css.properties.flex-direction")}}
 
-<h4 id="flex-grow">flex-grow</h4>
+#### flex-grow
 
-<p>{{Compat("css.properties.flex-grow")}}</p>
+{{Compat("css.properties.flex-grow")}}
 
-<h4 id="flex-shrink">flex-shrink</h4>
+#### flex-shrink
 
-<p>{{Compat("css.properties.flex-shrink")}}</p>
+{{Compat("css.properties.flex-shrink")}}
 
-<h2 id="Resources_on_MDN">Resources on MDN</h2>
+## Resources on MDN
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">Basic concepts of Grid Layout</a></li>
-</ul>
+- [Basic concepts of Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)

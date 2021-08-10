@@ -6,16 +6,17 @@ tags:
   - Reference
   - SVG
   - Web
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.paint-order
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>paint-order</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property lets you control the order in which the fill and stroke (and painting markers) of text content and shapes are drawn.</p>
+The **`paint-order`** [CSS](/en-US/docs/Web/CSS) property lets you control the order in which the fill and stroke (and painting markers) of text content and shapes are drawn.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css no-line-numbers">/* Normal */
+```css
+/* Normal */
 paint-order: normal;
 
 /* Single values */
@@ -30,49 +31,49 @@ paint-order: markers stroke fill; /* draw markers, then stroke, then fill */
 paint-order: inherit;
 paint-order: initial;
 paint-order: revert;
-paint-order: unset;</pre>
+paint-order: unset;
+```
 
-<p>If no value is specified, the default paint order is <code>fill</code>, <code>stroke</code>, <code>markers</code>.</p>
+If no value is specified, the default paint order is `fill`, `stroke`, `markers`.
 
-<p>When one value is specified, that one is painted first, followed by the other two in their default order relative to one another. When two values are specified, they will be painted in the order they are specified in, followed by the unspecified one.</p>
+When one value is specified, that one is painted first, followed by the other two in their default order relative to one another. When two values are specified, they will be painted in the order they are specified in, followed by the unspecified one.
 
-<div class="note">
-<p><strong>Note:</strong> In the case of this property, markers are only appropriate when drawing SVG shapes involving the use of the <code>marker-*</code> properties (e.g. <code><a href="/en-US/docs/Web/SVG/Attribute/marker-start">marker-start</a></code>) and <code><a href="/en-US/docs/Web/SVG/Element/marker">&lt;marker&gt;</a></code> element. They do not apply to HTML text, so in that case, you can only determine the order of <code>stroke</code> and <code>fill</code>.</p>
-</div>
+> **Note:** In the case of this property, markers are only appropriate when drawing SVG shapes involving the use of the `marker-*` properties (e.g. [`marker-start`](/en-US/docs/Web/SVG/Attribute/marker-start)) and [`<marker>`](/en-US/docs/Web/SVG/Element/marker) element. They do not apply to HTML text, so in that case, you can only determine the order of `stroke` and `fill`.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>normal</code></dt>
- <dd>Paint the different items in normal paint order.</dd>
- <dt><code>stroke</code>,<br>
- <code>fill</code>,<br>
- <code>markers</code></dt>
- <dd>Specify some or all of these values in the order you want them to be painted in.</dd>
-</dl>
+- `normal`
+  - : Paint the different items in normal paint order.
+- `stroke`,
+  `fill`,
+  `markers`
+  - : Specify some or all of these values in the order you want them to be painted in.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Reversing_the_paint_order_of_stroke_and_fill">Reversing the paint order of stroke and fill</h3>
+### Reversing the paint order of stroke and fill
 
-<h4 id="SVG">SVG</h4>
+#### SVG
 
-<pre class="brush: html">&lt;svg xmlns="http://www.w3.org/2000/svg" width="400" height="200"&gt;
-  &lt;text x="10" y="75"&gt;stroke in front&lt;/text&gt;
-  &lt;text x="10" y="150" class="stroke-behind"&gt;stroke behind&lt;/text&gt;
-&lt;/svg&gt;</pre>
+```html
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200">
+  <text x="10" y="75">stroke in front</text>
+  <text x="10" y="150" class="stroke-behind">stroke behind</text>
+</svg>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">text {
+```css
+text {
   font-family: sans-serif;
   font-size: 50px;
   font-weight: bold;
@@ -83,22 +84,21 @@ paint-order: unset;</pre>
 
 .stroke-behind {
   paint-order: stroke fill;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Reversing_the_paint_order_of_stroke_and_fill", "100%", 165)}}</p>
+{{EmbedLiveSample("Reversing_the_paint_order_of_stroke_and_fill", "100%", 165)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://css-tricks.com/almanac/properties/p/paint-order/">CSS Tricks: paint-order</a></li>
-</ul>
+- [CSS Tricks: paint-order](https://css-tricks.com/almanac/properties/p/paint-order/)

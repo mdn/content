@@ -6,26 +6,27 @@ tags:
   - CSS Fonts
   - CSS Property
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.font-variant-numeric
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>font-variant-numeric</code></strong> CSS property controls the usage of alternate glyphs for numbers, fractions, and ordinal markers.</p>
+The **`font-variant-numeric`** CSS property controls the usage of alternate glyphs for numbers, fractions, and ordinal markers.
 
-<div>{{EmbedInteractiveExample("pages/css/font-variant-numeric.html")}}</div>
+{{EmbedInteractiveExample("pages/css/font-variant-numeric.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">font-variant-numeric: normal;
+```css
+font-variant-numeric: normal;
 font-variant-numeric: ordinal;
 font-variant-numeric: slashed-zero;
-font-variant-numeric: lining-nums;         /* &lt;numeric-figure-values&gt; */
-font-variant-numeric: oldstyle-nums;       /* &lt;numeric-figure-values&gt; */
-font-variant-numeric: proportional-nums;   /* &lt;numeric-spacing-values&gt; */
-font-variant-numeric: tabular-nums;        /* &lt;numeric-spacing-values&gt; */
-font-variant-numeric: diagonal-fractions;  /* &lt;numeric-fraction-values&gt; */
-font-variant-numeric: stacked-fractions;   /* &lt;numeric-fraction-values&gt; */
+font-variant-numeric: lining-nums;         /* <numeric-figure-values> */
+font-variant-numeric: oldstyle-nums;       /* <numeric-figure-values> */
+font-variant-numeric: proportional-nums;   /* <numeric-spacing-values> */
+font-variant-numeric: tabular-nums;        /* <numeric-spacing-values> */
+font-variant-numeric: diagonal-fractions;  /* <numeric-fraction-values> */
+font-variant-numeric: stacked-fractions;   /* <numeric-fraction-values> */
 font-variant-numeric: oldstyle-nums stacked-fractions;
 
 /* Global values */
@@ -33,74 +34,68 @@ font-variant-numeric: inherit;
 font-variant-numeric: initial;
 font-variant-numeric: revert;
 font-variant-numeric: unset;
-</pre>
+```
 
-<p>This property can take one of two forms:</p>
+This property can take one of two forms:
 
-<ul>
- <li>either the keyword value <code>normal</code></li>
- <li>or one or more of the other values listed below, space-separated, in any order.</li>
-</ul>
+- either the keyword value `normal`
+- or one or more of the other values listed below, space-separated, in any order.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>normal</code></dt>
- <dd>This keyword leads to the deactivation of the use of such alternate glyphs.</dd>
- <dt><code>ordinal</code></dt>
- <dd>This keyword forces the use of special glyphs for the ordinal markers, like 1st, 2nd, 3rd, 4th in English or a 1a in Italian. It corresponds to the OpenType values <code>ordn</code>.</dd>
- <dt><code>slashed-zero</code></dt>
- <dd>This keyword forces the use of a 0 with a slash; this is useful when a clear distinction between O and 0 is needed. It corresponds to the OpenType values <code>zero</code>.</dd>
- <dt><em>&lt;numeric-figure-values</em>&gt;</dt>
- <dd>These values control the figures used for numbers. Two values are possible:
- <ul>
-  <li><code>lining-nums</code> activating the set of figures where numbers are all lying on the baseline. It corresponds to the OpenType values <code>lnum</code>.</li>
-  <li><code>oldstyle-nums</code> activating the set of figures where some numbers, like 3, 4, 7, 9 have descenders. It corresponds to the OpenType values <code>onum</code>.</li>
- </ul>
- </dd>
- <dt><em>&lt;numeric-spacing-values</em>&gt;</dt>
- <dd>These values controls the sizing of figures used for numbers. Two values are possible:
- <ul>
-  <li><code>proportional-nums</code> activating the set of figures where numbers are not all of the same size. It corresponds to the OpenType values <code>pnum</code>.</li>
-  <li><code>tabular-nums</code> activating the set of figures where numbers are all of the same size, allowing them to be easily aligned like in tables. It corresponds to the OpenType values <code>tnum</code>.</li>
- </ul>
- </dd>
- <dt><em>&lt;numeric-fraction-values</em>&gt;</dt>
- <dd>These values controls the glyphs used to display fractions. Two values are possible:
- <ul>
-  <li><code>diagonal-fractions</code> activating the set of figures where the numerator and denominator are made smaller and separated by a slash. It corresponds to the OpenType values <code>frac</code>.</li>
-  <li><code>stacked-fractions</code> activating the set of figures where the numerator and denominator are made smaller, stacked and separated by a horizontal line. It corresponds to the OpenType values <code>afrc</code>.</li>
- </ul>
- </dd>
-</dl>
-<h2 id="Formal_definition">Formal definition</h2>
+- `normal`
+  - : This keyword leads to the deactivation of the use of such alternate glyphs.
+- `ordinal`
+  - : This keyword forces the use of special glyphs for the ordinal markers, like 1st, 2nd, 3rd, 4th in English or a 1a in Italian. It corresponds to the OpenType values `ordn`.
+- `slashed-zero`
+  - : This keyword forces the use of a 0 with a slash; this is useful when a clear distinction between O and 0 is needed. It corresponds to the OpenType values `zero`.
+- _\<numeric-figure-values_>
 
-<p>{{cssinfo}}</p>
+  - : These values control the figures used for numbers. Two values are possible:
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+    - `lining-nums` activating the set of figures where numbers are all lying on the baseline. It corresponds to the OpenType values `lnum`.
+    - `oldstyle-nums` activating the set of figures where some numbers, like 3, 4, 7, 9 have descenders. It corresponds to the OpenType values `onum`.
+
+- _\<numeric-spacing-values_>
+
+  - : These values controls the sizing of figures used for numbers. Two values are possible:
+
+    - `proportional-nums` activating the set of figures where numbers are not all of the same size. It corresponds to the OpenType values `pnum`.
+    - `tabular-nums` activating the set of figures where numbers are all of the same size, allowing them to be easily aligned like in tables. It corresponds to the OpenType values `tnum`.
+
+- _\<numeric-fraction-values_>
+
+  - : These values controls the glyphs used to display fractions. Two values are possible:
+
+    - `diagonal-fractions` activating the set of figures where the numerator and denominator are made smaller and separated by a slash. It corresponds to the OpenType values `frac`.
+    - `stacked-fractions` activating the set of figures where the numerator and denominator are made smaller, stacked and separated by a horizontal line. It corresponds to the OpenType values `afrc`.
+
+## Formal definition
+
+{{cssinfo}}
+
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_ordinal_numeric_forms">Setting ordinal numeric forms</h3>
+### Setting ordinal numeric forms
 
-<p>{{EmbedGHLiveSample("css-examples/font-features/font-variant-numeric-example.html", '100%', 600)}}</p>
+{{EmbedGHLiveSample("css-examples/font-features/font-variant-numeric-example.html", '100%', 600)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See-also">See Also</h2>
+## See Also
 
-<ul>
-  <li>{{cssxref("font-variant-alternates")}}</li>
-  <li>{{cssxref("font-variant-caps")}}</li>
-  <li>{{cssxref("font-variant-east-asian")}}</li>
-  <li>{{cssxref("font-variant-ligatures")}}</li>
-  <li>{{cssxref("font-variant")}}</li>
- </ul>
+- {{cssxref("font-variant-alternates")}}
+- {{cssxref("font-variant-caps")}}
+- {{cssxref("font-variant-east-asian")}}
+- {{cssxref("font-variant-ligatures")}}
+- {{cssxref("font-variant")}}

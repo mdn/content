@@ -9,51 +9,50 @@ tags:
   - Reference
 browser-compat: css.types.filter-function.invert
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>invert()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Functions">function</a> inverts the color samples in the input image. Its result is a {{cssxref("&lt;filter-function&gt;")}}.</p>
+The **`invert()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) inverts the color samples in the input image. Its result is a {{cssxref("&lt;filter-function&gt;")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/function-invert.html")}}</div>
+{{EmbedInteractiveExample("pages/css/function-invert.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```css
+invert(amount)
+```
 
-<pre class="brush: css">invert(<var>amount</var>)</pre>
+### Parameters
 
-<h3 id="Parameters">Parameters</h3>
+- `amount`
+  - : The amount of the conversion, specified as a {{cssxref("&lt;number&gt;")}} or a {{cssxref("&lt;percentage&gt;")}}. A value of `100%` is completely inverted, while a value of `0%` leaves the input unchanged. Values between `0%` and `100%` are linear multipliers on the effect. The lacuna value for interpolation is `0`.
 
-<dl>
- <dt><code><var>amount</var></code></dt>
- <dd>The amount of the conversion, specified as a {{cssxref("&lt;number&gt;")}} or a {{cssxref("&lt;percentage&gt;")}}. A value of <code>100%</code> is completely inverted, while a value of <code>0%</code> leaves the input unchanged. Values between <code>0%</code> and <code>100%</code> are linear multipliers on the effect. The lacuna value for interpolation is <code>0</code>.</dd>
-</dl>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Examples of correct values for invert()
 
-<h3 id="Examples_of_correct_values_for_invert">Examples of correct values for invert()</h3>
-
-<pre class="brush: css">invert(0)     /* No effect */
+```css
+invert(0)     /* No effect */
 invert(.6)    /* 60% inversion */
-invert(100%)  /* Completely inverted */</pre>
+invert(100%)  /* Completely inverted */
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("&lt;filter-function&gt;")}}</li>
- <li>{{cssxref("filter-function/blur()", "blur()")}}</li>
- <li>{{cssxref("filter-function/brightness()", "brightness()")}}</li>
- <li>{{cssxref("filter-function/contrast()", "contrast()")}}</li>
- <li>{{cssxref("filter-function/drop-shadow()", "drop-shadow()")}}</li>
- <li>{{cssxref("filter-function/grayscale()", "grayscale()")}}</li>
- <li>{{cssxref("filter-function/hue-rotate()", "hue-rotate()")}}</li>
- <li>{{cssxref("filter-function/opacity()", "opacity()")}}</li>
- <li>{{cssxref("filter-function/saturate()", "saturate()")}}</li>
- <li>{{cssxref("filter-function/sepia()", "sepia()")}}</li>
-</ul>
+- {{cssxref("&lt;filter-function&gt;")}}
+- {{cssxref("filter-function/blur()", "blur()")}}
+- {{cssxref("filter-function/brightness()", "brightness()")}}
+- {{cssxref("filter-function/contrast()", "contrast()")}}
+- {{cssxref("filter-function/drop-shadow()", "drop-shadow()")}}
+- {{cssxref("filter-function/grayscale()", "grayscale()")}}
+- {{cssxref("filter-function/hue-rotate()", "hue-rotate()")}}
+- {{cssxref("filter-function/opacity()", "opacity()")}}
+- {{cssxref("filter-function/saturate()", "saturate()")}}
+- {{cssxref("filter-function/sepia()", "sepia()")}}

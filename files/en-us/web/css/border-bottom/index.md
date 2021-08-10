@@ -6,42 +6,43 @@ tags:
   - CSS Borders
   - CSS Property
   - Reference
-  - 'recipe:css-shorthand-property'
+  - recipe:css-shorthand-property
 browser-compat: css.properties.border-bottom
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>border-bottom</code></strong> <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand</a> <a href="/en-US/docs/Web/CSS">CSS</a> property sets an element's bottom <a href="/en-US/docs/Web/CSS/border">border</a>. It sets the values of {{cssxref("border-bottom-width")}}, {{cssxref("border-bottom-style")}} and {{cssxref("border-bottom-color")}}.</p>
+The **`border-bottom`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets an element's bottom [border](/en-US/docs/Web/CSS/border). It sets the values of {{cssxref("border-bottom-width")}}, {{cssxref("border-bottom-style")}} and {{cssxref("border-bottom-color")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/border-bottom.html")}}</div>
+{{EmbedInteractiveExample("pages/css/border-bottom.html")}}
 
-<p>As with all shorthand properties, <code>border-bottom</code> always sets the values of all of the properties that it can set, even if they are not specified. It sets those that are not specified to their default values. This means that ...</p>
+As with all shorthand properties, `border-bottom` always sets the values of all of the properties that it can set, even if they are not specified. It sets those that are not specified to their default values. This means that ...
 
-<pre class="brush: css">border-bottom-style: dotted;
+```css
+border-bottom-style: dotted;
 border-bottom: thick green;
-</pre>
+```
 
-<p>... is actually the same as ...</p>
+... is actually the same as ...
 
-<pre class="brush: css">border-bottom-style: dotted;
+```css
+border-bottom-style: dotted;
 border-bottom: none thick green;
-</pre>
+```
 
-<p>... and the value of {{cssxref("border-bottom-style")}} given before <code>border-bottom</code> is ignored. Since the default value of {{cssxref("border-bottom-style")}} is <code>none</code>, not specifying the <code>border-style</code> part results in no border.</p>
+... and the value of {{cssxref("border-bottom-style")}} given before `border-bottom` is ignored. Since the default value of {{cssxref("border-bottom-style")}} is `none`, not specifying the `border-style` part results in no border.
 
-<h2 id="Constituent_properties">Constituent properties</h2>
+## Constituent properties
 
-<p>This property is a shorthand for the following CSS properties:</p>
+This property is a shorthand for the following CSS properties:
 
-<ul>
- <li>{{cssxref("border-bottom-color")}}</li>
- <li>{{cssxref("border-bottom-style")}}</li>
- <li>{{cssxref("border-bottom-width")}}</li>
-</ul>
+- {{cssxref("border-bottom-color")}}
+- {{cssxref("border-bottom-style")}}
+- {{cssxref("border-bottom-width")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css no-line-numbers">border-bottom: 1px;
+```css
+border-bottom: 1px;
 border-bottom: 2px dotted;
 border-bottom: medium dashed blue;
 
@@ -49,42 +50,44 @@ border-bottom: medium dashed blue;
 border-bottom: inherit;
 border-bottom: initial;
 border-bottom: revert;
-border-bottom: unset;</pre>
+border-bottom: unset;
+```
 
-<p>The three values of the shorthand property can be specified in any order, and one or two of them may be omitted.</p>
+The three values of the shorthand property can be specified in any order, and one or two of them may be omitted.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>&lt;br-width&gt;</code></dt>
- <dd>See {{cssxref("border-bottom-width")}}.</dd>
- <dt><code>&lt;br-style&gt;</code></dt>
- <dd>See {{cssxref("border-bottom-style")}}.</dd>
- <dt>{{cssxref("&lt;color&gt;")}}</dt>
- <dd>See {{cssxref("border-bottom-color")}}.</dd>
-</dl>
+- `<br-width>`
+  - : See {{cssxref("border-bottom-width")}}.
+- `<br-style>`
+  - : See {{cssxref("border-bottom-style")}}.
+- {{cssxref("&lt;color&gt;")}}
+  - : See {{cssxref("border-bottom-color")}}.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Applying_a_bottom_border">Applying a bottom border</h3>
+### Applying a bottom border
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div&gt;
+```html
+<div>
   This box has a border on the bottom side.
-&lt;/div&gt;</pre>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   border-bottom: 4px dashed blue;
   background-color: gold;
   height: 100px;
@@ -92,24 +95,22 @@ border-bottom: unset;</pre>
   font-weight: bold;
   text-align: center;
 }
-</pre>
+```
 
-<h4 id="Results">Results</h4>
+#### Results
 
-<p>{{EmbedLiveSample('Applying_a_bottom_border')}}</p>
+{{EmbedLiveSample('Applying_a_bottom_border')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("border")}}</li>
- <li>{{cssxref("border-block")}}</li>
- <li>{{cssxref("outline")}}</li>
-</ul>
+- {{cssxref("border")}}
+- {{cssxref("border-block")}}
+- {{cssxref("outline")}}

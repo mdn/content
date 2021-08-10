@@ -9,16 +9,17 @@ tags:
   - NeedsCompatTable
   - NeedsExample
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.mask-border-repeat
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>mask-border-repeat</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets how the <a href="/en-US/docs/Web/CSS/border-image-slice#edge-regions">edge regions</a> of a source image are adjusted to fit the dimensions of an element's <a href="/en-US/docs/Web/CSS/mask-border">mask border</a>.</p>
+The **`mask-border-repeat`** [CSS](/en-US/docs/Web/CSS) property sets how the [edge regions](/en-US/docs/Web/CSS/border-image-slice#edge-regions) of a source image are adjusted to fit the dimensions of an element's [mask border](/en-US/docs/Web/CSS/mask-border).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css no-line-numbers">/* Keyword value */
+```css
+/* Keyword value */
 mask-border-repeat: stretch;
 mask-border-repeat: repeat;
 mask-border-repeat: round;
@@ -32,66 +33,62 @@ mask-border-repeat: inherit;
 mask-border-repeat: initial;
 mask-border-repeat: revert;
 mask-border-repeat: unset;
-</pre>
+```
 
-<p>The <code>mask-border-repeat</code> property may be specified using one or two values chosen from the list of values below.</p>
+The `mask-border-repeat` property may be specified using one or two values chosen from the list of values below.
 
-<ul>
- <li>When <strong>one</strong> value is specified, it applies the same behavior on <strong>all four sides</strong>.</li>
- <li>When <strong>two</strong> values are specified, the first applies to the <strong>top and bottom</strong>, the second to the <strong>left and right</strong>.</li>
-</ul>
+- When **one** value is specified, it applies the same behavior on **all four sides**.
+- When **two** values are specified, the first applies to the **top and bottom**, the second to the **left and right**.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>stretch</code></dt>
- <dd>The source image's edge regions are stretched to fill the gap between each border.</dd>
- <dt><code>repeat</code></dt>
- <dd>The source image's edge regions are tiled (repeated) to fill the gap between each border. Tiles may be clipped to achieve the proper fit.</dd>
- <dt><code>round</code></dt>
- <dd>The source image's edge regions are tiled (repeated) to fill the gap between each border. Tiles may be stretched to achieve the proper fit.</dd>
- <dt><code>space</code></dt>
- <dd>The source image's edge regions are tiled (repeated) to fill the gap between each border. Extra space will be distributed in between tiles to achieve the proper fit.</dd>
-</dl>
+- `stretch`
+  - : The source image's edge regions are stretched to fill the gap between each border.
+- `repeat`
+  - : The source image's edge regions are tiled (repeated) to fill the gap between each border. Tiles may be clipped to achieve the proper fit.
+- `round`
+  - : The source image's edge regions are tiled (repeated) to fill the gap between each border. Tiles may be stretched to achieve the proper fit.
+- `space`
+  - : The source image's edge regions are tiled (repeated) to fill the gap between each border. Extra space will be distributed in between tiles to achieve the proper fit.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Basic_usage">Basic usage</h3>
+### Basic usage
 
-<p>This property doesn't appear to be supported anywhere yet. When it eventually starts to be supported, it will serve to define how the border mask slice will repeat around the border — i.e. will it just repeat, or be scaled slightly so a whole number of slices fits, or be stretched so one slice fits?</p>
+This property doesn't appear to be supported anywhere yet. When it eventually starts to be supported, it will serve to define how the border mask slice will repeat around the border — i.e. will it just repeat, or be scaled slightly so a whole number of slices fits, or be stretched so one slice fits?
 
-<pre class="brush: css">mask-border-repeat: round;</pre>
+```css
+mask-border-repeat: round;
+```
 
-<p>Chromium-based browsers support an outdated version of this property — <code>mask-box-image-repeat</code> — with a prefix:</p>
+Chromium-based browsers support an outdated version of this property — `mask-box-image-repeat` — with a prefix:
 
-<pre class="brush: css">-webkit-mask-box-image-repeat: round;</pre>
+```css
+-webkit-mask-box-image-repeat: round;
+```
 
-<div class="notecard note">
-<p><strong>Note:</strong> The <code><a href="/en-US/docs/Web/CSS/mask-border">mask-border</a></code> page features a working example (using the out-of-date prefixed border mask properties supported in Chromium), so you can get an idea of the effect.</p>
-</div>
+> **Note:** The [`mask-border`](/en-US/docs/Web/CSS/mask-border) page features a working example (using the out-of-date prefixed border mask properties supported in Chromium), so you can get an idea of the effect.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{cssxref("mask-border")}}</li>
-  <li>{{cssxref("mask-border-mode")}}</li>
-  <li>{{cssxref("mask-border-outset")}}</li>
-  <li>{{cssxref("mask-border-source")}}</li>
-  <li>{{cssxref("mask-border-width")}}</li>
-</ul>
+- {{cssxref("mask-border")}}
+- {{cssxref("mask-border-mode")}}
+- {{cssxref("mask-border-outset")}}
+- {{cssxref("mask-border-source")}}
+- {{cssxref("mask-border-width")}}

@@ -5,17 +5,17 @@ tags:
   - CSS
   - Non-standard
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.box-orient
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
-<div class="notecard warning">
-  <p><strong>Warning:</strong> This is a property of the original CSS Flexible Box Layout Module draft, and has been replaced by a newer standard. See <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes">flexbox</a> for information about the current standard.</p>
-</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<p>The <strong><code>box-orient</code></strong> <a href="/en-US/docs/Web/CSS">CSS </a>property sets whether an element lays out its contents horizontally or vertically.</p>
+> **Warning:** This is a property of the original CSS Flexible Box Layout Module draft, and has been replaced by a newer standard. See [flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes) for information about the current standard.
 
-<pre class="brush:css">/* Keyword values */
+The **`box-orient`** [CSS ](/en-US/docs/Web/CSS)property sets whether an element lays out its contents horizontally or vertically.
+
+```css
+/* Keyword values */
 box-orient: horizontal;
 box-orient: vertical;
 box-orient: inline-axis;
@@ -25,55 +25,56 @@ box-orient: block-axis;
 box-orient: inherit;
 box-orient: initial;
 box-orient: unset;
-</pre>
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>box-orient</code> property is specified as one of the keyword values listed below.</p>
+The `box-orient` property is specified as one of the keyword values listed below.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>horizontal</code></dt>
- <dd>The box lays out its contents horizontally.</dd>
- <dt><code>vertical</code></dt>
- <dd>The box lays out its contents vertically.</dd>
- <dt><code>inline-axis</code> (HTML)</dt>
- <dd>The box displays its children along the inline axis.</dd>
- <dt><code>block-axis</code> (HTML)</dt>
- <dd>The box displays its children along the block axis.</dd>
-</dl>
+- `horizontal`
+  - : The box lays out its contents horizontally.
+- `vertical`
+  - : The box lays out its contents vertically.
+- `inline-axis` (HTML)
+  - : The box displays its children along the inline axis.
+- `block-axis` (HTML)
+  - : The box displays its children along the block axis.
 
-<p>The inline and block axes are the writing-mode dependent keywords which, in English, map to <code>horizontal</code> and <code>vertical</code> respectively.</p>
+The inline and block axes are the writing-mode dependent keywords which, in English, map to `horizontal` and `vertical` respectively.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>HTML DOM elements lay out their contents along the inline-axis by default. This CSS property will only apply to HTML elements with a CSS {{CSSxRef("display")}} value of {{CSSxRef("box")}} or {{CSSxRef("inline-box")}}.</p>
+HTML DOM elements lay out their contents along the inline-axis by default. This CSS property will only apply to HTML elements with a CSS {{CSSxRef("display")}} value of {{CSSxRef("box")}} or {{CSSxRef("inline-box")}}.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_horizontal_box_orientation">Setting horizontal box orientation</h3>
+### Setting horizontal box orientation
 
-<p>Here, he <code>box-orient</code> property will cause the two {{HTMLElement("p")}} sections in the example to display in the same line.</p>
+Here, he `box-orient` property will cause the two {{HTMLElement("p")}} sections in the example to display in the same line.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="example"&gt;
-    &lt;p&gt;I will be to the left of my sibling.&lt;/p&gt;
-    &lt;p&gt;I will be to the right of my sibling.&lt;/p&gt;
-&lt;/div&gt;</pre>
+```html
+<div class="example">
+    <p>I will be to the left of my sibling.</p>
+    <p>I will be to the right of my sibling.</p>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">div.example {
+```css
+div.example {
   display: -moz-box;                /* Mozilla */
   display: -webkit-box;             /* WebKit */
   display: box;                     /* As specified */
@@ -83,25 +84,23 @@ box-orient: unset;
   -webkit-box-orient: horizontal;   /* WebKit */
   box-orient: horizontal;           /* As specified */
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Setting_horizontal_box_orientation', 600, 50, '', 'Web/CSS/box-orient') }}</p>
+{{ EmbedLiveSample('Setting_horizontal_box_orientation', 600, 50, '', 'Web/CSS/box-orient') }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any standard.</p>
+Not part of any standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{CSSxRef("box-direction")}}</li>
- <li>{{CSSxRef("box-pack")}}</li>
- <li>{{CSSxRef("box-align")}}</li>
- <li>{{CSSxRef("flex-direction")}}</li>
-</ul>
+- {{CSSxRef("box-direction")}}
+- {{CSSxRef("box-pack")}}
+- {{CSSxRef("box-align")}}
+- {{CSSxRef("flex-direction")}}

@@ -1,5 +1,5 @@
 ---
-title: 'Box alignment for block, absolutely positioned and table layout'
+title: Box alignment for block, absolutely positioned and table layout
 slug: Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Block_Abspos_Tables
 tags:
   - Block
@@ -9,72 +9,67 @@ tags:
   - box alignment
   - table
 ---
-<p>The <a href="/en-US/docs/Web/CSS/CSS_Box_Alignment">Box Alignment Specification</a> details how alignment works in various layout methods. In this page we explore how box alignment works in the context of block layout, including floated, positioned, and table elements. As this page aims to detail things which are specific to block layout and box alignment, it should be read in conjunction with the main <a href="/en-US/docs/Web/CSS/CSS_Box_Alignment">Box Alignment</a> page, which details the common features of box alignment across layout methods.</p>
+The [Box Alignment Specification](/en-US/docs/Web/CSS/CSS_Box_Alignment) details how alignment works in various layout methods. In this page we explore how box alignment works in the context of block layout, including floated, positioned, and table elements. As this page aims to detail things which are specific to block layout and box alignment, it should be read in conjunction with the main [Box Alignment](/en-US/docs/Web/CSS/CSS_Box_Alignment) page, which details the common features of box alignment across layout methods.
 
-<div class="note">
-<p><strong>Note:</strong> At the time of writing (May 2018), there is no real support for the box alignment properties in block layout. This document details how the specification expects these properties to be implemented for completeness, and is likely to change as the specification and browser implementations develop.</p>
-</div>
+> **Note:** At the time of writing (May 2018), there is no real support for the box alignment properties in block layout. This document details how the specification expects these properties to be implemented for completeness, and is likely to change as the specification and browser implementations develop.
 
-<h2 id="align-content_and_justify-content">align-content and justify-content</h2>
+## align-content and justify-content
 
-<p>The {{cssxref("justify-content")}} property does not apply to block containers or table cells.</p>
+The {{cssxref("justify-content")}} property does not apply to block containers or table cells.
 
-<p>The {{cssxref("align-content")}} property applies to the block axis in order to align the contents of the box within its container. If a content distribution method such as <code>space-between</code>, <code>space-around</code> or <code>space-evenly</code> is requested then the fallback alignment will be used, as the content is treated as a single <a href="/en-US/docs/Glossary/Alignment_Subject">alignment subject</a>.</p>
+The {{cssxref("align-content")}} property applies to the block axis in order to align the contents of the box within its container. If a content distribution method such as `space-between`, `space-around` or `space-evenly` is requested then the fallback alignment will be used, as the content is treated as a single [alignment subject](/en-US/docs/Glossary/Alignment_Subject).
 
-<h2 id="justify-self">justify-self</h2>
+## justify-self
 
-<p>The {{cssxref("justify-self")}} property is used to align an item inside its containing block on the inline axis.</p>
+The {{cssxref("justify-self")}} property is used to align an item inside its containing block on the inline axis.
 
-<p>This property does not apply to floated elements or table cells.</p>
+This property does not apply to floated elements or table cells.
 
-<h3 id="Absolutely_positioned_elements">Absolutely positioned elements</h3>
+### Absolutely positioned elements
 
-<p>The alignment container is the positioned block, accounting for the offset values of top, left, bottom, and right. The normal keyword resolves to <code>stretch</code>, unless the positioned item is a replaced element, in which case it resolves to <code>start</code>.</p>
+The alignment container is the positioned block, accounting for the offset values of top, left, bottom, and right. The normal keyword resolves to `stretch`, unless the positioned item is a replaced element, in which case it resolves to `start`.
 
-<h2 id="align-self">align-self</h2>
+## align-self
 
-<p>The {{cssxref("align-self")}} property does not apply to block-level boxes (including floats), because there is more than one item in the block axis. It also does not apply to table cells.</p>
+The {{cssxref("align-self")}} property does not apply to block-level boxes (including floats), because there is more than one item in the block axis. It also does not apply to table cells.
 
-<h3 id="Absolutely_positioned_elements_2">Absolutely positioned elements</h3>
+### Absolutely positioned elements
 
-<p>The alignment container is the positioned block, accounting for the offset values of top, left, bottom, and right. The normal keyword resolves to <code>stretch</code>, unless the positioned item is a replaced element, in which case it resolves to <code>start</code>.</p>
+The alignment container is the positioned block, accounting for the offset values of top, left, bottom, and right. The normal keyword resolves to `stretch`, unless the positioned item is a replaced element, in which case it resolves to `start`.
 
-<h2 id="Aligning_in_these_layout_methods_today">Aligning in these layout methods today</h2>
+## Aligning in these layout methods today
 
-<p>As we do not currently have browser support for box alignment in block layout, your options for alignment are either to use one of the existing alignment methods or, to make even a single item inside a container a flex item in order to use the alignment properties as specified in flexbox.</p>
+As we do not currently have browser support for box alignment in block layout, your options for alignment are either to use one of the existing alignment methods or, to make even a single item inside a container a flex item in order to use the alignment properties as specified in flexbox.
 
-<p>Alignment of blocks horizontally prior to flexbox was typically achieved by way of setting auto margins on the block. A {{cssxref("margin")}} of <code>auto</code> will absorb all available space in that dimension, therefore setting a left and right margin of auto, you can push a block into the center:</p>
+Alignment of blocks horizontally prior to flexbox was typically achieved by way of setting auto margins on the block. A {{cssxref("margin")}} of `auto` will absorb all available space in that dimension, therefore setting a left and right margin of auto, you can push a block into the center:
 
-<pre class="brush: css">.container {
+```css
+.container {
   width: 20em;
   margin-left: auto;
   margin-right: auto;
 }
-</pre>
+```
 
-<p>In table layout, you have access to the {{cssxref("vertical-align")}} property to align the contents of a cell inside that cell.</p>
+In table layout, you have access to the {{cssxref("vertical-align")}} property to align the contents of a cell inside that cell.
 
-<p>For many use cases, turning the block container into a flex item will give you the alignment capability that you are looking for. In the example below, a container with a single item inside has been turned into a flex container for the purpose of being able to use the alignment properties.</p>
+For many use cases, turning the block container into a flex item will give you the alignment capability that you are looking for. In the example below, a container with a single item inside has been turned into a flex container for the purpose of being able to use the alignment properties.
 
-<p>{{EmbedGHLiveSample("css-examples/flexbox/alignment/intro.html", '100%', 700)}}</p>
+{{EmbedGHLiveSample("css-examples/flexbox/alignment/intro.html", '100%', 700)}}
 
-<h2 id="Reference">Reference</h2>
+## Reference
 
-<h3 id="CSS_Properties">CSS Properties</h3>
+### CSS Properties
 
-<ul>
- <li>{{cssxref("justify-content")}}</li>
- <li>{{cssxref("align-content")}}</li>
- <li>{{cssxref("justify-self")}}</li>
- <li>{{cssxref("align-self")}}</li>
-</ul>
+- {{cssxref("justify-content")}}
+- {{cssxref("align-content")}}
+- {{cssxref("justify-self")}}
+- {{cssxref("align-self")}}
 
-<h3 id="Glossary_Entries">Glossary Entries</h3>
+### Glossary Entries
 
-<ul>
- <li><a href="/en-US/docs/Glossary/Alignment_Subject">Alignment subject</a></li>
- <li><a href="/en-US/docs/Glossary/Alignment_Container">Alignment container</a></li>
- <li><a href="/en-US/docs/Glossary/Fallback_Alignment">Fallback alignment</a></li>
-</ul>
+- [Alignment subject](/en-US/docs/Glossary/Alignment_Subject)
+- [Alignment container](/en-US/docs/Glossary/Alignment_Container)
+- [Fallback alignment](/en-US/docs/Glossary/Fallback_Alignment)
 
-<p>{{CSSRef}}</p>
+{{CSSRef}}

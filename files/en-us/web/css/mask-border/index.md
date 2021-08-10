@@ -9,26 +9,25 @@ tags:
   - recipe:css-shorthand-property
 browser-compat: css.properties.mask-border
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>mask-border</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand property</a> lets you create a mask along the edge of an element's border.</p>
+The **`mask-border`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) lets you create a mask along the edge of an element's border.
 
-<h2 id="Constituent_properties">Constituent properties</h2>
+## Constituent properties
 
-<p>This property is a shorthand for the following CSS properties:</p>
+This property is a shorthand for the following CSS properties:
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/mask-border-mode"><code>mask-border-mode</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/mask-border-outset"><code>mask-border-outset</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/mask-border-repeat"><code>mask-border-repeat</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/mask-border-slice"><code>mask-border-slice</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/mask-border-source"><code>mask-border-source</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/mask-border-width"><code>mask-border-width</code></a></li>
-</ul>
+- [`mask-border-mode`](/en-US/docs/Web/CSS/mask-border-mode)
+- [`mask-border-outset`](/en-US/docs/Web/CSS/mask-border-outset)
+- [`mask-border-repeat`](/en-US/docs/Web/CSS/mask-border-repeat)
+- [`mask-border-slice`](/en-US/docs/Web/CSS/mask-border-slice)
+- [`mask-border-source`](/en-US/docs/Web/CSS/mask-border-source)
+- [`mask-border-width`](/en-US/docs/Web/CSS/mask-border-width)
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css no-line-numbers">/* source | slice */
+```css
+/* source | slice */
 mask-border: url('border-mask.png') 25;
 
 /* source | slice | repeat */
@@ -45,59 +44,55 @@ mask-border: inherit;
 mask-border: initial;
 mask-border: revert;
 mask-border: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>&lt;'mask-border-source'&gt;</code></dt>
- <dd>The source image. See {{cssxref("mask-border-source")}}.</dd>
- <dt><code>&lt;'mask-border-slice'&gt;</code></dt>
- <dd>The dimensions for slicing the source image into regions. Up to four values may be specified. See {{cssxref("mask-border-slice")}}.</dd>
- <dt><code>&lt;'mask-border-width'&gt;</code></dt>
- <dd>The width of the border mask. Up to four values may be specified. See {{cssxref("mask-border-width")}}.</dd>
- <dt><code>&lt;'mask-border-outset'&gt;</code></dt>
- <dd>The distance of the border mask from the element's outside edge. Up to four values may be specified. See {{cssxref("mask-border-outset")}}.</dd>
- <dt><code>&lt;'mask-border-repeat'&gt;</code></dt>
- <dd>Defines how the edge regions of the source image are adjusted to fit the dimensions of the border mask. Up to two values may be specified. See {{cssxref("mask-border-repeat")}}.</dd>
- <dt><code>&lt;'mask-border-mode'&gt;</code></dt>
- <dd>Defines whether the source image is treated as a luminance mask or alpha mask. See {{cssxref("mask-border-mode")}}.</dd>
-</dl>
+- `<'mask-border-source'>`
+  - : The source image. See {{cssxref("mask-border-source")}}.
+- `<'mask-border-slice'>`
+  - : The dimensions for slicing the source image into regions. Up to four values may be specified. See {{cssxref("mask-border-slice")}}.
+- `<'mask-border-width'>`
+  - : The width of the border mask. Up to four values may be specified. See {{cssxref("mask-border-width")}}.
+- `<'mask-border-outset'>`
+  - : The distance of the border mask from the element's outside edge. Up to four values may be specified. See {{cssxref("mask-border-outset")}}.
+- `<'mask-border-repeat'>`
+  - : Defines how the edge regions of the source image are adjusted to fit the dimensions of the border mask. Up to two values may be specified. See {{cssxref("mask-border-repeat")}}.
+- `<'mask-border-mode'>`
+  - : Defines whether the source image is treated as a luminance mask or alpha mask. See {{cssxref("mask-border-mode")}}.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_a_bitmap-based_mask_border">Setting a bitmap-based mask border</h3>
+### Setting a bitmap-based mask border
 
-<p>In this example, we will mask an element's border with a diamond pattern. The source for the mask is a ".png" file of 90 by 90 pixels, with three diamonds going vertically and horizontally:</p>
+In this example, we will mask an element's border with a diamond pattern. The source for the mask is a ".png" file of 90 by 90 pixels, with three diamonds going vertically and horizontally:
 
-<p><img alt="" src="mask-border-diamonds.png"></p>
+![](mask-border-diamonds.png)
 
-<p>To match the size of a single diamond, we will use a value of 90 divided by 3, or <code>30</code>, for slicing the image into corner and edge regions. A repeat value of <code>round</code> will make the mask slices fit evenly, i.e., without clipping or gaps.</p>
+To match the size of a single diamond, we will use a value of 90 divided by 3, or `30`, for slicing the image into corner and edge regions. A repeat value of `round` will make the mask slices fit evenly, i.e., without clipping or gaps.
 
-<p>{{EmbedGHLiveSample("css-examples/masking/mask-border.html", '100%', 800)}}</p>
+{{EmbedGHLiveSample("css-examples/masking/mask-border.html", '100%', 800)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{cssxref("mask-border-mode")}}</li>
-  <li>{{cssxref("mask-border-outset")}}</li>
-  <li>{{cssxref("mask-border-repeat")}}</li>
-  <li>{{cssxref("mask-border-source")}}</li>
-  <li>{{cssxref("mask-border-width")}}</li>
-</ul>
+- {{cssxref("mask-border-mode")}}
+- {{cssxref("mask-border-outset")}}
+- {{cssxref("mask-border-repeat")}}
+- {{cssxref("mask-border-source")}}
+- {{cssxref("mask-border-width")}}

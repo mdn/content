@@ -1,6 +1,6 @@
 ---
 title: ':target'
-slug: 'Web/CSS/:target'
+slug: Web/CSS/:target
 tags:
   - CSS
   - Layout
@@ -10,53 +10,59 @@ tags:
   - Web
 browser-compat: css.selectors.target
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>:target</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> represents a unique element (the <em>target element</em>) with an {{htmlattrxref("id")}} matching the URL's fragment.</p>
+The **`:target`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents a unique element (the _target element_) with an {{htmlattrxref("id")}} matching the URL's fragment.
 
-<pre class="brush: css no-line-numbers">/* Selects an element with an ID matching the current URL's fragment */
+```css
+/* Selects an element with an ID matching the current URL's fragment */
 :target {
   border: 2px solid black;
-}</pre>
+}
+```
 
-<p>For example, the following URL has a fragment (denoted by the <em>#</em> sign) that points to an element called <code>section2</code>:</p>
+For example, the following URL has a fragment (denoted by the _#_ sign) that points to an element called `section2`:
 
-<pre>http://www.example.com/index.html#section2</pre>
+    http://www.example.com/index.html#section2
 
-<p>The following element would be selected by a <code>:target</code> selector when the current URL is equal to the above:</p>
+The following element would be selected by a `:target` selector when the current URL is equal to the above:
 
-<pre class="brush: html">&lt;section id="section2"&gt;Example&lt;/section&gt;</pre>
+```html
+<section id="section2">Example</section>
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="A_table_of_contents">A table of contents</h3>
+### A table of contents
 
-<p>The <code>:target</code> pseudo-class can be used to highlight the portion of a page that has been linked to from a table of contents.</p>
+The `:target` pseudo-class can be used to highlight the portion of a page that has been linked to from a table of contents.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;h3&gt;Table of Contents&lt;/h3&gt;
-&lt;ol&gt;
- &lt;li&gt;&lt;a href="#p1"&gt;Jump to the first paragraph!&lt;/a&gt;&lt;/li&gt;
- &lt;li&gt;&lt;a href="#p2"&gt;Jump to the second paragraph!&lt;/a&gt;&lt;/li&gt;
- &lt;li&gt;&lt;a href="#nowhere"&gt;This link goes nowhere,
-   because the target doesn't exist.&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
+```html
+<h3>Table of Contents</h3>
+<ol>
+ <li><a href="#p1">Jump to the first paragraph!</a></li>
+ <li><a href="#p2">Jump to the second paragraph!</a></li>
+ <li><a href="#nowhere">This link goes nowhere,
+   because the target doesn't exist.</a></li>
+</ol>
 
-&lt;h3&gt;My Fun Article&lt;/h3&gt;
-&lt;p id="p1"&gt;You can target &lt;i&gt;this paragraph&lt;/i&gt; using a
-  URL fragment. Click on the link above to try out!&lt;/p&gt;
-&lt;p id="p2"&gt;This is &lt;i&gt;another paragraph&lt;/i&gt;, also accessible
-  from the links above. Isn't that delightful?&lt;/p&gt;
-</pre>
+<h3>My Fun Article</h3>
+<p id="p1">You can target <i>this paragraph</i> using a
+  URL fragment. Click on the link above to try out!</p>
+<p id="p2">This is <i>another paragraph</i>, also accessible
+  from the links above. Isn't that delightful?</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">p:target {
+```css
+p:target {
   background-color: gold;
 }
 
@@ -71,47 +77,49 @@ p:target::before {
 /* Style italic elements within the target element */
 p:target i {
   color: red;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<div>{{EmbedLiveSample('A_table_of_contents', 500, 300)}}</div>
+{{EmbedLiveSample('A_table_of_contents', 500, 300)}}
 
-<h3 id="Pure-CSS_lightbox">Pure-CSS lightbox</h3>
+### Pure-CSS lightbox
 
-<p>You can use the <code>:target</code> pseudo-class to create a lightbox without using any JavaScript. This technique relies on the ability of anchor links to point to elements that are initially hidden on the page. Once targeted, the CSS changes their <code>display</code> so that they are shown.</p>
+You can use the `:target` pseudo-class to create a lightbox without using any JavaScript. This technique relies on the ability of anchor links to point to elements that are initially hidden on the page. Once targeted, the CSS changes their `display` so that they are shown.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> A more complete pure-CSS lightbox based on the <code>:target</code> pseudo-class is <a href="https://github.com/madmurphy/takefive.css/">available on GitHub</a> (<a href="https://madmurphy.github.io/takefive.css/">demo</a>).</p>
+> **Note:** A more complete pure-CSS lightbox based on the `:target` pseudo-class is [available on GitHub](https://github.com/madmurphy/takefive.css/) ([demo](https://madmurphy.github.io/takefive.css/)).
+
+#### HTML
+
+```html
+<ul>
+  <li><a href="#example1">Open example #1</a></li>
+  <li><a href="#example2">Open example #2</a></li>
+</ul>
+
+<div class="lightbox" id="example1">
+  <figure>
+    <a href="#" class="close"></a>
+    <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Donec felis enim, placerat id eleifend eu, semper vel sem.</figcaption>
+  </figure>
 </div>
 
-<h4 id="HTML_2">HTML</h4>
-
-<pre class="brush: html">&lt;ul&gt;
-  &lt;li&gt;&lt;a href="#example1"&gt;Open example #1&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="#example2"&gt;Open example #2&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class="lightbox" id="example1"&gt;
-  &lt;figure&gt;
-    &lt;a href="#" class="close"&gt;&lt;/a&gt;
-    &lt;figcaption&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Donec felis enim, placerat id eleifend eu, semper vel sem.&lt;/figcaption&gt;
-  &lt;/figure&gt;
-&lt;/div&gt;
-
-&lt;div class="lightbox" id="example2"&gt;
-  &lt;figure&gt;
-    &lt;a href="#" class="close"&gt;&lt;/a&gt;
-    &lt;figcaption&gt;Cras risus odio, pharetra nec ultricies et,
+<div class="lightbox" id="example2">
+  <figure>
+    <a href="#" class="close"></a>
+    <figcaption>Cras risus odio, pharetra nec ultricies et,
       mollis ac augue. Nunc et diam quis sapien dignissim auctor.
-      Quisque quis neque arcu, nec gravida magna.&lt;/figcaption&gt;
-  &lt;/figure&gt;
-&lt;/div&gt;</pre>
+      Quisque quis neque arcu, nec gravida magna.</figcaption>
+  </figure>
+</div>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">/* Unopened lightbox */
+```css
+/* Unopened lightbox */
 .lightbox {
   display: none;
 }
@@ -169,22 +177,21 @@ p:target i {
   background-color: rgba(0,0,0,.7);
   content: "";
   cursor: default;
-}</pre>
+}
+```
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<div>{{EmbedLiveSample('Pure-CSS_lightbox', 500, 220)}}</div>
+{{EmbedLiveSample('Pure-CSS_lightbox', 500, 220)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Selectors/Using_the_:target_pseudo-class_in_selectors">Using the :target pseudo-class in selectors</a></li>
-</ul>
+- [Using the :target pseudo-class in selectors](/en-US/docs/Web/CSS/CSS_Selectors/Using_the_:target_pseudo-class_in_selectors)

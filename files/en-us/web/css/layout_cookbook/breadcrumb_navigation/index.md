@@ -9,55 +9,50 @@ tags:
   - cookbook
   - flexbox
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>Breadcrumb navigation helps the user to understand their location in the website by providing a breadcrumb trail back to the start page.</p>
+Breadcrumb navigation helps the user to understand their location in the website by providing a breadcrumb trail back to the start page.
 
-<p><img alt="Links displayed inline with separators" src="breadcrumb-navigation.png"></p>
+![Links displayed inline with separators](breadcrumb-navigation.png)
 
-<h2 id="Requirements">Requirements</h2>
+## Requirements
 
-<p>The items typically display inline with a separator to indicate a hierarchy between individual pages.</p>
+The items typically display inline with a separator to indicate a hierarchy between individual pages.
 
-<h2 id="Recipe">Recipe</h2>
+## Recipe
 
-<p>{{EmbedGHLiveSample("css-examples/css-cookbook/breadcrumb-navigation.html", '100%', 530)}}</p>
+{{EmbedGHLiveSample("css-examples/css-cookbook/breadcrumb-navigation.html", '100%', 530)}}
 
-<div class="callout">
-<p><a href="https://github.com/mdn/css-examples/blob/master/css-cookbook/breadcrumb-navigation--download.html">Download this example</a></p>
-</div>
+> **Callout:**
+>
+> [Download this example](https://github.com/mdn/css-examples/blob/master/css-cookbook/breadcrumb-navigation--download.html)
 
-<div class="notecard note">
-<p><strong>Note:</strong> The example above uses two selectors to insert content before every <code>li</code> except the first one. This could also be achieved using one selector only:</p>
+> **Note:** The example above uses two selectors to insert content before every `li` except the first one. This could also be achieved using one selector only:
+>
+>     .breadcrumb li:not(:first-child)::before {
+>       content: "→";
+>     }
+>
+> This solution uses a more complex selector, but requires less rules. Feel free to choose the solution that you prefer.
 
-<pre>.breadcrumb li:not(:first-child)::before {
-  content: "→";
-}
-</pre>
+## Choices made
 
-<p>This solution uses a more complex selector, but requires less rules. Feel free to choose the solution that you prefer.</p>
-</div>
+This pattern is laid out using a simple flex layout demonstrating how a line of CSS can give us our navigation. The separators are added using CSS Generated Content. You could change these to any separator that you like.
 
-<h2 id="Choices_made">Choices made</h2>
+## Accessibility concerns
 
-<p>This pattern is laid out using a simple flex layout demonstrating how a line of CSS can give us our navigation. The separators are added using CSS Generated Content. You could change these to any separator that you like.</p>
+I have used the `aria-label` and `aria-current` attributes to help users understand what this navigation is and where the current page is in the structure. See the related links for more information.
 
-<h2 id="Accessibility_concerns">Accessibility concerns</h2>
+## Browser compatibility
 
-<p>I have used the <code>aria-label</code> and <code>aria-current</code> attributes to help users understand what this navigation is and where the current page is in the structure. See the related links for more information.</p>
+The various layout methods have different browser support. See the charts below for details on basic support for the properties used.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+#### Flexbox
 
-<p>The various layout methods have different browser support. See the charts below for details on basic support for the properties used.</p>
+{{Compat("css.properties.flex")}}
 
-<h4 id="Flexbox">Flexbox</h4>
+## See also
 
-<p>{{Compat("css.properties.flex")}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">CSS Flexible Box Layout</a></li>
- <li><a href="https://www.w3.org/TR/WCAG20-TECHS/G65.html">Providing a Breadcrumb Trail</a></li>
- <li><a href="https://tink.uk/using-the-aria-current-attribute/">Using the aria-current attribute</a></li>
-</ul>
+- [CSS Flexible Box Layout](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout)
+- [Providing a Breadcrumb Trail](https://www.w3.org/TR/WCAG20-TECHS/G65.html)
+- [Using the aria-current attribute](https://tink.uk/using-the-aria-current-attribute/)

@@ -8,95 +8,81 @@ tags:
   - Performance
   - Reference
   - Transitions
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.will-change
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>will-change</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property hints to browsers how an element is expected to change. Browsers may set up optimizations before an element is actually changed. These kinds of optimizations can increase the responsiveness of a page by doing potentially expensive work before they are actually required.</p>
+The **`will-change`** [CSS](/en-US/docs/Web/CSS) property hints to browsers how an element is expected to change. Browsers may set up optimizations before an element is actually changed. These kinds of optimizations can increase the responsiveness of a page by doing potentially expensive work before they are actually required.
 
-<div class="warning">
- <p><strong>Warning:</strong> <code>will-change</code> is intended to be used as a last resort, in order to try to deal with existing performance problems. It should not be used to anticipate performance problems.</p>
-</div>
+> **Warning:** `will-change` is intended to be used as a last resort, in order to try to deal with existing performance problems. It should not be used to anticipate performance problems.
 
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 will-change: auto;
 will-change: scroll-position;
 will-change: contents;
-will-change: transform;        /* Example of &lt;custom-ident&gt; */
-will-change: opacity;          /* Example of &lt;custom-ident&gt; */
-will-change: left, top;        /* Example of two &lt;animatable-feature&gt; */
+will-change: transform;        /* Example of <custom-ident> */
+will-change: opacity;          /* Example of <custom-ident> */
+will-change: left, top;        /* Example of two <animatable-feature> */
 
 /* Global values */
 will-change: inherit;
 will-change: initial;
 will-change: revert;
 will-change: unset;
-</pre>
+```
 
-<p>Proper usage of this property can be a bit tricky:</p>
+Proper usage of this property can be a bit tricky:
 
-<ul>
- <li>
-  <p><em>Don't apply will-change to too many elements.</em> The browser already tries as hard as it can to optimize everything. Some of the stronger optimizations that are likely to be tied to <code>will-change</code> end up using a lot of a machine’s resources, and when overused like this can cause the page to slow down or consume a lot of resources.</p>
- </li>
- <li>
-  <p><em>Use sparingly.</em> The normal behavior for optimizations that the browser make is to remove the optimizations as soon as it can and revert back to normal. But adding <code>will-change</code> directly in a stylesheet implies that the targeted elements are always a few moments away from changing and the browser will keep the optimizations for much longer time than it would have otherwise. So it is a good practice to switch <code>will-change</code> on and off using script code before and after the change occurs.</p>
- </li>
- <li>
-  <p><em>Don't apply will-change to elements to perform premature optimization</em>. If your page is performing well, don't add the <code>will-change</code> property to elements just to wring out a little more speed. <code>will-change</code> is intended to be used as something of a last resort, in order to try to deal with existing performance problems. It should not be used to anticipate performance problems. Excessive use of <code>will-change</code> will result in excessive memory use and will cause more complex rendering to occur as the browser attempts to prepare for the possible change. This will lead to worse performance.</p>
- </li>
- <li>
-  <p><em>Give it sufficient time to work</em>. This property is intended as a method for authors to let the user-agent know about properties that are likely to change ahead of time. Then the browser can choose to apply any ahead-of-time optimizations required for the property change before the property change actually happens. So it is important to give the browser some time to actually do the optimizations. Find some way to predict at least slightly ahead of time that something will change, and set <code>will-change</code> then.</p>
- </li>
- <li>
-  <p><em>Be aware, that will-change may actually influence the visual appearance of elements</em>, when used with property values, that create a <a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context">stacking context</a> (e.g. will-change: opacity), as the stacking context is created up front.</p>
- </li>
-</ul>
+- _Don't apply will-change to too many elements._ The browser already tries as hard as it can to optimize everything. Some of the stronger optimizations that are likely to be tied to `will-change` end up using a lot of a machine’s resources, and when overused like this can cause the page to slow down or consume a lot of resources.
+- _Use sparingly._ The normal behavior for optimizations that the browser make is to remove the optimizations as soon as it can and revert back to normal. But adding `will-change` directly in a stylesheet implies that the targeted elements are always a few moments away from changing and the browser will keep the optimizations for much longer time than it would have otherwise. So it is a good practice to switch `will-change` on and off using script code before and after the change occurs.
+- _Don't apply will-change to elements to perform premature optimization_. If your page is performing well, don't add the `will-change` property to elements just to wring out a little more speed. `will-change` is intended to be used as something of a last resort, in order to try to deal with existing performance problems. It should not be used to anticipate performance problems. Excessive use of `will-change` will result in excessive memory use and will cause more complex rendering to occur as the browser attempts to prepare for the possible change. This will lead to worse performance.
+- _Give it sufficient time to work_. This property is intended as a method for authors to let the user-agent know about properties that are likely to change ahead of time. Then the browser can choose to apply any ahead-of-time optimizations required for the property change before the property change actually happens. So it is important to give the browser some time to actually do the optimizations. Find some way to predict at least slightly ahead of time that something will change, and set `will-change` then.
+- _Be aware, that will-change may actually influence the visual appearance of elements_, when used with property values, that create a [stacking context](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context) (e.g. will-change: opacity), as the stacking context is created up front.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>This keyword expresses no particular intent; the user agent should apply whatever heuristics and optimizations it normally does.</dd>
-</dl>
+- `auto`
+  - : This keyword expresses no particular intent; the user agent should apply whatever heuristics and optimizations it normally does.
 
-<p>The <code>&lt;animatable-feature&gt;</code> can be one of the following values:</p>
+The `<animatable-feature>` can be one of the following values:
 
-<dl>
- <dt><code>scroll-position</code></dt>
- <dd>Indicates that the author expects to animate or change the scroll position of the element in the near future.</dd>
- <dt><code>contents</code></dt>
- <dd>Indicates that the author expects to animate or change something about the element’s contents in the near future.</dd>
- <dt>{{cssxref("custom-ident", "&lt;custom-ident&gt;")}}</dt>
- <dd>Indicates that the author expects to animate or change the property with the given name on the element in the near future. If the property given is a shorthand, it indicates the expectation for all the longhands the shorthand expands to. It cannot be one of the following values: <code>unset</code>, <code>initial</code>, <code>inherit</code>, <code>will-change</code>, <code>auto</code>, <code>scroll-position</code>, or <code>contents</code>. The spec doesn't define the behavior of particular value, but it is common for <code>transform</code> to be a compositing layer hint. <a href="https://github.com/operasoftware/devopera/pull/330">Chrome currently takes two actions</a>, given particular CSS property idents: establish a new compositing layer or a new {{Glossary("stacking context")}}.</dd>
-</dl>
+- `scroll-position`
+  - : Indicates that the author expects to animate or change the scroll position of the element in the near future.
+- `contents`
+  - : Indicates that the author expects to animate or change something about the element’s contents in the near future.
+- {{cssxref("custom-ident", "&lt;custom-ident&gt;")}}
+  - : Indicates that the author expects to animate or change the property with the given name on the element in the near future. If the property given is a shorthand, it indicates the expectation for all the longhands the shorthand expands to. It cannot be one of the following values: `unset`, `initial`, `inherit`, `will-change`, `auto`, `scroll-position`, or `contents`. The spec doesn't define the behavior of particular value, but it is common for `transform` to be a compositing layer hint. [Chrome currently takes two actions](https://github.com/operasoftware/devopera/pull/330), given particular CSS property idents: establish a new compositing layer or a new {{Glossary("stacking context")}}.
 
-<h3 id="Via_stylesheet">Via stylesheet</h3>
+### Via stylesheet
 
-<p>It may be appropriate to include <code>will-change</code> in your style sheet for an application that does page flips on key presses like an album or a slide deck presentation where the pages are large and complex. This will let browser prepare the transition ahead of time and allow for snappy transitions between the pages as soon as the key is pressed. But use caution with the <code>will-change</code> property directly in stylesheets. It may cause the browser to keep the optimization in memory for much longer than it is needed.</p>
+It may be appropriate to include `will-change` in your style sheet for an application that does page flips on key presses like an album or a slide deck presentation where the pages are large and complex. This will let browser prepare the transition ahead of time and allow for snappy transitions between the pages as soon as the key is pressed. But use caution with the `will-change` property directly in stylesheets. It may cause the browser to keep the optimization in memory for much longer than it is needed.
 
-<pre class="brush: css">.slide {
+```css
+.slide {
   will-change: transform;
-}</pre>
+}
+```
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{CSSSyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Via_script">Via script</h3>
+### Via script
 
-<p>This is an example showing how to apply the <code>will-change</code> property through scripting, which is probably what you should be doing in most cases.</p>
+This is an example showing how to apply the `will-change` property through scripting, which is probably what you should be doing in most cases.
 
-<pre class="brush: js">var el = document.getElementById('element');
+```js
+var el = document.getElementById('element');
 
 // Set will-change when the element is hovered
 el.addEventListener('mouseenter', hintBrowser);
@@ -110,18 +96,17 @@ function hintBrowser() {
 
 function removeHint() {
   this.style.willChange = 'auto';
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("transform")}}</li>
-</ul>
+- {{cssxref("transform")}}

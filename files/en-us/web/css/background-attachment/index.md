@@ -6,19 +6,19 @@ tags:
   - CSS Background
   - CSS Property
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.background-attachment
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>background-attachment</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets whether a background image's position is fixed within the {{glossary("viewport")}}, or scrolls with its containing block.</p>
+The **`background-attachment`** [CSS](/en-US/docs/Web/CSS) property sets whether a background image's position is fixed within the {{glossary("viewport")}}, or scrolls with its containing block.
 
-<div>{{EmbedInteractiveExample("pages/css/background-attachment.html")}}</div>
+{{EmbedInteractiveExample("pages/css/background-attachment.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush: css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 background-attachment: scroll;
 background-attachment: fixed;
 background-attachment: local;
@@ -28,61 +28,63 @@ background-attachment: inherit;
 background-attachment: initial;
 background-attachment: revert;
 background-attachment: unset;
-</pre>
+```
 
-<p>The <code>background-attachment</code> property is specified as one of the keyword values from the list below.</p>
+The `background-attachment` property is specified as one of the keyword values from the list below.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>fixed</code></dt>
- <dd>The background is fixed relative to the viewport. Even if an element has a scrolling mechanism, the background doesn't move with the element. (This is not compatible with {{cssxref("background-clip", "background-clip: text", "#values")}}.)</dd>
- <dt><code>local</code></dt>
- <dd>The background is fixed relative to the element's contents. If the element has a scrolling mechanism, the background scrolls with the element's contents, and the background painting area and background positioning area are relative to the scrollable area of the element rather than to the border framing them.</dd>
- <dt><code>scroll</code></dt>
- <dd>The background is fixed relative to the element itself and does not scroll with its contents. (It is effectively attached to the element's border.)</dd>
-</dl>
+- `fixed`
+  - : The background is fixed relative to the viewport. Even if an element has a scrolling mechanism, the background doesn't move with the element. (This is not compatible with {{cssxref("background-clip", "background-clip: text", "#values")}}.)
+- `local`
+  - : The background is fixed relative to the element's contents. If the element has a scrolling mechanism, the background scrolls with the element's contents, and the background painting area and background positioning area are relative to the scrollable area of the element rather than to the border framing them.
+- `scroll`
+  - : The background is fixed relative to the element itself and does not scroll with its contents. (It is effectively attached to the element's border.)
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Simple_example">Simple example</h3>
+### Simple example
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;
+```html
+<p>
   There were doors all round the hall, but they were all locked; and when
   Alice had been all the way down one side and up the other, trying every
   door, she walked sadly down the middle, wondering how she was ever to
   get out again.
-&lt;/p&gt;</pre>
+</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush:css; highlight:[3];">p {
+```css
+p {
   background-image: url("starsolid.gif");
   background-attachment: fixed;
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Simple_example")}}</p>
+{{EmbedLiveSample("Simple_example")}}
 
-<h3 id="Multiple_background_images">Multiple background images</h3>
+### Multiple background images
 
-<p>This property supports multiple background images. You can specify a different <code>&lt;attachment&gt;</code> for each background, separated by commas. Each image is matched with the corresponding <code>&lt;attachment&gt;</code> type, from first specified to last.</p>
+This property supports multiple background images. You can specify a different `<attachment>` for each background, separated by commas. Each image is matched with the corresponding `<attachment>` type, from first specified to last.
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;
+```html
+<p>
   There were doors all round the hall, but they were all locked; and when
   Alice had been all the way down one side and up the other, trying every
   door, she walked sadly down the middle, wondering how she was ever to
@@ -96,31 +98,32 @@ background-attachment: unset;
   time round, she came upon a low curtain she had not noticed before, and
   behind it was a little door about fifteen inches high: she tried the
   little golden key in the lock, and to her great delight it fitted!
-&lt;/p&gt;</pre>
+</p>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush:css; highlight:[3];">p {
+```css
+p {
   background-image: url("starsolid.gif"),
       url("startransparent.gif");
   background-attachment: fixed, scroll;
   background-repeat: no-repeat, repeat-y;
-}</pre>
+}
+```
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Multiple_background_images")}}</p>
+{{EmbedLiveSample("Multiple_background_images")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds">Using multiple backgrounds</a></li>
-</ul>
+- [Using multiple backgrounds](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds)

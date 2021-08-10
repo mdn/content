@@ -1,6 +1,6 @@
 ---
 title: ':defined'
-slug: 'Web/CSS/:defined'
+slug: Web/CSS/:defined
 tags:
   - CSS
   - Layout
@@ -10,11 +10,12 @@ tags:
   - Web
 browser-compat: css.selectors.defined
 ---
-<div>{{ CSSRef }}</div>
+{{ CSSRef }}
 
-<p>The <strong><code>:defined</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> represents any element that has been defined. This includes any standard element built in to the browser, and custom elements that have been successfully defined (i.e. with the {{domxref("CustomElementRegistry.define()")}} method).</p>
+The **`:defined`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any element that has been defined. This includes any standard element built in to the browser, and custom elements that have been successfully defined (i.e. with the {{domxref("CustomElementRegistry.define()")}} method).
 
-<pre class="brush: css no-line-numbers">/* Selects any defined element */
+```css
+/* Selects any defined element */
 :defined {
   font-style: italic;
 }
@@ -23,21 +24,22 @@ browser-compat: css.selectors.defined
 simple-custom:defined {
   display: block;
 }
-</pre>
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Hiding_elements_until_they_are_defined">Hiding elements until they are defined</h3>
+### Hiding elements until they are defined
 
-<p>The following snippets are taken from our <a href="https://github.com/mdn/web-components-examples/tree/master/defined-pseudo-class">defined-pseudo-class</a> demo (<a href="https://mdn.github.io/web-components-examples/defined-pseudo-class/">see it live also</a>).</p>
+The following snippets are taken from our [defined-pseudo-class](https://github.com/mdn/web-components-examples/tree/master/defined-pseudo-class) demo ([see it live also](https://mdn.github.io/web-components-examples/defined-pseudo-class/)).
 
-<p>In this demo we define a very simple trivial custom element:</p>
+In this demo we define a very simple trivial custom element:
 
-<pre class="brush: js">customElements.define('simple-custom',
+```js
+customElements.define('simple-custom',
   class extends HTMLElement {
     constructor() {
       super();
@@ -48,17 +50,21 @@ simple-custom:defined {
       let shadowRoot = this.attachShadow({mode: 'open'})
         .appendChild(divElem);
   }
-})</pre>
+})
+```
 
-<p>Then insert a copy of this element into the document, along with a standard <code>&lt;p&gt;</code>:</p>
+Then insert a copy of this element into the document, along with a standard `<p>`:
 
-<pre class="brush: html">&lt;simple-custom text="Custom element example text"&gt;&lt;/simple-custom&gt;
+```html
+<simple-custom text="Custom element example text"></simple-custom>
 
-&lt;p&gt;Standard paragraph example text&lt;/p&gt;</pre>
+<p>Standard paragraph example text</p>
+```
 
-<p>In the CSS we first include the following rules:</p>
+In the CSS we first include the following rules:
 
-<pre class="brush: css">// Give the two elements distinctive backgrounds
+```css
+// Give the two elements distinctive backgrounds
 p {
   background: yellow;
 }
@@ -70,30 +76,31 @@ simple-custom {
 // Both the custom and the built-in element are given italic text
 :defined {
   font-style: italic;
-}</pre>
+}
+```
 
-<p>Then provide the following two rules to hide any instances of our custom element that are not defined, and display instances that are defined as block level elements:</p>
+Then provide the following two rules to hide any instances of our custom element that are not defined, and display instances that are defined as block level elements:
 
-<pre class="brush: css">simple-custom:not(:defined) {
+```css
+simple-custom:not(:defined) {
   display: none;
 }
 
 simple-custom:defined {
   display: block;
-}</pre>
+}
+```
 
-<p>This is useful if you have a complex custom element that takes a while to load into the page — you might want to hide instances of the element until definition is complete, so that you don't end up with flashes of ugly unstyled elements on the page</p>
+This is useful if you have a complex custom element that takes a while to load into the page — you might want to hide instances of the element until definition is complete, so that you don't end up with flashes of ugly unstyled elements on the page
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/Web_Components">Web components</a></li>
-</ul>
+- [Web components](/en-US/docs/Web/Web_Components)

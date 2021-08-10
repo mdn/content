@@ -6,22 +6,21 @@ tags:
   - CSS Borders
   - CSS Property
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.border-top-style
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>border-top-style</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets the line style of an element's top {{CSSxRef("border")}}.</p>
+The **`border-top-style`** [CSS](/en-US/docs/Web/CSS) property sets the line style of an element's top {{CSSxRef("border")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/border-top-style.html")}}</div>
+{{EmbedInteractiveExample("pages/css/border-top-style.html")}}
 
-<div class="notecard note">
-<p><strong>Note:</strong> The specification doesn't define how borders of different styles connect in the corners.</p>
-</div>
+> **Note:** The specification doesn't define how borders of different styles connect in the corners.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 border-top-style: none;
 border-top-style: hidden;
 border-top-style: dotted;
@@ -38,46 +37,49 @@ border-top-style: inherit;
 border-top-style: initial;
 border-top-style: revert;
 border-top-style: unset;
-</pre>
+```
 
-<p>The <code>border-top-style</code> property is specified as a single keyword chosen from those available for the {{CSSxRef("border-style")}} property.</p>
+The `border-top-style` property is specified as a single keyword chosen from those available for the {{CSSxRef("border-style")}} property.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{CSSSyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_border-top-style">Setting border-top-style</h3>
+### Setting border-top-style
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;table&gt;
-  &lt;tr&gt;
-    &lt;td class="b1"&gt;none&lt;/td&gt;
-    &lt;td class="b2"&gt;hidden&lt;/td&gt;
-    &lt;td class="b3"&gt;dotted&lt;/td&gt;
-    &lt;td class="b4"&gt;dashed&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class="b5"&gt;solid&lt;/td&gt;
-    &lt;td class="b6"&gt;double&lt;/td&gt;
-    &lt;td class="b7"&gt;groove&lt;/td&gt;
-    &lt;td class="b8"&gt;ridge&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class="b9"&gt;inset&lt;/td&gt;
-    &lt;td class="b10"&gt;outset&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;</pre>
+```html
+<table>
+  <tr>
+    <td class="b1">none</td>
+    <td class="b2">hidden</td>
+    <td class="b3">dotted</td>
+    <td class="b4">dashed</td>
+  </tr>
+  <tr>
+    <td class="b5">solid</td>
+    <td class="b6">double</td>
+    <td class="b7">groove</td>
+    <td class="b8">ridge</td>
+  </tr>
+  <tr>
+    <td class="b9">inset</td>
+    <td class="b10">outset</td>
+  </tr>
+</table>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">/* Define look of the table */
+```css
+/* Define look of the table */
 table {
   border-width: 2px;
   background-color: #52E385;
@@ -96,23 +98,22 @@ tr, td {
 .b7 {border-top-style: groove;}
 .b8 {border-top-style: ridge;}
 .b9 {border-top-style: inset;}
-.b10 {border-top-style: outset;}</pre>
+.b10 {border-top-style: outset;}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Examples', 300, 200)}}</p>
+{{EmbedLiveSample('Examples', 300, 200)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The other style-related border properties: {{CSSxRef("border-left-style")}}, {{CSSxRef("border-right-style")}}, {{CSSxRef("border-bottom-style")}}, and {{CSSxRef("border-style")}}.</li>
- <li>The other top-border-related properties: {{CSSxRef("border-top")}}, {{CSSxRef("border-top-color")}}, and {{CSSxRef("border-top-width")}}.</li>
-</ul>
+- The other style-related border properties: {{CSSxRef("border-left-style")}}, {{CSSxRef("border-right-style")}}, {{CSSxRef("border-bottom-style")}}, and {{CSSxRef("border-style")}}.
+- The other top-border-related properties: {{CSSxRef("border-top")}}, {{CSSxRef("border-top-color")}}, and {{CSSxRef("border-top-width")}}.

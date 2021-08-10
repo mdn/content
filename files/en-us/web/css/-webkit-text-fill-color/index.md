@@ -6,14 +6,15 @@ tags:
   - CSS Property
   - Non-standard
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.-webkit-text-fill-color
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<p>The <strong><code>-webkit-text-fill-color</code></strong> CSS property specifies the fill <a href="/en-US/docs/Web/CSS/color_value">color</a> of characters of text. If this property is not set, the value of the {{cssxref("color")}} property is used.</p>
+The **`-webkit-text-fill-color`** CSS property specifies the fill [color](/en-US/docs/Web/CSS/color_value) of characters of text. If this property is not set, the value of the {{cssxref("color")}} property is used.
 
-<pre class="brush: css no-line-numbers">/* &lt;color&gt; values */
+```css
+/* <color> values */
 -webkit-text-fill-color: red;
 -webkit-text-fill-color: #000000;
 -webkit-text-fill-color: rgb(100, 200, 0);
@@ -22,61 +23,59 @@ browser-compat: css.properties.-webkit-text-fill-color
 -webkit-text-fill-color: inherit;
 -webkit-text-fill-color: initial;
 -webkit-text-fill-color: unset;
-</pre>
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>&lt;color&gt;</code></dt>
- <dd>The foreground fill color of the element's text content.</dd>
-</dl>
+- `<color>`
+  - : The foreground fill color of the element's text content.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Changing_the_fill_color">Changing the fill color</h3>
+### Changing the fill color
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css; highlight[4]">p {
+```css
+p {
   margin: 0;
   font-size: 3em;
   -webkit-text-fill-color: green;
 }
-</pre>
+```
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;This text is green.&lt;/p&gt;
-</pre>
+```html
+<p>This text is green.</p>
+```
 
-<h4 id="Results">Results</h4>
+#### Results
 
-<p>{{EmbedLiveSample("Changing_the_fill_color", "380px", "60px")}}</p>
+{{EmbedLiveSample("Changing_the_fill_color", "380px", "60px")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://www.webkit.org/blog/85/introducing-text-stroke/">Surfin' Safari blog post announcing this feature</a></li>
- <li><a href="https://css-tricks.com/adding-stroke-to-web-text/">CSS-Tricks article explaining this feature</a></li>
- <li>{{cssxref("-webkit-text-stroke-color")}}</li>
- <li>{{cssxref("-webkit-text-stroke-width")}}</li>
- <li>{{cssxref("-webkit-text-stroke")}}</li>
-</ul>
+- [Surfin' Safari blog post announcing this feature](https://www.webkit.org/blog/85/introducing-text-stroke/)
+- [CSS-Tricks article explaining this feature](https://css-tricks.com/adding-stroke-to-web-text/)
+- {{cssxref("-webkit-text-stroke-color")}}
+- {{cssxref("-webkit-text-stroke-width")}}
+- {{cssxref("-webkit-text-stroke")}}

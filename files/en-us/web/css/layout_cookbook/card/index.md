@@ -9,72 +9,70 @@ tags:
   - card
   - css layout
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<p>This pattern is a list of "card" components with optional footers.</p>
+This pattern is a list of "card" components with optional footers.
 
-<p><img alt="Three card components in a row" src="cards.png"></p>
+![Three card components in a row](cards.png)
 
-<h2 id="Requirements">Requirements</h2>
+## Requirements
 
-<p>The card component can contain a variety of content, including a heading, image, content and a footer.</p>
+The card component can contain a variety of content, including a heading, image, content and a footer.
 
-<p>Each card should be the same height, and footers should stick to the bottom of the card.</p>
+Each card should be the same height, and footers should stick to the bottom of the card.
 
-<p>When added to a collection of cards, the cards should line up in two dimensions.</p>
+When added to a collection of cards, the cards should line up in two dimensions.
 
-<h2 id="Recipe">Recipe</h2>
+## Recipe
 
-<p>{{EmbedGHLiveSample("css-examples/css-cookbook/card.html", '100%', 1720)}}</p>
+{{EmbedGHLiveSample("css-examples/css-cookbook/card.html", '100%', 1720)}}
 
-<div class="callout">
-<p><a href="https://github.com/mdn/css-examples/blob/master/css-cookbook/card--download.html">Download this example</a></p>
-</div>
+> **Callout:**
+>
+> [Download this example](https://github.com/mdn/css-examples/blob/master/css-cookbook/card--download.html)
 
-<h2 id="Choices_made">Choices made</h2>
+## Choices made
 
-<p>The card is laid out using <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a> despite being a single dimensional layout, as it enables the use of content sizing for the grid tracks. When setting up the single column grid I use the following:</p>
+The card is laid out using [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout) despite being a single dimensional layout, as it enables the use of content sizing for the grid tracks. When setting up the single column grid I use the following:
 
-<pre class="brush: css">.card {
+```css
+.card {
   display: grid;
   grid-template-rows: max-content 200px 1fr;
-}</pre>
+}
+```
 
-<p>The heading track is set to {{cssxref("max-content")}}, which prevents it from stretching. I have decided that I want my image to live within a track that is 200 pixels tall. I then set the next track — which is where the content lives — to <code>1fr</code>. This means it will take up any additional space. </p>
+The heading track is set to {{cssxref("max-content")}}, which prevents it from stretching. I have decided that I want my image to live within a track that is 200 pixels tall. I then set the next track — which is where the content lives — to `1fr`. This means it will take up any additional space.
 
-<p>If the track does have a footer it will be auto-sized, as rows created in the implicit grid are auto-sized by default. Therefore this will fit the content added to it.</p>
+If the track does have a footer it will be auto-sized, as rows created in the implicit grid are auto-sized by default. Therefore this will fit the content added to it.
 
-<div class="note">
-<p><strong>Note:</strong> The various elements in separate cards do not align with each other, as each card is an independent grid. The proposed subgrid feature of Grid Level 2 would give a solution to this issue.</p>
-</div>
+> **Note:** The various elements in separate cards do not align with each other, as each card is an independent grid. The proposed subgrid feature of Grid Level 2 would give a solution to this issue.
 
-<h2 id="Useful_fallbacks_or_alternative_methods">Useful fallbacks or alternative methods</h2>
+## Useful fallbacks or alternative methods
 
-<p><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">Flexbox</a> could be used to lay out the card, in which case you should make the content area grow, and other items not grow. This would be a reasonable way to lay out the card, although I have a slight preference for being able to control the tracks from the container rather than needing to add rules to the items.</p>
+[Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout) could be used to lay out the card, in which case you should make the content area grow, and other items not grow. This would be a reasonable way to lay out the card, although I have a slight preference for being able to control the tracks from the container rather than needing to add rules to the items.
 
-<p>For the overall layout you could use flexbox, however this will result in cards stretching over the final flex row where there are fewer than can fit in the rows above. Alternatively you could use <a href="/en-US/docs/Web/CSS/CSS_Columns">CSS multi-col</a> — this would cause the cards to lay out down the columns, which may or may not be a problem.</p>
+For the overall layout you could use flexbox, however this will result in cards stretching over the final flex row where there are fewer than can fit in the rows above. Alternatively you could use [CSS multi-col](/en-US/docs/Web/CSS/CSS_Columns) — this would cause the cards to lay out down the columns, which may or may not be a problem.
 
-<p>See the <a href="/en-US/docs/Web/CSS/Layout_cookbook/Column_layouts">columns recipe</a> for demonstrations of each of these layout methods.</p>
+See the [columns recipe](/en-US/docs/Web/CSS/Layout_cookbook/Column_layouts) for demonstrations of each of these layout methods.
 
-<h2 id="Accessibility_concerns">Accessibility concerns</h2>
+## Accessibility concerns
 
-<p>Depending on the content of your card there may be things you could, or should do to enhance accessibility. See <a href="https://inclusive-components.design/cards/">Inclusive Components: Card</a> by Heydon Pickering, for a very detailed explanation of these issues.</p>
+Depending on the content of your card there may be things you could, or should do to enhance accessibility. See [Inclusive Components: Card](https://inclusive-components.design/cards/) by Heydon Pickering, for a very detailed explanation of these issues.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>The various layout methods have different browser support. See the charts below for details on basic support for the properties used.</p>
+The various layout methods have different browser support. See the charts below for details on basic support for the properties used.
 
-<h4 id="grid-template-columns">grid-template-columns</h4>
+#### grid-template-columns
 
-<p>{{Compat("css.properties.grid-template-columns")}}</p>
+{{Compat("css.properties.grid-template-columns")}}
 
-<h4 id="grid-template-rows">grid-template-rows</h4>
+#### grid-template-rows
 
-<p>{{Compat("css.properties.grid-template-rows")}}</p>
+{{Compat("css.properties.grid-template-rows")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Cssxref("grid-template-columns")}}, {{Cssxref("grid-template-rows")}}, {{Cssxref("gap")}}</li>
- <li><a href="https://inclusive-components.design/cards/">Inclusive Components: Card</a></li>
-</ul>
+- {{Cssxref("grid-template-columns")}}, {{Cssxref("grid-template-rows")}}, {{Cssxref("gap")}}
+- [Inclusive Components: Card](https://inclusive-components.design/cards/)

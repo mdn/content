@@ -13,22 +13,22 @@ tags:
   - Web
 browser-compat: css.types.image.gradient.repeating-linear-gradient
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>repeating-linear-gradient()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Functions">function</a> creates an image consisting of repeating linear gradients. It is similar to {{cssxref("gradient/linear-gradient()")}} and takes the same arguments, but it repeats the color stops infinitely in all directions so as to cover its entire container. The function's result is an object of the {{cssxref("&lt;gradient&gt;")}} data type, which is a special kind of {{cssxref("&lt;image&gt;")}}.</p>
+The **`repeating-linear-gradient()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) creates an image consisting of repeating linear gradients. It is similar to {{cssxref("gradient/linear-gradient()")}} and takes the same arguments, but it repeats the color stops infinitely in all directions so as to cover its entire container. The function's result is an object of the {{cssxref("&lt;gradient&gt;")}} data type, which is a special kind of {{cssxref("&lt;image&gt;")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/function-repeating-linear-gradient.html")}}</div>
+{{EmbedInteractiveExample("pages/css/function-repeating-linear-gradient.html")}}
 
+The length of the gradient that repeats is the distance between the first and last color stop. If the first color does not have a color-stop-length, the color-stop-length defaults to 0. With each repetition, the positions of the color stops are shifted by a multiple of the length of the basic linear gradient. Thus, the position of each ending color stop coincides with a starting color stop; if the color values are different, this will result in a sharp visual transition. This can be altered with repeating the first color again as the last color.
 
-<p>The length of the gradient that repeats is the distance between the first and last color stop. If the first color does not have a color-stop-length, the color-stop-length defaults to 0. With each repetition, the positions of the color stops are shifted by a multiple of the length of the basic linear gradient. Thus, the position of each ending color stop coincides with a starting color stop; if the color values are different, this will result in a sharp visual transition. This can be altered with repeating the first color again as the last color.</p>
+As with any gradient, a repeating linear gradient has [no intrinsic dimensions](/en-US/docs/Web/CSS/image#description); i.e., it has no natural or preferred size, nor a preferred ratio. Its concrete size will match the size of the element it applies to.
 
-<p>As with any gradient, a repeating linear gradient has <a href="/en-US/docs/Web/CSS/image#description">no intrinsic dimensions</a>; i.e., it has no natural or preferred size, nor a preferred ratio. Its concrete size will match the size of the element it applies to.</p>
+Because `<gradient>`s belong to the `<image>` data type, they can only be used where `<image>`s can be used. For this reason, `repeating-linear-gradient()` won't work on {{Cssxref("background-color")}} and other properties that use the {{cssxref("&lt;color&gt;")}} data type.
 
-<p>Because <code>&lt;gradient&gt;</code>s belong to the <code>&lt;image&gt;</code> data type, they can only be used where <code>&lt;image&gt;</code>s can be used. For this reason, <code>repeating-linear-gradient()</code> won't work on {{Cssxref("background-color")}} and other properties that use the {{cssxref("&lt;color&gt;")}} data type.</p>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush: css no-line-numbers">/* A repeating gradient tilted 45 degrees,
+```css
+/* A repeating gradient tilted 45 degrees,
    starting blue and finishing red, repeating 3 times */
 repeating-linear-gradient(45deg, blue, red 33.3%);
 
@@ -45,50 +45,52 @@ repeating-linear-gradient(0deg, blue, green 40%, red);
 /* A gradient repeating five times, going from the left to right,
    starting red, turning green, and back to red */
 repeating-linear-gradient(to right, red 0%, green 10%, red 20%);
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>&lt;side-or-corner&gt;</code></dt>
- <dd>
-   <p>The position of the gradient line's starting point. If specified, it consists of the word <code>to</code> and up to two keywords: one indicates the horizontal side (<code>left</code> or <code>right</code>), and the other the vertical side (<code>top</code> or <code>bottom</code>). The order of the side keywords does not matter. If unspecified, it defaults to <code>to bottom</code>.</p>
-   <p>The values <code>to top</code>, <code>to bottom</code>, <code>to left</code>, and <code>to right</code> are equivalent to the angles <code>0deg</code>, <code>180deg</code>, <code>270deg</code>, and <code>90deg</code> respectively. The other values are translated into an angle.</p>
- </dd>
- <dt>{{cssxref("&lt;angle&gt;")}}</dt>
- <dd>The gradient line's angle of direction. A value of <code>0deg</code> is equivalent to <code>to top</code>; increasing values rotate clockwise from there.</dd>
- <dt><code>&lt;linear-color-stop&gt;</code></dt>
- <dd>A color-stop's {{CSSxRef("&lt;color&gt;")}} value, followed by one or two optional stop positions, (each being either a {{CSSxRef("&lt;percentage&gt;")}} or a {{CSSxRef("&lt;length&gt;")}} along the gradient's axis). A percentage of <code>0%</code>, or a length of <code>0</code>, represents the start of the gradient; the value <code>100%</code> is 100% of the image size, meaning the gradient will not repeat.</dd>
- <dt><code>&lt;color-hint&gt;</code></dt>
- <dd>Th color-hint is an interpolation hint defining how the gradient progresses between adjacent color stops. The length defines at which point between two color stops the gradient color should reach the midpoint of the color transition. If omitted, the midpoint of the color transition is the midpoint between two color stops.</dd>
-</dl>
-<div class="note">
- <p><strong>Note:</strong> Rendering of <a href="#gradient_with_multiple_color_stops">color stops in CSS gradients</a> follows the same rules as color stops in <a href="/en-US/docs/Web/SVG/Tutorial/Gradients">SVG gradients</a>.</p>
-</div>
+- `<side-or-corner>`
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+  - : The position of the gradient line's starting point. If specified, it consists of the word `to` and up to two keywords: one indicates the horizontal side (`left` or `right`), and the other the vertical side (`top` or `bottom`). The order of the side keywords does not matter. If unspecified, it defaults to `to bottom`.
 
-<pre class="brush: css">repeating-linear-gradient(  [ <a href="/en-US/docs/Web/CSS/angle">&lt;angle&gt;</a> | to &lt;side-or-corner&gt; ,]? &lt;color-stop-list&gt; )
+    The values `to top`, `to bottom`, `to left`, and `to right` are equivalent to the angles `0deg`, `180deg`, `270deg`, and `90deg` respectively. The other values are translated into an angle.
+
+- {{cssxref("&lt;angle&gt;")}}
+  - : The gradient line's angle of direction. A value of `0deg` is equivalent to `to top`; increasing values rotate clockwise from there.
+- `<linear-color-stop>`
+  - : A color-stop's {{CSSxRef("&lt;color&gt;")}} value, followed by one or two optional stop positions, (each being either a {{CSSxRef("&lt;percentage&gt;")}} or a {{CSSxRef("&lt;length&gt;")}} along the gradient's axis). A percentage of `0%`, or a length of `0`, represents the start of the gradient; the value `100%` is 100% of the image size, meaning the gradient will not repeat.
+- `<color-hint>`
+  - : Th color-hint is an interpolation hint defining how the gradient progresses between adjacent color stops. The length defines at which point between two color stops the gradient color should reach the midpoint of the color transition. If omitted, the midpoint of the color transition is the midpoint between two color stops.
+
+> **Note:** Rendering of [color stops in CSS gradients](#gradient_with_multiple_color_stops) follows the same rules as color stops in [SVG gradients](/en-US/docs/Web/SVG/Tutorial/Gradients).
+
+### Formal syntax
+
+```css
+repeating-linear-gradient(  [ <angle> | to <side-or-corner> ,]? <color-stop-list> )
                             \---------------------------------/ \---------------/
                               Definition of the gradient line   List of color stops
 
-where &lt;side-or-corner&gt; = [left | right] || [top | bottom]
-  and &lt;color-stop-list&gt; = [ &lt;linear-color-stop&gt; [, &lt;color-hint&gt;? ]? ]#, &lt;linear-color-stop&gt;
-  and &lt;linear-color-stop&gt; = &lt;color&gt; [ &lt;color-stop-length&gt; ]?
-  and &lt;color-stop-length&gt; = [ &lt;percentage&gt; | &lt;length&gt; ]{1,2}
-  and &lt;color-hint&gt; = [ &lt;percentage&gt; | &lt;length&gt; ]
-</pre>
+where <side-or-corner> = [left | right] || [top | bottom]
+  and <color-stop-list> = [ <linear-color-stop> [, <color-hint>? ]? ]#, <linear-color-stop>
+  and <linear-color-stop> = <color> [ <color-stop-length> ]?
+  and <color-stop-length> = [ <percentage> | <length> ]{1,2}
+  and <color-hint> = [ <percentage> | <length> ]
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Zebra_stripes">Zebra stripes</h3>
+### Zebra stripes
 
-<pre class="brush: css hidden">body {
+```css hidden
+body {
   width: 100vw;
   height: 100vh;
-}</pre>
+}
+```
 
-<pre class="brush: css">body {
+```css
+body {
   background-image: repeating-linear-gradient(-45deg,
       transparent,
       transparent 20px,
@@ -99,49 +101,48 @@ where &lt;side-or-corner&gt; = [left | right] || [top | bottom]
       transparent 0 20px,
       black 20px 40px);
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample('Zebra_stripes', 120, 120)}}</p>
+{{EmbedLiveSample('Zebra_stripes', 120, 120)}}
 
-<h3 id="Ten_repeating_horizontal_bars">Ten repeating horizontal bars</h3>
+### Ten repeating horizontal bars
 
-<pre class="brush: css hidden">body {
+```css hidden
+body {
   width: 100vw;
   height: 100vh;
-}</pre>
+}
+```
 
-<pre class="brush: css">body {
+```css
+body {
   background-image: repeating-linear-gradient(to bottom,
       rgb(26,198,204),
       rgb(26,198,204) 7%,
       rgb(100,100,100) 10%);
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample('Ten_repeating_horizontal_bars', 120, 120)}}</p>
+{{EmbedLiveSample('Ten_repeating_horizontal_bars', 120, 120)}}
 
-<p>Because the last color stop is 10% and the gradient is vertical, each gradient in the repeated gradient is 10% of the height, fitting 10 horizontal bars.</p>
+Because the last color stop is 10% and the gradient is vertical, each gradient in the repeated gradient is 10% of the height, fitting 10 horizontal bars.
 
-<div class="note">
-<p><strong>Note:</strong> Please see <a href="/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients">Using CSS gradients</a> for more examples.</p>
-</div>
+> **Note:** Please see [Using CSS gradients](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients) for more examples.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients">Using CSS gradients</a></li>
- <li>Other gradient functions: {{cssxref("gradient/linear-gradient()")}}, {{cssxref("gradient/radial-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient()")}}, {{cssxref("gradient/conic-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient()")}}</li>
- <li>{{cssxref("&lt;image&gt;")}}</li>
- <li>{{cssxref("image()","image()")}}</li>
- <li>{{cssxref("element()")}}</li>
- <li>{{cssxref("image-set()","image-set()")}}</li>
- <li>{{cssxref("cross-fade()")}}</li>
-</ul>
+- [Using CSS gradients](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
+- Other gradient functions: {{cssxref("gradient/linear-gradient()")}}, {{cssxref("gradient/radial-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient()")}}, {{cssxref("gradient/conic-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient()")}}
+- {{cssxref("&lt;image&gt;")}}
+- {{cssxref("image()","image()")}}
+- {{cssxref("element()")}}
+- {{cssxref("image-set()","image-set()")}}
+- {{cssxref("cross-fade()")}}

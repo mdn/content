@@ -9,93 +9,87 @@ tags:
   - media feature
 browser-compat: css.at-rules.media.forced-colors
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>forced-colors</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features">media feature</a> is used to detect if the {{Glossary("user agent")}} has enabled a forced colors mode where it enforces a user-chosen limited color palette on the page. An example of a forced colors mode is Windows High Contrast mode.</p>
+The **`forced-colors`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) is used to detect if the {{Glossary("user agent")}} has enabled a forced colors mode where it enforces a user-chosen limited color palette on the page. An example of a forced colors mode is Windows High Contrast mode.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>forced-colors</code> media feature indicates whether or not the browser is currently in forced-colors mode.</p>
+The `forced-colors` media feature indicates whether or not the browser is currently in forced-colors mode.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code><dfn>none</dfn></code></dt>
- <dd>Forced colors mode is not active; the page’s colors are not being forced into a limited palette.</dd>
- <dt><code>active</code></dt>
- <dd>Indicates that forced colors mode is active. The browser provides the color palette to authors through the <a href="/en-US/docs/Web/CSS/color_value#system_colors">CSS system color</a> keywords and, if appropriate, triggers the appropriate value of <code><a href="/en-US/docs/Web/CSS/@media/prefers-color-scheme">prefers-color-scheme</a></code> so that authors can adapt the page. The browser selects the value for <code>prefers-color-scheme</code> based on the lightness of the <code>Canvas</code> system color (see the <a href="https://www.w3.org/TR/css-color-adjust-1/#forced">color adjust spec</a> for more details).</dd>
-</dl>
+- `none`
+  - : Forced colors mode is not active; the page’s colors are not being forced into a limited palette.
+- `active`
+  - : Indicates that forced colors mode is active. The browser provides the color palette to authors through the [CSS system color](/en-US/docs/Web/CSS/color_value#system_colors) keywords and, if appropriate, triggers the appropriate value of [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme) so that authors can adapt the page. The browser selects the value for `prefers-color-scheme` based on the lightness of the `Canvas` system color (see the [color adjust spec](https://www.w3.org/TR/css-color-adjust-1/#forced) for more details).
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<h3 id="Properties_affected_by_forced-color_mode">Properties affected by forced-color mode</h3>
+### Properties affected by forced-color mode
 
-<p>In forced colors mode, the values of the following properties are treated as if they have no author-level values specified. That is, browser-specified values are used instead. The browser-specified values do not affect the style cascade; the values are instead forced by the browser at paint time.</p>
+In forced colors mode, the values of the following properties are treated as if they have no author-level values specified. That is, browser-specified values are used instead. The browser-specified values do not affect the style cascade; the values are instead forced by the browser at paint time.
 
-<p>These browser-specified values are selected from the set of system colors &mdash; this ensures a consistent contrast for common UI elements for users that have forced colors enabled.</p>
+These browser-specified values are selected from the set of system colors — this ensures a consistent contrast for common UI elements for users that have forced colors enabled.
 
-<ul>
- <li>{{cssxref("color")}}</li>
- <li>{{cssxref("background-color")}}</li>
- <li>{{cssxref("text-decoration-color")}}</li>
- <li>{{cssxref("text-emphasis-color")}}</li>
- <li>{{cssxref("border-color")}}</li>
- <li>{{cssxref("outline-color")}}</li>
- <li>{{cssxref("column-rule-color")}}</li>
- <li>{{cssxref("-webkit-tap-highlight-color")}}</li>
- <li><a href="/en-US/docs/Web/SVG/Attribute/fill">SVG fill attribute</a></li>
- <li><a href="/en-US/docs/Web/SVG/Attribute/stroke">SVG stroke attribute</a></li>
-</ul>
+- {{cssxref("color")}}
+- {{cssxref("background-color")}}
+- {{cssxref("text-decoration-color")}}
+- {{cssxref("text-emphasis-color")}}
+- {{cssxref("border-color")}}
+- {{cssxref("outline-color")}}
+- {{cssxref("column-rule-color")}}
+- {{cssxref("-webkit-tap-highlight-color")}}
+- [SVG fill attribute](/en-US/docs/Web/SVG/Attribute/fill)
+- [SVG stroke attribute](/en-US/docs/Web/SVG/Attribute/stroke)
 
-<p>Additionally the following properties have special behavior in forced colors mode:</p>
-<ul>
- <li>{{cssxref("box-shadow")}} is forced to 'none'</li>
- <li>{{cssxref("text-shadow")}} is forced to 'none'</li>
- <li>{{cssxref("background-image")}} is forced to 'none' for values that are not url-based</li>
- <li>{{cssxref("color-scheme")}} is forced to 'light dark'</li>
- <li>{{cssxref("scrollbar-color")}} is forced to 'auto'</li>
-</ul>
+Additionally the following properties have special behavior in forced colors mode:
 
-<p>The system colors that are forced for the above properties depend on the context of the element. For example the {{cssxref("color")}} property on button element will be forced to <code>ButtonText</code>. On normal text it will be forced to <code>CanvasText</code>. See the <a href="/en-US/docs/Web/CSS/color_value#system_colors">list of system colors</a> for additional details of when each might be appropriate in various UI contexts.</p>
+- {{cssxref("box-shadow")}} is forced to 'none'
+- {{cssxref("text-shadow")}} is forced to 'none'
+- {{cssxref("background-image")}} is forced to 'none' for values that are not url-based
+- {{cssxref("color-scheme")}} is forced to 'light dark'
+- {{cssxref("scrollbar-color")}} is forced to 'auto'
 
-<p><strong>Note:</strong> user agents choose system colors based on native element semantics, <em>not</em> on added ARIA roles. As an example, adding <code>role="button"</code> to a div will <strong>not</strong> cause an element's color to be forced to <code>ButtonText</code></p>
+The system colors that are forced for the above properties depend on the context of the element. For example the {{cssxref("color")}} property on button element will be forced to `ButtonText`. On normal text it will be forced to `CanvasText`. See the [list of system colors](/en-US/docs/Web/CSS/color_value#system_colors) for additional details of when each might be appropriate in various UI contexts.
 
-<p>In addition to these adjustments, browsers will help ensure text legibility by drawing “backplates” behind text. This is particularly important for preserving contrast when text is placed on top of images.
-</p>
+**Note:** user agents choose system colors based on native element semantics, _not_ on added ARIA roles. As an example, adding `role="button"` to a div will **not** cause an element's color to be forced to `ButtonText`
 
-<p>There are two cases where the user agent does not force the values for the above properties &mdash; when a {{cssxref("forced-color-adjust")}} value of <code>none</code> is applied to an element, or when a system color is specified by the author.</p>
+In addition to these adjustments, browsers will help ensure text legibility by drawing “backplates” behind text. This is particularly important for preserving contrast when text is placed on top of images.
 
-<p>When forced-color-adjust is set to <code>none</code> on an element, none of the forced color values will apply, and author styles will be applied as normal. Additionally, the backplate for text will be disabled.</p>
+There are two cases where the user agent does not force the values for the above properties — when a {{cssxref("forced-color-adjust")}} value of `none` is applied to an element, or when a system color is specified by the author.
 
-<p>When a system color is specified, it will be used instead of the value that would otherwise have been forced.</p>
+When forced-color-adjust is set to `none` on an element, none of the forced color values will apply, and author styles will be applied as normal. Additionally, the backplate for text will be disabled.
 
-<p>You can also use system colors with any property <em>other</em> than those listed above, to ensure that the rest of the page integrates with the restricted color palette available in forced colors mode.</p>
+When a system color is specified, it will be used instead of the value that would otherwise have been forced.
 
-<h3 id="Accessibility_concerns">Accessibility concerns</h3>
+You can also use system colors with any property _other_ than those listed above, to ensure that the rest of the page integrates with the restricted color palette available in forced colors mode.
 
-<p>In general, web authors should <strong>not</strong> be using the <code>forced-colors</code> media feature to create a separate design for users with this feature enabled. Instead, its intended usage is to make small tweaks to improve usability or legibility when the default application of forced colors does not work well for a given portion of a page.</p>
+### Accessibility concerns
 
-<p>The high contrast provided by forced colors mode's reduced palette and text backplates is often essential for some users to be able to read or use a given website, so adjustments that affect content should be chosen carefully and targeted to content that is otherwise not legible.</p>
+In general, web authors should **not** be using the `forced-colors` media feature to create a separate design for users with this feature enabled. Instead, its intended usage is to make small tweaks to improve usability or legibility when the default application of forced colors does not work well for a given portion of a page.
 
-<h3 id="User_preferences">User preferences</h3>
+The high contrast provided by forced colors mode's reduced palette and text backplates is often essential for some users to be able to read or use a given website, so adjustments that affect content should be chosen carefully and targeted to content that is otherwise not legible.
 
-<p>This media feature is active only if the user has enabled color scheme preferences in their operating system. One example of such a feature is High Contrast mode on Windows.</p>
+### User preferences
 
-<h2 id="Examples">Examples</h2>
+This media feature is active only if the user has enabled color scheme preferences in their operating system. One example of such a feature is High Contrast mode on Windows.
 
-<div class="notecard note">
-<p><strong>Note:</strong> The below example will only work when using a browser that supports this media feature, and with a preference such as High Contrast mode enabled in your OS.</p>
-</div>
+## Examples
 
-<p>This example is a button that normally gets its contrast via {{cssxref("box-shadow")}}. Under forced colors mode, box-shadow is forced to none, so the example uses the forced-colors media feature to ensure there is a border of the appropriate color (ButtonText in this case)</p>
+> **Note:** The below example will only work when using a browser that supports this media feature, and with a preference such as High Contrast mode enabled in your OS.
 
-<h3 id="HTML">HTML</h3>
-<pre class="brush: html">&lt;button class="button"&gt;Press me!&lt;/button&gt;
-</pre>
+This example is a button that normally gets its contrast via {{cssxref("box-shadow")}}. Under forced colors mode, box-shadow is forced to none, so the example uses the forced-colors media feature to ensure there is a border of the appropriate color (ButtonText in this case)
 
-<h3 id="CSS">CSS</h3>
+### HTML
 
-<pre class="brush: css">
+```html
+<button class="button">Press me!</button>
+```
+
+### CSS
+
+```css
 .button {
   border: 0;
   padding: 10px;
@@ -108,24 +102,22 @@ browser-compat: css.at-rules.media.forced-colors
     border: 2px ButtonText solid;
   }
 }
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Examples")}}</p>
+{{EmbedLiveSample("Examples")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/CSS/@media">@media</a></li>
-  <li><a href="https://blogs.windows.com/msedgedev/2020/09/17/styling-for-windows-high-contrast-with-new-standards-for-forced-colors/">Styling for Windows high contrast with standards for forced colors.</a></li>
-  <li>{{cssxref("forced-color-adjust")}}</li>
-</ul>
+- [@media](/en-US/docs/Web/CSS/@media)
+- [Styling for Windows high contrast with standards for forced colors.](https://blogs.windows.com/msedgedev/2020/09/17/styling-for-windows-high-contrast-with-new-standards-for-forced-colors/)
+- {{cssxref("forced-color-adjust")}}

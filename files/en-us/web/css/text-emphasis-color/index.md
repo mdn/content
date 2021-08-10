@@ -10,18 +10,19 @@ tags:
   - Reference
   - Styling HTML
   - Text Emphasis
-  - 'recipe:css-property'
+  - recipe:css-property
   - text-decoration-color
 browser-compat: css.properties.text-emphasis-color
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>text-emphasis-color</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets the color of emphasis marks. This value can also be set using the {{cssxref("text-emphasis")}} shorthand.</p>
+The **`text-emphasis-color`** [CSS](/en-US/docs/Web/CSS) property sets the color of emphasis marks. This value can also be set using the {{cssxref("text-emphasis")}} shorthand.
 
-<pre class="brush:css no-line-numbers">/* Initial value */
+```css
+/* Initial value */
 text-emphasis-color: currentcolor;
 
-/* &lt;color&gt; */
+/* <color> */
 text-emphasis-color: #555;
 text-emphasis-color: blue;
 text-emphasis-color: rgba(90, 200, 160, 0.8);
@@ -32,60 +33,59 @@ text-emphasis-color: inherit;
 text-emphasis-color: initial;
 text-emphasis-color: revert;
 text-emphasis-color: unset;
-</pre>
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>&lt;color&gt;</code></dt>
- <dd>Defines the color of the emphasis marks. If no color is present, it defaults to <code>currentcolor</code>.</dd>
-</dl>
+- `<color>`
+  - : Defines the color of the emphasis marks. If no color is present, it defaults to `currentcolor`.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Emphasis_with_a_color_and_custom_character">Emphasis with a color and custom character</h3>
+### Emphasis with a color and custom character
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">em {
+```css
+em {
   text-emphasis-color: green;
   text-emphasis-style: "*";
-}</pre>
+}
+```
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;Here's an example:&lt;/p&gt;
+```html
+<p>Here's an example:</p>
 
-&lt;em&gt;This has emphasis marks!&lt;/em&gt;
-</pre>
+<em>This has emphasis marks!</em>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Emphasis_with_a_color_and_custom_character", 450, 100)}}</p>
+{{EmbedLiveSample("Emphasis_with_a_color_and_custom_character", 450, 100)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The {{cssxref("&lt;color&gt;")}} data type</li>
- <li>The other emphasis mark related properties: {{cssxref('text-emphasis-style')}}, {{cssxref('text-emphasis')}}, and {{cssxref("text-emphasis-position")}}.</li>
- <li>Other color-related properties: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}</li>
- <li><a href="/en-US/docs/Web/HTML/Applying_color">Applying color to HTML elements using CSS</a></li>
-</ul>
+- The {{cssxref("&lt;color&gt;")}} data type
+- The other emphasis mark related properties: {{cssxref('text-emphasis-style')}}, {{cssxref('text-emphasis')}}, and {{cssxref("text-emphasis-position")}}.
+- Other color-related properties: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}
+- [Applying color to HTML elements using CSS](/en-US/docs/Web/HTML/Applying_color)

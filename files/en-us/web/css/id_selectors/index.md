@@ -8,53 +8,59 @@ tags:
   - Selectors
 browser-compat: css.selectors.id
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The CSS <strong>ID selector</strong> matches an element based on the value of the element’s {{htmlattrxref("id")}} attribute. In order for the element to be selected, its <code>id</code> attribute must match exactly the value given in the selector.</p>
+The CSS **ID selector** matches an element based on the value of the element’s {{htmlattrxref("id")}} attribute. In order for the element to be selected, its `id` attribute must match exactly the value given in the selector.
 
-<pre class="brush: css no-line-numbers">/* The element with id="demo" */
+```css
+/* The element with id="demo" */
 #demo {
   border: red 2px solid;
-}</pre>
+}
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">#id_value { <em>style properties</em> }</pre>
+```css
+#id_value { style properties }
+```
 
-<p>Note that syntactically (but not specificity-wise), this is equivalent to the following {{Cssxref("Attribute_selectors", "attribute selector")}}:</p>
+Note that syntactically (but not specificity-wise), this is equivalent to the following {{Cssxref("Attribute_selectors", "attribute selector")}}:
 
-<pre class="brush: css">[id=id_value] { <em>style properties</em> }</pre>
+```css
+[id=id_value] { style properties }
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">#identified {
+```css
+#identified {
   background-color: skyblue;
 }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div id="identified"&gt;This div has a special ID on it!&lt;/div&gt;
-&lt;div&gt;This is just a regular div.&lt;/div&gt;
-</pre>
+```html
+<div id="identified">This div has a special ID on it!</div>
+<div>This is just a regular div.</div>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Examples", '100%', 50)}}</p>
+{{EmbedLiveSample("Examples", '100%', 50)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Selectors">CSS Selectors</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors">Learn CSS: Selectors</a></li>
-</ul>
+- [CSS Selectors](/en-US/docs/Web/CSS/CSS_Selectors)
+- [Learn CSS: Selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors)

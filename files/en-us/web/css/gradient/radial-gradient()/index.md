@@ -13,140 +13,129 @@ tags:
   - gradient
 browser-compat: css.types.image.gradient.radial-gradient
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>radial-gradient()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Functions">function</a> creates an image consisting of a progressive transition between two or more colors that radiate from an origin. Its shape may be a circle or an ellipse. The function's result is an object of the {{cssxref("&lt;gradient&gt;")}} data type, which is a special kind of {{cssxref("&lt;image&gt;")}}.</p>
+The **`radial-gradient()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) creates an image consisting of a progressive transition between two or more colors that radiate from an origin. Its shape may be a circle or an ellipse. The function's result is an object of the {{cssxref("&lt;gradient&gt;")}} data type, which is a special kind of {{cssxref("&lt;image&gt;")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/function-radial-gradient.html")}}</div>
+{{EmbedInteractiveExample("pages/css/function-radial-gradient.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush: css no-line-numbers">/* A gradient at the center of its container,
+```css
+/* A gradient at the center of its container,
    starting red, changing to blue, and finishing green */
-radial-gradient(circle at center, red 0, blue, green 100%)</pre>
+radial-gradient(circle at center, red 0, blue, green 100%)
+```
 
-<p>A radial gradient is specified by indicating the center of the gradient (where the 0% ellipse will be) and the size and shape of the <dfn>ending shape</dfn> (the 100% ellipse). </p>
+A radial gradient is specified by indicating the center of the gradient (where the 0% ellipse will be) and the size and shape of the *ending shape* (the 100% ellipse).
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt>{{cssxref("&lt;position&gt;")}}</dt>
- <dd>The position of the gradient, interpreted in the same way as {{cssxref("background-position")}} or {{cssxref("transform-origin")}}. If unspecified, it defaults to <code>center</code>.</dd>
- <dt><code>&lt;ending-shape&gt;</code></dt>
- <dd>The gradient's ending-shape. The value can be <code>circle</code> (meaning that the gradient's shape is a circle with a constant radius) or <code>ellipse</code> (meaning that the shape is an axis-aligned ellipse). If unspecified, it defaults to <code>ellipse</code>.</dd>
- <dt><code>&lt;size&gt;</code></dt>
- <dd>Determines the size of the gradient’s ending shape. If omitted it defaults to farthest-corner. It can be given explicitly or by keyword. For the purpose of the keyword definitions, consider the gradient box edges as extending infinitely in both directions, rather than being finite line segments.<br>
- <br>
- Both circle and ellipse gradients accept the following keywords for their <code>&lt;size&gt;</code>:
- <table class="standard-table">
-  <thead>
-   <tr>
-    <th>Keyword</th>
-    <th>Description</th>
-   </tr>
-  </thead>
-  <tbody>
-   <tr>
-    <td><code>closest-side</code></td>
-    <td>The gradient's ending shape meets the side of the box closest to its center (for circles) or meets both the vertical and horizontal sides closest to the center (for ellipses).</td>
-   </tr>
-   <tr>
-    <td><code>closest-corner</code></td>
-    <td>The gradient's ending shape is sized so that it exactly meets the closest corner of the box from its center.</td>
-   </tr>
-   <tr>
-    <td><code>farthest-side</code></td>
-    <td>Similar to <code>closest-side</code>, except the ending shape is sized to meet the side of the box farthest from its center (or vertical and horizontal sides).</td>
-   </tr>
-   <tr>
-    <td><code>farthest-corner</code></td>
-    <td>The default value, the gradient's ending shape is sized so that it exactly meets the farthest corner of the box from its center.</td>
-   </tr>
-  </tbody>
- </table>
+- {{cssxref("&lt;position&gt;")}}
+  - : The position of the gradient, interpreted in the same way as {{cssxref("background-position")}} or {{cssxref("transform-origin")}}. If unspecified, it defaults to `center`.
+- `<ending-shape>`
+  - : The gradient's ending-shape. The value can be `circle` (meaning that the gradient's shape is a circle with a constant radius) or `ellipse` (meaning that the shape is an axis-aligned ellipse). If unspecified, it defaults to `ellipse`.
+- `<size>`
 
- <p>If <code>&lt;ending-shape&gt;</code> is specified as <code>circle</code> or is omitted, the size may be given explicitly as a <code><a href="/en-US/docs/Web/CSS/length">&lt;length&gt;</a></code>, which provides an explicit circle radius. Negative values are invalid.<br>
-  <br>
-  If <code>&lt;ending-shape&gt;</code> is specified as <code>ellipse</code> or is omitted, the size may be given as a <code><a href="/en-US/docs/Web/CSS/length-percentage">&lt;length-percentage&gt;</a></code> with two values to provide an explicit ellipse size. The first value represents the horizontal radius, the second the vertical radius. Percentages values are relative to the corresponding dimension of the gradient box. Negative values are invalid.</p>
- </dd>
- <dt><code>&lt;linear-color-stop&gt;</code></dt>
- <dd>A color-stop's {{cssxref("&lt;color&gt;")}} value, followed by an one or two optional stop positions (either a {{cssxref("&lt;percentage&gt;")}} or a {{cssxref("&lt;length&gt;")}} along the gradient's axis). A percentage of <code>0%</code>, or a length of <code>0</code>, represents the center of the gradient; the value <code>100%</code> represents the intersection of the ending shape with the virtual gradient ray. Percentage values in between are linearly positioned on the gradient ray. Including two stop positions is equivalent to declaring two color stops with the same color at the two positions.</dd>
- <dt><code>&lt;color-hint&gt;</code></dt>
- <dd>Th color-hint is an interpolation hint defining how the gradient progresses between adjacent color stops. The length defines at which point between two color stops the gradient color should reach the midpoint of the color transition. If omitted, the midpoint of the color transition is the midpoint between two color stops.</dd>
-</dl>
+  - : Determines the size of the gradient’s ending shape. If omitted it defaults to farthest-corner. It can be given explicitly or by keyword. For the purpose of the keyword definitions, consider the gradient box edges as extending infinitely in both directions, rather than being finite line segments.
 
-<h2 id="Description">Description</h2>
+    Both circle and ellipse gradients accept the following keywords for their `<size>`:
 
-<p>As with any gradient, a radial gradient has <a href="/en-US/docs/Web/CSS/image#description">no intrinsic dimensions</a>; i.e., it has no natural or preferred size, nor a preferred ratio. Its concrete size will match the size of the element it applies to.</p>
+    | Keyword           | Description                                                                                                                                                                     |
+    | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+    | `closest-side`    | The gradient's ending shape meets the side of the box closest to its center (for circles) or meets both the vertical and horizontal sides closest to the center (for ellipses). |
+    | `closest-corner`  | The gradient's ending shape is sized so that it exactly meets the closest corner of the box from its center.                                                                    |
+    | `farthest-side`   | Similar to `closest-side`, except the ending shape is sized to meet the side of the box farthest from its center (or vertical and horizontal sides).                            |
+    | `farthest-corner` | The default value, the gradient's ending shape is sized so that it exactly meets the farthest corner of the box from its center.                                                |
 
-<p>To create a radial gradient that repeats so as to fill its container, use the {{cssxref("gradient/repeating-radial-gradient()")}} function instead.</p>
+    If `<ending-shape>` is specified as `circle` or is omitted, the size may be given explicitly as a [`<length>`](/en-US/docs/Web/CSS/length), which provides an explicit circle radius. Negative values are invalid.
 
-<p>Because <code>&lt;gradient&gt;</code>s belong to the <code>&lt;image&gt;</code> data type, they can only be used where <code>&lt;image&gt;</code>s can be used. For this reason, <code>radial-gradient()</code> won't work on {{Cssxref("background-color")}} and other properties that use the {{cssxref("&lt;color&gt;")}} data type.</p>
+    If `<ending-shape>` is specified as `ellipse` or is omitted, the size may be given as a [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) with two values to provide an explicit ellipse size. The first value represents the horizontal radius, the second the vertical radius. Percentages values are relative to the corresponding dimension of the gradient box. Negative values are invalid.
 
-<h3 id="Composition_of_a_radial_gradient">Composition of a radial gradient</h3>
+- `<linear-color-stop>`
+  - : A color-stop's {{cssxref("&lt;color&gt;")}} value, followed by an one or two optional stop positions (either a {{cssxref("&lt;percentage&gt;")}} or a {{cssxref("&lt;length&gt;")}} along the gradient's axis). A percentage of `0%`, or a length of `0`, represents the center of the gradient; the value `100%` represents the intersection of the ending shape with the virtual gradient ray. Percentage values in between are linearly positioned on the gradient ray. Including two stop positions is equivalent to declaring two color stops with the same color at the two positions.
+- `<color-hint>`
+  - : Th color-hint is an interpolation hint defining how the gradient progresses between adjacent color stops. The length defines at which point between two color stops the gradient color should reach the midpoint of the color transition. If omitted, the midpoint of the color transition is the midpoint between two color stops.
 
-<p><img alt="" src="radial_gradient.png">A radial gradient is defined by a <em>center point</em>, an <em>ending shape</em>, and two or more <em>color-stop points</em>.</p>
+## Description
 
-<p>To create a smooth gradient, the <code>radial-gradient()</code> function draws a series of concentric shapes radiating out from the center to the <em>ending shape</em> (and potentially beyond). The ending shape may be either a circle or an ellipse.</p>
+As with any gradient, a radial gradient has [no intrinsic dimensions](/en-US/docs/Web/CSS/image#description); i.e., it has no natural or preferred size, nor a preferred ratio. Its concrete size will match the size of the element it applies to.
 
-<p>Color-stop points are positioned on a <em>virtual gradient ray</em> that extends horizontally from the center towards the right. Percentage-based color-stop positions are relative to the intersection between the ending shape and this gradient ray, which represents <code>100%</code>. Each shape is a single color determined by the color on the gradient ray it intersects.</p>
+To create a radial gradient that repeats so as to fill its container, use the {{cssxref("gradient/repeating-radial-gradient()")}} function instead.
 
-<h2 id="Examples">Examples</h2>
+Because `<gradient>`s belong to the `<image>` data type, they can only be used where `<image>`s can be used. For this reason, `radial-gradient()` won't work on {{Cssxref("background-color")}} and other properties that use the {{cssxref("&lt;color&gt;")}} data type.
 
-<h3 id="Simple_gradient">Simple gradient</h3>
+### Composition of a radial gradient
 
-<pre class="brush: html hidden">&lt;div class="radial-gradient"&gt;&lt;/div&gt;
-</pre>
+![](radial_gradient.png)A radial gradient is defined by a _center point_, an _ending shape_, and two or more _color-stop points_.
 
-<pre class="brush: css hidden">.radial-gradient {
+To create a smooth gradient, the `radial-gradient()` function draws a series of concentric shapes radiating out from the center to the _ending shape_ (and potentially beyond). The ending shape may be either a circle or an ellipse.
+
+Color-stop points are positioned on a _virtual gradient ray_ that extends horizontally from the center towards the right. Percentage-based color-stop positions are relative to the intersection between the ending shape and this gradient ray, which represents `100%`. Each shape is a single color determined by the color on the gradient ray it intersects.
+
+## Examples
+
+### Simple gradient
+
+```html hidden
+<div class="radial-gradient"></div>
+```
+
+```css hidden
+.radial-gradient {
   width: 240px;
   height: 120px;
-}</pre>
+}
+```
 
-<pre class="brush: css">.radial-gradient {
+```css
+.radial-gradient {
   background-image: radial-gradient(cyan 0%, transparent 20%, salmon 40%);
-} </pre>
+} 
+```
 
-<p>{{EmbedLiveSample('Simple_gradient', 120, 120)}}</p>
+{{EmbedLiveSample('Simple_gradient', 120, 120)}}
 
-<h3 id="Non-centered_gradient">Non-centered gradient</h3>
+### Non-centered gradient
 
-<pre class="brush: html hidden">&lt;div class="radial-gradient"&gt;&lt;/div&gt;
-</pre>
+```html hidden
+<div class="radial-gradient"></div>
+```
 
-<pre class="brush: css hidden">.radial-gradient {
+```css hidden
+.radial-gradient {
   width: 240px;
   height: 120px;
-}</pre>
+}
+```
 
-<pre class="brush: css">.radial-gradient {
+```css
+.radial-gradient {
   background-image: radial-gradient(farthest-corner at 40px 40px,
       #f35 0%, #43e 100%);
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample('Non-centered_gradient', 240, 120)}}</p>
+{{EmbedLiveSample('Non-centered_gradient', 240, 120)}}
 
-<h3 id="More_radial-gradient_examples">More radial-gradient examples</h3>
+### More radial-gradient examples
 
-<p>Please see <a href="/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients">Using CSS gradients</a> for more examples.</p>
+Please see [Using CSS gradients](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients) for more examples.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients">Using CSS gradients</a></li>
- <li>Other gradient functions: {{cssxref("gradient/repeating-radial-gradient()")}}, {{cssxref("gradient/linear-gradient()")}}, {{cssxref("gradient/repeating-linear-gradient()")}}, {{cssxref("gradient/conic-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient()")}}</li>
- <li>{{cssxref("&lt;image&gt;")}}</li>
- <li>{{cssxref("image()","image()")}}</li>
- <li>{{cssxref("element()")}}</li>
- <li>{{cssxref("image-set()","image-set()")}}</li>
- <li>{{cssxref("cross-fade()")}}</li>
-</ul>
+- [Using CSS gradients](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
+- Other gradient functions: {{cssxref("gradient/repeating-radial-gradient()")}}, {{cssxref("gradient/linear-gradient()")}}, {{cssxref("gradient/repeating-linear-gradient()")}}, {{cssxref("gradient/conic-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient()")}}
+- {{cssxref("&lt;image&gt;")}}
+- {{cssxref("image()","image()")}}
+- {{cssxref("element()")}}
+- {{cssxref("image-set()","image-set()")}}
+- {{cssxref("cross-fade()")}}

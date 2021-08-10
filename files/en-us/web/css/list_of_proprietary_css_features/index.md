@@ -6,158 +6,142 @@ tags:
   - Guide
   - Junk
 ---
-<div>{{ CSSRef() }}</div>
+{{ CSSRef() }}
 
-<div class="warning">
-<p><strong>Warning:</strong> This page is incomplete and out of date. Please see the following for more current information:</p>
+> **Warning:** This page is incomplete and out of date. Please see the following for more current information:
+>
+> - [Microsoft CSS Extensions](/en-US/docs/Web/CSS/Microsoft_CSS_extensions)
+> - [Mozilla CSS Extensions](/en-US/docs/Web/CSS/Mozilla_Extensions)
+> - [WebKit CSS Extensions](/en-US/docs/Web/CSS/Webkit_Extensions)
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/Microsoft_CSS_extensions">Microsoft CSS Extensions</a></li>
- <li><a href="/en-US/docs/Web/CSS/Mozilla_Extensions">Mozilla CSS Extensions</a></li>
- <li><a href="/en-US/docs/Web/CSS/Webkit_Extensions">WebKit CSS Extensions</a></li>
-</ul>
-</div>
+This list includes proprietary extensions to CSS in different browser engines which are not experimental implementations of features being standardized (see [Draft Implementations of CSS Features](/en-US/docs/CSS/Draft_Implementations_of_CSS_Features) for a list of these).
 
-<p>This list includes proprietary extensions to CSS in different browser engines which are not experimental implementations of features being standardized (see <a href="/en-US/docs/CSS/Draft_Implementations_of_CSS_Features">Draft Implementations of CSS Features</a> for a list of these).</p>
+## Gecko
 
-<h2 id="Gecko">Gecko</h2>
+### Properties
 
-<h3 id="Properties">Properties</h3>
+- {{ Cssxref("-moz-force-broken-image-icon") }}
+- {{ Cssxref("-moz-image-region") }}
+- {{ Cssxref("-moz-margin-end") }}
+- {{ Cssxref("-moz-margin-start") }}
+- {{ Cssxref("-moz-orient") }}
+- {{ Cssxref("-moz-padding-end") }}
+- {{ Cssxref("-moz-padding-start") }}
+- {{ Cssxref("-moz-stack-sizing") }}
+- {{ Cssxref("-moz-window-shadow") }}
 
-<ul>
- <li>{{ Cssxref("-moz-force-broken-image-icon") }}</li>
- <li>{{ Cssxref("-moz-image-region") }}</li>
- <li>{{ Cssxref("-moz-margin-end") }}</li>
- <li>{{ Cssxref("-moz-margin-start") }}</li>
- <li>{{ Cssxref("-moz-orient") }}</li>
- <li>{{ Cssxref("-moz-padding-end") }}</li>
- <li>{{ Cssxref("-moz-padding-start") }}</li>
- <li>{{ Cssxref("-moz-stack-sizing") }}</li>
- <li>{{ Cssxref("-moz-window-shadow") }}</li>
-</ul>
+### Values
 
-<h3 id="Values">Values</h3>
+#### {{ cssxref("background-image") }}
 
-<h4 id="cssxrefbackground-image">{{ cssxref("background-image") }}</h4>
+- Sub-images
 
-<ul>
- <li>Sub-images
-  <ul>
-   <li>{{ cssxref("-moz-image-rect") }}</li>
-  </ul>
- </li>
-</ul>
+  - {{ cssxref("-moz-image-rect") }}
 
-<h3 id="Pseudo-elements_and_pseudo-classes">Pseudo-elements and pseudo-classes</h3>
+### Pseudo-elements and pseudo-classes
 
-<p>...</p>
+...
 
-<h3 id="At-rules">At-rules</h3>
+### At-rules
 
-<p>...</p>
+...
 
-<h3 id="Media_Queries">Media Queries</h3>
+### Media Queries
 
-<p>...</p>
+...
 
-<h3 id="Others">Others</h3>
+### Others
 
-<p>...</p>
+...
 
-<h2 id="Opera">Opera</h2>
+## Opera
 
-<h3 id="Properties_2">Properties</h3>
+### Properties
 
-<p>...</p>
+...
 
-<h3 id="Values_2">Values</h3>
+### Values
 
-<h4 id="cssxrefbackground-image_2">{{ cssxref("background-image") }}</h4>
+#### {{ cssxref("background-image") }}
 
-<ul>
- <li>{{ cssxref("-o-double-rainbow") }}</li>
-</ul>
+- {{ cssxref("-o-double-rainbow") }}
 
-<h3 id="Pseudo-elements_and_pseudo-classes_2">Pseudo-elements and pseudo-classes</h3>
+### Pseudo-elements and pseudo-classes
 
-<p>...</p>
+...
 
-<h3 id="At-rules_2">At-rules</h3>
+### At-rules
 
-<p>...</p>
+...
 
-<h3 id="Media_Queries_2">Media Queries</h3>
+### Media Queries
 
-<p>...</p>
+...
 
-<h3 id="Others_2">Others</h3>
+### Others
 
-<p>...</p>
+...
 
-<h2 id="Trident_IE">Trident (IE)</h2>
+## Trident (IE)
 
-<h3 id="Properties_3">Properties</h3>
+### Properties
 
-<ul>
- <li>{{ cssxref("-ms-accelerator") }}</li>
-</ul>
+- {{ cssxref("-ms-accelerator") }}
 
-<h3 id="Values_3">Values</h3>
+### Values
 
-<p>...</p>
+...
 
-<h3 id="Pseudo-elements_and_pseudo-classes_3">Pseudo-elements and pseudo-classes</h3>
+### Pseudo-elements and pseudo-classes
 
-<p>...</p>
+...
 
-<h3 id="At-rules_3">At-rules</h3>
+### At-rules
 
-<p>...</p>
+...
 
-<h3 id="Media_Queries_3">Media Queries</h3>
+### Media Queries
 
-<p>...</p>
+...
 
-<h3 id="Others_3">Others</h3>
+### Others
 
-<p>...</p>
+...
 
-<h2 id="WebKit">WebKit</h2>
+## WebKit
 
-<h3 id="Properties_4">Properties</h3>
+### Properties
 
-<ul>
- <li>{{ Cssxref("-webkit-box-reflect") }}</li>
- <li>{{ Cssxref("-webkit-mask") }}</li>
- <li>{{ Cssxref("-webkit-mask-attachment") }}</li>
- <li>{{ Cssxref("-webkit-mask-composite") }}</li>
- <li>{{ Cssxref("-webkit-mask-image") }}</li>
- <li>{{ Cssxref("-webkit-mask-origin") }}</li>
- <li>{{ Cssxref("-webkit-mask-repeat") }}</li>
- <li>{{ Cssxref("-webkit-tap-highlight-color") }}</li>
- <li>{{ Cssxref("-webkit-text-decorations-in-effect") }}</li>
- <li>{{ Cssxref("-webkit-text-stroke") }}</li>
- <li>{{ Cssxref("-webkit-text-stroke-color") }}</li>
- <li>{{ Cssxref("-webkit-text-stroke-width") }}</li>
- <li>{{ Cssxref("-webkit-touch-callout") }}</li>
-</ul>
+- {{ Cssxref("-webkit-box-reflect") }}
+- {{ Cssxref("-webkit-mask") }}
+- {{ Cssxref("-webkit-mask-attachment") }}
+- {{ Cssxref("-webkit-mask-composite") }}
+- {{ Cssxref("-webkit-mask-image") }}
+- {{ Cssxref("-webkit-mask-origin") }}
+- {{ Cssxref("-webkit-mask-repeat") }}
+- {{ Cssxref("-webkit-tap-highlight-color") }}
+- {{ Cssxref("-webkit-text-decorations-in-effect") }}
+- {{ Cssxref("-webkit-text-stroke") }}
+- {{ Cssxref("-webkit-text-stroke-color") }}
+- {{ Cssxref("-webkit-text-stroke-width") }}
+- {{ Cssxref("-webkit-touch-callout") }}
 
-<h3 id="Values_4">Values</h3>
+### Values
 
-<p>...</p>
+...
 
-<h3 id="Pseudo-elements_and_pseudo-classes_4">Pseudo-elements and pseudo-classes</h3>
+### Pseudo-elements and pseudo-classes
 
-<p>...</p>
+...
 
-<h3 id="At-rules_4">At-rules</h3>
+### At-rules
 
-<p>...</p>
+...
 
-<h3 id="Media_Queries_4">Media Queries</h3>
+### Media Queries
 
-<p>...</p>
+...
 
-<h3 id="Others_4">Others</h3>
+### Others
 
-<p>...</p>
+...

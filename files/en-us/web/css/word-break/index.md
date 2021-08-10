@@ -6,19 +6,20 @@ tags:
   - CSS Property
   - Reference
   - break-word
-  - 'recipe:css-property'
+  - recipe:css-property
   - word-break
 browser-compat: css.properties.word-break
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>word-break</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets whether line breaks appear wherever the text would otherwise overflow its content box.</p>
+The **`word-break`** [CSS](/en-US/docs/Web/CSS) property sets whether line breaks appear wherever the text would otherwise overflow its content box.
 
-<div>{{EmbedInteractiveExample("pages/css/word-break.html")}}</div>
+{{EmbedInteractiveExample("pages/css/word-break.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 word-break: normal;
 word-break: break-all;
 word-break: keep-all;
@@ -29,62 +30,61 @@ word-break: inherit;
 word-break: initial;
 word-break: revert;
 word-break: unset;
-</pre>
+```
 
-<p>The <code>word-break</code> property is specified as a single keyword chosen from the list of values below.</p>
+The `word-break` property is specified as a single keyword chosen from the list of values below.
 
-<h3>id="Values">Values</h3>
+### id="Values">Values
 
-<dl>
- <dt><code>normal</code></dt>
- <dd>Use the default line break rule.</dd>
- <dt><code>break-all</code></dt>
- <dd>To prevent overflow, word breaks should be inserted between any two characters (excluding Chinese/Japanese/Korean text).</dd>
- <dt><code>keep-all</code></dt>
- <dd>Word breaks should not be used for Chinese/Japanese/Korean (CJK) text. Non-CJK text behavior is the same as for <code>normal</code>.</dd>
- <dt><code>break-word</code> {{Deprecated_Inline}}</dt>
- <dd>Has the same effect as <code>word-break: normal</code> and <code>overflow-wrap: anywhere</code>, regardless of the actual value of the {{cssxref("overflow-wrap")}} property.</dd>
-</dl>
+- `normal`
+  - : Use the default line break rule.
+- `break-all`
+  - : To prevent overflow, word breaks should be inserted between any two characters (excluding Chinese/Japanese/Korean text).
+- `keep-all`
+  - : Word breaks should not be used for Chinese/Japanese/Korean (CJK) text. Non-CJK text behavior is the same as for `normal`.
+- `break-word` {{Deprecated_Inline}}
+  - : Has the same effect as `word-break: normal` and `overflow-wrap: anywhere`, regardless of the actual value of the {{cssxref("overflow-wrap")}} property.
 
-<div class="note">
-<p><strong>Note:</strong> In contrast to <code>word-break: break-word</code> and <code>overflow-wrap: break-word</code> (see {{cssxref("overflow-wrap")}}), <code>word-break: break-all</code> will create a break at the exact place where text would otherwise overflow its container (even if putting an entire word on its own line would negate the need for a break).</p>
-</div>
+> **Note:** In contrast to `word-break: break-word` and `overflow-wrap: break-word` (see {{cssxref("overflow-wrap")}}), `word-break: break-all` will create a break at the exact place where text would otherwise overflow its container (even if putting an entire word on its own line would negate the need for a break).
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;1. &lt;code&gt;word-break: normal&lt;/code&gt;&lt;/p&gt;
-&lt;p class="normal narrow"&gt;This is a long and
+```html
+<p>1. <code>word-break: normal</code></p>
+<p class="normal narrow">This is a long and
  Honorificabilitudinitatibus califragilisticexpialidocious Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
- グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉&lt;/p&gt;
+ グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉</p>
 
-&lt;p&gt;2. &lt;code&gt;word-break: break-all&lt;/code&gt;&lt;/p&gt;
-&lt;p class="breakAll narrow"&gt;This is a long and
+<p>2. <code>word-break: break-all</code></p>
+<p class="breakAll narrow">This is a long and
  Honorificabilitudinitatibus califragilisticexpialidocious Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
- グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉&lt;/p&gt;
+ グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉</p>
 
-&lt;p&gt;3. &lt;code&gt;word-break: keep-all&lt;/code&gt;&lt;/p&gt;
-&lt;p class="keepAll narrow"&gt;This is a long and
+<p>3. <code>word-break: keep-all</code></p>
+<p class="keepAll narrow">This is a long and
  Honorificabilitudinitatibus califragilisticexpialidocious Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
- グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉&lt;/p&gt;
+ グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉</p>
 
-&lt;p&gt;4. &lt;code&gt;word-break: break-word&lt;/code&gt;&lt;/p&gt;
-&lt;p class="breakWord narrow"&gt;This is a long and
+<p>4. <code>word-break: break-word</code></p>
+<p class="breakWord narrow">This is a long and
   Honorificabilitudinitatibus califragilisticexpialidocious Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
- グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉&lt;/p&gt;</pre>
+ グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.narrow {
+```css
+.narrow {
   padding: 10px;
   border: 1px solid;
   width: 500px;
@@ -109,22 +109,20 @@ word-break: unset;
 .breakWord {
   word-break: break-word;
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample('Examples', '100%', 600)}}</p>
+{{EmbedLiveSample('Examples', '100%', 600)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("overflow-wrap")}}</li>
- <li>{{cssxref("hyphens")}}</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Text/Wrapping_text">Guide to wrapping and breaking text</a></li>
-</ul>
+- {{cssxref("overflow-wrap")}}
+- {{cssxref("hyphens")}}
+- [Guide to wrapping and breaking text](/en-US/docs/Web/CSS/CSS_Text/Wrapping_text)

@@ -7,16 +7,17 @@ tags:
   - CSS Property
   - Reference
   - overscroll-behavior-y
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.overscroll-behavior-y
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>overscroll-behavior-y</code></strong> CSS property sets the browser's behavior when the vertical boundary of a scrolling area is reached.</span></p>
+The **`overscroll-behavior-y`** CSS property sets the browser's behavior when the vertical boundary of a scrolling area is reached.
 
-<p>See {{cssxref("overscroll-behavior")}} for a full explanation.</p>
+See {{cssxref("overscroll-behavior")}} for a full explanation.
 
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 overscroll-behavior-y: auto; /* default */
 overscroll-behavior-y: contain;
 overscroll-behavior-y: none;
@@ -26,54 +27,52 @@ overscroll-behavior-y: inherit;
 overscroll-behavior-y: initial;
 overscroll-behavior-y: revert;
 overscroll-behavior-y: unset;
-</pre>
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>overscroll-behavior-y</code> property is specified as a keyword chosen from the list of values below.</p>
+The `overscroll-behavior-y` property is specified as a keyword chosen from the list of values below.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>The default scroll overflow behavior occurs as normal.</dd>
- <dt><code>contain</code></dt>
- <dd>Default scroll overflow behavior is observed inside the element this value is set on (e.g. "bounce" effects or refreshes), but no scroll chaining occurs to neighboring scrolling areas, e.g. underlying elements will not scroll.</dd>
- <dt><code>none</code></dt>
- <dd>No scroll chaining occurs to neighboring scrolling areas, and default scroll overflow behavior is prevented.</dd>
-</dl>
+- `auto`
+  - : The default scroll overflow behavior occurs as normal.
+- `contain`
+  - : Default scroll overflow behavior is observed inside the element this value is set on (e.g. "bounce" effects or refreshes), but no scroll chaining occurs to neighboring scrolling areas, e.g. underlying elements will not scroll.
+- `none`
+  - : No scroll chaining occurs to neighboring scrolling areas, and default scroll overflow behavior is prevented.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Preventing_an_underlying_element_from_scrolling_vertically">Preventing an underlying element from scrolling vertically</h3>
+### Preventing an underlying element from scrolling vertically
 
-<pre class="brush: css">.messages {
+```css
+.messages {
   height: 220px;
   overflow: auto;
   overscroll-behavior-y: contain;
-} </pre>
+} 
+```
 
-<p>See {{cssxref("overscroll-behavior")}} for a full example and explanation.</p>
+See {{cssxref("overscroll-behavior")}} for a full example and explanation.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://developers.google.com/web/updates/2017/11/overscroll-behavior#demo">Take control of your scroll: customizing pull-to-refresh and overflow effects</a></li>
- <li>The mapped logical properties: {{cssxref("overscroll-behavior-inline")}}, {{cssxref("overscroll-behavior-block")}}</li>
-</ul>
+- [Take control of your scroll: customizing pull-to-refresh and overflow effects](https://developers.google.com/web/updates/2017/11/overscroll-behavior#demo)
+- The mapped logical properties: {{cssxref("overscroll-behavior-inline")}}, {{cssxref("overscroll-behavior-block")}}

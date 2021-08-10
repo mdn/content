@@ -6,20 +6,21 @@ tags:
   - CSS Outline
   - CSS Property
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.outline-style
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>outline-style</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets the style of an element's outline. An outline is a line that is drawn around an element, outside the {{cssxref("border")}}.</p>
+The **`outline-style`** [CSS](/en-US/docs/Web/CSS) property sets the style of an element's outline. An outline is a line that is drawn around an element, outside the {{cssxref("border")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/outline-style.html")}}</div>
+{{EmbedInteractiveExample("pages/css/outline-style.html")}}
 
-<p>It is often more convenient to use the shorthand property {{cssxref("outline")}} when defining the appearance of an outline.</p>
+It is often more convenient to use the shorthand property {{cssxref("outline")}} when defining the appearance of an outline.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 outline-style: auto;
 outline-style: none;
 outline-style: dotted;
@@ -36,81 +37,86 @@ outline-style: inherit;
 outline-style: initial;
 outline-style: revert;
 outline-style: unset;
-</pre>
+```
 
-<p>The <code>outline-style</code> property is specified as any one of the values listed below.</p>
+The `outline-style` property is specified as any one of the values listed below.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>Permits the user agent to render a custom outline style.</dd>
- <dt><code>none</code></dt>
- <dd>No outline is used. The {{cssxref("outline-width")}} is <code>0</code>.</dd>
- <dt><code>dotted</code></dt>
- <dd>The outline is a series of dots.</dd>
- <dt><code>dashed</code></dt>
- <dd>The outline is a series of short line segments.</dd>
- <dt><code>solid</code></dt>
- <dd>The outline is a single line.</dd>
- <dt><code>double</code></dt>
- <dd>The outline is two single lines. The {{cssxref("outline-width")}} is the sum of the two lines and the space between them.</dd>
- <dt><code>groove</code></dt>
- <dd>The outline looks as though it were carved into the page.</dd>
- <dt><code>ridge</code></dt>
- <dd>The opposite of <code>groove</code>: the outline looks as though it were extruded from the page.</dd>
- <dt><code>inset</code></dt>
- <dd>The outline makes the box look as though it were embedded in the page.</dd>
- <dt><code>outset</code></dt>
- <dd>The opposite of <code>inset</code>: the outline makes the box look as though it were coming out of the page.</dd>
-</dl>
+- `auto`
+  - : Permits the user agent to render a custom outline style.
+- `none`
+  - : No outline is used. The {{cssxref("outline-width")}} is `0`.
+- `dotted`
+  - : The outline is a series of dots.
+- `dashed`
+  - : The outline is a series of short line segments.
+- `solid`
+  - : The outline is a single line.
+- `double`
+  - : The outline is two single lines. The {{cssxref("outline-width")}} is the sum of the two lines and the space between them.
+- `groove`
+  - : The outline looks as though it were carved into the page.
+- `ridge`
+  - : The opposite of `groove`: the outline looks as though it were extruded from the page.
+- `inset`
+  - : The outline makes the box look as though it were embedded in the page.
+- `outset`
+  - : The opposite of `inset`: the outline makes the box look as though it were coming out of the page.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_outline_style_to_auto">Setting outline style to auto</h3>
+### Setting outline style to auto
 
-<p>The <code>auto</code> value indicates a custom outline style, described in <a href="https://www.w3.org/TR/css-ui-3/#outline-style">the specification</a> as "typically a style [that] is either a user interface default for the platform, or perhaps a style that is richer than can be described in detail in CSS, e.g. a rounded edge outline with semi-translucent outer pixels that appears to glow".
+The `auto` value indicates a custom outline style, described in [the specification](https://www.w3.org/TR/css-ui-3/#outline-style) as "typically a style \[that] is either a user interface default for the platform, or perhaps a style that is richer than can be described in detail in CSS, e.g. a rounded edge outline with semi-translucent outer pixels that appears to glow".
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;p class="auto"&gt;Outline Demo&lt;/p&gt;
-&lt;/div&gt; </pre>
+```html
+<div>
+  <p class="auto">Outline Demo</p>
+</div> 
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.auto {
+```css
+.auto {
   outline-style: auto; /* same result as "outline: auto" */
 }
 
 /* To make the Demo clearer */
-* { outline-width: 10px; padding: 15px; } </pre>
+* { outline-width: 10px; padding: 15px; } 
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Setting_outline_style_to_auto') }}</p>
+{{ EmbedLiveSample('Setting_outline_style_to_auto') }}
 
-<h3 id="Setting_outline_style_to_dashed_and_dotted">Setting outline style to dashed and dotted</h3>
+### Setting outline style to dashed and dotted
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;div class="dotted"&gt;
-    &lt;p class="dashed"&gt;Outline Demo&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt; </pre>
+```html
+<div>
+  <div class="dotted">
+    <p class="dashed">Outline Demo</p>
+  </div>
+</div> 
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.dotted {
+```css
+.dotted {
   outline-style: dotted; /* same result as "outline: dotted" */
 }
 .dashed {
@@ -118,25 +124,29 @@ outline-style: unset;
 }
 
 /* To make the Demo clearer */
-* { outline-width: 10px; padding: 15px; } </pre>
+* { outline-width: 10px; padding: 15px; } 
+```
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Setting_outline_style_to_dashed_and_dotted') }}</p>
+{{ EmbedLiveSample('Setting_outline_style_to_dashed_and_dotted') }}
 
-<h3 id="Setting_outline_style_to_solid_and_double">Setting outline style to solid and double</h3>
+### Setting outline style to solid and double
 
-<h4 id="HTML_3">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;div class="solid"&gt;
-    &lt;p class="double"&gt;Outline Demo&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt; </pre>
+```html
+<div>
+  <div class="solid">
+    <p class="double">Outline Demo</p>
+  </div>
+</div> 
+```
 
-<h4 id="CSS_3">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.solid {
+```css
+.solid {
   outline-style: solid;
 }
 .double {
@@ -144,25 +154,29 @@ outline-style: unset;
 }
 
 /* To make the Demo clearer */
-* { outline-width: 10px; padding: 15px; } </pre>
+* { outline-width: 10px; padding: 15px; } 
+```
 
-<h4 id="Result_3">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Setting_outline_style_to_solid_and_double') }}</p>
+{{ EmbedLiveSample('Setting_outline_style_to_solid_and_double') }}
 
-<h3 id="Setting_outline_style_to_groove_and_ridge">Setting outline style to groove and ridge</h3>
+### Setting outline style to groove and ridge
 
-<h4 id="HTML_4">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;div class="groove"&gt;
-    &lt;p class="ridge"&gt;Outline Demo&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
+```html
+<div>
+  <div class="groove">
+    <p class="ridge">Outline Demo</p>
+  </div>
+</div>
+```
 
-<h4 id="CSS_4">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.groove {
+```css
+.groove {
   outline-style: groove;
 }
 .ridge {
@@ -170,25 +184,29 @@ outline-style: unset;
 }
 
 /* To make the Demo clearer */
-* { outline-width: 10px; padding: 15px; }</pre>
+* { outline-width: 10px; padding: 15px; }
+```
 
-<h4 id="Result_4">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Setting_outline_style_to_groove_and_ridge') }}</p>
+{{ EmbedLiveSample('Setting_outline_style_to_groove_and_ridge') }}
 
-<h3 id="Setting_outline_style_to_inset_and_outset">Setting outline style to inset and outset</h3>
+### Setting outline style to inset and outset
 
-<h4 id="HTML_5">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;div class="inset"&gt;
-    &lt;p class="outset"&gt;Outline Demo&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
+```html
+<div>
+  <div class="inset">
+    <p class="outset">Outline Demo</p>
+  </div>
+</div>
+```
 
-<h4 id="CSS_5">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.inset {
+```css
+.inset {
   outline-style: inset;
 }
 .outset {
@@ -196,24 +214,23 @@ outline-style: unset;
 }
 
 /* To make the Demo clearer */
-* { outline-width: 10px; padding: 15px; }</pre>
+* { outline-width: 10px; padding: 15px; }
+```
 
-<h4 id="Result_5">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Setting_outline_style_to_inset_and_outset') }}</p>
+{{ EmbedLiveSample('Setting_outline_style_to_inset_and_outset') }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("outline")}}</li>
- <li>{{cssxref("outline-color")}}</li>
- <li>{{cssxref("outline-width")}}</li>
-</ul>
+- {{cssxref("outline")}}
+- {{cssxref("outline-color")}}
+- {{cssxref("outline-width")}}

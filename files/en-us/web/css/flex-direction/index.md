@@ -9,26 +9,27 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.flex-direction
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>flex-direction</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets how flex items are placed in the flex container defining the main axis and the direction (normal or reversed).</p>
+The **`flex-direction`** [CSS](/en-US/docs/Web/CSS) property sets how flex items are placed in the flex container defining the main axis and the direction (normal or reversed).
 
-<div>{{EmbedInteractiveExample("pages/css/flex-direction.html")}}</div>
+{{EmbedInteractiveExample("pages/css/flex-direction.html")}}
 
-<p>Note that the values <code>row</code> and <code>row-reverse</code> are affected by the directionality of the flex container. If its {{HTMLAttrxRef("dir")}} attribute is <code>ltr</code>, <code>row</code> represents the horizontal axis oriented from the left to the right, and <code>row-reverse</code> from the right to the left; if the <code>dir</code> attribute is <code>rtl</code>, <code>row</code> represents the axis oriented from the right to the left, and <code>row-reverse</code> from the left to the right.</p>
+Note that the values `row` and `row-reverse` are affected by the directionality of the flex container. If its {{HTMLAttrxRef("dir")}} attribute is `ltr`, `row` represents the horizontal axis oriented from the left to the right, and `row-reverse` from the right to the left; if the `dir` attribute is `rtl`, `row` represents the axis oriented from the right to the left, and `row-reverse` from the left to the right.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* The direction text is laid out in a line */
+```css
+/* The direction text is laid out in a line */
 flex-direction: row;
 
-/* Like &lt;row&gt;, but reversed */
+/* Like <row>, but reversed */
 flex-direction: row-reverse;
 
 /* The direction in which lines of text are stacked */
 flex-direction: column;
 
-/* Like &lt;column&gt;, but reversed */
+/* Like <column>, but reversed */
 flex-direction: column-reverse;
 
 /* Global values */
@@ -36,65 +37,63 @@ flex-direction: inherit;
 flex-direction: initial;
 flex-direction: revert;
 flex-direction: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<p>The following values are accepted:</p>
+The following values are accepted:
 
-<dl>
- <dt><code>row</code></dt>
- <dd>The flex container's main-axis is defined to be the same as the text direction. The <strong>main-start</strong> and <strong>main-end</strong> points are the same as the content direction.</dd>
- <dt><code>row-reverse</code></dt>
- <dd>Behaves the same as <code>row</code> but the <strong>main-start</strong> and <strong>main-end</strong> points are permuted.</dd>
- <dt><code>column</code></dt>
- <dd>The flex container's main-axis is the same as the block-axis. The <strong>main-start</strong> and <strong>main-end</strong> points are the same as the <strong>before</strong> and <strong>after</strong> points of the writing-mode.</dd>
- <dt><code>column-reverse</code></dt>
- <dd>Behaves the same as <code>column</code> but the <strong>main-start</strong> and <strong>main-end</strong> are permuted.</dd>
-</dl>
+- `row`
+  - : The flex container's main-axis is defined to be the same as the text direction. The **main-start** and **main-end** points are the same as the content direction.
+- `row-reverse`
+  - : Behaves the same as `row` but the **main-start** and **main-end** points are permuted.
+- `column`
+  - : The flex container's main-axis is the same as the block-axis. The **main-start** and **main-end** points are the same as the **before** and **after** points of the writing-mode.
+- `column-reverse`
+  - : Behaves the same as `column` but the **main-start** and **main-end** are permuted.
 
-<h2 id="Accessibility_concerns">Accessibility concerns</h2>
+## Accessibility concerns
 
-<p>Using the <code>flex-direction</code> property with values of <code>row-reverse</code> or <code>column-reverse</code> will create a disconnect between the visual presentation of content and DOM order. This will adversely affect users experiencing low vision navigating with the aid of assistive technology such as a screen reader. If the visual (CSS) order is important, then screen reader users will not have access to the correct reading order.</p>
+Using the `flex-direction` property with values of `row-reverse` or `column-reverse` will create a disconnect between the visual presentation of content and DOM order. This will adversely affect users experiencing low vision navigating with the aid of assistive technology such as a screen reader. If the visual (CSS) order is important, then screen reader users will not have access to the correct reading order.
 
-<ul>
- <li><a class="external external-icon" href="https://tink.uk/flexbox-the-keyboard-navigation-disconnect/" rel="noopener">Flexbox &amp; the keyboard navigation disconnect — Tink</a></li>
- <li><a class="external external-icon" href="http://adrianroselli.com/2015/09/source-order-matters.html" rel="noopener">Source Order Matters | Adrian Roselli</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.3_%e2%80%94_create_content_that_can_be_presented_in_different_ways">MDN Understanding WCAG, Guideline 1.3 explanations</a></li>
- <li><a class="external external-icon" href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-sequence.html" rel="noopener">Understanding Success Criterion 1.3.2 | W3C Understanding WCAG 2.0</a></li>
-</ul>
+- [Flexbox & the keyboard navigation disconnect — Tink](https://tink.uk/flexbox-the-keyboard-navigation-disconnect/)
+- [Source Order Matters | Adrian Roselli](http://adrianroselli.com/2015/09/source-order-matters.html)
+- [MDN Understanding WCAG, Guideline 1.3 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.3_%e2%80%94_create_content_that_can_be_presented_in_different_ways)
+- [Understanding Success Criterion 1.3.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-sequence.html)
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Reversing_flex_container_columns_and_rows">Reversing flex container columns and rows</h3>
+### Reversing flex container columns and rows
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;h4&gt;This is a Column-Reverse&lt;/h4&gt;
-&lt;div id="content"&gt;
-  &lt;div class="box" style="background-color:red;"&gt;A&lt;/div&gt;
-  &lt;div class="box" style="background-color:lightblue;"&gt;B&lt;/div&gt;
-  &lt;div class="box" style="background-color:yellow;"&gt;C&lt;/div&gt;
-&lt;/div&gt;
-&lt;h4&gt;This is a Row-Reverse&lt;/h4&gt;
-&lt;div id="content1"&gt;
-  &lt;div class="box1" style="background-color:red;"&gt;A&lt;/div&gt;
-  &lt;div class="box1" style="background-color:lightblue;"&gt;B&lt;/div&gt;
-  &lt;div class="box1" style="background-color:yellow;"&gt;C&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<h4>This is a Column-Reverse</h4>
+<div id="content">
+  <div class="box" style="background-color:red;">A</div>
+  <div class="box" style="background-color:lightblue;">B</div>
+  <div class="box" style="background-color:yellow;">C</div>
+</div>
+<h4>This is a Row-Reverse</h4>
+<div id="content1">
+  <div class="box1" style="background-color:red;">A</div>
+  <div class="box1" style="background-color:lightblue;">B</div>
+  <div class="box1" style="background-color:yellow;">C</div>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">#content {
+```css
+#content {
   width: 200px;
   height: 200px;
   border: 1px solid #c3c3c3;
@@ -118,23 +117,22 @@ flex-direction: unset;
 .box1 {
   width: 50px;
   height: 50px;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Reversing_flex_container_columns_and_rows', '', '550')}}</p>
+{{EmbedLiveSample('Reversing_flex_container_columns_and_rows', '', '550')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>CSS Flexbox Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Basic Concepts of Flexbox</a></em></li>
- <li>CSS Flexbox Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items">Ordering flex items</a></em></li>
-</ul>
+- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
+- CSS Flexbox Guide: _[Ordering flex items](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items)_

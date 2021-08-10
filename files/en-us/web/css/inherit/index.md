@@ -14,46 +14,46 @@ tags:
   - inherit
 browser-compat: css.types.global_keywords.inherit
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>inherit</code></strong> CSS keyword causes the element for which it is specified to take the <a href="/en-US/docs/Web/CSS/computed_value">computed value</a> of the property from its parent element. It can be applied to any CSS property, including the CSS shorthand {{cssxref("all")}}.</p>
+The **`inherit`** CSS keyword causes the element for which it is specified to take the [computed value](/en-US/docs/Web/CSS/computed_value) of the property from its parent element. It can be applied to any CSS property, including the CSS shorthand {{cssxref("all")}}.
 
-<p>For <a href="/en-US/docs/Web/CSS/inheritance#Inherited_properties">inherited properties</a>, this reinforces the default behavior, and is only needed to override another rule. For <a href="/en-US/docs/Web/CSS/inheritance#Non-inherited_properties">non-inherited properties</a>, this specifies a behavior that typically makes relatively little sense and you may consider using {{cssxref("initial")}} instead, or {{cssxref("unset")}} on the {{cssxref("all")}} property.</p>
+For [inherited properties](/en-US/docs/Web/CSS/inheritance#Inherited_properties), this reinforces the default behavior, and is only needed to override another rule. For [non-inherited properties](/en-US/docs/Web/CSS/inheritance#Non-inherited_properties), this specifies a behavior that typically makes relatively little sense and you may consider using {{cssxref("initial")}} instead, or {{cssxref("unset")}} on the {{cssxref("all")}} property.
 
-<p>Inheritance is always from the parent element in the document tree, even when the parent element is not the containing block.</p>
+Inheritance is always from the parent element in the document tree, even when the parent element is not the containing block.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Exclude_selected_elements_from_a_rule">Exclude selected elements from a rule</h3>
+### Exclude selected elements from a rule
 
-<pre class="brush: css">/* Make second-level headers green */
+```css
+/* Make second-level headers green */
 h2 { color: green; }
 
 /* ...but leave those in the sidebar alone so they use their parent's color */
 #sidebar h2 { color: inherit; }
-</pre>
+```
 
-<p>In this example the <code>h2</code> elements inside the sidebar might be different colors. For example, if one of them were the child of a div matched by the rule ...</p>
+In this example the `h2` elements inside the sidebar might be different colors. For example, if one of them were the child of a div matched by the rule ...
 
-<pre class="brush: css">div#current { color: blue; }
-</pre>
+```css
+div#current { color: blue; }
+```
 
-<p>... it would be blue.</p>
+... it would be blue.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/inheritance">Inheritance</a></li>
- <li>Use {{cssxref("initial")}} to set a property to its initial value.</li>
- <li>Use {{cssxref("unset")}} to set a property to its inherited value if it inherits, or to its initial value if not.</li>
- <li>Use {{cssxref("revert")}} to reset a property to the value established by the user-agent stylesheet (or by user styles, if any exist).</li>
- <li>The {{cssxref("all")}} property lets you reset all properties to their initial, inherited, reverted, or unset state at once.</li>
-</ul>
+- [Inheritance](/en-US/docs/Web/CSS/inheritance)
+- Use {{cssxref("initial")}} to set a property to its initial value.
+- Use {{cssxref("unset")}} to set a property to its inherited value if it inherits, or to its initial value if not.
+- Use {{cssxref("revert")}} to reset a property to the value established by the user-agent stylesheet (or by user styles, if any exist).
+- The {{cssxref("all")}} property lets you reset all properties to their initial, inherited, reverted, or unset state at once.

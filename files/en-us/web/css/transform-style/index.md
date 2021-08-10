@@ -7,22 +7,23 @@ tags:
   - CSS Transforms
   - Experimental
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.transform-style
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>transform-style</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets whether children of an element are positioned in the 3D space or are flattened in the plane of the element.</p>
+The **`transform-style`** [CSS](/en-US/docs/Web/CSS) property sets whether children of an element are positioned in the 3D space or are flattened in the plane of the element.
 
-<div>{{EmbedInteractiveExample("pages/css/transform-style.html")}}</div>
+{{EmbedInteractiveExample("pages/css/transform-style.html")}}
 
-<p>If flattened, the element's children will not exist on their own in the 3D-space.</p>
+If flattened, the element's children will not exist on their own in the 3D-space.
 
-<p>As this property is not inherited, it must be set for all non-leaf descendants of the element.</p>
+As this property is not inherited, it must be set for all non-leaf descendants of the element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 transform-style: flat;
 transform-style: preserve-3d;
 
@@ -31,52 +32,53 @@ transform-style: inherit;
 transform-style: initial;
 transform-style: revert;
 transform-style: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>flat</code></dt>
- <dd>Indicates that the children of the element are lying in the plane of the element itself.</dd>
- <dt><code>preserve-3d</code></dt>
- <dd>Indicates that the children of the element should be positioned in the 3D-space.</dd>
-</dl>
+- `flat`
+  - : Indicates that the children of the element are lying in the plane of the element itself.
+- `preserve-3d`
+  - : Indicates that the children of the element should be positioned in the 3D-space.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Transform_style_demonstration">Transform style demonstration</h3>
+### Transform style demonstration
 
-<p>In this example we have a 3D cube created using transforms. The parent container of the cube faces has <code>transform-style: preserve-3d</code> set on it by default, so it is transformed in the 3D space and you can see it as intended.</p>
+In this example we have a 3D cube created using transforms. The parent container of the cube faces has `transform-style: preserve-3d` set on it by default, so it is transformed in the 3D space and you can see it as intended.
 
-<p>We also provide a checkbox allowing you to toggle between this, and <code>transform-style: flat</code>. In this alternative state, the cube faces are all flattened onto the plane of their parent, and you might not be able to see them at all, depending on the browser you are using.</p>
+We also provide a checkbox allowing you to toggle between this, and `transform-style: flat`. In this alternative state, the cube faces are all flattened onto the plane of their parent, and you might not be able to see them at all, depending on the browser you are using.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;section id="example-element"&gt;
-  &lt;div class="face front"&gt;1&lt;/div&gt;
-  &lt;div class="face back"&gt;2&lt;/div&gt;
-  &lt;div class="face right"&gt;3&lt;/div&gt;
-  &lt;div class="face left"&gt;4&lt;/div&gt;
-  &lt;div class="face top"&gt;5&lt;/div&gt;
-  &lt;div class="face bottom"&gt;6&lt;/div&gt;
-&lt;/section&gt;
+```html
+<section id="example-element">
+  <div class="face front">1</div>
+  <div class="face back">2</div>
+  <div class="face right">3</div>
+  <div class="face left">4</div>
+  <div class="face top">5</div>
+  <div class="face bottom">6</div>
+</section>
 
-&lt;div class="checkbox"&gt;
-  &lt;label for="preserve"&gt;&lt;code&gt;preserve-3d&lt;/code&gt;&lt;/label&gt;
-  &lt;input type="checkbox" id="preserve" checked&gt;
-&lt;/div&gt;</pre>
+<div class="checkbox">
+  <label for="preserve"><code>preserve-3d</code></label>
+  <input type="checkbox" id="preserve" checked>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">#example-element {
+```css
+#example-element {
   margin: 50px;
   width: 100px;
   height: 100px;
@@ -124,35 +126,36 @@ transform-style: unset;
 .bottom {
   background: rgba(210,0,210,.7);
   transform: rotateX(-90deg) translateZ(50px);
-}</pre>
+}
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">const cube = document.getElementById('example-element');
+```js
+const cube = document.getElementById('example-element');
 const checkbox = document.getElementById('preserve');
 
-checkbox.addEventListener('change', () =&gt; {
+checkbox.addEventListener('change', () => {
   if(checkbox.checked) {
     cube.style.transformStyle = 'preserve-3d';
   } else {
     cube.style.transformStyle = 'flat';
   }
-})</pre>
+})
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Transform_style_demonstration', '100%', 260)}}</p>
+{{EmbedLiveSample('Transform_style_demonstration', '100%', 260)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/CSS/Using_CSS_transforms">Using CSS transforms</a></li>
-</ul>
+- [Using CSS transforms](/en-US/docs/CSS/Using_CSS_transforms)

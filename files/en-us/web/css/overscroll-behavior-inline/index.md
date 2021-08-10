@@ -8,16 +8,17 @@ tags:
   - CSS Property
   - Reference
   - overscroll-behavior-inline
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.overscroll-behavior-inline
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>overscroll-behavior-inline</code></strong> CSS property sets the browser's behavior when the inline direction boundary of a scrolling area is reached.</p>
+The **`overscroll-behavior-inline`** CSS property sets the browser's behavior when the inline direction boundary of a scrolling area is reached.
 
-<p>See {{cssxref("overscroll-behavior")}} for a full explanation.</p>
+See {{cssxref("overscroll-behavior")}} for a full explanation.
 
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 overscroll-behavior-inline: auto; /* default */
 overscroll-behavior-inline: contain;
 overscroll-behavior-inline: none;
@@ -27,59 +28,60 @@ overscroll-behavior-inline: inherit;
 overscroll-behavior-inline: initial;
 overscroll-behavior-inline: revert;
 overscroll-behavior-inline: unset;
-</pre>
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>overscroll-behavior-inline</code> property is specified as a keyword chosen from the list of values below.</p>
+The `overscroll-behavior-inline` property is specified as a keyword chosen from the list of values below.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>The default scroll overflow behavior occurs as normal.</dd>
- <dt><code>contain</code></dt>
- <dd>Default scroll overflow behavior is observed inside the element this value is set on (e.g. "bounce" effects or refreshes), but no scroll chaining occurs to neighboring scrolling areas, e.g. underlying elements will not scroll.</dd>
- <dt><code>none</code></dt>
- <dd>No scroll chaining occurs to neighboring scrolling areas, and default scroll overflow behavior is prevented.</dd>
-</dl>
+- `auto`
+  - : The default scroll overflow behavior occurs as normal.
+- `contain`
+  - : Default scroll overflow behavior is observed inside the element this value is set on (e.g. "bounce" effects or refreshes), but no scroll chaining occurs to neighboring scrolling areas, e.g. underlying elements will not scroll.
+- `none`
+  - : No scroll chaining occurs to neighboring scrolling areas, and default scroll overflow behavior is prevented.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Preventing_inline_overscrolling">Preventing inline overscrolling</h3>
+### Preventing inline overscrolling
 
-<p>In this demo we have two block-level boxes, one inside the other. The outer box has a large {{cssxref("width")}} set on it so the page will scroll horizontally. The inner box has a small width (and {{cssxref("height")}}) set on it so it sits comfortably inside the viewport, but its content is given a large width so it will also scroll horizontally.</p>
+In this demo we have two block-level boxes, one inside the other. The outer box has a large {{cssxref("width")}} set on it so the page will scroll horizontally. The inner box has a small width (and {{cssxref("height")}}) set on it so it sits comfortably inside the viewport, but its content is given a large width so it will also scroll horizontally.
 
-<p>By default, when the inner box is scrolled and a scroll boundary is reached, the whole page will begin to scroll, which is probably not what we want. To avoid this happening in the inline direction, we've set <code>overscroll-behavior-inline: contain</code> on the inner box.</p>
+By default, when the inner box is scrolled and a scroll boundary is reached, the whole page will begin to scroll, which is probably not what we want. To avoid this happening in the inline direction, we've set `overscroll-behavior-inline: contain` on the inner box.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;main&gt;
-  &lt;div&gt;
-    &lt;div&gt;
-      &lt;p&gt;&lt;code&gt;overscroll-behavior-inline&lt;/code&gt; has been used to make it so that when the scroll boundaries of the yellow inner box are reached, the whole page does not begin to scroll.&lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/main&gt;</pre>
+```html
+<main>
+  <div>
+    <div>
+      <p><code>overscroll-behavior-inline</code> has been used to make it so that when the scroll boundaries of the yellow inner box are reached, the whole page does not begin to scroll.</p>
+    </div>
+  </div>
+</main>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">main {
+```css
+main {
   height: 400px;
   width: 3000px;
   background-color: white;
   background-image: repeating-linear-gradient(to right, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 19px, rgba(0,0,0,0.5) 20px);
 }
 
-main &gt; div {
+main > div {
   height: 300px;
   width: 400px;
   overflow: auto;
@@ -89,7 +91,7 @@ main &gt; div {
   overscroll-behavior-inline: contain;
 }
 
-div &gt; div {
+div > div {
   height: 100%;
   width: 1500px;
   background-color: yellow;
@@ -104,22 +106,21 @@ p {
   position: relative;
   top: 10px;
   left: 10px;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Preventing_inline_overscrolling','100%', 500)}}</p>
+{{EmbedLiveSample('Preventing_inline_overscrolling','100%', 500)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://developers.google.com/web/updates/2017/11/overscroll-behavior#demo">Take control of your scroll: customizing pull-to-refresh and overflow effects</a></li>
-</ul>
+- [Take control of your scroll: customizing pull-to-refresh and overflow effects](https://developers.google.com/web/updates/2017/11/overscroll-behavior#demo)

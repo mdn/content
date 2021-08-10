@@ -9,13 +9,14 @@ tags:
   - Reference
 browser-compat: css.at-rules.counter-style.speak-as
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>speak-as</code></strong> descriptor specifies how a counter symbol constructed with a given {{cssxref('@counter-style')}} will be represented in the spoken form. For example, an author can specify a counter symbol to be either spoken as its numerical value or just represented with an audio cue.</p>
+The **`speak-as`** descriptor specifies how a counter symbol constructed with a given {{cssxref('@counter-style')}} will be represented in the spoken form. For example, an author can specify a counter symbol to be either spoken as its numerical value or just represented with an audio cue.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">/* Keyword values */
+```css
+/* Keyword values */
 speak-as: auto;
 speak-as: bullets;
 speak-as: numbers;
@@ -23,64 +24,65 @@ speak-as: words;
 speak-as: spell-out;
 
 /* @counter-style name value */
-speak-as: &lt;counter-style-name&gt;;
-</pre>
+speak-as: <counter-style-name>;
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>If the value of <code>speak-as</code> is specified as <code>auto</code>, then the effective value of <code>speak-as</code> will be determined based on the value of the {{cssxref("@counter-style/system")}} descriptor:
- <ul>
-  <li>If the value of <code>system</code> is <code>alphabetic</code>, the effective value of <code>speak-as</code> will be <code>spell-out</code>.</li>
-  <li>If <code>system</code> is <code>cyclic</code>, the effective value of <code>speak-as</code> will be <code>bullets</code>.</li>
-  <li>If <code>system</code> is <code>extends</code>, the value of <code>speak-as</code> will be the same as if <code>speak-as: auto</code> is specified on the extended style.</li>
-  <li>For all other cases, specifying <code>auto</code> has the same effect as specifying <code>speak-as: numbers</code>.</li>
- </ul>
- </dd>
- <dt><code>bullets</code></dt>
- <dd>A phrase or an audio cue defined by the {{Glossary("user agent")}} for representing an unordered list item will be read out.</dd>
- <dt><code>numbers</code></dt>
- <dd>The numerical value of the counter will be read out in the document language.</dd>
- <dt><code>words</code></dt>
- <dd>The user agent will generate a counter value as normal and read it out as a word in the document language.</dd>
- <dt><code>spell-out</code></dt>
- <dd>The user agent will generate a counter representation as normal and would read it out letter by letter. If the user agent doesn't know how to read out a particular counter symbol, the user agent might read it out as if the value of <code>speak-as</code> was <code>numbers</code>.</dd>
- <dt><code>&lt;counter-style-name&gt;</code></dt>
- <dd>The name of another counter style, specified as a {{cssxref("&lt;custom-ident&gt;")}}. If included, the counter will be spoken out in the form specified in that counter style, kind of like specifying the {{cssxref("@counter-style/fallback")}} descriptor. If the specified style does not exist, <code>speak-as</code> defaults to <code>auto</code>.</dd>
-</dl>
+- `auto`
 
-<h2 id="Accessibility_concerns">Accessibility concerns</h2>
+  - : If the value of `speak-as` is specified as `auto`, then the effective value of `speak-as` will be determined based on the value of the {{cssxref("@counter-style/system")}} descriptor:
 
-<p>Assistive technology support is very limited for the <code>speak-as</code> property. Do not rely on it to convey information critical to understanding the page's purpose.</p>
+    - If the value of `system` is `alphabetic`, the effective value of `speak-as` will be `spell-out`.
+    - If `system` is `cyclic`, the effective value of `speak-as` will be `bullets`.
+    - If `system` is `extends`, the value of `speak-as` will be the same as if `speak-as: auto` is specified on the extended style.
+    - For all other cases, specifying `auto` has the same effect as specifying `speak-as: numbers`.
 
-<p><a href="https://css-tricks.com/lets-talk-speech-css/">Let's Talk About Speech CSS | CSS Tricks</a></p>
+- `bullets`
+  - : A phrase or an audio cue defined by the {{Glossary("user agent")}} for representing an unordered list item will be read out.
+- `numbers`
+  - : The numerical value of the counter will be read out in the document language.
+- `words`
+  - : The user agent will generate a counter value as normal and read it out as a word in the document language.
+- `spell-out`
+  - : The user agent will generate a counter representation as normal and would read it out letter by letter. If the user agent doesn't know how to read out a particular counter symbol, the user agent might read it out as if the value of `speak-as` was `numbers`.
+- `<counter-style-name>`
+  - : The name of another counter style, specified as a {{cssxref("&lt;custom-ident&gt;")}}. If included, the counter will be spoken out in the form specified in that counter style, kind of like specifying the {{cssxref("@counter-style/fallback")}} descriptor. If the specified style does not exist, `speak-as` defaults to `auto`.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Accessibility concerns
 
-<p>{{cssinfo}}</p>
+Assistive technology support is very limited for the `speak-as` property. Do not rely on it to convey information critical to understanding the page's purpose.
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+[Let's Talk About Speech CSS | CSS Tricks](https://css-tricks.com/lets-talk-speech-css/)
+
+## Formal definition
+
+{{cssinfo}}
+
+## Formal syntax
 
 {{csssyntax}}
 
- <h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_the_spoken_form_for_a_counter">Setting the spoken form for a counter</h3>
+### Setting the spoken form for a counter
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;ul class="list"&gt;
-  &lt;li&gt;One&lt;/li&gt;
-  &lt;li&gt;Two&lt;/li&gt;
-  &lt;li&gt;Three&lt;/li&gt;
-  &lt;li&gt;Four&lt;/li&gt;
-  &lt;li&gt;Five&lt;/li&gt;
-&lt;/ul&gt;</pre>
+```html
+<ul class="list">
+  <li>One</li>
+  <li>Two</li>
+  <li>Three</li>
+  <li>Four</li>
+  <li>Five</li>
+</ul>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">@counter-style speak-as-example {
+```css
+@counter-style speak-as-example {
   system: fixed;
   symbols:     ;
   suffix: " ";
@@ -89,23 +91,22 @@ speak-as: &lt;counter-style-name&gt;;
 
 .list {
   list-style: speak-as-example;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Setting_the_spoken_form_for_a_counter') }}</p>
+{{ EmbedLiveSample('Setting_the_spoken_form_for_a_counter') }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}</li>
- <li>{{cssxref("symbols()", "symbols()")}}, the functional notation creating anonymous counter styles.</li>
-</ul>
+- {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
+- {{cssxref("symbols()", "symbols()")}}, the functional notation creating anonymous counter styles.

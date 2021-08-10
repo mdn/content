@@ -6,26 +6,27 @@ tags:
   - CSS Fonts
   - CSS Property
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.font-family
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>font-family</code></strong> CSS property specifies a prioritized list of one or more font family names and/or generic family names for the selected element.</p>
+The **`font-family`** CSS property specifies a prioritized list of one or more font family names and/or generic family names for the selected element.
 
-<div>{{EmbedInteractiveExample("pages/css/font-family.html")}}</div>
+{{EmbedInteractiveExample("pages/css/font-family.html")}}
 
-<p>Values are separated by commas to indicate that they are alternatives. The browser will select the first font in the list that is installed or that can be downloaded using a {{CSSxRef("@font-face")}} at-rule.</p>
+Values are separated by commas to indicate that they are alternatives. The browser will select the first font in the list that is installed or that can be downloaded using a {{CSSxRef("@font-face")}} at-rule.
 
-<p>It is often convenient to use the shorthand property {{CSSxRef("font")}} to set <code>font-size</code> and other font related properties all at once.</p>
+It is often convenient to use the shorthand property {{CSSxRef("font")}} to set `font-size` and other font related properties all at once.
 
-<p>You should always include at least one generic family name in a <code>font-family</code> list, since there's no guarantee that any given font is available. This lets the browser select an acceptable fallback font when necessary.</p>
+You should always include at least one generic family name in a `font-family` list, since there's no guarantee that any given font is available. This lets the browser select an acceptable fallback font when necessary.
 
-<p>The <code>font-family</code> property specifies a list of fonts, from highest priority to lowest. Font selection <em>does not</em> stop at the first font in the list that is on the user's system. Rather, font selection is done <em>one character at a time</em>, so that if an available font does not have a glyph for a needed character, the latter fonts are tried. (However, this doesn't work in Internet Explorer 6 or earlier.) When a font is only available in some <a href="/en-US/docs/Web/CSS/font-style">styles</a>, <a href="/en-US/docs/Web/CSS/font-variant">variants</a>, or <a href="/en-US/docs/Web/CSS/font-size">sizes</a>, those properties may also influence which font family is chosen.</p>
+The `font-family` property specifies a list of fonts, from highest priority to lowest. Font selection _does not_ stop at the first font in the list that is on the user's system. Rather, font selection is done _one character at a time_, so that if an available font does not have a glyph for a needed character, the latter fonts are tried. (However, this doesn't work in Internet Explorer 6 or earlier.) When a font is only available in some [styles](/en-US/docs/Web/CSS/font-style), [variants](/en-US/docs/Web/CSS/font-variant), or [sizes](/en-US/docs/Web/CSS/font-size), those properties may also influence which font family is chosen.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css; no-line-numbers">/* A font family name and a generic family name */
+```css
+/* A font family name and a generic family name */
 font-family: "Gill Sans Extrabold", sans-serif;
 font-family: "Goudy Bookletter 1911", sans-serif;
 
@@ -49,124 +50,115 @@ font-family: inherit;
 font-family: initial;
 font-family: revert;
 font-family: unset;
-</pre>
+```
 
-<p>The <code>font-family</code> property lists one or more font families, separated by commas. Each font family is specified as either a <code>&lt;family-name&gt;</code> or a <code>&lt;generic-name&gt;</code> value.</p>
+The `font-family` property lists one or more font families, separated by commas. Each font family is specified as either a `<family-name>` or a `<generic-name>` value.
 
-<p>The example below lists two font families, the first with a <code>&lt;family-name&gt;</code> and the second with a <code>&lt;generic-name&gt;</code>:</p>
+The example below lists two font families, the first with a `<family-name>` and the second with a `<generic-name>`:
 
-<pre class="brush: css;">font-family: "Gill Sans Extrabold", sans-serif;</pre>
+```css
+font-family: "Gill Sans Extrabold", sans-serif;
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>&lt;family-name&gt;</code></dt>
- <dd>The name of a font family. For example, "Times" and "Helvetica" are font families. Font family names containing whitespace should be quoted. For example: "Comic Sans MS".</dd>
- <dt><code>&lt;generic-name&gt;</code></dt>
- <dd>
- <p>Generic font families are a fallback mechanism, a means of preserving some of the style sheet author's intent when none of the specified fonts are available. Generic family names are keywords and must not be quoted. A generic font family should be the last item in the list of font family names. The following keywords are defined:</p>
- <dl>
-  <dt><code>serif</code></dt>
-  <dd>
-    <p>Glyphs have finishing strokes, flared or tapering ends, or have actual serifed endings.</p>
-    <p>For example: Lucida Bright, Lucida Fax, Palatino, Palatino Linotype, Palladio, URW Palladio, serif.</p>
-  </dd>
-  <dt><code>sans-serif</code></dt>
-  <dd>
-    <p>Glyphs have stroke endings that are plain.</p>
-    <p>For example: Open Sans, Fira Sans, Lucida Sans, Lucida Sans Unicode, Trebuchet MS, Liberation Sans, Nimbus Sans L, sans-serif.</p>
-  </dd>
-  <dt><code>monospace</code></dt>
-  <dd>
-    <p>All glyphs have the same fixed width.</p>
-    <p>For example: Fira Mono, DejaVu Sans Mono, Menlo, Consolas, Liberation Mono, Monaco, Lucida Console, monospace.</p>
-  </dd>
-  <dt><code>cursive</code></dt>
-  <dd>
-    <p>Glyphs in cursive fonts generally have either joining strokes or other cursive characteristics beyond those of italic typefaces. The glyphs are partially or completely connected, and the result looks more like handwritten pen or brush writing than printed letterwork.</p>
-    <p>For example: Brush Script MT, Brush Script Std, Lucida Calligraphy, Lucida Handwriting, Apple Chancery, cursive.</p>
-  </dd>
-  <dt><code>fantasy</code></dt>
-  <dd>
-    <p>Fantasy fonts are primarily decorative fonts that contain playful representations of characters.</p>
-    <p>For example: Papyrus, Herculanum, Party LET, Curlz MT, Harrington, fantasy.</p>
-  </dd>
-  <dt><code>system-ui</code></dt>
-  <dd>
-    <p>Glyphs are taken from the default user interface font on a given platform. Because typographic traditions vary widely across the world, this generic is provided for typefaces that don't map cleanly into the other generics.</p>
-  </dd>
-  <dt><code>ui-serif</code></dt>
-  <dd>
-    <p>The default user interface serif font.</p>
-  </dd>
-  <dt><code>ui-sans-serif</code></dt>
-  <dd>
-    <p>The default user interface sans-serif font.</p>
-  </dd>
-  <dt><code>ui-monospace</code></dt>
-  <dd>
-    <p>The default user interface monospace font.</p>
-  </dd>
-  <dt><code>ui-rounded</code></dt>
-  <dd>
-    <p>The default user interface font that has rounded features.</p>
-  </dd>
-  <dt><code>math</code></dt>
-  <dd>
-    <p>This is for the particular stylistic concerns of representing mathematics: superscript and subscript, brackets that cross several lines, nesting expressions, and double struck glyphs with distinct meanings.</p>
-  </dd>
-  <dt><code>emoji</code></dt>
-  <dd>
-    <p>Fonts that are specifically designed to render emoji.</p>
-  </dd>
-  <dt><code>fangsong</code></dt>
-  <dd>
-    <p>A particular style of Chinese characters that are between serif-style Song and cursive-style Kai forms. This style is often used for government documents.</p>
-  </dd>
- </dl>
- </dd>
-</dl>
+- `<family-name>`
+  - : The name of a font family. For example, "Times" and "Helvetica" are font families. Font family names containing whitespace should be quoted. For example: "Comic Sans MS".
+- `<generic-name>`
 
-<h3 id="Valid_family_names">Valid family names</h3>
+  - : Generic font families are a fallback mechanism, a means of preserving some of the style sheet author's intent when none of the specified fonts are available. Generic family names are keywords and must not be quoted. A generic font family should be the last item in the list of font family names. The following keywords are defined:
 
-<p>Font family names must either be given quoted as strings, or unquoted as a sequence of one or more identifiers. This means that punctuation characters and digits at the start of each token must be escaped in unquoted font family names.</p>
+    - `serif`
 
-<p>It is a <strong>good practice</strong> to quote font family names that contain white space, digits, or punctuation characters other than hyphens.</p>
+      - : Glyphs have finishing strokes, flared or tapering ends, or have actual serifed endings.
 
-<p>For example, the following declarations are valid:</p>
+        For example: Lucida Bright, Lucida Fax, Palatino, Palatino Linotype, Palladio, URW Palladio, serif.
 
-<pre class="brush: css; example-good">
-font-family: "Goudy Bookletter 1911", sans-serif;</pre>
+    - `sans-serif`
 
-<p>The following declarations are <strong>invalid</strong>:</p>
+      - : Glyphs have stroke endings that are plain.
 
-<pre class="brush: css; example-bad">font-family: Goudy Bookletter 1911, sans-serif;
+        For example: Open Sans, Fira Sans, Lucida Sans, Lucida Sans Unicode, Trebuchet MS, Liberation Sans, Nimbus Sans L, sans-serif.
+
+    - `monospace`
+
+      - : All glyphs have the same fixed width.
+
+        For example: Fira Mono, DejaVu Sans Mono, Menlo, Consolas, Liberation Mono, Monaco, Lucida Console, monospace.
+
+    - `cursive`
+
+      - : Glyphs in cursive fonts generally have either joining strokes or other cursive characteristics beyond those of italic typefaces. The glyphs are partially or completely connected, and the result looks more like handwritten pen or brush writing than printed letterwork.
+
+        For example: Brush Script MT, Brush Script Std, Lucida Calligraphy, Lucida Handwriting, Apple Chancery, cursive.
+
+    - `fantasy`
+
+      - : Fantasy fonts are primarily decorative fonts that contain playful representations of characters.
+
+        For example: Papyrus, Herculanum, Party LET, Curlz MT, Harrington, fantasy.
+
+    - `system-ui`
+      - : Glyphs are taken from the default user interface font on a given platform. Because typographic traditions vary widely across the world, this generic is provided for typefaces that don't map cleanly into the other generics.
+    - `ui-serif`
+      - : The default user interface serif font.
+    - `ui-sans-serif`
+      - : The default user interface sans-serif font.
+    - `ui-monospace`
+      - : The default user interface monospace font.
+    - `ui-rounded`
+      - : The default user interface font that has rounded features.
+    - `math`
+      - : This is for the particular stylistic concerns of representing mathematics: superscript and subscript, brackets that cross several lines, nesting expressions, and double struck glyphs with distinct meanings.
+    - `emoji`
+      - : Fonts that are specifically designed to render emoji.
+    - `fangsong`
+      - : A particular style of Chinese characters that are between serif-style Song and cursive-style Kai forms. This style is often used for government documents.
+
+### Valid family names
+
+Font family names must either be given quoted as strings, or unquoted as a sequence of one or more identifiers. This means that punctuation characters and digits at the start of each token must be escaped in unquoted font family names.
+
+It is a **good practice** to quote font family names that contain white space, digits, or punctuation characters other than hyphens.
+
+For example, the following declarations are valid:
+
+```css example-good
+font-family: "Goudy Bookletter 1911", sans-serif;
+```
+
+The following declarations are **invalid**:
+
+```css example-bad
+font-family: Goudy Bookletter 1911, sans-serif;
 font-family: Red/Black, sans-serif;
 font-family: "Lucida" Grande, sans-serif;
 font-family: Ahem!, sans-serif;
 font-family: test@foo, sans-serif;
 font-family: #POUND, sans-serif;
-font-family: Hawaii 5-0, sans-serif;</pre>
+font-family: Hawaii 5-0, sans-serif;
+```
 
-<p>The following example is technically <strong>valid</strong> but is not recommended:</p>
+The following example is technically **valid** but is not recommended:
 
-<pre class="brush: css;">
+```css
 font-family: Gill Sans Extrabold, sans-serif;
-</pre>
+```
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Some_common_font_families">Some common font families</h3>
+### Some common font families
 
-<pre class="brush: css;">.serif {
+```css
+.serif {
   font-family: Times, "Times New Roman", Georgia, serif;
 }
 
@@ -197,54 +189,54 @@ font-family: Gill Sans Extrabold, sans-serif;
 .fangsong {
   font-family: fangsong;
 }
-</pre>
+```
 
-<pre class="brush: html hidden">&lt;div class="serif"&gt;
+```html hidden
+<div class="serif">
   This is an example of a serif font.
-&lt;/div&gt;
+</div>
 
-&lt;div class="sansserif"&gt;
+<div class="sansserif">
   This is an example of a sans-serif font.
-&lt;/div&gt;
+</div>
 
-&lt;div class="monospace"&gt;
+<div class="monospace">
   This is an example of a monospace font.
-&lt;/div&gt;
+</div>
 
-&lt;div class="cursive"&gt;
+<div class="cursive">
   This is an example of a cursive font.
-&lt;/div&gt;
+</div>
 
-&lt;div class="fantasy"&gt;
+<div class="fantasy">
   This is an example of a fantasy font.
-&lt;/div&gt;
+</div>
 
-&lt;div class="math"&gt;
+<div class="math">
   This is an example of a math font.
-&lt;/div&gt;
+</div>
 
-&lt;div class="emoji"&gt;
+<div class="emoji">
   This is an example of an emoji font.
-&lt;/div&gt;
+</div>
 
-&lt;div class="fangsong"&gt;
+<div class="fangsong">
   This is an example of a fangsong font.
-&lt;/div&gt;</pre>
+</div>
+```
 
-<p>{{EmbedLiveSample("Some_common_font_families", 600, 220)}}</p>
+{{EmbedLiveSample("Some_common_font_families", 600, 220)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("font-style")}}</li>
- <li>{{cssxref("font-weight")}}</li>
- <li><a href="/en-US/docs/Learn/CSS/Styling_text/Fundamentals">Fundamental text and font styling</a></li>
-</ul>
+- {{cssxref("font-style")}}
+- {{cssxref("font-weight")}}
+- [Fundamental text and font styling](/en-US/docs/Learn/CSS/Styling_text/Fundamentals)

@@ -11,66 +11,62 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.-moz-outline-radius-topright
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}{{deprecated_header}}>
 
-<div>{{deprecated_header}}</div>>
+In Mozilla applications, the **`-moz-outline-radius-topright`** [CSS](/en-US/docs/Web/CSS) property can be used to round the top-right corner of an element's {{cssxref("outline")}}.
 
-<p>In Mozilla applications, the <strong><code>-moz-outline-radius-topright</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property can be used to round the top-right corner of an element's {{cssxref("outline")}}.</p>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+The value of `-moz-outline-radius-topright` is either a CSS [`<length>`](/en-US/docs/Web/CSS/length) or a [percentage](/en-US/docs/Web/CSS/percentage) of the corresponding dimensions of the border box. The [`calc()`](</en-US/docs/Web/CSS/calc()>) function may be used as well.
 
-<p>The value of <code>-moz-outline-radius-topright</code> is either a CSS <code><a href="/en-US/docs/Web/CSS/length">&lt;length&gt;</a></code> or a <a href="/en-US/docs/Web/CSS/percentage">percentage</a> of the corresponding dimensions of the border box. The <code><a href="/en-US/docs/Web/CSS/calc()">calc()</a></code> function may be used as well.</p>
+### Values
 
-<h3 id="Values">Values</h3>
+- `<length>`
+  - : The radius of the circle defining the curvature of the top and right edges of the element, specified as a CSS [`<length>`](/en-US/docs/Web/CSS/length).
+- `<percentage>`
+  - : The radius of the circle defining the rounding of the top-right corner of the element, specified as the [percentages](/en-US/docs/Web/CSS/percentage) of the top and right sides of the border box.
 
-<dl>
- <dt><code>&lt;length&gt;</code></dt>
- <dd>The radius of the circle defining the curvature of the top and right edges of the element, specified as a CSS <code><a href="/en-US/docs/Web/CSS/length">&lt;length&gt;</a></code>.</dd>
- <dt><code>&lt;percentage&gt;</code></dt>
- <dd>The radius of the circle defining the rounding of the top-right corner of the element, specified as the <a href="/en-US/docs/Web/CSS/percentage">percentages</a> of the top and right sides of the border box.</dd>
-</dl>
+## Formal definition
 
-<h2 id="Formal_definition">Formal definition</h2>
+{{CSSInfo}}
 
-<p>{{CSSInfo}}</p>
-
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{CSSSyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;Look at this paragraph's top-right corner.&lt;/p&gt;</pre>
+```html
+<p>Look at this paragraph's top-right corner.</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   margin: 5px;
   border: solid cyan;
   outline: dotted red;
   -moz-outline-radius-topright: 2em;
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Examples")}}</p>
+{{EmbedLiveSample("Examples")}}
 
-<div class="notecard note">
-<p><strong>Note:</strong> The example above will not display the desired effect if you are viewing this in a browser other than Firefox.</p>
-</div>
+> **Note:** The example above will not display the desired effect if you are viewing this in a browser other than Firefox.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any standard.</p>
+Not part of any standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>See the {{cssxref("-moz-outline-radius")}} property for more information.</li>
-</ul>
+- See the {{cssxref("-moz-outline-radius")}} property for more information.

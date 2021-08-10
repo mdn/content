@@ -12,77 +12,73 @@ tags:
   - WebVTT
 browser-compat: css.selectors.cue-region
 ---
-<p>{{CSSRef}}{{Draft}}{{SeeCompatTable}}</p>
+{{CSSRef}}{{Draft}}{{SeeCompatTable}}
 
-<p>The <strong><code>::cue-region</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-element</a> matches {{DOMxRef("WebVTT API", "WebVTT", "", 1)}} cues within a selected element. This can be used to <a href="/en-US/docs/Web/API/WebVTT_API#styling_webtt_cues">style captions and other cues</a> in media with VTT tracks.</p>
+The **`::cue-region`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) matches {{DOMxRef("WebVTT API", "WebVTT", "", 1)}} cues within a selected element. This can be used to [style captions and other cues](/en-US/docs/Web/API/WebVTT_API#styling_webtt_cues) in media with VTT tracks.
 
-<pre class="brush: css; no-line-numbers">::cue-region {
+```css
+::cue-region {
   color: yellow;
   font-weight: bold;
-}</pre>
+}
+```
 
-<p>The properties are applied to the entire set of cues as if they were a single unit. The only exception is that <code>background</code> and its shorthand properties apply to each cue individually, to avoid creating boxes and obscuring unexpectedly large areas of the media.</p>
+The properties are applied to the entire set of cues as if they were a single unit. The only exception is that `background` and its shorthand properties apply to each cue individually, to avoid creating boxes and obscuring unexpectedly large areas of the media.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
 {{CSSSyntax}}
 
-<h2 id="Permitted_properties">Permitted properties</h2>
+## Permitted properties
 
-<p>Rules whose selectors include this element may only use the following CSS properties:</p>
+Rules whose selectors include this element may only use the following CSS properties:
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/background"><code>background</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/background-attachment"><code>background-attachment</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/background-clip"><code>background-clip</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/background-color"><code>background-color</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/background-image"><code>background-image</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/background-origin"><code>background-origin</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/background-position"><code>background-position</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/background-repeat"><code>background-repeat</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/background-size"><code>background-size</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/color"><code>color</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/font"><code>font</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/font-family"><code>font-family</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/font-size"><code>font-size</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/font-stretch"><code>font-stretch</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/font-style"><code>font-style</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/font-variant"><code>font-variant</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/font-weight"><code>font-weight</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/line-height"><code>line-height</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/opacity"><code>opacity</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/outline"><code>outline</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/outline-color"><code>outline-color</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/outline-style"><code>outline-style</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/outline-width"><code>outline-width</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/ruby-position"><code>ruby-position</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/text-combine-upright"><code>text-combine-upright</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/text-decoration"><code>text-decoration</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/text-decoration-color"><code>text-decoration-color</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/text-decoration-line"><code>text-decoration-line</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/text-decoration-style"><code>text-decoration-style</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/text-decoration-thickness"><code>text-decoration-thickness</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/text-shadow"><code>text-shadow</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/visibility"><code>visibility</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/white-space"><code>white-space</code></a></li>
-</ul>
+- [`background`](/en-US/docs/Web/CSS/background)
+- [`background-attachment`](/en-US/docs/Web/CSS/background-attachment)
+- [`background-clip`](/en-US/docs/Web/CSS/background-clip)
+- [`background-color`](/en-US/docs/Web/CSS/background-color)
+- [`background-image`](/en-US/docs/Web/CSS/background-image)
+- [`background-origin`](/en-US/docs/Web/CSS/background-origin)
+- [`background-position`](/en-US/docs/Web/CSS/background-position)
+- [`background-repeat`](/en-US/docs/Web/CSS/background-repeat)
+- [`background-size`](/en-US/docs/Web/CSS/background-size)
+- [`color`](/en-US/docs/Web/CSS/color)
+- [`font`](/en-US/docs/Web/CSS/font)
+- [`font-family`](/en-US/docs/Web/CSS/font-family)
+- [`font-size`](/en-US/docs/Web/CSS/font-size)
+- [`font-stretch`](/en-US/docs/Web/CSS/font-stretch)
+- [`font-style`](/en-US/docs/Web/CSS/font-style)
+- [`font-variant`](/en-US/docs/Web/CSS/font-variant)
+- [`font-weight`](/en-US/docs/Web/CSS/font-weight)
+- [`line-height`](/en-US/docs/Web/CSS/line-height)
+- [`opacity`](/en-US/docs/Web/CSS/opacity)
+- [`outline`](/en-US/docs/Web/CSS/outline)
+- [`outline-color`](/en-US/docs/Web/CSS/outline-color)
+- [`outline-style`](/en-US/docs/Web/CSS/outline-style)
+- [`outline-width`](/en-US/docs/Web/CSS/outline-width)
+- [`ruby-position`](/en-US/docs/Web/CSS/ruby-position)
+- [`text-combine-upright`](/en-US/docs/Web/CSS/text-combine-upright)
+- [`text-decoration`](/en-US/docs/Web/CSS/text-decoration)
+- [`text-decoration-color`](/en-US/docs/Web/CSS/text-decoration-color)
+- [`text-decoration-line`](/en-US/docs/Web/CSS/text-decoration-line)
+- [`text-decoration-style`](/en-US/docs/Web/CSS/text-decoration-style)
+- [`text-decoration-thickness`](/en-US/docs/Web/CSS/text-decoration-thickness)
+- [`text-shadow`](/en-US/docs/Web/CSS/text-shadow)
+- [`visibility`](/en-US/docs/Web/CSS/visibility)
+- [`white-space`](/en-US/docs/Web/CSS/white-space)
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Other {{DOMxRef("WebVTT API", "WebVTT", "", 1)}} selectors:
-  <ul>
-   <li>{{CSSxRef("::cue")}}</li>
-   <li>{{CSSxRef(":past")}}</li>
-   <li>{{CSSxRef(":future")}}</li>
-  </ul>
- </li>
-</ul>
+- Other {{DOMxRef("WebVTT API", "WebVTT", "", 1)}} selectors:
+
+  - {{CSSxRef("::cue")}}
+  - {{CSSxRef(":past")}}
+  - {{CSSxRef(":future")}}

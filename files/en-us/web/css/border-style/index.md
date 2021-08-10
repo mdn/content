@@ -6,29 +6,28 @@ tags:
   - CSS Borders
   - CSS Property
   - Reference
-  - 'recipe:css-shorthand-property'
+  - recipe:css-shorthand-property
 browser-compat: css.properties.border-style
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>border-style</code></strong> <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand</a> <a href="/en-US/docs/CSS">CSS</a> property sets the line style for all four sides of an element's border.</p>
+The **`border-style`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [CSS](/en-US/docs/CSS) property sets the line style for all four sides of an element's border.
 
-<div>{{EmbedInteractiveExample("pages/css/border-style.html")}}</div>
+{{EmbedInteractiveExample("pages/css/border-style.html")}}
 
-<h2 id="Constituent_properties">Constituent properties</h2>
+## Constituent properties
 
-<p>This property is a shorthand for the following CSS properties:</p>
+This property is a shorthand for the following CSS properties:
 
-<ul>
-	<li><a href="/en-US/docs/Web/CSS/border-bottom-style"><code>border-bottom-style</code></a></li>
-	<li><a href="/en-US/docs/Web/CSS/border-left-style"><code>border-left-style</code></a></li>
-	<li><a href="/en-US/docs/Web/CSS/border-right-style"><code>border-right-style</code></a></li>
-	<li><a href="/en-US/docs/Web/CSS/border-top-style"><code>border-top-style</code></a></li>
-</ul>
+- [`border-bottom-style`](/en-US/docs/Web/CSS/border-bottom-style)
+- [`border-left-style`](/en-US/docs/Web/CSS/border-left-style)
+- [`border-right-style`](/en-US/docs/Web/CSS/border-right-style)
+- [`border-top-style`](/en-US/docs/Web/CSS/border-top-style)
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 border-style: none;
 border-style: hidden;
 border-style: dotted;
@@ -54,81 +53,76 @@ border-style: inherit;
 border-style: initial;
 border-style: revert;
 border-style: unset;
-</pre>
+```
 
-<p>The <code>border-style</code> property may be specified using one, two, three, or four values.</p>
+The `border-style` property may be specified using one, two, three, or four values.
 
-<ul>
-	<li>When <strong>one</strong> value is specified, it applies the same style to <strong>all four sides</strong>.</li>
-	<li>When <strong>two</strong> values are specified, the first style applies to the <strong>top and bottom</strong>, the second to the <strong>left and right</strong>.</li>
-	<li>When <strong>three</strong> values are specified, the first style applies to the <strong>top</strong>, the second to the <strong>left and right</strong>, the third to the <strong>bottom</strong>.</li>
-	<li>When <strong>four</strong> values are specified, the styles apply to the <strong>top</strong>, <strong>right</strong>, <strong>bottom</strong>, and <strong>left</strong> in that order (clockwise).</li>
-</ul>
+- When **one** value is specified, it applies the same style to **all four sides**.
+- When **two** values are specified, the first style applies to the **top and bottom**, the second to the **left and right**.
+- When **three** values are specified, the first style applies to the **top**, the second to the **left and right**, the third to the **bottom**.
+- When **four** values are specified, the styles apply to the **top**, **right**, **bottom**, and **left** in that order (clockwise).
 
-<p>Each value is a keyword chosen from the list below.</p>
+Each value is a keyword chosen from the list below.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
-	<dt><code>&lt;line-style&gt;</code></dt>
-	<dd><p>Describes the style of the border. It can have the following values:</p>
-    <dl>
-      <dt><code>none</code></dt>
-      <dd>Like the <code>hidden</code> keyword, displays no border. Unless a {{cssxref("background-image")}} is set, the computed value of the same side's {{cssxref("border-width")}} will be <code>0</code>, even if the specified value is something else. In the case of table cell and border collapsing, the <code>none</code> value has the <em>lowest</em> priority: if any other conflicting border is set, it will be displayed.</dd>
-      <dt><code>hidden</code></dt>
-      <dd>Like the <code>none</code> keyword, displays no border. Unless a {{cssxref("background-image")}} is set, the computed value of the same side's {{cssxref("border-width")}} will be <code>0</code>, even if the specified value is something else. In the case of table cell and border collapsing, the <code>hidden</code> value has the <em>highest</em> priority: if any other conflicting border is set, it won't be displayed.</dd>
-      <dt><code>dotted</code></dt>
-      <dd>Displays a series of rounded dots. The spacing of the dots is not defined by the specification and is implementation-specific. The radius of the dots is half the computed value of the same side's {{cssxref("border-width")}}.</dd>
-      <dt><code>dashed</code></dt>
-      <dd>Displays a series of short square-ended dashes or line segments. The exact size and length of the segments are not defined by the specification and are implementation-specific.</dd>
-      <dt><code>solid</code></dt>
-      <dd>Displays a single, straight, solid line.</dd>
-      <dt><code>double</code></dt>
-      <dd>Displays two straight lines that add up to the pixel size defined by {{cssxref("border-width")}}.</dd>
-      <dt><code>groove</code></dt>
-      <dd>Displays a border with a carved appearance. It is the opposite of <code>ridge</code>.</dd>
-      <dt><code>ridge</code></dt>
-      <dd>Displays a border with an extruded appearance. It is the opposite of <code>groove</code>.</dd>
-      <dt><code>inset</code></dt>
-      <dd>Displays a border that makes the element appear embedded. It is the opposite of <code>outset</code>. When applied to a table cell with {{cssxref("border-collapse")}} set to <code>collapsed</code>, this value behaves like <code>groove</code>.</dd>
-      <dt><code>outset</code></dt>
-      <dd>Displays a border that makes the element appear embossed. It is the opposite of <code>inset</code>. When applied to a table cell with {{cssxref("border-collapse")}} set to <code>collapsed</code>, this value behaves like <code>ridge</code>.</dd>
-    </dl>
-  </dd>
-</dl>
+- `<line-style>`
 
-<h2 id="Formal_definition">Formal definition</h2>
+  - : Describes the style of the border. It can have the following values:
 
-<p>{{cssinfo}}</p>
+    - `none`
+      - : Like the `hidden` keyword, displays no border. Unless a {{cssxref("background-image")}} is set, the computed value of the same side's {{cssxref("border-width")}} will be `0`, even if the specified value is something else. In the case of table cell and border collapsing, the `none` value has the _lowest_ priority: if any other conflicting border is set, it will be displayed.
+    - `hidden`
+      - : Like the `none` keyword, displays no border. Unless a {{cssxref("background-image")}} is set, the computed value of the same side's {{cssxref("border-width")}} will be `0`, even if the specified value is something else. In the case of table cell and border collapsing, the `hidden` value has the _highest_ priority: if any other conflicting border is set, it won't be displayed.
+    - `dotted`
+      - : Displays a series of rounded dots. The spacing of the dots is not defined by the specification and is implementation-specific. The radius of the dots is half the computed value of the same side's {{cssxref("border-width")}}.
+    - `dashed`
+      - : Displays a series of short square-ended dashes or line segments. The exact size and length of the segments are not defined by the specification and are implementation-specific.
+    - `solid`
+      - : Displays a single, straight, solid line.
+    - `double`
+      - : Displays two straight lines that add up to the pixel size defined by {{cssxref("border-width")}}.
+    - `groove`
+      - : Displays a border with a carved appearance. It is the opposite of `ridge`.
+    - `ridge`
+      - : Displays a border with an extruded appearance. It is the opposite of `groove`.
+    - `inset`
+      - : Displays a border that makes the element appear embedded. It is the opposite of `outset`. When applied to a table cell with {{cssxref("border-collapse")}} set to `collapsed`, this value behaves like `groove`.
+    - `outset`
+      - : Displays a border that makes the element appear embossed. It is the opposite of `inset`. When applied to a table cell with {{cssxref("border-collapse")}} set to `collapsed`, this value behaves like `ridge`.
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal definition
+
+{{cssinfo}}
+
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3>All property values</h3>
+### All property values
 
-<p>Here is an example of all the property values.</p>
+Here is an example of all the property values.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">
-&lt;pre class="b1"&gt;none&lt;/pre&gt;
-&lt;pre class="b2"&gt;hidden&lt;/pre&gt;
-&lt;pre class="b3"&gt;dotted&lt;/pre&gt;
-&lt;pre class="b4"&gt;dashed&lt;/pre&gt;
-&lt;pre class="b5"&gt;solid&lt;/pre&gt;
-&lt;pre class="b6"&gt;double&lt;/pre&gt;
-&lt;pre class="b7"&gt;groove&lt;/pre&gt;
-&lt;pre class="b8"&gt;ridge&lt;/pre&gt;
-&lt;pre class="b9"&gt;inset&lt;/pre&gt;
-&lt;pre class="b10"&gt;outset&lt;/pre&gt;
-</pre>
+```html
+<pre class="b1">none</pre>
+<pre class="b2">hidden</pre>
+<pre class="b3">dotted</pre>
+<pre class="b4">dashed</pre>
+<pre class="b5">solid</pre>
+<pre class="b6">double</pre>
+<pre class="b7">groove</pre>
+<pre class="b8">ridge</pre>
+<pre class="b9">inset</pre>
+<pre class="b10">outset</pre>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">
+```css
 pre {
   height: 80px;
   width: 120px;
@@ -179,22 +173,21 @@ pre {
 
 .b10 {
   border-style: outset;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<div>{{EmbedLiveSample('All_property_values', "1200", 450)}}</div>
+{{EmbedLiveSample('All_property_values', "1200", 450)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>The border-related shorthand CSS properties: {{Cssxref("border")}}, {{Cssxref("border-width")}}, {{Cssxref("border-color")}}, {{Cssxref("border-radius")}}</li>
-</ul>
+- The border-related shorthand CSS properties: {{Cssxref("border")}}, {{Cssxref("border-width")}}, {{Cssxref("border-color")}}, {{Cssxref("border-radius")}}

@@ -9,11 +9,12 @@ tags:
   - sizing
 browser-compat: css.properties.width.min-content
 ---
-<p>The <code>min-content</code> sizing keyword represents the intrinsic minimum width of the content. For text content this means that the content will take all soft-wrapping opportunities, becoming as small as the longest word.</p>
+The `min-content` sizing keyword represents the intrinsic minimum width of the content. For text content this means that the content will take all soft-wrapping opportunities, becoming as small as the longest word.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">/* Used as a length */
+```css
+/* Used as a length */
 width: min-content;
 inline-size: min-content;
 height: min-content;
@@ -26,47 +27,53 @@ grid-template-columns: 200px 1fr min-content;
 min-content: inherit;
 min-content: initial;
 min-content: revert;
-min-content: unset;</pre>
+min-content: unset;
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_min-content_for_box_sizing">Using min-content for box sizing</h3>
+### Using min-content for box sizing
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="item"&gt;Item&lt;/div&gt;
-&lt;div class="item"&gt;Item with more text in it.&lt;/div&gt;
-</pre>
+```html
+<div class="item">Item</div>
+<div class="item">Item with more text in it.</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.item {
+```css
+.item {
   width: min-content;
   background-color: #8ca0ff;
   padding: 5px;
   margin-bottom: 1em;
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Using_min-content_for_box_sizing", "100%", 200)}}</p>
+{{EmbedLiveSample("Using_min-content_for_box_sizing", "100%", 200)}}
 
-<h3 id="Sizing_grid_columns_with_min-content">Sizing grid columns with min-content</h3>
+### Sizing grid columns with min-content
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div id="container"&gt;
-  &lt;div&gt;Item&lt;/div&gt;
-  &lt;div&gt;
+```html
+<div id="container">
+  <div>Item</div>
+  <div>
     Item with more text in it.
-  &lt;/div&gt;
-  &lt;div&gt;Flexible item&lt;/div&gt;
-&lt;/div&gt;</pre>
+  </div>
+  <div>Flexible item</div>
+</div>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">#container {
+```css
+#container {
   display: grid;
   grid-template-columns: min-content min-content 1fr;
   grid-gap: 5px;
@@ -77,22 +84,22 @@ min-content: unset;</pre>
   padding: 10px;
 }
 
-#container &gt; div {
+#container > div {
   background-color: #8ca0ff;
   padding: 5px;
 }
-</pre>
+```
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Sizing_grid_columns_with_min-content", "100%", 200)}}</p>
+{{EmbedLiveSample("Sizing_grid_columns_with_min-content", "100%", 200)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<h3 id="Supported_for_width_and_other_sizing_properties">Supported for width (and other sizing properties)</h3>
+### Supported for width (and other sizing properties)
 
-<p>{{Compat}}</p>
+{{Compat}}

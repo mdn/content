@@ -11,20 +11,21 @@ tags:
   - SVG
   - SVG Filter
   - Web
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.backdrop-filter
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>backdrop-filter</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property lets you apply graphical effects such as blurring or color shifting to the area behind an element. Because it applies to everything <em>behind</em> the element, to see the effect you must make the element or its background at least partially transparent.</p>
+The **`backdrop-filter`** [CSS](/en-US/docs/Web/CSS) property lets you apply graphical effects such as blurring or color shifting to the area behind an element. Because it applies to everything _behind_ the element, to see the effect you must make the element or its background at least partially transparent.
 
-<pre class="brush: css no-line-numbers">/* Keyword value */
+```css
+/* Keyword value */
 backdrop-filter: none;
 
 /* URL to SVG filter */
 backdrop-filter: url(commonfilters.svg#filter);
 
-/* &lt;filter-function&gt; values */
+/* <filter-function> values */
 backdrop-filter: blur(2px);
 backdrop-filter: brightness(60%);
 backdrop-filter: contrast(40%);
@@ -44,32 +45,31 @@ backdrop-filter: inherit;
 backdrop-filter: initial;
 backdrop-filter: revert;
 backdrop-filter: unset;
-</pre>
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>none</code></dt>
- <dd>No filter is applied to the backdrop.</dd>
- <dt><code>&lt;filter-function-list&gt;</code></dt>
- <dd>A space-separated list of {{cssxref("&lt;filter-function&gt;")}}s or an <a href="/en-US/docs/Web/SVG/Element/filter">SVG filter</a> that will be applied to the backdrop.</dd>
-</dl>
+- `none`
+  - : No filter is applied to the backdrop.
+- `<filter-function-list>`
+  - : A space-separated list of {{cssxref("&lt;filter-function&gt;")}}s or an [SVG filter](/en-US/docs/Web/SVG/Element/filter) that will be applied to the backdrop.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.box {
+```css
+.box {
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 5px;
   font-family: sans-serif;
@@ -101,31 +101,31 @@ body {
   justify-content: center;
   height: 100%;
   width: 100%;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div class="container"&gt;
-  &lt;div class="box"&gt;
-    &lt;p&gt;backdrop-filter: blur(10px)&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="container">
+  <div class="box">
+    <p>backdrop-filter: blur(10px)</p>
+  </div>
+</div>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Examples", 600, 400)}}</p>
+{{EmbedLiveSample("Examples", 600, 400)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("filter")}}</li>
-</ul>
+- {{cssxref("filter")}}

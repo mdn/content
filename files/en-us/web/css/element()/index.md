@@ -11,77 +11,78 @@ tags:
   - Web
 browser-compat: css.types.image.element
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p>The <strong><code>element()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Functions">function</a> defines an {{cssxref("&lt;image&gt;")}} value generated from an arbitrary HTML element. This image is live, meaning that if the HTML element is changed, the CSS properties using the resulting value are automatically updated.</p>
+The **`element()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) defines an {{cssxref("&lt;image&gt;")}} value generated from an arbitrary HTML element. This image is live, meaning that if the HTML element is changed, the CSS properties using the resulting value are automatically updated.
 
-<p>A particularly useful scenario for using this would be to render an image in an HTML {{HTMLElement("canvas")}} element, then use that as a background.</p>
+A particularly useful scenario for using this would be to render an image in an HTML {{HTMLElement("canvas")}} element, then use that as a background.
 
-<p>On Gecko browsers, you can use the non-standard {{domxref("document.mozSetImageElement()")}} method to change the element being used as the background for a given CSS background element.</p>
+On Gecko browsers, you can use the non-standard {{domxref("document.mozSetImageElement()")}} method to change the element being used as the background for a given CSS background element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">element(<var>id</var>)</pre>
+```css
+element(id)
+```
 
-<p>where:</p>
+where:
 
-<dl>
- <dt><var>id</var></dt>
- <dd>The ID of an element to use as the background, specified using the HTML attribute #<em>id</em> on the element.</dd>
-</dl>
+- _id_
+  - : The ID of an element to use as the background, specified using the HTML attribute #_id_ on the element.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>These examples can be <a href="https://media.prod.mdn.mozit.cloud/samples/cssref/moz-element.html">viewed live</a> in builds of Firefox that support <code>-moz-element()</code>.</p>
+These examples can be [viewed live](https://media.prod.mdn.mozit.cloud/samples/cssref/moz-element.html) in builds of Firefox that support `-moz-element()`.
 
-<h3 id="A_somewhat_realistic_example">A somewhat realistic example</h3>
+### A somewhat realistic example
 
-<p>This example uses a hidden {{HTMLElement("div")}} as a background. The background element uses a gradient, but also includes text that is rendered as part of the background.</p>
+This example uses a hidden {{HTMLElement("div")}} as a background. The background element uses a gradient, but also includes text that is rendered as part of the background.
 
-<pre class="brush: html">&lt;div style="width:400px; height:400px; background:-moz-element(#myBackground1) no-repeat;"&gt;
-  &lt;p&gt;This box uses the element with the #myBackground1 ID as its background!&lt;/p&gt;
-&lt;/div&gt;
+```html
+<div style="width:400px; height:400px; background:-moz-element(#myBackground1) no-repeat;">
+  <p>This box uses the element with the #myBackground1 ID as its background!</p>
+</div>
 
-&lt;div style="overflow:hidden; height:0;"&gt;
-  &lt;div id="myBackground1" style="width:1024px; height:1024px; background-image: linear-gradient(to right, red, orange, yellow, white);"&gt;
-  &lt;p style="transform-origin:0 0; transform: rotate(45deg); color:white;"&gt;This text is part of the background. Cool, huh?&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
+<div style="overflow:hidden; height:0;">
+  <div id="myBackground1" style="width:1024px; height:1024px; background-image: linear-gradient(to right, red, orange, yellow, white);">
+  <p style="transform-origin:0 0; transform: rotate(45deg); color:white;">This text is part of the background. Cool, huh?</p>
+  </div>
+</div>
+```
 
-<p>The {{HTMLElement("div")}} element with the ID "myBackground1" is used as the background for the content including the paragraph "This box uses the element with the #myBackground1 ID as its background!".</p>
+The {{HTMLElement("div")}} element with the ID "myBackground1" is used as the background for the content including the paragraph "This box uses the element with the #myBackground1 ID as its background!".
 
-<p><img src="example1.png"></p>
+![](example1.png)
 
-<h3 id="A_somewhat_more_bizarre_example">A somewhat more bizarre example</h3>
+### A somewhat more bizarre example
 
-<p>This example uses a hidden {{HTMLElement("button")}} element in a repeating pattern as its background. This demonstrates that you can use arbitrary elements as background, but doesn't necessarily demonstrate good design practices.</p>
+This example uses a hidden {{HTMLElement("button")}} element in a repeating pattern as its background. This demonstrates that you can use arbitrary elements as background, but doesn't necessarily demonstrate good design practices.
 
-<pre class="brush: html">&lt;div style="width:400px; height:100px; background:-moz-element(#myBackground2);"&gt;
-&lt;/div&gt;
+```html
+<div style="width:400px; height:100px; background:-moz-element(#myBackground2);">
+</div>
 
-&lt;div style="overflow:hidden; height:0;"&gt;
-  &lt;button id="myBackground2" type="button"&gt;Evil button!&lt;/button&gt;
-&lt;/div&gt;
-</pre>
+<div style="overflow:hidden; height:0;">
+  <button id="myBackground2" type="button">Evil button!</button>
+</div>
+```
 
-<p><img src="example2.png"></p>
+![](example2.png)
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("image()", "image()")}}</li>
- <li>{{cssxref("image-set()", "image-set()")}}</li>
- <li>{{cssxref("&lt;image&gt;")}}</li>
- <li>{{cssxref("&lt;gradient&gt;")}}</li>
- <li>{{cssxref("element()")}}</li>
- <li>{{cssxref("cross-fade()")}}</li>
- <li>{{domxref("document.mozSetImageElement()")}}</li>
-</ul>
+- {{cssxref("image()", "image()")}}
+- {{cssxref("image-set()", "image-set()")}}
+- {{cssxref("&lt;image&gt;")}}
+- {{cssxref("&lt;gradient&gt;")}}
+- {{cssxref("element()")}}
+- {{cssxref("cross-fade()")}}
+- {{domxref("document.mozSetImageElement()")}}

@@ -7,22 +7,23 @@ tags:
   - CSS Property
   - CSS Tables
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.border-collapse
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>border-collapse</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets whether cells inside a {{htmlElement("table")}} have shared or separate borders.</p>
+The **`border-collapse`** [CSS](/en-US/docs/Web/CSS) property sets whether cells inside a {{htmlElement("table")}} have shared or separate borders.
 
-<div>{{EmbedInteractiveExample("pages/css/border-collapse.html")}}</div>
+{{EmbedInteractiveExample("pages/css/border-collapse.html")}}
 
-<p>When cells are collapsed, the {{cssxref("border-style")}} value of <code>inset</code> behaves like <code>groove</code>, and <code>outset</code> behaves like <code>ridge</code>.</p>
+When cells are collapsed, the {{cssxref("border-style")}} value of `inset` behaves like `groove`, and `outset` behaves like `ridge`.
 
-<p>When cells are separated, the distance between cells is defined by the {{cssxref("border-spacing")}} property.</p>
+When cells are separated, the distance between cells is defined by the {{cssxref("border-spacing")}} property.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 border-collapse: collapse;
 border-collapse: separate;
 
@@ -31,59 +32,60 @@ border-collapse: inherit;
 border-collapse: initial;
 border-collapse: revert;
 border-collapse: unset;
-</pre>
+```
 
-<p>The <code>border-collapse</code> property is specified as a single keyword, which may be chosen from the list below.</p>
+The `border-collapse` property is specified as a single keyword, which may be chosen from the list below.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>collapse</code></dt>
- <dd>Adjacent cells have shared borders (the collapsed-border table rendering model).</dd>
- <dt><code>separate</code></dt>
- <dd>Adjacent cells have distinct borders (the separated-border table rendering model).</dd>
-</dl>
+- `collapse`
+  - : Adjacent cells have shared borders (the collapsed-border table rendering model).
+- `separate`
+  - : Adjacent cells have distinct borders (the separated-border table rendering model).
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="A_colorful_table_of_browser_engines">A colorful table of browser engines</h3>
+### A colorful table of browser engines
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;table class="separate"&gt;
-  &lt;caption&gt;&lt;code&gt;border-collapse: separate&lt;/code&gt;&lt;/caption&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;&lt;th&gt;Browser&lt;/th&gt; &lt;th&gt;Layout Engine&lt;/th&gt;&lt;/tr&gt;
-    &lt;tr&gt;&lt;td class="fx"&gt;Firefox&lt;/td&gt; &lt;td class="gk"&gt;Gecko&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr&gt;&lt;td class="ed"&gt;Edge&lt;/td&gt; &lt;td class="tr"&gt;EdgeHTML&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr&gt;&lt;td class="sa"&gt;Safari&lt;/td&gt; &lt;td class="wk"&gt;Webkit&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr&gt;&lt;td class="ch"&gt;Chrome&lt;/td&gt; &lt;td class="bk"&gt;Blink&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr&gt;&lt;td class="op"&gt;Opera&lt;/td&gt; &lt;td class="bk"&gt;Blink&lt;/td&gt;&lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;table class="collapse"&gt;
-  &lt;caption&gt;&lt;code&gt;border-collapse: collapse&lt;/code&gt;&lt;/caption&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;&lt;th&gt;Browser&lt;/th&gt; &lt;th&gt;Layout Engine&lt;/th&gt;&lt;/tr&gt;
-    &lt;tr&gt;&lt;td class="fx"&gt;Firefox&lt;/td&gt; &lt;td class="gk"&gt;Gecko&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr&gt;&lt;td class="ed"&gt;Edge&lt;/td&gt; &lt;td class="tr"&gt;EdgeHTML&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr&gt;&lt;td class="sa"&gt;Safari&lt;/td&gt; &lt;td class="wk"&gt;Webkit&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr&gt;&lt;td class="ch"&gt;Chrome&lt;/td&gt; &lt;td class="bk"&gt;Blink&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr&gt;&lt;td class="op"&gt;Opera&lt;/td&gt; &lt;td class="bk"&gt;Blink&lt;/td&gt;&lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;</pre>
+```html
+<table class="separate">
+  <caption><code>border-collapse: separate</code></caption>
+  <tbody>
+    <tr><th>Browser</th> <th>Layout Engine</th></tr>
+    <tr><td class="fx">Firefox</td> <td class="gk">Gecko</td></tr>
+    <tr><td class="ed">Edge</td> <td class="tr">EdgeHTML</td></tr>
+    <tr><td class="sa">Safari</td> <td class="wk">Webkit</td></tr>
+    <tr><td class="ch">Chrome</td> <td class="bk">Blink</td></tr>
+    <tr><td class="op">Opera</td> <td class="bk">Blink</td></tr>
+  </tbody>
+</table>
+<table class="collapse">
+  <caption><code>border-collapse: collapse</code></caption>
+  <tbody>
+    <tr><th>Browser</th> <th>Layout Engine</th></tr>
+    <tr><td class="fx">Firefox</td> <td class="gk">Gecko</td></tr>
+    <tr><td class="ed">Edge</td> <td class="tr">EdgeHTML</td></tr>
+    <tr><td class="sa">Safari</td> <td class="wk">Webkit</td></tr>
+    <tr><td class="ch">Chrome</td> <td class="bk">Blink</td></tr>
+    <tr><td class="op">Opera</td> <td class="bk">Blink</td></tr>
+  </tbody>
+</table>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.collapse {
+```css
+.collapse {
   border-collapse: collapse;
 }
 
@@ -110,23 +112,22 @@ table td {
 .wk { border-color: gold blue; }
 .ch { border-color: red yellow green blue; }
 .bk { border-color: navy blue teal aqua; }
-.op { border-color: red; }</pre>
+.op { border-color: red; }
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('A_colorful_table_of_browser_engines', 400, 300) }}</p>
+{{ EmbedLiveSample('A_colorful_table_of_browser_engines', 400, 300) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("border-spacing")}}, {{cssxref("border-style")}}</li>
- <li>The <code>border-collapse</code> property alters the appearance of the {{htmlelement("table")}} HTML element.</li>
-</ul>
+- {{cssxref("border-spacing")}}, {{cssxref("border-style")}}
+- The `border-collapse` property alters the appearance of the {{htmlelement("table")}} HTML element.

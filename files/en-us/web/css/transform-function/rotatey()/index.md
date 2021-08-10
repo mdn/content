@@ -9,43 +9,35 @@ tags:
   - Reference
 browser-compat: css.types.transform-function.rotateY
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>rotateY()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a
-    href="/en-US/docs/Web/CSS/CSS_Functions">function</a> defines a transformation that rotates an element around the
-  ordinate (vertical axis) without deforming it. Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.
-</p>
+The **`rotateY()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) defines a transformation that rotates an element around the
+ordinate (vertical axis) without deforming it. Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.
 
-<div>{{EmbedInteractiveExample("pages/css/function-rotateY.html")}}</div>
+{{EmbedInteractiveExample("pages/css/function-rotateY.html")}}
 
-<p>The axis of rotation passes through an origin, defined by the {{ cssxref("transform-origin") }} CSS property.</p>
+The axis of rotation passes through an origin, defined by the {{ cssxref("transform-origin") }} CSS property.
 
-<div class="note">
-  <p><strong>Note:</strong> <code>rotateY(a)</code> is equivalent to
-    <code><a href="/en-US/docs/Web/CSS/transform-function/rotate3d">rotate3d</a>(0, 1, 0, a)</code>.
-  </p>
-</div>
+> **Note:** `rotateY(a)` is equivalent to
+> `rotate3d(0, 1, 0, a)`.
 
-<div class="note">
-  <p><strong>Note:</strong> Unlike rotations in the 2D plane, the composition of 3D rotations is usually
-  not commutative. In other words, the order in which the rotations are applied impacts the result.</p>
-</div>
+> **Note:** Unlike rotations in the 2D plane, the composition of 3D rotations is usually
+> not commutative. In other words, the order in which the rotations are applied impacts the result.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The amount of rotation created by <code>rotateY()</code> is specified by an {{cssxref("&lt;angle&gt;")}}. If
-  positive, the movement will be clockwise; if negative, it will be counter-clockwise.</p>
+The amount of rotation created by `rotateY()` is specified by an {{cssxref("&lt;angle&gt;")}}. If
+positive, the movement will be clockwise; if negative, it will be counter-clockwise.
 
-<pre class="brush: css">rotateY(<var>a</var>)
-</pre>
+```css
+rotateY(a)
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
-  <dt><code><var>a</var></code></dt>
-  <dd>Is an {{ cssxref("&lt;angle&gt;") }} representing the angle of the rotation. A positive angle denotes a clockwise
-    rotation, a negative angle a counter-clockwise one.</dd>
-</dl>
+- `a`
+  - : Is an {{ cssxref("&lt;angle&gt;") }} representing the angle of the rotation. A positive angle denotes a clockwise
+    rotation, a negative angle a counter-clockwise one.
 
 <table class="standard-table">
   <thead>
@@ -58,148 +50,108 @@ browser-compat: css.types.transform-function.rotateY
   </thead>
   <tbody>
     <tr>
-      <td colspan="2">This transformation applies to the 3D space and can't be represented on the plane.</td>
-      <td><math>
-          <mfenced>
-            <mtable>
-              <mtr>
-                <mtd>
-                  <mo>cos</mo>
+      <td colspan="2">
+        This transformation applies to the 3D space and can't be represented on
+        the plane.
+      </td>
+      <td>
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr
+                ><mtd
+                  ><mo>cos</mo>
+                  <mo>(</mo>
+                  <mi>a</mi>
+                  <mo>)</mo> </mtd
+                ><mtd><mn>0</mn> </mtd
+                ><mtd
+                  ><mo>sin</mo>
                   <mo>(</mo>
                   <mi>a</mi>
                   <mo>)</mo>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
+                </mtd></mtr
+              ><mtr
+                ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn> </mtd
+                ><mtd><mn>0</mn> </mtd></mtr
+              ><mtr
+                ><mtd
+                  ><mo>-</mo>
                   <mo>sin</mo>
                   <mo>(</mo>
                   <mi>a</mi>
-                  <mo>)</mo>
-                </mtd>
-              </mtr>
-              <mtr>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>1</mn>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-              </mtr>
-              <mtr>
-                <mtd>
-                  <mo>-</mo>
+                  <mo>)</mo> </mtd
+                ><mtd><mn>0</mn> </mtd
+                ><mtd
+                  ><mo>cos</mo>
+                  <mo>(</mo>
+                  <mi>a</mi>
+                  <mo>)</mo></mtd
+                ></mtr
+              ></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
+      <td>
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr
+                ><mtd
+                  ><mo>cos</mo>
+                  <mo>(</mo>
+                  <mi>a</mi>
+                  <mo>)</mo> </mtd
+                ><mtd><mn>0</mn> </mtd
+                ><mtd
+                  ><mo>sin</mo>
+                  <mo>(</mo>
+                  <mi>a</mi>
+                  <mo>)</mo> </mtd
+                ><mtd><mn>0</mn> </mtd></mtr
+              ><mtr
+                ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn> </mtd
+                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
+              ><mtr
+                ><mtd
+                  ><mo>-</mo>
                   <mo>sin</mo>
                   <mo>(</mo>
                   <mi>a</mi>
-                  <mo>)</mo>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mo>cos</mo>
+                  <mo>)</mo> </mtd
+                ><mtd><mn>0</mn> </mtd
+                ><mtd
+                  ><mo>cos</mo>
                   <mo>(</mo>
                   <mi>a</mi>
-                  <mo>)</mo>
-                </mtd>
-              </mtr>
-            </mtable>
-          </mfenced>
-        </math></td>
-      <td><math>
-          <mfenced>
-            <mtable>
-              <mtr>
-                <mtd>
-                  <mo>cos</mo>
-                  <mo>(</mo>
-                  <mi>a</mi>
-                  <mo>)</mo>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mo>sin</mo>
-                  <mo>(</mo>
-                  <mi>a</mi>
-                  <mo>)</mo>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-              </mtr>
-              <mtr>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>1</mn>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-              </mtr>
-              <mtr>
-                <mtd>
-                  <mo>-</mo>
-                  <mo>sin</mo>
-                  <mo>(</mo>
-                  <mi>a</mi>
-                  <mo>)</mo>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mo>cos</mo>
-                  <mo>(</mo>
-                  <mi>a</mi>
-                  <mo>)</mo>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-              </mtr>
-              <mtr>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>1</mn>
-                </mtd>
-              </mtr>
-            </mtable>
-          </mfenced>
-        </math></td>
+                  <mo>)</mo> </mtd
+                ><mtd><mn>0</mn> </mtd></mtr
+              ><mtr
+                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
+                ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn></mtd></mtr
+              ></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;Normal&lt;/div&gt;
-&lt;div class="rotated"&gt;Rotated&lt;/div&gt;</pre>
+```html
+<div>Normal</div>
+<div class="rotated">Rotated</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   width: 80px;
   height: 80px;
   background-color: skyblue;
@@ -209,23 +161,21 @@ browser-compat: css.types.transform-function.rotateY
   transform: rotateY(60deg);
   background-color: pink;
 }
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Examples", "auto", 180)}}</p>
+{{EmbedLiveSample("Examples", "auto", 180)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{cssxref("transform")}}</li>
-  <li>{{cssxref("&lt;transform-function&gt;")}}</li>
-</ul>
+- {{cssxref("transform")}}
+- {{cssxref("&lt;transform-function&gt;")}}

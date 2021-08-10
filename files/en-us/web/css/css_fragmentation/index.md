@@ -10,38 +10,23 @@ tags:
   - Overview
   - Reference
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong>CSS Fragmentation</strong> is a module of CSS that defines how content is displayed when it is broken (fragmented) across multiple <a href="/en-US/docs/Web/CSS/Paged_Media">pages</a>, regions, or <a href="/en-US/docs/Web/CSS/CSS_Columns">columns</a>.</p>
+**CSS Fragmentation** is a module of CSS that defines how content is displayed when it is broken (fragmented) across multiple [pages](/en-US/docs/Web/CSS/Paged_Media), regions, or [columns](/en-US/docs/Web/CSS/CSS_Columns).
 
-<p>Fragmentation occurs when an inline box wraps onto multiple lines. It also occurs when a block spans more than one column inside a column layout container, or spans a page break when printed. Each piece of the rendering for the element is called a <em>fragment</em>.</p>
+Fragmentation occurs when an inline box wraps onto multiple lines. It also occurs when a block spans more than one column inside a column layout container, or spans a page break when printed. Each piece of the rendering for the element is called a _fragment_.
 
-<h2 id="Reference">Reference</h2>
+## Reference
 
-<ul>
- <li>{{cssxref("box-decoration-break")}}</li>
- <li>{{cssxref("break-after")}}</li>
- <li>{{cssxref("break-before")}}</li>
- <li>{{cssxref("break-inside")}}</li>
- <li>{{cssxref("orphans")}}</li>
- <li>{{cssxref("widows")}}</li>
-</ul>
+- {{cssxref("box-decoration-break")}}
+- {{cssxref("break-after")}}
+- {{cssxref("break-before")}}
+- {{cssxref("break-inside")}}
+- {{cssxref("orphans")}}
+- {{cssxref("widows")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Fragmentation')}}</td>
-   <td>{{Spec2('CSS3 Fragmentation')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                | Status                                   | Comment             |
+| -------------------------------------------- | ---------------------------------------- | ------------------- |
+| {{SpecName('CSS3 Fragmentation')}} | {{Spec2('CSS3 Fragmentation')}} | Initial definition. |

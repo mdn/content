@@ -11,19 +11,20 @@ tags:
   - media feature
 browser-compat: css.at-rules.media.device-aspect-ratio
 ---
-<div>{{CSSRef}} {{deprecated_header}}</div>
+{{CSSRef}} {{deprecated_header}}
 
-<p>The <strong><code>device-aspect-ratio</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features">media feature</a> can be used to test the width-to-height aspect ratio of an output device.</p>
+The **`device-aspect-ratio`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) can be used to test the width-to-height aspect ratio of an output device.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>device-aspect-ratio</code> feature is specified as a {{cssxref("&lt;ratio&gt;")}}. It is a range feature, meaning that you can also use the prefixed <strong><code>min-device-aspect-ratio</code></strong> and <code><strong>max-device-aspect-ratio</strong></code> variants to query minimum and maximum values, respectively.</p>
+The `device-aspect-ratio` feature is specified as a {{cssxref("&lt;ratio&gt;")}}. It is a range feature, meaning that you can also use the prefixed **`min-device-aspect-ratio`** and **`max-device-aspect-ratio`** variants to query minimum and maximum values, respectively.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_min-device-aspect-ratio">Using min-device-aspect-ratio</h3>
+### Using min-device-aspect-ratio
 
-<pre class="brush: css">article {
+```css
+article {
   padding: 1rem;
 }
 
@@ -31,12 +32,13 @@ browser-compat: css.at-rules.media.device-aspect-ratio
   article {
     padding: 1rem 5vw;
   }
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

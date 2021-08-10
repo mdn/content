@@ -1,6 +1,6 @@
 ---
 title: ':paused'
-slug: 'Web/CSS/:paused'
+slug: Web/CSS/:paused
 tags:
   - CSS
   - Pseudo-class
@@ -8,39 +8,40 @@ tags:
   - paused
 browser-compat: css.selectors.paused
 ---
-<p>{{CSSRef}}{{SeeCompatTable}}</p>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p>The <strong><code>:paused</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> selector is a resource state pseudo-class that will match an audio, video, or similar resource that is capable of being "played" or "paused", when that element is "paused".</p>
+The **`:paused`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) selector is a resource state pseudo-class that will match an audio, video, or similar resource that is capable of being "played" or "paused", when that element is "paused".
 
-<p>A resource is paused either due to being in an non-activated state, or due to the user explicitly paused it.</p>
+A resource is paused either due to being in an non-activated state, or due to the user explicitly paused it.
 
-<pre class="brush: css">:paused {
+```css
+:paused {
 
-}</pre>
+}
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">:paused {
+```css
+:paused {
   border: 5px solid orange;
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref(":playing")}}</li>
-</ul>
+- {{cssxref(":playing")}}

@@ -13,16 +13,16 @@ tags:
   - gradient
 browser-compat: css.types.image.gradient.linear-gradient
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>linear-gradient()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Functions">function</a> creates an image consisting of a progressive transition between two or more colors along a straight line. Its result is an object of the {{CSSxRef("&lt;gradient&gt;")}} data type, which is a special kind of {{CSSxRef("&lt;image&gt;")}}.</p>
+The **`linear-gradient()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) creates an image consisting of a progressive transition between two or more colors along a straight line. Its result is an object of the {{CSSxRef("&lt;gradient&gt;")}} data type, which is a special kind of {{CSSxRef("&lt;image&gt;")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/function-linear-gradient.html")}}</div>
+{{EmbedInteractiveExample("pages/css/function-linear-gradient.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush: css">/* A gradient tilted 45 degrees,
+```css
+/* A gradient tilted 45 degrees,
    starting blue and finishing red */
 linear-gradient(45deg, blue, red);
 
@@ -44,140 +44,153 @@ linear-gradient(.25turn, red, 10%, blue);
 /* Multi-position color stop: A gradient tilted 45 degrees,
    with a red bottom-left half and a blue top-right half,
    with a hard line where the gradient changes from red to blue */
-linear-gradient(45deg, red 0 50%, blue 50% 100%);</pre>
+linear-gradient(45deg, red 0 50%, blue 50% 100%);
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>&lt;side-or-corner&gt;</code></dt>
- <dd>
-   <p>The position of the gradient line's starting point. If specified, it consists of the word <code>to</code> and up to two keywords: one indicates the horizontal side (<code>left</code> or <code>right</code>), and the other the vertical side (<code>top</code> or <code>bottom</code>). The order of the side keywords does not matter. If unspecified, it defaults to <code>to bottom</code>.</p>
-   <p>The values <code>to top</code>, <code>to bottom</code>, <code>to left</code>, and <code>to right</code> are equivalent to the angles <code>0deg</code>, <code>180deg</code>, <code>270deg</code>, and <code>90deg</code>, respectively. The other values are translated into an angle.</p>
- </dd>
- <dt>{{CSSxRef("&lt;angle&gt;")}}</dt>
- <dd>The gradient line's angle of direction. A value of <code>0deg</code> is equivalent to <code>to top</code>; increasing values rotate clockwise from there.</dd>
- <dt><code>&lt;linear-color-stop&gt;</code></dt>
- <dd>A color-stop's {{CSSxRef("&lt;color&gt;")}} value, followed by one or two optional stop positions, (each being either a {{CSSxRef("&lt;percentage&gt;")}} or a {{CSSxRef("&lt;length&gt;")}} along the gradient's axis).</dd>
- <dt><code>&lt;color-hint&gt;</code></dt>
- <dd>An interpolation hint defining how the gradient progresses between adjacent color stops. The length defines at which point between two color stops the gradient color should reach the midpoint of the color transition. If omitted, the midpoint of the color transition is the midpoint between two color stops.</dd>
-</dl>
-<div class="note">
- <p><strong>Note:</strong> Rendering of <a href="#gradient_with_multiple_color_stops">color stops in CSS gradients</a> follows the same rules as color stops in <a href="/en-US/docs/Web/SVG/Tutorial/Gradients">SVG gradients</a>.</p>
+- `<side-or-corner>`
 
- <p>Note also that the first example above does not exactly render as depicted in Mozilla Firefox (particularly version 80.0b3). You'll have to set the html height property to 100% or 100vh to render as depicted.</p>
-</div>
+  - : The position of the gradient line's starting point. If specified, it consists of the word `to` and up to two keywords: one indicates the horizontal side (`left` or `right`), and the other the vertical side (`top` or `bottom`). The order of the side keywords does not matter. If unspecified, it defaults to `to bottom`.
 
+    The values `to top`, `to bottom`, `to left`, and `to right` are equivalent to the angles `0deg`, `180deg`, `270deg`, and `90deg`, respectively. The other values are translated into an angle.
 
-<h2 id="Description">Description</h2>
+- {{CSSxRef("&lt;angle&gt;")}}
+  - : The gradient line's angle of direction. A value of `0deg` is equivalent to `to top`; increasing values rotate clockwise from there.
+- `<linear-color-stop>`
+  - : A color-stop's {{CSSxRef("&lt;color&gt;")}} value, followed by one or two optional stop positions, (each being either a {{CSSxRef("&lt;percentage&gt;")}} or a {{CSSxRef("&lt;length&gt;")}} along the gradient's axis).
+- `<color-hint>`
+  - : An interpolation hint defining how the gradient progresses between adjacent color stops. The length defines at which point between two color stops the gradient color should reach the midpoint of the color transition. If omitted, the midpoint of the color transition is the midpoint between two color stops.
 
-<p>As with any gradient, a linear gradient has <a href="/en-US/docs/Web/CSS/image#description">no intrinsic dimensions</a>; i.e., it has no natural or preferred size, nor a preferred ratio. Its concrete size will match the size of the element it applies to.</p>
+> **Note:** Rendering of [color stops in CSS gradients](#gradient_with_multiple_color_stops) follows the same rules as color stops in [SVG gradients](/en-US/docs/Web/SVG/Tutorial/Gradients).
+>
+> Note also that the first example above does not exactly render as depicted in Mozilla Firefox (particularly version 80.0b3). You'll have to set the html height property to 100% or 100vh to render as depicted.
 
-<p>To create a linear gradient that repeats so as to fill its container, use the {{CSSxRef("gradient/repeating-linear-gradient()")}} function instead.</p>
+## Description
 
-<p>Because <code>&lt;gradient&gt;</code>s belong to the <code>&lt;image&gt;</code> data type, they can only be used where <code>&lt;image&gt;</code>s can be used. For this reason, <code>linear-gradient()</code> won't work on {{CSSxRef("background-color")}} and other properties that use the {{CSSxRef("&lt;color&gt;")}} data type.</p>
+As with any gradient, a linear gradient has [no intrinsic dimensions](/en-US/docs/Web/CSS/image#description); i.e., it has no natural or preferred size, nor a preferred ratio. Its concrete size will match the size of the element it applies to.
 
-<h3 id="Composition_of_a_linear_gradient">Composition of a linear gradient</h3>
+To create a linear gradient that repeats so as to fill its container, use the {{CSSxRef("gradient/repeating-linear-gradient()")}} function instead.
 
-<p>A linear gradient is defined by an axis—the <em>gradient line</em>—and two or more <em>color-stop points</em>. Each point on the axis is a distinct color; to create a smooth gradient, the <code>linear-gradient()</code> function draws a series of colored lines perpendicular to the gradient line, each one matching the color of the point where it intersects the gradient line.</p>
+Because `<gradient>`s belong to the `<image>` data type, they can only be used where `<image>`s can be used. For this reason, `linear-gradient()` won't work on {{CSSxRef("background-color")}} and other properties that use the {{CSSxRef("&lt;color&gt;")}} data type.
 
-<p><img alt="linear-gradient.png" src="linear-gradient.png"></p>
+### Composition of a linear gradient
 
-<p>The gradient line is defined by the center of the box containing the gradient image and by an angle. The colors of the gradient are determined by two or more points: the starting point, the ending point, and, in between, optional color-stop points.</p>
+A linear gradient is defined by an axis—the _gradient line_—and two or more _color-stop points_. Each point on the axis is a distinct color; to create a smooth gradient, the `linear-gradient()` function draws a series of colored lines perpendicular to the gradient line, each one matching the color of the point where it intersects the gradient line.
 
-<p>The <em>starting point</em> is the location on the gradient line where the first color begins. The <em>ending point</em> is the point where the last color ends. Each of these two points is defined by the intersection of the gradient line with a perpendicular line passing from the box corner which is in the same quadrant. The ending point can be understood as the symmetrical point of the starting point. These somewhat complex definitions lead to an interesting effect sometimes called <em>magic corners</em>: the corners nearest to the starting and ending points have the same color as their respective starting or ending points.</p>
+![linear-gradient.png](linear-gradient.png)
 
-<h4 id="Customizing_Gradients">Customizing Gradients</h4>
+The gradient line is defined by the center of the box containing the gradient image and by an angle. The colors of the gradient are determined by two or more points: the starting point, the ending point, and, in between, optional color-stop points.
 
-<p>By adding more color-stop points on the gradient line, you can create a highly customized transition between multiple colors. A color-stop's position can be explicitly defined by using a {{CSSxRef("&lt;length&gt;")}} or a {{CSSxRef("&lt;percentage&gt;")}}. If you don't specify the location of a color, it is placed halfway between the one that precedes it and the one that follows it. The following two gradients are equivalent.</p>
+The _starting point_ is the location on the gradient line where the first color begins. The _ending point_ is the point where the last color ends. Each of these two points is defined by the intersection of the gradient line with a perpendicular line passing from the box corner which is in the same quadrant. The ending point can be understood as the symmetrical point of the starting point. These somewhat complex definitions lead to an interesting effect sometimes called _magic corners_: the corners nearest to the starting and ending points have the same color as their respective starting or ending points.
 
-<pre class="brush: css">linear-gradient(red, orange, yellow, green, blue);
-linear-gradient(red 0%, orange 25%, yellow 50%, green 75%, blue 100%);</pre>
+#### Customizing Gradients
 
-<p>By default, colors transition smoothly from the color at one color stop to the color at the subsequent color stop, with the midpoint between the colors being the half way point between the color transition. You can move this midpoint to any position between two color stops by adding an unlabelled % color hint between the two colors to indicate where the middle of the color transition should be. The following example is solid red from the start to the 10% mark and solid blue from 90% to the end. Between 10% and 90% the color transitions from red to blue, however the midpoint of the transition is at the 30% mark rather than 50% as would have happened without the 30% color hint.</p>
+By adding more color-stop points on the gradient line, you can create a highly customized transition between multiple colors. A color-stop's position can be explicitly defined by using a {{CSSxRef("&lt;length&gt;")}} or a {{CSSxRef("&lt;percentage&gt;")}}. If you don't specify the location of a color, it is placed halfway between the one that precedes it and the one that follows it. The following two gradients are equivalent.
 
-<pre class="brush: css">linear-gradient(red 10%, 30%, blue 90%);</pre>
+```css
+linear-gradient(red, orange, yellow, green, blue);
+linear-gradient(red 0%, orange 25%, yellow 50%, green 75%, blue 100%);
+```
 
-<p>If two or more color stops are at the same location, the transition will be a hard line between the first and last colors declared at that location. </p>
+By default, colors transition smoothly from the color at one color stop to the color at the subsequent color stop, with the midpoint between the colors being the half way point between the color transition. You can move this midpoint to any position between two color stops by adding an unlabelled % color hint between the two colors to indicate where the middle of the color transition should be. The following example is solid red from the start to the 10% mark and solid blue from 90% to the end. Between 10% and 90% the color transitions from red to blue, however the midpoint of the transition is at the 30% mark rather than 50% as would have happened without the 30% color hint.
 
-<p>Color stops should be listed in ascending order. Subsequent color stops of lower value will override the value of the previous color stop creating a hard transition. The following changes from red to yellow at the 40% mark, and then transitions from yellow to blue over 25% of the gradient</p>
+```css
+linear-gradient(red 10%, 30%, blue 90%);
+```
 
-<pre class="brush: css">linear-gradient(red 40%, yellow 30%, blue 65%);
-</pre>
+If two or more color stops are at the same location, the transition will be a hard line between the first and last colors declared at that location.
 
-<p>Multi-position color stop are allowed. A color can be declared as two adjacent color stops by including both positions in the CSS declaration. The following three gradients are equivalent:</p>
+Color stops should be listed in ascending order. Subsequent color stops of lower value will override the value of the previous color stop creating a hard transition. The following changes from red to yellow at the 40% mark, and then transitions from yellow to blue over 25% of the gradient
 
-<pre class="brush: css">linear-gradient(red 0%, orange 10%, orange 30%, yellow 50%, yellow 70%, green 90%, green 100%);
+```css
+linear-gradient(red 40%, yellow 30%, blue 65%);
+```
+
+Multi-position color stop are allowed. A color can be declared as two adjacent color stops by including both positions in the CSS declaration. The following three gradients are equivalent:
+
+```css
+linear-gradient(red 0%, orange 10%, orange 30%, yellow 50%, yellow 70%, green 90%, green 100%);
 linear-gradient(red, orange 10% 30%, yellow 50% 70%, green 90%);
-linear-gradient(red 0%, orange 10% 30%, yellow 50% 70%, green 90% 100%);</pre>
+linear-gradient(red 0%, orange 10% 30%, yellow 50% 70%, green 90% 100%);
+```
 
-<p>By default, if there is no color with a 0% stop, the first color declared will be at that point. Similarly, the last color will continue to the 100% mark, or be at the 100% mark if no length has been declared on that last stop.</p>
+By default, if there is no color with a 0% stop, the first color declared will be at that point. Similarly, the last color will continue to the 100% mark, or be at the 100% mark if no length has been declared on that last stop.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Gradient_at_a_45-degree_angle">Gradient at a 45-degree angle</h3>
+### Gradient at a 45-degree angle
 
-<pre class="brush: css hidden">body {
+```css hidden
+body {
   width: 100vw;
   height: 100vh;
-}</pre>
+}
+```
 
-<pre class="brush: css">body {
+```css
+body {
   background: linear-gradient(45deg, red, blue);
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample("Gradient_at_a_45-degree_angle", 120, 120)}}</p>
+{{EmbedLiveSample("Gradient_at_a_45-degree_angle", 120, 120)}}
 
-<h3 id="Gradient_that_starts_at_60_of_the_gradient_line">Gradient that starts at 60% of the gradient line</h3>
+### Gradient that starts at 60% of the gradient line
 
-<pre class="brush: css hidden">body {
+```css hidden
+body {
   width: 100vw;
   height: 100vh;
-}</pre>
+}
+```
 
-<pre class="brush: css">body {
+```css
+body {
   background: linear-gradient(135deg, orange 60%, cyan);
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Gradient_that_starts_at_60_of_the_gradient_line", 120, 120)}}</p>
+{{EmbedLiveSample("Gradient_that_starts_at_60_of_the_gradient_line", 120, 120)}}
 
-<h3 id="Gradient_with_multi-position_color_stops">Gradient with multi-position color stops</h3>
+### Gradient with multi-position color stops
 
-<p>This example uses multi-position color stops, with adjacent colors having the same color stop value, creating a striped effect.</p>
+This example uses multi-position color stops, with adjacent colors having the same color stop value, creating a striped effect.
 
-<pre class="brush: css hidden">body {
+```css hidden
+body {
   width: 100vw;
   height: 100vh;
-}</pre>
+}
+```
 
-
-<pre class="brush: css">body {
+```css
+body {
   background: linear-gradient(to right,
      red 20%, orange 20% 40%, yellow 40% 60%, green 60% 80%, blue 80%);
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Gradient_with_multi-position_color_stops", 120, 120)}}</p>
+{{EmbedLiveSample("Gradient_with_multi-position_color_stops", 120, 120)}}
 
-<h3 id="More_linear-gradient_examples">More linear-gradient examples</h3>
+### More linear-gradient examples
 
-<p>Please see <a href="/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients">Using CSS gradients</a> for more examples.</p>
+Please see [Using CSS gradients](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients) for more examples.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients">Using CSS gradients</a></li>
- <li>Other gradient functions: {{CSSxRef("gradient/repeating-linear-gradient()")}}, {{CSSxRef("gradient/radial-gradient()")}}, {{CSSxRef("gradient/repeating-radial-gradient()")}}, {{CSSxRef("gradient/conic-gradient()")}}, {{CSSxRef("gradient/repeating-conic-gradient()")}}</li>
- <li>{{CSSxRef("&lt;image&gt;")}}</li>
- <li>{{cssxref("element()")}}</li>
- <li>{{cssxref("image()","image()")}}</li>
- <li>{{cssxref("image-set()","image-set()")}}</li>
- <li>{{cssxref("cross-fade()")}}</li>
-</ul>
+- [Using CSS gradients](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
+- Other gradient functions: {{CSSxRef("gradient/repeating-linear-gradient()")}}, {{CSSxRef("gradient/radial-gradient()")}}, {{CSSxRef("gradient/repeating-radial-gradient()")}}, {{CSSxRef("gradient/conic-gradient()")}}, {{CSSxRef("gradient/repeating-conic-gradient()")}}
+- {{CSSxRef("&lt;image&gt;")}}
+- {{cssxref("element()")}}
+- {{cssxref("image()","image()")}}
+- {{cssxref("image-set()","image-set()")}}
+- {{cssxref("cross-fade()")}}

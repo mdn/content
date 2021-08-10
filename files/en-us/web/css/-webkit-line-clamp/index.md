@@ -6,29 +6,28 @@ tags:
   - CSS
   - CSS Property
   - Non-standard
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.-webkit-line-clamp
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>-webkit-line-clamp</code></strong> CSS property allows limiting of the contents of a {{Glossary("block container")}} to the specified number of lines.</p>
+The **`-webkit-line-clamp`** CSS property allows limiting of the contents of a {{Glossary("block container")}} to the specified number of lines.
 
-<p>It only works in combination with the {{cssxref("display")}} property set to <code>-webkit-box</code> or <code>-webkit-inline-box</code> and the {{cssxref("-webkit-box-orient")}} property set to <code>vertical</code>.</p>
+It only works in combination with the {{cssxref("display")}} property set to `-webkit-box` or `-webkit-inline-box` and the {{cssxref("-webkit-box-orient")}} property set to `vertical`.
 
-<p>In most cases you will also want to set {{cssxref("overflow")}} to <code>hidden</code>, otherwise the contents won't be clipped but an ellipsis will still be shown after the specified number of lines.</p>
+In most cases you will also want to set {{cssxref("overflow")}} to `hidden`, otherwise the contents won't be clipped but an ellipsis will still be shown after the specified number of lines.
 
-<p>When applied to anchor elements, the truncating can happen in the middle of the text, not necessarily at the end.</p>
+When applied to anchor elements, the truncating can happen in the middle of the text, not necessarily at the end.
 
-<div class="notecard note">
-<p><strong>Note:</strong> This property was originally implemented in WebKit and has some issues. It got standardized for legacy support. The <a href="https://www.w3.org/TR/css-overflow-3/#propdef--webkit-line-clamp">CSS Overflow Module Level 3</a> specification also defines a {{cssxref("line-clamp")}} property, which is meant to replace this property and avoid its issues.</p>
-</div>
+> **Note:** This property was originally implemented in WebKit and has some issues. It got standardized for legacy support. The [CSS Overflow Module Level 3](https://www.w3.org/TR/css-overflow-3/#propdef--webkit-line-clamp) specification also defines a {{cssxref("line-clamp")}} property, which is meant to replace this property and avoid its issues.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css">/* Keyword value */
+```css
+/* Keyword value */
 -webkit-line-clamp: none;
 
-/* &lt;integer&gt; values */
+/* <integer> values */
 -webkit-line-clamp: 3;
 -webkit-line-clamp: 10;
 
@@ -36,59 +35,59 @@ browser-compat: css.properties.-webkit-line-clamp
 -webkit-line-clamp: inherit;
 -webkit-line-clamp: initial;
 -webkit-line-clamp: unset;
-</pre>
+```
 
-<dl>
- <dt><code>none</code></dt>
- <dd>This value specifies that the content won't be clamped.</dd>
- <dt>{{cssxref("integer")}}</dt>
- <dd>This value specifies the number of lines after which the content will be clamped. It must be greater than 0.</dd>
-</dl>
+- `none`
+  - : This value specifies that the content won't be clamped.
+- {{cssxref("integer")}}
+  - : This value specifies the number of lines after which the content will be clamped. It must be greater than 0.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{CSSSyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Truncating_a_paragraph">Truncating a paragraph</h3>
+### Truncating a paragraph
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;
-  In this example the &lt;code&gt;-webkit-line-clamp&lt;/code&gt; property is set to &lt;code&gt;3&lt;/code&gt;, which means the text is clamped after three lines.
+```html
+<p>
+  In this example the <code>-webkit-line-clamp</code> property is set to <code>3</code>, which means the text is clamped after three lines.
   An ellipsis will be shown at the point where the text is clamped.
-&lt;/p&gt;</pre>
+</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   width: 300px;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
   overflow: hidden;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Truncating_a_paragraph", "100%", "100")}}</p>
+{{EmbedLiveSample("Truncating_a_paragraph", "100%", "100")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://css-tricks.com/line-clampin/">Line Clampin’ (Truncating Multiple Line Text)</a></li>
- <li>{{cssxref("line-clamp")}}</li>
-</ul>
+- [Line Clampin’ (Truncating Multiple Line Text)](https://css-tricks.com/line-clampin/)
+- {{cssxref("line-clamp")}}

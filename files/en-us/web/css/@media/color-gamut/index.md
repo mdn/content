@@ -9,52 +9,52 @@ tags:
   - media feature
 browser-compat: css.at-rules.media.color-gamut
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>color-gamut</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features">media feature</a> can be used to test the approximate range of colors that are supported by the {{glossary("user agent")}} and the output device.</p>
+The **`color-gamut`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) can be used to test the approximate range of colors that are supported by the {{glossary("user agent")}} and the output device.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>color-gamut</code> feature is specified as a keyword value chosen from the list below.</p>
+The `color-gamut` feature is specified as a keyword value chosen from the list below.
 
-<dl>
- <dt><code>srgb</code></dt>
- <dd>The output device can support approximately the <a href="https://en.wikipedia.org/wiki/SRGB">sRGB</a> gamut or more. This includes the vast majority of color displays.</dd>
- <dt><code>p3</code></dt>
- <dd>The output device can support approximately the gamut specified by the <a href="https://en.wikipedia.org/wiki/DCI-P3">DCI P3 Color Space</a> or more. The p3 gamut is larger than and includes the srgb gamut.</dd>
- <dt><code>rec2020</code></dt>
- <dd>The output device can support approximately the gamut specified by the <a href="https://en.wikipedia.org/wiki/Rec._2020">ITU-R Recommendation BT.2020 Color Space</a> or more. The rec2020 gamut is larger than and includes the p3 gamut.</dd>
-</dl>
+- `srgb`
+  - : The output device can support approximately the [sRGB](https://en.wikipedia.org/wiki/SRGB) gamut or more. This includes the vast majority of color displays.
+- `p3`
+  - : The output device can support approximately the gamut specified by the [DCI P3 Color Space](https://en.wikipedia.org/wiki/DCI-P3) or more. The p3 gamut is larger than and includes the srgb gamut.
+- `rec2020`
+  - : The output device can support approximately the gamut specified by the [ITU-R Recommendation BT.2020 Color Space](https://en.wikipedia.org/wiki/Rec._2020) or more. The rec2020 gamut is larger than and includes the p3 gamut.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;This is a test.&lt;/p&gt;</pre>
+```html
+<p>This is a test.</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">@media (color-gamut: srgb) {
+```css
+@media (color-gamut: srgb) {
   p {
     background: #f4ae8a;
   }
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Examples")}}</p>
+{{EmbedLiveSample("Examples")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">Using Media Queries</a></li>
- <li><a href="/en-US/docs/Web/CSS/@media">@media</a></li>
-</ul>
+- [Using Media Queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [@media](/en-US/docs/Web/CSS/@media)

@@ -9,69 +9,68 @@ tags:
   - Selector
 browser-compat: css.selectors.-webkit-progress-inner-element
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<p>The <strong><code>::-webkit-progress-inner-element</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-element</a> represents the outermost container of the {{HTMLElement("progress")}} element. It is the parent of the {{cssxref("::-webkit-progress-bar")}} pseudo-element.</p>
+The **`::-webkit-progress-inner-element`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents the outermost container of the {{HTMLElement("progress")}} element. It is the parent of the {{cssxref("::-webkit-progress-bar")}} pseudo-element.
 
-<div class="note">
-<p><strong>Note:</strong> In order to let <code>::-webkit-progress-value</code> take effect, {{cssxref("appearance")}} needs to be set to <code>none</code> on the <code>&lt;progress&gt;</code> element.</p>
-</div>
+> **Note:** In order to let `::-webkit-progress-value` take effect, {{cssxref("appearance")}} needs to be set to `none` on the `<progress>` element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">::-webkit-progress-inner-element</pre>
+```css
+::-webkit-progress-inner-element
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>These examples work only on Blink and WebKit.</p>
+These examples work only on Blink and WebKit.
 
-<h3 id="Adding_a_black_border_around_the_progress_bar">Adding a black border around the progress bar</h3>
+### Adding a black border around the progress bar
 
-<p>In this example, a 2px black border is added around the progress bar.</p>
+In this example, a 2px black border is added around the progress bar.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;progress value="10" max="50"&gt;
-</pre>
+```html
+<progress value="10" max="50">
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">progress {
+```css
+progress {
   -webkit-appearance: none;
 }
 
 ::-webkit-progress-inner-element {
   border: 2px solid black;
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Adding_a_black_border_around_the_progress_bar", 200, 50)}}</p>
+{{EmbedLiveSample("Adding_a_black_border_around_the_progress_bar", 200, 50)}}
 
-<h4 id="Result_screenshot">Result screenshot</h4>
+#### Result screenshot
 
-<p>If you're not using a Blink or WebKit browser, the above code results in a progress bar looking like this:</p>
+If you're not using a Blink or WebKit browser, the above code results in a progress bar looking like this:
 
-<p><img alt="" src="-webkit-progress-inner-element_example.png"></p>
+![](-webkit-progress-inner-element_example.png)
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any standard.</p>
+Not part of any standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The pseudo-elements used by WebKit/Blink to style other parts of a {{HTMLElement("progress")}} element:
-  <ul>
-   <li>{{cssxref("::-webkit-progress-bar")}}</li>
-   <li>{{cssxref("::-webkit-progress-value")}}</li>
-  </ul>
- </li>
- <li>{{cssxref("::-moz-progress-bar")}}</li>
- <li>{{cssxref("::-ms-fill")}}</li>
-</ul>
+- The pseudo-elements used by WebKit/Blink to style other parts of a {{HTMLElement("progress")}} element:
+
+  - {{cssxref("::-webkit-progress-bar")}}
+  - {{cssxref("::-webkit-progress-value")}}
+
+- {{cssxref("::-moz-progress-bar")}}
+- {{cssxref("::-ms-fill")}}

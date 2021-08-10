@@ -1,5 +1,5 @@
 ---
-title: 'Logical properties for margins, borders and padding'
+title: Logical properties for margins, borders and padding
 slug: Web/CSS/CSS_Logical_Properties/Margins_borders_padding
 tags:
   - CSS
@@ -8,290 +8,156 @@ tags:
   - concepts
   - writing modes
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<p>The <a href="https://drafts.csswg.org/css-logical/">Logical Properties and Values specification</a> defines flow-relative mappings for the various margin, border, and padding properties and their shorthands. In this guide we take a look at these.</p>
+The [Logical Properties and Values specification](https://drafts.csswg.org/css-logical/) defines flow-relative mappings for the various margin, border, and padding properties and their shorthands. In this guide we take a look at these.
 
-<p>If you have looked at the main page for <a href="/en-US/docs/Web/CSS/CSS_Logical_Properties">CSS Logical Properties and Values</a> you will see there are a huge number of properties listed. This is mostly due to the fact that there are four longhand values each for margin, border, and padding side, plus all the shorthand values.</p>
+If you have looked at the main page for [CSS Logical Properties and Values](/en-US/docs/Web/CSS/CSS_Logical_Properties) you will see there are a huge number of properties listed. This is mostly due to the fact that there are four longhand values each for margin, border, and padding side, plus all the shorthand values.
 
-<h2 id="Mappings_for_margins_borders_and_padding">Mappings for margins, borders, and padding</h2>
+## Mappings for margins, borders, and padding
 
-<p>The specification details mappings for each logical value to a physical counterpart. In the table below I have given these mapped values assuming that the {{cssxref("writing-mode")}} in use is <code>horizontal-tb</code> — with a left to right direction. The inline direction therefore runs horizontally — left to right — and {{cssxref("margin-inline-start")}} would be equivalent to {{cssxref("margin-left")}}.</p>
+The specification details mappings for each logical value to a physical counterpart. In the table below I have given these mapped values assuming that the {{cssxref("writing-mode")}} in use is `horizontal-tb` — with a left to right direction. The inline direction therefore runs horizontally — left to right — and {{cssxref("margin-inline-start")}} would be equivalent to {{cssxref("margin-left")}}.
 
-<p>If you were using a <code>horizontal-tb</code> writing mode with a right-to-left text direction then {{cssxref("margin-inline-start")}} would be the same as {{cssxref("margin-right")}}, and in a vertical writing mode it would be the same as using {{cssxref("margin-top")}}.</p>
+If you were using a `horizontal-tb` writing mode with a right-to-left text direction then {{cssxref("margin-inline-start")}} would be the same as {{cssxref("margin-right")}}, and in a vertical writing mode it would be the same as using {{cssxref("margin-top")}}.
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Logical property</th>
-   <th scope="col">Physical Property</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{cssxref("border-block-end")}}</td>
-   <td>{{cssxref("border-bottom")}}</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("border-block-end-color")}}</td>
-   <td>{{cssxref("border-bottom-color")}}</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("border-block-end-style")}}</td>
-   <td>{{cssxref("border-bottom-style")}}</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("border-block-end-width")}}</td>
-   <td>{{cssxref("border-bottom-width")}}</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("border-block-start")}}</td>
-   <td>{{cssxref("border-top")}}</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("border-block-start-color")}}</td>
-   <td>{{cssxref("border-top-color")}}</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("border-block-start-style")}}</td>
-   <td>{{cssxref("border-top-style")}}</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("border-block-start-width")}}</td>
-   <td>{{cssxref("border-top-width")}}</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("border-inline-end")}}</td>
-   <td>{{cssxref("border-right")}}</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("border-inline-end-color")}}</td>
-   <td>{{cssxref("border-right-color")}}</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("border-inline-end-style")}}</td>
-   <td>{{cssxref("border-right-style")}}</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("border-inline-end-width")}}</td>
-   <td>{{cssxref("border-right-width")}}</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("border-inline-start")}}</td>
-   <td>{{cssxref("border-left")}}</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("border-inline-start-color")}}</td>
-   <td>{{cssxref("border-left-color")}}</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("border-inline-start-style")}}</td>
-   <td>{{cssxref("border-left-style")}}</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("border-inline-start-width")}}</td>
-   <td>{{cssxref("border-left-width")}}</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("border-start-start-radius")}}</td>
-   <td>{{cssxref("border-top-left-radius")}}</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("border-start-end-radius")}}</td>
-   <td>{{cssxref("border-bottom-left-radius")}}</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("border-end-start-radius")}}</td>
-   <td>{{cssxref("border-top-right-radius")}}</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("border-end-end-radius")}}</td>
-   <td>{{cssxref("border-bottom-right-radius")}}</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("margin-block-end")}}</td>
-   <td>{{cssxref("margin-bottom")}}</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("margin-block-start")}}</td>
-   <td>{{cssxref("margin-top")}}</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("margin-inline-end")}}</td>
-   <td>{{cssxref("margin-right")}}</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("margin-inline-start")}}</td>
-   <td>{{cssxref("margin-left")}}</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("padding-block-end")}}</td>
-   <td>{{cssxref("padding-bottom")}}</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("padding-block-start")}}</td>
-   <td>{{cssxref("padding-top")}}</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("padding-inline-end")}}</td>
-   <td>{{cssxref("padding-right")}}</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("padding-inline-start")}}</td>
-   <td>{{cssxref("padding-left")}}</td>
-  </tr>
- </tbody>
-</table>
+| Logical property                                     | Physical Property                                        |
+| ---------------------------------------------------- | -------------------------------------------------------- |
+| {{cssxref("border-block-end")}}             | {{cssxref("border-bottom")}}                     |
+| {{cssxref("border-block-end-color")}}     | {{cssxref("border-bottom-color")}}             |
+| {{cssxref("border-block-end-style")}}     | {{cssxref("border-bottom-style")}}             |
+| {{cssxref("border-block-end-width")}}     | {{cssxref("border-bottom-width")}}             |
+| {{cssxref("border-block-start")}}         | {{cssxref("border-top")}}                         |
+| {{cssxref("border-block-start-color")}} | {{cssxref("border-top-color")}}                 |
+| {{cssxref("border-block-start-style")}} | {{cssxref("border-top-style")}}                 |
+| {{cssxref("border-block-start-width")}} | {{cssxref("border-top-width")}}                 |
+| {{cssxref("border-inline-end")}}         | {{cssxref("border-right")}}                     |
+| {{cssxref("border-inline-end-color")}} | {{cssxref("border-right-color")}}             |
+| {{cssxref("border-inline-end-style")}} | {{cssxref("border-right-style")}}             |
+| {{cssxref("border-inline-end-width")}} | {{cssxref("border-right-width")}}             |
+| {{cssxref("border-inline-start")}}         | {{cssxref("border-left")}}                     |
+| {{cssxref("border-inline-start-color")}} | {{cssxref("border-left-color")}}             |
+| {{cssxref("border-inline-start-style")}} | {{cssxref("border-left-style")}}             |
+| {{cssxref("border-inline-start-width")}} | {{cssxref("border-left-width")}}             |
+| {{cssxref("border-start-start-radius")}} | {{cssxref("border-top-left-radius")}}         |
+| {{cssxref("border-start-end-radius")}} | {{cssxref("border-bottom-left-radius")}}     |
+| {{cssxref("border-end-start-radius")}} | {{cssxref("border-top-right-radius")}}     |
+| {{cssxref("border-end-end-radius")}}     | {{cssxref("border-bottom-right-radius")}} |
+| {{cssxref("margin-block-end")}}             | {{cssxref("margin-bottom")}}                     |
+| {{cssxref("margin-block-start")}}         | {{cssxref("margin-top")}}                         |
+| {{cssxref("margin-inline-end")}}         | {{cssxref("margin-right")}}                     |
+| {{cssxref("margin-inline-start")}}         | {{cssxref("margin-left")}}                     |
+| {{cssxref("padding-block-end")}}         | {{cssxref("padding-bottom")}}                 |
+| {{cssxref("padding-block-start")}}         | {{cssxref("padding-top")}}                     |
+| {{cssxref("padding-inline-end")}}         | {{cssxref("padding-right")}}                     |
+| {{cssxref("padding-inline-start")}}     | {{cssxref("padding-left")}}                     |
 
-<p>There are also some additional shorthands, made possible because we have the ability to target both block or both inline edges of the box simultaneously. These shorthands have no physical equivalent.</p>
+There are also some additional shorthands, made possible because we have the ability to target both block or both inline edges of the box simultaneously. These shorthands have no physical equivalent.
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Property</th>
-   <th scope="col">Purpose</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{cssxref("border-block")}}</td>
-   <td>Sets {{cssxref("border-color")}}, {{cssxref("border-style")}}, and {{cssxref("border-width")}} for both block borders.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("border-block-color")}}</td>
-   <td>Sets <code>border-color</code> for both block borders.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("border-block-style")}}</td>
-   <td>Sets <code>border-style</code> for both block borders.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("border-block-width")}}</td>
-   <td>Sets <code>border-width</code> for both block borders.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("border-inline")}}</td>
-   <td>Sets <code>border-color</code>, <code>-style</code>, and <code>-width</code> for both inline borders.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("border-inline-color")}}</td>
-   <td>Sets <code>border-color</code> for both inline borders.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("border-inline-style")}}</td>
-   <td>Sets <code>border-style</code> for both inline borders.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("border-inline-width")}}</td>
-   <td>Sets <code>border-width</code> for both inline borders.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("margin-block")}}</td>
-   <td>Sets all the block {{cssxref("margin")}}s.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("margin-inline")}}</td>
-   <td>Sets all the inline <code>margin</code>s.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("padding-block")}}</td>
-   <td>Sets the block {{cssxref("padding")}}.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("padding-inline")}}</td>
-   <td>Sets the inline <code>padding</code>.</td>
-  </tr>
- </tbody>
-</table>
+| Property                                     | Purpose                                                                                                                                           |
+| -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{cssxref("border-block")}}         | Sets {{cssxref("border-color")}}, {{cssxref("border-style")}}, and {{cssxref("border-width")}} for both block borders. |
+| {{cssxref("border-block-color")}} | Sets `border-color` for both block borders.                                                                                                       |
+| {{cssxref("border-block-style")}} | Sets `border-style` for both block borders.                                                                                                       |
+| {{cssxref("border-block-width")}} | Sets `border-width` for both block borders.                                                                                                       |
+| {{cssxref("border-inline")}}         | Sets `border-color`, `-style`, and `-width` for both inline borders.                                                                              |
+| {{cssxref("border-inline-color")}} | Sets `border-color` for both inline borders.                                                                                                      |
+| {{cssxref("border-inline-style")}} | Sets `border-style` for both inline borders.                                                                                                      |
+| {{cssxref("border-inline-width")}} | Sets `border-width` for both inline borders.                                                                                                      |
+| {{cssxref("margin-block")}}         | Sets all the block {{cssxref("margin")}}s.                                                                                                 |
+| {{cssxref("margin-inline")}}         | Sets all the inline `margin`s.                                                                                                                    |
+| {{cssxref("padding-block")}}         | Sets the block {{cssxref("padding")}}.                                                                                                      |
+| {{cssxref("padding-inline")}}     | Sets the inline `padding`.                                                                                                                        |
 
-<h2 id="Margin_examples">Margin examples</h2>
+## Margin examples
 
-<p>The mapped margin properties of {{cssxref("margin-inline-start")}}, {{cssxref("margin-inline-end")}}, {{cssxref("margin-block-start")}}, and {{cssxref("margin-inline-end")}} can be used instead of their physical counterparts.</p>
+The mapped margin properties of {{cssxref("margin-inline-start")}}, {{cssxref("margin-inline-end")}}, {{cssxref("margin-block-start")}}, and {{cssxref("margin-inline-end")}} can be used instead of their physical counterparts.
 
-<p>In the example below I have created two boxes and added different sized margins to each edge. I have added an extra container with a border in order to make the margin more obvious to see.</p>
+In the example below I have created two boxes and added different sized margins to each edge. I have added an extra container with a border in order to make the margin more obvious to see.
 
-<p>One box uses physical properties and the other logical properties. Try changing the {{cssxref("direction")}} property to <code>rtl</code> to cause the boxes to display in a right-to-left direction, the margins on the first box will stay in the same place, while the margins on the inline dimension of the second box will switch.</p>
+One box uses physical properties and the other logical properties. Try changing the {{cssxref("direction")}} property to `rtl` to cause the boxes to display in a right-to-left direction, the margins on the first box will stay in the same place, while the margins on the inline dimension of the second box will switch.
 
-<p>You can also try changing the <code>writing-mode</code> from <code>horizontal-tb</code> to <code>vertical-rl</code>. Again, notice how the margins stay in the same place for the first box, but switch around to follow the text direction in the second.</p>
+You can also try changing the `writing-mode` from `horizontal-tb` to `vertical-rl`. Again, notice how the margins stay in the same place for the first box, but switch around to follow the text direction in the second.
 
-<p>{{EmbedGHLiveSample("css-examples/logical/margin-longhands.html", '100%', 700)}}</p>
+{{EmbedGHLiveSample("css-examples/logical/margin-longhands.html", '100%', 700)}}
 
-<h3 id="Margin_shorthands">Margin shorthands</h3>
+### Margin shorthands
 
-<p>As we can now target both sides of a box — either both inline sides or both block sides — there are new shorthands available, {{cssxref("margin-inline")}} and {{cssxref("margin-block")}}, which accept two values. The first value will apply to the start of that dimension, the second to the end. If you only use one value it is applied to both.</p>
+As we can now target both sides of a box — either both inline sides or both block sides — there are new shorthands available, {{cssxref("margin-inline")}} and {{cssxref("margin-block")}}, which accept two values. The first value will apply to the start of that dimension, the second to the end. If you only use one value it is applied to both.
 
-<p>In a horizontal writing mode this CSS would apply a 5px margin to the top of the box and a 10px margin to the bottom.</p>
+In a horizontal writing mode this CSS would apply a 5px margin to the top of the box and a 10px margin to the bottom.
 
-<pre class="brush: css">.box {
+```css
+.box {
   margin-block: 5px 10px;
-}</pre>
+}
+```
 
-<div class="notecard note">
-<p><strong>Note:</strong> The shorthand properties <code>margin-inline</code> and <code>margin-block</code> shipped in Firefox 66. As these are new properties check browser support before using.</p>
-</div>
+> **Note:** The shorthand properties `margin-inline` and `margin-block` shipped in Firefox 66. As these are new properties check browser support before using.
 
-<h2 id="Padding_examples">Padding examples</h2>
+## Padding examples
 
-<p>The mapped padding properties of {{cssxref("padding-inline-start")}}, {{cssxref("padding-inline-end")}}, {{cssxref("padding-block-start")}}, and {{cssxref("padding-inline-end")}} can be used instead of their physical counterparts.</p>
+The mapped padding properties of {{cssxref("padding-inline-start")}}, {{cssxref("padding-inline-end")}}, {{cssxref("padding-block-start")}}, and {{cssxref("padding-inline-end")}} can be used instead of their physical counterparts.
 
-<p>In the example below I have two boxes, one of which is using physical padding properties and the other logical padding properties. With a <code>writing-mode</code> of <code>horizontal-tb</code>, both boxes should appear the same.</p>
+In the example below I have two boxes, one of which is using physical padding properties and the other logical padding properties. With a `writing-mode` of `horizontal-tb`, both boxes should appear the same.
 
-<p>Try changing the <code>direction</code> property to <code>rtl</code> to cause the boxes to display in a right-to-left direction. The padding on the first box will stay in the same place, whereas the padding on the inline dimension of the second box will switch.</p>
+Try changing the `direction` property to `rtl` to cause the boxes to display in a right-to-left direction. The padding on the first box will stay in the same place, whereas the padding on the inline dimension of the second box will switch.
 
-<p>You can also try changing the <code>writing-mode</code> from <code>horizontal-tb</code> to <code>vertical-rl</code>. Again, notice how the padding stays in the same place for the first box, but switches around to follow the text direction in the second.</p>
+You can also try changing the `writing-mode` from `horizontal-tb` to `vertical-rl`. Again, notice how the padding stays in the same place for the first box, but switches around to follow the text direction in the second.
 
-<p>{{EmbedGHLiveSample("css-examples/logical/padding-longhands.html", '100%', 700)}}</p>
+{{EmbedGHLiveSample("css-examples/logical/padding-longhands.html", '100%', 700)}}
 
-<h3 id="Padding_shorthands">Padding shorthands</h3>
+### Padding shorthands
 
-<p>As with margin, there are two-value shorthands for padding — {{cssxref("padding-inline")}} and {{cssxref("padding-block")}} — which allow you to set the padding of the two inline, and two block dimensions, respectively.</p>
+As with margin, there are two-value shorthands for padding — {{cssxref("padding-inline")}} and {{cssxref("padding-block")}} — which allow you to set the padding of the two inline, and two block dimensions, respectively.
 
-<p>In a horizontal <code>writing-mode</code> this CSS would apply <code>5px</code> of padding to the top of the box and 10px of padding to the bottom:</p>
+In a horizontal `writing-mode` this CSS would apply `5px` of padding to the top of the box and 10px of padding to the bottom:
 
-<pre class="brush: css">.box {
+```css
+.box {
   padding-block: 5px 10px;
-}</pre>
+}
+```
 
-<div class="notecard note">
-<p><strong>Note:</strong> The shorthand properties <code>padding-inline</code> and <code>padding-block</code> shipped in Firefox 66. As these are new properties check browser support before using.</p>
-</div>
+> **Note:** The shorthand properties `padding-inline` and `padding-block` shipped in Firefox 66. As these are new properties check browser support before using.
 
-<h2 id="Border_examples">Border examples</h2>
+## Border examples
 
-<p>The border properties are the main reason that Logical Properties and Values seems to have so many properties, as we have the longhands for the color, width, and style of the border on each side of a box, along with the shorthand to set all three at once for each side. As with margin and padding we have a mapped version of each physical property.</p>
+The border properties are the main reason that Logical Properties and Values seems to have so many properties, as we have the longhands for the color, width, and style of the border on each side of a box, along with the shorthand to set all three at once for each side. As with margin and padding we have a mapped version of each physical property.
 
-<p>The demo below uses some longhands and three shorthand values. As with the other demos try changing the <code>direction</code> property to <code>rtl</code> to cause the boxes to display in a right-to-left direction, or changing the <code>writing-mode</code> from <code>horizontal-tb</code> to <code>vertical-rl</code>.</p>
+The demo below uses some longhands and three shorthand values. As with the other demos try changing the `direction` property to `rtl` to cause the boxes to display in a right-to-left direction, or changing the `writing-mode` from `horizontal-tb` to `vertical-rl`.
 
-<p>{{EmbedGHLiveSample("css-examples/logical/border-longhands.html", '100%', 700)}}</p>
+{{EmbedGHLiveSample("css-examples/logical/border-longhands.html", '100%', 700)}}
 
-<h3 id="New_border_shorthands">New border shorthands</h3>
+### New border shorthands
 
-<p>There are two-value shorthands to set the width, style and, color of the block or inline dimension, and two-value shorthands to set all three values in the block or inline dimension. The below code, in a horizontal writing mode, would give you a 2px green solid border on the top and bottom of the box, and a 4px dotted purple border on the left and right.</p>
+There are two-value shorthands to set the width, style and, color of the block or inline dimension, and two-value shorthands to set all three values in the block or inline dimension. The below code, in a horizontal writing mode, would give you a 2px green solid border on the top and bottom of the box, and a 4px dotted purple border on the left and right.
 
-<pre class="brush: css">.box {
+```css
+.box {
   border-block: 2px solid green;
   border-inline-width: 4px;
   border-inline-style: dotted;
   border-inline-color: rebeccapurple;
-}</pre>
+}
+```
 
-<div class="notecard note">
-<p><strong>Note:</strong> These two value shorthands shipped in Firefox 66, check browser support before using as other browsers may not have implemented them yet.</p>
-</div>
+> **Note:** These two value shorthands shipped in Firefox 66, check browser support before using as other browsers may not have implemented them yet.
 
-<h3 id="Flow_relative_border-radius_properties">Flow relative border-radius properties</h3>
+### Flow relative border-radius properties
 
-<p>The specification has fairly recently added flow-relative values for the {{cssxref("border-radius")}} longhands. These have not yet been implemented by any browser. The below example, in a horizontal <code>writing-mode</code>, would set the top-right border radius to 1em, the bottom-right to 0, the bottom-left to 20px and the top-left to 40px.</p>
+The specification has fairly recently added flow-relative values for the {{cssxref("border-radius")}} longhands. These have not yet been implemented by any browser. The below example, in a horizontal `writing-mode`, would set the top-right border radius to 1em, the bottom-right to 0, the bottom-left to 20px and the top-left to 40px.
 
-<pre class="brush: css">.box {
+```css
+.box {
   border-end-start-radius: 1em;
   border-end-end-radius: 0;
   border-start-end-radius: 20px;
   border-start-start-radius: 40px;
-}</pre>
+}
+```
 
-<h2 id="Indicating_logical_values_for_the_4-value_shorthand_syntax">Indicating logical values for the 4-value shorthand syntax</h2>
+## Indicating logical values for the 4-value shorthand syntax
 
-<p>The specification makes a suggestion for the four-value shorthands such as the <code>margin</code> property, however the final decision on how this should be indicated is as yet unresolved, and is discussed in <a href="https://github.com/w3c/csswg-drafts/issues/1282">this issue</a>.</p>
+The specification makes a suggestion for the four-value shorthands such as the `margin` property, however the final decision on how this should be indicated is as yet unresolved, and is discussed in [this issue](https://github.com/w3c/csswg-drafts/issues/1282).
 
-<p>Using any four-value shorthand such as margin, padding, or border will currently use the physical versions, so if following the flow of the document is important, use the longhand properties for the time being.</p>
+Using any four-value shorthand such as margin, padding, or border will currently use the physical versions, so if following the flow of the document is important, use the longhand properties for the time being.

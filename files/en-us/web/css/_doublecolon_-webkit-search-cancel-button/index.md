@@ -10,25 +10,25 @@ tags:
   - Selector
 browser-compat: css.selectors.-webkit-search-cancel-button
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<p>The <strong><code>::-webkit-search-cancel-button</code></strong> CSS <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-element</a> represents a button (the "cancel button") at the edge of an {{HTMLElement("input")}} of <code>type="search"</code> which clears away the current value of the {{HTMLElement("input")}} element. This button and pseudo-element are non-standard, supported only in WebKit and Blink, hence the vendor prefix. The clear button is only shown on non-empty search {{HTMLElement("input")}} elements.</p>
+The **`::-webkit-search-cancel-button`** CSS [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents a button (the "cancel button") at the edge of an {{HTMLElement("input")}} of `type="search"` which clears away the current value of the {{HTMLElement("input")}} element. This button and pseudo-element are non-standard, supported only in WebKit and Blink, hence the vendor prefix. The clear button is only shown on non-empty search {{HTMLElement("input")}} elements.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css"> <em>selector</em>::-webkit-search-cancel-button</pre>
+```css
+ selector::-webkit-search-cancel-button
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any standard.</p>
+Not part of any standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref('::-ms-clear')}}</li>
- <li>{{cssxref('::-webkit-search-results-button')}}</li>
-</ul>
+- {{cssxref('::-ms-clear')}}
+- {{cssxref('::-webkit-search-results-button')}}

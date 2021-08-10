@@ -6,32 +6,31 @@ tags:
   - CSS Fonts
   - CSS Property
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.font-variant-caps
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>font-variant-caps</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property controls the use of alternate glyphs for capital letters.</p>
+The **`font-variant-caps`** [CSS](/en-US/docs/Web/CSS) property controls the use of alternate glyphs for capital letters.
 
-<div>{{EmbedInteractiveExample("pages/css/font-variant-caps.html")}}</div>
+{{EmbedInteractiveExample("pages/css/font-variant-caps.html")}}
 
-<p>When a given font includes capital letter glyphs of multiple different sizes, this property selects the most appropriate ones. If petite capital glyphs are not available, they are rendered using small capital glyphs. If these are not present, the browser synthesizes them from the uppercase glyphs.</p>
+When a given font includes capital letter glyphs of multiple different sizes, this property selects the most appropriate ones. If petite capital glyphs are not available, they are rendered using small capital glyphs. If these are not present, the browser synthesizes them from the uppercase glyphs.
 
-<p>Fonts sometimes include special glyphs for various caseless characters (such as punctuation marks) to better match the capitalized characters around them. However, small capital glyphs are never synthesized for caseless characters.</p>
+Fonts sometimes include special glyphs for various caseless characters (such as punctuation marks) to better match the capitalized characters around them. However, small capital glyphs are never synthesized for caseless characters.
 
-<h3 id="Language-specific_rules">Language-specific rules</h3>
+### Language-specific rules
 
-<p>This property accounts for language-specific case mapping rules. For example:</p>
+This property accounts for language-specific case mapping rules. For example:
 
-<ul>
- <li>In Turkic languages, such as Turkish (tr), Azerbaijani (az), Crimean Tatar (crh), Volga Tatar (tt), and Bashkir (ba), there are two kinds of <code>i</code> (one with the dot, one without) and two case pairings: <code>i</code>/<code>İ</code> and <code>ı</code>/<code>I</code>.</li>
- <li>In German (de), the <code>ß</code> may become <code>ẞ</code> (U+1E9E) in uppercase.</li>
- <li>In Greek (el), vowels lose their accent when the whole word is in uppercase (<code>ά</code>/<code>Α</code>), except for the disjunctive eta (<code>ή</code>/<code>Ή</code>). Also, diphthongs with an accent on the first vowel lose the accent and gain a diacritic on the second vowel (<code>άι</code>/<code>ΑΪ</code>).</li>
-</ul>
+- In Turkic languages, such as Turkish (tr), Azerbaijani (az), Crimean Tatar (crh), Volga Tatar (tt), and Bashkir (ba), there are two kinds of `i` (one with the dot, one without) and two case pairings: `i`/`İ` and `ı`/`I`.
+- In German (de), the `ß` may become `ẞ` (U+1E9E) in uppercase.
+- In Greek (el), vowels lose their accent when the whole word is in uppercase (`ά`/`Α`), except for the disjunctive eta (`ή`/`Ή`). Also, diphthongs with an accent on the first vowel lose the accent and gain a diacritic on the second vowel (`άι`/`ΑΪ`).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 font-variant-caps: normal;
 font-variant-caps: small-caps;
 font-variant-caps: all-small-caps;
@@ -45,59 +44,57 @@ font-variant-caps: inherit;
 font-variant-caps: initial;
 font-variant-caps: revert;
 font-variant-caps: unset;
-</pre>
+```
 
-<p>The <code>font-variant-caps</code> property is specified using a single keyword value from the list below. In each case, if the font doesn't support the OpenType value, then it synthesizes the glyphs.</p>
+The `font-variant-caps` property is specified using a single keyword value from the list below. In each case, if the font doesn't support the OpenType value, then it synthesizes the glyphs.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>normal</code></dt>
- <dd>Deactivates of the use of alternate glyphs.</dd>
- <dt><code>small-caps</code></dt>
- <dd>Enables display of small capitals (OpenType feature: <code>smcp</code>). Small-caps glyphs typically use the form of uppercase letters but are reduced to the size of lowercase letters.</dd>
- <dt><code>all-small-caps</code></dt>
- <dd>Enables display of small capitals for both upper and lowercase letters (OpenType features: <code>c2sc</code>, <code>smcp</code>).</dd>
- <dt><code>petite-caps</code></dt>
- <dd>Enables display of petite capitals (OpenType feature: <code>pcap</code>).</dd>
- <dt><code>all-petite-caps</code></dt>
- <dd>Enables display of petite capitals for both upper and lowercase letters (OpenType features: <code>c2pc</code>, <code>pcap</code>).</dd>
- <dt><code>unicase</code></dt>
- <dd>Enables display of mixture of small capitals for uppercase letters with normal lowercase letters (OpenType feature: <code>unic</code>).</dd>
- <dt><code>titling-caps</code></dt>
- <dd>Enables display of titling capitals (OpenType feature: <code>titl</code>). Uppercase letter glyphs are often designed for use with lowercase letters. When used in all uppercase titling sequences they can appear too strong. Titling capitals are designed specifically for this situation.</dd>
-</dl>
+- `normal`
+  - : Deactivates of the use of alternate glyphs.
+- `small-caps`
+  - : Enables display of small capitals (OpenType feature: `smcp`). Small-caps glyphs typically use the form of uppercase letters but are reduced to the size of lowercase letters.
+- `all-small-caps`
+  - : Enables display of small capitals for both upper and lowercase letters (OpenType features: `c2sc`, `smcp`).
+- `petite-caps`
+  - : Enables display of petite capitals (OpenType feature: `pcap`).
+- `all-petite-caps`
+  - : Enables display of petite capitals for both upper and lowercase letters (OpenType features: `c2pc`, `pcap`).
+- `unicase`
+  - : Enables display of mixture of small capitals for uppercase letters with normal lowercase letters (OpenType feature: `unic`).
+- `titling-caps`
+  - : Enables display of titling capitals (OpenType feature: `titl`). Uppercase letter glyphs are often designed for use with lowercase letters. When used in all uppercase titling sequences they can appear too strong. Titling capitals are designed specifically for this situation.
 
-<h2 id="Accessibility_concerns">Accessibility concerns</h2>
+## Accessibility concerns
 
-<p>Large sections of text set with a <code>font-variant</code> value of <code>all-small-caps</code> or <code>all-petite-caps</code> may be difficult for people with cognitive concerns such as Dyslexia to read.</p>
+Large sections of text set with a `font-variant` value of `all-small-caps` or `all-petite-caps` may be difficult for people with cognitive concerns such as Dyslexia to read.
 
-<ul>
- <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">MDN Understanding WCAG, Guideline 1.4 explanations</a></li>
- <li><a href="https://www.w3.org/TR/WCAG21/#visual-presentation" rel="noopener">W3C Understanding WCAG 2.1</a></li>
-</ul>
+- [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [W3C Understanding WCAG 2.1](https://www.w3.org/TR/WCAG21/#visual-presentation)
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_the_small-caps_font_variant">Setting the small-caps font variant</h3>
+### Setting the small-caps font variant
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p class="small-caps"&gt;Firefox rocks, small caps!&lt;/p&gt;
-&lt;p class="normal"&gt;Firefox rocks, normal caps!&lt;/p&gt;
-</pre>
+```html
+<p class="small-caps">Firefox rocks, small caps!</p>
+<p class="normal">Firefox rocks, normal caps!</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush:css">.small-caps {
+```css
+.small-caps {
   font-variant-caps: small-caps;
   font-style: italic;
 }
@@ -105,26 +102,24 @@ font-variant-caps: unset;
   font-variant-caps: normal;
   font-style: italic;
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Setting_the_small-caps_font_variant') }}</p>
+{{ EmbedLiveSample('Setting_the_small-caps_font_variant') }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See-also">See Also</h2>
+## See Also
 
-<ul>
-  <li>{{cssxref("font-variant-alternates")}}</li>
-  <li>{{cssxref("font-variant")}}</li>
-  <li>{{cssxref("font-variant-east-asian")}}</li>
-  <li>{{cssxref("font-variant-ligatures")}}</li>
-  <li>{{cssxref("font-variant-numeric")}}</li>
- </ul>
+- {{cssxref("font-variant-alternates")}}
+- {{cssxref("font-variant")}}
+- {{cssxref("font-variant-east-asian")}}
+- {{cssxref("font-variant-ligatures")}}
+- {{cssxref("font-variant-numeric")}}

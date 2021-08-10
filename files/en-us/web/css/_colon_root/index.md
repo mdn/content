@@ -13,46 +13,47 @@ tags:
   - root
 browser-compat: css.selectors.root
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>:root</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes"> pseudo-class</a> matches the root element of a tree representing the document. In HTML, <code>:root</code> represents the {{HTMLElement("html")}} element and is identical to the selector <code>html</code>, except that its <a href="/en-US/docs/Web/CSS/Specificity">specificity</a> is higher.</p>
+The **`:root`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches the root element of a tree representing the document. In HTML, `:root` represents the {{HTMLElement("html")}} element and is identical to the selector `html`, except that its [specificity](/en-US/docs/Web/CSS/Specificity) is higher.
 
-<pre class="brush: css no-line-numbers">/* Selects the root element of the document:
-   &lt;html&gt; in the case of HTML */
+```css
+/* Selects the root element of the document:
+   <html> in the case of HTML */
 :root {
   background: yellow;
-}</pre>
+}
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Declaring_global_CSS_variables">Declaring global CSS variables</h3>
+### Declaring global CSS variables
 
-<p><code>:root</code> can be useful for declaring global <a href="/en-US/docs/Web/CSS/Using_CSS_custom_properties">CSS variables</a>:</p>
+`:root` can be useful for declaring global [CSS variables](/en-US/docs/Web/CSS/Using_CSS_custom_properties):
 
-<pre class="brush: css">:root {
+```css
+:root {
   --main-color: hotpink;
   --pane-padding: 5px 42px;
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTMLElement("html")}}</li>
- <li>{{domxref("Document.rootElement")}}</li>
- <li>{{domxref("Node.getRootNode()")}}</li>
- <li>{{domxref("Element.shadowRoot")}}</li>
- <li>{{domxref("ShadowRoot")}}</li>
-</ul>
+- {{HTMLElement("html")}}
+- {{domxref("Document.rootElement")}}
+- {{domxref("Node.getRootNode()")}}
+- {{domxref("Element.shadowRoot")}}
+- {{domxref("ShadowRoot")}}

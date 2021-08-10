@@ -9,36 +9,34 @@ tags:
   - Reference
 browser-compat: css.types.transform-function.perspective
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>perspective()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a
-    href="/en-US/docs/Web/CSS/CSS_Functions">function</a> defines a transformation that sets the distance between the
-  user and the z=0 plane, the perspective from which the viewer would be if the 2-dimensional interface were
-  3-dimensional. Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.</p>
+The **`perspective()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) defines a transformation that sets the distance between the
+user and the z=0 plane, the perspective from which the viewer would be if the 2-dimensional interface were
+3-dimensional. Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.
 
-<div>{{EmbedInteractiveExample("pages/css/function-perspective.html")}}</div>
+{{EmbedInteractiveExample("pages/css/function-perspective.html")}}
 
-<p>The <code>perspective()</code> transform function is part of the {{cssxref('transform')}} value applied on the
-  element being transformed. This differs from the {{cssxref('perspective')}} and {{cssxref('perspective-origin')}}
-  properties which are attached to the parent of a child transformed in 3-dimensional space.</p>
+The `perspective()` transform function is part of the {{cssxref('transform')}} value applied on the
+element being transformed. This differs from the {{cssxref('perspective')}} and {{cssxref('perspective-origin')}}
+properties which are attached to the parent of a child transformed in 3-dimensional space.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The perspective distance used by <code>perspective()</code> is specified by a {{cssxref("&lt;length&gt;")}} value,
-  which represents the distance between the user and the z=0 plane. The z=0 plane is the plane where everything appears
-  in a 2-dimensional view, or the screen. A positive value makes the element appear closer to the user than the rest of
-  the interface, a negative value farther. The greater the value, the further away the perspective of the user is.</p>
+The perspective distance used by `perspective()` is specified by a {{cssxref("&lt;length&gt;")}} value,
+which represents the distance between the user and the z=0 plane. The z=0 plane is the plane where everything appears
+in a 2-dimensional view, or the screen. A positive value makes the element appear closer to the user than the rest of
+the interface, a negative value farther. The greater the value, the further away the perspective of the user is.
 
-<pre class="brush: css">perspective(d)
-</pre>
+```css
+perspective(d)
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
-  <dt><var>d</var></dt>
-  <dd>Is a {{cssxref("&lt;length&gt;")}} representing the distance from the user to the z=0 plane. If it is 0 or a
-    negative value, no perspective transform is applied.</dd>
-</dl>
+- _d_
+  - : Is a {{cssxref("&lt;length&gt;")}} representing the distance from the user to the z=0 plane. If it is 0 or a
+    negative value, no perspective transform is applied.
 
 <table class="standard-table">
   <thead>
@@ -52,108 +50,76 @@ browser-compat: css.types.transform-function.perspective
   <tbody>
     <tr>
       <td colspan="2">
-        <p>This transformation applies to the 3D space and can't be represented on the plane.</p>
+        <p>
+          This transformation applies to the 3D space and can't be represented
+          on the plane.
+        </p>
       </td>
-      <td>This transformation is not a linear transformation in ℝ^3, and can't be represented
-        using a Cartesian-coordinate matrix.</td>
-      <td><math>
-          <mfenced>
-            <mtable>
-              <mtr>
-                <mtd>
-                  <mn>1</mn>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-              </mtr>
-              <mtr>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>1</mn>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-              </mtr>
-              <mtr>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>1</mn>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-              </mtr>
-              <mtr>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mo>−</mo>
+      <td>
+        This transformation is not a linear transformation in ℝ^3, and can't be
+        represented using a Cartesian-coordinate matrix.
+      </td>
+      <td>
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr
+                ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd
+                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
+              ><mtr
+                ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn> </mtd
+                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
+              ><mtr
+                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
+                ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
+              ><mtr
+                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
+                ><mtd
+                  ><mo>−</mo>
                   <mn>1</mn>
                   <mo>/</mo>
-                  <mi>d</mi>
-                </mtd>
-                <mtd>
-                  <mn>1</mn>
-                </mtd>
-              </mtr>
-            </mtable>
-          </mfenced>
-        </math></td>
+                  <mi>d</mi> </mtd
+                ><mtd><mn>1</mn></mtd></mtr
+              ></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;Without perspective:&lt;/p&gt;
-&lt;div class="no-perspective-box"&gt;
-  &lt;div class="face front"&gt;A&lt;/div&gt;
-  &lt;div class="face top"&gt;B&lt;/div&gt;
-  &lt;div class="face left"&gt;C&lt;/div&gt;
-&lt;/div&gt;
+```html
+<p>Without perspective:</p>
+<div class="no-perspective-box">
+  <div class="face front">A</div>
+  <div class="face top">B</div>
+  <div class="face left">C</div>
+</div>
 
-&lt;p&gt;With perspective (9cm):&lt;/p&gt;
-&lt;div class="perspective-box-far"&gt;
-  &lt;div class="face front"&gt;A&lt;/div&gt;
-  &lt;div class="face top"&gt;B&lt;/div&gt;
-  &lt;div class="face left"&gt;C&lt;/div&gt;
-&lt;/div&gt;
+<p>With perspective (9cm):</p>
+<div class="perspective-box-far">
+  <div class="face front">A</div>
+  <div class="face top">B</div>
+  <div class="face left">C</div>
+</div>
 
-&lt;p&gt;With perspective (4cm):&lt;/p&gt;
-&lt;div class="perspective-box-closer"&gt;
-  &lt;div class="face front"&gt;A&lt;/div&gt;
-  &lt;div class="face top"&gt;B&lt;/div&gt;
-  &lt;div class="face left"&gt;C&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+<p>With perspective (4cm):</p>
+<div class="perspective-box-closer">
+  <div class="face front">A</div>
+  <div class="face top">B</div>
+  <div class="face left">C</div>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.face {
+```css
+.face {
   position: absolute;
   width: 100px;
   height: 100px;
@@ -194,23 +160,21 @@ p + div {
   background-color: limegreen;
   transform: translate3d(0, 0, 50px);
 }
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{ EmbedLiveSample('Examples', '250', '350') }}</p>
+{{ EmbedLiveSample('Examples', '250', '350') }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{cssxref("transform")}}</li>
-  <li>{{cssxref("&lt;transform-function&gt;")}}</li>
-</ul>
+- {{cssxref("transform")}}
+- {{cssxref("&lt;transform-function&gt;")}}

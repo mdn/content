@@ -8,38 +8,23 @@ tags:
   - Overview
   - Reference
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong>CSS Table</strong> is a CSS module that defines how to lay out table data.</p>
+**CSS Table** is a CSS module that defines how to lay out table data.
 
-<h2 id="Reference">Reference</h2>
+## Reference
 
-<h3 id="Properties">Properties</h3>
+### Properties
 
-<ul>
- <li>{{cssxref("border-collapse")}}</li>
- <li>{{cssxref("border-spacing")}}</li>
- <li>{{cssxref("caption-side")}}</li>
- <li>{{cssxref("empty-cells")}}</li>
- <li>{{cssxref("table-layout")}}</li>
- <li>{{cssxref("vertical-align")}}</li>
-</ul>
+- {{cssxref("border-collapse")}}
+- {{cssxref("border-spacing")}}
+- {{cssxref("caption-side")}}
+- {{cssxref("empty-cells")}}
+- {{cssxref("table-layout")}}
+- {{cssxref("vertical-align")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS2.1", "tables.html")}}</td>
-   <td>{{Spec2("CSS2.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                    | Status                   | Comment            |
+| ------------------------------------------------ | ------------------------ | ------------------ |
+| {{SpecName("CSS2.1", "tables.html")}} | {{Spec2("CSS2.1")}} | Initial definition |

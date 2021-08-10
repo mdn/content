@@ -9,25 +9,23 @@ tags:
   - Reference
   - Selector
 ---
-<div>{{ CSSRef }}{{Non-standard_header}}</div>
+{{ CSSRef }}{{Non-standard_header}}
 
-<p>The <strong><code>:-moz-handler-crashed</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> is a <a href="/en-US/docs/Web/CSS/Mozilla_Extensions">Mozilla extension</a> that matches elements that can't be displayed because the plugin responsible for drawing them has crashed.</p>
+The **`:-moz-handler-crashed`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) is a [Mozilla extension](/en-US/docs/Web/CSS/Mozilla_Extensions) that matches elements that can't be displayed because the plugin responsible for drawing them has crashed.
 
-<div class="note">
-<p><strong>Note:</strong> This selector is mainly intended to be used by theme developers.</p>
-</div>
+> **Note:** This selector is mainly intended to be used by theme developers.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">:-moz-handler-crashed</pre>
+```css
+:-moz-handler-crashed
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any standard.</p>
+Not part of any standard.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{ cssxref(":-moz-handler-blocked") }}</li>
- <li>{{ cssxref(":-moz-handler-disabled") }}</li>
-</ul>
+- {{ cssxref(":-moz-handler-blocked") }}
+- {{ cssxref(":-moz-handler-disabled") }}

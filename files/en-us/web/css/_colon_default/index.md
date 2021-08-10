@@ -1,6 +1,6 @@
 ---
 title: ':default'
-slug: 'Web/CSS/:default'
+slug: Web/CSS/:default
 tags:
   - ':default'
   - CSS
@@ -13,73 +13,68 @@ tags:
   - default
 browser-compat: css.selectors.default
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>:default</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> selects form elements that are the default in a group of related elements.</p>
+The **`:default`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) selects form elements that are the default in a group of related elements.
 
-<p>What this selector matches is defined in <a href="https://html.spec.whatwg.org/multipage/semantics-other.html#selector-default">HTML Standard §4.16.3 Pseudo-classes</a> — it may match the {{htmlelement("button")}}, <code><a href="/en-US/docs/Web/HTML/Element/input/checkbox">&lt;input type="checkbox"&gt;</a></code>, <code><a href="/en-US/docs/Web/HTML/Element/input/radio">&lt;input type="radio"&gt;</a></code>, and {{htmlelement("option")}} elements:</p>
+What this selector matches is defined in [HTML Standard §4.16.3 Pseudo-classes](https://html.spec.whatwg.org/multipage/semantics-other.html#selector-default) — it may match the {{htmlelement("button")}}, [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox), [`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/radio), and {{htmlelement("option")}} elements:
 
-<ul>
- <li>A default option element is the first one with the <code>selected</code> attribute, or the first enabled option in DOM order. <code>multiple</code> {{htmlelement("select")}}s can have more than one <code>selected</code> option, so all will match <code>:default</code>.</li>
- <li><code>&lt;input type="checkbox"&gt;</code> and <code>&lt;input type="radio"&gt;</code> match if they have the <code>checked</code> attribute.</li>
- <li>{{htmlelement("button")}} matches if it is a {{htmlelement("form")}}’s <a href="https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#implicit-submission">default submission button</a>: the first <code>&lt;button&gt;</code> in DOM order that belongs to the form. This also applies to {{htmlelement("input")}} types that submit forms, like <code>image</code> or <code>submit</code>.</li>
-</ul>
+- A default option element is the first one with the `selected` attribute, or the first enabled option in DOM order. `multiple` {{htmlelement("select")}}s can have more than one `selected` option, so all will match `:default`.
+- `<input type="checkbox">` and `<input type="radio">` match if they have the `checked` attribute.
+- {{htmlelement("button")}} matches if it is a {{htmlelement("form")}}’s [default submission button](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#implicit-submission): the first `<button>` in DOM order that belongs to the form. This also applies to {{htmlelement("input")}} types that submit forms, like `image` or `submit`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;fieldset&gt;
-  &lt;legend&gt;Favorite season&lt;/legend&gt;
+```html
+<fieldset>
+  <legend>Favorite season</legend>
 
-  &lt;input type="radio" name="season" id="spring"&gt;
-  &lt;label for="spring"&gt;Spring&lt;/label&gt;
+  <input type="radio" name="season" id="spring">
+  <label for="spring">Spring</label>
 
-  &lt;input type="radio" name="season" id="summer" checked&gt;
-  &lt;label for="summer"&gt;Summer&lt;/label&gt;
+  <input type="radio" name="season" id="summer" checked>
+  <label for="summer">Summer</label>
 
-  &lt;input type="radio" name="season" id="fall"&gt;
-  &lt;label for="fall"&gt;Fall&lt;/label&gt;
+  <input type="radio" name="season" id="fall">
+  <label for="fall">Fall</label>
 
-  &lt;input type="radio" name="season" id="winter"&gt;
-  &lt;label for="winter"&gt;Winter&lt;/label&gt;
-&lt;/fieldset&gt;
-</pre>
+  <input type="radio" name="season" id="winter">
+  <label for="winter">Winter</label>
+</fieldset>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">input:default {
+```css
+input:default {
   box-shadow: 0 0 2px 1px coral;
 }
 
 input:default + label {
   color: coral;
 }
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Examples")}}</p>
+{{EmbedLiveSample("Examples")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
+{{Compat}}
 
-<p>{{Compat}}</p>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Learn/Forms">Web forms — Working with user data</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Styling_web_forms">Styling web forms</a></li>
- <li>Related HTML elements: {{htmlelement("button")}}, <code><a href="/en-US/docs/Web/HTML/Element/input/checkbox">&lt;input type="checkbox"&gt;</a></code>, <code><a href="/en-US/docs/Web/HTML/Element/input/radio">&lt;input type="radio"&gt;</a></code>, and {{htmlelement("option")}}</li>
-</ul>
-</div>
+- [Web forms — Working with user data](/en-US/docs/Learn/Forms)
+- [Styling web forms](/en-US/docs/Learn/Forms/Styling_web_forms)
+- Related HTML elements: {{htmlelement("button")}}, [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox), [`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/radio), and {{htmlelement("option")}}

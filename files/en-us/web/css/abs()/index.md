@@ -12,55 +12,56 @@ tags:
   - abs
 browser-compat: css.types.abs
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>abs()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Functions">function</a> contains one calculation, and returns the absolute value of the argument, as the same type as the input.</p>
+The **`abs()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) contains one calculation, and returns the absolute value of the argument, as the same type as the input.
 
-<p>The <code>abs(A)</code> statement will return <code>A</code> if <code>A</code>’s numeric value is positive or 0⁺. Otherwise it will return the value of <code> -1 * A</code>.</p>
+The `abs(A)` statement will return `A` if `A`’s numeric value is positive or 0⁺. Otherwise it will return the value of `-1 * A`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css no-line-numbers">/* property: abs(expression) */
-width: abs(20% - 100px);</pre>
+```css
+/* property: abs(expression) */
+width: abs(20% - 100px);
+```
 
-<p>The <code>abs()</code> function takes only one expression as its argument.</p>
+The `abs()` function takes only one expression as its argument.
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{CSSSyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Positive_variables">Positive variables</h3>
+### Positive variables
 
-<p>The <code>abs()</code> function can be used to ensure that a value is always positive. In the following  example a CSS custom property <code>--font-size</code> is used as the value of {{CSSxRef("font-size")}}. Wrapping this custom property in <code>abs()</code> will convert a negative value to a positive one.</p>
+The `abs()` function can be used to ensure that a value is always positive. In the following example a CSS custom property `--font-size` is used as the value of {{CSSxRef("font-size")}}. Wrapping this custom property in `abs()` will convert a negative value to a positive one.
 
-<pre class="brush: css;">h1 {
+```css
+h1 {
   font-size: abs( var( --font-size ) );
 }
-</pre>
+```
 
+### Control gradient angle of direction
 
-<h3 id="Control_gradient_angle_of_direction">Control gradient angle of direction</h3>
+You can also control the gradient direction using `abs()` function. In the following example, with an angle of -45deg the gradient would start red and transition to blue. By using `abs()` to make the value positive, the gradient will start blue and transition to red.
 
-<p>You can also control the gradient direction using <code>abs()</code> function. In the following example, with an angle of -45deg the gradient would start red and transition to blue. By using <code>abs()</code> to make the value positive, the gradient will start blue and transition to red.</p>
-
-<pre class="brush: css;">div {
+```css
+div {
   --deg: -45deg;
   background-image: linear-gradient( abs( var( --deg ) ), blue, red);
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{CSSxRef("sign", "sign()")}}</li>
-</ul>
+- {{CSSxRef("sign", "sign()")}}

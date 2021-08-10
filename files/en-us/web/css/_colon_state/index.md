@@ -13,43 +13,42 @@ tags:
   - Selector
 browser-compat: css.selectors.state
 ---
-<p>{{CSSRef}}{{Draft}}{{SeeCompatTable}}</p>
+{{CSSRef}}{{Draft}}{{SeeCompatTable}}
 
-<p>The <strong><code>:state</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> represents any <a href="/en-US/docs/Web/Web_Components/Using_custom_elements">custom element</a> with the specified custom state in {{DOMxRef("ElementInternals.states")}}.</p>
+The **`:state`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any [custom element](/en-US/docs/Web/Web_Components/Using_custom_elements) with the specified custom state in {{DOMxRef("ElementInternals.states")}}.
 
-<pre class="brush: css no-line-numbers">custom-element:state(foo) {
+```css
+custom-element:state(foo) {
   /* Styles to apply when `custom-element` is in the `foo` state */
 }
-</pre>
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
 {{CSSSyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Fill in a simple example that nicely shows a typical usage of the selector, then perhaps some more complex examples (see our guide on how to add <a href="/en-US/docs/MDN/Structures/Code_examples">code examples</a> for more information).</p>
+Fill in a simple example that nicely shows a typical usage of the selector, then perhaps some more complex examples (see our guide on how to add [code examples](/en-US/docs/MDN/Structures/Code_examples) for more information).
 
-<pre class="brush: css;">my code block</pre>
+```css
+my code block
+```
 
-<p>And/or include a list of links to useful code samples that live elsewhere:</p>
+And/or include a list of links to useful code samples that live elsewhere:
 
-<ul>
- <li>x</li>
- <li>y</li>
- <li>z</li>
-</ul>
+- x
+- y
+- z
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The {{DOMxRef("ElementInternals.states")}} property - {{DOMxRef("DOMTokenList")}} used to configure which custom states a custom element is in.</li>
-</ul>
+- The {{DOMxRef("ElementInternals.states")}} property - {{DOMxRef("DOMTokenList")}} used to configure which custom states a custom element is in.

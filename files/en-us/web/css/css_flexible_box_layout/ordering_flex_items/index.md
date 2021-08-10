@@ -11,129 +11,115 @@ tags:
   - order
   - reverse
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<p>New layout methods such as Flexbox and Grid bring with them the possibility of controlling the order of content. In this article we will take a look at ways in which you can change the visual order of your content when using Flexbox. We will also consider the implications of reordering items from an accessibility point of view.</p>
+New layout methods such as Flexbox and Grid bring with them the possibility of controlling the order of content. In this article we will take a look at ways in which you can change the visual order of your content when using Flexbox. We will also consider the implications of reordering items from an accessibility point of view.
 
-<h2 id="Reverse_the_display_of_the_items">Reverse the display of the items</h2>
+## Reverse the display of the items
 
-<p>the {{cssxref("flex-direction")}} property can take one of four values:</p>
+the {{cssxref("flex-direction")}} property can take one of four values:
 
-<ul>
- <li><code>row</code></li>
- <li><code>column</code></li>
- <li><code>row-reverse</code></li>
- <li><code>column-reverse</code></li>
-</ul>
+- `row`
+- `column`
+- `row-reverse`
+- `column-reverse`
 
-<p>The first two values keep the items in the same order that they appear in the document source order and display them sequentially from the start line.</p>
+The first two values keep the items in the same order that they appear in the document source order and display them sequentially from the start line.
 
-<p><img alt="The items are displayed in a row starting on the left." src="basics1.png"></p>
+![The items are displayed in a row starting on the left.](basics1.png)
 
-<p><img alt="The items are displayed as a column starting from the top " src="align10.png"></p>
+![The items are displayed as a column starting from the top ](align10.png)
 
-<p>The second two values reverse the items by switching the start and end lines.</p>
+The second two values reverse the items by switching the start and end lines.
 
-<p><img alt="The items are displayed in reverse order starting on the right-hand line." src="align9.png"></p>
+![The items are displayed in reverse order starting on the right-hand line.](align9.png)
 
-<p><img alt="The items are displayed in a column in reverse order starting at the bottom line." src="align11.png"></p>
+![The items are displayed in a column in reverse order starting at the bottom line.](align11.png)
 
-<p>Remember that the start line relates to writing modes. The row-related examples above demonstrate how <code>row</code> and <code>row-reverse</code> work in a left-to-right language such as English. If you are working in a right-to-left language like Arabic then <code>row</code> would start on the right, <code>row-reverse</code> on the left.</p>
+Remember that the start line relates to writing modes. The row-related examples above demonstrate how `row` and `row-reverse` work in a left-to-right language such as English. If you are working in a right-to-left language like Arabic then `row` would start on the right, `row-reverse` on the left.
 
-<p><img alt="Flex containers with Arabic letters showing how row starts from the right hand side and row-reverse from the left." src="order-rtl.png"></p>
+![Flex containers with Arabic letters showing how row starts from the right hand side and row-reverse from the left.](order-rtl.png)
 
-<p>This can seem like a neat way to display things in reverse order however you should be mindful that the items are only <em>visually</em> displayed in reverse order. The specification says the following on this matter:</p>
+This can seem like a neat way to display things in reverse order however you should be mindful that the items are only _visually_ displayed in reverse order. The specification says the following on this matter:
 
-<blockquote>
-<p>“Note: The reordering capabilities of flex layout intentionally affect only the visual rendering, leaving speech order and navigation based on the source order. This allows authors to manipulate the visual presentation while leaving the source order intact for non-CSS UAs and for linear models such as speech and sequential navigation.” - <a href="https://www.w3.org/TR/css-flexbox-1/#flow-order">Ordering and Orientation</a></p>
-</blockquote>
+> “Note: The reordering capabilities of flex layout intentionally affect only the visual rendering, leaving speech order and navigation based on the source order. This allows authors to manipulate the visual presentation while leaving the source order intact for non-CSS UAs and for linear models such as speech and sequential navigation.” - [Ordering and Orientation](https://www.w3.org/TR/css-flexbox-1/#flow-order)
 
-<p>If your items were links or some other element that the user could tab to, then the tabbing order would be the order that these items appear in the document source — not your visual order.</p>
+If your items were links or some other element that the user could tab to, then the tabbing order would be the order that these items appear in the document source — not your visual order.
 
-<p>If you are using a reverse value, or otherwise reordering your items, you should consider whether you actually need to change the logical order in the source. The specification continues with a warning not to use reordering to fix issues in your source:</p>
+If you are using a reverse value, or otherwise reordering your items, you should consider whether you actually need to change the logical order in the source. The specification continues with a warning not to use reordering to fix issues in your source:
 
-<blockquote>
-<p>“Authors <em>must not</em> use order or the *-reverse values of flex-flow/flex-direction as a substitute for correct source ordering, as that can ruin the accessibility of the document.”</p>
-</blockquote>
+> “Authors _must not_ use order or the \*-reverse values of flex-flow/flex-direction as a substitute for correct source ordering, as that can ruin the accessibility of the document.”
 
-<div class="note">
-<p><strong>Note:</strong> For some years Firefox had a bug whereby it would attempt to follow the visual order and not the source order, making it behave differently to other browsers. This has now been fixed. You should always take the source order as the logical order of the document as all up-to-date user agents will be following the specification and doing so.</p>
-</div>
+> **Note:** For some years Firefox had a bug whereby it would attempt to follow the visual order and not the source order, making it behave differently to other browsers. This has now been fixed. You should always take the source order as the logical order of the document as all up-to-date user agents will be following the specification and doing so.
 
-<p>In the live example below I have added a focus style in order that as you tab from link to link you can see which is highlighted. If you change the order using <code>flex-direction</code> you can see how the tab order continues to follow the order that the items are listed in the source.</p>
+In the live example below I have added a focus style in order that as you tab from link to link you can see which is highlighted. If you change the order using `flex-direction` you can see how the tab order continues to follow the order that the items are listed in the source.
 
-<p>{{EmbedGHLiveSample("css-examples/flexbox/order/flex-direction.html", '100%', 440)}}</p>
+{{EmbedGHLiveSample("css-examples/flexbox/order/flex-direction.html", '100%', 440)}}
 
-<p>In the same way that changing the value of <code>flex-direction</code> does not change the order in which items are navigated to, changing this value does not change paint order. It is a visual reversal of the items only.</p>
+In the same way that changing the value of `flex-direction` does not change the order in which items are navigated to, changing this value does not change paint order. It is a visual reversal of the items only.
 
-<h2 id="The_order_property">The order property</h2>
+## The order property
 
-<p>In addition to reversing the order in which flex items are visually displayed, you can target individual items and change where they appear in the visual order with the {{cssxref("order")}} property.</p>
+In addition to reversing the order in which flex items are visually displayed, you can target individual items and change where they appear in the visual order with the {{cssxref("order")}} property.
 
-<p>The <code>order</code> property is designed to lay the items out in <em>ordinal groups</em>. What this means is that items are assigned an integer that represents their group. The items are then placed in the visual order according to that integer, lowest values first. If more than one item has the same integer value, then within that group the items are laid out as per source order.</p>
+The `order` property is designed to lay the items out in _ordinal groups_. What this means is that items are assigned an integer that represents their group. The items are then placed in the visual order according to that integer, lowest values first. If more than one item has the same integer value, then within that group the items are laid out as per source order.
 
-<p>As an example, I have 5 flex items, and assign <code>order</code> values as follows:</p>
+As an example, I have 5 flex items, and assign `order` values as follows:
 
-<ul>
- <li>Source item 1: <code>order: 2</code></li>
- <li>Source item 2: <code>order: 3</code></li>
- <li>Source item 3: <code>order: 1</code></li>
- <li>Source item 4: <code>order: 3</code></li>
- <li>Source item 5: <code>order: 1</code></li>
-</ul>
+- Source item 1: `order: 2`
+- Source item 2: `order: 3`
+- Source item 3: `order: 1`
+- Source item 4: `order: 3`
+- Source item 5: `order: 1`
 
-<p>These items would be displayed on the page in the following order:</p>
+These items would be displayed on the page in the following order:
 
-<ul>
- <li>Source item 3: <code>order: 1</code></li>
- <li>Source item 5: <code>order: 1</code></li>
- <li>Source item 1: <code>order: 2</code></li>
- <li>Source item 2: <code>order: 3</code></li>
- <li>Source item 4: <code>order: 3</code></li>
-</ul>
+- Source item 3: `order: 1`
+- Source item 5: `order: 1`
+- Source item 1: `order: 2`
+- Source item 2: `order: 3`
+- Source item 4: `order: 3`
 
-<p><img alt="Items have a number showing their source order which has been rearranged." src="order-property.png"></p>
+![Items have a number showing their source order which has been rearranged.](order-property.png)
 
-<p>You can play around with the values in this live example below and see how that changes the order. Also, try changing <code>flex-direction</code> to <code>row-reverse</code> and see what happens — the start line is switched so the ordering begins from the opposite side.</p>
+You can play around with the values in this live example below and see how that changes the order. Also, try changing `flex-direction` to `row-reverse` and see what happens — the start line is switched so the ordering begins from the opposite side.
 
-<p>{{EmbedGHLiveSample("css-examples/flexbox/order/order.html", '100%', 500)}}</p>
+{{EmbedGHLiveSample("css-examples/flexbox/order/order.html", '100%', 500)}}
 
-<p>Flex items have a default <code>order</code> value of <code>0</code>, therefore items with an integer value greater than 0 will be displayed after any items that have not been given an explicit <code>order</code> value.</p>
+Flex items have a default `order` value of `0`, therefore items with an integer value greater than 0 will be displayed after any items that have not been given an explicit `order` value.
 
-<p>You can also use negative values with order, which can be quite useful. If you want to make one item display first, and leave the order of all other items unchanged, you can give that item an order of <code>-1</code>. As this is lower than 0 the item will always be displayed first.</p>
+You can also use negative values with order, which can be quite useful. If you want to make one item display first, and leave the order of all other items unchanged, you can give that item an order of `-1`. As this is lower than 0 the item will always be displayed first.
 
-<p>In the live code example below I have items laid out using Flexbox. By changing which item has the class <code>active</code> assigned to it in the HTML, you can change which item displays first and therefore becomes full width at the top of the layout, with the other items displaying below it.</p>
+In the live code example below I have items laid out using Flexbox. By changing which item has the class `active` assigned to it in the HTML, you can change which item displays first and therefore becomes full width at the top of the layout, with the other items displaying below it.
 
-<p>{{EmbedGHLiveSample("css-examples/flexbox/order/negative-order.html", '100%', 520)}}</p>
+{{EmbedGHLiveSample("css-examples/flexbox/order/negative-order.html", '100%', 520)}}
 
-<p>The items are displayed in what is described in the specification as <em>order-modified document order</em>. The value of the order property is taken into account before the items are displayed.</p>
+The items are displayed in what is described in the specification as _order-modified document order_. The value of the order property is taken into account before the items are displayed.
 
-<p>Order also changes the paint order of the items; items with a lower value for <code>order</code> will be painted first and those with a higher value for <code>order</code> painted afterwards.</p>
+Order also changes the paint order of the items; items with a lower value for `order` will be painted first and those with a higher value for `order` painted afterwards.
 
-<h2 id="The_order_property_and_accessibility">The order property and accessibility</h2>
+## The order property and accessibility
 
-<p>Use of the <code>order</code> property has exactly the same implications for accessibility as changing the direction with <code>flex-direction</code>. Using <code>order</code> changes the order in which items are painted, and the order in which they appear visually. It does not change the sequential navigation order of the items. Therefore if a user is tabbing between the items, they could find themselves jumping around your layout in a very confusing way.</p>
+Use of the `order` property has exactly the same implications for accessibility as changing the direction with `flex-direction`. Using `order` changes the order in which items are painted, and the order in which they appear visually. It does not change the sequential navigation order of the items. Therefore if a user is tabbing between the items, they could find themselves jumping around your layout in a very confusing way.
 
-<p>By tabbing around any of the live examples on this page, you can see how order is potentially creating a strange experience for anyone not using a pointing device of some kind. To read more about this disconnect of visual order and logical order and some of the potential problems it raises for accessibility, see the following resources.</p>
+By tabbing around any of the live examples on this page, you can see how order is potentially creating a strange experience for anyone not using a pointing device of some kind. To read more about this disconnect of visual order and logical order and some of the potential problems it raises for accessibility, see the following resources.
 
-<ul>
- <li><a href="https://tink.uk/flexbox-the-keyboard-navigation-disconnect/">Flexbox and the keyboard navigation disconnect</a></li>
- <li><a href="https://adrianroselli.com/2015/10/html-source-order-vs-css-display-order.html">HTML Source Order vs CSS Display Order</a></li>
- <li><a href="https://alastairc.uk/2017/06/the-responsive-order-conflict/">The Responsive Order Conflict for Keyboard Focus</a></li>
-</ul>
+- [Flexbox and the keyboard navigation disconnect](https://tink.uk/flexbox-the-keyboard-navigation-disconnect/)
+- [HTML Source Order vs CSS Display Order](https://adrianroselli.com/2015/10/html-source-order-vs-css-display-order.html)
+- [The Responsive Order Conflict for Keyboard Focus](https://alastairc.uk/2017/06/the-responsive-order-conflict/)
 
-<h2 id="Use_cases_for_order">Use cases for order</h2>
+## Use cases for order
 
-<p>There are sometimes places where the fact that the logical and therefore reading order of flex items is separate from the visual order, is helpful. Used carefully the <code>order</code> property can allow for some useful common patterns to be easily implemented.</p>
+There are sometimes places where the fact that the logical and therefore reading order of flex items is separate from the visual order, is helpful. Used carefully the `order` property can allow for some useful common patterns to be easily implemented.
 
-<p>You might have a design, perhaps a card that will display a news item. The heading of the news item is the key thing to highlight and would be the element that a user might jump to if they were tabbing between headings to find content they wanted to read. The card also has a date; the finished design we want to create is something like this.</p>
+You might have a design, perhaps a card that will display a news item. The heading of the news item is the key thing to highlight and would be the element that a user might jump to if they were tabbing between headings to find content they wanted to read. The card also has a date; the finished design we want to create is something like this.
 
-<p><img alt="A design component with a date, then heading and then content." src="order-card.png"></p>
+![A design component with a date, then heading and then content.](order-card.png)
 
-<p>Visually the date appears above the heading, in the source. However, if the card was read out by a screen reader I would prefer that the title was announced first and then the publication date. We can make this so using the <code>order</code> property.</p>
+Visually the date appears above the heading, in the source. However, if the card was read out by a screen reader I would prefer that the title was announced first and then the publication date. We can make this so using the `order` property.
 
-<p>The card is going to be our flex container, with <code>flex-direction</code> set to column. I then give the date an <code>order</code> of <code>-1</code>. This pulls it up above the heading.</p>
+The card is going to be our flex container, with `flex-direction` set to column. I then give the date an `order` of `-1`. This pulls it up above the heading.
 
-<p>{{EmbedGHLiveSample("css-examples/flexbox/order/usecase-order.html", '100%', 730)}}</p>
+{{EmbedGHLiveSample("css-examples/flexbox/order/usecase-order.html", '100%', 730)}}
 
-<p>These small tweaks are the sort of cases where the <code>order</code> property makes sense. Keep the logical order as the reading and tab order of the document, and maintain that in the most accessible and structured fashion. Then use <code>order</code> for purely visual design tweaks. When doing so take care that you are not reordering items that could be accessed by the keyboard as a user is tabbing around. Especially when using newer layout methods you should ensure that your browser testing includes testing the site using keyboard only, rather than a mouse or touchscreen. You will quickly see if your development choices make getting around the content difficult.</p>
+These small tweaks are the sort of cases where the `order` property makes sense. Keep the logical order as the reading and tab order of the document, and maintain that in the most accessible and structured fashion. Then use `order` for purely visual design tweaks. When doing so take care that you are not reordering items that could be accessed by the keyboard as a user is tabbing around. Especially when using newer layout methods you should ensure that your browser testing includes testing the site using keyboard only, rather than a mouse or touchscreen. You will quickly see if your development choices make getting around the content difficult.

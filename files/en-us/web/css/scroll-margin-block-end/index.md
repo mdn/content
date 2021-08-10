@@ -3,19 +3,20 @@ title: scroll-margin-block-end
 slug: Web/CSS/scroll-margin-block-end
 tags:
   - CSS
-  - 'recipe:css-property'
+  - recipe:css-property
   - scroll-margin-block-end
 browser-compat: css.properties.scroll-margin-block-end
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <code>scroll-margin-block-end</code> property defines the margin of the scroll snap area at the end of the block dimension that is used for snapping this box to the snapport. The scroll snap area is determined by taking the transformed border box, finding its rectangular bounding box (axis-aligned in the scroll container’s coordinate space), then adding the specified outsets.</p>
+The `scroll-margin-block-end` property defines the margin of the scroll snap area at the end of the block dimension that is used for snapping this box to the snapport. The scroll snap area is determined by taking the transformed border box, finding its rectangular bounding box (axis-aligned in the scroll container’s coordinate space), then adding the specified outsets.
 
-<div>{{EmbedInteractiveExample("pages/css/scroll-margin-block-end.html")}}</div>
+{{EmbedInteractiveExample("pages/css/scroll-margin-block-end.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">/* &lt;length&gt; values */
+```css
+/* <length> values */
 scroll-margin-block-end: 10px;
 scroll-margin-block-end: 1em;
 
@@ -24,33 +25,30 @@ scroll-margin-block-end: inherit;
 scroll-margin-block-end: initial;
 scroll-margin-block-end: revert;
 scroll-margin-block-end: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>&lt;length&gt;</code></dt>
- <dd>An outset from the block end edge of the scroll container.</dd>
-</dl>
-<h2 id="Formal_definition">Formal definition</h2>
+- `<length>`
+  - : An outset from the block end edge of the scroll container.
 
-<p>{{cssinfo}}</p>
+## Formal definition
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+{{cssinfo}}
+
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/CSS/CSS_Scroll_Snap">CSS Scroll Snap</a></li>
-  <li><a href="https://developers.google.com/web/updates/2018/07/css-scroll-snap">Well-Controlled Scrolling with CSS Scroll Snap</a></li>
-</ul>
+- [CSS Scroll Snap](/en-US/docs/Web/CSS/CSS_Scroll_Snap)
+- [Well-Controlled Scrolling with CSS Scroll Snap](https://developers.google.com/web/updates/2018/07/css-scroll-snap)

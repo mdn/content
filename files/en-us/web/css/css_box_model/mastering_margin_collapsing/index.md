@@ -7,47 +7,46 @@ tags:
   - Guide
   - Reference
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <a href="/en-US/docs/Web/CSS/margin-top">top</a> and <a href="/en-US/docs/Web/CSS/margin-bottom">bottom</a> margins of blocks are sometimes combined (collapsed) into a single margin whose size is the largest of the individual margins (or just one of them, if they are equal), a behavior known as <strong>margin collapsing</strong>. Note that the margins of <a href="/en-US/docs/Web/CSS/float">floating</a> and <a href="/en-US/docs/Web/CSS/position#types_of_positioning">absolutely positioned</a> elements never collapse.</p>
+The [top](/en-US/docs/Web/CSS/margin-top) and [bottom](/en-US/docs/Web/CSS/margin-bottom) margins of blocks are sometimes combined (collapsed) into a single margin whose size is the largest of the individual margins (or just one of them, if they are equal), a behavior known as **margin collapsing**. Note that the margins of [floating](/en-US/docs/Web/CSS/float) and [absolutely positioned](/en-US/docs/Web/CSS/position#types_of_positioning) elements never collapse.
 
-<p>Margin collapsing occurs in three basic cases:</p>
+Margin collapsing occurs in three basic cases:
 
-<dl>
- <dt>Adjacent siblings</dt>
- <dd>The margins of adjacent siblings are collapsed (except when the latter sibling needs to be <a href="/en-US/docs/Web/CSS/clear">cleared</a> past floats).</dd>
- <dt>No content separating parent and descendants</dt>
- <dd>If there is no border, padding, inline part, <a href="/en-US/docs/Web/Guide/CSS/Block_formatting_context">block formatting context</a> created, or <em><a href="/en-US/docs/Web/CSS/clear">clearance</a></em> to separate the {{cssxref("margin-top")}} of a block from the {{cssxref("margin-top")}} of one or more of its descendant blocks; or no border, padding, inline content, {{cssxref("height")}}, or {{cssxref("min-height")}} to separate the {{cssxref("margin-bottom")}} of a block from the {{cssxref("margin-bottom")}} of one or more of its descendant blocks, then those margins collapse. The collapsed margin ends up outside the parent.</dd>
- <dt>Empty blocks</dt>
- <dd>If there is no border, padding, inline content, {{cssxref("height")}}, or {{cssxref("min-height")}} to separate a block's {{cssxref("margin-top")}} from its {{cssxref("margin-bottom")}}, then its top and bottom margins collapse.</dd>
-</dl>
+- Adjacent siblings
+  - : The margins of adjacent siblings are collapsed (except when the latter sibling needs to be [cleared](/en-US/docs/Web/CSS/clear) past floats).
+- No content separating parent and descendants
+  - : If there is no border, padding, inline part, [block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context) created, or _[clearance](/en-US/docs/Web/CSS/clear)_ to separate the {{cssxref("margin-top")}} of a block from the {{cssxref("margin-top")}} of one or more of its descendant blocks; or no border, padding, inline content, {{cssxref("height")}}, or {{cssxref("min-height")}} to separate the {{cssxref("margin-bottom")}} of a block from the {{cssxref("margin-bottom")}} of one or more of its descendant blocks, then those margins collapse. The collapsed margin ends up outside the parent.
+- Empty blocks
+  - : If there is no border, padding, inline content, {{cssxref("height")}}, or {{cssxref("min-height")}} to separate a block's {{cssxref("margin-top")}} from its {{cssxref("margin-bottom")}}, then its top and bottom margins collapse.
 
-<p>Some things to note:</p>
+Some things to note:
 
-<ul>
- <li>More complex margin collapsing (of more than two margins) occurs when the above cases are combined.</li>
- <li>These rules apply even to margins that are zero, so the margin of a descendant ends up outside its parent (according to the rules above) whether or not the parent's margin is zero.</li>
- <li>When negative margins are involved, the size of the collapsed margin is the sum of the largest positive margin and the smallest (most negative) negative margin.</li>
- <li>When all margins are negative, the size of the collapsed margin is the smallest (most negative) margin. This applies to both adjacent elements and nested elements.</li>
-</ul>
+- More complex margin collapsing (of more than two margins) occurs when the above cases are combined.
+- These rules apply even to margins that are zero, so the margin of a descendant ends up outside its parent (according to the rules above) whether or not the parent's margin is zero.
+- When negative margins are involved, the size of the collapsed margin is the sum of the largest positive margin and the smallest (most negative) negative margin.
+- When all margins are negative, the size of the collapsed margin is the smallest (most negative) margin. This applies to both adjacent elements and nested elements.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;The bottom margin of this paragraph is collapsed …&lt;/p&gt;
-&lt;p&gt;… with the top margin of this paragraph, yielding a margin of &lt;code&gt;1.2rem&lt;/code&gt; in between.&lt;/p&gt;
+```html
+<p>The bottom margin of this paragraph is collapsed …</p>
+<p>… with the top margin of this paragraph, yielding a margin of <code>1.2rem</code> in between.</p>
 
-&lt;div&gt;This parent element contains two paragraphs!
-  &lt;p&gt;This paragraph has a &lt;code&gt;.4rem&lt;/code&gt; margin between it and the text above.&lt;/p&gt;
-  &lt;p&gt;My bottom margin collapses with my parent, yielding a bottom margin of &lt;code&gt;2rem&lt;/code&gt;.&lt;/p&gt;
-&lt;/div&gt;
+<div>This parent element contains two paragraphs!
+  <p>This paragraph has a <code>.4rem</code> margin between it and the text above.</p>
+  <p>My bottom margin collapses with my parent, yielding a bottom margin of <code>2rem</code>.</p>
+</div>
 
-&lt;p&gt;I am &lt;code&gt;2rem&lt;/code&gt; below the element above.&lt;/p&gt;</pre>
+<p>I am <code>2rem</code> below the element above.</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   margin: 2rem 0;
   background: lavender;
 }
@@ -55,33 +54,19 @@ tags:
 p {
   margin: .4rem 0 1.2rem 0;
   background: yellow;
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample('Examples', 'auto', 350)}}</p>
+{{EmbedLiveSample('Examples', 'auto', 350)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS2.1", "box.html#collapsing-margins", "margin collapsing")}}</td>
-   <td>{{Spec2("CSS2.1")}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                        | Status                   | Comment             |
+| ---------------------------------------------------------------------------------------------------- | ------------------------ | ------------------- |
+| {{SpecName("CSS2.1", "box.html#collapsing-margins", "margin collapsing")}} | {{Spec2("CSS2.1")}} | Initial definition. |
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{css_key_concepts}}</li>
-</ul>
+- {{css_key_concepts}}

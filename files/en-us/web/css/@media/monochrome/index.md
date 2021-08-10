@@ -9,24 +9,27 @@ tags:
   - media feature
 browser-compat: css.at-rules.media.monochrome
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>monochrome</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features">media feature</a> can be used to test the number of bits per pixel in the monochrome frame buffer of the output device.</p>
+The **`monochrome`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) can be used to test the number of bits per pixel in the monochrome frame buffer of the output device.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>monochrome</code> feature is specified as an {{cssxref("&lt;integer&gt;")}} representing the number of bits per pixel in the monochrome frame buffer. If the device is not a monochrome device, the value is zero. It is a range feature, meaning that you can also use the prefixed <strong><code>min-monochrome</code></strong> and <code><strong>max-monochrome</strong></code> variants to query minimum and maximum values, respectively.</p>
+The `monochrome` feature is specified as an {{cssxref("&lt;integer&gt;")}} representing the number of bits per pixel in the monochrome frame buffer. If the device is not a monochrome device, the value is zero. It is a range feature, meaning that you can also use the prefixed **`min-monochrome`** and **`max-monochrome`** variants to query minimum and maximum values, respectively.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p class="mono"&gt;Your device supports monochrome pixels!&lt;/p&gt;
-&lt;p class="no-mono"&gt;Your device doesn't support monochrome pixels.&lt;/p&gt;</pre>
+```html
+<p class="mono">Your device supports monochrome pixels!</p>
+<p class="no-mono">Your device doesn't support monochrome pixels.</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   display: none;
 }
 
@@ -44,16 +47,17 @@ browser-compat: css.at-rules.media.monochrome
     display: block;
     color: #ee3636;
   }
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Examples")}}</p>
+{{EmbedLiveSample("Examples")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

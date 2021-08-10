@@ -6,23 +6,24 @@ tags:
   - CSS Borders
   - CSS Property
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.border-top-width
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>border-top-width</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets the width of the top border of an element.</p>
+The **`border-top-width`** [CSS](/en-US/docs/Web/CSS) property sets the width of the top border of an element.
 
-<div>{{EmbedInteractiveExample("pages/css/border-top-width.html")}}</div>
+{{EmbedInteractiveExample("pages/css/border-top-width.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 border-top-width: thin;
 border-top-width: medium;
 border-top-width: thick;
 
-/* &lt;length&gt; values */
+/* <length> values */
 border-top-width: 10em;
 border-top-width: 3vmax;
 border-top-width: 6px;
@@ -32,44 +33,41 @@ border-top-width: inherit;
 border-top-width: initial;
 border-top-width: revert;
 border-top-width: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>&lt;line-width&gt;</code></dt>
- <dd>Defines the width of the border, either as an explicit nonnegative {{cssxref("&lt;length&gt;")}} or a keyword. If it's a keyword, it must be one of the following values:
-   <ul>
-     <li><code>thin</code></li>
-     <li><code>medium</code></li>
-     <li><code>thick</code></li>
-  </ul>
- </dd>
-</dl>
+- `<line-width>`
 
+  - : Defines the width of the border, either as an explicit nonnegative {{cssxref("&lt;length&gt;")}} or a keyword. If it's a keyword, it must be one of the following values:
 
-<div class="note">
- <p><strong>Note:</strong> Because the specification doesn't define the exact thickness denoted by each keyword, the precise result when using one of them is implementation-specific. Nevertheless, they always follow the pattern <code>thin ≤ medium ≤ thick</code>, and the values are constant within a single document.</p>
-</div>
+    - `thin`
+    - `medium`
+    - `thick`
 
-<h2 id="Formal_definition">Formal definition</h2>
+> **Note:** Because the specification doesn't define the exact thickness denoted by each keyword, the precise result when using one of them is implementation-specific. Nevertheless, they always follow the pattern `thin ≤ medium ≤ thick`, and the values are constant within a single document.
 
-<p>{{CSSInfo}}</p>
+## Formal definition
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+{{CSSInfo}}
+
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;Element 1&lt;/div&gt;
-&lt;div&gt;Element 2&lt;/div&gt;</pre>
+```html
+<div>Element 1</div>
+<div>Element 2</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   border: 1px solid red;
   margin: 1em 0;
 }
@@ -79,23 +77,22 @@ div:nth-child(1) {
 }
 div:nth-child(2) {
   border-top-width: 2em;
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample('Examples', '100%')}}</p>
+{{EmbedLiveSample('Examples', '100%')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The other border-width-related CSS properties: {{Cssxref("border-left-width")}}, {{Cssxref("border-right-width")}}, {{Cssxref("border-bottom-width")}}, and {{Cssxref("border-width")}}.</li>
- <li>The other border-top-related CSS properties: {{Cssxref("border")}}, {{Cssxref("border-top")}}, {{Cssxref("border-top-style")}}, and {{Cssxref("border-top-color")}}.</li>
-</ul>
+- The other border-width-related CSS properties: {{Cssxref("border-left-width")}}, {{Cssxref("border-right-width")}}, {{Cssxref("border-bottom-width")}}, and {{Cssxref("border-width")}}.
+- The other border-top-related CSS properties: {{Cssxref("border")}}, {{Cssxref("border-top")}}, {{Cssxref("border-top-style")}}, and {{Cssxref("border-top-color")}}.

@@ -9,64 +9,59 @@ tags:
   - Understanding_CSS_z-index
   - z-index
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>For floated blocks, the stacking order is a bit different. Floating blocks are placed between non-positioned blocks and positioned blocks:</p>
+For floated blocks, the stacking order is a bit different. Floating blocks are placed between non-positioned blocks and positioned blocks:
 
-<ol>
- <li>The background and borders of the root element</li>
- <li>Descendant non-positioned blocks, in order of appearance in the HTML</li>
- <li><em>Floating blocks</em></li>
- <li>Descendant positioned elements, in order of appearance in the HTML</li>
-</ol>
+1.  The background and borders of the root element
+2.  Descendant non-positioned blocks, in order of appearance in the HTML
+3.  _Floating blocks_
+4.  Descendant positioned elements, in order of appearance in the HTML
 
-<p>See <a href="/en-US/docs/Web/CSS/position#types_of_positioning">types of positioning</a> for an explanation of positioned and non-positioned elements.</p>
+See [types of positioning](/en-US/docs/Web/CSS/position#types_of_positioning) for an explanation of positioned and non-positioned elements.
 
-<p>Actually, as you can see in the example below, the background and border of the non-positioned block (DIV #4) is completely unaffected by floating blocks, but the content is affected. This happens according to standard float behavior. This behavior can be shown with an added rule to the above list:</p>
+Actually, as you can see in the example below, the background and border of the non-positioned block (DIV #4) is completely unaffected by floating blocks, but the content is affected. This happens according to standard float behavior. This behavior can be shown with an added rule to the above list:
 
-<ol>
- <li>The background and borders of the root element</li>
- <li>Descendant non-positioned blocks, in order of appearance in the HTML</li>
- <li>Floating blocks</li>
- <li><em>Descendant non-positioned inline elements</em></li>
- <li>Descendant positioned elements, in order of appearance in the HTML</li>
-</ol>
+1.  The background and borders of the root element
+2.  Descendant non-positioned blocks, in order of appearance in the HTML
+3.  Floating blocks
+4.  _Descendant non-positioned inline elements_
+5.  Descendant positioned elements, in order of appearance in the HTML
 
-<p>{{EmbedLiveSample("Source_code_for_the_example", 600, 250)}}</p>
+{{EmbedLiveSample("Source_code_for_the_example", 600, 250)}}
 
-<div class="note">
-<p><strong>Note:</strong> If an <code>opacity</code> value is applied to the non-positioned block (DIV #4), then something strange happens: the background and border of that block pops up above the floating blocks and the positioned blocks. This is due to a peculiar part of the specification: applying a <code>opacity</code> value creates a new stacking context (see <a href="https://philipwalton.com/articles/what-no-one-told-you-about-z-index/">What No One Told You About Z-Index</a>).</p>
-</div>
+> **Note:** If an `opacity` value is applied to the non-positioned block (DIV #4), then something strange happens: the background and border of that block pops up above the floating blocks and the positioned blocks. This is due to a peculiar part of the specification: applying a `opacity` value creates a new stacking context (see [What No One Told You About Z-Index](https://philipwalton.com/articles/what-no-one-told-you-about-z-index/)).
 
-<h2 id="Source_code_for_the_example">Source code for the example</h2>
+## Source code for the example
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div id="abs1"&gt;
-  &lt;b&gt;DIV #1&lt;/b&gt;&lt;br /&gt;position: absolute;&lt;/div&gt;
+```html
+<div id="abs1">
+  <b>DIV #1</b><br />position: absolute;</div>
 
-&lt;div id="flo1"&gt;
-  &lt;b&gt;DIV #2&lt;/b&gt;&lt;br /&gt;float: left;&lt;/div&gt;
+<div id="flo1">
+  <b>DIV #2</b><br />float: left;</div>
 
-&lt;div id="flo2"&gt;
-  &lt;b&gt;DIV #3&lt;/b&gt;&lt;br /&gt;float: right;&lt;/div&gt;
+<div id="flo2">
+  <b>DIV #3</b><br />float: right;</div>
 
-&lt;br /&gt;
+<br />
 
-&lt;div id="sta1"&gt;
-  &lt;b&gt;DIV #4&lt;/b&gt;&lt;br /&gt;no positioning&lt;/div&gt;
+<div id="sta1">
+  <b>DIV #4</b><br />no positioning</div>
 
-&lt;div id="abs2"&gt;
-  &lt;b&gt;DIV #5&lt;/b&gt;&lt;br /&gt;position: absolute;&lt;/div&gt;
+<div id="abs2">
+  <b>DIV #5</b><br />position: absolute;</div>
 
-&lt;div id="rel1"&gt;
-  &lt;b&gt;DIV #6&lt;/b&gt;&lt;br /&gt;position: relative;&lt;/div&gt;
+<div id="rel1">
+  <b>DIV #6</b><br />position: relative;</div>
+```
 
-</pre>
+### CSS
 
-<h3 id="CSS">CSS</h3>
-
-<pre class="brush: css">div {
+```css
+div {
   padding: 10px;
   text-align: center;
 }
@@ -128,15 +123,13 @@ b {
   margin: 0px 10px 0px 10px;
   text-align: left;
 }
-</pre>
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index">Stacking without the z-index property</a>: The stacking rules that apply when <code>z-index</code> is not used.</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index">Using z-index</a>: How to use <code>z-index</code> to change default stacking.</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context">The stacking context</a>: Notes on the stacking context.</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1">Stacking context example 1</a>: 2-level HTML hierarchy, z-index on the last level</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_2">Stacking context example 2</a>: 2-level HTML hierarchy, z-index on all levels</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_3">Stacking context example 3</a>: 3-level HTML hierarchy, z-index on the second level</li>
-</ul>
+- [Stacking without the z-index property](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index): The stacking rules that apply when `z-index` is not used.
+- [Using z-index](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index): How to use `z-index` to change default stacking.
+- [The stacking context](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context): Notes on the stacking context.
+- [Stacking context example 1](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1): 2-level HTML hierarchy, z-index on the last level
+- [Stacking context example 2](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_2): 2-level HTML hierarchy, z-index on all levels
+- [Stacking context example 3](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_3): 3-level HTML hierarchy, z-index on the second level

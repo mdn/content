@@ -8,58 +8,62 @@ tags:
   - Selectors
 browser-compat: css.selectors.general_sibling
 ---
-<div>{{CSSRef("Selectors")}}</div>
+{{CSSRef("Selectors")}}
 
-<p>The <strong>general sibling combinator</strong> (<code>~</code>) separates two selectors and matches <em>all iterations</em> of the second element, that are following the first element (though not necessarily immediately), and are children of the same parent {{Glossary("element")}}.</p>
+The **general sibling combinator** (`~`) separates two selectors and matches _all iterations_ of the second element, that are following the first element (though not necessarily immediately), and are children of the same parent {{Glossary("element")}}.
 
-<pre class="brush: css no-line-numbers">/* Paragraphs that are siblings of and
+```css
+/* Paragraphs that are siblings of and
    subsequent to any image */
 img ~ p {
   color: red;
-}</pre>
+}
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">former_element ~ target_element { <em>style properties</em> }
-</pre>
+```css
+former_element ~ target_element { style properties }
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">p ~ span {
+```css
+p ~ span {
   color: red;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;span&gt;This is not red.&lt;/span&gt;
-&lt;p&gt;Here is a paragraph.&lt;/p&gt;
-&lt;code&gt;Here is some code.&lt;/code&gt;
-&lt;span&gt;And here is a red span!&lt;/span&gt;
-&lt;span&gt;And this is a red span!&lt;/span&gt;
-&lt;code&gt;More code...&lt;/code&gt;
-&lt;div&gt; How are you? &lt;/div&gt;
-&lt;p&gt; Whatever it may be, keep smiling. &lt;/p&gt;
-&lt;h1&gt; Dream big &lt;/h1&gt;
-&lt;h2&gt; that's all. &lt;/h2&gt;
-&lt;span&gt;And yet again this is a red span!&lt;/span&gt;
-</pre>
+```html
+<span>This is not red.</span>
+<p>Here is a paragraph.</p>
+<code>Here is some code.</code>
+<span>And here is a red span!</span>
+<span>And this is a red span!</span>
+<code>More code...</code>
+<div> How are you? </div>
+<p> Whatever it may be, keep smiling. </p>
+<h1> Dream big </h1>
+<h2> that's all. </h2>
+<span>And yet again this is a red span!</span>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Examples", "auto", 300)}}</p>
+{{EmbedLiveSample("Examples", "auto", 300)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/Adjacent_sibling_combinator">Adjacent sibling combinator</a></li>
-</ul>
+- [Adjacent sibling combinator](/en-US/docs/Web/CSS/Adjacent_sibling_combinator)

@@ -11,11 +11,12 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.-webkit-box-reflect
 ---
-<div>{{CSSRef}}{{Non-standard_Header}}</div>
+{{CSSRef}}{{Non-standard_Header}}
 
-<p>The <strong><code>-webkit-box-reflect</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property lets you reflect the content of an element in one specific direction.</p>
+The **`-webkit-box-reflect`** [CSS](/en-US/docs/Web/CSS) property lets you reflect the content of an element in one specific direction.
 
-<pre class="brush:css no-line-numbers">/* Direction values */
+```css
+/* Direction values */
 -webkit-box-reflect: above;
 -webkit-box-reflect: below;
 -webkit-box-reflect: left;
@@ -31,45 +32,39 @@ browser-compat: css.properties.-webkit-box-reflect
 -webkit-box-reflect: inherit;
 -webkit-box-reflect: initial;
 -webkit-box-reflect: unset;
-</pre>
+```
 
-<div class="warning">
-  <p><strong>Warning:</strong> This feature is <strong>not intended to be used by Web sites</strong>. To achieve reflection on the Web, the standard way is to use the CSS {{CSSxRef("element()", "element()")}} function.</p>
-</div>
+> **Warning:** This feature is **not intended to be used by Web sites**. To achieve reflection on the Web, the standard way is to use the CSS {{CSSxRef("element()", "element()")}} function.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>above</code><em>, </em><code>below</code><em>, </em><code>right</code><em>, </em><code>left</code></dt>
- <dd>Are keywords indicating in which direction the reflection is to happen.</dd>
- <dt>{{CSSxRef("&lt;length&gt;")}}</dt>
- <dd>Indicates the size of the reflection.</dd>
- <dt>{{CSSxRef("&lt;image&gt;")}}</dt>
- <dd>Describes the mask to be applied to the reflection.</dd>
-</dl>
+- `above`_,_ `below`_,_ `right`_,_ `left`
+  - : Are keywords indicating in which direction the reflection is to happen.
+- {{CSSxRef("&lt;length&gt;")}}
+  - : Indicates the size of the reflection.
+- {{CSSxRef("&lt;image&gt;")}}
+  - : Describes the mask to be applied to the reflection.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{CSSSyntax}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any standard. The standard way to do reflection in CSS is to use the CSS {{CSSxRef("element()", "element()")}} function.</p>
+Not part of any standard. The standard way to do reflection in CSS is to use the CSS {{CSSxRef("element()", "element()")}} function.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The Apple <a href="http://developer.apple.com/library/safari/documentation/appleapplications/reference/safaricssref/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266-SW16">documentation</a>.</li>
- <li>The Webkit <a href="https://www.webkit.org/blog/182/css-reflections/">specification</a>.</li>
- <li>Lea Verou's article on reflection using <a href="http://lea.verou.me/2011/06/css-reflections-for-firefox-with-moz-element-and-svg-masks/">CSS features on the standard track</a>.</li>
-</ul>
+- The Apple [documentation](http://developer.apple.com/library/safari/documentation/appleapplications/reference/safaricssref/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266-SW16).
+- The Webkit [specification](https://www.webkit.org/blog/182/css-reflections/).
+- Lea Verou's article on reflection using [CSS features on the standard track](http://lea.verou.me/2011/06/css-reflections-for-firefox-with-moz-element-and-svg-masks/).

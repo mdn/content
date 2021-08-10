@@ -7,14 +7,15 @@ tags:
   - CSS Property
   - Experimental
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.mask-composite
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>mask-composite</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property represents a compositing operation used on the current mask layer with the mask layers below it.</p>
+The **`mask-composite`** [CSS](/en-US/docs/Web/CSS) property represents a compositing operation used on the current mask layer with the mask layers below it.
 
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 mask-composite: add;
 mask-composite: subtract;
 mask-composite: intersect;
@@ -25,51 +26,47 @@ mask-composite: inherit;
 mask-composite: initial;
 mask-composite: revert;
 mask-composite: unset;
-</pre>
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>One or more of the keyword values listed below, separated by commas.</p>
+One or more of the keyword values listed below, separated by commas.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<p>For the composition the current mask layer is referred to as <em>source</em>, while all layers below it are referred to as <em>destination</em>.</p>
+For the composition the current mask layer is referred to as _source_, while all layers below it are referred to as _destination_.
 
-<dl>
- <dt><code>add</code></dt>
- <dd>The source is placed over the destination.</dd>
- <dt><code>subtract</code></dt>
- <dd>The source is placed, where it falls outside of the destination.</dd>
- <dt><code>intersect</code></dt>
- <dd>The parts of source that overlap the destination, replace the destination.</dd>
- <dt><code>exclude</code></dt>
- <dd>The non-overlapping regions of source and destination are combined.</dd>
-</dl>
+- `add`
+  - : The source is placed over the destination.
+- `subtract`
+  - : The source is placed, where it falls outside of the destination.
+- `intersect`
+  - : The parts of source that overlap the destination, replace the destination.
+- `exclude`
+  - : The non-overlapping regions of source and destination are combined.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Compositing_mask_layers_with_addition">Compositing mask layers with addition</h3>
+### Compositing mask layers with addition
 
-<p>{{EmbedGHLiveSample("css-examples/masking/mask-composite.html", '100%', 550)}}</p>
+{{EmbedGHLiveSample("css-examples/masking/mask-composite.html", '100%', 550)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="https://css-tricks.com/clipping-masking-css/">Clipping and Masking in CSS</a></li>
-</ul>
+- [Clipping and Masking in CSS](https://css-tricks.com/clipping-masking-css/)

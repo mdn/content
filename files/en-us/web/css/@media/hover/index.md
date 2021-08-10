@@ -9,50 +9,50 @@ tags:
   - media feature
 browser-compat: css.at-rules.media.hover
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>hover</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features">media feature</a> can be used to test whether the user's <em>primary</em> input mechanism can hover over elements.</p>
+The **`hover`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) can be used to test whether the user's *primary* input mechanism can hover over elements.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>hover</code> feature is specified as a keyword value chosen from the list below.</p>
+The `hover` feature is specified as a keyword value chosen from the list below.
 
-<dl>
- <dt><code>none</code></dt>
- <dd>The primary input mechanism cannot hover at all or cannot conveniently hover (e.g., many mobile devices emulate hovering when the user performs an inconvenient long tap), or there is no primary pointing input mechanism.</dd>
- <dt><code>hover</code></dt>
- <dd>The primary input mechanism can conveniently hover over elements.</dd>
-</dl>
+- `none`
+  - : The primary input mechanism cannot hover at all or cannot conveniently hover (e.g., many mobile devices emulate hovering when the user performs an inconvenient long tap), or there is no primary pointing input mechanism.
+- `hover`
+  - : The primary input mechanism can conveniently hover over elements.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;a href="#"&gt;Try hovering over me!&lt;/a&gt;</pre>
+```html
+<a href="#">Try hovering over me!</a>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">@media (hover: hover) {
+```css
+@media (hover: hover) {
   a:hover {
     background: yellow;
   }
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Examples")}}</p>
+{{EmbedLiveSample("Examples")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">Using Media Queries</a></li>
- <li><a href="/en-US/docs/Web/CSS/@media">@media</a></li>
-</ul>
+- [Using Media Queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [@media](/en-US/docs/Web/CSS/@media)

@@ -8,43 +8,42 @@ tags:
   - Overview
   - Reference
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong>CSS Text Decoration</strong> is a module of CSS that defines features relating to text decoration, such as underlines, text shadows, and emphasis marks.</p>
+**CSS Text Decoration** is a module of CSS that defines features relating to text decoration, such as underlines, text shadows, and emphasis marks.
 
-<h2 id="Reference">Reference</h2>
+## Reference
 
-<h3 id="Properties">Properties</h3>
+### Properties
 
-<ul>
- <li>{{cssxref("letter-spacing")}}</li>
- <li>{{cssxref("text-align")}}</li>
- <li>{{cssxref("text-decoration")}}</li>
- <li>{{cssxref("text-decoration-color")}}</li>
- <li>{{cssxref("text-decoration-line")}}</li>
- <li>{{cssxref("text-decoration-offset")}}</li>
- <li>{{cssxref("text-decoration-skip-ink")}}</li>
- <li>{{cssxref("text-decoration-style")}}</li>
- <li>{{cssxref("text-decoration-thickness")}}</li>
- <li>{{cssxref("text-emphasis")}}</li>
- <li>{{cssxref("text-emphasis-color")}}</li>
- <li>{{cssxref("text-emphasis-position")}}</li>
- <li>{{cssxref("text-emphasis-style")}}</li>
- <li>{{cssxref("text-indent")}}</li>
- <li>{{cssxref("text-rendering")}}</li>
- <li>{{cssxref("text-shadow")}}</li>
- <li>{{cssxref("text-transform")}}</li>
- <li>{{cssxref("white-space")}}</li>
- <li>{{cssxref("word-spacing")}}</li>
-</ul>
+- {{cssxref("letter-spacing")}}
+- {{cssxref("text-align")}}
+- {{cssxref("text-decoration")}}
+- {{cssxref("text-decoration-color")}}
+- {{cssxref("text-decoration-line")}}
+- {{cssxref("text-decoration-offset")}}
+- {{cssxref("text-decoration-skip-ink")}}
+- {{cssxref("text-decoration-style")}}
+- {{cssxref("text-decoration-thickness")}}
+- {{cssxref("text-emphasis")}}
+- {{cssxref("text-emphasis-color")}}
+- {{cssxref("text-emphasis-position")}}
+- {{cssxref("text-emphasis-style")}}
+- {{cssxref("text-indent")}}
+- {{cssxref("text-rendering")}}
+- {{cssxref("text-shadow")}}
+- {{cssxref("text-transform")}}
+- {{cssxref("white-space")}}
+- {{cssxref("word-spacing")}}
 
-<h2 id="Guides">Guides</h2>
+## Guides
 
-<p><em>None.</em></p>
+_None._
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: css">.under {
+```css
+.under {
   text-decoration: underline red;
 }
 
@@ -71,53 +70,29 @@ tags:
 .blink {
   text-decoration: blink;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;p class="under"&gt;This text has a line underneath it.&lt;/p&gt;
-&lt;p class="over"&gt;This text has a line over it.&lt;/p&gt;
-&lt;p class="line"&gt;This text has a line going through it.&lt;/p&gt;
-&lt;p&gt;This &lt;a class="plain" href="#"&gt;link will not be underlined&lt;/a&gt;,
+```html
+<p class="under">This text has a line underneath it.</p>
+<p class="over">This text has a line over it.</p>
+<p class="line">This text has a line going through it.</p>
+<p>This <a class="plain" href="#">link will not be underlined</a>,
     as links generally are by default. Be careful when removing
     the text decoration on anchors since users often depend on
-    the underline to denote hyperlinks.&lt;/p&gt;
-&lt;p class="underover"&gt;This text has lines above &lt;em&gt;and&lt;/em&gt; below it.&lt;/p&gt;
-&lt;p class="thick"&gt;This text has a really thick purple underline in supporting browsers.&lt;/p&gt;
-&lt;p class="blink"&gt;This text might blink for you,
-    depending on the browser you use.&lt;/p&gt;
-</pre>
+    the underline to denote hyperlinks.</p>
+<p class="underover">This text has lines above <em>and</em> below it.</p>
+<p class="thick">This text has a really thick purple underline in supporting browsers.</p>
+<p class="blink">This text might blink for you,
+    depending on the browser you use.</p>
+```
 
-<p>{{EmbedLiveSample('Examples','auto','320')}}</p>
+{{EmbedLiveSample('Examples','auto','320')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Text Decoration')}}</td>
-   <td>{{Spec2('CSS4 Text Decoration')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Text Decoration')}}</td>
-   <td>{{Spec2('CSS3 Text Decoration')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'text.html')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                    | Status                                       | Comment            |
+| ------------------------------------------------ | -------------------------------------------- | ------------------ |
+| {{SpecName('CSS4 Text Decoration')}} | {{Spec2('CSS4 Text Decoration')}} |                    |
+| {{SpecName('CSS3 Text Decoration')}} | {{Spec2('CSS3 Text Decoration')}} |                    |
+| {{SpecName('CSS2.1', 'text.html')}} | {{Spec2('CSS2.1')}}                     |                    |
+| {{SpecName('CSS1')}}                     | {{Spec2('CSS1')}}                     | Initial definition |

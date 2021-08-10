@@ -9,109 +9,103 @@ tags:
   - Reference
   - display-legacy
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>CSS 2 used a single-keyword syntax for the <code>display</code> property, requiring separate keywords for block-level and inline-level variants of the same layout mode. This page details those values.</p>
+CSS 2 used a single-keyword syntax for the `display` property, requiring separate keywords for block-level and inline-level variants of the same layout mode. This page details those values.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>Valid <code>&lt;display-legacy&gt;</code> values:</p>
+Valid `<display-legacy>` values:
 
-<dl>
- <dt><code>inline-block</code></dt>
- <dd>The element generates a block element box that will be flowed with surrounding content as if it were a single inline box (behaving much like a replaced element would).<br>
- <br>
- It is equivalent to <code>inline flow-root</code>.</dd>
- <dt><code>inline-table</code></dt>
- <dd>The <code>inline-table</code> value does not have a direct mapping in HTML. It behaves like an HTML {{HTMLElement("table")}} element, but as an inline box, rather than a block-level box. Inside the table box is a block-level context.<br>
- <br>
- It is equivalent to <code>inline table</code>.</dd>
- <dt><code>inline-flex</code></dt>
- <dd>The element behaves like an inline element and lays out its content according to the flexbox model.<br>
- <br>
- It is equivalent to <code>inline flex</code>.</dd>
- <dt><code>inline-grid</code></dt>
- <dd>The element behaves like an inline element and lays out its content according to the grid model.<br>
- <br>
- It is equivalent to <code>inline grid</code>.</dd>
-</dl>
+- `inline-block`
 
-<h2 id="Examples">Examples</h2>
+  - : The element generates a block element box that will be flowed with surrounding content as if it were a single inline box (behaving much like a replaced element would).
 
-<p>In the below example, we are creating an inline flex container with the legacy keyword inline-flex.</p>
+    It is equivalent to `inline flow-root`.
 
-<h3 id="HTML">HTML</h3>
+- `inline-table`
 
-<pre class="brush: html">&lt;div class="container"&gt;
-  &lt;div&gt;Flex Item&lt;/div&gt;
-  &lt;div&gt;Flex Item&lt;/div&gt;
-&lt;/div&gt;
+  - : The `inline-table` value does not have a direct mapping in HTML. It behaves like an HTML {{HTMLElement("table")}} element, but as an inline box, rather than a block-level box. Inside the table box is a block-level context.
+
+    It is equivalent to `inline table`.
+
+- `inline-flex`
+
+  - : The element behaves like an inline element and lays out its content according to the flexbox model.
+
+    It is equivalent to `inline flex`.
+
+- `inline-grid`
+
+  - : The element behaves like an inline element and lays out its content according to the grid model.
+
+    It is equivalent to `inline grid`.
+
+## Examples
+
+In the below example, we are creating an inline flex container with the legacy keyword inline-flex.
+
+### HTML
+
+```html
+<div class="container">
+  <div>Flex Item</div>
+  <div>Flex Item</div>
+</div>
 
 Not a flex item
-</pre>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.container {
+```css
+.container {
   display: inline-flex;
 }
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Examples", 300, 150)}}</p>
+{{EmbedLiveSample("Examples", 300, 150)}}
 
-<p>In the new syntax the inline flex container would be created using two values, inline for the outer display type, and flex for the inner display type.</p>
+In the new syntax the inline flex container would be created using two values, inline for the outer display type, and flex for the inner display type.
 
-<pre class="brush: css">.container {
+```css
+.container {
   display: inline flex;
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Display', '#typedef-display-legacy', 'display-legacy')}}</td>
-   <td>{{Spec2('CSS3 Display')}}</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                    | Status                           |
+| ------------------------------------------------------------------------------------------------ | -------------------------------- |
+| {{SpecName('CSS3 Display', '#typedef-display-legacy', 'display-legacy')}} | {{Spec2('CSS3 Display')}} |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<h3 id="Support_of_inline-block">Support of inline-block</h3>
+### Support of inline-block
 
-<p>{{Compat("css.properties.display.inline-block", 10)}}</p>
+{{Compat("css.properties.display.inline-block", 10)}}
 
-<h3 id="Support_of_inline-table">Support of inline-table</h3>
+### Support of inline-table
 
-<p>{{Compat("css.properties.display.inline-table", 10)}}</p>
+{{Compat("css.properties.display.inline-table", 10)}}
 
-<h3 id="Support_of_inline-flex">Support of inline-flex</h3>
+### Support of inline-flex
 
-<p>{{Compat("css.properties.display.inline-flex", 10)}}</p>
+{{Compat("css.properties.display.inline-flex", 10)}}
 
-<h3 id="Support_of_inline-grid">Support of inline-grid</h3>
+### Support of inline-grid
 
-<p>{{Compat("css.properties.display.inline-grid", 10)}}</p>
+{{Compat("css.properties.display.inline-grid", 10)}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{CSSxRef("display")}}
-  <ul>
-   <li>{{CSSxRef("&lt;display-outside&gt;")}}</li>
-   <li>{{CSSxRef("&lt;display-inside&gt;")}}</li>
-   <li>{{CSSxRef("&lt;display-listitem&gt;")}}</li>
-   <li>{{CSSxRef("&lt;display-internal&gt;")}}</li>
-   <li>{{CSSxRef("&lt;display-box&gt;")}}</li>
-  </ul>
- </li>
-</ul>
+- {{CSSxRef("display")}}
+
+  - {{CSSxRef("&lt;display-outside&gt;")}}
+  - {{CSSxRef("&lt;display-inside&gt;")}}
+  - {{CSSxRef("&lt;display-listitem&gt;")}}
+  - {{CSSxRef("&lt;display-internal&gt;")}}
+  - {{CSSxRef("&lt;display-box&gt;")}}

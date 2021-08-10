@@ -8,24 +8,25 @@ tags:
   - Experimental
   - Reference
   - Web
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.clip-path
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <code><strong>clip-path</strong></code> <a href="/en-US/docs/Web/CSS">CSS</a> property creates a clipping region that sets what part of an element should be shown. Parts that are inside the region are shown, while those outside are hidden.</p>
+The **`clip-path`** [CSS](/en-US/docs/Web/CSS) property creates a clipping region that sets what part of an element should be shown. Parts that are inside the region are shown, while those outside are hidden.
 
-<div>{{EmbedInteractiveExample("pages/css/clip-path.html")}}</div>
+{{EmbedInteractiveExample("pages/css/clip-path.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 clip-path: none;
 
-/* <var>&lt;clip-source&gt;</var> values */
+/* <clip-source> values */
 clip-path: url(resources.svg#c1);
 
-/* <var>&lt;geometry-box&gt;</var> values */
+/* <geometry-box> values */
 clip-path: margin-box;
 clip-path: border-box;
 clip-path: padding-box;
@@ -34,7 +35,7 @@ clip-path: fill-box;
 clip-path: stroke-box;
 clip-path: view-box;
 
-/* <var>&lt;basic-shape&gt;</var> values */
+/* <basic-shape> values */
 clip-path: inset(100px 50px);
 clip-path: circle(50px at 0 100px);
 clip-path: ellipse(50px 60px at 0 10% 20%);
@@ -49,347 +50,345 @@ clip-path: inherit;
 clip-path: initial;
 clip-path: revert;
 clip-path: unset;
-</pre>
+```
 
-<p>The <code>clip-path</code> property is specified as one or a combination of the values listed below.</p>
+The `clip-path` property is specified as one or a combination of the values listed below.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code><var>&lt;clip-source&gt;</var></code></dt>
- <dd>A {{cssxref("&lt;url&gt;")}} referencing an <a href="/en-US/docs/Web/SVG">SVG</a> {{SVGElement("clipPath")}} element.</dd>
- <dt>{{cssxref("&lt;basic-shape&gt;")}}</dt>
- <dd>A shape whose size and position is defined by the <code>&lt;geometry-box&gt;</code> value. If no geometry box is specified, the <code>border-box</code> will be used as the reference box.</dd>
- <dt><code><var>&lt;geometry-box&gt;</var></code></dt>
- <dd>
-  <p>If specified in combination with a <code><var>&lt;basic-shape&gt;</var></code>, this value defines the reference box for the basic shape. If specified by itself, it causes the edges of the specified box, including any corner shaping (such as a {{cssxref("border-radius")}}), to be the clipping path. The geometry box can be one of the following values:</p>
-  <dl>
-   <dt><code>margin-box</code></dt>
-   <dd>Uses the <a href="/en-US/docs/Web/CSS/CSS_Shapes/From_box_values#margin-box">margin box</a> as the reference box.</dd>
-   <dt><code>border-box</code></dt>
-   <dd>Uses the <a href="/en-US/docs/Web/CSS/CSS_Shapes/From_box_values#border-box">border box</a> as the reference box.</dd>
-   <dt><code>padding-box</code></dt>
-   <dd>Uses the <a href="/en-US/docs/Web/CSS/CSS_Shapes/From_box_values#padding-box">padding box</a> as the reference box.</dd>
-   <dt><code>content-box</code></dt>
-   <dd>Uses the <a href="/en-US/docs/Web/CSS/CSS_Shapes/From_box_values#content-box">content box</a> as the reference box.</dd>
-   <dt><code>fill-box</code></dt>
-   <dd>Uses the object bounding box as the reference box.</dd>
-   <dt><code>stroke-box</code></dt>
-   <dd>Uses the stroke bounding box as the reference box.</dd>
-   <dt><code>view-box</code></dt>
-   <dd>Uses the nearest SVG viewport as the reference box. If a {{SVGAttr("viewBox")}} attribute is specified for the element creating the SVG viewport, the reference box is positioned at the origin of the coordinate system established by the <code>viewBox</code> attribute and the dimension of the size of the reference box is set to the width and height values of the <code>viewBox</code> attribute.</dd>
-  </dl>
- </dd>
- <dt><code>none</code></dt>
- <dd>No clipping path is created.</dd>
-</dl>
+- `<clip-source>`
+  - : A {{cssxref("&lt;url&gt;")}} referencing an [SVG](/en-US/docs/Web/SVG) {{SVGElement("clipPath")}} element.
+- {{cssxref("&lt;basic-shape&gt;")}}
+  - : A shape whose size and position is defined by the `<geometry-box>` value. If no geometry box is specified, the `border-box` will be used as the reference box.
+- `<geometry-box>`
 
-<div class="note">
-<p><strong>Note:</strong> A computed value other than <strong><code>none</code></strong> results in the creation of a new <a href="/en-US/docs/CSS/Understanding_z-index/The_stacking_context">stacking context</a> the same way that CSS {{cssxref("opacity")}} does for values other than <code>1</code>.</p>
-</div>
+  - : If specified in combination with a `<basic-shape>`, this value defines the reference box for the basic shape. If specified by itself, it causes the edges of the specified box, including any corner shaping (such as a {{cssxref("border-radius")}}), to be the clipping path. The geometry box can be one of the following values:
 
-<h2 id="Formal_definition">Formal definition</h2>
+    - `margin-box`
+      - : Uses the [margin box](/en-US/docs/Web/CSS/CSS_Shapes/From_box_values#margin-box) as the reference box.
+    - `border-box`
+      - : Uses the [border box](/en-US/docs/Web/CSS/CSS_Shapes/From_box_values#border-box) as the reference box.
+    - `padding-box`
+      - : Uses the [padding box](/en-US/docs/Web/CSS/CSS_Shapes/From_box_values#padding-box) as the reference box.
+    - `content-box`
+      - : Uses the [content box](/en-US/docs/Web/CSS/CSS_Shapes/From_box_values#content-box) as the reference box.
+    - `fill-box`
+      - : Uses the object bounding box as the reference box.
+    - `stroke-box`
+      - : Uses the stroke bounding box as the reference box.
+    - `view-box`
+      - : Uses the nearest SVG viewport as the reference box. If a {{SVGAttr("viewBox")}} attribute is specified for the element creating the SVG viewport, the reference box is positioned at the origin of the coordinate system established by the `viewBox` attribute and the dimension of the size of the reference box is set to the width and height values of the `viewBox` attribute.
 
-<p>{{cssinfo}}</p>
+- `none`
+  - : No clipping path is created.
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+> **Note:** A computed value other than **`none`** results in the creation of a new [stacking context](/en-US/docs/CSS/Understanding_z-index/The_stacking_context) the same way that CSS {{cssxref("opacity")}} does for values other than `1`.
+
+## Formal definition
+
+{{cssinfo}}
+
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Comparison_of_HTML_and_SVG">Comparison of HTML and SVG</h3>
+### Comparison of HTML and SVG
 
-<pre class="brush: html hidden">&lt;svg class="defs"&gt;
-  &lt;defs&gt;
-    &lt;clipPath id="myPath" clipPathUnits="objectBoundingBox"&gt;
-      &lt;path d="M0.5,1 C0.5,1,0,0.7,0,0.3 A0.25,0.25,1,1,1,0.5,0.3 A0.25,0.25,1,1,1,1,0.3 C1,0.7,0.5,1,0.5,1 Z" /&gt;
-    &lt;/clipPath&gt;
-  &lt;/defs&gt;
-&lt;/svg&gt;
+```html hidden
+<svg class="defs">
+  <defs>
+    <clipPath id="myPath" clipPathUnits="objectBoundingBox">
+      <path d="M0.5,1 C0.5,1,0,0.7,0,0.3 A0.25,0.25,1,1,1,0.5,0.3 A0.25,0.25,1,1,1,1,0.3 C1,0.7,0.5,1,0.5,1 Z" />
+    </clipPath>
+  </defs>
+</svg>
 
-&lt;div class="grid"&gt;
-  &lt;div class="col"&gt;
-    &lt;div class="note"&gt;clip-path: none&lt;/div&gt;
-    &lt;div class="row"&gt;
-      &lt;div class="cell"&gt; &lt;span&gt;HTML&lt;/span&gt;
-        &lt;div class="container"&gt;
-          &lt;p class="none"&gt;
-            I LOVE&lt;br&gt;&lt;em&gt;clipping&lt;/em&gt;
-          &lt;/p&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class="cell"&gt; &lt;span&gt;SVG&lt;/span&gt;
-        &lt;div class="container viewbox"&gt;
-          &lt;svg viewBox="0 0 192 192"&gt;
-            &lt;g class="none"&gt;
-              &lt;rect x="24" y="24" width="144" height="144" /&gt;
-              &lt;text x="96" y="91"&gt;I LOVE&lt;/text&gt;
-              &lt;text x="96" y="109" class="em"&gt;clipping&lt;/text&gt;
-            &lt;/g&gt;
-          &lt;/svg&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
+<div class="grid">
+  <div class="col">
+    <div class="note">clip-path: none</div>
+    <div class="row">
+      <div class="cell"> <span>HTML</span>
+        <div class="container">
+          <p class="none">
+            I LOVE<br><em>clipping</em>
+          </p>
+        </div>
+      </div>
+      <div class="cell"> <span>SVG</span>
+        <div class="container viewbox">
+          <svg viewBox="0 0 192 192">
+            <g class="none">
+              <rect x="24" y="24" width="144" height="144" />
+              <text x="96" y="91">I LOVE</text>
+              <text x="96" y="109" class="em">clipping</text>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
 
-    &lt;div class="note"&gt;clip-path: url(#myPath)&lt;br&gt;&lt;br&gt;
+    <div class="note">clip-path: url(#myPath)<br><br>
       Assuming the following clipPath definition:
-      &lt;pre&gt;
-&amp;lt;svg&amp;gt;
-  &amp;lt;clipPath id="myPath" clipPathUnits="objectBoundingBox"&amp;gt;
-    &amp;lt;path d="M0.5,1
+      <pre>
+&lt;svg&gt;
+  &lt;clipPath id="myPath" clipPathUnits="objectBoundingBox"&gt;
+    &lt;path d="M0.5,1
       C 0.5,1,0,0.7,0,0.3
       A 0.25,0.25,1,1,1,0.5,0.3
       A 0.25,0.25,1,1,1,1,0.3
-      C 1,0.7,0.5,1,0.5,1 Z" /&amp;gt;
-  &amp;lt;/clipPath&amp;gt;
-&amp;lt;/svg&amp;gt;&lt;/pre&gt;
-    &lt;/div&gt;
-    &lt;div class="row"&gt;
-      &lt;div class="cell"&gt; &lt;span&gt;HTML&lt;/span&gt;
-        &lt;div class="container"&gt;
-          &lt;p class="svg"&gt;
-            I LOVE&lt;br&gt;&lt;em&gt;clipping&lt;/em&gt;
-          &lt;/p&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class="cell"&gt; &lt;span&gt;SVG&lt;/span&gt;
-        &lt;div class="container viewbox"&gt;
-          &lt;svg viewBox="0 0 192 192"&gt;
-            &lt;g class="svg"&gt;
-              &lt;rect x="24" y="24" width="144" height="144" /&gt;
-              &lt;text x="96" y="91"&gt;I LOVE&lt;/text&gt;
-              &lt;text x="96" y="109" class="em"&gt;clipping&lt;/text&gt;
-            &lt;/g&gt;
-          &lt;/svg&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
+      C 1,0.7,0.5,1,0.5,1 Z" /&gt;
+  &lt;/clipPath&gt;
+&lt;/svg&gt;</pre>
+    </div>
+    <div class="row">
+      <div class="cell"> <span>HTML</span>
+        <div class="container">
+          <p class="svg">
+            I LOVE<br><em>clipping</em>
+          </p>
+        </div>
+      </div>
+      <div class="cell"> <span>SVG</span>
+        <div class="container viewbox">
+          <svg viewBox="0 0 192 192">
+            <g class="svg">
+              <rect x="24" y="24" width="144" height="144" />
+              <text x="96" y="91">I LOVE</text>
+              <text x="96" y="109" class="em">clipping</text>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
 
-    &lt;div class="note"&gt;clip-path: path('M15,45 A30,30,0,0,1,75,45 A30,30,0,0,1,135,45 Q135,90,75,130 Q15,90,15,45 Z')
-    &lt;/div&gt;
-    &lt;div class="row"&gt;
-      &lt;div class="cell"&gt; &lt;span&gt;HTML&lt;/span&gt;
-        &lt;div class="container"&gt;
-          &lt;p class="svg2"&gt;
-            I LOVE&lt;br&gt;&lt;em&gt;clipping&lt;/em&gt;
-          &lt;/p&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class="cell"&gt; &lt;span&gt;SVG&lt;/span&gt;
-        &lt;div class="container viewbox"&gt;
-          &lt;svg viewBox="0 0 192 192"&gt;
-            &lt;g class="svg2"&gt;
-              &lt;rect x="24" y="24" width="144" height="144" /&gt;
-              &lt;text x="96" y="91"&gt;I LOVE&lt;/text&gt;
-              &lt;text x="96" y="109" class="em"&gt;clipping&lt;/text&gt;
-            &lt;/g&gt;
-          &lt;/svg&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
+    <div class="note">clip-path: path('M15,45 A30,30,0,0,1,75,45 A30,30,0,0,1,135,45 Q135,90,75,130 Q15,90,15,45 Z')
+    </div>
+    <div class="row">
+      <div class="cell"> <span>HTML</span>
+        <div class="container">
+          <p class="svg2">
+            I LOVE<br><em>clipping</em>
+          </p>
+        </div>
+      </div>
+      <div class="cell"> <span>SVG</span>
+        <div class="container viewbox">
+          <svg viewBox="0 0 192 192">
+            <g class="svg2">
+              <rect x="24" y="24" width="144" height="144" />
+              <text x="96" y="91">I LOVE</text>
+              <text x="96" y="109" class="em">clipping</text>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
 
-    &lt;div class="note"&gt;clip-path: circle(25%)&lt;/div&gt;
-    &lt;div class="row"&gt;
-      &lt;div class="cell"&gt; &lt;span&gt;HTML&lt;/span&gt;
-        &lt;div class="container"&gt;
-          &lt;p class="shape1"&gt;
-            I LOVE&lt;br&gt;&lt;em&gt;clipping&lt;/em&gt;
-          &lt;/p&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class="cell"&gt; &lt;span&gt;SVG&lt;/span&gt;
-        &lt;div class="container viewbox"&gt;
-          &lt;svg viewBox="0 0 192 192"&gt;
-            &lt;g class="shape1"&gt;
-              &lt;rect x="24" y="24" width="144" height="144" /&gt;
-              &lt;text x="96" y="91"&gt;I LOVE&lt;/text&gt;
-              &lt;text x="96" y="109" class="em"&gt;clipping&lt;/text&gt;
-            &lt;/g&gt;
-          &lt;/svg&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
+    <div class="note">clip-path: circle(25%)</div>
+    <div class="row">
+      <div class="cell"> <span>HTML</span>
+        <div class="container">
+          <p class="shape1">
+            I LOVE<br><em>clipping</em>
+          </p>
+        </div>
+      </div>
+      <div class="cell"> <span>SVG</span>
+        <div class="container viewbox">
+          <svg viewBox="0 0 192 192">
+            <g class="shape1">
+              <rect x="24" y="24" width="144" height="144" />
+              <text x="96" y="91">I LOVE</text>
+              <text x="96" y="109" class="em">clipping</text>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
 
-    &lt;div class="note"&gt;clip-path: circle(25% at 25% 25%)&lt;/div&gt;
-    &lt;div class="row"&gt;
-      &lt;div class="cell"&gt; &lt;span&gt;HTML&lt;/span&gt;
-        &lt;div class="container"&gt;
-          &lt;p class="shape2"&gt;
-            I LOVE&lt;br&gt;&lt;em&gt;clipping&lt;/em&gt;
-          &lt;/p&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class="cell"&gt; &lt;span&gt;SVG&lt;/span&gt;
-        &lt;div class="container viewbox"&gt;
-          &lt;svg viewBox="0 0 192 192"&gt;
-            &lt;g class="shape2"&gt;
-              &lt;rect x="24" y="24" width="144" height="144" /&gt;
-              &lt;text x="96" y="91"&gt;I LOVE&lt;/text&gt;
-              &lt;text x="96" y="109" class="em"&gt;clipping&lt;/text&gt;
-            &lt;/g&gt;
-          &lt;/svg&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
+    <div class="note">clip-path: circle(25% at 25% 25%)</div>
+    <div class="row">
+      <div class="cell"> <span>HTML</span>
+        <div class="container">
+          <p class="shape2">
+            I LOVE<br><em>clipping</em>
+          </p>
+        </div>
+      </div>
+      <div class="cell"> <span>SVG</span>
+        <div class="container viewbox">
+          <svg viewBox="0 0 192 192">
+            <g class="shape2">
+              <rect x="24" y="24" width="144" height="144" />
+              <text x="96" y="91">I LOVE</text>
+              <text x="96" y="109" class="em">clipping</text>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
 
-    &lt;div class="note"&gt;clip-path: fill-box circle(25% at 25% 25%)&lt;/div&gt;
-    &lt;div class="row"&gt;
-      &lt;div class="cell"&gt; &lt;span&gt;HTML&lt;/span&gt;
-        &lt;div class="container"&gt;
-          &lt;p class="shape3"&gt;
-            I LOVE&lt;br&gt;&lt;em&gt;clipping&lt;/em&gt;
-          &lt;/p&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class="cell"&gt; &lt;span&gt;SVG&lt;/span&gt;
-        &lt;div class="container viewbox"&gt;
-          &lt;svg viewBox="0 0 192 192"&gt;
-            &lt;g class="shape3"&gt;
-              &lt;rect x="24" y="24" width="144" height="144" /&gt;
-              &lt;text x="96" y="91"&gt;I LOVE&lt;/text&gt;
-              &lt;text x="96" y="109" class="em"&gt;clipping&lt;/text&gt;
-            &lt;/g&gt;
-          &lt;/svg&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
+    <div class="note">clip-path: fill-box circle(25% at 25% 25%)</div>
+    <div class="row">
+      <div class="cell"> <span>HTML</span>
+        <div class="container">
+          <p class="shape3">
+            I LOVE<br><em>clipping</em>
+          </p>
+        </div>
+      </div>
+      <div class="cell"> <span>SVG</span>
+        <div class="container viewbox">
+          <svg viewBox="0 0 192 192">
+            <g class="shape3">
+              <rect x="24" y="24" width="144" height="144" />
+              <text x="96" y="91">I LOVE</text>
+              <text x="96" y="109" class="em">clipping</text>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
 
-    &lt;div class="note"&gt;clip-path: stroke-box circle(25% at 25% 25%)&lt;/div&gt;
-    &lt;div class="row"&gt;
-      &lt;div class="cell"&gt; &lt;span&gt;HTML&lt;/span&gt;
-        &lt;div class="container"&gt;
-          &lt;p class="shape4"&gt;
-            I LOVE&lt;br&gt;&lt;em&gt;clipping&lt;/em&gt;
-          &lt;/p&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class="cell"&gt; &lt;span&gt;SVG&lt;/span&gt;
-        &lt;div class="container viewbox"&gt;
-          &lt;svg viewBox="0 0 192 192"&gt;
-            &lt;g class="shape4"&gt;
-              &lt;rect x="24" y="24" width="144" height="144" /&gt;
-              &lt;text x="96" y="91"&gt;I LOVE&lt;/text&gt;
-              &lt;text x="96" y="109" class="em"&gt;clipping&lt;/text&gt;
-            &lt;/g&gt;
-          &lt;/svg&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
+    <div class="note">clip-path: stroke-box circle(25% at 25% 25%)</div>
+    <div class="row">
+      <div class="cell"> <span>HTML</span>
+        <div class="container">
+          <p class="shape4">
+            I LOVE<br><em>clipping</em>
+          </p>
+        </div>
+      </div>
+      <div class="cell"> <span>SVG</span>
+        <div class="container viewbox">
+          <svg viewBox="0 0 192 192">
+            <g class="shape4">
+              <rect x="24" y="24" width="144" height="144" />
+              <text x="96" y="91">I LOVE</text>
+              <text x="96" y="109" class="em">clipping</text>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
 
-    &lt;div class="note"&gt;clip-path: view-box circle(25% at 25% 25%)&lt;/div&gt;
-    &lt;div class="row"&gt;
-      &lt;div class="cell"&gt; &lt;span&gt;HTML&lt;/span&gt;
-        &lt;div class="container"&gt;
-          &lt;p class="shape5"&gt;
-            I LOVE&lt;br&gt;&lt;em&gt;clipping&lt;/em&gt;
-          &lt;/p&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class="cell"&gt; &lt;span&gt;SVG&lt;/span&gt;
-        &lt;div class="container viewbox"&gt;
-          &lt;svg viewBox="0 0 192 192"&gt;
-            &lt;g class="shape5"&gt;
-              &lt;rect x="24" y="24" width="144" height="144" /&gt;
-              &lt;text x="96" y="91"&gt;I LOVE&lt;/text&gt;
-              &lt;text x="96" y="109" class="em"&gt;clipping&lt;/text&gt;
-            &lt;/g&gt;
-          &lt;/svg&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
+    <div class="note">clip-path: view-box circle(25% at 25% 25%)</div>
+    <div class="row">
+      <div class="cell"> <span>HTML</span>
+        <div class="container">
+          <p class="shape5">
+            I LOVE<br><em>clipping</em>
+          </p>
+        </div>
+      </div>
+      <div class="cell"> <span>SVG</span>
+        <div class="container viewbox">
+          <svg viewBox="0 0 192 192">
+            <g class="shape5">
+              <rect x="24" y="24" width="144" height="144" />
+              <text x="96" y="91">I LOVE</text>
+              <text x="96" y="109" class="em">clipping</text>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
 
-    &lt;div class="note"&gt;clip-path: margin-box circle(25% at 25% 25%)&lt;/div&gt;
-    &lt;div class="row"&gt;
-      &lt;div class="cell"&gt; &lt;span&gt;HTML&lt;/span&gt;
-        &lt;div class="container"&gt;
-          &lt;p class="shape6"&gt;
-            I LOVE&lt;br&gt;&lt;em&gt;clipping&lt;/em&gt;
-          &lt;/p&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class="cell"&gt; &lt;span&gt;SVG&lt;/span&gt;
-        &lt;div class="container viewbox"&gt;
-          &lt;svg viewBox="0 0 192 192"&gt;
-            &lt;g class="shape6"&gt;
-              &lt;rect x="24" y="24" width="144" height="144" /&gt;
-              &lt;text x="96" y="91"&gt;I LOVE&lt;/text&gt;
-              &lt;text x="96" y="109" class="em"&gt;clipping&lt;/text&gt;
-            &lt;/g&gt;
-          &lt;/svg&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
+    <div class="note">clip-path: margin-box circle(25% at 25% 25%)</div>
+    <div class="row">
+      <div class="cell"> <span>HTML</span>
+        <div class="container">
+          <p class="shape6">
+            I LOVE<br><em>clipping</em>
+          </p>
+        </div>
+      </div>
+      <div class="cell"> <span>SVG</span>
+        <div class="container viewbox">
+          <svg viewBox="0 0 192 192">
+            <g class="shape6">
+              <rect x="24" y="24" width="144" height="144" />
+              <text x="96" y="91">I LOVE</text>
+              <text x="96" y="109" class="em">clipping</text>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
 
-    &lt;div class="note"&gt;clip-path: border-box circle(25% at 25% 25%)&lt;/div&gt;
-    &lt;div class="row"&gt;
-      &lt;div class="cell"&gt; &lt;span&gt;HTML&lt;/span&gt;
-        &lt;div class="container"&gt;
-          &lt;p class="shape7"&gt;
-            I LOVE&lt;br&gt;&lt;em&gt;clipping&lt;/em&gt;
-          &lt;/p&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class="cell"&gt; &lt;span&gt;SVG&lt;/span&gt;
-        &lt;div class="container viewbox"&gt;
-          &lt;svg viewBox="0 0 192 192"&gt;
-            &lt;g class="shape7"&gt;
-              &lt;rect x="24" y="24" width="144" height="144" /&gt;
-              &lt;text x="96" y="91"&gt;I LOVE&lt;/text&gt;
-              &lt;text x="96" y="109" class="em"&gt;clipping&lt;/text&gt;
-            &lt;/g&gt;
-          &lt;/svg&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
+    <div class="note">clip-path: border-box circle(25% at 25% 25%)</div>
+    <div class="row">
+      <div class="cell"> <span>HTML</span>
+        <div class="container">
+          <p class="shape7">
+            I LOVE<br><em>clipping</em>
+          </p>
+        </div>
+      </div>
+      <div class="cell"> <span>SVG</span>
+        <div class="container viewbox">
+          <svg viewBox="0 0 192 192">
+            <g class="shape7">
+              <rect x="24" y="24" width="144" height="144" />
+              <text x="96" y="91">I LOVE</text>
+              <text x="96" y="109" class="em">clipping</text>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
 
-    &lt;div class="note"&gt;clip-path: padding-box circle(25% at 25% 25%)&lt;/div&gt;
-    &lt;div class="row"&gt;
-      &lt;div class="cell"&gt; &lt;span&gt;HTML&lt;/span&gt;
-        &lt;div class="container"&gt;
-          &lt;p class="shape8"&gt;
-            I LOVE&lt;br&gt;&lt;em&gt;clipping&lt;/em&gt;
-          &lt;/p&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class="cell"&gt; &lt;span&gt;SVG&lt;/span&gt;
-        &lt;div class="container viewbox"&gt;
-          &lt;svg viewBox="0 0 192 192"&gt;
-            &lt;g class="shape8"&gt;
-              &lt;rect x="24" y="24" width="144" height="144" /&gt;
-              &lt;text x="96" y="91"&gt;I LOVE&lt;/text&gt;
-              &lt;text x="96" y="109" class="em"&gt;clipping&lt;/text&gt;
-            &lt;/g&gt;
-          &lt;/svg&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
+    <div class="note">clip-path: padding-box circle(25% at 25% 25%)</div>
+    <div class="row">
+      <div class="cell"> <span>HTML</span>
+        <div class="container">
+          <p class="shape8">
+            I LOVE<br><em>clipping</em>
+          </p>
+        </div>
+      </div>
+      <div class="cell"> <span>SVG</span>
+        <div class="container viewbox">
+          <svg viewBox="0 0 192 192">
+            <g class="shape8">
+              <rect x="24" y="24" width="144" height="144" />
+              <text x="96" y="91">I LOVE</text>
+              <text x="96" y="109" class="em">clipping</text>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
 
-    &lt;div class="note"&gt;clip-path: content-box circle(25% at 25% 25%)&lt;/div&gt;
-    &lt;div class="row"&gt;
-      &lt;div class="cell"&gt; &lt;span&gt;HTML&lt;/span&gt;
-        &lt;div class="container"&gt;
-          &lt;p class="shape9"&gt;
-            I LOVE&lt;br&gt;&lt;em&gt;clipping&lt;/em&gt;
-          &lt;/p&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class="cell"&gt; &lt;span&gt;SVG&lt;/span&gt;
-        &lt;div class="container viewbox"&gt;
-          &lt;svg viewBox="0 0 192 192"&gt;
-            &lt;g class="shape9"&gt;
-              &lt;rect x="24" y="24" width="144" height="144" /&gt;
-              &lt;text x="96" y="91"&gt;I LOVE&lt;/text&gt;
-              &lt;text x="96" y="109" class="em"&gt;clipping&lt;/text&gt;
-            &lt;/g&gt;
-          &lt;/svg&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
+    <div class="note">clip-path: content-box circle(25% at 25% 25%)</div>
+    <div class="row">
+      <div class="cell"> <span>HTML</span>
+        <div class="container">
+          <p class="shape9">
+            I LOVE<br><em>clipping</em>
+          </p>
+        </div>
+      </div>
+      <div class="cell"> <span>SVG</span>
+        <div class="container viewbox">
+          <svg viewBox="0 0 192 192">
+            <g class="shape9">
+              <rect x="24" y="24" width="144" height="144" />
+              <text x="96" y="91">I LOVE</text>
+              <text x="96" y="109" class="em">clipping</text>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+```
 
-<pre class="brush: css">html,body {
+```css
+html,body {
   height: 100%;
   box-sizing: border-box;
   background: #EEE;
@@ -516,72 +515,72 @@ svg text {
 
 svg text.em {
   font-style: italic;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Comparison_of_HTML_and_SVG", "100%", 800, "", "", "example-outcome-frame")}}</p>
+{{EmbedLiveSample("Comparison_of_HTML_and_SVG", "100%", 800, "", "", "example-outcome-frame")}}
 
-<h3 id="Complete_example">Complete example</h3>
+### Complete example
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;img id="clipped" src="mdn.svg"
-    alt="MDN logo"&gt;
-&lt;svg height="0" width="0"&gt;
-  &lt;defs&gt;
-    &lt;clipPath id="cross"&gt;
-      &lt;rect y="110" x="137" width="90" height="90"/&gt;
-      &lt;rect x="0" y="110" width="90" height="90"/&gt;
-      &lt;rect x="137" y="0" width="90" height="90"/&gt;
-      &lt;rect x="0" y="0" width="90" height="90"/&gt;
-    &lt;/clipPath&gt;
-  &lt;/defs&gt;
-&lt;/svg&gt;
+```html
+<img id="clipped" src="mdn.svg"
+    alt="MDN logo">
+<svg height="0" width="0">
+  <defs>
+    <clipPath id="cross">
+      <rect y="110" x="137" width="90" height="90"/>
+      <rect x="0" y="110" width="90" height="90"/>
+      <rect x="137" y="0" width="90" height="90"/>
+      <rect x="0" y="0" width="90" height="90"/>
+    </clipPath>
+  </defs>
+</svg>
 
-&lt;select id="clipPath"&gt;
-  &lt;option value="none"&gt;none&lt;/option&gt;
-  &lt;option value="circle(100px at 110px 100px)"&gt;circle&lt;/option&gt;
-  &lt;option value="url(#cross)" selected&gt;cross&lt;/option&gt;
-  &lt;option value="inset(20px round 20px)"&gt;inset&lt;/option&gt;
-  &lt;option value="path('M 0 200 L 0,110 A 110,90 0,0,1 240,100 L 200 340 z')"&gt;path&lt;/option&gt;
-&lt;/select&gt;
-</pre>
+<select id="clipPath">
+  <option value="none">none</option>
+  <option value="circle(100px at 110px 100px)">circle</option>
+  <option value="url(#cross)" selected>cross</option>
+  <option value="inset(20px round 20px)">inset</option>
+  <option value="path('M 0 200 L 0,110 A 110,90 0,0,1 240,100 L 200 340 z')">path</option>
+</select>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">#clipped {
+```css
+#clipped {
   margin-bottom: 20px;
   clip-path: url(#cross);
 }
-</pre>
+```
 
-<pre class="brush: js hidden">const clipPathSelect = document.getElementById("clipPath");
+```js hidden
+const clipPathSelect = document.getElementById("clipPath");
 clipPathSelect.addEventListener("change", function (evt) {
   document.getElementById("clipped").style.clipPath = evt.target.value;
 });
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Complete_example", 230, 250)}}</p>
+{{EmbedLiveSample("Complete_example", 230, 250)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://hacks.mozilla.org/2017/06/css-shapes-clipping-and-masking/">Shapes in clipping and masking – and how to use them</a></li>
- <li>CSS properties: {{cssxref("mask")}}, {{cssxref("filter")}}</li>
- <li><a href="/en-US/docs/Applying_SVG_effects_to_HTML_content">Applying SVG effects to HTML content</a></li>
- <li>SVG attributes:
-  <ul>
-   <li>{{SVGAttr("clip-path")}}</li>
-   <li>{{SVGAttr("clip-rule")}}</li>
-  </ul>
- </li>
-</ul>
+- [Shapes in clipping and masking – and how to use them](https://hacks.mozilla.org/2017/06/css-shapes-clipping-and-masking/)
+- CSS properties: {{cssxref("mask")}}, {{cssxref("filter")}}
+- [Applying SVG effects to HTML content](/en-US/docs/Applying_SVG_effects_to_HTML_content)
+- SVG attributes:
+
+  - {{SVGAttr("clip-path")}}
+  - {{SVGAttr("clip-rule")}}

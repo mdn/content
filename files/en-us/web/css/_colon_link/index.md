@@ -1,6 +1,6 @@
 ---
 title: ':link'
-slug: 'Web/CSS/:link'
+slug: Web/CSS/:link
 tags:
   - CSS
   - Layout
@@ -10,58 +10,58 @@ tags:
   - Web
 browser-compat: css.selectors.link
 ---
-<div>{{ CSSRef }}</div>
+{{ CSSRef }}
 
-<p>The <strong><code>:link</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> represents an element that has not yet been visited. It matches every unvisited {{HTMLElement("a")}} or {{HTMLElement("area")}} element that has an <code>href</code> attribute.</p>
+The **`:link`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents an element that has not yet been visited. It matches every unvisited {{HTMLElement("a")}} or {{HTMLElement("area")}} element that has an `href` attribute.
 
-<pre class="brush: css no-line-numbers">/* Selects any &lt;a&gt; that has not been visited yet */
+```css
+/* Selects any <a> that has not been visited yet */
 a:link {
   color: red;
-}</pre>
+}
+```
 
-<p>Styles defined by the <code>:link</code> pseudo-class will be overridden by any subsequent link-related pseudo-class ({{cssxref(":active")}}, {{cssxref(":hover")}}, or {{cssxref(":visited")}}) that has at least equal specificity. To style links appropriately, put the <code>:link</code> rule before all other link-related rules, as defined by the <em>LVHA-order</em>: <code>:link</code> — <code>:visited</code> — <code>:hover</code> — <code>:active</code>.</p>
+Styles defined by the `:link` pseudo-class will be overridden by any subsequent link-related pseudo-class ({{cssxref(":active")}}, {{cssxref(":hover")}}, or {{cssxref(":visited")}}) that has at least equal specificity. To style links appropriately, put the `:link` rule before all other link-related rules, as defined by the _LVHA-order_: `:link` — `:visited` — `:hover` — `:active`.
 
-<div class="note">
-<p><strong>Note:</strong> Use {{cssxref(":any-link")}} to select an element independent of whether it has been visited or not.</p>
-</div>
+> **Note:** Use {{cssxref(":any-link")}} to select an element independent of whether it has been visited or not.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>By default, most browsers apply a special {{cssxref("color")}} value to visited links. Thus, the links in this example will probably have special font colors only before you visit them. (After that, you'll need to clear your browser history to see them again.) However, the {{cssxref("background-color")}} values are likely to remain, as most browsers do not set that property on visited links by default.</p>
+By default, most browsers apply a special {{cssxref("color")}} value to visited links. Thus, the links in this example will probably have special font colors only before you visit them. (After that, you'll need to clear your browser history to see them again.) However, the {{cssxref("background-color")}} values are likely to remain, as most browsers do not set that property on visited links by default.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;a href="#ordinary-target"&gt;This is an ordinary link.&lt;/a&gt;&lt;br&gt;
-&lt;a href=""&gt;You've already visited this link.&lt;/a&gt;&lt;br&gt;
-&lt;a&gt;Placeholder link (won't get styled)&lt;/a&gt;
-</pre>
+```html
+<a href="#ordinary-target">This is an ordinary link.</a><br>
+<a href="">You've already visited this link.</a><br>
+<a>Placeholder link (won't get styled)</a>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">a:link {
+```css
+a:link {
   background-color: gold;
   color: green;
 }
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Examples")}}</p>
+{{EmbedLiveSample("Examples")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Link-related pseudo-classes: {{ cssxref(":visited") }}, {{ cssxref(":hover") }}, {{ cssxref(":active") }}</li>
-</ul>
+- Link-related pseudo-classes: {{ cssxref(":visited") }}, {{ cssxref(":hover") }}, {{ cssxref(":active") }}

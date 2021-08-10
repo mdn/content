@@ -1,6 +1,6 @@
 ---
 title: ':read-write'
-slug: 'Web/CSS/:read-write'
+slug: Web/CSS/:read-write
 tags:
   - CSS
   - Layout
@@ -11,32 +11,34 @@ tags:
   - read-write
 browser-compat: css.selectors.read-write
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>:read-write</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> represents an element (such as <code>input</code> or <code>textarea</code>) that is editable by the user.</p>
+The **`:read-write`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents an element (such as `input` or `textarea`) that is editable by the user.
 
-<pre class="brush: css no-line-numbers">input:read-write, textarea:read-write {
+```css
+input:read-write, textarea:read-write {
   background-color: #bbf;
 }
 
 p:read-write {
   background-color: #bbf;
 }
-</pre>
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Confirming_form_information_in_read-onlyread-write_controls">Confirming form information in read-only/read-write controls</h3>
+### Confirming form information in read-only/read-write controls
 
-<p>One use of <code>readonly</code> form controls is to allow the user to check and verify information that they may have entered in an earlier form (for example, shipping details), while still being able to submit the information along with the rest of the form. We do just this in the example below.</p>
+One use of `readonly` form controls is to allow the user to check and verify information that they may have entered in an earlier form (for example, shipping details), while still being able to submit the information along with the rest of the form. We do just this in the example below.
 
-<p>The <code>:read-only</code> pseudo-class is used to remove all the styling that makes the inputs look like clickable fields, making them look more like read-only paragraphs.The <code>:read-write</code> pseudo-class on the other hand is used to provide some nicer styling to the editable <code>&lt;textarea&gt;</code>.</p>
+The `:read-only` pseudo-class is used to remove all the styling that makes the inputs look like clickable fields, making them look more like read-only paragraphs.The `:read-write` pseudo-class on the other hand is used to provide some nicer styling to the editable `<textarea>`.
 
-<pre class="brush: css">input:-moz-read-only, textarea:-moz-read-only,
+```css
+input:-moz-read-only, textarea:-moz-read-only,
 input:read-only, textarea:read-only {
   border: 0;
   box-shadow: none;
@@ -47,21 +49,25 @@ textarea:-moz-read-write,
 textarea:read-write {
   box-shadow: inset 1px 1px 3px #ccc;
   border-radius: 5px;
-}</pre>
+}
+```
 
-<p>You can find the full source code at <a class="external external-icon" href="https://github.com/mdn/learning-area/blob/master/html/forms/pseudo-classes/readonly-confirmation.html" rel="noopener">readonly-confirmation.html</a>; this renders like so:</p>
+You can find the full source code at [readonly-confirmation.html](https://github.com/mdn/learning-area/blob/master/html/forms/pseudo-classes/readonly-confirmation.html); this renders like so:
 
-<p>{{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/readonly-confirmation.html", '100%', 660)}}</p>
+{{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/readonly-confirmation.html", '100%', 660)}}
 
-<h3 id="Styling_read-write_non-form_controls">Styling read-write non-form controls</h3>
+### Styling read-write non-form controls
 
-<p>This selector doesn't just select {{htmlElement("input")}}/{{htmlElement("textarea")}} elements — it will select <em>any</em> element that can be edited by the user, such as a {{htmlelement("p")}} element with {{htmlattrxref("contenteditable")}} set on it.</p>
+This selector doesn't just select {{htmlElement("input")}}/{{htmlElement("textarea")}} elements — it will select _any_ element that can be edited by the user, such as a {{htmlelement("p")}} element with {{htmlattrxref("contenteditable")}} set on it.
 
-<pre class="brush: html">&lt;p contenteditable&gt;This paragraph is editable; it is read-write.&lt;/p&gt;
+```html
+<p contenteditable>This paragraph is editable; it is read-write.</p>
 
-&lt;p&gt;This paragraph is not editable; it is read-only.&lt;/p&gt;</pre>
+<p>This paragraph is not editable; it is read-only.</p>
+```
 
-<pre class="brush: css">p {
+```css
+p {
   font-size: 150%;
   padding: 5px;
   border-radius: 5px;
@@ -74,21 +80,20 @@ p:read-only {
 
 p:read-write {
   background-color: lime;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample('Styling_read-write_non-form_controls', '100%', 400)}}</p>
+{{EmbedLiveSample('Styling_read-write_non-form_controls', '100%', 400)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref(":read-only")}}</li>
- <li>HTML {{htmlattrxref("contenteditable")}} attribute</li>
-</ul>
+- {{cssxref(":read-only")}}
+- HTML {{htmlattrxref("contenteditable")}} attribute

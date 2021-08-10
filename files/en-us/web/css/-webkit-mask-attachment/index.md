@@ -8,14 +8,15 @@ tags:
   - Non-standard
   - Reference
   - Web
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.-webkit-mask-attachment
 ---
-<div>{{CSSRef}}{{Non-standard_Header}}</div>
+{{CSSRef}}{{Non-standard_Header}}
 
-<p>If a {{CSSxRef("-webkit-mask-image")}} is specified, <code>-webkit-mask-attachment</code> determines whether the mask image's position is fixed within the viewport, or scrolls along with its containing block.</p>
+If a {{CSSxRef("-webkit-mask-image")}} is specified, `-webkit-mask-attachment` determines whether the mask image's position is fixed within the viewport, or scrolls along with its containing block.
 
-<pre class="brush: css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 -webkit-mask-attachment: scroll;
 -webkit-mask-attachment: fixed;
 -webkit-mask-attachment: local;
@@ -28,53 +29,50 @@ browser-compat: css.properties.-webkit-mask-attachment
 -webkit-mask-attachment: inherit;
 -webkit-mask-attachment: initial;
 -webkit-mask-attachment: unset;
-</pre>
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt>scroll</dt>
- <dd>If <code>scroll</code> is specified, the mask image scrolls within the viewport along with the block that contains the mask image.</dd>
- <dt>fixed</dt>
- <dd>If <code>fixed</code> is specified, the mask image does not scroll with its containing element, instead remaining stationary within the viewport.</dd>
-</dl>
+- scroll
+  - : If `scroll` is specified, the mask image scrolls within the viewport along with the block that contains the mask image.
+- fixed
+  - : If `fixed` is specified, the mask image does not scroll with its containing element, instead remaining stationary within the viewport.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{CSSSyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Fixing_a_mask_image_to_the_viewport">Fixing a mask image to the viewport</h3>
+### Fixing a mask image to the viewport
 
-<pre class="brush: css">body {
+```css
+body {
   -webkit-mask-image: url('images/mask.png');
   -webkit-mask-attachment: fixed;
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any standard.</p>
+Not part of any standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{CSSxRef("-webkit-mask")}}</li>
- <li>{{CSSxRef("-webkit-mask-clip")}}</li>
- <li>{{CSSxRef("-webkit-mask-box-image")}}</li>
- <li>{{CSSxRef("-webkit-mask-origin")}}</li>
- <li>{{CSSxRef("-webkit-mask-image")}}</li>
- <li>{{CSSxRef("-webkit-mask-composite")}}</li>
- <li>{{CSSxRef("-webkit-mask-repeat")}}</li>
-</ul>
+- {{CSSxRef("-webkit-mask")}}
+- {{CSSxRef("-webkit-mask-clip")}}
+- {{CSSxRef("-webkit-mask-box-image")}}
+- {{CSSxRef("-webkit-mask-origin")}}
+- {{CSSxRef("-webkit-mask-image")}}
+- {{CSSxRef("-webkit-mask-composite")}}
+- {{CSSxRef("-webkit-mask-repeat")}}

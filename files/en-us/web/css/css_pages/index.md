@@ -8,60 +8,33 @@ tags:
   - Overview
   - Reference
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong>CSS Paged Media</strong> is a module of CSS that defines how page switches are handled.</p>
+**CSS Paged Media** is a module of CSS that defines how page switches are handled.
 
-<h2 id="Reference">Reference</h2>
+## Reference
 
-<h3 id="CSS_properties">CSS properties</h3>
+### CSS properties
 
-<ul>
- <li>{{cssxref("page-break-after")}}</li>
- <li>{{cssxref("page-break-before")}}</li>
- <li>{{cssxref("page-break-inside")}}</li>
-</ul>
+- {{cssxref("page-break-after")}}
+- {{cssxref("page-break-before")}}
+- {{cssxref("page-break-inside")}}
 
-<h3 id="At-rules">At-rules</h3>
+### At-rules
 
-<ul>
- <li>{{cssxref('@page')}}</li>
-</ul>
+- {{cssxref('@page')}}
 
-<h3 id="Pseudo-classes">Pseudo-classes</h3>
+### Pseudo-classes
 
-<ul>
- <li>{{cssxref(':blank')}}</li>
- <li>{{cssxref(':first')}}</li>
- <li>{{cssxref(':left')}}</li>
- <li>{{cssxref(':right')}}</li>
-</ul>
+- {{cssxref(':blank')}}
+- {{cssxref(':first')}}
+- {{cssxref(':left')}}
+- {{cssxref(':right')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Paged Media')}}</td>
-   <td>{{Spec2('CSS3 Paged Media')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Fragmentation')}}</td>
-   <td>{{Spec2('CSS3 Fragmentation')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Specification                                | Status                                   | Comment |
+| -------------------------------------------- | ---------------------------------------- | ------- |
+| {{SpecName('CSS3 Paged Media')}} | {{Spec2('CSS3 Paged Media')}} |         |
+| {{SpecName('CSS3 Fragmentation')}} | {{Spec2('CSS3 Fragmentation')}} |         |
+| {{SpecName('CSS2.1')}}                 | {{Spec2('CSS2.1')}}                 |         |

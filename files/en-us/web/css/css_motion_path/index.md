@@ -10,18 +10,20 @@ tags:
   - Overview
   - Reference
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p><strong>Motion Path</strong> is a CSS module that allows authors to animate any graphical object along a custom path.</p>
+**Motion Path** is a CSS module that allows authors to animate any graphical object along a custom path.
 
-<p>The idea is that when you want to animate an element moving along a path, you previously only had animating translation, position, etc. at your disposal, which wasn't ideal and only allowed for simple movements. With {{cssxref("offset-path")}} you can define a specific path of any shape you want. You then animate it along that path by animating {{cssxref("offset-distance")}}, and can choose to rotate it at any point using {{cssxref("offset-rotate")}}.</p>
+The idea is that when you want to animate an element moving along a path, you previously only had animating translation, position, etc. at your disposal, which wasn't ideal and only allowed for simple movements. With {{cssxref("offset-path")}} you can define a specific path of any shape you want. You then animate it along that path by animating {{cssxref("offset-distance")}}, and can choose to rotate it at any point using {{cssxref("offset-rotate")}}.
 
-<h2 id="Basic_example">Basic example</h2>
+## Basic example
 
-<pre class="brush: html">&lt;div id="motion-demo"&gt;&lt;/div&gt;
-</pre>
+```html
+<div id="motion-demo"></div>
+```
 
-<pre class="brush: css">#motion-demo {
+```css
+#motion-demo {
   offset-path: path('M20,20 C20,100 200,0 200,100');
   animation: move 3000ms infinite alternate ease-in-out;
   width: 40px;
@@ -36,47 +38,30 @@ tags:
   100% {
     offset-distance: 100%;
   }
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample('Basic_example', '100%', 150)}}</p>
+{{EmbedLiveSample('Basic_example', '100%', 150)}}
 
-<h2 id="Reference">Reference</h2>
+## Reference
 
-<h3 id="Properties">Properties</h3>
+### Properties
 
-<ul>
- <li>{{cssxref("offset")}}</li>
- <li>{{cssxref("offset-anchor")}}</li>
- <li>{{cssxref("offset-distance")}}</li>
- <li>{{cssxref("offset-path")}}</li>
- <li>{{cssxref("offset-position")}}</li>
- <li>{{cssxref("offset-rotate")}}</li>
-</ul>
+- {{cssxref("offset")}}
+- {{cssxref("offset-anchor")}}
+- {{cssxref("offset-distance")}}
+- {{cssxref("offset-path")}}
+- {{cssxref("offset-position")}}
+- {{cssxref("offset-rotate")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th>Specification</th>
-   <th>Status</th>
-   <th>Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Motion Path Level 1')}}</td>
-   <td>{{Spec2('Motion Path Level 1')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                    | Status                                       | Comment             |
+| ------------------------------------------------ | -------------------------------------------- | ------------------- |
+| {{SpecName('Motion Path Level 1')}} | {{Spec2('Motion Path Level 1')}} | Initial definition. |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<h3 id="offset_property">offset property</h3>
+### offset property
 
-<div>
-
-<p>{{Compat("css.properties.offset-path")}}</p>
-</div>
+{{Compat("css.properties.offset-path")}}

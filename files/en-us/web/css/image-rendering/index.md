@@ -7,20 +7,21 @@ tags:
   - CSS Property
   - Reference
   - image-rendering
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.image-rendering
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>image-rendering</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets an image scaling algorithm. The property applies to an element itself, to any images set in its other properties, and to its descendants.</p>
+The **`image-rendering`** [CSS](/en-US/docs/Web/CSS) property sets an image scaling algorithm. The property applies to an element itself, to any images set in its other properties, and to its descendants.
 
-<div>{{EmbedInteractiveExample("pages/css/image-rendering.html")}}</div>
+{{EmbedInteractiveExample("pages/css/image-rendering.html")}}
 
-<p>The {{Glossary("user agent")}} will scale an image when the page author specifies dimensions other than its natural size. Scaling may also occur due to user interaction (zooming). For example, if the natural size of an image is <code>100×100px</code><em>,</em> but its actual dimensions are <code>200×200px</code> (or <code>50×50px</code>), then the image will be upscaled (or downscaled) using the algorithm specified by <code>image-rendering</code>. This property has no effect on non-scaled images.</p>
+The {{Glossary("user agent")}} will scale an image when the page author specifies dimensions other than its natural size. Scaling may also occur due to user interaction (zooming). For example, if the natural size of an image is `100×100px`_,_ but its actual dimensions are `200×200px` (or `50×50px`), then the image will be upscaled (or downscaled) using the algorithm specified by `image-rendering`. This property has no effect on non-scaled images.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 image-rendering: auto;
 image-rendering: crisp-edges;
 image-rendering: pixelated;
@@ -29,56 +30,56 @@ image-rendering: pixelated;
 image-rendering: inherit;
 image-rendering: initial;
 image-rendering: revert;
-image-rendering: unset;</pre>
+image-rendering: unset;
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>The scaling algorithm is UA dependent. Since version 1.9 (Firefox 3.0), Gecko uses <em>bilinear</em> resampling (high quality).</dd>
- <dt><code>smooth</code> {{Experimental_Inline}}</dt>
- <dd>The image should be scaled with an algorithm that maximizes the appearance of the image. In particular, scaling algorithms that "smooth" colors are acceptable, such as bilinear interpolation. This is intended for images such as photos.</dd>
- <dt><code>high-quality</code> {{Experimental_Inline}}</dt>
- <dd>Identical to <code>smooth</code>, but with a preference for higher-quality scaling. If system resources are constrained, images with <code>high-quality</code> should be prioritized over those with any other value, when considering which images to degrade the quality of and to what degree.</dd>
- <dt><code>crisp-edges</code></dt>
- <dd>The image must be scaled with an algorithm that preserves contrast and edges in the image, and which does not smooth colors or introduce blur to the image in the process. Suitable algorithms include nearest-neighbor and <a href="https://en.wikipedia.org/wiki/Pixel-art_scaling_algorithms">other non-smoothing scaling algorithms</a> such as 2×SaI and <a href="https://en.wikipedia.org/wiki/Hqx">hqx-family</a> algorithms. This value is intended for pixel-art images, such as in browser games.</dd>
- <dt><code>pixelated</code></dt>
- <dd>When scaling the image up, the nearest-neighbor algorithm must be used, so that the image appears to be composed of large pixels. When scaling down, this is the same as <code>auto</code>.</dd>
-</dl>
+- `auto`
+  - : The scaling algorithm is UA dependent. Since version 1.9 (Firefox 3.0), Gecko uses _bilinear_ resampling (high quality).
+- `smooth` {{Experimental_Inline}}
+  - : The image should be scaled with an algorithm that maximizes the appearance of the image. In particular, scaling algorithms that "smooth" colors are acceptable, such as bilinear interpolation. This is intended for images such as photos.
+- `high-quality` {{Experimental_Inline}}
+  - : Identical to `smooth`, but with a preference for higher-quality scaling. If system resources are constrained, images with `high-quality` should be prioritized over those with any other value, when considering which images to degrade the quality of and to what degree.
+- `crisp-edges`
+  - : The image must be scaled with an algorithm that preserves contrast and edges in the image, and which does not smooth colors or introduce blur to the image in the process. Suitable algorithms include nearest-neighbor and [other non-smoothing scaling algorithms](https://en.wikipedia.org/wiki/Pixel-art_scaling_algorithms) such as 2×SaI and [hqx-family](https://en.wikipedia.org/wiki/Hqx) algorithms. This value is intended for pixel-art images, such as in browser games.
+- `pixelated`
+  - : When scaling the image up, the nearest-neighbor algorithm must be used, so that the image appears to be composed of large pixels. When scaling down, this is the same as `auto`.
 
-<div class="notecard note">
-<p><strong>Note:</strong> The values <code>optimizeQuality</code> and <code>optimizeSpeed</code> present in an early draft (and coming from its SVG counterpart {{SVGAttr("image-rendering")}}) are defined as synonyms for the <code>smooth</code> and <code>pixelated</code> values respectively.</p>
-</div>
+> **Note:** The values `optimizeQuality` and `optimizeSpeed` present in an early draft (and coming from its SVG counterpart {{SVGAttr("image-rendering")}}) are defined as synonyms for the `smooth` and `pixelated` values respectively.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_image_scaling_algorithms">Setting image scaling algorithms</h3>
+### Setting image scaling algorithms
 
-<p>In practical use, the <code>pixelated</code> and <code>crisp-edges</code> rules can be combined to provide some fallback for each other. (Just prepend the actual rules with the fallback.) The <a href="/en-US/docs/Web/API/Canvas_API">Canvas API</a> can provide a <a href="http://phrogz.net/tmp/canvas_image_zoom.html">fallback solution for <code>pixelated</code></a> through manual image data manipulation or with <code><a href="/en-US/docs/Web/API/CanvasRenderingContext2D/imageSmoothingEnabled">imageSmoothingEnabled</a></code>.</p>
+In practical use, the `pixelated` and `crisp-edges` rules can be combined to provide some fallback for each other. (Just prepend the actual rules with the fallback.) The [Canvas API](/en-US/docs/Web/API/Canvas_API) can provide a [fallback solution for `pixelated`](http://phrogz.net/tmp/canvas_image_zoom.html) through manual image data manipulation or with [`imageSmoothingEnabled`](/en-US/docs/Web/API/CanvasRenderingContext2D/imageSmoothingEnabled).
 
-<pre class="brush: html hidden">&lt;div&gt;
-  &lt;img class="auto" alt="auto" src="blumen.jpg" /&gt;
-  &lt;img class="pixelated" alt="pixelated" src="blumen.jpg" /&gt;
-  &lt;img class="crisp-edges" alt="crisp-edges" src="blumen.jpg" /&gt;
-&lt;/div&gt;
-</pre>
+```html hidden
+<div>
+  <img class="auto" alt="auto" src="blumen.jpg" />
+  <img class="pixelated" alt="pixelated" src="blumen.jpg" />
+  <img class="crisp-edges" alt="crisp-edges" src="blumen.jpg" />
+</div>
+```
 
-<pre class="brush: css hidden">img {
+```css hidden
+img {
   height: 200px;
 }
-</pre>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.auto {
+```css
+.auto {
   image-rendering: auto;
 }
 
@@ -91,28 +92,24 @@ image-rendering: unset;</pre>
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Setting_image_scaling_algorithms')}}</p>
+{{EmbedLiveSample('Setting_image_scaling_algorithms')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<div class="notecard note">
-<p><strong>Note:</strong> Although <code>crisp-edges</code> is supposed to use a pixel-art scaler like in the specification example, in practice no browsers (as of January 2020) does so. <a href="https://dxr.mozilla.org/mozilla-central/rev/5fd4cfacc90ddd975c82ba27fdc56f4187b3f180/gfx/wr/webrender/src/resource_cache.rs#1727">In Firefox</a>, <code>crisp-edges</code> is interpreted as nearest-neighbor, <code>pixelated</code> is not supported, and <code>auto</code> is interpolated as trilinear or linear.</p>
+> **Note:** Although `crisp-edges` is supposed to use a pixel-art scaler like in the specification example, in practice no browsers (as of January 2020) does so. [In Firefox](https://dxr.mozilla.org/mozilla-central/rev/5fd4cfacc90ddd975c82ba27fdc56f4187b3f180/gfx/wr/webrender/src/resource_cache.rs#1727), `crisp-edges` is interpreted as nearest-neighbor, `pixelated` is not supported, and `auto` is interpolated as trilinear or linear.
+>
+> For behavior on Chromium and Safari (WebKit), see the [`GetInterpolationQuality`](https://cs.chromium.org/chromium/src/third_party/blink/renderer/core/style/computed_style.cc?type=cs&q=GetInterpolationQuality&g=0&l=1160) function and [`CSSPrimitiveValue::operator ImageRendering()`](https://github.com/WebKit/webkit/blob/9b169b6c85394d94f172e5d75ca2f6c74830e99c/Source/WebCore/css/CSSPrimitiveValueMappings.h#L4324) respectively.
 
-<p>For behavior on Chromium and Safari (WebKit), see the <code><a href="https://cs.chromium.org/chromium/src/third_party/blink/renderer/core/style/computed_style.cc?type=cs&amp;q=GetInterpolationQuality&amp;g=0&amp;l=1160">GetInterpolationQuality</a></code> function and <code><a href="https://github.com/WebKit/webkit/blob/9b169b6c85394d94f172e5d75ca2f6c74830e99c/Source/WebCore/css/CSSPrimitiveValueMappings.h#L4324">CSSPrimitiveValue::operator ImageRendering()</a></code> respectively.</p>
-</div>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>Other image-related CSS properties: {{cssxref("object-fit")}}, {{cssxref("object-position")}}, {{cssxref("image-orientation")}}, {{cssxref("image-rendering")}}, {{cssxref("image-resolution")}}.</li>
-</ul>
+- Other image-related CSS properties: {{cssxref("object-fit")}}, {{cssxref("object-position")}}, {{cssxref("image-orientation")}}, {{cssxref("image-rendering")}}, {{cssxref("image-resolution")}}.

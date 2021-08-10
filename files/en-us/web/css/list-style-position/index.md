@@ -6,26 +6,25 @@ tags:
   - CSS Lists
   - CSS Property
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.list-style-position
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>list-style-position</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets the position of the {{cssxref("::marker")}} relative to a list item.</p>
+The **`list-style-position`** [CSS](/en-US/docs/Web/CSS) property sets the position of the {{cssxref("::marker")}} relative to a list item.
 
-<div>{{EmbedInteractiveExample("pages/css/list-style-position.html")}}</div>
+{{EmbedInteractiveExample("pages/css/list-style-position.html")}}
 
-<p>It is often more convenient to use the shorthand {{cssxref("list-style")}}.</p>
+It is often more convenient to use the shorthand {{cssxref("list-style")}}.
 
-<div class="notecard note">
-<p><strong>Note:</strong> This property is applied to list items, i.e., elements with <code>{{cssxref("display")}}: list-item;</code>. <a href="https://www.w3.org/TR/html5/rendering.html#lists">By default</a> this includes {{HTMLElement("li")}} elements. Because this property is inherited, it can be set on the parent element (normally {{HTMLElement("ol")}} or {{HTMLElement("ul")}}) to let it apply to all list items.</p>
-</div>
+> **Note:** This property is applied to list items, i.e., elements with `{{cssxref("display")}}: list-item;`. [By default](https://www.w3.org/TR/html5/rendering.html#lists) this includes {{HTMLElement("li")}} elements. Because this property is inherited, it can be set on the parent element (normally {{HTMLElement("ol")}} or {{HTMLElement("ul")}}) to let it apply to all list items.
 
-<p>Note that there is variance among browsers regarding behavior when a block element is placed first within a list element declared as <code>list-style-position: inside</code>. Chrome and Safari both place this element on the same line as the marker box, whereas Firefox, Internet Explorer, and Opera place it on the next line. For more information on this, see {{bug(36854)}}.</p>
+Note that there is variance among browsers regarding behavior when a block element is placed first within a list element declared as `list-style-position: inside`. Chrome and Safari both place this element on the same line as the marker box, whereas Firefox, Internet Explorer, and Opera place it on the next line. For more information on this, see {{bug(36854)}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 list-style-position: inside;
 list-style-position: outside;
 
@@ -34,55 +33,56 @@ list-style-position: inherit;
 list-style-position: initial;
 list-style-position: revert;
 list-style-position: unset;
-</pre>
+```
 
-<p>The <code>list-style-position</code> property is specified as one of the keyword values listed below.</p>
+The `list-style-position` property is specified as one of the keyword values listed below.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>inside</code></dt>
- <dd>The {{cssxref("::marker")}} is the first element among the list item's contents.</dd>
- <dt><code>outside</code></dt>
- <dd>The {{cssxref("::marker")}} is outside the principal block box.</dd>
-</dl>
+- `inside`
+  - : The {{cssxref("::marker")}} is the first element among the list item's contents.
+- `outside`
+  - : The {{cssxref("::marker")}} is outside the principal block box.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_list_item_position">Setting list item position</h3>
+### Setting list item position
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;ul class="inside"&gt;List 1
-  &lt;li&gt;List Item 1-1&lt;/li&gt;
-  &lt;li&gt;List Item 1-2&lt;/li&gt;
-  &lt;li&gt;List Item 1-3&lt;/li&gt;
-  &lt;li&gt;List Item 1-4&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul class="outside"&gt;List 2
-  &lt;li&gt;List Item 2-1&lt;/li&gt;
-  &lt;li&gt;List Item 2-2&lt;/li&gt;
-  &lt;li&gt;List Item 2-3&lt;/li&gt;
-  &lt;li&gt;List Item 2-4&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul class="inside-img"&gt;List 3
-  &lt;li&gt;List Item 3-1&lt;/li&gt;
-  &lt;li&gt;List Item 3-2&lt;/li&gt;
-  &lt;li&gt;List Item 3-3&lt;/li&gt;
-  &lt;li&gt;List Item 3-4&lt;/li&gt;
-&lt;/ul&gt;</pre>
+```html
+<ul class="inside">List 1
+  <li>List Item 1-1</li>
+  <li>List Item 1-2</li>
+  <li>List Item 1-3</li>
+  <li>List Item 1-4</li>
+</ul>
+<ul class="outside">List 2
+  <li>List Item 2-1</li>
+  <li>List Item 2-2</li>
+  <li>List Item 2-3</li>
+  <li>List Item 2-4</li>
+</ul>
+<ul class="inside-img">List 3
+  <li>List Item 3-1</li>
+  <li>List Item 3-2</li>
+  <li>List Item 3-3</li>
+  <li>List Item 3-4</li>
+</ul>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush:css;">.inside {
+```css
+.inside {
   list-style-position: inside;
   list-style-type: square;
 }
@@ -95,22 +95,21 @@ list-style-position: unset;
 .inside-img {
   list-style-position: inside;
   list-style-image: url("starsolid.gif");
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Setting_list_item_position", 200, 420)}}</p>
+{{EmbedLiveSample("Setting_list_item_position", 200, 420)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Cssxref("list-style")}}, {{Cssxref("list-style-type")}}, {{Cssxref("list-style-image")}}</li>
-</ul>
+- {{Cssxref("list-style")}}, {{Cssxref("list-style-type")}}, {{Cssxref("list-style-image")}}

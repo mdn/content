@@ -7,18 +7,19 @@ tags:
   - CSS Property
   - Experimental
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.inset-block-end
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>inset-block-end</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property defines the logical block end offset of an element, which maps to a physical inset depending on the element's writing mode, directionality, and text orientation. It corresponds to the {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, or {{cssxref("left")}} property depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.</p>
+The **`inset-block-end`** [CSS](/en-US/docs/Web/CSS) property defines the logical block end offset of an element, which maps to a physical inset depending on the element's writing mode, directionality, and text orientation. It corresponds to the {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, or {{cssxref("left")}} property depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.
 
-<pre class="brush:css no-line-numbers">/* &lt;length&gt; values */
+```css
+/* <length> values */
 inset-block-end: 3px;
 inset-block-end: 2.4em;
 
-/* &lt;percentage&gt;s of the width or height of the containing block */
+/* <percentage>s of the width or height of the containing block */
 inset-block-end: 10%;
 
 /* Keyword value */
@@ -29,36 +30,38 @@ inset-block-end: inherit;
 inset-block-end: initial;
 inset-block-end: revert;
 inset-block-end: unset;
-</pre>
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<h3 id="Values">Values</h3>
+### Values
 
-<p>The <code>inset-block-end</code> property takes the same values as the {{cssxref("left")}} property.</p>
+The `inset-block-end` property takes the same values as the {{cssxref("left")}} property.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_block_end_offset">Setting block end offset</h3>
+### Setting block end offset
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;p class="exampleText"&gt;Example text&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div>
+  <p class="exampleText">Example text</p>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   background-color: yellow;
   width: 120px;
   height: 120px;
@@ -69,24 +72,23 @@ inset-block-end: unset;
   position: relative;
   inset-block-end: 20px;
   background-color: #c8c800;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Setting_block_end_offset", 140, 140)}}</p>
+{{EmbedLiveSample("Setting_block_end_offset", 140, 140)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The properties which defines other insets: {{cssxref("inset-block-start")}}, {{cssxref("inset-inline-start")}}, and {{cssxref("inset-inline-end")}}</li>
- <li>The mapped physical properties: {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, and {{cssxref("left")}}</li>
- <li>{{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}</li>
-</ul>
+- The properties which defines other insets: {{cssxref("inset-block-start")}}, {{cssxref("inset-inline-start")}}, and {{cssxref("inset-inline-end")}}
+- The mapped physical properties: {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, and {{cssxref("left")}}
+- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

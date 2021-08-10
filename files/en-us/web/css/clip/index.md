@@ -7,58 +7,58 @@ tags:
   - CSS Property
   - Deprecated
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.clip
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>clip</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property defines a visible portion of an element. The <code>clip</code> property applies only to absolutely positioned elements — that is, elements with {{cssxref("position","position:absolute")}} or {{cssxref("position","position:fixed")}}.</p>
+The **`clip`** [CSS](/en-US/docs/Web/CSS) property defines a visible portion of an element. The `clip` property applies only to absolutely positioned elements — that is, elements with {{cssxref("position","position:absolute")}} or {{cssxref("position","position:fixed")}}.
 
-<pre class="brush:css no-line-numbers">/* Keyword value */
+```css
+/* Keyword value */
 clip: auto;
 
-/* &lt;shape&gt; values */
+/* <shape> values */
 clip: rect(1px, 10em, 3rem, 2ch);
 
 /* Global values */
 clip: inherit;
 clip: initial;
 clip: revert;
-clip: unset;</pre>
+clip: unset;
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<div class="note">
-<p><strong>Note:</strong> Where possible, authors are encouraged to use the newer {{cssxref("clip-path")}} property instead.</p>
-</div>
+> **Note:** Where possible, authors are encouraged to use the newer {{cssxref("clip-path")}} property instead.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt>{{cssxref("shape")}}</dt>
- <dd>
-  <p>A rectangular {{cssxref("shape")}} of the form <code>rect(&lt;top&gt;, &lt;right&gt;, &lt;bottom&gt;, &lt;left&gt;)</code>. The <code>&lt;top&gt;</code> and <code>&lt;bottom&gt;</code> values are offsets from the <em>inside top border edge</em> of the box, while <code>&lt;right&gt;</code> and <code>&lt;left&gt;</code> are offsets from the <em>inside left border edge</em> of the box — that is, the extent of the padding box.</p>
-  <p>The <code>&lt;top&gt;</code>, <code>&lt;right&gt;</code>, <code>&lt;bottom&gt;</code>, and <code>&lt;left&gt;</code> values may be either a {{cssxref("&lt;length&gt;")}} or <code>auto</code>. If any side's value is <code>auto</code>, the element is clipped to that side's <em>inside border edge</em>.</p>
- </dd>
- <dt><code>auto</code></dt>
- <dd>The element does not clip (default). This is different from <code>rect(auto, auto, auto, auto)</code>, which clips to the element's inside border edges.</dd>
-</dl>
+- {{cssxref("shape")}}
 
-<h2 id="Formal_definition">Formal definition</h2>
+  - : A rectangular {{cssxref("shape")}} of the form `rect(<top>, <right>, <bottom>, <left>)`. The `<top>` and `<bottom>` values are offsets from the _inside top border edge_ of the box, while `<right>` and `<left>` are offsets from the _inside left border edge_ of the box — that is, the extent of the padding box.
 
-<p>{{cssinfo}}</p>
+    The `<top>`, `<right>`, `<bottom>`, and `<left>` values may be either a {{cssxref("&lt;length&gt;")}} or `auto`. If any side's value is `auto`, the element is clipped to that side's _inside border edge_.
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+- `auto`
+  - : The element does not clip (default). This is different from `rect(auto, auto, auto, auto)`, which clips to the element's inside border edges.
+
+## Formal definition
+
+{{cssinfo}}
+
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Clipping_an_image">Clipping an image</h3>
+### Clipping an image
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush:css">.dotted-border {
+```css
+.dotted-border {
   border: dotted;
   position: relative;
   width: 536px;
@@ -85,32 +85,33 @@ clip: unset;</pre>
 #bottom-right {
   left: 200px;
   clip: rect(235px, 335px, 345px, 160px);
-}</pre>
+}
+```
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush:html">&lt;p class="dotted-border"&gt;
-  &lt;img src="https://developer.mozilla.org/@api/deki/files/3613/=hut.jpg" title="Original graphic"&gt;
-  &lt;img id="top-left" src="https://developer.mozilla.org/@api/deki/files/3613/=hut.jpg" title="Graphic clipped to upper left"&gt;
-  &lt;img id="middle" src="https://developer.mozilla.org/@api/deki/files/3613/=hut.jpg" title="Graphic clipped towards middle"&gt;
-  &lt;img id="bottom-right" src="https://developer.mozilla.org/@api/deki/files/3613/=hut.jpg" title="Graphic clipped to bottom right"&gt;
-&lt;/p&gt;</pre>
+```html
+<p class="dotted-border">
+  <img src="https://developer.mozilla.org/@api/deki/files/3613/=hut.jpg" title="Original graphic">
+  <img id="top-left" src="https://developer.mozilla.org/@api/deki/files/3613/=hut.jpg" title="Graphic clipped to upper left">
+  <img id="middle" src="https://developer.mozilla.org/@api/deki/files/3613/=hut.jpg" title="Graphic clipped towards middle">
+  <img id="bottom-right" src="https://developer.mozilla.org/@api/deki/files/3613/=hut.jpg" title="Graphic clipped to bottom right">
+</p>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Clipping_an_image', '689px', '410px')}}</p>
+{{EmbedLiveSample('Clipping_an_image', '689px', '410px')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>This property is deprecated. Use {{cssxref("clip-path")}} instead.</li>
- <li>Related CSS properties: {{cssxref("text-overflow")}}, {{cssxref("white-space")}}, {{cssxref("overflow-x")}}, {{cssxref("overflow-y")}}, {{cssxref("overflow")}}, {{cssxref("display")}}, {{cssxref("position")}}</li>
-</ul>
+- This property is deprecated. Use {{cssxref("clip-path")}} instead.
+- Related CSS properties: {{cssxref("text-overflow")}}, {{cssxref("white-space")}}, {{cssxref("overflow-x")}}, {{cssxref("overflow-y")}}, {{cssxref("overflow")}}, {{cssxref("display")}}, {{cssxref("position")}}

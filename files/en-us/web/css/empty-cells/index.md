@@ -6,20 +6,21 @@ tags:
   - CSS Property
   - CSS Tables
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.empty-cells
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>empty-cells</code></strong> CSS property sets whether borders and backgrounds appear around {{htmlelement("table")}} cells that have no visible content.</p>
+The **`empty-cells`** CSS property sets whether borders and backgrounds appear around {{htmlelement("table")}} cells that have no visible content.
 
-<div>{{EmbedInteractiveExample("pages/css/empty-cells.html")}}</div>
+{{EmbedInteractiveExample("pages/css/empty-cells.html")}}
 
-<p>This property has an effect only when the {{cssxref("border-collapse")}} property is <code>separate</code>.</p>
+This property has an effect only when the {{cssxref("border-collapse")}} property is `separate`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 empty-cells: show;
 empty-cells: hide;
 
@@ -27,59 +28,59 @@ empty-cells: hide;
 empty-cells: inherit;
 empty-cells: initial;
 empty-cells: unset;
-</pre>
+```
 
-<p>The <code>empty-cells</code> property is specified as one of the keyword values listed below.</p>
+The `empty-cells` property is specified as one of the keyword values listed below.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>show</code></dt>
- <dd>Borders and backgrounds are drawn like in normal cells.</dd>
- <dt><code>hide</code></dt>
- <dd>No borders or backgrounds are drawn.</dd>
-</dl>
+- `show`
+  - : Borders and backgrounds are drawn like in normal cells.
+- `hide`
+  - : No borders or backgrounds are drawn.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Example</h2>
+## Example
 
-<h3 id="Showing_and_hiding_empty_table_cells">Showing and hiding empty table cells</h3>
+### Showing and hiding empty table cells
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;table class="table_1"&gt;
-  &lt;tr&gt;
-    &lt;td&gt;Moe&lt;/td&gt;
-    &lt;td&gt;Larry&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;Curly&lt;/td&gt;
-    &lt;td&gt;&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;
-&lt;br&gt;
-&lt;table class="table_2"&gt;
-  &lt;tr&gt;
-    &lt;td&gt;Moe&lt;/td&gt;
-    &lt;td&gt;Larry&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;Curly&lt;/td&gt;
-    &lt;td&gt;&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;
-</pre>
+```html
+<table class="table_1">
+  <tr>
+    <td>Moe</td>
+    <td>Larry</td>
+  </tr>
+  <tr>
+    <td>Curly</td>
+    <td></td>
+  </tr>
+</table>
+<br>
+<table class="table_2">
+  <tr>
+    <td>Moe</td>
+    <td>Larry</td>
+  </tr>
+  <tr>
+    <td>Curly</td>
+    <td></td>
+  </tr>
+</table>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.table_1 {
+```css
+.table_1 {
   empty-cells: show;
 }
 
@@ -91,23 +92,22 @@ td,
 th {
   border: 1px solid gray;
   padding: 0.5rem;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Showing_and_hiding_empty_table_cells', '100%', '200') }}</p>
+{{ EmbedLiveSample('Showing_and_hiding_empty_table_cells', '100%', '200') }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("border-collapse")}}</li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Styling_tables">Styling tables</a></li>
-</ul>
+- {{cssxref("border-collapse")}}
+- [Styling tables](/en-US/docs/Learn/CSS/Building_blocks/Styling_tables)

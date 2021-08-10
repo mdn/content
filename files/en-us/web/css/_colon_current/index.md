@@ -1,65 +1,68 @@
 ---
 title: ':current'
-slug: 'Web/CSS/:current'
+slug: Web/CSS/:current
 browser-compat: css.selectors.current
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<p>The <strong><code>:current</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> selector is a time-dimensional pseudo-class that represents the element, or an ancestor of the element, that is currently being displayed. For example in a video with captions which are being displayed by <a href="/en-US/docs/Web/API/WebVTT_API">WebVTT</a>.</p>
+The **`:current`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) selector is a time-dimensional pseudo-class that represents the element, or an ancestor of the element, that is currently being displayed. For example in a video with captions which are being displayed by [WebVTT](/en-US/docs/Web/API/WebVTT_API).
 
-<pre class="brush: css">:current(p, span) {
+```css
+:current(p, span) {
   background-color: yellow;
-}</pre>
+}
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">:current(p, span) {
+```css
+:current(p, span) {
   background-color: yellow;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;video controls preload="metadata"&gt;
-  &lt;source src="video.mp4" type="video/mp4" /&gt;
-  &lt;source src="video.webm" type="video/webm" /&gt;
-  &lt;track label="English" kind="subtitles" srclang="en" src="subtitles.vtt" default&gt;
-&lt;/video&gt;</pre>
+```html
+<video controls preload="metadata">
+  <source src="video.mp4" type="video/mp4" />
+  <source src="video.webm" type="video/webm" />
+  <track label="English" kind="subtitles" srclang="en" src="subtitles.vtt" default>
+</video>
+```
 
-<h3 id="WebVTT">WebVTT</h3>
+### WebVTT
 
-<pre>WEBVTT FILE
+    WEBVTT FILE
 
-1
-00:00:03.500 --&gt; 00:00:05.000
-This is the first caption
+    1
+    00:00:03.500 --> 00:00:05.000
+    This is the first caption
 
-2
-00:00:06.000 --&gt; 00:00:09.000
-This is the second caption
+    2
+    00:00:06.000 --> 00:00:09.000
+    This is the second caption
 
-3
-00:00:11.000 --&gt; 00:00:19.000
-This is the third caption
-</pre>
+    3
+    00:00:11.000 --> 00:00:19.000
+    This is the third caption
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebVTT_API">Web Video Text Tracks Format (WebVTT)</a></li>
- <li>{{cssxref(":past")}}</li>
- <li>{{cssxref(":future")}}</li>
-</ul>
+- [Web Video Text Tracks Format (WebVTT)](/en-US/docs/Web/API/WebVTT_API)
+- {{cssxref(":past")}}
+- {{cssxref(":future")}}

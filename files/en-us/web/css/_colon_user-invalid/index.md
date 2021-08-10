@@ -9,58 +9,58 @@ tags:
   - Selector
 browser-compat: css.selectors.user-invalid
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>:user-invalid</code></strong> CSS <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> represents any validated form element whose value isn't valid based on their <a href="/en-US/docs/Learn/Forms#constraint_validation">validation constraints</a>, after the user has interacted with it.</p>
+The **`:user-invalid`** CSS [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any validated form element whose value isn't valid based on their [validation constraints](/en-US/docs/Learn/Forms#constraint_validation), after the user has interacted with it.
 
-<p>The <code>:user-invalid</code> pseudo-class must match an {{CSSxRef(":invalid")}}, {{CSSxRef(":out-of-range")}}, or blank-but {{CSSxRef(":required")}} element between the time the user has attempted to submit the form and before the user has interacted again with the form element. </p>
+The `:user-invalid` pseudo-class must match an {{CSSxRef(":invalid")}}, {{CSSxRef(":out-of-range")}}, or blank-but {{CSSxRef(":required")}} element between the time the user has attempted to submit the form and before the user has interacted again with the form element.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> The pseudo-class behaves in the same way as the non-standard <code>:-moz-ui-invalid</code> pseudo-class.</p>
-</div>
+> **Note:** The pseudo-class behaves in the same way as the non-standard `:-moz-ui-invalid` pseudo-class.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
 {{CSSSyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3>Setting a color and symbol on :user-invalid</h3>
+### Setting a color and symbol on :user-invalid
 
-<p>In the following example, the red border and ❌ only display once the user has interacted with the field.
-Try typing something other than an email address to see it in action.</p>
+In the following example, the red border and ❌ only display once the user has interacted with the field.
+Try typing something other than an email address to see it in action.
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;label for="email"&gt;Email *: &lt;/label&gt;
-  &lt;input id="email" name="email" type="email" required&gt;
-  &lt;span&gt;&lt;/span&gt;
-&lt;/form&gt;</pre>
+```html
+<form>
+  <label for="email">Email *: </label>
+  <input id="email" name="email" type="email" required>
+  <span></span>
+</form>
+```
 
-<pre class="brush: css">input:user-invalid {
+```css
+input:user-invalid {
   border: 2px solid red;
 }
 
 input:user-invalid + span::before {
   content: '✖';
   color: red;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Setting_a_color_and_symbol_on_user-invalid", 140, 100)}}</p>
+{{EmbedLiveSample("Setting_a_color_and_symbol_on_user-invalid", 140, 100)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>{{CSSxRef(":valid")}}</li>
-	<li>{{CSSxRef(":invalid")}}</li>
-	<li>{{CSSxRef(":required")}}</li>
-	<li>{{CSSxRef(":optional")}}</li>
-	<li>{{CSSxRef(":user-valid")}}</li>
-</ul>
+- {{CSSxRef(":valid")}}
+- {{CSSxRef(":invalid")}}
+- {{CSSxRef(":required")}}
+- {{CSSxRef(":optional")}}
+- {{CSSxRef(":user-valid")}}

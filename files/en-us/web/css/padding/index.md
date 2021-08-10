@@ -6,36 +6,32 @@ tags:
   - CSS Padding
   - CSS Property
   - Reference
-  - 'recipe:css-shorthand-property'
+  - recipe:css-shorthand-property
 browser-compat: css.properties.padding
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>padding</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand property</a> sets the <a href="/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#padding_area">padding area</a> on all four sides of an element at once.</p>
+The **`padding`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) sets the [padding area](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#padding_area) on all four sides of an element at once.
 
-<div>{{EmbedInteractiveExample("pages/css/padding.html")}}</div>
+{{EmbedInteractiveExample("pages/css/padding.html")}}
 
+An element's padding area is the space between its content and its border.
 
-<p>An element's padding area is the space between its content and its border.</p>
+> **Note:** Padding creates extra space within an element. In contrast, {{cssxref("margin")}} creates extra space _around_ an element.
 
-<div class="note">
-<p><strong>Note:</strong> Padding creates extra space within an element. In contrast, {{cssxref("margin")}} creates extra space <em>around</em> an element.</p>
-</div>
+## Constituent properties
 
-<h2 id="Constituent_properties">Constituent properties</h2>
+This property is a shorthand for the following CSS properties:
 
-<p>This property is a shorthand for the following CSS properties:</p>
+- {{cssxref("padding-bottom")}}
+- {{cssxref("padding-left")}}
+- {{cssxref("padding-right")}}
+- {{cssxref("padding-top")}}
 
-<ul>
- <li>{{cssxref("padding-bottom")}}</li>
- <li>{{cssxref("padding-left")}}</li>
- <li>{{cssxref("padding-right")}}</li>
- <li>{{cssxref("padding-top")}}</li>
-</ul>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush:css no-line-numbers">/* Apply to all four sides */
+```css
+/* Apply to all four sides */
 padding: 1em;
 
 /* vertical | horizontal */
@@ -52,47 +48,45 @@ padding: inherit;
 padding: initial;
 padding: revert;
 padding: unset;
-</pre>
+```
 
-<p>The <code>padding</code> property may be specified using one, two, three, or four values. Each value is a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;percentage&gt;")}}. Negative values are invalid.</p>
+The `padding` property may be specified using one, two, three, or four values. Each value is a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;percentage&gt;")}}. Negative values are invalid.
 
-<ul>
- <li>When <strong>one</strong> value is specified, it applies the same padding to <strong>all four sides</strong>.</li>
- <li>When <strong>two</strong> values are specified, the first padding applies to the <strong>top and bottom</strong>, the second to the <strong>left and right</strong>.</li>
- <li>When <strong>three</strong> values are specified, the first padding applies to the <strong>top</strong>, the second to the <strong>right and left</strong>, the third to the <strong>bottom</strong>.</li>
- <li>When <strong>four</strong> values are specified, the paddings apply to the <strong>top</strong>, <strong>right</strong>, <strong>bottom</strong>, and <strong>left</strong> in that order (clockwise).</li>
-</ul>
+- When **one** value is specified, it applies the same padding to **all four sides**.
+- When **two** values are specified, the first padding applies to the **top and bottom**, the second to the **left and right**.
+- When **three** values are specified, the first padding applies to the **top**, the second to the **right and left**, the third to the **bottom**.
+- When **four** values are specified, the paddings apply to the **top**, **right**, **bottom**, and **left** in that order (clockwise).
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt>{{cssxref("&lt;length&gt;")}}</dt>
- <dd>The size of the padding as a fixed value.</dd>
- <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
- <dd>The size of the padding as a percentage, relative to the <em>width</em> of the containing block.</dd>
-</dl>
+- {{cssxref("&lt;length&gt;")}}
+  - : The size of the padding as a fixed value.
+- {{cssxref("&lt;percentage&gt;")}}
+  - : The size of the padding as a percentage, relative to the _width_ of the containing block.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_padding_with_pixels">Setting padding with pixels</h3>
+### Setting padding with pixels
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;h4&gt;This element has moderate padding.&lt;/h4&gt;
-&lt;h3&gt;The padding is huge in this element!&lt;/h3&gt;
-</pre>
+```html
+<h4>This element has moderate padding.</h4>
+<h3>The padding is huge in this element!</h3>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">h4 {
+```css
+h4 {
   background-color: lime;
   padding: 20px 50px;
 }
@@ -101,15 +95,16 @@ h3 {
   background-color: cyan;
   padding: 110px 50px 50px 110px;
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Setting_padding_with_pixels', '100%', 300)}}</p>
+{{EmbedLiveSample('Setting_padding_with_pixels', '100%', 300)}}
 
-<h3 id="Setting_padding_with_pixels_and_percentages">Setting padding with pixels and percentages</h3>
+### Setting padding with pixels and percentages
 
-<pre class="brush: css">padding: 5%;                /* All sides: 5% padding */
+```css
+padding: 5%;                /* All sides: 5% padding */
 
 padding: 10px;              /* All sides: 10px padding */
 
@@ -123,20 +118,19 @@ padding: 10px 3% 20px;      /* top:            10px padding */
 padding: 1em 3px 30px 5px;  /* top:    1em padding  */
                             /* right:  3px padding  */
                             /* bottom: 30px padding */
-                            /* left:   5px padding  */ </pre>
+                            /* left:   5px padding  */ 
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">Introduction to the CSS basic box model</a></li>
- <li>{{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, and {{cssxref("padding-left")}}.</li>
- <li>The mapped logical properties: {{cssxref("padding-block-start")}}, {{cssxref("padding-block-end")}}, {{cssxref("padding-inline-start")}}, and {{cssxref("padding-inline-end")}} and the shorthands {{cssxref("padding-block")}} and {{cssxref("padding-inline")}}</li>
-</ul>
+- [Introduction to the CSS basic box model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+- {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, and {{cssxref("padding-left")}}.
+- The mapped logical properties: {{cssxref("padding-block-start")}}, {{cssxref("padding-block-end")}}, {{cssxref("padding-inline-start")}}, and {{cssxref("padding-inline-end")}} and the shorthands {{cssxref("padding-block")}} and {{cssxref("padding-inline")}}

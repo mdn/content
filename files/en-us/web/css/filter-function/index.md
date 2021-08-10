@@ -10,73 +10,74 @@ tags:
   - Reference
 browser-compat: css.types.filter-function
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <code><strong>&lt;filter-function&gt;</strong></code> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Types">data type</a> represents a graphical effect that can change the appearance of an input image. It is used in the {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties.</p>
+The **`<filter-function>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents a graphical effect that can change the appearance of an input image. It is used in the {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>&lt;filter-function&gt;</code> data type is specified using one of the filter functions listed below. Each function requires an argument which, if invalid, results in no filter being applied.</p>
+The `<filter-function>` data type is specified using one of the filter functions listed below. Each function requires an argument which, if invalid, results in no filter being applied.
 
-<dl>
- <dt>{{cssxref("filter-function/blur()", "blur()")}}</dt>
- <dd>Blurs the image.</dd>
- <dt>{{cssxref("filter-function/brightness()", "brightness()")}}</dt>
- <dd>Makes the image brighter or darker.</dd>
- <dt>{{cssxref("filter-function/contrast()", "contrast()")}}</dt>
- <dd>Increases or decreases the image's contrast.</dd>
- <dt>{{cssxref("filter-function/drop-shadow()", "drop-shadow()")}}</dt>
- <dd>Applies a drop shadow behind the image.</dd>
- <dt>{{cssxref("filter-function/grayscale()", "grayscale()")}}</dt>
- <dd>Converts the image to grayscale.</dd>
- <dt>{{cssxref("filter-function/hue-rotate()", "hue-rotate()")}}</dt>
- <dd>Changes the overall hue of the image.</dd>
- <dt>{{cssxref("filter-function/invert()", "invert()")}}</dt>
- <dd>Inverts the colors of the image.</dd>
- <dt>{{cssxref("filter-function/opacity()", "opacity()")}}</dt>
- <dd>Makes the image transparent.</dd>
- <dt>{{cssxref("filter-function/saturate()", "saturate()")}}</dt>
- <dd>Super-saturates or desaturates the input image.</dd>
- <dt>{{cssxref("filter-function/sepia()", "sepia()")}}</dt>
- <dd>Converts the image to sepia.</dd>
-</dl>
+- {{cssxref("filter-function/blur()", "blur()")}}
+  - : Blurs the image.
+- {{cssxref("filter-function/brightness()", "brightness()")}}
+  - : Makes the image brighter or darker.
+- {{cssxref("filter-function/contrast()", "contrast()")}}
+  - : Increases or decreases the image's contrast.
+- {{cssxref("filter-function/drop-shadow()", "drop-shadow()")}}
+  - : Applies a drop shadow behind the image.
+- {{cssxref("filter-function/grayscale()", "grayscale()")}}
+  - : Converts the image to grayscale.
+- {{cssxref("filter-function/hue-rotate()", "hue-rotate()")}}
+  - : Changes the overall hue of the image.
+- {{cssxref("filter-function/invert()", "invert()")}}
+  - : Inverts the colors of the image.
+- {{cssxref("filter-function/opacity()", "opacity()")}}
+  - : Makes the image transparent.
+- {{cssxref("filter-function/saturate()", "saturate()")}}
+  - : Super-saturates or desaturates the input image.
+- {{cssxref("filter-function/sepia()", "sepia()")}}
+  - : Converts the image to sepia.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Filter_function_comparison">Filter function comparison</h3>
+### Filter function comparison
 
-<p>This example provides a simple graphic, along with a select menu to allow you to choose between the different types of filter function, and a slider to allow you to vary the values used inside the filter function. Updating the controls updates the filter effect in real time, allowing you to investigate the effects of different filters.</p>
+This example provides a simple graphic, along with a select menu to allow you to choose between the different types of filter function, and a slider to allow you to vary the values used inside the filter function. Updating the controls updates the filter effect in real time, allowing you to investigate the effects of different filters.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div&gt;&lt;/div&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;label for="filter-select"&gt;Choose a filter function:&lt;/label&gt;
-    &lt;select id="filter-select"&gt;
-      &lt;option selected&gt;blur&lt;/option&gt;
-      &lt;option&gt;brightness&lt;/option&gt;
-      &lt;option&gt;contrast&lt;/option&gt;
-      &lt;option&gt;drop-shadow&lt;/option&gt;
-      &lt;option&gt;grayscale&lt;/option&gt;
-      &lt;option&gt;hue-rotate&lt;/option&gt;
-      &lt;option&gt;invert&lt;/option&gt;
-      &lt;option&gt;opacity&lt;/option&gt;
-      &lt;option&gt;saturate&lt;/option&gt;
-      &lt;option&gt;sepia&lt;/option&gt;
-    &lt;/select&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;input type="range"&gt;&lt;output&gt;&lt;/output&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Current value: &lt;code&gt;&lt;/code&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</pre>
+```html
+<div></div>
+<ul>
+  <li>
+    <label for="filter-select">Choose a filter function:</label>
+    <select id="filter-select">
+      <option selected>blur</option>
+      <option>brightness</option>
+      <option>contrast</option>
+      <option>drop-shadow</option>
+      <option>grayscale</option>
+      <option>hue-rotate</option>
+      <option>invert</option>
+      <option>opacity</option>
+      <option>saturate</option>
+      <option>sepia</option>
+    </select>
+  </li>
+  <li>
+    <input type="range"><output></output>
+  </li>
+  <li>
+    <p>Current value: <code></code></p>
+  </li>
+</ul>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   width: 300px;
   height: 300px;
   background: url(https://media.prod.mdn.mozit.cloud/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png) no-repeat center;
@@ -101,22 +102,24 @@ output {
 select {
   width: 40%;
   margin-left: 2px;
-}</pre>
+}
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">const selectElem = document.querySelector('select');
+```js
+const selectElem = document.querySelector('select');
 const divElem = document.querySelector('div');
 const slider = document.querySelector('input');
 const output = document.querySelector('output');
 const curValue = document.querySelector('p code');
 
-selectElem.addEventListener('change', () =&gt; {
+selectElem.addEventListener('change', () => {
   setSlider(selectElem.value);
   setDiv(selectElem.value);
 });
 
-slider.addEventListener('input', () =&gt; {
+slider.addEventListener('input', () => {
   setDiv(selectElem.value);
 });
 
@@ -180,22 +183,21 @@ function updateCurValue() {
 }
 
 setSlider(selectElem.value);
-setDiv(selectElem.value);</pre>
+setDiv(selectElem.value);
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Filter_function_comparison', '100%', 500)}}</p>
+{{EmbedLiveSample('Filter_function_comparison', '100%', 500)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Properties that use this data type: {{cssxref("filter")}} and {{cssxref("backdrop-filter")}}</li>
-</ul>
+- Properties that use this data type: {{cssxref("filter")}} and {{cssxref("backdrop-filter")}}

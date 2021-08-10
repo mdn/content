@@ -9,51 +9,51 @@ tags:
   - media feature
 browser-compat: css.at-rules.media.any-hover
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>any-hover</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features">media feature</a> can be used to test whether <em>any</em> available input mechanism can hover over elements.</p>
+The **`any-hover`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) can be used to test whether _any_ available input mechanism can hover over elements.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>any-hover</code> feature is specified as a keyword value chosen from the list below.</p>
+The `any-hover` feature is specified as a keyword value chosen from the list below.
 
-<dl>
- <dt><code>none</code></dt>
- <dd>None of the available input mechanism(s) can hover conveniently, or there is no pointing input mechanism.</dd>
- <dt><code>hover</code></dt>
- <dd>One or more available input mechanisms can conveniently hover over elements.</dd>
-</dl>
+- `none`
+  - : None of the available input mechanism(s) can hover conveniently, or there is no pointing input mechanism.
+- `hover`
+  - : One or more available input mechanisms can conveniently hover over elements.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Testing_whether_input_methods_can_hover">Testing whether input methods can hover</h3>
+### Testing whether input methods can hover
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;a href="#"&gt;Try hovering over me!&lt;/a&gt;</pre>
+```html
+<a href="#">Try hovering over me!</a>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">@media (any-hover: hover) {
+```css
+@media (any-hover: hover) {
   a:hover {
     background: yellow;
   }
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Testing_whether_input_methods_can_hover")}}</p>
+{{EmbedLiveSample("Testing_whether_input_methods_can_hover")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/@media/hover">the <code>hover</code> media feature</a></li>
-</ul>
+- [the `hover` media feature](/en-US/docs/Web/CSS/@media/hover)

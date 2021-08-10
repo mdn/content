@@ -7,56 +7,50 @@ tags:
   - Guide
   - Reference
 ---
-<p>This article explains the inline formatting context</p>
+This article explains the inline formatting context
 
-<h2 id="Core_concepts">Core concepts</h2>
+## Core concepts
 
-<p>The inline formatting context is part of the visual rendering of a web page. Inline boxes are laid out one after the other, in the direction sentences run in the writing mode in use:</p>
+The inline formatting context is part of the visual rendering of a web page. Inline boxes are laid out one after the other, in the direction sentences run in the writing mode in use:
 
-<ul>
- <li>In a horizontal writing mode, boxes are laid out horizontally, starting on the left.</li>
- <li>In a vertical writing mode they would be laid out vertically starting at the top.</li>
-</ul>
+- In a horizontal writing mode, boxes are laid out horizontally, starting on the left.
+- In a vertical writing mode they would be laid out vertically starting at the top.
 
-<p>In the example below, the two ({{HTMLElement("div")}}) elements with the black borders form a <a href="/en-US/docs/Web/Guide/CSS/Block_formatting_context">block formatting context</a>, inside which each word participates in an inline formatting context. The boxes in the horizontal writing mode run horizontally, and the vertical writing mode boxes run vertically.</p>
+In the example below, the two ({{HTMLElement("div")}}) elements with the black borders form a [block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context), inside which each word participates in an inline formatting context. The boxes in the horizontal writing mode run horizontally, and the vertical writing mode boxes run vertically.
 
-<p>{{EmbedGHLiveSample("css-examples/inline-formatting/inline.html", '100%', 720)}}</p>
+{{EmbedGHLiveSample("css-examples/inline-formatting/inline.html", '100%', 720)}}
 
-<p>Boxes forming a line are contained by a rectangular area called a line box. This box will be large enough to contain all of the inline boxes in that line; when there is no more room in the inline direction another line will be created. Therefore a paragraph is a set of inline line boxes, stacked in the block direction.</p>
+Boxes forming a line are contained by a rectangular area called a line box. This box will be large enough to contain all of the inline boxes in that line; when there is no more room in the inline direction another line will be created. Therefore a paragraph is a set of inline line boxes, stacked in the block direction.
 
-<p>When an inline box is split, margins, borders, and padding have no visual effect where the split occurs. In the next example there is a ({{HTMLElement("span")}}) element wrapping a set of words wrapping onto two lines. The border on the <code>&lt;span&gt;</code> breaks at the wrapping point.</p>
+When an inline box is split, margins, borders, and padding have no visual effect where the split occurs. In the next example there is a ({{HTMLElement("span")}}) element wrapping a set of words wrapping onto two lines. The border on the `<span>` breaks at the wrapping point.
 
-<p>{{EmbedGHLiveSample("css-examples/inline-formatting/break.html", '100%', 720)}}</p>
+{{EmbedGHLiveSample("css-examples/inline-formatting/break.html", '100%', 720)}}
 
-<p>Margins, borders, and padding in the inline direction are respected. In the example below you can see how the margin, border, and padding on the inline <code>&lt;span&gt;</code> element are added.</p>
+Margins, borders, and padding in the inline direction are respected. In the example below you can see how the margin, border, and padding on the inline `<span>` element are added.
 
-<p>{{EmbedGHLiveSample("css-examples/inline-formatting/mbp.html", '100%', 920)}}</p>
+{{EmbedGHLiveSample("css-examples/inline-formatting/mbp.html", '100%', 920)}}
 
-<div class="notecard note">
-<p><strong>Note:</strong> I am using the logical, flow-relative properties — {{cssxref("padding-inline-start")}} rather than {{cssxref("padding-left")}} — so that they work in the inline dimension whether the text is horizontal or vertical. Read more about these properties in <a href="/en-US/docs/Web/CSS/CSS_Logical_Properties">Logical Properties and Values</a>.</p>
-</div>
+> **Note:** I am using the logical, flow-relative properties — {{cssxref("padding-inline-start")}} rather than {{cssxref("padding-left")}} — so that they work in the inline dimension whether the text is horizontal or vertical. Read more about these properties in [Logical Properties and Values](/en-US/docs/Web/CSS/CSS_Logical_Properties).
 
-<h2 id="Alignment_in_the_block_direction">Alignment in the block direction</h2>
+## Alignment in the block direction
 
-<p>Inline boxes may be aligned in the block direction in different ways, using the {{cssxref("vertical-align")}} property, which will align on the block axis in vertical writing modes (therefore not vertically at all!). In the example below the large text is making the line box of the first sentence larger, therefore the <code>vertical-align</code> property can be used to align the inline boxes either side of it. I have used the value <code>top</code>, try changing it to <code>middle</code>, <code>bottom</code>, or <code>baseline</code>.</p>
+Inline boxes may be aligned in the block direction in different ways, using the {{cssxref("vertical-align")}} property, which will align on the block axis in vertical writing modes (therefore not vertically at all!). In the example below the large text is making the line box of the first sentence larger, therefore the `vertical-align` property can be used to align the inline boxes either side of it. I have used the value `top`, try changing it to `middle`, `bottom`, or `baseline`.
 
-<p>{{EmbedGHLiveSample("css-examples/inline-formatting/align.html", '100%', 920)}}</p>
+{{EmbedGHLiveSample("css-examples/inline-formatting/align.html", '100%', 920)}}
 
-<h2 id="Alignment_in_the_inline_direction">Alignment in the inline direction</h2>
+## Alignment in the inline direction
 
-<p>If there is additional space in the inline direction, the {{cssxref("text-align")}} property can be used to align the inline boxes within their line box. Try changing the value of <code>text-align</code> below to <code>end</code>.</p>
+If there is additional space in the inline direction, the {{cssxref("text-align")}} property can be used to align the inline boxes within their line box. Try changing the value of `text-align` below to `end`.
 
-<p>{{EmbedGHLiveSample("css-examples/inline-formatting/text-align.html", '100%', 920)}}</p>
+{{EmbedGHLiveSample("css-examples/inline-formatting/text-align.html", '100%', 920)}}
 
-<h2 id="Effect_of_floats">Effect of floats</h2>
+## Effect of floats
 
-<p>Line boxes usually have the same size in the inline direction, therefore the same width if working in a horizontal writing mode, or height if working in a vertical writing mode. If there is a {{cssxref("float")}} within the same block formatting context however, the float will cause the line boxes that wrap the float to become shorter.</p>
+Line boxes usually have the same size in the inline direction, therefore the same width if working in a horizontal writing mode, or height if working in a vertical writing mode. If there is a {{cssxref("float")}} within the same block formatting context however, the float will cause the line boxes that wrap the float to become shorter.
 
-<p>{{EmbedGHLiveSample("css-examples/flow/formatting-contexts/float.html", '100%', 720)}}</p>
+{{EmbedGHLiveSample("css-examples/flow/formatting-contexts/float.html", '100%', 720)}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/Guide/CSS/Block_formatting_context">Block formatting context</a></li>
- <li><a href="/en-US/docs/Web/CSS/Visual_formatting_model">Visual Formatting Model</a></li>
-</ul>
+- [Block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context)
+- [Visual Formatting Model](/en-US/docs/Web/CSS/Visual_formatting_model)

@@ -9,28 +9,24 @@ tags:
   - Understanding_CSS_z-index
   - z-index
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>In the most basic cases, <a href="/en-US/docs/Web/HTML">HTML</a> pages can be considered two-dimensional, because text, images, and other elements are arranged on the page without overlapping. In this case, there is a single rendering flow, and all elements are aware of the space taken by others. The {{cssxref("z-index")}} attribute lets you adjust the order of the layering of objects when rendering content.</p>
+In the most basic cases, [HTML](/en-US/docs/Web/HTML) pages can be considered two-dimensional, because text, images, and other elements are arranged on the page without overlapping. In this case, there is a single rendering flow, and all elements are aware of the space taken by others. The {{cssxref("z-index")}} attribute lets you adjust the order of the layering of objects when rendering content.
 
-<blockquote>
-<p><em>In CSS 2.1, each box has a position in three dimensions. In addition to their horizontal and vertical positions, boxes lie along a "z-axis" and are formatted one on top of the other. Z-axis positions are particularly relevant when boxes overlap visually.</em></p>
-</blockquote>
+> _In CSS 2.1, each box has a position in three dimensions. In addition to their horizontal and vertical positions, boxes lie along a "z-axis" and are formatted one on top of the other. Z-axis positions are particularly relevant when boxes overlap visually._
 
-<p>(from <a href="https://www.w3.org/TR/CSS21/visuren.html#z-index">CSS 2.1 Section 9.9.1 - Layered presentation</a>)</p>
+(from [CSS 2.1 Section 9.9.1 - Layered presentation](https://www.w3.org/TR/CSS21/visuren.html#z-index))
 
-<p>This means that CSS style rules allow you to position boxes on layers in addition to the normal rendering layer (layer 0). The Z position of each layer is expressed as an integer representing the stacking order for rendering. Greater numbers mean closer to the observer. Z position can be controlled with the CSS <code>z-index</code> property.</p>
+This means that CSS style rules allow you to position boxes on layers in addition to the normal rendering layer (layer 0). The Z position of each layer is expressed as an integer representing the stacking order for rendering. Greater numbers mean closer to the observer. Z position can be controlled with the CSS `z-index` property.
 
-<p>Using <code>z-index</code> appears extremely easy: a single property, assigned a single integer number, with an easy-to-understand behavior. However, when <code>z-index</code> is applied to complex hierarchies of HTML elements, its behavior can be hard to understand or predict. This is due to complex stacking rules. In fact a dedicated section has been reserved in the CSS specification <a href="https://www.w3.org/TR/CSS21/zindex.html">CSS-2.1 Appendix E</a> to explain these rules better.</p>
+Using `z-index` appears extremely easy: a single property, assigned a single integer number, with an easy-to-understand behavior. However, when `z-index` is applied to complex hierarchies of HTML elements, its behavior can be hard to understand or predict. This is due to complex stacking rules. In fact a dedicated section has been reserved in the CSS specification [CSS-2.1 Appendix E](https://www.w3.org/TR/CSS21/zindex.html) to explain these rules better.
 
-<p>This article will try to explain those rules, with some simplification and several examples.</p>
+This article will try to explain those rules, with some simplification and several examples.
 
-<ol>
- <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index">Stacking without the z-index property</a>: The stacking rules that apply when <code>z-index</code> is not used.</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_and_float">Stacking with floated blocks</a>: How floating elements are handled with stacking.</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index">Using z-index</a>: How to use <code>z-index</code> to change default stacking.</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context">The stacking context</a>: Notes on the stacking context.</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1">Stacking context example 1</a>: 2-level HTML hierarchy, <code>z-index</code> on the last level</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_2">Stacking context example 2</a>: 2-level HTML hierarchy, <code>z-index</code> on all levels</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_3">Stacking context example 3</a>: 3-level HTML hierarchy, <code>z-index</code> on the second level</li>
-</ol>
+1.  [Stacking without the z-index property](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index): The stacking rules that apply when `z-index` is not used.
+2.  [Stacking with floated blocks](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_and_float): How floating elements are handled with stacking.
+3.  [Using z-index](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index): How to use `z-index` to change default stacking.
+4.  [The stacking context](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context): Notes on the stacking context.
+5.  [Stacking context example 1](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1): 2-level HTML hierarchy, `z-index` on the last level
+6.  [Stacking context example 2](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_2): 2-level HTML hierarchy, `z-index` on all levels
+7.  [Stacking context example 3](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_3): 3-level HTML hierarchy, `z-index` on the second level

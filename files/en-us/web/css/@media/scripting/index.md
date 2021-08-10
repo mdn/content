@@ -9,35 +9,35 @@ tags:
   - media feature
 browser-compat: css.at-rules.media.scripting
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>scripting</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features">media feature</a> can be used to test whether scripting (such as JavaScript) is available.</p>
+The **`scripting`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) can be used to test whether scripting (such as JavaScript) is available.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>scripting</code> feature is specified as a keyword value chosen from the list below.</p>
+The `scripting` feature is specified as a keyword value chosen from the list below.
 
-<dl>
- <dt><code>none</code></dt>
- <dd>Scripting is completely unavailable on the current document.</dd>
- <dt><code>initial-only</code></dt>
- <dd>Scripting is enabled during the initial page load, but not afterwards.</dd>
- <dt><code>enabled</code></dt>
- <dd>Scripting is supported and active on the current document.</dd>
-</dl>
+- `none`
+  - : Scripting is completely unavailable on the current document.
+- `initial-only`
+  - : Scripting is enabled during the initial page load, but not afterwards.
+- `enabled`
+  - : Scripting is supported and active on the current document.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p class="script-none"&gt;You do not have scripting available. :-(&lt;/p&gt;
-&lt;p class="script-initial-only"&gt;Your scripting is only enabled during the initial page load. Weird.&lt;/p&gt;
-&lt;p class="script-enabled"&gt;You have scripting enabled! :-)&lt;/p&gt;
-</pre>
+```html
+<p class="script-none">You do not have scripting available. :-(</p>
+<p class="script-initial-only">Your scripting is only enabled during the initial page load. Weird.</p>
+<p class="script-enabled">You have scripting enabled! :-)</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   color: lightgray;
 }
 
@@ -57,23 +57,22 @@ browser-compat: css.at-rules.media.scripting
   .script-enabled {
     color: red;
   }
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Examples")}}</p>
+{{EmbedLiveSample("Examples")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">Using Media Queries</a></li>
- <li><a href="/en-US/docs/Web/CSS/@media">@media</a></li>
-</ul>
+- [Using Media Queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [@media](/en-US/docs/Web/CSS/@media)

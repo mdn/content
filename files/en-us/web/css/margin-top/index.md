@@ -5,21 +5,21 @@ tags:
   - CSS
   - CSS Property
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.margin-top
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>margin-top</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets the <a href="/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">margin area</a> on the top of an element. A positive value places it farther from its neighbors, while a negative value places it closer.</p>
+The **`margin-top`** [CSS](/en-US/docs/Web/CSS) property sets the [margin area](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model) on the top of an element. A positive value places it farther from its neighbors, while a negative value places it closer.
 
-<div>{{EmbedInteractiveExample("pages/css/margin-top.html")}}</div>
+{{EmbedInteractiveExample("pages/css/margin-top.html")}}
 
+This property has no effect on _non-[replaced](/en-US/docs/Web/CSS/Replaced_element)_ inline elements, such as {{HTMLElement("span")}} or {{HTMLElement("code")}}.
 
-<p>This property has no effect on <em>non-<a href="/en-US/docs/Web/CSS/Replaced_element">replaced</a></em> inline elements, such as {{HTMLElement("span")}} or {{HTMLElement("code")}}.</p>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush:css no-line-numbers">/* &lt;length&gt; values */
+```css
+/* <length> values */
 margin-top: 10px;  /* An absolute length */
 margin-top: 1em;   /* relative to the text size */
 margin-top: 5%;    /* relative to the nearest block container's width */
@@ -32,50 +32,47 @@ margin-top: inherit;
 margin-top: initial;
 margin-top: revert;
 margin-top: unset;
-</pre>
+```
 
-<p>The <code>margin-top</code> property is specified as the keyword <code>auto</code>, or a <code>&lt;length&gt;</code>, or a <code>&lt;percentage&gt;</code>. Its value can be positive, zero, or negative.</p>
+The `margin-top` property is specified as the keyword `auto`, or a `<length>`, or a `<percentage>`. Its value can be positive, zero, or negative.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt>{{cssxref("&lt;length&gt;")}}</dt>
- <dd>The size of the margin as a fixed value.</dd>
- <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
- <dd>The size of the margin as a percentage, relative to the <em>width</em> of the containing block.</dd>
- <dt><code>auto</code></dt>
- <dd>The browser selects a suitable value to use. See {{cssxref("margin")}}.</dd>
-</dl>
+- {{cssxref("&lt;length&gt;")}}
+  - : The size of the margin as a fixed value.
+- {{cssxref("&lt;percentage&gt;")}}
+  - : The size of the margin as a percentage, relative to the _width_ of the containing block.
+- `auto`
+  - : The browser selects a suitable value to use. See {{cssxref("margin")}}.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_positive_and_negative_top_margins">Setting positive and negative top margins</h3>
+### Setting positive and negative top margins
 
-<pre class="brush:css;">.content { margin-top:   5%; }
+```css
+.content { margin-top:   5%; }
 .sidebox { margin-top: 10px; }
 .logo    { margin-top: -5px; }
 #footer  { margin-top:  1em; }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, and {{cssxref("margin-left")}} and the {{cssxref("margin")}} shorthand</li>
- <li>The mapped logical properties: {{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}}, {{cssxref("margin-inline-start")}}, and {{cssxref("margin-inline-end")}} and the shorthands {{cssxref("margin-block")}} and {{cssxref("margin-inline")}}</li>
-</ul>
+- {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, and {{cssxref("margin-left")}} and the {{cssxref("margin")}} shorthand
+- The mapped logical properties: {{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}}, {{cssxref("margin-inline-start")}}, and {{cssxref("margin-inline-end")}} and the shorthands {{cssxref("margin-block")}} and {{cssxref("margin-inline")}}

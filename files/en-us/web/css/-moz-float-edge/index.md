@@ -4,18 +4,19 @@ slug: Web/CSS/-moz-float-edge
 tags:
   - CSS
   - CSS Property
-  - 'CSS:Mozilla Extensions'
+  - CSS:Mozilla Extensions
   - Layout
   - NeedsCompatTable
   - Non-standard
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.-moz-float-edge
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<p>The non-standard <strong><code>-moz-float-edge</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property specifies whether the height and width properties of the element include the margin, border, or padding thickness.</p>
+The non-standard **`-moz-float-edge`** [CSS](/en-US/docs/Web/CSS) property specifies whether the height and width properties of the element include the margin, border, or padding thickness.
 
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 -moz-float-edge: border-box;
 -moz-float-edge: content-box;
 -moz-float-edge: margin-box;
@@ -25,64 +26,64 @@ browser-compat: css.properties.-moz-float-edge
 -moz-float-edge: inherit;
 -moz-float-edge: initial;
 -moz-float-edge: unset;
-</pre>
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>border-box</code></dt>
- <dd>The height and width properties include the content, padding and border but not the margin.</dd>
- <dt><code>content-box</code></dt>
- <dd>The height and width properties include the content, but not the padding, border or margin.</dd>
- <dt><code>margin-box</code></dt>
- <dd>The height and width properties include the content, padding, border and margin.</dd>
- <dt><code>padding-box</code></dt>
- <dd>The height and width properties include the content and padding but not the border or margin.</dd>
-</dl>
+- `border-box`
+  - : The height and width properties include the content, padding and border but not the margin.
+- `content-box`
+  - : The height and width properties include the content, but not the padding, border or margin.
+- `margin-box`
+  - : The height and width properties include the content, padding, border and margin.
+- `padding-box`
+  - : The height and width properties include the content and padding but not the border or margin.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div class="box"&gt;
-  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
-&lt;/div&gt;</pre>
+```html
+<div class="box">
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.box {
-  display: <span class="highVAL">block</span>;
+```css
+.box {
+  display: block;
   height: 5px;
   margin: 0.5em auto 0.5em auto;
   color: gray;
   -moz-float-edge: margin-box;
   box-sizing: border-box;
-} </pre>
+} 
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{ EmbedLiveSample('Examples') }}</p>
+{{ EmbedLiveSample('Examples') }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any standard.</p>
+Not part of any standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{bug(432891)}}</li>
-</ul>
+- {{bug(432891)}}

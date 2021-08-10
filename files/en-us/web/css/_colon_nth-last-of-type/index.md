@@ -1,6 +1,6 @@
 ---
 title: ':nth-last-of-type()'
-slug: 'Web/CSS/:nth-last-of-type'
+slug: Web/CSS/:nth-last-of-type
 tags:
   - CSS
   - Layout
@@ -10,64 +10,66 @@ tags:
   - Web
 browser-compat: css.selectors.nth-last-of-type
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>:nth-last-of-type()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> matches elements of a given type, based on their position among a group of siblings, counting from the end.</p>
+The **`:nth-last-of-type()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches elements of a given type, based on their position among a group of siblings, counting from the end.
 
-<pre class="brush: css no-line-numbers">/* Selects every fourth &lt;p&gt; element
+```css
+/* Selects every fourth <p> element
    among any group of siblings,
    counting backwards from the last one */
 p:nth-last-of-type(4n) {
   color: lime;
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Note:</strong> This pseudo-class is essentially the same as {{Cssxref(":nth-of-type")}}, except it counts items backwards from the <em>end</em>, not forwards from the beginning.</p>
-</div>
+> **Note:** This pseudo-class is essentially the same as {{Cssxref(":nth-of-type")}}, except it counts items backwards from the _end_, not forwards from the beginning.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>nth-last-of-type</code> pseudo-class is specified with a single argument, which represents the pattern for matching elements, counting from the end.</p>
+The `nth-last-of-type` pseudo-class is specified with a single argument, which represents the pattern for matching elements, counting from the end.
 
-<p>See {{Cssxref(":nth-last-child")}} for a more detailed explanation of its syntax.</p>
+See {{Cssxref(":nth-last-child")}} for a more detailed explanation of its syntax.
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;span&gt;This is a span.&lt;/span&gt;
-  &lt;span&gt;This is another span.&lt;/span&gt;
-  &lt;em&gt;This is emphasized.&lt;/em&gt;
-  &lt;span&gt;Wow, this span gets limed!!!&lt;/span&gt;
-  &lt;strike&gt;This is struck through.&lt;/strike&gt;
-  &lt;span&gt;Here is one last span.&lt;/span&gt;
-&lt;/div&gt;</pre>
+```html
+<div>
+  <span>This is a span.</span>
+  <span>This is another span.</span>
+  <em>This is emphasized.</em>
+  <span>Wow, this span gets limed!!!</span>
+  <strike>This is struck through.</strike>
+  <span>Here is one last span.</span>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">span:nth-last-of-type(2) {
+```css
+span:nth-last-of-type(2) {
   background-color: lime;
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample('Examples')}}</p>
+{{EmbedLiveSample('Examples')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Cssxref(":nth-last-child")}}, {{Cssxref(":nth-of-type")}}</li>
-</ul>
+- {{Cssxref(":nth-last-child")}}, {{Cssxref(":nth-of-type")}}

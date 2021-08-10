@@ -10,14 +10,15 @@ tags:
   - Layout
   - Reference
   - Web
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.initial-letter
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <code>initial-letter</code> CSS property sets styling for dropped, raised, and sunken initial letters.</p>
+The `initial-letter` CSS property sets styling for dropped, raised, and sunken initial letters.
 
-<pre class="brush: css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 initial-letter: normal;
 
 /* Numeric values */
@@ -31,44 +32,45 @@ initial-letter: inherit;
 initial-letter: initial;
 initial-letter: revert;
 initial-letter: unset;
-</pre>
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The keyword value <code>normal</code>, or a <code>&lt;number&gt;</code> optionally followed by an <code>&lt;integer&gt;</code>.</p>
+The keyword value `normal`, or a `<number>` optionally followed by an `<integer>`.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>normal</code></dt>
- <dd>No special initial-letter effect. Text behaves as normal.</dd>
- <dt><code>&lt;number&gt;</code></dt>
- <dd>Defines the size of the initial letter, in terms of how many lines it occupies. Negative values are not allowed.</dd>
- <dt><code>&lt;integer&gt;</code></dt>
- <dd>Defines the number of lines the initial letter should sink when the size of it is given. Values must be greater than zero. If omitted, it duplicates the size value, floored to the nearest positive whole number.</dd>
-</dl>
+- `normal`
+  - : No special initial-letter effect. Text behaves as normal.
+- `<number>`
+  - : Defines the size of the initial letter, in terms of how many lines it occupies. Negative values are not allowed.
+- `<integer>`
+  - : Defines the number of lines the initial letter should sink when the size of it is given. Values must be greater than zero. If omitted, it duplicates the size value, floored to the nearest positive whole number.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_initial_letter_size">Setting initial letter size</h3>
+### Setting initial letter size
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p class="normal"&gt;Initial letter is normal&lt;/p&gt;
-&lt;p class="onefive"&gt;Initial letter occupies 1.5 lines&lt;/p&gt;
-&lt;p class="three"&gt;Initial letter occupies 3 lines&lt;/p&gt;</pre>
+```html
+<p class="normal">Initial letter is normal</p>
+<p class="onefive">Initial letter occupies 1.5 lines</p>
+<p class="three">Initial letter occupies 3 lines</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush:css">.normal {
+```css
+.normal {
   -webkit-initial-letter: normal;
   initial-letter: normal;
 }
@@ -82,21 +84,19 @@ initial-letter: unset;
   -webkit-initial-letter: 3.0;
   initial-letter: 3.0;
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Setting_initial_letter_size', 250, 180)}}</p>
+{{EmbedLiveSample('Setting_initial_letter_size', 250, 180)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<ul>
-  <li>{{cssxref("initial-letter-align")}}</li>
-  <li><a href="https://www.oddbird.net/2017/01/03/initial-letter/">Drop caps in CSS</a></li>
- </ul>
+- {{cssxref("initial-letter-align")}}
+- [Drop caps in CSS](https://www.oddbird.net/2017/01/03/initial-letter/)

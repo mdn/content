@@ -1,6 +1,6 @@
 ---
 title: ':blank'
-slug: 'Web/CSS/:blank'
+slug: Web/CSS/:blank
 tags:
   - ':blank'
   - CSS
@@ -13,50 +13,50 @@ tags:
   - Selector
 browser-compat: css.selectors.blank
 ---
-<p>{{CSSRef}}{{SeeCompatTable}}</p>
+{{CSSRef}}{{SeeCompatTable}}
 
-<div class="notecard note">
-<p><strong>Note:</strong> The <code>:blank</code> selector is considered at risk, as the CSSWG keeps changing it.</p>
+> **Note:** The `:blank` selector is considered at risk, as the CSSWG keeps changing it.
+>
+> See [CSSWG issue #1967](https://github.com/w3c/csswg-drafts/issues/1967 "[selectors] decide on :blank").
 
-<p>See <a href="https://github.com/w3c/csswg-drafts/issues/1967" title="[selectors] decide on :blank">CSSWG issue #1967</a>.</p>
-</div>
+The **`:blank`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) selects empty user input elements (e.g. {{HTMLElement("input")}} or {{HTMLElement("textarea")}}).
 
-<p>The <strong><code>:blank</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> selects empty user input elements (e.g. {{HTMLElement("input")}} or {{HTMLElement("textarea")}}).</p>
-
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
 {{CSSSyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Simple_blank_example">Simple :blank example</h3>
+### Simple :blank example
 
-<p>In eventual supporting browsers, the <code>:blank</code> pseudo-class will enable developers to highlight in some way input controls that are not required, but still have no content filled in, perhaps as a reminder to users.</p>
+In eventual supporting browsers, the `:blank` pseudo-class will enable developers to highlight in some way input controls that are not required, but still have no content filled in, perhaps as a reminder to users.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;textarea&gt;&lt;/textarea&gt;</pre>
+```html
+<textarea></textarea>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">textarea:blank {
+```css
+textarea:blank {
   border: 3px solid red;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Simple_blank_example', '100%', 150)}}</p>
+{{EmbedLiveSample('Simple_blank_example', '100%', 150)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{CSSxRef(":empty")}}</li>
-</ul>
+- {{CSSxRef(":empty")}}

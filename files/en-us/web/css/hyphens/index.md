@@ -6,28 +6,25 @@ tags:
   - CSS Property
   - CSS Text
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.hyphens
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>hyphens</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property specifies how words should be hyphenated when text wraps across multiple lines. It can prevent hyphenation entirely, hyphenate at manually-specified points within the text, or let the browser automatically insert hyphens where appropriate.</p>
+The **`hyphens`** [CSS](/en-US/docs/Web/CSS) property specifies how words should be hyphenated when text wraps across multiple lines. It can prevent hyphenation entirely, hyphenate at manually-specified points within the text, or let the browser automatically insert hyphens where appropriate.
 
-<div>{{EmbedInteractiveExample("pages/css/hyphens.html")}}</div>
+{{EmbedInteractiveExample("pages/css/hyphens.html")}}
 
-<div class="notecard note">
-<p><strong>Note:</strong> In the above demo, the string "An extra­ordinarily long English word!" contains the hidden <code>&amp;shy;</code> character: <code>An extra&amp;shy;­ordinarily long English word!</code>. This character is used to indicate a potential place to insert a hyphen when <code>hyphens: manual;</code> is specified.</p>
-</div>
+> **Note:** In the above demo, the string "An extra­ordinarily long English word!" contains the hidden `&shy;` character: `An extra&shy;­ordinarily long English word!`. This character is used to indicate a potential place to insert a hyphen when `hyphens: manual;` is specified.
 
-<p>Hyphenation rules are language-specific. In HTML, the language is determined by the <code><a href="/en-US/docs/Web/HTML/Global_attributes/lang">lang</a></code> attribute, and browsers will hyphenate only if this attribute is present and the appropriate hyphenation dictionary is available. In XML, the <code><a href="/en-US/docs/Web/SVG/Attribute/xml:lang">xml:lang</a></code> attribute must be used.</p>
+Hyphenation rules are language-specific. In HTML, the language is determined by the [`lang`](/en-US/docs/Web/HTML/Global_attributes/lang) attribute, and browsers will hyphenate only if this attribute is present and the appropriate hyphenation dictionary is available. In XML, the [`xml:lang`](/en-US/docs/Web/SVG/Attribute/xml:lang) attribute must be used.
 
-<div class="note">
-<p><strong>Note:</strong> The rules defining how hyphenation is performed are not explicitly defined by the specification, so the exact hyphenation may vary from browser to browser.</p>
-</div>
+> **Note:** The rules defining how hyphenation is performed are not explicitly defined by the specification, so the exact hyphenation may vary from browser to browser.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 hyphens: none;
 hyphens: manual;
 hyphens: auto;
@@ -37,69 +34,63 @@ hyphens: inherit;
 hyphens: initial;
 hyphens: revert;
 hyphens: unset;
-</pre>
+```
 
-<p>The <code>hyphens</code> property is specified as a single keyword value chosen from the list below.</p>
+The `hyphens` property is specified as a single keyword value chosen from the list below.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>none</code></dt>
- <dd>Words are not broken at line breaks, even if characters inside the words suggest line break points. Lines will only wrap at whitespace.</dd>
- <dt><code>manual</code></dt>
- <dd>Words are broken for line-wrapping only where characters inside the word suggest line break opportunities. See {{anch("Suggesting line break opportunities")}} below for details.</dd>
- <dt><code>auto</code></dt>
- <dd>The browser is free to automatically break words at appropriate hyphenation points, following whatever rules it chooses. However, suggested line break opportunities (see {{anch("Suggesting line break opportunities")}} below) will override automatic break point selection when present.</dd>
-</dl>
+- `none`
+  - : Words are not broken at line breaks, even if characters inside the words suggest line break points. Lines will only wrap at whitespace.
+- `manual`
+  - : Words are broken for line-wrapping only where characters inside the word suggest line break opportunities. See {{anch("Suggesting line break opportunities")}} below for details.
+- `auto`
+  - : The browser is free to automatically break words at appropriate hyphenation points, following whatever rules it chooses. However, suggested line break opportunities (see {{anch("Suggesting line break opportunities")}} below) will override automatic break point selection when present.
 
-<div class="note">
-<p><strong>Note:</strong> The <code>auto</code> setting's behavior depends on the language being properly tagged to select the appropriate hyphenation rules. You must specify a language using the <code>lang</code> HTML attribute to guarantee that automatic hyphenation is applied in that language.</p>
-</div>
+> **Note:** The `auto` setting's behavior depends on the language being properly tagged to select the appropriate hyphenation rules. You must specify a language using the `lang` HTML attribute to guarantee that automatic hyphenation is applied in that language.
 
-<h2 id="Suggesting_line_break_opportunities">Suggesting line break opportunities</h2>
+## Suggesting line break opportunities
 
-<p>There are two Unicode characters used to manually specify potential line break points within text:</p>
+There are two Unicode characters used to manually specify potential line break points within text:
 
-<dl>
- <dt>U+2010 (HYPHEN)</dt>
- <dd>The "hard" hyphen character indicates a visible line break opportunity. Even if the line is not actually broken at that point, the hyphen is still rendered.</dd>
- <dt>U+00AD (SHY)</dt>
- <dd>An invisible, "<strong>s</strong>oft" <strong>hy</strong>phen. This character is not rendered visibly; instead, it marks a place where the browser should break the word if hyphenation is necessary. In HTML, use <code>&amp;shy;</code> to insert a soft hyphen.</dd>
-</dl>
+- U+2010 (HYPHEN)
+  - : The "hard" hyphen character indicates a visible line break opportunity. Even if the line is not actually broken at that point, the hyphen is still rendered.
+- U+00AD (SHY)
+  - : An invisible, "**s**oft" **hy**phen. This character is not rendered visibly; instead, it marks a place where the browser should break the word if hyphenation is necessary. In HTML, use `&shy;` to insert a soft hyphen.
 
-<div class="notecard note">
-<p><strong>Note:</strong> When the HTML <code><a href="/en-US/docs/Web/HTML/Element/wbr">&lt;wbr&gt;</a></code> element leads to a line break, no hyphen is added.</p>
-</div>
+> **Note:** When the HTML [`<wbr>`](/en-US/docs/Web/HTML/Element/wbr) element leads to a line break, no hyphen is added.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Specifying_text_hyphenation">Specifying text hyphenation</h3>
+### Specifying text hyphenation
 
-<p>This example uses three classes, one for each possible configuration of the <code>hyphens</code> property.</p>
+This example uses three classes, one for each possible configuration of the `hyphens` property.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;dl&gt;
-  &lt;dt&gt;&lt;code&gt;none&lt;/code&gt;: no hyphen; overflow if needed&lt;/dt&gt;
-  &lt;dd lang="en" class="none"&gt;An extreme&amp;shy;ly long English word&lt;/dd&gt;
-  &lt;dt&gt;&lt;code&gt;manual&lt;/code&gt;: hyphen only at &amp;amp;hyphen; or &amp;amp;shy; (if needed)&lt;/dt&gt;
-  &lt;dd lang="en" class="manual"&gt;An extreme&amp;shy;ly long English word&lt;/dd&gt;
-  &lt;dt&gt;&lt;code&gt;auto&lt;/code&gt;: hyphens where the algorithm decides (if needed)&lt;/dt&gt;
-  &lt;dd lang="en" class="auto"&gt;An extreme&amp;shy;ly long English word&lt;/dd&gt;
-&lt;/dl&gt;
-</pre>
+```html
+<dl>
+  <dt><code>none</code>: no hyphen; overflow if needed</dt>
+  <dd lang="en" class="none">An extreme&shy;ly long English word</dd>
+  <dt><code>manual</code>: hyphen only at &amp;hyphen; or &amp;shy; (if needed)</dt>
+  <dd lang="en" class="manual">An extreme&shy;ly long English word</dd>
+  <dt><code>auto</code>: hyphens where the algorithm decides (if needed)</dt>
+  <dd lang="en" class="auto">An extreme&shy;ly long English word</dd>
+</dl>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">dd {
+```css
+dd {
   width: 55px;
   border: 1px solid black;
  }
@@ -118,25 +109,23 @@ dd.auto {
   -ms-hyphens: auto;
   hyphens: auto;
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
 {{EmbedLiveSample("Specifying_text_hyphenation", "100%", 490)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Cssxref("content")}}</li>
- <li>{{cssxref("overflow-wrap")}} (formerly <code>word-wrap</code>)</li>
- <li>{{cssxref("word-break")}}</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Text/Wrapping_text">Guide to wrapping and breaking text</a></li>
-</ul>
+- {{Cssxref("content")}}
+- {{cssxref("overflow-wrap")}} (formerly `word-wrap`)
+- {{cssxref("word-break")}}
+- [Guide to wrapping and breaking text](/en-US/docs/Web/CSS/CSS_Text/Wrapping_text)

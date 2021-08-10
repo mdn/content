@@ -13,111 +13,109 @@ tags:
   - revert
 browser-compat: css.types.global_keywords.revert
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>revert</code></strong> CSS keyword reverts the cascaded value of the property from its current value to the value the property would have had if no changes had been made by the current <strong>{{Glossary("style origin")}}</strong> to the current element. Thus, it resets the property to its inherited value if it inherits from its parent or to the default value established by the user agent's stylesheet (or by user styles, if any exist). It can be applied to any CSS property, including the CSS shorthand {{cssxref("all")}}.</p>
+The **`revert`** CSS keyword reverts the cascaded value of the property from its current value to the value the property would have had if no changes had been made by the current **{{Glossary("style origin")}}** to the current element. Thus, it resets the property to its inherited value if it inherits from its parent or to the default value established by the user agent's stylesheet (or by user styles, if any exist). It can be applied to any CSS property, including the CSS shorthand {{cssxref("all")}}.
 
-<p>This removes from the cascade all of the styles that have been overridden until the style being rolled back to is reached.</p>
+This removes from the cascade all of the styles that have been overridden until the style being rolled back to is reached.
 
-<ul>
- <li>If used by a site's own styles (the author origin), <code>revert</code> rolls back the property's cascaded value to the user's custom style, if one exists; otherwise, it rolls the style back to the user agent's default style.</li>
- <li>If used in a user's custom stylesheet, or if the style was applied by the user (the user origin), <code>revert</code> rolls back the cascaded value to the user agent's default style.</li>
- <li>If used within the user agent's default styles, this keyword is functionally equivalent to {{cssxref("unset")}}.</li>
-</ul>
+- If used by a site's own styles (the author origin), `revert` rolls back the property's cascaded value to the user's custom style, if one exists; otherwise, it rolls the style back to the user agent's default style.
+- If used in a user's custom stylesheet, or if the style was applied by the user (the user origin), `revert` rolls back the cascaded value to the user agent's default style.
+- If used within the user agent's default styles, this keyword is functionally equivalent to {{cssxref("unset")}}.
 
-<p>The <code>revert</code> keyword works exactly the same as <code><a href="/en-US/docs/Web/CSS/unset">unset</a></code> in many cases. The only difference is for properties that have values set by the browser or by custom stylesheets created by users (set on the browser side).</p>
+The `revert` keyword works exactly the same as [`unset`](/en-US/docs/Web/CSS/unset) in many cases. The only difference is for properties that have values set by the browser or by custom stylesheets created by users (set on the browser side).
 
-<p>Revert will not affect rules applied to children of an element you reset (but will remove effects of a parent rule on a child). So if you have a <code>color: green</code> for all sections and <code>all: revert</code> on a specific section the color of the section will be black. But if you have a rule to make all paragraphs red then all paragraphs will still be red in all sections.</p>
+Revert will not affect rules applied to children of an element you reset (but will remove effects of a parent rule on a child). So if you have a `color: green` for all sections and `all: revert` on a specific section the color of the section will be black. But if you have a rule to make all paragraphs red then all paragraphs will still be red in all sections.
 
-<div class="notecard note">
-<p><strong>Note:</strong> Revert is just a value. It is still possible to override <code>revert</code> value using <a href="/en-US/docs/Web/CSS/Specificity">specificity</a>.</p>
-</div>
+> **Note:** Revert is just a value. It is still possible to override `revert` value using [specificity](/en-US/docs/Web/CSS/Specificity).
 
-<div class="note">
-<p><strong>Note:</strong> The <code>revert</code> keyword is different from and should not be confused with {{cssxref("initial")}}, which uses the <a href="/en-US/docs/Web/CSS/initial_value">initial value</a> defined on a per-property basis by the CSS specifications. In contrast, user-agent stylesheets set default values on the basis of CSS selectors.</p>
+> **Note:** The `revert` keyword is different from and should not be confused with {{cssxref("initial")}}, which uses the [initial value](/en-US/docs/Web/CSS/initial_value) defined on a per-property basis by the CSS specifications. In contrast, user-agent stylesheets set default values on the basis of CSS selectors.
+>
+> For example, the [initial value](/en-US/docs/Web/CSS/initial_value) for the {{cssxref("display")}} property is `inline`, whereas a normal user-agent stylesheet sets the default {{cssxref("display")}} value of {{HTMLElement("div")}}s to `block`, of {{HTMLElement("table")}}s to `table`, etc.
 
-<p>For example, the <a href="/en-US/docs/Web/CSS/initial_value">initial value</a> for the {{cssxref("display")}} property is <code>inline</code>, whereas a normal user-agent stylesheet sets the default {{cssxref("display")}} value of {{HTMLElement("div")}}s to <code>block</code>, of {{HTMLElement("table")}}s to <code>table</code>, etc.</p>
-</div>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Revert vs unset
 
-<h3 id="Revert_vs_unset">Revert vs unset</h3>
+Although `revert` and `unset` are similar they differ for some properties for some elements.
 
-<p>Although <code>revert</code> and <code>unset</code> are similar they differ for some properties for some elements.</p>
+So in the below example, we set custom `font-weight` in a global stylesheet, but then try to unset and revert. Unset will keep the text normal because this is an initial value for font-weight property. Revert will revert to bold because this is a default value for headers in most browsers.
 
-<p>So in the below example, we set custom <code>font-weight</code> in a global stylesheet, but then try to unset and revert. Unset will keep the text normal because this is an initial value for font-weight property. Revert will revert to bold because this is a default value for headers in most browsers.</p>
-
-<pre class="brush: css">h3 {
+```css
+h3 {
   font-weight: normal;
   color: blue;
-}</pre>
+}
+```
 
-<pre class="brush: html">&lt;h3 style="font-weight: unset; color: unset;"&gt;This will still have font-weight: normal, but color: black&lt;/h3&gt;
-&lt;p&gt;Just some text&lt;/p&gt;
-&lt;h3 style="font-weight: revert; color: revert;"&gt;This should have its original font-weight (bold) and color: black&lt;/h3&gt;
-&lt;p&gt;Just some text&lt;/p&gt;</pre>
+```html
+<h3 style="font-weight: unset; color: unset;">This will still have font-weight: normal, but color: black</h3>
+<p>Just some text</p>
+<h3 style="font-weight: revert; color: revert;">This should have its original font-weight (bold) and color: black</h3>
+<p>Just some text</p>
+```
 
-<p>{{EmbedLiveSample('Revert_vs_unset')}}</p>
+{{EmbedLiveSample('Revert_vs_unset')}}
 
-<h3 id="Revert_all">Revert all</h3>
+### Revert all
 
-<p>Reverting all values is useful when you did heavy modifications for something and then want to revert to defaults. So to iterate on above example instead of reverting font-weight and color separately you could just revert all of them.</p>
+Reverting all values is useful when you did heavy modifications for something and then want to revert to defaults. So to iterate on above example instead of reverting font-weight and color separately you could just revert all of them.
 
-<pre class="brush: css">h3 {
+```css
+h3 {
   font-weight: normal;
   color: blue;
   border-bottom: 1px solid grey;
-}</pre>
+}
+```
 
-<pre class="brush: html">&lt;h3&gt;This will have custom styles&lt;/h3&gt;
-&lt;p&gt;Just some text&lt;/p&gt;
-&lt;h3 style="all: revert"&gt;This should be reverted to browser/user defaults&lt;/h3&gt;
-&lt;p&gt;Just some text&lt;/p&gt;</pre>
+```html
+<h3>This will have custom styles</h3>
+<p>Just some text</p>
+<h3 style="all: revert">This should be reverted to browser/user defaults</h3>
+<p>Just some text</p>
+```
 
-<p>{{EmbedLiveSample('Revert_all')}}</p>
+{{EmbedLiveSample('Revert_all')}}
 
-<h3 id="Revert_on_a_parent">Revert on a parent</h3>
+### Revert on a parent
 
-<p>Reverting effectively removes the value for the element you select with some rule and only for that element. To illustrate this we will set a green color on a section and red color on a paragraph.</p>
+Reverting effectively removes the value for the element you select with some rule and only for that element. To illustrate this we will set a green color on a section and red color on a paragraph.
 
-<pre class="brush: css">section { color: darkgreen }
+```css
+section { color: darkgreen }
 p { color: red }
 section.with-revert { color: revert }
-</pre>
+```
 
-<pre class="brush: html">&lt;section&gt;
-  &lt;h3&gt;This will be dark green&lt;/h3&gt;
-  &lt;p&gt;Text in paragraph will be red.&lt;/p&gt;
+```html
+<section>
+  <h3>This will be dark green</h3>
+  <p>Text in paragraph will be red.</p>
   This will also be dark green.
-&lt;/section&gt;
-&lt;section class="with-revert"&gt;
-  &lt;h3&gt;This will be black&lt;/h3&gt;
-  &lt;p&gt;Text in paragraph will be red.&lt;/p&gt;
+</section>
+<section class="with-revert">
+  <h3>This will be black</h3>
+  <p>Text in paragraph will be red.</p>
   This will also be black.
-&lt;/section&gt;</pre>
+</section>
+```
 
-<p>Notice how paragraph still has a red color even though a color property for the section was reverted. Also note that both the header and plain text node is black. This is exactly the same as if <code>section { color: darkgreen }</code> would not exist for the second section.</p>
+Notice how paragraph still has a red color even though a color property for the section was reverted. Also note that both the header and plain text node is black. This is exactly the same as if `section { color: darkgreen }` would not exist for the second section.
 
-<p>{{EmbedLiveSample('Revert_on_a_parent')}}</p>
+{{EmbedLiveSample('Revert_on_a_parent')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
-<div>
+{{Compat}}
 
-<p>{{Compat}}</p>
-</div>
-</div>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>Use {{cssxref("initial")}} to set a property to its initial value.</li>
- <li>Use {{cssxref("unset")}} to set a property to its inherited value if it inherits, or to its initial value if not.</li>
- <li>Use {{cssxref("inherit")}} to make an element's property the same as its parent.</li>
- <li>The {{cssxref("all")}} property lets you reset all properties to their initial, inherited, reverted, or unset state at once.</li>
-</ul>
+- Use {{cssxref("initial")}} to set a property to its initial value.
+- Use {{cssxref("unset")}} to set a property to its inherited value if it inherits, or to its initial value if not.
+- Use {{cssxref("inherit")}} to make an element's property the same as its parent.
+- The {{cssxref("all")}} property lets you reset all properties to their initial, inherited, reverted, or unset state at once.

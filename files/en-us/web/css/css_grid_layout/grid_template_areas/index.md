@@ -6,37 +6,37 @@ tags:
   - CSS Grids
   - Guide
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>In the <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid">previous guide</a> we looked at grid lines, and how to position items against those lines. When you use CSS Grid Layout you always have lines, and this can be a straightforward way to place items on your grid. However, there is an alternate method to use for positioning items on the grid which you can use alone or in combination with line-based placement. This method involves placing our items using named template areas, and we will find out exactly how this method works. You will see very quickly why we sometimes call this the ascii-art method of grid layout!</p>
+In the [previous guide](/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid) we looked at grid lines, and how to position items against those lines. When you use CSS Grid Layout you always have lines, and this can be a straightforward way to place items on your grid. However, there is an alternate method to use for positioning items on the grid which you can use alone or in combination with line-based placement. This method involves placing our items using named template areas, and we will find out exactly how this method works. You will see very quickly why we sometimes call this the ascii-art method of grid layout!
 
-<h2>Naming a grid area</h2>
+## Naming a grid area
 
-<p>You have already encountered the {{cssxref("grid-area")}} property. This is the property that can take as a value all four of the lines used to position a grid area.</p>
+You have already encountered the {{cssxref("grid-area")}} property. This is the property that can take as a value all four of the lines used to position a grid area.
 
-<pre class="brush: css">.box1 {
+```css
+.box1 {
    grid-area: 1 / 1 / 4 / 2;
 }
-</pre>
+```
 
-<p>What we are doing here when defining all four lines, is defining the area by specifying the lines that enclose that area.</p>
+What we are doing here when defining all four lines, is defining the area by specifying the lines that enclose that area.
 
-<p><img alt="The Grid Area defined by lines" src="4_area.png"></p>
+![The Grid Area defined by lines](4_area.png)
 
-<p>We can also define an area by giving it a name and then specify the location of that area in the value of the {{cssxref("grid-template-areas")}} property. You can choose what you would like to name your area. For example, if I wish to create the layout shown below I can identify four main areas.</p>
+We can also define an area by giving it a name and then specify the location of that area in the value of the {{cssxref("grid-template-areas")}} property. You can choose what you would like to name your area. For example, if I wish to create the layout shown below I can identify four main areas.
 
-<ul>
- <li>a header</li>
- <li>a footer</li>
- <li>a sidebar</li>
- <li>the main content</li>
-</ul>
+- a header
+- a footer
+- a sidebar
+- the main content
 
-<p><img alt="An image showing a simple two column layout with header and footer" src="4_layout.png"></p>
+![An image showing a simple two column layout with header and footer](4_layout.png)
 
-<p>With the {{cssxref("grid-area")}} property I can assign each of these areas a name. This will not yet create any layout, but we now have named areas to use in a layout.</p>
+With the {{cssxref("grid-area")}} property I can assign each of these areas a name. This will not yet create any layout, but we now have named areas to use in a layout.
 
-<pre class="brush: css">.header {
+```css
+.header {
     grid-area: hd;
 }
 .footer {
@@ -48,11 +48,12 @@ tags:
 .sidebar {
     grid-area: sd;
 }
-</pre>
+```
 
-<p>Having defined these names I then create my layout. This time, instead of placing my items using line numbers specified on the items themselves, I create the whole layout on the grid container.</p>
+Having defined these names I then create my layout. This time, instead of placing my items using line numbers specified on the items themselves, I create the whole layout on the grid container.
 
-<pre class="brush: css">.wrapper {
+```css
+.wrapper {
     display: grid;
     grid-template-columns: repeat(9, 1fr);
     grid-auto-rows: minmax(100px, auto);
@@ -61,9 +62,10 @@ tags:
       "sd sd sd main main main main main main"
       "ft ft ft ft   ft   ft   ft   ft   ft";
 }
-</pre>
+```
 
-<pre class="brush: css hidden">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -73,31 +75,34 @@ tags:
     margin: 0 auto;
 }
 
-.wrapper &gt; div {
+.wrapper > div {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
     padding: 1em;
     color: #d9480f;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-    &lt;div class="header"&gt;Header&lt;/div&gt;
-    &lt;div class="sidebar"&gt;Sidebar&lt;/div&gt;
-    &lt;div class="content"&gt;Content&lt;/div&gt;
-    &lt;div class="footer"&gt;Footer&lt;/div&gt;
-&lt;/div&gt;</pre>
+```html
+<div class="wrapper">
+    <div class="header">Header</div>
+    <div class="sidebar">Sidebar</div>
+    <div class="content">Content</div>
+    <div class="footer">Footer</div>
+</div>
+```
 
-<p>{{ EmbedLiveSample('Naming_a_grid_area', '300', '330') }}</p>
+{{ EmbedLiveSample('Naming_a_grid_area', '300', '330') }}
 
-<p>Using this method we do not need to specify anything at all on the individual grid items, everything happens on our grid container. We can see the layout described as the value of the {{cssxref("grid-template-areas")}} property.</p>
+Using this method we do not need to specify anything at all on the individual grid items, everything happens on our grid container. We can see the layout described as the value of the {{cssxref("grid-template-areas")}} property.
 
-<h2>Leaving a grid cell empty</h2>
+## Leaving a grid cell empty
 
-<p>We have completely filled our grid with areas in this example, leaving no white space. However you can leave grid cells empty with this method of layout. To leave a cell empty use the full stop character, '<code>.</code>'. If I want to only display the footer directly under the main content I would need to leave the three cells underneath the sidebar empty.</p>
+We have completely filled our grid with areas in this example, leaving no white space. However you can leave grid cells empty with this method of layout. To leave a cell empty use the full stop character, '`.`'. If I want to only display the footer directly under the main content I would need to leave the three cells underneath the sidebar empty.
 
-<pre class="brush: css">.header {
+```css
+.header {
     grid-area: hd;
 }
 .footer {
@@ -109,9 +114,10 @@ tags:
 .sidebar {
     grid-area: sd;
 }
-</pre>
+```
 
-<pre class="brush: css hidden">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -121,16 +127,17 @@ tags:
     margin: 0 auto;
 }
 
-.wrapper &gt; div {
+.wrapper > div {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
     padding: 1em;
     color: #d9480f;
 }
-</pre>
+```
 
-<pre class="brush: css">.wrapper {
+```css
+.wrapper {
     display: grid;
     grid-template-columns: repeat(9, 1fr);
     grid-auto-rows: minmax(100px, auto);
@@ -139,26 +146,29 @@ tags:
       "sd sd sd main main main main main main"
       ".  .  .  ft   ft   ft   ft   ft   ft";
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-    &lt;div class="header"&gt;Header&lt;/div&gt;
-    &lt;div class="sidebar"&gt;Sidebar&lt;/div&gt;
-    &lt;div class="content"&gt;Content&lt;/div&gt;
-    &lt;div class="footer"&gt;Footer&lt;/div&gt;
-&lt;/div&gt;</pre>
+```html
+<div class="wrapper">
+    <div class="header">Header</div>
+    <div class="sidebar">Sidebar</div>
+    <div class="content">Content</div>
+    <div class="footer">Footer</div>
+</div>
+```
 
-<p>{{ EmbedLiveSample('Leaving_a_grid_cell_empty', '300', '330') }}</p>
+{{ EmbedLiveSample('Leaving_a_grid_cell_empty', '300', '330') }}
 
-<p>In order to make the layout neater I can use multiple <code>.</code> characters. As long as there is no white space between the full stops it will be counted as one cell. For a complex layout there is a benefit to having the rows and columns neatly aligned. It means that you can actually see, right there in the CSS, what this layout looks like.</p>
+In order to make the layout neater I can use multiple `.` characters. As long as there is no white space between the full stops it will be counted as one cell. For a complex layout there is a benefit to having the rows and columns neatly aligned. It means that you can actually see, right there in the CSS, what this layout looks like.
 
-<h2>Spanning multiple cells</h2>
+## Spanning multiple cells
 
-<p>In our example each of the areas spans multiple grid cells and we achieve this by repeating the name of that grid area multiple times with white space between. You can add extra white space in order to keep your columns neatly lined up in the value of <code>grid-template-areas</code>. You can see that I have done this in order that the <code>hd</code> and <code>ft</code> line up with <code>main</code>.</p>
+In our example each of the areas spans multiple grid cells and we achieve this by repeating the name of that grid area multiple times with white space between. You can add extra white space in order to keep your columns neatly lined up in the value of `grid-template-areas`. You can see that I have done this in order that the `hd` and `ft` line up with `main`.
 
-<p>The area that you create by chaining the area names must be rectangular, at this point there is no way to create an L-shaped area. The specification does note that a future level might provide this functionality. You can however span rows just as easily as columns. For example we could make our sidebar span down to the end of the footer by replacing the <code>.</code> with <code>sd</code>.</p>
+The area that you create by chaining the area names must be rectangular, at this point there is no way to create an L-shaped area. The specification does note that a future level might provide this functionality. You can however span rows just as easily as columns. For example we could make our sidebar span down to the end of the footer by replacing the `.` with `sd`.
 
-<pre class="brush: css">.header {
+```css
+.header {
     grid-area: hd;
 }
 .footer {
@@ -170,9 +180,10 @@ tags:
 .sidebar {
     grid-area: sd;
 }
-</pre>
+```
 
-<pre class="brush: css hidden">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -182,16 +193,17 @@ tags:
     margin: 0 auto;
 }
 
-.wrapper &gt; div {
+.wrapper > div {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
     padding: 1em;
     color: #d9480f;
 }
-</pre>
+```
 
-<pre class="brush: css">.wrapper {
+```css
+.wrapper {
     display: grid;
     grid-template-columns: repeat(9, 1fr);
     grid-auto-rows: minmax(100px, auto);
@@ -200,28 +212,31 @@ tags:
       "sd sd sd main main main main main main"
       "sd sd sd  ft  ft   ft   ft   ft   ft";
 }
-</pre>
+```
 
-<pre class="brush: html hidden">&lt;div class="wrapper"&gt;
-    &lt;div class="header"&gt;Header&lt;/div&gt;
-    &lt;div class="sidebar"&gt;Sidebar&lt;/div&gt;
-    &lt;div class="content"&gt;Content&lt;/div&gt;
-    &lt;div class="footer"&gt;Footer&lt;/div&gt;
-&lt;/div&gt;</pre>
+```html hidden
+<div class="wrapper">
+    <div class="header">Header</div>
+    <div class="sidebar">Sidebar</div>
+    <div class="content">Content</div>
+    <div class="footer">Footer</div>
+</div>
+```
 
-<p>{{ EmbedLiveSample('Spanning_multiple_cells', '300', '330') }}</p>
+{{ EmbedLiveSample('Spanning_multiple_cells', '300', '330') }}
 
-<p>The value of {{cssxref("grid-template-areas")}} must show a complete grid, otherwise it is invalid (and the property is ignored). This means that you must have the same number of cells for each row, if empty with a full stop character demonstrating that the cell is to be left empty. You will also create an invalid grid if your areas are not rectangular.</p>
+The value of {{cssxref("grid-template-areas")}} must show a complete grid, otherwise it is invalid (and the property is ignored). This means that you must have the same number of cells for each row, if empty with a full stop character demonstrating that the cell is to be left empty. You will also create an invalid grid if your areas are not rectangular.
 
-<h2>Redefining the grid using media queries</h2>
+## Redefining the grid using media queries
 
-<p>As our layout is now contained in one part of the CSS, this makes it very easy to make changes at different breakpoints. You can do this by redefining the grid, the position of items on the grid, or both at once.</p>
+As our layout is now contained in one part of the CSS, this makes it very easy to make changes at different breakpoints. You can do this by redefining the grid, the position of items on the grid, or both at once.
 
-<p>When doing this, define the names for your areas outside of any media queries. That way the content area would always be called <code>main</code> no matter where on the grid it is placed.</p>
+When doing this, define the names for your areas outside of any media queries. That way the content area would always be called `main` no matter where on the grid it is placed.
 
-<p>For our layout above, we might like to have a very simple layout at narrow widths, defining a single column grid and stacking up our items.</p>
+For our layout above, we might like to have a very simple layout at narrow widths, defining a single column grid and stacking up our items.
 
-<pre class="brush: css hidden">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -231,16 +246,17 @@ tags:
     margin: 0 auto;
 }
 
-.wrapper &gt; div {
+.wrapper > div {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
     padding: 1em;
     color: #d9480f;
 }
-</pre>
+```
 
-<pre class="brush: css">.header {
+```css
+.header {
     grid-area: hd;
 }
 .footer {
@@ -263,11 +279,12 @@ tags:
       "sd"
       "ft";
 }
-</pre>
+```
 
-<p>We can then redefine that layout inside media queries to go to our two columns layout, and perhaps take it to a three column layout if the available space is even wider. Note that for the wide layout I keep my nine column track grid, I redefine where items are placed using <code>grid-template-areas</code>.</p>
+We can then redefine that layout inside media queries to go to our two columns layout, and perhaps take it to a three column layout if the available space is even wider. Note that for the wide layout I keep my nine column track grid, I redefine where items are placed using `grid-template-areas`.
 
-<pre class="brush: css">@media (min-width: 500px) {
+```css
+@media (min-width: 500px) {
     .wrapper {
         grid-template-columns: repeat(9, 1fr);
         grid-template-areas:
@@ -283,33 +300,35 @@ tags:
           "sd sd main main main main main ft ft";
     }
 }
-</pre>
+```
 
+```html hidden
+<div class="wrapper">
+    <div class="header">Header</div>
+    <div class="sidebar">Sidebar</div>
+    <div class="content">Content</div>
+    <div class="footer">Footer</div>
+</div>
+```
 
-<pre class="brush: html hidden">&lt;div class="wrapper"&gt;
-    &lt;div class="header"&gt;Header&lt;/div&gt;
-    &lt;div class="sidebar"&gt;Sidebar&lt;/div&gt;
-    &lt;div class="content"&gt;Content&lt;/div&gt;
-    &lt;div class="footer"&gt;Footer&lt;/div&gt;
-&lt;/div&gt;</pre>
+{{ EmbedLiveSample('Redefining_the_grid_using_media_queries', '550', '330') }}
 
-<p>{{ EmbedLiveSample('Redefining_the_grid_using_media_queries', '550', '330') }}</p>
+## Using `grid-template-areas` for UI elements
 
-<h2 id="Using_grid-template-areas_for_UI_elements">Using <code>grid-template-areas</code> for UI elements</h2>
+Many of the grid examples you will find online make the assumption that you will use grid for main page layout, however grid can be just as useful for small elements as those larger ones. Using {{cssxref("grid-template-areas")}} can be especially nice as it is easy to see in the code what your element looks like.
 
-<p>Many of the grid examples you will find online make the assumption that you will use grid for main page layout, however grid can be just as useful for small elements as those larger ones. Using {{cssxref("grid-template-areas")}} can be especially nice as it is easy to see in the code what your element looks like.</p>
+### Media object example
 
-<h3>Media object example</h3>
+As a very simple example we can create a “media object”. This is a component with space for an image or other media on one side and content on the other. The image might be displayed on the right or left of the box.
 
-<p>As a very simple example we can create a “media object”. This is a component with space for an image or other media on one side and content on the other. The image might be displayed on the right or left of the box.</p>
+![Images showing an example media object design](4_media_objects.png)
 
-<p><img alt="Images showing an example media object design" src="4_media_objects.png"></p>
+Our grid is a two-column track grid, with the column for the image sized at `1fr` and the text `3fr`. If you wanted a fixed width image area, then you could set the image column as a pixel width, and assign the text area `1fr`. A single column track of `1fr` would then take up the rest of the space.
 
-<p>Our grid is a two-column track grid, with the column for the image sized at <code>1fr</code> and the text <code>3fr</code>. If you wanted a fixed width image area, then you could set the image column as a pixel width, and assign the text area <code>1fr</code>. A single column track of <code>1fr</code> would then take up the rest of the space.</p>
+We give the image area a grid area name of `img` and the text area `content`, then we can lay those out using the `grid-template-areas` property.
 
-<p>We give the image area a grid area name of <code>img</code> and the text area <code>content</code>, then we can lay those out using the <code>grid-template-areas</code> property.</p>
-
-<pre class="brush: css">* {box-sizing: border-box;}
+```css
+* {box-sizing: border-box;}
 
 .media {
     border: 2px solid #f76707;
@@ -334,22 +353,25 @@ tags:
     padding: 10px;
 
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div class="media"&gt;
-    &lt;div class="image"&gt;&lt;/div&gt;
-    &lt;div class="text"&gt;This is a media object example.
+```html
+<div class="media">
+    <div class="image"></div>
+    <div class="text">This is a media object example.
       We can use grid-template-areas to switch around the image and text part of the media object.
-    &lt;/div&gt;
-&lt;/div&gt;</pre>
+    </div>
+</div>
+```
 
-<p>{{ EmbedLiveSample('Media_object_example', '300', '200') }}</p>
+{{ EmbedLiveSample('Media_object_example', '300', '200') }}
 
-<h3>Displaying the image on the other side of the box</h3>
+### Displaying the image on the other side of the box
 
-<p>We might want to be able to display our box with the image the other way around. To do this, we redefine the grid to put the <code>1fr</code> track last, and flip the values in {{cssxref("grid-template-areas")}}.</p>
+We might want to be able to display our box with the image the other way around. To do this, we redefine the grid to put the `1fr` track last, and flip the values in {{cssxref("grid-template-areas")}}.
 
-<pre class="brush: css">* {box-sizing: border-box;}
+```css
+* {box-sizing: border-box;}
 
 .media {
     border: 2px solid #f76707;
@@ -379,42 +401,43 @@ tags:
     padding: 10px;
 
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div class="media flipped"&gt;
-    &lt;div class="image"&gt;&lt;/div&gt;
-    &lt;div class="text"&gt;This is a media object example.
+```html
+<div class="media flipped">
+    <div class="image"></div>
+    <div class="text">This is a media object example.
       We can use grid-template-areas to switch around the image and text part of the media object.
-    &lt;/div&gt;
-&lt;/div&gt;</pre>
+    </div>
+</div>
+```
 
-<p>{{ EmbedLiveSample('Displaying_the_image_on_the_other_side_of_the_box', '300', '200') }}</p>
+{{ EmbedLiveSample('Displaying_the_image_on_the_other_side_of_the_box', '300', '200') }}
 
-<h2 id="Grid_definition_shorthands">Grid definition shorthands</h2>
+## Grid definition shorthands
 
-<p>Having looked at various ways of placing items on our grids and many of the properties used to define grid, this is a good time to take a look at a couple of shorthands that are available for defining the grid and many things about it all in one line of CSS.</p>
+Having looked at various ways of placing items on our grids and many of the properties used to define grid, this is a good time to take a look at a couple of shorthands that are available for defining the grid and many things about it all in one line of CSS.
 
-<p>These can quickly become difficult to read for other developers, or even your future self. However they are part of the specification and it is likely you will come across them in examples or in use by other developers, even if you choose not to use them.</p>
+These can quickly become difficult to read for other developers, or even your future self. However they are part of the specification and it is likely you will come across them in examples or in use by other developers, even if you choose not to use them.
 
-<p>Before using any shorthand it is worth remembering that shorthands not only enable the setting of many properties in one go, they also act to <strong>reset things</strong> to their initial values that you do not, or cannot set in the shorthand. Therefore if you use a shorthand, be aware that it may reset things you have applied elsewhere.</p>
+Before using any shorthand it is worth remembering that shorthands not only enable the setting of many properties in one go, they also act to **reset things** to their initial values that you do not, or cannot set in the shorthand. Therefore if you use a shorthand, be aware that it may reset things you have applied elsewhere.
 
-<p>The two shorthands for the grid container are the Explicit Grid Shorthand <code>grid-template</code> and the Grid Definition Shorthand <code>grid</code>.</p>
+The two shorthands for the grid container are the Explicit Grid Shorthand `grid-template` and the Grid Definition Shorthand `grid`.
 
-<h3 id="grid-template"><code>grid-template</code></h3>
+### `grid-template`
 
-<p>The {{cssxref("grid-template")}} property sets the following properties:</p>
+The {{cssxref("grid-template")}} property sets the following properties:
 
-<ul>
- <li>{{cssxref("grid-template-rows")}}</li>
- <li>{{cssxref("grid-template-columns")}}</li>
- <li>{{cssxref("grid-template-areas")}}</li>
-</ul>
+- {{cssxref("grid-template-rows")}}
+- {{cssxref("grid-template-columns")}}
+- {{cssxref("grid-template-areas")}}
 
-<p>The property is referred to as the Explicit Grid Shorthand because it is setting those things that you control when you define an explicit grid, and not those which impact any implicit row or column tracks that might be created.</p>
+The property is referred to as the Explicit Grid Shorthand because it is setting those things that you control when you define an explicit grid, and not those which impact any implicit row or column tracks that might be created.
 
-<p>The following code creates a layout using {{cssxref("grid-template")}} that is the same as the layout created earlier in this guide.</p>
+The following code creates a layout using {{cssxref("grid-template")}} that is the same as the layout created earlier in this guide.
 
-<pre class="brush: css">.wrapper {
+```css
+.wrapper {
     display: grid;
     grid-template:
       "hd hd hd hd   hd   hd   hd   hd   hd" minmax(100px, auto)
@@ -422,36 +445,35 @@ tags:
       "ft ft ft ft   ft   ft   ft   ft   ft" minmax(100px, auto)
              / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
 }
-</pre>
+```
 
-<p>The first value is our <code>grid-template-areas</code> value but we also declare the size of the row at the end of each row. This is what the <code>minmax(100px, auto)</code> is doing.</p>
+The first value is our `grid-template-areas` value but we also declare the size of the row at the end of each row. This is what the `minmax(100px, auto)` is doing.
 
-<p>Then after <code>grid-template-areas</code> we have a forward slash, after that is an explicit track listing of column tracks.</p>
+Then after `grid-template-areas` we have a forward slash, after that is an explicit track listing of column tracks.
 
-<h3 id="grid"><code>grid</code></h3>
+### `grid`
 
-<p>The {{cssxref("grid")}} shorthand goes a step further and also sets properties used by the implicit grid. So you will be setting:</p>
+The {{cssxref("grid")}} shorthand goes a step further and also sets properties used by the implicit grid. So you will be setting:
 
-<ul>
- <li>{{cssxref("grid-template-rows")}}</li>
- <li>{{cssxref("grid-template-columns")}}</li>
- <li>{{cssxref("grid-template-areas")}}</li>
- <li>{{cssxref("grid-auto-rows")}}</li>
- <li>{{cssxref("grid-auto-columns")}}</li>
- <li>{{cssxref("grid-auto-flow")}}</li>
-</ul>
+- {{cssxref("grid-template-rows")}}
+- {{cssxref("grid-template-columns")}}
+- {{cssxref("grid-template-areas")}}
+- {{cssxref("grid-auto-rows")}}
+- {{cssxref("grid-auto-columns")}}
+- {{cssxref("grid-auto-flow")}}
 
-<p>You can use this syntax in the exact same way as the {{cssxref("grid-template")}} shorthand, just be aware than when doing so you will reset the other values set by the property.</p>
+You can use this syntax in the exact same way as the {{cssxref("grid-template")}} shorthand, just be aware than when doing so you will reset the other values set by the property.
 
-<pre class="brush: css">.wrapper {
+```css
+.wrapper {
     display: grid;
     grid: "hd hd hd hd   hd   hd   hd   hd   hd" minmax(100px, auto)
     "sd sd sd main main main main main main" minmax(100px, auto)
     "ft ft ft ft   ft   ft   ft   ft   ft" minmax(100px, auto)
     / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
 }
-</pre>
+```
 
-<p>We will revisit the other functionality offered by this shorthand later in these guides when we take a look at auto placement and the grid-auto-flow property.</p>
+We will revisit the other functionality offered by this shorthand later in these guides when we take a look at auto placement and the grid-auto-flow property.
 
-<p>If you have worked through these initial guides you now should be in a position to create grid layouts using line-based placement or named areas. Take some time to build some common layout patterns using grid, while there are lots of new terms to learn, the syntax is relatively straightforward. As you develop examples, you are likely to come up with some questions and use cases for things we haven't covered yet. In the rest of these guides we will be looking at some more of the detail included in the specification – in order that you can begin to create advanced layouts with it.</p>
+If you have worked through these initial guides you now should be in a position to create grid layouts using line-based placement or named areas. Take some time to build some common layout patterns using grid, while there are lots of new terms to learn, the syntax is relatively straightforward. As you develop examples, you are likely to come up with some questions and use cases for things we haven't covered yet. In the rest of these guides we will be looking at some more of the detail included in the specification – in order that you can begin to create advanced layouts with it.

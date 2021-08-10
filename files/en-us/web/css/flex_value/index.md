@@ -10,40 +10,40 @@ tags:
   - Web
 browser-compat: css.types.flex
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>&lt;flex&gt;</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Types">data type</a> denotes a flexible length within a grid container. It is used in {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-rows")}} and other related properties.</p>
+The **`<flex>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) denotes a flexible length within a grid container. It is used in {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-rows")}} and other related properties.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>&lt;flex&gt;</code> data type is specified as a {{cssxref("&lt;number&gt;")}} followed by the unit <code>fr</code>. The <code>fr</code> unit represents a fraction of the leftover space in the grid container. As with all CSS dimensions, there is no space between the unit and the number.</p>
+The `<flex>` data type is specified as a {{cssxref("&lt;number&gt;")}} followed by the unit `fr`. The `fr` unit represents a fraction of the leftover space in the grid container. As with all CSS dimensions, there is no space between the unit and the number.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Examples_of_correct_values_for_the_fr_data_type">Examples of correct values for the fr data type</h3>
+### Examples of correct values for the fr data type
 
-<pre class="brush: css">1fr    /* Using an integer value */
+```css
+1fr    /* Using an integer value */
 2.5fr  /* Using a float value */
-</pre>
+```
 
-<h3 id="Example_of_use_in_a_tracklisting_for_CSS_Grid_layout">Example of use in a tracklisting for CSS Grid layout</h3>
+### Example of use in a tracklisting for CSS Grid layout
 
-<pre class="brush: css">.grid {
+```css
+.grid {
   display: grid;
   grid-template-columns: 1fr 1fr 2.5fr 1.5fr;
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a></li>
-</ul>
+- [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout)

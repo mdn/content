@@ -7,16 +7,17 @@ tags:
   - CSS Writing Modes
   - Experimental
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.text-combine-upright
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>text-combine-upright</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets the combination of characters into the space of a single character. If the combined text is wider than 1em, the user agent must fit the contents within 1em. The resulting composition is treated as a single upright glyph for layout and decoration. This property only has an effect in vertical writing modes.</p>
+The **`text-combine-upright`** [CSS](/en-US/docs/Web/CSS) property sets the combination of characters into the space of a single character. If the combined text is wider than 1em, the user agent must fit the contents within 1em. The resulting composition is treated as a single upright glyph for layout and decoration. This property only has an effect in vertical writing modes.
 
-<p>This is used to produce an effect that is known as tate-chū-yoko (縦中横) in Japanese, or as 直書橫向 in Chinese.</p>
+This is used to produce an effect that is known as tate-chū-yoko (縦中横) in Japanese, or as 直書橫向 in Chinese.
 
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 text-combine-upright: none;
 text-combine-upright: all;
 
@@ -29,83 +30,84 @@ text-combine-upright: inherit;
 text-combine-upright: initial;
 text-combine-upright: revert;
 text-combine-upright: unset;
-</pre>
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>none</code></dt>
- <dd>There is no special processing.</dd>
- <dt><code>all</code></dt>
- <dd>Attempts to typeset all consecutive characters within the box horizontally, such that they take up the space of a single character within the vertical line of the box.</dd>
- <dt><code>digits &lt;integer&gt;?</code></dt>
- <dd>Attempts to display a sequence of consecutive ASCII digits (U+0030–U+0039) that has as many or fewer characters than the specified integer, such that it takes up the space of a single character within the vertical line box. If the integer is omitted, it computes to 2. Integers outside the range of 2-4 are invalid.</dd>
-</dl>
+- `none`
+  - : There is no special processing.
+- `all`
+  - : Attempts to typeset all consecutive characters within the box horizontally, such that they take up the space of a single character within the vertical line of the box.
+- `digits <integer>?`
+  - : Attempts to display a sequence of consecutive ASCII digits (U+0030–U+0039) that has as many or fewer characters than the specified integer, such that it takes up the space of a single character within the vertical line box. If the integer is omitted, it computes to 2. Integers outside the range of 2-4 are invalid.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Digits">Digits</h3>
+### Digits
 
-<p>The digits value requires less markup than the all value when digits are being combined, but it is currently not very widely supported by browsers.</p>
+The digits value requires less markup than the all value when digits are being combined, but it is currently not very widely supported by browsers.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p lang="ja" class="exampleText"&gt;平成20年4月16日に&lt;/p&gt;
-</pre>
+```html
+<p lang="ja" class="exampleText">平成20年4月16日に</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.exampleText {
+```css
+.exampleText {
   writing-mode: vertical-lr;
   text-combine-upright: digits 2;
   font: 36px serif;
-}</pre>
+}
+```
 
-<h4 id="Results">Results</h4>
+#### Results
 
-<p>{{EmbedLiveSample("Digits", 100, 350, "tate-chu-yoko.png")}}</p>
+{{EmbedLiveSample("Digits", 100, 350, "tate-chu-yoko.png")}}
 
-<h3 id="All">All</h3>
+### All
 
-<p>The all value requires markup around every piece of horizontal text, but it is currently supported by more browsers than the digits value.</p>
+The all value requires markup around every piece of horizontal text, but it is currently supported by more browsers than the digits value.
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p lang="zh-Hant"&gt;民國&lt;span class="num"&gt;105&lt;/span
-&gt;年&lt;span class="num"&gt;4&lt;/span
-&gt;月&lt;span class="num"&gt;29&lt;/span&gt;日&lt;/p&gt;
-</pre>
+```html
+<p lang="zh-Hant">民國<span class="num">105</span
+>年<span class="num">4</span
+>月<span class="num">29</span>日</p>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">html { writing-mode: vertical-rl; font: 24px serif }
+```css
+html { writing-mode: vertical-rl; font: 24px serif }
 .num { text-combine-upright: all }
-</pre>
+```
 
-<h4 id="Results_2">Results</h4>
+#### Results
 
-<p>{{EmbedLiveSample("All", 250, 300, "text-combine-upright-all.png")}}</p>
+{{EmbedLiveSample("All", 250, 300, "text-combine-upright-all.png")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("writing-mode")}}, {{cssxref("text-orientation")}}</li>
-</ul>
+- {{cssxref("writing-mode")}}, {{cssxref("text-orientation")}}

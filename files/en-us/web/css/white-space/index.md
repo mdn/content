@@ -6,31 +6,27 @@ tags:
   - CSS Property
   - CSS Text
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
   - white-space
 browser-compat: css.properties.white-space
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>white-space</code></strong> CSS property sets how {{Glossary("whitespace", "white space")}} inside an element is handled.</p>
+The **`white-space`** CSS property sets how {{Glossary("whitespace", "white space")}} inside an element is handled.
 
-<div>{{EmbedInteractiveExample("pages/css/white-space.html")}}</div>
+{{EmbedInteractiveExample("pages/css/white-space.html")}}
 
+The property specifies two things:
 
-<p>The property specifies two things:</p>
+- Whether and how white-space is collapsed.
+- Whether lines may wrap at soft-wrap opportunities.
 
-<ul>
-  <li>Whether and how white-space is collapsed.</li>
-  <li>Whether lines may wrap at soft-wrap opportunities.</li>
-</ul>
+> **Note:** To make words break _within themselves_, use {{CSSxRef("overflow-wrap")}}, {{CSSxRef("word-break")}}, or {{CSSxRef("hyphens")}} instead.
 
-<div class="note">
-<p><strong>Note:</strong> To make words break <em>within themselves</em>, use {{CSSxRef("overflow-wrap")}}, {{CSSxRef("word-break")}}, or {{CSSxRef("hyphens")}} instead.</p>
-</div>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush: css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 white-space: normal;
 white-space: nowrap;
 white-space: pre;
@@ -43,158 +39,159 @@ white-space: inherit;
 white-space: initial;
 white-space: revert;
 white-space: unset;
-</pre>
+```
 
-<p>The <code>white-space</code> property is specified as a single keyword chosen from the list of values below.</p>
+The `white-space` property is specified as a single keyword chosen from the list of values below.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>normal</code></dt>
- <dd>Sequences of white space are collapsed. Newline characters in the source are handled the same as other white space. Lines are broken as necessary to fill line boxes.</dd>
- <dt><code>nowrap</code></dt>
- <dd>Collapses white space as for <code>normal</code>, but suppresses line breaks (text wrapping) within the source.</dd>
- <dt><code>pre</code></dt>
- <dd>Sequences of white space are preserved. Lines are only broken at newline characters in the source and at {{HTMLElement("br")}} elements.</dd>
- <dt><code>pre-wrap</code></dt>
- <dd>Sequences of white space are preserved. Lines are broken at newline characters, at {{HTMLElement("br")}}, and as necessary to fill line boxes.</dd>
- <dt><code>pre-line</code></dt>
- <dd>Sequences of white space are collapsed. Lines are broken at newline characters, at {{HTMLElement("br")}}, and as necessary to fill line boxes.</dd>
- <dt><code>break-spaces</code></dt>
- <dd>The behavior is identical to that of <code>pre-wrap</code>, except that:
- <ul>
-  <li>Any sequence of preserved white space always takes up space, including at the end of the line.</li>
-  <li>A line breaking opportunity exists after every preserved white space character, including between white space characters.</li>
-  <li>Such preserved spaces take up space and do not hang, and thus affect the box’s intrinsic sizes (min-content size and max-content size).</li>
- </ul>
- </dd>
-</dl>
+- `normal`
+  - : Sequences of white space are collapsed. Newline characters in the source are handled the same as other white space. Lines are broken as necessary to fill line boxes.
+- `nowrap`
+  - : Collapses white space as for `normal`, but suppresses line breaks (text wrapping) within the source.
+- `pre`
+  - : Sequences of white space are preserved. Lines are only broken at newline characters in the source and at {{HTMLElement("br")}} elements.
+- `pre-wrap`
+  - : Sequences of white space are preserved. Lines are broken at newline characters, at {{HTMLElement("br")}}, and as necessary to fill line boxes.
+- `pre-line`
+  - : Sequences of white space are collapsed. Lines are broken at newline characters, at {{HTMLElement("br")}}, and as necessary to fill line boxes.
+- `break-spaces`
 
-<p>The following table summarizes the behavior of the various <code>white-space</code> values:</p>
+  - : The behavior is identical to that of `pre-wrap`, except that:
+
+    - Any sequence of preserved white space always takes up space, including at the end of the line.
+    - A line breaking opportunity exists after every preserved white space character, including between white space characters.
+    - Such preserved spaces take up space and do not hang, and thus affect the box’s intrinsic sizes (min-content size and max-content size).
+
+The following table summarizes the behavior of the various `white-space` values:
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th></th>
-   <th>New lines</th>
-   <th>Spaces and tabs</th>
-   <th>Text wrapping</th>
-   <th>End-of-line spaces</th>
-   <th>End-of-line other space separators</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <th><code>normal</code></th>
-   <td>Collapse</td>
-   <td>Collapse</td>
-   <td>Wrap</td>
-   <td>Remove</td>
-   <td>Hang</td>
-  </tr>
-  <tr>
-   <th><code>nowrap</code></th>
-   <td>Collapse</td>
-   <td>Collapse</td>
-   <td>No wrap</td>
-   <td>Remove</td>
-   <td>Hang</td>
-  </tr>
-  <tr>
-   <th><code>pre</code></th>
-   <td>Preserve</td>
-   <td>Preserve</td>
-   <td>No wrap</td>
-   <td>Preserve</td>
-   <td>No wrap</td>
-  </tr>
-  <tr>
-   <th><code>pre-wrap</code></th>
-   <td>Preserve</td>
-   <td>Preserve</td>
-   <td>Wrap</td>
-   <td>Hang</td>
-   <td>Hang</td>
-  </tr>
-  <tr>
-   <th><code>pre-line</code></th>
-   <td>Preserve</td>
-   <td>Collapse</td>
-   <td>Wrap</td>
-   <td>Remove</td>
-   <td>Hang</td>
-  </tr>
-  <tr>
-   <th><code>break-spaces</code></th>
-   <td>Preserve</td>
-   <td>Preserve</td>
-   <td>Wrap</td>
-   <td>Wrap</td>
-   <td>Wrap</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th></th>
+      <th>New lines</th>
+      <th>Spaces and tabs</th>
+      <th>Text wrapping</th>
+      <th>End-of-line spaces</th>
+      <th>End-of-line other space separators</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th><code>normal</code></th>
+      <td>Collapse</td>
+      <td>Collapse</td>
+      <td>Wrap</td>
+      <td>Remove</td>
+      <td>Hang</td>
+    </tr>
+    <tr>
+      <th><code>nowrap</code></th>
+      <td>Collapse</td>
+      <td>Collapse</td>
+      <td>No wrap</td>
+      <td>Remove</td>
+      <td>Hang</td>
+    </tr>
+    <tr>
+      <th><code>pre</code></th>
+      <td>Preserve</td>
+      <td>Preserve</td>
+      <td>No wrap</td>
+      <td>Preserve</td>
+      <td>No wrap</td>
+    </tr>
+    <tr>
+      <th><code>pre-wrap</code></th>
+      <td>Preserve</td>
+      <td>Preserve</td>
+      <td>Wrap</td>
+      <td>Hang</td>
+      <td>Hang</td>
+    </tr>
+    <tr>
+      <th><code>pre-line</code></th>
+      <td>Preserve</td>
+      <td>Collapse</td>
+      <td>Wrap</td>
+      <td>Remove</td>
+      <td>Hang</td>
+    </tr>
+    <tr>
+      <th><code>break-spaces</code></th>
+      <td>Preserve</td>
+      <td>Preserve</td>
+      <td>Wrap</td>
+      <td>Wrap</td>
+      <td>Wrap</td>
+    </tr>
+  </tbody>
 </table>
 
-<div class="notecard note">
-  <p><strong>Note:</strong> There is a distinction made between <strong>spaces</strong> and <strong>other space separators</strong>. These are defined as follows:</p>
-  <dl>
-    <dt>spaces</dt>
-    <dd>Spaces (U+0020), tabs (U+0009), and segment breaks (such as newlines).</dd>
-    <dt>other space separators</dt>
-    <dd>All other space separators defined in Unicode, other than those already defined as spaces.</dd>
-  </dl>
+> **Note:** There is a distinction made between **spaces** and **other space separators**. These are defined as follows:
+>
+> - spaces
+>   - : Spaces (U+0020), tabs (U+0009), and segment breaks (such as newlines).
+> - other space separators
+>   - : All other space separators defined in Unicode, other than those already defined as spaces.
+>
+> Where white space is said to _hang_, this can affect the size of the box when measured for intrinsic sizing.
 
-  <p>Where white space is said to <em>hang</em>, this can affect the size of the box when measured for intrinsic sizing.</p>
-</div>
+## Formal definition
 
-<h2 id="Formal_definition">Formal definition</h2>
+{{CSSInfo}}
 
-<p>{{CSSInfo}}</p>
-
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{CSSSyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Basic_example">Basic example</h3>
+### Basic example
 
-<pre class="brush: css">code {
+```css
+code {
   white-space: pre;
-}</pre>
+}
+```
 
-<h3 id="Line_breaks_inside_pre_elements">Line breaks inside &lt;pre&gt; elements</h3>
+### Line breaks inside \<pre> elements
 
-<pre class="brush: css">pre {
+```css
+pre {
   white-space: pre-wrap;
-}</pre>
+}
+```
 
-<h3 id="In_action">In action</h3>
+### In action
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html hidden">&lt;div id="css-code" class="box"&gt;
+```html hidden
+<div id="css-code" class="box">
   p { white-space:
-  &lt;select&gt;
-    &lt;option&gt;normal&lt;/option&gt;
-    &lt;option&gt;nowrap&lt;/option&gt;
-    &lt;option&gt;pre&lt;/option&gt;
-    &lt;option&gt;pre-wrap&lt;/option&gt;
-    &lt;option&gt;pre-line&lt;/option&gt;
-    &lt;option&gt;break-spaces&lt;/option&gt;
-  &lt;/select&gt; }
-&lt;/div&gt;
-&lt;div id="results" class="box"&gt;
-  &lt;p&gt;    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  <select>
+    <option>normal</option>
+    <option>nowrap</option>
+    <option>pre</option>
+    <option>pre-wrap</option>
+    <option>pre-line</option>
+    <option>break-spaces</option>
+  </select> }
+</div>
+<div id="results" class="box">
+  <p>    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 
-    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
-&lt;/div&gt;</pre>
+    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+```
 
-<pre class="brush: css hidden">.box {
+```css hidden
+.box {
   width: 300px;
   padding: 16px;
   border-radius: 10px;
@@ -216,31 +213,33 @@ white-space: unset;
   height: 400px;
   white-space: normal;
   font-size: 14px;
-}</pre>
+}
+```
 
-<pre class="brush: js hidden">var select  = document.querySelector("#css-code select");
+```js hidden
+var select  = document.querySelector("#css-code select");
 var results = document.querySelector("#results p");
 select.addEventListener("change", function(e) {
   results.setAttribute("style", "white-space: "+e.target.value);
-})</pre>
+})
+```
 
+```html
+<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> 
+```
 
-<pre class="brush: html">&lt;p&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt; </pre>
+#### Result
 
-<h4 id="Result">Result</h4>
+{{EmbedLiveSample("In_action", "100%", 500)}}
 
-<p>{{EmbedLiveSample("In_action", "100%", 500)}}</p>
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Properties that define how words break <em>within themselves</em>: {{CSSxRef("overflow-wrap")}}, {{CSSxRef("word-break")}}, {{CSSxRef("hyphens")}}</li>
-</ul>
+- Properties that define how words break _within themselves_: {{CSSxRef("overflow-wrap")}}, {{CSSxRef("word-break")}}, {{CSSxRef("hyphens")}}

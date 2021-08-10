@@ -8,14 +8,15 @@ tags:
   - CSS Property
   - NeedsExample
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.break-before
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>break-before</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets how page, column, or region breaks should behave before a generated box. If there is no generated box, the property is ignored.</p>
+The **`break-before`** [CSS](/en-US/docs/Web/CSS) property sets how page, column, or region breaks should behave before a generated box. If there is no generated box, the property is ignored.
 
-<pre class="brush:css no-line-numbers">/* Generic break values */
+```css
+/* Generic break values */
 break-before: auto;
 break-before: avoid;
 break-before: always;
@@ -42,153 +43,121 @@ break-before: inherit;
 break-before: initial;
 break-before: revert;
 break-before: unset;
-</pre>
+```
 
-<p>Each possible break point (in other words, each element boundary) is affected by three properties: the {{cssxref("break-after")}} value of the previous element, the <code>break-before</code> value of the next element, and the {{cssxref("break-inside")}} value of the containing element.</p>
+Each possible break point (in other words, each element boundary) is affected by three properties: the {{cssxref("break-after")}} value of the previous element, the `break-before` value of the next element, and the {{cssxref("break-inside")}} value of the containing element.
 
-<p>To determine if a break must be done, the following rules are applied:</p>
+To determine if a break must be done, the following rules are applied:
 
-<ol>
- <li>If any of the three concerned values is a <em>forced break value</em> (<code>always</code>, <code>left</code>, <code>right</code>, <code>page</code>, <code>column</code>, or <code>region</code>), it has precedence. If more than one of them are such a break, the one of the element that appears the latest in the flow is taken (i.e., the <code>break-before</code> value has precedence over the <code>break-after</code> value, which itself has precedence over the <code>break-inside</code> value).</li>
- <li>If any of the three concerned values is an <em>avoid break value</em> (<code>avoid</code>, <code>avoid-page</code>, <code>avoid-region</code>, or <code>avoid-column</code>), no such break will be applied at that point.</li>
-</ol>
+1.  If any of the three concerned values is a _forced break value_ (`always`, `left`, `right`, `page`, `column`, or `region`), it has precedence. If more than one of them are such a break, the one of the element that appears the latest in the flow is taken (i.e., the `break-before` value has precedence over the `break-after` value, which itself has precedence over the `break-inside` value).
+2.  If any of the three concerned values is an _avoid break value_ (`avoid`, `avoid-page`, `avoid-region`, or `avoid-column`), no such break will be applied at that point.
 
-<p>Once forced breaks have been applied, soft breaks may be added if needed, but not on element boundaries that resolve in a corresponding <code>avoid</code> value.</p>
+Once forced breaks have been applied, soft breaks may be added if needed, but not on element boundaries that resolve in a corresponding `avoid` value.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>break-before</code> property is specified as one of the keyword values from the list below.</p>
+The `break-before` property is specified as one of the keyword values from the list below.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<h4 id="Generic_break_values">Generic break values</h4>
+#### Generic break values
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>Allows, but does not force, any break (page, column, or region) to be inserted right before the principal box.</dd>
- <dt><code>avoid</code></dt>
- <dd>Avoids any break (page, column, or region) from being inserted right before the principal box.</dd>
- <dt><code>always</code> {{experimental_inline}}</dt>
- <dd>Forces a page break right after the principal box. The type of this break is that of the immediately-containing fragmentation context. If we are inside a multicol container then it would force a column break, inside paged media (but not inside a multicol container) a page break.</dd>
- <dt><code>all</code> {{experimental_inline}}</dt>
- <dd>Forces a page break right after the principal box. Breaking through all possible fragmentation contexts. So a break inside a multicol container, which was inside a page container would force a column and page break.</dd>
-</dl>
+- `auto`
+  - : Allows, but does not force, any break (page, column, or region) to be inserted right before the principal box.
+- `avoid`
+  - : Avoids any break (page, column, or region) from being inserted right before the principal box.
+- `always` {{experimental_inline}}
+  - : Forces a page break right after the principal box. The type of this break is that of the immediately-containing fragmentation context. If we are inside a multicol container then it would force a column break, inside paged media (but not inside a multicol container) a page break.
+- `all` {{experimental_inline}}
+  - : Forces a page break right after the principal box. Breaking through all possible fragmentation contexts. So a break inside a multicol container, which was inside a page container would force a column and page break.
 
-<h4 id="Page_break_values">Page break values</h4>
+#### Page break values
 
-<dl>
- <dt><code>avoid-page</code></dt>
- <dd>Avoids any page break right before the principal box.</dd>
- <dt><code>page</code></dt>
- <dd>Forces a page break right before the principal box.</dd>
- <dt><code>left</code></dt>
- <dd>Forces one or two page breaks right before the principal box, whichever will make the next page into a left page.</dd>
- <dt><code>right</code></dt>
- <dd>Forces one or two page breaks right before the principal box, whichever will make the next page into a right page.</dd>
- <dt><code>recto</code> {{experimental_inline}}</dt>
- <dd>Forces one or two page breaks right before the principal box, whichever will make the next page into a recto page. (A recto page is a right page in a left-to-right spread or a left page in a right-to-left spread.)</dd>
- <dt><code>verso</code> {{experimental_inline}}</dt>
- <dd>Forces one or two page breaks right before the principal box, whichever will make the next page into a verso page. (A verso page is a left page in a left-to-right spread or a left right in a right-to-left spread.)</dd>
-</dl>
+- `avoid-page`
+  - : Avoids any page break right before the principal box.
+- `page`
+  - : Forces a page break right before the principal box.
+- `left`
+  - : Forces one or two page breaks right before the principal box, whichever will make the next page into a left page.
+- `right`
+  - : Forces one or two page breaks right before the principal box, whichever will make the next page into a right page.
+- `recto` {{experimental_inline}}
+  - : Forces one or two page breaks right before the principal box, whichever will make the next page into a recto page. (A recto page is a right page in a left-to-right spread or a left page in a right-to-left spread.)
+- `verso` {{experimental_inline}}
+  - : Forces one or two page breaks right before the principal box, whichever will make the next page into a verso page. (A verso page is a left page in a left-to-right spread or a left right in a right-to-left spread.)
 
-<h4 id="Column_break_values">Column break values</h4>
+#### Column break values
 
-<dl>
- <dt><code>avoid-column</code></dt>
- <dd>Avoids any column break right before the principal box.</dd>
- <dt><code>column</code></dt>
- <dd>Forces a column break right before the principal box.</dd>
-</dl>
+- `avoid-column`
+  - : Avoids any column break right before the principal box.
+- `column`
+  - : Forces a column break right before the principal box.
 
-<h4 id="Region_break_values">Region break values</h4>
+#### Region break values
 
-<dl>
- <dt><code>avoid-region</code> {{experimental_inline}}</dt>
- <dd>Avoids any region break right before the principal box.</dd>
- <dt><code>region</code> {{experimental_inline}}</dt>
- <dd>Forces a region break right before the principal box.</dd>
-</dl>
+- `avoid-region` {{experimental_inline}}
+  - : Avoids any region break right before the principal box.
+- `region` {{experimental_inline}}
+  - : Forces a region break right before the principal box.
 
-<h2 id="Page_break_aliases">Page break aliases</h2>
+## Page break aliases
 
-<p>For compatibility reasons, the legacy {{cssxref("page-break-before")}} property should be treated by browsers as an alias of <code>break-before</code>. This ensures that sites using <code>page-break-before</code> continue to work as designed. A subset of values should be aliased as follows:</p>
+For compatibility reasons, the legacy {{cssxref("page-break-before")}} property should be treated by browsers as an alias of `break-before`. This ensures that sites using `page-break-before` continue to work as designed. A subset of values should be aliased as follows:
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">page-break-before</th>
-   <th scope="col">break-before</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>auto</code></td>
-   <td><code>auto</code></td>
-  </tr>
-  <tr>
-   <td><code>left</code></td>
-   <td><code>left</code></td>
-  </tr>
-  <tr>
-   <td><code>right</code></td>
-   <td><code>right</code></td>
-  </tr>
-  <tr>
-   <td><code>avoid</code></td>
-   <td><code>avoid</code></td>
-  </tr>
-  <tr>
-   <td><code>always</code></td>
-   <td><code>page</code></td>
-  </tr>
- </tbody>
-</table>
+| page-break-before | break-before |
+| ----------------- | ------------ |
+| `auto`            | `auto`       |
+| `left`            | `left`       |
+| `right`           | `right`      |
+| `avoid`           | `avoid`      |
+| `always`          | `page`       |
 
-<div class="notecard note">
-<p><strong>Note:</strong> The <code>always</code> value of <code>page-break-*</code> was implemented by browsers as a page break, and not as a column break. Therefore the aliasing is to <code>page</code>, rather than the <code>always</code> value in the Level 4 spec.</p>
-</div>
+> **Note:** The `always` value of `page-break-*` was implemented by browsers as a page break, and not as a column break. Therefore the aliasing is to `page`, rather than the `always` value in the Level 4 spec.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Breaking_into_neat_columns">Breaking into neat columns</h3>
+### Breaking into neat columns
 
-<p>In the following example we have a container that contains an <code>&lt;h1&gt;</code> spanning all columns (achieved using <code>column-span: all</code>) and a series of <code>&lt;h2&gt;</code>s and paragraphs laid out in multiple columns using <code>column-width: 200px</code>.</p>
+In the following example we have a container that contains an `<h1>` spanning all columns (achieved using `column-span: all`) and a series of `<h2>`s and paragraphs laid out in multiple columns using `column-width: 200px`.
 
-<p>By default, the subheadings and paragraphs were laid out rather messily because the headings were not in a uniform place. However, we used <code>break-before: column</code> on the <code>&lt;h2&gt;</code> elements to force a column break before each one, meaning that you end up with an <code>&lt;h2&gt;</code> neatly at the top of each column.</p>
+By default, the subheadings and paragraphs were laid out rather messily because the headings were not in a uniform place. However, we used `break-before: column` on the `<h2>` elements to force a column break before each one, meaning that you end up with an `<h2>` neatly at the top of each column.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;article&gt;
-  &lt;h1&gt;Main heading&lt;/h1&gt;
+```html
+<article>
+  <h1>Main heading</h1>
 
-  &lt;h2&gt;Subheading&lt;/h2&gt;
+  <h2>Subheading</h2>
 
-  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae fringilla mauris. Quisque commodo eget nisi sed pretium. Mauris luctus nec lacus in ultricies. Mauris vitae hendrerit arcu, ac scelerisque lacus. Aliquam lobortis in lacus sit amet posuere. Fusce iaculis urna id neque dapibus, eu lacinia lectus dictum.&lt;/p&gt;
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae fringilla mauris. Quisque commodo eget nisi sed pretium. Mauris luctus nec lacus in ultricies. Mauris vitae hendrerit arcu, ac scelerisque lacus. Aliquam lobortis in lacus sit amet posuere. Fusce iaculis urna id neque dapibus, eu lacinia lectus dictum.</p>
 
-  &lt;h2&gt;Subheading&lt;/h2&gt;
+  <h2>Subheading</h2>
 
-  &lt;p&gt;Praesent condimentum dui dui, sit amet rutrum diam tincidunt eu. Cras suscipit porta leo sit amet rutrum. Sed vehicula ornare tincidunt. Curabitur a ipsum ac diam mattis volutpat ac ut elit. Nullam luctus justo non vestibulum gravida. Morbi metus libero, pharetra non porttitor a, molestie nec nisi.&lt;/p&gt;
+  <p>Praesent condimentum dui dui, sit amet rutrum diam tincidunt eu. Cras suscipit porta leo sit amet rutrum. Sed vehicula ornare tincidunt. Curabitur a ipsum ac diam mattis volutpat ac ut elit. Nullam luctus justo non vestibulum gravida. Morbi metus libero, pharetra non porttitor a, molestie nec nisi.</p>
 
-  &lt;h2&gt;Subheading&lt;/h2&gt;
+  <h2>Subheading</h2>
 
-  &lt;p&gt;Vivamus eleifend metus vitae neque placerat, eget interdum elit mattis. Donec eu vulputate nibh. Ut turpis leo, malesuada quis nisl nec, volutpat egestas tellus.
+  <p>Vivamus eleifend metus vitae neque placerat, eget interdum elit mattis. Donec eu vulputate nibh. Ut turpis leo, malesuada quis nisl nec, volutpat egestas tellus.
 
-  &lt;h2&gt;Subheading&lt;/h2&gt;
+  <h2>Subheading</h2>
 
-  &lt;p&gt;In finibus viverra enim vel suscipit. Quisque consequat velit eu orci malesuada, ut interdum tortor molestie. Proin sed pellentesque augue. Nam risus justo, faucibus non porta a, congue vel massa. Cras luctus lacus nisl, sed tincidunt velit pharetra ac. Duis suscipit faucibus dui sed ultricies.&lt;/p&gt;
-&lt;/article&gt;</pre>
+  <p>In finibus viverra enim vel suscipit. Quisque consequat velit eu orci malesuada, ut interdum tortor molestie. Proin sed pellentesque augue. Nam risus justo, faucibus non porta a, congue vel massa. Cras luctus lacus nisl, sed tincidunt velit pharetra ac. Duis suscipit faucibus dui sed ultricies.</p>
+</article>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">html {
+```css
+html {
   font-family: helvetica, arial, sans-serif;
 }
 
@@ -212,23 +181,22 @@ p {
 article {
   column-width: 200px;
   gap: 20px;
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample('Breaking_into_neat_columns', '100%', 600)}}</p>
+{{EmbedLiveSample('Breaking_into_neat_columns', '100%', 600)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout">Multiple-column Layout</a></li>
- <li><a href="https://www.smashingmagazine.com/2019/02/css-fragmentation/">Breaking Boxes With CSS Fragmentation</a></li>
-</ul>
+- [Multiple-column Layout](/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
+- [Breaking Boxes With CSS Fragmentation](https://www.smashingmagazine.com/2019/02/css-fragmentation/)

@@ -11,43 +11,46 @@ tags:
   - UI Selector
 browser-compat: css.selectors.out-of-range
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>:out-of-range</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> represents an {{htmlelement("input")}} element whose current value is outside the range limits specified by the {{htmlattrxref("min", "input")}} and {{htmlattrxref("max","input")}} attributes.</p>
+The **`:out-of-range`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents an {{htmlelement("input")}} element whose current value is outside the range limits specified by the {{htmlattrxref("min", "input")}} and {{htmlattrxref("max","input")}} attributes.
 
-<pre class="brush: css no-line-numbers">/* Selects any &lt;input&gt;, but only when it has a range
+```css
+/* Selects any <input>, but only when it has a range
    specified, and its value is outside that range */
 input:out-of-range {
   background-color: rgba(255, 0, 0, 0.25);
-}</pre>
+}
+```
 
-<p>This pseudo-class is useful for giving the user a visual indication that a field's current value is outside the permitted limits.</p>
+This pseudo-class is useful for giving the user a visual indication that a field's current value is outside the permitted limits.
 
-<div class="note">
-  <p><strong>Note:</strong> This pseudo-class only applies to elements that have (and can take) a range limitation. In the absence of such a limitation, the element can neither be "in-range" nor "out-of-range."</p>
-</div>
+> **Note:** This pseudo-class only applies to elements that have (and can take) a range limitation. In the absence of such a limitation, the element can neither be "in-range" nor "out-of-range."
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;form action="" id="form1"&gt;
- &lt;p&gt;Values between 1 and 10 are valid.&lt;/p&gt;
-  &lt;ul&gt;
-    &lt;li&gt;
-      &lt;input id="value1" name="value1" type="number" placeholder="1 to 10" min="1" max="10" value="12"&gt;
-      &lt;label for="value1"&gt;Your value is &lt;/label&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/form&gt;</pre>
+```html
+<form action="" id="form1">
+ <p>Values between 1 and 10 are valid.</p>
+  <ul>
+    <li>
+      <input id="value1" name="value1" type="number" placeholder="1 to 10" min="1" max="10" value="12">
+      <label for="value1">Your value is </label>
+    </li>
+  </ul>
+</form>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css;">li {
+```css
+li {
   list-style: none;
   margin-bottom: 1em;
 }
@@ -71,23 +74,22 @@ input:in-range + label::after {
 
 input:out-of-range + label::after {
   content: 'out of range!';
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<div>{{EmbedLiveSample('Examples', 600, 140)}}</div>
+{{EmbedLiveSample('Examples', 600, 140)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref(":in-range")}}</li>
- <li><a href="/en-US/docs/Learn/Forms/Form_validation">Form data validation</a></li>
-</ul>
+- {{cssxref(":in-range")}}
+- [Form data validation](/en-US/docs/Learn/Forms/Form_validation)

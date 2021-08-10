@@ -9,73 +9,70 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.font-smooth
 ---
-<div>{{ CSSRef }} {{ Non-standard_header }}</div>
+{{ CSSRef }} {{ Non-standard_header }}
 
-<p>The <strong><code>font-smooth</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property controls the application of anti-aliasing when fonts are rendered.</p>
+The **`font-smooth`** [CSS](/en-US/docs/Web/CSS) property controls the application of anti-aliasing when fonts are rendered.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css">/* Keyword values */
+```css
+/* Keyword values */
 font-smooth: auto;
 font-smooth: never;
 font-smooth: always;
 
-/* &lt;length&gt; value */
+/* <length> value */
 font-smooth: 2em;
 
 /* Global values */
 font-smooth: inherit;
 font-smooth: initial;
 font-smooth: revert;
-font-smooth: unset;</pre>
+font-smooth: unset;
+```
 
-<div class="note">
-<p><strong>Note:</strong> WebKit implements a similar property, but with different values: <strong><code>-webkit-font-smoothing</code></strong>. It only works on Mac OS X/macOS.</p>
+> **Note:** WebKit implements a similar property, but with different values: **`-webkit-font-smoothing`**. It only works on Mac OS X/macOS.
+>
+> - `auto` - Let the browser decide (Uses subpixel anti-aliasing when available; this is the default)
+> - `none` - Turn font smoothing off; display text with jagged sharp edges.
+> - `antialiased` - Smooth the font on the level of the pixel, as opposed to the subpixel. Switching from subpixel rendering to antialiasing for light text on dark backgrounds makes it look lighter.
+> - `subpixel-antialiased` - On most non-retina displays, this will give the sharpest text.
 
-<ul>
- <li><code>auto</code> - Let the browser decide (Uses subpixel anti-aliasing when available; this is the default)</li>
- <li><code>none</code> - Turn font smoothing off; display text with jagged sharp edges.</li>
- <li><code>antialiased</code> - Smooth the font on the level of the pixel, as opposed to the subpixel. Switching from subpixel rendering to antialiasing for light text on dark backgrounds makes it look lighter.</li>
- <li><code>subpixel-antialiased</code> - On most non-retina displays, this will give the sharpest text.</li>
-</ul>
-</div>
+> **Note:** Firefox implements a similar property, but with different values: **`-moz-osx-font-smoothing`**. It only works on Mac OS X/macOS.
+>
+> - `auto` - Allow the browser to select an optimization for font smoothing, typically `grayscale`.
+> - `grayscale` - Render text with grayscale antialiasing, as opposed to the subpixel. Switching from subpixel rendering to antialiasing for light text on dark backgrounds makes it look lighter.
 
-<div class="note">
-<p><strong>Note:</strong> Firefox implements a similar property, but with different values: <strong><code>-moz-osx-font-smoothing</code></strong>. It only works on Mac OS X/macOS.</p>
+## Formal definition
 
-<ul>
- <li><code>auto</code> - Allow the browser to select an optimization for font smoothing, typically <code>grayscale</code>.</li>
- <li><code>grayscale</code> - Render text with grayscale antialiasing, as opposed to the subpixel. Switching from subpixel rendering to antialiasing for light text on dark backgrounds makes it look lighter.</li>
-</ul>
-</div>
+{{cssinfo}}
 
-<h2 id="Formal_definition">Formal definition</h2>
-
-<p>{{cssinfo}}</p>
-
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Basic_usage_example">Basic usage example</h3>
+### Basic usage example
 
-<p>The following example shows the Safari/Chromium and Firefox equivalents that turn on font-smoothing on macOS. In both cases the smoothed font should look slightly lighter in weight.</p>
+The following example shows the Safari/Chromium and Firefox equivalents that turn on font-smoothing on macOS. In both cases the smoothed font should look slightly lighter in weight.
 
-<p>For those of you not on a macOS system, here is a screenshot (the live version appears later on):</p>
+For those of you not on a macOS system, here is a screenshot (the live version appears later on):
 
-<p><img alt="" src="smoothing.png"></p>
+![](smoothing.png)
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;Without font smoothing&lt;/p&gt;
+```html
+<p>Without font smoothing</p>
 
-&lt;p class="smoothed"&gt;With font smoothing&lt;/p&gt;</pre>
+<p class="smoothed">With font smoothing</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">html {
+```css
+html {
   background-color: black;
   color: white;
   font-size: 3rem;
@@ -88,23 +85,22 @@ p {
 .smoothed {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Basic_usage_example', '100%', 260)}}</p>
+{{EmbedLiveSample('Basic_usage_example', '100%', 260)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any standard.</p>
+Not part of any standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="http://usabilitypost.com/2012/11/05/stop-fixing-font-smoothing/">Please Stop "Fixing" Font Smoothing – UsabilityPost</a></li>
- <li><a href="https://www.zachleat.com/web/font-smooth/">Laissez-faire font smoothing and anti-aliasing</a></li>
-</ul>
+- [Please Stop "Fixing" Font Smoothing – UsabilityPost](http://usabilitypost.com/2012/11/05/stop-fixing-font-smoothing/)
+- [Laissez-faire font smoothing and anti-aliasing](https://www.zachleat.com/web/font-smooth/)

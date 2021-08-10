@@ -9,39 +9,38 @@ tags:
   - media feature
 browser-compat: css.at-rules.media.pointer
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>pointer</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features">media feature</a> tests whether the user has a pointing device (such as a mouse), and if so, how accurate the <em>primary</em> pointing device is.</p>
+The **`pointer`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) tests whether the user has a pointing device (such as a mouse), and if so, how accurate the _primary_ pointing device is.
 
-<div class="note">
-<p><strong>Note:</strong> If you want to test the accuracy of <em>any</em> pointing device, use <code><a href="/en-US/docs/Web/CSS/@media/any-pointer">any-pointer</a></code> instead.</p>
-</div>
+> **Note:** If you want to test the accuracy of _any_ pointing device, use [`any-pointer`](/en-US/docs/Web/CSS/@media/any-pointer) instead.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>pointer</code> feature is specified as a keyword value chosen from the list below.</p>
+The `pointer` feature is specified as a keyword value chosen from the list below.
 
-<dl>
- <dt><code>none</code></dt>
- <dd>The primary input mechanism does not include a pointing device.</dd>
- <dt><code>coarse</code></dt>
- <dd>The primary input mechanism includes a pointing device of limited accuracy.</dd>
- <dt><code>fine</code></dt>
- <dd>The primary input mechanism includes an accurate pointing device.</dd>
-</dl>
+- `none`
+  - : The primary input mechanism does not include a pointing device.
+- `coarse`
+  - : The primary input mechanism includes a pointing device of limited accuracy.
+- `fine`
+  - : The primary input mechanism includes an accurate pointing device.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example creates a small checkbox for users with fine primary pointers and a large checkbox for users with coarse primary pointers.</p>
+This example creates a small checkbox for users with fine primary pointers and a large checkbox for users with coarse primary pointers.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;input id="test" type="checkbox" /&gt;
-&lt;label for="test"&gt;Look at me!&lt;/label&gt;</pre>
+```html
+<input id="test" type="checkbox" />
+<label for="test">Look at me!</label>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">input[type="checkbox"] {
+```css
+input[type="checkbox"] {
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
@@ -69,22 +68,21 @@ input[type="checkbox"]:checked {
     border-width: 2px;
     border-color: red;
   }
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Examples")}}</p>
+{{EmbedLiveSample("Examples")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/@media/any-pointer">The <code>any-pointer</code> media feature</a></li>
-</ul>
+- [The `any-pointer` media feature](/en-US/docs/Web/CSS/@media/any-pointer)

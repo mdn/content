@@ -9,26 +9,28 @@ tags:
   - media feature
 browser-compat: css.at-rules.media.color-index
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>color-index</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features">media feature</a> can be used to test the number of entries in the output device's color lookup table.</p>
+The **`color-index`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) can be used to test the number of entries in the output device's color lookup table.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>color-index</code> feature is specified as an {{cssxref("&lt;integer&gt;")}} value representing the number of entries in the output device's color lookup table. (This value is zero if the device does not use such a table.) It is a range feature, meaning that you can also use the prefixed <strong><code>min-color-index</code></strong> and <code><strong>max-color-index</strong></code> variants to query minimum and maximum values, respectively.</p>
+The `color-index` feature is specified as an {{cssxref("&lt;integer&gt;")}} value representing the number of entries in the output device's color lookup table. (This value is zero if the device does not use such a table.) It is a range feature, meaning that you can also use the prefixed **`min-color-index`** and **`max-color-index`** variants to query minimum and maximum values, respectively.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Basic_example">Basic example</h3>
+### Basic example
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;This is a test.&lt;/p&gt;
-</pre>
+```html
+<p>This is a test.</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   color: black;
 }
 
@@ -42,30 +44,31 @@ browser-compat: css.at-rules.media.color-index
   p {
     color: #1475ef;
   }
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Basic_example")}}</p>
+{{EmbedLiveSample("Basic_example")}}
 
-<h3 id="Custom_stylesheet">Custom stylesheet</h3>
+### Custom stylesheet
 
-<p>This HTML will apply a special stylesheet for devices that have at least 256 colors.</p>
+This HTML will apply a special stylesheet for devices that have at least 256 colors.
 
-<pre class="brush: html">&lt;link rel=&quot;stylesheet&quot; href=&quot;http://foo.bar.com/base.css&quot; /&gt;
-&lt;link rel=&quot;stylesheet&quot; media=&quot;all and (min-color-index: 256)&quot; href=&quot;http://foo.bar.com/color-stylesheet.css&quot; /&gt;</pre>
+```html
+<link rel="stylesheet" href="http://foo.bar.com/base.css" />
+<link rel="stylesheet" media="all and (min-color-index: 256)" href="http://foo.bar.com/color-stylesheet.css" />
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">Using Media Queries</a></li>
- <li><a href="/en-US/docs/Web/CSS/@media">@media</a></li>
-</ul>
+- [Using Media Queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [@media](/en-US/docs/Web/CSS/@media)

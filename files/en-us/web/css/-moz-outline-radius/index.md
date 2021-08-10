@@ -4,19 +4,18 @@ slug: Web/CSS/-moz-outline-radius
 tags:
   - CSS
   - CSS Property
-  - 'CSS:Mozilla Extensions'
+  - CSS:Mozilla Extensions
   - Non-standard
   - Reference
-  - 'recipe:css-shorthand-property'
+  - recipe:css-shorthand-property
 browser-compat: css.properties.-moz-outline-radius
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}{{deprecated_header}}
 
-<div>{{deprecated_header}}</div>
+In Mozilla applications like Firefox, the **`-moz-outline-radius`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) can be used to give an element's {{cssxref("outline")}} rounded corners.
 
-<p>In Mozilla applications like Firefox, the <strong><code>-moz-outline-radius</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand property</a> can be used to give an element's {{cssxref("outline")}} rounded corners.</p>
-
-<pre class="brush:css">/* One value */
+```css
+/* One value */
 -moz-outline-radius: 25px;
 
 /* Two values */
@@ -32,96 +31,88 @@ browser-compat: css.properties.-moz-outline-radius
 -moz-outline-radius: inherit;
 -moz-outline-radius: initial;
 -moz-outline-radius: unset;
-</pre>
+```
 
-<h2 id="Constituent_properties">Constituent properties</h2>
+## Constituent properties
 
-<p>This property is a shorthand for the following CSS properties:</p>
+This property is a shorthand for the following CSS properties:
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/-moz-outline-radius-bottomleft"><code>-moz-outline-radius-bottomleft</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/-moz-outline-radius-bottomright"><code>-moz-outline-radius-bottomright</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/-moz-outline-radius-topleft"><code>-moz-outline-radius-topleft</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/-moz-outline-radius-topright"><code>-moz-outline-radius-topright</code></a></li>
-</ul>
+- [`-moz-outline-radius-bottomleft`](/en-US/docs/Web/CSS/-moz-outline-radius-bottomleft)
+- [`-moz-outline-radius-bottomright`](/en-US/docs/Web/CSS/-moz-outline-radius-bottomright)
+- [`-moz-outline-radius-topleft`](/en-US/docs/Web/CSS/-moz-outline-radius-topleft)
+- [`-moz-outline-radius-topright`](/en-US/docs/Web/CSS/-moz-outline-radius-topright)
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<h3 id="Values">Values</h3>
+### Values
 
-<div class="note">
-  <p><strong>Note:</strong> Elliptical outlines and <code>&lt;percentage&gt;</code> values follow the syntax described in {{cssxref("border-radius")}}.</p>
-</div>
+> **Note:** Elliptical outlines and `<percentage>` values follow the syntax described in {{cssxref("border-radius")}}.
 
-<p>One, two, three or four <code>&lt;outline-radius&gt;</code> values, represents one of:</p>
+One, two, three or four `<outline-radius>` values, represents one of:
 
-<dl>
- <dt>{{cssxref("&lt;length&gt;")}}</dt>
- <dd>See {{cssxref("&lt;length&gt;")}} for possible values.</dd>
- <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
- <dd>A {{cssxref("&lt;percentage&gt;")}}; see {{cssxref("border-radius")}} for details.</dd>
-</dl>
+- {{cssxref("&lt;length&gt;")}}
+  - : See {{cssxref("&lt;length&gt;")}} for possible values.
+- {{cssxref("&lt;percentage&gt;")}}
+  - : A {{cssxref("&lt;percentage&gt;")}}; see {{cssxref("border-radius")}} for details.
 
-<ul>
- <li>If a single value is set, it applies to all 4 corners.</li>
- <li>If two values are set, the first one applies to the top-left and bottom-right corners and the second one to the top-right and bottom-left corners.</li>
- <li>If three values are set, the first one applies to the top-Left corner, the second one to the top-right and bottom-left corners and the third one to the bottom-right corner.</li>
- <li>If four values are set, the first one applies to the top-left corner, the second one to the top-right corner, the third one to the bottom-right corner and the fourth one to the bottom-left corner.</li>
-</ul>
+<!---->
 
-<h2 id="Formal_definition">Formal definition</h2>
+- If a single value is set, it applies to all 4 corners.
+- If two values are set, the first one applies to the top-left and bottom-right corners and the second one to the top-right and bottom-left corners.
+- If three values are set, the first one applies to the top-Left corner, the second one to the top-right and bottom-left corners and the third one to the bottom-right corner.
+- If four values are set, the first one applies to the top-left corner, the second one to the top-right corner, the third one to the bottom-right corner and the fourth one to the bottom-left corner.
 
-<p>{{CSSInfo}}</p>
+## Formal definition
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+{{CSSInfo}}
+
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Rounding_an_outline">Rounding an outline</h3>
+### Rounding an outline
 
-<p>Note: This example will not display the desired effect if you are viewing this in a browser other than Firefox.</p>
+Note: This example will not display the desired effect if you are viewing this in a browser other than Firefox.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;This element has a rounded outline!&lt;/p&gt;</pre>
+```html
+<p>This element has a rounded outline!</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   margin: 5px;
   border: 1px solid black;
   outline: dotted red;
   -moz-outline-radius: 12% 1em 25px;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Rounding_an_outline')}}</p>
+{{EmbedLiveSample('Rounding_an_outline')}}
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<ul>
- <li><code>dotted</code> or <code>dashed</code> radiused corners were rendered as solid until Firefox 50, {{bug("382721")}}</li>
- <li>Future versions of Gecko/Firefox may drop this property completely. See {{bug("593717")}}.</li>
-</ul>
+- `dotted` or `dashed` radiused corners were rendered as solid until Firefox 50, {{bug("382721")}}
+- Future versions of Gecko/Firefox may drop this property completely. See {{bug("593717")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any standard.</p>
+Not part of any standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/Mozilla_Extensions">Mozilla CSS extensions</a></li>
- <li>Related CSS properties:
-  <ul>
-   <li><code><a href="/en-US/docs/Web/CSS/outline">outline</a></code></li>
-  </ul>
- </li>
-</ul>
+- [Mozilla CSS extensions](/en-US/docs/Web/CSS/Mozilla_Extensions)
+- Related CSS properties:
+
+  - [`outline`](/en-US/docs/Web/CSS/outline)

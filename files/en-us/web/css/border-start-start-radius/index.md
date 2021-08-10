@@ -8,15 +8,16 @@ tags:
   - Experimental
   - Reference
   - border-start-start-radius
-  - 'recipe:css-property'
+  - recipe:css-property
   - writing modes
 browser-compat: css.properties.border-start-start-radius
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<p>The <strong><code>border-start-start-radius</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property defines a logical border radius on an element, which maps to a physical border radius that depends on the element's {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}. This is useful when building styles to work regardless of the <a href="/en-US/docs/Web/CSS/text-orientation">text orientation</a> and <a href="/en-US/docs/Web/CSS/CSS_Writing_Modes">writing mode</a>.</p>
+The **`border-start-start-radius`** [CSS](/en-US/docs/Web/CSS) property defines a logical border radius on an element, which maps to a physical border radius that depends on the element's {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}. This is useful when building styles to work regardless of the [text orientation](/en-US/docs/Web/CSS/text-orientation) and [writing mode](/en-US/docs/Web/CSS/CSS_Writing_Modes).
 
-<pre class="brush:css no-line-numbers">/* &lt;length&gt; values */
+```css
+/* <length> values */
 /* With one value the corner will be a circle */
 border-start-start-radius: 10px;
 border-start-start-radius: 1em;
@@ -29,41 +30,41 @@ border-start-start-radius: inherit;
 border-start-start-radius: initial;
 border-start-start-radius: revert;
 border-start-start-radius: unset;
-</pre>
+```
 
-<p>This property affects the corner between the block-start and the inline-start sides of the element. For instance, in a <code>horizontal-tb</code> writing mode with <code>ltr</code> direction, it corresponds to the {{CSSxRef("border-top-left-radius")}} property.</p>
+This property affects the corner between the block-start and the inline-start sides of the element. For instance, in a `horizontal-tb` writing mode with `ltr` direction, it corresponds to the {{CSSxRef("border-top-left-radius")}} property.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>&lt;length-percentage&gt;</code></dt>
- <dd>Denotes the size of the circle radius or the semi-major and semi-minor axes of the ellipse. As absolute length it can be expressed in any unit allowed by the CSS {{cssxref("&lt;length&gt;")}} data type. Percentages for the horizontal axis refer to the width of the box, percentages for the vertical axis refer to the height of the box. Negative values are invalid.</dd>
-</dl>
+- `<length-percentage>`
+  - : Denotes the size of the circle radius or the semi-major and semi-minor axes of the ellipse. As absolute length it can be expressed in any unit allowed by the CSS {{cssxref("&lt;length&gt;")}} data type. Percentages for the horizontal axis refer to the width of the box, percentages for the vertical axis refer to the height of the box. Negative values are invalid.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{CSSSyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Border_radius_with_vertical_text">Border radius with vertical text</h3>
+### Border radius with vertical text
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;p class="exampleText"&gt;Example&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div>
+  <p class="exampleText">Example</p>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   background-color: rebeccapurple;
   width: 120px;
   height: 120px;
@@ -75,23 +76,22 @@ border-start-start-radius: unset;
   padding: 10px;
   background-color: #fff;
   border-start-start-radius: 10px;
-}</pre>
+}
+```
 
-<h4 id="Results">Results</h4>
+#### Results
 
-<p>{{EmbedLiveSample("Border_radius_with_vertical_text", 140, 140)}}</p>
+{{EmbedLiveSample("Border_radius_with_vertical_text", 140, 140)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The mapped physical property: {{CSSxRef("border-top-left-radius")}}</li>
- <li>{{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}}, {{CSSxRef("text-orientation")}}</li>
-</ul>
+- The mapped physical property: {{CSSxRef("border-top-left-radius")}}
+- {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}}, {{CSSxRef("text-orientation")}}

@@ -11,120 +11,110 @@ tags:
   - flexbox
   - grid
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>You will often need to create a layout which has a number of columns, and CSS provides several ways to do this. Whether you use Grid, Flexbox or Multi-column layout will depend on what you are trying to achieve, and in this recipe we explore these options.</p>
+You will often need to create a layout which has a number of columns, and CSS provides several ways to do this. Whether you use Grid, Flexbox or Multi-column layout will depend on what you are trying to achieve, and in this recipe we explore these options.
 
-<p><img alt="three different styles of layouts which have two columns in the container." src="cookbook-multiple-columns.png"></p>
+![three different styles of layouts which have two columns in the container.](cookbook-multiple-columns.png)
 
-<h2 id="Requirements">Requirements</h2>
+## Requirements
 
-<p>There are a number of design patterns you might want to achieve with your columns:</p>
+There are a number of design patterns you might want to achieve with your columns:
 
-<ul>
- <li>A continuous thread of content broken up into newspaper-style columns.</li>
- <li>A single row of items arranged as columns, with all heights being equal.</li>
- <li>Multiple rows of columns lined up by row and column.</li>
-</ul>
+- A continuous thread of content broken up into newspaper-style columns.
+- A single row of items arranged as columns, with all heights being equal.
+- Multiple rows of columns lined up by row and column.
 
-<h2 id="The_recipes">The recipes</h2>
+## The recipes
 
-<p>You need to choose different layout methods in order to achieve your requirements.</p>
+You need to choose different layout methods in order to achieve your requirements.
 
-<h3 id="A_continuous_thread_of_content_—_multi-column_layout">A continuous thread of content — multi-column layout</h3>
+### A continuous thread of content — multi-column layout
 
-<p>If you create columns using multi-column layout your text will remain as a continuous stream filling each column in turn. The columns must all be the same size, and you are unable to target an individual column or the content of an individual column.</p>
+If you create columns using multi-column layout your text will remain as a continuous stream filling each column in turn. The columns must all be the same size, and you are unable to target an individual column or the content of an individual column.
 
-<p>You can control the gaps between columns with the {{cssxref("column-gap")}} property, and add a rule between columns using {{cssxref("column-rule")}}.</p>
+You can control the gaps between columns with the {{cssxref("column-gap")}} property, and add a rule between columns using {{cssxref("column-rule")}}.
 
-<p>{{EmbedGHLiveSample("css-examples/css-cookbook/columns-multicol.html", '100%', 720)}}</p>
+{{EmbedGHLiveSample("css-examples/css-cookbook/columns-multicol.html", '100%', 720)}}
 
-<div class="callout">
-<p><a href="https://github.com/mdn/css-examples/blob/master/css-cookbook/columns-multicol--download.html">Download this example</a></p>
-</div>
+> **Callout:**
+>
+> [Download this example](https://github.com/mdn/css-examples/blob/master/css-cookbook/columns-multicol--download.html)
 
-<p>Use multicol when:</p>
+Use multicol when:
 
-<ul>
- <li>You want your text to display in newspaper-like columns.</li>
- <li>You have a set of small items you want to break into columns.</li>
- <li>You do not need to target individual column boxes for styling.</li>
-</ul>
+- You want your text to display in newspaper-like columns.
+- You have a set of small items you want to break into columns.
+- You do not need to target individual column boxes for styling.
 
-<h3 id="A_single_row_of_items_with_equal_heights_—_flexbox">A single row of items with equal heights — flexbox</h3>
+### A single row of items with equal heights — flexbox
 
-<p>Flexbox can be used to break content into columns by setting {{cssxref("flex-direction")}} to <code>row</code>, however flexbox targets the elements inside the flex container and will place each direct child into a new column. This is a different behavior to what you saw with multicol.</p>
+Flexbox can be used to break content into columns by setting {{cssxref("flex-direction")}} to `row`, however flexbox targets the elements inside the flex container and will place each direct child into a new column. This is a different behavior to what you saw with multicol.
 
-<p>There is currently no way to add a rule between flex items, and browser support for the {{cssxref("column-gap")}} and {{cssxref("row-gap")}} properties is limited. Therefore to create gaps between items use a margin.</p>
+There is currently no way to add a rule between flex items, and browser support for the {{cssxref("column-gap")}} and {{cssxref("row-gap")}} properties is limited. Therefore to create gaps between items use a margin.
 
-<p>{{EmbedGHLiveSample("css-examples/css-cookbook/columns-flexbox.html", '100%', 720)}}</p>
+{{EmbedGHLiveSample("css-examples/css-cookbook/columns-flexbox.html", '100%', 720)}}
 
-<div class="callout">
-<p><a href="https://github.com/mdn/css-examples/blob/master/css-cookbook/columns-flexbox--download.html">Download this example</a></p>
-</div>
+> **Callout:**
+>
+> [Download this example](https://github.com/mdn/css-examples/blob/master/css-cookbook/columns-flexbox--download.html)
 
-<p>Flexbox can also be used to create layouts where the flex items wrap onto new rows, by setting the {{cssxref("flex-wrap")}} property on the container to <code>wrap</code>. These new flex lines will distribute space along that line only — the items in the new line will not line up with items in the line above, as you'll see in the example below. This is why flexbox is described as one-dimensional. It is designed for controlling layout as a row or a column, but not both at the same time.</p>
+Flexbox can also be used to create layouts where the flex items wrap onto new rows, by setting the {{cssxref("flex-wrap")}} property on the container to `wrap`. These new flex lines will distribute space along that line only — the items in the new line will not line up with items in the line above, as you'll see in the example below. This is why flexbox is described as one-dimensional. It is designed for controlling layout as a row or a column, but not both at the same time.
 
-<p>{{EmbedGHLiveSample("css-examples/css-cookbook/columns-flexbox-wrapping.html", '100%', 720)}}</p>
+{{EmbedGHLiveSample("css-examples/css-cookbook/columns-flexbox-wrapping.html", '100%', 720)}}
 
-<div class="callout">
-<p><a href="https://github.com/mdn/css-examples/blob/master/css-cookbook/columns-flexbox-wrapping--download.html">Download this example</a></p>
-</div>
+> **Callout:**
+>
+> [Download this example](https://github.com/mdn/css-examples/blob/master/css-cookbook/columns-flexbox-wrapping--download.html)
 
-<p>Use flexbox:</p>
+Use flexbox:
 
-<ul>
- <li>For single rows or columns of items.</li>
- <li>When you want to do alignment on the cross axis after laying out your items.</li>
- <li>When you are happy for wrapped items to share out space along their line only and not line up with items in other lines.</li>
-</ul>
+- For single rows or columns of items.
+- When you want to do alignment on the cross axis after laying out your items.
+- When you are happy for wrapped items to share out space along their line only and not line up with items in other lines.
 
-<h3 id="Lining_items_up_in_rows_and_columns_—_grid_layout">Lining items up in rows and columns — grid layout</h3>
+### Lining items up in rows and columns — grid layout
 
-<p>If what you want is a layout where items line up in rows and columns then you should choose CSS Grid Layout. Grid Layout works on the direct children of the grid container in a similar way to the manner in which flexbox works on the direct children of the flex container, however with CSS Grid you can line your items up in rows and columns — it is described as two-dimensional.</p>
+If what you want is a layout where items line up in rows and columns then you should choose CSS Grid Layout. Grid Layout works on the direct children of the grid container in a similar way to the manner in which flexbox works on the direct children of the flex container, however with CSS Grid you can line your items up in rows and columns — it is described as two-dimensional.
 
-<p>{{EmbedGHLiveSample("css-examples/css-cookbook/columns-grid.html", '100%', 720)}}</p>
+{{EmbedGHLiveSample("css-examples/css-cookbook/columns-grid.html", '100%', 720)}}
 
-<div class="callout">
-<p><a href="https://github.com/mdn/css-examples/blob/master/css-cookbook/columns-grid--download.html">Download this example</a></p>
-</div>
+> **Callout:**
+>
+> [Download this example](https://github.com/mdn/css-examples/blob/master/css-cookbook/columns-grid--download.html)
 
-<p>Use Grid:</p>
+Use Grid:
 
-<ul>
- <li>For multiple rows or columns of items.</li>
- <li>When you want to be able to align the items on the block and inline axes.</li>
- <li>When you want items to line up in rows and columns.</li>
-</ul>
+- For multiple rows or columns of items.
+- When you want to be able to align the items on the block and inline axes.
+- When you want items to line up in rows and columns.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>The various layout methods have different browser support. See the charts below for details on basic support for the properties used.</p>
+The various layout methods have different browser support. See the charts below for details on basic support for the properties used.
 
-<h4 id="column-width">column-width</h4>
+#### column-width
 
-<p>{{Compat("css.properties.column-width")}}</p>
+{{Compat("css.properties.column-width")}}
 
-<h4 id="column-rule">column-rule</h4>
+#### column-rule
 
-<p>{{Compat("css.properties.column-rule")}}</p>
+{{Compat("css.properties.column-rule")}}
 
-<h4 id="flex">flex</h4>
+#### flex
 
-<p>{{Compat("css.properties.flex")}}</p>
+{{Compat("css.properties.flex")}}
 
-<h4 id="flex-wrap">flex-wrap</h4>
+#### flex-wrap
 
-<p>{{Compat("css.properties.flex-wrap")}}</p>
+{{Compat("css.properties.flex-wrap")}}
 
-<h4 id="grid-template-columns">grid-template-columns</h4>
+#### grid-template-columns
 
-<p>{{Compat("css.properties.grid-template-columns")}}</p>
+{{Compat("css.properties.grid-template-columns")}}
 
-<h2 id="Resources_on_MDN">Resources on MDN</h2>
+## Resources on MDN
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Columns">Guide to Multi-column Layout</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">Guide to Flexbox</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">Guide to CSS Grid Layout</a></li>
-</ul>
+- [Guide to Multi-column Layout](/en-US/docs/Web/CSS/CSS_Columns)
+- [Guide to Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout)
+- [Guide to CSS Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout)

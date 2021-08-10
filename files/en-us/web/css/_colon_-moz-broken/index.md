@@ -11,46 +11,48 @@ tags:
   - Selector
 browser-compat: css.selectors.-moz-broken
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<p>The <strong><code>:-moz-broken</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> is a <a href="/en-US/docs/Web/CSS/Mozilla_Extensions">Mozilla extension</a> that matches elements representing broken image links.</p>
+The **`:-moz-broken`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) is a [Mozilla extension](/en-US/docs/Web/CSS/Mozilla_Extensions) that matches elements representing broken image links.
 
-<div class="note">
-<p><strong>Note:</strong> This selector is mainly intended to be used by theme developers.</p>
-</div>
+> **Note:** This selector is mainly intended to be used by theme developers.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">:-moz-broken</pre>
+```css
+:-moz-broken
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;img src="broken.jpg" alt="This image is broken. :-("&gt;</pre>
+```html
+<img src="broken.jpg" alt="This image is broken. :-(">
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">:-moz-broken {
+```css
+:-moz-broken {
   background: bisque;
   padding: 8px;
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Examples")}}</p>
+{{EmbedLiveSample("Examples")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any standard.</p>
+Not part of any standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref(":-moz-loading")}}, {{cssxref(":-moz-suppressed")}}, {{cssxref(":-moz-user-disabled")}}</li>
- <li>{{bug("11011")}}</li>
-</ul>
+- {{cssxref(":-moz-loading")}}, {{cssxref(":-moz-suppressed")}}, {{cssxref(":-moz-user-disabled")}}
+- {{bug("11011")}}

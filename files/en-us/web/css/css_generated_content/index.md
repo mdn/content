@@ -8,52 +8,31 @@ tags:
   - Overview
   - Reference
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<p><strong>CSS Generated Content</strong> is a module of CSS that defines how to add content to an element. Generated content can be used to add content to anonymous replaced elements or replace the content of a DOM node in very limited circumstances with a generated value.</p>
+**CSS Generated Content** is a module of CSS that defines how to add content to an element. Generated content can be used to add content to anonymous replaced elements or replace the content of a DOM node in very limited circumstances with a generated value.
 
-<p>See the <a href="/en-US/docs/Learn/CSS/Howto/Generated_content">how to guide for generated content</a> to learn more, and the {{cssxref("content")}} and {{cssxref("quotes")}} properties for implementation information.</p>
+See the [how to guide for generated content](/en-US/docs/Learn/CSS/Howto/Generated_content) to learn more, and the {{cssxref("content")}} and {{cssxref("quotes")}} properties for implementation information.
 
-<h2 id="Reference">Reference</h2>
+## Reference
 
-<h3 id="Properties">Properties</h3>
+### Properties
 
-<ul>
- <li>{{cssxref("content")}}</li>
- <li>{{cssxref("quotes")}}</li>
-</ul>
+- {{cssxref("content")}}
+- {{cssxref("quotes")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Content")}}</td>
-   <td>{{Spec2("CSS3 Content")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                        | Status                           | Comment            |
+| ------------------------------------ | -------------------------------- | ------------------ |
+| {{SpecName("CSS3 Content")}} | {{Spec2("CSS3 Content")}} |                    |
+| {{SpecName('CSS2.1')}}         | {{Spec2('CSS2.1')}}         | Initial definition |
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Learn/CSS/Howto/Generated_content">Using CSS generated content</a></li>
- <li>{{cssxref("content")}}</li>
- <li>{{cssxref("quotes")}}</li>
- <li>{{cssxref("::before")}}</li>
- <li>{{cssxref("::after")}}</li>
- <li>{{cssxref("::marker")}}</li>
-</ul>
+- [Using CSS generated content](/en-US/docs/Learn/CSS/Howto/Generated_content)
+- {{cssxref("content")}}
+- {{cssxref("quotes")}}
+- {{cssxref("::before")}}
+- {{cssxref("::after")}}
+- {{cssxref("::marker")}}

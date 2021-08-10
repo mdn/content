@@ -8,13 +8,14 @@ tags:
   - Reference
 browser-compat: css.at-rules.keyframes
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>@keyframes</code></strong> CSS <a href="/en-US/docs/Web/CSS/At-rule">at-rule</a> controls the intermediate steps in a CSS animation sequence by defining styles for keyframes (or waypoints) along the animation sequence. This gives more control over the intermediate steps of the animation sequence than <a href="/en-US/docs/Web/CSS/CSS_Transitions">transitions</a>.</p>
+The **`@keyframes`** CSS [at-rule](/en-US/docs/Web/CSS/At-rule) controls the intermediate steps in a CSS animation sequence by defining styles for keyframes (or waypoints) along the animation sequence. This gives more control over the intermediate steps of the animation sequence than [transitions](/en-US/docs/Web/CSS/CSS_Transitions).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css no-line-numbers">@keyframes slidein {
+```css
+@keyframes slidein {
   from {
     transform: translateX(0%);
   }
@@ -22,76 +23,78 @@ browser-compat: css.at-rules.keyframes
   to {
     transform: translateX(100%);
   }
-}</pre>
+}
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt>{{cssxref("custom-ident")}}</dt>
- <dd>A name identifying the keyframe list. This must match the identifier production in CSS syntax.</dd>
- <dt><code>from</code></dt>
- <dd>A starting offset of <code>0%</code>.</dd>
- <dt><code>to</code></dt>
- <dd>An ending offset of <code>100%</code>.</dd>
- <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
- <dd>A percentage of the time through the animation sequence at which the specified keyframe should occur.</dd>
-</dl>
+- {{cssxref("custom-ident")}}
+  - : A name identifying the keyframe list. This must match the identifier production in CSS syntax.
+- `from`
+  - : A starting offset of `0%`.
+- `to`
+  - : An ending offset of `100%`.
+- {{cssxref("&lt;percentage&gt;")}}
+  - : A percentage of the time through the animation sequence at which the specified keyframe should occur.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>JavaScript can access the <code>@keyframes</code> at-rule with the CSS object model interface {{domxref("CSSKeyframesRule")}}.</p>
+JavaScript can access the `@keyframes` at-rule with the CSS object model interface {{domxref("CSSKeyframesRule")}}.
 
-<p>To use keyframes, create a <code>@keyframes</code> rule with a name that is then used by the {{ cssxref("animation-name") }} property to match an animation to its keyframe declaration. Each <code>@keyframes</code> rule contains a style list of keyframe selectors, which specify percentages along the animation when the keyframe occurs, and a block containing the styles for that keyframe.</p>
+To use keyframes, create a `@keyframes` rule with a name that is then used by the {{ cssxref("animation-name") }} property to match an animation to its keyframe declaration. Each `@keyframes` rule contains a style list of keyframe selectors, which specify percentages along the animation when the keyframe occurs, and a block containing the styles for that keyframe.
 
-<p>You can list the keyframe percentages in any order; they will be handled in the order they should occur.</p>
+You can list the keyframe percentages in any order; they will be handled in the order they should occur.
 
-<h3 id="Valid_keyframe_lists">Valid keyframe lists</h3>
+### Valid keyframe lists
 
-<p>If a keyframe rule doesn't specify the start or end states of the animation (that is, <code>0%</code>/<code>from</code> and <code>100%</code>/<code>to</code>), browsers will use the element's existing styles for the start/end states. This can be used to animate an element from its initial state and back.</p>
+If a keyframe rule doesn't specify the start or end states of the animation (that is, `0%`/`from` and `100%`/`to`), browsers will use the element's existing styles for the start/end states. This can be used to animate an element from its initial state and back.
 
-<p>Properties that can't be animated in keyframe rules are ignored, but supported properties will still be animated.</p>
+Properties that can't be animated in keyframe rules are ignored, but supported properties will still be animated.
 
-<h3 id="Resolving_duplicates">Resolving duplicates</h3>
+### Resolving duplicates
 
-<p>If multiple keyframe sets exist for a given name, the last one encountered by the parser is used. <code>@keyframes</code> rules don't cascade, so animations never derive keyframes from more than one rule set.</p>
+If multiple keyframe sets exist for a given name, the last one encountered by the parser is used. `@keyframes` rules don't cascade, so animations never derive keyframes from more than one rule set.
 
-<p>If a given animation time offset is duplicated, all keyframes in the <code>@keyframes</code> rule for that percentage are used for that frame. There is cascading within a <code>@keyframes</code> rule if multiple keyframes specify the same percentage values.</p>
+If a given animation time offset is duplicated, all keyframes in the `@keyframes` rule for that percentage are used for that frame. There is cascading within a `@keyframes` rule if multiple keyframes specify the same percentage values.
 
-<h3 id="When_properties_are_left_out_of_some_keyframes">When properties are left out of some keyframes</h3>
+### When properties are left out of some keyframes
 
-<p>Properties that aren't specified in every keyframe are interpolated if possible — properties that can't be interpolated are dropped from the animation. For example:</p>
+Properties that aren't specified in every keyframe are interpolated if possible — properties that can't be interpolated are dropped from the animation. For example:
 
-<pre class="brush: css">@keyframes identifier {
+```css
+@keyframes identifier {
   0% { top: 0; left: 0; }
   30% { top: 50px; }
   68%, 72% { left: 50px; }
   100% { top: 100px; left: 100%; }
 }
-</pre>
+```
 
-<p>Here, the {{ cssxref("top") }} property animates using the <code>0%</code>, <code>30%</code>, and <code>100%</code> keyframes, and {{ cssxref("left") }} animates using the <code>0%</code>, <code>68%</code>, <code>72%</code> and <code>100%</code> keyframes.</p>
+Here, the {{ cssxref("top") }} property animates using the `0%`, `30%`, and `100%` keyframes, and {{ cssxref("left") }} animates using the `0%`, `68%`, `72%` and `100%` keyframes.
 
-<h3 id="When_a_keyframe_is_defined_multiple_times">When a keyframe is defined multiple times</h3>
+### When a keyframe is defined multiple times
 
-<p>If a keyframe is defined multiple times but not all affected properties are in each keyframe, all values specified in these keyframes are considered. For example:</p>
+If a keyframe is defined multiple times but not all affected properties are in each keyframe, all values specified in these keyframes are considered. For example:
 
-<pre class="brush: css">@keyframes identifier {
+```css
+@keyframes identifier {
   0% { top: 0; }
   50% { top: 30px; left: 20px; }
   50% { top: 10px; }
   100% { top: 0; }
 }
-</pre>
+```
 
-<p>In this example, at the <code>50%</code> keyframe, the values used are <code>top: 10px</code> and <code>left: 20px</code>.</p>
+In this example, at the `50%` keyframe, the values used are `top: 10px` and `left: 20px`.
 
-<p>Cascading keyframes are supported starting in Firefox 14.</p>
+Cascading keyframes are supported starting in Firefox 14.
 
-<h3 id="!important_in_a_keyframe"><code>!important</code> in a keyframe</h3>
+### `!important` in a keyframe
 
-<p>Declarations in a keyframe qualified with <code>!important</code> are ignored.</p>
+Declarations in a keyframe qualified with `!important` are ignored.
 
-<pre class="brush: css">@keyframes important1 {
+```css
+@keyframes important1 {
   from { margin-top: 50px; }
   50%  { margin-top: 150px !important; } /* ignored */
   to   { margin-top: 100px; }
@@ -103,29 +106,27 @@ browser-compat: css.at-rules.keyframes
   to   { margin-top: 150px !important; /* ignored */
          margin-bottom: 50px; }
 }
-</pre>
+```
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="CSS_animation_examples">CSS animation examples</h3>
+### CSS animation examples
 
-<p>See <a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations">Using CSS animations</a> for examples.</p>
+See [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations) for examples.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations">Using CSS animations</a></li>
- <li>{{domxref("AnimationEvent")}}</li>
-</ul>
+- [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- {{domxref("AnimationEvent")}}

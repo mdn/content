@@ -6,28 +6,27 @@ tags:
   - CSS Property
   - CSS Transitions
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.transition-property
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>transition-property</code> </strong><a href="/en-US/docs/Web/CSS">CSS</a> property sets the CSS properties to which a <a href="/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">transition effect</a> should be applied.</p>
+The **`transition-property` **[CSS](/en-US/docs/Web/CSS) property sets the CSS properties to which a [transition effect](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) should be applied.
 
-<div>{{EmbedInteractiveExample("pages/css/transition-property.html")}}</div>
+{{EmbedInteractiveExample("pages/css/transition-property.html")}}
 
-<div class="note">
-  <p><strong>Note:</strong> The <a href="/en-US/docs/Web/CSS/CSS_animated_properties">set of properties that can be animated</a> is subject to change. As such, you should avoid including any properties in the list that don't currently animate, as someday they might, causing unexpected results.</p>
-</div>
+> **Note:** The [set of properties that can be animated](/en-US/docs/Web/CSS/CSS_animated_properties) is subject to change. As such, you should avoid including any properties in the list that don't currently animate, as someday they might, causing unexpected results.
 
-<p>If you specify a shorthand property (e.g., {{cssxref("background")}}), all of its longhand sub-properties that can be animated will be.</p>
+If you specify a shorthand property (e.g., {{cssxref("background")}}), all of its longhand sub-properties that can be animated will be.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 transition-property: none;
 transition-property: all;
 
-/* &lt;custom-ident&gt; values */
+/* <custom-ident> values */
 transition-property: test_05;
 transition-property: -specific;
 transition-property: sliding-vertically;
@@ -42,40 +41,41 @@ transition-property: inherit;
 transition-property: initial;
 transition-property: revert;
 transition-property: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
-	<dt><code>none</code></dt>
-	<dd>No properties will transition.</dd>
-	<dt><code>all</code></dt>
-	<dd>All properties that can transition will.</dd>
-	<dt>{{cssxref("&lt;custom-ident&gt;")}}</dt>
-	<dd>A string identifying the property to which a transition effect should be applied when its value changes.</dd>
-</dl>
+- `none`
+  - : No properties will transition.
+- `all`
+  - : All properties that can transition will.
+- {{cssxref("&lt;custom-ident&gt;")}}
+  - : A string identifying the property to which a transition effect should be applied when its value changes.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Simple_example">Simple example</h3>
+### Simple example
 
-<p>This example performs a four-second font size transition when the user hovers over the element, the <code>transition-property</code> is the <code>font-size</code>.</p>
+This example performs a four-second font size transition when the user hovers over the element, the `transition-property` is the `font-size`.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;a class="target"&gt;Hover over me&lt;/a&gt;</pre>
+```html
+<a class="target">Hover over me</a>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.target {
+```css
+.target {
   font-size: 14px;
   transition-property: font-size;
   transition-duration: 4s;
@@ -84,27 +84,25 @@ transition-property: unset;
 .target:hover {
   font-size: 36px;
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample('Simple_example', 600, 100)}}</p>
+{{EmbedLiveSample('Simple_example', 600, 100)}}
 
-<p>You will find more examples of <code>transition-property</code> included in the main <a href="/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">CSS transitions</a> article.</p>
+You will find more examples of `transition-property` included in the main [CSS transitions](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) article.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li><a href="/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">Using CSS transitions</a></li>
-	<li>{{cssxref('transition')}}</li>
-	<li>{{cssxref('transition-duration')}}</li>
-	<li>{{cssxref('transition-timing-function')}}</li>
-	<li>{{cssxref('transition-delay')}}</li>
-	<li>{{domxref("TransitionEvent")}}</li>
-</ul>
+- [Using CSS transitions](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+- {{cssxref('transition')}}
+- {{cssxref('transition-duration')}}
+- {{cssxref('transition-timing-function')}}
+- {{cssxref('transition-delay')}}
+- {{domxref("TransitionEvent")}}

@@ -8,20 +8,21 @@ tags:
   - Layout
   - Reference
   - Web
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.visibility
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>visibility</code></strong> CSS property shows or hides an element without changing the layout of a document. The property can also hide rows or columns in a {{HTMLElement("table")}}.</p>
+The **`visibility`** CSS property shows or hides an element without changing the layout of a document. The property can also hide rows or columns in a {{HTMLElement("table")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/visibility.html")}}</div>
+{{EmbedInteractiveExample("pages/css/visibility.html")}}
 
-<p>To both hide an element <em>and remove it from the document layout</em>, set the {{cssxref("display")}} property to <code>none</code> instead of using <code>visibility</code>.</p>
+To both hide an element _and remove it from the document layout_, set the {{cssxref("display")}} property to `none` instead of using `visibility`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 visibility: visible;
 visibility: hidden;
 visibility: collapse;
@@ -31,100 +32,99 @@ visibility: inherit;
 visibility: initial;
 visibility: revert;
 visibility: unset;
-</pre>
+```
 
-<p>The <code>visibility</code> property is specified as one of the keyword values listed below.</p>
+The `visibility` property is specified as one of the keyword values listed below.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>visible</code></dt>
- <dd>The element box is visible.</dd>
- <dt><code>hidden</code></dt>
- <dd>The element box is invisible (not drawn), but still affects layout as normal. Descendants of the element will be visible if they have <code>visibility</code> set to <code>visible</code>. The element cannot receive focus (such as when navigating through <a href="/en-US/docs/Web/HTML/Global_attributes/tabindex">tab indexes</a>).</dd>
- <dt><code>collapse</code></dt>
- <dd>
- <p>The <code>collapse</code> keyword has different effects for different elements:</p>
- <ul>
-  <li>For {{HTMLElement("table")}} rows, columns, column groups, and row groups, the row(s) or column(s) are hidden and the space they would have occupied is removed (as if <code>{{Cssxref("display")}}: none</code> were applied to the column/row of the table). However, the size of other rows and columns is still calculated as though the cells in the collapsed row(s) or column(s) are present. This value allows for the fast removal of a row or column from a table without forcing the recalculation of widths and heights for the entire table.</li>
-  <li>Collapsed flex items and ruby annotations are hidden, and the space they would have occupied is removed.</li>
-  <li>For other elements, <code>collapse</code> is treated the same as <code>hidden</code>.</li>
- </ul>
- </dd>
-</dl>
+- `visible`
+  - : The element box is visible.
+- `hidden`
+  - : The element box is invisible (not drawn), but still affects layout as normal. Descendants of the element will be visible if they have `visibility` set to `visible`. The element cannot receive focus (such as when navigating through [tab indexes](/en-US/docs/Web/HTML/Global_attributes/tabindex)).
+- `collapse`
 
-<h2 id="Accessibility_concerns">Accessibility concerns</h2>
+  - : The `collapse` keyword has different effects for different elements:
 
-<p>Using a <code>visibility</code> value of <code>hidden</code> on an element will remove it from the <a href="/en-US/docs/Learn/Accessibility/What_is_accessibility#Accessibility_APIs">accessibility tree</a>. This will cause the element and all its descendant elements to no longer be announced by screen reading technology.</p>
+    - For {{HTMLElement("table")}} rows, columns, column groups, and row groups, the row(s) or column(s) are hidden and the space they would have occupied is removed (as if `{{Cssxref("display")}}: none` were applied to the column/row of the table). However, the size of other rows and columns is still calculated as though the cells in the collapsed row(s) or column(s) are present. This value allows for the fast removal of a row or column from a table without forcing the recalculation of widths and heights for the entire table.
+    - Collapsed flex items and ruby annotations are hidden, and the space they would have occupied is removed.
+    - For other elements, `collapse` is treated the same as `hidden`.
 
-<h2 id="Interpolation">Interpolation</h2>
+## Accessibility concerns
 
-<p>Visibility values are interpolated between <em>visible</em> and <em>not-visible</em>. One of the start or ending values must therefore be <code>visible</code> or no interpolation can happen. The value is interpolated as a discrete step, where values of the timing function between <code>0</code> and <code>1</code> map to <code>visible</code> and other values of the timing function (which occur only at the start/end of the transition or as a result of <code>cubic-bezier()</code> functions with y values outside of [0, 1]) map to the closer endpoint.</p>
+Using a `visibility` value of `hidden` on an element will remove it from the [accessibility tree](/en-US/docs/Learn/Accessibility/What_is_accessibility#Accessibility_APIs). This will cause the element and all its descendant elements to no longer be announced by screen reading technology.
 
-<h2 id="Notes">Notes</h2>
+## Interpolation
 
-<ul>
- <li>Support for <code>visibility: collapse</code> is missing or partially incorrect in some modern browsers. It may not be correctly treated like <code>visibility: hidden</code> on elements other than table rows and columns.</li>
- <li><code>visibility: collapse</code> may change the layout of a table if the table has nested tables within the cells that are collapsed, unless <code>visibility: visible</code> is specified explicitly on nested tables.</li>
-</ul>
+Visibility values are interpolated between _visible_ and _not-visible_. One of the start or ending values must therefore be `visible` or no interpolation can happen. The value is interpolated as a discrete step, where values of the timing function between `0` and `1` map to `visible` and other values of the timing function (which occur only at the start/end of the transition or as a result of `cubic-bezier()` functions with y values outside of \[0, 1]) map to the closer endpoint.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Notes
 
-<p>{{CSSInfo}}</p>
+- Support for `visibility: collapse` is missing or partially incorrect in some modern browsers. It may not be correctly treated like `visibility: hidden` on elements other than table rows and columns.
+- `visibility: collapse` may change the layout of a table if the table has nested tables within the cells that are collapsed, unless `visibility: visible` is specified explicitly on nested tables.
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal definition
+
+{{CSSInfo}}
+
+## Formal syntax
 
 {{CSSSyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Basic_example">Basic example</h3>
+### Basic example
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p class="visible"&gt;The first paragraph is visible.&lt;/p&gt;
-&lt;p class="not-visible"&gt;The second paragraph is NOT visible.&lt;/p&gt;
-&lt;p class="visible"&gt;The third paragraph is visible. Notice the second paragraph is still occupying space.&lt;/p&gt;
-</pre>
+```html
+<p class="visible">The first paragraph is visible.</p>
+<p class="not-visible">The second paragraph is NOT visible.</p>
+<p class="visible">The third paragraph is visible. Notice the second paragraph is still occupying space.</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.visible {
+```css
+.visible {
   visibility: visible;
 }
 
 .not-visible {
   visibility: hidden;
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample('Basic_example')}}</p>
+{{EmbedLiveSample('Basic_example')}}
 
-<h3 id="Table_example">Table example</h3>
+### Table example
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;table&gt;
-  &lt;tr&gt;
-    &lt;td&gt;1.1&lt;/td&gt;
-    &lt;td class="collapse"&gt;1.2&lt;/td&gt;
-    &lt;td&gt;1.3&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr class="collapse"&gt;
-    &lt;td&gt;2.1&lt;/td&gt;
-    &lt;td&gt;2.2&lt;/td&gt;
-    &lt;td&gt;2.3&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;3.1&lt;/td&gt;
-    &lt;td&gt;3.2&lt;/td&gt;
-    &lt;td&gt;3.3&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;</pre>
+```html
+<table>
+  <tr>
+    <td>1.1</td>
+    <td class="collapse">1.2</td>
+    <td>1.3</td>
+  </tr>
+  <tr class="collapse">
+    <td>2.1</td>
+    <td>2.2</td>
+    <td>2.3</td>
+  </tr>
+  <tr>
+    <td>3.1</td>
+    <td>3.2</td>
+    <td>3.3</td>
+  </tr>
+</table>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.collapse {
+```css
+.collapse {
   visibility: collapse;
 }
 
@@ -135,20 +135,18 @@ table {
 td {
   border: 1px solid gray;
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample('Table_example')}}</p>
+{{EmbedLiveSample('Table_example')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("display")}}</li>
-</ul>
+- {{cssxref("display")}}

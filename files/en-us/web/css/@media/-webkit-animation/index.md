@@ -9,50 +9,46 @@ tags:
   - media feature
 browser-compat: css.at-rules.media.-webkit-animation
 ---
-<div>{{ CSSRef }} {{ Non-standard_header }}</div>
+{{ CSSRef }} {{ Non-standard_header }}
 
-<p>The <strong><code>-webkit-animation</code></strong> Boolean <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features">media feature</a> is a <a href="/en-US/docs/Web/CSS/WebKit_Extensions">Chrome extension</a> whose value is <code>true</code> if vendor-prefixed CSS {{cssxref("animation")}}s are supported.</p>
+The **`-webkit-animation`** Boolean [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) is a [Chrome extension](/en-US/docs/Web/CSS/WebKit_Extensions) whose value is `true` if vendor-prefixed CSS {{cssxref("animation")}}s are supported.
 
-<p>Apple has <a href="https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/OtherStandardCSS3Features.html#//apple_ref/doc/uid/TP40007601-SW3">a description in Safari CSS Reference</a>.</p>
+Apple has [a description in Safari CSS Reference](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/OtherStandardCSS3Features.html#//apple_ref/doc/uid/TP40007601-SW3).
 
-<div class="note">
-<p><strong>Note:</strong> This media feature is only supported by WebKit. If possible, use an {{cssxref("@supports")}} feature query instead.</p>
-</div>
+> **Note:** This media feature is only supported by WebKit. If possible, use an {{cssxref("@supports")}} feature query instead.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>-webkit-animation</code> media feature is a Boolean whose value is <code>true</code> if the vendor-prefixed CSS animation properties are supported.</p>
+The `-webkit-animation` media feature is a Boolean whose value is `true` if the vendor-prefixed CSS animation properties are supported.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>true</code></dt>
- <dd>The browser supports <code>-webkit</code> prefixed CSS {{cssxref("animation")}}s.</dd>
- <dt><code>false</code></dt>
- <dd>The browser doesn't support these prefixed CSS animations.</dd>
-</dl>
+- `true`
+  - : The browser supports `-webkit` prefixed CSS {{cssxref("animation")}}s.
+- `false`
+  - : The browser doesn't support these prefixed CSS animations.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Example_of_-webkit-animation">Example of -webkit-animation</h3>
+### Example of -webkit-animation
 
-<pre class="brush: css">@media (-webkit-animation) {
+```css
+@media (-webkit-animation) {
   /* CSS to use if animations are supported */
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any standard.</p>
+Not part of any standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/@media/-webkit-transform-3d"><code>-webkit-transform-3d</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/@media/-webkit-transform-2d"><code>-webkit-transform-2d</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/@media/-webkit-transition"><code>-webkit-transition</code></a></li>
- <li><a href="http://www.quirksmode.org/css/tests/mediaqueries/animation.html">Test page at quirksmode.org</a></li>
-</ul>
+- [`-webkit-transform-3d`](/en-US/docs/Web/CSS/@media/-webkit-transform-3d)
+- [`-webkit-transform-2d`](/en-US/docs/Web/CSS/@media/-webkit-transform-2d)
+- [`-webkit-transition`](/en-US/docs/Web/CSS/@media/-webkit-transition)
+- [Test page at quirksmode.org](http://www.quirksmode.org/css/tests/mediaqueries/animation.html)

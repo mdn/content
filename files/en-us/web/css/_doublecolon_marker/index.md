@@ -11,67 +11,67 @@ tags:
   - Selector
 browser-compat: css.selectors.marker
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>::marker</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-element</a> selects the marker box of a list item, which typically contains a bullet or number. It works on any element or pseudo-element set to <code><a href="/en-US/docs/Web/CSS/display">display: list-item</a></code>, such as the {{HTMLElement("li")}} and {{HTMLElement("summary")}} elements.</p>
+The **`::marker`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) selects the marker box of a list item, which typically contains a bullet or number. It works on any element or pseudo-element set to [`display: list-item`](/en-US/docs/Web/CSS/display), such as the {{HTMLElement("li")}} and {{HTMLElement("summary")}} elements.
 
-<pre class="brush: css no-line-numbers">::marker {
+```css
+::marker {
   color: blue;
   font-size: 1.2em;
-}</pre>
+}
+```
 
-<h2 id="Allowable_properties">Allowable properties</h2>
+## Allowable properties
 
-<p>Only certain CSS properties can be used in a rule with <code>::marker</code> as a selector:</p>
+Only certain CSS properties can be used in a rule with `::marker` as a selector:
 
-<ul>
- <li>All <a href="/en-US/docs/Web/CSS/CSS_Fonts">font properties</a></li>
- <li>The {{CSSxRef("white-space")}} property</li>
- <li>{{CSSxRef("color")}}</li>
- <li>{{CSSxRef("text-combine-upright")}}, {{CSSxRef("unicode-bidi")}} and {{CSSxRef("direction")}} properties</li>
- <li>The {{CSSxRef("content")}} property</li>
- <li>All <a href="/en-US/docs/Web/CSS/CSS_Animations#css_properties">animation</a> and <a href="/en-US/docs/Web/CSS/CSS_Transitions#properties">transition</a> properties</li>
-</ul>
+- All [font properties](/en-US/docs/Web/CSS/CSS_Fonts)
+- The {{CSSxRef("white-space")}} property
+- {{CSSxRef("color")}}
+- {{CSSxRef("text-combine-upright")}}, {{CSSxRef("unicode-bidi")}} and {{CSSxRef("direction")}} properties
+- The {{CSSxRef("content")}} property
+- All [animation](/en-US/docs/Web/CSS/CSS_Animations#css_properties) and [transition](/en-US/docs/Web/CSS/CSS_Transitions#properties) properties
 
-<div class="notecard note">
-<p><strong>Note:</strong> The specification states that additional CSS properties may be supported in future.</p>
-</div>
+> **Note:** The specification states that additional CSS properties may be supported in future.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
 {{CSSSyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;ul&gt;
-  &lt;li&gt;Peaches&lt;/li&gt;
-  &lt;li&gt;Apples&lt;/li&gt;
-  &lt;li&gt;Plums&lt;/li&gt;
-&lt;/ul&gt;</pre>
+```html
+<ul>
+  <li>Peaches</li>
+  <li>Apples</li>
+  <li>Plums</li>
+</ul>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">ul li::marker {
+```css
+ul li::marker {
   color: red;
   font-size: 1.5em;
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample('Examples')}}</p>
+{{EmbedLiveSample('Examples')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>HTML elements that have marker boxes by default: {{HTMLElement("ol")}}, {{HTMLElement("li")}}, {{HTMLElement("summary")}}</li>
-</ul>
+- HTML elements that have marker boxes by default: {{HTMLElement("ol")}}, {{HTMLElement("li")}}, {{HTMLElement("summary")}}

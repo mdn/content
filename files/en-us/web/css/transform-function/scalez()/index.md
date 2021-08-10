@@ -9,42 +9,36 @@ tags:
   - Reference
 browser-compat: css.types.transform-function.scaleZ
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>scaleZ()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a
-    href="/en-US/docs/Web/CSS/CSS_Functions">function</a> defines a transformation that resizes an element along the
-  z-axis. Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.</p>
+The **`scaleZ()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) defines a transformation that resizes an element along the
+z-axis. Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.
 
-<div>{{EmbedInteractiveExample("pages/css/function-scaleZ.html")}}</div>
+{{EmbedInteractiveExample("pages/css/function-scaleZ.html")}}
 
-<p>This scaling transformation modifies the z-coordinate of each element point by a constant factor, except when the
-  scale factor is 1, in which case the function is the identity transform. The scaling is not isotropic, and the angles
-  of the element are not conserved. <code>scaleZ(-1)</code> defines an <a
-    href="https://en.wikipedia.org/wiki/Axial_symmetry">axial symmetry</a>, with the z-axis passing through the origin
-  (as specified by the {{cssxref("transform-origin")}} property).</p>
+This scaling transformation modifies the z-coordinate of each element point by a constant factor, except when the
+scale factor is 1, in which case the function is the identity transform. The scaling is not isotropic, and the angles
+of the element are not conserved. `scaleZ(-1)` defines an [axial symmetry](https://en.wikipedia.org/wiki/Axial_symmetry), with the z-axis passing through the origin
+(as specified by the {{cssxref("transform-origin")}} property).
 
-<p>In the above interactive examples, <code><a href="/en-US/docs/Web/CSS/perspective">perspective: 550px;</a></code> (to
-  create a 3D space) and <code><a href="/en-US/docs/Web/CSS/transform-style">transform-style: preserve-3d;</a></code>
-  (so the children, the 6 sides of the cube, are also positioned in the 3D space), have been set on the cube.</p>
+In the above interactive examples, [`perspective: 550px;`](/en-US/docs/Web/CSS/perspective) (to
+create a 3D space) and [`transform-style: preserve-3d;`](/en-US/docs/Web/CSS/transform-style)
+(so the children, the 6 sides of the cube, are also positioned in the 3D space), have been set on the cube.
 
-<div class="note">
-  <p><strong>Note:</strong> <code>scaleZ(sz)</code> is equivalent to
-    <code><a href="/en-US/docs/Web/CSS/transform-function/scale3d">scale3d</a>(1, 1, sz)</code>.
-  </p>
-</div>
+> **Note:** `scaleZ(sz)` is equivalent to
+> `scale3d(1, 1, sz)`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">scaleZ(s)
-</pre>
+```css
+scaleZ(s)
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
-  <dt><code>s</code></dt>
-  <dd>Is a {{cssxref("&lt;number&gt;")}} representing the scaling factor to apply on the z-coordinate of each point of
-    the element.</dd>
-</dl>
+- `s`
+  - : Is a {{cssxref("&lt;number&gt;")}} representing the scaling factor to apply on the z-coordinate of each point of
+    the element.
 
 <table class="standard-table">
   <thead>
@@ -57,124 +51,67 @@ browser-compat: css.types.transform-function.scaleZ
   </thead>
   <tbody>
     <tr>
-      <td colspan="2">This transformation applies to the 3D space and can't be represented on the plane.
+      <td colspan="2">
+        This transformation applies to the 3D space and can't be represented on
+        the plane.
       </td>
-      <td><math>
-          <mfenced>
-            <mtable>
-              <mtr>
-                <mtd>
-                  <mn>1</mn>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-              </mtr>
-              <mtr>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>1</mn>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-              </mtr>
-              <mtr>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mi>s</mi>
-                </mtd>
-              </mtr>
-            </mtable>
-          </mfenced>
-        </math></td>
-      <td><math>
-          <mfenced>
-            <mtable>
-              <mtr>
-                <mtd>
-                  <mn>1</mn>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-              </mtr>
-              <mtr>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>1</mn>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-              </mtr>
-              <mtr>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mi>s</mi>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-              </mtr>
-              <mtr>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>1</mn>
-                </mtd>
-              </mtr>
-            </mtable>
-          </mfenced>
-        </math></td>
+      <td>
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr
+                ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd
+                ><mtd><mn>0</mn> </mtd></mtr
+              ><mtr
+                ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn> </mtd
+                ><mtd><mn>0</mn> </mtd></mtr
+              ><mtr
+                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
+                ><mtd><mi>s</mi></mtd></mtr
+              ></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
+      <td>
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr
+                ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd
+                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
+              ><mtr
+                ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn> </mtd
+                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
+              ><mtr
+                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
+                ><mtd><mi>s</mi> </mtd><mtd><mn>0</mn> </mtd></mtr
+              ><mtr
+                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
+                ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn></mtd></mtr
+              ></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;Normal&lt;/div&gt;
-&lt;div class="perspective"&gt;Translated&lt;/div&gt;
-&lt;div class="scaled-translated"&gt;Scaled&lt;/div&gt;</pre>
+```html
+<div>Normal</div>
+<div class="perspective">Translated</div>
+<div class="scaled-translated">Scaled</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   width: 80px;
   height: 80px;
   background-color: skyblue;
@@ -191,26 +128,24 @@ browser-compat: css.types.transform-function.scaleZ
   transform: perspective(400px) scaleZ(2) translateZ(-100px);
   background-color: pink;
 }
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Examples", 200, 300)}}</p>
+{{EmbedLiveSample("Examples", 200, 300)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><code><a href="/en-US/docs/Web/CSS/transform-function/scaleX">scaleX()</a></code></li>
-  <li><code><a href="/en-US/docs/Web/CSS/transform-function/scaleY">scaleY()</a></code></li>
-  <li>{{cssxref("transform")}}</li>
-  <li>{{cssxref("&lt;transform-function&gt;")}}</li>
-  <li>{{cssxref("transform-origin")}}</li>
-</ul>
+- [`scaleX()`](/en-US/docs/Web/CSS/transform-function/scaleX)
+- [`scaleY()`](/en-US/docs/Web/CSS/transform-function/scaleY)
+- {{cssxref("transform")}}
+- {{cssxref("&lt;transform-function&gt;")}}
+- {{cssxref("transform-origin")}}

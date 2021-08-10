@@ -8,16 +8,17 @@ tags:
   - NeedsExample
   - Non-standard
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.scroll-snap-type-x
 ---
-<div>{{CSSRef}}{{deprecated_header}}</div>
+{{CSSRef}}{{deprecated_header}}
 
-<p>The <strong><code>scroll-snap-type-x</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property defines how strictly snap points are enforced on the horizontal axis of the scroll container in case there is one.</p>
+The **`scroll-snap-type-x`** [CSS](/en-US/docs/Web/CSS) property defines how strictly snap points are enforced on the horizontal axis of the scroll container in case there is one.
 
-<p>Specifying any precise animations or physics used to enforce those snap points is not covered by this property but instead left up to the user agent.</p>
+Specifying any precise animations or physics used to enforce those snap points is not covered by this property but instead left up to the user agent.
 
-<pre class="brush: css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 scroll-snap-type-x: none;
 scroll-snap-type-x: mandatory;
 scroll-snap-type-x: proximity;
@@ -26,40 +27,36 @@ scroll-snap-type-x: proximity;
 scroll-snap-type-x: inherit;
 scroll-snap-type-x: initial;
 scroll-snap-type-x: unset;
-</pre>
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>none</code></dt>
- <dd>When the visual {{Glossary("viewport")}} of this scroll container is scrolled horizontally, it must ignore snap points.</dd>
- <dt><code>mandatory</code></dt>
- <dd>The visual viewport of this scroll container will rest on a snap point if it isn't currently scrolled horizontally. That means it snaps on that point when the scroll action finished, if possible. If content is added, moved, deleted or resized the scroll offset will be adjusted to maintain the resting on that snap point.</dd>
- <dt><code>proximity</code></dt>
- <dd>The visual viewport of this scroll container may come to rest on a snap point if it isn't currently scrolled horizontally considering the user agent's scroll parameters. If content is added, moved, deleted or resized the scroll offset may be adjusted to maintain the resting on that snap point.</dd>
-</dl>
+- `none`
+  - : When the visual {{Glossary("viewport")}} of this scroll container is scrolled horizontally, it must ignore snap points.
+- `mandatory`
+  - : The visual viewport of this scroll container will rest on a snap point if it isn't currently scrolled horizontally. That means it snaps on that point when the scroll action finished, if possible. If content is added, moved, deleted or resized the scroll offset will be adjusted to maintain the resting on that snap point.
+- `proximity`
+  - : The visual viewport of this scroll container may come to rest on a snap point if it isn't currently scrolled horizontally considering the user agent's scroll parameters. If content is added, moved, deleted or resized the scroll offset may be adjusted to maintain the resting on that snap point.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{CSSSyntax}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any standard.</p>
+Not part of any standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/scroll-snap-type-y"><code>scroll-snap-type-y</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/scroll-snap-type"><code>scroll-snap-type</code></a></li>
-</ul>
+- [`scroll-snap-type-y`](/en-US/docs/Web/CSS/scroll-snap-type-y)
+- [`scroll-snap-type`](/en-US/docs/Web/CSS/scroll-snap-type)

@@ -6,12 +6,13 @@ tags:
   - CSS Fonts
   - CSS Property
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.font-size-adjust
 ---
-<p>The <strong><code>font-size-adjust</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets the size of lower-case letters relative to the current font size (which defines the size of upper-case letters).</p>
+The **`font-size-adjust`** [CSS](/en-US/docs/Web/CSS) property sets the size of lower-case letters relative to the current font size (which defines the size of upper-case letters).
 
-<pre class="brush:css no-line-numbers">/* Use the specified font size */
+```css
+/* Use the specified font size */
 font-size-adjust: none;
 
 /* Use a font size that makes lowercase
@@ -26,71 +27,72 @@ font-size-adjust: inherit;
 font-size-adjust: initial;
 font-size-adjust: revert;
 font-size-adjust: unset;
-</pre>
+```
 
-<p>The property is useful since the legibility of fonts, especially at small sizes, is determined more by the size of lowercase letters than by the size of capital letters. Legibility can become an issue when the first-choice {{ Cssxref("font-family") }} is unavailable and its replacement has a significantly different aspect ratio (the ratio of the size of lowercase letters to the size of the font).</p>
+The property is useful since the legibility of fonts, especially at small sizes, is determined more by the size of lowercase letters than by the size of capital letters. Legibility can become an issue when the first-choice {{ Cssxref("font-family") }} is unavailable and its replacement has a significantly different aspect ratio (the ratio of the size of lowercase letters to the size of the font).
 
-<p>To use this property in a way that is compatible with browsers that do not support <code>font-size-adjust</code>, it is specified as a number that the {{ Cssxref("font-size") }} property is multiplied by. This means the value specified for the property should generally be the aspect ratio of the first choice font. For example, a style sheet that specifies:</p>
+To use this property in a way that is compatible with browsers that do not support `font-size-adjust`, it is specified as a number that the {{ Cssxref("font-size") }} property is multiplied by. This means the value specified for the property should generally be the aspect ratio of the first choice font. For example, a style sheet that specifies:
 
-<pre class="brush: css">font-size: 14px;
+```css
+font-size: 14px;
 font-size-adjust: 0.5;
-</pre>
+```
 
-<p>... is really specifying that the lowercase letters of the font should be <code>7px</code> high (0.5 × 14px).  This will still produce reasonable results in browsers that do not support <code>font-size-adjust</code>, where a <code>14px</code> font will be used.</p>
+... is really specifying that the lowercase letters of the font should be `7px` high (0.5 × 14px).  This will still produce reasonable results in browsers that do not support `font-size-adjust`, where a `14px` font will be used.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>none</code></dt>
- <dd>Choose the size of the font based only on the {{ Cssxref("font-size") }} property.</dd>
- <dt>ex-height | cap-height | ch-width | ic-width | ic-height</dt>
- <dd>Specifies the font metric to normalize on. Defaults to <code>ex-height</code>. One of:
-   <dl>
-     <dt><code>ex-height</code></dt>
-     <dd>Normalize the aspect value of the fonts, using the x-height divided by the font size.</dd>
-     <dt><code>cap-height</code></dt>
-     <dd>Normalize the cap-height of the fonts, using the cap-height by the font size.</dd>
-     <dt><code>ch-width</code></dt>
-     <dd>Normalize the horizontal narrow pitch of the fonts, using the advance width of “0” (ZERO, U+0030) divided by the font size.</dd>
-     <dt><code>ic-width</code></dt>
-     <dd>Normalize the horizontal wide pitch of the font, using the advance width of “水” (CJK water ideograph, U+6C34) divided by the font size.</dd>
-     <dt><code>ic-height</code></dt>
-     <dd>Normalize the vertical wide pitch of the font, using the advance height of “水” (CJK water ideograph, U+6C34) divided by the font size.</dd>
-   </dl>
- </dt>
- </dd>
- <dt>{{cssxref("&lt;number&gt;")}}</dt>
- <dd>
- <p>Choose the size of the font so that its lowercase letters (as determined by the x-height of the font) are the specified number times the {{ Cssxref("font-size") }}.</p>
+- `none`
+  - : Choose the size of the font based only on the {{ Cssxref("font-size") }} property.
+- ex-height | cap-height | ch-width | ic-width | ic-height
 
- <p>The number specified should generally be the aspect ratio (ratio of x-height to font size) of the first choice {{ Cssxref("font-family") }}. This means that the first-choice font, when available, will appear the same size in browsers, whether or not they support <code>font-size-adjust</code>.</p>
+  - : Specifies the font metric to normalize on. Defaults to `ex-height`. One of:
 
- <p><code>0</code> yields text of zero height (hidden text).</p>
- </dd>
-</dl>
-<h2 id="Formal_definition">Formal definition</h2>
+    - `ex-height`
+      - : Normalize the aspect value of the fonts, using the x-height divided by the font size.
+    - `cap-height`
+      - : Normalize the cap-height of the fonts, using the cap-height by the font size.
+    - `ch-width`
+      - : Normalize the horizontal narrow pitch of the fonts, using the advance width of “0” (ZERO, U+0030) divided by the font size.
+    - `ic-width`
+      - : Normalize the horizontal wide pitch of the font, using the advance width of “水” (CJK water ideograph, U+6C34) divided by the font size.
+    - `ic-height`
+      - : Normalize the vertical wide pitch of the font, using the advance height of “水” (CJK water ideograph, U+6C34) divided by the font size.
 
-<p>{{cssinfo}}</p>
+- {{cssxref("&lt;number&gt;")}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+  - : Choose the size of the font so that its lowercase letters (as determined by the x-height of the font) are the specified number times the {{ Cssxref("font-size") }}.
+
+    The number specified should generally be the aspect ratio (ratio of x-height to font size) of the first choice {{ Cssxref("font-family") }}. This means that the first-choice font, when available, will appear the same size in browsers, whether or not they support `font-size-adjust`.
+
+    `0` yields text of zero height (hidden text).
+
+## Formal definition
+
+{{cssinfo}}
+
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Adjusting_lower-case_letter_sizes">Adjusting lower-case letter sizes</h3>
+### Adjusting lower-case letter sizes
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p class="times"&gt;This text uses the Times font (10px), which is hard to read in small sizes.&lt;/p&gt;
-&lt;p class="verdana"&gt;This text uses the Verdana font (10px), which has relatively large lowercase letters.&lt;/p&gt;
-&lt;p class="adjtimes"&gt;This is the 10px Times, but now adjusted to the same aspect ratio as the Verdana.&lt;/p&gt;</pre>
+```html
+<p class="times">This text uses the Times font (10px), which is hard to read in small sizes.</p>
+<p class="verdana">This text uses the Verdana font (10px), which has relatively large lowercase letters.</p>
+<p class="adjtimes">This is the 10px Times, but now adjusted to the same aspect ratio as the Verdana.</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.times {
+```css
+.times {
   font-family: Times, serif;
   font-size: 10px;
 }
@@ -105,26 +107,24 @@ font-size-adjust: 0.5;
   font-size-adjust: ex-height 0.58;
   font-size: 10px;
 }
-</pre>
+```
 
-<h4 id="Results">Results</h4>
+#### Results
 
-<p>{{ EmbedLiveSample('Adjusting_lower-case_letter_sizes', 500, 200) }}</p>
+{{ EmbedLiveSample('Adjusting_lower-case_letter_sizes', 500, 200) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("font-size")}}</li>
- <li>{{cssxref("font-weight")}}</li>
- <li><a href="/en-US/docs/Learn/CSS/Styling_text/Fundamentals">Fundamental text and font styling</a></li>
-</ul>
+- {{cssxref("font-size")}}
+- {{cssxref("font-weight")}}
+- [Fundamental text and font styling](/en-US/docs/Learn/CSS/Styling_text/Fundamentals)

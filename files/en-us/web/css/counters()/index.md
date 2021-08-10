@@ -9,74 +9,75 @@ tags:
   - Reference
 browser-compat: css.types.counters
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<p>The <strong><code>counters()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Functions">function</a> enables nested counters, returning a concatenated string representing the current values of the named counters, if there are any. The <code>counters()</code> function has two forms: <code>counters(<var>name</var>, <var>string</var>)</code> or <code>counters(<var>name</var>, <var>string</var>, <var>style</var>)</code>. It is generally used with <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-elements</a>, but can be used, theoretically, anywhere a <code><a href="/en-US/docs/Web/CSS/string">&lt;string&gt;</a></code> value is supported. The generated text is the value of all counters with the given name, from outermost to innermost, separated by the specified string. The counters are rendered in the style indicated, defaulting to <code>decimal</code> if no style is specified.</p>
+The **`counters()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) enables nested counters, returning a concatenated string representing the current values of the named counters, if there are any. The `counters()` function has two forms: `counters(name, string)` or `counters(name, string, style)`. It is generally used with [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements), but can be used, theoretically, anywhere a [`<string>`](/en-US/docs/Web/CSS/string) value is supported. The generated text is the value of all counters with the given name, from outermost to innermost, separated by the specified string. The counters are rendered in the style indicated, defaulting to `decimal` if no style is specified.
 
-<pre class="brush: css">/* Simple usage  - style defaults to decimal */
+```css
+/* Simple usage  - style defaults to decimal */
 counters(countername, '-');
 
 /* changing the counter display */
-counters(countername, '.', upper-roman)</pre>
+counters(countername, '.', upper-roman)
+```
 
-<p>A <a href="/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters">counter</a> has no visible effect by itself. The <code>counters()</code> function (and {{cssxref("counter", "counter()")}} function) is what makes it useful by returning developer defined content.</p>
+A [counter](/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters) has no visible effect by itself. The `counters()` function (and {{cssxref("counter", "counter()")}} function) is what makes it useful by returning developer defined content.
 
-<div class="notecard note">
-<p><strong>Note:</strong> The <code>counters()</code> function can be used with any CSS property, but support for properties other than {{CSSxRef("content")}} is experimental, and support for the type-or-unit parameter is sparse.</p>
+> **Note:** The `counters()` function can be used with any CSS property, but support for properties other than {{CSSxRef("content")}} is experimental, and support for the type-or-unit parameter is sparse.
+>
+> Check the [Browser compatibility table](#browser_compatibility) carefully before using this in production.
 
-<p>Check the <a href="#browser_compatibility">Browser compatibility table</a> carefully before using this in production.</p>
-</div>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+### Values
 
-<h3 id="Values">Values</h3>
+- {{cssxref("&lt;custom-ident&gt;")}}
+  - : A name identifying the counters, which is the same case-sensitive name used for the {{cssxref("counter-reset")}} and {{cssxref("counter-increment")}}. The name cannot start with two dashes and can't be `none`, `unset`, `initial`, or `inherit`.
+- `<counter-style>`
+  - : A counter style name or [`symbols()`](/en-US/docs/Web/CSS/symbols) function, where a counter style name is a numeric, alphabetic, or symbolic simple predefined counter style, a complex longhand east Asian or Ethiopic predefined counter style, or other [predefined counter style](/en-US/docs/Web/CSS/CSS_Counter_Styles). If omitted, the counter-style defaults to decimal
+- {{cssxref("&lt;string&gt;")}}
+  - : Any number of text characters. Non-Latin characters must be encoded using their Unicode escape sequences: for example, `\000A9` represents the copyright symbol.
 
-<dl>
- <dt>{{cssxref("&lt;custom-ident&gt;")}}</dt>
- <dd>A name identifying the counters, which is the same case-sensitive name used for the {{cssxref("counter-reset")}} and {{cssxref("counter-increment")}}. The name cannot start with two dashes and can't be <code>none</code>, <code>unset</code>, <code>initial</code>, or <code>inherit</code>.</dd>
- <dt><code>&lt;counter-style&gt;</code></dt>
- <dd>A counter style name or <code><a href="/en-US/docs/Web/CSS/symbols">symbols()</a></code> function, where a counter style name is a numeric, alphabetic, or symbolic simple predefined counter style, a complex longhand east Asian or Ethiopic predefined counter style, or other <a href="/en-US/docs/Web/CSS/CSS_Counter_Styles">predefined counter style</a>. If omitted, the counter-style defaults to decimal</dd>
- <dt>{{cssxref("&lt;string&gt;")}}</dt>
- <dd>Any number of text characters. Non-Latin characters must be encoded using their Unicode escape sequences: for example, <code>\000A9</code> represents the copyright symbol.</dd>
-</dl>
-
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{CSSSyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="default_value_compared_to_upper_Roman">default value compared to upper Roman</h3>
+### default value compared to upper Roman
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html;">&lt;ol&gt;
-  &lt;li&gt;
-     &lt;ol&gt;
-        &lt;li&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;/li&gt;
-      &lt;/ol&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;/li&gt;
-  &lt;li&gt;
-     &lt;ol&gt;
-        &lt;li&gt;&lt;/li&gt;
-        &lt;li&gt;
-           &lt;ol&gt;
-              &lt;li&gt;&lt;/li&gt;
-              &lt;li&gt;&lt;/li&gt;
-              &lt;li&gt;&lt;/li&gt;
-           &lt;/ol&gt;
-        &lt;/li&gt;
-      &lt;/ol&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;</pre>
+```html
+<ol>
+  <li>
+     <ol>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ol>
+  </li>
+  <li></li>
+  <li></li>
+  <li>
+     <ol>
+        <li></li>
+        <li>
+           <ol>
+              <li></li>
+              <li></li>
+              <li></li>
+           </ol>
+        </li>
+      </ol>
+  </li>
+</ol>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css; highlight[2]">ol {
+```css
+ol {
   counter-reset: listCounter;
 }
 li {
@@ -87,43 +88,47 @@ li::marker {
 }
 li::before {
   content:  counters(listCounter, ".") " == " counters(listCounter, ".", lower-roman) ;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("default_value_compared_to_upper_Roman", "100%", 150)}}</p>
+{{EmbedLiveSample("default_value_compared_to_upper_Roman", "100%", 150)}}
 
-<h3 id="decimal-leading-zero_compared_to_lower-alpha">decimal-leading-zero compared to lower-alpha</h3>
+### decimal-leading-zero compared to lower-alpha
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html;">&lt;ol&gt;
-  &lt;li&gt;
-     &lt;ol&gt;
-        &lt;li&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;/li&gt;
-      &lt;/ol&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;/li&gt;
-  &lt;li&gt;
-     &lt;ol&gt;
-        &lt;li&gt;&lt;/li&gt;
-        &lt;li&gt;
-           &lt;ol&gt;
-              &lt;li&gt;&lt;/li&gt;
-              &lt;li&gt;&lt;/li&gt;
-              &lt;li&gt;&lt;/li&gt;
-           &lt;/ol&gt;
-        &lt;/li&gt;
-      &lt;/ol&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;</pre>
+```html
+<ol>
+  <li>
+     <ol>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ol>
+  </li>
+  <li></li>
+  <li></li>
+  <li>
+     <ol>
+        <li></li>
+        <li>
+           <ol>
+              <li></li>
+              <li></li>
+              <li></li>
+           </ol>
+        </li>
+      </ol>
+  </li>
+</ol>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css; highlight[2]">ol {
+```css
+ol {
   counter-reset: count;
 }
 li {
@@ -133,29 +138,28 @@ li::marker {
    content: counters(count, '.', upper-alpha) ') ';
 }
 li::before {
-  content: counters(count, ".", <dfn>decimal-leading-zero</dfn>) " == " counters(count, ".", lower-alpha);
-}</pre>
+  content: counters(count, ".", decimal-leading-zero) " == " counters(count, ".", lower-alpha);
+}
+```
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("decimal-leading-zero_compared_to_lower-alpha", "100%", 150)}}</p>
+{{EmbedLiveSample("decimal-leading-zero_compared_to_lower-alpha", "100%", 150)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters">Using CSS Counters</a></li>
- <li>{{cssxref("counter-set")}}</li>
- <li>{{cssxref("counter-reset")}}</li>
- <li>{{cssxref("counter-increment")}}</li>
- <li>{{cssxref("@counter-style")}}</li>
- <li>CSS <code><a href="/en-US/docs/Web/CSS/counter_function">counter()</a></code> function</li>
- <li>{{cssxref("::marker")}}</li>
-</ul>
+- [Using CSS Counters](/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters)
+- {{cssxref("counter-set")}}
+- {{cssxref("counter-reset")}}
+- {{cssxref("counter-increment")}}
+- {{cssxref("@counter-style")}}
+- CSS [`counter()`](/en-US/docs/Web/CSS/counter_function) function
+- {{cssxref("::marker")}}

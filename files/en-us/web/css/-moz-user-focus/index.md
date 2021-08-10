@@ -4,18 +4,19 @@ slug: Web/CSS/-moz-user-focus
 tags:
   - '-moz-user-focus'
   - CSS
-  - 'CSS:Mozilla Extensions'
+  - CSS:Mozilla Extensions
   - NeedsContent
   - Non-standard
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.-moz-user-focus
 ---
-<div>{{CSSRef}} {{Non-standard_header}}</div>
+{{CSSRef}} {{Non-standard_header}}
 
-<p>The <strong><code>-moz-user-focus</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property is used to indicate whether an element can have the focus.</p>
+The **`-moz-user-focus`** [CSS](/en-US/docs/Web/CSS) property is used to indicate whether an element can have the focus.
 
-<pre class="brush:css">/* Keyword values */
+```css
+/* Keyword values */
 -moz-user-focus: normal;
 -moz-user-focus: ignore;
 
@@ -23,72 +24,69 @@ browser-compat: css.properties.-moz-user-focus
 -moz-user-focus: inherit;
 -moz-user-focus: initial;
 -moz-user-focus: unset;
-</pre>
+```
 
-<p>By setting its value to <code>ignore</code>, you can disable focusing the element, which means that the user will not be able to activate the element. The element will be skipped in the tab sequence.</p>
+By setting its value to `ignore`, you can disable focusing the element, which means that the user will not be able to activate the element. The element will be skipped in the tab sequence.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<div class="note">
-  <p><strong>Note:</strong> This property doesn't work for XUL {{XULElem("textbox")}} elements, because the <code>textbox</code> itself never takes focus. Instead, XBL creates an anonymous HTML {{HTMLElement("input")}} element inside the <code>textbox</code>, and that element is what receives focus. You can stop the <code>textbox</code> from taking keyboard focus by setting its tab index to <code>-1</code>, and from taking mouse focus by preventing the default action of <code>mousedown</code> events.</p>
-</div>
+> **Note:** This property doesn't work for XUL {{XULElem("textbox")}} elements, because the `textbox` itself never takes focus. Instead, XBL creates an anonymous HTML {{HTMLElement("input")}} element inside the `textbox`, and that element is what receives focus. You can stop the `textbox` from taking keyboard focus by setting its tab index to `-1`, and from taking mouse focus by preventing the default action of `mousedown` events.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>ignore</code></dt>
- <dd>The element does not accept the keyboard focus and will be skipped in the tab order.</dd>
- <dt><code>normal</code></dt>
- <dd>The element can accept the keyboard focus.</dd>
- <dt><code>select-after</code></dt>
- <dd>?</dd>
- <dt><code>select-before</code></dt>
- <dd>?</dd>
- <dt><code>select-menu</code></dt>
- <dd>?</dd>
- <dt><code>select-same</code></dt>
- <dd>?</dd>
- <dt><code>select-all</code></dt>
- <dd>?</dd>
- <dt><code>none</code></dt>
- <dd>?</dd>
-</dl>
+- `ignore`
+  - : The element does not accept the keyboard focus and will be skipped in the tab order.
+- `normal`
+  - : The element can accept the keyboard focus.
+- `select-after`
+  - : ?
+- `select-before`
+  - : ?
+- `select-menu`
+  - : ?
+- `select-same`
+  - : ?
+- `select-all`
+  - : ?
+- `none`
+  - : ?
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush:html">&lt;input class="ignored" value="The user cannot focus on this element."&gt;
-</pre>
+```html
+<input class="ignored" value="The user cannot focus on this element.">
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush:css">.ignored {
+```css
+.ignored {
   -moz-user-focus: ignore;
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any standard. A similar property, <code>user-focus</code>, was proposed in <a href="https://www.w3.org/TR/2000/WD-css3-userint-20000216">early drafts of a predecessor of the CSS3 UI specification</a>, but was rejected by the working group.</p>
+Not part of any standard. A similar property, `user-focus`, was proposed in [early drafts of a predecessor of the CSS3 UI specification](https://www.w3.org/TR/2000/WD-css3-userint-20000216), but was rejected by the working group.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("-moz-user-input")}}</li>
- <li>{{cssxref("-moz-user-modify")}}</li>
- <li>{{cssxref("-moz-user-select")}}</li>
-</ul>
+- {{cssxref("-moz-user-input")}}
+- {{cssxref("-moz-user-modify")}}
+- {{cssxref("-moz-user-select")}}

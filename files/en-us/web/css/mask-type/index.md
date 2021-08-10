@@ -7,14 +7,15 @@ tags:
   - CSS Property
   - Reference
   - SVG
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.mask-type
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>mask-type</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets whether an SVG {{svgElement("mask")}} element is used as a <em>luminance</em> or an <em>alpha</em> mask. It applies to the <code>&lt;mask&gt;</code> element itself.</p>
+The **`mask-type`** [CSS](/en-US/docs/Web/CSS) property sets whether an SVG {{svgElement("mask")}} element is used as a _luminance_ or an _alpha_ mask. It applies to the `<mask>` element itself.
 
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 mask-type: luminance;
 mask-type: alpha;
 
@@ -23,103 +24,107 @@ mask-type: inherit;
 mask-type: initial;
 mask-type: revert;
 mask-type: unset;
-</pre>
+```
 
-<p>This property may be overridden by the {{cssxref("mask-mode")}} property, which has the same effect but applies to the element where the mask is used. Alpha masks will generally be faster to render.</p>
+This property may be overridden by the {{cssxref("mask-mode")}} property, which has the same effect but applies to the element where the mask is used. Alpha masks will generally be faster to render.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>mask-type</code> property is specified as one of the keyword values listed below.</p>
+The `mask-type` property is specified as one of the keyword values listed below.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>luminance</code></dt>
- <dd>Is a keyword indicating that the associated mask image is a luminance mask, i.e., that its <a href="https://en.wikipedia.org/wiki/Luminance_%28relative%29">relative luminance</a> values must be used when applying it.</dd>
- <dt><code>alpha</code></dt>
- <dd>Is a keyword indicating that the associated mask image is an alpha mask, i.e., that its <a href="https://en.wikipedia.org/wiki/Alpha_compositing">alpha channel</a> values must be used when applying it.</dd>
-</dl>
+- `luminance`
+  - : Is a keyword indicating that the associated mask image is a luminance mask, i.e., that its [relative luminance](https://en.wikipedia.org/wiki/Luminance_%28relative%29) values must be used when applying it.
+- `alpha`
+  - : Is a keyword indicating that the associated mask image is an alpha mask, i.e., that its [alpha channel](https://en.wikipedia.org/wiki/Alpha_compositing) values must be used when applying it.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_an_alpha_mask">Setting an alpha mask</h3>
+### Setting an alpha mask
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="redsquare"&gt;&lt;/div&gt;
-&lt;svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink" width="0" height="0"&gt;
-  &lt;defs&gt;
-    &lt;mask id="m" maskContentUnits="objectBoundingBox"
-      style="mask-type:alpha"&gt;
-      &lt;rect x=".1" y=".1" width=".8" height=".8"
-          fill="red" fill-opacity="0.7"/&gt;
-    &lt;/mask&gt;
-  &lt;/defs&gt;
-&lt;/svg&gt;</pre>
+```html
+<div class="redsquare"></div>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink" width="0" height="0">
+  <defs>
+    <mask id="m" maskContentUnits="objectBoundingBox"
+      style="mask-type:alpha">
+      <rect x=".1" y=".1" width=".8" height=".8"
+          fill="red" fill-opacity="0.7"/>
+    </mask>
+  </defs>
+</svg>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.redsquare {
+```css
+.redsquare {
   height: 100px;
   width: 100px;
   background-color: rgb(128, 128, 128);
   border: solid 1px black;
   mask: url("#m");
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Setting_an_alpha_mask', '100%', '102')}}</p>
+{{EmbedLiveSample('Setting_an_alpha_mask', '100%', '102')}}
 
-<h3 id="Setting_a_luminance_mask">Setting a luminance mask</h3>
+### Setting a luminance mask
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="redsquare"&gt;&lt;/div&gt;
-&lt;svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink" width="0" height="0"&gt;
-  &lt;defs&gt;
-    &lt;mask id="m" maskContentUnits="objectBoundingBox"
-      style="mask-type:luminance"&gt;
-      &lt;rect x=".1" y=".1" width=".8" height=".8"
-          fill="red" fill-opacity="0.7"/&gt;
-    &lt;/mask&gt;
-  &lt;/defs&gt;
-&lt;/svg&gt;</pre>
+```html
+<div class="redsquare"></div>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink" width="0" height="0">
+  <defs>
+    <mask id="m" maskContentUnits="objectBoundingBox"
+      style="mask-type:luminance">
+      <rect x=".1" y=".1" width=".8" height=".8"
+          fill="red" fill-opacity="0.7"/>
+    </mask>
+  </defs>
+</svg>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.redsquare {
+```css
+.redsquare {
   height: 100px;
   width: 100px;
   background-color: rgb(128, 128, 128);
   border: solid 1px black;
   mask: url("#m");
-}</pre>
+}
+```
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Setting_a_luminance_mask', '100%', '102')}}</p>
+{{EmbedLiveSample('Setting_a_luminance_mask', '100%', '102')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Other mask-related properties: {{cssxref("mask")}}, {{cssxref("mask-mode")}}</li>
-</ul>
+- Other mask-related properties: {{cssxref("mask")}}, {{cssxref("mask-mode")}}

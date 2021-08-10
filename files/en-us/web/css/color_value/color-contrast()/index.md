@@ -10,30 +10,29 @@ tags:
   - color-contrast
 browser-compat: css.types.color.color-contrast
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>color-contrast()</code></strong> functional notation takes a {{cssxref("color_value","color")}} value and compares it to a list of other {{cssxref("color_value","color")}} values, selecting the one with the highest contrast from the list.</p>
+The **`color-contrast()`** functional notation takes a {{cssxref("color_value","color")}} value and compares it to a list of other {{cssxref("color_value","color")}} values, selecting the one with the highest contrast from the list.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">color-contrast(wheat vs tan, sienna, #d2691e)
+```css
+color-contrast(wheat vs tan, sienna, #d2691e)
 color-contrast(#008080 vs olive, var(--myColor), #d2691e)
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
-  <dt>Functional notation: <code>color-contrast( &lt;color&gt; vs &lt;color&gt;#{2,}  )</code></dt>
-  <dd>
-    <p><code>&lt;color&gt;</code> is any valid {{cssxref("color_value","color")}}.</p>
-    <p><code>&lt;color&gt;#{2,}</code> is a comma-separated list of color values to compare with the first value.</p>
-  </dd>
-</dl>
+- Functional notation: `color-contrast( <color> vs <color>#{2,} )`
 
-<h2 id="Specifications">Specifications</h2>
+  - : `<color>` is any valid {{cssxref("color_value","color")}}.
+
+    `<color>#{2,}` is a comma-separated list of color values to compare with the first value.
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

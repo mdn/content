@@ -6,21 +6,22 @@ tags:
   - CSS Property
   - Reference
   - css scrollbars
-  - 'recipe:css-property'
+  - recipe:css-property
   - scrollbar-width
 browser-compat: css.properties.scrollbar-width
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>scrollbar-width</code></strong> property allows the author to set the maximum thickness of an element’s scrollbars when they are shown.</p>
+The **`scrollbar-width`** property allows the author to set the maximum thickness of an element’s scrollbars when they are shown.
 
-<div>{{EmbedInteractiveExample("pages/css/scrollbar-width.html")}}</div>
+{{EmbedInteractiveExample("pages/css/scrollbar-width.html")}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">/* Keyword values */
+```css
+/* Keyword values */
 scrollbar-width: auto;
 scrollbar-width: thin;
 scrollbar-width: none;
@@ -30,89 +31,89 @@ scrollbar-width: inherit;
 scrollbar-width: initial;
 scrollbar-width: revert;
 scrollbar-width: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><var>&lt;scrollbar-width&gt;</var></dt>
- <dd>Defines the width of the scrollbar as a keyword. It must be one of the following values:
- <table class="standard-table">
-  <tbody>
-   <tr>
-    <td><code>auto</code></td>
-    <td>The default scrollbar width for the platform.</td>
-   </tr>
-   <tr>
-    <td><code>thin</code></td>
-    <td>A thin scrollbar width variant on platforms that provide that option, or a thinner scrollbar than the default platform scrollbar width.</td>
-   </tr>
-   <tr>
-    <td><code>none</code></td>
-    <td>No scrollbar shown, however the element will still be scrollable.</td>
-   </tr>
-  </tbody>
- </table>
+- _\<scrollbar-width>_
 
- <div class="note">
- <p><strong>Note:</strong> User Agents must apply any <code>scrollbar-width</code> value set on the root element to the viewport.</p>
- </div>
- </dd>
-</dl>
+  - : Defines the width of the scrollbar as a keyword. It must be one of the following values:
 
-<h2 id="Accessibility_concerns">Accessibility concerns</h2>
+    <table class="standard-table">
+      <tbody>
+        <tr>
+          <td><code>auto</code></td>
+          <td>The default scrollbar width for the platform.</td>
+        </tr>
+        <tr>
+          <td><code>thin</code></td>
+          <td>
+            A thin scrollbar width variant on platforms that provide that option, or
+            a thinner scrollbar than the default platform scrollbar width.
+          </td>
+        </tr>
+        <tr>
+          <td><code>none</code></td>
+          <td>No scrollbar shown, however the element will still be scrollable.</td>
+        </tr>
+      </tbody>
+    </table>
 
-<p>Use this property with caution — setting <code>scrollbar-width</code> to <code>thin</code> or <code>none</code> can make content hard or impossible to scroll if the author does not provide an alternative scrolling mechanism. While swiping gestures or mouse wheels can enable scrolling on such content, some devices have no scroll alternative.</p>
+    > **Note:** User Agents must apply any `scrollbar-width` value set on the root element to the viewport.
 
-<p>WCAG criterion 2.1.1 (Keyboard) has been in place for a long time to advise on basic keyboard accessibility, and this should include scrolling of content areas. And introduced in WCAG 2.1, criterion 2.5.5 (Target Size) advises that touch targets should be at least 44px in width and height (although the problem is compounded on high-resolution screens; thorough testing is advised).</p>
+## Accessibility concerns
 
-<ul>
- <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.1_%E2%80%94_Keyboard_Accessible_Make_all_functionality_available_from_a_keyboard">MDN Understanding WCAG, Guideline 2.1 explanations</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.5_Input_Modalities_Make_it_easier_for_users_to_operate_functionality_through_various_inputs_beyond_keyboard.s/">MDN Understanding WCAG, Guideline 2.5 explanations</a></li>
- <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/keyboard">Understanding Success Criterion 2.1.1 | W3C Understanding WCAG 2.1</a></li>
- <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/target-size.html" rel="noopener">Understanding Success Criterion 2.5.5 | W3C Understanding WCAG 2.1</a></li>
-</ul>
+Use this property with caution — setting `scrollbar-width` to `thin` or `none` can make content hard or impossible to scroll if the author does not provide an alternative scrolling mechanism. While swiping gestures or mouse wheels can enable scrolling on such content, some devices have no scroll alternative.
 
-<h2 id="Formal_definition">Formal definition</h2>
+WCAG criterion 2.1.1 (Keyboard) has been in place for a long time to advise on basic keyboard accessibility, and this should include scrolling of content areas. And introduced in WCAG 2.1, criterion 2.5.5 (Target Size) advises that touch targets should be at least 44px in width and height (although the problem is compounded on high-resolution screens; thorough testing is advised).
 
-<p>{{CSSInfo}}</p>
+- [MDN Understanding WCAG, Guideline 2.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.1_%E2%80%94_Keyboard_Accessible_Make_all_functionality_available_from_a_keyboard)
+- [MDN Understanding WCAG, Guideline 2.5 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.5_Input_Modalities_Make_it_easier_for_users_to_operate_functionality_through_various_inputs_beyond_keyboard.s/)
+- [Understanding Success Criterion 2.1.1 | W3C Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/keyboard)
+- [Understanding Success Criterion 2.5.5 | W3C Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html)
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal definition
+
+{{CSSInfo}}
+
+## Formal syntax
 
 {{CSSSyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Sizing_overflow_scrollbars">Sizing overflow scrollbars</h3>
+### Sizing overflow scrollbars
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush:css">.scroller {
+```css
+.scroller {
   width: 300px;
   height: 100px;
   overflow-y: scroll;
   scrollbar-width: thin;
-}</pre>
+}
+```
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="scroller"&gt;Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic. Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.&lt;/div&gt;</pre>
+```html
+<div class="scroller">Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic. Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.</div>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Sizing_overflow_scrollbars")}}</p>
+{{EmbedLiveSample("Sizing_overflow_scrollbars")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{CSSxRef("-ms-overflow-style")}}</li>
- <li>{{CSSxRef("::-webkit-scrollbar")}}</li>
-</ul>
+- {{CSSxRef("-ms-overflow-style")}}
+- {{CSSxRef("::-webkit-scrollbar")}}

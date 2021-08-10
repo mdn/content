@@ -6,76 +6,76 @@ tags:
   - CSS Property
   - Non-standard
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.-moz-orient
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<p>The <strong><code>-moz-orient</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property specifies the orientation of the element to which it's applied.</p>
+The **`-moz-orient`** [CSS](/en-US/docs/Web/CSS) property specifies the orientation of the element to which it's applied.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>-moz-orient</code> property is specified as one of the keyword values chosen from the list below.</p>
+The `-moz-orient` property is specified as one of the keyword values chosen from the list below.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>inline</code></dt>
- <dd>The element is rendered in the same direction as the axis of the text: horizontally for horizontal writing modes, vertically for vertical writing modes.</dd>
- <dt><code>block</code></dt>
- <dd>The element is rendered orthogonally to the axis of the text: vertically for horizontal writing modes, horizontal for vertical writing modes.</dd>
- <dt><code>horizontal</code></dt>
- <dd>The element is rendered horizontally.</dd>
- <dt><code>vertical</code></dt>
- <dd>The element is rendered vertically.</dd>
-</dl>
+- `inline`
+  - : The element is rendered in the same direction as the axis of the text: horizontally for horizontal writing modes, vertically for vertical writing modes.
+- `block`
+  - : The element is rendered orthogonally to the axis of the text: vertically for horizontal writing modes, horizontal for vertical writing modes.
+- `horizontal`
+  - : The element is rendered horizontally.
+- `vertical`
+  - : The element is rendered vertically.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;
+```html
+<p>
   The following progress meter
   is horizontal (the default):
-&lt;/p&gt;
-&lt;progress max="100" value="75"&gt;&lt;/progress&gt;
+</p>
+<progress max="100" value="75"></progress>
 
-&lt;p&gt;
+<p>
  The following progress meter
  is vertical:
-&lt;/p&gt;
-&lt;progress class="vert" max="100" value="75"&gt;&lt;/progress&gt;</pre>
+</p>
+<progress class="vert" max="100" value="75"></progress>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.vert {
+```css
+.vert {
   -moz-orient: vertical;
   width: 16px;
   height: 150px;
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Examples","200","360")}}</p>
+{{EmbedLiveSample("Examples","200","360")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any standard. Though <a href="https://lists.w3.org/Archives/Public/www-style/2014Jun/0396.html">submitted</a> to the W3C, with positive initial feedback, this property is not yet part of any specification; currently, this is a Mozilla-specific extension (that is, <code>-moz-orient</code>).</p>
+Not part of any standard. Though [submitted](https://lists.w3.org/Archives/Public/www-style/2014Jun/0396.html) to the W3C, with positive initial feedback, this property is not yet part of any specification; currently, this is a Mozilla-specific extension (that is, `-moz-orient`).
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("box-orient")}}</li>
-</ul>
+- {{cssxref("box-orient")}}

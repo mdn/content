@@ -1,51 +1,47 @@
 ---
 title: '::-webkit-scrollbar'
-slug: 'Web/CSS/::-webkit-scrollbar'
+slug: Web/CSS/::-webkit-scrollbar
 tags:
   - '::-webkit-scrollbar'
   - CSS
   - CSS Selectors
-  - 'CSS:WebKit Extensions'
+  - CSS:WebKit Extensions
   - NeedsCompatTable
   - Non-standard
   - Pseudo-element
   - Reference
   - Selector
 ---
-<p>{{CSSRef}}{{Draft}}{{Non-standard_Header}}</p>
+{{CSSRef}}{{Draft}}{{Non-standard_Header}}
 
-<p>The <code>::-webkit-scrollbar</code> CSS pseudo-element affects the style of an element's scrollbar when it has <code>overflow:scroll;</code> set.</p>
-<div class="notecard note">
-<p><strong>Note:</strong> If <code>overflow:scroll;</code> is not set, no scrollbar is displayed.</p>
-</div>
+The `::-webkit-scrollbar` CSS pseudo-element affects the style of an element's scrollbar when it has `overflow:scroll;` set.
 
-<div class="notecard note">
-<p><strong>Note:</strong> <code>::-webkit-scrollbar</code> is only available in <a class="external external-icon" href="https://www.chromium.org/blink">Blink</a>- and <a class="external external-icon" href="https://webkit.org">WebKit</a>-based browsers (e.g., Chrome, Edge, Opera, Safari, all browsers on iOS, and <a href="https://en.wikipedia.org/wiki/List_of_web_browsers#WebKit-based">others</a>).</p>
-</div>
+> **Note:** If `overflow:scroll;` is not set, no scrollbar is displayed.
 
-<h2 id="CSS_Scrollbar_Selectors">CSS Scrollbar Selectors</h2>
+> **Note:** `::-webkit-scrollbar` is only available in [Blink](https://www.chromium.org/blink)- and [WebKit](https://webkit.org)-based browsers (e.g., Chrome, Edge, Opera, Safari, all browsers on iOS, and [others](https://en.wikipedia.org/wiki/List_of_web_browsers#WebKit-based)).
 
-<p>You can use the following pseudo-elements to customize various parts of the scrollbar for webkit browsers:</p>
+## CSS Scrollbar Selectors
 
-<ul>
- <li><code>::-webkit-scrollbar</code> — the entire scrollbar.</li>
- <li><code>::-webkit-scrollbar-button</code> — the buttons on the scrollbar (arrows pointing upwards and downwards that scroll one line at a time).</li>
- <li><code>::-webkit-scrollbar-thumb</code> — the draggable scrolling handle.</li>
- <li><code>::-webkit-scrollbar-track</code> — the track (progress bar) of the scrollbar, where there is a gray bar on top of a white bar.</li>
- <li><code>::-webkit-scrollbar-track-piece</code> — the part of the track (progress bar) not covered by the handle.</li>
- <li><code>::-webkit-scrollbar-corner</code> — the bottom corner of the scrollbar, where both horizontal and vertical scrollbars meet This is often the bottom-right corner of the browser window.</li>
- <li><code>::-webkit-resizer</code> — the draggable resizing handle that appears at the bottom corner of some elements.</li>
-</ul>
+You can use the following pseudo-elements to customize various parts of the scrollbar for webkit browsers:
 
-<h2 id="Syntax">Syntax</h2>
+- `::-webkit-scrollbar` — the entire scrollbar.
+- `::-webkit-scrollbar-button` — the buttons on the scrollbar (arrows pointing upwards and downwards that scroll one line at a time).
+- `::-webkit-scrollbar-thumb` — the draggable scrolling handle.
+- `::-webkit-scrollbar-track` — the track (progress bar) of the scrollbar, where there is a gray bar on top of a white bar.
+- `::-webkit-scrollbar-track-piece` — the part of the track (progress bar) not covered by the handle.
+- `::-webkit-scrollbar-corner` — the bottom corner of the scrollbar, where both horizontal and vertical scrollbars meet This is often the bottom-right corner of the browser window.
+- `::-webkit-resizer` — the draggable resizing handle that appears at the bottom corner of some elements.
+
+## Syntax
 
 {{CSSSyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.visible-scrollbar, .invisible-scrollbar, .mostly-customized-scrollbar {
+```css
+.visible-scrollbar, .invisible-scrollbar, .mostly-customized-scrollbar {
   display: block;
   width: 10em;
   overflow: auto;
@@ -68,11 +64,12 @@ tags:
 .mostly-customized-scrollbar::-webkit-scrollbar-thumb {
     background: #000;
 }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div class="visible-scrollbar"&gt;
+```html
+<div class="visible-scrollbar">
   Etiam sagittis sem sed lacus laoreet, eu fermentum eros auctor.
   Proin at nulla elementum, consectetur ex eget, commodo ante.
   Sed eros mi, bibendum ut dignissim et, maximus eget nibh. Phasellus
@@ -84,62 +81,61 @@ tags:
   amet faucibus. Curabitur nibh justo, faucibus sed velit cursus,
   mattis cursus dolor. Pellentesque id pretium est. Quisque
   convallis nisi a diam malesuada mollis. Aliquam at enim ligula.
-&lt;/div&gt;
+</div>
 
-&lt;div class="invisible-scrollbar"&gt;
+<div class="invisible-scrollbar">
 Thisisaveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeerylongword
-&lt;/div&gt;
+</div>
 
-&lt;div class="mostly-customized-scrollbar"&gt;
-Thisisaveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeerylongword&lt;br&gt;
-And pretty tall&lt;br&gt;
-thing with weird scrollbars.&lt;br&gt;
+<div class="mostly-customized-scrollbar">
+Thisisaveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeerylongword<br>
+And pretty tall<br>
+thing with weird scrollbars.<br>
 Who thought scrollbars could be made weeeeird?
-&lt;/div&gt;</pre>
+</div>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Examples")}}</p>
+{{EmbedLiveSample("Examples")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any standard.</p>
+Not part of any standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<h3 id="-webkit-scrollbar"><code>::-webkit-scrollbar</code></h3>
+### `::-webkit-scrollbar`
 
-<p>{{Compat("css.selectors.-webkit-scrollbar")}}</p>
+{{Compat("css.selectors.-webkit-scrollbar")}}
 
-<h3 id="-webkit-scrollbar-button"><code>::-webkit-scrollbar-button</code></h3>
+### `::-webkit-scrollbar-button`
 
-<p>{{Compat("css.selectors.-webkit-scrollbar-button")}}</p>
+{{Compat("css.selectors.-webkit-scrollbar-button")}}
 
-<h3 id="-webkit-scrollbar-thumb"><code>::-webkit-scrollbar-thumb</code></h3>
+### `::-webkit-scrollbar-thumb`
 
-<p>{{Compat("css.selectors.-webkit-scrollbar-thumb")}}</p>
+{{Compat("css.selectors.-webkit-scrollbar-thumb")}}
 
-<h3 id="-webkit-scrollbar-track"><code>::-webkit-scrollbar-track</code></h3>
+### `::-webkit-scrollbar-track`
 
-<p>{{Compat("css.selectors.-webkit-scrollbar-track")}}</p>
+{{Compat("css.selectors.-webkit-scrollbar-track")}}
 
-<h3 id="-webkit-scrollbar-track-piece"><code>::-webkit-scrollbar-track-piece</code></h3>
+### `::-webkit-scrollbar-track-piece`
 
-<p>{{Compat("css.selectors.-webkit-scrollbar-track-piece")}}</p>
+{{Compat("css.selectors.-webkit-scrollbar-track-piece")}}
 
-<h3 id="-webkit-scrollbar-corner"><code>::-webkit-scrollbar-corner</code></h3>
+### `::-webkit-scrollbar-corner`
 
-<p>{{Compat("css.selectors.-webkit-scrollbar-corner")}}</p>
+{{Compat("css.selectors.-webkit-scrollbar-corner")}}
 
-<h3 id="-webkit-resizer"><code>::-webkit-resizer</code></h3>
+### `::-webkit-resizer`
 
-<p>{{Compat("css.selectors.-webkit-resizer")}}</p>
+{{Compat("css.selectors.-webkit-resizer")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>WebKit blog on <a href="https://webkit.org/blog/363/styling-scrollbars/">Styling Scrollbars</a></li>
- <li><a href="https://trac.webkit.org/export/41842/trunk/LayoutTests/scrollbars/overflow-scrollbar-combinations.html">WebKit test</a> for scrollbar styles mentioned above</li>
- <li>{{CSSxRef("-ms-overflow-style")}}</li>
- <li>{{CSSxRef("scrollbar-width")}}</li>
-</ul>
+- WebKit blog on [Styling Scrollbars](https://webkit.org/blog/363/styling-scrollbars/)
+- [WebKit test](https://trac.webkit.org/export/41842/trunk/LayoutTests/scrollbars/overflow-scrollbar-combinations.html) for scrollbar styles mentioned above
+- {{CSSxRef("-ms-overflow-style")}}
+- {{CSSxRef("scrollbar-width")}}

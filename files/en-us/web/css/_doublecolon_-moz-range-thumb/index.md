@@ -10,63 +10,59 @@ tags:
   - Selector
 browser-compat: css.selectors.-moz-range-thumb
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<p>The <strong><code>::-moz-range-thumb</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-element</a> is a <a href="/en-US/docs/Web/CSS/Mozilla_Extensions">Mozilla extension</a> that represents the <em>thumb</em> (i.e., virtual knob) of an {{HTMLElement("input")}} of <code>type="range"</code>. The user can move the thumb along the input's track to alter its numerical value.</p>
+The **`::-moz-range-thumb`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) is a [Mozilla extension](/en-US/docs/Web/CSS/Mozilla_Extensions) that represents the _thumb_ (i.e., virtual knob) of an {{HTMLElement("input")}} of `type="range"`. The user can move the thumb along the input's track to alter its numerical value.
 
-<div class="note">
-<p><strong>Note:</strong> Using <code>::-moz-range-thumb</code> with anything but an <code>&lt;input type="range"&gt;</code> doesn't match anything and has no effect.</p>
-</div>
+> **Note:** Using `::-moz-range-thumb` with anything but an `<input type="range">` doesn't match anything and has no effect.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;input type="range" min="0" max="100" step="5" value="50"/&gt;
-</pre>
+```html
+<input type="range" min="0" max="100" step="5" value="50"/>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">input[type=range]::-moz-range-thumb {
+```css
+input[type=range]::-moz-range-thumb {
   background-color: green;
 }
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Examples", 300, 50)}}</p>
+{{EmbedLiveSample("Examples", 300, 50)}}
 
-<p>A progress bar using this style might look something like this:</p>
+A progress bar using this style might look something like this:
 
-<p><img alt="The thumb of the &lt;input type=right> styled in green" src="screen_shot_2015-12-04_at_13.30.08.png"></p>
+![The thumb of the <input type=right> styled in green](screen_shot_2015-12-04_at_13.30.08.png)
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any standard.</p>
+Not part of any standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The pseudo-elements used by Gecko to style other parts of a range input:
-  <ul>
-   <li>{{cssxref("::-moz-range-track")}} represents the groove in which the thumb slides.</li>
-   <li>{{cssxref("::-moz-range-progress")}} represents the lower portion of the track.</li>
-  </ul>
- </li>
- <li>Similar pseudo-elements used by other browsers:
-  <ul>
-   <li>{{cssxref("::-webkit-slider-thumb")}}, pseudo-element supported by WebKit and Blink (Safari, Chrome, and Opera)</li>
-   <li>{{cssxref("::-ms-thumb")}}, pseudo-element supported by Internet Explorer and Edge</li>
-  </ul>
- </li>
- <li><a href="https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/">CSS-Tricks: Styling Cross-Browser Compatible Range Inputs with CSS</a></li>
- <li><a href="http://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html">QuirksMode: Styling and scripting sliders</a></li>
-</ul>
+- The pseudo-elements used by Gecko to style other parts of a range input:
+
+  - {{cssxref("::-moz-range-track")}} represents the groove in which the thumb slides.
+  - {{cssxref("::-moz-range-progress")}} represents the lower portion of the track.
+
+- Similar pseudo-elements used by other browsers:
+
+  - {{cssxref("::-webkit-slider-thumb")}}, pseudo-element supported by WebKit and Blink (Safari, Chrome, and Opera)
+  - {{cssxref("::-ms-thumb")}}, pseudo-element supported by Internet Explorer and Edge
+
+- [CSS-Tricks: Styling Cross-Browser Compatible Range Inputs with CSS](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/)
+- [QuirksMode: Styling and scripting sliders](http://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html)

@@ -9,35 +9,32 @@ tags:
   - Reference
   - SVG
   - Web
-  - 'recipe:css-shorthand-property'
+  - recipe:css-shorthand-property
 browser-compat: css.properties.mask
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>mask</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand property</a> hides an element (partially or fully) by masking or clipping the image at specific points.</p>
+The **`mask`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) hides an element (partially or fully) by masking or clipping the image at specific points.
 
-<div class="note">
-<p><strong>Note:</strong> As well as the properties listed below, the <code>mask</code> shorthand also resets {{cssxref("mask-border")}} to its initial value. It is therefore recommended to use the <code>mask</code> shorthand rather than other shorthands or the individual properties to override any mask settings earlier in the cascade. This will ensure that <code>mask-border</code> has also been reset to allow the new styles to take effect.</p>
-</div>
+> **Note:** As well as the properties listed below, the `mask` shorthand also resets {{cssxref("mask-border")}} to its initial value. It is therefore recommended to use the `mask` shorthand rather than other shorthands or the individual properties to override any mask settings earlier in the cascade. This will ensure that `mask-border` has also been reset to allow the new styles to take effect.
 
-<h2 id="Constituent_properties">Constituent properties</h2>
+## Constituent properties
 
-<p>This property is a shorthand for the following CSS properties:</p>
+This property is a shorthand for the following CSS properties:
 
-<ul>
-	<li><a href="/en-US/docs/Web/CSS/mask-clip"><code>mask-clip</code></a></li>
-	<li><a href="/en-US/docs/Web/CSS/mask-composite"><code>mask-composite</code></a></li>
-	<li><a href="/en-US/docs/Web/CSS/mask-image"><code>mask-image</code></a></li>
-	<li><a href="/en-US/docs/Web/CSS/mask-mode"><code>mask-mode</code></a></li>
-	<li><a href="/en-US/docs/Web/CSS/mask-origin"><code>mask-origin</code></a></li>
-	<li><a href="/en-US/docs/Web/CSS/mask-position"><code>mask-position</code></a></li>
-	<li><a href="/en-US/docs/Web/CSS/mask-repeat"><code>mask-repeat</code></a></li>
-	<li><a href="/en-US/docs/Web/CSS/mask-size"><code>mask-size</code></a></li>
-</ul>
+- [`mask-clip`](/en-US/docs/Web/CSS/mask-clip)
+- [`mask-composite`](/en-US/docs/Web/CSS/mask-composite)
+- [`mask-image`](/en-US/docs/Web/CSS/mask-image)
+- [`mask-mode`](/en-US/docs/Web/CSS/mask-mode)
+- [`mask-origin`](/en-US/docs/Web/CSS/mask-origin)
+- [`mask-position`](/en-US/docs/Web/CSS/mask-position)
+- [`mask-repeat`](/en-US/docs/Web/CSS/mask-repeat)
+- [`mask-size`](/en-US/docs/Web/CSS/mask-size)
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">/* Keyword values */
+```css
+/* Keyword values */
 mask: none;
 
 /* Image values */
@@ -61,63 +58,60 @@ mask: unset;
 /* Multiple masks */
 mask: url(masks.svg#star) left / 16px repeat-y,    /* Element within SVG graphic is used as a mask on the left-hand side with a width of 16px */
       url(masks.svg#circle) right / 16px repeat-y; /* Element within SVG graphic is used as a mask on the right-hand side with a width of 16px */
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
-	<dt><code>&lt;mask-reference&gt;</code></dt>
-	<dd>Sets the mask image source. See {{cssxref("mask-image")}}.</dd>
-	<dt><code>&lt;masking-mode&gt;</code></dt>
-	<dd>Sets the masking mode of the mask image. See {{cssxref("mask-mode")}}.</dd>
-	<dt><code>&lt;position&gt;</code></dt>
-	<dd>Sets the position of the mask image. See {{cssxref("mask-position")}}.</dd>
-	<dt><code>&lt;bg-size&gt;</code></dt>
-	<dd>Sets the size of the mask image. See {{cssxref("mask-size")}}.</dd>
-	<dt><code>&lt;repeat-style&gt;</code></dt>
-	<dd>Sets the repetition of the mask image. See {{cssxref("mask-repeat")}}.</dd>
-	<dt><code>&lt;geometry-box&gt;</code></dt>
-	<dd>If only one <code>&lt;geometry-box&gt;</code> value is given, it sets both {{cssxref("mask-origin")}} and {{cssxref("mask-clip")}}. If two <code>&lt;geometry-box&gt;</code> values are present, then the first sets {{cssxref("mask-origin")}} and the second sets {{cssxref("mask-clip")}}.</dd>
-	<dt><code>&lt;geometry-box&gt; | no-clip</code></dt>
-	<dd>Sets the area that is affected by the mask image. See {{cssxref("mask-clip")}}.</dd>
-	<dt><code>&lt;compositing-operator&gt;</code></dt>
-	<dd>Sets the compositing operation used on the current mask layer. See {{cssxref("mask-composite")}}.</dd>
-</dl>
+- `<mask-reference>`
+  - : Sets the mask image source. See {{cssxref("mask-image")}}.
+- `<masking-mode>`
+  - : Sets the masking mode of the mask image. See {{cssxref("mask-mode")}}.
+- `<position>`
+  - : Sets the position of the mask image. See {{cssxref("mask-position")}}.
+- `<bg-size>`
+  - : Sets the size of the mask image. See {{cssxref("mask-size")}}.
+- `<repeat-style>`
+  - : Sets the repetition of the mask image. See {{cssxref("mask-repeat")}}.
+- `<geometry-box>`
+  - : If only one `<geometry-box>` value is given, it sets both {{cssxref("mask-origin")}} and {{cssxref("mask-clip")}}. If two `<geometry-box>` values are present, then the first sets {{cssxref("mask-origin")}} and the second sets {{cssxref("mask-clip")}}.
+- `<geometry-box> | no-clip`
+  - : Sets the area that is affected by the mask image. See {{cssxref("mask-clip")}}.
+- `<compositing-operator>`
+  - : Sets the compositing operation used on the current mask layer. See {{cssxref("mask-composite")}}.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Masking_an_image">Masking an image</h3>
+### Masking an image
 
-<pre class="brush: css">.target {
+```css
+.target {
   mask: url(#c1) luminance;
 }
 
 .anothertarget {
   mask: url(resources.svg#c1) 50px 30px/10px 10px repeat-x exclude;
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>{{Cssxref("clip-path")}}, {{Cssxref("filter")}}</li>
-	<li><a href="https://hacks.mozilla.org/2017/06/css-shapes-clipping-and-masking/">CSS Shapes, clipping and masking – and how to use them</a></li>
-	<li><a href="/en-US/docs/Applying_SVG_effects_to_HTML_content">Applying SVG effects to HTML content</a></li>
-	<li><a href="/en-US/docs/SVG">SVG</a></li>
-</ul>
+- {{Cssxref("clip-path")}}, {{Cssxref("filter")}}
+- [CSS Shapes, clipping and masking – and how to use them](https://hacks.mozilla.org/2017/06/css-shapes-clipping-and-masking/)
+- [Applying SVG effects to HTML content](/en-US/docs/Applying_SVG_effects_to_HTML_content)
+- [SVG](/en-US/docs/SVG)

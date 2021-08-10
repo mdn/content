@@ -7,26 +7,26 @@ tags:
   - CSS Property
   - Layout
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.outline-width
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <a href="/en-US/docs/Web/CSS">CSS</a> <strong><code>outline-width</code></strong> property sets the thickness of an element's outline. An outline is a line that is drawn around an element, outside the {{cssxref("border")}}.</p>
+The [CSS](/en-US/docs/Web/CSS) **`outline-width`** property sets the thickness of an element's outline. An outline is a line that is drawn around an element, outside the {{cssxref("border")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/outline-width.html")}}</div>
+{{EmbedInteractiveExample("pages/css/outline-width.html")}}
 
+It is often more convenient to use the shorthand property {{cssxref("outline")}} when defining the appearance of an outline.
 
-<p>It is often more convenient to use the shorthand property {{cssxref("outline")}} when defining the appearance of an outline.</p>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 outline-width: thin;
 outline-width: medium;
 outline-width: thick;
 
-/* &lt;length&gt; values */
+/* <length> values */
 outline-width: 1px;
 outline-width: 0.1em;
 
@@ -34,48 +34,49 @@ outline-width: 0.1em;
 outline-width: inherit;
 outline-width: initial;
 outline-width: revert;
-outline-width: unset;</pre>
+outline-width: unset;
+```
 
-<p>The <code>outline-width</code> property is specified as any one of the values listed below.</p>
+The `outline-width` property is specified as any one of the values listed below.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt>{{cssxref("&lt;length&gt;")}}</dt>
- <dd>The width of the outline specified as a <code>&lt;length&gt;</code>.</dd>
- <dt><code>thin</code></dt>
- <dd>Depends on the user agent. Typically equivalent to <code>1px</code> in desktop browsers (including Firefox).</dd>
- <dt><code>medium</code></dt>
- <dd>Depends on the user agent. Typically equivalent to <code>3px</code> in desktop browsers (including Firefox).</dd>
- <dt><code>thick</code></dt>
- <dd>Depends on the user agent. Typically equivalent to <code>5px</code> in desktop browsers (including Firefox).</dd>
-</dl>
+- {{cssxref("&lt;length&gt;")}}
+  - : The width of the outline specified as a `<length>`.
+- `thin`
+  - : Depends on the user agent. Typically equivalent to `1px` in desktop browsers (including Firefox).
+- `medium`
+  - : Depends on the user agent. Typically equivalent to `3px` in desktop browsers (including Firefox).
+- `thick`
+  - : Depends on the user agent. Typically equivalent to `5px` in desktop browsers (including Firefox).
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_an_elements_outline_width">Setting an element's outline width</h3>
+### Setting an element's outline width
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;span id="thin"&gt;thin&lt;/span&gt;
-&lt;span id="medium"&gt;medium&lt;/span&gt;
-&lt;span id="thick"&gt;thick&lt;/span&gt;
-&lt;span id="twopixels"&gt;2px&lt;/span&gt;
-&lt;span id="oneex"&gt;1ex&lt;/span&gt;
-&lt;span id="em"&gt;1.2em&lt;/span&gt;
-</pre>
+```html
+<span id="thin">thin</span>
+<span id="medium">medium</span>
+<span id="thick">thick</span>
+<span id="twopixels">2px</span>
+<span id="oneex">1ex</span>
+<span id="em">1.2em</span>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">span {
+```css
+span {
   outline-style: solid;
   display: inline-block;
   margin: 20px;
@@ -104,25 +105,22 @@ outline-width: unset;</pre>
 #em {
   outline-width: 1.2em;
 }
+```
 
-</pre>
+#### Result
 
-<h4 id="Result">Result</h4>
+{{EmbedLiveSample('Setting_an_elements_outline_width', '100%', '80')}}
 
-<p>{{EmbedLiveSample('Setting_an_elements_outline_width', '100%', '80')}}</p>
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("outline")}}</li>
- <li>{{cssxref("outline-color")}}</li>
- <li>{{cssxref("outline-style")}}</li>
-</ul>
+- {{cssxref("outline")}}
+- {{cssxref("outline-color")}}
+- {{cssxref("outline-style")}}

@@ -9,16 +9,17 @@ tags:
   - NeedsContent
   - NeedsExample
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.mask-border-mode
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>mask-border-mode</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property specifies the blending mode used in a <a href="/en-US/docs/Web/CSS/mask-border">mask border</a>.</p>
+The **`mask-border-mode`** [CSS](/en-US/docs/Web/CSS) property specifies the blending mode used in a [mask border](/en-US/docs/Web/CSS/mask-border).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 mask-border-mode: luminance;
 mask-border-mode: alpha;
 
@@ -27,48 +28,46 @@ mask-border-mode: inherit;
 mask-border-mode: initial;
 mask-border-mode: repeat;
 mask-border-mode: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>luminance</code></dt>
- <dd>The luminance values of the mask border image are used as the mask values.</dd>
- <dt><code>alpha</code></dt>
- <dd>The alpha values of the mask border image are used as the mask values.</dd>
-</dl>
+- `luminance`
+  - : The luminance values of the mask border image are used as the mask values.
+- `alpha`
+  - : The alpha values of the mask border image are used as the mask values.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Basic_usage">Basic usage</h3>
+### Basic usage
 
-<p>This property doesn't yet seem to have support anywhere. When browsers support it, it will specify the type of blending mode used for the mask border — luminance or alpha:</p>
+This property doesn't yet seem to have support anywhere. When browsers support it, it will specify the type of blending mode used for the mask border — luminance or alpha:
 
-<pre class="brush: css">mask-border-mode: luminance;
-mask-border-mode: alpha;</pre>
+```css
+mask-border-mode: luminance;
+mask-border-mode: alpha;
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{cssxref("mask-border")}}</li>
-  <li>{{cssxref("mask-border-outset")}}</li>
-  <li>{{cssxref("mask-border-repeat")}}</li>
-  <li>{{cssxref("mask-border-source")}}</li>
-  <li>{{cssxref("mask-border-width")}}</li>
-</ul>
+- {{cssxref("mask-border")}}
+- {{cssxref("mask-border-outset")}}
+- {{cssxref("mask-border-repeat")}}
+- {{cssxref("mask-border-source")}}
+- {{cssxref("mask-border-width")}}

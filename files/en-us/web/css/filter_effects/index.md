@@ -8,50 +8,33 @@ tags:
   - Overview
   - Reference
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong>Filter Effects</strong> is a module of CSS that defines a way of processing an element’s rendering before it is displayed in the document.</p>
+**Filter Effects** is a module of CSS that defines a way of processing an element’s rendering before it is displayed in the document.
 
-<h2 id="Reference">Reference</h2>
+## Reference
 
-<h3 id="Properties">Properties</h3>
+### Properties
 
-<ul>
- <li>{{cssxref("backdrop-filter")}}</li>
- <li>{{cssxref("filter")}}</li>
-</ul>
+- {{cssxref("backdrop-filter")}}
+- {{cssxref("filter")}}
 
-<h3 id="Data_types">Data types</h3>
+### Data types
 
-<ul>
- <li>{{cssxref("&lt;filter-function&gt;")}}</li>
-</ul>
+- {{cssxref("&lt;filter-function&gt;")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('Filters 1.0', '#FilterProperty', 'filter') }}</td>
-   <td>{{ Spec2('Filters 1.0') }}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                | Status                               | Comment             |
+| ---------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
+| {{ SpecName('Filters 1.0', '#FilterProperty', 'filter') }} | {{ Spec2('Filters 1.0') }} | Initial definition. |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<h3 id="backdrop-filter_property"><code>backdrop-filter</code> property</h3>
+### `backdrop-filter` property
 
-<p>{{Compat("css.properties.backdrop-filter")}}</p>
+{{Compat("css.properties.backdrop-filter")}}
 
-<h3 id="filter_property"><code>filter</code> property</h3>
+### `filter` property
 
-<p>{{Compat("css.properties.filter")}}</p>
+{{Compat("css.properties.filter")}}

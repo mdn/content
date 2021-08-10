@@ -8,50 +8,29 @@ tags:
   - Overview
   - Reference
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong>CSS Lists</strong> is a module of CSS that defines how lists can be laid out and styled.</p>
+**CSS Lists** is a module of CSS that defines how lists can be laid out and styled.
 
-<h2 id="Reference">Reference</h2>
+## Reference
 
-<h3 id="Properties">Properties</h3>
+### Properties
 
-<ul>
- <li>{{cssxref("list-style-image")}}</li>
- <li>{{cssxref("list-style-type")}}</li>
- <li>{{cssxref("list-style-position")}}</li>
- <li>{{cssxref("list-style")}}</li>
-</ul>
+- {{cssxref("list-style-image")}}
+- {{cssxref("list-style-type")}}
+- {{cssxref("list-style-position")}}
+- {{cssxref("list-style")}}
 
-<h2 id="Guides">Guides</h2>
+## Guides
 
-<dl>
- <dt><a href="/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Consistent_list_indentation">Consistent list indentation</a></dt>
- <dd>Explains how to achieve consistent list indentation across different browsers.</dd>
- <dt><a href="/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters">Using CSS Counters</a></dt>
- <dd>Explains how to use the CSS counter properties to control list counters.</dd>
-</dl>
+- [Consistent list indentation](/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Consistent_list_indentation)
+  - : Explains how to achieve consistent list indentation across different browsers.
+- [Using CSS Counters](/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters)
+  - : Explains how to use the CSS counter properties to control list counters.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Lists')}}</td>
-   <td>{{Spec2('CSS3 Lists')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'generate.html')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                        | Status                           | Comment            |
+| ---------------------------------------------------- | -------------------------------- | ------------------ |
+| {{SpecName('CSS3 Lists')}}                 | {{Spec2('CSS3 Lists')}} |                    |
+| {{SpecName('CSS2.1', 'generate.html')}} | {{Spec2('CSS2.1')}}         | Initial definition |

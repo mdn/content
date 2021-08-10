@@ -9,58 +9,52 @@ tags:
   - Web
 browser-compat: css.types.frequency
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>&lt;frequency&gt;</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Types">data type</a> represents a frequency dimension, such as the pitch of a speaking voice. It is not currently used in any CSS properties.</p>
+The **`<frequency>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents a frequency dimension, such as the pitch of a speaking voice. It is not currently used in any CSS properties.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>&lt;frequency&gt;</code> data type consists of a {{cssxref("&lt;number&gt;")}} followed by one of the units listed below. As with all CSS dimensions, there is no space between the unit literal and the number.</p>
+The `<frequency>` data type consists of a {{cssxref("&lt;number&gt;")}} followed by one of the units listed below. As with all CSS dimensions, there is no space between the unit literal and the number.
 
-<h3 id="Units">Units</h3>
+### Units
 
-<dl>
- <dt><code>Hz</code></dt>
- <dd>Represents a frequency in hertz. Examples: <code>0Hz</code>, <code>1500Hz</code>, <code>10000Hz</code>.</dd>
- <dt><code>kHz</code></dt>
- <dd>Represents a frequency in kilohertz. Examples: <code>0kHz</code>, <code>1.5kHz</code>, <code>10kHz</code>.</dd>
-</dl>
+- `Hz`
+  - : Represents a frequency in hertz. Examples: `0Hz`, `1500Hz`, `10000Hz`.
+- `kHz`
+  - : Represents a frequency in kilohertz. Examples: `0kHz`, `1.5kHz`, `10kHz`.
 
-<div class="note">
-<p><strong>Note:</strong> Although the number <code>0</code> is always the same regardless of unit, the unit may not be omitted. In other words, <code>0</code> is invalid and does not represent <code>0Hz</code> or <code>0kHz</code>. Though the units are case-insensitive, it is good practice to use a capital "H" for <code>Hz</code> and <code>kHz</code>, as specified in the <a href="https://en.wikipedia.org/wiki/International_System_of_Units">SI</a>.</p>
-</div>
+> **Note:** Although the number `0` is always the same regardless of unit, the unit may not be omitted. In other words, `0` is invalid and does not represent `0Hz` or `0kHz`. Though the units are case-insensitive, it is good practice to use a capital "H" for `Hz` and `kHz`, as specified in the [SI](https://en.wikipedia.org/wiki/International_System_of_Units).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Valid_frequency_values">Valid frequency values</h3>
+### Valid frequency values
 
-<pre>12Hz     Positive integer
-4.3Hz    Non-integer
-14KhZ    The unit is case-insensitive, though non-SI capitalization is not recommended.
-+0Hz     Zero, with a leading + and a unit
--0kHz    Zero, with a leading - and a unit</pre>
+    12Hz     Positive integer
+    4.3Hz    Non-integer
+    14KhZ    The unit is case-insensitive, though non-SI capitalization is not recommended.
+    +0Hz     Zero, with a leading + and a unit
+    -0kHz    Zero, with a leading - and a unit
 
-<h3 id="Invalid_frequency_values">Invalid frequency values</h3>
+### Invalid frequency values
 
-<pre class="example-bad">12.0     This is a &lt;number&gt;, not an &lt;frequency&gt;, because it is missing a unit.
+```plain example-bad
+12.0     This is a <number>, not an <frequency>, because it is missing a unit.
 7 Hz     No space is allowed between the number and the unit.
-0        Although unitless zero is an allowable &lt;length&gt;, it's an invalid &lt;frequency&gt;.</pre>
+0        Although unitless zero is an allowable <length>, it's an invalid <frequency>.
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<div class="note">
-<p><strong>Note:</strong> This data type was initially introduced in <a href="https://www.w3.org/TR/CSS2/aural.html#q19.0">CSS Level 2</a> for the now-obsolete <a href="/en-US/docs/Web/CSS/@media/aural">aural</a> <a href="/en-US/docs/Web/CSS/@media#Media_types">media type</a>, where it was used to define the pitch of the voice. However, the <code>&lt;frequency&gt;</code> data type has been reintroduced in CSS3, though no CSS property is using it at the moment.</p>
-</div>
+> **Note:** This data type was initially introduced in [CSS Level 2](https://www.w3.org/TR/CSS2/aural.html#q19.0) for the now-obsolete [aural](/en-US/docs/Web/CSS/@media/aural) [media type](/en-US/docs/Web/CSS/@media#Media_types), where it was used to define the pitch of the voice. However, the `<frequency>` data type has been reintroduced in CSS3, though no CSS property is using it at the moment.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("&lt;frequency-percentage&gt;")}}</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Values_and_Units">CSS Values and Units</a></li>
-</ul>
+- {{cssxref("&lt;frequency-percentage&gt;")}}
+- [CSS Values and Units](/en-US/docs/Web/CSS/CSS_Values_and_Units)

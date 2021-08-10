@@ -8,34 +8,37 @@ tags:
   - Selectors
 browser-compat: css.selectors.universal
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The CSS <strong>universal selector</strong> (<code>*</code>) matches elements of any type.</p>
+The CSS **universal selector** (`*`) matches elements of any type.
 
-<pre class="brush: css no-line-numbers">/* Selects all elements */
+```css
+/* Selects all elements */
 * {
   color: green;
-}</pre>
+}
+```
 
-<p>Universal selectors can be namespaced when using {{CSSXref("@namespace")}}. This is useful when dealing with documents containing multiple namespaces such as HTML5 with inline SVG or MathML, or XML that mixes multiple vocabularies.</p>
+Universal selectors can be namespaced when using {{CSSXref("@namespace")}}. This is useful when dealing with documents containing multiple namespaces such as HTML5 with inline SVG or MathML, or XML that mixes multiple vocabularies.
 
-<ul>
-  <li><code>ns|*</code> - matches all elements in namespace <em>ns</em></li>
-  <li><code>*|*</code> - matches all elements</li>
-  <li><code>|*</code> - matches all elements without any declared namespace</li>
- </ul>
+- `ns|*` - matches all elements in namespace _ns_
+- `*|*` - matches all elements
+- `|*` - matches all elements without any declared namespace
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">* { <em>style properties</em> }</pre>
+```css
+* { style properties }
+```
 
-<p>The asterisk is optional with simple selectors. For instance, <code>*.warning</code> and <code>.warning</code> are equivalent.</p>
+The asterisk is optional with simple selectors. For instance, `*.warning` and `.warning` are equivalent.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">* [lang^=en] {
+```css
+* [lang^=en] {
   color: green;
 }
 
@@ -55,40 +58,41 @@ browser-compat: css.selectors.universal
 .floating + * {
   clear: left;
 }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p class="warning"&gt;
-  &lt;span lang="en-us"&gt;A green span&lt;/span&gt; in a red paragraph.
-&lt;/p&gt;
-&lt;p id="maincontent" lang="en-gb"&gt;
-  &lt;span class="warning"&gt;A red span&lt;/span&gt; in a green paragraph.
-&lt;/p&gt;</pre>
+```html
+<p class="warning">
+  <span lang="en-us">A green span</span> in a red paragraph.
+</p>
+<p id="maincontent" lang="en-gb">
+  <span class="warning">A red span</span> in a green paragraph.
+</p>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample('Examples')}}</p>
+{{EmbedLiveSample('Examples')}}
 
-<h3 id="namespacing">Namespaces</h3>
+### Namespaces
 
-<p>In this example the selector will only match elements in the example namespace.</p>
+In this example the selector will only match elements in the example namespace.
 
-<pre class="brush: css">@namespace example url(http://www.example.com);
+```css
+@namespace example url(http://www.example.com);
 example|* { color: blue }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Selectors">CSS Selectors</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors">Learn CSS: Selectors</a></li>
-</ul>
+- [CSS Selectors](/en-US/docs/Web/CSS/CSS_Selectors)
+- [Learn CSS: Selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors)

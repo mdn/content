@@ -7,18 +7,19 @@ tags:
   - CSS Property
   - NeedsContent
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.flex-grow
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>flex-grow</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets the flex grow factor of a flex item's <a href="https://www.w3.org/TR/css-flexbox/#main-size">main size</a>.</p>
+The **`flex-grow`** [CSS](/en-US/docs/Web/CSS) property sets the flex grow factor of a flex item's [main size](https://www.w3.org/TR/css-flexbox/#main-size).
 
-<div>{{EmbedInteractiveExample("pages/css/flex-grow.html")}}</div>
+{{EmbedInteractiveExample("pages/css/flex-grow.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* &lt;number&gt; values */
+```css
+/* <number> values */
 flex-grow: 3;
 flex-grow: 0.6;
 
@@ -27,56 +28,56 @@ flex-grow: inherit;
 flex-grow: initial;
 flex-grow: revert;
 flex-grow: unset;
-</pre>
+```
 
-<p>The <code>flex-grow</code> property is specified as a single <code>&lt;number&gt;</code>.</p>
+The `flex-grow` property is specified as a single `<number>`.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>&lt;number&gt;</code></dt>
- <dd>See {{cssxref("&lt;number&gt;")}}. Negative values are invalid. Defaults to 0.</dd>
-</dl>
+- `<number>`
+  - : See {{cssxref("&lt;number&gt;")}}. Negative values are invalid. Defaults to 0.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>This property specifies how much of the remaining space in the flex container should be assigned to the item (the flex grow factor).</p>
+This property specifies how much of the remaining space in the flex container should be assigned to the item (the flex grow factor).
 
-<p>The <a href="https://www.w3.org/TR/css-flexbox/#main-size">main size</a> is either width or height of the item which is dependent on the {{cssxref("flex-direction")}} value.</p>
+The [main size](https://www.w3.org/TR/css-flexbox/#main-size) is either width or height of the item which is dependent on the {{cssxref("flex-direction")}} value.
 
-<p>The remaining space is the size of the flex container minus the size of all flex items' sizes together. If all sibling items have the same flex grow factor, then all items will receive the same share of remaining space, otherwise it is distributed according to the ratio defined by the different flex grow factors.</p>
+The remaining space is the size of the flex container minus the size of all flex items' sizes together. If all sibling items have the same flex grow factor, then all items will receive the same share of remaining space, otherwise it is distributed according to the ratio defined by the different flex grow factors.
 
-<p><code>flex-grow</code> is used alongside the other flex properties {{cssxref("flex-shrink")}} and {{cssxref("flex-basis")}}, and normally defined using the {{cssxref("flex")}} shorthand to ensure all values are set.</p>
+`flex-grow` is used alongside the other flex properties {{cssxref("flex-shrink")}} and {{cssxref("flex-basis")}}, and normally defined using the {{cssxref("flex")}} shorthand to ensure all values are set.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_flex_item_grow_factor">Setting flex item grow factor</h3>
+### Setting flex item grow factor
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;h4&gt;This is a Flex-Grow&lt;/h4&gt;
-&lt;h5&gt;A,B,C and F are flex-grow:1 . D and E are flex-grow:2 .&lt;/h5&gt;
-&lt;div id="content"&gt;
-  &lt;div class="box" style="background-color:red;"&gt;A&lt;/div&gt;
-  &lt;div class="box" style="background-color:lightblue;"&gt;B&lt;/div&gt;
-  &lt;div class="box" style="background-color:yellow;"&gt;C&lt;/div&gt;
-  &lt;div class="box1" style="background-color:brown;"&gt;D&lt;/div&gt;
-  &lt;div class="box1" style="background-color:lightgreen;"&gt;E&lt;/div&gt;
-  &lt;div class="box" style="background-color:brown;"&gt;F&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<h4>This is a Flex-Grow</h4>
+<h5>A,B,C and F are flex-grow:1 . D and E are flex-grow:2 .</h5>
+<div id="content">
+  <div class="box" style="background-color:red;">A</div>
+  <div class="box" style="background-color:lightblue;">B</div>
+  <div class="box" style="background-color:yellow;">C</div>
+  <div class="box1" style="background-color:brown;">D</div>
+  <div class="box1" style="background-color:lightgreen;">E</div>
+  <div class="box" style="background-color:brown;">F</div>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">#content {
+```css
+#content {
   display: flex;
 
   justify-content: space-around;
@@ -93,24 +94,22 @@ flex-grow: unset;
   flex-grow: 2;
   border: 3px solid rgba(0,0,0,.2);
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Setting_flex_item_grow_factor', '700px', '300px', '', 'Web/CSS/flex-grow')}}</p>
+{{EmbedLiveSample('Setting_flex_item_grow_factor', '700px', '300px', '', 'Web/CSS/flex-grow')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>CSS Flexbox Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Basic Concepts of Flexbox</a></em></li>
- <li>CSS Flexbox Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax">Controlling Ratios of flex items along the main axis</a></em></li>
- <li><a href="https://css-tricks.com/flex-grow-is-weird/">`flex-grow` is weird. Or is it?</a> article by Manuel Matuzovic on CSS-Tricks, which illustrates how flex-grow works</li>
-</ul>
+- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
+- CSS Flexbox Guide: _[Controlling Ratios of flex items along the main axis](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)_
+- [\`flex-grow\` is weird. Or is it?](https://css-tricks.com/flex-grow-is-weird/) article by Manuel Matuzovic on CSS-Tricks, which illustrates how flex-grow works

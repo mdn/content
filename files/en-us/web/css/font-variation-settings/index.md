@@ -6,19 +6,19 @@ tags:
   - CSS Fonts
   - CSS Property
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.font-variation-settings
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>font-variation-settings</code></strong> CSS property provides low-level control over <a href="/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide">variable font</a> characteristics, by specifying the four letter axis names of the characteristics you want to vary, along with their values.</p>
+The **`font-variation-settings`** CSS property provides low-level control over [variable font](/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide) characteristics, by specifying the four letter axis names of the characteristics you want to vary, along with their values.
 
-<div>{{EmbedInteractiveExample("pages/css/font-variation-settings.html")}}</div>
+{{EmbedInteractiveExample("pages/css/font-variation-settings.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush:css no-line-numbers">/* Use the default settings */
+```css
+/* Use the default settings */
 font-variation-settings: normal;
 
 /* Set values for variable font axis names */
@@ -29,110 +29,102 @@ font-variation-settings: inherit;
 font-variation-settings: initial;
 font-variation-settings: revert;
 font-variation-settings: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<p>This property's value can take one of two forms:</p>
+This property's value can take one of two forms:
 
-<dl>
- <dt><code>normal</code></dt>
- <dd>Text is laid out using default settings.</dd>
- <dt><code>&lt;string&gt; &lt;number&gt;</code></dt>
- <dd>When rendering text, the list of variable font axis names is passed to the text layout engine to enable or disable font features. Each setting is always one or more pairs consisting of a {{cssxref("&lt;string&gt;")}} of 4 ASCII characters followed by a {{cssxref("number")}} indicating the axis value to set. If the <code>&lt;string&gt;</code> has more or fewer characters or contains characters outside the U+20 - U+7E codepoint range, the whole property is invalid. The <code>&lt;number&gt;</code> can be fractional or negative, depending on the value range available in your font, as defined by the font designer.</dd>
-</dl>
+- `normal`
+  - : Text is laid out using default settings.
+- `<string> <number>`
+  - : When rendering text, the list of variable font axis names is passed to the text layout engine to enable or disable font features. Each setting is always one or more pairs consisting of a {{cssxref("&lt;string&gt;")}} of 4 ASCII characters followed by a {{cssxref("number")}} indicating the axis value to set. If the `<string>` has more or fewer characters or contains characters outside the U+20 - U+7E codepoint range, the whole property is invalid. The `<number>` can be fractional or negative, depending on the value range available in your font, as defined by the font designer.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>This property is a low-level mechanism designed to set variable font features where no other way to enable or access those features exist. You should only use it when no basic properties exist to set those features (e.g. {{cssxref("font-weight")}}, {{cssxref("font-style")}}).</p>
+This property is a low-level mechanism designed to set variable font features where no other way to enable or access those features exist. You should only use it when no basic properties exist to set those features (e.g. {{cssxref("font-weight")}}, {{cssxref("font-style")}}).
 
-<p>Font characteristics set using <code>font-variation-settings</code> will always override those set using the corresponding basic font properties, e.g. <code>font-weight</code>, no matter where they appear in the cascade. In some browsers, this is currently only true when the <code>@font-face</code> declaration includes a <code>font-weight</code> range.</p>
+Font characteristics set using `font-variation-settings` will always override those set using the corresponding basic font properties, e.g. `font-weight`, no matter where they appear in the cascade. In some browsers, this is currently only true when the `@font-face` declaration includes a `font-weight` range.
 
-<h3 id="Registered_and_custom_axes">Registered and custom axes</h3>
+### Registered and custom axes
 
-<p>Variable font axes come in two types: <strong>registered</strong> and <strong>custom</strong>.</p>
+Variable font axes come in two types: **registered** and **custom**.
 
-<p>Registered axes are the most commonly encountered — common enough that the authors of the specification felt they were worth standardizing. Note that this doesn't mean that the author has to include all of these in their font.</p>
+Registered axes are the most commonly encountered — common enough that the authors of the specification felt they were worth standardizing. Note that this doesn't mean that the author has to include all of these in their font.
 
-<p>Here are the registered axes along with their corresponding CSS properties:</p>
+Here are the registered axes along with their corresponding CSS properties:
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Axis Tag</th>
-   <th scope="col">CSS Property</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>"wght"</td>
-   <td>{{cssxref("font-weight")}}</td>
-  </tr>
-  <tr>
-   <td>"wdth"</td>
-   <td>{{cssxref("font-stretch")}}</td>
-  </tr>
-  <tr>
-   <td>"slnt" (slant)</td>
-   <td>{{cssxref("font-style")}}: <code>oblique + angle</code></td>
-  </tr>
-  <tr>
-   <td>"ital"</td>
-   <td>{{cssxref("font-style")}}: <code>italic</code></td>
-  </tr>
-  <tr>
-   <td>"opsz"</td>
-   <td>
-    <p>{{cssxref("font-optical-sizing")}}</p>
-   </td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Axis Tag</th>
+      <th scope="col">CSS Property</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>"wght"</td>
+      <td>{{cssxref("font-weight")}}</td>
+    </tr>
+    <tr>
+      <td>"wdth"</td>
+      <td>{{cssxref("font-stretch")}}</td>
+    </tr>
+    <tr>
+      <td>"slnt" (slant)</td>
+      <td>{{cssxref("font-style")}}: <code>oblique + angle</code></td>
+    </tr>
+    <tr>
+      <td>"ital"</td>
+      <td>{{cssxref("font-style")}}: <code>italic</code></td>
+    </tr>
+    <tr>
+      <td>"opsz"</td>
+      <td><p>{{cssxref("font-optical-sizing")}}</p></td>
+    </tr>
+  </tbody>
 </table>
 
-<p>Custom axes can be anything the font designer wants to vary in their font, for example ascender or descender heights, the size of serifs, or anything else they can imagine. Any axis can be used as long as it is given a unique 4-character axis. Some will end up becoming more common, and may even become registered over time.</p>
+Custom axes can be anything the font designer wants to vary in their font, for example ascender or descender heights, the size of serifs, or anything else they can imagine. Any axis can be used as long as it is given a unique 4-character axis. Some will end up becoming more common, and may even become registered over time.
 
-<div class="note">
-<p><strong>Note:</strong> Registered axis tags are identified using lower-case tags, whereas custom axes should be given upper-case tags. Note that font designers aren't forced follow this practice in any way, and some won't. The important takeaway here is that axis tags are case-sensitive.</p>
-</div>
+> **Note:** Registered axis tags are identified using lower-case tags, whereas custom axes should be given upper-case tags. Note that font designers aren't forced follow this practice in any way, and some won't. The important takeaway here is that axis tags are case-sensitive.
 
-<p>In order to use variable fonts on your operating system, you need to make sure that it is up to date. For example Linux OSes need the latest Linux Freetype version, and macOS prior to 10.13 does not support variable fonts. If your operating system is not up to date, you will not be able to use variable fonts in web pages or the Firefox Developer Tools.</p>
+In order to use variable fonts on your operating system, you need to make sure that it is up to date. For example Linux OSes need the latest Linux Freetype version, and macOS prior to 10.13 does not support variable fonts. If your operating system is not up to date, you will not be able to use variable fonts in web pages or the Firefox Developer Tools.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>You can find a number of other variable fonts examples at our <a href="/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide">Variable fonts guide</a>, <a class="external external-icon" href="https://v-fonts.com/" rel="noopener">v-fonts.com</a>, and <a class="external external-icon" href="https://www.axis-praxis.org/" rel="noopener">axis-praxis.org</a>.</p>
+You can find a number of other variable fonts examples at our [Variable fonts guide](/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide), [v-fonts.com](https://v-fonts.com/), and [axis-praxis.org](https://www.axis-praxis.org/).
 
-<h3 id="Weight_wght">Weight (wght)</h3>
+### Weight (wght)
 
-<p>The following live example's CSS can be edited to allow you to play with font weight values.</p>
+The following live example's CSS can be edited to allow you to play with font weight values.
 
-<div>{{EmbedGHLiveSample("css-examples/variable-fonts/weight.html", '100%', 520)}}</div>
+{{EmbedGHLiveSample("css-examples/variable-fonts/weight.html", '100%', 520)}}
 
-<h3 id="Slant_slnt">Slant (slnt)</h3>
+### Slant (slnt)
 
-<p>The following live example's CSS can be edited to allow you to play with font slant/oblique values.</p>
+The following live example's CSS can be edited to allow you to play with font slant/oblique values.
 
-<div>{{EmbedGHLiveSample("css-examples/variable-fonts/slant.html", '100%', 520)}}</div>
+{{EmbedGHLiveSample("css-examples/variable-fonts/slant.html", '100%', 520)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide">Variable fonts guide</a></li>
- <li><a href="https://www.microsoft.com/typography/otspec180/otvaroverview.htm">OpenType Font Variations Overview</a></li>
- <li><a href="https://www.microsoft.com/typography/otspec/dvaraxisreg.htm">OpenType Design-Variation Axis Tag Registry</a></li>
-</ul>
+- [Variable fonts guide](/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide)
+- [OpenType Font Variations Overview](https://www.microsoft.com/typography/otspec180/otvaroverview.htm)
+- [OpenType Design-Variation Axis Tag Registry](https://www.microsoft.com/typography/otspec/dvaraxisreg.htm)

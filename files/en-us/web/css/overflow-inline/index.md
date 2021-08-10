@@ -6,20 +6,19 @@ tags:
   - CSS Box Model
   - CSS Property
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.overflow-inline
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>overflow-inline</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets what shows when content overflows the inline start and end edges of a box. This may be nothing, a scroll bar, or the overflow content.</p>
+The **`overflow-inline`** [CSS](/en-US/docs/Web/CSS) property sets what shows when content overflows the inline start and end edges of a box. This may be nothing, a scroll bar, or the overflow content.
 
-<div class="note">
-<p><strong>Note:</strong> The <code>overflow-inline</code> property maps to {{Cssxref("overflow-y")}} or {{Cssxref("overflow-x")}} depending on the writing mode of the document.</p>
-</div>
+> **Note:** The `overflow-inline` property maps to {{Cssxref("overflow-y")}} or {{Cssxref("overflow-x")}} depending on the writing mode of the document.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 overflow-inline: visible;
 overflow-inline: hidden;
 overflow-inline: scroll;
@@ -30,67 +29,67 @@ overflow-inline: inherit;
 overflow-inline: initial;
 overflow-inline: revert;
 overflow-inline: unset;
-</pre>
+```
 
-<p>The <code>overflow-inline</code> property is specified as a single keyword chosen from the list of values below.</p>
+The `overflow-inline` property is specified as a single keyword chosen from the list of values below.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>visible</code></dt>
- <dd>Content is not clipped and may be rendered outside the padding box's inline start and end edges.</dd>
- <dt><code>hidden</code></dt>
- <dd>Content is clipped if necessary to fit the inline dimension in the padding box. No scrollbars are provided.</dd>
- <dt><code>scroll</code></dt>
- <dd>Content is clipped if necessary to fit in the padding box in the inline dimension. Browsers display scrollbars whether or not any content is actually clipped. (This prevents scrollbars from appearing or disappearing when the content changes.) Printers may still print overflowing content.</dd>
- <dt><code>auto</code></dt>
- <dd>Depends on the user agent. If content fits inside the padding box, it looks the same as <code>visible</code>, but still establishes a new block-formatting context. Desktop browsers provide scrollbars if content overflows.</dd>
-</dl>
+- `visible`
+  - : Content is not clipped and may be rendered outside the padding box's inline start and end edges.
+- `hidden`
+  - : Content is clipped if necessary to fit the inline dimension in the padding box. No scrollbars are provided.
+- `scroll`
+  - : Content is clipped if necessary to fit in the padding box in the inline dimension. Browsers display scrollbars whether or not any content is actually clipped. (This prevents scrollbars from appearing or disappearing when the content changes.) Printers may still print overflowing content.
+- `auto`
+  - : Depends on the user agent. If content fits inside the padding box, it looks the same as `visible`, but still establishes a new block-formatting context. Desktop browsers provide scrollbars if content overflows.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_inline_overflow_behavior">Setting inline overflow behavior</h3>
+### Setting inline overflow behavior
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;ul&gt;
-  &lt;li&gt;&lt;code&gt;overflow-inline:hidden&lt;/code&gt; — hides the text outside the box
-    &lt;div id="div1"&gt;
+```html
+<ul>
+  <li><code>overflow-inline:hidden</code> — hides the text outside the box
+    <div id="div1">
       ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ
-    &lt;/div&gt;
-  &lt;/li&gt;
+    </div>
+  </li>
 
-  &lt;li&gt;&lt;code&gt;overflow-inline:scroll&lt;/code&gt; — always adds a scrollbar
-    &lt;div id="div2"&gt;
+  <li><code>overflow-inline:scroll</code> — always adds a scrollbar
+    <div id="div2">
       ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ
-    &lt;/div&gt;
-  &lt;/li&gt;
+    </div>
+  </li>
 
-  &lt;li&gt;&lt;code&gt;overflow-inline:visible&lt;/code&gt; — displays the text outside the box if needed
-    &lt;div id="div3"&gt;
+  <li><code>overflow-inline:visible</code> — displays the text outside the box if needed
+    <div id="div3">
       ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ
-    &lt;/div&gt;
-  &lt;/li&gt;
+    </div>
+  </li>
 
-  &lt;li&gt;&lt;code&gt;overflow-inline:auto&lt;/code&gt; — on most browsers, equivalent to &lt;code&gt;scroll&lt;/code&gt;
-    &lt;div id="div4"&gt;
+  <li><code>overflow-inline:auto</code> — on most browsers, equivalent to <code>scroll</code>
+    <div id="div4">
       ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ
-    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-</pre>
+    </div>
+  </li>
+</ul>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">#div1, #div2, #div3, #div4 {
+```css
+#div1, #div2, #div3, #div4 {
   border: 1px solid black;
   width:  250px;
   margin-bottom: 12px;
@@ -100,24 +99,22 @@ overflow-inline: unset;
 #div2 { overflow-inline: scroll;}
 #div3 { overflow-inline: visible;}
 #div4 { overflow-inline: auto;}
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
 {{EmbedLiveSample("Setting_inline_overflow_behavior", "100%", "270")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Related CSS properties: {{cssxref("text-overflow")}}, {{cssxref("white-space")}}, {{Cssxref("overflow")}}, {{Cssxref("overflow-block")}}, {{Cssxref("overflow-x")}}, {{Cssxref("overflow-y")}}, {{Cssxref("clip")}}, {{Cssxref("display")}}</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Logical_Properties">CSS Logical Properties</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Writing_Modes">Writing Modes</a></li>
-</ul>
+- Related CSS properties: {{cssxref("text-overflow")}}, {{cssxref("white-space")}}, {{Cssxref("overflow")}}, {{Cssxref("overflow-block")}}, {{Cssxref("overflow-x")}}, {{Cssxref("overflow-y")}}, {{Cssxref("clip")}}, {{Cssxref("display")}}
+- [CSS Logical Properties](/en-US/docs/Web/CSS/CSS_Logical_Properties)
+- [Writing Modes](/en-US/docs/Web/CSS/CSS_Writing_Modes)

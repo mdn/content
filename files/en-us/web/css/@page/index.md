@@ -10,66 +10,60 @@ tags:
   - Web
 browser-compat: css.at-rules.page
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>@page</code></strong> CSS at-rule is used to modify some CSS properties when printing a document.</p>
+The **`@page`** CSS at-rule is used to modify some CSS properties when printing a document.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css no-line-numbers">@page {
+```css
+@page {
   margin: 1cm;
 }
 
 @page :first {
   margin: 2cm;
-}</pre>
+}
+```
 
-<h3 id="Descriptors">Descriptors</h3>
+### Descriptors
 
-<dl>
- <dt><a href="/en-US/docs/Web/CSS/@page/size"><code>size</code></a></dt>
- <dd>Specifies the target size and orientation of the page box’s containing block. In the general case, where one page box is rendered onto one page sheet, it also indicates the size of the destination page sheet.</dd>
-</dl>
+- [`size`](/en-US/docs/Web/CSS/@page/size)
+  - : Specifies the target size and orientation of the page box’s containing block. In the general case, where one page box is rendered onto one page sheet, it also indicates the size of the destination page sheet.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>You can't change all CSS properties with <code>@page</code>. You can only change the margins, orphans, widows, and page breaks of the document. Attempts to change any other CSS properties will be ignored.</p>
+You can't change all CSS properties with `@page`. You can only change the margins, orphans, widows, and page breaks of the document. Attempts to change any other CSS properties will be ignored.
 
-<p>The <code>@page</code> at-rule can be accessed via the CSS object model interface {{domxref("CSSPageRule")}}.</p>
+The `@page` at-rule can be accessed via the CSS object model interface {{domxref("CSSPageRule")}}.
 
-<div class="note">
-  <p><strong>Note:</strong> The W3C is discussing how to handle viewport-related {{cssxref("&lt;length&gt;")}} units, <code>vh</code>, <code>vw</code>, <code>vmin</code>, and <code>vmax</code>. Meanwhile do not use them within a <code>@page</code> at-rule.</p>
-</div>
+> **Note:** The W3C is discussing how to handle viewport-related {{cssxref("&lt;length&gt;")}} units, `vh`, `vw`, `vmin`, and `vmax`. Meanwhile do not use them within a `@page` at-rule.
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="page_pseudo-class_examples">@page pseudo-class examples</h3>
+### @page pseudo-class examples
 
-<p>Please refer to the various <a href="/en-US/docs/Web/CSS/Pseudo-classes" title="Pseudo-classes">pseudo-classes</a> of <code>@page</code> for examples.</p>
+Please refer to the various [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes "Pseudo-classes") of `@page` for examples.
 
-<ul>
- <li>{{Cssxref(":blank")}}</li>
- <li>{{Cssxref(":first")}}</li>
- <li>{{Cssxref(":left")}}</li>
- <li>{{Cssxref(":right")}}</li>
- <li>{{Cssxref(":recto")}} {{experimental_inline}}</li>
- <li>{{Cssxref(":verso")}} {{experimental_inline}}</li>
-</ul>
+- {{Cssxref(":blank")}}
+- {{Cssxref(":first")}}
+- {{Cssxref(":left")}}
+- {{Cssxref(":right")}}
+- {{Cssxref(":recto")}} {{experimental_inline}}
+- {{Cssxref(":verso")}} {{experimental_inline}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>See the <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=286443">[META] CSS Paged Media Module Level 3</a> ticket in Bugzilla for tracking progress on the subject (page-based counters, etc.)</li>
-</ul>
+- See the [\[META\] CSS Paged Media Module Level 3](https://bugzilla.mozilla.org/show_bug.cgi?id=286443) ticket in Bugzilla for tracking progress on the subject (page-based counters, etc.)

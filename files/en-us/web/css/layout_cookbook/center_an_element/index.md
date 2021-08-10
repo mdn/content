@@ -11,45 +11,43 @@ tags:
   - cookbook
   - flexbox
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>In this recipe you will see how to center one box inside another. Centering both horizontally and vertically was difficult before flexbox, with the Box Alignment properties it is now straightforward.</p>
+In this recipe you will see how to center one box inside another. Centering both horizontally and vertically was difficult before flexbox, with the Box Alignment properties it is now straightforward.
 
-<p><img alt="an element centered inside a larger box" src="cookbook-center.png"></p>
+![an element centered inside a larger box](cookbook-center.png)
 
-<h2 id="Requirements">Requirements</h2>
+## Requirements
 
-<p>To place an item into the center of another box horizontally and vertically.</p>
+To place an item into the center of another box horizontally and vertically.
 
-<h2 id="Recipe">Recipe</h2>
+## Recipe
 
-<p>{{EmbedGHLiveSample("css-examples/css-cookbook/center.html", '100%', 720)}}</p>
+{{EmbedGHLiveSample("css-examples/css-cookbook/center.html", '100%', 720)}}
 
-<div class="callout">
-<p><a href="https://github.com/mdn/css-examples/blob/master/css-cookbook/center--download.html">Download this example</a></p>
-</div>
+> **Callout:**
+>
+> [Download this example](https://github.com/mdn/css-examples/blob/master/css-cookbook/center--download.html)
 
-<h2 id="Choices_made">Choices made</h2>
+## Choices made
 
-<p>To center one box inside another we make the containing box a flex container. Then set {{cssxref("align-items")}} to center to perform centering on the block axis, and {{cssxref("justify-content")}} to center to perform centering on the inline axis.</p>
+To center one box inside another we make the containing box a flex container. Then set {{cssxref("align-items")}} to center to perform centering on the block axis, and {{cssxref("justify-content")}} to center to perform centering on the inline axis.
 
-<p>In the future we may be able to center elements without needing to turn the parent into a flex container, as the Box Alignment properties used here are specified to apply to block layout too. However, support is currently limited for box alignment properties on block layout, so currently centering using Flexbox is the most robust way to achieve this.</p>
+In the future we may be able to center elements without needing to turn the parent into a flex container, as the Box Alignment properties used here are specified to apply to block layout too. However, support is currently limited for box alignment properties on block layout, so currently centering using Flexbox is the most robust way to achieve this.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>The various layout methods have different browser support. See the charts below for details on basic support for the properties used.</p>
+The various layout methods have different browser support. See the charts below for details on basic support for the properties used.
 
-<h4 id="align-items">align-items</h4>
+#### align-items
 
-<p>{{Compat("css.properties.align-items")}}</p>
+{{Compat("css.properties.align-items")}}
 
-<h4 id="justify-content">justify-content</h4>
+#### justify-content
 
-<p>{{Compat("css.properties.justify-content")}}</p>
+{{Compat("css.properties.justify-content")}}
 
-<h2 id="Resources_on_MDN">Resources on MDN</h2>
+## Resources on MDN
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox">Box Alignment in Flexbox</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Box_Alignment">CSS Box alignment guide</a></li>
-</ul>
+- [Box Alignment in Flexbox](/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox)
+- [CSS Box alignment guide](/en-US/docs/Web/CSS/CSS_Box_Alignment)
