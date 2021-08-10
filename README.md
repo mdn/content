@@ -342,9 +342,10 @@ resolving them. You can do this by merging the `main` branch into your
 branch (`git pull mdn main`), and then pushing the updated branch to
 your fork (`git push`).
 
-1. Once you've created your pull request, never use `git rebase` on your
-branch if you need to make changes. Any changes should be made as
-additional commits.
+1. An alternative strategy is `git rebase` of `main` on your branch.
+This will rewrite the git history and might confuse reviewers as notifications
+from GitHub lead to nowhere. Your changes are replayed on top of the current
+main branch at that point in time.
 
 1. Each pull request should contain a single logical change, or related set
 of changes that make sense to submit together. If a pull request becomes
