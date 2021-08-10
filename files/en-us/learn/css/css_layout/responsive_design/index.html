@@ -97,29 +97,29 @@ tags:
 
 <p>You can add multiple media queries within a stylesheet, tweaking either your whole layout or just parts of it to best suit various screen sizes. The points at which a media query is introduced, and the layout changed, are known as <em>breakpoints</em>.</p>
 
-<p>A common approach when using Media Queries is to create a simple single-column layout for narrow-screen devices (e.g mobile phones), then check for larger screens and implement a multiple-column layout when you know that you have enough screen width to handle it. This is often described as <strong>mobile first</strong> design.</p>
+<p>A common approach when using Media Queries is to create a simple single-column layout for narrow-screen devices (e.g.,mobile phones), then check for larger screens and implement a multiple-column layout when you know you have enough screen width to handle it. This is often described as <strong>mobile first</strong> design.</p>
 
 <p>Find out more in the MDN documentation for <a href="/en-US/docs/Web/CSS/Media_Queries">Media Queries</a>.</p>
 
 <h2 id="Flexible_grids">Flexible grids</h2>
 
-<p>Responsive sites don't just change their layout between breakpoints, they are built on flexible grids. A flexible grid means that you don't need to target every possible device size that there is, and build a pixel perfect layout for it. That approach would be impossible given the vast number of differently-sized devices that exist, and the fact that on desktop at least, people do not always have their browser window maximized.</p>
+<p>Responsive sites don't just change their layout between breakpoints, they're also built on flexible grids. A flexible grid means that you don't need to target every possible device size that there is and build a pixel perfect layout for it. That approach would be impossible given the vast number of differently-sized devices that exist and the fact that, on desktop at least, people don't always have their browser window maximized.</p>
 
-<p>By using a flexible grid, you only need to add in a breakpoint and change the design at the point where the content starts to look bad. For example, if the line lengths become unreadably long as the screen size increases, or a box becomes squashed with two words on each line as it narrows.</p>
+<p>By using a flexible grid, you only need to insert a breakpoint and change the design at the point where the content starts to look bad. For example, when the line lengths become unreadably long as the screen size increases, or when a box becomes squashed with two words on each line as it narrows.</p>
 
-<p>In the early days of responsive design, our only option for performing layout was to use <a href="/en-US/docs/Learn/CSS/CSS_layout/Floats">floats</a>. Flexible floated layouts were achieved by giving each element a percentage width, and ensuring that across the layout the totals were not more than 100%. In his original piece on fluid grids, Marcotte detailed a formula for taking a layout designed using pixels and converting it into percentages.</p>
+<p>In the early days of responsive design, our only option for implementing layout was to use <a href="/en-US/docs/Learn/CSS/CSS_layout/Floats">floats</a>. Flexible floated layouts were achieved by giving each element a percentage width and ensuring that across the layout the totals were not more than 100%. In his original piece on fluid grids, Marcotte detailed a formula for taking a layout designed using pixels and converting it into percentages.</p>
 
 <pre><code>target / context = result </code>
 </pre>
 
-<p>For example, if our target column size is 60 pixels, and the context (or container) it is in is 960 pixels, we divide 60 by 960 to get a value we can use in our CSS, after moving the decimal point two places to the right.</p>
+<p>For example, if our target column size is 60 pixels and the context (or container) it's in is 960 pixels, we divide 60 by 960 to get a value we can use in our CSS (after moving the decimal point two places to the right).</p>
 
 <pre class="brush: css">.col {
   width: 6.25%; /* 60 / 960 = 0.0625 */
 }
 </pre>
 
-<p>This approach will be found in many places across the web today, and it is documented here in the layout section of our <a href="/en-US/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods">Legacy layout methods</a> article. It is likely that you will come across websites using this approach in your work, so it is worth understanding it, even though you would not build a modern site using a float-based flexible grid.</p>
+<p>This approach will be found in many places across the web today. It's documented here in the layout section of our <a href="/en-US/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods">Legacy layout methods</a> article. It's likely that you'll come across websites using this approach in your work, so it's worth understanding it even though you would not build a modern site using a float-based flexible grid.</p>
 
 <p>The following example demonstrates a simple responsive design using Media Queries and a flexible grid. On narrow screens the layout displays the boxes stacked on top of one another:</p>
 
