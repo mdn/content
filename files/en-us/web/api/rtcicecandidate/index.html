@@ -29,8 +29,10 @@ browser-compat: api.RTCIceCandidate
 
 <dl>
 	<dt>{{domxref("RTCIceCandidate.RTCIceCandidate()","RTCIceCandidate()")}}</dt>
-	<dd>Creates an <code>RTCIceCandidate</code> object to represent a single ICE candidate, optionally configured based on an object based on the {{domxref("RTCIceCandidateInit")}} dictionary.
-	<div class="note"><strong>Note:</strong> For backward compatibility, the constructor also accepts as input a string containing the value of the {{domxref("RTCIceCandidate.candidate", "candidate")}} property instead of a {{domxref("RTCIceCandidateInit")}} object, since the <code>candidate</code> includes all of the information that <code>RTCIceCandidateInit</code> does and more.</div>
+	<dd>Creates an <code>RTCIceCandidate</code> object to represent a single ICE candidate, optionally configured based on a configuration object.
+	<div class="notecard note">
+		<p><strong>Note:</strong> For backwards compatibility, the constructor also accepts as input a string containing the value of the {{domxref("RTCIceCandidate.candidate", "candidate")}} property instead of the configuration object.</p>
+	</div>
 	</dd>
 </dl>
 
@@ -71,7 +73,9 @@ browser-compat: api.RTCIceCandidate
 
 <dl>
 	<dt>{{domxref("RTCIceCandidate.toJSON", "toJSON()")}}</dt>
-	<dd>Given the <code>RTCIceCandidate</code>'s current configuration, <code>toJSON()</code> returns a {{domxref("DOMString")}} containing a {{Glossary("JSON")}} representation of that configuration in the form of a {{domxref("RTCIceCandidateInit")}} object.</dd>
+	<dd>Returns a {{Glossary("JSON")}} representation of the <code>RTCIceCandidate</code>'s current configuration.
+		The format of the representation is the same as the <code>candidateInfo</code> object that can optionally be passed to the {{domxref("RTCIceCandidate.RTCIceCandidate()","RTCIceCandidate() constructor")}} to configure a candidate.</dd>
+	<dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>

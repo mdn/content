@@ -20,10 +20,8 @@ browser-compat: api.RTCIceCandidate.tcpType
 
 <p>The <strong>{{domxref("RTCIceCandidate")}}</strong> interface's read-only <strong><code>tcpType</code></strong> property is included on TCP candidates to provide additional details about the candidate type.</p>
 
-<p>The <code>tcpType</code> field's value is set when the
-  {{domxref("RTCIceCandidate.RTCIceCandidate", "RTCIceCandidate()")}} constructor is used.
-  You can't directly set its value; instead, its value is automatically extracted from the
-  {{domxref("RTCIceCandidateInit.candidate", "candidate")}} a-line, if it's formatted properly.</p>
+<p>The <code>tcpType</code> field's value is set from the <code>candidateInfo</code> options object passed to the {{domxref("RTCIceCandidate.RTCIceCandidate", "RTCIceCandidate()")}} constructor.
+  You can't specify the value of <code>tcpType</code> directly in the options object, but its value is automatically extracted from the object's <code>candidate</code> a-line, if it's formatted properly.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -66,8 +64,7 @@ browser-compat: api.RTCIceCandidate.tcpType
 
 <ul>
   <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a></li>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API/Protocols">Introduction to WebRTC
-      protocols</a></li>
+  <li><a href="/en-US/docs/Web/API/WebRTC_API/Protocols">Introduction to WebRTC protocols</a></li>
   <li><a href="/en-US/docs/Web/API/WebRTC_API/Connectivity">WebRTC connectivity</a></li>
   <li>{{domxref("RTCIceCandidate.protocol")}}</li>
   <li>{{domxref("RTCIceCandidate.type")}}</li>
