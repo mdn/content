@@ -40,7 +40,7 @@ browser-compat: webextensions.api.storage.StorageArea.set
  <dd>
  <p>An object containing one or more key/value pairs to be stored in storage. If an item already exists, its value will be updated.</p>
 
- <p>Values may be <a href="/en-US/docs/Glossary/Primitive">primitive types</a> (such as numbers, booleans, and strings) or {{jsxref("Array")}} types.</p>
+ <p>Values can be <a href="/en-US/docs/Glossary/Primitive">primitive</a> (such as a number, boolean, or string), {{jsxref("Array")}}, or {{jsxref("Object")}} types.</p>
 
  <p>It's generally not possible to store other types, such as <code>Function</code>, <code>Date</code>, <code>RegExp</code>, <code>Set</code>, <code>Map</code>, <code>ArrayBuffer</code>, and so on. Some of these unsupported types will restore as an empty object, and some cause <code>set()</code> to throw an error. The exact behavior here is browser-specific.</p>
  </dd>
