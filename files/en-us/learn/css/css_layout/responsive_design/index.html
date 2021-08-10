@@ -84,9 +84,9 @@ tags:
 
 <h2 id="Media_Queries">Media Queries</h2>
 
-<p>Responsive design was only able to emerge because of the media query. This feature of the web became available to browsers in 2009. Media Queries allow us to run a series of tests (e.g. whether the user's screen is greater than a certain width, or a certain resolution) and apply CSS selectively to style the page appropriately for the user's needs.</p>
+<p>Responsive design was only able to emerge because of the media query. This feature of the web became available to browsers in 2009. Media queries allow us to run a series of tests (e.g., whether the user's screen is greater than a certain width or a certain resolution) and apply CSS selectively to style the page appropriately for the user's needs.</p>
 
-<p>For example, the following media query tests to see if the current web page is being displayed as screen media (therefore not a printed document) and the viewport is at least 800 pixels wide. The CSS for the <code>.container</code> selector will only be applied if these two things are true.</p>
+<p>For example, the following media query tests to see if the current web page is displayed as screen media (not a printed document) and the viewport is at least 800 pixels wide. The CSS for the <code>.container</code> selector will only be applied if these two things are true.</p>
 
 <pre class="brush: css">@media screen and (min-width: 800px) {
   .container {
@@ -95,7 +95,7 @@ tags:
 }
 </pre>
 
-<p>You can add multiple media queries within a stylesheet, tweaking your whole layout or parts of it to best suit the various screen sizes. The points at which a media query is introduced, and the layout changed, are known as <em>breakpoints</em>.</p>
+<p>You can add multiple media queries within a stylesheet, tweaking either your whole layout or just parts of it to best suit various screen sizes. The points at which a media query is introduced, and the layout changed, are known as <em>breakpoints</em>.</p>
 
 <p>A common approach when using Media Queries is to create a simple single-column layout for narrow-screen devices (e.g mobile phones), then check for larger screens and implement a multiple-column layout when you know that you have enough screen width to handle it. This is often described as <strong>mobile first</strong> design.</p>
 
