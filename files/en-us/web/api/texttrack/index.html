@@ -15,8 +15,6 @@ browser-compat: api.TextTrack
 
 <p>The <code>TextTrack</code> interface—part of the API for handling WebVTT (text tracks on media presentations)—describes and controls the text track associated with a particular {{HTMLElement("track")}} element.</p>
 
-<p><strong>Note:</strong> The {{domxref("TextTrackCue")}} interface is an abstract class used as the parent for other cue interfaces such as {{domxref("VTTCue")}}. Therefore, when adding or removing a cue you will be passing in one of the cue types that inherit from <code>TextTrackCue</code>.</p>
-
 <h2 id="Properties">Properties</h2>
 
 <p><em>This interface also inherits properties from {{domxref("EventTarget")}}.</em></p>
@@ -51,6 +49,10 @@ browser-compat: api.TextTrack
 <h2 id="methods">Methods</h2>
 
 <p class="methods also_inherits"><em>This interface also inherits methods from {{domxref("EventTarget")}}.</em></p>
+
+<div class="notecard note">
+<p><strong>Note:</strong> The {{domxref("TextTrackCue")}} interface is an abstract class used as the parent for other cue interfaces such as {{domxref("VTTCue")}}. Therefore, when adding or removing a cue you will be passing in one of the cue types that inherit from <code>TextTrackCue</code>.</p>
+</div>
 
 <dl id="method_definitions">
 	<dt>{{domxref("TextTrack.addCue()")}}</dt>
