@@ -14,14 +14,14 @@ browser-compat: css.properties.grid-template-columns.minmax
 ---
 <div>{{CSSRef}}</div>
 
-<p>The <strong><code>minmax()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Functions">function</a> defines a size range greater than or equal to <var>min</var> and less than or equal to <var>max</var>. It is used with <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grids</a>.</p>
+<p>The <strong><code>minmax()</code></strong> <a href="/en-US/docs/Web/CSS/CSS_Functions">CSS function</a> defines a size range greater than or equal to <var>min</var> and less than or equal to <var>max</var>. It is used with <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grids</a>.</p>
 
 <div>{{EmbedInteractiveExample("pages/css/function-minmax.html")}}</div>
 
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: css no-line-numbers">/* &lt;inflexible-breadth&gt;, &lt;track-breadth&gt; values */
+<pre class="brush: css">/* &lt;inflexible-breadth&gt;, &lt;track-breadth&gt; values */
 minmax(200px, 1fr)
 minmax(400px, 50%)
 minmax(30%, 300px)
@@ -79,17 +79,17 @@ minmax(auto, 300px)
 <p><code>minmax()</code> function can be used within: </p>
 
 <ul>
- <li><a href="/en-US/docs/Web/CSS/grid-template-columns">grid-template-columns</a></li>
- <li><a href="/en-US/docs/Web/CSS/grid-template-rows">grid-template-rows</a></li>
- <li><a href="/en-US/docs/Web/CSS/grid-auto-columns">grid-auto-columns</a></li>
- <li><a href="/en-US/docs/Web/CSS/grid-auto-rows">grid-auto-rows</a></li>
+ <li>{{CSSxRef("grid-template-columns")}}</li>
+ <li>{{CSSxRef("grid-template-rows")}}</li>
+ <li>{{CSSxRef("grid-auto-columns")}}</li>
+ <li>{{CSSxRef("grid-auto-rows")}}</li>
 </ul>
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="CSS">CSS</h3>
 
-<pre class="brush: css; highlight[3]">#container {
+<pre class="brush: css">#container {
   display: grid;
   grid-template-columns: minmax(min-content, 300px) minmax(200px, 1fr) 150px;
   grid-gap: 5px;
@@ -135,9 +135,9 @@ minmax(auto, 300px)
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>Grid Layout Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#Track_sizing_and_minmax()">Basic concepts of grid layout - track sizing with minmax()</a></em></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes">CSS grids, logical values and writing modes</a></li>
+ <li>Grid Layout Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#track_sizing_and_minmax">Basic concepts of grid layout - track sizing with minmax()</a></em></li>
+ <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Logical_Values_and_Writing_Modes">CSS grids, logical values and writing modes</a></li>
  <li>
-  <p>Video tutorial: <em><a href="http://gridbyexample.com/video/series-minmax/">Introducing minmax()</a></em></p>
+  <p>Video tutorial: <em><a href="https://gridbyexample.com/video/series-minmax/">Introducing minmax()</a></em></p>
  </li>
 </ul>
