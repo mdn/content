@@ -31,7 +31,7 @@ tags:
 
 <h2 id="Historic_website_layouts">Historic website layouts</h2>
 
-<p>At one point in history you had two options when designing a website:</p>
+<p>At one point in history, you had two options when designing a website:</p>
 
 <ul>
  <li>You could create a <em>liquid</em> site, which would stretch to fill the browser window</li>
@@ -46,7 +46,7 @@ tags:
 <p><strong>Note</strong>: See this simple liquid layout: <a href="https://mdn.github.io/css-examples/learn/rwd/liquid-width.html">example</a>, <a href="https://github.com/mdn/css-examples/blob/master/learn/rwd/liquid-width.html">source code</a>. When viewing the example, drag your browser window in and out to see how this looks at different sizes.</p>
 </div>
 
-<p>The fixed-width site risked a horizontal scrollbar on screens smaller than the site width (as seen below), and lots of white space at the edges of the design on larger screens.</p>
+<p>The fixed-width site risked a horizontal scrollbar on screens smaller than the site width (as seen below) and lots of white space at the edges of the design on larger screens.</p>
 
 <img alt="A layout with a horizontal scrollbar in a mobile viewport." src="mdn-rwd-fixed.png" style="display: block;">
 
@@ -55,30 +55,30 @@ tags:
 </div>
 
 <div class="notecard note">
-<p><strong>Note</strong>: The screenshots above are taken using the <a href="/en-US/docs/Tools/Responsive_Design_Mode">Responsive Design Mode</a> in Firefox DevTools.</p>
+<p><strong>Note</strong>: The screenshots above were taken using the <a href="/en-US/docs/Tools/Responsive_Design_Mode">Responsive Design Mode</a> in Firefox DevTools.</p>
 </div>
 
-<p>As the mobile web started to become a reality with the first feature phones, companies who wished to embrace mobile would generally create a special mobile version of their site, with a different URL (often something like <em>m.example.com</em>, or <em>example.mobi</em>). This meant that two separate versions of the site had to be developed and kept up-to-date.</p>
+<p>As the mobile web started to become a reality with the first feature phones, companies who wished to embrace mobile would generally create a special mobile version of their site with a different URL (often something like <em>m.example.com</em> or <em>example.mobi</em>). This meant that two separate versions of the site had to be developed and kept up-to-date.</p>
 
 <p>In addition, these mobile sites often offered a very cut down experience. As mobile devices became more powerful and able to display full websites, this was frustrating to mobile users who found themselves trapped in the site's mobile version and unable to access information they knew was on the full-featured desktop version of the site.</p>
 
 <h2 id="Flexible_layout_before_responsive_design">Flexible layout before responsive design</h2>
 
-<p>A number of approaches were developed to try to solve the downsides of the liquid or fixed-width methods of building websites. In 2004 Cameron Adams wrote a post entitled <a href="https://www.themaninblue.com/writing/perspective/2004/09/21/">Resolution dependent layout</a>, describing a method of creating a design that could adapt to different screen resolutions. This approach required JavaScript to detect the screen resolution and load the correct CSS.</p>
+<p>A number of approaches were developed to try to solve the downsides of the liquid and fixed-width methods of building websites. In 2004, Cameron Adams wrote a post entitled <a href="https://www.themaninblue.com/writing/perspective/2004/09/21/">Resolution dependent layout</a> describing a method of creating a design that could adapt to different screen resolutions. This approach required JavaScript to detect the screen resolution and load the correct CSS.</p>
 
-<p>Zoe Mickley Gillenwater was instrumental in <a href="https://zomigi.com/blog/voices-that-matter-slides-available/">her work</a> to describe and formalize the different ways in which flexible sites could be created, attempting to find a happy medium between filling the screen or being completely fixed in size.</p>
+<p>Zoe Mickley Gillenwater was instrumental in <a href="https://zomigi.com/blog/voices-that-matter-slides-available/">her work</a> to describe and formalize different ways in which flexible sites could be created. She was attempting to find a happy medium between filling a screen or being completely fixed in size.</p>
 
 <h2 id="Responsive_design">Responsive design</h2>
 
 <p>The term responsive design was <a href="https://alistapart.com/article/responsive-web-design/">coined by Ethan Marcotte in 2010</a> and described the use of three techniques in combination.</p>
 
 <ol>
- <li>The first was the idea of fluid grids, something which was already being explored by Gillenwater, and can be read up on in Marcotte's article, <a href="https://alistapart.com/article/fluidgrids/">Fluid Grids</a> (published in 2009 on A List Apart).</li>
- <li>The second technique was the idea of <a href="https://unstoppablerobotninja.com/entry/fluid-images">fluid images</a>. Using a very simple technique of setting the <code>max-width</code> property to <code>100%</code>, images would scale down smaller if their containing column became narrower than the image's intrinsic size, but never grow larger. This enables an image to scale down to fit in a flexibly-sized column, rather than overflow it, but not grow larger and become pixelated if the column becomes wider than the image.</li>
- <li>The third key component was the <a href="/en-US/docs/Web/CSS/Media_Queries">media query</a>. Media Queries enable the type of layout switch that Cameron Adams had previously explored using JavaScript, using only CSS. Rather than having one layout for all screen sizes, the layout could be changed. Sidebars could be repositioned for the smaller screen, or alternate navigation could be displayed.</li>
+ <li>The first was the idea of fluid grids, something which was already being explored by Gillenwater and can be read up on in Marcotte's article, <a href="https://alistapart.com/article/fluidgrids/">Fluid Grids</a> (published in 2009 on A List Apart).</li>
+ <li>The second technique was the idea of <a href="https://unstoppablerobotninja.com/entry/fluid-images">fluid images</a>. Using a very simple technique of setting the <code>max-width</code> property to <code>100%</code>, images would scale down if their containing column became narrower than the image's intrinsic size, but they would never grow larger. This allowed an image to scale down to fit a flexibly-sized column rather than overflow it, and it prevented the image from growing larger and becoming pixelated if the column became wider than the image.</li>
+ <li>The third key component was the <a href="/en-US/docs/Web/CSS/Media_Queries">media query</a>. Media Queries enable the type of layout switch that Cameron Adams had previously explored using JavaScript, but this time by using only CSS. Rather than having one layout for all screen sizes, the layout could be changed. Sidebars could be repositioned for the smaller screen, or alternate navigation could be displayed.</li>
 </ol>
 
-<p>It is important to understand that <strong>responsive web design isn't a separate technology</strong> — it is a term used to describe an approach to web design or a set of best practices, used to create a layout that can <em>respond</em> to the device being used to view the content. In Marcotte's original exploration this meant flexible grids (using floats) and media queries, however in the almost 10 years since that article was written, working responsively has become the default. Modern CSS layout methods are inherently responsive, and we have new things built into the web platform to make designing responsive sites easier.</p>
+<p>It's important to understand that <strong>responsive web design isn't a separate technology</strong>. It's a term used to describe an <em>approach</em> to web design — or a set of best practices — used to create a layout that can <em>respond</em> to the device used to view the content. In Marcotte's original exploration, this meant flexible grids (using floats) and media queries; however, in the almost 10 years since that article was written, working responsively has become the default. Modern CSS layout methods are inherently responsive, and we have new features built into the web platform to make designing responsive sites easier.</p>
 
 <p>The rest of this article will point you to the various web platform features you might want to use when creating a responsive site.</p>
 
