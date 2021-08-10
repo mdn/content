@@ -33,7 +33,7 @@ browser-compat: api.HTMLTableRowElement
 
 <dl>
  <dt>{{domxref("HTMLTableRowElement.deleteCell()")}}</dt>
- <dd>Removes the cell at the given position in the row. If the given position is greater (or equal as it starts at zero) than the amount of cells in the row, or is smaller than <code>0</code>, it raises a {{domxref("DOMException")}} with the <code>IndexSizeError</code> value.</dd>
+ <dd>Removes the cell at the given position in the row. If it is equal to <code>-1</code>, it deletes the last cell of the row. If the given position is greater (or equal as it starts at zero) than the amount of cells in the row, or is smaller than <code>-1</code>, it raises a {{domxref("DOMException")}} with the <code>IndexSizeError</code> value.</dd>
  <dt>{{domxref("HTMLTableRowElement.insertCell()")}}</dt>
  <dd>Inserts a new cell just before the given position in the row. If the given position is not given or is <code>-1</code>, it appends the cell to the row. If the given position is greater (or equal as it starts at zero) than the amount of cells in the row, or is smaller than <code>-1</code>, it raises a {{domxref("DOMException")}} with the <code>IndexSizeError</code> value. Returns a reference to a {{domxref("HTMLTableCellElement")}}.</dd>
 </dl>

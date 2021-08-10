@@ -64,7 +64,8 @@ browser-compat: api.XRSystem.requestSession
       <em>must</em> support.</li>
     <li><code>optionalFeatures</code> {{optional_inline}}: An array of values identifying features which the returned
      {{domxref("XRSession")}} may optionally support.</li>
-     <li><code>domOverlay</code> {{optional_inline}}: An object with a required <code>root</code> property that specifies the overlay element that will be displayed to the user as the content of the DOM overlay.</li>
+     <li><code>domOverlay</code> {{optional_inline}}: An object with a required <code>root</code> property that specifies the overlay element that will be displayed to the user as the content of the DOM overlay. See the <a href="#requesting_a_session_with_a_dom_overlay">example below</a>.</li>
+     <li><code>depthSensing</code> {{optional_inline}}: An object with two required properties {{domxref("XRSession.depthUsage", "usagePreference")}} and {{domxref("XRSession.depthDataFormat", "dataFormatPreference")}} to configure how to perform depth sensing. See the <a href="#requesting_a_depth-sensing_session">example below</a>.</li>
     </ul>
   </dd>
 </dl>
@@ -103,8 +104,12 @@ browser-compat: api.XRSystem.requestSession
 <h2 id="Session_features">Session features</h2>
 
 <dl>
+  <dt><code>anchor</code></dt>
+  <dd>Enable use of {{domxref("XRAnchor")}} objects.</dd>
   <dt><code>bounded-floor</code></dt>
   <dd>Similar to the <code>local</code> type, except the user is not expected to move outside a predetermined boundary, given by the {{domxref("XRBoundedReferenceSpace.boundsGeometry", "boundsGeometry")}} in the returned object.</dd>
+  <dt><code>depth-sensing</code></dt>
+  <dd>Enable the ability to obtain depth information using {{domxref("XRDepthInformation")}} objects.</dd>
   <dt><code>dom-overlay</code></dt>
   <dd>Enable allowing to specify a DOM overlay element that will be displayed to the user.</dd>
   <dt><code>local</code></dt>
@@ -126,8 +131,8 @@ browser-compat: api.XRSystem.requestSession
 <table class="standard-table">
  <thead>
   <tr>
-   <th scope="col">Reference space type</th>
-   <th scope="col">User consent rquirement</th>
+   <th scope="col">Session feature</th>
+   <th scope="col">User consent requirement</th>
    <th scope="col">Feature policy requirement</th>
   </tr>
  </thead>
@@ -137,6 +142,11 @@ browser-compat: api.XRSystem.requestSession
    <td>Always required</td>
    <td><code>xr-spatial-tracking</code></td>
   </tr>
+  <tr>
+    <td><code>depth-sensing</code></td>
+    <td>—</td>
+    <td><code>xr-spatial-tracking</code></td>
+   </tr>
   <tr>
    <td><code>local</code></td>
    <td>Always required for inline sessions</td>
@@ -228,15 +238,29 @@ function onButtonClicked() {
 navigator.xr.requestSession('immersive-vr', { requiredFeatures: ['unbounded'] })
 </pre>
 
-<h3>Requesting a session with a DOM overlay</h3>
+<h3 id="Requesting_a_session_with_a_DOM_overlay">Requesting a session with a DOM overlay</h3>
 
 <pre class="brush: js">
-navigator.xr.requestSession(‘immersive-ar’, {
+navigator.xr.requestSession("immersive-ar", {
   optionalFeatures: ["dom-overlay"],
   domOverlay: {
     root: document.getElementById("xr-overlay")
   }
 }
+</pre>
+
+<h3 id="Requesting_a_depth-sensing_session">Requesting a depth-sensing session</h3>
+
+<p> Here, the caller is able to handle both CPU- and GPU-optimized usage, as well as both "luminance-alpha" and "float32" formats. The order indicates preference for CPU and "luminance-alpha":
+
+<pre class="brush: js">
+navigator.xr.requestSession("immersive-ar", {
+  requiredFeatures: ["depth-sensing"],
+  depthSensing: {
+    usagePreference: ["cpu-optimized", "gpu-optimized"],
+    formatPreference: ["luminance-alpha", "float32"]
+  }
+});
 </pre>
 
 <h2 id="Specifications">Specifications</h2>

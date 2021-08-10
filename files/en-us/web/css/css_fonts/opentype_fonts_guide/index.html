@@ -11,7 +11,7 @@ tags:
 ---
 <div>{{CSSRef}}</div>
 
-<p>Font features or variants refer to different glyphs or character styles contained within an OpenType font. These include things like ligatures (special glyphs that combine characters like 'fi' or 'ffl'), kerning (adjustments to the spacing between specific letterform pairings), fractions, numeral styles, and a number of others. These are all referred to as OpenType Features, and are made available to use on the web via specific properties and a low-level control property — {{cssxref("font-feature-settings")}}. This article provides you with all you need to know about using OpenType font features in CSS.</p>
+<p>Font features or variants refer to different glyphs or character styles contained within an OpenType font. These include things like ligatures (special glyphs that combine characters like 'fi' or 'ffl'), kerning (adjustments to the spacing between specific letterform pairings), fractions, numeral styles, and several others. These are all referred to as OpenType Features, and are made available to use on the web via specific properties and low-level control properties — {{cssxref("font-feature-settings")}}. This article provides you with all you need to know about using OpenType font features in CSS.</p>
 
 <p>Some fonts will have one or more of these features enabled by default (kerning and default ligatures are common examples), while others are left to the designer or developer to choose to enable in specific scenarios.</p>
 
@@ -23,7 +23,7 @@ tags:
 
 <h2 id="Discovering_availability_of_features_in_fonts">Discovering availability of features in fonts</h2>
 
-<p>This is sometimes the trickiest thing to work out if you don't have any documentation that came with the fonts (many type designers and foundries will provide sample pages and CSS just for this very reason). But there are some sites that make it easier to figure out. You can visit <a href="https://wakamaifondue.com">wakamaifondue.com</a>, drop your font file on the circle where instructed and in a few moments you'll have a full report on all the capabilities and features of your font. <a href="https://axis-praxis.org">Axis-praxis.org</a> also offers a similar capability, with the ability to click on the features to turn them on or off in a given text block.</p>
+<p>This is sometimes the trickiest thing to work out if you don't have any documentation that came with the fonts (many type designers and foundries will provide sample pages and CSS just for this very reason). But there are some sites that make it easier to figure out. You can visit <a href="https://wakamaifondue.com">wakamaifondue.com</a>, drop your font file on the circle where instructed, and in a few moments you'll have a full report on all the capabilities and features of your font. <a href="https://axis-praxis.org">Axis-praxis.org</a> also offers a similar capability, with the ability to click on the features to turn them on or off in a given text block.</p>
 
 <h2 id="Why_you_would_use_them">Why you would use them?</h2>
 
@@ -38,19 +38,19 @@ tags:
 <p>While none of these features individually will render a site useless due to their absence, each of them in turn can make a site easier to use and more memorable for its attention to detail.</p>
 
 <blockquote>
-<p>OpenType features are like secret compartments in fonts. Unlock them and you'll find ways to make fonts look and behave differently in subtle and dramatic ways. Not all OpenType features are appropriate to use all of the time, but some features are critical for great typography. <cite><em>-- Tim Brown, Head of Typography at Adobe</em>.</cite></p>
+<p>OpenType features are like secret compartments in fonts. Unlock them and you'll find ways to make fonts look and behave differently in subtle and dramatic ways. Not all OpenType features are appropriate to use all of the time, but some features are critical for great typography. <em>-- Tim Brown, Head of Typography at Adobe</em>.</p>
 </blockquote>
 
 <h3 id="Sometimes_its_substance_not_just_style">Sometimes it's substance, not just style</h3>
 
-<p>There are some cases — like with {{cssxref("font-variant-east-asian")}} — that OpenType features are directly tied to using different forms of certain glyphs, which can impact meaning and readability. In cases such as these it's more than just a nicety, but rather an integral part of the content itself.</p>
+<p>There are some cases — like with {{cssxref("font-variant-east-asian")}} — that OpenType features are directly tied to using different forms of certain glyphs, which can impact meaning and readability. In cases such as these, it's more than just a nicety, but rather an integral part of the content itself.</p>
 
 <h2 id="The_font_features">The font features</h2>
 
 <p>There are a number of different features to consider. They are grouped and explained here according to the main attributes and options covered in the W3C specifications.</p>
 
 <div class="note">
-<p><strong>Note:</strong> The examples below show the properties and some example combinations, along with the lower-level syntax equivalents. They may not match exactly due to browser implementation inconsistencies, but in many cases the first example will match the second. The typefaces shown are Playfair Display, Source Serif Pro, IBM Plex Serif, Dancing Script, and Kokoro (all available and free to use, most are on Google Fonts and other services).</p>
+<p><strong>Note:</strong> The examples below show the properties and some example combinations, along with the lower-level syntax equivalents. They may not match exactly due to browser implementation inconsistencies, but in many cases, the first example will match the second. The typefaces shown are Playfair Display, Source Serif Pro, IBM Plex Serif, Dancing Script, and Kokoro (all available and free to use, most are on Google Fonts and other services).</p>
 </div>
 
 <h3 id="Kerning_cssxreffont-kerning">Kerning ({{cssxref("font-kerning")}})</h3>
@@ -61,7 +61,7 @@ tags:
 
 <h3 id="Alternates_cssxreffont-variant-alternates">Alternates ({{cssxref("font-variant-alternates")}})</h3>
 
-<p>Fonts can supply a number of different alternatives for various glyphs, such as different styles of lower case 'a' or more or less elaborate swashes in a script typeface. This property can activate an entire set of alternates or just a specific one, depending on the values supplied.The example below is showing several different aspects of working with alternate characters. Fonts with alternate glyphs can make them available across the board or individually in separate stylistic sets, or even individual characters. In this example you can see two different typefaces, and the introduction of the {{cssxref("@font-feature-values")}} at-rule. This is used to define shortcuts or named options that can be defined per font family. This way you can create a named option that applies to only a single font, or one that is shared and can be applied more generally</p>
+<p>Fonts can supply a number of different alternatives for various glyphs, such as different styles of lower case 'a' or more or less elaborate swashes in a script typeface. This property can activate an entire set of alternates or just a specific one, depending on the values supplied. The example below is showing several different aspects of working with alternate characters. Fonts with alternate glyphs can make them available across the board or individually in separate stylistic sets, or even individual characters. In this example you can see two different typefaces, and the introduction of the {{cssxref("@font-feature-values")}} at-rule. This is used to define shortcuts or named options that can be defined per font family. This way you can create a named option that applies to only a single font, or one that is shared and can be applied more generally</p>
 
 <div>{{EmbedGHLiveSample("css-examples/font-features/font-variant-alternates.html", '100%', 800)}}</div>
 
@@ -76,7 +76,7 @@ tags:
 <pre class="brush: css">font-variant-alternates: styleset(alt-g);
 </pre>
 
-<p>and notice that the lower case 'a' reverts to its regular form and the lower case 'g' changes instead.</p>
+<p>and notice that the lower case 'a' reverts to its regular form and the lower case 'g's changes instead.</p>
 
 <h4 id="More_about_alternates">More about alternates</h4>
 
@@ -111,7 +111,7 @@ tags:
 
 <ul>
  <li>'Lining' figures are all the same height and on the same baseline.</li>
- <li>'Oldstyle' figures are mixed height and designed to have the appearance of ascenders and descenders like other lower case letters. These are designed to be used inline with copy so the numerals visually blend with the surrounding glyphs in a similar fashion to small caps.</li>
+ <li>'Oldstyle' figures are mixed height and designed to have the appearance of ascenders and descenders like other lower case letters. These are designed to be used inline with a copy so the numerals visually blend with the surrounding glyphs in a similar fashion to small caps.</li>
 </ul>
 
 <p>There is also the notion of spacing. Proportional spacing is the normal setting, whereas tabular spacing lines up numerals evenly regardless of character width, making it more appropriate for lining up tables of numbers in financial tables.</p>
@@ -151,9 +151,9 @@ tags:
 
 <h2 id="Font_feature_settings">Font feature settings</h2>
 
-<p>{{cssxref("font-feature-settings")}} is the 'low level syntax' that allows explicit access to every named available OpenType feature. This gives a lot of control, but has some disadvantages in how it impacts inheritance and — as mentioned above — if you wish to change one setting, you have to redeclare the entire string (unless you're using <a href="/en-US/docs/Web/CSS/Using_CSS_variables">CSS custom properties</a> to set the values). Because of this, it's best to use the standard properties shown above wherever possible.</p>
+<p>{{cssxref("font-feature-settings")}} is the 'low level syntax' that allows explicit access to every named available OpenType feature. This gives a lot of control but has some disadvantages in how it impacts inheritance and — as mentioned above — if you wish to change one setting, you have to redeclare the entire string (unless you're using <a href="/en-US/docs/Web/CSS/Using_CSS_variables">CSS custom properties</a> to set the values). Because of this, it's best to use the standard properties shown above wherever possible.</p>
 
-<p>There a huge number of possible features. You can see examples of a number of them above, and there are several resources available for finding more of them.</p>
+<p>There are a huge number of possible features. You can see examples of a number of them above, and there are several resources available for finding more of them.</p>
 
 <p>The general syntax looks like this:</p>
 
@@ -162,16 +162,16 @@ tags:
 }
 </pre>
 
-<p>According to the specification you can either supply just the 4-character feature code or supply a 1 following the code (for enabling that feature) or a 0 (zero) to disable it. This is helpful if you have a feature like ligatures enabled by default but you would like to turn them off, like so:</p>
+<p>According to the specification you can either supply just the 4-character feature code or supply a 1 following the code (for enabling that feature) or a 0 (zero) to disable it. This is helpful if you have a feature like ligatures enabled by default but you would like to turn them off like so:</p>
 
 <pre class="brush: css">.no-ligatures {
   font-feature-settings: "liga" 0, "dlig" 0;
 }</pre>
 
-<h4 class="brush: css" id="More_on_font-feature-settings_codes">More on font-feature-settings codes</h4>
+<h4 id="More_on_font-feature-settings_codes">More on font-feature-settings codes</h4>
 
 <ul>
- <li class="brush: css"><a href="https://sparanoid.com/lab/opentype-features/">'The Complete CSS Demo for OpenType Features'</a> (can't vouch for the truth of the name, but it's pretty big)</li>
+ <li><a href="https://sparanoid.com/lab/opentype-features/">'The Complete CSS Demo for OpenType Features'</a> (can't vouch for the truth of the name, but it's pretty big)</li>
  <li><a href="https://en.wikipedia.org/wiki/List_of_typographic_features">A list of OpenType features on Wikipedia</a></li>
 </ul>
 

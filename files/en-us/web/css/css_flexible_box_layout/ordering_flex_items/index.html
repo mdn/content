@@ -13,7 +13,7 @@ tags:
 ---
 <p>{{CSSRef}}</p>
 
-<p>New layout methods such as Flexbox and Grid bring with them the possibility of controlling the order of content. In this article we will take a look at ways in which you can change the visual order of your content when using Flexbox. We will also consider the implications of reordering items from an accessibility point of view.</p>
+<p>New layout methods such as Flexbox and Grid bring with them the possibility of controlling the order of content. In this article, we will take a look at ways in which you can change the visual order of your content when using Flexbox. We will also consider the implications of reordering items from an accessibility point of view.</p>
 
 <h2 id="Reverse_the_display_of_the_items">Reverse the display of the items</h2>
 
@@ -57,7 +57,7 @@ tags:
 </blockquote>
 
 <div class="note">
-<p><strong>Note:</strong> For some years Firefox had a bug whereby it would attempt to follow the visual order and not the source order, making it behave differently to other browsers. This has now been fixed. You should always take the source order as the logical order of the document as all up-to-date user agents will be following the specification and doing so.</p>
+<p><strong>Note:</strong> For some years Firefox had a bug whereby it would attempt to follow the visual order and not the source order, making it behave differently from other browsers. This has now been fixed. You should always take the source order as the logical order of the document as all up-to-date user agents will be following the specification and doing so.</p>
 </div>
 
 <p>In the live example below I have added a focus style in order that as you tab from link to link you can see which is highlighted. If you change the order using <code>flex-direction</code> you can see how the tab order continues to follow the order that the items are listed in the source.</p>
@@ -100,7 +100,7 @@ tags:
 
 <p>Flex items have a default <code>order</code> value of <code>0</code>, therefore items with an integer value greater than 0 will be displayed after any items that have not been given an explicit <code>order</code> value.</p>
 
-<p>You can also use negative values with order, which can be quite useful. If you want to make one item display first, and leave the order of all other items unchanged, you can give that item an order of <code>-1</code>. As this is lower than 0 the item will always be displayed first.</p>
+<p>You can also use negative values with <code>order</code>, which can be quite useful. If you want to make one item display first and leave the order of all other items unchanged, you can give that item order of <code>-1</code>. As this is lower than 0 the item will always be displayed first.</p>
 
 <p>In the live code example below I have items laid out using Flexbox. By changing which item has the class <code>active</code> assigned to it in the HTML, you can change which item displays first and therefore becomes full width at the top of the layout, with the other items displaying below it.</p>
 
@@ -114,7 +114,7 @@ tags:
 
 <p>Use of the <code>order</code> property has exactly the same implications for accessibility as changing the direction with <code>flex-direction</code>. Using <code>order</code> changes the order in which items are painted, and the order in which they appear visually. It does not change the sequential navigation order of the items. Therefore if a user is tabbing between the items, they could find themselves jumping around your layout in a very confusing way.</p>
 
-<p>By tabbing around any of the live examples on this page, you can see how order is potentially creating a strange experience for anyone not using a pointing device of some kind. To read more about this disconnect of visual order and logical order and some of the potential problems it raises for accessibility, see the following resources.</p>
+<p>By tabbing around any of the live examples on this page, you can see how <code>order</code> is potentially creating a strange experience for anyone not using a pointing device of some kind. To read more about this disconnect of visual order and logical order and some of the potential problems it raises for accessibility, see the following resources.</p>
 
 <ul>
  <li><a href="https://tink.uk/flexbox-the-keyboard-navigation-disconnect/">Flexbox and the keyboard navigation disconnect</a></li>
@@ -126,7 +126,7 @@ tags:
 
 <p>There are sometimes places where the fact that the logical and therefore reading order of flex items is separate from the visual order, is helpful. Used carefully the <code>order</code> property can allow for some useful common patterns to be easily implemented.</p>
 
-<p>You might have a design, perhaps a card that will display a news item. The heading of the news item is the key thing to highlight and would be the element that a user might jump to if they were tabbing between headings to find content they wanted to read. The card also has a date; the finished design we want to create is something like this.</p>
+<p>You might have a design, perhaps a card that will display a news item. The heading of the news item is the key thing to highlight and would be the element that a user might jump to if they were tabbing between headings to find the content they wanted to read. The card also has a date; the finished design we want to create is something like this.</p>
 
 <p><img alt="A design component with a date, then heading and then content." src="order-card.png"></p>
 
@@ -136,4 +136,4 @@ tags:
 
 <p>{{EmbedGHLiveSample("css-examples/flexbox/order/usecase-order.html", '100%', 730)}}</p>
 
-<p>These small tweaks are the sort of cases where the <code>order</code> property makes sense. Keep the logical order as the reading and tab order of the document, and maintain that in the most accessible and structured fashion. Then use <code>order</code> for purely visual design tweaks. When doing so take care that you are not reordering items that could be accessed by the keyboard as a user is tabbing around. Especially when using newer layout methods you should ensure that your browser testing includes testing the site using keyboard only, rather than a mouse or touchscreen. You will quickly see if your development choices make getting around the content difficult.</p>
+<p>These small tweaks are the sort of cases where the <code>order</code> property makes sense. Keep the logical order as the reading and tab order of the document, and maintain that in the most accessible and structured fashion. Then use <code>order</code> for purely visual design tweaks. When doing so take care that you are not reordering items that could be accessed by the keyboard as a user is tabbing around. Especially when using newer layout methods you should ensure that your browser testing includes testing the site using only a keyboard, rather than a mouse or a touchscreen. You will quickly see if your development choices make getting around the content difficult.</p>

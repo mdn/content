@@ -35116,17 +35116,6 @@
       "gingerchris"
     ]
   },
-  "Web/API/DOMObject": {
-    "modified": "2019-03-23T23:59:07.618Z",
-    "contributors": [
-      "Sheppy",
-      "Sebastianz",
-      "teoli",
-      "kscarfone",
-      "ethertank",
-      "Brettz9"
-    ]
-  },
   "Web/API/DOMParser": {
     "modified": "2020-10-25T22:15:37.690Z",
     "contributors": [
@@ -71349,12 +71338,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/RTCIceGathererState": {
-    "modified": "2020-10-15T22:06:40.949Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
   "Web/API/RTCIceParameters": {
     "modified": "2020-10-15T22:06:42.205Z",
     "contributors": [
@@ -71369,12 +71352,6 @@
   },
   "Web/API/RTCIceParameters/usernameFragment": {
     "modified": "2020-10-15T22:06:44.472Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
-  "Web/API/RTCIceProtocol": {
-    "modified": "2020-10-15T22:06:16.004Z",
     "contributors": [
       "Sheppy"
     ]
@@ -71432,12 +71409,6 @@
     "contributors": [
       "sideshowbarker",
       "fscholz",
-      "Sheppy"
-    ]
-  },
-  "Web/API/RTCIceTcpCandidateType": {
-    "modified": "2020-10-15T22:06:15.898Z",
-    "contributors": [
       "Sheppy"
     ]
   },

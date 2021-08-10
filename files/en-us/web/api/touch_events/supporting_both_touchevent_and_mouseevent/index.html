@@ -16,7 +16,7 @@ tags:
 
 <p>The touch events standard defines a few browser requirements regarding touch and mouse interaction (see the <a href="https://w3c.github.io/touch-events/#mouse-events"><em>Interaction with Mouse Events and click</em></a> section for details), noting <em>the browser may fire both touch events and mouse events in response to the same user input</em>. This section describes the requirement that may affect an application.</p>
 
-<p>If the browser fires both touch and mouse events because of a single user input, the browser <em>must</em> fire a {{event("touchstart")}} before any mouse events. Consequently, if an application does not want mouse events fired on a specific touch {{domxref("Touch.target","target")}} element, the element's touch event handlers should call {{domxref("Event.preventDefault()","preventDefault()")}} and no additional mouse events will be dispatched.</p>
+<p>If the browser fires both touch and mouse events because of a single user input, the browser <em>must</em> fire a {{domxref("Element/touchstart_event", "touchstart")}} before any mouse events. Consequently, if an application does not want mouse events fired on a specific touch {{domxref("Touch.target","target")}} element, the element's touch event handlers should call {{domxref("Event.preventDefault()","preventDefault()")}} and no additional mouse events will be dispatched.</p>
 
 <p>Here is a code snippet of the {{event("touchmove")}} event handler calling <code>preventDefault()</code>.</p>
 
@@ -41,7 +41,7 @@ function process_touchmove(ev) {
  <li><code>click</code></li>
 </ul>
 
-<p>If the {{event("touchstart")}}, {{event("touchmove")}} or {{event("touchend")}} event is canceled during an interaction, no mouse or click events will be fired, and the resulting sequence of events would just be:</p>
+<p>If the {{domxref("Element/touchstart_event", "touchstart")}}, {{event("touchmove")}} or {{event("touchend")}} event is canceled during an interaction, no mouse or click events will be fired, and the resulting sequence of events would just be:</p>
 
 <ul>
  <li><code>touchstart</code></li>
@@ -62,5 +62,5 @@ function process_touchmove(ev) {
 <ul>
  <li><a href="/en-US/docs/Web/API/Touch_events">Touch Events Overview</a></li>
  <li><a href="/en-US/docs/Web/API/Touch_events/Using_Touch_Events">Using Touch Events</a></li>
- <li><a href="http://www.html5rocks.com/en/mobile/touchandmouse/">Touch and Mouse (Together Again for the First Time)</a></li>
+ <li><a href="https://www.html5rocks.com/en/mobile/touchandmouse/">Touch and Mouse (Together Again for the First Time)</a></li>
 </ul>

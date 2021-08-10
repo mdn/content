@@ -17,7 +17,7 @@ tags:
 <p>Touch events consist of three interfaces ({{domxref("Touch")}}, {{domxref("TouchEvent")}} and {{domxref("TouchList")}}) and the following event types:</p>
 
 <ul>
- <li>{{event("touchstart")}} - fired when a touch point is placed on the touch surface.</li>
+ <li>{{domxref("Document/touchstart_event", "touchstart")}} - fired when a touch point is placed on the touch surface.</li>
  <li>{{event("touchmove")}} - fired when a touch point is moved along the touch surface.</li>
  <li>{{event("touchend")}} - fired when a touch point is removed from the touch surface.</li>
  <li>{{event("touchcancel")}} - fired when a touch point has been disrupted in an implementation-specific manner (for example, too many touch points are created).</li>
@@ -34,7 +34,7 @@ tags:
  <li>{{domxref("TouchEvent.targetTouches","targetTouches")}} - a list of the touch points on the <em>target</em> DOM element.</li>
  <li>{{domxref("TouchEvent.changedTouches","changedTouches")}} - a list of the touch points whose items depend on the associated event type:
   <ul>
-   <li>For the {{event("touchstart")}} event, it is a list of the touch points that became active with the current event.</li>
+   <li>For the {{domxref("Document/touchstart_event", "touchstart")}} event, it is a list of the touch points that became active with the current event.</li>
    <li>For the {{event("touchmove")}} event, it is a list of the touch points that have changed since the last event.</li>
    <li>For the {{event("touchend")}} event, it is a list of the touch points that have been removed from the surface (that is, the set of touch points corresponding to fingers no longer touching the surface).</li>
   </ul>
@@ -47,7 +47,7 @@ tags:
 
 <p>An application may consider different factors when defining the semantics of a gesture. For instance, the distance a touch point traveled from its starting location to its location when the touch ended. Another potential factor is time; for example, the time elapsed between the touch's start and the touch's end, or the time lapse between two <em>consecutive</em> taps intended to create a double-tap gesture. The directionality of a swipe (for example left to right, right to left, etc.) is another factor to consider.</p>
 
-<p>The touch list(s) an application uses depends on the semantics of the application's <em>gestures</em>. For example, if an application supports a single touch (tap) on one element, it would use the {{domxref("TouchEvent.targetTouches","targetTouches")}} list in the {{event("touchstart")}} event handler to process the touch point in an application-specific manner. If an application supports two-finger swipe for any two touch points, it will use the {{domxref("TouchEvent.changedTouches","changedTouches")}} list in the {{event("touchmove")}} event handler to determine if two touch points had moved and then implement the semantics of that gesture in an application-specific manner.</p>
+<p>The touch list(s) an application uses depends on the semantics of the application's <em>gestures</em>. For example, if an application supports a single touch (tap) on one element, it would use the {{domxref("TouchEvent.targetTouches","targetTouches")}} list in the {{domxref("Document/touchstart_event", "touchstart")}} event handler to process the touch point in an application-specific manner. If an application supports two-finger swipe for any two touch points, it will use the {{domxref("TouchEvent.changedTouches","changedTouches")}} list in the {{event("touchmove")}} event handler to determine if two touch points had moved and then implement the semantics of that gesture in an application-specific manner.</p>
 
 <p>Browsers typically dispatch <em>emulated</em> mouse and click events when there is only a single active touch point. Multi-touch interactions involving two or more active touch points will usually only generate touch events. To prevent the emulated mouse events from being sent, use the {{domxref("Event.preventDefault()","preventDefault()")}} method in the touch event handlers. For more information about the interaction between mouse and touch events, see {{domxref("Touch_events.Supporting_both_TouchEvent_and_MouseEvent", "Supporting both TouchEvent and MouseEvent")}}.</p>
 
@@ -106,7 +106,7 @@ function process_touchmove(ev) {
 <ul>
  <li>Minimize the amount of work that is done in the touch handlers.</li>
  <li>Add the touch point handlers to the specific target element (rather than the entire document or nodes higher up in the document tree).</li>
- <li>Add {{event("touchmove")}}, {{event("touchend")}} and {{event("touchcancel")}} event handlers within the {{event("touchstart")}}.</li>
+ <li>Add {{event("touchmove")}}, {{event("touchend")}} and {{event("touchcancel")}} event handlers within the {{domxref("Document/touchstart_event", "touchstart")}}.</li>
  <li>The target touch element or node should be large enough to accommodate a finger touch. If the target area is too small, touching it could result in firing other events for adjacent elements.</li>
 </ul>
 
