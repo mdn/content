@@ -13,9 +13,9 @@ browser-compat: api.TextTrack
 ---
 <div>{{APIRef("WebVTT")}}</div>
 
-<div id="interface_description">
 <p>The <code>TextTrack</code> interface—part of the API for handling WebVTT (text tracks on media presentations)—describes and controls the text track associated with a particular {{HTMLElement("track")}} element.</p>
-</div>
+
+<p><strong>Note:</strong> The {{domxref("TextTrackCue")}} interface is an abstract class used as the parent for other cue interfaces such as {{domxref("VTTCue")}}. Therefore, when adding or removing a cue you will be passing in one of the cue types that inherit from <code>TextTrackCue</code>.</p>
 
 <h2 id="Properties">Properties</h2>
 
