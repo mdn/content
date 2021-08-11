@@ -100,7 +100,7 @@ function step(timestamp) {
     element.style.transform = 'translateX(' + count + 'px)';
   }
 
-  if (elapsed &lt; 2000) { // Stop the animation after 2 seconds
+  if (elapsed &gt; 2000) { // Stop the animation after 2 seconds
     previousTimeStamp = timestamp
     window.requestAnimationFrame(step);
   }
