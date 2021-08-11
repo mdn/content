@@ -76,11 +76,11 @@ Mozilla/5.0 (Android 4.4; <strong>Tablet</strong>; rv:41.0) Gecko/41.0 Firefox/4
 
 <p>Windows user agents have the following variations, where <em>x.y</em> is the Windows NT version (for instance, Windows NT 6.1).</p>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
-   <th scope="col">Windows version</th>
-   <th scope="col">Gecko user agent string</th>
+   <th>Windows version</th>
+   <th>Gecko user agent string</th>
   </tr>
  </thead>
  <tbody>
@@ -101,11 +101,11 @@ Mozilla/5.0 (Android 4.4; <strong>Tablet</strong>; rv:41.0) Gecko/41.0 Firefox/4
 
 <p>Note that <a href="https://support.mozilla.org/kb/firefox-no-longer-works-mac-os-10-4-or-powerpc">Firefox no longer officially supports Mac OS X on PowerPC</a>.</p>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
-   <th scope="col">Mac OS X version</th>
-   <th scope="col">Gecko user agent string</th>
+   <th>Mac OS X version</th>
+   <th>Gecko user agent string</th>
   </tr>
  </thead>
  <tbody>
@@ -124,11 +124,11 @@ Mozilla/5.0 (Android 4.4; <strong>Tablet</strong>; rv:41.0) Gecko/41.0 Firefox/4
 
 <p>Linux is a more diverse platform. Your distribution of Linux might include an extension that changes your user-agent. A few common examples are given below.</p>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
-   <th scope="col">Linux version</th>
-   <th scope="col">Gecko user agent string</th>
+   <th>Linux version</th>
+   <th>Gecko user agent string</th>
   </tr>
  </thead>
  <tbody>
@@ -149,11 +149,11 @@ Mozilla/5.0 (Android 4.4; <strong>Tablet</strong>; rv:41.0) Gecko/41.0 Firefox/4
 
 <h2 id="Android_version_40_and_below">Android (version 40 and below)</h2>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
-   <th scope="col">Form factor</th>
-   <th scope="col">Gecko user agent string</th>
+   <th>Form factor</th>
+   <th>Gecko user agent string</th>
   </tr>
  </thead>
  <tbody>
@@ -172,11 +172,11 @@ Mozilla/5.0 (Android 4.4; <strong>Tablet</strong>; rv:41.0) Gecko/41.0 Firefox/4
 
 <p>Beginning in version 41, Firefox for Android will contain the Android version as part of the <var>platform</var> token. For increased interoperability, if the browser is running on a version below 4 it will report 4.4. Android versions 4 and above will report the version accurately. Note that the same Gecko—with the same capabilities—is shipped to all versions of Android.</p>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
-   <th scope="col">Form factor</th>
-   <th scope="col">Gecko user agent string</th>
+   <th>Form factor</th>
+   <th>Gecko user agent string</th>
   </tr>
  </thead>
  <tbody>
@@ -201,11 +201,11 @@ Mozilla/5.0 (Android 4.4; <strong>Tablet</strong>; rv:41.0) Gecko/41.0 Firefox/4
 
 <p>Starting in Version 6, users can opt into using a GeckoView-based Focus for Android with a hidden preference: it uses a GeckoView UA string to advertise Gecko compatibility.</p>
 
-<table class="standard-table">
+<table>
  <tbody>
   <tr>
-   <th scope="col">Focus Version (Rendering Engine)</th>
-   <th scope="col">User Agent string</th>
+   <th>Focus Version (Rendering Engine)</th>
+   <th>User Agent string</th>
   </tr>
   <tr>
    <td>1.0 (WebView Mobile)</td>
@@ -226,11 +226,11 @@ Mozilla/5.0 (Android 4.4; <strong>Tablet</strong>; rv:41.0) Gecko/41.0 Firefox/4
 
 <p>Since version 4.1, Klar for Android uses the same UA string as <a href="#focus_for_android">Focus for Android</a>. Before version 4.1, it sent a <var>Klar/&lt;version&gt;</var> <var>product/version</var> token.</p>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
-   <th scope="col">Klar Version (Rendering Engine)</th>
-   <th scope="col">User Agent string</th>
+   <th>Klar Version (Rendering Engine)</th>
+   <th>User Agent string</th>
   </tr>
  </thead>
  <tbody>
@@ -263,17 +263,15 @@ Mozilla/5.0 (Android 4.4; <strong>Tablet</strong>; rv:41.0) Gecko/41.0 Firefox/4
 
 <pre>Mozilla/5.0 (Linux; &lt;Android version&gt;) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Focus/&lt;firefoxversion&gt; Chrome/&lt;Chrome Rev&gt; Safari/&lt;WebKit Rev&gt;</pre>
 
-<table class="standard-table">
- <tbody>
+<table>
   <tr>
-   <td><strong>Firefox TV version</strong></td>
-   <td><strong>User Agent string</strong></td>
+   <th>Firefox TV version</th>
+   <th>User Agent string</th>
   </tr>
   <tr>
    <td>v3.0</td>
    <td>Mozilla/5.0 (Linux; Android 7.1.2) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Focus/3.0 Chrome/59.0.3017.125 Safari/537.36</td>
   </tr>
- </tbody>
 </table>
 
 <h2 id="Firefox_for_Echo_Show">Firefox for Echo Show</h2>
@@ -283,26 +281,23 @@ Mozilla/5.0 (Android 4.4; <strong>Tablet</strong>; rv:41.0) Gecko/41.0 Firefox/4
 <pre>Mozilla/5.0 (Linux; &lt;Android version&gt;) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Focus/&lt;firefoxversion&gt; Chrome/&lt;Chrome Rev&gt; Safari/&lt;WebKit Rev&gt;
 </pre>
 
-<table class="standard-table">
- <tbody>
+<table>
   <tr>
-   <td><strong>Firefox for Echo Show version</strong></td>
-   <td><strong>User agent string</strong></td>
+   <th>Firefox for Echo Show version</th>
+   <th>User agent string</th>
   </tr>
   <tr>
    <td>v1.1</td>
    <td>Mozilla/5.0 (Linux; Android 5.1.1) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Focus/1.1 Chrome/59.0.3017.125 Safari/537.36</td>
   </tr>
- </tbody>
 </table>
 
 <h2 id="Firefox_OS">Firefox OS</h2>
 
-<table class="standard-table">
- <tbody>
+<table>
   <tr>
-   <th scope="col">Form factor</th>
-   <th scope="col">Gecko user agent string</th>
+   <th>Form factor</th>
+   <th>Gecko user agent string</th>
   </tr>
   <tr>
    <td>Phone</td>
@@ -320,7 +315,6 @@ Mozilla/5.0 (Android 4.4; <strong>Tablet</strong>; rv:41.0) Gecko/41.0 Firefox/4
    <td>Device-specific</td>
    <td>Mozilla/5.0 (Mobile; <em><strong>nnnn;</strong></em> rv:26.0) Gecko/26.0 Firefox/26.0</td>
   </tr>
- </tbody>
 </table>
 
 <h3 id="Device-specific_user_agent_strings">Device-specific user agent strings</h3>
@@ -337,11 +331,11 @@ Mozilla/5.0 (Android 4.4; <strong>Tablet</strong>; rv:41.0) Gecko/41.0 Firefox/4
 
 <p>While the version number for Firefox OS is not included in the UA string, it is possible to infer version information from the Gecko version number present in the UA string.</p>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
-   <th scope="col">Firefox OS version number</th>
-   <th scope="col">Gecko version number</th>
+   <th>Firefox OS version number</th>
+   <th>Gecko version number</th>
   </tr>
  </thead>
  <tbody>
@@ -394,11 +388,11 @@ Mozilla/5.0 (Android 4.4; <strong>Tablet</strong>; rv:41.0) Gecko/41.0 Firefox/4
 
 <p>Firefox for iOS uses the default Mobile Safari UA string, with an additional <strong>FxiOS/&lt;version&gt;</strong> token, similar to how <a href="https://developer.chrome.com/multidevice/user-agent#chrome_for_ios_user_agent">Chrome for iOS identifies itself</a>.</p>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
-   <th scope="col">Form factor</th>
-   <th scope="col">Firefox for iOS user agent string</th>
+   <th>Form factor</th>
+   <th>Firefox for iOS user agent string</th>
   </tr>
  </thead>
  <tbody>
@@ -425,11 +419,11 @@ Mozilla/5.0 (Android 4.4; <strong>Tablet</strong>; rv:41.0) Gecko/41.0 Firefox/4
 
 <p>These are some sample UA strings from other Gecko-based browsers on various platforms. Note that many of these have not yet been released on Gecko 2.0!</p>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
-   <th scope="col">Browser</th>
-   <th scope="col">Gecko user agent string</th>
+   <th>Browser</th>
+   <th>Gecko user agent string</th>
   </tr>
  </thead>
  <tbody>
