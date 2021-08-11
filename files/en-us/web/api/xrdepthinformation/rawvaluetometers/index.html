@@ -25,7 +25,7 @@ browser-compat: api.XRDepthInformation.rawValueToMeters
 
 <h2>Examples</h2>
 
-<p>Use {{domxref("XRFrame.getDepthInformation()")}} (CPU) or {{domxref("XRWebGLBinding.getDepthInformation()")}} (WebGL) to obtain depth information. The returned objects will contain the <code>rawValueToMeters</code> scale factor which can be used for further calculations.</p>
+<p>Use {{domxref("XRFrame.getDepthInformation()")}} (CPU) or {{domxref("XRWebGLBinding.getDepthInformation()")}} (WebGL) to obtain depth information. The returned objects will contain the <code>rawValueToMeters</code> scale factor, which can be used for further calculations.</p>
 
 <p>For CPU depth information and a buffer that has "luminance-alpha" format:</p>
 
@@ -37,7 +37,7 @@ const depthInMeters = uint16[index] * depthInfo.rawValueToMeters;
 
 <p>(Use {{jsxref("Float32Array")}} for a "float32" data format.)</p>
 
-<p>Note that the depth in meters is in depth buffer coordinates. Additional steps are needed to convert them to normalized view coordinates, or the {{domxref("XRCPUDepthInformation.getDepthInMeters()")}} method can be used.</p>
+<p>Note that the depth in meters is in depth-buffer coordinates. Additional steps are needed to convert them to normalized view coordinates, or the {{domxref("XRCPUDepthInformation.getDepthInMeters()")}} method can be used.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
