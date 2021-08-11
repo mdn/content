@@ -98,7 +98,7 @@ The BigInt type is a numeric primitive in JavaScript that can represent integers
 
 A BigInt is created by appending `n` to the end of an integer or by calling the constructor.
 
-You can obtain the safest value that can be incremented with Numbers by using the constant {{jsxref("Number.MAX_SAFE_INTEGER")}}. With the introduction of BigInts, you can operate with numbers beyond the {{jsxref("Number.MAX_SAFE_INTEGER")}}.
+You can obtain the largest safe value that can be incremented with Numbers by using the constant {{jsxref("Number.MAX_SAFE_INTEGER")}}. With the introduction of BigInts, you can operate with numbers beyond the {{jsxref("Number.MAX_SAFE_INTEGER")}}.
 
 This example demonstrates, where incrementing the {{jsxref("Number.MAX_SAFE_INTEGER")}} returns the expected result:
 
