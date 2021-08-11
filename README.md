@@ -359,16 +359,25 @@ for each logical set of changes that belong together.
 (it contains technical changes, and isn't just a typo fix, grammatical
 improvement, or formatting/structural change), please describe why you're
 making the change and anything else we need to know about it.
-   - If the pull request is simple (it is really clear what has been
+  - If the pull request is simple (it is really clear what has been
      changed and why, and the change is obviously a good thing), you can do
      this in your pull request's description.
-   - If the pull request is complex (the changes and the reasoning behind
+  - If the pull request is complex (the changes and the reasoning behind
      them need a bit more explanation), then the requestor should file an
      issue describing the intended change first, and seek discussion/approval
      as needed. When the time is right to submit the PR, they should
      reference the issue (or an existing issue that describes the motivation
      for the change) in the PR. You can reference an existing issue
      using `#` followed by the issue's ID, for example `#1234`.
+  - Pull requests should not contain large amounts of grammar updates.
+     Seemingly insignificant changes can change the meaning of technical
+     content, so these need a careful review. Keep in mind that MDN contains
+     technical documentation; you should not report merely basic improvements
+     in the grammar but only cases where the grammar is incorrect.
+
+Else reviewers spend their time reviewing minor improvements rather than working on more valuable things.
+
+Also, keep in mind that MDN contains technical documentation; sometimes Grammarly doesn't understand the technical use of a term and report incorrect errors.
 
 1. Do not re-open a pull request that a reviewer has closed.
 
