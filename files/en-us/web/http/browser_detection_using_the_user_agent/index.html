@@ -170,13 +170,12 @@ addEventListener("resize", setTimeout.bind(0,function(){
 
 <p>Also, pay attention not to use a simple regular expression on the BrowserName, user agents also contain strings outside the Keyword/Value syntax. Safari &amp; Chrome contain the string 'like Gecko', for instance.</p>
 
-<table class="standard-table">
+<table>
 	<thead>
 		<tr>
-			<th scope="col"></th>
-			<th scope="col">Must contain</th>
-			<th scope="col">Must not contain</th>
-			<th scope="col"></th>
+			<th>Engine</th>
+			<th>Must contain</th>
+			<th>Must not contain</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -184,58 +183,50 @@ addEventListener("resize", setTimeout.bind(0,function(){
 			<td>Firefox</td>
 			<td><code>Firefox/xyz</code></td>
 			<td><code>Seamonkey/xyz</code></td>
-			<td></td>
 		</tr>
 		<tr>
 			<td>Seamonkey</td>
 			<td><code>Seamonkey/xyz</code></td>
-			<td></td>
-			<td></td>
+      <td></td>
 		</tr>
 		<tr>
 			<td>Chrome</td>
 			<td><code>Chrome/xyz</code></td>
 			<td><code>Chromium/xyz</code></td>
-			<td></td>
 		</tr>
 		<tr>
 			<td>Chromium</td>
 			<td><code>Chromium/xyz</code></td>
-			<td></td>
 			<td></td>
 		</tr>
 		<tr>
 			<td>Safari</td>
 			<td><code>Safari/xyz</code></td>
 			<td><code>Chrome/xyz</code> or <code>Chromium/xyz</code></td>
-			<td>Safari gives two version numbers: one technical in the <code>Safari/xyz</code> token, and one user-friendly in a <code>Version/xyz</code> token</td>
 		</tr>
 		<tr>
-			<td rowspan="2">Opera</td>
-      <td>
-			<p><code>OPR/xyz</code></p></td>
+			<td>Opera 15+ (Blink-based engine)</td>
+      <td><code>OPR/xyz</code></td>
       <td></td>
-      <td>Opera 15+ (Blink-based engine)</td>
     </tr>
     <tr>
-      <td>
-			<p><code>Opera/xyz</code></p>
-			</td>
+      <td>Opera 12- (Presto-based engine)</td>
+      <td><code>Opera/xyz</code></td>
       <td></td>
-			<td>Opera 12- (Presto-based engine)</td>
 		</tr>
 		<tr>
-			<td rowspan="2">Internet Explorer</td>
+			<td>Internet Explorer 10-</td>
 			<td><code>; MSIE xyz;</code></td>
       <td></td>
-      <td>Internet Explorer 10-</td>
     <tr>
+      <td>Internet Explorer 11</td>
       <td><code>Trident/7.0; .*rv:xyz</code></td>
       <td></td>
-			<td> Internet Explorer 11</td>
-		</tr>
+x		</tr>
 	</tbody>
 </table>
+
+<p>[1] Safari gives two version numbers: one technical in the <code>Safari/xyz</code> token, and one user-friendly in a <code>Version/xyz</code> token.</p>
 
 <p>Of course, there is absolutely no guarantee that another browser will not hijack some of these things (like Chrome hijacked the Safari string in the past). That's why browser detection using the user agent string is unreliable and should be done only with the check of the version number (hijacking of past versions is less likely).</p>
 
@@ -251,12 +242,12 @@ addEventListener("resize", setTimeout.bind(0,function(){
 
 <p>There are five major rendering engines: Trident, Gecko, Presto, Blink, and WebKit. As sniffing the rendering engines names is common, a lot of user agents added other rendering names to trigger detection. It is therefore important to pay attention not to trigger false-positives when detecting the rendering engine.</p>
 
-<table class="standard-table">
+<table>
 	<thead>
 		<tr>
-			<th scope="col"></th>
-			<th scope="col">Must contain</th>
-			<th scope="col"></th>
+			<th>Engine</th>
+			<th>Must contain</th>
+			<th>Comment</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -313,50 +304,45 @@ addEventListener("resize", setTimeout.bind(0,function(){
 	<li>Never use the OS token to define if a browser is on mobile, tablet or desktop. The OS may run on more than one type of (for example, Android runs on tablets as well as phones).</li>
 </ul>
 
-<p>The following table summarizes the way major browser vendors indicate that their browsers are running on a mobile device:</p>
+<p>The following table summarizes the way common browser vendors indicate that their browsers are running on a mobile device:</p>
 
 <table>
-	<caption>Common browsers User Agent strings</caption>
 	<thead>
 		<tr>
-			<th scope="col">Browser</th>
-			<th scope="col">Rule</th>
-			<th scope="col">Example</th>
+			<th>Browser</th>
+			<th>Rule</th>
+			<th>Example</th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
 			<td>Mozilla (Gecko, Firefox)</td>
-			<td><a href="/en-US/docs/Gecko_user_agent_string_reference"><strong>Mobile</strong> or <strong>Tablet</strong> token</a> in the comment.</td>
+			<td><code>Mobile</code> or <code>Tablet</code> inside the comment.</td>
 			<td><code>Mozilla/5.0 (Android; Mobile; rv:13.0) Gecko/13.0 Firefox/13.0</code></td>
 		</tr>
 		<tr>
 			<td>WebKit-based (Android, Safari)</td>
-			<td><a href="https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariWebContent/OptimizingforSafarioniPhone/OptimizingforSafarioniPhone.html#//apple_ref/doc/uid/TP40006517-SW3"><strong>Mobile Safari</strong> token</a> outside the comment.</td>
+			<td><code>Mobile Safari</code> token <a href="https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariWebContent/OptimizingforSafarioniPhone/OptimizingforSafarioniPhone.html#//apple_ref/doc/uid/TP40006517-SW3">outside</a> the comment.</td>
 			<td><code>Mozilla/5.0 (Linux; U; Android 4.0.3; de-ch; HTC Sensation Build/IML74K) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30</code></td>
 		</tr>
 		<tr>
 			<td>Blink-based (Chromium, Google Chrome, Opera 15+, Edge on Android)</td>
-			<td><a href="https://developers.google.com/chrome/mobile/docs/user-agent"><strong>Mobile Safari</strong> token</a> outside the comment.</td>
+			<td><code>Mobile Safari</code> token <a href="https://developers.google.com/chrome/mobile/docs/user-agent">outside</a> the comment.</td>
 			<td><code>Mozilla/5.0 (Linux; Android 4.4.2); Nexus 5 Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.117 Mobile Safari/537.36 OPR/20.0.1396.72047</code></td>
 		</tr>
 		<tr>
 			<td>Presto-based (Opera 12-)</td>
-			<td>
-			<p><a href="https://my.opera.com/community/openweb/idopera/"><strong>Opera Mobi/xyz</strong> token</a> in the comment (Opera 12-)</p>
-			</td>
-			<td>
-			<p><code>Opera/9.80 (Android 2.3.3; Linux; Opera Mobi/ADR-1111101157; U; es-ES) Presto/2.9.201 Version/11.50</code></p>
-			</td>
+			<td><code>Opera Mobi/xyz</code> token <a href="https://my.opera.com/community/openweb/idopera/">inside</a> the comment.</td>
+			<td><code>Opera/9.80 (Android 2.3.3; Linux; Opera Mobi/ADR-1111101157; U; es-ES) Presto/2.9.201 Version/11.50</code></td>
 		</tr>
 		<tr>
 			<td>Internet Explorer</td>
-			<td><strong>IEMobile/xyz</strong> token in the comment.</td>
+			<td><code>IEMobile/xyz</code> token in the comment.</td>
 			<td><code>Mozilla/5.0 (compatible; MSIE 9.0; Windows Phone OS 7.5; Trident/5.0; IEMobile/9.0)</code></td>
 		</tr>
 		<tr>
 			<td>Edge on Windows 10 Mobile</td>
-			<td><strong>Mobile/xyz</strong> &amp; <strong>Edge/</strong> tokens outside the comment.</td>
+			<td><code>Mobile/xyz</code> and <code>Edge/</code> tokens outside the comment.</td>
 			<td><code>Mozilla/5.0 (Windows Phone 10.0; Android 6.0.1; Xbox; Xbox One) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Mobile Safari/537.36 Edge/16.16299</code></td>
 		</tr>
 	</tbody>
