@@ -27,8 +27,6 @@ browser-compat: api.NDEFMessage.records
 
 <p>The following example shows how to read the contents of an NDEF message. It first sets up an event handler for {{domxrex("NDEFReader.onreading")}}, which is passed an instance of {{domxref("NDEFReadingEvent")}}. An <code>NDEFMessage</code> object is returned from {{domxref("NDEFReadingEvent.message")}}. It loops through <code>message.records</code> and processes each record based on its message type. The data member is a {{domxref("DataView")}}, which allows handling data encoded in UTF-16.</p>
 
-<p>This text should be replaced with a brief description of what the example demonstrates.</p>
-
 <pre class="brush: js">ndefReaderInst.onreading = event => {
   const ndefMessage = event.message;
   for (const record of ndefMessage.records) {
