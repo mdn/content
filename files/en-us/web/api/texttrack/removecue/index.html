@@ -1,0 +1,61 @@
+---
+title: TextTrack.removeCue()
+slug: Web/API/TextTrack/removeCue
+tags:
+  - API
+  - Method
+  - Reference
+  - removeCue
+  - TextTrack
+browser-compat: api.TextTrack.removeCue
+---
+<div>{{APIRef("WebVTT")}}</div>
+
+<p class="summary">The <strong><code>removeCue()</code></strong> method of the {{domxref("TextTrack")}} interface removes a cue from the list of cues.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js">TextTrack.removeCue(cue);</pre>
+
+<h3 id="Parameters">Parameters</h3>
+
+<dl>
+  <dt><code>cue</code></dt>
+  <dd>A {{domxref("TextTrackCue")}}.</dd>
+</dl>
+
+<h3 id="Returns">Return value</h3>
+
+<p>Undefined.</p>
+
+<h3 id="Exceptions">Exceptions</h3>
+
+<dl>
+  <dt>{{domxref("DOMException")}} <code>NotFoundError</code></dt>
+  <dd>Thrown if the given cue is not found in the list of cues.</dd>
+</dl>
+
+<div class="notecard note">
+  <p><strong>Note:</strong> The {{domxref("TextTrackCue")}} interface is an abstract class used as the parent for other cue interfaces such as {{domxref("VTTCue")}}. Therefore, when removing a cue you will be passing in one of the cue types that inherit from <code>TextTrackCue</code>.</p>
+</div>
+
+<h2 id="Examples">Examples</h2>
+
+<p>In the following example a cue is added to a video text track using <code>addCue()</code>, then removed using <code>removeCue</code>.</p>
+
+<pre class="brush: js">let video = document.querySelector('video');
+let track = video.addTextTrack("captions", "Captions", "en");
+track.mode = "showing";
+let cue = new VTTCue(0, 0.9, 'Hildy!');
+track.addCue(cue);
+track.removeCue(cue);
+</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<p>{{Specifications}}</p>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>
+
