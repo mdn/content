@@ -10,9 +10,9 @@ tags:
 ---
 <p>{{CSSRef}}</p>
 
-<p>The <a href="https://drafts.csswg.org/css-logical/">Logical Properties and Values specification</a> defines flow-relative mappings for the various margin, border, and padding properties and their shorthands. In this guide we take a look at these.</p>
+<p>The <a href="https://drafts.csswg.org/css-logical/">Logical Properties and Values specification</a> defines flow-relative mappings for the various margin, border, and padding properties and their shorthands. In this guide, we take a look at these.</p>
 
-<p>If you have looked at the main page for <a href="/en-US/docs/Web/CSS/CSS_Logical_Properties">CSS Logical Properties and Values</a> you will see there are a huge number of properties listed. This is mostly due to the fact that there are four longhand values each for margin, border, and padding side, plus all the shorthand values.</p>
+<p>If you have looked at the main page for <a href="/en-US/docs/Web/CSS/CSS_Logical_Properties">CSS Logical Properties and Values</a> you will see there are a huge number of properties listed. This is mostly because there are four longhand values each for margin, border, and padding side, plus all the shorthand values.</p>
 
 <h2 id="Mappings_for_margins_borders_and_padding">Mappings for margins, borders, and padding</h2>
 
@@ -143,7 +143,7 @@ tags:
  </tbody>
 </table>
 
-<p>There are also some additional shorthands, made possible because we have the ability to target both block or both inline edges of the box simultaneously. These shorthands have no physical equivalent.</p>
+<p>There are also some additional shorthands, made possible because we can target both block or both inline edges of the box simultaneously. These shorthands have no physical equivalent.</p>
 
 <table class="standard-table">
  <thead>
@@ -187,19 +187,19 @@ tags:
   </tr>
   <tr>
    <td>{{cssxref("margin-block")}}</td>
-   <td>Sets all the block {{cssxref("margin")}}s.</td>
+   <td>Sets the both block {{cssxref("margin")}}s.</td>
   </tr>
   <tr>
    <td>{{cssxref("margin-inline")}}</td>
-   <td>Sets all the inline <code>margin</code>s.</td>
+   <td>Sets the both inline <code>margin</code>s.</td>
   </tr>
   <tr>
    <td>{{cssxref("padding-block")}}</td>
-   <td>Sets the block {{cssxref("padding")}}.</td>
+   <td>Sets the both block {{cssxref("padding")}}.</td>
   </tr>
   <tr>
    <td>{{cssxref("padding-inline")}}</td>
-   <td>Sets the inline <code>padding</code>.</td>
+   <td>Sets the both inline <code>padding</code>.</td>
   </tr>
  </tbody>
 </table>
@@ -208,7 +208,7 @@ tags:
 
 <p>The mapped margin properties of {{cssxref("margin-inline-start")}}, {{cssxref("margin-inline-end")}}, {{cssxref("margin-block-start")}}, and {{cssxref("margin-inline-end")}} can be used instead of their physical counterparts.</p>
 
-<p>In the example below I have created two boxes and added different sized margins to each edge. I have added an extra container with a border in order to make the margin more obvious to see.</p>
+<p>In the example below I have created two boxes and added different sized margins to each edge. I have added an extra container with a border to make the margin more obvious to see.</p>
 
 <p>One box uses physical properties and the other logical properties. Try changing the {{cssxref("direction")}} property to <code>rtl</code> to cause the boxes to display in a right-to-left direction, the margins on the first box will stay in the same place, while the margins on the inline dimension of the second box will switch.</p>
 
