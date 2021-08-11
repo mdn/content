@@ -1,0 +1,73 @@
+---
+title: NDEFReadingEvent.serialNumber
+slug: Web/API/NDEFReadingEvent/serialNumber
+tags:
+  - API
+  - Property
+  - Reference
+  - serialNumber
+  - NDEFReadingEvent
+browser-compat: api.NDEFReadingEvent.serialNumber
+---
+<div>{{securecontext_header}}{{DefaultAPISidebar("")}}</div>
+
+<p class="summary">The <strong><code>serialNumber</code></strong>  property of the {{domxref("NDEFReadingEvent")}} interface returns the serial number of the device, which is used for anti-collision and identification, or an empty string if no serial number is available. </p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js">let aserialNumber = NDEFReadingEvent.serialNumber;</pre>
+
+<h3>Value</h3>
+<p>A string containing the device's serial number.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<p>This example shows how to create a convenience function that reads a single tag and then stops polling, saving battery life by cutting unneeded work. The example could easily be extended to time out after a given amount of milliseconds.</p>
+
+<pre class="brush: js">const ndef = new NDEFReader();
+
+  function read() {
+    return new Promise((resolve, reject) => {
+      const ctlr = new AbortController();
+      ctlr.signal.onabort = reject;
+      ndef.addEventListener("reading", event => {
+        ctlr.abort();
+        resolve(event);
+      }, { once: true });
+      ndef.scan({ signal: ctlr.signal }).catch(err => reject(err));
+    });
+  }
+
+  read().then(({ serialNumber }) => {
+    console.log(serialNumber);
+  });
+  </pre>
+
+<h2 id="Examples">Examples</h2>
+
+<p>Fill in a simple example that nicely shows a typical usage of the API, then perhaps some more complex examples (see our guide on how to add <a href="/en-US/docs/MDN/Contribute/Structures/Code_examples">code examples</a> for more information).</p>
+
+<p>This text should be replaced with a brief description of what the example demonstrates.</p>
+
+<pre class="brush: js">
+my code block</pre>
+
+<p>And/or include a list of links to useful code samples that live elsewhere:</p>
+
+<ul>
+	<li>x</li>
+	<li>y</li>
+	<li>z</li>
+</ul>
+
+<h2 id="Specifications">Specifications</h2>
+
+<p>{{Specifications}}</p>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+
+<p>{{Compat}}</p>
+
+
