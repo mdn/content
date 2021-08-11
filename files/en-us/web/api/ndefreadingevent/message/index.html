@@ -19,30 +19,29 @@ browser-compat: api.NDEFReadingEvent.message
 </pre>
 
 <h3>Value</h3>
-<p>A {{domxref("NDEFMessage")}}.</p>
+<p>An {{domxref("NDEFMessage")}} object.</p>
 
 <h2 id="Examples">Examples</h2>
 
 <p>This example shows how to create a convenience function that reads a single tag and then stops polling, saving battery life by cutting unneeded work. The example could easily be extended to time out after a given amount of milliseconds.</p>
 
-<pre class="brush: js">const ndef = new NDEFReader();
+<pre class="brush: js">const ndefReader = new NDEFReader();
 
   function read() {
     return new Promise((resolve, reject) => {
       const ctlr = new AbortController();
       ctlr.signal.onabort = reject;
-      ndef.addEventListener("reading", event => {
+      ndefReader.addEventListener("reading", event => {
         ctlr.abort();
         resolve(event);
       }, { once: true });
-      ndef.scan({ signal: ctlr.signal }).catch(err => reject(err));
+      ndefReader.scan({ signal: ctlr.signal }).catch(err => reject(err));
     });
   }
 
   read().then(({ serialNumber }) => {
     console.log(serialNumber);
-  });
-  </pre>
+  });</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
