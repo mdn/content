@@ -21,28 +21,28 @@ browser-compat: api.XRReferenceSpace.reset_event
 ---
 <p>{{APIRef("WebXR Device API")}}</p>
 
-<p><span class="seoSummary">The <code><strong>reset</strong></code> event is sent to an {{domxref("XRReferenceSpace")}} object when a discontinuity is detected in either the native origin or the effective origin, causing a jump in the position or orientation of objects oriented using the reference space.</span> This is common when the user calibrates or recalibrates an XR device, or if the device automatically changes its origin after losing tracking of the user, then re-gaining it.</p>
+<p>The <code><strong>reset</strong></code> event is sent to an {{domxref("XRReferenceSpace")}} object when a discontinuity is detected in either the native origin or the effective origin, causing a jump in the position or orientation of objects oriented using the reference space. This is common when the user calibrates or recalibrates an XR device, or if the device automatically changes its origin after losing tracking of the user, then re-gaining it.</p>
 
 <p>In the case of {{domxref("XRBoundedReferenceSpace")}} objects, the <code>reset</code> event can also be fired when the {{domxref("XRBoundedReferenceSpace.boundsGeometry", "boundsGeometry")}} changes.</p>
 
 <p>In either case, the event is sent before any WebXR animation frames which make use of the new origin are executed.</p>
 
-<table class="properties">
+<table>
  <tbody>
   <tr>
-   <th scope="row">Bubbles</th>
+   <th>Bubbles</th>
    <td>Yes</td>
   </tr>
   <tr>
-   <th scope="row">Cancelable</th>
+   <th>Cancelable</th>
    <td>No</td>
   </tr>
   <tr>
-   <th scope="row">Interface</th>
+   <th>Interface</th>
    <td>{{domxref("XRReferenceSpaceEvent")}}</td>
   </tr>
   <tr>
-   <th scope="row">Event handler property</th>
+   <th>Event handler property</th>
    <td>{{domxref("XRReferenceSpace/onreset", "onreset")}}</td>
   </tr>
  </tbody>

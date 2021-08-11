@@ -23,10 +23,10 @@ browser-compat: api.XRPermissionDescriptor.optionalFeatures
 ---
 <p>{{APIRef("WebXR Device API")}}{{SecureContext_header}}</p>
 
-<p><span class="seoSummary">The {{domxref("XRPermissionDescriptor")}}
+<p>The {{domxref("XRPermissionDescriptor")}}
     dictionary's <code><strong>optionalFeatures</strong></code> property is used to
     specify a list of WebXR features which your app or site would like to use but can
-    operate without if permission isn't granted to use them.</span></p>
+    operate without if permission isn't granted to use them.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -45,12 +45,12 @@ browser-compat: api.XRPermissionDescriptor.optionalFeatures
   permission to use them isn't available. Future editions of WebXR may add more
   recognized features.</p>
 
-<table class="standard-table" id="value-list">
+<table class="standard-table">
   <thead>
     <tr>
-    <th scope="col">XRReferenceSpaceType</th>
-    <th scope="col">Description</th>
-    <th scope="col">Interface</th>
+    <th>XRReferenceSpaceType</th>
+    <th>Description</th>
+    <th>Interface</th>
     </tr>
   </thead>
   <tbody>
@@ -62,9 +62,9 @@ browser-compat: api.XRPermissionDescriptor.optionalFeatures
     <tr>
     <td><code>local</code></td>
     <td>
-      <p>A tracking space whose native origin is located near the viewer's position at the time the session was created. The exact position depends on the underlying platform and implementation. The user isn't expected to move much if at all beyond their starting position, and tracking is optimized for this use case.</p>
+      A tracking space whose native origin is located near the viewer's position at the time the session was created. The exact position depends on the underlying platform and implementation. The user isn't expected to move much if at all beyond their starting position, and tracking is optimized for this use case.
 
-      <p>For devices with six degrees of freedom (6DoF) tracking, the <code>local</code> reference space tries to keep the origin stable relative to the environment.</p>
+      For devices with six degrees of freedom (6DoF) tracking, the <code>local</code> reference space tries to keep the origin stable relative to the environment.
     </td>
     <td>{{domxref("XRReferenceSpace")}}</td>
     </tr>
