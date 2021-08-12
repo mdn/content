@@ -8,9 +8,9 @@ tags:
 
 In client-server protocols, like HTTP, sessions consist of three phases:
 
-1.  The client establishes a TCP connection (or the appropriate connection if the transport layer is not TCP).
-2.  The client sends its request, and waits for the answer.
-3.  The server processes the request, sending back its answer, providing a status code and appropriate data.
+1. The client establishes a TCP connection (or the appropriate connection if the transport layer is not TCP).
+2. The client sends its request, and waits for the answer.
+3. The server processes the request, sending back its answer, providing a status code and appropriate data.
 
 As of HTTP/1.1, the connection is no longer closed after completing the third phase, and the client is now granted a further request: this means the second and third phases can now be performed any number of times.
 
@@ -26,13 +26,13 @@ With TCP the default port, for an HTTP server on a computer, is port 80. Other p
 
 Once the connection is established, the user-agent can send the request (a user-agent is typically a web browser, but can be anything else, a crawler, for example). A client request consists of text directives, separated by CRLF (carriage return, followed by line feed), divided into three blocks:
 
-1.  The first line contains a request method followed by its parameters:
+1. The first line contains a request method followed by its parameters:
 
     - the path of the document, i.e. an absolute URL without the protocol or domain name
     - the HTTP protocol version
 
-2.  Subsequent lines represent an HTTP header, giving the server information about what type of data is appropriate (e.g., what language, what MIME types), or other data altering its behavior (e.g., not sending an answer if it is already cached). These HTTP headers form a block which ends with an empty line.
-3.  The final block is an optional data block, which may contain further data mainly used by the POST method.
+2. Subsequent lines represent an HTTP header, giving the server information about what type of data is appropriate (e.g., what language, what MIME types), or other data altering its behavior (e.g., not sending an answer if it is already cached). These HTTP headers form a block which ends with an empty line.
+3. The final block is an optional data block, which may contain further data mainly used by the POST method.
 
 ### Example requests
 
@@ -64,9 +64,9 @@ HTTP defines a set of [request methods](/en-US/docs/Web/HTTP/Methods) indicating
 
 After the connected agent has sent its request, the web server processes it, and ultimately returns a response. Similar to a client request, a server response is formed of text directives, separated by CRLF, though divided into three blocks:
 
-1.  The first line, the _status line_, consists of an acknowledgment of the HTTP version used, followed by a response status code (and its brief meaning in human-readable text).
-2.  Subsequent lines represent specific HTTP headers, giving the client information about the data sent (e.g. type, data size, compression algorithm used, hints about caching). Similarly to the block of HTTP headers for a client request, these HTTP headers form a block ending with an empty line.
-3.  The final block is a data block, which contains the optional data.
+1. The first line, the _status line_, consists of an acknowledgment of the HTTP version used, followed by a response status code (and its brief meaning in human-readable text).
+2. Subsequent lines represent specific HTTP headers, giving the client information about the data sent (e.g. type, data size, compression algorithm used, hints about caching). Similarly to the block of HTTP headers for a client request, these HTTP headers form a block ending with an empty line.
+3. The final block is a data block, which contains the optional data.
 
 ### Example responses
 

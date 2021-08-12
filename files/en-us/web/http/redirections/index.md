@@ -25,9 +25,9 @@ When browsers receive a redirect, they immediately load the new URL provided in 
 
 There are several types of redirects, sorted into three categories:
 
-1.  [Permanent redirections](#permanent_redirections)
-2.  [Temporary redirections](#temporary_redirections)
-3.  [Special redirections](#special_redirections)
+1. [Permanent redirections](#permanent_redirections)
+2. [Temporary redirections](#temporary_redirections)
+3. [Special redirections](#special_redirections)
 
 ### Permanent redirections
 
@@ -67,8 +67,8 @@ Search engine robots and other crawlers don't memorize the new, temporary URL. T
 
 HTTP redirects aren't the only way to define redirections. There are two others:
 
-1.  HTML redirections with the {{HTMLElement("meta")}} element
-2.  JavaScript redirections via the [DOM](/en-US/docs/Web/API/Document_Object_Model)
+1. HTML redirections with the {{HTMLElement("meta")}} element
+2. JavaScript redirections via the [DOM](/en-US/docs/Web/API/Document_Object_Model)
 
 ### HTML redirections
 
@@ -98,9 +98,9 @@ Like HTML redirections, this can't work on all resources, and obviously, this wi
 
 With three ways to trigger redirections, several ways can be used at the same time. But which is applied first?
 
-1.  HTTP redirects always execute first — they exist when there is not even a transmitted page.
-2.  HTML redirects ({{HTMLElement("meta")}}) execute if there weren't any HTTP redirects.
-3.  JavaScript redirects execute last, and only if JavaScript is enabled.
+1. HTTP redirects always execute first — they exist when there is not even a transmitted page.
+2. HTML redirects ({{HTMLElement("meta")}}) execute if there weren't any HTTP redirects.
+3. JavaScript redirects execute last, and only if JavaScript is enabled.
 
 When possible, use HTTP redirects and don't add {{HTMLElement("meta")}} element redirects. If someone changes the HTTP redirects but forgets to change the HTML redirects, the redirects will no longer be identical, which could cause an infinite loop or other nightmares.
 

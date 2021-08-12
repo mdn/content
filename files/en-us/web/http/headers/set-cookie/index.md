@@ -140,8 +140,8 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 
     > **Note:** Standards related to the [SameSite Cookies](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) recently changed such that:
     >
-    > 1.  The cookie-sending behavior if `SameSite` is not specified is `SameSite=Lax`. Previously the default was that cookies were sent for all requests.
-    > 2.  Cookies with `SameSite=None` must now
+    > 1. The cookie-sending behavior if `SameSite` is not specified is `SameSite=Lax`. Previously the default was that cookies were sent for all requests.
+    > 2. Cookies with `SameSite=None` must now
     >     also specify the `Secure` attribute (i.e. they require a secure context).
     >
     > The options below covers the new behavior. See the [Browser compatibility](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite#browser_compatibility) table for information about specific browser implementation (rows: "`SameSite`: Defaults to `Lax`" and "`SameSite`: Secure context required").
