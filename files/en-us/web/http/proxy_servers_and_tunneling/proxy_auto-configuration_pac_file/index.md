@@ -314,7 +314,9 @@ myIpAddress()
 
 #### Parameters
 
-**(none)**
+(none)
+
+#### Return value
 
 Returns the server IP address of the machine Firefox is running on, as a string in the dot-separated integer format.
 

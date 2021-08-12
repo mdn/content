@@ -174,7 +174,7 @@ Please note the security issues in the [Security](#security) section below. Cook
 Ways to mitigate attacks involving cookies:
 
 - Use the `HttpOnly` attribute to prevent access to cookie values via JavaScript.
-- Cookies that are used for sensitive information (such as indicating authentication) should have a short lifetime, with the `SameSite` attribute set to `Strict` or `Lax`. (See [SameSite cookies](#), above.) In [browsers that support SameSite](/en-US/docs/Web/HTTP/Headers/Set-Cookie#browser_compatibility), this has the effect of ensuring that the authentication cookie is not sent with cross-site requests, so such a request is effectively unauthenticated to the application server.
+- Cookies that are used for sensitive information (such as indicating authentication) should have a short lifetime, with the `SameSite` attribute set to `Strict` or `Lax`. (See [SameSite attribute](#samesite_attribute), above.) In [browsers that support SameSite](/en-US/docs/Web/HTTP/Headers/Set-Cookie#browser_compatibility), this has the effect of ensuring that the authentication cookie is not sent with cross-site requests, so such a request is effectively unauthenticated to the application server.
 
 ## Tracking and privacy
 
