@@ -1,6 +1,6 @@
 ---
 title: ':only-of-type'
-slug: 'Web/CSS/:only-of-type'
+slug: Web/CSS/:only-of-type
 tags:
   - CSS
   - Layout
@@ -10,66 +10,66 @@ tags:
   - Web
 browser-compat: css.selectors.only-of-type
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>:only-of-type</code></strong> CSS <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> represents an element that has no siblings of the same type.</p>
+The **`:only-of-type`** CSS [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents an element that has no siblings of the same type.
 
-<pre class="brush: css no-line-numbers">/* Selects each &lt;p&gt;, but only if it is the */
-/* only &lt;p&gt; element inside its parent */
+```css
+/* Selects each <p>, but only if it is the */
+/* only <p> element inside its parent */
 p:only-of-type {
   background-color: lime;
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Note:</strong> As originally defined, the selected element had to have a parent. Beginning with Selectors Level 4, this is no longer required.</p>
-</div>
+> **Note:** As originally defined, the selected element had to have a parent. Beginning with Selectors Level 4, this is no longer required.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Styling_elements_with_no_siblings_of_the_same_type">Styling elements with no siblings of the same type</h3>
+### Styling elements with no siblings of the same type
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;main&gt;
-  &lt;div&gt;I am `div` #1.&lt;/div&gt;
-  &lt;p&gt;I am the only `p` among my siblings.&lt;/p&gt;
-  &lt;div&gt;I am `div` #2.&lt;/div&gt;
-  &lt;div&gt;I am `div` #3.
-    &lt;i&gt;I am the only `i` child.&lt;/i&gt;
-    &lt;em&gt;I am `em` #1.&lt;/em&gt;
-    &lt;em&gt;I am `em` #2.&lt;/em&gt;
-  &lt;/div&gt;
-&lt;/main&gt;
-</pre>
+```html
+<main>
+  <div>I am `div` #1.</div>
+  <p>I am the only `p` among my siblings.</p>
+  <div>I am `div` #2.</div>
+  <div>I am `div` #3.
+    <i>I am the only `i` child.</i>
+    <em>I am `em` #1.</em>
+    <em>I am `em` #2.</em>
+  </div>
+</main>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">main :only-of-type {
+```css
+main :only-of-type {
   color: red;
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Styling_elements_with_no_siblings_of_the_same_type','100%',180)}}</p>
+{{EmbedLiveSample('Styling_elements_with_no_siblings_of_the_same_type','100%',180)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Cssxref(":only-child")}}</li>
- <li>{{Cssxref(":first-of-type")}}</li>
- <li>{{Cssxref(":last-of-type")}}</li>
- <li>{{Cssxref(":nth-of-type")}}</li>
-</ul>
+- {{Cssxref(":only-child")}}
+- {{Cssxref(":first-of-type")}}
+- {{Cssxref(":last-of-type")}}
+- {{Cssxref(":nth-of-type")}}

@@ -10,66 +10,69 @@ tags:
   - Reference
 browser-compat: css.at-rules.counter-style.additive-symbols
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>additive-symbols</code></strong> descriptor lets you specify symbols when the value of a counter {{cssxref('system')}} descriptor is <code>additive</code>. The <code>additive-symbols</code> descriptor defines <em>additive tuples</em>, each of which is a pair containing a symbol and a non-negative integer weight. The additive system is used to construct <a href="https://en.wikipedia.org/wiki/Sign-value_notation">sign-value numbering</a> systems such as Roman numerals.</p>
+The **`additive-symbols`** descriptor lets you specify symbols when the value of a counter {{cssxref('system')}} descriptor is `additive`. The `additive-symbols` descriptor defines _additive tuples_, each of which is a pair containing a symbol and a non-negative integer weight. The additive system is used to construct [sign-value numbering](https://en.wikipedia.org/wiki/Sign-value_notation) systems such as Roman numerals.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css no-line-numbers">additive-symbols: 3 "0";
+```css
+additive-symbols: 3 "0";
 additive-symbols: 3 "0", 2 "\2E\20";
 additive-symbols: 3 "0", 2 url(symbol.png);
-</pre>
+```
 
-<p>When the <code>system</code> descriptor is <code>cyclic</code>, <code>numeric</code>, <code>alphabetic</code>, <code>symbolic</code>, or <code>fixed</code>, use the {{cssxref('symbols')}} descriptor instead of <code>additive-symbols</code>.</p>
+When the `system` descriptor is `cyclic`, `numeric`, `alphabetic`, `symbolic`, or `fixed`, use the {{cssxref('symbols')}} descriptor instead of `additive-symbols`.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Specifying_additive_symbols">Specifying additive symbols</h3>
+### Specifying additive symbols
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;ul class="list"&gt;
-  &lt;li&gt;One&lt;/li&gt;
-  &lt;li&gt;Two&lt;/li&gt;
-  &lt;li&gt;Three&lt;/li&gt;
-  &lt;li&gt;Four&lt;/li&gt;
-  &lt;li&gt;Five&lt;/li&gt;
-&lt;/ul&gt;</pre>
+```html
+<ul class="list">
+  <li>One</li>
+  <li>Two</li>
+  <li>Three</li>
+  <li>Four</li>
+  <li>Five</li>
+</ul>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">@counter-style additive-symbols-example {
+```css
+@counter-style additive-symbols-example {
   system: additive;
   additive-symbols: V 5, IV 4, I 1;
 }
 .list {
   list-style: additive-symbols-example;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Specifying_additive_symbols') }}</p>
+{{ EmbedLiveSample('Specifying_additive_symbols') }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}</li>
- <li>The {{cssxref("symbols", "symbols()")}}, functional notation is used for creating anonymous counter styles.</li>
-</ul>
+- {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
+- The {{cssxref("symbols", "symbols()")}}, functional notation is used for creating anonymous counter styles.

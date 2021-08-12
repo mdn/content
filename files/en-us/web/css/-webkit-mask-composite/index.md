@@ -6,18 +6,19 @@ tags:
   - CSS
   - CSS Masking
   - CSS Property
-  - 'CSS:WebKit Extensions'
+  - CSS:WebKit Extensions
   - Non-standard
   - Reference
   - mask-composite
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.-webkit-mask-composite
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<p>The <strong><code>-webkit-mask-composite</code></strong> property specifies the manner in which multiple mask images applied to the same element are composited with one another. Mask images are composited in the opposite order that they are declared with the {{CSSxRef("-webkit-mask-image")}} property.</p>
+The **`-webkit-mask-composite`** property specifies the manner in which multiple mask images applied to the same element are composited with one another. Mask images are composited in the opposite order that they are declared with the {{CSSxRef("-webkit-mask-image")}} property.
 
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 -webkit-mask-composite: clear;
 -webkit-mask-composite: copy;
 -webkit-mask-composite: source-over;
@@ -34,69 +35,64 @@ browser-compat: css.properties.-webkit-mask-composite
 -webkit-mask-composite: inherit;
 -webkit-mask-composite: initial;
 -webkit-mask-composite: unset;
-</pre>
+```
 
-<div class="note">
-<p><strong>Note:</strong> There is a standardized {{CSSxRef("mask-composite")}} property covering parts of this non-standard property using different keywords.</p>
-</div>
+> **Note:** There is a standardized {{CSSxRef("mask-composite")}} property covering parts of this non-standard property using different keywords.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>clear</code></dt>
- <dd>Overlapping pixels in the source mask image and the destination mask image are cleared.</dd>
- <dt><code>copy</code></dt>
- <dd>The source mask image replaces the destination mask image.</dd>
- <dt><code>source-over</code></dt>
- <dd>The source mask image is rendered over the destination mask image.</dd>
- <dt><code>source-in</code></dt>
- <dd>Overlapping pixels in the source mask image and the destination mask image are replaced by the pixels of the source mask image; all other pixels are cleared.</dd>
- <dt><code>source-out</code></dt>
- <dd>Overlapping pixels in the source mask image and the destination mask image are cleared; all remaining pixels of the source mask image are rendered.</dd>
- <dt><code>source-atop</code></dt>
- <dd>The pixels of the destination mask image are rendered. The pixels of the source mask image are rendered only if they overlap a nontransparent portion of the destination mask image. This causes the source mask image to have no effect.</dd>
- <dt><code>destination-over</code></dt>
- <dd>The destination mask image is rendered over the source mask image.</dd>
- <dt><code>destination-in</code></dt>
- <dd>Overlapping pixels in the source mask image and the destination mask image remain the pixels of the destination mask image; all other pixels are cleared.</dd>
- <dt><code>destination-out</code></dt>
- <dd>Overlapping pixels in the source mask image and the destination mask image are cleared; all remaining pixels of the source mask image are rendered.</dd>
- <dt><code>destination-atop</code></dt>
- <dd>The pixels of the source mask image are rendered. The pixels of the destination mask image are rendered only if they overlap a nontransparent portion of the destination mask image. This causes the destination mask image to have no effect.</dd>
- <dt><code>xor</code></dt>
- <dd>Overlapping pixels in the source mask image and the destination mask image become fully transparent if they are both fully opaque.</dd>
-</dl>
+- `clear`
+  - : Overlapping pixels in the source mask image and the destination mask image are cleared.
+- `copy`
+  - : The source mask image replaces the destination mask image.
+- `source-over`
+  - : The source mask image is rendered over the destination mask image.
+- `source-in`
+  - : Overlapping pixels in the source mask image and the destination mask image are replaced by the pixels of the source mask image; all other pixels are cleared.
+- `source-out`
+  - : Overlapping pixels in the source mask image and the destination mask image are cleared; all remaining pixels of the source mask image are rendered.
+- `source-atop`
+  - : The pixels of the destination mask image are rendered. The pixels of the source mask image are rendered only if they overlap a nontransparent portion of the destination mask image. This causes the source mask image to have no effect.
+- `destination-over`
+  - : The destination mask image is rendered over the source mask image.
+- `destination-in`
+  - : Overlapping pixels in the source mask image and the destination mask image remain the pixels of the destination mask image; all other pixels are cleared.
+- `destination-out`
+  - : Overlapping pixels in the source mask image and the destination mask image are cleared; all remaining pixels of the source mask image are rendered.
+- `destination-atop`
+  - : The pixels of the source mask image are rendered. The pixels of the destination mask image are rendered only if they overlap a nontransparent portion of the destination mask image. This causes the destination mask image to have no effect.
+- `xor`
+  - : Overlapping pixels in the source mask image and the destination mask image become fully transparent if they are both fully opaque.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{CSSSyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Compositing_with_XOR">Compositing with XOR</h3>
+### Compositing with XOR
 
-<pre class="brush: css">.example {
+```css
+.example {
   -webkit-mask-image: url(mask1.png), url('mask2.png');
   -webkit-mask-composite: xor, source-over;
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any standard. This property is specified as {{CSSxRef("mask-composite")}} using different values.</p>
+Not part of any standard. This property is specified as {{CSSxRef("mask-composite")}} using different values.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{CSSxRef("mask-composite")}}</li>
-</ul>
+- {{CSSxRef("mask-composite")}}

@@ -7,20 +7,21 @@ tags:
   - CSS Property
   - NeedsContent
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.flex-shrink
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>flex-shrink</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets the flex shrink factor of a flex item. If the size of all flex items is larger than the flex container, items shrink to fit according to <code>flex-shrink</code>.</p>
+The **`flex-shrink`** [CSS](/en-US/docs/Web/CSS) property sets the flex shrink factor of a flex item. If the size of all flex items is larger than the flex container, items shrink to fit according to `flex-shrink`.
 
-<p>In use, <code>flex-shrink</code> is used alongside the other flex properties {{cssxref("flex-grow")}} and {{cssxref("flex-basis")}}, and normally defined using the {{cssxref("flex")}} shorthand.</p>
+In use, `flex-shrink` is used alongside the other flex properties {{cssxref("flex-grow")}} and {{cssxref("flex-basis")}}, and normally defined using the {{cssxref("flex")}} shorthand.
 
-<div>{{EmbedInteractiveExample("pages/css/flex-shrink.html")}}</div>
+{{EmbedInteractiveExample("pages/css/flex-shrink.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* &lt;number&gt; values */
+```css
+/* <number> values */
 flex-shrink: 2;
 flex-shrink: 0.6;
 
@@ -29,46 +30,46 @@ flex-shrink: inherit;
 flex-shrink: initial;
 flex-shrink: revert;
 flex-shrink: unset;
-</pre>
+```
 
-<p>The <code>flex-shrink</code> property is specified as a single <code>&lt;number&gt;</code>.</p>
+The `flex-shrink` property is specified as a single `<number>`.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>&lt;number&gt;</code></dt>
- <dd>See {{cssxref("&lt;number&gt;")}}. Negative values are invalid. Defaults to 1.</dd>
-</dl>
+- `<number>`
+  - : See {{cssxref("&lt;number&gt;")}}. Negative values are invalid. Defaults to 1.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_flex_item_shrink_factor">Setting flex item shrink factor</h3>
+### Setting flex item shrink factor
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;The width of content is 500px; the flex-basis of the flex items is 120px.&lt;/p&gt;
-&lt;p&gt;A, B, C have flex-shrink:1 set. D and E have flex-shrink:2 set&lt;/p&gt;
-&lt;p&gt;The width of D and E is less than the others.&lt;/p&gt;
-&lt;div id="content"&gt;
-  &lt;div class="box" style="background-color:red;"&gt;A&lt;/div&gt;
-  &lt;div class="box" style="background-color:lightblue;"&gt;B&lt;/div&gt;
-  &lt;div class="box" style="background-color:yellow;"&gt;C&lt;/div&gt;
-  &lt;div class="box1" style="background-color:brown;"&gt;D&lt;/div&gt;
-  &lt;div class="box1" style="background-color:lightgreen;"&gt;E&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<p>The width of content is 500px; the flex-basis of the flex items is 120px.</p>
+<p>A, B, C have flex-shrink:1 set. D and E have flex-shrink:2 set</p>
+<p>The width of D and E is less than the others.</p>
+<div id="content">
+  <div class="box" style="background-color:red;">A</div>
+  <div class="box" style="background-color:lightblue;">B</div>
+  <div class="box" style="background-color:yellow;">C</div>
+  <div class="box1" style="background-color:brown;">D</div>
+  <div class="box1" style="background-color:lightgreen;">E</div>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">#content {
+```css
+#content {
   display: flex;
   width: 500px;
 }
@@ -85,23 +86,21 @@ flex-shrink: unset;
 .box1 {
   flex-shrink: 2;
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Setting_flex_item_shrink_factor', 500, 300)}}</p>
+{{EmbedLiveSample('Setting_flex_item_shrink_factor', 500, 300)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>CSS Flexbox Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Basic Concepts of Flexbox</a></em></li>
- <li>CSS Flexbox Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax">Controlling Ratios of flex items along the main axis</a></em></li>
-</ul>
+- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
+- CSS Flexbox Guide: _[Controlling Ratios of flex items along the main axis](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)_

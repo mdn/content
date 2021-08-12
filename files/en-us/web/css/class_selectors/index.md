@@ -8,40 +8,46 @@ tags:
   - Selectors
 browser-compat: css.selectors.class
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <a href="/en-US/docs/CSS">CSS</a> <strong>class selector</strong> matches elements based on the contents of their {{htmlattrxref("class")}} attribute.</p>
+The [CSS](/en-US/docs/CSS) **class selector** matches elements based on the contents of their {{htmlattrxref("class")}} attribute.
 
-<pre class="brush: css no-line-numbers">/* All elements with class="spacious" */
+```css
+/* All elements with class="spacious" */
 .spacious {
   margin: 2em;
 }
 
-/* All &lt;li&gt; elements with class="spacious" */
+/* All <li> elements with class="spacious" */
 li.spacious {
   margin: 2em;
 }
 
-/* All &lt;li&gt; elements with a class list that includes both "spacious" and "elegant" */
+/* All <li> elements with a class list that includes both "spacious" and "elegant" */
 /* For example, class="elegant retro spacious" */
 li.spacious.elegant {
   margin: 2em;
 }
-</pre>
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">.class_name { <em>style properties</em> }</pre>
+```css
+.class_name { style properties }
+```
 
-<p>Note that this is equivalent to the following {{Cssxref("Attribute_selectors", "attribute selector")}}:</p>
+Note that this is equivalent to the following {{Cssxref("Attribute_selectors", "attribute selector")}}:
 
-<pre class="brush: css">[class~=class_name] { <em>style properties</em> }</pre>
+```css
+[class~=class_name] { style properties }
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.red {
+```css
+.red {
   color: #f33;
 }
 
@@ -53,61 +59,35 @@ li.spacious.elegant {
   font-weight: bold;
   text-shadow: 4px 4px 3px #77f;
 }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p class="red"&gt;This paragraph has red text.&lt;/p&gt;
-&lt;p class="red yellow-bg"&gt;This paragraph has red text and a yellow background.&lt;/p&gt;
-&lt;p class="red fancy"&gt;This paragraph has red text and "fancy" styling.&lt;/p&gt;
-&lt;p&gt;This is just a regular paragraph.&lt;/p&gt;
-</pre>
+```html
+<p class="red">This paragraph has red text.</p>
+<p class="red yellow-bg">This paragraph has red text and a yellow background.</p>
+<p class="red fancy">This paragraph has red text and "fancy" styling.</p>
+<p>This is just a regular paragraph.</p>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample('Examples')}}</p>
+{{EmbedLiveSample('Examples')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Selectors', '#class-html', 'class selectors')}}</td>
-   <td>{{Spec2('CSS4 Selectors')}}</td>
-   <td>No changes</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Selectors', '#class-html', 'class selectors')}}</td>
-   <td>{{Spec2('CSS3 Selectors')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'selector.html#class-html', 'child selectors')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#class-as-selector', 'child selectors')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                | Status                               | Comment            |
+| -------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
+| {{SpecName('CSS4 Selectors', '#class-html', 'class selectors')}}         | {{Spec2('CSS4 Selectors')}} | No changes         |
+| {{SpecName('CSS3 Selectors', '#class-html', 'class selectors')}}         | {{Spec2('CSS3 Selectors')}} |                    |
+| {{SpecName('CSS2.1', 'selector.html#class-html', 'child selectors')}} | {{Spec2('CSS2.1')}}             |                    |
+| {{SpecName('CSS1', '#class-as-selector', 'child selectors')}}             | {{Spec2('CSS1')}}             | Initial definition |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Selectors">CSS Selectors</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors">Learn CSS: Selectors</a></li>
-</ul>
+- [CSS Selectors](/en-US/docs/Web/CSS/CSS_Selectors)
+- [Learn CSS: Selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors)

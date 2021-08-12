@@ -6,18 +6,17 @@ tags:
   - CSS Property
   - Non-standard
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.box-flex-group
 ---
-<p>{{CSSRef}}{{Non-standard_Header}}</p>
+{{CSSRef}}{{Non-standard_Header}}
 
-<div class="notecard warning">
-<p><strong>Warning:</strong> This is a property of the original CSS Flexible Box Layout Module draft, and has been replaced by a newer standard. See <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes">flexbox</a> for information about the current standard.</p>
-</div>
+> **Warning:** This is a property of the original CSS Flexible Box Layout Module draft, and has been replaced by a newer standard. See [flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes) for information about the current standard.
 
-<p>The <strong><code>box-flex-group</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property assigns the flexbox's child elements to a flex group.</p>
+The **`box-flex-group`** [CSS](/en-US/docs/Web/CSS) property assigns the flexbox's child elements to a flex group.
 
-<pre class="brush: css; no-line-numbers">/* &lt;integer&gt; values */
+```css
+/* <integer> values */
 box-flex-group: 1;
 box-flex-group: 5;
 
@@ -25,52 +24,52 @@ box-flex-group: 5;
 box-flex-group: inherit;
 box-flex-group: initial;
 box-flex-group: unset;
-</pre>
+```
 
-<p>For flexible elements assigned to flex groups, the first flex group is 1 and higher values specify subsequent flex groups. The initial value is 1. When dividing up the box's extra space, the browser first considers all elements within the first flex group. Each element within that group is given extra space based on the ratio of that element's flexibility compared to the flexibility of other elements within the same flex group. If the space of all flexible children within the group has been increased to the maximum, the process repeats for the children within the next flex group, using any space left over from the previous flex group. Once there are no more flex groups, and there is still space remaining, the extra space is divided within the containing box according to the {{cssxref("box-pack")}} property.</p>
+For flexible elements assigned to flex groups, the first flex group is 1 and higher values specify subsequent flex groups. The initial value is 1. When dividing up the box's extra space, the browser first considers all elements within the first flex group. Each element within that group is given extra space based on the ratio of that element's flexibility compared to the flexibility of other elements within the same flex group. If the space of all flexible children within the group has been increased to the maximum, the process repeats for the children within the next flex group, using any space left over from the previous flex group. Once there are no more flex groups, and there is still space remaining, the extra space is divided within the containing box according to the {{cssxref("box-pack")}} property.
 
-<p>If the box would overflow after the preferred space of the children has been computed, then space is removed from flexible elements in a manner similar to that used when adding extra space. Each flex group is examined in turn and space is removed according to the ratio of the flexibility of each element. Elements do not shrink below their minimum widths.</p>
+If the box would overflow after the preferred space of the children has been computed, then space is removed from flexible elements in a manner similar to that used when adding extra space. Each flex group is examined in turn and space is removed according to the ratio of the flexibility of each element. Elements do not shrink below their minimum widths.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>box-flex-group</code> property is specified as any positive {{CSSxRef("&lt;integer&gt;")}}.</p>
+The `box-flex-group` property is specified as any positive {{CSSxRef("&lt;integer&gt;")}}.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{CSSSyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Simple_usage_example">Simple usage example</h3>
+### Simple usage example
 
-<p>In the original Flexbox spec, <code>box-flex-group</code> could be used to assign flex children to different groups to distribute flexible space between:</p>
+In the original Flexbox spec, `box-flex-group` could be used to assign flex children to different groups to distribute flexible space between:
 
-<pre class="brush: css">article:nth-child(1) {
+```css
+article:nth-child(1) {
   -webkit-box-flex-group: 1;
 }
 
 article:nth-child(2) {
   -webkit-box-flex-group: 2;
-}</pre>
+}
+```
 
-<p>This was only ever supported in WebKit-based browsers, with a prefix, and in subsequent versions of the spec this functionality does not have an equivalent. Instead, distribution of space inside the flex container is now handled using <code><a href="/en-US/docs/Web/CSS/flex-basis">flex-basis</a></code>, <code><a href="/en-US/docs/Web/CSS/flex-grow">flex-grow</a></code>, and <code><a href="/en-US/docs/Web/CSS/flex-shrink">flex-shrink</a></code>.</p>
+This was only ever supported in WebKit-based browsers, with a prefix, and in subsequent versions of the spec this functionality does not have an equivalent. Instead, distribution of space inside the flex container is now handled using [`flex-basis`](/en-US/docs/Web/CSS/flex-basis), [`flex-grow`](/en-US/docs/Web/CSS/flex-grow), and [`flex-shrink`](/en-US/docs/Web/CSS/flex-shrink).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any standard.</p>
+Not part of any standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{CSSxRef("box-flex")}}</li>
- <li>{{CSSxRef("box-ordinal-group")}}</li>
- <li>{{CSSxRef("box-pack")}}</li>
-</ul>
+- {{CSSxRef("box-flex")}}
+- {{CSSxRef("box-ordinal-group")}}
+- {{CSSxRef("box-pack")}}

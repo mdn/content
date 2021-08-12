@@ -8,33 +8,33 @@ tags:
   - media feature
 browser-compat: css.at-rules.media.shape
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <code>shape</code> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features">media feature</a> can be used to test the shape of the device to distinguish rectangular and round displays.</p>
+The `shape` [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) can be used to test the shape of the device to distinguish rectangular and round displays.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>shape</code> discrete feature is specified as one of two acceptable strings, either <code>rect</code> representing a rectangular screen or <code>round</code> representing a circular, oval or elliptical screen.</p>
+The `shape` discrete feature is specified as one of two acceptable strings, either `rect` representing a rectangular screen or `round` representing a circular, oval or elliptical screen.
 
-<dl>
- <dt><code><dfn>rect</dfn></code></dt>
- <dd>The shape is an axis aligned rectangle or square, or a similar shape such as rounded rectangle for which the traditional designs are appropriate.</dd>
- <dt><code><dfn>round</dfn></code></dt>
- <dd>The shape is rounded or a similar shape to the circle such as an oval, an ellipse for which distinctively rounded designs are appropriate.</dd>
-</dl>
+- `rect`
+  - : The shape is an axis aligned rectangle or square, or a similar shape such as rounded rectangle for which the traditional designs are appropriate.
+- `round`
+  - : The shape is rounded or a similar shape to the circle such as an oval, an ellipse for which distinctively rounded designs are appropriate.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Basic_example">Basic example</h3>
+### Basic example
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;h1&gt;Hello World!&lt;/h1&gt;
-</pre>
+```html
+<h1>Hello World!</h1>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">h1 {
+```css
+h1 {
   text-align: left;
 }
 
@@ -49,30 +49,29 @@ browser-compat: css.at-rules.media.shape
     text-align: center;
   }
 }
-</pre>
+```
 
-<h3 id="Custom_stylesheet">Custom stylesheet</h3>
+### Custom stylesheet
 
-<p>This HTML will apply a special stylesheet for devices that have round screens.</p>
+This HTML will apply a special stylesheet for devices that have round screens.
 
-<pre class="brush: html">&lt;head&gt;
-    &lt;link rel=&quot;stylesheet&quot; href=&quot;default.css&quot; /&gt;
-    &lt;link media=&quot;screen and (shape: rect)&quot; rel=&quot;stylesheet&quot; href=&quot;rectangle.css&quot; /&gt;
-    &lt;link media=&quot;screen and (shape: round)&quot; rel=&quot;stylesheet&quot; href=&quot;round.css&quot; /&gt;
-&lt;/head&gt;
-</pre>
+```html
+<head>
+    <link rel="stylesheet" href="default.css" />
+    <link media="screen and (shape: rect)" rel="stylesheet" href="rectangle.css" />
+    <link media="screen and (shape: round)" rel="stylesheet" href="round.css" />
+</head>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">Using Media Queries</a></li>
- <li><a href="/en-US/docs/Web/CSS/@media">@media</a></li>
-</ul>
+- [Using Media Queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [@media](/en-US/docs/Web/CSS/@media)

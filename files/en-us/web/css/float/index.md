@@ -6,93 +6,42 @@ tags:
   - CSS Positioning
   - CSS Property
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.float
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>float</code></strong> CSS property places an element on the left or right side of its container, allowing text and inline elements to wrap around it. The element is removed from the normal flow of the page, though still remaining a part of the flow (in contrast to <a href="/en-US/docs/Web/CSS/position#Absolute_positioning">absolute positioning</a>).</p>
+The **`float`** CSS property places an element on the left or right side of its container, allowing text and inline elements to wrap around it. The element is removed from the normal flow of the page, though still remaining a part of the flow (in contrast to [absolute positioning](/en-US/docs/Web/CSS/position#Absolute_positioning)).
 
-<div>{{EmbedInteractiveExample("pages/css/float.html")}}</div>
+{{EmbedInteractiveExample("pages/css/float.html")}}
 
-<p>A <em>floating element</em> is one where the computed value of <code>float</code> is not <code>none</code>.</p>
+A _floating element_ is one where the computed value of `float` is not `none`.
 
-<p>As <code>float</code> implies the use of the block layout, it modifies the computed value of the {{cssxref("display")}} values, in some cases:</p>
+As `float` implies the use of the block layout, it modifies the computed value of the {{cssxref("display")}} values, in some cases:
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specified value</th>
-   <th scope="col">Computed value</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>inline</code></td>
-   <td><code>block</code></td>
-  </tr>
-  <tr>
-   <td><code>inline-block</code></td>
-   <td><code>block</code></td>
-  </tr>
-  <tr>
-   <td><code>inline-table</code></td>
-   <td><code>table</code></td>
-  </tr>
-  <tr>
-   <td><code>table-row</code></td>
-   <td><code>block</code></td>
-  </tr>
-  <tr>
-   <td><code>table-row-group</code></td>
-   <td><code>block</code></td>
-  </tr>
-  <tr>
-   <td><code>table-column</code></td>
-   <td><code>block</code></td>
-  </tr>
-  <tr>
-   <td><code>table-column-group</code></td>
-   <td><code>block</code></td>
-  </tr>
-  <tr>
-   <td><code>table-cell</code></td>
-   <td><code>block</code></td>
-  </tr>
-  <tr>
-   <td><code>table-caption</code></td>
-   <td><code>block</code></td>
-  </tr>
-  <tr>
-   <td><code>table-header-group</code></td>
-   <td><code>block</code></td>
-  </tr>
-  <tr>
-   <td><code>table-footer-group</code></td>
-   <td><code>block</code></td>
-  </tr>
-  <tr>
-   <td><code>inline-flex</code></td>
-   <td><code>flex</code></td>
-  </tr>
-  <tr>
-   <td><code>inline-grid</code></td>
-   <td><code>grid</code></td>
-  </tr>
-  <tr>
-   <td><em>other</em></td>
-   <td><em>unchanged</em></td>
-  </tr>
- </tbody>
-</table>
+| Specified value      | Computed value |
+| -------------------- | -------------- |
+| `inline`             | `block`        |
+| `inline-block`       | `block`        |
+| `inline-table`       | `table`        |
+| `table-row`          | `block`        |
+| `table-row-group`    | `block`        |
+| `table-column`       | `block`        |
+| `table-column-group` | `block`        |
+| `table-cell`         | `block`        |
+| `table-caption`      | `block`        |
+| `table-header-group` | `block`        |
+| `table-footer-group` | `block`        |
+| `inline-flex`        | `flex`         |
+| `inline-grid`        | `grid`         |
+| _other_              | _unchanged_    |
 
-<div class="note">
-  <p><strong>Note:</strong> If you're referring to this property from JavaScript as a member of the {{domxref("HTMLElement.style")}} object, modern browsers support <code>float</code>, but in older browsers you have to spell it as <code>cssFloat</code>, with Internet Explorer versions 8 and older using <code>styleFloat</code>. This was an exception to the rule, that the name of the DOM member is the camel-case name of the dash-separated CSS name (due to the fact that "float" is a reserved word in JavaScript, as seen in the need to escape "class" as "className" and escape &lt;label&gt;'s "for" as "htmlFor").</p>
-</div>
+> **Note:** If you're referring to this property from JavaScript as a member of the {{domxref("HTMLElement.style")}} object, modern browsers support `float`, but in older browsers you have to spell it as `cssFloat`, with Internet Explorer versions 8 and older using `styleFloat`. This was an exception to the rule, that the name of the DOM member is the camel-case name of the dash-separated CSS name (due to the fact that "float" is a reserved word in JavaScript, as seen in the need to escape "class" as "className" and escape \<label>'s "for" as "htmlFor").
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 float: left;
 float: right;
 float: none;
@@ -104,60 +53,60 @@ float: inherit;
 float: initial;
 float: revert;
 float: unset;
-</pre>
+```
 
-<p>The <code>float</code> property is specified as a single keyword, chosen from the list of values below.</p>
+The `float` property is specified as a single keyword, chosen from the list of values below.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>left</code></dt>
- <dd>The element must float on the left side of its containing block.</dd>
- <dt><code>right</code></dt>
- <dd>The element must float on the right side of its containing block.</dd>
- <dt><code>none</code></dt>
- <dd>The element must not float.</dd>
- <dt><code>inline-start</code></dt>
- <dd>The element must float on the start side of its containing block. That is the left side with <code>ltr</code> scripts, and the right side with <code>rtl</code> scripts.</dd>
- <dt><code>inline-end</code></dt>
- <dd>The element must float on the end side of its containing block. That is the right side with <code>ltr</code> scripts, and the left side with <code>rtl</code> scripts.</dd>
-</dl>
+- `left`
+  - : The element must float on the left side of its containing block.
+- `right`
+  - : The element must float on the right side of its containing block.
+- `none`
+  - : The element must not float.
+- `inline-start`
+  - : The element must float on the start side of its containing block. That is the left side with `ltr` scripts, and the right side with `rtl` scripts.
+- `inline-end`
+  - : The element must float on the end side of its containing block. That is the right side with `ltr` scripts, and the left side with `rtl` scripts.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="How_floated_elements_are_positioned">How floated elements are positioned</h3>
+### How floated elements are positioned
 
-<p>As mentioned above, when an element is floated, it is taken out of the normal flow of the document (though still remaining part of it). It is shifted to the left, or right, until it touches the edge of its containing box, <em>or another floated element</em>.</p>
+As mentioned above, when an element is floated, it is taken out of the normal flow of the document (though still remaining part of it). It is shifted to the left, or right, until it touches the edge of its containing box, _or another floated element_.
 
-<p>In this example, there are three colored squares. Two are floated left, and one is floated right. Note that the second "left" square is placed to the right of the first. Additional squares would continue to stack to the right, until they filled the containing box, after which they would wrap to the next line.</p>
+In this example, there are three colored squares. Two are floated left, and one is floated right. Note that the second "left" square is placed to the right of the first. Additional squares would continue to stack to the right, until they filled the containing box, after which they would wrap to the next line.
 
-<p>A floated element is at least as tall as its tallest nested floated children. We gave the parent <code>width: 100%</code> and floated it to ensure it is tall enough to encompass its floated children, and to make sure it takes up the width of the parent so we don't have to clear its adjacent sibling.</p>
+A floated element is at least as tall as its tallest nested floated children. We gave the parent `width: 100%` and floated it to ensure it is tall enough to encompass its floated children, and to make sure it takes up the width of the parent so we don't have to clear its adjacent sibling.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;section&gt;
-  &lt;div class="left"&gt;1&lt;/div&gt;
-  &lt;div class="left"&gt;2&lt;/div&gt;
-  &lt;div class="right"&gt;3&lt;/div&gt;
-  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+```html
+<section>
+  <div class="left">1</div>
+  <div class="left">2</div>
+  <div class="right">3</div>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
      Morbi tristique sapien ac erat tincidunt, sit amet dignissim
      lectus vulputate. Donec id iaculis velit. Aliquam vel
      malesuada erat. Praesent non magna ac massa aliquet tincidunt
-     vel in massa. Phasellus feugiat est vel leo finibus congue.&lt;/p&gt;
-&lt;/section&gt;
-</pre>
+     vel in massa. Phasellus feugiat est vel leo finibus congue.</p>
+</section>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">section {
+```css
+section {
   border: 1px solid blue;
   width: 100%;
   float: left;
@@ -177,27 +126,26 @@ div {
 .right {
   float: right;
   background: cyan;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('How_floated_elements_are_positioned','400','180')}}</p>
+{{EmbedLiveSample('How_floated_elements_are_positioned','400','180')}}
 
-<h3 id="Clearing_floats">Clearing floats</h3>
+### Clearing floats
 
-<p>Sometimes you may want to force an item to move below any floated elements. For instance, you may want paragraphs to remain adjacent to floats, but force headings to be on their own line. See {{cssxref("clear")}} for examples.</p>
+Sometimes you may want to force an item to move below any floated elements. For instance, you may want paragraphs to remain adjacent to floats, but force headings to be on their own line. See {{cssxref("clear")}} for examples.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/block_formatting_context">Block formatting context</a></li>
- <li>Use {{cssxref("clear")}} to force an item to move below a floated element.</li>
-</ul>
+- [Block formatting context](/en-US/docs/Web/CSS/block_formatting_context)
+- Use {{cssxref("clear")}} to force an item to move below a floated element.

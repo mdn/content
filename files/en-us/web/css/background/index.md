@@ -9,37 +9,35 @@ tags:
   - recipe:css-shorthand-property
 browser-compat: css.properties.background
 ---
-<p>{{CSSRef("CSS Background")}}</p>
+{{CSSRef("CSS Background")}}
 
-<p>The <strong><code>background</code></strong> <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand</a> <a href="/en-US/docs/Web/CSS">CSS</a> property sets all background style properties at once, such as color, image, origin and size, or repeat method.</p>
+The **`background`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets all background style properties at once, such as color, image, origin and size, or repeat method.
 
-<div>{{EmbedInteractiveExample("pages/css/background.html")}}</div>
+{{EmbedInteractiveExample("pages/css/background.html")}}
 
+## Constituent properties
 
-<h2 id="Constituent_properties">Constituent properties</h2>
+This property is a shorthand for the following CSS properties:
 
-<p>This property is a shorthand for the following CSS properties:</p>
+- {{cssxref("background-attachment")}}
+- {{cssxref("background-clip")}}
+- {{cssxref("background-color")}}
+- {{cssxref("background-image")}}
+- {{cssxref("background-origin")}}
+- {{cssxref("background-position")}}
+- {{cssxref("background-repeat")}}
+- {{cssxref("background-size")}}
 
-<ul>
- <li>{{cssxref("background-attachment")}}</li>
- <li>{{cssxref("background-clip")}}</li>
- <li>{{cssxref("background-color")}}</li>
- <li>{{cssxref("background-image")}}</li>
- <li>{{cssxref("background-origin")}}</li>
- <li>{{cssxref("background-position")}}</li>
- <li>{{cssxref("background-repeat")}}</li>
- <li>{{cssxref("background-size")}}</li>
-</ul>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush: css no-line-numbers">/* Using a &lt;background-color&gt; */
+```css
+/* Using a <background-color> */
 background: green;
 
-/* Using a &lt;bg-image&gt; and &lt;repeat-style&gt; */
+/* Using a <bg-image> and <repeat-style> */
 background: url("test.jpg") repeat-y;
 
-/* Using a &lt;box&gt; and &lt;background-color&gt; */
+/* Using a <box> and <background-color> */
 background: border-box red;
 
 /* A single image, centered and scaled */
@@ -49,103 +47,98 @@ background: no-repeat center/80% url("../img/image.png");
 background: inherit;
 background: initial;
 background: revert;
-background: unset;</pre>
+background: unset;
+```
 
-<p>The <code>background</code> property is specified as one or more background layers, separated by commas.</p>
+The `background` property is specified as one or more background layers, separated by commas.
 
-<p>The syntax of each layer is as follows:</p>
+The syntax of each layer is as follows:
 
-<ul>
- <li>Each layer may include zero or one occurrences of any of the following values:
-  <ul>
-   <li><code>&lt;attachment&gt;</code></li>
-   <li><code>&lt;bg-image&gt;</code></li>
-   <li><code>&lt;position&gt;</code></li>
-   <li><code>&lt;bg-size&gt;</code></li>
-   <li><code>&lt;repeat-style&gt;</code></li>
-  </ul>
- </li>
- <li>The <code>&lt;bg-size&gt;</code> value may only be included immediately after <code>&lt;position&gt;</code>, separated with the '/' character, like this: "<code>center/80%</code>".</li>
- <li>The <code>&lt;box&gt;</code> value may be included zero, one, or two times. If included once, it sets both {{cssxref("background-origin")}} and {{cssxref("background-clip")}}. If it is included twice, the first occurrence sets {{cssxref("background-origin")}}, and the second sets {{cssxref("background-clip")}}.</li>
- <li>The <code>&lt;background-color&gt;</code> value may only be included in the last layer specified.</li>
-</ul>
+- Each layer may include zero or one occurrences of any of the following values:
 
-<h3 id="Values">Values</h3>
+  - `<attachment>`
+  - `<bg-image>`
+  - `<position>`
+  - `<bg-size>`
+  - `<repeat-style>`
 
-<dl>
- <dt><code>&lt;attachment&gt;</code></dt>
- <dd>See {{cssxref("background-attachment")}}</dd>
- <dt><code>&lt;box&gt;</code></dt>
- <dd>See {{cssxref("background-clip")}} and {{cssxref("background-origin")}}</dd>
- <dt><code>&lt;background-color&gt;</code></dt>
- <dd>See {{cssxref("background-color")}}</dd>
- <dt><code>&lt;bg-image&gt;</code></dt>
- <dd>See {{Cssxref("background-image")}}</dd>
- <dt><code>&lt;position&gt;</code></dt>
- <dd>See {{cssxref("background-position")}}</dd>
- <dt><code>&lt;repeat-style&gt;</code></dt>
- <dd>See {{cssxref("background-repeat")}}</dd>
- <dt><code>&lt;bg-size&gt;</code></dt>
- <dd>See {{cssxref("background-size")}}.</dd>
-</dl>
+- The `<bg-size>` value may only be included immediately after `<position>`, separated with the '/' character, like this: "`center/80%`".
+- The `<box>` value may be included zero, one, or two times. If included once, it sets both {{cssxref("background-origin")}} and {{cssxref("background-clip")}}. If it is included twice, the first occurrence sets {{cssxref("background-origin")}}, and the second sets {{cssxref("background-clip")}}.
+- The `<background-color>` value may only be included in the last layer specified.
 
-<h2 id="Accessibility_concerns">Accessibility concerns</h2>
+### Values
 
-<p>Browsers do not provide any special information on background images to assistive technology. This is important primarily for screen readers, as a screen reader will not announce its presence and therefore convey nothing to its users. If the image contains information critical to understanding the page's overall purpose, it is better to describe it semantically in the document.</p>
+- `<attachment>`
+  - : See {{cssxref("background-attachment")}}
+- `<box>`
+  - : See {{cssxref("background-clip")}} and {{cssxref("background-origin")}}
+- `<background-color>`
+  - : See {{cssxref("background-color")}}
+- `<bg-image>`
+  - : See {{Cssxref("background-image")}}
+- `<position>`
+  - : See {{cssxref("background-position")}}
+- `<repeat-style>`
+  - : See {{cssxref("background-repeat")}}
+- `<bg-size>`
+  - : See {{cssxref("background-size")}}.
 
-<ul>
- <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_%e2%80%94_providing_text_alternatives_for_non-text_content">MDN Understanding WCAG, Guideline 1.1 explanations</a></li>
- <li><a href="https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html">Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0</a></li>
-</ul>
+## Accessibility concerns
 
-<h2 id="Formal_definition">Formal definition</h2>
+Browsers do not provide any special information on background images to assistive technology. This is important primarily for screen readers, as a screen reader will not announce its presence and therefore convey nothing to its users. If the image contains information critical to understanding the page's overall purpose, it is better to describe it semantically in the document.
 
-<p>{{cssinfo}}</p>
+- [MDN Understanding WCAG, Guideline 1.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_%e2%80%94_providing_text_alternatives_for_non-text_content)
+- [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal definition
+
+{{cssinfo}}
+
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_backgrounds_with_color_keywords_and_images">Setting backgrounds with color keywords and images</h3>
+### Setting backgrounds with color keywords and images
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p class="topbanner"&gt;
-  Starry sky&lt;br/&gt;
-  Twinkle twinkle&lt;br/&gt;
+```html
+<p class="topbanner">
+  Starry sky<br/>
+  Twinkle twinkle<br/>
   Starry sky
-&lt;/p&gt;
-&lt;p class="warning"&gt;Here is a paragraph&lt;p&gt;</pre>
+</p>
+<p class="warning">Here is a paragraph<p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush:css">.warning {
+```css
+.warning {
   background: pink;
 }
 
 .topbanner {
   background: url("starsolid.gif") #99f repeat-y fixed;
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Setting_backgrounds_with_color_keywords_and_images")}}</p>
+{{EmbedLiveSample("Setting_backgrounds_with_color_keywords_and_images")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("box-decoration-break")}}</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients">Using gradients</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds">Using multiple backgrounds</a></li>
-</ul>
+- {{cssxref("box-decoration-break")}}
+- [Using gradients](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
+- [Using multiple backgrounds](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds)

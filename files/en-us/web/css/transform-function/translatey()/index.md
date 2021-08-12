@@ -9,36 +9,31 @@ tags:
   - Reference
 browser-compat: css.types.transform-function.translateY
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>translateY()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a
-    href="/en-US/docs/Web/CSS/CSS_Functions">function</a> repositions an element vertically on the 2D plane. Its result
-  is a {{cssxref("&lt;transform-function&gt;")}} data type.</p>
+The **`translateY()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) repositions an element vertically on the 2D plane. Its result
+is a {{cssxref("&lt;transform-function&gt;")}} data type.
 
-<p><img alt="" src="translatey.png"></p>
+![](translatey.png)
 
-<div class="note">
-  <p><strong>Note:</strong> <code>translateY(ty)</code> is equivalent to
-    <code><a href="/en-US/docs/Web/CSS/transform-function/translate()">translate</a>(0, ty)</code> or
-    <code><a href="/en-US/docs/Web/CSS/transform-function/translate3d()">translate3d</a>(0, ty, 0)</code>.
-  </p>
-</div>
+> **Note:** `translateY(ty)` is equivalent to
+> `translate(0, ty)` or
+> `translate3d(0, ty, 0)`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">/* &lt;length-percentage&gt; values */
+```css
+/* <length-percentage> values */
 transform: translateY(200px);
 transform: translateY(50%);
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
-  <dt><code>&lt;length-percentage&gt;</code></dt>
-  <dd>The value is a {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}} representing the ordinate of the
+- `<length-percentage>`
+  - : The value is a {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}} representing the ordinate of the
     translating vector. A percentage value refers to the height of the reference box defined by the
-    {{cssxref("transform-box")}} property.</dd>
-</dl>
+    {{cssxref("transform-box")}} property.
 
 <table class="standard-table">
   <thead>
@@ -52,81 +47,82 @@ transform: translateY(50%);
   <tbody>
     <tr>
       <td rowspan="2">
-        <p>A translation is not a linear transformation in ℝ^2 and can't be represented using a
-          Cartesian-coordinate matrix.</p>
+        <p>
+          A translation is not a linear transformation in ℝ^2 and can't be
+          represented using a Cartesian-coordinate matrix.
+        </p>
       </td>
-      <td><math>
-          <mfenced>
-            <mtable>
-              <mtr>
+      <td>
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr
+                ><mtd><mn>1</mn></mtd>
+                <mtd><mn>0</mn></mtd>
+                <mtd><mn>0</mn></mtd> </mtr
+              ><mtr
+                ><mtd><mn>0</mn></mtd>
+                <mtd><mn>1</mn></mtd>
+                <mtd><mi>t</mi></mtd> </mtr
+              ><mtr
+                ><mtd><mn>0</mn></mtd>
+                <mtd><mn>0</mn></mtd>
+                <mtd><mn>1</mn></mtd></mtr
+              ></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
+      <td rowspan="2">
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr
+                ><mtd><mn>1</mn></mtd>
+                <mtd><mn>0</mn></mtd>
+                <mtd><mn>0</mn></mtd> </mtr
+              ><mtr
+                ><mtd><mn>0</mn></mtd>
+                <mtd><mn>1</mn></mtd>
+                <mtd><mi>t</mi></mtd> </mtr
+              ><mtr
+                ><mtd><mn>0</mn></mtd>
+                <mtd><mn>0</mn></mtd>
+                <mtd><mn>1</mn></mtd></mtr
+              ></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
+      <td rowspan="2">
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr
+                ><mtd><mn>1</mn></mtd>
+                <mtd><mn>0</mn></mtd>
+                <mtd><mn>0</mn></mtd>
+                <mtd><mn>0</mn></mtd> </mtr
+              ><mtr
+                ><mtd><mn>0</mn></mtd>
                 <mtd><mn>1</mn></mtd>
                 <mtd><mn>0</mn></mtd>
-                <mtd><mn>0</mn></mtd>
-              </mtr>
-              <mtr>
-                <mtd><mn>0</mn></mtd>
-                <mtd><mn>1</mn></mtd>
-                <mtd><mi>t</mi></mtd>
-              </mtr>
-              <mtr>
-                <mtd><mn>0</mn></mtd>
+                <mtd><mi>t</mi></mtd> </mtr
+              ><mtr
+                ><mtd><mn>0</mn></mtd>
                 <mtd><mn>0</mn></mtd>
                 <mtd><mn>1</mn></mtd>
-              </mtr>
-            </mtable>
-          </mfenced>
-        </math></td>
-      <td rowspan="2"><math>
-          <mfenced>
-            <mtable>
-              <mtr>
-                <mtd><mn>1</mn></mtd>
+                <mtd><mn>0</mn></mtd> </mtr
+              ><mtr
+                ><mtd><mn>0</mn></mtd>
                 <mtd><mn>0</mn></mtd>
                 <mtd><mn>0</mn></mtd>
-              </mtr>
-              <mtr>
-                <mtd><mn>0</mn></mtd>
-                <mtd><mn>1</mn></mtd>
-                <mtd><mi>t</mi></mtd>
-              </mtr>
-              <mtr>
-                <mtd><mn>0</mn></mtd>
-                <mtd><mn>0</mn></mtd>
-                <mtd><mn>1</mn></mtd>
-              </mtr>
-            </mtable>
-          </mfenced>
-        </math></td>
-      <td rowspan="2"><math>
-          <mfenced>
-            <mtable>
-              <mtr>
-                <mtd><mn>1</mn></mtd>
-                <mtd><mn>0</mn></mtd>
-                <mtd><mn>0</mn></mtd>
-                <mtd><mn>0</mn></mtd>
-              </mtr>
-              <mtr>
-                <mtd><mn>0</mn></mtd>
-                <mtd><mn>1</mn></mtd>
-                <mtd><mn>0</mn></mtd>
-                <mtd><mi>t</mi></mtd>
-              </mtr>
-              <mtr>
-                <mtd><mn>0</mn></mtd>
-                <mtd><mn>0</mn></mtd>
-                <mtd><mn>1</mn></mtd>
-                <mtd><mn>0</mn></mtd>
-              </mtr>
-              <mtr>
-                <mtd><mn>0</mn></mtd>
-                <mtd><mn>0</mn></mtd>
-                <mtd><mn>0</mn></mtd>
-                <mtd><mn>1</mn></mtd>
-              </mtr>
-            </mtable>
-          </mfenced>
-        </math></td>
+                <mtd><mn>1</mn></mtd></mtr
+              ></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
     </tr>
     <tr>
       <td><code>[1 0 0 1 0 t]</code></td>
@@ -134,22 +130,26 @@ transform: translateY(50%);
   </tbody>
 </table>
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
-<pre class="brush: css">translateY({{cssxref("&lt;length-percentage&gt;")}})
-</pre>
+```css
+translateY({{cssxref("&lt;length-percentage&gt;")}})
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;Static&lt;/div&gt;
-&lt;div class="moved"&gt;Moved&lt;/div&gt;
-&lt;div&gt;Static&lt;/div&gt;</pre>
+```html
+<div>Static</div>
+<div class="moved">Moved</div>
+<div>Static</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   width: 60px;
   height: 60px;
   background-color: skyblue;
@@ -159,23 +159,21 @@ transform: translateY(50%);
   transform: translateY(10px);
   background-color: pink;
 }
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Examples", 250, 250)}}</p>
+{{EmbedLiveSample("Examples", 250, 250)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{cssxref("transform")}}</li>
-  <li>{{cssxref("&lt;transform-function&gt;")}}</li>
-</ul>
+- {{cssxref("transform")}}
+- {{cssxref("&lt;transform-function&gt;")}}

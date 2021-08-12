@@ -6,20 +6,21 @@ tags:
   - CSS Background
   - CSS Property
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.background-origin
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>background-origin</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets the background's origin: from the border start, inside the border, or inside the padding.</p>
+The **`background-origin`** [CSS](/en-US/docs/Web/CSS) property sets the background's origin: from the border start, inside the border, or inside the padding.
 
-<div>{{EmbedInteractiveExample("pages/css/background-origin.html")}}</div>
+{{EmbedInteractiveExample("pages/css/background-origin.html")}}
 
-<p>Note that <code>background-origin</code> is ignored when {{cssxref("background-attachment")}} is <code>fixed</code>.</p>
+Note that `background-origin` is ignored when {{cssxref("background-attachment")}} is `fixed`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 background-origin: border-box;
 background-origin: padding-box;
 background-origin: content-box;
@@ -29,62 +30,65 @@ background-origin: inherit;
 background-origin: initial;
 background-origin: revert;
 background-origin: unset;
-</pre>
+```
 
-<p>The <code>background-origin</code> property is specified as one of the keyword values listed below.</p>
+The `background-origin` property is specified as one of the keyword values listed below.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>border-box</code></dt>
- <dd>The background is positioned relative to the border box.</dd>
- <dt><code>padding-box</code></dt>
- <dd>The background is positioned relative to the padding box.</dd>
- <dt><code>content-box</code></dt>
- <dd>The background is positioned relative to the content box.</dd>
-</dl>
+- `border-box`
+  - : The background is positioned relative to the border box.
+- `padding-box`
+  - : The background is positioned relative to the padding box.
+- `content-box`
+  - : The background is positioned relative to the content box.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_background_origins">Setting background origins</h3>
+### Setting background origins
 
-<pre class="brush:css; highlight:[6];">.example {
+```css
+.example {
   border: 10px double;
   padding: 10px;
   background: url('image.jpg');
   background-position: center left;
   background-origin: content-box;
 }
-</pre>
+```
 
-<pre class="brush:css; highlight:[6];">#example2 {
+```css
+#example2 {
   border: 4px solid black;
   padding: 10px;
   background: url('image.gif');
   background-repeat: no-repeat;
   background-origin: border-box;
 }
-</pre>
+```
 
-<pre class="brush:css; highlight:[4];">div {
+```css
+div {
   background-image: url('logo.jpg'), url('mainback.png'); /* Applies two images to the background */
   background-position: top right, 0px 0px;
   background-origin: content-box, padding-box;
-}</pre>
+}
+```
 
-<h3 id="Using_two_gradients">Using two gradients</h3>
+### Using two gradients
 
-<p>In this example the box has a thick dotted border. The first gradient uses the <code>padding-box</code> as the <code>background-origin</code> and therefore the background sits inside the border. The second uses the <code>content-box</code> and so only displays behind the content.</p>
+In this example the box has a thick dotted border. The first gradient uses the `padding-box` as the `background-origin` and therefore the background sits inside the border. The second uses the `content-box` and so only displays behind the content.
 
-<pre class="brush:css;">.box {
+```css
+.box {
   margin: 10px 0;
   color: #fff;
   background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,0.6) 60%, rgba(252,176,69,1) 100%),
@@ -94,22 +98,23 @@ background-origin: unset;
   width: 400px;
   background-origin: padding-box, content-box;
   background-repeat: no-repeat;
-}</pre>
+}
+```
 
-<pre class="brush:html">&lt;div class="box"&gt;Hello!&lt;/div&gt;</pre>
+```html
+<div class="box">Hello!</div>
+```
 
-<p>{{EmbedLiveSample('Using_two_gradients', 420, 140)}}</p>
+{{EmbedLiveSample('Using_two_gradients', 420, 140)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("background-clip")}}</li>
-</ul>
+- {{cssxref("background-clip")}}

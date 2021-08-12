@@ -10,63 +10,61 @@ tags:
   - Reference
 browser-compat: css.at-rules.font-face.font-family
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>font-family</code></strong> CSS descriptor allows authors to specify the font family for the font specified in an {{cssxref("@font-face")}} rule.</p>
+The **`font-family`** CSS descriptor allows authors to specify the font family for the font specified in an {{cssxref("@font-face")}} rule.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">/* &lt;string&gt; values */
+```css
+/* <string> values */
 font-family: "font family";
 font-family: 'another font family';
 
-/* &lt;custom-ident&gt; value */
+/* <custom-ident> value */
 font-family: examplefont;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>&lt;family-name&gt;</code></dt>
- <dd>Specifies the name of the font family.</dd>
-</dl>
+- `<family-name>`
+  - : Specifies the name of the font family.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_the_font_family_name">Setting the font family name</h3>
+### Setting the font family name
 
-<pre class="brush: css">@font-face {
+```css
+@font-face {
   font-family: examplefont;
   src: url('examplefont.ttf');
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("@font-face/font-display", "font-display")}}</li>
- <li>{{cssxref("@font-face/font-stretch", "font-stretch")}}</li>
- <li>{{cssxref("@font-face/font-style", "font-style")}}</li>
- <li>{{cssxref("@font-face/font-weight", "font-weight")}}</li>
- <li>{{cssxref("@font-face/font-variant", "font-variant")}}</li>
- <li>{{cssxref("font-feature-settings", "font-feature-settings")}}</li>
- <li>{{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}</li>
- <li>{{cssxref("@font-face/src", "src")}}</li>
- <li>{{cssxref("@font-face/unicode-range", "unicode-range")}}</li>
-</ul>
+- {{cssxref("@font-face/font-display", "font-display")}}
+- {{cssxref("@font-face/font-stretch", "font-stretch")}}
+- {{cssxref("@font-face/font-style", "font-style")}}
+- {{cssxref("@font-face/font-weight", "font-weight")}}
+- {{cssxref("@font-face/font-variant", "font-variant")}}
+- {{cssxref("font-feature-settings", "font-feature-settings")}}
+- {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}
+- {{cssxref("@font-face/src", "src")}}
+- {{cssxref("@font-face/unicode-range", "unicode-range")}}

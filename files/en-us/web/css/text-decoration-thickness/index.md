@@ -6,18 +6,19 @@ tags:
   - CSS Text Decoration
   - Property
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
   - text-decoration
   - text-decoration-thickness
 browser-compat: css.properties.text-decoration-thickness
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>text-decoration-thickness</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets the stroke thickness of the decoration line that is used on text in an element, such as a line-through, underline, or overline.</p>
+The **`text-decoration-thickness`** [CSS](/en-US/docs/Web/CSS) property sets the stroke thickness of the decoration line that is used on text in an element, such as a line-through, underline, or overline.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* Single keyword */
+```css
+/* Single keyword */
 text-decoration-thickness: auto;
 text-decoration-thickness: from-font;
 
@@ -33,42 +34,43 @@ text-decoration-thickness: inherit;
 text-decoration-thickness: initial;
 text-decoration-thickness: revert;
 text-decoration-thickness: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>The browser chooses an appropriate width for the text decoration line.</dd>
- <dt><code>from-font</code></dt>
- <dd>If the font file includes information about a preferred thickness, use that value. If the font file doesn't include this information, behave as if <code>auto</code> was set, with the browser choosing an appropriate thickness.</dd>
- <dt><code>&lt;length&gt;</code></dt>
- <dd>Specifies the thickness of the text decoration line as a {{cssxref('length')}}, overriding the font file suggestion or the browser default.</dd>
- <dt><code>&lt;percentage&gt;</code></dt>
- <dd>Specifies the thickness of the text decoration line as a {{cssxref('percentage')}} of <strong>1em</strong> in the current font. A percentage inherits as a relative value, and so therefore scales with changes in the font. The browser must use a minimum of 1 device pixel. For a given application of this property, the thickness is constant across the whole box it is applied to, even if there are child elements with a different font size.</dd>
-</dl>
+- `auto`
+  - : The browser chooses an appropriate width for the text decoration line.
+- `from-font`
+  - : If the font file includes information about a preferred thickness, use that value. If the font file doesn't include this information, behave as if `auto` was set, with the browser choosing an appropriate thickness.
+- `<length>`
+  - : Specifies the thickness of the text decoration line as a {{cssxref('length')}}, overriding the font file suggestion or the browser default.
+- `<percentage>`
+  - : Specifies the thickness of the text decoration line as a {{cssxref('percentage')}} of **1em** in the current font. A percentage inherits as a relative value, and so therefore scales with changes in the font. The browser must use a minimum of 1 device pixel. For a given application of this property, the thickness is constant across the whole box it is applied to, even if there are child elements with a different font size.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Varying_thickness">Varying thickness</h3>
+### Varying thickness
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p class="thin"&gt;Here's some text with a 1px red underline.&lt;/p&gt;
-&lt;p class="thick"&gt;This one has a 5px red underline.&lt;/p&gt;
-&lt;p class="shorthand"&gt;This uses the equivalent shorthand.&lt;/p&gt;</pre>
+```html
+<p class="thin">Here's some text with a 1px red underline.</p>
+<p class="thick">This one has a 5px red underline.</p>
+<p class="shorthand">This uses the equivalent shorthand.</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.thin {
+```css
+.thin {
   text-decoration-line: underline;
   text-decoration-style: solid;
   text-decoration-color: red;
@@ -84,27 +86,24 @@ text-decoration-thickness: unset;
 
 .shorthand {
   text-decoration: underline solid red 5px;
-}</pre>
+}
+```
 
-<h4 id="Results">Results</h4>
+#### Results
 
-<p>{{ EmbedLiveSample('Varying_thickness', '', '', '') }}</p>
+{{ EmbedLiveSample('Varying_thickness', '', '', '') }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<div class="notecard note">
-<p><strong>Note:</strong> The property used to be called <code>text-decoration-width</code>, but was updated in 2019 to <code>text-decoration-thickness</code>.</p>
-</div>
+> **Note:** The property used to be called `text-decoration-width`, but was updated in 2019 to `text-decoration-thickness`.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("text-decoration")}}</li>
- <li>{{cssxref("text-underline-offset")}}</li>
-</ul>
+- {{cssxref("text-decoration")}}
+- {{cssxref("text-underline-offset")}}

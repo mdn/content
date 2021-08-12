@@ -7,27 +7,26 @@ tags:
   - CSS Grid
   - CSS Property
   - Reference
-  - 'recipe:css-shorthand-property'
+  - recipe:css-shorthand-property
 browser-compat: css.properties.place-items
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <a href="/en-US/docs/Web/CSS">CSS</a> <strong><code>place-items</code></strong> <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand property</a> allows you to align items along both the block and inline directions at once (i.e. the {{CSSxRef("align-items")}} and {{CSSxRef("justify-items")}} properties) in a relevant layout system such as <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">Grid</a> or <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">Flexbox</a>. If the second value is not set, the first value is also used for it.</p>
+The [CSS](/en-US/docs/Web/CSS) **`place-items`** [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) allows you to align items along both the block and inline directions at once (i.e. the {{CSSxRef("align-items")}} and {{CSSxRef("justify-items")}} properties) in a relevant layout system such as [Grid](/en-US/docs/Web/CSS/CSS_Grid_Layout) or [Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout). If the second value is not set, the first value is also used for it.
 
-<div>{{EmbedInteractiveExample("pages/css/place-items.html")}}</div>
+{{EmbedInteractiveExample("pages/css/place-items.html")}}
 
-<h2 id="Constituent_properties">Constituent properties</h2>
+## Constituent properties
 
-<p>This property is a shorthand for the following CSS properties:</p>
+This property is a shorthand for the following CSS properties:
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/align-items"><code>align-items</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/justify-items"><code>justify-items</code></a></li>
-</ul>
+- [`align-items`](/en-US/docs/Web/CSS/align-items)
+- [`justify-items`](/en-US/docs/Web/CSS/justify-items)
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css">/* Keyword values */
+```css
+/* Keyword values */
 place-items: auto center;
 place-items: normal start;
 
@@ -53,65 +52,63 @@ place-items: inherit;
 place-items: initial;
 place-items: revert;
 place-items: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>The value used is the value of the <code>justify-items</code> property of the parents box, unless the box has no parent, or is absolutely positioned, in these cases, <code>auto</code> represents <code>normal</code>.</dd>
- <dt><code>normal</code></dt>
- <dd>The effect of this keyword is dependent of the layout mode we are in:
- <ul>
-  <li>In block-level layouts, the keyword is a synonym of <code>start</code>.</li>
-  <li>In absolutely-positioned layouts, the keyword behaved like <code>start</code> on <em>replaced</em> absolutely-positioned boxes, and as <code>stretch</code> on <em>all other</em> absolutely-positioned boxes.</li>
-  <li>In table cell layouts, this keyword has no meaning as this property is <em>ignored</em>.</li>
-  <li>In flexbox layouts, this keyword has no meaning as this property is <em>ignored.</em></li>
-  <li>In grid layouts, this keyword leads to a behavior similar to the one of <code>stretch</code>, except for boxes with an aspect ratio or an intrinsic sizes where it behaves like <code>start</code>.</li>
- </ul>
- </dd>
- <dt><code>start</code></dt>
- <dd>The item is packed flush to each other toward the start edge of the alignment container in the appropriate axis.</dd>
- <dt><code>end</code></dt>
- <dd>The item is packed flush to each other toward the end edge of the alignment container in the appropriate axis.</dd>
- <dt><code>flex-start</code></dt>
- <dd>The item is packed flush to each other toward the edge of the alignment container depending on the flex container's main-start or cross-start side.<br>
- This only applies to flex layout items. For items that are not children of a flex container, this value is treated like <code>start</code>.</dd>
- <dt><code>flex-end</code></dt>
- <dd>The item is packed flush to each other toward the edge of the alignment container depending on the flex container's main-end or cross-end side.<br>
- This only applies to flex layout items. For items that are not children of a flex container, this value is treated like <code>end</code>.</dd>
- <dt><code>self-start</code></dt>
- <dd>The item is packed flush to the edge of the alignment container of the start side of the item, in the appropriate axis.</dd>
- <dt><code>self-end</code></dt>
- <dd>The item is packed flush to the edge of the alignment container of the end side of the item, in the appropriate axis.</dd>
- <dt><code>center</code></dt>
- <dd>The items are packed flush to each other toward the center of the of the alignment container.</dd>
- <dt><code>left</code></dt>
- <dd>The items are packed flush to each other toward the left edge of the alignment container. If the property’s axis is not parallel with the inline axis, this value behaves like <code>start</code>.</dd>
- <dt><code>right</code></dt>
- <dd>The items are packed flush to each other toward the right edge of the alignment container in the appropriate axis. If the property’s axis is not parallel with the inline axis, this value behaves like <code>start</code>.</dd>
- <dt><code>baseline<br>
- first baseline</code><br>
- <code>last baseline</code></dt>
- <dd>Specifies participation in first- or last-baseline alignment: aligns the alignment baseline of the box’s first or last baseline set with the corresponding baseline in the shared first or last baseline set of all the boxes in its baseline-sharing group.<br>
- The fallback alignment for <code>first baseline</code> is <code>start</code>, the one for <code>last baseline</code> is <code>end</code>.</dd>
- <dt><code>stretch</code></dt>
- <dd>If the combined size of the items is less than the size of the alignment container, any <code>auto</code>-sized items have their size increased equally (not proportionally), while still respecting the constraints imposed by {{CSSxRef("max-height")}}/{{CSSxRef("max-width")}} (or equivalent functionality), so that the combined size exactly fills the alignment container.</dd>
-</dl>
+- `auto`
+  - : The value used is the value of the `justify-items` property of the parents box, unless the box has no parent, or is absolutely positioned, in these cases, `auto` represents `normal`.
+- `normal`
 
-<h2 id="Formal_definition">Formal definition</h2>
+  - : The effect of this keyword is dependent of the layout mode we are in:
 
-<p>{{cssinfo}}</p>
+    - In block-level layouts, the keyword is a synonym of `start`.
+    - In absolutely-positioned layouts, the keyword behaved like `start` on _replaced_ absolutely-positioned boxes, and as `stretch` on _all other_ absolutely-positioned boxes.
+    - In table cell layouts, this keyword has no meaning as this property is _ignored_.
+    - In flexbox layouts, this keyword has no meaning as this property is _ignored._
+    - In grid layouts, this keyword leads to a behavior similar to the one of `stretch`, except for boxes with an aspect ratio or an intrinsic sizes where it behaves like `start`.
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+- `start`
+  - : The item is packed flush to each other toward the start edge of the alignment container in the appropriate axis.
+- `end`
+  - : The item is packed flush to each other toward the end edge of the alignment container in the appropriate axis.
+- `flex-start`
+  - : The item is packed flush to each other toward the edge of the alignment container depending on the flex container's main-start or cross-start side.
+    This only applies to flex layout items. For items that are not children of a flex container, this value is treated like `start`.
+- `flex-end`
+  - : The item is packed flush to each other toward the edge of the alignment container depending on the flex container's main-end or cross-end side.
+    This only applies to flex layout items. For items that are not children of a flex container, this value is treated like `end`.
+- `self-start`
+  - : The item is packed flush to the edge of the alignment container of the start side of the item, in the appropriate axis.
+- `self-end`
+  - : The item is packed flush to the edge of the alignment container of the end side of the item, in the appropriate axis.
+- `center`
+  - : The items are packed flush to each other toward the center of the of the alignment container.
+- `left`
+  - : The items are packed flush to each other toward the left edge of the alignment container. If the property’s axis is not parallel with the inline axis, this value behaves like `start`.
+- `right`
+  - : The items are packed flush to each other toward the right edge of the alignment container in the appropriate axis. If the property’s axis is not parallel with the inline axis, this value behaves like `start`.
+- `baseline first baseline`
+  `last baseline`
+  - : Specifies participation in first- or last-baseline alignment: aligns the alignment baseline of the box’s first or last baseline set with the corresponding baseline in the shared first or last baseline set of all the boxes in its baseline-sharing group.
+    The fallback alignment for `first baseline` is `start`, the one for `last baseline` is `end`.
+- `stretch`
+  - : If the combined size of the items is less than the size of the alignment container, any `auto`-sized items have their size increased equally (not proportionally), while still respecting the constraints imposed by {{CSSxRef("max-height")}}/{{CSSxRef("max-width")}} (or equivalent functionality), so that the combined size exactly fills the alignment container.
+
+## Formal definition
+
+{{cssinfo}}
+
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Placing_items_in_a_flex_container">Placing items in a flex container</h3>
+### Placing items in a flex container
 
-<pre class="brush: css hidden">div &gt; div {
+```css hidden
+div > div {
   box-sizing: border-box;
   border: 2px solid #8c8c8c;
   width: 50px;
@@ -157,53 +154,56 @@ select {
 
 .row {
   margin-top: 10px;
-}</pre>
+}
+```
 
-<pre class="brush: html hidden">&lt;div id="container" class="flex"&gt;
-  &lt;div id="item1"&gt;1&lt;/div&gt;
-  &lt;div id="item2"&gt;2&lt;/div&gt;
-  &lt;div id="item3"&gt;3&lt;/div&gt;
-  &lt;div id="item4"&gt;4&lt;/div&gt;
-  &lt;div id="item5"&gt;5&lt;/div&gt;
-  &lt;div id="item6"&gt;6&lt;/div&gt;
-&lt;/div&gt;
+```html hidden
+<div id="container" class="flex">
+  <div id="item1">1</div>
+  <div id="item2">2</div>
+  <div id="item3">3</div>
+  <div id="item4">4</div>
+  <div id="item5">5</div>
+  <div id="item6">6</div>
+</div>
 
-&lt;div class="row"&gt;
-  &lt;label for="display"&gt;display: &lt;/label&gt;
-  &lt;select id="display"&gt;
-    &lt;option value="flex"&gt;flex&lt;/option&gt;
-    &lt;option value="grid"&gt;grid&lt;/option&gt;
-  &lt;/select&gt;
-&lt;/div&gt;
+<div class="row">
+  <label for="display">display: </label>
+  <select id="display">
+    <option value="flex">flex</option>
+    <option value="grid">grid</option>
+  </select>
+</div>
 
-&lt;div class="row"&gt;
-  &lt;label for="values"&gt;place-items: &lt;/label&gt;
-  &lt;select id="values"&gt;
-    &lt;option value="start"&gt;start&lt;/option&gt;
-    &lt;option value="center"&gt;center&lt;/option&gt;
-    &lt;option value="end"&gt;end&lt;/option&gt;
-    &lt;option value="left"&gt;left&lt;/option&gt;
-    &lt;option value="right"&gt;right&lt;/option&gt;
-    &lt;option value="auto center"&gt;auto center&lt;/option&gt;
-    &lt;option value="normal start"&gt;normal start&lt;/option&gt;
-    &lt;option value="center normal"&gt;center normal&lt;/option&gt;
-    &lt;option value="start auto"&gt;start auto&lt;/option&gt;
-    &lt;option value="end normal"&gt;end normal&lt;/option&gt;
-    &lt;option value="self-start auto"&gt;self-start auto&lt;/option&gt;
-    &lt;option value="self-end normal"&gt;self-end normal&lt;/option&gt;
-    &lt;option value="flex-start auto"&gt;flex-start auto&lt;/option&gt;
-    &lt;option value="flex-end normal"&gt;flex-end normal&lt;/option&gt;
-    &lt;option value="left auto"&gt;left auto&lt;/option&gt;
-    &lt;option value="right normal"&gt;right normal&lt;/option&gt;
-    &lt;option value="baseline normal"&gt;baseline normal&lt;/option&gt;
-    &lt;option value="first baseline auto"&gt;first baseline auto&lt;/option&gt;
-    &lt;option value="last baseline normal"&gt;last baseline normal&lt;/option&gt;
-    &lt;option value="stretch auto"&gt;stretch auto&lt;/option&gt;
-  &lt;/select&gt;
-&lt;/div&gt;
-</pre>
+<div class="row">
+  <label for="values">place-items: </label>
+  <select id="values">
+    <option value="start">start</option>
+    <option value="center">center</option>
+    <option value="end">end</option>
+    <option value="left">left</option>
+    <option value="right">right</option>
+    <option value="auto center">auto center</option>
+    <option value="normal start">normal start</option>
+    <option value="center normal">center normal</option>
+    <option value="start auto">start auto</option>
+    <option value="end normal">end normal</option>
+    <option value="self-start auto">self-start auto</option>
+    <option value="self-end normal">self-end normal</option>
+    <option value="flex-start auto">flex-start auto</option>
+    <option value="flex-end normal">flex-end normal</option>
+    <option value="left auto">left auto</option>
+    <option value="right normal">right normal</option>
+    <option value="baseline normal">baseline normal</option>
+    <option value="first baseline auto">first baseline auto</option>
+    <option value="last baseline normal">last baseline normal</option>
+    <option value="stretch auto">stretch auto</option>
+  </select>
+</div>
+```
 
-<pre class="brush: js hidden">var values = document.getElementById('values');
+```js hidden
+var values = document.getElementById('values');
 var display = document.getElementById('display');
 var container = document.getElementById('container');
 
@@ -214,11 +214,12 @@ values.addEventListener('change', function (evt) {
 display.addEventListener('change', function (evt) {
   container.className = evt.target.value;
 });
-</pre>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css; highlight[4]">#container {
+```css
+#container {
   height:200px;
   width: 240px;
   place-items: center; /* You can change this value by selecting another option in the list */
@@ -234,29 +235,27 @@ display.addEventListener('change', function (evt) {
   display: grid;
   grid-template-columns: repeat(auto-fill, 50px);
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Placing_items_in_a_flex_container", 260, 290)}}</p>
+{{EmbedLiveSample("Placing_items_in_a_flex_container", 260, 290)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>CSS Flexbox Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Basic Concepts of Flexbox</a></em></li>
- <li>CSS Flexbox Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container">Aligning items in a flex container</a></em></li>
- <li>CSS Grid Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">Box alignment in CSS Grid layouts</a></em></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Box_Alignment">CSS Box Alignment</a></li>
- <li>The {{CSSxRef("align-items")}} property</li>
- <li>The {{CSSxRef("align-self")}} property</li>
- <li>The {{CSSxRef("justify-items")}} property</li>
- <li>The {{CSSxRef("justify-self")}} property</li>
-</ul>
+- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
+- CSS Flexbox Guide: _[Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_
+- CSS Grid Guide: _[Box alignment in CSS Grid layouts](/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
+- [CSS Box Alignment](/en-US/docs/Web/CSS/CSS_Box_Alignment)
+- The {{CSSxRef("align-items")}} property
+- The {{CSSxRef("align-self")}} property
+- The {{CSSxRef("justify-items")}} property
+- The {{CSSxRef("justify-self")}} property

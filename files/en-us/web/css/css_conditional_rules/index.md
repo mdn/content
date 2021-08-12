@@ -8,54 +8,39 @@ tags:
   - Overview
   - Reference
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong>CSS Conditional Rules</strong> is a CSS module that allows to define a set of rules that will only apply based on the capabilities of the processor or the document the style sheet is being applied to.</p>
+**CSS Conditional Rules** is a CSS module that allows to define a set of rules that will only apply based on the capabilities of the processor or the document the style sheet is being applied to.
 
-<h2 id="Reference">Reference</h2>
+## Reference
 
-<h3 id="At-rules">At-rules</h3>
+### At-rules
 
-<ul>
- <li>{{cssxref("@document")}}</li>
- <li>{{cssxref("@media")}}</li>
- <li>{{cssxref("@supports")}}</li>
- <li>{{cssxref("@import")}}</li>
-</ul>
+- {{cssxref("@document")}}
+- {{cssxref("@media")}}
+- {{cssxref("@supports")}}
+- {{cssxref("@import")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Conditional')}}</td>
-   <td>{{Spec2('CSS3 Conditional')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                | Status                                   | Comment            |
+| -------------------------------------------- | ---------------------------------------- | ------------------ |
+| {{SpecName('CSS3 Conditional')}} | {{Spec2('CSS3 Conditional')}} | Initial definition |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<h3 id="document_rule"><code>@document</code> rule</h3>
+### `@document` rule
 
-<p>{{Compat("css.at-rules.document")}}</p>
+{{Compat("css.at-rules.document")}}
 
-<h3 id="import_rule"><code>@import</code> rule</h3>
+### `@import` rule
 
-<p>{{Compat("css.at-rules.import")}}</p>
+{{Compat("css.at-rules.import")}}
 
-<h3 id="media_rule"><code>@media</code> rule</h3>
+### `@media` rule
 
-<p>{{Compat("css.at-rules.media")}}</p>
+{{Compat("css.at-rules.media")}}
 
-<h3 id="supports_rule"><code>@supports</code> rule</h3>
+### `@supports` rule
 
-<p>{{Compat("css.at-rules.supports")}}</p>
+{{Compat("css.at-rules.supports")}}

@@ -10,51 +10,50 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.-moz-image-region
 ---
-<div>{{CSSRef}}{{Non-standard_Header}}</div>
+{{CSSRef}}{{Non-standard_Header}}
 
-<p>For certain XUL elements and pseudo-elements that use an image from the {{CSSxRef("list-style-image")}} property, this property specifies a region of the image that is used in place of the whole image. This allows elements to use different pieces of the same image to improve performance.</p>
+For certain XUL elements and pseudo-elements that use an image from the {{CSSxRef("list-style-image")}} property, this property specifies a region of the image that is used in place of the whole image. This allows elements to use different pieces of the same image to improve performance.
 
-<pre class="brush: css no-line-numbers">/* Keyword value */
+```css
+/* Keyword value */
 -moz-image-region: auto;
 
-/* &lt;shape&gt; value */
+/* <shape> value */
 -moz-image-region: rect(0, 8px, 4px, 4px);
 
 /* Global values */
 -moz-image-region: inherit;
 -moz-image-region: initial;
--moz-image-region: unset;</pre>
+-moz-image-region: unset;
+```
 
-<p>The syntax is similar to the {{CSSxRef("clip")}} property. All four values are relative to the upper left corner of the image.</p>
+The syntax is similar to the {{CSSxRef("clip")}} property. All four values are relative to the upper left corner of the image.
 
-<div class="note">
-<p><strong>Note:</strong> For a system that works on any background, see {{CSSxRef("-moz-image-rect")}}.</p>
-</div>
+> **Note:** For a system that works on any background, see {{CSSxRef("-moz-image-rect")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>Automatically defines the region of the image to use.</dd>
- <dt><a href="/en-US/docs/Web/CSS/shape"><code>&lt;shape&gt;</code></a></dt>
- <dd>A shape defining the part of the image to use. The <code>rect()</code> function defines a rectangle to use as shape. Its parameters define the top, right, bottom, and left offsets of the edges of the image, in this order.</dd>
-</dl>
+- `auto`
+  - : Automatically defines the region of the image to use.
+- [`<shape>`](/en-US/docs/Web/CSS/shape)
+  - : A shape defining the part of the image to use. The `rect()` function defines a rectangle to use as shape. Its parameters define the top, right, bottom, and left offsets of the edges of the image, in this order.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{CSSSyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Clipping_an_image">Clipping an image</h3>
+### Clipping an image
 
-<pre class="brush:css">#example-button {
+```css
+#example-button {
   /* display only the 4x4 area from the top left of this image */
   list-style-image: url("chrome://example/skin/example.png");
   -moz-image-region: rect(0px, 4px, 4px, 0px);
@@ -62,18 +61,17 @@ browser-compat: css.properties.-moz-image-region
 #example-button:hover {
   /* use the 4x4 area to the right of the first for the hovered button */
   -moz-image-region: rect(0px, 8px, 4px, 4px);
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any standard.</p>
+Not part of any standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{CSSxRef("-moz-image-rect")}}</li>
-</ul>
+- {{CSSxRef("-moz-image-rect")}}

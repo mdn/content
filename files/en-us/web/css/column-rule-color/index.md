@@ -11,18 +11,19 @@ tags:
   - Styling HTML
   - column-rule-color
   - columns
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.column-rule-color
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>column-rule-color</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets the color of the line drawn between columns in a multi-column layout.</p>
+The **`column-rule-color`** [CSS](/en-US/docs/Web/CSS) property sets the color of the line drawn between columns in a multi-column layout.
 
-<div>{{EmbedInteractiveExample("pages/css/column-rule-color.html")}}</div>
+{{EmbedInteractiveExample("pages/css/column-rule-color.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* &lt;color&gt; values */
+```css
+/* <color> values */
 column-rule-color: red;
 column-rule-color: rgb(192, 56, 78);
 column-rule-color: transparent;
@@ -33,60 +34,60 @@ column-rule-color: inherit;
 column-rule-color: initial;
 column-rule-color: revert;
 column-rule-color: unset;
-</pre>
+```
 
-<p>The <code>column-rule-color</code> property is specified as a single <code>&lt;color&gt;</code> value.</p>
+The `column-rule-color` property is specified as a single `<color>` value.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt>{{cssxref("&lt;color&gt;")}}</dt>
- <dd>The color of the rule that separates columns.</dd>
-</dl>
-<h2 id="Formal_definition">Formal definition</h2>
+- {{cssxref("&lt;color&gt;")}}
+  - : The color of the rule that separates columns.
 
-<p>{{cssinfo}}</p>
+## Formal definition
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+{{cssinfo}}
+
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_a_blue_column_rule">Setting a blue column rule</h3>
+### Setting a blue column rule
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;This is a bunch of text split into three columns.
+```html
+<p>This is a bunch of text split into three columns.
    The `column-rule-color` property is used to change
    the color of the line that is drawn between columns.
-   Don't you think that's wonderful?&lt;/p&gt;</pre>
+   Don't you think that's wonderful?</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush:css">p {
+```css
+p {
   column-count: 3;
   column-rule-style: solid;
   column-rule-color: blue;
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Setting_a_blue_column_rule")}}</p>
+{{EmbedLiveSample("Setting_a_blue_column_rule")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The {{cssxref("&lt;color&gt;")}} data type</li>
- <li>Other color-related properties: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, and {{cssxref("caret-color")}}</li>
- <li><a href="/en-US/docs/Web/HTML/Applying_color">Applying color to HTML elements using CSS</a></li>
-</ul>
+- The {{cssxref("&lt;color&gt;")}} data type
+- Other color-related properties: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, and {{cssxref("caret-color")}}
+- [Applying color to HTML elements using CSS](/en-US/docs/Web/HTML/Applying_color)

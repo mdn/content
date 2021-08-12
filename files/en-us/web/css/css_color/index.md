@@ -12,91 +12,56 @@ tags:
   - Styling HTML
   - colors
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong>CSS Color</strong> is a CSS module that deals with colors, color types, color blending, opacity, and how you can apply these colors and effects to HTML content. Not all CSS properties that take a {{cssxref("&lt;color&gt;")}} as a value are part of this module, but they do depend upon it.</p>
+**CSS Color** is a CSS module that deals with colors, color types, color blending, opacity, and how you can apply these colors and effects to HTML content. Not all CSS properties that take a {{cssxref("&lt;color&gt;")}} as a value are part of this module, but they do depend upon it.
 
-<h2 id="Reference">Reference</h2>
+## Reference
 
-<h3 id="Properties">Properties</h3>
+### Properties
 
-<ul>
- <li>{{cssxref("color")}}</li>
- <li>{{cssxref("color-adjust")}}</li>
- <li>{{cssxref("opacity")}}</li>
-</ul>
+- {{cssxref("color")}}
+- {{cssxref("color-adjust")}}
+- {{cssxref("opacity")}}
 
-<h3 id="Data_types">Data types</h3>
+### Data types
 
-<ul>
- <li>{{cssxref("&lt;color&gt;")}}</li>
-</ul>
+- {{cssxref("&lt;color&gt;")}}
 
-<h2 id="Guides">Guides</h2>
+## Guides
 
-<dl>
- <dt><a href="/en-US/docs/Web/HTML/Applying_color">Applying color to HTML elements using CSS</a></dt>
- <dd>A guide to using CSS to apply color to a variety of types of content. All color-related CSS properties are touched upon.</dd>
-</dl>
+- [Applying color to HTML elements using CSS](/en-US/docs/Web/HTML/Applying_color)
+  - : A guide to using CSS to apply color to a variety of types of content. All color-related CSS properties are touched upon.
 
-<h2 id="Tools">Tools</h2>
+## Tools
 
-<dl>
- <dt><a href="/en-US/docs/Web/CSS/CSS_Colors/Color_picker_tool">Color picker tool</a></dt>
- <dd>This tool makes it easy to create, adjust, and experiment with custom colors.</dd>
-</dl>
+- [Color picker tool](/en-US/docs/Web/CSS/CSS_Colors/Color_picker_tool)
+  - : This tool makes it easy to create, adjust, and experiment with custom colors.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Colors')}}</td>
-   <td>{{Spec2('CSS4 Colors')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Colors')}}</td>
-   <td>{{Spec2('CSS3 Colors')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'colors.html')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                    | Status                           | Comment            |
+| ------------------------------------------------ | -------------------------------- | ------------------ |
+| {{SpecName('CSS4 Colors')}}             | {{Spec2('CSS4 Colors')}} |                    |
+| {{SpecName('CSS3 Colors')}}             | {{Spec2('CSS3 Colors')}} |                    |
+| {{SpecName('CSS2.1', 'colors.html')}} | {{Spec2('CSS2.1')}}         |                    |
+| {{SpecName('CSS1')}}                     | {{Spec2('CSS1')}}         | Initial definition |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<h3 id="color_property"><code>color</code> property</h3>
+### `color` property
 
-<p>{{Compat("css.properties.color")}}</p>
+{{Compat("css.properties.color")}}
 
-<h3 id="color-adjust_property"><code>color-adjust</code> property</h3>
+### `color-adjust` property
 
-<p>{{Compat("css.properties.color-adjust")}}</p>
+{{Compat("css.properties.color-adjust")}}
 
-<h3 id="opacity_property"><code>opacity</code> property</h3>
+### `opacity` property
 
-<p>{{Compat("css.properties.opacity")}}</p>
+{{Compat("css.properties.opacity")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Color-related properties that are part of other specifications: {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}</li>
- <li>In CSS, gradients aren't colors but <a href="/en-US/docs/Web/CSS/CSS_Images">images</a>.</li>
-</ul>
+- Color-related properties that are part of other specifications: {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}
+- In CSS, gradients aren't colors but [images](/en-US/docs/Web/CSS/CSS_Images).

@@ -1,9 +1,9 @@
 ---
 title: '::-webkit-slider-runnable-track'
-slug: 'Web/CSS/::-webkit-slider-runnable-track'
+slug: Web/CSS/::-webkit-slider-runnable-track
 tags:
   - CSS
-  - 'CSS:WebKit Extensions'
+  - CSS:WebKit Extensions
   - NeedsBrowserCompatibility
   - NeedsCompatTable
   - NeedsExample
@@ -14,32 +14,31 @@ tags:
   - Selector
 browser-compat: css.selectors.-webkit-slider-runnable-track
 ---
-<p>{{CSSRef}}{{Non-standard_Header}}</p>
+{{CSSRef}}{{Non-standard_Header}}
 
-<p>The <strong><code>::-webkit-slider-runnable-track</code></strong> CSS <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-element</a> represents the "track" (the groove in which the indicator slides) of an {{HTMLElement("input/range", '&lt;input type="range"&gt;')}}.</p>
+The **`::-webkit-slider-runnable-track`** CSS [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents the "track" (the groove in which the indicator slides) of an {{HTMLElement("input/range", '&lt;input type="range"&gt;')}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">::-webkit-slider-runnable-track</pre>
+```css
+::-webkit-slider-runnable-track
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any standard.</p>
+Not part of any standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{CSSxRef("::-webkit-slider-thumb")}}</li>
- <li>Similar pseudo-elements used by other browsers:
-  <ul>
-   <li>{{CSSxRef("::-ms-track")}}</li>
-   <li>{{CSSxRef("::-moz-range-track")}}</li>
-  </ul>
- </li>
- <li><a href="https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/">CSS-Tricks: Styling Cross-Browser Compatible Range Inputs with CSS</a></li>
- <li><a href="http://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html">QuirksMode: Styling and scripting sliders</a></li>
-</ul>
+- {{CSSxRef("::-webkit-slider-thumb")}}
+- Similar pseudo-elements used by other browsers:
+
+  - {{CSSxRef("::-ms-track")}}
+  - {{CSSxRef("::-moz-range-track")}}
+
+- [CSS-Tricks: Styling Cross-Browser Compatible Range Inputs with CSS](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/)
+- [QuirksMode: Styling and scripting sliders](http://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html)

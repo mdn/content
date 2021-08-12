@@ -8,124 +8,85 @@ tags:
   - Reference
   - Selectors
 ---
-<div>{{CSSRef("Selectors")}}</div>
+{{CSSRef("Selectors")}}
 
-<p><strong>CSS selectors</strong> define the elements to which a set of CSS rules apply.</span></p>
+**CSS selectors** define the elements to which a set of CSS rules apply.
 
-<div class="notecard note">
-<p><strong>Note:</strong> There are no selectors or combinators to select parent items, siblings of parents, or children of parent siblings.</p>
-</div>
+> **Note:** There are no selectors or combinators to select parent items, siblings of parents, or children of parent siblings.
 
-<h2 id="Basic_selectors">Basic selectors</h2>
+## Basic selectors
 
-<dl>
- <dt><a href="/en-US/docs/Web/CSS/Universal_selectors">Universal selector</a></dt>
- <dd>Selects all elements. Optionally, it may be restricted to a specific namespace or to all namespaces.<br>
- <strong>Syntax:</strong> <code>*</code> <code><var>ns</var>|*</code> <code>*|*</code><br>
- <strong>Example:</strong> <code>*</code> will match all the elements of the document.</dd>
- <dt><a href="/en-US/docs/Web/CSS/Type_selectors">Type selector</a></dt>
- <dd>Selects all elements that have the given node name.<br>
- <strong>Syntax:</strong> <code><var>elementname</var></code><br>
- <strong>Example:</strong> <code>input</code> will match any {{HTMLElement("input")}} element.</dd>
- <dt><a href="/en-US/docs/Web/CSS/Class_selectors">Class selector</a></dt>
- <dd>Selects all elements that have the given <code>class</code> attribute.<br>
- <strong>Syntax:</strong> <code>.<var>classname</var></code><br>
- <strong>Example:</strong> <code>.index</code> will match any element that has a class of "index".</dd>
- <dt><a href="/en-US/docs/Web/CSS/ID_selectors">ID selector</a></dt>
- <dd>Selects an element based on the value of its <code>id</code> attribute. There should be only one element with a given ID in a document.<br>
- <strong>Syntax:</strong> <code>#<var>idname</var></code><br>
- <strong>Example:</strong> <code>#toc</code> will match the element that has the ID "toc".</dd>
- <dt><a href="/en-US/docs/Web/CSS/Attribute_selectors">Attribute selector</a></dt>
- <dd>Selects all elements that have the given attribute.<br>
- <strong>Syntax:</strong> <code>[<var>attr</var>]</code> <code>[<var>attr</var>=<var>value</var>]</code> <code>[<var>attr</var>~=<var>value</var>]</code> <code>[<var>attr</var>|=<var>value</var>]</code> <code>[<var>attr</var>^=<var>value</var>]</code> <code>[<var>attr</var>$=<var>value</var>]</code> <code>[<var>attr</var>*=<var>value</var>]</code><br>
- <strong>Example:</strong> <code>[autoplay]</code> will match all elements that have the <code>autoplay</code> attribute set (to any value).</dd>
-</dl>
+- [Universal selector](/en-US/docs/Web/CSS/Universal_selectors)
+  - : Selects all elements. Optionally, it may be restricted to a specific namespace or to all namespaces.
+    **Syntax:** `*` `ns|*` `*|*`
+    **Example:** `*` will match all the elements of the document.
+- [Type selector](/en-US/docs/Web/CSS/Type_selectors)
+  - : Selects all elements that have the given node name.
+    **Syntax:** `elementname`
+    **Example:** `input` will match any {{HTMLElement("input")}} element.
+- [Class selector](/en-US/docs/Web/CSS/Class_selectors)
+  - : Selects all elements that have the given `class` attribute.
+    **Syntax:** `.classname`
+    **Example:** `.index` will match any element that has a class of "index".
+- [ID selector](/en-US/docs/Web/CSS/ID_selectors)
+  - : Selects an element based on the value of its `id` attribute. There should be only one element with a given ID in a document.
+    **Syntax:** `#idname`
+    **Example:** `#toc` will match the element that has the ID "toc".
+- [Attribute selector](/en-US/docs/Web/CSS/Attribute_selectors)
+  - : Selects all elements that have the given attribute.
+    **Syntax:** `[attr]` `[attr=value]` `[attr~=value]` `[attr|=value]` `[attr^=value]` `[attr$=value]` `[attr*=value]`
+    **Example:** `[autoplay]` will match all elements that have the `autoplay` attribute set (to any value).
 
-<h2 id="Grouping_selectors">Grouping selectors</h2>
+## Grouping selectors
 
-<dl>
- <dt><a href="/en-US/docs/Web/CSS/Selector_list">Selector list</a></dt>
- <dd>The <code>,</code> is a grouping method, it selects all the matching nodes.<br>
- <strong>Syntax:</strong> <code><var>A</var>, <var>B</var></code><br>
- <strong>Example:</strong> <code>div, span</code> will match both {{HTMLElement("span")}} and {{HTMLElement("div")}} elements.</dd>
-</dl>
+- [Selector list](/en-US/docs/Web/CSS/Selector_list)
+  - : The `,` is a grouping method, it selects all the matching nodes.
+    **Syntax:** `A, B`
+    **Example:** `div, span` will match both {{HTMLElement("span")}} and {{HTMLElement("div")}} elements.
 
-<h2 id="Combinators">Combinators</h2>
+## Combinators
 
-<dl>
- <dt><a href="/en-US/docs/Web/CSS/Descendant_combinator">Descendant combinator</a></dt>
- <dd>The <code> </code> (space) combinator selects nodes that are descendants of the first element.<br>
- <strong>Syntax:</strong> <code><var>A</var> <var>B</var></code><br>
- <strong>Example:</strong> <code>div span</code> will match all {{HTMLElement("span")}} elements that are inside a {{HTMLElement("div")}} element.</dd>
- <dt><a href="/en-US/docs/Web/CSS/Child_combinator">Child combinator</a></dt>
- <dd>The <code>&gt;</code> combinator selects nodes that are direct children of the first element.<br>
- <strong>Syntax:</strong> <code><var>A</var> &gt; <var>B</var></code><br>
- <strong>Example:</strong> <code>ul &gt; li</code> will match all {{HTMLElement("li")}} elements that are nested directly inside a {{HTMLElement("ul")}} element.</dd>
- <dt><a href="/en-US/docs/Web/CSS/General_sibling_combinator">General sibling combinator</a></dt>
- <dd>The <code>~</code> combinator selects siblings. This means that the second element follows the first (though not necessarily immediately), and both share the same parent.<br>
- <strong>Syntax:</strong> <code><var>A</var> ~ <var>B</var></code><br>
- <strong>Example:</strong> <code>p ~ span</code> will match all {{HTMLElement("span")}} elements that follow a {{HTMLElement("p")}}, immediately or not.</dd>
- <dt><a href="/en-US/docs/Web/CSS/Adjacent_sibling_combinator">Adjacent sibling combinator</a></dt>
- <dd>The <code>+</code> combinator matches the second element only if it <em>immediately</em> follows the first element.<br>
- <strong>Syntax:</strong> <code><var>A</var> + <var>B</var></code><br>
- <strong>Example:</strong> <code>h2 + p</code> will match all {{HTMLElement("p")}} elements that <em>immediately</em> follows {{HTMLElement("h2")}} element.</dd>
- <dt><a href="/en-US/docs/Web/CSS/Column_combinator">Column combinator</a> {{Experimental_Inline}}</dt>
- <dd>The <code>||</code> combinator selects nodes which belong to a column.<br>
- <strong>Syntax:</strong> <code><var>A</var> || <var>B</var></code><br>
- <strong>Example:</strong> <code>col || td</code> will match all {{HTMLElement("td")}} elements that belong to the scope of the {{HTMLElement("col")}}.</dd>
-</dl>
+- [Descendant combinator](/en-US/docs/Web/CSS/Descendant_combinator)
+  - : The ` ` (space) combinator selects nodes that are descendants of the first element.
+    **Syntax:** `A B`
+    **Example:** `div span` will match all {{HTMLElement("span")}} elements that are inside a {{HTMLElement("div")}} element.
+- [Child combinator](/en-US/docs/Web/CSS/Child_combinator)
+  - : The `>` combinator selects nodes that are direct children of the first element.
+    **Syntax:** `A > B`
+    **Example:** `ul > li` will match all {{HTMLElement("li")}} elements that are nested directly inside a {{HTMLElement("ul")}} element.
+- [General sibling combinator](/en-US/docs/Web/CSS/General_sibling_combinator)
+  - : The `~` combinator selects siblings. This means that the second element follows the first (though not necessarily immediately), and both share the same parent.
+    **Syntax:** `A ~ B`
+    **Example:** `p ~ span` will match all {{HTMLElement("span")}} elements that follow a {{HTMLElement("p")}}, immediately or not.
+- [Adjacent sibling combinator](/en-US/docs/Web/CSS/Adjacent_sibling_combinator)
+  - : The `+` combinator matches the second element only if it _immediately_ follows the first element.
+    **Syntax:** `A + B`
+    **Example:** `h2 + p` will match all {{HTMLElement("p")}} elements that _immediately_ follows {{HTMLElement("h2")}} element.
+- [Column combinator](/en-US/docs/Web/CSS/Column_combinator) {{Experimental_Inline}}
+  - : The `||` combinator selects nodes which belong to a column.
+    **Syntax:** `A || B`
+    **Example:** `col || td` will match all {{HTMLElement("td")}} elements that belong to the scope of the {{HTMLElement("col")}}.
 
-<h2 id="Pseudo">Pseudo</h2>
+## Pseudo
 
-<dl>
- <dt><a href="/en-US/docs/Web/CSS/Pseudo-classes">Pseudo classes</a></dt>
- <dd>The <code>:</code> pseudo allow the selection of elements based on state information that is not contained in the document tree.<br>
- <strong>Example:</strong> <code>a:visited</code> will match all {{HTMLElement("a")}} elements that have been visited by the user.</dd>
- <dt><a href="/en-US/docs/Web/CSS/Pseudo-elements">Pseudo elements</a></dt>
- <dd>The <code>::</code> pseudo represent entities that are not included in HTML.<br>
- <strong>Example:</strong> <code>p::first-line</code> will match the first line of all {{HTMLElement("p")}} elements.</dd>
-</dl>
+- [Pseudo classes](/en-US/docs/Web/CSS/Pseudo-classes)
+  - : The `:` pseudo allow the selection of elements based on state information that is not contained in the document tree.
+    **Example:** `a:visited` will match all {{HTMLElement("a")}} elements that have been visited by the user.
+- [Pseudo elements](/en-US/docs/Web/CSS/Pseudo-elements)
+  - : The `::` pseudo represent entities that are not included in HTML.
+    **Example:** `p::first-line` will match the first line of all {{HTMLElement("p")}} elements.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS4 Selectors")}}</td>
-   <td>{{Spec2("CSS4 Selectors")}}</td>
-   <td>Added the <code>||</code> column combinator, grid structural selectors, logical combinators, location, time-dimensional, resource state, linguistic and UI pseudo-classes, modifier for ASCII case-sensitive and case-insensitive attribute value selection.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS3 Selectors")}}</td>
-   <td>{{Spec2("CSS3 Selectors")}}</td>
-   <td>Added the <code>~</code> general sibling combinator and tree-structural pseudo-classes.<br>
-    Made pseudo-elements use a <code>::</code> double-colon prefix. Additional attribute selectors</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS2.1", "selector.html")}}</td>
-   <td>{{Spec2("CSS2.1")}}</td>
-   <td>Added the <code>&gt;</code> child and <code>+</code> adjacent sibling combinators.<br>
-    Added the <strong>universal</strong> and <strong>attribute</strong> selectors.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS1")}}</td>
-   <td>{{Spec2("CSS1")}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                        | Status                               | Comment                                                                                                                                                                                                                                             |
+| ---------------------------------------------------- | ------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName("CSS4 Selectors")}}             | {{Spec2("CSS4 Selectors")}} | Added the `\|\|` column combinator, grid structural selectors, logical combinators, location, time-dimensional, resource state, linguistic and UI pseudo-classes, modifier for ASCII case-sensitive and case-insensitive attribute value selection. |
+| {{SpecName("CSS3 Selectors")}}             | {{Spec2("CSS3 Selectors")}} | Added the `~` general sibling combinator and tree-structural pseudo-classes. Made pseudo-elements use a `::` double-colon prefix. Additional attribute selectors                                                                                    |
+| {{SpecName("CSS2.1", "selector.html")}} | {{Spec2("CSS2.1")}}             | Added the `>` child and `+` adjacent sibling combinators. Added the **universal** and **attribute** selectors.                                                                                                                                      |
+| {{SpecName("CSS1")}}                         | {{Spec2("CSS1")}}             | Initial definition.                                                                                                                                                                                                                                 |
 
-<p>See the <a href="/en-US/docs/Web/CSS/Pseudo-classes#Specifications">pseudo-class</a> and <a href="/en-US/docs/Web/CSS/Pseudo-elements#Specifications">pseudo-element</a> specification tables for details on those.</p>
+See the [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes#Specifications) and [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements#Specifications) specification tables for details on those.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/Specificity">CSS Specificity</a></li>
-</ul>
+- [CSS Specificity](/en-US/docs/Web/CSS/Specificity)

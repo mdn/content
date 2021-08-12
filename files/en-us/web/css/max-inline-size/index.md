@@ -12,24 +12,25 @@ tags:
   - Text Direction
   - Writing Mode
   - max-inline-size
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.max-inline-size
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>max-inline-size</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property defines the horizontal or vertical maximum size of an element's block, depending on its writing mode. It corresponds to either the {{cssxref("max-width")}} or the {{cssxref("max-height")}} property, depending on the value of {{cssxref("writing-mode")}}.</p>
+The **`max-inline-size`** [CSS](/en-US/docs/Web/CSS) property defines the horizontal or vertical maximum size of an element's block, depending on its writing mode. It corresponds to either the {{cssxref("max-width")}} or the {{cssxref("max-height")}} property, depending on the value of {{cssxref("writing-mode")}}.
 
-<p>If the writing mode is vertically oriented, the value of <code>max-inline-size</code> relates to the maximal height of the element; otherwise, it relates to the maximal width of the element. A related property is {{cssxref("max-block-size")}}, which defines the other dimension of the element.</p>
+If the writing mode is vertically oriented, the value of `max-inline-size` relates to the maximal height of the element; otherwise, it relates to the maximal width of the element. A related property is {{cssxref("max-block-size")}}, which defines the other dimension of the element.
 
-<div>{{EmbedInteractiveExample("pages/css/max-inline-size.html")}}</div>
+{{EmbedInteractiveExample("pages/css/max-inline-size.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* &lt;length&gt; values */
+```css
+/* <length> values */
 max-inline-size: 300px;
 max-inline-size: 25em;
 
-/* &lt;percentage&gt; values */
+/* <percentage> values */
 max-inline-size: 75%;
 
 /* Keyword values */
@@ -43,53 +44,54 @@ max-inline-size: inherit;
 max-inline-size: initial;
 max-inline-size: revert;
 max-inline-size: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<p>The <code>max-inline-size</code> property takes the same values as the {{cssxref("max-width")}} and {{cssxref("max-height")}} properties.</p>
+The `max-inline-size` property takes the same values as the {{cssxref("max-width")}} and {{cssxref("max-height")}} properties.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_maximum_inline_size_in_pixels">Setting maximum inline size in pixels</h3>
+### Setting maximum inline size in pixels
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p class="exampleText"&gt;Example text&lt;/p&gt;
-</pre>
+```html
+<p class="exampleText">Example text</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.exampleText {
+```css
+.exampleText {
   writing-mode: vertical-rl;
   background-color: yellow;
   block-size: 100%;
   max-inline-size: 200px;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Setting_maximum_inline_size_in_pixels")}}</p>
+{{EmbedLiveSample("Setting_maximum_inline_size_in_pixels")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The mapped physical properties: {{cssxref("max-width")}} and {{cssxref("max-height")}}</li>
- <li>{{cssxref("writing-mode")}}</li>
-</ul>
+- The mapped physical properties: {{cssxref("max-width")}} and {{cssxref("max-height")}}
+- {{cssxref("writing-mode")}}

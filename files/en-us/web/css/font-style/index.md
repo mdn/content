@@ -8,20 +8,21 @@ tags:
   - Reference
   - Web
   - font
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.font-style
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>font-style</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets whether a font should be styled with a normal, italic, or oblique face from its {{cssxref("font-family")}}.</p>
+The **`font-style`** [CSS](/en-US/docs/Web/CSS) property sets whether a font should be styled with a normal, italic, or oblique face from its {{cssxref("font-family")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/font-style.html")}}</div>
+{{EmbedInteractiveExample("pages/css/font-style.html")}}
 
-<p><strong>Italic</strong> font faces are generally cursive in nature, usually using less horizontal space than their unstyled counterparts, while <strong>oblique</strong> faces are usually just sloped versions of the regular face. When the specified style is not available, both italic and oblique faces are simulated by artificially sloping the glyphs of the regular face (use {{cssxref("font-synthesis")}} to control this behavior).</p>
+**Italic** font faces are generally cursive in nature, usually using less horizontal space than their unstyled counterparts, while **oblique** faces are usually just sloped versions of the regular face. When the specified style is not available, both italic and oblique faces are simulated by artificially sloping the glyphs of the regular face (use {{cssxref("font-synthesis")}} to control this behavior).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">font-style: normal;
+```css
+font-style: normal;
 font-style: italic;
 font-style: oblique;
 font-style: oblique 10deg;
@@ -31,50 +32,51 @@ font-style: inherit;
 font-style: initial;
 font-style: revert;
 font-style: unset;
-</pre>
+```
 
-<p>The <code>font-style</code> property is specified as a single keyword chosen from the list of values below, which can optionally include an angle if the keyword is <code>oblique</code>.</p>
+The `font-style` property is specified as a single keyword chosen from the list of values below, which can optionally include an angle if the keyword is `oblique`.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>normal</code></dt>
- <dd>Selects a font that is classified as <code>normal</code> within a {{Cssxref("font-family")}}.</dd>
- <dt><code>italic</code></dt>
- <dd>Selects a font that is classified as <code>italic</code>. If no italic version of the face is available, one classified as <code>oblique</code> is used instead. If neither is available, the style is artificially simulated.</dd>
- <dt><code>oblique</code></dt>
- <dd>Selects a font that is classified as <code>oblique</code>. If no oblique version of the face is available, one classified as <code>italic</code> is used instead. If neither is available, the style is artificially simulated.</dd>
- <dt><code>oblique</code> <code><a href="/en-US/docs/Web/CSS/angle">&lt;angle&gt;</a></code></dt>
- <dd>Selects a font classified as <code>oblique</code>, and additionally specifies an angle for the slant of the text. If one or more oblique faces are available in the chosen font family, the one that most closely matches the specified angle is chosen. If no oblique faces are available, the browser will synthesize an oblique version of the font by slanting a normal face by the specified amount. Valid values are degree values of <code>-90deg</code> to <code>90deg</code> inclusive. If an angle is not specified, an angle of 14 degrees is used. Positive values are slanted to the end of the line, while negative values are slanted towards the beginning.<br>
- <br>
- In general, for a requested angle of 14 degrees or greater, larger angles are preferred; otherwise, smaller angles are preferred (see the spec's <a href="https://drafts.csswg.org/css-fonts-4/#font-matching-algorithm">font matching section</a> for the precise algorithm).</dd>
-</dl>
+- `normal`
+  - : Selects a font that is classified as `normal` within a {{Cssxref("font-family")}}.
+- `italic`
+  - : Selects a font that is classified as `italic`. If no italic version of the face is available, one classified as `oblique` is used instead. If neither is available, the style is artificially simulated.
+- `oblique`
+  - : Selects a font that is classified as `oblique`. If no oblique version of the face is available, one classified as `italic` is used instead. If neither is available, the style is artificially simulated.
+- `oblique` [`<angle>`](/en-US/docs/Web/CSS/angle)
 
-<h3 id="Variable_fonts">Variable fonts</h3>
+  - : Selects a font classified as `oblique`, and additionally specifies an angle for the slant of the text. If one or more oblique faces are available in the chosen font family, the one that most closely matches the specified angle is chosen. If no oblique faces are available, the browser will synthesize an oblique version of the font by slanting a normal face by the specified amount. Valid values are degree values of `-90deg` to `90deg` inclusive. If an angle is not specified, an angle of 14 degrees is used. Positive values are slanted to the end of the line, while negative values are slanted towards the beginning.
 
-<p>Variable fonts can offer a fine control over the degree to which an oblique face is slanted. You can select this using the <code>&lt;angle&gt;</code> modifier for the <code>oblique</code> keyword.</p>
+    In general, for a requested angle of 14 degrees or greater, larger angles are preferred; otherwise, smaller angles are preferred (see the spec's [font matching section](https://drafts.csswg.org/css-fonts-4/#font-matching-algorithm) for the precise algorithm).
 
-<p>For TrueType or OpenType variable fonts, the <code>"slnt"</code> variation is used to implement varying slant angles for oblique, and the <code>"ital"</code> variation with a value of 1 is used to implement italic values. See {{cssxref("font-variation-settings")}}.</p>
+### Variable fonts
 
-<p>For the example below to work, you'll need a browser that supports the CSS Fonts Level 4 syntax in which <code>font-style: oblique</code> can accept an <code>&lt;angle&gt;</code>.</p>
+Variable fonts can offer a fine control over the degree to which an oblique face is slanted. You can select this using the `<angle>` modifier for the `oblique` keyword.
 
-<div>{{EmbedLiveSample("Variable_fonts", 1200, 180)}}</div>
+For TrueType or OpenType variable fonts, the `"slnt"` variation is used to implement varying slant angles for oblique, and the `"ital"` variation with a value of 1 is used to implement italic values. See {{cssxref("font-variation-settings")}}.
 
-<h4 id="HTML">HTML</h4>
+For the example below to work, you'll need a browser that supports the CSS Fonts Level 4 syntax in which `font-style: oblique` can accept an `<angle>`.
 
-<pre class="brush: html">&lt;header&gt;
-    &lt;input type="range" id="slant" name="slant" min="-90" max="90" /&gt;
-    &lt;label for="slant"&gt;Slant&lt;/label&gt;
-&lt;/header&gt;
-&lt;div class="container"&gt;
-    &lt;p class="sample"&gt;...it would not be wonderful to meet a Megalosaurus, forty feet long or so, waddling like an elephantine lizard up Holborn Hill.&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+{{EmbedLiveSample("Variable_fonts", 1200, 180)}}
 
-<h4 id="CSS">CSS</h4>
+#### HTML
 
-<pre class="brush: css">/*
-AmstelvarAlpha-VF is created by <span class="col-11 mr-2 text-gray-dark">David Berlow</span> (https://github.com/TypeNetwork/Amstelvar)
+```html
+<header>
+    <input type="range" id="slant" name="slant" min="-90" max="90" />
+    <label for="slant">Slant</label>
+</header>
+<div class="container">
+    <p class="sample">...it would not be wonderful to meet a Megalosaurus, forty feet long or so, waddling like an elephantine lizard up Holborn Hill.</p>
+</div>
+```
+
+#### CSS
+
+```css
+/*
+AmstelvarAlpha-VF is created by David Berlow (https://github.com/TypeNetwork/Amstelvar)
 and is used here under the terms of its license:
 https://github.com/TypeNetwork/Amstelvar/blob/master/OFL.txt
 */
@@ -97,10 +99,10 @@ label {
 .sample {
   font: 2rem 'AmstelvarAlpha', sans-serif;
 }
+```
 
-</pre>
-
-<pre class="brush: css hidden">html, body {
+```css hidden
+html, body {
   max-height: 100vh;
   max-width: 100vw;
   overflow: hidden;
@@ -119,15 +121,16 @@ header {
   flex-grow: 1;
 }
 
-.container &gt; p {
+.container > p {
   margin-top: 0;
   margin-bottom: 0;
 }
-</pre>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">let slantLabel = document.querySelector('label[for="slant"]');
+```js
+let slantLabel = document.querySelector('label[for="slant"]');
 let slantInput = document.querySelector('#slant');
 let sampleText = document.querySelector('.sample');
 
@@ -140,35 +143,35 @@ function update() {
 slantInput.addEventListener('input', update);
 
 update();
-</pre>
+```
 
-<h2 id="Accessibility_concerns">Accessibility concerns</h2>
+## Accessibility concerns
 
-<p>Large sections of text set with a <code>font-style</code> value of <code>italic</code> may be difficult for people with cognitive concerns such as Dyslexia to read.</p>
+Large sections of text set with a `font-style` value of `italic` may be difficult for people with cognitive concerns such as Dyslexia to read.
 
-<ul>
- <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">MDN Understanding WCAG, Guideline 1.4 explanations</a></li>
- <li><a href="https://www.w3.org/TR/WCAG21/#visual-presentation">W3C Understanding WCAG 2.1</a></li>
-</ul>
+- [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [W3C Understanding WCAG 2.1](https://www.w3.org/TR/WCAG21/#visual-presentation)
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Font_styles">Font styles</h3>
+### Font styles
 
-<pre class="brush: html hidden">&lt;p class="normal"&gt;This paragraph is normal.&lt;/p&gt;
-&lt;p class="italic"&gt;This paragraph is italic.&lt;/p&gt;
-&lt;p class="oblique"&gt;This paragraph is oblique.&lt;/p&gt;
-</pre>
+```html hidden
+<p class="normal">This paragraph is normal.</p>
+<p class="italic">This paragraph is italic.</p>
+<p class="oblique">This paragraph is oblique.</p>
+```
 
-<pre class="brush: css">.normal {
+```css
+.normal {
   font-style: normal;
 }
 
@@ -178,22 +181,21 @@ update();
 
 .oblique {
   font-style: oblique;
-}</pre>
+}
+```
 
-<p>{{ EmbedLiveSample('Font_styles') }}</p>
+{{ EmbedLiveSample('Font_styles') }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("font-style")}}</li>
- <li>{{cssxref("font-weight")}}</li>
- <li><a href="/en-US/docs/Learn/CSS/Styling_text/Fundamentals">Fundamental text and font styling</a></li>
-</ul>
+- {{cssxref("font-style")}}
+- {{cssxref("font-weight")}}
+- [Fundamental text and font styling](/en-US/docs/Learn/CSS/Styling_text/Fundamentals)

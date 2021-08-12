@@ -6,20 +6,21 @@ tags:
   - CSS Property
   - Reference
   - Web
-  - 'recipe:css-property'
+  - recipe:css-property
   - scroll-margin
   - scroll-margin-right
 browser-compat: css.properties.scroll-margin-right
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <code>scroll-margin-right</code> property defines the right margin of the scroll snap area that is used for snapping this box to the snapport. The scroll snap area is determined by taking the transformed border box, finding its rectangular bounding box (axis-aligned in the scroll container’s coordinate space), then adding the specified outsets.</p>
+The `scroll-margin-right` property defines the right margin of the scroll snap area that is used for snapping this box to the snapport. The scroll snap area is determined by taking the transformed border box, finding its rectangular bounding box (axis-aligned in the scroll container’s coordinate space), then adding the specified outsets.
 
-<div>{{EmbedInteractiveExample("pages/css/scroll-margin-right.html")}}</div>
+{{EmbedInteractiveExample("pages/css/scroll-margin-right.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">/* &lt;length&gt; values */
+```css
+/* <length> values */
 scroll-margin-right: 10px;
 scroll-margin-right: 1em;
 
@@ -28,33 +29,30 @@ scroll-margin-right: inherit;
 scroll-margin-right: initial;
 scroll-margin-right: revert;
 scroll-margin-right: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code><var>&lt;length&gt;</var></code></dt>
- <dd>An outset from the right edge of the scroll container.</dd>
-</dl>
-<h2 id="Formal_definition">Formal definition</h2>
+- `<length>`
+  - : An outset from the right edge of the scroll container.
 
-<p>{{cssinfo}}</p>
+## Formal definition
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+{{cssinfo}}
+
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/CSS/CSS_Scroll_Snap">CSS Scroll Snap</a></li>
-  <li><a href="https://developers.google.com/web/updates/2018/07/css-scroll-snap">Well-Controlled Scrolling with CSS Scroll Snap</a></li>
-</ul>
+- [CSS Scroll Snap](/en-US/docs/Web/CSS/CSS_Scroll_Snap)
+- [Well-Controlled Scrolling with CSS Scroll Snap](https://developers.google.com/web/updates/2018/07/css-scroll-snap)

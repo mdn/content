@@ -8,22 +8,23 @@ tags:
   - Experimental
   - Reference
   - min-inline-size
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.min-inline-size
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>min-inline-size</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property defines the horizontal or vertical minimal size of an element's block, depending on its writing mode. It corresponds to either the {{cssxref("min-width")}} or the {{cssxref("min-height")}} property, depending on the value of {{cssxref("writing-mode")}}.</p>
+The **`min-inline-size`** [CSS](/en-US/docs/Web/CSS) property defines the horizontal or vertical minimal size of an element's block, depending on its writing mode. It corresponds to either the {{cssxref("min-width")}} or the {{cssxref("min-height")}} property, depending on the value of {{cssxref("writing-mode")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/min-inline-size.html")}}</div>
+{{EmbedInteractiveExample("pages/css/min-inline-size.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* &lt;length&gt; values */
+```css
+/* <length> values */
 min-inline-size: 100px;
 min-inline-size: 5em;
 
-/* &lt;percentage&gt; values */
+/* <percentage> values */
 min-inline-size: 10%;
 
 /* Keyword values */
@@ -36,55 +37,56 @@ min-inline-size: inherit;
 min-inline-size: initial;
 min-inline-size: revert;
 min-inline-size: unset;
-</pre>
+```
 
-<p>If the writing mode is vertically oriented, the value of <code>min-inline-size</code> relates to the minimum height of the element; otherwise, it relates to the minimum width of the element. A related property is {{cssxref("min-block-size")}}, which defines the other dimension of the element.</p>
+If the writing mode is vertically oriented, the value of `min-inline-size` relates to the minimum height of the element; otherwise, it relates to the minimum width of the element. A related property is {{cssxref("min-block-size")}}, which defines the other dimension of the element.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<p>The <code>min-inline-size</code> property takes the same values as the {{cssxref("min-width")}} and {{cssxref("min-height")}} properties.</p>
+The `min-inline-size` property takes the same values as the {{cssxref("min-width")}} and {{cssxref("min-height")}} properties.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_minimum_inline_size_for_vertical_text">Setting minimum inline size for vertical text</h3>
+### Setting minimum inline size for vertical text
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p class="exampleText"&gt;Example text&lt;/p&gt;
-</pre>
+```html
+<p class="exampleText">Example text</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.exampleText {
+```css
+.exampleText {
   writing-mode: vertical-rl;
   background-color: yellow;
   block-size: 5%;
   min-inline-size: 200px;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Setting_minimum_inline_size_for_vertical_text")}}</p>
+{{EmbedLiveSample("Setting_minimum_inline_size_for_vertical_text")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The mapped physical properties: {{cssxref("min-width")}} and {{cssxref("min-height")}}</li>
- <li>{{cssxref("writing-mode")}}</li>
-</ul>
+- The mapped physical properties: {{cssxref("min-width")}} and {{cssxref("min-height")}}
+- {{cssxref("writing-mode")}}

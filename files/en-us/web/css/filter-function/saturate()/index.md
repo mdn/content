@@ -9,51 +9,51 @@ tags:
   - Reference
 browser-compat: css.types.filter-function.saturate
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>saturate()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Functions">function</a> super-saturates or desaturates the input image. Its result is a {{cssxref("&lt;filter-function&gt;")}}.</p>
+The **`saturate()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) super-saturates or desaturates the input image. Its result is a {{cssxref("&lt;filter-function&gt;")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/function-saturate.html")}}</div>
+{{EmbedInteractiveExample("pages/css/function-saturate.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">saturate(<var>amount</var>)</pre>
+```css
+saturate(amount)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code><var>amount</var></code></dt>
- <dd>The amount of the conversion, specified as a {{cssxref("&lt;number&gt;")}} or a {{cssxref("&lt;percentage&gt;")}}. A value under <code>100%</code> desaturates the image, while a value over <code>100%</code> super-saturates it. A value of <code>0%</code> is completely unsaturated, while a value of <code>100%</code> leaves the input unchanged. The lacuna value for interpolation is <code>1</code>.</dd>
-</dl>
+- `amount`
+  - : The amount of the conversion, specified as a {{cssxref("&lt;number&gt;")}} or a {{cssxref("&lt;percentage&gt;")}}. A value under `100%` desaturates the image, while a value over `100%` super-saturates it. A value of `0%` is completely unsaturated, while a value of `100%` leaves the input unchanged. The lacuna value for interpolation is `1`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Examples_of_correct_values_for_saturate">Examples of correct values for saturate()</h3>
+### Examples of correct values for saturate()
 
-<pre class="brush: css">saturate(0)     /* Completely unsaturated */
+```css
+saturate(0)     /* Completely unsaturated */
 saturate(.4)    /* 40% saturated */
 saturate(100%)  /* No effect */
-saturate(200%)  /* Double saturation */</pre>
+saturate(200%)  /* Double saturation */
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("&lt;filter-function&gt;")}}</li>
- <li>{{cssxref("filter-function/blur()", "blur()")}}</li>
- <li>{{cssxref("filter-function/brightness()", "brightness()")}}</li>
- <li>{{cssxref("filter-function/contrast()", "contrast()")}}</li>
- <li>{{cssxref("filter-function/drop-shadow()", "drop-shadow()")}}</li>
- <li>{{cssxref("filter-function/grayscale()", "grayscale()")}}</li>
- <li>{{cssxref("filter-function/hue-rotate()", "hue-rotate()")}}</li>
- <li>{{cssxref("filter-function/invert()", "invert()")}}</li>
- <li>{{cssxref("filter-function/opacity()", "opacity()")}}</li>
- <li>{{cssxref("filter-function/sepia()", "sepia()")}}</li>
-</ul>
+- {{cssxref("&lt;filter-function&gt;")}}
+- {{cssxref("filter-function/blur()", "blur()")}}
+- {{cssxref("filter-function/brightness()", "brightness()")}}
+- {{cssxref("filter-function/contrast()", "contrast()")}}
+- {{cssxref("filter-function/drop-shadow()", "drop-shadow()")}}
+- {{cssxref("filter-function/grayscale()", "grayscale()")}}
+- {{cssxref("filter-function/hue-rotate()", "hue-rotate()")}}
+- {{cssxref("filter-function/invert()", "invert()")}}
+- {{cssxref("filter-function/opacity()", "opacity()")}}
+- {{cssxref("filter-function/sepia()", "sepia()")}}

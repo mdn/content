@@ -9,34 +9,35 @@ tags:
   - CSS Property
   - Reference
   - gap
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.gap
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>gap</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets the gaps ({{glossary("gutters")}}) between rows and columns. It is a <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand</a> for {{CSSxRef("row-gap")}} and {{CSSxRef("column-gap")}}.</p>
+The **`gap`** [CSS](/en-US/docs/Web/CSS) property sets the gaps ({{glossary("gutters")}}) between rows and columns. It is a [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) for {{CSSxRef("row-gap")}} and {{CSSxRef("column-gap")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/gap.html")}}</div>
+{{EmbedInteractiveExample("pages/css/gap.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css; no-line-numbers">/* One &lt;length&gt; value */
+```css
+/* One <length> value */
 gap: 20px;
 gap: 1em;
 gap: 3vmin;
 gap: 0.5cm;
 
-/* One &lt;percentage&gt; value */
+/* One <percentage> value */
 gap: 16%;
 gap: 100%;
 
-/* Two &lt;length&gt; values */
+/* Two <length> values */
 gap: 20px 10px;
 gap: 1em 0.5em;
 gap: 3vmin 2vmax;
 gap: 0.5cm 2mm;
 
-/* One or two &lt;percentage&gt; values */
+/* One or two <percentage> values */
 gap: 16% 100%;
 gap: 21px 82%;
 
@@ -49,55 +50,55 @@ gap: inherit;
 gap: initial;
 gap: revert;
 gap: unset;
-</pre>
+```
 
-<p>This property is specified as a value for <code>&lt;'row-gap'&gt;</code> followed optionally by a value for <code>&lt;'column-gap'&gt;</code>. If <code>&lt;'column-gap'&gt;</code> is omitted, it's set to the same value as <code>&lt;'row-gap'&gt;</code>.</p>
+This property is specified as a value for `<'row-gap'>` followed optionally by a value for `<'column-gap'>`. If `<'column-gap'>` is omitted, it's set to the same value as `<'row-gap'>`.
 
-<p><code>&lt;'row-gap'&gt;</code> and <code>&lt;'column-gap'&gt;</code> are each specified as a <code>&lt;length&gt;</code> or a <code>&lt;percentage&gt;</code>.</p>
+`<'row-gap'>` and `<'column-gap'>` are each specified as a `<length>` or a `<percentage>`.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt>{{CSSxRef("&lt;length&gt;")}}</dt>
- <dd>Is the width of the gutter separating the grid lines.</dd>
- <dt>{{CSSxRef("&lt;percentage&gt;")}}</dt>
- <dd>Is the width of the gutter separating the grid lines, relative to the dimension of the element.</dd>
-</dl>
+- {{CSSxRef("&lt;length&gt;")}}
+  - : Is the width of the gutter separating the grid lines.
+- {{CSSxRef("&lt;percentage&gt;")}}
+  - : Is the width of the gutter separating the grid lines, relative to the dimension of the element.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Flex_layout">Flex layout</h3>
+### Flex layout
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html;">&lt;div id="flexbox"&gt;
-  &lt;div&gt;&lt;/div&gt;
-  &lt;div&gt;&lt;/div&gt;
-  &lt;div&gt;&lt;/div&gt;
-  &lt;div&gt;&lt;/div&gt;
-  &lt;div&gt;&lt;/div&gt;
-  &lt;div&gt;&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div id="flexbox">
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css; highlight[5]">#flexbox {
+```css
+#flexbox {
   display: flex;
   flex-wrap: wrap;
   width: 300px;
   gap: 20px 5px;
 }
 
-#flexbox &gt; div {
+#flexbox > div {
   border: 1px solid green;
   background-color: lime;
   flex: 1 1 auto;
@@ -105,81 +106,84 @@ gap: unset;
   height: 50px;
 
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Flex_layout", "auto", "120px")}}</p>
+{{EmbedLiveSample("Flex_layout", "auto", "120px")}}
 
-<h3 id="Grid_layout">Grid layout</h3>
+### Grid layout
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html;">&lt;div id="grid"&gt;
-  &lt;div&gt;&lt;/div&gt;
-  &lt;div&gt;&lt;/div&gt;
-  &lt;div&gt;&lt;/div&gt;
-  &lt;div&gt;&lt;/div&gt;
-  &lt;div&gt;&lt;/div&gt;
-  &lt;div&gt;&lt;/div&gt;
-  &lt;div&gt;&lt;/div&gt;
-  &lt;div&gt;&lt;/div&gt;
-  &lt;div&gt;&lt;/div&gt;
-&lt;/div&gt;</pre>
+```html
+<div id="grid">
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css; highlight[5]">#grid {
+```css
+#grid {
   display: grid;
   height: 200px;
   grid-template: repeat(3, 1fr) / repeat(3, 1fr);
   gap: 20px 5px;
 }
 
-#grid &gt; div {
+#grid > div {
   border: 1px solid green;
   background-color: lime;
 }
-</pre>
+```
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Grid_layout", "auto", "120px")}}</p>
+{{EmbedLiveSample("Grid_layout", "auto", "120px")}}
 
-<h3 id="Multi-column_layout">Multi-column layout</h3>
+### Multi-column layout
 
-<h4 id="HTML_3">HTML</h4>
+#### HTML
 
-<pre class="brush: html;">&lt;p class="content-box"&gt;
+```html
+<p class="content-box">
   This is some multi-column text with a 40px column
-  gap created with the CSS &lt;code&gt;gap&lt;/code&gt; property.
+  gap created with the CSS <code>gap</code> property.
   Don't you think that's fun and exciting? I sure do!
-&lt;/p&gt;
-</pre>
+</p>
+```
 
-<h4 id="CSS_3">CSS</h4>
+#### CSS
 
-<pre class="brush: css; highlight[3]">.content-box {
+```css
+.content-box {
   column-count: 3;
   gap: 40px;
 }
-</pre>
+```
 
-<h4 id="Result_3">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Multi-column_layout", "auto", "120px")}}</p>
+{{EmbedLiveSample("Multi-column_layout", "auto", "120px")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Related CSS properties: {{CSSxRef("row-gap")}}, {{CSSxRef("column-gap")}}</li>
- <li>Grid Layout Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#Gutters">Basic concepts of grid layout - Gutters</a></em></li>
-</ul>
+- Related CSS properties: {{CSSxRef("row-gap")}}, {{CSSxRef("column-gap")}}
+- Grid Layout Guide: _[Basic concepts of grid layout - Gutters](/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#Gutters)_

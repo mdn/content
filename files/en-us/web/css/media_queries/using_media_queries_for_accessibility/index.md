@@ -8,35 +8,35 @@ tags:
   - CSS
   - Guide
 ---
-<p><strong>Media Queries</strong> can also be used to help users with disabilities understand your website better.</p>
+**Media Queries** can also be used to help users with disabilities understand your website better.
 
-<h2 id="Reduced_Motion">Reduced Motion</h2>
+## Reduced Motion
 
-<p>Blinking and flashing animation can be problematic for people with cognitive concerns such as Attention Deficit Hyperactivity Disorder (ADHD). Additionally, certain kinds of motion can be a trigger for Vestibular disorders, epilepsy, and migraine and Scotopic sensitivity.</p>
+Blinking and flashing animation can be problematic for people with cognitive concerns such as Attention Deficit Hyperactivity Disorder (ADHD). Additionally, certain kinds of motion can be a trigger for Vestibular disorders, epilepsy, and migraine and Scotopic sensitivity.
 
-<p>Also, this method of switching animation off according to the user's preference can also benefit users with low battery or low-end phones or computers.</p>
+Also, this method of switching animation off according to the user's preference can also benefit users with low battery or low-end phones or computers.
 
-<h3 id="Syntax">Syntax</h3>
+### Syntax
 
-<dl>
- <dt><code><dfn>no-preference</dfn></code></dt>
- <dd>Indicates that the user has made no preference known to the system.</dd>
- <dt><code><dfn>reduce</dfn></code></dt>
- <dd>Indicates that user has notified the system that they prefer an interface that minimizes the amount of movement or animation, preferably to the point where all non-essential movement is removed.</dd>
-</dl>
+- `no-preference`
+  - : Indicates that the user has made no preference known to the system.
+- `reduce`
+  - : Indicates that user has notified the system that they prefer an interface that minimizes the amount of movement or animation, preferably to the point where all non-essential movement is removed.
 
-<h3 id="Example">Example</h3>
+### Example
 
-<p>This example has an annoying animation unless you turn on Reduce Motion in your accessibility preferences.</p>
+This example has an annoying animation unless you turn on Reduce Motion in your accessibility preferences.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="animation"&gt;animated box&lt;/div&gt;
-</pre>
+```html
+<div class="animation">animated box</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.animation {
+```css
+.animation {
   -webkit-animation: vibrate 0.3s linear infinite both;
   animation: vibrate 0.3s linear infinite both;
 }
@@ -46,42 +46,35 @@ tags:
     animation: none;
   }
 }
-</pre>
+```
 
-<h2 id="High_Contrast_Mode">High Contrast Mode</h2>
+## High Contrast Mode
 
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<p>The <strong>-ms-high-contrast</strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features">media feature</a> is a <a href="/en-US/docs/Web/CSS/Microsoft_extensions">Microsoft extension</a> that describes whether the application is being displayed in high contrast mode, and with what color variation.</p>
+The **-ms-high-contrast** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features) is a [Microsoft extension](/en-US/docs/Web/CSS/Microsoft_extensions) that describes whether the application is being displayed in high contrast mode, and with what color variation.
 
-<p>This will help not only users with low vision and contrast sensitivity issues but also users that are working on a computer or phone with direct sunlight.</p>
+This will help not only users with low vision and contrast sensitivity issues but also users that are working on a computer or phone with direct sunlight.
 
-<h3 id="Syntax_2">Syntax</h3>
+### Syntax
 
-<p>The <strong><code>-ms-high-contrast</code></strong> media feature is specified as one of the following values.</p>
+The **`-ms-high-contrast`** media feature is specified as one of the following values.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>active</code></dt>
- <dd>
- <p>Indicates that the subsequent styling rules will be applied when the system is placed in high contrast mode with any color variation.</p>
- </dd>
- <dt><code>black-on-white</code></dt>
- <dd>
- <p>Indicates that the subsequent styling rules will be applied when the system is placed in high contrast mode with a black-on-white color variation.</p>
- </dd>
- <dt><code>white-on-black</code></dt>
- <dd>
- <p>Indicates that the subsequent styling rules will be applied when the system is placed in high contrast mode with a white-on-black color variation.</p>
- </dd>
-</dl>
+- `active`
+  - : Indicates that the subsequent styling rules will be applied when the system is placed in high contrast mode with any color variation.
+- `black-on-white`
+  - : Indicates that the subsequent styling rules will be applied when the system is placed in high contrast mode with a black-on-white color variation.
+- `white-on-black`
+  - : Indicates that the subsequent styling rules will be applied when the system is placed in high contrast mode with a white-on-black color variation.
 
-<h3 id="Example_2">Example</h3>
+### Example
 
-<p>The following declarations will match applications that are being displayed in high contrast mode with any color variation, a black-on-white color variation, and a white-on-black color variation, respectively.</p>
+The following declarations will match applications that are being displayed in high contrast mode with any color variation, a black-on-white color variation, and a white-on-black color variation, respectively.
 
-<pre class="brush: css">@media screen and (-ms-high-contrast: active) {
+```css
+@media screen and (-ms-high-contrast: active) {
   /* All high contrast styling rules */
 }
 @media screen and (-ms-high-contrast: black-on-white) {
@@ -90,4 +83,4 @@ tags:
 @media screen and (-ms-high-contrast: white-on-black) {
   div { background-image: url('image-wb.png'); }
 }
-</pre>
+```

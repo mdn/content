@@ -6,38 +6,35 @@ tags:
   - CSS Property
   - CSS Text Decoration
   - Reference
-  - 'recipe:css-shorthand-property'
+  - recipe:css-shorthand-property
 browser-compat: css.properties.text-emphasis
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>text-emphasis</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property applies emphasis marks to text (except spaces and control characters). It is a <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand</a> for {{cssxref("text-emphasis-style")}} and {{cssxref("text-emphasis-color")}}.</p>
+The **`text-emphasis`** [CSS](/en-US/docs/Web/CSS) property applies emphasis marks to text (except spaces and control characters). It is a [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) for {{cssxref("text-emphasis-style")}} and {{cssxref("text-emphasis-color")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/text-emphasis.html")}}</div>
+{{EmbedInteractiveExample("pages/css/text-emphasis.html")}}
 
-<p>The <code>text-emphasis</code> property is quite different from {{cssxref("text-decoration")}}. The <code>text-decoration</code> property does not inherit, and the decoration specified is applied across the whole element. However, text-emphasis does inherit, which means it is possible to change emphasis marks for descendants.</p>
+The `text-emphasis` property is quite different from {{cssxref("text-decoration")}}. The `text-decoration` property does not inherit, and the decoration specified is applied across the whole element. However, text-emphasis does inherit, which means it is possible to change emphasis marks for descendants.
 
-<p>The size of the emphasis symbol, like ruby symbols, is about 50% of the size of the font, and <code>text-emphasis</code> may affect line height when the current leading is not enough for the marks.</p>
+The size of the emphasis symbol, like ruby symbols, is about 50% of the size of the font, and `text-emphasis` may affect line height when the current leading is not enough for the marks.
 
-<div class="note">
-<p><strong>Note:</strong> <code>text-emphasis</code> doesn't reset the value of {{cssxref("text-emphasis-position")}}. This is because if the style and the color of emphasis marks may vary in a text, it is extremely unlikely that their position will. In the very rare cases when this is needed, the property {{cssxref("text-emphasis-position")}}.</p>
-</div>
+> **Note:** `text-emphasis` doesn't reset the value of {{cssxref("text-emphasis-position")}}. This is because if the style and the color of emphasis marks may vary in a text, it is extremely unlikely that their position will. In the very rare cases when this is needed, the property {{cssxref("text-emphasis-position")}}.
 
-<h2 id="Constituent_properties">Constituent properties</h2>
+## Constituent properties
 
-<p>This property is a shorthand for the following CSS properties:</p>
+This property is a shorthand for the following CSS properties:
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/text-emphasis-color"><code>text-emphasis-color</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/text-emphasis-style"><code>text-emphasis-style</code></a></li>
-</ul>
+- [`text-emphasis-color`](/en-US/docs/Web/CSS/text-emphasis-color)
+- [`text-emphasis-style`](/en-US/docs/Web/CSS/text-emphasis-style)
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* Initial value */
+```css
+/* Initial value */
 text-emphasis: none; /* No emphasis marks */
 
-/* &lt;string&gt; value */
+/* <string> value */
 text-emphasis: 'x';
 text-emphasis: '点';
 text-emphasis: '\25B2';
@@ -58,72 +55,72 @@ text-emphasis: inherit;
 text-emphasis: initial;
 text-emphasis: revert;
 text-emphasis: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>none</code></dt>
- <dd>No emphasis marks.</dd>
- <dt><code>filled</code></dt>
- <dd>The shape is filled with solid color. If neither <code>filled</code> nor <code>open</code> is present, this is the default.</dd>
- <dt><code>open</code></dt>
- <dd>The shape is hollow.</dd>
- <dt><code>dot</code></dt>
- <dd>Display small circles as marks. The filled dot is <code>'•'</code> (<code>U+2022</code>), and the open dot is <code>'◦'</code> (<code>U+25E6</code>).</dd>
- <dt><code>circle</code></dt>
- <dd>Display large circles as marks. The filled circle is <code>'●'</code> (<code>U+25CF</code>), and the open circle is <code>'○'</code> (<code>U+25CB</code>). This is the default shape in horizontal writing modes when no other shape is given.</dd>
- <dt><code>double-circle</code></dt>
- <dd>Display double circles as marks. The filled double-circle is <code>'◉'</code> (<code>U+25C9</code>), and the open double-circle is <code>'◎'</code> (<code>U+25CE</code>).</dd>
- <dt><code>triangle</code></dt>
- <dd>Display triangles as marks. The filled triangle is <code>'▲'</code> (<code>U+25B2</code>), and the open triangle is <code>'△'</code> (<code>U+25B3</code>).</dd>
- <dt><code>sesame</code></dt>
- <dd>Display sesames as marks. The filled sesame is <code>'﹅'</code> (<code>U+FE45</code>), and the open sesame is <code>'﹆'</code> (<code>U+FE46</code>). This is the default shape in vertical writing modes when no other shape is given.</dd>
- <dt><code>&lt;string&gt;</code></dt>
- <dd>Display the given string as marks. Authors should not specify more than one <em>character</em> in <code>&lt;string&gt;</code>. The UA may truncate or ignore strings consisting of more than one grapheme cluster.</dd>
- <dt><code>&lt;color&gt;</code></dt>
- <dd>Defines the color of the mark. If no color is present, it defaults to <code>currentcolor</code>.</dd>
-</dl>
+- `none`
+  - : No emphasis marks.
+- `filled`
+  - : The shape is filled with solid color. If neither `filled` nor `open` is present, this is the default.
+- `open`
+  - : The shape is hollow.
+- `dot`
+  - : Display small circles as marks. The filled dot is `'•'` (`U+2022`), and the open dot is `'◦'` (`U+25E6`).
+- `circle`
+  - : Display large circles as marks. The filled circle is `'●'` (`U+25CF`), and the open circle is `'○'` (`U+25CB`). This is the default shape in horizontal writing modes when no other shape is given.
+- `double-circle`
+  - : Display double circles as marks. The filled double-circle is `'◉'` (`U+25C9`), and the open double-circle is `'◎'` (`U+25CE`).
+- `triangle`
+  - : Display triangles as marks. The filled triangle is `'▲'` (`U+25B2`), and the open triangle is `'△'` (`U+25B3`).
+- `sesame`
+  - : Display sesames as marks. The filled sesame is `'﹅'` (`U+FE45`), and the open sesame is `'﹆'` (`U+FE46`). This is the default shape in vertical writing modes when no other shape is given.
+- `<string>`
+  - : Display the given string as marks. Authors should not specify more than one _character_ in `<string>`. The UA may truncate or ignore strings consisting of more than one grapheme cluster.
+- `<color>`
+  - : Defines the color of the mark. If no color is present, it defaults to `currentcolor`.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="A_heading_with_emphasis_shape_and_color">A heading with emphasis shape and color</h3>
+### A heading with emphasis shape and color
 
-<p>This example draws a heading with triangles used to emphasize each character.</p>
+This example draws a heading with triangles used to emphasize each character.
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">h2 {
+```css
+h2 {
   text-emphasis: triangle #D55;
-}</pre>
+}
+```
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;h2&gt;This is important!&lt;/h2&gt;</pre>
+```html
+<h2>This is important!</h2>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("A_heading_with_emphasis_shape_and_color", 500, 70)}}</p>
+{{EmbedLiveSample("A_heading_with_emphasis_shape_and_color", 500, 70)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The longhand properties {{cssxref('text-emphasis-style')}}, {{cssxref('text-emphasis-color')}}.</li>
- <li>The {{cssxref('text-emphasis-position')}} property allowing to define the position of the emphasis marks.</li>
-</ul>
+- The longhand properties {{cssxref('text-emphasis-style')}}, {{cssxref('text-emphasis-color')}}.
+- The {{cssxref('text-emphasis-position')}} property allowing to define the position of the emphasis marks.

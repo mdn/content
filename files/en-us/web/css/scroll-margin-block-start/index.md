@@ -5,19 +5,20 @@ tags:
   - Beginner
   - CSS
   - Example
-  - 'recipe:css-property'
+  - recipe:css-property
   - scroll-margin-block-start
 browser-compat: css.properties.scroll-margin-block-start
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <code>scroll-margin-block-start</code> property defines the margin of the scroll snap area at the start of the block dimension that is used for snapping this box to the snapport. The scroll snap area is determined by taking the transformed border box, finding its rectangular bounding box (axis-aligned in the scroll container’s coordinate space), then adding the specified outsets.</p>
+The `scroll-margin-block-start` property defines the margin of the scroll snap area at the start of the block dimension that is used for snapping this box to the snapport. The scroll snap area is determined by taking the transformed border box, finding its rectangular bounding box (axis-aligned in the scroll container’s coordinate space), then adding the specified outsets.
 
-<div>{{EmbedInteractiveExample("pages/css/scroll-margin-block-start.html")}}</div>
+{{EmbedInteractiveExample("pages/css/scroll-margin-block-start.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">/* &lt;length&gt; values */
+```css
+/* <length> values */
 scroll-margin-block-start: 10px;
 scroll-margin-block-start: 1em;
 
@@ -26,33 +27,30 @@ scroll-margin-block-start: inherit;
 scroll-margin-block-start: initial;
 scroll-margin-block-start: revert;
 scroll-margin-block-start: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>&lt;length&gt;</code></dt>
- <dd>An outset from the block start edge of the scroll container.</dd>
-</dl>
-<h2 id="Formal_definition">Formal definition</h2>
+- `<length>`
+  - : An outset from the block start edge of the scroll container.
 
-<p>{{cssinfo}}</p>
+## Formal definition
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+{{cssinfo}}
+
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/CSS/CSS_Scroll_Snap">CSS Scroll Snap</a></li>
-  <li><a href="https://developers.google.com/web/updates/2018/07/css-scroll-snap">Well-Controlled Scrolling with CSS Scroll Snap</a></li>
-</ul>
+- [CSS Scroll Snap](/en-US/docs/Web/CSS/CSS_Scroll_Snap)
+- [Well-Controlled Scrolling with CSS Scroll Snap](https://developers.google.com/web/updates/2018/07/css-scroll-snap)

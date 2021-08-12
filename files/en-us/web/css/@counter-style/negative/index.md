@@ -9,55 +9,57 @@ tags:
   - Reference
 browser-compat: css.at-rules.counter-style.negative
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>When defining custom counter styles, the <strong><code>negative</code></strong> descriptor lets you alter the representations of negative counter values, by providing a way to specify symbols to be appended or prepended to the counter representation when the value is negative.</p>
+When defining custom counter styles, the **`negative`** descriptor lets you alter the representations of negative counter values, by providing a way to specify symbols to be appended or prepended to the counter representation when the value is negative.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css no-line-numbers">/* &lt;symbol&gt; values */
+```css
+/* <symbol> values */
 negative: "-";       /* Prepends '-' if value is negative */
 negative: "(" ")";   /* Surrounds value by '(' and ')' if it is negative */
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt>first <code>&lt;symbol&gt;</code></dt>
- <dd>This symbol will be prepended to the representation when the counter is negative.</dd>
- <dt>second <code>&lt;symbol&gt;</code></dt>
- <dd>If present, this symbol will be appended to the representation when the counter is negative.</dd>
-</dl>
+- first `<symbol>`
+  - : This symbol will be prepended to the representation when the counter is negative.
+- second `<symbol>`
+  - : If present, this symbol will be appended to the representation when the counter is negative.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>If the counter value is negative, the symbol provided as value for the descriptor is prepended to the counter representation; and a second symbol if specified, will be appended to the representation. The negative descriptor has effect only if the <code>system</code> value is <code>symbolic</code>, <code>alphabetic</code>, <code>numeric</code>, <code>additive</code>, or <code>extends</code>, if the extended counter style itself uses a negative sign. If the negative descriptor is specified for other systems that don't support negative counter values, then the descriptor is ignored.</p>
+If the counter value is negative, the symbol provided as value for the descriptor is prepended to the counter representation; and a second symbol if specified, will be appended to the representation. The negative descriptor has effect only if the `system` value is `symbolic`, `alphabetic`, `numeric`, `additive`, or `extends`, if the extended counter style itself uses a negative sign. If the negative descriptor is specified for other systems that don't support negative counter values, then the descriptor is ignored.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Rendering_negative_counters">Rendering negative counters</h3>
+### Rendering negative counters
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;ol class="list" start="-3"&gt;
-  &lt;li&gt;One&lt;/li&gt;
-  &lt;li&gt;Two&lt;/li&gt;
-  &lt;li&gt;Three&lt;/li&gt;
-  &lt;li&gt;Four&lt;/li&gt;
-  &lt;li&gt;Five&lt;/li&gt;
-&lt;/ol&gt;</pre>
+```html
+<ol class="list" start="-3">
+  <li>One</li>
+  <li>Two</li>
+  <li>Three</li>
+  <li>Four</li>
+  <li>Five</li>
+</ol>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">@counter-style neg {
+```css
+@counter-style neg {
   system: numeric;
   symbols: "0" "1" "2" "3" "4" "5" "6" "7" "8" "9";
   negative: "(-" ")";
@@ -65,23 +67,22 @@ negative: "(" ")";   /* Surrounds value by '(' and ')' if it is negative */
 
 .list {
   list-style: neg;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Rendering_negative_counters', '', '', '', 'Web/CSS/@counter-style/negative') }}</p>
+{{ EmbedLiveSample('Rendering_negative_counters', '', '', '', 'Web/CSS/@counter-style/negative') }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}</li>
- <li>{{cssxref("symbols()", "symbols()")}}, the functional notation creating anonymous counter styles.</li>
-</ul>
+- {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
+- {{cssxref("symbols()", "symbols()")}}, the functional notation creating anonymous counter styles.

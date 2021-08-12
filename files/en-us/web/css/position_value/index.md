@@ -10,95 +10,91 @@ tags:
   - Web
 browser-compat: css.types.position
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>&lt;position&gt;</code></strong> (or <strong><code>&lt;bg-position&gt;</code></strong>) <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Types">data type</a> denotes a two-dimensional coordinate used to set a location relative to an element box. It is used in the {{cssxref("background-position")}} and {{cssxref("offset-anchor")}} properties.</p>
+The **`<position>`** (or **`<bg-position>`**) [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) denotes a two-dimensional coordinate used to set a location relative to an element box. It is used in the {{cssxref("background-position")}} and {{cssxref("offset-anchor")}} properties.
 
-<div class="note">
-<p><strong>Note:</strong> The final position described by the <code>&lt;position&gt;</code> value does not need to be inside the element's box.</p>
-</div>
+> **Note:** The final position described by the `<position>` value does not need to be inside the element's box.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p><img alt="" src="position_type.png">The <code>&lt;position&gt;</code> data type is specified with one or two keywords, with optional offsets.</p>
+![](position_type.png)The `<position>` data type is specified with one or two keywords, with optional offsets.
 
-<p>The keyword values are <code>center</code>, <code>top</code>, <code>right</code>, <code>bottom</code>, and <code>left</code>. Each keyword represents either an edge of the element's box or the center line between two edges. Depending on the context, <code>center</code> represents either the center between the left and right edges, or the center between the top and bottom edges.</p>
+The keyword values are `center`, `top`, `right`, `bottom`, and `left`. Each keyword represents either an edge of the element's box or the center line between two edges. Depending on the context, `center` represents either the center between the left and right edges, or the center between the top and bottom edges.
 
-<p>If specified, an offset can be either a relative {{cssxref("&lt;percentage&gt;")}} value or an absolute {{cssxref("&lt;length&gt;")}} value. Positive values are offset towards the right or the bottom, whichever is appropriate. Negative values are offset in the opposite directions.</p>
+If specified, an offset can be either a relative {{cssxref("&lt;percentage&gt;")}} value or an absolute {{cssxref("&lt;length&gt;")}} value. Positive values are offset towards the right or the bottom, whichever is appropriate. Negative values are offset in the opposite directions.
 
-<p>If only a single offset value is specified, it defines the x-coordinate, with the value for the other axis defaulting to <code>center</code>.</p>
+If only a single offset value is specified, it defines the x-coordinate, with the value for the other axis defaulting to `center`.
 
-<pre class="brush:css">/* 1-value syntax */
-<var>keyword</var>                  /* Either the horizontal or vertical position; the other axis defaults to center */
-<var>value</var>                    /* The position on the x-axis; the y-axis defaults to 50% */
+```css
+/* 1-value syntax */
+keyword                  /* Either the horizontal or vertical position; the other axis defaults to center */
+value                    /* The position on the x-axis; the y-axis defaults to 50% */
 
 /* 2-value syntax */
-<var>keyword</var> <var>keyword</var>          /* A keyword for each direction (the order is irrelevant) */
-<var>keyword</var> <var>value</var>            /* A keyword for horizontal position, value for vertical position */
-<var>value</var> <var>keyword</var>            /* A value for horizontal position, keyword for vertical position */
-<var>value</var> <var>value</var>              /* A value for each direction (horizontal then vertical) */
+keyword keyword          /* A keyword for each direction (the order is irrelevant) */
+keyword value            /* A keyword for horizontal position, value for vertical position */
+value keyword            /* A value for horizontal position, keyword for vertical position */
+value value              /* A value for each direction (horizontal then vertical) */
 
 /* 4-value syntax */
-<var>keyword</var> <var>value</var> <var>keyword</var> <var>value</var> /* Each value is an offset from the keyword that precedes it */
-</pre>
+keyword value keyword value /* Each value is an offset from the keyword that precedes it */
+```
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
-<pre class="brush: css">[
+```css
+[
  [ left | center | right ] || [ top | center | bottom ]
 |
- [ left | center | right | &lt;length&gt; | &lt;percentage&gt; ]
- [ top | center | bottom | &lt;length&gt; | &lt;percentage&gt; ]?
+ [ left | center | right | <length> | <percentage> ]
+ [ top | center | bottom | <length> | <percentage> ]?
 |
- [ [ left | right ] [ &lt;length&gt; | &lt;percentage&gt; ] ] &amp;&amp;
- [ [ top | bottom ] [ &lt;length&gt; | &lt;percentage&gt; ] ]
+ [ [ left | right ] [ <length> | <percentage> ] ] &&
+ [ [ top | bottom ] [ <length> | <percentage> ] ]
 ]
-</pre>
+```
 
-<div class="notecard note">
-<p><strong>Note:</strong> The {{cssxref("background-position")}} property also accepts a three-value syntax. This is not allowed in other properties that use <code>&lt;position&gt;</code>.</p>
-</div>
+> **Note:** The {{cssxref("background-position")}} property also accepts a three-value syntax. This is not allowed in other properties that use `<position>`.
 
-<h2 id="Interpolation">Interpolation</h2>
+## Interpolation
 
-<p>When animated, a point's abscissa and ordinate values are interpolated independently. However, because the speed of the interpolation is determined by a single <a href="/en-US/docs/Web/CSS/easing-function">timing function</a> for both coordinates, the point will move in a straight line.</p>
+When animated, a point's abscissa and ordinate values are interpolated independently. However, because the speed of the interpolation is determined by a single [timing function](/en-US/docs/Web/CSS/easing-function) for both coordinates, the point will move in a straight line.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Valid_positions">Valid positions</h3>
+### Valid positions
 
-<pre>center
-left
-center top
+    center
+    left
+    center top
 
-right 8.5%
-bottom 12vmin right -6px
+    right 8.5%
+    bottom 12vmin right -6px
 
-10% 20%
-8rem 14px
-</pre>
+    10% 20%
+    8rem 14px
 
-<h3 id="Invalid_positions">Invalid positions</h3>
+### Invalid positions
 
-<pre class="example-bad">left right
+```plain example-bad
+left right
 bottom top
 10px 15px 20px 15px
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Values_and_Units">CSS Values and Units</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Values_and_units">CSS Values and Units introduction</a></li>
- <li>{{cssxref("background-position")}}</li>
- <li>{{cssxref("radial-gradient()")}}</li>
- <li>{{cssxref("conic-gradient()", "conic-gradient()")}}</li>
-</ul>
+- [CSS Values and Units](/en-US/docs/Web/CSS/CSS_Values_and_Units)
+- [CSS Values and Units introduction](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
+- {{cssxref("background-position")}}
+- {{cssxref("radial-gradient()")}}
+- {{cssxref("conic-gradient()", "conic-gradient()")}}

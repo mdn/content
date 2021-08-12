@@ -6,18 +6,19 @@ tags:
   - CSS Multi-column Layout
   - CSS Property
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.column-fill
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>column-fill</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property controls how an element's contents are balanced when broken into columns.</p>
+The **`column-fill`** [CSS](/en-US/docs/Web/CSS) property controls how an element's contents are balanced when broken into columns.
 
-<div>{{EmbedInteractiveExample("pages/css/column-fill.html")}}</div>
+{{EmbedInteractiveExample("pages/css/column-fill.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 column-fill: auto;
 column-fill: balance;
 column-fill: balance-all;
@@ -27,46 +28,47 @@ column-fill: inherit;
 column-fill: initial;
 column-fill: revert;
 column-fill: unset;
-</pre>
+```
 
-<p>The <code>column-fill</code> property is specified as one of the keyword values listed below. The initial value is <code>balance</code> so the content will be balanced across the columns.</p>
+The `column-fill` property is specified as one of the keyword values listed below. The initial value is `balance` so the content will be balanced across the columns.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>Columns are filled sequentially. Content takes up only the room it needs, possibly resulting in some columns remaining empty.</dd>
- <dt><code>balance</code></dt>
- <dd>Content is equally divided between columns. In fragmented contexts, such as <a href="/en-US/docs/Web/CSS/Paged_Media">paged media</a>, only the last fragment is balanced. Therefore in paged media, only the last page would be balanced.</dd>
- <dt><code>balance-all</code></dt>
- <dd>Content is equally divided between columns. In fragmented contexts, such as <a href="/en-US/docs/Web/CSS/Paged_Media">paged media</a>, all fragments are balanced.</dd>
-</dl>
+- `auto`
+  - : Columns are filled sequentially. Content takes up only the room it needs, possibly resulting in some columns remaining empty.
+- `balance`
+  - : Content is equally divided between columns. In fragmented contexts, such as [paged media](/en-US/docs/Web/CSS/Paged_Media), only the last fragment is balanced. Therefore in paged media, only the last page would be balanced.
+- `balance-all`
+  - : Content is equally divided between columns. In fragmented contexts, such as [paged media](/en-US/docs/Web/CSS/Paged_Media), all fragments are balanced.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="Balancing_column_content">Balancing column content</h3>
+### Balancing column content
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p class="fill-auto"&gt;
+```html
+<p class="fill-auto">
   This paragraph fills columns one at a time. Since all of the text can fit in the first column, the others are empty.
-&lt;/p&gt;
+</p>
 
-&lt;p class="fill-balance"&gt;
+<p class="fill-balance">
   This paragraph attempts to balance the amount of content in each column.
-&lt;/p&gt;</pre>
+</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   height: 7em;
   background: #ff9;
   columns: 3;
@@ -79,30 +81,27 @@ p.fill-auto {
 
 p.fill-balance {
   column-fill: balance;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Balancing_column_content', 'auto', 320)}}</p>
+{{EmbedLiveSample('Balancing_column_content', 'auto', 320)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<div class="notecard warning">
-<p><strong>Warning:</strong> There are some interoperability issues and bugs with <code>column-fill</code> across browsers, due to unresolved issues in the specification.</p>
+> **Warning:** There are some interoperability issues and bugs with `column-fill` across browsers, due to unresolved issues in the specification.
+>
+> In particular, when using `column-fill: auto` to fill columns sequentially, Chrome will only consult this property if the multicol container has a size in the block dimension (e.g., height in a horizontal writing mode). Firefox will always consult this property, therefore filling the first column with all of the content in cases where there is no size.
 
-<p>In particular, when using <code>column-fill: auto</code> to fill columns sequentially, Chrome will only consult this property if the multicol container has a size in the block dimension (e.g., height in a horizontal writing mode). Firefox will always consult this property, therefore filling the first column with all of the content in cases where there is no size.</p>
-</div>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout">Multiple-column Layout</a></li>
- <li>{{CSSXref("column-count")}}</li>
- <li>{{CSSXref("column-width")}}</li>
-</ul>
+- [Multiple-column Layout](/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
+- {{CSSXref("column-count")}}
+- {{CSSXref("column-width")}}

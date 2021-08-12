@@ -13,35 +13,38 @@ tags:
   - Web
   - matchMedia
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The {{Glossary("DOM")}} provides features that can test the results of a <a href="/en-US/docs/Web/CSS/Media_Queries">media query</a> programmatically, via the {{domxref("MediaQueryList")}} interface and its methods and properties. Once you've created a <code>MediaQueryList</code> object, you can check the result of the query or receive notifications when the result changes.</p>
+The {{Glossary("DOM")}} provides features that can test the results of a [media query](/en-US/docs/Web/CSS/Media_Queries) programmatically, via the {{domxref("MediaQueryList")}} interface and its methods and properties. Once you've created a `MediaQueryList` object, you can check the result of the query or receive notifications when the result changes.
 
-<h2 id="Creating_a_media_query_list">Creating a media query list</h2>
+## Creating a media query list
 
-<p>Before you can evaluate the results of a media query, you need to create the <code>MediaQueryList</code> object representing the query. To do this, use the {{domxref("window.matchMedia")}} method.</p>
+Before you can evaluate the results of a media query, you need to create the `MediaQueryList` object representing the query. To do this, use the {{domxref("window.matchMedia")}} method.
 
-<p>For example, to set up a query list that determines if the device is in landscape or portrait orientation:</p>
+For example, to set up a query list that determines if the device is in landscape or portrait orientation:
 
-<pre class="brush: js">const mediaQueryList = window.matchMedia("(orientation: portrait)");
-</pre>
+```js
+const mediaQueryList = window.matchMedia("(orientation: portrait)");
+```
 
-<h2 id="Checking_the_result_of_a_query">Checking the result of a query</h2>
+## Checking the result of a query
 
-<p>Once you've created your media query list, you can check the result of the query by looking at the value of its <code>matches</code> property:</p>
+Once you've created your media query list, you can check the result of the query by looking at the value of its `matches` property:
 
-<pre class="brush: js">if (mediaQueryList.matches) {
+```js
+if (mediaQueryList.matches) {
   /* The viewport is currently in portrait orientation */
 } else {
   /* The viewport is not currently in portrait orientation, therefore landscape */
 }
-</pre>
+```
 
-<h2 id="Receiving_query_notifications">Receiving query notifications</h2>
+## Receiving query notifications
 
-<p>If you need to be aware of changes to the evaluated result of the query on an ongoing basis, it's more efficient to register a <a href="/en-US/docs/Web/API/EventTarget/addEventListener">listener</a> than to poll the query's result. To do this, call the <code>addListener()</code> method on the {{domxref("MediaQueryList")}} object, with a callback function to invoke when the media query status changes (e.g., the media query test goes from <code>true</code> to <code>false</code>):</p>
+If you need to be aware of changes to the evaluated result of the query on an ongoing basis, it's more efficient to register a [listener](/en-US/docs/Web/API/EventTarget/addEventListener) than to poll the query's result. To do this, call the `addListener()` method on the {{domxref("MediaQueryList")}} object, with a callback function to invoke when the media query status changes (e.g., the media query test goes from `true` to `false`):
 
-<pre class="brush: js">// Create the query list.
+```js
+// Create the query list.
 const mediaQueryList = window.matchMedia("(orientation: portrait)");
 
 // Define a callback function for the event listener.
@@ -54,43 +57,43 @@ handleOrientationChange(mediaQueryList);
 
 // Add the callback function as a listener to the query list.
 mediaQueryList.addEventListener('change', handleOrientationChange);
-</pre>
+```
 
-<p>This code creates the orientation-testing media query list, then adds an event listener to it. After defining the listener, we also call the listener directly. This makes our listener perform adjustments based on the current device orientation; otherwise, our code might assume the device is in portrait mode at startup, even if it's actually in landscape mode.</p>
+This code creates the orientation-testing media query list, then adds an event listener to it. After defining the listener, we also call the listener directly. This makes our listener perform adjustments based on the current device orientation; otherwise, our code might assume the device is in portrait mode at startup, even if it's actually in landscape mode.
 
-<p>The <code>handleOrientationChange()</code> function would look at the result of the query and handle whatever we need to do on an orientation change:</p>
+The `handleOrientationChange()` function would look at the result of the query and handle whatever we need to do on an orientation change:
 
-<pre class="brush: js">function handleOrientationChange(evt) {
+```js
+function handleOrientationChange(evt) {
   if (evt.matches) {
     /* The viewport is currently in portrait orientation */
   } else {
     /* The viewport is currently in landscape orientation */
   }
 }
-</pre>
+```
 
-<p>Above, we define the parameter as <code>evt</code> — an event object. This makes sense because <a href="/en-US/docs/Web/API/MediaQueryList#browser_compatibility">newer implementations of <code>MediaQueryList</code></a> handle event listeners in a standard way. They no longer use the unusual {{domxref("MediaQueryListListener")}} mechanism, but a standard event listener setup, passing an <a href="/en-US/docs/Web/API/Event">event object</a> of type {{domxref("MediaQueryListEvent")}} as the argument to the callback function.</p>
+Above, we define the parameter as `evt` — an event object. This makes sense because [newer implementations of `MediaQueryList`](/en-US/docs/Web/API/MediaQueryList#browser_compatibility) handle event listeners in a standard way. They no longer use the unusual {{domxref("MediaQueryListListener")}} mechanism, but a standard event listener setup, passing an [event object](/en-US/docs/Web/API/Event) of type {{domxref("MediaQueryListEvent")}} as the argument to the callback function.
 
-<p>This event object also includes the {{domxref("MediaQueryListEvent.media","media")}} and {{domxref("MediaQueryListEvent.matches","matches")}} properties, so you can query these features of the <code>MediaQueryList</code> by directly accessing it, or accessing the event object.</p>
+This event object also includes the {{domxref("MediaQueryListEvent.media","media")}} and {{domxref("MediaQueryListEvent.matches","matches")}} properties, so you can query these features of the `MediaQueryList` by directly accessing it, or accessing the event object.
 
-<h2 id="Ending_query_notifications">Ending query notifications</h2>
+## Ending query notifications
 
-<p>To stop receiving notifications about changes to the value of your media query, call <code>removeListener()</code> on the <code>MediaQueryList</code>, passing it the name of the previously-defined callback function:</p>
+To stop receiving notifications about changes to the value of your media query, call `removeListener()` on the `MediaQueryList`, passing it the name of the previously-defined callback function:
 
-<pre class="brush: js">mediaQueryList.removeListener(handleOrientationChange);
-</pre>
+```js
+mediaQueryList.removeListener(handleOrientationChange);
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<h3 id="MediaQueryList_interface"><code>MediaQueryList</code> interface</h3>
+### `MediaQueryList` interface
 
-<p>{{Compat("api.MediaQueryList")}}</p>
+{{Compat("api.MediaQueryList")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">Media queries</a></li>
- <li>{{domxref("window.matchMedia()")}}</li>
- <li>{{domxref("MediaQueryList")}}</li>
- <li>{{domxref("MediaQueryListEvent")}}</li>
-</ul>
+- [Media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+- {{domxref("window.matchMedia()")}}
+- {{domxref("MediaQueryList")}}
+- {{domxref("MediaQueryListEvent")}}

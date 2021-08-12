@@ -1,51 +1,56 @@
 ---
 title: ':nth-col'
-slug: 'Web/CSS/:nth-col'
+slug: Web/CSS/:nth-col
 browser-compat: css.selectors.nth-col
 ---
-<p>{{CSSRef}}{{SeeCompatTable}}</p>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p>The <strong><code>:nth-col()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> is designed for tables and grids. It accepts the An+B notation such as used with the {{Cssxref(":nth-child")}} selector, using this to target every nth column. The values odd and even are also valid.</p>
+The **`:nth-col()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) is designed for tables and grids. It accepts the An+B notation such as used with the {{Cssxref(":nth-child")}} selector, using this to target every nth column. The values odd and even are also valid.
 
-<pre class="brush: css">/* Selects every odd column in a table */
+```css
+/* Selects every odd column in a table */
 :nth-col(odd) {
   background-color: pink;
-}</pre>
+}
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>nth-col</code> pseudo-class is specified with a single argument, which represents the pattern for matching elements.</p>
+The `nth-col` pseudo-class is specified with a single argument, which represents the pattern for matching elements.
 
-<p>See {{Cssxref(":nth-child")}} for a more detailed explanation of its syntax.</p>
+See {{Cssxref(":nth-child")}} for a more detailed explanation of its syntax.
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Basic_example">Basic example</h3>
+### Basic example
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;table&gt;
-  &lt;tr&gt;
-    &lt;td&gt;one&lt;/td&gt;
-    &lt;td&gt;two&lt;/td&gt;
-    &lt;td&gt;three&lt;/td&gt;
-    &lt;td&gt;four&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-  &lt;td&gt;one&lt;/td&gt;
-    &lt;td&gt;two&lt;/td&gt;
-    &lt;td&gt;three&lt;/td&gt;
-    &lt;td&gt;four&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;</pre>
+```html
+<table>
+  <tr>
+    <td>one</td>
+    <td>two</td>
+    <td>three</td>
+    <td>four</td>
+  </tr>
+  <tr>
+  <td>one</td>
+    <td>two</td>
+    <td>three</td>
+    <td>four</td>
+  </tr>
+</table>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">td {
+```css
+td {
   border: 1px solid #ccc;
   padding: .2em;
 }
@@ -54,22 +59,20 @@ browser-compat: css.selectors.nth-col
 :nth-col(2n+1) {
   background-color: pink;
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Basic_example', 250, 200)}}</p>
+{{EmbedLiveSample('Basic_example', 250, 200)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Cssxref(":nth-child")}}, {{Cssxref(":nth-last-of-type")}}</li>
-</ul>
+- {{Cssxref(":nth-child")}}, {{Cssxref(":nth-last-of-type")}}

@@ -6,25 +6,24 @@ tags:
   - CSS
   - CSS Property
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.resize
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>resize</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets whether an element is resizable, and if so, in which directions.</p>
+The **`resize`** [CSS](/en-US/docs/Web/CSS) property sets whether an element is resizable, and if so, in which directions.
 
-<div>{{EmbedInteractiveExample("pages/css/resize.html")}}</div>
+{{EmbedInteractiveExample("pages/css/resize.html")}}
 
-<p><code>resize</code> does not apply to the following:</p>
+`resize` does not apply to the following:
 
-<ul>
- <li>Inline elements</li>
- <li>Block elements for which the {{cssxref("overflow")}} property is set to <code>visible</code></li>
-</ul>
+- Inline elements
+- Block elements for which the {{cssxref("overflow")}} property is set to `visible`
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 resize: none;
 resize: both;
 resize: horizontal;
@@ -36,71 +35,77 @@ resize: inline;
 resize: inherit;
 resize: initial;
 resize: revert;
-resize: unset;  </pre>
+resize: unset;
+```
 
-<p>The <code>resize</code> property is specified as a single keyword value from the list below.</p>
+The `resize` property is specified as a single keyword value from the list below.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>none</code></dt>
- <dd>The element offers no user-controllable method for resizing it.</dd>
- <dt><code>both</code></dt>
- <dd>The element displays a mechanism for allowing the user to resize it, which may be resized both horizontally and vertically.</dd>
- <dt><code>horizontal</code></dt>
- <dd>The element displays a mechanism for allowing the user to resize it in the <em>horizontal</em> direction.</dd>
- <dt><code>vertical</code></dt>
- <dd>The element displays a mechanism for allowing the user to resize it in the <em>vertical</em> direction.</dd>
- <dt><code>block</code> {{experimental_inline}}</dt>
- <dd>The element displays a mechanism for allowing the user to resize it in the <em>block</em> direction (either horizontally or vertically, depending on the {{cssxref("writing-mode")}} and {{cssxref("direction")}} value).</dd>
- <dt><code>inline</code> {{experimental_inline}}</dt>
- <dd>The element displays a mechanism for allowing the user to resize it in the <em>inline</em> direction (either horizontally or vertically, depending on the {{cssxref("writing-mode")}} and {{cssxref("direction")}} value).</dd>
-</dl>
+- `none`
+  - : The element offers no user-controllable method for resizing it.
+- `both`
+  - : The element displays a mechanism for allowing the user to resize it, which may be resized both horizontally and vertically.
+- `horizontal`
+  - : The element displays a mechanism for allowing the user to resize it in the _horizontal_ direction.
+- `vertical`
+  - : The element displays a mechanism for allowing the user to resize it in the _vertical_ direction.
+- `block` {{experimental_inline}}
+  - : The element displays a mechanism for allowing the user to resize it in the _block_ direction (either horizontally or vertically, depending on the {{cssxref("writing-mode")}} and {{cssxref("direction")}} value).
+- `inline` {{experimental_inline}}
+  - : The element displays a mechanism for allowing the user to resize it in the _inline_ direction (either horizontally or vertically, depending on the {{cssxref("writing-mode")}} and {{cssxref("direction")}} value).
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Disabling_resizability_of_textareas">Disabling resizability of textareas</h3>
+### Disabling resizability of textareas
 
-<p>In many browsers, {{HTMLElement("textarea")}} elements are resizable by default. You may override this behavior with the <code>resize</code> property.</p>
+In many browsers, {{HTMLElement("textarea")}} elements are resizable by default. You may override this behavior with the `resize` property.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;textarea&gt;Type some text here.&lt;/textarea&gt;</pre>
+```html
+<textarea>Type some text here.</textarea>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">textarea {
+```css
+textarea {
   resize: none; /* Disables resizability */
-}  </pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Disabling_resizability_of_textareas","200","100")}}</p>
+{{EmbedLiveSample("Disabling_resizability_of_textareas","200","100")}}
 
-<h3 id="Using_resize_with_arbitrary_elements">Using resize with arbitrary elements</h3>
+### Using resize with arbitrary elements
 
-<p>You can use the <code>resize</code> property to make any element resizable. In the example below, a resizable {{HTMLElement("div")}} contains a resizable paragraph ({{HTMLElement("p")}} element).</p>
+You can use the `resize` property to make any element resizable. In the example below, a resizable {{HTMLElement("div")}} contains a resizable paragraph ({{HTMLElement("p")}} element).
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="resizable"&gt;
-  &lt;p class="resizable"&gt;
+```html
+<div class="resizable">
+  <p class="resizable">
     This paragraph is resizable in all directions, because
     the CSS `resize` property is set to `both` on this element.
-  &lt;/p&gt;
-&lt;/div&gt;</pre>
+  </p>
+</div>
+```
 
-<h4 id="CSS_3">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.resizable {
+```css
+.resizable {
   resize: both;
   overflow: scroll;
   border: 1px solid black;
@@ -114,22 +119,21 @@ div {
 p {
   height: 200px;
   width: 200px;
-}  </pre>
+}
+```
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Using_resize_with_arbitrary_elements","450","450")}}</p>
+{{EmbedLiveSample("Using_resize_with_arbitrary_elements","450","450")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTMLElement("textarea")}}</li>
-</ul>
+- {{HTMLElement("textarea")}}

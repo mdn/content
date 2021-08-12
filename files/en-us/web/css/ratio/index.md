@@ -10,67 +10,41 @@ tags:
   - Web
 browser-compat: css.types.ratio
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>&lt;ratio&gt;</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Types">data type</a>, used for describing <a href="/en-US/docs/Web/CSS/@media/aspect-ratio">aspect ratios</a> in <a href="/en-US/docs/Web/CSS/Media_Queries">media queries</a>, denotes the proportion between two unitless values.</p>
+The **`<ratio>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types), used for describing [aspect ratios](/en-US/docs/Web/CSS/@media/aspect-ratio) in [media queries](/en-US/docs/Web/CSS/Media_Queries), denotes the proportion between two unitless values.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>In Media Queries Level 3, the <code>&lt;ratio&gt;</code> data type consisted of a strictly positive {{cssxref("&lt;integer&gt;")}} followed by a forward slash ('/', Unicode <code>U+002F SOLIDUS</code>) and a second strictly positive {{cssxref("&lt;integer&gt;")}}. Spaces before and after the slash are optional. The first number represents the width, while the second represents the height.</p>
+In Media Queries Level 3, the `<ratio>` data type consisted of a strictly positive {{cssxref("&lt;integer&gt;")}} followed by a forward slash ('/', Unicode `U+002F SOLIDUS`) and a second strictly positive {{cssxref("&lt;integer&gt;")}}. Spaces before and after the slash are optional. The first number represents the width, while the second represents the height.
 
-<p>In Media Queries Level 4, the &lt;ratio&gt; date type is updated to consist of a strictly positive {{cssxref("&lt;number&gt;")}} followed by a forward slash ('/', Unicode <code>U+002F SOLIDUS</code>) and a second strictly positive {{cssxref("&lt;number&gt;")}}. In addition a single {{cssxref("&lt;number&gt;")}} as a value is allowable.</p>
+In Media Queries Level 4, the \<ratio> date type is updated to consist of a strictly positive {{cssxref("&lt;number&gt;")}} followed by a forward slash ('/', Unicode `U+002F SOLIDUS`) and a second strictly positive {{cssxref("&lt;number&gt;")}}. In addition a single {{cssxref("&lt;number&gt;")}} as a value is allowable.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Use_in_a_media_query">Use in a media query</h3>
+### Use in a media query
 
-<pre class="brush: css">@media screen and (min-aspect-ratio: 16/9) { ... }</pre>
+```css
+@media screen and (min-aspect-ratio: 16/9) { ... }
+```
 
-<h3 id="Common_aspect_ratios">Common aspect ratios</h3>
+### Common aspect ratios
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col"></th>
-   <th scope="col">Ratio</th>
-   <th scope="col">Usage</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><img src="ratio4_3.png"></td>
-   <td><code>4/3</code></td>
-   <td>Traditional TV format in the twentieth century.</td>
-  </tr>
-  <tr>
-   <td><img src="ratio16_9.png"></td>
-   <td><code>16/9</code></td>
-   <td>Modern "widescreen" TV format.</td>
-  </tr>
-  <tr>
-   <td><img alt="Ratio1_1.85.png" src="ratio1_1.85.png"></td>
-   <td><code>185/100</code> = <code>91/50</code></td>
-   <td>The most common movie format since the 1960s.</td>
-  </tr>
-  <tr>
-   <td><img alt="Ratio1_2.39.png" src="ratio1_2.39.png"></td>
-   <td><code>239/100</code><br>
-     </td>
-   <td>"Widescreen," anamorphic movie format.</td>
-  </tr>
- </tbody>
-</table>
+|                                     | Ratio               | Usage                                           |
+| ----------------------------------- | ------------------- | ----------------------------------------------- |
+| ![](ratio4_3.png)                   | `4/3`               | Traditional TV format in the twentieth century. |
+| ![](ratio16_9.png)                  | `16/9`              | Modern "widescreen" TV format.                  |
+| ![Ratio1_1.85.png](ratio1_1.85.png) | `185/100` = `91/50` | The most common movie format since the 1960s.   |
+| ![Ratio1_2.39.png](ratio1_2.39.png) | `239/100`           | "Widescreen," anamorphic movie format.          |
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><code><a href="/en-US/docs/Web/CSS/@media/aspect-ratio">aspect-ratio</a></code> media feature</li>
-</ul>
+- [`aspect-ratio`](/en-US/docs/Web/CSS/@media/aspect-ratio) media feature

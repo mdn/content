@@ -12,20 +12,21 @@ tags:
   - Web
 browser-compat: css.at-rules.page.size
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p>The <strong><code>size</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/At-rule">at-rule</a> descriptor, used with the {{cssxref("@page")}} at-rule, defines the size and orientation of the box which is used to represent a page. Most of the time, this size corresponds to the target size of the printed page if applicable.</p>
+The **`size`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) descriptor, used with the {{cssxref("@page")}} at-rule, defines the size and orientation of the box which is used to represent a page. Most of the time, this size corresponds to the target size of the printed page if applicable.
 
-<p>Size may either be defined with a "scalable" keyword (in this case the page will fill the available dimensions) or with absolute dimensions.</p>
+Size may either be defined with a "scalable" keyword (in this case the page will fill the available dimensions) or with absolute dimensions.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css">/* Keyword values for scalable size */
+```css
+/* Keyword values for scalable size */
 size: auto;
 size: portrait;
 size: landscape;
 
-/* &lt;length&gt; values */
+/* <length> values */
 /* 1 value: height = width */
 size: 6in;
 
@@ -40,77 +41,75 @@ size: letter;
 
 /* Mixing size and orientation */
 size: A4 portrait;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>The user agent decides the size of the page. In most cases, the dimensions and orientation of the target sheet are used.</dd>
- <dt><code>landscape</code></dt>
- <dd>The content of the page is displayed in landscape mode (i.e. the longest side of the box is horizontal).</dd>
- <dt><code>portrait</code></dt>
- <dd>The content of the page is displayed in portrait mode (i.e. the longest side of the box is vertical). This is the default orientation.</dd>
- <dt><code>&lt;length&gt;</code></dt>
- <dd>Any length value (see {{cssxref("&lt;length&gt;")}}). The first value corresponds to the width of the page box and the second one corresponds to its height. If only one value is provided, it is used for both width and height.</dd>
- <dt><code>&lt;page-size&gt;</code></dt>
- <dd>
-   <p>A keyword which may be any of the following values:</p>
- <dl>
-  <dt>A5</dt>
-  <dd>This matches the standard, ISO dimensions: 148mm x 210mm.</dd>
-  <dt>A4</dt>
-  <dd>This matches the standard, ISO dimensions: 210mm x 297mm. (most frequently used dimensions for personal printing.)</dd>
-  <dt>A3</dt>
-  <dd>This matches the standard, ISO dimensions: 297mm x 420mm.</dd>
-  <dt>B5</dt>
-  <dd>This matches the standard, ISO dimensions: 176mm x 250mm.</dd>
-  <dt>B4</dt>
-  <dd>This matches the standard, ISO dimensions: 250mm x 353mm.</dd>
-  <dt>JIS-B5</dt>
-  <dd>This correspond to the JIS standard dimensions: 182mm x 257mm.</dd>
-  <dt>JIS-B4</dt>
-  <dd>This correspond to the JIS standard dimensions: 257mm x 364mm.</dd>
-  <dt>letter</dt>
-  <dd>This keyword is a equivalent to the dimensions of letter paper in North America i.e. 8.5in x 11in.</dd>
-  <dt>legal</dt>
-  <dd>This keyword is a equivalent to the dimensions of legal papers in North America i.e. 8.5in x 14in.</dd>
-  <dt>ledger</dt>
-  <dd>This keyword is a equivalent to the dimensions of ledger pages in North America i.e. 11in x 17in.</dd>
- </dl>
- </dd>
-</dl>
+- `auto`
+  - : The user agent decides the size of the page. In most cases, the dimensions and orientation of the target sheet are used.
+- `landscape`
+  - : The content of the page is displayed in landscape mode (i.e. the longest side of the box is horizontal).
+- `portrait`
+  - : The content of the page is displayed in portrait mode (i.e. the longest side of the box is vertical). This is the default orientation.
+- `<length>`
+  - : Any length value (see {{cssxref("&lt;length&gt;")}}). The first value corresponds to the width of the page box and the second one corresponds to its height. If only one value is provided, it is used for both width and height.
+- `<page-size>`
 
-<h2 id="Formal_definition">Formal definition</h2>
+  - : A keyword which may be any of the following values:
 
-<p>{{cssinfo}}</p>
+    - A5
+      - : This matches the standard, ISO dimensions: 148mm x 210mm.
+    - A4
+      - : This matches the standard, ISO dimensions: 210mm x 297mm. (most frequently used dimensions for personal printing.)
+    - A3
+      - : This matches the standard, ISO dimensions: 297mm x 420mm.
+    - B5
+      - : This matches the standard, ISO dimensions: 176mm x 250mm.
+    - B4
+      - : This matches the standard, ISO dimensions: 250mm x 353mm.
+    - JIS-B5
+      - : This correspond to the JIS standard dimensions: 182mm x 257mm.
+    - JIS-B4
+      - : This correspond to the JIS standard dimensions: 257mm x 364mm.
+    - letter
+      - : This keyword is a equivalent to the dimensions of letter paper in North America i.e. 8.5in x 11in.
+    - legal
+      - : This keyword is a equivalent to the dimensions of legal papers in North America i.e. 8.5in x 14in.
+    - ledger
+      - : This keyword is a equivalent to the dimensions of ledger pages in North America i.e. 11in x 17in.
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal definition
+
+{{cssinfo}}
+
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Specifying_size_and_orientation">Specifying size and orientation</h3>
+### Specifying size and orientation
 
-<pre class="brush: css">@page {
+```css
+@page {
   size: 4in 6in landscape;
 }
-</pre>
+```
 
-<h3 id="Nesting_inside_a_media_rule">Nesting inside a @media rule</h3>
+### Nesting inside a @media rule
 
-<pre class="brush: css">@media print {
+```css
+@media print {
   @page {
     size: 50mm 150mm;
   }
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

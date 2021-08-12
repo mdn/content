@@ -9,22 +9,23 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.animation-iteration-count
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>animation-iteration-count</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets the number of times an animation sequence should be played before stopping.</p>
+The **`animation-iteration-count`** [CSS](/en-US/docs/Web/CSS) property sets the number of times an animation sequence should be played before stopping.
 
-<p>If multiple values are specified, each time the animation is played the next value in the list is used, cycling back to the first value after the last one is used.</p>
+If multiple values are specified, each time the animation is played the next value in the list is used, cycling back to the first value after the last one is used.
 
-<div>{{EmbedInteractiveExample("pages/css/animation-iteration-count.html")}}</div>
+{{EmbedInteractiveExample("pages/css/animation-iteration-count.html")}}
 
-<p>It is often convenient to use the shorthand property {{cssxref("animation")}} to set all animation properties at once.</p>
+It is often convenient to use the shorthand property {{cssxref("animation")}} to set all animation properties at once.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* Keyword value */
+```css
+/* Keyword value */
 animation-iteration-count: infinite;
 
-/* &lt;number&gt; values */
+/* <number> values */
 animation-iteration-count: 3;
 animation-iteration-count: 2.4;
 
@@ -35,42 +36,42 @@ animation-iteration-count: 2, 0, infinite;
 animation-iteration-count: inherit;
 animation-iteration-count: initial;
 animation-iteration-count: revert;
-animation-iteration-count: unset;</pre>
+animation-iteration-count: unset;
+```
 
-<p>The <strong><code>animation-iteration-count</code></strong> property is specified as one or more comma-separated values.</p>
+The **`animation-iteration-count`** property is specified as one or more comma-separated values.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
-	<dt><code>infinite</code></dt>
-	<dd>The animation will repeat forever.</dd>
-	<dt><code>{{cssxref("&lt;number&gt;")}}</code></dt>
-	<dd>The number of times the animation will repeat; this is <code>1</code> by default. You may specify non-integer values to play part of an animation cycle: for example, <code>0.5</code> will play half of the animation cycle. Negative values are invalid.</dd>
-</dl>
+- `infinite`
+  - : The animation will repeat forever.
+- `{{cssxref("&lt;number&gt;")}}`
+  - : The number of times the animation will repeat; this is `1` by default. You may specify non-integer values to play part of an animation cycle: for example, `0.5` will play half of the animation cycle. Negative values are invalid.
 
-<div class="note">
-<p><strong>Note:</strong> When you specify multiple values on an <code>animation-*</code> property, they will be assigned to the animations specified in the {{cssxref("animation-name")}} property in different ways depending on how many there are. For more information, see <a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations#setting_multiple_animation_property_values">Setting multiple animation property values</a>.</p>
-</div>
+> **Note:** When you specify multiple values on an `animation-*` property, they will be assigned to the animations specified in the {{cssxref("animation-name")}} property in different ways depending on how many there are. For more information, see [Setting multiple animation property values](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations#setting_multiple_animation_property_values).
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="The_animation_will_run_10_times.">The animation will run 10 times.</h3>
+### The animation will run 10 times.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="box"&gt;&lt;/div&gt;</pre>
+```html
+<div class="box"></div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.box {
+```css
+.box {
   background-color: rebeccapurple;
   border-radius: 10px;
   width: 100px;
@@ -87,23 +88,22 @@ animation-iteration-count: unset;</pre>
   100% {
     transform: rotate(360deg);
   }
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Examples","100%","250")}}</p>
+{{EmbedLiveSample("Examples","100%","250")}}
 
-<p>See <a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations">CSS animations</a> for examples.</p>
+See [CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations) for examples.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li><a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations" title="Tutorial about CSS animations">Using CSS animations</a></li>
-	<li>JavaScript {{domxref("AnimationEvent")}} API</li>
-</ul>
+- [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations "Tutorial about CSS animations")
+- JavaScript {{domxref("AnimationEvent")}} API

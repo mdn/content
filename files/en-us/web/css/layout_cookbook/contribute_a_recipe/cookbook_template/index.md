@@ -10,55 +10,51 @@ tags:
   - cookbook
   - recipes
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<div class="note">
-  <p><strong>Note:</strong> This is a template page for a CSS Cookbook page. Please use this as a raw template when you create a new cookbook page.<br>
-<em>Comment in italics are information about how to use part of the template.</em></p>
-</div>
+> **Note:** This is a template page for a CSS Cookbook page. Please use this as a raw template when you create a new cookbook page.
+> _Comment in italics are information about how to use part of the template._
 
-<p><em>Description of the problem this recipe solves or the pattern you are demonstrating.</em></p>
+_Description of the problem this recipe solves or the pattern you are demonstrating._
 
-<h2 id="Requirements">Requirements</h2>
+## Requirements
 
-<p><em>What does this pattern need to include, or what problems does it need to solve? List that here.</em></p>
+_What does this pattern need to include, or what problems does it need to solve? List that here._
 
-<h2 id="Recipe">Recipe</h2>
+## Recipe
 
-<p><em>Change the path to the example below to point to your merged example. The last parameter is the live example height, which you can change as needed.</em></p>
+_Change the path to the example below to point to your merged example. The last parameter is the live example height, which you can change as needed._
 
-<p>{{EmbedGHLiveSample("css-examples/css-cookbook/center.html", '100%', 720)}}</p>
+{{EmbedGHLiveSample("css-examples/css-cookbook/center.html", '100%', 720)}}
 
-<p><em>Change the link to point to your merged download version.</em></p>
+_Change the link to point to your merged download version._
 
-<p><a href="https://github.com/mdn/css-examples/blob/master/css-cookbook/center--download.html">Download the example</a></p>
+[Download the example](https://github.com/mdn/css-examples/blob/master/css-cookbook/center--download.html)
 
-<h2 id="Choices_made">Choices made</h2>
+## Choices made
 
-<p><em>Explain your decisions when creating the pattern. Why did you choose a certain method? If you want to add an additional example here — for example a version with fallbacks, please do. This section is deliberately loose as patterns range from the very simple to more complex.</em></p>
+_Explain your decisions when creating the pattern. Why did you choose a certain method? If you want to add an additional example here — for example a version with fallbacks, please do. This section is deliberately loose as patterns range from the very simple to more complex._
 
-<h2 id="Useful_fallbacks_or_alternative_methods">Useful fallbacks or alternative methods</h2>
+## Useful fallbacks or alternative methods
 
-<p><em>If there are useful alternative methods for building the recipe, or fallback recipes to use if you have to support non-supporting browsers, include them in separate sections down here.</em></p>
+_If there are useful alternative methods for building the recipe, or fallback recipes to use if you have to support non-supporting browsers, include them in separate sections down here._
 
-<h2 id="Accessibility_concerns">Accessibility concerns</h2>
+## Accessibility concerns
 
-<p><em>Include this is there are any specific things to watch out for in regard to accessibility. If not relevant for your pattern this can be omitted.</em></p>
+_Include this is there are any specific things to watch out for in regard to accessibility. If not relevant for your pattern this can be omitted._
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>The various layout methods have different browser support. See the charts below for details on basic support for the properties used.</p>
+The various layout methods have different browser support. See the charts below for details on basic support for the properties used.
 
-<p><em>Include the compat data for key properties you used, as in the example below which includes align-items.</em></p>
+_Include the compat data for key properties you used, as in the example below which includes align-items._
 
-<h4 id="align-items">align-items</h4>
+#### align-items
 
-<p>{{Compat("css.properties.align-items")}}</p>
+{{Compat("css.properties.align-items")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><em>Links of link of related properties: {{Cssxref("example-property")}}</em></li>
- <li><em>Links to article showing how to use the property in context: "Using … article"</em></li>
- <li><em>Very good external links. Don't be afraid of external links, but they should be outstanding, and not only mention minor details.</em></li>
-</ul>
+- _Links of link of related properties: {{Cssxref("example-property")}}_
+- _Links to article showing how to use the property in context: "Using … article"_
+- _Very good external links. Don't be afraid of external links, but they should be outstanding, and not only mention minor details._

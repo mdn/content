@@ -8,57 +8,38 @@ tags:
   - Overview
   - Reference
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong>CSS Masking</strong> is a <a href="/en-US/docs/Web/CSS">CSS</a> module that defines means, including masking and clipping, for partially or fully hiding portions of visual elements.</p>
+**CSS Masking** is a [CSS](/en-US/docs/Web/CSS) module that defines means, including masking and clipping, for partially or fully hiding portions of visual elements.
 
-<h2 id="Reference">Reference</h2>
+## Reference
 
-<h3 id="Properties">Properties</h3>
+### Properties
 
-<ul>
- <li>{{cssxref("clip")}} {{deprecated_inline}}</li>
- <li>{{cssxref("clip-path")}}</li>
- <li>{{cssxref("clip-rule")}}</li>
- <li>{{cssxref("mask")}}</li>
- <li>{{cssxref("mask-border")}}</li>
- <li>{{cssxref("mask-border-mode")}}</li>
- <li>{{cssxref("mask-border-outset")}}</li>
- <li>{{cssxref("mask-border-repeat")}}</li>
- <li>{{cssxref("mask-border-slice")}}</li>
- <li>{{cssxref("mask-border-source")}}</li>
- <li>{{cssxref("mask-border-width")}}</li>
- <li>{{cssxref("mask-clip")}}</li>
- <li>{{cssxref("mask-composite")}}</li>
- <li>{{cssxref("mask-image")}}</li>
- <li>{{cssxref("mask-mode")}}</li>
- <li>{{cssxref("mask-origin")}}</li>
- <li>{{cssxref("mask-position")}}</li>
- <li>{{cssxref("mask-repeat")}}</li>
- <li>{{cssxref("mask-size")}}</li>
- <li>{{cssxref("mask-type")}}</li>
-</ul>
+- {{cssxref("clip")}} {{deprecated_inline}}
+- {{cssxref("clip-path")}}
+- {{cssxref("clip-rule")}}
+- {{cssxref("mask")}}
+- {{cssxref("mask-border")}}
+- {{cssxref("mask-border-mode")}}
+- {{cssxref("mask-border-outset")}}
+- {{cssxref("mask-border-repeat")}}
+- {{cssxref("mask-border-slice")}}
+- {{cssxref("mask-border-source")}}
+- {{cssxref("mask-border-width")}}
+- {{cssxref("mask-clip")}}
+- {{cssxref("mask-composite")}}
+- {{cssxref("mask-image")}}
+- {{cssxref("mask-mode")}}
+- {{cssxref("mask-origin")}}
+- {{cssxref("mask-position")}}
+- {{cssxref("mask-repeat")}}
+- {{cssxref("mask-size")}}
+- {{cssxref("mask-type")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Masks")}}</td>
-   <td>{{Spec2("CSS Masks")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('SVG1.1', 'masking.html#MaskProperty', 'mask')}}</td>
-   <td>{{Spec2('SVG1.1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                    | Status                       | Comment            |
+| -------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
+| {{SpecName("CSS Masks")}}                                                 | {{Spec2("CSS Masks")}} |                    |
+| {{SpecName('SVG1.1', 'masking.html#MaskProperty', 'mask')}} | {{Spec2('SVG1.1')}}     | Initial definition |

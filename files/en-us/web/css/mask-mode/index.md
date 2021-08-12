@@ -7,14 +7,15 @@ tags:
   - CSS Property
   - Experimental
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.mask-mode
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>mask-mode</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets whether the mask reference defined by {{cssxref("mask-image")}} is treated as a luminance or alpha mask.</p>
+The **`mask-mode`** [CSS](/en-US/docs/Web/CSS) property sets whether the mask reference defined by {{cssxref("mask-image")}} is treated as a luminance or alpha mask.
 
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 mask-mode: alpha;
 mask-mode: luminance;
 mask-mode: match-source;
@@ -27,51 +28,46 @@ mask-mode: inherit;
 mask-mode: initial;
 mask-mode: revert;
 mask-mode: unset;
-</pre>
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>mask-mode</code> property is specified as one or more of the keyword values listed below, separated by commas.</p>
+The `mask-mode` property is specified as one or more of the keyword values listed below, separated by commas.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
-	<dt><code>alpha</code></dt>
-	<dd>This keyword indicates that the transparency (alpha channel) values of the mask layer image should be used as the mask values.</dd>
-	<dt><code>luminance</code></dt>
-	<dd>This keyword indicates that the luminance values of the mask layer image should be used as the mask values.</dd>
-	<dt><code>match-source</code></dt>
-	<dd>
-	<p>If the {{cssxref("mask-image")}} property is of type <code>&lt;mask-source&gt;</code>, the luminance values of the mask layer image should be used as the mask values.</p>
+- `alpha`
+  - : This keyword indicates that the transparency (alpha channel) values of the mask layer image should be used as the mask values.
+- `luminance`
+  - : This keyword indicates that the luminance values of the mask layer image should be used as the mask values.
+- `match-source`
 
-	<p>If it is of type {{cssxref("&lt;image&gt;")}}, the alpha values of the mask layer image should be used as the mask values.</p>
-	</dd>
-</dl>
+  - : If the {{cssxref("mask-image")}} property is of type `<mask-source>`, the luminance values of the mask layer image should be used as the mask values.
 
-<h2 id="Formal_definition">Formal definition</h2>
+    If it is of type {{cssxref("&lt;image&gt;")}}, the alpha values of the mask layer image should be used as the mask values.
 
-<p>{{cssinfo}}</p>
+## Formal definition
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+{{cssinfo}}
+
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_alpha_mask_mode">Using alpha mask mode</h3>
+### Using alpha mask mode
 
-<p>{{EmbedGHLiveSample("css-examples/masking/mask-mode.html", '100%', 760)}}</p>
+{{EmbedGHLiveSample("css-examples/masking/mask-mode.html", '100%', 760)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="https://css-tricks.com/clipping-masking-css/">Clipping and Masking in CSS</a></li>
-</ul>
+- [Clipping and Masking in CSS](https://css-tricks.com/clipping-masking-css/)

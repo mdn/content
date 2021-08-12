@@ -11,30 +11,28 @@ tags:
   - values
 browser-compat: css.types.angle-percentage
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>&lt;angle-percentage&gt;</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Types">data type</a> represents a value that can be either a {{Cssxref("angle")}} or a {{Cssxref("percentage")}}.</p>
+The **`<angle-percentage>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents a value that can be either a {{Cssxref("angle")}} or a {{Cssxref("percentage")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>Refer to the documentation for {{Cssxref("angle")}} and {{Cssxref("percentage")}} for details of the individual syntaxes allowed by this type.</p>
+Refer to the documentation for {{Cssxref("angle")}} and {{Cssxref("percentage")}} for details of the individual syntaxes allowed by this type.
 
-<h2 id="Use_in_calc">Use in calc()</h2>
+## Use in calc()
 
-<p>Where an <code>&lt;angle-percentage&gt;</code> is specified as an allowable type, this means that the percentage resolves to an angle and therefore can be used in a {{Cssxref("calc()")}} expression.</p>
+Where an `<angle-percentage>` is specified as an allowable type, this means that the percentage resolves to an angle and therefore can be used in a {{Cssxref("calc()")}} expression.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Types">CSS data types</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients">Using CSS gradients</a></li>
- <li><code><a href="/en-US/docs/Web/CSS/conic-gradient">conic-gradient()</a></code> and <code><a href="/en-US/docs/Web/CSS/repeating-conic-gradient">repeating-conic-gradient()</a></code></li>
-</ul>
+- [CSS data types](/en-US/docs/Web/CSS/CSS_Types)
+- [Using CSS gradients](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
+- [`conic-gradient()`](/en-US/docs/Web/CSS/conic-gradient) and [`repeating-conic-gradient()`](/en-US/docs/Web/CSS/repeating-conic-gradient)

@@ -9,30 +9,28 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.background-image
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<p>The <strong><code>background-image</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets one or more background images on an element.</p>
+The **`background-image`** [CSS](/en-US/docs/Web/CSS) property sets one or more background images on an element.
 
-<div>{{EmbedInteractiveExample("pages/css/background-image.html")}}</div>
+{{EmbedInteractiveExample("pages/css/background-image.html")}}
 
+The background images are drawn on stacking context layers on top of each other. The first layer specified is drawn as if it is closest to the user.
 
-<p>The background images are drawn on stacking context layers on top of each other. The first layer specified is drawn as if it is closest to the user.</p>
+The [borders](/en-US/docs/Web/CSS/border) of the element are then drawn on top of them, and the {{cssxref("background-color")}} is drawn beneath them. How the images are drawn relative to the box and its borders is defined by the {{cssxref("background-clip")}} and {{cssxref("background-origin")}} CSS properties.
 
-<p>The <a href="/en-US/docs/Web/CSS/border">borders</a> of the element are then drawn on top of them, and the {{cssxref("background-color")}} is drawn beneath them. How the images are drawn relative to the box and its borders is defined by the {{cssxref("background-clip")}} and {{cssxref("background-origin")}} CSS properties.</p>
+If a specified image cannot be drawn (for example, when the file denoted by the specified URI cannot be loaded), browsers handle it as they would a `none` value.
 
-<p>If a specified image cannot be drawn (for example, when the file denoted by the specified URI cannot be loaded), browsers handle it as they would a <code>none</code> value.</p>
+> **Note:** Even if the images are opaque and the color won't be displayed in normal circumstances, web developers should always specify a {{cssxref("background-color")}}. If the images cannot be loaded—for instance, when the network is down—the background color will be used as a fallback.
 
-<div class="note">
-  <p><strong>Note:</strong> Even if the images are opaque and the color won't be displayed in normal circumstances, web developers should always specify a {{cssxref("background-color")}}. If the images cannot be loaded—for instance, when the network is down—the background color will be used as a fallback.</p>
-</div>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+Each background image is specified either as the keyword `none` or as an {{cssxref("&lt;image&gt;")}} value.
 
-<p>Each background image is specified either as the keyword <code>none</code> or as an {{cssxref("&lt;image&gt;")}} value.</p>
+To specify multiple background images, supply multiple values, separated by a comma:
 
-<p>To specify multiple background images, supply multiple values, separated by a comma:</p>
-
-<pre class="brush: css no-line-numbers">background-image:
+```css
+background-image:
   linear-gradient(to bottom, rgba(255,255,0,0.5), rgba(0,0,255,0.5)),
   url('catfront.png');
 
@@ -40,56 +38,56 @@ browser-compat: css.properties.background-image
 background-image: inherit;
 background-image: initial;
 background-image: revert;
-background-image: unset;</pre>
+background-image: unset;
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>none</code></dt>
- <dd>Is a keyword denoting the absence of images.</dd>
- <dt><code>&lt;image&gt;</code></dt>
- <dd>Is an {{cssxref("&lt;image&gt;")}} denoting the image to display. There can be several of them, separated by commas, as <a href="/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds">multiple backgrounds</a> are supported.</dd>
-</dl>
+- `none`
+  - : Is a keyword denoting the absence of images.
+- `<image>`
+  - : Is an {{cssxref("&lt;image&gt;")}} denoting the image to display. There can be several of them, separated by commas, as [multiple backgrounds](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds) are supported.
 
-<h2 id="Accessibility_concerns">Accessibility concerns</h2>
+## Accessibility concerns
 
-<p>Browsers do not provide any special information on background images to assistive technology. This is important primarily for screen readers, as a screen reader will not announce its presence and therefore convey nothing to its users. If the image contains information critical to understanding the page's overall purpose, it is better to describe it semantically in the document.</p>
+Browsers do not provide any special information on background images to assistive technology. This is important primarily for screen readers, as a screen reader will not announce its presence and therefore convey nothing to its users. If the image contains information critical to understanding the page's overall purpose, it is better to describe it semantically in the document.
 
-<ul>
- <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_%e2%80%94_providing_text_alternatives_for_non-text_content">MDN Understanding WCAG, Guideline 1.1 explanations</a></li>
- <li><a href="https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html">Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0</a></li>
-</ul>
+- [MDN Understanding WCAG, Guideline 1.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_%e2%80%94_providing_text_alternatives_for_non-text_content)
+- [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Layering_background_images">Layering background images</h3>
+### Layering background images
 
-<p>Note that the star image is partially transparent and is layered over the cat image.</p>
+Note that the star image is partially transparent and is layered over the cat image.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;p class="catsandstars"&gt;
-    This paragraph is full of cats&lt;br /&gt;and stars.
-  &lt;/p&gt;
-  &lt;p&gt;This paragraph is not.&lt;/p&gt;
-  &lt;p class="catsandstars"&gt;
-    Here are more cats for you.&lt;br /&gt;Look at them!
-  &lt;/p&gt;
-  &lt;p&gt;And no more.&lt;/p&gt;
-&lt;/div&gt;</pre>
+```html
+<div>
+  <p class="catsandstars">
+    This paragraph is full of cats<br />and stars.
+  </p>
+  <p>This paragraph is not.</p>
+  <p class="catsandstars">
+    Here are more cats for you.<br />Look at them!
+  </p>
+  <p>And no more.</p>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   font-size: 1.5em;
   color: #FE7F88;
   background-image: none;
@@ -107,38 +105,34 @@ div {
       url("catfront.png");
   background-color: transparent;
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Layering_background_images')}}</p>
+{{EmbedLiveSample('Layering_background_images')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Images/Implementing_image_sprites_in_CSS">Implementing image sprites in CSS</a></li>
- <li>{{HTMLElement("img")}}</li>
- <li>Image-related data types: {{cssxref("&lt;image&gt;")}}, {{cssxref("&lt;gradient&gt;")}}</li>
- <li>Image-related functions:
-  <ul>
-   <li>{{cssxref("cross-fade()")}}</li>
-   <li>{{cssxref("element()")}}</li>
-   <li>{{cssxref("image()", "image()")}}</li>
-   <li>{{cssxref("image-set()")}}</li>
-   <li>{{cssxref("linear-gradient()")}}</li>
-   <li>{{cssxref("radial-gradient()")}}</li>
-   <li>{{cssxref("repeating-linear-gradient()")}}</li>
-   <li>{{cssxref("repeating-radial-gradient()")}}</li>
-   <li>{{cssxref("paint()")}}</li>
-   <li>{{cssxref("url()", "url()")}}</li>
-  </ul>
- </li>
-</ul>
+- [Implementing image sprites in CSS](/en-US/docs/Web/CSS/CSS_Images/Implementing_image_sprites_in_CSS)
+- {{HTMLElement("img")}}
+- Image-related data types: {{cssxref("&lt;image&gt;")}}, {{cssxref("&lt;gradient&gt;")}}
+- Image-related functions:
+
+  - {{cssxref("cross-fade()")}}
+  - {{cssxref("element()")}}
+  - {{cssxref("image()", "image()")}}
+  - {{cssxref("image-set()")}}
+  - {{cssxref("linear-gradient()")}}
+  - {{cssxref("radial-gradient()")}}
+  - {{cssxref("repeating-linear-gradient()")}}
+  - {{cssxref("repeating-radial-gradient()")}}
+  - {{cssxref("paint()")}}
+  - {{cssxref("url()", "url()")}}

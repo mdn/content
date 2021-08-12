@@ -6,18 +6,19 @@ tags:
   - CSS Borders
   - CSS Property
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.border-bottom-color
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>border-bottom-color</code></strong> CSS property sets the color of an element's bottom <a href="/en-US/docs/Web/CSS/border">border</a>. It can also be set with the shorthand CSS properties {{cssxref("border-color")}} or {{cssxref("border-bottom")}}.</p>
+The **`border-bottom-color`** CSS property sets the color of an element's bottom [border](/en-US/docs/Web/CSS/border). It can also be set with the shorthand CSS properties {{cssxref("border-color")}} or {{cssxref("border-bottom")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/border-bottom-color.html")}}</div>
+{{EmbedInteractiveExample("pages/css/border-bottom-color.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css no-line-numbers  language-css">/* &lt;color&gt; values */
+```css
+/* <color> values */
 border-bottom-color: red;
 border-bottom-color: #ffbb00;
 border-bottom-color: rgb(255, 0, 0);
@@ -30,40 +31,41 @@ border-bottom-color: inherit;
 border-bottom-color: initial;
 border-bottom-color: revert;
 border-bottom-color: unset;
-</pre>
+```
 
-<p>The <code>border-bottom-color</code> property is specified as a single value.</p>
+The `border-bottom-color` property is specified as a single value.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt>{{cssxref("&lt;color&gt;")}}</dt>
- <dd>The color of the bottom border.</dd>
-</dl>
+- {{cssxref("&lt;color&gt;")}}
+  - : The color of the bottom border.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="A_simple_div_with_a_border">A simple div with a border</h3>
+### A simple div with a border
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="mybox"&gt;
-  &lt;p&gt;This is a box with a border around it.
+```html
+<div class="mybox">
+  <p>This is a box with a border around it.
      Note which side of the box is
-     &lt;span class="redtext"&gt;red&lt;/span&gt;.&lt;/p&gt;
-&lt;/div&gt;</pre>
+     <span class="redtext">red</span>.</p>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.mybox {
+```css
+.mybox {
     border: solid 0.3em gold;
     border-bottom-color: red;
     width: auto;
@@ -71,24 +73,23 @@ border-bottom-color: unset;
 
 .redtext {
     color: red;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('A_simple_div_with_a_border')}}</p>
+{{EmbedLiveSample('A_simple_div_with_a_border')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The border-related CSS shorthand properties: {{Cssxref("border")}}, {{Cssxref("border-bottom")}}, and {{Cssxref("border-color")}}.</li>
- <li>The color-related CSS properties for the other borders: {{Cssxref("border-right-color")}}, {{Cssxref("border-top-color")}}, and {{Cssxref("border-left-color")}}.</li>
- <li>The other border-related CSS properties applying to the same border: {{cssxref("border-bottom-style")}} and {{cssxref("border-bottom-width")}}.</li>
-</ul>
+- The border-related CSS shorthand properties: {{Cssxref("border")}}, {{Cssxref("border-bottom")}}, and {{Cssxref("border-color")}}.
+- The color-related CSS properties for the other borders: {{Cssxref("border-right-color")}}, {{Cssxref("border-top-color")}}, and {{Cssxref("border-left-color")}}.
+- The other border-related CSS properties applying to the same border: {{cssxref("border-bottom-style")}} and {{cssxref("border-bottom-width")}}.

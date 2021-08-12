@@ -9,48 +9,43 @@ tags:
   - Reference
 browser-compat: css.types.transform-function.scale
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>scale()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a
-    href="/en-US/docs/Web/CSS/CSS_Functions">function</a> defines a transformation that resizes an element on the 2D
-  plane. Because the amount of scaling is defined by a vector, it can resize the horizontal and vertical dimensions at
-  different scales. Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.</p>
+The **`scale()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) defines a transformation that resizes an element on the 2D
+plane. Because the amount of scaling is defined by a vector, it can resize the horizontal and vertical dimensions at
+different scales. Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.
 
-<p><img src="scale.png"></p>
+![](scale.png)
 
-<p>This scaling transformation is characterized by a two-dimensional vector. Its coordinates define how much scaling is
-  done in each direction. If both coordinates are equal, the scaling is uniform (<em>isotropic</em>) and the aspect
-  ratio of the element is preserved (this is a <a
-    href="https://en.wikipedia.org/wiki/Homothetic_transformation">homothetic transformation</a>).</p>
+This scaling transformation is characterized by a two-dimensional vector. Its coordinates define how much scaling is
+done in each direction. If both coordinates are equal, the scaling is uniform (_isotropic_) and the aspect
+ratio of the element is preserved (this is a [homothetic transformation](https://en.wikipedia.org/wiki/Homothetic_transformation)).
 
-<p>When a coordinate value is outside the [-1, 1] range, the element grows along that dimension; when inside, it
-  shrinks. If it is negative, the result a <a href="https://en.wikipedia.org/wiki/Point_reflection">point reflection</a>
-  in that dimension. A value of 1 has no effect.</p>
+When a coordinate value is outside the \[-1, 1] range, the element grows along that dimension; when inside, it
+shrinks. If it is negative, the result a [point reflection](https://en.wikipedia.org/wiki/Point_reflection)
+in that dimension. A value of 1 has no effect.
 
-<div class="note">
-  <p><strong>Note:</strong> The <code>scale()</code> function only scales in 2D. To scale in 3D, use
-  <code><a href="/en-US/docs/Web/CSS/transform-function/scale3d()">scale3d()</a></code> instead.</p>
-</div>
+> **Note:** The `scale()` function only scales in 2D. To scale in 3D, use
+> [`scale3d()`](</en-US/docs/Web/CSS/transform-function/scale3d()>) instead.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>scale()</code> function is specified with either one or two values, which represent the amount of scaling
-  to be applied in each direction.</p>
+The `scale()` function is specified with either one or two values, which represent the amount of scaling
+to be applied in each direction.
 
-<pre class="brush: css">scale(<var>sx</var>)
+```css
+scale(sx)
 
-scale(<var>sx</var>, <var>sy</var>)
-</pre>
+scale(sx, sy)
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
-  <dt><code><var>sx</var></code></dt>
-  <dd>A {{cssxref("&lt;number&gt;")}} representing the abscissa of the scaling vector.</dd>
-  <dt><code><var>sy</var></code></dt>
-  <dd>A {{cssxref("&lt;number&gt;")}} representing the ordinate of the scaling vector. If not defined, its default value
-    is <code><var>sx</var></code>, resulting in a uniform scaling that preserves the element's aspect ratio.</dd>
-</dl>
+- `sx`
+  - : A {{cssxref("&lt;number&gt;")}} representing the abscissa of the scaling vector.
+- `sy`
+  - : A {{cssxref("&lt;number&gt;")}} representing the ordinate of the scaling vector. If not defined, its default value
+    is `sx`, resulting in a uniform scaling that preserves the element's aspect ratio.
 
 <table class="standard-table">
   <thead>
@@ -63,168 +58,76 @@ scale(<var>sx</var>, <var>sy</var>)
   </thead>
   <tbody>
     <tr>
-      <td rowspan="2"><math>
-          <mfenced>
-            <mtable>
-              <mtr>
-                <mtd>
-                  <mi>sx</mi>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-              </mtr>
-              <mtr>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mi>sy</mi>
-                </mtd>
-              </mtr>
-            </mtable>
-          </mfenced>
-        </math></td>
-      <td><math>
-          <mfenced>
-            <mtable>
-              <mtr>
-                <mtd>
-                  <mi>sx</mi>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-              </mtr>
-              <mtr>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mi>sy</mi>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-              </mtr>
-              <mtr>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>1</mn>
-                </mtd>
-              </mtr>
-            </mtable>
-          </mfenced>
-        </math></td>
-      <td rowspan="2"><math>
-          <mfenced>
-            <mtable>
-              <mtr>
-                <mtd>
-                  <mi>sx</mi>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-              </mtr>
-              <mtr>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mi>sy</mi>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-              </mtr>
-              <mtr>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>1</mn>
-                </mtd>
-              </mtr>
-            </mtable>
-          </mfenced>
-        </math></td>
-      <td rowspan="2"><math>
-          <mfenced>
-            <mtable>
-              <mtr>
-                <mtd>
-                  <mi>sx</mi>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-              </mtr>
-              <mtr>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mi>sy</mi>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-              </mtr>
-              <mtr>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>1</mn>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-              </mtr>
-              <mtr>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>1</mn>
-                </mtd>
-              </mtr>
-            </mtable>
-          </mfenced>
-        </math></td>
+      <td rowspan="2">
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr
+                ><mtd><mi>sx</mi> </mtd><mtd><mn>0</mn> </mtd></mtr
+              ><mtr
+                ><mtd><mn>0</mn> </mtd><mtd><mi>sy</mi></mtd></mtr
+              ></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
+      <td>
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr
+                ><mtd><mi>sx</mi> </mtd><mtd><mn>0</mn> </mtd
+                ><mtd><mn>0</mn> </mtd></mtr
+              ><mtr
+                ><mtd><mn>0</mn> </mtd><mtd><mi>sy</mi> </mtd
+                ><mtd><mn>0</mn> </mtd></mtr
+              ><mtr
+                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
+                ><mtd><mn>1</mn></mtd></mtr
+              ></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
+      <td rowspan="2">
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr
+                ><mtd><mi>sx</mi> </mtd><mtd><mn>0</mn> </mtd
+                ><mtd><mn>0</mn> </mtd></mtr
+              ><mtr
+                ><mtd><mn>0</mn> </mtd><mtd><mi>sy</mi> </mtd
+                ><mtd><mn>0</mn> </mtd></mtr
+              ><mtr
+                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
+                ><mtd><mn>1</mn></mtd></mtr
+              ></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
+      <td rowspan="2">
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr
+                ><mtd><mi>sx</mi> </mtd><mtd><mn>0</mn> </mtd
+                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
+              ><mtr
+                ><mtd><mn>0</mn> </mtd><mtd><mi>sy</mi> </mtd
+                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
+              ><mtr
+                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
+                ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
+              ><mtr
+                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
+                ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn></mtd></mtr
+              ></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
     </tr>
     <tr>
       <td><code>[sx 0 0 sy 0 0]</code></td>
@@ -232,38 +135,38 @@ scale(<var>sx</var>, <var>sy</var>)
   </tbody>
 </table>
 
-<h2 id="Accessibility_concerns">Accessibility concerns</h2>
+## Accessibility concerns
 
-<p>Scaling/zooming animations are problematic for accessibility, as they are a common trigger for certain types of
-  migraine. If you need to include such animations on your website, you should provide a control to allow users to turn
-  off animations, preferably site-wide.</p>
+Scaling/zooming animations are problematic for accessibility, as they are a common trigger for certain types of
+migraine. If you need to include such animations on your website, you should provide a control to allow users to turn
+off animations, preferably site-wide.
 
-<p>Also, consider making use of the {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}} media feature
-  — use it to write a <a href="/en-US/docs/Web/CSS/Media_Queries">media query</a> that will turn off animations if the
-  user has reduced animation specified in their system preferences.</p>
+Also, consider making use of the {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}} media feature
+— use it to write a [media query](/en-US/docs/Web/CSS/Media_Queries) that will turn off animations if the
+user has reduced animation specified in their system preferences.
 
-<p>Find out more:</p>
+Find out more:
 
-<ul>
-  <li><a
-      href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.3_%e2%80%94_seizures_and_physical_reactions_do_not_design_content_in_a_way_that_is_known_to_cause_seizures_or_physical_reactions">MDN
-      Understanding WCAG, Guideline 2.3 explanations</a></li>
-  <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/animation-from-interactions">Understanding Success Criterion
-      2.3.3 | W3C Understanding WCAG 2.1</a></li>
-</ul>
+- [MDN
+  Understanding WCAG, Guideline 2.3 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.3_%e2%80%94_seizures_and_physical_reactions_do_not_design_content_in_a_way_that_is_known_to_cause_seizures_or_physical_reactions)
+- [Understanding Success Criterion
+  2.3.3 | W3C Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/animation-from-interactions)
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Scaling_the_X_and_Y_dimensions_together">Scaling the X and Y dimensions together</h3>
+### Scaling the X and Y dimensions together
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div&gt;Normal&lt;/div&gt;
-&lt;div class="scaled"&gt;Scaled&lt;/div&gt;</pre>
+```html
+<div>Normal</div>
+<div class="scaled">Scaled</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   width: 80px;
   height: 80px;
   background-color: skyblue;
@@ -273,23 +176,25 @@ scale(<var>sx</var>, <var>sy</var>)
   transform: scale(0.7); /* Equal to scaleX(0.7) scaleY(0.7) */
   background-color: pink;
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Scaling_the_X_and_Y_dimensions_together", "200", "200")}}</p>
+{{EmbedLiveSample("Scaling_the_X_and_Y_dimensions_together", "200", "200")}}
 
-<h3 id="Scaling_X_and_Y_dimensions_separately_and_translating_the_origin">Scaling X and Y dimensions separately, and
-  translating the origin</h3>
+### Scaling X and Y dimensions separately, and translating the origin
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div&gt;Normal&lt;/div&gt;
-&lt;div class="scaled"&gt;Scaled&lt;/div&gt;</pre>
+```html
+<div>Normal</div>
+<div class="scaled">Scaled</div>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   width: 80px;
   height: 80px;
   background-color: skyblue;
@@ -300,24 +205,22 @@ scale(<var>sx</var>, <var>sy</var>)
   transform-origin: left;
   background-color: pink;
 }
-</pre>
+```
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Scaling_X_and_Y_dimensions_separately_and_translating_the_origin", "200", "200")}}</p>
+{{EmbedLiveSample("Scaling_X_and_Y_dimensions_separately_and_translating_the_origin", "200", "200")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{cssxref("transform")}}</li>
-  <li>{{cssxref("&lt;transform-function&gt;")}}</li>
-  <li>{{cssxref("transform-function/scale3d()", "scale3d()")}}</li>
-</ul>
+- {{cssxref("transform")}}
+- {{cssxref("&lt;transform-function&gt;")}}
+- {{cssxref("transform-function/scale3d()", "scale3d()")}}

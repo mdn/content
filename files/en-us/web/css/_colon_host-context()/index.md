@@ -1,6 +1,6 @@
 ---
 title: ':host-context()'
-slug: 'Web/CSS/:host-context()'
+slug: Web/CSS/:host-context()
 tags:
   - ':host-context()'
   - CSS
@@ -12,19 +12,18 @@ tags:
   - Web
 browser-compat: css.selectors.host-context
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>:host-context()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> function selects the shadow host of the <a href="/en-US/docs/Web/Web_Components/Using_shadow_DOM">shadow DOM</a> containing the CSS it is used inside (so you can select a custom element from inside its shadow DOM) — but only if the selector given as the function's parameter matches the shadow host's ancestor(s) in the place it sits inside the DOM hierarchy.</p>
+The **`:host-context()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) function selects the shadow host of the [shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM) containing the CSS it is used inside (so you can select a custom element from inside its shadow DOM) — but only if the selector given as the function's parameter matches the shadow host's ancestor(s) in the place it sits inside the DOM hierarchy.
 
-<p>In other words, this allows a custom element, or anything within that custom element's shadow DOM, to apply different styles based on its position within the outer DOM or classes/attributes applied to ancestor elements.</span></p>
+In other words, this allows a custom element, or anything within that custom element's shadow DOM, to apply different styles based on its position within the outer DOM or classes/attributes applied to ancestor elements.
 
-<p>One typical use of this is with a descendant selector expression — for example <code>h1</code> — to select only instances of the custom element that are inside an <code>&lt;h1&gt;</code>.  Another typical use would be to allow inner elements to react to classes or attributes on any ancestor elements - for example, applying a different text color when a <code>.dark-theme</code> class is applied to <code>&lt;body&gt;</code>.</p>
+One typical use of this is with a descendant selector expression — for example `h1` — to select only instances of the custom element that are inside an `<h1>`.  Another typical use would be to allow inner elements to react to classes or attributes on any ancestor elements - for example, applying a different text color when a `.dark-theme` class is applied to `<body>`.
 
-<div class="note">
-<p><strong>Note:</strong> This has no effect when used outside a shadow DOM.</p>
-</div>
+> **Note:** This has no effect when used outside a shadow DOM.
 
-<pre class="brush: css no-line-numbers">/* Selects a shadow root host, only if it is
+```css
+/* Selects a shadow root host, only if it is
    a descendant of the selector argument given */
 :host-context(h1) {
   font-weight: bold;
@@ -43,25 +42,28 @@ p {
 :host-context(body.dark-theme) p {
   color: #fff;
 }
-</pre>
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
 {{CSSSyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Selectively_styling_shadow_hosts">Selectively styling shadow hosts</h3>
+### Selectively styling shadow hosts
 
-<p>The following snippets are taken from our <a href="https://github.com/mdn/web-components-examples/tree/master/host-selectors">host-selectors example</a> (<a href="https://mdn.github.io/web-components-examples/host-selectors/">see it live also</a>).</p>
+The following snippets are taken from our [host-selectors example](https://github.com/mdn/web-components-examples/tree/master/host-selectors) ([see it live also](https://mdn.github.io/web-components-examples/host-selectors/)).
 
-<p>In this example we have a simple custom element — <code>&lt;context-span&gt;</code> — that you can wrap around text:</p>
+In this example we have a simple custom element — `<context-span>` — that you can wrap around text:
 
-<pre class="brush: html">&lt;h1&gt;Host selectors &lt;a href="#"&gt;&lt;context-span&gt;example&lt;/context-span&gt;&lt;/a&gt;&lt;/h1&gt;</pre>
+```html
+<h1>Host selectors <a href="#"><context-span>example</context-span></a></h1>
+```
 
-<p>Inside the element's constructor, we create <code>style</code> and <code>span</code> elements, fill the <code>span</code> with the content of the custom element, and fill the <code>style</code> element with some CSS rules:</p>
+Inside the element's constructor, we create `style` and `span` elements, fill the `span` with the content of the custom element, and fill the `style` element with some CSS rules:
 
-<pre class="brush: js">let style = document.createElement('style');
+```js
+let style = document.createElement('style');
 let span = document.createElement('span');
 span.textContent = this.textContent;
 
@@ -74,22 +76,21 @@ style.textContent = 'span:hover { text-decoration: underline; }' +
                     ':host-context(h1):after { content: " - no links in headers!" }' +
                     ':host-context(article, aside) { color: gray; }' +
                     ':host(.footer) { color : red; }' +
-                    ':host { background: rgba(0,0,0,0.1); padding: 2px 5px; }';</pre>
+                    ':host { background: rgba(0,0,0,0.1); padding: 2px 5px; }';
+```
 
-<p>The <code>:host-context(h1) { font-style: italic; }</code> and <code>:host-context(h1):after { content: " - no links in headers!" }</code> rules style the instance of the <code>&lt;context-span&gt;</code> element (the shadow host in this instance) inside the <code>&lt;h1&gt;</code>. We've used it to make it clear that the custom element shouldn't appear inside the <code>&lt;h1&gt;</code> in our design.</p>
+The `:host-context(h1) { font-style: italic; }` and `:host-context(h1):after { content: " - no links in headers!" }` rules style the instance of the `<context-span>` element (the shadow host in this instance) inside the `<h1>`. We've used it to make it clear that the custom element shouldn't appear inside the `<h1>` in our design.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/Web_Components">Web components</a></li>
- <li>{{cssxref(":host")}}</li>
- <li>{{cssxref(":host()")}}</li>
-</ul>
+- [Web components](/en-US/docs/Web/Web_Components)
+- {{cssxref(":host")}}
+- {{cssxref(":host()")}}

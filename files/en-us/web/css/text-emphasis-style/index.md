@@ -6,17 +6,18 @@ tags:
   - CSS Property
   - CSS Text Decoration
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.text-emphasis-style
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>text-emphasis-style</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets the appearance of emphasis marks. It can also be set, and reset, using the {{cssxref("text-emphasis")}} shorthand.</p>
+The **`text-emphasis-style`** [CSS](/en-US/docs/Web/CSS) property sets the appearance of emphasis marks. It can also be set, and reset, using the {{cssxref("text-emphasis")}} shorthand.
 
-<pre class="brush:css no-line-numbers">/* Initial value */
+```css
+/* Initial value */
 text-emphasis-style: none; /* No emphasis marks */
 
-/* &lt;string&gt; values */
+/* <string> values */
 text-emphasis-style: 'x';
 text-emphasis-style: '点';
 text-emphasis-style: '\25B2';
@@ -38,60 +39,56 @@ text-emphasis-style: inherit;
 text-emphasis-style: initial;
 text-emphasis-style: revert;
 text-emphasis-style: unset;
-</pre>
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>none</code></dt>
- <dd>No emphasis marks.</dd>
- <dt><code>filled</code></dt>
- <dd>The shape is filled with solid color. If neither <code>filled</code> nor <code>open</code> is present, this is the default.</dd>
- <dt><code>open</code></dt>
- <dd>The shape is hollow.</dd>
- <dt><code>dot</code></dt>
- <dd>Display small circles as marks. The filled dot is <code>'•'</code> (<code>U+2022</code>), and the open dot is <code>'◦'</code> (<code>U+25E6</code>).</dd>
- <dt><code>circle</code></dt>
- <dd>Display large circles as marks. The filled circle is <code>'●'</code> (<code>U+25CF</code>), and the open circle is <code>'○'</code> (<code>U+25CB</code>).</dd>
- <dt><code>double-circle</code></dt>
- <dd>Display double circles as marks. The filled double-circle is <code>'◉'</code> (<code>U+25C9</code>), and the open double-circle is <code>'◎'</code> (<code>U+25CE</code>).</dd>
- <dt><code>triangle</code></dt>
- <dd>Display triangles as marks. The filled triangle is <code>'▲'</code> (<code>U+25B2</code>), and the open triangle is <code>'△'</code> (<code>U+25B3</code>).</dd>
- <dt><code>sesame</code></dt>
- <dd>Display sesames as marks. The filled sesame is <code>'﹅'</code> (<code>U+FE45</code>), and the open sesame is <code>'﹆'</code> (<code>U+FE46</code>).</dd>
- <dt><code>&lt;string&gt;</code></dt>
- <dd>Display the given string as marks. Authors should not specify more than one <em>character</em> in <code>&lt;string&gt;</code>. The UA may truncate or ignore strings consisting of more than one grapheme cluster.</dd>
-</dl>
+- `none`
+  - : No emphasis marks.
+- `filled`
+  - : The shape is filled with solid color. If neither `filled` nor `open` is present, this is the default.
+- `open`
+  - : The shape is hollow.
+- `dot`
+  - : Display small circles as marks. The filled dot is `'•'` (`U+2022`), and the open dot is `'◦'` (`U+25E6`).
+- `circle`
+  - : Display large circles as marks. The filled circle is `'●'` (`U+25CF`), and the open circle is `'○'` (`U+25CB`).
+- `double-circle`
+  - : Display double circles as marks. The filled double-circle is `'◉'` (`U+25C9`), and the open double-circle is `'◎'` (`U+25CE`).
+- `triangle`
+  - : Display triangles as marks. The filled triangle is `'▲'` (`U+25B2`), and the open triangle is `'△'` (`U+25B3`).
+- `sesame`
+  - : Display sesames as marks. The filled sesame is `'﹅'` (`U+FE45`), and the open sesame is `'﹆'` (`U+FE46`).
+- `<string>`
+  - : Display the given string as marks. Authors should not specify more than one _character_ in `<string>`. The UA may truncate or ignore strings consisting of more than one grapheme cluster.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Basic_example">Basic example</h3>
+### Basic example
 
-<pre><code>h2 {
-  text-emphasis-style: sesame;
-}</code></pre>
+    h2 {
+      text-emphasis-style: sesame;
+    }
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The related properties {{cssxref('text-emphasis-color')}}, {{cssxref('text-emphasis')}}.</li>
- <li>The {{cssxref('text-emphasis-position')}} property allowing to define the position of the emphasis marks.</li>
-</ul>
+- The related properties {{cssxref('text-emphasis-color')}}, {{cssxref('text-emphasis')}}.
+- The {{cssxref('text-emphasis-position')}} property allowing to define the position of the emphasis marks.

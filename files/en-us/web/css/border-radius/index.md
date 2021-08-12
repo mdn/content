@@ -9,57 +9,54 @@ tags:
   - recipe:css-shorthand-property
 browser-compat: css.properties.border-radius
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>border-radius</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property rounds the corners of an element's outer border edge. You can set a single radius to make circular corners, or two radii to make elliptical corners.</p>
+The **`border-radius`** [CSS](/en-US/docs/Web/CSS) property rounds the corners of an element's outer border edge. You can set a single radius to make circular corners, or two radii to make elliptical corners.
 
-<div>{{EmbedInteractiveExample("pages/css/border-radius.html")}}</div>
+{{EmbedInteractiveExample("pages/css/border-radius.html")}}
 
-<p>The radius applies to the whole {{cssxref("background")}}, even if the element has no border; the exact position of the clipping is defined by the {{cssxref("background-clip")}} property.</p>
+The radius applies to the whole {{cssxref("background")}}, even if the element has no border; the exact position of the clipping is defined by the {{cssxref("background-clip")}} property.
 
-<p>The <code>border-radius</code> property does not apply to table elements when {{cssxref("border-collapse")}} is <code>collapse</code>.</p>
+The `border-radius` property does not apply to table elements when {{cssxref("border-collapse")}} is `collapse`.
 
-<div class="note">
-  <p><strong>Note:</strong> As with any shorthand property, individual sub-properties cannot inherit, such as in <code>border-radius:0 0 inherit inherit</code>, which would partially override existing definitions. Instead, the individual longhand properties have to be used.</p>
-</div>
+> **Note:** As with any shorthand property, individual sub-properties cannot inherit, such as in `border-radius:0 0 inherit inherit`, which would partially override existing definitions. Instead, the individual longhand properties have to be used.
 
-<h2 id="Constituent_properties">Constituent properties</h2>
+## Constituent properties
 
-<p>This property is a shorthand for the following CSS properties:</p>
+This property is a shorthand for the following CSS properties:
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/border-top-left-radius"><code>border-top-left-radius</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/border-top-right-radius"><code>border-top-right-radius</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/border-bottom-right-radius"><code>border-bottom-right-radius</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/border-bottom-left-radius"><code>border-bottom-left-radius</code></a></li>
-</ul>
+- [`border-top-left-radius`](/en-US/docs/Web/CSS/border-top-left-radius)
+- [`border-top-right-radius`](/en-US/docs/Web/CSS/border-top-right-radius)
+- [`border-bottom-right-radius`](/en-US/docs/Web/CSS/border-bottom-right-radius)
+- [`border-bottom-left-radius`](/en-US/docs/Web/CSS/border-bottom-left-radius)
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css no-line-numbers"><strong>/* The syntax of the first radius allows one to four values */</strong>
+```css
+/* The syntax of the first radius allows one to four values */
 /* Radius is set for all 4 sides */
 border-radius: 10px;
 
-/* <em>top-left-and-bottom-right</em> | <em>top-right-and-bottom-left</em> */
+/* top-left-and-bottom-right | top-right-and-bottom-left */
 border-radius: 10px 5%;
 
-/* <em>top-left</em> | <em>top-right-and-bottom-left</em> | <em>bottom-right</em> */
+/* top-left | top-right-and-bottom-left | bottom-right */
 border-radius: 2px 4px 2px;
 
-/* <em>top-left</em> | <em>top-right</em> | <em>bottom-right</em> | <em>bottom-left</em> */
+/* top-left | top-right | bottom-right | bottom-left */
 border-radius: 1px 0 3px 4px;
 
-<strong>/* The syntax of the second radius allows one to four values</strong> */
-/* (first radius values) / <em>radius</em> */
+/* The syntax of the second radius allows one to four values */
+/* (first radius values) / radius */
 border-radius: 10px / 20px;
 
-/* (first radius values) / <em>top-left-and-bottom-right</em> | <em>top-right-and-bottom-left</em> */
+/* (first radius values) / top-left-and-bottom-right | top-right-and-bottom-left */
 border-radius: 10px 5% / 20px 30px;
 
-/* (first radius values) / <em>top-left</em> | <em>top-right-and-bottom-left</em> | <em>bottom-right</em> */
+/* (first radius values) / top-left | top-right-and-bottom-left | bottom-right */
 border-radius: 10px 5px 2em / 20px 25px 30%;
 
-/* (first radius values) / <em>top-left</em> | <em>top-right</em> | <em>bottom-right</em> | <em>bottom-left</em> */
+/* (first radius values) / top-left | top-right | bottom-right | bottom-left */
 border-radius: 10px 5% / 20px 25em 30px 35em;
 
 /* Global values */
@@ -67,131 +64,168 @@ border-radius: inherit;
 border-radius: initial;
 border-radius: revert;
 border-radius: unset;
-</pre>
+```
 
-<p>The <code>border-radius</code> property is specified as:</p>
+The `border-radius` property is specified as:
 
-<ul>
- <li>one, two, three, or four {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}} values. This is used to set a single radius for the corners.</li>
- <li>followed optionally by "/" and one, two, three, or four <code>&lt;length&gt;</code> or <code>&lt;percentage&gt;</code> values. This is used to set an additional radius, so you can have elliptical corners.</li>
-</ul>
+- one, two, three, or four {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}} values. This is used to set a single radius for the corners.
+- followed optionally by "/" and one, two, three, or four `<length>` or `<percentage>` values. This is used to set an additional radius, so you can have elliptical corners.
 
-<h3 id="Values">Values</h3>
+### Values
 
 <table>
- <tbody>
-  <tr>
-   <td><em>radius</em></td>
-   <td><img alt="all-corner.png" src="all-corner.png"></td>
-   <td>Is a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} denoting a radius to use for the border in each corner of the border. It is used only in the one-value syntax.</td>
-  </tr>
-  <tr>
-   <td><em>top-left-and-bottom-right</em></td>
-   <td><img alt="top-left-bottom-right.png" src="top-left-bottom-right.png"></td>
-   <td>Is a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} denoting a radius to use for the border in the top-left and bottom-right corners of the element's box. It is used only in the two-value syntax.</td>
-  </tr>
-  <tr>
-   <td><em>top-right-and-bottom-left</em></td>
-   <td><img alt="top-right-bottom-left.png" src="top-right-bottom-left.png"></td>
-   <td>Is a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} denoting a radius to use for the border in the top-right and bottom-left corners of the element's box. It is used only in the two- and three-value syntaxes.</td>
-  </tr>
-  <tr>
-   <td><em>top-left</em></td>
-   <td><img alt="top-left.png" src="top-left.png"></td>
-   <td>Is a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} denoting a radius to use for the border in the top-left corner of the element's box. It is used only in the three- and four-value syntaxes.</td>
-  </tr>
-  <tr>
-   <td><em>top-right</em></td>
-   <td><img alt="top-right.png" src="top-right.png"></td>
-   <td>Is a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} denoting a radius to use for the border in the top-right corner of the element's box. It is used only in the four-value syntax.</td>
-  </tr>
-  <tr>
-   <td><em>bottom-right</em></td>
-   <td><img alt="bottom-rigth.png" src="bottom-rigth.png"></td>
-   <td>Is a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} denoting a radius to use for the border in the bottom-right corner of the element's box. It is used only in the three- and four-value syntaxes.</td>
-  </tr>
-  <tr>
-   <td><em>bottom-left</em></td>
-   <td><img alt="bottom-left.png" src="bottom-left.png"></td>
-   <td>Is a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} denoting a radius to use for the border in the bottom-left corner of the element's box. It is used only in the four-value syntax.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <td><em>radius</em></td>
+      <td><img alt="all-corner.png" src="all-corner.png" /></td>
+      <td>
+        Is a {{cssxref("&lt;length&gt;")}} or a
+        {{cssxref("&lt;percentage&gt;")}} denoting a radius to use
+        for the border in each corner of the border. It is used only in the
+        one-value syntax.
+      </td>
+    </tr>
+    <tr>
+      <td><em>top-left-and-bottom-right</em></td>
+      <td>
+        <img alt="top-left-bottom-right.png" src="top-left-bottom-right.png" />
+      </td>
+      <td>
+        Is a {{cssxref("&lt;length&gt;")}} or a
+        {{cssxref("&lt;percentage&gt;")}} denoting a radius to use
+        for the border in the top-left and bottom-right corners of the element's
+        box. It is used only in the two-value syntax.
+      </td>
+    </tr>
+    <tr>
+      <td><em>top-right-and-bottom-left</em></td>
+      <td>
+        <img alt="top-right-bottom-left.png" src="top-right-bottom-left.png" />
+      </td>
+      <td>
+        Is a {{cssxref("&lt;length&gt;")}} or a
+        {{cssxref("&lt;percentage&gt;")}} denoting a radius to use
+        for the border in the top-right and bottom-left corners of the element's
+        box. It is used only in the two- and three-value syntaxes.
+      </td>
+    </tr>
+    <tr>
+      <td><em>top-left</em></td>
+      <td><img alt="top-left.png" src="top-left.png" /></td>
+      <td>
+        Is a {{cssxref("&lt;length&gt;")}} or a
+        {{cssxref("&lt;percentage&gt;")}} denoting a radius to use
+        for the border in the top-left corner of the element's box. It is used
+        only in the three- and four-value syntaxes.
+      </td>
+    </tr>
+    <tr>
+      <td><em>top-right</em></td>
+      <td><img alt="top-right.png" src="top-right.png" /></td>
+      <td>
+        Is a {{cssxref("&lt;length&gt;")}} or a
+        {{cssxref("&lt;percentage&gt;")}} denoting a radius to use
+        for the border in the top-right corner of the element's box. It is used
+        only in the four-value syntax.
+      </td>
+    </tr>
+    <tr>
+      <td><em>bottom-right</em></td>
+      <td><img alt="bottom-rigth.png" src="bottom-rigth.png" /></td>
+      <td>
+        Is a {{cssxref("&lt;length&gt;")}} or a
+        {{cssxref("&lt;percentage&gt;")}} denoting a radius to use
+        for the border in the bottom-right corner of the element's box. It is
+        used only in the three- and four-value syntaxes.
+      </td>
+    </tr>
+    <tr>
+      <td><em>bottom-left</em></td>
+      <td><img alt="bottom-left.png" src="bottom-left.png" /></td>
+      <td>
+        Is a {{cssxref("&lt;length&gt;")}} or a
+        {{cssxref("&lt;percentage&gt;")}} denoting a radius to use
+        for the border in the bottom-left corner of the element's box. It is
+        used only in the four-value syntax.
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<dl>
- <dt>{{cssxref("&lt;length&gt;")}}</dt>
- <dd>Denotes the size of the circle radius, or the semi-major and semi-minor axes of the ellipse, using length values. Negative values are invalid.</dd>
- <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
- <dd>Denotes the size of the circle radius, or the semi-major and semi-minor axes of the ellipse, using percentage values. Percentages for the horizontal axis refer to the width of the box; percentages for the vertical axis refer to the height of the box. Negative values are invalid.</dd>
-</dl>
+- {{cssxref("&lt;length&gt;")}}
+  - : Denotes the size of the circle radius, or the semi-major and semi-minor axes of the ellipse, using length values. Negative values are invalid.
+- {{cssxref("&lt;percentage&gt;")}}
+  - : Denotes the size of the circle radius, or the semi-major and semi-minor axes of the ellipse, using percentage values. Percentages for the horizontal axis refer to the width of the box; percentages for the vertical axis refer to the height of the box. Negative values are invalid.
 
-<p>For example:</p>
+For example:
 
-<pre class="brush: css">border-radius: 1em/5em;
+```css
+border-radius: 1em/5em;
 
 /* ... is equivalent to: */
 border-top-left-radius:     1em 5em;
 border-top-right-radius:    1em 5em;
 border-bottom-right-radius: 1em 5em;
 border-bottom-left-radius:  1em 5em;
-</pre>
+```
 
-<pre class="brush: css">border-radius: 4px 3px 6px / 2px 4px;
+```css
+border-radius: 4px 3px 6px / 2px 4px;
 
 /* ... is equivalent to: */
 border-top-left-radius:     4px 2px;
 border-top-right-radius:    3px 4px;
 border-bottom-right-radius: 6px 2px;
 border-bottom-left-radius:  3px 4px;
-</pre>
+```
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2>Examples</h2>
+## Examples
 
-<pre class="brush: html hidden">
-  &lt;pre id="example-1"&gt;
+```html hidden
+  <pre id="example-1">
 border: solid 10px;
 border-radius: 10px 40px 40px 10px;
-  &lt;/pre&gt;
-  &lt;pre id="example-2"&gt;
+  </pre>
+  <pre id="example-2">
 border: groove 1em red;
 border-radius: 2em;
-  &lt;/pre&gt;
-  &lt;pre id="example-3"&gt;
+  </pre>
+  <pre id="example-3">
 background: gold;
 border: ridge gold;
 border-radius: 13em/3em;
-  &lt;/pre&gt;
-  &lt;pre id="example-4"&gt;
+  </pre>
+  <pre id="example-4">
 border: none;
 border-radius: 40px 10px;
 background: gold;
-  &lt;/pre&gt;
-  &lt;pre id="example-5"&gt;
+  </pre>
+  <pre id="example-5">
 border: none;
 border-radius: 50%;
 background: burlywood;
-  &lt;/pre&gt;
-  &lt;pre id="example-6"&gt;
+  </pre>
+  <pre id="example-6">
 border: dotted;
 border-width: 10px 4px;
 border-radius: 10px 40px;
-  &lt;/pre&gt;
-  &lt;pre id="example-7"&gt;
+  </pre>
+  <pre id="example-7">
 border: dashed;
 border-width: 2px 4px;
 border-radius: 40px;
-  &lt;/pre&gt;
-</pre>
+  </pre>
+```
 
-<pre class="brush: css hidden">
+```css hidden
 pre {
   margin: 20px;
   padding: 20px;
@@ -238,30 +272,26 @@ pre#example-7 {
   border-width: 2px 4px;
   border-radius: 40px;
 }
-</pre>
+```
 
 {{EmbedLiveSample("Examples", "200", "1150")}}
 
-<h3 id="Live_Samples">Live Samples</h3>
+### Live Samples
 
-<ul>
- <li>Sample 1 : <a href="https://jsfiddle.net/Tripad/qnGKj/2/">https://jsfiddle.net/Tripad/qnGKj/2/</a></li>
- <li>Sample 2 : <a href="https://jsfiddle.net/Tripad/qnGKj/3/">https://jsfiddle.net/Tripad/qnGKj/3/</a></li>
- <li>Sample 3 : <a href="https://jsfiddle.net/Tripad/qnGKj/4/">https://jsfiddle.net/Tripad/qnGKj/4/</a></li>
- <li>Sample 4 : <a href="https://jsfiddle.net/Tripad/qnGKj/5/">https://jsfiddle.net/Tripad/qnGKj/5/</a></li>
- <li>Sample 5 : <a href="https://jsfiddle.net/Tripad/qnGKj/6/">https://jsfiddle.net/Tripad/qnGKj/6/</a></li>
-</ul>
+- Sample 1 : <https://jsfiddle.net/Tripad/qnGKj/2/>
+- Sample 2 : <https://jsfiddle.net/Tripad/qnGKj/3/>
+- Sample 3 : <https://jsfiddle.net/Tripad/qnGKj/4/>
+- Sample 4 : <https://jsfiddle.net/Tripad/qnGKj/5/>
+- Sample 5 : <https://jsfiddle.net/Tripad/qnGKj/6/>
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Border-radius-related CSS properties: {{cssxref("border-top-left-radius")}}, {{cssxref("border-top-right-radius")}}, {{cssxref("border-bottom-right-radius")}}, {{cssxref("border-bottom-left-radius")}}, {{cssxref("border-start-start-radius")}}, {{cssxref("border-start-end-radius")}}, {{cssxref("border-end-start-radius")}}, {{cssxref("border-end-end-radius")}}</li>
-</ul>
+- Border-radius-related CSS properties: {{cssxref("border-top-left-radius")}}, {{cssxref("border-top-right-radius")}}, {{cssxref("border-bottom-right-radius")}}, {{cssxref("border-bottom-left-radius")}}, {{cssxref("border-start-start-radius")}}, {{cssxref("border-start-end-radius")}}, {{cssxref("border-end-start-radius")}}, {{cssxref("border-end-end-radius")}}

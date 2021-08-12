@@ -5,28 +5,26 @@ tags:
   - CSS
   - CSS Property
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.vertical-align
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>vertical-align</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets vertical alignment of an inline, inline-block or table-cell box.</p>
+The **`vertical-align`** [CSS](/en-US/docs/Web/CSS) property sets vertical alignment of an inline, inline-block or table-cell box.
 
-<div>{{EmbedInteractiveExample("pages/css/vertical-align.html")}}</div>
+{{EmbedInteractiveExample("pages/css/vertical-align.html")}}
 
+The vertical-align property can be used in two contexts:
 
-<p>The vertical-align property can be used in two contexts:</p>
+- To vertically align an inline element's box inside its containing line box. For example, it could be used to [vertically position an image in a line of text](#vertical_alignment_in_a_line_box).
+- To vertically align [the content of a cell in a table](#vertical_alignment_in_a_table_cell).
 
-<ul>
- <li>To vertically align an inline element's box inside its containing line box. For example, it could be used to <a href="#vertical_alignment_in_a_line_box">vertically position an image in a line of text</a>.</li>
- <li>To vertically align <a href="#vertical_alignment_in_a_table_cell">the content of a cell in a table</a>.</li>
-</ul>
+Note that `vertical-align` only applies to inline, inline-block and table-cell elements: you can't use it to vertically align [block-level elements](/en-US/docs/Web/HTML/Block-level_elements).
 
-<p>Note that <code>vertical-align</code> only applies to inline, inline-block and table-cell elements: you can't use it to vertically align <a href="/en-US/docs/Web/HTML/Block-level_elements">block-level elements</a>.</p>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush: css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 vertical-align: baseline;
 vertical-align: sub;
 vertical-align: super;
@@ -36,11 +34,11 @@ vertical-align: middle;
 vertical-align: top;
 vertical-align: bottom;
 
-/* &lt;length&gt; values */
+/* <length> values */
 vertical-align: 10em;
 vertical-align: 4px;
 
-/* &lt;percentage&gt; values */
+/* <percentage> values */
 vertical-align: 20%;
 
 /* Global values */
@@ -48,118 +46,115 @@ vertical-align: inherit;
 vertical-align: initial;
 vertical-align: revert;
 vertical-align: unset;
-</pre>
+```
 
-<p>The <code>vertical-align</code> property is specified as one of the values listed below.</p>
+The `vertical-align` property is specified as one of the values listed below.
 
-<h3 id="Values_for_inline_elements">Values for inline elements</h3>
+### Values for inline elements
 
-<h4 id="Parent-relative_values">Parent-relative values</h4>
+#### Parent-relative values
 
-<p>These values vertically align the element relative to its parent element:</p>
+These values vertically align the element relative to its parent element:
 
-<dl>
- <dt><code>baseline</code></dt>
- <dd>Aligns the baseline of the element with the baseline of its parent. The baseline of some <a href="/en-US/docs/Web/CSS/Replaced_element">replaced elements</a>, like {{HTMLElement("textarea")}}, is not specified by the HTML specification, meaning that their behavior with this keyword may vary between browsers.</dd>
- <dt><code>sub</code></dt>
- <dd>Aligns the baseline of the element with the subscript-baseline of its parent.</dd>
- <dt><code>super</code></dt>
- <dd>Aligns the baseline of the element with the superscript-baseline of its parent.</dd>
- <dt><code>text-top</code></dt>
- <dd>Aligns the top of the element with the top of the parent element's font.</dd>
- <dt><code>text-bottom</code></dt>
- <dd>Aligns the bottom of the element with the bottom of the parent element's font.</dd>
- <dt><code>middle</code></dt>
- <dd>Aligns the middle of the element with the baseline plus half the x-height of the parent.</dd>
- <dt>{{cssxref("&lt;length&gt;")}}</dt>
- <dd>Aligns the baseline of the element to the given length above the baseline of its parent. A negative value is allowed.</dd>
- <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
- <dd>Aligns the baseline of the element to the given percentage above the baseline of its parent, with the value being a percentage of the {{Cssxref("line-height")}} property. A negative value is allowed.</dd>
-</dl>
+- `baseline`
+  - : Aligns the baseline of the element with the baseline of its parent. The baseline of some [replaced elements](/en-US/docs/Web/CSS/Replaced_element), like {{HTMLElement("textarea")}}, is not specified by the HTML specification, meaning that their behavior with this keyword may vary between browsers.
+- `sub`
+  - : Aligns the baseline of the element with the subscript-baseline of its parent.
+- `super`
+  - : Aligns the baseline of the element with the superscript-baseline of its parent.
+- `text-top`
+  - : Aligns the top of the element with the top of the parent element's font.
+- `text-bottom`
+  - : Aligns the bottom of the element with the bottom of the parent element's font.
+- `middle`
+  - : Aligns the middle of the element with the baseline plus half the x-height of the parent.
+- {{cssxref("&lt;length&gt;")}}
+  - : Aligns the baseline of the element to the given length above the baseline of its parent. A negative value is allowed.
+- {{cssxref("&lt;percentage&gt;")}}
+  - : Aligns the baseline of the element to the given percentage above the baseline of its parent, with the value being a percentage of the {{Cssxref("line-height")}} property. A negative value is allowed.
 
-<h4 id="Line-relative_values">Line-relative values</h4>
+#### Line-relative values
 
-<p>The following values vertically align the element relative to the entire line:</p>
+The following values vertically align the element relative to the entire line:
 
-<dl>
- <dt><code>top</code></dt>
- <dd>Aligns the top of the element and its descendants with the top of the entire line.</dd>
- <dt><code>bottom</code></dt>
- <dd>Aligns the bottom of the element and its descendants with the bottom of the entire line.</dd>
-</dl>
+- `top`
+  - : Aligns the top of the element and its descendants with the top of the entire line.
+- `bottom`
+  - : Aligns the bottom of the element and its descendants with the bottom of the entire line.
 
-<p>For elements that do not have a baseline, the bottom margin edge is used instead.</p>
+For elements that do not have a baseline, the bottom margin edge is used instead.
 
-<h3 id="Values_for_table_cells">Values for table cells</h3>
+### Values for table cells
 
-<dl>
- <dt><code>baseline</code> (and <code>sub</code>, <code>super</code>, <code>text-top</code>, <code>text-bottom</code>, <code>&lt;length&gt;</code>, and <code>&lt;percentage&gt;</code>)</dt>
- <dd>Aligns the baseline of the cell with the baseline of all other cells in the row that are baseline-aligned.</dd>
- <dt><code>top</code></dt>
- <dd>Aligns the top padding edge of the cell with the top of the row.</dd>
- <dt><code>middle</code></dt>
- <dd>Centers the padding box of the cell within the row.</dd>
- <dt><code>bottom</code></dt>
- <dd>Aligns the bottom padding edge of the cell with the bottom of the row.</dd>
-</dl>
+- `baseline` (and `sub`, `super`, `text-top`, `text-bottom`, `<length>`, and `<percentage>`)
+  - : Aligns the baseline of the cell with the baseline of all other cells in the row that are baseline-aligned.
+- `top`
+  - : Aligns the top padding edge of the cell with the top of the row.
+- `middle`
+  - : Centers the padding box of the cell within the row.
+- `bottom`
+  - : Aligns the bottom padding edge of the cell with the bottom of the row.
 
-<p>Negative values are allowed.</p>
+Negative values are allowed.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3>Basic example</h3>
+### Basic example
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div&gt;An &lt;img src="frame_image.svg" alt="link" width="32" height="32" /&gt; image with a default alignment.&lt;/div&gt;
-&lt;div&gt;An &lt;img class="top" src="frame_image.svg" alt="link" width="32" height="32" /&gt; image with a text-top alignment.&lt;/div&gt;
-&lt;div&gt;An &lt;img class="bottom" src="frame_image.svg" alt="link" width="32" height="32" /&gt; image with a text-bottom alignment.&lt;/div&gt;
-&lt;div&gt;An &lt;img class="middle" src="frame_image.svg" alt="link" width="32" height="32" /&gt; image with a middle alignment.&lt;/div&gt;
-</pre>
+```html
+<div>An <img src="frame_image.svg" alt="link" width="32" height="32" /> image with a default alignment.</div>
+<div>An <img class="top" src="frame_image.svg" alt="link" width="32" height="32" /> image with a text-top alignment.</div>
+<div>An <img class="bottom" src="frame_image.svg" alt="link" width="32" height="32" /> image with a text-bottom alignment.</div>
+<div>An <img class="middle" src="frame_image.svg" alt="link" width="32" height="32" /> image with a middle alignment.</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">img.top { vertical-align: text-top; }
+```css
+img.top { vertical-align: text-top; }
 img.bottom { vertical-align: text-bottom; }
 img.middle { vertical-align: middle; }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Basic_example")}}</p>
+{{EmbedLiveSample("Basic_example")}}
 
-<h3>Vertical alignment in a line box</h3>
+### Vertical alignment in a line box
 
-<h4>HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;
-top:         &lt;img style="vertical-align: top" src="star.png"/&gt;
-middle:      &lt;img style="vertical-align: middle" src="star.png"/&gt;
-bottom:      &lt;img style="vertical-align: bottom" src="star.png"/&gt;
-super:       &lt;img style="vertical-align: super" src="star.png"/&gt;
-sub:         &lt;img style="vertical-align: sub" src="star.png"/&gt;
-&lt;/p&gt;
+```html
+<p>
+top:         <img style="vertical-align: top" src="star.png"/>
+middle:      <img style="vertical-align: middle" src="star.png"/>
+bottom:      <img style="vertical-align: bottom" src="star.png"/>
+super:       <img style="vertical-align: super" src="star.png"/>
+sub:         <img style="vertical-align: sub" src="star.png"/>
+</p>
 
-&lt;p&gt;
-text-top:    &lt;img style="vertical-align: text-top" src="star.png"/&gt;
-text-bottom: &lt;img style="vertical-align: text-bottom" src="star.png"/&gt;
-0.2em:       &lt;img style="vertical-align: 0.2em" src="star.png"/&gt;
--1em:        &lt;img style="vertical-align: -1em" src="star.png"/&gt;
-20%:         &lt;img style="vertical-align: 20%" src="star.png"/&gt;
--100%:       &lt;img style="vertical-align: -100%" src="star.png"/&gt;
-&lt;/p&gt;
+<p>
+text-top:    <img style="vertical-align: text-top" src="star.png"/>
+text-bottom: <img style="vertical-align: text-bottom" src="star.png"/>
+0.2em:       <img style="vertical-align: 0.2em" src="star.png"/>
+-1em:        <img style="vertical-align: -1em" src="star.png"/>
+20%:         <img style="vertical-align: 20%" src="star.png"/>
+-100%:       <img style="vertical-align: -100%" src="star.png"/>
+</p>
+```
 
-</pre>
-
-<pre class="hidden brush: css">#* {
+```css hidden
+#* {
   box-sizing: border-box;
 }
 
@@ -176,35 +171,37 @@ p {
   margin-right: auto;
   width: 80%;
 }
-</pre>
+```
 
-<h4>Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Vertical_alignment_in_a_line_box", '100%', 160, "", "")}}</p>
+{{EmbedLiveSample("Vertical_alignment_in_a_line_box", '100%', 160, "", "")}}
 
-<h3>Vertical alignment in a table cell</h3>
+### Vertical alignment in a table cell
 
-<h4>HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;table&gt;
-  &lt;tr&gt;
-    &lt;td style="vertical-align: baseline"&gt;baseline&lt;/td&gt;
-    &lt;td style="vertical-align: top"&gt;top&lt;/td&gt;
-    &lt;td style="vertical-align: middle"&gt;middle&lt;/td&gt;
-    &lt;td style="vertical-align: bottom"&gt;bottom&lt;/td&gt;
-    &lt;td&gt;
-      &lt;p&gt;There is a theory which states that if ever anyone discovers exactly
+```html
+<table>
+  <tr>
+    <td style="vertical-align: baseline">baseline</td>
+    <td style="vertical-align: top">top</td>
+    <td style="vertical-align: middle">middle</td>
+    <td style="vertical-align: bottom">bottom</td>
+    <td>
+      <p>There is a theory which states that if ever anyone discovers exactly
       what the Universe is for and why it is here, it will instantly disappear and
-      be replaced by something even more bizarre and inexplicable.&lt;/p&gt;
-      &lt;p&gt;There is another theory which states that this has already happened.&lt;/p&gt;
-    &lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;
-</pre>
+      be replaced by something even more bizarre and inexplicable.</p>
+      <p>There is another theory which states that this has already happened.</p>
+    </td>
+  </tr>
+</table>
+```
 
-<h4>CSS</h4>
+#### CSS
 
-<pre class="brush: css">table {
+```css
+table {
   margin-left: auto;
   margin-right: auto;
   width: 80%;
@@ -218,26 +215,23 @@ td {
   padding: 0.5em;
   font-family: monospace;
 }
-</pre>
+```
 
-<h4>Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Vertical_alignment_in_a_table_cell", '100%', 230, "", "")}}</p>
+{{EmbedLiveSample("Vertical_alignment_in_a_table_cell", '100%', 230, "", "")}}
 
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox#Center_item">Typical use cases of Flexbox, section "Center item"</a></li>
- <li>{{Cssxref("line-height")}}, {{Cssxref("text-align")}}, {{Cssxref("margin")}}</li>
- <li><a href="http://phrogz.net/css/vertical-align/index.html">Understanding <code>vertical-align</code>, or "How (Not) To Vertically Center Content"</a></li>
- <li><a href="https://christopheraue.net/design/vertical-align">Vertical-Align: All You Need To Know</a></li>
-</ul>
+- [Typical use cases of Flexbox, section "Center item"](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox#Center_item)
+- {{Cssxref("line-height")}}, {{Cssxref("text-align")}}, {{Cssxref("margin")}}
+- [Understanding `vertical-align`, or "How (Not) To Vertically Center Content"](http://phrogz.net/css/vertical-align/index.html)
+- [Vertical-Align: All You Need To Know](https://christopheraue.net/design/vertical-align)

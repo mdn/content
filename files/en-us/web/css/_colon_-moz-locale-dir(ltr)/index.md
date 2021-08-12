@@ -11,48 +11,47 @@ tags:
   - Reference
   - Selector
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<p>The <strong><code>:-moz-locale-dir(ltr)</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> is a <a href="/en-US/docs/Web/CSS/Mozilla_Extensions">Mozilla extension</a> that matches an element if the user interface is being displayed left-to-right. This is determined by the preference <code>intl.uidirection.<em>locale</em></code> (where <code><em>locale</em></code> is the current locale) being set to "ltr".</p>
+The **`:-moz-locale-dir(ltr)`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) is a [Mozilla extension](/en-US/docs/Web/CSS/Mozilla_Extensions) that matches an element if the user interface is being displayed left-to-right. This is determined by the preference `intl.uidirection.locale` (where `locale` is the current locale) being set to "ltr".
 
-<div class="notecard note">
-<p><strong>Note:</strong> This selector is mainly used by extensions and themes to adapt the user interface based on the user's locale. (This can vary from window to window, and even from tab to tab.) It also allows extensions to work even when they don't support the user's default locale, since they can support both left-to-right and right-to-left layouts regardless of locale specifics.</p>
-</div>
+> **Note:** This selector is mainly used by extensions and themes to adapt the user interface based on the user's locale. (This can vary from window to window, and even from tab to tab.) It also allows extensions to work even when they don't support the user's default locale, since they can support both left-to-right and right-to-left layouts regardless of locale specifics.
 
-<div class="notecard warning">
- <p><strong>Warning:</strong> This selector does not work properly from HTML; it always matches, regardless of whether the UI locale is left-to-right or right-to-left.</p>
-</div>
+> **Warning:** This selector does not work properly from HTML; it always matches, regardless of whether the UI locale is left-to-right or right-to-left.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">:-moz-locale-dir(ltr)</pre>
+```css
+:-moz-locale-dir(ltr)
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example doesn't work if you're not using Firefox, and may not work even in Firefox due to an issue with the selector not working properly with HTML content. It was designed for use with <a href="/en-US/docs/Archive/Mozilla/XUL">XUL</a>.</p>
+This example doesn't work if you're not using Firefox, and may not work even in Firefox due to an issue with the selector not working properly with HTML content. It was designed for use with [XUL](/en-US/docs/Archive/Mozilla/XUL).
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;If you're using a left-to-right interface, this should be red.&lt;/p&gt;
-</pre>
+```html
+<p>If you're using a left-to-right interface, this should be red.</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">p:-moz-locale-dir(ltr) {
+```css
+p:-moz-locale-dir(ltr) {
   color: red;
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Examples")}}</p>
+{{EmbedLiveSample("Examples")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any standard.</p>
+Not part of any standard.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{CSSxRef(":dir", ":dir(…)")}}</li>
- <li>{{CSSxRef(":-moz-locale-dir(rtl)")}}</li>
-</ul>
+- {{CSSxRef(":dir", ":dir(…)")}}
+- {{CSSxRef(":-moz-locale-dir(rtl)")}}

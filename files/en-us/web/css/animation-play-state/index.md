@@ -9,17 +9,18 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.animation-play-state
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>animation-play-state</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets whether an animation is running or paused.</p>
+The **`animation-play-state`** [CSS](/en-US/docs/Web/CSS) property sets whether an animation is running or paused.
 
-<div>{{EmbedInteractiveExample("pages/css/animation-play-state.html")}}</div>
+{{EmbedInteractiveExample("pages/css/animation-play-state.html")}}
 
-<p>Resuming a paused animation will start the animation from where it left off at the time it was paused, rather than starting over from the beginning of the animation sequence.</p>
+Resuming a paused animation will start the animation from where it left off at the time it was paused, rather than starting over from the beginning of the animation sequence.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* Single animation */
+```css
+/* Single animation */
 animation-play-state: running;
 animation-play-state: paused;
 
@@ -31,40 +32,39 @@ animation-play-state: inherit;
 animation-play-state: initial;
 animation-play-state: revert;
 animation-play-state: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
-	<dt><code>running</code></dt>
-	<dd>The <strong>animation</strong> is currently <strong>playing</strong>.</dd>
-	<dt><code>paused</code></dt>
-	<dd>The <strong>animation</strong> is currently <strong>paused</strong>.</dd>
-</dl>
+- `running`
+  - : The **animation** is currently **playing**.
+- `paused`
+  - : The **animation** is currently **paused**.
 
-<div class="note">
-<p><strong>Note:</strong> When you specify multiple comma-separated values on an <code>animation-*</code> property, they will be assigned to the animations specified in the {{cssxref("animation-name")}} property in different ways depending on how many there are. For more information, see <a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations#setting_multiple_animation_property_values">Setting multiple animation property values</a>.</p>
-</div>
+> **Note:** When you specify multiple comma-separated values on an `animation-*` property, they will be assigned to the animations specified in the {{cssxref("animation-name")}} property in different ways depending on how many there are. For more information, see [Setting multiple animation property values](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations#setting_multiple_animation_property_values).
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="The_animation_is_paused">The animation is paused</h3>
+### The animation is paused
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="box"&gt;&lt;/div&gt;</pre>
+```html
+<div class="box"></div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.box {
+```css
+.box {
   background-color: rebeccapurple;
   border-radius: 10px;
   width: 100px;
@@ -81,23 +81,22 @@ animation-play-state: unset;
   100% {
     transform: rotate(360deg);
   }
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Examples","100%","250")}}</p>
+{{EmbedLiveSample("Examples","100%","250")}}
 
-<p>See <a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations">CSS animations</a> for examples.</p>
+See [CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations) for examples.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li><a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations" title="Tutorial about CSS animations">Using CSS animations</a></li>
-	<li>JavaScript {{domxref("AnimationEvent")}} API</li>
-</ul>
+- [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations "Tutorial about CSS animations")
+- JavaScript {{domxref("AnimationEvent")}} API

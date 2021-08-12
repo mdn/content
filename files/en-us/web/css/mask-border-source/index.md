@@ -9,21 +9,22 @@ tags:
   - NeedsCompatTable
   - NeedsExample
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.mask-border-source
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>mask-border-source</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets the source image used to create an element's <a href="/en-US/docs/Web/CSS/mask-border">mask border</a>.</p>
+The **`mask-border-source`** [CSS](/en-US/docs/Web/CSS) property sets the source image used to create an element's [mask border](/en-US/docs/Web/CSS/mask-border).
 
-<p>The {{cssxref("mask-border-slice")}} property is used to divide the source image into regions, which are then dynamically applied to the final mask border.</p>
+The {{cssxref("mask-border-slice")}} property is used to divide the source image into regions, which are then dynamically applied to the final mask border.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* Keyword value */
+```css
+/* Keyword value */
 mask-border-source: none;
 
-/* &lt;image&gt; values */
+/* <image> values */
 mask-border-source: url(image.jpg);
 mask-border-source: linear-gradient(to top, red, yellow);
 
@@ -32,55 +33,53 @@ mask-border-source: inherit;
 mask-border-source: initial;
 mask-border-source: revert;
 mask-border-source: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>none</code></dt>
- <dd>No mask border is used.</dd>
- <dt>{{cssxref("&lt;image&gt;")}}</dt>
- <dd>Image reference to use for the mask border.</dd>
-</dl>
+- `none`
+  - : No mask border is used.
+- {{cssxref("&lt;image&gt;")}}
+  - : Image reference to use for the mask border.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Basic_usage">Basic usage</h3>
+### Basic usage
 
-<p>This property doesn't appear to be supported anywhere yet. When it eventually starts to be supported, it will serve to define the source of the border mask.</p>
+This property doesn't appear to be supported anywhere yet. When it eventually starts to be supported, it will serve to define the source of the border mask.
 
-<pre class="brush: css">mask-border-source: url(image.jpg);</pre>
+```css
+mask-border-source: url(image.jpg);
+```
 
-<p>Chromium-based browsers support an outdated version of this property — <code>mask-box-image-source</code> — with a prefix:</p>
+Chromium-based browsers support an outdated version of this property — `mask-box-image-source` — with a prefix:
 
-<pre class="brush: css">-webkit-mask-box-image-source: url(image.jpg);</pre>
+```css
+-webkit-mask-box-image-source: url(image.jpg);
+```
 
-<div class="notecard note">
-<p><strong>Note:</strong> The <code><a href="/en-US/docs/Web/CSS/mask-border">mask-border</a></code> page features a working example (using the out-of-date prefixed border mask properties supported in Chromium), so you can get an idea of the effect.</p>
-</div>
+> **Note:** The [`mask-border`](/en-US/docs/Web/CSS/mask-border) page features a working example (using the out-of-date prefixed border mask properties supported in Chromium), so you can get an idea of the effect.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{cssxref("mask-border")}}</li>
-  <li>{{cssxref("mask-border-mode")}}</li>
-  <li>{{cssxref("mask-border-outset")}}</li>
-  <li>{{cssxref("mask-border-repeat")}}</li>
-  <li>{{cssxref("mask-border-width")}}</li>
-</ul>
+- {{cssxref("mask-border")}}
+- {{cssxref("mask-border-mode")}}
+- {{cssxref("mask-border-outset")}}
+- {{cssxref("mask-border-repeat")}}
+- {{cssxref("mask-border-width")}}

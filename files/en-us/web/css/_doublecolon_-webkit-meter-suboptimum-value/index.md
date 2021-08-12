@@ -1,6 +1,6 @@
 ---
 title: '::-webkit-meter-suboptimum-value'
-slug: 'Web/CSS/::-webkit-meter-suboptimum-value'
+slug: Web/CSS/::-webkit-meter-suboptimum-value
 tags:
   - '-webkit-meter-suboptimum-value'
   - CSS
@@ -10,49 +10,53 @@ tags:
   - Selector
 browser-compat: css.selectors.-webkit-meter-suboptimum-value
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<p>The <strong><code>::-webkit-meter-suboptimum-value</code></strong> <a href="/en-US/docs/Glossary/Pseudo-element">pseudo-element</a> gives a yellow color to the {{htmlelement("meter")}} element when the value attribute falls outside of the low-high range.</p>
+The **`::-webkit-meter-suboptimum-value`** [pseudo-element](/en-US/docs/Glossary/Pseudo-element) gives a yellow color to the {{htmlelement("meter")}} element when the value attribute falls outside of the low-high range.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">::-webkit-meter-suboptimum-value</pre>
+```css
+::-webkit-meter-suboptimum-value
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example will only work in browsers based on WebKit or Blink.</p>
+This example will only work in browsers based on WebKit or Blink.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;meter min="0" max="10" value="6"&gt;Score out of 10&lt;/meter&gt;</pre>
+```html
+<meter min="0" max="10" value="6">Score out of 10</meter>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">meter::-webkit-meter-suboptimum-value {
+```css
+meter::-webkit-meter-suboptimum-value {
   background: -webkit-gradient linear, left top, left bottom;
   height: 100%;
   box-sizing: border-box;
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{ EmbedLiveSample('Examples', '100%', 50) }}</p>
+{{ EmbedLiveSample('Examples', '100%', 50) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any standard.</p>
+Not part of any standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<p>The pseudo-elements used by WebKit/Blink to style other parts of a {{htmlelement("meter")}} element are as follows:</p>
+The pseudo-elements used by WebKit/Blink to style other parts of a {{htmlelement("meter")}} element are as follows:
 
-<ul>
- <li>{{cssxref("::-webkit-meter-inner-element")}}</li>
- <li>{{cssxref("::-webkit-meter-bar")}}</li>
- <li>{{cssxref("::-webkit-meter-even-less-good-value")}}</li>
- <li>{{cssxref("::-webkit-meter-optimum-value")}}</li>
-</ul>
+- {{cssxref("::-webkit-meter-inner-element")}}
+- {{cssxref("::-webkit-meter-bar")}}
+- {{cssxref("::-webkit-meter-even-less-good-value")}}
+- {{cssxref("::-webkit-meter-optimum-value")}}

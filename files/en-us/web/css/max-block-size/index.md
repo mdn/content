@@ -12,31 +12,31 @@ tags:
   - Reference
   - height
   - max-block-size
-  - 'recipe:css-property'
+  - recipe:css-property
   - size
   - width
 browser-compat: css.properties.max-block-size
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <code><strong>max-block-size</strong></code> <a href="/en-US/docs/Web/CSS">CSS</a> property specifies the maximum size of an element in the direction opposite that of the writing direction as specified by {{cssxref("writing-mode")}}. That is, if the writing direction is horizontal, then <code>max-block-size</code> is equivalent to {{cssxref("max-height")}}; if the writing direction is vertical, <code>max-block-size</code> is the same as {{cssxref("max-width")}}.</p>
+The **`max-block-size`** [CSS](/en-US/docs/Web/CSS) property specifies the maximum size of an element in the direction opposite that of the writing direction as specified by {{cssxref("writing-mode")}}. That is, if the writing direction is horizontal, then `max-block-size` is equivalent to {{cssxref("max-height")}}; if the writing direction is vertical, `max-block-size` is the same as {{cssxref("max-width")}}.
 
-<p>The other dimension's maximum length is specified using the {{cssxref("max-inline-size")}} property.</p>
+The other dimension's maximum length is specified using the {{cssxref("max-inline-size")}} property.
 
-<p>This is useful because the <code>max-width</code> is always used for horizontal sizes and <code>max-height</code> is always used for vertical sizes, and if you need to set lengths based on the size of your text content, you need to be able to do so with the writing direction in mind.</p>
+This is useful because the `max-width` is always used for horizontal sizes and `max-height` is always used for vertical sizes, and if you need to set lengths based on the size of your text content, you need to be able to do so with the writing direction in mind.
 
-<p>Any time you would normally use <code>max-height</code> or <code>max-width</code>, you should instead use <code>max-block-size</code> to set the maximum "height" of the content (even though this may not be a vertical value) and <code>max-inline-size</code> to set the maximum "width" of the content (although this may instead be vertical rather than horizontal). See the {{SectionOnPage("/en-US/docs/Web/CSS/writing-mode", "Example")}}, which shows the different writing modes in action.</p>
+Any time you would normally use `max-height` or `max-width`, you should instead use `max-block-size` to set the maximum "height" of the content (even though this may not be a vertical value) and `max-inline-size` to set the maximum "width" of the content (although this may instead be vertical rather than horizontal). See the {{SectionOnPage("/en-US/docs/Web/CSS/writing-mode", "Example")}}, which shows the different writing modes in action.
 
-<div>{{EmbedInteractiveExample("pages/css/max-block-size.html")}}</div>
+{{EmbedInteractiveExample("pages/css/max-block-size.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush:css no-line-numbers">/* &lt;length&gt; values */
+```css
+/* <length> values */
 max-block-size: 300px;
 max-block-size: 25em;
 
-/* &lt;percentage&gt; values */
+/* <percentage> values */
 max-block-size: 75%;
 
 /* Keyword values */
@@ -50,67 +50,50 @@ max-block-size: inherit;
 max-block-size: initial;
 max-block-size: revert;
 max-block-size: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<p>The <code>max-block-size</code> property's value can be any value that's legal for the {{cssxref("max-width")}} and {{cssxref("max-height")}} properties:</p>
+The `max-block-size` property's value can be any value that's legal for the {{cssxref("max-width")}} and {{cssxref("max-height")}} properties:
 
-<p>{{page("/en-US/docs/Web/CSS/max-width", "Values")}}</p>
+{{page("/en-US/docs/Web/CSS/max-width", "Values")}}
 
-<h3 id="How_writing-mode_affects_directionality">How writing-mode affects directionality</h3>
+### How writing-mode affects directionality
 
-<p>The values of <code>writing-mode</code> affect the mapping of <code>max-block-size</code> to <code>max-width</code> or <code>max-height</code> as follows:</p>
+The values of `writing-mode` affect the mapping of `max-block-size` to `max-width` or `max-height` as follows:
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Values of <code>writing-mode</code></th>
-   <th scope="col"><code>max-block-size</code> is equivalent to</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>horizontal-tb</code>, <code>lr</code> {{deprecated_inline}}, <code>lr-tb</code> {{deprecated_inline}}, <code>rl</code> {{deprecated_inline}}, <code>rb</code> {{deprecated_inline}}, <code>rb-rl</code> {{deprecated_inline}}</td>
-   <td>{{cssxref("max-height")}}</td>
-  </tr>
-  <tr>
-   <td><code>vertical-rl</code>, <code>vertical-lr</code>, <code>sideways-rl</code> {{experimental_inline}}, <code>sideways-lr</code> {{experimental_inline}}, <code>tb</code> {{deprecated_inline}}, <code>tb-rl</code> {{deprecated_inline}}</td>
-   <td>{{cssxref("max-width")}}</td>
-  </tr>
- </tbody>
-</table>
+| Values of `writing-mode`                                                                                                                                                                              | `max-block-size` is equivalent to |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------- |
+| `horizontal-tb`, `lr` {{deprecated_inline}}, `lr-tb` {{deprecated_inline}}, `rl` {{deprecated_inline}}, `rb` {{deprecated_inline}}, `rb-rl` {{deprecated_inline}}  | {{cssxref("max-height")}}  |
+| `vertical-rl`, `vertical-lr`, `sideways-rl` {{experimental_inline}}, `sideways-lr` {{experimental_inline}}, `tb` {{deprecated_inline}}, `tb-rl` {{deprecated_inline}} | {{cssxref("max-width")}}  |
 
-<div class="note">
-<p><strong>Note:</strong> The <code>writing-mode</code> values <code>sideways-lr</code> and <code>sideways-rl</code> were removed from the CSS Writing Modes Level 3 specification late in its design process. They may be restored in Level 4.</p>
-</div>
+> **Note:** The `writing-mode` values `sideways-lr` and `sideways-rl` were removed from the CSS Writing Modes Level 3 specification late in its design process. They may be restored in Level 4.
 
-<div class="note">
-<p><strong>Note:</strong> The writing modes <code>lr</code>, <code>lr-tb</code>, <code>rl</code>, <code>rb</code>, and <code>rb-tl</code> are no longer allowed in {{Glossary("HTML")}} contexts; they may only be used in {{Glossary("SVG")}} 1.x contexts.</p>
-</div>
+> **Note:** The writing modes `lr`, `lr-tb`, `rl`, `rb`, and `rb-tl` are no longer allowed in {{Glossary("HTML")}} contexts; they may only be used in {{Glossary("SVG")}} 1.x contexts.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_max-block-size_with_horizontal_and_vertical_text">Setting max-block-size with horizontal and vertical text</h3>
+### Setting max-block-size with horizontal and vertical text
 
-<p>In this example, the same text (the opening sentences from {{interwiki("wikipedia", "Herman Melville", "Herman Melville's")}} novel <em>{{interwiki("wikipedia", "Moby-Dick")}}</em>) is presented in both the <code>horizontal-tb</code> and <code>vertical-rl</code> writing modes.</p>
+In this example, the same text (the opening sentences from {{interwiki("wikipedia", "Herman Melville", "Herman Melville's")}} novel _{{interwiki("wikipedia", "Moby-Dick")}}_) is presented in both the `horizontal-tb` and `vertical-rl` writing modes.
 
-<p>Everything else about the two boxes is identical, including the values used for {{cssxref("max-block-size")}}.</p>
+Everything else about the two boxes is identical, including the values used for {{cssxref("max-block-size")}}.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<p>The HTML establishes the two {{HTMLElement("div")}} blocks that will be presented with their {{cssxref("writing-mode")}} set using the classes <code>horizontal</code> or <code>vertical</code>. Both boxes share the <code>standard-box</code> class, which establishes coloring, padding, and their respective values of <code>max-block-size</code>.</p>
+The HTML establishes the two {{HTMLElement("div")}} blocks that will be presented with their {{cssxref("writing-mode")}} set using the classes `horizontal` or `vertical`. Both boxes share the `standard-box` class, which establishes coloring, padding, and their respective values of `max-block-size`.
 
-<pre class="brush: html">&lt;p&gt;Writing mode &lt;code&gt;horizontal-tb&lt;/code&gt; (the default):&lt;/p&gt;
-&lt;div class="standard-box horizontal"&gt;
+```html
+<p>Writing mode <code>horizontal-tb</code> (the default):</p>
+<div class="standard-box horizontal">
   Call me Ishmael. Some years ago—never mind how
   long precisely—having little or no money in my
   purse, and nothing particular to interest me on
@@ -118,10 +101,10 @@ max-block-size: unset;
   the watery part of the world. It is a way I have of
   driving off the spleen and regulating the
   circulation.
-&lt;/div&gt;
+</div>
 
-&lt;p&gt;Writing mode &lt;code&gt;vertical-rl&lt;/code&gt;:&lt;/p&gt;
-&lt;div class="standard-box vertical"&gt;
+<p>Writing mode <code>vertical-rl</code>:</p>
+<div class="standard-box vertical">
   Call me Ishmael. Some years ago—never mind how
   long precisely—having little or no money in my
   purse, and nothing particular to interest me on
@@ -129,15 +112,17 @@ max-block-size: unset;
   the watery part of the world. It is a way I have of
   driving off the spleen and regulating the
   circulation.
-&lt;/div&gt;</pre>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<p>The CSS defines three classes. The first, <code>standard-box</code>, is applied to both boxes, as seen above. It provides standard styling including the minimum and maximum block sizes, font size, and so forth.</p>
+The CSS defines three classes. The first, `standard-box`, is applied to both boxes, as seen above. It provides standard styling including the minimum and maximum block sizes, font size, and so forth.
 
-<p>After that come the classes <code>horizontal</code> and <code>vertical</code>, which add the {{cssxref("writing-mode")}} property to the box, with the value set to <code>horizontal-tb</code> or <code>vertical-rl</code> depending on which class is used.</p>
+After that come the classes `horizontal` and `vertical`, which add the {{cssxref("writing-mode")}} property to the box, with the value set to `horizontal-tb` or `vertical-rl` depending on which class is used.
 
-<pre class="brush: css">.standard-box {
+```css
+.standard-box {
   padding: 4px;
   background-color: #abcdef;
   color: #000;
@@ -153,24 +138,22 @@ max-block-size: unset;
 .vertical {
   writing-mode: vertical-rl;
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Setting_max-block-size_with_horizontal_and_vertical_text", 600, 850)}}</p>
+{{EmbedLiveSample("Setting_max-block-size_with_horizontal_and_vertical_text", 600, 850)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The mapped physical properties: {{cssxref("max-width")}} and {{cssxref("max-height")}}</li>
- <li>Setting the other direction's maximum size: {{cssxref("max-inline-size")}}</li>
- <li>{{cssxref("writing-mode")}}</li>
-</ul>
+- The mapped physical properties: {{cssxref("max-width")}} and {{cssxref("max-height")}}
+- Setting the other direction's maximum size: {{cssxref("max-inline-size")}}
+- {{cssxref("writing-mode")}}

@@ -5,18 +5,17 @@ tags:
   - CSS
   - Non-standard
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.box-direction
 ---
-<p>{{CSSRef}}{{Non-standard_header}}</p>
+{{CSSRef}}{{Non-standard_header}}
 
-<div class="notecard warning">
-<p><strong>Warning:</strong> This is a property of the original CSS Flexible Box Layout Module draft, and has been replaced by a newer standard. The <code>-moz-box-direction</code> will only be used for XUL while the previous standard <code>box-direction</code> has been replaced by <code>flex-direction</code>. See <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes">flexbox</a> for information about the current standard.</p>
-</div>
+> **Warning:** This is a property of the original CSS Flexible Box Layout Module draft, and has been replaced by a newer standard. The `-moz-box-direction` will only be used for XUL while the previous standard `box-direction` has been replaced by `flex-direction`. See [flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes) for information about the current standard.
 
-<p>The <strong><code>box-direction</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property specifies whether a box lays out its contents normally (from the top or left edge), or in reverse (from the bottom or right edge).</p>
+The **`box-direction`** [CSS](/en-US/docs/Web/CSS) property specifies whether a box lays out its contents normally (from the top or left edge), or in reverse (from the bottom or right edge).
 
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 box-direction: normal;
 box-direction: reverse;
 
@@ -25,67 +24,62 @@ box-direction: inherit;
 box-direction: initial;
 box-direction: revert;
 box-direction: unset;
-</pre>
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>box-direction</code> property is specified as one of the keyword values listed below.</p>
+The `box-direction` property is specified as one of the keyword values listed below.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>normal</code></dt>
- <dd>The box lays out its contents from the start (the left or top edge).</dd>
- <dt><code>reverse</code></dt>
- <dd>The box lays out its contents from the end (the right or bottom edge).</dd>
-</dl>
+- `normal`
+  - : The box lays out its contents from the start (the left or top edge).
+- `reverse`
+  - : The box lays out its contents from the end (the right or bottom edge).
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>The edge of the box designated the <em>start</em> for layout purposes depends on the box's orientation:</p>
+The edge of the box designated the _start_ for layout purposes depends on the box's orientation:
 
-<ul>
-  <li>For horizontal elements, the <em>start</em> is the top edge.</li>
-  <li>For vertical elements, the <em>start</em> is the left edge.</li>
-</ul>
+- For horizontal elements, the _start_ is the top edge.
+- For vertical elements, the _start_ is the left edge.
 
-<p>The edge opposite to the start is designated the <em>end</em>.</p>
+The edge opposite to the start is designated the _end_.
 
-<p>If the direction is set using the element's <code>dir</code> attribute, then the style is ignored.</p>
+If the direction is set using the element's `dir` attribute, then the style is ignored.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_box_direction">Setting box direction</h3>
+### Setting box direction
 
-<pre class="brush:css">.example {
+```css
+.example {
   /* bottom-to-top layout */
   -moz-box-direction: reverse;      /* Mozilla */
   -webkit-box-direction: reverse;   /* WebKit */
   box-direction: reverse;           /* As specified */
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any standard.</p>
+Not part of any standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{CSSxRef("box-orient")}}</li>
- <li>{{CSSxRef("box-pack")}}</li>
- <li>{{CSSxRef("box-align")}}</li>
- <li>{{CSSxRef("flex-direction")}}</li>
-</ul>
+- {{CSSxRef("box-orient")}}
+- {{CSSxRef("box-pack")}}
+- {{CSSxRef("box-align")}}
+- {{CSSxRef("flex-direction")}}

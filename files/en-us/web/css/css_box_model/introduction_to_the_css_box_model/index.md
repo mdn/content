@@ -7,79 +7,54 @@ tags:
   - Guide
   - Layout
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>When laying out a document, the browser's rendering engine represents each element as a rectangular box according to the standard <strong>CSS basic box model</strong>. CSS determines the size, position, and properties (color, background, border size, etc.) of these boxes.</p>
+When laying out a document, the browser's rendering engine represents each element as a rectangular box according to the standard **CSS basic box model**. CSS determines the size, position, and properties (color, background, border size, etc.) of these boxes.
 
-<p>Every box is composed of four parts (or <em>areas</em>), defined by their respective edges: the <em>content edge</em>, <em>padding edge</em>, <em>border edge</em>, and <em>margin edge</em>.</p>
+Every box is composed of four parts (or _areas_), defined by their respective edges: the _content edge_, _padding edge_, _border edge_, and _margin edge_.
 
-<p><img alt="CSS Box model" src="boxmodel-(3).png"></p>
+![CSS Box model](<boxmodel-(3).png>)
 
-<h2>Content area</h2>
+## Content area
 
-<p>The <strong>content area</strong>, bounded by the content edge, contains the "real" content of the element, such as text, an image, or a video player. Its dimensions are the <em>content width</em> (or <em>content-box width</em>) and the <em>content height</em> (or <em>content-box height</em>). It often has a background color or background image.</p>
+The **content area**, bounded by the content edge, contains the "real" content of the element, such as text, an image, or a video player. Its dimensions are the _content width_ (or _content-box width_) and the _content height_ (or _content-box height_). It often has a background color or background image.
 
-<p>If the {{cssxref("box-sizing")}} property is set to <code>content-box</code> (default) and if the element is a block element, the content area's size can be explicitly defined with the {{cssxref("width")}}, {{cssxref("min-width")}}, {{cssxref("max-width")}}, {{ cssxref("height") }}, {{cssxref("min-height")}}, and {{cssxref("max-height")}} properties.</p>
+If the {{cssxref("box-sizing")}} property is set to `content-box` (default) and if the element is a block element, the content area's size can be explicitly defined with the {{cssxref("width")}}, {{cssxref("min-width")}}, {{cssxref("max-width")}}, {{ cssxref("height") }}, {{cssxref("min-height")}}, and {{cssxref("max-height")}} properties.
 
-<h2>Padding area</h2>
+## Padding area
 
-<p>The <strong>padding area</strong>, bounded by the padding edge, extends the content area to include the element's padding. Its dimensions are the <em>padding-box width</em> and the <em>padding-box height</em>.</p>
+The **padding area**, bounded by the padding edge, extends the content area to include the element's padding. Its dimensions are the _padding-box width_ and the _padding-box height_.
 
-<p>The thickness of the padding is determined by the {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, {{cssxref("padding-left")}}, and shorthand {{cssxref("padding")}} properties.</p>
+The thickness of the padding is determined by the {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, {{cssxref("padding-left")}}, and shorthand {{cssxref("padding")}} properties.
 
-<h2>Border area</h2>
+## Border area
 
-<p>The <strong>border area</strong>, bounded by the border edge, extends the padding area to include the element's borders. Its dimensions are the <em>border-box width</em> and the <em>border-box height</em>.</p>
+The **border area**, bounded by the border edge, extends the padding area to include the element's borders. Its dimensions are the _border-box width_ and the _border-box height_.
 
-<p>The thickness of the borders are determined by the {{cssxref("border-width")}} and shorthand {{cssxref("border")}} properties. If the {{cssxref("box-sizing")}} property is set to <code>border-box</code>, the border area's size can be explicitly defined with the {{cssxref("width")}}, {{cssxref("min-width")}}, {{cssxref("max-width")}}, {{ cssxref("height") }}, {{cssxref("min-height")}}, and {{cssxref("max-height")}} properties. When there is a background ({{cssxref("background-color")}} or {{cssxref("background-image")}}) set on a box, it extends to the outer edge of the border (i.e. extends underneath the border in z-ordering). This default behavior can be altered with the {{cssxref("background-clip")}} css property.</p>
+The thickness of the borders are determined by the {{cssxref("border-width")}} and shorthand {{cssxref("border")}} properties. If the {{cssxref("box-sizing")}} property is set to `border-box`, the border area's size can be explicitly defined with the {{cssxref("width")}}, {{cssxref("min-width")}}, {{cssxref("max-width")}}, {{ cssxref("height") }}, {{cssxref("min-height")}}, and {{cssxref("max-height")}} properties. When there is a background ({{cssxref("background-color")}} or {{cssxref("background-image")}}) set on a box, it extends to the outer edge of the border (i.e. extends underneath the border in z-ordering). This default behavior can be altered with the {{cssxref("background-clip")}} css property.
 
-<h2>Margin area</h2>
+## Margin area
 
-<p>The <strong>margin area</strong>, bounded by the margin edge, extends the border area to include an empty area used to separate the element from its neighbors. Its dimensions are the <em>margin-box width</em> and the <em>margin-box height</em>.</p>
+The **margin area**, bounded by the margin edge, extends the border area to include an empty area used to separate the element from its neighbors. Its dimensions are the _margin-box width_ and the _margin-box height_.
 
-<p>The size of the margin area is determined by the {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, {{cssxref("margin-left")}}, and shorthand {{cssxref("margin")}} properties. When <a href="/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing">margin collapsing</a> occurs, the margin area is not clearly defined since margins are shared between boxes.</p>
+The size of the margin area is determined by the {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, {{cssxref("margin-left")}}, and shorthand {{cssxref("margin")}} properties. When [margin collapsing](/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing) occurs, the margin area is not clearly defined since margins are shared between boxes.
 
-<p>Finally, note that for non-replaced inline elements, the amount of space taken up (the contribution to the height of the line) is determined by the {{cssxref('line-height')}} property, even though the borders and padding are still displayed around the content.</p>
+Finally, note that for non-replaced inline elements, the amount of space taken up (the contribution to the height of the line) is determined by the {{cssxref('line-height')}} property, even though the borders and padding are still displayed around the content.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/Containing_block">Layout and the containing block</a></li>
- <li><a href="/en-US/docs/Web/CSS/Cascade">Introducing the CSS Cascade</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">Cascade and inheritance</a></li>
-</ul>
+- [Layout and the containing block](/en-US/docs/Web/CSS/Containing_block)
+- [Introducing the CSS Cascade](/en-US/docs/Web/CSS/Cascade)
+- [Cascade and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Box', '#intro')}}</td>
-   <td>{{Spec2('CSS3 Box')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{ SpecName("CSS2.1","box.html#box-dimensions")}}</td>
-   <td>{{ Spec2('CSS2.1') }}</td>
-   <td>Though more precisely worded, there is no practical change.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName("CSS1","#formatting-model")}}</td>
-   <td>{{ Spec2('CSS1') }}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                    | Status                       | Comment                                                     |
+| ---------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------------- |
+| {{SpecName('CSS3 Box', '#intro')}}                     | {{Spec2('CSS3 Box')}} |                                                             |
+| {{ SpecName("CSS2.1","box.html#box-dimensions")}} | {{ Spec2('CSS2.1') }} | Though more precisely worded, there is no practical change. |
+| {{ SpecName("CSS1","#formatting-model")}}         | {{ Spec2('CSS1') }}     | Initial definition.                                         |
 
-<h2 id="See_also_2">See also</h2>
+## See also
 
-<ul>
- <li>{{css_key_concepts}}</li>
-</ul>
+- {{css_key_concepts}}

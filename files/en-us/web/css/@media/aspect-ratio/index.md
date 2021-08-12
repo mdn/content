@@ -9,30 +9,32 @@ tags:
   - media feature
 browser-compat: css.at-rules.media.aspect-ratio
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>aspect-ratio</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features">media feature</a> can be used to test the aspect ratio of the {{glossary("viewport")}}.</p>
+The **`aspect-ratio`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) can be used to test the aspect ratio of the {{glossary("viewport")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>aspect-ratio</code> feature is specified as a {{cssxref("&lt;ratio&gt;")}} value representing the width-to-height aspect ratio of the viewport. It is a range feature, meaning you can also use the prefixed <strong><code>min-aspect-ratio</code></strong> and <code><strong>max-aspect-ratio</strong></code> variants to query minimum and maximum values, respectively.</p>
+The `aspect-ratio` feature is specified as a {{cssxref("&lt;ratio&gt;")}} value representing the width-to-height aspect ratio of the viewport. It is a range feature, meaning you can also use the prefixed **`min-aspect-ratio`** and **`max-aspect-ratio`** variants to query minimum and maximum values, respectively.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The example below is contained in an {{htmlElement("iframe")}}, which creates its own viewport. Resize the <code>&lt;iframe&gt;</code> to see <code>aspect-ratio</code> in action.</p>
+The example below is contained in an {{htmlElement("iframe")}}, which creates its own viewport. Resize the `<iframe>` to see `aspect-ratio` in action.
 
-<p>Note that, when none of the media query conditions are true, the background will turn white because none of the below rules will be applied to the <code>&lt;div&gt;</code> inside the <code>&lt;iframe&gt;</code>. See if you can find which width and height values trigger this!</p>
+Note that, when none of the media query conditions are true, the background will turn white because none of the below rules will be applied to the `<div>` inside the `<iframe>`. See if you can find which width and height values trigger this!
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div id='inner'&gt;
+```html
+<div id='inner'>
   Watch this element as you resize your viewport's width and height.
-&lt;/div&gt;
-</pre>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">/* Minimum aspect ratio */
+```css
+/* Minimum aspect ratio */
 @media (min-aspect-ratio: 8/5) {
   div {
     background: #9af; /* blue */
@@ -52,26 +54,29 @@ browser-compat: css.at-rules.media.aspect-ratio
     background: #f9a; /* red */
   }
 }
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
+```html hidden
+<label id="wf" for="w">width:165</label>
+<input id="w" name="w" type="range" min="100" max="250" step="5" value="165">
+<label id="hf" for="w">height:165</label>
+<input id="h" name="h" type="range" min="100" max="250" step="5" value="165">
 
-<pre class="brush: html hidden">&lt;label id="wf" for="w"&gt;width:165&lt;/label&gt;
-&lt;input id="w" name="w" type="range" min="100" max="250" step="5" value="165"&gt;
-&lt;label id="hf" for="w"&gt;height:165&lt;/label&gt;
-&lt;input id="h" name="h" type="range" min="100" max="250" step="5" value="165"&gt;
+<iframe id="outer" src="data:text/html,<style> @media (min-aspect-ratio: 8/5) { div { background: %239af; } } @media (max-aspect-ratio: 3/2) { div { background: %239ff; } } @media (aspect-ratio: 1/1) { div { background: %23f9a; } }</style><div id='inner'> Watch this element as you resize your viewport's width and height.</div>">
 
-&lt;iframe id="outer" src="data:text/html,&lt;style&gt; @media (min-aspect-ratio: 8/5) { div { background: %239af; } } @media (max-aspect-ratio: 3/2) { div { background: %239ff; } } @media (aspect-ratio: 1/1) { div { background: %23f9a; } }&lt;/style&gt;&lt;div id='inner'&gt; Watch this element as you resize your viewport's width and height.&lt;/div&gt;"&gt;
+</iframe>
+```
 
-&lt;/iframe&gt;
-</pre>
-
-<pre class="brush: css hidden">iframe{
+```css hidden
+iframe{
   display:block;
-}</pre>
+}
+```
 
-<pre class="brush: js hidden">outer.style.width=outer.style.height="165px"
+```js hidden
+outer.style.width=outer.style.height="165px"
 
 w.onchange=w.oninput=function(){
   outer.style.width=w.value+"px"
@@ -80,21 +85,20 @@ w.onchange=w.oninput=function(){
 h.onchange=h.oninput=function(){
   outer.style.height=h.value+"px"
   hf.textContent="height:"+h.value
-}</pre>
+}
+```
 
-<div>{{ EmbedLiveSample('Result', '300px', '350px') }}</div>
+{{ EmbedLiveSample('Result', '300px', '350px') }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">Using Media Queries</a></li>
- <li><a href="/en-US/docs/Web/CSS/@media">@media</a></li>
-</ul>
+- [Using Media Queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [@media](/en-US/docs/Web/CSS/@media)

@@ -5,29 +5,28 @@ tags:
   - CSS
   - CSS Property
   - Property
-  - 'recipe:css-shorthand-property'
+  - recipe:css-shorthand-property
 browser-compat: css.properties.margin
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>margin</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> shorthand property sets the <a href="/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">margin area</a> on all four sides of an element.
+The **`margin`** [CSS](/en-US/docs/Web/CSS) shorthand property sets the [margin area](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model) on all four sides of an element.
 
-<div>{{EmbedInteractiveExample("pages/css/margin.html")}}</div>
+{{EmbedInteractiveExample("pages/css/margin.html")}}
 
-<h2 id="Constituent_properties">Constituent properties</h2>
+## Constituent properties
 
-<p>This property is a shorthand for the following CSS properties:</p>
+This property is a shorthand for the following CSS properties:
 
-<ul>
- <li>{{cssxref("margin-bottom")}}</li>
- <li>{{cssxref("margin-left")}}</li>
- <li>{{cssxref("margin-right")}}</li>
- <li>{{cssxref("margin-top")}}</li>
-</ul>
+- {{cssxref("margin-bottom")}}
+- {{cssxref("margin-left")}}
+- {{cssxref("margin-right")}}
+- {{cssxref("margin-top")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* Apply to all four sides */
+```css
+/* Apply to all four sides */
 margin: 1em;
 margin: -3px;
 
@@ -45,65 +44,64 @@ margin: inherit;
 margin: initial;
 margin: revert;
 margin: unset;
-</pre>
+```
 
-<p>The <code>margin</code> property may be specified using one, two, three, or four values. Each value is a {{cssxref("&lt;length&gt;")}}, a {{cssxref("&lt;percentage&gt;")}}, or the keyword <code><a href="#auto">auto</a></code>. Negative values draw the element closer to its neighbors than it would be by default.</p>
+The `margin` property may be specified using one, two, three, or four values. Each value is a {{cssxref("&lt;length&gt;")}}, a {{cssxref("&lt;percentage&gt;")}}, or the keyword [`auto`](#auto). Negative values draw the element closer to its neighbors than it would be by default.
 
-<ul>
- <li>When <strong>one</strong> value is specified, it applies the same margin to <strong>all four sides</strong>.</li>
- <li>When <strong>two</strong> values are specified, the first margin applies to the <strong>top and bottom</strong>, the second to the <strong>left and right</strong>.</li>
- <li>When <strong>three</strong> values are specified, the first margin applies to the <strong>top</strong>, the second to the <strong>right and left</strong>, the third to the <strong>bottom</strong>.</li>
- <li>When <strong>four</strong> values are specified, the margins apply to the <strong>top</strong>, <strong>right</strong>, <strong>bottom</strong>, and <strong>left</strong> in that order (clockwise).</li>
-</ul>
+- When **one** value is specified, it applies the same margin to **all four sides**.
+- When **two** values are specified, the first margin applies to the **top and bottom**, the second to the **left and right**.
+- When **three** values are specified, the first margin applies to the **top**, the second to the **right and left**, the third to the **bottom**.
+- When **four** values are specified, the margins apply to the **top**, **right**, **bottom**, and **left** in that order (clockwise).
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><strong>{{cssxref("length")}}</strong></dt>
- <dd>The size of the margin as a fixed value.</dd>
- <dt>{{cssxref("percentage")}}</dt>
- <dd>The size of the margin as a percentage, relative to the <em>width</em> of the <a href="/en-US/docs/Web/CSS/Containing_block">containing block</a>.</dd>
- <dt><code>auto</code></dt>
- <dd>The browser selects a suitable margin to use. For example, in certain cases this value can be used to center an element.</dd>
-</dl>
+- **{{cssxref("length")}}**
+  - : The size of the margin as a fixed value.
+- {{cssxref("percentage")}}
+  - : The size of the margin as a percentage, relative to the _width_ of the [containing block](/en-US/docs/Web/CSS/Containing_block).
+- `auto`
+  - : The browser selects a suitable margin to use. For example, in certain cases this value can be used to center an element.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>This property can be used to set a margin on all four sides of an element. Margins create extra space <em>around</em> an element, unlike {{cssxref("padding")}}, which creates extra space <em>within</em> an element.</p>
+This property can be used to set a margin on all four sides of an element. Margins create extra space _around_ an element, unlike {{cssxref("padding")}}, which creates extra space _within_ an element.
 
-<p>The top and bottom margins have no effect on <em>non-<a href="/en-US/docs/Web/CSS/Replaced_element">replaced</a></em> inline elements, such as {{HTMLElement("span")}} or {{HTMLElement("code")}}.</p>
+The top and bottom margins have no effect on _non-[replaced](/en-US/docs/Web/CSS/Replaced_element)_ inline elements, such as {{HTMLElement("span")}} or {{HTMLElement("code")}}.
 
-<h3 id="Horizontal_centering">Horizontal centering</h3>
+### Horizontal centering
 
-<p>To center something horizontally in modern browsers, you can use {{cssxref("display")}}<code>: flex; </code>{{cssxref("justify-content")}}<code>: center;</code> .</p>
+To center something horizontally in modern browsers, you can use {{cssxref("display")}}`: flex; `{{cssxref("justify-content")}}`: center;` .
 
-<p>However, in older browsers like IE8-9 that do not support Flexible Box Layout, these are not available. In order to center an element inside its parent, use <code>margin: 0 auto;</code>.</p>
+However, in older browsers like IE8-9 that do not support Flexible Box Layout, these are not available. In order to center an element inside its parent, use `margin: 0 auto;`.
 
-<h3 id="Margin_collapsing">Margin collapsing</h3>
+### Margin collapsing
 
-<p>Elements' top and bottom margins are sometimes collapsed into a single margin that is equal to the larger of the two margins. See <a href="/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing">Mastering margin collapsing</a> for more information.</p>
+Elements' top and bottom margins are sometimes collapsed into a single margin that is equal to the larger of the two margins. See [Mastering margin collapsing](/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing) for more information.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Simple_example">Simple example</h3>
+### Simple example
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="center"&gt;This element is centered.&lt;/div&gt;
+```html
+<div class="center">This element is centered.</div>
 
-&lt;div class="outside"&gt;This element is positioned outside of its container.&lt;/div&gt;</pre>
+<div class="outside">This element is positioned outside of its container.</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css; highlight:[2,8]">.center {
+```css
+.center {
   margin: auto;
   background: lime;
   width: 66%;
@@ -113,13 +111,15 @@ margin: unset;
   margin: 3rem 0 0 -3rem;
   background: cyan;
   width: 66%;
-}</pre>
+}
+```
 
-<p>{{ EmbedLiveSample('Simple_example','100%',120) }}</p>
+{{ EmbedLiveSample('Simple_example','100%',120) }}
 
-<h3 id="More_examples">More examples</h3>
+### More examples
 
-<pre class="brush: css">margin: 5%;                 /* All sides: 5% margin */
+```css
+margin: 5%;                 /* All sides: 5% margin */
 
 margin: 10px;               /* All sides: 10px margin */
 
@@ -140,21 +140,19 @@ margin: 2em auto;           /* top and bottom: 2em margin   */
 
 margin: auto;               /* top and bottom: 0 margin     */
                             /* Box is horizontally centered */
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">Introduction to the CSS basic box model </a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing">Margin collapsing</a></li>
- <li>{{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, and {{cssxref("margin-left")}}</li>
- <li>The mapped logical properties: {{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}}, {{cssxref("margin-inline-start")}}, and {{cssxref("margin-inline-end")}} and the shorthands {{cssxref("margin-block")}} and {{cssxref("margin-inline")}}</li>
-</ul>
+- [Introduction to the CSS basic box model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+- [Margin collapsing](/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+- {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, and {{cssxref("margin-left")}}
+- The mapped logical properties: {{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}}, {{cssxref("margin-inline-start")}}, and {{cssxref("margin-inline-end")}} and the shorthands {{cssxref("margin-block")}} and {{cssxref("margin-inline")}}

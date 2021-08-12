@@ -6,73 +6,67 @@ tags:
   - NeedsCompatTable
   - Non-standard
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.-moz-force-broken-image-icon
 ---
-<div>{{Non-standard_header}}{{CSSRef}}</div>
+{{Non-standard_header}}{{CSSRef}}
 
-<p>The <strong><code>-moz-force-broken-image-icon</code></strong> extended CSS property can be used to force the broken image icon to be shown even when a broken image has an <code>alt</code> attribute.</p>
+The **`-moz-force-broken-image-icon`** extended CSS property can be used to force the broken image icon to be shown even when a broken image has an `alt` attribute.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt>{{cssxref("&lt;integer&gt;")}}</dt>
- <dd>A value of <code>1</code> means that the broken image icon is shown even if the image has an {{HTMLElement("img", "<code>alt</code>", "#attr-alt")}} attribute. When the value <code>0</code> is used the image will act as usual and only display the <code>alt</code> attribute.</dd>
-</dl>
+- {{cssxref("&lt;integer&gt;")}}
+  - : A value of `1` means that the broken image icon is shown even if the image has an {{HTMLElement("img", "<code>alt</code>", "#attr-alt")}} attribute. When the value `0` is used the image will act as usual and only display the `alt` attribute.
 
-<div class="note">
-  <p><strong>Note:</strong> Even if the value is set to <code>1</code> the <code>alt</code> attribute will still be displayed, alongside the broken image icon.</p>
-</div>
+> **Note:** Even if the value is set to `1` the `alt` attribute will still be displayed, alongside the broken image icon.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush:html;">&lt;img src='/broken/image/link.png' alt='Broken image link'&gt;</pre>
+```html
+<img src='/broken/image/link.png' alt='Broken image link'>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush:css;">img {
+```css
+img {
   -moz-force-broken-image-icon: 1;
   height: 100px;
   width: 100px;
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{ EmbedLiveSample('Examples','125','125','/files/4619/broken%20image%20link.png') }}</p>
+{{ EmbedLiveSample('Examples','125','125','/files/4619/broken%20image%20link.png') }}
 
-<div class="note">
-  <p><strong>Note:</strong> Unless the image has a specified height and width the broken image icon will not be displayed but the alt attribute will also be hidden if <code>-moz-force-broken-image-icon</code> is set to <code>1</code>.</p>
-</div>
+> **Note:** Unless the image has a specified height and width the broken image icon will not be displayed but the alt attribute will also be hidden if `-moz-force-broken-image-icon` is set to `1`.
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<ul>
- <li>This property will only work in Gecko-based browsers.</li>
- <li>The use of this property is not recommended. A proper <code>alt</code> attribute should be used instead.</li>
-</ul>
+- This property will only work in Gecko-based browsers.
+- The use of this property is not recommended. A proper `alt` attribute should be used instead.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any standard.</p>
+Not part of any standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{ Bug(58646) }}</li>
-</ul>
+- {{ Bug(58646) }}

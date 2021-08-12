@@ -1,9 +1,9 @@
 ---
 title: '::-moz-scrolled-page-sequence'
-slug: 'Web/CSS/::-moz-scrolled-page-sequence'
+slug: Web/CSS/::-moz-scrolled-page-sequence
 tags:
   - CSS
-  - 'CSS:Mozilla Extensions'
+  - CSS:Mozilla Extensions
   - NeedsContent
   - NeedsExample
   - Non-standard
@@ -12,25 +12,23 @@ tags:
   - Selector
 browser-compat: css.selectors.-moz-scrolled-page-sequence
 ---
-<div>{{CSSRef}}{{non-standard_header}}</div>
+{{CSSRef}}{{non-standard_header}}
 
-<p>The <strong><code>::-moz-scrolled-page-sequence</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-element</a> is a <a href="/en-US/docs/Web/CSS/Mozilla_Extensions">Mozilla extension</a> that represents the background of a print preview.</p>
+The **`::-moz-scrolled-page-sequence`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) is a [Mozilla extension](/en-US/docs/Web/CSS/Mozilla_Extensions) that represents the background of a print preview.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
 {{CSSSyntax}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any standard.</p>
+Not part of any standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{CSSxRef("::-moz-page")}}</li>
- <li>{{CSSxRef("::-moz-page-sequence")}}</li>
-</ul>
+- {{CSSxRef("::-moz-page")}}
+- {{CSSxRef("::-moz-page-sequence")}}

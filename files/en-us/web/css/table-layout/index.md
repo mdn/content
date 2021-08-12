@@ -6,18 +6,19 @@ tags:
   - CSS Property
   - CSS Tables
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.table-layout
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>table-layout</code></strong> CSS property sets the algorithm used to lay out {{htmlelement("table")}} cells, rows, and columns.</p>
+The **`table-layout`** CSS property sets the algorithm used to lay out {{htmlelement("table")}} cells, rows, and columns.
 
-<div>{{EmbedInteractiveExample("pages/css/table-layout.html")}}</div>
+{{EmbedInteractiveExample("pages/css/table-layout.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 table-layout: auto;
 table-layout: fixed;
 
@@ -25,46 +26,47 @@ table-layout: fixed;
 table-layout: inherit;
 table-layout: initial;
 table-layout: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
-	<dt>{{Cssxref("auto")}}</dt>
-	<dd>By default, most browsers use an automatic table layout algorithm. The widths of the table and its cells are adjusted to fit the content.</dd>
-	<dt><code>fixed</code></dt>
-	<dd>
-    <p>Table and column widths are set by the widths of <code>table</code> and <code>col</code> elements or by the width of the first row of cells. Cells in subsequent rows do not affect column widths.</p>
-    <p>Under the "fixed" layout method, the entire table can be rendered once the first table row has been downloaded and analyzed. This can speed up rendering time over the "automatic" layout method, but subsequent cell content might not fit in the column widths provided. Cells use the {{Cssxref("overflow")}} property to determine whether to clip any overflowing content, but only if the table has a known width; otherwise, they won't overflow the cells.</p>
-  </dd>
-</dl>
+- {{Cssxref("auto")}}
+  - : By default, most browsers use an automatic table layout algorithm. The widths of the table and its cells are adjusted to fit the content.
+- `fixed`
 
-<h2 id="Formal_definition">Formal definition</h2>
+  - : Table and column widths are set by the widths of `table` and `col` elements or by the width of the first row of cells. Cells in subsequent rows do not affect column widths.
 
-<p>{{CSSInfo}}</p>
+    Under the "fixed" layout method, the entire table can be rendered once the first table row has been downloaded and analyzed. This can speed up rendering time over the "automatic" layout method, but subsequent cell content might not fit in the column widths provided. Cells use the {{Cssxref("overflow")}} property to determine whether to clip any overflowing content, but only if the table has a known width; otherwise, they won't overflow the cells.
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal definition
+
+{{CSSInfo}}
+
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Fixed-width_tables_with_text-overflow">Fixed-width tables with text-overflow</h3>
+### Fixed-width tables with text-overflow
 
-<p>This example uses a fixed table layout, combined with the {{cssxref("width")}} property, to restrict the table's width. The {{cssxref("text-overflow")}} property is used to apply an ellipsis to words that are too long to fit. If the table layout were <code>auto</code>, the table would grow to accommodate its contents, despite the specified <code>width</code>.</p>
+This example uses a fixed table layout, combined with the {{cssxref("width")}} property, to restrict the table's width. The {{cssxref("text-overflow")}} property is used to apply an ellipsis to words that are too long to fit. If the table layout were `auto`, the table would grow to accommodate its contents, despite the specified `width`.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;table&gt;
-  &lt;tr&gt;&lt;td&gt;Ed&lt;/td&gt;&lt;td&gt;Wood&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;Albert&lt;/td&gt;&lt;td&gt;Schweitzer&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;Jane&lt;/td&gt;&lt;td&gt;Fonda&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;William&lt;/td&gt;&lt;td&gt;Shakespeare&lt;/td&gt;&lt;/tr&gt;
-&lt;/table&gt;</pre>
+```html
+<table>
+  <tr><td>Ed</td><td>Wood</td></tr>
+  <tr><td>Albert</td><td>Schweitzer</td></tr>
+  <tr><td>Jane</td><td>Fonda</td></tr>
+  <tr><td>William</td><td>Shakespeare</td></tr>
+</table>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">table {
+```css
+table {
   table-layout: fixed;
   width: 120px;
   border: 1px solid red;
@@ -75,22 +77,21 @@ td {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Fixed-width_tables_with_text-overflow')}}</p>
+{{EmbedLiveSample('Fixed-width_tables_with_text-overflow')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li><code><a href="/en-US/docs/Web/HTML/Element/table">&lt;table&gt;</a></code></li>
-</ul>
+- [`<table>`](/en-US/docs/Web/HTML/Element/table)

@@ -7,22 +7,23 @@ tags:
   - CSS Text Decoration
   - Layout
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.text-decoration-style
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>text-decoration-style</code></strong> <a href="/en-US/docs/CSS">CSS</a> property sets the style of the lines specified by {{ cssxref("text-decoration-line") }}. The style applies to all lines that are set with <code>text-decoration-line</code>.</p>
+The **`text-decoration-style`** [CSS](/en-US/docs/CSS) property sets the style of the lines specified by {{ cssxref("text-decoration-line") }}. The style applies to all lines that are set with `text-decoration-line`.
 
-<div>{{EmbedInteractiveExample("pages/css/text-decoration-style.html")}}</div>
+{{EmbedInteractiveExample("pages/css/text-decoration-style.html")}}
 
-<p>If the specified decoration has a specific semantic meaning, like a line-through line meaning that some text has been deleted, authors are encouraged to denote this meaning using an HTML tag, like {{ HTMLElement("del") }} or {{ HTMLElement("s") }}. As browsers can disable styling in some cases, the semantic meaning won't disappear in such a situation.</p>
+If the specified decoration has a specific semantic meaning, like a line-through line meaning that some text has been deleted, authors are encouraged to denote this meaning using an HTML tag, like {{ HTMLElement("del") }} or {{ HTMLElement("s") }}. As browsers can disable styling in some cases, the semantic meaning won't disappear in such a situation.
 
-<p>When setting multiple line-decoration properties at once, it may be more convenient to use the {{cssxref("text-decoration")}} shorthand property instead.</p>
+When setting multiple line-decoration properties at once, it may be more convenient to use the {{cssxref("text-decoration")}} shorthand property instead.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 text-decoration-style: solid;
 text-decoration-style: double;
 text-decoration-style: dotted;
@@ -34,74 +35,74 @@ text-decoration-style: inherit;
 text-decoration-style: initial;
 text-decoration-style: revert;
 text-decoration-style: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt>solid</dt>
- <dd>Draws a single line.</dd>
- <dt>double</dt>
- <dd>Draws a double line.</dd>
- <dt>dotted</dt>
- <dd>Draws a dotted line.</dd>
- <dt>dashed</dt>
- <dd>Draws a dashed line.</dd>
- <dt>wavy</dt>
- <dd>Draws a wavy line.</dd>
- <dt>-moz-none{{ non-standard_inline }}</dt>
- <dd>Draws no line. Use {{ cssxref("text-decoration-line") }}<code>: none</code> instead.</dd>
-</dl>
+- solid
+  - : Draws a single line.
+- double
+  - : Draws a double line.
+- dotted
+  - : Draws a dotted line.
+- dashed
+  - : Draws a dashed line.
+- wavy
+  - : Draws a wavy line.
+- \-moz-none{{ non-standard_inline }}
+  - : Draws no line. Use {{ cssxref("text-decoration-line") }}`: none` instead.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_a_wavy_underline">Setting a wavy underline</h3>
+### Setting a wavy underline
 
-<pre class="brush: css">.example {
+```css
+.example {
        -moz-text-decoration-line: underline;
        -moz-text-decoration-style: wavy;
        -moz-text-decoration-color: red;
     -webkit-text-decoration-line: underline;
     -webkit-text-decoration-style: wavy;
     -webkit-text-decoration-color: red;
-}</pre>
+}
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.wavy {
+```css
+.wavy {
   text-decoration-line: underline;
   text-decoration-style: wavy;
   text-decoration-color: red;
 }
-</pre>
+```
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p class="wavy"&gt;This text has a wavy red line beneath it.&lt;/p&gt;
-</pre>
+```html
+<p class="wavy">This text has a wavy red line beneath it.</p>
+```
 
-<h4 id="Results">Results</h4>
+#### Results
 
-<p>{{ EmbedLiveSample('Setting_a_wavy_underline', '', '', '') }}</p>
+{{ EmbedLiveSample('Setting_a_wavy_underline', '', '', '') }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>When setting multiple line-decoration properties at once, it may be more convenient to use the {{cssxref("text-decoration")}} shorthand property instead.</li>
-</ul>
+- When setting multiple line-decoration properties at once, it may be more convenient to use the {{cssxref("text-decoration")}} shorthand property instead.

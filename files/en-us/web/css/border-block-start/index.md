@@ -12,28 +12,27 @@ tags:
   - border-block-start-color
   - border-block-start-style
   - border-block-start-width
-  - 'recipe:css-shorthand-property'
+  - recipe:css-shorthand-property
 browser-compat: css.properties.border-block-start
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>border-block-start</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property is a <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand property</a> for setting the individual logical block-start border property values in a single place in the style sheet.</p>
+The **`border-block-start`** [CSS](/en-US/docs/Web/CSS) property is a [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) for setting the individual logical block-start border property values in a single place in the style sheet.
 
-<div>{{EmbedInteractiveExample("pages/css/border-block-start.html")}}</div>
+{{EmbedInteractiveExample("pages/css/border-block-start.html")}}
 
-<h2 id="Constituent_properties">Constituent properties</h2>
+## Constituent properties
 
-<p>This property is a shorthand for the following CSS properties:</p>
+This property is a shorthand for the following CSS properties:
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/border-block-start-color"><code>border-block-start-color</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/border-block-start-style"><code>border-block-start-style</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/border-block-start-width"><code>border-block-start-width</code></a></li>
-</ul>
+- [`border-block-start-color`](/en-US/docs/Web/CSS/border-block-start-color)
+- [`border-block-start-style`](/en-US/docs/Web/CSS/border-block-start-style)
+- [`border-block-start-width`](/en-US/docs/Web/CSS/border-block-start-width)
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css  no-line-numbers">border-block-start: 1px;
+```css
+border-block-start: 1px;
 border-block-start: 2px dotted;
 border-block-start: medium dashed blue;
 
@@ -41,47 +40,48 @@ border-block-start: medium dashed blue;
 border-block-start: inherit;
 border-block-start: initial;
 border-block-start: revert;
-border-block-start: unset;</pre>
+border-block-start: unset;
+```
 
-<p><code>border-block-start</code> can be used to set the values for one or more of {{cssxref("border-block-start-width")}}, {{cssxref("border-block-start-style")}}, and {{cssxref("border-block-start-color")}}. The physical border to which it maps depends on the element's writing mode, directionality, and text orientation. It corresponds to the {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, or {{cssxref("border-left")}} property depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.</p>
+`border-block-start` can be used to set the values for one or more of {{cssxref("border-block-start-width")}}, {{cssxref("border-block-start-style")}}, and {{cssxref("border-block-start-color")}}. The physical border to which it maps depends on the element's writing mode, directionality, and text orientation. It corresponds to the {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, or {{cssxref("border-left")}} property depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.
 
-<p>Related properties are {{cssxref("border-block-end")}}, {{cssxref("border-inline-start")}}, and {{cssxref("border-inline-end")}}, which define the other borders of the element.</p>
+Related properties are {{cssxref("border-block-end")}}, {{cssxref("border-inline-start")}}, and {{cssxref("border-inline-end")}}, which define the other borders of the element.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<p>The <code>border-block-start</code> is specified with one or more of the following, in any order:</p>
+The `border-block-start` is specified with one or more of the following, in any order:
 
-<dl>
- <dt><code>&lt;'border-width'&gt;</code></dt>
- <dd>The width of the border. See {{cssxref("border-width")}}.</dd>
- <dt><code>&lt;'border-style'&gt;</code></dt>
- <dd>The line style of the border. See {{cssxref("border-style")}}.</dd>
- <dt><code>&lt;'color'&gt;</code></dt>
- <dd>The color of the border. See {{cssxref("color")}}.</dd>
-</dl>
+- `<'border-width'>`
+  - : The width of the border. See {{cssxref("border-width")}}.
+- `<'border-style'>`
+  - : The line style of the border. See {{cssxref("border-style")}}.
+- `<'color'>`
+  - : The color of the border. See {{cssxref("color")}}.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Border_with_vertical_text">Border with vertical text</h3>
+### Border with vertical text
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;p class="exampleText"&gt;Example text&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div>
+  <p class="exampleText">Example text</p>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush:css  no-line-numbers">div {
+```css
+div {
   background-color: yellow;
   width: 120px;
   height: 120px;
@@ -90,21 +90,20 @@ border-block-start: unset;</pre>
 .exampleText {
   writing-mode: vertical-rl;
   border-block-start: 5px dashed blue;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Border_with_vertical_text", 140, 140)}}</p>
+{{EmbedLiveSample("Border_with_vertical_text", 140, 140)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>This property maps to one of the physical border properties: {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, or {{cssxref("border-left")}}.</li>
- <li>{{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}</li>
-</ul>
+- This property maps to one of the physical border properties: {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, or {{cssxref("border-left")}}.
+- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

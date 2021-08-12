@@ -8,33 +8,34 @@ tags:
   - cookbook
   - recipes
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The grid wrapper pattern is useful for aligning grid content within a central wrapper, while also allowing items to break out and align to the edge of the containing element or page when desired.</p>
+The grid wrapper pattern is useful for aligning grid content within a central wrapper, while also allowing items to break out and align to the edge of the containing element or page when desired.
 
-<h2 id="Requirements">Requirements</h2>
+## Requirements
 
-<p>Items placed on the grid should be able to align to a horizontally-centered max-width wrapper and/or the outer edges of the grid.</p>
+Items placed on the grid should be able to align to a horizontally-centered max-width wrapper and/or the outer edges of the grid.
 
-<h2 id="Recipe">Recipe</h2>
+## Recipe
 
-<p>{{EmbedGHLiveSample("css-examples/css-cookbook/grid-wrapper.html", '100%', 720)}}</p>
+{{EmbedGHLiveSample("css-examples/css-cookbook/grid-wrapper.html", '100%', 720)}}
 
-<div class="callout">
-<p><a href="https://github.com/mdn/css-examples/blob/master/css-cookbook/grid-wrapper--download.html">Download this example</a></p>
-</div>
+> **Callout:**
+>
+> [Download this example](https://github.com/mdn/css-examples/blob/master/css-cookbook/grid-wrapper--download.html)
 
-<h2 id="Choices_made">Choices made</h2>
+## Choices made
 
-<p>This recipe uses the CSS Grid {{cssxref("minmax()")}} function to define the grid track sizes in the {{cssxref("grid-template-columns")}} property. For the central columns with a maximum width we can set a minimum value of 0 or greater and a maximum value that specifies the maximum size the column tracks will grow to. Using a numeric unit (pixels, ems, rems) will create a fixed maximum size for the central wrapper, whereas using percentage values or viewport units will mean this wrapper grows or shrinks in response to its context.</p>
+This recipe uses the CSS Grid {{cssxref("minmax()")}} function to define the grid track sizes in the {{cssxref("grid-template-columns")}} property. For the central columns with a maximum width we can set a minimum value of 0 or greater and a maximum value that specifies the maximum size the column tracks will grow to. Using a numeric unit (pixels, ems, rems) will create a fixed maximum size for the central wrapper, whereas using percentage values or viewport units will mean this wrapper grows or shrinks in response to its context.
 
-<p>The outer two columns have a maximum size of <code>1fr</code>, meaning that they will each expand to fill the remaining available space in the grid container.</p>
+The outer two columns have a maximum size of `1fr`, meaning that they will each expand to fill the remaining available space in the grid container.
 
-<h2 id="Useful_fallbacks_or_alternative_methods">Useful fallbacks or alternative methods</h2>
+## Useful fallbacks or alternative methods
 
-<p>When using this recipe at page level it can be useful to set a <code>max-width</code> along with left and right <code>auto</code> {{cssxref("margin")}}s to center the content horizontally:</p>
+When using this recipe at page level it can be useful to set a `max-width` along with left and right `auto` {{cssxref("margin")}}s to center the content horizontally:
 
-<pre class="brush: css">.grid {
+```css
+.grid {
   max-width: 1200px;
   margin: 0 auto; // horizontally centers the container
 }
@@ -47,35 +48,36 @@ tags:
     max-width: none;
     margin: 0;
   }
-}</pre>
+}
+```
 
-<p>To “break out” a full-width item to the edge of the viewport you can then use this trick (courtesy of <a href="https://una.im/">Una Kravets</a>):</p>
+To “break out” a full-width item to the edge of the viewport you can then use this trick (courtesy of [Una Kravets](https://una.im/)):
 
-<pre class="brush: css">.item {
+```css
+.item {
   width: 100vw;
   margin-left: 50%;
   transform: translate3d(-50%, 0, 0);
-}</pre>
+}
+```
 
-<p>This gives a good approximation of the layout, only without the benefit of being able to align items easily on an exact grid.</p>
+This gives a good approximation of the layout, only without the benefit of being able to align items easily on an exact grid.
 
-<h2 id="Accessibility_concerns">Accessibility concerns</h2>
+## Accessibility concerns
 
-<p>Although Grid enables us to position items anywhere (within reason), it is important when placing items using CSS Grid that your underlying markup follows a logical order (see <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility">CSS Grid layout and accessibility</a> for more details).</p>
+Although Grid enables us to position items anywhere (within reason), it is important when placing items using CSS Grid that your underlying markup follows a logical order (see [CSS Grid layout and accessibility](/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility) for more details).
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>The various layout methods have different browser support. See the charts below for details on basic support for the properties used.</p>
+The various layout methods have different browser support. See the charts below for details on basic support for the properties used.
 
-<h4 id="grid-template-columns">grid-template-columns</h4>
+#### grid-template-columns
 
-<p>{{Compat("css.properties.grid-template-columns")}}</p>
+{{Compat("css.properties.grid-template-columns")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Cssxref("grid-template-columns")}}</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout on MDN</a></li>
- <li>Article:<a href="https://css-irl.info/more-flexibility-with-minmax/"> CSS Grid: More flexibility with minmax()</a></li>
- <li>Article: <a href="https://rachelandrew.co.uk/archives/2017/06/01/breaking-out-with-css-grid-explained/">Breaking Out with CSS Grid</a></li>
-</ul>
+- {{Cssxref("grid-template-columns")}}
+- [CSS Grid Layout on MDN](/en-US/docs/Web/CSS/CSS_Grid_Layout)
+- Article:[ CSS Grid: More flexibility with minmax()](https://css-irl.info/more-flexibility-with-minmax/)
+- Article: [Breaking Out with CSS Grid](https://rachelandrew.co.uk/archives/2017/06/01/breaking-out-with-css-grid-explained/)

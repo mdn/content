@@ -6,23 +6,24 @@ tags:
   - CSS Borders
   - CSS Property
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.border-image-outset
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>border-image-outset</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets the distance by which an element's <a href="/en-US/docs/Web/CSS/border-image">border image</a> is set out from its border box.</p>
+The **`border-image-outset`** [CSS](/en-US/docs/Web/CSS) property sets the distance by which an element's [border image](/en-US/docs/Web/CSS/border-image) is set out from its border box.
 
-<p>The parts of the border image that are rendered outside the element's border box with <code>border-image-outset</code> do not trigger overflow scrollbars and don't capture mouse events.</p>
+The parts of the border image that are rendered outside the element's border box with `border-image-outset` do not trigger overflow scrollbars and don't capture mouse events.
 
-<div>{{EmbedInteractiveExample("pages/css/border-image-outset.html")}}</div>
+{{EmbedInteractiveExample("pages/css/border-image-outset.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* &lt;length&gt; value */
+```css
+/* <length> value */
 border-image-outset: 1rem;
 
-/* &lt;number&gt; value */
+/* <number> value */
 border-image-outset: 1.5;
 
 /* vertical | horizontal */
@@ -39,69 +40,66 @@ border-image-outset: inherit;
 border-image-outset: initial;
 border-image-outset: revert;
 border-image-outset: unset;
-</pre>
+```
 
-<p>The <code>border-image-outset</code> property may be specified as one, two, three, or four values. Each value is a {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;number&gt;")}}. Negative values are invalid and will cause the <code>border-image-outset</code> declaration to be ignored.</p>
+The `border-image-outset` property may be specified as one, two, three, or four values. Each value is a {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;number&gt;")}}. Negative values are invalid and will cause the `border-image-outset` declaration to be ignored.
 
-<ol>
- <li>If <strong>one</strong> value is specified, it applies to <strong>all four sides</strong>.</li>
- <li>If <strong>two</strong> values are specified, the first applies to the <strong>top and bottom</strong> and the second to the <strong>left and right</strong>.</li>
- <li>If <strong>three</strong> values are specified, the first applies to the <strong>top</strong>, the second to the <strong>left and right</strong>, and the third to the <strong>bottom</strong>.</li>
- <li>If <strong>four</strong> values are specified, they apply to the <strong>top</strong>, <strong>right</strong>, <strong>bottom</strong>, and <strong>left</strong> in that order (clockwise).</li>
-</ol>
+1.  If **one** value is specified, it applies to **all four sides**.
+2.  If **two** values are specified, the first applies to the **top and bottom** and the second to the **left and right**.
+3.  If **three** values are specified, the first applies to the **top**, the second to the **left and right**, and the third to the **bottom**.
+4.  If **four** values are specified, they apply to the **top**, **right**, **bottom**, and **left** in that order (clockwise).
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt>{{cssxref("&lt;length&gt;")}}</dt>
- <dd>The size of the <code>border-image</code> outset as a dimension — a number with a unit.</dd>
- <dt>{{cssxref("&lt;number&gt;")}}</dt>
- <dd>The size of the <code>border-image</code> outset as a multiple of the element's corresponding {{cssxref("border-width")}}s. For example, if an element has <code>border-width: 1em 2px 0 1.5rem</code>, and <code>border-image-outset: 2</code>, the final <code>border-image-outset</code> would be calculated as <code>2em 4px 0 3rem</code>.</dd>
-</dl>
+- {{cssxref("&lt;length&gt;")}}
+  - : The size of the `border-image` outset as a dimension — a number with a unit.
+- {{cssxref("&lt;number&gt;")}}
+  - : The size of the `border-image` outset as a multiple of the element's corresponding {{cssxref("border-width")}}s. For example, if an element has `border-width: 1em 2px 0 1.5rem`, and `border-image-outset: 2`, the final `border-image-outset` would be calculated as `2em 4px 0 3rem`.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Outsetting_a_border_image">Outsetting a border image</h3>
+### Outsetting a border image
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div id="outset"&gt;This element has an outset border image!&lt;/div&gt;
-</pre>
+```html
+<div id="outset">This element has an outset border image!</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">#outset {
+```css
+#outset {
   width: 10rem;
   background: #cef;
   border: 1.4rem solid;
   border-image: radial-gradient(#ff2, #55f) 40;
   border-image-outset: 1.5;  /* 1.5 × 1.4rem = 2.1rem */
   margin: 2.1rem;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Outsetting_a_border_image", "auto", 200)}}</p>
+{{EmbedLiveSample("Outsetting_a_border_image", "auto", 200)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders">Backgrounds and borders</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders">Learn CSS: Backgrounds and borders</a></li>
-</ul>
+- [Backgrounds and borders](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders)
+- [Learn CSS: Backgrounds and borders](/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)

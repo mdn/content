@@ -10,18 +10,19 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.mask-image
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>mask-image</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets the image that is used as mask layer for an element.
-By default this means the alpha channel of the mask image will be multiplied with the alpha channel of the element. This can be controlled with the {{cssxref("mask-mode")}} property.</p>
+The **`mask-image`** [CSS](/en-US/docs/Web/CSS) property sets the image that is used as mask layer for an element.
+By default this means the alpha channel of the mask image will be multiplied with the alpha channel of the element. This can be controlled with the {{cssxref("mask-mode")}} property.
 
-<pre class="brush:css no-line-numbers">/* Keyword value */
+```css
+/* Keyword value */
 mask-image: none;
 
-/* &lt;mask-source&gt; value */
+/* <mask-source> value */
 mask-image: url(masks.svg#mask1);
 
-/* &lt;image&gt; values */
+/* <image> values */
 mask-image: linear-gradient(rgba(0, 0, 0, 1.0), transparent);
 mask-image: image(url(mask.png), skyblue);
 
@@ -33,46 +34,42 @@ mask-image: inherit;
 mask-image: initial;
 mask-image: revert;
 mask-image: unset;
-</pre>
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>none</code></dt>
- <dd>This keyword is interpreted as an opaque white image layer.</dd>
- <dt><code>&lt;mask-source&gt;</code></dt>
- <dd>A {{cssxref("url()","url()")}} reference to a {{SVGElement("mask")}} or to a CSS image.</dd>
- <dt>{{cssxref("&lt;image&gt;")}}</dt>
- <dd>An image value used as mask image layer.</dd>
-</dl>
+- `none`
+  - : This keyword is interpreted as an opaque white image layer.
+- `<mask-source>`
+  - : A {{cssxref("url()","url()")}} reference to a {{SVGElement("mask")}} or to a CSS image.
+- {{cssxref("&lt;image&gt;")}}
+  - : An image value used as mask image layer.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_a_mask_image_with_a_URL">Setting a mask image with a URL</h3>
+### Setting a mask image with a URL
 
-<p>{{EmbedGHLiveSample("css-examples/masking/mask-image.html", '100%', 560)}}</p>
+{{EmbedGHLiveSample("css-examples/masking/mask-image.html", '100%', 560)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="https://css-tricks.com/clipping-masking-css/">Clipping and Masking in CSS</a></li>
-  <li><a href="https://web.dev/css-masking/">Apply effects to images with CSS's mask-image property</a></li>
-</ul>
+- [Clipping and Masking in CSS](https://css-tricks.com/clipping-masking-css/)
+- [Apply effects to images with CSS's mask-image property](https://web.dev/css-masking/)

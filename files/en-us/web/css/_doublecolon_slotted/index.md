@@ -1,6 +1,6 @@
 ---
 title: '::slotted()'
-slug: 'Web/CSS/::slotted'
+slug: Web/CSS/::slotted
 tags:
   - '::slotted'
   - CSS
@@ -11,49 +11,53 @@ tags:
   - Web
 browser-compat: css.selectors.slotted
 ---
-<div>{{ CSSRef }}</div>
+{{ CSSRef }}
 
-<p>The <strong><code>::slotted()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-element</a> represents any element that has been placed into a slot inside an HTML template (see <a href="/en-US/docs/Web/Web_Components/Using_templates_and_slots">Using templates and slots</a> for more information).</p>
+The **`::slotted()`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents any element that has been placed into a slot inside an HTML template (see [Using templates and slots](/en-US/docs/Web/Web_Components/Using_templates_and_slots) for more information).
 
-<p>This only works when used inside CSS placed within a <a href="/en-US/docs/Web/Web_Components/Using_shadow_DOM">shadow DOM</a>. Note also that this selector won't select a text node placed into a slot; it only targets actual elements.</p>
+This only works when used inside CSS placed within a [shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM). Note also that this selector won't select a text node placed into a slot; it only targets actual elements.
 
-<pre class="brush: css no-line-numbers">/* Selects any element placed inside a slot */
+```css
+/* Selects any element placed inside a slot */
 ::slotted(*) {
   font-weight: bold;
 }
 
-/* Selects any &lt;span&gt; placed inside a slot */
+/* Selects any <span> placed inside a slot */
 ::slotted(span) {
   font-weight: bold;
 }
-</pre>
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Highlighting_slotted_elements">Highlighting slotted elements</h3>
+### Highlighting slotted elements
 
-<p>The following snippets are taken from our <a href="https://github.com/mdn/web-components-examples/tree/master/slotted-pseudo-element">slotted-pseudo-element</a> demo (<a href="https://mdn.github.io/web-components-examples/slotted-pseudo-element/">see it live also</a>).</p>
+The following snippets are taken from our [slotted-pseudo-element](https://github.com/mdn/web-components-examples/tree/master/slotted-pseudo-element) demo ([see it live also](https://mdn.github.io/web-components-examples/slotted-pseudo-element/)).
 
-<p>In this demo we use a simple template with three slots:</p>
+In this demo we use a simple template with three slots:
 
-<pre class="brush: html">&lt;template id="person-template"&gt;
-  &lt;div&gt;
-    &lt;h2&gt;Personal ID Card&lt;/h2&gt;
-    &lt;slot name="person-name"&gt;NAME MISSING&lt;/slot&gt;
-    &lt;ul&gt;
-      &lt;li&gt;&lt;slot name="person-age"&gt;AGE MISSING&lt;/slot&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;slot name="person-occupation"&gt;OCCUPATION MISSING&lt;/slot&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/div&gt;
-&lt;/template&gt;</pre>
+```html
+<template id="person-template">
+  <div>
+    <h2>Personal ID Card</h2>
+    <slot name="person-name">NAME MISSING</slot>
+    <ul>
+      <li><slot name="person-age">AGE MISSING</slot></li>
+      <li><slot name="person-occupation">OCCUPATION MISSING</slot></li>
+    </ul>
+  </div>
+</template>
+```
 
-<p>A custom element — <code>&lt;person-details&gt;</code> — is defined like so:</p>
+A custom element — `<person-details>` — is defined like so:
 
-<pre class="brush: js">customElements.define('person-details',
+```js
+customElements.define('person-details',
   class extends HTMLElement {
     constructor() {
       super();
@@ -72,28 +76,29 @@ browser-compat: css.selectors.slotted
       shadowRoot.appendChild(style);
       shadowRoot.appendChild(templateContent.cloneNode(true));
   }
-})</pre>
+})
+```
 
-<p>You'll see that when filling the <code>style</code> element with content, we select all slotted elements (<code>::slotted(*)</code>) and give them a different font and color. This allows them to stand out better next to the slots that haven't been successfully filled.</p>
+You'll see that when filling the `style` element with content, we select all slotted elements (`::slotted(*)`) and give them a different font and color. This allows them to stand out better next to the slots that haven't been successfully filled.
 
-<p>The element looks like this when inserted into the page:</p>
+The element looks like this when inserted into the page:
 
-<pre class="brush: html">&lt;person-details&gt;
-  &lt;p slot="person-name"&gt;Dr. Shazaam&lt;/p&gt;
-  &lt;span slot="person-age"&gt;Immortal&lt;/span&gt;
-  &lt;span slot="person-occupation"&gt;Superhero&lt;/span&gt;
-&lt;/person-details&gt;</pre>
+```html
+<person-details>
+  <p slot="person-name">Dr. Shazaam</p>
+  <span slot="person-age">Immortal</span>
+  <span slot="person-occupation">Superhero</span>
+</person-details>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/Web_Components">Web components</a></li>
-</ul>
+- [Web components](/en-US/docs/Web/Web_Components)

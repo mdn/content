@@ -12,14 +12,15 @@ tags:
   - NeedsL
   - Reference
   - Web
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.initial-letter-align
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p>The <strong><code>initial-letter-align</code></strong> CSS property specifies the alignment of initial letters within a paragraph.</p>
+The **`initial-letter-align`** CSS property specifies the alignment of initial letters within a paragraph.
 
-<pre class="brush: css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 initial-letter-align: auto;
 initial-letter-align: alphabetic;
 initial-letter-align: hanging;
@@ -30,48 +31,48 @@ initial-letter-align: inherit;
 initial-letter-align: initial;
 initial-letter-align: revert;
 initial-letter-align: unset;
-</pre>
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>One of the keyword values listed below.</p>
+One of the keyword values listed below.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>The user agent selects the value which corresponds to the language of the text. Western languages would default to alphabetic, CJK languages to ideographic, and some Indic languages to hanging.</dd>
- <dt><code>alphabetic</code></dt>
- <dd>As described above, the cap height of the initial letter aligns with the cap height of the first line of text. The baseline of the initial letter aligns with the baseline of the Nth text baseline.</dd>
- <dt><code>hanging</code></dt>
- <dd>The hanging baseline of the initial letter aligns with the hanging baseline of the first line of text.</dd>
- <dt><code>ideographic</code></dt>
- <dd>The initial letter is centered in the N-line area.</dd>
-</dl>
+- `auto`
+  - : The user agent selects the value which corresponds to the language of the text. Western languages would default to alphabetic, CJK languages to ideographic, and some Indic languages to hanging.
+- `alphabetic`
+  - : As described above, the cap height of the initial letter aligns with the cap height of the first line of text. The baseline of the initial letter aligns with the baseline of the Nth text baseline.
+- `hanging`
+  - : The hanging baseline of the initial letter aligns with the hanging baseline of the first line of text.
+- `ideographic`
+  - : The initial letter is centered in the N-line area.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Aligning_initial_letter">Aligning initial letter</h3>
+### Aligning initial letter
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p class="auto "&gt;Initial letter - auto&lt;/p&gt;
-&lt;p class="alphabetic"&gt;Initial letter - alphabetic&lt;/p&gt;
-&lt;p class="hanging"&gt;Initial letter - hanging&lt;/p&gt;
-&lt;p class="ideographic"&gt;Initial letter - ideographic&lt;/p&gt;
-</pre>
+```html
+<p class="auto ">Initial letter - auto</p>
+<p class="alphabetic">Initial letter - alphabetic</p>
+<p class="hanging">Initial letter - hanging</p>
+<p class="ideographic">Initial letter - ideographic</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.auto {
+```css
+.auto {
   -webkit-initial-letter-align: auto;
   initial-letter-align: auto;
 }
@@ -89,21 +90,20 @@ initial-letter-align: unset;
 .ideographic {
   -webkit-initial-letter-align: ideographic;
   initial-letter-align: ideographic;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Aligning_initial_letter')}}</p>
+{{EmbedLiveSample('Aligning_initial_letter')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<ul>
-  <li>{{cssxref("initial-letter")}}</li>
-  <li><a href="https://www.oddbird.net/2017/01/03/initial-letter/">Drop caps in CSS</a></li>
-</ul>
+- {{cssxref("initial-letter")}}
+- [Drop caps in CSS](https://www.oddbird.net/2017/01/03/initial-letter/)

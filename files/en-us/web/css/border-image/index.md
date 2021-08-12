@@ -9,31 +9,28 @@ tags:
   - recipe:css-shorthand-property
 browser-compat: css.properties.border-image
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>border-image</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property draws an image around a given element. It replaces the element's regular <a href="/en-US/docs/Web/CSS/border">border</a>.</p>
+The **`border-image`** [CSS](/en-US/docs/Web/CSS) property draws an image around a given element. It replaces the element's regular [border](/en-US/docs/Web/CSS/border).
 
-<div>{{EmbedInteractiveExample("pages/css/border-image.html")}}</div>
+{{EmbedInteractiveExample("pages/css/border-image.html")}}
 
-<div class="note">
-<p><strong>Note:</strong> You should specify a separate {{cssxref("border-style")}} in case the border image fails to load. Indeed, this is required according to the specification, although not all browsers implement this requirement.</p>
-</div>
+> **Note:** You should specify a separate {{cssxref("border-style")}} in case the border image fails to load. Indeed, this is required according to the specification, although not all browsers implement this requirement.
 
-<h2 id="Constituent_properties">Constituent properties</h2>
+## Constituent properties
 
-<p>This property is a shorthand for the following CSS properties:</p>
+This property is a shorthand for the following CSS properties:
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/border-image-outset"><code>border-image-outset</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/border-image-repeat"><code>border-image-repeat</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/border-image-slice"><code>border-image-slice</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/border-image-source"><code>border-image-source</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/border-image-width"><code>border-image-width</code></a></li>
-</ul>
+- [`border-image-outset`](/en-US/docs/Web/CSS/border-image-outset)
+- [`border-image-repeat`](/en-US/docs/Web/CSS/border-image-repeat)
+- [`border-image-slice`](/en-US/docs/Web/CSS/border-image-slice)
+- [`border-image-source`](/en-US/docs/Web/CSS/border-image-source)
+- [`border-image-width`](/en-US/docs/Web/CSS/border-image-width)
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css no-line-numbers">/* source | slice */
+```css
+/* source | slice */
 border-image: linear-gradient(red, blue) 27;
 
 /* source | slice | repeat */
@@ -49,64 +46,61 @@ border-image: url("/images/border.png") 27 23 / 50px 30px / 1rem round space;
 border-image: inherit;
 border-image: initial;
 border-image: revert;
-border-image: unset;</pre>
+border-image: unset;
+```
 
-<p>The <code>border-image</code> property may be specified with anywhere from one to five of the values listed below.</p>
+The `border-image` property may be specified with anywhere from one to five of the values listed below.
 
-<div class="note">
-<p><strong>Note:</strong> If the <a href="/en-US/docs/Web/CSS/computed_value">computed value</a> of {{cssxref("border-image-source")}} is <code>none</code>, or if the image cannot be displayed, the {{cssxref("border-style")}} will be displayed instead.</p>
-</div>
+> **Note:** If the [computed value](/en-US/docs/Web/CSS/computed_value) of {{cssxref("border-image-source")}} is `none`, or if the image cannot be displayed, the {{cssxref("border-style")}} will be displayed instead.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>&lt;'border-image-source'&gt;</code></dt>
- <dd>The source image. See {{cssxref("border-image-source")}}.</dd>
- <dt><code>&lt;'border-image-slice'&gt;</code></dt>
- <dd>The dimensions for slicing the source image into regions. Up to four values may be specified. See {{cssxref("border-image-slice")}}.</dd>
- <dt><code>&lt;'border-image-width'&gt;</code></dt>
- <dd>The width of the border image. Up to four values may be specified. See {{cssxref("border-image-width")}}.</dd>
- <dt><code>&lt;'border-image-outset'&gt;</code></dt>
- <dd>The distance of the border image from the element's outside edge. Up to four values may be specified. See {{cssxref("border-image-outset")}}.</dd>
- <dt><code>&lt;'border-image-repeat'&gt;</code></dt>
- <dd>Defines how the edge regions of the source image are adjusted to fit the dimensions of the border image. Up to two values may be specified. See {{cssxref("border-image-repeat")}}.</dd>
-</dl>
+- `<'border-image-source'>`
+  - : The source image. See {{cssxref("border-image-source")}}.
+- `<'border-image-slice'>`
+  - : The dimensions for slicing the source image into regions. Up to four values may be specified. See {{cssxref("border-image-slice")}}.
+- `<'border-image-width'>`
+  - : The width of the border image. Up to four values may be specified. See {{cssxref("border-image-width")}}.
+- `<'border-image-outset'>`
+  - : The distance of the border image from the element's outside edge. Up to four values may be specified. See {{cssxref("border-image-outset")}}.
+- `<'border-image-repeat'>`
+  - : Defines how the edge regions of the source image are adjusted to fit the dimensions of the border image. Up to two values may be specified. See {{cssxref("border-image-repeat")}}.
 
-<h2 id="Accessibility_concerns">Accessibility concerns</h2>
+## Accessibility concerns
 
-<p>Assistive technology cannot parse border images. If the image contains information critical to understanding the page's overall purpose, it is better to describe it semantically in the document.</p>
+Assistive technology cannot parse border images. If the image contains information critical to understanding the page's overall purpose, it is better to describe it semantically in the document.
 
-<ul>
- <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_%e2%80%94_providing_text_alternatives_for_non-text_content">MDN Understanding WCAG, Guideline 1.1 explanations</a></li>
- <li><a href="https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html" rel="noopener">Understanding Success Criterion 1.1.1  | Understanding WCAG 2.0</a></li>
-</ul>
+- [MDN Understanding WCAG, Guideline 1.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_%e2%80%94_providing_text_alternatives_for_non-text_content)
+- [Understanding Success Criterion 1.1.1  | Understanding WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Bitmap">Bitmap</h3>
+### Bitmap
 
-<p>In this example, we will apply a diamond pattern to an element's borders. The source for the border image is a ".png" file of 81 by 81 pixels, with three diamonds going vertically and horizontally:</p>
+In this example, we will apply a diamond pattern to an element's borders. The source for the border image is a ".png" file of 81 by 81 pixels, with three diamonds going vertically and horizontally:
 
-<p><img alt="an example borderimage" src="border.png"></p>
+![an example borderimage](border.png)
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div id="bitmap"&gt;This element is surrounded by a bitmap-based border image!&lt;/div&gt;
-</pre>
+```html
+<div id="bitmap">This element is surrounded by a bitmap-based border image!</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<p>To match the size of a single diamond, we will use a value of 81 divided by 3, or <code>27</code>, for slicing the image into corner and edge regions. To center the border image on the edge of the element's background, we will make the outset values equal to half of the width values. Finally, a repeat value of <code>round</code> will make the border slices fit evenly, i.e., without clipping or gaps.</p>
+To match the size of a single diamond, we will use a value of 81 divided by 3, or `27`, for slicing the image into corner and edge regions. To center the border image on the edge of the element's background, we will make the outset values equal to half of the width values. Finally, a repeat value of `round` will make the border slices fit evenly, i.e., without clipping or gaps.
 
-<pre class="brush:css">#bitmap {
+```css
+#bitmap {
   width: 200px;
   background-color: #ffa;
   border: 36px solid orange;
@@ -120,48 +114,48 @@ border-image: unset;</pre>
       18px 14px 9px 4px       /* outset */
       round;                  /* repeat */
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Bitmap', '100%', 200)}}</p>
+{{EmbedLiveSample('Bitmap', '100%', 200)}}
 
-<h3 id="Gradient">Gradient</h3>
+### Gradient
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div id="gradient"&gt;This element is surrounded by a gradient-based border image!&lt;/div&gt;
-</pre>
+```html
+<div id="gradient">This element is surrounded by a gradient-based border image!</div>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush:css">#gradient {
+```css
+#gradient {
   width: 200px;
   border: 30px solid;
   border-image: repeating-linear-gradient(45deg, #f33, #3bf, #f33 30px) 60;
   padding: 20px;
 }
-</pre>
+```
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Gradient')}}</p>
+{{EmbedLiveSample('Gradient')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("border")}}</li>
- <li>{{cssxref("outline")}}</li>
- <li>{{cssxref("box-shadow")}}</li>
- <li>{{cssxref("background-image")}}</li>
- <li>{{cssxref("url()", "url()")}} function</li>
- <li>Gradient functions: {{CSSxRef("conic-gradient()")}}, {{CSSxRef("linear-gradient()")}}, {{CSSxRef("repeating-linear-gradient()")}}, {{CSSxRef("radial-gradient()")}}, {{CSSxRef("repeating-radial-gradient()")}}</li>
-</ul>
+- {{cssxref("border")}}
+- {{cssxref("outline")}}
+- {{cssxref("box-shadow")}}
+- {{cssxref("background-image")}}
+- {{cssxref("url()", "url()")}} function
+- Gradient functions: {{CSSxRef("conic-gradient()")}}, {{CSSxRef("linear-gradient()")}}, {{CSSxRef("repeating-linear-gradient()")}}, {{CSSxRef("radial-gradient()")}}, {{CSSxRef("repeating-radial-gradient()")}}

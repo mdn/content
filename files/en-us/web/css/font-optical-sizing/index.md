@@ -7,19 +7,19 @@ tags:
   - CSS Property
   - NeedsExample
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.font-optical-sizing
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>font-optical-sizing</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets whether text rendering is optimized for viewing at different sizes.</p>
+The **`font-optical-sizing`** [CSS](/en-US/docs/Web/CSS) property sets whether text rendering is optimized for viewing at different sizes.
 
-<div>{{EmbedInteractiveExample("pages/css/font-optical-sizing.html")}}</div>
+{{EmbedInteractiveExample("pages/css/font-optical-sizing.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush:css no-line-numbers">/* keyword values */
+```css
+/* keyword values */
 font-optical-sizing: none;
 font-optical-sizing: auto; /* default */
 
@@ -28,42 +28,43 @@ font-optical-sizing: inherit;
 font-optical-sizing: initial;
 font-optical-sizing: revert;
 font-optical-sizing: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt>none</dt>
- <dd>The browser will not modify the shape of glyphs for optimal viewing.</dd>
- <dt>auto</dt>
- <dd>The browser will modify the shape of glyphs for optimal viewing.</dd>
-</dl>
+- none
+  - : The browser will not modify the shape of glyphs for optimal viewing.
+- auto
+  - : The browser will modify the shape of glyphs for optimal viewing.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Optical sizing is enabled by default for fonts that have an optical size variation axis. The optical size variation axis is represented by <code>opsz</code> in {{cssxref("font-variation-settings")}}.</p>
+Optical sizing is enabled by default for fonts that have an optical size variation axis. The optical size variation axis is represented by `opsz` in {{cssxref("font-variation-settings")}}.
 
-<p>When optical sizing is used, small text sizes are often rendered with thicker strokes and larger serifs, whereas larger text is often rendered more delicately with more contrast between thicker and thinner strokes.</p>
+When optical sizing is used, small text sizes are often rendered with thicker strokes and larger serifs, whereas larger text is often rendered more delicately with more contrast between thicker and thinner strokes.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Disabling_optical_sizing">Disabling optical sizing</h3>
+### Disabling optical sizing
 
-<pre class="brush: html">&lt;p class="optical-sizing"&gt;This paragraph is optically sized.
- This is the default across browsers.&lt;/p&gt;
+```html
+<p class="optical-sizing">This paragraph is optically sized.
+ This is the default across browsers.</p>
 
-&lt;p class="no-optical-sizing"&gt;This paragraph is not optically sized.
- You should see a difference in supporting browsers.&lt;/p&gt;</pre>
+<p class="no-optical-sizing">This paragraph is not optically sized.
+ You should see a difference in supporting browsers.</p>
+```
 
-<pre class="brush: css">@font-face {
+```css
+@font-face {
     src: url('AmstelvarAlpha-VF.ttf');
     font-family:'Amstelvar';
     font-style: normal;
@@ -76,24 +77,21 @@ p {
 
 .no-optical-sizing {
   font-optical-sizing: none;
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Note:</strong> The font referenced above — which includes optical sizing and is freely-licensed — is good for testing. You can <a href="https://github.com/TypeNetwork/Amstelvar/releases">download it on GitHub</a>.</p>
-</div>
+> **Note:** The font referenced above — which includes optical sizing and is freely-licensed — is good for testing. You can [download it on GitHub](https://github.com/TypeNetwork/Amstelvar/releases).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("font-size")}}</li>
- <li>{{cssxref("font-size-adjust")}}</li>
- <li><a href="/en-US/docs/Learn/CSS/Styling_text/Fundamentals">Fundamental text and font styling</a></li>
-</ul>
+- {{cssxref("font-size")}}
+- {{cssxref("font-size-adjust")}}
+- [Fundamental text and font styling](/en-US/docs/Learn/CSS/Styling_text/Fundamentals)

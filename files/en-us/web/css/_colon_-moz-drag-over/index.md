@@ -1,9 +1,9 @@
 ---
 title: ':-moz-drag-over'
-slug: 'Web/CSS/:-moz-drag-over'
+slug: Web/CSS/:-moz-drag-over
 tags:
   - CSS
-  - 'CSS:Mozilla Extensions'
+  - CSS:Mozilla Extensions
   - Firefox
   - Mozilla
   - NeedsCompatTable
@@ -13,48 +13,49 @@ tags:
   - Selector
 browser-compat: css.selectors:-moz-drag-over
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<p>The <strong><code>:-moz-drag-over</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> is a <a href="/en-US/docs/Web/CSS/Mozilla_Extensions">Mozilla extension</a> that matches an element when a {{event("dragover")}} event is called on it.</p>
+The **`:-moz-drag-over`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) is a [Mozilla extension](/en-US/docs/Web/CSS/Mozilla_Extensions) that matches an element when a {{event("dragover")}} event is called on it.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">:-moz-drag-over
-</pre>
+```css
+:-moz-drag-over
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush:html">&lt;table border="1"&gt;
-  &lt;tr&gt;
-    &lt;td width="100px" height="100px"&gt;Drag Over&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;
-</pre>
+```html
+<table border="1">
+  <tr>
+    <td width="100px" height="100px">Drag Over</td>
+  </tr>
+</table>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush:css">td:-moz-drag-over {
+```css
+td:-moz-drag-over {
   color: red;
 }
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Examples")}}</p>
+{{EmbedLiveSample("Examples")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any standard.</p>
+Not part of any standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/Mozilla_Extensions">Mozilla CSS extensions</a></li>
- <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API">HTML drag and drop</a></li>
-</ul>
+- [Mozilla CSS extensions](/en-US/docs/Web/CSS/Mozilla_Extensions)
+- [HTML drag and drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)

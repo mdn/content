@@ -10,39 +10,40 @@ tags:
   - ascent-override
 browser-compat: css.at-rules.font-face.ascent-override
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<p>The <strong><code>ascent-override</code></strong> CSS descriptor defines the ascent metric for the font. The ascent metric is the height above the baseline that CSS uses to lay out line boxes in an inline formatting context.</p>
+The **`ascent-override`** CSS descriptor defines the ascent metric for the font. The ascent metric is the height above the baseline that CSS uses to lay out line boxes in an inline formatting context.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">ascent-override: normal;
-ascent-override: 90%;</pre>
+```css
+ascent-override: normal;
+ascent-override: 90%;
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>normal</code></dt>
- <dd>The default value. When used the metric value is obtained from the font file.</dd>
- <dt><code>&lt;percentage&gt;</code></dt>
- <dd>A {{cssxref("&lt;percentage&gt;")}} value.</dd>
-</dl>
+- `normal`
+  - : The default value. When used the metric value is obtained from the font file.
+- `<percentage>`
+  - : A {{cssxref("&lt;percentage&gt;")}} value.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Overriding_metrics_of_a_fallback_font">Overriding metrics of a fallback font</h3>
+### Overriding metrics of a fallback font
 
-<p>The <code>ascent-override</code> property can help when overriding the metrics of a fallback font to better match those of a primary web font.</p>
+The `ascent-override` property can help when overriding the metrics of a fallback font to better match those of a primary web font.
 
-<pre class="brush: css">@font-face {
+```css
+@font-face {
   font-family: web-font;
   src: url("https://example.com/font.woff");
 }
@@ -51,30 +52,29 @@ ascent-override: 90%;</pre>
   font-family: local-font;
   src: local(Local Font);
   ascent-override: 125%;
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("@font-face/descent-override", "descent-override")}}</li>
- <li>{{cssxref("@font-face/font-display", "font-display")}}</li>
- <li>{{cssxref("@font-face/font-family", "font-family")}}</li>
- <li>{{cssxref("@font-face/font-weight", "font-weight")}}</li>
- <li>{{cssxref("@font-face/font-style", "font-style")}}</li>
- <li>{{cssxref("@font-face/font-stretch", "font-stretch")}}</li>
- <li>{{cssxref("@font-face/font-variant", "font-variant")}}</li>
- <li>{{cssxref("font-feature-settings", "font-feature-settings")}}</li>
- <li>{{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}</li>
- <li>{{cssxref("@font-face/line-gap-override", "line-gap-override")}}</li>
- <li>{{cssxref("@font-face/src", "src")}}</li>
- <li>{{cssxref("@font-face/size-adjust", "size-adjust")}}</li>
- <li>{{cssxref("@font-face/unicode-range", "unicode-range descriptor")}}</li>
-</ul>
+- {{cssxref("@font-face/descent-override", "descent-override")}}
+- {{cssxref("@font-face/font-display", "font-display")}}
+- {{cssxref("@font-face/font-family", "font-family")}}
+- {{cssxref("@font-face/font-weight", "font-weight")}}
+- {{cssxref("@font-face/font-style", "font-style")}}
+- {{cssxref("@font-face/font-stretch", "font-stretch")}}
+- {{cssxref("@font-face/font-variant", "font-variant")}}
+- {{cssxref("font-feature-settings", "font-feature-settings")}}
+- {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}
+- {{cssxref("@font-face/line-gap-override", "line-gap-override")}}
+- {{cssxref("@font-face/src", "src")}}
+- {{cssxref("@font-face/size-adjust", "size-adjust")}}
+- {{cssxref("@font-face/unicode-range", "unicode-range descriptor")}}

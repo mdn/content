@@ -8,72 +8,84 @@ tags:
   - Selectors
 browser-compat: css.selectors.list
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The CSS <strong>selector list</strong> (<code>,</code>) selects all the matching nodes.</p>
+The CSS **selector list** (`,`) selects all the matching nodes.
 
-<pre class="brush: css no-line-numbers">/* Selects all matching elements */
+```css
+/* Selects all matching elements */
 span,
 div {
   border: red 2px solid;
-}</pre>
+}
+```
 
-<p>To reduce the size of style sheets, one can group selectors in comma-separated lists.</p>
+To reduce the size of style sheets, one can group selectors in comma-separated lists.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">element, element, element { <em>style properties</em> }</pre>
+```css
+element, element, element { style properties }
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Single_Line_Grouping">Single Line Grouping</h3>
+### Single Line Grouping
 
-<p>Grouping selectors in a single line using a comma-separated lists.</p>
+Grouping selectors in a single line using a comma-separated lists.
 
-<pre class="brush: css">h1, h2, h3, h4, h5, h6 { font-family: helvetica; }
-</pre>
+```css
+h1, h2, h3, h4, h5, h6 { font-family: helvetica; }
+```
 
-<h3 id="Multi_Line_Grouping">Multi Line Grouping</h3>
+### Multi Line Grouping
 
-<p>Grouping selectors in a multiple lines using a comma-separated lists.</p>
+Grouping selectors in a multiple lines using a comma-separated lists.
 
-<pre class="brush: css">#main,
+```css
+#main,
 .content,
 article {
   font-size: 1.1em;
 }
-</pre>
+```
 
-<h3 id="Selector_list_invalidation">Selector list invalidation</h3>
+### Selector list invalidation
 
-<p>A downside to using selector lists is that the following aren't equivalent:</p>
+A downside to using selector lists is that the following aren't equivalent:
 
-<pre class="brush: css">h1 { font-family: sans-serif }
+```css
+h1 { font-family: sans-serif }
 h2:maybe-unsupported { font-family: sans-serif }
-h3 { font-family: sans-serif }</pre>
+h3 { font-family: sans-serif }
+```
 
-<pre class="brush: css">h1, h2:maybe-unsupported, h3 { font-family: sans-serif }</pre>
+```css
+h1, h2:maybe-unsupported, h3 { font-family: sans-serif }
+```
 
-<p>This is because a single unsupported selector in a selector list invalidates the whole rule.</p>
+This is because a single unsupported selector in a selector list invalidates the whole rule.
 
-<p>A way to remedy this us to use the {{CSSxRef(":is", ":is()")}} or {{CSSxRef(":where", ":where()")}} selectors, which accept a forgiving selector list. This will ignore invalid selectors in the list but accept those which are valid.</p>
+A way to remedy this us to use the {{CSSxRef(":is", ":is()")}} or {{CSSxRef(":where", ":where()")}} selectors, which accept a forgiving selector list. This will ignore invalid selectors in the list but accept those which are valid.
 
-<pre class="brush: css">h1 { font-family: sans-serif }
+```css
+h1 { font-family: sans-serif }
 h2:maybe-unsupported { font-family: sans-serif }
-h3 { font-family: sans-serif }</pre>
+h3 { font-family: sans-serif }
+```
 
-<pre class="brush: css">:is(h1, h2:maybe-unsupported, h3) { font-family: sans-serif }</pre>
+```css
+:is(h1, h2:maybe-unsupported, h3) { font-family: sans-serif }
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The {{CSSxRef(":is", ":is()")}} {{Experimental_Inline}} and {{CSSxRef(":where", ":where()")}} {{Experimental_Inline}} pseudo-classes, which accept a forgiving selector list.</li>
-</ul>
+- The {{CSSxRef(":is", ":is()")}} {{Experimental_Inline}} and {{CSSxRef(":where", ":where()")}} {{Experimental_Inline}} pseudo-classes, which accept a forgiving selector list.

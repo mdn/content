@@ -6,18 +6,19 @@ tags:
   - CSS Multi-column Layout
   - CSS Property
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.column-rule-style
 ---
-<div>{{ CSSRef}}</div>
+{{ CSSRef}}
 
-<p>The <strong><code>column-rule-style</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets the style of the line drawn between columns in a multi-column layout.</p>
+The **`column-rule-style`** [CSS](/en-US/docs/Web/CSS) property sets the style of the line drawn between columns in a multi-column layout.
 
-<div>{{EmbedInteractiveExample("pages/css/column-rule-style.html")}}</div>
+{{EmbedInteractiveExample("pages/css/column-rule-style.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* &lt;'border-style'&gt; values */
+```css
+/* <'border-style'> values */
 column-rule-style: none;
 column-rule-style: hidden;
 column-rule-style: dotted;
@@ -34,60 +35,60 @@ column-rule-style: inherit;
 column-rule-style: initial;
 column-rule-style: revert;
 column-rule-style: unset;
-</pre>
+```
 
-<p>The <code>column-rule-style</code> property is specified as a single <code>&lt;'border-style'&gt;</code> value.</p>
+The `column-rule-style` property is specified as a single `<'border-style'>` value.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
-	<dt><code>&lt;'border-style'&gt;</code></dt>
-	<dd>Is a keyword defined by {{ cssxref("border-style") }} describing the style of the rule. The styling must be interpreted as in the collapsing border model.</dd>
-</dl>
+- `<'border-style'>`
+  - : Is a keyword defined by {{ cssxref("border-style") }} describing the style of the rule. The styling must be interpreted as in the collapsing border model.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_a_dashed_column_rule">Setting a dashed column rule</h3>
+### Setting a dashed column rule
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;This is a bunch of text split into three columns.
+```html
+<p>This is a bunch of text split into three columns.
    The `column-rule-style` property is used to change
    the style of the line that is drawn between columns.
-   Don't you think that's wonderful?&lt;/p&gt;</pre>
+   Don't you think that's wonderful?</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   column-count: 3;
   column-rule-style: dashed;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Setting_a_dashed_column_rule') }}</p>
+{{ EmbedLiveSample('Setting_a_dashed_column_rule') }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li><a href="/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout">Multiple-column Layout</a></li>
-	<li>{{CSSXref("column-rule")}}</li>
-	<li>{{CSSXref("column-rule-width")}}</li>
-	<li>{{CSSXref("column-rule-color")}}</li>
-</ul>
+- [Multiple-column Layout](/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
+- {{CSSXref("column-rule")}}
+- {{CSSXref("column-rule-width")}}
+- {{CSSXref("column-rule-color")}}

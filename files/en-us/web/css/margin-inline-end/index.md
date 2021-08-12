@@ -10,18 +10,19 @@ tags:
   - Reference
   - margin-inline
   - margin-inline-end
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.margin-inline-end
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>margin-inline-end</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property defines the logical inline end margin of an element, which maps to a physical margin depending on the element's writing mode, directionality, and text orientation. In other words, it corresponds to the {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}} or {{cssxref("margin-left")}} property depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.</p>
+The **`margin-inline-end`** [CSS](/en-US/docs/Web/CSS) property defines the logical inline end margin of an element, which maps to a physical margin depending on the element's writing mode, directionality, and text orientation. In other words, it corresponds to the {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}} or {{cssxref("margin-left")}} property depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/margin-inline-end.html")}}</div>
+{{EmbedInteractiveExample("pages/css/margin-inline-end.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* &lt;length&gt; values */
+```css
+/* <length> values */
 margin-inline-end: 10px;   /* An absolute length */
 margin-inline-end: 1em;    /* relative to the text size */
 margin-inline-end: 5%;     /* relative to the nearest block container's width */
@@ -34,36 +35,38 @@ margin-inline-end: inherit;
 margin-inline-end: initial;
 margin-inline-end: revert;
 margin-inline-end: unset;
-</pre>
+```
 
-<p>It relates to {{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}}, and {{cssxref("margin-inline-start")}}, which define the other margins of the element.</p>
+It relates to {{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}}, and {{cssxref("margin-inline-start")}}, which define the other margins of the element.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<p>The <code>margin-inline-end</code> property takes the same values as the {{cssxref("margin-left")}} property.</p>
+The `margin-inline-end` property takes the same values as the {{cssxref("margin-left")}} property.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_inline_end_margin">Setting inline end margin</h3>
+### Setting inline end margin
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;p class="exampleText"&gt;Example text&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div>
+  <p class="exampleText">Example text</p>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   background-color: yellow;
   width: 120px;
   height: 120px;
@@ -73,24 +76,23 @@ margin-inline-end: unset;
   writing-mode: vertical-lr;
   margin-inline-end: 20px;
   background-color: #c8c800;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Setting_inline_end_margin", 140, 140)}}</p>
+{{EmbedLiveSample("Setting_inline_end_margin", 140, 140)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("margin-inline-start")}}</li>
- <li>The mapped physical properties: {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, and {{cssxref("margin-left")}}</li>
- <li>{{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}</li>
-</ul>
+- {{cssxref("margin-inline-start")}}
+- The mapped physical properties: {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, and {{cssxref("margin-left")}}
+- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

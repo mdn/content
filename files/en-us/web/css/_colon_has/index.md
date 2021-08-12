@@ -1,6 +1,6 @@
 ---
 title: ':has()'
-slug: 'Web/CSS/:has'
+slug: Web/CSS/:has
 tags:
   - ':has'
   - CSS
@@ -11,48 +11,47 @@ tags:
   - Selectors
 browser-compat: css.selectors.has
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>:has()</code></strong> CSS <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> represents an element if any of the selectors passed as parameters (relative to the {{cssxref(":scope")}} of the given element) match at least one element.</p>
+The **`:has()`** CSS [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents an element if any of the selectors passed as parameters (relative to the {{cssxref(":scope")}} of the given element) match at least one element.
 
-<pre class="brush: css no-line-numbers">/* Selects any &lt;a&gt;, as long as it has an &lt;img&gt; element directly inside it  */
+```css
+/* Selects any <a>, as long as it has an <img> element directly inside it  */
 /* Note that this is not supported in any browser yet */
-let test = document.querySelector('a:has(&gt; img)');</pre>
+let test = document.querySelector('a:has(> img)');
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
 {{CSSSyntax}}
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The <code>:has()</code> pseudo-class takes a relative selector list as an argument. In earlier revisions of the CSS Selectors Level 4 specification, <code>:has</code> had a limitation that it couldn't be used within stylesheets. Instead, it could only be used with functions like {{domxref("document.querySelector()")}}; this was due to performance concerns. <em>This limitation has been removed</em> because no browser implemented it that way. Instead, browsers currently only support the use of <code>:has()</code> within stylesheets.</p>
+The `:has()` pseudo-class takes a relative selector list as an argument. In earlier revisions of the CSS Selectors Level 4 specification, `:has` had a limitation that it couldn't be used within stylesheets. Instead, it could only be used with functions like {{domxref("document.querySelector()")}}; this was due to performance concerns. _This limitation has been removed_ because no browser implemented it that way. Instead, browsers currently only support the use of `:has()` within stylesheets.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Matching_&lt;a&gt;_elements_that_directly_contain_an_&lt;img&gt;">Matching &lt;a&gt; elements that directly contain an &lt;img&gt;</h3>
+### Matching \<a> elements that directly contain an \<img>
 
-<p>The following selector matches only {{HTMLElement("a")}} elements that directly contain an {{HTMLElement("img")}} child:</p>
+The following selector matches only {{HTMLElement("a")}} elements that directly contain an {{HTMLElement("img")}} child:
 
-<pre>a:has(&gt; img)
-</pre>
+    a:has(> img)
 
-<h3 id="Matching_&lt;h1&gt;_elements_that_are_followed_by_a_&lt;p&gt;">Matching &lt;h1&gt; elements that are followed by a &lt;p&gt;</h3>
+### Matching \<h1> elements that are followed by a \<p>
 
-<p>The following selector matches {{HTMLElement("h1")}} elements only if they have a {{htmlelement("p")}} element directly following them:</p>
+The following selector matches {{HTMLElement("h1")}} elements only if they have a {{htmlelement("p")}} element directly following them:
 
-<pre>h1:has(+ p)</pre>
+    h1:has(+ p)
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors">Locating DOM elements using selectors</a></li>
- <li><code><a href="/en-US/docs/Web/CSS/:scope">:scope</a></code></li>
-</ul>
+- [Locating DOM elements using selectors](/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
+- [`:scope`](/en-US/docs/Web/CSS/:scope)

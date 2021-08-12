@@ -9,72 +9,68 @@ tags:
   - overflow-wrap
   - word-break
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>This guide explains the various ways in which overflowing text can be managed in CSS.</p>
+This guide explains the various ways in which overflowing text can be managed in CSS.
 
-<h2>What is overflowing text?</h2>
+## What is overflowing text?
 
-<p>In CSS, if you have an unbreakable string such as a very long word, by default it will overflow any container that is too small for it in the inline direction. We can see this happening in the example below: the long word is extending past the boundary of the box it is contained in.</p>
+In CSS, if you have an unbreakable string such as a very long word, by default it will overflow any container that is too small for it in the inline direction. We can see this happening in the example below: the long word is extending past the boundary of the box it is contained in.
 
-<p>{{EmbedGHLiveSample("css-examples/css-text/inline-overflow.html", '100%', 420)}}</p>
+{{EmbedGHLiveSample("css-examples/css-text/inline-overflow.html", '100%', 420)}}
 
-<p>CSS will display overflow in this way, because to do something else could cause data loss. In CSS data loss means that some of your content vanishes. So the initial value of {{cssxref("overflow")}} is <code>visible</code>, and we can see the overflowing text. It is generally better to be able to see overflow, even if it is messy. If things were to disappear or be cropped as would happen if <code>overflow</code> was set to <code>hidden</code> you might not spot it when previewing your site. Messy overflow is at least easy to spot, and in the worst case, your visitor will be able to see and read the content even if it looks a bit strange.</p>
+CSS will display overflow in this way, because to do something else could cause data loss. In CSS data loss means that some of your content vanishes. So the initial value of {{cssxref("overflow")}} is `visible`, and we can see the overflowing text. It is generally better to be able to see overflow, even if it is messy. If things were to disappear or be cropped as would happen if `overflow` was set to `hidden` you might not spot it when previewing your site. Messy overflow is at least easy to spot, and in the worst case, your visitor will be able to see and read the content even if it looks a bit strange.
 
-<p>In this next example you can see what happens if <code>overflow</code> is set to <code>hidden</code>.</p>
+In this next example you can see what happens if `overflow` is set to `hidden`.
 
-<p>{{EmbedGHLiveSample("css-examples/css-text/inline-overflow-hidden.html", '100%', 420)}}</p>
+{{EmbedGHLiveSample("css-examples/css-text/inline-overflow-hidden.html", '100%', 420)}}
 
-<h2>Finding the min-content size</h2>
+## Finding the min-content size
 
-<p>To find the minimum size of the box that will contain its contents with no overflows, set the {{cssxref("width")}} or {{cssxref("inline-size")}} property of the box to {{cssxref("min-content")}}.</p>
+To find the minimum size of the box that will contain its contents with no overflows, set the {{cssxref("width")}} or {{cssxref("inline-size")}} property of the box to {{cssxref("min-content")}}.
 
-<p>{{EmbedGHLiveSample("css-examples/css-text/min-content.html", '100%', 420)}}</p>
+{{EmbedGHLiveSample("css-examples/css-text/min-content.html", '100%', 420)}}
 
-<p>Using <code>min-content</code> is therefore one possibility for overflowing boxes. If it is possible to allow the box to grow to be the minimum size required for the content, but no bigger, using this keyword will give you that sizing.</p>
+Using `min-content` is therefore one possibility for overflowing boxes. If it is possible to allow the box to grow to be the minimum size required for the content, but no bigger, using this keyword will give you that sizing.
 
-<h2>Breaking long words</h2>
+## Breaking long words
 
-<p>If the box needs to be a fixed size, or you are keen to ensure that long words can't overflow, then the {{cssxref("overflow-wrap")}} property can help. This property will break a word once it is too long to fit on a line by itself.</p>
+If the box needs to be a fixed size, or you are keen to ensure that long words can't overflow, then the {{cssxref("overflow-wrap")}} property can help. This property will break a word once it is too long to fit on a line by itself.
 
-<p>{{EmbedGHLiveSample("css-examples/css-text/overflow-wrap.html", '100%', 660)}}</p>
+{{EmbedGHLiveSample("css-examples/css-text/overflow-wrap.html", '100%', 660)}}
 
-<div class="note notecard">
-  <p><strong>Note:</strong> The <code>overflow-wrap</code> property acts in the same way as the non-standard property <code>word-wrap</code>. The <code>word-wrap</code> property is now treated by browsers as an alias of the standard property.</p>
-</div>
+> **Note:** The `overflow-wrap` property acts in the same way as the non-standard property `word-wrap`. The `word-wrap` property is now treated by browsers as an alias of the standard property.
 
-<p>An alternative property to try is {{cssxref("word-break")}}. This property will break the word at the point it overflows. It will cause a break even if placing the word onto a new line would allow it to display without breaking.</p>
+An alternative property to try is {{cssxref("word-break")}}. This property will break the word at the point it overflows. It will cause a break even if placing the word onto a new line would allow it to display without breaking.
 
-<p>In this next example you can compare the difference between the two properties on the same string of text.</p>
+In this next example you can compare the difference between the two properties on the same string of text.
 
-<p>{{EmbedGHLiveSample("css-examples/css-text/word-break.html", '100%', 700)}}</p>
+{{EmbedGHLiveSample("css-examples/css-text/word-break.html", '100%', 700)}}
 
-<p>This might be useful if you want to prevent a large gap appearing if there is just enough space for the string. Or, where there is another element that you would not want the break to happen immediately after.</p>
+This might be useful if you want to prevent a large gap appearing if there is just enough space for the string. Or, where there is another element that you would not want the break to happen immediately after.
 
-<p>In the example below there is a checkbox and label. Let's say, you want the label to break should it be too long for the box. However, you don't want it to break directly after the checkbox.</p>
+In the example below there is a checkbox and label. Let's say, you want the label to break should it be too long for the box. However, you don't want it to break directly after the checkbox.
 
-<p>{{EmbedGHLiveSample("css-examples/css-text/word-break-checkbox.html", '100%', 660)}}</p>
+{{EmbedGHLiveSample("css-examples/css-text/word-break-checkbox.html", '100%', 660)}}
 
-<h2>Adding hyphens</h2>
+## Adding hyphens
 
-<p>To add hypens when words are broken, use the CSS {{cssxref("hyphens")}} property. Using a value of <code>auto</code>, the browser is free to automatically break words at appropriate hyphenation points, following whatever rules it chooses. To have some control over the process, use a value of <code>manual</code>, then insert a hard or soft break character into the string. A hard break (<code>&hyphen;</code>) will always break, even if it is not necessary to do so. A soft break (<code>&shy;</code>) only breaks if breaking is needed.</p>
+To add hypens when words are broken, use the CSS {{cssxref("hyphens")}} property. Using a value of `auto`, the browser is free to automatically break words at appropriate hyphenation points, following whatever rules it chooses. To have some control over the process, use a value of `manual`, then insert a hard or soft break character into the string. A hard break (`‐`) will always break, even if it is not necessary to do so. A soft break (`­`) only breaks if breaking is needed.
 
-<p>{{EmbedGHLiveSample("css-examples/css-text/hyphens.html", '100%', 660)}}</p>
+{{EmbedGHLiveSample("css-examples/css-text/hyphens.html", '100%', 660)}}
 
-<h2>The &lt;wbr&gt; element</h2>
+## The \<wbr> element
 
-<p>If you know where you want a long string to break, then it is also possible to insert the HTML {{HTMLElement("wbr")}} element. This can be useful in cases such as displaying a long URL on a page. You can then add the property in order to break the string in sensible places that will make it easier to read.</p>
+If you know where you want a long string to break, then it is also possible to insert the HTML {{HTMLElement("wbr")}} element. This can be useful in cases such as displaying a long URL on a page. You can then add the property in order to break the string in sensible places that will make it easier to read.
 
-<p>In the below example the text breaks in the location of the {{HTMLElement("wbr")}}.</p>
+In the below example the text breaks in the location of the {{HTMLElement("wbr")}}.
 
-<p>{{EmbedGHLiveSample("css-examples/css-text/wbr.html", '100%', 460)}}</p>
+{{EmbedGHLiveSample("css-examples/css-text/wbr.html", '100%', 460)}}
 
-<h2>See also</h2>
+## See also
 
-<ul>
-    <li>The HTML {{HTMLElement("wbr")}} element</li>
-    <li>The CSS {{cssxref("word-break")}} property</li>
-    <li>The CSS {{cssxref("overflow-wrap")}} property</li>
-    <li>The CSS {{cssxref("hyphens")}} property</li>
-    <li><a href="https://www.smashingmagazine.com/2019/09/overflow-data-loss-css/">Overflow and Data Loss in CSS</a></li>
-</ul>
+- The HTML {{HTMLElement("wbr")}} element
+- The CSS {{cssxref("word-break")}} property
+- The CSS {{cssxref("overflow-wrap")}} property
+- The CSS {{cssxref("hyphens")}} property
+- [Overflow and Data Loss in CSS](https://www.smashingmagazine.com/2019/09/overflow-data-loss-css/)

@@ -10,49 +10,51 @@ tags:
   - Reference
 browser-compat: css.at-rules.counter-style.suffix
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <code><strong>suffix</strong></code> descriptor of the{{cssxref("@counter-style")}} rule specifies content that will be appended to the marker representation.</p>
+The **`suffix`** descriptor of the{{cssxref("@counter-style")}} rule specifies content that will be appended to the marker representation.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">/* &lt;symbol&gt; values */
+```css
+/* <symbol> values */
 suffix: "";
 suffix: ") ";
 suffix: url(bullet.png);
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>&lt;symbol&gt;</code></dt>
- <dd>Specifies a <code>&lt;symbol&gt;</code> that is appended to the marker representation. It may be a {{cssxref("&lt;string&gt;")}}, {{cssxref("&lt;image&gt;")}}, or {{cssxref("&lt;custom-ident&gt;")}}.</dd>
-</dl>
+- `<symbol>`
+  - : Specifies a `<symbol>` that is appended to the marker representation. It may be a {{cssxref("&lt;string&gt;")}}, {{cssxref("&lt;image&gt;")}}, or {{cssxref("&lt;custom-ident&gt;")}}.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_a_suffix_for_a_counter">Setting a suffix for a counter</h3>
+### Setting a suffix for a counter
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;ul class="choices"&gt;
-  &lt;li&gt;One&lt;/li&gt;
-  &lt;li&gt;Two&lt;/li&gt;
-  &lt;li&gt;Three&lt;/li&gt;
-  &lt;li&gt;None of the above&lt;/li&gt;
-&lt;/ul&gt;</pre>
+```html
+<ul class="choices">
+  <li>One</li>
+  <li>Two</li>
+  <li>Three</li>
+  <li>None of the above</li>
+</ul>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">@counter-style options {
+```css
+@counter-style options {
   system: fixed;
   symbols: A B C D;
   suffix: ") ";
@@ -60,23 +62,22 @@ suffix: url(bullet.png);
 
 .choices {
   list-style: options;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Setting_a_suffix_for_a_counter')}}</p>
+{{ EmbedLiveSample('Setting_a_suffix_for_a_counter')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}</li>
- <li>{{cssxref("symbols()", "symbols()")}}, the functional notation creating anonymous counter styles</li>
-</ul>
+- {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
+- {{cssxref("symbols()", "symbols()")}}, the functional notation creating anonymous counter styles

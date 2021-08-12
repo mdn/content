@@ -10,61 +10,53 @@ tags:
   - Web
 browser-compat: css.types.time
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>&lt;time&gt;</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Types">data type</a> represents a time value expressed in seconds or milliseconds. It is used in {{cssxref("animation")}}, {{cssxref("transition")}}, and related properties.</p>
+The **`<time>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents a time value expressed in seconds or milliseconds. It is used in {{cssxref("animation")}}, {{cssxref("transition")}}, and related properties.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>&lt;time&gt;</code> data type consists of a {{cssxref("&lt;number&gt;")}} followed by one of the units listed below. Optionally, it may be preceded by a single <code>+</code> or <code>-</code> sign. As with all dimensions, there is no space between the unit literal and the number.</p>
+The `<time>` data type consists of a {{cssxref("&lt;number&gt;")}} followed by one of the units listed below. Optionally, it may be preceded by a single `+` or `-` sign. As with all dimensions, there is no space between the unit literal and the number.
 
-<div class="note">
-<p><strong>Note:</strong> Although the number <code>0</code> is always the same regardless of unit, the unit may not be omitted. In other words, <code>0</code> is invalid and does not represent <code>0s</code> or <code>0ms</code>.</p>
-</div>
+> **Note:** Although the number `0` is always the same regardless of unit, the unit may not be omitted. In other words, `0` is invalid and does not represent `0s` or `0ms`.
 
-<h3 id="Units">Units</h3>
+### Units
 
-<dl>
-	<dt><strong><code>s</code></strong></dt>
-	<dd>Represents a time in seconds. Examples: <code>0s</code>, <code>1.5s</code>, <code>-60s</code>.</dd>
-	<dt><strong><code>ms</code></strong></dt>
-	<dd>Represents a time in milliseconds. Examples: <code>0ms</code>, <code>150.25ms</code>, <code>-60000ms</code>.</dd>
-</dl>
+- **`s`**
+  - : Represents a time in seconds. Examples: `0s`, `1.5s`, `-60s`.
+- **`ms`**
+  - : Represents a time in milliseconds. Examples: `0ms`, `150.25ms`, `-60000ms`.
 
-<div class="note">
-<p><strong>Note:</strong> Conversion between <code>s</code> and <code>ms</code> follows the logical <code>1s</code> = <code>1000ms</code>.</p>
-</div>
+> **Note:** Conversion between `s` and `ms` follows the logical `1s` = `1000ms`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Valid_times">Valid times</h3>
+### Valid times
 
-<pre>12s         Positive integer
--456ms      Negative integer
-4.3ms       Non-integer
-14mS        The unit is case-insensitive, although capital letters are not recommended.
-+0s         Zero with a leading + and a unit
--0ms        Zero with a leading - and a unit
-</pre>
+    12s         Positive integer
+    -456ms      Negative integer
+    4.3ms       Non-integer
+    14mS        The unit is case-insensitive, although capital letters are not recommended.
+    +0s         Zero with a leading + and a unit
+    -0ms        Zero with a leading - and a unit
 
-<h3 id="Invalid_times">Invalid times</h3>
+### Invalid times
 
-<pre class="example-bad">0           Although unitless zero is allowed for &lt;length&gt;s, it's invalid for &lt;time&gt;s.
-12.0        This is a &lt;number&gt;, not a &lt;time&gt;, because it's missing a unit.
+```plain example-bad
+0           Although unitless zero is allowed for <length>s, it's invalid for <time>s.
+12.0        This is a <number>, not a <time>, because it's missing a unit.
 7 ms        No space is allowed between the number and the unit.
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>{{cssxref("&lt;time-percentage&gt;")}}</li>
-	<li><a href="/en-US/docs/Web/CSS/CSS_Values_and_Units">CSS Values and Units</a></li>
-</ul>
+- {{cssxref("&lt;time-percentage&gt;")}}
+- [CSS Values and Units](/en-US/docs/Web/CSS/CSS_Values_and_Units)

@@ -7,14 +7,15 @@ tags:
   - CSS Multi-column Layout
   - CSS Property
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.orphans
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>orphans</code></strong> <a href="/en-US/docs/CSS">CSS</a> property sets the minimum number of lines in a block container that must be shown at the <em>bottom</em> of a <a href="/en-US/docs/Web/CSS/Paged_Media">page</a>, region, or <a href="/en-US/docs/Web/CSS/CSS_Columns">column</a>.</p>
+The **`orphans`** [CSS](/en-US/docs/CSS) property sets the minimum number of lines in a block container that must be shown at the _bottom_ of a [page](/en-US/docs/Web/CSS/Paged_Media), region, or [column](/en-US/docs/Web/CSS/CSS_Columns).
 
-<pre class="brush:css no-line-numbers">/* &lt;integer&gt; values */
+```css
+/* <integer> values */
 orphans: 2;
 orphans: 3;
 
@@ -23,43 +24,43 @@ orphans: inherit;
 orphans: initial;
 orphans: revert;
 orphans: unset;
-</pre>
+```
 
-<p>In typography, an <em>orphan</em> is the first line of a paragraph that appears alone at the bottom of a page. (The paragraph continues on a following page.)</p>
+In typography, an _orphan_ is the first line of a paragraph that appears alone at the bottom of a page. (The paragraph continues on a following page.)
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt>{{cssxref("&lt;integer&gt;")}}</dt>
- <dd>The minimum number of lines that can stay by themselves at the bottom of a fragment before a fragmentation break. The value must be positive.</dd>
-</dl>
+- {{cssxref("&lt;integer&gt;")}}
+  - : The minimum number of lines that can stay by themselves at the bottom of a fragment before a fragmentation break. The value must be positive.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_a_minimum_orphan_size_of_three_lines">Setting a minimum orphan size of three lines</h3>
+### Setting a minimum orphan size of three lines
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;p&gt;This is the first paragraph containing some text.&lt;/p&gt;
-  &lt;p&gt;This is the second paragraph containing some more text than the first one. It is used to demonstrate how orphans work.&lt;/p&gt;
-  &lt;p&gt;This is the third paragraph. It has a little bit more text than the first one.&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div>
+  <p>This is the first paragraph containing some text.</p>
+  <p>This is the second paragraph containing some more text than the first one. It is used to demonstrate how orphans work.</p>
+  <p>This is the third paragraph. It has a little bit more text than the first one.</p>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css; highlight[5]">div {
+```css
+div {
   background-color: #8cffa0;
   height: 150px;
   columns: 3;
@@ -73,23 +74,21 @@ p {
 p:first-child {
   margin-top: 0;
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Setting_a_minimum_orphan_size_of_three_lines", 380, 150)}}</p>
+{{EmbedLiveSample("Setting_a_minimum_orphan_size_of_three_lines", 380, 150)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("widows")}}</li>
- <li><a href="/en-US/docs/Web/CSS/Paged_Media">Paged media</a></li>
-</ul>
+- {{cssxref("widows")}}
+- [Paged media](/en-US/docs/Web/CSS/Paged_Media)

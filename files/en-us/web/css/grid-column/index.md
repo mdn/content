@@ -6,27 +6,26 @@ tags:
   - CSS Grid
   - CSS Property
   - Reference
-  - 'recipe:css-shorthand-property'
+  - recipe:css-shorthand-property
 browser-compat: css.properties.grid-column
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>grid-column</code></strong> CSS <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand property</a> specifies a grid item's size and location within a {{glossary("grid column")}} by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the inline-start and inline-end edge of its {{glossary("grid areas", "grid area")}}.</p>
+The **`grid-column`** CSS [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) specifies a grid item's size and location within a {{glossary("grid column")}} by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the inline-start and inline-end edge of its {{glossary("grid areas", "grid area")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/grid-column.html")}}</div>
+{{EmbedInteractiveExample("pages/css/grid-column.html")}}
 
-<h2 id="Constituent_properties">Constituent properties</h2>
+## Constituent properties
 
-<p>This property is a shorthand for the following CSS properties:</p>
+This property is a shorthand for the following CSS properties:
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/grid-column-end"><code>grid-column-end</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/grid-column-start"><code>grid-column-start</code></a></li>
-</ul>
+- [`grid-column-end`](/en-US/docs/Web/CSS/grid-column-end)
+- [`grid-column-start`](/en-US/docs/Web/CSS/grid-column-start)
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">grid-column: auto;
+```css
+grid-column: auto;
 
 /* with line numbers */
 grid-column: 1;
@@ -42,72 +41,74 @@ grid-column: inherit;
 grid-column: initial;
 grid-column: revert;
 grid-column: unset;
-</pre>
+```
 
-<p>This property is specified as one or two <code>&lt;grid-line&gt;</code> values.</p>
+This property is specified as one or two `<grid-line>` values.
 
-<p>If two <code>&lt;grid-line&gt;</code> values are given they are separated by "/". The <code>grid-column-start</code> longhand is set to the value before the slash, and the <code>grid-column-end</code> longhand is set to the value after the slash.</p>
+If two `<grid-line>` values are given they are separated by "/". The `grid-column-start` longhand is set to the value before the slash, and the `grid-column-end` longhand is set to the value after the slash.
 
-<p>Each <code>&lt;grid-line&gt;</code> value can be specified as:</p>
+Each `<grid-line>` value can be specified as:
 
-<ul>
- <li>either the <code>auto</code> keyword</li>
- <li>or a <code>&lt;custom-ident&gt;</code> value</li>
- <li>or an <code>&lt;integer&gt;</code> value</li>
- <li>or both <code>&lt;custom-ident&gt;</code> and <code>&lt;integer&gt;</code>, separated by a space</li>
- <li>or the keyword <code>span</code> together with either a <code>&lt;custom-ident&gt;</code> or an <code>&lt;integer&gt;</code> or both.</li>
-</ul>
+- either the `auto` keyword
+- or a `<custom-ident>` value
+- or an `<integer>` value
+- or both `<custom-ident>` and `<integer>`, separated by a space
+- or the keyword `span` together with either a `<custom-ident>` or an `<integer>` or both.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>Is a keyword indicating that the property contributes nothing to the grid item’s placement, indicating auto-placement, an automatic span, or a default span of <code>1</code>.</dd>
- <dt><code>&lt;custom-ident&gt;</code></dt>
- <dd>If there is a named line with the name '&lt;custom-ident&gt;-start'/'&lt;custom-ident&gt;-end', it contributes the first such line to the grid item’s placement.
- <div class="note">
-   <p><strong>Note:</strong> Named grid areas automatically generate implicit named lines of this form, so specifying <code>grid-column: foo;</code> will choose the start/end edge of that named grid area (unless another line named <code>foo-start</code>/<code>foo-end</code> was explicitly specified before it).</p>
- </div>
+- `auto`
+  - : Is a keyword indicating that the property contributes nothing to the grid item’s placement, indicating auto-placement, an automatic span, or a default span of `1`.
+- `<custom-ident>`
 
- <p>Otherwise, this is treated as if the integer <code>1</code> had been specified along with the <code>&lt;custom-ident&gt;</code>.</p>
- </dd>
- <dt><code>&lt;integer&gt; &amp;&amp; &lt;custom-ident&gt;?</code></dt>
- <dd>Contributes the nth grid line to the grid item’s placement. If a negative integer is given, it instead counts in reverse, starting from the end edge of the explicit grid.
- <p>If a name is given as a &lt;custom-ident&gt;, only lines with that name are counted. If not enough lines with that name exist, all implicit grid lines are assumed to have that name for the purpose of finding this position.</p>
+  - : If there is a named line with the name '\<custom-ident>-start'/'\<custom-ident>-end', it contributes the first such line to the grid item’s placement.
 
- <p>An {{cssxref("integer")}} value of <code>0</code> is invalid.</p>
- </dd>
- <dt><code>span &amp;&amp; [ &lt;integer&gt; || &lt;custom-ident&gt; ]</code></dt>
- <dd>Contributes a grid span to the grid item’s placement such that the corresponding edge of the grid item’s grid area is n lines from the opposite edge.
- <p>If a name is given as a &lt;custom-ident&gt;, only lines with that name are counted. If not enough lines with that name exist, all implicit grid lines on the side of the explicit grid corresponding to the search direction are assumed to have that name for the purpose of counting this span.</p>
+    > **Note:** Named grid areas automatically generate implicit named lines of this form, so specifying `grid-column: foo;` will choose the start/end edge of that named grid area (unless another line named `foo-start`/`foo-end` was explicitly specified before it).
 
- <p>If the &lt;integer&gt; is omitted, it defaults to <code>1</code>. Negative integers or 0 are invalid.</p>
- </dd>
-</dl>
+    Otherwise, this is treated as if the integer `1` had been specified along with the `<custom-ident>`.
 
-<h2 id="Formal_definition">Formal definition</h2>
+- `<integer> && <custom-ident>?`
 
-<p>{{cssinfo}}</p>
+  - : Contributes the nth grid line to the grid item’s placement. If a negative integer is given, it instead counts in reverse, starting from the end edge of the explicit grid.
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+    If a name is given as a \<custom-ident>, only lines with that name are counted. If not enough lines with that name exist, all implicit grid lines are assumed to have that name for the purpose of finding this position.
+
+    An {{cssxref("integer")}} value of `0` is invalid.
+
+- `span && [ <integer> || <custom-ident> ]`
+
+  - : Contributes a grid span to the grid item’s placement such that the corresponding edge of the grid item’s grid area is n lines from the opposite edge.
+
+    If a name is given as a \<custom-ident>, only lines with that name are counted. If not enough lines with that name exist, all implicit grid lines on the side of the explicit grid corresponding to the search direction are assumed to have that name for the purpose of counting this span.
+
+    If the \<integer> is omitted, it defaults to `1`. Negative integers or 0 are invalid.
+
+## Formal definition
+
+{{cssinfo}}
+
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_grid_column_size_and_location">Setting grid column size and location</h3>
+### Setting grid column size and location
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div id="grid"&gt;
-  &lt;div id="item1"&gt;&lt;/div&gt;
-  &lt;div id="item2"&gt;&lt;/div&gt;
-  &lt;div id="item3"&gt;&lt;/div&gt;
-&lt;/div&gt;</pre>
+```html
+<div id="grid">
+  <div id="item1"></div>
+  <div id="item2"></div>
+  <div id="item3"></div>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css; highlight[14,19]">#grid {
+```css
+#grid {
   display: grid;
   height: 100px;
   grid-template-columns: repeat(6, 1fr);
@@ -127,24 +128,22 @@ grid-column: unset;
   background-color: blue;
   grid-column: span 2 / 7;
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Setting_grid_column_size_and_location", "100%", "100px")}}</p>
+{{EmbedLiveSample("Setting_grid_column_size_and_location", "100%", "100px")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Related CSS properties: {{cssxref("grid-row")}}, {{cssxref("grid-row-start")}}, {{cssxref("grid-row-end")}}, {{cssxref("grid-column-start")}}, {{cssxref("grid-column-end")}}</li>
- <li>Grid Layout Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid">Line-based placement with CSS Grid</a></em></li>
- <li>Video tutorial: <em><a href="http://gridbyexample.com/video/series-line-based-placement/">Line-based placement</a></em></li>
-</ul>
+- Related CSS properties: {{cssxref("grid-row")}}, {{cssxref("grid-row-start")}}, {{cssxref("grid-row-end")}}, {{cssxref("grid-column-start")}}, {{cssxref("grid-column-end")}}
+- Grid Layout Guide: _[Line-based placement with CSS Grid](/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)_
+- Video tutorial: _[Line-based placement](http://gridbyexample.com/video/series-line-based-placement/)_

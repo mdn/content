@@ -8,31 +8,16 @@ tags:
   - Overview
   - Reference
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong>CSS Custom Properties for Cascading Variables</strong> is a <a href="/en-US/docs/Web/CSS">CSS</a> module that allows for the creation of custom properties that can be used over and over.</p>
+**CSS Custom Properties for Cascading Variables** is a [CSS](/en-US/docs/Web/CSS) module that allows for the creation of custom properties that can be used over and over.
 
-<h2 id="CSS_properties">CSS properties</h2>
+## CSS properties
 
-<ul>
- <li>{{cssxref("--*")}}</li>
-</ul>
+- {{cssxref("--*")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Variables")}}</td>
-   <td>{{Spec2("CSS3 Variables")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                            | Status                               | Comment            |
+| ---------------------------------------- | ------------------------------------ | ------------------ |
+| {{SpecName("CSS3 Variables")}} | {{Spec2("CSS3 Variables")}} | Initial definition |

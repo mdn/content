@@ -7,48 +7,46 @@ tags:
   - Reference
 browser-compat: css.at-rules.document
 ---
-<div>{{CSSRef}}{{Deprecated_header}}</div>
+{{CSSRef}}{{Deprecated_header}}
 
-<p>The <strong><code>@document</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/At-rule">at-rule</a> restricts the style rules contained within it based on the URL of the document. It is designed primarily for user-defined style sheets, though it can be used on author-defined style sheets, too.</p>
+The **`@document`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) restricts the style rules contained within it based on the URL of the document. It is designed primarily for user-defined style sheets, though it can be used on author-defined style sheets, too.
 
-<pre class="brush: css no-line-numbers">@document url("https://www.example.com/") {
+```css
+@document url("https://www.example.com/") {
   h1 {
     color: green;
   }
 }
-</pre>
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>An <code>@document</code> rule can specify one or more matching functions. If any of the functions apply to a given URL, the rule will take effect on that URL. The functions available are:</p>
+An `@document` rule can specify one or more matching functions. If any of the functions apply to a given URL, the rule will take effect on that URL. The functions available are:
 
-<ul>
- <li><code>url()</code>, which matches an exact URL.</li>
- <li><code>url-prefix()</code>, which matches if the document URL starts with the value provided.</li>
- <li><code>domain()</code>, which matches if the document URL is on the domain provided (or a subdomain of it).</li>
- <li><code>media-document()</code>, with the parameter of video, image, plugin or all.</li>
- <li><code>regexp()</code>, which matches if the document URL is matched by the <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">regular expression</a> provided. The expression must match the entire URL.</li>
-</ul>
+- `url()`, which matches an exact URL.
+- `url-prefix()`, which matches if the document URL starts with the value provided.
+- `domain()`, which matches if the document URL is on the domain provided (or a subdomain of it).
+- `media-document()`, with the parameter of video, image, plugin or all.
+- `regexp()`, which matches if the document URL is matched by the [regular expression](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) provided. The expression must match the entire URL.
 
-<p>The values provided to the <code>url()</code>, <code>url-prefix()</code>, <code>domain()</code>, and <code>media-document()</code> functions can be optionally enclosed by single or double quotes. The values provided to the <code>regexp()</code> function <em>must</em> be enclosed in quotes.</p>
+The values provided to the `url()`, `url-prefix()`, `domain()`, and `media-document()` functions can be optionally enclosed by single or double quotes. The values provided to the `regexp()` function _must_ be enclosed in quotes.
 
-<p>Escaped values provided to the <code>regexp()</code> function must additionally be escaped from the CSS. For example, a <code>.</code> (period) matches any character in regular expressions. To match a literal period, you would first need to escape it using regular expression rules (to <code>\.</code>), then escape that string using CSS rules (to <code>\\.</code>).</p>
+Escaped values provided to the `regexp()` function must additionally be escaped from the CSS. For example, a `.` (period) matches any character in regular expressions. To match a literal period, you would first need to escape it using regular expression rules (to `\.`), then escape that string using CSS rules (to `\\.`).
 
-<p><code>@document</code> is currently only supported in Firefox; if you wanted to replicate using such functionality in your own non-Firefox browser, you could try using <a href="https://github.com/An-Error94/Handy-Scripts/tree/master/%40document-polyfill">this polyfill</a> by @An-Error94, which uses a combination of a user script, <a href="/en-US/docs/Web/HTML/Global_attributes/data-*">data-* attributes</a>, and <a href="/en-US/docs/Web/CSS/Attribute_selectors">attribute selectors</a>.</p>
+`@document` is currently only supported in Firefox; if you wanted to replicate using such functionality in your own non-Firefox browser, you could try using [this polyfill](https://github.com/An-Error94/Handy-Scripts/tree/master/%40document-polyfill) by @An-Error94, which uses a combination of a user script, [data-\* attributes](/en-US/docs/Web/HTML/Global_attributes/data-*), and [attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors).
 
-<div class="note">
-<p><strong>Note:</strong> There is a -moz-prefixed version of this property — <code>@-moz-document</code>. This has been limited to use only in user and UA sheets in Firefox 59 in Nightly and Beta — an experiment designed to mitigate potential CSS injection attacks (See {{bug(1035091)}}).</p>
-</div>
+> **Note:** There is a -moz-prefixed version of this property — `@-moz-document`. This has been limited to use only in user and UA sheets in Firefox 59 in Nightly and Beta — an experiment designed to mitigate potential CSS injection attacks (See {{bug(1035091)}}).
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Specifying_document_for_CSS_rule">Specifying document for CSS rule</h3>
+### Specifying document for CSS rule
 
-<pre class="brush: css">@document url("http://www.w3.org/"),
+```css
+@document url("http://www.w3.org/"),
           url-prefix("http://www.w3.org/Style/"),
           domain("mozilla.org"),
           media-document("video"),
@@ -67,18 +65,16 @@ browser-compat: css.at-rules.document
     background: yellow;
   }
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p><a href="https://www.w3.org/TR/2012/WD-css3-conditional-20120911/#at-document">Initially</a> in {{SpecName('CSS3 Conditional')}}, <code>@document</code> has been <a href="https://www.w3.org/TR/2012/WD-css3-conditional-20121213/#changes">postponed</a> to Level 4 then removed.</p>
+[Initially](https://www.w3.org/TR/2012/WD-css3-conditional-20120911/#at-document) in {{SpecName('CSS3 Conditional')}}, `@document` has been [postponed](https://www.w3.org/TR/2012/WD-css3-conditional-20121213/#changes) to Level 4 then removed.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="http://lists.w3.org/Archives/Public/www-style/2004Aug/0135">Per-site user style sheet rules</a> on the www-style mailing list.</li>
-</ul>
+- [Per-site user style sheet rules](http://lists.w3.org/Archives/Public/www-style/2004Aug/0135) on the www-style mailing list.

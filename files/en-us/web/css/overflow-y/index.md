@@ -6,19 +6,19 @@ tags:
   - CSS Box Model
   - CSS Property
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.overflow-y
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>overflow-y</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets what shows when content overflows a block-level element's top and bottom edges. This may be nothing, a scroll bar, or the overflow content.</p>
+The **`overflow-y`** [CSS](/en-US/docs/Web/CSS) property sets what shows when content overflows a block-level element's top and bottom edges. This may be nothing, a scroll bar, or the overflow content.
 
-<div>{{EmbedInteractiveExample("pages/css/overflow-y.html")}}</div>
+{{EmbedInteractiveExample("pages/css/overflow-y.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 overflow-y: visible;
 overflow-y: hidden;
 overflow-y: clip;
@@ -30,71 +30,71 @@ overflow-y: inherit;
 overflow-y: initial;
 overflow-y: revert;
 overflow-y: unset;
-</pre>
+```
 
-<p>The <code>overflow-y</code> property is specified as a single keyword chosen from the list of values below.</p>
+The `overflow-y` property is specified as a single keyword chosen from the list of values below.
 
-<p>If {{cssxref("overflow-x")}} is <code>hidden</code>, <code>scroll</code> or <code>auto</code> and this property is <code>visible</code> (default) it will implicitly compute to <code>auto</code>.</p>
+If {{cssxref("overflow-x")}} is `hidden`, `scroll` or `auto` and this property is `visible` (default) it will implicitly compute to `auto`.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>visible</code></dt>
- <dd>Content is not clipped and may be rendered outside the padding box's top and bottom edges.</dd>
- <dt><code>hidden</code></dt>
- <dd>Content is clipped if necessary to fit vertically in the padding box. No scrollbars are provided.</dd>
- <dt><code>clip</code> {{experimental_inline}}</dt>
- <dd>Like for <code>hidden</code>, the content is clipped to the element's padding box. The difference between <code>clip</code> and <code>hidden</code> is that the <code>clip</code> keyword also forbids all scrolling, including programmatic scrolling. The box is not a scroll container, and does not start a new formatting context. If you wish to start a new formatting context, you can use {{cssxref("display", "display: flow-root", "#flow-root")}} to do so.</dd>
- <dt><code>scroll</code></dt>
- <dd>Content is clipped if necessary to fit vertically in the padding box. Browsers display scrollbars whether or not any content is actually clipped. (This prevents scrollbars from appearing or disappearing when the content changes.) Printers may still print overflowing content.</dd>
- <dt><code>auto</code></dt>
- <dd>Depends on the user agent. If content fits inside the padding box, it looks the same as <code>visible</code>, but still establishes a new block-formatting context. Desktop browsers provide scrollbars if content overflows.</dd>
-</dl>
+- `visible`
+  - : Content is not clipped and may be rendered outside the padding box's top and bottom edges.
+- `hidden`
+  - : Content is clipped if necessary to fit vertically in the padding box. No scrollbars are provided.
+- `clip` {{experimental_inline}}
+  - : Like for `hidden`, the content is clipped to the element's padding box. The difference between `clip` and `hidden` is that the `clip` keyword also forbids all scrolling, including programmatic scrolling. The box is not a scroll container, and does not start a new formatting context. If you wish to start a new formatting context, you can use {{cssxref("display", "display: flow-root", "#flow-root")}} to do so.
+- `scroll`
+  - : Content is clipped if necessary to fit vertically in the padding box. Browsers display scrollbars whether or not any content is actually clipped. (This prevents scrollbars from appearing or disappearing when the content changes.) Printers may still print overflowing content.
+- `auto`
+  - : Depends on the user agent. If content fits inside the padding box, it looks the same as `visible`, but still establishes a new block-formatting context. Desktop browsers provide scrollbars if content overflows.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
-<h2 id="Examples">Examples</h2>
 
-<h3 id="Setting_overflow-y_behavior">Setting overflow-y behavior</h3>
+## Examples
 
-<h4 id="HTML">HTML</h4>
+### Setting overflow-y behavior
 
-<pre class="brush: html">&lt;ul&gt;
-  &lt;li&gt;&lt;code&gt;overflow-y:hidden&lt;/code&gt; — hides the text outside the box
-  &lt;div id="div1"&gt;
+#### HTML
+
+```html
+<ul>
+  <li><code>overflow-y:hidden</code> — hides the text outside the box
+  <div id="div1">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-    &lt;/div&gt;
-  &lt;/li&gt;
+    </div>
+  </li>
 
-  &lt;li&gt;&lt;code&gt;overflow-y:scroll&lt;/code&gt; — always adds a scrollbar
-  &lt;div id="div2"&gt;
+  <li><code>overflow-y:scroll</code> — always adds a scrollbar
+  <div id="div2">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-    &lt;/div&gt;
-  &lt;/li&gt;
+    </div>
+  </li>
 
-  &lt;li&gt;&lt;code&gt;overflow-y:visible&lt;/code&gt; — displays the text outside the box if needed
-  &lt;div id="div3"&gt;
+  <li><code>overflow-y:visible</code> — displays the text outside the box if needed
+  <div id="div3">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-    &lt;/div&gt;
-  &lt;/li&gt;
+    </div>
+  </li>
 
-  &lt;li&gt;&lt;code&gt;overflow-y:auto&lt;/code&gt; — on most browser, equivalent to &lt;code&gt;scroll&lt;/code&gt;
-  &lt;div id="div4"&gt;
+  <li><code>overflow-y:auto</code> — on most browser, equivalent to <code>scroll</code>
+  <div id="div4">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+    </div>
+  </li>
+</ul>
+```
 
-</pre>
+#### CSS
 
-<h4 id="CSS">CSS</h4>
-
-<pre class="brush: css">#div1,
+```css
+#div1,
 #div2,
 #div3,
 #div4 {
@@ -107,22 +107,20 @@ overflow-y: unset;
 #div2 { overflow-y: scroll; margin-bottom: 12px;}
 #div3 { overflow-y: visible; margin-bottom: 120px;}
 #div4 { overflow-y: auto; margin-bottom: 120px;}
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
 {{EmbedLiveSample("Setting_overflow-y_behavior", "100%", "780")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Related CSS properties: {{cssxref("text-overflow")}}, {{cssxref("white-space")}}, {{Cssxref("overflow")}}, {{Cssxref("overflow-x")}}, {{Cssxref("clip")}}, {{Cssxref("display")}}</li>
-</ul>
+- Related CSS properties: {{cssxref("text-overflow")}}, {{cssxref("white-space")}}, {{Cssxref("overflow")}}, {{Cssxref("overflow-x")}}, {{Cssxref("clip")}}, {{Cssxref("display")}}

@@ -6,28 +6,27 @@ tags:
   - CSS Positioning
   - CSS Property
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.z-index
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>z-index</code></strong> CSS property sets the z-order of a <a href="/en-US/docs/Web/CSS/position">positioned</a> element and its descendants or flex items. Overlapping elements with a larger z-index cover those with a smaller one.</p>
+The **`z-index`** CSS property sets the z-order of a [positioned](/en-US/docs/Web/CSS/position) element and its descendants or flex items. Overlapping elements with a larger z-index cover those with a smaller one.
 
-<div>{{EmbedInteractiveExample("pages/css/z-index.html")}}</div>
+{{EmbedInteractiveExample("pages/css/z-index.html")}}
 
-<p>For a positioned box (that is, one with any <code>position</code> other than <code>static</code>), the <code>z-index</code> property specifies:</p>
+For a positioned box (that is, one with any `position` other than `static`), the `z-index` property specifies:
 
-<ol>
- <li>The stack level of the box in the current <a href="/en-US/docs/Web/Guide/CSS/Understanding_z_index/The_stacking_context">stacking context</a>.</li>
- <li>Whether the box establishes a local stacking context.</li>
-</ol>
+1.  The stack level of the box in the current [stacking context](/en-US/docs/Web/Guide/CSS/Understanding_z_index/The_stacking_context).
+2.  Whether the box establishes a local stacking context.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* Keyword value */
+```css
+/* Keyword value */
 z-index: auto;
 
-/* &lt;integer&gt; values */
+/* <integer> values */
 z-index: 0;
 z-index: 3;
 z-index: 289;
@@ -38,43 +37,43 @@ z-index: inherit;
 z-index: initial;
 z-index: revert;
 z-index: unset;
-</pre>
+```
 
-<p>The <code>z-index</code> property is specified as either the keyword <code>auto</code> or an <code>&lt;integer&gt;</code>.</p>
+The `z-index` property is specified as either the keyword `auto` or an `<integer>`.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>The box does not establish a new local stacking context. The stack level of the generated box in the current stacking context is <code>0</code>.</dd>
- <dt><code>&lt;integer&gt;</code></dt>
- <dd>This {{cssxref("&lt;integer&gt;")}} is the stack level of the generated box in the current stacking context. The box also establishes a local stacking context. This means that the z-indexes of descendants are not compared to the z-indexes of elements outside this element.</dd>
-</dl>
+- `auto`
+  - : The box does not establish a new local stacking context. The stack level of the generated box in the current stacking context is `0`.
+- `<integer>`
+  - : This {{cssxref("&lt;integer&gt;")}} is the stack level of the generated box in the current stacking context. The box also establishes a local stacking context. This means that the z-indexes of descendants are not compared to the z-indexes of elements outside this element.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Visually_layering_elements">Visually layering elements</h3>
+### Visually layering elements
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-  &lt;div class="dashed-box"&gt;Dashed box&lt;/div&gt;
-  &lt;div class="gold-box"&gt;Gold box&lt;/div&gt;
-  &lt;div class="green-box"&gt;Green box&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="wrapper">
+  <div class="dashed-box">Dashed box</div>
+  <div class="gold-box">Gold box</div>
+  <div class="green-box">Green box</div>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css;">.wrapper {
+```css
+.wrapper {
   position: relative;
 }
 
@@ -104,23 +103,21 @@ z-index: unset;
   height: 7em;
   opacity: 0.9;
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Visually_layering_elements', '550', '200', '') }}</p>
+{{ EmbedLiveSample('Visually_layering_elements', '550', '200', '') }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>CSS {{Cssxref("position")}} property</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index">Understanding CSS z-indexes</a></li>
-</ul>
+- CSS {{Cssxref("position")}} property
+- [Understanding CSS z-indexes](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index)

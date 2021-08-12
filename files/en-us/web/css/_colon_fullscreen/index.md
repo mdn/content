@@ -1,6 +1,6 @@
 ---
 title: ':fullscreen'
-slug: 'Web/CSS/:fullscreen'
+slug: Web/CSS/:fullscreen
 tags:
   - CSS
   - Full-screen
@@ -13,66 +13,69 @@ tags:
   - screen
 browser-compat: css.selectors.fullscreen
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>:fullscreen</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> matches every element which is currently in full-screen mode. If multiple elements have been put into full-screen mode, this selects them all.</p>
+The **`:fullscreen`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches every element which is currently in full-screen mode. If multiple elements have been put into full-screen mode, this selects them all.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
 {{csssyntax}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>The <code>:fullscreen</code> pseudo-class lets you configure your stylesheets to automatically adjust the size, style, or layout of content when elements switch back and forth between full-screen and traditional presentations.</p>
+The `:fullscreen` pseudo-class lets you configure your stylesheets to automatically adjust the size, style, or layout of content when elements switch back and forth between full-screen and traditional presentations.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In this example, the color of a button is changed depending on whether or not the document is in full-screen mode. This is done without needing to specifically apply style changes using JavaScript.</p>
+In this example, the color of a button is changed depending on whether or not the document is in full-screen mode. This is done without needing to specifically apply style changes using JavaScript.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<p>The page's HTML looks like this:</p>
+The page's HTML looks like this:
 
-<pre class="brush: html">&lt;h1&gt;MDN Web Docs Demo: :fullscreen pseudo-class&lt;/h1&gt;
+```html
+<h1>MDN Web Docs Demo: :fullscreen pseudo-class</h1>
 
-&lt;p&gt;This demo uses the &lt;code&gt;:fullscreen&lt;/code&gt; pseudo-class to automatically
+<p>This demo uses the <code>:fullscreen</code> pseudo-class to automatically
   change the style of a button used to toggle full-screen mode on and off,
-  entirely using CSS.&lt;/p&gt;
+  entirely using CSS.</p>
 
-&lt;button id="fs-toggle"&gt;Toggle Fullscreen&lt;/button&gt;</pre>
+<button id="fs-toggle">Toggle Fullscreen</button>
+```
 
-<p>The {{HTMLElement("button")}} with the ID <code>"fs-toggle"</code> will change between pale red and pale green depending on whether or not the document is in full-screen mode.</p>
+The {{HTMLElement("button")}} with the ID `"fs-toggle"` will change between pale red and pale green depending on whether or not the document is in full-screen mode.
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<p>The magic happens in the CSS. There are two rules here. The first establishes the background color of the "Toggle Full-screen Mode" button when the element is not in a full-screen state. The key is the use of the <code>:not(:fullscreen)</code>, which looks for the element to not have the <code>:fullscreen</code> pseudo-class applied to it.</p>
+The magic happens in the CSS. There are two rules here. The first establishes the background color of the "Toggle Full-screen Mode" button when the element is not in a full-screen state. The key is the use of the `:not(:fullscreen)`, which looks for the element to not have the `:fullscreen` pseudo-class applied to it.
 
-<pre class="brush: css">#fs-toggle:not(:fullscreen) {
+```css
+#fs-toggle:not(:fullscreen) {
   background-color: #afa;
 }
-</pre>
+```
 
-<p>When the document <em>is</em> in full-screen mode, the following CSS applies instead, setting the background color to a pale shade of red.</p>
+When the document _is_ in full-screen mode, the following CSS applies instead, setting the background color to a pale shade of red.
 
-<pre class="brush: css">#fs-toggle:fullscreen {
+```css
+#fs-toggle:fullscreen {
   background-color: #faa;
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Fullscreen_API">Fullscreen API </a></li>
- <li><a href="/en-US/docs/Web/API/Fullscreen_API/Guide">Guide to the Fullscreen API</a></li>
- <li>{{cssxref(":not")}}</li>
- <li>{{cssxref("::backdrop")}}</li>
- <li>DOM API: {{ domxref("Element.requestFullscreen()") }}, {{ domxref("Document.exitFullscreen()") }}, {{ domxref("Document.fullscreenElement") }}</li>
- <li>{{HTMLAttrXRef("allowfullscreen", "iframe")}} attribute</li>
-</ul>
+- [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API)
+- [Guide to the Fullscreen API](/en-US/docs/Web/API/Fullscreen_API/Guide)
+- {{cssxref(":not")}}
+- {{cssxref("::backdrop")}}
+- DOM API: {{ domxref("Element.requestFullscreen()") }}, {{ domxref("Document.exitFullscreen()") }}, {{ domxref("Document.fullscreenElement") }}
+- {{HTMLAttrXRef("allowfullscreen", "iframe")}} attribute

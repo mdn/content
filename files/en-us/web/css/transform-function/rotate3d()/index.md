@@ -9,71 +9,72 @@ tags:
   - Reference
 browser-compat: css.types.transform-function.rotate3d
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>rotate3d()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a
-    href="/en-US/docs/Web/CSS/CSS_Functions">function</a> defines a transformation that rotates an element around a
-  fixed axis in 3D space, without deforming it. Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.</p>
+The **`rotate3d()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) defines a transformation that rotates an element around a
+fixed axis in 3D space, without deforming it. Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.
 
-<div>{{EmbedInteractiveExample("pages/css/rotate3d.html")}}</div>
+{{EmbedInteractiveExample("pages/css/rotate3d.html")}}
 
-<p>In 3D space, rotations have three degrees of liberty, which together describe a single axis of rotation. The axis of
-  rotation is defined by an [x, y, z] vector and pass by the origin (as defined by the {{ cssxref("transform-origin") }}
-  property). If, as specified, the vector is not <em>normalized</em> (i.e., if the sum of the square of its three
-  coordinates is not 1), the {{glossary("user agent")}} will normalize it internally. A non-normalizable vector, such as
-  the null vector, [0, 0, 0], will cause the rotation to be ignored, but without invaliding the whole CSS property.
-</p>
+In 3D space, rotations have three degrees of liberty, which together describe a single axis of rotation. The axis of
+rotation is defined by an \[x, y, z] vector and pass by the origin (as defined by the {{ cssxref("transform-origin") }}
+property). If, as specified, the vector is not _normalized_ (i.e., if the sum of the square of its three
+coordinates is not 1), the {{glossary("user agent")}} will normalize it internally. A non-normalizable vector, such as
+the null vector, \[0, 0, 0], will cause the rotation to be ignored, but without invaliding the whole CSS property.
 
-<div class="note">
-  <p><strong>Note:</strong> Unlike rotations in the 2D plane, the composition of 3D rotations is usually
-  not commutative. In other words, the order in which the rotations are applied impacts the result.</p>
-</div>
+> **Note:** Unlike rotations in the 2D plane, the composition of 3D rotations is usually
+> not commutative. In other words, the order in which the rotations are applied impacts the result.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The amount of rotation created by <code>rotate3d()</code> is specified by three {{cssxref("&lt;number&gt;")}}s and
-  one {{cssxref("&lt;angle&gt;")}}. The <code>&lt;number&gt;</code>s represent the x-, y-, and z-coordinates of the
-  vector denoting the axis of rotation. The <code>&lt;angle&gt;</code> represents the angle of rotation; if positive,
-  the movement will be clockwise; if negative, it will be counter-clockwise.</p>
+The amount of rotation created by `rotate3d()` is specified by three {{cssxref("&lt;number&gt;")}}s and
+one {{cssxref("&lt;angle&gt;")}}. The `<number>`s represent the x-, y-, and z-coordinates of the
+vector denoting the axis of rotation. The `<angle>` represents the angle of rotation; if positive,
+the movement will be clockwise; if negative, it will be counter-clockwise.
 
-<pre class="brush: css">rotate3d(<var>x</var>, <var>y</var>, <var>z</var>, <var>a</var>)
-</pre>
+```css
+rotate3d(x, y, z, a)
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
-  <dt><code><var>x</var></code></dt>
-  <dd>Is a {{cssxref("&lt;number&gt;")}} describing the x-coordinate of the vector denoting the axis of rotation which
-    could between 0 and 1.</dd>
-  <dt><code><var>y</var></code></dt>
-  <dd>Is a {{cssxref("&lt;number&gt;")}} describing the y-coordinate of the vector denoting the axis of rotation which
-    could between 0 and 1.</dd>
-  <dt><code><var>z</var></code></dt>
-  <dd>Is a {{cssxref("&lt;number&gt;")}} describing the z-coordinate of the vector denoting the axis of rotation which
-    could between 0 and 1.</dd>
-  <dt><code><var>a</var></code></dt>
-  <dd>Is an {{ cssxref("&lt;angle&gt;") }} representing the angle of the rotation. A positive angle denotes a clockwise
-    rotation, a negative angle a counter-clockwise one.</dd>
-</dl>
+- `x`
+  - : Is a {{cssxref("&lt;number&gt;")}} describing the x-coordinate of the vector denoting the axis of rotation which
+    could between 0 and 1.
+- `y`
+  - : Is a {{cssxref("&lt;number&gt;")}} describing the y-coordinate of the vector denoting the axis of rotation which
+    could between 0 and 1.
+- `z`
+  - : Is a {{cssxref("&lt;number&gt;")}} describing the z-coordinate of the vector denoting the axis of rotation which
+    could between 0 and 1.
+- `a`
+  - : Is an {{ cssxref("&lt;angle&gt;") }} representing the angle of the rotation. A positive angle denotes a clockwise
+    rotation, a negative angle a counter-clockwise one.
 
 <table class="standard-table">
   <tbody>
     <tr>
       <th scope="col">Cartesian coordinates on ℝ^2</th>
-      <td rowspan="2">This transformation applies to the 3D space and can't be represented on the plane.</td>
+      <td rowspan="2">
+        This transformation applies to the 3D space and can't be represented on
+        the plane.
+      </td>
     </tr>
     <tr>
       <th scope="col">Homogeneous coordinates on ℝℙ^2</th>
     </tr>
     <tr>
       <th scope="col">Cartesian coordinates on ℝ^3</th>
-      <td><a href="/en-US/docs/Web/CSS/transform-function/rotate3d()/transform-functions-rotate3d_cart.png"><img
-            src="transform-functions-rotate3d_cart.png"></a><math>
-          <mfenced>
-            <mtable>
-              <mtr>
-                <mtd>
-                  <mn>1</mn>
+      <td>
+        <a
+          href="/en-US/docs/Web/CSS/transform-function/rotate3d()/transform-functions-rotate3d_cart.png"
+          ><img src="transform-functions-rotate3d_cart.png" /></a
+        ><math>
+          <mfenced
+            ><mtable
+              ><mtr
+                ><mtd
+                  ><mn>1</mn>
                   <mo>+</mo>
                   <mo>(</mo>
                   <mn>1</mn>
@@ -84,16 +85,14 @@ browser-compat: css.types.transform-function.rotate3d
                   <mo>)</mo>
                   <mo>)</mo>
                   <mo>(</mo>
-                  <msup>
-                    <mi>x</mi>
-                    <mn>2</mn>
-                  </msup>
-                  <mo>-</mo>
+                  <msup
+                    ><mi>x</mi>
+                    <mn>2</mn> </msup
+                  ><mo>-</mo>
                   <mn>1</mn>
-                  <mo>)</mo>
-                </mtd>
-                <mtd>
-                  <mi>z</mi>
+                  <mo>)</mo> </mtd
+                ><mtd
+                  ><mi>z</mi>
                   <mo>·</mo>
                   <mo>sin</mo>
                   <mo>(</mo>
@@ -109,10 +108,9 @@ browser-compat: css.types.transform-function.rotate3d
                   <mo>(</mo>
                   <mi>a</mi>
                   <mo>)</mo>
-                  <mo>)</mo>
-                </mtd>
-                <mtd>
-                  <mo>-</mo>
+                  <mo>)</mo> </mtd
+                ><mtd
+                  ><mo>-</mo>
                   <mi>y</mi>
                   <mo>·</mo>
                   <mo>sin</mo>
@@ -131,11 +129,10 @@ browser-compat: css.types.transform-function.rotate3d
                   <mi>a</mi>
                   <mo>)</mo>
                   <mo>)</mo>
-                </mtd>
-              </mtr>
-              <mtr>
-                <mtd>
-                  <mo>-</mo>
+                </mtd></mtr
+              ><mtr
+                ><mtd
+                  ><mo>-</mo>
                   <mi>z</mi>
                   <mo>·</mo>
                   <mo>sin</mo>
@@ -153,10 +150,9 @@ browser-compat: css.types.transform-function.rotate3d
                   <mo>(</mo>
                   <mi>a</mi>
                   <mo>)</mo>
-                  <mo>)</mo>
-                </mtd>
-                <mtd>
-                  <mn>1</mn>
+                  <mo>)</mo> </mtd
+                ><mtd
+                  ><mn>1</mn>
                   <mo>+</mo>
                   <mo>(</mo>
                   <mn>1</mn>
@@ -170,10 +166,9 @@ browser-compat: css.types.transform-function.rotate3d
                   <mi>y2</mi>
                   <mo>-</mo>
                   <mn>1</mn>
-                  <mo>)</mo>
-                </mtd>
-                <mtd>
-                  <mi>x</mi>
+                  <mo>)</mo> </mtd
+                ><mtd
+                  ><mi>x</mi>
                   <mo>·</mo>
                   <mo>sin</mo>
                   <mo>(</mo>
@@ -191,11 +186,10 @@ browser-compat: css.types.transform-function.rotate3d
                   <mi>a</mi>
                   <mo>)</mo>
                   <mo>)</mo>
-                </mtd>
-              </mtr>
-              <mtr>
-                <mtd>
-                  <mi>y</mi>
+                </mtd></mtr
+              ><mtr
+                ><mtd
+                  ><mi>y</mi>
                   <mo>sin</mo>
                   <mo>(</mo>
                   <mi>a</mi>
@@ -209,10 +203,9 @@ browser-compat: css.types.transform-function.rotate3d
                   <mo>(</mo>
                   <mi>a</mi>
                   <mo>)</mo>
-                  <mo>)</mo>
-                </mtd>
-                <mtd>
-                  <mo>-</mo>
+                  <mo>)</mo> </mtd
+                ><mtd
+                  ><mo>-</mo>
                   <mi>x</mi>
                   <mo>sin</mo>
                   <mo>(</mo>
@@ -227,10 +220,9 @@ browser-compat: css.types.transform-function.rotate3d
                   <mo>(</mo>
                   <mi>a</mi>
                   <mo>)</mo>
-                  <mo>)</mo>
-                </mtd>
-                <mtd>
-                  <mn>1</mn>
+                  <mo>)</mo> </mtd
+                ><mtd
+                  ><mn>1</mn>
                   <mo>+</mo>
                   <mo>(</mo>
                   <mn>1</mn>
@@ -244,48 +236,44 @@ browser-compat: css.types.transform-function.rotate3d
                   <mi>z2</mi>
                   <mo>-</mo>
                   <mn>1</mn>
-                  <mo>)</mo>
-                </mtd>
-                <mtd><mi>t</mi></mtd>
-              </mtr>
-              <mtr>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>1</mn>
-                </mtd>
-              </mtr>
-            </mtable>
-          </mfenced>
-        </math></td>
+                  <mo>)</mo> </mtd
+                ><mtd><mi>t</mi></mtd> </mtr
+              ><mtr
+                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
+                ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn></mtd></mtr
+              ></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
     </tr>
     <tr>
       <th scope="col">Homogeneous coordinates on ℝℙ^3</th>
-      <td><a href="/en-US/docs/Web/CSS/transform-function/rotate3d()/transform-functions-rotate3d_hom4.png"><img
-            src="transform-functions-rotate3d_hom4.png"></a></td>
+      <td>
+        <a
+          href="/en-US/docs/Web/CSS/transform-function/rotate3d()/transform-functions-rotate3d_hom4.png"
+          ><img src="transform-functions-rotate3d_hom4.png"
+        /></a>
+      </td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Rotating_on_the_y-axis">Rotating on the y-axis</h3>
+### Rotating on the y-axis
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div&gt;Normal&lt;/div&gt;
-&lt;div class="rotated"&gt;Rotated&lt;/div&gt;</pre>
+```html
+<div>Normal</div>
+<div class="rotated">Rotated</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">body {
+```css
+body {
   perspective: 800px;
 }
 
@@ -299,22 +287,25 @@ div {
   transform: rotate3d(0, 1, 0, 60deg);
   background-color: pink;
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Rotating_on_the_y-axis", "auto", 180)}}</p>
+{{EmbedLiveSample("Rotating_on_the_y-axis", "auto", 180)}}
 
-<h3 id="Rotating_on_a_custom_axis">Rotating on a custom axis</h3>
+### Rotating on a custom axis
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div&gt;Normal&lt;/div&gt;
-&lt;div class="rotated"&gt;Rotated&lt;/div&gt;</pre>
+```html
+<div>Normal</div>
+<div class="rotated">Rotated</div>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">body {
+```css
+body {
   perspective: 800px;
 }
 
@@ -328,23 +319,21 @@ div {
   transform: rotate3d(1, 2, -1, 192deg);
   background-color: pink;
 }
-</pre>
+```
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Rotating_on_a_custom_axis", "auto", 180)}}</p>
+{{EmbedLiveSample("Rotating_on_a_custom_axis", "auto", 180)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{cssxref("transform")}}</li>
-  <li>{{cssxref("&lt;transform-function&gt;")}}</li>
-</ul>
+- {{cssxref("transform")}}
+- {{cssxref("&lt;transform-function&gt;")}}

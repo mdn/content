@@ -8,22 +8,23 @@ tags:
   - Layout
   - Reference
   - Web
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.right
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>right</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property participates in specifying the horizontal position of a <a href="/en-US/docs/Web/CSS/position">positioned element</a>. It has no effect on non-positioned elements.</p>
+The **`right`** [CSS](/en-US/docs/Web/CSS) property participates in specifying the horizontal position of a [positioned element](/en-US/docs/Web/CSS/position). It has no effect on non-positioned elements.
 
-<div>{{EmbedInteractiveExample("pages/css/right.html")}}</div>
+{{EmbedInteractiveExample("pages/css/right.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* &lt;length&gt; values */
+```css
+/* <length> values */
 right: 3px;
 right: 2.4em;
 
-/* &lt;percentage&gt;s of the width of the containing block */
+/* <percentage>s of the width of the containing block */
 right: 10%;
 
 /* Keyword value */
@@ -34,64 +35,63 @@ right: inherit;
 right: initial;
 right: revert;
 right: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
-	<dt>{{cssxref("&lt;length&gt;")}}</dt>
-	<dd>A negative, null, or positive {{cssxref("&lt;length&gt;")}} that represents:
-	<ul>
-		<li>for <em>absolutely positioned elements</em>, the distance to the right edge of the containing block.</li>
-		<li>for <em>relatively positioned elements</em>, the distance that the element is moved to the left of its normal position.</li>
-	</ul>
-	</dd>
-	<dt>{{cssxref("&lt;percentage&gt;")}}</dt>
-	<dd>A {{cssxref("&lt;percentage&gt;")}} of the containing block's width.</dd>
-	<dt><code>auto</code></dt>
-	<dd>Specifies that:
-	<ul>
-		<li>for <em>absolutely positioned elements</em>, the position of the element is based on the {{Cssxref("left")}} property, while <code>width: auto</code> is treated as a width based on the content; or if <code>left</code> is also <code>auto</code>, the element is positioned where it should horizontally be positioned if it were a static element.</li>
-		<li>for <em>relatively positioned elements</em>, the distance of the element from its normal position is based on the {{Cssxref("left")}} property; or if <code>left</code> is also <code>auto</code>, the element is not moved horizontally at all.</li>
-	</ul>
-	</dd>
-	<dt><code>inherit</code></dt>
-	<dd>Specifies that the value is the same as the computed value from its parent element (which might not be its containing block). This computed value is then handled as if it were a {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, or the <code>auto</code> keyword.</dd>
-</dl>
+- {{cssxref("&lt;length&gt;")}}
 
-<h2 id="Description">Description</h2>
+  - : A negative, null, or positive {{cssxref("&lt;length&gt;")}} that represents:
 
-<p>The effect of <code>right</code> depends on how the element is positioned (i.e., the value of the {{cssxref("position")}} property):</p>
+    - for _absolutely positioned elements_, the distance to the right edge of the containing block.
+    - for _relatively positioned elements_, the distance that the element is moved to the left of its normal position.
 
-<ul>
-	<li>When <code>position</code> is set to <code>absolute</code> or <code>fixed</code>, the <code>right</code> property specifies the distance between the element's right edge and the right edge of its containing block.</li>
-	<li>When <code>position</code> is set to <code>relative</code>, the <code>right</code> property specifies the distance the element's right edge is moved to the left from its normal position.</li>
-	<li>When <code>position</code> is set to <code>sticky</code>, the <code>right</code> property is used to compute the sticky-constraint rectangle.</li>
-	<li>When <code>position</code> is set to <code>static</code>, the <code>right</code> property has <em>no effect</em>.</li>
-</ul>
+- {{cssxref("&lt;percentage&gt;")}}
+  - : A {{cssxref("&lt;percentage&gt;")}} of the containing block's width.
+- `auto`
 
-<p>When both {{cssxref("left")}} and <code>right</code> are defined, if not prevented from doing so by other properties, the element will stretch to satisfy both. If the element cannot stretch to satisfy both -- for example, if a <code>width</code> is declared -- the position of the element is <em>over-constrained</em>. When this is the case, the <code>left</code> value has precedence when the container is left-to-right; the <code>right</code> value has precedence when the container is right-to-left.</p>
+  - : Specifies that:
 
-<h2 id="Formal_definition">Formal definition</h2>
+    - for _absolutely positioned elements_, the position of the element is based on the {{Cssxref("left")}} property, while `width: auto` is treated as a width based on the content; or if `left` is also `auto`, the element is positioned where it should horizontally be positioned if it were a static element.
+    - for _relatively positioned elements_, the distance of the element from its normal position is based on the {{Cssxref("left")}} property; or if `left` is also `auto`, the element is not moved horizontally at all.
 
-<p>{{cssinfo}}</p>
+- `inherit`
+  - : Specifies that the value is the same as the computed value from its parent element (which might not be its containing block). This computed value is then handled as if it were a {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, or the `auto` keyword.
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Description
+
+The effect of `right` depends on how the element is positioned (i.e., the value of the {{cssxref("position")}} property):
+
+- When `position` is set to `absolute` or `fixed`, the `right` property specifies the distance between the element's right edge and the right edge of its containing block.
+- When `position` is set to `relative`, the `right` property specifies the distance the element's right edge is moved to the left from its normal position.
+- When `position` is set to `sticky`, the `right` property is used to compute the sticky-constraint rectangle.
+- When `position` is set to `static`, the `right` property has _no effect_.
+
+When both {{cssxref("left")}} and `right` are defined, if not prevented from doing so by other properties, the element will stretch to satisfy both. If the element cannot stretch to satisfy both -- for example, if a `width` is declared -- the position of the element is _over-constrained_. When this is the case, the `left` value has precedence when the container is left-to-right; the `right` value has precedence when the container is right-to-left.
+
+## Formal definition
+
+{{cssinfo}}
+
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Absolute_and_relative_positioning_using_right">Absolute and relative positioning using right</h3>
+### Absolute and relative positioning using right
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div id="relative"&gt;Relatively positioned&lt;/div&gt;
-&lt;div id="absolute"&gt;Absolutely positioned&lt;/div&gt;</pre>
+```html
+<div id="relative">Relatively positioned</div>
+<div id="absolute">Absolutely positioned</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">#relative {
+```css
+#relative {
   width: 100px;
   height: 100px;
   background-color: #FFC7E4;
@@ -108,27 +108,29 @@ right: unset;
   bottom: 10px;
   right: 20px;
 }
+```
 
-</pre>
+#### Result
 
-<h4 id="Result">Result</h4>
+{{ EmbedLiveSample('Absolute_and_relative_positioning_using_right', 500, 220) }}
 
-<p>{{ EmbedLiveSample('Absolute_and_relative_positioning_using_right', 500, 220) }}</p>
+### Declaring both left and right
 
-<h3 id="Declaring_both_left_and_right">Declaring both left and right</h3>
+When both `left` and `right` are declared, the element will stretch to meet both, unless other constraints prevent it from doing so. If the element will not stretch or shrink to meet both. When the position of the element is _overspecified_, the precedence is based on the container's direction: The `left` will take precedence if the container's direction is left-to-right. The `right` will take precedence if the container's direction is right-to-left.
 
-<p>When both <code>left</code> and <code>right</code> are declared, the element will stretch to meet both, unless other constraints prevent it from doing so. If the element will not stretch or shrink to meet both. When the position of the element is <em>overspecified</em>, the precedence is based on the container's direction: The <code>left</code> will take precedence if the container's direction is left-to-right. The <code>right</code> will take precedence if the container's direction is right-to-left.</p>
+#### HTML
 
-<h4 id="HTML_2">HTML</h4>
+```html
+<div id="parent">Parent
+    <div id="noWidth">No width</div>
+    <div id="width">width: 100px</div>
+</div>
+```
 
-<pre class="brush: html">&lt;div id="parent"&gt;Parent
-    &lt;div id="noWidth"&gt;No width&lt;/div&gt;
-    &lt;div id="width"&gt;width: 100px&lt;/div&gt;
-&lt;/div&gt;</pre>
+#### CSS
 
-<h4 id="CSS_2">CSS</h4>
-
-<pre class="brush: css;">div {
+```css
+div {
   outline: 1px solid #CCCCCC;
 }
 #parent {
@@ -150,24 +152,22 @@ right: unset;
   width: 100px;
   top: 60px;
 }
-</pre>
+```
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Declaring_both_left_and_right', 500, 220) }}</p>
+{{ EmbedLiveSample('Declaring_both_left_and_right', 500, 220) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>{{cssxref("inset")}}, the shorthand for all related properties: {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}}, and {{cssxref("right")}}</li>
-	<li>The mapped logical properties: {{cssxref("inset-block-start")}}, {{cssxref("inset-block-end")}}, {{cssxref("inset-inline-start")}}, and {{cssxref("inset-inline-end")}} and the shorthands {{cssxref("inset-block")}} and {{cssxref("inset-inline")}}</li>
-	<li>{{cssxref("position")}}</li>
-</ul>
+- {{cssxref("inset")}}, the shorthand for all related properties: {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}}, and {{cssxref("right")}}
+- The mapped logical properties: {{cssxref("inset-block-start")}}, {{cssxref("inset-block-end")}}, {{cssxref("inset-inline-start")}}, and {{cssxref("inset-inline-end")}} and the shorthands {{cssxref("inset-block")}} and {{cssxref("inset-inline")}}
+- {{cssxref("position")}}

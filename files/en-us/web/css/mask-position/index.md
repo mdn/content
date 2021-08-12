@@ -7,21 +7,22 @@ tags:
   - CSS Property
   - Experimental
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.mask-position
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>mask-position</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets the initial position, relative to the mask position layer set by {{cssxref("mask-origin")}}, for each defined mask image.</p>
+The **`mask-position`** [CSS](/en-US/docs/Web/CSS) property sets the initial position, relative to the mask position layer set by {{cssxref("mask-origin")}}, for each defined mask image.
 
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 mask-position: top;
 mask-position: bottom;
 mask-position: left;
 mask-position: right;
 mask-position: center;
 
-/* &lt;position&gt; values */
+/* <position> values */
 mask-position: 25% 75%;
 mask-position: 0px 0px;
 mask-position: 10% 8em;
@@ -35,46 +36,42 @@ mask-position: inherit;
 mask-position: initial;
 mask-position: revert;
 mask-position: unset;
-</pre>
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>One or more <code>&lt;position&gt;</code> values, separated by commas.</p>
+One or more `<position>` values, separated by commas.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt>{{cssxref("&lt;position&gt;")}}</dt>
- <dd>One to four values representing a 2D position regarding the edges of the element's box. Relative or absolute offsets can be given. Note that the position can be set outside of the element's box.</dd>
-</dl>
+- {{cssxref("&lt;position&gt;")}}
+  - : One to four values representing a 2D position regarding the edges of the element's box. Relative or absolute offsets can be given. Note that the position can be set outside of the element's box.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_mask_position">Setting mask position</h3>
+### Setting mask position
 
-<p>Change the <code>mask-position</code> value to any of the allowed values detailed above.
-  If viewing the example in a Chromium-based browser change the value of <code>-webkit-mask-position</code>.
+Change the `mask-position` value to any of the allowed values detailed above.
+If viewing the example in a Chromium-based browser change the value of `-webkit-mask-position`.
 
-<p>{{EmbedGHLiveSample("css-examples/masking/mask-position.html", '100%', 760)}}</p>
+{{EmbedGHLiveSample("css-examples/masking/mask-position.html", '100%', 760)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="https://css-tricks.com/clipping-masking-css/">Clipping and Masking in CSS</a></li>
-</ul>
+- [Clipping and Masking in CSS](https://css-tricks.com/clipping-masking-css/)

@@ -9,17 +9,18 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.animation-delay
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>animation-delay</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property specifies the amount of time to wait from applying the animation to an element before beginning to perform the animation. The animation can start later, immediately from its beginning, or immediately and partway through the animation.</p>
+The **`animation-delay`** [CSS](/en-US/docs/Web/CSS) property specifies the amount of time to wait from applying the animation to an element before beginning to perform the animation. The animation can start later, immediately from its beginning, or immediately and partway through the animation.
 
-<div>{{EmbedInteractiveExample("pages/css/animation-delay.html")}}</div>
+{{EmbedInteractiveExample("pages/css/animation-delay.html")}}
 
-<p>It is often convenient to use the shorthand property {{cssxref("animation")}} to set all animation properties at once.</p>
+It is often convenient to use the shorthand property {{cssxref("animation")}} to set all animation properties at once.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* Single animation */
+```css
+/* Single animation */
 animation-delay: 3s;
 animation-delay: 0s;
 animation-delay: -1500ms;
@@ -32,42 +33,42 @@ animation-delay: inherit;
 animation-delay: initial;
 animation-delay: revert;
 animation-delay: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>{{cssxref("&lt;time&gt;")}}</code></dt>
- <dd>
-   <p>The time offset, from the moment at which the animation is applied to the element, at which the animation should begin. This may be specified in either seconds (<code>s</code>) or milliseconds (<code>ms</code>). The unit is required.</p>
-   <p>A positive value indicates that the animation should begin after the specified amount of time has elapsed. A value of <code>0s</code>, which is the default, indicates that the animation should begin as soon as it's applied.</p>
-   <p>A negative value causes the animation to begin immediately, but partway through its cycle. For example, if you specify <code>-1s</code> as the animation delay time, the animation will begin immediately but will start 1 second into the animation sequence. If you specify a negative value for the animation delay, but the starting value is implicit, the starting value is taken from the moment the animation is applied to the element.</p>
- </dd>
-</dl>
+- `{{cssxref("&lt;time&gt;")}}`
 
-<div class="note">
-<p><strong>Note:</strong> When you specify multiple comma-separated values on an <code>animation-*</code> property, they will be assigned to the animations specified in the {{cssxref("animation-name")}} property in different ways depending on how many there are. For more information, see <a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations#setting_multiple_animation_property_values">Setting multiple animation property values</a>.</p>
-</div>
+  - : The time offset, from the moment at which the animation is applied to the element, at which the animation should begin. This may be specified in either seconds (`s`) or milliseconds (`ms`). The unit is required.
 
-<h2 id="Formal_definition">Formal definition</h2>
+    A positive value indicates that the animation should begin after the specified amount of time has elapsed. A value of `0s`, which is the default, indicates that the animation should begin as soon as it's applied.
 
-<p>{{cssinfo}}</p>
+    A negative value causes the animation to begin immediately, but partway through its cycle. For example, if you specify `-1s` as the animation delay time, the animation will begin immediately but will start 1 second into the animation sequence. If you specify a negative value for the animation delay, but the starting value is implicit, the starting value is taken from the moment the animation is applied to the element.
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+> **Note:** When you specify multiple comma-separated values on an `animation-*` property, they will be assigned to the animations specified in the {{cssxref("animation-name")}} property in different ways depending on how many there are. For more information, see [Setting multiple animation property values](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations#setting_multiple_animation_property_values).
+
+## Formal definition
+
+{{cssinfo}}
+
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="The_animation_has_a_delay_of_2_seconds">The animation has a delay of 2 seconds</h3>
+### The animation has a delay of 2 seconds
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="box"&gt;&lt;/div&gt;</pre>
+```html
+<div class="box"></div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.box {
+```css
+.box {
   background-color: rebeccapurple;
   border-radius: 10px;
   width: 100px;
@@ -84,23 +85,22 @@ animation-delay: unset;
   100% {
     transform: rotate(360deg);
   }
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Examples","100%","250")}}</p>
+{{EmbedLiveSample("Examples","100%","250")}}
 
-<p>See <a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations">CSS animations</a> for examples.</p>
+See [CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations) for examples.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations" title="Tutorial about CSS animations">Using CSS animations</a></li>
- <li>JavaScript {{domxref("AnimationEvent")}} API</li>
-</ul>
+- [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations "Tutorial about CSS animations")
+- JavaScript {{domxref("AnimationEvent")}} API

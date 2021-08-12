@@ -9,51 +9,52 @@ tags:
   - Selector
 browser-compat: css.selectors.-webkit-outer-spin-button
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<p>The <strong><code>::-webkit-outer-spin-button</code></strong> CSS pseudo-element is used to style the outer part of the spinner button of number picker {{htmlelement("input")}} elements.</p>
+The **`::-webkit-outer-spin-button`** CSS pseudo-element is used to style the outer part of the spinner button of number picker {{htmlelement("input")}} elements.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">::-webkit-outer-spin-button</pre>
+```css
+::-webkit-outer-spin-button
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<div class="notecard note">
-<p><strong>Note:</strong> These examples only works on browsers based on WebKit or Blink.</p>
-</div>
+> **Note:** These examples only works on browsers based on WebKit or Blink.
 
-<h3 id="Hiding_the_spinner">Hiding the spinner</h3>
+### Hiding the spinner
 
-<p>This example uses <code>input::-webkit-outer-spin-button</code> to find {{HTMLElement("input")}} elements' spinner widgets and set their <code>-webkit-appearance</code> to <code>none</code>, thus hiding them.</p>
+This example uses `input::-webkit-outer-spin-button` to find {{HTMLElement("input")}} elements' spinner widgets and set their `-webkit-appearance` to `none`, thus hiding them.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;input type="number"&gt;
-</pre>
+```html
+<input type="number">
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">input::-webkit-outer-spin-button {
+```css
+input::-webkit-outer-spin-button {
   -webkit-appearance: none;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Hiding_the_spinner", 200, 30)}}</p>
+{{EmbedLiveSample("Hiding_the_spinner", 200, 30)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any standard.</p>
+Not part of any standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("::-webkit-inner-spin-button")}}</li>
- <li>{{cssxref("::-webkit-textfield-decoration-container")}}</li>
- <li><a href="http://trac.webkit.org/wiki/Styling%20Form%20Controls#inputelement">Styling Form Controls – WebKit</a></li>
-</ul>
+- {{cssxref("::-webkit-inner-spin-button")}}
+- {{cssxref("::-webkit-textfield-decoration-container")}}
+- [Styling Form Controls – WebKit](http://trac.webkit.org/wiki/Styling%20Form%20Controls#inputelement)

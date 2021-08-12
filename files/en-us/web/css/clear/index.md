@@ -6,35 +6,35 @@ tags:
   - CSS Positioning
   - CSS Property
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.clear
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>clear</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets whether an element must be moved below (cleared) <a href="/en-US/docs/Web/CSS/float">floating</a> elements that precede it. The <code>clear</code> property applies to floating and non-floating elements.</p>
+The **`clear`** [CSS](/en-US/docs/Web/CSS) property sets whether an element must be moved below (cleared) [floating](/en-US/docs/Web/CSS/float) elements that precede it. The `clear` property applies to floating and non-floating elements.
 
-<div>{{EmbedInteractiveExample("pages/css/clear.html")}}</div>
+{{EmbedInteractiveExample("pages/css/clear.html")}}
 
-<p>When applied to non-floating blocks, it moves the <a href="/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#border_area">border edge</a> of the element down until it is below the <a href="/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#margin_area">margin edge</a> of all relevant floats. The non-floated block's top margin collapses.</p>
+When applied to non-floating blocks, it moves the [border edge](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#border_area) of the element down until it is below the [margin edge](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#margin_area) of all relevant floats. The non-floated block's top margin collapses.
 
-<p>Vertical margins between two floated elements on the other hand will not collapse. When applied to floating elements, the margin edge of the bottom element is moved below the margin edge of all relevant floats. This affects the position of later floats, since later floats cannot be positioned higher than earlier ones.</p>
+Vertical margins between two floated elements on the other hand will not collapse. When applied to floating elements, the margin edge of the bottom element is moved below the margin edge of all relevant floats. This affects the position of later floats, since later floats cannot be positioned higher than earlier ones.
 
-<p>The floats that are relevant to be cleared are the earlier floats within the same <a href="/en-US/docs/Web/Guide/CSS/Block_formatting_context">block formatting context</a>.</p>
+The floats that are relevant to be cleared are the earlier floats within the same [block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context).
 
-<div class="note">
-<p><strong>Note:</strong> If an element contains only floated elements, its height collapses to nothing. If you want it to always be able to resize, so that it contains floating elements inside it, you need to self-clear its children. This is called <strong>clearfix</strong>, and one way to do it is to add <code>clear</code> to a replaced {{cssxref("::after")}} <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-element</a> on it.</p>
+> **Note:** If an element contains only floated elements, its height collapses to nothing. If you want it to always be able to resize, so that it contains floating elements inside it, you need to self-clear its children. This is called **clearfix**, and one way to do it is to add `clear` to a replaced {{cssxref("::after")}} [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) on it.
+>
+> ```css
+> #container::after {
+>   content: "";
+>   display: block;
+>   clear: both;
+> }
+> ```
 
-<pre class="brush: css">#container::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-</pre>
-</div>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush: css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 clear: none;
 clear: left;
 clear: right;
@@ -47,49 +47,49 @@ clear: inherit;
 clear: initial;
 clear: revert;
 clear: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>none</code></dt>
- <dd>Is a keyword indicating that the element is <em>not</em> moved down to clear past floating elements.</dd>
- <dt><code>left</code></dt>
- <dd>Is a keyword indicating that the element is moved down to clear past <em>left</em> floats.</dd>
- <dt><code>right</code></dt>
- <dd>Is a keyword indicating that the element is moved down to clear past <em>right</em> floats.</dd>
- <dt><code>both</code></dt>
- <dd>Is a keyword indicating that the element is moved down to clear past <em>both</em> left and right floats.</dd>
- <dt><code>inline-start</code></dt>
- <dd>Is a keyword indicating that the element is moved down to clear floats on <em>start side of its containing block</em>, that is the <em>left</em> floats on ltr scripts and the <em>right</em> floats on rtl scripts.</dd>
- <dt><code>inline-end</code></dt>
- <dd>Is a keyword indicating that the element is moved down to clear floats on <em>end side of its containing block</em>, that is the <em>right</em> floats on ltr scripts and the <em>left</em> floats on rtl scripts.</dd>
-</dl>
+- `none`
+  - : Is a keyword indicating that the element is _not_ moved down to clear past floating elements.
+- `left`
+  - : Is a keyword indicating that the element is moved down to clear past _left_ floats.
+- `right`
+  - : Is a keyword indicating that the element is moved down to clear past _right_ floats.
+- `both`
+  - : Is a keyword indicating that the element is moved down to clear past _both_ left and right floats.
+- `inline-start`
+  - : Is a keyword indicating that the element is moved down to clear floats on _start side of its containing block_, that is the _left_ floats on ltr scripts and the _right_ floats on rtl scripts.
+- `inline-end`
+  - : Is a keyword indicating that the element is moved down to clear floats on _end side of its containing block_, that is the _right_ floats on ltr scripts and the _left_ floats on rtl scripts.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3>clear: left</h3>
+### clear: left
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-  &lt;p class="black"&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor.&lt;/p&gt;
-  &lt;p class="red"&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/p&gt;
-  &lt;p class="left"&gt;This paragraph clears left.&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="wrapper">
+  <p class="black">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor.</p>
+  <p class="red">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+  <p class="left">This paragraph clears left.</p>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.wrapper{
+```css
+.wrapper{
   border:1px solid black;
   padding:10px;
 }
@@ -113,24 +113,26 @@ clear: unset;
 p {
   width: 50%;
 }
-</pre>
+```
 
-<p>{{ EmbedLiveSample('clear_left','100%','250') }}</p>
+{{ EmbedLiveSample('clear_left','100%','250') }}
 
-<h3>clear: right</h3>
+### clear: right
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-  &lt;p class="black"&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor.&lt;/p&gt;
-  &lt;p class="red"&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/p&gt;
-  &lt;p class="right"&gt;This paragraph clears right.&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="wrapper">
+  <p class="black">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor.</p>
+  <p class="red">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+  <p class="right">This paragraph clears right.</p>
+</div>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.wrapper{
+```css
+.wrapper{
   border:1px solid black;
   padding:10px;
 }
@@ -153,24 +155,27 @@ p {
 }
 p {
   width: 50%;
-}</pre>
+}
+```
 
-<p>{{ EmbedLiveSample('clear_right','100%','250') }}</p>
+{{ EmbedLiveSample('clear_right','100%','250') }}
 
-<h3>clear: both</h3>
+### clear: both
 
-<h4 id="HTML_3">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-  &lt;p class="black"&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor. Fusce pulvinar lacus ac dui.&lt;/p&gt;
-  &lt;p class="red"&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor.&lt;/p&gt;
-  &lt;p class="both"&gt;This paragraph clears both.&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="wrapper">
+  <p class="black">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor. Fusce pulvinar lacus ac dui.</p>
+  <p class="red">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor.</p>
+  <p class="both">This paragraph clears both.</p>
+</div>
+```
 
-<h4 id="CSS_3">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.wrapper{
+```css
+.wrapper{
   border:1px solid black;
   padding:10px;
 }
@@ -193,20 +198,19 @@ p {
 }
 p {
   width: 45%;
-}</pre>
+}
+```
 
-<p>{{ EmbedLiveSample('clear_both','100%','300') }}</p>
+{{ EmbedLiveSample('clear_both','100%','300') }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">CSS basic box model</a></li>
-</ul>
+- [CSS basic box model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)

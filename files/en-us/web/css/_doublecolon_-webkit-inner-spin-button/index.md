@@ -1,6 +1,6 @@
 ---
 title: '::-webkit-inner-spin-button'
-slug: 'Web/CSS/::-webkit-inner-spin-button'
+slug: Web/CSS/::-webkit-inner-spin-button
 tags:
   - CSS
   - NeedsBrowserCompatibility
@@ -11,49 +11,52 @@ tags:
   - Selector
 browser-compat: css.selectors.-webkit-inner-spin-button
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<p>The <strong><code>::-webkit-inner-spin-button</code></strong> CSS pseudo-element is used to style the inner part of the spinner button of number picker input elements.</p>
+The **`::-webkit-inner-spin-button`** CSS pseudo-element is used to style the inner part of the spinner button of number picker input elements.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">::-webkit-inner-spin-button</pre>
+```css
+::-webkit-inner-spin-button
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>These examples work only in browsers based on WebKit and Blink.</p>
+These examples work only in browsers based on WebKit and Blink.
 
-<h3 id="Changing_the_cursor_in_the_spin_controls">Changing the cursor in the spin controls</h3>
+### Changing the cursor in the spin controls
 
-<p>In this example, the CSS {{cssxref("cursor")}} is changed to <code>pointer</code> whenever the cursor is positioned over the inner part of the input's spin controls.</p>
+In this example, the CSS {{cssxref("cursor")}} is changed to `pointer` whenever the cursor is positioned over the inner part of the input's spin controls.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;input type="number"&gt;
-</pre>
+```html
+<input type="number">
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">input[type=number]::-webkit-inner-spin-button {
+```css
+input[type=number]::-webkit-inner-spin-button {
   cursor: pointer;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Changing_the_cursor_in_the_spin_controls", 200, 30)}}</p>
+{{EmbedLiveSample("Changing_the_cursor_in_the_spin_controls", 200, 30)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any standard.</p>
+Not part of any standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("::-webkit-outer-spin-button")}}</li>
- <li>{{cssxref("::-webkit-textfield-decoration-container")}}</li>
- <li><a href="http://trac.webkit.org/wiki/Styling%20Form%20Controls#inputelement">Styling Form Controls – WebKit</a></li>
-</ul>
+- {{cssxref("::-webkit-outer-spin-button")}}
+- {{cssxref("::-webkit-textfield-decoration-container")}}
+- [Styling Form Controls – WebKit](http://trac.webkit.org/wiki/Styling%20Form%20Controls#inputelement)

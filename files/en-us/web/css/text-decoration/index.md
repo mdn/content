@@ -6,31 +6,30 @@ tags:
   - CSS Property
   - CSS Text Decoration
   - Reference
-  - 'recipe:css-shorthand-property'
+  - recipe:css-shorthand-property
 browser-compat: css.properties.text-decoration
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>text-decoration</code></strong> <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand</a> <a href="/en-US/docs/Web/CSS">CSS</a> property sets the appearance of decorative lines on text. It is a shorthand for {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-style")}}, and the newer {{cssxref("text-decoration-thickness")}} property.</p>
+The **`text-decoration`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets the appearance of decorative lines on text. It is a shorthand for {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-style")}}, and the newer {{cssxref("text-decoration-thickness")}} property.
 
-<div>{{EmbedInteractiveExample("pages/css/text-decoration.html")}}</div>
+{{EmbedInteractiveExample("pages/css/text-decoration.html")}}
 
-<p>Text decorations are drawn across descendant text elements. This means that if an element specifies a text decoration, then a child element can't remove the decoration. For example, in the markup <code>&lt;p&gt;This text has &lt;em&gt;some emphasized words&lt;/em&gt; in it.&lt;/p&gt;</code>, the style rule <code>p { text-decoration: underline; }</code> would cause the entire paragraph to be underlined. The style rule <code>em { text-decoration: none; }</code> would not cause any change; the entire paragraph would still be underlined. However, the rule <code>em { text-decoration: overline; }</code> would cause a second decoration to appear on "some emphasized words".</p>
+Text decorations are drawn across descendant text elements. This means that if an element specifies a text decoration, then a child element can't remove the decoration. For example, in the markup `<p>This text has <em>some emphasized words</em> in it.</p>`, the style rule `p { text-decoration: underline; }` would cause the entire paragraph to be underlined. The style rule `em { text-decoration: none; }` would not cause any change; the entire paragraph would still be underlined. However, the rule `em { text-decoration: overline; }` would cause a second decoration to appear on "some emphasized words".
 
-<h2 id="Constituent_properties">Constituent properties</h2>
+## Constituent properties
 
-<p>This property is a shorthand for the following CSS properties:</p>
+This property is a shorthand for the following CSS properties:
 
-<ul>
-	<li><a href="/en-US/docs/Web/CSS/text-decoration-color"><code>text-decoration-color</code></a></li>
-	<li><a href="/en-US/docs/Web/CSS/text-decoration-line"><code>text-decoration-line</code></a></li>
-	<li><a href="/en-US/docs/Web/CSS/text-decoration-style"><code>text-decoration-style</code></a></li>
-	<li><a href="/en-US/docs/Web/CSS/text-decoration-thickness"><code>text-decoration-thickness</code></a></li>
-</ul>
+- [`text-decoration-color`](/en-US/docs/Web/CSS/text-decoration-color)
+- [`text-decoration-line`](/en-US/docs/Web/CSS/text-decoration-line)
+- [`text-decoration-style`](/en-US/docs/Web/CSS/text-decoration-style)
+- [`text-decoration-thickness`](/en-US/docs/Web/CSS/text-decoration-thickness)
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">text-decoration: underline;
+```css
+text-decoration: underline;
 text-decoration: overline red;
 text-decoration: none;
 
@@ -38,36 +37,36 @@ text-decoration: none;
 text-decoration: inherit;
 text-decoration: initial;
 text-decoration: revert;
-text-decoration: unset;</pre>
+text-decoration: unset;
+```
 
-<p>The <code>text-decoration</code> property is specified as one or more space-separated values representing the various longhand text-decoration properties.</p>
+The `text-decoration` property is specified as one or more space-separated values representing the various longhand text-decoration properties.
 
-<h3 id="values">Values</h3>
+### Values
 
-<dl>
-	<dt>{{cssxref("text-decoration-line")}}</dt>
-	<dd>Sets the kind of decoration used, such as <code>underline</code> or <code>line-through</code>.</dd>
-	<dt>{{cssxref("text-decoration-color")}}</dt>
-	<dd>Sets the color of the decoration.</dd>
-	<dt>{{cssxref("text-decoration-style")}}</dt>
-	<dd>Sets the style of the line used for the decoration, such as <code>solid</code>, <code>wavy</code>, or <code>dashed</code>.</dd>
-	<dt>{{cssxref("text-decoration-thickness")}}</dt>
-	<dd>Sets the thickness of the line used for the decoration.</dd>
-</dl>
+- {{cssxref("text-decoration-line")}}
+  - : Sets the kind of decoration used, such as `underline` or `line-through`.
+- {{cssxref("text-decoration-color")}}
+  - : Sets the color of the decoration.
+- {{cssxref("text-decoration-style")}}
+  - : Sets the style of the line used for the decoration, such as `solid`, `wavy`, or `dashed`.
+- {{cssxref("text-decoration-thickness")}}
+  - : Sets the thickness of the line used for the decoration.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Demonstration_of_text-decoration_values">Demonstration of text-decoration values</h3>
+### Demonstration of text-decoration values
 
-<pre class="brush: css">.under {
+```css
+.under {
   text-decoration: underline red;
 }
 
@@ -94,34 +93,33 @@ text-decoration: unset;</pre>
 .blink {
   text-decoration: blink;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;p class="under"&gt;This text has a line underneath it.&lt;/p&gt;
-&lt;p class="over"&gt;This text has a line over it.&lt;/p&gt;
-&lt;p class="line"&gt;This text has a line going through it.&lt;/p&gt;
-&lt;p&gt;This &lt;a class="plain" href="#"&gt;link will not be underlined&lt;/a&gt;,
+```html
+<p class="under">This text has a line underneath it.</p>
+<p class="over">This text has a line over it.</p>
+<p class="line">This text has a line going through it.</p>
+<p>This <a class="plain" href="#">link will not be underlined</a>,
     as links generally are by default. Be careful when removing
     the text decoration on anchors since users often depend on
-    the underline to denote hyperlinks.&lt;/p&gt;
-&lt;p class="underover"&gt;This text has lines above &lt;em&gt;and&lt;/em&gt; below it.&lt;/p&gt;
-&lt;p class="thick"&gt;This text has a really thick purple underline in supporting browsers.&lt;/p&gt;
-&lt;p class="blink"&gt;This text might blink for you,
-    depending on the browser you use.&lt;/p&gt;
-</pre>
+    the underline to denote hyperlinks.</p>
+<p class="underover">This text has lines above <em>and</em> below it.</p>
+<p class="thick">This text has a really thick purple underline in supporting browsers.</p>
+<p class="blink">This text might blink for you,
+    depending on the browser you use.</p>
+```
 
-<p>{{EmbedLiveSample('Examples','auto','320')}}</p>
+{{EmbedLiveSample('Examples','auto','320')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>The individual text-decoration properties are {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-color")}}, and {{cssxref("text-decoration-style")}}.</li>
-	<li>The {{cssxref("list-style")}} attribute controls the appearance of items in HTML {{HTMLElement("ol")}} and {{HTMLElement("ul")}} lists.</li>
-</ul>
+- The individual text-decoration properties are {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-color")}}, and {{cssxref("text-decoration-style")}}.
+- The {{cssxref("list-style")}} attribute controls the appearance of items in HTML {{HTMLElement("ol")}} and {{HTMLElement("ul")}} lists.

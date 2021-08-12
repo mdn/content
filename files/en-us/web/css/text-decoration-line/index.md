@@ -6,20 +6,21 @@ tags:
   - CSS Property
   - CSS Text Decoration
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.text-decoration-line
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>text-decoration-line</code></strong> <a href="/en-US/docs/CSS">CSS</a> property sets the kind of decoration that is used on text in an element, such as an underline or overline.</p>
+The **`text-decoration-line`** [CSS](/en-US/docs/CSS) property sets the kind of decoration that is used on text in an element, such as an underline or overline.
 
-<div>{{EmbedInteractiveExample("pages/css/text-decoration-line.html")}}</div>
+{{EmbedInteractiveExample("pages/css/text-decoration-line.html")}}
 
-<p>When setting multiple line-decoration properties at once, it may be more convenient to use the {{cssxref("text-decoration")}} shorthand property instead.</p>
+When setting multiple line-decoration properties at once, it may be more convenient to use the {{cssxref("text-decoration")}} shorthand property instead.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* Single keyword */
+```css
+/* Single keyword */
 text-decoration-line: none;
 text-decoration-line: underline;
 text-decoration-line: overline;
@@ -35,41 +36,42 @@ text-decoration-line: inherit;
 text-decoration-line: initial;
 text-decoration-line: revert;
 text-decoration-line: unset;
-</pre>
+```
 
-<p>The <code>text-decoration-line</code> property is specified as <code>none</code>, or <strong>one or more</strong> space-separated values from the list below.</p>
+The `text-decoration-line` property is specified as `none`, or **one or more** space-separated values from the list below.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>none</code></dt>
- <dd>Produces no text decoration.</dd>
- <dt><code>underline</code></dt>
- <dd>Each line of text has a decorative line beneath it.</dd>
- <dt><code>overline</code></dt>
- <dd>Each line of text has a decorative line above it.</dd>
- <dt><code>line-through</code></dt>
- <dd>Each line of text has a decorative line going through its middle.</dd>
- <dt><code>blink</code> {{deprecated_inline}}</dt>
- <dd>The text blinks (alternates between visible and invisible). Conforming user agents may not blink the text. This value is <strong>deprecated</strong> in favor of <a href="/en-US/docs/Web/CSS/animation">CSS animations</a>.</dd>
-</dl>
+- `none`
+  - : Produces no text decoration.
+- `underline`
+  - : Each line of text has a decorative line beneath it.
+- `overline`
+  - : Each line of text has a decorative line above it.
+- `line-through`
+  - : Each line of text has a decorative line going through its middle.
+- `blink` {{deprecated_inline}}
+  - : The text blinks (alternates between visible and invisible). Conforming user agents may not blink the text. This value is **deprecated** in favor of [CSS animations](/en-US/docs/Web/CSS/animation).
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Basic_example">Basic example</h3>
+### Basic example
 
-<pre class="brush: html">&lt;p class="wavy"&gt;Here's some text with wavy red underline!&lt;/p&gt;
-&lt;p class="both"&gt;This text has lines both above and below it.&lt;/p&gt;</pre>
+```html
+<p class="wavy">Here's some text with wavy red underline!</p>
+<p class="both">This text has lines both above and below it.</p>
+```
 
-<pre class="brush: css">.wavy {
+```css
+.wavy {
   text-decoration-line: underline;
   text-decoration-style: wavy;
   text-decoration-color: red;
@@ -77,20 +79,19 @@ text-decoration-line: unset;
 
 .both {
   text-decoration-line: underline overline;
-}</pre>
+}
+```
 
-<p>{{ EmbedLiveSample('Examples', '', '', '') }}</p>
+{{ EmbedLiveSample('Examples', '', '', '') }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>When setting multiple line-decoration properties at once, it may be more convenient to use the {{cssxref("text-decoration")}} shorthand property instead.</li>
-</ul>
+- When setting multiple line-decoration properties at once, it may be more convenient to use the {{cssxref("text-decoration")}} shorthand property instead.

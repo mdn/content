@@ -1,6 +1,6 @@
 ---
 title: ':focus'
-slug: 'Web/CSS/:focus'
+slug: Web/CSS/:focus
 tags:
   - ':focus'
   - CSS
@@ -11,33 +11,36 @@ tags:
   - Web
 browser-compat: css.selectors.focus
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>:focus</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> represents an element (such as a form input) that has received focus. It is generally triggered when the user clicks or taps on an element or selects it with the keyboard's <kbd>Tab</kbd> key.</p>
+The **`:focus`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents an element (such as a form input) that has received focus. It is generally triggered when the user clicks or taps on an element or selects it with the keyboard's <kbd>Tab</kbd> key.
 
-<pre class="brush: css no-line-numbers">/* Selects any &lt;input&gt; when focused */
+```css
+/* Selects any <input> when focused */
 input:focus {
   color: red;
-}</pre>
+}
+```
 
-<div class="notecard note">
-<p><strong>Note:</strong> This pseudo-class applies only to the focused element itself. Use {{CSSxRef(":focus-within")}} if you want to select an element that <em>contains</em> a focused element.</p>
-</div>
+> **Note:** This pseudo-class applies only to the focused element itself. Use {{CSSxRef(":focus-within")}} if you want to select an element that _contains_ a focused element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
 {{CSSSyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html no-line-numbers">&lt;div&gt;&lt;input class="red-input" value="I'll be red when focused."&gt;&lt;/div&gt;
-&lt;div&gt;&lt;input class="blue-input" value="I'll be blue when focused."&gt;&lt;/div&gt</pre>
+```html
+<div><input class="red-input" value="I'll be red when focused."></div>
+<div><input class="blue-input" value="I'll be blue when focused."></div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.red-input:focus {
+```css
+.red-input:focus {
   background: yellow;
   color: red;
 }
@@ -45,39 +48,34 @@ input:focus {
 .blue-input:focus {
   background: yellow;
   color: blue;
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Examples")}}</p>
+{{EmbedLiveSample("Examples")}}
 
-<h2 id="Accessibility_concerns">Accessibility concerns</h2>
+## Accessibility concerns
 
-<p>Make sure the visual focus indicator can be seen by people with low vision.  This will also benefit anyone use a screen in a brightly lit space (like outside in the sun). <a href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html">WCAG 2.1 SC 1.4.11 Non-Text Contrast</a> requires that the visual focus indicator be at least 3 to 1.</p>
+Make sure the visual focus indicator can be seen by people with low vision.  This will also benefit anyone use a screen in a brightly lit space (like outside in the sun). [WCAG 2.1 SC 1.4.11 Non-Text Contrast](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html) requires that the visual focus indicator be at least 3 to 1.
 
-<ul>
- <li>Accessible Visual Focus Indicators: <a href="https://www.deque.com/blog/give-site-focus-tips-designing-usable-focus-indicators/">Give Your Site Some Focus! Tips for Designing Useful and Usable Focus Indicators</a></li>
-</ul>
+- Accessible Visual Focus Indicators: [Give Your Site Some Focus! Tips for Designing Useful and Usable Focus Indicators](https://www.deque.com/blog/give-site-focus-tips-designing-usable-focus-indicators/)
 
-<h3 id="focus_outline_none"><code>:focus { outline: none; }</code></h3>
+### `:focus { outline: none; }`
 
-<p>Never just remove the focus outline (visible focus indicator) without replacing it with a focus outline that will pass <a href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html">WCAG 2.1 SC 1.4.11 Non-Text Contrast</a>.</p>
+Never just remove the focus outline (visible focus indicator) without replacing it with a focus outline that will pass [WCAG 2.1 SC 1.4.11 Non-Text Contrast](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html).
 
-<ul>
- <li>Quick Tip: <a href="https://a11yproject.com/posts/never-remove-css-outlines/">Never remove CSS outlines</a></li>
-</ul>
+- Quick Tip: [Never remove CSS outlines](https://a11yproject.com/posts/never-remove-css-outlines/)
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{CSSxRef(":focus-visible")}}</li>
- <li>{{CSSxRef(":focus-within")}}</li>
-</ul>
+- {{CSSxRef(":focus-visible")}}
+- {{CSSxRef(":focus-within")}}

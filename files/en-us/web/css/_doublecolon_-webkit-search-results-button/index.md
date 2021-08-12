@@ -10,24 +10,24 @@ tags:
   - Selector
 browser-compat: css.selectors.-webkit-search-results-button
 ---
-<p>{{CSSRef}}{{Non-standard_header}}</p>
+{{CSSRef}}{{Non-standard_header}}
 
-<p>The <strong><code>::-webkit-search-results-button</code></strong> CSS <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-element</a> represents a button (the "search results button") at the left edge of an {{HTMLElement("input")}} of <code>type="search"</code> which when clicked displays a menu which allows the user to choose from previous recent search queries. This button and pseudo-element are non-standard, supported only in WebKit and Blink, hence the vendor prefix. The search results button is only shown on search {{HTMLElement("input")}} elements that have a <a href="/en-US/docs/Web/HTML/Element/input#attr-results"><code>results</code></a> attribute.</p>
+The **`::-webkit-search-results-button`** CSS [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents a button (the "search results button") at the left edge of an {{HTMLElement("input")}} of `type="search"` which when clicked displays a menu which allows the user to choose from previous recent search queries. This button and pseudo-element are non-standard, supported only in WebKit and Blink, hence the vendor prefix. The search results button is only shown on search {{HTMLElement("input")}} elements that have a [`results`](/en-US/docs/Web/HTML/Element/input#attr-results) attribute.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css"> <em>selector</em>::-webkit-search-results-button</pre>
+```css
+ selector::-webkit-search-results-button
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any standard.</p>
+Not part of any standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref('::-webkit-search-cancel-button')}}</li>
-</ul>
+- {{cssxref('::-webkit-search-cancel-button')}}

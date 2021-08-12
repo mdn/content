@@ -10,33 +10,33 @@ tags:
   - Reference
   - Selector
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<p>The <strong><code>:-moz-suppressed</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> is a <a href="/en-US/docs/Web/CSS/Mozilla_Extensions">Mozilla extension</a> that matches elements representing images that were suppressed because loading images from the specified site has been blocked.</p>
+The **`:-moz-suppressed`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) is a [Mozilla extension](/en-US/docs/Web/CSS/Mozilla_Extensions) that matches elements representing images that were suppressed because loading images from the specified site has been blocked.
 
-<div class="note">
-<p><strong>Note:</strong> This selector is mainly intended to be used by theme developers.</p>
-</div>
+> **Note:** This selector is mainly intended to be used by theme developers.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">:-moz-suppressed</pre>
+```css
+:-moz-suppressed
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Styling_elements_that_have_been_blocked">Styling elements that have been blocked</h3>
+### Styling elements that have been blocked
 
-<pre class="brush: css">:-moz-suppressed {
+```css
+:-moz-suppressed {
   background: yellow;
   padding: 8px;
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any standard.</p>
+Not part of any standard.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref(":-moz-broken")}}, {{cssxref(":-moz-loading")}}, {{cssxref(":-moz-user-disabled")}}</li>
-</ul>
+- {{cssxref(":-moz-broken")}}, {{cssxref(":-moz-loading")}}, {{cssxref(":-moz-user-disabled")}}

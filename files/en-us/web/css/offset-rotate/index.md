@@ -8,22 +8,21 @@ tags:
   - Experimental
   - Reference
   - offset-rotate
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.offset-rotate
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>offset-rotate</code></strong> CSS property defines the orientation/direction of the element as it is positioned along the {{cssxref("offset-path")}}.</p>
+The **`offset-rotate`** CSS property defines the orientation/direction of the element as it is positioned along the {{cssxref("offset-path")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/offset-rotate.html")}}</div>
+{{EmbedInteractiveExample("pages/css/offset-rotate.html")}}
 
-<div class="notecard note">
-<p><strong>Note:</strong> Early versions of the spec called this property <code>motion-rotation</code>.</p>
-</div>
+> **Note:** Early versions of the spec called this property `motion-rotation`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">/* Follow the path direction, with optional additional angle */
+```css
+/* Follow the path direction, with optional additional angle */
 offset-rotate: auto;
 offset-rotate: auto 45deg;
 
@@ -38,47 +37,42 @@ offset-rotate: .5turn;
 offset-rotate: inherit;
 offset-rotate: initial;
 offset-rotate: revert;
-offset-rotate: unset;</pre>
+offset-rotate: unset;
+```
 
-<dl>
- <dt><code><dfn>auto</dfn></code></dt>
- <dd>
- <p>The element is rotated by the angle of the direction of the {{cssxref("offset-path")}}, relative to the positive x-axis. This is the default value.</p>
- </dd>
- <dt><code>{{cssxref("&lt;angle&gt;")}}</code></dt>
- <dd>
- <p>The element has a constant clockwise rotation transformation applied to it by the specified rotation angle.</p>
- </dd>
- <dt><code><dfn>auto &lt;angle&gt;</dfn></code></dt>
- <dd>
- <p>If <code>auto</code> is followed by an {{cssxref("&lt;angle&gt;")}}, the computed value of the angle is added to the computed value of <code>auto</code>.</p>
- </dd>
- <dt><code><dfn>reverse</dfn></code></dt>
- <dd>
- <p>The element is rotated similar to <code>auto</code>, except it faces the opposite direction. It is the same as specifying a value of <code>auto 180deg</code>.</p>
- </dd>
-</dl>
-<h2 id="Formal_definition">Formal definition</h2>
+- `auto`
+  - : The element is rotated by the angle of the direction of the {{cssxref("offset-path")}}, relative to the positive x-axis. This is the default value.
+- `{{cssxref("&lt;angle&gt;")}}`
+  - : The element has a constant clockwise rotation transformation applied to it by the specified rotation angle.
+- `auto <angle>`
+  - : If `auto` is followed by an {{cssxref("&lt;angle&gt;")}}, the computed value of the angle is added to the computed value of `auto`.
+- `reverse`
+  - : The element is rotated similar to `auto`, except it faces the opposite direction. It is the same as specifying a value of `auto 180deg`.
 
-<p>{{cssinfo}}</p>
+## Formal definition
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+{{cssinfo}}
+
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_element_orientation_along_its_offset_path">Setting element orientation along its offset path</h3>
+### Setting element orientation along its offset path
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div&gt;&lt;/div&gt;
-&lt;div&gt;&lt;/div&gt;
-&lt;div&gt;&lt;/div&gt;</pre>
+```html
+<div></div>
+<div></div>
+<div></div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   width: 40px;
   height: 40px;
   background: #2BC4A2;
@@ -102,26 +96,25 @@ div:nth-child(3) {
   100% {
     offset-distance: 100%;
   }
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Setting_element_orientation_along_its_offset_path', '100%', '200')}}</p>
+{{EmbedLiveSample('Setting_element_orientation_along_its_offset_path', '100%', '200')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("offset")}}</li>
- <li>{{cssxref("offset-anchor")}}</li>
- <li>{{cssxref("offset-distance")}}</li>
- <li>{{cssxref("offset-path")}}</li>
- <li>{{cssxref("offset-position")}}</li>
-</ul>
+- {{cssxref("offset")}}
+- {{cssxref("offset-anchor")}}
+- {{cssxref("offset-distance")}}
+- {{cssxref("offset-path")}}
+- {{cssxref("offset-position")}}

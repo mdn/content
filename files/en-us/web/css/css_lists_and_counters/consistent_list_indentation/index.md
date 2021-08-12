@@ -6,95 +6,97 @@ tags:
   - Guide
   - NeedsUpdate
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>One of the most common style changes made to lists is a change in the indentation distance—that is, how far the list items are pushed over to the right. This often leads to frustration, because what works in one browser often doesn't have the same effect in another. For example, if you declare that lists have no left margin, they move over in Internet Explorer, but sit stubbornly in place in Gecko-based browsers. This article will help you understand the problems that can occur and how to avoid them.</p>
+One of the most common style changes made to lists is a change in the indentation distance—that is, how far the list items are pushed over to the right. This often leads to frustration, because what works in one browser often doesn't have the same effect in another. For example, if you declare that lists have no left margin, they move over in Internet Explorer, but sit stubbornly in place in Gecko-based browsers. This article will help you understand the problems that can occur and how to avoid them.
 
-<p> To understand why this is the case, and more importantly how to avoid the problem altogether, it's necessary to examine the details of list construction.</p>
+To understand why this is the case, and more importantly how to avoid the problem altogether, it's necessary to examine the details of list construction.
 
-<h2 id="Making_a_List">Making a List</h2>
+## Making a List
 
-<p>First, we consider a single, pure list item. This list item has no marker (otherwise known as a "bullet") and is not yet part of a list itself. It hangs alone in the void, simple and unadorned, as shown in Figure 1.</p>
+First, we consider a single, pure list item. This list item has no marker (otherwise known as a "bullet") and is not yet part of a list itself. It hangs alone in the void, simple and unadorned, as shown in Figure 1.
 
-<p><img alt="Figure 1" class="internal" src="consistent-list-indentation-figure1.gif"></p>
+![Figure 1](consistent-list-indentation-figure1.gif)
 
-<p>That dotted red border represents the outer edges of the content area of the list item. Remember that, at this point, the list item has no padding or borders. If we add two more list items, we get a result like that shown in Figure 2.</p>
+That dotted red border represents the outer edges of the content area of the list item. Remember that, at this point, the list item has no padding or borders. If we add two more list items, we get a result like that shown in Figure 2.
 
-<p><img alt="Figure 2" class="internal" src="consistent-list-indentation-figure2.gif"></p>
+![Figure 2](consistent-list-indentation-figure2.gif)
 
-<p>Now we wrap these in a parent element; in this case, we'll wrap them in an unordered list (i.e., <code>&lt;ul&gt;</code>). According to the CSS box model, the list items' boxes must be displayed within the parent element's content area. Since that parent has no padding or margins yet, we get the situation shown in Figure 3.</p>
+Now we wrap these in a parent element; in this case, we'll wrap them in an unordered list (i.e., `<ul>`). According to the CSS box model, the list items' boxes must be displayed within the parent element's content area. Since that parent has no padding or margins yet, we get the situation shown in Figure 3.
 
-<p><img alt="Figure 3" class="internal" src="consistent-list-indentation-figure3.gif"></p>
+![Figure 3](consistent-list-indentation-figure3.gif)
 
-<p>Here, the dotted blue border shows us the edges of the <code>&lt;ul&gt;</code> element's content area. Since we have no padding for the <code>&lt;ul&gt;</code> element, its content wraps snugly around the three list items.</p>
+Here, the dotted blue border shows us the edges of the `<ul>` element's content area. Since we have no padding for the `<ul>` element, its content wraps snugly around the three list items.
 
-<p>Now we add the list item markers. Since this is an unordered list, we'll add traditional filled-circle "bullets," as shown in Figure 4.</p>
+Now we add the list item markers. Since this is an unordered list, we'll add traditional filled-circle "bullets," as shown in Figure 4.
 
-<p><img alt="Figure 4" class="internal" src="consistent-list-indentation-figure4.gif"></p>
+![Figure 4](consistent-list-indentation-figure4.gif)
 
-<p>Visually, the markers are <em>outside</em> the content area of the <code>&lt;ul&gt;</code>, but that's not the important part here. What's key is that the markers are placed outside the "principal box" of the <code>&lt;li&gt;</code> elements, not the <code>&lt;ul&gt;</code>. They're sort of like appendages to the list items, hanging outside the content-area of the <code>&lt;li&gt;</code> but still attached to the <code>&lt;li&gt;</code>.</p>
+Visually, the markers are _outside_ the content area of the `<ul>`, but that's not the important part here. What's key is that the markers are placed outside the "principal box" of the `<li>` elements, not the `<ul>`. They're sort of like appendages to the list items, hanging outside the content-area of the `<li>` but still attached to the `<li>`.
 
-<p>This is why, in every browser except Internet Explorer for Windows, markers are placed outside any border set for an <code>&lt;li&gt;</code> element, assuming the value of <code>list-style-position</code> is <code>outside</code>. If it's changed to <code>inside</code>, then the markers are brought inside the <code>&lt;li&gt;</code>'s content, as though they're an inline box placed at the very beginning of the <code>&lt;li&gt;</code>.</p>
+This is why, in every browser except Internet Explorer for Windows, markers are placed outside any border set for an `<li>` element, assuming the value of `list-style-position` is `outside`. If it's changed to `inside`, then the markers are brought inside the `<li>`'s content, as though they're an inline box placed at the very beginning of the `<li>`.
 
-<h2 id="Indenting_It_Twice">Indenting It Twice</h2>
+## Indenting It Twice
 
-<p>So how will all this appear in a document? At the moment, we have a situation analogous to these styles:</p>
+So how will all this appear in a document? At the moment, we have a situation analogous to these styles:
 
-<pre class="brush:css">ul, li {margin-left: 0; padding-left: 0;}</pre>
+```css
+ul, li {margin-left: 0; padding-left: 0;}
+```
 
-<p>If we dropped this list into a document as-is, there would be no apparent indentation and the markers would be in danger of falling off the left edge of the browser window.</p>
+If we dropped this list into a document as-is, there would be no apparent indentation and the markers would be in danger of falling off the left edge of the browser window.
 
-<p> To avoid this and get some indentation, there are only three options available to browser implementors.</p>
+To avoid this and get some indentation, there are only three options available to browser implementors.
 
-<ol>
- <li>Give each <code>&lt;li&gt;</code> element a left margin.</li>
- <li>Give the <code>&lt;ul&gt;</code> element a left margin.</li>
- <li>Give the <code>&lt;ul&gt;</code> element some left padding.</li>
-</ol>
+1.  Give each `<li>` element a left margin.
+2.  Give the `<ul>` element a left margin.
+3.  Give the `<ul>` element some left padding.
 
-<p>As it turns out, nobody seems to have used the first option. The second option was taken by Internet Explorer, and Opera. The third was adopted by Firefox.</p>
+As it turns out, nobody seems to have used the first option. The second option was taken by Internet Explorer, and Opera. The third was adopted by Firefox.
 
-<p>Let's look at the two approaches for a moment. In Internet Explorer and Opera, the lists are indented by setting a left margin of 40 pixels on the <code>&lt;ul&gt;</code> element. If we apply a background color to the <code>&lt;ul&gt;</code> element and leave the list item and <code>&lt;ul&gt;</code> borders in place, we get the result shown in Figure 5.</p>
+Let's look at the two approaches for a moment. In Internet Explorer and Opera, the lists are indented by setting a left margin of 40 pixels on the `<ul>` element. If we apply a background color to the `<ul>` element and leave the list item and `<ul>` borders in place, we get the result shown in Figure 5.
 
-<p><img alt="Figure 5" class="internal" src="consistent-list-indentation-figure5.gif"></p>
+![Figure 5](consistent-list-indentation-figure5.gif)
 
-<p>Gecko, on the other hand, sets a left <em>padding</em> of 40 pixels for the <code>&lt;ul&gt;</code> element, so given the exact same styles as were used to produce Figure 5, loading the example into a Gecko-based browser gives us Figure 6.</p>
+Gecko, on the other hand, sets a left _padding_ of 40 pixels for the `<ul>` element, so given the exact same styles as were used to produce Figure 5, loading the example into a Gecko-based browser gives us Figure 6.
 
-<p><img alt="Figure 6" class="internal" src="consistent-list-indentation-figure6.gif"></p>
+![Figure 6](consistent-list-indentation-figure6.gif)
 
-<p>As we can see, the markers remain attached to the <code>&lt;li&gt;</code> elements, no matter where they are. The difference is entirely in how the <code>&lt;ul&gt;</code> is styled. We can only see the difference if we try to set a background or border on the <code>&lt;ul&gt;</code> element.</p>
+As we can see, the markers remain attached to the `<li>` elements, no matter where they are. The difference is entirely in how the `<ul>` is styled. We can only see the difference if we try to set a background or border on the `<ul>` element.
 
-<h2 id="Finding_Consistency">Finding Consistency</h2>
+## Finding Consistency
 
-<p>Boil it all down, and what we're left with is this: if you want consistent rendering of lists between Gecko, Internet Explorer, and Opera, you need to set <strong>both</strong> the left margin and left padding of the <code>&lt;ul&gt;</code> element. We can ignore <code>&lt;li&gt;</code> altogether for these purposes. If you want to reproduce the default display in Netscape 6.x, you write:</p>
+Boil it all down, and what we're left with is this: if you want consistent rendering of lists between Gecko, Internet Explorer, and Opera, you need to set **both** the left margin and left padding of the `<ul>` element. We can ignore `<li>` altogether for these purposes. If you want to reproduce the default display in Netscape 6.x, you write:
 
-<pre class="brush:css">ul {margin-left: 0; padding-left: 40px;}</pre>
+```css
+ul {margin-left: 0; padding-left: 40px;}
+```
 
-<p>If you're more interested in following the Internet Explorer/Opera model, then:</p>
+If you're more interested in following the Internet Explorer/Opera model, then:
 
-<pre class="brush:css">ul {margin-left: 40px; padding-left: 0;}</pre>
+```css
+ul {margin-left: 40px; padding-left: 0;}
+```
 
-<p>Of course, you can fill in your preferred values. Set both to <code>1.25em</code>, if you like -- there's no reason why you have to stick with pixel-based indentation. If you want to reset lists to have no indentation, then you still have to zero out both padding and margin:</p>
+Of course, you can fill in your preferred values. Set both to `1.25em`, if you like -- there's no reason why you have to stick with pixel-based indentation. If you want to reset lists to have no indentation, then you still have to zero out both padding and margin:
 
-<pre class="brush:css">ul {margin-left: 0; padding-left: 0;}</pre>
+```css
+ul {margin-left: 0; padding-left: 0;}
+```
 
-<p>Remember, though, that in so doing, you'll have the bullets hanging outside the list and its parent element. If the parent is the <code>body</code>, there's a strong chance your bullets will be completely outside the browser window, and thus will not be visible.</p>
+Remember, though, that in so doing, you'll have the bullets hanging outside the list and its parent element. If the parent is the `body`, there's a strong chance your bullets will be completely outside the browser window, and thus will not be visible.
 
-<h2 id="Conclusion">Conclusion</h2>
+## Conclusion
 
-<p>In the end, we can see that none of the browsers mentioned in this article is right or wrong about how they lay out lists. They use different default styles, and that's where the problems creep in. By making sure you style both the left padding and left margin of lists, you can find much greater cross-browser consistency in your list indentation.</p>
+In the end, we can see that none of the browsers mentioned in this article is right or wrong about how they lay out lists. They use different default styles, and that's where the problems creep in. By making sure you style both the left padding and left margin of lists, you can find much greater cross-browser consistency in your list indentation.
 
-<h2 id="Recommendations">Recommendations</h2>
+## Recommendations
 
-<ul>
- <li>When altering the indentation of lists, make sure to set both the padding and margin.</li>
-</ul>
+- When altering the indentation of lists, make sure to set both the padding and margin.
 
-<h2 id="Original_Document_Information">Original Document Information</h2>
+## Original Document Information
 
-<ul>
- <li>Author(s): Eric A. Meyer, Netscape Communications</li>
- <li>Last Updated Date: Published 30 Aug 2002</li>
- <li>Copyright Information: Copyright © 2001-2003 Netscape. All rights reserved.</li>
- <li>Note: This reprinted article was originally part of the DevEdge site.</li>
-</ul>
+- Author(s): Eric A. Meyer, Netscape Communications
+- Last Updated Date: Published 30 Aug 2002
+- Copyright Information: Copyright © 2001-2003 Netscape. All rights reserved.
+- Note: This reprinted article was originally part of the DevEdge site.

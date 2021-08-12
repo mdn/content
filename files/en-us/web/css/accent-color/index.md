@@ -2,27 +2,28 @@
 title: accent-color
 slug: Web/CSS/accent-color
 tags:
-- CSS
-- CSS Property
-- CSS User Interface
-- HTML Colors
-- Input
-- Reference
-- Styling HTML
-- accent-color
-- 'recipe:css-property'
+  - CSS
+  - CSS Property
+  - CSS User Interface
+  - HTML Colors
+  - Input
+  - Reference
+  - Styling HTML
+  - accent-color
+  - recipe:css-property
 browser-compat: css.properties.accent-color
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>accent-color</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets the color of the elements {{Glossary("accent")}}. An accent appears in elements such as {{HTMLElement("input")}} of <code><a href="/en-US/docs/Web/HTML/Element/input/checkbox">type="checkbox"</a></code>, or <code><a href="/en-US/docs/Web/HTML/Element/input/radio">type="radio"</a></code>.</p>
+The **`accent-color`** [CSS](/en-US/docs/Web/CSS) property sets the color of the elements {{Glossary("accent")}}. An accent appears in elements such as {{HTMLElement("input")}} of [`type="checkbox"`](/en-US/docs/Web/HTML/Element/input/checkbox), or [`type="radio"`](/en-US/docs/Web/HTML/Element/input/radio).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 accent-color: auto;
 
-/* &lt;color&gt; values */
+/* <color> values */
 accent-color: red;
 accent-color: #5729e9;
 accent-color: rgb(0, 200, 0);
@@ -32,38 +33,39 @@ accent-color: hsl(228, 4%, 24%);
 accent-color: inherit;
 accent-color: initial;
 accent-color: revert;
-accent-color: unset;</pre>
+accent-color: unset;
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
-  <dt><code>auto</code></dt>
-  <dd>Represents a UA-chosen color, which should match the accent color of the platform, if any.
-  </dd>
-  <dt>{{cssxref("&lt;color&gt;")}}</dt>
-  <dd>Specifies the color to be used as the accent color.</dd>
-</dl>
+- `auto`
+  - : Represents a UA-chosen color, which should match the accent color of the platform, if any.
+- {{cssxref("&lt;color&gt;")}}
+  - : Specifies the color to be used as the accent color.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_a_custom_accent_color">Setting a custom accent color</h3>
+### Setting a custom accent color
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;input type="checkbox" checked /&gt;
-&lt;input type="checkbox" class="custom" checked /&gt;</pre>
+```html
+<input type="checkbox" checked />
+<input type="checkbox" class="custom" checked />
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">input {
+```css
+input {
   accent-color: auto;
   display: block;
   width: 30px;
@@ -73,25 +75,23 @@ accent-color: unset;</pre>
 input.custom {
   accent-color: rebeccapurple;
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Setting_a_custom_accent_color', 500, 200)}}</p>
+{{EmbedLiveSample('Setting_a_custom_accent_color', 500, 200)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{HTMLElement("input")}} element</li>
-  <li><a href="/en-US/docs/Web/HTML/Applying_color">Applying color to HTML elements using CSS</a></li>
-  <li>The {{cssxref("&lt;color&gt;")}} data type</li>
-  <li>Other color-related properties: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}</li>
-</ul>
+- The {{HTMLElement("input")}} element
+- [Applying color to HTML elements using CSS](/en-US/docs/Web/HTML/Applying_color)
+- The {{cssxref("&lt;color&gt;")}} data type
+- Other color-related properties: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}

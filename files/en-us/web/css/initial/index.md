@@ -13,51 +13,53 @@ tags:
   - initial
 browser-compat: css.types.global_keywords.initial
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>initial</code></strong> CSS keyword applies the <a href="/en-US/docs/Web/CSS/initial_value">initial (or default) value</a> of a property to an element. It can be applied to any CSS property. This includes the CSS shorthand {{cssxref("all")}}, with which <code>initial</code> can be used to restore all CSS properties to their initial state.</p>
+The **`initial`** CSS keyword applies the [initial (or default) value](/en-US/docs/Web/CSS/initial_value) of a property to an element. It can be applied to any CSS property. This includes the CSS shorthand {{cssxref("all")}}, with which `initial` can be used to restore all CSS properties to their initial state.
 
-<p>On <a href="/en-US/docs/Web/CSS/inheritance#Inherited_properties">inherited properties</a>, the initial value may be unexpected. You should consider using the {{cssxref("inherit")}}, {{cssxref("unset")}}, or {{cssxref("revert")}} keywords instead.</p>
+On [inherited properties](/en-US/docs/Web/CSS/inheritance#Inherited_properties), the initial value may be unexpected. You should consider using the {{cssxref("inherit")}}, {{cssxref("unset")}}, or {{cssxref("revert")}} keywords instead.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_initial_to_reset_color_for_an_element">Using initial to reset color for an element</h3>
+### Using initial to reset color for an element
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;
-  &lt;span&gt;This text is red.&lt;/span&gt;
-  &lt;em&gt;This text is in the initial color (typically black).&lt;/em&gt;
-  &lt;span&gt;This is red again.&lt;/span&gt;
-&lt;/p&gt;</pre>
+```html
+<p>
+  <span>This text is red.</span>
+  <em>This text is in the initial color (typically black).</em>
+  <span>This is red again.</span>
+</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   color: red;
 }
 
 em {
   color: initial;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Using_initial_to_reset_color_for_an_element')}}</p>
+{{EmbedLiveSample('Using_initial_to_reset_color_for_an_element')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Use {{cssxref("unset")}} to set a property to its inherited value if it inherits, or to its initial value if not.</li>
- <li>Use {{cssxref("revert")}} to reset a property to the value established by the user-agent stylesheet (or by user styles, if any exist).</li>
- <li>Use {{cssxref("inherit")}} to make an element's property the same as its parent.</li>
- <li>The {{cssxref("all")}} property lets you reset all properties to their initial, inherited, reverted, or unset state at once.</li>
-</ul>
+- Use {{cssxref("unset")}} to set a property to its inherited value if it inherits, or to its initial value if not.
+- Use {{cssxref("revert")}} to reset a property to the value established by the user-agent stylesheet (or by user styles, if any exist).
+- Use {{cssxref("inherit")}} to make an element's property the same as its parent.
+- The {{cssxref("all")}} property lets you reset all properties to their initial, inherited, reverted, or unset state at once.

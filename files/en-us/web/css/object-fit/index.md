@@ -9,21 +9,22 @@ tags:
   - Reference
   - css layout
   - object-fit
-  - 'recipe:css-property'
+  - recipe:css-property
   - size
 browser-compat: css.properties.object-fit
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>object-fit</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets how the content of a <a href="/en-US/docs/Web/CSS/Replaced_element">replaced element</a>, such as an {{HTMLElement("img")}} or {{HTMLElement("video")}}, should be resized to fit its container.</p>
+The **`object-fit`** [CSS](/en-US/docs/Web/CSS) property sets how the content of a [replaced element](/en-US/docs/Web/CSS/Replaced_element), such as an {{HTMLElement("img")}} or {{HTMLElement("video")}}, should be resized to fit its container.
 
-<p>You can alter the alignment of the replaced element's content object within the element's box using the {{cssxref("object-position")}} property.</p>
+You can alter the alignment of the replaced element's content object within the element's box using the {{cssxref("object-position")}} property.
 
-<div>{{EmbedInteractiveExample("pages/css/object-fit.html")}}</div>
+{{EmbedInteractiveExample("pages/css/object-fit.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">object-fit: contain;
+```css
+object-fit: contain;
 object-fit: cover;
 object-fit: fill;
 object-fit: none;
@@ -33,69 +34,71 @@ object-fit: scale-down;
 object-fit: inherit;
 object-fit: initial;
 object-fit: revert;
-object-fit: unset;</pre>
+object-fit: unset;
+```
 
-<p>The <code>object-fit</code> property is specified as a single keyword chosen from the list of values below.</p>
+The `object-fit` property is specified as a single keyword chosen from the list of values below.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>contain</code></dt>
- <dd>The replaced content is scaled to maintain its aspect ratio while fitting within the element’s content box. The entire object is made to fill the box, while preserving its aspect ratio, so the object will be <a href="https://en.wikipedia.org/wiki/Letterboxing_(filming)">"letterboxed"</a> if its aspect ratio does not match the aspect ratio of the box.</dd>
- <dt><code>cover</code></dt>
- <dd>The replaced content is sized to maintain its aspect ratio while filling the element’s entire content box. If the object's aspect ratio does not match the aspect ratio of its box, then the object will be clipped to fit.</dd>
- <dt><code>fill</code></dt>
- <dd>The replaced content is sized to fill the element’s content box. The entire object will completely fill the box. If the object's aspect ratio does not match the aspect ratio of its box, then the object will be stretched to fit.</dd>
- <dt><code>none</code></dt>
- <dd>The replaced content is not resized.</dd>
- <dt><code>scale-down</code></dt>
- <dd>The content is sized as if <code>none</code> or <code>contain</code> were specified, whichever would result in a smaller concrete object size.</dd>
-</dl>
+- `contain`
+  - : The replaced content is scaled to maintain its aspect ratio while fitting within the element’s content box. The entire object is made to fill the box, while preserving its aspect ratio, so the object will be ["letterboxed"](<https://en.wikipedia.org/wiki/Letterboxing_(filming)>) if its aspect ratio does not match the aspect ratio of the box.
+- `cover`
+  - : The replaced content is sized to maintain its aspect ratio while filling the element’s entire content box. If the object's aspect ratio does not match the aspect ratio of its box, then the object will be clipped to fit.
+- `fill`
+  - : The replaced content is sized to fill the element’s content box. The entire object will completely fill the box. If the object's aspect ratio does not match the aspect ratio of its box, then the object will be stretched to fit.
+- `none`
+  - : The replaced content is not resized.
+- `scale-down`
+  - : The content is sized as if `none` or `contain` were specified, whichever would result in a smaller concrete object size.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_object-fit_for_an_image">Setting object-fit for an image</h3>
+### Setting object-fit for an image
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;section&gt;
-  &lt;h2&gt;object-fit: fill&lt;/h2&gt;
-  &lt;img class="fill" src="mdn_logo_only_color.png" alt="MDN Logo"&gt;
+```html
+<section>
+  <h2>object-fit: fill</h2>
+  <img class="fill" src="mdn_logo_only_color.png" alt="MDN Logo">
 
-  &lt;img class="fill narrow" src="mdn_logo_only_color.png" alt="MDN Logo"&gt;
+  <img class="fill narrow" src="mdn_logo_only_color.png" alt="MDN Logo">
 
-  &lt;h2&gt;object-fit: contain&lt;/h2&gt;
-  &lt;img class="contain" src="mdn_logo_only_color.png" alt="MDN Logo"&gt;
+  <h2>object-fit: contain</h2>
+  <img class="contain" src="mdn_logo_only_color.png" alt="MDN Logo">
 
-  &lt;img class="contain narrow" src="mdn_logo_only_color.png" alt="MDN Logo"&gt;
+  <img class="contain narrow" src="mdn_logo_only_color.png" alt="MDN Logo">
 
-  &lt;h2&gt;object-fit: cover&lt;/h2&gt;
-  &lt;img class="cover" src="mdn_logo_only_color.png" alt="MDN Logo"&gt;
+  <h2>object-fit: cover</h2>
+  <img class="cover" src="mdn_logo_only_color.png" alt="MDN Logo">
 
-  &lt;img class="cover narrow" src="mdn_logo_only_color.png" alt="MDN Logo"&gt;
+  <img class="cover narrow" src="mdn_logo_only_color.png" alt="MDN Logo">
 
-  &lt;h2&gt;object-fit: none&lt;/h2&gt;
-  &lt;img class="none" src="mdn_logo_only_color.png" alt="MDN Logo"&gt;
+  <h2>object-fit: none</h2>
+  <img class="none" src="mdn_logo_only_color.png" alt="MDN Logo">
 
-  &lt;img class="none narrow" src="mdn_logo_only_color.png" alt="MDN Logo"&gt;
+  <img class="none narrow" src="mdn_logo_only_color.png" alt="MDN Logo">
 
-  &lt;h2&gt;object-fit: scale-down&lt;/h2&gt;
-  &lt;img class="scale-down" src="mdn_logo_only_color.png" alt="MDN Logo"&gt;
+  <h2>object-fit: scale-down</h2>
+  <img class="scale-down" src="mdn_logo_only_color.png" alt="MDN Logo">
 
-  &lt;img class="scale-down narrow" src="mdn_logo_only_color.png" alt="MDN Logo"&gt;
-&lt;/section&gt;</pre>
+  <img class="scale-down narrow" src="mdn_logo_only_color.png" alt="MDN Logo">
+</section>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">h2 {
+```css
+h2 {
   font-family: Courier New, monospace;
   font-size: 1em;
   margin: 1em 0 0.3em;
@@ -132,23 +135,21 @@ img {
 .scale-down {
   object-fit: scale-down;
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Setting_object-fit_for_an_image', 500, 1100) }}</p>
+{{ EmbedLiveSample('Setting_object-fit_for_an_image', 500, 1100) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Other image-related CSS properties: {{cssxref("object-position")}}, {{cssxref("image-orientation")}}, {{cssxref("image-rendering")}}, {{cssxref("image-resolution")}}.</li>
- <li>{{cssxref("background-size")}}</li>
-</ul>
+- Other image-related CSS properties: {{cssxref("object-position")}}, {{cssxref("image-orientation")}}, {{cssxref("image-rendering")}}, {{cssxref("image-resolution")}}.
+- {{cssxref("background-size")}}

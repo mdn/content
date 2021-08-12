@@ -7,14 +7,15 @@ tags:
   - CSS Property
   - Experimental
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.mask-origin
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>mask-origin</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets the origin of a mask.</p>
+The **`mask-origin`** [CSS](/en-US/docs/Web/CSS) property sets the origin of a mask.
 
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 mask-origin: content-box;
 mask-origin: padding-box;
 mask-origin: border-box;
@@ -37,65 +38,61 @@ mask-origin: inherit;
 mask-origin: initial;
 mask-origin: revert;
 mask-origin: unset;
-</pre>
+```
 
-<p>For elements rendered as a single box, this property specifies the mask positioning area. In other words, this property specifies the origin position of an image specified by the {{cssxref("mask-image")}} CSS property. For elements rendered as multiple boxes, such as inline boxes on several lines or boxes on several pages, it specifies which boxes {{cssxref("box-decoration-break")}} operates upon to determine the mask positioning area.</p>
+For elements rendered as a single box, this property specifies the mask positioning area. In other words, this property specifies the origin position of an image specified by the {{cssxref("mask-image")}} CSS property. For elements rendered as multiple boxes, such as inline boxes on several lines or boxes on several pages, it specifies which boxes {{cssxref("box-decoration-break")}} operates upon to determine the mask positioning area.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>One or more of the keyword values listed below, separated by commas.</p>
+One or more of the keyword values listed below, separated by commas.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>content-box</code></dt>
- <dd>The position is relative to the content box.</dd>
- <dt><code>padding-box</code></dt>
- <dd>The position is relative to the padding box. For single boxes <code>0 0</code> is the upper left corner of the padding edge, <code>100% 100%</code> is the lower right corner.</dd>
- <dt><code>border-box</code></dt>
- <dd>The position is relative to the border box.</dd>
- <dt><code>margin-box</code></dt>
- <dd>The position is relative to the margin box.</dd>
- <dt><code>fill-box</code></dt>
- <dd>The position is relative to the object bounding box.</dd>
- <dt><code>stroke-box</code></dt>
- <dd>The position is relative to the stroke bounding box.</dd>
- <dt><code>view-box</code></dt>
- <dd>Uses the nearest SVG viewport as reference box. If a {{svgattr("viewBox")}} attribute is specified for the element creating the SVG viewport, the reference box is positioned at the origin of the coordinate system established by the <code>viewBox</code> attribute and the dimension of the reference box is set to the width and height values of the <code>viewBox</code> attribute.</dd>
- <dt><code>content</code> {{non-standard_inline}}</dt>
- <dd>Same as <code>content-box</code>.</dd>
- <dt><code>padding</code> {{non-standard_inline}}</dt>
- <dd>Same as <code>padding-box</code>.</dd>
- <dt><code>border</code> {{non-standard_inline}}</dt>
- <dd>Same as <code>border-box</code>.</dd>
-</dl>
+- `content-box`
+  - : The position is relative to the content box.
+- `padding-box`
+  - : The position is relative to the padding box. For single boxes `0 0` is the upper left corner of the padding edge, `100% 100%` is the lower right corner.
+- `border-box`
+  - : The position is relative to the border box.
+- `margin-box`
+  - : The position is relative to the margin box.
+- `fill-box`
+  - : The position is relative to the object bounding box.
+- `stroke-box`
+  - : The position is relative to the stroke bounding box.
+- `view-box`
+  - : Uses the nearest SVG viewport as reference box. If a {{svgattr("viewBox")}} attribute is specified for the element creating the SVG viewport, the reference box is positioned at the origin of the coordinate system established by the `viewBox` attribute and the dimension of the reference box is set to the width and height values of the `viewBox` attribute.
+- `content` {{non-standard_inline}}
+  - : Same as `content-box`.
+- `padding` {{non-standard_inline}}
+  - : Same as `padding-box`.
+- `border` {{non-standard_inline}}
+  - : Same as `border-box`.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_mask_origin_to_border-box">Setting mask origin to border-box</h3>
+### Setting mask origin to border-box
 
-<p>Try some of the other possible values by updating the CSS in the box below.</p>
+Try some of the other possible values by updating the CSS in the box below.
 
-<p>{{EmbedGHLiveSample("css-examples/masking/mask-origin.html", '100%', 600)}}</p>
+{{EmbedGHLiveSample("css-examples/masking/mask-origin.html", '100%', 600)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="https://css-tricks.com/clipping-masking-css/">Clipping and Masking in CSS</a></li>
-</ul>
+- [Clipping and Masking in CSS](https://css-tricks.com/clipping-masking-css/)

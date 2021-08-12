@@ -7,37 +7,37 @@ tags:
   - media feature
 browser-compat: css.at-rules.media.prefers-contrast
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p>The <strong><code>prefers-contrast</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features">media feature</a> is used to detect if the user has requested that the web content is presented with a higher (or lower) contrast.</p>
+The **`prefers-contrast`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) is used to detect if the user has requested that the web content is presented with a higher (or lower) contrast.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<dl>
- <dt><code><dfn>no-preference</dfn></code></dt>
- <dd>Indicates that the user has made no preference known to the system. This keyword value evaluates as false in a Boolean context.</dd>
- <dt><code>more</code></dt>
- <dd>Indicates that user has notified the system that they prefer an interface that has a higher level of contrast.</dd>
- <dt><code><dfn>less</dfn></code></dt>
- <dd>Indicates that user has notified the system that they prefer an interface that has a lower level of contrast.</dd>
-</dl>
+- `no-preference`
+  - : Indicates that the user has made no preference known to the system. This keyword value evaluates as false in a Boolean context.
+- `more`
+  - : Indicates that user has notified the system that they prefer an interface that has a higher level of contrast.
+- `less`
+  - : Indicates that user has notified the system that they prefer an interface that has a lower level of contrast.
 
-<h2 id="User_preferences">User preferences</h2>
+## User preferences
 
-<p>Various operating systems do support such preferences and user agents are likely to rely on the settings provided by the operating system.</p>
+Various operating systems do support such preferences and user agents are likely to rely on the settings provided by the operating system.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example has an annoying low contrast by default.</p>
+This example has an annoying low contrast by default.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div class="contrast"&gt;low contrast box&lt;/div&gt;
-</pre>
+```html
+<div class="contrast">low contrast box</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.contrast {
+```css
+.contrast {
   width: 100px;
   height: 100px;
   outline: 2px dashed black;
@@ -48,25 +48,23 @@ browser-compat: css.at-rules.media.prefers-contrast
     outline: 2px solid black;
   }
 }
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Examples")}}</p>
+{{EmbedLiveSample("Examples")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Microsoft <a href="https://msdn.microsoft.com/library/Hh771830">-ms-high-contrast</a> media feature</li>
- <li>CSS <a href="/en-US/docs/Web/CSS/@media/forced-colors">forced-colors</a> media query</li>
-</ul>
+- Microsoft [-ms-high-contrast](https://msdn.microsoft.com/library/Hh771830) media feature
+- CSS [forced-colors](/en-US/docs/Web/CSS/@media/forced-colors) media query
 
-<p>{{QuickLinksWithSubpages("/en-US/docs/Web/CSS/@media/")}}</p>
+{{QuickLinksWithSubpages("/en-US/docs/Web/CSS/@media/")}}

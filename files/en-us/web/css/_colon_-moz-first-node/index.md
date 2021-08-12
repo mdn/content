@@ -1,61 +1,60 @@
 ---
 title: ':-moz-first-node'
-slug: 'Web/CSS/:-moz-first-node'
+slug: Web/CSS/:-moz-first-node
 tags:
   - CSS
-  - 'CSS:Mozilla Extensions'
+  - CSS:Mozilla Extensions
   - NeedsCompatTable
   - Non-standard
   - Pseudo-class
   - Reference
   - Selector
 ---
-<div>{{Non-standard_header}}{{CSSRef}}</div>
+{{Non-standard_header}}{{CSSRef}}
 
-<p>The <strong><code>:-moz-first-node</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> is a <a href="/en-US/docs/Web/CSS/Mozilla_Extensions">Mozilla extension</a> that represents any element that is the first child node of some other element. It differs from {{Cssxref(":first-child")}} because it does not match a first-child element with (non-whitespace) text before it.</p>
+The **`:-moz-first-node`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) is a [Mozilla extension](/en-US/docs/Web/CSS/Mozilla_Extensions) that represents any element that is the first child node of some other element. It differs from {{Cssxref(":first-child")}} because it does not match a first-child element with (non-whitespace) text before it.
 
-<div class="note">
-  <p><strong>Note:</strong> Any whitespace at the start of an element is ignored for the determination of <code>:-moz-first-node</code>.</p>
-</div>
+> **Note:** Any whitespace at the start of an element is ignored for the determination of `:-moz-first-node`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">:-moz-first-node
-</pre>
+```css
+:-moz-first-node
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush:css">span:-moz-first-node {
+```css
+span:-moz-first-node {
   background-color: lime;
 }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush:html">&lt;p&gt;
-  &lt;span&gt;This matches!&lt;/span&gt;
-  &lt;span&gt;This doesn't match.&lt;/span&gt;
-&lt;/p&gt;
+```html
+<p>
+  <span>This matches!</span>
+  <span>This doesn't match.</span>
+</p>
 
-&lt;p&gt;
+<p>
   Blahblah.
-  &lt;span&gt;This doesn't match because it's preceded by text.&lt;/span&gt;
-&lt;/p&gt;
-</pre>
+  <span>This doesn't match because it's preceded by text.</span>
+</p>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Examples")}}</p>
+{{EmbedLiveSample("Examples")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any standard.</p>
+Not part of any standard.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref(":-moz-last-node")}}</li>
- <li>{{cssxref(":first-child")}}</li>
-</ul>
+- {{cssxref(":-moz-last-node")}}
+- {{cssxref(":first-child")}}

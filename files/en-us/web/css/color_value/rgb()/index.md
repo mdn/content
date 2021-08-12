@@ -10,40 +10,37 @@ tags:
   - color
   - rgb
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>rgb()</code></strong> functional notation expresses a color according to its red, green, and blue components. An optional alpha component represents the color's transparency.</p>
+The **`rgb()`** functional notation expresses a color according to its red, green, and blue components. An optional alpha component represents the color's transparency.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> CSS Colors Level 4 made some changes to <code>rgb()</code>. In browsers that support the standard {{cssxref("color_value/rgba()","rgba()")}} is an alias for <code>rgb()</code>, they accept the same parameters and behave the same way.</p>
+> **Note:** CSS Colors Level 4 made some changes to `rgb()`. In browsers that support the standard {{cssxref("color_value/rgba()","rgba()")}} is an alias for `rgb()`, they accept the same parameters and behave the same way.
+>
+> The Level 4 specification also allows for space-separated in addition to comma-separated values.
 
-  <p>The Level 4 specification also allows for space-separated in addition to comma-separated values.</p>
-</div>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush: css">rgb(255,255,255) /* white */
+```css
+rgb(255,255,255) /* white */
 rgb(255,255,255,.5) /* white with 50% opacity */
 rgb(255 255 255); /* CSS Colors 4 space-separated values */
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
-  <dt>Functional notation: <code>rgb[a](R, G, B[, A])</code></dt>
-  <dd><code>R</code> (red), <code>G</code> (green), and <code>B</code> (blue) can be either {{cssxref("&lt;number&gt;")}}s or {{cssxref("&lt;percentage&gt;")}}s, where the number <code>255</code> corresponds to <code>100%</code>. <code>A</code> (alpha) can be a {{cssxref("&lt;number&gt;")}} between <code>0</code> and <code>1</code>, or a {{cssxref("&lt;percentage&gt;")}}, where the number <code>1</code> corresponds to <code>100%</code> (full opacity).</dd>
-  <dt>Functional notation: <code>rgb[a](R G B[ / A])</code></dt>
-  <dd>CSS Colors Level 4 adds support for space-separated values in the functional notation.</dd>
-</dl>
+- Functional notation: `rgb[a](R, G, B[, A])`
+  - : `R` (red), `G` (green), and `B` (blue) can be either {{cssxref("&lt;number&gt;")}}s or {{cssxref("&lt;percentage&gt;")}}s, where the number `255` corresponds to `100%`. `A` (alpha) can be a {{cssxref("&lt;number&gt;")}} between `0` and `1`, or a {{cssxref("&lt;percentage&gt;")}}, where the number `1` corresponds to `100%` (full opacity).
+- Functional notation: `rgb[a](R G B[ / A])`
+  - : CSS Colors Level 4 adds support for space-separated values in the functional notation.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("css.types.color.rgb_functional_notation")}}</p>
+{{Compat("css.types.color.rgb_functional_notation")}}
 
-<h3>Space-separated values</h3>
+### Space-separated values
 
-<p>{{Compat("css.types.color.space_separated_functional_notation")}}</p>
+{{Compat("css.types.color.space_separated_functional_notation")}}
 
-<h3>Accepts alpha value</h3>
+### Accepts alpha value
 
-<p>{{Compat("css.types.color.rgb_function_accepts_alpha")}}</p>
+{{Compat("css.types.color.rgb_function_accepts_alpha")}}

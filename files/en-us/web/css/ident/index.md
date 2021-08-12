@@ -11,77 +11,58 @@ tags:
   - Web
   - ident
 ---
-<p>{{CSSRef}}{{Draft}}</p>
+{{CSSRef}}{{Draft}}
 
-<p>The <strong><code>&lt;ident&gt;</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Types">data type</a> denotes an arbitrary string used as an {{glossary("identifier")}}.</p>
+The **`<ident>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) denotes an arbitrary string used as an {{glossary("identifier")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The syntax of <code>&lt;custom-ident&gt;</code> is similar to CSS identifiers (such as property names), except that it is <a href="https://en.wikipedia.org/wiki/Case_sensitivity">case-sensitive</a>. It consists of one or more characters, where characters can be any of the following:</p>
+The syntax of `<custom-ident>` is similar to CSS identifiers (such as property names), except that it is [case-sensitive](https://en.wikipedia.org/wiki/Case_sensitivity). It consists of one or more characters, where characters can be any of the following:
 
-<ul>
- <li>any alphabetical character (<code>A</code> to <code>Z</code>, or <code>a</code> to <code>z</code>),</li>
- <li>any decimal digit (<code>0</code> to <code>9</code>),</li>
- <li>a hyphen (<code>-</code>),</li>
- <li>an underscore (<code>_</code>),</li>
- <li>an escaped character (preceded by a backslash, <code>\</code>),</li>
- <li>a <a href="https://en.wikipedia.org/wiki/Unicode">Unicode</a> character (in the format of a backslash, <code>\</code>, followed by one to six hexadecimal digits, representing its Unicode code point)</li>
-</ul>
+- any alphabetical character (`A` to `Z`, or `a` to `z`),
+- any decimal digit (`0` to `9`),
+- a hyphen (`-`),
+- an underscore (`_`),
+- an escaped character (preceded by a backslash, `\`),
+- a [Unicode](https://en.wikipedia.org/wiki/Unicode) character (in the format of a backslash, `\`, followed by one to six hexadecimal digits, representing its Unicode code point)
 
-<p>Note that <code>id1</code>, <code>Id1</code>, <code>iD1</code> and <code>ID1</code> are all different identifiers as they are <a href="https://en.wikipedia.org/wiki/Case_sensitivity">case-sensitive</a>. On the other hand, as there are several ways to escape a character, <code>toto\?</code> and <code>toto\3F</code> are the same identifiers.</p>
+Note that `id1`, `Id1`, `iD1` and `ID1` are all different identifiers as they are [case-sensitive](https://en.wikipedia.org/wiki/Case_sensitivity). On the other hand, as there are several ways to escape a character, `toto\?` and `toto\3F` are the same identifiers.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Valid_identifiers">Valid identifiers</h3>
+### Valid identifiers
 
-<pre class="example-good">nono79      	A mix of alphanumeric characters and numbers
+```plain example-good
+nono79      	A mix of alphanumeric characters and numbers
 ground-level	A mix of alphanumeric characters and a dash
 -test       	A dash followed by alphanumeric characters
 --toto      	A custom-property like identifier
 _internal   	An underscore followed by alphanumeric characters
 \22 toto    	A Unicode character followed by a sequence of alphanumeric characters
 bili\.bob   	A correctly escaped period
-</pre>
+```
 
-<h3 id="Invalid_identifiers">Invalid identifiers</h3>
+### Invalid identifiers
 
-<pre class="example-bad">34rem   	It must not start with a decimal digit.
+```plain example-bad
+34rem   	It must not start with a decimal digit.
 -12rad  	It must not start with a dash followed by a decimal digit.
 bili.bob	Only alphanumeric characters, _, and - needn't be escaped.
 'bilibob'	This would be a {{CSSxRef("&lt;string&gt;")}}.
 "bilibob"	This would be a {{CSSxRef("&lt;string&gt;")}}.
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Values', '#css-identifier', '<code>&lt;ident&gt;</code>')}}</td>
-   <td>{{Spec2('CSS4 Values')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Values', '#css-identifier', '<code>&lt;ident&gt;</code>')}}</td>
-   <td>{{Spec2('CSS3 Values')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                        | Status                           | Comment |
+| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
+| {{SpecName('CSS4 Values', '#css-identifier', '<code>&lt;ident&gt;</code>')}} | {{Spec2('CSS4 Values')}} |         |
+| {{SpecName('CSS3 Values', '#css-identifier', '<code>&lt;ident&gt;</code>')}} | {{Spec2('CSS3 Values')}} |         |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p><em>As this type is not a real type but a convenience type used to simplify the definition of other CSS syntax.</em></p>
+_As this type is not a real type but a convenience type used to simplify the definition of other CSS syntax._
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{CSSxRef("&lt;custom-ident&gt;")}} – A restricted subset of <code>&lt;ident&gt;</code> values excluding CSS-wide keywords, {{CSSxRef("--*", "custom properties")}} and other per-property values.</li>
-</ul>
+- {{CSSxRef("&lt;custom-ident&gt;")}} – A restricted subset of `<ident>` values excluding CSS-wide keywords, {{CSSxRef("--*", "custom properties")}} and other per-property values.

@@ -5,20 +5,21 @@ tags:
   - CSS
   - CSS Property
   - Compositing and Blending
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.background-blend-mode
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>background-blend-mode</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets how an element's background images should blend with each other and with the element's background color.</p>
+The **`background-blend-mode`** [CSS](/en-US/docs/Web/CSS) property sets how an element's background images should blend with each other and with the element's background color.
 
-<div>{{EmbedInteractiveExample("pages/css/background-blend-mode.html")}}</div>
+{{EmbedInteractiveExample("pages/css/background-blend-mode.html")}}
 
-<p>Blending modes should be defined in the same order as the {{cssxref("background-image")}} property. If the blending modes' and background images' list lengths are not equal, it will be repeated and/or truncated until lengths match.</p>
+Blending modes should be defined in the same order as the {{cssxref("background-image")}} property. If the blending modes' and background images' list lengths are not equal, it will be repeated and/or truncated until lengths match.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* One value */
+```css
+/* One value */
 background-blend-mode: normal;
 
 /* Two values, one per background */
@@ -29,81 +30,85 @@ background-blend-mode: initial;
 background-blend-mode: inherit;
 background-blend-mode: revert;
 background-blend-mode: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
-	<dt>{{cssxref("&lt;blend-mode&gt;")}}</dt>
-	<dd>The blending mode to be applied. There can be several values, separated by commas.</dd>
-</dl>
+- {{cssxref("&lt;blend-mode&gt;")}}
+  - : The blending mode to be applied. There can be several values, separated by commas.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Basic_example">Basic example</h3>
+### Basic example
 
-<pre class="brush: css">.item {
+```css
+.item {
     width: 300px;
     height: 300px;
     background: url('image1.png'),url('image2.png');
     background-blend-mode: screen;
-}</pre>
+}
+```
 
-<h3 id="Try_out_different_blend_modes">Try out different blend modes</h3>
+### Try out different blend modes
 
-<pre class="brush: html hidden">&lt;div id="div"&gt;&lt;/div&gt;
-&lt;select id="select"&gt;
-    &lt;option&gt;normal&lt;/option&gt;
-    &lt;option&gt;multiply&lt;/option&gt;
-    &lt;option selected&gt;screen&lt;/option&gt;
-    &lt;option&gt;overlay&lt;/option&gt;
-    &lt;option&gt;darken&lt;/option&gt;
-    &lt;option&gt;lighten&lt;/option&gt;
-    &lt;option&gt;color-dodge&lt;/option&gt;
-    &lt;option&gt;color-burn&lt;/option&gt;
-    &lt;option&gt;hard-light&lt;/option&gt;
-    &lt;option&gt;soft-light&lt;/option&gt;
-    &lt;option&gt;difference&lt;/option&gt;
-    &lt;option&gt;exclusion&lt;/option&gt;
-    &lt;option&gt;hue&lt;/option&gt;
-    &lt;option&gt;saturation&lt;/option&gt;
-    &lt;option&gt;color&lt;/option&gt;
-    &lt;option&gt;luminosity&lt;/option&gt;
-&lt;/select&gt;</pre>
+```html hidden
+<div id="div"></div>
+<select id="select">
+    <option>normal</option>
+    <option>multiply</option>
+    <option selected>screen</option>
+    <option>overlay</option>
+    <option>darken</option>
+    <option>lighten</option>
+    <option>color-dodge</option>
+    <option>color-burn</option>
+    <option>hard-light</option>
+    <option>soft-light</option>
+    <option>difference</option>
+    <option>exclusion</option>
+    <option>hue</option>
+    <option>saturation</option>
+    <option>color</option>
+    <option>luminosity</option>
+</select>
+```
 
-<pre class="brush: css hidden">#div {
+```css hidden
+#div {
     width: 300px;
     height: 300px;
     background: url('br.png'),url('tr.png');
     background-blend-mode: screen;
-}</pre>
+}
+```
 
-<pre class="brush: js hidden">document.getElementById("select").onchange = function(event) {
+```js hidden
+document.getElementById("select").onchange = function(event) {
     document.getElementById("div").style.backgroundBlendMode = document.getElementById("select").selectedOptions[0].innerHTML;
 }
-console.log(document.getElementById('div'));</pre>
+console.log(document.getElementById('div'));
+```
 
-<p>{{ EmbedLiveSample('Examples', "330", "350") }}</p>
+{{ EmbedLiveSample('Examples', "330", "350") }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>{{cssxref("&lt;blend-mode&gt;")}}</li>
-	<li>{{cssxref("mix-blend-mode")}}</li>
-</ul>
+- {{cssxref("&lt;blend-mode&gt;")}}
+- {{cssxref("mix-blend-mode")}}

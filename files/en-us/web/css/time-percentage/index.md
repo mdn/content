@@ -11,59 +11,59 @@ tags:
   - values
 browser-compat: css.types.time-percentage
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>&lt;time-percentage&gt;</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Types">data type</a> represents a value that can be either a {{Cssxref("time")}} or a {{Cssxref("percentage")}}.</p>
+The **`<time-percentage>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents a value that can be either a {{Cssxref("time")}} or a {{Cssxref("percentage")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>Refer to the documentation for {{Cssxref("time")}} and {{Cssxref("percentage")}} for details of the individual syntaxes allowed by this type.</p>
+Refer to the documentation for {{Cssxref("time")}} and {{Cssxref("percentage")}} for details of the individual syntaxes allowed by this type.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Use_in_calc">Use in calc()</h3>
+### Use in calc()
 
-<p>Where a <code>&lt;time-percentage&gt;</code> is specified as an allowable type, this means that the percentage resolves to a time and therefore can be used in a {{Cssxref("calc()")}} expression.</p>
+Where a `<time-percentage>` is specified as an allowable type, this means that the percentage resolves to a time and therefore can be used in a {{Cssxref("calc()")}} expression.
 
-<h3 id="Valid_percentages">Valid percentages</h3>
+### Valid percentages
 
-<pre>50%
-+50%        Optional plus sign
--50%        Negative percentages are not valid for all properties that accept percentages</pre>
+    50%
+    +50%        Optional plus sign
+    -50%        Negative percentages are not valid for all properties that accept percentages
 
-<h3 id="Invalid_percentages">Invalid percentages</h3>
+### Invalid percentages
 
-<pre class="example-bad">50 %        Space not allowed between the space and the percentage sign</pre>
+```plain example-bad
+50 %        Space not allowed between the space and the percentage sign
+```
 
-<h3 id="Valid_times">Valid times</h3>
+### Valid times
 
-<pre>12s         Positive integer
--456ms      Negative integer
-4.3ms       Non-integer
-14mS        The unit is case-insensitive, although capital letters are not recommended.
-+0s         Zero with a leading + and a unit
--0ms        Zero with a leading - and a unit
-</pre>
+    12s         Positive integer
+    -456ms      Negative integer
+    4.3ms       Non-integer
+    14mS        The unit is case-insensitive, although capital letters are not recommended.
+    +0s         Zero with a leading + and a unit
+    -0ms        Zero with a leading - and a unit
 
-<h3 id="Invalid_times">Invalid times</h3>
+### Invalid times
 
-<pre class="example-bad">0           Although unitless zero is allowed for &lt;length&gt;s, it's invalid for &lt;time&gt;s.
-12.0        This is a &lt;number&gt;, not a &lt;time&gt;, because it's missing a unit.
+```plain example-bad
+0           Although unitless zero is allowed for <length>s, it's invalid for <time>s.
+12.0        This is a <number>, not a <time>, because it's missing a unit.
 7 ms        No space is allowed between the number and the unit.
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("&lt;percentage&gt;")}}</li>
- <li>{{cssxref("&lt;time&gt;")}}</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Values_and_Units">CSS Values and Units</a></li>
-</ul>
+- {{cssxref("&lt;percentage&gt;")}}
+- {{cssxref("&lt;time&gt;")}}
+- [CSS Values and Units](/en-US/docs/Web/CSS/CSS_Values_and_Units)

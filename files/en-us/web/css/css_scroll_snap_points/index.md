@@ -8,41 +8,24 @@ tags:
   - Overview
   - Reference
 ---
-<div>{{CSSRef}} {{deprecated_header}}</div>
+{{CSSRef}} {{deprecated_header}}
 
-<p><strong>CSS Scroll Snap Points</strong> is a module of CSS that introduces scroll snap positions. These determine the specific positions that a container’s scrollport may end at after a scrolling operation has completed.</p>
+**CSS Scroll Snap Points** is a module of CSS that introduces scroll snap positions. These determine the specific positions that a container’s scrollport may end at after a scrolling operation has completed.
 
-<div class="note">
-<p><strong>Note:</strong> <a href="/en-US/docs/Web/CSS/CSS_Scroll_Snap">CSS Scroll Snap</a> is the modern specification that defines this functionality.</p>
-</div>
+> **Note:** [CSS Scroll Snap](/en-US/docs/Web/CSS/CSS_Scroll_Snap) is the modern specification that defines this functionality.
 
-<h2 id="Reference">Reference</h2>
+## Reference
 
-<h3 id="CSS_properties">CSS properties</h3>
+### CSS properties
 
-<ul>
- <li>{{cssxref("scroll-snap-coordinate")}}</li>
- <li>{{cssxref("scroll-snap-destination")}}</li>
- <li>{{cssxref("scroll-snap-points-x")}}</li>
- <li>{{cssxref("scroll-snap-points-y")}}</li>
- <li>{{cssxref("scroll-snap-type")}}</li>
-</ul>
+- {{cssxref("scroll-snap-coordinate")}}
+- {{cssxref("scroll-snap-destination")}}
+- {{cssxref("scroll-snap-points-x")}}
+- {{cssxref("scroll-snap-points-y")}}
+- {{cssxref("scroll-snap-type")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Scroll Snap Points", "#propdef-scroll-snap-points-y", "scroll-snap-points-y")}}</td>
-   <td>{{Spec2("CSS Scroll Snap Points")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                                    | Status                                           | Comment            |
+| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------ |
+| {{SpecName("CSS Scroll Snap Points", "#propdef-scroll-snap-points-y", "scroll-snap-points-y")}} | {{Spec2("CSS Scroll Snap Points")}} | Initial definition |

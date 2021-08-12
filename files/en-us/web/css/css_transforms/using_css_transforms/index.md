@@ -14,75 +14,71 @@ tags:
   - perspective
   - rotation
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>By modifying the coordinate space, <strong>CSS transforms</strong> change the shape and position of the affected content without disrupting the normal document flow. This guide provides an introduction to using transforms.</p>
+By modifying the coordinate space, **CSS transforms** change the shape and position of the affected content without disrupting the normal document flow. This guide provides an introduction to using transforms.
 
-<p>CSS transforms are implemented using a set of CSS properties that let you apply affine linear transformations to HTML elements. These transformations include rotation, skewing, scaling, and translation both in the plane and in the 3D space.</p>
+CSS transforms are implemented using a set of CSS properties that let you apply affine linear transformations to HTML elements. These transformations include rotation, skewing, scaling, and translation both in the plane and in the 3D space.
 
-<div class="warning">
- <p><strong>Warning:</strong> Only elements positioned by the <a href="/en-US/docs/Web/CSS/CSS_Box_Model">box model</a> can be <code>transform</code>ed. As a rule of thumb, an element is positioned by the box model if it has <code>display: block</code>.</p>
-</div>
+> **Warning:** Only elements positioned by the [box model](/en-US/docs/Web/CSS/CSS_Box_Model) can be `transform`ed. As a rule of thumb, an element is positioned by the box model if it has `display: block`.
 
-<h2 id="CSS_transforms_properties">CSS transforms properties</h2>
+## CSS transforms properties
 
-<p>Two major properties are used to define CSS transforms: {{cssxref("transform")}} and {{cssxref("transform-origin")}}</p>
+Two major properties are used to define CSS transforms: {{cssxref("transform")}} and {{cssxref("transform-origin")}}
 
-<dl>
- <dt>{{cssxref("transform-origin")}}</dt>
- <dd>Specifies the position of the origin. By default, it is at the center of the element and can be moved. It is used by several transforms, like rotations, scaling or skewing, that need a specific point as a parameter.</dd>
- <dt>{{cssxref("transform")}}</dt>
- <dd>Specifies the transforms to apply to the element. It is a space-separated list of transforms, which are applied one after the other, as requested by the composition operation. Composite transforms are effectively applied in order from right to left.</dd>
-</dl>
+- {{cssxref("transform-origin")}}
+  - : Specifies the position of the origin. By default, it is at the center of the element and can be moved. It is used by several transforms, like rotations, scaling or skewing, that need a specific point as a parameter.
+- {{cssxref("transform")}}
+  - : Specifies the transforms to apply to the element. It is a space-separated list of transforms, which are applied one after the other, as requested by the composition operation. Composite transforms are effectively applied in order from right to left.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Here is an unaltered image of the MDN logo:</p>
+Here is an unaltered image of the MDN logo:
 
-<p><img alt="MDN Logo" src="logo.png"></p>
+![MDN Logo](logo.png)
 
-<h3 id="Rotating">Rotating</h3>
+### Rotating
 
-<p>Here is the MDN logo rotated 90 degrees from its bottom-left corner.</p>
+Here is the MDN logo rotated 90 degrees from its bottom-left corner.
 
-<pre class="brush: html">&lt;img style="transform: rotate(90deg);
+```html
+<img style="transform: rotate(90deg);
             transform-origin: bottom left;"
-     src="logo.png"&gt;
-</pre>
+     src="logo.png">
+```
 
-<p>{{EmbedLiveSample('Rotating', 'auto', 240) }}</p>
+{{EmbedLiveSample('Rotating', 'auto', 240) }}
 
-<h3 id="Skewing_and_translating">Skewing and translating</h3>
+### Skewing and translating
 
-<p>Here is the MDN logo, skewed by 10 degrees and translated by 150 pixels on the X-axis.</p>
+Here is the MDN logo, skewed by 10 degrees and translated by 150 pixels on the X-axis.
 
-<pre class="brush: html">&lt;img style="transform: skewx(10deg) translatex(150px);
+```html
+<img style="transform: skewx(10deg) translatex(150px);
             transform-origin: bottom left;"
-     src="logo.png"&gt;
-</pre>
+     src="logo.png">
+```
 
-<p>{{EmbedLiveSample('Skewing_and_translating') }}</p>
+{{EmbedLiveSample('Skewing_and_translating') }}
 
-<h2 id="3D_specific_CSS_properties">3D specific CSS properties</h2>
+## 3D specific CSS properties
 
-<p>Performing CSS transformations in 3D space is a bit more complex. You have to start by configuring the 3D space by giving it a perspective, then you have to configure how your 2D elements will behave in that space.</p>
+Performing CSS transformations in 3D space is a bit more complex. You have to start by configuring the 3D space by giving it a perspective, then you have to configure how your 2D elements will behave in that space.
 
-<h3 id="Perspective">Perspective</h3>
+### Perspective
 
-<p>The first element to set is the {{cssxref("perspective")}}. The perspective is what gives us the 3D impression. The farther from the viewer the elements are, the smaller they are.</p>
+The first element to set is the {{cssxref("perspective")}}. The perspective is what gives us the 3D impression. The farther from the viewer the elements are, the smaller they are.
 
-<p>{{page("/en-US/docs/Web/CSS/perspective", "Setting perspective", 0, 0, 3)}}</p>
+{{page("/en-US/docs/Web/CSS/perspective", "Setting perspective", 0, 0, 3)}}
 
-<p>The second element to configure is the position of the viewer, with the {{ cssxref("perspective-origin") }} property. By default the perspective is centered on the viewer, which is not always adequate.</p>
+The second element to configure is the position of the viewer, with the {{ cssxref("perspective-origin") }} property. By default the perspective is centered on the viewer, which is not always adequate.
 
-<p>{{page("/en-US/docs/Web/CSS/perspective-origin", "Changing the perspective origin", 0, 0, 3)}}</p>
+{{page("/en-US/docs/Web/CSS/perspective-origin", "Changing the perspective origin", 0, 0, 3)}}
 
-<p>Once you have done this, you can work on the element in the 3D space.</p>
+Once you have done this, you can work on the element in the 3D space.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/Events/Using_device_orientation_with_3D_transforms" title="Using Deviceorientation with 3D Transforms">Using device orientation with 3D Transforms</a></li>
- <li><a href="https://desandro.github.io/3dtransforms/">Intro to CSS 3D transforms</a> (Blog post by David DeSandro)</li>
- <li><a href="https://css-transform.moro.es/">CSS Transform Playground</a> (Online tool to visualize CSS Transform functions)</li>
-</ul>
+- [Using device orientation with 3D Transforms](/en-US/docs/Web/Events/Using_device_orientation_with_3D_transforms "Using Deviceorientation with 3D Transforms")
+- [Intro to CSS 3D transforms](https://desandro.github.io/3dtransforms/) (Blog post by David DeSandro)
+- [CSS Transform Playground](https://css-transform.moro.es/) (Online tool to visualize CSS Transform functions)

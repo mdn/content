@@ -12,15 +12,14 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.text-decoration-skip
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>text-decoration-skip</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets what parts of an element’s content any text decoration affecting the element must skip over. It controls all text decoration lines drawn by the element and also any text decoration lines drawn by its ancestors.</p>
+The **`text-decoration-skip`** [CSS](/en-US/docs/Web/CSS) property sets what parts of an element’s content any text decoration affecting the element must skip over. It controls all text decoration lines drawn by the element and also any text decoration lines drawn by its ancestors.
 
-<div class="notecard note">
-<p><strong>Note:</strong> Most other browsers are converging on supporting the simpler {{cssxref("text-decoration-skip-ink")}} property.</p>
-</div>
+> **Note:** Most other browsers are converging on supporting the simpler {{cssxref("text-decoration-skip-ink")}} property.
 
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 text-decoration-skip: none;
 text-decoration-skip: objects;
 text-decoration-skip: spaces;
@@ -37,71 +36,72 @@ text-decoration-skip: inherit;
 text-decoration-skip: initial;
 text-decoration-skip: revert;
 text-decoration-skip: unset;
-</pre>
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>none</code></dt>
- <dd>Nothing is skipped. Thus, text decoration is drawn for all text content and across atomic inline-level boxes.</dd>
- <dt><code>objects</code></dt>
- <dd>The entire margin box of the element is skipped if it is an atomic inline such as an image or inline-block.</dd>
- <dt><code>spaces</code></dt>
- <dd>All spacing is skipped: all <a href="https://www.unicode.org/reports/tr44/#White_Space">Unicode white space characters</a> and all word separators, plus any adjacent {{cssxref("letter-spacing")}} or {{cssxref("word-spacing")}}.</dd>
- <dt><code>leading-spaces</code></dt>
- <dd>The same as <code>spaces</code>, except that only leading spaces are skipped.</dd>
- <dt><code>trailing-spaces</code></dt>
- <dd>The same as <code>spaces</code>, except that only trailing spaces are skipped.</dd>
- <dt><code>edges</code></dt>
- <dd>
-   <p>The start and end of the text decoration is inset slightly (e.g., by half of the line thickness) from the content edge of the decorating box. Thus, adjacent elements receive separate underlines. (This is important in Chinese, where underlining is a form of punctuation.)</p>
-   <img alt='An example of "text-decoration-skip: edges;".' src="decoration-skip-edges.png">
- </dd>
- <dt><code>box-decoration</code></dt>
- <dd>The text decoration is skipped over the box's margin, border, and padding areas. This only has an effect on decorations imposed by an ancestor; a <em>decorating box</em> never draws over its own box decoration.</dd>
-</dl>
+- `none`
+  - : Nothing is skipped. Thus, text decoration is drawn for all text content and across atomic inline-level boxes.
+- `objects`
+  - : The entire margin box of the element is skipped if it is an atomic inline such as an image or inline-block.
+- `spaces`
+  - : All spacing is skipped: all [Unicode white space characters](https://www.unicode.org/reports/tr44/#White_Space) and all word separators, plus any adjacent {{cssxref("letter-spacing")}} or {{cssxref("word-spacing")}}.
+- `leading-spaces`
+  - : The same as `spaces`, except that only leading spaces are skipped.
+- `trailing-spaces`
+  - : The same as `spaces`, except that only trailing spaces are skipped.
+- `edges`
 
-<h2 id="Formal_definition">Formal definition</h2>
+  - : The start and end of the text decoration is inset slightly (e.g., by half of the line thickness) from the content edge of the decorating box. Thus, adjacent elements receive separate underlines. (This is important in Chinese, where underlining is a form of punctuation.)
 
-<p>{{CSSInfo}}</p>
+    ![An example of "text-decoration-skip: edges;".](decoration-skip-edges.png)
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+- `box-decoration`
+  - : The text decoration is skipped over the box's margin, border, and padding areas. This only has an effect on decorations imposed by an ancestor; a _decorating box_ never draws over its own box decoration.
+
+## Formal definition
+
+{{CSSInfo}}
+
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Skipping_edges">Skipping edges</h3>
+### Skipping edges
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;Hey, grab a cup of &lt;em&gt;coffee!&lt;/em&gt;&lt;/p&gt;</pre>
+```html
+<p>Hey, grab a cup of <em>coffee!</em></p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css; highlight[4]">p {
+```css
+p {
   margin: 0;
   font-size: 3em;
   text-decoration: underline;
   text-decoration-skip: edges;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Skipping_edges", "100%", 150)}}</p>
+{{EmbedLiveSample("Skipping_edges", "100%", 150)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><code><a href="/en-US/docs/Web/CSS/text-decoration-skip-ink">text-decoration-skip-ink</a></code></li>
-</ul>
+- [`text-decoration-skip-ink`](/en-US/docs/Web/CSS/text-decoration-skip-ink)

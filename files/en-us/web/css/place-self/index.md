@@ -6,27 +6,26 @@ tags:
   - CSS Box Alignment
   - CSS Property
   - Reference
-  - 'recipe:css-shorthand-property'
+  - recipe:css-shorthand-property
 browser-compat: css.properties.place-self
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>place-self</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand property</a> allows you to align an individual item in both the block and inline directions at once (i.e. the {{cssxref("align-self")}} and {{cssxref("justify-self")}} properties) in a relevant layout system such as <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">Grid</a> or <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">Flexbox</a>. If the second value is not present, the first value is also used for it.</p>
+The **`place-self`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) allows you to align an individual item in both the block and inline directions at once (i.e. the {{cssxref("align-self")}} and {{cssxref("justify-self")}} properties) in a relevant layout system such as [Grid](/en-US/docs/Web/CSS/CSS_Grid_Layout) or [Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout). If the second value is not present, the first value is also used for it.
 
-<div>{{EmbedInteractiveExample("pages/css/place-self.html")}}</div>
+{{EmbedInteractiveExample("pages/css/place-self.html")}}
 
-<h2 id="Constituent_properties">Constituent properties</h2>
+## Constituent properties
 
-<p>This property is a shorthand for the following CSS properties:</p>
+This property is a shorthand for the following CSS properties:
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/align-self"><code>align-self</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/justify-self"><code>justify-self</code></a></li>
-</ul>
+- [`align-self`](/en-US/docs/Web/CSS/align-self)
+- [`justify-self`](/en-US/docs/Web/CSS/justify-self)
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">/* Keyword values */
+```css
+/* Keyword values */
 place-self: auto center;
 place-self: normal start;
 
@@ -51,70 +50,71 @@ place-self: stretch auto;
 place-self: inherit;
 place-self: initial;
 place-self: revert;
-place-self: unset;</pre>
+place-self: unset;
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>Computes to the parent's {{cssxref("align-items")}} value.</dd>
- <dt><code>normal</code></dt>
- <dd>The effect of this keyword is dependent of the layout mode we are in:
- <ul>
-  <li>In absolutely-positioned layouts, the keyword behaves like <code>start</code> on <em>replaced</em> absolutely-positioned boxes, and as <code>stretch</code> on <em>all other</em> absolutely-positioned boxes.</li>
-  <li>In static position of absolutely-positioned layouts, the keyword behaves as <code>stretch</code>.</li>
-  <li>For flex items, the keyword behaves as <code>stretch</code>.</li>
-  <li>For grid items, this keyword leads to a behavior similar to the one of <code>stretch</code>, except for boxes with an aspect ratio or an intrinsic sizes where it behaves like <code>start</code>.</li>
-  <li>The property doesn't apply to block-level boxes, and to table cells.</li>
- </ul>
- </dd>
- <dt><code>self-start</code></dt>
- <dd>Aligns the items to be flush with the edge of the alignment container corresponding to the item's start side in the cross axis.</dd>
- <dt><code>self-end</code></dt>
- <dd>Aligns the items to be flush with the edge of the alignment container corresponding to the item's end side in the cross axis.</dd>
- <dt><code>flex-start</code></dt>
- <dd>The cross-start margin edge of the flex item is flushed with the cross-start edge of the line.</dd>
- <dt><code>flex-end</code></dt>
- <dd>The cross-end margin edge of the flex item is flushed with the cross-end edge of the line.</dd>
- <dt><code>center</code></dt>
- <dd>The flex item's margin box is centered within the line on the cross-axis. If the cross-size of the item is larger than the flex container, it will overflow equally in both directions.</dd>
- <dt><code>baseline<br>
- first baseline</code><br>
- <code>last baseline</code></dt>
- <dd>Specifies participation in first- or last-baseline alignment: aligns the alignment baseline of the box’s first or last baseline set with the corresponding baseline in the shared first or last baseline set of all the boxes in its baseline-sharing group.<br>
- The fallback alignment for <code>first baseline</code> is <code>start</code>, the one for <code>last baseline</code> is <code>end</code>.</dd>
- <dt><code>stretch</code></dt>
- <dd>If the combined size of the items along the cross axis is less than the size of the alignment container and the item is <code>auto</code>-sized, its size is increased equally (not proportionally), while still respecting the constraints imposed by {{cssxref("max-height")}}/{{cssxref("max-width")}} (or equivalent functionality), so that the combined size of all <code>auto</code>-sized items exactly fills the alignment container along the cross axis.</dd>
-</dl>
+- `auto`
+  - : Computes to the parent's {{cssxref("align-items")}} value.
+- `normal`
 
-<h2 id="Formal_definition">Formal definition</h2>
+  - : The effect of this keyword is dependent of the layout mode we are in:
 
-<p>{{cssinfo}}</p>
+    - In absolutely-positioned layouts, the keyword behaves like `start` on _replaced_ absolutely-positioned boxes, and as `stretch` on _all other_ absolutely-positioned boxes.
+    - In static position of absolutely-positioned layouts, the keyword behaves as `stretch`.
+    - For flex items, the keyword behaves as `stretch`.
+    - For grid items, this keyword leads to a behavior similar to the one of `stretch`, except for boxes with an aspect ratio or an intrinsic sizes where it behaves like `start`.
+    - The property doesn't apply to block-level boxes, and to table cells.
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+- `self-start`
+  - : Aligns the items to be flush with the edge of the alignment container corresponding to the item's start side in the cross axis.
+- `self-end`
+  - : Aligns the items to be flush with the edge of the alignment container corresponding to the item's end side in the cross axis.
+- `flex-start`
+  - : The cross-start margin edge of the flex item is flushed with the cross-start edge of the line.
+- `flex-end`
+  - : The cross-end margin edge of the flex item is flushed with the cross-end edge of the line.
+- `center`
+  - : The flex item's margin box is centered within the line on the cross-axis. If the cross-size of the item is larger than the flex container, it will overflow equally in both directions.
+- `baseline first baseline`
+  `last baseline`
+  - : Specifies participation in first- or last-baseline alignment: aligns the alignment baseline of the box’s first or last baseline set with the corresponding baseline in the shared first or last baseline set of all the boxes in its baseline-sharing group.
+    The fallback alignment for `first baseline` is `start`, the one for `last baseline` is `end`.
+- `stretch`
+  - : If the combined size of the items along the cross axis is less than the size of the alignment container and the item is `auto`-sized, its size is increased equally (not proportionally), while still respecting the constraints imposed by {{cssxref("max-height")}}/{{cssxref("max-width")}} (or equivalent functionality), so that the combined size of all `auto`-sized items exactly fills the alignment container along the cross axis.
+
+## Formal definition
+
+{{cssinfo}}
+
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Simple_demonstration">Simple demonstration</h3>
+### Simple demonstration
 
-<p>In the following example we have a simple 2 x 2 grid layout. Initially the grid container has <code><a href="/en-US/docs/Web/CSS/justify-items">justify-items</a></code> and <code><a href="/en-US/docs/Web/CSS/align-items">align-items</a></code> values of <code>stretch</code> — the defaults — which causes the grid items to stretch across the entire width of their cells.</p>
+In the following example we have a simple 2 x 2 grid layout. Initially the grid container has [`justify-items`](/en-US/docs/Web/CSS/justify-items) and [`align-items`](/en-US/docs/Web/CSS/align-items) values of `stretch` — the defaults — which causes the grid items to stretch across the entire width of their cells.
 
-<p>The second, third, and fourth grid items are then given different values of <code>place-self</code>, to show how these override the default placements. These values cause the grid items to span only as wide/tall as their content width/height, and align in different positions across their cells, in the block and inline directions.</p>
+The second, third, and fourth grid items are then given different values of `place-self`, to show how these override the default placements. These values cause the grid items to span only as wide/tall as their content width/height, and align in different positions across their cells, in the block and inline directions.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;article class="container"&gt;
-  &lt;span&gt;First&lt;/span&gt;
-  &lt;span&gt;Second&lt;/span&gt;
-  &lt;span&gt;Third&lt;/span&gt;
-  &lt;span&gt;Fourth&lt;/span&gt;
-&lt;/article&gt;</pre>
+```html
+<article class="container">
+  <span>First</span>
+  <span>Second</span>
+  <span>Third</span>
+  <span>Fourth</span>
+</article>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">html {
+```css
+html {
   font-family: helvetica, arial, sans-serif;
   letter-spacing: 1px;
 }
@@ -154,27 +154,26 @@ article, span {
 
 article {
   margin: 20px;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Simple_demonstration', '100%', 300)}}</p>
+{{EmbedLiveSample('Simple_demonstration', '100%', 300)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>CSS Flexbox Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Basic Concepts of Flexbox</a></em></li>
- <li>CSS Flexbox Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container">Aligning items in a flex container</a></em></li>
- <li>CSS Grid Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">Box alignment in CSS Grid layouts</a></em></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Box_Alignment">CSS Box Alignment</a></li>
- <li>The {{cssxref("align-self")}} property</li>
- <li>The {{cssxref("justify-self")}} property</li>
-</ul>
+- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
+- CSS Flexbox Guide: _[Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_
+- CSS Grid Guide: _[Box alignment in CSS Grid layouts](/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
+- [CSS Box Alignment](/en-US/docs/Web/CSS/CSS_Box_Alignment)
+- The {{cssxref("align-self")}} property
+- The {{cssxref("justify-self")}} property

@@ -6,18 +6,19 @@ tags:
   - CSS Fonts
   - CSS Property
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.font-synthesis
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>font-synthesis</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property controls which missing typefaces, bold or italic, may be synthesized by the browser.</p>
+The **`font-synthesis`** [CSS](/en-US/docs/Web/CSS) property controls which missing typefaces, bold or italic, may be synthesized by the browser.
 
-<div>{{EmbedInteractiveExample("pages/css/font-synthesis.html")}}</div>
+{{EmbedInteractiveExample("pages/css/font-synthesis.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">font-synthesis: none;
+```css
+font-synthesis: none;
 font-synthesis: weight;
 font-synthesis: style;
 font-synthesis: weight style;
@@ -27,45 +28,45 @@ font-synthesis: inherit;
 font-synthesis: initial;
 font-synthesis: revert;
 font-synthesis: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>none</code></dt>
- <dd>Indicates that neither bold nor italic typeface may be synthesized.</dd>
- <dt><code>weight</code></dt>
- <dd>Indicates that a bold typeface may be synthesized if needed.</dd>
- <dt><code>style</code></dt>
- <dd>Indicates that an italic typeface may be synthesized if needed.</dd>
-</dl>
+- `none`
+  - : Indicates that neither bold nor italic typeface may be synthesized.
+- `weight`
+  - : Indicates that a bold typeface may be synthesized if needed.
+- `style`
+  - : Indicates that an italic typeface may be synthesized if needed.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Most standard Western fonts include italic and bold variants, but many novelty fonts do not. Fonts used for Chinese, Japanese, Korean and other logographic scripts tend not to include these variants, and synthesizing them may impede the legibility of the text. In these cases, it may be desirable to switch off the browser's default font-synthesis.</p>
+Most standard Western fonts include italic and bold variants, but many novelty fonts do not. Fonts used for Chinese, Japanese, Korean and other logographic scripts tend not to include these variants, and synthesizing them may impede the legibility of the text. In these cases, it may be desirable to switch off the browser's default font-synthesis.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Disabling_font_synthesis">Disabling font synthesis</h3>
+### Disabling font synthesis
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;em class="syn"&gt;Synthesize me! 站直。&lt;/em&gt;
-&lt;br/&gt;
-&lt;em class="no-syn"&gt;Don't synthesize me! 站直。&lt;/em&gt;
-</pre>
+```html
+<em class="syn">Synthesize me! 站直。</em>
+<br/>
+<em class="no-syn">Don't synthesize me! 站直。</em>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">em {
+```css
+em {
   font-weight: bold;
 }
 .syn {
@@ -74,23 +75,21 @@ font-synthesis: unset;
 .no-syn {
   font-synthesis: none;
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Disabling_font_synthesis', '', '50') }}</p>
+{{ EmbedLiveSample('Disabling_font_synthesis', '', '50') }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("font-style")}}</li>
- <li>{{cssxref("font-weight")}}</li>
-</ul>
+- {{cssxref("font-style")}}
+- {{cssxref("font-weight")}}

@@ -6,28 +6,29 @@ tags:
   - CSS Grid
   - CSS Property
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.grid-column-end
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>grid-column-end</code></strong> CSS property specifies a grid item’s end position within the grid column by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the block-end edge of its {{glossary("grid areas", "grid area")}}.</p>
+The **`grid-column-end`** CSS property specifies a grid item’s end position within the grid column by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the block-end edge of its {{glossary("grid areas", "grid area")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/grid-column-end.html")}}</div>
+{{EmbedInteractiveExample("pages/css/grid-column-end.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css no-line-numbers">/* Keyword value */
+```css
+/* Keyword value */
 grid-column-end: auto;
 
-/* &lt;custom-ident&gt; values */
+/* <custom-ident> values */
 grid-column-end: somegridarea;
 
-/* &lt;integer&gt; + &lt;custom-ident&gt; values */
+/* <integer> + <custom-ident> values */
 grid-column-end: 2;
 grid-column-end: somegridarea 4;
 
-/* span + &lt;integer&gt; + &lt;custom-ident&gt; values */
+/* span + <integer> + <custom-ident> values */
 grid-column-end: span 3;
 grid-column-end: span somegridarea;
 grid-column-end: 5 somegridarea span;
@@ -37,63 +38,66 @@ grid-column-end: inherit;
 grid-column-end: initial;
 grid-column-end: revert;
 grid-column-end: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>Is a keyword indicating that the property contributes nothing to the grid item’s placement, indicating auto-placement, an automatic span, or a default span of <code>1</code>.</dd>
- <dt><code>&lt;custom-ident&gt;</code></dt>
- <dd>If there is a named line with the name '&lt;custom-ident&gt;-end', it contributes the first such line to the grid item’s placement.
- <div class="note">
-   <p><strong>Note:</strong> Named grid areas automatically generate implicit named lines of this form, so specifying <code>grid-column-end: foo;</code> will choose the end edge of that named grid area (unless another line named <code>foo-end</code> was explicitly specified before it).</p>
- </div>
+- `auto`
+  - : Is a keyword indicating that the property contributes nothing to the grid item’s placement, indicating auto-placement, an automatic span, or a default span of `1`.
+- `<custom-ident>`
 
- <p>Otherwise, this is treated as if the integer <code>1</code> had been specified along with the <code>&lt;custom-ident&gt;</code>.</p>
- </dd>
- <dt><code>&lt;integer&gt; &amp;&amp; &lt;custom-ident&gt;?</code></dt>
- <dd>Contributes the nth grid line to the grid item’s placement. If a negative integer is given, it instead counts in reverse, starting from the end edge of the explicit grid.
- <p>If a name is given as a &lt;custom-ident&gt;, only lines with that name are counted. If not enough lines with that name exist, all implicit grid lines are assumed to have that name for the purpose of finding this position.</p>
+  - : If there is a named line with the name '\<custom-ident>-end', it contributes the first such line to the grid item’s placement.
 
- <p>An {{cssxref("integer")}} value of <code>0</code> is invalid.</p>
- </dd>
- <dt><code>span &amp;&amp; [ &lt;integer&gt; || &lt;custom-ident&gt; ]</code></dt>
- <dd>Contributes a grid span to the grid item’s placement such that the column end edge of the grid item’s grid area is n lines from the start edge.
- <p>If a name is given as a &lt;custom-ident&gt;, only lines with that name are counted. If not enough lines with that name exist, all implicit grid lines on the side of the explicit grid corresponding to the search direction are assumed to have that name for the purpose of counting this span.</p>
+    > **Note:** Named grid areas automatically generate implicit named lines of this form, so specifying `grid-column-end: foo;` will choose the end edge of that named grid area (unless another line named `foo-end` was explicitly specified before it).
 
- <p>If the &lt;integer&gt; is omitted, it defaults to <code>1</code>. Negative integers or 0 are invalid.</p>
+    Otherwise, this is treated as if the integer `1` had been specified along with the `<custom-ident>`.
 
- <p>The <code>&lt;custom-ident&gt;</code> cannot take the <code>span</code> value.</p>
- </dd>
-</dl>
+- `<integer> && <custom-ident>?`
 
-<h2 id="Formal_definition">Formal definition</h2>
+  - : Contributes the nth grid line to the grid item’s placement. If a negative integer is given, it instead counts in reverse, starting from the end edge of the explicit grid.
 
-<p>{{cssinfo}}</p>
+    If a name is given as a \<custom-ident>, only lines with that name are counted. If not enough lines with that name exist, all implicit grid lines are assumed to have that name for the purpose of finding this position.
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+    An {{cssxref("integer")}} value of `0` is invalid.
+
+- `span && [ <integer> || <custom-ident> ]`
+
+  - : Contributes a grid span to the grid item’s placement such that the column end edge of the grid item’s grid area is n lines from the start edge.
+
+    If a name is given as a \<custom-ident>, only lines with that name are counted. If not enough lines with that name exist, all implicit grid lines on the side of the explicit grid corresponding to the search direction are assumed to have that name for the purpose of counting this span.
+
+    If the \<integer> is omitted, it defaults to `1`. Negative integers or 0 are invalid.
+
+    The `<custom-ident>` cannot take the `span` value.
+
+## Formal definition
+
+{{cssinfo}}
+
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_column_end_for_a_grid_item">Setting column end for a grid item</h3>
+### Setting column end for a grid item
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-  &lt;div class="box1"&gt;One&lt;/div&gt;
-  &lt;div class="box2"&gt;Two&lt;/div&gt;
-  &lt;div class="box3"&gt;Three&lt;/div&gt;
-  &lt;div class="box4"&gt;Four&lt;/div&gt;
-  &lt;div class="box5"&gt;Five&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="wrapper">
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
+  <div class="box4">Four</div>
+  <div class="box5">Five</div>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.wrapper {
+```css
+.wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 100px;
@@ -111,9 +115,10 @@ grid-column-end: unset;
   grid-row-start: 3;
   grid-row-end: 5;
 }
-</pre>
+```
 
-<pre class="brush: css hidden">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -121,7 +126,7 @@ grid-column-end: unset;
   background-color: #fff4e6;
 }
 
-.wrapper &gt; div {
+.wrapper > div {
   border: 2px solid #ffa94d;
   border-radius: 5px;
   background-color: #ffd8a8;
@@ -135,24 +140,22 @@ grid-column-end: unset;
   background-color: #fff9db;
   padding: 1em;
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Setting_column_end_for_a_grid_item', '230', '420') }}</p>
+{{ EmbedLiveSample('Setting_column_end_for_a_grid_item', '230', '420') }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Related CSS properties: {{cssxref("grid-column-start")}}, {{cssxref("grid-column")}}, {{cssxref("grid-row-start")}}, {{cssxref("grid-row-end")}}, {{cssxref("grid-row")}}</li>
- <li>Grid Layout Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid">Line-based placement with CSS Grid</a></em></li>
- <li>Video tutorial: <em><a href="http://gridbyexample.com/video/series-line-based-placement/">Line-based placement</a></em></li>
-</ul>
+- Related CSS properties: {{cssxref("grid-column-start")}}, {{cssxref("grid-column")}}, {{cssxref("grid-row-start")}}, {{cssxref("grid-row-end")}}, {{cssxref("grid-row")}}
+- Grid Layout Guide: _[Line-based placement with CSS Grid](/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)_
+- Video tutorial: _[Line-based placement](http://gridbyexample.com/video/series-line-based-placement/)_

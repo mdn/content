@@ -13,22 +13,22 @@ tags:
   - Web
 browser-compat: css.types.image.gradient.repeating-radial-gradient
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>repeating-radial-gradient()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Functions">function</a> creates an image consisting of repeating gradients that radiate from an origin. It is similar to {{cssxref("gradient/radial-gradient()", "radial-gradient()")}} and takes the same arguments, but it repeats the color stops infinitely in all directions so as to cover its entire container, similar to {{cssxref("gradient/repeating-linear-gradient()", "repeating-linear-gradient()")}}. The function's result is an object of the {{cssxref("&lt;gradient&gt;")}} data type, which is a special kind of {{cssxref("&lt;image&gt;")}}.</p>
+The **`repeating-radial-gradient()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) creates an image consisting of repeating gradients that radiate from an origin. It is similar to {{cssxref("gradient/radial-gradient()", "radial-gradient()")}} and takes the same arguments, but it repeats the color stops infinitely in all directions so as to cover its entire container, similar to {{cssxref("gradient/repeating-linear-gradient()", "repeating-linear-gradient()")}}. The function's result is an object of the {{cssxref("&lt;gradient&gt;")}} data type, which is a special kind of {{cssxref("&lt;image&gt;")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/function-repeating-radial-gradient.html")}}</div>
+{{EmbedInteractiveExample("pages/css/function-repeating-radial-gradient.html")}}
 
+With each repetition, the positions of the color stops are shifted by a multiple of the dimensions of the basic radial gradient (the distance between the last color stop and the first). Thus, the position of each ending color stop coincides with a starting color stop; if the color values are different, this will result in a sharp visual transition, which can be mitigated by repeating the first color as the last color.
 
-<p>With each repetition, the positions of the color stops are shifted by a multiple of the dimensions of the basic radial gradient (the distance between the last color stop and the first). Thus, the position of each ending color stop coincides with a starting color stop; if the color values are different, this will result in a sharp visual transition, which can be mitigated by repeating the first color as the last color.</p>
+As with any gradient, a repeating radial gradient has [no intrinsic dimensions](/en-US/docs/Web/CSS/image#description); i.e., it has no natural or preferred size, nor a preferred ratio. Its concrete size will match the size of the element it applies to.
 
-<p>As with any gradient, a repeating radial gradient has <a href="/en-US/docs/Web/CSS/image#description">no intrinsic dimensions</a>; i.e., it has no natural or preferred size, nor a preferred ratio. Its concrete size will match the size of the element it applies to.</p>
+Because `<gradient>`s belong to the `<image>` data type, they can only be used where `<image>`s can be used. For this reason, `repeating-radial-gradient()` won't work on {{cssxref("background-color")}} and other properties that use the {{cssxref("&lt;color&gt;")}} data type.
 
-<p>Because <code>&lt;gradient&gt;</code>s belong to the <code>&lt;image&gt;</code> data type, they can only be used where <code>&lt;image&gt;</code>s can be used. For this reason, <code>repeating-radial-gradient()</code> won't work on {{cssxref("background-color")}} and other properties that use the {{cssxref("&lt;color&gt;")}} data type.</p>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush: css no-line-numbers">/* A gradient at the center of its container,
+```css
+/* A gradient at the center of its container,
    starting red, changing to blue, and finishing green,
    with the colors repeating every 30px */
 repeating-radial-gradient(circle at center, red 0, blue, green 30px);
@@ -38,128 +38,113 @@ repeating-radial-gradient(circle at center, red 0, blue, green 30px);
    repeating five times between the center and the bottom right corner,
    and only once between the center and the top left corner */
 repeating-radial-gradient(farthest-corner at 20% 20%, red 0, green, red 20%);
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt>{{cssxref("&lt;position&gt;")}}</dt>
- <dd>The position of the gradient, interpreted in the same way as {{cssxref("background-position")}} or {{cssxref("transform-origin")}}. If unspecified, it defaults to <code>center</code>.</dd>
- <dt><code>&lt;shape&gt;</code></dt>
- <dd>The gradient's shape. The value can be <code>circle</code> (meaning that the gradient's shape is a circle with constant radius) or <code>ellipse</code> (meaning that the shape is an axis-aligned ellipse). If unspecified, it defaults to <code>ellipse</code>.</dd>
- <dt><code>&lt;extent-keyword&gt;</code></dt>
- <dd>
-  <p>A keyword describing how big the ending shape must be. The possible values are:</p>
-  <table class="standard-table">
-   <tbody>
-    <tr>
-     <th>Keyword</th>
-     <th>Description</th>
-    </tr>
-    <tr>
-     <td><code>closest-side</code></td>
-     <td>The gradient's ending shape meets the side of the box closest to its center (for circles) or meets both the vertical and horizontal sides closest to the center (for ellipses).</td>
-    </tr>
-    <tr>
-     <td><code>closest-corner</code></td>
-     <td>The gradient's ending shape is sized so that it exactly meets the closest corner of the box from its center.</td>
-    </tr>
-    <tr>
-     <td><code>farthest-side</code></td>
-     <td>Similar to <code>closest-side</code>, except the ending shape is sized to meet the side of the box farthest from its center (or vertical and horizontal sides).</td>
-    </tr>
-    <tr>
-     <td><code>farthest-corner</code></td>
-     <td>The gradient's ending shape is sized so that it exactly meets the farthest corner of the box from its center.</td>
-    </tr>
-   </tbody>
-  </table>
+- {{cssxref("&lt;position&gt;")}}
+  - : The position of the gradient, interpreted in the same way as {{cssxref("background-position")}} or {{cssxref("transform-origin")}}. If unspecified, it defaults to `center`.
+- `<shape>`
+  - : The gradient's shape. The value can be `circle` (meaning that the gradient's shape is a circle with constant radius) or `ellipse` (meaning that the shape is an axis-aligned ellipse). If unspecified, it defaults to `ellipse`.
+- `<extent-keyword>`
 
-  <div class="note">
-   <p><strong>Note:</strong> Early implementations of this function included other keywords (<code>cover</code> and <code>contain</code>) as synonyms of the standard <code>farthest-corner</code> and <code>closest-side</code>, respectively. Use the standard keywords only, as some implementations have already dropped those older variants.</p>
-  </div>
- </dd>
- <dt><code>&lt;color-stop&gt;</code></dt>
- <dd>A color-stop's {{cssxref("&lt;color&gt;")}} value, followed by an optional stop position (either a {{cssxref("&lt;percentage&gt;")}} or a {{cssxref("&lt;length&gt;")}} along the gradient's axis). A percentage of <code>0%</code>, or a length of <code>0</code>, represents the center of the gradient; the value <code>100%</code> represents the intersection of the ending shape with the virtual gradient ray. Percentage values in between are linearly positioned on the virtual gradient ray.</dd>
-</dl>
+  - : A keyword describing how big the ending shape must be. The possible values are:
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+    | Keyword           | Description                                                                                                                                                                     |
+    | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+    | `closest-side`    | The gradient's ending shape meets the side of the box closest to its center (for circles) or meets both the vertical and horizontal sides closest to the center (for ellipses). |
+    | `closest-corner`  | The gradient's ending shape is sized so that it exactly meets the closest corner of the box from its center.                                                                    |
+    | `farthest-side`   | Similar to `closest-side`, except the ending shape is sized to meet the side of the box farthest from its center (or vertical and horizontal sides).                            |
+    | `farthest-corner` | The gradient's ending shape is sized so that it exactly meets the farthest corner of the box from its center.                                                                   |
 
-<pre class="brush: css">repeating-radial-gradient(
-       [[ circle  || <a href="/en-US/docs/Web/CSS/length">&lt;length&gt;</a> ]                     [at <a href="/en-US/docs/Web/CSS/position_value">&lt;position&gt;</a>]? , |
-        [ ellipse || [<a href="/en-US/docs/Web/CSS/length">&lt;length&gt;</a> | <a href="/en-US/docs/Web/CSS/percentage">&lt;percentage&gt;</a> ]{2}] [at <a href="/en-US/docs/Web/CSS/position_value">&lt;position&gt;</a>]? , |
-        [[ circle | ellipse ] || &lt;extent-keyword&gt; ] [at <a href="/en-US/docs/Web/CSS/position_value">&lt;position&gt;</a>]? , |
-                                                     at <a href="/en-US/docs/Web/CSS/position_value">&lt;position&gt;</a>   ,    &lt;color-stop-list&gt; )
+    > **Note:** Early implementations of this function included other keywords (`cover` and `contain`) as synonyms of the standard `farthest-corner` and `closest-side`, respectively. Use the standard keywords only, as some implementations have already dropped those older variants.
+
+- `<color-stop>`
+  - : A color-stop's {{cssxref("&lt;color&gt;")}} value, followed by an optional stop position (either a {{cssxref("&lt;percentage&gt;")}} or a {{cssxref("&lt;length&gt;")}} along the gradient's axis). A percentage of `0%`, or a length of `0`, represents the center of the gradient; the value `100%` represents the intersection of the ending shape with the virtual gradient ray. Percentage values in between are linearly positioned on the virtual gradient ray.
+
+### Formal syntax
+
+```css
+repeating-radial-gradient(
+       [[ circle  || <length> ]                     [at <position>]? , |
+        [ ellipse || [<length> | <percentage> ]{2}] [at <position>]? , |
+        [[ circle | ellipse ] || <extent-keyword> ] [at <position>]? , |
+                                                     at <position>   ,    <color-stop-list> )
         \---------------------------------------------------------------/\-----------------/
                   Contour, size and position of the ending shape          List of color stops
 
-where &lt;extent-keyword&gt; = closest-corner | closest-side | farthest-corner | farthest-side
-   and &lt;color-stop-list&gt; = [ &lt;linear-color-stop&gt; [, &lt;color-hint&gt;? ]? ]#, &lt;linear-color-stop&gt;
-   and &lt;linear-color-stop&gt; = &lt;color&gt; [ &lt;color-stop-length&gt; ]?
-   and &lt;color-stop-length&gt; = [ &lt;percentage&gt; | &lt;length&gt; ]{1,2}
-   and &lt;color-hint&gt; = [ &lt;percentage&gt; | &lt;length&gt; ]</pre>
+where <extent-keyword> = closest-corner | closest-side | farthest-corner | farthest-side
+   and <color-stop-list> = [ <linear-color-stop> [, <color-hint>? ]? ]#, <linear-color-stop>
+   and <linear-color-stop> = <color> [ <color-stop-length> ]?
+   and <color-stop-length> = [ <percentage> | <length> ]{1,2}
+   and <color-hint> = [ <percentage> | <length> ]
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Black_and_white_gradient">Black and white gradient</h3>
+### Black and white gradient
 
-<pre class="brush: html hidden">&lt;div class="radial-gradient"&gt;&lt;/div&gt;
-</pre>
+```html hidden
+<div class="radial-gradient"></div>
+```
 
-<pre class="brush: css hidden">.radial-gradient {
+```css hidden
+.radial-gradient {
   width: 120px;
   height: 120px;
-}</pre>
+}
+```
 
-<pre class="brush: css">.radial-gradient {
+```css
+.radial-gradient {
   background: repeating-radial-gradient(black, black 5px, white 5px, white 10px);
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample('Black_and_white_gradient', 120, 120)}}</p>
+{{EmbedLiveSample('Black_and_white_gradient', 120, 120)}}
 
-<h3 id="Farthest-corner">Farthest-corner</h3>
+### Farthest-corner
 
-<pre class="brush: html hidden">&lt;div class="radial-gradient"&gt;&lt;/div&gt;
-</pre>
+```html hidden
+<div class="radial-gradient"></div>
+```
 
-<pre class="brush: css hidden">.radial-gradient {
+```css hidden
+.radial-gradient {
   width: 240px;
   height: 120px;
-}</pre>
+}
+```
 
-<pre class="brush: css">.radial-gradient {
+```css
+.radial-gradient {
   background: repeating-radial-gradient(ellipse farthest-corner at 20% 20%,
       red, black 5%, blue 5%, green 10%);
   background: repeating-radial-gradient(ellipse farthest-corner at 20% 20%,
       red 0 5%, green 5% 10%);
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample('Farthest-corner', 120, 120)}}</p>
+{{EmbedLiveSample('Farthest-corner', 120, 120)}}
 
-<p>The elliptical gradient will be centered 20% from the top left, and will repeat 10 times between the center and the farthest corner (the bottom right corner). Browsers supporting multi position color stops will display a red and green striped ellipse. Browsers not supporting the syntax yet will see a gradient that goes from red to black and then from blue to green.</p>
+The elliptical gradient will be centered 20% from the top left, and will repeat 10 times between the center and the farthest corner (the bottom right corner). Browsers supporting multi position color stops will display a red and green striped ellipse. Browsers not supporting the syntax yet will see a gradient that goes from red to black and then from blue to green.
 
-<div class="note">
-<p><strong>Note:</strong> Please see <a href="/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients">Using CSS gradients</a> for more examples.</p>
-</div>
+> **Note:** Please see [Using CSS gradients](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients) for more examples.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients">Using CSS gradients</a></li>
- <li>Other gradient functions: {{cssxref("gradient/radial-gradient()", "radial-gradient()")}}, {{cssxref("gradient/linear-gradient()", "linear-gradient()")}}, {{cssxref("gradient/repeating-linear-gradient()", "repeating-linear-gradient()")}}, {{cssxref("gradient/conic-gradient()", "conic-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient()", "repeating-conic-gradient()")}}</li>
- <li>{{cssxref("&lt;image&gt;")}}</li>
- <li>{{cssxref("image/image()","image()")}}</li>
- <li>{{cssxref("element()")}}</li>
- <li>{{cssxref("image/image-set()","image-set()")}}</li>
- <li>{{cssxref("cross-fade()")}}</li>
-</ul>
+- [Using CSS gradients](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
+- Other gradient functions: {{cssxref("gradient/radial-gradient()", "radial-gradient()")}}, {{cssxref("gradient/linear-gradient()", "linear-gradient()")}}, {{cssxref("gradient/repeating-linear-gradient()", "repeating-linear-gradient()")}}, {{cssxref("gradient/conic-gradient()", "conic-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient()", "repeating-conic-gradient()")}}
+- {{cssxref("&lt;image&gt;")}}
+- {{cssxref("image/image()","image()")}}
+- {{cssxref("element()")}}
+- {{cssxref("image/image-set()","image-set()")}}
+- {{cssxref("cross-fade()")}}

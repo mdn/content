@@ -11,94 +11,104 @@ tags:
   - Web
 browser-compat: css.types.image.cross-fade
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<p>The <strong><code>cross-fade()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Functions">function</a> can be used to blend two or more images at a defined transparency. It can be used for many simple image manipulations, such as tinting an image with a solid color or highlighting a particular area of the page by combining an image with a radial gradient.</p>
+The **`cross-fade()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) can be used to blend two or more images at a defined transparency. It can be used for many simple image manipulations, such as tinting an image with a solid color or highlighting a particular area of the page by combining an image with a radial gradient.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p><strong>Important</strong>: The specification and current implementations have different syntaxes. The specification syntax is explained first.</p>
+**Important**: The specification and current implementations have different syntaxes. The specification syntax is explained first.
 
-<h3 id="Specification_syntax">Specification syntax</h3>
+### Specification syntax
 
-<p>The <code>cross-fade()</code> function takes a list of images with a percentage defining how much of each image is retained in terms of opacity when it is blended with the other images. The percent value must be coded without quotes, must contain the <code>'%'</code> symbol, and its value must be between 0% and 100%.</p>
+The `cross-fade()` function takes a list of images with a percentage defining how much of each image is retained in terms of opacity when it is blended with the other images. The percent value must be coded without quotes, must contain the `'%'` symbol, and its value must be between 0% and 100%.
 
-<p>The function can be used in CSS anywhere an ordinary image reference can be used.</p>
+The function can be used in CSS anywhere an ordinary image reference can be used.
 
-<h4 id="Cross-fade_percentages">Cross-fade percentages</h4>
+#### Cross-fade percentages
 
-<p>Think of the percentage as an opacity value for each image. This means a value of 0% means the image is fully transparent while a value of 100% makes the image fully opaque.</p>
+Think of the percentage as an opacity value for each image. This means a value of 0% means the image is fully transparent while a value of 100% makes the image fully opaque.
 
-<pre class="brush: css">cross-fade( url(white.png) 0%, url(black.png) 100%); /* fully black */
+```css
+cross-fade( url(white.png) 0%, url(black.png) 100%); /* fully black */
 cross-fade( url(white.png) 25%, url(black.png) 75%); /* 25% white, 75% black */
 cross-fade( url(white.png) 50%, url(black.png) 50%); /* 50% white, 50% black */
-<span class="hljs-tag"><span class="hljs-value">cross-fade( url(white.png) 75%, url(black.png) 25%); /* 75% white, 25% black */
+cross-fade( url(white.png) 75%, url(black.png) 25%); /* 75% white, 25% black */
 cross-fade( url(white.png) 100%, url(black.png) 0%); /* fully white */
-cross-fade( url(green.png) 75%, url(red.png) 75%); /* both green and red at 75% */</span></span></pre>
+cross-fade( url(green.png) 75%, url(red.png) 75%); /* both green and red at 75% */
+```
 
-<p>If any percentages are omitted, all the specified percentages are summed together and subtracted from <code>100%</code>. If the result is greater than 0%, the result is then divided equally between all images with omitted percentages.</p>
+If any percentages are omitted, all the specified percentages are summed together and subtracted from `100%`. If the result is greater than 0%, the result is then divided equally between all images with omitted percentages.
 
-<p>In the simplest case, two images are faded between each other. To do that, only one of the images needs to have a percentage, the other one will be faded accordingly. For example, a value of 0% defined for the first image yields only the second image, while 100% yields only the first. A 25% value renders the first image at 25% and the second at 75%. The 75% value is the inverse, showing the first image at 75% and the second at 25%.</p>
+In the simplest case, two images are faded between each other. To do that, only one of the images needs to have a percentage, the other one will be faded accordingly. For example, a value of 0% defined for the first image yields only the second image, while 100% yields only the first. A 25% value renders the first image at 25% and the second at 75%. The 75% value is the inverse, showing the first image at 75% and the second at 25%.
 
-<p>The above could also have been written as:</p>
+The above could also have been written as:
 
-<pre class="brush: css">cross-fade( url(white.png) 0%,   url(black.png)); /* fully black */
+```css
+cross-fade( url(white.png) 0%,   url(black.png)); /* fully black */
 cross-fade( url(white.png) 25%,  url(black.png)); /* 25% white, 75% black */
 cross-fade( url(white.png),      url(black.png)); /* 50% white, 50% black */
 cross-fade( url(white.png) 75%,  url(black.png)); /* 75% white, 25% black */
 cross-fade( url(white.png) 100%, url(black.png)); /* fully white */
-cross-fade( url(green.png) 75%, url(red.png) 75%); /* both green and red at 75% */</pre>
+cross-fade( url(green.png) 75%, url(red.png) 75%); /* both green and red at 75% */
+```
 
-<p>If no percentages are declared, both the images will be 50% opaque, with a cross-fade rendering as an even merge of both images. The 50%/50% example seen above did not need to have the percentages listed, as when a percentage value is omitted, the included percentages are added together and subtracted from 100%. The result, if greater than 0, is then divided equally between all images with omitted percentages.</p>
+If no percentages are declared, both the images will be 50% opaque, with a cross-fade rendering as an even merge of both images. The 50%/50% example seen above did not need to have the percentages listed, as when a percentage value is omitted, the included percentages are added together and subtracted from 100%. The result, if greater than 0, is then divided equally between all images with omitted percentages.
 
-<p>In the last example, the sum of both percentages is not 100%, and therefore both images include their respective opacities.</p>
+In the last example, the sum of both percentages is not 100%, and therefore both images include their respective opacities.
 
-<p>If no percentages are declared and three images are included, each image will be 33.33% opaque. The two following are lines (almost) identical:</p>
+If no percentages are declared and three images are included, each image will be 33.33% opaque. The two following are lines (almost) identical:
 
-<pre class="brush: css">cross-fade( url(red.png), url(yellow.png), url(blue.png)); /* all three will be 33.3333% opaque */
-cross-fade( url(red.png) 33.33%, url(yellow.png) 33.33%, url(blue.png) 33.33%);</pre>
+```css
+cross-fade( url(red.png), url(yellow.png), url(blue.png)); /* all three will be 33.3333% opaque */
+cross-fade( url(red.png) 33.33%, url(yellow.png) 33.33%, url(blue.png) 33.33%);
+```
 
-<h3 id="Older_implemented_syntax">Older, implemented syntax</h3>
+### Older, implemented syntax
 
-<pre class="brush: css">cross-fade( &lt;image&gt;, &lt;image&gt;, &lt;percentage&gt; )</pre>
+```css
+cross-fade( <image>, <image>, <percentage> )
+```
 
-<p>The specification for the <code>cross-fade()</code> function allows for multiple images and for each image to have transparency values independent of the other values. This was not always the case. The <a href="/en-US/docs/">original syntax</a>, which has been implemented in some browsers, only allowed for two images, with the sum of the transparency of those two images being exactly 100%. The original syntax is supported in Safari and supported with the <code>-webkit-</code> prefix in Chrome, Opera, and other blink-based browsers.</p>
+The specification for the `cross-fade()` function allows for multiple images and for each image to have transparency values independent of the other values. This was not always the case. The [original syntax](/en-US/docs/), which has been implemented in some browsers, only allowed for two images, with the sum of the transparency of those two images being exactly 100%. The original syntax is supported in Safari and supported with the `-webkit-` prefix in Chrome, Opera, and other blink-based browsers.
 
-<pre class="brush: css">cross-fade(url(white.png), url(black.png), 0%);   /* fully black */
+```css
+cross-fade(url(white.png), url(black.png), 0%);   /* fully black */
 cross-fade(url(white.png), url(black.png), 25%);  /* 25% white, 75% black */
 cross-fade(url(white.png), url(black.png), 50%);  /* 50% white, 50% black */
 cross-fade(url(white.png), url(black.png), 75%);  /* 75% white, 25% black */
 cross-fade(url(white.png), url(black.png), 100%); /* fully white */
-</pre>
+```
 
-<p>In the implemented syntax, the two comma-separated images are declared first, followed by a comma and required percent value. Omitting the comma or percent invalidates the value. The percent is the opacity of the first declared image. The included percentage is subtracted from 100%, with the difference being the opacity of the second image.</p>
+In the implemented syntax, the two comma-separated images are declared first, followed by a comma and required percent value. Omitting the comma or percent invalidates the value. The percent is the opacity of the first declared image. The included percentage is subtracted from 100%, with the difference being the opacity of the second image.
 
-<p>The green/red example (with the percentages totalling 150%) and the yellow/red/blue example (with three images) from the specification syntax section, are not possible in this implementation.</p>
+The green/red example (with the percentages totalling 150%) and the yellow/red/blue example (with three images) from the specification syntax section, are not possible in this implementation.
 
-<h2 id="Accessibility_concerns">Accessibility concerns</h2>
+## Accessibility concerns
 
-<p>Browsers do not provide any special information on background images to assistive technology. This is important primarily for screen readers, as a screen reader will not announce its presence and therefore convey nothing to its users. If the image contains information critical to understanding the page's overall purpose, it is better to describe it semantically in the document. When using background images, make sure the contrast in color is great enough that any text is legible over the image as well as if the images is missing.</p>
+Browsers do not provide any special information on background images to assistive technology. This is important primarily for screen readers, as a screen reader will not announce its presence and therefore convey nothing to its users. If the image contains information critical to understanding the page's overall purpose, it is better to describe it semantically in the document. When using background images, make sure the contrast in color is great enough that any text is legible over the image as well as if the images is missing.
 
-<ul>
- <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.1_%E2%80%94_Providing_text_alternatives_for_non-text_content">MDN Understanding WCAG, Guideline 1.1 explanations</a></li>
- <li><a class="external external-icon" href="https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html" rel="noopener">Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0</a></li>
-</ul>
+- [MDN Understanding WCAG, Guideline 1.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.1_%E2%80%94_Providing_text_alternatives_for_non-text_content)
+- [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Older_syntax_for_cross-fade">Older syntax for cross-fade</h3>
+### Older syntax for cross-fade
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="crossfade"&gt;&lt;/div&gt;</pre>
+```html
+<div class="crossfade"></div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css; highlight[4-11]">.crossfade {
+```css
+.crossfade {
     width: 300px;
     height: 300px;
     background-image: -webkit-cross-fade(
@@ -109,28 +119,27 @@ cross-fade(url(white.png), url(black.png), 100%); /* fully white */
         url('br.png'),
         url('tr.png'),
         75%);
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Older_syntax_for_cross-fade", "330", "330")}}</p>
+{{EmbedLiveSample("Older_syntax_for_cross-fade", "330", "330")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("image")}}</li>
- <li>{{cssxref("url")}}</li>
- <li>{{cssxref("_image", "image()")}}</li>
- <li>{{cssxref("image-set")}}</li>
- <li>{{cssxref("element")}}</li>
- <li><a href="/en-US/docs/CSS/Using_CSS_gradients" title="Using gradients">Using CSS gradients</a></li>
- <li>Gradient functions: {{cssxref("linear-gradient", "linear-gradient()")}}, {{cssxref("radial-gradient", "radial-gradient()")}}, {{cssxref("repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("repeating-radial-gradient", "repeating-radial-gradient()")}}, {{cssxref("conic-gradient", "conic-gradient()")}},</li>
-</ul>
+- {{cssxref("image")}}
+- {{cssxref("url")}}
+- {{cssxref("_image", "image()")}}
+- {{cssxref("image-set")}}
+- {{cssxref("element")}}
+- [Using CSS gradients](/en-US/docs/CSS/Using_CSS_gradients "Using gradients")
+- Gradient functions: {{cssxref("linear-gradient", "linear-gradient()")}}, {{cssxref("radial-gradient", "radial-gradient()")}}, {{cssxref("repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("repeating-radial-gradient", "repeating-radial-gradient()")}}, {{cssxref("conic-gradient", "conic-gradient()")}},

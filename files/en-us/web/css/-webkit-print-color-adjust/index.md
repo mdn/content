@@ -7,14 +7,15 @@ tags:
   - Layout
   - Non-standard
   - Web
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.-webkit-print-color-adjust
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<p>The <strong><code>-webkit-print-color-adjust</code></strong> property is a non-standard CSS extension that can be used to force printing of background colors and images in browsers based on the WebKit engine.</p>
+The **`-webkit-print-color-adjust`** property is a non-standard CSS extension that can be used to force printing of background colors and images in browsers based on the WebKit engine.
 
-<pre class="brush: css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 -webkit-print-color-adjust: economy;
 -webkit-print-color-adjust: exact;
 
@@ -22,51 +23,49 @@ browser-compat: css.properties.-webkit-print-color-adjust
 -webkit-print-color-adjust: inherit;
 -webkit-print-color-adjust: initial;
 -webkit-print-color-adjust: unset;
-</pre>
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>-webkit-print-color-adjust</code> property is specified as one of the keyword values listed below.</p>
+The `-webkit-print-color-adjust` property is specified as one of the keyword values listed below.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>economy</code></dt>
- <dd>Normal behavior.  Background colors and images are only printed if the user explicitly allows it in their browser's print settings dialog.</dd>
- <dt><code>exact</code></dt>
- <dd>Background colors and images of the element to which this rule is applied are always printed, user's print settings are overridden.</dd>
-</dl>
+- `economy`
+  - : Normal behavior.  Background colors and images are only printed if the user explicitly allows it in their browser's print settings dialog.
+- `exact`
+  - : Background colors and images of the element to which this rule is applied are always printed, user's print settings are overridden.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{CSSSyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Forcing_white-on-black_printing">Forcing white-on-black printing</h3>
+### Forcing white-on-black printing
 
-<pre class="brush: css">article {
+```css
+article {
   -webkit-print-color-adjust: exact;
   background: #222;
   color: #eee;
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any standard, though there is a <a href="http://wiki.csswg.org/ideas/print-backgrounds">proposal in the CSSWG wiki</a> to standardize it.</p>
+Not part of any standard, though there is a [proposal in the CSSWG wiki](http://wiki.csswg.org/ideas/print-backgrounds) to standardize it.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>WebKit <a href="https://bugs.webkit.org/show_bug.cgi?id=64583">bug 64583</a>: "WIP: Add CSS property to control printing of backgrounds for individual elements"</li>
- <li>CSSWG wiki: <a href="http://wiki.csswg.org/ideas/print-backgrounds">print-backgrounds</a> - a proposal to standardize this property</li>
- <li>CSS Color Module Level 4:  the <code><a href="https://drafts.csswg.org/css-color-4/#color-adjust">color-adjust</a></code> property - a newer proposal to standardize this property</li>
-</ul>
+- WebKit [bug 64583](https://bugs.webkit.org/show_bug.cgi?id=64583): "WIP: Add CSS property to control printing of backgrounds for individual elements"
+- CSSWG wiki: [print-backgrounds](http://wiki.csswg.org/ideas/print-backgrounds) - a proposal to standardize this property
+- CSS Color Module Level 4:  the [`color-adjust`](https://drafts.csswg.org/css-color-4/#color-adjust) property - a newer proposal to standardize this property

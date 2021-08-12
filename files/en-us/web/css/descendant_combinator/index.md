@@ -8,70 +8,74 @@ tags:
   - Selectors
 browser-compat: css.selectors.descendant
 ---
-<div>{{CSSRef("Selectors")}}</div>
+{{CSSRef("Selectors")}}
 
-<p>The <strong>descendant combinator</strong> — typically represented by a single space (<code> </code>) character — combines two selectors such that elements matched by the second selector are selected if they have an ancestor (parent, parent's parent, parent's parent's parent, etc) element matching the first selector. Selectors that utilize a descendant combinator are called <dfn>descendant selectors</dfn>.</p>
+The **descendant combinator** — typically represented by a single space (` `) character — combines two selectors such that elements matched by the second selector are selected if they have an ancestor (parent, parent's parent, parent's parent's parent, etc) element matching the first selector. Selectors that utilize a descendant combinator are called _descendant selectors_.
 
-<pre class="brush: css no-line-numbers">/* List items that are descendants of the "my-things" list */
+```css
+/* List items that are descendants of the "my-things" list */
 ul.my-things li {
   margin: 2em;
-}</pre>
+}
+```
 
-<p>The descendant combinator is technically one or more {{Glossary("CSS")}} white space characters — the space character and/or one of four control characters: carriage return, form feed, new line, and tab characters — between two selectors in the absence of another combinator. Additionally, the white space characters of which the combinator is comprised may contain any number of CSS comments.</p>
+The descendant combinator is technically one or more {{Glossary("CSS")}} white space characters — the space character and/or one of four control characters: carriage return, form feed, new line, and tab characters — between two selectors in the absence of another combinator. Additionally, the white space characters of which the combinator is comprised may contain any number of CSS comments.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css"><var>selector1</var> <var>selector2</var> {
-  <var>/* property declarations */</var>
-}</pre>
+```css
+selector1 selector2 {
+  /* property declarations */
+}
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">li {
+```css
+li {
   list-style-type: disc;
 }
 
 li li {
   list-style-type: circle;
 }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;ul&gt;
-  &lt;li&gt;
-    &lt;div&gt;Item 1&lt;/div&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Subitem A&lt;/li&gt;
-      &lt;li&gt;Subitem B&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;div&gt;Item 2&lt;/div&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Subitem A&lt;/li&gt;
-      &lt;li&gt;Subitem B&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-</pre>
+```html
+<ul>
+  <li>
+    <div>Item 1</div>
+    <ul>
+      <li>Subitem A</li>
+      <li>Subitem B</li>
+    </ul>
+  </li>
+  <li>
+    <div>Item 2</div>
+    <ul>
+      <li>Subitem A</li>
+      <li>Subitem B</li>
+    </ul>
+  </li>
+</ul>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Examples", "100%", 160)}}</p>
+{{EmbedLiveSample("Examples", "100%", 160)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/Child_combinator">Child combinator</a></li>
-</ul>
+- [Child combinator](/en-US/docs/Web/CSS/Child_combinator)

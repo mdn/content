@@ -1,42 +1,45 @@
 ---
 title: ':-moz-window-inactive'
-slug: 'Web/CSS/:-moz-window-inactive'
+slug: Web/CSS/:-moz-window-inactive
 tags:
   - CSS
-  - 'CSS:Mozilla Extensions'
+  - CSS:Mozilla Extensions
   - Non-standard
   - Pseudo-class
   - Reference
   - Selector
 browser-compat: css.selectors.-moz-window-inactive
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<p>The <strong><code>:-moz-window-inactive</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> is a <a href="/en-US/docs/Web/CSS/Mozilla_Extensions">Mozilla extension</a> that matches any element while it's in an inactive window.</p>
+The **`:-moz-window-inactive`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) is a [Mozilla extension](/en-US/docs/Web/CSS/Mozilla_Extensions) that matches any element while it's in an inactive window.
 
-<p><code>:-moz-window-inactive</code> works in content HTML documents, too.</p>
+`:-moz-window-inactive` works in content HTML documents, too.
 
-<div class="note">
-  <p><strong>Note:</strong> Prior to the addition of this pseudo-class, giving different styles to background windows was achieved by setting an attribute (<code>active="true"</code>) on the top-level XUL chrome window. This attribute is no longer used.</p>
+> **Note:** Prior to the addition of this pseudo-class, giving different styles to background windows was achieved by setting an attribute (`active="true"`) on the top-level XUL chrome window. This attribute is no longer used.
+
+## Syntax
+
+```css
+:-moz-window-inactive
+```
+
+## Examples
+
+This example alters the appearance of a box's background depending on whether its window is active or not.
+
+### HTML
+
+```html
+<div id="mybox">
+  <p>This is a box!</p>
 </div>
+```
 
-<h2 id="Syntax">Syntax</h2>
+### CSS
 
-<pre class="brush: css">:-moz-window-inactive</pre>
-
-<h2 id="Examples">Examples</h2>
-
-<p>This example alters the appearance of a box's background depending on whether its window is active or not.</p>
-
-<h3 id="HTML">HTML</h3>
-
-<pre class="brush: html">&lt;div id="mybox"&gt;
-  &lt;p&gt;This is a box!&lt;/p&gt;
-&lt;/div&gt;</pre>
-
-<h3 id="CSS">CSS</h3>
-
-<pre class="brush: css">#mybox {
+```css
+#mybox {
   background: linear-gradient(to bottom, yellow, cyan);
   width: 200px;
   height: 200px;
@@ -44,30 +47,28 @@ browser-compat: css.selectors.-moz-window-inactive
 
 #mybox:-moz-window-inactive {
   background: cyan;
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>The result of this code is shown below. You can view this as a {{LiveSampleLink('Examples', 'separate page')}} as well.</p>
+The result of this code is shown below. You can view this as a {{LiveSampleLink('Examples', 'separate page')}} as well.
 
-<p>{{EmbedLiveSample('Examples', 220, 220)}}</p>
+{{EmbedLiveSample('Examples', 220, 220)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any standard.</p>
+Not part of any standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/Mozilla_Extensions">Mozilla CSS extensions</a></li>
- <li>Related CSS selectors:
-  <ul>
-   <li><code><a href="/en-US/docs/Web/CSS/:active">:active</a></code></li>
-  </ul>
- </li>
- <li>The {{domxref("Document.activeElement")}} property for regular DOM, and the {{domxref("ShadowRoot.activeElement")}} property for <a href="/en-US/docs/Web/Web_Components/Using_shadow_DOM">shadow DOM</a> roots.</li>
-</ul>
+- [Mozilla CSS extensions](/en-US/docs/Web/CSS/Mozilla_Extensions)
+- Related CSS selectors:
+
+  - [`:active`](/en-US/docs/Web/CSS/:active)
+
+- The {{domxref("Document.activeElement")}} property for regular DOM, and the {{domxref("ShadowRoot.activeElement")}} property for [shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM) roots.

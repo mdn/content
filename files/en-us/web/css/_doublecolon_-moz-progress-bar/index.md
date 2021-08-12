@@ -1,57 +1,59 @@
 ---
 title: '::-moz-progress-bar'
-slug: 'Web/CSS/::-moz-progress-bar'
+slug: Web/CSS/::-moz-progress-bar
 tags:
   - CSS
-  - 'CSS:Mozilla Extensions'
+  - CSS:Mozilla Extensions
   - NeedsCompatTable
   - Non-standard
   - Pseudo-element
   - Reference
   - Selector
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<p>The <strong><code>::-moz-progress-bar</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-element</a> is a <a href="/en-US/docs/Web/CSS/Mozilla_Extensions">Mozilla extension</a> that represents the progress bar inside a {{HTMLElement("progress")}} element. (The bar represents the amount of progress that has been made.)</p>
+The **`::-moz-progress-bar`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) is a [Mozilla extension](/en-US/docs/Web/CSS/Mozilla_Extensions) that represents the progress bar inside a {{HTMLElement("progress")}} element. (The bar represents the amount of progress that has been made.)
 
-<p>If you want to select the unfinished part of {{HTMLElement("progress")}} in Mozilla, please select the {{HTMLElement("progress")}} directly.</p>
+If you want to select the unfinished part of {{HTMLElement("progress")}} in Mozilla, please select the {{HTMLElement("progress")}} directly.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush:html;">&lt;progress value="30" max="100"&gt;30%&lt;/progress&gt;
-&lt;progress max="100"&gt;Indeterminate&lt;/progress&gt;</pre>
+```html
+<progress value="30" max="100">30%</progress>
+<progress max="100">Indeterminate</progress>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">::-moz-progress-bar {
+```css
+::-moz-progress-bar {
   background-color: red;
 }
 
 /* Force indeterminate bars to have zero width */
 :indeterminate::-moz-progress-bar {
   width: 0;
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample('Examples')}}</p>
+{{EmbedLiveSample('Examples')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any standard.</p>
+Not part of any standard.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTMLElement("progress")}}</li>
- <li>{{ cssxref("::-ms-fill") }}</li>
- <li>{{ cssxref("::-webkit-progress-bar") }}</li>
- <li>{{ cssxref("::-webkit-progress-value") }}</li>
- <li>{{ cssxref("::-webkit-progress-inner-element") }}</li>
-</ul>
+- {{HTMLElement("progress")}}
+- {{ cssxref("::-ms-fill") }}
+- {{ cssxref("::-webkit-progress-bar") }}
+- {{ cssxref("::-webkit-progress-value") }}
+- {{ cssxref("::-webkit-progress-inner-element") }}

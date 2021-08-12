@@ -11,66 +11,64 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.-moz-outline-radius-bottomleft
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}{{deprecated_header}}
 
-<div>{{deprecated_header}}</div>
+In Mozilla applications, the **`-moz-outline-radius-bottomleft`** [CSS](/en-US/docs/Web/CSS) property can be used to round the bottom-left corner of an element's {{cssxref("outline")}}.
 
-<p>In Mozilla applications, the <strong><code>-moz-outline-radius-bottomleft</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property can be used to round the bottom-left corner of an element's {{cssxref("outline")}}.</p>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+The value of `-moz-outline-radius-bottomleft` is either a CSS {{cssxref("length", "&lt;length&gt;")}} or a [percentage](/en-US/docs/Web/CSS/percentage) of the corresponding dimensions of the border box. The {{cssxref("calc()", "calc()")}} function may be used as well.
 
-<p>The value of <code>-moz-outline-radius-bottomleft</code> is either a CSS {{cssxref("length", "&lt;length&gt;")}} or a <a href="/en-US/docs/Web/CSS/percentage">percentage</a> of the corresponding dimensions of the border box. The {{cssxref("calc()", "calc()")}} function may be used as well.</p>
+### Values
 
-<h3 id="Values">Values</h3>
+- `<length>`
+  - : The radius of the circle defining the curvature of the bottom and left edges of the element, specified as a CSS {{cssxref("length", "&lt;length&gt;")}}.
+- `<percentage>`
+  - : The radius of the circle defining the rounding of the bottom-left corner of the element, specified as the [percentages](/en-US/docs/Web/CSS/percentage) of the bottom and left sides of the border box.
 
-<dl>
- <dt><code>&lt;length&gt;</code></dt>
- <dd>The radius of the circle defining the curvature of the bottom and left edges of the element, specified as a CSS {{cssxref("length", "&lt;length&gt;")}}.</dd>
- <dt><code>&lt;percentage&gt;</code></dt>
- <dd>The radius of the circle defining the rounding of the bottom-left corner of the element, specified as the <a href="/en-US/docs/Web/CSS/percentage">percentages</a> of the bottom and left sides of the border box.</dd>
-</dl>
+## Formal definition
 
-<h2 id="Formal_definition">Formal definition</h2>
+{{cssinfo}}
 
-<p>{{cssinfo}}</p>
-
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Rounding_a_outline">Rounding a outline</h3>
+### Rounding a outline
 
-<p>Since this is a Firefox-only property, this example will not display the desired effect if you are viewing this in a browser other than Firefox.</p>
+Since this is a Firefox-only property, this example will not display the desired effect if you are viewing this in a browser other than Firefox.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;Look at this paragraph's bottom-left corner.&lt;/p&gt;</pre>
+```html
+<p>Look at this paragraph's bottom-left corner.</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   margin: 10px;
   border: solid cyan;
   outline: dotted green;
   -moz-outline-radius-bottomleft: 2em;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Rounding_a_outline")}}</p>
+{{EmbedLiveSample("Rounding_a_outline")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any standard.</p>
+Not part of any standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>See the {{cssxref("-moz-outline-radius")}} property for more information.</li>
-</ul>
+- See the {{cssxref("-moz-outline-radius")}} property for more information.

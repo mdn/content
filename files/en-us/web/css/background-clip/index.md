@@ -9,26 +9,22 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.background-clip
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<p>The <strong><code>background-clip</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets whether an element's background extends underneath its border box, padding box, or content box.</p>
+The **`background-clip`** [CSS](/en-US/docs/Web/CSS) property sets whether an element's background extends underneath its border box, padding box, or content box.
 
-<div>{{EmbedInteractiveExample("pages/css/background-clip.html")}}</div>
+{{EmbedInteractiveExample("pages/css/background-clip.html")}}
 
+If the element has no {{cssxref("background-image")}} or {{cssxref("background-color")}}, this property will only have a visual effect when the border has transparent regions or partially opaque regions (due to {{cssxref("border-style")}} or {{cssxref("border-image")}}); otherwise, the border masks the difference.
 
-<p>If the element has no {{cssxref("background-image")}} or {{cssxref("background-color")}}, this property will only have a visual effect when the border has transparent regions or partially opaque regions (due to {{cssxref("border-style")}} or {{cssxref("border-image")}}); otherwise, the border masks the difference.</p>
+> **Note:** Because the [root element](/en-US/docs/Web/HTML/Element/html) has a different background painting area, the `background-clip` property has no effect when specified on it. See "[The backgrounds of special elements.](https://drafts.csswg.org/css-backgrounds-3/#special-backgrounds)"
 
-<div class="notecard note">
-<p><strong>Note:</strong> Because the <a href="/en-US/docs/Web/HTML/Element/html">root element</a> has a different background painting area, the <code>background-clip</code> property has no effect when specified on it. See "<a href="https://drafts.csswg.org/css-backgrounds-3/#special-backgrounds">The backgrounds of special elements.</a>"</p>
-</div>
+> **Note:** For documents whose [root element](/en-US/docs/Web/HTML/Element/html) is an HTML element: if the computed value of {{cssxref("background-image")}} on the root element is `none` and its {{cssxref("background-color")}} is `transparent`, user agents must instead propagate the computed values of the `background` properties from that element’s first HTML {{HTMLElement("body")}} child element. The used values of that `<body>` element’s `background` properties are their initial values, and the propagated values are treated as if they were specified on the root element. It is recommended that authors of HTML documents specify the canvas background for the `<body>` element rather than the HTML element.
 
-<div class="notecard note">
-<p><strong>Note:</strong> For documents whose <a href="/en-US/docs/Web/HTML/Element/html">root element</a> is an HTML element: if the computed value of {{cssxref("background-image")}} on the root element is <code>none</code> and its {{cssxref("background-color")}} is <code>transparent</code>, user agents must instead propagate the computed values of the <code>background</code> properties from that element’s first HTML {{HTMLElement("body")}} child element. The used values of that <code>&lt;body&gt;</code> element’s <code>background</code> properties are their initial values, and the propagated values are treated as if they were specified on the root element. It is recommended that authors of HTML documents specify the canvas background for the <code>&lt;body&gt;</code> element rather than the HTML element.</p>
-</div>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 background-clip: border-box;
 background-clip: padding-box;
 background-clip: content-box;
@@ -39,51 +35,50 @@ background-clip: inherit;
 background-clip: initial;
 background-clip: revert;
 background-clip: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>border-box</code></dt>
- <dd>The background extends to the outside edge of the border (but underneath the border in z-ordering).</dd>
- <dt><code>padding-box</code></dt>
- <dd>The background extends to the outside edge of the padding. No background is drawn beneath the border.</dd>
- <dt><code>content-box</code></dt>
- <dd>The background is painted within (clipped to) the content box.</dd>
- <dt><code>text</code></dt>
- <dd>The background is painted within (clipped to) the foreground text.</dd>
-</dl>
+- `border-box`
+  - : The background extends to the outside edge of the border (but underneath the border in z-ordering).
+- `padding-box`
+  - : The background extends to the outside edge of the padding. No background is drawn beneath the border.
+- `content-box`
+  - : The background is painted within (clipped to) the content box.
+- `text`
+  - : The background is painted within (clipped to) the foreground text.
 
-<h2 id="Accessibility_concerns">Accessibility concerns</h2>
+## Accessibility concerns
 
-<p>When using <code>background-clip: text</code> check that the contrast ratio between the background color and the color of the text placed over it is high enough that people experiencing low vision conditions will be able to read the content of the page.</p>
+When using `background-clip: text` check that the contrast ratio between the background color and the color of the text placed over it is high enough that people experiencing low vision conditions will be able to read the content of the page.
 
-<p>If the background image does not load, this could also lead to the text becoming unreadable. Add a fallback {{cssxref("background-color")}} to prevent this from happening, and test without the image.</p>
+If the background image does not load, this could also lead to the text becoming unreadable. Add a fallback {{cssxref("background-color")}} to prevent this from happening, and test without the image.
 
-<p>Consider using feature queries with {{cssxref("@supports")}} to test for support of <code>background-clip: text</code> and provide an accessible alternative where it is not supported.</p>
+Consider using feature queries with {{cssxref("@supports")}} to test for support of `background-clip: text` and provide an accessible alternative where it is not supported.
 
+## Formal definition
 
-<h2 id="Formal_definition">Formal definition</h2>
+{{cssinfo}}
 
-<p>{{cssinfo}}</p>
-
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p class="border-box"&gt;The background extends behind the border.&lt;/p&gt;
-&lt;p class="padding-box"&gt;The background extends to the inside edge of the border.&lt;/p&gt;
-&lt;p class="content-box"&gt;The background extends only to the edge of the content box.&lt;/p&gt;
-&lt;p class="text"&gt;The background is clipped to the foreground text.&lt;/p&gt;
-</pre>
+```html
+<p class="border-box">The background extends behind the border.</p>
+<p class="padding-box">The background extends to the inside edge of the border.</p>
+<p class="content-box">The background extends only to the edge of the content box.</p>
+<p class="text">The background is clipped to the foreground text.</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   border: .8em darkviolet;
   border-style: dotted double;
   margin: 1em 0;
@@ -101,24 +96,23 @@ background-clip: unset;
   background-clip: text;
   -webkit-background-clip: text;
   color: rgba(0,0,0,.2);
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Examples', 600, 580)}}</p>
+{{EmbedLiveSample('Examples', 600, 580)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The {{cssxref("clip-path")}} property creates a clipping region that defines what part of an <em>entire element</em> should be displayed.</li>
- <li>Background properties: {{cssxref("background")}}, {{cssxref("background-color")}}, {{cssxref("background-image")}}, {{cssxref("background-origin")}}</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">Introduction to the CSS box model</a></li>
-</ul>
+- The {{cssxref("clip-path")}} property creates a clipping region that defines what part of an _entire element_ should be displayed.
+- Background properties: {{cssxref("background")}}, {{cssxref("background-color")}}, {{cssxref("background-image")}}, {{cssxref("background-origin")}}
+- [Introduction to the CSS box model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)

@@ -9,78 +9,64 @@ tags:
   - Reference
   - display-outside
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <code>&lt;display-outside&gt;</code> keywords specify the element’s outer {{CSSxRef("display")}} type, which is essentially its role in flow layout. These keywords are used as values of the <code>display</code> property, and can be used for legacy purposes as a single keyword, or as defined in the Level 3 specification alongside a value from the {{CSSxRef("&lt;display-inside&gt;")}} keywords.</p>
+The `<display-outside>` keywords specify the element’s outer {{CSSxRef("display")}} type, which is essentially its role in flow layout. These keywords are used as values of the `display` property, and can be used for legacy purposes as a single keyword, or as defined in the Level 3 specification alongside a value from the {{CSSxRef("&lt;display-inside&gt;")}} keywords.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>Valid <code>&lt;display-outside&gt;</code> values:</p>
+Valid `<display-outside>` values:
 
-<dl>
- <dt><code>block</code></dt>
- <dd>The element generates a block element box, generating line breaks both before and after the element when in the normal flow.</dd>
- <dt><code>inline</code></dt>
- <dd>The element generates one or more inline element boxes that do not generate line breaks before or after themselves. In normal flow, the next element will be on the same line if there is space</dd>
-</dl>
+- `block`
+  - : The element generates a block element box, generating line breaks both before and after the element when in the normal flow.
+- `inline`
+  - : The element generates one or more inline element boxes that do not generate line breaks before or after themselves. In normal flow, the next element will be on the same line if there is space
 
-<div class="note">
-<p><strong>Note:</strong> Browsers that support the two value syntax, on finding the outer value only, such as when <code>display: block</code> or <code>display: inline</code> is specified, will set the inner value to <code>flow</code>. This will result in expected behavior; for example if you specify an element to be block, you would expect that the children of that element would participate in block and inline normal flow layout.</p>
-</div>
+> **Note:** Browsers that support the two value syntax, on finding the outer value only, such as when `display: block` or `display: inline` is specified, will set the inner value to `flow`. This will result in expected behavior; for example if you specify an element to be block, you would expect that the children of that element would participate in block and inline normal flow layout.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the following example, span elements (normally displayed as inline elements) are set to <code>display: block</code> and so break onto new lines and expand to fill their container in the inline dimension.</p>
+In the following example, span elements (normally displayed as inline elements) are set to `display: block` and so break onto new lines and expand to fill their container in the inline dimension.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;span&gt;span 1&lt;/span&gt;
-&lt;span&gt;span 2&lt;/span&gt;</pre>
+```html
+<span>span 1</span>
+<span>span 2</span>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">span {
+```css
+span {
     display: block;
     border: 1px solid rebeccapurple;
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Examples", 300, 60)}}</p>
+{{EmbedLiveSample("Examples", 300, 60)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Display', '#typedef-display-outside', 'display-outside')}}</td>
-   <td>{{Spec2('CSS3 Display')}}</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                        | Status                           |
+| ---------------------------------------------------------------------------------------------------- | -------------------------------- |
+| {{SpecName('CSS3 Display', '#typedef-display-outside', 'display-outside')}} | {{Spec2('CSS3 Display')}} |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("css.properties.display.display-outside", 10)}}</p>
+{{Compat("css.properties.display.display-outside", 10)}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{CSSxRef("display")}}
-  <ul>
-   <li>{{CSSxRef("&lt;display-inside&gt;")}}</li>
-   <li>{{CSSxRef("&lt;display-listitem&gt;")}}</li>
-   <li>{{CSSxRef("&lt;display-internal&gt;")}}</li>
-   <li>{{CSSxRef("&lt;display-box&gt;")}}</li>
-   <li>{{CSSxRef("&lt;display-legacy&gt;")}}</li>
-  </ul>
- </li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow">Block and Inline layout in Normal Flow</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts">Formatting Contexts explained</a></li>
-</ul>
+- {{CSSxRef("display")}}
+
+  - {{CSSxRef("&lt;display-inside&gt;")}}
+  - {{CSSxRef("&lt;display-listitem&gt;")}}
+  - {{CSSxRef("&lt;display-internal&gt;")}}
+  - {{CSSxRef("&lt;display-box&gt;")}}
+  - {{CSSxRef("&lt;display-legacy&gt;")}}
+
+- [Block and Inline layout in Normal Flow](/en-US/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)
+- [Formatting Contexts explained](/en-US/docs/Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts)

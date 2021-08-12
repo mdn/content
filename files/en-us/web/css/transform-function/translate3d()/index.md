@@ -9,36 +9,33 @@ tags:
   - Reference
 browser-compat: css.types.transform-function.translate3d
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>translate3d()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a
-    href="/en-US/docs/Web/CSS/CSS_Functions">function</a> repositions an element in 3D space. Its result is a
-  {{cssxref("&lt;transform-function&gt;")}} data type.</p>
+The **`translate3d()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) repositions an element in 3D space. Its result is a
+{{cssxref("&lt;transform-function&gt;")}} data type.
 
-<div>{{EmbedInteractiveExample("pages/css/function-translate3d.html")}}</div>
+{{EmbedInteractiveExample("pages/css/function-translate3d.html")}}
 
-<p>This transformation is characterized by a three-dimensional vector. Its coordinates define how much the element moves
-  in each direction.</p>
+This transformation is characterized by a three-dimensional vector. Its coordinates define how much the element moves
+in each direction.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">translate3d(<var>tx</var>, <var>ty</var>, <var>tz</var>)
-</pre>
+```css
+translate3d(tx, ty, tz)
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
-  <dt><code><var>tx</var></code></dt>
-  <dd>Is a {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}} representing the abscissa of the
-    translating vector.</dd>
-  <dt><code><var>ty</var></code></dt>
-  <dd>Is a {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}} representing the ordinate of the
-    translating vector.</dd>
-  <dt><code><var>tz</var></code></dt>
-  <dd>Is a {{cssxref("&lt;length&gt;")}} representing the z component of the translating vector. It can't be a
+- `tx`
+  - : Is a {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}} representing the abscissa of the
+    translating vector.
+- `ty`
+  - : Is a {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}} representing the ordinate of the
+    translating vector.
+- `tz`
+  - : Is a {{cssxref("&lt;length&gt;")}} representing the z component of the translating vector. It can't be a
     {{cssxref("&lt;percentage&gt;")}} value; in that case the property containing the transform is considered invalid.
-  </dd>
-</dl>
 
 <table class="standard-table">
   <thead>
@@ -52,89 +49,56 @@ browser-compat: css.types.transform-function.translate3d
   <tbody>
     <tr>
       <td colspan="2">
-        <p>This transformation applies to the 3D space and can't be represented on the plane.</p>
+        <p>
+          This transformation applies to the 3D space and can't be represented
+          on the plane.
+        </p>
       </td>
-      <td>A translation is not a linear transformation in ℝ^3 and can't be represented using a
-        Cartesian-coordinate matrix.</td>
-      <td><math>
-          <mfenced>
-            <mtable>
-              <mtr>
-                <mtd>
-                  <mn>1</mn>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mi>tx</mi>
-                </mtd>
-              </mtr>
-              <mtr>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>1</mn>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mi>ty</mi>
-                </mtd>
-              </mtr>
-              <mtr>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>1</mn>
-                </mtd>
-                <mtd>
-                  <mi>tz</mi>
-                </mtd>
-              </mtr>
-              <mtr>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>1</mn>
-                </mtd>
-              </mtr>
-            </mtable>
-          </mfenced>
-        </math></td>
+      <td>
+        A translation is not a linear transformation in ℝ^3 and can't be
+        represented using a Cartesian-coordinate matrix.
+      </td>
+      <td>
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr
+                ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd
+                ><mtd><mn>0</mn> </mtd><mtd><mi>tx</mi> </mtd></mtr
+              ><mtr
+                ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn> </mtd
+                ><mtd><mn>0</mn> </mtd><mtd><mi>ty</mi> </mtd></mtr
+              ><mtr
+                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
+                ><mtd><mn>1</mn> </mtd><mtd><mi>tz</mi> </mtd></mtr
+              ><mtr
+                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
+                ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn></mtd></mtr
+              ></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_a_single_axis_translation">Using a single axis translation</h3>
+### Using a single axis translation
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div&gt;Static&lt;/div&gt;
-&lt;div class="moved"&gt;Moved&lt;/div&gt;
-&lt;div&gt;Static&lt;/div&gt;</pre>
+```html
+<div>Static</div>
+<div class="moved">Moved</div>
+<div>Static</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   width: 60px;
   height: 60px;
   background-color: skyblue;
@@ -145,23 +109,26 @@ browser-compat: css.types.transform-function.translate3d
   transform: perspective(500px) translate3d(10px, 0, 0px);
   background-color: pink;
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Using_a_single_axis_translation", 250, 250)}}</p>
+{{EmbedLiveSample("Using_a_single_axis_translation", 250, 250)}}
 
-<h3 id="Combining_z-axis_and_x-axis_translation">Combining z-axis and x-axis translation</h3>
+### Combining z-axis and x-axis translation
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div&gt;Static&lt;/div&gt;
-&lt;div class="moved"&gt;Moved&lt;/div&gt;
-&lt;div&gt;Static&lt;/div&gt;</pre>
+```html
+<div>Static</div>
+<div class="moved">Moved</div>
+<div>Static</div>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   width: 60px;
   height: 60px;
   background-color: skyblue;
@@ -171,23 +138,21 @@ browser-compat: css.types.transform-function.translate3d
   transform: perspective(500px) translate3d(10px, 0, 100px);
   background-color: pink;
 }
-</pre>
+```
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Combining_z-axis_and_x-axis_translation", 250, 250)}}</p>
+{{EmbedLiveSample("Combining_z-axis_and_x-axis_translation", 250, 250)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{cssxref("transform")}}</li>
-  <li>{{cssxref("&lt;transform-function&gt;")}}</li>
-</ul>
+- {{cssxref("transform")}}
+- {{cssxref("&lt;transform-function&gt;")}}

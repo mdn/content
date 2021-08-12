@@ -9,39 +9,40 @@ tags:
   - recipe:css-shorthand-property
 browser-compat: css.properties.border-left
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>border-left</code></strong> <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand</a> <a href="/en-US/docs/Web/CSS">CSS</a> property sets all the properties of an element's left <a href="/en-US/docs/Web/CSS/border">border</a>.</p>
+The **`border-left`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets all the properties of an element's left [border](/en-US/docs/Web/CSS/border).
 
-<div>{{EmbedInteractiveExample("pages/css/border-left.html")}}</div>
+{{EmbedInteractiveExample("pages/css/border-left.html")}}
 
-<p>As with all shorthand properties, <code>border-left</code> always sets the values of all of the properties that it can set, even if they are not specified. It sets those that are not specified to their default values. This means that ...</p>
+As with all shorthand properties, `border-left` always sets the values of all of the properties that it can set, even if they are not specified. It sets those that are not specified to their default values. This means that ...
 
-<pre class="brush: css">border-left-style: dotted;
+```css
+border-left-style: dotted;
 border-left: thick green;
-</pre>
+```
 
-<p>... is actually the same as ...</p>
+... is actually the same as ...
 
-<pre class="brush: css">border-left-style: dotted;
+```css
+border-left-style: dotted;
 border-left: none thick green;
-</pre>
+```
 
-<p>... and the value of {{cssxref("border-left-style")}} given before <code>border-left</code> is ignored. Since the default value of {{cssxref("border-left-style")}} is <code>none</code>, not specifying the <code>border-style</code> part results in no border.</p>
+... and the value of {{cssxref("border-left-style")}} given before `border-left` is ignored. Since the default value of {{cssxref("border-left-style")}} is `none`, not specifying the `border-style` part results in no border.
 
-<h2 id="Constituent_properties">Constituent properties</h2>
+## Constituent properties
 
-<p>This property is a shorthand for the following CSS properties:</p>
+This property is a shorthand for the following CSS properties:
 
-<ul>
- <li>{{cssxref("border-left-color")}}</li>
- <li>{{cssxref("border-left-style")}}</li>
- <li>{{cssxref("border-left-width")}}</li>
-</ul>
+- {{cssxref("border-left-color")}}
+- {{cssxref("border-left-style")}}
+- {{cssxref("border-left-width")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css no-line-numbers">border-left: 1px;
+```css
+border-left: 1px;
 border-left: 2px dotted;
 border-left: medium dashed blue;
 
@@ -50,42 +51,43 @@ border-left: inherit;
 border-left: initial;
 border-left: revert;
 border-left: unset;
-</pre>
+```
 
-<p>The three values of the shorthand property can be specified in any order, and one or two of them may be omitted.</p>
+The three values of the shorthand property can be specified in any order, and one or two of them may be omitted.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>&lt;br-width&gt;</code></dt>
- <dd>See {{cssxref("border-left-width")}}.</dd>
- <dt><code>&lt;br-style&gt;</code></dt>
- <dd>See {{cssxref("border-left-style")}}.</dd>
- <dt>{{cssxref("&lt;color&gt;")}}</dt>
- <dd>See {{cssxref("border-left-color")}}.</dd>
-</dl>
+- `<br-width>`
+  - : See {{cssxref("border-left-width")}}.
+- `<br-style>`
+  - : See {{cssxref("border-left-style")}}.
+- {{cssxref("&lt;color&gt;")}}
+  - : See {{cssxref("border-left-color")}}.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Applying_a_left_border">Applying a left border</h3>
+### Applying a left border
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div&gt;
+```html
+<div>
   This box has a border on the left side.
-&lt;/div&gt;</pre>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   border-left: 4px dashed blue;
   background-color: gold;
   height: 100px;
@@ -93,26 +95,24 @@ border-left: unset;
   font-weight: bold;
   text-align: center;
 }
-</pre>
+```
 
-<h4 id="Results">Results</h4>
+#### Results
 
-<p>{{EmbedLiveSample('Applying_a_left_border')}}</p>
+{{EmbedLiveSample('Applying_a_left_border')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("border")}}</li>
- <li>{{cssxref("border-block")}}</li>
- <li>{{cssxref("outline")}}</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders">Backgrounds and borders</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders">Learn CSS: Backgrounds and borders</a></li>
-</ul>
+- {{cssxref("border")}}
+- {{cssxref("border-block")}}
+- {{cssxref("outline")}}
+- [Backgrounds and borders](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders)
+- [Learn CSS: Backgrounds and borders](/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)

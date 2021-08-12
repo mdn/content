@@ -7,40 +7,34 @@ tags:
   - box alignment
   - multi-column
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<p>The <a href="/en-US/docs/Web/CSS/CSS_Box_Alignment">Box Alignment</a> Specification details how alignment works in various layout methods; on this page we explore how Box Alignment works in the context of <a href="/en-US/docs/Web/CSS/CSS_Columns">Multi-column Layout</a>. As this page aims to detail things which are specific to Multi-column Layout and Box Alignment, it should be read in conjunction with the main <a href="/en-US/docs/Web/CSS/CSS_Box_Alignment">Box Alignment</a> page which details the common features of Box Alignment across layout methods.</p>
+The [Box Alignment](/en-US/docs/Web/CSS/CSS_Box_Alignment) Specification details how alignment works in various layout methods; on this page we explore how Box Alignment works in the context of [Multi-column Layout](/en-US/docs/Web/CSS/CSS_Columns). As this page aims to detail things which are specific to Multi-column Layout and Box Alignment, it should be read in conjunction with the main [Box Alignment](/en-US/docs/Web/CSS/CSS_Box_Alignment) page which details the common features of Box Alignment across layout methods.
 
-<p>In multi-column layout the alignment container is the content box of the multicol container. The alignment subject is the column box. The properties which apply to multi-column layouts are detailed below.</p>
+In multi-column layout the alignment container is the content box of the multicol container. The alignment subject is the column box. The properties which apply to multi-column layouts are detailed below.
 
-<div class="note">
-<p><strong>Note:</strong> Multi-column Layout predates the Box Alignment specification. and the properties listed here, while specified for Multicol, may not be supported in browsers.</p>
-</div>
+> **Note:** Multi-column Layout predates the Box Alignment specification. and the properties listed here, while specified for Multicol, may not be supported in browsers.
 
-<h2 id="align-content_and_justify-content">align-content and justify-content</h2>
+## align-content and justify-content
 
-<p>The {{cssxref("align-content")}} property applies to the block axis and {{cssxref("justify-content")}} to the inline axis. Any spacing added to the columns due to use of space distribution will be added to the gap between the columns, therefore making the gap larger than might be specified by the {{cssxref("column-gap")}} property.</p>
+The {{cssxref("align-content")}} property applies to the block axis and {{cssxref("justify-content")}} to the inline axis. Any spacing added to the columns due to use of space distribution will be added to the gap between the columns, therefore making the gap larger than might be specified by the {{cssxref("column-gap")}} property.
 
-<p>Using a value of <code>justify-content</code> other than <code>normal</code> or <code>stretch</code> will cause column boxes to display at the {{cssxref("column-width")}} specified on the multicol container, and the remaining space distributed according to the value of justify-content.</p>
+Using a value of `justify-content` other than `normal` or `stretch` will cause column boxes to display at the {{cssxref("column-width")}} specified on the multicol container, and the remaining space distributed according to the value of justify-content.
 
-<h2 id="column-gap">column-gap</h2>
+## column-gap
 
-<p>The {{cssxref("column-gap")}} property was specified in earlier versions of the multiple-column layout specification, and has now been unified with the gap properties for other layout methods in box alignment. While other layout methods treat the initial value of column-gap as 0 multicol treats it as 1em, as in general you would not want to have no gap between columns.</p>
+The {{cssxref("column-gap")}} property was specified in earlier versions of the multiple-column layout specification, and has now been unified with the gap properties for other layout methods in box alignment. While other layout methods treat the initial value of column-gap as 0 multicol treats it as 1em, as in general you would not want to have no gap between columns.
 
-<h2 id="Reference">Reference</h2>
+## Reference
 
-<h3 id="CSS_Properties">CSS Properties</h3>
+### CSS Properties
 
-<ul>
- <li>{{cssxref("justify-content")}}</li>
- <li>{{cssxref("align-content")}}</li>
- <li>{{cssxref("column-gap")}}</li>
-</ul>
+- {{cssxref("justify-content")}}
+- {{cssxref("align-content")}}
+- {{cssxref("column-gap")}}
 
-<h3 id="Glossary_Entries">Glossary Entries</h3>
+### Glossary Entries
 
-<ul>
- <li><a href="/en-US/docs/Glossary/Alignment_Subject">Alignment subject</a></li>
- <li><a href="/en-US/docs/Glossary/Alignment_Container">Alignment container</a></li>
- <li><a href="/en-US/docs/Glossary/Fallback_Alignment">Fallback alignment</a></li>
-</ul>
+- [Alignment subject](/en-US/docs/Glossary/Alignment_Subject)
+- [Alignment container](/en-US/docs/Glossary/Alignment_Container)
+- [Fallback alignment](/en-US/docs/Glossary/Fallback_Alignment)

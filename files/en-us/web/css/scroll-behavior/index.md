@@ -6,23 +6,23 @@ tags:
   - CSS Property
   - CSSOM View
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.scroll-behavior
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<p>The <strong><code>scroll-behavior</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets the behavior for a scrolling box when scrolling is triggered by the navigation or CSSOM scrolling APIs.</p>
+The **`scroll-behavior`** [CSS](/en-US/docs/Web/CSS) property sets the behavior for a scrolling box when scrolling is triggered by the navigation or CSSOM scrolling APIs.
 
-<div>{{EmbedInteractiveExample("pages/css/scroll-behavior.html")}}</div>
+{{EmbedInteractiveExample("pages/css/scroll-behavior.html")}}
 
+Note that any other scrolls, such as those performed by the user, are not affected by this property. When this property is specified on the root element, it applies to the viewport instead. This property specified on the `body` element will *not* propagate to the viewport.
 
-<p>Note that any other scrolls, such as those performed by the user, are not affected by this property. When this property is specified on the root element, it applies to the viewport instead. This property specified on the <code>body</code> element will <em>not</em> propagate to the viewport.</p>
+User agents are allowed to ignore this property.
 
-<p>User agents are allowed to ignore this property.</p>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 scroll-behavior: auto;
 scroll-behavior: smooth;
 
@@ -31,47 +31,48 @@ scroll-behavior: inherit;
 scroll-behavior: initial;
 scroll-behavior: revert;
 scroll-behavior: unset;
-</pre>
+```
 
-<p>The <code>scroll-behavior</code> property is specified as one of the keyword values listed below.</p>
+The `scroll-behavior` property is specified as one of the keyword values listed below.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>The scrolling box scrolls instantly.</dd>
- <dt><code>smooth</code></dt>
- <dd>The scrolling box scrolls in a smooth fashion using a user-agent-defined timing function over a user-agent-defined period of time. User agents should follow platform conventions, if any.</dd>
-</dl>
+- `auto`
+  - : The scrolling box scrolls instantly.
+- `smooth`
+  - : The scrolling box scrolls in a smooth fashion using a user-agent-defined timing function over a user-agent-defined period of time. User agents should follow platform conventions, if any.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_smooth_scroll_behavior">Setting smooth scroll behavior</h3>
+### Setting smooth scroll behavior
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;nav&gt;
-  &lt;a href="#page-1"&gt;1&lt;/a&gt;
-  &lt;a href="#page-2"&gt;2&lt;/a&gt;
-  &lt;a href="#page-3"&gt;3&lt;/a&gt;
-&lt;/nav&gt;
-&lt;div class="scroll-container"&gt;
-  &lt;div class="scroll-page" id="page-1"&gt;1&lt;/div&gt;
-  &lt;div class="scroll-page" id="page-2"&gt;2&lt;/div&gt;
-  &lt;div class="scroll-page" id="page-3"&gt;3&lt;/div&gt;
-&lt;/div&gt;</pre>
+```html
+<nav>
+  <a href="#page-1">1</a>
+  <a href="#page-2">2</a>
+  <a href="#page-3">3</a>
+</nav>
+<div class="scroll-container">
+  <div class="scroll-page" id="page-1">1</div>
+  <div class="scroll-page" id="page-2">2</div>
+  <div class="scroll-page" id="page-3">3</div>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">a {
+```css
+a {
   display: inline-block;
   width: 50px;
   text-decoration: none;
@@ -99,16 +100,16 @@ nav {
   height: 100%;
   font-size: 5em;
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample("Setting_smooth_scroll_behavior", "100%", 250) }}</p>
+{{ EmbedLiveSample("Setting_smooth_scroll_behavior", "100%", 250) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

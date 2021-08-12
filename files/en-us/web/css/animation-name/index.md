@@ -9,17 +9,18 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.animation-name
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>animation-name</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property specifies the names of one or more {{cssxref("@keyframes")}} at-rules describing the animation or animations to apply to the element.</p>
+The **`animation-name`** [CSS](/en-US/docs/Web/CSS) property specifies the names of one or more {{cssxref("@keyframes")}} at-rules describing the animation or animations to apply to the element.
 
-<div>{{EmbedInteractiveExample("pages/css/animation-name.html")}}</div>
+{{EmbedInteractiveExample("pages/css/animation-name.html")}}
 
-<p>It is often convenient to use the shorthand property {{cssxref("animation")}} to set all animation properties at once.</p>
+It is often convenient to use the shorthand property {{cssxref("animation")}} to set all animation properties at once.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* Single animation */
+```css
+/* Single animation */
 animation-name: none;
 animation-name: test_05;
 animation-name: -specific;
@@ -33,40 +34,40 @@ animation-name: none, -moz-specific, sliding;
 animation-name: initial;
 animation-name: inherit;
 animation-name: revert;
-animation-name: unset;</pre>
+animation-name: unset;
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
-	<dt><code>none</code></dt>
-	<dd>A special keyword denoting no keyframes. It can be used to deactivate an animation without changing the ordering of the other identifiers, or to deactivate animations coming from the cascade.</dd>
-	<dt>{{cssxref("&lt;custom-ident&gt;")}}</dt>
-	<dd>A name identifying the animation. This identifier is composed of a combination of case-sensitive letters <code>a</code> to <code>z</code>, numbers <code>0</code> to <code>9</code>, underscores (<code>_</code>), and/or dashes (<code>-</code>). The first non-dash character must be a letter. Also, two dashes are forbidden at the beginning of the identifier. Furthermore, the identifier can't be <code>none</code>, <code>unset</code>, <code>initial</code>, or <code>inherit</code>.</dd>
-</dl>
+- `none`
+  - : A special keyword denoting no keyframes. It can be used to deactivate an animation without changing the ordering of the other identifiers, or to deactivate animations coming from the cascade.
+- {{cssxref("&lt;custom-ident&gt;")}}
+  - : A name identifying the animation. This identifier is composed of a combination of case-sensitive letters `a` to `z`, numbers `0` to `9`, underscores (`_`), and/or dashes (`-`). The first non-dash character must be a letter. Also, two dashes are forbidden at the beginning of the identifier. Furthermore, the identifier can't be `none`, `unset`, `initial`, or `inherit`.
 
-<div class="note">
-<p><strong>Note:</strong> When you specify multiple comma-separated values on an <code>animation-*</code> property, they will be assigned to the animations specified in the {{cssxref("animation-name")}} property in different ways depending on how many there are. For more information, see <a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations#setting_multiple_animation_property_values">Setting multiple animation property values</a>.</p>
-</div>
+> **Note:** When you specify multiple comma-separated values on an `animation-*` property, they will be assigned to the animations specified in the {{cssxref("animation-name")}} property in different ways depending on how many there are. For more information, see [Setting multiple animation property values](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations#setting_multiple_animation_property_values).
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="The_animation_has_an_animation-name_of_rotate">The animation has an animation-name of rotate</h3>
+### The animation has an animation-name of rotate
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="box"&gt;&lt;/div&gt;</pre>
+```html
+<div class="box"></div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.box {
+```css
+.box {
   background-color: rebeccapurple;
   border-radius: 10px;
   width: 100px;
@@ -82,23 +83,22 @@ animation-name: unset;</pre>
   100% {
     transform: rotate(360deg);
   }
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Examples","100%","250")}}</p>
+{{EmbedLiveSample("Examples","100%","250")}}
 
-<p>See <a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations">CSS animations</a> for examples.</p>
+See [CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations) for examples.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li><a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations" title="Tutorial about CSS animations">Using CSS animations</a></li>
-	<li>JavaScript {{domxref("AnimationEvent")}} API</li>
-</ul>
+- [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations "Tutorial about CSS animations")
+- JavaScript {{domxref("AnimationEvent")}} API

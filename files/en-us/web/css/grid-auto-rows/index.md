@@ -8,31 +8,32 @@ tags:
   - Reference
 browser-compat: css.properties.grid-auto-rows
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>grid-auto-rows</code></strong> CSS property specifies the size of an implicitly-created grid row {{glossary("grid tracks", "track")}} or pattern of tracks.</p>
+The **`grid-auto-rows`** CSS property specifies the size of an implicitly-created grid row {{glossary("grid tracks", "track")}} or pattern of tracks.
 
-<div>{{EmbedInteractiveExample("pages/css/grid-auto-rows.html")}}</div>
+{{EmbedInteractiveExample("pages/css/grid-auto-rows.html")}}
 
-<p>If a grid item is positioned into a row that is not explicitly sized by {{cssxref("grid-template-rows")}}, implicit {{glossary("grid", "grid")}} tracks are created to hold it. This can happen either by explicitly positioning into a row that is out of range, or by the auto-placement algorithm creating additional rows.</p>
+If a grid item is positioned into a row that is not explicitly sized by {{cssxref("grid-template-rows")}}, implicit {{glossary("grid", "grid")}} tracks are created to hold it. This can happen either by explicitly positioning into a row that is out of range, or by the auto-placement algorithm creating additional rows.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 grid-auto-rows: min-content;
 grid-auto-rows: max-content;
 grid-auto-rows: auto;
 
-/* &lt;length&gt; values */
+/* <length> values */
 grid-auto-rows: 100px;
 grid-auto-rows: 20cm;
 grid-auto-rows: 50vmax;
 
-/* &lt;percentage&gt; values */
+/* <percentage> values */
 grid-auto-rows: 10%;
 grid-auto-rows: 33.3%;
 
-/* &lt;flex&gt; values */
+/* <flex> values */
 grid-auto-rows: 0.5fr;
 grid-auto-rows: 3fr;
 
@@ -54,57 +55,60 @@ grid-auto-rows: inherit;
 grid-auto-rows: initial;
 grid-auto-rows: revert;
 grid-auto-rows: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt>{{cssxref("&lt;length&gt;")}}</dt>
- <dd>Is a non-negative length.</dd>
- <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
- <dd>Is a non-negative {{cssxref("percentage", "&lt;percentage&gt;")}} value relative to the block size of the grid container. If the block size of the grid container is indefinite, the percentage value is treated like <code>auto</code>.</dd>
- <dt>{{cssxref("&lt;flex&gt;")}}</dt>
- <dd>Is a non-negative dimension with the unit <code>fr</code> specifying the track’s flex factor. Each <code>&lt;flex&gt;</code>-sized track takes a share of the remaining space in proportion to its flex factor.
- <p>When appearing outside a <code>minmax()</code> notation, it implies an automatic minimum (i.e. <code>minmax(auto, &lt;flex&gt;)</code>).</p>
- </dd>
- <dt>{{cssxref("max-content")}}</dt>
- <dd>Is a keyword representing the largest maximal content contribution of the grid items occupying the grid track.</dd>
- <dt>{{cssxref("min-content")}}</dt>
- <dd>Is a keyword representing the largest minimal content contribution of the grid items occupying the grid track.</dd>
- <dt>{{cssxref("minmax", "minmax(min, max)")}}</dt>
- <dd>Is a functional notation that defines a size range greater than or equal to <em>min</em> and less than or equal to <em>max</em>. If <em>max</em> is smaller than <em>min</em>, then <em>max</em> is ignored and the function is treated as <em>min</em>. As a maximum, a <code>&lt;flex&gt;</code> value sets the track’s flex factor. As a minimum, it is treated as zero (or minimal content, if the grid container is sized under a minimal content constraint).</dd>
- <dt>{{cssxref("fit-content()", "fit-content( [ &lt;length&gt; | &lt;percentage&gt; ] )")}}</dt>
- <dd>Represents the formula <code>min(max-content, max(auto, <var>argument</var>))</code>, which is calculated similar to <code>auto</code> (i.e. <code>minmax(auto, max-content)</code>), except that the track size is clamped at <var>argument</var> if it is greater than the <code>auto</code> minimum.</dd>
- <dt><code>auto</code></dt>
- <dd>
-   <p>Is a keyword that is identical to maximal content if it's a maximum. As a minimum it represents the largest minimum size (as specified by {{cssxref("min-width")}}/{{cssxref("min-height")}}) of the grid items occupying the grid track.</p>
-   <p>Note: <code>auto</code> track sizes (and only <code>auto</code> track sizes) can be stretched by the {{cssxref("align-content")}} and {{cssxref("justify-content")}} properties.</p>
- </dd>
-</dl>
+- {{cssxref("&lt;length&gt;")}}
+  - : Is a non-negative length.
+- {{cssxref("&lt;percentage&gt;")}}
+  - : Is a non-negative {{cssxref("percentage", "&lt;percentage&gt;")}} value relative to the block size of the grid container. If the block size of the grid container is indefinite, the percentage value is treated like `auto`.
+- {{cssxref("&lt;flex&gt;")}}
 
-<h2 id="Formal_definition">Formal definition</h2>
+  - : Is a non-negative dimension with the unit `fr` specifying the track’s flex factor. Each `<flex>`-sized track takes a share of the remaining space in proportion to its flex factor.
 
-<p>{{cssinfo}}</p>
+    When appearing outside a `minmax()` notation, it implies an automatic minimum (i.e. `minmax(auto, <flex>)`).
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+- {{cssxref("max-content")}}
+  - : Is a keyword representing the largest maximal content contribution of the grid items occupying the grid track.
+- {{cssxref("min-content")}}
+  - : Is a keyword representing the largest minimal content contribution of the grid items occupying the grid track.
+- {{cssxref("minmax", "minmax(min, max)")}}
+  - : Is a functional notation that defines a size range greater than or equal to _min_ and less than or equal to _max_. If _max_ is smaller than _min_, then _max_ is ignored and the function is treated as _min_. As a maximum, a `<flex>` value sets the track’s flex factor. As a minimum, it is treated as zero (or minimal content, if the grid container is sized under a minimal content constraint).
+- {{cssxref("fit-content()", "fit-content( [ &lt;length&gt; | &lt;percentage&gt; ] )")}}
+  - : Represents the formula `min(max-content, max(auto, argument))`, which is calculated similar to `auto` (i.e. `minmax(auto, max-content)`), except that the track size is clamped at _argument_ if it is greater than the `auto` minimum.
+- `auto`
+
+  - : Is a keyword that is identical to maximal content if it's a maximum. As a minimum it represents the largest minimum size (as specified by {{cssxref("min-width")}}/{{cssxref("min-height")}}) of the grid items occupying the grid track.
+
+    Note: `auto` track sizes (and only `auto` track sizes) can be stretched by the {{cssxref("align-content")}} and {{cssxref("justify-content")}} properties.
+
+## Formal definition
+
+{{cssinfo}}
+
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_grid_row_size">Setting grid row size</h3>
+### Setting grid row size
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div id="grid"&gt;
-  &lt;div id="item1"&gt;&lt;/div&gt;
-  &lt;div id="item2"&gt;&lt;/div&gt;
-  &lt;div id="item3"&gt;&lt;/div&gt;
-&lt;/div&gt;</pre>
+```html
+<div id="grid">
+  <div id="item1"></div>
+  <div id="item2"></div>
+  <div id="item3"></div>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css; highlight[6]">#grid {
+```css
+#grid {
   width: 200px;
   display: grid;
   grid-template-areas: "a a";
@@ -112,27 +116,25 @@ grid-auto-rows: unset;
   grid-auto-rows: 100px;
 }
 
-#grid &gt; div {
+#grid > div {
   background-color: lime;
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Setting_grid_row_size", "210px", "210px")}}</p>
+{{EmbedLiveSample("Setting_grid_row_size", "210px", "210px")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Related CSS properties: {{cssxref("grid-auto-columns")}}, {{cssxref("grid-auto-flow")}}, {{cssxref("grid")}}</li>
- <li>Grid Layout Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout#Sizing_rows_in_the_implicit_grid">Auto-placement in grid layout - sizing rows in the implicit grid</a></em></li>
- <li>Video tutorial: <em><a href="http://gridbyexample.com/video/series-auto-placement-order/">Introducing Grid auto-placement and order</a></em></li>
-</ul>
+- Related CSS properties: {{cssxref("grid-auto-columns")}}, {{cssxref("grid-auto-flow")}}, {{cssxref("grid")}}
+- Grid Layout Guide: _[Auto-placement in grid layout - sizing rows in the implicit grid](/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout#Sizing_rows_in_the_implicit_grid)_
+- Video tutorial: _[Introducing Grid auto-placement and order](http://gridbyexample.com/video/series-auto-placement-order/)_

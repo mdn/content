@@ -11,40 +11,39 @@ tags:
   - lab
 browser-compat: css.types.color.lab
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>lab()</code></strong> functional notation expresses a given color in the CIE L*a*b* color space. Lab represents the entire range of color that humans can see.</p>
+The **`lab()`** functional notation expresses a given color in the CIE L\*a\*b\* color space. Lab represents the entire range of color that humans can see.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">lab(29.2345% 39.3825 20.0664);
+```css
+lab(29.2345% 39.3825 20.0664);
 lab(52.2345% 40.1645 59.9971);
 lab(52.2345% 40.1645 59.9971 / .5);
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
-  <dt>Functional notation: <code>lab(L a b [/ A])</code></dt>
-  <dd>
-    <p><code>L</code> specifies the CIE Lightness, and is a {{cssxref("&lt;percentage&gt;")}} between <code>0%</code> representing black and <code>100%</code> representing white.</p>
-    <p>The second argument <code>a</code> is the distance along the <code>a</code> axis in the Lab colorspace.</p>
-    <p>The third argument <code>b</code> is the distance along the <code>b</code> axis in the Lab colorspace.</p>
-    <p><code>A</code> (alpha) can be a {{cssxref("&lt;number&gt;")}} between <code>0</code> and <code>1</code>, or a {{cssxref("&lt;percentage&gt;")}}, where the number <code>1</code> corresponds to <code>100%</code> (full opacity).</p>
-  </dd>
-</dl>
+- Functional notation: `lab(L a b [/ A])`
 
-<h2 id="Specifications">Specificatiions</h2>
+  - : `L` specifies the CIE Lightness, and is a {{cssxref("&lt;percentage&gt;")}} between `0%` representing black and `100%` representing white.
+
+    The second argument `a` is the distance along the `a` axis in the Lab colorspace.
+
+    The third argument `b` is the distance along the `b` axis in the Lab colorspace.
+
+    `A` (alpha) can be a {{cssxref("&lt;number&gt;")}} between `0` and `1`, or a {{cssxref("&lt;percentage&gt;")}}, where the number `1` corresponds to `100%` (full opacity).
+
+## Specificatiions
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2>See also</h2>
+## See also
 
-<ul>
-  <li><a href="https://lea.verou.me/2020/04/lch-colors-in-css-what-why-and-how/">LCH colors in CSS: what, why, and how?</a></li>
-  <li><a href="https://webkit.org/blog/11577/release-notes-for-safari-technology-preview-122/">Safari Technology Preview 122 release notes</a>: includes <code>lab()</code> and {{cssxref("color_value/lch()",'lch()')}} colors.</li>
-</ul>
+- [LCH colors in CSS: what, why, and how?](https://lea.verou.me/2020/04/lch-colors-in-css-what-why-and-how/)
+- [Safari Technology Preview 122 release notes](https://webkit.org/blog/11577/release-notes-for-safari-technology-preview-122/): includes `lab()` and {{cssxref("color_value/lch()",'lch()')}} colors.

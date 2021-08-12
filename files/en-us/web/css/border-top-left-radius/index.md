@@ -9,30 +9,29 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.border-top-left-radius
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>border-top-left-radius</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property rounds the top-left corner of an element by specifying the radius (or the radius of the semi-major and semi-minor axes) of the ellipse defining the curvature of the corner.</p>
+The **`border-top-left-radius`** [CSS](/en-US/docs/Web/CSS) property rounds the top-left corner of an element by specifying the radius (or the radius of the semi-major and semi-minor axes) of the ellipse defining the curvature of the corner.
 
-<div>{{EmbedInteractiveExample("pages/css/border-top-left-radius.html")}}</div>
+{{EmbedInteractiveExample("pages/css/border-top-left-radius.html")}}
 
-<p>The rounding can be a circle or an ellipse, or if one of the value is <code>0,</code>no rounding is done and the corner is square.</p>
+The rounding can be a circle or an ellipse, or if one of the value is `0,`no rounding is done and the corner is square.
 
-<img alt="border-radius.png" src="border-radius.png">
+![border-radius.png](border-radius.png)
 
-<p>A background, being an image or a color, is clipped at the border, even a rounded one; the exact location of the clipping is defined by the value of the {{cssxref("background-clip")}} property.</p>
+A background, being an image or a color, is clipped at the border, even a rounded one; the exact location of the clipping is defined by the value of the {{cssxref("background-clip")}} property.
 
-<div class="note">
-  <p><strong>Note:</strong> If the value of this property is not set in a {{cssxref("border-radius")}} shorthand property that is applied to the element after the <code>border-top-left-radius</code> CSS property, the value of this property is then reset to its initial value by the <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand property</a>.</p>
-</div>
+> **Note:** If the value of this property is not set in a {{cssxref("border-radius")}} shorthand property that is applied to the element after the `border-top-left-radius` CSS property, the value of this property is then reset to its initial value by the [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* the corner is a circle */
-/* border-top-left-radius: <em>radius</em> */
+```css
+/* the corner is a circle */
+/* border-top-left-radius: radius */
 border-top-left-radius: 3px;
 
 /* the corner is an ellipse */
-/* border-top-left-radius: <em>horizontal</em> <em>vertical</em> */
+/* border-top-left-radius: horizontal vertical */
 border-top-left-radius: 0.5em 1em;
 
 border-top-left-radius: inherit;
@@ -42,121 +41,121 @@ border-top-left-radius: inherit;
 border-top-left-radius: initial;
 border-top-left-radius: revert;
 border-top-left-radius: unset;
-</pre>
+```
 
-<p>With one value:</p>
+With one value:
 
-<ul>
- <li>the value is a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} denoting the radius of the circle to use for the border in that corner.</li>
-</ul>
+- the value is a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} denoting the radius of the circle to use for the border in that corner.
 
-<p>With two values:</p>
+With two values:
 
-<ul>
- <li>the first value is a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} denoting the horizontal semi-major axis of the ellipse to use for the border in that corner.</li>
- <li>the second value is a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} denoting the vertical semi-major axis of the ellipse to use for the border in that corner.</li>
-</ul>
+- the first value is a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} denoting the horizontal semi-major axis of the ellipse to use for the border in that corner.
+- the second value is a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} denoting the vertical semi-major axis of the ellipse to use for the border in that corner.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>&lt;length-percentage&gt;</code></dt>
- <dd>Denotes the size of the circle radius or the semi-major and semi-minor axes of the ellipse. As absolute length it can be expressed in any unit allowed by the CSS {{cssxref("&lt;length&gt;")}} data type. Percentages for the horizontal axis refer to the width of the box, percentages for the vertical axis refer to the height of the box. Negative values are invalid.</dd>
-</dl>
+- `<length-percentage>`
+  - : Denotes the size of the circle radius or the semi-major and semi-minor axes of the ellipse. As absolute length it can be expressed in any unit allowed by the CSS {{cssxref("&lt;length&gt;")}} data type. Percentages for the horizontal axis refer to the width of the box, percentages for the vertical axis refer to the height of the box. Negative values are invalid.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3>Arc of a circle</h3>
+### Arc of a circle
 
-<p>A single <code>&lt;length&gt;</code> value produces an arc of a circle.</p>
+A single `<length>` value produces an arc of a circle.
 
-<pre class="brush: html hidden">&lt;div&gt;&lt;/div&gt;
-</pre>
+```html hidden
+<div></div>
+```
 
-<pre class="brush: css">div {
+```css
+div {
   border-top-left-radius: 40px;
   background-color: lightgreen;
   border: solid 1px black;
   width: 100px;
   height: 100px;
 }
-</pre>
+```
 
 {{EmbedLiveSample("Arc_of_a_circle")}}
 
-<h3>Arc of an ellipse</h3>
+### Arc of an ellipse
 
-<p>Two different <code>&lt;length&gt;</code> values produce an arc of an ellipse.</p>
+Two different `<length>` values produce an arc of an ellipse.
 
-<pre class="brush: html hidden">&lt;div&gt;&lt;/div&gt;
-</pre>
+```html hidden
+<div></div>
+```
 
-<pre class="brush: css">div {
+```css
+div {
   border-top-left-radius: 40px 20px;
   background-color: lightgreen;
   border: solid 1px black;
   width: 100px;
   height: 100px;
 }
-</pre>
+```
 
 {{EmbedLiveSample("Arc_of_an_ellipse")}}
 
-<h3>Square element with percentage radius</h3>
+### Square element with percentage radius
 
-<p>A square element with a single <code>&lt;percentage&gt;</code> value produces an arc of a circle.</p>
+A square element with a single `<percentage>` value produces an arc of a circle.
 
-<pre class="brush: html hidden">&lt;div&gt;&lt;/div&gt;
-</pre>
+```html hidden
+<div></div>
+```
 
-<pre class="brush: css">div {
+```css
+div {
   border-top-left-radius: 40%;
   background-color: lightgreen;
   border: solid 1px black;
   width: 100px;
   height: 100px;
 }
-</pre>
+```
 
 {{EmbedLiveSample("Square_element_with_percentage_radius")}}
 
-<h3>Non-square element with percentage radius</h3>
+### Non-square element with percentage radius
 
-<p>A non-square element with a single <code>&lt;percentage&gt;</code> value produces an arc of an ellipse.</p>
+A non-square element with a single `<percentage>` value produces an arc of an ellipse.
 
-<pre class="brush: html hidden">&lt;div&gt;&lt;/div&gt;
-</pre>
+```html hidden
+<div></div>
+```
 
-<pre class="brush: css">div {
+```css
+div {
   border-top-left-radius: 40%;
   background-color: lightgreen;
   border: solid 1px black;
   width: 200px;
   height: 100px;
 }
-</pre>
+```
 
 {{EmbedLiveSample("Non-square_element_with_percentage_radius")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("border-radius")}} shorthand property</li>
- <li>{{cssxref("border-top-right-radius")}}, {{cssxref("border-bottom-right-radius")}}, and {{cssxref("border-bottom-left-radius")}}</li>
-</ul>
+- {{cssxref("border-radius")}} shorthand property
+- {{cssxref("border-top-right-radius")}}, {{cssxref("border-bottom-right-radius")}}, and {{cssxref("border-bottom-left-radius")}}

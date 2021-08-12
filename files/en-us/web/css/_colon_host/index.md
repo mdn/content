@@ -1,6 +1,6 @@
 ---
 title: ':host'
-slug: 'Web/CSS/:host'
+slug: Web/CSS/:host
 tags:
   - ':host'
   - CSS
@@ -15,38 +15,39 @@ tags:
   - shadow dom
 browser-compat: css.selectors.host
 ---
-<div>{{ CSSRef }}</div>
+{{ CSSRef }}
 
-<p>The <strong><code>:host</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> selects the shadow host of the <a href="/en-US/docs/Web/Web_Components/Using_shadow_DOM">shadow DOM</a> containing the CSS it is used inside — in other words, this allows you to select a custom element from inside its shadow DOM.</p>
+The **`:host`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) selects the shadow host of the [shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM) containing the CSS it is used inside — in other words, this allows you to select a custom element from inside its shadow DOM.
 
-<div class="note">
-<p><strong>Note:</strong> This has no effect when used outside a shadow DOM.</p>
-</div>
+> **Note:** This has no effect when used outside a shadow DOM.
 
-<pre class="brush: css no-line-numbers">/* Selects a shadow root host */
+```css
+/* Selects a shadow root host */
 :host {
   font-weight: bold;
 }
-</pre>
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre>:host
-</pre>
+    :host
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Styling_the_shadow_host">Styling the shadow host</h3>
+### Styling the shadow host
 
-<p>The following snippets are taken from our <a href="https://github.com/mdn/web-components-examples/tree/master/host-selectors">host-selectors example</a> (<a href="https://mdn.github.io/web-components-examples/host-selectors/">see it live also</a>).</p>
+The following snippets are taken from our [host-selectors example](https://github.com/mdn/web-components-examples/tree/master/host-selectors) ([see it live also](https://mdn.github.io/web-components-examples/host-selectors/)).
 
-<p>In this example we have a simple custom element — <code>&lt;context-span&gt;</code> — that you can wrap around text:</p>
+In this example we have a simple custom element — `<context-span>` — that you can wrap around text:
 
-<pre class="brush: html">&lt;h1&gt;Host selectors &lt;a href="#"&gt;&lt;context-span&gt;example&lt;/context-span&gt;&lt;/a&gt;&lt;/h1&gt;</pre>
+```html
+<h1>Host selectors <a href="#"><context-span>example</context-span></a></h1>
+```
 
-<p>Inside the element's constructor, we create <code>style</code> and <code>span</code> elements, fill the <code>span</code> with the content of the custom element, and fill the <code>style</code> element with some CSS rules:</p>
+Inside the element's constructor, we create `style` and `span` elements, fill the `span` with the content of the custom element, and fill the `style` element with some CSS rules:
 
-<pre class="brush: js">let style = document.createElement('style');
+```js
+let style = document.createElement('style');
 let span = document.createElement('span');
 span.textContent = this.textContent;
 
@@ -59,22 +60,21 @@ style.textContent = 'span:hover { text-decoration: underline; }' +
                     ':host-context(h1):after { content: " - no links in headers!" }' +
                     ':host-context(article, aside) { color: gray; }' +
                     ':host(.footer) { color : red; }' +
-                    ':host { background: rgba(0,0,0,0.1); padding: 2px 5px; }';</pre>
+                    ':host { background: rgba(0,0,0,0.1); padding: 2px 5px; }';
+```
 
-<p>The <code>:host { background: rgba(0,0,0,0.1); padding: 2px 5px; }</code> rule styles all instances of the <code>&lt;context-span&gt;</code> element (the shadow host in this instance) in the document.</p>
+The `:host { background: rgba(0,0,0,0.1); padding: 2px 5px; }` rule styles all instances of the `<context-span>` element (the shadow host in this instance) in the document.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/Web_Components">Web components</a></li>
- <li>{{cssxref(":host()")}}</li>
- <li>{{cssxref(":host-context()")}}</li>
-</ul>
+- [Web components](/en-US/docs/Web/Web_Components)
+- {{cssxref(":host()")}}
+- {{cssxref(":host-context()")}}

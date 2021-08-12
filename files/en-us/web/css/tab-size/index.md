@@ -6,20 +6,21 @@ tags:
   - CSS Property
   - CSS Text
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.tab-size
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>tab-size</code></strong> CSS property is used to customize the width of tab characters (U+0009).</p>
+The **`tab-size`** CSS property is used to customize the width of tab characters (U+0009).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* &lt;integer&gt; values */
+```css
+/* <integer> values */
 tab-size: 4;
 tab-size: 0;
 
-/* &lt;length&gt; values */
+/* <length> values */
 tab-size: 10px;
 tab-size: 2em;
 
@@ -28,78 +29,79 @@ tab-size: inherit;
 tab-size: initial;
 tab-size: revert;
 tab-size: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt>{{CSSxRef("&lt;integer&gt;")}}</dt>
- <dd>A multiple of the advance width of the space character (U+0020) to be used as the width of tabs. Must be nonnegative.</dd>
- <dt>{{CSSxRef("&lt;length&gt;")}}</dt>
- <dd>The width of tabs. Must be nonnegative.</dd>
-</dl>
+- {{CSSxRef("&lt;integer&gt;")}}
+  - : A multiple of the advance width of the space character (U+0020) to be used as the width of tabs. Must be nonnegative.
+- {{CSSxRef("&lt;length&gt;")}}
+  - : The width of tabs. Must be nonnegative.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{CSSSyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Expanding_by_character_count">Expanding by character count</h3>
+### Expanding by character count
 
-<pre class="brush: css">pre {
+```css
+pre {
   tab-size: 4; /* Set tab size to 4 characters wide */
 }
-</pre>
+```
 
-<h3 id="Collapse_tabs">Collapse tabs</h3>
+### Collapse tabs
 
-<pre class="brush: css">pre {
+```css
+pre {
   tab-size: 0; /* Remove indentation */
 }
-</pre>
+```
 
-<h3 id="Comparing_to_the_default_size">Comparing to the default size</h3>
+### Comparing to the default size
 
-<p>This example compares a default tab size with a custom tab size. Note that {{cssxref("white-space")}} is set to <code>pre</code> to prevent the tabs from collapsing.</p>
+This example compares a default tab size with a custom tab size. Note that {{cssxref("white-space")}} is set to `pre` to prevent the tabs from collapsing.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;no tab&lt;/p&gt;
-&lt;p&gt;&amp;#0009;default tab size of 8 characters wide&lt;/p&gt;
-&lt;p class="custom"&gt;&amp;#0009;custom tab size of 3 characters wide&lt;/p&gt;
-&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;3 spaces, equivalent to the custom tab size&lt;/p&gt;
-</pre>
+```html
+<p>no tab</p>
+<p>&#0009;default tab size of 8 characters wide</p>
+<p class="custom">&#0009;custom tab size of 3 characters wide</p>
+<p>&nbsp;&nbsp;&nbsp;3 spaces, equivalent to the custom tab size</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   white-space: pre;
 }
 
 .custom {
   tab-size: 3;
   -moz-tab-size: 3;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Comparing_to_the_default_size')}}</p>
+{{EmbedLiveSample('Comparing_to_the_default_size')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://lists.w3.org/Archives/Public/www-style/2008Dec/0009.html">Controlling size of a tab character (U+0009)</a>, an email by Anne van Kesteren to the CSSWG.</li>
-</ul>
+- [Controlling size of a tab character (U+0009)](https://lists.w3.org/Archives/Public/www-style/2008Dec/0009.html), an email by Anne van Kesteren to the CSSWG.

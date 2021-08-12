@@ -3,28 +3,27 @@ title: scroll-margin-block
 slug: Web/CSS/scroll-margin-block
 tags:
   - CSS
-  - 'recipe:css-shorthand-property'
+  - recipe:css-shorthand-property
   - scroll-margin-block
 browser-compat: css.properties.scroll-margin-block
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <code>scroll-margin-block</code> <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand property</a> sets the scroll margins of an element in the block dimension.</p>
+The `scroll-margin-block` [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) sets the scroll margins of an element in the block dimension.
 
-<div>{{EmbedInteractiveExample("pages/css/scroll-margin-block.html")}}</div>
+{{EmbedInteractiveExample("pages/css/scroll-margin-block.html")}}
 
-<h2 id="Constituent_properties">Constituent properties</h2>
+## Constituent properties
 
-<p>This property is a shorthand for the following CSS properties:</p>
+This property is a shorthand for the following CSS properties:
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/scroll-margin-block-end"><code>scroll-margin-block-end</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/scroll-margin-block-start"><code>scroll-margin-block-start</code></a></li>
-</ul>
+- [`scroll-margin-block-end`](/en-US/docs/Web/CSS/scroll-margin-block-end)
+- [`scroll-margin-block-start`](/en-US/docs/Web/CSS/scroll-margin-block-start)
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">/* &lt;length&gt; values */
+```css
+/* <length> values */
 scroll-margin-block: 10px;
 scroll-margin-block: 1em .5em ;
 
@@ -33,38 +32,34 @@ scroll-margin-block: inherit;
 scroll-margin-block: initial;
 scroll-margin-block: revert;
 scroll-margin-block: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>&lt;length&gt;</code></dt>
- <dd>An outset from the corresponding edge of the scroll container.</dd>
-</dl>
+- `<length>`
+  - : An outset from the corresponding edge of the scroll container.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The scroll-margin values represent outsets defining the scroll snap area that is used for snapping this box to the snapport. The scroll snap area is determined by taking the transformed border box, finding its rectangular bounding box (axis-aligned in the scroll container’s coordinate space), then adding the specified outsets.</p>
+The scroll-margin values represent outsets defining the scroll snap area that is used for snapping this box to the snapport. The scroll snap area is determined by taking the transformed border box, finding its rectangular bounding box (axis-aligned in the scroll container’s coordinate space), then adding the specified outsets.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/CSS/CSS_Scroll_Snap">CSS Scroll Snap</a></li>
-  <li><a href="https://developers.google.com/web/updates/2018/07/css-scroll-snap">Well-Controlled Scrolling with CSS Scroll Snap</a></li>
-</ul>
+- [CSS Scroll Snap](/en-US/docs/Web/CSS/CSS_Scroll_Snap)
+- [Well-Controlled Scrolling with CSS Scroll Snap](https://developers.google.com/web/updates/2018/07/css-scroll-snap)

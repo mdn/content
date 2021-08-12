@@ -9,49 +9,48 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.line-height-step
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>line-height-step</code></strong> CSS property sets the step unit for line box heights. When the property is set, line box heights are rounded up to the closest multiple of the unit.</p>
+The **`line-height-step`** CSS property sets the step unit for line box heights. When the property is set, line box heights are rounded up to the closest multiple of the unit.
 
-<pre class="brush:css no-line-numbers">/* Point values */
+```css
+/* Point values */
 line-height-step: 18pt;
 
 /* Global values */
 line-height-step: inherit;
 line-height-step: initial;
 line-height-step: revert;
-line-height-step: unset;</pre>
+line-height-step: unset;
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>line-height-step</code> property is specified as any one of the following:</p>
+The `line-height-step` property is specified as any one of the following:
 
-<ul>
- <li>a <code>&lt;length&gt;</code>.</li>
-</ul>
+- a `<length>`.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>&lt;length&gt;</code></dt>
- <dd>The specified {{cssxref("&lt;length&gt;")}} is used in the calculation of the line box height step.</dd>
-</dl>
+- `<length>`
+  - : The specified {{cssxref("&lt;length&gt;")}} is used in the calculation of the line box height step.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_step_unit_for_line_box_height">Setting step unit for line box height</h3>
+### Setting step unit for line box height
 
-<p>In the following example, the height of line box in each paragraph is rounded up to the step unit. The line box in <code>&lt;h1&gt;</code> does not fit into one step unit and thus occupies two, but it is still centered within the two step unit.</p>
+In the following example, the height of line box in each paragraph is rounded up to the step unit. The line box in `<h1>` does not fit into one step unit and thus occupies two, but it is still centered within the two step unit.
 
-<pre class="brush: css">:root {
+```css
+:root {
   font-size: 12pt;
   --my-grid: 18pt;
   line-height-step: var(--my-grid);
@@ -59,24 +58,23 @@ line-height-step: unset;</pre>
 h1 {
   font-size: 20pt;
   margin-top: calc(2 * var(--my-grid));
-}</pre>
+}
+```
 
-<p>The result of these rules is shown below in the following screenshot:</p>
+The result of these rules is shown below in the following screenshot:
 
-<p><img alt="How the line-height-step property affects the appearance of text." src="line-grid-center.png"></p>
+![How the line-height-step property affects the appearance of text.](line-grid-center.png)
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Cssxref("font")}}</li>
- <li>{{Cssxref("font-size")}}</li>
- <li>{{Cssxref("line-height")}}</li>
-</ul>
+- {{Cssxref("font")}}
+- {{Cssxref("font-size")}}
+- {{Cssxref("line-height")}}

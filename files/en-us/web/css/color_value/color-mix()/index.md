@@ -10,38 +10,43 @@ tags:
   - color-mix
 browser-compat: css.types.color.color-mix
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>color-mix()</code></strong> functional notation takes two {{cssxref("color_value","color")}} values and returns the result of mixing them in a given colorspace by a given amount.</p>
+The **`color-mix()`** functional notation takes two {{cssxref("color_value","color")}} values and returns the result of mixing them in a given colorspace by a given amount.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">color-mix(in lch, peru 40%, lightgoldenrod);
+```css
+color-mix(in lch, peru 40%, lightgoldenrod);
 color-mix(in srgb, #34c9eb 20%, white);
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
-  <dt>Functional notation: <code> color-mix( in &lt;colorspace&gt; , [ &lt;color&gt; && &lt;percentage&gt;? ]#{2})</code></dt>
-  <dd>
-    <p><code>&lt;colorspace&gt;</code> is one of <code>srgb</code>, <code>hsl</code>, <code>hwb</code>, <code>xyz</code>, <code>lab</code>, <code>lch</code>. If no colorspace is specified the default is <code>lch</code>.</p>
-    <p><code>[ &lt;color&gt;</code> is any valid {{cssxref("color_value","color")}}.</p>
-    <p><code>&lt;percentage&gt;</code> is the percentage of that color to mix.</p>
-  </dd>
-</dl>
+- Functional notation: `color-mix( in <colorspace> , [ <color> && <percentage>? ]#{2})`
 
-<h2 id="Examples">Examples</h2>
+  - : `<colorspace>` is one of `srgb`, `hsl`, `hwb`, `xyz`, `lab`, `lch`. If no colorspace is specified the default is `lch`.
 
-<h3>HTML</h3>
- <pre class="brush: html">&lt;ul>
-  &lt;li>10% #34c9eb&lt;/li>
-  &lt;li>40% #34c9eb&lt;/li>
-  &lt;li>70% #34c9eb&lt;/li>
-&lt;/ul></pre>
+    `[ <color>` is any valid {{cssxref("color_value","color")}}.
 
-<h3 id="CSS">CSS</h3>
-  <pre class="brush: css hidden">ul {
+    `<percentage>` is the percentage of that color to mix.
+
+## Examples
+
+### HTML
+
+```html
+<ul>
+  <li>10% #34c9eb</li>
+  <li>40% #34c9eb</li>
+  <li>70% #34c9eb</li>
+</ul>
+```
+
+### CSS
+
+```css hidden
+ul {
     display: flex;
     list-style-type: none;
     font-size: 150%;
@@ -53,9 +58,11 @@ color-mix(in srgb, #34c9eb 20%, white);
   li {
     padding: 10px;
   }
-  </pre>
 
-<pre class="brush: css">li:nth-child(1) {
+```
+
+```css
+li:nth-child(1) {
   background-color: color-mix(in srgb, #34c9eb 10%, white);
 }
 
@@ -65,16 +72,19 @@ li:nth-child(2) {
 
 li:nth-child(3) {
   background-color: color-mix(in srgb, #34c9eb 70%, white);
-}</pre>
+}
+```
 
-<h4 id="result">Result</h4>
-<p>In a supporting browser the three items become more blue as a higher percentage of <code>#34c9eb</code> is mixed in.</p>
-<p>{{EmbedLiveSample('Examples','100%', 200)}}</p>
+#### Result
 
-<h2 id="Specifications">Specifications</h2>
+In a supporting browser the three items become more blue as a higher percentage of `#34c9eb` is mixed in.
+
+{{EmbedLiveSample('Examples','100%', 200)}}
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -7,25 +7,26 @@ tags:
   - CSS Grid
   - CSS Property
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
   - row-gap
 browser-compat: css.properties.row-gap
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>row-gap</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets the size of the gap ({{glossary("gutters","gutter")}}) between an element's grid rows.</p>
+The **`row-gap`** [CSS](/en-US/docs/Web/CSS) property sets the size of the gap ({{glossary("gutters","gutter")}}) between an element's grid rows.
 
-<div>{{EmbedInteractiveExample("pages/css/row-gap.html")}}</div>
+{{EmbedInteractiveExample("pages/css/row-gap.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css no-line-numbers">/* &lt;length&gt; values */
+```css
+/* <length> values */
 row-gap: 20px;
 row-gap: 1em;
 row-gap: 3vmin;
 row-gap: 0.5cm;
 
-/* &lt;percentage&gt; value */
+/* <percentage> value */
 row-gap: 10%;
 
 /* Global values */
@@ -33,74 +34,77 @@ row-gap: inherit;
 row-gap: initial;
 row-gap: revert;
 row-gap: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>&lt;length-percentage&gt;</code></dt>
- <dd>Is the width of the gutter separating the rows. {{CSSxRef("&lt;percentage&gt;")}} values are relative to the dimension of the element.</dd>
-</dl>
+- `<length-percentage>`
+  - : Is the width of the gutter separating the rows. {{CSSxRef("&lt;percentage&gt;")}} values are relative to the dimension of the element.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Flex_layout">Flex layout</h3>
+### Flex layout
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div id="flexbox"&gt;
-  &lt;div&gt;&lt;/div&gt;
-  &lt;div&gt;&lt;/div&gt;
-  &lt;div&gt;&lt;/div&gt;
-  &lt;div&gt;&lt;/div&gt;
-  &lt;div&gt;&lt;/div&gt;
-  &lt;div&gt;&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div id="flexbox">
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css; highlight[5]">#flexbox {
+```css
+#flexbox {
   display: flex;
   flex-wrap: wrap;
   width: 300px;
   row-gap: 20px;
 }
 
-#flexbox &gt; div {
+#flexbox > div {
   border: 1px solid green;
   background-color: lime;
   flex: 1 1 auto;
   width: 100px;
   height: 50px;
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Flex_layout', "auto", "120px")}}</p>
+{{EmbedLiveSample('Flex_layout', "auto", "120px")}}
 
-<h3 id="Grid_layout">Grid layout</h3>
+### Grid layout
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div id="grid"&gt;
-  &lt;div&gt;&lt;/div&gt;
-  &lt;div&gt;&lt;/div&gt;
-  &lt;div&gt;&lt;/div&gt;
-&lt;/div&gt;</pre>
+```html
+<div id="grid">
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css; highlight[6]">#grid {
+```css
+#grid {
   display: grid;
   height: 200px;
   grid-template-columns: 200px;
@@ -108,27 +112,25 @@ row-gap: unset;
   row-gap: 20px;
 }
 
-#grid &gt; div {
+#grid > div {
   border: 1px solid green;
   background-color: lime;
 }
-</pre>
+```
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Grid_layout', 'auto', 120)}}</p>
+{{EmbedLiveSample('Grid_layout', 'auto', 120)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Related CSS properties: {{CSSxRef("column-gap")}}, {{CSSxRef("gap")}}</li>
- <li>Grid Layout Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#Gutters">Basic concepts of grid layout - Gutters</a></em></li>
-</ul>
+- Related CSS properties: {{CSSxRef("column-gap")}}, {{CSSxRef("gap")}}
+- Grid Layout Guide: _[Basic concepts of grid layout - Gutters](/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#Gutters)_

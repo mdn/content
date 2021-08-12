@@ -7,18 +7,19 @@ tags:
   - CSS Text
   - Experimental
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.text-align-last
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>text-align-last</code></strong> CSS property sets how the last line of a block or a line, right before a forced line break, is aligned.</p>
+The **`text-align-last`** CSS property sets how the last line of a block or a line, right before a forced line break, is aligned.
 
-<div>{{EmbedInteractiveExample("pages/css/text-align-last.html")}}</div>
+{{EmbedInteractiveExample("pages/css/text-align-last.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 text-align-last: auto;
 text-align-last: start;
 text-align-last: end;
@@ -32,64 +33,63 @@ text-align-last: inherit;
 text-align-last: initial;
 text-align-last: revert;
 text-align-last: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>The affected line is aligned per the value of {{cssxref("text-align")}}, unless {{cssxref("text-align")}} is <code>justify</code>, in which case the effect is the same as setting <code>text-align-last</code> to <code>start</code>.</dd>
- <dt><code>start</code></dt>
- <dd>The same as <code>left</code> if direction is left-to-right and <code>right</code> if direction is right-to-left.</dd>
- <dt><code>end</code></dt>
- <dd>The same as <code>right</code> if direction is left-to-right and <code>left</code> if direction is right-to-left.</dd>
- <dt><code>left</code></dt>
- <dd>The inline contents are aligned to the left edge of the line box.</dd>
- <dt><code>right</code></dt>
- <dd>The inline contents are aligned to the right edge of the line box.</dd>
- <dt><code>center</code></dt>
- <dd>The inline contents are centered within the line box.</dd>
- <dt><code>justify</code></dt>
- <dd>The text is justified. Text should line up their left and right edges to the left and right content edges of the paragraph.</dd>
-</dl>
+- `auto`
+  - : The affected line is aligned per the value of {{cssxref("text-align")}}, unless {{cssxref("text-align")}} is `justify`, in which case the effect is the same as setting `text-align-last` to `start`.
+- `start`
+  - : The same as `left` if direction is left-to-right and `right` if direction is right-to-left.
+- `end`
+  - : The same as `right` if direction is left-to-right and `left` if direction is right-to-left.
+- `left`
+  - : The inline contents are aligned to the left edge of the line box.
+- `right`
+  - : The inline contents are aligned to the right edge of the line box.
+- `center`
+  - : The inline contents are centered within the line box.
+- `justify`
+  - : The text is justified. Text should line up their left and right edges to the left and right content edges of the paragraph.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Justifying_the_last_line">Justifying the last line</h3>
+### Justifying the last line
 
-<pre class="brush: html hidden">&lt;p&gt;Integer elementum massa at nulla placerat varius. Suspendisse in libero risus, in interdum massa. Vestibulum ac leo vitae metus faucibus gravida ac in neque. Nullam est eros, suscipit sed dictum quis, accumsan a ligula.&lt;/p&gt;
-</pre>
+```html hidden
+<p>Integer elementum massa at nulla placerat varius. Suspendisse in libero risus, in interdum massa. Vestibulum ac leo vitae metus faucibus gravida ac in neque. Nullam est eros, suscipit sed dictum quis, accumsan a ligula.</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   font-size: 1.4em;
   text-align: justify;
   text-align-last: center;
-}</pre>
+}
+```
 
-<h4 id="Results">Results</h4>
+#### Results
 
-<p>{{EmbedLiveSample('Justifying_the_last_line','560')}}</p>
+{{EmbedLiveSample('Justifying_the_last_line','560')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("text-align")}}</li>
-</ul>
+- {{cssxref("text-align")}}

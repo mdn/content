@@ -6,18 +6,19 @@ tags:
   - CSS Property
   - CSS Scroll Anchoring
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.overflow-anchor
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>overflow-anchor</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property provides a way to opt out of the browser's scroll anchoring behavior, which adjusts scroll position to minimize content shifts.</p>
+The **`overflow-anchor`** [CSS](/en-US/docs/Web/CSS) property provides a way to opt out of the browser's scroll anchoring behavior, which adjusts scroll position to minimize content shifts.
 
-<p>Scroll anchoring behavior is enabled by default in any browser that supports it. Therefore, changing the value of this property is typically only required if you are experiencing problems with scroll anchoring in a document or part of a document and need to turn the behavior off.</p>
+Scroll anchoring behavior is enabled by default in any browser that supports it. Therefore, changing the value of this property is typically only required if you are experiencing problems with scroll anchoring in a document or part of a document and need to turn the behavior off.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 overflow-anchor: auto;
 overflow-anchor: none;
 
@@ -26,46 +27,43 @@ overflow-anchor: inherit;
 overflow-anchor: initial;
 overflow-anchor: revert;
 overflow-anchor: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>The element becomes a potential anchor when adjusting scroll position.</dd>
- <dt><code>none</code></dt>
- <dd>The element won't be selected as a potential anchor.</dd>
-</dl>
+- `auto`
+  - : The element becomes a potential anchor when adjusting scroll position.
+- `none`
+  - : The element won't be selected as a potential anchor.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Prevent_scroll_anchoring">Prevent scroll anchoring</h3>
+### Prevent scroll anchoring
 
-<p>To prevent scroll anchoring in a document, use the <code>overflow-anchor</code> property.</p>
+To prevent scroll anchoring in a document, use the `overflow-anchor` property.
 
-<pre class="brush: css">* {
+```css
+* {
   overflow-anchor: none;
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/overflow-anchor/Guide_to_scroll_anchoring">Guide to scroll anchoring</a></li>
-</ul>
+- [Guide to scroll anchoring](/en-US/docs/Web/CSS/overflow-anchor/Guide_to_scroll_anchoring)

@@ -6,23 +6,24 @@ tags:
   - CSS Multi-column Layout
   - CSS Property
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.column-rule-width
 ---
-<div>{{ CSSRef}}</div>
+{{ CSSRef}}
 
-<p>The <strong><code>column-rule-width</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets the width of the line drawn between columns in a multi-column layout.</p>
+The **`column-rule-width`** [CSS](/en-US/docs/Web/CSS) property sets the width of the line drawn between columns in a multi-column layout.
 
-<div>{{EmbedInteractiveExample("pages/css/column-rule-width.html")}}</div>
+{{EmbedInteractiveExample("pages/css/column-rule-width.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 column-rule-width: thin;
 column-rule-width: medium;
 column-rule-width: thick;
 
-/* &lt;length&gt; values */
+/* <length> values */
 column-rule-width: 1px;
 column-rule-width: 2.5em;
 
@@ -31,62 +32,61 @@ column-rule-width: inherit;
 column-rule-width: initial;
 column-rule-width: revert;
 column-rule-width: unset;
-</pre>
+```
 
-<p>The <code>column-rule-width</code> property is specified as a single <code>&lt;'border-width'&gt;</code> value.</p>
+The `column-rule-width` property is specified as a single `<'border-width'>` value.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>&lt;'border-width'&gt;</code></dt>
- <dd>Is a keyword defined by {{ cssxref("border-width") }} describing the width of the rule. It may be either a {{cssxref("&lt;length&gt;")}} or one of the <code>thin</code>, <code>medium</code>, or <code>thick</code> keywords.</dd>
-</dl>
+- `<'border-width'>`
+  - : Is a keyword defined by {{ cssxref("border-width") }} describing the width of the rule. It may be either a {{cssxref("&lt;length&gt;")}} or one of the `thin`, `medium`, or `thick` keywords.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_a_thick_column_rule">Setting a thick column rule</h3>
+### Setting a thick column rule
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;This is a bunch of text split into three columns.
+```html
+<p>This is a bunch of text split into three columns.
    The `column-rule-width` property is used to change
    the width of the line that is drawn between columns.
-   Don't you think that's wonderful?&lt;/p&gt;</pre>
+   Don't you think that's wonderful?</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush:css">p {
+```css
+p {
   column-count: 3;
   column-rule-style: solid;
   column-rule-width: thick;
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Setting_a_thick_column_rule")}}</p>
+{{EmbedLiveSample("Setting_a_thick_column_rule")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout">Multiple-column Layout</a></li>
- <li>{{CSSXref("column-rule-style")}}</li>
- <li>{{CSSXref("column-rule-color")}}</li>
- <li>{{CSSXref("column-rule")}}</li>
-</ul>
+- [Multiple-column Layout](/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
+- {{CSSXref("column-rule-style")}}
+- {{CSSXref("column-rule-color")}}
+- {{CSSXref("column-rule")}}

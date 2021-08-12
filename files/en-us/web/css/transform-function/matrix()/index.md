@@ -9,34 +9,29 @@ tags:
   - Reference
 browser-compat: css.types.transform-function.matrix
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>matrix()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a
-    href="/en-US/docs/Web/CSS/CSS_Functions">function</a> defines a homogeneous 2D transformation matrix. Its result is
-  a {{cssxref("&lt;transform-function&gt;")}} data type.</p>
+The **`matrix()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) defines a homogeneous 2D transformation matrix. Its result is
+a {{cssxref("&lt;transform-function&gt;")}} data type.
 
-<div class="note">
-  <p><strong>Note:</strong> <code>matrix(a, b, c, d, tx, ty)</code> is a shorthand for
-    <code><a href="/en-US/docs/Web/CSS/transform-function/matrix3d">matrix3d</a>(a, b, 0, 0, c, d, 0, 0, 0, 0, 1, 0, tx, ty, 0, 1)</code>.
-  </p>
-</div>
+> **Note:** `matrix(a, b, c, d, tx, ty)` is a shorthand for
+> `matrix3d(a, b, 0, 0, c, d, 0, 0, 0, 0, 1, 0, tx, ty, 0, 1)`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>matrix()</code> function is specified with six values. The constant values are implied and not passed as
-  parameters; the other parameters are described in the column-major order.</p>
+The `matrix()` function is specified with six values. The constant values are implied and not passed as
+parameters; the other parameters are described in the column-major order.
 
-<pre class="brush: css">matrix(<var>a</var>, <var>b</var>, <var>c</var>, <var>d</var>, <var>tx</var>, <var>ty</var>)
-</pre>
+```css
+matrix(a, b, c, d, tx, ty)
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
-  <dt><var>a</var> <var>b</var> <var>c</var> <var>d</var></dt>
-  <dd>Are {{cssxref("&lt;number&gt;")}}s describing the linear transformation.</dd>
-  <dt><var>tx</var> <var>ty</var></dt>
-  <dd>Are {{cssxref("&lt;number&gt;")}}s describing the translation to apply.</dd>
-</dl>
+- _a_ _b_ _c_ _d_
+  - : Are {{cssxref("&lt;number&gt;")}}s describing the linear transformation.
+- _tx_ _ty_
+  - : Are {{cssxref("&lt;number&gt;")}}s describing the translation to apply.
 
 <table class="standard-table">
   <thead>
@@ -49,168 +44,76 @@ browser-compat: css.types.transform-function.matrix
   </thead>
   <tbody>
     <tr>
-      <td rowspan="2"><math>
-          <mfenced>
-            <mtable>
-              <mtr>
-                <mtd>
-                  <mi>a</mi>
-                </mtd>
-                <mtd>
-                  <mi>c</mi>
-                </mtd>
-              </mtr>
-              <mtr>
-                <mtd>
-                  <mi>b</mi>
-                </mtd>
-                <mtd>
-                  <mi>d</mi>
-                </mtd>
-              </mtr>
-            </mtable>
-          </mfenced>
-        </math></td>
-      <td><math>
-          <mfenced>
-            <mtable>
-              <mtr>
-                <mtd>
-                  <mi>a</mi>
-                </mtd>
-                <mtd>
-                  <mi>c</mi>
-                </mtd>
-                <mtd>
-                  <mi>tx</mi>
-                </mtd>
-              </mtr>
-              <mtr>
-                <mtd>
-                  <mi>b</mi>
-                </mtd>
-                <mtd>
-                  <mi>d</mi>
-                </mtd>
-                <mtd>
-                  <mi>ty</mi>
-                </mtd>
-              </mtr>
-              <mtr>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>1</mn>
-                </mtd>
-              </mtr>
-            </mtable>
-          </mfenced>
-        </math></td>
-      <td rowspan="2"><math>
-          <mfenced>
-            <mtable>
-              <mtr>
-                <mtd>
-                  <mi>a</mi>
-                </mtd>
-                <mtd>
-                  <mi>c</mi>
-                </mtd>
-                <mtd>
-                  <mi>tx</mi>
-                </mtd>
-              </mtr>
-              <mtr>
-                <mtd>
-                  <mi>b</mi>
-                </mtd>
-                <mtd>
-                  <mi>d</mi>
-                </mtd>
-                <mtd>
-                  <mi>ty</mi>
-                </mtd>
-              </mtr>
-              <mtr>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>1</mn>
-                </mtd>
-              </mtr>
-            </mtable>
-          </mfenced>
-        </math></td>
-      <td rowspan="2"><math>
-          <mfenced>
-            <mtable>
-              <mtr>
-                <mtd>
-                  <mi>a</mi>
-                </mtd>
-                <mtd>
-                  <mi>c</mi>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mi>tx</mi>
-                </mtd>
-              </mtr>
-              <mtr>
-                <mtd>
-                  <mi>b</mi>
-                </mtd>
-                <mtd>
-                  <mi>d</mi>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mi>ty</mi>
-                </mtd>
-              </mtr>
-              <mtr>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>1</mn>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-              </mtr>
-              <mtr>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>1</mn>
-                </mtd>
-              </mtr>
-            </mtable>
-          </mfenced>
-        </math></td>
+      <td rowspan="2">
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr
+                ><mtd><mi>a</mi> </mtd><mtd><mi>c</mi> </mtd></mtr
+              ><mtr
+                ><mtd><mi>b</mi> </mtd><mtd><mi>d</mi></mtd></mtr
+              ></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
+      <td>
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr
+                ><mtd><mi>a</mi> </mtd><mtd><mi>c</mi> </mtd
+                ><mtd><mi>tx</mi> </mtd></mtr
+              ><mtr
+                ><mtd><mi>b</mi> </mtd><mtd><mi>d</mi> </mtd
+                ><mtd><mi>ty</mi> </mtd></mtr
+              ><mtr
+                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
+                ><mtd><mn>1</mn></mtd></mtr
+              ></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
+      <td rowspan="2">
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr
+                ><mtd><mi>a</mi> </mtd><mtd><mi>c</mi> </mtd
+                ><mtd><mi>tx</mi> </mtd></mtr
+              ><mtr
+                ><mtd><mi>b</mi> </mtd><mtd><mi>d</mi> </mtd
+                ><mtd><mi>ty</mi> </mtd></mtr
+              ><mtr
+                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
+                ><mtd><mn>1</mn></mtd></mtr
+              ></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
+      <td rowspan="2">
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr
+                ><mtd><mi>a</mi> </mtd><mtd><mi>c</mi> </mtd
+                ><mtd><mn>0</mn> </mtd><mtd><mi>tx</mi> </mtd></mtr
+              ><mtr
+                ><mtd><mi>b</mi> </mtd><mtd><mi>d</mi> </mtd
+                ><mtd><mn>0</mn> </mtd><mtd><mi>ty</mi> </mtd></mtr
+              ><mtr
+                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
+                ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
+              ><mtr
+                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
+                ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn></mtd></mtr
+              ></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
     </tr>
     <tr>
       <td><code>[a b c d tx ty]</code></td>
@@ -218,20 +121,22 @@ browser-compat: css.types.transform-function.matrix
   </tbody>
 </table>
 
-<p>The values represent the following functions:<br>
-  <code>matrix( scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY() )</code>
-</p>
+The values represent the following functions:
+`matrix( scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY() )`
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;Normal&lt;/div&gt;
-&lt;div class="changed"&gt;Changed&lt;/div&gt;</pre>
+```html
+<div>Normal</div>
+<div class="changed">Changed</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   width: 80px;
   height: 80px;
   background-color: skyblue;
@@ -240,26 +145,25 @@ browser-compat: css.types.transform-function.matrix
 .changed {
   transform: matrix(1, 2, -1, 1, 80, 80);
   background-color: pink;
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Examples", 350, 350)}}</p>
+{{EmbedLiveSample("Examples", 350, 350)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{cssxref("transform")}}</li>
-  <li>{{cssxref("&lt;transform-function&gt;")}}</li>
-  <li><code><a href="/en-US/docs/Web/CSS/transform-function/matrix3d">matrix3d()</a></code></li>
-  <li><a href="https://dev.opera.com/articles/understanding-the-css-transforms-matrix/">Understanding the CSS Transforms
-      Matrix</a></li>
-</ul>
+- {{cssxref("transform")}}
+- {{cssxref("&lt;transform-function&gt;")}}
+- [`matrix3d()`](/en-US/docs/Web/CSS/transform-function/matrix3d)
+- [Understanding the CSS Transforms
+  Matrix](https://dev.opera.com/articles/understanding-the-css-transforms-matrix/)

@@ -10,30 +10,31 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.content
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>content</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property replaces an element with a generated value. Objects inserted using the <code>content</code> property are <strong>anonymous <a href="/en-US/docs/Web/CSS/Replaced_element">replaced elements</a></strong><em>.</em></p>
+The **`content`** [CSS](/en-US/docs/Web/CSS) property replaces an element with a generated value. Objects inserted using the `content` property are **anonymous [replaced elements](/en-US/docs/Web/CSS/Replaced_element)\***.\*
 
-<pre class="brush:css no-line-numbers">/* Keywords that cannot be combined with other values */
+```css
+/* Keywords that cannot be combined with other values */
 content: normal;
 content: none;
 
-/* &lt;image&gt; values */
-content: url(&quot;http://www.example.com/test.png&quot;);
+/* <image> values */
+content: url("http://www.example.com/test.png");
 content: linear-gradient(#e66465, #9198e5);
 content: image-set("image1x.png" 1x, "image2x.png" 2x);
 
 /* alt text for generated content, added in the Level 3 specification */
-content: url(&quot;http://www.example.com/test.png&quot;) / &quot;This is the alt text&quot;;
+content: url("http://www.example.com/test.png") / "This is the alt text";
 
-/* &lt;string&gt; value */
-content: &quot;prefix&quot;;
+/* <string> value */
+content: "prefix";
 
-/* &lt;counter&gt; values, optionally with &lt;list-style-type&gt; */
+/* <counter> values, optionally with <list-style-type> */
 content: counter(chapter_counter);
 content: counter(chapter_counter, upper-roman);
-content: counters(section_counter, &quot;.&quot;);
-content: counters(section_counter, &quot;.&quot;, decimal-leading-zero);
+content: counters(section_counter, ".");
+content: counters(section_counter, ".", decimal-leading-zero);
 
 /* attr() value linked to the HTML attribute value */
 content: attr(value string);
@@ -52,82 +53,83 @@ content: inherit;
 content: initial;
 content: revert;
 content: unset;
-</pre>
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>none</code></dt>
- <dd>The pseudo-element is not generated.</dd>
- <dt><code>normal</code></dt>
- <dd>Computes to <code>none</code> for the <code>::before</code> and <code>::after</code> pseudo-elements.</dd>
- <dt>{{cssxref("&lt;string&gt;")}}</dt>
- <dd>Specifies the "alt text" for the element. This value can be any number of text characters. Non-Latin characters must be encoded using their Unicode escape sequences: for example, <code>\000A9</code> represents the copyright symbol.</dd>
- <dt>{{cssxref("&lt;image&gt;")}}</dt>
- <dd>An {{cssxref("&lt;image&gt;")}}, denoted by the {{cssxref("url()")}} or {{cssxref("&lt;gradient&gt;")}} data type, or part of the webpage, defined by the {{cssxref("element()", "element()")}} function, denoting the content to display.</dd>
- <dt>{{cssxref("counter()")}}</dt>
- <dd>
-   <p>The value of a <a href="/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters">CSS counter</a>, generally a number produced by computations defined by {{cssxref("&lt;counter-reset&gt;")}} and {{cssxref("&lt;counter-increment&gt;")}} properties. It can be displayed using either the {{cssxref("counter()")}} or {{cssxref("counters()")}} function.</p>
-   <p>The {{cssxref("counter()")}} function has two forms: 'counter(<var>name</var>)' or 'counter(<var>name</var>, style)'. The generated text is the value of the innermost counter of the given name in scope at the given pseudo-element. It is formatted in the specified {{cssxref("&lt;list-style-type&gt;")}} (<code>decimal</code> by default).</p>
-   <p>The {{cssxref("counters()")}} function also has two forms: 'counters(<var>name</var>, <var>string</var>)' or 'counters(<var>name</var>, <var>string</var>, <var>style</var>)'. The generated text is the value of all counters with the given name in scope at the given pseudo-element, from outermost to innermost, separated by the specified string. The counters are rendered in the indicated {{cssxref("&lt;list-style-type&gt;")}} (<code>decimal</code> by default).</p>
- </dd>
- <dt><code>attr(x)</code></dt>
- <dd>The value of the element's attribute <code>x</code> as a string. If there is no attribute <code>x</code>, an empty string is returned. The case-sensitivity of attribute names depends on the document language.</dd>
- <dt><code>open-quote</code> | <code>close-quote</code></dt>
- <dd>These values are replaced by the appropriate string from the {{cssxref("quotes")}} property.</dd>
- <dt><code>no-open-quote</code> | <code>no-close-quote</code></dt>
- <dd>Introduces no content, but increments (decrements) the level of nesting for quotes.</dd>
-</dl>
+- `none`
+  - : The pseudo-element is not generated.
+- `normal`
+  - : Computes to `none` for the `::before` and `::after` pseudo-elements.
+- {{cssxref("&lt;string&gt;")}}
+  - : Specifies the "alt text" for the element. This value can be any number of text characters. Non-Latin characters must be encoded using their Unicode escape sequences: for example, `\000A9` represents the copyright symbol.
+- {{cssxref("&lt;image&gt;")}}
+  - : An {{cssxref("&lt;image&gt;")}}, denoted by the {{cssxref("url()")}} or {{cssxref("&lt;gradient&gt;")}} data type, or part of the webpage, defined by the {{cssxref("element()", "element()")}} function, denoting the content to display.
+- {{cssxref("counter()")}}
 
-<h2 id="Accessibility_concerns">Accessibility concerns</h2>
+  - : The value of a [CSS counter](/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters), generally a number produced by computations defined by {{cssxref("&lt;counter-reset&gt;")}} and {{cssxref("&lt;counter-increment&gt;")}} properties. It can be displayed using either the {{cssxref("counter()")}} or {{cssxref("counters()")}} function.
 
-<p>CSS-generated content is not included in the <a href="/en-US/docs/Web/API/Document_Object_Model/Introduction">DOM</a>. Because of this, it will not be represented in the <a href="/en-US/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis">accessibility tree</a> and certain assistive technology/browser combinations will not announce it. If the content conveys information that is critical to understanding the page's purpose, it is better to include it in the main document.</p>
+    The {{cssxref("counter()")}} function has two forms: 'counter(_name_)' or 'counter(_name_, style)'. The generated text is the value of the innermost counter of the given name in scope at the given pseudo-element. It is formatted in the specified {{cssxref("&lt;list-style-type&gt;")}} (`decimal` by default).
 
-<ul>
- <li><a href="https://tink.uk/accessibility-support-for-css-generated-content/">Accessibility support for CSS generated content – Tink</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.3_%e2%80%94_create_content_that_can_be_presented_in_different_ways">Explanation of WCAG, Guideline 1.3 – MDN</a></li>
- <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html">Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0</a></li>
-</ul>
+    The {{cssxref("counters()")}} function also has two forms: 'counters(_name_, _string_)' or 'counters(_name_, _string_, _style_)'. The generated text is the value of all counters with the given name in scope at the given pseudo-element, from outermost to innermost, separated by the specified string. The counters are rendered in the indicated {{cssxref("&lt;list-style-type&gt;")}} (`decimal` by default).
 
-<h2 id="Formal_definition">Formal definition</h2>
+- `attr(x)`
+  - : The value of the element's attribute `x` as a string. If there is no attribute `x`, an empty string is returned. The case-sensitivity of attribute names depends on the document language.
+- `open-quote` | `close-quote`
+  - : These values are replaced by the appropriate string from the {{cssxref("quotes")}} property.
+- `no-open-quote` | `no-close-quote`
+  - : Introduces no content, but increments (decrements) the level of nesting for quotes.
 
-<p>{{cssinfo}}</p>
+## Accessibility concerns
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+CSS-generated content is not included in the [DOM](/en-US/docs/Web/API/Document_Object_Model/Introduction). Because of this, it will not be represented in the [accessibility tree](/en-US/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis) and certain assistive technology/browser combinations will not announce it. If the content conveys information that is critical to understanding the page's purpose, it is better to include it in the main document.
+
+- [Accessibility support for CSS generated content – Tink](https://tink.uk/accessibility-support-for-css-generated-content/)
+- [Explanation of WCAG, Guideline 1.3 – MDN](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.3_%e2%80%94_create_content_that_can_be_presented_in_different_ways)
+- [Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
+
+## Formal definition
+
+{{cssinfo}}
+
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Headings_and_quotes">Headings and quotes</h3>
+### Headings and quotes
 
-<p>This example inserts quotation marks around quotes, and adds the word "Chapter" before headings.</p>
+This example inserts quotation marks around quotes, and adds the word "Chapter" before headings.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;h1&gt;5&lt;/h1&gt;
-&lt;p&gt;According to Sir Tim Berners-Lee,
-  &lt;q cite="http://www.w3.org/People/Berners-Lee/FAQ.html#Internet"&gt;I was
+```html
+<h1>5</h1>
+<p>According to Sir Tim Berners-Lee,
+  <q cite="http://www.w3.org/People/Berners-Lee/FAQ.html#Internet">I was
     lucky enough to invent the Web at the time when the Internet
-    already existed - and had for a decade and a half.&lt;/q&gt;
+    already existed - and had for a decade and a half.</q>
   We must understand that there is nothing fundamentally wrong
   with building on the contributions of others.
-&lt;/p&gt;
+</p>
 
-&lt;h1&gt;6&lt;/h1&gt;
-&lt;p&gt;According to the Mozilla Manifesto,
-  &lt;q cite="http://www.mozilla.org/en-US/about/manifesto/"&gt;Individuals
+<h1>6</h1>
+<p>According to the Mozilla Manifesto,
+  <q cite="http://www.mozilla.org/en-US/about/manifesto/">Individuals
     must have the ability to shape the Internet and
-    their own experiences on the Internet.&lt;/q&gt;
+    their own experiences on the Internet.</q>
   Therefore, we can infer that contributing to the open web
   can protect our own individual experiences on it.
-&lt;/p&gt;</pre>
+</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">q {
+```css
+q {
   color: blue;
 }
 
@@ -143,75 +145,87 @@ h1::before  {
   content: "Chapter ";  /* The trailing space creates separation
                            between the added content and the
                            rest of the content */
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Headings_and_quotes', '100%', 200)}}</p>
+{{EmbedLiveSample('Headings_and_quotes', '100%', 200)}}
 
-<h3 id="Image_combined_with_text">Image combined with text</h3>
+### Image combined with text
 
-<p>This example inserts an image before the link. If the image is not found, it inserts text instead.</p>
+This example inserts an image before the link. If the image is not found, it inserts text instead.
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;a href="https://www.mozilla.org/en-US/"&gt;Mozilla Home Page&lt;/a&gt;</pre>
+```html
+<a href="https://www.mozilla.org/en-US/">Mozilla Home Page</a>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">a::before {
+```css
+a::before {
   content: url("https://mozorg.cdn.mozilla.net/media/img/favicon.ico") / " MOZILLA: ";
   font: x-small Arial, sans-serif;
   color: gray;
-}</pre>
+}
+```
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Image_combined_with_text', '100%', 60)}}</p>
+{{EmbedLiveSample('Image_combined_with_text', '100%', 60)}}
 
-<h3 id="Targeting_classes">Targeting classes</h3>
+### Targeting classes
 
-<p>This example inserts additional text after special items in a list.</p>
+This example inserts additional text after special items in a list.
 
-<h4 id="HTML_3">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;h2&gt;Paperback Best Sellers&lt;/h2&gt;
-&lt;ol&gt;
-  &lt;li&gt;Political Thriller&lt;/li&gt;
-  &lt;li class="new-entry"&gt;Halloween Stories&lt;/li&gt;
-  &lt;li&gt;My Biography&lt;/li&gt;
-  &lt;li class="new-entry"&gt;Vampire Romance&lt;/li&gt;
-&lt;/ol&gt;</pre>
+```html
+<h2>Paperback Best Sellers</h2>
+<ol>
+  <li>Political Thriller</li>
+  <li class="new-entry">Halloween Stories</li>
+  <li>My Biography</li>
+  <li class="new-entry">Vampire Romance</li>
+</ol>
+```
 
-<h4 id="CSS_3">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.new-entry::after {
+```css
+.new-entry::after {
   content: " New!";  /* The leading space creates separation
                         between the added content and the
                         rest of the content */
   color: red;
-}</pre>
+}
+```
 
-<h4 id="Result_3">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Targeting_classes', '100%', 160)}}</p>
+{{EmbedLiveSample('Targeting_classes', '100%', 160)}}
 
-<h3 id="Images_and_element_attributes">Images and element attributes</h3>
+### Images and element attributes
 
-<p>This example inserts an image before each link, and adds its <code>id</code> attribute after.</p>
+This example inserts an image before each link, and adds its `id` attribute after.
 
-<h4 id="HTML_4">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;ul&gt;
-  &lt;li&gt;&lt;a id="moz" href="https://www.mozilla.org/"&gt;
-    Mozilla Home Page&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a id="mdn" href="https://developer.mozilla.org/"&gt;
-    Mozilla Developer Network&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</pre>
+```html
+<ul>
+  <li><a id="moz" href="https://www.mozilla.org/">
+    Mozilla Home Page</a></li>
+  <li><a id="mdn" href="https://developer.mozilla.org/">
+    Mozilla Developer Network</a></li>
+</ul>
+```
 
-<h4 id="CSS_4">CSS</h4>
+#### CSS
 
-<pre class="brush: css">a {
+```css
+a {
   text-decoration: none;
   border-bottom: 3px dotted navy;
 }
@@ -231,50 +245,51 @@ a::after {
 li {
   margin: 1em;
 }
-</pre>
+```
 
-<h4 id="Result_4">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Images_and_element_attributes', '100%', 160)}}</p>
+{{EmbedLiveSample('Images_and_element_attributes', '100%', 160)}}
 
-<h3 id="Element_replacement">Element replacement</h3>
+### Element replacement
 
-<p>This example replaces an element's content with an image. You can replace the contents of an element with either a {{cssxref("url()")}} or an {{cssxref("&lt;image&gt;")}} value. Content added with <code>::before</code> or <code>::after</code> will not be generated as the contents of the element have been replaced.</p>
+This example replaces an element's content with an image. You can replace the contents of an element with either a {{cssxref("url()")}} or an {{cssxref("&lt;image&gt;")}} value. Content added with `::before` or `::after` will not be generated as the contents of the element have been replaced.
 
-<h4 id="HTML_5">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div id="replaced"&gt;Mozilla&lt;/div&gt;
-</pre>
+```html
+<div id="replaced">Mozilla</div>
+```
 
-<h4 id="CSS_5">CSS</h4>
+#### CSS
 
-<pre class="brush: css">#replaced {
+```css
+#replaced {
   content: url("mdn.svg");
 }
 
 #replaced::after { /* will not show if element replacement is supported */
   content: " (" attr(id) ")";
-}</pre>
+}
+```
 
-<h4 id="Result_5">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Element_replacement', '100%', 200)}}</p>
+{{EmbedLiveSample('Element_replacement', '100%', 200)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/Replaced_element">Replaced elements</a></li>
- <li>{{Cssxref("::after")}}</li>
- <li>{{Cssxref("::before")}}</li>
- <li>{{Cssxref("::marker")}}</li>
- <li>{{Cssxref("quotes")}}</li>
- <li>{{cssxref("url()", "url()")}} function</li>
-</ul>
+- [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)
+- {{Cssxref("::after")}}
+- {{Cssxref("::before")}}
+- {{Cssxref("::marker")}}
+- {{Cssxref("quotes")}}
+- {{cssxref("url()", "url()")}} function

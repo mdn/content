@@ -6,23 +6,24 @@ tags:
   - CSS Borders
   - CSS Property
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.border-left-width
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>border-left-width</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets the width of the left border of an element.</p>
+The **`border-left-width`** [CSS](/en-US/docs/Web/CSS) property sets the width of the left border of an element.
 
-<div>{{EmbedInteractiveExample("pages/css/border-left-width.html")}}</div>
+{{EmbedInteractiveExample("pages/css/border-left-width.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 border-left-width: thin;
 border-left-width: medium;
 border-left-width: thick;
 
-/* &lt;length&gt; values */
+/* <length> values */
 border-left-width: 10em;
 border-left-width: 3vmax;
 border-left-width: 6px;
@@ -32,45 +33,43 @@ border-left-width: inherit;
 border-left-width: initial;
 border-left-width: revert;
 border-left-width: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>&lt;line-width&gt;</code></dt>
- <dd>Defines the width of the border, either as an explicit nonnegative {{cssxref("&lt;length&gt;")}} or a keyword. If it's a keyword, it must be one of the following values:
-   <ul>
-     <li><code>thin</code></li>
-     <li><code>medium</code></li>
-     <li><code>thick</code></li>
-  </ul>
- </dd>
-</dl>
+- `<line-width>`
 
-<div class="note">
- <p><strong>Note:</strong> Because the specification doesn't define the exact thickness denoted by each keyword, the precise result when using one of them is implementation-specific. Nevertheless, they always follow the pattern <code>thin ≤ medium ≤ thick</code>, and the values are constant within a single document.</p>
-</div>
+  - : Defines the width of the border, either as an explicit nonnegative {{cssxref("&lt;length&gt;")}} or a keyword. If it's a keyword, it must be one of the following values:
 
-<h2 id="Formal_definition">Formal definition</h2>
+    - `thin`
+    - `medium`
+    - `thick`
 
-<p>{{CSSInfo}}</p>
+> **Note:** Because the specification doesn't define the exact thickness denoted by each keyword, the precise result when using one of them is implementation-specific. Nevertheless, they always follow the pattern `thin ≤ medium ≤ thick`, and the values are constant within a single document.
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal definition
+
+{{CSSInfo}}
+
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Comparing_border_widths">Comparing border widths</h3>
+### Comparing border widths
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div&gt;Element 1&lt;/div&gt;
-&lt;div&gt;Element 2&lt;/div&gt;</pre>
+```html
+<div>Element 1</div>
+<div>Element 2</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   border: 1px solid red;
   margin: 1em 0;
 }
@@ -80,23 +79,22 @@ div:nth-child(1) {
 }
 div:nth-child(2) {
   border-left-width: 2em;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Comparing_border_widths', '100%')}}</p>
+{{EmbedLiveSample('Comparing_border_widths', '100%')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The other border-width-related CSS properties: {{Cssxref("border-top-width")}}, {{Cssxref("border-right-width")}}, {{Cssxref("border-bottom-width")}}, and {{Cssxref("border-width")}}.</li>
- <li>The other border-left-related CSS properties: {{Cssxref("border")}}, {{Cssxref("border-left")}}, {{Cssxref("border-left-style")}}, and {{Cssxref("border-left-color")}}.</li>
-</ul>
+- The other border-width-related CSS properties: {{Cssxref("border-top-width")}}, {{Cssxref("border-right-width")}}, {{Cssxref("border-bottom-width")}}, and {{Cssxref("border-width")}}.
+- The other border-left-related CSS properties: {{Cssxref("border")}}, {{Cssxref("border-left")}}, {{Cssxref("border-left-style")}}, and {{Cssxref("border-left-color")}}.

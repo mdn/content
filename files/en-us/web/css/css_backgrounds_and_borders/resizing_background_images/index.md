@@ -16,22 +16,25 @@ tags:
   - resize
   - width
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong>{{cssxref("background-size")}}</strong> CSS property lets you resize the background image of an element, overriding the default behavior of tiling the image at its full size by specifying the width and/or height of the image. By doing so, you can scale the image upward or downward as desired.</p>
+The **{{cssxref("background-size")}}** CSS property lets you resize the background image of an element, overriding the default behavior of tiling the image at its full size by specifying the width and/or height of the image. By doing so, you can scale the image upward or downward as desired.
 
-<h2 id="Tiling_a_large_image">Tiling a large image</h2>
+## Tiling a large image
 
-<p>Let's consider a large image, a 2982x2808 Firefox logo image. We want (for some reason likely involving horrifyingly bad site design) to tile four copies of this image into a 300x300-pixel element. To do this, we can use a fixed <code>background-size</code> value of 150 pixels.</p>
+Let's consider a large image, a 2982x2808 Firefox logo image. We want (for some reason likely involving horrifyingly bad site design) to tile four copies of this image into a 300x300-pixel element. To do this, we can use a fixed `background-size` value of 150 pixels.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div class="tiledBackground"&gt;
-&lt;/div&gt;</pre>
+```html
+<div class="tiledBackground">
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css; highlight:[3]">.tiledBackground {
+```css
+.tiledBackground {
   background-image: url(https://www.mozilla.org/media/img/logos/firefox/logo-quantum.9c5e96634f92.png);
   background-size: 150px;
   width: 300px;
@@ -39,30 +42,32 @@ tags:
   border: 2px solid;
   color: pink;
 }
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Tiling_a_large_image", 340, 340)}}</p>
+{{EmbedLiveSample("Tiling_a_large_image", 340, 340)}}
 
-<h2 id="Stretching_an_image">Stretching an image</h2>
+## Stretching an image
 
-<p>You can also specify both the horizontal and vertical sizes of the image, like this:</p>
+You can also specify both the horizontal and vertical sizes of the image, like this:
 
-<pre class="brush:css">background-size: 300px 150px;
-</pre>
+```css
+background-size: 300px 150px;
+```
 
-<p>The result looks like this:</p>
+The result looks like this:
 
-<p><img alt="New Firefox logo stretched" src="s.codepen.io_richienb_debug_lonxgp_pnkvygvggyxa.png"></p>
+![New Firefox logo stretched](s.codepen.io_richienb_debug_lonxgp_pnkvygvggyxa.png)
 
-<h2 id="Scaling_an_image_up">Scaling an image up</h2>
+## Scaling an image up
 
-<p>On the other end of the spectrum, you can scale an image up in the background. Here we scale a 32x32 pixel favicon to 300x300 pixels:</p>
+On the other end of the spectrum, you can scale an image up in the background. Here we scale a 32x32 pixel favicon to 300x300 pixels:
 
-<p><img alt="MDN Logo scaled" src="favicon57.de33179910ae.1.1.png"></p>
+![MDN Logo scaled](favicon57.de33179910ae.1.1.png)
 
-<pre class="brush: css; highlight:[5]">.square2 {
+```css
+.square2 {
   background-image: url(favicon.png);
   background-size: 300px;
   width: 300px;
@@ -71,27 +76,30 @@ tags:
   text-shadow: white 0px 0px 2px;
   font-size: 16px;
 }
-</pre>
+```
 
-<p>As you can see, the CSS is actually essentially identical, save the name of the image file.</p>
+As you can see, the CSS is actually essentially identical, save the name of the image file.
 
-<h2 id="Special_values.3A_.22contain.22_and_.22cover.22">Special values: "contain" and "cover"</h2>
+## Special values: "contain" and "cover"
 
-<p>Besides {{cssxref("&lt;length&gt;")}} values, the {{ cssxref("background-size") }} CSS property offers two special size values, <code>contain</code> and <code>cover</code>. Let's take a look at these.</p>
+Besides {{cssxref("&lt;length&gt;")}} values, the {{ cssxref("background-size") }} CSS property offers two special size values, `contain` and `cover`. Let's take a look at these.
 
-<h3 id="contain">contain</h3>
+### contain
 
-<p>The <code>contain</code> value specifies that, regardless of the size of the containing box, the background image should be scaled so that each side is as large as possible while not exceeding the length of the corresponding side of the container. Try resizing the example below to see this in action.</p>
+The `contain` value specifies that, regardless of the size of the containing box, the background image should be scaled so that each side is as large as possible while not exceeding the length of the corresponding side of the container. Try resizing the example below to see this in action.
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="bgSizeContain"&gt;
-  &lt;p&gt;Try resizing this element!&lt;/p&gt;
-&lt;/div&gt;</pre>
+```html
+<div class="bgSizeContain">
+  <p>Try resizing this element!</p>
+</div>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.bgSizeContain {
+```css
+.bgSizeContain {
   background-image: url(https://www.mozilla.org/media/img/logos/firefox/logo-quantum.9c5e96634f92.png);
   background-size: contain;
   width: 160px;
@@ -100,25 +108,29 @@ tags:
   color: pink;
   resize: both;
   overflow: scroll;
-}</pre>
+}
+```
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('contain', 250, 250) }}</p>
+{{ EmbedLiveSample('contain', 250, 250) }}
 
-<h3 id="cover">cover</h3>
+### cover
 
-<p>The <code>cover</code> value specifies that the background image should be sized so that it is as small as possible while ensuring that both dimensions are greater than or equal to the corresponding size of the container. Try resizing the example below to see this in action.</p>
+The `cover` value specifies that the background image should be sized so that it is as small as possible while ensuring that both dimensions are greater than or equal to the corresponding size of the container. Try resizing the example below to see this in action.
 
-<h4 id="HTML_3">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="bgSizeCover"&gt;
-  &lt;p&gt;Try resizing this element!&lt;/p&gt;
-&lt;/div&gt;</pre>
+```html
+<div class="bgSizeCover">
+  <p>Try resizing this element!</p>
+</div>
+```
 
-<h4 id="CSS_3">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.bgSizeCover {
+```css
+.bgSizeCover {
   background-image: url(https://www.mozilla.org/media/img/logos/firefox/logo-quantum.9c5e96634f92.png);
   background-size: cover;
   width: 160px;
@@ -127,16 +139,15 @@ tags:
   color: pink;
   resize: both;
   overflow: scroll;
-}</pre>
+}
+```
 
-<h4 id="Result_3">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('cover', 250, 250) }}</p>
+{{ EmbedLiveSample('cover', 250, 250) }}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{ cssxref("background-size") }}</li>
- <li>{{ cssxref("background") }}</li>
- <li><a href="/en-US/docs/Web/CSS/Scaling_of_SVG_backgrounds">Scaling of SVG backgrounds</a></li>
-</ul>
+- {{ cssxref("background-size") }}
+- {{ cssxref("background") }}
+- [Scaling of SVG backgrounds](/en-US/docs/Web/CSS/Scaling_of_SVG_backgrounds)

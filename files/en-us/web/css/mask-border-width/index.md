@@ -9,25 +9,26 @@ tags:
   - NeedsCompatTable
   - NeedsExample
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.mask-border-width
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>mask-border-width</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets the width of an element's <a href="/en-US/docs/Web/CSS/mask-border">mask border</a>.</p>
+The **`mask-border-width`** [CSS](/en-US/docs/Web/CSS) property sets the width of an element's [mask border](/en-US/docs/Web/CSS/mask-border).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* Keyword value */
+```css
+/* Keyword value */
 mask-border-width: auto;
 
-/* &lt;length&gt; value */
+/* <length> value */
 mask-border-width: 1rem;
 
-/* &lt;percentage&gt; value */
+/* <percentage> value */
 mask-border-width: 25%;
 
-/* &lt;number&gt; value */
+/* <number> value */
 mask-border-width: 3;
 
 /* vertical | horizontal */
@@ -44,66 +45,62 @@ mask-border-width: inherit;
 mask-border-width: initial;
 mask-border-width: revert;
 mask-border-width: unset;
-</pre>
+```
 
-<p>The <code>mask-border-width</code> property may be specified using one, two, three, or four values chosen from the list of values below.</p>
+The `mask-border-width` property may be specified using one, two, three, or four values chosen from the list of values below.
 
-<ul>
- <li>When <strong>one</strong> value is specified, it applies the same width to <strong>all four sides</strong>.</li>
- <li>When <strong>two</strong> values are specified, the first width applies to the <strong>top and bottom</strong>, the second to the <strong>left and right</strong>.</li>
- <li>When <strong>three</strong> values are specified, the first width applies to the <strong>top</strong>, the second to the <strong>left and right</strong>, the third to the <strong>bottom</strong>.</li>
- <li>When <strong>four</strong> values are specified, the widths apply to the <strong>top</strong>, <strong>right</strong>, <strong>bottom</strong>, and <strong>left</strong> in that order (clockwise).</li>
-</ul>
+- When **one** value is specified, it applies the same width to **all four sides**.
+- When **two** values are specified, the first width applies to the **top and bottom**, the second to the **left and right**.
+- When **three** values are specified, the first width applies to the **top**, the second to the **left and right**, the third to the **bottom**.
+- When **four** values are specified, the widths apply to the **top**, **right**, **bottom**, and **left** in that order (clockwise).
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>&lt;length-percentage&gt;</code></dt>
- <dd>The width of the mask border, specified as a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;percentage&gt;")}}. Percentages are relative to the <em>width</em> of the border area for horizontal offsets and the <em>height</em> of the border area for vertical offsets. Must not be negative.</dd>
- <dt><code>&lt;number&gt;</code></dt>
- <dd>The width of the mask border, specified as a multiple of the corresponding {{cssxref("border-width")}}. Must not be negative.</dd>
- <dt><code>auto</code></dt>
- <dd>The width of the mask border is made equal to the intrinsic width or height (whichever is applicable) of the corresponding {{cssxref("mask-border-slice")}}. If the image does not have the required intrinsic dimension, the corresponding <code>border-width</code> is used instead.</dd>
-</dl>
+- `<length-percentage>`
+  - : The width of the mask border, specified as a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;percentage&gt;")}}. Percentages are relative to the _width_ of the border area for horizontal offsets and the _height_ of the border area for vertical offsets. Must not be negative.
+- `<number>`
+  - : The width of the mask border, specified as a multiple of the corresponding {{cssxref("border-width")}}. Must not be negative.
+- `auto`
+  - : The width of the mask border is made equal to the intrinsic width or height (whichever is applicable) of the corresponding {{cssxref("mask-border-slice")}}. If the image does not have the required intrinsic dimension, the corresponding `border-width` is used instead.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Basic_usage">Basic usage</h3>
+### Basic usage
 
-<p>This property doesn't appear to be supported anywhere yet. When it eventually starts to be supported, it will serve to define the width of the border mask — setting this to a different value to <code><a href="/en-US/docs/Web/CSS/mask-border-slice">mask-border-slice</a></code> will cause the slices to be scaled to fit the border mask.</p>
+This property doesn't appear to be supported anywhere yet. When it eventually starts to be supported, it will serve to define the width of the border mask — setting this to a different value to [`mask-border-slice`](/en-US/docs/Web/CSS/mask-border-slice) will cause the slices to be scaled to fit the border mask.
 
-<pre class="brush: css">mask-border-width: 30 fill;</pre>
+```css
+mask-border-width: 30 fill;
+```
 
-<p>Chromium-based browsers support an outdated version of this property — <code>mask-box-image-width</code> — with a prefix:</p>
+Chromium-based browsers support an outdated version of this property — `mask-box-image-width` — with a prefix:
 
-<pre class="brush: css">-webkit-mask-box-image-width: 20px;</pre>
+```css
+-webkit-mask-box-image-width: 20px;
+```
 
-<div class="notecard note">
-<p><strong>Note:</strong> The <code><a href="/en-US/docs/Web/CSS/mask-border">mask-border</a></code> page features a working example (using the out-of-date prefixed border mask properties supported in Chromium), so you can get an idea of the effect.</p>
-</div>
+> **Note:** The [`mask-border`](/en-US/docs/Web/CSS/mask-border) page features a working example (using the out-of-date prefixed border mask properties supported in Chromium), so you can get an idea of the effect.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{cssxref("mask-border")}}</li>
-  <li>{{cssxref("mask-border-mode")}}</li>
-  <li>{{cssxref("mask-border-outset")}}</li>
-  <li>{{cssxref("mask-border-repeat")}}</li>
-  <li>{{cssxref("mask-border-source")}}</li>
-</ul>
+- {{cssxref("mask-border")}}
+- {{cssxref("mask-border-mode")}}
+- {{cssxref("mask-border-outset")}}
+- {{cssxref("mask-border-repeat")}}
+- {{cssxref("mask-border-source")}}

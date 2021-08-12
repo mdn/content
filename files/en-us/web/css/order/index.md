@@ -9,15 +9,16 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.order
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>order</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets the order to lay out an item in a flex or grid container. Items in a container are sorted by ascending <code>order</code> value and then by their source code order.</p>
+The **`order`** [CSS](/en-US/docs/Web/CSS) property sets the order to lay out an item in a flex or grid container. Items in a container are sorted by ascending `order` value and then by their source code order.
 
-<div>{{EmbedInteractiveExample("pages/css/order.html")}}</div>
+{{EmbedInteractiveExample("pages/css/order.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* &lt;integer&gt; values */
+```css
+/* <integer> values */
 order: 5;
 order: -5;
 
@@ -25,75 +26,74 @@ order: -5;
 order: inherit;
 order: initial;
 order: revert;
-order: unset;</pre>
+order: unset;
+```
 
-<p>Since <code>order</code> is only meant to affect the <em>visual order</em> of elements and not their logical or tab order. <code>order</code> must not be used on non-visual media such as <a href="/en-US/docs/Web/CSS/@media#speech">speech</a>.</p>
+Since `order` is only meant to affect the _visual order_ of elements and not their logical or tab order. `order` must not be used on non-visual media such as [speech](/en-US/docs/Web/CSS/@media#speech).
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt>{{cssxref("&lt;integer&gt;")}}</dt>
- <dd>Represents the ordinal group to be used by the item.</dd>
-</dl>
+- {{cssxref("&lt;integer&gt;")}}
+  - : Represents the ordinal group to be used by the item.
 
-<h2 id="Accessibility_concerns">Accessibility concerns</h2>
+## Accessibility concerns
 
-<p>Using the <code>order</code> property will create a disconnect between the visual presentation of content and DOM order. This will adversely affect users experiencing low vision navigating with the aid of assistive technology such as a screen reader. If the visual (css) order is important, then screen reader users will not have access to the correct reading order.</p>
+Using the `order` property will create a disconnect between the visual presentation of content and DOM order. This will adversely affect users experiencing low vision navigating with the aid of assistive technology such as a screen reader. If the visual (css) order is important, then screen reader users will not have access to the correct reading order.
 
-<ul>
- <li><a href="https://tink.uk/flexbox-the-keyboard-navigation-disconnect/">Flexbox &amp; the keyboard navigation disconnect — Tink</a></li>
- <li><a href="http://adrianroselli.com/2015/09/source-order-matters.html">Source Order Matters | Adrian Roselli</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.3_%e2%80%94_create_content_that_can_be_presented_in_different_ways">MDN Understanding WCAG, Guideline 1.3 explanations</a></li>
- <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-sequence.html">Understanding Success Criterion 1.3.2 | W3C Understanding WCAG 2.0</a></li>
-</ul>
+- [Flexbox & the keyboard navigation disconnect — Tink](https://tink.uk/flexbox-the-keyboard-navigation-disconnect/)
+- [Source Order Matters | Adrian Roselli](http://adrianroselli.com/2015/09/source-order-matters.html)
+- [MDN Understanding WCAG, Guideline 1.3 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.3_%e2%80%94_create_content_that_can_be_presented_in_different_ways)
+- [Understanding Success Criterion 1.3.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-sequence.html)
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Ordering_items_in_a_flex_container">Ordering items in a flex container</h3>
+### Ordering items in a flex container
 
-<p>This example uses CSS to create a classic two-sidebar layout surrounding a content block. The Flexible Box Layout Module automatically creates blocks of equal vertical size and uses as much horizontal space as available.</p>
+This example uses CSS to create a classic two-sidebar layout surrounding a content block. The Flexible Box Layout Module automatically creates blocks of equal vertical size and uses as much horizontal space as available.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush:html;">&lt;header&gt;...&lt;/header&gt;
-&lt;main&gt;
-  &lt;article&gt;Article&lt;/article&gt;
-  &lt;nav&gt;Nav&lt;/nav&gt;
-  &lt;aside&gt;Aside&lt;/aside&gt;
-&lt;/main&gt;
-&lt;footer&gt;...&lt;/footer&gt;</pre>
+```html
+<header>...</header>
+<main>
+  <article>Article</article>
+  <nav>Nav</nav>
+  <aside>Aside</aside>
+</main>
+<footer>...</footer>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush:css;">main { display: flex;  text-align:center; }
-main &gt; article { flex:1;        order: 2; }
-main &gt; nav     { width: 200px;  order: 1; }
-main &gt; aside   { width: 200px;  order: 3; }</pre>
+```css
+main { display: flex;  text-align:center; }
+main > article { flex:1;        order: 2; }
+main > nav     { width: 200px;  order: 1; }
+main > aside   { width: 200px;  order: 3; }
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Ordering_items_in_a_flex_container') }}</p>
+{{ EmbedLiveSample('Ordering_items_in_a_flex_container') }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>CSS Flexbox Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Basic Concepts of Flexbox</a></em></li>
- <li>CSS Flexbox Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items">Ordering flex items</a></em></li>
- <li>CSS Grid Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility">CSS Grid Layout and accessibility</a></em></li>
-</ul>
+- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
+- CSS Flexbox Guide: _[Ordering flex items](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items)_
+- CSS Grid Guide: _[CSS Grid Layout and accessibility](/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)_

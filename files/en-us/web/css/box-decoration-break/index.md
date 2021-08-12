@@ -10,27 +10,26 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.box-decoration-break
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>box-decoration-break</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property specifies how an element's <a href="/en-US/docs/Web/CSS/CSS_Fragmentation">fragments</a> should be rendered when broken across multiple lines, columns, or pages.</p>
+The **`box-decoration-break`** [CSS](/en-US/docs/Web/CSS) property specifies how an element's [fragments](/en-US/docs/Web/CSS/CSS_Fragmentation) should be rendered when broken across multiple lines, columns, or pages.
 
-<div>{{EmbedInteractiveExample("pages/css/box-decoration-break.html")}}</div>
+{{EmbedInteractiveExample("pages/css/box-decoration-break.html")}}
 
-<p>The specified value will impact the appearance of the following properties:</p>
+The specified value will impact the appearance of the following properties:
 
-<ul>
- <li>{{Cssxref("background")}}</li>
- <li>{{Cssxref("border")}}</li>
- <li>{{Cssxref("border-image")}}</li>
- <li>{{Cssxref("box-shadow")}}</li>
- <li>{{Cssxref("clip-path")}}</li>
- <li>{{Cssxref("margin")}}</li>
- <li>{{Cssxref("padding")}}</li>
-</ul>
+- {{Cssxref("background")}}
+- {{Cssxref("border")}}
+- {{Cssxref("border-image")}}
+- {{Cssxref("box-shadow")}}
+- {{Cssxref("clip-path")}}
+- {{Cssxref("margin")}}
+- {{Cssxref("padding")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 box-decoration-break: slice;
 box-decoration-break: clone;
 
@@ -39,34 +38,33 @@ box-decoration-break: initial;
 box-decoration-break: inherit;
 box-decoration-break: revert;
 box-decoration-break: unset;
-</pre>
+```
 
-<p>The <code>box-decoration-break</code> property is specified as one of the keyword values listed below.</p>
+The `box-decoration-break` property is specified as one of the keyword values listed below.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>slice</code></dt>
- <dd>The element is initially rendered as if its box were not fragmented, after which the rendering for this hypothetical box is sliced into pieces for each line/column/page. Note that the hypothetical box can be different for each fragment since it uses its own height if the break occurs in the inline direction, and its own width if the break occurs in the block direction. See the CSS specification for details.</dd>
- <dt><code>clone</code></dt>
- <dd>Each box fragment is rendered independently with the specified border, padding, and margin wrapping each fragment. The {{ Cssxref("border-radius") }}, {{ Cssxref("border-image") }}, and {{ Cssxref("box-shadow") }} are applied to each fragment independently. The background is also drawn independently for each fragment, which means that a background image with {{ Cssxref("background-repeat") }}<code>: no-repeat</code> may nevertheless repeat multiple times.</dd>
-</dl>
+- `slice`
+  - : The element is initially rendered as if its box were not fragmented, after which the rendering for this hypothetical box is sliced into pieces for each line/column/page. Note that the hypothetical box can be different for each fragment since it uses its own height if the break occurs in the inline direction, and its own width if the break occurs in the block direction. See the CSS specification for details.
+- `clone`
+  - : Each box fragment is rendered independently with the specified border, padding, and margin wrapping each fragment. The {{ Cssxref("border-radius") }}, {{ Cssxref("border-image") }}, and {{ Cssxref("box-shadow") }} are applied to each fragment independently. The background is also drawn independently for each fragment, which means that a background image with {{ Cssxref("background-repeat") }}`: no-repeat` may nevertheless repeat multiple times.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Inline_box_fragments">Inline box fragments</h3>
+### Inline box fragments
 
-<p>An inline element that contains line breaks styled with:</p>
+An inline element that contains line breaks styled with:
 
-<pre class="brush:css">.example {
+```css
+.example {
   background: linear-gradient(to bottom right, yellow, green);
   box-shadow:
     8px 8px 10px 0px deeppink,
@@ -81,60 +79,60 @@ box-decoration-break: unset;
 }
 
 ...
-&lt;span class="example"&gt;The&lt;br&gt;quick&lt;br&gt;orange fox&lt;/span&gt;</pre>
+<span class="example">The<br>quick<br>orange fox</span>
+```
 
-<p>... results in:</p>
+... results in:
 
-<p><img alt="A screenshot of the rendering of an inline element styled with box-decoration-break:slice and styles given in the example." src="box-decoration-break-inline-slice.png"></p>
+![A screenshot of the rendering of an inline element styled with box-decoration-break:slice and styles given in the example.](box-decoration-break-inline-slice.png)
 
-<p>Adding <code>box-decoration-break: clone</code> to the above styles:</p>
+Adding `box-decoration-break: clone` to the above styles:
 
-<pre class="brush:css">-webkit-box-decoration-break: clone;
+```css
+-webkit-box-decoration-break: clone;
 box-decoration-break: clone;
-</pre>
+```
 
-<p>... results in:</p>
+... results in:
 
-<p><img alt="A screenshot of the rendering of an inline element styled with box-decoration-break:clone and styles given in the example" src="box-decoration-break-inline-clone.png"></p>
+![A screenshot of the rendering of an inline element styled with box-decoration-break:clone and styles given in the example](box-decoration-break-inline-clone.png)
 
-<p>You can <a href="https://mdn.mozillademos.org/files/8179/box-decoration-break-inline.html">try the two inline examples above</a> in your browser.</p>
+You can [try the two inline examples above](https://mdn.mozillademos.org/files/8179/box-decoration-break-inline.html) in your browser.
 
-<p>Here's an example of an inline element using a large <code>border-radius</code> value. The second <code>"iM"</code> has a line-break between the <code>"i"</code> and the <code>"M"</code>. For comparison, the first <code>"iM"</code> is without line breaks. Note that if you stack the rendering of the two fragments horizontally next to each other it will result in the non-fragmented rendering.</p>
+Here's an example of an inline element using a large `border-radius` value. The second `"iM"` has a line-break between the `"i"` and the `"M"`. For comparison, the first `"iM"` is without line breaks. Note that if you stack the rendering of the two fragments horizontally next to each other it will result in the non-fragmented rendering.
 
-<p><img alt="A screenshot of the rendering of the second inline element example." src="box-decoration-break-slice-inline-2.png"></p>
+![A screenshot of the rendering of the second inline element example.](box-decoration-break-slice-inline-2.png)
 
-<p><a href="https://mdn.mozillademos.org/files/8191/box-decoration-break-inline-extreme.html">Try the above example</a> in your browser.</p>
+[Try the above example](https://mdn.mozillademos.org/files/8191/box-decoration-break-inline-extreme.html) in your browser.
 
-<h3 id="Block_box_fragments">Block box fragments</h3>
+### Block box fragments
 
-<p>A block element with similar styles as above and no fragmentation results in:</p>
+A block element with similar styles as above and no fragmentation results in:
 
-<p><img alt="A screenshot of the rendering of the block element used in the examples without any fragmentation." src="box-decoration-break-block.png"></p>
+![A screenshot of the rendering of the block element used in the examples without any fragmentation.](box-decoration-break-block.png)
 
-<p>Fragmenting the above block into three columns results in:</p>
+Fragmenting the above block into three columns results in:
 
-<p><img alt="A screenshot of the rendering of the fragmented block used in the examples styled with box-decoration-break:slice." src="box-decoration-break-block-slice.png"></p>
+![A screenshot of the rendering of the fragmented block used in the examples styled with box-decoration-break:slice.](box-decoration-break-block-slice.png)
 
-<p>Note that stacking these pieces vertically will result in the non-fragmented rendering.</p>
+Note that stacking these pieces vertically will result in the non-fragmented rendering.
 
-<p>Now, the same example but styled with <code>box-decoration-break: clone</code> results in:</p>
+Now, the same example but styled with `box-decoration-break: clone` results in:
 
-<p><img alt="A screenshot of the rendering of the fragmented block used in the examples styled with box-decoration-break:clone." src="box-decoration-break-block-clone.png"></p>
+![A screenshot of the rendering of the fragmented block used in the examples styled with box-decoration-break:clone.](box-decoration-break-block-clone.png)
 
-<p>Note here that each fragment has an identical replicated border, box-shadow, and background.</p>
+Note here that each fragment has an identical replicated border, box-shadow, and background.
 
-<p>You can <a href="https://mdn.mozillademos.org/files/8187/box-decoration-break-block.html">try the block examples above</a> in your browser.</p>
+You can [try the block examples above](https://mdn.mozillademos.org/files/8187/box-decoration-break-block.html) in your browser.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("break-after")}}, {{cssxref("break-before")}}, {{cssxref("break-inside")}}</li>
-</ul>
+- {{cssxref("break-after")}}, {{cssxref("break-before")}}, {{cssxref("break-inside")}}

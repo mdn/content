@@ -9,48 +9,49 @@ tags:
   - Selector
 browser-compat: css.selectors.first-line
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>::first-line</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-element</a> applies styles to the first line of a <a href="/en-US/docs/Web/CSS/Visual_formatting_model#block-level_elements_and_block_boxes">block-level element</a>. Note that the length of the first line depends on many factors, including the width of the element, the width of the document, and the font size of the text.</p>
+The **`::first-line`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) applies styles to the first line of a [block-level element](/en-US/docs/Web/CSS/Visual_formatting_model#block-level_elements_and_block_boxes). Note that the length of the first line depends on many factors, including the width of the element, the width of the document, and the font size of the text.
 
-<pre class="brush: css no-line-numbers">/* Selects the first line of a &lt;p&gt; */
+```css
+/* Selects the first line of a <p> */
 p::first-line {
   color: red;
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Note:</strong> CSS3 introduced the <code>::first-line</code> notation (with two colons) to distinguish <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-classes</a> from <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-elements</a>. Browsers also accept <code>:first-line</code>, introduced in CSS2.</p>
-</div>
+> **Note:** CSS3 introduced the `::first-line` notation (with two colons) to distinguish [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) from [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements). Browsers also accept `:first-line`, introduced in CSS2.
 
-<h2 id="Allowable_properties">Allowable properties</h2>
+## Allowable properties
 
-<p>Only a small subset of CSS properties can be used with the <code>::first-line</code> pseudo-element:</p>
+Only a small subset of CSS properties can be used with the `::first-line` pseudo-element:
 
-<ul>
- <li>All font-related properties: {{Cssxref("font")}}, {{cssxref("font-kerning")}}, {{Cssxref("font-style")}}, {{Cssxref("font-variant")}}, {{cssxref("font-variant-numeric")}}, {{cssxref("font-variant-position")}}, {{cssxref("font-variant-east-asian")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-alternates")}}, {{cssxref("font-variant-ligatures")}}, {{cssxref("font-synthesis")}}, {{cssxref("font-feature-settings")}}, {{cssxref("font-language-override")}}, {{Cssxref("font-weight")}}, {{Cssxref("font-size")}}, {{cssxref("font-size-adjust")}}, {{cssxref("font-stretch")}}, and {{Cssxref("font-family")}}</li>
- <li>All background-related properties: {{Cssxref("background-color")}}, {{cssxref("background-clip")}}, {{Cssxref("background-image")}}, {{cssxref("background-origin")}}, {{Cssxref("background-position")}}, {{Cssxref("background-repeat")}}, {{cssxref("background-size")}},  {{Cssxref("background-attachment")}}, and {{cssxref("background-blend-mode")}}</li>
- <li>The {{cssxref("color")}} property</li>
- <li>{{cssxref("word-spacing")}}, {{cssxref("letter-spacing")}}, {{cssxref("text-decoration")}}, {{cssxref("text-transform")}}, and {{cssxref("line-height")}}</li>
- <li>{{cssxref("text-shadow")}}, {{cssxref("text-decoration")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-style")}}, and {{cssxref("vertical-align")}}.</li>
-</ul>
+- All font-related properties: {{Cssxref("font")}}, {{cssxref("font-kerning")}}, {{Cssxref("font-style")}}, {{Cssxref("font-variant")}}, {{cssxref("font-variant-numeric")}}, {{cssxref("font-variant-position")}}, {{cssxref("font-variant-east-asian")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-alternates")}}, {{cssxref("font-variant-ligatures")}}, {{cssxref("font-synthesis")}}, {{cssxref("font-feature-settings")}}, {{cssxref("font-language-override")}}, {{Cssxref("font-weight")}}, {{Cssxref("font-size")}}, {{cssxref("font-size-adjust")}}, {{cssxref("font-stretch")}}, and {{Cssxref("font-family")}}
+- All background-related properties: {{Cssxref("background-color")}}, {{cssxref("background-clip")}}, {{Cssxref("background-image")}}, {{cssxref("background-origin")}}, {{Cssxref("background-position")}}, {{Cssxref("background-repeat")}}, {{cssxref("background-size")}},  {{Cssxref("background-attachment")}}, and {{cssxref("background-blend-mode")}}
+- The {{cssxref("color")}} property
+- {{cssxref("word-spacing")}}, {{cssxref("letter-spacing")}}, {{cssxref("text-decoration")}}, {{cssxref("text-transform")}}, and {{cssxref("line-height")}}
+- {{cssxref("text-shadow")}}, {{cssxref("text-decoration")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-style")}}, and {{cssxref("vertical-align")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;Styles will only be applied to the first line of this paragraph.
-After that, all text will be styled like normal. See what I mean?&lt;/p&gt;
+```html
+<p>Styles will only be applied to the first line of this paragraph.
+After that, all text will be styled like normal. See what I mean?</p>
 
-&lt;span&gt;The first line of this text will not receive special styling
-because it is not a block-level element.&lt;/span&gt;</pre>
+<span>The first line of this text will not receive special styling
+because it is not a block-level element.</span>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">::first-line {
+```css
+::first-line {
   color: blue;
   text-transform: uppercase;
 
@@ -58,22 +59,21 @@ because it is not a block-level element.&lt;/span&gt;</pre>
   /* Many properties are invalid in ::first-line pseudo-elements */
   margin-left: 20px;
   text-indent: 20px;
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample('Examples', 350, 160)}}</p>
+{{EmbedLiveSample('Examples', 350, 160)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("::first-letter")}}</li>
-</ul>
+- {{cssxref("::first-letter")}}

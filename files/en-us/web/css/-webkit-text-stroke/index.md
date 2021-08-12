@@ -7,14 +7,15 @@ tags:
   - Non-standard
   - Reference
   - WebKit
-  - 'recipe:css-shorthand-property'
+  - recipe:css-shorthand-property
 browser-compat: css.properties.-webkit-text-stroke
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<p>The <strong><code>-webkit-text-stroke</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property specifies the <a href="/en-US/docs/Web/CSS/length">width</a> and <a href="/en-US/docs/Web/CSS/color_value">color</a> of strokes for text characters. This is a shorthand property for the longhand properties {{cssxref("-webkit-text-stroke-width")}} and {{cssxref("-webkit-text-stroke-color")}}.</p>
+The **`-webkit-text-stroke`** [CSS](/en-US/docs/Web/CSS) property specifies the [width](/en-US/docs/Web/CSS/length) and [color](/en-US/docs/Web/CSS/color_value) of strokes for text characters. This is a shorthand property for the longhand properties {{cssxref("-webkit-text-stroke-width")}} and {{cssxref("-webkit-text-stroke-color")}}.
 
-<pre class="brush:css no-line-numbers">/* Width and color values */
+```css
+/* Width and color values */
 -webkit-text-stroke: 4px navy;
 text-stroke: 4px navy;
 
@@ -24,70 +25,69 @@ text-stroke: 4px navy;
 -webkit-text-stroke: unset;
 text-stroke: inherit;
 text-stroke: initial;
-text-stroke: unset;</pre>
+text-stroke: unset;
+```
 
-<h2 id="Constituent_properties">Constituent properties</h2>
+## Constituent properties
 
-<p>This property is a shorthand for the following CSS properties:</p>
+This property is a shorthand for the following CSS properties:
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/-webkit-text-stroke-color"><code>-webkit-stroke-color</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/-webkit-text-stroke-width"><code>-webkit-stroke-width</code></a></li>
-</ul>
+- [`-webkit-stroke-color`](/en-US/docs/Web/CSS/-webkit-text-stroke-color)
+- [`-webkit-stroke-width`](/en-US/docs/Web/CSS/-webkit-text-stroke-width)
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt>{{cssxref("&lt;length&gt;")}}</dt>
- <dd>The width of the stroke.</dd>
- <dt>{{cssxref("&lt;color&gt;")}}</dt>
- <dd>The color of the stroke.</dd>
-</dl>
+- {{cssxref("&lt;length&gt;")}}
+  - : The width of the stroke.
+- {{cssxref("&lt;color&gt;")}}
+  - : The color of the stroke.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Adding_a_red_text_stroke">Adding a red text stroke</h3>
+### Adding a red text stroke
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p id="example"&gt;The stroke of this text is red.&lt;/p&gt;</pre>
+```html
+<p id="example">The stroke of this text is red.</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css; highlight[4]">#example {
+```css
+#example {
   font-size: 3em;
   margin: 0;
   -webkit-text-stroke: 2px red;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Adding_a_red_text_stroke", 600, 60)}}</p>
+{{EmbedLiveSample("Adding_a_red_text_stroke", 600, 60)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://www.webkit.org/blog/85/introducing-text-stroke/">Surfin' Safari blog post announcing this feature</a></li>
- <li><a href="https://css-tricks.com/adding-stroke-to-web-text/">CSS-Tricks article explaining this feature</a></li>
- <li>{{cssxref("-webkit-text-stroke-width")}}</li>
- <li>{{cssxref("-webkit-text-stroke-color")}}</li>
- <li>{{cssxref("-webkit-text-fill-color")}}</li>
-</ul>
+- [Surfin' Safari blog post announcing this feature](https://www.webkit.org/blog/85/introducing-text-stroke/)
+- [CSS-Tricks article explaining this feature](https://css-tricks.com/adding-stroke-to-web-text/)
+- {{cssxref("-webkit-text-stroke-width")}}
+- {{cssxref("-webkit-text-stroke-color")}}
+- {{cssxref("-webkit-text-fill-color")}}

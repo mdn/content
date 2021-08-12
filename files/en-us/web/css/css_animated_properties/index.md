@@ -8,10 +8,10 @@ tags:
   - Guide
   - Reference
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong>Certain CSS properties can be animated</strong> using <a href="/en-US/docs/Web/CSS/CSS_Animations">CSS Animations</a> or <a href="/en-US/docs/Web/CSS/CSS_Transitions">CSS Transitions</a>. <em>Animation</em> means that their values can be made to change gradually over a given amount of time.</p>
+**Certain CSS properties can be animated** using [CSS Animations](/en-US/docs/Web/CSS/CSS_Animations) or [CSS Transitions](/en-US/docs/Web/CSS/CSS_Transitions). _Animation_ means that their values can be made to change gradually over a given amount of time.
 
-<p>The animatable properties are:</p>
+The animatable properties are:
 
-<p>{{CSSAnimatedProperties}}</p>
+{{CSSAnimatedProperties}}

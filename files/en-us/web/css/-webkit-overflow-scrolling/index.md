@@ -6,50 +6,51 @@ tags:
   - CSS Property
   - Non-standard
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.-webkit-overflow-scrolling
 ---
-<div>{{CSSRef}} {{Non-standard_header}}</div>
+{{CSSRef}} {{Non-standard_header}}
 
-<p>The <code>-webkit-overflow-scrolling</code> <a href="/en-US/docs/Web/CSS">CSS</a> property controls whether or not touch devices use momentum-based scrolling for a given element.</p>
+The `-webkit-overflow-scrolling` [CSS](/en-US/docs/Web/CSS) property controls whether or not touch devices use momentum-based scrolling for a given element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>Use "regular" scrolling, where the content immediately ceases to scroll when you remove your finger from the touchscreen.</dd>
- <dt><code>touch</code></dt>
- <dd>Use momentum-based scrolling, where the content continues to scroll for a while after finishing the scroll gesture and removing your finger from the touchscreen. The speed and duration of the continued scrolling is proportional to how vigorous the scroll gesture was. Also creates a new stacking context.</dd>
-</dl>
+- `auto`
+  - : Use "regular" scrolling, where the content immediately ceases to scroll when you remove your finger from the touchscreen.
+- `touch`
+  - : Use momentum-based scrolling, where the content continues to scroll for a while after finishing the scroll gesture and removing your finger from the touchscreen. The speed and duration of the continued scrolling is proportional to how vigorous the scroll gesture was. Also creates a new stacking context.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div class="scroll-touch"&gt;
-  &lt;p&gt;
+```html
+<div class="scroll-touch">
+  <p>
     This paragraph has momentum scrolling
-  &lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="scroll-auto"&gt;
-  &lt;p&gt;
+  </p>
+</div>
+<div class="scroll-auto">
+  <p>
     This paragraph does not.
-  &lt;/p&gt;
-&lt;/div&gt;</pre>
+  </p>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   width: 100%;
   overflow: auto;
 }
@@ -68,24 +69,22 @@ p {
 .scroll-auto {
   -webkit-overflow-scrolling: auto; /* Stops scrolling immediately */
 }
-</pre>
+```
 
-<h3 id="Results">Results</h3>
+### Results
 
-<p>{{EmbedLiveSample('Examples')}}</p>
+{{EmbedLiveSample('Examples')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any standard. Apple has <a href="https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/css/property/-webkit-overflow-scrolling">a description in the Safari CSS Reference</a>.</p>
+Not part of any standard. Apple has [a description in the Safari CSS Reference](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/css/property/-webkit-overflow-scrolling).
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="http://css-tricks.com/snippets/css/momentum-scrolling-on-ios-overflow-elements/">CSS-Tricks article with demo</a></li>
- <li><a href="https://www.smashingmagazine.com/2018/08/scroll-bouncing-websites/">Smashing Magazine - describing the effect of scroll bouncing and how it works on different web browsers</a></li>
- <li><a href="https://developer.apple.com/documentation/safari_release_notes/safari_13_release_notes">Safari 13 Release notes</a>: Indicates the addition of support for one-finger accelerated scrolling to all frames and <code>overflow:scroll</code> elements, eliminating the need to set <code>-webkit-overflow-scrolling: touch</code>.</li>
-</ul>
+- [CSS-Tricks article with demo](http://css-tricks.com/snippets/css/momentum-scrolling-on-ios-overflow-elements/)
+- [Smashing Magazine - describing the effect of scroll bouncing and how it works on different web browsers](https://www.smashingmagazine.com/2018/08/scroll-bouncing-websites/)
+- [Safari 13 Release notes](https://developer.apple.com/documentation/safari_release_notes/safari_13_release_notes): Indicates the addition of support for one-finger accelerated scrolling to all frames and `overflow:scroll` elements, eliminating the need to set `-webkit-overflow-scrolling: touch`.

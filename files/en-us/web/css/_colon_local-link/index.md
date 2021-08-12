@@ -1,51 +1,50 @@
 ---
 title: ':local-link'
-slug: 'Web/CSS/:local-link'
+slug: Web/CSS/:local-link
 browser-compat: css.selectors.local-link
 ---
-<p>{{ CSSRef }}</p>
+{{ CSSRef }}
 
-<p>The <strong><code>:local-link</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> represents a link to the same document. Therefore an element that is the source anchor of a hyperlink whose target’s absolute URL matches the element's own document URL.</p>
+The **`:local-link`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents a link to the same document. Therefore an element that is the source anchor of a hyperlink whose target’s absolute URL matches the element's own document URL.
 
-<pre>/* Selects any &lt;a&gt; that links to the current document */
-a:local-link {
-  color: green;
-}
-</pre>
+    /* Selects any <a> that links to the current document */
+    a:local-link {
+      color: green;
+    }
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;a href="#target"&gt;This is a link on the current page.&lt;/a&gt;&lt;br&gt;
-&lt;a href="https://example.com"&gt;This is an external link&lt;/a&gt;&lt;br&gt;
-</pre>
+```html
+<a href="#target">This is a link on the current page.</a><br>
+<a href="https://example.com">This is an external link</a><br>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">a:local-link {
+```css
+a:local-link {
   color: green;
 }
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Examples")}}</p>
+{{EmbedLiveSample("Examples")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>Link-related pseudo-classes: {{ cssxref(":link") }},{{ cssxref(":visited") }}, {{ cssxref(":hover") }}, {{ cssxref(":active") }}</li>
-</ul>
+- Link-related pseudo-classes: {{ cssxref(":link") }},{{ cssxref(":visited") }}, {{ cssxref(":hover") }}, {{ cssxref(":active") }}

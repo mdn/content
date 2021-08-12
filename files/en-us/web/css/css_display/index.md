@@ -8,106 +8,73 @@ tags:
   - Overview
   - Reference
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong>CSS Display</strong> is a module of CSS that defines how the CSS formatting box tree is generated from the document element tree and defines properties controlling it.</p>
+**CSS Display** is a module of CSS that defines how the CSS formatting box tree is generated from the document element tree and defines properties controlling it.
 
-<h2 id="Reference">Reference</h2>
+## Reference
 
-<h3 id="CSS_properties">CSS properties</h3>
+### CSS properties
 
-<ul>
- <li>{{CSSxRef("display")}}</li>
-</ul>
+- {{CSSxRef("display")}}
 
-<h3 id="CSS_data_types">CSS data types</h3>
+### CSS data types
 
-<ul>
- <li>{{CSSxRef("&lt;display-outside&gt;")}}</li>
- <li>{{CSSxRef("&lt;display-inside&gt;")}}</li>
- <li>{{CSSxRef("&lt;display-listitem&gt;")}}</li>
- <li>{{CSSxRef("&lt;display-box&gt;")}}</li>
- <li>{{CSSxRef("&lt;display-internal&gt;")}}</li>
- <li>{{CSSxRef("&lt;display-legacy&gt;")}}</li>
-</ul>
+- {{CSSxRef("&lt;display-outside&gt;")}}
+- {{CSSxRef("&lt;display-inside&gt;")}}
+- {{CSSxRef("&lt;display-listitem&gt;")}}
+- {{CSSxRef("&lt;display-box&gt;")}}
+- {{CSSxRef("&lt;display-internal&gt;")}}
+- {{CSSxRef("&lt;display-legacy&gt;")}}
 
-<h2 id="Guides">Guides</h2>
+## Guides
 
-<ul>
-  <li><a href="/en-US/docs/Web/CSS/display/two-value_syntax_of_display">Adapting to the two-value syntax of display</a></li>
-</ul>
+- [Adapting to the two-value syntax of display](/en-US/docs/Web/CSS/display/two-value_syntax_of_display)
 
-<h3 id="CSS_Flow_Layout_display_block_display_inline">CSS Flow Layout (<code>display: block</code>, <code>display: inline</code>)</h3>
+### CSS Flow Layout (`display: block`, `display: inline`)
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow">Block and Inline Layout in Normal Flow</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Overflow">Flow Layout and Overflow</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Writing_Modes">Flow Layout and Writing Modes</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts">Formatting Contexts Explained</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow">In Flow and Out of Flow</a></li>
-</ul>
+- [Block and Inline Layout in Normal Flow](/en-US/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)
+- [Flow Layout and Overflow](/en-US/docs/Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Overflow)
+- [Flow Layout and Writing Modes](/en-US/docs/Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Writing_Modes)
+- [Formatting Contexts Explained](/en-US/docs/Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts)
+- [In Flow and Out of Flow](/en-US/docs/Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow)
 
-<h3 id="display_flex"><code>display: flex</code></h3>
+### `display: flex`
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Basic concepts of flexbox</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container">Aligning Items in a Flex Container</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax">Controlling Ratios of Flex Items Along the Main Axis</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox">Cross-browser Flexbox mixins</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items">Mastering Wrapping of Flex Items</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items">Ordering Flex Items</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods">Relationship of flexbox to other layout methods</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox">Backwards Compatibility of Flexbox</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox">Typical use cases of Flexbox</a></li>
-</ul>
+- [Basic concepts of flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)
+- [Aligning Items in a Flex Container](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)
+- [Controlling Ratios of Flex Items Along the Main Axis](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)
+- [Cross-browser Flexbox mixins](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox)
+- [Mastering Wrapping of Flex Items](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items)
+- [Ordering Flex Items](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items)
+- [Relationship of flexbox to other layout methods](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods)
+- [Backwards Compatibility of Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox)
+- [Typical use cases of Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox)
 
-<h3 id="display_grid"><code>display: grid</code></h3>
+### `display: grid`
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">Basic Concepts of Grid Layout</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout">Relationship to other layout methods</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid">Line-based placement</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas">Grid template areas</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines">Layout using named grid lines</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout">Auto-placement in grid layout</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">Box alignment in grid layout</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Logical_Values_and_Writing_Modes">Grids, logical values and writing modes</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility">CSS Grid Layout and Accessibility</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement">CSS Grid Layout and Progressive Enhancement</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout">Realizing common layouts using grids</a></li>
-</ul>
+- [Basic Concepts of Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
+- [Relationship to other layout methods](/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)
+- [Line-based placement](/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)
+- [Grid template areas](/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
+- [Layout using named grid lines](/en-US/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines)
+- [Auto-placement in grid layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)
+- [Box alignment in grid layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)
+- [Grids, logical values and writing modes](/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Logical_Values_and_Writing_Modes)
+- [CSS Grid Layout and Accessibility](/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)
+- [CSS Grid Layout and Progressive Enhancement](/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
+- [Realizing common layouts using grids](/en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout)
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Display", "#the-display-properties", "display")}}</td>
-   <td>{{Spec2("CSS3 Display")}}</td>
-   <td>Added <code>run-in</code>, <code>flow</code>, <code>flow-root</code>, <code>contents</code> and multi-keyword values.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS2.1", "visuren.html#display-prop", "display")}}</td>
-   <td>{{Spec2("CSS2.1")}}</td>
-   <td>Added the table model values and <code>inline-block</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS1", "#display", "display")}}</td>
-   <td>{{Spec2("CSS1")}}</td>
-   <td>Initial definition. Basic values: <code>none</code>, <code>block</code>, <code>inline</code> and <code>list-item</code>.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                            | Status                           | Comment                                                                      |
+| ---------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------------------------------- |
+| {{SpecName("CSS3 Display", "#the-display-properties", "display")}} | {{Spec2("CSS3 Display")}} | Added `run-in`, `flow`, `flow-root`, `contents` and multi-keyword values.    |
+| {{SpecName("CSS2.1", "visuren.html#display-prop", "display")}}     | {{Spec2("CSS2.1")}}         | Added the table model values and `inline-block`.                             |
+| {{SpecName("CSS1", "#display", "display")}}                                 | {{Spec2("CSS1")}}         | Initial definition. Basic values: `none`, `block`, `inline` and `list-item`. |
 
-<p>In addition to the CSS Display Specification Level 3, further specifications define the behavior of various values of display.</p>
+In addition to the CSS Display Specification Level 3, further specifications define the behavior of various values of display.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("css.properties.display", 10)}}</p>
+{{Compat("css.properties.display", 10)}}

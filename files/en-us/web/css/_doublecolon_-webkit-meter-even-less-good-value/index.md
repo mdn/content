@@ -1,6 +1,6 @@
 ---
 title: '::-webkit-meter-even-less-good-value'
-slug: 'Web/CSS/::-webkit-meter-even-less-good-value'
+slug: Web/CSS/::-webkit-meter-even-less-good-value
 tags:
   - '-webkit-meter-even-less-good-value'
   - CSS
@@ -10,47 +10,51 @@ tags:
   - Selector
 browser-compat: css.selectors.-webkit-meter-even-less-good-value
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<p>The <strong><code>::-webkit-meter-even-less-good-value</code></strong> gives a red color to a {{htmlelement("meter")}} element when the value and the optimum attributes fall outside the low-high range, but in opposite zones. To illustrate, it applies when <em>value</em> &lt; <em>low</em> &lt; <em>high</em> &lt; <em>optimum</em> or <em>value</em> &gt; <em>high</em> &gt; <em>low</em> &gt; <em>optimum</em>.</p>
+The **`::-webkit-meter-even-less-good-value`** gives a red color to a {{htmlelement("meter")}} element when the value and the optimum attributes fall outside the low-high range, but in opposite zones. To illustrate, it applies when _value_ < _low_ < _high_ < _optimum_ or _value_ > _high_ > _low_ > _optimum_.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">::-webkit-meter-even-less-good-value</pre>
+```css
+::-webkit-meter-even-less-good-value
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any standard.</p>
+Not part of any standard.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;meter min="0" max="10" value="6"&gt;Score out of 10&lt;/meter&gt;</pre>
+```html
+<meter min="0" max="10" value="6">Score out of 10</meter>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">meter::-webkit-meter-even-less-good-value {
+```css
+meter::-webkit-meter-even-less-good-value {
   background: linear-gradient(to bottom, #f77, #d44 45%, #d44 55%, #f77);
   height: 100%;
   box-sizing: border-box;
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{ EmbedLiveSample('Examples', '100%', 50) }}</p>
+{{ EmbedLiveSample('Examples', '100%', 50) }}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<p>The pseudo-elements used by WebKit/Blink to style other parts of a {{htmlelement("meter")}} element are as follows:</p>
+The pseudo-elements used by WebKit/Blink to style other parts of a {{htmlelement("meter")}} element are as follows:
 
-<ul>
- <li>{{cssxref("::-webkit-meter-inner-element")}}</li>
- <li>{{cssxref("::-webkit-meter-bar")}}</li>
- <li>{{cssxref("::-webkit-meter-optimum-value")}}</li>
- <li>{{cssxref("::-webkit-meter-suboptimum-value")}}</li>
-</ul>
+- {{cssxref("::-webkit-meter-inner-element")}}
+- {{cssxref("::-webkit-meter-bar")}}
+- {{cssxref("::-webkit-meter-optimum-value")}}
+- {{cssxref("::-webkit-meter-suboptimum-value")}}

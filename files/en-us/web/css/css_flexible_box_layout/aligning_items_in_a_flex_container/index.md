@@ -14,201 +14,189 @@ tags:
   - justify
   - justify-content
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<p>One of the reasons that flexbox quickly caught the interest of web developers is that it brought proper alignment capabilities to the web for the first time. It enabled proper vertical alignment, so we can at last easily center a box. In this guide, we will take a thorough look at how the alignment and justification properties work in Flexbox.</p>
+One of the reasons that flexbox quickly caught the interest of web developers is that it brought proper alignment capabilities to the web for the first time. It enabled proper vertical alignment, so we can at last easily center a box. In this guide, we will take a thorough look at how the alignment and justification properties work in Flexbox.
 
-<p>To center our box we use the <code>align-items</code> property to align our item on the cross axis, which in this case is the block axis running vertically. We use <code>justify-content</code> to align the item on the main axis, which in this case the inline axis running horizontally.</p>
+To center our box we use the `align-items` property to align our item on the cross axis, which in this case is the block axis running vertically. We use `justify-content` to align the item on the main axis, which in this case the inline axis running horizontally.
 
-<p><img alt="A containing element with another box centered inside it." src="align1.png"></p>
+![A containing element with another box centered inside it.](align1.png)
 
-<p>You can take a look at the code of this example below. Change the size of the container or nested element and the nested element always remains centered.</p>
+You can take a look at the code of this example below. Change the size of the container or nested element and the nested element always remains centered.
 
-<p>{{EmbedGHLiveSample("css-examples/flexbox/alignment/intro.html", '100%', 700)}}</p>
+{{EmbedGHLiveSample("css-examples/flexbox/alignment/intro.html", '100%', 700)}}
 
-<h2 id="Properties_that_control_alignment">Properties that control alignment</h2>
+## Properties that control alignment
 
-<p>The properties we will look at in this guide are as follows.</p>
+The properties we will look at in this guide are as follows.
 
-<ul>
- <li>{{cssxref("justify-content")}} — controls alignment of all items on the main axis.</li>
- <li>{{cssxref("align-items")}} — controls alignment of all items on the cross axis.</li>
- <li>{{cssxref("align-self")}} — controls alignment of an individual flex item on the cross axis.</li>
- <li>{{cssxref("align-content")}} — described in the spec as for “packing flex lines”; controls space between flex lines on the cross axis.</li>
- <li>{{cssxref("gap")}}, {{cssxref("column-gap")}}, and {{cssxref("row-gap")}} — used to create gaps or gutters between flex items.</li>
-</ul>
+- {{cssxref("justify-content")}} — controls alignment of all items on the main axis.
+- {{cssxref("align-items")}} — controls alignment of all items on the cross axis.
+- {{cssxref("align-self")}} — controls alignment of an individual flex item on the cross axis.
+- {{cssxref("align-content")}} — described in the spec as for “packing flex lines”; controls space between flex lines on the cross axis.
+- {{cssxref("gap")}}, {{cssxref("column-gap")}}, and {{cssxref("row-gap")}} — used to create gaps or gutters between flex items.
 
-<p>We will also discover how auto margins can be used for alignment in flexbox.</p>
+We will also discover how auto margins can be used for alignment in flexbox.
 
-<h2 id="The_Cross_Axis">The Cross Axis</h2>
+## The Cross Axis
 
-<p>The <code>align-items</code> and <code>align-self</code> properties control alignment of our flex items on the cross axis, down the columns if <code>flex-direction</code> is <code>row</code> and along the row if <code>flex-direction</code> is <code>column</code>.</p>
+The `align-items` and `align-self` properties control alignment of our flex items on the cross axis, down the columns if `flex-direction` is `row` and along the row if `flex-direction` is `column`.
 
-<p>We are making use of cross-axis alignment in the most simple flex example. If we add <code>display: flex</code> to a container, the child items all become flex items arranged in a row. They will all stretch to be as tall as the tallest item, as that item is defining the height of the items on the cross axis. If your flex container has a height set, then the items will stretch to that height, regardless of how much content is in the item.</p>
+We are making use of cross-axis alignment in the most simple flex example. If we add `display: flex` to a container, the child items all become flex items arranged in a row. They will all stretch to be as tall as the tallest item, as that item is defining the height of the items on the cross axis. If your flex container has a height set, then the items will stretch to that height, regardless of how much content is in the item.
 
-<p><img alt="Three items, one with additional text causing it to be taller than the others." src="align2.png"></p>
+![Three items, one with additional text causing it to be taller than the others.](align2.png)
 
-<p><img alt="Three items stretched to 200 pixels tall" src="align3.png"></p>
+![Three items stretched to 200 pixels tall](align3.png)
 
-<p>The reason the items become the same height is that the initial value of <code>align-items</code>, the property that controls alignment on the cross axis, is set to <code>stretch</code>.</p>
+The reason the items become the same height is that the initial value of `align-items`, the property that controls alignment on the cross axis, is set to `stretch`.
 
-<p>We can use other values to control how the items align:</p>
+We can use other values to control how the items align:
 
-<ul>
- <li><code>align-items: flex-start</code></li>
- <li><code>align-items: flex-end</code></li>
- <li><code>align-items: center</code></li>
- <li><code>align-items: stretch</code></li>
- <li><code>align-items: baseline</code></li>
-</ul>
+- `align-items: flex-start`
+- `align-items: flex-end`
+- `align-items: center`
+- `align-items: stretch`
+- `align-items: baseline`
 
-<p>In the live example below, the value of <code>align-items</code> is <code>stretch</code>. Try the other values and see how all of the items align against each other in the flex container.</p>
+In the live example below, the value of `align-items` is `stretch`. Try the other values and see how all of the items align against each other in the flex container.
 
-<p>{{EmbedGHLiveSample("css-examples/flexbox/alignment/align-items.html", '100%', 520)}} </p>
+{{EmbedGHLiveSample("css-examples/flexbox/alignment/align-items.html", '100%', 520)}}
 
-<h3 id="Aligning_one_item_with_align-self">Aligning one item with <code>align-self</code></h3>
+### Aligning one item with `align-self`
 
-<p>The <code>align-items</code> property sets the <code>align-self</code> property on all of the flex items as a group. This means you can explicitly declare the <code>align-self</code> property to target a single item. The <code>align-self</code> property accepts all of the same values as <code>align-items</code> plus a value of <code>auto</code>, which will reset the value to that which is defined on the flex container.</p>
+The `align-items` property sets the `align-self` property on all of the flex items as a group. This means you can explicitly declare the `align-self` property to target a single item. The `align-self` property accepts all of the same values as `align-items` plus a value of `auto`, which will reset the value to that which is defined on the flex container.
 
-<p>In this next live example, the flex container has <code>align-items: flex-start</code>, which means the items are all aligned to the start of the cross axis. I have targeted the first item using a <code>first-child</code> selector and set that item to <code>align-self: stretch</code>; another item has been selected using its class of <code>selected</code> and given <code>align-self: center</code>. You can change the value of <code>align-items</code> or change the values of <code>align-self</code> on the individual items to see how this works.</p>
+In this next live example, the flex container has `align-items: flex-start`, which means the items are all aligned to the start of the cross axis. I have targeted the first item using a `first-child` selector and set that item to `align-self: stretch`; another item has been selected using its class of `selected` and given `align-self: center`. You can change the value of `align-items` or change the values of `align-self` on the individual items to see how this works.
 
-<p>{{EmbedGHLiveSample("css-examples/flexbox/alignment/align-self.html", '100%', 650)}}</p>
+{{EmbedGHLiveSample("css-examples/flexbox/alignment/align-self.html", '100%', 650)}}
 
-<h3 id="Changing_the_main_axis">Changing the main axis</h3>
+### Changing the main axis
 
-<p>So far we have looked at the behavior when our <code>flex-direction</code> is <code>row</code>, and while working in a language written top to bottom. This means that the main axis runs along the row horizontally, and our cross axis alignment moves the items up and down.</p>
+So far we have looked at the behavior when our `flex-direction` is `row`, and while working in a language written top to bottom. This means that the main axis runs along the row horizontally, and our cross axis alignment moves the items up and down.
 
-<p><img alt="Three items, the first aligned to flex-start, second to center, third to flex-end. Aligning on the vertical axis." src="align4.png"></p>
+![Three items, the first aligned to flex-start, second to center, third to flex-end. Aligning on the vertical axis.](align4.png)
 
-<p>If we change our <code>flex-direction</code> to column, <code>align-items</code> and <code>align-self</code> will align the items to the left and right.</p>
+If we change our `flex-direction` to column, `align-items` and `align-self` will align the items to the left and right.
 
-<p><img alt="Three items, the first aligned to flex-start, second to center, third to flex-end. Aligning on the horizontal axis." src="align5.png"></p>
+![Three items, the first aligned to flex-start, second to center, third to flex-end. Aligning on the horizontal axis.](align5.png)
 
-<p>You can try this out in the example below, which has a flex container with <code>flex-direction: column</code> yet otherwise is exactly the same as the previous example.</p>
+You can try this out in the example below, which has a flex container with `flex-direction: column` yet otherwise is exactly the same as the previous example.
 
-<p>{{EmbedGHLiveSample("css-examples/flexbox/alignment/align-self-column.html", '100%', 730)}} </p>
+{{EmbedGHLiveSample("css-examples/flexbox/alignment/align-self-column.html", '100%', 730)}}
 
-<h2 id="Aligning_content_on_the_cross_axis_—_the_align-content_property">Aligning content on the cross axis — the align-content property</h2>
+## Aligning content on the cross axis — the align-content property
 
-<p>So far we have been aligning the items, or an individual item inside the area defined by the flex-container. If you have a wrapped multiple-line flex container then you might also want to use the <code>align-content</code> property to control the distribution of space between the rows. In the specification this is described as <a href="https://drafts.csswg.org/css-flexbox/#align-content-property">packing flex lines</a>.</p>
+So far we have been aligning the items, or an individual item inside the area defined by the flex-container. If you have a wrapped multiple-line flex container then you might also want to use the `align-content` property to control the distribution of space between the rows. In the specification this is described as [packing flex lines](https://drafts.csswg.org/css-flexbox/#align-content-property).
 
-<p>For <code>align-content</code> to work you need more height in your flex container than is required to display the items. It then works on all the items as a set, and dictates what happens with that free space, and the alignment of the entire set of items within it.</p>
+For `align-content` to work you need more height in your flex container than is required to display the items. It then works on all the items as a set, and dictates what happens with that free space, and the alignment of the entire set of items within it.
 
-<p>The <code>align-content</code> property takes the following values:</p>
+The `align-content` property takes the following values:
 
-<ul>
- <li><code>align-content: flex-start</code></li>
- <li><code>align-content: flex-end</code></li>
- <li><code>align-content: center</code></li>
- <li><code>align-content: space-between</code></li>
- <li><code>align-content: space-around</code></li>
- <li><code>align-content: stretch</code></li>
- <li><code>align-content: space-evenly</code> (not defined in the Flexbox specification)</li>
-</ul>
+- `align-content: flex-start`
+- `align-content: flex-end`
+- `align-content: center`
+- `align-content: space-between`
+- `align-content: space-around`
+- `align-content: stretch`
+- `align-content: space-evenly` (not defined in the Flexbox specification)
 
-<p>In the live example below, the flex container has a height of 400 pixels, which is more than needed to display our items. The value of <code>align-content</code> is <code>space-between</code>, which means that the available space is shared out <em>between</em> the flex lines, which are placed flush with the start and end of the container on the cross axis.</p>
+In the live example below, the flex container has a height of 400 pixels, which is more than needed to display our items. The value of `align-content` is `space-between`, which means that the available space is shared out _between_ the flex lines, which are placed flush with the start and end of the container on the cross axis.
 
-<p>Try out the other values to see how the <code>align-content</code> property works.</p>
+Try out the other values to see how the `align-content` property works.
 
-<p>{{EmbedGHLiveSample("css-examples/flexbox/alignment/align-content.html", '100%', 850)}} </p>
+{{EmbedGHLiveSample("css-examples/flexbox/alignment/align-content.html", '100%', 850)}}
 
-<p>Once again we can switch our <code>flex-direction</code> to <code>column</code> in order to see how this property behaves when we are working by column. As before, we need enough space in the cross axis to have some free space after displaying all of the items.</p>
+Once again we can switch our `flex-direction` to `column` in order to see how this property behaves when we are working by column. As before, we need enough space in the cross axis to have some free space after displaying all of the items.
 
-<p>{{EmbedGHLiveSample("css-examples/flexbox/alignment/align-content-column.html", '100%', 860)}} </p>
+{{EmbedGHLiveSample("css-examples/flexbox/alignment/align-content-column.html", '100%', 860)}}
 
-<div class="note">
-<p><strong>Note:</strong> The value <code>space-evenly</code> is not defined in the flexbox specification and is a later addition to the Box Alignment specification. Browser support for this value is not as good as that of the values defined in the flexbox spec.</p>
-</div>
+> **Note:** The value `space-evenly` is not defined in the flexbox specification and is a later addition to the Box Alignment specification. Browser support for this value is not as good as that of the values defined in the flexbox spec.
 
-<p>See the <a href="/en-US/docs/Web/CSS/justify-content">documentation for <code>justify-content</code> on MDN</a> for more details on all of these values and browser support.</p>
+See the [documentation for `justify-content` on MDN](/en-US/docs/Web/CSS/justify-content) for more details on all of these values and browser support.
 
-<h2 id="Aligning_content_on_the_main_axis">Aligning content on the main axis</h2>
+## Aligning content on the main axis
 
-<p>Now that we have seen how alignment works on the cross axis, we can take a look at the main axis. Here we only have one property available to us — <code>justify-content</code>. This is because we are only dealing with items as a group on the main axis. With <code>justify-content</code> we control what happens with available space, should there be more space than is needed to display the items.</p>
+Now that we have seen how alignment works on the cross axis, we can take a look at the main axis. Here we only have one property available to us — `justify-content`. This is because we are only dealing with items as a group on the main axis. With `justify-content` we control what happens with available space, should there be more space than is needed to display the items.
 
-<p>In our initial example with <code>display: flex</code> on the container, the items display as a row and all line up at the start of the container. This is due to the initial value of <code>justify-content</code> being <code>flex-start</code>. Any available space is placed at the end of the items.</p>
+In our initial example with `display: flex` on the container, the items display as a row and all line up at the start of the container. This is due to the initial value of `justify-content` being `flex-start`. Any available space is placed at the end of the items.
 
-<p><img alt="Three items, each 100 pixels wide in a 500 pixel container. The available space is at the end of the items." src="align6.png"></p>
+![Three items, each 100 pixels wide in a 500 pixel container. The available space is at the end of the items.](align6.png)
 
-<p>The <code>justify-content</code> property accepts the same values as <code>align-content</code>.</p>
+The `justify-content` property accepts the same values as `align-content`.
 
-<ul>
- <li><code>justify-content: flex-start</code></li>
- <li><code>justify-content: flex-end</code></li>
- <li><code>justify-content: center</code></li>
- <li><code>justify-content: space-between</code></li>
- <li><code>justify-content: space-around</code></li>
- <li><code>justify-content: space-evenly</code> (not defined in the Flexbox specification)</li>
-</ul>
+- `justify-content: flex-start`
+- `justify-content: flex-end`
+- `justify-content: center`
+- `justify-content: space-between`
+- `justify-content: space-around`
+- `justify-content: space-evenly` (not defined in the Flexbox specification)
 
-<p>In the example below, the value of <code>justify-content</code> is <code>space-between</code>. The available space after displaying the items is distributed between the items. The left and right item line up flush with the start and end.</p>
+In the example below, the value of `justify-content` is `space-between`. The available space after displaying the items is distributed between the items. The left and right item line up flush with the start and end.
 
-<p>{{EmbedGHLiveSample("css-examples/flexbox/alignment/justify-content.html", '100%', 480)}} </p>
+{{EmbedGHLiveSample("css-examples/flexbox/alignment/justify-content.html", '100%', 480)}}
 
-<p>If the main axis is in the block direction because <code>flex-direction</code> is set to <code>column</code>, then <code>justify-content</code> will distribute space between items in that dimension as long as there is space in the flex container to distribute.</p>
+If the main axis is in the block direction because `flex-direction` is set to `column`, then `justify-content` will distribute space between items in that dimension as long as there is space in the flex container to distribute.
 
-<p>{{EmbedGHLiveSample("css-examples/flexbox/alignment/justify-content-column.html", '100%', 880)}} </p>
+{{EmbedGHLiveSample("css-examples/flexbox/alignment/justify-content-column.html", '100%', 880)}}
 
-<h3 id="Alignment_and_Writing_Modes">Alignment and Writing Modes</h3>
+### Alignment and Writing Modes
 
-<p>Remember that with all of these alignment methods, the values of <code>flex-start</code> and <code>flex-end</code> are writing mode-aware. If the value of <code>justify-content</code> is <code>start</code> and the writing mode is left-to-right as in English, the items will line up starting at the left side of the container.</p>
+Remember that with all of these alignment methods, the values of `flex-start` and `flex-end` are writing mode-aware. If the value of `justify-content` is `start` and the writing mode is left-to-right as in English, the items will line up starting at the left side of the container.
 
-<p><img alt="Three items lined up on the left" src="basics5.png"></p>
+![Three items lined up on the left](basics5.png)
 
-<p>However if the writing mode is right-to-left as in Arabic, the items will line up starting at the right side of the container.</p>
+However if the writing mode is right-to-left as in Arabic, the items will line up starting at the right side of the container.
 
-<p><img alt="Three items lined up from the right" src="basics6.png"></p>
+![Three items lined up from the right](basics6.png)
 
-<p>The live example below has the <code>direction</code> property set to <code>rtl</code> to force a right-to-left flow for our items. You can remove this, or change the values of <code>justify-content</code> to see how flexbox behaves when the start of the inline direction is on the right.</p>
+The live example below has the `direction` property set to `rtl` to force a right-to-left flow for our items. You can remove this, or change the values of `justify-content` to see how flexbox behaves when the start of the inline direction is on the right.
 
-<p>{{EmbedGHLiveSample("css-examples/flexbox/alignment/justify-content-writing-mode.html", '100%', 440)}} </p>
+{{EmbedGHLiveSample("css-examples/flexbox/alignment/justify-content-writing-mode.html", '100%', 440)}}
 
-<h2 id="Alignment_and_flex-direction">Alignment and flex-direction</h2>
+## Alignment and flex-direction
 
-<p>The start line will also change if you change the <code>flex-direction</code> property — for example using <code>row-reverse</code> instead of <code>row</code>.</p>
+The start line will also change if you change the `flex-direction` property — for example using `row-reverse` instead of `row`.
 
-<p>In this next example I have items laid out with <code>flex-direction: row-reverse</code> and <code>justify-content: flex-end</code>. In a left to right language the items all line up on the left. Try changing <code>flex-direction: row-reverse</code> to <code>flex-direction: row</code>. You will see that the items now move to the right hand side.</p>
+In this next example I have items laid out with `flex-direction: row-reverse` and `justify-content: flex-end`. In a left to right language the items all line up on the left. Try changing `flex-direction: row-reverse` to `flex-direction: row`. You will see that the items now move to the right hand side.
 
-<p>{{EmbedGHLiveSample("css-examples/flexbox/alignment/justify-content-reverse.html", '100%', 440)}} </p>
+{{EmbedGHLiveSample("css-examples/flexbox/alignment/justify-content-reverse.html", '100%', 440)}}
 
-<p>While this may all seem a little confusing, the rule to remember is that unless you do something to change it, flex items lay themselves out in the direction that words are laid out in the language of your document along the inline, row axis. <code>flex-start</code> will be where the start of a sentence of text would begin.</p>
+While this may all seem a little confusing, the rule to remember is that unless you do something to change it, flex items lay themselves out in the direction that words are laid out in the language of your document along the inline, row axis. `flex-start` will be where the start of a sentence of text would begin.
 
-<p><img alt="Diagram showing start on the left and end on the right." src="align8.png"></p>
+![Diagram showing start on the left and end on the right.](align8.png)
 
-<p>You can switch them to display in the block direction for the language of your document by selecting <code>flex-direction: column</code>. Then <code>flex-start</code> will then be where the top of your first paragraph of text would start.</p>
+You can switch them to display in the block direction for the language of your document by selecting `flex-direction: column`. Then `flex-start` will then be where the top of your first paragraph of text would start.
 
-<p><img alt="Diagram showing start at the top and end at the bottom." src="align10.png"></p>
+![Diagram showing start at the top and end at the bottom.](align10.png)
 
-<p>If you change <code>flex-direction</code> to one of the reverse values, then they will lay themselves out from the end axis and in the reverse order to the way words are written in the language of your document. <code>flex-start</code> will then change to the end of that axis — so to the location where your lines would wrap if working in rows, or at the end of your last paragraph of text in the block direction.</p>
+If you change `flex-direction` to one of the reverse values, then they will lay themselves out from the end axis and in the reverse order to the way words are written in the language of your document. `flex-start` will then change to the end of that axis — so to the location where your lines would wrap if working in rows, or at the end of your last paragraph of text in the block direction.
 
-<p><img alt="Diagram showing start on the right and end on the left." src="align9.png"></p>
+![Diagram showing start on the right and end on the left.](align9.png)
 
-<p><img alt="Diagram showing end at the top and start at the bottom" src="align11.png"></p>
+![Diagram showing end at the top and start at the bottom](align11.png)
 
-<h2 id="Using_auto_margins_for_main_axis_alignment">Using auto margins for main axis alignment</h2>
+## Using auto margins for main axis alignment
 
-<p>We don’t have a <code>justify-items</code> or <code>justify-self</code> property available to us on the main axis as our items are treated as a group on that axis. However it is possible to do some individual alignment in order to separate an item or a group of items from others by using auto margins along with flexbox.</p>
+We don’t have a `justify-items` or `justify-self` property available to us on the main axis as our items are treated as a group on that axis. However it is possible to do some individual alignment in order to separate an item or a group of items from others by using auto margins along with flexbox.
 
-<p>A common pattern is a navigation bar where some key items are aligned to the right, with the main group on the left. You might think that this should be a use case for a <code>justify-self</code> property, however consider the image below. I have three items on one side and two on the other. If I were able to use <code>justify-self</code> on item <em>d</em>, it would also change the alignment of item <em>e</em> that follows, which may or may not be my intention.</p>
+A common pattern is a navigation bar where some key items are aligned to the right, with the main group on the left. You might think that this should be a use case for a `justify-self` property, however consider the image below. I have three items on one side and two on the other. If I were able to use `justify-self` on item _d_, it would also change the alignment of item _e_ that follows, which may or may not be my intention.
 
-<p><img alt="Five items, in two groups. Three on the left and two on the right." src="align7.png"></p>
+![Five items, in two groups. Three on the left and two on the right.](align7.png)
 
-<p>Instead we can target item 4 and separate it from the first three items by giving it a <code>margin-left</code> value of <code>auto</code>. Auto margins will take up all of the space that they can in their axis — it is how centering a block with margin auto left and right works. Each side tries to take as much space as it can, and so the block is pushed into the middle.</p>
+Instead we can target item 4 and separate it from the first three items by giving it a `margin-left` value of `auto`. Auto margins will take up all of the space that they can in their axis — it is how centering a block with margin auto left and right works. Each side tries to take as much space as it can, and so the block is pushed into the middle.
 
-<p>In this live example, I have flex items arranged into a row with the basic flex values, and the class <code>push</code> has <code>margin-left: auto</code>. You can try removing this, or adding the class to another item to see how it works.</p>
+In this live example, I have flex items arranged into a row with the basic flex values, and the class `push` has `margin-left: auto`. You can try removing this, or adding the class to another item to see how it works.
 
-<p>{{EmbedGHLiveSample("css-examples/flexbox/alignment/auto-margins.html", '100%', 470)}} </p>
+{{EmbedGHLiveSample("css-examples/flexbox/alignment/auto-margins.html", '100%', 470)}}
 
-<h2 id="Creating_gaps_between_items">Creating gaps between items</h2>
+## Creating gaps between items
 
-<p>To create a gap between flex items, use the {{cssxref("gap")}}, {{cssxref("column-gap")}}, and {{cssxref("row-gap")}} properties. The {{cssxref("column-gap")}} property creates gaps between items on the main axis. The {{cssxref("row-gap")}} property creates gaps between flex lines, when you have {{cssxref("flex-wrap")}}</code> set to <code>wrap</code>. The {{cssxref("gap")}} property is a shorthand that sets both together.</p>
+To create a gap between flex items, use the {{cssxref("gap")}}, {{cssxref("column-gap")}}, and {{cssxref("row-gap")}} properties. The {{cssxref("column-gap")}} property creates gaps between items on the main axis. The {{cssxref("row-gap")}} property creates gaps between flex lines, when you have {{cssxref("flex-wrap")}} set to `wrap`. The {{cssxref("gap")}} property is a shorthand that sets both together.
 
-<p>{{EmbedGHLiveSample("css-examples/box-alignment/flexbox/gap.html", '100%', 700)}}</p>
+{{EmbedGHLiveSample("css-examples/box-alignment/flexbox/gap.html", '100%', 700)}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Box_Alignment">Box Alignment</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox">Box Alignment in Flexbox</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Grid_Layout">Box Alignment in Grid Layout</a></li>
-</ul>
+- [Box Alignment](/en-US/docs/Web/CSS/CSS_Box_Alignment)
+- [Box Alignment in Flexbox](/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox)
+- [Box Alignment in Grid Layout](/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Grid_Layout)

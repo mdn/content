@@ -12,94 +12,102 @@ tags:
   - Web
 browser-compat: css.selectors.scope
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>:scope</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> represents elements that are a reference point for selectors to match against.</p>
+The **`:scope`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents elements that are a reference point for selectors to match against.
 
-<pre class="brush: css">/* Selects a scoped element */
+```css
+/* Selects a scoped element */
 :scope {
   background-color: lime;
-}</pre>
+}
+```
 
-<p>Currently, when used in a stylesheet, <code>:scope</code> is the same as {{cssxref(":root")}}, since there is not at this time a way to explicitly establish a scoped element. When used from a DOM API such as {{domxref("Element.querySelector", "querySelector()")}}, {{domxref("Element.querySelectorAll", "querySelectorAll()")}}, {{domxref("Element.matches", "matches()")}}, or {{domxref("Element.closest()")}}, <code>:scope</code> matches the element on which the method was called.</p>
+Currently, when used in a stylesheet, `:scope` is the same as {{cssxref(":root")}}, since there is not at this time a way to explicitly establish a scoped element. When used from a DOM API such as {{domxref("Element.querySelector", "querySelector()")}}, {{domxref("Element.querySelectorAll", "querySelectorAll()")}}, {{domxref("Element.matches", "matches()")}}, or {{domxref("Element.closest()")}}, `:scope` matches the element on which the method was called.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Identity_match">Identity match</h3>
+### Identity match
 
-<p>In this simple example, we demonstrate that using the <code>:scope</code> pseudo-class from the {{domxref("Element.matches()")}} method matches the element on which it's called.</p>
+In this simple example, we demonstrate that using the `:scope` pseudo-class from the {{domxref("Element.matches()")}} method matches the element on which it's called.
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">let paragraph = document.getElementById("para");
+```js
+let paragraph = document.getElementById("para");
 let output = document.getElementById("output");
 
 if (paragraph.matches(":scope")) {
   output.innerText = "Yep, the element is its own scope as expected!";
-}</pre>
+}
+```
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p id="para"&gt;
+```html
+<p id="para">
   This is a paragraph. It is not an interesting paragraph. Sorry about that.
-&lt;/p&gt;
-&lt;p id="output"&gt;&lt;/p&gt;</pre>
+</p>
+<p id="output"></p>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<div>{{ EmbedLiveSample('Identity_match') }}</div>
+{{ EmbedLiveSample('Identity_match') }}
 
-<h3 id="Direct_children">Direct children</h3>
+### Direct children
 
-<p>A situation where the <code>:scope</code> pseudo-class prove to be useful is when you need to get direct descendant of an already retrieved {{domxref("Element")}}.</p>
+A situation where the `:scope` pseudo-class prove to be useful is when you need to get direct descendant of an already retrieved {{domxref("Element")}}.
 
-<h4 id="JavaScript_2">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">var context = document.getElementById('context');
-var selected = context.querySelectorAll(':scope &gt; div');
+```js
+var context = document.getElementById('context');
+var selected = context.querySelectorAll(':scope > div');
 
 document.getElementById('results').innerHTML = Array.prototype.map.call(selected, function (element) {
     return '#' + element.getAttribute('id');
-}).join(', ');</pre>
+}).join(', ');
+```
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div id="context"&gt;
-    &lt;div id="element-1"&gt;
-        &lt;div id="element-1.1"&gt;&lt;/div&gt;
-        &lt;div id="element-1.2"&gt;&lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div id="element-2"&gt;
-        &lt;div id="element-2.1"&gt;&lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;
+```html
+<div id="context">
+    <div id="element-1">
+        <div id="element-1.1"></div>
+        <div id="element-1.2"></div>
+    </div>
+    <div id="element-2">
+        <div id="element-2.1"></div>
+    </div>
+</div>
+<p>
     Selected elements ids :
-    &lt;span id="results"&gt;&lt;/span&gt;
-&lt;/p&gt;</pre>
+    <span id="results"></span>
+</p>
+```
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Direct_children') }}</p>
+{{ EmbedLiveSample('Direct_children') }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The {{cssxref(":root")}} <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a></li>
- <li><a href="/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors">Locating DOM elements using selectors</a></li>
- <li>{{domxref("Element.querySelector()")}} and {{domxref("Element.querySelectorAll()")}}</li>
- <li>{{domxref("Document.querySelector()")}} and {{domxref("Document.querySelectorAll()")}}</li>
- <li>{{domxref("DocumentFragment.querySelector()")}} and {{domxref("DocumentFragment.querySelectorAll()")}}</li>
-</ul>
+- The {{cssxref(":root")}} [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes)
+- [Locating DOM elements using selectors](/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
+- {{domxref("Element.querySelector()")}} and {{domxref("Element.querySelectorAll()")}}
+- {{domxref("Document.querySelector()")}} and {{domxref("Document.querySelectorAll()")}}
+- {{domxref("DocumentFragment.querySelector()")}} and {{domxref("DocumentFragment.querySelectorAll()")}}

@@ -9,60 +9,62 @@ tags:
   - Selector
 browser-compat: css.selectors.grammar-error
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p>The <strong><code>::grammar-error</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-element</a> represents a text segment which the {{glossary("user agent")}} has flagged as grammatically incorrect.</p>
+The **`::grammar-error`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents a text segment which the {{glossary("user agent")}} has flagged as grammatically incorrect.
 
-<h2 id="Allowable_properties">Allowable properties</h2>
+## Allowable properties
 
-<p>Only a small subset of CSS properties can be used in a rule with <code>::grammar-error</code> in its selector:</p>
+Only a small subset of CSS properties can be used in a rule with `::grammar-error` in its selector:
 
-<ul>
- <li>{{cssxref("color")}}</li>
- <li>{{cssxref("background-color")}}</li>
- <li>{{cssxref("cursor")}}</li>
- <li>{{cssxref("caret-color")}}</li>
- <li>{{cssxref("outline")}} and its longhands</li>
- <li>{{cssxref("text-decoration")}} and its associated properties</li>
- <li>{{cssxref("text-emphasis-color")}}</li>
- <li>{{cssxref("text-shadow")}}</li>
-</ul>
+- {{cssxref("color")}}
+- {{cssxref("background-color")}}
+- {{cssxref("cursor")}}
+- {{cssxref("caret-color")}}
+- {{cssxref("outline")}} and its longhands
+- {{cssxref("text-decoration")}} and its associated properties
+- {{cssxref("text-emphasis-color")}}
+- {{cssxref("text-shadow")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">::grammar-error</pre>
+```css
+::grammar-error
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Simple_document_grammar_check">Simple document grammar check</h3>
+### Simple document grammar check
 
-<p>In this example, eventual supporting browsers should highlight any flagged grammatical errors with the styles shown.</p>
+In this example, eventual supporting browsers should highlight any flagged grammatical errors with the styles shown.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;My friends is coming to the party tonight.&lt;/p&gt;</pre>
+```html
+<p>My friends is coming to the party tonight.</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">::grammar-error  {
+```css
+::grammar-error  {
   text-decoration: underline red;
   color: red;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Simple_document_grammar_check', '100%', 60)}}</p>
+{{EmbedLiveSample('Simple_document_grammar_check', '100%', 60)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("::spelling-error")}}</li>
-</ul>
+- {{cssxref("::spelling-error")}}

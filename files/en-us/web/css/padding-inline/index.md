@@ -3,30 +3,29 @@ title: padding-inline
 slug: Web/CSS/padding-inline
 tags:
   - CSS
-  - 'recipe:css-shorthand-property'
+  - recipe:css-shorthand-property
 browser-compat: css.properties.padding-inline
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>padding-inline</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand property</a> defines the logical inline start and end padding of an element, which maps to physical padding properties depending on the element's writing mode, directionality, and text orientation.</p>
+The **`padding-inline`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) defines the logical inline start and end padding of an element, which maps to physical padding properties depending on the element's writing mode, directionality, and text orientation.
 
-<h2 id="Constituent_properties">Constituent properties</h2>
+## Constituent properties
 
-<p>This property is a shorthand for the following CSS properties:</p>
+This property is a shorthand for the following CSS properties:
 
-<ul>
-  <li><a href="/en-US/docs/Web/CSS/padding-inline-end"><code>padding-inline-end</code></a></li>
-  <li><a href="/en-US/docs/Web/CSS/padding-inline-start"><code>padding-inline-start</code></a></li>
- </ul>
+- [`padding-inline-end`](/en-US/docs/Web/CSS/padding-inline-end)
+- [`padding-inline-start`](/en-US/docs/Web/CSS/padding-inline-start)
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">/* &lt;length&gt; values */
+```css
+/* <length> values */
 padding-inline: 10px 20px;  /* An absolute length */
 padding-inline: 1em 2em;   /* relative to the text size */
 padding-inline: 10px; /* sets both start and end values */
 
-/* &lt;percentage&gt; values */
+/* <percentage> values */
 padding-inline: 5% 2%; /* relative to the nearest block container's width */
 
 /* Global values */
@@ -34,45 +33,45 @@ padding-inline: inherit;
 padding-inline: initial;
 padding-inline: revert;
 padding-inline: unset;
-</pre>
+```
 
-<p>The <code>padding-inline</code> property may be specified with one or two values. If one value is given, it is used as the value for both {{cssxref("padding-inline-start")}} and {{cssxref("padding-inline-end")}}. If two values are given, the first is used for {{cssxref("padding-inline-start")}} and the second for {{cssxref("padding-inline-end")}}.</p>
+The `padding-inline` property may be specified with one or two values. If one value is given, it is used as the value for both {{cssxref("padding-inline-start")}} and {{cssxref("padding-inline-end")}}. If two values are given, the first is used for {{cssxref("padding-inline-start")}} and the second for {{cssxref("padding-inline-end")}}.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
-  <dt>{{cssxref("&lt;length&gt;")}}</dt>
-  <dd>The size of the padding as a fixed value. Must be nonnegative.</dd>
-  <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
-  <dd>The size of the padding as a percentage, relative to the <em>inline-size</em> of the containing block. Must be nonnegative.</dd>
-</dl>
+- {{cssxref("&lt;length&gt;")}}
+  - : The size of the padding as a fixed value. Must be nonnegative.
+- {{cssxref("&lt;percentage&gt;")}}
+  - : The size of the padding as a percentage, relative to the _inline-size_ of the containing block. Must be nonnegative.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Values for this property correspond to the {{cssxref("padding-top")}} and {{cssxref("padding-bottom")}}, or {{cssxref("padding-right")}}, and {{cssxref("padding-left")}} property depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.</p>
+Values for this property correspond to the {{cssxref("padding-top")}} and {{cssxref("padding-bottom")}}, or {{cssxref("padding-right")}}, and {{cssxref("padding-left")}} property depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Setting_inline_padding_for_vertical_text">Setting inline padding for vertical text</h3>
+### Setting inline padding for vertical text
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;p class="exampleText"&gt;Example text&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div>
+  <p class="exampleText">Example text</p>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   background-color: yellow;
   width: 120px;
   height: 120px;
@@ -82,23 +81,22 @@ padding-inline: unset;
   writing-mode: vertical-rl;
   padding-inline: 20px 40px;
   background-color: #c8c800;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Setting_inline_padding_for_vertical_text", 140, 140)}}</p>
+{{EmbedLiveSample("Setting_inline_padding_for_vertical_text", 140, 140)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The mapped physical properties: {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, and {{cssxref("padding-left")}}</li>
- <li>{{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}</li>
-</ul>
+- The mapped physical properties: {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, and {{cssxref("padding-left")}}
+- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

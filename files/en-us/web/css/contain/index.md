@@ -11,28 +11,25 @@ tags:
   - Reference
   - Style
   - Web
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.contain
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>contain</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property allows an author to indicate that an element and its contents are, as much as possible, <em>independent</em> of the rest of the document tree. This allows the browser to recalculate layout, style, paint, size, or any combination of them for a limited area of the DOM and not the entire page, leading to obvious performance benefits.</p>
+The **`contain`** [CSS](/en-US/docs/Web/CSS) property allows an author to indicate that an element and its contents are, as much as possible, _independent_ of the rest of the document tree. This allows the browser to recalculate layout, style, paint, size, or any combination of them for a limited area of the DOM and not the entire page, leading to obvious performance benefits.
 
-<p>This property is useful on pages that contain a lot of widgets that are all independent, as it can be used to prevent each widget's internals from having side effects outside of the widget's bounding-box.</p>
+This property is useful on pages that contain a lot of widgets that are all independent, as it can be used to prevent each widget's internals from having side effects outside of the widget's bounding-box.
 
-<div class="notecard note">
-<p><strong>Note:</strong> If applied (with value: <code>paint</code>, <code>strict</code> or <code>content</code>), this property creates:</p>
+> **Note:** If applied (with value: `paint`, `strict` or `content`), this property creates:
+>
+> 1.  A new [containing block](/en-US/docs/Web/CSS/Containing_block) (for the descendants whose {{cssxref("position")}} property is `absolute` or `fixed`).
+> 2.  A new [stacking context](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context).
+> 3.  A new [block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context).
 
-<ol>
- <li>A new <a href="/en-US/docs/Web/CSS/Containing_block">containing block</a> (for the descendants whose {{cssxref("position")}} property is <code>absolute</code> or <code>fixed</code>).</li>
- <li>A new <a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context">stacking context</a>.</li>
- <li>A new <a href="/en-US/docs/Web/Guide/CSS/Block_formatting_context">block formatting context</a>.</li>
-</ol>
-</div>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush: css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 contain: none;
 contain: strict;
 contain: content;
@@ -49,120 +46,128 @@ contain: size layout paint;
 contain: inherit;
 contain: initial;
 contain: revert;
-contain: unset;</pre>
+contain: unset;
+```
 
-<p>The <code>contain</code> property is specified as either one of the following:</p>
+The `contain` property is specified as either one of the following:
 
-<ul>
- <li>Using a single <code>none</code>, <code>strict</code>, or <code>content</code> keyword.</li>
- <li>Using one or more of the <code>size</code>, <code>layout</code>, <code>style</code>, and <code>paint</code> keywords in any order.</li>
-</ul>
+- Using a single `none`, `strict`, or `content` keyword.
+- Using one or more of the `size`, `layout`, `style`, and `paint` keywords in any order.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>none</code></dt>
- <dd>Indicates the element renders as normal, with no containment applied.</dd>
- <dt><code>strict</code></dt>
- <dd>Indicates that all containment rules except <code>style</code> are applied to the element. This is equivalent to <code>contain: size layout paint</code>.</dd>
- <dt><code>content</code></dt>
- <dd>Indicates that all containment rules except <code>size</code> and <code>style</code> are applied to the element. This is equivalent to <code>contain: layout paint</code>.</dd>
- <dt><code>size</code></dt>
- <dd>Indicates that the element can be sized without the need to examine its descendants' sizes.</dd>
- <dt><code>layout</code></dt>
- <dd>Indicates that nothing outside the element may affect its internal layout and vice versa.</dd>
- <dt><code>style</code></dt>
- <dd>Indicates that, for properties that can have effects on more than just an element and its descendants, those effects don't escape the containing element. Note that this value is marked "at-risk" in the spec and may not be supported everywhere.</dd>
- <dt><code>paint</code></dt>
- <dd>Indicates that descendants of the element don't display outside its bounds. If the containing box is offscreen, the browser does not need to paint its contained elements — these must also be offscreen as they are contained completely by that box. And if a descendant overflows the containing element's bounds, then that descendant will be clipped to the containing element's border-box.</dd>
-</dl>
+- `none`
+  - : Indicates the element renders as normal, with no containment applied.
+- `strict`
+  - : Indicates that all containment rules except `style` are applied to the element. This is equivalent to `contain: size layout paint`.
+- `content`
+  - : Indicates that all containment rules except `size` and `style` are applied to the element. This is equivalent to `contain: layout paint`.
+- `size`
+  - : Indicates that the element can be sized without the need to examine its descendants' sizes.
+- `layout`
+  - : Indicates that nothing outside the element may affect its internal layout and vice versa.
+- `style`
+  - : Indicates that, for properties that can have effects on more than just an element and its descendants, those effects don't escape the containing element. Note that this value is marked "at-risk" in the spec and may not be supported everywhere.
+- `paint`
+  - : Indicates that descendants of the element don't display outside its bounds. If the containing box is offscreen, the browser does not need to paint its contained elements — these must also be offscreen as they are contained completely by that box. And if a descendant overflows the containing element's bounds, then that descendant will be clipped to the containing element's border-box.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Simple_layout">Simple layout</h3>
+### Simple layout
 
-<p>The markup below consists of a number of articles, each with content:</p>
+The markup below consists of a number of articles, each with content:
 
-<pre class="brush: html">&lt;h1&gt;My blog&lt;/h1&gt;
-&lt;article&gt;
-  &lt;h2&gt;Heading of a nice article&lt;/h2&gt;
-  &lt;p&gt;Content here.&lt;/p&gt;
-&lt;/article&gt;
-&lt;article&gt;
-  &lt;h2&gt;Another heading of another article&lt;/h2&gt;
-  &lt;img src="graphic.jpg" alt="photo"&gt;
-  &lt;p&gt;More content here.&lt;/p&gt;
-&lt;/article&gt;</pre>
+```html
+<h1>My blog</h1>
+<article>
+  <h2>Heading of a nice article</h2>
+  <p>Content here.</p>
+</article>
+<article>
+  <h2>Another heading of another article</h2>
+  <img src="graphic.jpg" alt="photo">
+  <p>More content here.</p>
+</article>
+```
 
-<p>Each <code>&lt;article&gt;</code> and <code>&lt;img&gt;</code> is given a border, and the images are floated:</p>
+Each `<article>` and `<img>` is given a border, and the images are floated:
 
-<pre class="brush: css">img {
+```css
+img {
   float: left;
   border: 3px solid black;
 }
 
 article {
   border: 1px solid black;
-}</pre>
+}
+```
 
-<p>{{EmbedGHLiveSample("css-examples/contain/simple-layout.html", '100%', 400)}}</p>
+{{EmbedGHLiveSample("css-examples/contain/simple-layout.html", '100%', 400)}}
 
-<p>You can immediately see an issue — no effort is made to clear the floating beyond the bottom of the article.</p>
+You can immediately see an issue — no effort is made to clear the floating beyond the bottom of the article.
 
-<h3 id="Float_interference">Float interference</h3>
+### Float interference
 
-<p>If we were to insert another image at the bottom of the first article, a large portion of the DOM tree may be re-laid out or repainted, and this would interfere further with the layout of the second article:</p>
+If we were to insert another image at the bottom of the first article, a large portion of the DOM tree may be re-laid out or repainted, and this would interfere further with the layout of the second article:
 
-<pre class="brush: html">&lt;h1&gt;My blog&lt;/h1&gt;
-&lt;article&gt;
-  &lt;h2&gt;Heading of a nice article&lt;/h2&gt;
-  &lt;p&gt;Content here.&lt;/p&gt;
-  &lt;img src="i-just-showed-up.jpg" alt="social"&gt;
-&lt;/article&gt;
-&lt;article&gt;
-  &lt;h2&gt;Another heading of another article&lt;/h2&gt;
-  &lt;img src="graphic.jpg" alt="photo"&gt;
-  &lt;p&gt;More content here.&lt;/p&gt;
-&lt;/article&gt;</pre>
+```html
+<h1>My blog</h1>
+<article>
+  <h2>Heading of a nice article</h2>
+  <p>Content here.</p>
+  <img src="i-just-showed-up.jpg" alt="social">
+</article>
+<article>
+  <h2>Another heading of another article</h2>
+  <img src="graphic.jpg" alt="photo">
+  <p>More content here.</p>
+</article>
+```
 
-<pre class="brush: css hidden">img {
+```css hidden
+img {
   float: left;
   border: 3px solid black;
 }
 
 article {
   border: 1px solid black;
-}</pre>
+}
+```
 
-<p>As you can see, because of the way floats work, the first image ends up inside the area of the second article:</p>
+As you can see, because of the way floats work, the first image ends up inside the area of the second article:
 
-<p>{{EmbedGHLiveSample("css-examples/contain/float-interference.html", '100%', 400)}}</p>
+{{EmbedGHLiveSample("css-examples/contain/float-interference.html", '100%', 400)}}
 
-<h3 id="Fixing_with_contain">Fixing with contain</h3>
+### Fixing with contain
 
-<p>If we give each <code>article</code> the <code>contain</code> property with a value of <code>content</code>, when new elements are inserted the browser understands it only needs to recalculate the containing element's subtree, and not anything outside it:</p>
+If we give each `article` the `contain` property with a value of `content`, when new elements are inserted the browser understands it only needs to recalculate the containing element's subtree, and not anything outside it:
 
-<pre class="brush: html hidden">&lt;h1&gt;My blog&lt;/h1&gt;
-&lt;article&gt;
-  &lt;h2&gt;Heading of a nice article&lt;/h2&gt;
-  &lt;p&gt;Content here.&lt;/p&gt;
-  &lt;img src="i-just-showed-up.jpg" alt="social"&gt;
-&lt;/article&gt;
-&lt;article&gt;
-  &lt;h2&gt;Another heading of another article&lt;/h2&gt;
-  &lt;img src="graphic.jpg" alt="photo"&gt;
-  &lt;p&gt;More content here.&lt;/p&gt;
-&lt;/article&gt;</pre>
+```html hidden
+<h1>My blog</h1>
+<article>
+  <h2>Heading of a nice article</h2>
+  <p>Content here.</p>
+  <img src="i-just-showed-up.jpg" alt="social">
+</article>
+<article>
+  <h2>Another heading of another article</h2>
+  <img src="graphic.jpg" alt="photo">
+  <p>More content here.</p>
+</article>
+```
 
-<pre class="brush: css">img {
+```css
+img {
   float: left;
   border: 3px solid black;
 }
@@ -170,24 +175,23 @@ article {
 article {
   border: 1px solid black;
   contain: content;
-}</pre>
+}
+```
 
-<p>This also means that the first image no longer floats down to the second article, and instead stays inside its containing element's bounds:</p>
+This also means that the first image no longer floats down to the second article, and instead stays inside its containing element's bounds:
 
-<p>{{EmbedGHLiveSample("css-examples/contain/contain-fix.html", '100%', 500)}}</p>
+{{EmbedGHLiveSample("css-examples/contain/contain-fix.html", '100%', 500)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Containment">CSS containment</a></li>
- <li>CSS {{cssxref("content-visibility")}} property</li>
- <li>CSS {{cssxref("position")}} property</li>
-</ul>
+- [CSS containment](/en-US/docs/Web/CSS/CSS_Containment)
+- CSS {{cssxref("content-visibility")}} property
+- CSS {{cssxref("position")}} property

@@ -13,18 +13,19 @@ tags:
   - Styles
   - Styling HTML
   - background-color
-  - 'recipe:css-property'
+  - recipe:css-property
 browser-compat: css.properties.background-color
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>background-color</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets the background color of an element.</p>
+The **`background-color`** [CSS](/en-US/docs/Web/CSS) property sets the background color of an element.
 
-<div>{{EmbedInteractiveExample("pages/css/background-color.html")}}</div>
+{{EmbedInteractiveExample("pages/css/background-color.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 background-color: red;
 background-color: indigo;
 
@@ -53,56 +54,55 @@ background-color: inherit;
 background-color: initial;
 background-color: revert;
 background-color: unset;
-</pre>
+```
 
-<p>The <code>background-color</code> property is specified as a single <code>>&lt;color&gt;</code> value.</p>
+The `background-color` property is specified as a single `><color>` value.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
-	<dt>{{cssxref("&lt;color&gt;")}}</dt>
-	<dd>The uniform color of the background. It is rendered behind any {{cssxref("background-image")}} that is specified, although the color will still be visible through any transparency in the image.</dd>
-</dl>
+- {{cssxref("&lt;color&gt;")}}
+  - : The uniform color of the background. It is rendered behind any {{cssxref("background-image")}} that is specified, although the color will still be visible through any transparency in the image.
 
-<h2 id="Accessibility_concerns">Accessibility concerns</h2>
+## Accessibility concerns
 
-<p>It is important to ensure that the contrast ratio between the background color and the color of the text placed over it is high enough that people experiencing low vision conditions will be able to read the content of the page.</p>
+It is important to ensure that the contrast ratio between the background color and the color of the text placed over it is high enough that people experiencing low vision conditions will be able to read the content of the page.
 
-<p>Color contrast ratio is determined by comparing the luminance of the text and background color values. In order to meet current <a href="https://www.w3.org/WAI/intro/wcag">Web Content Accessibility Guidelines (WCAG)</a>, a ratio of 4.5:1 is required for text content and 3:1 for larger text such as headings. Large text is defined as 18.66px and <a href="/en-US/docs/Web/CSS/font-weight">bold</a> or larger, or 24px or larger.</p>
+Color contrast ratio is determined by comparing the luminance of the text and background color values. In order to meet current [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/intro/wcag), a ratio of 4.5:1 is required for text content and 3:1 for larger text such as headings. Large text is defined as 18.66px and [bold](/en-US/docs/Web/CSS/font-weight) or larger, or 24px or larger.
 
-<ul>
-	<li><a href="https://webaim.org/resources/contrastchecker/">WebAIM: Color Contrast Checker</a></li>
-	<li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">MDN Understanding WCAG, Guideline 1.4 explanations</a></li>
-	<li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html">Understanding Success Criterion 1.4.3  | W3C Understanding WCAG 2.0</a></li>
-</ul>
+- [WebAIM: Color Contrast Checker](https://webaim.org/resources/contrastchecker/)
+- [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [Understanding Success Criterion 1.4.3  | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div class="exampleone"&gt;
+```html
+<div class="exampleone">
   Lorem ipsum dolor sit amet, consectetuer
-&lt;/div&gt;
+</div>
 
-&lt;div class="exampletwo"&gt;
+<div class="exampletwo">
   Lorem ipsum dolor sit amet, consectetuer
-&lt;/div&gt;
+</div>
 
-&lt;div class="examplethree"&gt;
+<div class="examplethree">
   Lorem ipsum dolor sit amet, consectetuer
-&lt;/div&gt;</pre>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css; highlight:[2,7,12];">.exampleone { background-color: transparent; }
+```css
+.exampleone { background-color: transparent; }
 
 .exampletwo {
   background-color: rgb(153,102,153);
@@ -113,25 +113,23 @@ background-color: unset;
   background-color: #777799;
   color: #FFFFFF;
 }
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Examples", 200, 150)}}</p>
+{{EmbedLiveSample("Examples", 200, 150)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li><a href="/en-US/docs/Web/CSS/CSS_Background_and_Borders/Using_CSS_multiple_backgrounds">Multiple backgrounds</a></li>
-	<li>The {{cssxref("&lt;color&gt;")}} data type</li>
-	<li>Other color-related properties: {{cssxref("color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}</li>
-	<li><a href="/en-US/docs/Web/HTML/Applying_color">Applying color to HTML elements using CSS</a></li>
-</ul>
+- [Multiple backgrounds](/en-US/docs/Web/CSS/CSS_Background_and_Borders/Using_CSS_multiple_backgrounds)
+- The {{cssxref("&lt;color&gt;")}} data type
+- Other color-related properties: {{cssxref("color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}
+- [Applying color to HTML elements using CSS](/en-US/docs/Web/HTML/Applying_color)

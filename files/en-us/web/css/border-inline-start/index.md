@@ -12,28 +12,27 @@ tags:
   - border-inline-start-color
   - border-inline-start-style
   - border-inline-start-width
-  - 'recipe:css-shorthand-property'
+  - recipe:css-shorthand-property
 browser-compat: css.properties.border-inline-start
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>border-inline-start</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property is a <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand property</a> for setting the individual logical inline-start border property values in a single place in the style sheet.</p>
+The **`border-inline-start`** [CSS](/en-US/docs/Web/CSS) property is a [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) for setting the individual logical inline-start border property values in a single place in the style sheet.
 
-<div>{{EmbedInteractiveExample("pages/css/border-inline-start.html")}}</div>
+{{EmbedInteractiveExample("pages/css/border-inline-start.html")}}
 
-<h2 id="Constituent_properties">Constituent properties</h2>
+## Constituent properties
 
-<p>This property is a shorthand for the following CSS properties:</p>
+This property is a shorthand for the following CSS properties:
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/border-inline-start-color"><code>border-inline-start-color</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/border-inline-start-style"><code>border-inline-start-style</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/border-inline-start-width"><code>border-inline-start-width</code></a></li>
-</ul>
+- [`border-inline-start-color`](/en-US/docs/Web/CSS/border-inline-start-color)
+- [`border-inline-start-style`](/en-US/docs/Web/CSS/border-inline-start-style)
+- [`border-inline-start-width`](/en-US/docs/Web/CSS/border-inline-start-width)
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers">border-inline-start: 1px;
+```css
+border-inline-start: 1px;
 border-inline-start: 2px dotted;
 border-inline-start: medium dashed green;
 
@@ -41,45 +40,46 @@ border-inline-start: medium dashed green;
 border-inline-start: inherit;
 border-inline-start: initial;
 border-inline-start: revert;
-border-inline-start: unset;</pre>
+border-inline-start: unset;
+```
 
-<p>The physical border to which <code>border-inline-start</code> maps depends on the element's writing mode, directionality, and text orientation. It corresponds to the {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, or {{cssxref("border-left")}} property depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.</p>
+The physical border to which `border-inline-start` maps depends on the element's writing mode, directionality, and text orientation. It corresponds to the {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, or {{cssxref("border-left")}} property depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.
 
-<p>Related properties are {{cssxref("border-block-start")}}, {{cssxref("border-block-end")}}, and {{cssxref("border-inline-end")}}, which define the other borders of the element.</p>
+Related properties are {{cssxref("border-block-start")}}, {{cssxref("border-block-end")}}, and {{cssxref("border-inline-end")}}, which define the other borders of the element.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<p>The <code>border-inline-start</code> is specified with one or more of the following, in any order:</p>
+The `border-inline-start` is specified with one or more of the following, in any order:
 
-<dl>
- <dt><code>&lt;'border-width'&gt;</code></dt>
- <dd>The width of the border. See {{cssxref("border-width")}}.</dd>
- <dt><code>&lt;'border-style'&gt;</code></dt>
- <dd>The line style of the border. See {{cssxref("border-style")}}.</dd>
- <dt><code>&lt;'color'&gt;</code></dt>
- <dd>The color of the border. See {{cssxref("color")}}.</dd>
-</dl>
+- `<'border-width'>`
+  - : The width of the border. See {{cssxref("border-width")}}.
+- `<'border-style'>`
+  - : The line style of the border. See {{cssxref("border-style")}}.
+- `<'color'>`
+  - : The color of the border. See {{cssxref("color")}}.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;p class="exampleText"&gt;Example text&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div>
+  <p class="exampleText">Example text</p>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   background-color: yellow;
   width: 120px;
   height: 120px;
@@ -88,21 +88,20 @@ border-inline-start: unset;</pre>
 .exampleText {
   writing-mode: vertical-rl;
   border-inline-start: 5px dashed blue;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Examples", 140, 140)}}</p>
+{{EmbedLiveSample("Examples", 140, 140)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>This property maps to one of the physical border properties: {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, or {{cssxref("border-left")}}.</li>
- <li>{{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}</li>
-</ul>
+- This property maps to one of the physical border properties: {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, or {{cssxref("border-left")}}.
+- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}
