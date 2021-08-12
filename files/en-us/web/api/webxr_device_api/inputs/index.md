@@ -488,8 +488,6 @@ mat4.getTranslation(targetRayOrigin, viewerRefSpace);
 mat4.getRotation(targetRayDirection, viewerRefSpace);
 ```
 
-**<<<--- add diagram showing the targeting ray space (overlaid on the grip space) --->>>**
-
 To determine what object is targeted, follow the targeting ray until it intersects an object. This process is called **hit testing** or **collision detection**. The approach you take to hit testing depends very much on the specific needs of your app. The first question is: are you detecting collisions with virtual objects or terrain, real-world objects or terrain, or both?
 
 In any case, to identify the targeted object, you need to determine if the ray specified by the {{domxref("XRInputSource")}} property {{domxref("XRInputSource.targetRaySpace", "targetRaySpace")}} intersects any objects in the scene, whether thye're virtual or real-world.
@@ -501,8 +499,6 @@ See [Targeting and hit detection](/en-US/docs/Web/API/WebXR_Device_API/Targeting
 An input source's {{domxref("XRInputSource.gripSpace", "gripSpace")}} property identifies an {{domxref("XRSpace")}} describing the origin and orienation to use when rendering an object so that it appears to be held in the same hand as its input source. This space is intended to be used when drawing a model of the handheld WebXR input controller represented by the objec{{domxref("XRInputSource")}}, but can just as well be used to draw any object, such as a ball, a tool, or a weapon. We covered the {{anch("Grip space", "grip space")}} above, but let's see how it can be used to draw objects representative of the hand or in the hand.
 
 Since the origin of the grip space is located at the center of the hand's grip, you can use it as a starting point for rendering your object. Apply any needed offset transform to shift the origin to the start point for rendering your object as you apply any rotation needed to orient your model correctly to align with the grip space's orientation.
-
-**<<<--- diagram needed: applying transform to grip space to position/orient object --->>>**
 
 ## Advanced controllers using the gamepad object
 
