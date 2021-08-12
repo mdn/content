@@ -90,8 +90,6 @@ The other three degrees of freedom are translational, providing the ability to s
 
 ![Diagram showing rotation around each of the three axes in a WebXR setting](xr-translation-headset.png)
 
-**<<<--- replace image with an SVG for future translation work and consistency --->>>**
-
 Some more advanced headsets provide at least minimal support for translational movement detection, but to capture more substantial movement through the space, external sensors are usually required, such as cameras (either using visible light or infrared).
 
 ### WebXR session modes

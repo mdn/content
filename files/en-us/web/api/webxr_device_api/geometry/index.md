@@ -180,8 +180,6 @@ XR sessions are created using the {{domxref("XRSystem.requestSession", "navigat
 
 > **Note:** At this time, the reference space to use or to prefer is the only option available when creating an {{domxref("XRSession")}}. In the future, it's likely that more options will become available.
 
-**<<<--- insert table of reference space requirements here --->>>**
-
 ## Positioning and orienting objects
 
 All spatial (position, orientation, and movement) information exchanged between your app and the WebXR API is expressed in relation to a specific space at the time the frame is being rendered. Any further position and orientation management is between you and WebGL, though you do make use of the origin offset from the reference space in order to position the objects correctly in the 3D world.

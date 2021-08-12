@@ -174,8 +174,6 @@ If tracking fails, such as due to a temporary loss of connectivity between the h
 
 Some XR hardware uses algorithms to compute the estimated position of the user based on the movement currently ongoing, while other hardware will report no movement at all, but with `emulatedPosition` set to `true`. In either case, you may wish to adjust your rendering to compensate for the loss, depending on your specific needs.
 
-**<<<--- more text and example about how to handle rendering during lost tracking --->>>**
-
 ### When tracking resumes
 
 You can detect when tracking has resumed after being lost when the user position jumps while at the same time the value of `emulatedPosition` changes from `true` to `false`. How you handle this depends on your application. If your app provides a way for the user to move through the virtual world without physically moving in the real world (a so-called **teleportation** mechanic), you can accept the new position and continue, allowing the jump from your previously-assumed position to be immediately corrected with the new position.

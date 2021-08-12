@@ -81,8 +81,6 @@ If your virtual camera's perspective projection matrix doesn't result in virtual
 
 A related issue is that if you use your perspective matrix to determine where to place objects, a mismatch between your perspective projection matrix and the user's physical perspective on the world could result in the objects not being positioned accurately. If your app lets the user hang virtual paintings on their walls, for example, but the perspective matrix doesn't match up, the placed paintings could wind up not actually up against the wall, partially intersecting the wall, or with one end closer to the wall than the other instead of being properly parallel to the wall.
 
-**<<<--- once AR module is done, add some more details here about getting this right --->>>**
-
 ## See also
 
 - [WebGL model view projection](/en-US/docs/Web/API/WebGL_API/WebGL_model_view_projection)
