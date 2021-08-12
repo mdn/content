@@ -19,7 +19,7 @@ tags:
 
 <h2 id="Principle">Principle</h2>
 
-<p>In HTTP, redirection is triggered by a server sending a special <em>redirect</em> response to a request. Redirect responses have <a href="/en-US/docs/Web/HTTP/Status">status codes</a> that start with <code>3</code>, and a {{ httpheader("Location") }} header holding the URL to redirect to.</p>
+<p>In HTTP, redirection is triggered by a server sending a special <em>redirect</em> response to a request. Redirect responses have <a href="/en-US/docs/Web/HTTP/Status">status codes</a> that start with <code>3</code>, and a {{ httpheader("Location") }} header holding the URL to redirect to.</p>
 
 <p>When browsers receive a redirect, they immediately load the new URL provided in the <code>Location</code> header. Besides the small performance hit of an additional round-trip, users rarely notice the redirection.</p>
 
@@ -37,25 +37,25 @@ tags:
 
 <p>These redirections are meant to last forever. They imply that the original URL should no longer be used, and replaced with the new one.Search engine robots, RSS readers, and other crawlers will update the original URL for the resource.</p>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
-   <th scope="row">Code</th>
-   <th scope="col">Text</th>
-   <th scope="col">Method handling</th>
-   <th scope="col">Typical use case</th>
+   <th>Code</th>
+   <th>Text</th>
+   <th>Method handling</th>
+   <th>Typical use case</th>
   </tr>
  </thead>
  <tbody>
   <tr>
-   <th scope="row"><code>301</code></th>
+   <td><code>301</code></td>
    <td><code>Moved Permanently</code></td>
    <td>{{HTTPMethod("GET")}} methods unchanged.<br>
     Others may or may not be changed to {{HTTPMethod("GET")}}. [1]</td>
    <td>Reorganization of a Web site.</td>
   </tr>
   <tr>
-   <th scope="row"><code>308</code></th>
+   <td><code>308</code></td>
    <td><code>Permanent Redirect</code></td>
    <td>Method and body not changed.</td>
    <td>Reorganization of a Web site, with non-GET links/operations.</td>
@@ -71,32 +71,32 @@ tags:
 
 <p>Search engine robots and other crawlers don't memorize the new, temporary URL. Temporary redirections are also used when creating, updating, or deleting resources, to show temporary progress pages.</p>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
-   <th scope="row">Code</th>
-   <th scope="col">Text</th>
-   <th scope="col">Method handling</th>
-   <th scope="col">Typical use case</th>
+   <th>Code</th>
+   <th>Text</th>
+   <th>Method handling</th>
+   <th>Typical use case</th>
   </tr>
  </thead>
  <tbody>
   <tr>
-   <th scope="row"><code>302</code></th>
+   <td><code>302</code></td>
    <td><code>Found</code></td>
    <td>{{HTTPMethod("GET")}} methods unchanged.<br>
     Others may or may not be changed to {{HTTPMethod("GET")}}. [2]</td>
    <td>The Web page is temporarily unavailable for unforeseen reasons.</td>
   </tr>
   <tr>
-   <th scope="row"><code>303</code></th>
+   <td><code>303</code></td>
    <td><code>See Other</code></td>
    <td>{{HTTPMethod("GET")}} methods unchanged.<br>
     Others <em>changed</em> to <code>GET</code> (body lost).</td>
    <td>Used to redirect after a {{HTTPMethod("PUT")}} or a {{HTTPMethod("POST")}}, so that refreshing the result page doesn't re-trigger the operation.</td>
   </tr>
   <tr>
-   <th scope="row"><code>307</code></th>
+   <td><code>307</code></td>
    <td><code>Temporary Redirect</code></td>
    <td>Method and body not changed</td>
    <td>The Web page is temporarily unavailable for unforeseen reasons. Better than <code>302</code> when non-<code>GET</code> operations are available on the site.</td>
@@ -110,22 +110,22 @@ tags:
 
 <p>{{HTTPStatus("304")}} (Not Modified) redirects a page to the locally cached copy (that was stale), and {{HTTPStatus("300")}} (Multiple Choice) is a manual redirection: the body, presented by the browser as a Web page, lists the possible redirections and the user clicks on one to select it.</p>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
-   <th scope="row">Code</th>
-   <th scope="col">Text</th>
-   <th scope="col">Typical use case</th>
+   <th>Code</th>
+   <th>Text</th>
+   <th>Typical use case</th>
   </tr>
  </thead>
  <tbody>
   <tr>
-   <th scope="row"><code>300</code></th>
+   <td><code>300</code></td>
    <td><code>Multiple Choice</code></td>
    <td>Not many: the choices are listed in an HTML page in the body. Machine-readable choices are encouraged to be sent as {{HTTPHeader("Link")}} headers with <code>rel=alternate</code>.</td>
   </tr>
   <tr>
-   <th scope="row"><code>304</code></th>
+   <td><code>304</code></td>
    <td><code>Not Modified</code></td>
    <td>Sent for revalidated conditional requests. Indicates that the cached response is still fresh and can be used.</td>
   </tr>

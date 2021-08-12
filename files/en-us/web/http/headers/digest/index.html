@@ -11,22 +11,21 @@ browser-compat: http.headers.Digest
 <p>The <code><strong>Digest</strong></code> response HTTP header provides a
   {{Glossary("digest")}} of the requested resource.</p>
 
-<p>In <a href="https://datatracker.ietf.org/doc/html/rfc7231">RFC 7231</a> terms this is the
-  <em>selected representation</em> of a resource. The selected representation depends on
-  the <code><a href="/en-US/docs/Web/HTTP/Headers/Content-Type">Content-Type</a></code>
-  and
-  <code><a href="/en-US/docs/Web/HTTP/Headers/Content-Encoding">Content-Encoding</a></code>
-  header values: so a single resource may have multiple different digest values.</p>
+<p>
+  In <a href="https://datatracker.ietf.org/doc/html/rfc7231">RFC 7231</a> terms,
+  this is the <em>selected representation</em> of a resource.
+  The selected representation depends
+  on the <code><a href="/en-US/docs/Web/HTTP/Headers/Content-Type">Content-Type</a></code>
+  and <code><a href="/en-US/docs/Web/HTTP/Headers/Content-Encoding">Content-Encoding</a></code> header values,
+  so a single resource may have multiple different digest values.
+</p>
 
-<p>The digest is calculated over the entire representation. The representation itself may
-  be:</p>
+<p>The digest is calculated over the entire representation. The representation itself may be:</p>
 
 <ul>
-  <li>fully contained in the response message body</li>
-  <li>not at all contained in the message body (for example, in a response to a
-    <code><a href="/en-US/docs/Web/HTTP/Methods/HEAD">HEAD</a></code> request)</li>
-  <li>partially contained in the message body (for example, in a response to a <a
-      href="/en-US/docs/Web/HTTP/Range_requests">range request</a>).</li>
+  <li>fully contained in the response message body,</li>
+  <li>not at all contained in the message body (for example, in a response to a <code><a href="/en-US/docs/Web/HTTP/Methods/HEAD">HEAD</a></code> request),</li>
+  <li>or partially contained in the message body (for example, in a response to a <a href="/en-US/docs/Web/HTTP/Range_requests">range request</a>).</li>
 </ul>
 
 <table class="properties">
@@ -44,8 +43,7 @@ browser-compat: http.headers.Digest
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: html">Digest: &lt;digest-algorithm&gt;=&lt;digest-value&gt;
-
+<pre>Digest: &lt;digest-algorithm&gt;=&lt;digest-value&gt;
 Digest: &lt;digest-algorithm&gt;=&lt;digest-value&gt;,&lt;digest-algorithm&gt;=&lt;digest-value&gt;
 </pre>
 
@@ -67,35 +65,26 @@ Digest: &lt;digest-algorithm&gt;=&lt;digest-value&gt;,&lt;digest-algorithm&gt;=&
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: html">Digest: sha-256=X48E9qOokqqrvdts8nOJRJN3OWDUoyWxBf7kbu9DBPE=
+<pre>Digest: sha-256=X48E9qOokqqrvdts8nOJRJN3OWDUoyWxBf7kbu9DBPE=
 Digest: sha-256=X48E9qOokqqrvdts8nOJRJN3OWDUoyWxBf7kbu9DBPE=,unixsum=30637</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
+<table>
     <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Title</th>
+      <th>Specification</th>
     </tr>
-  </thead>
-  <tbody>
     <tr>
-      <td>
-        <p><a href="https://datatracker.ietf.org/doc/draft-ietf-httpbis-digest-headers">draft-ietf-httpbis-digest-headers-latest</a>
-        </p>
-      </td>
-      <td>Resource Digests for HTTP</td>
+      <td><a href="https://datatracker.ietf.org/doc/draft-ietf-httpbis-digest-headers">draft-ietf-httpbis-digest-headers-latest</a></td>
     </tr>
-  </tbody>
 </table>
 
-<p>This header was originally defined in <a href="https://datatracker.ietf.org/doc/html/rfc3230">RFC
-    3230</a>, but the definition of "selected representation" in <a
-    href="https://www.rfc-editor.org/info/rfc7231">RFC 7231</a> made the original
-  definition inconsistent with current HTTP specifications. When released, The "Resource
-  Digests for HTTP" draft therefore will obsolete RFC 3230 and will update the standard to
-  be consistent.</p>
+<p>
+  This header was originally defined in <a href="https://datatracker.ietf.org/doc/html/rfc3230">RFC 3230</a>,
+  but the definition of "selected representation" in <a  href="https://www.rfc-editor.org/info/rfc7231">RFC 7231</a> made the original definition inconsistent with current HTTP specifications.
+  When released, The "Resource Digests for HTTP" draft therefore will obsolete RFC 3230
+  and will update the standard to be consistent.
+</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
