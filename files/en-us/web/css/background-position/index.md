@@ -87,16 +87,26 @@ The percentage offset of the given background image's position is relative to th
 
 Essentially what happens is the background image dimension is _subtracted_ from the corresponding container dimension, and then a percentage of the resulting value is used as the direct offset from the left (or top) edge.
 
-`(container width - image width) * (position x%) = (x offset value) (container height - image height) * (position y%) = (y offset value)`
+```
+(container width - image width) * (position x%) = (x offset value)
+(container height - image height) * (position y%) = (y offset value)
+```
 
 Using the X axis for an example, let's say we have an image that is 300px wide and we are using it in a container that is 100px wide, with background-size set to auto:
 
-`100px - 300px = -200px (container & image difference)`
+```
+100px - 300px = -200px (container & image difference)
+```
 
 So that with position percentages of -25%, 0%, 50%, 100%, 125%, we get these image-to-container edge offset values:
 
-`-200px * -25% = 50px -200px * 0% = 0px -200px * 50% = -100px -200px * 100% = -200px`
-`-200px * 125% = -250px`
+```
+-200px * -25% = 50px
+-200px * 0% = 0px
+-200px * 50% = -100px
+-200px * 100% = -200px
+-200px * 125% = -250px
+```
 
 So with these resultant values for our example, the **left edge** of the **image** is offset from the **left edge** of the **container** by:
 
