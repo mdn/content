@@ -22,7 +22,7 @@ tags:
 
 <p>A full WebXR experience isn't just about showing the user a wholly virtual scene or augmenting reality by adding to or altering the world around them. In order to make an experience that's fulfilling and engaging, the user needs to be able to interact with it. To that end, WebXR provides support for a variety of kinds of input devices.</p>
 
-<p><span class="seoSummary">In this guide, we'll look at how to use WebXR's input device management features to determine what input sources are available and how to then monitor those sources for inputs in order to handle user interactivity with your virtual or augmented environment.</span></p>
+<p>In this guide, we'll look at how to use WebXR's input device management features to determine what input sources are available and how to then monitor those sources for inputs in order to handle user interactivity with your virtual or augmented environment.</p>
 
 <h2 id="Inputs_in_WebXR">Inputs in WebXR</h2>
 
@@ -188,14 +188,14 @@ xrSession.addEventListener("inputsourceschange", event =&gt; {
 });
 </pre>
 
-<p>The <code>inputsourceschange</code> event is also fired once when the session's creation callback first completes execution, so you can use it to fetch the input source list as soon as it's available at startup time. The event is delivered as an {{domxref("XRInputSourceChangeEvent")}}, which includes three properties of interest:</p>
+<p>The <code>inputsourceschange</code> event is also fired once when the session's creation callback first completes execution, so you can use it to fetch the input source list as soon as it's available at startup time. The event is delivered as an {{domxref("XRInputSourcesChangeEvent")}}, which includes three properties of interest:</p>
 
 <dl>
- <dt>{{domxref("XRInputSourceChangeEvent.session", "session")}}</dt>
+ <dt>{{domxref("XRInputSourcesChangeEvent.session", "session")}}</dt>
  <dd>The <code>XRSession</code> for which the input sources have changed.</dd>
- <dt>{{domxref("XRInputSourceChangeEvent.added", "added")}}</dt>
+ <dt>{{domxref("XRInputSourcesChangeEvent.added", "added")}}</dt>
  <dd>An array of zero or more {{domxref("XRInputSource")}} objects indicating the input sources that have been newly added to the XR system.</dd>
- <dt>{{domxref("XRInputSourceChangeEvent.removed", "removed")}}</dt>
+ <dt>{{domxref("XRInputSourcesChangeEvent.removed", "removed")}}</dt>
  <dd>An array of zero or more {{domxref("XRInputSource")}} objects indicating any input sources that have been removed from the XR system.</dd>
 </dl>
 
