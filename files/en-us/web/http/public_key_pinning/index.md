@@ -9,156 +9,134 @@ tags:
   - Deprecated
   - Security
 ---
-<p>{{HTTPSidebar}}{{deprecated_header}}</p>
+{{HTTPSidebar}}{{deprecated_header}}
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Public Key Pinning mechanism was deprecated in favor of <a href="/en-US/docs/Web/Security/Certificate_Transparency">Certificate Transparency</a> and {{HTTPHeader("Expect-CT")}} header.</p>
-</div>
+> **Note:** Public Key Pinning mechanism was deprecated in favor of [Certificate Transparency](/en-US/docs/Web/Security/Certificate_Transparency) and {{HTTPHeader("Expect-CT")}} header.
 
-<p class="summary"><strong>HTTP Public Key Pinning</strong> ({{Glossary("HPKP")}}) was a security feature that used to tell a web client to associate a specific cryptographic public key with a certain web server to decrease the risk of {{Glossary("MITM")}} attacks with forged certificates. It has been removed in modern browsers and is no longer supported.</p>
+**HTTP Public Key Pinning** ({{Glossary("HPKP")}}) was a security feature that used to tell a web client to associate a specific cryptographic public key with a certain web server to decrease the risk of {{Glossary("MITM")}} attacks with forged certificates. It has been removed in modern browsers and is no longer supported.
 
-<p>To ensure the authenticity of a server's public key used in {{Glossary("TLS")}} sessions, this public key is wrapped into a X.509 certificate which is usually signed by a certificate authority ({{Glossary("Certificate_authority", "CA")}}). Web clients such as browsers trust a lot of these CAs, which can all create certificates for arbitrary domain names. If an attacker is able to compromise a single CA, they can perform MITM attacks on various TLS connections. HPKP can circumvent this threat for the {{Glossary("HTTPS")}} protocol by telling the client which public key belongs to a certain web server.</p>
+To ensure the authenticity of a server's public key used in {{Glossary("TLS")}} sessions, this public key is wrapped into a X.509 certificate which is usually signed by a certificate authority ({{Glossary("Certificate_authority", "CA")}}). Web clients such as browsers trust a lot of these CAs, which can all create certificates for arbitrary domain names. If an attacker is able to compromise a single CA, they can perform MITM attacks on various TLS connections. HPKP can circumvent this threat for the {{Glossary("HTTPS")}} protocol by telling the client which public key belongs to a certain web server.
 
-<p>HPKP is a <em>Trust on First Use</em> ({{Glossary("TOFU")}}) technique. The first time a web server tells a client via a special HTTP header which public keys belong to it, the client stores this information for a given period of time. When the client visits the server again, it expects at least one certificate in the certificate chain to contain a public key whose fingerprint is already known via HPKP. If the server delivers an unknown public key, the client should present a warning to the user.</p>
+HPKP is a _Trust on First Use_ ({{Glossary("TOFU")}}) technique. The first time a web server tells a client via a special HTTP header which public keys belong to it, the client stores this information for a given period of time. When the client visits the server again, it expects at least one certificate in the certificate chain to contain a public key whose fingerprint is already known via HPKP. If the server delivers an unknown public key, the client should present a warning to the user.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Firefox and Chrome <strong>disable pin validation</strong> for pinned hosts whose validated certificate chain terminates at a <strong>user-defined trust anchor</strong> (rather than a built-in trust anchor). This means that for users who imported custom root certificates all pinning violations are ignored.</p>
-</div>
+> **Note:** Firefox and Chrome **disable pin validation** for pinned hosts whose validated certificate chain terminates at a **user-defined trust anchor** (rather than a built-in trust anchor). This means that for users who imported custom root certificates all pinning violations are ignored.
 
-<h2 id="Enabling_HPKP">Enabling HPKP</h2>
+## Enabling HPKP
 
-<p>To enable this feature for your site, you need to return the {{HTTPHeader("Public-Key-Pins")}} HTTP header when your site is accessed over HTTPS:</p>
+To enable this feature for your site, you need to return the {{HTTPHeader("Public-Key-Pins")}} HTTP header when your site is accessed over HTTPS:
 
-<pre>Public-Key-Pins: pin-sha256="base64=="; max-age=<em>expireTime</em> [; includeSubDomains][; report-uri="<em>reportURI"</em>]</pre>
+    Public-Key-Pins: pin-sha256="base64=="; max-age=expireTime [; includeSubDomains][; report-uri="reportURI"]
 
-<dl>
- <dt><code>pin-sha256</code></dt>
- <dd>The quoted string is the Base64 encoded <em>Subject Public Key Information</em> ({{Glossary("SPKI")}}) fingerprint. It is possible to specify multiple pins for different public keys. Some browsers might allow other hashing algorithms than SHA-256 in the future. See below on how to extract this information out of a certificate or key file.</dd>
- <dt><code>max-age</code></dt>
- <dd>The time, in seconds, that the browser should remember that this site is only to be accessed using one of the defined keys.</dd>
- <dt><code>includeSubDomains</code> {{optional_inline}}</dt>
- <dd>If this optional parameter is specified, this rule applies to all of the site's subdomains as well.</dd>
- <dt><code>report-uri</code> {{optional_inline}}</dt>
- <dd>If this optional parameter is specified, pin validation failures are reported to the given URL.</dd>
-</dl>
+- `pin-sha256`
+  - : The quoted string is the Base64 encoded _Subject Public Key Information_ ({{Glossary("SPKI")}}) fingerprint. It is possible to specify multiple pins for different public keys. Some browsers might allow other hashing algorithms than SHA-256 in the future. See below on how to extract this information out of a certificate or key file.
+- `max-age`
+  - : The time, in seconds, that the browser should remember that this site is only to be accessed using one of the defined keys.
+- `includeSubDomains` {{optional_inline}}
+  - : If this optional parameter is specified, this rule applies to all of the site's subdomains as well.
+- `report-uri` {{optional_inline}}
+  - : If this optional parameter is specified, pin validation failures are reported to the given URL.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> The current specification requires including a second pin for a backup key which isn't yet used in production. This allows for changing the server's public key without breaking accessibility for clients that have already noted the pins. This is important for example when the former key gets compromised.</p>
-</div>
+> **Note:** The current specification requires including a second pin for a backup key which isn't yet used in production. This allows for changing the server's public key without breaking accessibility for clients that have already noted the pins. This is important for example when the former key gets compromised.
 
-<h3 id="Extracting_the_Base64_encoded_public_key_information">Extracting the Base64 encoded public key information</h3>
+### Extracting the Base64 encoded public key information
 
-<div class="notecard note">
-  <p><strong>Note:</strong> While the example below shows how to set a pin on a server certificate, it is recommended to place the pin on the intermediate certificate of the CA that issued the server certificate, to ease certificates renewals and rotations.</p>
-</div>
+> **Note:** While the example below shows how to set a pin on a server certificate, it is recommended to place the pin on the intermediate certificate of the CA that issued the server certificate, to ease certificates renewals and rotations.
 
-<p>First you need to extract the public key information from your certificate or key file and encode them using Base64.</p>
+First you need to extract the public key information from your certificate or key file and encode them using Base64.
 
-<p>The following commands will help you extract the Base64 encoded information from a key file, a certificate signing request, or a certificate.</p>
+The following commands will help you extract the Base64 encoded information from a key file, a certificate signing request, or a certificate.
 
-<pre>openssl rsa -in my-rsa-key-file.key -outform der -pubout | openssl dgst -sha256 -binary | openssl enc -base64</pre>
+    openssl rsa -in my-rsa-key-file.key -outform der -pubout | openssl dgst -sha256 -binary | openssl enc -base64
 
-<pre>openssl ec -in my-ecc-key-file.key -outform der -pubout | openssl dgst -sha256 -binary | openssl enc -base64</pre>
+<!---->
 
-<pre>openssl req -in my-signing-request.csr -pubkey -noout | openssl pkey -pubin -outform der | openssl dgst -sha256 -binary | openssl enc -base64</pre>
+    openssl ec -in my-ecc-key-file.key -outform der -pubout | openssl dgst -sha256 -binary | openssl enc -base64
 
-<pre>openssl x509 -in my-certificate.crt -pubkey -noout | openssl pkey -pubin -outform der | openssl dgst -sha256 -binary | openssl enc -base64</pre>
+<!---->
 
-<p>The following command will extract the Base64 encoded information for a website.</p>
+    openssl req -in my-signing-request.csr -pubkey -noout | openssl pkey -pubin -outform der | openssl dgst -sha256 -binary | openssl enc -base64
 
-<pre>openssl s_client -servername www.example.com -connect www.example.com:443 | openssl x509 -pubkey -noout | openssl pkey -pubin -outform der | openssl dgst -sha256 -binary | openssl enc -base64</pre>
+<!---->
 
-<h3 id="Example_HPKP_Header">Example HPKP Header</h3>
+    openssl x509 -in my-certificate.crt -pubkey -noout | openssl pkey -pubin -outform der | openssl dgst -sha256 -binary | openssl enc -base64
 
-<pre>Public-Key-Pins:
-  pin-sha256="cUPcTAZWKaASuYWhhneDttWpY3oBAkE3h2+soZS7sWs=";
-  pin-sha256="M8HztCzM3elUxkcjR2S5P4hhyBNf6lHkmjAHKhpGPWE=";
-  max-age=5184000; includeSubDomains;
-  report-uri="<em>https://www.example.org/hpkp-report"</em></pre>
+The following command will extract the Base64 encoded information for a website.
 
-<p>In this example, <strong>pin-sha256="cUPcTAZWKaASuYWhhneDttWpY3oBAkE3h2+soZS7sWs="</strong> pins the server's public key used in production. The second pin declaration <strong>pin-sha256="M8HztCzM3elUxkcjR2S5P4hhyBNf6lHkmjAHKhpGPWE="</strong> also pins the backup key. <strong>max-age=5184000</strong> tells the client to store this information for two months, which is a reasonable time limit according to the IETF RFC. This key pinning is also valid for all subdomains, which is told by the <strong>includeSubDomains</strong> declaration. Finally, <strong>report-uri="https://www.example.net/hpkp-report"</strong> explains where to report pin validation failures.</p>
+    openssl s_client -servername www.example.com -connect www.example.com:443 | openssl x509 -pubkey -noout | openssl pkey -pubin -outform der | openssl dgst -sha256 -binary | openssl enc -base64
 
-<h3 id="Report-Only_header">Report-Only header</h3>
+### Example HPKP Header
 
-<p>Instead of using a {{HTTPHeader("Public-Key-Pins")}} header you can also use a {{HTTPHeader("Public-Key-Pins-Report-Only")}} header. This header only sends reports to the <code>report-uri</code> specified in the header and does still allow browsers to connect to the webserver even if the pinning is violated.</p>
+    Public-Key-Pins:
+      pin-sha256="cUPcTAZWKaASuYWhhneDttWpY3oBAkE3h2+soZS7sWs=";
+      pin-sha256="M8HztCzM3elUxkcjR2S5P4hhyBNf6lHkmjAHKhpGPWE=";
+      max-age=5184000; includeSubDomains;
+      report-uri="https://www.example.org/hpkp-report"
 
-<h3 id="Setting_up_your_webserver_to_include_the_HPKP_header">Setting up your webserver to include the HPKP header</h3>
+In this example, **pin-sha256="cUPcTAZWKaASuYWhhneDttWpY3oBAkE3h2+soZS7sWs="** pins the server's public key used in production. The second pin declaration **pin-sha256="M8HztCzM3elUxkcjR2S5P4hhyBNf6lHkmjAHKhpGPWE="** also pins the backup key. **max-age=5184000** tells the client to store this information for two months, which is a reasonable time limit according to the IETF RFC. This key pinning is also valid for all subdomains, which is told by the **includeSubDomains** declaration. Finally, **report-uri="https\://www\.example.net/hpkp-report"** explains where to report pin validation failures.
 
-<p>The concrete steps necessary to deliver the HPKP header depend on the web server you use.</p>
+### Report-Only header
 
-<div class="notecard note">
-  <p><strong>Note:</strong> These examples use a max-age of two months and include all subdomains. It is advised to verify that this setup will work for your server.</p>
-</div>
+Instead of using a {{HTTPHeader("Public-Key-Pins")}} header you can also use a {{HTTPHeader("Public-Key-Pins-Report-Only")}} header. This header only sends reports to the `report-uri` specified in the header and does still allow browsers to connect to the webserver even if the pinning is violated.
 
-<div class="notecard warning">
-  <p><strong>Warning:</strong> HPKP has the potential to lock out users for a long time if used incorrectly! The use of backup certificates and/or pinning the CA certificate is recommended.</p>
-</div>
+### Setting up your webserver to include the HPKP header
 
-<h4 id="Apache">Apache</h4>
+The concrete steps necessary to deliver the HPKP header depend on the web server you use.
 
-<p>Adding a line similar to the following to your webserver's config will enable HPKP on your Apache. This requires <code>mod_headers</code> enabled.</p>
+> **Note:** These examples use a max-age of two months and include all subdomains. It is advised to verify that this setup will work for your server.
 
-<pre>Header always set Public-Key-Pins "pin-sha256=\"base64+primary==\"; pin-sha256=\"base64+backup==\"; max-age=5184000; includeSubDomains"</pre>
+> **Warning:** HPKP has the potential to lock out users for a long time if used incorrectly! The use of backup certificates and/or pinning the CA certificate is recommended.
 
-<h4 id="Nginx">Nginx</h4>
+#### Apache
 
-<p>Adding the following line and inserting the appropriate <code>pin-sha256="..."</code> values will enable HPKP on your nginx. This requires the <code>ngx_http_headers_module.</code></p>
+Adding a line similar to the following to your webserver's config will enable HPKP on your Apache. This requires `mod_headers` enabled.
 
-<pre>add_header Public-Key-Pins 'pin-sha256="base64+primary=="; pin-sha256="base64+backup=="; max-age=5184000; includeSubDomains' always;</pre>
+    Header always set Public-Key-Pins "pin-sha256=\"base64+primary==\"; pin-sha256=\"base64+backup==\"; max-age=5184000; includeSubDomains"
 
-<h4 id="Lighttpd">Lighttpd</h4>
+#### Nginx
 
-<p>The following line with your relevant key information (pin-sha256="..." fields) will enable HPKP on lighttpd.</p>
+Adding the following line and inserting the appropriate `pin-sha256="..."` values will enable HPKP on your nginx. This requires the `ngx_http_headers_module.`
 
-<pre>setenv.add-response-header  = ( "Public-Key-Pins" =&gt; "pin-sha256=\"base64+primary==\"; pin-sha256=\"base64+backup==\"; max-age=5184000; includeSubDomains")</pre>
+    add_header Public-Key-Pins 'pin-sha256="base64+primary=="; pin-sha256="base64+backup=="; max-age=5184000; includeSubDomains' always;
 
-<p><strong>Note:</strong> This requires the <code>mod_setenv</code> server.module loaded which can be included by the following if not already loaded.</p>
+#### Lighttpd
 
-<pre>server.modules += ( "mod_setenv" )</pre>
+The following line with your relevant key information (pin-sha256="..." fields) will enable HPKP on lighttpd.
 
-<h4 id="IIS">IIS</h4>
+    setenv.add-response-header  = ( "Public-Key-Pins" => "pin-sha256=\"base64+primary==\"; pin-sha256=\"base64+backup==\"; max-age=5184000; includeSubDomains")
 
-<p>Add the following line to the Web.config file to send the <code>Public-Key-Pins</code> header:</p>
+**Note:** This requires the `mod_setenv` server.module loaded which can be included by the following if not already loaded.
 
-<pre>&lt;system.webServer&gt;
-  ...
+    server.modules += ( "mod_setenv" )
 
-  &lt;httpProtocol&gt;
-    &lt;customHeaders&gt;
-      &lt;add name="Public-Key-Pins" value="pin-sha256=&amp;quot;base64+primary==&amp;quot;; pin-sha256=&amp;quot;base64+backup==&amp;quot;; max-age=5184000; includeSubDomains" /&gt;
-    &lt;/customHeaders&gt;
-  &lt;/httpProtocol&gt;
+#### IIS
 
-  ...
-&lt;/system.webServer&gt;
-</pre>
+Add the following line to the Web.config file to send the `Public-Key-Pins` header:
 
-<h2 id="Specifications">Specifications</h2>
+    <system.webServer>
+      ...
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Title</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{RFC("7469", "Public-Key-Pins", "2.1")}}</td>
-   <td>Public Key Pinning Extension for HTTP</td>
-  </tr>
- </tbody>
-</table>
+      <httpProtocol>
+        <customHeaders>
+          <add name="Public-Key-Pins" value="pin-sha256=&quot;base64+primary==&quot;; pin-sha256=&quot;base64+backup==&quot;; max-age=5184000; includeSubDomains" />
+        </customHeaders>
+      </httpProtocol>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+      ...
+    </system.webServer>
 
-<p>{{Compat("http.headers.Public-Key-Pins")}}</p>
+## Specifications
 
-<h2 id="See_also">See also</h2>
+| Specification                                            | Title                                 |
+| -------------------------------------------------------- | ------------------------------------- |
+| {{RFC("7469", "Public-Key-Pins", "2.1")}} | Public Key Pinning Extension for HTTP |
 
-<ul>
- <li>{{HTTPHeader("Public-Key-Pins")}}</li>
- <li>{{HTTPHeader("Public-Key-Pins-Report-Only")}}</li>
- <li>Browser test site: <a href="https://projects.dm.id.lv/Public-Key-Pins_test">HSTS and HPKP test</a></li>
- <li>{{HTTPHeader("Expect-CT")}}</li>
-</ul>
+## Browser compatibility
+
+{{Compat("http.headers.Public-Key-Pins")}}
+
+## See also
+
+- {{HTTPHeader("Public-Key-Pins")}}
+- {{HTTPHeader("Public-Key-Pins-Report-Only")}}
+- Browser test site: [HSTS and HPKP test](https://projects.dm.id.lv/Public-Key-Pins_test)
+- {{HTTPHeader("Expect-CT")}}

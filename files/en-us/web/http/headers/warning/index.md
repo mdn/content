@@ -9,29 +9,29 @@ tags:
   - Reference
 browser-compat: http.headers.Warning
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<div class="notecard note">
-  <p><strong>Note:</strong> The <code>Warning</code> header is soon to be deprecated; see
-    <a href="https://github.com/httpwg/http-core/issues/139">Warning
-      (https://github.com/httpwg/http-core/issues/139)</a> and <a
-      href="https://github.com/whatwg/fetch/issues/913">Warning: header &amp;
-      stale-while-revalidate (https://github.com/whatwg/fetch/issues/913)</a> for more
-    details.</p>
-</div>
+> **Note:** The `Warning` header is soon to be deprecated; see
+> [Warning
+> (https://github.com/httpwg/http-core/issues/139)](https://github.com/httpwg/http-core/issues/139) and [Warning: header &
+> stale-while-revalidate (https://github.com/whatwg/fetch/issues/913)](https://github.com/whatwg/fetch/issues/913) for more
+> details.
 
-<p>The <strong><code>Warning</code></strong> general HTTP header contains information
-  about possible problems with the status of the message. More than one
-  <code>Warning</code> header may appear in a response.</p>
+The **`Warning`** general HTTP header contains information
+about possible problems with the status of the message. More than one
+`Warning` header may appear in a response.
 
-<p><code>Warning</code> header fields can in general be applied to any message, however
-  some warn-codes are specific to caches and can only be applied to response messages.</p>
+`Warning` header fields can in general be applied to any message, however
+some warn-codes are specific to caches and can only be applied to response messages.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Header type</th>
-      <td>{{Glossary("Request header")}}, {{Glossary("Response header")}}</td>
+      <td>
+        {{Glossary("Request header")}},
+        {{Glossary("Response header")}}
+      </td>
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
@@ -40,116 +40,66 @@ browser-compat: http.headers.Warning
   </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: html">Warning: &lt;warn-code&gt; &lt;warn-agent&gt; &lt;warn-text&gt; [&lt;warn-date&gt;]
-</pre>
+```html
+Warning: <warn-code> <warn-agent> <warn-text> [<warn-date>]
+```
 
-<h2 id="Directives">Directives</h2>
+## Directives
 
-<dl>
-  <dt>&lt;warn-code&gt;</dt>
-  <dd>A three-digit warning number. The first digit indicates whether the
-    <code>Warning</code> is required to be deleted from a stored response after
+- \<warn-code>
+
+  - : A three-digit warning number. The first digit indicates whether the
+    `Warning` is required to be deleted from a stored response after
     validation.
-    <ul>
-      <li><code>1xx</code> warn-codes describe the freshness or validation status of the
-        response and will be deleted by a cache after deletion.</li>
-      <li>
-        <p><code>2xx</code> warn-codes describe some aspect of the representation that is
-          not rectified by a validation and won't be deleted by a cache after validation
-          unless a full response is sent.</p>
-      </li>
-    </ul>
-  </dd>
-  <dt>&lt;warn-agent&gt;</dt>
-  <dd>
-    <p>The name or pseudonym of the server or software adding the <code>Warning</code>
-      header (might be "-" when the agent is unknown).</p>
-  </dd>
-  <dt>&lt;warn-text&gt;</dt>
-  <dd>Advisory text describing the error.</dd>
-  <dt>&lt;warn-date&gt;</dt>
-  <dd>Optional. If more than one <code>Warning</code> header is sent, include a date that
-    matches the {{HTTPHeader("Date")}} header.</dd>
-</dl>
 
-<h2 id="Warning_codes">Warning codes</h2>
+    - `1xx` warn-codes describe the freshness or validation status of the
+      response and will be deleted by a cache after deletion.
+    - `2xx` warn-codes describe some aspect of the representation that is
+      not rectified by a validation and won't be deleted by a cache after validation
+      unless a full response is sent.
 
-<p>The <a
-    href="https://www.iana.org/assignments/http-warn-codes/http-warn-codes.xhtml">HTTP Warn
-    Codes registry at iana.org</a> defines the namespace for warn codes.</p>
+- \<warn-agent>
+  - : The name or pseudonym of the server or software adding the `Warning`
+    header (might be "-" when the agent is unknown).
+- \<warn-text>
+  - : Advisory text describing the error.
+- \<warn-date>
+  - : Optional. If more than one `Warning` header is sent, include a date that
+    matches the {{HTTPHeader("Date")}} header.
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Code</th>
-      <th scope="col">Text</th>
-      <th scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>110</td>
-      <td>Response is Stale</td>
-      <td>A response provided by a cache is stale (the expiration time set for it has
-        passed).</td>
-    </tr>
-    <tr>
-      <td>111</td>
-      <td>Revalidation Failed</td>
-      <td>An attempt to validate the response failed, due to an inability to reach the
-        server.</td>
-    </tr>
-    <tr>
-      <td>112</td>
-      <td>Disconnected Operation</td>
-      <td>The cache is disconnected from the rest of the network.</td>
-    </tr>
-    <tr>
-      <td>113</td>
-      <td>Heuristic Expiration</td>
-      <td>Sent If a cache heuristically chose a freshness lifetime greater than 24 hours
-        and the response's age is greater than 24 hours.</td>
-    </tr>
-    <tr>
-      <td>199</td>
-      <td>Miscellaneous Warning</td>
-      <td>Arbitrary, non-specific warning</td>
-    </tr>
-    <tr>
-      <td>214</td>
-      <td>Transformation Applied</td>
-      <td>Added by a proxy if it applies any transformation to the representation, such as
-        changing the content-coding, media-type or the like.</td>
-    </tr>
-    <tr>
-      <td>299</td>
-      <td>Miscellaneous Persistent Warning</td>
-      <td>Same as 199, but indicating a persistent warning</td>
-    </tr>
-  </tbody>
-</table>
+## Warning codes
 
-<h2 id="Examples">Examples</h2>
+The [HTTP Warn
+Codes registry at iana.org](https://www.iana.org/assignments/http-warn-codes/http-warn-codes.xhtml) defines the namespace for warn codes.
 
-<pre>Warning: 110 anderson/1.3.37 "Response is stale"
+| Code | Text                             | Description                                                                                                                           |
+| ---- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| 110  | Response is Stale                | A response provided by a cache is stale (the expiration time set for it has passed).                                                  |
+| 111  | Revalidation Failed              | An attempt to validate the response failed, due to an inability to reach the server.                                                  |
+| 112  | Disconnected Operation           | The cache is disconnected from the rest of the network.                                                                               |
+| 113  | Heuristic Expiration             | Sent If a cache heuristically chose a freshness lifetime greater than 24 hours and the response's age is greater than 24 hours.       |
+| 199  | Miscellaneous Warning            | Arbitrary, non-specific warning                                                                                                       |
+| 214  | Transformation Applied           | Added by a proxy if it applies any transformation to the representation, such as changing the content-coding, media-type or the like. |
+| 299  | Miscellaneous Persistent Warning | Same as 199, but indicating a persistent warning                                                                                      |
 
-Date: Wed, 21 Oct 2015 07:28:00 GMT
-Warning: 112 - "cache down" "Wed, 21 Oct 2015 07:28:00 GMT"
-</pre>
+## Examples
 
-<h2 id="Specifications">Specifications</h2>
+    Warning: 110 anderson/1.3.37 "Response is stale"
+
+    Date: Wed, 21 Oct 2015 07:28:00 GMT
+    Warning: 112 - "cache down" "Wed, 21 Oct 2015 07:28:00 GMT"
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{HTTPHeader("Date")}}</li>
-  <li><a href="/en-US/docs/Web/HTTP/Status">HTTP response status codes</a></li>
-</ul>
+- {{HTTPHeader("Date")}}
+- [HTTP response status codes](/en-US/docs/Web/HTTP/Status)

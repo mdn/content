@@ -2,49 +2,45 @@
 title: 'Feature-Policy: document-domain'
 slug: Web/HTTP/Headers/Feature-Policy/document-domain
 tags:
-- Directive
-- Experimental
-- Feature Policy
-- Feature-Policy
-- HTTP
-- Reference
-- document-domain
-- Header
+  - Directive
+  - Experimental
+  - Feature Policy
+  - Feature-Policy
+  - HTTP
+  - Reference
+  - document-domain
+  - Header
 browser-compat: http.headers.Feature-Policy.document-domain
 ---
-<div>{{HTTPSidebar}} {{SeeCompatTable}}</div>
+{{HTTPSidebar}} {{SeeCompatTable}}
 
-<p>The HTTP {{HTTPHeader("Feature-Policy")}} header
-    <code>document-domain</code> directive controls whether the current document is
-    allowed to set {{domxref("document.domain")}}. When this policy is disabled, attempting
-    to set {{domxref("document.domain")}} will fail and cause a <code>SecurityError</code>
-    {{domxref("DOMException")}} to be thrown.</p>
+The HTTP {{HTTPHeader("Feature-Policy")}} header
+`document-domain` directive controls whether the current document is
+allowed to set {{domxref("document.domain")}}. When this policy is disabled, attempting
+to set {{domxref("document.domain")}} will fail and cause a `SecurityError`
+{{domxref("DOMException")}} to be thrown.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre>Feature-Policy: document-domain &lt;allowlist&gt;;</pre>
+    Feature-Policy: document-domain <allowlist>;
 
-<dl>
-  <dt>&lt;allowlist&gt;</dt>
-  <dd>A list of origins for which the feature is allowed. See <a href="/en-US/docs/Web/HTTP/Headers/Feature-Policy#syntax"><code>Feature-Policy</code></a>.</dd>
-</dl>
+- \<allowlist>
+  - : A list of origins for which the feature is allowed. See [`Feature-Policy`](/en-US/docs/Web/HTTP/Headers/Feature-Policy#syntax).
 
-<h2 id="Default_policy">Default policy</h2>
+## Default policy
 
-<p>Default allow list for <code>document-domain</code> is <code>*</code>.</p>
+Default allow list for `document-domain` is `*`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{HTTPHeader("Feature-Policy")}} header</li>
-  <li><a href="/en-US/docs/Web/HTTP/Feature_Policy">Feature Policy</a></li>
-  <li><a href="/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy">Using Feature Policy</a></li>
-</ul>
+- {{HTTPHeader("Feature-Policy")}} header
+- [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy)
+- [Using Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)

@@ -8,19 +8,19 @@ tags:
   - header
 browser-compat: http.headers.ETag
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The <strong><code>ETag</code></strong> HTTP response header is an identifier for a
-  specific version of a resource. It lets caches be more efficient and save bandwidth, as
-  a web server does not need to resend a full response if the content has not changed.
-  Additionally, etags help prevent simultaneous updates of a resource from overwriting
-  each other (<a href="#avoiding_mid-air_collisions">"mid-air collisions"</a>).</p>
+The **`ETag`** HTTP response header is an identifier for a
+specific version of a resource. It lets caches be more efficient and save bandwidth, as
+a web server does not need to resend a full response if the content has not changed.
+Additionally, etags help prevent simultaneous updates of a resource from overwriting
+each other (["mid-air collisions"](#avoiding_mid-air_collisions)).
 
-<p>If the resource at a given URL changes, a new <code>Etag</code> value <em>must</em> be
-  generated. A comparison of them can determine whether two representations of a resource
-  are the same. Etags are therefore similar to fingerprints, and might also be used for
-  tracking purposes by some servers. They might also be set to persist indefinitely by a
-  tracking server.</p>
+If the resource at a given URL changes, a new `Etag` value _must_ be
+generated. A comparison of them can determine whether two representations of a resource
+are the same. Etags are therefore similar to fingerprints, and might also be used for
+tracking purposes by some servers. They might also be set to persist indefinitely by a
+tracking server.
 
 <table class="properties">
   <tbody>
@@ -35,90 +35,83 @@ browser-compat: http.headers.ETag
   </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: html">ETag: W/"&lt;etag_value&gt;"
-ETag: "&lt;etag_value&gt;"
-</pre>
+```html
+ETag: W/"<etag_value>"
+ETag: "<etag_value>"
+```
 
-<h2 id="Directives">Directives</h2>
+## Directives
 
-<dl>
-  <dt><code>W/</code> {{optional_inline}}</dt>
-  <dd><code>'W/'</code> (case-sensitive) indicates that a <a
-      href="/en-US/docs/Web/HTTP/Conditional_requests#weak_validation">weak validator</a>
+- `W/` {{optional_inline}}
+  - : `'W/'` (case-sensitive) indicates that a [weak validator](/en-US/docs/Web/HTTP/Conditional_requests#weak_validation)
     is used. Weak etags are easy to generate, but are far less useful for comparisons.
     Strong validators are ideal for comparisons but can be very difficult to generate
-    efficiently. Weak <code>ETag</code> values of two representations of the same
+    efficiently. Weak `ETag` values of two representations of the same
     resources might be semantically equivalent, but not byte-for-byte identical. This
-    means weak etags prevent caching when <a
-      href="/en-US/docs/Web/HTTP/Headers/Accept-Ranges">byte range requests</a> are used,
-    but strong etags mean range requests can still be cached.</dd>
-  <dt>"&lt;etag_value&gt;"</dt>
-  <dd>Entity tag uniquely representing the requested resource. They are a string of ASCII
-    characters placed between double quotes, like <code>"675af34563dc-tr34"</code>. The
-    method by which <code>ETag</code> values are generated is not specified. Often, a hash
+    means weak etags prevent caching when [byte range requests](/en-US/docs/Web/HTTP/Headers/Accept-Ranges) are used,
+    but strong etags mean range requests can still be cached.
+- "\<etag_value>"
+  - : Entity tag uniquely representing the requested resource. They are a string of ASCII
+    characters placed between double quotes, like `"675af34563dc-tr34"`. The
+    method by which `ETag` values are generated is not specified. Often, a hash
     of the content, a hash of the last modification timestamp, or just a revision number
-    is used. For example, MDN uses a hexadecimal hash of the wiki article content.</dd>
-</dl>
+    is used. For example, MDN uses a hexadecimal hash of the wiki article content.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre>ETag: "33a64df551425fcc55e4d42a148795d9f25f89d4"
-ETag: W/"0815"</pre>
+    ETag: "33a64df551425fcc55e4d42a148795d9f25f89d4"
+    ETag: W/"0815"
 
-<h3 id="Avoiding_mid-air_collisions">Avoiding mid-air collisions</h3>
+### Avoiding mid-air collisions
 
-<p>With the help of the <code>ETag</code> and the {{HTTPHeader("If-Match")}} headers, you
-  can detect mid-air edit collisions.</p>
+With the help of the `ETag` and the {{HTTPHeader("If-Match")}} headers, you
+can detect mid-air edit collisions.
 
-<p>For example, when editing a wiki, the current wiki content may be hashed
-  and put into an <code>Etag</code> header in the response:</p>
+For example, when editing a wiki, the current wiki content may be hashed
+and put into an `Etag` header in the response:
 
-<pre>ETag: "33a64df551425fcc55e4d42a148795d9f25f89d4"</pre>
+    ETag: "33a64df551425fcc55e4d42a148795d9f25f89d4"
 
-<p>When saving changes to a wiki page (posting data), the {{HTTPMethod("POST")}} request
-  will contain the {{HTTPHeader("If-Match")}} header containing the <code>ETag</code>
-  values to check freshness against.</p>
+When saving changes to a wiki page (posting data), the {{HTTPMethod("POST")}} request
+will contain the {{HTTPHeader("If-Match")}} header containing the `ETag`
+values to check freshness against.
 
-<pre>If-Match: "33a64df551425fcc55e4d42a148795d9f25f89d4"</pre>
+    If-Match: "33a64df551425fcc55e4d42a148795d9f25f89d4"
 
-<p>If the hashes don't match, it means that the document has been edited in-between and a
-  {{HTTPStatus("412")}} <code>Precondition Failed</code> error is thrown.</p>
+If the hashes don't match, it means that the document has been edited in-between and a
+{{HTTPStatus("412")}} `Precondition Failed` error is thrown.
 
-<h3 id="Caching_of_unchanged_resources">Caching of unchanged resources</h3>
+### Caching of unchanged resources
 
-<p>Another typical use of the <code>ETag</code> header is to cache resources that are
-  unchanged. If a user visits a given URL again (that has an <code>ETag</code> set), and
-  it is <em>stale</em> (too old to be considered usable), the client will send the value
-  of its <code>ETag</code> along in an {{HTTPHeader("If-None-Match")}} header field:</p>
+Another typical use of the `ETag` header is to cache resources that are
+unchanged. If a user visits a given URL again (that has an `ETag` set), and
+it is _stale_ (too old to be considered usable), the client will send the value
+of its `ETag` along in an {{HTTPHeader("If-None-Match")}} header field:
 
-<pre>If-None-Match: "33a64df551425fcc55e4d42a148795d9f25f89d4"</pre>
+    If-None-Match: "33a64df551425fcc55e4d42a148795d9f25f89d4"
 
-<p>The server compares the client's <code>ETag</code> (sent with
-  <code>If-None-Match</code>) with the <code>ETag</code> for its current version of the
-  resource, and if both values match (that is, the resource has not changed), the server
-  sends back a {{HTTPStatus("304")}} <code>Not Modified</code> status, without a body,
-  which tells the client that the cached version of the response is still good to use
-  (<em>fresh</em>).</p>
+The server compares the client's `ETag` (sent with
+`If-None-Match`) with the `ETag` for its current version of the
+resource, and if both values match (that is, the resource has not changed), the server
+sends back a {{HTTPStatus("304")}} `Not Modified` status, without a body,
+which tells the client that the cached version of the response is still good to use
+(_fresh_).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{HTTPHeader("If-Match")}}</li>
-  <li>{{HTTPHeader("If-None-Match")}}</li>
-  <li>{{HTTPStatus("304")}}<code> Not Modified</code></li>
-  <li>{{HTTPStatus("412")}}<code> Precondition Failed</code></li>
-  <li>
-    <p><a href="https://www.w3.org/1999/04/Editing/">W3C Note: Editing the Web – Detecting
-        the Lost Update Problem Using Unreserved Checkout</a></p>
-  </li>
-</ul>
+- {{HTTPHeader("If-Match")}}
+- {{HTTPHeader("If-None-Match")}}
+- {{HTTPStatus("304")}}` Not Modified`
+- {{HTTPStatus("412")}}` Precondition Failed`
+- [W3C Note: Editing the Web – Detecting
+  the Lost Update Problem Using Unreserved Checkout](https://www.w3.org/1999/04/Editing/)

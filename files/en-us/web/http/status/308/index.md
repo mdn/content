@@ -2,48 +2,44 @@
 title: 308 Permanent Redirect
 slug: Web/HTTP/Status/308
 tags:
-- HTTP
-- HTTP Status Code
-- Reference
-- redirects
+  - HTTP
+  - HTTP Status Code
+  - Reference
+  - redirects
 browser-compat: http.status.308
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The HyperText Transfer Protocol (HTTP)
-  <code><strong>308 Permanent Redirect</strong></code> redirect status response code
-  indicates that the resource requested has been definitively moved to the URL given by
-  the {{HTTPHeader("Location")}} headers. A browser redirects to this page and search
-  engines update their links to the resource (in 'SEO-speak', it is said that the
-  'link-juice' is sent to the new URL).</p>
+The HyperText Transfer Protocol (HTTP)
+**`308 Permanent Redirect`** redirect status response code
+indicates that the resource requested has been definitively moved to the URL given by
+the {{HTTPHeader("Location")}} headers. A browser redirects to this page and search
+engines update their links to the resource (in 'SEO-speak', it is said that the
+'link-juice' is sent to the new URL).
 
-<p>The request method and the body will not be altered, whereas {{HTTPStatus("301")}} may
-  incorrectly sometimes be changed to a {{HTTPMethod("GET")}} method.</p>
+The request method and the body will not be altered, whereas {{HTTPStatus("301")}} may
+incorrectly sometimes be changed to a {{HTTPMethod("GET")}} method.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Some Web applications may use the
-    <code>308 Permanent Redirect</code> in a non-standard way and for other purposes. For
-    example, Google Drive uses a <code>308 Resume Incomplete</code> response to indicate
-    to the client when an incomplete upload stalled. (See <a
-        href="https://developers.google.com/drive/v3/web/manage-uploads#resumable">Perform a resumable download</a> on Google Drive documentation.)
-  </p>
-</div>
+> **Note:** Some Web applications may use the
+> `308 Permanent Redirect` in a non-standard way and for other purposes. For
+> example, Google Drive uses a `308 Resume Incomplete` response to indicate
+> to the client when an incomplete upload stalled. (See [Perform a resumable download](https://developers.google.com/drive/v3/web/manage-uploads#resumable) on Google Drive documentation.)
 
-<h2 id="Status">Status</h2>
+## Status
 
-<pre class="brush: html">308 Permanent Redirect</pre>
+```html
+308 Permanent Redirect
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{HTTPStatus("301", "301 Moved Permanently")}}</li>
-  <li>{{HTTPStatus("302", "302 Found")}}, the temporary redirect</li>
-</ul>
+- {{HTTPStatus("301", "301 Moved Permanently")}}
+- {{HTTPStatus("302", "302 Found")}}, the temporary redirect

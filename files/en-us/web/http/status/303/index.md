@@ -2,37 +2,37 @@
 title: 303 See Other
 slug: Web/HTTP/Status/303
 tags:
-- HTTP
-- HTTP Status Code
-- Reference
-- redirects
+  - HTTP
+  - HTTP Status Code
+  - Reference
+  - redirects
 browser-compat: http.status.303
 ---
-<p>{{HTTPSidebar}}</p>
+{{HTTPSidebar}}
 
-<p>The HyperText Transfer Protocol (HTTP) <code><strong>303 See Other</strong></code>
-  redirect status response code indicates that the redirects don't link to the newly
-  uploaded resources, but to another page (such as a confirmation page or an upload
-  progress page). This response code is usually sent back as a result of
-  {{HTTPMethod("PUT")}} or {{HTTPMethod("POST")}}. The method used to display this
-  redirected page is always {{HTTPMethod("GET")}}.</p>
+The HyperText Transfer Protocol (HTTP) **`303 See Other`**
+redirect status response code indicates that the redirects don't link to the newly
+uploaded resources, but to another page (such as a confirmation page or an upload
+progress page). This response code is usually sent back as a result of
+{{HTTPMethod("PUT")}} or {{HTTPMethod("POST")}}. The method used to display this
+redirected page is always {{HTTPMethod("GET")}}.
 
-<h2 id="Status">Status</h2>
+## Status
 
-<pre class="brush: html">303 See Other</pre>
+```html
+303 See Other
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{HTTPStatus("302", "302 Found")}}, the temporary redirect</li>
-  <li>{{HTTPStatus("307", "307 Temporary Redirect")}}, the equivalent of this status code
-    where the method used never changes.</li>
-</ul>
+- {{HTTPStatus("302", "302 Found")}}, the temporary redirect
+- {{HTTPStatus("307", "307 Temporary Redirect")}}, the equivalent of this status code
+  where the method used never changes.

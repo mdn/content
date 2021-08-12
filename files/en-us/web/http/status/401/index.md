@@ -2,49 +2,49 @@
 title: 401 Unauthorized
 slug: Web/HTTP/Status/401
 tags:
-- Client error
-- HTTP
-- Reference
-- Status code
+  - Client error
+  - HTTP
+  - Reference
+  - Status code
 browser-compat: http.status.401
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The HTTP <strong><code>401 Unauthorized</code></strong> client error status response
-  code indicates that the request has not been applied because it lacks valid
-  authentication credentials for the target resource.</p>
+The HTTP **`401 Unauthorized`** client error status response
+code indicates that the request has not been applied because it lacks valid
+authentication credentials for the target resource.
 
-<p>This status is sent with a {{HTTPHeader("WWW-Authenticate")}} header that contains
-  information on how to authorize correctly.</p>
+This status is sent with a {{HTTPHeader("WWW-Authenticate")}} header that contains
+information on how to authorize correctly.
 
-<p>This status is similar to {{HTTPStatus("403")}}, but in this case, authentication is
-  possible.</p>
+This status is similar to {{HTTPStatus("403")}}, but in this case, authentication is
+possible.
 
-<h2 id="Status">Status</h2>
+## Status
 
-<pre class="brush: html">401 Unauthorized</pre>
+```html
+401 Unauthorized
+```
 
-<h2 id="Example_response">Example response</h2>
+## Example response
 
-<pre>HTTP/1.1 401 Unauthorized
-Date: Wed, 21 Oct 2015 07:28:00 GMT
-WWW-Authenticate: Basic realm="Access to staging site"</pre>
+    HTTP/1.1 401 Unauthorized
+    Date: Wed, 21 Oct 2015 07:28:00 GMT
+    WWW-Authenticate: Basic realm="Access to staging site"
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/HTTP/Authentication">HTTP authentication</a></li>
-  <li>{{HTTPHeader("WWW-Authenticate")}}</li>
-  <li>{{HTTPHeader("Authorization")}}</li>
-  <li>{{HTTPHeader("Proxy-Authorization")}}</li>
-  <li>{{HTTPHeader("Proxy-Authenticate")}}</li>
-  <li>{{HTTPStatus("403")}}, {{HTTPStatus("407")}}</li>
-</ul>
+- [HTTP authentication](/en-US/docs/Web/HTTP/Authentication)
+- {{HTTPHeader("WWW-Authenticate")}}
+- {{HTTPHeader("Authorization")}}
+- {{HTTPHeader("Proxy-Authorization")}}
+- {{HTTPHeader("Proxy-Authenticate")}}
+- {{HTTPStatus("403")}}, {{HTTPStatus("407")}}

@@ -10,62 +10,61 @@ tags:
   - Experimental
 browser-compat: http.headers.Feature-Policy.fullscreen
 ---
-<div>{{HTTPSidebar}} {{SeeCompatTable}}</div>
+{{HTTPSidebar}} {{SeeCompatTable}}
 
-<p>The HTTP {{HTTPHeader("Feature-Policy")}} header <code>fullscreen</code> directive controls whether the current document is allowed to use {{domxref('Element.requestFullScreen()')}}. When this policy is enabled, the returned {{jsxref('Promise')}} rejects with a {{jsxref('TypeError')}}.</p>
+The HTTP {{HTTPHeader("Feature-Policy")}} header `fullscreen` directive controls whether the current document is allowed to use {{domxref('Element.requestFullScreen()')}}. When this policy is enabled, the returned {{jsxref('Promise')}} rejects with a {{jsxref('TypeError')}}.
 
-<p>By default, top-level documents and their same-origin child frames can request and enter fullscreen mode. This directive allows or prevents cross-origin frames from using fullscreen mode. This includes same-origin frames.</p>
+By default, top-level documents and their same-origin child frames can request and enter fullscreen mode. This directive allows or prevents cross-origin frames from using fullscreen mode. This includes same-origin frames.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> If both this directive (i.e. via the <code>allow</code> attribute) and the <code>allowfullscreen</code> attribute are present on an <code>&lt;iframe&gt;</code> element, this directive takes precedence. There was a bug whereby the <code>fullscreen</code> directive didn't work unless the <code>allowfullscreen</code> attribute was also present, but this has been fixed as of Firefox 80 ({{bug(1608358)}}).</p>
-</div>
+> **Note:** If both this directive (i.e. via the `allow` attribute) and the `allowfullscreen` attribute are present on an `<iframe>` element, this directive takes precedence. There was a bug whereby the `fullscreen` directive didn't work unless the `allowfullscreen` attribute was also present, but this has been fixed as of Firefox 80 ({{bug(1608358)}}).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre>Feature-Policy: fullscreen &lt;allowlist&gt;;</pre>
+    Feature-Policy: fullscreen <allowlist>;
 
-<dl>
-  <dt>&lt;allowlist&gt;</dt>
-  <dd>A list of origins for which the feature is allowed. See <a href="/en-US/docs/Web/HTTP/Headers/Feature-Policy#syntax"><code>Feature-Policy</code></a>.</dd>
-</dl>
+- \<allowlist>
+  - : A list of origins for which the feature is allowed. See [`Feature-Policy`](/en-US/docs/Web/HTTP/Headers/Feature-Policy#syntax).
 
-<h2 id="Default_policy">Default policy</h2>
+## Default policy
 
-<p>Default allow list for <code>fullscreen</code> is <code>'self'</code>.</p>
+Default allow list for `fullscreen` is `'self'`.
 
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### General example
 
-<h3 id="General_example">General example</h3>
+SecureCorp Inc. wants to disable the Fullscreen API within all browsing contexts except for its own origin and those whose origin is `https://example.com`. It can do so by delivering the following HTTP response header to define a feature policy:
 
-<p>SecureCorp Inc. wants to disable the Fullscreen API within all browsing contexts except for its own origin and those whose origin is <code>https://example.com</code>. It can do so by delivering the following HTTP response header to define a feature policy:</p>
+```bash
+Feature-Policy: fullscreen 'self' https://example.com
+```
 
-<pre class="brush: bash">Feature-Policy: fullscreen 'self' https://example.com</pre>
+### With an \<iframe> element
 
-<h3 id="With_an_&lt;iframe&gt;_element">With an &lt;iframe&gt; element</h3>
+FastCorp Inc. wants to disable `fullscreen` for all cross-origin child frames, except for a specific \<iframe>. It can do so by delivering the following HTTP response header to define a feature policy:
 
-<p>FastCorp Inc. wants to disable <code>fullscreen</code> for all cross-origin child frames, except for a specific &lt;iframe&gt;. It can do so by delivering the following HTTP response header to define a feature policy:</p>
+```bash
+Feature-Policy: fullscreen 'self'
+```
 
-<pre class="brush: bash">Feature-Policy: fullscreen 'self'</pre>
+Then include an {{HTMLElement('iframe','allow','#Attributes')}} attribute on the `<iframe>` element:
 
-<p>Then include an {{HTMLElement('iframe','allow','#Attributes')}} attribute on the <code>&lt;iframe&gt;</code> element:</p>
+```html
+<iframe src="https://other.com/videoplayer" allow="fullscreen"></iframe>
+```
 
-<pre class="brush: html">&lt;iframe src="https://other.com/videoplayer" allow="fullscreen"&gt;&lt;/iframe&gt;</pre>
+iframe attributes can selectively enable features in certain frames, and not in others, even if those frames contain documents from the same origin.
 
-<p>iframe attributes can selectively enable features in certain frames, and not in others, even if those frames contain documents from the same origin.</p>
+## Specifications
 
-<h2 id="Specifications">Specifications</h2>
+{{Specifications}}
 
-<p>{{Specifications}}</p>
+## Browser compatibility
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+{{Compat}}
 
-<p>{{Compat}}</p>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{HTTPHeader("Feature-Policy")}} header</li>
- <li><a href="/en-US/docs/Web/HTTP/Feature_Policy">Feature Policy</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy">Using Feature Policy</a></li>
-</ul>
+- {{HTTPHeader("Feature-Policy")}} header
+- [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy)
+- [Using Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)

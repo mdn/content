@@ -5,8 +5,8 @@ tags:
   - HTTP
   - Index
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>This page lists all MDN HTTP pages along with their summary and tags.</p>
+This page lists all MDN HTTP pages along with their summary and tags.
 
-<p>{{Index("/en-US/docs/Web/HTTP")}}</p>
+{{Index("/en-US/docs/Web/HTTP")}}

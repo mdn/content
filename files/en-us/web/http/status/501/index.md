@@ -7,32 +7,31 @@ tags:
   - Status code
 browser-compat: http.status.501
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The HyperText Transfer Protocol (HTTP) <code><strong>501 Not Implemented</strong></code> server error response code means that <strong>the server does not support the functionality required to fulfill the request</strong>.</p>
+The HyperText Transfer Protocol (HTTP) **`501 Not Implemented`** server error response code means that **the server does not support the functionality required to fulfill the request**.
 
-<p>This status can also send a {{HTTPHeader("Retry-After")}} header, telling the requester when to check back to see if the functionality is supported by then.</p>
+This status can also send a {{HTTPHeader("Retry-After")}} header, telling the requester when to check back to see if the functionality is supported by then.
 
-<p><code>501</code> is the appropriate response when the server does not recognize the request method and is incapable of supporting it for any resource. The only methods that servers are required to support (and therefore that must not return <code>501</code>) are {{HTTPMethod("GET")}} and {{HTTPMethod("HEAD")}}.</p>
+`501` is the appropriate response when the server does not recognize the request method and is incapable of supporting it for any resource. The only methods that servers are required to support (and therefore that must not return `501`) are {{HTTPMethod("GET")}} and {{HTTPMethod("HEAD")}}.
 
-<p>If the server <em>does</em> recognize the method, but intentionally does not support it, the appropriate response is {{HTTPStatus(405, "405 Method Not Allowed")}}.</p>
+If the server _does_ recognize the method, but intentionally does not support it, the appropriate response is {{HTTPStatus(405, "405 Method Not Allowed")}}.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> </p>
-  <ul>
-    <li>A 501 error is not something you can fix, but requires a fix by the web server you are trying to access.</li>
-    <li>A 501 response is cacheable by default; that is, unless caching headers instruct otherwise.</li>
-  </ul>
-</div>
+> **Note:**
+>
+> - A 501 error is not something you can fix, but requires a fix by the web server you are trying to access.
+> - A 501 response is cacheable by default; that is, unless caching headers instruct otherwise.
 
-<h2 id="Status">Status</h2>
+## Status
 
-<pre class="brush: html">501 Not Implemented</pre>
+```html
+501 Not Implemented
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,22 +2,22 @@
 title: 'CSP: media-src'
 slug: Web/HTTP/Headers/Content-Security-Policy/media-src
 tags:
-- CSP
-- Content-Security-Policy
-- Directive
-- HTTP
-- Media
-- Reference
-- Security
-- media-src
-- source
+  - CSP
+  - Content-Security-Policy
+  - Directive
+  - HTTP
+  - Media
+  - Reference
+  - Security
+  - media-src
+  - source
 browser-compat: http.headers.csp.Content-Security-Policy.media-src
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
-  <code><strong>media-src</strong></code> directive specifies valid sources for loading
-  media using the {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements.</p>
+The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
+**`media-src`** directive specifies valid sources for loading
+media using the {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements.
 
 <table class="properties">
   <tbody>
@@ -31,52 +31,57 @@ browser-compat: http.headers.csp.Content-Security-Policy.media-src
     </tr>
     <tr>
       <th scope="row">{{CSP("default-src")}} fallback</th>
-      <td>Yes. If this directive is absent, the user agent will look for the
-        <code>default-src</code> directive.</td>
+      <td>
+        Yes. If this directive is absent, the user agent will look for the
+        <code>default-src</code> directive.
+      </td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>One or more sources can be allowed for the <code>media-src</code> policy:</p>
+One or more sources can be allowed for the `media-src` policy:
 
-<pre class="brush: html">Content-Security-Policy: media-src &lt;source&gt;;
-Content-Security-Policy: media-src &lt;source&gt; &lt;source&gt;;
-</pre>
+```html
+Content-Security-Policy: media-src <source>;
+Content-Security-Policy: media-src <source> <source>;
+```
 
-<h3 id="Sources">Sources</h3>
+### Sources
 
-<p>{{page("Web/HTTP/Headers/Content-Security-Policy/connect-src", "Sources")}}</p>
+{{page("Web/HTTP/Headers/Content-Security-Policy/connect-src", "Sources")}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Violation_cases">Violation cases</h3>
+### Violation cases
 
-<p>Given this CSP header:</p>
+Given this CSP header:
 
-<pre class="brush: bash">Content-Security-Policy: media-src https://example.com/</pre>
+```bash
+Content-Security-Policy: media-src https://example.com/
+```
 
-<p>The following {{HTMLElement("audio")}}, {{HTMLElement("video")}} and
-  {{HTMLElement("track")}} elements are blocked and won't load:</p>
+The following {{HTMLElement("audio")}}, {{HTMLElement("video")}} and
+{{HTMLElement("track")}} elements are blocked and won't load:
 
-<pre class="brush: html">&lt;audio src="https://not-example.com/audio"&gt;&lt;/audio&gt;
+```html
+<audio src="https://not-example.com/audio"></audio>
 
-&lt;video src="https://not-example.com/video"&gt;
-  &lt;track kind="subtitles" src="https://not-example.com/subtitles"&gt;
-&lt;/video&gt;</pre>
+<video src="https://not-example.com/video">
+  <track kind="subtitles" src="https://not-example.com/subtitles">
+</video>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{HTTPHeader("Content-Security-Policy")}}</li>
-  <li>{{HTMLElement("audio")}}, {{HTMLElement("video")}} and {{HTMLElement("track")}}</li>
-</ul>
+- {{HTTPHeader("Content-Security-Policy")}}
+- {{HTMLElement("audio")}}, {{HTMLElement("video")}} and {{HTMLElement("track")}}

@@ -9,64 +9,60 @@ tags:
   - header
 browser-compat: http.headers.WWW-Authenticate
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The HTTP <strong><code>WWW-Authenticate</code></strong> response header defines the authentication method that should be used to gain access to a resource.</p>
+The HTTP **`WWW-Authenticate`** response header defines the authentication method that should be used to gain access to a resource.
 
-<p>The <code>WWW-Authenticate</code> header is sent along with a {{HTTPStatus("401")}} <code>Unauthorized</code> response.</p>
+The `WWW-Authenticate` header is sent along with a {{HTTPStatus("401")}} `Unauthorized` response.
 
 <table class="properties">
-	<tbody>
-		<tr>
-			<th scope="row">Header type</th>
-			<td>{{Glossary("Response header")}}</td>
-		</tr>
-		<tr>
-			<th scope="row">{{Glossary("Forbidden header name")}}</th>
-			<td>no</td>
-		</tr>
-	</tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Header type</th>
+      <td>{{Glossary("Response header")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>no</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: html">WWW-Authenticate: &lt;type&gt; realm=&lt;realm&gt;[, charset="UTF-8"]
-</pre>
+```html
+WWW-Authenticate: <type> realm=<realm>[, charset="UTF-8"]
+```
 
-<h2 id="Directives">Directives</h2>
+## Directives
 
-<dl>
-	<dt>&lt;type&gt;</dt>
-	<dd><a href="/en-US/docs/Web/HTTP/Authentication#authentication_schemes">Authentication type</a>. A common type is <a href="/en-US/docs/Web/HTTP/Authentication#basic_authentication_scheme">"Basic"</a>. IANA maintains a <a href="https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml">list of Authentication schemes</a>.</dd>
-	<dt>realm=&lt;realm&gt;</dt>
-	<dd>A description of the protected area. If no realm is specified, clients often display a formatted hostname instead.</dd>
-	<dt>charset=&lt;charset&gt;</dt>
-	<dd>Tells the client the server's preferred encoding scheme when submitting a username and password. The only allowed value is the case insensitive string "UTF-8". This does not relate to the encoding of the realm string.</dd>
-</dl>
+- \<type>
+  - : [Authentication type](/en-US/docs/Web/HTTP/Authentication#authentication_schemes). A common type is ["Basic"](/en-US/docs/Web/HTTP/Authentication#basic_authentication_scheme). IANA maintains a [list of Authentication schemes](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml).
+- realm=\<realm>
+  - : A description of the protected area. If no realm is specified, clients often display a formatted hostname instead.
+- charset=\<charset>
+  - : Tells the client the server's preferred encoding scheme when submitting a username and password. The only allowed value is the case insensitive string "UTF-8". This does not relate to the encoding of the realm string.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Typically, a server response contains a <code>WWW-Authenticate</code> header that looks like this:</p>
+Typically, a server response contains a `WWW-Authenticate` header that looks like this:
 
-<pre>WWW-Authenticate: Basic realm="Access to the staging site", charset="UTF-8"
-</pre>
+    WWW-Authenticate: Basic realm="Access to the staging site", charset="UTF-8"
 
-<p>See also <a href="/en-US/docs/Web/HTTP/Authentication">HTTP authentication</a> for examples on how to configure Apache or nginx servers to password protect your site with HTTP basic authentication.</p>
+See also [HTTP authentication](/en-US/docs/Web/HTTP/Authentication) for examples on how to configure Apache or nginx servers to password protect your site with HTTP basic authentication.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li><a href="/en-US/docs/Web/HTTP/Authentication">HTTP authentication</a></li>
-	<li>{{HTTPHeader("Authorization")}}</li>
-	<li>{{HTTPHeader("Proxy-Authorization")}}</li>
-	<li>{{HTTPHeader("Proxy-Authenticate")}}</li>
-	<li>{{HTTPStatus("401")}}, {{HTTPStatus("403")}}, {{HTTPStatus("407")}}</li>
-</ul>
+- [HTTP authentication](/en-US/docs/Web/HTTP/Authentication)
+- {{HTTPHeader("Authorization")}}
+- {{HTTPHeader("Proxy-Authorization")}}
+- {{HTTPHeader("Proxy-Authenticate")}}
+- {{HTTPStatus("401")}}, {{HTTPStatus("403")}}, {{HTTPStatus("407")}}

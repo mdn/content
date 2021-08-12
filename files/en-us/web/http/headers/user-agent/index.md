@@ -8,139 +8,136 @@ tags:
   - User-agent
 browser-compat: http.headers.User-Agent
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The <strong>User-Agent</strong> {{Glossary("request header")}} is a characteristic string that lets servers and network peers identify the application, operating system, vendor, and/or version of the requesting {{Glossary("user agent")}}.</p>
+The **User-Agent** {{Glossary("request header")}} is a characteristic string that lets servers and network peers identify the application, operating system, vendor, and/or version of the requesting {{Glossary("user agent")}}.
 
-<div class="notecard warning">
-  <p><strong>Warning:</strong> Please read <a href="/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent">Browser detection using the user agent</a> for why serving different Web pages or services to different browsers is usually a bad idea.</p>
-</div>
+> **Warning:** Please read [Browser detection using the user agent](/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent) for why serving different Web pages or services to different browsers is usually a bad idea.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Request header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>no</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Header type</th>
+      <td>{{Glossary("Request header")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>no</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: html">User-Agent: &lt;product&gt; / &lt;product-version&gt; &lt;comment&gt;</pre>
+```html
+User-Agent: <product> / <product-version> <comment>
+```
 
-<p>Common format for web browsers:</p>
+Common format for web browsers:
 
-<pre class="brush: html">User-Agent: Mozilla/5.0 (&lt;system-information&gt;) &lt;platform&gt; (&lt;platform-details&gt;) &lt;extensions&gt;</pre>
+```html
+User-Agent: Mozilla/5.0 (<system-information>) <platform> (<platform-details>) <extensions>
+```
 
-<h3 id="Directives">Directives</h3>
+### Directives
 
-<dl>
- <dt><code>&lt;product&gt;</code></dt>
- <dd>A product identifier — its name or development codename.</dd>
- <dt><code>&lt;product-version&gt;</code></dt>
- <dd>Version number of the product.</dd>
- <dt><code>&lt;comment&gt;</code></dt>
- <dd>Zero or more comments containing more details; sub-product information, for example.</dd>
-</dl>
+- `<product>`
+  - : A product identifier — its name or development codename.
+- `<product-version>`
+  - : Version number of the product.
+- `<comment>`
+  - : Zero or more comments containing more details; sub-product information, for example.
 
-<h2 id="Firefox_UA_string">Firefox UA string</h2>
+## Firefox UA string
 
-<p>For more on Firefox- and Gecko-based user agent strings, see the <a href="/en-US/docs/Web/HTTP/Headers/User-Agent/Firefox">Firefox user agent string reference</a>. The UA string of Firefox is broken down into 4 components:</p>
+For more on Firefox- and Gecko-based user agent strings, see the [Firefox user agent string reference](/en-US/docs/Web/HTTP/Headers/User-Agent/Firefox). The UA string of Firefox is broken down into 4 components:
 
-<pre>Mozilla/5.0 (<strong><em>platform</em></strong>; rv:<strong><em>geckoversion</em></strong>) Gecko/<strong><em>geckotrail</em></strong> Firefox/<strong><em>firefoxversion</em></strong></pre>
+    Mozilla/5.0 (platform; rv:geckoversion) Gecko/geckotrail Firefox/firefoxversion
 
-<ol>
- <li><code>Mozilla/5.0</code> is the general token that says the browser is Mozilla-compatible. For historical reasons, almost every browser today sends it.</li>
- <li><strong><em>platform</em></strong> describes the native platform the browser is running on (Windows, Mac, Linux, Android, etc.), and if it's a mobile phone. {{Glossary("Firefox OS")}} phones say <code>Mobile</code> — the web is the platform. Note that <strong><em>platform</em></strong> can consist of multiple "<code>; </code>"-separated tokens. See below for further details and examples.</li>
- <li><strong>rv:<em>geckoversion</em></strong> indicates the release version of Gecko (such as "<em>17.0</em>"). In recent browsers, <strong><em>geckoversion</em></strong> is the same as <strong><em>firefoxversion</em></strong>.</li>
- <li><strong><em>Gecko/geckotrail</em></strong> indicates that the browser is based on Gecko. (On Desktop, <em><strong>geckotrail</strong></em> is always the fixed string <code>20100101</code>.)</li>
- <li><em><strong>Firefox/firefoxversion</strong></em> indicates the browser is Firefox, and provides the version (such as "<em>17.0"</em>).</li>
-</ol>
+1.  `Mozilla/5.0` is the general token that says the browser is Mozilla-compatible. For historical reasons, almost every browser today sends it.
+2.  **_platform_** describes the native platform the browser is running on (Windows, Mac, Linux, Android, etc.), and if it's a mobile phone. {{Glossary("Firefox OS")}} phones say `Mobile` — the web is the platform. Note that **_platform_** can consist of multiple "`; `"-separated tokens. See below for further details and examples.
+3.  **rv:_geckoversion_** indicates the release version of Gecko (such as "_17.0_"). In recent browsers, **_geckoversion_** is the same as **_firefoxversion_**.
+4.  **_Gecko/geckotrail_** indicates that the browser is based on Gecko. (On Desktop, **_geckotrail_** is always the fixed string `20100101`.)
+5.  **_Firefox/firefoxversion_** indicates the browser is Firefox, and provides the version (such as "_17.0"_).
 
-<h3>Examples</h3>
+### Examples
 
-<pre>Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:47.0) Gecko/20100101 Firefox/47.0
-Mozilla/5.0 (Macintosh; Intel Mac OS X <em>x.y</em>; rv:42.0) Gecko/20100101 Firefox/42.0
-</pre>
+    Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:47.0) Gecko/20100101 Firefox/47.0
+    Mozilla/5.0 (Macintosh; Intel Mac OS X x.y; rv:42.0) Gecko/20100101 Firefox/42.0
 
-<h2 id="Chrome_UA_string">Chrome UA string</h2>
+## Chrome UA string
 
-<p>The Chrome (or Chromium/Blink-based engines) user agent string is similar to Firefox’s. For compatibility, it adds strings like <code>KHTML, like Gecko</code> and <code>Safari</code>.</p>
+The Chrome (or Chromium/Blink-based engines) user agent string is similar to Firefox’s. For compatibility, it adds strings like `KHTML, like Gecko` and `Safari`.
 
-<h3>Examples</h3>
+### Examples
 
-<pre>Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36</pre>
+    Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36
 
-<h2 id="Opera_UA_string">Opera UA string</h2>
+## Opera UA string
 
-<p>The Opera browser is also based on the Blink engine, which is why it almost looks the same, but adds <code>"OPR/&lt;version&gt;"</code>.</p>
+The Opera browser is also based on the Blink engine, which is why it almost looks the same, but adds `"OPR/<version>"`.
 
-<h3>Examples</h3>
+### Examples
 
-<pre>Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.106 Safari/537.36 OPR/38.0.2220.41</pre>
+    Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.106 Safari/537.36 OPR/38.0.2220.41
 
-<p>Older, Presto-based Opera releases used:</p>
+Older, Presto-based Opera releases used:
 
-<pre>Opera/9.80 (Macintosh; Intel Mac OS X; U; en) Presto/2.2.15 Version/10.00
-Opera/9.60 (Windows NT 6.0; U; en) Presto/2.1.1</pre>
+    Opera/9.80 (Macintosh; Intel Mac OS X; U; en) Presto/2.2.15 Version/10.00
+    Opera/9.60 (Windows NT 6.0; U; en) Presto/2.1.1
 
-<h2 id="Edge_UA_string">Microsoft Edge UA string</h2>
+## Microsoft Edge UA string
 
-<p>The Edge browser is also based on the Blink engine.</p>
+The Edge browser is also based on the Blink engine.
 
-<h3>Examples</h3>
+### Examples
 
-<pre>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36 Edg/91.0.864.59</pre>
+    Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36 Edg/91.0.864.59
 
-<h2 id="Safari_UA_string">Safari UA string</h2>
+## Safari UA string
 
-<p>In this example, the user agent string is mobile Safari’s version. It contains the word <code>"Mobile"</code>.</p>
+In this example, the user agent string is mobile Safari’s version. It contains the word `"Mobile"`.
 
-<h3>Examples</h3>
+### Examples
 
-<pre>Mozilla/5.0 (iPhone; CPU iPhone OS 13_5_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.1 Mobile/15E148 Safari/604.1</pre>
+    Mozilla/5.0 (iPhone; CPU iPhone OS 13_5_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.1 Mobile/15E148 Safari/604.1
 
-<h2 id="Internet_Explorer_UA_string">Internet Explorer UA string</h2>
+## Internet Explorer UA string
 
-<h3>Examples</h3>
+### Examples
 
-<pre>Mozilla/5.0 (compatible; MSIE 9.0; Windows Phone OS 7.5; Trident/5.0; IEMobile/9.0)</pre>
+    Mozilla/5.0 (compatible; MSIE 9.0; Windows Phone OS 7.5; Trident/5.0; IEMobile/9.0)
 
-<h2 id="Crawler_and_bot_UA_strings">Crawler and bot UA strings</h2>
+## Crawler and bot UA strings
 
-<h3>Examples</h3>
+### Examples
 
-<pre>Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)</pre>
+    Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)
 
-<pre>Mozilla/5.0 (compatible; YandexAccessibilityBot/3.0; +http://yandex.com/bots)</pre>
+<!---->
 
-<h2 id="Library_and_net_tool_UA_strings">Library and net tool UA strings</h2>
+    Mozilla/5.0 (compatible; YandexAccessibilityBot/3.0; +http://yandex.com/bots)
 
-<h3>Examples</h3>
+## Library and net tool UA strings
 
-<pre>curl/7.64.1</pre>
+### Examples
 
-<pre>PostmanRuntime/7.26.5</pre>
+    curl/7.64.1
 
-<h2 id="Specifications">Specifications</h2>
+<!---->
+
+    PostmanRuntime/7.26.5
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://hacks.mozilla.org/2013/09/user-agent-detection-history-and-checklist/">User-Agent detection, history and checklist</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Headers/User-Agent/Firefox">Firefox user agent string reference</a></li>
- <li>
-  <p><a href="/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent">Browser detection using the user agent</a></p>
- </li>
-</ul>
+- [User-Agent detection, history and checklist](https://hacks.mozilla.org/2013/09/user-agent-detection-history-and-checklist/)
+- [Firefox user agent string reference](/en-US/docs/Web/HTTP/Headers/User-Agent/Firefox)
+- [Browser detection using the user agent](/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent)

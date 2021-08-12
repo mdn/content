@@ -2,31 +2,27 @@
 title: Digest
 slug: Web/HTTP/Headers/Digest
 tags:
-- HTTP
-- HTTP Header
+  - HTTP
+  - HTTP Header
 browser-compat: http.headers.Digest
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The <code><strong>Digest</strong></code> response HTTP header provides a
-  {{Glossary("digest")}} of the requested resource.</p>
+The **`Digest`** response HTTP header provides a
+{{Glossary("digest")}} of the requested resource.
 
-<p>
-  In <a href="https://datatracker.ietf.org/doc/html/rfc7231">RFC 7231</a> terms,
-  this is the <em>selected representation</em> of a resource.
-  The selected representation depends
-  on the <code><a href="/en-US/docs/Web/HTTP/Headers/Content-Type">Content-Type</a></code>
-  and <code><a href="/en-US/docs/Web/HTTP/Headers/Content-Encoding">Content-Encoding</a></code> header values,
-  so a single resource may have multiple different digest values.
-</p>
+In [RFC 7231](https://datatracker.ietf.org/doc/html/rfc7231) terms,
+this is the _selected representation_ of a resource.
+The selected representation depends
+on the [`Content-Type`](/en-US/docs/Web/HTTP/Headers/Content-Type)
+and [`Content-Encoding`](/en-US/docs/Web/HTTP/Headers/Content-Encoding) header values,
+so a single resource may have multiple different digest values.
 
-<p>The digest is calculated over the entire representation. The representation itself may be:</p>
+The digest is calculated over the entire representation. The representation itself may be:
 
-<ul>
-  <li>fully contained in the response message body,</li>
-  <li>not at all contained in the message body (for example, in a response to a <code><a href="/en-US/docs/Web/HTTP/Methods/HEAD">HEAD</a></code> request),</li>
-  <li>or partially contained in the message body (for example, in a response to a <a href="/en-US/docs/Web/HTTP/Range_requests">range request</a>).</li>
-</ul>
+- fully contained in the response message body,
+- not at all contained in the message body (for example, in a response to a [`HEAD`](/en-US/docs/Web/HTTP/Methods/HEAD) request),
+- or partially contained in the message body (for example, in a response to a [range request](/en-US/docs/Web/HTTP/Range_requests)).
 
 <table class="properties">
   <tbody>
@@ -41,61 +37,45 @@ browser-compat: http.headers.Digest
   </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre>Digest: &lt;digest-algorithm&gt;=&lt;digest-value&gt;
-Digest: &lt;digest-algorithm&gt;=&lt;digest-value&gt;,&lt;digest-algorithm&gt;=&lt;digest-value&gt;
-</pre>
+    Digest: <digest-algorithm>=<digest-value>
+    Digest: <digest-algorithm>=<digest-value>,<digest-algorithm>=<digest-value>
 
-<h2 id="Directives">Directives</h2>
+## Directives
 
-<dl>
-  <dt><code>&lt;digest-algorithm&gt;</code></dt>
-  <dd>Supported digest algorithms are defined in <a
-      href="https://datatracker.ietf.org/doc/html/rfc3230">RFC 3230</a> and <a
-      href="https://datatracker.ietf.org/doc/html/rfc5843">RFC 5843</a>, and include
-    <code>SHA-256</code> and <code>SHA-512</code>. Some of the supported algorithms,
-    including <code>unixsum</code> and <code>MD5</code> are subject to collisions and are
-    thus not suitable for applications in which collision-resistance is important.</dd>
-  <dt><code>&lt;digest-value&gt;</code></dt>
-  <dd>The result of applying the digest algorithm to the resource representation and
+- `<digest-algorithm>`
+  - : Supported digest algorithms are defined in [RFC 3230](https://datatracker.ietf.org/doc/html/rfc3230) and [RFC 5843](https://datatracker.ietf.org/doc/html/rfc5843), and include
+    `SHA-256` and `SHA-512`. Some of the supported algorithms,
+    including `unixsum` and `MD5` are subject to collisions and are
+    thus not suitable for applications in which collision-resistance is important.
+- `<digest-value>`
+  - : The result of applying the digest algorithm to the resource representation and
     encoding the result. The choice of digest algorithm also determines the encoding to
-    use: for example <code>SHA-256</code> uses base64 encoding.</dd>
-</dl>
+    use: for example `SHA-256` uses base64 encoding.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre>Digest: sha-256=X48E9qOokqqrvdts8nOJRJN3OWDUoyWxBf7kbu9DBPE=
-Digest: sha-256=X48E9qOokqqrvdts8nOJRJN3OWDUoyWxBf7kbu9DBPE=,unixsum=30637</pre>
+    Digest: sha-256=X48E9qOokqqrvdts8nOJRJN3OWDUoyWxBf7kbu9DBPE=
+    Digest: sha-256=X48E9qOokqqrvdts8nOJRJN3OWDUoyWxBf7kbu9DBPE=,unixsum=30637
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table>
-    <tr>
-      <th>Specification</th>
-    </tr>
-    <tr>
-      <td><a href="https://datatracker.ietf.org/doc/draft-ietf-httpbis-digest-headers">draft-ietf-httpbis-digest-headers-latest</a></td>
-    </tr>
-</table>
+| Specification                                                                                                  |
+| -------------------------------------------------------------------------------------------------------------- |
+| [draft-ietf-httpbis-digest-headers-latest](https://datatracker.ietf.org/doc/draft-ietf-httpbis-digest-headers) |
 
-<p>
-  This header was originally defined in <a href="https://datatracker.ietf.org/doc/html/rfc3230">RFC 3230</a>,
-  but the definition of "selected representation" in <a  href="https://www.rfc-editor.org/info/rfc7231">RFC 7231</a> made the original definition inconsistent with current HTTP specifications.
-  When released, The "Resource Digests for HTTP" draft therefore will obsolete RFC 3230
-  and will update the standard to be consistent.
-</p>
+This header was originally defined in [RFC 3230](https://datatracker.ietf.org/doc/html/rfc3230),
+but the definition of "selected representation" in [RFC 7231](https://www.rfc-editor.org/info/rfc7231) made the original definition inconsistent with current HTTP specifications.
+When released, The "Resource Digests for HTTP" draft therefore will obsolete RFC 3230
+and will update the standard to be consistent.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{HTTPHeader("Want-Digest")}}</li>
-  <li><a href="/en-US/docs/Web/HTTP/Range_requests">HTTP range requests</a></li>
-  <li><a href="/en-US/docs/Web/HTTP/Status/206"
-      title="The HTTP 206 Partial Content success status response code indicates that the request has succeeded and has the body contains the requested ranges of data, as described in the Range header of the request."><code>206 Partial Content</code></a>
-  </li>
-</ul>
+- {{HTTPHeader("Want-Digest")}}
+- [HTTP range requests](/en-US/docs/Web/HTTP/Range_requests)
+- [`206 Partial Content`](/en-US/docs/Web/HTTP/Status/206 "The HTTP 206 Partial Content success status response code indicates that the request has succeeded and has the body contains the requested ranges of data, as described in the Range header of the request.")

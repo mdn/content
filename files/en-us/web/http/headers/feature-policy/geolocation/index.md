@@ -7,76 +7,74 @@ tags:
   - HTTP
   - header
   - Experimental
-
 browser-compat: http.headers.Feature-Policy.geolocation
 ---
-<div>{{HTTPSidebar}} {{SeeCompatTable}}</div>
+{{HTTPSidebar}} {{SeeCompatTable}}
 
-<p>The HTTP {{HTTPHeader("Feature-Policy")}} header
-    <code>geolocation</code> directive controls whether the current document is allowed to
-    use the {{domxref('Geolocation')}} Interface. When this policy is enabled, calls to
-    {{domxref('Geolocation.getCurrentPosition','getCurrentPosition()')}} and
-    {{domxref('Geolocation.watchPosition','watchPosition()')}} will cause those functions'
-    callbacks to be invoked with a {{domxref('GeolocationPositionError')}} code of
-    <code>PERMISSION_DENIED</code>.</p>
+The HTTP {{HTTPHeader("Feature-Policy")}} header
+`geolocation` directive controls whether the current document is allowed to
+use the {{domxref('Geolocation')}} Interface. When this policy is enabled, calls to
+{{domxref('Geolocation.getCurrentPosition','getCurrentPosition()')}} and
+{{domxref('Geolocation.watchPosition','watchPosition()')}} will cause those functions'
+callbacks to be invoked with a {{domxref('GeolocationPositionError')}} code of
+`PERMISSION_DENIED`.
 
-<p>By default, the Geolocation API can be used within top-level documents and their
-  same-origin child frames. This directive allows or prevents cross-origin frames from
-  accessing geolocation. This includes same-origin frames.</p>
+By default, the Geolocation API can be used within top-level documents and their
+same-origin child frames. This directive allows or prevents cross-origin frames from
+accessing geolocation. This includes same-origin frames.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre>Feature-Policy: geolocation &lt;allowlist&gt;;</pre>
+    Feature-Policy: geolocation <allowlist>;
 
-<dl>
-  <dt>&lt;allowlist&gt;</dt>
-  <dd>A list of origins for which the feature is allowed. See <a href="/en-US/docs/Web/HTTP/Headers/Feature-Policy#syntax"><code>Feature-Policy</code></a>.</dd>
-</dl>
+- \<allowlist>
+  - : A list of origins for which the feature is allowed. See [`Feature-Policy`](/en-US/docs/Web/HTTP/Headers/Feature-Policy#syntax).
 
-<h2 id="Default_policy">Default policy</h2>
+## Default policy
 
-<p>Default allow list for <code>geolocation</code> is <code>'self'</code>.</p>
+Default allow list for `geolocation` is `'self'`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="General_example">General example</h3>
+### General example
 
-<p>SecureCorp Inc. wants to disable the Geolocation API within all browsing contexts
-  except for its own origin and those whose origin is <code>https://example.com</code>. It
-  can do so by delivering the following HTTP response header to define a feature policy:
-</p>
+SecureCorp Inc. wants to disable the Geolocation API within all browsing contexts
+except for its own origin and those whose origin is `https://example.com`. It
+can do so by delivering the following HTTP response header to define a feature policy:
 
-<pre class="brush: bash">Feature-Policy: geolocation 'self' https://example.com</pre>
+```bash
+Feature-Policy: geolocation 'self' https://example.com
+```
 
-<h3 id="With_an_&lt;iframe&gt;_element">With an &lt;iframe&gt; element</h3>
+### With an \<iframe> element
 
-<p>FastCorp Inc. wants to disable <code>geolocation</code> for all cross-origin child
-  frames, except for a specific &lt;iframe&gt;. It can do so by delivering the following
-  HTTP response header to define a feature policy:</p>
+FastCorp Inc. wants to disable `geolocation` for all cross-origin child
+frames, except for a specific \<iframe>. It can do so by delivering the following
+HTTP response header to define a feature policy:
 
-<pre class="brush: bash">Feature-Policy: geolocation 'self'</pre>
+```bash
+Feature-Policy: geolocation 'self'
+```
 
-<p>Then include an {{HTMLElement('iframe','allow','#Attributes')}} attribute on the
-  <code>&lt;iframe&gt;</code> element:</p>
+Then include an {{HTMLElement('iframe','allow','#Attributes')}} attribute on the
+`<iframe>` element:
 
-<pre>&lt;iframe src="https://other.com/map" allow="geolocation"&gt;&lt;/iframe&gt;</pre>
+    <iframe src="https://other.com/map" allow="geolocation"></iframe>
 
-<p>iframe attributes can selectively enable features in certain frames, and not in others,
-  even if those frames contain documents from the same origin.</p>
+iframe attributes can selectively enable features in certain frames, and not in others,
+even if those frames contain documents from the same origin.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{HTTPHeader("Feature-Policy")}} header</li>
-  <li><a href="/en-US/docs/Web/HTTP/Feature_Policy">Feature Policy</a></li>
-  <li><a href="/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy">Using Feature
-      Policy</a></li>
-</ul>
+- {{HTTPHeader("Feature-Policy")}} header
+- [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy)
+- [Using Feature
+  Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)

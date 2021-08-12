@@ -2,23 +2,23 @@
 title: 'CSP: manifest-src'
 slug: Web/HTTP/Headers/Content-Security-Policy/manifest-src
 tags:
-- CSP
-- Content-Security-Policy
-- Directive
-- HTTP
-- Manifest
-- Reference
-- Security
-- manifest-src
-- source
+  - CSP
+  - Content-Security-Policy
+  - Directive
+  - HTTP
+  - Manifest
+  - Reference
+  - Security
+  - manifest-src
+  - source
 browser-compat: http.headers.csp.Content-Security-Policy.manifest-src
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The HTTP
-  {{HTTPHeader("Content-Security-Policy")}}<code>: <strong>manifest-src</strong></code>
-  directive specifies which <a href="/en-US/docs/Web/Manifest">manifest</a> can be applied
-  to the resource.</p>
+The HTTP
+{{HTTPHeader("Content-Security-Policy")}}`: manifest-src`
+directive specifies which [manifest](/en-US/docs/Web/Manifest) can be applied
+to the resource.
 
 <table class="properties">
   <tbody>
@@ -32,49 +32,53 @@ browser-compat: http.headers.csp.Content-Security-Policy.manifest-src
     </tr>
     <tr>
       <th scope="row">{{CSP("default-src")}} fallback</th>
-      <td>Yes. If this directive is absent, the user agent will look for the
-        <code>default-src</code> directive.</td>
+      <td>
+        Yes. If this directive is absent, the user agent will look for the
+        <code>default-src</code> directive.
+      </td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>One or more sources can be allowed for the <code>manifest-src</code> policy:</p>
+One or more sources can be allowed for the `manifest-src` policy:
 
-<pre class="brush: html">Content-Security-Policy: manifest-src &lt;source&gt;;
-Content-Security-Policy: manifest-src &lt;source&gt; &lt;source&gt;;
-</pre>
+```html
+Content-Security-Policy: manifest-src <source>;
+Content-Security-Policy: manifest-src <source> <source>;
+```
 
-<h3 id="Sources">Sources</h3>
+### Sources
 
-<p>{{page("Web/HTTP/Headers/Content-Security-Policy/connect-src", "Sources")}}</p>
+{{page("Web/HTTP/Headers/Content-Security-Policy/connect-src", "Sources")}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Violation_cases">Violation cases</h3>
+### Violation cases
 
-<p>Given this CSP header:</p>
+Given this CSP header:
 
-<pre class="brush: bash">Content-Security-Policy: manifest-src https://example.com/</pre>
+```bash
+Content-Security-Policy: manifest-src https://example.com/
+```
 
-<p>The following {{HTMLElement("link")}} is blocked and won't load:</p>
+The following {{HTMLElement("link")}} is blocked and won't load:
 
-<pre
-  class="brush: html">&lt;link rel="manifest" href="https://not-example.com/manifest"&gt;</pre>
+```html
+<link rel="manifest" href="https://not-example.com/manifest">
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{HTTPHeader("Content-Security-Policy")}}</li>
-  <li><a href="/en-US/docs/Web/Manifest">Web app manifest</a></li>
-  <li>{{HTMLElement("link")}}</li>
-</ul>
+- {{HTTPHeader("Content-Security-Policy")}}
+- [Web app manifest](/en-US/docs/Web/Manifest)
+- {{HTMLElement("link")}}

@@ -9,91 +9,84 @@ tags:
   - header
 browser-compat: http.headers.Clear-Site-Data
 ---
-<p>{{HTTPSidebar}}</p>
+{{HTTPSidebar}}
 
-<p>The <strong><code>Clear-Site-Data</code></strong> header clears browsing data (cookies, storage, cache) associated with the requesting website. It allows web developers to have more control over the data stored locally by a browser for their origins.</p>
+The **`Clear-Site-Data`** header clears browsing data (cookies, storage, cache) associated with the requesting website. It allows web developers to have more control over the data stored locally by a browser for their origins.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Response header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>no</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Header type</th>
+      <td>{{Glossary("Response header")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>no</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>Clear-Site-Data</code> header accepts one or more directives. If all types of data should be cleared, the wildcard directive (<code>"*"</code>) can be used.</p>
+The `Clear-Site-Data` header accepts one or more directives. If all types of data should be cleared, the wildcard directive (`"*"`) can be used.
 
-<pre>// Single directive
-Clear-Site-Data: "cache"
+    // Single directive
+    Clear-Site-Data: "cache"
 
-// Multiple directives (comma separated)
-Clear-Site-Data: "cache", "cookies"
+    // Multiple directives (comma separated)
+    Clear-Site-Data: "cache", "cookies"
 
-// Wild card
-Clear-Site-Data: "*"
-</pre>
+    // Wild card
+    Clear-Site-Data: "*"
 
-<h2 id="Directives">Directives</h2>
+## Directives
 
-<div class="notecard note">
-  <p><strong>Note:</strong> All directives must comply with the <a href="https://tools.ietf.org/html/rfc7230#section-3.2.6">quoted-string grammar</a>. A directive that does not include the double quotes is invalid.</p>
-</div>
+> **Note:** All directives must comply with the [quoted-string grammar](https://tools.ietf.org/html/rfc7230#section-3.2.6). A directive that does not include the double quotes is invalid.
 
-<dl>
- <dt id="cache"><code>"cache"</code></dt>
- <dd>Indicates that the server wishes to remove locally cached data (i.e. the browser cache, see <a href="/en-US/docs/Web/HTTP/Caching">HTTP caching</a>) for the origin of the response URL. Depending on the browser, this might also clear out things like pre-rendered pages, script caches, WebGL shader caches, or address bar suggestions.</dd>
- <dt id="cookies"><code>"cookies"</code></dt>
- <dd>Indicates that the server wishes to remove all cookies for the origin of the response URL. HTTP authentication credentials are also cleared out. This affects the entire registered domain, including subdomains. So https://example.com as well as https://stage.example.com, will have cookies cleared.</dd>
- <dt id="storage"><code>"storage"</code></dt>
- <dd>Indicates that the server wishes to remove all DOM storage for the origin of the response URL. This includes storage mechanisms such as:
- <ul>
-  <li>localStorage (executes <code>localStorage.clear</code>),</li>
-  <li>sessionStorage (executes <code>sessionStorage.clear</code>),</li>
-  <li>IndexedDB (for each database execute {{domxref("IDBFactory.deleteDatabase")}}),</li>
-  <li>Service worker registrations (for each service worker registration, execute {{domxref("ServiceWorkerRegistration.unregister")}}),</li>
-  <li><a href="/en-US/docs/Web/HTML/Using_the_application_cache">AppCache,</a></li>
-  <li>WebSQL databases,</li>
-  <li><a href="/en-US/docs/Web/API/File_and_Directory_Entries_API">FileSystem API data</a>,</li>
-  <li>Plugin data (Flash via <code><a href="https://wiki.mozilla.org/NPAPI:ClearSiteData">NPP_ClearSiteData</a></code>).</li>
- </ul>
- </dd>
- <dt id="executionContexts"><code>"executionContexts"</code></dt>
- <dd>Indicates that the server wishes to reload all browsing contexts for the origin of the response ({{domxref("Location.reload")}}).</dd>
- <dt><code>"*"</code> (wildcard)</dt>
- <dd>Indicates that the server wishes to clear all types of data for the origin of the response. If more data types are added in future versions of this header, they will also be covered by it.</dd>
-</dl>
+- `"cache"`
+  - : Indicates that the server wishes to remove locally cached data (i.e. the browser cache, see [HTTP caching](/en-US/docs/Web/HTTP/Caching)) for the origin of the response URL. Depending on the browser, this might also clear out things like pre-rendered pages, script caches, WebGL shader caches, or address bar suggestions.
+- `"cookies"`
+  - : Indicates that the server wishes to remove all cookies for the origin of the response URL. HTTP authentication credentials are also cleared out. This affects the entire registered domain, including subdomains. So https\://example.com as well as https\://stage.example.com, will have cookies cleared.
+- `"storage"`
 
-<h2 id="Examples">Examples</h2>
+  - : Indicates that the server wishes to remove all DOM storage for the origin of the response URL. This includes storage mechanisms such as:
 
-<h3 id="Sign_out_of_web_site">Sign out of web site</h3>
+    - localStorage (executes `localStorage.clear`),
+    - sessionStorage (executes `sessionStorage.clear`),
+    - IndexedDB (for each database execute {{domxref("IDBFactory.deleteDatabase")}}),
+    - Service worker registrations (for each service worker registration, execute {{domxref("ServiceWorkerRegistration.unregister")}}),
+    - [AppCache,](/en-US/docs/Web/HTML/Using_the_application_cache)
+    - WebSQL databases,
+    - [FileSystem API data](/en-US/docs/Web/API/File_and_Directory_Entries_API),
+    - Plugin data (Flash via [`NPP_ClearSiteData`](https://wiki.mozilla.org/NPAPI:ClearSiteData)).
 
-<p>If a user signs out of your website or service, you might want to remove locally stored data. You can achieve that by adding the <code>Clear-Site-Data</code> header when sending the page confirming that logging out from the site has been accomplished successfully (https://example.com/logout, for example):</p>
+- `"executionContexts"`
+  - : Indicates that the server wishes to reload all browsing contexts for the origin of the response ({{domxref("Location.reload")}}).
+- `"*"` (wildcard)
+  - : Indicates that the server wishes to clear all types of data for the origin of the response. If more data types are added in future versions of this header, they will also be covered by it.
 
-<pre>Clear-Site-Data: "cache", "cookies", "storage", "executionContexts"</pre>
+## Examples
 
-<h3 id="Clearing_cookies">Clearing cookies</h3>
+### Sign out of web site
 
-<p>If this header is delivered with the response at https://example.com/clear-cookies, all cookies on the same domain https://example.com and any subdomains (like https://stage.example.com, etc), will be cleared out.</p>
+If a user signs out of your website or service, you might want to remove locally stored data. You can achieve that by adding the `Clear-Site-Data` header when sending the page confirming that logging out from the site has been accomplished successfully (https\://example.com/logout, for example):
 
-<pre>Clear-Site-Data: "cookies"</pre>
+    Clear-Site-Data: "cache", "cookies", "storage", "executionContexts"
 
-<h2 id="Specifications">Specifications</h2>
+### Clearing cookies
+
+If this header is delivered with the response at https\://example.com/clear-cookies, all cookies on the same domain https\://example.com and any subdomains (like https\://stage.example.com, etc), will be cleared out.
+
+    Clear-Site-Data: "cookies"
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTTPHeader("Cache-Control")}}</li>
-</ul>
+- {{HTTPHeader("Cache-Control")}}

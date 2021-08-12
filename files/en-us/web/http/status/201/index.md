@@ -2,37 +2,37 @@
 title: 201 Created
 slug: Web/HTTP/Status/201
 tags:
-- HTTP
-- Reference
-- Status code
-- Success
+  - HTTP
+  - Reference
+  - Status code
+  - Success
 browser-compat: http.status.201
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The HTTP <strong><code>201 Created</code></strong> success status response code
-  indicates that the request has succeeded and has led to the creation of a resource. The
-  new resource is effectively created before this response is sent back and the new
-  resource is returned in the body of the message, its location being either the URL of
-  the request, or the content of the {{HTTPHeader("Location")}} header.</p>
+The HTTP **`201 Created`** success status response code
+indicates that the request has succeeded and has led to the creation of a resource. The
+new resource is effectively created before this response is sent back and the new
+resource is returned in the body of the message, its location being either the URL of
+the request, or the content of the {{HTTPHeader("Location")}} header.
 
-<p>The common use case of this status code is as the result of a {{HTTPMethod("POST")}}
-  request.</p>
+The common use case of this status code is as the result of a {{HTTPMethod("POST")}}
+request.
 
-<h2 id="Status">Status</h2>
+## Status
 
-<pre class="brush: html">201 Created</pre>
+```html
+201 Created
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/HTTP/Methods">HTTP request methods</a></li>
-</ul>
+- [HTTP request methods](/en-US/docs/Web/HTTP/Methods)

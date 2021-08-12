@@ -8,12 +8,12 @@ tags:
   - Request header
   - header
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The HTTP <strong><code>Proxy-Authorization</code></strong> request header contains the
-  credentials to authenticate a user agent to a proxy server, usually after the server has
-  responded with a {{HTTPStatus("407")}} <code>Proxy Authentication Required</code> status
-  and the {{HTTPHeader("Proxy-Authenticate")}} header.</p>
+The HTTP **`Proxy-Authorization`** request header contains the
+credentials to authenticate a user agent to a proxy server, usually after the server has
+responded with a {{HTTPStatus("407")}} `Proxy Authentication Required` status
+and the {{HTTPHeader("Proxy-Authenticate")}} header.
 
 <table class="properties">
   <tbody>
@@ -28,55 +28,45 @@ tags:
   </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: html">Proxy-Authorization: &lt;type&gt; &lt;credentials&gt;</pre>
+```html
+Proxy-Authorization: <type> <credentials>
+```
 
-<h2 id="Directives">Directives</h2>
+## Directives
 
-<dl>
-  <dt>&lt;type&gt;</dt>
-  <dd><a href="/en-US/docs/Web/HTTP/Authentication#authentication_schemes">Authentication
-      type</a>. A common type is <a
-      href="/en-US/docs/Web/HTTP/Authentication#basic_authentication_scheme">"Basic"</a>.
-    See also the <a
-      href="https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml">IANA
-      registry of Authentication schemes</a>.</dd>
-  <dt>&lt;credentials&gt;</dt>
-  <dd>The credentials are constructed like this:
-    <ul>
-      <li>The username and the password are combined with a colon
-        (<code>aladdin:opensesame</code>).</li>
-      <li>The resulting string is <a
-          href="/en-US/docs/Glossary/Base64">base64</a>
-        encoded (<code>YWxhZGRpbjpvcGVuc2VzYW1l</code>).</li>
-    </ul>
+- \<type>
+  - : [Authentication
+    type](/en-US/docs/Web/HTTP/Authentication#authentication_schemes). A common type is ["Basic"](/en-US/docs/Web/HTTP/Authentication#basic_authentication_scheme).
+    See also the [IANA
+    registry of Authentication schemes](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml).
+- \<credentials>
 
-    <div class="notecard note">
-      <p><strong>Note:</strong> Base64 encoding does not mean encryption or hashing! This
-        method is equally secure as sending the credentials in clear text (base64 is a
-        reversible encoding). Prefer to use HTTPS in conjunction with Basic
-        Authentication.</p>
-    </div>
-  </dd>
-</dl>
+  - : The credentials are constructed like this:
 
-<h2 id="Examples">Examples</h2>
+    - The username and the password are combined with a colon
+      (`aladdin:opensesame`).
+    - The resulting string is [base64](/en-US/docs/Glossary/Base64)
+      encoded (`YWxhZGRpbjpvcGVuc2VzYW1l`).
 
-<pre>Proxy-Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
-</pre>
+    > **Note:** Base64 encoding does not mean encryption or hashing! This
+    > method is equally secure as sending the credentials in clear text (base64 is a
+    > reversible encoding). Prefer to use HTTPS in conjunction with Basic
+    > Authentication.
 
-<h2 id="Specifications">Specifications</h2>
+## Examples
+
+    Proxy-Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/HTTP/Authentication">HTTP authentication</a></li>
-  <li>{{HTTPHeader("Proxy-Authenticate")}}</li>
-  <li>{{HTTPHeader("WWW-Authenticate")}}</li>
-  <li>{{HTTPHeader("Authorization")}}</li>
-  <li>{{HTTPStatus("401")}}, {{HTTPStatus("403")}}, {{HTTPStatus("407")}}</li>
-</ul>
+- [HTTP authentication](/en-US/docs/Web/HTTP/Authentication)
+- {{HTTPHeader("Proxy-Authenticate")}}
+- {{HTTPHeader("WWW-Authenticate")}}
+- {{HTTPHeader("Authorization")}}
+- {{HTTPStatus("401")}}, {{HTTPStatus("403")}}, {{HTTPStatus("407")}}

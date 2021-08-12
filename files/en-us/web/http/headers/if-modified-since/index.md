@@ -2,29 +2,29 @@
 title: If-Modified-Since
 slug: Web/HTTP/Headers/If-Modified-Since
 tags:
-- Conditional Requests
-- HTTP
-- HTTP Header
-- Reference
-- Request header
+  - Conditional Requests
+  - HTTP
+  - HTTP Header
+  - Reference
+  - Request header
 browser-compat: http.headers.If-Modified-Since
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The <strong><code>If-Modified-Since</code></strong> request HTTP header makes the
-  request conditional: the server will send back the requested resource, with a
-  {{HTTPStatus("200")}} status, only if it has been last modified after the given date. If
-  the resource has not been modified since, the response will be a {{HTTPStatus("304")}}
-  without any body; the {{HTTPHeader("Last-Modified")}} response header of a previous
-  request will contain the date of last modification. Unlike
-  {{HTTPHeader("If-Unmodified-Since")}}, <code>If-Modified-Since</code> can only be used
-  with a {{HTTPMethod("GET")}} or {{HTTPMethod("HEAD")}}.</p>
+The **`If-Modified-Since`** request HTTP header makes the
+request conditional: the server will send back the requested resource, with a
+{{HTTPStatus("200")}} status, only if it has been last modified after the given date. If
+the resource has not been modified since, the response will be a {{HTTPStatus("304")}}
+without any body; the {{HTTPHeader("Last-Modified")}} response header of a previous
+request will contain the date of last modification. Unlike
+{{HTTPHeader("If-Unmodified-Since")}}, `If-Modified-Since` can only be used
+with a {{HTTPMethod("GET")}} or {{HTTPMethod("HEAD")}}.
 
-<p>When used in combination with {{HTTPHeader("If-None-Match")}}, it is ignored, unless
-  the server doesn't support <code>If-None-Match</code>.</p>
+When used in combination with {{HTTPHeader("If-None-Match")}}, it is ignored, unless
+the server doesn't support `If-None-Match`.
 
-<p>The most common use case is to update a cached entity that has no associated
-  {{HTTPHeader("ETag")}}.</p>
+The most common use case is to update a cached entity that has no associated
+{{HTTPHeader("ETag")}}.
 
 <table class="properties">
   <tbody>
@@ -39,55 +39,48 @@ browser-compat: http.headers.If-Modified-Since
   </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: html">If-Modified-Since: &lt;day-name&gt;, &lt;day&gt; &lt;month&gt; &lt;year&gt; &lt;hour&gt;:&lt;minute&gt;:&lt;second&gt; GMT
-</pre>
+```html
+If-Modified-Since: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT
+```
 
-<h2 id="Directives">Directives</h2>
+## Directives
 
-<dl>
-  <dt>&lt;day-name&gt;</dt>
-  <dd>One of "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", or "Sun" (case-sensitive).</dd>
-  <dt>&lt;day&gt;</dt>
-  <dd>2 digit day number, e.g. "04" or "23".</dd>
-  <dt>&lt;month&gt;</dt>
-  <dd>One of "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov",
-    "Dec" (case sensitive).</dd>
-  <dt>&lt;year&gt;</dt>
-  <dd>4 digit year number, e.g. "1990" or "2016".</dd>
-  <dt>&lt;hour&gt;</dt>
-  <dd>2 digit hour number, e.g. "09" or "23".</dd>
-  <dt>&lt;minute&gt;</dt>
-  <dd>2 digit minute number, e.g. "04" or "59".</dd>
-  <dt>&lt;second&gt;</dt>
-  <dd>2 digit second number, e.g. "04" or "59".</dd>
-  <dt><code>GMT</code></dt>
-  <dd>
-    <p>Greenwich Mean Time. HTTP dates are always expressed in GMT, never in local time.
-    </p>
-  </dd>
-</dl>
+- \<day-name>
+  - : One of "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", or "Sun" (case-sensitive).
+- \<day>
+  - : 2 digit day number, e.g. "04" or "23".
+- \<month>
+  - : One of "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov",
+    "Dec" (case sensitive).
+- \<year>
+  - : 4 digit year number, e.g. "1990" or "2016".
+- \<hour>
+  - : 2 digit hour number, e.g. "09" or "23".
+- \<minute>
+  - : 2 digit minute number, e.g. "04" or "59".
+- \<second>
+  - : 2 digit second number, e.g. "04" or "59".
+- `GMT`
+  - : Greenwich Mean Time. HTTP dates are always expressed in GMT, never in local time.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre>If-Modified-Since: Wed, 21 Oct 2015 07:28:00 GMT
-</pre>
+    If-Modified-Since: Wed, 21 Oct 2015 07:28:00 GMT
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{HTTPHeader("ETag")}}</li>
-  <li>{{HTTPHeader("If-Unmodified-since")}}</li>
-  <li>{{HTTPHeader("If-Match")}}</li>
-  <li>{{HTTPHeader("If-None-Match")}}</li>
-  <li>{{HTTPStatus("304")}}<code> Not Modified</code></li>
-</ul>
+- {{HTTPHeader("ETag")}}
+- {{HTTPHeader("If-Unmodified-since")}}
+- {{HTTPHeader("If-Match")}}
+- {{HTTPHeader("If-None-Match")}}
+- {{HTTPStatus("304")}}` Not Modified`

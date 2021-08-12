@@ -7,29 +7,25 @@ tags:
   - Request method
 browser-compat: http.methods.POST
 ---
-<p>{{HTTPSidebar}}</p>
+{{HTTPSidebar}}
 
-<p>The <strong>HTTP <code>POST</code> method</strong> sends data to the server. The type of the body of the request is indicated by the {{HTTPHeader("Content-Type")}} header.</p>
+The **HTTP `POST` method** sends data to the server. The type of the body of the request is indicated by the {{HTTPHeader("Content-Type")}} header.
 
-<p>The difference between {{HTTPMethod("PUT")}} and <code>POST</code> is that <code>PUT</code> is idempotent: calling it once or several times successively has the same effect (that is no <em>side</em> effect), where successive identical <code>POST</code> may have additional effects, like passing an order several times.</p>
+The difference between {{HTTPMethod("PUT")}} and `POST` is that `PUT` is idempotent: calling it once or several times successively has the same effect (that is no _side_ effect), where successive identical `POST` may have additional effects, like passing an order several times.
 
-<p>A <code>POST</code> request is typically sent via an <a href="/en-US/docs/Learn/Forms">HTML form</a> and results in a change on the server. In this case, the content type is selected by putting the adequate string in the {{htmlattrxref("enctype", "form")}} attribute of the {{HTMLElement("form")}} element or the {{htmlattrxref("formenctype", "input")}} attribute of the {{HTMLElement("input") }} or {{HTMLElement("button")}} elements:</p>
+A `POST` request is typically sent via an [HTML form](/en-US/docs/Learn/Forms) and results in a change on the server. In this case, the content type is selected by putting the adequate string in the {{htmlattrxref("enctype", "form")}} attribute of the {{HTMLElement("form")}} element or the {{htmlattrxref("formenctype", "input")}} attribute of the {{HTMLElement("input") }} or {{HTMLElement("button")}} elements:
 
-<ul>
- <li><code>application/x-www-form-urlencoded</code>: the keys and values are encoded in key-value tuples separated by <code>'&amp;'</code>, with a <code>'='</code> between the key and the value. Non-alphanumeric characters in both keys and values are {{glossary("percent-encoding", "percent encoded")}}: this is the reason why this type is not suitable to use with binary data (use <code>multipart/form-data</code> instead)</li>
- <li><code>multipart/form-data</code>: each value is sent as a block of data ("body part"), with a user agent-defined delimiter ("boundary") separating each part. The keys are given in the <code>Content-Disposition</code> header of each part.</li>
- <li><code>text/plain</code></li>
-</ul>
+- `application/x-www-form-urlencoded`: the keys and values are encoded in key-value tuples separated by `'&'`, with a `'='` between the key and the value. Non-alphanumeric characters in both keys and values are {{glossary("percent-encoding", "percent encoded")}}: this is the reason why this type is not suitable to use with binary data (use `multipart/form-data` instead)
+- `multipart/form-data`: each value is sent as a block of data ("body part"), with a user agent-defined delimiter ("boundary") separating each part. The keys are given in the `Content-Disposition` header of each part.
+- `text/plain`
 
-<p>When the <code>POST</code> request is sent via a method other than an HTML form — like via an {{domxref("XMLHttpRequest")}} — the body can take any type. As described in the HTTP 1.1 specification, <code>POST</code> is designed to allow a uniform method to cover the following functions:</p>
+When the `POST` request is sent via a method other than an HTML form — like via an {{domxref("XMLHttpRequest")}} — the body can take any type. As described in the HTTP 1.1 specification, `POST` is designed to allow a uniform method to cover the following functions:
 
-<ul>
- <li>Annotation of existing resources</li>
- <li>Posting a message to a bulletin board, newsgroup, mailing list, or similar group of articles;</li>
- <li>Adding a new user through a signup modal;</li>
- <li>Providing a block of data, such as the result of submitting a form, to a data-handling process;</li>
- <li>Extending a database through an append operation.</li>
-</ul>
+- Annotation of existing resources
+- Posting a message to a bulletin board, newsgroup, mailing list, or similar group of articles;
+- Adding a new user through a signup modal;
+- Providing a block of data, such as the result of submitting a form, to a data-handling process;
+- Extending a database through an append operation.
 
 <table class="properties">
   <tbody>
@@ -54,57 +50,57 @@ browser-compat: http.methods.POST
       <td>Only if freshness information is included</td>
     </tr>
     <tr>
-      <th scope="row">Allowed in <a href="/en-US/docs/Learn/Forms">HTML forms</a></th>
+      <th scope="row">
+        Allowed in <a href="/en-US/docs/Learn/Forms">HTML forms</a>
+      </th>
       <td>Yes</td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: html">POST /test
-</pre>
+```html
+POST /test
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>A simple form using the default <code>application/x-www-form-urlencoded</code> content type:</p>
+A simple form using the default `application/x-www-form-urlencoded` content type:
 
-<pre>POST /test HTTP/1.1
-Host: foo.example
-Content-Type: application/x-www-form-urlencoded
-Content-Length: 27
+    POST /test HTTP/1.1
+    Host: foo.example
+    Content-Type: application/x-www-form-urlencoded
+    Content-Length: 27
 
-field1=value1&amp;field2=value2</pre>
+    field1=value1&field2=value2
 
-<p>A form using the <code>multipart/form-data</code> content type:</p>
+A form using the `multipart/form-data` content type:
 
-<pre>POST /test HTTP/1.1
-Host: foo.example
-Content-Type: multipart/form-data;boundary="boundary"
+    POST /test HTTP/1.1
+    Host: foo.example
+    Content-Type: multipart/form-data;boundary="boundary"
 
---boundary
-Content-Disposition: form-data; name="field1"
+    --boundary
+    Content-Disposition: form-data; name="field1"
 
-value1
---boundary
-Content-Disposition: form-data; name="field2"; filename="example.txt"
+    value1
+    --boundary
+    Content-Disposition: form-data; name="field2"; filename="example.txt"
 
-value2
---boundary--
-</pre>
+    value2
+    --boundary--
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTTPHeader("Content-Type")}}</li>
- <li>{{HTTPHeader("Content-Disposition")}}</li>
- <li>{{HTTPMethod("GET")}}</li>
-</ul>
+- {{HTTPHeader("Content-Type")}}
+- {{HTTPHeader("Content-Disposition")}}
+- {{HTTPMethod("GET")}}

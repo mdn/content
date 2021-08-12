@@ -8,57 +8,54 @@ tags:
   - header
 browser-compat: http.headers.Access-Control-Max-Age
 ---
-<p>{{HTTPSidebar}}</p>
+{{HTTPSidebar}}
 
-<p>The <strong><code>Access-Control-Max-Age</code></strong> response header indicates how long the results of a {{glossary("preflight request")}} (that is the information contained in the {{HTTPHeader("Access-Control-Allow-Methods")}} and {{HTTPHeader("Access-Control-Allow-Headers")}} headers) can be cached.</p>
+The **`Access-Control-Max-Age`** response header indicates how long the results of a {{glossary("preflight request")}} (that is the information contained in the {{HTTPHeader("Access-Control-Allow-Methods")}} and {{HTTPHeader("Access-Control-Allow-Headers")}} headers) can be cached.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Response header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>no</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Header type</th>
+      <td>{{Glossary("Response header")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>no</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: html">Access-Control-Max-Age: &lt;delta-seconds&gt;
-</pre>
+```html
+Access-Control-Max-Age: <delta-seconds>
+```
 
-<h2 id="Directives">Directives</h2>
+## Directives
 
-<dl>
- <dt>&lt;delta-seconds&gt;</dt>
- <dd>Maximum number of seconds the results can be cached.<br>
- Firefox <a href="https://searchfox.org/mozilla-central/source/netwerk/protocol/http/nsCORSListenerProxy.cpp#1118">caps this at 24 hours</a> (86400 seconds).<br>
- Chromium (prior to v76) <a href="https://cs.chromium.org/chromium/src/services/network/public/cpp/cors/preflight_result.cc?l=36&amp;rcl=52002151773d8cd9ffc5f557cd7cc880fddcae3e">caps at 10 minutes</a> (600 seconds).<br>
- Chromium (starting in v76) <a href="https://cs.chromium.org/chromium/src/services/network/public/cpp/cors/preflight_result.cc?l=31&amp;rcl=49e7c0b4886cac1f3d09dc046bd528c9c811a0fa">caps at 2 hours</a> (7200 seconds).<br>
- Chromium also specifies a default value of 5 seconds.<br>
- A value of <strong>-1</strong> will disable caching, requiring a preflight OPTIONS check for all calls.</dd>
-</dl>
+- \<delta-seconds>
+  - : Maximum number of seconds the results can be cached.
+    Firefox [caps this at 24 hours](https://searchfox.org/mozilla-central/source/netwerk/protocol/http/nsCORSListenerProxy.cpp#1118) (86400 seconds).
+    Chromium (prior to v76) [caps at 10 minutes](https://cs.chromium.org/chromium/src/services/network/public/cpp/cors/preflight_result.cc?l=36&rcl=52002151773d8cd9ffc5f557cd7cc880fddcae3e) (600 seconds).
+    Chromium (starting in v76) [caps at 2 hours](https://cs.chromium.org/chromium/src/services/network/public/cpp/cors/preflight_result.cc?l=31&rcl=49e7c0b4886cac1f3d09dc046bd528c9c811a0fa) (7200 seconds).
+    Chromium also specifies a default value of 5 seconds.
+    A value of **-1** will disable caching, requiring a preflight OPTIONS check for all calls.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Cache results of a preflight request for 10 minutes:</p>
+Cache results of a preflight request for 10 minutes:
 
-<pre>Access-Control-Max-Age: 600 </pre>
+    Access-Control-Max-Age: 600
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTTPHeader("Access-Control-Allow-Headers")}}</li>
- <li>{{HTTPHeader("Access-Control-Allow-Methods")}}</li>
-</ul>
+- {{HTTPHeader("Access-Control-Allow-Headers")}}
+- {{HTTPHeader("Access-Control-Allow-Methods")}}

@@ -2,21 +2,21 @@
 title: Age
 slug: Web/HTTP/Headers/Age
 tags:
-- Caching
-- HTTP
-- Response
-- header
+  - Caching
+  - HTTP
+  - Response
+  - header
 browser-compat: http.headers.Age
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The <code><strong>Age</strong></code> header contains the time in seconds the object
-  has been in a proxy cache.</p>
+The **`Age`** header contains the time in seconds the object
+has been in a proxy cache.
 
-<p>The <code>Age</code> header is usually close to zero. If it is <code>Age: 0</code>, it
-  was probably just fetched from the origin server; otherwise It is usually calculated as
-  a difference between the proxy's current date and the {{HTTPHeader("Date")}} general
-  header included in the HTTP response.</p>
+The `Age` header is usually close to zero. If it is `Age: 0`, it
+was probably just fetched from the origin server; otherwise It is usually calculated as
+a difference between the proxy's current date and the {{HTTPHeader("Date")}} general
+header included in the HTTP response.
 
 <table class="properties">
   <tbody>
@@ -31,36 +31,31 @@ browser-compat: http.headers.Age
   </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: html">Age: &lt;delta-seconds&gt;
-</pre>
+```html
+Age: <delta-seconds>
+```
 
-<h2 id="Directives">Directives</h2>
+## Directives
 
-<dl>
-  <dt>&lt;delta-seconds&gt;</dt>
-  <dd>
-    <p>A non-negative integer, representing time in seconds the object has been in a proxy
-      cache.</p>
-  </dd>
-</dl>
+- \<delta-seconds>
+  - : A non-negative integer, representing time in seconds the object has been in a proxy
+    cache.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre>Age: 24</pre>
+    Age: 24
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{HTTPHeader("Cache-Control")}}</li>
-  <li>{{HTTPHeader("Expires")}}</li>
-</ul>
+- {{HTTPHeader("Cache-Control")}}
+- {{HTTPHeader("Expires")}}

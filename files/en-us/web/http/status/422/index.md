@@ -2,42 +2,30 @@
 title: 422 Unprocessable Entity
 slug: Web/HTTP/Status/422
 tags:
-- Client error
-- HTTP
-- HTTP Status Code
-- Reference
-- Status code
-- WebDAV
+  - Client error
+  - HTTP
+  - HTTP Status Code
+  - Reference
+  - Status code
+  - WebDAV
 ---
-<p>{{HTTPSidebar}}</p>
+{{HTTPSidebar}}
 
-<p>The HyperText Transfer Protocol (HTTP)
-  <code><strong>422 Unprocessable Entity</strong></code> response status code indicates
-  that the server understands the content type of the request entity, and the syntax of
-  the request entity is correct, but it was unable to process the contained instructions.
-</p>
+The HyperText Transfer Protocol (HTTP)
+**`422 Unprocessable Entity`** response status code indicates
+that the server understands the content type of the request entity, and the syntax of
+the request entity is correct, but it was unable to process the contained instructions.
 
-<div class="notecard warning">
-  <p><strong>Warning:</strong> The client should not repeat this request without modification.</p>
-</div>
+> **Warning:** The client should not repeat this request without modification.
 
-<h2 id="Status">Status</h2>
+## Status
 
-<pre class="brush: html">422 Unprocessable Entity</pre>
+```html
+422 Unprocessable Entity
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Title</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{RFC("4918", "422 Unprocessable Entity" , "11.2")}}</td>
-      <td>HTTP Extensions for Web Distributed Authoring and Versioning (WebDAV)</td>
-    </tr>
-  </tbody>
-</table>
+| Specification                                                        | Title                                                                 |
+| -------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| {{RFC("4918", "422 Unprocessable Entity" , "11.2")}} | HTTP Extensions for Web Distributed Authoring and Versioning (WebDAV) |

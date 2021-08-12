@@ -9,66 +9,58 @@ tags:
   - referrer
 browser-compat: http.headers.Referer
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The <code><strong>Referer</strong></code> HTTP request header contains an absolute or partial address of the page making the request. When following a link, this would be the address of the page containing the link. When making resource requests to another domain, this would be the address of the page using the resource. The <code>Referer</code> header allows servers to identify where people are visiting them from, which can then be used for analytics, logging, optimized caching, and more.</p>
+The **`Referer`** HTTP request header contains an absolute or partial address of the page making the request. When following a link, this would be the address of the page containing the link. When making resource requests to another domain, this would be the address of the page using the resource. The `Referer` header allows servers to identify where people are visiting them from, which can then be used for analytics, logging, optimized caching, and more.
 
-<p>The <code>Referer</code> header may not contain URL fragments (i.e. "#section") or "username:password" information. It can potentially contain an <em>origin</em>, <em>path</em>, and <em>querystring</em>. What is sent, if anything, depends on the <em>referrer policy</em> for the request. See {{HTTPHeader("Referrer-Policy")}} for <a href="/en-US/docs/Web/HTTP/Headers/Referrer-Policy#directives">information</a> and <a href="/en-US/docs/Web/HTTP/Headers/Referrer-Policy#examples">examples</a>.
+The `Referer` header may not contain URL fragments (i.e. "#section") or "username:password" information. It can potentially contain an _origin_, _path_, and _querystring_. What is sent, if anything, depends on the _referrer policy_ for the request. See {{HTTPHeader("Referrer-Policy")}} for [information](/en-US/docs/Web/HTTP/Headers/Referrer-Policy#directives) and [examples](/en-US/docs/Web/HTTP/Headers/Referrer-Policy#examples).
 
-<div class="notecard note">
-  <p><strong>Note:</strong> The header name "referer" is actually a misspelling of the word "referrer". See {{interwiki("wikipedia", "HTTP_referer", "HTTP referer on Wikipedia")}} for more details.</p>
-</div>
+> **Note:** The header name "referer" is actually a misspelling of the word "referrer". See {{interwiki("wikipedia", "HTTP_referer", "HTTP referer on Wikipedia")}} for more details.
 
-<div class="notecard warning">
-  <p><strong>Warning:</strong> Although this header has many innocent uses it can have undesirable consequences for user security and privacy. See <a href="/en-US/docs/Web/Security/Referer_header:_privacy_and_security_concerns">Referer header: privacy and security concerns</a> for more information and mitigations.</p>
-</div>
+> **Warning:** Although this header has many innocent uses it can have undesirable consequences for user security and privacy. See [Referer header: privacy and security concerns](/en-US/docs/Web/Security/Referer_header:_privacy_and_security_concerns) for more information and mitigations.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Request header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Header type</th>
+      <td>{{Glossary("Request header")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: html">Referer: &lt;url&gt;
-</pre>
+```html
+Referer: <url>
+```
 
-<h2 id="Directives">Directives</h2>
+## Directives
 
-<dl>
- <dt>&lt;url&gt;</dt>
- <dd>An absolute or partial address of the web page making the request. URL fragments (i.e. "#section") and userinfo (i.e. "username:password" in "https://username:password@example.com/foo/bar/") are not included. Origin, path, and querystring may be included, depending on the <a href="/en-US/docs/Web/HTTP/Headers/Referrer-Policy#directives">referrer policy</a>.</dd>
-</dl>
+- \<url>
+  - : An absolute or partial address of the web page making the request. URL fragments (i.e. "#section") and userinfo (i.e. "username:password" in "https\://username:password\@example.com/foo/bar/") are not included. Origin, path, and querystring may be included, depending on the [referrer policy](/en-US/docs/Web/HTTP/Headers/Referrer-Policy#directives).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre>Referer: https://developer.mozilla.org/en-US/docs/Web/JavaScript
-Referer: https://example.com/page?q=123
-Referer: https://example.com/
-</pre>
+    Referer: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+    Referer: https://example.com/page?q=123
+    Referer: https://example.com/
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{interwiki("wikipedia", "HTTP_referer", "HTTP referer on Wikipedia")}}</li>
-  <li><a href="/en-US/docs/Web/API/Fetch_API">Fetch</a>: {{domxref("Request.referrerPolicy")}}</li>
-  <li>The obsolete {{HTTPHeader("Content-Security-Policy")}} {{HTTPHeader("Content-Security-Policy/referrer", "referrer")}} {{deprecated_inline}} directive.</li>
-  <li><a href="/en-US/docs/Web/Security/Same-origin_policy">Same-origin policy</a></li>
-  <li><a href="https://blog.mozilla.org/security/2015/01/21/meta-referrer/">Tighter Control Over Your Referrers – Mozilla Security Blog</a></li>
- </ul>
+- {{interwiki("wikipedia", "HTTP_referer", "HTTP referer on Wikipedia")}}
+- [Fetch](/en-US/docs/Web/API/Fetch_API): {{domxref("Request.referrerPolicy")}}
+- The obsolete {{HTTPHeader("Content-Security-Policy")}} {{HTTPHeader("Content-Security-Policy/referrer", "referrer")}} {{deprecated_inline}} directive.
+- [Same-origin policy](/en-US/docs/Web/Security/Same-origin_policy)
+- [Tighter Control Over Your Referrers – Mozilla Security Blog](https://blog.mozilla.org/security/2015/01/21/meta-referrer/)

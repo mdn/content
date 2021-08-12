@@ -7,11 +7,11 @@ tags:
   - Request method
 browser-compat: http.methods.TRACE
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The <strong>HTTP <code>TRACE</code> method</strong> performs a message loop-back test along the path to the target resource, providing a useful debugging mechanism.</p>
+The **HTTP `TRACE` method** performs a message loop-back test along the path to the target resource, providing a useful debugging mechanism.
 
-<p>The final recipient of the request should reflect the message received, excluding some fields described below, back to the client as the message body of a {{HTTPStatus("200")}} (<code>OK</code>) response with a {{HTTPHeader("Content-Type")}} of <code>message/http</code>. The final recipient is either the origin server or the first server to receive a {{HTTPHeader("Max-Forwards")}} value of 0 in the request.</p>
+The final recipient of the request should reflect the message received, excluding some fields described below, back to the client as the message body of a {{HTTPStatus("200")}} (`OK`) response with a {{HTTPHeader("Content-Type")}} of `message/http`. The final recipient is either the origin server or the first server to receive a {{HTTPHeader("Max-Forwards")}} value of 0 in the request.
 
 <table class="properties">
   <tbody>
@@ -42,21 +42,20 @@ browser-compat: http.methods.TRACE
   </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: html">TRACE /index.html
-</pre>
+```html
+TRACE /index.html
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/HTTP/Methods">HTTP methods</a></li>
-</ul>
+- [HTTP methods](/en-US/docs/Web/HTTP/Methods)

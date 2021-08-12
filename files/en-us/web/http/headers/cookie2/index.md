@@ -9,49 +9,38 @@ tags:
   - request
 browser-compat: http.headers.Cookie2
 ---
-<div>{{HTTPSidebar}} {{deprecated_header}}</div>
+{{HTTPSidebar}} {{deprecated_header}}
 
-<p>The obsolete <strong><code>Cookie2</code></strong> HTTP request header used to advise the server that the user agent understands "new-style" cookies, but nowadays user agents will use the {{HTTPHeader("Cookie")}} header instead, not this one.</p>
+The obsolete **`Cookie2`** HTTP request header used to advise the server that the user agent understands "new-style" cookies, but nowadays user agents will use the {{HTTPHeader("Cookie")}} header instead, not this one.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Request header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Header type</th>
+      <td>{{Glossary("Request header")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre>Cookie2: $Version="1"</pre>
+    Cookie2: $Version="1"
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Title</th>
-  </tr>
-  <tr>
-   <td>{{RFC("2965", "Cookie2")}}</td>
-   <td>Historic specification of HTTP State Management Mechanism, obsoleted by {{RFC("6265")}}</td>
-  </tr>
- </tbody>
-</table>
+| Specification                        | Title                                                                                        |
+| ------------------------------------ | -------------------------------------------------------------------------------------------- |
+| {{RFC("2965", "Cookie2")}} | Historic specification of HTTP State Management Mechanism, obsoleted by {{RFC("6265")}} |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTTPHeader("Cookie")}}</li>
- <li>{{domxref("Document.cookie")}}</li>
-</ul>
+- {{HTTPHeader("Cookie")}}
+- {{domxref("Document.cookie")}}

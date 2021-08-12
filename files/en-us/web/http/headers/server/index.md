@@ -2,21 +2,19 @@
 title: Server
 slug: Web/HTTP/Headers/Server
 tags:
-- HTTP
-- Reference
-- header
+  - HTTP
+  - Reference
+  - header
 browser-compat: http.headers.Server
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The <code><strong>Server</strong></code> header describes the
-    software used by the origin server that handled the request — that is, the server that
-    generated the response.</p>
+The **`Server`** header describes the
+software used by the origin server that handled the request — that is, the server that
+generated the response.
 
-<div class="notecard warning">
-  <p><strong>Warning:</strong> Avoid overly-detailed <code>Server</code> values, as they can reveal information that
-    might make it (slightly) easier for attackers to exploit known security holes.</p>
-</div>
+> **Warning:** Avoid overly-detailed `Server` values, as they can reveal information that
+> might make it (slightly) easier for attackers to exploit known security holes.
 
 <table class="properties">
   <tbody>
@@ -31,41 +29,36 @@ browser-compat: http.headers.Server
   </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: html">Server: &lt;product&gt;
-</pre>
+```html
+Server: <product>
+```
 
-<h2 id="Directives">Directives</h2>
+## Directives
 
-<dl>
-  <dt><code>&lt;product&gt;</code></dt>
-  <dd>
-    <p>The name of the software or product that handled the request. Usually in a format
-      similar to {{HTTPHeader('User-Agent')}}.</p>
-  </dd>
-</dl>
+- `<product>`
+  - : The name of the software or product that handled the request. Usually in a format
+    similar to {{HTTPHeader('User-Agent')}}.
 
-<p>How much detail to include is an interesting balance to strike; exposing the OS version
-  is probably a bad idea, as mentioned in the earlier warning about overly-detailed
-  values. However, exposed Apache versions helped browsers work around a bug those
-  versions had with {{HTTPHeader('Content-Encoding')}} combined with
-  {{HTTPHeader('Range')}}.</p>
+How much detail to include is an interesting balance to strike; exposing the OS version
+is probably a bad idea, as mentioned in the earlier warning about overly-detailed
+values. However, exposed Apache versions helped browsers work around a bug those
+versions had with {{HTTPHeader('Content-Encoding')}} combined with
+{{HTTPHeader('Range')}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre>Server: Apache/2.4.1 (Unix)</pre>
+    Server: Apache/2.4.1 (Unix)
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{HTTPHeader("Allow")}}</li>
-</ul>
+- {{HTTPHeader("Allow")}}

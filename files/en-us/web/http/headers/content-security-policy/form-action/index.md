@@ -12,84 +12,89 @@ tags:
   - form-action
 browser-compat: http.headers.csp.Content-Security-Policy.form-action
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) <code><strong>form</strong></code><strong><code>-action</code></strong> directive restricts the URLs which can be used as the target of a form submissions from a given context.</p>
+The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`form`\*\***`-action`\*\* directive restricts the URLs which can be used as the target of a form submissions from a given context.
 
-<div class="notecard warning">
-  <p><strong>Warning:</strong> Whether <code>form-action</code> should block redirects after a form submission is <a href="https://github.com/w3c/webappsec-csp/issues/8">debated</a> and browser implementations of this aspect are inconsistent (e.g. Firefox 57 doesn't block the redirects whereas Chrome 63 does).</p>
-</div>
+> **Warning:** Whether `form-action` should block redirects after a form submission is [debated](https://github.com/w3c/webappsec-csp/issues/8) and browser implementations of this aspect are inconsistent (e.g. Firefox 57 doesn't block the redirects whereas Chrome 63 does).
 
 <table class="properties">
-	<tbody>
-		<tr>
-			<th scope="row">CSP version</th>
-			<td>2</td>
-		</tr>
-		<tr>
-			<th scope="row">Directive type</th>
-			<td>{{Glossary("Navigation directive")}}</td>
-		</tr>
-		<tr>
-			<th scope="row">{{CSP("default-src")}} fallback</th>
-			<td>No. Not setting this allows anything.</td>
-		</tr>
-	</tbody>
+  <tbody>
+    <tr>
+      <th scope="row">CSP version</th>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th scope="row">Directive type</th>
+      <td>{{Glossary("Navigation directive")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{CSP("default-src")}} fallback</th>
+      <td>No. Not setting this allows anything.</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>One or more sources can be set for the <code>form-action</code> policy:</p>
+One or more sources can be set for the `form-action` policy:
 
-<pre class="brush: html">Content-Security-Policy: form-action &lt;source&gt;;
-Content-Security-Policy: form-action &lt;source&gt; &lt;source&gt;;
-</pre>
+```html
+Content-Security-Policy: form-action <source>;
+Content-Security-Policy: form-action <source> <source>;
+```
 
-<h3 id="Sources">Sources</h3>
+### Sources
 
-<p>{{page("Web/HTTP/Headers/Content-Security-Policy/default-src", "Sources")}}</p>
+{{page("Web/HTTP/Headers/Content-Security-Policy/default-src", "Sources")}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Meta_tag_configuration">Meta tag configuration</h3>
+### Meta tag configuration
 
-<pre class="brush: html">&lt;meta http-equiv="Content-Security-Policy" content="form-action 'none'"&gt;</pre>
+```html
+<meta http-equiv="Content-Security-Policy" content="form-action 'none'">
+```
 
-<h3 id="Apache_configuration">Apache configuration</h3>
+### Apache configuration
 
-<pre class="brush: bash">&lt;IfModule mod_headers.c&gt;
+```bash
+<IfModule mod_headers.c>
 Header set Content-Security-Policy "form-action 'none';"
-&lt;/IfModule&gt;</pre>
+</IfModule>
+```
 
-<h3 id="Nginx_configuration">Nginx configuration</h3>
+### Nginx configuration
 
-<pre class="brush: bash">add_header Content-Security-Policy "form-action 'none';"</pre>
+```bash
+add_header Content-Security-Policy "form-action 'none';"
+```
 
-<h3 id="Violation_case">Violation case</h3>
+### Violation case
 
-<p>Using a {{HTMLElement("form")}} element with an action set to inline JavaScript will result in a CSP violation.</p>
+Using a {{HTMLElement("form")}} element with an action set to inline JavaScript will result in a CSP violation.
 
-<pre class="brush: html; example-bad">&lt;meta http-equiv="Content-Security-Policy" content="form-action 'none'"&gt;
+```html example-bad
+<meta http-equiv="Content-Security-Policy" content="form-action 'none'">
 
-&lt;form action="javascript:alert('Foo')" id="form1" method="post"&gt;
-  &lt;input type="text" name="fieldName" value="fieldValue"&gt;
-  &lt;input type="submit" id="submit" value="submit"&gt;
-&lt;/form&gt;
+<form action="javascript:alert('Foo')" id="form1" method="post">
+  <input type="text" name="fieldName" value="fieldValue">
+  <input type="submit" id="submit" value="submit">
+</form>
 
 // Error: Refused to send form data because it violates the following
-// Content Security Policy directive: "form-action 'none'".</pre>
+// Content Security Policy directive: "form-action 'none'".
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>{{HTTPheader("Content-Security-Policy")}}</li>
-	<li>{{HTMLElement("form")}}</li>
-</ul>
+- {{HTTPheader("Content-Security-Policy")}}
+- {{HTMLElement("form")}}

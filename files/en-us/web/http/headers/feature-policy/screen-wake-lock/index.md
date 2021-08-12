@@ -11,61 +11,38 @@ tags:
   - Experimental
 browser-compat: http.headers.Feature-Policy.screen-wake-lock
 ---
-<p>{{HTTPSidebar}} {{SeeCompatTable}}</p>
+{{HTTPSidebar}} {{SeeCompatTable}}
 
-<p>The HTTP {{HTTPHeader("Feature-Policy")}} header <strong><code>screen-wake-lock</code></strong> directive controls whether the current document is allowed to use <a href="/en-US/docs/Web/API/Screen_Wake_Lock_API">Screen Wake Lock API</a> to indicate that device should not dim or turn off the screen.</p>
+The HTTP {{HTTPHeader("Feature-Policy")}} header **`screen-wake-lock`** directive controls whether the current document is allowed to use [Screen Wake Lock API](/en-US/docs/Web/API/Screen_Wake_Lock_API) to indicate that device should not dim or turn off the screen.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> In earlier specification drafts this directive was called <code>wake-lock</code>")}}.</p>
-</div>
+> **Note:** In earlier specification drafts this directive was called `wake-lock`")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre>Feature-Policy: screen-wake-lock &lt;allowlist&gt;;</pre>
+    Feature-Policy: screen-wake-lock <allowlist>;
 
-<dl>
-  <dt>&lt;allowlist&gt;</dt>
-  <dd>A list of origins for which the feature is allowed. See <a href="/en-US/docs/Web/HTTP/Headers/Feature-Policy#syntax"><code>Feature-Policy</code></a>.</dd>
-</dl>
+- \<allowlist>
+  - : A list of origins for which the feature is allowed. See [`Feature-Policy`](/en-US/docs/Web/HTTP/Headers/Feature-Policy#syntax).
 
-<h2 id="Default_policy">Default policy</h2>
+## Default policy
 
-<p>Default allow list for <code>screen-wake-lock</code> is <code>'self'</code>.</p>
+Default allow list for `screen-wake-lock` is `'self'`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Feature Policy')}}</td>
-   <td>{{Spec2('Feature Policy')}}</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td><a href="https://w3c.github.io/screen-wake-lock/#the-screen-wake-lock-powerful-feature">Screen Wake Lock API</a></td>
-   <td>Editor's Draft</td>
-   <td>Initial definition of <code>screen-wake-lock</code> feature directive.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                         | Status                               | Comment                                                     |
+| ----------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------------------------------------------------------- |
+| {{SpecName('Feature Policy')}}                                                              | {{Spec2('Feature Policy')}} | Initial definition.                                         |
+| [Screen Wake Lock API](https://w3c.github.io/screen-wake-lock/#the-screen-wake-lock-powerful-feature) | Editor's Draft                       | Initial definition of `screen-wake-lock` feature directive. |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Screen_Wake_Lock_API">Screen Wake Lock API</a></li>
- <li>{{HTTPHeader('Feature-Policy')}} header</li>
- <li><a href="/en-US/docs/Web/HTTP/Feature_Policy">Feature Policy</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy">Using Feature Policy</a></li>
- <li><a href="https://www.w3.org/TR/wake-lock/#wake-locks">Default value of the allow list</a></li>
-</ul>
+- [Screen Wake Lock API](/en-US/docs/Web/API/Screen_Wake_Lock_API)
+- {{HTTPHeader('Feature-Policy')}} header
+- [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy)
+- [Using Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)
+- [Default value of the allow list](https://www.w3.org/TR/wake-lock/#wake-locks)

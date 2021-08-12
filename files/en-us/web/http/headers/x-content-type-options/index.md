@@ -8,37 +8,33 @@ tags:
   - Response Header
 browser-compat: http.headers.X-Content-Type-Options
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The <code><strong>X-Content-Type-Options</strong></code> response HTTP header is a
-  marker used by the server to indicate that the <a
-    href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME types</a> advertised in the
-  {{HTTPHeader("Content-Type")}} headers should not be changed and be followed. This is a
-  way to opt out of <a
-    href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#mime_sniffing">MIME type
-    sniffing</a>, or, in other words, to say that the MIME types are deliberately
-  configured.</p>
+The **`X-Content-Type-Options`** response HTTP header is a
+marker used by the server to indicate that the [MIME types](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) advertised in the
+{{HTTPHeader("Content-Type")}} headers should not be changed and be followed. This is a
+way to opt out of [MIME type
+sniffing](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#mime_sniffing), or, in other words, to say that the MIME types are deliberately
+configured.
 
-<p>This header was introduced by Microsoft in IE 8 as a way for webmasters to block
-  content sniffing that was happening and could transform non-executable MIME types into
-  executable MIME types. Since then, other browsers have introduced it, even if their MIME
-  sniffing algorithms were less aggressive.</p>
+This header was introduced by Microsoft in IE 8 as a way for webmasters to block
+content sniffing that was happening and could transform non-executable MIME types into
+executable MIME types. Since then, other browsers have introduced it, even if their MIME
+sniffing algorithms were less aggressive.
 
-<p>Starting with Firefox 72, the opting out of MIME sniffing is also applied to top-level
-  documents if a {{HTTPHeader("Content-type")}} is provided. This can cause HTML web pages
-  to be downloaded instead of being rendered when they are served with a MIME type other
-  than <code>text/html</code>. Make sure to set both headers correctly.</p>
+Starting with Firefox 72, the opting out of MIME sniffing is also applied to top-level
+documents if a {{HTTPHeader("Content-type")}} is provided. This can cause HTML web pages
+to be downloaded instead of being rendered when they are served with a MIME type other
+than `text/html`. Make sure to set both headers correctly.
 
-<p>Site security testers usually expect this header to be set.</p>
+Site security testers usually expect this header to be set.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> <code>X-Content-Type-Options</code> only apply
-    <a href="https://fetch.spec.whatwg.org/#should-response-to-request-be-blocked-due-to-nosniff?">request-blocking due to <code>nosniff</code></a>
-    for <a href="https://fetch.spec.whatwg.org/#concept-request-destination">request destinations</a> of "<code>script</code>"
-    and "<code>style</code>". However, it also
-    <a href="https://chromium.googlesource.com/chromium/src/+/master/services/network/cross_origin_read_blocking_explainer.md#determining-whether-a-response-is-corb_protected">enables Cross-Origin Read Blocking (CORB)</a>
-    protection for HTML, TXT, JSON and XML files (excluding SVG <code>image/svg+xml</code>).</p>
-</div>
+> **Note:** `X-Content-Type-Options` only apply
+> [request-blocking due to `nosniff`](https://fetch.spec.whatwg.org/#should-response-to-request-be-blocked-due-to-nosniff?)
+> for [request destinations](https://fetch.spec.whatwg.org/#concept-request-destination) of "`script`"
+> and "`style`". However, it also
+> [enables Cross-Origin Read Blocking (CORB)](https://chromium.googlesource.com/chromium/src/+/master/services/network/cross_origin_read_blocking_explainer.md#determining-whether-a-response-is-corb_protected)
+> protection for HTML, TXT, JSON and XML files (excluding SVG `image/svg+xml`).
 
 <table class="properties">
   <tbody>
@@ -53,51 +49,41 @@ browser-compat: http.headers.X-Content-Type-Options
   </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: html">X-Content-Type-Options: nosniff
-</pre>
+```html
+X-Content-Type-Options: nosniff
+```
 
-<h2 id="Directives">Directives</h2>
+## Directives
 
-<dl>
-  <dt><code>nosniff</code></dt>
-  <dd>Blocks a request if the request destination is of type
-    <code>style</code> and the MIME type is not <code>text/css</code>,
-    or of type <code>script</code> and the MIME type is not a <a href="https://html.spec.whatwg.org/multipage/scripting.html#javascript-mime-type">JavaScript MIME type</a>.
-  </dd>
-</dl>
+- `nosniff`
+  - : Blocks a request if the request destination is of type
+    `style` and the MIME type is not `text/css`,
+    or of type `script` and the MIME type is not a [JavaScript MIME type](https://html.spec.whatwg.org/multipage/scripting.html#javascript-mime-type).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h3 id="Browser_specific_notes">Browser specific notes</h3>
+### Browser specific notes
 
-<ul>
-  <li>Firefox 72 enables <code>X-Content-Type-Options: nosniff</code> for top-level
-    documents</li>
-</ul>
+- Firefox 72 enables `X-Content-Type-Options: nosniff` for top-level
+  documents
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{HTTPHeader("Content-Type")}}</li>
-  <li>The <a
-      href="https://blogs.msdn.microsoft.com/ie/2008/09/02/ie8-security-part-vi-beta-2-update/">original
-      definition</a> of X-Content-Type-Options by Microsoft.</li>
-  <li>The <a href="https://observatory.mozilla.org/">Mozilla Observatory</a> tool testing
-    the configuration (including this header) of Web sites for safety and security</li>
-  <li><a
-      href="https://blog.mozilla.org/security/2016/08/26/mitigating-mime-confusion-attacks-in-firefox/">Mitigating
-      MIME Confusion Attacks in Firefox</a></li>
-  <li><a href="https://fetch.spec.whatwg.org/#corb">Cross-Origin Read Blocking (CORB)</a>
-  </li>
-  <li><a
-      href="https://chromium.googlesource.com/chromium/src/+/master/services/network/cross_origin_read_blocking_explainer.md">Google
-      Docs CORB explainer</a></li>
-</ul>
+- {{HTTPHeader("Content-Type")}}
+- The [original
+  definition](https://blogs.msdn.microsoft.com/ie/2008/09/02/ie8-security-part-vi-beta-2-update/) of X-Content-Type-Options by Microsoft.
+- The [Mozilla Observatory](https://observatory.mozilla.org/) tool testing
+  the configuration (including this header) of Web sites for safety and security
+- [Mitigating
+  MIME Confusion Attacks in Firefox](https://blog.mozilla.org/security/2016/08/26/mitigating-mime-confusion-attacks-in-firefox/)
+- [Cross-Origin Read Blocking (CORB)](https://fetch.spec.whatwg.org/#corb)
+- [Google
+  Docs CORB explainer](https://chromium.googlesource.com/chromium/src/+/master/services/network/cross_origin_read_blocking_explainer.md)

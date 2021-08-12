@@ -10,39 +10,35 @@ tags:
   - Experimental
 browser-compat: http.headers.Feature-Policy.publickey-credentials-get
 ---
-<div>{{HTTPSidebar}} {{SeeCompatTable}}</div>
+{{HTTPSidebar}} {{SeeCompatTable}}
 
-<p>The HTTP {{HTTPHeader("Feature-Policy")}} header <code>publickey-credentials-get</code> directive controls whether the current document is allowed to access the <a href="/en-US/docs/Web/API/Web_Authentication_API">Web Authentication API</a> to retrieve public-key credentials; i.e, via {{DOMxRef("CredentialsContainer.get", "navigator.credentials.get({publicKey: ..., ...})")}}.</p>
+The HTTP {{HTTPHeader("Feature-Policy")}} header `publickey-credentials-get` directive controls whether the current document is allowed to access the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) to retrieve public-key credentials; i.e, via {{DOMxRef("CredentialsContainer.get", "navigator.credentials.get({publicKey: ..., ...})")}}.
 
-<p>When this policy is enabled, any attempt to query public key credentials will result in an error.</p>
+When this policy is enabled, any attempt to query public key credentials will result in an error.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre>Feature-Policy: publickey-credentials-get &lt;allowlist&gt;;</pre>
+    Feature-Policy: publickey-credentials-get <allowlist>;
 
-<dl>
-  <dt>&lt;allowlist&gt;</dt>
-  <dd>A list of origins for which the feature is allowed. See <a href="/en-US/docs/Web/HTTP/Headers/Feature-Policy#syntax"><code>Feature-Policy</code></a>.</dd>
-</dl>
+- \<allowlist>
+  - : A list of origins for which the feature is allowed. See [`Feature-Policy`](/en-US/docs/Web/HTTP/Headers/Feature-Policy#syntax).
 
-<h2 id="Default_policy">Default policy</h2>
+## Default policy
 
-<p>The default allowlist is <code>'self'</code>.</p>
+The default allowlist is `'self'`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTTPHeader("Feature-Policy")}} header</li>
- <li><a href="/en-US/docs/Web/HTTP/Feature_Policy">Feature Policy</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy">Using Feature Policy</a></li>
- <li><a href="/en-US/docs/Web/API/Web_Authentication_API">Web Authentication API</a></li>
- <li>{{DOMxRef("PublicKeyCredential")}} interface</li>
-</ul>
+- {{HTTPHeader("Feature-Policy")}} header
+- [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy)
+- [Using Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)
+- [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API)
+- {{DOMxRef("PublicKeyCredential")}} interface

@@ -13,22 +13,19 @@ tags:
   - Security
 browser-compat: http.headers.csp.Content-Security-Policy.plugin-types
 ---
-<div>{{HTTPSidebar}}{{deprecated_header}}</div>
+{{HTTPSidebar}}{{deprecated_header}}
 
-<p>The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
-  <code><strong>plugin-types</strong></code> directive restricts the set of plugins that
-  can be embedded into a document by limiting the types of resources which can be loaded.
-</p>
+The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
+**`plugin-types`** directive restricts the set of plugins that
+can be embedded into a document by limiting the types of resources which can be loaded.
 
-<p>Instantiation of an {{HTMLElement("embed")}}, {{HTMLElement("object")}} or
-  {{HTMLElement("applet")}} element will fail if:</p>
+Instantiation of an {{HTMLElement("embed")}}, {{HTMLElement("object")}} or
+{{HTMLElement("applet")}} element will fail if:
 
-<ul>
-  <li>the element to load does not declare a valid MIME type,</li>
-  <li>the declared type does not match one of specified types in the
-    <code>plugin-types</code> directive,</li>
-  <li>the fetched resource does not match the declared type.</li>
-</ul>
+- the element to load does not declare a valid MIME type,
+- the declared type does not match one of specified types in the
+  `plugin-types` directive,
+- the fetched resource does not match the declared type.
 
 <table class="properties">
   <tbody>
@@ -47,67 +44,67 @@ browser-compat: http.headers.csp.Content-Security-Policy.plugin-types
   </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>One or more <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME types</a> can
-  be set for the <code>plugin-types</code> policy:</p>
+One or more [MIME types](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) can
+be set for the `plugin-types` policy:
 
-<pre class="brush: html">Content-Security-Policy: plugin-types &lt;type&gt;/&lt;subtype&gt;;
-Content-Security-Policy: plugin-types &lt;type&gt;/&lt;subtype&gt; &lt;type&gt;/&lt;subtype&gt;;
-</pre>
+```html
+Content-Security-Policy: plugin-types <type>/<subtype>;
+Content-Security-Policy: plugin-types <type>/<subtype> <type>/<subtype>;
+```
 
-<dl>
-  <dt>&lt;type&gt;/&lt;subtype&gt;</dt>
-  <dd>A valid <a
-      href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types">MIME
-      type</a>.</dd>
-</dl>
+- \<type>/\<subtype>
+  - : A valid [MIME
+    type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Disallowing_plugins">Disallowing plugins</h3>
+### Disallowing plugins
 
-<p>To disallow all plugins, the {{CSP("object-src")}} directive should be set to
-  <code>'none'</code> which will disallow plugins. The <code>plugin-types</code> directive
-  is only used if you are allowing plugins with <code>object-src</code> at all.</p>
+To disallow all plugins, the {{CSP("object-src")}} directive should be set to
+`'none'` which will disallow plugins. The `plugin-types` directive
+is only used if you are allowing plugins with `object-src` at all.
 
-<pre
-  class="brush: html">&lt;meta http-equiv="Content-Security-Policy" content="object-src 'none'"&gt;</pre>
+```html
+<meta http-equiv="Content-Security-Policy" content="object-src 'none'">
+```
 
-<h3 id="Allowing_Flash_content">Allowing Flash content</h3>
+### Allowing Flash content
 
-<p>The content security policy</p>
+The content security policy
 
-<pre
-  class="brush: bash">Content-Security-Policy: plugin-types application/x-shockwave-flash</pre>
+```bash
+Content-Security-Policy: plugin-types application/x-shockwave-flash
+```
 
-<p>will allow to load flash objects:</p>
+will allow to load flash objects:
 
-<pre
-  class="brush: html">&lt;object data="https://example.com/flash" type="application/x-shockwave-flash"&gt;&lt;/object&gt;</pre>
+```html
+<object data="https://example.com/flash" type="application/x-shockwave-flash"></object>
+```
 
-<h3 id="Allowing_Java_applets">Allowing Java applets</h3>
+### Allowing Java applets
 
-<p>To load an {{HTMLElement("applet")}} you must specify
-  <code>application/x-java-applet</code>:</p>
+To load an {{HTMLElement("applet")}} you must specify
+`application/x-java-applet`:
 
-<pre
-  class="brush: bash">Content-Security-Policy: plugin-types application/x-java-applet</pre>
+```bash
+Content-Security-Policy: plugin-types application/x-java-applet
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any current specification. Used to be defined in <a href="https://www.w3.org/TR/CSP2/#directive-plugin-types">CSP 2</a>.</p>
+Not part of any current specification. Used to be defined in [CSP 2](https://www.w3.org/TR/CSP2/#directive-plugin-types).
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{HTTPHeader("Content-Security-Policy")}}: {{CSP("object-src")}}</li>
-  <li>{{HTMLElement("object")}}</li>
-  <li>{{HTMLElement("embed")}}</li>
-  <li>{{HTMLElement("applet")}}</li>
-  <li>{{HTTPHeader("X-Content-Type-Options")}}</li>
-</ul>
+- {{HTTPHeader("Content-Security-Policy")}}: {{CSP("object-src")}}
+- {{HTMLElement("object")}}
+- {{HTMLElement("embed")}}
+- {{HTMLElement("applet")}}
+- {{HTTPHeader("X-Content-Type-Options")}}

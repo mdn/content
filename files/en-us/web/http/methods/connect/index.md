@@ -7,22 +7,20 @@ tags:
   - Request method
 browser-compat: http.methods.CONNECT
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The <strong>HTTP <code>CONNECT</code> method</strong> starts two-way communications
-  with the requested resource. It can be used to open a tunnel.</p>
+The **HTTP `CONNECT` method** starts two-way communications
+with the requested resource. It can be used to open a tunnel.
 
-<p>For example, the <code>CONNECT</code> method can be used to access websites that use
-  {{Glossary("SSL")}} ({{Glossary("HTTPS")}}). The client asks an HTTP {{Glossary("Proxy
-  server")}} to tunnel the <a
-    href="/en-US/docs/Glossary/Transmission_Control_Protocol_(TCP)">TCP</a> connection to
-  the desired destination. The server then proceeds to make the connection on behalf of
-  the client. Once the connection has been established by the server, the
-  {{Glossary("Proxy server")}} continues to proxy the <a
-    href="/en-US/docs/Glossary/Transmission_Control_Protocol_(TCP)">TCP</a> stream to and
-  from the client.</p>
+For example, the `CONNECT` method can be used to access websites that use
+{{Glossary("SSL")}} ({{Glossary("HTTPS")}}). The client asks an HTTP {{Glossary("Proxy
+  server")}} to tunnel the [TCP](</en-US/docs/Glossary/Transmission_Control_Protocol_(TCP)>) connection to
+the desired destination. The server then proceeds to make the connection on behalf of
+the client. Once the connection has been established by the server, the
+{{Glossary("Proxy server")}} continues to proxy the [TCP](</en-US/docs/Glossary/Transmission_Control_Protocol_(TCP)>) stream to and
+from the client.
 
-<p><code>CONNECT</code> is a hop-by-hop method.</p>
+`CONNECT` is a hop-by-hop method.
 
 <table class="properties">
   <tbody>
@@ -47,38 +45,38 @@ browser-compat: http.methods.CONNECT
       <td>No</td>
     </tr>
     <tr>
-      <th scope="row">Allowed in <a href="/en-US/docs/Learn/Forms">HTML forms</a>
+      <th scope="row">
+        Allowed in <a href="/en-US/docs/Learn/Forms">HTML forms</a>
       </th>
       <td>No</td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: html">CONNECT www.example.com:443 HTTP/1.1
-</pre>
+```html
+CONNECT www.example.com:443 HTTP/1.1
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>Some proxy servers might need authority to create a tunnel. See also the
-  {{HTTPHeader("Proxy-Authorization")}} header.</p>
+Some proxy servers might need authority to create a tunnel. See also the
+{{HTTPHeader("Proxy-Authorization")}} header.
 
-<pre>CONNECT server.example.com:80 HTTP/1.1
-Host: server.example.com:80
-Proxy-Authorization: basic aGVsbG86d29ybGQ=</pre>
+    CONNECT server.example.com:80 HTTP/1.1
+    Host: server.example.com:80
+    Proxy-Authorization: basic aGVsbG86d29ybGQ=
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{Glossary("Proxy server")}}</li>
-  <li>{{HTTPHeader("Proxy-Authorization")}}</li>
-</ul>
+- {{Glossary("Proxy server")}}
+- {{HTTPHeader("Proxy-Authorization")}}

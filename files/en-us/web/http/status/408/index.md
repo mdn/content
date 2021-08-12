@@ -2,53 +2,42 @@
 title: 408 Request Timeout
 slug: Web/HTTP/Status/408
 tags:
-- Client error
-- HTTP
-- HTTP Status Code
-- Reference
-- Status code
+  - Client error
+  - HTTP
+  - HTTP Status Code
+  - Reference
+  - Status code
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The HyperText Transfer Protocol (HTTP)
-  <code><strong>408 Request Timeout</strong></code> response status code means that the
-  server would like to shut down this unused connection. It is sent on an idle connection
-  by some servers, <em>even without any previous request by the client</em>.</p>
+The HyperText Transfer Protocol (HTTP)
+**`408 Request Timeout`** response status code means that the
+server would like to shut down this unused connection. It is sent on an idle connection
+by some servers, _even without any previous request by the client_.
 
-<p>A server should send the "close" {{HTTPHeader("Connection")}} header field in the
-  response, since <code>408</code> implies that the server has decided to close the
-  connection rather than continue waiting.</p>
+A server should send the "close" {{HTTPHeader("Connection")}} header field in the
+response, since `408` implies that the server has decided to close the
+connection rather than continue waiting.
 
-<p>This response is used much more since some browsers, like Chrome, Firefox 27+, and IE9,
-  use HTTP pre-connection mechanisms to speed up surfing.</p>
+This response is used much more since some browsers, like Chrome, Firefox 27+, and IE9,
+use HTTP pre-connection mechanisms to speed up surfing.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> some servers merely shut down the connection without sending
-    this message.</p>
-</div>
+> **Note:** some servers merely shut down the connection without sending
+> this message.
 
-<h2 id="Status">Status</h2>
+## Status
 
-<pre class="brush: html">408 Request Timeout</pre>
+```html
+408 Request Timeout
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Title</th>
-    </tr>
-    <tr>
-      <td>{{RFC("7231", "408 Request Timeout" , "6.5.7")}}</td>
-      <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
-    </tr>
-  </tbody>
-</table>
+| Specification                                                    | Title                                                         |
+| ---------------------------------------------------------------- | ------------------------------------------------------------- |
+| {{RFC("7231", "408 Request Timeout" , "6.5.7")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{HTTPHeader("Connection")}}</li>
-  <li>{{HTTPHeader("X-DNS-Prefetch-Control")}}</li>
-</ul>
+- {{HTTPHeader("Connection")}}
+- {{HTTPHeader("X-DNS-Prefetch-Control")}}

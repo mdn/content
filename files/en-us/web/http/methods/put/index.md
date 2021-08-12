@@ -7,11 +7,11 @@ tags:
   - Request method
 browser-compat: http.methods.PUT
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The <strong>HTTP <code>PUT</code> request method</strong> creates a new resource or replaces a representation of the target resource with the request payload.</p>
+The **HTTP `PUT` request method** creates a new resource or replaces a representation of the target resource with the request payload.
 
-<p>The difference between <code>PUT</code> and {{HTTPMethod("POST")}} is that <code>PUT</code> is idempotent: calling it once or several times successively has the same effect (that is no <em>side</em> effect), whereas successive identical {{HTTPMethod("POST")}} requests may have additional effects, akin to placing an order several times.</p>
+The difference between `PUT` and {{HTTPMethod("POST")}} is that `PUT` is idempotent: calling it once or several times successively has the same effect (that is no _side_ effect), whereas successive identical {{HTTPMethod("POST")}} requests may have additional effects, akin to placing an order several times.
 
 <table class="properties">
   <tbody>
@@ -36,52 +36,52 @@ browser-compat: http.methods.PUT
       <td>No</td>
     </tr>
     <tr>
-      <th scope="row">Allowed in <a href="/en-US/docs/Learn/Forms">HTML forms</a></th>
+      <th scope="row">
+        Allowed in <a href="/en-US/docs/Learn/Forms">HTML forms</a>
+      </th>
       <td>No</td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: html">PUT /new.html HTTP/1.1
-</pre>
+```html
+PUT /new.html HTTP/1.1
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="Request">Request</h3>
+### Request
 
-<pre>PUT /new.html HTTP/1.1
-Host: example.com
-Content-type: text/html
-Content-length: 16
+    PUT /new.html HTTP/1.1
+    Host: example.com
+    Content-type: text/html
+    Content-length: 16
 
-&lt;p&gt;New File&lt;/p&gt;</pre>
+    <p>New File</p>
 
-<h3 id="Responses">Responses</h3>
+### Responses
 
-<p>If the target resource does not have a current representation and the <code>PUT</code> request successfully creates one, then the origin server must inform the user agent by sending a {{HTTPStatus("201")}} (<code>Created</code>) response.</p>
+If the target resource does not have a current representation and the `PUT` request successfully creates one, then the origin server must inform the user agent by sending a {{HTTPStatus("201")}} (`Created`) response.
 
-<pre>HTTP/1.1 201 Created
-Content-Location: /new.html</pre>
+    HTTP/1.1 201 Created
+    Content-Location: /new.html
 
-<p>If the target resource does have a current representation and that representation is successfully modified in accordance with the state of the enclosed representation, then the origin server must send either a {{HTTPStatus("200")}} (<code>OK</code>) or a {{HTTPStatus("204")}} (<code>No Content</code>) response to indicate successful completion of the request.</p>
+If the target resource does have a current representation and that representation is successfully modified in accordance with the state of the enclosed representation, then the origin server must send either a {{HTTPStatus("200")}} (`OK`) or a {{HTTPStatus("204")}} (`No Content`) response to indicate successful completion of the request.
 
-<pre>HTTP/1.1 204 No Content
-Content-Location: /existing.html
-</pre>
+    HTTP/1.1 204 No Content
+    Content-Location: /existing.html
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTTPStatus("201")}}</li>
- <li>{{HTTPStatus("204")}}</li>
-</ul>
+- {{HTTPStatus("201")}}
+- {{HTTPStatus("204")}}

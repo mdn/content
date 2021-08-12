@@ -7,59 +7,47 @@ tags:
   - Response header
   - Reference
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The <code><strong>Allow</strong></code> header lists the set of methods supported by a resource.</p>
+The **`Allow`** header lists the set of methods supported by a resource.
 
-<p>This header must be sent if the server responds with a {{HTTPStatus("405")}} <code>Method Not Allowed</code> status code to indicate which request methods can be used. An empty <code>Allow</code> header indicates that the resource allows no request methods, which might occur temporarily for a given resource, for example.</p>
+This header must be sent if the server responds with a {{HTTPStatus("405")}} `Method Not Allowed` status code to indicate which request methods can be used. An empty `Allow` header indicates that the resource allows no request methods, which might occur temporarily for a given resource, for example.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Response header")}} </td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>no</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Header type</th>
+      <td>{{Glossary("Response header")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>no</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: html">Allow: &lt;http-methods&gt;
-</pre>
+```html
+Allow: <http-methods>
+```
 
-<h2 id="Directives">Directives</h2>
+## Directives
 
-<dl>
- <dt>&lt;http-methods&gt;</dt>
- <dd>The comma-separated list of allowed <a href="/en-US/docs/Web/HTTP/Methods">HTTP request methods</a>.</dd>
-</dl>
+- \<http-methods>
+  - : The comma-separated list of allowed [HTTP request methods](/en-US/docs/Web/HTTP/Methods).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre>Allow: GET, POST, HEAD</pre>
+    Allow: GET, POST, HEAD
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Title</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7231", "Allow", "7.4.1")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
-  </tr>
- </thead>
-</table>
+| Specification                                | Title                                                         |
+| -------------------------------------------- | ------------------------------------------------------------- |
+| {{RFC("7231", "Allow", "7.4.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTTPStatus("405")}}</li>
- <li>{{HTTPHeader("Server")}}</li>
-</ul>
+- {{HTTPStatus("405")}}
+- {{HTTPHeader("Server")}}

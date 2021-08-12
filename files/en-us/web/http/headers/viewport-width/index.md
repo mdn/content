@@ -12,74 +12,69 @@ tags:
   - Exerimental
 browser-compat: http.headers.Viewport-Width
 ---
-<div>{{HTTPSidebar}} {{deprecated_header}}{{securecontext_header}}</div>
+{{HTTPSidebar}} {{deprecated_header}}{{securecontext_header}}
 
-<p>The <strong><code>Viewport-Width</code></strong> <a href="/en-US/docs/Glossary/Client_hints">device client hint</a> request header provides the client's layout viewport width in {{Glossary("CSS pixel","CSS pixels")}}. The value is rounded up to the smallest following integer (i.e. ceiling value).</p>
+The **`Viewport-Width`** [device client hint](/en-US/docs/Glossary/Client_hints) request header provides the client's layout viewport width in {{Glossary("CSS pixel","CSS pixels")}}. The value is rounded up to the smallest following integer (i.e. ceiling value).
 
 <table class="properties">
   <tbody>
-   <tr>
-    <th scope="row">Header type</th>
-    <td>{{Glossary("Request header")}}, {{Glossary("Client hints","Client hint")}}</td>
-   </tr>
-   <tr>
-    <th scope="row">{{Glossary("Forbidden header name")}}</th>
-    <td>no</td>
-   </tr>
+    <tr>
+      <th scope="row">Header type</th>
+      <td>
+        {{Glossary("Request header")}},
+        {{Glossary("Client hints","Client hint")}}
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>no</td>
+    </tr>
   </tbody>
- </table>
+</table>
 
-<p>The hint can be used with other screen-specific hints to deliver images optimized for a specific screen size, or to omit resources that are not needed for a particular screen width.</p>
+The hint can be used with other screen-specific hints to deliver images optimized for a specific screen size, or to omit resources that are not needed for a particular screen width.
 
-<p>If the <code>Viewport-Width</code> header appears more than once in a message the last occurrence is used.</p>
+If the `Viewport-Width` header appears more than once in a message the last occurrence is used.
 
-<div class="notecard note">
-  <p><strong>Note:</strong></p>
-    <ul>
-      <li>Client Hints are accessible only on secure origins (via TLS).</li>
-      <li>A server has to opt in to receive the <code>Viewport-Width</code> header from the client, by sending the {{HTTPHeader("Accept-CH")}} response header.</li>
-      <li>Servers that opt in to the <code>Viewport-Width</code> client hint will typically also specify it in the {{HTTPHeader("Vary")}} header. This informs caches that the server may send different responses based on the header value in a request.</li>
-      <li><code>Viewport-Width</code> was removed from the original client hints specification in <a href="https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-client-hints-07">draft-ietf-httpbis-client-hints-07</a>. The proposed replacement is <a href="https://wicg.github.io/responsive-image-client-hints/#sec-ch-viewport-width"><code>Sec-CH-Viewport-Width</code></a> (Responsive Image Client Hints).</li>
-    </ul>
-</div>
+> **Note:**
+>
+> - Client Hints are accessible only on secure origins (via TLS).
+> - A server has to opt in to receive the `Viewport-Width` header from the client, by sending the {{HTTPHeader("Accept-CH")}} response header.
+> - Servers that opt in to the `Viewport-Width` client hint will typically also specify it in the {{HTTPHeader("Vary")}} header. This informs caches that the server may send different responses based on the header value in a request.
+> - `Viewport-Width` was removed from the original client hints specification in [draft-ietf-httpbis-client-hints-07](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-client-hints-07). The proposed replacement is [`Sec-CH-Viewport-Width`](https://wicg.github.io/responsive-image-client-hints/#sec-ch-viewport-width) (Responsive Image Client Hints).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre>Viewport-Width: &lt;number&gt;</pre>
+    Viewport-Width: <number>
 
-<h2 id="Directives">Directives</h2>
+## Directives
 
-<dl>
- <dt><code> &lt;number&gt;</code></dt>
- <dd>The width of the user's viewport in {{Glossary("CSS pixel","CSS pixels")}}, rounded up to the nearest integer.</dd>
-</dl>
+- `<number>`
+  - : The width of the user's viewport in {{Glossary("CSS pixel","CSS pixels")}}, rounded up to the nearest integer.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>A server must first opt in to receive the <code>Viewport-Width</code> header by sending the response header {{HTTPHeader("Accept-CH")}} containing the directive <code>Viewport-Width</code>.</p>
+A server must first opt in to receive the `Viewport-Width` header by sending the response header {{HTTPHeader("Accept-CH")}} containing the directive `Viewport-Width`.
 
-<pre>Accept-CH: Viewport-Width</pre>
+    Accept-CH: Viewport-Width
 
-<p>Then on subsequent requests the client might send <code>Viewport-Width</code> header back:</p>
+Then on subsequent requests the client might send `Viewport-Width` header back:
 
-<pre>Viewport-Width: 320</pre>
+    Viewport-Width: 320
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/client-hints">Adapting to Users with Client Hints</a> (developer.google.com)</li>
- <li>Device client hints
-  <ul>
-    <li>{{HTTPHeader("Content-DPR")}}</li>
-    <li>{{HTTPHeader("Device-Memory")}}</li>
-    <li>{{HTTPHeader("DPR")}}</li>
-    <li>{{HTTPHeader("Width")}}</li>
-   </ul>
- </li>
- <li>{{HTTPHeader("Accept-CH")}}</li>
- <li><a href="/en-US/docs/Web/HTTP/Caching#varying_responses">HTTP Caching > Varying responses</a> and {{HTTPHeader("Vary")}}</li>
-</ul>
+- [Adapting to Users with Client Hints](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/client-hints) (developer.google.com)
+- Device client hints
+
+  - {{HTTPHeader("Content-DPR")}}
+  - {{HTTPHeader("Device-Memory")}}
+  - {{HTTPHeader("DPR")}}
+  - {{HTTPHeader("Width")}}
+
+- {{HTTPHeader("Accept-CH")}}
+- [HTTP Caching > Varying responses](/en-US/docs/Web/HTTP/Caching#varying_responses) and {{HTTPHeader("Vary")}}

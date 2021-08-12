@@ -2,79 +2,75 @@
 title: 'Reason: CORS header ''Access-Control-Allow-Origin'' missing'
 slug: Web/HTTP/CORS/Errors/CORSMissingAllowOrigin
 tags:
-- CORS
-- CORSMissingAllowOrigin
-- Cross-Origin
-- Error
-- HTTP
-- HTTPS
-- Messages
-- Reasons
-- Security
-- console
-- troubleshooting
+  - CORS
+  - CORSMissingAllowOrigin
+  - Cross-Origin
+  - Error
+  - HTTP
+  - HTTPS
+  - Messages
+  - Reasons
+  - Security
+  - console
+  - troubleshooting
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<h2 id="Reason">Reason</h2>
+## Reason
 
-<pre
-  class="brush: html">Reason: CORS header 'Access-Control-Allow-Origin' missing</pre>
+```html
+Reason: CORS header 'Access-Control-Allow-Origin' missing
+```
 
-<h2 id="What_went_wrong">What went wrong?</h2>
+## What went wrong?
 
-<p>The response to the {{Glossary("CORS")}} request is missing the required
-  {{HTTPHeader("Access-Control-Allow-Origin")}} header, which is used to determine whether
-  or not the resource can be accessed by content operating within the current origin.</p>
+The response to the {{Glossary("CORS")}} request is missing the required
+{{HTTPHeader("Access-Control-Allow-Origin")}} header, which is used to determine whether
+or not the resource can be accessed by content operating within the current origin.
 
-<p>If the server is under your control, add the origin of the requesting site to the set
-  of domains permitted access by adding it to the <code>Access-Control-Allow-Origin</code>
-  header's value.</p>
+If the server is under your control, add the origin of the requesting site to the set
+of domains permitted access by adding it to the `Access-Control-Allow-Origin`
+header's value.
 
-<p>For example, to allow a site at https://amazing.site to access the resource using CORS,
-  the header should be:</p>
+For example, to allow a site at https\://amazing.site to access the resource using CORS,
+the header should be:
 
-<pre>Access-Control-Allow-Origin: https://amazing.site</pre>
+    Access-Control-Allow-Origin: https://amazing.site
 
-<p>You can also configure a site to allow any site to access it by using the
-  <code>*</code> wildcard. You should only use this for public APIs. Private APIs should
-  never use <code>*</code>, and should instead have a specific domain or domains set. In
-  addition, the wildcard only works for requests made with the
-  {{htmlattrxref("crossorigin")}} attribute set to <code>anonymous</code>, and it prevents
-  sending credentials like cookies in requests.</p>
+You can also configure a site to allow any site to access it by using the
+`*` wildcard. You should only use this for public APIs. Private APIs should
+never use `*`, and should instead have a specific domain or domains set. In
+addition, the wildcard only works for requests made with the
+{{htmlattrxref("crossorigin")}} attribute set to `anonymous`, and it prevents
+sending credentials like cookies in requests.
 
-<pre>Access-Control-Allow-Origin: *</pre>
+    Access-Control-Allow-Origin: *
 
-<div class="notecard warning">
-  <p><strong>Warning:</strong> Using the wildcard to allow all sites to access a private
-    API is a bad idea.</p>
-</div>
+> **Warning:** Using the wildcard to allow all sites to access a private
+> API is a bad idea.
 
-<p>To allow any site to make CORS requests <em>without</em> using the <code>*</code>
-  wildcard (for example, to enable credentials), your server must read the value of the
-  request's <code>Origin</code> header and use that value to set
-  <code>Access-Control-Allow-Origin</code>, and must also set a <code>Vary: Origin</code>
-  header to indicate that some headers are being set dynamically depending on the origin.
-</p>
+To allow any site to make CORS requests _without_ using the `*`
+wildcard (for example, to enable credentials), your server must read the value of the
+request's `Origin` header and use that value to set
+`Access-Control-Allow-Origin`, and must also set a `Vary: Origin`
+header to indicate that some headers are being set dynamically depending on the origin.
 
-<p>The exact directive for setting headers depends on your web server. In Apache, add a
-  line such as the following to the server's configuration (within the appropriate
-  <code>&lt;Directory&gt;</code>, <code>&lt;Location&gt;</code>,
-  <code>&lt;Files&gt;</code>, or <code>&lt;VirtualHost&gt;</code> section). The
-  configuration is typically found in a <code>.conf</code> file (<code>httpd.conf</code>
-  and <code>apache.conf</code> are common names for these), or in an
-  <code>.htaccess</code> file.</p>
+The exact directive for setting headers depends on your web server. In Apache, add a
+line such as the following to the server's configuration (within the appropriate
+`<Directory>`, `<Location>`,
+`<Files>`, or `<VirtualHost>` section). The
+configuration is typically found in a `.conf` file (`httpd.conf`
+and `apache.conf` are common names for these), or in an
+`.htaccess` file.
 
-<pre>Header set Access-Control-Allow-Origin '<em>origin-list</em>'</pre>
+    Header set Access-Control-Allow-Origin 'origin-list'
 
-<p>For Nginx, the command to set up this header is:</p>
+For Nginx, the command to set up this header is:
 
-<pre>add_header 'Access-Control-Allow-Origin' '<em>origin-list</em>';</pre>
+    add_header 'Access-Control-Allow-Origin' 'origin-list';
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/HTTP/CORS/Errors">CORS errors</a></li>
-  <li>Glossary: {{Glossary("CORS")}}</li>
-  <li><a href="/en-US/docs/Web/HTTP/CORS">CORS introduction</a></li>
-</ul>
+- [CORS errors](/en-US/docs/Web/HTTP/CORS/Errors)
+- Glossary: {{Glossary("CORS")}}
+- [CORS introduction](/en-US/docs/Web/HTTP/CORS)

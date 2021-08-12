@@ -11,62 +11,39 @@ tags:
   - Experimental
 browser-compat: http.headers.Feature-Policy.vr
 ---
-<div>{{HTTPSidebar}} {{SeeCompatTable}}</div>
+{{HTTPSidebar}} {{SeeCompatTable}}
 
-<div class="notecard warning">
-  <p><strong>Warning:</strong> The <a href="/en-US/docs/Web/API/WebVR_API">WebVR API</a> has been replaced with the <a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</a>
-  and is currently being removed from the web platform.
-  Use the feature identifier {{HTTPHeader("Feature-Policy/xr-spatial-tracking","xr-spatial-tracking")}} for WebXR Device API instead.</p>
-</div>
+> **Warning:** The [WebVR API](/en-US/docs/Web/API/WebVR_API) has been replaced with the [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API)
+> and is currently being removed from the web platform.
+> Use the feature identifier {{HTTPHeader("Feature-Policy/xr-spatial-tracking","xr-spatial-tracking")}} for WebXR Device API instead.
 
-<p>The HTTP {{HTTPHeader("Feature-Policy")}} header <code>vr</code> directive controls whether the current document is allowed to use the <a href="/en-US/docs/Web/API/WebVR_API">WebVR API</a>. When this policy is enabled, the {{JSxRef("Promise")}} returned by {{DOMxRef("Navigator.getVRDisplays","Navigator.getVRDisplays()")}} will reject with a {{DOMxRef("DOMException")}}.</p>
+The HTTP {{HTTPHeader("Feature-Policy")}} header `vr` directive controls whether the current document is allowed to use the [WebVR API](/en-US/docs/Web/API/WebVR_API). When this policy is enabled, the {{JSxRef("Promise")}} returned by {{DOMxRef("Navigator.getVRDisplays","Navigator.getVRDisplays()")}} will reject with a {{DOMxRef("DOMException")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre>Feature-Policy: vr &lt;allowlist&gt;;</pre>
+    Feature-Policy: vr <allowlist>;
 
-<dl>
-  <dt>&lt;allowlist&gt;</dt>
-  <dd>A list of origins for which the feature is allowed. See <a href="/en-US/docs/Web/HTTP/Headers/Feature-Policy#syntax"><code>Feature-Policy</code></a>.</dd>
-</dl>
+- \<allowlist>
+  - : A list of origins for which the feature is allowed. See [`Feature-Policy`](/en-US/docs/Web/HTTP/Headers/Feature-Policy#syntax).
 
-<h2 id="Default_policy">Default policy</h2>
+## Default policy
 
-<p>The default allowlist is <code>'self'</code>.</p>
+The default allowlist is `'self'`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Feature Policy")}}</td>
-   <td>{{Spec2("Feature Policy")}}</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("WebVR 1.1")}}</td>
-   <td>{{Spec2("WebVR 1.1")}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Specification                            | Status                               | Comment             |
+| ---------------------------------------- | ------------------------------------ | ------------------- |
+| {{SpecName("Feature Policy")}} | {{Spec2("Feature Policy")}} | Initial definition. |
+| {{SpecName("WebVR 1.1")}}         | {{Spec2("WebVR 1.1")}}         |                     |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTTPHeader("Feature-Policy/xr-spatial-tracking","Feature-Policy: xr-spatial-tracking")}}</li>
- <li>{{HTTPHeader("Feature-Policy")}} header</li>
- <li><a href="/en-US/docs/Web/HTTP/Feature_Policy">Feature Policy</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy">Using Feature Policy</a></li>
-</ul>
+- {{HTTPHeader("Feature-Policy/xr-spatial-tracking","Feature-Policy: xr-spatial-tracking")}}
+- {{HTTPHeader("Feature-Policy")}} header
+- [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy)
+- [Using Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)

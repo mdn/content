@@ -2,25 +2,25 @@
 title: 'CSP: style-src-elem'
 slug: Web/HTTP/Headers/Content-Security-Policy/style-src-elem
 tags:
-- CSP
-- Content
-- Content-Security-Policy
-- Directive
-- HTTP
-- Reference
-- Security
-- Style
-- source
-- style-src
-- style-src-elem
+  - CSP
+  - Content
+  - Content-Security-Policy
+  - Directive
+  - HTTP
+  - Reference
+  - Security
+  - Style
+  - source
+  - style-src
+  - style-src-elem
 browser-compat: http.headers.csp.Content-Security-Policy.style-src-elem
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
-  <strong><code>style-src-elem</code></strong> directive
-  specifies valid sources for stylesheets {{HTMLElement("style")}} elements and
-  {{HTMLElement("link")}} elements with <code>rel="stylesheet"</code>.</p>
+The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
+**`style-src-elem`** directive
+specifies valid sources for stylesheets {{HTMLElement("style")}} elements and
+{{HTMLElement("link")}} elements with `rel="stylesheet"`.
 
 <table class="properties">
   <tbody>
@@ -35,58 +35,57 @@ browser-compat: http.headers.csp.Content-Security-Policy.style-src-elem
     <tr>
       <th scope="row">{{CSP("default-src")}} fallback</th>
       <td>
-        <p>Yes. If this directive is absent, the user agent will look for
-          the {{CSP("style-src")}} directive, and if both of them are absent, fallback
-          to <code>default-src</code> directive.</p>
+        <p>
+          Yes. If this directive is absent, the user agent will look for
+          the {{CSP("style-src")}} directive, and if both of them are
+          absent, fallback to <code>default-src</code> directive.
+        </p>
       </td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>One or more sources can be allowed for the <code>style-src-elem</code> policy:</p>
+One or more sources can be allowed for the `style-src-elem` policy:
 
-<pre class="brush: html">Content-Security-Policy: style-src-elem &lt;source&gt;;
-Content-Security-Policy: style-src-elem &lt;source&gt; &lt;source&gt;;
-</pre>
+```html
+Content-Security-Policy: style-src-elem <source>;
+Content-Security-Policy: style-src-elem <source> <source>;
+```
 
-<p><code>style-src-elem</code> can be used in conjunction with {{CSP("style-src")}}:</p>
+`style-src-elem` can be used in conjunction with {{CSP("style-src")}}:
 
-<pre>Content-Security-Policy: <code>style</code>-src &lt;source&gt;;
-Content-Security-Policy: <code>style</code>-src-elem &lt;source&gt;;</pre>
+    Content-Security-Policy: style-src <source>;
+    Content-Security-Policy: style-src-elem <source>;
 
-<h3 id="Sources">Sources</h3>
+### Sources
 
-<p>{{page("Web/HTTP/Headers/Content-Security-Policy/connect-src", "Sources")}}</p>
+{{page("Web/HTTP/Headers/Content-Security-Policy/connect-src", "Sources")}}
 
-<dl>
-  <dt>'report-sample'</dt>
-  <dd>Requires a sample of the violating code to be included in the violation report.</dd>
-</dl>
+- 'report-sample'
+  - : Requires a sample of the violating code to be included in the violation report.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>TBD</p>
+TBD
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{HTTPHeader("Content-Security-Policy")}}</li>
-  <li>{{CSP("style-src")}}</li>
-  <li>{{CSP("style-src-attr")}}</li>
-  <li>{{HTTPHeader("Link")}} header</li>
-  <li>{{HTMLElement("style")}}, {{HTMLElement("link")}}</li>
-  <li>{{cssxref("@import")}}</li>
-  <li>{{domxref("CSSStyleSheet.insertRule()")}}</li>
-  <li>{{domxref("CSSGroupingRule.insertRule()")}}</li>
-  <li>{{domxref("CSSStyleDeclaration.cssText")}}</li>
-</ul>
+- {{HTTPHeader("Content-Security-Policy")}}
+- {{CSP("style-src")}}
+- {{CSP("style-src-attr")}}
+- {{HTTPHeader("Link")}} header
+- {{HTMLElement("style")}}, {{HTMLElement("link")}}
+- {{cssxref("@import")}}
+- {{domxref("CSSStyleSheet.insertRule()")}}
+- {{domxref("CSSGroupingRule.insertRule()")}}
+- {{domxref("CSSStyleDeclaration.cssText")}}

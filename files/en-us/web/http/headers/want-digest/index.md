@@ -8,37 +8,37 @@ tags:
   - Response header
 browser-compat: http.headers.Want-Digest
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The <code><strong>Want-Digest</strong></code> HTTP header is primarily used in a HTTP
-  request, to ask the responder to provide a {{Glossary("digest")}} of the requested
-  resource using the <code><a href="/en-US/docs/Web/HTTP/Headers/Digest">Digest</a></code>
-  response header.</p>
+The **`Want-Digest`** HTTP header is primarily used in a HTTP
+request, to ask the responder to provide a {{Glossary("digest")}} of the requested
+resource using the [`Digest`](/en-US/docs/Web/HTTP/Headers/Digest)
+response header.
 
-<p>The header contains identifiers for one or more digest algorithms that the sender
-  wishes the responder to use to create the digest. The sender may use <a
-    href="/en-US/docs/Glossary/Quality_values">quality values</a> to indicate its
-  preference ordering among the choices it offers.</p>
+The header contains identifiers for one or more digest algorithms that the sender
+wishes the responder to use to create the digest. The sender may use [quality values](/en-US/docs/Glossary/Quality_values) to indicate its
+preference ordering among the choices it offers.
 
-<p>If <code>Want-Digest</code> does not include any digest algorithms that the server
-  supports, the server may respond with:</p>
+If `Want-Digest` does not include any digest algorithms that the server
+supports, the server may respond with:
 
-<ul>
-  <li>a digest calculated using a different digest algorithm, or</li>
-  <li>a <code><a href="/en-US/docs/Web/HTTP/Status/400">400 Bad Request</a></code> error,
-    and include another <code>Want-Digest</code> header with that response, listing the
-    algorithms that it does support.</li>
-</ul>
+- a digest calculated using a different digest algorithm, or
+- a [`400 Bad Request`](/en-US/docs/Web/HTTP/Status/400) error,
+  and include another `Want-Digest` header with that response, listing the
+  algorithms that it does support.
 
-<p>See the page for the
-  <code><a href="/en-US/docs/Web/HTTP/Headers/Digest">Digest</a></code> header for more
-  information.</p>
+See the page for the
+[`Digest`](/en-US/docs/Web/HTTP/Headers/Digest) header for more
+information.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Header type</th>
-      <td>{{Glossary("Request header")}}, {{Glossary("Response header")}}</td>
+      <td>
+        {{Glossary("Request header")}},
+        {{Glossary("Response header")}}
+      </td>
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
@@ -47,104 +47,94 @@ browser-compat: http.headers.Want-Digest
   </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: html">Want-Digest: &lt;digest-algorithm&gt;
+```html
+Want-Digest: <digest-algorithm>
 
 // Multiple algorithms, weighted with the quality value syntax:
-Want-Digest: &lt;digest-algorithm&gt;&lt;q-value&gt;,&lt;digest-algorithm&gt;&lt;q-value&gt;</pre>
+Want-Digest: <digest-algorithm><q-value>,<digest-algorithm><q-value>
+```
 
-<h2 id="Directives">Directives</h2>
+## Directives
 
-<dl>
-  <dt><code>&lt;digest-algorithm&gt;</code></dt>
-  <dd>Supported digest algorithms are defined in <a
-      href="https://datatracker.ietf.org/doc/html/rfc3230">RFC 3230</a> and <a
-      href="https://datatracker.ietf.org/doc/html/rfc5843">RFC 5843</a>, and include
-    <code>SHA-256</code> and <code>SHA-512</code>. Some of the supported algorithms,
-    including <code>unixsum</code> and <code>MD5</code> are subject to collisions and are
-    thus not suitable for applications in which collision-resistance is important.</dd>
-  <dt><code>&lt;q-value&gt;</code></dt>
-  <dd>The <a href="/en-US/docs/Glossary/Quality_values">quality value</a> to apply to that
-    option.</dd>
-</dl>
+- `<digest-algorithm>`
+  - : Supported digest algorithms are defined in [RFC 3230](https://datatracker.ietf.org/doc/html/rfc3230) and [RFC 5843](https://datatracker.ietf.org/doc/html/rfc5843), and include
+    `SHA-256` and `SHA-512`. Some of the supported algorithms,
+    including `unixsum` and `MD5` are subject to collisions and are
+    thus not suitable for applications in which collision-resistance is important.
+- `<q-value>`
+  - : The [quality value](/en-US/docs/Glossary/Quality_values) to apply to that
+    option.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: html">Want-Digest: sha-256
-Want-Digest: SHA-512;q=0.3, sha-256;q=1, md5;q=0</pre>
+```html
+Want-Digest: sha-256
+Want-Digest: SHA-512;q=0.3, sha-256;q=1, md5;q=0
+```
 
-<h3 id="Basic_operation">Basic operation</h3>
+### Basic operation
 
-<p>The sender provides a list of digests which it is prepared to accept, and the server
-  uses one of them:</p>
+The sender provides a list of digests which it is prepared to accept, and the server
+uses one of them:
 
-<pre>Request:
+    Request:
 
-  GET /item
-  Want-Digest: sha-256;q=0.3, sha;q=1
+      GET /item
+      Want-Digest: sha-256;q=0.3, sha;q=1
 
-Response:
+    Response:
 
-  HTTP/1.1 200 Ok
-  Digest: sha-256=X48E9qOokqqrvdts8nOJRJN3OWDUoyWxBf7kbu9DBPE=</pre>
+      HTTP/1.1 200 Ok
+      Digest: sha-256=X48E9qOokqqrvdts8nOJRJN3OWDUoyWxBf7kbu9DBPE=
 
-<h3 id="Unsupported_digests">Unsupported digests</h3>
+### Unsupported digests
 
-<p>The server does not support any of the requested digest algorithms, so uses a different
-  algorithm:</p>
+The server does not support any of the requested digest algorithms, so uses a different
+algorithm:
 
-<pre>Request:
+    Request:
 
-  GET /item
-  Want-Digest: sha;q=1
+      GET /item
+      Want-Digest: sha;q=1
 
-Response:
+    Response:
 
-  HTTP/1.1 200 Ok
-  Digest: sha-256=X48E9qOokqqrvdts8nOJRJN3OWDUoyWxBf7kbu9DBPE=</pre>
+      HTTP/1.1 200 Ok
+      Digest: sha-256=X48E9qOokqqrvdts8nOJRJN3OWDUoyWxBf7kbu9DBPE=
 
-<p>The server does not support any of the requested digest algorithms, so responds with a
-  400 error and includes another <code>Want-Digest</code> header, listing the algorithms
-  that it does support:</p>
+The server does not support any of the requested digest algorithms, so responds with a
+400 error and includes another `Want-Digest` header, listing the algorithms
+that it does support:
 
-<pre>Request:
+    Request:
 
-  GET /item
-  Want-Digest: sha;q=1
+      GET /item
+      Want-Digest: sha;q=1
 
-Response:
+    Response:
 
-  HTTP/1.1 400 Bad Request
-  Want-Digest: sha-256, sha-512</pre>
+      HTTP/1.1 400 Bad Request
+      Want-Digest: sha-256, sha-512
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table>
-  <tr>
-    <th>Specification</th>
-  </tr>
-  <tr>
-    <td><a href="https://datatracker.ietf.org/doc/draft-ietf-httpbis-digest-headers">draft-ietf-httpbis-digest-headers-latest</a></td>
-  </tr>
-</table>
+| Specification                                                                                                  |
+| -------------------------------------------------------------------------------------------------------------- |
+| [draft-ietf-httpbis-digest-headers-latest](https://datatracker.ietf.org/doc/draft-ietf-httpbis-digest-headers) |
 
-<p>
-  This header was originally defined in <a href="https://datatracker.ietf.org/doc/html/rfc3230">RFC 3230</a>,
-  but the definition of "selected representation"
-  in <a href="https://www.rfc-editor.org/info/rfc7231">RFC 7231</a>
-  made the original definition inconsistent with current HTTP specifications.
-  When released, The "Resource Digests for HTTP" draft therefore will obsolete RFC 3230
-  and will update the standard to be consistent.
-</p>
+This header was originally defined in [RFC 3230](https://datatracker.ietf.org/doc/html/rfc3230),
+but the definition of "selected representation"
+in [RFC 7231](https://www.rfc-editor.org/info/rfc7231)
+made the original definition inconsistent with current HTTP specifications.
+When released, The "Resource Digests for HTTP" draft therefore will obsolete RFC 3230
+and will update the standard to be consistent.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{HTTPHeader("Digest")}}</li>
-</ul>
+- {{HTTPHeader("Digest")}}

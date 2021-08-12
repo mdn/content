@@ -2,68 +2,66 @@
 title: 412 Precondition Failed
 slug: Web/HTTP/Status/412
 tags:
-- Error
-- HTTP
-- Reference
-- Status code
+  - Error
+  - HTTP
+  - Reference
+  - Status code
 browser-compat: http.status.412
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The HyperText Transfer Protocol (HTTP)
-  <code><strong>412 Precondition Failed</strong></code> client error response code
-  indicates that access to the target resource has been denied. This happens with
-  conditional requests on methods other than {{HTTPMethod("GET")}} or
-  {{HTTPMethod("HEAD")}} when the condition defined by the
-  {{HTTPHeader("If-Unmodified-Since")}} or {{HTTPHeader("If-None-Match")}} headers is not
-  fulfilled. In that case, the request, usually an upload or a modification of a resource,
-  cannot be made and this error response is sent back.</p>
+The HyperText Transfer Protocol (HTTP)
+**`412 Precondition Failed`** client error response code
+indicates that access to the target resource has been denied. This happens with
+conditional requests on methods other than {{HTTPMethod("GET")}} or
+{{HTTPMethod("HEAD")}} when the condition defined by the
+{{HTTPHeader("If-Unmodified-Since")}} or {{HTTPHeader("If-None-Match")}} headers is not
+fulfilled. In that case, the request, usually an upload or a modification of a resource,
+cannot be made and this error response is sent back.
 
-<h2 id="Status">Status</h2>
+## Status
 
-<pre class="brush: html">412 Precondition Failed</pre>
+```html
+412 Precondition Failed
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre><code>ETag: "33a64df551425fcc55e4d42a148795d9f25f89d4"
-ETag: W/"0815"</code></pre>
+    ETag: "33a64df551425fcc55e4d42a148795d9f25f89d4"
+    ETag: W/"0815"
 
-<h3 id="Avoiding_mid-air_collisions">Avoiding mid-air collisions</h3>
+### Avoiding mid-air collisions
 
-<p>With the help of the <code>ETag</code> and the {{HTTPHeader("If-Match")}} headers, you
-  can detect mid-air edit collisions.</p>
+With the help of the `ETag` and the {{HTTPHeader("If-Match")}} headers, you
+can detect mid-air edit collisions.
 
-<p>For example, when editing MDN, the current wiki content is hashed and put into an
-  <code>Etag</code> in the response:</p>
+For example, when editing MDN, the current wiki content is hashed and put into an
+`Etag` in the response:
 
-<pre><code>ETag: "33a64df551425fcc55e4d42a148795d9f25f89d4"</code></pre>
+    ETag: "33a64df551425fcc55e4d42a148795d9f25f89d4"
 
-<p>When saving changes to a wiki page (posting data), the {{HTTPMethod("POST")}} request
-  will contain the {{HTTPHeader("If-Match")}} header containing the <code>ETag</code>
-  values to check freshness against.</p>
+When saving changes to a wiki page (posting data), the {{HTTPMethod("POST")}} request
+will contain the {{HTTPHeader("If-Match")}} header containing the `ETag`
+values to check freshness against.
 
-<pre><code>If-Match: "33a64df551425fcc55e4d42a148795d9f25f89d4"</code></pre>
+    If-Match: "33a64df551425fcc55e4d42a148795d9f25f89d4"
 
-<p>If the hashes don't match, it means that the document has been edited in-between and a
-  {{HTTPStatus("412")}} <code>Precondition Failed</code> error is thrown.</p>
+If the hashes don't match, it means that the document has been edited in-between and a
+{{HTTPStatus("412")}} `Precondition Failed` error is thrown.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>The information below has been pulled from MDN's GitHub (<a
-    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>).
-</p>
+The information below has been pulled from MDN's GitHub (<https://github.com/mdn/browser-compat-data>).
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{HTTPStatus("304")}}</li>
-  <li>{{HTTPHeader("If-Unmodified-Since")}}</li>
-  <li>{{HTTPHeader("If-None-Match")}}</li>
-  <li>{{HTTPStatus("428")}}</li>
-</ul>
+- {{HTTPStatus("304")}}
+- {{HTTPHeader("If-Unmodified-Since")}}
+- {{HTTPHeader("If-None-Match")}}
+- {{HTTPStatus("428")}}

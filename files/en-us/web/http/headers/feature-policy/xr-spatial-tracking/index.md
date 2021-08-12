@@ -11,37 +11,33 @@ tags:
   - Experimental
 browser-compat: http.headers.Feature-Policy.xr-spatial-tracking
 ---
-<div>{{HTTPSidebar}}{{Draft}}{{SeeCompatTable}}</div>
+{{HTTPSidebar}}{{Draft}}{{SeeCompatTable}}
 
-<p>The HTTP {{HTTPHeader("Feature-Policy")}} header <code>xr-spatial-tracking</code> directive controls whether the current document is allowed to use the <a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</a>. This policy controls whether {{DOMxRef("XRSystem/requestSession","navigator.xr.requestSession()")}} can return {{DOMxRef("XRSession")}} that requires spatial tracking and whether user agent can indicate support for sessions supporting spatial tracking via {{DOMxRef("XRSystem/isSessionSupported","navigator.xr.isSessionSupported()")}} and {{Event("devicechange")}} event on {{DOMxRef("Navigator.xr","navigator.xr")}} object.</p>
+The HTTP {{HTTPHeader("Feature-Policy")}} header `xr-spatial-tracking` directive controls whether the current document is allowed to use the [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API). This policy controls whether {{DOMxRef("XRSystem/requestSession","navigator.xr.requestSession()")}} can return {{DOMxRef("XRSession")}} that requires spatial tracking and whether user agent can indicate support for sessions supporting spatial tracking via {{DOMxRef("XRSystem/isSessionSupported","navigator.xr.isSessionSupported()")}} and {{Event("devicechange")}} event on {{DOMxRef("Navigator.xr","navigator.xr")}} object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre>Feature-Policy: xr-spatial-tracking &lt;allowlist&gt;;</pre>
+    Feature-Policy: xr-spatial-tracking <allowlist>;
 
-<dl>
-  <dt>&lt;allowlist&gt;</dt>
-  <dd>A list of origins for which the feature is allowed. See <a href="/en-US/docs/Web/HTTP/Headers/Feature-Policy#syntax"><code>Feature-Policy</code></a>.</dd>
- </dl>
+- \<allowlist>
+  - : A list of origins for which the feature is allowed. See [`Feature-Policy`](/en-US/docs/Web/HTTP/Headers/Feature-Policy#syntax).
 
-<h2 id="Default_policy">Default policy</h2>
+## Default policy
 
-<p>The default allowlist is <code>'self'</code>.</p>
+The default allowlist is `'self'`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</a></li>
- <li>{{DOMxRef("XRSystem/requestSession","navigator.xr.requestSession()")}}, and {{DOMxRef("XRSystem/isSessionSupported","navigator.xr.isSessionSupported()")}} and {{Event("devicechange")}} event on {{DOMxRef("Navigator.xr","navigator.xr")}}</li>
- <li>{{HTTPHeader("Feature-Policy")}} header</li>
- <li><a href="/en-US/docs/Web/HTTP/Feature_Policy">Feature Policy</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy">Using Feature Policy</a></li>
-</ul>
+- [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API)
+- {{DOMxRef("XRSystem/requestSession","navigator.xr.requestSession()")}}, and {{DOMxRef("XRSystem/isSessionSupported","navigator.xr.isSessionSupported()")}} and {{Event("devicechange")}} event on {{DOMxRef("Navigator.xr","navigator.xr")}}
+- {{HTTPHeader("Feature-Policy")}} header
+- [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy)
+- [Using Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)

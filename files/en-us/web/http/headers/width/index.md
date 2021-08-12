@@ -12,77 +12,71 @@ tags:
   - Deprecated
 browser-compat: http.headers.Width
 ---
-<div>{{HTTPSidebar}} {{deprecated_header}}{{securecontext_header}}</div>
+{{HTTPSidebar}} {{deprecated_header}}{{securecontext_header}}
 
-<p>The <strong><code>Width</code></strong> {{Glossary("Client hints","device client hint")}} request header field indicates the desired resource width in physical pixels — the intrinsic size of an image. The provided pixel value is a number rounded to the smallest following integer (i.e. ceiling value).</p>
+The **`Width`** {{Glossary("Client hints","device client hint")}} request header field indicates the desired resource width in physical pixels — the intrinsic size of an image. The provided pixel value is a number rounded to the smallest following integer (i.e. ceiling value).
 
 <table class="properties">
   <tbody>
-   <tr>
-    <th scope="row">Header type</th>
-    <td>{{Glossary("Request header")}}, {{Glossary("Client hints","Client hint")}}</td>
-   </tr>
-   <tr>
-    <th scope="row">{{Glossary("Forbidden header name")}}</th>
-    <td>no</td>
-   </tr>
+    <tr>
+      <th scope="row">Header type</th>
+      <td>
+        {{Glossary("Request header")}},
+        {{Glossary("Client hints","Client hint")}}
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>no</td>
+    </tr>
   </tbody>
- </table>
+</table>
 
-<p>The hint is particularly useful because it allows the client to request a resource that is optimal for both the screen and the layout: taking into account both the density-corrected width of the screen and the image's extrinsic size within the layout.</p>
+The hint is particularly useful because it allows the client to request a resource that is optimal for both the screen and the layout: taking into account both the density-corrected width of the screen and the image's extrinsic size within the layout.
 
-<p>If the desired resource width is not known at the time of the request or the resource does not have a display width, the <code>Width</code> header field can be omitted.</p>
+If the desired resource width is not known at the time of the request or the resource does not have a display width, the `Width` header field can be omitted.
 
-<p>If the <code>Width</code> header appears more than once in a message the last occurrence is used.</p>
+If the `Width` header appears more than once in a message the last occurrence is used.
 
-<div class="notecard note">
-  <p><strong>Note:</strong></p>
-    <ul>
-      <li>Client Hints are accessible only on secure origins (via TLS).</li>
-      <li>A server has to opt in to receive the <code>Width</code> header from the client, by sending the {{HTTPHeader("Accept-CH")}} response header.</li>
-      <li>Servers that opt in to the <code>Width</code> client hint will typically also specify it in the {{HTTPHeader("Vary")}} header. This informs caches that the server may send different responses based on the header value in a request.</li>
-      <li><code>Width</code> was removed from the client hints specification in <a href="https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-client-hints-07">draft-ietf-httpbis-client-hints-07</a>. The proposed replacement is <a href="https://wicg.github.io/responsive-image-client-hints/#sec-ch-width"><code>Sec-CH-Width</code></a> (Responsive Image Client Hints).</li>
-    </ul>
-</div>
+> **Note:**
+>
+> - Client Hints are accessible only on secure origins (via TLS).
+> - A server has to opt in to receive the `Width` header from the client, by sending the {{HTTPHeader("Accept-CH")}} response header.
+> - Servers that opt in to the `Width` client hint will typically also specify it in the {{HTTPHeader("Vary")}} header. This informs caches that the server may send different responses based on the header value in a request.
+> - `Width` was removed from the client hints specification in [draft-ietf-httpbis-client-hints-07](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-client-hints-07). The proposed replacement is [`Sec-CH-Width`](https://wicg.github.io/responsive-image-client-hints/#sec-ch-width) (Responsive Image Client Hints).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre>Width: &lt;number&gt;</pre>
+    Width: <number>
 
-<h2 id="Directives">Directives</h2>
+## Directives
 
-<dl>
- <dt><code> &lt;number&gt;</code></dt>
- <dd>The width of the resource in physical pixels, rounded up to the nearest integer.</dd>
-</dl>
+- `<number>`
+  - : The width of the resource in physical pixels, rounded up to the nearest integer.
 
+## Examples
 
-<h2 id="Examples">Examples</h2>
+The server first needs to opt in to receive the `Width` header by sending the response headers {{HTTPHeader("Accept-CH")}} containing `Width`.
 
-<p>The server first needs to opt in to receive the <code>Width</code> header by sending the response headers {{HTTPHeader("Accept-CH")}} containing <code>Width</code>.</p>
+    Accept-CH: Width
 
-<pre>Accept-CH: Width</pre>
+Then on subsequent requests the client might send `Width` header back:
 
-<p>Then on subsequent requests the client might send <code>Width</code> header back:</p>
+    Width: 1920
 
-<pre>Width: 1920</pre>
+## Browser compatibility
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+{{Compat}}
 
-<p>{{Compat}}</p>
+## See also
 
-<h2 id="See_also">See also</h2>
+- [Adapting to Users with Client Hints](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/client-hints) (developer.google.com)
+- Device client hints
 
-<ul>
-  <li><a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/client-hints">Adapting to Users with Client Hints</a> (developer.google.com)</li>
- <li>Device client hints
-  <ul>
-    <li>{{HTTPHeader("Content-DPR")}}</li>
-    <li>{{HTTPHeader("Device-Memory")}}</li>
-    <li>{{HTTPHeader("DPR")}}</li>
-    <li>{{HTTPHeader("Viewport-Width")}}</li>
-   </ul>
- </li>
- <li>{{HTTPHeader("Accept-CH")}}</li>
- <li><a href="/en-US/docs/Web/HTTP/Caching#varying_responses">HTTP Caching > Varying responses</a> and {{HTTPHeader("Vary")}}</li>
-</ul>
+  - {{HTTPHeader("Content-DPR")}}
+  - {{HTTPHeader("Device-Memory")}}
+  - {{HTTPHeader("DPR")}}
+  - {{HTTPHeader("Viewport-Width")}}
+
+- {{HTTPHeader("Accept-CH")}}
+- [HTTP Caching > Varying responses](/en-US/docs/Web/HTTP/Caching#varying_responses) and {{HTTPHeader("Vary")}}

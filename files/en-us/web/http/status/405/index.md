@@ -8,38 +8,27 @@ tags:
   - Reference
   - Status code
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The HyperText Transfer Protocol (HTTP) <code><strong>405 Method Not Allowed</strong></code> response status code indicates that the request method is known by the server but is not supported by the target resource.</p>
+The HyperText Transfer Protocol (HTTP) **`405 Method Not Allowed`** response status code indicates that the request method is known by the server but is not supported by the target resource.
 
-<p>The server <strong>must</strong> generate an <strong><code>Allow</code></strong> header field in a 405 response containing a list of the target resource's currently supported methods.</p>
+The server **must** generate an **`Allow`** header field in a 405 response containing a list of the target resource's currently supported methods.
 
-<h2 id="Status">Status</h2>
+## Status
 
-<pre class="brush: html">405 Method Not Allowed</pre>
+```html
+405 Method Not Allowed
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Title</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{RFC("7231", "405 Method Not Allowed" , "6.5.5")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                        | Title                                                         |
+| -------------------------------------------------------------------- | ------------------------------------------------------------- |
+| {{RFC("7231", "405 Method Not Allowed" , "6.5.5")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTTPHeader("Allow")}}</li>
- <li><a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html" rel="noopener">HTTP/1.1: Status Code Definitions</a></li>
- <li><a href="https://kinsta.com/blog/405-method-not-allowed-error/">How to Fix 405 Method Not Allowed</a></li>
- <li><a href="https://docs.microsoft.com/en-us/aspnet/web-api/overview/testing-and-debugging/troubleshooting-http-405-errors-after-publishing-web-api-applications">Troubleshooting HTTP 405</a></li>
-</ul>
+- {{HTTPHeader("Allow")}}
+- [HTTP/1.1: Status Code Definitions](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
+- [How to Fix 405 Method Not Allowed](https://kinsta.com/blog/405-method-not-allowed-error/)
+- [Troubleshooting HTTP 405](https://docs.microsoft.com/en-us/aspnet/web-api/overview/testing-and-debugging/troubleshooting-http-405-errors-after-publishing-web-api-applications)

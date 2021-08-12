@@ -10,50 +10,33 @@ tags:
   - Experimental
 browser-compat: http.headers.Feature-Policy.picture-in-picture
 ---
-<p>{{HTTPSidebar}} {{SeeCompatTable}}</p>
+{{HTTPSidebar}} {{SeeCompatTable}}
 
-<p>The HTTP {{HTTPHeader("Feature-Policy")}} header <code>picture-in-picture</code> directive controls whether the current document is allowed to play a video in a Picture-in-Picture mode via the corresponding API.</p>
+The HTTP {{HTTPHeader("Feature-Policy")}} header `picture-in-picture` directive controls whether the current document is allowed to play a video in a Picture-in-Picture mode via the corresponding API.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre>Feature-Policy: picture-in-picture &lt;allowlist&gt;;</pre>
+    Feature-Policy: picture-in-picture <allowlist>;
 
-<dl>
-  <dt>&lt;allowlist&gt;</dt>
-  <dd>A list of origins for which the feature is allowed. See <a href="/en-US/docs/Web/HTTP/Headers/Feature-Policy#syntax"><code>Feature-Policy</code></a>.</dd>
-</dl>
+- \<allowlist>
+  - : A list of origins for which the feature is allowed. See [`Feature-Policy`](/en-US/docs/Web/HTTP/Headers/Feature-Policy#syntax).
 
-<h2 id="Default_policy">Default policy</h2>
+## Default policy
 
-<p>As of June 2019, the <a href="https://wicg.github.io/picture-in-picture/#feature-policy">spec draft</a> and <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=806249#c17">Google Chrome</a> set default allow list to <code>*</code>.</p>
+As of June 2019, the [spec draft](https://wicg.github.io/picture-in-picture/#feature-policy) and [Google Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=806249#c17) set default allow list to `*`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Feature Policy')}}</td>
-   <td>{{Spec2('Feature Policy')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                            | Status                               | Comment             |
+| ---------------------------------------- | ------------------------------------ | ------------------- |
+| {{SpecName('Feature Policy')}} | {{Spec2('Feature Policy')}} | Initial definition. |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTTPHeader("Feature-Policy")}} header</li>
- <li><a href="/en-US/docs/Web/HTTP/Feature_Policy">Feature Policy</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy">Using Feature Policy</a></li>
-</ul>
+- {{HTTPHeader("Feature-Policy")}} header
+- [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy)
+- [Using Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)

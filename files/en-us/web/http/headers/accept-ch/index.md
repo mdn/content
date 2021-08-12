@@ -9,11 +9,11 @@ tags:
   - Response header
 browser-compat: http.headers.Accept-CH
 ---
-<div>{{HTTPSidebar}}{{securecontext_header}}{{SeeCompatTable}}</div>
+{{HTTPSidebar}}{{securecontext_header}}{{SeeCompatTable}}
 
-<p>The <code><strong>Accept-CH</strong></code> header may be set by a server to specify
-  which <a href="/en-US/docs/Glossary/Client_hints">client hints</a> headers a client
-  should include in subsequent requests.</p>
+The **`Accept-CH`** header may be set by a server to specify
+which [client hints](/en-US/docs/Glossary/Client_hints) headers a client
+should include in subsequent requests.
 
 <table class="properties">
   <tbody>
@@ -26,45 +26,38 @@ browser-compat: http.headers.Accept-CH
       <td>no</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("CORS-safelisted response header")}}</th>
+      <th scope="row">
+        {{Glossary("CORS-safelisted response header")}}
+      </th>
       <td>no</td>
-     </tr>
+    </tr>
   </tbody>
 </table>
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Client hints are accessible only on secure origins (via TLS).
-    <code>Accept-CH</code> (and <code>Accept-CH-Lifetime</code>) headers should be persisted for all secure requests
-    to ensure client hints are sent reliably.</p>
-</div>
+> **Note:** Client hints are accessible only on secure origins (via TLS).
+> `Accept-CH` (and `Accept-CH-Lifetime`) headers should be persisted for all secure requests
+> to ensure client hints are sent reliably.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre>Accept-CH: &lt;list of client hints&gt;
-</pre>
+    Accept-CH: <list of client hints>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre>Accept-CH: Viewport-Width, Width
-Vary: Viewport-Width, Width
-</pre>
+    Accept-CH: Viewport-Width, Width
+    Vary: Viewport-Width, Width
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Remember to <a
-      href="/en-US/docs/Glossary/Client_hints#varying_client_hints">vary the response</a>
-    based on the accepted client hints.</p>
-</div>
+> **Note:** Remember to [vary the response](/en-US/docs/Glossary/Client_hints#varying_client_hints)
+> based on the accepted client hints.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{HTTPHeader("Vary")}}</li>
-</ul>
+- {{HTTPHeader("Vary")}}

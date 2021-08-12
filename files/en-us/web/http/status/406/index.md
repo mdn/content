@@ -2,53 +2,50 @@
 title: 406 Not Acceptable
 slug: Web/HTTP/Status/406
 tags:
-- HTTP
-- Reference
-- Status code
+  - HTTP
+  - Reference
+  - Status code
 browser-compat: http.status.406
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The HyperText Transfer Protocol (HTTP) <code><strong>406 Not Acceptable</strong></code>
-  client error response code indicates that the server cannot produce a response matching
-  the list of acceptable values defined in the request's proactive <a
-    href="/en-US/docs/Web/HTTP/Content_negotiation">content negotiation</a> headers, and
-  that the server is unwilling to supply a default representation.</p>
+The HyperText Transfer Protocol (HTTP) **`406 Not Acceptable`**
+client error response code indicates that the server cannot produce a response matching
+the list of acceptable values defined in the request's proactive [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation) headers, and
+that the server is unwilling to supply a default representation.
 
-<p>Proactive content negotiation headers include:</p>
+Proactive content negotiation headers include:
 
-<ul>
-  <li>{{HTTPHeader("Accept")}}</li>
-  <li>{{HTTPHeader("Accept-Encoding")}}</li>
-  <li>{{HTTPHeader("Accept-Language")}}</li>
-</ul>
+- {{HTTPHeader("Accept")}}
+- {{HTTPHeader("Accept-Encoding")}}
+- {{HTTPHeader("Accept-Language")}}
 
-<p>In practice, this error is very rarely used. Instead of responding using this error
-  code, which would be cryptic for the end user and difficult to fix, servers ignore the
-  relevant header and serve an actual page to the user. It is assumed that even if the
-  user won't be completely happy, they will prefer this to an error code.</p>
+In practice, this error is very rarely used. Instead of responding using this error
+code, which would be cryptic for the end user and difficult to fix, servers ignore the
+relevant header and serve an actual page to the user. It is assumed that even if the
+user won't be completely happy, they will prefer this to an error code.
 
-<p>If a server returns such an error status, the body of the message should contain the
-  list of the available representations of the resources, allowing the user to choose
-  among them.</p>
+If a server returns such an error status, the body of the message should contain the
+list of the available representations of the resources, allowing the user to choose
+among them.
 
-<h2 id="Status">Status</h2>
+## Status
 
-<pre class="brush: html">406 Not Acceptable</pre>
+```html
+406 Not Acceptable
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{HTTPHeader("Accept")}}</li>
-  <li>{{HTTPHeader("Accept-Encoding")}}</li>
-  <li>{{HTTPHeader("Accept-Language")}}</li>
-  <li>HTTP <a href="/en-US/docs/Web/HTTP/Content_negotiation">content negotiation</a></li>
-</ul>
+- {{HTTPHeader("Accept")}}
+- {{HTTPHeader("Accept-Encoding")}}
+- {{HTTPHeader("Accept-Language")}}
+- HTTP [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation)

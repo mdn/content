@@ -8,31 +8,29 @@ tags:
   - Status code
 browser-compat: http.status.410
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The HyperText Transfer Protocol (HTTP) <code><strong>410 Gone</strong></code> client error response code indicates that access to the target resource is no longer available at the origin server and that this condition is likely to be permanent.</p>
+The HyperText Transfer Protocol (HTTP) **`410 Gone`** client error response code indicates that access to the target resource is no longer available at the origin server and that this condition is likely to be permanent.
 
-<p>If you don't know whether this condition is temporary or permanent, a {{HTTPStatus(404)}} status code should be used instead.</p>
+If you don't know whether this condition is temporary or permanent, a {{HTTPStatus(404)}} status code should be used instead.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> A 410 response is cacheable by default.</p>
-</div>
+> **Note:** A 410 response is cacheable by default.
 
-<h2 id="Status">Status</h2>
+## Status
 
-<pre class="brush: html">410 Gone</pre>
+```html
+410 Gone
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>{{HTTPStatus(404)}}</li>
-	<li><a href="https://www.exai.com/blog/410-gone-client-error">410 gone</a></li>
-</ul>
+- {{HTTPStatus(404)}}
+- [410 gone](https://www.exai.com/blog/410-gone-client-error)

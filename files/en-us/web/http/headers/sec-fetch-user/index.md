@@ -10,66 +10,63 @@ tags:
   - Request header
 browser-compat: http.headers.Sec-Fetch-User
 ---
-<p>{{HTTPSidebar}}</p>
+{{HTTPSidebar}}
 
-<p>The <strong><code>Sec-Fetch-User</code></strong> {{Glossary("Fetch metadata request header", "fetch metadata request header")}} is only sent for requests initiated by user activation, and its value will always be <code>?1</code>.</p>
+The **`Sec-Fetch-User`** {{Glossary("Fetch metadata request header", "fetch metadata request header")}} is only sent for requests initiated by user activation, and its value will always be `?1`.
 
-<p>A server can use this header to identify whether a navigation request from a document, iframe, etc., was originated by the user.</p>
+A server can use this header to identify whether a navigation request from a document, iframe, etc., was originated by the user.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Fetch Metadata Request Header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>yes (prefix <code>Sec-</code>)</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("CORS-safelisted request header")}}</th>
-   <td>no</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Header type</th>
+      <td>{{Glossary("Fetch Metadata Request Header")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>yes (prefix <code>Sec-</code>)</td>
+    </tr>
+    <tr>
+      <th scope="row">
+        {{Glossary("CORS-safelisted request header")}}
+      </th>
+      <td>no</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre>Sec-Fetch-User: ?1
-</pre>
+    Sec-Fetch-User: ?1
 
-<h2 id="Directives">Directives</h2>
+## Directives
 
-<p>The value will always be <code>?1</code>. When a request is triggered by something other than a user activation, the spec requires browsers to omit the header completely.</p>
+The value will always be `?1`. When a request is triggered by something other than a user activation, the spec requires browsers to omit the header completely.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>If a user clicks on a page link to another page on the same origin, the resulting request would have the following headers:</p>
+If a user clicks on a page link to another page on the same origin, the resulting request would have the following headers:
 
-<pre>Sec-Fetch-Dest: document
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: same-origin
-Sec-Fetch-User: ?1
-</pre>
+    Sec-Fetch-Dest: document
+    Sec-Fetch-Mode: navigate
+    Sec-Fetch-Site: same-origin
+    Sec-Fetch-User: ?1
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>Related headers
-   <ul>
-    <li>{{HTTPHeader("Sec-Fetch-Dest")}}</li>
-    <li>{{HTTPHeader("Sec-Fetch-Mode")}}</li>
-    <li>{{HTTPHeader("Sec-Fetch-Site")}}</li>
-    </ul>
-  </li>
-  <li><a href="https://web.dev/fetch-metadata/">Protect your resources from web attacks with Fetch Metadata</a> (web.dev)</li>
-  <li><a href="https://secmetadata.appspot.com/">Fetch Metadata Request Headers playground</a> (secmetadata.appspot.com)</li>
- </ul>
+- Related headers
+
+  - {{HTTPHeader("Sec-Fetch-Dest")}}
+  - {{HTTPHeader("Sec-Fetch-Mode")}}
+  - {{HTTPHeader("Sec-Fetch-Site")}}
+
+- [Protect your resources from web attacks with Fetch Metadata](https://web.dev/fetch-metadata/) (web.dev)
+- [Fetch Metadata Request Headers playground](https://secmetadata.appspot.com/) (secmetadata.appspot.com)

@@ -12,43 +12,40 @@ tags:
   - block-all-mixed-content
 browser-compat: http.headers.csp.Content-Security-Policy.block-all-mixed-content
 ---
-<div>{{HTTPSidebar}}{{deprecated_header}}</div>
+{{HTTPSidebar}}{{deprecated_header}}
 
-<p>The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) <code><strong>block-all-mixed-content</strong></code> directive prevents loading any assets over HTTP when the page uses HTTPS.</p>
+The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`block-all-mixed-content`** directive prevents loading any assets over HTTP when the page uses HTTPS.
 
-<p>All <a href="/en-US/docs/Web/Security/Mixed_content">mixed content</a> resource requests are blocked, including both active and passive mixed content. This also applies to {{HTMLElement("iframe")}} documents, ensuring the entire page is mixed content-free.</p>
+All [mixed content](/en-US/docs/Web/Security/Mixed_content) resource requests are blocked, including both active and passive mixed content. This also applies to {{HTMLElement("iframe")}} documents, ensuring the entire page is mixed content-free.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> The {{CSP("upgrade-insecure-requests")}} directive is evaluated before <code>block-all-mixed-content</code>. If the former is set, the latter does nothing, so set one directive or the other – not both, unless you want to force HTTPS on older browsers that do not force it after a redirect to HTTP.</p>
-</div>
+> **Note:** The {{CSP("upgrade-insecure-requests")}} directive is evaluated before `block-all-mixed-content`. If the former is set, the latter does nothing, so set one directive or the other – not both, unless you want to force HTTPS on older browsers that do not force it after a redirect to HTTP.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: html">Content-Security-Policy: block-all-mixed-content;</pre>
+```html
+Content-Security-Policy: block-all-mixed-content;
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre>Content-Security-Policy: block-all-mixed-content;
+    Content-Security-Policy: block-all-mixed-content;
 
-&lt;meta http-equiv="Content-Security-Policy" content="block-all-mixed-content"&gt;
-</pre>
+    <meta http-equiv="Content-Security-Policy" content="block-all-mixed-content">
 
-<p>To disallow http assets on a more granular level, you can also set individual directives to <code>https:</code>. For example, to disallow nonsecure HTTP images:</p>
+To disallow http assets on a more granular level, you can also set individual directives to `https:`. For example, to disallow nonsecure HTTP images:
 
-<pre>Content-Security-Policy: img-src https:</pre>
+    Content-Security-Policy: img-src https:
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any current specification. Used to be defined in the outdated <a href="https://www.w3.org/TR/mixed-content/#block-all-mixed-content">Mixed Content Level 1</a> specification.</p>
+Not part of any current specification. Used to be defined in the outdated [Mixed Content Level 1](https://www.w3.org/TR/mixed-content/#block-all-mixed-content) specification.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTTPHeader("Content-Security-Policy")}}</li>
- <li>{{CSP("upgrade-insecure-requests")}}</li>
- <li><a href="/en-US/docs/Web/Security/Mixed_content">Mixed content</a></li>
-</ul>
+- {{HTTPHeader("Content-Security-Policy")}}
+- {{CSP("upgrade-insecure-requests")}}
+- [Mixed content](/en-US/docs/Web/Security/Mixed_content)

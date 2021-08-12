@@ -2,59 +2,44 @@
 title: 431 Request Header Fields Too Large
 slug: Web/HTTP/Status/431
 tags:
-- Client error
-- HTTP
-- HTTP Status Code
-- Reference
-- Status code
+  - Client error
+  - HTTP
+  - HTTP Status Code
+  - Reference
+  - Status code
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>
-  The HTTP <code><strong>431 Request Header Fields Too Large</strong></code> response status code
-  indicates that the server refuses to process the request because the request's
-  <a href="/en-US/docs/Web/HTTP/Headers">HTTP headers</a> are too long.
-  The request <em>may</em> be resubmitted after reducing the size of the request headers.
-</p>
+The HTTP **`431 Request Header Fields Too Large`** response status code
+indicates that the server refuses to process the request because the request's
+[HTTP headers](/en-US/docs/Web/HTTP/Headers) are too long.
+The request _may_ be resubmitted after reducing the size of the request headers.
 
-<p>431 can be used when the <strong>total size</strong> of request headers is too large,
-  or when a <strong>single</strong> header field is too large. To help those running into
-  this error, indicate which of the two is the problem in the response body — ideally,
-  also include which headers are too large. This lets users attempt to fix the problem,
-  such as by clearing their cookies.</p>
+431 can be used when the **total size** of request headers is too large,
+or when a **single** header field is too large. To help those running into
+this error, indicate which of the two is the problem in the response body — ideally,
+also include which headers are too large. This lets users attempt to fix the problem,
+such as by clearing their cookies.
 
-<p>Servers will often produce this status if:</p>
+Servers will often produce this status if:
 
-<ul>
-  <li>The {{ httpheader("Referer") }} URL is too long</li>
-  <li>There are too many <a href="/en-US/docs/Web/HTTP/Cookies">Cookies</a> sent in the
-    request</li>
-</ul>
+- The {{ httpheader("Referer") }} URL is too long
+- There are too many [Cookies](/en-US/docs/Web/HTTP/Cookies) sent in the
+  request
 
-<h2 id="Status">Status</h2>
+## Status
 
-<pre class="brush: html">431 Request Header Fields Too Large</pre>
+```html
+431 Request Header Fields Too Large
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Title</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{RFC("6585", "431 Request Header Fields Too Large" , "5")}}</td>
-      <td>Additional HTTP Status Codes</td>
-    </tr>
-  </tbody>
-</table>
+| Specification                                                                    | Title                        |
+| -------------------------------------------------------------------------------- | ---------------------------- |
+| {{RFC("6585", "431 Request Header Fields Too Large" , "5")}} | Additional HTTP Status Codes |
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{HTTPStatus(414, "414 URI Too Long")}}</li>
-  <li>{{Glossary("Request header")}}</li>
-</ul>
+- {{HTTPStatus(414, "414 URI Too Long")}}
+- {{Glossary("Request header")}}

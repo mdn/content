@@ -7,61 +7,40 @@ tags:
   - Reference
 browser-compat: http.methods
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>HTTP defines a set of <strong>request methods</strong> to indicate the desired action to be performed for a given resource. Although they can also be nouns, these request methods are sometimes referred to as <em>HTTP verbs</em>. Each of them implements a different semantic, but some common features are shared by a group of them: e.g. a request method can be {{glossary("Safe/HTTP", "safe")}}, {{glossary("idempotent")}}, or {{glossary("cacheable")}}.</p>
+HTTP defines a set of **request methods** to indicate the desired action to be performed for a given resource. Although they can also be nouns, these request methods are sometimes referred to as _HTTP verbs_. Each of them implements a different semantic, but some common features are shared by a group of them: e.g. a request method can be {{glossary("Safe/HTTP", "safe")}}, {{glossary("idempotent")}}, or {{glossary("cacheable")}}.
 
-<dl>
- <dt><code><a href="/en-US/docs/Web/HTTP/Methods/GET">GET</a></code></dt>
- <dd>The <code>GET</code> method requests a representation of the specified resource. Requests using <code>GET</code> should only retrieve data.</dd>
- <dt><code><a href="/en-US/docs/Web/HTTP/Methods/HEAD">HEAD</a></code></dt>
- <dd>The <code>HEAD</code> method asks for a response identical to that of a <code>GET</code> request, but without the response body.</dd>
- <dt><code><a href="/en-US/docs/Web/HTTP/Methods/POST">POST</a></code></dt>
- <dd>The <code>POST</code> method is used to submit an entity to the specified resource, often causing a change in state or side effects on the server.</dd>
- <dt><code><a href="/en-US/docs/Web/HTTP/Methods/PUT">PUT</a></code></dt>
- <dd>The <code>PUT</code> method replaces all current representations of the target resource with the request payload.</dd>
- <dt><code><a href="/en-US/docs/Web/HTTP/Methods/DELETE">DELETE</a></code></dt>
- <dd>The <code>DELETE</code> method deletes the specified resource.</dd>
- <dt><code><a href="/en-US/docs/Web/HTTP/Methods/CONNECT">CONNECT</a></code></dt>
- <dd>The <code>CONNECT</code> method establishes a tunnel to the server identified by the target resource.</dd>
- <dt><code><a href="/en-US/docs/Web/HTTP/Methods/OPTIONS">OPTIONS</a></code></dt>
- <dd>The <code>OPTIONS</code> method is used to describe the communication options for the target resource.</dd>
- <dt><code><a href="/en-US/docs/Web/HTTP/Methods/TRACE">TRACE</a></code></dt>
- <dd>The <code>TRACE</code> method performs a message loop-back test along the path to the target resource.</dd>
- <dt><code><a href="/en-US/docs/Web/HTTP/Methods/PATCH">PATCH</a></code></dt>
- <dd>The <code>PATCH</code> method is used to apply partial modifications to a resource.</dd>
-</dl>
+- [`GET`](/en-US/docs/Web/HTTP/Methods/GET)
+  - : The `GET` method requests a representation of the specified resource. Requests using `GET` should only retrieve data.
+- [`HEAD`](/en-US/docs/Web/HTTP/Methods/HEAD)
+  - : The `HEAD` method asks for a response identical to that of a `GET` request, but without the response body.
+- [`POST`](/en-US/docs/Web/HTTP/Methods/POST)
+  - : The `POST` method is used to submit an entity to the specified resource, often causing a change in state or side effects on the server.
+- [`PUT`](/en-US/docs/Web/HTTP/Methods/PUT)
+  - : The `PUT` method replaces all current representations of the target resource with the request payload.
+- [`DELETE`](/en-US/docs/Web/HTTP/Methods/DELETE)
+  - : The `DELETE` method deletes the specified resource.
+- [`CONNECT`](/en-US/docs/Web/HTTP/Methods/CONNECT)
+  - : The `CONNECT` method establishes a tunnel to the server identified by the target resource.
+- [`OPTIONS`](/en-US/docs/Web/HTTP/Methods/OPTIONS)
+  - : The `OPTIONS` method is used to describe the communication options for the target resource.
+- [`TRACE`](/en-US/docs/Web/HTTP/Methods/TRACE)
+  - : The `TRACE` method performs a message loop-back test along the path to the target resource.
+- [`PATCH`](/en-US/docs/Web/HTTP/Methods/PATCH)
+  - : The `PATCH` method is used to apply partial modifications to a resource.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Title</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{RFC("7231", "Request methods", "4")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
-   <td>Specifies GET, HEAD, POST, PUT, DELETE, CONNECT, OPTIONS, TRACE.</td>
-  </tr>
-  <tr>
-   <td>{{RFC("5789", "Patch method", "2")}}</td>
-   <td>PATCH Method for HTTP</td>
-   <td>Specifies PATCH.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                        | Title                                                         | Comment                                                          |
+| ---------------------------------------------------- | ------------------------------------------------------------- | ---------------------------------------------------------------- |
+| {{RFC("7231", "Request methods", "4")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content | Specifies GET, HEAD, POST, PUT, DELETE, CONNECT, OPTIONS, TRACE. |
+| {{RFC("5789", "Patch method", "2")}}     | PATCH Method for HTTP                                         | Specifies PATCH.                                                 |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/HTTP/Headers">HTTP headers</a></li>
-</ul>
+- [HTTP headers](/en-US/docs/Web/HTTP/Headers)

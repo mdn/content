@@ -7,20 +7,19 @@ tags:
   - header
 browser-compat: http.headers.Content-Location
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The <strong><code>Content-Location</code></strong> header indicates an alternate
-  location for the returned data. The principal use is to indicate the URL of a resource
-  transmitted as the result of <a href="/en-US/docs/Web/HTTP/Content_negotiation">content
-    negotiation</a>.</p>
+The **`Content-Location`** header indicates an alternate
+location for the returned data. The principal use is to indicate the URL of a resource
+transmitted as the result of [content
+negotiation](/en-US/docs/Web/HTTP/Content_negotiation).
 
-<p>{{HTTPHeader("Location")}} and <code>Content-Location</code> are different.
-  <code>Location</code> indicates the URL of a redirect, while
-  <code>Content-Location</code> indicates the direct URL to use to access the resource,
-  without further content negotiation in the future. <code>Location</code> is a header
-  associated with the response, while <code>Content-Location</code> is associated with the
-  data returned. This distinction may seem abstract without <a
-    href="#examples">examples</a>.</p>
+{{HTTPHeader("Location")}} and `Content-Location` are different.
+`Location` indicates the URL of a redirect, while
+`Content-Location` indicates the direct URL to use to access the resource,
+without further content negotiation in the future. `Location` is a header
+associated with the response, while `Content-Location` is associated with the
+data returned. This distinction may seem abstract without [examples](#examples).
 
 <table class="properties">
   <tbody>
@@ -35,144 +34,114 @@ browser-compat: http.headers.Content-Location
   </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: html">Content-Location: &lt;url&gt;
-</pre>
+```html
+Content-Location: <url>
+```
 
-<h2 id="Directives">Directives</h2>
+## Directives
 
-<dl>
-  <dt>&lt;url&gt;</dt>
-  <dd>A <a
-      href="/en-US/docs/Learn/Common_questions/What_is_a_URL#examples_of_relative_urls">relative</a>
-    (to the request URL) or <a
-      href="/en-US/docs/Learn/Common_questions/What_is_a_URL#examples_of_absolute_urls">absolute</a>
-    URL.</dd>
-</dl>
+- \<url>
+  - : A [relative](/en-US/docs/Learn/Common_questions/What_is_a_URL#examples_of_relative_urls)
+    (to the request URL) or [absolute](/en-US/docs/Learn/Common_questions/What_is_a_URL#examples_of_absolute_urls)
+    URL.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Requesting_data_from_a_server_in_different_formats">Requesting data from a server
-  in different formats</h3>
+### Requesting data from a server in different formats
 
-<p>Let's say a site's API can return data in {{glossary("JSON")}}, {{glossary("XML")}}, or
-  <a href="https://en.wikipedia.org/wiki/Comma-separated_values" rel="external"
-    title="Comma-separated values">CSV</a> formats. If the URL for a particular document
-  is at <code>https://example.com/documents/foo</code>, the site could return different
-  URLs for <code>Content-Location</code> depending on the request's
-  {{HTTPHeader("Accept")}} header:</p>
+Let's say a site's API can return data in {{glossary("JSON")}}, {{glossary("XML")}}, or
+[CSV](https://en.wikipedia.org/wiki/Comma-separated_values "Comma-separated values") formats. If the URL for a particular document
+is at `https://example.com/documents/foo`, the site could return different
+URLs for `Content-Location` depending on the request's
+{{HTTPHeader("Accept")}} header:
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Request header</th>
-      <th scope="col">Response header</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>Accept: application/json, text/json</code></td>
-      <td><code>Content-Location: /documents/foo.json</code></td>
-    </tr>
-    <tr>
-      <td><code>Accept: application/xml, text/xml</code></td>
-      <td><code>Content-Location: /documents/foo.xml</code></td>
-    </tr>
-    <tr>
-      <td><code>Accept: text/plain, text/*</code></td>
-      <td><code>Content-Location: /documents/foo.txt</code></td>
-    </tr>
-  </tbody>
-</table>
+| Request header                        | Response header                         |
+| ------------------------------------- | --------------------------------------- |
+| `Accept: application/json, text/json` | `Content-Location: /documents/foo.json` |
+| `Accept: application/xml, text/xml`   | `Content-Location: /documents/foo.xml`  |
+| `Accept: text/plain, text/*`          | `Content-Location: /documents/foo.txt`  |
 
-<p>These URLs are examples — the site could serve the different filetypes with any URL
-  patterns it wishes, such as a <a
-    href="/en-US/docs/Web/API/HTMLAnchorElement/search">query string
-    parameter</a>: <code>/documents/foo?format=json</code>,
-  <code>/documents/foo?format=xml</code>, and so on.</p>
+These URLs are examples — the site could serve the different filetypes with any URL
+patterns it wishes, such as a [query string
+parameter](/en-US/docs/Web/API/HTMLAnchorElement/search): `/documents/foo?format=json`,
+`/documents/foo?format=xml`, and so on.
 
-<p>Then the client could remember that the JSON version is available at that particular
-  URL, skipping content negotation the next time it requests that document.</p>
+Then the client could remember that the JSON version is available at that particular
+URL, skipping content negotation the next time it requests that document.
 
-<p>The server could also consider other <a
-    href="/en-US/docs/Web/HTTP/Content_negotiation">content negotiation</a> headers, such
-  as {{HTTPHeader("Accept-Language")}}.</p>
+The server could also consider other [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation) headers, such
+as {{HTTPHeader("Accept-Language")}}.
 
-<h3 id="Pointing_to_a_new_document_HTTP_201_Created">Pointing to a new document (HTTP 201
-  Created)</h3>
+### Pointing to a new document (HTTP 201 Created)
 
-<p>Say you're creating a new blog post through a site's API:</p>
+Say you're creating a new blog post through a site's API:
 
-<pre>PUT /new/post
-Host: example.com
-Content-Type: text/markdown
+    PUT /new/post
+    Host: example.com
+    Content-Type: text/markdown
 
-# My first blog post!
+    # My first blog post!
 
-I made this through `example.com`'s API. I hope it worked.
-</pre>
+    I made this through `example.com`'s API. I hope it worked.
 
-<p>The site returns a generic success message confirming the post was published. The
-  server specifies <em>where</em> the new post is with <code>Content-Location</code>:</p>
+The site returns a generic success message confirming the post was published. The
+server specifies _where_ the new post is with `Content-Location`:
 
-<pre>HTTP/1.1 201 Created
-Content-Type: text/plain; charset=utf-8
-Content-Location: /my-first-blog-post
+    HTTP/1.1 201 Created
+    Content-Type: text/plain; charset=utf-8
+    Content-Location: /my-first-blog-post
 
-✅ Success!
-</pre>
+    ✅ Success!
 
-<h3 id="Indicating_the_URL_of_a_transactions_result">Indicating the URL of a transaction's
-  result</h3>
+### Indicating the URL of a transaction's result
 
-<p>Say you have a
-  <code><a href="/en-US/docs/Web/HTML/Element/form">&lt;form&gt;</a></code> for sending
-  money to another user of a site.</p>
+Say you have a
+[`<form>`](/en-US/docs/Web/HTML/Element/form) for sending
+money to another user of a site.
 
-<pre class="brush: html">&lt;form action="/send-payment" method="post"&gt;
-  &lt;p&gt;
-    &lt;label&gt;Who do you want to send the money to?
-      &lt;input type="text" name="recipient"&gt;
-    &lt;/label&gt;
-  &lt;/p&gt;
+```html
+<form action="/send-payment" method="post">
+  <p>
+    <label>Who do you want to send the money to?
+      <input type="text" name="recipient">
+    </label>
+  </p>
 
-  &lt;p&gt;
-    &lt;label&gt;How much?
-      &lt;input type="number" name="amount"&gt;
-    &lt;/label&gt;
-  &lt;/p&gt;
+  <p>
+    <label>How much?
+      <input type="number" name="amount">
+    </label>
+  </p>
 
-  &lt;button type="submit"&gt;Send Money&lt;/button&gt;
-&lt;/form&gt;
-</pre>
+  <button type="submit">Send Money</button>
+</form>
+```
 
-<p>When the form is submitted, the site generates a receipt for the transaction. The
-  server could use <code>Content-Location</code> to indicate that receipt's URL for future
-  access.</p>
+When the form is submitted, the site generates a receipt for the transaction. The
+server could use `Content-Location` to indicate that receipt's URL for future
+access.
 
-<pre>HTTP/1.1 200 OK
-Content-Type: text/html; charset=utf-8
-Content-Location: /my-receipts/38
+    HTTP/1.1 200 OK
+    Content-Type: text/html; charset=utf-8
+    Content-Location: /my-receipts/38
 
-&lt;!doctype html&gt;
-<em>(Lots of HTML…)</em>
+    <!doctype html>
+    (Lots of HTML…)
 
-&lt;p&gt;You sent $38.00 to ExampleUser.&lt;/p&gt;
+    <p>You sent $38.00 to ExampleUser.</p>
 
-<em>(Lots more HTML…)</em>
-</pre>
+    (Lots more HTML…)
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{HTTPHeader("Location")}}</li>
-</ul>
+- {{HTTPHeader("Location")}}

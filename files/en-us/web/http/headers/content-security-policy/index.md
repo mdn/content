@@ -10,16 +10,15 @@ tags:
   - header
 browser-compat: http.headers.csp.Content-Security-Policy
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The HTTP <strong><code>Content-Security-Policy</code></strong> response header allows
-  web site administrators to control resources the user agent is allowed to load for a
-  given page. With a few exceptions, policies mostly involve specifying server origins and
-  script endpoints. This helps guard against cross-site scripting attacks
-  ({{Glossary("Cross-site_scripting")}}).</p>
+The HTTP **`Content-Security-Policy`** response header allows
+web site administrators to control resources the user agent is allowed to load for a
+given page. With a few exceptions, policies mostly involve specifying server origins and
+script endpoints. This helps guard against cross-site scripting attacks
+({{Glossary("Cross-site_scripting")}}).
 
-<p>For more information, see the introductory article on <a
-    href="/en-US/docs/Web/HTTP/CSP">Content Security Policy (CSP)</a>.</p>
+For more information, see the introductory article on [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP).
 
 <table class="properties">
   <tbody>
@@ -34,306 +33,273 @@ browser-compat: http.headers.csp.Content-Security-Policy
   </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: html">Content-Security-Policy: &lt;policy-directive&gt;; &lt;policy-directive&gt;
-</pre>
+```html
+Content-Security-Policy: <policy-directive>; <policy-directive>
+```
 
-<p>where <code>&lt;policy-directive&gt;</code> consists of:
-  <code>&lt;directive&gt; &lt;value&gt;</code> with no internal punctuation.</p>
+where `<policy-directive>` consists of:
+`<directive> <value>` with no internal punctuation.
 
-<h2 id="Directives">Directives</h2>
+## Directives
 
-<h3 id="Fetch_directives">Fetch directives</h3>
+### Fetch directives
 
-<p>Fetch directives control the locations from which certain resource types may be loaded.
-</p>
+Fetch directives control the locations from which certain resource types may be loaded.
 
-<dl>
-  <dt>{{CSP("child-src")}}</dt>
-  <dd>
-    <p>Defines the valid sources for <a href="/en-US/docs/Web/API/Web_Workers_API">web
-        workers</a> and nested browsing contexts loaded using elements such as
-      {{HTMLElement("frame")}} and {{HTMLElement("iframe")}}.</p>
+- {{CSP("child-src")}}
 
-    <div class="notecard warning">
-      <p>
-        <strong>Warning:</strong> Instead of <strong><code>child-src</code></strong>,
-        if you want to regulate nested browsing contexts and workers,
-        you should use the {{CSP("frame-src")}} and {{CSP("worker-src")}} directives, respectively.
-      </p>
-    </div>
-  </dd>
-  <dt>{{CSP("connect-src")}}</dt>
-  <dd>Restricts the URLs which can be loaded using script interfaces</dd>
-  <dt>{{CSP("default-src")}}</dt>
-  <dd>Serves as a fallback for the other {{Glossary("Fetch directive", "fetch
-    directives")}}.</dd>
-  <dt>{{CSP("font-src")}}</dt>
-  <dd>Specifies valid sources for fonts loaded using {{cssxref("@font-face")}}.</dd>
-  <dt>{{CSP("frame-src")}}</dt>
-  <dd>Specifies valid sources for nested browsing contexts loading using elements such as
-    {{HTMLElement("frame")}} and {{HTMLElement("iframe")}}.</dd>
-  <dt>{{CSP("img-src")}}</dt>
-  <dd>Specifies valid sources of images and favicons.</dd>
-  <dt>{{CSP("manifest-src")}}</dt>
-  <dd>Specifies valid sources of application manifest files.</dd>
-  <dt>{{CSP("media-src")}}</dt>
-  <dd>Specifies valid sources for loading media using the {{HTMLElement("audio")}} ,
-    {{HTMLElement("video")}} and {{HTMLElement("track")}} elements.</dd>
-  <dt>{{CSP("object-src")}}</dt>
-  <dd>Specifies valid sources for the {{HTMLElement("object")}}, {{HTMLElement("embed")}},
+  - : Defines the valid sources for [web
+    workers](/en-US/docs/Web/API/Web_Workers_API) and nested browsing contexts loaded using elements such as
+    {{HTMLElement("frame")}} and {{HTMLElement("iframe")}}.
+
+    > **Warning:** Instead of **`child-src`**,
+    > if you want to regulate nested browsing contexts and workers,
+    > you should use the {{CSP("frame-src")}} and {{CSP("worker-src")}} directives, respectively.
+
+- {{CSP("connect-src")}}
+  - : Restricts the URLs which can be loaded using script interfaces
+- {{CSP("default-src")}}
+  - : Serves as a fallback for the other {{Glossary("Fetch directive", "fetch
+    directives")}}.
+- {{CSP("font-src")}}
+  - : Specifies valid sources for fonts loaded using {{cssxref("@font-face")}}.
+- {{CSP("frame-src")}}
+  - : Specifies valid sources for nested browsing contexts loading using elements such as
+    {{HTMLElement("frame")}} and {{HTMLElement("iframe")}}.
+- {{CSP("img-src")}}
+  - : Specifies valid sources of images and favicons.
+- {{CSP("manifest-src")}}
+  - : Specifies valid sources of application manifest files.
+- {{CSP("media-src")}}
+  - : Specifies valid sources for loading media using the {{HTMLElement("audio")}} ,
+    {{HTMLElement("video")}} and {{HTMLElement("track")}} elements.
+- {{CSP("object-src")}}
+
+  - : Specifies valid sources for the {{HTMLElement("object")}}, {{HTMLElement("embed")}},
     and {{HTMLElement("applet")}} elements.
-    <div class="notecard note">
-      <p><strong>Note:</strong> Elements controlled by <code>object-src</code> are perhaps
-        coincidentally considered legacy HTML elements and are not receiving new standardized
-        features (such as the security attributes <code>sandbox</code> or <code>allow</code>
-        for <code>&lt;iframe&gt;</code>). Therefore it is <strong>recommended</strong> to
-        restrict this fetch-directive (e.g., explicitly set <code>object-src 'none'</code> if
-        possible).</p>
-    </div>
-  </dd>
-  <dt>{{CSP("prefetch-src")}}{{experimental_inline}}</dt>
-  <dd>Specifies valid sources to be prefetched or prerendered.</dd>
-  <dt>{{CSP("script-src")}}</dt>
-  <dd>Specifies valid sources for JavaScript.</dd>
-  <dt>{{CSP("script-src-elem")}}{{experimental_inline}}</dt>
-  <dd>Specifies valid sources for JavaScript {{HTMLElement("script")}} elements.</dd>
-  <dt>{{CSP("script-src-attr")}}{{experimental_inline}}</dt>
-  <dd>Specifies valid sources for JavaScript inline event handlers.</dd>
-  <dt>{{CSP("style-src")}}</dt>
-  <dd>Specifies valid sources for stylesheets.</dd>
-  <dt>{{CSP("style-src-elem")}}{{experimental_inline}}</dt>
-  <dd>Specifies valid sources for stylesheets {{HTMLElement("style")}} elements and
-    {{HTMLElement("link")}} elements with <code>rel="stylesheet"</code>.</dd>
-  <dt>{{CSP("style-src-attr")}}{{experimental_inline}}</dt>
-  <dd>Specifies valid sources for inline styles applied to individual DOM elements.</dd>
-  <dt>{{CSP("worker-src")}}{{experimental_inline}}</dt>
-  <dd>Specifies valid sources for {{domxref("Worker")}}, {{domxref("SharedWorker")}}, or
-    {{domxref("ServiceWorker")}} scripts.</dd>
-</dl>
 
-<h3 id="Document_directives">Document directives</h3>
+    > **Note:** Elements controlled by `object-src` are perhaps
+    > coincidentally considered legacy HTML elements and are not receiving new standardized
+    > features (such as the security attributes `sandbox` or `allow`
+    > for `<iframe>`). Therefore it is **recommended** to
+    > restrict this fetch-directive (e.g., explicitly set `object-src 'none'` if
+    > possible).
 
-<p>Document directives govern the properties of a document or <a
-    href="/en-US/docs/Web/API/Web_Workers_API">worker</a> environment to which a policy
-  applies.</p>
+- {{CSP("prefetch-src")}}{{experimental_inline}}
+  - : Specifies valid sources to be prefetched or prerendered.
+- {{CSP("script-src")}}
+  - : Specifies valid sources for JavaScript.
+- {{CSP("script-src-elem")}}{{experimental_inline}}
+  - : Specifies valid sources for JavaScript {{HTMLElement("script")}} elements.
+- {{CSP("script-src-attr")}}{{experimental_inline}}
+  - : Specifies valid sources for JavaScript inline event handlers.
+- {{CSP("style-src")}}
+  - : Specifies valid sources for stylesheets.
+- {{CSP("style-src-elem")}}{{experimental_inline}}
+  - : Specifies valid sources for stylesheets {{HTMLElement("style")}} elements and
+    {{HTMLElement("link")}} elements with `rel="stylesheet"`.
+- {{CSP("style-src-attr")}}{{experimental_inline}}
+  - : Specifies valid sources for inline styles applied to individual DOM elements.
+- {{CSP("worker-src")}}{{experimental_inline}}
+  - : Specifies valid sources for {{domxref("Worker")}}, {{domxref("SharedWorker")}}, or
+    {{domxref("ServiceWorker")}} scripts.
 
-<dl>
-  <dt>{{CSP("base-uri")}}</dt>
-  <dd>Restricts the URLs which can be used in a document's {{HTMLElement("base")}}
-    element.</dd>
-  <dt>{{CSP("sandbox")}}</dt>
-  <dd>Enables a sandbox for the requested resource similar to the
-    {{HTMLElement("iframe")}} {{htmlattrxref("sandbox", "iframe")}} attribute.</dd>
-</dl>
+### Document directives
 
-<h3 id="Navigation_directives">Navigation directives</h3>
+Document directives govern the properties of a document or [worker](/en-US/docs/Web/API/Web_Workers_API) environment to which a policy
+applies.
 
-<p>Navigation directives govern to which locations a user can navigate or submit a form,
-  for example.</p>
+- {{CSP("base-uri")}}
+  - : Restricts the URLs which can be used in a document's {{HTMLElement("base")}}
+    element.
+- {{CSP("sandbox")}}
+  - : Enables a sandbox for the requested resource similar to the
+    {{HTMLElement("iframe")}} {{htmlattrxref("sandbox", "iframe")}} attribute.
 
-<dl>
-  <dt>{{CSP("form-action")}}</dt>
-  <dd>Restricts the URLs which can be used as the target of a form submissions from a
-    given context.</dd>
-  <dt>{{CSP("frame-ancestors")}}</dt>
-  <dd>Specifies valid parents that may embed a page using {{HTMLElement("frame")}},
+### Navigation directives
+
+Navigation directives govern to which locations a user can navigate or submit a form,
+for example.
+
+- {{CSP("form-action")}}
+  - : Restricts the URLs which can be used as the target of a form submissions from a
+    given context.
+- {{CSP("frame-ancestors")}}
+  - : Specifies valid parents that may embed a page using {{HTMLElement("frame")}},
     {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, {{HTMLElement("embed")}}, or
-    {{HTMLElement("applet")}}.</dd>
-  <dt>{{CSP("navigate-to")}}{{experimental_inline}}</dt>
-  <dd>Restricts the URLs to which a document can initiate navigation by any means,
+    {{HTMLElement("applet")}}.
+- {{CSP("navigate-to")}}{{experimental_inline}}
+  - : Restricts the URLs to which a document can initiate navigation by any means,
     including {{HTMLElement("form")}} (if {{CSP("form-action")}} is not specified),
     {{HTMLElement("a")}}, {{DOMxRef("window.location")}}, {{DOMxRef("window.open")}}, etc.
-  </dd>
-</dl>
 
-<h3 id="Reporting_directives">Reporting directives</h3>
+### Reporting directives
 
-<p>Reporting directives control the reporting process of CSP violations. See also the
-  {{HTTPHeader("Content-Security-Policy-Report-Only")}} header.</p>
+Reporting directives control the reporting process of CSP violations. See also the
+{{HTTPHeader("Content-Security-Policy-Report-Only")}} header.
 
-<dl>
-  <dt>{{CSP("report-uri")}}{{deprecated_inline}}</dt>
-  <dd>Instructs the user agent to report attempts to violate the Content Security Policy.
+- {{CSP("report-uri")}}{{deprecated_inline}}
+
+  - : Instructs the user agent to report attempts to violate the Content Security Policy.
     These violation reports consist of {{Glossary("JSON")}} documents sent via an HTTP
-    <code>POST</code> request to the specified URI.
-    <div class="notecard warning">
-      <p>
-        <strong>Warning:</strong> Though the {{CSP("report-to")}} directive is intended
-        to replace the deprecated <code><strong>report-uri</strong></code> directive,
-        {{CSP("report-to")}} is not supported in most browsers yet.
-        So for compatibility with current browsers
-        while also adding forward compatibility when browsers get {{CSP("report-to")}} support,
-        you can specify both <code><strong>report-uri</strong></code> and {{CSP("report-to")}}:
-      </p>
+    `POST` request to the specified URI.
 
-      <pre class="brush: html">Content-Security-Policy: ...; report-uri https://endpoint.example.com; report-to groupname</pre>
+    > **Warning:** Though the {{CSP("report-to")}} directive is intended
+    > to replace the deprecated **`report-uri`** directive,
+    > {{CSP("report-to")}} is not supported in most browsers yet.
+    > So for compatibility with current browsers
+    > while also adding forward compatibility when browsers get {{CSP("report-to")}} support,
+    > you can specify both **`report-uri`** and {{CSP("report-to")}}:
+    >
+    > ```html
+        > Content-Security-Policy: ...; report-uri https://endpoint.example.com; report-to groupname
+        > ```
+    >
+    > In browsers that support {{CSP("report-to")}},
+    > the **`report-uri`** directive will be ignored.
 
-      <p>
-        In browsers that support {{CSP("report-to")}},
-        the <code><strong>report-uri</strong></code> directive will be ignored.
-      </p>
-    </div>
-  </dd>
-  <dt>{{CSP("report-to")}}{{experimental_inline}}</dt>
-  <dd>Fires a <code>SecurityPolicyViolationEvent</code>.</dd>
-</dl>
+- {{CSP("report-to")}}{{experimental_inline}}
+  - : Fires a `SecurityPolicyViolationEvent`.
 
-<h3 id="Other_directives">Other directives</h3>
+### Other directives
 
-<dl>
-  <dt>{{CSP("require-sri-for")}}{{experimental_inline}}</dt>
-  <dd>Requires the use of {{Glossary("SRI")}} for scripts or styles on the page.</dd>
-  <dt>{{CSP("require-trusted-types-for")}}{{experimental_inline}}</dt>
-  <dd>Enforces <a href="https://w3c.github.io/webappsec-trusted-types/dist/spec/">Trusted
-      Types</a> at the DOM XSS injection sinks.</dd>
-  <dt>{{CSP("trusted-types")}}{{experimental_inline}}</dt>
-  <dd>Used to specify an allow-list of <a
-      href="https://w3c.github.io/webappsec-trusted-types/dist/spec/">Trusted Types</a>
+- {{CSP("require-sri-for")}}{{experimental_inline}}
+  - : Requires the use of {{Glossary("SRI")}} for scripts or styles on the page.
+- {{CSP("require-trusted-types-for")}}{{experimental_inline}}
+  - : Enforces [Trusted
+    Types](https://w3c.github.io/webappsec-trusted-types/dist/spec/) at the DOM XSS injection sinks.
+- {{CSP("trusted-types")}}{{experimental_inline}}
+  - : Used to specify an allow-list of [Trusted Types](https://w3c.github.io/webappsec-trusted-types/dist/spec/)
     policies. Trusted Types allows applications to lock down DOM XSS injection sinks to
-    only accept non-spoofable, typed values in place of strings.</dd>
-  <dt>{{CSP("upgrade-insecure-requests")}}</dt>
-  <dd>Instructs user agents to treat all of a site's insecure URLs (those served over
+    only accept non-spoofable, typed values in place of strings.
+- {{CSP("upgrade-insecure-requests")}}
+  - : Instructs user agents to treat all of a site's insecure URLs (those served over
     HTTP) as though they have been replaced with secure URLs (those served over HTTPS).
     This directive is intended for web sites with large numbers of insecure legacy URLs
-    that need to be rewritten.</dd>
-</dl>
+    that need to be rewritten.
 
-<h3 id="deprecated_directives">Deprecated directives</h3>
+### Deprecated directives
 
-<dl>
-  <dt>{{CSP("block-all-mixed-content")}}{{deprecated_inline}}</dt>
-  <dd>Prevents loading any assets using HTTP when the page is loaded using HTTPS.</dd>
-  <dt>{{CSP("plugin-types")}}{{deprecated_inline}}</dt>
-  <dd>Restricts the set of plugins that can be embedded into a document by limiting the
-    types of resources which can be loaded.</dd>
-  <dt>{{CSP("referrer")}}{{deprecated_inline}}{{non-standard_inline}}</dt>
-  <dd>Used to specify information in the <a
-      href="/en-US/docs/Web/HTTP/Headers/Referer">Referer</a> (sic) header for links away
-    from a page. Use the {{HTTPHeader("Referrer-Policy")}} header instead.</dd>
-</dl>
+- {{CSP("block-all-mixed-content")}}{{deprecated_inline}}
+  - : Prevents loading any assets using HTTP when the page is loaded using HTTPS.
+- {{CSP("plugin-types")}}{{deprecated_inline}}
+  - : Restricts the set of plugins that can be embedded into a document by limiting the
+    types of resources which can be loaded.
+- {{CSP("referrer")}}{{deprecated_inline}}{{non-standard_inline}}
+  - : Used to specify information in the [Referer](/en-US/docs/Web/HTTP/Headers/Referer) (sic) header for links away
+    from a page. Use the {{HTTPHeader("Referrer-Policy")}} header instead.
 
-<h2 id="Values">Values</h2>
+## Values
 
-<h3 id="Keyword_values">Keyword values</h3>
+### Keyword values
 
-<dl>
- <dt><code>none</code></dt>
- <dd>Won't allow loading of any resources.</dd>
- <dt><code>self</code></dt>
- <dd>Only allow resources from the current origin.</dd>
- <dt><code>strict-dynamic</code> {{experimental_inline}}</dt>
- <dd>TBD</dd>
- <dt><code>report-sample</code> {{experimental_inline}}</dt>
- <dd>TBD</dd>
-</dl>
+- `none`
+  - : Won't allow loading of any resources.
+- `self`
+  - : Only allow resources from the current origin.
+- `strict-dynamic` {{experimental_inline}}
+  - : TBD
+- `report-sample` {{experimental_inline}}
+  - : TBD
 
-<h3 id="Unsafe_keyword_values">Unsafe keyword values</h3>
+### Unsafe keyword values
 
-<dl>
- <dt><code>unsafe-inline</code></dt>
- <dd>Allow use of inline resources.</dd>
- <dt><code>unsafe-eval</code></dt>
- <dd>Allow use of dynamic code evaluation such as {{jsxref("Global_Objects/eval", "eval")}}, {{domxref("Window.setImmediate", "setImmediate")}}{{non-standard_inline}}, and <code>window.execScript</code> {{non-standard_inline}}.</dd>
- <dt><code>unsafe-hashes</code> {{experimental_inline}}</dt>
- <dd>TBD</dd>
- <dt><code>unsafe-allow-redirects</code> {{experimental_inline}}</dt>
- <dd>TBD</dd>
-</dl>
+- `unsafe-inline`
+  - : Allow use of inline resources.
+- `unsafe-eval`
+  - : Allow use of dynamic code evaluation such as {{jsxref("Global_Objects/eval", "eval")}}, {{domxref("Window.setImmediate", "setImmediate")}}{{non-standard_inline}}, and `window.execScript` {{non-standard_inline}}.
+- `unsafe-hashes` {{experimental_inline}}
+  - : TBD
+- `unsafe-allow-redirects` {{experimental_inline}}
+  - : TBD
 
-<h3 id="Hosts_values">Hosts values</h3>
+### Hosts values
 
-<dl>
- <dt>Host</dt>
- <dd>Only allow loading of resources from a specific host, with optional scheme, port, and path. e.g. <code>example.com</code>, <code>*.example.com</code>, <code>https://*.example.com:12/path/to/file.js</code></dd>
- <dt>Scheme:</dt>
- <dd>Only allow loading of resources over a specific scheme, should always end with "<code>:</code>". e.g. <code>https:</code>, <code>http:</code>, <code>data:</code> etc.</dd>
-</dl>
+- Host
+  - : Only allow loading of resources from a specific host, with optional scheme, port, and path. e.g. `example.com`, `*.example.com`, `https://*.example.com:12/path/to/file.js`
+- Scheme:
+  - : Only allow loading of resources over a specific scheme, should always end with "`:`". e.g. `https:`, `http:`, `data:` etc.
 
-<h3 id="Other_values">Other values</h3>
+### Other values
 
-<dl>
- <dt>nonce-*</dt>
- <dd>A cryptographic nonce (only used once) to whitelist scripts. The server must generate a unique nonce value each time it transmits a policy. It is critical to provide a nonce that cannot be guessed as bypassing a resource's policy is otherwise trivial. This is used in conjunction with the <a href="/en-US/docs/Web/HTML/Element/script#attr-nonce">script tag nonce attribute</a>. e.g. <code>nonce-DhcnhD3khTMePgXwdayK9BsMqXjhguVV</code></dd>
- <dt>sha*-*</dt>
- <dd>sha256, sha384, or sha512. followed by a dash and then the sha* value. e.g. <code>sha256-jzgBGA4UWFFmpOBq0JpdsySukE1FrEN5bUpoK8Z29fY=</code></dd>
-</dl>
+- nonce-\*
+  - : A cryptographic nonce (only used once) to whitelist scripts. The server must generate a unique nonce value each time it transmits a policy. It is critical to provide a nonce that cannot be guessed as bypassing a resource's policy is otherwise trivial. This is used in conjunction with the [script tag nonce attribute](/en-US/docs/Web/HTML/Element/script#attr-nonce). e.g. `nonce-DhcnhD3khTMePgXwdayK9BsMqXjhguVV`
+- sha\*-\*
+  - : sha256, sha384, or sha512. followed by a dash and then the sha\* value. e.g. `sha256-jzgBGA4UWFFmpOBq0JpdsySukE1FrEN5bUpoK8Z29fY=`
 
-<h2 id="CSP_in_workers">CSP in workers</h2>
+## CSP in workers
 
-<p><a href="/en-US/docs/Web/API/Worker">Workers</a> are in general <em>not</em> governed
-  by the content security policy of the document (or parent worker) that created them. To
-  specify a content security policy for the worker, set a
-  <code>Content-Security-Policy</code> response header for the request which requested the
-  worker script itself.</p>
+[Workers](/en-US/docs/Web/API/Worker) are in general _not_ governed
+by the content security policy of the document (or parent worker) that created them. To
+specify a content security policy for the worker, set a
+`Content-Security-Policy` response header for the request which requested the
+worker script itself.
 
-<p>The exception to this is if the worker script's origin is a globally unique identifier
-  (for example, if its URL has a scheme of data or blob). In this case, the worker does
-  inherit the content security policy of the document or worker that created it.</p>
+The exception to this is if the worker script's origin is a globally unique identifier
+(for example, if its URL has a scheme of data or blob). In this case, the worker does
+inherit the content security policy of the document or worker that created it.
 
-<h2 id="Multiple_content_security_policies">Multiple content security policies</h2>
+## Multiple content security policies
 
-<p>The CSP mechanism allows multiple policies being specified for a resource, including
-  via the <code>Content-Security-Policy</code> header, the
-  {{HTTPHeader("Content-Security-Policy-Report-Only")}} header and a
-  {{HTMLElement("meta")}} element.</p>
+The CSP mechanism allows multiple policies being specified for a resource, including
+via the `Content-Security-Policy` header, the
+{{HTTPHeader("Content-Security-Policy-Report-Only")}} header and a
+{{HTMLElement("meta")}} element.
 
-<p>You can use the <code>Content-Security-Policy</code> header more than once, as in the
-  example below. Pay special attention to the {{CSP("connect-src")}} directive here. Even
-  though the second policy would allow the connection, the first policy contains
-  <code>connect-src 'none'</code>. Adding additional policies <em>can only further
-    restrict</em> the capabilities of the protected resource, which means that there will
-  be no connection allowed and, as the strictest policy, <code>connect-src 'none'</code>
-  is enforced.</p>
+You can use the `Content-Security-Policy` header more than once, as in the
+example below. Pay special attention to the {{CSP("connect-src")}} directive here. Even
+though the second policy would allow the connection, the first policy contains
+`connect-src 'none'`. Adding additional policies _can only further
+restrict_ the capabilities of the protected resource, which means that there will
+be no connection allowed and, as the strictest policy, `connect-src 'none'`
+is enforced.
 
-<pre>Content-Security-Policy: default-src 'self' http://example.com;
-                         connect-src 'none';
-Content-Security-Policy: connect-src http://example.com/;
-                         script-src http://example.com/</pre>
+    Content-Security-Policy: default-src 'self' http://example.com;
+                             connect-src 'none';
+    Content-Security-Policy: connect-src http://example.com/;
+                             script-src http://example.com/
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Example: Disable unsafe inline/eval, only allow loading of resources (images, fonts,
-  scripts, etc.) over https:</p>
+Example: Disable unsafe inline/eval, only allow loading of resources (images, fonts,
+scripts, etc.) over https:
 
-<pre>// header
-Content-Security-Policy: default-src https:
+    // header
+    Content-Security-Policy: default-src https:
 
-// meta tag
-&lt;meta http-equiv="Content-Security-Policy" content="default-src https:"&gt;
-</pre>
+    // meta tag
+    <meta http-equiv="Content-Security-Policy" content="default-src https:">
 
-<p>Example: Pre-existing site that uses too much inline code to fix but wants to ensure
-  resources are loaded only over HTTPS and to disable plugins:</p>
+Example: Pre-existing site that uses too much inline code to fix but wants to ensure
+resources are loaded only over HTTPS and to disable plugins:
 
-<pre>Content-Security-Policy: default-src https: 'unsafe-eval' 'unsafe-inline'; object-src 'none'</pre>
+    Content-Security-Policy: default-src https: 'unsafe-eval' 'unsafe-inline'; object-src 'none'
 
-<p>Example: Do not implement the above policy yet; instead just report violations that
-  would have occurred:</p>
+Example: Do not implement the above policy yet; instead just report violations that
+would have occurred:
 
-<pre>Content-Security-Policy-Report-Only: default-src https:; report-uri /csp-violation-report-endpoint/</pre>
+    Content-Security-Policy-Report-Only: default-src https:; report-uri /csp-violation-report-endpoint/
 
-<p>See <a href="https://infosec.mozilla.org/guidelines/web_security#Examples_5">Mozilla
-    Web Security Guidelines</a> for more examples.</p>
+See [Mozilla
+Web Security Guidelines](https://infosec.mozilla.org/guidelines/web_security#Examples_5) for more examples.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{HTTPHeader("Content-Security-Policy-Report-Only")}}</li>
-  <li><a href="/en-US/docs/Web/HTTP/CSP">Learn about: Content Security Policy</a></li>
-  <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy">Content
-      Security in WebExtensions</a></li>
-  <li><a href="https://csp.withgoogle.com/docs/strict-csp.html">Adopting a strict
-      policy</a></li>
-  <li><a href="https://github.com/google/csp-evaluator">CSP Evaluator</a> - Evaluate your
-    Content Security Policy</li>
-</ul>
+- {{HTTPHeader("Content-Security-Policy-Report-Only")}}
+- [Learn about: Content Security Policy](/en-US/docs/Web/HTTP/CSP)
+- [Content
+  Security in WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy)
+- [Adopting a strict
+  policy](https://csp.withgoogle.com/docs/strict-csp.html)
+- [CSP Evaluator](https://github.com/google/csp-evaluator) - Evaluate your
+  Content Security Policy

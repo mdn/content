@@ -9,17 +9,16 @@ tags:
   - header
 browser-compat: http.headers.Vary
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The <strong><code>Vary</code></strong> HTTP response header determines how to match
-  future request headers to decide whether a cached response can be used rather than
-  requesting a fresh one from the origin server. It is used by the server to indicate
-  which headers it used when selecting a representation of a resource in a <a
-    href="/en-US/docs/Web/HTTP/Content_negotiation">content negotiation</a> algorithm.</p>
+The **`Vary`** HTTP response header determines how to match
+future request headers to decide whether a cached response can be used rather than
+requesting a fresh one from the origin server. It is used by the server to indicate
+which headers it used when selecting a representation of a resource in a [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation) algorithm.
 
-<p>The <code>Vary</code> header should be set on a {{HTTPStatus("304")}}
-  <code>Not Modified</code> response exactly like it would have been set on an equivalent
-  {{HTTPStatus("200")}} <code>OK</code> response.</p>
+The `Vary` header should be set on a {{HTTPStatus("304")}}
+`Not Modified` response exactly like it would have been set on an equivalent
+{{HTTPStatus("200")}} `OK` response.
 
 <table class="properties">
   <tbody>
@@ -34,63 +33,55 @@ browser-compat: http.headers.Vary
   </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: html">Vary: *
-Vary: &lt;header-name&gt;, &lt;header-name&gt;, ...
-</pre>
+```html
+Vary: *
+Vary: <header-name>, <header-name>, ...
+```
 
-<h2 id="Directives">Directives</h2>
+## Directives
 
-<dl>
-  <dt>*</dt>
-  <dd>Each request for a URL is supposed to be treated as a unique and uncacheable
+- \*
+  - : Each request for a URL is supposed to be treated as a unique and uncacheable
     request. A better way to indicate this is to use {{HTTPHeader("Cache-Control")}}:
-    <code>no-store</code>, which is clearer to read and also signals that the object
-    shouldn't be stored ever.</dd>
-  <dt>&lt;header-name&gt;</dt>
-  <dd>A comma-separated list of header names to take into account when deciding whether or
-    not a cached response can be used.</dd>
-</dl>
+    `no-store`, which is clearer to read and also signals that the object
+    shouldn't be stored ever.
+- \<header-name>
+  - : A comma-separated list of header names to take into account when deciding whether or
+    not a cached response can be used.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Dynamic_serving">Dynamic serving</h3>
+### Dynamic serving
 
-<p>When using the <code>Vary: User-Agent</code> header, caching servers should consider
-  the user agent when deciding whether to serve the page from cache. For example, if you
-  are serving different content to mobile users, it can help you to avoid that a cache may
-  mistakenly serve a desktop version of your site to your mobile users. It can help Google
-  and other search engines to discover the mobile version of a page, and might also tell
-  them that no <a href="https://en.wikipedia.org/wiki/Cloaking">Cloaking</a> is intended.
-</p>
+When using the `Vary: User-Agent` header, caching servers should consider
+the user agent when deciding whether to serve the page from cache. For example, if you
+are serving different content to mobile users, it can help you to avoid that a cache may
+mistakenly serve a desktop version of your site to your mobile users. It can help Google
+and other search engines to discover the mobile version of a page, and might also tell
+them that no [Cloaking](https://en.wikipedia.org/wiki/Cloaking) is intended.
 
-<pre>Vary: User-Agent</pre>
+    Vary: User-Agent
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Compatibility_notes">Compatibility notes</h2>
+## Compatibility notes
 
-<ul>
-  <li><a
-      href="https://blogs.msdn.microsoft.com/ieinternals/2009/06/17/vary-with-care/">Vary
-      with care – Vary header problems in IE6-9</a></li>
-</ul>
+- [Vary
+  with care – Vary header problems in IE6-9](https://blogs.msdn.microsoft.com/ieinternals/2009/06/17/vary-with-care/)
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a
-      href="https://www.smashingmagazine.com/2017/11/understanding-vary-header/">Understanding
-      The Vary Header - Smashing Magazine</a></li>
-  <li><a href="https://www.fastly.com/blog/best-practices-for-using-the-vary-header">Best
-      Practices for Using the Vary Header – fastly.com</a></li>
-  <li><a href="/en-US/docs/Web/HTTP/Content_negotiation">Content
-      negotiation</a></li>
-</ul>
+- [Understanding
+  The Vary Header - Smashing Magazine](https://www.smashingmagazine.com/2017/11/understanding-vary-header/)
+- [Best
+  Practices for Using the Vary Header – fastly.com](https://www.fastly.com/blog/best-practices-for-using-the-vary-header)
+- [Content
+  negotiation](/en-US/docs/Web/HTTP/Content_negotiation)

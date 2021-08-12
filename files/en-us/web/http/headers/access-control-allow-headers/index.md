@@ -9,106 +9,101 @@ tags:
   - header
 browser-compat: http.headers.Access-Control-Allow-Headers
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The <strong><code>Access-Control-Allow-Headers</code></strong> response header is used in response to a {{glossary("preflight request")}} which includes the {{HTTPHeader("Access-Control-Request-Headers")}} to indicate which HTTP headers can be used during the actual request.</p>
+The **`Access-Control-Allow-Headers`** response header is used in response to a {{glossary("preflight request")}} which includes the {{HTTPHeader("Access-Control-Request-Headers")}} to indicate which HTTP headers can be used during the actual request.
 
-<p>This header is required if the request has an {{HTTPHeader("Access-Control-Request-Headers")}} header.</p>
+This header is required if the request has an {{HTTPHeader("Access-Control-Request-Headers")}} header.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> {{glossary("CORS-safelisted_request_header", "CORS-safelisted request headers")}} are always allowed and hence usually aren't listed in <code>Access-Control-Allow-Headers</code> (unless there is a need to circumvent the safelist <a href="/en-US/docs/Glossary/CORS-safelisted_request_header#additional_restrictions">additional restrictions</a>).</p>
-</div>
+> **Note:** {{glossary("CORS-safelisted_request_header", "CORS-safelisted request headers")}} are always allowed and hence usually aren't listed in `Access-Control-Allow-Headers` (unless there is a need to circumvent the safelist [additional restrictions](/en-US/docs/Glossary/CORS-safelisted_request_header#additional_restrictions)).
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Response header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>no</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Header type</th>
+      <td>{{Glossary("Response header")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>no</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: html">Access-Control-Allow-Headers: [<em>&lt;header-name&gt;</em>[, <em>&lt;header-name&gt;</em>]*]
+```html
+Access-Control-Allow-Headers: [<header-name>[, <header-name>]*]
 Access-Control-Allow-Headers: *
-</pre>
+```
 
-<h2 id="Directives">Directives</h2>
+## Directives
 
-<dl>
- <dt><code>&lt;header-name&gt;</code></dt>
- <dd>The name of a supported request header. The header may list any number of headers, separated by commas.</dd>
- <dt><code>*</code> (wildcard)</dt>
- <dd>The value "<code>*</code>" only counts as a special wildcard value for requests without credentials (requests without <a href="/en-US/docs/Web/HTTP/Cookies">HTTP cookies</a> or HTTP authentication information). In requests with credentials, it is treated as the literal header name "<code>*</code>" without special semantics. Note that the {{HTTPHeader("Authorization")}} header can't be wildcarded and always needs to be listed explicitly.</dd>
-</dl>
+- `<header-name>`
+  - : The name of a supported request header. The header may list any number of headers, separated by commas.
+- `*` (wildcard)
+  - : The value "`*`" only counts as a special wildcard value for requests without credentials (requests without [HTTP cookies](/en-US/docs/Web/HTTP/Cookies) or HTTP authentication information). In requests with credentials, it is treated as the literal header name "`*`" without special semantics. Note that the {{HTTPHeader("Authorization")}} header can't be wildcarded and always needs to be listed explicitly.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="A_custom_header">A custom header</h3>
+### A custom header
 
-<p>Here's an example of what an <code>Access-Control-Allow-Headers</code> header might look like. It indicates that a custom header named <code>X-Custom-Header</code> is supported by CORS requests to the server (in addition to the {{glossary("CORS-safelisted_request_header", "CORS-safelisted request headers")}}).</p>
+Here's an example of what an `Access-Control-Allow-Headers` header might look like. It indicates that a custom header named `X-Custom-Header` is supported by CORS requests to the server (in addition to the {{glossary("CORS-safelisted_request_header", "CORS-safelisted request headers")}}).
 
-<pre>Access-Control-Allow-Headers: X-Custom-Header</pre>
+    Access-Control-Allow-Headers: X-Custom-Header
 
-<h3 id="Multiple_headers">Multiple headers</h3>
+### Multiple headers
 
-<p>This example shows <code>Access-Control-Allow-Headers</code> when it specifies support for multiple headers.</p>
+This example shows `Access-Control-Allow-Headers` when it specifies support for multiple headers.
 
-<pre>Access-Control-Allow-Headers: X-Custom-Header, Upgrade-Insecure-Requests</pre>
+    Access-Control-Allow-Headers: X-Custom-Header, Upgrade-Insecure-Requests
 
-<h3 id="Bypassing_additional_restrictions">Bypassing additional restrictions</h3>
+### Bypassing additional restrictions
 
-<p>Although {{glossary("CORS-safelisted_request_header", "CORS-safelisted request headers")}} are always allowed and don't usually need to be listed in <code>Access-Control-Allow-Headers</code>, listing them anyway will circumvent the <a href="/en-US/docs/Glossary/CORS-safelisted_request_header#additional_restrictions">additional restrictions</a> that apply.</p>
+Although {{glossary("CORS-safelisted_request_header", "CORS-safelisted request headers")}} are always allowed and don't usually need to be listed in `Access-Control-Allow-Headers`, listing them anyway will circumvent the [additional restrictions](/en-US/docs/Glossary/CORS-safelisted_request_header#additional_restrictions) that apply.
 
-<pre>Access-Control-Allow-Headers: Accept</pre>
+    Access-Control-Allow-Headers: Accept
 
-<h3 id="Example_preflight_request">Example preflight request</h3>
+### Example preflight request
 
-<p>Let's look at an example of a {{glossary("preflight request")}} involving <code>Access-Control-Allow-Headers</code>.</p>
+Let's look at an example of a {{glossary("preflight request")}} involving `Access-Control-Allow-Headers`.
 
-<h4 id="Request">Request</h4>
+#### Request
 
-<p>First, the request. The preflight request is an {{HTTPMethod("OPTIONS")}} request that includes some combination of the three preflight request headers: {{HTTPHeader("Access-Control-Request-Method")}}, {{HTTPHeader("Access-Control-Request-Headers")}}, and {{HTTPHeader("Origin")}}.</p>
+First, the request. The preflight request is an {{HTTPMethod("OPTIONS")}} request that includes some combination of the three preflight request headers: {{HTTPHeader("Access-Control-Request-Method")}}, {{HTTPHeader("Access-Control-Request-Headers")}}, and {{HTTPHeader("Origin")}}.
 
-<p>The preflight request below tells the server that we want to send a CORS <code>GET</code> request that has the headers listed in {{HTTPHeader("Access-Control-Request-Headers")}} ({{HTTPHeader("Content-Type")}} and <code>x-requested-with</code>).</p>
+The preflight request below tells the server that we want to send a CORS `GET` request that has the headers listed in {{HTTPHeader("Access-Control-Request-Headers")}} ({{HTTPHeader("Content-Type")}} and `x-requested-with`).
 
-<pre>OPTIONS /resource/foo
-Access-Control-Request-Method: GET
-<strong>Access-Control-Request-Headers: Content-Type, x-requested-with</strong>
-Origin: https://foo.bar.org</pre>
+    OPTIONS /resource/foo
+    Access-Control-Request-Method: GET
+    Access-Control-Request-Headers: Content-Type, x-requested-with
+    Origin: https://foo.bar.org
 
-<h4 id="Response">Response</h4>
+#### Response
 
-<p>If the CORS request indicated by the preflight request is authorized, the server will respond to the preflight request with a message that indicates the allowed origin, methods and headers. Below we see that {{HTTPHeader("Access-Control-Allow-Headers")}} includes the headers that were requested.</p>
+If the CORS request indicated by the preflight request is authorized, the server will respond to the preflight request with a message that indicates the allowed origin, methods and headers. Below we see that {{HTTPHeader("Access-Control-Allow-Headers")}} includes the headers that were requested.
 
-<pre>HTTP/1.1 200 OK
-Content-Length: 0
-Connection: keep-alive
-Access-Control-Allow-Origin: https://foo.bar.org
-Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE
-<strong>Access-Control-Allow-Headers: Content-Type, x-requested-with</strong>
-Access-Control-Max-Age: 86400</pre>
+    HTTP/1.1 200 OK
+    Content-Length: 0
+    Connection: keep-alive
+    Access-Control-Allow-Origin: https://foo.bar.org
+    Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE
+    Access-Control-Allow-Headers: Content-Type, x-requested-with
+    Access-Control-Max-Age: 86400
 
-<p>If the requested method isn't supported, the server will respond with an error.</p>
+If the requested method isn't supported, the server will respond with an error.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTTPHeader("Access-Control-Allow-Origin")}}</li>
- <li>{{HTTPHeader("Access-Control-Expose-Headers")}}</li>
- <li>{{HTTPHeader("Access-Control-Allow-Methods")}}</li>
- <li>{{HTTPHeader("Access-Control-Request-Headers")}}</li>
-</ul>
+- {{HTTPHeader("Access-Control-Allow-Origin")}}
+- {{HTTPHeader("Access-Control-Expose-Headers")}}
+- {{HTTPHeader("Access-Control-Allow-Methods")}}
+- {{HTTPHeader("Access-Control-Request-Headers")}}

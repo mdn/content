@@ -10,69 +10,68 @@ tags:
   - Response header
 browser-compat: http.headers.Pragma
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The <code><strong>Pragma</strong></code> HTTP/1.0 general header is an
-  implementation-specific header that may have various effects along the request-response
-  chain. It is used for backwards compatibility with HTTP/1.0 caches where the
-  {{HTTPHeader("Cache-Control")}} HTTP/1.1 header is not yet present.</p>
+The **`Pragma`** HTTP/1.0 general header is an
+implementation-specific header that may have various effects along the request-response
+chain. It is used for backwards compatibility with HTTP/1.0 caches where the
+{{HTTPHeader("Cache-Control")}} HTTP/1.1 header is not yet present.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> <code>Pragma</code> is not specified for HTTP responses and is
-    therefore not a reliable replacement for the general HTTP/1.1
-    <code>Cache-Control</code> header, although it does behave the same as
-    <code>Cache-Control: no-cache</code>, if the <code>Cache-Control</code> header field
-    is omitted in a request. Use <code>Pragma</code> only for backwards compatibility with
-    HTTP/1.0 clients.</p>
-</div>
+> **Note:** `Pragma` is not specified for HTTP responses and is
+> therefore not a reliable replacement for the general HTTP/1.1
+> `Cache-Control` header, although it does behave the same as
+> `Cache-Control: no-cache`, if the `Cache-Control` header field
+> is omitted in a request. Use `Pragma` only for backwards compatibility with
+> HTTP/1.0 clients.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Header type</th>
-      <td>{{Glossary("Request header")}}, {{Glossary("Response header")}} (response behavior is not specified and thus implementation-specific).</td>
+      <td>
+        {{Glossary("Request header")}},
+        {{Glossary("Response header")}} (response behavior is not
+        specified and thus implementation-specific).
+      </td>
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
       <td>no</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("CORS-safelisted response header")}}</th>
+      <th scope="row">
+        {{Glossary("CORS-safelisted response header")}}
+      </th>
       <td>yes</td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: html">Pragma: no-cache
-</pre>
+```html
+Pragma: no-cache
+```
 
-<h2 id="Directives">Directives</h2>
+## Directives
 
-<dl>
-  <dt>no-cache</dt>
-  <dd>
-    <p>Same as <code>Cache-Control: no-cache</code>. Forces caches to submit the request
-      to the origin server for validation before releasing a cached copy.</p>
-  </dd>
-</dl>
+- no-cache
+  - : Same as `Cache-Control: no-cache`. Forces caches to submit the request
+    to the origin server for validation before releasing a cached copy.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre>Pragma: no-cache</pre>
+    Pragma: no-cache
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{HTTPHeader("Cache-Control")}}</li>
-  <li>{{HTTPHeader("Expires")}}</li>
-</ul>
+- {{HTTPHeader("Cache-Control")}}
+- {{HTTPHeader("Expires")}}

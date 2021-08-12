@@ -2,22 +2,22 @@
 title: Host
 slug: Web/HTTP/Headers/Host
 tags:
-- HTTP
-- Reference
-- header
+  - HTTP
+  - Reference
+  - header
 browser-compat: http.headers.Host
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The <code><strong>Host</strong></code> request header specifies the host and port
-  number of the server to which the request is being sent.</p>
+The **`Host`** request header specifies the host and port
+number of the server to which the request is being sent.
 
-<p>If no port is included, the default port for the service requested (e.g.,
-  <code>443</code> for an HTTPS URL, and <code>80</code> for an HTTP URL) is implied.</p>
+If no port is included, the default port for the service requested (e.g.,
+`443` for an HTTPS URL, and `80` for an HTTP URL) is implied.
 
-<p>A <code>Host</code> header field must be sent in all HTTP/1.1 request messages. A
-  {{HTTPStatus("400")}} (Bad Request) status code may be sent to any HTTP/1.1 request
-  message that lacks a <code>Host</code> header field or that contains more than one.</p>
+A `Host` header field must be sent in all HTTP/1.1 request messages. A
+{{HTTPStatus("400")}} (Bad Request) status code may be sent to any HTTP/1.1 request
+message that lacks a `Host` header field or that contains more than one.
 
 <table class="properties">
   <tbody>
@@ -32,35 +32,32 @@ browser-compat: http.headers.Host
   </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: html">Host: &lt;host&gt;:&lt;port&gt;
-</pre>
+```html
+Host: <host>:<port>
+```
 
-<h2 id="Directives">Directives</h2>
+## Directives
 
-<dl>
-  <dt>&lt;host&gt;</dt>
-  <dd>the domain name of the server (for virtual hosting).</dd>
-  <dt>&lt;port&gt; {{optional_inline}}</dt>
-  <dd>TCP port number on which the server is listening.</dd>
-</dl>
+- \<host>
+  - : the domain name of the server (for virtual hosting).
+- \<port> {{optional_inline}}
+  - : TCP port number on which the server is listening.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre>Host: developer.mozilla.org</pre>
+    Host: developer.mozilla.org
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{HTTPStatus("400")}}</li>
-  <li>{{HTMLElement("base")}}</li>
-</ul>
+- {{HTTPStatus("400")}}
+- {{HTMLElement("base")}}

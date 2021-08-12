@@ -10,40 +10,35 @@ tags:
   - Experimental
 browser-compat: http.headers.Feature-Policy.display-capture
 ---
-<div>{{HTTPSidebar}} {{SeeCompatTable}} </div>
+{{HTTPSidebar}} {{SeeCompatTable}}
 
-<p>The HTTP {{HTTPHeader("Feature-Policy")}} header <code>display-capture</code> directive controls whether or not the document is permitted to use <a href="/en-US/docs/Web/API/Screen_Capture_API">Screen Capture API</a>, that is, {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} to capture the screen's contents.</p>
+The HTTP {{HTTPHeader("Feature-Policy")}} header `display-capture` directive controls whether or not the document is permitted to use [Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API), that is, {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} to capture the screen's contents.
 
-<p>If <code>display-capture</code> is disabled in a document, the document will not be able to initiate screen capture via {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}.</p>
+If `display-capture` is disabled in a document, the document will not be able to initiate screen capture via {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre>Feature-Policy: display-capture &lt;allowlist&gt;;</pre>
+    Feature-Policy: display-capture <allowlist>;
 
-<dl>
-  <dt>&lt;allowlist&gt;</dt>
-  <dd>A list of origins for which the feature is allowed. See <a href="/en-US/docs/Web/HTTP/Headers/Feature-Policy#syntax"><code>Feature-Policy</code></a>.</dd>
-</dl>
+- \<allowlist>
+  - : A list of origins for which the feature is allowed. See [`Feature-Policy`](/en-US/docs/Web/HTTP/Headers/Feature-Policy#syntax).
 
-<h2 id="Default_policy">Default policy</h2>
+## Default policy
 
-<p>Default allow list for <code>display-capture</code> is <code>'self'</code>.</p>
+Default allow list for `display-capture` is `'self'`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
+## Browser compatibility
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+{{Compat}}
 
-<p>{{Compat}}</p>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{HTTPHeader("Feature-Policy")}} header</li>
- <li><a href="/en-US/docs/Web/HTTP/Feature_Policy">Feature Policy</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy">Using Feature Policy</a></li>
- <li><a href="/en-US/docs/Web/API/Screen_Capture_API">Screen Capture API</a></li>
- <li><a href="/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture">Using the Screen Capture API</a></li>
-</ul>
+- {{HTTPHeader("Feature-Policy")}} header
+- [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy)
+- [Using Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)
+- [Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API)
+- [Using the Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture)

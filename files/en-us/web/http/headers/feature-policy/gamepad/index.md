@@ -7,63 +7,62 @@ tags:
   - HTTP
   - header
   - Experimental
-
 browser-compat: http.headers.Feature-Policy.gamepad
 ---
-<div>{{HTTPSidebar}} {{SeeCompatTable}}</div>
+{{HTTPSidebar}} {{SeeCompatTable}}
 
-<p>The HTTP {{HTTPHeader("Feature-Policy")}} header <code>gamepad</code> directive controls whether the current document is allowed to use the <a href="/en-US/docs/Web/API/Gamepad_API">Gamepad API</a>.
-  When this policy is disabled, calls to {{domxref('Navigator.getGamepads()')}} will throw a <code>SecurityError</code> {{domxref('DOMException')}}.
-  In addition, the {{event("gamepadconnected")}} and {{event("gamepaddisconnected")}} events will not fire.</p>
+The HTTP {{HTTPHeader("Feature-Policy")}} header `gamepad` directive controls whether the current document is allowed to use the [Gamepad API](/en-US/docs/Web/API/Gamepad_API).
+When this policy is disabled, calls to {{domxref('Navigator.getGamepads()')}} will throw a `SecurityError` {{domxref('DOMException')}}.
+In addition, the {{event("gamepadconnected")}} and {{event("gamepaddisconnected")}} events will not fire.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre>Feature-Policy: gamepad &lt;allowlist&gt;;</pre>
+    Feature-Policy: gamepad <allowlist>;
 
-<dl>
-  <dt>&lt;allowlist&gt;</dt>
-  <dd>A list of origins for which the feature is allowed. See <a href="/en-US/docs/Web/HTTP/Headers/Feature-Policy#syntax"><code>Feature-Policy</code></a>.</dd>
-</dl>
+- \<allowlist>
+  - : A list of origins for which the feature is allowed. See [`Feature-Policy`](/en-US/docs/Web/HTTP/Headers/Feature-Policy#syntax).
 
-<h2 id="Default_policy">Default policy</h2>
+## Default policy
 
-<p>Default allow list for <code>gamepad</code> is <code>'self'</code>.</p>
+Default allow list for `gamepad` is `'self'`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="General_example">General example</h3>
+### General example
 
-<p>SecureCorp Inc. wants to disable the Gamepad API within all browsing contexts except for its own origin and those whose origin is <code>https://example.com</code>.
-  It can do so by delivering the following HTTP response header to define a feature policy:</p>
+SecureCorp Inc. wants to disable the Gamepad API within all browsing contexts except for its own origin and those whose origin is `https://example.com`.
+It can do so by delivering the following HTTP response header to define a feature policy:
 
-<pre class="brush: bash">Feature-Policy: gamepad 'self' https://example.com</pre>
+```bash
+Feature-Policy: gamepad 'self' https://example.com
+```
 
-<h3 id="With_an_&lt;iframe&gt;_element">With an &lt;iframe&gt; element</h3>
+### With an \<iframe> element
 
-<p>FastCorp Inc. wants to disable <code>gamepad</code> for all cross-origin child frames, except for a specific &lt;iframe&gt;.
-  It can do so by delivering the following HTTP response header to define a feature policy:</p>
+FastCorp Inc. wants to disable `gamepad` for all cross-origin child frames, except for a specific \<iframe>.
+It can do so by delivering the following HTTP response header to define a feature policy:
 
-<pre class="brush: bash">Feature-Policy: gamepad 'self'</pre>
+```bash
+Feature-Policy: gamepad 'self'
+```
 
-<p>Then include an {{HTMLElement('iframe','allow','#Attributes')}} attribute on the <code>&lt;iframe&gt;</code> element:</p>
+Then include an {{HTMLElement('iframe','allow','#Attributes')}} attribute on the `<iframe>` element:
 
-<pre>&lt;iframe src="https://other.com/game" allow="gamepad"&gt;&lt;/iframe&gt;</pre>
+    <iframe src="https://other.com/game" allow="gamepad"></iframe>
 
-<p>iframe attributes can selectively enable features in certain frames, and not in others, even if those frames contain documents from the same origin.</p>
+iframe attributes can selectively enable features in certain frames, and not in others, even if those frames contain documents from the same origin.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{HTTPHeader("Feature-Policy")}} header</li>
-  <li><a href="/en-US/docs/Web/HTTP/Feature_Policy">Feature Policy</a></li>
-  <li><a href="/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy">Using Feature
-      Policy</a></li>
-</ul>
+- {{HTTPHeader("Feature-Policy")}} header
+- [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy)
+- [Using Feature
+  Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)

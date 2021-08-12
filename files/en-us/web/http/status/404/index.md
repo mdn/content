@@ -8,41 +8,39 @@ tags:
   - Status code
 browser-compat: http.status.404
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The HTTP <code><strong>404 Not Found</strong></code> client error response code indicates that the server can't find the requested resource. Links that lead to a 404 page are often called broken or dead links and can be subject to <a href="https://en.wikipedia.org/wiki/Link_rot">link rot</a>.</p>
+The HTTP **`404 Not Found`** client error response code indicates that the server can't find the requested resource. Links that lead to a 404 page are often called broken or dead links and can be subject to [link rot](https://en.wikipedia.org/wiki/Link_rot).
 
-<p>A 404 status code does not indicate whether the resource is temporarily or permanently missing. But if a resource is permanently removed, a {{HTTPStatus("410")}} (Gone) should be used instead of a 404 status.</p>
+A 404 status code does not indicate whether the resource is temporarily or permanently missing. But if a resource is permanently removed, a {{HTTPStatus("410")}} (Gone) should be used instead of a 404 status.
 
-<h2 id="Status">Status</h2>
+## Status
 
-<pre class="brush: html">404 Not Found</pre>
+```html
+404 Not Found
+```
 
-<h2 id="Custom_error_pages">Custom error pages</h2>
+## Custom error pages
 
-<p>Many web sites customize the look of a 404 page to be more helpful to the user and provide guidance on what to do next. Apache servers can be configured using an <code>.htaccess</code> file and a code snippet like the following example.</p>
+Many web sites customize the look of a 404 page to be more helpful to the user and provide guidance on what to do next. Apache servers can be configured using an `.htaccess` file and a code snippet like the following example.
 
-<pre class="brush: bash">ErrorDocument 404 /notfound.html</pre>
+```bash
+ErrorDocument 404 /notfound.html
+```
 
-<p>For an example of a custom 404 page, see <a href="/en-US/404">MDN's 404 page</a>.</p>
+For an example of a custom 404 page, see [MDN's 404 page](/en-US/404).
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Custom design is a good thing, in moderation. Feel free to make your 404 page humorous and human, but don't confuse your users.</p>
-</div>
+> **Note:** Custom design is a good thing, in moderation. Feel free to make your 404 page humorous and human, but don't confuse your users.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTTPStatus("410")}}</li>
- <li>
-  <p>{{interwiki("wikipedia", "HTTP_404", "Wikipedia: HTTP 404")}}</p>
- </li>
-</ul>
+- {{HTTPStatus("410")}}
+- {{interwiki("wikipedia", "HTTP_404", "Wikipedia: HTTP 404")}}

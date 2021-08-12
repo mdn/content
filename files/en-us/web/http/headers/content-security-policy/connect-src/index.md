@@ -12,25 +12,21 @@ tags:
   - source
 browser-compat: http.headers.csp.Content-Security-Policy.connect-src
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
-  <code><strong>connect-src</strong></code> directive restricts the URLs which can be
-  loaded using script interfaces. The APIs that are restricted are:</p>
+The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
+**`connect-src`** directive restricts the URLs which can be
+loaded using script interfaces. The APIs that are restricted are:
 
-<ul>
-  <li>{{HTMLElement("a")}} {{htmlattrxref("ping", "a")}},</li>
-  <li>{{domxref("WindowOrWorkerGlobalScope.fetch")}},</li>
-  <li>{{domxref("XMLHttpRequest")}},</li>
-  <li>{{domxref("WebSocket")}},</li>
-  <li>{{domxref("EventSource")}}, and</li>
-  <li>{{domxref("Navigator.sendBeacon()")}}.</li>
-</ul>
+- {{HTMLElement("a")}} {{htmlattrxref("ping", "a")}},
+- {{domxref("WindowOrWorkerGlobalScope.fetch")}},
+- {{domxref("XMLHttpRequest")}},
+- {{domxref("WebSocket")}},
+- {{domxref("EventSource")}}, and
+- {{domxref("Navigator.sendBeacon()")}}.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> <code>connect-src 'self'</code> does not resolve to websocket
-    schemas in all browsers, more info in this <a href="https://github.com/w3c/webappsec-csp/issues/7">issue</a>.</p>
-</div>
+> **Note:** `connect-src 'self'` does not resolve to websocket
+> schemas in all browsers, more info in this [issue](https://github.com/w3c/webappsec-csp/issues/7).
 
 <table class="properties">
   <tbody>
@@ -44,38 +40,44 @@ browser-compat: http.headers.csp.Content-Security-Policy.connect-src
     </tr>
     <tr>
       <th scope="row">{{CSP("default-src")}} fallback</th>
-      <td>Yes. If this directive is absent, the user agent will look for the
-        <code>default-src</code> directive.</td>
+      <td>
+        Yes. If this directive is absent, the user agent will look for the
+        <code>default-src</code> directive.
+      </td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>One or more sources can be allowed for the connect-src policy:</p>
+One or more sources can be allowed for the connect-src policy:
 
-<pre class="brush: html">Content-Security-Policy: connect-src &lt;source&gt;;
-Content-Security-Policy: connect-src &lt;source&gt; &lt;source&gt;;
-</pre>
+```html
+Content-Security-Policy: connect-src <source>;
+Content-Security-Policy: connect-src <source> <source>;
+```
 
-<h3 id="Sources">Sources</h3>
+### Sources
 
-<p>{{page("/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/default-src",
-  "common_sources")}}</p>
+{{page("/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/default-src",
+  "common_sources")}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Violation_cases">Violation cases</h3>
+### Violation cases
 
-<p>Given this CSP header:</p>
+Given this CSP header:
 
-<pre class="brush: bash">Content-Security-Policy: connect-src https://example.com/</pre>
+```bash
+Content-Security-Policy: connect-src https://example.com/
+```
 
-<p>The following connections are blocked and won't load:</p>
+The following connections are blocked and won't load:
 
-<pre class="brush: html">&lt;a ping="https://not-example.com"&gt;
+```html
+<a ping="https://not-example.com">
 
-&lt;script&gt;
+<script>
   var xhr = new XMLHttpRequest();
   xhr.open('GET', 'https://not-example.com/');
   xhr.send();
@@ -85,31 +87,28 @@ Content-Security-Policy: connect-src &lt;source&gt; &lt;source&gt;;
   var es = new EventSource("https://not-example.com/");
 
   navigator.sendBeacon("https://not-example.com/", { ... });
-&lt;/script&gt;</pre>
+</script>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Compatibility_notes">Compatibility notes</h2>
+## Compatibility notes
 
-<ul>
-  <li>Prior to Firefox 23, <code>xhr-src</code> was used in place of the
-    <code>connect-src</code> directive and only restricted the use of
-    {{domxref("XMLHttpRequest")}}.</li>
-</ul>
+- Prior to Firefox 23, `xhr-src` was used in place of the
+  `connect-src` directive and only restricted the use of
+  {{domxref("XMLHttpRequest")}}.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{HTTPHeader("Content-Security-Policy")}}</li>
-  <li>{{HTMLElement("a")}} {{htmlattrxref("ping", "a")}}</li>
-  <li>{{domxref("WindowOrWorkerGlobalScope.fetch")}}</li>
-  <li>{{domxref("XMLHttpRequest")}}</li>
-  <li>{{domxref("WebSocket")}}</li>
-  <li>{{domxref("EventSource")}}</li>
-</ul>
+- {{HTTPHeader("Content-Security-Policy")}}
+- {{HTMLElement("a")}} {{htmlattrxref("ping", "a")}}
+- {{domxref("WindowOrWorkerGlobalScope.fetch")}}
+- {{domxref("XMLHttpRequest")}}
+- {{domxref("WebSocket")}}
+- {{domxref("EventSource")}}

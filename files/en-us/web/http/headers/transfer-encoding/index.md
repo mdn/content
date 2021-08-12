@@ -10,34 +10,35 @@ tags:
   - Payload header
 browser-compat: http.headers.Transfer-Encoding
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The <strong><code>Transfer-Encoding</code></strong> header specifies the form of
-  encoding used to safely transfer the {{Glossary("Payload body","payload body")}} to the
-  user.</p>
+The **`Transfer-Encoding`** header specifies the form of
+encoding used to safely transfer the {{Glossary("Payload body","payload body")}} to the
+user.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> <a href="https://wikipedia.org/wiki/HTTP/2">HTTP/2</a> doesn't support
-    HTTP 1.1's chunked transfer encoding mechanism, as it provides its own, more efficient,
-    mechanisms for data streaming.</p>
-</div>
+> **Note:** [HTTP/2](https://wikipedia.org/wiki/HTTP/2) doesn't support
+> HTTP 1.1's chunked transfer encoding mechanism, as it provides its own, more efficient,
+> mechanisms for data streaming.
 
-<p><code>Transfer-Encoding</code> is a <a
-    href="/en-US/docs/Web/HTTP/Headers#hbh">hop-by-hop header</a>, that is applied to a
-  message between two nodes, not to a resource itself. Each segment of a multi-node
-  connection can use different <code>Transfer-Encoding</code> values. If you want to
-  compress data over the whole connection, use the end-to-end
-  {{HTTPHeader("Content-Encoding")}} header instead.</p>
+`Transfer-Encoding` is a [hop-by-hop header](/en-US/docs/Web/HTTP/Headers#hbh), that is applied to a
+message between two nodes, not to a resource itself. Each segment of a multi-node
+connection can use different `Transfer-Encoding` values. If you want to
+compress data over the whole connection, use the end-to-end
+{{HTTPHeader("Content-Encoding")}} header instead.
 
-<p>When present on a response to a {{HTTPMethod("HEAD")}} request that has no body, it
-  indicates the value that would have applied to the corresponding {{HTTPMethod("GET")}}
-  message.</p>
+When present on a response to a {{HTTPMethod("HEAD")}} request that has no body, it
+indicates the value that would have applied to the corresponding {{HTTPMethod("GET")}}
+message.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Header type</th>
-      <td>{{Glossary("Request header")}}, {{Glossary("Response header")}}, {{Glossary("Payload header")}}</td>
+      <td>
+        {{Glossary("Request header")}},
+        {{Glossary("Response header")}},
+        {{Glossary("Payload header")}}
+      </td>
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
@@ -46,90 +47,85 @@ browser-compat: http.headers.Transfer-Encoding
   </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: html">Transfer-Encoding: chunked
+```html
+Transfer-Encoding: chunked
 Transfer-Encoding: compress
 Transfer-Encoding: deflate
 Transfer-Encoding: gzip
 Transfer-Encoding: identity
 
-<em>// Several values can be listed, separated by a comma</em>
-Transfer-Encoding: gzip, chunked</pre>
+// Several values can be listed, separated by a comma
+Transfer-Encoding: gzip, chunked
+```
 
-<h2 id="Directives">Directives</h2>
+## Directives
 
-<dl>
-  <dt><code>chunked</code></dt>
-  <dd>Data is sent in a series of chunks. The {{HTTPHeader("Content-Length")}} header is
+- `chunked`
+  - : Data is sent in a series of chunks. The {{HTTPHeader("Content-Length")}} header is
     omitted in this case and at the beginning of each chunk you need to add the length of
-    the current chunk in hexadecimal format, followed by '<code>\r\n</code>' and then the
-    chunk itself, followed by another '<code>\r\n</code>'. The terminating chunk is a
+    the current chunk in hexadecimal format, followed by '`\r\n`' and then the
+    chunk itself, followed by another '`\r\n`'. The terminating chunk is a
     regular chunk, with the exception that its length is zero. It is followed by the
-    trailer, which consists of a (possibly empty) sequence of header fields. </dd>
-  <dt><code>compress</code></dt>
-  <dd>A format using the <a href="https://en.wikipedia.org/wiki/LZW">Lempel-Ziv-Welch</a> (LZW) algorithm. The
-    value name was taken from the UNIX <em>compress</em> program, which implemented this
-    algorithm.<br>
+    trailer, which consists of a (possibly empty) sequence of header fields.
+- `compress`
+  - : A format using the [Lempel-Ziv-Welch](https://en.wikipedia.org/wiki/LZW) (LZW) algorithm. The
+    value name was taken from the UNIX _compress_ program, which implemented this
+    algorithm.
     Like the compress program, which has disappeared from most UNIX distributions, this
     content-encoding is used by almost no browsers today, partly because of a patent issue
-    (which expired in 2003).</dd>
-  <dt><code>deflate</code></dt>
-  <dd>Using the <a href="https://en.wikipedia.org/wiki/Zlib">zlib</a>
-    structure (defined in <a href="https://datatracker.ietf.org/doc/html/rfc1950">RFC 1950</a>), with the <a
-      href="https://en.wikipedia.org/wiki/DEFLATE"><em>deflate</em></a>
-    compression algorithm (defined in <a href="https://datatracker.ietf.org/doc/html/rfc1952">RFC 1951</a>).</dd>
-  <dt><code>gzip</code></dt>
-  <dd>A format using the <a       href="https://en.wikipedia.org/wiki/LZ77_and_LZ78#LZ77">Lempel-Ziv coding</a>
-    (LZ77), with a 32-bit CRC. This is originally the format of the UNIX <em>gzip</em>
+    (which expired in 2003).
+- `deflate`
+  - : Using the [zlib](https://en.wikipedia.org/wiki/Zlib)
+    structure (defined in [RFC 1950](https://datatracker.ietf.org/doc/html/rfc1950)), with the [_deflate_](https://en.wikipedia.org/wiki/DEFLATE)
+    compression algorithm (defined in [RFC 1951](https://datatracker.ietf.org/doc/html/rfc1952)).
+- `gzip`
+  - : A format using the [Lempel-Ziv coding](https://en.wikipedia.org/wiki/LZ77_and_LZ78#LZ77)
+    (LZ77), with a 32-bit CRC. This is originally the format of the UNIX _gzip_
     program. The HTTP/1.1 standard also recommends that the servers supporting this
-    content-encoding should recognize <code>x-gzip</code> as an alias, for compatibility
-    purposes.</dd>
-  <dt><code>identity</code></dt>
-  <dd>Indicates the identity function (i.e. no compression, nor modification). This token,
-    except if explicitly specified, is always deemed acceptable.</dd>
-</dl>
+    content-encoding should recognize `x-gzip` as an alias, for compatibility
+    purposes.
+- `identity`
+  - : Indicates the identity function (i.e. no compression, nor modification). This token,
+    except if explicitly specified, is always deemed acceptable.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Chunked_encoding">Chunked encoding</h3>
+### Chunked encoding
 
-<p>Chunked encoding is useful when larger amounts of data are sent to the client and the
-  total size of the response may not be known until the request has been fully processed.
-  For example, when generating a large HTML table resulting from a database query or when
-  transmitting large images. A chunked response looks like this:</p>
+Chunked encoding is useful when larger amounts of data are sent to the client and the
+total size of the response may not be known until the request has been fully processed.
+For example, when generating a large HTML table resulting from a database query or when
+transmitting large images. A chunked response looks like this:
 
-<pre>HTTP/1.1 200 OK
-Content-Type: text/plain
-Transfer-Encoding: chunked
+    HTTP/1.1 200 OK
+    Content-Type: text/plain
+    Transfer-Encoding: chunked
 
-7\r\n
-Mozilla\r\n
-9\r\n
-Developer\r\n
-7\r\n
-Network\r\n
-0\r\n
-\r\n</pre>
+    7\r\n
+    Mozilla\r\n
+    9\r\n
+    Developer\r\n
+    7\r\n
+    Network\r\n
+    0\r\n
+    \r\n
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{HTTPHeader("Accept-Encoding")}}</li>
-  <li>{{HTTPHeader("Content-Encoding")}}</li>
-  <li>{{HTTPHeader("Content-Length")}}</li>
-  <li>Header fields that regulate the use of trailers: {{HTTPHeader("TE")}} (requests) and
-    {{HTTPHeader("Trailer")}} (responses).</li>
-  <li>
-    <p><a href="https://en.wikipedia.org/wiki/Chunked_transfer_encoding">Chunked transfer
-        encoding</a></p>
-  </li>
-</ul>
+- {{HTTPHeader("Accept-Encoding")}}
+- {{HTTPHeader("Content-Encoding")}}
+- {{HTTPHeader("Content-Length")}}
+- Header fields that regulate the use of trailers: {{HTTPHeader("TE")}} (requests) and
+  {{HTTPHeader("Trailer")}} (responses).
+- [Chunked transfer
+  encoding](https://en.wikipedia.org/wiki/Chunked_transfer_encoding)

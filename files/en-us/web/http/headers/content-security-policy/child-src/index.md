@@ -2,25 +2,24 @@
 title: 'CSP: child-src'
 slug: Web/HTTP/Headers/Content-Security-Policy/child-src
 tags:
-- CSP
-- Child
-- Content-Security-Policy
-- Directive
-- HTTP
-- Reference
-- Security
-- child-src
-- source
+  - CSP
+  - Child
+  - Content-Security-Policy
+  - Directive
+  - HTTP
+  - Reference
+  - Security
+  - child-src
+  - source
 browser-compat: http.headers.csp.Content-Security-Policy.child-src
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
-  <strong><code>child-src</code></strong> directive defines the valid sources for <a
-    href="/en-US/docs/Web/API/Web_Workers_API">web workers</a> and nested browsing
-  contexts loaded using elements such as {{HTMLElement("frame")}} and
-  {{HTMLElement("iframe")}}. For workers, non-compliant requests are treated as fatal
-  network errors by the user agent.</p>
+The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
+**`child-src`** directive defines the valid sources for [web workers](/en-US/docs/Web/API/Web_Workers_API) and nested browsing
+contexts loaded using elements such as {{HTMLElement("frame")}} and
+{{HTMLElement("iframe")}}. For workers, non-compliant requests are treated as fatal
+network errors by the user agent.
 
 <table class="properties">
   <tbody>
@@ -34,53 +33,57 @@ browser-compat: http.headers.csp.Content-Security-Policy.child-src
     </tr>
     <tr>
       <th scope="row">{{CSP("default-src")}} fallback</th>
-      <td>Yes. If this directive is absent, the user agent will look for the
-        <code>default-src</code> directive.</td>
+      <td>
+        Yes. If this directive is absent, the user agent will look for the
+        <code>default-src</code> directive.
+      </td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>One or more sources can be allowed for the child-src policy:</p>
+One or more sources can be allowed for the child-src policy:
 
-<pre class="brush: html">Content-Security-Policy: child-src &lt;source&gt;;
-Content-Security-Policy: child-src &lt;source&gt; &lt;source&gt;;
-</pre>
+```html
+Content-Security-Policy: child-src <source>;
+Content-Security-Policy: child-src <source> <source>;
+```
 
-<h3 id="Sources">Sources</h3>
+### Sources
 
-<p>{{page("Web/HTTP/Headers/Content-Security-Policy/connect-src", "Sources")}}</p>
+{{page("Web/HTTP/Headers/Content-Security-Policy/connect-src", "Sources")}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Violation_cases">Violation cases</h3>
+### Violation cases
 
-<p>Given this CSP header:</p>
+Given this CSP header:
 
-<pre class="brush: bash">Content-Security-Policy: child-src https://example.com/</pre>
+```bash
+Content-Security-Policy: child-src https://example.com/
+```
 
-<p>This {{HTMLElement("iframe")}} and worker are blocked and won't load:</p>
+This {{HTMLElement("iframe")}} and worker are blocked and won't load:
 
-<pre class="brush: html">&lt;iframe src="https://not-example.com"&gt;&lt;/iframe&gt;
+```html
+<iframe src="https://not-example.com"></iframe>
 
-&lt;script&gt;
+<script>
   var blockedWorker = new Worker("data:application/javascript,...");
-&lt;/script&gt;</pre>
+</script>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{HTTPHeader("Content-Security-Policy")}}</li>
-  <li>{{HTMLElement("frame")}} and {{HTMLElement("iframe")}}</li>
-  <li>{{domxref("Worker")}}, {{domxref("SharedWorker")}}, {{domxref("ServiceWorker")}}
-  </li>
-</ul>
+- {{HTTPHeader("Content-Security-Policy")}}
+- {{HTMLElement("frame")}} and {{HTMLElement("iframe")}}
+- {{domxref("Worker")}}, {{domxref("SharedWorker")}}, {{domxref("ServiceWorker")}}

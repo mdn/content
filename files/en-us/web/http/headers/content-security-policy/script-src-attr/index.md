@@ -14,13 +14,13 @@ tags:
   - source
 browser-compat: http.headers.csp.Content-Security-Policy.script-src-attr
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
-  <code><strong>script-src-attr</strong></code> directive specifies valid sources for
-  JavaScript inline event handlers. This includes only inline script event handlers like
-  <code>onclick</code>, but not URLs loaded directly into {{HTMLElement("script")}}
-  elements.</p>
+The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
+**`script-src-attr`** directive specifies valid sources for
+JavaScript inline event handlers. This includes only inline script event handlers like
+`onclick`, but not URLs loaded directly into {{HTMLElement("script")}}
+elements.
 
 <table class="properties">
   <tbody>
@@ -34,104 +34,94 @@ browser-compat: http.headers.csp.Content-Security-Policy.script-src-attr
     </tr>
     <tr>
       <th scope="row">{{CSP("default-src")}} fallback</th>
-      <td>Yes. If this directive is absent, the user agent will look for
-        the {{CSP("script-src")}} directive, and if both of them are absent, fallback
-        to <code>default-src</code> directive.</td>
+      <td>
+        Yes. If this directive is absent, the user agent will look for
+        the {{CSP("script-src")}} directive, and if both of them are
+        absent, fallback to <code>default-src</code> directive.
+      </td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>One or more sources can be allowed for the <code>script-src-attr</code> policy:</p>
+One or more sources can be allowed for the `script-src-attr` policy:
 
-<pre class="brush: html">Content-Security-Policy: script-src-attr &lt;source&gt;;
-Content-Security-Policy: script-src-attr &lt;source&gt; &lt;source&gt;;
-</pre>
+```html
+Content-Security-Policy: script-src-attr <source>;
+Content-Security-Policy: script-src-attr <source> <source>;
+```
 
-<p><code>script-src-attr</code> can be used in conjunction with {{CSP("script-src")}}:</p>
+`script-src-attr` can be used in conjunction with {{CSP("script-src")}}:
 
-<pre class="brush: html">Content-Security-Policy: script-src &lt;source&gt;;
-Content-Security-Policy: script-src-attr &lt;source&gt;;
-</pre>
+```html
+Content-Security-Policy: script-src <source>;
+Content-Security-Policy: script-src-attr <source>;
+```
 
-<h3 id="Sources">Sources</h3>
+### Sources
 
-<dl>
-  <dt><code>&lt;host-source&gt;</code></dt>
-  <dd>Internet hosts by name or IP address, as well as an optional <a href="/en-US/docs/Learn/Common_questions/What_is_a_URL">URL scheme</a> and/or port number. The site's address may include an optional leading wildcard (the asterisk character, <code>'*'</code>), and you may use a wildcard (again, <code>'*'</code>) as the port number, indicating that all legal ports are valid for the source.<br>
+- `<host-source>`
+
+  - : Internet hosts by name or IP address, as well as an optional [URL scheme](/en-US/docs/Learn/Common_questions/What_is_a_URL) and/or port number. The site's address may include an optional leading wildcard (the asterisk character, `'*'`), and you may use a wildcard (again, `'*'`) as the port number, indicating that all legal ports are valid for the source.
     Examples:
-    <ul>
-      <li><code>http://*.example.com</code>: Matches all attempts to load from any subdomain of example.com using the <code>http:</code> URL scheme.</li>
-      <li><code>mail.example.com:443</code>: Matches all attempts to access port 443 on mail.example.com.</li>
-      <li><code>https://store.example.com</code>: Matches all attempts to access store.example.com using <code>https:</code>.</li>
-      <li><code>*.example.com</code>: Matches all attempts to load from any subdomain of example.com using the current protocol.</li>
-    </ul>
-  </dd>
 
-  <dt><code>&lt;scheme-source&gt;</code></dt>
-  <dd>A scheme such as <code>http:</code> or <code>https:</code>. The colon is required. Unlike other values below, single quotes shouldn't be used. You can also specify data schemes (not recommended).
-    <ul>
-      <li><code>data:</code> Allows <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs"><code>data:</code> URIs</a> to be used as a content source.<em> This is insecure; an attacker can also inject arbitrary data: URIs. Use this sparingly and definitely not for scripts.</em></li>
-      <li><code>mediastream:</code> Allows <a href="/en-US/docs/Web/API/Media_Streams_API"><code>mediastream:</code> URIs</a> to be used as a content source.</li>
-      <li><code>blob:</code> Allows <a href="/en-US/docs/Web/API/Blob"><code>blob:</code> URIs</a> to be used as a content source.</li>
-      <li><code>filesystem:</code> Allows <a href="/en-US/docs/Web/API/FileSystem"><code>filesystem:</code> URIs</a> to be used as a content source.</li>
-    </ul>
-  </dd>
+    - `http://*.example.com`: Matches all attempts to load from any subdomain of example.com using the `http:` URL scheme.
+    - `mail.example.com:443`: Matches all attempts to access port 443 on mail.example.com.
+    - `https://store.example.com`: Matches all attempts to access store.example.com using `https:`.
+    - `*.example.com`: Matches all attempts to load from any subdomain of example.com using the current protocol.
 
-  <dt><code>'self'</code></dt>
-  <dd>Refers to the origin from which the protected document is being served, including the same URL scheme and port number. You must include the single quotes. Some browsers specifically exclude <code>blob</code> and <code>filesystem</code> from source directives. Sites needing to allow these content types can specify them using the Data attribute.</dd>
+- `<scheme-source>`
 
-  <dt><code>'unsafe-eval'</code></dt>
-  <dd>Allows the use of <code>eval()</code> and similar methods for creating code from strings. You must include the single quotes.</dd>
+  - : A scheme such as `http:` or `https:`. The colon is required. Unlike other values below, single quotes shouldn't be used. You can also specify data schemes (not recommended).
 
-  <dt><code>'unsafe-hashes'</code></dt>
-  <dd>Allows enabling specific inline <a href="/en-US/docs/Web/Events/Event_handlers">event handlers</a>. If you only need to allow inline event handlers and not inline {{HTMLElement("script")}} elements or <code>javascript:</code> URLs, this is a safer method than using the <code>unsafe-inline</code> expression.</dd>
+    - `data:` Allows [`data:` URIs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) to be used as a content source. _This is insecure; an attacker can also inject arbitrary data: URIs. Use this sparingly and definitely not for scripts._
+    - `mediastream:` Allows [`mediastream:` URIs](/en-US/docs/Web/API/Media_Streams_API) to be used as a content source.
+    - `blob:` Allows [`blob:` URIs](/en-US/docs/Web/API/Blob) to be used as a content source.
+    - `filesystem:` Allows [`filesystem:` URIs](/en-US/docs/Web/API/FileSystem) to be used as a content source.
 
-  <dt><code>'unsafe-inline'</code></dt>
-  <dd>Allows the use of inline resources, such as inline {{HTMLElement("script")}} elements, <code>javascript:</code> URLs, and inline event handlers. The single quotes are required.</dd>
+- `'self'`
+  - : Refers to the origin from which the protected document is being served, including the same URL scheme and port number. You must include the single quotes. Some browsers specifically exclude `blob` and `filesystem` from source directives. Sites needing to allow these content types can specify them using the Data attribute.
+- `'unsafe-eval'`
+  - : Allows the use of `eval()` and similar methods for creating code from strings. You must include the single quotes.
+- `'unsafe-hashes'`
+  - : Allows enabling specific inline [event handlers](/en-US/docs/Web/Events/Event_handlers). If you only need to allow inline event handlers and not inline {{HTMLElement("script")}} elements or `javascript:` URLs, this is a safer method than using the `unsafe-inline` expression.
+- `'unsafe-inline'`
+  - : Allows the use of inline resources, such as inline {{HTMLElement("script")}} elements, `javascript:` URLs, and inline event handlers. The single quotes are required.
+- `'none'`
+  - : Refers to the empty set; that is, no URLs match. The single quotes are required.
+- `'nonce-<base64-value>'`
 
-  <dt><code>'none'</code></dt>
-  <dd>Refers to the empty set; that is, no URLs match. The single quotes are required.</dd>
+  - : An allow-list for specific inline scripts using a cryptographic nonce (number used once). The server must generate a unique nonce value each time it transmits a policy. It is critical to provide an unguessable nonce, as bypassing a resource^s policy is otherwise trivial. See [unsafe inline script](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#unsafe_inline_script) for an example. Specifying nonce makes a modern browser ignore `'unsafe-inline'` which could still be set for older browsers without nonce support.
 
-  <dt><code>'nonce-&lt;base64-value&gt;'</code></dt>
-  <dd>An allow-list for specific inline scripts using a cryptographic nonce (number used once). The server must generate a unique nonce value each time it transmits a policy. It is critical to provide an unguessable nonce, as bypassing a resource^s policy is otherwise trivial. See <a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#unsafe_inline_script">unsafe inline script</a> for an example. Specifying nonce makes a modern browser ignore <code>'unsafe-inline'</code> which could still be set for older browsers without nonce support.
-    <div class="notecard note">
-      <p><strong>Note:</strong> The CSP <code>nonce</code> source can only be applied to <em>nonceable</em> elements (e.g., as the {{HTMLElement("img")}} element has no <code>nonce</code> attribute, there is no way to associate it with this CSP source).</p>
-    </div>
-  </dd>
+    > **Note:** The CSP `nonce` source can only be applied to _nonceable_ elements (e.g., as the {{HTMLElement("img")}} element has no `nonce` attribute, there is no way to associate it with this CSP source).
 
-  <dt><code>'&lt;hash-algorithm&gt;-&lt;base64-value&gt;'</code></dt>
-  <dd>A sha256, sha384 or sha512 hash of scripts or styles. The use of this source consists of two portions separated by a dash: the encryption algorithm used to create the hash and the base64-encoded hash of the script or style. When generating the hash, don't include the &lt;script&gt; or &lt;style&gt; tags and note that capitalization and whitespace matter, including leading or trailing whitespace. See <a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#unsafe_inline_script">unsafe inline script</a> for an example. In CSP 2.0, this is applied only to inline scripts. CSP 3.0 allows it in the case of <code>script-src</code> for external scripts.</dd>
+- `'<hash-algorithm>-<base64-value>'`
+  - : A sha256, sha384 or sha512 hash of scripts or styles. The use of this source consists of two portions separated by a dash: the encryption algorithm used to create the hash and the base64-encoded hash of the script or style. When generating the hash, don't include the \<script> or \<style> tags and note that capitalization and whitespace matter, including leading or trailing whitespace. See [unsafe inline script](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#unsafe_inline_script) for an example. In CSP 2.0, this is applied only to inline scripts. CSP 3.0 allows it in the case of `script-src` for external scripts.
+- `'strict-dynamic'`
+  - : The `strict-dynamic` source expression specifies that the trust explicitly given to a script present in the markup, by accompanying it with a nonce or a hash, shall be propagated to all the scripts loaded by that root script. At the same time, any allow-list or source expressions such as `'self'` or `'unsafe-inline'` are ignored. See [script-src](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#strict-dynamic) for an example.
+- `'report-sample'`
+  - : Requires a sample of the violating code to be included in the violation report.
 
-  <dt><code>'strict-dynamic'</code></dt>
-  <dd>The <code>strict-dynamic</code> source expression specifies that the trust explicitly given to a script present in the markup, by accompanying it with a nonce or a hash, shall be propagated to all the scripts loaded by that root script. At the same time, any allow-list or source expressions such as <code>'self'</code> or <code>'unsafe-inline'</code> are ignored. See <a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#strict-dynamic">script-src</a> for an example.</dd>
+## Examples
 
-  <dt><code>'report-sample'</code></dt>
-  <dd>Requires a sample of the violating code to be included in the violation report.</dd>
-</dl>
+### Fallback to script-src
 
-<h2 id="Examples">Examples</h2>
+If `script-src-attr` is absent, User Agent falls back to
+the {{CSP("script-src")}} directive, and if that is absent as well, to
+{{CSP("default-src")}}.
 
-<h3 id="Fallback_to_script-src">Fallback to script-src</h3>
-
-<p>If <code>script-src-attr</code> is absent, User Agent falls back to
-  the {{CSP("script-src")}} directive, and if that is absent as well, to
-  {{CSP("default-src")}}.</p>
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{HTTPHeader("Content-Security-Policy")}}</li>
-  <li>{{HTMLElement("script")}}</li>
-  <li>{{CSP("script-src")}}</li>
-  <li>{{CSP("script-src-elem")}}</li>
-</ul>
+- {{HTTPHeader("Content-Security-Policy")}}
+- {{HTMLElement("script")}}
+- {{CSP("script-src")}}
+- {{CSP("script-src-elem")}}

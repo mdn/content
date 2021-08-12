@@ -16,77 +16,73 @@ tags:
   - origin
 browser-compat: http.headers.Access-Control-Allow-Origin
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The <code><strong>Access-Control-Allow-Origin</strong></code> response header indicates whether the response can be shared with requesting code from the given {{glossary("origin")}}.</p>
+The **`Access-Control-Allow-Origin`** response header indicates whether the response can be shared with requesting code from the given {{glossary("origin")}}.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Response header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>no</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Header type</th>
+      <td>{{Glossary("Response header")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>no</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: html">Access-Control-Allow-Origin: *
-Access-Control-Allow-Origin: &lt;origin&gt;
+```html
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Origin: <origin>
 Access-Control-Allow-Origin: null
-</pre>
+```
 
-<h2 id="Directives">Directives</h2>
+## Directives
 
-<dl>
- <dt><code>*</code></dt>
- <dd>For requests <em>without credentials</em>, the literal value "<code>*</code>" can be specified, as a wildcard; the value tells browsers to allow requesting code from any origin to access the resource. Attempting to use the wildcard with credentials <a href="/en-US/docs/Web/HTTP/CORS/Errors/CORSNotSupportingCredentials">will result in an error</a>.</dd>
- <dt><code>&lt;origin&gt;</code></dt>
- <dd>Specifies an origin. Only a single origin can be specified. If the server supports clients from multiple origins, it must return the origin for the specific client making the request.</dd>
- <dt><code>null</code></dt>
- <dd>Specifies the origin "null".
-  <div class="notecard note">
-    <p><strong>Note:</strong> <code>null</code> <a href="https://w3c.github.io/webappsec-cors-for-developers/#avoid-returning-access-control-allow-origin-null">should not be used</a>: "It may seem safe to return <code>Access-Control-Allow-Origin: "null"</code>, but the serialization of the Origin of any resource that uses a non-hierarchical scheme (such as <code>data:</code> or <code>file:</code>) and sandboxed documents is defined to be "null". Many User Agents will grant such documents access to a response with an <code>Access-Control-Allow-Origin: "null"</code> header, and any origin can create a hostile document with a "null" Origin. The "null" value for the ACAO header should therefore be avoided."</p>
-  </div>
- </dd>
-</dl>
+- `*`
+  - : For requests _without credentials_, the literal value "`*`" can be specified, as a wildcard; the value tells browsers to allow requesting code from any origin to access the resource. Attempting to use the wildcard with credentials [will result in an error](/en-US/docs/Web/HTTP/CORS/Errors/CORSNotSupportingCredentials).
+- `<origin>`
+  - : Specifies an origin. Only a single origin can be specified. If the server supports clients from multiple origins, it must return the origin for the specific client making the request.
+- `null`
 
-<h2 id="Examples">Examples</h2>
+  - : Specifies the origin "null".
 
-<p>A response that tells the browser to allow code from any origin to access a resource will include the following:</p>
+    > **Note:** `null` [should not be used](https://w3c.github.io/webappsec-cors-for-developers/#avoid-returning-access-control-allow-origin-null): "It may seem safe to return `Access-Control-Allow-Origin: "null"`, but the serialization of the Origin of any resource that uses a non-hierarchical scheme (such as `data:` or `file:`) and sandboxed documents is defined to be "null". Many User Agents will grant such documents access to a response with an `Access-Control-Allow-Origin: "null"` header, and any origin can create a hostile document with a "null" Origin. The "null" value for the ACAO header should therefore be avoided."
 
-<pre>Access-Control-Allow-Origin: *</pre>
+## Examples
 
-<p>A response that tells the browser to allow requesting code from the origin <code>https://developer.mozilla.org</code> to access a resource will include the following:</p>
+A response that tells the browser to allow code from any origin to access a resource will include the following:
 
-<pre>Access-Control-Allow-Origin: https://developer.mozilla.org</pre>
+    Access-Control-Allow-Origin: *
 
-<p>Limiting the possible <code>Access-Control-Allow-Origin</code> values to a set of allowed origins requires code on the server side to check the value of the {{HTTPHeader("Origin")}} request header, compare that to a list of allowed origins, and then if the {{HTTPHeader("Origin")}} value is in the list, to set the <code>Access-Control-Allow-Origin</code> value to the same value as the {{HTTPHeader("Origin")}} value.</p>
+A response that tells the browser to allow requesting code from the origin `https://developer.mozilla.org` to access a resource will include the following:
 
-<h3 id="CORS_and_caching">CORS and caching</h3>
+    Access-Control-Allow-Origin: https://developer.mozilla.org
 
-<p>If the server sends a response with an <code>Access-Control-Allow-Origin</code> value that is an explicit origin (rather than the "<code>*</code>" wildcard), then the response should also include a {{HTTPHeader("Vary")}} response header with the value <code>Origin</code> — to indicate to browsers that server responses can differ based on the value of the <code>Origin</code> request header.</p>
+Limiting the possible `Access-Control-Allow-Origin` values to a set of allowed origins requires code on the server side to check the value of the {{HTTPHeader("Origin")}} request header, compare that to a list of allowed origins, and then if the {{HTTPHeader("Origin")}} value is in the list, to set the `Access-Control-Allow-Origin` value to the same value as the {{HTTPHeader("Origin")}} value.
 
-<pre>Access-Control-Allow-Origin: https://developer.mozilla.org
-Vary: Origin</pre>
+### CORS and caching
 
-<h2 id="Specifications">Specifications</h2>
+If the server sends a response with an `Access-Control-Allow-Origin` value that is an explicit origin (rather than the "`*`" wildcard), then the response should also include a {{HTTPHeader("Vary")}} response header with the value `Origin` — to indicate to browsers that server responses can differ based on the value of the `Origin` request header.
+
+    Access-Control-Allow-Origin: https://developer.mozilla.org
+    Vary: Origin
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTTPHeader("Origin")}}</li>
- <li>{{HTTPHeader("Vary")}}</li>
- <li><a href="/en-US/docs/Web/HTTP/CORS">Cross-Origin Resource Sharing (CORS)</a></li>
- <li>{{httpheader("Cross-Origin-Resource-Policy")}}</li>
-</ul>
+- {{HTTPHeader("Origin")}}
+- {{HTTPHeader("Vary")}}
+- [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS)
+- {{httpheader("Cross-Origin-Resource-Policy")}}

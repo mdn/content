@@ -2,28 +2,26 @@
 title: Retry-After
 slug: Web/HTTP/Headers/Retry-After
 tags:
-- HTTP
-- Reference
-- Response
-- Response Header
-- header
+  - HTTP
+  - Reference
+  - Response
+  - Response Header
+  - header
 browser-compat: http.headers.Retry-After
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The <strong><code>Retry-After</code></strong> response HTTP header indicates how long
-  the user agent should wait before making a follow-up request. There are three main cases
-  this header is used:</p>
+The **`Retry-After`** response HTTP header indicates how long
+the user agent should wait before making a follow-up request. There are three main cases
+this header is used:
 
-<ul>
-  <li>When sent with a {{HTTPStatus(503)}} (Service Unavailable) response, this indicates
-    how long the service is expected to be unavailable.</li>
-  <li>When sent with a {{HTTPStatus(429)}} (Too Many Requests) response, this indicates
-    how long to wait before making a new request.</li>
-  <li>When sent with a redirect response, such as {{HTTPStatus(301)}} (Moved Permanently),
-    this indicates the minimum time that the user agent is asked to wait before issuing
-    the redirected request.</li>
-</ul>
+- When sent with a {{HTTPStatus(503)}} (Service Unavailable) response, this indicates
+  how long the service is expected to be unavailable.
+- When sent with a {{HTTPStatus(429)}} (Too Many Requests) response, this indicates
+  how long to wait before making a new request.
+- When sent with a redirect response, such as {{HTTPStatus(301)}} (Moved Permanently),
+  this indicates the minimum time that the user agent is asked to wait before issuing
+  the redirected request.
 
 <table class="properties">
   <tbody>
@@ -38,51 +36,46 @@ browser-compat: http.headers.Retry-After
   </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: html">Retry-After: &lt;http-date&gt;
-Retry-After: &lt;delay-seconds&gt;
-</pre>
+```html
+Retry-After: <http-date>
+Retry-After: <delay-seconds>
+```
 
-<h2 id="Directives">Directives</h2>
+## Directives
 
-<dl>
-  <dt>&lt;http-date&gt;</dt>
-  <dd>A date after which to retry. See the {{HTTPHeader("Date")}} header for more details
-    on the HTTP date format.</dd>
-  <dt>&lt;delay-seconds&gt;</dt>
-  <dd>A non-negative decimal integer indicating the seconds to delay after the response is
-    received.</dd>
-</dl>
+- \<http-date>
+  - : A date after which to retry. See the {{HTTPHeader("Date")}} header for more details
+    on the HTTP date format.
+- \<delay-seconds>
+  - : A non-negative decimal integer indicating the seconds to delay after the response is
+    received.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Dealing_with_scheduled_downtime">Dealing with scheduled downtime</h3>
+### Dealing with scheduled downtime
 
-<p>Support for the <code>Retry-After</code> header on both clients and servers is still
-  inconsistent. However, some crawlers and spiders, like the Googlebot, honor the
-  <code>Retry-After</code> header. It is useful to send it along with a
-  {{HTTPStatus(503)}} (Service Unavailable) response, so that search engines will keep
-  indexing your site when the downtime is over.</p>
+Support for the `Retry-After` header on both clients and servers is still
+inconsistent. However, some crawlers and spiders, like the Googlebot, honor the
+`Retry-After` header. It is useful to send it along with a
+{{HTTPStatus(503)}} (Service Unavailable) response, so that search engines will keep
+indexing your site when the downtime is over.
 
-<pre>Retry-After: Wed, 21 Oct 2015 07:28:00 GMT
-Retry-After: 120
-</pre>
+    Retry-After: Wed, 21 Oct 2015 07:28:00 GMT
+    Retry-After: 120
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a
-      href="https://webmasters.googleblog.com/2011/01/how-to-deal-with-planned-site-downtime.html">Google
-      Webmaster blog: How to deal with planned site downtime</a></li>
-  <li>{{HTTPStatus(503)}} (Service Unavailable)</li>
-  <li>{{HTTPStatus(301)}} (Moved Permanently)</li>
-</ul>
+- [Google
+  Webmaster blog: How to deal with planned site downtime](https://webmasters.googleblog.com/2011/01/how-to-deal-with-planned-site-downtime.html)
+- {{HTTPStatus(503)}} (Service Unavailable)
+- {{HTTPStatus(301)}} (Moved Permanently)

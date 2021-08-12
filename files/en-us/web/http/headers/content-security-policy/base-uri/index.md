@@ -9,80 +9,87 @@ tags:
   - Security
 browser-compat: http.headers.csp.Content-Security-Policy.base-uri
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The HTTP {{HTTPHeader("Content-Security-Policy")}} <strong><code>base-uri</code></strong> directive restricts the URLs which can be used in a document's {{HTMLElement("base")}} element. If this value is absent, then any URI is allowed. If this directive is absent, the user agent will use the value in the {{HTMLElement("base")}} element.</p>
+The HTTP {{HTTPHeader("Content-Security-Policy")}} **`base-uri`** directive restricts the URLs which can be used in a document's {{HTMLElement("base")}} element. If this value is absent, then any URI is allowed. If this directive is absent, the user agent will use the value in the {{HTMLElement("base")}} element.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">CSP version</th>
-   <td>2</td>
-  </tr>
-  <tr>
-   <th scope="row">Directive type</th>
-   <td>{{Glossary("Document directive")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{CSP("default-src")}} fallback</th>
-   <td>No. Not setting this allows any URL.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">CSP version</th>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th scope="row">Directive type</th>
+      <td>{{Glossary("Document directive")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{CSP("default-src")}} fallback</th>
+      <td>No. Not setting this allows any URL.</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>One or more<em>sources</em> can be allowed for the base-uri policy:</p>
+One or more*sources* can be allowed for the base-uri policy:
 
-<pre class="brush: html">Content-Security-Policy: base-uri &lt;source&gt;;
-Content-Security-Policy: base-uri &lt;source&gt; &lt;source&gt;;
-</pre>
+```html
+Content-Security-Policy: base-uri <source>;
+Content-Security-Policy: base-uri <source> <source>;
+```
 
-<h3 id="Sources">Sources</h3>
+### Sources
 
-<p>While this directive uses the same arguments as other CSP directives, some of them don’t make sense for `&lt;base&gt;`, such as the keywords <code>'unsafe-inline'</code> and <code>'strict-dynamic'</code></p>
+While this directive uses the same arguments as other CSP directives, some of them don’t make sense for \`\<base>\`, such as the keywords `'unsafe-inline'` and `'strict-dynamic'`
 
-<p>{{page("Web/HTTP/Headers/Content-Security-Policy/default-src", "Sources")}}</p>
+{{page("Web/HTTP/Headers/Content-Security-Policy/default-src", "Sources")}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Meta_tag_configuration">Meta tag configuration</h3>
+### Meta tag configuration
 
-<pre class="brush: html">&lt;meta http-equiv="Content-Security-Policy" content="base-uri 'self'"&gt;</pre>
+```html
+<meta http-equiv="Content-Security-Policy" content="base-uri 'self'">
+```
 
-<h3 id="Apache_configuration">Apache configuration</h3>
+### Apache configuration
 
-<pre class="brush: bash">&lt;IfModule mod_headers.c&gt;
+```bash
+<IfModule mod_headers.c>
 Header set Content-Security-Policy "base-uri 'self'";
-&lt;/IfModule&gt;</pre>
+</IfModule>
+```
 
-<h3 id="Nginx_configuration">Nginx configuration</h3>
+### Nginx configuration
 
-<pre class="brush: bash">add_header Content-Security-Policy "base-uri 'self';"</pre>
+```bash
+add_header Content-Security-Policy "base-uri 'self';"
+```
 
-<h3 id="Violation_case">Violation case</h3>
+### Violation case
 
-<p>Since your domain isn't <code>example.com</code>, a {{HTMLElement("base")}} element with its <code>href</code> set to <code>https://example.com</code> will result in a CSP violation.</p>
+Since your domain isn't `example.com`, a {{HTMLElement("base")}} element with its `href` set to `https://example.com` will result in a CSP violation.
 
-<pre class="brush: html; example-bad">&lt;meta http-equiv="Content-Security-Policy" content="base-uri 'self'"&gt;
-&lt;base href="https://example.com/"&gt;
+```html example-bad
+<meta http-equiv="Content-Security-Policy" content="base-uri 'self'">
+<base href="https://example.com/">
 
 // Error: Refused to set the document's base URI to 'https://example.com/'
 // because it violates the following Content Security Policy
-// directive: "base-uri 'self'"</pre>
+// directive: "base-uri 'self'"
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTTPheader("Content-Security-Policy")}}</li>
- <li>{{HTMLElement("base")}}</li>
- <li>{{domxref("Node.baseURI")}}</li>
-</ul>
+- {{HTTPheader("Content-Security-Policy")}}
+- {{HTMLElement("base")}}
+- {{domxref("Node.baseURI")}}

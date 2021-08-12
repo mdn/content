@@ -2,50 +2,50 @@
 title: 302 Found
 slug: Web/HTTP/Status/302
 tags:
-- HTTP
-- HTTP Status Code
-- Reference
-- redirects
+  - HTTP
+  - HTTP Status Code
+  - Reference
+  - redirects
 browser-compat: http.status.302
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The HyperText Transfer Protocol (HTTP) <code><strong>302 Found</strong></code> redirect
-  status response code indicates that the resource requested has been temporarily moved to
-  the URL given by the {{HTTPHeader("Location")}} header. A browser redirects to this page
-  but search engines don't update their links to the resource (in 'SEO-speak', it is said
-  that the 'link-juice' is not sent to the new URL).</p>
+The HyperText Transfer Protocol (HTTP) **`302 Found`** redirect
+status response code indicates that the resource requested has been temporarily moved to
+the URL given by the {{HTTPHeader("Location")}} header. A browser redirects to this page
+but search engines don't update their links to the resource (in 'SEO-speak', it is said
+that the 'link-juice' is not sent to the new URL).
 
-<p>Even if the specification requires the method (and the body) not to be altered when the
-  redirection is performed, not all user-agents conform here - you can still find this
-  type of bugged software out there. It is therefore recommended to set the
-  <code>302</code> code only as a response for {{HTTPMethod("GET")}} or
-  {{HTTPMethod("HEAD")}} methods and to use {{HTTPStatus("307", "307 Temporary
-  Redirect")}} instead, as the method change is explicitly prohibited in that case.</p>
+Even if the specification requires the method (and the body) not to be altered when the
+redirection is performed, not all user-agents conform here - you can still find this
+type of bugged software out there. It is therefore recommended to set the
+`302` code only as a response for {{HTTPMethod("GET")}} or
+{{HTTPMethod("HEAD")}} methods and to use {{HTTPStatus("307", "307 Temporary
+  Redirect")}} instead, as the method change is explicitly prohibited in that case.
 
-<p>In the cases where you want the method used to be changed to {{HTTPMethod("GET")}}, use
-  {{HTTPStatus("303", "303 See Other")}} instead. This is useful when you want to give a
-  response to a {{HTTPMethod("PUT")}} method that is not the uploaded resource but a
-  confirmation message such as: 'you successfully uploaded XYZ'.</p>
+In the cases where you want the method used to be changed to {{HTTPMethod("GET")}}, use
+{{HTTPStatus("303", "303 See Other")}} instead. This is useful when you want to give a
+response to a {{HTTPMethod("PUT")}} method that is not the uploaded resource but a
+confirmation message such as: 'you successfully uploaded XYZ'.
 
-<h2 id="Status">Status</h2>
+## Status
 
-<pre class="brush: html">302 Found</pre>
+```html
+302 Found
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{HTTPStatus("307", "307 Temporary Redirect")}}, the equivalent of this status code
-    where the method used never changes.</li>
-  <li>{{HTTPStatus("303", "303 See Other")}}, a temporary redirect that changes the method
-    used to {{HTTPMethod("GET")}}.</li>
-  <li>{{HTTPStatus("301", "301 Moved Permanently")}}, the permanent redirect.</li>
-</ul>
+- {{HTTPStatus("307", "307 Temporary Redirect")}}, the equivalent of this status code
+  where the method used never changes.
+- {{HTTPStatus("303", "303 See Other")}}, a temporary redirect that changes the method
+  used to {{HTTPMethod("GET")}}.
+- {{HTTPStatus("301", "301 Moved Permanently")}}, the permanent redirect.

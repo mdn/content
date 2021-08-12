@@ -7,101 +7,81 @@ tags:
   - header
 browser-compat: http.headers.Expect-CT
 ---
-<p>{{HTTPSidebar}}</p>
+{{HTTPSidebar}}
 
-<p>The <code>Expect-CT</code> header lets sites opt in to reporting and/or enforcement of <a href="/en-US/docs/Web/Security/Certificate_Transparency">Certificate Transparency</a> requirements, to prevent the use of misissued certificates for that site from going unnoticed.</p>
+The `Expect-CT` header lets sites opt in to reporting and/or enforcement of [Certificate Transparency](/en-US/docs/Web/Security/Certificate_Transparency) requirements, to prevent the use of misissued certificates for that site from going unnoticed.
 
-<p>CT requirements can be satisfied via any one of the following mechanisms:</p>
+CT requirements can be satisfied via any one of the following mechanisms:
 
-<ul>
- <li>X.509v3 certificate extension to allow embedding of signed certificate timestamps issued by individual logs</li>
- <li>A TLS extension of type <code>signed_certificate_timestamp</code> sent during the handshake</li>
- <li>Supporting OCSP stapling (that is, the <code>status_request</code> TLS extension) and providing a <code>SignedCertificateTimestampList</code></li>
-</ul>
+- X.509v3 certificate extension to allow embedding of signed certificate timestamps issued by individual logs
+- A TLS extension of type `signed_certificate_timestamp` sent during the handshake
+- Supporting OCSP stapling (that is, the `status_request` TLS extension) and providing a `SignedCertificateTimestampList`
 
-<div class="notecard note">
-  <p><strong>Note:</strong> When a site enables the <code>Expect-CT</code> header, they are requesting that the browser check that any certificate for that site appears in <strong><a href="https://www.certificate-transparency.org/known-logs">public CT logs</a></strong>.</p>
-</div>
+> **Note:** When a site enables the `Expect-CT` header, they are requesting that the browser check that any certificate for that site appears in **[public CT logs](https://www.certificate-transparency.org/known-logs)**.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Browsers <strong>ignore</strong> the <code>Expect-CT</code> header over HTTP; the header only has effect on HTTPS connections.</p>
-</div>
+> **Note:** Browsers **ignore** the `Expect-CT` header over HTTP; the header only has effect on HTTPS connections.
 
-<div class="notecard note">
-<p><strong>Note:</strong> The <code>Expect-CT</code> will likely become obsolete in June 2021. Since May 2018 new certificates are expected to support SCTs by default. Certificates before March 2018 were allowed to have a lifetime of 39 months, those will all be expired in June 2021.</p>
-</div>
+> **Note:** The `Expect-CT` will likely become obsolete in June 2021. Since May 2018 new certificates are expected to support SCTs by default. Certificates before March 2018 were allowed to have a lifetime of 39 months, those will all be expired in June 2021.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Response header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Header type</th>
+      <td>{{Glossary("Response header")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre>Expect-CT: report-uri="&lt;uri&gt;",
-           enforce,
-           max-age=&lt;age&gt;</pre>
+    Expect-CT: report-uri="<uri>",
+               enforce,
+               max-age=<age>
 
-<h2 id="Directives"> Directives</h2>
+##  Directives
 
-<dl>
- <dt><code>max-age</code></dt>
- <dd>
- <p>The number of seconds after reception of the <code>Expect-CT</code> header field during which the user agent should regard the host of the received message as a known <code>Expect-CT</code> host.</p>
+- `max-age`
 
- <p>If a cache receives a value greater than it can represent, or if any of its subsequent calculations overflows, the cache will consider this value to be either 2,147,483,648 (2^31) or the greatest positive integer it can represent.</p>
- </dd>
- <dt><code>report-uri="&lt;uri&gt;"</code> {{optional_inline}}</dt>
- <dd>
- <p>The URI where the user agent should report <code>Expect-CT</code> failures.</p>
- When present with the <code>enforce</code> directive, the configuration is referred to as an "enforce-and-report" configuration, signalling to the user agent both that compliance to the Certificate Transparency policy should be enforced <em>and</em> that violations should be reported.</dd>
- <dt><code>enforce</code> {{optional_inline}}</dt>
- <dd>
- <p>Signals to the user agent that compliance with the Certificate Transparency policy should be enforced (rather than only reporting compliance) and that the user agent should refuse future connections that violate its Certificate Transparency policy.</p>
+  - : The number of seconds after reception of the `Expect-CT` header field during which the user agent should regard the host of the received message as a known `Expect-CT` host.
 
- <p>When both the <code>enforce</code> directive and the <code>report-uri</code> directive are present, the configuration is referred to as an "enforce-and-report" configuration, signalling to the user agent both that compliance to the Certificate Transparency policy should be enforced and that violations should be reported.</p>
- </dd>
-</dl>
+    If a cache receives a value greater than it can represent, or if any of its subsequent calculations overflows, the cache will consider this value to be either 2,147,483,648 (2^31) or the greatest positive integer it can represent.
 
-<h2 id="Example">Example</h2>
+- `report-uri="<uri>"` {{optional_inline}}
 
-<p>The following example specifies enforcement of Certificate Transparency for 24 hours and reports violations to <code>foo.example</code>.</p>
+  - : The URI where the user agent should report `Expect-CT` failures.
 
-<pre>Expect-CT: max-age=86400, enforce, report-uri="https://foo.example/report"</pre>
+    When present with the `enforce` directive, the configuration is referred to as an "enforce-and-report" configuration, signalling to the user agent both that compliance to the Certificate Transparency policy should be enforced _and_ that violations should be reported.
 
-<h2 id="Notes">Notes</h2>
+- `enforce` {{optional_inline}}
 
-<p>Root CAs manually added to the trust store override and suppress <code>Expect-CT</code> reports/enforcement.</p>
+  - : Signals to the user agent that compliance with the Certificate Transparency policy should be enforced (rather than only reporting compliance) and that the user agent should refuse future connections that violate its Certificate Transparency policy.
 
-<p>Browsers will not remember an <code>Expect-CT</code> policy, unless the site has 'proven' it can serve a certificate satisfying the certificate transparency requirements. Browsers implement their own trust model regarding which CT logs are considered trusted for the certificate to have been logged to.</p>
+    When both the `enforce` directive and the `report-uri` directive are present, the configuration is referred to as an "enforce-and-report" configuration, signalling to the user agent both that compliance to the Certificate Transparency policy should be enforced and that violations should be reported.
 
-<p>Builds of Chrome are designed to stop enforcing the <code>Expect-CT</code> policy 10 weeks after the installation's build date.</p>
+## Example
 
-<h2 id="Specifications">Specifications</h2>
+The following example specifies enforcement of Certificate Transparency for 24 hours and reports violations to `foo.example`.
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Title</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><a href="https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-expect-ct-08">Internet Draft</a></td>
-   <td>Expect-CT Extension for HTTP</td>
-  </tr>
- </tbody>
-</table>
+    Expect-CT: max-age=86400, enforce, report-uri="https://foo.example/report"
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Notes
 
-<p>{{Compat}}</p>
+Root CAs manually added to the trust store override and suppress `Expect-CT` reports/enforcement.
+
+Browsers will not remember an `Expect-CT` policy, unless the site has 'proven' it can serve a certificate satisfying the certificate transparency requirements. Browsers implement their own trust model regarding which CT logs are considered trusted for the certificate to have been logged to.
+
+Builds of Chrome are designed to stop enforcing the `Expect-CT` policy 10 weeks after the installation's build date.
+
+## Specifications
+
+| Specification                                                                           | Title                        |
+| --------------------------------------------------------------------------------------- | ---------------------------- |
+| [Internet Draft](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-expect-ct-08) | Expect-CT Extension for HTTP |
+
+## Browser compatibility
+
+{{Compat}}

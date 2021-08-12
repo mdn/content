@@ -12,55 +12,34 @@ tags:
   - Experimental
 browser-compat: http.headers.Feature-Policy.payment
 ---
-<div>{{HTTPSidebar}} {{SeeCompatTable}}</div>
+{{HTTPSidebar}} {{SeeCompatTable}}
 
-<p>The HTTP {{HTTPHeader("Feature-Policy")}} header field's <code>payment</code> directive controls whether the current document is allowed to use the <a href="/en-US/docs/Web/API/Payment_Request_API">Payment Request API</a>. When this policy is disabled, the {{DOMxRef("PaymentRequest()")}} constructor will throw a {{exception("SyntaxError")}}.</p>
+The HTTP {{HTTPHeader("Feature-Policy")}} header field's `payment` directive controls whether the current document is allowed to use the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API). When this policy is disabled, the {{DOMxRef("PaymentRequest()")}} constructor will throw a {{exception("SyntaxError")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre>Feature-Policy: payment &lt;allowlist&gt;;</pre>
+    Feature-Policy: payment <allowlist>;
 
-<dl>
-  <dt>&lt;allowlist&gt;</dt>
-  <dd>A list of origins for which the feature is allowed. See <a href="/en-US/docs/Web/HTTP/Headers/Feature-Policy#syntax"><code>Feature-Policy</code></a>.</dd>
-</dl>
+- \<allowlist>
+  - : A list of origins for which the feature is allowed. See [`Feature-Policy`](/en-US/docs/Web/HTTP/Headers/Feature-Policy#syntax).
 
-<h2 id="Default_policy">Default policy</h2>
+## Default policy
 
-<p>The <code>payment</code> feature's default allowlist value is <code>'self'</code>.</p>
+The `payment` feature's default allowlist value is `'self'`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Payment')}}</td>
-   <td>{{Spec2('Payment')}}</td>
-   <td>See <a href="https://w3c.github.io/payment-request/#feature-policy">Section 16. Feature Policy integration</a>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Feature Policy')}}</td>
-   <td>{{Spec2('Feature Policy')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                            | Status                               | Comment                                                                                              |
+| ---------------------------------------- | ------------------------------------ | ---------------------------------------------------------------------------------------------------- |
+| {{SpecName('Payment')}}         | {{Spec2('Payment')}}         | See [Section 16. Feature Policy integration](https://w3c.github.io/payment-request/#feature-policy). |
+| {{SpecName('Feature Policy')}} | {{Spec2('Feature Policy')}} | Initial definition.                                                                                  |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTTPHeader("Feature-Policy")}} header field</li>
- <li><a href="/en-US/docs/Web/HTTP/Feature_Policy">Feature Policy</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy">Using Feature Policy</a></li>
-</ul>
+- {{HTTPHeader("Feature-Policy")}} header field
+- [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy)
+- [Using Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)

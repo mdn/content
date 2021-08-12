@@ -14,150 +14,170 @@ tags:
   - style-src
 browser-compat: http.headers.csp.Content-Security-Policy.style-src
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) <strong><code>style-src</code></strong> directive specifies valid sources for stylesheets.</p>
+The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`style-src`** directive specifies valid sources for stylesheets.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">CSP version</th>
-   <td>1</td>
-  </tr>
-  <tr>
-   <th scope="row">Directive type</th>
-   <td>{{Glossary("Fetch directive")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{CSP("default-src")}} fallback</th>
-   <td>Yes. If this directive is absent, the user agent will look for the <code>default-src</code> directive.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">CSP version</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Directive type</th>
+      <td>{{Glossary("Fetch directive")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{CSP("default-src")}} fallback</th>
+      <td>
+        Yes. If this directive is absent, the user agent will look for the
+        <code>default-src</code> directive.
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>One or more sources can be allowed for the <code>style-src</code> policy:</p>
+One or more sources can be allowed for the `style-src` policy:
 
-<pre class="brush: html">Content-Security-Policy: style-src &lt;source&gt;;
-Content-Security-Policy: style-src &lt;source&gt; &lt;source&gt;;
-</pre>
+```html
+Content-Security-Policy: style-src <source>;
+Content-Security-Policy: style-src <source> <source>;
+```
 
-<h3 id="Sources">Sources</h3>
+### Sources
 
-<p>{{page("Web/HTTP/Headers/Content-Security-Policy/connect-src", "Sources")}}</p>
+{{page("Web/HTTP/Headers/Content-Security-Policy/connect-src", "Sources")}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Violation_cases">Violation cases</h3>
+### Violation cases
 
-<p>Given this CSP header:</p>
+Given this CSP header:
 
-<pre class="brush: bash">Content-Security-Policy: style-src https://example.com/</pre>
+```bash
+Content-Security-Policy: style-src https://example.com/
+```
 
-<p>the following stylesheets are blocked and won't load:</p>
+the following stylesheets are blocked and won't load:
 
-<pre class="brush: html">&lt;link href="https://not-example.com/styles/main.css" rel="stylesheet" type="text/css" /&gt;
+```html
+<link href="https://not-example.com/styles/main.css" rel="stylesheet" type="text/css" />
 
-&lt;style&gt;
+<style>
 #inline-style { background: red; }
-&lt;/style&gt;
+</style>
 
-&lt;style&gt;
+<style>
   @import url("https://not-example.com/styles/print.css") print;
-&lt;/style&gt;</pre>
+</style>
+```
 
-<p>as well as styles loaded using the {{HTTPHeader("Link")}} header:</p>
+as well as styles loaded using the {{HTTPHeader("Link")}} header:
 
-<pre class="brush: bash">Link: &lt;https://not-example.com/styles/stylesheet.css&gt;;rel=stylesheet
-</pre>
+```bash
+Link: <https://not-example.com/styles/stylesheet.css>;rel=stylesheet
+```
 
-<p>Inline style attributes are also blocked:</p>
+Inline style attributes are also blocked:
 
-<pre class="brush: html">&lt;div style="display:none"&gt;Foo&lt;/div&gt;</pre>
+```html
+<div style="display:none">Foo</div>
+```
 
-<p>As well as styles that are applied in JavaScript by setting the <code>style</code> attribute directly, or by setting {{domxref("CSSStyleDeclaration.cssText", "cssText")}}:</p>
+As well as styles that are applied in JavaScript by setting the `style` attribute directly, or by setting {{domxref("CSSStyleDeclaration.cssText", "cssText")}}:
 
-<pre class="brush: js">document.querySelector('div').setAttribute('style', 'display:none;');
-document.querySelector('div').style.cssText = 'display:none;';</pre>
+```js
+document.querySelector('div').setAttribute('style', 'display:none;');
+document.querySelector('div').style.cssText = 'display:none;';
+```
 
-<p>However, styles properties that are set directly on the element's {{domxref("HTMLElement/style", "style")}} property will not be blocked, allowing users to safely manipulate styles via JavaScript:</p>
+However, styles properties that are set directly on the element's {{domxref("HTMLElement/style", "style")}} property will not be blocked, allowing users to safely manipulate styles via JavaScript:
 
-<pre class="brush: js">document.querySelector('div').style.display = 'none';</pre>
+```js
+document.querySelector('div').style.display = 'none';
+```
 
-<p>These types of manipulations can be prevented by disallowing Javascript via the {{CSP("script-src")}} CSP directive.</p>
+These types of manipulations can be prevented by disallowing Javascript via the {{CSP("script-src")}} CSP directive.
 
-<h3 id="Unsafe_inline_styles">Unsafe inline styles</h3>
+### Unsafe inline styles
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Disallowing inline styles and inline scripts is one of the biggest security wins CSP provides. However, if you absolutely have to use it, there are a few mechanisms that will allow them.</p>
-</div>
+> **Note:** Disallowing inline styles and inline scripts is one of the biggest security wins CSP provides. However, if you absolutely have to use it, there are a few mechanisms that will allow them.
 
-<p>To allow inline styles, <code>'unsafe-inline'</code>, a nonce-source or a hash-source that matches the inline block can be specified.</p>
+To allow inline styles, `'unsafe-inline'`, a nonce-source or a hash-source that matches the inline block can be specified.
 
-<pre class="brush: bash">Content-Security-Policy: style-src 'unsafe-inline';
-</pre>
+```bash
+Content-Security-Policy: style-src 'unsafe-inline';
+```
 
-<p>The above Content Security Policy will allow inline styles like the {{HTMLElement("style")}} element, and the <code>style</code> attribute on any element:</p>
+The above Content Security Policy will allow inline styles like the {{HTMLElement("style")}} element, and the `style` attribute on any element:
 
-<pre class="brush: html">&lt;style&gt;
+```html
+<style>
   #inline-style { background: red; }
-&lt;/style&gt;
+</style>
 
-&lt;div style="display:none"&gt;Foo&lt;/div&gt;
-</pre>
+<div style="display:none">Foo</div>
+```
 
-<p>You can use a nonce-source to only allow specific inline style blocks:</p>
+You can use a nonce-source to only allow specific inline style blocks:
 
-<pre class="brush: bash">Content-Security-Policy: style-src 'nonce-2726c7f26c'</pre>
+```bash
+Content-Security-Policy: style-src 'nonce-2726c7f26c'
+```
 
-<p>You will have to set the same nonce on the {{HTMLElement("style")}} element:</p>
+You will have to set the same nonce on the {{HTMLElement("style")}} element:
 
-<pre class="brush: html">&lt;style nonce="2726c7f26c"&gt;
+```html
+<style nonce="2726c7f26c">
   #inline-style { background: red; }
-&lt;/style&gt;
-</pre>
+</style>
+```
 
-<p>Alternatively, you can create hashes from your inline styles. CSP supports sha256, sha384 and sha512. The <strong>binary</strong> form of the hash has to be encoded with base64. You can obtain the hash of a string on the command line via the <code>openssl</code> program:</p>
+Alternatively, you can create hashes from your inline styles. CSP supports sha256, sha384 and sha512. The **binary** form of the hash has to be encoded with base64. You can obtain the hash of a string on the command line via the `openssl` program:
 
-<pre class="brush: bash">echo -n "#inline-style { background: red; }" | openssl dgst -sha256 -binary | openssl enc -base64</pre>
+```bash
+echo -n "#inline-style { background: red; }" | openssl dgst -sha256 -binary | openssl enc -base64
+```
 
-<p>You can use a hash-source to only allow specific inline style blocks:</p>
+You can use a hash-source to only allow specific inline style blocks:
 
-<pre class="brush: bash">Content-Security-Policy: style-src 'sha256-ozBpjL6dxO8fsS4u6fwG1dFDACYvpNxYeBA6tzR+FY8='</pre>
+```bash
+Content-Security-Policy: style-src 'sha256-ozBpjL6dxO8fsS4u6fwG1dFDACYvpNxYeBA6tzR+FY8='
+```
 
-<p>When generating the hash, don't include the {{HTMLElement("style")}} tags and note that capitalization and whitespace matter, including leading or trailing whitespace.</p>
+When generating the hash, don't include the {{HTMLElement("style")}} tags and note that capitalization and whitespace matter, including leading or trailing whitespace.
 
-<pre class="brush: html">&lt;style&gt;#inline-style { background: red; }&lt;/style&gt;</pre>
+```html
+<style>#inline-style { background: red; }</style>
+```
 
-<h3 id="Unsafe_style_expressions">Unsafe style expressions</h3>
+### Unsafe style expressions
 
-<p>The <code>'unsafe-eval'</code> source expression controls several style methods that create style declarations from strings. If <code>'unsafe-eval'</code> isn't specified with the <code>style-src</code> directive, the following methods are blocked and won't have any effect:</p>
+The `'unsafe-eval'` source expression controls several style methods that create style declarations from strings. If `'unsafe-eval'` isn't specified with the `style-src` directive, the following methods are blocked and won't have any effect:
 
-<ul>
- <li>{{domxref("CSSStyleSheet.insertRule()")}}</li>
- <li>{{domxref("CSSGroupingRule.insertRule()")}}</li>
- <li>{{domxref("CSSStyleDeclaration.cssText")}}</li>
-</ul>
+- {{domxref("CSSStyleSheet.insertRule()")}}
+- {{domxref("CSSGroupingRule.insertRule()")}}
+- {{domxref("CSSStyleDeclaration.cssText")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTTPHeader("Content-Security-Policy")}}</li>
- <li>{{CSP("style-src-elem")}}</li>
- <li>{{CSP("style-src-attr")}}</li>
- <li>{{HTTPHeader("Link")}} header</li>
- <li>{{HTMLElement("style")}}, {{HTMLElement("link")}}</li>
- <li>{{cssxref("@import")}}</li>
- <li>{{domxref("CSSStyleSheet.insertRule()")}}</li>
- <li>{{domxref("CSSGroupingRule.insertRule()")}}</li>
- <li>{{domxref("CSSStyleDeclaration.cssText")}}</li>
-</ul>
+- {{HTTPHeader("Content-Security-Policy")}}
+- {{CSP("style-src-elem")}}
+- {{CSP("style-src-attr")}}
+- {{HTTPHeader("Link")}} header
+- {{HTMLElement("style")}}, {{HTMLElement("link")}}
+- {{cssxref("@import")}}
+- {{domxref("CSSStyleSheet.insertRule()")}}
+- {{domxref("CSSGroupingRule.insertRule()")}}
+- {{domxref("CSSStyleDeclaration.cssText")}}

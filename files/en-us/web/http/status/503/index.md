@@ -8,33 +8,31 @@ tags:
   - Status code
 browser-compat: http.status.503
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The HyperText Transfer Protocol (HTTP) <code><strong>503 Service Unavailable</strong></code> server error response code indicates that the server is not ready to handle the request.</p>
+The HyperText Transfer Protocol (HTTP) **`503 Service Unavailable`** server error response code indicates that the server is not ready to handle the request.
 
-<p>Common causes are a server that is down for maintenance or that is overloaded. This response should be used for temporary conditions and the {{HTTPHeader("Retry-After")}} HTTP header should, if possible, contain the estimated time for the recovery of the service.</p>
+Common causes are a server that is down for maintenance or that is overloaded. This response should be used for temporary conditions and the {{HTTPHeader("Retry-After")}} HTTP header should, if possible, contain the estimated time for the recovery of the service.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> together with this response, a user-friendly page explaining the problem should be sent.</p>
-</div>
+> **Note:** together with this response, a user-friendly page explaining the problem should be sent.
 
-<p>Caching-related headers that are sent along with this response should be taken care of, as a 503 status is often a temporary condition and responses shouldn't usually be cached.</p>
+Caching-related headers that are sent along with this response should be taken care of, as a 503 status is often a temporary condition and responses shouldn't usually be cached.
 
-<h2 id="Status">Status</h2>
+## Status
 
-<pre class="brush: html">503 Service Unavailable</pre>
+```html
+503 Service Unavailable
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTTPHeader("Retry-After")}}</li>
- <li><a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html">HTTP/1.1: Status Code Definitions</a></li>
-</ul>
+- {{HTTPHeader("Retry-After")}}
+- [HTTP/1.1: Status Code Definitions](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
