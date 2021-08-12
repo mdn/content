@@ -13,11 +13,11 @@ tags:
 
 HTTP response status codes indicate whether a specific [HTTP](/en-US/docs/Web/HTTP) request has been successfully completed. Responses are grouped in five classes:
 
-1.  [Informational responses](#information_responses) (`100`–`199`)
-2.  [Successful responses](#successful_responses) (`200`–`299`)
-3.  [Redirects](#redirection_messages) (`300`–`399`)
-4.  [Client errors](#client_error_responses) (`400`–`499`)
-5.  [Server errors](#server_error_responses) (`500`–`599`)
+1. [Informational responses](#information_responses) (`100`–`199`)
+2. [Successful responses](#successful_responses) (`200`–`299`)
+3. [Redirects](#redirection_messages) (`300`–`399`)
+4. [Client errors](#client_error_responses) (`400`–`499`)
+5. [Server errors](#server_error_responses) (`500`–`599`)
 
 The below status codes are defined by [section 10 of RFC 2616](https://datatracker.ietf.org/doc/html/rfc2616#section-10). You can find an updated specification in [RFC 7231](https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.1).
 

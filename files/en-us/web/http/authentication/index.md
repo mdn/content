@@ -18,9 +18,9 @@ HTTP provides a general framework for access control and authentication. This pa
 
 The challenge and response flow works like this:
 
-1.  The server responds to a client with a {{HTTPStatus("401")}} (Unauthorized) response status and provides information on how to authorize with a {{HTTPHeader("WWW-Authenticate")}} response header containing at least one challenge.
-2.  A client that wants to authenticate itself with the server can then do so by including an {{HTTPHeader("Authorization")}} request header with the credentials.
-3.  Usually a client will present a password prompt to the user and will then issue the request including the correct `Authorization` header.
+1. The server responds to a client with a {{HTTPStatus("401")}} (Unauthorized) response status and provides information on how to authorize with a {{HTTPHeader("WWW-Authenticate")}} response header containing at least one challenge.
+2. A client that wants to authenticate itself with the server can then do so by including an {{HTTPHeader("Authorization")}} request header with the credentials.
+3. Usually a client will present a password prompt to the user and will then issue the request including the correct `Authorization` header.
 
 ![A sequence diagram illustrating HTTP messages between a client and a server lifeline.](httpauth.png "Sequence Diagram of Client-server HTTP Authentication")
 

@@ -20,10 +20,10 @@ The HTTP/2 binary framing mechanism has been designed to not require any alterat
 
 HTTP requests, and responses, share similar structure and are composed of:
 
-1.  A _start-line_ describing the requests to be implemented, or its status of whether successful or a failure. This start-line is always a single line.
-2.  An optional set of _HTTP headers_ specifying the request, or describing the body included in the message.
-3.  A blank line indicating all meta-information for the request has been sent.
-4.  An optional _body_ containing data associated with the request (like content of an HTML form), or the document associated with a response. The presence of the body and its size is specified by the start-line and HTTP headers.
+1. A _start-line_ describing the requests to be implemented, or its status of whether successful or a failure. This start-line is always a single line.
+2. An optional set of _HTTP headers_ specifying the request, or describing the body included in the message.
+3. A blank line indicating all meta-information for the request has been sent.
+4. An optional _body_ containing data associated with the request (like content of an HTML form), or the document associated with a response. The presence of the body and its size is specified by the start-line and HTTP headers.
 
 The start-line and HTTP headers of the HTTP message are collectively known as the _head_ of the requests, whereas its payload is known as the _body_.
 
@@ -35,8 +35,8 @@ The start-line and HTTP headers of the HTTP message are collectively known as th
 
 HTTP requests are messages sent by the client to initiate an action on the server. Their _start-line_ contain three elements:
 
-1.  An _[HTTP method](/en-US/docs/Web/HTTP/Methods)_, a verb (like {{HTTPMethod("GET")}}, {{HTTPMethod("PUT")}} or {{HTTPMethod("POST")}}) or a noun (like {{HTTPMethod("HEAD")}} or {{HTTPMethod("OPTIONS")}}), that describes the action to be performed. For example, `GET` indicates that a resource should be fetched or `POST` means that data is pushed to the server (creating or modifying a resource, or generating a temporary document to send back).
-2.  The _request target_, usually a {{glossary("URL")}}, or the absolute path of the protocol, port, and domain are usually characterized by the request context. The format of this request target varies between different HTTP methods. It can be
+1. An _[HTTP method](/en-US/docs/Web/HTTP/Methods)_, a verb (like {{HTTPMethod("GET")}}, {{HTTPMethod("PUT")}} or {{HTTPMethod("POST")}}) or a noun (like {{HTTPMethod("HEAD")}} or {{HTTPMethod("OPTIONS")}}), that describes the action to be performed. For example, `GET` indicates that a resource should be fetched or `POST` means that data is pushed to the server (creating or modifying a resource, or generating a temporary document to send back).
+2. The _request target_, usually a {{glossary("URL")}}, or the absolute path of the protocol, port, and domain are usually characterized by the request context. The format of this request target varies between different HTTP methods. It can be
 
     - An absolute path, ultimately followed by a `'?'` and query string. This is the most common form, known as the _origin form_, and is used with `GET`, `POST`, `HEAD`, and `OPTIONS` methods.
       `POST / HTTP/1.1 GET /background.png HTTP/1.0 HEAD /test.html?query=alibaba HTTP/1.1 OPTIONS /anypage.html HTTP/1.0`
@@ -47,7 +47,7 @@ HTTP requests are messages sent by the client to initiate an action on the serve
     - The _asterisk form_, a simple asterisk (`'*'`) is used with `OPTIONS`, representing the server as a whole.
       `OPTIONS * HTTP/1.1`
 
-3.  The _HTTP version_, which defines the structure of the remaining message, acting as an indicator of the expected version to use for the response.
+3. The _HTTP version_, which defines the structure of the remaining message, acting as an indicator of the expected version to use for the response.
 
 ### Headers
 
@@ -76,9 +76,9 @@ Bodies can be broadly divided into two categories:
 
 The start line of an HTTP response, called the _status line_, contains the following information:
 
-1.  The _protocol version_, usually `HTTP/1.1`.
-2.  A _status code_, indicating success or failure of the request. Common status codes are {{HTTPStatus("200")}}, {{HTTPStatus("404")}}, or {{HTTPStatus("302")}}
-3.  A _status text_. A brief, purely informational, textual description of the status code to help a human understand the HTTP message.
+1. The _protocol version_, usually `HTTP/1.1`.
+2. A _status code_, indicating success or failure of the request. Common status codes are {{HTTPStatus("200")}}, {{HTTPStatus("404")}}, or {{HTTPStatus("302")}}
+3. A _status text_. A brief, purely informational, textual description of the status code to help a human understand the HTTP message.
 
 A typical status line looks like: `HTTP/1.1 404 Not Found`.
 
