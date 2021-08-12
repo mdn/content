@@ -14,49 +14,48 @@ tags:
   - devicechange
 browser-compat: api.XRSystem.devicechange_event
 ---
-<div>{{APIRef("WebXR Device API")}}</div>
+{{APIRef("WebXR Device API")}}
 
-<p>A <strong><code>devicechange</code></strong> event is fired on an {{DOMxRef("XRSystem")}} object whenever the availability of immersive XR devices has changed; for example, a VR headset or AR goggles have been connected or disconnected. It's a generic {{DOMxRef("Event")}} with no added properties.</p>
+A **`devicechange`** event is fired on an {{DOMxRef("XRSystem")}} object whenever the availability of immersive XR devices has changed; for example, a VR headset or AR goggles have been connected or disconnected. It's a generic {{DOMxRef("Event")}} with no added properties.
 
-<div class="notecard note">
-<p><strong>Note:</strong> Not to be confused with the {{domxref("MediaDevices")}} {{DOMxRef("MediaDevices.devicechange_event", "devicechange")}} event.</p>
-</div>
+> **Note:** Not to be confused with the {{domxref("MediaDevices")}} {{DOMxRef("MediaDevices.devicechange_event", "devicechange")}} event.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th>Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th>Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th>Interface</th>
-   <td>{{DOMxRef("Event")}}</td>
-  </tr>
-  <tr>
-   <th>Event handler</th>
-   <td>{{DOMxRef("XRSystem.ondevicechange")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th>Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Interface</th>
+      <td>{{DOMxRef("Event")}}</td>
+    </tr>
+    <tr>
+      <th>Event handler</th>
+      <td>{{DOMxRef("XRSystem.ondevicechange")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p><code>devicechange</code> events are not delivered if the document which owns the <strong>{{domxref("XRSystem")}}</strong> object has been granted permission to do so through the <code><a href="/en-US/docs/Web/HTTP/Headers/Feature-Policy/xr-spatial-tracking">xr-spatial-tracking</a></code> feature policy.</p>
+`devicechange` events are not delivered if the document which owns the **{{domxref("XRSystem")}}** object has been granted permission to do so through the [`xr-spatial-tracking`](/en-US/docs/Web/HTTP/Headers/Feature-Policy/xr-spatial-tracking) feature policy.
 
-<p>You can use this event to, for example, monitor for the availability of a WebXR-compatible device so that you can enable a UI element which the user can use to activate immersive mode. This is shown in the {{anch("Example", "example")}} below.</p>
+You can use this event to, for example, monitor for the availability of a WebXR-compatible device so that you can enable a UI element which the user can use to activate immersive mode. This is shown in the {{anch("Example", "example")}} below.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The example shown here handles the <code>devicechange</code> event by toggling the availability of the "Enter XR" button based on whether or not any immersive devices are currently available.</p>
+The example shown here handles the `devicechange` event by toggling the availability of the "Enter XR" button based on whether or not any immersive devices are currently available.
 
-<pre class="brush: js">if (navigator.xr) {
-  navigator.xr.addEventListener("devicechange", event =&gt; {
+```js
+if (navigator.xr) {
+  navigator.xr.addEventListener("devicechange", event => {
     navigator.xr.isSessionSupported("immersive-vr")
-    .then(immersiveOK) =&gt; {
+    .then(immersiveOK) => {
       if (immersiveOK) {
         enableXRButton.disabled = false;
       } else {
@@ -65,29 +64,28 @@ browser-compat: api.XRSystem.devicechange_event
     });
   });
 }
+```
 
-</pre>
+When `devicechange` is received, the handler set up in this code calls the `XR` method {{domxref("XRSystem.isSessionSupported", "isSessionSupported()")}} to find out if there's a device available that can handle immersive VR presentations. If there is, the button to enter XR mode is enabled; otherwise it's disabled.
 
-<p>When <code>devicechange</code> is received, the handler set up in this code calls the <code>XR</code> method {{domxref("XRSystem.isSessionSupported", "isSessionSupported()")}} to find out if there's a device available that can handle immersive VR presentations. If there is, the button to enter XR mode is enabled; otherwise it's disabled.</p>
+You can also use the {{domxref("XRSystem.ondevicechange", "ondevicechange")}} event handler property to set a single handler for `devicechange` events:
 
-<p>You can also use the {{domxref("XRSystem.ondevicechange", "ondevicechange")}} event handler property to set a single handler for <code>devicechange</code> events:</p>
-
-<pre class="brush: js">if (navigator.xr) {
-  navigator.xr.ondevicechange = event =&gt; {
+```js
+if (navigator.xr) {
+  navigator.xr.ondevicechange = event => {
     /* ... etc ... */
   };
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{DOMxRef("XRSystem.ondevicechange")}}</li>
-</ul>
+- {{DOMxRef("XRSystem.ondevicechange")}}

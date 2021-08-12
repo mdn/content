@@ -11,39 +11,35 @@ tags:
   - VR
 browser-compat: api.XRAnchor
 ---
-<p>{{APIRef("WebXR Device API")}} {{secureContext_header}}</p>
+{{APIRef("WebXR Device API")}} {{secureContext_header}}
 
-<p>The <code><strong>XRAnchor</strong></code> interface creates anchors which keep track of the pose that is fixed relative to the real world. With anchors, you can specify poses in the world that need to be updated to correctly reflect the evolving understanding of the world, such that the poses remain aligned with the same place in the physical world. That helps to build an illusion that the placed objects are really present in the user’s environment.</p>
+The **`XRAnchor`** interface creates anchors which keep track of the pose that is fixed relative to the real world. With anchors, you can specify poses in the world that need to be updated to correctly reflect the evolving understanding of the world, such that the poses remain aligned with the same place in the physical world. That helps to build an illusion that the placed objects are really present in the user’s environment.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("XRAnchor.anchorSpace")}} {{ReadOnlyInline}}</dt>
- <dd>Returns an {{domxref("XRSpace")}} object to locate the anchor relative to other <code>XRSpace</code> objects.</dd>
-</dl>
+- {{domxref("XRAnchor.anchorSpace")}} {{ReadOnlyInline}}
+  - : Returns an {{domxref("XRSpace")}} object to locate the anchor relative to other `XRSpace` objects.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
-  <dt>{{domxref("XRAnchor.delete()")}}</dt>
-  <dd>Removes the anchor.</dd>
-</dl>
+- {{domxref("XRAnchor.delete()")}}
+  - : Removes the anchor.
 
-<h2>Examples</h2>
+## Examples
 
-<h3>Requesting a session with anchors enabled</h3>
+### Requesting a session with anchors enabled
 
-<pre class="brush: js">
+```js
 navigator.xr.requestSession("immersive-ar", {
   requireFeatures: ["anchors"],
 }
-</pre>
+```
 
-<h3>Adding anchors</h3>
+### Adding anchors
 
-<p>You can use {{domxref("XRFrame.createAnchor()")}} to create an anchor.</p>
+You can use {{domxref("XRFrame.createAnchor()")}} to create an anchor.
 
-<pre class="brush: js">
+```js
 frame.createAnchor(anchorPose, referenceSpace).then((anchor) => {
 
   // Do stuff with the anchor (assign objects that will be relative to this anchor)
@@ -51,21 +47,19 @@ frame.createAnchor(anchorPose, referenceSpace).then((anchor) => {
 }, (error) => {
   console.error("Could not create anchor: "" + error);
 });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("XRAnchorSet")}}</li>
-  <li>{{domxref("XRFrame.createAnchor()")}}</li>
-  <li>{{domxref("XRFrame.trackedAnchors")}}</li>
-  <li>{{domxref("XRHitTestResult.createAnchor()")}}</li>
-</ul>
+- {{domxref("XRAnchorSet")}}
+- {{domxref("XRFrame.createAnchor()")}}
+- {{domxref("XRFrame.trackedAnchors")}}
+- {{domxref("XRHitTestResult.createAnchor()")}}

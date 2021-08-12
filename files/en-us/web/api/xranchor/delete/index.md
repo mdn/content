@@ -2,36 +2,38 @@
 title: XRAnchor.delete()
 slug: Web/API/XRAnchor/delete
 tags:
-- API
-- Method
-- Reference
-- AR
-- VR
-- XR
-- WebXR
+  - API
+  - Method
+  - Reference
+  - AR
+  - VR
+  - XR
+  - WebXR
 browser-compat: api.XRAnchor.delete
 ---
-<div>{{APIRef("WebXR Device API")}}</div>
+{{APIRef("WebXR Device API")}}
 
-<p>The <code><strong>delete()</strong></code> method of the {{domxref("XRAnchor")}} interface removes an anchor. This can be useful when an application is no longer interested in receiving updates to an anchor.</p>
+The **`delete()`** method of the {{domxref("XRAnchor")}} interface removes an anchor. This can be useful when an application is no longer interested in receiving updates to an anchor.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">delete()</pre>
+```js
+delete()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>Returns {{jsxref("undefined")}}.</p>
+Returns {{jsxref("undefined")}}.
 
-<h2>Examples</h2>
+## Examples
 
-<h3>Removing all anchors</h3>
+### Removing all anchors
 
-<pre class="brush: js">
+```js
 let anchorsCollection = new Set();
 
 // Upon creating anchors, add them to the Set
@@ -42,12 +44,12 @@ for (const anchor of anchorsCollection) {
 }
 
 anchorsCollection.clear();
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

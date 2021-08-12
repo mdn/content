@@ -2,96 +2,89 @@
 title: XRSession.requestAnimationFrame()
 slug: Web/API/XRSession/requestAnimationFrame
 tags:
-- API
-- AR
-- Augmented Reality
-- Experimental
-- Method
-- Reference
-- VR
-- Virtual Reality
-- WebXR
-- WebXR Device API
-- XRSession
-- requestAnimationFrame()
+  - API
+  - AR
+  - Augmented Reality
+  - Experimental
+  - Method
+  - Reference
+  - VR
+  - Virtual Reality
+  - WebXR
+  - WebXR Device API
+  - XRSession
+  - requestAnimationFrame()
 browser-compat: api.XRSession.requestAnimationFrame
 ---
-<div>{{APIRef("WebXR Device API")}}</div>
+{{APIRef("WebXR Device API")}}
 
-<p>The {{domxref("XRSession")}}
-    method <code><strong>requestAnimationFrame()</strong></code>, much like the
-    {{domxref("Window")}} method of the same name, schedules a callback to be executed the
-    next time the browser is ready to paint the session's virtual environment to the XR
-    display. The specified callback is executed once before the next repaint; if
-  you wish for it to be executed for the following repaint, you must
-  call <code>requestAnimationFrame()</code> again. This can be done from within the
-  callback itself.</p>
+The {{domxref("XRSession")}}
+method **`requestAnimationFrame()`**, much like the
+{{domxref("Window")}} method of the same name, schedules a callback to be executed the
+next time the browser is ready to paint the session's virtual environment to the XR
+display. The specified callback is executed once before the next repaint; if
+you wish for it to be executed for the following repaint, you must
+call `requestAnimationFrame()` again. This can be done from within the
+callback itself.
 
-<p>The callback takes two parameters as inputs: an {{DOMxRef("XRFrame")}} describing the
-  state of all tracked objects for the session, and a time stamp you can use to compute
-  any animation updates needed.</p>
+The callback takes two parameters as inputs: an {{DOMxRef("XRFrame")}} describing the
+state of all tracked objects for the session, and a time stamp you can use to compute
+any animation updates needed.
 
-<p>You can cancel a previously scheduled animation by calling
-  {{DOMxRef("XRSession.cancelAnimationFrame", "cancelAnimationFrame()")}}.</p>
+You can cancel a previously scheduled animation by calling
+{{DOMxRef("XRSession.cancelAnimationFrame", "cancelAnimationFrame()")}}.
 
-<div class="notecard note">
-<p><strong>Note:</strong> Despite the obvious similarities between these methods and the
-    global {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} function
-    provided by the <code>Window</code> interface, you <em>must not</em> treat these as
-    interchangeable. There is <em>no</em> guarantee that the latter will work at all while
-    an immersive XR session is underway.</p>
-</div>
+> **Note:** Despite the obvious similarities between these methods and the
+> global {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} function
+> provided by the `Window` interface, you *must not* treat these as
+> interchangeable. There is *no* guarantee that the latter will work at all while
+> an immersive XR session is underway.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>requestID</em> = <em>xrSession</em>.requestAnimationFrame(<em>animationFrameCallback</em>);
-</pre>
+```js
+requestID = xrSession.requestAnimationFrame(animationFrameCallback);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>animationFrameCallback</code></dt>
-  <dd>
-    <p>A function which is called before the next repaint in order to allow you to update
-      and render the XR scene based on elapsed time, animation, user input changes, and so
-      forth. The callback receives as input two parameters:</p>
+- `animationFrameCallback`
 
-    <dl>
-      <dt><code>time</code></dt>
-      <dd>A {{domxref("DOMHighResTimeStamp")}} indicating the time offset at which the
-        updated viewer state was received from the WebXR device.</dd>
-      <dt><code>xrFrame</code></dt>
-      <dd>An {{domxref("XRFrame")}} object describing the state of the objects being
+  - : A function which is called before the next repaint in order to allow you to update
+    and render the XR scene based on elapsed time, animation, user input changes, and so
+    forth. The callback receives as input two parameters:
+
+    - `time`
+      - : A {{domxref("DOMHighResTimeStamp")}} indicating the time offset at which the
+        updated viewer state was received from the WebXR device.
+    - `xrFrame`
+      - : An {{domxref("XRFrame")}} object describing the state of the objects being
         tracked by the session. This can be used to obtain the poses of the viewer and the
         scene itself, as well as other information needed to render a frame of an AR or VR
-        scene.</dd>
-    </dl>
-  </dd>
-</dl>
+        scene.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An integer value which serves as a unique, non-zero ID or handle you may pass to
-  {{domxref("XRSession.cancelAnimationFrame", "cancelAnimationFrame()")}} if you need to
-  remove the pending animation frame request.</p>
+An integer value which serves as a unique, non-zero ID or handle you may pass to
+{{domxref("XRSession.cancelAnimationFrame", "cancelAnimationFrame()")}} if you need to
+remove the pending animation frame request.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example requests <code>XRSession</code> with "inline" mode so that it can
-  be displayed in an HTML element (without the need for a separate AR or VR device).</p>
+The following example requests `XRSession` with "inline" mode so that it can
+be displayed in an HTML element (without the need for a separate AR or VR device).
 
-<div class="notecard note">
-  <p><strong>Note:</strong> A real application should check that the device and the User
-    Agent support WebXR API at all and then that they both support the desired session
-    type via {{DOMxRef("XRSystem.isSessionSupported()")}}.</p>
-</div>
+> **Note:** A real application should check that the device and the User
+> Agent support WebXR API at all and then that they both support the desired session
+> type via {{DOMxRef("XRSystem.isSessionSupported()")}}.
 
-<pre class="brush: js">// Obtain XR object
+```js
+// Obtain XR object
 const XR = navigator.xr
 
 // Request a new XRSession
-XR.requestSession("inline").then((xrSession) =&gt; {
-  xrSession.requestAnimationFrame((time, xrFrame) =&gt; {
+XR.requestSession("inline").then((xrSession) => {
+  xrSession.requestAnimationFrame((time, xrFrame) => {
     let viewer = xrFrame.getViewerPose(xrReferenceSpace)
 
     gl.bindFramebuffer(xrWebGLLayer.framebuffer)
@@ -103,13 +96,14 @@ XR.requestSession("inline").then((xrSession) =&gt; {
     }
   })
 })
-</pre>
+```
 
-<p>The following example was taken directly from the spec draft. This example demonstrates
-  a design pattern that ensures seamless transition between non-immersive animations
-  created via {{DOMxRef("Window.requestAnimationFrame")}} and immersive XR animations.</p>
+The following example was taken directly from the spec draft. This example demonstrates
+a design pattern that ensures seamless transition between non-immersive animations
+created via {{DOMxRef("Window.requestAnimationFrame")}} and immersive XR animations.
 
-<pre class="brush: js">let xrSession = null
+```js
+let xrSession = null
 
 function onWindowAnimationFrame(time) {
   window.requestAnimationFrame(onWindowAnimationFrame)
@@ -136,7 +130,7 @@ function renderFrame(time, xrFrame) {
 
 // Assumed to be called by a user gesture event elsewhere in code.
 function startXRSession() {
-  navigator.xr.requestSession('immersive-vr').then((session) =&gt; {
+  navigator.xr.requestSession('immersive-vr').then((session) => {
     xrSession = session
     xrSession.addEventListener('end', onXRSessionEnded)
     // Do necessary session setup here.
@@ -147,19 +141,18 @@ function startXRSession() {
 
 function onXRSessionEnded() {
   xrSession = null
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{DOMxRef("Window.requestAnimationFrame()")}}</li>
-  <li>{{domxref("XRSession.cancelAnimationFrame()")}}</li>
-</ul>
+- {{DOMxRef("Window.requestAnimationFrame()")}}
+- {{domxref("XRSession.cancelAnimationFrame()")}}

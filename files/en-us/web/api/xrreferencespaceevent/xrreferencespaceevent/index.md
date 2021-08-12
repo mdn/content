@@ -2,74 +2,72 @@
 title: XRReferenceSpaceEvent()
 slug: Web/API/XRReferenceSpaceEvent/XRReferenceSpaceEvent
 tags:
-- API
-- AR
-- Constructor
-- Events
-- Mixed
-- Reality
-- Reference
-- Reference Space
-- VR
-- Virtual
-- WebXR
-- WebXR API
-- WebXR Device API
-- XR
-- XRReferenceSpaceEvent
-- augmented
-- events
+  - API
+  - AR
+  - Constructor
+  - Events
+  - Mixed
+  - Reality
+  - Reference
+  - Reference Space
+  - VR
+  - Virtual
+  - WebXR
+  - WebXR API
+  - WebXR Device API
+  - XR
+  - XRReferenceSpaceEvent
+  - augmented
+  - events
 browser-compat: api.XRReferenceSpaceEvent.XRReferenceSpaceEvent
 ---
-<p>{{APIRef("WebXR Device API")}}</p>
+{{APIRef("WebXR Device API")}}
 
-<p>The <code><strong>XRReferenceSpaceEvent()</strong></code>
-    constructor is used to create a new {{domxref("XRReferenceSpaceEvent")}} object, which
-    represents an event regarding the state of a WebXR reference space object,
-    {{domxref("XRReferenceSpace")}}.</p>
+The **`XRReferenceSpaceEvent()`**
+constructor is used to create a new {{domxref("XRReferenceSpaceEvent")}} object, which
+represents an event regarding the state of a WebXR reference space object,
+{{domxref("XRReferenceSpace")}}.
 
-<p>Currently, only the {{domxref("XRReferenceSpace.reset_event", "reset")}} event is
-  defined using this type.</p>
+Currently, only the {{domxref("XRReferenceSpace.reset_event", "reset")}} event is
+defined using this type.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">let <em>refSpaceEvent</em> = new XRReferenceSpaceEvent(<em>type</em>, <em>eventInitDict</em>);</pre>
+```js
+let refSpaceEvent = new XRReferenceSpaceEvent(type, eventInitDict);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>type</code></dt>
-  <dd>A {{domxref("DOMString")}} indicating the event type which has occurred. Currently,
-    this is always <code>reset</code>.</dd>
-  <dt><code>eventInitDict</code></dt>
-  <dd>
-    <p>An object to configure the event. The properties are:</p>
-    <ul>
-      <li><code>referenceSpace</code>: The {{domxref("XRReferenceSpace")}} from which the event originates.</li>
-      <li><code>transform</code>: An {{domxref("XRRigidTransform")}} which maps the old coordinate system (from before the changes indicated by this event) to the new coordiante system.</li>
-    </ul>
-  </dd>
-</dl>
+- `type`
+  - : A {{domxref("DOMString")}} indicating the event type which has occurred. Currently,
+    this is always `reset`.
+- `eventInitDict`
 
-<h3 id="Return_value">Return value</h3>
+  - : An object to configure the event. The properties are:
 
-<p>A new <code>XRReferenceSpaceEvent</code> object, initialized as defined by the input parameters.</p>
+    - `referenceSpace`: The {{domxref("XRReferenceSpace")}} from which the event originates.
+    - `transform`: An {{domxref("XRRigidTransform")}} which maps the old coordinate system (from before the changes indicated by this event) to the new coordiante system.
 
-<h2 id="Examples">Examples</h2>
+### Return value
 
-<p>This simple snippet calls the constructor to create a new reference space event of type {{domxref("XRReferenceSpace.reset_event", "reset")}}.</p>
+A new `XRReferenceSpaceEvent` object, initialized as defined by the input parameters.
 
-<pre class="brush: js">let refSpaceEvent = new XRReferenceSpaceEvent("reset", {
+## Examples
+
+This simple snippet calls the constructor to create a new reference space event of type {{domxref("XRReferenceSpace.reset_event", "reset")}}.
+
+```js
+let refSpaceEvent = new XRReferenceSpaceEvent("reset", {
   referenceSpace: myRefSpace,
   transform: myTransform
 });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

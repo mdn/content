@@ -22,43 +22,45 @@ tags:
   - selectend
 browser-compat: api.XRSession.selectend_event
 ---
-<p>{{APIRef("WebXR Device API")}}</p>
+{{APIRef("WebXR Device API")}}
 
-<p>The WebXR event <code><strong>selectend</strong></code> is sent to an {{domxref("XRSession")}} when one of its input sources ends its <a href="/en-US/docs/Web/API/WebXR_Device_API/Inputs#primary_actions">primary action</a> or when an input source that's in the process of handling an ongoing primary action is disconnected without successfully completing the action.</p>
+The WebXR event **`selectend`** is sent to an {{domxref("XRSession")}} when one of its input sources ends its [primary action](/en-US/docs/Web/API/WebXR_Device_API/Inputs#primary_actions) or when an input source that's in the process of handling an ongoing primary action is disconnected without successfully completing the action.
 
-<p>Primary actions include things like users pressing triggers or buttons, tapping a touchpad, speaking a command, or performing a recognizable gesture when using a video tracking system or handheld controller with an accelerometer.</p>
+Primary actions include things like users pressing triggers or buttons, tapping a touchpad, speaking a command, or performing a recognizable gesture when using a video tracking system or handheld controller with an accelerometer.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th>Bubbles</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th>Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th>Interface</th>
-   <td>{{domxref("XRInputSourceEvent")}}</td>
-  </tr>
-  <tr>
-   <th>Event handler property</th>
-   <td>{{domxref("XRSession.onselectend", "onselectend")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th>Bubbles</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Interface</th>
+      <td>{{domxref("XRInputSourceEvent")}}</td>
+    </tr>
+    <tr>
+      <th>Event handler property</th>
+      <td>
+        {{domxref("XRSession.onselectend", "onselectend")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>For details on how the {{domxref("XRSession.selectstart_event", "selectstart")}}, {{domxref("XRSession.select_event", "select")}}, and {{domxref("XRSession.selectend_event", "selectend")}} events work, and how you should react to them, see {{SectionOnPage("/en-US/docs/Web/API/WebXR_Device_API/Inputs", "Primary actions")}}.</p>
+For details on how the {{domxref("XRSession.selectstart_event", "selectstart")}}, {{domxref("XRSession.select_event", "select")}}, and {{domxref("XRSession.selectend_event", "selectend")}} events work, and how you should react to them, see {{SectionOnPage("/en-US/docs/Web/API/WebXR_Device_API/Inputs", "Primary actions")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>See <a href="/en-US/docs/Web/API/XRSession/selectstart_event#examples"><code>selectstart_event</code></a> for example code.</p>
+See [`selectstart_event`](/en-US/docs/Web/API/XRSession/selectstart_event#examples) for example code.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}

@@ -2,56 +2,57 @@
 title: XRReferenceSpace.onreset
 slug: Web/API/XRReferenceSpace/onreset
 tags:
-- API
-- AR
-- Event Handler
-- Property
-- Reality
-- Reference
-- Spatial
-- VR
-- Virtual
-- WebXR
-- WebXR API
-- WebXR Device API
-- XR
-- XRReferenceSpace
-- augmented
-- onreset
-- reset
-- tracking
+  - API
+  - AR
+  - Event Handler
+  - Property
+  - Reality
+  - Reference
+  - Spatial
+  - VR
+  - Virtual
+  - WebXR
+  - WebXR API
+  - WebXR Device API
+  - XR
+  - XRReferenceSpace
+  - augmented
+  - onreset
+  - reset
+  - tracking
 browser-compat: api.XRReferenceSpace.onreset
 ---
-<p>{{APIRef("WebXR Device API")}}</p>
+{{APIRef("WebXR Device API")}}
 
-<p>The {{domxref("XRReferenceSpace")}}
-  interface's <code><strong>onreset</strong></code> event handler property can be set to a
-  function which is called when the <code>XRReferenceSpace</code> receives a
-  {{domxref("XRReferenceSpace.reset_event", "reset")}} event, signaling that the  XR
-  device has experienced a discontinuity large enough to require that the position and/or
-  orientation of the origin be significantly altered to compensate.</p>
+The {{domxref("XRReferenceSpace")}}
+interface's **`onreset`** event handler property can be set to a
+function which is called when the `XRReferenceSpace` receives a
+{{domxref("XRReferenceSpace.reset_event", "reset")}} event, signaling that the  XR
+device has experienced a discontinuity large enough to require that the position and/or
+orientation of the origin be significantly altered to compensate.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>xrReferenceSpace</em>.onreset = <em>eventHandler</em>;
+```js
+xrReferenceSpace.onreset = eventHandler;
 
-<em>eventHandler</em> = <em>xrReferenceSpace</em>.onreset;
-</pre>
+eventHandler = xrReferenceSpace.onreset;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An event handler function which will be called whenever the <code>reset</code> event is
-  received by the <code>XRReferenceSpace</code>.</p>
+An event handler function which will be called whenever the `reset` event is
+received by the `XRReferenceSpace`.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>See the {{domxref("XRReferenceSpace.reset_event", "reset")}} event documentation for
-  further details.</p>
+See the {{domxref("XRReferenceSpace.reset_event", "reset")}} event documentation for
+further details.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

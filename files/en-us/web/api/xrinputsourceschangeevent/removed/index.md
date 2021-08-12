@@ -2,48 +2,50 @@
 title: XRInputSourcesChangeEvent.removed
 slug: Web/API/XRInputSourcesChangeEvent/removed
 tags:
-- API
-- AR
-- Input Sources
-- Inputs
-- Mixed
-- Property
-- Read-only
-- Reality
-- Reference
-- VR
-- Virtual
-- WebXR
-- WebXR API
-- WebXR Device API
-- XR
-- XRInputSourcesChangeEvent
-- augmented
-- controllers
-- removed
+  - API
+  - AR
+  - Input Sources
+  - Inputs
+  - Mixed
+  - Property
+  - Read-only
+  - Reality
+  - Reference
+  - VR
+  - Virtual
+  - WebXR
+  - WebXR API
+  - WebXR Device API
+  - XR
+  - XRInputSourcesChangeEvent
+  - augmented
+  - controllers
+  - removed
 browser-compat: api.XRInputSourcesChangeEvent.removed
 ---
-<p>{{APIRef("WebXR Device API")}}</p>
+{{APIRef("WebXR Device API")}}
 
-<p>The read-only {{domxref("XRInputSourcesChangeEvent")}} property {{domxref("XRInputSourcesChangeEvent.removed", "removed")}} is an array of
-    zero or more {{domxref("XRInputSource")}} objects representing the input sources that have been removed from the {{domxref("XRSession")}}.</p>
+The read-only {{domxref("XRInputSourcesChangeEvent")}} property {{domxref("XRInputSourcesChangeEvent.removed", "removed")}} is an array of
+zero or more {{domxref("XRInputSource")}} objects representing the input sources that have been removed from the {{domxref("XRSession")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>removedInputs</em> = <em>xrInputSourcesChangeEvent</em>.removed;</pre>
+```js
+removedInputs = xrInputSourcesChangeEvent.removed;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{jsxref("Array")}} of zero or more {{domxref("XRInputSource")}} objects, each representing one input device removed from the XR system.</p>
+An {{jsxref("Array")}} of zero or more {{domxref("XRInputSource")}} objects, each representing one input device removed from the XR system.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>See <a href="/en-US/docs/Web/API/XRInputSourcesChangeEvent/added#examples"><code>XRInputSourcesChangeEvent.added</code></a> for example code.</p>
+See [`XRInputSourcesChangeEvent.added`](/en-US/docs/Web/API/XRInputSourcesChangeEvent/added#examples) for example code.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}

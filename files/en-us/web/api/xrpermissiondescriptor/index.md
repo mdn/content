@@ -20,45 +20,44 @@ tags:
   - descriptor
 browser-compat: api.XRPermissionDescriptor
 ---
-<p>{{APIRef("WebXR Device API")}}{{SecureContext_header}}</p>
+{{APIRef("WebXR Device API")}}{{SecureContext_header}}
 
-<p><span class="seoSummary">User permissions in the <a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</a> are managed using the <a href="/en-US/docs/Web/API/Permissions_API">Permissions API</a>. To that end, the <code><strong>XRPermissionDescriptor</strong></code> dictionary is used to describe the WebXR features the app needs to use, as well as those features it would like ot use if permision is granted.</span></p>
+User permissions in the [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) are managed using the [Permissions API](/en-US/docs/Web/API/Permissions_API). To that end, the **`XRPermissionDescriptor`** dictionary is used to describe the WebXR features the app needs to use, as well as those features it would like ot use if permision is granted.
 
-<p>The <code>XRPermissionDescriptor</code>'s {{domxref("PermissionDescriptor.name", "name")}} must be set to <code>xr</code> in order to direct the Permissions API to correctly handle the request as applying to WebXR.</p>
+The `XRPermissionDescriptor`'s {{domxref("PermissionDescriptor.name", "name")}} must be set to `xr` in order to direct the Permissions API to correctly handle the request as applying to WebXR.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p>In addition to inheriting the properties of the parent interface, {{domxref("PermissionDescriptor")}}, <code>XRPermissionDescriptor</code> provides the following properties.</p>
+In addition to inheriting the properties of the parent interface, {{domxref("PermissionDescriptor")}}, `XRPermissionDescriptor` provides the following properties.
 
-<dl>
-	<dt>{{domxref("XRPermissionDescriptor.mode", "mode")}} </dt>
-	<dd>An string indicating the XR mode (<code>inline</code>, <code>immersive-vr</code>, or <code>immersive-ar</code>) for which the permissions are requested.</dd>
-	<dt>{{domxref("XRPermissionDescriptor.optionalFeatures", "optionalFeatures")}}</dt>
-	<dd>An array of strings, each specifying the name of a WebXR feature which is requested but not required for the app to function.</dd>
-	<dt>{{domxref("XRPermissionDescriptor.requiredFeatures", "requiredFeatures")}}</dt>
-	<dd>An array of strings giving the names of the WebXR features for which permission <em>must</em> be obtained in order to use your app or site.</dd>
-</dl>
+- {{domxref("XRPermissionDescriptor.mode", "mode")}}
+  - : An string indicating the XR mode (`inline`, `immersive-vr`, or `immersive-ar`) for which the permissions are requested.
+- {{domxref("XRPermissionDescriptor.optionalFeatures", "optionalFeatures")}}
+  - : An array of strings, each specifying the name of a WebXR feature which is requested but not required for the app to function.
+- {{domxref("XRPermissionDescriptor.requiredFeatures", "requiredFeatures")}}
+  - : An array of strings giving the names of the WebXR features for which permission *must* be obtained in order to use your app or site.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The example below demonstrates performing the permission request for an application that requires the <code>local-floor</code> reference space in an <code>immersive-vr</code> environment.</p>
+The example below demonstrates performing the permission request for an application that requires the `local-floor` reference space in an `immersive-vr` environment.
 
-<p>If the <a href="/en-US/docs/Web/API/Permissions_API">Permissions API</a> is found to be available (by checking to see if {{domxref("navigator.permissions")}} is defined), its {{domxref("Permissions.query", "query()")}} method is called, specifying the permission descriptor we've established, <code>xrPermissionDesc</code>.</p>
+If the [Permissions API](/en-US/docs/Web/API/Permissions_API) is found to be available (by checking to see if {{domxref("navigator.permissions")}} is defined), its {{domxref("Permissions.query", "query()")}} method is called, specifying the permission descriptor we've established, `xrPermissionDesc`.
 
-<p>When the returned <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">promise</a> resolves, we check the returned status. If permission has been granted, we call a function <code>setupXR()</code> that handles preparing the WebXR environment for use. If permission is conditional based on prompting, we call a function <code>promptAndSetupXR()</code> that would handle asking for permission before enabling and starting up the environment. And for any other returned state—which is almost certainly <code>denied</code>, which is the only other option as of this article's writing—we do nothing, since we can't use WebXR.</p>
+When the returned [promise](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) resolves, we check the returned status. If permission has been granted, we call a function `setupXR()` that handles preparing the WebXR environment for use. If permission is conditional based on prompting, we call a function `promptAndSetupXR()` that would handle asking for permission before enabling and starting up the environment. And for any other returned state—which is almost certainly `denied`, which is the only other option as of this article's writing—we do nothing, since we can't use WebXR.
 
-<p>If the permission request promise is rejected, the error is handled (currently by just dumping it to the console using domxref("console.log()")}}).</p>
+If the permission request promise is rejected, the error is handled (currently by just dumping it to the console using domxref("console.log()")}}).
 
-<p>If the Permissions API isn't available at all, this example assumes that WebXR will report an appropriate error if permission isn't available, and tries to start up the WebXR session using the same <code>setupXR()</code> function called by the <code>granted</code> case.</p>
+If the Permissions API isn't available at all, this example assumes that WebXR will report an appropriate error if permission isn't available, and tries to start up the WebXR session using the same `setupXR()` function called by the `granted` case.
 
-<pre class="brush: js">let xrPermissionDesc = {
+```js
+let xrPermissionDesc = {
   name: "xr",
   mode: "immersive-vr",
   requiredFeatures: [ "local-floor" ]
 };
 
 if (navigator.permissions) {
-  navigator.permissions.query(xrPermissionDesc).then(({state}) =&gt; {
+  navigator.permissions.query(xrPermissionDesc).then(({state}) => {
     switch(state) {
       case "granted":
         setupXR();
@@ -76,21 +75,19 @@ if (navigator.permissions) {
 } else {
   setupXR();
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li><a href="/en-US/docs/Web/API/WebXR_Device_API/Permissions_and_security">Permissions and security for WebXR</a></li>
-	<li>{{domxref("XRPermissionStatus")}}</li>
-	<li>{{domxref("navigator.permissions")}} and {{domxref("WorkerNavigator.permissions")}}</li>
-	<li>{{domxref("Permissions")}}</li>
-</ul>
+- [Permissions and security for WebXR](/en-US/docs/Web/API/WebXR_Device_API/Permissions_and_security)
+- {{domxref("XRPermissionStatus")}}
+- {{domxref("navigator.permissions")}} and {{domxref("WorkerNavigator.permissions")}}
+- {{domxref("Permissions")}}

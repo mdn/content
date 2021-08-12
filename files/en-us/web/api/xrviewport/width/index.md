@@ -2,51 +2,52 @@
 title: XRViewport.width
 slug: Web/API/XRViewport/width
 tags:
-- API
-- AR
-- Property
-- Read-only
-- Reality
-- Reference
-- VR
-- Virtual
-- WebXR
-- WebXR API
-- WebXR Device API
-- XR
-- XRViewport
-- augmented
-- size
-- viewport
-- width
+  - API
+  - AR
+  - Property
+  - Read-only
+  - Reality
+  - Reference
+  - VR
+  - Virtual
+  - WebXR
+  - WebXR API
+  - WebXR Device API
+  - XR
+  - XRViewport
+  - augmented
+  - size
+  - viewport
+  - width
 browser-compat: api.XRViewport.width
 ---
-<p>{{APIRef("WebXR Device API")}}</p>
+{{APIRef("WebXR Device API")}}
 
-<p>The read-only {{domxref("XRViewport")}} property
-    <strong><code>width</code></strong> specifies the width of the viewport, in pixels,
-    onto the drawing surface the 3D scene is to be rendered into. This is defined
-  using this property along with the viewport's {{domxref("XRViewport.height", "height")}}
-  and its origin given by its properties {{domxref("XRViewport.x", "x")}} and
-  {{domxref("XRViewport.y", "y")}}.</p>
+The read-only {{domxref("XRViewport")}} property
+**`width`** specifies the width of the viewport, in pixels,
+onto the drawing surface the 3D scene is to be rendered into. This is defined
+using this property along with the viewport's {{domxref("XRViewport.height", "height")}}
+and its origin given by its properties {{domxref("XRViewport.x", "x")}} and
+{{domxref("XRViewport.y", "y")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>width</em> = <em>xrViewport</em>.width;</pre>
+```js
+width = xrViewport.width;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>The viewport's width in pixels.</p>
+The viewport's width in pixels.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>See the main {{domxref("XRViewport")}} page for examples.</p>
+See the main {{domxref("XRViewport")}} page for examples.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}

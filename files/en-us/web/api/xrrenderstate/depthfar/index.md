@@ -2,39 +2,40 @@
 title: XRRenderState.depthFar
 slug: Web/API/XRRenderState/depthFar
 tags:
-- API
-- AR
-- Augmented Reality
-- Experimental
-- Property
-- Reference
-- VR
-- Virtual Reality
-- WebXR
-- WebXR Device API
-- XR
-- depthFar
+  - API
+  - AR
+  - Augmented Reality
+  - Experimental
+  - Property
+  - Reference
+  - VR
+  - Virtual Reality
+  - WebXR
+  - WebXR Device API
+  - XR
+  - depthFar
 browser-compat: api.XRRenderState.depthFar
 ---
-<div>{{APIRef("WebXR Device API")}}</div>
+{{APIRef("WebXR Device API")}}
 
-<p class="summary">The <strong><code>depthFar</code></strong> read-only property of the
-  {{domxref("XRRenderState")}} interface returns the distance in meters of the far clip
-  plane from the viewer.</p>
+The **`depthFar`** read-only property of the
+{{domxref("XRRenderState")}} interface returns the distance in meters of the far clip
+plane from the viewer.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>aDouble</var> = XRRenderState.depthFar;</pre>
+```js
+var aDouble = XRRenderState.depthFar;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{jsxref("Number")}}.</p>
+A {{jsxref("Number")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,37 +2,37 @@
 title: XRAnchor.anchorSpace
 slug: Web/API/XRAnchor/anchorSpace
 tags:
-- API
-- Property
-- Reference
-- AR
-- VR
-- XR
-- WebXR
+  - API
+  - Property
+  - Reference
+  - AR
+  - VR
+  - XR
+  - WebXR
 browser-compat: api.XRAnchor.anchorSpace
 ---
-<div>{{APIRef("WebXR Device API")}}</div>
+{{APIRef("WebXR Device API")}}
 
-<p>The read-only <code><strong>anchorSpace</strong></code> property of the {{domxref("XRAnchor")}} interface returns an {{domxref("XRSpace")}} object to locate the anchor relative to other <code>XRSpace</code> objects. It can be passed to {{domxref("XRFrame.getPose()")}} subsequently.</p>
+The read-only **`anchorSpace`** property of the {{domxref("XRAnchor")}} interface returns an {{domxref("XRSpace")}} object to locate the anchor relative to other `XRSpace` objects. It can be passed to {{domxref("XRFrame.getPose()")}} subsequently.
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{domxref("XRSpace")}} object.</p>
+An {{domxref("XRSpace")}} object.
 
-<h2>Examples</h2>
+## Examples
 
-<h3>Updating anchors</h3>
+### Updating anchors
 
-<pre class="brush: js">
+```js
 for (const anchor of frame.trackedAnchors) {
   const pose = frame.getPose(anchor.anchorSpace, referenceSpace);
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

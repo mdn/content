@@ -2,47 +2,47 @@
 title: XRCPUDepthInformation.data
 slug: Web/API/XRCPUDepthInformation/data
 tags:
-- API
-- AR
-- Augmented Reality
-- Experimental
-- Property
-- Reference
-- VR
-- WebXR
-- WebXR Device API
+  - API
+  - AR
+  - Augmented Reality
+  - Experimental
+  - Property
+  - Reference
+  - VR
+  - WebXR
+  - WebXR Device API
 browser-compat: api.XRCPUDepthInformation.data
 ---
-<div>{{APIRef("WebXR Device API")}}</div>
+{{APIRef("WebXR Device API")}}
 
-<p>The <em>read-only</em> <strong><code>data</code></strong> property of the {{DOMxRef("XRCPUDepthInformation")}} interface is an {{jsxref("ArrayBuffer")}} containing depth-buffer information in raw format.</p>
+The *read-only* **`data`** property of the {{DOMxRef("XRCPUDepthInformation")}} interface is an {{jsxref("ArrayBuffer")}} containing depth-buffer information in raw format.
 
-<p>The data is stored in row-major format, without padding, with each entry corresponding to distance from the view's near plane to the users' environment, in unspecified units. The size of each data entry and the type is determined by {{domxref("XRSession.depthDataFormat", "depthDataFormat")}}. The values can be converted from unspecified units to meters by multiplying them by {{domxref("XRDepthInformation.rawValueToMeters", "rawValueToMeters")}}. The {{domxref("XRDepthInformation.normDepthBufferFromNormView", "normDepthBufferFromNormView")}} property can be used to transform from normalized view coordinates (an origin in the top left corner of the view, with X axis growing to the right, and Y axis growing downward) into the depth buffer’s coordinate system.</p>
+The data is stored in row-major format, without padding, with each entry corresponding to distance from the view's near plane to the users' environment, in unspecified units. The size of each data entry and the type is determined by {{domxref("XRSession.depthDataFormat", "depthDataFormat")}}. The values can be converted from unspecified units to meters by multiplying them by {{domxref("XRDepthInformation.rawValueToMeters", "rawValueToMeters")}}. The {{domxref("XRDepthInformation.normDepthBufferFromNormView", "normDepthBufferFromNormView")}} property can be used to transform from normalized view coordinates (an origin in the top left corner of the view, with X axis growing to the right, and Y axis growing downward) into the depth buffer’s coordinate system.
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{jsxref("ArrayBuffer")}}.</p>
+An {{jsxref("ArrayBuffer")}}.
 
-<h2>Examples</h2>
+## Examples
 
-<p>Use {{domxref("XRFrame.getDepthInformation()")}} to obtain depth information. The returned <code>XRCPUDepthInformation</code> object will contain the <code>data</code> buffer.</p>
+Use {{domxref("XRFrame.getDepthInformation()")}} to obtain depth information. The returned `XRCPUDepthInformation` object will contain the `data` buffer.
 
-<p>For CPU depth information and a buffer that has "luminance-alpha" format:</p>
+For CPU depth information and a buffer that has "luminance-alpha" format:
 
-<pre class="brush: js">
+```js
 const uint16 = new Uint16Array(depthInfo.data);
 const index = column + row * depthInfo.width;
 const depthInMeters = uint16[index] * depthInfo.rawValueToMeters;
-</pre>
+```
 
-<p>(Use {{jsxref("Float32Array")}} for a "float32" data format.)</p>
+(Use {{jsxref("Float32Array")}} for a "float32" data format.)
 
-<p>Note that the depth in meters is in depth-buffer coordinates. Additional steps are needed to convert them to normalized view coordinates, or the {{domxref("XRCPUDepthInformation.getDepthInMeters()")}} method can be used.</p>
+Note that the depth in meters is in depth-buffer coordinates. Additional steps are needed to convert them to normalized view coordinates, or the {{domxref("XRCPUDepthInformation.getDepthInMeters()")}} method can be used.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}

@@ -17,169 +17,123 @@ tags:
   - requestSession
 browser-compat: api.XRSystem.requestSession
 ---
-<div>{{APIRef("WebXR Device API")}}</div>
+{{APIRef("WebXR Device API")}}
 
-<p>The <strong>{{domxref("XRSystem")}}</strong> interface's
-  <code><strong>requestSession()</strong></code> method returns a {{jsxref("promise")}}
-  which resolves to an {{domxref("XRSession")}} object through which you can manage the
-  requested type of WebXR session.</p>
+The **{{domxref("XRSystem")}}** interface's
+**`requestSession()`** method returns a {{jsxref("promise")}}
+which resolves to an {{domxref("XRSession")}} object through which you can manage the
+requested type of WebXR session.
 
-<p>While only one immersive VR session can be active at a time, multiple
-  inline sessions can be in progress at once.</p>
+While only one immersive VR session can be active at a time, multiple
+inline sessions can be in progress at once.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">navigator.xr</em>.requestSession(<em>mode</em>, <em>options</em>)
-</pre>
+```js
+navigator.xr.requestSession(mode, options)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>mode</code></dt>
-  <dd>
-    <p>A {{jsxref("String")}} defining the XR session mode. The supported modes are:</p>
-      <ul>
-        <li>{{experimental_inline}} <code>immersive-ar</code>: The session's output will be given exclusive access to the immersive device,
-         but the rendered content will be blended with the real-world environment.
-         The session's {{DOMxRef("XRSession.environmentBlendMode", "environmentBlendMode")}} indicates the method
-         to be used to blend the content together.
-        </li>
-        <li><code>immersive-vr</code>: Indicates that the rendered session will be displayed using an immersive XR device
-         in VR mode; it is not intended to be overlaid or integrated into the surrounding environment.
-         The {{DOMxRef("XRSession.environmentBlendMode", "environmentBlendMode")}} is expected to be
-         <code>opaque</code> if possible, but might be <code>additive</code> if the hardware requires it.
-        </li>
-        <li><code>inline</code>: The output is presented inline within the context of an element in a standard HTML document,
-         rather than occupying the full visual space. Inline sessions can be presented in either mono or stereo mode,
-         and may or may not have viewer tracking available. Inline sessions don't require special hardware and should be
-         available on any {{Glossary("user agent")}} offering WebXR API support.
-        </li>
-       </ul>
-  </dd>
-  <dt><code>options</code> {{optional_inline}}</dt>
-  <dd>An object to configure the {{domxref("XRSession")}}. If none are included, the device will use a default feature
-  configuration for all options. For more information, see <a href="#session_features">Session features</a> below.
-  <ul>
-    <li><code>requiredFeatures</code> {{optional_inline}}: An array of values which the returned {{domxref("XRSession")}}
-      <em>must</em> support.</li>
-    <li><code>optionalFeatures</code> {{optional_inline}}: An array of values identifying features which the returned
-     {{domxref("XRSession")}} may optionally support.</li>
-     <li><code>domOverlay</code> {{optional_inline}}: An object with a required <code>root</code> property that specifies the overlay element that will be displayed to the user as the content of the DOM overlay. See the <a href="#requesting_a_session_with_a_dom_overlay">example below</a>.</li>
-     <li><code>depthSensing</code> {{optional_inline}}: An object with two required properties {{domxref("XRSession.depthUsage", "usagePreference")}} and {{domxref("XRSession.depthDataFormat", "dataFormatPreference")}} to configure how to perform depth sensing. See the <a href="#requesting_a_depth-sensing_session">example below</a>.</li>
-    </ul>
-  </dd>
-</dl>
-  </dd>
-</dl>
+- `mode`
 
-<h3 id="Return_value">Return value</h3>
+  - : A {{jsxref("String")}} defining the XR session mode. The supported modes are:
 
-<p>A {{jsxref("Promise")}} that resolves with an {{domxref("XRSession")}} object if the
-  device and user agent support the requested mode and features.</p>
+    - {{experimental_inline}} `immersive-ar`: The session's output will be given exclusive access to the immersive device,
+      but the rendered content will be blended with the real-world environment.
+      The session's {{DOMxRef("XRSession.environmentBlendMode", "environmentBlendMode")}} indicates the method
+      to be used to blend the content together.
+    - `immersive-vr`: Indicates that the rendered session will be displayed using an immersive XR device
+      in VR mode; it is not intended to be overlaid or integrated into the surrounding environment.
+      The {{DOMxRef("XRSession.environmentBlendMode", "environmentBlendMode")}} is expected to be
+      `opaque` if possible, but might be `additive` if the hardware requires it.
+    - `inline`: The output is presented inline within the context of an element in a standard HTML document,
+      rather than occupying the full visual space. Inline sessions can be presented in either mono or stereo mode,
+      and may or may not have viewer tracking available. Inline sessions don't require special hardware and should be
+      available on any {{Glossary("user agent")}} offering WebXR API support.
 
-<h3 id="Exceptions">Exceptions</h3>
+- `options` {{optional_inline}}
 
-<p>This method doesn't throw true exceptions; instead, it rejects the returned promise,
-  passing into it a {{domxref("DOMException")}} whose <code>name</code> is one of the
-  following:</p>
+  - : An object to configure the {{domxref("XRSession")}}. If none are included, the device will use a default feature
+    configuration for all options. For more information, see [Session features](#session_features) below.
 
-<dl>
-  <dt><code>InvalidStateError</code></dt>
-  <dd>The requested session mode is <code>immersive-vr</code> but there is already an
+    - `requiredFeatures` {{optional_inline}}: An array of values which the returned {{domxref("XRSession")}}
+      _must_ support.
+    - `optionalFeatures` {{optional_inline}}: An array of values identifying features which the returned
+      {{domxref("XRSession")}} may optionally support.
+    - `domOverlay` {{optional_inline}}: An object with a required `root` property that specifies the overlay element that will be displayed to the user as the content of the DOM overlay. See the [example below](#requesting_a_session_with_a_dom_overlay).
+    - `depthSensing` {{optional_inline}}: An object with two required properties {{domxref("XRSession.depthUsage", "usagePreference")}} and {{domxref("XRSession.depthDataFormat", "dataFormatPreference")}} to configure how to perform depth sensing. See the [example below](#requesting_a_depth-sensing_session).
+
+### Return value
+
+A {{jsxref("Promise")}} that resolves with an {{domxref("XRSession")}} object if the
+device and user agent support the requested mode and features.
+
+### Exceptions
+
+This method doesn't throw true exceptions; instead, it rejects the returned promise,
+passing into it a {{domxref("DOMException")}} whose `name` is one of the
+following:
+
+- `InvalidStateError`
+  - : The requested session mode is `immersive-vr` but there is already an
     immersive VR session either currently active or in the process of being set up. There
-    can only be one immersive VR session at a time.</dd>
-  <dt><code>NotSupportedError</code></dt>
-  <dd>There is no WebXR-compatible device available, or the device does not support the
-    specified <code>sessionMode</code>; this can also be thrown if any of the
-    <em>required</em> options are unsupported.</dd>
-  <dt><code>SecurityError</code></dt>
-  <dd>
-    <p>Permission to enter the specified XR mode is denied. This can happen for a number
-      of reasons, which are covered in more detail in
-      {{SectionOnPage("/en-US/docs/Web/API/WebXR_Device_API", "Permissions and
-      security")}}.</p>
-  </dd>
-</dl>
+    can only be one immersive VR session at a time.
+- `NotSupportedError`
+  - : There is no WebXR-compatible device available, or the device does not support the
+    specified `sessionMode`; this can also be thrown if any of the
+    _required_ options are unsupported.
+- `SecurityError`
+  - : Permission to enter the specified XR mode is denied. This can happen for a number
+    of reasons, which are covered in more detail in
+    {{SectionOnPage("/en-US/docs/Web/API/WebXR_Device_API", "Permissions and
+      security")}}.
 
-<h2 id="Session_features">Session features</h2>
+## Session features
 
-<dl>
-  <dt><code>anchor</code></dt>
-  <dd>Enable use of {{domxref("XRAnchor")}} objects.</dd>
-  <dt><code>bounded-floor</code></dt>
-  <dd>Similar to the <code>local</code> type, except the user is not expected to move outside a predetermined boundary, given by the {{domxref("XRBoundedReferenceSpace.boundsGeometry", "boundsGeometry")}} in the returned object.</dd>
-  <dt><code>depth-sensing</code></dt>
-  <dd>Enable the ability to obtain depth information using {{domxref("XRDepthInformation")}} objects.</dd>
-  <dt><code>dom-overlay</code></dt>
-  <dd>Enable allowing to specify a DOM overlay element that will be displayed to the user.</dd>
-  <dt><code>local</code></dt>
-  <dd>Enable a tracking space whose native origin is located near the viewer's position at the time the session was created. The exact position depends on the underlying platform and implementation. The user isn't expected to move much if at all beyond their starting position, and tracking is optimized for this use case.</dd>
-  <dt><code>local-floor</code></dt>
-  <dd>Similar to the <code>local</code> type, except the starting position is placed in a safe location for the viewer to stand, where the value of the y axis is 0 at floor level. If that floor level isn't known, the {{Glossary("user agent")}} will estimate the floor level. If the estimated floor level is non-zero, the browser is expected to round it such a way as to avoid fingerprinting (likely to the nearest centimeter).</dd>
-  <dt><code>secondary-views</code></dt>
-  <dd>Enable {{domxref("XRView")}} objects to be secondary views. This can be used for  first-person observer views used for video capture, or "quad views" where there are two views per eye, with differing resolution and fields of view.</dd>
-  <dt><code>unbounded</code></dt>
-  <dd>Enable a tracking space which allows the user total freedom of movement, possibly over extremely long distances from their origin point. The viewer isn't tracked at all; tracking is optimized for stability around the user's current position, so the native origin may drift as needed to accommodate that need.</dd>
-  <dt><code>viewer</code></dt>
-  <dd>Enable a tracking space whose native origin tracks the viewer's position and orientation.</dd>
-</dl>
+- `anchor`
+  - : Enable use of {{domxref("XRAnchor")}} objects.
+- `bounded-floor`
+  - : Similar to the `local` type, except the user is not expected to move outside a predetermined boundary, given by the {{domxref("XRBoundedReferenceSpace.boundsGeometry", "boundsGeometry")}} in the returned object.
+- `depth-sensing`
+  - : Enable the ability to obtain depth information using {{domxref("XRDepthInformation")}} objects.
+- `dom-overlay`
+  - : Enable allowing to specify a DOM overlay element that will be displayed to the user.
+- `local`
+  - : Enable a tracking space whose native origin is located near the viewer's position at the time the session was created. The exact position depends on the underlying platform and implementation. The user isn't expected to move much if at all beyond their starting position, and tracking is optimized for this use case.
+- `local-floor`
+  - : Similar to the `local` type, except the starting position is placed in a safe location for the viewer to stand, where the value of the y axis is 0 at floor level. If that floor level isn't known, the {{Glossary("user agent")}} will estimate the floor level. If the estimated floor level is non-zero, the browser is expected to round it such a way as to avoid fingerprinting (likely to the nearest centimeter).
+- `secondary-views`
+  - : Enable {{domxref("XRView")}} objects to be secondary views. This can be used for first-person observer views used for video capture, or "quad views" where there are two views per eye, with differing resolution and fields of view.
+- `unbounded`
+  - : Enable a tracking space which allows the user total freedom of movement, possibly over extremely long distances from their origin point. The viewer isn't tracked at all; tracking is optimized for stability around the user's current position, so the native origin may drift as needed to accommodate that need.
+- `viewer`
+  - : Enable a tracking space whose native origin tracks the viewer's position and orientation.
 
-<h3 id="Security_requirements">Security requirements</h3>
+### Security requirements
 
-<p>Each reference space or feature type has minimum safety requirements. By session type, those are:</p>
+Each reference space or feature type has minimum safety requirements. By session type, those are:
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Session feature</th>
-   <th scope="col">User consent requirement</th>
-   <th scope="col">Feature policy requirement</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>bounded-floor</code></td>
-   <td>Always required</td>
-   <td><code>xr-spatial-tracking</code></td>
-  </tr>
-  <tr>
-    <td><code>depth-sensing</code></td>
-    <td>—</td>
-    <td><code>xr-spatial-tracking</code></td>
-   </tr>
-  <tr>
-   <td><code>local</code></td>
-   <td>Always required for inline sessions</td>
-   <td><code>xr-spatial-tracking</code></td>
-  </tr>
-  <tr>
-   <td><code>local-floor</code></td>
-   <td>Always required</td>
-   <td><code>xr-spatial-tracking</code></td>
-  </tr>
-  <tr>
-   <td><code>unbounded</code></td>
-   <td>Always required</td>
-   <td><code>xr-spatial-tracking</code></td>
-  </tr>
-  <tr>
-   <td><code>viewer</code></td>
-   <td>Always required</td>
-   <td>—</td>
-  </tr>
- </tbody>
-</table>
+| Session feature | User consent requirement            | Feature policy requirement |
+| --------------- | ----------------------------------- | -------------------------- |
+| `bounded-floor` | Always required                     | `xr-spatial-tracking`      |
+| `depth-sensing` | —                                   | `xr-spatial-tracking`      |
+| `local`         | Always required for inline sessions | `xr-spatial-tracking`      |
+| `local-floor`   | Always required                     | `xr-spatial-tracking`      |
+| `unbounded`     | Always required                     | `xr-spatial-tracking`      |
+| `viewer`        | Always required                     | —                          |
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Creating_an_immersive_VR_session">Creating an immersive VR session</h3>
+### Creating an immersive VR session
 
-<p>The following example calls <code>requestSession()</code> requesting an
-  <code>"immersive-vr"</code> session. If the {{jsxref("Promise")}} resolves, it sets up a
-  session and initiates the animation loop.</p>
+The following example calls `requestSession()` requesting an
+`"immersive-vr"` session. If the {{jsxref("Promise")}} resolves, it sets up a
+session and initiates the animation loop.
 
-<pre class="brush: js">navigator.xr.requestSession("immersive-vr")
-.then((xrSession) =&gt; {
+```js
+navigator.xr.requestSession("immersive-vr")
+.then((xrSession) => {
   xrSession.addEventListener('end', onXRSessionEnded);
   // Do necessary session setup here.
   // Begin the session’s animation loop.
@@ -187,23 +141,24 @@ browser-compat: api.XRSystem.requestSession
 }).catch(function(error) {
   // "immersive-vr" sessions are not supported
   console.warn("'immersive-vr' isn't supported, or an error occurred activating VR!");
-});</pre>
+});
+```
 
-<h3 id="Verifying_WebXR_support_and_using_a_button_to_start_VR_mode">Verifying WebXR
-  support and using a button to start VR mode</h3>
+### Verifying WebXR support and using a button to start VR mode
 
-<p>The following example shows how to use both <code>isSessionSupported()</code> and
-  <code>requestSession()</code>. First, it checks to see if WebXR is available by
-  verifying the existence of {{domxref("navigator.xr")}}. Next, it calls
-  <code>isSessionSupported()</code>, passing it the desired session option before enabling
-  controls for entering XR. Adding controls is a necessary step because entering XR
-  requires a user action. Finally, the <code>onButtonClicked()</code> method calls
-  <code>requestSession()</code> using the same session option passed to
-  <code>isSessionSupported()</code>.</p>
+The following example shows how to use both `isSessionSupported()` and
+`requestSession()`. First, it checks to see if WebXR is available by
+verifying the existence of {{domxref("navigator.xr")}}. Next, it calls
+`isSessionSupported()`, passing it the desired session option before enabling
+controls for entering XR. Adding controls is a necessary step because entering XR
+requires a user action. Finally, the `onButtonClicked()` method calls
+`requestSession()` using the same session option passed to
+`isSessionSupported()`.
 
-<pre class="brush: js">if (navigator.xr) {
+```js
+if (navigator.xr) {
   navigator.xr.isSessionSupported('immersive-vr')
-  .then((isSupported) =&gt; {
+  .then((isSupported) => {
     if (isSupported) {
       immersiveButton.addEventListener('click', onButtonClicked);
       immersiveButton.textContent = 'Enter XR';
@@ -219,41 +174,42 @@ browser-compat: api.XRSystem.requestSession
 function onButtonClicked() {
   if (!xrSession) {
     navigator.xr.requestSession('immersive-vr')
-    .then((session) =&gt; {
+    .then((session) => {
       xrSession = session;
       // onSessionStarted() not shown for reasons of brevity and clarity.
       onSessionStarted(xrSession);
     });
   } else {
     // Button is a toggle button.
-    xrSession.end().then(() =&gt; xrSession = null);
+    xrSession.end().then(() => xrSession = null);
   }
-}</pre>
+}
+```
 
-<h3>Requesting a session with required features</h3>
+### Requesting a session with required features
 
-<p>Require an unbounded experience in which the user is able to freely move around their physical environment:</p>
+Require an unbounded experience in which the user is able to freely move around their physical environment:
 
-<pre class="brush: js">
+```js
 navigator.xr.requestSession('immersive-vr', { requiredFeatures: ['unbounded'] })
-</pre>
+```
 
-<h3 id="Requesting_a_session_with_a_DOM_overlay">Requesting a session with a DOM overlay</h3>
+### Requesting a session with a DOM overlay
 
-<pre class="brush: js">
+```js
 navigator.xr.requestSession("immersive-ar", {
   optionalFeatures: ["dom-overlay"],
   domOverlay: {
     root: document.getElementById("xr-overlay")
   }
 }
-</pre>
+```
 
-<h3 id="Requesting_a_depth-sensing_session">Requesting a depth-sensing session</h3>
+### Requesting a depth-sensing session
 
-<p> Here, the caller is able to handle both CPU- and GPU-optimized usage, as well as both "luminance-alpha" and "float32" formats. The order indicates preference for CPU and "luminance-alpha":
+Here, the caller is able to handle both CPU- and GPU-optimized usage, as well as both "luminance-alpha" and "float32" formats. The order indicates preference for CPU and "luminance-alpha":
 
-<pre class="brush: js">
+```js
 navigator.xr.requestSession("immersive-ar", {
   requiredFeatures: ["depth-sensing"],
   depthSensing: {
@@ -261,12 +217,12 @@ navigator.xr.requestSession("immersive-ar", {
     formatPreference: ["luminance-alpha", "float32"]
   }
 });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}

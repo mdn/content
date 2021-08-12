@@ -25,39 +25,42 @@ tags:
   - visibilitychange
 browser-compat: api.XRSession.visibilitychange_event
 ---
-<p>{{APIRef("WebXR Device API")}}</p>
+{{APIRef("WebXR Device API")}}
 
-<p>The <code><strong>visibilitychange</strong></code> event is sent to an {{domxref("XRSession")}} to inform it when it becomes visible or hidden, or when it becomes visible but not currently focused. Upon receiving the event, you can check the value of the session's {{domxref("XRSession.visibilityState", "visibilityState")}} property to determine the new visibility state.</p>
+The **`visibilitychange`** event is sent to an {{domxref("XRSession")}} to inform it when it becomes visible or hidden, or when it becomes visible but not currently focused. Upon receiving the event, you can check the value of the session's {{domxref("XRSession.visibilityState", "visibilityState")}} property to determine the new visibility state.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th>Bubbles</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th>Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th>Interface</th>
-   <td>{{domxref("XRSessionEvent")}}</td>
-  </tr>
-  <tr>
-   <th>Event handler property</th>
-   <td>{{domxref("XRSession.onvisibilitychange", "onvisibilitychange")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th>Bubbles</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Interface</th>
+      <td>{{domxref("XRSessionEvent")}}</td>
+    </tr>
+    <tr>
+      <th>Event handler property</th>
+      <td>
+        {{domxref("XRSession.onvisibilitychange", "onvisibilitychange")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>When the <code>XRSession</code> receives this event, the visibility state has already been changed.</p>
+When the `XRSession` receives this event, the visibility state has already been changed.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example demonstrates how to listen for a <code>visibilitychange</code> event on a WebXR session, using {{domxref("EventTarget.addEventListener", "addEventListener()")}} to begin listening for the event:</p>
+This example demonstrates how to listen for a `visibilitychange` event on a WebXR session, using {{domxref("EventTarget.addEventListener", "addEventListener()")}} to begin listening for the event:
 
-<pre class="brush: js">navigator.xr.requestSession("inline").then((xrSession) =&gt; {
-  xrSession.addEventListener("visibilitychange", e =&gt; {
+```js
+navigator.xr.requestSession("inline").then((xrSession) => {
+  xrSession.addEventListener("visibilitychange", e => {
     switch(e.session.visibilityState) {
       case "visible":
       case "visible-blurred":
@@ -69,20 +72,22 @@ browser-compat: api.XRSession.visibilitychange_event
     }
   });
 });
-</pre>
+```
 
-<p>When a visibility state change occurs, the event is received and dispatched to a function <code>mySessionVisible()</code>, with a Boolean parameter indicating whether or not the session is presently being displayed to the user.</p>
+When a visibility state change occurs, the event is received and dispatched to a function `mySessionVisible()`, with a Boolean parameter indicating whether or not the session is presently being displayed to the user.
 
-<p>You can also create the event handler by assigning it to the {{domxref("XRSession")}}'s {{domxref("XRSession.onvisibilitychange", "onvisibilitychange")}} event handler property, like this:</p>
+You can also create the event handler by assigning it to the {{domxref("XRSession")}}'s {{domxref("XRSession.onvisibilitychange", "onvisibilitychange")}} event handler property, like this:
 
-<pre class="brush: js">xrSession.onvisibilitychange = (e) =&gt; {
+```js
+xrSession.onvisibilitychange = (e) => {
   /* event handled here */
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}

@@ -2,83 +2,80 @@
 title: XRInputSourceEvent()
 slug: Web/API/XRInputSourceEvent/XRInputSourceEvent
 tags:
-- API
-- AR
-- Constructor
-- Input Sources
-- Inputs
-- Mixed
-- Reality
-- Reference
-- VR
-- Virtual
-- WebXR
-- WebXR API
-- WebXR Device API
-- XR
-- XRInputSourceEvent
-- augmented
-- controllers
-- events
+  - API
+  - AR
+  - Constructor
+  - Input Sources
+  - Inputs
+  - Mixed
+  - Reality
+  - Reference
+  - VR
+  - Virtual
+  - WebXR
+  - WebXR API
+  - WebXR Device API
+  - XR
+  - XRInputSourceEvent
+  - augmented
+  - controllers
+  - events
 browser-compat: api.XRInputSourceEvent.XRInputSourceEvent
 ---
-<p>{{APIRef("WebXR Device API")}}</p>
+{{APIRef("WebXR Device API")}}
 
-<p>The <code><strong>XRInputSourceEvent()</strong></code>
-    constructor creates and returns a new {{domxref("XRInputSourceEvent")}} object
-    describing an event (state change) which has occurred on a WebXR user input device
-    represented by an {{domxref("XRInputSource")}}.</p>
+The **`XRInputSourceEvent()`**
+constructor creates and returns a new {{domxref("XRInputSourceEvent")}} object
+describing an event (state change) which has occurred on a WebXR user input device
+represented by an {{domxref("XRInputSource")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>newInputSourceEvent</em> = new XRInputSourceEvent(<em>type</em>, <em>eventInitDict</em>);</pre>
+```js
+newInputSourceEvent = new XRInputSourceEvent(type, eventInitDict);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>type</code></dt>
-  <dd>
-    <p>A {{domxref("DOMString")}} indicating which of the input source events the new
-      object will represent. Permitted values are listed under {{anch("Event types")}}
-      below.</p>
-  </dd>
-  <dt><code>eventInitDict</code></dt>
-  <dd>An object to configure the event with the following properties:
-    <ul>
-      <li><code>frame</code>: An {{domxref("XRFrame")}} object representing the event frame during which the event took place. This event is <em>not</em> associated with the animation process, and has no viewer information contained within it.</li>
-      <li><code>inputSource</code>: An {{domxref("XRInputSource")}} object representing the input device from which the event is being sent.</li>
-    </ul>
-  </dd>
-</dl>
+- `type`
+  - : A {{domxref("DOMString")}} indicating which of the input source events the new
+    object will represent. Permitted values are listed under {{anch("Event types")}}
+    below.
+- `eventInitDict`
 
-<h3 id="Return_value">Return value</h3>
+  - : An object to configure the event with the following properties:
 
-<p>A new {{domxref("XRInputSourceEvent")}} object representing the event described by the
-  given <code>type</code> and <code>eventInitDict</code>.</p>
+    - `frame`: An {{domxref("XRFrame")}} object representing the event frame during which the event took place. This event is _not_ associated with the animation process, and has no viewer information contained within it.
+    - `inputSource`: An {{domxref("XRInputSource")}} object representing the input device from which the event is being sent.
 
-<h2 id="Event_types">Event types</h2>
+### Return value
 
-<p>{{page("/en-US/docs/Web/API/XRInputSourceEvent", "Event types")}}</p>
+A new {{domxref("XRInputSourceEvent")}} object representing the event described by the
+given `type` and `eventInitDict`.
 
-<h2 id="Examples">Examples</h2>
+## Event types
 
-<p>This example creates a new {{domxref("XRSession.select_event", "select")}} event and
-  sends it to the {{domxref("XRSession")}}.</p>
+{{page("/en-US/docs/Web/API/XRInputSourceEvent", "Event types")}}
 
-<pre class="brush: js">let event = new XRInputSourceEvent("select", {
+## Examples
+
+This example creates a new {{domxref("XRSession.select_event", "select")}} event and
+sends it to the {{domxref("XRSession")}}.
+
+```js
+let event = new XRInputSourceEvent("select", {
   frame: eventFrame,
   inputSource: source
 };
 if (event) {
   xrSession.dispatchEvent(event);
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}

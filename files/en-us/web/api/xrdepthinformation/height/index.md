@@ -2,38 +2,38 @@
 title: XRDepthInformation.height
 slug: Web/API/XRDepthInformation/height
 tags:
-- API
-- AR
-- Augmented Reality
-- Experimental
-- Property
-- Reference
-- VR
-- WebXR
-- WebXR Device API
+  - API
+  - AR
+  - Augmented Reality
+  - Experimental
+  - Property
+  - Reference
+  - VR
+  - WebXR
+  - WebXR Device API
 browser-compat: api.XRDepthInformation.height
 ---
-<div>{{APIRef("WebXR Device API")}}</div>
+{{APIRef("WebXR Device API")}}
 
-<p>The <em>read-only</em> <strong><code>height</code></strong> property of the {{DOMxRef("XRDepthInformation")}} interface contains the height of the depth buffer (number of rows).</p>
+The *read-only* **`height`** property of the {{DOMxRef("XRDepthInformation")}} interface contains the height of the depth buffer (number of rows).
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An unsigned long integer.</p>
+An unsigned long integer.
 
-<h2>Examples</h2>
+## Examples
 
-<p>Use {{domxref("XRFrame.getDepthInformation()")}} (CPU) or {{domxref("XRWebGLBinding.getDepthInformation()")}} (WebGL) to obtain depth information. The returned objects will contain the <code>height</code> of the depth buffer, which you can use for further calculations.</p>
+Use {{domxref("XRFrame.getDepthInformation()")}} (CPU) or {{domxref("XRWebGLBinding.getDepthInformation()")}} (WebGL) to obtain depth information. The returned objects will contain the `height` of the depth buffer, which you can use for further calculations.
 
-<pre class="brush: js">
+```js
 const smallerDepthDimension = Math.min(depthInfo.width, depthInfo.height);
 const largerDepthDimension = Math.max(depthInfo.width, depthInfo.height);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}

@@ -2,50 +2,52 @@
 title: XRRenderState.baseLayer
 slug: Web/API/XRRenderState/baseLayer
 tags:
-- API
-- AR
-- Augmented Reality
-- Experimental
-- Property
-- Reference
-- VR
-- Virtual Reality
-- WebXR
-- WebXR Device API
-- XRRenderState
-- baseLayer
+  - API
+  - AR
+  - Augmented Reality
+  - Experimental
+  - Property
+  - Reference
+  - VR
+  - Virtual Reality
+  - WebXR
+  - WebXR Device API
+  - XRRenderState
+  - baseLayer
 browser-compat: api.XRRenderState.baseLayer
 ---
-<div>{{APIRef("WebXR Device API")}}</div>
+{{APIRef("WebXR Device API")}}
 
-<p>The read-only <strong><code>baseLayer</code></strong> property of the
-  {{domxref("XRRenderState")}} interface returns the {{domxref("XRWebGLLayer")}} instance
-  that is the source of bitmap images and a description of how the image is to be rendered
-  in the device.</p>
+The read-only **`baseLayer`** property of the
+{{domxref("XRRenderState")}} interface returns the {{domxref("XRWebGLLayer")}} instance
+that is the source of bitmap images and a description of how the image is to be rendered
+in the device.
 
-<p>This property is read-only; however, you can indirectly change its
-  value using  {{domxref("XRSession.updateRenderState")}}.</p>
+This property is read-only; however, you can indirectly change its
+value using  {{domxref("XRSession.updateRenderState")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>xrWebGLLayer</var> = <em>xrRenderState</em>.baseLayer;</pre>
+```js
+var xrWebGLLayer = xrRenderState.baseLayer;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("XRWebGLLayer")}} object which is used as the source of the world's
-  contents when rendering each frame of the scene.</p>
+A {{domxref("XRWebGLLayer")}} object which is used as the source of the world's
+contents when rendering each frame of the scene.
 
-<p>See the examples below to see how to use {{domxref("XRSession.updateRenderState",
-  "updateRenderState()")}} to set the current <code>XRWebGLLayer</code> used for rendering
-  the scene.</p>
+See the examples below to see how to use {{domxref("XRSession.updateRenderState",
+  "updateRenderState()")}} to set the current `XRWebGLLayer` used for rendering
+the scene.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>You can set the <code>XRWebGLLayer</code> used for rendering by calling
-  {{domxref("XRSession.updateRenderState", "updateRenderState()")}}, like this:</p>
+You can set the `XRWebGLLayer` used for rendering by calling
+{{domxref("XRSession.updateRenderState", "updateRenderState()")}}, like this:
 
-<pre class="brush: js">let canvas = document.querySelector("canvas");
+```js
+let canvas = document.querySelector("canvas");
 gl = canvas.getContext("webgl", { xrCompatible: true });
 setNewWebGLLayer();
 
@@ -59,18 +61,17 @@ function setNewWebGLLayer(gl) {
     baseLayer: new XRWebGLLayer(xrSession, gl);
   });
 };
-</pre>
+```
 
-<p>Here, the canvas obtained in the first line is the canvas into which WebGL is going to
-  draw. That context is passed into {{domxref("XRWebGLLayer.XRWebGLLayer", "new
-  XRWebGLLayer()")}} to create an <code>XRWebGLLayer</code> which uses the contents of the
-  WebGL context <code>gl</code> as the source of the world's image during presentation.
-</p>
+Here, the canvas obtained in the first line is the canvas into which WebGL is going to
+draw. That context is passed into {{domxref("XRWebGLLayer.XRWebGLLayer", "new
+  XRWebGLLayer()")}} to create an `XRWebGLLayer` which uses the contents of the
+WebGL context `gl` as the source of the world's image during presentation.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

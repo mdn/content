@@ -2,47 +2,47 @@
 title: XRInputSourcesChangeEvent.session
 slug: Web/API/XRInputSourcesChangeEvent/session
 tags:
-- API
-- AR
-- Input Sources
-- Inputs
-- Mixed
-- Property
-- Read-only
-- Reality
-- Reference
-- Session
-- VR
-- Virtual
-- WebXR
-- WebXR API
-- WebXR Device API
-- XR
-- XRInputSourcesChangeEvent
-- augmented
+  - API
+  - AR
+  - Input Sources
+  - Inputs
+  - Mixed
+  - Property
+  - Read-only
+  - Reality
+  - Reference
+  - Session
+  - VR
+  - Virtual
+  - WebXR
+  - WebXR API
+  - WebXR Device API
+  - XR
+  - XRInputSourcesChangeEvent
+  - augmented
 browser-compat: api.XRInputSourcesChangeEvent.session
 ---
-<p>{{APIRef("WebXR Device API")}}</p>
+{{APIRef("WebXR Device API")}}
 
-<p><span class="seoSummary">The {{domxref("XRInputSourcesChangeEvent")}} property
-    {{domxref("XRInputSourcesChangeEvent.session", "session")}} specifies the
-    {{domxref("XRSession")}} to which the input source list change event applies.</span>
-</p>
+The {{domxref("XRInputSourcesChangeEvent")}} property
+{{domxref("XRInputSourcesChangeEvent.session", "session")}} specifies the
+{{domxref("XRSession")}} to which the input source list change event applies.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let <em>inputsSession</em> = <em>xrInputSourcesChangeEvent</em>.session;
-</pre>
+```js
+let inputsSession = xrInputSourcesChangeEvent.session;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{domxref("XRSession")}} indicating the WebXR session to which the input source list
-  change applies.</p>
+An {{domxref("XRSession")}} indicating the WebXR session to which the input source list
+change applies.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}

@@ -2,57 +2,55 @@
 title: XRSession.onselectstart
 slug: Web/API/XRSession/onselectstart
 tags:
-- API
-- AR
-- Augmented Reality
-- Event Handler
-- Experimental
-- Reference
-- VR
-- Virtual Reality
-- WebXR
-- WebXR Device API
-- XRSession
-- onselectstart
+  - API
+  - AR
+  - Augmented Reality
+  - Event Handler
+  - Experimental
+  - Reference
+  - VR
+  - Virtual Reality
+  - WebXR
+  - WebXR Device API
+  - XRSession
+  - onselectstart
 browser-compat: api.XRSession.onselectstart
 ---
-<div>{{APIRef("WebXR Device API")}}</div>
+{{APIRef("WebXR Device API")}}
 
-<p><span class="seoSummary">The <code><strong>onselectstart</strong></code> attribute of
-    the {{DOMxRef("XRSession")}} object is the event handler for the
-    {{DOMxRef("XRSession.selectstart_event", "selectstart")}} event, which is dispatched
-    when user starts making some sort of selection by pressing a trigger, touchpad, or
-    button, speaking a command, or making a hand gesture. For example, this might include
-    pressing a button or moving a joystick.</span></p>
+The **`onselectstart`** attribute of
+the {{DOMxRef("XRSession")}} object is the event handler for the
+{{DOMxRef("XRSession.selectstart_event", "selectstart")}} event, which is dispatched
+when user starts making some sort of selection by pressing a trigger, touchpad, or
+button, speaking a command, or making a hand gesture. For example, this might include
+pressing a button or moving a joystick.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Not to be confused with {{DOMxRef("XRSession.onselect")}}
-    and {{DOMxRef("XRSession.onselectend")}}.</p>
-</div>
+> **Note:** Not to be confused with {{DOMxRef("XRSession.onselect")}}
+> and {{DOMxRef("XRSession.onselectend")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>XRSession</em>.onselectstart = function(event) { ... }
-</pre>
+```js
+XRSession.onselectstart = function(event) { ... }
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js"><em>XRSession</em>.onselectstart = function(event) {
+```js
+XRSession.onselectstart = function(event) {
   console.log("The user has started a primary action, but might not have completed it.")
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{DOMxRef("XRSession.onselectend")}}</li>
-  <li>{{DOMxRef("XRSession.onselect")}}</li>
-</ul>
+- {{DOMxRef("XRSession.onselectend")}}
+- {{DOMxRef("XRSession.onselect")}}

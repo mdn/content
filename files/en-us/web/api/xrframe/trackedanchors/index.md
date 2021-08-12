@@ -2,37 +2,37 @@
 title: XRFrame.trackedAnchors
 slug: Web/API/XRFrame/trackedAnchors
 tags:
-- API
-- Property
-- Reference
-- AR
-- VR
-- XR
-- WebXR
+  - API
+  - Property
+  - Reference
+  - AR
+  - VR
+  - XR
+  - WebXR
 browser-compat: api.XRFrame.trackedAnchors
 ---
-<div>{{APIRef("WebXR Device API")}}</div>
+{{APIRef("WebXR Device API")}}
 
-<p>The read-only <code><strong>trackedAnchor</strong></code> property of the {{domxref("XRFrame")}} interface returns an {{domxref("XRAnchorSet")}} object containing all anchors still tracked in the frame.</p>
+The read-only **`trackedAnchor`** property of the {{domxref("XRFrame")}} interface returns an {{domxref("XRAnchorSet")}} object containing all anchors still tracked in the frame.
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{domxref("XRAnchorSet")}} object.</p>
+An {{domxref("XRAnchorSet")}} object.
 
-<h2>Examples</h2>
+## Examples
 
-<h3>Updating anchors</h3>
+### Updating anchors
 
-<pre class="brush: js">
+```js
 for (const anchor of frame.trackedAnchors) {
   const pose = frame.getPose(anchor.anchorSpace, referenceSpace);
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

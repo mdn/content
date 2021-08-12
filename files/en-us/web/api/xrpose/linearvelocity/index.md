@@ -2,42 +2,41 @@
 title: XRPose.linearVelocity
 slug: Web/API/XRPose/linearVelocity
 tags:
-- API
-- Property
-- Read-only
-- Reference
-- WebXR
-- XRPose
+  - API
+  - Property
+  - Read-only
+  - Reference
+  - WebXR
+  - XRPose
 browser-compat: api.XRPose.linearVelocity
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <code>linearVelocity</code> read-only property of the
+The `linearVelocity` read-only property of the
 {{DOMxRef("XRPose")}} interface is a {{DOMxRef("DOMPointReadOnly")}} describing
 the linear velocity in meters per second relative to the base
-{{DOMxRef("XRSpace")}}.</p>
+{{DOMxRef("XRSpace")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let metersPerSecond = xrPose.linearVelocity;</pre>
+```js
+let metersPerSecond = xrPose.linearVelocity;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{DOMxRef("DOMPointReadOnly")}} describing the linear velocity in meters
+A {{DOMxRef("DOMPointReadOnly")}} describing the linear velocity in meters
 per second relative to the base {{DOMxRef("XRSpace")}}. Returns {{jsxref("null")}}
-if the user agent can’t populate this value.</p>
+if the user agent can’t populate this value.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}
 
+## See also
 
-<h2>See also</h2>
-
-<ul>
-  <li>{{domxref("XRPose.linearVelocity")}}</li>
-</ul>
+- {{domxref("XRPose.linearVelocity")}}

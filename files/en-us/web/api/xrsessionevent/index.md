@@ -21,46 +21,41 @@ tags:
   - augmented
 browser-compat: api.XRSessionEvent
 ---
-<p>{{APIRef("WebXR Device API")}}</p>
+{{APIRef("WebXR Device API")}}
 
-<p>The <a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</a>'s <code><strong>XRSessionEvent</strong></code> interface describes an event which indicates the change of the state of an {{domxref("XRSession")}}. These events occur, for example, when the session ends or the visibility of its context changes.</p>
+The [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API)'s **`XRSessionEvent`** interface describes an event which indicates the change of the state of an {{domxref("XRSession")}}. These events occur, for example, when the session ends or the visibility of its context changes.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("XRSessionEvent.XRSessionEvent", "XRSessionEvent()")}}</dt>
- <dd>Creates and returns a new <code>XRSessionEvent</code> object.</dd>
-</dl>
+- {{domxref("XRSessionEvent.XRSessionEvent", "XRSessionEvent()")}}
+  - : Creates and returns a new `XRSessionEvent` object.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>In addition to properties inherited from its parent interface, {{domxref("Event")}}, <code>XRSessionEvent</code> provides the following:</em></p>
+_In addition to properties inherited from its parent interface, {{domxref("Event")}}, `XRSessionEvent` provides the following:_
 
-<dl>
- <dt>{{domxref("XRSessionEvent.session", "session")}} {{ReadOnlyInline}}</dt>
- <dd>The {{domxref("XRSession")}} to which the event refers.</dd>
-</dl>
+- {{domxref("XRSessionEvent.session", "session")}} {{ReadOnlyInline}}
+  - : The {{domxref("XRSession")}} to which the event refers.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>While <code>XRSessionEvent</code> defines no methods, it inherits methods from its parent interface, {{domxref("Event")}}.</em></p>
+_While `XRSessionEvent` defines no methods, it inherits methods from its parent interface, {{domxref("Event")}}._
 
-<h2 id="Session_event_types">Session event types</h2>
+## Session event types
 
-<p><em>The following events are represented using the <code>XRSessionEvent</code> interface, and are permitted values for its <code>type</code> property.</em></p>
+_The following events are represented using the `XRSessionEvent` interface, and are permitted values for its `type` property._
 
-<dl>
- <dt>{{domxref("XRSession.end_event", "end")}}</dt>
- <dd>Fired at the session when it has ended, after being terminated by the application or the {{Glossary("user agent")}}.</dd>
- <dt>{{domxref("XRSession.visibilitychange_event", "visibilitychange")}}</dt>
- <dd>Fired at the session whenever its visibility state changes.</dd>
-</dl>
+- {{domxref("XRSession.end_event", "end")}}
+  - : Fired at the session when it has ended, after being terminated by the application or the {{Glossary("user agent")}}.
+- {{domxref("XRSession.visibilitychange_event", "visibilitychange")}}
+  - : Fired at the session whenever its visibility state changes.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example creates a listiener that watches for the visibility state of the session to change. It reacts by calling a function <code>mySessionVisible()</code> with a Boolean indicating whether or not the session is visible; this function might, for instance, spin up or reconfigure a worker that handles rendering the scene.</p>
+This example creates a listiener that watches for the visibility state of the session to change. It reacts by calling a function `mySessionVisible()` with a Boolean indicating whether or not the session is visible; this function might, for instance, spin up or reconfigure a worker that handles rendering the scene.
 
-<pre class="brush: js">xrSession.addEventListener("visibilitystate", e =&gt; {
+```js
+xrSession.addEventListener("visibilitystate", e => {
   switch(e.session.visibilitystate) {
     case "visible":
     case "visible-blurred":
@@ -71,12 +66,12 @@ browser-compat: api.XRSessionEvent
       break;
   }
 });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}

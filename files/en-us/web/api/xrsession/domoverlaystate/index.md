@@ -2,60 +2,58 @@
 title: XRSession.domOverlayState
 slug: Web/API/XRSession/domOverlayState
 tags:
-- API
-- AR
-- Augmented Reality
-- Experimental
-- Property
-- Reference
-- VR
-- WebXR
-- WebXR Device API
-- XRSession
+  - API
+  - AR
+  - Augmented Reality
+  - Experimental
+  - Property
+  - Reference
+  - VR
+  - WebXR
+  - WebXR Device API
+  - XRSession
 browser-compat: api.XRSession.domOverlayState
 ---
-<div>{{APIRef("WebXR Device API")}}</div>
+{{APIRef("WebXR Device API")}}
 
-<p>The <em>read-only</em> <strong><code>domOverlayState</code></strong> property of an <code>immersive-ar</code>
-    {{DOMxRef("XRSession")}} provides information about the DOM overlay, if the feature is enabled.</p>
+The *read-only* **`domOverlayState`** property of an `immersive-ar`
+{{DOMxRef("XRSession")}} provides information about the DOM overlay, if the feature is enabled.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">session.domOverlayState;</pre>
+```js
+session.domOverlayState;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>Returns {{jsxref("null")}} if the DOM overlay feature is not supported or not enabled or an object containing information about the dom overlay state with the following properties:</p>
+Returns {{jsxref("null")}} if the DOM overlay feature is not supported or not enabled or an object containing information about the dom overlay state with the following properties:
 
-<dl>
-  <dt><code>type</code></dt>
-  <dd>A string indicating how the DOM overlay is being displayed. Possible values:
-    <ul>
-      <li><code>screen</code>: the overlay is drawn on the entire screen-based device (for handheld AR devices).</li>
-      <li><code>head-locked</code>: the overlay is drawn at a head-locked UI that fills the renderable viewport and follows the user’s head movement.</li>
-      <li><code>floating</code>:  the overlay appears as a rectangle floating in space that's kept in front of the user.
-      It doesn't necessarily fill up the entire space and/or is strictly head-locked.</li>
-    </ul>
+- `type`
 
-  </dd>
-</dl>
+  - : A string indicating how the DOM overlay is being displayed. Possible values:
 
-<h2>Examples</h2>
+    - `screen`: the overlay is drawn on the entire screen-based device (for handheld AR devices).
+    - `head-locked`: the overlay is drawn at a head-locked UI that fills the renderable viewport and follows the user’s head movement.
+    - `floating`: the overlay appears as a rectangle floating in space that's kept in front of the user.
+      It doesn't necessarily fill up the entire space and/or is strictly head-locked.
 
-<h3>Checking which DOM overlay got enabled</h3>
+## Examples
 
-<pre class="brush: js">
+### Checking which DOM overlay got enabled
+
+```js
 if (session.domOverlayState) {
   console.log(session.domOverlayState.type);
 } else {
   console.log("DOM overlay not supported or enabled!");
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}

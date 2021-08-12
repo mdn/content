@@ -2,60 +2,60 @@
 title: XRViewport.y
 slug: Web/API/XRViewport/y
 tags:
-- API
-- AR
-- Horizontal
-- Position
-- Property
-- Read-only
-- Reality
-- Reference
-- VR
-- Virtual
-- WebXR
-- WebXR API
-- WebXR Device API
-- XR
-- XRViewport
-- augmented
-- origin
-- viewport
-- 'y'
+  - API
+  - AR
+  - Horizontal
+  - Position
+  - Property
+  - Read-only
+  - Reality
+  - Reference
+  - VR
+  - Virtual
+  - WebXR
+  - WebXR API
+  - WebXR Device API
+  - XR
+  - XRViewport
+  - augmented
+  - origin
+  - viewport
+  - 'y'
 browser-compat: api.XRViewport.y
 ---
-<p>{{APIRef("WebXR Device API")}}</p>
+{{APIRef("WebXR Device API")}}
 
-<p>The read-only {{domxref("XRViewport")}} interface's
-    <code><strong>y</strong></code> property indicates the offset from the bottom edge of
-    the destination surface (typically a {{domxref("XRWebGLLayer")}} to the bottom edge of
-    the viewport within the surface into which WebXR content is to be rendered. The
-  viewport's {{domxref("XRViewport.x", "x")}} property identifies the <code>x</code>
-  component of the origin, and its is given by the {{domxref("XRViewPort.width",
-  "width")}} and {{domxref("XRViewport.height", "height")}} properties.</p>
+The read-only {{domxref("XRViewport")}} interface's
+**`y`** property indicates the offset from the bottom edge of
+the destination surface (typically a {{domxref("XRWebGLLayer")}} to the bottom edge of
+the viewport within the surface into which WebXR content is to be rendered. The
+viewport's {{domxref("XRViewport.x", "x")}} property identifies the `x`
+component of the origin, and its is given by the {{domxref("XRViewPort.width",
+  "width")}} and {{domxref("XRViewport.height", "height")}} properties.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>y</em> = <em>xrViewport</em>.y;</pre>
+```js
+y = xrViewport.y;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>The offset from the bottom edge of the rendering surface to the bottom edge of the
-  viewport, in pixels.</p>
+The offset from the bottom edge of the rendering surface to the bottom edge of the
+viewport, in pixels.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Although other web APIs typically consider the <code>y</code>
-    axis to begin at the top and grow larger progressing downward, WebGL reverses this,
-    with <code>y</code> growing larger as it goes upward on the screen.</p>
-</div>
+> **Note:** Although other web APIs typically consider the `y`
+> axis to begin at the top and grow larger progressing downward, WebGL reverses this,
+> with `y` growing larger as it goes upward on the screen.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>See the main {{domxref("XRViewport")}} page for examples.</p>
+See the main {{domxref("XRViewport")}} page for examples.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}

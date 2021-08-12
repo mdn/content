@@ -2,50 +2,48 @@
 title: XRCPUDepthInformation.getDepthInMeters()
 slug: Web/API/XRCPUDepthInformation/getDepthInMeters
 tags:
-- API
-- AR
-- Augmented Reality
-- Experimental
-- Method
-- Reference
-- VR
-- WebXR
-- WebXR Device API
+  - API
+  - AR
+  - Augmented Reality
+  - Experimental
+  - Method
+  - Reference
+  - VR
+  - WebXR
+  - WebXR Device API
 browser-compat: api.XRCPUDepthInformation.getDepthInMeters
 ---
-<div>{{APIRef("WebXR Device API")}}</div>
+{{APIRef("WebXR Device API")}}
 
-<p>The <strong><code>getDepthInMeters()</code></strong> method of the {{DOMxRef("XRCPUDepthInformation")}} interface returns the depth in meters at (x, y) in normalized view coordinates (origin in the top left corner).</p>
+The **`getDepthInMeters()`** method of the {{DOMxRef("XRCPUDepthInformation")}} interface returns the depth in meters at (x, y) in normalized view coordinates (origin in the top left corner).
 
-<h2>Syntax</h2>
+## Syntax
 
-<pre class="brush: js">getDepthInMeters(x, y)</pre>
+```js
+getDepthInMeters(x, y)
+```
 
-<h3>Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>x</code></dt>
-  <dd>X coordinate (origin at the left, grows to the right).</dd>
-  <dt><code>y</code></dt>
-  <dd>Y coordinate (origin at the top, grows downward).</dd>
-</dl>
+- `x`
+  - : X coordinate (origin at the left, grows to the right).
+- `y`
+  - : Y coordinate (origin at the top, grows downward).
 
-<h3>Exceptions</h3>
+### Exceptions
 
-<ul>
-  <li>A {{jsxref("RangeError")}} is thrown if <code>x</code> or <code>y</code> are greater than 1.0 or less than 0.0.</li>
-</ul>
+- A {{jsxref("RangeError")}} is thrown if `x` or `y` are greater than 1.0 or less than 0.0.
 
-<h2>Examples</h2>
+## Examples
 
-<pre class="brush: js">
+```js
 const distance = depthInfo.getDepthInMeters(x, y);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}

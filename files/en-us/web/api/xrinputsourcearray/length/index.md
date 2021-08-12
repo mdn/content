@@ -2,49 +2,51 @@
 title: XRInputSourceArray.length
 slug: Web/API/XRInputSourceArray/length
 tags:
-- API
-- AR
-- Input Sources
-- Inputs
-- Mixed
-- Property
-- Reality
-- Reference
-- VR
-- Virtual
-- WebXR
-- WebXR API
-- WebXR Device API
-- XR
-- XRInputSourceArray
-- augmented
-- controllers
-- count
+  - API
+  - AR
+  - Input Sources
+  - Inputs
+  - Mixed
+  - Property
+  - Reality
+  - Reference
+  - VR
+  - Virtual
+  - WebXR
+  - WebXR API
+  - WebXR Device API
+  - XR
+  - XRInputSourceArray
+  - augmented
+  - controllers
+  - count
 browser-compat: api.XRInputSourceArray.length
 ---
-<p>{{APIRef("WebXR Device API")}}</p>
+{{APIRef("WebXR Device API")}}
 
-<p>The read-only <code><strong>length</strong></code> property returns an integer value
-  indicating the number of items in the input source list represented by
-  the {{domxref("XRInputSourceArray")}} object.</p>
+The read-only **`length`** property returns an integer value
+indicating the number of items in the input source list represented by
+the {{domxref("XRInputSourceArray")}} object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">let <em>inputSourceCount</em> = <em>xrInputSourceArray</em>.length;</pre>
+```js
+let inputSourceCount = xrInputSourceArray.length;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An integer value indicating the number of {{domxref("XRInputSource")}} objects
-  representing WebXR input sources are includled in the array.</p>
+An integer value indicating the number of {{domxref("XRInputSource")}} objects
+representing WebXR input sources are includled in the array.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In this example, a game that requires at least one input source
-  uses <code>length</code> to check this before proceeding to allow the user to play the
-  game.</p>
+In this example, a game that requires at least one input source
+uses `length` to check this before proceeding to allow the user to play the
+game.
 
-<pre class="brush: js">let sources = xrSession.inputSources;
+```js
+let sources = xrSession.inputSources;
 
 if (sources.length === 0) {
   showAlertDialog("You need to have at least one controller to play Super Duper Shark Jump Fest 9000.",
@@ -52,19 +54,20 @@ if (sources.length === 0) {
                     { label: "Shop Now", url: "https://www.amazon.com/s?k=vr+controllers" },
                     { label: "Quit" handler: quitGame }
                   ]);
-}</pre>
+}
+```
 
-<p>Here, if <code>length</code> is 0, a
-  hypothetical <code>showAlertDialog()</code> function is called with a prompt string
-  explaining the need for a controller, and an array of objects, each describing a button
-  and what should happen when it's clicked. The first takes the user to an Amazon.com
-  search for VR controllers, and the second calls a <code>quitGame()</code> function to
-  start shutting the game program down.</p>
+Here, if `length` is 0, a
+hypothetical `showAlertDialog()` function is called with a prompt string
+explaining the need for a controller, and an array of objects, each describing a button
+and what should happen when it's clicked. The first takes the user to an Amazon.com
+search for VR controllers, and the second calls a `quitGame()` function to
+start shutting the game program down.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

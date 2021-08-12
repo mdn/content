@@ -2,99 +2,92 @@
 title: XRWebGLLayer()
 slug: Web/API/XRWebGLLayer/XRWebGLLayer
 tags:
-- API
-- AR
-- Constructor
-- Context
-- Create
-- Initialize
-- Layer
-- Reality
-- Reference
-- VR
-- Virtual
-- WebXR
-- WebXR API
-- WebXR Device API
-- XR
-- XRWebGLLayer
-- augmented
-- new
+  - API
+  - AR
+  - Constructor
+  - Context
+  - Create
+  - Initialize
+  - Layer
+  - Reality
+  - Reference
+  - VR
+  - Virtual
+  - WebXR
+  - WebXR API
+  - WebXR Device API
+  - XR
+  - XRWebGLLayer
+  - augmented
+  - new
 browser-compat: api.XRWebGLLayer.XRWebGLLayer
 ---
-<p>{{APIRef("WebXR Device API")}}</p>
+{{APIRef("WebXR Device API")}}
 
-<p>The <a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR
-      Device API</a> <code><strong>XRWebGLLayer()</strong></code> constructor creates and
-    returns a new {{domxref("XRWebGLLayer")}} object, providing the linkage between the
-    WebXR device and the WebGL graphics layer used to render the 3D scene.</p>
+The [WebXR
+Device API](/en-US/docs/Web/API/WebXR_Device_API) **`XRWebGLLayer()`** constructor creates and
+returns a new {{domxref("XRWebGLLayer")}} object, providing the linkage between the
+WebXR device and the WebGL graphics layer used to render the 3D scene.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">let <em>glLayer</em> = new XRWebGLLayer(<em>session</em>, <em>context</em>, <em>layerInit</em>);</pre>
+```js
+let glLayer = new XRWebGLLayer(session, context, layerInit);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>session</code></dt>
-  <dd>An {{domxref("XRSession")}} object specifying the WebXR session which will be
-    rendered using the WebGL context.</dd>
-  <dt><code>context</code></dt>
-  <dd>A {{domxref("WebGLRenderingContext")}} or {{domxref("WebGL2RenderingContext")}}
+- `session`
+  - : An {{domxref("XRSession")}} object specifying the WebXR session which will be
+    rendered using the WebGL context.
+- `context`
+  - : A {{domxref("WebGLRenderingContext")}} or {{domxref("WebGL2RenderingContext")}}
     identifying the WebGL drawing context to use for rendering the scene for the specified
-    WebXR session.</dd>
-  <dt><code>layerInit</code> {{optional_inline}}</dt>
-  <dd>
-    <p>An object providing configuration options for the new <code>XRWebGLLayer</code>. The available options
-      are:</p>
-    <ul>
-      <li><code>alpha</code>: The frame buffer's color buffer will be established with an alpha channel if the <code>alpha</code> Boolean property is <code>true</code>. Otherwise, the color buffer will not have an alpha channel. The default value is <code>true</code>.</li>
-      <li><code>antialias</code>: A Boolean value which is <code>true</code> if anti-aliasing is to be used when rendering in the context; otherwise <code>false</code>. The browser selects the anti-aliasing method to use; there is no support for requesting a specific mode yet.  The default value is <code>true</code>.</li>
-      <li><code>depth</code>: A Boolean value which, if <code>true</code>, requests that the new layer have a depth buffer; otherwise, no depth layer is allocated. The default is <code>true</code>.</li>
-      <li><code>framebufferScaleFactor</code>: A floating-point value which is used to scale the image during compositing, with a value of 1.0 represents the default pixel size for the frame buffer. The static {{domxref("XRWebGLLayer")}} function {{domxref("XRWebGLLayer.getNativeFramebufferScaleFactor()")}} returns the scale that would result in a 1:1 pixel ratio, thereby ensuring that the rendering is occurring at the device's native resolution. The default is 1.0.</li>
-      <li><code>ignoreDepthValues</code>: A Boolean value which indicates whether or not to ignore the contents of the depth buffer while compositing the scene. The default is <code>false</code>.</li>
-      <li><code>stencil</code>: A Boolean value which, if <code>true</code>, requests that the new layer include a stencil buffer. Otherwise, no stencil buffer is allocated. The default is <code>false</code>.</li>
-    </ul>
-  </dd>
-</dl>
+    WebXR session.
+- `layerInit` {{optional_inline}}
 
-<h3 id="Return_value">Return value</h3>
+  - : An object providing configuration options for the new `XRWebGLLayer`. The available options
+    are:
 
-<p>A newly-created {{domxref("XRWebGLLayer")}} which links the specified
-  {{domxref("XRSession")}} to the WebGL context given by <code>context</code>, which will
-  be used as the renderer for the session. Any options specified in <code>layerInit</code>
-  are used to tailor the rendering system's configuration.</p>
+    - `alpha`: The frame buffer's color buffer will be established with an alpha channel if the `alpha` Boolean property is `true`. Otherwise, the color buffer will not have an alpha channel. The default value is `true`.
+    - `antialias`: A Boolean value which is `true` if anti-aliasing is to be used when rendering in the context; otherwise `false`. The browser selects the anti-aliasing method to use; there is no support for requesting a specific mode yet.  The default value is `true`.
+    - `depth`: A Boolean value which, if `true`, requests that the new layer have a depth buffer; otherwise, no depth layer is allocated. The default is `true`.
+    - `framebufferScaleFactor`: A floating-point value which is used to scale the image during compositing, with a value of 1.0 represents the default pixel size for the frame buffer. The static {{domxref("XRWebGLLayer")}} function {{domxref("XRWebGLLayer.getNativeFramebufferScaleFactor()")}} returns the scale that would result in a 1:1 pixel ratio, thereby ensuring that the rendering is occurring at the device's native resolution. The default is 1.0.
+    - `ignoreDepthValues`: A Boolean value which indicates whether or not to ignore the contents of the depth buffer while compositing the scene. The default is `false`.
+    - `stencil`: A Boolean value which, if `true`, requests that the new layer include a stencil buffer. Otherwise, no stencil buffer is allocated. The default is `false`.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Return value
 
-<dl>
-  <dt><code>InvalidStateError</code></dt>
-  <dd>
-    <p>The new <code>XRWebGLLayer</code> could not be created due to one of a number of
-      possible state errors:</p>
+A newly-created {{domxref("XRWebGLLayer")}} which links the specified
+{{domxref("XRSession")}} to the WebGL context given by `context`, which will
+be used as the renderer for the session. Any options specified in `layerInit`
+are used to tailor the rendering system's configuration.
 
-    <ul>
-      <li>The {{domxref("XRSession")}} specified by <code>session</code> has already been
-        stopped.</li>
-      <li>The specified WebGL context, <code>context</code>, <a
-          href="/en-US/docs/Web/API/WebGLRenderingContext/isContextLost#Usage_notes">has
-          been lost</a> for any reason, such as a GPU switch or reset.</li>
-      <li>The specified <code>session</code> is immersive but the <code>context</code> is
-        not WebXR compatible.</li>
-    </ul>
-  </dd>
-  <dt><code>OperationError</code></dt>
-  <dd>The resources (including memory buffers) needed for the layer to operate could not
-    be allocated.</dd>
-</dl>
+### Exceptions
 
-<h2 id="Example">Example</h2>
+- `InvalidStateError`
 
-<p>In this example, a new {{domxref("XRWebGLLayer")}} is created for a WebXR session,
-  <code>xrSession</code>.</p>
+  - : The new `XRWebGLLayer` could not be created due to one of a number of
+    possible state errors:
 
-<pre class="brush: js">xrSession.updateRenderState({
+    - The {{domxref("XRSession")}} specified by `session` has already been
+      stopped.
+    - The specified WebGL context, `context`, [has
+      been lost](/en-US/docs/Web/API/WebGLRenderingContext/isContextLost#Usage_notes) for any reason, such as a GPU switch or reset.
+    - The specified `session` is immersive but the `context` is
+      not WebXR compatible.
+
+- `OperationError`
+  - : The resources (including memory buffers) needed for the layer to operate could not
+    be allocated.
+
+## Example
+
+In this example, a new {{domxref("XRWebGLLayer")}} is created for a WebXR session,
+`xrSession`.
+
+```js
+xrSession.updateRenderState({
   baseLayer: new XRWebGLLayer(xrSession, gl, {
      alpha: false,
      antialias: false,
@@ -104,22 +97,20 @@ browser-compat: api.XRWebGLLayer.XRWebGLLayer
      stencil: false
   });
 });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</a></li>
-  <li><a href="/en-US/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL">Getting
-      started with WebGL</a></li>
-  <li><a href="https://www.khronos.org/webgl/wiki/HandlingContextLost">Handling lost
-      context in WebGL</a>: Khronos WebGL wiki</li>
-</ul>
+- [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API)
+- [Getting
+  started with WebGL](/en-US/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL)
+- [Handling lost
+  context in WebGL](https://www.khronos.org/webgl/wiki/HandlingContextLost): Khronos WebGL wiki

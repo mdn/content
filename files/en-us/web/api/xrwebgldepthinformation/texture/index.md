@@ -2,30 +2,30 @@
 title: XRWebGLDepthInformation.texture
 slug: Web/API/XRWebGLDepthInformation/texture
 tags:
-- API
-- AR
-- Augmented Reality
-- Experimental
-- Property
-- Reference
-- VR
-- WebXR
-- WebXR Device API
+  - API
+  - AR
+  - Augmented Reality
+  - Experimental
+  - Property
+  - Reference
+  - VR
+  - WebXR
+  - WebXR Device API
 browser-compat: api.XRWebGLDepthInformation.texture
 ---
-<div>{{APIRef("WebXR Device API")}}</div>
+{{APIRef("WebXR Device API")}}
 
-<p>The <em>read-only</em> <strong><code>texture</code></strong> property of the {{DOMxRef("XRWebGLDepthInformation")}} interface is a {{domxref("WebGLTexture")}} containing depth buffer information as an opaque texture.</p>
+The _read-only_ **`texture`** property of the {{DOMxRef("XRWebGLDepthInformation")}} interface is a {{domxref("WebGLTexture")}} containing depth buffer information as an opaque texture.
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("WebGLTexture")}}.</p>
+A {{domxref("WebGLTexture")}}.
 
-<h2>Examples</h2>
+## Examples
 
-<p>Use {{domxref("XRWebGLBinding.getDepthInformation()")}} to obtain GPU depth information. The returned <code>XRWebGLDepthInformation</code> object will contain the <code>texture</code> buffer which can then be bound to a texture and depth buffer information can be made available to a WebGL fragment shader.</p>
+Use {{domxref("XRWebGLBinding.getDepthInformation()")}} to obtain GPU depth information. The returned `XRWebGLDepthInformation` object will contain the `texture` buffer which can then be bound to a texture and depth buffer information can be made available to a WebGL fragment shader.
 
-<pre class="brush: js">
+```js
 const depthInfo = glBinding.getDepthInformation(view);
 const uvTransform = depthInfo.normDepthBufferFromNormView.matrix;
 
@@ -42,19 +42,17 @@ gl.uniformMatrix4fv(u_UVTransformLocation, false, uvTransform);
 
 // scaling factor to convert from the raw number to meters
 gl.uniform1f(u_RawValueToMeters, depthInfo.rawValueToMeters);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("XRWebGLBinding.getDepthInformation()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.bindTexture()")}}</li>
-</ul>
+- {{domxref("XRWebGLBinding.getDepthInformation()")}}
+- {{domxref("WebGLRenderingContext.bindTexture()")}}

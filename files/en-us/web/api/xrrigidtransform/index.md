@@ -21,60 +21,56 @@ tags:
   - transform
 browser-compat: api.XRRigidTransform
 ---
-<p>{{APIRef("WebXR Device API")}}</p>
+{{APIRef("WebXR Device API")}}
 
-<p>The <strong><code>XRRigidTransform</code></strong> is a <a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR API</a> interface that represents the 3D geometric transform described by a position and orientation.</p>
+The **`XRRigidTransform`** is a [WebXR API](/en-US/docs/Web/API/WebXR_Device_API) interface that represents the 3D geometric transform described by a position and orientation.
 
-<p><code>XRRigidTransform</code> is used to specify transforms throughout the WebXR APIs, including:</p>
+`XRRigidTransform` is used to specify transforms throughout the WebXR APIs, including:
 
-<ul>
- <li>The offset and orientation relative to the parent reference space to use when creating a new reference space with {{domxref("XRReferenceSpace.getOffsetReferenceSpace", "getOffsetReferenceSpace()")}}.</li>
- <li>The {{domxref("XRView.transform", "transform")}} of an {{domxref("XRView")}}.</li>
- <li>The {{domxref("XRPose.transform", "transform")}} of an {{domxref("XRPose")}}.</li>
- <li>The {{domxref("XRReferenceSpaceEvent")}} event's {{domxref("XRReferenceSpaceEvent.transform", "transform")}} property, as found in the {{domxref("XRReferenceSpace.reset_event", "reset")}} event received by an {{domxref("XRReferenceSpace")}}.</li>
-</ul>
+- The offset and orientation relative to the parent reference space to use when creating a new reference space with {{domxref("XRReferenceSpace.getOffsetReferenceSpace", "getOffsetReferenceSpace()")}}.
+- The {{domxref("XRView.transform", "transform")}} of an {{domxref("XRView")}}.
+- The {{domxref("XRPose.transform", "transform")}} of an {{domxref("XRPose")}}.
+- The {{domxref("XRReferenceSpaceEvent")}} event's {{domxref("XRReferenceSpaceEvent.transform", "transform")}} property, as found in the {{domxref("XRReferenceSpace.reset_event", "reset")}} event received by an {{domxref("XRReferenceSpace")}}.
 
-<p>Using <code>XRRigidTransform</code> in these places rather than bare arrays that provide the matrix data has an advantage. It automatically computes the inverse of the transform and even caches it making subsequent requests significantly faster.</p>
+Using `XRRigidTransform` in these places rather than bare arrays that provide the matrix data has an advantage. It automatically computes the inverse of the transform and even caches it making subsequent requests significantly faster.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("XRRigidTransform.XRRigidTransform", "new XRRigidTransform()")}}</dt>
- <dd>Creates a new <code>XRRigidTransform</code> object which represents a transform that applies a specified position and/or orientation.</dd>
-</dl>
+- {{domxref("XRRigidTransform.XRRigidTransform", "new XRRigidTransform()")}}
+  - : Creates a new `XRRigidTransform` object which represents a transform that applies a specified position and/or orientation.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{DOMxRef("XRRigidTransform.position")}} {{readonlyInline}} {{experimental_inline}}</dt>
- <dd>A {{DOMxRef("DOMPointReadOnly")}} specifying a 3-dimensional point, expressed in meters, describing the translation component of the transform. The {{DOMxRef("DOMPointReadonly.w", "w")}} property is always <code>1.0</code>.</dd>
- <dt>{{DOMxRef("XRRigidTransform.orientation")}} {{readonlyInline}} {{experimental_inline}}</dt>
- <dd>A {{DOMxRef("DOMPointReadOnly")}} which contains a unit quaternion describing the rotational component of the transform. As a unit quaternion, its length is always normalized to <code>1.0</code>.</dd>
- <dt>{{DOMxRef("XRRigidTransform.matrix")}} {{readonlyInline}} {{experimental_inline}}</dt>
- <dd>Returns the transform matrix in the form of a 16-member {{jsxref("Float32Array")}}. See the section <a href="/en-US/docs/Web/API/XRRigidTransform/matrix#matrix_format">Matrix format</a> for how the array is used to represent a matrix.</dd>
- <dt>{{DOMxRef("XRRigidTransform.inverse")}} {{readonlyInline}} {{experimental_inline}}</dt>
- <dd>Returns a <code>XRRigidTransform</code> which is the inverse of this transform. That is, if applied to an object that had been previously transformed by the original transform, it will undo the transform and return the original object.</dd>
-</dl>
+- {{DOMxRef("XRRigidTransform.position")}} {{readonlyInline}} {{experimental_inline}}
+  - : A {{DOMxRef("DOMPointReadOnly")}} specifying a 3-dimensional point, expressed in meters, describing the translation component of the transform. The {{DOMxRef("DOMPointReadonly.w", "w")}} property is always `1.0`.
+- {{DOMxRef("XRRigidTransform.orientation")}} {{readonlyInline}} {{experimental_inline}}
+  - : A {{DOMxRef("DOMPointReadOnly")}} which contains a unit quaternion describing the rotational component of the transform. As a unit quaternion, its length is always normalized to `1.0`.
+- {{DOMxRef("XRRigidTransform.matrix")}} {{readonlyInline}} {{experimental_inline}}
+  - : Returns the transform matrix in the form of a 16-member {{jsxref("Float32Array")}}. See the section [Matrix format](/en-US/docs/Web/API/XRRigidTransform/matrix#matrix_format) for how the array is used to represent a matrix.
+- {{DOMxRef("XRRigidTransform.inverse")}} {{readonlyInline}} {{experimental_inline}}
+  - : Returns a `XRRigidTransform` which is the inverse of this transform. That is, if applied to an object that had been previously transformed by the original transform, it will undo the transform and return the original object.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>When an <code>XRRigidTransform</code> is interpreted, the orientation is always applied to the affected object before the position is applied.</p>
+When an `XRRigidTransform` is interpreted, the orientation is always applied to the affected object before the position is applied.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This code snippet creates an <code>XRRigidTransform</code> to specify the offset and orientation in relation to the current reference space to use when creating a new reference space. It then requests the first animation frame callback by calling the session's {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}} method.</p>
+This code snippet creates an `XRRigidTransform` to specify the offset and orientation in relation to the current reference space to use when creating a new reference space. It then requests the first animation frame callback by calling the session's {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}} method.
 
-<pre class="brush: js">xrSession.requestReferenceSpace(refSpaceType)
-.then((refSpace) =&gt; {
+```js
+xrSession.requestReferenceSpace(refSpaceType)
+.then((refSpace) => {
   xrReferenceSpace = refSpace;
   xrReferenceSpace = xrReferenceSpace.getOffsetReferenceSpace(
         new XRRigidTransform(viewerStartPosition, cubeOrientation));
-  animationFrameRequestID = xrSession.requestAnimationFrame(drawFrame);</pre>
+  animationFrameRequestID = xrSession.requestAnimationFrame(drawFrame);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}

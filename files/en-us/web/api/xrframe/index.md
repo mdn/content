@@ -18,45 +18,39 @@ tags:
   - XRFrame
 browser-compat: api.XRFrame
 ---
-<div>{{APIRef("WebXR Device API")}}{{SecureContext_Header}}</div>
+{{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
-<p>A <a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</a> <code><strong>XRFrame</strong></code> object is passed into the {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}} callback function and provides access to the information needed in order to render a single frame of animation for an {{domxref("XRSession")}} describing a VR or AR scene. Events which communicate the tracking state of objects also provide an <code>XRFrame</code> reference as part of their structure.</p>
+A [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) **`XRFrame`** object is passed into the {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}} callback function and provides access to the information needed in order to render a single frame of animation for an {{domxref("XRSession")}} describing a VR or AR scene. Events which communicate the tracking state of objects also provide an `XRFrame` reference as part of their structure.
 
-<p>In addition to providing a reference to the {{domxref("XRSession")}} for which this frame is to be rendered, the {{domxref("XRFrame.getViewerPose", "getViewerPose()")}} method is provided to obtain the {{domxref("XRViewerPose")}} describing the viewer's position and orientation in space, and {{domxref("XRFrame.getPose", "getPose()")}} can be used to create an {{domxref("XRPose")}} describing the relative position of one {{domxref("XRSpace")}} relative to another.</p>
+In addition to providing a reference to the {{domxref("XRSession")}} for which this frame is to be rendered, the {{domxref("XRFrame.getViewerPose", "getViewerPose()")}} method is provided to obtain the {{domxref("XRViewerPose")}} describing the viewer's position and orientation in space, and {{domxref("XRFrame.getPose", "getPose()")}} can be used to create an {{domxref("XRPose")}} describing the relative position of one {{domxref("XRSpace")}} relative to another.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{DOMxRef("XRFrame.session", "session")}} {{ReadonlyInline}}</dt>
- <dd>The {{DOMxRef("XRSession")}} that for which this <code>XRFrame</code> describes the tracking details for all objects. The information about a specific object can be obtained by calling one of the methods on the object.</dd>
- <dt>{{DOMxRef("XRFrame.trackedAnchors", "trackedAnchors")}} {{ReadonlyInline}}</dt>
- <dd>An {{domxref("XRAnchorSet")}} containing all anchors still tracked in the frame.</dd>
-</dl>
+- {{DOMxRef("XRFrame.session", "session")}} {{ReadonlyInline}}
+  - : The {{DOMxRef("XRSession")}} that for which this `XRFrame` describes the tracking details for all objects. The information about a specific object can be obtained by calling one of the methods on the object.
+- {{DOMxRef("XRFrame.trackedAnchors", "trackedAnchors")}} {{ReadonlyInline}}
+  - : An {{domxref("XRAnchorSet")}} containing all anchors still tracked in the frame.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("XRFrame.createAnchor()", "createAnchor()")}}</dt>
- <dd>Returns a {{jsxref("Promise")}} which resolves to a free-floating {{domxref("XRAnchor")}} object.</dd>
- <dt>{{domxref("XRFrame.getDepthInformation()", "getDepthInformation()")}}</dt>
- <dd>Returns an {{domxref("XRCPUDepthInformation")}} object containing CPU depth information for the frame.</dd>
- <dt>{{DOMxRef("XRFrame.getPose", "getPose()")}}</dt>
- <dd>Returns an {{domxref("XRPose")}} object representing the spatial relationship between the two specified {{domxref("XRSpace")}} objects.</dd>
- <dt>{{DOMxRef("XRFrame.getViewerPose", "getViewerPose()")}}</dt>
- <dd>Returns an {{domxref("XRViewerPose")}} describing the viewer's position and orientation in a given {{domxref("XRReferenceSpace")}}.</dd>
-</dl>
+- {{domxref("XRFrame.createAnchor()", "createAnchor()")}}
+  - : Returns a {{jsxref("Promise")}} which resolves to a free-floating {{domxref("XRAnchor")}} object.
+- {{domxref("XRFrame.getDepthInformation()", "getDepthInformation()")}}
+  - : Returns an {{domxref("XRCPUDepthInformation")}} object containing CPU depth information for the frame.
+- {{DOMxRef("XRFrame.getPose", "getPose()")}}
+  - : Returns an {{domxref("XRPose")}} object representing the spatial relationship between the two specified {{domxref("XRSpace")}} objects.
+- {{DOMxRef("XRFrame.getViewerPose", "getViewerPose()")}}
+  - : Returns an {{domxref("XRViewerPose")}} describing the viewer's position and orientation in a given {{domxref("XRReferenceSpace")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</a></li>
- <li><a href="/en-US/docs/Web/API/WebXR_Device_API/Spatial_tracking">Spatial tracking in WebXR</a></li>
-</ul>
+- [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API)
+- [Spatial tracking in WebXR](/en-US/docs/Web/API/WebXR_Device_API/Spatial_tracking)

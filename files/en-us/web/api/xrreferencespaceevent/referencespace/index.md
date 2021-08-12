@@ -2,47 +2,48 @@
 title: XRReferenceSpaceEvent.referenceSpace
 slug: Web/API/XRReferenceSpaceEvent/referenceSpace
 tags:
-- API
-- AR
-- Mixed
-- Reality
-- Reference
-- Reference Space
-- VR
-- Virtual
-- WebXR
-- WebXR API
-- WebXR Device API
-- XR
-- XRReferenceSpaceEvent
-- augmented
-- events
-- referenceSpace
-- source
-- Property
+  - API
+  - AR
+  - Mixed
+  - Reality
+  - Reference
+  - Reference Space
+  - VR
+  - Virtual
+  - WebXR
+  - WebXR API
+  - WebXR Device API
+  - XR
+  - XRReferenceSpaceEvent
+  - augmented
+  - events
+  - referenceSpace
+  - source
+  - Property
 browser-compat: api.XRReferenceSpaceEvent.referenceSpace
 ---
-<p>{{APIRef("WebXR Device API")}}</p>
+{{APIRef("WebXR Device API")}}
 
-<p>The read-only {{domxref("XRReferenceSpaceEvent")}} property
-  <code><strong>referenceSpace</strong></code> specifies the reference space which is the
-  originator of the event.</p>
+The read-only {{domxref("XRReferenceSpaceEvent")}} property
+**`referenceSpace`** specifies the reference space which is the
+originator of the event.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">let <em>refSpace</em> = <em>xrReferenceSpaceEvent</em>.referenceSpace;</pre>
+```js
+let refSpace = xrReferenceSpaceEvent.referenceSpace;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{domxref("XRReferenceSpace")}} indicating the source of the event.</p>
+An {{domxref("XRReferenceSpace")}} indicating the source of the event.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

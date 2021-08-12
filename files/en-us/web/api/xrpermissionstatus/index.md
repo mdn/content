@@ -19,32 +19,28 @@ tags:
   - augmented
 browser-compat: api.XRPermissionStatus
 ---
-<p>{{APIRef("WebXR Device API")}}{{SecureContext_Header}}</p>
+{{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
-<p>The <code><strong>XRPermissionStatus</strong></code> interface defines the object returned by calling {{domxref("Permissions.query", "navigator.permissions.query()")}} for the <code>xr</code> permission name; it indicates whether or not the app or site has permission to use WebXR, an may be monitored over time for changes to that permissions tate.</p>
+The **`XRPermissionStatus`** interface defines the object returned by calling {{domxref("Permissions.query", "navigator.permissions.query()")}} for the `xr` permission name; it indicates whether or not the app or site has permission to use WebXR, an may be monitored over time for changes to that permissions tate.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>In addition to the properties listed below, <code>XRPermissionStatus</code> includes the properties defined by its parent interface, {{domxref("PermissionStatus")}}.</em></p>
+_In addition to the properties listed below, `XRPermissionStatus` includes the properties defined by its parent interface, {{domxref("PermissionStatus")}}._
 
-<dl>
- <dt>{{domxref("XRPermissionStatus.granted", "granted")}}</dt>
- <dd>An array of strings listing the names of the features for which permission has been granted as of the time at which <code>navigator.permissions.query()</code> was called. Any feature which was specified in either the {{domxref("XRPermissionDescriptor.optionalFeatures", "optionalFeatures")}} or {{domxref("XRPermissionDescriptor.requiredFeatures", "requiredFeatures")}} when calling <code>navigator.permissions.query()</code> are listed in <code>granted</code> if and only if permission to use them is granted.</dd>
-</dl>
+- {{domxref("XRPermissionStatus.granted", "granted")}}
+  - : An array of strings listing the names of the features for which permission has been granted as of the time at which `navigator.permissions.query()` was called. Any feature which was specified in either the {{domxref("XRPermissionDescriptor.optionalFeatures", "optionalFeatures")}} or {{domxref("XRPermissionDescriptor.requiredFeatures", "requiredFeatures")}} when calling `navigator.permissions.query()` are listed in `granted` if and only if permission to use them is granted.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebXR_Device_API/Permissions_and_security">Permissions and security for WebXR</a></li>
- <li>{{domxref("XRPermissionStatus")}}</li>
- <li>{{domxref("navigator.permissions")}} and {{domxref("WorkerNavigator.permissions")}}</li>
- <li>{{domxref("Permissions")}}</li>
-</ul>
+- [Permissions and security for WebXR](/en-US/docs/Web/API/WebXR_Device_API/Permissions_and_security)
+- {{domxref("XRPermissionStatus")}}
+- {{domxref("navigator.permissions")}} and {{domxref("WorkerNavigator.permissions")}}
+- {{domxref("Permissions")}}

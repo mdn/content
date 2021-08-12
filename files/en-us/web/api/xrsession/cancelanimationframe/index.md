@@ -2,69 +2,68 @@
 title: XRSession.cancelAnimationFrame()
 slug: Web/API/XRSession/cancelAnimationFrame
 tags:
-- API
-- AR
-- Augmented Reality
-- Experimental
-- Method
-- Reference
-- VR
-- Virtual Reality
-- WebXR
-- WebXR Device API
-- XRSession
-- cancelAnimationFrame()
+  - API
+  - AR
+  - Augmented Reality
+  - Experimental
+  - Method
+  - Reference
+  - VR
+  - Virtual Reality
+  - WebXR
+  - WebXR Device API
+  - XRSession
+  - cancelAnimationFrame()
 browser-compat: api.XRSession.cancelAnimationFrame
 ---
-<div>{{APIRef("WebXR Device API")}}</div>
+{{APIRef("WebXR Device API")}}
 
-<p><span
-    class="seoSummary">The <strong><code>cancelAnimationFrame()</code></strong> method of
-    the {{domxref("XRSession")}} interface cancels an animation frame which was previously
-    requested by calling {{DOMxRef("XRSession.requestAnimationFrame",
-    "requestAnimationFrame")}}.</span></p>
+The **`cancelAnimationFrame()`** method of
+the {{domxref("XRSession")}} interface cancels an animation frame which was previously
+requested by calling {{DOMxRef("XRSession.requestAnimationFrame",
+    "requestAnimationFrame")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>xrSession</em>.cancelAnimationFrame(<em>handle</em>);
-</pre>
+```js
+xrSession.cancelAnimationFrame(handle);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>handle</code></dt>
-  <dd>The unique value returned by the call
+- `handle`
+  - : The unique value returned by the call
     to {{DOMxRef("XRSession.requestAnimationFrame", "requestAnimationFrame()")}} that
-    previously scheduled the animation callback.</dd>
-</dl>
+    previously scheduled the animation callback.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>None.</p>
+None.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>This function has no effect if the specified <code>handle</code> cannot be found.</p>
+This function has no effect if the specified `handle` cannot be found.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In the example below we see code which starts up a WebXR session if immersive VR mode
-  is supported. Once started, the session schedules its first frame to be rendered by
-  calling {{DOMxRef("XRSession.requestAnimationFrame", "requestAnimationFrame()")}}.</p>
+In the example below we see code which starts up a WebXR session if immersive VR mode
+is supported. Once started, the session schedules its first frame to be rendered by
+calling {{DOMxRef("XRSession.requestAnimationFrame", "requestAnimationFrame()")}}.
 
-<p>The <code>pauseXR()</code> function shown at the bottom can be called to suspend the
-  WebVR session, in essence, by canceling any pending animation frame callback. Since each
-  frame callback schedules the next one, removing the callback terminates updating of the
-  WebXR scene.</p>
+The `pauseXR()` function shown at the bottom can be called to suspend the
+WebVR session, in essence, by canceling any pending animation frame callback. Since each
+frame callback schedules the next one, removing the callback terminates updating of the
+WebXR scene.
 
-<pre class="brush: js">const XR = navigator.xr;
+```js
+const XR = navigator.xr;
 
 let requestHandle = null;
 let xrSession = null;
 
 if (XR) {
   XR.isSessionSupported('immersive-vr')
-  .then((isSupported) =&gt; {
+  .then((isSupported) => {
     if (isSupported) {
       startXR();
     }
@@ -87,25 +86,22 @@ async function startXR() {
 }
 
 function pauseXR() {
-  if (xrSession &amp;&amp; requestHandle) {
+  if (xrSession && requestHandle) {
     xrSession.cancelAnimationFrame(requestHandle);
     requestHandle = null;
   }
 }
+```
 
-</pre>
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{DOMxRef("Window.cancelAnimationFrame")}}</li>
-  <li>{{domxref("XRSession.requestAnimationFrame")}}</li>
-</ul>
+- {{DOMxRef("Window.cancelAnimationFrame")}}
+- {{domxref("XRSession.requestAnimationFrame")}}

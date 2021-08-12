@@ -2,38 +2,39 @@
 title: XRFrame.session
 slug: Web/API/XRFrame/session
 tags:
-- API
-- AR
-- Augmented Reality
-- Property
-- Reference
-- Session
-- VR
-- Virtual Reality
-- WebXR
-- WebXR Device API
-- XR
-- XRFrame
+  - API
+  - AR
+  - Augmented Reality
+  - Property
+  - Reference
+  - Session
+  - VR
+  - Virtual Reality
+  - WebXR
+  - WebXR Device API
+  - XR
+  - XRFrame
 browser-compat: api.XRFrame.session
 ---
-<div>{{APIRef("WebXR Device API")}}</div>
+{{APIRef("WebXR Device API")}}
 
-<p>An <code>XRFrame</code> object's <em>read-only</em> <code><strong>session</strong></code> property returns the {{domxref("XRSession")}} object that generated the frame.</p>
+An `XRFrame` object's *read-only* **`session`** property returns the {{domxref("XRSession")}} object that generated the frame.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>xrSession = xrFrame</em>.session;
-</pre>
+```js
+var xrSession = xrFrame.session;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("XRSession")}} object representing the WebXR session for which
-  this <code>XRFrame</code> describes the object positions and orientations.</p>
+A {{domxref("XRSession")}} object representing the WebXR session for which
+this `XRFrame` describes the object positions and orientations.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}

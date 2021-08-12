@@ -2,55 +2,53 @@
 title: XRSession.onvisibilitychange
 slug: Web/API/XRSession/onvisibilitychange
 tags:
-- API
-- AR
-- Augmented Reality
-- Event Handler
-- Reference
-- VR
-- Virtual Reality
-- WebXR Device API
-- XRSession
-- onvisibilitychange
+  - API
+  - AR
+  - Augmented Reality
+  - Event Handler
+  - Reference
+  - VR
+  - Virtual Reality
+  - WebXR Device API
+  - XRSession
+  - onvisibilitychange
 browser-compat: api.XRSession.onvisibilitychange
 ---
-<div>{{APIRef("WebXR Device API")}}</div>
+{{APIRef("WebXR Device API")}}
 
-<p>The <code><strong>onvisibilitychange</strong></code>
-    attribute of the {{DOMxRef("XRSession")}} object is the event handler for the
-    {{DOMxRef("XRSession.visibilitychange_event", "visibilitychange")}} event, which is
-    dispatched when the visibility state of the XR session changes. The visibility state
-    of the session is accessible via {{DOMxRef("XRSession.visibilityState")}}.</p>
+The **`onvisibilitychange`**
+attribute of the {{DOMxRef("XRSession")}} object is the event handler for the
+{{DOMxRef("XRSession.visibilitychange_event", "visibilitychange")}} event, which is
+dispatched when the visibility state of the XR session changes. The visibility state
+of the session is accessible via {{DOMxRef("XRSession.visibilityState")}}.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> The visibility state of XR session affects the frame loop so
-    callbacks registered via {{DOMxRef("XRSession.requestAnimationFrame()")}} might not be
-    called. Consult {{DOMxRef("XRSession.visibilityState")}} article for details.</p>
-</div>
+> **Note:** The visibility state of XR session affects the frame loop so
+> callbacks registered via {{DOMxRef("XRSession.requestAnimationFrame()")}} might not be
+> called. Consult {{DOMxRef("XRSession.visibilityState")}} article for details.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>XRSession</em>.onvisibilitychange = function(event) { ... }
-</pre>
+```js
+XRSession.onvisibilitychange = function(event) { ... }
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js"><em>XRSession</em>.onvisibilitychange = function(event) {
+```js
+XRSession.onvisibilitychange = function(event) {
   console.log("The visibility the XR session changed.")
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{DOMxRef("XRSession.visibilityState")}}</li>
-  <li>{{DOMxRef("XRSession.requestAnimationFrame()")}}</li>
-</ul>
+- {{DOMxRef("XRSession.visibilityState")}}
+- {{DOMxRef("XRSession.requestAnimationFrame()")}}
