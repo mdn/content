@@ -44,7 +44,7 @@ browser-compat: api.NDEFReader
 
 <h3>Handling initial reads while writing</h3>
 
-<p>The example below shows how to coordinate between a common reading handler and one used specifically for a single write. In order to write, a tag needs to be found and read. This gives you the ability to check whether it is actually a tag that you want to write to. That's why it's recommended that you call write() from a reading event.</p>
+<p>The example below shows how to coordinate between a common reading handler and one used specifically for a single write. In order to write, a tag needs to be found and read. This gives you the ability to check whether it is actually a tag that you want to write to. That's why it's recommended that you call <code>write()</code> from a reading event.</p>
 
 <pre class="brush: js">const ndef = new NDEFReader();
 let ignoreRead = false;
