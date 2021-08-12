@@ -2,19 +2,19 @@
 title: 'CSP: prefetch-src'
 slug: Web/HTTP/Headers/Content-Security-Policy/prefetch-src
 tags:
-- CSP
-- Content Security Policy
-- Directive
-- HTTP
-- Reference
-- prefetch-src
+  - CSP
+  - Content Security Policy
+  - Directive
+  - HTTP
+  - Reference
+  - prefetch-src
 browser-compat: http.headers.csp.Content-Security-Policy.prefetch-src
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
-  <code><strong>prefetch-src</strong></code> directive specifies valid resources that may
-  be prefetched or prerendered.</p>
+The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
+**`prefetch-src`** directive specifies valid resources that may
+be prefetched or prerendered.
 
 <table class="properties">
   <tbody>
@@ -28,51 +28,50 @@ browser-compat: http.headers.csp.Content-Security-Policy.prefetch-src
     </tr>
     <tr>
       <th scope="row">{{CSP("default-src")}} fallback</th>
-      <td>Yes. If this directive is absent, the user agent will look for the
-        <code>default-src</code> directive.</td>
+      <td>
+        Yes. If this directive is absent, the user agent will look for the
+        <code>default-src</code> directive.
+      </td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>One or more sources can be allowed for the <code>prefetch-src</code> policy:</p>
+One or more sources can be allowed for the `prefetch-src` policy:
 
-<pre class="brush: html">Content-Security-Policy: prefetch-src &lt;source&gt;;
-Content-Security-Policy: prefetch-src &lt;source&gt; &lt;source&gt;;
-</pre>
+```html
+Content-Security-Policy: prefetch-src <source>;
+Content-Security-Policy: prefetch-src <source> <source>;
+```
 
-<h3 id="Sources">Sources</h3>
+### Sources
 
-<p>{{page("/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/default-src",
-  "common_sources")}}</p>
+{{page("/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/default-src",
+  "common_sources")}}
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="Prefetch_resources_do_not_match_header">Prefetch resources do not match header
-</h3>
+### Prefetch resources do not match header
 
-<p>Given a page with the following Content Security Policy:</p>
+Given a page with the following Content Security Policy:
 
-<pre>Content-Security-Policy: prefetch-src https://example.com/
-</pre>
+    Content-Security-Policy: prefetch-src https://example.com/
 
-<p>Fetches for the following code will return network errors, as the URLs provided do not
-  match <code>prefetch-src</code>'s source list:</p>
+Fetches for the following code will return network errors, as the URLs provided do not
+match `prefetch-src`'s source list:
 
-<pre>&lt;link rel="prefetch" src="https://example.org/"&gt;&lt;/link&gt;
-&lt;link rel="prerender" src="https://example.org/"&gt;&lt;/link&gt;</pre>
+    <link rel="prefetch" src="https://example.org/"></link>
+    <link rel="prerender" src="https://example.org/"></link>
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{HTTPHeader("Content-Security-Policy")}}</li>
-</ul>
+- {{HTTPHeader("Content-Security-Policy")}}

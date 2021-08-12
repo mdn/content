@@ -8,43 +8,32 @@ tags:
   - Reference
   - Status code
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The HTTP <code><strong>429 Too Many Requests</strong></code> response status code indicates the user has sent too many requests in a given amount of time ("rate limiting").</p>
+The HTTP **`429 Too Many Requests`** response status code indicates the user has sent too many requests in a given amount of time ("rate limiting").
 
-<p>A {{HTTPHeader("Retry-After")}} header might be included to this response indicating how long to wait before making a new request.</p>
+A {{HTTPHeader("Retry-After")}} header might be included to this response indicating how long to wait before making a new request.
 
-<h2 id="Status">Status</h2>
+## Status
 
-<pre class="brush: html">429 Too Many Requests</pre>
+```html
+429 Too Many Requests
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre>HTTP/1.1 429 Too Many Requests
-Content-Type: text/html
-Retry-After: 3600</pre>
+    HTTP/1.1 429 Too Many Requests
+    Content-Type: text/html
+    Retry-After: 3600
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Title</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{RFC("6585", "429 Too Many Requests" , "4")}}</td>
-   <td>Additional HTTP Status Codes</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                | Title                        |
+| ------------------------------------------------------------ | ---------------------------- |
+| {{RFC("6585", "429 Too Many Requests" , "4")}} | Additional HTTP Status Codes |
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTTPHeader("Retry-After")}}</li>
- <li><a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html" rel="noopener">HTTP/1.1: Status Code Definitions</a></li>
- <li>Python solution: <a href="https://stackoverflow.com/questions/22786068/how-to-avoid-http-error-429-too-many-requests-python">How to avoid HTTP error 429 python</a></li>
-</ul>
+- {{HTTPHeader("Retry-After")}}
+- [HTTP/1.1: Status Code Definitions](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
+- Python solution: [How to avoid HTTP error 429 python](https://stackoverflow.com/questions/22786068/how-to-avoid-http-error-429-too-many-requests-python)

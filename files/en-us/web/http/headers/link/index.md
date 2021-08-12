@@ -12,47 +12,49 @@ tags:
   - Reference
 browser-compat: http.headers.Link
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The HTTP <strong><code>Link</code></strong> entity-header field provides a means for serialising one or more links in HTTP headers. It is semantically equivalent to the HTML {{HTMLElement("link")}} element.</p>
+The HTTP **`Link`** entity-header field provides a means for serialising one or more links in HTTP headers. It is semantically equivalent to the HTML {{HTMLElement("link")}} element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: html">Link: &lt; <var>uri-reference</var> &gt;; <var>param1</var>=<var>value1</var>; <var>param2</var>="<var>value2</var>"</pre>
+```html
+Link: < uri-reference >; param1=value1; param2="value2"
+```
 
-<dl>
- <dt><code>&lt;uri-reference&gt;</code></dt>
- <dd>The URI reference, must be enclosed between <code>&lt;</code> and <code>&gt;</code>.</dd>
-</dl>
+- `<uri-reference>`
+  - : The URI reference, must be enclosed between `<` and `>`.
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>The link header contains parameters, which are separated with <code>;</code> and are equivalent to attributes of the {{HTMLElement("link")}} element.</p>
+The link header contains parameters, which are separated with `;` and are equivalent to attributes of the {{HTMLElement("link")}} element.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The URI (absolute or relative) must be enclosed between <code>&lt;</code> and <code>&gt;</code>:</p>
+The URI (absolute or relative) must be enclosed between `<` and `>`:
 
-<pre class="example-good">Link: &lt;https://example.com&gt;; rel="preconnect"</pre>
+```plain example-good
+Link: <https://example.com>; rel="preconnect"
+```
 
-<pre class="example-bad">Link: https://bad.example; rel="preconnect"</pre>
+```plain example-bad
+Link: https://bad.example; rel="preconnect"
+```
 
-<h3 id="Specifying_multiple_links">Specifying multiple links</h3>
+### Specifying multiple links
 
-<p>You can specify multiple links separated by commas, for example:</p>
+You can specify multiple links separated by commas, for example:
 
-<pre>Link: &lt;https://one.example.com&gt;; rel="preconnect", &lt;https://two.example.com&gt;; rel="preconnect", &lt;https://three.example.com&gt;; rel="preconnect"</pre>
+    Link: <https://one.example.com>; rel="preconnect", <https://two.example.com>; rel="preconnect", <https://three.example.com>; rel="preconnect"
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTTPStatus(103, "103 Early Hints")}}</li>
-</ul>
+- {{HTTPStatus(103, "103 Early Hints")}}

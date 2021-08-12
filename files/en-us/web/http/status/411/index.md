@@ -2,48 +2,37 @@
 title: 411 Length Required
 slug: Web/HTTP/Status/411
 tags:
-- Client error
-- HTTP
-- HTTP Status Code
-- Reference
-- Status code
+  - Client error
+  - HTTP
+  - HTTP Status Code
+  - Reference
+  - Status code
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The HyperText Transfer Protocol (HTTP)
-  <code><strong>411 Length Required</strong></code> client error response code indicates
-  that the server refuses to accept the request without a defined
-  {{HTTPHeader("Content-Length")}} header.</p>
+The HyperText Transfer Protocol (HTTP)
+**`411 Length Required`** client error response code indicates
+that the server refuses to accept the request without a defined
+{{HTTPHeader("Content-Length")}} header.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> by specification, when sending data in a series of chunks, the
-    <code>Content-Length</code> header is omitted and at the beginning of each chunk you
-    need to add the length of the current chunk in hexadecimal format. See
-    {{HTTPHeader("Transfer-Encoding")}} for more details.</p>
-</div>
+> **Note:** by specification, when sending data in a series of chunks, the
+> `Content-Length` header is omitted and at the beginning of each chunk you
+> need to add the length of the current chunk in hexadecimal format. See
+> {{HTTPHeader("Transfer-Encoding")}} for more details.
 
-<h2 id="Status">Status</h2>
+## Status
 
-<pre class="brush: html">411 Length Required</pre>
+```html
+411 Length Required
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Title</th>
-    </tr>
-    <tr>
-      <td>{{RFC("7231", "411 Length Required" , "6.5.10")}}</td>
-      <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
-    </tr>
-  </tbody>
-</table>
+| Specification                                                    | Title                                                         |
+| ---------------------------------------------------------------- | ------------------------------------------------------------- |
+| {{RFC("7231", "411 Length Required" , "6.5.10")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{HTTPHeader("Content-Length")}}</li>
-  <li>{{HTTPHeader("Transfer-Encoding")}}</li>
-</ul>
+- {{HTTPHeader("Content-Length")}}
+- {{HTTPHeader("Transfer-Encoding")}}

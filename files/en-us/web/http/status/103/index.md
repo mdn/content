@@ -2,50 +2,36 @@
 title: 103 Early Hints
 slug: Web/HTTP/Status/103
 tags:
-- Draft
-- HTTP
-- Informational
-- NeedsCompatTable
-- NeedsContent
-- Status code
+  - Draft
+  - HTTP
+  - Informational
+  - NeedsCompatTable
+  - NeedsContent
+  - Status code
 browser-compat: http.status.103
 ---
-<p>{{HTTPSidebar}}{{Draft}}</p>
+{{HTTPSidebar}}{{Draft}}
 
-<p>The HTTP <strong><code>103 Early Hints</code></strong> information response status code
-  is primarily intended to be used with the {{HTTPHeader("Link")}} header to allow the
-  user agent to start preloading resources while the server is still preparing a response.
-</p>
+The HTTP **`103 Early Hints`** information response status code
+is primarily intended to be used with the {{HTTPHeader("Link")}} header to allow the
+user agent to start preloading resources while the server is still preparing a response.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: html">103 Early Hints</pre>
+```html
+103 Early Hints
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comments</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{RFC(8297, "103 Early Hints")}}</td>
-      <td>IETF RFC</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+| Specification                                | Status   | Comments           |
+| -------------------------------------------- | -------- | ------------------ |
+| {{RFC(8297, "103 Early Hints")}} | IETF RFC | Initial definition |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{HTTPHeader("Link")}}</li>
-</ul>
+- {{HTTPHeader("Link")}}

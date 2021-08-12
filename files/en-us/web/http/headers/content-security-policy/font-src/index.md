@@ -2,21 +2,21 @@
 title: 'CSP: font-src'
 slug: Web/HTTP/Headers/Content-Security-Policy/font-src
 tags:
-- CSP
-- Content-Security-Policy
-- Directive
-- HTTP
-- Reference
-- Security
-- font
-- source
+  - CSP
+  - Content-Security-Policy
+  - Directive
+  - HTTP
+  - Reference
+  - Security
+  - font
+  - source
 browser-compat: http.headers.csp.Content-Security-Policy.font-src
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
-  <code><strong>font</strong></code><strong><code>-src</code></strong> directive specifies
-  valid sources for fonts loaded using {{cssxref("@font-face")}}.</p>
+The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
+**`font`\*\***`-src`\*\* directive specifies
+valid sources for fonts loaded using {{cssxref("@font-face")}}.
 
 <table class="properties">
   <tbody>
@@ -30,35 +30,41 @@ browser-compat: http.headers.csp.Content-Security-Policy.font-src
     </tr>
     <tr>
       <th scope="row">{{CSP("default-src")}} fallback</th>
-      <td>Yes. If this directive is absent, the user agent will look for the
-        <code>default-src</code> directive.</td>
+      <td>
+        Yes. If this directive is absent, the user agent will look for the
+        <code>default-src</code> directive.
+      </td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>One or more sources can be allowed for the <code>font-src</code> policy:</p>
+One or more sources can be allowed for the `font-src` policy:
 
-<pre class="brush: html">Content-Security-Policy: font-src &lt;source&gt;;
-Content-Security-Policy: font-src &lt;source&gt; &lt;source&gt;;
-</pre>
+```html
+Content-Security-Policy: font-src <source>;
+Content-Security-Policy: font-src <source> <source>;
+```
 
-<h3 id="Sources">Sources</h3>
+### Sources
 
-<p>{{page("Web/HTTP/Headers/Content-Security-Policy/connect-src", "Sources")}}</p>
+{{page("Web/HTTP/Headers/Content-Security-Policy/connect-src", "Sources")}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Violation_cases">Violation cases</h3>
+### Violation cases
 
-<p>Given this CSP header:</p>
+Given this CSP header:
 
-<pre class="brush: bash">Content-Security-Policy: font-src https://example.com/</pre>
+```bash
+Content-Security-Policy: font-src https://example.com/
+```
 
-<p>The following font resource loading is blocked and won't load:</p>
+The following font resource loading is blocked and won't load:
 
-<pre class="brush: html">&lt;style&gt;
+```html
+<style>
   @font-face {
     font-family: "MyFont";
     src: url("https://not-example.com/font");
@@ -66,19 +72,18 @@ Content-Security-Policy: font-src &lt;source&gt; &lt;source&gt;;
   body {
     font-family: "MyFont";
   }
-&lt;/style&gt;</pre>
+</style>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{HTTPHeader("Content-Security-Policy")}}</li>
-  <li>{{cssxref("@font-face")}}</li>
-</ul>
+- {{HTTPHeader("Content-Security-Policy")}}
+- {{cssxref("@font-face")}}

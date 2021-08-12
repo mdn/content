@@ -12,95 +12,92 @@ tags:
   - frame-ancestors
 browser-compat: http.headers.csp.Content-Security-Policy.frame-ancestors
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) <code><strong>frame-ancestors</strong></code> directive specifies valid parents that may embed a page using {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, {{HTMLElement("embed")}}, or {{HTMLElement("applet")}}.</p>
+The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`frame-ancestors`** directive specifies valid parents that may embed a page using {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, {{HTMLElement("embed")}}, or {{HTMLElement("applet")}}.
 
-<p>Setting this directive to <code>'none'</code> is similar to {{HTTPHeader("X-Frame-Options")}}<code>: deny</code> (which is also supported in older browsers).</p>
+Setting this directive to `'none'` is similar to {{HTTPHeader("X-Frame-Options")}}`: deny` (which is also supported in older browsers).
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">CSP version</th>
-   <td>2</td>
-  </tr>
-  <tr>
-   <th scope="row">Directive type</th>
-   <td>{{Glossary("Navigation directive")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{CSP("default-src")}} fallback</th>
-   <td>No. Not setting this allows anything.</td>
-  </tr>
-  <tr>
-   <th colspan="2" scope="row">This directive is not supported in the {{HTMLElement("meta")}} element.</th>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">CSP version</th>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th scope="row">Directive type</th>
+      <td>{{Glossary("Navigation directive")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{CSP("default-src")}} fallback</th>
+      <td>No. Not setting this allows anything.</td>
+    </tr>
+    <tr>
+      <th colspan="2" scope="row">
+        This directive is not supported in the {{HTMLElement("meta")}}
+        element.
+      </th>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>One or more sources can be set for the <code>frame-ancestors</code> policy:</p>
+One or more sources can be set for the `frame-ancestors` policy:
 
-<pre class="brush: html">Content-Security-Policy: frame-ancestors &lt;source&gt;;
-Content-Security-Policy: frame-ancestors &lt;source&gt; &lt;source&gt;;
-</pre>
+```html
+Content-Security-Policy: frame-ancestors <source>;
+Content-Security-Policy: frame-ancestors <source> <source>;
+```
 
-<h3 id="Sources">Sources</h3>
+### Sources
 
-<p>&lt;source&gt; can be one of the following:</p>
+\<source> can be one of the following:
 
-<div class="notecard note">
-  <p><strong>Note:</strong> The <code>frame-ancestors</code> directive's syntax is similar to a source list of other directives (e.g. {{CSP("default-src")}}), but doesn't allow <code>'unsafe-eval'</code> or <code>'unsafe-inline'</code> for example. It will also not fall back to a <code>default-src</code> setting. Only the sources listed below are allowed:</p>
-</div>
+> **Note:** The `frame-ancestors` directive's syntax is similar to a source list of other directives (e.g. {{CSP("default-src")}}), but doesn't allow `'unsafe-eval'` or `'unsafe-inline'` for example. It will also not fall back to a `default-src` setting. Only the sources listed below are allowed:
 
-<dl>
- <dt>&lt;host-source&gt;</dt>
- <dd>Internet hosts by name or IP address, as well as an optional {{Glossary("URL")}} scheme and/or port number, separated by spaces. The site's address may include an optional leading wildcard (the asterisk character, <code>'*'</code>), and you may use a wildcard (again, <code>'*'</code>) as the port number, indicating that all legal ports are valid for the source. Single quotes surrounding the host are not allowed.<br>
- Examples:
- <ul>
-  <li><code>http://*.example.com</code>: Matches all attempts to load from any subdomain of example.com using the <code>http:</code> URL scheme.</li>
-  <li><code>mail.example.com:443</code>: Matches all attempts to access port 443 on mail.example.com.</li>
-  <li><code>https://store.example.com</code>: Matches all attempts to access store.example.com using <code>https:</code>.</li>
- </ul>
+- \<host-source>
 
- <div class="notecard warning">
-  <p><strong>Warning:</strong> If no URL scheme is specified for a <code>host-source</code> and the iframe is loaded from an <code>https</code> URL, the URL for the page loading the iframe must also be <code>https</code>, per the <a href="https://w3c.github.io/webappsec-csp/#match-url-to-source-expression">Does url match expression in origin with redirect count?</a> section of the CSP spec.</p>
- </div>
+  - : Internet hosts by name or IP address, as well as an optional {{Glossary("URL")}} scheme and/or port number, separated by spaces. The site's address may include an optional leading wildcard (the asterisk character, `'*'`), and you may use a wildcard (again, `'*'`) as the port number, indicating that all legal ports are valid for the source. Single quotes surrounding the host are not allowed.
+    Examples:
 
- </dd>
- <dt>&lt;scheme-source&gt;</dt>
- <dd>A scheme such as <code>http:</code> or <code>https:</code>. The colon is required and scheme should not be quoted. You can also specify data schemes (not recommended).
- <ul>
-  <li><code>data:</code> Allows <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs"><code>data:</code> URIs</a> to be used as a content source.<em> This is insecure; an attacker can also inject arbitrary data: URIs. Use this sparingly and definitely not for scripts.</em></li>
-  <li><code>mediastream:</code> Allows <a href="/en-US/docs/Web/API/Media_Streams_API"><code>mediastream:</code> URIs</a> to be used as a content source.</li>
-  <li><code>blob:</code> Allows <a href="/en-US/docs/Web/API/Blob"><code>blob:</code> URIs</a> to be used as a content source.</li>
-  <li><code>filesystem:</code> Allows <a href="/en-US/docs/Web/API/FileSystem"><code>filesystem:</code> URIs</a> to be used as a content source.</li>
- </ul>
- </dd>
- <dt><code>'self'</code></dt>
- <dd>Refers to the origin from which the protected document is being served, including the same URL scheme and port number. You must include the single quotes. Some browsers specifically exclude <code>blob</code> and <code>filesystem</code> from source directives. Sites needing to allow these content types can specify them using the Data attribute.</dd>
- <dt><code>'none'</code></dt>
- <dd>Refers to the empty set; that is, no URLs match. The single quotes are required.</dd>
-</dl>
+    - `http://*.example.com`: Matches all attempts to load from any subdomain of example.com using the `http:` URL scheme.
+    - `mail.example.com:443`: Matches all attempts to access port 443 on mail.example.com.
+    - `https://store.example.com`: Matches all attempts to access store.example.com using `https:`.
 
-<h2 id="Examples">Examples</h2>
+    > **Warning:** If no URL scheme is specified for a `host-source` and the iframe is loaded from an `https` URL, the URL for the page loading the iframe must also be `https`, per the [Does url match expression in origin with redirect count?](https://w3c.github.io/webappsec-csp/#match-url-to-source-expression) section of the CSP spec.
 
-<pre class="brush: bash">Content-Security-Policy: frame-ancestors 'none';
+- \<scheme-source>
 
-Content-Security-Policy: frame-ancestors 'self' https://www.example.org;</pre>
+  - : A scheme such as `http:` or `https:`. The colon is required and scheme should not be quoted. You can also specify data schemes (not recommended).
 
-<h2 id="Specifications">Specifications</h2>
+    - `data:` Allows [`data:` URIs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) to be used as a content source. _This is insecure; an attacker can also inject arbitrary data: URIs. Use this sparingly and definitely not for scripts._
+    - `mediastream:` Allows [`mediastream:` URIs](/en-US/docs/Web/API/Media_Streams_API) to be used as a content source.
+    - `blob:` Allows [`blob:` URIs](/en-US/docs/Web/API/Blob) to be used as a content source.
+    - `filesystem:` Allows [`filesystem:` URIs](/en-US/docs/Web/API/FileSystem) to be used as a content source.
+
+- `'self'`
+  - : Refers to the origin from which the protected document is being served, including the same URL scheme and port number. You must include the single quotes. Some browsers specifically exclude `blob` and `filesystem` from source directives. Sites needing to allow these content types can specify them using the Data attribute.
+- `'none'`
+  - : Refers to the empty set; that is, no URLs match. The single quotes are required.
+
+## Examples
+
+```bash
+Content-Security-Policy: frame-ancestors 'none';
+
+Content-Security-Policy: frame-ancestors 'self' https://www.example.org;
+```
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTTPHeader("Content-Security-Policy")}}</li>
- <li>{{HTTPHeader("X-Frame-Options")}}</li>
-</ul>
+- {{HTTPHeader("Content-Security-Policy")}}
+- {{HTTPHeader("X-Frame-Options")}}

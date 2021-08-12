@@ -10,12 +10,12 @@ tags:
   - Security
 browser-compat: http.headers.csp.Content-Security-Policy.worker-src
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
-  <code><strong>worker-src</strong></code> directive specifies valid sources for
-  {{domxref("Worker")}}, {{domxref("SharedWorker")}}, or {{domxref("ServiceWorker")}}
-  scripts.</p>
+The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
+**`worker-src`** directive specifies valid sources for
+{{domxref("Worker")}}, {{domxref("SharedWorker")}}, or {{domxref("ServiceWorker")}}
+scripts.
 
 <table class="properties">
   <tbody>
@@ -30,60 +30,64 @@ browser-compat: http.headers.csp.Content-Security-Policy.worker-src
     <tr>
       <th scope="row">Fallback</th>
       <td>
-        <p>If this directive is absent, the user agent will first look for the
-          {{CSP("child-src")}} directive, then the {{CSP("script-src")}} directive, then
-          finally for the {{CSP("default-src")}} directive, when governing worker
-          execution.</p>
+        <p>
+          If this directive is absent, the user agent will first look for the
+          {{CSP("child-src")}} directive, then the
+          {{CSP("script-src")}} directive, then finally for the
+          {{CSP("default-src")}} directive, when governing worker
+          execution.
         </p>
+        <p></p>
       </td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>One or more sources can be allowed for the <code>worker-src</code> policy:</p>
+One or more sources can be allowed for the `worker-src` policy:
 
-<pre class="brush: html">Content-Security-Policy: worker-src &lt;source&gt;;
-Content-Security-Policy: worker-src &lt;source&gt; &lt;source&gt;;
-</pre>
+```html
+Content-Security-Policy: worker-src <source>;
+Content-Security-Policy: worker-src <source> <source>;
+```
 
-<h3 id="Sources">Sources</h3>
+### Sources
 
-<p>{{page("Web/HTTP/Headers/Content-Security-Policy/connect-src", "Sources")}}</p>
+{{page("Web/HTTP/Headers/Content-Security-Policy/connect-src", "Sources")}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Violation_cases">Violation cases</h3>
+### Violation cases
 
-<p>Given this CSP header:</p>
+Given this CSP header:
 
-<pre class="brush: bash">Content-Security-Policy: worker-src https://example.com/</pre>
+```bash
+Content-Security-Policy: worker-src https://example.com/
+```
 
-<p>{{domxref("Worker")}}, {{domxref("SharedWorker")}}, {{domxref("ServiceWorker")}} are
-  blocked and won't load:</p>
+{{domxref("Worker")}}, {{domxref("SharedWorker")}}, {{domxref("ServiceWorker")}} are
+blocked and won't load:
 
-<pre class="brush: html">&lt;script&gt;
+```html
+<script>
   var blockedWorker = new Worker("data:application/javascript,...");
   blockedWorker = new SharedWorker("https://not-example.com/");
   navigator.serviceWorker.register('https://not-example.com/sw.js');
-&lt;/script&gt;</pre>
+</script>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{HTTPHeader("Content-Security-Policy")}}</li>
-  <li><a
-      href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers#content_security_policy">CSP
-      for Web Workers</a></li>
-  <li>{{domxref("Worker")}}, {{domxref("SharedWorker")}}, {{domxref("ServiceWorker")}}
-  </li>
-</ul>
+- {{HTTPHeader("Content-Security-Policy")}}
+- [CSP
+  for Web Workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers#content_security_policy)
+- {{domxref("Worker")}}, {{domxref("SharedWorker")}}, {{domxref("ServiceWorker")}}

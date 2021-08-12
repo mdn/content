@@ -2,56 +2,51 @@
 title: 204 No Content
 slug: Web/HTTP/Status/204
 tags:
-- HTTP
-- Reference
-- Status code
-- Success
+  - HTTP
+  - Reference
+  - Status code
+  - Success
 browser-compat: http.status.204
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The HTTP <strong><code>204 No Content</code></strong> success status response code
-  indicates that a request has succeeded, but that the client doesn't need to navigate away
-  from its current page.</p>
+The HTTP **`204 No Content`** success status response code
+indicates that a request has succeeded, but that the client doesn't need to navigate away
+from its current page.
 
-<p>This might be used, for example, when implementing "save and continue editing" functionality for a wiki site.
-  In this case a {{HTTPMethod("PUT")}} request would be used to save the page, and the <code>204 No Content</code> response
-  would be sent to indicate that the editor should not be replaced by some other page.</p>
+This might be used, for example, when implementing "save and continue editing" functionality for a wiki site.
+In this case a {{HTTPMethod("PUT")}} request would be used to save the page, and the `204 No Content` response
+would be sent to indicate that the editor should not be replaced by some other page.
 
-<p>A 204 response is cacheable by default (an {{HTTPHeader("ETag")}} header is included in such a response).</p>
+A 204 response is cacheable by default (an {{HTTPHeader("ETag")}} header is included in such a response).
 
+## Status
 
-<h2 id="Status">Status</h2>
+```html
+204 No Content
+```
 
-<pre class="brush: html">204 No Content</pre>
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Compatibility_notes">Compatibility notes</h2>
+## Compatibility notes
 
-<ul>
-  <li>Although this status code is intended to describe a response with no body, servers
-    may erroneously include data following the headers. The protocol allows user agents to
-    vary in how they process such responses (<a
-      href="https://github.com/httpwg/http11bis/issues/26">discussion regarding this
-      specification text can be found here</a>). This is observable in persistent
-    connections, where the invalid body may include a distinct response to a subsequent
-    request.<br>
-    <br>
-    Apple Safari rejects any such data. Google Chrome and Microsoft Edge discard up to
-    four invalid bytes preceding a valid response. Firefox tolerates in excess of a
-    kilobyte of invalid data preceding a valid response.
-  </li>
-</ul>
+- Although this status code is intended to describe a response with no body, servers
+  may erroneously include data following the headers. The protocol allows user agents to
+  vary in how they process such responses ([discussion regarding this
+  specification text can be found here](https://github.com/httpwg/http11bis/issues/26)). This is observable in persistent
+  connections, where the invalid body may include a distinct response to a subsequent
+  request.
 
-<h2 id="See_also">See also</h2>
+  Apple Safari rejects any such data. Google Chrome and Microsoft Edge discard up to
+  four invalid bytes preceding a valid response. Firefox tolerates in excess of a
+  kilobyte of invalid data preceding a valid response.
 
-<ul>
-  <li><a href="/en-US/docs/Web/HTTP/Methods">HTTP request methods</a></li>
-</ul>
+## See also
+
+- [HTTP request methods](/en-US/docs/Web/HTTP/Methods)

@@ -7,10 +7,10 @@ tags:
   - Request method
 browser-compat: http.methods.DELETE
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The <strong>HTTP <code>DELETE</code> request method</strong> deletes the specified
-  resource.</p>
+The **HTTP `DELETE` request method** deletes the specified
+resource.
 
 <table class="properties">
   <tbody>
@@ -35,60 +35,58 @@ browser-compat: http.methods.DELETE
       <td>No</td>
     </tr>
     <tr>
-      <th scope="row">Allowed in <a href="/en-US/docs/Learn/Forms">HTML forms</a>
+      <th scope="row">
+        Allowed in <a href="/en-US/docs/Learn/Forms">HTML forms</a>
       </th>
       <td>No</td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: html">DELETE /file.html HTTP/1.1
-</pre>
+```html
+DELETE /file.html HTTP/1.1
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="Request">Request</h3>
+### Request
 
-<pre>DELETE /file.html HTTP/1.1
-Host: example.com
-</pre>
+    DELETE /file.html HTTP/1.1
+    Host: example.com
 
-<h3 id="Responses">Responses</h3>
+### Responses
 
-<p>If a <code>DELETE</code> method is successfully applied, there are several response
-  status codes possible:</p>
+If a `DELETE` method is successfully applied, there are several response
+status codes possible:
 
-<ul>
-  <li>A {{HTTPStatus("202")}} (<code>Accepted</code>) status code if the action will
-    likely succeed but has not yet been enacted.</li>
-  <li>A {{HTTPStatus("204")}} (<code>No Content</code>) status code if the action has been
-    enacted and no further information is to be supplied.</li>
-  <li>A {{HTTPStatus("200")}} (<code>OK</code>) status code if the action has been enacted
-    and the response message includes a representation describing the status.</li>
-</ul>
+- A {{HTTPStatus("202")}} (`Accepted`) status code if the action will
+  likely succeed but has not yet been enacted.
+- A {{HTTPStatus("204")}} (`No Content`) status code if the action has been
+  enacted and no further information is to be supplied.
+- A {{HTTPStatus("200")}} (`OK`) status code if the action has been enacted
+  and the response message includes a representation describing the status.
 
-<pre>HTTP/1.1 200 OK
-Date: Wed, 21 Oct 2015 07:28:00 GMT
+<!---->
 
-&lt;html&gt;
-  &lt;body&gt;
-    &lt;h1&gt;File deleted.&lt;/h1&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</pre>
+    HTTP/1.1 200 OK
+    Date: Wed, 21 Oct 2015 07:28:00 GMT
 
-<h2 id="Specifications">Specifications</h2>
+    <html>
+      <body>
+        <h1>File deleted.</h1>
+      </body>
+    </html>
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>HTTP status: {{HTTPStatus("200")}}, {{HTTPStatus("202")}}, {{HTTPStatus("204")}}
-  </li>
-</ul>
+- HTTP status: {{HTTPStatus("200")}}, {{HTTPStatus("202")}}, {{HTTPStatus("204")}}

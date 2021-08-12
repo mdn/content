@@ -2,75 +2,69 @@
 title: Accept-Ranges
 slug: Web/HTTP/Headers/Accept-Ranges
 tags:
-- HTTP
-- HTTP Header
-- Range Requests
-- Reference
-- Response Header
+  - HTTP
+  - HTTP Header
+  - Range Requests
+  - Reference
+  - Response Header
 browser-compat: http.headers.Accept-Ranges
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The <code><strong>Accept-Ranges</strong></code> response HTTP header is a marker used
-	by the server to advertise its support of partial requests. The value of this field
-	indicates the unit that can be used to define a range.</p>
+The **`Accept-Ranges`** response HTTP header is a marker used
+by the server to advertise its support of partial requests. The value of this field
+indicates the unit that can be used to define a range.
 
-<p>In presence of an <code>Accept-Ranges</code> header, the browser may try to
-	<em>resume</em> an interrupted download, rather than to start it from the start again.
-</p>
+In presence of an `Accept-Ranges` header, the browser may try to
+_resume_ an interrupted download, rather than to start it from the start again.
 
 <table class="properties">
-	<tbody>
-		<tr>
-			<th scope="row">Header type</th>
-			<td>{{Glossary("Response header")}}</td>
-		</tr>
-		<tr>
-			<th scope="row">{{Glossary("Forbidden header name")}}</th>
-			<td>no</td>
-		</tr>
-	</tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Header type</th>
+      <td>{{Glossary("Response header")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>no</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: html">Accept-Ranges: &lt;range-unit&gt;
-Accept-Ranges: none</pre>
+```html
+Accept-Ranges: <range-unit>
+Accept-Ranges: none
+```
 
-<h2 id="Directives">Directives</h2>
+## Directives
 
-<dl>
-	<dt><code>&lt;range-unit&gt;</code></dt>
-	<dd>Defines the range unit the server supports. Though <code>bytes</code> is the only
-		range unit formally defined by {{RFC("7233")}}, additional range units may be
-		registered in the<a
-			href="https://www.iana.org/assignments/http-parameters/http-parameters.xhtml#range-units">
-			HTTP Range Unit Registry</a>. </dd>
-	<dt><code>none</code></dt>
-	<dd>No range unit is supported, this makes the header equivalent of its own absence
-		and is therefore rarely used, though some browsers, like IE9, it is used to
-		disable or remove the pause buttons in the download manager.</dd>
-</dl>
+- `<range-unit>`
+  - : Defines the range unit the server supports. Though `bytes` is the only
+    range unit formally defined by {{RFC("7233")}}, additional range units may be
+    registered in the[
+    HTTP Range Unit Registry](https://www.iana.org/assignments/http-parameters/http-parameters.xhtml#range-units).
+- `none`
+  - : No range unit is supported, this makes the header equivalent of its own absence
+    and is therefore rarely used, though some browsers, like IE9, it is used to
+    disable or remove the pause buttons in the download manager.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre>Accept-Ranges: bytes
-</pre>
+    Accept-Ranges: bytes
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>{{HTTPHeader("If-Range")}}</li>
-	<li>{{HTTPHeader("Range")}}</li>
-	<li><a
-			href="https://www.iana.org/assignments/http-parameters/http-parameters.xhtml#range-units">IANA
-			HTTP Range Unit Registry</a></li>
-</ul>
+- {{HTTPHeader("If-Range")}}
+- {{HTTPHeader("Range")}}
+- [IANA
+  HTTP Range Unit Registry](https://www.iana.org/assignments/http-parameters/http-parameters.xhtml#range-units)

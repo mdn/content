@@ -2,75 +2,77 @@
 title: Content-Range
 slug: Web/HTTP/Headers/Content-Range
 tags:
-- HTTP
-- HTTP Header
-- Reference
-- Response Header
-- Header
-- Payload header
+  - HTTP
+  - HTTP Header
+  - Reference
+  - Response Header
+  - Header
+  - Payload header
 browser-compat: http.headers.Content-Range
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The <strong><code>Content-Range</code></strong> response HTTP header indicates where in
-  a full body message a partial message belongs.</p>
+The **`Content-Range`** response HTTP header indicates where in
+a full body message a partial message belongs.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Header type</th>
-      <td>{{Glossary("Response header")}}, {{Glossary("Payload header")}}</td>
+      <td>
+        {{Glossary("Response header")}},
+        {{Glossary("Payload header")}}
+      </td>
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
       <td>no</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Simple response header", "CORS-safelisted
-        response-header")}}</th>
+      <th scope="row">
+        {{Glossary("Simple response header", "CORS-safelisted
+        response-header")}}
+      </th>
       <td>no</td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: html">Content-Range: &lt;unit&gt; &lt;range-start&gt;-&lt;range-end&gt;/&lt;size&gt;
-Content-Range: &lt;unit&gt; &lt;range-start&gt;-&lt;range-end&gt;/*
-Content-Range: &lt;unit&gt; */&lt;size&gt;</pre>
+```html
+Content-Range: <unit> <range-start>-<range-end>/<size>
+Content-Range: <unit> <range-start>-<range-end>/*
+Content-Range: <unit> */<size>
+```
 
-<h2 id="Directives">Directives</h2>
+## Directives
 
-<dl>
-  <dt>&lt;unit&gt;</dt>
-  <dd>The unit in which ranges are specified. This is usually <code>bytes</code>.</dd>
-  <dt>&lt;range-start&gt;</dt>
-  <dd>An integer in the given unit indicating the beginning of the request range.</dd>
-  <dt>&lt;range-end&gt;</dt>
-  <dd>An integer in the given unit indicating the end of the requested range.</dd>
-  <dt>&lt;size&gt;</dt>
-  <dd>The total size of the document (or <code>'*'</code> if unknown).</dd>
-</dl>
+- \<unit>
+  - : The unit in which ranges are specified. This is usually `bytes`.
+- \<range-start>
+  - : An integer in the given unit indicating the beginning of the request range.
+- \<range-end>
+  - : An integer in the given unit indicating the end of the requested range.
+- \<size>
+  - : The total size of the document (or `'*'` if unknown).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre>Content-Range: bytes 200-1000/67589
-</pre>
+    Content-Range: bytes 200-1000/67589
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{HTTPHeader("If-Range")}}</li>
-  <li>{{HTTPHeader("Range")}}</li>
-  <li>{{HTTPHeader("Content-Type")}}</li>
-  <li>{{HTTPStatus("206")}} <code>Partial Content</code></li>
-  <li>{{HTTPStatus("416")}} <code>Range Not Satisfiable</code></li>
-</ul>
+- {{HTTPHeader("If-Range")}}
+- {{HTTPHeader("Range")}}
+- {{HTTPHeader("Content-Type")}}
+- {{HTTPStatus("206")}} `Partial Content`
+- {{HTTPStatus("416")}} `Range Not Satisfiable`

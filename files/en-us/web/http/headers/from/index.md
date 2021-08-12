@@ -2,25 +2,21 @@
 title: From
 slug: Web/HTTP/Headers/From
 tags:
-- HTTP
-- Reference
-- header
+  - HTTP
+  - Reference
+  - header
 browser-compat: http.headers.From
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The <code><strong>From</strong></code> request header contains an Internet email
-  address for a human user who controls the requesting user agent.</p>
+The **`From`** request header contains an Internet email
+address for a human user who controls the requesting user agent.
 
-<p>If you are running a robotic user agent (e.g. a crawler), the <code>From</code> header
-  should be sent, so you can be contacted if problems occur on servers, such as if the
-  robot is sending excessive, unwanted, or invalid requests.</p>
+If you are running a robotic user agent (e.g. a crawler), the `From` header
+should be sent, so you can be contacted if problems occur on servers, such as if the
+robot is sending excessive, unwanted, or invalid requests.
 
-<div class="notecard warning">
-  <p>
-    <strong>Warning:</strong> You shouldn't use the <code>From</code> header for access control or authentication.
-  </p>
-</div>
+> **Warning:** You shouldn't use the `From` header for access control or authentication.
 
 <table class="properties">
   <tbody>
@@ -35,32 +31,29 @@ browser-compat: http.headers.From
   </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: html">From: &lt;email&gt;
-</pre>
+```html
+From: <email>
+```
 
-<h2 id="Directives">Directives</h2>
+## Directives
 
-<dl>
-  <dt>&lt;email&gt;</dt>
-  <dd>A machine-usable email address.</dd>
-</dl>
+- \<email>
+  - : A machine-usable email address.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre>From: webmaster@example.org</pre>
+    From: webmaster@example.org
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{HTTPHeader("Host")}}</li>
-</ul>
+- {{HTTPHeader("Host")}}

@@ -10,34 +10,30 @@ tags:
   - Non-standard
 browser-compat: http.headers.Feature-Policy.unsized-media
 ---
-<p>{{HTTPSidebar}} {{SeeCompatTable}}{{Non-standard_header}}</p>
+{{HTTPSidebar}} {{SeeCompatTable}}{{Non-standard_header}}
 
-<p>The HTTP {{HTTPHeader('Feature-Policy')}} header <code>unsized-media</code> directive controls whether the current document is allowed to change the size of media elements after the initial layout is complete.</p>
+The HTTP {{HTTPHeader('Feature-Policy')}} header `unsized-media` directive controls whether the current document is allowed to change the size of media elements after the initial layout is complete.
 
-<p>This restriction solves "layout instability" problem caused by providing default dimensions for images whose size is not specified in advance so that image doesn't change size after loading.</p>
+This restriction solves "layout instability" problem caused by providing default dimensions for images whose size is not specified in advance so that image doesn't change size after loading.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre>Feature-Policy: unsized-media &lt;allowlist&gt;;</pre>
+    Feature-Policy: unsized-media <allowlist>;
 
-<dl>
-  <dt>&lt;allowlist&gt;</dt>
-  <dd>A list of origins for which the feature is allowed. See <a href="/en-US/docs/Web/HTTP/Headers/Feature-Policy#syntax"><code>Feature-Policy</code></a>.</dd>
-</dl>
+- \<allowlist>
+  - : A list of origins for which the feature is allowed. See [`Feature-Policy`](/en-US/docs/Web/HTTP/Headers/Feature-Policy#syntax).
 
-<h2 id="Default_value">Default value</h2>
+## Default value
 
-<p>The default value for unsized-media is <code>'*'</code>, that is unsized media elements are allowed for all origins by default. The page will re-flow every time an image with unknown dimensions is loaded.</p>
+The default value for unsized-media is `'*'`, that is unsized media elements are allowed for all origins by default. The page will re-flow every time an image with unknown dimensions is loaded.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTTPHeader('Feature-Policy')}} header</li>
- <li><a href="/en-US/docs/Web/HTTP/Feature_Policy">Feature Policy</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy">Using Feature Policy</a></li>
- <li><a href="https://github.com/w3c/webappsec-feature-policy/blob/master/policies/unsized-media.md">Proposal</a></li>
-</ul>
+- {{HTTPHeader('Feature-Policy')}} header
+- [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy)
+- [Using Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)
+- [Proposal](https://github.com/w3c/webappsec-feature-policy/blob/master/policies/unsized-media.md)

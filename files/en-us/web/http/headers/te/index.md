@@ -2,28 +2,26 @@
 title: TE
 slug: Web/HTTP/Headers/TE
 tags:
-- HTTP
-- Reference
-- header
+  - HTTP
+  - Reference
+  - header
 browser-compat: http.headers.TE
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The <code><strong>TE</strong></code> request header specifies the transfer encodings
-  the user agent is willing to accept. (you could informally call it
-  <em><code>Accept-Transfer-Encoding</code></em>, which would be more intuitive).</p>
+The **`TE`** request header specifies the transfer encodings
+the user agent is willing to accept. (you could informally call it
+_`Accept-Transfer-Encoding`_, which would be more intuitive).
 
-<div class="notecard note">
-  <p><strong>Note:</strong> <a href="https://datatracker.ietf.org/doc/html/rfc7540#section-8.1.2.2">In HTTP/2,
-    the <code>TE</code> header field is only accepted
-    if the <code>trailers</code> value is set.</a></p>
-</div>
+> **Note:** [In HTTP/2,
+> the `TE` header field is only accepted
+> if the `trailers` value is set.](https://datatracker.ietf.org/doc/html/rfc7540#section-8.1.2.2)
 
-<p>See also the {{HTTPHeader("Transfer-Encoding")}} response header for more details on
-  transfer encodings. Note that <code>chunked</code> is always acceptable for HTTP/1.1
-  recipients and you don't have to specify <code>"chunked"</code> using the
-  <code>TE</code> header. However, it is useful for setting if the client is accepting
-  trailer fields in a chunked transfer coding using the "trailers" value.</p>
+See also the {{HTTPHeader("Transfer-Encoding")}} response header for more details on
+transfer encodings. Note that `chunked` is always acceptable for HTTP/1.1
+recipients and you don't have to specify `"chunked"` using the
+`TE` header. However, it is useful for setting if the client is accepting
+trailer fields in a chunked transfer coding using the "trailers" value.
 
 <table class="properties">
   <tbody>
@@ -38,55 +36,48 @@ browser-compat: http.headers.TE
   </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: html">TE: compress
+```html
+TE: compress
 TE: deflate
 TE: gzip
 TE: trailers
 
 // Multiple directives, weighted with the {{glossary("quality values", "quality value")}} syntax:
 TE: trailers, deflate;q=0.5
-</pre>
+```
 
-<h2 id="Directives">Directives</h2>
+## Directives
 
-<dl>
-  <dt><code>compress</code></dt>
-  <dd>A format using the <a       href="https://en.wikipedia.org/wiki/LZW">Lempel-Ziv-Welch</a> (LZW) algorithm is
-    accepted as a transfer coding name.</dd>
-  <dt><code>deflate</code></dt>
-  <dd>Using the <a href="https://en.wikipedia.org/wiki/Zlib">zlib</a>
-    structure is accepted as a transfer coding name.</dd>
-  <dt><code>gzip</code></dt>
-  <dd>A format using the <a       href="https://en.wikipedia.org/wiki/LZ77_and_LZ78#LZ77">Lempel-Ziv coding</a>
-    (LZ77), with a 32-bit CRC is accepted as a transfer coding name.</dd>
-  <dt><code>trailers</code></dt>
-  <dd>Indicates that the client is willing to accept trailer fields in a chunked transfer
-    coding.</dd>
-  <dt><code>q</code></dt>
-  <dd>
-    <p>When multiple transfer codings are acceptable, the <code>q</code> parameter of the
-      <a href="/en-US/docs/Glossary/Quality_values">quality value</a> syntax can rank
-      codings by preference.</p>
-  </dd>
-</dl>
+- `compress`
+  - : A format using the [Lempel-Ziv-Welch](https://en.wikipedia.org/wiki/LZW) (LZW) algorithm is
+    accepted as a transfer coding name.
+- `deflate`
+  - : Using the [zlib](https://en.wikipedia.org/wiki/Zlib)
+    structure is accepted as a transfer coding name.
+- `gzip`
+  - : A format using the [Lempel-Ziv coding](https://en.wikipedia.org/wiki/LZ77_and_LZ78#LZ77)
+    (LZ77), with a 32-bit CRC is accepted as a transfer coding name.
+- `trailers`
+  - : Indicates that the client is willing to accept trailer fields in a chunked transfer
+    coding.
+- `q`
+  - : When multiple transfer codings are acceptable, the `q` parameter of the
+    [quality value](/en-US/docs/Glossary/Quality_values) syntax can rank
+    codings by preference.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{HTTPHeader("Transfer-Encoding")}}</li>
-  <li>{{HTTPHeader("Trailer")}}</li>
-  <li>
-    <p><a href="https://en.wikipedia.org/wiki/Chunked_transfer_encoding">Chunked transfer
-        encoding</a></p>
-  </li>
-</ul>
+- {{HTTPHeader("Transfer-Encoding")}}
+- {{HTTPHeader("Trailer")}}
+- [Chunked transfer
+  encoding](https://en.wikipedia.org/wiki/Chunked_transfer_encoding)

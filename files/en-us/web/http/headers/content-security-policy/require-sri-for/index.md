@@ -2,64 +2,63 @@
 title: 'CSP: require-sri-for'
 slug: Web/HTTP/Headers/Content-Security-Policy/require-sri-for
 tags:
-- CSP
-- Directive
-- HTTP
-- Reference
-- Security
-- Subresource Integrity
-- require-sri-for
+  - CSP
+  - Directive
+  - HTTP
+  - Reference
+  - Security
+  - Subresource Integrity
+  - require-sri-for
 browser-compat: http.headers.csp.Content-Security-Policy.require-sri-for
 ---
-<div>{{deprecated_header}}</div>
+{{deprecated_header}}
 
-<p>The <a href="/en-US/docs/Web/HTTP">HTTP</a> {{HTTPHeader("Content-Security-Policy")}}
-  <code><strong>require-sri-for</strong></code> directive instructs the client to require
-  the use of <a href="/en-US/docs/Web/Security/Subresource_Integrity">Subresource
-    Integrity</a> for scripts or styles on the page.</p>
+The [HTTP](/en-US/docs/Web/HTTP) {{HTTPHeader("Content-Security-Policy")}}
+**`require-sri-for`** directive instructs the client to require
+the use of [Subresource
+Integrity](/en-US/docs/Web/Security/Subresource_Integrity) for scripts or styles on the page.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: html">Content-Security-Policy: require-sri-for script;
+```html
+Content-Security-Policy: require-sri-for script;
 Content-Security-Policy: require-sri-for style;
 Content-Security-Policy: require-sri-for script style;
-</pre>
+```
 
-<dl>
-  <dt><code>script</code></dt>
-  <dd>Requires {{Glossary("SRI")}} for scripts.</dd>
-  <dt><code>style</code></dt>
-  <dd>Requires {{Glossary("SRI")}} for style sheets.</dd>
-  <dt><code>script style</code></dt>
-  <dd>Requires {{Glossary("SRI")}} for both, scripts and style sheets.</dd>
-</dl>
+- `script`
+  - : Requires {{Glossary("SRI")}} for scripts.
+- `style`
+  - : Requires {{Glossary("SRI")}} for style sheets.
+- `script style`
+  - : Requires {{Glossary("SRI")}} for both, scripts and style sheets.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>If you set your site to require SRI for script and styles using this directive:</p>
+If you set your site to require SRI for script and styles using this directive:
 
-<pre>Content-Security-Policy: require-sri-for script style</pre>
+    Content-Security-Policy: require-sri-for script style
 
-<p>{{HTMLElement("script")}} elements like the following will be loaded as they use a
-  valid integrity attribute.</p>
+{{HTMLElement("script")}} elements like the following will be loaded as they use a
+valid integrity attribute.
 
-<pre class="brush: html; example-good">&lt;script src="https://code.jquery.com/jquery-3.1.1.slim.js"
+```html example-good
+<script src="https://code.jquery.com/jquery-3.1.1.slim.js"
         integrity="sha256-5i/mQ300M779N2OVDrl16lbohwXNUdzL/R2aVUXyXWA="
-        crossorigin="anonymous"&gt;&lt;/script&gt;</pre>
+        crossorigin="anonymous"></script>
+```
 
-<p>However, scripts without integrity won't load anymore:</p>
+However, scripts without integrity won't load anymore:
 
-<pre
-  class="brush: html; example-bad">&lt;script src="https://code.jquery.com/jquery-3.1.1.slim.js"&gt;&lt;/script&gt;</pre>
+```html example-bad
+<script src="https://code.jquery.com/jquery-3.1.1.slim.js"></script>
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{HTTPHeader("Content-Security-Policy")}}</li>
-  <li><a href="/en-US/docs/Web/Security/Subresource_Integrity">Subresource Integrity</a>
-  </li>
-</ul>
+- {{HTTPHeader("Content-Security-Policy")}}
+- [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity)

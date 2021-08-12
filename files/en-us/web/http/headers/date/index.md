@@ -2,91 +2,90 @@
 title: Date
 slug: Web/HTTP/Headers/Date
 tags:
-- HTTP
-- HTTP Header
-- Request header
-- Response header
-- Reference
+  - HTTP
+  - HTTP Header
+  - Request header
+  - Response header
+  - Reference
 browser-compat: http.headers.Date
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The <strong><code>Date</code></strong> general HTTP header contains the date and time
-	at which the message was originated.</p>
+The **`Date`** general HTTP header contains the date and time
+at which the message was originated.
 
-<div class="notecard warning">
-	<p><strong>Warning:</strong> <code>Date</code> is listed
-    in the <a href="https://fetch.spec.whatwg.org/#forbidden-header-name">forbidden header names</a>
-    in the fetch spec, so this code will not send the <code>Date</code> header:</p>
-
-	  <pre class="brush: js">fetch('https://httpbin.org/get', {
-      'headers': {
-        'Date': (new Date()).toUTCString()
-      }
-    })</pre>
-</div>
+> **Warning:** `Date` is listed
+> in the [forbidden header names](https://fetch.spec.whatwg.org/#forbidden-header-name)
+> in the fetch spec, so this code will not send the `Date` header:
+>
+> ```js
+> fetch('https://httpbin.org/get', {
+>       'headers': {
+>         'Date': (new Date()).toUTCString()
+>       }
+>     })
+> ```
 
 <table class="properties">
-	<tbody>
-		<tr>
-			<th scope="row">Header type</th>
-			<td>{{Glossary("Request header")}}, {{Glossary("Response header")}}</td>
-		</tr>
-		<tr>
-			<th scope="row">{{Glossary("Forbidden header name")}}</th>
-			<td>yes</td>
-		</tr>
-	</tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Header type</th>
+      <td>
+        {{Glossary("Request header")}},
+        {{Glossary("Response header")}}
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: html">Date: &lt;day-name&gt;, &lt;day&gt; &lt;month&gt; &lt;year&gt; &lt;hour&gt;:&lt;minute&gt;:&lt;second&gt; GMT
-</pre>
+```html
+Date: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT
+```
 
-<h2 id="Directives">Directives</h2>
+## Directives
 
-<dl>
-	<dt>&lt;day-name&gt;</dt>
-	<dd>One of "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", or "Sun" (case-sensitive).</dd>
-	<dt>&lt;day&gt;</dt>
-	<dd>2 digit day number, e.g. "04" or "23".</dd>
-	<dt>&lt;month&gt;</dt>
-	<dd>One of "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct",
-		"Nov", "Dec" (case sensitive).</dd>
-	<dt>&lt;year&gt;</dt>
-	<dd>4 digit year number, e.g. "1990" or "2016".</dd>
-	<dt>&lt;hour&gt;</dt>
-	<dd>2 digit hour number, e.g. "09" or "23".</dd>
-	<dt>&lt;minute&gt;</dt>
-	<dd>2 digit minute number, e.g. "04" or "59".</dd>
-	<dt>&lt;second&gt;</dt>
-	<dd>2 digit second number, e.g. "04" or "59".</dd>
-	<dt>GMT</dt>
-	<dd>
-		<p>Greenwich Mean Time. HTTP dates are always expressed in GMT, never in local
-			time.</p>
-	</dd>
-</dl>
+- \<day-name>
+  - : One of "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", or "Sun" (case-sensitive).
+- \<day>
+  - : 2 digit day number, e.g. "04" or "23".
+- \<month>
+  - : One of "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct",
+    "Nov", "Dec" (case sensitive).
+- \<year>
+  - : 4 digit year number, e.g. "1990" or "2016".
+- \<hour>
+  - : 2 digit hour number, e.g. "09" or "23".
+- \<minute>
+  - : 2 digit minute number, e.g. "04" or "59".
+- \<second>
+  - : 2 digit second number, e.g. "04" or "59".
+- GMT
+  - : Greenwich Mean Time. HTTP dates are always expressed in GMT, never in local
+    time.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre>Date: Wed, 21 Oct 2015 07:28:00 GMT
-</pre>
+    Date: Wed, 21 Oct 2015 07:28:00 GMT
 
-<pre class="brush: js">new Date().toUTCString()
-// "Mon, 09 Mar 2020 08:13:24 GMT"</pre>
+```js
+new Date().toUTCString()
+// "Mon, 09 Mar 2020 08:13:24 GMT"
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>{{HTTPHeader("Age")}}</li>
-</ul>
+- {{HTTPHeader("Age")}}

@@ -9,73 +9,71 @@ tags:
   - header
 browser-compat: http.headers.Cross-Origin-Opener-Policy
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The HTTP <strong><code>Cross-Origin-Opener-Policy</code></strong> (COOP) response header allows you to ensure a top-level document does not share a browsing context group with cross-origin documents.</p>
+The HTTP **`Cross-Origin-Opener-Policy`** (COOP) response header allows you to ensure a top-level document does not share a browsing context group with cross-origin documents.
 
-<p>COOP will process-isolate your document and potential attackers can't access to your global object if they were opening it in a popup, preventing a set of cross-origin attacks dubbed <a href="https://github.com/xsleaks/xsleaks">XS-Leaks</a>.</p>
+COOP will process-isolate your document and potential attackers can't access to your global object if they were opening it in a popup, preventing a set of cross-origin attacks dubbed [XS-Leaks](https://github.com/xsleaks/xsleaks).
 
-<p>If a cross-origin document with COOP is opened in a new window, the opening document will not have a reference to it, and the <code><a href="/en-US/docs/Web/API/Window/opener">window.opener</a></code> property of the new window will be <code>null</code>. This allows you to have more control over references to a window than <code><a href="/en-US/docs/Web/HTML/Link_types/noopener">rel=noopener</a></code>, which only affects outgoing navigations.</p>
+If a cross-origin document with COOP is opened in a new window, the opening document will not have a reference to it, and the [`window.opener`](/en-US/docs/Web/API/Window/opener) property of the new window will be `null`. This allows you to have more control over references to a window than [`rel=noopener`](/en-US/docs/Web/HTML/Link_types/noopener), which only affects outgoing navigations.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Response header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>no</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Header type</th>
+      <td>{{Glossary("Response header")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>no</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: html">Cross-Origin-Opener-Policy: unsafe-none | same-origin-allow-popups | same-origin
-</pre>
+```html
+Cross-Origin-Opener-Policy: unsafe-none | same-origin-allow-popups | same-origin
+```
 
-<h3 id="Directives">Directives</h3>
+### Directives
 
-<dl>
- <dt><code>unsafe-none</code></dt>
- <dd>This is the default value. Allows the document to be added to its opener's browsing context group unless the opener itself has a COOP of <code>same-origin</code> or <code>same-origin-allow-popups</code>.</dd>
- <dt><code>same-origin-allow-popups</code></dt>
- <dd>Retains references to newly opened windows or tabs which either don't set COOP or which opt out of isolation by setting a COOP of <code>unsafe-none</code>.</dd>
- <dt><code>same-origin</code></dt>
- <dd>Isolates the browsing context exclusively to same-origin documents. Cross-origin documents are not loaded in the same browsing context.</dd>
-</dl>
+- `unsafe-none`
+  - : This is the default value. Allows the document to be added to its opener's browsing context group unless the opener itself has a COOP of `same-origin` or `same-origin-allow-popups`.
+- `same-origin-allow-popups`
+  - : Retains references to newly opened windows or tabs which either don't set COOP or which opt out of isolation by setting a COOP of `unsafe-none`.
+- `same-origin`
+  - : Isolates the browsing context exclusively to same-origin documents. Cross-origin documents are not loaded in the same browsing context.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Certain_features_depend_on_cross-origin_isolation">Certain features depend on cross-origin isolation</h3>
+### Certain features depend on cross-origin isolation
 
-<p>Certain features like {{jsxref("SharedArrayBuffer")}} objects or {{domxref("Performance.now()")}} with unthrottled timers are only available if your document has a COOP header with the value <code>same-origin</code> value set.</p>
+Certain features like {{jsxref("SharedArrayBuffer")}} objects or {{domxref("Performance.now()")}} with unthrottled timers are only available if your document has a COOP header with the value `same-origin` value set.
 
-<pre>Cross-Origin-Opener-Policy: same-origin
-Cross-Origin-Embedder-Policy: require-corp
-</pre>
+    Cross-Origin-Opener-Policy: same-origin
+    Cross-Origin-Embedder-Policy: require-corp
 
-<p>See also the {{HTTPHeader("Cross-Origin-Embedder-Policy")}} header which you'll need to set as well.</p>
+See also the {{HTTPHeader("Cross-Origin-Embedder-Policy")}} header which you'll need to set as well.
 
-<p>To check if cross-origin isolation has been successful, you can test against the <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/crossOriginIsolated">crossOriginIsolated</a></code> property available to window and worker contexts:</p>
+To check if cross-origin isolation has been successful, you can test against the [`crossOriginIsolated`](/en-US/docs/Web/API/WindowOrWorkerGlobalScope/crossOriginIsolated) property available to window and worker contexts:
 
-<pre class="brush: js">if (crossOriginIsolated) {
+```js
+if (crossOriginIsolated) {
   // Post SharedArrayBuffer
 } else {
   // Do something else
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{httpheader("Cross-Origin-Embedder-Policy")}}</li>
-</ul>
+- {{httpheader("Cross-Origin-Embedder-Policy")}}

@@ -2,17 +2,17 @@
 title: Access-Control-Allow-Methods
 slug: Web/HTTP/Headers/Access-Control-Allow-Methods
 tags:
-- CORS
-- HTTP
-- Reference
-- header
+  - CORS
+  - HTTP
+  - Reference
+  - header
 browser-compat: http.headers.Access-Control-Allow-Methods
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The <strong><code>Access-Control-Allow-Methods</code></strong> response header
-  specifies the method or methods allowed when accessing the resource in response to a
-  {{glossary("preflight request")}}.</p>
+The **`Access-Control-Allow-Methods`** response header
+specifies the method or methods allowed when accessing the resource in response to a
+{{glossary("preflight request")}}.
 
 <table class="properties">
   <tbody>
@@ -27,44 +27,40 @@ browser-compat: http.headers.Access-Control-Allow-Methods
   </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: html">Access-Control-Allow-Methods: &lt;method&gt;, &lt;method&gt;, ...
+```html
+Access-Control-Allow-Methods: <method>, <method>, ...
 Access-Control-Allow-Methods: *
-</pre>
+```
 
-<h2 id="Directives">Directives</h2>
+## Directives
 
-<dl>
-  <dt>&lt;method&gt;</dt>
-  <dd>Comma-delimited list of the allowed <a href="/en-US/docs/Web/HTTP/Methods">HTTP
-      request methods</a>.</dd>
-  <dt><code>*</code> (wildcard)</dt>
-  <dd>The value "<code>*</code>" only counts as a special wildcard value for requests
-    without credentials (requests without <a href="/en-US/docs/Web/HTTP/Cookies">HTTP
-      cookies</a> or HTTP authentication information). In requests with credentials, it is
-    treated as the literal method name "<code>*</code>" without special semantics.</dd>
-</dl>
+- \<method>
+  - : Comma-delimited list of the allowed [HTTP
+    request methods](/en-US/docs/Web/HTTP/Methods).
+- `*` (wildcard)
+  - : The value "`*`" only counts as a special wildcard value for requests
+    without credentials (requests without [HTTP
+    cookies](/en-US/docs/Web/HTTP/Cookies) or HTTP authentication information). In requests with credentials, it is
+    treated as the literal method name "`*`" without special semantics.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre>Access-Control-Allow-Methods: POST, GET, OPTIONS
-Access-Control-Allow-Methods: *
-</pre>
+    Access-Control-Allow-Methods: POST, GET, OPTIONS
+    Access-Control-Allow-Methods: *
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{HTTPHeader("Access-Control-Allow-Origin")}}</li>
-  <li>{{HTTPHeader("Access-Control-Expose-Headers")}}</li>
-  <li>{{HTTPHeader("Access-Control-Allow-Headers")}}</li>
-  <li>{{HTTPHeader("Access-Control-Request-Method")}}</li>
-</ul>
+- {{HTTPHeader("Access-Control-Allow-Origin")}}
+- {{HTTPHeader("Access-Control-Expose-Headers")}}
+- {{HTTPHeader("Access-Control-Allow-Headers")}}
+- {{HTTPHeader("Access-Control-Request-Method")}}

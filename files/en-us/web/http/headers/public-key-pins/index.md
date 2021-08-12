@@ -2,34 +2,29 @@
 title: Public-Key-Pins
 slug: Web/HTTP/Headers/Public-Key-Pins
 tags:
-- Deprecated
-- HPKP
-- HTTP
-- Deprecated
-- Reference
-- Security
-- header
+  - Deprecated
+  - HPKP
+  - HTTP
+  - Deprecated
+  - Reference
+  - Security
+  - header
 browser-compat: http.headers.Public-Key-Pins
 ---
-<div>{{HTTPSidebar}}{{deprecated_header}}</div>
+{{HTTPSidebar}}{{deprecated_header}}
 
-<div class="notecard note">
-  <p>
-    <strong>Note:</strong> Public Key Pinning mechanism was deprecated
-    in favor of <a href="/en-US/docs/Web/Security/Certificate_Transparency">Certificate Transparency</a>
-    and {{HTTPHeader("Expect-CT")}} header.
-  </p>
-</div>
+> **Note:** Public Key Pinning mechanism was deprecated
+> in favor of [Certificate Transparency](/en-US/docs/Web/Security/Certificate_Transparency)
+> and {{HTTPHeader("Expect-CT")}} header.
 
-<p>The HTTP <code><strong>Public-Key-Pins</strong></code> response header used to
-  associate a specific cryptographic public {{Glossary("key")}} with a certain web server
-  to decrease the risk of {{Glossary("MITM")}} attacks with forged certificates, however,
-  it has been removed from modern browsers and is no longer supported. Use <a
-    href="/en-US/docs/Web/Security/Certificate_Transparency">Certificate
-    Transparency</a> and {{HTTPHeader("Expect-CT")}} header instead.</p>
+The HTTP **`Public-Key-Pins`** response header used to
+associate a specific cryptographic public {{Glossary("key")}} with a certain web server
+to decrease the risk of {{Glossary("MITM")}} attacks with forged certificates, however,
+it has been removed from modern browsers and is no longer supported. Use [Certificate
+Transparency](/en-US/docs/Web/Security/Certificate_Transparency) and {{HTTPHeader("Expect-CT")}} header instead.
 
-<p>For more information, see the <a href="/en-US/docs/Web/HTTP/Public_Key_Pinning">HTTP
-    Public Key Pinning</a> article.</p>
+For more information, see the [HTTP
+Public Key Pinning](/en-US/docs/Web/HTTP/Public_Key_Pinning) article.
 
 <table class="properties">
   <tbody>
@@ -44,70 +39,64 @@ browser-compat: http.headers.Public-Key-Pins
   </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: html">Public-Key-Pins: pin-sha256="&lt;pin-value&gt;";
-                 max-age=&lt;expire-time&gt;;
+```html
+Public-Key-Pins: pin-sha256="<pin-value>";
+                 max-age=<expire-time>;
                  includeSubDomains;
-                 report-uri="&lt;uri&gt;"</pre>
+                 report-uri="<uri>"
+```
 
-<h2 id="Directives">Directives</h2>
+## Directives
 
-<dl>
-  <dt><code>pin-sha256="&lt;pin-value&gt;"</code></dt>
-  <dd>The quoted string is the Base64 encoded Subject Public Key Information
+- `pin-sha256="<pin-value>"`
+  - : The quoted string is the Base64 encoded Subject Public Key Information
     ({{Glossary("SPKI")}}) fingerprint. It is possible to specify multiple pins for
     different public keys. Some browsers might allow other hashing algorithms than SHA-256
-    in the future.</dd>
-  <dt><code>max-age=&lt;expire-time&gt;</code></dt>
-  <dd>The time, in seconds, that the browser should remember that this site is only to be
-    accessed using one of the defined keys.</dd>
-  <dt><code>includeSubDomains </code>{{optional_inline}}</dt>
-  <dd>If this optional parameter is specified, this rule applies to all of the site's
-    subdomains as well.</dd>
-  <dt><code>report-uri="&lt;uri&gt;"</code> {{optional_inline}}</dt>
-  <dd>If this optional parameter is specified, pin validation failures are reported to the
-    given URL.</dd>
-</dl>
+    in the future.
+- `max-age=<expire-time>`
+  - : The time, in seconds, that the browser should remember that this site is only to be
+    accessed using one of the defined keys.
+- `includeSubDomains `{{optional_inline}}
+  - : If this optional parameter is specified, this rule applies to all of the site's
+    subdomains as well.
+- `report-uri="<uri>"` {{optional_inline}}
+  - : If this optional parameter is specified, pin validation failures are reported to the
+    given URL.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<div class="notecard warning">
-  <p>
-    <strong>Warning:</strong> HPKP has the potential to lock out users for a long time
-    if used incorrectly!
-    The use of backup certificates and/or pinning the CA certificate is recommended.
-  </p>
-</div>
+> **Warning:** HPKP has the potential to lock out users for a long time
+> if used incorrectly!
+> The use of backup certificates and/or pinning the CA certificate is recommended.
 
-<pre>Public-Key-Pins:
-  pin-sha256="cUPcTAZWKaASuYWhhneDttWpY3oBAkE3h2+soZS7sWs=";
-  pin-sha256="M8HztCzM3elUxkcjR2S5P4hhyBNf6lHkmjAHKhpGPWE=";
-  max-age=5184000; includeSubDomains;
-  report-uri="https://www.example.org/hpkp-report"</pre>
+    Public-Key-Pins:
+      pin-sha256="cUPcTAZWKaASuYWhhneDttWpY3oBAkE3h2+soZS7sWs=";
+      pin-sha256="M8HztCzM3elUxkcjR2S5P4hhyBNf6lHkmjAHKhpGPWE=";
+      max-age=5184000; includeSubDomains;
+      report-uri="https://www.example.org/hpkp-report"
 
-<p>In this example,
-  <strong>pin-sha256="cUPcTAZWKaASuYWhhneDttWpY3oBAkE3h2+soZS7sWs="</strong> pins the
-  server's public key used in production. The second pin declaration
-  <strong>pin-sha256="M8HztCzM3elUxkcjR2S5P4hhyBNf6lHkmjAHKhpGPWE="</strong> also pins the
-  backup key. <strong>max-age=5184000</strong> tells the client to store this information
-  for two months, which is a reasonable time limit according to the IETF RFC. This key
-  pinning is also valid for all subdomains, which is told by the
-  <strong>includeSubDomains</strong> declaration. Finally,
-  <strong>report-uri="https://www.example.org/hpkp-report"</strong> explains where to
-  report pin validation failures.</p>
+In this example,
+**pin-sha256="cUPcTAZWKaASuYWhhneDttWpY3oBAkE3h2+soZS7sWs="** pins the
+server's public key used in production. The second pin declaration
+**pin-sha256="M8HztCzM3elUxkcjR2S5P4hhyBNf6lHkmjAHKhpGPWE="** also pins the
+backup key. **max-age=5184000** tells the client to store this information
+for two months, which is a reasonable time limit according to the IETF RFC. This key
+pinning is also valid for all subdomains, which is told by the
+**includeSubDomains** declaration. Finally,
+**report-uri="https\://www\.example.org/hpkp-report"** explains where to
+report pin validation failures.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{HTTPHeader("Public-Key-Pins-Report-Only")}}</li>
-  <li>{{HTTPHeader("Expect-CT")}}</li>
-</ul>
+- {{HTTPHeader("Public-Key-Pins-Report-Only")}}
+- {{HTTPHeader("Expect-CT")}}

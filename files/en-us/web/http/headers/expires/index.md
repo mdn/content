@@ -2,25 +2,23 @@
 title: Expires
 slug: Web/HTTP/Headers/Expires
 tags:
-- Caching
-- HTTP
-- Response
-- header
+  - Caching
+  - HTTP
+  - Response
+  - header
 browser-compat: http.headers.Expires
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The <code><strong>Expires</strong></code> header contains the date/time after which the
-  response is considered stale.</p>
+The **`Expires`** header contains the date/time after which the
+response is considered stale.
 
-<p>Invalid dates, like the value 0, represent a date in the past and mean that the
-  resource is already expired.</p>
+Invalid dates, like the value 0, represent a date in the past and mean that the
+resource is already expired.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> If there is a {{HTTPHeader("Cache-Control")}} header
-    with the <code>max-age</code> or <code>s-maxage</code> directive in the response,
-    the <code>Expires</code> header is ignored.</p>
-</div>
+> **Note:** If there is a {{HTTPHeader("Cache-Control")}} header
+> with the `max-age` or `s-maxage` directive in the response,
+> the `Expires` header is ignored.
 
 <table class="properties">
   <tbody>
@@ -33,41 +31,38 @@ browser-compat: http.headers.Expires
       <td>no</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("CORS-safelisted response header")}}</th>
+      <th scope="row">
+        {{Glossary("CORS-safelisted response header")}}
+      </th>
       <td>yes</td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: html">Expires: &lt;http-date&gt;
-</pre>
+```html
+Expires: <http-date>
+```
 
-<h2 id="Directives">Directives</h2>
+## Directives
 
-<dl>
-  <dt>&lt;http-date&gt;</dt>
-  <dd>
-    <p>An HTTP-date timestamp.</p>
-  </dd>
-</dl>
+- \<http-date>
+  - : An HTTP-date timestamp.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre>Expires: Wed, 21 Oct 2015 07:28:00 GMT</pre>
+    Expires: Wed, 21 Oct 2015 07:28:00 GMT
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{HTTPHeader("Cache-Control")}}</li>
-  <li>{{HTTPHeader("Age")}}</li>
-</ul>
+- {{HTTPHeader("Cache-Control")}}
+- {{HTTPHeader("Age")}}

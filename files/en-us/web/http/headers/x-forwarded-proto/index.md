@@ -2,25 +2,24 @@
 title: X-Forwarded-Proto
 slug: Web/HTTP/Headers/X-Forwarded-Proto
 tags:
-- HTTP
-- HTTP Header
-- Non-standard
-- Reference
-- Request header
-- header
+  - HTTP
+  - HTTP Header
+  - Non-standard
+  - Reference
+  - Request header
+  - header
 browser-compat: http.headers.X-Forwarded-Proto
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The <strong><code>X-Forwarded-Proto</code></strong> (XFP) header is a de-facto standard
-  header for identifying the protocol (HTTP or HTTPS) that a client used to connect to
-  your proxy or load balancer. Your server access logs contain the protocol used between
-  the server and the load balancer, but not the protocol used between the client and the
-  load balancer. To determine the protocol used between the client and the load balancer,
-  the <code>X-Forwarded-Proto</code> request header can be used.</p>
+The **`X-Forwarded-Proto`** (XFP) header is a de-facto standard
+header for identifying the protocol (HTTP or HTTPS) that a client used to connect to
+your proxy or load balancer. Your server access logs contain the protocol used between
+the server and the load balancer, but not the protocol used between the client and the
+load balancer. To determine the protocol used between the client and the load balancer,
+the `X-Forwarded-Proto` request header can be used.
 
-<p>A standardized version of this header is the HTTP {{HTTPHeader("Forwarded")}} header.
-</p>
+A standardized version of this header is the HTTP {{HTTPHeader("Forwarded")}} header.
 
 <table class="properties">
   <tbody>
@@ -35,45 +34,41 @@ browser-compat: http.headers.X-Forwarded-Proto
   </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: html">X-Forwarded-Proto: &lt;protocol&gt;
-</pre>
+```html
+X-Forwarded-Proto: <protocol>
+```
 
-<h2 id="Directives">Directives</h2>
+## Directives
 
-<dl>
-  <dt>&lt;protocol&gt;</dt>
-  <dd>The forwarded protocol (http or https).</dd>
-</dl>
+- \<protocol>
+  - : The forwarded protocol (http or https).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre>X-Forwarded-Proto: https</pre>
+    X-Forwarded-Proto: https
 
-<p>Other non-standard forms:</p>
+Other non-standard forms:
 
-<pre># Microsoft
-Front-End-Https: on
+    # Microsoft
+    Front-End-Https: on
 
-X-Forwarded-Protocol: https
-X-Forwarded-Ssl: on
-X-Url-Scheme: https
-</pre>
+    X-Forwarded-Protocol: https
+    X-Forwarded-Ssl: on
+    X-Url-Scheme: https
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any current specification. The standardized version of this header is
-  {{HTTPHeader("Forwarded")}}.</p>
+Not part of any current specification. The standardized version of this header is
+{{HTTPHeader("Forwarded")}}.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{HTTPHeader("Forwarded")}}</li>
-  <li>{{HTTPHeader("X-Forwarded-For")}}</li>
-  <li>{{HTTPHeader("X-Forwarded-Host")}}</li>
-</ul>
+- {{HTTPHeader("Forwarded")}}
+- {{HTTPHeader("X-Forwarded-For")}}
+- {{HTTPHeader("X-Forwarded-Host")}}

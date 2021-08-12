@@ -12,72 +12,67 @@ tags:
   - Exerimental
 browser-compat: http.headers.Content-DPR
 ---
-<div>{{HTTPSidebar}} {{deprecated_header}}{{securecontext_header}}</div>
+{{HTTPSidebar}} {{deprecated_header}}{{securecontext_header}}
 
-<p>The <strong><code>Content-DPR</code></strong> response header is used to confirm the <em>image</em> device to pixel ratio in requests where the screen {{HTTPHeader("DPR")}} <a href="/en-US/docs/Glossary/Client_hints">client hint</a> was used to select an image resource.</p>
-
+The **`Content-DPR`** response header is used to confirm the _image_ device to pixel ratio in requests where the screen {{HTTPHeader("DPR")}} [client hint](/en-US/docs/Glossary/Client_hints) was used to select an image resource.
 
 <table class="properties">
   <tbody>
-   <tr>
-    <th scope="row">Header type</th>
-    <td>{{Glossary("Response header")}}, {{Glossary("Client hints","Client hint")}}</td>
-   </tr>
-   <tr>
-    <th scope="row">{{Glossary("Forbidden header name")}}</th>
-    <td>no</td>
-   </tr>
-   <tr>
-    <th scope="row">{{Glossary("CORS-safelisted response header")}}</th>
-    <td>no</td>
-   </tr>
+    <tr>
+      <th scope="row">Header type</th>
+      <td>
+        {{Glossary("Response header")}},
+        {{Glossary("Client hints","Client hint")}}
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>no</td>
+    </tr>
+    <tr>
+      <th scope="row">
+        {{Glossary("CORS-safelisted response header")}}
+      </th>
+      <td>no</td>
+    </tr>
   </tbody>
- </table>
+</table>
 
-<p>If the {{HTTPHeader("DPR")}} client hint is used to select an image the server must specify <code>Content-DPR</code> in the response. If the value in <code>Content-DPR</code> is different from the {{HTTPHeader("DPR")}} value in the request (i.e. image DPR is not the same as screen DPR) then the client must use the <code>Content-DPR</code> for determining intrinsic image size and scaling the image.</p>
+If the {{HTTPHeader("DPR")}} client hint is used to select an image the server must specify `Content-DPR` in the response. If the value in `Content-DPR` is different from the {{HTTPHeader("DPR")}} value in the request (i.e. image DPR is not the same as screen DPR) then the client must use the `Content-DPR` for determining intrinsic image size and scaling the image.
 
-<p>If the <code>Content-DPR</code> header appears more than once in a message the last occurrence is used.</p>
+If the `Content-DPR` header appears more than once in a message the last occurrence is used.
 
-<div class="notecard note">
-  <p><strong>Note:</strong></p>
-    <ul>
-      <li><code>Content-DPR</code> was removed from the client hints specification in <a href="https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-client-hints-07">draft-ietf-httpbis-client-hints-07</a>. The <a href="https://wicg.github.io/responsive-image-client-hints">Responsive Image Client Hints</a> spec proposes to replace this header by specifying intrinsic resolution/dimensions in EXIF metadata.</li>
-    </ul>
-</div>
+> **Note:**
+>
+> - `Content-DPR` was removed from the client hints specification in [draft-ietf-httpbis-client-hints-07](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-client-hints-07). The [Responsive Image Client Hints](https://wicg.github.io/responsive-image-client-hints) spec proposes to replace this header by specifying intrinsic resolution/dimensions in EXIF metadata.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre>Content-DPR: &lt;number&gt;</pre>
+    Content-DPR: <number>
 
-<h2 id="Directives">Directives</h2>
+## Directives
 
-<dl>
- <dt><code> &lt;number&gt;</code></dt>
- <dd>The image device pixel ratio, calculated according to the following formula:
-  <br> Content-DPR = <em>Selected image resource size</em> / (<em>Width</em> / <em>DPR</em>)
-</dd>
-</dl>
+- `<number>`
+  - : The image device pixel ratio, calculated according to the following formula:
+    Content-DPR = _Selected image resource size_ / (_Width_ / _DPR_)
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>See the <a href="/en-US/docs/Web/HTTP/Headers/DPR#examples"><code>DPR</code></a> header example.</p>
+See the [`DPR`](/en-US/docs/Web/HTTP/Headers/DPR#examples) header example.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/client-hints">Adapting to Users with Client Hints</a> (developer.google.com)</li>
- <li>Device client hints
-  <ul>
-    <li>{{HTTPHeader("Device-Memory")}}</li>
-    <li>{{HTTPHeader("DPR")}}</li>
-    <li>{{HTTPHeader("Viewport-Width")}}</li>
-    <li>{{HTTPHeader("Width")}}</li>
-   </ul>
- </li>
- <li>{{HTTPHeader("Accept-CH")}}</li>
- <li><a href="/en-US/docs/Web/HTTP/Caching#varying_responses">HTTP Caching > Varying responses</a> and {{HTTPHeader("Vary")}}</li>
-</ul>
+- [Adapting to Users with Client Hints](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/client-hints) (developer.google.com)
+- Device client hints
+
+  - {{HTTPHeader("Device-Memory")}}
+  - {{HTTPHeader("DPR")}}
+  - {{HTTPHeader("Viewport-Width")}}
+  - {{HTTPHeader("Width")}}
+
+- {{HTTPHeader("Accept-CH")}}
+- [HTTP Caching > Varying responses](/en-US/docs/Web/HTTP/Caching#varying_responses) and {{HTTPHeader("Vary")}}

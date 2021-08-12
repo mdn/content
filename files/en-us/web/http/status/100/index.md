@@ -2,37 +2,36 @@
 title: 100 Continue
 slug: Web/HTTP/Status/100
 tags:
-- HTTP
-- Informational
-- Status code
+  - HTTP
+  - Informational
+  - Status code
 browser-compat: http.status.100
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The HTTP <strong><code>100 Continue</code></strong> informational status response code
-  indicates that everything so far is OK and that the client should continue with the
-  request or ignore it if it is already finished.</p>
+The HTTP **`100 Continue`** informational status response code
+indicates that everything so far is OK and that the client should continue with the
+request or ignore it if it is already finished.
 
-<p>To have a server check the request's headers, a client must send
-  {{HTTPHeader("Expect")}}<code>: 100-continue</code> as a header in its initial request
-  and receive a <code>100 Continue</code> status code in response before sending the body.
-</p>
+To have a server check the request's headers, a client must send
+{{HTTPHeader("Expect")}}`: 100-continue` as a header in its initial request
+and receive a `100 Continue` status code in response before sending the body.
 
-<h2 id="Status">Status</h2>
+## Status
 
-<pre class="brush: html">100 Continue</pre>
+```html
+100 Continue
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{HTTPHeader("Expect")}}</li>
-  <li>{{HTTPStatus(417)}}</li>
-</ul>
+- {{HTTPHeader("Expect")}}
+- {{HTTPStatus(417)}}

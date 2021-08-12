@@ -2,20 +2,20 @@
 title: Last-Modified
 slug: Web/HTTP/Headers/Last-Modified
 tags:
-- HTTP
-- HTTP Header
-- Reference
-- Response Header
+  - HTTP
+  - HTTP Header
+  - Reference
+  - Response Header
 browser-compat: http.headers.Last-Modified
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The <strong><code>Last-Modified</code></strong> response HTTP header contains the date
-  and time at which the origin server believes the resource was last modified. It is used
-  as a validator to determine if a resource received or stored is the same. Less accurate
-  than an {{HTTPHeader("ETag")}} header, it is a fallback mechanism. Conditional requests
-  containing {{HTTPHeader("If-Modified-Since")}} or {{HTTPHeader("If-Unmodified-Since")}}
-  headers make use of this field.</p>
+The **`Last-Modified`** response HTTP header contains the date
+and time at which the origin server believes the resource was last modified. It is used
+as a validator to determine if a resource received or stored is the same. Less accurate
+than an {{HTTPHeader("ETag")}} header, it is a fallback mechanism. Conditional requests
+containing {{HTTPHeader("If-Modified-Since")}} or {{HTTPHeader("If-Unmodified-Since")}}
+headers make use of this field.
 
 <table class="properties">
   <tbody>
@@ -28,59 +28,54 @@ browser-compat: http.headers.Last-Modified
       <td>no</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("CORS-safelisted response header")}}</th>
+      <th scope="row">
+        {{Glossary("CORS-safelisted response header")}}
+      </th>
       <td>yes</td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: html">Last-Modified: &lt;day-name&gt;, &lt;day&gt; &lt;month&gt; &lt;year&gt; &lt;hour&gt;:&lt;minute&gt;:&lt;second&gt; GMT
-</pre>
+```html
+Last-Modified: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT
+```
 
-<h2 id="Directives">Directives</h2>
+## Directives
 
-<dl>
-  <dt>&lt;day-name&gt;</dt>
-  <dd>One of "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", or "Sun" (case-sensitive).</dd>
-  <dt>&lt;day&gt;</dt>
-  <dd>2 digit day number, e.g. "04" or "23".</dd>
-  <dt>&lt;month&gt;</dt>
-  <dd>One of "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov",
-    "Dec" (case sensitive).</dd>
-  <dt>&lt;year&gt;</dt>
-  <dd>4 digit year number, e.g. "1990" or "2016".</dd>
-  <dt>&lt;hour&gt;</dt>
-  <dd>2 digit hour number, e.g. "09" or "23".</dd>
-  <dt>&lt;minute&gt;</dt>
-  <dd>2 digit minute number, e.g. "04" or "59".</dd>
-  <dt>&lt;second&gt;</dt>
-  <dd>2 digit second number, e.g. "04" or "59".</dd>
-  <dt><code>GMT</code></dt>
-  <dd>
-    <p>Greenwich Mean Time. HTTP dates are always expressed in GMT, never in local time.
-    </p>
-  </dd>
-</dl>
+- \<day-name>
+  - : One of "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", or "Sun" (case-sensitive).
+- \<day>
+  - : 2 digit day number, e.g. "04" or "23".
+- \<month>
+  - : One of "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov",
+    "Dec" (case sensitive).
+- \<year>
+  - : 4 digit year number, e.g. "1990" or "2016".
+- \<hour>
+  - : 2 digit hour number, e.g. "09" or "23".
+- \<minute>
+  - : 2 digit minute number, e.g. "04" or "59".
+- \<second>
+  - : 2 digit second number, e.g. "04" or "59".
+- `GMT`
+  - : Greenwich Mean Time. HTTP dates are always expressed in GMT, never in local time.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre>Last-Modified: Wed, 21 Oct 2015 07:28:00 GMT
-</pre>
+    Last-Modified: Wed, 21 Oct 2015 07:28:00 GMT
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{HTTPHeader("If-Modified-Since")}}</li>
-  <li>{{HTTPHeader("If-Unmodified-Since")}}</li>
-  <li>{{HTTPHeader("Etag")}}</li>
-</ul>
+- {{HTTPHeader("If-Modified-Since")}}
+- {{HTTPHeader("If-Unmodified-Since")}}
+- {{HTTPHeader("Etag")}}

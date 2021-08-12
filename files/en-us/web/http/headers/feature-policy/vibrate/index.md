@@ -12,52 +12,35 @@ tags:
   - Non-standard
 browser-compat: http.headers.Feature-Policy.vibrate
 ---
-<p>{{HTTPSidebar}} {{Deprecated_Header}}</p>
+{{HTTPSidebar}} {{Deprecated_Header}}
 
-<p>The HTTP {{HTTPHeader("Feature-Policy")}} header <code>vibrate</code> {{deprecated_inline}} directive controls whether the current document is allowed to trigger device vibrations via {{DOMxRef("Navigator.vibrate","Navigator.vibrate()")}} method of <a href="/en-US/docs/Web/API/Vibration_API">Vibration API</a>.</p>
+The HTTP {{HTTPHeader("Feature-Policy")}} header `vibrate` {{deprecated_inline}} directive controls whether the current document is allowed to trigger device vibrations via {{DOMxRef("Navigator.vibrate","Navigator.vibrate()")}} method of [Vibration API](/en-US/docs/Web/API/Vibration_API).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre>Feature-Policy: vibrate &lt;allowlist&gt;;</pre>
+    Feature-Policy: vibrate <allowlist>;
 
-<dl>
-  <dt>&lt;allowlist&gt;</dt>
-  <dd>A list of origins for which the feature is allowed. See <a href="/en-US/docs/Web/HTTP/Headers/Feature-Policy#syntax"><code>Feature-Policy</code></a>.</dd>
-</dl>
+- \<allowlist>
+  - : A list of origins for which the feature is allowed. See [`Feature-Policy`](/en-US/docs/Web/HTTP/Headers/Feature-Policy#syntax).
 
-<h2 id="Default_policy">Default policy</h2>
+## Default policy
 
-<p>Default allow list for <code>vibrate</code> is <code>'self'</code>.</p>
+Default allow list for `vibrate` is `'self'`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Feature Policy')}}</td>
-   <td>{{Spec2('Feature Policy')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                            | Status                               | Comment             |
+| ---------------------------------------- | ------------------------------------ | ------------------- |
+| {{SpecName('Feature Policy')}} | {{Spec2('Feature Policy')}} | Initial definition. |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTTPHeader("Feature-Policy")}} header</li>
- <li><a href="/en-US/docs/Web/HTTP/Feature_Policy">Feature Policy</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy">Using Feature Policy</a></li>
- <li><a href="/en-US/docs/Web/API/Vibration_API">Vibration API</a></li>
- <li>{{DOMxRef("Navigator.vibrate","Navigator.vibrate()")}}</li>
-</ul>
+- {{HTTPHeader("Feature-Policy")}} header
+- [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy)
+- [Using Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)
+- [Vibration API](/en-US/docs/Web/API/Vibration_API)
+- {{DOMxRef("Navigator.vibrate","Navigator.vibrate()")}}

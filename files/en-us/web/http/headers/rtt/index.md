@@ -11,73 +11,68 @@ tags:
   - Experimental
 browser-compat: http.headers.rtt
 ---
-<div>{{HTTPSidebar}} {{SeeCompatTable}}</div>
+{{HTTPSidebar}} {{SeeCompatTable}}
 
-<p>The <strong><code>RTT</code></strong> {{Glossary("Client hints","network client hint")}} request header field provides the approximate round trip time on the application layer, in milliseconds. The RTT hint, unlike transport layer RTT, includes server processing time.</p>
+The **`RTT`** {{Glossary("Client hints","network client hint")}} request header field provides the approximate round trip time on the application layer, in milliseconds. The RTT hint, unlike transport layer RTT, includes server processing time.
 
 <table class="properties">
   <tbody>
-   <tr>
-    <th scope="row">Header type</th>
-    <td>{{Glossary("Request header")}}, {{Glossary("Client hints","Client hint")}}</td>
-   </tr>
-   <tr>
-    <th scope="row">{{Glossary("Forbidden header name")}}</th>
-    <td>no</td>
-   </tr>
+    <tr>
+      <th scope="row">Header type</th>
+      <td>
+        {{Glossary("Request header")}},
+        {{Glossary("Client hints","Client hint")}}
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>no</td>
+    </tr>
   </tbody>
- </table>
+</table>
 
-<p>The RTT value is rounded to the nearest 25 milliseconds to prevent fingerprinting; There are many other mechanisms an attacker might use to obtain similar round-trip information.</p>
+The RTT value is rounded to the nearest 25 milliseconds to prevent fingerprinting; There are many other mechanisms an attacker might use to obtain similar round-trip information.
 
-<p>The hint allows a server to choose what information is sent based on the network responsiveness/latency. For example, it might choose to send fewer resources.</p>
+The hint allows a server to choose what information is sent based on the network responsiveness/latency. For example, it might choose to send fewer resources.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> The {{HTTPHeader("Vary")}} header is used in responses to indicate that a different resource is sent for every different value of the header (see <a href="/en-US/docs/Web/HTTP/Caching#varying_responses">HTTP Caching > Varying responses</a>). Even if {{HTTPHeader("RTT")}} is used to configure what resources are sent consider omitting it in the {{HTTPHeader("Vary")}} header  — it is likely to change often, which effectively makes the resource uncachable.</p>
-</div>
+> **Note:** The {{HTTPHeader("Vary")}} header is used in responses to indicate that a different resource is sent for every different value of the header (see [HTTP Caching > Varying responses](/en-US/docs/Web/HTTP/Caching#varying_responses)). Even if {{HTTPHeader("RTT")}} is used to configure what resources are sent consider omitting it in the {{HTTPHeader("Vary")}} header — it is likely to change often, which effectively makes the resource uncachable.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre>RTT: &lt;number&gt;</pre>
+    RTT: <number>
 
-<h2 id="Directives">Directives</h2>
+## Directives
 
-<dl>
- <dt>&lt;number&gt;</dt>
- <dd>The approximate round trip time in milliseconds, rounded to the nearest 25 milliseconds.</dd>
-</dl>
+- \<number>
+  - : The approximate round trip time in milliseconds, rounded to the nearest 25 milliseconds.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>A server first needs to opt in to receive the <code>RTT</code> header by sending the {{HTTPHeader("Accept-CH")}} response header containing <code>RTT</code>.</p>
+A server first needs to opt in to receive the `RTT` header by sending the {{HTTPHeader("Accept-CH")}} response header containing `RTT`.
 
-<pre>Accept-CH: RTT</pre>
+    Accept-CH: RTT
 
-<p>Then on subsequent requests the client might send an <code>RTT</code> header back:</p>
+Then on subsequent requests the client might send an `RTT` header back:
 
-<pre>RTT: 125</pre>
+    RTT: 125
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/client-hints">Adapting to Users with Client Hints</a> (developer.google.com)</li>
- <li>Network client hints
-  <ul>
-    <li>{{HTTPHeader("Downlink")}}</li>
-    <li>{{HTTPHeader("ECT")}}</li>
-    <li>{{HTTPHeader("Save-Data")}}</li>
-   </ul>
- </li>
- <li>{{HTTPHeader("Accept-CH")}}</li>
- <li><a href="/en-US/docs/Web/HTTP/Caching#varying_responses">HTTP Caching > Varying responses</a> and {{HTTPHeader("Vary")}}</li>
- <li>{{domxref("NetworkInformation.effectiveType")}}</li>
-</ul>
+- [Adapting to Users with Client Hints](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/client-hints) (developer.google.com)
+- Network client hints
 
+  - {{HTTPHeader("Downlink")}}
+  - {{HTTPHeader("ECT")}}
+  - {{HTTPHeader("Save-Data")}}
+
+- {{HTTPHeader("Accept-CH")}}
+- [HTTP Caching > Varying responses](/en-US/docs/Web/HTTP/Caching#varying_responses) and {{HTTPHeader("Vary")}}
+- {{domxref("NetworkInformation.effectiveType")}}

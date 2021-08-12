@@ -5,79 +5,65 @@ tags:
   - HTTP
   - Reference
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The <strong><code>Accept-Patch</code></strong> response HTTP header advertises which media-type the server is able to understand in a PATCH request.</p>
+The **`Accept-Patch`** response HTTP header advertises which media-type the server is able to understand in a PATCH request.
 
-<p><strong><code>Accept-Patch</code></strong> in response to any method means that PATCH is allowed on the resource identified by the Request-URI. Two common cases lead to this:</p>
+**`Accept-Patch`** in response to any method means that PATCH is allowed on the resource identified by the Request-URI. Two common cases lead to this:
 
-<p>A server receiving a PATCH request with an unsupported media type could reply with {{HTTPStatus("415")}} <code>Unsupported Media Type</code> and an Accept-Patch header referencing one or more supported media types.</p>
+A server receiving a PATCH request with an unsupported media type could reply with {{HTTPStatus("415")}} `Unsupported Media Type` and an Accept-Patch header referencing one or more supported media types.
 
-<div class="notecard note">
-  <p><strong>Note:</strong></p>
-  <ul>
-    <li><p>An IANA registry maintains <a href="https://www.iana.org/assignments/http-parameters/http-parameters.xml#http-parameters-1">a complete list of official content encodings</a>.</p></li>
-    <li>Two others content encoding, <code>bzip</code> and <code>bzip2</code>, are sometimes used, though not standard. They implement the algorithm used by these two UNIX programs. Note that the first one was discontinued due to patent licensing problems.</li>
-  </ul>
-</div>
+> **Note:**
+>
+> - An IANA registry maintains [a complete list of official content encodings](https://www.iana.org/assignments/http-parameters/http-parameters.xml#http-parameters-1).
+> - Two others content encoding, `bzip` and `bzip2`, are sometimes used, though not standard. They implement the algorithm used by these two UNIX programs. Note that the first one was discontinued due to patent licensing problems.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Response header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Header type</th>
+      <td>{{Glossary("Response header")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: html">Accept-Patch: application/example, text/example
+```html
+Accept-Patch: application/example, text/example
 Accept-Patch: text/example;charset=utf-8
 Accept-Patch: application/merge-patch+json
-</pre>
+```
 
-<h2 id="Directives">Directives</h2>
+## Directives
 
-<p>None</p>
+None
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: html">Accept-Patch: application/example, text/example
+```html
+Accept-Patch: application/example, text/example
 
 Accept-Patch: text/example;charset=utf-8
 
 Accept-Patch: application/merge-patch+json
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Title</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{RFC("5789", "Accept-Patch", "3.1")}}</td>
-   <td>HTTP PATCH</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                        | Title      |
+| ---------------------------------------------------- | ---------- |
+| {{RFC("5789", "Accept-Patch", "3.1")}} | HTTP PATCH |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>Browser compatibility is not relevant for this header (header is sent by server, and the specification does not define client behavior).</p>
+Browser compatibility is not relevant for this header (header is sent by server, and the specification does not define client behavior).
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Http method {{HTTPMethod("PATCH")}}</li>
- <li>HTTP Semantic and context {{RFC("7231", "PUT", "4.3.4")}}</li>
-</ul>
+- Http method {{HTTPMethod("PATCH")}}
+- HTTP Semantic and context {{RFC("7231", "PUT", "4.3.4")}}

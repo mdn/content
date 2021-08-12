@@ -8,65 +8,62 @@ tags:
   - header
 browser-compat: http.headers.Server-Timing
 ---
-<p>{{HTTPSidebar}}</p>
+{{HTTPSidebar}}
 
-<p>The <strong><code>Server-Timing</code></strong> header communicates one or more metrics and descriptions for a given request-response cycle. It is used to surface any backend server timing metrics (e.g. database read/write, CPU time, file system access, etc.) in the developer tools in the user's browser or in the {{domxref("PerformanceServerTiming")}} interface.</p>
+The **`Server-Timing`** header communicates one or more metrics and descriptions for a given request-response cycle. It is used to surface any backend server timing metrics (e.g. database read/write, CPU time, file system access, etc.) in the developer tools in the user's browser or in the {{domxref("PerformanceServerTiming")}} interface.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Response header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>no</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Header type</th>
+      <td>{{Glossary("Response header")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>no</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The syntax of the <code>Server-Timing</code> header allows you to communicate metrics in different ways: server metric name only, metric with value, metric with value and description, and metric with description.</p>
+The syntax of the `Server-Timing` header allows you to communicate metrics in different ways: server metric name only, metric with value, metric with value and description, and metric with description.
 
-<p>The specification advices that names and descriptions should be kept as short as possible (use abbreviations and omit optional values where possible) to minimize the HTTP overhead.</p>
+The specification advices that names and descriptions should be kept as short as possible (use abbreviations and omit optional values where possible) to minimize the HTTP overhead.
 
-<pre>// Single metric without value
-Server-Timing: missedCache
+    // Single metric without value
+    Server-Timing: missedCache
 
-// Single metric with value
-Server-Timing: cpu;dur=2.4
+    // Single metric with value
+    Server-Timing: cpu;dur=2.4
 
-// Single metric with description and value
-Server-Timing: cache;desc="Cache Read";dur=23.2
+    // Single metric with description and value
+    Server-Timing: cache;desc="Cache Read";dur=23.2
 
-// Two metrics with value
-Server-Timing: db;dur=53, app;dur=47.2
+    // Two metrics with value
+    Server-Timing: db;dur=53, app;dur=47.2
 
-// Server-Timing as trailer
-Trailer: Server-Timing
---- response body ---
-Server-Timing: total;dur=123.4
-</pre>
+    // Server-Timing as trailer
+    Trailer: Server-Timing
+    --- response body ---
+    Server-Timing: total;dur=123.4
 
-<h2 id="Privacy_and_security">Privacy and security</h2>
+## Privacy and security
 
-<p>The <code>Server-Timing</code> header may expose potentially sensitive application and infrastructure information. Consider to control which metrics are returned when and to whom on the server side. For example, you could only show metrics to authenticated users and nothing to the public.</p>
+The `Server-Timing` header may expose potentially sensitive application and infrastructure information. Consider to control which metrics are returned when and to whom on the server side. For example, you could only show metrics to authenticated users and nothing to the public.
 
-<h2 id="PerformanceServerTiming_interface">PerformanceServerTiming interface</h2>
+## PerformanceServerTiming interface
 
-<p>In addition to having <code>Server-Timing</code> header metrics appear in the developer tools of the browser, the {{domxref("PerformanceServerTiming")}} interface enables tools to automatically collect and process metrics from JavaScript. This interface is restricted to the same origin, but you can use the {{HTTPHeader("Timing-Allow-Origin")}} header to specify the domains that are allowed to access the server metrics. The interface is only available in secure contexts (HTTPS) in some browsers.</p>
+In addition to having `Server-Timing` header metrics appear in the developer tools of the browser, the {{domxref("PerformanceServerTiming")}} interface enables tools to automatically collect and process metrics from JavaScript. This interface is restricted to the same origin, but you can use the {{HTTPHeader("Timing-Allow-Origin")}} header to specify the domains that are allowed to access the server metrics. The interface is only available in secure contexts (HTTPS) in some browsers.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("PerformanceServerTiming")}}</li>
-</ul>
+- {{domxref("PerformanceServerTiming")}}

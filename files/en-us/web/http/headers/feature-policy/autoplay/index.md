@@ -11,48 +11,42 @@ tags:
   - Experimental
 browser-compat: http.headers.Feature-Policy.autoplay
 ---
-<div>{{HTTPSidebar}} {{SeeCompatTable}}</div>
+{{HTTPSidebar}} {{SeeCompatTable}}
 
-<p>The HTTP {{HTTPHeader("Feature-Policy")}} header
-    <code>autoplay</code> directive controls whether the current document is allowed to
-    autoplay media requested through the {{domxref("HTMLMediaElement")}} interface.
-  When this policy is enabled and there were no user gestures, the {{jsxref("Promise")}}
-  returned by {{domxref("HTMLMediaElement.play()")}} will reject with
-  a {{domxref("DOMException")}}. The {{htmlattrxref("autoplay", "audio")}} attribute on
-  {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements will be ignored.</p>
+The HTTP {{HTTPHeader("Feature-Policy")}} header
+`autoplay` directive controls whether the current document is allowed to
+autoplay media requested through the {{domxref("HTMLMediaElement")}} interface.
+When this policy is enabled and there were no user gestures, the {{jsxref("Promise")}}
+returned by {{domxref("HTMLMediaElement.play()")}} will reject with
+a {{domxref("DOMException")}}. The {{htmlattrxref("autoplay", "audio")}} attribute on
+{{HTMLElement("audio")}} and {{HTMLElement("video")}} elements will be ignored.
 
-<p>For more details on autoplay and autoplay blocking, see the article <a
-    href="/en-US/docs/Web/Media/Autoplay_guide">Autoplay guide for media and Web Audio
-    APIs</a>.</p>
+For more details on autoplay and autoplay blocking, see the article [Autoplay guide for media and Web Audio
+APIs](/en-US/docs/Web/Media/Autoplay_guide).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre>Feature-Policy: autoplay &lt;allowlist&gt;;</pre>
+    Feature-Policy: autoplay <allowlist>;
 
-<dl>
-  <dt>&lt;allowlist&gt;</dt>
-  <dd>A list of origins for which the feature is allowed. See <a href="/en-US/docs/Web/HTTP/Headers/Feature-Policy#syntax"><code>Feature-Policy</code></a>.</dd>
- </dl>
+- \<allowlist>
+  - : A list of origins for which the feature is allowed. See [`Feature-Policy`](/en-US/docs/Web/HTTP/Headers/Feature-Policy#syntax).
 
-<h2 id="Default_policy">Default policy</h2>
+## Default policy
 
-<p>The default value in <a
-    href="https://www.chromestatus.com/feature/5100524789563392">Google Chrome</a> is
-  <code>'self'</code>.</p>
+The default value in [Google Chrome](https://www.chromestatus.com/feature/5100524789563392) is
+`'self'`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{HTTPHeader("Feature-Policy")}} header</li>
-  <li><a href="/en-US/docs/Web/HTTP/Feature_Policy">Feature Policy</a></li>
-  <li><a href="/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy">Using Feature
-      Policy</a></li>
-</ul>
+- {{HTTPHeader("Feature-Policy")}} header
+- [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy)
+- [Using Feature
+  Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)

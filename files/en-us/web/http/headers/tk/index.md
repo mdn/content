@@ -2,18 +2,18 @@
 title: Tk
 slug: Web/HTTP/Headers/Tk
 tags:
-- DNT
-- HTTP
-- Reference
-- Response
-- header
-- tracking
+  - DNT
+  - HTTP
+  - Reference
+  - Response
+  - header
+  - tracking
 browser-compat: http.headers.Tk
 ---
-<div>{{HTTPSidebar}}{{Deprecated_header}}</div>
+{{HTTPSidebar}}{{Deprecated_header}}
 
-<p>The <strong><code>Tk</code></strong> response header indicates the tracking status that
-  applied to the corresponding request.</p>
+The **`Tk`** response header indicates the tracking status that
+applied to the corresponding request.
 
 <table class="properties">
   <tbody>
@@ -28,9 +28,10 @@ browser-compat: http.headers.Tk
   </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: html">Tk: !  (under construction)
+```html
+Tk: !  (under construction)
 Tk: ?  (dynamic)
 Tk: G  (gateway or multiple parties)
 Tk: N  (not tracking)
@@ -39,58 +40,53 @@ Tk: C  (tracking with consent)
 Tk: P  (potential consent)
 Tk: D  (disregarding DNT)
 Tk: U  (updated)
-</pre>
+```
 
-<h3 id="Directives">Directives</h3>
+### Directives
 
-<dl>
-  <dt>!</dt>
-  <dd>Under construction. The origin server is currently testing its communication of
-    tracking status.</dd>
-  <dt>?</dt>
-  <dd>Dynamic. The origin server needs more information to determine tracking status.</dd>
-  <dt>G</dt>
-  <dd>Gateway or multiple parties. The server is acting as a gateway to an exchange
-    involving multiple parties.</dd>
-  <dt>N</dt>
-  <dd>Not tracking.</dd>
-  <dt>T</dt>
-  <dd>Tracking.</dd>
-  <dt>C</dt>
-  <dd>Tracking with consent. The origin server believes it has received prior consent for
-    tracking this user, user agent, or device.</dd>
-  <dt>P</dt>
-  <dd>Potential consent. The origin server does not know, in real-time, whether it has
+- !
+  - : Under construction. The origin server is currently testing its communication of
+    tracking status.
+- ?
+  - : Dynamic. The origin server needs more information to determine tracking status.
+- G
+  - : Gateway or multiple parties. The server is acting as a gateway to an exchange
+    involving multiple parties.
+- N
+  - : Not tracking.
+- T
+  - : Tracking.
+- C
+  - : Tracking with consent. The origin server believes it has received prior consent for
+    tracking this user, user agent, or device.
+- P
+  - : Potential consent. The origin server does not know, in real-time, whether it has
     received prior consent for tracking this user, user agent, or device, but promises not
-    to use or share any <code>DNT:1</code> data until such consent has been determined,
+    to use or share any `DNT:1` data until such consent has been determined,
     and further promises to delete or permanently de-identify within 48 hours any
-    <code>DNT:1</code> data received for which such consent has not been received.</dd>
-  <dt>D</dt>
-  <dd>Disregarding DNT. The origin server is unable or unwilling to respect a tracking
-    preference received from the requesting user agent.</dd>
-  <dt>U</dt>
-  <dd>Updated. The request resulted in a potential change to the tracking status
-    applicable to this user, user agent, or device.</dd>
-</dl>
+    `DNT:1` data received for which such consent has not been received.
+- D
+  - : Disregarding DNT. The origin server is unable or unwilling to respect a tracking
+    preference received from the requesting user agent.
+- U
+  - : Updated. The request resulted in a potential change to the tracking status
+    applicable to this user, user agent, or device.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>A <code>Tk</code> header for a resource that claims not to be tracking would look like:
-</p>
+A `Tk` header for a resource that claims not to be tracking would look like:
 
-<pre>Tk: N</pre>
+    Tk: N
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{HTTPHeader("DNT")}} header</li>
-  <li>{{domxref("Navigator.doNotTrack")}}</li>
-</ul>
+- {{HTTPHeader("DNT")}} header
+- {{domxref("Navigator.doNotTrack")}}

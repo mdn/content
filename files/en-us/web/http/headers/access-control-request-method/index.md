@@ -2,19 +2,19 @@
 title: Access-Control-Request-Method
 slug: Web/HTTP/Headers/Access-Control-Request-Method
 tags:
-- CORS
-- HTTP
-- Reference
-- header
+  - CORS
+  - HTTP
+  - Reference
+  - header
 browser-compat: http.headers.Access-Control-Request-Method
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The <strong><code>Access-Control-Request-Method</code></strong> request header is used
-  by browsers when issuing a {{glossary("preflight request")}}, to let the server know
-  which <a href="/en-US/docs/Web/HTTP/Methods">HTTP method</a> will be used when the
-  actual request is made. This header is necessary as the preflight request is always an
-  {{HTTPMethod("OPTIONS")}} and doesn't use the same method as the actual request.</p>
+The **`Access-Control-Request-Method`** request header is used
+by browsers when issuing a {{glossary("preflight request")}}, to let the server know
+which [HTTP method](/en-US/docs/Web/HTTP/Methods) will be used when the
+actual request is made. This header is necessary as the preflight request is always an
+{{HTTPMethod("OPTIONS")}} and doesn't use the same method as the actual request.
 
 <table class="properties">
   <tbody>
@@ -29,34 +29,30 @@ browser-compat: http.headers.Access-Control-Request-Method
   </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: html">Access-Control-Request-Method: &lt;method&gt;
-</pre>
+```html
+Access-Control-Request-Method: <method>
+```
 
-<h2 id="Directives">Directives</h2>
+## Directives
 
-<dl>
-  <dt>&lt;method&gt;</dt>
-  <dd>One of the <a href="/en-US/docs/Web/HTTP/Methods">HTTP request methods</a>, for
+- \<method>
+  - : One of the [HTTP request methods](/en-US/docs/Web/HTTP/Methods), for
     example {{HTTPMethod("GET")}}, {{HTTPMethod("POST")}}, or {{HTTPMethod("DELETE")}}.
-  </dd>
-</dl>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre>Access-Control-Request-Method: POST</pre>
+    Access-Control-Request-Method: POST
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{HTTPHeader("Access-Control-Request-Headers")}}</li>
-</ul>
+- {{HTTPHeader("Access-Control-Request-Headers")}}

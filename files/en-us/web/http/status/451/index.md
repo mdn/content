@@ -8,48 +8,50 @@ tags:
   - Status code
 browser-compat: http.status.451
 ---
-<p>{{HTTPSidebar}}</p>
+{{HTTPSidebar}}
 
-<p>The HyperText Transfer Protocol (HTTP) <code><strong>451 Unavailable For Legal Reasons</strong></code> client error response code indicates that the user requested a resource that is not available due to legal reasons, such as a web page for which a legal action has been issued.</p>
+The HyperText Transfer Protocol (HTTP) **`451 Unavailable For Legal Reasons`** client error response code indicates that the user requested a resource that is not available due to legal reasons, such as a web page for which a legal action has been issued.
 
-<h2 id="Status">Status</h2>
+## Status
 
-<pre class="brush: html">451 Unavailable For Legal Reasons</pre>
+```html
+451 Unavailable For Legal Reasons
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example response is taken from the IETF RFC (see below) and contains a reference to {{interwiki("wikipedia", "Monty_Python's_Life_of_Brian", "Monty Python's Life of Brian")}}.</p>
+This example response is taken from the IETF RFC (see below) and contains a reference to {{interwiki("wikipedia", "Monty_Python's_Life_of_Brian", "Monty Python's Life of Brian")}}.
 
-<p><strong>Note:</strong> the {{HTTPHeader("Link")}} header might also contain a <code>rel="blocked-by"</code> relation identifying the entity and implementing blockage, not any other entity mandating it.</p>
+**Note:** the {{HTTPHeader("Link")}} header might also contain a `rel="blocked-by"` relation identifying the entity and implementing blockage, not any other entity mandating it.
 
-<p>Any attempt to identify the entity ultimately responsible for the resource being unavailable belongs in the response body, not in the <code>rel="blocked-by"</code> link. This includes the name of the person or organization that made a legal demand resulting in the content's removal.</p>
+Any attempt to identify the entity ultimately responsible for the resource being unavailable belongs in the response body, not in the `rel="blocked-by"` link. This includes the name of the person or organization that made a legal demand resulting in the content's removal.
 
-<pre>HTTP/1.1 451 Unavailable For Legal Reasons
-Link: &lt;https://spqr.example.org/legislatione&gt;; rel="blocked-by"
-Content-Type: text/html</pre>
+    HTTP/1.1 451 Unavailable For Legal Reasons
+    Link: <https://spqr.example.org/legislatione>; rel="blocked-by"
+    Content-Type: text/html
 
-<pre>&lt;html&gt;
-      &lt;head&gt;&lt;title&gt;Unavailable For Legal Reasons&lt;/title&gt;&lt;/head&gt;
-      &lt;body&gt;
-            &lt;h1&gt;Unavailable For Legal Reasons&lt;/h1&gt;
-            &lt;p&gt;This request may not be serviced in the Roman Province
-            of Judea due to the Lex Julia Majestatis, which disallows
-            access to resources hosted on servers deemed to be
-            operated by the People's Front of Judea.&lt;/p&gt;
-     &lt;/body&gt;
-&lt;/html&gt;</pre>
+<!---->
 
-<h2 id="Specifications">Specifications</h2>
+    <html>
+          <head><title>Unavailable For Legal Reasons</title></head>
+          <body>
+                <h1>Unavailable For Legal Reasons</h1>
+                <p>This request may not be serviced in the Roman Province
+                of Judea due to the Lex Julia Majestatis, which disallows
+                access to resources hosted on servers deemed to be
+                operated by the People's Front of Judea.</p>
+         </body>
+    </html>
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{interwiki("wikipedia", "HTTP_451", "Wikipedia: HTTP 451")}}</li>
- <li>{{interwiki("wikipedia", "Fahrenheit_451", "Wikipedia: Fahrenheit 451")}} (which gave this status code its number)</li>
-</ul>
+- {{interwiki("wikipedia", "HTTP_451", "Wikipedia: HTTP 451")}}
+- {{interwiki("wikipedia", "Fahrenheit_451", "Wikipedia: Fahrenheit 451")}} (which gave this status code its number)

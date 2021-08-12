@@ -10,34 +10,30 @@ tags:
 ---
 {{HTTPSidebar}}
 
-<div class="notecard warning">
-  <p><strong>Warning:</strong> Do not use this header. Browsers omit this header and servers should ignore it.</p>
-</div>
+> **Warning:** Do not use this header. Browsers omit this header and servers should ignore it.
 
-<p>The <strong><code>Accept-Charset</code></strong> request HTTP header was a header that advertised a client's supported {{glossary("character encoding", "character encodings")}}. It is no longer widely used.</p>
+The **`Accept-Charset`** request HTTP header was a header that advertised a client's supported {{glossary("character encoding", "character encodings")}}. It is no longer widely used.
 
-<p>UTF-8 is well-supported and the overwhelmingly preferred choice for character encoding. To <a href="https://www.eff.org/deeplinks/2010/01/primer-information-theory-and-privacy">guarantee better privacy through less configuration-based entropy</a>, all browsers omit the <code>Accept-Charset</code> header. Chrome, Firefox, Internet Explorer, Opera, and Safari abandoned this header.</p>
+UTF-8 is well-supported and the overwhelmingly preferred choice for character encoding. To [guarantee better privacy through less configuration-based entropy](https://www.eff.org/deeplinks/2010/01/primer-information-theory-and-privacy), all browsers omit the `Accept-Charset` header. Chrome, Firefox, Internet Explorer, Opera, and Safari abandoned this header.
 
-<p>Today, <code>Accept-Charset</code> is most notable for being one of several <a href="/en-US/docs/Glossary/Forbidden_header_name">forbidden header names</a>.</p>
+Today, `Accept-Charset` is most notable for being one of several [forbidden header names](/en-US/docs/Glossary/Forbidden_header_name).
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Request header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Header type</th>
+      <td>{{Glossary("Request header")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>HTTP <a href="/en-US/docs/Web/HTTP/Content_negotiation">content negotiation</a></li>
- <li><a href="https://hsivonen.fi/accept-charset/">Accept-Charset is no more</a></li>
- <li>Header with the result of the content negotiation: {{HTTPHeader("Content-Type")}}</li>
- <li>Other similar headers: {{HTTPHeader("TE")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("Accept-Language")}}, {{HTTPHeader("Accept")}}</li>
-</ul>
+- HTTP [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation)
+- [Accept-Charset is no more](https://hsivonen.fi/accept-charset/)
+- Header with the result of the content negotiation: {{HTTPHeader("Content-Type")}}
+- Other similar headers: {{HTTPHeader("TE")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("Accept-Language")}}, {{HTTPHeader("Accept")}}

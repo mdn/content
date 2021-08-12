@@ -7,13 +7,11 @@ tags:
   - Request method
 browser-compat: http.methods.GET
 ---
-<p>{{HTTPSidebar}}</p>
+{{HTTPSidebar}}
 
-<p>The <strong>HTTP <code>GET</code> method</strong> requests a representation of the specified resource. Requests using <code>GET</code> should only be used to request data (they shouldn't include data).</p>
+The **HTTP `GET` method** requests a representation of the specified resource. Requests using `GET` should only be used to request data (they shouldn't include data).
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Sending body/payload in a <code>GET</code> request may cause some existing implementations to reject the request — while not prohibited by the specification, the semantics are undefined. It is better to just avoid sending payloads in <code>GET</code> requests.</p>
-</div>
+> **Note:** Sending body/payload in a `GET` request may cause some existing implementations to reject the request — while not prohibited by the specification, the semantics are undefined. It is better to just avoid sending payloads in `GET` requests.
 
 <table class="properties">
   <tbody>
@@ -44,23 +42,22 @@ browser-compat: http.methods.GET
   </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: html">GET /index.html
-</pre>
+```html
+GET /index.html
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/HTTP/Headers">HTTP Headers</a></li>
- <li>{{HTTPHeader("Range")}}</li>
- <li>{{HTTPMethod("POST")}}</li>
-</ul>
+- [HTTP Headers](/en-US/docs/Web/HTTP/Headers)
+- {{HTTPHeader("Range")}}
+- {{HTTPMethod("POST")}}

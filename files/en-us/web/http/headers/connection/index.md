@@ -2,42 +2,43 @@
 title: Connection
 slug: Web/HTTP/Headers/Connection
 tags:
-- HTTP
-- HTTP Header
-- Request header
-- Response header
-- Reference
-- Web
+  - HTTP
+  - HTTP Header
+  - Request header
+  - Response header
+  - Reference
+  - Web
 browser-compat: http.headers.Connection
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The <strong><code>Connection</code></strong> general header controls whether or not the
-  network connection stays open after the current transaction finishes. If the value sent
-  is <code>keep-alive</code>, the connection is persistent and not closed, allowing for
-  subsequent requests to the same server to be done.</p>
+The **`Connection`** general header controls whether or not the
+network connection stays open after the current transaction finishes. If the value sent
+is `keep-alive`, the connection is persistent and not closed, allowing for
+subsequent requests to the same server to be done.
 
-<div class="notecard warning">
-  <p><strong>Warning:</strong> Connection-specific header fields such as {{HTTPHeader("Connection")}} and
-    {{HTTPHeader("Keep-Alive")}} are
-    <a href="https://datatracker.ietf.org/doc/html/rfc7540#section-8.1.2.2">prohibited in HTTP/2</a>.
-    Chrome and Firefox ignore them in HTTP/2 responses, but Safari conforms to the HTTP/2
-    spec requirements and won't load any response which contains them.</p>
-</div>
+> **Warning:** Connection-specific header fields such as {{HTTPHeader("Connection")}} and
+> {{HTTPHeader("Keep-Alive")}} are
+> [prohibited in HTTP/2](https://datatracker.ietf.org/doc/html/rfc7540#section-8.1.2.2).
+> Chrome and Firefox ignore them in HTTP/2 responses, but Safari conforms to the HTTP/2
+> spec requirements and won't load any response which contains them.
 
-<p>Except for the standard hop-by-hop headers ({{HTTPHeader("Keep-Alive")}},
-  {{HTTPHeader("Transfer-Encoding")}}, {{HTTPHeader("TE")}}, {{HTTPHeader("Connection")}},
-  {{HTTPHeader("Trailer")}}, {{HTTPHeader("Upgrade")}},
-  {{HTTPHeader("Proxy-Authorization")}} and {{HTTPHeader("Proxy-Authenticate")}}), any
-  hop-by-hop headers used by the message must be listed in the <code>Connection</code>
-  header, so that the first proxy knows it has to consume them and not forward them
-  further. Standard hop-by-hop headers are also required to be listed.</p>
+Except for the standard hop-by-hop headers ({{HTTPHeader("Keep-Alive")}},
+{{HTTPHeader("Transfer-Encoding")}}, {{HTTPHeader("TE")}}, {{HTTPHeader("Connection")}},
+{{HTTPHeader("Trailer")}}, {{HTTPHeader("Upgrade")}},
+{{HTTPHeader("Proxy-Authorization")}} and {{HTTPHeader("Proxy-Authenticate")}}), any
+hop-by-hop headers used by the message must be listed in the `Connection`
+header, so that the first proxy knows it has to consume them and not forward them
+further. Standard hop-by-hop headers are also required to be listed.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Header type</th>
-      <td>{{Glossary("Request header")}}, {{Glossary("Response header")}}</td>
+      <td>
+        {{Glossary("Request header")}},
+        {{Glossary("Response header")}}
+      </td>
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
@@ -46,26 +47,25 @@ browser-compat: http.headers.Connection
   </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: html">Connection: keep-alive
+```html
+Connection: keep-alive
 Connection: close
-</pre>
+```
 
-<h2 id="Directives">Directives</h2>
+## Directives
 
-<dl>
-  <dt><code>close</code></dt>
-  <dd>Indicates that either the client or the server would like to close the connection.
-    This is the default on HTTP/1.0 requests.</dd>
-  <dt>any comma-separated list of HTTP headers [Usually <code>keep-alive</code> only]</dt>
-  <dd>Indicates that the client would like to keep the connection open. Having a
+- `close`
+  - : Indicates that either the client or the server would like to close the connection.
+    This is the default on HTTP/1.0 requests.
+- any comma-separated list of HTTP headers \[Usually `keep-alive` only]
+  - : Indicates that the client would like to keep the connection open. Having a
     persistent connection is the default on HTTP/1.1 requests. The list of headers are the
     name of the header to be removed by the first non-transparent proxy or cache
     in-between: these headers define the connection between the emitter and the first
-    entity, not the destination node.</dd>
-</dl>
+    entity, not the destination node.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

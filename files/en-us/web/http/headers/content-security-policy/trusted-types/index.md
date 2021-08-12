@@ -8,57 +8,53 @@ tags:
   - Security
 browser-compat: http.headers.csp.Content-Security-Policy.trusted-types
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) <code><strong>trusted-types</strong></code> {{experimental_inline}} directive instructs user agents to restrict the creation of Trusted Types policies - functions that build non-spoofable, typed values intended to be passed to DOM XSS sinks in place of strings.</p>
+The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`trusted-types`** {{experimental_inline}} directive instructs user agents to restrict the creation of Trusted Types policies - functions that build non-spoofable, typed values intended to be passed to DOM XSS sinks in place of strings.
 
-<p>Together with <strong><a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/require-trusted-types-for"><code>require-trusted-types-for</code></a></strong> directive, this allows authors to define rules guarding writing values to the DOM and thus reducing the DOM XSS attack surface to small, isolated parts of the web application codebase, facilitating their monitoring and code review. This directive declares an allow-list of trusted type policy names created with <code>TrustedTypes.createPolicy</code> from Trusted Types API.</p>
+Together with **[`require-trusted-types-for`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/require-trusted-types-for)** directive, this allows authors to define rules guarding writing values to the DOM and thus reducing the DOM XSS attack surface to small, isolated parts of the web application codebase, facilitating their monitoring and code review. This directive declares an allow-list of trusted type policy names created with `TrustedTypes.createPolicy` from Trusted Types API.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre>Content-Security-Policy: trusted-types;
-Content-Security-Policy: trusted-types 'none';
-Content-Security-Policy: trusted-types &lt;policyName&gt;;
-Content-Security-Policy: trusted-types &lt;policyName&gt; &lt;policyName&gt; 'allow-duplicates';
-</pre>
+    Content-Security-Policy: trusted-types;
+    Content-Security-Policy: trusted-types 'none';
+    Content-Security-Policy: trusted-types <policyName>;
+    Content-Security-Policy: trusted-types <policyName> <policyName> 'allow-duplicates';
 
-<dl>
- <dt>&lt;policyName&gt;</dt>
- <dd>A valid policy name consists only of alphanumeric characters, or one of "<code>-#=_/@.%</code>".  A star (<code>*</code>) as a policy name instructs the user agent to allow any unique policy name ('<code>allow-duplicates</code>' may relax that further).</dd>
- <dt><code>'none'</code></dt>
- <dd>Disallows creating any Trusted Type policy (same as not specifying any <em>&lt;policyName&gt;</em>).</dd>
- <dt><code>'allow-duplicates'</code></dt>
- <dd>Allows for creating policies with a name that was already used.</dd>
-</dl>
+- \<policyName>
+  - : A valid policy name consists only of alphanumeric characters, or one of "`-#=_/@.%`".  A star (`*`) as a policy name instructs the user agent to allow any unique policy name ('`allow-duplicates`' may relax that further).
+- `'none'`
+  - : Disallows creating any Trusted Type policy (same as not specifying any _\<policyName>_).
+- `'allow-duplicates'`
+  - : Allows for creating policies with a name that was already used.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">// Content-Security-Policy: trusted-types foo bar 'allow-duplicates';
+```js
+// Content-Security-Policy: trusted-types foo bar 'allow-duplicates';
 
 if (typeof trustedTypes !== 'undefined') {
   const policyFoo = trustedTypes.createPolicy('foo', {});
   const policyFoo2 = trustedTypes.createPolicy('foo', {});
   const policyBaz = trustedTypes.createPolicy('baz', {}); // Throws and dispatches a SecurityPolicyViolationEvent.
 }
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>A <a href="https://github.com/w3c/webappsec-trusted-types#polyfill">polyfill for Trusted Types</a> is available on Github.</p>
+A [polyfill for Trusted Types](https://github.com/w3c/webappsec-trusted-types#polyfill) is available on Github.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTTPHeader("Content-Security-Policy")}}</li>
- <li><a href="/en-US/docs/Glossary/Cross-site_scripting">Cross-Site Scripting (XSS)</a></li>
- <li><a href="https://web.dev/trusted-types">Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types</a></li>
- <li>Trusted Types with <a href="https://github.com/cure53/DOMPurify#what-about-dompurify-and-trusted-types">DOMPurify</a> XSS sanitizer</li>
-</ul>
+- {{HTTPHeader("Content-Security-Policy")}}
+- [Cross-Site Scripting (XSS)](/en-US/docs/Glossary/Cross-site_scripting)
+- [Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types](https://web.dev/trusted-types)
+- Trusted Types with [DOMPurify](https://github.com/cure53/DOMPurify#what-about-dompurify-and-trusted-types) XSS sanitizer

@@ -9,107 +9,96 @@ tags:
   - Upgrade
 browser-compat: http.headers.Upgrade
 ---
-<p>{{HTTPSidebar}}</p>
+{{HTTPSidebar}}
 
-<p>The HTTP 1.1 (only) <code>Upgrade</code> header can be used to upgrade an already established client/server connection to a different protocol (over the same transport protocol). For example, it can be used by a client to upgrade a connection from HTTP 1.1 to HTTP 2.0, or an HTTP or HTTPS connection into a WebSocket.</p>
+The HTTP 1.1 (only) `Upgrade` header can be used to upgrade an already established client/server connection to a different protocol (over the same transport protocol). For example, it can be used by a client to upgrade a connection from HTTP 1.1 to HTTP 2.0, or an HTTP or HTTPS connection into a WebSocket.
 
-<div class="notecard warning">
-  <p><strong>Warning:</strong> HTTP/2 explicitly disallows the use of this mechanism/header; it is specific to HTTP/1.1.</p>
-</div>
+> **Warning:** HTTP/2 explicitly disallows the use of this mechanism/header; it is specific to HTTP/1.1.
 
 <table class="properties">
-	<tbody>
-		<tr>
-			<th scope="row">Header type</th>
-			<td>{{Glossary("Request header")}}, {{Glossary("Response header")}}</td>
-		</tr>
-		<tr>
-			<th scope="row">{{Glossary("Forbidden header name")}}</th>
-			<td>yes</td>
-		</tr>
-	</tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Header type</th>
+      <td>
+        {{Glossary("Request header")}},
+        {{Glossary("Response header")}}
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Overview">Overview</h2>
+## Overview
 
-<p>The <code>Upgrade</code> header field may be used by clients to invite a server to switch to one (or more) of the listed protocols, in descending preference order.</p>
+The `Upgrade` header field may be used by clients to invite a server to switch to one (or more) of the listed protocols, in descending preference order.
 
-<p>For example, the client might send a <code>GET</code> request as shown, listing the preferred protocols to switch to (in this case "example/1" and "foo/2"):</p>
+For example, the client might send a `GET` request as shown, listing the preferred protocols to switch to (in this case "example/1" and "foo/2"):
 
-<pre>GET /index.html HTTP/1.1
-Host: www.example.com
-Connection: upgrade
-Upgrade: example/1, foo/2</pre>
+    GET /index.html HTTP/1.1
+    Host: www.example.com
+    Connection: upgrade
+    Upgrade: example/1, foo/2
 
-<div class="notecard note">
-  <p><strong>Note:</strong> <code>Connection: upgrade</code> must be set whenever <code>Upgrade</code> is sent.</p>
-</div>
+> **Note:** `Connection: upgrade` must be set whenever `Upgrade` is sent.
 
-<p>The server can choose to ignore the request, for any reason, in which case it should just respond as though the <code>Upgrade</code> header had not been sent (for example, with a  {{HTTPStatus(200, "200 OK")}}).</p>
+The server can choose to ignore the request, for any reason, in which case it should just respond as though the `Upgrade` header had not been sent (for example, with a  {{HTTPStatus(200, "200 OK")}}).
 
-<p>If the server decides to upgrade the connection, it must:</p>
+If the server decides to upgrade the connection, it must:
 
-<ol>
-	<li>Send back a {{HTTPStatus(101, "101 Switching Protocols")}} response status with an <code>Upgrade</code> header that specifies the protocol(s) being switched to. For example:
+1.  Send back a {{HTTPStatus(101, "101 Switching Protocols")}} response status with an `Upgrade` header that specifies the protocol(s) being switched to. For example:
 
-	<pre><code>HTTP/1.1 101 Switching Protocols
-Upgrade: foo/2
-Connection: Upgrade</code></pre>
-	</li>
-	<li>Send a response to the original request <em>using the new protocol</em> (the server may only switch to a protocol with which it can complete the original request).</li>
-</ol>
+        HTTP/1.1 101 Switching Protocols
+        Upgrade: foo/2
+        Connection: Upgrade
 
-<p>A server may also send the header as part of a {{HTTPStatus("426")}} <code>Upgrade Required</code> response, to indicate that the server won't perform the request using the current protocol, but might do so if the protocol is changed. The client can then request a protocol change using the process above.</p>
+2.  Send a response to the original request *using the new protocol* (the server may only switch to a protocol with which it can complete the original request).
 
-<p>More detail and examples are provided in the topic <a href="/en-US/docs/Web/HTTP/Protocol_upgrade_mechanism">Protocol upgrade mechanism</a>.</p>
+A server may also send the header as part of a {{HTTPStatus("426")}} `Upgrade Required` response, to indicate that the server won't perform the request using the current protocol, but might do so if the protocol is changed. The client can then request a protocol change using the process above.
 
-<h2 id="Syntax">Syntax</h2>
+More detail and examples are provided in the topic [Protocol upgrade mechanism](/en-US/docs/Web/HTTP/Protocol_upgrade_mechanism).
 
-<pre>Connection: upgrade
-Upgrade: <em>protocol_name</em>[<strong>/</strong><em>protocol_version</em>]
-</pre>
+## Syntax
 
-<p>Notes:</p>
+    Connection: upgrade
+    Upgrade: protocol_name[/protocol_version]
 
-<ul>
-	<li>The {{HTTPHeader("Connection")}} header with type <code>upgrade</code> must <em>always</em> be sent with the <code>Upgrade</code> header (as shown above).</li>
-	<li>Protocols are listed, comma-separated, in order of descending preference. Protocol version is optional. For example:
-	<pre>  Connection: upgrade
-  Upgrade: a_protocol/1, example ,another_protocol/2.2
-</pre>
-	</li>
-</ul>
+Notes:
 
-<h2 id="Directives">Directives</h2>
+- The {{HTTPHeader("Connection")}} header with type `upgrade` must _always_ be sent with the `Upgrade` header (as shown above).
+- Protocols are listed, comma-separated, in order of descending preference. Protocol version is optional. For example:
 
-<dl>
-	<dt>any comma-separated list protocol names (each with optional protocol version)</dt>
-	<dd>One or more protocol names with optional version ("/" separated). The protocols are listed in order of descending preference.</dd>
-</dl>
+        Connection: upgrade
+        Upgrade: a_protocol/1, example ,another_protocol/2.2
 
-<h2 id="Examples">Examples</h2>
+## Directives
 
-<pre>Connection: upgrade
-Upgrade: HTTP/2.0, SHTTP/1.3, IRC/6.9, RTA/x11
-</pre>
+- any comma-separated list protocol names (each with optional protocol version)
+  - : One or more protocol names with optional version ("/" separated). The protocols are listed in order of descending preference.
 
-<pre>Connection: Upgrade
-Upgrade: websocket
-</pre>
+## Examples
 
-<h2 id="Specifications">Specifications</h2>
+    Connection: upgrade
+    Upgrade: HTTP/2.0, SHTTP/1.3, IRC/6.9, RTA/x11
+
+<!---->
+
+    Connection: Upgrade
+    Upgrade: websocket
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li><a href="/en-US/docs/Web/HTTP/Protocol_upgrade_mechanism">Protocol upgrade mechanism</a></li>
-	<li>{{HTTPStatus("101")}} <code>Switching Protocol</code></li>
-	<li>{{HTTPStatus("426")}} <code>Upgrade Required</code></li>
-	<li>{{HTTPHeader("Connection")}}</li>
-</ul>
+- [Protocol upgrade mechanism](/en-US/docs/Web/HTTP/Protocol_upgrade_mechanism)
+- {{HTTPStatus("101")}} `Switching Protocol`
+- {{HTTPStatus("426")}} `Upgrade Required`
+- {{HTTPHeader("Connection")}}

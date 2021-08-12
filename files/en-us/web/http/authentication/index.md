@@ -8,135 +8,134 @@ tags:
   - HTTP
   - Security
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p class="summary">HTTP provides a general framework for access control and authentication. This page is an introduction to the HTTP framework for authentication, and shows how to restrict access to your server using the HTTP "Basic" schema.</p>
+HTTP provides a general framework for access control and authentication. This page is an introduction to the HTTP framework for authentication, and shows how to restrict access to your server using the HTTP "Basic" schema.
 
-<h2 id="The_general_HTTP_authentication_framework">The general HTTP authentication framework</h2>
+## The general HTTP authentication framework
 
-<p>{{RFC("7235")}} defines the HTTP authentication framework, which can be used by a server to {{glossary("challenge")}} a client request, and by a client to provide authentication information.</p>
+{{RFC("7235")}} defines the HTTP authentication framework, which can be used by a server to {{glossary("challenge")}} a client request, and by a client to provide authentication information.
 
-<p>The challenge and response flow works like this:</p>
+The challenge and response flow works like this:
 
-<ol>
- <li>The server responds to a client with a {{HTTPStatus("401")}} (Unauthorized) response status and provides information on how to authorize with a {{HTTPHeader("WWW-Authenticate")}} response header containing at least one challenge.</li>
- <li>A client that wants to authenticate itself with the server can then do so by including an {{HTTPHeader("Authorization")}} request header with the credentials.</li>
- <li>Usually a client will present a password prompt to the user and will then issue the request including the correct <code>Authorization</code> header.</li>
-</ol>
+1.  The server responds to a client with a {{HTTPStatus("401")}} (Unauthorized) response status and provides information on how to authorize with a {{HTTPHeader("WWW-Authenticate")}} response header containing at least one challenge.
+2.  A client that wants to authenticate itself with the server can then do so by including an {{HTTPHeader("Authorization")}} request header with the credentials.
+3.  Usually a client will present a password prompt to the user and will then issue the request including the correct `Authorization` header.
 
-<p><img alt="A sequence diagram illustrating HTTP messages between a client and a server lifeline." src="httpauth.png" title="Sequence Diagram of Client-server HTTP Authentication"></p>
+![A sequence diagram illustrating HTTP messages between a client and a server lifeline.](httpauth.png "Sequence Diagram of Client-server HTTP Authentication")
 
-<p>In the case of a "Basic" authentication like shown in the figure, the exchange <strong>must</strong> happen over an HTTPS (TLS) connection to be secure.</p>
+In the case of a "Basic" authentication like shown in the figure, the exchange **must** happen over an HTTPS (TLS) connection to be secure.
 
-<h3 id="Proxy_authentication">Proxy authentication</h3>
+### Proxy authentication
 
-<p>The same challenge and response mechanism can be used for <em>proxy authentication</em>. As both resource authentication and proxy authentication can coexist, a different set of headers and status codes is needed. In the case of proxies, the challenging status code is {{HTTPStatus("407")}} (Proxy Authentication Required), the {{HTTPHeader("Proxy-Authenticate")}} response header contains at least one challenge applicable to the proxy, and the {{HTTPHeader("Proxy-Authorization")}} request header is used for providing the credentials to the proxy server.</p>
+The same challenge and response mechanism can be used for _proxy authentication_. As both resource authentication and proxy authentication can coexist, a different set of headers and status codes is needed. In the case of proxies, the challenging status code is {{HTTPStatus("407")}} (Proxy Authentication Required), the {{HTTPHeader("Proxy-Authenticate")}} response header contains at least one challenge applicable to the proxy, and the {{HTTPHeader("Proxy-Authorization")}} request header is used for providing the credentials to the proxy server.
 
-<h3 id="Access_forbidden">Access forbidden</h3>
+### Access forbidden
 
-<p>If a (proxy) server receives <em>invalid</em> credentials, it should respond with a {{HTTPStatus("401")}} <code>Unauthorized</code> or with a {{HTTPStatus("407")}} <code>Proxy Authentication Required</code>, and the user may send a new request or replace the {{HTTPHeader("Authorization")}} header field.</p>
-<p>If a (proxy) server receives valid credentials that are <em>inadequate</em> to access a given resource, the server should respond with the {{HTTPStatus("403")}} <code>Forbidden</code> status code. Unlike {{HTTPStatus("401")}} <code>Unauthorized</code> or {{HTTPStatus("407")}} <code>Proxy Authentication Required</code>, authentication is impossible for this user and browsers will not propose a new attempt.</p>
-<p>In all cases, the server may prefer returning a {{HTTPStatus("404")}} <code>Not Found</code> status code, to hide the existence of the page to a user without adequate privileges or not correctly authenticated.</p>
+If a (proxy) server receives _invalid_ credentials, it should respond with a {{HTTPStatus("401")}} `Unauthorized` or with a {{HTTPStatus("407")}} `Proxy Authentication Required`, and the user may send a new request or replace the {{HTTPHeader("Authorization")}} header field.
 
-<h3 id="Authentication_of_cross-origin_images">Authentication of cross-origin images</h3>
+If a (proxy) server receives valid credentials that are _inadequate_ to access a given resource, the server should respond with the {{HTTPStatus("403")}} `Forbidden` status code. Unlike {{HTTPStatus("401")}} `Unauthorized` or {{HTTPStatus("407")}} `Proxy Authentication Required`, authentication is impossible for this user and browsers will not propose a new attempt.
 
-<p>A potential security hole recently been fixed by browsers is authentication of cross-site images. From <a href="/en-US/docs/Mozilla/Firefox/Releases/59">Firefox 59</a> onwards, image resources loaded from different origins to the current document are no longer able to trigger HTTP authentication dialogs ({{bug(1423146)}}), preventing user credentials being stolen if attackers were able to embed an arbitrary image into a third-party page.</p>
+In all cases, the server may prefer returning a {{HTTPStatus("404")}} `Not Found` status code, to hide the existence of the page to a user without adequate privileges or not correctly authenticated.
 
-<h3 id="Character_encoding_of_HTTP_authentication">Character encoding of HTTP authentication</h3>
+### Authentication of cross-origin images
 
-<p>Browsers use <code>utf-8</code> encoding for usernames and passwords.</p>
+A potential security hole recently been fixed by browsers is authentication of cross-site images. From [Firefox 59](/en-US/docs/Mozilla/Firefox/Releases/59) onwards, image resources loaded from different origins to the current document are no longer able to trigger HTTP authentication dialogs ({{bug(1423146)}}), preventing user credentials being stolen if attackers were able to embed an arbitrary image into a third-party page.
 
-<p>Firefox once used <code>ISO-8859-1</code>, but changed to <code>utf-8</code> for parity with other browsers and to avoid potential problems as described in {{bug(1419658)}}.</p>
+### Character encoding of HTTP authentication
 
-<h3 id="WWW-Authenticate_and_Proxy-Authenticate_headers">WWW-Authenticate and Proxy-Authenticate headers</h3>
+Browsers use `utf-8` encoding for usernames and passwords.
 
-<p>The {{HTTPHeader("WWW-Authenticate")}} and {{HTTPHeader("Proxy-Authenticate")}} response headers define the authentication method that should be used to gain access to a resource. They must specify which authentication scheme is used, so that the client that wishes to authorize knows how to provide the credentials.</p>
+Firefox once used `ISO-8859-1`, but changed to `utf-8` for parity with other browsers and to avoid potential problems as described in {{bug(1419658)}}.
 
-<p>The syntax for these headers is the following:</p>
+### WWW-Authenticate and Proxy-Authenticate headers
 
-<pre class="brush: html">WWW-Authenticate: &lt;type&gt; realm=&lt;realm&gt;
-Proxy-Authenticate: &lt;type&gt; realm=&lt;realm&gt;
-</pre>
+The {{HTTPHeader("WWW-Authenticate")}} and {{HTTPHeader("Proxy-Authenticate")}} response headers define the authentication method that should be used to gain access to a resource. They must specify which authentication scheme is used, so that the client that wishes to authorize knows how to provide the credentials.
 
-<p>Here, <code>&lt;type&gt;</code> is the authentication scheme ("Basic" is the most common scheme and <a href="#basic_authentication_scheme">introduced below</a>). The <em>realm</em> is used to describe the protected area or to indicate the scope of protection. This could be a message like "Access to the staging site" or similar, so that the user knows to which space they are trying to get access to.</p>
+The syntax for these headers is the following:
 
-<h3 id="Authorization_and_Proxy-Authorization_headers">Authorization and Proxy-Authorization headers</h3>
+```html
+WWW-Authenticate: <type> realm=<realm>
+Proxy-Authenticate: <type> realm=<realm>
+```
 
-<p>The {{HTTPHeader("Authorization")}} and {{HTTPHeader("Proxy-Authorization")}} request headers contain the credentials to authenticate a user agent with a (proxy) server. Here, the <code>&lt;type&gt;</code> is needed again followed by the credentials, which can be encoded or encrypted depending on which authentication scheme is used.</p>
+Here, `<type>` is the authentication scheme ("Basic" is the most common scheme and [introduced below](#basic_authentication_scheme)). The _realm_ is used to describe the protected area or to indicate the scope of protection. This could be a message like "Access to the staging site" or similar, so that the user knows to which space they are trying to get access to.
 
-<pre class="brush: html">Authorization: &lt;type&gt; &lt;credentials&gt;
-Proxy-Authorization: &lt;type&gt; &lt;credentials&gt;
-</pre>
+### Authorization and Proxy-Authorization headers
 
-<h3 id="Authentication_schemes">Authentication schemes</h3>
+The {{HTTPHeader("Authorization")}} and {{HTTPHeader("Proxy-Authorization")}} request headers contain the credentials to authenticate a user agent with a (proxy) server. Here, the `<type>` is needed again followed by the credentials, which can be encoded or encrypted depending on which authentication scheme is used.
 
-<p>The general HTTP authentication framework is used by several authentication schemes. Schemes can differ in security strength and in their availability in client or server software.</p>
+```html
+Authorization: <type> <credentials>
+Proxy-Authorization: <type> <credentials>
+```
 
-<p>The most common authentication scheme is the "Basic" authentication scheme, which is introduced in more detail below. IANA maintains a <a class="external external-icon" href="https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml">list of authentication schemes</a>, but there are other schemes offered by host services, such as Amazon AWS. Common authentication schemes include:</p>
+### Authentication schemes
 
-<dl>
- <dt><strong>Basic</strong></dt>
- <dd>See {{rfc(7617)}}, base64-encoded credentials. More information below.</dd>
- <dt><strong>Bearer</strong></dt>
- <dd>See {{rfc(6750)}}, bearer tokens to access OAuth 2.0-protected resources</dd>
- <dt><strong>Digest</strong></dt>
- <dd>See {{rfc(7616)}}, only md5 hashing is supported in Firefox, see {{bug(472823)}} for SHA encryption support</dd>
- <dt><strong>HOBA</strong></dt>
- <dd>See {{rfc(7486)}}, Section 3, <strong>H</strong>TTP <strong>O</strong>rigin-<strong>B</strong>ound <strong>A</strong>uthentication, digital-signature-based</dd>
- <dt><strong>Mutual</strong></dt>
- <dd>See {{rfc(8120)}}</dd>
- <dt><strong>AWS4-HMAC-SHA256</strong></dt>
- <dd>See <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html">AWS docs</a></dd>
-</dl>
+The general HTTP authentication framework is used by several authentication schemes. Schemes can differ in security strength and in their availability in client or server software.
 
-<h2 id="Basic_authentication_scheme">Basic authentication scheme</h2>
+The most common authentication scheme is the "Basic" authentication scheme, which is introduced in more detail below. IANA maintains a [list of authentication schemes](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml), but there are other schemes offered by host services, such as Amazon AWS. Common authentication schemes include:
 
-<p>The "Basic" HTTP authentication scheme is defined in {{rfc(7617)}}, which transmits credentials as user ID/password pairs, encoded using base64.</p>
+- **Basic**
+  - : See {{rfc(7617)}}, base64-encoded credentials. More information below.
+- **Bearer**
+  - : See {{rfc(6750)}}, bearer tokens to access OAuth 2.0-protected resources
+- **Digest**
+  - : See {{rfc(7616)}}, only md5 hashing is supported in Firefox, see {{bug(472823)}} for SHA encryption support
+- **HOBA**
+  - : See {{rfc(7486)}}, Section 3, **H**TTP **O**rigin-**B**ound **A**uthentication, digital-signature-based
+- **Mutual**
+  - : See {{rfc(8120)}}
+- **AWS4-HMAC-SHA256**
+  - : See [AWS docs](https://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html)
 
-<h3 id="Security_of_basic_authentication">Security of basic authentication</h3>
+## Basic authentication scheme
 
-<p>As the user ID and password are passed over the network as clear text (it is base64 encoded, but base64 is a reversible encoding), the basic authentication scheme <strong>is not secure</strong>. HTTPS/TLS should be used with basic authentication. Without these additional security enhancements, basic authentication should not be used to protect sensitive or valuable information.</p>
+The "Basic" HTTP authentication scheme is defined in {{rfc(7617)}}, which transmits credentials as user ID/password pairs, encoded using base64.
 
-<h3 id="Restricting_access_with_Apache_and_basic_authentication">Restricting access with Apache and basic authentication</h3>
+### Security of basic authentication
 
-<p>To password-protect a directory on an Apache server, you will need a <code>.htaccess</code> and a <code>.htpasswd</code> file.</p>
+As the user ID and password are passed over the network as clear text (it is base64 encoded, but base64 is a reversible encoding), the basic authentication scheme **is not secure**. HTTPS/TLS should be used with basic authentication. Without these additional security enhancements, basic authentication should not be used to protect sensitive or valuable information.
 
-<p>The <code>.htaccess</code> file typically looks like this:</p>
+### Restricting access with Apache and basic authentication
 
-<pre>AuthType Basic
-AuthName "Access to the staging site"
-AuthUserFile /path/to/.htpasswd
-Require valid-user</pre>
+To password-protect a directory on an Apache server, you will need a `.htaccess` and a `.htpasswd` file.
 
-<p>The <code>.htaccess</code> file references a <code>.htpasswd</code> file in which each line consists of a username and a password separated by a colon (<code>:</code>). You cannot see the actual passwords as they are <a href="https://httpd.apache.org/docs/2.4/misc/password_encryptions.html">hashed</a> (using MD5-based hashing, in this case). Note that you can name your <code>.htpasswd</code> file differently if you like, but keep in mind this file shouldn't be accessible to anyone. (Apache is usually configured to prevent access to <code>.ht*</code> files).</p>
+The `.htaccess` file typically looks like this:
 
-<pre>aladdin:$apr1$ZjTqBB3f$IF9gdYAGlMrs2fuINjHsz.
-user2:$apr1$O04r.y2H$/vEkesPhVInBByJUkXitA/
-</pre>
+    AuthType Basic
+    AuthName "Access to the staging site"
+    AuthUserFile /path/to/.htpasswd
+    Require valid-user
 
-<h3 id="Restricting_access_with_nginx_and_basic_authentication">Restricting access with nginx and basic authentication</h3>
+The `.htaccess` file references a `.htpasswd` file in which each line consists of a username and a password separated by a colon (`:`). You cannot see the actual passwords as they are [hashed](https://httpd.apache.org/docs/2.4/misc/password_encryptions.html) (using MD5-based hashing, in this case). Note that you can name your `.htpasswd` file differently if you like, but keep in mind this file shouldn't be accessible to anyone. (Apache is usually configured to prevent access to `.ht*` files).
 
-<p>For nginx, you will need to specify a location that you are going to protect and the <code>auth_basic</code> directive that provides the name to the password-protected area. The <code>auth_basic_user_file</code> directive then points to a <code>.htpasswd</code> file containing the encrypted user credentials, just like in the Apache example above.</p>
+    aladdin:$apr1$ZjTqBB3f$IF9gdYAGlMrs2fuINjHsz.
+    user2:$apr1$O04r.y2H$/vEkesPhVInBByJUkXitA/
 
-<pre>location /status {
-    auth_basic           "Access to the staging site";
-    auth_basic_user_file /etc/apache2/.htpasswd;
-}</pre>
+### Restricting access with nginx and basic authentication
 
-<h3 id="Access_using_credentials_in_the_URL">Access using credentials in the URL</h3>
+For nginx, you will need to specify a location that you are going to protect and the `auth_basic` directive that provides the name to the password-protected area. The `auth_basic_user_file` directive then points to a `.htpasswd` file containing the encrypted user credentials, just like in the Apache example above.
 
-<p>Many clients also let you avoid the login prompt by using an encoded URL containing the username and the password like this:</p>
+    location /status {
+        auth_basic           "Access to the staging site";
+        auth_basic_user_file /etc/apache2/.htpasswd;
+    }
 
-<pre class="example-bad">https://username:password@www.example.com/</pre>
+### Access using credentials in the URL
 
-<p><strong>The use of these URLs is deprecated</strong>. In Chrome, the <code>username:password@</code> part in URLs is even <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=82250#c7">stripped out</a> for security reasons. In Firefox, it is checked if the site actually requires authentication and if not, Firefox will warn the user with a prompt "You are about to log in to the site “www.example.com” with the username “username”, but the website does not require authentication. This may be an attempt to trick you."</p>
+Many clients also let you avoid the login prompt by using an encoded URL containing the username and the password like this:
 
-<h2 id="See_also">See also</h2>
+```plain example-bad
+https://username:password@www.example.com/
+```
 
-<ul>
- <li>{{HTTPHeader("WWW-Authenticate")}}</li>
- <li>{{HTTPHeader("Authorization")}}</li>
- <li>{{HTTPHeader("Proxy-Authorization")}}</li>
- <li>{{HTTPHeader("Proxy-Authenticate")}}</li>
- <li>{{HTTPStatus("401")}}, {{HTTPStatus("403")}}, {{HTTPStatus("407")}}</li>
-</ul>
+**The use of these URLs is deprecated**. In Chrome, the `username:password@` part in URLs is even [stripped out](https://bugs.chromium.org/p/chromium/issues/detail?id=82250#c7) for security reasons. In Firefox, it is checked if the site actually requires authentication and if not, Firefox will warn the user with a prompt "You are about to log in to the site “www\.example.com” with the username “username”, but the website does not require authentication. This may be an attempt to trick you."
+
+## See also
+
+- {{HTTPHeader("WWW-Authenticate")}}
+- {{HTTPHeader("Authorization")}}
+- {{HTTPHeader("Proxy-Authorization")}}
+- {{HTTPHeader("Proxy-Authenticate")}}
+- {{HTTPStatus("401")}}, {{HTTPStatus("403")}}, {{HTTPStatus("407")}}

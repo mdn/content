@@ -8,51 +8,51 @@ tags:
   - header
 browser-compat: http.headers.Upgrade-Insecure-Requests
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The HTTP <strong><code>Upgrade-Insecure-Requests</code></strong> request header sends a signal to the server expressing the client’s preference for an encrypted and authenticated response, and that it can successfully handle the {{CSP("upgrade-insecure-requests")}} <a href="/en-US/docs/Web/HTTP/CSP">CSP</a> directive.</p>
+The HTTP **`Upgrade-Insecure-Requests`** request header sends a signal to the server expressing the client’s preference for an encrypted and authenticated response, and that it can successfully handle the {{CSP("upgrade-insecure-requests")}} [CSP](/en-US/docs/Web/HTTP/CSP) directive.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Request header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>no</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Header type</th>
+      <td>{{Glossary("Request header")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>no</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: html">Upgrade-Insecure-Requests: 1</pre>
+```html
+Upgrade-Insecure-Requests: 1
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>A client's request signals to the server that it supports the upgrade mechanisms of {{CSP("upgrade-insecure-requests")}}:</p>
+A client's request signals to the server that it supports the upgrade mechanisms of {{CSP("upgrade-insecure-requests")}}:
 
-<pre>GET / HTTP/1.1
-Host: example.com
-Upgrade-Insecure-Requests: 1</pre>
+    GET / HTTP/1.1
+    Host: example.com
+    Upgrade-Insecure-Requests: 1
 
-<p>The server can now redirect to a secure version of the site. A {{HTTPHeader("Vary")}} header can be used so that the site isn't served by caches to clients that don’t support the upgrade mechanism.</p>
+The server can now redirect to a secure version of the site. A {{HTTPHeader("Vary")}} header can be used so that the site isn't served by caches to clients that don’t support the upgrade mechanism.
 
-<pre>Location: https://example.com/
-Vary: Upgrade-Insecure-Requests</pre>
+    Location: https://example.com/
+    Vary: Upgrade-Insecure-Requests
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTTPHeader("Content-Security-Policy")}}</li>
- <li>CSP {{CSP("upgrade-insecure-requests")}} directive</li>
-</ul>
+- {{HTTPHeader("Content-Security-Policy")}}
+- CSP {{CSP("upgrade-insecure-requests")}} directive

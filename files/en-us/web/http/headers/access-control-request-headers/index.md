@@ -8,49 +8,46 @@ tags:
   - header
 browser-compat: http.headers.Access-Control-Request-Headers
 ---
-<p>{{HTTPSidebar}}</p>
+{{HTTPSidebar}}
 
-<p>The <strong><code>Access-Control-Request-Headers</code></strong> request header is used by browsers when issuing a {{glossary("preflight request")}}, to let the server know which <a href="/en-US/docs/Web/HTTP/Headers">HTTP headers</a> the client might send when the actual request is made (such as with {{domxref("XMLHttpRequest.setRequestHeader()","setRequestHeader()")}}). This browser side header will be answered by the complementary server side header of {{HTTPHeader("Access-Control-Allow-Headers")}}.</p>
+The **`Access-Control-Request-Headers`** request header is used by browsers when issuing a {{glossary("preflight request")}}, to let the server know which [HTTP headers](/en-US/docs/Web/HTTP/Headers) the client might send when the actual request is made (such as with {{domxref("XMLHttpRequest.setRequestHeader()","setRequestHeader()")}}). This browser side header will be answered by the complementary server side header of {{HTTPHeader("Access-Control-Allow-Headers")}}.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Request header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Header type</th>
+      <td>{{Glossary("Request header")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: html">Access-Control-Request-Headers: &lt;header-name&gt;, &lt;header-name&gt;, ...
-</pre>
+```html
+Access-Control-Request-Headers: <header-name>, <header-name>, ...
+```
 
-<h2 id="Directives">Directives</h2>
+## Directives
 
-<dl>
- <dt>&lt;header-name&gt;</dt>
- <dd>A comma-delimited list of <a href="/en-US/docs/Web/HTTP/Headers">HTTP headers</a> that are included in the request.</dd>
-</dl>
+- \<header-name>
+  - : A comma-delimited list of [HTTP headers](/en-US/docs/Web/HTTP/Headers) that are included in the request.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre>Access-Control-Request-Headers: X-PINGOTHER, Content-Type</pre>
+    Access-Control-Request-Headers: X-PINGOTHER, Content-Type
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTTPHeader("Access-Control-Request-Method")}}</li>
-</ul>
+- {{HTTPHeader("Access-Control-Request-Method")}}

@@ -11,72 +11,68 @@ tags:
   - Experimental
 browser-compat: http.headers.downlink
 ---
-<div>{{HTTPSidebar}} {{SeeCompatTable}}</div>
+{{HTTPSidebar}} {{SeeCompatTable}}
 
-<p>The <strong><code>Downlink</code></strong> {{Glossary("Client hints","network client hint")}} request header field provides the approximate bandwidth of the client's connection to the server, in Mbps.</p>
+The **`Downlink`** {{Glossary("Client hints","network client hint")}} request header field provides the approximate bandwidth of the client's connection to the server, in Mbps.
 
 <table class="properties">
   <tbody>
-   <tr>
-    <th scope="row">Header type</th>
-    <td>{{Glossary("Request header")}}, {{Glossary("Client hints","Client hint")}}</td>
-   </tr>
-   <tr>
-    <th scope="row">{{Glossary("Forbidden header name")}}</th>
-    <td>no</td>
-   </tr>
+    <tr>
+      <th scope="row">Header type</th>
+      <td>
+        {{Glossary("Request header")}},
+        {{Glossary("Client hints","Client hint")}}
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>no</td>
+    </tr>
   </tbody>
- </table>
+</table>
 
-<p>The <code>Downlink</code> value is given in Mbps and rounded to the nearest 25 kilobits per second to prevent fingerprinting; There are many other mechanisms an attacker might use to obtain similar information.</p>
+The `Downlink` value is given in Mbps and rounded to the nearest 25 kilobits per second to prevent fingerprinting; There are many other mechanisms an attacker might use to obtain similar information.
 
-<p>The hint allows a server to choose what information is sent based on the network bandwidth. For example, a server might choose to send smaller versions of images and other resources on low bandwidth networks.</p>
+The hint allows a server to choose what information is sent based on the network bandwidth. For example, a server might choose to send smaller versions of images and other resources on low bandwidth networks.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> The {{HTTPHeader("Vary")}} header is used in responses to indicate that a different resource is sent for every different value of the header (see <a href="/en-US/docs/Web/HTTP/Caching#varying_responses">HTTP Caching > Varying responses</a>). Even if {{HTTPHeader("Downlink")}} is used to configure what resources are sent, consider omitting it in the {{HTTPHeader("Vary")}} header — it is likely to change often, which effectively makes the resource uncachable.</p>
-</div>
+> **Note:** The {{HTTPHeader("Vary")}} header is used in responses to indicate that a different resource is sent for every different value of the header (see [HTTP Caching > Varying responses](/en-US/docs/Web/HTTP/Caching#varying_responses)). Even if {{HTTPHeader("Downlink")}} is used to configure what resources are sent, consider omitting it in the {{HTTPHeader("Vary")}} header — it is likely to change often, which effectively makes the resource uncachable.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre>Downlink: &lt;number&gt;</pre>
+    Downlink: <number>
 
-<h2 id="Directives">Directives</h2>
+## Directives
 
-<dl>
- <dt>&lt;number&gt;</dt>
- <dd>The downlink rate in Mbps, rounded to the nearest 25 kilobits.</dd>
-</dl>
+- \<number>
+  - : The downlink rate in Mbps, rounded to the nearest 25 kilobits.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>A server first needs to opt in to receive the <code>Downlink</code> header by sending the {{HTTPHeader("Accept-CH")}} response header containing <code>Downlink</code>.</p>
+A server first needs to opt in to receive the `Downlink` header by sending the {{HTTPHeader("Accept-CH")}} response header containing `Downlink`.
 
-<pre>Accept-CH: Downlink</pre>
+    Accept-CH: Downlink
 
-<p>Then on subsequent requests the client might send a <code>Downlink</code> header back:</p>
+Then on subsequent requests the client might send a `Downlink` header back:
 
-<pre>Downlink: 1.7</pre>
+    Downlink: 1.7
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/client-hints">Adapting to Users with Client Hints</a> (developer.google.com)</li>
- <li>Network client hints
-  <ul>
-    <li>{{HTTPHeader("RTT")}}</li>
-    <li>{{HTTPHeader("ECT")}}</li>
-    <li>{{HTTPHeader("Save-Data")}}</li>
-   </ul>
- </li>
- <li>{{HTTPHeader("Accept-CH")}}</li>
- <li><a href="/en-US/docs/Web/HTTP/Caching#varying_responses">HTTP Caching > Varying responses</a> and {{HTTPHeader("Vary")}}</li>
- <li>{{domxref("NetworkInformation.effectiveType")}}</li>
-</ul>
+- [Adapting to Users with Client Hints](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/client-hints) (developer.google.com)
+- Network client hints
+
+  - {{HTTPHeader("RTT")}}
+  - {{HTTPHeader("ECT")}}
+  - {{HTTPHeader("Save-Data")}}
+
+- {{HTTPHeader("Accept-CH")}}
+- [HTTP Caching > Varying responses](/en-US/docs/Web/HTTP/Caching#varying_responses) and {{HTTPHeader("Vary")}}
+- {{domxref("NetworkInformation.effectiveType")}}

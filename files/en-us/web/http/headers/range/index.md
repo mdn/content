@@ -9,70 +9,66 @@ tags:
   - Request header
 browser-compat: http.headers.Range
 ---
-<p>{{HTTPSidebar}}</p>
+{{HTTPSidebar}}
 
-<p>The <strong><code>Range</code></strong> HTTP request header indicates the part of a document that the server should return. Several parts can be requested with one <code>Range</code> header at once, and the server may send back these ranges in a multipart document. If the server sends back ranges, it uses the {{HTTPStatus("206")}}<code> Partial Content</code> for the response. If the ranges are invalid, the server returns the {{HTTPStatus("416")}}<code> Range Not Satisfiable</code> error. The server can also ignore the <code>Range</code> header and return the whole document with a {{HTTPStatus("200")}} status code.</p>
+The **`Range`** HTTP request header indicates the part of a document that the server should return. Several parts can be requested with one `Range` header at once, and the server may send back these ranges in a multipart document. If the server sends back ranges, it uses the {{HTTPStatus("206")}}` Partial Content` for the response. If the ranges are invalid, the server returns the {{HTTPStatus("416")}}` Range Not Satisfiable` error. The server can also ignore the `Range` header and return the whole document with a {{HTTPStatus("200")}} status code.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Request header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>no</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Header type</th>
+      <td>{{Glossary("Request header")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>no</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: html">Range: &lt;unit&gt;=&lt;range-start&gt;-
-Range: &lt;unit&gt;=&lt;range-start&gt;-&lt;range-end&gt;
-Range: &lt;unit&gt;=&lt;range-start&gt;-&lt;range-end&gt;, &lt;range-start&gt;-&lt;range-end&gt;
-Range: &lt;unit&gt;=&lt;range-start&gt;-&lt;range-end&gt;, &lt;range-start&gt;-&lt;range-end&gt;, &lt;range-start&gt;-&lt;range-end&gt;
-Range: &lt;unit&gt;=-&lt;suffix-length&gt;</pre>
+```html
+Range: <unit>=<range-start>-
+Range: <unit>=<range-start>-<range-end>
+Range: <unit>=<range-start>-<range-end>, <range-start>-<range-end>
+Range: <unit>=<range-start>-<range-end>, <range-start>-<range-end>, <range-start>-<range-end>
+Range: <unit>=-<suffix-length>
+```
 
-<h2 id="Directives">Directives</h2>
+## Directives
 
-<dl>
- <dt>&lt;unit&gt;</dt>
- <dd>The unit in which ranges are specified. This is usually <code>bytes</code>.</dd>
- <dt>&lt;range-start&gt;</dt>
- <dd>An integer in the given unit indicating the beginning of the request range.</dd>
- <dt>&lt;range-end&gt;</dt>
- <dd>An integer in the given unit indicating the end of the requested range. This value is optional and, if omitted, the end of the document is taken as the end of the range.</dd>
- <dt>&lt;suffix-length&gt;</dt>
- <dd>An integer in the given unit indicating the number of units at the end of the file to return.</dd>
-</dl>
+- \<unit>
+  - : The unit in which ranges are specified. This is usually `bytes`.
+- \<range-start>
+  - : An integer in the given unit indicating the beginning of the request range.
+- \<range-end>
+  - : An integer in the given unit indicating the end of the requested range. This value is optional and, if omitted, the end of the document is taken as the end of the range.
+- \<suffix-length>
+  - : An integer in the given unit indicating the number of units at the end of the file to return.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Requesting three ranges from the file.</p>
+Requesting three ranges from the file.
 
-<pre>Range: bytes=200-1000, 2000-6576, 19000-
-</pre>
+    Range: bytes=200-1000, 2000-6576, 19000-
 
-<p>Requesting the first 500 and last 500 bytes of the file. The request may be rejected by the server if the ranges overlap.</p>
+Requesting the first 500 and last 500 bytes of the file. The request may be rejected by the server if the ranges overlap.
 
-<pre>Range: bytes=0-499, -500
-</pre>
+    Range: bytes=0-499, -500
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTTPHeader("If-Range")}}</li>
- <li>{{HTTPHeader("Content-Range")}}</li>
- <li>{{HTTPHeader("Content-Type")}}</li>
- <li>{{HTTPStatus("206")}}<code> Partial Content</code></li>
- <li>{{HTTPStatus("416")}}<code> Range Not Satisfiable</code></li>
-</ul>
+- {{HTTPHeader("If-Range")}}
+- {{HTTPHeader("Content-Range")}}
+- {{HTTPHeader("Content-Type")}}
+- {{HTTPStatus("206")}}` Partial Content`
+- {{HTTPStatus("416")}}` Range Not Satisfiable`

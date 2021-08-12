@@ -12,12 +12,11 @@ tags:
   - header
 browser-compat: http.headers.Sec-WebSocket-Accept
 ---
-<div>{{HTTPSidebar}}{{Draft}}</div>
+{{HTTPSidebar}}{{Draft}}
 
-<p>The <strong>Sec-WebSocket-Accept</strong> header is used in the websocket opening
-  handshake. It would appear in the response headers. That is, this is header is sent from
-  server to client to inform that server is willing to initiate a websocket connection.
-</p>
+The **Sec-WebSocket-Accept** header is used in the websocket opening
+handshake. It would appear in the response headers. That is, this is header is sent from
+server to client to inform that server is willing to initiate a websocket connection.
 
 <table class="properties">
   <tbody>
@@ -32,37 +31,32 @@ browser-compat: http.headers.Sec-WebSocket-Accept
   </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: html">Sec-WebSocket-Accept: &lt;hashed key&gt;</pre>
+```html
+Sec-WebSocket-Accept: <hashed key>
+```
 
-<h2 id="Directives">Directives</h2>
+## Directives
 
-<dl>
-  <dt>&lt;hashed key&gt;</dt>
-  <dd>
-    <p>The server takes the value of the Sec-WebSocket-Key sent in the handshake request,
-      appends <code>258EAFA5-E914-47DA-95CA-C5AB0DC85B11</code>, takes SHA-1 of the new
-      value, and is then <a
-        href="/en-US/docs/Glossary/Base64">base64</a>
-      encoded.</p>
-  </dd>
-</dl>
+- \<hashed key>
+  - : The server takes the value of the Sec-WebSocket-Key sent in the handshake request,
+    appends `258EAFA5-E914-47DA-95CA-C5AB0DC85B11`, takes SHA-1 of the new
+    value, and is then [base64](/en-US/docs/Glossary/Base64)
+    encoded.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre>Sec-WebSocket-Accept: s3pPLMBiTxaQ9kYGzzhZRbK+xOo=</pre>
+    Sec-WebSocket-Accept: s3pPLMBiTxaQ9kYGzzhZRbK+xOo=
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{HTTPHeader("Sec-WebSocket-Key")}}</li>
-</ul>
+- {{HTTPHeader("Sec-WebSocket-Key")}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

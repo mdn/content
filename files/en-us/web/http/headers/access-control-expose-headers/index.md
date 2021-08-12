@@ -8,70 +8,67 @@ tags:
   - header
 browser-compat: http.headers.Access-Control-Expose-Headers
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The <strong><code>Access-Control-Expose-Headers</code></strong> response header allows a server to indicate which response headers should be made available to scripts running in the browser, in response to a cross-origin request.</p>
+The **`Access-Control-Expose-Headers`** response header allows a server to indicate which response headers should be made available to scripts running in the browser, in response to a cross-origin request.
 
-<p>Only the {{Glossary("CORS-safelisted response header", "CORS-safelisted response headers")}} are exposed by default. For clients to be able to access other headers, the server must list them using the <code>Access-Control-Expose-Headers</code> header.</p>
+Only the {{Glossary("CORS-safelisted response header", "CORS-safelisted response headers")}} are exposed by default. For clients to be able to access other headers, the server must list them using the `Access-Control-Expose-Headers` header.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Response header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>no</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Header type</th>
+      <td>{{Glossary("Response header")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>no</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: html">Access-Control-Expose-Headers: [<em>&lt;header-name&gt;</em>[, <em>&lt;header-name&gt;</em>]*]
+```html
+Access-Control-Expose-Headers: [<header-name>[, <header-name>]*]
 Access-Control-Expose-Headers: *
-</pre>
+```
 
-<h2 id="Directives">Directives</h2>
+## Directives
 
-<dl>
- <dt>&lt;header-name&gt;</dt>
- <dd>A list of zero or more comma-separated <a href="/en-US/docs/Web/HTTP/Headers">header names</a> that clients are allowed to access from a response. These are <em>in addition</em> to the {{Glossary("CORS-safelisted response header", "CORS-safelisted response headers")}}.</dd>
- <dt><code>*</code> (wildcard)</dt>
- <dd>The value "<code>*</code>" only counts as a special wildcard value for requests without credentials (requests without <a href="/en-US/docs/Web/HTTP/Cookies">HTTP cookies</a> or HTTP authentication information). In requests with credentials, it is treated as the literal header name "<code>*</code>" without special semantics.<br>
- Note that the {{HTTPHeader("Authorization")}} header can't be wildcarded and always needs to be listed explicitly.</dd>
-</dl>
+- \<header-name>
+  - : A list of zero or more comma-separated [header names](/en-US/docs/Web/HTTP/Headers) that clients are allowed to access from a response. These are _in addition_ to the {{Glossary("CORS-safelisted response header", "CORS-safelisted response headers")}}.
+- `*` (wildcard)
+  - : The value "`*`" only counts as a special wildcard value for requests without credentials (requests without [HTTP cookies](/en-US/docs/Web/HTTP/Cookies) or HTTP authentication information). In requests with credentials, it is treated as the literal header name "`*`" without special semantics.
+    Note that the {{HTTPHeader("Authorization")}} header can't be wildcarded and always needs to be listed explicitly.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The {{Glossary("CORS-safelisted response header", "CORS-safelisted response headers")}} are: {{HTTPHeader("Cache-Control")}}, {{HTTPHeader("Content-Language")}}, {{HTTPHeader("Content-Length")}}, {{HTTPHeader("Content-Type")}}, {{HTTPHeader("Expires")}}, {{HTTPHeader("Last-Modified")}}, {{HTTPHeader("Pragma")}}. To expose a non-CORS-safelisted response header, you can specify:</p>
+The {{Glossary("CORS-safelisted response header", "CORS-safelisted response headers")}} are: {{HTTPHeader("Cache-Control")}}, {{HTTPHeader("Content-Language")}}, {{HTTPHeader("Content-Length")}}, {{HTTPHeader("Content-Type")}}, {{HTTPHeader("Expires")}}, {{HTTPHeader("Last-Modified")}}, {{HTTPHeader("Pragma")}}. To expose a non-CORS-safelisted response header, you can specify:
 
-<pre>Access-Control-Expose-Headers: Content-Encoding</pre>
+    Access-Control-Expose-Headers: Content-Encoding
 
-<p>To additionally expose a custom header, like <code>X-Kuma-Revision</code>, you can specify multiple headers separated by a comma:</p>
+To additionally expose a custom header, like `X-Kuma-Revision`, you can specify multiple headers separated by a comma:
 
-<pre>Access-Control-Expose-Headers: Content-Encoding, X-Kuma-Revision</pre>
+    Access-Control-Expose-Headers: Content-Encoding, X-Kuma-Revision
 
-<p>For requests without credentials, a server can also respond with a wildcard value:</p>
+For requests without credentials, a server can also respond with a wildcard value:
 
-<pre>Access-Control-Expose-Headers: *</pre>
+    Access-Control-Expose-Headers: *
 
-<p>However, this won't wildcard the {{HTTPHeader("Authorization")}} header, so if you need to expose that, you will need to list it explicitly:</p>
+However, this won't wildcard the {{HTTPHeader("Authorization")}} header, so if you need to expose that, you will need to list it explicitly:
 
-<pre>Access-Control-Expose-Headers: *, Authorization</pre>
+    Access-Control-Expose-Headers: *, Authorization
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTTPHeader("Access-Control-Allow-Headers")}}</li>
- <li>{{HTTPHeader("Access-Control-Allow-Origin")}}</li>
-</ul>
+- {{HTTPHeader("Access-Control-Allow-Headers")}}
+- {{HTTPHeader("Access-Control-Allow-Origin")}}

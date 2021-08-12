@@ -9,15 +9,15 @@ tags:
   - Response Header
 browser-compat: http.headers.Proxy-Authenticate
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The HTTP <strong><code>Proxy-Authenticate</code></strong> response header defines the
-  authentication method that should be used to gain access to a resource behind a
-  {{Glossary("proxy server")}}. It authenticates the request to the proxy server, allowing
-  it to transmit the request further.</p>
+The HTTP **`Proxy-Authenticate`** response header defines the
+authentication method that should be used to gain access to a resource behind a
+{{Glossary("proxy server")}}. It authenticates the request to the proxy server, allowing
+it to transmit the request further.
 
-<p>The <code>Proxy-Authenticate</code> header is sent along with a {{HTTPStatus("407")}}
-  <code>Proxy Authentication Required</code>.</p>
+The `Proxy-Authenticate` header is sent along with a {{HTTPStatus("407")}}
+`Proxy Authentication Required`.
 
 <table class="properties">
   <tbody>
@@ -32,47 +32,41 @@ browser-compat: http.headers.Proxy-Authenticate
   </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: html">Proxy-Authenticate: &lt;type&gt; realm=&lt;realm&gt;
-</pre>
+```html
+Proxy-Authenticate: <type> realm=<realm>
+```
 
-<h2 id="Directives">Directives</h2>
+## Directives
 
-<dl>
-  <dt>&lt;type&gt;</dt>
-  <dd><a href="/en-US/docs/Web/HTTP/Authentication#authentication_schemes">Authentication
-      type</a>. A common type is <a
-      href="/en-US/docs/Web/HTTP/Authentication#basic_authentication_scheme">"Basic"</a>.
-    IANA maintains a <a
-      href="https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml">list
-      of authentication schemes</a>.</dd>
-  <dt>realm=&lt;realm&gt;</dt>
-  <dd>A description of the protected area, the realm. If no realm is specified, clients
-    often display a formatted host name instead.</dd>
-</dl>
+- \<type>
+  - : [Authentication
+    type](/en-US/docs/Web/HTTP/Authentication#authentication_schemes). A common type is ["Basic"](/en-US/docs/Web/HTTP/Authentication#basic_authentication_scheme).
+    IANA maintains a [list
+    of authentication schemes](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml).
+- realm=\<realm>
+  - : A description of the protected area, the realm. If no realm is specified, clients
+    often display a formatted host name instead.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre>Proxy-Authenticate: Basic
+    Proxy-Authenticate: Basic
 
-Proxy-Authenticate: Basic realm="Access to the internal site"
-</pre>
+    Proxy-Authenticate: Basic realm="Access to the internal site"
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/HTTP/Authentication">HTTP authentication</a></li>
-  <li>{{HTTPHeader("Authorization")}}</li>
-  <li>{{HTTPHeader("Proxy-Authorization")}}</li>
-  <li>{{HTTPHeader("WWW-Authenticate")}}</li>
-  <li>{{HTTPStatus("401")}}, {{HTTPStatus("403")}}, {{HTTPStatus("407")}}</li>
-</ul>
+- [HTTP authentication](/en-US/docs/Web/HTTP/Authentication)
+- {{HTTPHeader("Authorization")}}
+- {{HTTPHeader("Proxy-Authorization")}}
+- {{HTTPHeader("WWW-Authenticate")}}
+- {{HTTPStatus("401")}}, {{HTTPStatus("403")}}, {{HTTPStatus("407")}}

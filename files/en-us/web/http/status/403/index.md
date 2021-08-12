@@ -8,33 +8,32 @@ tags:
   - Status code
 browser-compat: http.status.403
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The HTTP <strong><code>403 Forbidden</code></strong> client error status response code indicates that the server understood the request but refuses to authorize it.</p>
+The HTTP **`403 Forbidden`** client error status response code indicates that the server understood the request but refuses to authorize it.
 
-<p>This status is similar to {{HTTPStatus("401")}}, but in this case, re-authenticating will make no difference. The access is permanently forbidden and tied to the application logic, such as insufficient rights to a resource.</p>
+This status is similar to {{HTTPStatus("401")}}, but in this case, re-authenticating will make no difference. The access is permanently forbidden and tied to the application logic, such as insufficient rights to a resource.
 
-<h2 id="Status">Status</h2>
+## Status
 
-<pre class="brush: html">403 Forbidden</pre>
+```html
+403 Forbidden
+```
 
-<h2 id="Example_response">Example response</h2>
+## Example response
 
-<pre>HTTP/1.1 403 Forbidden
-Date: Wed, 21 Oct 2015 07:28:00 GMT
-</pre>
+    HTTP/1.1 403 Forbidden
+    Date: Wed, 21 Oct 2015 07:28:00 GMT
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTTPStatus("401")}}</li>
- <li><a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html" rel="noopener">HTTP/1.1: Status Code Definitions</a></li>
-</ul>
+- {{HTTPStatus("401")}}
+- [HTTP/1.1: Status Code Definitions](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)

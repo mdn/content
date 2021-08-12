@@ -16,50 +16,48 @@ tags:
   - Web security
   - message
 ---
-<p>{{HTTPSidebar}}</p>
+{{HTTPSidebar}}
 
-<p>The warning "Content Security Policy: The page's settings blocked the loading of a resource: xyz" occurs when the page's CSP configuration given by <code>xyz</code> prevents the resource from being loaded into the document's context.</p>
+The warning "Content Security Policy: The page's settings blocked the loading of a resource: xyz" occurs when the page's CSP configuration given by `xyz` prevents the resource from being loaded into the document's context.
 
-<h2 id="Message">Message</h2>
+## Message
 
-<h3>Firefox</h3>
-<p><code>Content Security Policy: The pages settings blocked the loading of a resource: <em>xyz</em></code></p>
-</p>with:</p>
-<dl>
- <dt><code>xyz</code></dt>
- <dd>The name of the CSP directive that blocked the resource. This may be expressed as either just the name of the directive, or as the entire policy directive string.</dd>
- <dt><code>uvw</code></dt>
- <dd>Text that provides information that may help you resolve the problem, potentially including specific changes you might make to the CSP configuration.</dd>
-</dl>
+### Firefox
 
-<h3>Chrome</h3>
-<ul>
-   <li><code>Refused to apply inline style because it violates the following Content Security Policy Directive: "<em>xyz</em>". <em>uvw</em>.</code></li>
-   <li><code>Refused to execute inline script because it violates the following Content Security Policy directive: "<em>xyz</em>". <em>uvw</em>.</code></li>
-   <li><code>Refused to run the JavaScript URL because it violates the following Content Security Policy directive: "<em>xyz</em>". <em>uvw</em>.</code></li>
-   <li><code>Refused to execute inline event handler because it violates the following Content Security Policy directive: "<em>xyz</em>". <em>uvw</em>.</code></li>
-</ul>
-<p>with:</p>
-<dl>
- <dt><code>xyz</code></dt>
- <dd>The name of the CSP directive that blocked the resource. This may be expressed as either just the name of the directive, or as the entire policy directive string.</dd>
- <dt><code>uvw</code></dt>
- <dd>Text that provides information that may help you resolve the problem, potentially including specific changes you might make to the CSP configuration.</dd>
-</dl>
+`Content Security Policy: The pages settings blocked the loading of a resource: xyz`
 
-<p><strong>&lt;&lt;&lt;--- The Chrome information above may be incomplete; we need to investigate that when we resume work on this content ---&gt;&gt;&gt;</strong></p>
+with:
 
-<h2 id="What_went_wrong">What went wrong?</h2>
+- `xyz`
+  - : The name of the CSP directive that blocked the resource. This may be expressed as either just the name of the directive, or as the entire policy directive string.
+- `uvw`
+  - : Text that provides information that may help you resolve the problem, potentially including specific changes you might make to the CSP configuration.
 
-<p>This warning message means that due to the existence of a particular CSP directive, a resource wasn't loaded.</p>
+### Chrome
 
-<p><strong>&lt;&lt;&lt;--- add details and suggested fixes ---&gt;&gt;&gt;</strong></p>
+- `Refused to apply inline style because it violates the following Content Security Policy Directive: "xyz". uvw.`
+- `Refused to execute inline script because it violates the following Content Security Policy directive: "xyz". uvw.`
+- `Refused to run the JavaScript URL because it violates the following Content Security Policy directive: "xyz". uvw.`
+- `Refused to execute inline event handler because it violates the following Content Security Policy directive: "xyz". uvw.`
 
-<h2 id="See_also">See also</h2>
+with:
 
-<ul>
- <li><a href="/en-US/docs/Web/HTTP/CSP/Errors">CSP errors and warnings</a></li>
- <li><a href="/en-US/docs/Web/HTTP/CSP">Content Security Policy</a></li>
- <li>{{HTTPHeader("Content-Security-Policy")}}</li>
- <li>{{HTTPHeader("Content-Security-Policy-Report-Only")}}</li>
-</ul>
+- `xyz`
+  - : The name of the CSP directive that blocked the resource. This may be expressed as either just the name of the directive, or as the entire policy directive string.
+- `uvw`
+  - : Text that provides information that may help you resolve the problem, potentially including specific changes you might make to the CSP configuration.
+
+**<<<--- The Chrome information above may be incomplete; we need to investigate that when we resume work on this content --->>>**
+
+## What went wrong?
+
+This warning message means that due to the existence of a particular CSP directive, a resource wasn't loaded.
+
+**<<<--- add details and suggested fixes --->>>**
+
+## See also
+
+- [CSP errors and warnings](/en-US/docs/Web/HTTP/CSP/Errors)
+- [Content Security Policy](/en-US/docs/Web/HTTP/CSP)
+- {{HTTPHeader("Content-Security-Policy")}}
+- {{HTTPHeader("Content-Security-Policy-Report-Only")}}

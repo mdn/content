@@ -7,15 +7,13 @@ tags:
   - Request method
 browser-compat: http.methods.HEAD
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The <strong>HTTP <code>HEAD</code> method</strong> requests the <a href="/en-US/docs/Web/HTTP/Headers">headers</a> that would be returned if the <code>HEAD</code> request's URL was instead requested with the HTTP {{HTTPMethod("GET")}} method. For example, if a URL might produce a large download, a <code>HEAD</code> request could read its {{HTTPHeader("Content-Length")}} header to check the filesize without actually downloading the file.</p>
+The **HTTP `HEAD` method** requests the [headers](/en-US/docs/Web/HTTP/Headers) that would be returned if the `HEAD` request's URL was instead requested with the HTTP {{HTTPMethod("GET")}} method. For example, if a URL might produce a large download, a `HEAD` request could read its {{HTTPHeader("Content-Length")}} header to check the filesize without actually downloading the file.
 
-<div class="notecard warning">
-  <p><strong>Warning:</strong> A response to a <code>HEAD</code> method <em>should not</em> have a body. If it has one anyway, that body <strong>must be</strong> ignored: any {{glossary("Representation header", "representation headers")}} that might describe the erroneous body are instead assumed to describe the response which a similar <code>GET</code> request would have received.</p>
-</div>
+> **Warning:** A response to a `HEAD` method _should not_ have a body. If it has one anyway, that body **must be** ignored: any {{glossary("Representation header", "representation headers")}} that might describe the erroneous body are instead assumed to describe the response which a similar `GET` request would have received.
 
-<p>If the response to a <code>HEAD</code> request shows that a cached URL response is now outdated, the cached copy is invalidated even if no <code>GET</code> request was made.</p>
+If the response to a `HEAD` request shows that a cached URL response is now outdated, the cached copy is invalidated even if no `GET` request was made.
 
 <table class="properties">
   <tbody>
@@ -40,27 +38,28 @@ browser-compat: http.methods.HEAD
       <td>Yes</td>
     </tr>
     <tr>
-      <th scope="row">Allowed in <a href="/en-US/docs/Learn/Forms">HTML forms</a></th>
+      <th scope="row">
+        Allowed in <a href="/en-US/docs/Learn/Forms">HTML forms</a>
+      </th>
       <td>No</td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: html">HEAD /index.html
-</pre>
+```html
+HEAD /index.html
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTTPMethod("GET")}}</li>
-</ul>
+- {{HTTPMethod("GET")}}

@@ -6,63 +6,57 @@ tags:
   - HTTP
   - URL
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p class="summary">A recurring question among website owners is whether to choose non-www or www URLs. This page provides some advice on what's best.</p>
+A recurring question among website owners is whether to choose non-www or www URLs. This page provides some advice on what's best.
 
-<h2 id="What_are_domain_names">What are domain names?</h2>
+## What are domain names?
 
-<p>In an HTTP URL, the first substring that follows the initial <code>http://</code> or <code>https://</code> is called the domain name. This domain name is hosted on a server where the document resides.</p>
+In an HTTP URL, the first substring that follows the initial `http://` or `https://` is called the domain name. This domain name is hosted on a server where the document resides.
 
-<p>A server isn't necessarily a physical machine: several servers can reside on the same physical machine. Or, one server can be handled by several machines, cooperating to produce the answer or balancing the load of the requests between them. The key point is that semantically <em>one domain name represents one single server</em>.</p>
+A server isn't necessarily a physical machine: several servers can reside on the same physical machine. Or, one server can be handled by several machines, cooperating to produce the answer or balancing the load of the requests between them. The key point is that semantically _one domain name represents one single server_.
 
-<h2 id="So_do_I_have_to_choose_one_or_the_other_for_my_web_site">So, do I have to choose one or the other for my web site?</h2>
+## So, do I have to choose one or the other for my web site?
 
-<ul>
- <li><strong>Yes</strong>, you need to choose one and stick with it. The choice of which one to have as your canonical location is yours, but if you choose one, stick with it. It will make your website appear more consistent to your users and to search engines. This includes always linking to the chosen domain (which shouldn't be hard if you're using relative URLs in your website) and always sharing links (by email/social networks, etc.) to the same domain.</li>
- <li><strong>No</strong>, you can have two. What is important is that you are coherent and consistent with which one is the official domain. <strong>This official domain is called the <em>canonical</em> name.</strong> All your absolute links should use it. But even so, you can still have the other domain working: HTTP allows two techniques so that it is clear for your users, or search engines, which domain is the canonical one, while still allowing the non-canonical domain to work and provide the expected pages.</li>
-</ul>
+- **Yes**, you need to choose one and stick with it. The choice of which one to have as your canonical location is yours, but if you choose one, stick with it. It will make your website appear more consistent to your users and to search engines. This includes always linking to the chosen domain (which shouldn't be hard if you're using relative URLs in your website) and always sharing links (by email/social networks, etc.) to the same domain.
+- **No**, you can have two. What is important is that you are coherent and consistent with which one is the official domain. **This official domain is called the _canonical_ name.** All your absolute links should use it. But even so, you can still have the other domain working: HTTP allows two techniques so that it is clear for your users, or search engines, which domain is the canonical one, while still allowing the non-canonical domain to work and provide the expected pages.
 
-<p>So, choose one of your domains as your canonical one! There are two techniques below to allow the non-canonical domain to work still.</p>
+So, choose one of your domains as your canonical one! There are two techniques below to allow the non-canonical domain to work still.
 
-<h2 id="Techniques_for_canonical_URLs">Techniques for canonical URLs</h2>
+## Techniques for canonical URLs
 
-<p>There are different ways to choose which website is <em>canonical</em>.</p>
+There are different ways to choose which website is _canonical_.
 
-<h3 id="Using_HTTP_301_redirects">Using HTTP 301 redirects</h3>
+### Using HTTP 301 redirects
 
-<p>In this case, you need to configure the server receiving the HTTP requests (which is most likely the same for www and non-www URLs) to respond with an adequate HTTP {{HTTPStatus(301)}} response to any request to the non-canonical domain. This will redirect the browser trying to access the non-canonical URLs to their canonical equivalent. For example, if you've chosen to use non-www URLs as the canonical type, you should redirect all www URLs to their equivalent URL without the www.</p>
+In this case, you need to configure the server receiving the HTTP requests (which is most likely the same for www and non-www URLs) to respond with an adequate HTTP {{HTTPStatus(301)}} response to any request to the non-canonical domain. This will redirect the browser trying to access the non-canonical URLs to their canonical equivalent. For example, if you've chosen to use non-www URLs as the canonical type, you should redirect all www URLs to their equivalent URL without the www.
 
-<p>Example:</p>
+Example:
 
-<ol>
- <li>A server receives a request for <code>http://www.example.org/whaddup</code> (when the canonical domain is example.org)</li>
- <li>The server answers with a code {{HTTPStatus(301)}} with the header <code>{{HTTPHeader("Location")}}: http://example.org/whaddup</code>.</li>
- <li>The client issues a request to the canonical domain: <code>http://example.org/whatddup</code></li>
-</ol>
+1.  A server receives a request for `http://www.example.org/whaddup` (when the canonical domain is example.org)
+2.  The server answers with a code {{HTTPStatus(301)}} with the header `{{HTTPHeader("Location")}}: http://example.org/whaddup`.
+3.  The client issues a request to the canonical domain: `http://example.org/whatddup`
 
-<p>The<a href="https://github.com/h5bp/html5-boilerplate"> HTML5 boilerplate project</a> has an example on <a href="https://github.com/h5bp/html5-boilerplate/blob/7a22a33d4041c479d0962499e853501073811887/.htaccess#L219-L258">how to configure an Apache server to redirect one domain to the other</a>.</p>
+The[ HTML5 boilerplate project](https://github.com/h5bp/html5-boilerplate) has an example on [how to configure an Apache server to redirect one domain to the other](https://github.com/h5bp/html5-boilerplate/blob/7a22a33d4041c479d0962499e853501073811887/.htaccess#L219-L258).
 
-<h3 id="Using_&lt;link_relcanonical&gt;">Using <em><code>&lt;link rel="canonical"&gt;</code></em></h3>
+### Using _`<link rel="canonical">`_
 
-<p>It is possible to add a special HTML {{HTMLElement("link")}} element to a page to indicate what the canonical address of a page is. This has no impact on the human reader of the page, but tells search engine crawlers where the page actually lives. This way, search engines don't index the same page several times, potentially leading to it being considered as duplicate content or spam, and even removing or lowering your page from the search engine result pages.</p>
+It is possible to add a special HTML {{HTMLElement("link")}} element to a page to indicate what the canonical address of a page is. This has no impact on the human reader of the page, but tells search engine crawlers where the page actually lives. This way, search engines don't index the same page several times, potentially leading to it being considered as duplicate content or spam, and even removing or lowering your page from the search engine result pages.
 
-<p>When adding such a tag, you serve the same content for both domains, telling search engines which URL is canonical. In the previous example, <code>http://www.example.org/whaddup</code> would serve the same content as <code>http://example.org/whaddup</code>, but with an additional {{htmlelement("link")}} element in the head:</p>
+When adding such a tag, you serve the same content for both domains, telling search engines which URL is canonical. In the previous example, `http://www.example.org/whaddup` would serve the same content as `http://example.org/whaddup`, but with an additional {{htmlelement("link")}} element in the head:
 
-<p><code>&lt;link href="http://example.org/whaddup" rel="canonical"&gt;</code></p>
+`<link href="http://example.org/whaddup" rel="canonical">`
 
-<p>Unlike the previous case, browser history will consider non-www and www URLs as independent entries.</p>
+Unlike the previous case, browser history will consider non-www and www URLs as independent entries.
 
-<h2 id="Make_your_page_work_for_both">Make your page work for both</h2>
+## Make your page work for both
 
-<p>With these techniques, you can configure your server to respond correctly for both, the www-prefixed and the non-www-prefixed domains. It is good advice to do this since you can't predict which URL users will type in their browser's URL bar. It is a matter of choosing which type you want to use as your canonical location, then redirecting the other type to it.</p>
+With these techniques, you can configure your server to respond correctly for both, the www-prefixed and the non-www-prefixed domains. It is good advice to do this since you can't predict which URL users will type in their browser's URL bar. It is a matter of choosing which type you want to use as your canonical location, then redirecting the other type to it.
 
-<h2 id="Deciding_the_case">Deciding the case</h2>
+## Deciding the case
 
-<p>This is a very subjective topic it could be considered a <a href="https://bikeshed.com/">bikeshedding</a> issue. If you wish to read deeper, please see some of the <a href="https://www.netlify.com/blog/2017/02/28/to-www-or-not-www/">many</a> <a href="https://www.wpbeginner.com/beginners-guide/www-vs-non-www-which-is-better-for-wordpress-seo/">articles</a> on the subject.</p>
+This is a very subjective topic it could be considered a [bikeshedding](https://bikeshed.com/) issue. If you wish to read deeper, please see some of the [many](https://www.netlify.com/blog/2017/02/28/to-www-or-not-www/) [articles](https://www.wpbeginner.com/beginners-guide/www-vs-non-www-which-is-better-for-wordpress-seo/) on the subject.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://www.chrisfinke.com/2011/07/25/what-do-people-type-in-the-address-bar/">Stats on what people type in the URL bar</a> (2011)</li>
-</ul>
+- [Stats on what people type in the URL bar](https://www.chrisfinke.com/2011/07/25/what-do-people-type-in-the-address-bar/) (2011)

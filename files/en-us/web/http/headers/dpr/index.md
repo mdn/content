@@ -12,85 +12,75 @@ tags:
   - Exerimental
 browser-compat: http.headers.DPR
 ---
-<div>{{HTTPSidebar}} {{deprecated_header}}{{securecontext_header}}</div>
+{{HTTPSidebar}} {{deprecated_header}}{{securecontext_header}}
 
-<p>The <strong><code>DPR</code></strong> <a href="/en-US/docs/Glossary/Client_hints">device client hint</a> request header provides the client device pixel ratio. This ratio is the number of physical device pixels corresponding to every {{Glossary("CSS pixel")}}.</p>
+The **`DPR`** [device client hint](/en-US/docs/Glossary/Client_hints) request header provides the client device pixel ratio. This ratio is the number of physical device pixels corresponding to every {{Glossary("CSS pixel")}}.
 
 <table class="properties">
   <tbody>
-   <tr>
-    <th scope="row">Header type</th>
-    <td>{{Glossary("Request header")}}, {{Glossary("Client hints","Client hint")}}</td>
-   </tr>
-   <tr>
-    <th scope="row">{{Glossary("Forbidden header name")}}</th>
-    <td>no</td>
-   </tr>
+    <tr>
+      <th scope="row">Header type</th>
+      <td>
+        {{Glossary("Request header")}},
+        {{Glossary("Client hints","Client hint")}}
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>no</td>
+    </tr>
   </tbody>
- </table>
+</table>
 
-<p>The hint is useful when selecting image sources that best correspond to a screen's pixel density. This is similar to the role played by <code>x</code> descriptors in the <code>&lt;img&gt;</code> <a href="/en-US/docs/Web/HTML/Element/img#attr-srcset"><code>srcset</code></a> attribute to allow user agents to select a preferred image.</p>
+The hint is useful when selecting image sources that best correspond to a screen's pixel density. This is similar to the role played by `x` descriptors in the `<img>` [`srcset`](/en-US/docs/Web/HTML/Element/img#attr-srcset) attribute to allow user agents to select a preferred image.
 
-<p>If a server uses the <code>DPR</code> hint to choose which resource is sent in a response, the response must include the {{HTTPHeader("Content-DPR")}} header. The client must use the value in <code>Content-DPR</code> for layout if it differs from the value in the request's <code>DPR</code> header.</p>
+If a server uses the `DPR` hint to choose which resource is sent in a response, the response must include the {{HTTPHeader("Content-DPR")}} header. The client must use the value in `Content-DPR` for layout if it differs from the value in the request's `DPR` header.
 
-<p>If the <code>DPR</code> header appears more than once in a message the last occurrence is used.</p>
+If the `DPR` header appears more than once in a message the last occurrence is used.
 
-<div class="notecard note">
-  <p><strong>Note:</strong></p>
-    <ul>
-      <li>Client Hints are accessible only on secure origins (via TLS).</li>
-      <li>A server has to opt in to receive the <code>DPR</code> header from the client, by sending the {{HTTPHeader("Accept-CH")}} response header.</li>
-      <li>Servers that opt in to the <code>DPR</code> client hint will typically also specify it in the {{HTTPHeader("Vary")}} header. This informs caches that the server may send different responses based on the header value in a request.</li>
-      <li><code>DPR</code> was removed from the client hints specification in <a href="https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-client-hints-07">draft-ietf-httpbis-client-hints-07</a>. The proposed replacement is <a href="https://wicg.github.io/responsive-image-client-hints/#sec-ch-dpr"><code>Sec-CH-DPR</code></a> (Responsive Image Client Hints).</li>
-    </ul>
-</div>
+> **Note:**
+>
+> - Client Hints are accessible only on secure origins (via TLS).
+> - A server has to opt in to receive the `DPR` header from the client, by sending the {{HTTPHeader("Accept-CH")}} response header.
+> - Servers that opt in to the `DPR` client hint will typically also specify it in the {{HTTPHeader("Vary")}} header. This informs caches that the server may send different responses based on the header value in a request.
+> - `DPR` was removed from the client hints specification in [draft-ietf-httpbis-client-hints-07](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-client-hints-07). The proposed replacement is [`Sec-CH-DPR`](https://wicg.github.io/responsive-image-client-hints/#sec-ch-dpr) (Responsive Image Client Hints).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre>DPR: &lt;number&gt;</pre>
+    DPR: <number>
 
-<h2 id="Directives">Directives</h2>
+## Directives
 
-<dl>
- <dt><code> &lt;number&gt;</code></dt>
- <dd>The client device pixel ratio.</dd>
-</dl>
+- `<number>`
+  - : The client device pixel ratio.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>A server must first opt in to receive the <code>DPR</code> header by sending the response header {{HTTPHeader("Accept-CH")}} containing the directive <code>DPR</code>.</p>
+A server must first opt in to receive the `DPR` header by sending the response header {{HTTPHeader("Accept-CH")}} containing the directive `DPR`.
 
-<pre>Accept-CH: DPR</pre>
+    Accept-CH: DPR
 
-<p>Then on subsequent requests the client might send <code>DPR</code> header to the server:</p>
+Then on subsequent requests the client might send `DPR` header to the server:
 
-<pre>DPR: 2.0
-</pre>
+    DPR: 2.0
 
-<p>If a request with the <code>DPR</code> header (as shown above) is for an image resource, then the server response must include the {{HTTPHeader("Content-DPR")}} header:</p>
+If a request with the `DPR` header (as shown above) is for an image resource, then the server response must include the {{HTTPHeader("Content-DPR")}} header:
 
-<pre>Content-DPR: 2.0
-</pre>
+    Content-DPR: 2.0
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
+## See also
 
-<h2 id="See_also">See also</h2>
+- [Adapting to Users with Client Hints](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/client-hints) (developer.google.com)
+- Device client hints
 
-<ul>
-  <li><a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/client-hints">Adapting to Users with Client Hints</a> (developer.google.com)</li>
- <li>Device client hints
-  <ul>
-    <li>{{HTTPHeader("Content-DPR")}}</li>
-    <li>{{HTTPHeader("Device-Memory")}}</li>
-    <li>{{HTTPHeader("Viewport-Width")}}</li>
-    <li>{{HTTPHeader("Width")}}</li>
-   </ul>
- </li>
- <li>{{HTTPHeader("Accept-CH")}}</li>
- <li><a href="/en-US/docs/Web/HTTP/Caching#varying_responses">HTTP Caching > Varying responses</a> and {{HTTPHeader("Vary")}}</li>
-</ul>
+  - {{HTTPHeader("Content-DPR")}}
+  - {{HTTPHeader("Device-Memory")}}
+  - {{HTTPHeader("Viewport-Width")}}
+  - {{HTTPHeader("Width")}}
 
-
+- {{HTTPHeader("Accept-CH")}}
+- [HTTP Caching > Varying responses](/en-US/docs/Web/HTTP/Caching#varying_responses) and {{HTTPHeader("Vary")}}

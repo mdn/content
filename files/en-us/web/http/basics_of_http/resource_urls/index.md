@@ -7,102 +7,93 @@ tags:
   - Intermediate
   - Resource
 ---
-<p>{{HTTPSidebar}}{{non-standard_header}}</p>
+{{HTTPSidebar}}{{non-standard_header}}
 
-<p>Resource URLs, URLs prefixed with the <code>resource:</code> scheme, are used by
-  Firefox and Firefox browser extensions to load resources internally, but some of the
-  information is available to sites the browser connects to as well.</p>
+Resource URLs, URLs prefixed with the `resource:` scheme, are used by
+Firefox and Firefox browser extensions to load resources internally, but some of the
+information is available to sites the browser connects to as well.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>Resource URLs are composed of two parts: a prefix (<code>resource:</code>), and a URL
-  pointing to the resource you want to load:</p>
+Resource URLs are composed of two parts: a prefix (`resource:`), and a URL
+pointing to the resource you want to load:
 
-<pre class="brush: html">resource://&lt;url&gt;</pre>
+```html
+resource://<url>
+```
 
-<p>An example:</p>
+An example:
 
-<pre>resource://gre/res/svg.css</pre>
+    resource://gre/res/svg.css
 
-<p>When arrows are found in the resource URL's ('-&gt;'), it means that the first file
-  loaded the next one:</p>
+When arrows are found in the resource URL's ('->'), it means that the first file
+loaded the next one:
 
-<pre>resource://&lt;File-loader&gt; -&gt; &lt;File-loaded&gt;</pre>
+    resource://<File-loader> -> <File-loaded>
 
-<p>Please refer to <a
-    href="/en-US/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web">Identifying
-    resources on the web</a> for more general details.</p>
+Please refer to [Identifying
+resources on the web](/en-US/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web) for more general details.
 
-<p>In this article, we focus on resource URIs, which are used internally by Firefox to
-  point to built-in resources.</p>
+In this article, we focus on resource URIs, which are used internally by Firefox to
+point to built-in resources.
 
-<h2 id="Threats">Threats</h2>
+## Threats
 
-<p>Because some of the information shared by <code>resource:</code> URLs is available to
-  websites, a web page could run internal scripts and inspect internal resources of
-  Firefox, including the default preferences, which could be a serious security and
-  privacy issue.</p>
+Because some of the information shared by `resource:` URLs is available to
+websites, a web page could run internal scripts and inspect internal resources of
+Firefox, including the default preferences, which could be a serious security and
+privacy issue.
 
-<p>For example, <a href="https://www.browserleaks.com/firefox">a script on
-    Browserleaks</a> highlights what Firefox reveals when queried by a simple script
-  running on the site (you can find the code in <a
-    href="https://browserleaks.com/firefox#more">https://browserleaks.com/firefox#more</a>).
-</p>
+For example, [a script on
+Browserleaks](https://www.browserleaks.com/firefox) highlights what Firefox reveals when queried by a simple script
+running on the site (you can find the code in <https://browserleaks.com/firefox#more>).
 
-<p>The file firefox.js passes preference names and values to the pref() function. For
-  example:</p>
+The file firefox.js passes preference names and values to the pref() function. For
+example:
 
-<pre><a href="https://searchfox.org/mozilla-central/rev/48ea452803907f2575d81021e8678634e8067fc2/browser/app/profile/firefox.js#575">http://searchfox.org/mozilla-central/rev/48ea452803907f2575d81021e8678634e8067fc2/browser/app/profile/firefox.js#575</a></pre>
+    http://searchfox.org/mozilla-central/rev/48ea452803907f2575d81021e8678634e8067fc2/browser/app/profile/firefox.js#575
 
-<p>Web sites can easily collect Firefox default preferences by overriding this
-  <code>pref()</code> function and using the script
-  <code>resource:///defaults/preferences/firefox.js</code>.</p>
+Web sites can easily collect Firefox default preferences by overriding this
+`pref()` function and using the script
+`resource:///defaults/preferences/firefox.js`.
 
-<p>Furthermore, some default values of preferences differ between build configurations,
-  such as platform and locale, which means web sites could identify individual users using
-  this information.</p>
+Furthermore, some default values of preferences differ between build configurations,
+such as platform and locale, which means web sites could identify individual users using
+this information.
 
-<h2 id="Solution">Solution</h2>
+## Solution
 
-<p>In order to fix this problem, Mozilla changed the behavior of loading resource: URIs in
-  {{bug(863246)}}, which landed in <a
-    href="/en-US/docs/Mozilla/Firefox/Releases/57">Firefox 57 (Quantum)</a>.</p>
+In order to fix this problem, Mozilla changed the behavior of loading resource: URIs in
+{{bug(863246)}}, which landed in [Firefox 57 (Quantum)](/en-US/docs/Mozilla/Firefox/Releases/57).
 
-<p>In the past, web content was able to access whatever <code>resource:</code> URIs were
-  desired — not only Firefox’s internal resources, but also extensions’ assets.  Now this
-  behavior is prohibited by default.</p>
+In the past, web content was able to access whatever `resource:` URIs were
+desired — not only Firefox’s internal resources, but also extensions’ assets.  Now this
+behavior is prohibited by default.
 
-<p>It is however still necessary for Firefox to load resources in web content under
-  certain circumstances.  For example, if you open the view source page (View Page Source
-  or View Selection Source), you will find it requires <code>viewsource.css</code> through
-  a <code>resource:</code> URI.  Resources that have to be exposed to web content have
-  been moved to a new location named <code>resource://content-accessible/</code>, which is
-  isolated and only contains non-sensitive resources.  In this way we can keep essential
-  resources exposed and have most threats eliminated.</p>
+It is however still necessary for Firefox to load resources in web content under
+certain circumstances.  For example, if you open the view source page (View Page Source
+or View Selection Source), you will find it requires `viewsource.css` through
+a `resource:` URI.  Resources that have to be exposed to web content have
+been moved to a new location named `resource://content-accessible/`, which is
+isolated and only contains non-sensitive resources.  In this way we can keep essential
+resources exposed and have most threats eliminated.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> It is recommended that web and extension developers don't try
-    to use resource URLs anymore. Their usage was hacky at best, and most usage won't work
-    any more.</p>
-</div>
+> **Note:** It is recommended that web and extension developers don't try
+> to use resource URLs anymore. Their usage was hacky at best, and most usage won't work
+> any more.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>resource: is not defined in any specification.</p>
+resource: is not defined in any specification.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>resource: is Firefox only.</p>
+resource: is Firefox only.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a
-      href="/en-US/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web">Identifying
-      resources on the Web</a></li>
-  <li><a href="/en-US/docs/Learn/Common_questions/What_is_a_URL">What is a URL?</a></li>
-  <li><a href="https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml">IANA list
-      of URI schemes</a> (<code>resource:</code> is <a
-      href="https://www.iana.org/assignments/uri-schemes/prov/resource">covered here</a>)
-  </li>
-</ul>
+- [Identifying
+  resources on the Web](/en-US/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web)
+- [What is a URL?](/en-US/docs/Learn/Common_questions/What_is_a_URL)
+- [IANA list
+  of URI schemes](https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml) (`resource:` is [covered here](https://www.iana.org/assignments/uri-schemes/prov/resource))

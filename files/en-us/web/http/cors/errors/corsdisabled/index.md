@@ -2,44 +2,44 @@
 title: 'Reason: CORS disabled'
 slug: Web/HTTP/CORS/Errors/CORSDisabled
 tags:
-- Authentication
-- Authentication Article
-- CORS
-- Cross-Origin
-- Disabled
-- Errors
-- HTTP
-- HTTPS
-- Messages
-- Resource
-- Same Origin
-- Same-origin
-- Security
-- Sharing
-- Validation
-- secure
-- troubleshooting
+  - Authentication
+  - Authentication Article
+  - CORS
+  - Cross-Origin
+  - Disabled
+  - Errors
+  - HTTP
+  - HTTPS
+  - Messages
+  - Resource
+  - Same Origin
+  - Same-origin
+  - Security
+  - Sharing
+  - Validation
+  - secure
+  - troubleshooting
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<h2 id="Reason">Reason</h2>
+## Reason
 
-<pre class="brush: html">Reason: CORS disabled</pre>
+```html
+Reason: CORS disabled
+```
 
-<h2 id="What_went_wrong">What went wrong?</h2>
+## What went wrong?
 
-<p>A request that needs to use {{Glossary("CORS")}} was attempted, but CORS is disabled in
-  the user's browser. When this happens, the user needs to turn CORS back on in their
-  browser.</p>
+A request that needs to use {{Glossary("CORS")}} was attempted, but CORS is disabled in
+the user's browser. When this happens, the user needs to turn CORS back on in their
+browser.
 
-<p>In Firefox, the preference that disables CORS is <code>content.cors.disable</code>.
-  Setting this to <code>true</code> disables CORS, so whenever that's the case, CORS
-  requests will always fail with this error.</p>
+In Firefox, the preference that disables CORS is `content.cors.disable`.
+Setting this to `true` disables CORS, so whenever that's the case, CORS
+requests will always fail with this error.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/HTTP/CORS/Errors">CORS errors</a></li>
-  <li>Glossary: {{Glossary("CORS")}}</li>
-  <li><a href="/en-US/docs/Web/HTTP/CORS">CORS introduction</a></li>
-</ul>
+- [CORS errors](/en-US/docs/Web/HTTP/CORS/Errors)
+- Glossary: {{Glossary("CORS")}}
+- [CORS introduction](/en-US/docs/Web/HTTP/CORS)

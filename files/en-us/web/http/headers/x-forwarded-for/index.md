@@ -2,33 +2,32 @@
 title: X-Forwarded-For
 slug: Web/HTTP/Headers/X-Forwarded-For
 tags:
-- HTTP
-- HTTP Header
-- Non-standard
-- Reference
-- Request header
-- header
+  - HTTP
+  - HTTP Header
+  - Non-standard
+  - Reference
+  - Request header
+  - header
 browser-compat: http.headers.X-Forwarded-For
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The <strong><code>X-Forwarded-For</code></strong> (XFF) header is a de-facto standard
-  header for identifying the originating IP address of a client connecting to a web server
-  through an HTTP proxy or a load balancer. When traffic is intercepted between clients
-  and servers, server access logs contain the IP address of the proxy or load balancer
-  only. To see the original IP address of the client, the <code>X-Forwarded-For</code>
-  request header is used.</p>
+The **`X-Forwarded-For`** (XFF) header is a de-facto standard
+header for identifying the originating IP address of a client connecting to a web server
+through an HTTP proxy or a load balancer. When traffic is intercepted between clients
+and servers, server access logs contain the IP address of the proxy or load balancer
+only. To see the original IP address of the client, the `X-Forwarded-For`
+request header is used.
 
-<p>This header is used for debugging, statistics, and generating location-dependent
-  content and by design it exposes privacy sensitive information, such as the IP address
-  of the client. Therefore the user's privacy must be kept in mind when deploying this
-  header.</p>
+This header is used for debugging, statistics, and generating location-dependent
+content and by design it exposes privacy sensitive information, such as the IP address
+of the client. Therefore the user's privacy must be kept in mind when deploying this
+header.
 
-<p>A standardized version of this header is the HTTP {{HTTPHeader("Forwarded")}} header.
-</p>
+A standardized version of this header is the HTTP {{HTTPHeader("Forwarded")}} header.
 
-<p><code>X-Forwarded-For</code> is also an email-header indicating that an email-message
-  was forwarded from another account.</p>
+`X-Forwarded-For` is also an email-header indicating that an email-message
+was forwarded from another account.
 
 <table class="properties">
   <tbody>
@@ -43,51 +42,46 @@ browser-compat: http.headers.X-Forwarded-For
   </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: html">X-Forwarded-For: &lt;client&gt;, &lt;proxy1&gt;, &lt;proxy2&gt;
-</pre>
+```html
+X-Forwarded-For: <client>, <proxy1>, <proxy2>
+```
 
-<h2 id="Directives">Directives</h2>
+## Directives
 
-<dl>
-  <dt>&lt;client&gt;</dt>
-  <dd>The client IP address</dd>
-  <dt>&lt;proxy1&gt;, &lt;proxy2&gt;</dt>
-  <dd>If a request goes through multiple proxies, the IP addresses of each successive
+- \<client>
+  - : The client IP address
+- \<proxy1>, \<proxy2>
+  - : If a request goes through multiple proxies, the IP addresses of each successive
     proxy is listed. This means, the right-most IP address is the IP address of the most
     recent proxy and the left-most IP address is the IP address of the originating client.
-  </dd>
-</dl>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre>X-Forwarded-For: 2001:db8:85a3:8d3:1319:8a2e:370:7348
+    X-Forwarded-For: 2001:db8:85a3:8d3:1319:8a2e:370:7348
 
-X-Forwarded-For: 203.0.113.195
+    X-Forwarded-For: 203.0.113.195
 
-X-Forwarded-For: 203.0.113.195, 70.41.3.18, 150.172.238.178
-</pre>
+    X-Forwarded-For: 203.0.113.195, 70.41.3.18, 150.172.238.178
 
-<p>Other non-standard forms:</p>
+Other non-standard forms:
 
-<pre># Used for some Google services
-X-ProxyUser-Ip: 203.0.113.19</pre>
+    # Used for some Google services
+    X-ProxyUser-Ip: 203.0.113.19
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any current specification. The standardized version of this header is
-  {{HTTPHeader("Forwarded")}}.</p>
+Not part of any current specification. The standardized version of this header is
+{{HTTPHeader("Forwarded")}}.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{HTTPHeader("Forwarded")}}</li>
-  <li>{{HTTPHeader("X-Forwarded-Host")}}</li>
-  <li>{{HTTPHeader("X-Forwarded-Proto")}}</li>
-  <li>{{HTTPHeader("Via")}}</li>
-</ul>
+- {{HTTPHeader("Forwarded")}}
+- {{HTTPHeader("X-Forwarded-Host")}}
+- {{HTTPHeader("X-Forwarded-Proto")}}
+- {{HTTPHeader("Via")}}

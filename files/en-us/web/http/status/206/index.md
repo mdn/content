@@ -2,75 +2,75 @@
 title: 206 Partial Content
 slug: Web/HTTP/Status/206
 tags:
-- HTTP
-- HTTP Status
-- Range Requests
-- Success
+  - HTTP
+  - HTTP Status
+  - Range Requests
+  - Success
 browser-compat: http.status.206
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The HTTP <strong><code>206 Partial Content</code></strong> success status response code
-  indicates that the request has succeeded and the body contains the requested ranges
-  of data, as described in the {{HTTPHeader("Range")}} header of the request.</p>
+The HTTP **`206 Partial Content`** success status response code
+indicates that the request has succeeded and the body contains the requested ranges
+of data, as described in the {{HTTPHeader("Range")}} header of the request.
 
-<p>If there is only one range, the {{HTTPHeader("Content-Type")}} of the whole response is
-  set to the type of the document, and a {{HTTPHeader("Content-Range")}} is provided.</p>
+If there is only one range, the {{HTTPHeader("Content-Type")}} of the whole response is
+set to the type of the document, and a {{HTTPHeader("Content-Range")}} is provided.
 
-<p>If several ranges are sent back, the {{HTTPHeader("Content-Type")}} is set to
-  <code>multipart/byteranges</code> and each fragment covers one range, with
-  {{HTTPHeader("Content-Range")}} and {{HTTPHeader("Content-Type")}} describing it.</p>
+If several ranges are sent back, the {{HTTPHeader("Content-Type")}} is set to
+`multipart/byteranges` and each fragment covers one range, with
+{{HTTPHeader("Content-Range")}} and {{HTTPHeader("Content-Type")}} describing it.
 
-<h2 id="Status">Status</h2>
+## Status
 
-<pre class="brush: html">206 Partial Content</pre>
+```html
+206 Partial Content
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>A response containing one single range:</p>
+A response containing one single range:
 
-<pre>HTTP/1.1 206 Partial Content
-Date: Wed, 15 Nov 2015 06:25:24 GMT
-Last-Modified: Wed, 15 Nov 2015 04:58:08 GMT
-Content-Range: bytes 21010-47021/47022
-Content-Length: 26012
-Content-Type: image/gif
+    HTTP/1.1 206 Partial Content
+    Date: Wed, 15 Nov 2015 06:25:24 GMT
+    Last-Modified: Wed, 15 Nov 2015 04:58:08 GMT
+    Content-Range: bytes 21010-47021/47022
+    Content-Length: 26012
+    Content-Type: image/gif
 
-... 26012 bytes of partial image data ...</pre>
+    ... 26012 bytes of partial image data ...
 
-<p>A response containing several ranges:</p>
+A response containing several ranges:
 
-<pre>HTTP/1.1 206 Partial Content
-Date: Wed, 15 Nov 2015 06:25:24 GMT
-Last-Modified: Wed, 15 Nov 2015 04:58:08 GMT
-Content-Length: 1741
-Content-Type: multipart/byteranges; boundary=String_separator
+    HTTP/1.1 206 Partial Content
+    Date: Wed, 15 Nov 2015 06:25:24 GMT
+    Last-Modified: Wed, 15 Nov 2015 04:58:08 GMT
+    Content-Length: 1741
+    Content-Type: multipart/byteranges; boundary=String_separator
 
---String_separator
-Content-Type: application/pdf
-Content-Range: bytes 234-639/8000
+    --String_separator
+    Content-Type: application/pdf
+    Content-Range: bytes 234-639/8000
 
-...the first range...
---String_separator
-Content-Type: application/pdf
-Content-Range: bytes 4590-7999/8000
+    ...the first range...
+    --String_separator
+    Content-Type: application/pdf
+    Content-Range: bytes 4590-7999/8000
 
-...the second range
---String_separator--</pre>
+    ...the second range
+    --String_separator--
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{HTTPHeader("If-Range")}}</li>
-  <li>{{HTTPHeader("Range")}}</li>
-  <li>{{HTTPHeader("Content-Range")}}</li>
-  <li>{{HTTPHeader("Content-Type")}}</li>
-</ul>
+- {{HTTPHeader("If-Range")}}
+- {{HTTPHeader("Range")}}
+- {{HTTPHeader("Content-Range")}}
+- {{HTTPHeader("Content-Type")}}

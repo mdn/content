@@ -9,60 +9,57 @@ tags:
   - header
 browser-compat: http.headers.Timing-Allow-Origin
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The <strong><code>Timing-Allow-Origin</code></strong> response header specifies origins that are allowed to see values of attributes retrieved via features of the <a href="/en-US/docs/Web/API/Resource_Timing_API">Resource Timing API</a>, which would otherwise be reported as zero due to cross-origin restrictions.</p>
+The **`Timing-Allow-Origin`** response header specifies origins that are allowed to see values of attributes retrieved via features of the [Resource Timing API](/en-US/docs/Web/API/Resource_Timing_API), which would otherwise be reported as zero due to cross-origin restrictions.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Response header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>no</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Header type</th>
+      <td>{{Glossary("Response header")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>no</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: html">Timing-Allow-Origin: *
-Timing-Allow-Origin: &lt;origin&gt;[, &lt;origin&gt;]*
-</pre>
+```html
+Timing-Allow-Origin: *
+Timing-Allow-Origin: <origin>[, <origin>]*
+```
 
-<h2 id="Directives">Directives</h2>
+## Directives
 
-<dl>
- <dt><code>*</code></dt>
- <dd>The server may specify "*" as a wildcard, thereby allowing any origin to see timing resources.</dd>
- <dt><code>&lt;origin&gt;</code></dt>
- <dd>Specifies a URI that may see the timing resources. You can specify multiple origins, separated by commas.</dd>
-</dl>
+- `*`
+  - : The server may specify "\*" as a wildcard, thereby allowing any origin to see timing resources.
+- `<origin>`
+  - : Specifies a URI that may see the timing resources. You can specify multiple origins, separated by commas.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>To allow any resource to see timing resources:</p>
+To allow any resource to see timing resources:
 
-<pre>Timing-Allow-Origin: *</pre>
+    Timing-Allow-Origin: *
 
-<p>To allow <code>https://developer.mozilla.org</code> to see timing resources, you can specify:</p>
+To allow `https://developer.mozilla.org` to see timing resources, you can specify:
 
-<pre>Timing-Allow-Origin: https://developer.mozilla.org</pre>
+    Timing-Allow-Origin: https://developer.mozilla.org
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Resource_Timing_API">Resource Timing API</a></li>
- <li><a href="/en-US/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API">Using the Resource Timing API</a></li>
- <li>{{HTTPHeader("Vary")}}</li>
-</ul>
+- [Resource Timing API](/en-US/docs/Web/API/Resource_Timing_API)
+- [Using the Resource Timing API](/en-US/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API)
+- {{HTTPHeader("Vary")}}

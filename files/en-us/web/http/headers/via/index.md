@@ -9,18 +9,21 @@ tags:
   - Reference
 browser-compat: http.headers.Via
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The <code><strong>Via</strong></code> general header is added by proxies, both forward
-  and reverse proxies, and can appear in the request headers and the response headers. It
-  is used for tracking message forwards, avoiding request loops, and identifying the
-  protocol capabilities of senders along the request/response chain.</p>
+The **`Via`** general header is added by proxies, both forward
+and reverse proxies, and can appear in the request headers and the response headers. It
+is used for tracking message forwards, avoiding request loops, and identifying the
+protocol capabilities of senders along the request/response chain.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Header type</th>
-      <td>{{Glossary("Request header")}}, {{Glossary("Response header")}}</td>
+      <td>
+        {{Glossary("Request header")}},
+        {{Glossary("Response header")}}
+      </td>
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
@@ -29,44 +32,40 @@ browser-compat: http.headers.Via
   </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: html">Via: [ &lt;protocol-name&gt; "/" ] &lt;protocol-version&gt; &lt;host&gt; [ ":" &lt;port&gt; ]
+```html
+Via: [ <protocol-name> "/" ] <protocol-version> <host> [ ":" <port> ]
 or
-Via: [ &lt;protocol-name&gt; "/" ] &lt;protocol-version&gt; &lt;pseudonym&gt;
-</pre>
+Via: [ <protocol-name> "/" ] <protocol-version> <pseudonym>
+```
 
-<h2 id="Directives">Directives</h2>
+## Directives
 
-<dl>
-  <dt>&lt;protocol-name&gt;</dt>
-  <dd>Optional. The name of the protocol used, such as "HTTP".</dd>
-  <dt>&lt;protocol-version&gt;</dt>
-  <dd>The version of the protocol used, such as "1.1".</dd>
-  <dt>&lt;host&gt; and &lt;port&gt;</dt>
-  <dd>Public proxy URL and port.</dd>
-  <dt>&lt;pseudonym&gt;</dt>
-  <dd>Name/alias of an internal proxy.</dd>
-</dl>
+- \<protocol-name>
+  - : Optional. The name of the protocol used, such as "HTTP".
+- \<protocol-version>
+  - : The version of the protocol used, such as "1.1".
+- \<host> and \<port>
+  - : Public proxy URL and port.
+- \<pseudonym>
+  - : Name/alias of an internal proxy.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre>Via: 1.1 vegur
-Via: HTTP/1.1 GWA
-Via: 1.0 fred, 1.1 p.example.net
-</pre>
+    Via: 1.1 vegur
+    Via: HTTP/1.1 GWA
+    Via: 1.0 fred, 1.1 p.example.net
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{HTTPHeader("X-Forwarded-For")}}</li>
-  <li><a href="https://github.com/heroku/vegur">Heroku's proxy library Vegur</a></li>
-</ul>
+- {{HTTPHeader("X-Forwarded-For")}}
+- [Heroku's proxy library Vegur](https://github.com/heroku/vegur)

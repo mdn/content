@@ -9,66 +9,61 @@ tags:
   - origin
 browser-compat: http.headers.Origin
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The <strong><code>Origin</code></strong> request header indicates where a request originates from. It doesn't include any path information. It is similar to the {{HTTPHeader("Referer")}} header, but, unlike that header, it doesn't disclose the whole path.</p>
+The **`Origin`** request header indicates where a request originates from. It doesn't include any path information. It is similar to the {{HTTPHeader("Referer")}} header, but, unlike that header, it doesn't disclose the whole path.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Basically, browsers add the {{httpheader("Origin")}} request header to:</p>
-  <ul>
-    <li>all {{Glossary("CORS", "cross origin")}} requests.</li>
-    <li><a href="/en-US/docs/Web/Security/Same-origin_policy">same-origin</a> requests except for {{HTTPMethod("GET")}} or {{HTTPMethod("HEAD")}} requests (i.e. they are added to same-origin {{HTTPMethod("POST")}}, {{HTTPMethod("OPTIONS")}}, {{HTTPMethod("PUT")}}, {{HTTPMethod("PATCH")}}, and {{HTTPMethod("DELETE")}} requests).</li>
-  </ul>
-  <p>There are some exceptions to the above rules; for example if a cross-origin {{HTTPMethod("GET")}} or {{HTTPMethod("HEAD")}} request is made in <a href="/en-US/docs/Web/API/Request/mode#value">no-cors mode</a> the <code>Origin</code> header will not be added.</p>
-</div>
+> **Note:** Basically, browsers add the {{httpheader("Origin")}} request header to:
+>
+> - all {{Glossary("CORS", "cross origin")}} requests.
+> - [same-origin](/en-US/docs/Web/Security/Same-origin_policy) requests except for {{HTTPMethod("GET")}} or {{HTTPMethod("HEAD")}} requests (i.e. they are added to same-origin {{HTTPMethod("POST")}}, {{HTTPMethod("OPTIONS")}}, {{HTTPMethod("PUT")}}, {{HTTPMethod("PATCH")}}, and {{HTTPMethod("DELETE")}} requests).
+>
+> There are some exceptions to the above rules; for example if a cross-origin {{HTTPMethod("GET")}} or {{HTTPMethod("HEAD")}} request is made in [no-cors mode](/en-US/docs/Web/API/Request/mode#value) the `Origin` header will not be added.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Request header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Header type</th>
+      <td>{{Glossary("Request header")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: html">Origin: null
-Origin: &lt;scheme&gt; "://" &lt;hostname&gt; [ ":" &lt;port&gt; ]
-</pre>
+```html
+Origin: null
+Origin: <scheme> "://" <hostname> [ ":" <port> ]
+```
 
-<h2 id="Directives">Directives</h2>
+## Directives
 
-<dl>
- <dt>&lt;scheme&gt;</dt>
- <dd>The protocol that is used. Usually it is the HTTP protocol or its secured version, HTTPS.</dd>
- <dt>&lt;hostname&gt;</dt>
- <dd>The domain name of the server (for virtual hosting) or the IP.</dd>
- <dt>&lt;port&gt; {{optional_inline}}</dt>
- <dd>TCP port number on which the server is listening. If no port is given, the default port for the service requested (e.g., "80" for an HTTP URL) is implied.</dd>
-</dl>
+- \<scheme>
+  - : The protocol that is used. Usually it is the HTTP protocol or its secured version, HTTPS.
+- \<hostname>
+  - : The domain name of the server (for virtual hosting) or the IP.
+- \<port> {{optional_inline}}
+  - : TCP port number on which the server is listening. If no port is given, the default port for the service requested (e.g., "80" for an HTTP URL) is implied.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre>Origin: https://developer.mozilla.org</pre>
+    Origin: https://developer.mozilla.org
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTTPHeader("Host")}}</li>
- <li>{{HTTPHeader("Referer")}}</li>
- <li><a href="/en-US/docs/Web/Security/Same-origin_policy">Same-origin policy</a></li>
- <li>Stack Overflow: <a href="https://stackoverflow.com/a/42242802/">When do browsers send the Origin header? When do browsers set the origin to null?</a></li>
-</ul>
+- {{HTTPHeader("Host")}}
+- {{HTTPHeader("Referer")}}
+- [Same-origin policy](/en-US/docs/Web/Security/Same-origin_policy)
+- Stack Overflow: [When do browsers send the Origin header? When do browsers set the origin to null?](https://stackoverflow.com/a/42242802/)

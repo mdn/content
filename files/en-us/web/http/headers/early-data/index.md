@@ -11,16 +11,15 @@ tags:
   - Experimental
 browser-compat: http.headers.Early-Data
 ---
-<div>{{SeeCompatTable}}{{HTTPSidebar}}</div>
+{{SeeCompatTable}}{{HTTPSidebar}}
 
-<p>The <code><strong>Early-Data</strong></code> header is set by
-    an intermediary to indicate that the request has been conveyed in <a
-      href="/en-US/docs/Web/Security/Transport_Layer_Security#tls_1.3">TLS early data</a>,
-    and also indicates that the intermediary understands the {{HTTPStatus("425", "425 (Too
-    Early)")}} status code.</p>
+The **`Early-Data`** header is set by
+an intermediary to indicate that the request has been conveyed in [TLS early data](/en-US/docs/Web/Security/Transport_Layer_Security#tls_1.3),
+and also indicates that the intermediary understands the {{HTTPStatus("425", "425 (Too
+    Early)")}} status code.
 
-<p>The <code>Early-Data</code> header is <strong>not</strong> set by the originator of the
-  request (i.e., a browser).</p>
+The `Early-Data` header is **not** set by the originator of the
+request (i.e., a browser).
 
 <table class="properties">
   <tbody>
@@ -35,21 +34,22 @@ browser-compat: http.headers.Early-Data
   </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: html">Early-Data: 1
-</pre>
+```html
+Early-Data: 1
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre>GET /resource HTTP/1.0
-Host: example.com
-Early-Data: 1</pre>
+    GET /resource HTTP/1.0
+    Host: example.com
+    Early-Data: 1
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,32 +2,30 @@
 title: Expect
 slug: Web/HTTP/Headers/Expect
 tags:
-- HTTP
-- HTTP Header
-- Reference
-- Request header
+  - HTTP
+  - HTTP Header
+  - Reference
+  - Request header
 browser-compat: http.headers.Expect
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The <strong><code>Expect</code></strong> HTTP request header indicates expectations
-  that need to be fulfilled by the server in order to properly handle the request.</p>
+The **`Expect`** HTTP request header indicates expectations
+that need to be fulfilled by the server in order to properly handle the request.
 
-<p>The only expectation defined in the specification is <code>Expect: 100-continue</code>,
-  to which the server shall respond with:</p>
+The only expectation defined in the specification is `Expect: 100-continue`,
+to which the server shall respond with:
 
-<ul>
-  <li>{{HTTPStatus("100")}} if the information contained in the header is sufficient to
-    cause an immediate success,</li>
-  <li>{{HTTPStatus("417")}} (Expectation Failed) if it cannot meet the expectation; or any
-    other 4xx status otherwise.</li>
-</ul>
+- {{HTTPStatus("100")}} if the information contained in the header is sufficient to
+  cause an immediate success,
+- {{HTTPStatus("417")}} (Expectation Failed) if it cannot meet the expectation; or any
+  other 4xx status otherwise.
 
-<p>For example, the server may reject a request if its {{HTTPHeader("Content-Length")}} is
-  too large.</p>
+For example, the server may reject a request if its {{HTTPHeader("Content-Length")}} is
+too large.
 
-<p>No common browsers send the <code>Expect</code> header, but some other clients such as
-  cURL do so by default.</p>
+No common browsers send the `Expect` header, but some other clients such as
+cURL do so by default.
 
 <table class="properties">
   <tbody>
@@ -42,52 +40,48 @@ browser-compat: http.headers.Expect
   </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>No other expectations except "100-continue" are specified currently.</p>
+No other expectations except "100-continue" are specified currently.
 
-<pre class="brush: html">Expect: 100-continue
-</pre>
-
-<h2 id="Directives">Directives</h2>
-
-<dl>
-  <dt>100-continue</dt>
-  <dd>Informs recipients that the client is about to send a (presumably large) message
-    body in this request and wishes to receive a {{HTTPStatus("100")}} (Continue) interim
-    response.</dd>
-</dl>
-
-<h2 id="Examples">Examples</h2>
-
-<h3 id="Large_message_body">Large message body</h3>
-
-<p>A client sends a request with a Expect header and waits for the server to respond
-  before sending the message body.</p>
-
-<pre>PUT /somewhere/fun HTTP/1.1
-Host: origin.example.com
-Content-Type: video/h264
-Content-Length: 1234567890987
+```html
 Expect: 100-continue
-</pre>
+```
 
-<p>The server now checks the request headers and may respond with a {{HTTPStatus("100")}}
-  (Continue) response to instruct the client to go ahead and send the message body, or it
-  will send a {{HTTPStatus("417")}} (Expectation Failed) status if any of the expectations
-  cannot be met.</p>
+## Directives
 
-<h2 id="Specifications">Specifications</h2>
+- 100-continue
+  - : Informs recipients that the client is about to send a (presumably large) message
+    body in this request and wishes to receive a {{HTTPStatus("100")}} (Continue) interim
+    response.
+
+## Examples
+
+### Large message body
+
+A client sends a request with a Expect header and waits for the server to respond
+before sending the message body.
+
+    PUT /somewhere/fun HTTP/1.1
+    Host: origin.example.com
+    Content-Type: video/h264
+    Content-Length: 1234567890987
+    Expect: 100-continue
+
+The server now checks the request headers and may respond with a {{HTTPStatus("100")}}
+(Continue) response to instruct the client to go ahead and send the message body, or it
+will send a {{HTTPStatus("417")}} (Expectation Failed) status if any of the expectations
+cannot be met.
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{HTTPStatus("417")}}<code> Expectation Failed</code></li>
-  <li>{{HTTPStatus("100")}}<code> Continue</code></li>
-</ul>
+- {{HTTPStatus("417")}}` Expectation Failed`
+- {{HTTPStatus("100")}}` Continue`

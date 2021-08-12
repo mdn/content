@@ -7,29 +7,27 @@ tags:
   - Status code
 browser-compat: http.status.504
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The HyperText Transfer Protocol (HTTP) <code><strong>504 Gateway Timeout</strong></code> server error response code indicates that the server, while acting as a gateway or proxy, did not get a response in time from the upstream server that it needed in order to complete the request.</p>
+The HyperText Transfer Protocol (HTTP) **`504 Gateway Timeout`** server error response code indicates that the server, while acting as a gateway or proxy, did not get a response in time from the upstream server that it needed in order to complete the request.
 
-<div class="notecard note">
-<p><strong>Note:</strong> A {{interwiki("wikipedia", "Gateway_(telecommunications)", "Gateway")}} might refer to different things in networking and a 504 error is usually not something you can fix, but requires a fix by the web server or the proxies you are trying to get access through.</p>
-</div>
+> **Note:** A {{interwiki("wikipedia", "Gateway_(telecommunications)", "Gateway")}} might refer to different things in networking and a 504 error is usually not something you can fix, but requires a fix by the web server or the proxies you are trying to get access through.
 
-<h2 id="Status">Status</h2>
+## Status
 
-<pre class="brush: html">504 Gateway Timeout</pre>
+```html
+504 Gateway Timeout
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html" rel="noopener">HTTP/1.1: Status Code Definitions</a></li>
- <li>{{HTTPStatus(502)}}</li>
-</ul>
+- [HTTP/1.1: Status Code Definitions](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
+- {{HTTPStatus(502)}}

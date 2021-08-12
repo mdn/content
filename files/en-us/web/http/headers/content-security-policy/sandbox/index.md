@@ -10,13 +10,13 @@ tags:
   - Security
 browser-compat: http.headers.csp.Content-Security-Policy.sandbox
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
-  <code><strong>sandbox</strong></code> directive enables a sandbox for the requested
-  resource similar to the {{HTMLElement("iframe")}} {{htmlattrxref("sandbox", "iframe")}}
-  attribute. It applies restrictions to a page's actions including preventing popups,
-  preventing the execution of plugins and scripts, and enforcing a same-origin policy.</p>
+The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
+**`sandbox`** directive enables a sandbox for the requested
+resource similar to the {{HTMLElement("iframe")}} {{htmlattrxref("sandbox", "iframe")}}
+attribute. It applies restrictions to a page's actions including preventing popups,
+preventing the execution of plugins and scripts, and enforcing a same-origin policy.
 
 <table class="properties">
   <tbody>
@@ -29,80 +29,81 @@ browser-compat: http.headers.csp.Content-Security-Policy.sandbox
       <td>{{Glossary("Document directive")}}</td>
     </tr>
     <tr>
-      <th colspan="2" scope="row">This directive is not supported in the
-        {{HTMLElement("meta")}} element or by the
-        {{HTTPHeader("Content-Security-policy-Report-Only")}} header field.</th>
+      <th colspan="2" scope="row">
+        This directive is not supported in the {{HTMLElement("meta")}}
+        element or by the
+        {{HTTPHeader("Content-Security-policy-Report-Only")}}
+        header field.
+      </th>
     </tr>
   </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: html">Content-Security-Policy: sandbox;
-Content-Security-Policy: sandbox &lt;value&gt;;
-</pre>
+```html
+Content-Security-Policy: sandbox;
+Content-Security-Policy: sandbox <value>;
+```
 
-<p>where <code>&lt;value&gt;</code> can optionally be one of the following values:</p>
+where `<value>` can optionally be one of the following values:
 
-<dl>
-  <dt><code>allow-downloads</code></dt>
-  <dd>Allows for downloads after the user clicks a button or link.</dd>
-  <dt><code>allow-downloads-without-user-activation</code> {{experimental_inline}}</dt>
-  <dd>Allows for downloads to occur without a gesture from the user.</dd>
-  <dt><code>allow-forms</code></dt>
-  <dd>Allows the page to submit forms. If this keyword is not used, this operation is not
-    allowed.</dd>
-  <dt><code>allow-modals</code></dt>
-  <dd>Allows the page to open modal windows.</dd>
-  <dt><code>allow-orientation-lock</code></dt>
-  <dd>Allows the page to disable the ability to lock the screen orientation.</dd>
-  <dt><code>allow-pointer-lock</code></dt>
-  <dd>Allows the page to use the <a href="/en-US/docs/Web/API/Pointer_Lock_API">Pointer Lock
-      API</a>.</dd>
-  <dt><code>allow-popups</code></dt>
-  <dd>Allows popups (like from <code>window.open</code>, <code>target="_blank"</code>,
-    <code>showModalDialog</code>). If this keyword is not used, that functionality will
-    silently fail.</dd>
-  <dt><code>allow-popups-to-escape-sandbox</code></dt>
-  <dd>Allows a sandboxed document to open new windows without forcing the sandboxing flags
+- `allow-downloads`
+  - : Allows for downloads after the user clicks a button or link.
+- `allow-downloads-without-user-activation` {{experimental_inline}}
+  - : Allows for downloads to occur without a gesture from the user.
+- `allow-forms`
+  - : Allows the page to submit forms. If this keyword is not used, this operation is not
+    allowed.
+- `allow-modals`
+  - : Allows the page to open modal windows.
+- `allow-orientation-lock`
+  - : Allows the page to disable the ability to lock the screen orientation.
+- `allow-pointer-lock`
+  - : Allows the page to use the [Pointer Lock
+    API](/en-US/docs/Web/API/Pointer_Lock_API).
+- `allow-popups`
+  - : Allows popups (like from `window.open`, `target="_blank"`,
+    `showModalDialog`). If this keyword is not used, that functionality will
+    silently fail.
+- `allow-popups-to-escape-sandbox`
+  - : Allows a sandboxed document to open new windows without forcing the sandboxing flags
     upon them. This will allow, for example, a third-party advertisement to be safely
-    sandboxed without forcing the same restrictions upon a landing page.</dd>
-  <dt><code>allow-presentation</code></dt>
-  <dd>Allows embedders to have control over whether an iframe can start a presentation
-    session.</dd>
-  <dt><code>allow-same-origin</code></dt>
-  <dd>Allows the content to be treated as being from its normal origin. If this keyword is
-    not used, the embedded content is treated as being from a unique origin.</dd>
-  <dt><code>allow-scripts</code></dt>
-  <dd>Allows the page to run scripts (but not create pop-up windows). If this keyword is
-    not used, this operation is not allowed.</dd>
-  <dt><code>allow-storage-access-by-user-activation</code> {{experimental_inline}}</dt>
-  <dd>Lets the resource request access to the parent's storage capabilities with the <a
-      href="/en-US/docs/Web/API/Storage_Access_API">Storage Access API</a>.</dd>
-  <dt><code>allow-top-navigation</code></dt>
-  <dd>Allows the page to navigate (load) content to the top-level browsing context. If
-    this keyword is not used, this operation is not allowed.</dd>
-  <dt><code>allow-top-navigation-by-user-activation</code></dt>
-  <dd>Lets the resource navigate the top-level browsing context, but only if initiated by
-    a user gesture.</dd>
-</dl>
+    sandboxed without forcing the same restrictions upon a landing page.
+- `allow-presentation`
+  - : Allows embedders to have control over whether an iframe can start a presentation
+    session.
+- `allow-same-origin`
+  - : Allows the content to be treated as being from its normal origin. If this keyword is
+    not used, the embedded content is treated as being from a unique origin.
+- `allow-scripts`
+  - : Allows the page to run scripts (but not create pop-up windows). If this keyword is
+    not used, this operation is not allowed.
+- `allow-storage-access-by-user-activation` {{experimental_inline}}
+  - : Lets the resource request access to the parent's storage capabilities with the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API).
+- `allow-top-navigation`
+  - : Allows the page to navigate (load) content to the top-level browsing context. If
+    this keyword is not used, this operation is not allowed.
+- `allow-top-navigation-by-user-activation`
+  - : Lets the resource navigate the top-level browsing context, but only if initiated by
+    a user gesture.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: bash">Content-Security-Policy: sandbox allow-scripts;</pre>
+```bash
+Content-Security-Policy: sandbox allow-scripts;
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{HTTPHeader("Content-Security-Policy")}}</li>
-  <li>{{htmlattrxref("sandbox", "iframe")}} attribute on {{HTMLElement("iframe")}}
-    elements</li>
-</ul>
+- {{HTTPHeader("Content-Security-Policy")}}
+- {{htmlattrxref("sandbox", "iframe")}} attribute on {{HTMLElement("iframe")}}
+  elements

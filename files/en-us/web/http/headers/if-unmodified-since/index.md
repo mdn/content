@@ -2,33 +2,29 @@
 title: If-Unmodified-Since
 slug: Web/HTTP/Headers/If-Unmodified-Since
 tags:
-- HTTP
-- HTTP Header
-- Reference
-- Request header
+  - HTTP
+  - HTTP Header
+  - Reference
+  - Request header
 browser-compat: http.headers.If-Unmodified-Since
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The <strong><code>If-Unmodified-Since</code></strong> request HTTP header makes the
-  request conditional: the server will send back the requested resource, or accept it in
-  the case of a {{HTTPMethod("POST")}} or another non-{{Glossary("Safe/HTTP", "safe")}} method, only if
-  it has not been last modified after the given date. If the resource has been modified
-  after the given date, the response will be a {{HTTPStatus("412")}} (Precondition Failed)
-  error.</p>
+The **`If-Unmodified-Since`** request HTTP header makes the
+request conditional: the server will send back the requested resource, or accept it in
+the case of a {{HTTPMethod("POST")}} or another non-{{Glossary("Safe/HTTP", "safe")}} method, only if
+it has not been last modified after the given date. If the resource has been modified
+after the given date, the response will be a {{HTTPStatus("412")}} (Precondition Failed)
+error.
 
-<p>There are two common use cases:</p>
+There are two common use cases:
 
-<ul>
-  <li>In conjunction with non-{{Glossary("Safe/HTTP", "safe")}} methods, like {{HTTPMethod("POST")}},
-    it can be used to implement an <a
-      href="https://en.wikipedia.org/wiki/Optimistic_concurrency_control">optimistic
-      concurrency control</a>, like done by some wikis: editions are rejected if the
-    stored document has been modified since the original has been retrieved.</li>
-  <li>In conjunction with a range request with a {{HTTPHeader("If-Range")}} header, it can
-    be used to ensure that the new fragment requested comes from an unmodified document.
-  </li>
-</ul>
+- In conjunction with non-{{Glossary("Safe/HTTP", "safe")}} methods, like {{HTTPMethod("POST")}},
+  it can be used to implement an [optimistic
+  concurrency control](https://en.wikipedia.org/wiki/Optimistic_concurrency_control), like done by some wikis: editions are rejected if the
+  stored document has been modified since the original has been retrieved.
+- In conjunction with a range request with a {{HTTPHeader("If-Range")}} header, it can
+  be used to ensure that the new fragment requested comes from an unmodified document.
 
 <table class="properties">
   <tbody>
@@ -43,56 +39,49 @@ browser-compat: http.headers.If-Unmodified-Since
   </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: html">If-Unmodified-Since: &lt;day-name&gt;, &lt;day&gt; &lt;month&gt; &lt;year&gt; &lt;hour&gt;:&lt;minute&gt;:&lt;second&gt; GMT
-</pre>
+```html
+If-Unmodified-Since: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT
+```
 
-<h2 id="Directives">Directives</h2>
+## Directives
 
-<dl>
-  <dt>&lt;day-name&gt;</dt>
-  <dd>One of "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", or "Sun" (case-sensitive).</dd>
-  <dt>&lt;day&gt;</dt>
-  <dd>2 digit day number, e.g. "04" or "23".</dd>
-  <dt>&lt;month&gt;</dt>
-  <dd>One of "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov",
-    "Dec" (case sensitive).</dd>
-  <dt>&lt;year&gt;</dt>
-  <dd>4 digit year number, e.g. "1990" or "2016".</dd>
-  <dt>&lt;hour&gt;</dt>
-  <dd>2 digit hour number, e.g. "09" or "23".</dd>
-  <dt>&lt;minute&gt;</dt>
-  <dd>2 digit minute number, e.g. "04" or "59".</dd>
-  <dt>&lt;second&gt;</dt>
-  <dd>2 digit second number, e.g. "04" or "59".</dd>
-  <dt><code>GMT</code></dt>
-  <dd>
-    <p>Greenwich Mean Time. HTTP dates are always expressed in GMT, never in local time.
-    </p>
-  </dd>
-</dl>
+- \<day-name>
+  - : One of "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", or "Sun" (case-sensitive).
+- \<day>
+  - : 2 digit day number, e.g. "04" or "23".
+- \<month>
+  - : One of "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov",
+    "Dec" (case sensitive).
+- \<year>
+  - : 4 digit year number, e.g. "1990" or "2016".
+- \<hour>
+  - : 2 digit hour number, e.g. "09" or "23".
+- \<minute>
+  - : 2 digit minute number, e.g. "04" or "59".
+- \<second>
+  - : 2 digit second number, e.g. "04" or "59".
+- `GMT`
+  - : Greenwich Mean Time. HTTP dates are always expressed in GMT, never in local time.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre>If-Unmodified-Since: Wed, 21 Oct 2015 07:28:00 GMT
-</pre>
+    If-Unmodified-Since: Wed, 21 Oct 2015 07:28:00 GMT
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{HTTPHeader("Last-Modified")}}</li>
-  <li>{{HTTPHeader("If-Modified-Since")}}</li>
-  <li>{{HTTPHeader("If-Match")}}</li>
-  <li>{{HTTPHeader("If-None-Match")}}</li>
-  <li>{{HTTPHeader("If-Range")}}</li>
-  <li>{{HTTPStatus("412")}}<code> Precondition Failed</code></li>
-</ul>
+- {{HTTPHeader("Last-Modified")}}
+- {{HTTPHeader("If-Modified-Since")}}
+- {{HTTPHeader("If-Match")}}
+- {{HTTPHeader("If-None-Match")}}
+- {{HTTPHeader("If-Range")}}
+- {{HTTPStatus("412")}}` Precondition Failed`

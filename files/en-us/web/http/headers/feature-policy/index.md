@@ -13,165 +13,143 @@ tags:
   - header
 browser-compat: http.headers.Feature-Policy
 ---
-<div>{{HTTPSidebar}} {{SeeCompatTable}}</div>
+{{HTTPSidebar}} {{SeeCompatTable}}
 
-<div class="notecard warning">
-  <p><strong>Warning:</strong> The header has now been renamed to <code>Permissions-Policy</code> in the spec, and this article will eventually be updated to reflect that change.</p>
-</div>
+> **Warning:** The header has now been renamed to `Permissions-Policy` in the spec, and this article will eventually be updated to reflect that change.
 
-<p>The HTTP <strong><code>Feature-Policy</code></strong> header provides a mechanism to allow and deny the use of browser features in its own frame, and in content within any {{HTMLElement("iframe")}} elements in the document.</p>
+The HTTP **`Feature-Policy`** header provides a mechanism to allow and deny the use of browser features in its own frame, and in content within any {{HTMLElement("iframe")}} elements in the document.
 
-<p>For more information, see the main <a href="/en-US/docs/Web/HTTP/Feature_Policy">Feature Policy</a> article.</p>
+For more information, see the main [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy) article.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Response header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Header type</th>
+      <td>{{Glossary("Response header")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre>Feature-Policy: &lt;directive&gt; &lt;allowlist&gt;</pre>
+    Feature-Policy: <directive> <allowlist>
 
-<dl>
- <dt><code>&lt;directive&gt;</code></dt>
- <dd>The Feature Policy directive to apply the <code>allowlist</code> to. See <a href="#directives">Directives</a> below for a list of the permitted directive names.</dd>
- <dt>&lt;allowlist&gt;</dt>
- <dd><p>An <code>allowlist</code> is a list of origins that takes one or more of the following values, separated by spaces:</p>
+- `<directive>`
+  - : The Feature Policy directive to apply the `allowlist` to. See [Directives](#directives) below for a list of the permitted directive names.
+- \<allowlist>
 
-  <ul>
-   <li><code>*</code>: The feature will be allowed in this document, and all nested browsing contexts (iframes) regardless of their origin.</li>
-   <li><code>'self'</code>: The feature will be allowed in this document, and in all nested browsing contexts (iframes) in the same origin. The feature is not allowed in cross-origin documents in nested browsing contexts.</li>
-   <li><code>'src'</code>: (In an iframe <code>allow</code> attribute only) The feature will be allowed in this iframe, as long as the document loaded into it comes from the same origin as the URL in the iframe's {{HTMLElement('iframe','src','#Attributes')}} attribute.
-    <div class="notecard note">
-      <p><strong>Note:</strong> The <code>'src'</code> origin is used in the iframe <code>allow</code> attribute only, and is the <em>default</em> <code>allowlist</code> value.</p>
-    </div>
-   </li>
-   <li><code>'none'</code>: The feature is disabled in top-level and nested browsing contexts.</li>
-   <li>&lt;origin(s)&gt;: The feature is allowed for specific origins (for example, https://example.com). Origins should be separated by a space.</li>
-  </ul>
+  - : An `allowlist` is a list of origins that takes one or more of the following values, separated by spaces:
 
-  <p>The values <code>*</code> (enable for all origins) or <code>'none'</code> (disable for all origins) may only be used alone, while <code>'self'</code> and <code>'src'</code> may be used with one or more origins.</p>
-  <p>Features have a <em>default</em> allowlist, which is one of: <code>*</code>, <code>'self'</code>, or <code>'none'</code>.</p>
-</dd>
-</dl>
+    - `*`: The feature will be allowed in this document, and all nested browsing contexts (iframes) regardless of their origin.
+    - `'self'`: The feature will be allowed in this document, and in all nested browsing contexts (iframes) in the same origin. The feature is not allowed in cross-origin documents in nested browsing contexts.
+    - `'src'`: (In an iframe `allow` attribute only) The feature will be allowed in this iframe, as long as the document loaded into it comes from the same origin as the URL in the iframe's {{HTMLElement('iframe','src','#Attributes')}} attribute.
 
+      > **Note:** The `'src'` origin is used in the iframe `allow` attribute only, and is the _default_ `allowlist` value.
 
+    - `'none'`: The feature is disabled in top-level and nested browsing contexts.
+    - \<origin(s)>: The feature is allowed for specific origins (for example, https\://example.com). Origins should be separated by a space.
 
+    The values `*` (enable for all origins) or `'none'` (disable for all origins) may only be used alone, while `'self'` and `'src'` may be used with one or more origins.
 
-<h2 id="Directives">Directives</h2>
+    Features have a _default_ allowlist, which is one of: `*`, `'self'`, or `'none'`.
 
-<dl>
- <dt>{{httpheader('Feature-Policy/accelerometer','accelerometer')}}</dt>
- <dd>Controls whether the current document is allowed to gather information about the acceleration of the device through the {{DOMxRef("Accelerometer")}} interface.</dd>
- <dt>{{httpheader('Feature-Policy/ambient-light-sensor','ambient-light-sensor')}}</dt>
- <dd>Controls whether the current document is allowed to gather information about the amount of light in the environment around the device through the {{DOMxRef("AmbientLightSensor")}} interface.</dd>
- <dt>{{httpheader('Feature-Policy/autoplay','autoplay')}}</dt>
- <dd>Controls whether the current document is allowed to autoplay media requested through the {{domxref("HTMLMediaElement")}} interface. When this policy is disabled and there were no user gestures, the {{jsxref("Promise")}} returned by {{domxref("HTMLMediaElement.play()")}} will reject with a {{domxref("DOMException")}}. The autoplay attribute on {{HTMLELement("audio")}} and {{HTMLElement("video")}} elements will be ignored.</dd>
- <dt>{{httpheader('Feature-Policy/battery','battery')}}</dt>
- <dd>Controls whether the use of the <a href="/en-US/docs/Web/API/Battery_Status_API">Battery Status API</a> is allowed. When this policy is disabled, the {{JSxRef("Promise")}} returned by {{DOMxRef("Navigator.getBattery","Navigator.getBattery()")}} will reject with a {{Exception("NotAllowedError")}} {{DOMxRef("DOMException")}}.</dd>
- <dt>{{httpheader('Feature-Policy/camera', 'camera')}}</dt>
- <dd>Controls whether the current document is allowed to use video input devices. When this policy is disabled, the {{jsxref("Promise")}} returned by {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} will reject with a {{Exception("NotAllowedError")}} {{DOMxRef("DOMException")}}.</dd>
- <dt>{{HTTPHeader('Feature-Policy/display-capture', 'display-capture')}}</dt>
- <dd>Controls whether or not the current document is permitted to use the {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} method to capture screen contents. When this policy is disabled, the promise returned by <code>getDisplayMedia()</code> will reject with a {{Exception("NotAllowedError")}} if permission is not obtained to capture the display's contents.</dd>
- <dt>{{httpheader('Feature-Policy/document-domain','document-domain')}}</dt>
- <dd>Controls whether the current document is allowed to set {{domxref("document.domain")}}. When this policy is disabled, attempting to set {{domxref("document.domain")}} will fail and cause a {{Exception("SecurityError")}} {{domxref("DOMException")}} to be thrown.</dd>
- <dt>{{httpheader('Feature-Policy/encrypted-media', 'encrypted-media')}}</dt>
- <dd>Controls whether the current document is allowed to use the <a href="/en-US/docs/Web/API/Encrypted_Media_Extensions_API">Encrypted Media Extensions</a> API (EME). When this policy is disabled, the {{jsxref("Promise")}} returned by {{domxref("Navigator.requestMediaKeySystemAccess()")}} will reject with a {{domxref("DOMException")}}.</dd>
- <dt>{{httpheader('Feature-Policy/execution-while-not-rendered', 'execution-while-not-rendered')}}</dt>
- <dd>Controls whether tasks should execute in frames while they're not being rendered (e.g. if an iframe is <code><a href="/en-US/docs/Web/HTML/Global_attributes/hidden">hidden</a></code> or <code>display: none</code>).</dd>
- <dt>{{httpheader('Feature-Policy/execution-while-out-of-viewport', 'execution-while-out-of-viewport')}}</dt>
- <dd>Controls whether tasks should execute in frames while they're outside of the visible viewport.</dd>
- <dt>{{httpheader('Feature-Policy/fullscreen','fullscreen')}}</dt>
- <dd>Controls whether the current document is allowed to use {{DOMxRef("Element.requestFullScreen()")}}. When this policy is disabled, the returned {{JSxRef("Promise")}} rejects with a {{JSxRef("TypeError")}}.</dd>
- <dt>{{httpheader('Feature-Policy/gamepad','gamepad')}}</dt>
- <dd>Controls whether the current document is allowed to use the <a href="/en-US/docs/Web/API/Gamepad_API">Gamepad API</a>.
-  When this policy is disabled, calls to {{domxref('Navigator.getGamepads()')}} will throw a <code>SecurityError</code> {{domxref('DOMException')}}, and the {{event("gamepadconnected")}} and {{event("gamepaddisconnected")}} events will not fire.</dd>
- <dt>{{httpheader('Feature-Policy/geolocation','geolocation')}}</dt>
- <dd>Controls whether the current document is allowed to use the {{domxref('Geolocation')}} Interface. When this policy is disabled, calls to {{domxref('Geolocation.getCurrentPosition','getCurrentPosition()')}} and {{domxref('Geolocation.watchPosition','watchPosition()')}} will cause those functions' callbacks to be invoked with a {{domxref('GeolocationPositionError')}} code of <code>PERMISSION_DENIED</code>.</dd>
- <dt>{{httpheader('Feature-Policy/gyroscope','gyroscope')}}</dt>
- <dd>Controls whether the current document is allowed to gather information about the orientation of the device through the {{DOMxRef("Gyroscope")}} interface.</dd>
- <dt>{{httpheader('Feature-Policy/layout-animations','layout-animations')}}</dt>
- <dd>Controls whether the current document is allowed to show layout animations.</dd>
- <dt>{{httpheader('Feature-Policy/legacy-image-formats','legacy-image-formats')}}</dt>
- <dd>Controls whether the current document is allowed to display images in legacy formats.</dd>
- <dt>{{httpheader('Feature-Policy/magnetometer','magnetometer')}}</dt>
- <dd>Controls whether the current document is allowed to gather information about the orientation of the device through the {{DOMxRef("Magnetometer")}} interface.</dd>
- <dt>{{httpheader('Feature-Policy/microphone','microphone')}}</dt>
- <dd>Controls whether the current document is allowed to use audio input devices. When this policy is disabled, the {{jsxref("Promise")}} returned by {{domxref("MediaDevices.getUserMedia()")}} will reject with a {{Exception("NotAllowedError")}}.</dd>
- <dt>{{httpheader('Feature-Policy/midi', 'midi')}}</dt>
- <dd>Controls whether the current document is allowed to use the <a href="/en-US/docs/Web/API/Web_MIDI_API">Web MIDI API</a>. When this policy is disabled, the {{jsxref("Promise")}} returned by {{domxref("Navigator.requestMIDIAccess()")}} will reject with a {{domxref("DOMException")}}.</dd>
- <dt>{{httpheader('Feature-Policy/navigation-override','navigation-override')}}</dt>
- <dd>Controls the availability of mechanisms that enables the page author to take control over the behavior of <a href="https://www.w3.org/TR/css-nav/">spatial navigation</a>, or to cancel it outright.</dd>
- <dt>{{httpheader('Feature-Policy/oversized-images','oversized-images')}}</dt>
- <dd>Controls whether the current document is allowed to download and display large images.</dd>
- <dt>{{httpheader('Feature-Policy/payment', 'payment')}}</dt>
- <dd>Controls whether the current document is allowed to use the <a href="/en-US/docs/Web/API/Payment_Request_API">Payment Request API</a>. When this policy is enabled, the {{domxref("PaymentRequest","PaymentRequest()")}} constructor will throw a {{Exception("SecurityError")}} {{domxref("DOMException")}}.</dd>
- <dt>{{httpheader('Feature-Policy/picture-in-picture', 'picture-in-picture')}}</dt>
- <dd>Controls whether the current document is allowed to play a video in a Picture-in-Picture mode via the corresponding API.</dd>
- <dt>{{httpheader("Feature-Policy/publickey-credentials-get", "publickey-credentials-get")}}</dt>
- <dd>Controls whether the current document is allowed to use the <a href="/en-US/docs/Web/API/Web_Authentication_API">Web Authentication API</a> to retrieve already stored public-key credentials, i.e. via {{domxref("CredentialsContainer.get","navigator.credentials.get({publicKey: ..., ...})")}}.</dd>
- <dt>{{httpheader('Feature-Policy/sync-xhr', 'sync-xhr')}}</dt>
- <dd>Controls whether the current document is allowed to make synchronous {{DOMxRef("XMLHttpRequest")}} requests.</dd>
- <dt>{{httpheader('Feature-Policy/unoptimized-images', 'unoptimized-images')}} {{experimental_inline}}{{Non-standard_Inline}}</dt>
- <dd>Controls whether the current document is allowed to download and display unoptimized images.</dd>
- <dt>{{httpheader('Feature-Policy/unsized-media', 'unsized-media')}} {{experimental_inline}}{{Non-standard_Inline}}</dt>
- <dd>Controls whether the current document is allowed to change the size of media elements after the initial layout is complete.</dd>
- <dt>{{httpheader('Feature-Policy/usb', 'usb')}}</dt>
- <dd>Controls whether the current document is allowed to use the <a href="https://wicg.github.io/webusb/">WebUSB API</a>.</dd>
- <dt>{{httpheader('Feature-Policy/vibrate', 'vibrate')}} {{deprecated_inline}}{{experimental_inline}}{{Non-standard_Inline}}</dt>
- <dd>Controls whether the current document is  allowed to trigger device vibrations via {{DOMxRef("Navigator.vibrate","Navigator.vibrate()")}} method of <a href="/en-US/docs/Web/API/Vibration_API">Vibration API</a>.</dd>
- <dt>{{httpheader('Feature-Policy/vr', 'vr')}} {{deprecated_inline}}</dt>
- <dd>Controls whether the current document is allowed to use the <a href="/en-US/docs/Web/API/WebVR_API">WebVR API</a>. When this policy is disabled, the {{jsxref("Promise")}} returned by {{domxref("Navigator.getVRDisplays","Navigator.getVRDisplays()")}} will reject with a {{domxref("DOMException")}}. Keep in mind that the WebVR standard is in the process of being replaced with <a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR</a>.</dd>
- <dt>{{httpheader('Feature-Policy/screen-wake-lock', 'screen-wake-lock')}}</dt>
- <dd>Controls whether the current document is allowed to use <a href="/en-US/docs/Web/API/Screen_Wake_Lock_API">Screen Wake Lock API</a> to indicate that device should not turn off or dim the screen.</dd>
- <dt>{{httpheader("Feature-Policy/web-share", "web-share")}}</dt>
- <dd>Controls whether or not the current document is allowed to use the {{domxref("Navigator.share","Navigator.share()")}} of Web Share API to share text, links, images, and other content to arbitrary destinations of user's choice, e.g. mobile apps.</dd>
- <dt>{{httpheader("Feature-Policy/xr-spatial-tracking", "xr-spatial-tracking")}}</dt>
- <dd>Controls whether or not the current document is allowed to use the <a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</a> to interact with a WebXR session.</dd>
-</dl>
+## Directives
 
-<h2 id="Example">Example</h2>
+- {{httpheader('Feature-Policy/accelerometer','accelerometer')}}
+  - : Controls whether the current document is allowed to gather information about the acceleration of the device through the {{DOMxRef("Accelerometer")}} interface.
+- {{httpheader('Feature-Policy/ambient-light-sensor','ambient-light-sensor')}}
+  - : Controls whether the current document is allowed to gather information about the amount of light in the environment around the device through the {{DOMxRef("AmbientLightSensor")}} interface.
+- {{httpheader('Feature-Policy/autoplay','autoplay')}}
+  - : Controls whether the current document is allowed to autoplay media requested through the {{domxref("HTMLMediaElement")}} interface. When this policy is disabled and there were no user gestures, the {{jsxref("Promise")}} returned by {{domxref("HTMLMediaElement.play()")}} will reject with a {{domxref("DOMException")}}. The autoplay attribute on {{HTMLELement("audio")}} and {{HTMLElement("video")}} elements will be ignored.
+- {{httpheader('Feature-Policy/battery','battery')}}
+  - : Controls whether the use of the [Battery Status API](/en-US/docs/Web/API/Battery_Status_API) is allowed. When this policy is disabled, the {{JSxRef("Promise")}} returned by {{DOMxRef("Navigator.getBattery","Navigator.getBattery()")}} will reject with a {{Exception("NotAllowedError")}} {{DOMxRef("DOMException")}}.
+- {{httpheader('Feature-Policy/camera', 'camera')}}
+  - : Controls whether the current document is allowed to use video input devices. When this policy is disabled, the {{jsxref("Promise")}} returned by {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} will reject with a {{Exception("NotAllowedError")}} {{DOMxRef("DOMException")}}.
+- {{HTTPHeader('Feature-Policy/display-capture', 'display-capture')}}
+  - : Controls whether or not the current document is permitted to use the {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} method to capture screen contents. When this policy is disabled, the promise returned by `getDisplayMedia()` will reject with a {{Exception("NotAllowedError")}} if permission is not obtained to capture the display's contents.
+- {{httpheader('Feature-Policy/document-domain','document-domain')}}
+  - : Controls whether the current document is allowed to set {{domxref("document.domain")}}. When this policy is disabled, attempting to set {{domxref("document.domain")}} will fail and cause a {{Exception("SecurityError")}} {{domxref("DOMException")}} to be thrown.
+- {{httpheader('Feature-Policy/encrypted-media', 'encrypted-media')}}
+  - : Controls whether the current document is allowed to use the [Encrypted Media Extensions](/en-US/docs/Web/API/Encrypted_Media_Extensions_API) API (EME). When this policy is disabled, the {{jsxref("Promise")}} returned by {{domxref("Navigator.requestMediaKeySystemAccess()")}} will reject with a {{domxref("DOMException")}}.
+- {{httpheader('Feature-Policy/execution-while-not-rendered', 'execution-while-not-rendered')}}
+  - : Controls whether tasks should execute in frames while they're not being rendered (e.g. if an iframe is [`hidden`](/en-US/docs/Web/HTML/Global_attributes/hidden) or `display: none`).
+- {{httpheader('Feature-Policy/execution-while-out-of-viewport', 'execution-while-out-of-viewport')}}
+  - : Controls whether tasks should execute in frames while they're outside of the visible viewport.
+- {{httpheader('Feature-Policy/fullscreen','fullscreen')}}
+  - : Controls whether the current document is allowed to use {{DOMxRef("Element.requestFullScreen()")}}. When this policy is disabled, the returned {{JSxRef("Promise")}} rejects with a {{JSxRef("TypeError")}}.
+- {{httpheader('Feature-Policy/gamepad','gamepad')}}
+  - : Controls whether the current document is allowed to use the [Gamepad API](/en-US/docs/Web/API/Gamepad_API).
+    When this policy is disabled, calls to {{domxref('Navigator.getGamepads()')}} will throw a `SecurityError` {{domxref('DOMException')}}, and the {{event("gamepadconnected")}} and {{event("gamepaddisconnected")}} events will not fire.
+- {{httpheader('Feature-Policy/geolocation','geolocation')}}
+  - : Controls whether the current document is allowed to use the {{domxref('Geolocation')}} Interface. When this policy is disabled, calls to {{domxref('Geolocation.getCurrentPosition','getCurrentPosition()')}} and {{domxref('Geolocation.watchPosition','watchPosition()')}} will cause those functions' callbacks to be invoked with a {{domxref('GeolocationPositionError')}} code of `PERMISSION_DENIED`.
+- {{httpheader('Feature-Policy/gyroscope','gyroscope')}}
+  - : Controls whether the current document is allowed to gather information about the orientation of the device through the {{DOMxRef("Gyroscope")}} interface.
+- {{httpheader('Feature-Policy/layout-animations','layout-animations')}}
+  - : Controls whether the current document is allowed to show layout animations.
+- {{httpheader('Feature-Policy/legacy-image-formats','legacy-image-formats')}}
+  - : Controls whether the current document is allowed to display images in legacy formats.
+- {{httpheader('Feature-Policy/magnetometer','magnetometer')}}
+  - : Controls whether the current document is allowed to gather information about the orientation of the device through the {{DOMxRef("Magnetometer")}} interface.
+- {{httpheader('Feature-Policy/microphone','microphone')}}
+  - : Controls whether the current document is allowed to use audio input devices. When this policy is disabled, the {{jsxref("Promise")}} returned by {{domxref("MediaDevices.getUserMedia()")}} will reject with a {{Exception("NotAllowedError")}}.
+- {{httpheader('Feature-Policy/midi', 'midi')}}
+  - : Controls whether the current document is allowed to use the [Web MIDI API](/en-US/docs/Web/API/Web_MIDI_API). When this policy is disabled, the {{jsxref("Promise")}} returned by {{domxref("Navigator.requestMIDIAccess()")}} will reject with a {{domxref("DOMException")}}.
+- {{httpheader('Feature-Policy/navigation-override','navigation-override')}}
+  - : Controls the availability of mechanisms that enables the page author to take control over the behavior of [spatial navigation](https://www.w3.org/TR/css-nav/), or to cancel it outright.
+- {{httpheader('Feature-Policy/oversized-images','oversized-images')}}
+  - : Controls whether the current document is allowed to download and display large images.
+- {{httpheader('Feature-Policy/payment', 'payment')}}
+  - : Controls whether the current document is allowed to use the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API). When this policy is enabled, the {{domxref("PaymentRequest","PaymentRequest()")}} constructor will throw a {{Exception("SecurityError")}} {{domxref("DOMException")}}.
+- {{httpheader('Feature-Policy/picture-in-picture', 'picture-in-picture')}}
+  - : Controls whether the current document is allowed to play a video in a Picture-in-Picture mode via the corresponding API.
+- {{httpheader("Feature-Policy/publickey-credentials-get", "publickey-credentials-get")}}
+  - : Controls whether the current document is allowed to use the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) to retrieve already stored public-key credentials, i.e. via {{domxref("CredentialsContainer.get","navigator.credentials.get({publicKey: ..., ...})")}}.
+- {{httpheader('Feature-Policy/sync-xhr', 'sync-xhr')}}
+  - : Controls whether the current document is allowed to make synchronous {{DOMxRef("XMLHttpRequest")}} requests.
+- {{httpheader('Feature-Policy/unoptimized-images', 'unoptimized-images')}} {{experimental_inline}}{{Non-standard_Inline}}
+  - : Controls whether the current document is allowed to download and display unoptimized images.
+- {{httpheader('Feature-Policy/unsized-media', 'unsized-media')}} {{experimental_inline}}{{Non-standard_Inline}}
+  - : Controls whether the current document is allowed to change the size of media elements after the initial layout is complete.
+- {{httpheader('Feature-Policy/usb', 'usb')}}
+  - : Controls whether the current document is allowed to use the [WebUSB API](https://wicg.github.io/webusb/).
+- {{httpheader('Feature-Policy/vibrate', 'vibrate')}} {{deprecated_inline}}{{experimental_inline}}{{Non-standard_Inline}}
+  - : Controls whether the current document is allowed to trigger device vibrations via {{DOMxRef("Navigator.vibrate","Navigator.vibrate()")}} method of [Vibration API](/en-US/docs/Web/API/Vibration_API).
+- {{httpheader('Feature-Policy/vr', 'vr')}} {{deprecated_inline}}
+  - : Controls whether the current document is allowed to use the [WebVR API](/en-US/docs/Web/API/WebVR_API). When this policy is disabled, the {{jsxref("Promise")}} returned by {{domxref("Navigator.getVRDisplays","Navigator.getVRDisplays()")}} will reject with a {{domxref("DOMException")}}. Keep in mind that the WebVR standard is in the process of being replaced with [WebXR](/en-US/docs/Web/API/WebXR_Device_API).
+- {{httpheader('Feature-Policy/screen-wake-lock', 'screen-wake-lock')}}
+  - : Controls whether the current document is allowed to use [Screen Wake Lock API](/en-US/docs/Web/API/Screen_Wake_Lock_API) to indicate that device should not turn off or dim the screen.
+- {{httpheader("Feature-Policy/web-share", "web-share")}}
+  - : Controls whether or not the current document is allowed to use the {{domxref("Navigator.share","Navigator.share()")}} of Web Share API to share text, links, images, and other content to arbitrary destinations of user's choice, e.g. mobile apps.
+- {{httpheader("Feature-Policy/xr-spatial-tracking", "xr-spatial-tracking")}}
+  - : Controls whether or not the current document is allowed to use the [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) to interact with a WebXR session.
 
-<p>SecureCorp Inc. wants to disable Microphone and Geolocation APIs in its application. It can do so by delivering the following HTTP response header to define a feature policy:</p>
+## Example
 
-<pre>Feature-Policy: microphone 'none'; geolocation 'none'</pre>
+SecureCorp Inc. wants to disable Microphone and Geolocation APIs in its application. It can do so by delivering the following HTTP response header to define a feature policy:
 
-<p>By specifying the <code>'none'</code> keyword for the origin list, the specified features will be disabled for all browsing contexts (this includes all iframes), regardless of their origin.</p>
+    Feature-Policy: microphone 'none'; geolocation 'none'
 
-<h2 id="Specifications">Specifications</h2>
+By specifying the `'none'` keyword for the origin list, the specified features will be disabled for all browsing contexts (this includes all iframes), regardless of their origin.
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><a href="https://w3c.github.io/webappsec-permissions-policy/#permissions-policy-http-header-field">Permissions Policy</a></td>
-  </tr>
- </tbody>
-</table>
+## Specifications
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+| Specification                                                                                                  |
+| -------------------------------------------------------------------------------------------------------------- |
+| [Permissions Policy](https://w3c.github.io/webappsec-permissions-policy/#permissions-policy-http-header-field) |
 
-<p>{{Compat}}</p>
+## Browser compatibility
 
-<h2 id="See_also">See also</h2>
+{{Compat}}
 
-<ul>
- <li><a href="/en-US/docs/Web/HTTP/Feature_Policy">Feature Policy</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy">Using Feature Policy</a></li>
- <li>{{DOMxRef("Document.featurePolicy")}} and {{DOMxRef("FeaturePolicy")}}</li>
- <li><a class="external external-icon" href="https://chrome.google.com/webstore/detail/feature-policy-tester-dev/pchamnkhkeokbpahnocjaeednpbpacop" rel="noopener">Feature-Policy Tester (Chrome Developer Tools extension)</a></li>
- <li>{{HTTPHeader("Content-Security-Policy")}}</li>
- <li>{{HTTPHeader("Referrer-Policy")}}</li>
-</ul>
+## See also
+
+- [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy)
+- [Using Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)
+- {{DOMxRef("Document.featurePolicy")}} and {{DOMxRef("FeaturePolicy")}}
+- [Feature-Policy Tester (Chrome Developer Tools extension)](https://chrome.google.com/webstore/detail/feature-policy-tester-dev/pchamnkhkeokbpahnocjaeednpbpacop)
+- {{HTTPHeader("Content-Security-Policy")}}
+- {{HTTPHeader("Referrer-Policy")}}

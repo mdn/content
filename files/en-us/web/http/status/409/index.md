@@ -8,26 +8,26 @@ tags:
   - Reference
 browser-compat: http.status.409
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The HTTP <code><strong>409 Conflict</strong></code> response status code indicates a request conflict with current state of the target resource.</p>
+The HTTP **`409 Conflict`** response status code indicates a request conflict with current state of the target resource.
 
-<p>Conflicts are most likely to occur in response to a {{HTTPMethod("PUT")}} request. For example, you may get a 409 response when uploading a file which is older than the one already on the server resulting in a version control conflict.</p>
+Conflicts are most likely to occur in response to a {{HTTPMethod("PUT")}} request. For example, you may get a 409 response when uploading a file which is older than the one already on the server resulting in a version control conflict.
 
-<h2 id="Status">Status</h2>
+## Status
 
-<pre class="brush: html">409 Conflict</pre>
+```html
+409 Conflict
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTTPMethod("PUT")}}</li>
-</ul>
+- {{HTTPMethod("PUT")}}

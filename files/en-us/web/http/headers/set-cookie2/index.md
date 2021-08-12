@@ -2,18 +2,18 @@
 title: Set-Cookie2
 slug: Web/HTTP/Headers/Set-Cookie2
 tags:
-- Cookies
-- HTTP
-- Deprecated
-- Reference
-- header
+  - Cookies
+  - HTTP
+  - Deprecated
+  - Reference
+  - header
 browser-compat: http.headers.Set-Cookie2
 ---
-<div>{{HTTPSidebar}} {{deprecated_header}}</div>
+{{HTTPSidebar}} {{deprecated_header}}
 
-<p>The obsolete <strong><code>Set-Cookie2</code></strong> HTTP response header used to
-  send cookies from the server to the user agent, but has been deprecated by the
-  specification. Use {{HTTPHeader("Set-Cookie")}} instead.</p>
+The obsolete **`Set-Cookie2`** HTTP response header used to
+send cookies from the server to the user agent, but has been deprecated by the
+specification. Use {{HTTPHeader("Set-Cookie")}} instead.
 
 <table class="properties">
   <tbody>
@@ -28,49 +28,38 @@ browser-compat: http.headers.Set-Cookie2
   </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: html">Set-Cookie2: &lt;cookie-name&gt;=&lt;cookie-value&gt;
-Set-Cookie2: &lt;cookie-name&gt;=&lt;cookie-value&gt;; Comment=&lt;value&gt;
-Set-Cookie2: &lt;cookie-name&gt;=&lt;cookie-value&gt;; CommentURL=&lt;http-url&gt;
-Set-Cookie2: &lt;cookie-name&gt;=&lt;cookie-value&gt;; Discard
-Set-Cookie2: &lt;cookie-name&gt;=&lt;cookie-value&gt;; Domain=&lt;domain-value&gt;
-Set-Cookie2: &lt;cookie-name&gt;=&lt;cookie-value&gt;; Max-Age=&lt;non-zero-digit&gt;
-Set-Cookie2: &lt;cookie-name&gt;=&lt;cookie-value&gt;; Path=&lt;path-value&gt;
-Set-Cookie2: &lt;cookie-name&gt;=&lt;cookie-value&gt;; Port=&lt;port-number&gt;
-Set-Cookie2: &lt;cookie-name&gt;=&lt;cookie-value&gt;; Secure
-Set-Cookie2: &lt;cookie-name&gt;=&lt;cookie-value&gt;; Version=&lt;version-number&gt;
+```html
+Set-Cookie2: <cookie-name>=<cookie-value>
+Set-Cookie2: <cookie-name>=<cookie-value>; Comment=<value>
+Set-Cookie2: <cookie-name>=<cookie-value>; CommentURL=<http-url>
+Set-Cookie2: <cookie-name>=<cookie-value>; Discard
+Set-Cookie2: <cookie-name>=<cookie-value>; Domain=<domain-value>
+Set-Cookie2: <cookie-name>=<cookie-value>; Max-Age=<non-zero-digit>
+Set-Cookie2: <cookie-name>=<cookie-value>; Path=<path-value>
+Set-Cookie2: <cookie-name>=<cookie-value>; Port=<port-number>
+Set-Cookie2: <cookie-name>=<cookie-value>; Secure
+Set-Cookie2: <cookie-name>=<cookie-value>; Version=<version-number>
 
 // Multiple directives are also possible, for example:
-Set-Cookie2: &lt;cookie-name&gt;=&lt;cookie-value&gt;; Domain=&lt;domain-value&gt;; Secure
+Set-Cookie2: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure
 
 // Multiple cookies are separated by a comma
-Set-Cookie2: &lt;cookie-name&gt;=&lt;cookie-value&gt;, &lt;cookie-name&gt;=&lt;cookie-value&gt;, ...
-</pre>
+Set-Cookie2: <cookie-name>=<cookie-value>, <cookie-name>=<cookie-value>, ...
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Title</th>
-    </tr>
-    <tr>
-      <td>{{RFC("2965", "Set-Cookie2")}}</td>
-      <td>Historic specification of HTTP State Management Mechanism, obsoleted
-        by {{RFC("6265")}}</td>
-    </tr>
-  </tbody>
-</table>
+| Specification                            | Title                                                                                        |
+| ---------------------------------------- | -------------------------------------------------------------------------------------------- |
+| {{RFC("2965", "Set-Cookie2")}} | Historic specification of HTTP State Management Mechanism, obsoleted by {{RFC("6265")}} |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{HTTPHeader("Set-Cookie")}}</li>
-  <li>{{domxref("Document.cookie")}}</li>
-</ul>
+- {{HTTPHeader("Set-Cookie")}}
+- {{domxref("Document.cookie")}}

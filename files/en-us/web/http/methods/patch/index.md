@@ -6,21 +6,21 @@ tags:
   - Reference
   - Request method
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The <strong>HTTP <code>PATCH</code> request method</strong> applies partial modifications to a resource.</p>
+The **HTTP `PATCH` request method** applies partial modifications to a resource.
 
-<p><code>PATCH</code> is somewhat analogous to the "update" concept found in {{Glossary("CRUD")}} (in general, HTTP is different than {{Glossary("CRUD")}}, and the two should not be confused).</p>
+`PATCH` is somewhat analogous to the "update" concept found in {{Glossary("CRUD")}} (in general, HTTP is different than {{Glossary("CRUD")}}, and the two should not be confused).
 
-<p>A <code>PATCH</code> request is considered a set of instructions on how to modify a resource. Contrast this with {{HTTPMethod("PUT")}}; which is a complete representation of a resource.</p>
+A `PATCH` request is considered a set of instructions on how to modify a resource. Contrast this with {{HTTPMethod("PUT")}}; which is a complete representation of a resource.
 
-<p>A <code>PATCH</code> is not necessarily idempotent, although it can be. Contrast this with {{HTTPMethod("PUT")}}; which is always idempotent. The word "idempotent" means that any number of repeated, identical requests will leave the resource in the same state. For example if an auto-incrementing counter field is an integral part of the resource, then a {{HTTPMethod("PUT")}} will naturally overwrite it (since it overwrites everything), but not necessarily so for <code>PATCH</code>.</p>
+A `PATCH` is not necessarily idempotent, although it can be. Contrast this with {{HTTPMethod("PUT")}}; which is always idempotent. The word "idempotent" means that any number of repeated, identical requests will leave the resource in the same state. For example if an auto-incrementing counter field is an integral part of the resource, then a {{HTTPMethod("PUT")}} will naturally overwrite it (since it overwrites everything), but not necessarily so for `PATCH`.
 
-<p><code>PATCH</code> (like {{HTTPMethod("POST")}}) <em>may</em> have side-effects on other resources.</p>
+`PATCH` (like {{HTTPMethod("POST")}}) _may_ have side-effects on other resources.
 
-<p>To find out whether a server supports <code>PATCH</code>, a server can advertise its support by adding it to the list in the {{HTTPHeader("Allow")}} or {{HTTPHeader("Access-Control-Allow-Methods")}} (for <a href="/en-US/docs/Web/HTTP/CORS">CORS</a>) response headers.</p>
+To find out whether a server supports `PATCH`, a server can advertise its support by adding it to the list in the {{HTTPHeader("Allow")}} or {{HTTPHeader("Access-Control-Allow-Methods")}} (for [CORS](/en-US/docs/Web/HTTP/CORS)) response headers.
 
-<p>Another (implicit) indication that <code>PATCH</code> is allowed, is the presence of the {{HTTPHeader("Accept-Patch")}} header, which specifies the patch document formats accepted by the server.</p>
+Another (implicit) indication that `PATCH` is allowed, is the presence of the {{HTTPHeader("Accept-Patch")}} header, which specifies the patch document formats accepted by the server.
 
 <table class="properties">
   <tbody>
@@ -45,60 +45,50 @@ tags:
       <td>No</td>
     </tr>
     <tr>
-      <th scope="row">Allowed in <a href="/en-US/docs/Learn/Forms">HTML forms</a></th>
+      <th scope="row">
+        Allowed in <a href="/en-US/docs/Learn/Forms">HTML forms</a>
+      </th>
       <td>No</td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: html">PATCH /file.txt HTTP/1.1
-</pre>
+```html
+PATCH /file.txt HTTP/1.1
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="Request">Request</h3>
+### Request
 
-<pre>PATCH /file.txt HTTP/1.1
-Host: www.example.com
-Content-Type: application/example
-If-Match: "e0023aa4e"
-Content-Length: 100
+    PATCH /file.txt HTTP/1.1
+    Host: www.example.com
+    Content-Type: application/example
+    If-Match: "e0023aa4e"
+    Content-Length: 100
 
-[description of changes]</pre>
+    [description of changes]
 
-<h3 id="Response">Response</h3>
+### Response
 
-<p>A successful response is indicated by any <a href="https://datatracker.ietf.org/doc/html/rfc7231#section-6.3">2xx</a> status code.</p>
+A successful response is indicated by any [2xx](https://datatracker.ietf.org/doc/html/rfc7231#section-6.3) status code.
 
-<p>In the example below a {{HTTPStatus("204")}} response code is used, because the response does not carry a payload body. A {{HTTPStatus("200")}} response could have contained a payload body.</p>
+In the example below a {{HTTPStatus("204")}} response code is used, because the response does not carry a payload body. A {{HTTPStatus("200")}} response could have contained a payload body.
 
-<pre>HTTP/1.1 204 No Content
-Content-Location: /file.txt
-ETag: "e0023aa4f"</pre>
+    HTTP/1.1 204 No Content
+    Content-Location: /file.txt
+    ETag: "e0023aa4f"
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Title</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{RFC("5789", "PATCH")}}</td>
-   <td>PATCH Method for HTTP</td>
-  </tr>
- </tbody>
-</table>
+| Specification                    | Title                 |
+| -------------------------------- | --------------------- |
+| {{RFC("5789", "PATCH")}} | PATCH Method for HTTP |
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTTPStatus("204")}}</li>
- <li>{{HTTPHeader("Allow")}}, {{HTTPHeader("Access-Control-Allow-Methods")}}</li>
- <li>{{HTTPHeader("Accept-Patch")}} – specifies the patch document formats accepted by the server.</li>
-</ul>
+- {{HTTPStatus("204")}}
+- {{HTTPHeader("Allow")}}, {{HTTPHeader("Access-Control-Allow-Methods")}}
+- {{HTTPHeader("Accept-Patch")}} – specifies the patch document formats accepted by the server.

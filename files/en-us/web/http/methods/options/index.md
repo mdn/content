@@ -7,9 +7,9 @@ tags:
   - Request method
 browser-compat: http.methods.OPTIONS
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The <strong>HTTP <code>OPTIONS</code> method</strong> requests permitted communication options for a given URL or server. A client can specify a URL with this method, or an asterisk (<code>*</code>) to refer to the entire server.</p>
+The **HTTP `OPTIONS` method** requests permitted communication options for a given URL or server. A client can specify a URL with this method, or an asterisk (`*`) to refer to the entire server.
 
 <table class="properties">
   <tbody>
@@ -40,83 +40,83 @@ browser-compat: http.methods.OPTIONS
   </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: html">OPTIONS /index.html HTTP/1.1
+```html
+OPTIONS /index.html HTTP/1.1
 OPTIONS * HTTP/1.1
-</pre>
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Identifying_allowed_request_methods">Identifying allowed request methods</h3>
+### Identifying allowed request methods
 
-<p>To find out which request methods a server supports, one can use the <code>curl</code> command-line program to issue an <code>OPTIONS</code> request:</p>
+To find out which request methods a server supports, one can use the `curl` command-line program to issue an `OPTIONS` request:
 
-<pre class="brush: bash">curl -X OPTIONS https://example.org -i</pre>
+```bash
+curl -X OPTIONS https://example.org -i
+```
 
-<p>The response then contains an {{HTTPHeader("Allow")}} header that holds the allowed methods:</p>
+The response then contains an {{HTTPHeader("Allow")}} header that holds the allowed methods:
 
-<pre>HTTP/1.1 204 No Content
-<mark>Allow: OPTIONS, GET, HEAD, POST</mark>
-Cache-Control: max-age=604800
-Date: Thu, 13 Oct 2016 11:45:00 GMT
-Server: EOS (lax004/2813)
-</pre>
+    HTTP/1.1 204 No Content
+    Allow: OPTIONS, GET, HEAD, POST
+    Cache-Control: max-age=604800
+    Date: Thu, 13 Oct 2016 11:45:00 GMT
+    Server: EOS (lax004/2813)
 
-<h3 id="Preflighted_requests_in_CORS">Preflighted requests in CORS</h3>
+### Preflighted requests in CORS
 
-<p>In <a href="/en-US/docs/Web/HTTP/CORS">CORS</a>, a <a href="/en-US/docs/Glossary/Preflight_request">preflight request</a> is sent with the <code>OPTIONS</code> method so that the server can respond if it is acceptable to send the request. In this example, we will request permission for these parameters:</p>
+In [CORS](/en-US/docs/Web/HTTP/CORS), a [preflight request](/en-US/docs/Glossary/Preflight_request) is sent with the `OPTIONS` method so that the server can respond if it is acceptable to send the request. In this example, we will request permission for these parameters:
 
-<ul>
- <li>The {{HTTPHeader("Access-Control-Request-Method")}} header sent in the preflight request tells the server that when the actual request is sent, it will have a {{HTTPMethod("POST")}} request method.</li>
- <li>The {{HTTPHeader("Access-Control-Request-Headers")}} header tells the server that when the actual request is sent, it will have the <code>X-PINGOTHER</code> and <code>Content-Type</code> headers.</li>
-</ul>
+- The {{HTTPHeader("Access-Control-Request-Method")}} header sent in the preflight request tells the server that when the actual request is sent, it will have a {{HTTPMethod("POST")}} request method.
+- The {{HTTPHeader("Access-Control-Request-Headers")}} header tells the server that when the actual request is sent, it will have the `X-PINGOTHER` and `Content-Type` headers.
 
-<pre>OPTIONS /resources/post-here/ HTTP/1.1
-Host: bar.example
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
-Accept-Language: en-us,en;q=0.5
-Accept-Encoding: gzip,deflate
-Connection: keep-alive
-Origin: https://foo.example
-<mark>Access-Control-Request-Method: POST
-Access-Control-Request-Headers: X-PINGOTHER, Content-Type</mark></pre>
+<!---->
 
-<p>The server now can respond if it will accept a request under these circumstances. In this example, the server response says that:</p>
+    OPTIONS /resources/post-here/ HTTP/1.1
+    Host: bar.example
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+    Accept-Language: en-us,en;q=0.5
+    Accept-Encoding: gzip,deflate
+    Connection: keep-alive
+    Origin: https://foo.example
+    Access-Control-Request-Method: POST
+    Access-Control-Request-Headers: X-PINGOTHER, Content-Type
 
-<dl>
- <dt>{{HTTPHeader("Access-Control-Allow-Origin")}}</dt>
- <dd>The <code>https://foo.example</code> origin is permitted to request the <code>bar.example/resources/post-here/</code> URL via the following:</dd>
- <dt>{{HTTPHeader("Access-Control-Allow-Methods")}}</dt>
- <dd>{{HTTPMethod("POST")}}, {{HTTPMethod("GET")}}, and <code>OPTIONS</code> are permitted methods for the URL. (This header is similar to the {{HTTPHeader("Allow")}} response header, but used only for <a href="/en-US/docs/Web/HTTP/CORS">CORS</a>.)</dd>
- <dt>{{HTTPHeader("Access-Control-Allow-Headers")}}</dt>
- <dd>Any script inspecting the response is permitted to read the values of the <code>X-PINGOTHER</code> and <code>Content-Type</code> headers.</dd>
- <dt>{{HTTPHeader("Access-Control-Max-Age")}}</dt>
- <dd>The above permissions may be cached for 86,400 seconds (1 day).</dd>
-</dl>
+The server now can respond if it will accept a request under these circumstances. In this example, the server response says that:
 
-<pre>HTTP/1.1 204 No Content
-Date: Mon, 01 Dec 2008 01:15:39 GMT
-Server: Apache/2.0.61 (Unix)
-<mark>Access-Control-Allow-Origin: https://foo.example
-Access-Control-Allow-Methods: POST, GET, OPTIONS
-Access-Control-Allow-Headers: X-PINGOTHER, Content-Type
-Access-Control-Max-Age: 86400</mark>
-Vary: Accept-Encoding, Origin
-Keep-Alive: timeout=2, max=100
-Connection: Keep-Alive</pre>
+- {{HTTPHeader("Access-Control-Allow-Origin")}}
+  - : The `https://foo.example` origin is permitted to request the `bar.example/resources/post-here/` URL via the following:
+- {{HTTPHeader("Access-Control-Allow-Methods")}}
+  - : {{HTTPMethod("POST")}}, {{HTTPMethod("GET")}}, and `OPTIONS` are permitted methods for the URL. (This header is similar to the {{HTTPHeader("Allow")}} response header, but used only for [CORS](/en-US/docs/Web/HTTP/CORS).)
+- {{HTTPHeader("Access-Control-Allow-Headers")}}
+  - : Any script inspecting the response is permitted to read the values of the `X-PINGOTHER` and `Content-Type` headers.
+- {{HTTPHeader("Access-Control-Max-Age")}}
+  - : The above permissions may be cached for 86,400 seconds (1 day).
 
-<h2 id="Specifications">Specifications</h2>
+<!---->
+
+    HTTP/1.1 204 No Content
+    Date: Mon, 01 Dec 2008 01:15:39 GMT
+    Server: Apache/2.0.61 (Unix)
+    Access-Control-Allow-Origin: https://foo.example
+    Access-Control-Allow-Methods: POST, GET, OPTIONS
+    Access-Control-Allow-Headers: X-PINGOTHER, Content-Type
+    Access-Control-Max-Age: 86400
+    Vary: Accept-Encoding, Origin
+    Keep-Alive: timeout=2, max=100
+    Connection: Keep-Alive
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTTPHeader("Allow")}} header</li>
- <li><a href="/en-US/docs/Web/HTTP/CORS">CORS</a></li>
-</ul>
+- {{HTTPHeader("Allow")}} header
+- [CORS](/en-US/docs/Web/HTTP/CORS)

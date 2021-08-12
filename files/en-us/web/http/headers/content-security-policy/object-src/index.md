@@ -2,34 +2,32 @@
 title: 'CSP: object-src'
 slug: Web/HTTP/Headers/Content-Security-Policy/object-src
 tags:
-- CSP
-- Content-Security-Policy
-- Directive
-- HTTP
-- Object
-- Reference
-- Security
-- object-src
-- source
+  - CSP
+  - Content-Security-Policy
+  - Directive
+  - HTTP
+  - Object
+  - Reference
+  - Security
+  - object-src
+  - source
 browser-compat: http.headers.csp.Content-Security-Policy.object-src
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The HTTP {{HTTPHeader("Content-Security-Policy")}}
-  <code><strong>object-src</strong></code> directive specifies valid sources for the
-  {{HTMLElement("object")}}, {{HTMLElement("embed")}}, and {{HTMLElement("applet")}}
-  elements.</p>
+The HTTP {{HTTPHeader("Content-Security-Policy")}}
+**`object-src`** directive specifies valid sources for the
+{{HTMLElement("object")}}, {{HTMLElement("embed")}}, and {{HTMLElement("applet")}}
+elements.
 
-<p>To set allowed types for {{HTMLElement("object")}}, {{HTMLElement("embed")}}, and
-  {{HTMLElement("applet")}} elements, use the {{CSP("plugin-types")}} directive.</p>
+To set allowed types for {{HTMLElement("object")}}, {{HTMLElement("embed")}}, and
+{{HTMLElement("applet")}} elements, use the {{CSP("plugin-types")}} directive.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Elements controlled by <code>object-src</code> are perhaps coincidentally
-    considered legacy HTML elements and aren't receiving new standardized features (such as
-    the security attributes <code>sandbox</code> or <code>allow</code> for
-    <code>&lt;iframe&gt;</code>). Therefore it is <a href="https://csp.withgoogle.com/docs/strict-csp.html">recommended</a> to restrict
-    this fetch-directive (e.g. explicitly set <code>object-src 'none'</code> if possible).</p>
-</div>
+> **Note:** Elements controlled by `object-src` are perhaps coincidentally
+> considered legacy HTML elements and aren't receiving new standardized features (such as
+> the security attributes `sandbox` or `allow` for
+> `<iframe>`). Therefore it is [recommended](https://csp.withgoogle.com/docs/strict-csp.html) to restrict
+> this fetch-directive (e.g. explicitly set `object-src 'none'` if possible).
 
 <table class="properties">
   <tbody>
@@ -43,52 +41,56 @@ browser-compat: http.headers.csp.Content-Security-Policy.object-src
     </tr>
     <tr>
       <th scope="row">{{CSP("default-src")}} fallback</th>
-      <td>Yes. If this directive is absent, the user agent will look for the
-        <code>default-src</code> directive.</td>
+      <td>
+        Yes. If this directive is absent, the user agent will look for the
+        <code>default-src</code> directive.
+      </td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>One or more sources can be allowed for the object-src policy:</p>
+One or more sources can be allowed for the object-src policy:
 
-<pre class="brush: html">Content-Security-Policy: object-src &lt;source&gt;;
-Content-Security-Policy: object-src &lt;source&gt; &lt;source&gt;;
-</pre>
+```html
+Content-Security-Policy: object-src <source>;
+Content-Security-Policy: object-src <source> <source>;
+```
 
-<h3 id="Sources">Sources</h3>
+### Sources
 
-<p>{{page("Web/HTTP/Headers/Content-Security-Policy/connect-src", "Sources")}}</p>
+{{page("Web/HTTP/Headers/Content-Security-Policy/connect-src", "Sources")}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Violation_cases">Violation cases</h3>
+### Violation cases
 
-<p>Given this CSP header:</p>
+Given this CSP header:
 
-<pre class="brush: bash">Content-Security-Policy: object-src https://example.com/</pre>
+```bash
+Content-Security-Policy: object-src https://example.com/
+```
 
-<p>The following {{HTMLElement("object")}}, {{HTMLElement("embed")}}, and
-  {{HTMLElement("applet")}} elements are blocked and won't load:</p>
+The following {{HTMLElement("object")}}, {{HTMLElement("embed")}}, and
+{{HTMLElement("applet")}} elements are blocked and won't load:
 
-<pre class="brush: html">&lt;embed src="https://not-example.com/flash"&gt;&lt;/embed&gt;
-&lt;object data="https://not-example.com/plugin"&gt;&lt;/object&gt;
-&lt;applet archive="https://not-example.com/java"&gt;&lt;/applet&gt;</pre>
+```html
+<embed src="https://not-example.com/flash"></embed>
+<object data="https://not-example.com/plugin"></object>
+<applet archive="https://not-example.com/java"></applet>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{HTTPHeader("Content-Security-Policy")}}</li>
-  <li>{{HTMLElement("object")}}, {{HTMLElement("embed")}}, and {{HTMLElement("applet")}}
-  </li>
-  <li>{{CSP("plugin-types")}}</li>
-</ul>
+- {{HTTPHeader("Content-Security-Policy")}}
+- {{HTMLElement("object")}}, {{HTMLElement("embed")}}, and {{HTMLElement("applet")}}
+- {{CSP("plugin-types")}}

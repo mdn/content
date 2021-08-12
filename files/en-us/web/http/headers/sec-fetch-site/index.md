@@ -10,89 +10,83 @@ tags:
   - Request header
 browser-compat: http.headers.Sec-Fetch-Site
 ---
-<p>{{HTTPSidebar}}</p>
+{{HTTPSidebar}}
 
-<p>The <strong><code>Sec-Fetch-Site</code></strong> {{Glossary("Fetch metadata request header", "fetch metadata request header")}} indicates the relationship between a request initiator's origin and the origin of the requested resource.</p>
+The **`Sec-Fetch-Site`** {{Glossary("Fetch metadata request header", "fetch metadata request header")}} indicates the relationship between a request initiator's origin and the origin of the requested resource.
 
-<p>In other words, this header tells a server whether a request for a resource is coming from the same origin, the same site, a different site, or is a "user initiated" request. The server can then use this information to decide if the request should be allowed.</p>
+In other words, this header tells a server whether a request for a resource is coming from the same origin, the same site, a different site, or is a "user initiated" request. The server can then use this information to decide if the request should be allowed.
 
-<p>Same-origin requests would usually be allowed by default, but what happens for requests from other origins may further depend on what resource is being requested, or information in other {{Glossary("Fetch metadata request header","Fetch metadata request headers")}}. By default, requests that are not accepted should be rejected with a {{HTTPStatus("403")}} response code.</p>
+Same-origin requests would usually be allowed by default, but what happens for requests from other origins may further depend on what resource is being requested, or information in other {{Glossary("Fetch metadata request header","Fetch metadata request headers")}}. By default, requests that are not accepted should be rejected with a {{HTTPStatus("403")}} response code.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Fetch Metadata Request Header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>yes (prefix <code>Sec-</code>)</td>
-  </tr>
-   <th scope="row">{{Glossary("CORS-safelisted request header")}}</th>
-   <td>no</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Header type</th>
+      <td>{{Glossary("Fetch Metadata Request Header")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>yes (prefix <code>Sec-</code>)</td>
+    </tr>
+    <tr>
+      <th scope="row">
+        {{Glossary("CORS-safelisted request header")}}
+      </th>
+      <td>no</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre>Sec-Fetch-Site: cross-site
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Site: same-site
-Sec-Fetch-Site: none
-</pre>
+    Sec-Fetch-Site: cross-site
+    Sec-Fetch-Site: same-origin
+    Sec-Fetch-Site: same-site
+    Sec-Fetch-Site: none
 
-<h2 id="Directives">Directives</h2>
+## Directives
 
-<dl>
-  <dt><code>cross-site</code></dt>
-  <dd>The request initiator and the server hosting the resource have a different site (i.e. a request by "potentially-evil.com" for a resource at "example.com").</dd>
-  <dt><code>same-origin</code></dt>
-  <dd>The request initiator and the server hosting the resource have the same {{Glossary("origin")}} (same scheme, host and port).</dd>
-  <dt><code>same-site</code></dt>
-  <dd>The request initiator and the server hosting the resource have the same scheme, domain and/or subdomain, but not necessarily the same port.</dd>
-  <dt><code>none</code></dt>
-  <dd>This request is a user-originated operation. For example: entering a URL into the address bar, opening a bookmark, or dragging-and-dropping a file into the browser window.</dd>
- </dl>
+- `cross-site`
+  - : The request initiator and the server hosting the resource have a different site (i.e. a request by "potentially-evil.com" for a resource at "example.com").
+- `same-origin`
+  - : The request initiator and the server hosting the resource have the same {{Glossary("origin")}} (same scheme, host and port).
+- `same-site`
+  - : The request initiator and the server hosting the resource have the same scheme, domain and/or subdomain, but not necessarily the same port.
+- `none`
+  - : This request is a user-originated operation. For example: entering a URL into the address bar, opening a bookmark, or dragging-and-dropping a file into the browser window.
 
+## Examples
 
- <h2 id="Examples">Examples</h2>
+A fetch request to `https://mysite.example/foo.json` originating from a web page on `https://mysite.example` (with the same port) is a same-origin request.
+The browser will generate the `Sec-Fetch-Site: same-origin` header as shown below, and the server will typically allow the request:
 
- <p>A fetch request to <code>https://mysite.example/foo.json</code> originating from a web page on <code>https://mysite.example</code> (with the same port) is a same-origin request.
-The browser will generate the <code>Sec-Fetch-Site: same-origin</code> header as shown below, and the server will typically allow the request:</p>
+    GET /foo.json
+    Sec-Fetch-Dest: empty
+    Sec-Fetch-Mode: cors
+    Sec-Fetch-Site: same-origin
 
- <pre>GET /foo.json
-Sec-Fetch-Dest: empty
-Sec-Fetch-Mode: cors
-Sec-Fetch-Site: same-origin
-</pre>
+A fetch request to the same URL from another site, for example `potentially-evil.com`, causes the browser to generate a different header (e.g. `Sec-Fetch-Site: cross-site`), which the server can choose to accept or reject:
 
-<p>A fetch request to the same URL from another site, for example <code>potentially-evil.com</code>, causes the browser to generate a different header (e.g. <code>Sec-Fetch-Site: cross-site</code>), which the server can choose to accept or reject:</p>
+    GET /foo.json
+    Sec-Fetch-Dest: empty
+    Sec-Fetch-Mode: cors
+    Sec-Fetch-Site: cross-site
 
-<pre>GET /foo.json
-Sec-Fetch-Dest: empty
-Sec-Fetch-Mode: cors
-Sec-Fetch-Site: cross-site
-</pre>
+## Specifications
 
-<h2 id="Specifications">Specifications</h2>
+{{Specifications}}
 
-<p>{{Specifications}}</p>
+## Browser compatibility
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+{{Compat}}
 
-<p>{{Compat}}</p>
+## See also
 
-<h2 id="See_also">See also</h2>
+- Related headers
 
-<ul>
- <li>Related headers
-  <ul>
-    <li>{{HTTPHeader("Sec-Fetch-Mode")}}</li>
-    <li>{{HTTPHeader("Sec-Fetch-User")}}</li>
-    <li>{{HTTPHeader("Sec-Fetch-Dest")}}</li>
-   </ul>
- </li>
- <li><a href="https://web.dev/fetch-metadata/">Protect your resources from web attacks with Fetch Metadata</a> (web.dev)</li>
- <li><a href="https://secmetadata.appspot.com/">Fetch Metadata Request Headers playground</a> (secmetadata.appspot.com)</li>
-</ul>
+  - {{HTTPHeader("Sec-Fetch-Mode")}}
+  - {{HTTPHeader("Sec-Fetch-User")}}
+  - {{HTTPHeader("Sec-Fetch-Dest")}}
+
+- [Protect your resources from web attacks with Fetch Metadata](https://web.dev/fetch-metadata/) (web.dev)
+- [Fetch Metadata Request Headers playground](https://secmetadata.appspot.com/) (secmetadata.appspot.com)

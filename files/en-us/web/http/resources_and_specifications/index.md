@@ -5,258 +5,55 @@ tags:
   - Guide
   - HTTP
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>HTTP was first specified in the early 1990s. Designed with extensibility in mind, it has seen numerous additions over the years; this lead to its specification being scattered through numerous specification documents (in the midst of experimental abandoned extensions). This page lists relevant resources about HTTP.</p>
+HTTP was first specified in the early 1990s. Designed with extensibility in mind, it has seen numerous additions over the years; this lead to its specification being scattered through numerous specification documents (in the midst of experimental abandoned extensions). This page lists relevant resources about HTTP.
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Title</th>
-   <th scope="col">Status</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{rfc(7230)}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing</td>
-   <td>Proposed Standard</td>
-  </tr>
-  <tr>
-   <td>{{rfc(7231)}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
-   <td>Proposed Standard</td>
-  </tr>
-  <tr>
-   <td>{{rfc(7232)}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests</td>
-   <td>Proposed Standard</td>
-  </tr>
-  <tr>
-   <td>{{rfc(7233)}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Range Requests</td>
-   <td>Proposed Standard</td>
-  </tr>
-  <tr>
-   <td>{{rfc(7234)}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Caching</td>
-   <td>Proposed Standard</td>
-  </tr>
-  <tr>
-   <td>{{rfc(5861)}}</td>
-   <td>HTTP Cache-Control Extensions for Stale Content</td>
-   <td>Informational</td>
-  </tr>
-  <tr>
-   <td>{{rfc(8246)}}</td>
-   <td>HTTP Immutable Responses</td>
-   <td>Proposed Standard</td>
-  </tr>
-  <tr>
-   <td>{{rfc(7235)}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Authentication</td>
-   <td>Proposed Standard</td>
-  </tr>
-  <tr>
-   <td>{{rfc(6265)}}</td>
-   <td>HTTP State Management Mechanism<br>
-    <em>Defines Cookies</em></td>
-   <td>Proposed Standard</td>
-  </tr>
-  <tr>
-   <td><a href="https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-cookie-prefixes-00">Draft spec</a></td>
-   <td>Cookie Prefixes</td>
-   <td>IETF Draft</td>
-  </tr>
-  <tr>
-   <td><a href="https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-cookie-same-site-00">Draft spec</a></td>
-   <td>Same-Site Cookies</td>
-   <td>IETF Draft</td>
-  </tr>
-  <tr>
-   <td><a href="https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-cookie-alone-01">Draft spec</a></td>
-   <td>Deprecate modification of 'secure' cookies from non-secure origins</td>
-   <td>IETF Draft</td>
-  </tr>
-  <tr>
-   <td>{{rfc(2145)}}</td>
-   <td>Use and Interpretation of HTTP Version Numbers</td>
-   <td>Informational</td>
-  </tr>
-  <tr>
-   <td>{{rfc(6585)}}</td>
-   <td>Additional HTTP Status Codes</td>
-   <td>Proposed Standard</td>
-  </tr>
-  <tr>
-   <td>{{rfc(7538)}}</td>
-   <td>The Hypertext Transfer Protocol Status Code 308 (Permanent Redirect)</td>
-   <td>Proposed Standard</td>
-  </tr>
-  <tr>
-   <td>{{rfc(7725)}}</td>
-   <td>An HTTP Status Code to Report Legal Obstacles</td>
-   <td>On the standard track</td>
-  </tr>
-  <tr>
-   <td>{{rfc(2397)}}</td>
-   <td>The "data" URL scheme</td>
-   <td>Proposed Standard</td>
-  </tr>
-  <tr>
-   <td>{{rfc(3986)}}</td>
-   <td>Uniform Resource Identifier (URI): Generic Syntax</td>
-   <td>Internet Standard</td>
-  </tr>
-  <tr>
-   <td>{{rfc(5988)}}</td>
-   <td>Web Linking<br>
-    <em>Defines the {{HTTPHeader("Link")}} header</em></td>
-   <td>Proposed Standard</td>
-  </tr>
-  <tr>
-   <td><a href="https://tools.ietf.org/id/draft-thomson-hybi-http-timeout-01.html">Experimental spec</a></td>
-   <td>Hypertext Transfer Protocol (HTTP) Keep-Alive Header</td>
-   <td>Informational (Expired)</td>
-  </tr>
-  <tr>
-   <td><a href="http://httpwg.org/http-extensions/client-hints.html">Draft spec</a></td>
-   <td>HTTP Client Hints</td>
-   <td>IETF Draft</td>
-  </tr>
-  <tr>
-   <td>{{rfc(7578)}}</td>
-   <td>Returning Values from Forms: multipart/form-data</td>
-   <td>Proposed Standard</td>
-  </tr>
-  <tr>
-   <td>{{rfc(6266)}}</td>
-   <td>Use of the Content-Disposition Header Field in the Hypertext Transfer Protocol (HTTP)</td>
-   <td>Proposed Standard</td>
-  </tr>
-  <tr>
-   <td>{{rfc(2183)}}</td>
-   <td>Communicating Presentation Information in Internet Messages: The Content-Disposition Header Field<br>
-    <em>Only a subset of syntax of the {{HTTPHeader("Content-Disposition")}} header can be used in the context of HTTP messages.</em></td>
-   <td>Proposed Standard</td>
-  </tr>
-  <tr>
-   <td>{{rfc(7239)}}</td>
-   <td>Forwarded HTTP Extension</td>
-   <td>Proposed Standard</td>
-  </tr>
-  <tr>
-   <td>{{rfc(6455)}}</td>
-   <td>The WebSocket Protocol</td>
-   <td>Proposed Standard</td>
-  </tr>
-  <tr>
-   <td>{{rfc(5246)}}</td>
-   <td>The Transport Layer Security (TLS) Protocol Version 1.2<br>
-    <em>This specification has been modified by subsequent RFCs, but these modifications have no effect on the HTTP protocol.</em></td>
-   <td>Proposed Standard</td>
-  </tr>
-  <tr>
-   <td>{{rfc(8446)}}</td>
-   <td>The Transport Layer Security (TLS) Protocol Version 1.3<br>
-    <em>Supersedes TLS 1.2.</em></td>
-   <td>Proposed Standard</td>
-  </tr>
-  <tr>
-   <td>{{rfc(2817)}}</td>
-   <td>Upgrading to TLS Within HTTP/1.1</td>
-   <td>Proposed Standard</td>
-  </tr>
-  <tr>
-   <td>{{rfc(7540)}}</td>
-   <td>Hypertext Transfer Protocol Version 2 (HTTP/2)</td>
-   <td>Proposed Standard</td>
-  </tr>
-  <tr>
-   <td>{{rfc(7541)}}</td>
-   <td>HPACK: Header Compression for HTTP/2</td>
-   <td>On the standard track</td>
-  </tr>
-  <tr>
-   <td>{{rfc(7838)}}</td>
-   <td>HTTP Alternative Services</td>
-   <td>On the standard track</td>
-  </tr>
-  <tr>
-   <td>{{rfc(7301)}}</td>
-   <td>Transport Layer Security (TLS) Application-Layer Protocol Negotiation Extension<br>
-    <em>Used to negotiate HTTP/2 at the transport to save an extra request/response round trip.</em></td>
-   <td>Proposed Standard</td>
-  </tr>
-  <tr>
-   <td>{{rfc(6454)}}</td>
-   <td>The Web Origin Concept</td>
-   <td>Proposed Standard</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Fetch', '#cors-protocol', 'CORS')}}</td>
-   <td>Cross-Origin Resource Sharing</td>
-   <td>{{Spec2("Fetch")}}</td>
-  </tr>
-  <tr>
-   <td>{{rfc(7034)}}</td>
-   <td>HTTP Header Field X-Frame-Options</td>
-   <td>Informational</td>
-  </tr>
-  <tr>
-   <td>{{rfc(6797)}}</td>
-   <td>HTTP Strict Transport Security (HSTS)</td>
-   <td>Proposed Standard</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("Upgrade Insecure Requests")}}</td>
-   <td>Upgrade Insecure Requests</td>
-   <td>{{Spec2("Upgrade Insecure Requests")}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSP 1.0")}}</td>
-   <td>Content Security Policy 1.0<br>
-    <em>CSP 1.1 and CSP 3.0 doesn't extend the HTTP standard</em></td>
-   <td>{{Spec2("CSP 1.0")}}</td>
-  </tr>
-  <tr>
-   <td><a href="https://msdn.microsoft.com/en-us/library/jj676915(v=vs.85).aspx">Microsoft document</a></td>
-   <td>Specifying legacy document modes*<br>
-    <em>Defines X-UA-Compatible</em></td>
-   <td>Note</td>
-  </tr>
-  <tr>
-   <td>{{rfc(5689)}}</td>
-   <td>HTTP Extensions for Web Distributed Authoring and Versioning (WebDAV)<br>
-    <em>These extensions of the Web, as well as CardDAV and CalDAV, are out-of-scope for HTTP on the Web. Modern APIs for application are defines using the RESTful pattern nowadays.</em></td>
-   <td>Proposed Standard</td>
-  </tr>
-  <tr>
-   <td>{{rfc(2324)}}</td>
-   <td>Hyper Text Coffee Pot Control Protocol (HTCPCP/1.0)</td>
-   <td>April 1st joke spec</td>
-  </tr>
-  <tr>
-   <td>{{rfc(7168)}}</td>
-   <td>The Hyper Text Coffee Pot Control Protocol for Tea Efflux Appliances (HTCPCP-TEA)</td>
-   <td>April 1st joke spec</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML WHATWG")}}</td>
-   <td>HTML<br>
-    <em>Defines extensions of HTTP for Server-Sent Events</em></td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-  </tr>
-  <tr>
-   <td><a href="https://wicg.github.io/reporting/">Reporting API</a></td>
-   <td><code>Report-To</code> header</td>
-   <td>Draft</td>
-  </tr>
-  <tr>
-   <td><a href="https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-expect-ct-01">Draft spec</a></td>
-   <td>Expect-CT Extension for HTTP</td>
-   <td>IETF Draft</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                              | Title                                                                                                                                                                                                                                                 | Status                                               |
+| ------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
+| {{rfc(7230)}}                                                                           | Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing                                                                                                                                                                                    | Proposed Standard                                    |
+| {{rfc(7231)}}                                                                           | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content                                                                                                                                                                                         | Proposed Standard                                    |
+| {{rfc(7232)}}                                                                           | Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests                                                                                                                                                                                          | Proposed Standard                                    |
+| {{rfc(7233)}}                                                                           | Hypertext Transfer Protocol (HTTP/1.1): Range Requests                                                                                                                                                                                                | Proposed Standard                                    |
+| {{rfc(7234)}}                                                                           | Hypertext Transfer Protocol (HTTP/1.1): Caching                                                                                                                                                                                                       | Proposed Standard                                    |
+| {{rfc(5861)}}                                                                           | HTTP Cache-Control Extensions for Stale Content                                                                                                                                                                                                       | Informational                                        |
+| {{rfc(8246)}}                                                                           | HTTP Immutable Responses                                                                                                                                                                                                                              | Proposed Standard                                    |
+| {{rfc(7235)}}                                                                           | Hypertext Transfer Protocol (HTTP/1.1): Authentication                                                                                                                                                                                                | Proposed Standard                                    |
+| {{rfc(6265)}}                                                                           | HTTP State Management Mechanism _Defines Cookies_                                                                                                                                                                                                     | Proposed Standard                                    |
+| [Draft spec](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-cookie-prefixes-00)  | Cookie Prefixes                                                                                                                                                                                                                                       | IETF Draft                                           |
+| [Draft spec](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-cookie-same-site-00) | Same-Site Cookies                                                                                                                                                                                                                                     | IETF Draft                                           |
+| [Draft spec](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-cookie-alone-01)     | Deprecate modification of 'secure' cookies from non-secure origins                                                                                                                                                                                    | IETF Draft                                           |
+| {{rfc(2145)}}                                                                           | Use and Interpretation of HTTP Version Numbers                                                                                                                                                                                                        | Informational                                        |
+| {{rfc(6585)}}                                                                           | Additional HTTP Status Codes                                                                                                                                                                                                                          | Proposed Standard                                    |
+| {{rfc(7538)}}                                                                           | The Hypertext Transfer Protocol Status Code 308 (Permanent Redirect)                                                                                                                                                                                  | Proposed Standard                                    |
+| {{rfc(7725)}}                                                                           | An HTTP Status Code to Report Legal Obstacles                                                                                                                                                                                                         | On the standard track                                |
+| {{rfc(2397)}}                                                                           | The "data" URL scheme                                                                                                                                                                                                                                 | Proposed Standard                                    |
+| {{rfc(3986)}}                                                                           | Uniform Resource Identifier (URI): Generic Syntax                                                                                                                                                                                                     | Internet Standard                                    |
+| {{rfc(5988)}}                                                                           | Web Linking _Defines the {{HTTPHeader("Link")}} header_                                                                                                                                                                                         | Proposed Standard                                    |
+| [Experimental spec](https://tools.ietf.org/id/draft-thomson-hybi-http-timeout-01.html)     | Hypertext Transfer Protocol (HTTP) Keep-Alive Header                                                                                                                                                                                                  | Informational (Expired)                              |
+| [Draft spec](http://httpwg.org/http-extensions/client-hints.html)                          | HTTP Client Hints                                                                                                                                                                                                                                     | IETF Draft                                           |
+| {{rfc(7578)}}                                                                           | Returning Values from Forms: multipart/form-data                                                                                                                                                                                                      | Proposed Standard                                    |
+| {{rfc(6266)}}                                                                           | Use of the Content-Disposition Header Field in the Hypertext Transfer Protocol (HTTP)                                                                                                                                                                 | Proposed Standard                                    |
+| {{rfc(2183)}}                                                                           | Communicating Presentation Information in Internet Messages: The Content-Disposition Header Field _Only a subset of syntax of the {{HTTPHeader("Content-Disposition")}} header can be used in the context of HTTP messages._               | Proposed Standard                                    |
+| {{rfc(7239)}}                                                                           | Forwarded HTTP Extension                                                                                                                                                                                                                              | Proposed Standard                                    |
+| {{rfc(6455)}}                                                                           | The WebSocket Protocol                                                                                                                                                                                                                                | Proposed Standard                                    |
+| {{rfc(5246)}}                                                                           | The Transport Layer Security (TLS) Protocol Version 1.2 _This specification has been modified by subsequent RFCs, but these modifications have no effect on the HTTP protocol._                                                                       | Proposed Standard                                    |
+| {{rfc(8446)}}                                                                           | The Transport Layer Security (TLS) Protocol Version 1.3 _Supersedes TLS 1.2._                                                                                                                                                                         | Proposed Standard                                    |
+| {{rfc(2817)}}                                                                           | Upgrading to TLS Within HTTP/1.1                                                                                                                                                                                                                      | Proposed Standard                                    |
+| {{rfc(7540)}}                                                                           | Hypertext Transfer Protocol Version 2 (HTTP/2)                                                                                                                                                                                                        | Proposed Standard                                    |
+| {{rfc(7541)}}                                                                           | HPACK: Header Compression for HTTP/2                                                                                                                                                                                                                  | On the standard track                                |
+| {{rfc(7838)}}                                                                           | HTTP Alternative Services                                                                                                                                                                                                                             | On the standard track                                |
+| {{rfc(7301)}}                                                                           | Transport Layer Security (TLS) Application-Layer Protocol Negotiation Extension _Used to negotiate HTTP/2 at the transport to save an extra request/response round trip._                                                                             | Proposed Standard                                    |
+| {{rfc(6454)}}                                                                           | The Web Origin Concept                                                                                                                                                                                                                                | Proposed Standard                                    |
+| {{SpecName('Fetch', '#cors-protocol', 'CORS')}}                           | Cross-Origin Resource Sharing                                                                                                                                                                                                                         | {{Spec2("Fetch")}}                             |
+| {{rfc(7034)}}                                                                           | HTTP Header Field X-Frame-Options                                                                                                                                                                                                                     | Informational                                        |
+| {{rfc(6797)}}                                                                           | HTTP Strict Transport Security (HSTS)                                                                                                                                                                                                                 | Proposed Standard                                    |
+| {{SpecName("Upgrade Insecure Requests")}}                                   | Upgrade Insecure Requests                                                                                                                                                                                                                             | {{Spec2("Upgrade Insecure Requests")}} |
+| {{SpecName("CSP 1.0")}}                                                           | Content Security Policy 1.0 _CSP 1.1 and CSP 3.0 doesn't extend the HTTP standard_                                                                                                                                                                    | {{Spec2("CSP 1.0")}}                         |
+| [Microsoft document](<https://msdn.microsoft.com/en-us/library/jj676915(v=vs.85).aspx>)    | Specifying legacy document modes\* _Defines X-UA-Compatible_                                                                                                                                                                                          | Note                                                 |
+| {{rfc(5689)}}                                                                           | HTTP Extensions for Web Distributed Authoring and Versioning (WebDAV) _These extensions of the Web, as well as CardDAV and CalDAV, are out-of-scope for HTTP on the Web. Modern APIs for application are defines using the RESTful pattern nowadays._ | Proposed Standard                                    |
+| {{rfc(2324)}}                                                                           | Hyper Text Coffee Pot Control Protocol (HTCPCP/1.0)                                                                                                                                                                                                   | April 1st joke spec                                  |
+| {{rfc(7168)}}                                                                           | The Hyper Text Coffee Pot Control Protocol for Tea Efflux Appliances (HTCPCP-TEA)                                                                                                                                                                     | April 1st joke spec                                  |
+| {{SpecName("HTML WHATWG")}}                                                       | HTML _Defines extensions of HTTP for Server-Sent Events_                                                                                                                                                                                              | {{Spec2("HTML WHATWG")}}                     |
+| [Reporting API](https://wicg.github.io/reporting/)                                         | `Report-To` header                                                                                                                                                                                                                                    | Draft                                                |
+| [Draft spec](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-expect-ct-01)        | Expect-CT Extension for HTTP                                                                                                                                                                                                                          | IETF Draft                                           |

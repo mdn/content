@@ -7,471 +7,461 @@ tags:
   - PAC
   - Proxy
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>A <strong>Proxy Auto-Configuration (PAC)</strong> file is a JavaScript function that determines whether web browser requests (HTTP, HTTPS, and FTP) go directly to the destination or are forwarded to a web proxy server. The JavaScript function contained in the PAC file defines the function:</p>
+A **Proxy Auto-Configuration (PAC)** file is a JavaScript function that determines whether web browser requests (HTTP, HTTPS, and FTP) go directly to the destination or are forwarded to a web proxy server. The JavaScript function contained in the PAC file defines the function:
 
-<pre class="brush: js">function FindProxyForURL(url, host) {
+```js
+function FindProxyForURL(url, host) {
   // ...
-}</pre>
+}
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">function FindProxyForURL(<var>url</var>, <var>host</var>)</pre>
+```js
+function FindProxyForURL(url, host)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code><var>url</var></code></dt>
- <dd>The URL being accessed. The path and query components of <code>https://</code> URLs are stripped. In Chrome (versions 52 to 73), you can disable this by setting <code>PacHttpsUrlStrippingEnabled</code> to <code>false</code> in policy or by launching with the <code>--unsafe-pac-url</code> command-line flag (in Chrome 74, only the flag works, and from 75 onward, there is no way to disable path-stripping; as of Chrome 81, path-stripping does not apply to HTTP URLs, but there is interest in changing this behavior to match HTTPS); in Firefox, the preference is <code>network.proxy.autoconfig_url.include_path</code>.</dd>
- <dt><code><var>host</var></code></dt>
- <dd>The hostname extracted from the URL. This is only for convenience; it is the same string as between <code>://</code> and the first <code>:</code> or <code>/</code> after that. The port number is not included in this parameter. It can be extracted from the URL when necessary.</dd>
-</dl>
+- `url`
+  - : The URL being accessed. The path and query components of `https://` URLs are stripped. In Chrome (versions 52 to 73), you can disable this by setting `PacHttpsUrlStrippingEnabled` to `false` in policy or by launching with the `--unsafe-pac-url` command-line flag (in Chrome 74, only the flag works, and from 75 onward, there is no way to disable path-stripping; as of Chrome 81, path-stripping does not apply to HTTP URLs, but there is interest in changing this behavior to match HTTPS); in Firefox, the preference is `network.proxy.autoconfig_url.include_path`.
+- `host`
+  - : The hostname extracted from the URL. This is only for convenience; it is the same string as between `://` and the first `:` or `/` after that. The port number is not included in this parameter. It can be extracted from the URL when necessary.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Returns a string describing the configuration. The format of this string is defined in <strong>return value format</strong> below.</p>
+Returns a string describing the configuration. The format of this string is defined in **return value format** below.
 
-<h3 id="Return_value_format">Return value format</h3>
+### Return value format
 
-<ul>
- <li>The JavaScript function returns a single string</li>
- <li>If the string is null, no proxies should be used</li>
- <li>The string can contain any number of the following building blocks, separated by a semicolon:</li>
-</ul>
+- The JavaScript function returns a single string
+- If the string is null, no proxies should be used
+- The string can contain any number of the following building blocks, separated by a semicolon:
 
-<dl>
- <dt><code>DIRECT</code></dt>
- <dd>Connections should be made directly, without any proxies</dd>
- <dt><code>PROXY <em>host:port</em></code></dt>
- <dd>The specified proxy should be used</dd>
- <dt><code>SOCKS <em>host:port</em></code></dt>
- <dd>The specified SOCKS server should be used</dd>
-</dl>
+<!---->
 
-<p>Recent versions of Firefox support as well:</p>
+- `DIRECT`
+  - : Connections should be made directly, without any proxies
+- `PROXY host:port`
+  - : The specified proxy should be used
+- `SOCKS host:port`
+  - : The specified SOCKS server should be used
 
-<dl>
- <dt><code>HTTP <em>host:port</em></code></dt>
- <dd>The specified proxy should be used</dd>
- <dt><code>HTTPS <em>host:port</em></code></dt>
- <dd>The specified HTTPS proxy should be used</dd>
- <dt><code>SOCKS4 <em>host:port</em></code>, <code>SOCKS5 <em>host:port</em></code></dt>
- <dd>The specified SOCKS server (with the specified SOCK version) should be used</dd>
-</dl>
+Recent versions of Firefox support as well:
 
-<p>If there are multiple semicolon-separated settings, the left-most setting will be used, until Firefox fails to establish the connection to the proxy. In that case, the next value will be used, etc.</p>
+- `HTTP host:port`
+  - : The specified proxy should be used
+- `HTTPS host:port`
+  - : The specified HTTPS proxy should be used
+- `SOCKS4 host:port`, `SOCKS5 host:port`
+  - : The specified SOCKS server (with the specified SOCK version) should be used
 
-<p>The browser will automatically retry a previously unresponsive proxy after 30 minutes. Additional attempts will continue beginning at one hour, always adding 30 minutes to the elapsed time between attempts.</p>
+If there are multiple semicolon-separated settings, the left-most setting will be used, until Firefox fails to establish the connection to the proxy. In that case, the next value will be used, etc.
 
-<p>If all proxies are down, and there was no DIRECT option specified, the browser will ask if proxies should be temporarily ignored, and direct connections attempted. After 20 minutes, the browser will ask if proxies should be retried, asking again after an additional 40 minutes. Queries will continue, always adding 20 minutes to the elapsed time between queries.</p>
+The browser will automatically retry a previously unresponsive proxy after 30 minutes. Additional attempts will continue beginning at one hour, always adding 30 minutes to the elapsed time between attempts.
 
-<h4 id="Examples">Examples</h4>
+If all proxies are down, and there was no DIRECT option specified, the browser will ask if proxies should be temporarily ignored, and direct connections attempted. After 20 minutes, the browser will ask if proxies should be retried, asking again after an additional 40 minutes. Queries will continue, always adding 20 minutes to the elapsed time between queries.
 
-<dl>
- <dt><code>PROXY w3proxy.netscape.com:8080; PROXY mozilla.netscape.com:8081</code></dt>
- <dd>Primary proxy is w3proxy:8080; if that goes down start using mozilla:8081 until the primary proxy comes up again.</dd>
- <dt><code>PROXY w3proxy.netscape.com:8080; PROXY mozilla.netscape.com:8081; DIRECT</code></dt>
- <dd>Same as above, but if both proxies go down, automatically start making direct connections. (In the first example above, Netscape will ask user confirmation about making direct connections; in this case, there is no user intervention.)</dd>
- <dt><code>PROXY w3proxy.netscape.com:8080; SOCKS socks:1080</code></dt>
- <dd>Use SOCKS if the primary proxy goes down.</dd>
-</dl>
+#### Examples
 
-<p>The auto-config file should be saved to a file with a .pac filename extension:</p>
+- `PROXY w3proxy.netscape.com:8080; PROXY mozilla.netscape.com:8081`
+  - : Primary proxy is w3proxy:8080; if that goes down start using mozilla:8081 until the primary proxy comes up again.
+- `PROXY w3proxy.netscape.com:8080; PROXY mozilla.netscape.com:8081; DIRECT`
+  - : Same as above, but if both proxies go down, automatically start making direct connections. (In the first example above, Netscape will ask user confirmation about making direct connections; in this case, there is no user intervention.)
+- `PROXY w3proxy.netscape.com:8080; SOCKS socks:1080`
+  - : Use SOCKS if the primary proxy goes down.
 
-<pre class="brush: html">proxy.pac</pre>
+The auto-config file should be saved to a file with a .pac filename extension:
 
-<p>And the MIME type should be set to:</p>
+```html
+proxy.pac
+```
 
-<pre class="brush: html">application/x-ns-proxy-autoconfig</pre>
+And the MIME type should be set to:
 
-<p>Next, you should configure your server to map the .pac filename extension to the MIME type.</p>
+```html
+application/x-ns-proxy-autoconfig
+```
 
-<div class="notecard note">
-  <p><strong>Note:</strong></p>
-<ul>
- <li>The JavaScript function should always be saved to a file by itself but not be embedded in a HTML file or any other file.</li>
- <li>The examples at the end of this document are complete. There is no additional syntax needed to save it into a file and use it. (Of course, the JavaScripts must be edited to reflect your site's domain name and/or subnets.)</li>
-</ul>
-</div>
+Next, you should configure your server to map the .pac filename extension to the MIME type.
 
-<h2 id="Predefined_functions_and_environment">Predefined functions and environment</h2>
+> **Note:**
+>
+> - The JavaScript function should always be saved to a file by itself but not be embedded in a HTML file or any other file.
+> - The examples at the end of this document are complete. There is no additional syntax needed to save it into a file and use it. (Of course, the JavaScripts must be edited to reflect your site's domain name and/or subnets.)
 
-<p>These functions can be used in building the PAC file:</p>
+## Predefined functions and environment
 
-<ul>
- <li>Hostname based conditions
-  <ul>
-   <li><code><a href="#isplainhostname">isPlainHostName()</a></code></li>
-   <li><code><a href="#dnsdomainis">dnsDomainIs()</a></code></li>
-   <li><code><a href="#localhostordomainis">localHostOrDomainIs()</a></code></li>
-   <li><code><a href="#isresolvable">isResolvable()</a></code></li>
-   <li><code><a href="#isinnet">isInNet()</a></code></li>
-  </ul>
- </li>
- <li>Related utility functions
-  <ul>
-   <li><code><a href="#dnsresolve">dnsResolve()</a></code></li>
-   <li><code><a href="#convert_addr">convert_addr()</a></code></li>
-   <li><code><a href="#myipaddress">myIpAddress()</a></code></li>
-   <li><code><a href="#dnsdomainlevels">dnsDomainLevels()</a></code></li>
-  </ul>
- </li>
- <li>URL/hostname based conditions
-  <ul>
-   <li><code><a href="#shexpmatch">shExpMatch()</a></code></li>
-  </ul>
- </li>
- <li>Time based conditions
-  <ul>
-   <li><code><a href="#weekdayrange">weekdayRange()</a></code></li>
-   <li><code><a href="#daterange">dateRange()</a></code></li>
-   <li><code><a href="#timerange">timeRange()</a></code></li>
-  </ul>
- </li>
- <li>Logging utility
-  <ul>
-   <li><code><a href="#alert">alert()</a></code></li>
-  </ul>
- </li>
- <li>There was one associative array (object) already defined, because at the time JavaScript code was unable to define it by itself:
-  <ul>
-   <li><code>ProxyConfig.bindings</code> {{deprecated_inline}}</li>
-  </ul>
- </li>
-</ul>
+These functions can be used in building the PAC file:
 
-<div class="notecard note">
-  <p><strong>Note:</strong> pactester (part of the <a href="https://github.com/pacparser/pacparser">pacparser </a>package) was used to test the following syntax examples.</p>
-  <ul>
-    <li>The PAC file is named <code>proxy.pac</code></li>
-    <li>Command line: <code>pactester -p ~/pacparser-master/tests/proxy.pac -u http://www.mozilla.org</code> (passes the <code>host</code> parameter <code>www.mozilla.org</code> and the <code>url</code> parameter <code>http://www.mozilla.org</code>)</li>
-  </ul>
-</div>
+- Hostname based conditions
 
-<h3 id="isPlainHostName">isPlainHostName()</h3>
+  - [`isPlainHostName()`](#isplainhostname)
+  - [`dnsDomainIs()`](#dnsdomainis)
+  - [`localHostOrDomainIs()`](#localhostordomainis)
+  - [`isResolvable()`](#isresolvable)
+  - [`isInNet()`](#isinnet)
 
-<h4 id="Syntax_2">Syntax</h4>
+- Related utility functions
 
-<pre class="brush: js">isPlainHostName(<var>host</var>)</pre>
+  - [`dnsResolve()`](#dnsresolve)
+  - [`convert_addr()`](#convert_addr)
+  - [`myIpAddress()`](#myipaddress)
+  - [`dnsDomainLevels()`](#dnsdomainlevels)
 
-<h4 id="Parameters_2">Parameters</h4>
+- URL/hostname based conditions
 
-<dl>
- <dt>host</dt>
- <dd>The hostname from the URL (excluding port number).</dd>
-</dl>
+  - [`shExpMatch()`](#shexpmatch)
 
-<h4 id="Description_2">Description</h4>
+- Time based conditions
 
-<p>True if and only if there is no domain name in the hostname (no dots).</p>
+  - [`weekdayRange()`](#weekdayrange)
+  - [`dateRange()`](#daterange)
+  - [`timeRange()`](#timerange)
 
-<h4 id="Examples_2">Examples</h4>
+- Logging utility
 
-<pre class="brush: js">isPlainHostName("www.mozilla.org") // false
+  - [`alert()`](#alert)
+
+- There was one associative array (object) already defined, because at the time JavaScript code was unable to define it by itself:
+
+  - `ProxyConfig.bindings` {{deprecated_inline}}
+
+> **Note:** pactester (part of the [pacparser ](https://github.com/pacparser/pacparser)package) was used to test the following syntax examples.
+>
+> - The PAC file is named `proxy.pac`
+> - Command line: `pactester -p ~/pacparser-master/tests/proxy.pac -u http://www.mozilla.org` (passes the `host` parameter `www.mozilla.org` and the `url` parameter `http://www.mozilla.org`)
+
+### isPlainHostName()
+
+#### Syntax
+
+```js
+isPlainHostName(host)
+```
+
+#### Parameters
+
+- host
+  - : The hostname from the URL (excluding port number).
+
+#### Description
+
+True if and only if there is no domain name in the hostname (no dots).
+
+#### Examples
+
+```js
+isPlainHostName("www.mozilla.org") // false
 isPlainHostName("www") // true
-</pre>
+```
 
-<h3 id="dnsDomainIs"><code>dnsDomainIs()</code></h3>
+### `dnsDomainIs()`
 
-<h4 id="Syntax_3">Syntax</h4>
+#### Syntax
 
-<pre class="brush: js">dnsDomainIs(<var>host</var>, <var>domain</var>)</pre>
+```js
+dnsDomainIs(host, domain)
+```
 
-<h4 id="Parameters_3">Parameters</h4>
+#### Parameters
 
-<dl>
- <dt>host</dt>
- <dd>Is the hostname from the URL.</dd>
- <dt>domain</dt>
- <dd>Is the domain name to test the hostname against.</dd>
-</dl>
+- host
+  - : Is the hostname from the URL.
+- domain
+  - : Is the domain name to test the hostname against.
 
-<h4 id="Description_3">Description</h4>
+#### Description
 
-<p>Returns true if and only if the domain of hostname matches.</p>
+Returns true if and only if the domain of hostname matches.
 
-<h4 id="Examples_3">Examples</h4>
+#### Examples
 
-<pre class="brush: js">dnsDomainIs("www.mozilla.org", ".mozilla.org") // true
+```js
+dnsDomainIs("www.mozilla.org", ".mozilla.org") // true
 dnsDomainIs("www", ".mozilla.org") // false
-</pre>
+```
 
-<h3 id="localHostOrDomainIs">localHostOrDomainIs()</h3>
+### localHostOrDomainIs()
 
-<h4 id="Syntax_4">Syntax</h4>
+#### Syntax
 
-<pre class="brush: js">localHostOrDomainIs(<var>host</var>, <var>hostdom</var>)</pre>
+```js
+localHostOrDomainIs(host, hostdom)
+```
 
-<h4 id="Parameters_4">Parameters</h4>
+#### Parameters
 
-<dl>
- <dt>host</dt>
- <dd>The hostname from the URL.</dd>
- <dt>hostdom</dt>
- <dd>Fully qualified hostname to match against.</dd>
-</dl>
+- host
+  - : The hostname from the URL.
+- hostdom
+  - : Fully qualified hostname to match against.
 
-<h4 id="Description_4">Description</h4>
+#### Description
 
-<p>Is true if the hostname matches <em>exactly</em> the specified hostname, or if there is no domain name part in the hostname, but the unqualified hostname matches.</p>
+Is true if the hostname matches _exactly_ the specified hostname, or if there is no domain name part in the hostname, but the unqualified hostname matches.
 
-<h4 id="Examples_4">Examples</h4>
+#### Examples
 
-<pre class="brush: js">localHostOrDomainIs("www.mozilla.org" , "www.mozilla.org") // true (exact match)
+```js
+localHostOrDomainIs("www.mozilla.org" , "www.mozilla.org") // true (exact match)
 localHostOrDomainIs("www"             , "www.mozilla.org") // true (hostname match, domain not specified)
 localHostOrDomainIs("www.google.com"  , "www.mozilla.org") // false (domain name mismatch)
-localHostOrDomainIs("home.mozilla.org", "www.mozilla.org") // false (hostname mismatch)</pre>
+localHostOrDomainIs("home.mozilla.org", "www.mozilla.org") // false (hostname mismatch)
+```
 
-<h3 id="isResolvable">isResolvable()</h3>
+### isResolvable()
 
-<h4 id="Syntax_5">Syntax</h4>
+#### Syntax
 
-<pre class="brush: js">isResolvable(<var>host</var>)</pre>
+```js
+isResolvable(host)
+```
 
-<h4 id="Parameters_5">Parameters</h4>
+#### Parameters
 
-<dl>
- <dt>host</dt>
- <dd>is the hostname from the URL.</dd>
-</dl>
+- host
+  - : is the hostname from the URL.
 
-<p>Tries to resolve the hostname. Returns true if succeeds.</p>
+Tries to resolve the hostname. Returns true if succeeds.
 
-<h4 id="Examples_5">Examples:</h4>
+#### Examples:
 
-<pre class="brush: js">isResolvable("www.mozilla.org") // true
-</pre>
+```js
+isResolvable("www.mozilla.org") // true
+```
 
-<h3 id="isInNet">isInNet()</h3>
+### isInNet()
 
-<h4 id="Syntax_6">Syntax</h4>
+#### Syntax
 
-<pre class="brush: js">isInNet(<var>host</var>, <var>pattern</var>, <var>mask</var>)</pre>
+```js
+isInNet(host, pattern, mask)
+```
 
-<h4 id="Parameters_6">Parameters</h4>
+#### Parameters
 
-<dl>
- <dt>host</dt>
- <dd>a DNS hostname, or IP address. If a hostname is passed, it will be resolved into an IP address by this function.</dd>
- <dt>pattern</dt>
- <dd>an IP address pattern in the dot-separated format.</dd>
- <dt>mask</dt>
- <dd>mask for the IP address pattern informing which parts of the IP address should be matched against. 0 means ignore, 255 means match.</dd>
-</dl>
+- host
+  - : a DNS hostname, or IP address. If a hostname is passed, it will be resolved into an IP address by this function.
+- pattern
+  - : an IP address pattern in the dot-separated format.
+- mask
+  - : mask for the IP address pattern informing which parts of the IP address should be matched against. 0 means ignore, 255 means match.
 
-<p>True if and only if the IP address of the host matches the specified IP address pattern.</p>
+True if and only if the IP address of the host matches the specified IP address pattern.
 
-<p>Pattern and mask specification is done the same way as for SOCKS configuration.</p>
+Pattern and mask specification is done the same way as for SOCKS configuration.
 
-<h4 id="Examples_6">Examples:</h4>
+#### Examples:
 
-<pre class="brush: js">function alert_eval(str) { alert(str + ' is ' + eval(str)) }
+```js
+function alert_eval(str) { alert(str + ' is ' + eval(str)) }
 function FindProxyForURL(url, host) {
   alert_eval('isInNet(host, "63.245.213.24", "255.255.255.255")')
   // "PAC-alert: isInNet(host, "63.245.213.24", "255.255.255.255") is true"
 }
-</pre>
+```
 
-<h3 id="dnsResolve">dnsResolve()</h3>
+### dnsResolve()
 
-<pre class="brush: js">dnsResolve(<em>host</em>)</pre>
+```js
+dnsResolve(host)
+```
 
-<h4 id="Parameters_7">Parameters</h4>
+#### Parameters
 
-<dl>
- <dt>host</dt>
- <dd>hostname to resolve.</dd>
-</dl>
+- host
+  - : hostname to resolve.
 
-<p>Resolves the given DNS hostname into an IP address, and returns it in the dot-separated format as a string.</p>
+Resolves the given DNS hostname into an IP address, and returns it in the dot-separated format as a string.
 
-<h4 id="Example">Example</h4>
+#### Example
 
-<pre class="brush: js">dnsResolve("www.mozilla.org"); // returns the string "104.16.41.2"</pre>
+```js
+dnsResolve("www.mozilla.org"); // returns the string "104.16.41.2"
+```
 
-<h3 id="convert_addr">convert_addr()</h3>
+### convert_addr()
 
-<h4 id="Syntax_7">Syntax</h4>
+#### Syntax
 
-<pre class="brush: js">convert_addr(ipaddr)</pre>
+```js
+convert_addr(ipaddr)
+```
 
-<h4 id="Parameters_8">Parameters</h4>
+#### Parameters
 
-<dl>
- <dt>ipaddr</dt>
- <dd>Any dotted address such as an IP address or mask.</dd>
-</dl>
+- ipaddr
+  - : Any dotted address such as an IP address or mask.
 
-<p>Concatenates the four dot-separated bytes into one 4-byte word and converts it to decimal.</p>
+Concatenates the four dot-separated bytes into one 4-byte word and converts it to decimal.
 
-<h4 id="Example_2">Example</h4>
+#### Example
 
-<pre class="brush: js">convert_addr("104.16.41.2"); // returns the decimal number 1745889538</pre>
+```js
+convert_addr("104.16.41.2"); // returns the decimal number 1745889538
+```
 
-<h3 id="myIpAddress">myIpAddress()</h3>
+### myIpAddress()
 
-<h4 id="Syntax_8">Syntax</h4>
+#### Syntax
 
-<pre class="brush: js">myIpAddress()</pre>
+```js
+myIpAddress()
+```
 
-<h4 id="Parameters_9">Parameters</h4>
+#### Parameters
 
-<p><strong>(none)</strong></p>
+**(none)**
 
-<p>Returns the server IP address of the machine Firefox is running on, as a string in the dot-separated integer format.</p>
+Returns the server IP address of the machine Firefox is running on, as a string in the dot-separated integer format.
 
-<div class="notecard warning">
-  <p><strong>Warning:</strong> myIpAddress() returns the same IP address as the server address returned by <strong><code>nslookup localhost</code></strong> on a Linux machine. It does not return the public IP address.</p>
-</div>
+> **Warning:** myIpAddress() returns the same IP address as the server address returned by **`nslookup localhost`** on a Linux machine. It does not return the public IP address.
 
-<h4 id="Example_3">Example</h4>
+#### Example
 
-<pre class="brush: js">myIpAddress() //returns the string "127.0.1.1" if you were running Firefox on that localhost</pre>
+```js
+myIpAddress() //returns the string "127.0.1.1" if you were running Firefox on that localhost
+```
 
-<h3 id="dnsDomainLevels">dnsDomainLevels()</h3>
+### dnsDomainLevels()
 
-<h4 id="Syntax_9">Syntax</h4>
+#### Syntax
 
-<pre class="brush: js">dnsDomainLevels(<var>host</var>)</pre>
+```js
+dnsDomainLevels(host)
+```
 
-<h4 id="Parameters_10">Parameters</h4>
+#### Parameters
 
-<dl>
- <dt>host</dt>
- <dd>is the hostname from the URL.</dd>
-</dl>
+- host
+  - : is the hostname from the URL.
 
-<p>Returns the number (integer) of DNS domain levels (number of dots) in the hostname.</p>
+Returns the number (integer) of DNS domain levels (number of dots) in the hostname.
 
-<h4 id="Examples_7">Examples:</h4>
+#### Examples:
 
-<pre class="brush: js">dnsDomainLevels("www");             // 0
+```js
+dnsDomainLevels("www");             // 0
 dnsDomainLevels("mozilla.org");     // 1
 dnsDomainLevels("www.mozilla.org"); // 2
-</pre>
+```
 
-<h3 id="shExpMatch">shExpMatch()</h3>
+### shExpMatch()
 
-<h4 id="Syntax_10">Syntax</h4>
+#### Syntax
 
-<pre class="brush: js">shExpMatch(<var>str</var>, <var>shexp</var>)</pre>
+```js
+shExpMatch(str, shexp)
+```
 
-<h4 id="Parameters_11">Parameters</h4>
+#### Parameters
 
-<dl>
- <dt>str</dt>
- <dd>is any string to compare (e.g. the URL, or the hostname).</dd>
- <dt>shexp</dt>
- <dd>is a shell expression to compare against.</dd>
-</dl>
+- str
+  - : is any string to compare (e.g. the URL, or the hostname).
+- shexp
+  - : is a shell expression to compare against.
 
-<p>Returns <code>true</code> if the string matches the specified shell glob expression.</p>
+Returns `true` if the string matches the specified shell glob expression.
 
-<p>Support for particular glob expression syntax varies across browsers:
-  <code>*</code> (match any number of characters) and <code>?</code> (match one character) are always supported,
-  while <code>[characters]</code> and <code>[^characters]</code> are additionally supported by some implementations (including Firefox).</p>
+Support for particular glob expression syntax varies across browsers:
+`*` (match any number of characters) and `?` (match one character) are always supported,
+while `[characters]` and `[^characters]` are additionally supported by some implementations (including Firefox).
 
-<div class="notecard note">
-  <p><strong>Note:</strong> If supported by the client, JavaScript regular expressions typically provide a more powerful and consistent way to pattern-match URLs (and other strings).</p>
-</div>
+> **Note:** If supported by the client, JavaScript regular expressions typically provide a more powerful and consistent way to pattern-match URLs (and other strings).
 
+#### Examples
 
-<h4 id="Examples_8">Examples</h4>
+```js
+shExpMatch("http://home.netscape.com/people/ari/index.html", "*/ari/*"); // returns true
+shExpMatch("http://home.netscape.com/people/montulli/index.html", "*/ari/*"); // returns false
+```
 
-<pre class="brush: js">shExpMatch("http://home.netscape.com/people/ari/index.html", "*/ari/*"); // returns true
-shExpMatch("http://home.netscape.com/people/montulli/index.html", "*/ari/*"); // returns false</pre>
+### weekdayRange()
 
-<h3 id="weekdayRange">weekdayRange()</h3>
+#### Syntax
 
-<h4 id="Syntax_11">Syntax</h4>
+```js
+weekdayRange(wd1, wd2, [gmt])
+```
 
-<pre class="brush: js">weekdayRange(<var>wd1</var>, <var>wd2</var>, [<var>gmt</var>])</pre>
+> **Note:** (Before Firefox 49) wd1 must be less than wd2 if you want the function to evaluate these parameters as a range. See the warning below.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> (Before Firefox 49) wd1 must be less than wd2 if you want the function to evaluate these parameters as a range. See the warning below.</p>
-</div>
+#### Parameters
 
-<h4 id="Parameters_12">Parameters</h4>
+- wd1 and wd2
+  - : One of the ordered weekday strings: `"SUN"`, `"MON"`, `"TUE"`, `"WED"`, `"THU"`, `"FRI"`, `"SAT"`
+- gmt
+  - : Is either the string "GMT" or is left out.
 
-<dl>
- <dt>wd1 and wd2</dt>
- <dd>One of the ordered weekday strings: <code>"SUN"</code>, <code>"MON"</code>, <code>"TUE"</code>, <code>"WED"</code>, <code>"THU"</code>, <code>"FRI"</code>, <code>"SAT"</code>
- <dt>gmt</dt>
- <dd>Is either the string "GMT" or is left out.</dd>
-</dl>
+Only the first parameter is mandatory. Either the second, the third, or both may be left out.
 
-<p>Only the first parameter is mandatory. Either the second, the third, or both may be left out.</p>
+If only one parameter is present, the function returns a value of true on the weekday that the parameter represents. If the string "GMT" is specified as a second parameter, times are taken to be in GMT. Otherwise, they are assumed to be in the local timezone.
 
-<p>If only one parameter is present, the function returns a value of true on the weekday that the parameter represents. If the string "GMT" is specified as a second parameter, times are taken to be in GMT. Otherwise, they are assumed to be in the local timezone.</p>
+If both **wd1** and **wd1** are defined, the condition is true if the current weekday is in between those two _ordered_ weekdays. Bounds are inclusive, _but the bounds are ordered_. If the "GMT" parameter is specified, times are taken to be in GMT. Otherwise, the local timezone is used.
 
-<p>If both <strong>wd1</strong> and <strong>wd1</strong> are defined, the condition is true if the current weekday is in between those two <em>ordered</em> weekdays. Bounds are inclusive, <em>but the bounds are ordered</em>. If the "GMT" parameter is specified, times are taken to be in GMT. Otherwise, the local timezone is used.</p>
+> **Warning:** _The order of the days matters_.
+> Before Firefox 49, `weekdayRange("SUN", "SAT")` will always evaluate to `true`.
+> Now `weekdayRange("WED", "SUN")` will only evaluate to `true`
+> if the current day is Wednesday or Sunday.
 
-<div class="notecard warning">
-  <p>
-    <strong>Warning:</strong> <em>The order of the days matters</em>.
-    Before Firefox 49, <code>weekdayRange("<em>SUN", "SAT"</em>)</code> will always evaluate to <code>true</code>.
-    Now <code>weekdayRange("<em>WED", "SUN"</em>)</code> will only evaluate to <code>true</code>
-    if the current day is Wednesday or Sunday.
-  </p>
-</div>
+#### Examples
 
-<h4 id="Examples_9">Examples</h4>
-
-<pre class="brush: js">weekdayRange("MON", "FRI");        // returns true Monday through Friday (local timezone)
+```js
+weekdayRange("MON", "FRI");        // returns true Monday through Friday (local timezone)
 weekdayRange("MON", "FRI", "GMT"); // returns true Monday through Friday (GMT timezone)
 weekdayRange("SAT");               // returns true on Saturdays local time
 weekdayRange("SAT", "GMT");        // returns true on Saturdays GMT time
-weekdayRange("FRI", "MON");        // returns true Friday and Monday only (note, order does matter!)</pre>
+weekdayRange("FRI", "MON");        // returns true Friday and Monday only (note, order does matter!)
+```
 
-<h3 id="dateRange">dateRange()</h3>
+### dateRange()
 
-<h4 id="Syntax_12">Syntax</h4>
+#### Syntax
 
-<pre class="brush: js">dateRange(&lt;day&gt; | &lt;month&gt; | &lt;year&gt;, [gmt])  // ambiguity is resolved by assuming year is greater than 31
-dateRange(&lt;day1&gt;, &lt;day2&gt;, [gmt])
-dateRange(&lt;month1&gt;, &lt;month2&gt;, [gmt])
-dateRange(&lt;year1&gt;, &lt;year2&gt;, [gmt])
-dateRange(&lt;day1&gt;, &lt;month1&gt;, &lt;day2&gt;, &lt;month2&gt;, [gmt])
-dateRange(&lt;month1&gt;, &lt;year1&gt;, &lt;month2&gt;, &lt;year2&gt;, [gmt])
-dateRange(&lt;day1&gt;, &lt;month1&gt;, &lt;year1&gt;, &lt;day2&gt;, &lt;month2&gt;, &lt;year2&gt;, [gmt])</pre>
+```js
+dateRange(<day> | <month> | <year>, [gmt])  // ambiguity is resolved by assuming year is greater than 31
+dateRange(<day1>, <day2>, [gmt])
+dateRange(<month1>, <month2>, [gmt])
+dateRange(<year1>, <year2>, [gmt])
+dateRange(<day1>, <month1>, <day2>, <month2>, [gmt])
+dateRange(<month1>, <year1>, <month2>, <year2>, [gmt])
+dateRange(<day1>, <month1>, <year1>, <day2>, <month2>, <year2>, [gmt])
+```
 
-<div class="notecard note">
-  <p><strong>Note:</strong> (Before Firefox 49) day1 must be less than day2, month1 must be less than month2, and year1 must be less than year2 if you want the function to evaluate these parameters as a range. See the warning below.</p>
-</div>
+> **Note:** (Before Firefox 49) day1 must be less than day2, month1 must be less than month2, and year1 must be less than year2 if you want the function to evaluate these parameters as a range. See the warning below.
 
-<h4 id="Parameters_13">Parameters</h4>
+#### Parameters
 
-<dl>
- <dt>day</dt>
- <dd>Is the ordered day of the month between 1 and 31 (as an integer).</dd>
-</dl>
+- day
+  - : Is the ordered day of the month between 1 and 31 (as an integer).
 
-<pre class="brush: html">1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31</pre>
+```html
+1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31
+```
 
-<dl>
- <dt>month</dt>
- <dd>Is one of the ordered month strings below.</dd>
-</dl>
+- month
+  - : Is one of the ordered month strings below.
 
-<pre class="brush: html">"JAN"|"FEB"|"MAR"|"APR"|"MAY"|"JUN"|"JUL"|"AUG"|"SEP"|"OCT"|"NOV"|"DEC"</pre>
+```html
+"JAN"|"FEB"|"MAR"|"APR"|"MAY"|"JUN"|"JUL"|"AUG"|"SEP"|"OCT"|"NOV"|"DEC"
+```
 
-<dl>
- <dt>year</dt>
- <dd>Is the ordered full year integer number. For example, 2016 (<strong>not</strong> 16).</dd>
- <dt>gmt</dt>
- <dd>Is either the string "GMT", which makes time comparison occur in GMT timezone, or is left out. If left unspecified, times are taken to be in the local timezone.</dd>
-</dl>
+- year
+  - : Is the ordered full year integer number. For example, 2016 (**not** 16).
+- gmt
+  - : Is either the string "GMT", which makes time comparison occur in GMT timezone, or is left out. If left unspecified, times are taken to be in the local timezone.
 
-<p>If only a single value is specified (from each category: day, month, year), the function returns a true value only on days that match that specification. If both values are specified, the result is true between those times, including bounds, <em>but the bounds are ordered</em>.</p>
+If only a single value is specified (from each category: day, month, year), the function returns a true value only on days that match that specification. If both values are specified, the result is true between those times, including bounds, _but the bounds are ordered_.
 
-<div class="notecard warning">
-  <p><strong>Warning:</strong> <strong>The order of the days, months, and years matter</strong>; Before Firefox 49, <code>dateRange("<em>JAN", "DEC"</em>)</code> will always evaluate to <code>true</code>. Now <code>dateRange("<em>DEC", "JAN"</em>)</code> will only evaluate true if the current month is December or January.</p>
-</div>
+> **Warning:** **The order of the days, months, and years matter**; Before Firefox 49, `dateRange("JAN", "DEC")` will always evaluate to `true`. Now `dateRange("DEC", "JAN")` will only evaluate true if the current month is December or January.
 
-<h4 id="Examples_10">Examples</h4>
+#### Examples
 
-<pre class="brush: js">dateRange(1);            // returns true on the first day of each month, local timezone
+```js
+dateRange(1);            // returns true on the first day of each month, local timezone
 dateRange(1, "GMT")      // returns true on the first day of each month, GMT timezone
 dateRange(1, 15);        // returns true on the first half of each month
 dateRange(24, "DEC");    // returns true on 24th of December each year
@@ -492,131 +482,131 @@ dateRange(1995);
 // returns true during the entire year of 1995
 
 dateRange(1995, 1997);
-// returns true from beginning of year 1995 until the end of year 1997</pre>
+// returns true from beginning of year 1995 until the end of year 1997
+```
 
-<h3 id="timeRange">timeRange()</h3>
+### timeRange()
 
-<h4 id="Syntax_13">Syntax</h4>
+#### Syntax
 
-<pre class="brush: html">// The full range of expansions is analogous to dateRange.
-timeRange(&lt;hour1&gt;, &lt;min1&gt;, &lt;sec1&gt;, &lt;hour2&gt;, &lt;min2&gt;, &lt;sec2&gt;, [gmt])</pre>
+```html
+// The full range of expansions is analogous to dateRange.
+timeRange(<hour1>, <min1>, <sec1>, <hour2>, <min2>, <sec2>, [gmt])
+```
 
-<div class="notecard note">
-  <p><strong>Note:</strong> (Before Firefox 49) the category hour1, min1, sec1 must be less than the category hour2, min2, sec2 if you want the function to evaluate these parameters as a range. See the warning below.</p>
-</div>
+> **Note:** (Before Firefox 49) the category hour1, min1, sec1 must be less than the category hour2, min2, sec2 if you want the function to evaluate these parameters as a range. See the warning below.
 
-<h4 id="Parameters_14">Parameters</h4>
+#### Parameters
 
-<dl>
- <dt>hour</dt>
- <dd>Is the hour from 0 to 23. (0 is midnight, 23 is 11 pm.)</dd>
- <dt>min</dt>
- <dd>Minutes from 0 to 59.</dd>
- <dt>sec</dt>
- <dd>Seconds from 0 to 59.</dd>
- <dt>gmt</dt>
- <dd>Either the string "GMT" for GMT timezone, or not specified, for local timezone.</dd>
-</dl>
+- hour
+  - : Is the hour from 0 to 23. (0 is midnight, 23 is 11 pm.)
+- min
+  - : Minutes from 0 to 59.
+- sec
+  - : Seconds from 0 to 59.
+- gmt
+  - : Either the string "GMT" for GMT timezone, or not specified, for local timezone.
 
-<p>If only a single value is specified (from each category: hour, minute, second), the function returns a true value only at times that match that specification. If both values are specified, the result is true between those times, including bounds, <em>but the bounds are ordered</em>.</p>
+If only a single value is specified (from each category: hour, minute, second), the function returns a true value only at times that match that specification. If both values are specified, the result is true between those times, including bounds, _but the bounds are ordered_.
 
-<div class="notecard warning">
-  <p><strong>Warning:</strong> <strong>The order of the hour, minute, second matter</strong>; Before Firefox 49, <code>timeRange(<em>0, 23</em>)</code> will always evaluate to true. Now <code>timeRange(<em>23, 0</em>)</code> will only evaluate true if the current hour is 23:00 or midnight.</p>
-</div>
+> **Warning:** **The order of the hour, minute, second matter**; Before Firefox 49, `timeRange(0, 23)` will always evaluate to true. Now `timeRange(23, 0)` will only evaluate true if the current hour is 23:00 or midnight.
 
-<h4 id="Examples_11">Examples</h4>
+#### Examples
 
-<pre class="brush: js">timerange(12);                // returns true from noon to 1pm
+```js
+timerange(12);                // returns true from noon to 1pm
 timerange(12, 13);            // returns true from noon to 1pm
 timerange(12, "GMT");         // returns true from noon to 1pm, in GMT timezone
 timerange(9, 17);             // returns true from 9am to 5pm
 timerange(8, 30, 17, 00);     // returns true from 8:30am to 5:00pm
-timerange(0, 0, 0, 0, 0, 30); // returns true between midnight and 30 seconds past midnight</pre>
+timerange(0, 0, 0, 0, 0, 30); // returns true between midnight and 30 seconds past midnight
+```
 
-<h3 id="alert">alert()</h3>
+### alert()
 
-<h4 id="Syntax_14">Syntax</h4>
+#### Syntax
 
-<pre class="brush: html">
+```html
 alert(message)
-</pre>
+```
 
-<h4 id="Parameters_15">Parameters</h4>
+#### Parameters
 
-<dl>
- <dt>message</dt>
- <dd>The string to log</dd>
-</dl>
+- message
+  - : The string to log
 
-<p>Logs the message in the browser console.</p>
+Logs the message in the browser console.
 
-<h4 id="Examples_12">Examples</h4>
+#### Examples
 
-<pre class="brush: js">alert(host + " = " + dnsResolve(host));            // logs the host name and its IP address
-alert("Error: shouldn't reach this clause.");      // log a simple message</pre>
+```js
+alert(host + " = " + dnsResolve(host));            // logs the host name and its IP address
+alert("Error: shouldn't reach this clause.");      // log a simple message
+```
 
-<h2 id="Example_1">Example 1</h2>
+## Example 1
 
-<h3 id="Use_proxy_for_everything_except_local_hosts">Use proxy for everything except local hosts</h3>
+### Use proxy for everything except local hosts
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Since all of the examples that follow are very specific, they have not been tested.</p>
-</div>
+> **Note:** Since all of the examples that follow are very specific, they have not been tested.
 
-<p>All hosts which aren't fully qualified, or the ones that are in local domain, will be connected to directly. Everything else will go through <code>w3proxy.mozilla.org:8080</code>. If the proxy goes down, connections become direct automatically:</p>
+All hosts which aren't fully qualified, or the ones that are in local domain, will be connected to directly. Everything else will go through `w3proxy.mozilla.org:8080`. If the proxy goes down, connections become direct automatically:
 
-<pre class="brush: js">function FindProxyForURL(url, host) {
+```js
+function FindProxyForURL(url, host) {
   if (isPlainHostName(host) || dnsDomainIs(host, ".mozilla.org")) {
     return "DIRECT";
   } else {
     return "PROXY w3proxy.mozilla.org:8080; DIRECT";
   }
-}</pre>
+}
+```
 
-<div class="notecard note">
-  <p><strong>Note:</strong> This is the simplest and most efficient autoconfig file for cases where there's only one proxy.</p>
-</div>
+> **Note:** This is the simplest and most efficient autoconfig file for cases where there's only one proxy.
 
-<h2 id="Example_2_2">Example 2</h2>
+## Example 2
 
-<h3 id="As_above_but_use_proxy_for_local_servers_which_are_outside_the_firewall">As above, but use proxy for local servers which are outside the firewall</h3>
+### As above, but use proxy for local servers which are outside the firewall
 
-<p>If there are hosts (such as the main Web server) that belong to the local domain but are outside the firewall and are only reachable through the proxy server, those exceptions can be handled using the <code>localHostOrDomainIs()</code> function:</p>
+If there are hosts (such as the main Web server) that belong to the local domain but are outside the firewall and are only reachable through the proxy server, those exceptions can be handled using the `localHostOrDomainIs()` function:
 
-<pre class="brush: js">function FindProxyForURL(url, host) {
+```js
+function FindProxyForURL(url, host) {
   if (
-    (isPlainHostName(host) || dnsDomainIs(host, ".mozilla.org")) &amp;&amp;
-    !localHostOrDomainIs(host, "www.mozilla.org") &amp;&amp;
+    (isPlainHostName(host) || dnsDomainIs(host, ".mozilla.org")) &&
+    !localHostOrDomainIs(host, "www.mozilla.org") &&
     !localHostOrDomainIs(host, "merchant.mozilla.org")
   ) {
     return "DIRECT";
   } else {
     return "PROXY w3proxy.mozilla.org:8080; DIRECT";
   }
-}</pre>
+}
+```
 
-<p>The above example will use the proxy for everything except local hosts in the mozilla.org domain, with the further exception that hosts <code>www.mozilla.org</code> and <code>merchant.mozilla.org</code> will go through the proxy.</p>
+The above example will use the proxy for everything except local hosts in the mozilla.org domain, with the further exception that hosts `www.mozilla.org` and `merchant.mozilla.org` will go through the proxy.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> The order of the above exceptions for efficiency: <code>localHostOrDomainIs()</code> functions only get executed for URLs that are in local domain, not for every URL. Be careful to note the parentheses around the <em>or</em> expression before the <em>and</em> expression to achieve the above-mentioned efficient behavior.</p>
-</div>
+> **Note:** The order of the above exceptions for efficiency: `localHostOrDomainIs()` functions only get executed for URLs that are in local domain, not for every URL. Be careful to note the parentheses around the _or_ expression before the _and_ expression to achieve the above-mentioned efficient behavior.
 
-<h2 id="Example_3_2">Example 3</h2>
+## Example 3
 
-<h3 id="Use_proxy_only_if_cannot_resolve_host">Use proxy only if cannot resolve host</h3>
+### Use proxy only if cannot resolve host
 
-<p>This example will work in an environment where the internal DNS server is set up so that it can only resolve internal host names, and the goal is to use a proxy only for hosts that aren't resolvable:</p>
+This example will work in an environment where the internal DNS server is set up so that it can only resolve internal host names, and the goal is to use a proxy only for hosts that aren't resolvable:
 
-<pre class="brush: js">function FindProxyForURL(url, host) {
+```js
+function FindProxyForURL(url, host) {
   if (isResolvable(host))
     return "DIRECT";
   else
     return "PROXY proxy.mydomain.com:8080";
-}</pre>
+}
+```
 
-<p>The above requires consulting the DNS every time; it can be grouped intelligently with other rules so that DNS is consulted only if other rules do not yield a result:</p>
+The above requires consulting the DNS every time; it can be grouped intelligently with other rules so that DNS is consulted only if other rules do not yield a result:
 
-<pre class="brush: js">function FindProxyForURL(url, host) {
+```js
+function FindProxyForURL(url, host) {
   if (
     isPlainHostName(host) ||
     dnsDomainIs(host, ".mydomain.com") ||
@@ -626,24 +616,28 @@ alert("Error: shouldn't reach this clause.");      // log a simple message</pre>
   } else {
     return "PROXY proxy.mydomain.com:8080";
   }
-}</pre>
+}
+```
 
-<h2 id="Example_4">Example 4</h2>
+## Example 4
 
-<h3 id="Subnet_based_decisions">Subnet based decisions</h3>
+### Subnet based decisions
 
-<p>In this example all of the hosts in a given subnet are connected-to directly, others are connected through the proxy:</p>
+In this example all of the hosts in a given subnet are connected-to directly, others are connected through the proxy:
 
-<pre class="brush: js">function FindProxyForURL(url, host) {
+```js
+function FindProxyForURL(url, host) {
   if (isInNet(host, "198.95.0.0", "255.255.0.0"))
     return "DIRECT";
   else
     return "PROXY proxy.mydomain.com:8080";
-}</pre>
+}
+```
 
-<p>Again, use of the DNS server in the above can be minimized by adding redundant rules in the beginning:</p>
+Again, use of the DNS server in the above can be minimized by adding redundant rules in the beginning:
 
-<pre class="brush: js">function FindProxyForURL(url, host) {
+```js
+function FindProxyForURL(url, host) {
   if (
     isPlainHostName(host) ||
     dnsDomainIs(host, ".mydomain.com") ||
@@ -653,42 +647,26 @@ alert("Error: shouldn't reach this clause.");      // log a simple message</pre>
   } else {
     return "PROXY proxy.mydomain.com:8080";
   }
-}</pre>
+}
+```
 
-<h2 id="Example_5">Example 5</h2>
+## Example 5
 
-<h3 id="Load_balancingrouting_based_on_URL_patterns">Load balancing/routing based on URL patterns</h3>
+### Load balancing/routing based on URL patterns
 
-<p>This example is more sophisticated. There are four (4) proxy servers; one of them is a hot stand-by for all of the other ones, so if any of the remaining three goes down the fourth one will take over. Furthermore, the three remaining proxy servers share the load based on URL patterns, which makes their caching more effective (there is only one copy of any document on the three servers - as opposed to one copy on each of them). The load is distributed like this:</p>
+This example is more sophisticated. There are four (4) proxy servers; one of them is a hot stand-by for all of the other ones, so if any of the remaining three goes down the fourth one will take over. Furthermore, the three remaining proxy servers share the load based on URL patterns, which makes their caching more effective (there is only one copy of any document on the three servers - as opposed to one copy on each of them). The load is distributed like this:
 
-<table>
- <tbody>
-  <tr>
-   <th>Proxy</th>
-   <th>Purpose</th>
-  </tr>
-  <tr>
-   <td>#1</td>
-   <td>.com domain</td>
-  </tr>
-  <tr>
-   <td>#2</td>
-   <td>.edu domain</td>
-  </tr>
-  <tr>
-   <td>#3</td>
-   <td>all other domains</td>
-  </tr>
-  <tr>
-   <td>#4</td>
-   <td>hot stand-by</td>
-  </tr>
- </tbody>
-</table>
+| Proxy | Purpose           |
+| ----- | ----------------- |
+| #1    | .com domain       |
+| #2    | .edu domain       |
+| #3    | all other domains |
+| #4    | hot stand-by      |
 
-<p>All local accesses are desired to be direct. All proxy servers run on the port 8080 (they don't need to, you can just change your port but remember to modify your configuations on both side). Note how strings can be concatenated with the <code><strong>+</strong></code> operator in JavaScript.</p>
+All local accesses are desired to be direct. All proxy servers run on the port 8080 (they don't need to, you can just change your port but remember to modify your configuations on both side). Note how strings can be concatenated with the **`+`** operator in JavaScript.
 
-<pre class="brush: js">function FindProxyForURL(url, host) {
+```js
+function FindProxyForURL(url, host) {
 
   if (isPlainHostName(host) || dnsDomainIs(host, ".mydomain.com"))
     return "DIRECT";
@@ -704,15 +682,17 @@ alert("Error: shouldn't reach this clause.");      // log a simple message</pre>
   else
     return "PROXY proxy3.mydomain.com:8080; " +
            "PROXY proxy4.mydomain.com:8080";
-}</pre>
+}
+```
 
-<h2 id="Example_6">Example 6</h2>
+## Example 6
 
-<h3 id="Setting_a_proxy_for_a_specific_protocol">Setting a proxy for a specific protocol</h3>
+### Setting a proxy for a specific protocol
 
-<p>Most of the standard JavaScript functionality is available for use in the <code>FindProxyForURL()</code> function. As an example, to set different proxies based on the protocol the {{jsxref("String.prototype.startsWith()", "startsWith()")}} function can be used:</p>
+Most of the standard JavaScript functionality is available for use in the `FindProxyForURL()` function. As an example, to set different proxies based on the protocol the {{jsxref("String.prototype.startsWith()", "startsWith()")}} function can be used:
 
-<pre class="brush: js">function FindProxyForURL(url, host) {
+```js
+function FindProxyForURL(url, host) {
 
   if (url.startsWith("http:"))
     return "PROXY http-proxy.mydomain.com:8080";
@@ -729,29 +709,29 @@ alert("Error: shouldn't reach this clause.");      // log a simple message</pre>
   else
     return "DIRECT";
 
-}</pre>
+}
+```
 
-<div class="notecard note">
-  <p><strong>Note:</strong> The same can be accomplished using the <code><a href="#shexpmatch">shExpMatch()</a></code> function described earlier.</p>
-</div>
+> **Note:** The same can be accomplished using the [`shExpMatch()`](#shexpmatch) function described earlier.
 
-<p>For example:</p>
+For example:
 
-<pre class="brush: js">// ...
+```js
+// ...
 if (shExpMatch(url, "http:*")) {
   return "PROXY http-proxy.mydomain.com:8080";
 }
-// ...</pre>
+// ...
+```
 
-<div class="notecard note">
-  <p><strong>Note:</strong> The autoconfig file can be output by a CGI script. This is useful, for example, when making the autoconfig file act differently based on the client IP address (the <code>REMOTE_ADDR</code> environment variable in CGI).</p>
-  <p>Usage of <code>isInNet()</code>, <code>isResolvable()</code> and <code>dnsResolve()</code> functions should be carefully considered, as they require the DNS server to be consulted. All the other autoconfig-related functions are mere string-matching functions that don't require the use of a DNS server. If a proxy is used, the proxy will perform its DNS lookup which would double the impact on the DNS server. Most of the time these functions are not necessary to achieve the desired result.</p>
-</div>
+> **Note:** The autoconfig file can be output by a CGI script. This is useful, for example, when making the autoconfig file act differently based on the client IP address (the `REMOTE_ADDR` environment variable in CGI).
+>
+> Usage of `isInNet()`, `isResolvable()` and `dnsResolve()` functions should be carefully considered, as they require the DNS server to be consulted. All the other autoconfig-related functions are mere string-matching functions that don't require the use of a DNS server. If a proxy is used, the proxy will perform its DNS lookup which would double the impact on the DNS server. Most of the time these functions are not necessary to achieve the desired result.
 
-<h2 id="History_and_implementation">History and implementation</h2>
+## History and implementation
 
-<p>Proxy auto-config was introduced into Netscape Navigator 2.0 in the late 1990s, at the same time when JavaScript was introduced. Open-sourcing Netscape eventually lead to Firefox itself.</p>
+Proxy auto-config was introduced into Netscape Navigator 2.0 in the late 1990s, at the same time when JavaScript was introduced. Open-sourcing Netscape eventually lead to Firefox itself.
 
-<p>The most "original" implementation of PAC and its JavaScript libraries is, therefore, <code>nsProxyAutoConfig.js</code> found in early versions of Firefox. These utilities are found in many other open-source systems including <a href="https://cs.chromium.org/chromium/src/services/proxy_resolver/pac_js_library.h">Chromium</a>. Firefox later integrated the file into <code><a href="https://dxr.mozilla.org/mozilla-central/source/netwerk/base/ProxyAutoConfig.cpp">ProxyAutoConfig.cpp</a></code> as a C++ string literal. To extract it into its own file, it suffices to copy the chunk into JavaScript with a <code>console.log</code> directive to print it.</p>
+The most "original" implementation of PAC and its JavaScript libraries is, therefore, `nsProxyAutoConfig.js` found in early versions of Firefox. These utilities are found in many other open-source systems including [Chromium](https://cs.chromium.org/chromium/src/services/proxy_resolver/pac_js_library.h). Firefox later integrated the file into [`ProxyAutoConfig.cpp`](https://dxr.mozilla.org/mozilla-central/source/netwerk/base/ProxyAutoConfig.cpp) as a C++ string literal. To extract it into its own file, it suffices to copy the chunk into JavaScript with a `console.log` directive to print it.
 
-<p>Microsoft in general made its own implementation. There used to be <a href="https://en.wikipedia.org/wiki/Proxy_auto-config#Old_Microsoft_problems">some problems with their libraries</a>, but most are resolved by now. They have defined <a href="https://docs.microsoft.com/en-us/windows/win32/winhttp/ipv6-extensions-to-navigator-auto-config-file-format">some new "Ex" suffixed functions</a> around the address handling parts to support IPv6. The feature is supported by Chromium, but not yet by Firefox (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=558253">bugzilla #558253</a>).</p>
+Microsoft in general made its own implementation. There used to be [some problems with their libraries](https://en.wikipedia.org/wiki/Proxy_auto-config#Old_Microsoft_problems), but most are resolved by now. They have defined [some new "Ex" suffixed functions](https://docs.microsoft.com/en-us/windows/win32/winhttp/ipv6-extensions-to-navigator-auto-config-file-format) around the address handling parts to support IPv6. The feature is supported by Chromium, but not yet by Firefox ([bugzilla #558253](https://bugzilla.mozilla.org/show_bug.cgi?id=558253)).

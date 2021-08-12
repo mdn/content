@@ -11,114 +11,108 @@ tags:
   - Prefetch
   - Web Development
 ---
-<h3 id="What_is_link_prefetching.3F">What is link prefetching?</h3>
+### What is link prefetching?
 
-<p>Link prefetching is a browser mechanism, which utilizes browser idle time to download or <em>prefetch</em> documents that the user might visit in the near future. A web page provides a set of prefetching hints to the browser, and after the browser is finished loading the page, it begins silently prefetching specified documents and stores them in its cache. When the user visits one of the prefetched documents, it can be served up quickly out of the browser's cache.</p>
+Link prefetching is a browser mechanism, which utilizes browser idle time to download or _prefetch_ documents that the user might visit in the near future. A web page provides a set of prefetching hints to the browser, and after the browser is finished loading the page, it begins silently prefetching specified documents and stores them in its cache. When the user visits one of the prefetched documents, it can be served up quickly out of the browser's cache.
 
-<h3 id="Does_prefetching_work_with_HTTPS">Does prefetching work with HTTPS?</h3>
+### Does prefetching work with HTTPS?
 
-<p>Starting in Gecko 1.9.1 (Firefox 3.5), HTTPS content can be prefetched.</p>
+Starting in Gecko 1.9.1 (Firefox 3.5), HTTPS content can be prefetched.
 
-<h3 id="What_are_the_prefetching_hints.3F">What are the prefetching hints?</h3>
+### What are the prefetching hints?
 
-<p>The browser looks for either an HTML {{ HTMLElement("link") }} or an <a href="/en-US/docs/Web/HTTP/Headers" title="HTTP headers">HTTP <code>Link:</code> header</a> with a relation type of either <code>next</code> or <code>prefetch</code>. An example using the <code>link</code> tag follows:</p>
+The browser looks for either an HTML {{ HTMLElement("link") }} or an [HTTP `Link:` header](/en-US/docs/Web/HTTP/Headers "HTTP headers") with a relation type of either `next` or `prefetch`. An example using the `link` tag follows:
 
-<pre class="eval">&lt;link rel="prefetch" href="/images/big.jpeg"&gt;
-</pre>
+    <link rel="prefetch" href="/images/big.jpeg">
 
-<p>The same prefetching hint using an HTTP <code>Link:</code> header:</p>
+The same prefetching hint using an HTTP `Link:` header:
 
-<pre class="eval">Link: &lt;/images/big.jpeg&gt;; rel=prefetch
-</pre>
+    Link: </images/big.jpeg>; rel=prefetch
 
-<p>The format for the <code>Link:</code> header is described in <a href="https://datatracker.ietf.org/doc/html/rfc5988">RFC 5988</a> section 5.</p>
+The format for the `Link:` header is described in [RFC 5988](https://datatracker.ietf.org/doc/html/rfc5988) section 5.
 
-<p>The browser observes all of these hints and queues up each unique request to be prefetched when the browser is idle. There can be multiple hints per page, as it might make sense to prefetch multiple documents. For example, the next document might contain several large images.</p>
+The browser observes all of these hints and queues up each unique request to be prefetched when the browser is idle. There can be multiple hints per page, as it might make sense to prefetch multiple documents. For example, the next document might contain several large images.
 
-<p>Some more examples follow:</p>
+Some more examples follow:
 
-<pre class="eval">&lt;link rel="prefetch alternate stylesheet" title="Designed for Mozilla" href="mozspecific.css"&gt;
-&lt;link rel="next" href="2.html"&gt;
-</pre>
+    <link rel="prefetch alternate stylesheet" title="Designed for Mozilla" href="mozspecific.css">
+    <link rel="next" href="2.html">
 
-<h3 id="Are_anchor_.28.3Ca.3E.29_tags_prefetched.3F">Are anchor (&lt;a&gt;) tags prefetched?</h3>
+### Are anchor (\<a>) tags prefetched?
 
-<p>No, only <code>&lt;link&gt;</code> tags with a relation type of <code>next</code> or <code>prefetch</code> are prefetched. However, if there is sufficient interest, we may expand link prefetching support to include prefetching &lt;a&gt; tags, which include a relation type of <code>next</code> or <code>prefetch</code> in the future. Doing so would probably help content providers avoid the problem of stale prefetching links.</p>
+No, only `<link>` tags with a relation type of `next` or `prefetch` are prefetched. However, if there is sufficient interest, we may expand link prefetching support to include prefetching \<a> tags, which include a relation type of `next` or `prefetch` in the future. Doing so would probably help content providers avoid the problem of stale prefetching links.
 
-<h3 id="Is_link_prefetching_standards_compliant.3F">Is link prefetching standards compliant?</h3>
+### Is link prefetching standards compliant?
 
-<p>Yes, link prefetching as outlined in this document does not violate any existing web standards. In fact, the HTML 4.01 specification explicitly allows for the definition of new link relation types (<a href="https://www.w3.org/TR/html4/types.html#type-links">see Section 6.12: Link types</a>). However, the exact mechanism employed by Mozilla is not yet standardized. An Internet-Draft is in the works.</p>
+Yes, link prefetching as outlined in this document does not violate any existing web standards. In fact, the HTML 4.01 specification explicitly allows for the definition of new link relation types ([see Section 6.12: Link types](https://www.w3.org/TR/html4/types.html#type-links)). However, the exact mechanism employed by Mozilla is not yet standardized. An Internet-Draft is in the works.
 
-<p>Standardization of this technique is part of the scope of HTML 5, see the current working draft, <a href="https://www.whatwg.org/specs/web-apps/current-work/#link-type-prefetch">section §5.11.3.13. Link type "prefetch"</a> .</p>
+Standardization of this technique is part of the scope of HTML 5, see the current working draft, [section §5.11.3.13. Link type "prefetch"](https://www.whatwg.org/specs/web-apps/current-work/#link-type-prefetch) .
 
-<h3 id="How_is_browser_idle_time_determined.3F">How is browser idle time determined?</h3>
+### How is browser idle time determined?
 
-<p>In the current implementation (Mozilla 1.2), idle time is determined using the <code>nsIWebProgressListener</code> API. We attach a listener to the toplevel <code>nsIWebProgress</code> object ("@mozilla.org/docloaderservice;1"). From this, we receive document start &amp; stop notifications, and we approximate idle time as the period between the last document stop and the next document start. The last document stop notification occurs roughly when the onLoad handler would fire for the toplevel document. This is when we kick off prefetch requests. If a subframe contains prefetching hints, prefetching will not begin until the top-most frame and all its "child" frames finish loading.</p>
+In the current implementation (Mozilla 1.2), idle time is determined using the `nsIWebProgressListener` API. We attach a listener to the toplevel `nsIWebProgress` object ("@mozilla.org/docloaderservice;1"). From this, we receive document start & stop notifications, and we approximate idle time as the period between the last document stop and the next document start. The last document stop notification occurs roughly when the onLoad handler would fire for the toplevel document. This is when we kick off prefetch requests. If a subframe contains prefetching hints, prefetching will not begin until the top-most frame and all its "child" frames finish loading.
 
-<h3 id="What_happens_if_I_click_on_a_link_while_something_is_being_prefetched.3F">What happens if I click on a link while something is being prefetched?</h3>
+### What happens if I click on a link while something is being prefetched?
 
-<p>When the user clicks on a link, or initiates any kind of page load, link prefetching will stop and any prefetch hints will be discarded. If a prefetched document is partially downloaded, then the partial document will still be stored in the cache provided the server sent an "Accept-Ranges: bytes" response header. This header is typically generated by webservers when serving up static content. When the user visits a prefetched document for real, the remaining portion of the document will be fetched using a HTTP byte-range request.</p>
+When the user clicks on a link, or initiates any kind of page load, link prefetching will stop and any prefetch hints will be discarded. If a prefetched document is partially downloaded, then the partial document will still be stored in the cache provided the server sent an "Accept-Ranges: bytes" response header. This header is typically generated by webservers when serving up static content. When the user visits a prefetched document for real, the remaining portion of the document will be fetched using a HTTP byte-range request.
 
-<h3 id="What_if_I.27m_downloading_something_in_the_background.3F_Will_link_prefetching_compete_for_bandwidth.3F">What if I'm downloading something in the background? Will link prefetching compete for bandwidth?</h3>
+### What if I'm downloading something in the background? Will link prefetching compete for bandwidth?
 
-<p>Yes and no. If you are downloading something using Mozilla, link prefetching will be delayed until any background downloads complete. For example, if you load a bookmark group (which opens several tabs), any prefetch requests initiated by one of the bookmarked pages will not begin until all of the tabs finish loading. If you are using another application which uses the network, link prefetching in Mozilla may compete for bandwidth with the other application. This is a problem that we hope to address in the future by leveraging operating system services to monitor network idle time.</p>
+Yes and no. If you are downloading something using Mozilla, link prefetching will be delayed until any background downloads complete. For example, if you load a bookmark group (which opens several tabs), any prefetch requests initiated by one of the bookmarked pages will not begin until all of the tabs finish loading. If you are using another application which uses the network, link prefetching in Mozilla may compete for bandwidth with the other application. This is a problem that we hope to address in the future by leveraging operating system services to monitor network idle time.
 
-<h3 id="Are_there_any_restrictions_on_what_is_prefetched.3F">Are there any restrictions on what is prefetched?</h3>
+### Are there any restrictions on what is prefetched?
 
-<p>Yes, only <code>http://</code> (and, starting in {{ Gecko("1.9.1") }} <code>https://</code>) URLs can be prefetched. Other protocols (such as FTP) do not provide rich enough support for client side caching.</p>
+Yes, only `http://` (and, starting in {{ Gecko("1.9.1") }} `https://`) URLs can be prefetched. Other protocols (such as FTP) do not provide rich enough support for client side caching.
 
-<h3 id="Will_Mozilla_prefetch_documents_from_a_different_host.3F">Will Mozilla prefetch documents from a different host?</h3>
+### Will Mozilla prefetch documents from a different host?
 
-<p>Yes. There is no same-origin restriction for link prefetching. Limiting prefetching to only URLs from the same server would not offer any increased browser security.</p>
+Yes. There is no same-origin restriction for link prefetching. Limiting prefetching to only URLs from the same server would not offer any increased browser security.
 
-<h3 id="Do_prefetched_requests_contain_a_Referer:_header.3F">Do prefetched requests contain a Referer: header?</h3>
+### Do prefetched requests contain a Referer: header?
 
-<p>Yes, prefetched requests include a HTTP <code>Referer:</code> header indicating the document from which the prefetching hint was extracted.</p>
+Yes, prefetched requests include a HTTP `Referer:` header indicating the document from which the prefetching hint was extracted.
 
-<p>This may impact referrer tracking that is commonly used on many sites. For this reason, link prefetching may not be appropriate for all content. However, it is possible to instruct Mozilla to validate a prefetched document when the user follows a href to the prefetched document by specifying the <code>Cache-control: must-revalidate</code> HTTP response header. This header enables caching, but requires an <code>If-Modified-Since</code> or <code>If-None-Match</code> validation request before the serving the document out of the browser's cache.</p>
+This may impact referrer tracking that is commonly used on many sites. For this reason, link prefetching may not be appropriate for all content. However, it is possible to instruct Mozilla to validate a prefetched document when the user follows a href to the prefetched document by specifying the `Cache-control: must-revalidate` HTTP response header. This header enables caching, but requires an `If-Modified-Since` or `If-None-Match` validation request before the serving the document out of the browser's cache.
 
-<h3 id="As_a_server_admin.2C_can_I_distinguish_prefetch_requests_from_normal_requests.3F">As a server admin, can I distinguish prefetch requests from normal requests?</h3>
+### As a server admin, can I distinguish prefetch requests from normal requests?
 
-<p>Yes, we send the following header along with each prefetch request:</p>
+Yes, we send the following header along with each prefetch request:
 
-<pre>X-moz: prefetch</pre>
+    X-moz: prefetch
 
-<p>Of course, this request header is not at all standardized, and it may change in future Mozilla releases. Chrome uses "X-Purpose: prefetch" or "Purpose: prefetch" <a href="https://bugs.webkit.org/show_bug.cgi?id=46529">header</a>.</p>
+Of course, this request header is not at all standardized, and it may change in future Mozilla releases. Chrome uses "X-Purpose: prefetch" or "Purpose: prefetch" [header](https://bugs.webkit.org/show_bug.cgi?id=46529).
 
-<h3 id="Is_there_a_preference_to_disable_link_prefetching.3F">Is there a preference to disable link prefetching?</h3>
+### Is there a preference to disable link prefetching?
 
-<p>Yes, there is a hidden preference that you can set to disable link prefetching. Add this line to your prefs.js file located in your profile directory (or make the appropriate change via <code>about:config</code>:</p>
+Yes, there is a hidden preference that you can set to disable link prefetching. Add this line to your prefs.js file located in your profile directory (or make the appropriate change via `about:config`:
 
-<pre class="eval">user_pref("network.prefetch-next", false);
-</pre>
+    user_pref("network.prefetch-next", false);
 
-<p>However, the theory is that if link prefetching needs to be disabled then there must be something wrong with the implementation. We would rather improve the implementation if it does not work correctly, than expect users to locate and tweak some obscure preference.</p>
+However, the theory is that if link prefetching needs to be disabled then there must be something wrong with the implementation. We would rather improve the implementation if it does not work correctly, than expect users to locate and tweak some obscure preference.
 
-<h3 id="What_about_folks_who_pay-per-byte_for_network_bandwidth.3F">What about folks who pay-per-byte for network bandwidth?</h3>
+### What about folks who pay-per-byte for network bandwidth?
 
-<p>Basically, there are two ways of looking at this issue: websites can already cause things to be silently downloaded using JS/DOM hacks. Prefetching is a browser feature; users should be able to disable it easily.</p>
+Basically, there are two ways of looking at this issue: websites can already cause things to be silently downloaded using JS/DOM hacks. Prefetching is a browser feature; users should be able to disable it easily.
 
-<p>It is important that websites adopt <code>&lt;link&gt;</code> tag based prefetching instead of trying to roll-in silent downloading using various JS/DOM hacks. The <code>&lt;link&gt;</code> tag gives the browser the ability to know what sites are up to, and we can use this information to better prioritize document prefetching. The user preference to disable <code>&lt;link&gt;</code> tag prefetching may encourage websites to stick with JS/DOM hacks, and that would not be good for users. This is one reason why prefetching is enabled by default.</p>
+It is important that websites adopt `<link>` tag based prefetching instead of trying to roll-in silent downloading using various JS/DOM hacks. The `<link>` tag gives the browser the ability to know what sites are up to, and we can use this information to better prioritize document prefetching. The user preference to disable `<link>` tag prefetching may encourage websites to stick with JS/DOM hacks, and that would not be good for users. This is one reason why prefetching is enabled by default.
 
-<h3 id="Which_browsers_support_link_prefetching.3F">Which browsers support link prefetching?</h3>
+### Which browsers support link prefetching?
 
-<p>Browsers based on Mozilla 1.2 (or later) as well as browsers based on Mozilla 1.0.2 (or later) support prefetching. This includes Firefox and Netscape 7.01+. Camino builds as of March 2003 are based on Mozilla 1.0.1, and therefore do not support prefetching. <a href="https://gemal.dk/browserspy/prefetch.php">Test</a> your browser to see if it supports Link Prefetching.</p>
+Browsers based on Mozilla 1.2 (or later) as well as browsers based on Mozilla 1.0.2 (or later) support prefetching. This includes Firefox and Netscape 7.01+. Camino builds as of March 2003 are based on Mozilla 1.0.1, and therefore do not support prefetching. [Test](https://gemal.dk/browserspy/prefetch.php) your browser to see if it supports Link Prefetching.
 
-<h3 id="Privacy_implications">Privacy implications</h3>
+### Privacy implications
 
-<p>Along with the referral and URL-following implications already mentioned above, prefetching will generally cause the cookies of the prefetched site to be accessed. (For example, if you google amazon, the google results page will prefetch <code>www.amazon.com</code>, causing amazon cookies to be sent back and forth. You can block 3rd party cookies in Firefox, see <a href="https://support.mozilla.com/en-US/kb/Disabling%20third%20party%20cookies">Disabling third party cookies</a>.)</p>
+Along with the referral and URL-following implications already mentioned above, prefetching will generally cause the cookies of the prefetched site to be accessed. (For example, if you google amazon, the google results page will prefetch `www.amazon.com`, causing amazon cookies to be sent back and forth. You can block 3rd party cookies in Firefox, see [Disabling third party cookies](https://support.mozilla.com/en-US/kb/Disabling%20third%20party%20cookies).)
 
-<h3 id="What_about....3F">What about...?</h3>
+### What about...?
 
-<p>If you have any questions or comments about link prefetching, please feel free to send them my way :-)</p>
+If you have any questions or comments about link prefetching, please feel free to send them my way :-)
 
-<h4 id="See_also">See also</h4>
+#### See also
 
-<p><a href="https://www.edochan.com/programming/pf.htm">Prefetching Hints</a></p>
+[Prefetching Hints](https://www.edochan.com/programming/pf.htm)
 
-<h2 id="Original_Document_Information">Original Document Information</h2>
+## Original Document Information
 
-<ul>
- <li>Author(s): Darin Fisher (darin at meer dot net)</li>
- <li>Last Updated Date: Updated: March 3, 2003</li>
-</ul>
+- Author(s): Darin Fisher (darin at meer dot net)
+- Last Updated Date: Updated: March 3, 2003

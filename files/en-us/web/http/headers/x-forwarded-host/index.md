@@ -2,31 +2,30 @@
 title: X-Forwarded-Host
 slug: Web/HTTP/Headers/X-Forwarded-Host
 tags:
-- HTTP
-- HTTP Header
-- Non-standard
-- Reference
-- Request header
-- header
+  - HTTP
+  - HTTP Header
+  - Non-standard
+  - Reference
+  - Request header
+  - header
 browser-compat: http.headers.X-Forwarded-Host
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The <strong><code>X-Forwarded-Host</code></strong> (XFH) header is a de-facto standard
-  header for identifying the original host requested by the client in the
-  {{HTTPHeader("Host")}} HTTP request header.</p>
+The **`X-Forwarded-Host`** (XFH) header is a de-facto standard
+header for identifying the original host requested by the client in the
+{{HTTPHeader("Host")}} HTTP request header.
 
-<p>Host names and ports of reverse proxies (load balancers, CDNs) may differ from the
-  origin server handling the request, in that case the <code>X-Forwarded-Host</code>
-  header is useful to determine which Host was originally used.</p>
+Host names and ports of reverse proxies (load balancers, CDNs) may differ from the
+origin server handling the request, in that case the `X-Forwarded-Host`
+header is useful to determine which Host was originally used.
 
-<p>This header is used for debugging, statistics, and generating location-dependent
-  content and by design it exposes privacy sensitive information, such as the IP address
-  of the client. Therefore the user's privacy must be kept in mind when deploying this
-  header.</p>
+This header is used for debugging, statistics, and generating location-dependent
+content and by design it exposes privacy sensitive information, such as the IP address
+of the client. Therefore the user's privacy must be kept in mind when deploying this
+header.
 
-<p>A standardized version of this header is the HTTP {{HTTPHeader("Forwarded")}} header.
-</p>
+A standardized version of this header is the HTTP {{HTTPHeader("Forwarded")}} header.
 
 <table class="properties">
   <tbody>
@@ -41,37 +40,33 @@ browser-compat: http.headers.X-Forwarded-Host
   </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: html">X-Forwarded-Host: &lt;host&gt;
-</pre>
+```html
+X-Forwarded-Host: <host>
+```
 
-<h2 id="Directives">Directives</h2>
+## Directives
 
-<dl>
-  <dt>&lt;host&gt;</dt>
-  <dd>The domain name of the forwarded server.</dd>
-</dl>
+- \<host>
+  - : The domain name of the forwarded server.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre>X-Forwarded-Host: id42.example-cdn.com
-</pre>
+    X-Forwarded-Host: id42.example-cdn.com
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any current specification. The standardized version of this header is
-  {{HTTPHeader("Forwarded")}}.</p>
+Not part of any current specification. The standardized version of this header is
+{{HTTPHeader("Forwarded")}}.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{HTTPHeader("Host")}}</li>
-  <li>{{HTTPHeader("Forwarded")}}</li>
-  <li>{{HTTPHeader("X-Forwarded-For")}}</li>
-  <li>{{HTTPHeader("X-Forwarded-Proto")}}</li>
-</ul>
+- {{HTTPHeader("Host")}}
+- {{HTTPHeader("Forwarded")}}
+- {{HTTPHeader("X-Forwarded-For")}}
+- {{HTTPHeader("X-Forwarded-Proto")}}

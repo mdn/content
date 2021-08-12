@@ -2,47 +2,47 @@
 title: 407 Proxy Authentication Required
 slug: Web/HTTP/Status/407
 tags:
-- Client error
-- HTTP
-- Reference
-- Status code
+  - Client error
+  - HTTP
+  - Reference
+  - Status code
 browser-compat: http.status.407
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The HTTP <strong><code>407 Proxy Authentication Required </code></strong> client error
-  status response code indicates that the request has not been applied because it lacks
-  valid authentication credentials for a {{Glossary("proxy server")}} that is between the
-  browser and the server that can access the requested resource.</p>
+The HTTP **`407 Proxy Authentication Required `**client error
+status response code indicates that the request has not been applied because it lacks
+valid authentication credentials for a {{Glossary("proxy server")}} that is between the
+browser and the server that can access the requested resource.
 
-<p>This status is sent with a {{HTTPHeader("Proxy-Authenticate")}} header that contains
-  information on how to authorize correctly.</p>
+This status is sent with a {{HTTPHeader("Proxy-Authenticate")}} header that contains
+information on how to authorize correctly.
 
-<h2 id="Status">Status</h2>
+## Status
 
-<pre class="brush: html">407 Proxy Authentication Required </pre>
+```html
+407 Proxy Authentication Required 
+```
 
-<h2 id="Example_response">Example response</h2>
+## Example response
 
-<pre>HTTP/1.1 407 Proxy Authentication Required
-Date: Wed, 21 Oct 2015 07:28:00 GMT
-Proxy-Authenticate: Basic realm="Access to internal site"</pre>
+    HTTP/1.1 407 Proxy Authentication Required
+    Date: Wed, 21 Oct 2015 07:28:00 GMT
+    Proxy-Authenticate: Basic realm="Access to internal site"
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/HTTP/Authentication">HTTP authentication</a></li>
-  <li>{{HTTPHeader("WWW-Authenticate")}}</li>
-  <li>{{HTTPHeader("Authorization")}}</li>
-  <li>{{HTTPHeader("Proxy-Authorization")}}</li>
-  <li>{{HTTPHeader("Proxy-Authenticate")}}</li>
-  <li>{{HTTPStatus("401")}}, {{HTTPStatus("403")}}</li>
-</ul>
+- [HTTP authentication](/en-US/docs/Web/HTTP/Authentication)
+- {{HTTPHeader("WWW-Authenticate")}}
+- {{HTTPHeader("Authorization")}}
+- {{HTTPHeader("Proxy-Authorization")}}
+- {{HTTPHeader("Proxy-Authenticate")}}
+- {{HTTPStatus("401")}}, {{HTTPStatus("403")}}
