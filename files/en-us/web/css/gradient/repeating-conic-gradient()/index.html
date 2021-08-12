@@ -57,12 +57,12 @@ background: repeating-conic-gradient(
 <p>Because <code>&lt;gradient&gt;</code>s belong to the <code>&lt;image&gt;</code> data type, they can only be used where <code>&lt;image&gt;</code>s can be used. For this reason, <code>repeating-conic-gradient()</code> won't work on {{CSSxRef("background-color")}} and other properties that use the {{CSSxRef("&lt;color&gt;")}} data type.</p>
 
 <div class="notecard note">
-<p><strong>Note:</strong> To create a conic gradient that does not repeat, make the gradient a full 360 degree rotation, or use the {{CSSxRef("gradient/conic-gradient()")}} function instead.</p>
+<p><strong>Note:</strong> To create a conic gradient that does not repeat, make the gradient a full 360 degree rotation, or use the {{cssxref("gradient/conic-gradient()", "conic-gradient()")}} function instead.</p>
 </div>
 
 <h3 id="Understanding_repeating_conic_gradients">Understanding repeating conic gradients</h3>
 
-<p>The repeating-conic-gradient syntax is similar to the {{CSSxRef("gradient/conic-gradient()")}} and {{CSSxRef("gradient/repeating-radial-gradient()")}} syntax. Like the non-repeating conic-gradient, the color-stops are placed around a gradient arc. Like the repeating radial gradient, the size of the repeating section is the first color stop subtracted from the angle of the last color stop.</p>
+<p>The repeating-conic-gradient syntax is similar to the {{cssxref("gradient/conic-gradient()", "conic-gradient()")}} and {{cssxref("gradient/repeating-radial-gradient()", "repeating-radial-gradient()")}} syntax. Like the non-repeating conic-gradient, the color-stops are placed around a gradient arc. Like the repeating radial gradient, the size of the repeating section is the first color stop subtracted from the angle of the last color stop.</p>
 
 <p><img alt="Comparison of the color stops for repeating and non-repeating conic and radial gradients" src="repeatingconicgradient.png"></p>
 
@@ -165,10 +165,10 @@ repeating-conic-gradient(from -45deg, red 45deg, orange, yellow, green, blue 225
 
 <ul>
 	<li><a href="/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients">Using CSS gradients</a></li>
-	<li>Other gradient functions: {{CSSxRef("gradient/conic-gradient()")}}, {{CSSxRef("gradient/linear-gradient()")}}, {{CSSxRef("gradient/repeating-linear-gradient()")}}, {{CSSxRef("gradient/radial-gradient()")}}, {{CSSxRef("gradient/repeating-radial-gradient()")}}</li>
+	<li>Other gradient functions: {{cssxref("gradient/conic-gradient()", "conic-gradient()")}}, {{cssxref("gradient/linear-gradient()", "linear-gradient()")}}, {{cssxref("gradient/repeating-linear-gradient()", "repeating-linear-gradient()")}}, {{cssxref("gradient/radial-gradient()", "radial-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient()", "repeating-radial-gradient()")}}</li>
 	<li>{{cssxref("&lt;image&gt;")}}</li>
-	<li>{{cssxref("image()","image()")}}</li>
+	<li>{{cssxref("image/image()","image()")}}</li>
 	<li>{{cssxref("element()")}}</li>
-	<li>{{cssxref("image-set()","image-set()")}}</li>
+	<li>{{cssxref("image/image-set()","image-set()")}}</li>
 	<li>{{cssxref("cross-fade()")}}</li>
 </ul>
