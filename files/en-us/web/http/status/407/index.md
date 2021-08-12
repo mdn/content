@@ -10,7 +10,7 @@ browser-compat: http.status.407
 ---
 {{HTTPSidebar}}
 
-The HTTP **`407 Proxy Authentication Required `**client error
+The HTTP **`407 Proxy Authentication Required`** client error
 status response code indicates that the request has not been applied because it lacks
 valid authentication credentials for a {{Glossary("proxy server")}} that is between the
 browser and the server that can access the requested resource.

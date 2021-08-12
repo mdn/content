@@ -59,7 +59,7 @@ Public-Key-Pins-Report-Only: pin-sha256="<pin-value>";
 - max-age=\<expire-time>
   - : This directive is meaningless for the Public-Key-Pins-Report-Only header, it will be
     ignored by user agents and the header will not be cached.
-- `includeSubDomains `{{optional_inline}}
+- `includeSubDomains` {{optional_inline}}
   - : If this optional parameter is specified, this rule applies to all of the site's
     subdomains as well.
 - `report-uri="<uri>"`
