@@ -83,5 +83,5 @@ cannot be met.
 
 ## See also
 
-- {{HTTPStatus("417")}}` Expectation Failed`
-- {{HTTPStatus("100")}}` Continue`
+- {{HTTPStatus("417", "417 Expectation Failed")}}
+- {{HTTPStatus("100", "100 Continue")}}

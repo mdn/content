@@ -84,4 +84,4 @@ If-Unmodified-Since: <day-name>, <day> <month> <year> <hour>:<minute>:<second> G
 - {{HTTPHeader("If-Match")}}
 - {{HTTPHeader("If-None-Match")}}
 - {{HTTPHeader("If-Range")}}
-- {{HTTPStatus("412")}}` Precondition Failed`
+- {{HTTPStatus("412", "412 Precondition Failed")}}

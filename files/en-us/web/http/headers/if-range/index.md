@@ -89,5 +89,5 @@ If-Range: <etag>
 - {{HTTPHeader("If-Unmodified-Since")}}
 - {{HTTPHeader("If-Match")}}
 - {{HTTPHeader("If-None-Match")}}
-- {{HTTPStatus("206")}}` Partial Content`
+- {{HTTPStatus("206", "206 Partial Content")}}
 - [HTTP Conditional Requests](/en-US/docs/Web/HTTP/Conditional_requests)

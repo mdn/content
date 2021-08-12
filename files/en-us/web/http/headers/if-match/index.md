@@ -88,5 +88,5 @@ If-Match: <etag_value>, <etag_value>, …
 - {{HTTPHeader("If-Unmodified-Since")}}
 - {{HTTPHeader("If-Modified-Since")}}
 - {{HTTPHeader("If-None-Match")}}
-- {{HTTPStatus("416")}}` Range Not Satisfiable`
-- {{HTTPStatus("412")}}` Precondition Failed`
+- {{HTTPStatus("416", "416 Range Not Satisfiable")}}
+- {{HTTPStatus("412", "412 Precondition Failed")}}

@@ -361,7 +361,7 @@ will send this message:
 The `multipart/byteranges` MIME type is used to send partial responses to
 the browser.
 
-When the {{HTTPStatus("206")}}` Partial Content` status code is sent, this
+When the {{HTTPStatus("206", "206 Partial Content")}} status code is sent, this
 MIME type indicates that the document is composed of several parts, one for each of the
 requested ranges. Like other multipart types, the {{HTTPHeader("Content-Type")}} uses a
 `boundary` to separate the pieces. Each piece has a
