@@ -117,7 +117,7 @@ ndef.write(
 <pre class="brush: js">const ndef = new NDEFReader();
 try {
   await ndef.write({
-    records: [{ recordType: "url", data: "https://w3c.github.io/web-nfc/" }]
+    records: [{ recordType: "url", data: "http://example.com/" }]
   });
 } catch {
   console.log("Write failed :-( try again.");
