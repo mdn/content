@@ -14,11 +14,11 @@ browser-compat: http.headers.csp.Content-Security-Policy.navigate-to
 {{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
-**`navigate`\*\***`-to`** directive
+**`navigate-to`** directive
 restricts the URLs to which a document can initiate navigations by any means including
 {{HTMLElement("form")}} (if {{CSP("form-action")}} is not specified),
 {{HTMLElement("a")}}, {{DOMxRef("window.location")}}, {{DOMxRef("window.open")}}, etc.
-This is an enforcement on what navigations this document initiates **not\*\*
+This is an enforcement on what navigations this document initiates, **not**
 on what this document is allowed to navigate to.
 
 > **Note:** If the {{CSP("form-action")}} directive is present,
