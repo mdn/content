@@ -507,7 +507,7 @@ mat4.getRotation(targetRayDirection, viewerRefSpace);</pre>
 
 <p>To determine what object is targeted, follow the targeting ray until it intersects an object. This process is called <strong>hit testing</strong> or <strong>collision detection</strong>. The approach you take to hit testing depends very much on the specific needs of your app. The first question is: are you detecting collisions with virtual objects or terrain, real-world objects or terrain, or both?</p>
 
-<p>In any case, to identify the targeted object, you need to determine if the ray specified by the {{domxref("XRInputSession")}} property {{domxref("XRInputSession.targetRaySpace", "targetRaySpace")}} intersects any objects in the scene, whether thye're virtual or real-world.</p>
+<p>In any case, to identify the targeted object, you need to determine if the ray specified by the {{domxref("XRInputSource")}} property {{domxref("XRInputSource.targetRaySpace", "targetRaySpace")}} intersects any objects in the scene, whether thye're virtual or real-world.</p>
 
 <p>See <a href="/en-US/docs/Web/API/WebXR_Device_API/Targeting">Targeting and hit detection</a> for a more detailed look at what's involved..</p>
 
@@ -531,7 +531,7 @@ mat4.getRotation(targetRayDirection, viewerRefSpace);</pre>
 
 <p>This <code>gamepad</code> object is not only used to obtain access to specialty buttons, trackpads, and so forth, but also provides a way to more directly access and monitor the controls that serve as the primary select and squeeze inputs, since these are included in its {{domxref("Gamepad.buttons", "buttons")}} list.</p>
 
-<p>Because this use of the <code>Gamepad</code> interface is a convenience rather than a true application of the Gamepad API, there are several differences between how it's used with WebXR and how it's used in Gamepad API applications. The most notable—but not the only—difference is that WebXR adds the <code>xr-standard</code> gamepad mapping, expanding the {{domxref("GamepadMappingType")}} enumerated type. This gamepad mapping defines how the controls on a typical one-hand handheld VR controller are mapped to gamepad controls. </p>
+<p>Because this use of the <code>Gamepad</code> interface is a convenience rather than a true application of the Gamepad API, there are several differences between how it's used with WebXR and how it's used in Gamepad API applications. The most notable—but not the only—difference is that WebXR adds the <code>xr-standard</code> gamepad mapping, see the {{domxref("XRInputSource.gamepad")}} property for additional differences. This gamepad mapping defines how the controls on a typical one-hand handheld VR controller are mapped to gamepad controls. </p>
 
 <p>For details on the gamepad mapping as well as the other differences how the use of the {{domxref("Gamepad")}} object and its children differs from its use in the Gamepad API, see the article <a href="/en-US/docs/Web/WebXR_Device_API/Gamepads">Supporting advanced controllers and gamepads in WebXR applications</a>.</p>
 
