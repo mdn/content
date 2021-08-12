@@ -227,7 +227,7 @@ isResolvable(host)
 
 Tries to resolve the hostname. Returns true if succeeds.
 
-#### Examples:
+#### Examples
 
 ```js
 isResolvable("www.mozilla.org") // true
@@ -254,7 +254,7 @@ True if and only if the IP address of the host matches the specified IP address 
 
 Pattern and mask specification is done the same way as for SOCKS configuration.
 
-#### Examples:
+#### Examples
 
 ```js
 function alert_eval(str) { alert(str + ' is ' + eval(str)) }
@@ -343,7 +343,7 @@ dnsDomainLevels(host)
 
 Returns the number (integer) of DNS domain levels (number of dots) in the hostname.
 
-#### Examples:
+#### Examples
 
 ```js
 dnsDomainLevels("www");             // 0

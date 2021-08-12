@@ -91,7 +91,7 @@ You should explicitly communicate the intended `SameSite` policy for your cook
 Set-Cookie: flavor=choco; SameSite=Lax
 ```
 
-## Example:
+## Example
 
     RewriteEngine on
     RewriteBase "/"
